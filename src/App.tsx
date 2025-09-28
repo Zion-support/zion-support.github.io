@@ -22,6 +22,8 @@ import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitoring';
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
+import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
+import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 
 // Lazy load heavy components for better performance
 const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
@@ -31,6 +33,11 @@ const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
 const CommandPalette = lazy(() => import('./components/CommandPalette'));
 const AdvancedMonitoringDashboard = lazy(() => import('./components/AdvancedMonitoringDashboard'));
 const ComprehensivePerformanceDashboard = lazy(() => import('./components/ComprehensivePerformanceDashboard'));
+const RealTimePerformanceMonitor = lazy(() => import('./components/RealTimePerformanceMonitor'));
+const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPalette'));
+const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
+const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
+const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
 
 export default function App(): React.JSX.Element {
   const navigate = useNavigate();
@@ -45,6 +52,8 @@ export default function App(): React.JSX.Element {
   const [showCommandPalette, setShowCommandPalette] = useState(false);
   const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
   const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
+  const [showRealTimePerformance, setShowRealTimePerformance] = useState(false);
+  const [showEnhancedCommandPalette, setShowEnhancedCommandPalette] = useState(false);
   // const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
 
   // Notification management
@@ -52,25 +61,76 @@ export default function App(): React.JSX.Element {
     setNotifications(prev => prev.filter(notification => notification.id !== id));
   }, []);
 
+  // Enhanced notification system
+  const addNotification = useCallback((notification: Omit<Notification, 'id'>) => {
+    const id = Date.now().toString();
+    const newNotification: Notification = {
+      ...notification,
+      id,
+      timestamp: Date.now()
+    };
+    setNotifications(prev => [...prev, newNotification]);
+    
+    // Auto-remove after 5 seconds for info notifications
+    if (notification.type === 'info') {
+      setTimeout(() => removeNotification(id), 5000);
+    }
+  }, [removeNotification]);
+
   // Performance and loading state
   const [isLoading, setIsLoading] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState(0);
+
+  // Performance monitoring
+  useEffect(() => {
+    const startTime = performance.now();
+    
+    const measurePerformance = () => {
+      const loadTime = performance.now() - startTime;
+      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+      
+      // Log performance metrics
+      console.debug('Performance Metrics:', {
+        loadTime: `${Math.round(loadTime)}ms`,
+        renderTime: `${Math.round(performance.now() - startTime)}ms`,
+        memoryUsage: memory ? `${Math.round(memory.usedJSHeapSize / 1024 / 1024)}MB` : 'N/A'
+      });
+    };
+
+    // Measure after initial render
+    const timeoutId = setTimeout(measurePerformance, 100);
+    
+    return () => clearTimeout(timeoutId);
+  }, []);
+
+  // Service Worker registration
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+          addNotification({ type: 'success', message: 'App is now available offline!' });
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, [addNotification]);
   
   const handleScroll = useCallback(() => {
     // Track scroll depth for analytics
     const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
     if (scrollDepth > 0 && scrollDepth % 25 === 0) {
-      seoAnalytics.trackEvent('scroll_depth', { depth: scrollDepth });
+      console.debug('Scroll depth tracked:', { depth: scrollDepth });
     }
   }, []);
   
   const handleClick = useCallback((event?: Event) => {
     console.debug('Click event captured for engagement tracking', event);
-    seoAnalytics.trackEvent('user_interaction', { type: 'click', timestamp: Date.now() });
   }, []);
   
   const originalTrackEngagement = useCallback(() => {
-    seoAnalytics.trackEvent('user_engagement', { 
+    console.debug('User engagement tracked', { 
       timestamp: Date.now(),
       session_duration: performance.now()
     });
@@ -138,6 +198,8 @@ export default function App(): React.JSX.Element {
       enhancedPerformanceMonitor.initialize();
       enhancedErrorHandler.initialize();
       enhancedAccessibilityManager.initialize();
+      advancedErrorRecovery.initialize();
+      enhancedSEOOptimizer.initialize();
       
       // Initialize advanced systems
       void performanceAnalytics; // Initialize performance analytics
@@ -151,6 +213,19 @@ export default function App(): React.JSX.Element {
       
       // Initialize SEO for current page
       seoManager.updateSEO({
+        title: seoData.title,
+        description: seoData.description,
+        keywords: seoData.keywords.split(', '),
+        canonical: seoData.canonicalUrl,
+        ogTitle: seoData.title,
+        ogDescription: seoData.description,
+        ogImage: seoData.ogImage,
+        ogType: seoData.ogType,
+        twitterCard: seoData.twitterCard
+      });
+
+      // Also update with enhanced SEO optimizer
+      enhancedSEOOptimizer.updateSEO({
         title: seoData.title,
         description: seoData.description,
         keywords: seoData.keywords.split(', '),
@@ -194,21 +269,23 @@ export default function App(): React.JSX.Element {
       event.preventDefault();
       setShowSystemDashboard((prev: boolean) => !prev);
       seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
+      addNotification({ type: 'info', message: 'System dashboard toggled' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
       event.preventDefault();
       setShowSystemHealth((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+h', action: 'toggle_system_health' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+h', action: 'toggle_system_health' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'K') {
       event.preventDefault();
       setShowKeyboardHelp((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+k', action: 'toggle_keyboard_help' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+k', action: 'toggle_keyboard_help' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
       event.preventDefault();
       setShowPerformanceWidget((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'C') {
       event.preventDefault();
@@ -218,18 +295,23 @@ export default function App(): React.JSX.Element {
     // Performance dashboard toggle removed - state variable not defined
     if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
       event.preventDefault();
-      setShowCommandPalette((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+k', action: 'toggle_command_palette' });
+      setShowEnhancedCommandPalette((prev: boolean) => !prev);
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+k', action: 'toggle_enhanced_command_palette' });
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'R') {
+      event.preventDefault();
+      setShowRealTimePerformance((prev: boolean) => !prev);
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+r', action: 'toggle_real_time_performance' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
       event.preventDefault();
       setShowAdvancedMonitoring((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+m', action: 'toggle_advanced_monitoring' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+m', action: 'toggle_advanced_monitoring' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'T') {
       event.preventDefault();
       setIsDarkMode((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+t', action: 'toggle_theme' });
+      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+t', action: 'toggle_theme' });
     }
     if (event.key === 'Escape') {
       setShowCommandPalette(false);
@@ -238,9 +320,12 @@ export default function App(): React.JSX.Element {
       setShowPerformanceWidget(false);
       setShowKeyboardHelp(false);
       setShowAdvancedMonitoring(false);
+      setShowComprehensiveDashboard(false);
+      setShowRealTimePerformance(false);
+      setShowEnhancedCommandPalette(false);
       seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
     }
-  }, []);
+  }, [addNotification]);
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -307,7 +392,7 @@ export default function App(): React.JSX.Element {
       document.addEventListener('keydown', handleKeyDown);
 
       // Initialize basic systems
-      seoAnalytics.initialize();
+      console.debug('Initializing analytics system');
       
       // Initialize SEO analytics
       seoAnalytics.trackPageView(window.location.pathname);
@@ -319,7 +404,6 @@ export default function App(): React.JSX.Element {
       performanceSEO.optimizeCSS();
       
       // Initialize analytics system
-      seoAnalytics.initialize();
       seoAnalytics.trackPageView(window.location.pathname);
 
       // Set default SEO data using the correct method
@@ -413,8 +497,45 @@ export default function App(): React.JSX.Element {
   return (
     <PerformanceOptimizer enableMonitoring={true} enableOptimizations={true}>
       <EnhancedErrorBoundary>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <AppRouter />
+        <Suspense fallback={<ModernLoadingSpinner />}>
+          <AccessibilityEnhancer>
+            <Suspense fallback={null}>
+              <DynamicMetaTags
+                title="Zion Tech Group - Advanced AI and IT Solutions"
+                description="Leading provider of cutting-edge AI and IT solutions, cloud services, cybersecurity, and digital transformation services for modern enterprises."
+                keywords="AI solutions, IT services, cloud computing, cybersecurity, digital transformation, enterprise software, machine learning, data analytics"
+                canonicalUrl={window.location.href}
+                structuredData={{
+                  "@context": "https://schema.org",
+                  "@type": "Organization",
+                  "name": "Zion Tech Group",
+                  "description": "Leading provider of cutting-edge AI and IT solutions",
+                  "url": "https://ziontechgroup.com",
+                  "logo": "https://ziontechgroup.com/logo.png",
+                  "sameAs": [
+                    "https://linkedin.com/company/ziontechgroup",
+                    "https://twitter.com/ziontechgroup"
+                  ],
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-555-0123",
+                    "contactType": "customer service",
+                    "areaServed": "US",
+                    "availableLanguage": "English"
+                  },
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "123 Tech Street",
+                    "addressLocality": "San Francisco",
+                    "addressRegion": "CA",
+                    "postalCode": "94105",
+                    "addressCountry": "US"
+                  }
+                }}
+              />
+            </Suspense>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+              <AppRouter />
         
         {/* System Dashboard - Toggle with Ctrl+Shift+D */}
         {showSystemDashboard && (
@@ -473,6 +594,7 @@ export default function App(): React.JSX.Element {
         </Suspense>
 
         <PerformanceDashboard
+          className="fixed bottom-4 left-4 z-30"
           isVisible={showPerformanceWidget}
         />
 
@@ -526,6 +648,25 @@ export default function App(): React.JSX.Element {
           </Suspense>
         )}
 
+        {showRealTimePerformance && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <RealTimePerformanceMonitor
+              isVisible={showRealTimePerformance}
+              onClose={() => setShowRealTimePerformance(false)}
+              refreshInterval={1000}
+            />
+          </Suspense>
+        )}
+
+        {showEnhancedCommandPalette && (
+          <Suspense fallback={<ModernLoadingSpinner />}>
+            <EnhancedCommandPalette
+              isVisible={showEnhancedCommandPalette}
+              onClose={() => setShowEnhancedCommandPalette(false)}
+            />
+          </Suspense>
+        )}
+
         {showComprehensiveDashboard && (
           <Suspense fallback={<ModernLoadingSpinner />}>
             <ComprehensivePerformanceDashboard />
@@ -543,17 +684,25 @@ export default function App(): React.JSX.Element {
         </button>
 
         {/* Keyboard Shortcuts Help Panel */}
-        <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
+        <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200 max-w-xs">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
           <div>Ctrl+Shift+D: System Dashboard</div>
           <div>Ctrl+Shift+H: System Health</div>
           <div>Ctrl+Shift+M: Advanced Monitoring</div>
+          <div>Ctrl+Shift+R: Real-Time Performance</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
           <div>Ctrl+Shift+T: Toggle Theme</div>
-          <div>Ctrl+K: Command Palette</div>
+          <div>Ctrl+K: Enhanced Command Palette</div>
           <div>Esc: Close All Modals</div>
         </div>
       </div>
+      
+      {/* Performance Indicator */}
+      <Suspense fallback={null}>
+        <PerformanceIndicator showDetails={showAdvancedMonitoring} />
+      </Suspense>
+    </AccessibilityEnhancer>
+    </Suspense>
     </EnhancedErrorBoundary>
     </PerformanceOptimizer>
   );

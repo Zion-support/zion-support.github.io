@@ -36,7 +36,7 @@ export function createLazyComponent<T extends ComponentType<Record<string, unkno
   return function LazyWrapper(props: Record<string, unknown>) {
     return (
       <Suspense fallback={fallback ? React.createElement(fallback) : <div>Loading...</div>}>
-        <LazyComponent {...props as any} />
+        <LazyComponent {...(props as Record<string, unknown>)} />
       </Suspense>
     );
   };
@@ -93,7 +93,11 @@ export function createIntersectionLazyComponent<T extends ComponentType<Record<s
       <div ref={ref}>
         {isVisible ? (
           <Suspense fallback={<div>Loading...</div>}>
+<<<<<<< HEAD
             <LazyComponent {...props as any} />
+=======
+            <LazyComponent {...(props as Record<string, unknown>)} />
+>>>>>>> e43d75dadb2933fe49f8fe4de7cbff2549fc8cb6
           </Suspense>
         ) : (
           <div>Loading...</div>

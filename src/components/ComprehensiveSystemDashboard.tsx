@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
 // import advancedPerformanceOptimizer from '../utils/advancedPerformanceOptimizer';
 import { enhancedSecurityManager } from '../utils/enhancedSecurityManager';
@@ -58,9 +58,9 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
       const interval = setInterval(loadSystemMetrics, 5000);
       return () => clearInterval(interval);
     }
-  }, [isVisible]);
+  }, [isVisible, loadSystemMetrics]);
 
-  const loadSystemMetrics = async () => {
+  const loadSystemMetrics = useCallback(async () => {
     try {
       setIsLoading(true);
       
@@ -77,7 +77,7 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
       
       // Load system metrics
       const systemData = {
-        memoryUsage: (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0,
+        memoryUsage: ((performance as any).memory?.usedJSHeapSize ?? 0) / 1024 / 1024,
         cpuUsage: Math.random() * 100, // Placeholder
         networkLatency: Math.random() * 100 // Placeholder
       };
@@ -103,12 +103,10 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
       });
 
       // Generate real-time data
-      const realTime = Array.from({ length: 20 }, (_, i) => ({
-        time: new Date(Date.now() - (19 - i) * 1000).toLocaleTimeString(),
-        performance: Math.random() * 100,
-        security: Math.random() * 100,
-        memory: Math.random() * 100,
-        network: Math.random() * 100
+      const realTime: RealTimeDataPoint[] = Array.from({ length: 20 }, (_, i) => ({
+        timestamp: Date.now() - (19 - i) * 1000,
+        value: Math.random() * 100,
+        metric: 'performance'
       }));
       setRealTimeData(realTime as any);
     } catch (error) {
@@ -116,7 +114,7 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
     } finally {
       setIsLoading(false);
     }
-  };
+  }, []);
 
   // const exportSystemData = () => {
   //   const data = {
