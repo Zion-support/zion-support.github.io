@@ -6,10 +6,10 @@ import PerformanceTracker from './components/PerformanceTracker';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
-import { seoOptimizer } from './utils/seoOptimizations';
-import { seoEnhancer } from './utils/advancedSEOEnhancer';
-import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
+// import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
+// import { seoOptimizer } from './utils/seoOptimizations';
+// import { seoEnhancer } from './utils/advancedSEOEnhancer';
+// import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 // Removed unused imports to reduce warnings
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -17,14 +17,14 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
-import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
+import { SEOOptimizer } from './components/SEOOptimizer';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
-import { performanceOptimizer } from './utils/performanceOptimizer';
+// import { performanceOptimizer } from './utils/performanceOptimizer';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
@@ -245,7 +245,7 @@ export default function App(): React.JSX.Element {
 
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
-  }, [seoData]);
+  }, []);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: typeof memoizedSeoData) => {
@@ -631,7 +631,7 @@ export default function App(): React.JSX.Element {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span>Memory Usage:</span>
-                <span className="text-green-400">{Math.round((performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0)} MB</span>
+                <span className="text-green-400">{Math.round((performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize / 1024 / 1024 || 0)} MB</span>
               </div>
               <div className="flex justify-between">
                 <span>Render Time:</span>

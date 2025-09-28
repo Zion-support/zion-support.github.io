@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { advancedBuildOptimizer } from '../utils/advancedBuildOptimizer';
-import { accessibilityEnhancements } from '../utils/accessibilityEnhancements';
+// import { accessibilityEnhancements } from '../utils/accessibilityEnhancements';
 
 interface AdvancedPerformanceDashboardProps {
   isVisible: boolean;
