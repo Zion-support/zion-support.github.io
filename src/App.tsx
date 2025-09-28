@@ -193,8 +193,13 @@ export default function App(): React.JSX.Element {
     ogImage: 'https://zion.app/og-image.jpg',
     ogUrl: `https://zion.app${currentPathname}`,
     ogType: 'website' as const,
+    ogTitle: 'Zion Tech Group - AI & Technology Solutions',
+    ogDescription: 'Transform your business with cutting-edge AI and technology solutions.',
     twitterCard: 'summary_large_image' as const,
-    siteName: 'Zion Tech Group'
+    siteName: 'Zion Tech Group',
+    twitterTitle: 'Zion Tech Group - AI & Technology Solutions',
+    twitterDescription: 'Transform your business with cutting-edge AI and technology solutions.',
+    twitterImage: 'https://zion.app/twitter-image.jpg'
   }), [currentPathname]);
 
   // Performance optimization hook (for future use)
