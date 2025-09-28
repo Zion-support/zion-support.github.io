@@ -1,19 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { 
   ResponsiveContainer, 
-  BarChart, 
   CartesianGrid, 
   XAxis, 
   YAxis, 
   Tooltip, 
-  Bar, 
-  PieChart, 
-  Pie, 
-  Cell, 
   LineChart, 
-  Line,
-  Area,
-  AreaChart
+  Line
 } from 'recharts';
 import { performanceEnhancements } from '../utils/performanceEnhancements';
 import { bundleOptimizer } from '../utils/bundleOptimizer';
@@ -142,11 +135,11 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
   const loadingScore = 88; // Placeholder since loadingOptimizer is not available
   const overallScore = Math.round((performanceScore + bundleScore + loadingScore) / 3);
 
-  const pieData = [
-    { name: 'Performance', value: performanceScore, color: '#3b82f6' },
-    { name: 'Bundle', value: bundleScore, color: '#10b981' },
-    { name: 'Loading', value: loadingScore, color: '#f59e0b' }
-  ];
+  // const pieData = [
+  //   { name: 'Performance', value: performanceScore, color: '#3b82f6' },
+  //   { name: 'Bundle', value: bundleScore, color: '#10b981' },
+  //   { name: 'Loading', value: loadingScore, color: '#f59e0b' }
+  // ];
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">

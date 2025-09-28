@@ -30,20 +30,20 @@ export default function App(): React.JSX.Element {
   }, []);
   const originalTrackEngagement = useCallback(() => {}, []);
 
-  // Get current pathname for SEO
+  // Get current pathname for SEO (used in seoData)
   const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
   
-  // Temporary SEO data
+  // SEO data
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises.',
     keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services'],
-    canonicalUrl: typeof window !== 'undefined' ? window.location.href : '',
+    canonicalUrl: `https://zion.app${currentPathname}`,
     ogType: 'website' as const,
-    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
+    ogUrl: `https://zion.app${currentPathname}`,
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const
-  }), []);
+  }), [currentPathname]);
 
   // Performance optimization hook
   const { preloadResource } = usePerformanceOptimization({

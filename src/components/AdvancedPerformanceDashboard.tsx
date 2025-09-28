@@ -11,8 +11,8 @@ import {
   LineChart,
   Line
 } from 'recharts';
-import { advancedBuildOptimizer } from '../utils/advancedBuildOptimizer';
-import { accessibilityUtils } from '../utils/accessibilityUtils';
+// import { advancedBuildOptimizer } from '../utils/advancedBuildOptimizer';
+// import { accessibilityUtils } from '../utils/accessibilityUtils';
 
 interface AdvancedPerformanceDashboardProps {
   isVisible: boolean;

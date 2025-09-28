@@ -70,7 +70,7 @@ const AdvancedDashboard: React.FC = () => {
 
   const updateData = () => {
     // Mock data for now - uncomment when analytics and cache are available
-    const events: any[] = [];
+    const events: Array<{ type: string; timestamp: number; data: Record<string, unknown> }> = [];
     const cacheStats = { hitRate: 0.85, size: 1024, maxSize: 2048 };
     
     // Convert analytics events to analytics data format

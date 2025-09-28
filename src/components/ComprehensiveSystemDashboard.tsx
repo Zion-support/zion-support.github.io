@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area, LineChart, Line } from 'recharts';
-import advancedPerformanceOptimizer from '../utils/advancedPerformanceOptimizer';
+import { XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
+// import advancedPerformanceOptimizer from '../utils/advancedPerformanceOptimizer';
 import { enhancedSecurityManager } from '../utils/enhancedSecurityManager';
 import { enhancedPerformanceMonitor } from '../utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from '../utils/enhancedAnalytics';
@@ -67,11 +67,11 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
       
       // Load analytics data
       const analyticsReport = enhancedAnalytics.generateReport();
-      const advancedEvents = advancedAnalytics.getEvents();
+      // const advancedEvents = advancedAnalytics.getEvents();
       
       // Load system metrics
       const systemData = {
-        memoryUsage: (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0,
+        memoryUsage: (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize / 1024 / 1024 || 0,
         cpuUsage: Math.random() * 100, // Placeholder
         networkLatency: Math.random() * 100 // Placeholder
       };
@@ -112,29 +112,29 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
     }
   };
 
-  const exportSystemData = () => {
-    const data = {
-      metrics,
-      realTimeData,
-      timestamp: new Date().toISOString()
-    };
+  // const exportSystemData = () => {
+  //   const data = {
+  //     metrics,
+  //     realTimeData,
+  //     timestamp: new Date().toISOString()
+  //   };
 
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'system-dashboard-data.json';
-    a.click();
-    URL.revokeObjectURL(url);
-  };
+  //   const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  //   const url = URL.createObjectURL(blob);
+  //   const a = document.createElement('a');
+  //   a.href = url;
+  //   a.download = 'system-dashboard-data.json';
+  //   a.click();
+  //   URL.revokeObjectURL(url);
+  // };
 
-  const clearAllData = () => {
-    errorRecoverySystem.reset();
-    advancedAnalytics.clearData();
-    smartCache.clear();
-    setMetrics(null);
-    setRealTimeData([]);
-  };
+  // const clearAllData = () => {
+  //   errorRecoverySystem.reset();
+  //   advancedAnalytics.clearData();
+  //   smartCache.clear();
+  //   setMetrics(null);
+  //   setRealTimeData([]);
+  // };
 
   const getScoreColor = (score: number) => {
     if (score >= 90) return '#10B981';
@@ -171,7 +171,7 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
             {tabs.map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id as any)}
+                onClick={() => setActiveTab(tab.id as 'performance' | 'security' | 'analytics')}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-colors ${
                   activeTab === tab.id
                     ? 'bg-white text-blue-600 shadow-sm'
