@@ -31,39 +31,6 @@ const RealTimePerformanceMonitor: React.FC<RealTimePerformanceMonitorProps> = ({
   const [history, setHistory] = useState<PerformanceMetrics[]>([]);
   const [maxHistoryLength] = useState(100);
 
-   React, { useState, useEffect, useCallback } from "react";
-
-interface PerformanceMetrics {
-  fps: number;
-  memoryUsage: number;
-  renderTime: number;
-  networkLatency: number;
-  errorCount: number;
-  timestamp: number;
-}
-
-interface RealTimePerformanceMonitorProps {
-  isVisible: boolean;
-  onClose: () => void;
-}
-
-const RealTimePerformanceMonitor: React.FC<RealTimePerformanceMonitorProps> = ({
-  isVisible,
-  onClose,
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fps: 0,
-    memoryUsage: 0,
-    renderTime: 0,
-    networkLatency: 0,
-    errorCount: 0,
-    timestamp: Date.now(),
-  });
-
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [history, setHistory] = useState<PerformanceMetrics[]>([]);
-  const [maxHistoryLength] = useState(100);
-
   const calculateFPS = useCallback(() => {
     let lastTime = performance.now();
     let frameCount = 0;
@@ -89,7 +56,6 @@ const RealTimePerformanceMonitor: React.FC<RealTimePerformanceMonitorProps> = ({
     }
   }, [isMonitoring]);
 
-  
   const updateMetrics = useCallback(() => {
     if (!isMonitoring) return;
 
