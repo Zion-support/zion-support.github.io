@@ -49,6 +49,9 @@ import { enhancedSecuritySystem } from './utils/enhancedSecuritySystem';
 import { enhancedAccessibilitySystem } from './utils/enhancedAccessibilitySystem';
 import { apiCache as apiCacheSystem, imageCache as imageCacheSystem, dataCache as dataCacheSystem } from './utils/enhancedCachingSystem';
 import { enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
+import { advancedAppEnhancements } from './utils/advancedAppEnhancements';
+import { errorHandler, ErrorBoundary } from './utils/errorHandler';
+import { performanceMonitor } from './utils/performanceMonitoring';
 
 // Lazy load heavy components for better performance
 const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
@@ -226,6 +229,10 @@ export default function App(): React.JSX.Element {
       enhancedSecurityManager.initialize();
       enhancedAnalyticsSystem.initialize();
       
+      // Initialize new advanced enhancements
+      advancedAppEnhancements.initialize();
+      performanceMonitor.initialize();
+      
       // Initialize performance and accessibility enhancements
       // initializePerformanceEnhancements();
       // initializeAccessibilityEnhancements();
@@ -334,11 +341,12 @@ export default function App(): React.JSX.Element {
   }
 
   return (
-    <EnhancedErrorBoundary>
-      <SEOOptimizer />
-      <PerformanceTracker />
-      <WebsiteEnhancements />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <ErrorBoundary>
+      <EnhancedErrorBoundary>
+        <SEOOptimizer />
+        <PerformanceTracker />
+        <WebsiteEnhancements />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
         {/* System Dashboard */}
@@ -479,7 +487,8 @@ export default function App(): React.JSX.Element {
 
         {/* Enhanced Notification System */}
         <EnhancedNotificationSystem />
-      </div>
-    </EnhancedErrorBoundary>
+        </div>
+      </EnhancedErrorBoundary>
+    </ErrorBoundary>
   );
 }
