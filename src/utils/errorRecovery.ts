@@ -2,9 +2,26 @@
  * Error Recovery System
  */
 
+export interface ErrorContext {
+  component?: string;
+  action?: string;
+  timestamp: number;
+  userAgent?: string;
+  url?: string;
+}
+
+export interface RecoveryStrategy {
+  name: string;
+  condition: (error: Error, context: ErrorContext) => boolean;
+  action: (error: Error, context: ErrorContext) => Promise<void>;
+}
+
 export class ErrorRecovery {
   private errorCount = 0;
   private maxRetries = 3;
+  private errorHistory: ErrorContext[] = [];
+  private errors: ErrorContext[] = [];
+  private recoveryStrategies: RecoveryStrategy[] = [];
 
   constructor() {
     this.setupErrorHandling();
@@ -19,6 +36,17 @@ export class ErrorRecovery {
 
     window.addEventListener('unhandledrejection', (event) => {
       this.handleError(event.reason instanceof Error ? event.reason : new Error(String(event.reason)));
+    });
+
+    // Component error recovery
+    this.addStrategy({
+      name: 'component-reset',
+      condition: (error, context) => 
+        Boolean(context.component && error.message.includes('component')),
+      action: async (error, context) => {
+        console.log('🔄 Resetting component...');
+        // Component reset logic would go here
+      }
     });
   }
 
@@ -71,8 +99,26 @@ export class ErrorRecovery {
     return this.errorCount;
   }
 
+  public getErrorHistory(): ErrorContext[] {
+    return [...this.errorHistory];
+  }
+
+  public getErrors(): ErrorContext[] {
+    return [...this.errors];
+  }
+
   public reset(): void {
     this.errorCount = 0;
+    this.errorHistory = [];
+    this.errors = [];
+  }
+
+  public addStrategy(strategy: RecoveryStrategy): void {
+    this.recoveryStrategies.push(strategy);
+  }
+
+  public addRecoveryStrategy(strategy: RecoveryStrategy): void {
+    this.recoveryStrategies.push(strategy);
   }
 }
 
