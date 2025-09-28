@@ -17,6 +17,7 @@ export interface PerformanceMetrics {
 }
 
 export class AdvancedPerformanceMonitor {
+  private static instance: AdvancedPerformanceMonitor | null = null;
   private metrics: PerformanceMetrics;
   private isMonitoring = false;
   private callbacks: ((metrics: PerformanceMetrics) => void)[] = [];
@@ -37,6 +38,13 @@ export class AdvancedPerformanceMonitor {
       scrollDepth: 0,
       interactions: 0
     };
+  }
+
+  public static getInstance(): AdvancedPerformanceMonitor {
+    if (!AdvancedPerformanceMonitor.instance) {
+      AdvancedPerformanceMonitor.instance = new AdvancedPerformanceMonitor();
+    }
+    return AdvancedPerformanceMonitor.instance;
   }
 
   public start(): void {
@@ -80,8 +88,9 @@ export class AdvancedPerformanceMonitor {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (entry.entryType === 'first-input' && 'processingStart' in entry && 'startTime' in entry) {
-            this.metrics.fid = (entry as any).processingStart - entry.startTime;
+          if (entry.entryType === 'first-input') {
+            const fidEntry = entry as PerformanceEventTiming;
+            this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
           }
         });
       });
