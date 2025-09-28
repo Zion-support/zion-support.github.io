@@ -8,11 +8,12 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { analytics } from './utils/analytics';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import RealTimeMonitor from './components/RealTimeMonitor';
-import SystemMetricsDashboard from './components/SystemMetricsDashboard';
-import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
-import EnhancedAnalytics from './components/EnhancedAnalytics';
+// Available dashboard components for future use:
+// import PerformanceDashboard from './components/PerformanceDashboard';
+// import RealTimeMonitor from './components/RealTimeMonitor';
+// import SystemMetricsDashboard from './components/SystemMetricsDashboard';
+// import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
+// import EnhancedAnalytics from './components/EnhancedAnalytics';
 // Available for future use:
 // import { seoManager } from './utils/seoEnhanced';
 // import { seoOptimizer } from './utils/seoOptimization';
