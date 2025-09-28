@@ -619,8 +619,8 @@ export default function App(): React.JSX.Element {
       }
       
       // Initialize enhanced systems
-      enhancedPerformanceMonitor.startMonitoring();
-      analytics.initialize();
+      enhancedPerformanceMonitor.initialize();
+      // analytics.initialize(); // Auto-initialized when module is loaded
       
       // Initialize accessibility and security enhancers
       if (advancedAccessibilityEnhancer && typeof advancedAccessibilityEnhancer.initialize === 'function') {
