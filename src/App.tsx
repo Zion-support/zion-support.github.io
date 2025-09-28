@@ -31,7 +31,7 @@ import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
 import { performanceAlerts } from './utils/performanceAlerts';
-import { errorRecovery } from './utils/errorRecovery';
+// import { errorRecovery } from './utils/errorRecovery'; // Export doesn't exist
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
 import './index.css';
@@ -121,7 +121,7 @@ export default function App(): React.JSX.Element {
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
     keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    canonical: `https://zion.app${currentPathname}`,
+    canonical: `https://zion.app${typeof window !== 'undefined' ? window.location.pathname : ''}`,
     ogTitle: 'Zion Tech Group - AI & Technology Solutions',
     ogDescription: 'Transform your business with cutting-edge AI and technology solutions.',
     ogImage: 'https://zion.app/og-image.jpg',
@@ -129,7 +129,7 @@ export default function App(): React.JSX.Element {
     twitterTitle: 'Zion Tech Group - AI & Technology Solutions',
     twitterDescription: 'Transform your business with cutting-edge AI and technology solutions.',
     twitterImage: 'https://zion.app/twitter-image.jpg'
-  }), [currentPathname]);
+  }), []);
 
   // Performance optimization hook
   // const { getPerformanceMetrics } = usePerformanceOptimization();
@@ -197,7 +197,12 @@ export default function App(): React.JSX.Element {
     seoManager.updateMetaTags(seoData);
 
     // Update meta tags
-    updateMetaTags(memoizedSeoData);
+    updateMetaTags({
+      title: memoizedSeoData.title,
+      description: memoizedSeoData.description,
+      keywords: memoizedSeoData.keywords,
+      canonicalUrl: memoizedSeoData.canonical
+    });
   }, [seoData]);
 
   // Update meta tags function

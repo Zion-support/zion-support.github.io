@@ -224,7 +224,7 @@ class EnhancedMonitoring {
           if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
             this.trackPerformance({
               name: 'CLS',
-              value: (entry as { value: number }).value,
+              value: (entry as any).value || 0,
               type: 'measure',
               url: window.location.href,
               sessionId: this.sessionId,

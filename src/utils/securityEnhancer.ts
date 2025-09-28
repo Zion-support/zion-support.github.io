@@ -46,12 +46,7 @@ class SecurityEnhancer {
   private blockedDomains: Set<string> = new Set();
   private suspiciousPatterns: RegExp[] = [];
 
-  public static getInstance(): SecurityEnhancer {
-    if (!SecurityEnhancer.instance) {
-      SecurityEnhancer.instance = new SecurityEnhancer();
-    }
-    return SecurityEnhancer.instance;
-  }
+  // Removed duplicate getInstance method
 
   constructor(config: Partial<SecurityConfig> = {}) {
     this.config = {
