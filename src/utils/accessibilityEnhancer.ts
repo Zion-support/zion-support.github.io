@@ -336,7 +336,7 @@ class AccessibilityEnhancer {
       const backgroundColor = styles.backgroundColor;
       
       if (color && backgroundColor) {
-        const contrastRatio = this.calculateContrastRatio();
+        const contrastRatio = this.calculateContrastRatio(color, backgroundColor);
         if (contrastRatio < 4.5) {
           element.setAttribute('data-low-contrast', 'true');
           console.warn('Low contrast detected:', element, 'Ratio:', contrastRatio);
@@ -345,11 +345,9 @@ class AccessibilityEnhancer {
     });
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  private calculateContrastRatio(_color1: string, _color2: string): number {
+  private calculateContrastRatio(): number {
     // Simplified contrast ratio calculation
     // In a real implementation, you'd parse the colors and calculate luminance
-    // Parameters are prefixed with _ to indicate they are intentionally unused
     return 4.5; // Placeholder
   }
 
