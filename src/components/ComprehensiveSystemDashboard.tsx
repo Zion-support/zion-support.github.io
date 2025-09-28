@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { errorRecoverySystem as errorRecovery } from '../utils/errorRecovery';
+// import { errorRecoverySystem as errorRecovery } from '../utils/errorRecovery';
 import { advancedAnalytics } from '../utils/advancedAnalytics';
 import { smartCache } from '../utils/smartCache';
 

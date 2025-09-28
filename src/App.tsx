@@ -3,11 +3,11 @@ import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
+// import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
+// import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
@@ -20,7 +20,7 @@ import { advancedCacheSystem } from './utils/advancedCacheSystem';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
 import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { SecurityEnhancer } from './utils/securityEnhancer';
-import AdvancedAnalytics from './components/AdvancedAnalytics';
+// import AdvancedAnalytics from './components/AdvancedAnalytics';
 import { comprehensivePerformanceMonitor } from './utils/comprehensivePerformanceMonitor';
 import { enhancedErrorRecovery } from './utils/enhancedErrorRecovery';
 import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
@@ -31,7 +31,7 @@ import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
 import { performanceAlerts } from './utils/performanceAlerts';
-import { errorRecovery } from './utils/errorRecovery';
+// import { errorRecovery } from './utils/errorRecovery';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
 import './index.css';
@@ -43,16 +43,16 @@ export default function App(): React.JSX.Element {
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
-  const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  // const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
+  // const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Performance metrics state
-  const [performanceMetrics, setPerformanceMetrics] = useState({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    errorCount: 0
-  });
+  // Performance metrics state - commented out to reduce warnings
+  // const [performanceMetrics, setPerformanceMetrics] = useState({
+  //   loadTime: 0,
+  //   renderTime: 0,
+  //   memoryUsage: 0,
+  //   errorCount: 0
+  // });
 
   // Memoize SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
@@ -106,15 +106,15 @@ export default function App(): React.JSX.Element {
   }, []);
 
   // Enhanced track engagement function
-  const engagementData = useMemo(() => ({
-    clicks: 0,
-    scrollDepth: 0,
-    startTime: Date.now()
-  }), []);
+  // const engagementData = useMemo(() => ({
+  //   clicks: 0,
+  //   scrollDepth: 0,
+  //   startTime: Date.now()
+  // }), []);
 
   const enhancedTrackEngagement = useCallback(() => {
     trackEngagement();
-  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
+  }, [trackEngagement]);
 
   // Memoize the SEO data to prevent unnecessary re-renders
   const memoizedSeoData = useMemo(() => ({
@@ -145,7 +145,7 @@ export default function App(): React.JSX.Element {
       if ('startMonitoring' in enhancedPerformanceMonitor) {
         enhancedPerformanceMonitor.startMonitoring();
       } else if ('initialize' in enhancedPerformanceMonitor) {
-        (enhancedPerformanceMonitor as any).initialize();
+        (enhancedPerformanceMonitor as { initialize: () => void }).initialize();
       }
       enhancedAnalytics.initialize();
       advancedCacheSystem.initialize();
@@ -198,7 +198,7 @@ export default function App(): React.JSX.Element {
 
     // Update meta tags
     updateMetaTags(memoizedSeoData);
-  }, [seoData]);
+  }, [seoData, memoizedSeoData, updateMetaTags]);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: typeof seoData) => {
@@ -282,7 +282,7 @@ export default function App(): React.JSX.Element {
     const updateMetrics = () => {
       if (typeof window !== 'undefined' && window.performance) {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const memory = (performance as any).memory;
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
         
         setPerformanceMetrics({
           loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
