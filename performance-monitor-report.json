@@ -1,8 +1,8 @@
 {
-  "buildTime": 8154,
-  "bundleSize": 1251419,
-  "chunkCount": 16,
-  "timestamp": "2025-09-28T23:07:47.678Z",
+  "buildTime": 9424,
+  "bundleSize": 1240271,
+  "chunkCount": 17,
+  "timestamp": "2025-09-28T23:14:19.896Z",
   "recommendations": [
     "High chunk count - consider consolidating chunks"
   ],

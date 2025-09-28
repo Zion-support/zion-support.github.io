@@ -1,0 +1,54 @@
+{
+  "timestamp": "2025-09-28T23:14:42.605Z",
+  "totalSize": 1291518,
+  "jsFiles": 17,
+  "cssFiles": 1,
+  "largestJsFiles": [
+    {
+      "name": "assets/js/chunk-NzAoPyO7.js",
+      "size": 496310
+    },
+    {
+      "name": "assets/js/chunk-DPvCVK5I.js",
+      "size": 286925
+    },
+    {
+      "name": "assets/js/chunk-tqLhQUpU.js",
+      "size": 205819
+    },
+    {
+      "name": "assets/js/chunk-BIiLZScT.js",
+      "size": 157783
+    },
+    {
+      "name": "assets/js/main-BvPWsqfW.js",
+      "size": 24172
+    },
+    {
+      "name": "assets/js/Home-Cp6u65aW.js",
+      "size": 13937
+    },
+    {
+      "name": "assets/js/Contact-DPL7fkhz.js",
+      "size": 8875
+    },
+    {
+      "name": "assets/js/About-NgzRJ-s6.js",
+      "size": 8361
+    },
+    {
+      "name": "sw-enhanced.js",
+      "size": 7084
+    },
+    {
+      "name": "assets/js/Services-gZpTQ77T.js",
+      "size": 6967
+    }
+  ],
+  "largestCssFiles": [
+    {
+      "name": "assets/css/main-BS0QWvBY.css",
+      "size": 21477
+    }
+  ]
+}
