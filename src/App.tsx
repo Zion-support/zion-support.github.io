@@ -117,7 +117,7 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
 
-    // Set default SEO data
+    // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
 
     // Basic performance monitoring
