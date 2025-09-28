@@ -6,18 +6,47 @@ interface AIPerformanceDashboardProps {
   onClose: () => void;
 }
 
+interface PerformanceMetrics {
+  errorRate: number;
+  criticalErrorsToday: number;
+  userImpactScore: number;
+  avgResolutionTime: number;
+}
+
+interface AIInsights {
+  predictedHighRiskActions: string[];
+  recommendedImprovements: string[];
+  errorTrends: Array<{
+    category: string;
+    trend: 'increasing' | 'decreasing' | 'stable';
+  }>;
+}
+
+interface ErrorReport {
+  severity: string;
+  message: string;
+  lastOccurrence: string | number;
+  occurrenceCount: number;
+  context: {
+    component?: string;
+    action?: string;
+  };
+  aiPredictedImpact?: number;
+  resolutionSuggestions?: string[];
+}
+
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
-  const [metrics, setMetrics] = useState<any>(null);
-  const [insights, setInsights] = useState<any>(null);
-  const [errors, setErrors] = useState<any[]>([]);
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [insights, setInsights] = useState<AIInsights | null>(null);
+  const [errors, setErrors] = useState<ErrorReport[]>([]);
 
   useEffect(() => {
     if (isVisible) {
       const updateData = () => {
         try {
-          setMetrics(enhancedErrorHandler.getPerformanceMetrics());
-          setInsights(enhancedErrorHandler.getAIInsights());
-          setErrors(enhancedErrorHandler.getErrorReports().slice(0, 10));
+          setMetrics(enhancedErrorHandler.getPerformanceMetrics() as PerformanceMetrics);
+          setInsights(enhancedErrorHandler.getAIInsights() as AIInsights);
+          setErrors(enhancedErrorHandler.getErrorReports().slice(0, 10) as ErrorReport[]);
         } catch (error) {
           console.error('Failed to fetch dashboard data:', error);
         }
@@ -124,7 +153,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
             <div className="bg-gray-50 p-4 rounded-lg mb-8">
               <h3 className="text-lg font-semibold mb-3 text-gray-800">📊 Error Trends (7 days)</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {insights.errorTrends.map((trend: any, index: number) => (
+                {insights.errorTrends.map((trend, index: number) => (
                   <div key={index} className="bg-white p-3 rounded border">
                     <div className="flex items-center justify-between">
                       <span className="font-medium capitalize">{trend.category}</span>
@@ -156,7 +185,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                             {error.severity}
                           </span>
                           <span className="text-xs text-gray-500">
-                            {new Date(error.lastOccurrence).toLocaleString()}
+                            {new Date(typeof error.lastOccurrence === 'string' ? error.lastOccurrence : error.lastOccurrence).toLocaleString()}
                           </span>
                         </div>
                         <h4 className="font-medium text-gray-800 mb-1">{error.message}</h4>
