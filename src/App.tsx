@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useMemo, useEffect } from 'react';
+import React, { useCallback, useState, useEffect, useMemo } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import PerformanceDashboard from './components/PerformanceDashboard';
@@ -9,14 +9,10 @@ import EnhancedNotificationSystem from './components/EnhancedNotificationSystem'
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { initializeErrorReporting } from './utils/errorReporting';
-import { advancedPerformanceOptimizer } from './utils/performanceOptimizer';
-import { seoOptimizer } from './utils/seoOptimization';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
 import './styles/modern-utilities.css';
-
 export default function App(): React.JSX.Element {
   // State for system metrics dashboard
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
@@ -54,93 +50,62 @@ export default function App(): React.JSX.Element {
     ogType: 'website',
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const
+    twitterCard: 'summary_large_image' as const,
+    structuredData: []
   }), []);
 
+  // Handle scroll events
+  const handleScroll = useCallback(() => {
+    // Scroll handling logic can be added here
+  }, []);
+
+  // Handle click events
+  const handleClick = useCallback(() => {
+    // Click handling logic can be added here
+  }, []);
+
+  // Simple SEO manager
+  const seoManager = {
+    updateMetaTags: (data: typeof seoData) => {
+      if (typeof document !== 'undefined') {
+        document.title = data.title;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+          metaDescription.setAttribute('content', data.description);
+        }
+      }
+    }
+  };
+
   useEffect(() => {
-    // Initialize error reporting
-    initializeErrorReporting();
-    
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
-    }
-    
-    // Initialize performance optimizer
-    if (advancedPerformanceOptimizer) {
-      advancedPerformanceOptimizer.startMonitoring();
-    }
-    
-    // Initialize SEO optimizer
-    if (seoOptimizer) {
-      seoOptimizer.updatePageSEO({
-        title: seoData.title,
-        description: seoData.description,
-        keywords: seoData.keywords,
-        image: seoData.ogImage,
-        url: typeof window !== 'undefined' ? window.location.href : '',
-        type: seoData.ogType as 'website' | 'article' | 'product'
-      });
-    }
-    
-    // Mark app as fully initialized
-    if (typeof window !== 'undefined' && window.performance && 
-        typeof performance.mark === 'function' && 
-        typeof performance.measure === 'function') {
-      performance.mark('app-init-complete');
-      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
-    }
-  }, [seoData]);
-
-  // Add keyboard event listener
-  React.useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
-    
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [handleKeyDown]);
-
-  // Track engagement function
-  const trackEngagement = useCallback(() => {
-    const timeOnPage = Date.now() - engagementData.startTime;
-    seoAnalytics.trackUserEngagement(window.location.pathname, {
-      timeOnPage,
-      scrollDepth: engagementData.scrollDepth,
-      clicks: engagementData.clicks,
-    });
-  }, [engagementData]);
-
-  // Main initialization and cleanup effect
-  React.useEffect(() => {
-    // Track engagement on page unload
-    window.addEventListener('beforeunload', trackEngagement);
-    window.addEventListener('scroll', handleScroll);
-    document.addEventListener('click', handleClick);
-
-    // Mark app as fully initialized
-    if (typeof window !== 'undefined' && window.performance && 
-        typeof performance.mark === 'function' && 
-        typeof performance.measure === 'function') {
-      performance.mark('app-init-complete');
-      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
 
     // Set default SEO data
     seoManager.updateMetaTags(seoData);
 
-    // Basic performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized');
+    // Add keyboard event listener
+    document.addEventListener('keydown', handleKeyDown);
+
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+
+    // Mark app as fully initialized
+    if (typeof window !== 'undefined' && window.performance && 
+        typeof performance.mark === 'function' && 
+        typeof performance.measure === 'function') {
+      performance.mark('app-init-complete');
+      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
 
     // Cleanup function
     return () => {
-      window.removeEventListener('beforeunload', trackEngagement);
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
+      document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [trackEngagement, handleScroll, handleClick, seoData]);
+  }, [handleKeyDown]);
 
   // Show loading screen while initializing
   if (isLoading) {
