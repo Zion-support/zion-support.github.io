@@ -11,7 +11,7 @@ interface SEOEnhancerProps {
   ogImageAlt?: string;
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   noIndex?: boolean;
-  structuredData?: Record<string, any>;
+  structuredData?: Record<string, unknown>;
   children?: React.ReactNode;
 }
 
@@ -80,7 +80,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 
     // Track SEO enhancement
     if ('gtag' in window) {
-      (window as any).gtag('event', 'seo_enhanced', {
+      (window as Window & { gtag?: (command: string, eventName: string, params: Record<string, unknown>) => void }).gtag?.('event', 'seo_enhanced', {
         page_title: title,
         page_location: currentUrl
       });
