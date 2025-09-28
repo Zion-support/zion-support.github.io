@@ -19,15 +19,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
-  const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
-  const [performanceMetrics, setPerformanceMetrics] = useState({
-    memoryUsage: 0,
-    renderTime: 0,
-    networkLatency: 0,
-    errorCount: 0
-  });
-  
-  // Engagement tracking data (for future use)
+  // Engagement tracking data (currently unused but available for future features)
   // const engagementData = useMemo(() => ({
   //   startTime: Date.now(),
   //   scrollDepth: 0,
