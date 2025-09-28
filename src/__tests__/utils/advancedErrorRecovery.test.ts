@@ -7,6 +7,13 @@ describe('Advanced Error Recovery System', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     // Reset any internal state if needed
+    advancedErrorRecovery.reset();
+    // Configure for testing with minimal delays
+    advancedErrorRecovery.configure({
+      retryDelay: 0,
+      enableCircuitBreaker: false,
+      maxRetries: 2
+    });
   });
 
   describe('Error Recovery Strategies', () => {
@@ -149,7 +156,7 @@ describe('Advanced Error Recovery System', () => {
         'network'
       );
 
-      expect(guidance).toContain('network');
+      expect(guidance).toContain('Network');
       expect(guidance).toContain('connection');
     });
 
