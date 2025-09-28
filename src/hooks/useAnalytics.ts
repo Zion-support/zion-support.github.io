@@ -1,6 +1,4 @@
-// import { useEffect } from 'react';
-
-interface AnalyticsEvent {
+// interface AnalyticsEvent {
   action: string;
   category: string;
   label?: string;

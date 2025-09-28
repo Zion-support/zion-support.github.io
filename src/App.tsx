@@ -4,7 +4,7 @@ import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
-// import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceMonitor from './components/PerformanceMonitor';
 // import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
@@ -709,6 +709,15 @@ export default function App(): React.JSX.Element {
       <Suspense fallback={null}>
         <PerformanceIndicator showDetails={showAdvancedMonitoring} />
       </Suspense>
+      
+      {/* Performance Monitor */}
+      <PerformanceMonitor 
+        showDetails={showAdvancedMonitoring}
+        enableAlerts={true}
+        onPerformanceIssue={(metric, value, threshold) => {
+          console.warn(`Performance issue detected: ${metric} = ${value} (threshold: ${threshold})`);
+        }}
+      />
     </AccessibilityEnhancer>
     </Suspense>
     </EnhancedErrorBoundary>
