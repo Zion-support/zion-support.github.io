@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
+import { advancedAnalytics as analytics, AdvancedAnalytics } from '../utils/advancedAnalytics';
 import AdvancedCacheManager from '../utils/advancedCache';
 import AdvancedAccessibilityManager from '../utils/advancedAccessibilityManager';
 import AdvancedSecurityManager from '../utils/advancedSecurityManager';
@@ -78,8 +78,8 @@ const AdvancedDashboard: React.FC = () => {
       id: `session_${Date.now()}`,
       startTime: Date.now() - 300000, // 5 minutes ago
       lastActivity: Date.now(),
-      pageViews: events.filter(e => e.name === 'page_view').length,
-      events: events.map(e => ({
+      pageViews: events.filter((e: any) => e.name === 'page_view').length,
+      events: events.map((e: any) => ({
         event: e.name,
         timestamp: e.timestamp || Date.now(),
         properties: e.properties
