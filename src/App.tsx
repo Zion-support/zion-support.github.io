@@ -5,11 +5,7 @@ import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-import { seoOptimizer } from './utils/seoOptimization';
-import { cacheManager } from './utils/cacheManager';
-import { apiClient } from './utils/apiClient';
-import { notificationManager } from './utils/notificationManager';
-import { userFeedback } from './utils/userFeedbackManager';
+// Removed unused imports: seoOptimizer, cacheManager, apiClient, notificationManager, userFeedback
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import RealTimeMonitor from './components/RealTimeMonitor';
@@ -18,7 +14,7 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedAnalytics from './components/EnhancedAnalytics';
-import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
+// Removed unused import: getComprehensiveEnhancements
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -89,9 +85,8 @@ export default function App(): React.JSX.Element {
 
     // Initialize basic systems
     analytics.initialize();
-    cacheManager.initialize();
-    apiClient.initialize();
-    notificationManager.initialize();
+    // Note: CacheManager, ApiClient, and NotificationManager don't have initialize methods
+    // They are initialized when first used via their getInstance() methods
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -99,10 +94,10 @@ export default function App(): React.JSX.Element {
     // Initialize performance SEO optimizations
     performanceSEO.optimizeImages();
     performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
+    // Note: optimizeCSS method doesn't exist in PerformanceSEO class
 
-    // Set default SEO data
-    seoManager.updateMetaTags(seoData);
+    // Set default SEO data using the correct method
+    seoManager.updateSEO(seoData);
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
