@@ -22,7 +22,7 @@ export const createLazyComponent = <P extends object>(
     const [show, setShow] = React.useState(delay === 0);
     
     React.useEffect(() => {
-      if (delay > 0) {
+      if (typeof delay === 'number' && delay > 0) {
         const timer = setTimeout(() => setShow(true), delay);
         return () => clearTimeout(timer);
       }
@@ -34,7 +34,7 @@ export const createLazyComponent = <P extends object>(
 
     return (
       <Suspense fallback={customFallback || fallback || <ModernLoadingSpinner />}>
-        <LazyComponent {...(restProps as P)} ref={ref} />
+        <LazyComponent {...(restProps as Record<string, unknown>)} ref={ref} />
       </Suspense>
     );
   });

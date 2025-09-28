@@ -91,7 +91,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         largestContentfulPaint: lcp,
         cumulativeLayoutShift: cls,
         firstInputDelay: 0, // Would need to measure this separately
-        timeToInteractive: navigation.domInteractive - navigation.navigationStart,
+        timeToInteractive: navigation.domInteractive - (navigation as PerformanceNavigationTiming).navigationStart || 0,
         bundleSize: 0, // Would need to calculate from actual bundle
         memoryUsage,
         renderTime,

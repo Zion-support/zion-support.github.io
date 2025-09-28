@@ -32,7 +32,7 @@ export const useOptimizedState = <T>(initialValue: T) => {
  */
 export const useDebouncedState = <T>(initialValue: T, delay: number = 300) => {
   const [state, setState] = useState(initialValue);
-  const timeoutRef = useRef<NodeJS.Timeout>();
+  const timeoutRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
   const setDebouncedState = useCallback((newValue: T | ((prev: T) => T)) => {
     if (timeoutRef.current) {

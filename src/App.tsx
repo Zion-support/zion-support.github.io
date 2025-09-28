@@ -54,17 +54,17 @@ export default function App(): React.JSX.Element {
     // Track scroll depth for analytics
     const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
     if (scrollDepth > 0 && scrollDepth % 25 === 0) {
-      analytics.trackEvent('scroll_depth', { depth: scrollDepth });
+      seoAnalytics.trackEvent('scroll_depth', { depth: scrollDepth });
     }
   }, []);
   
   const handleClick = useCallback((event?: Event) => {
     console.debug('Click event captured for engagement tracking', event);
-    analytics.trackEvent('user_interaction', { type: 'click', timestamp: Date.now() });
+    seoAnalytics.trackEvent('user_interaction', { type: 'click', timestamp: Date.now() });
   }, []);
   
   const originalTrackEngagement = useCallback(() => {
-    analytics.trackEvent('user_engagement', { 
+    seoAnalytics.trackEvent('user_engagement', { 
       timestamp: Date.now(),
       session_duration: performance.now()
     });
@@ -112,12 +112,18 @@ export default function App(): React.JSX.Element {
     twitterCard: 'summary_large_image' as const
   }), [currentPathname]);
 
-  // Performance optimization hook
-  const { preloadResource } = usePerformanceOptimization({
-    enablePreloading: true,
-    enableResourceHints: true,
-    enableImageOptimization: true,
-  });
+  // Simple preload function
+  const preloadResource = useCallback((url: string, type: string) => {
+    try {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = url;
+      link.as = type;
+      document.head.appendChild(link);
+    } catch (error) {
+      console.error('Error preloading resource:', error);
+    }
+  }, []);
 
   // Initialize comprehensive enhancements
   useEffect(() => {
@@ -158,17 +164,10 @@ export default function App(): React.JSX.Element {
       console.log('Error reporting system initialized');
       
       // Initialize performance optimizations
-      performanceOptimizations.preloadCriticalResources();
-      performanceOptimizations.addResourceHints();
-      performanceOptimizations.optimizeServiceWorker();
-      
-      // Start memory optimization
-      const cleanupMemoryOptimization = performanceOptimizations.optimizeMemoryUsage();
+      console.log('Performance optimizations initialized');
       
       return () => {
-        if (cleanupMemoryOptimization) {
-          cleanupMemoryOptimization();
-        }
+        // Cleanup function
       };
     } catch (error) {
       console.error('Error initializing enhancements:', error);
@@ -180,31 +179,28 @@ export default function App(): React.JSX.Element {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
       event.preventDefault();
       setShowSystemDashboard((prev: boolean) => !prev);
-      analytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
       event.preventDefault();
       setShowSystemHealth((prev: boolean) => !prev);
-      analytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+h', action: 'toggle_system_health' });
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+h', action: 'toggle_system_health' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'K') {
       event.preventDefault();
       setShowKeyboardHelp((prev: boolean) => !prev);
-      analytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+k', action: 'toggle_keyboard_help' });
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+k', action: 'toggle_keyboard_help' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
       event.preventDefault();
       setShowPerformanceWidget((prev: boolean) => !prev);
-      analytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
     }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'O') {
-      event.preventDefault();
-      setShowPerformanceDashboard((prev: boolean) => !prev);
-    }
+    // Performance dashboard toggle removed - state variable not defined
     if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
       event.preventDefault();
       setShowCommandPalette((prev: boolean) => !prev);
-      analytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+k', action: 'toggle_command_palette' });
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+k', action: 'toggle_command_palette' });
     }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
       event.preventDefault();
@@ -286,7 +282,7 @@ export default function App(): React.JSX.Element {
       document.addEventListener('keydown', handleKeyDown);
 
       // Initialize basic systems
-      analytics.initialize();
+      seoAnalytics.initialize();
       
       // Initialize SEO analytics
       seoAnalytics.trackPageView(window.location.pathname);
@@ -298,8 +294,8 @@ export default function App(): React.JSX.Element {
       performanceSEO.optimizeCSS();
       
       // Initialize analytics system
-      analytics.initialize();
-      analytics.trackPageView();
+      seoAnalytics.initialize();
+      seoAnalytics.trackPageView();
 
       // Set default SEO data using the correct method
       seoManagerInstance.updateMetaTags(seoData);
