@@ -521,7 +521,7 @@ export default function App(): React.JSX.Element {
         />
 
         {/* New Components */}
-        <NotificationSystem />
+        <NotificationSystem notifications={[]} onRemove={() => {}} />
         
         <KeyboardShortcutsHelp
           isVisible={showKeyboardHelp}
