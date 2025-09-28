@@ -6,34 +6,7 @@ interface AIPerformanceDashboardProps {
   onClose: () => void;
 }
 
-interface PerformanceMetrics {
-  errorRate: number;
-  criticalErrorsToday: number;
-  userImpactScore: number;
-  avgResolutionTime: number;
-}
-
-interface AIInsights {
-  predictedHighRiskActions: string[];
-  recommendedImprovements: string[];
-  errorTrends: Array<{
-    category: string;
-    trend: 'increasing' | 'decreasing' | 'stable';
-  }>;
-}
-
-interface ErrorReport {
-  severity: string;
-  message: string;
-  lastOccurrence: string | number;
-  occurrenceCount: number;
-  context: {
-    component?: string;
-    action?: string;
-  };
-  aiPredictedImpact?: number;
-  resolutionSuggestions?: string[];
-}
+// Interfaces removed as they were unused - types are defined inline where needed
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
   const [metrics, setMetrics] = useState<{
