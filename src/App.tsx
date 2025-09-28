@@ -7,6 +7,7 @@ import PerformanceTracker from './components/PerformanceTracker';
 // import PerformanceMonitor from './components/PerformanceMonitor';
 // import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
 import PerformanceDashboard from './components/PerformanceDashboard';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
@@ -350,9 +351,10 @@ export default function App(): React.JSX.Element {
   }
 
   return (
-    <EnhancedErrorBoundary showDetails={process.env.NODE_ENV === 'development'}>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <AppRouter />
+    <PerformanceOptimizer enableMonitoring={true} enableOptimizations={true}>
+      <EnhancedErrorBoundary showDetails={process.env.NODE_ENV === 'development'}>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <AppRouter />
         
         {/* System Dashboard - Toggle with Ctrl+Shift+D */}
         {showSystemDashboard && (
@@ -479,5 +481,6 @@ export default function App(): React.JSX.Element {
         </div>
       </div>
     </EnhancedErrorBoundary>
+    </PerformanceOptimizer>
   );
 }
