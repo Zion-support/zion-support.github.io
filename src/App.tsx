@@ -193,14 +193,6 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeImages();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
-<<<<<<< HEAD
-
-    // Initialize new utility systems
-    // performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
-    // accessibilityUtils.announce('Application initialized');
-    // securityUtils.getSecurityScore();
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-4652
 
     // Set default SEO data using the correct method
     updateMetaTags(seoData);
@@ -242,10 +234,7 @@ export default function App(): React.JSX.Element {
         }
       }
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-4652
+    
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
         typeof performance.mark === 'function' && 
@@ -263,18 +252,12 @@ export default function App(): React.JSX.Element {
       trackEngagement();
     };
   }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags, enhancedTrackEngagement, trackEngagement]);
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-4652
   // Optimize performance on mount
   useEffect(() => {
     // Performance optimization is handled by the usePerformanceOptimization hook
     preloadResource('/api/health');
   }, [preloadResource]);
 
-<<<<<<< HEAD
-=======
   // Track engagement on scroll and click
   useEffect(() => {
     const handleScrollWithEngagement = () => {
@@ -296,7 +279,6 @@ export default function App(): React.JSX.Element {
     };
   }, [handleScroll, handleClick, enhancedTrackEngagement]);
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-4652
   // Performance monitoring effect
   React.useEffect(() => {
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
