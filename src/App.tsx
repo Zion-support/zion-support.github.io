@@ -30,7 +30,7 @@ import { errorTracker } from './utils/advancedErrorTracker';
 import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
 
 // Import comprehensive systems
-import enhancedErrorRecovery from './utils/comprehensiveErrorRecovery';
+// import enhancedErrorRecovery from './utils/comprehensiveErrorRecovery';
 
 // Import types
 import NotificationSystem, { Notification } from './components/NotificationSystem';
@@ -51,16 +51,16 @@ const RealTimePerformanceMonitor = lazy(() => import('./components/RealTimePerfo
 const AdvancedAnalytics = lazy(() => import('./components/AdvancedAnalytics'));
 const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard'));
 const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPalette'));
-const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
-const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
-const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
+// const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
+// const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
+// const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
 const SystemStatusIndicator = lazy(() => import('./components/SystemStatusIndicator'));
 const EnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotificationSystem'));
 const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcutsManager'));
 const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDashboard'));
 // import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
-import SEOOptimizer, { useSEOData } from './components/SEOOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { performanceAlerts } from './utils/performanceAlerts';
@@ -84,14 +84,14 @@ export default function App(): React.JSX.Element {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
-  const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
-  const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
+  // const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
+  // const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
   const [showComprehensiveMonitoring, setShowComprehensiveMonitoring] = useState(false);
   const [showRealTimePerformance, setShowRealTimePerformance] = useState(false);
   const [showEnhancedCommandPalette, setShowEnhancedCommandPalette] = useState(false);
   const [showSystemStatus, setShowSystemStatus] = useState(true);
   const [showEnhancedNotifications] = useState(true);
-  const [showKeyboardShortcutsManager, setShowKeyboardShortcutsManager] = useState(false);
+  // const [showKeyboardShortcutsManager, setShowKeyboardShortcutsManager] = useState(false);
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
@@ -198,12 +198,12 @@ export default function App(): React.JSX.Element {
     console.debug('Click event captured for engagement tracking', event);
   }, []);
   
-  const originalTrackEngagement = useCallback(() => {
-    console.debug('User engagement tracked', { 
-      timestamp: Date.now(),
-      session_duration: performance.now()
-    });
-  }, []);
+  // const originalTrackEngagement = useCallback(() => {
+  //   console.debug('User engagement tracked', { 
+  //     timestamp: Date.now(),
+  //     session_duration: performance.now()
+  //   });
+  // }, []);
 
   // Simulate loading for demonstration
   useEffect(() => {
@@ -259,17 +259,17 @@ export default function App(): React.JSX.Element {
   }), [currentPathname]);
 
   // Simple preload function
-  const preloadResource = useCallback((url: string, type: string) => {
-    try {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = url;
-      link.as = type;
-      document.head.appendChild(link);
-    } catch (error) {
-      console.error('Error preloading resource:', error);
-    }
-  }, []);
+  // const preloadResource = useCallback((url: string, type: string) => {
+  //   try {
+  //     const link = document.createElement('link');
+  //     link.rel = 'preload';
+  //     link.href = url;
+  //     link.as = type;
+  //     document.head.appendChild(link);
+  //   } catch (error) {
+  //     console.error('Error preloading resource:', error);
+  //   }
+  // }, []);
 
   // Initialize comprehensive enhancements
   useEffect(() => {
@@ -360,84 +360,84 @@ export default function App(): React.JSX.Element {
   }, [seoData.title, seoData.description, seoData.keywords, seoData.canonicalUrl, seoData.ogImage, seoData.ogType, seoData.twitterCard]);
 
   // Optimized keyboard handler for system dashboard toggle
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
-      event.preventDefault();
-      setShowSystemDashboard((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
-      addNotification({ type: 'info', title: 'Dashboard', message: 'System dashboard toggled' });
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
-      event.preventDefault();
-      setShowSystemHealth((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+h', action: 'toggle_system_health' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'K') {
-      event.preventDefault();
-      setShowKeyboardHelp((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+k', action: 'toggle_keyboard_help' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceWidget((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'C') {
-      event.preventDefault();
-      setShowComprehensiveDashboard((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+c', action: 'toggle_comprehensive_dashboard' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowComprehensiveMonitoring((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+m', action: 'toggle_comprehensive_monitoring' });
-    }
-    // Performance dashboard toggle removed - state variable not defined
-    if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
-      event.preventDefault();
-      setShowEnhancedCommandPalette((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+k', action: 'toggle_enhanced_command_palette' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'R') {
-      event.preventDefault();
-      setShowRealTimePerformance((prev: boolean) => !prev);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+r', action: 'toggle_real_time_performance' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowAdvancedMonitoring((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+m', action: 'toggle_advanced_monitoring' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'T') {
-      event.preventDefault();
-      setIsDarkMode((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+t', action: 'toggle_theme' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'S') {
-      event.preventDefault();
-      setShowSystemStatus((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+s', action: 'toggle_system_status' });
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === '?') {
-      event.preventDefault();
-      setShowKeyboardShortcutsManager((prev: boolean) => !prev);
-      console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+?', action: 'toggle_keyboard_shortcuts_manager' });
-    }
-    if (event.key === 'Escape') {
-      setShowCommandPalette(false);
-      setShowSystemDashboard(false);
-      setShowSystemHealth(false);
-      setShowPerformanceWidget(false);
-      setShowKeyboardHelp(false);
-      setShowAdvancedMonitoring(false);
-      setShowComprehensiveDashboard(false);
-      setShowRealTimePerformance(false);
-      setShowEnhancedCommandPalette(false);
-      setShowKeyboardShortcutsManager(false);
-      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
-    }
-  }, [addNotification]);
+  // const handleKeyDown = useCallback((event: KeyboardEvent) => {
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
+  //     event.preventDefault();
+  //     setShowSystemDashboard((prev: boolean) => !prev);
+  //     seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
+  //     addNotification({ type: 'info', title: 'Dashboard', message: 'System dashboard toggled' });
+  //     console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+d', action: 'toggle_system_dashboard' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
+  //     event.preventDefault();
+  //     setShowSystemHealth((prev: boolean) => !prev);
+  //     console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+h', action: 'toggle_system_health' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'K') {
+  //     event.preventDefault();
+  //     setShowKeyboardHelp((prev: boolean) => !prev);
+  //     console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+k', action: 'toggle_keyboard_help' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
+  //     event.preventDefault();
+  //     setShowPerformanceWidget((prev: boolean) => !prev);
+  //     console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+p', action: 'toggle_performance_widget' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'C') {
+  //     event.preventDefault();
+  //     setShowComprehensiveDashboard((prev: boolean) => !prev);
+  //     seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+c', action: 'toggle_comprehensive_dashboard' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+  //     event.preventDefault();
+  //     setShowComprehensiveMonitoring((prev: boolean) => !prev);
+  //     seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+m', action: 'toggle_comprehensive_monitoring' });
+  //   }
+  //   // Performance dashboard toggle removed - state variable not defined
+  //   if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
+  //     event.preventDefault();
+  //     setShowEnhancedCommandPalette((prev: boolean) => !prev);
+  //     seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+k', action: 'toggle_enhanced_command_palette' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'R') {
+  //     event.preventDefault();
+  //     setShowRealTimePerformance((prev: boolean) => !prev);
+  //     seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+r', action: 'toggle_real_time_performance' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+  //     event.preventDefault();
+  //     setShowAdvancedMonitoring((prev: boolean) => !prev);
+  //     console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+m', action: 'toggle_advanced_monitoring' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'T') {
+  //     event.preventDefault();
+  //     setIsDarkMode((prev: boolean) => !prev);
+  //     console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+t', action: 'toggle_theme' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'S') {
+  //     event.preventDefault();
+  //     setShowSystemStatus((prev: boolean) => !prev);
+  //     console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+s', action: 'toggle_system_status' });
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === '?') {
+  //     event.preventDefault();
+  //     setShowKeyboardShortcutsManager((prev: boolean) => !prev);
+  //     console.debug('Keyboard shortcut used:', { shortcut: 'cmd+shift+?', action: 'toggle_keyboard_shortcuts_manager' });
+  //   }
+  //   if (event.key === 'Escape') {
+  //     setShowCommandPalette(false);
+  //     setShowSystemDashboard(false);
+  //     setShowSystemHealth(false);
+  //     setShowPerformanceWidget(false);
+  //     setShowKeyboardHelp(false);
+  //     setShowAdvancedMonitoring(false);
+  //     setShowComprehensiveDashboard(false);
+  //     setShowRealTimePerformance(false);
+  //     setShowEnhancedCommandPalette(false);
+  //     setShowKeyboardShortcutsManager(false);
+  //     seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
+  //   }
+  // }, [addNotification]);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
   // const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
@@ -461,7 +461,7 @@ export default function App(): React.JSX.Element {
   const trackEngagement = useCallback(() => {
     // Track user engagement metrics
     if (analytics && 'track' in analytics) {
-      (analytics as any).track('engagement', {
+      (analytics as { track: (event: string, data: Record<string, unknown>) => void }).track('engagement', {
         scrollDepth: engagementData.scrollDepth,
         clicks: engagementData.clicks,
         timeOnPage: Date.now() - engagementData.startTime
@@ -470,14 +470,14 @@ export default function App(): React.JSX.Element {
   }, [engagementData]);
 
   // Handle scroll events
-  const handleScrollEngagement = useCallback(() => {
-    engagementData.scrollDepth = Math.max(engagementData.scrollDepth, window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100);
-  }, [engagementData]);
+  // const handleScrollEngagement = useCallback(() => {
+  //   engagementData.scrollDepth = Math.max(engagementData.scrollDepth, window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100);
+  // }, [engagementData]);
 
   // Handle click events
-  const handleClickEngagement = useCallback(() => {
-    engagementData.clicks++;
-  }, [engagementData]);
+  // const handleClickEngagement = useCallback(() => {
+  //   engagementData.clicks++;
+  // }, [engagementData]);
 
   // Initialize app with custom configuration
   // Temporarily disable useAppInitialization to fix build
@@ -870,7 +870,7 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('scroll', handleScrollWithEngagement);
       document.removeEventListener('click', handleClickWithEngagement);
     };
-  }, [handleScrollEngagement, handleClickEngagement, trackEngagement]);
+  }, [handleScroll, handleClick, trackEngagement]);
 
   if (isLoading) {
     return <ModernLoadingSpinner progress={loadingProgress} />;
@@ -994,7 +994,7 @@ export default function App(): React.JSX.Element {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span>Memory Usage:</span>
-                <span className="text-green-400">{Math.round(((performance as any).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
+                <span className="text-green-400">{Math.round(((performance as { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
               </div>
               <div className="flex justify-between">
                 <span>Render Time:</span>
