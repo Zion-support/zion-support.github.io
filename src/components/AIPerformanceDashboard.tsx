@@ -44,7 +44,6 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
     if (isVisible) {
       const updateData = () => {
         try {
-<<<<<<< HEAD
           const performanceMetrics = enhancedErrorHandler.getPerformanceMetrics();
           const aiInsights = enhancedErrorHandler.getAIInsights();
           const errorReports = enhancedErrorHandler.getErrorReports().slice(0, 10);
