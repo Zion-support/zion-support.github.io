@@ -12,8 +12,14 @@ import './styles/system-metrics.css';
 import './styles/modern-utilities.css';
 
 // Import utility modules
-import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
+import { seoOptimizer } from './utils/seoOptimization';
+import { cacheManager } from './utils/cacheManager';
+import { apiClient } from './utils/apiClient';
+import { notificationManager } from './utils/notificationManager';
+import { userFeedback } from './utils/userFeedbackManager';
+import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
 import { advancedCacheSystem } from './utils/advancedCacheSystem';
@@ -56,14 +62,27 @@ export default function App(): React.JSX.Element {
     const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
     const securityEnhancer = SecurityEnhancer.getInstance();
     
+    // Get comprehensive enhancements
+    const enhancements = getComprehensiveEnhancements({
+      enableAdvancedPerformance: true,
+      enableSecurityFeatures: true,
+      enableAccessibilityFeatures: true,
+      enableSEOFeatures: true,
+      enableUXFeatures: true,
+      enableAnalytics: true,
+      enableOfflineSupport: true,
+      enablePWA: true
+    });
+    
     // Store enhancers globally for debugging
-    (window as Record<string, unknown>).enhancements = {
+    (window as unknown as Record<string, unknown>).enhancements = {
       accessibilityEnhancer,
       securityEnhancer,
       enhancedPerformanceMonitor,
       enhancedAnalytics,
       advancedCacheSystem,
-      advancedAutomationSystem
+      advancedAutomationSystem,
+      ...enhancements
     };
   }, []);
 
@@ -78,6 +97,7 @@ export default function App(): React.JSX.Element {
       setShowPerformanceOptimizer(prev => !prev);
     }
   }, []);
+
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -123,6 +143,54 @@ export default function App(): React.JSX.Element {
     analytics.initialize();
     analytics.trackPageView();
 
+    // Initialize enhanced SEO optimizer
+    seoOptimizer.updatePageSEO({
+      title: seoData.title,
+      description: seoData.description,
+      keywords: seoData.keywords,
+      image: seoData.ogImage,
+      url: window.location.href,
+      type: seoData.ogType as 'website' | 'article' | 'product'
+    });
+
+    // Initialize cache manager
+    cacheManager.configure({
+      maxSize: 100,
+      ttl: 10 * 60 * 1000, // 10 minutes
+      storageType: 'localStorage',
+      enableCompression: true,
+      enableEncryption: false
+    });
+
+    // Initialize API client
+    apiClient.configure({
+      baseURL: '/api',
+      timeout: 30000,
+      retries: 3,
+      enableCaching: true,
+      enableLogging: process.env.NODE_ENV === 'development'
+    });
+
+    // Initialize notification manager
+    notificationManager.configure({
+      position: 'top-right',
+      duration: 5000,
+      maxNotifications: 5,
+      enableSound: true,
+      enableVibration: true,
+      enableBrowserNotifications: true,
+      theme: 'auto'
+    });
+
+    // Show welcome notification
+    notificationManager.info('Welcome to Zion Tech Group', 'Your advanced technology solutions platform is ready!');
+
+    // Show welcome feedback
+    userFeedback.showSuccess(
+      'Welcome!',
+      'Zion Tech Group is now ready with enhanced performance optimizations and user experience features.'
+    );
+
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
     
@@ -134,14 +202,6 @@ export default function App(): React.JSX.Element {
     document.addEventListener('click', handleClick, { passive: true });
   }, [handleClick, handleKeyDown, handleScroll, seoData, preloadResource, seoManager]);
 
-  // Add keyboard event listener
-  React.useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
-    
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [handleKeyDown]);
   // Main initialization and cleanup effect
   React.useEffect(() => {
     // Track engagement on page unload
@@ -155,22 +215,11 @@ export default function App(): React.JSX.Element {
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
 
-    // Set default SEO data
-    seoManager.updateMetaTags(seoData);
-
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
     }
-
-    // Mark app as fully initialized
-    if (typeof window !== 'undefined' && window.performance && 
-        typeof performance.mark === 'function' && 
-        typeof performance.measure === 'function') {
-      performance.mark('app-init-complete');
-      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
-    }
-  }, [trackEngagement, seoData]);
+  }, [trackEngagement]);
 
   // Cleanup function for event listeners
   useEffect(() => {
@@ -202,18 +251,15 @@ export default function App(): React.JSX.Element {
       // Remove event listeners
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
-      document.removeEventListener('keydown', handleKeyDown);
     };
   }, [seoData, handleKeyDown, handleScroll, handleClick, trackEngagement]);
 
   // Show loading screen while initializing
   if (isLoading) {
     return (
-      <EnhancedErrorBoundary>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-          <ModernLoadingSpinner progress={loadingProgress} />
-        </div>
-      </EnhancedErrorBoundary>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <ModernLoadingSpinner progress={loadingProgress} />
+      </div>
     );
   }
 
@@ -222,14 +268,14 @@ export default function App(): React.JSX.Element {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
-        {/* System Dashboard */}
+        {/* System Dashboard - Toggle with Ctrl+Shift+D */}
         {showSystemDashboard && (
           <EnhancedSystemDashboard
             onClose={() => setShowSystemDashboard(false)}
           />
         )}
         
-        {/* Performance Optimizer */}
+        {/* Performance Optimizer - Toggle with Ctrl+Shift+P */}
         {showPerformanceOptimizer && (
           <PerformanceOptimizer
             onClose={() => setShowPerformanceOptimizer(false)}
