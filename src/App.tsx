@@ -31,6 +31,7 @@ import { getNotificationManager } from './utils/advancedNotifications';
 import { getThemeManager } from './utils/themeManager';
 import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
 import { getDataVisualization } from './utils/advancedDataVisualization';
+import { useAppInitialization } from './hooks/useAppInitialization';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -65,21 +66,14 @@ export default function App(): React.JSX.Element {
   // }), []);
 
   // Initialize app with custom configuration
-  // Temporarily disable useAppInitialization to fix build
-  // const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
-  //   enablePerformanceMonitoring: true,
-  //   enableAccessibility: true,
-  //   enableSecurity: true,
-  //   enableAnalytics: true,
-  //   enableNotifications: true,
-  //   enableCaching: true,
-  // });
-  
-  const isLoading = false;
-  const loadingProgress = 100;
-  const handleScroll = useCallback(() => {}, []);
-  const handleClick = useCallback(() => {}, []);
-  const trackEngagement = useCallback(() => {}, []);
+  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement, engagementData } = useAppInitialization({
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSecurity: true,
+    enableAnalytics: true,
+    enableNotifications: true,
+    enableCaching: true,
+  });
 
   // Performance optimization hook - Temporarily disabled
   // usePerformanceOptimization({
@@ -439,8 +433,8 @@ export default function App(): React.JSX.Element {
       trackEngagement();
     };
 
-    const handleClickWithEngagement = (event: Event) => {
-      handleClick(event);
+    const handleClickWithEngagement = (event: MouseEvent) => {
+      handleClick(event as Event);
       trackEngagement();
     };
 
