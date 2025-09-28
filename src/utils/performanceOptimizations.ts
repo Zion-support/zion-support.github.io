@@ -14,6 +14,7 @@ export interface PerformanceMetrics {
   networkSpeed: string;
   cpuUsage: number;
   storageUsed: number;
+  [key: string]: number | string;
 }
 
 export interface OptimizationRecommendation {
@@ -127,7 +128,7 @@ class PerformanceOptimizer {
       };
     }
 
-    (this.metrics as Record<string, unknown>)[key] = value;
+    (this.metrics as PerformanceMetrics)[key] = value as number | string;
     this.generateRecommendations();
   }
 
