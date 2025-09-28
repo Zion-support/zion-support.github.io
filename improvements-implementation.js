@@ -5,8 +5,7 @@
  * This script implements various improvements to the Zion website
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
 
 console.log('🚀 Starting Comprehensive Improvements Implementation');
 console.log('===================================================');
@@ -577,7 +576,7 @@ async function executeImprovements() {
         log('5. Test performance: Run Lighthouse audit', 'yellow');
         
     } catch (error) {
-        log(\`❌ Error implementing improvements: \${error.message}\`, 'red');
+        log(`❌ Error implementing improvements: ${error.message}`, 'red');
         process.exit(1);
     }
 }
