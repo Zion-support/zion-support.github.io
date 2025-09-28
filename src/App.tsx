@@ -11,7 +11,6 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 // Removed unused imports to fix linting warnings
 import './index.css';
 import './styles/notifications.css';
@@ -78,7 +77,7 @@ export default function App(): React.JSX.Element {
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
     keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogType: 'website',
+    ogType: 'website' as const,
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const,
@@ -200,13 +199,7 @@ export default function App(): React.JSX.Element {
     };
   }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick]);
 
-  // Performance optimization hook
-  const { optimizePerformance } = usePerformanceOptimization();
-
-  // Optimize performance on mount
-  useEffect(() => {
-    optimizePerformance();
-  }, [optimizePerformance]);
+  // Performance optimization is handled by the hook automatically
 
   // Track engagement on scroll and click
   useEffect(() => {
