@@ -48,6 +48,9 @@ import { errorTracker } from './utils/advancedErrorTracker';
 import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
 
 // Import new comprehensive systems
+import { buildOptimizer } from './utils/advancedBuildOptimizer';
+import { errorRecovery } from './utils/enhancedErrorRecovery';
+import { analyticsSystem } from './utils/enhancedAnalyticsSystem';
 import { performanceOptimizer as comprehensivePerformanceOptimizer } from './utils/performanceOptimizations';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
 // import { securityEnhancer } from './utils/securityEnhancements';
@@ -62,7 +65,6 @@ import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import { enhancedSecuritySystem } from './utils/enhancedSecuritySystem';
 import { enhancedAccessibilitySystem } from './utils/enhancedAccessibilitySystem';
 import { apiCache as apiCacheSystem, imageCache as imageCacheSystem, dataCache as dataCacheSystem } from './utils/enhancedCachingSystem';
-import { enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
 
 // Lazy load heavy components for better performance
 const LazyEnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
@@ -280,7 +282,7 @@ function App(): React.JSX.Element {
       apiCacheSystem.initialize();
       imageCacheSystem.initialize();
       dataCacheSystem.initialize();
-      enhancedAnalyticsSystem.initialize();
+      analyticsSystem.initialize();
       
       // Initialize advanced systems
       void performanceAnalytics; // Initialize performance analytics
@@ -332,7 +334,7 @@ function App(): React.JSX.Element {
         image: imageCacheSystem.getMetrics(),
         data: dataCacheSystem.getMetrics()
       });
-      console.log('📊 Analytics metrics:', enhancedAnalyticsSystem.getMetrics());
+      console.log('📊 Analytics metrics:', analyticsSystem.getMetrics());
       
       // Initialize error reporting system
       console.log('Error reporting system initialized');
@@ -487,6 +489,11 @@ function App(): React.JSX.Element {
       seoOptimizer.initialize();
       advancedAccessibilityEnhancer.initialize();
       
+      // Initialize new comprehensive systems
+      buildOptimizer.initialize();
+      errorRecovery.initialize();
+      analyticsSystem.initialize();
+      
       // Initialize new monitoring and optimization systems
       // Note: PerformanceMonitor is auto-initialized in constructor
       // seoOptimizer and errorHandler will be initialized by their respective classes
@@ -499,6 +506,9 @@ function App(): React.JSX.Element {
       (window as unknown as Record<string, unknown>).performanceOptimizer = advancedPerformanceOptimizer;
       (window as unknown as Record<string, unknown>).seoOptimizer = seoOptimizer;
       (window as unknown as Record<string, unknown>).accessibilityEnhancer = advancedAccessibilityEnhancer;
+      (window as unknown as Record<string, unknown>).buildOptimizer = buildOptimizer;
+      (window as unknown as Record<string, unknown>).errorRecovery = errorRecovery;
+      (window as unknown as Record<string, unknown>).analyticsSystem = analyticsSystem;
     } catch (error) {
       console.error('Error initializing enhancements:', error);
     }

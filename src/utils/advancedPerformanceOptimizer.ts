@@ -290,24 +290,6 @@ class AdvancedPerformanceOptimizer {
     };
   }
 
-  constructor(config: Partial<OptimizationConfig> = {}) {
-    this.config = {
-      enableImageOptimization: true,
-      enableCodeSplitting: true,
-      enableLazyLoading: true,
-      enablePrefetching: true,
-      enableCompression: true,
-      enableCaching: true,
-      enableServiceWorker: true,
-      enableCriticalCSS: true,
-      enableResourceHints: true,
-      enableBundleOptimization: true,
-      ...config
-    };
-    this.initializeStrategies();
-  }
-
-
   /**
    * Initialize performance monitoring
    */
