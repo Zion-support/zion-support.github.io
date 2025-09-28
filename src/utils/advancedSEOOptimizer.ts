@@ -1,6 +1,6 @@
 /**
  * Advanced SEO Optimizer
- * Comprehensive SEO optimization utilities for Zion Tech Group website
+ * Comprehensive SEO optimization utilities for the Zion Tech Group website
  */
 
 interface SEOConfig {
@@ -19,6 +19,12 @@ interface SEOConfig {
   enableCanonical: boolean;
   enableOpenGraph: boolean;
   enableTwitterCards: boolean;
+  enableMetaOptimization: boolean;
+  enableSitemapGeneration: boolean;
+  enableCanonicalUrls: boolean;
+  enableSchemaMarkup: boolean;
+  enablePerformanceSEO: boolean;
+  enableAccessibilitySEO: boolean;
 }
 
 interface PageSEOData {
@@ -252,6 +258,134 @@ export class AdvancedSEOOptimizer {
       site: this.config.twitterHandle,
     };
   }
+
+  /**
+   * Initialize the SEO optimizer
+   */
+  public async initialize(): Promise<void> {
+    if (this.isInitialized) return;
+
+    try {
+      if (this.config.enableMetaOptimization) {
+        this.optimizeMetaTags();
+      }
+
+      if (this.config.enableStructuredData) {
+        this.addStructuredData();
+      }
+
+      if (this.config.enableSitemapGeneration) {
+        await this.generateSitemap();
+      }
+
+      if (this.config.enableRobotsTxt) {
+        await this.generateRobotsTxt();
+      }
+
+      if (this.config.enablePerformanceSEO) {
+        this.optimizeForPerformance();
+      }
+
+      if (this.config.enableAccessibilitySEO) {
+        this.optimizeForAccessibility();
+      }
+
+      this.isInitialized = true;
+      console.log('🔍 Advanced SEO Optimizer initialized');
+    } catch (error) {
+      console.error('Error initializing SEO optimizer:', error);
+    }
+  }
+
+  /**
+   * Optimize meta tags for better SEO
+   */
+  private optimizeMetaTags(): void {
+    if (typeof document === 'undefined') return;
+
+    // Ensure viewport meta tag
+    this.ensureMetaTag('viewport', 'width=device-width, initial-scale=1.0');
+
+    // Add charset if not present
+    if (!document.querySelector('meta[charset]')) {
+      const charset = document.createElement('meta');
+      charset.setAttribute('charset', 'utf-8');
+      document.head.insertBefore(charset, document.head.firstChild);
+    }
+
+    // Add theme color
+    this.ensureMetaTag('theme-color', '#667eea');
+
+    // Add mobile web app capabilities
+    this.ensureMetaTag('apple-mobile-web-app-capable', 'yes');
+    this.ensureMetaTag('apple-mobile-web-app-status-bar-style', 'default');
+    this.ensureMetaTag('apple-mobile-web-app-title', 'Zion Tech Group');
+  }
+
+  /**
+   * Ensure a meta tag exists with the given name and content
+   */
+  private ensureMetaTag(name: string, content: string): void {
+    if (typeof document === 'undefined') return;
+
+    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.name = name;
+      document.head.appendChild(meta);
+    }
+    meta.content = content;
+  }
+
+  /**
+   * Add structured data for better search engine understanding
+   */
+  private addStructuredData(): void {
+    if (typeof document === 'undefined') return;
+
+    const organizationSchema = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "description": "Leading AI and Technology Solutions Provider",
+      "url": "https://zion.app",
+      "logo": "https://zion.app/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-0123",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/zion-tech-group",
+        "https://twitter.com/ziontechgroup"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Tech Street",
+        "addressLocality": "San Francisco",
+        "addressRegion": "CA",
+        "postalCode": "94105",
+        "addressCountry": "US"
+      }
+    };
+
+    this.addStructuredDataScript(organizationSchema);
+  }
+
+  /**
+   * Add structured data script to the page
+   */
+  private addStructuredDataScript(data: any): void {
+    if (typeof document === 'undefined') return;
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(data);
+    document.head.appendChild(script);
+  }
+
 
   /**
    * Generate robots.txt content
@@ -493,18 +627,10 @@ Allow: /blog/
   }
 }
 
-// Export default instance
-export const seoOptimizer = new AdvancedSEOOptimizer();
 
-// Export utility functions
-export const generatePageSEO = (pageData: Partial<PageSEOData>) => {
-  return seoOptimizer.generatePageSEO(pageData);
-};
+// Export singleton instance
+export const advancedSEOOptimizer = new AdvancedSEOOptimizer();
 
-export const auditPageSEO = (url: string) => {
-  return seoOptimizer.auditPageSEO(url);
-};
+// Export class for custom instances
+export type { SEOConfig, PageSEOData };
 
-export const generateMetaTags = (pageData: PageSEOData) => {
-  return seoOptimizer.generateMetaTags(pageData);
-};

@@ -39,6 +39,12 @@ interface AnalyticsData {
   };
 }
 
+interface AnalyticsEvent {
+  type: string;
+  timestamp: number;
+  data?: Record<string, unknown>;
+}
+
 interface CacheData {
   size: number;
   totalSize: number;

@@ -69,6 +69,33 @@ export default defineConfig({
             // All other node_modules go to vendor
             return 'vendor';
           }
+          // App chunks - more granular splitting
+          if (id.includes('src/pages/')) {
+            return 'pages';
+          }
+          if (id.includes('src/components/')) {
+            // Split large components into separate chunks
+            if (id.includes('Advanced') || id.includes('Comprehensive')) {
+              return 'components-advanced';
+            }
+            if (id.includes('Dashboard') || id.includes('Monitor')) {
+              return 'components-dashboard';
+            }
+            return 'components';
+          }
+          if (id.includes('src/utils/')) {
+            // Split utils by functionality
+            if (id.includes('advanced') || id.includes('comprehensive')) {
+              return 'utils-advanced';
+            }
+            if (id.includes('performance') || id.includes('monitor')) {
+              return 'utils-performance';
+            }
+            return 'utils';
+          }
+          if (id.includes('src/hooks/')) {
+            return 'hooks';
+          }
           
           // App chunks - more granular splitting
           if (id.includes('src/pages/')) {
