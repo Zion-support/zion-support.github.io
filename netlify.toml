@@ -14,6 +14,9 @@
   NETLIFY_USE_PNPM = "true"
   # Disable Next.js auto-detection
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  # Ensure clean installs
+  NPM_CONFIG_PRODUCTION = "false"
+  NODE_ENV = "production"
 
 # Explicitly disable Next.js plugin to prevent auto-detection
 [build.processing]
