@@ -62,16 +62,8 @@ class PerformanceEnhancer {
    * Setup comprehensive performance monitoring
    */
   private setupPerformanceMonitoring(): void {
-    // Monitor Core Web Vitals
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(this.handleWebVital);
-      getFID(this.handleWebVital);
-      getFCP(this.handleWebVital);
-      getLCP(this.handleWebVital);
-      getTTFB(this.handleWebVital);
-    }).catch((error) => {
-      console.warn('Web Vitals not available:', error);
-    });
+    // Monitor Core Web Vitals - using built-in Performance Observer instead of web-vitals
+    this.monitorCoreWebVitals();
 
     // Monitor memory usage
     if ('memory' in performance) {
