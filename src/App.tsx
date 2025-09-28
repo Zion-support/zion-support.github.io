@@ -73,7 +73,7 @@ export default function App(): React.JSX.Element {
   const seoData = { 
     title: 'Zion Tech Group - Advanced AI and IT Solutions',
     description: 'Leading provider of AI-powered IT solutions, cloud computing, cybersecurity, and digital transformation services for enterprises worldwide.',
-    keywords: ['AI', 'IT Solutions', 'Cloud Computing', 'Cybersecurity', 'Digital Transformation'],
+    keywords: 'AI, IT Solutions, Cloud Computing, Cybersecurity, Digital Transformation',
     image: '/images/og-default.jpg',
     url: `https://ziontechgroup.com${currentPathname}`,
     type: 'website' as const
@@ -94,7 +94,7 @@ export default function App(): React.JSX.Element {
   const memoizedSeoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology'],
+    keywords: 'AI solutions, quantum computing, digital transformation, cloud services, enterprise technology',
     canonical: `https://zion.app${currentPathname}`,
     ogTitle: 'Zion Tech Group - AI & Technology Solutions',
     ogDescription: 'Transform your business with cutting-edge AI and technology solutions.',
@@ -136,7 +136,7 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeCSS();
 
     // Set default SEO data using the correct method
-    const seoDataFormatted = { ...seoData, keywords: Array.isArray(seoData.keywords) ? seoData.keywords : [seoData.keywords || 'AI'] };
+    const seoDataFormatted = { ...seoData, keywords: seoData.keywords || 'AI' };
     seoManager.updateMetaTags(seoDataFormatted);
     
     // Initialize advanced optimization systems
