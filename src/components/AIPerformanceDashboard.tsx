@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { enhancedErrorHandler } from '../utils/enhancedErrorHandling';
 
 interface AIPerformanceDashboardProps {
   isVisible: boolean;
@@ -8,13 +9,13 @@ interface AIPerformanceDashboardProps {
 // Removed unused interfaces - they were defined but never used in the component
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
-  const [metrics, _setMetrics] = useState<{
+  const [metrics, setMetrics] = useState<{
     errorRate: number;
     avgResolutionTime: number;
     criticalErrorsToday: number;
     userImpactScore: number;
   } | null>(null);
-  const [insights, _setInsights] = useState<{
+  const [insights, setInsights] = useState<{
     predictedHighRiskActions: string[];
     recommendedImprovements: string[];
     errorTrends: Array<{
@@ -22,7 +23,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
       trend: 'increasing' | 'decreasing' | 'stable';
     }>;
   } | null>(null);
-  const [errors, _setErrors] = useState<Array<{
+  const [errors, setErrors] = useState<Array<{
     severity: string;
     message: string;
     lastOccurrence: string | Date;
@@ -39,8 +40,33 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
     if (isVisible) {
       const updateData = () => {
         try {
-          // Fetch dashboard data - placeholder for future implementation
-          console.log('Updating AI performance dashboard data...');
+          const performanceMetrics = enhancedErrorHandler.getPerformanceMetrics();
+          const aiInsights = enhancedErrorHandler.getAIInsights();
+          const errorReports = enhancedErrorHandler.getErrorReports().slice(0, 10);
+          
+          // Type-safe conversion
+          setMetrics(performanceMetrics as {
+            errorRate: number;
+            avgResolutionTime: number;
+            criticalErrorsToday: number;
+            userImpactScore: number;
+          });
+          
+          setInsights(aiInsights as {
+            predictedHighRiskActions: string[];
+            recommendedImprovements: string[];
+            errorTrends: Array<{ category: string; trend: 'increasing' | 'decreasing' | 'stable' }>;
+          });
+          
+          setErrors(errorReports.map(error => ({
+            severity: error.severity,
+            message: error.message,
+            lastOccurrence: error.lastOccurrence,
+            occurrenceCount: 1,
+            context: error.context,
+            aiPredictedImpact: error.aiPredictedImpact,
+            resolutionSuggestions: error.resolutionSuggestions
+          })));
         } catch (error) {
           console.error('Failed to fetch dashboard data:', error);
         }
