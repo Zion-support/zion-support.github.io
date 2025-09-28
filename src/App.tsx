@@ -26,8 +26,8 @@ import './index.css';
 
 export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer (currently unused but reserved for future features)
-  // const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-  // const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+  const [showSystemDashboard, setShowSystemDashboard] = React.useState(false);
+  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = React.useState(false);
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -103,8 +103,8 @@ export default function App(): React.JSX.Element {
     structuredData: []
   }), []);
 
-  // Track engagement function
-  const trackEngagement = useCallback(() => {
+  // Enhanced track engagement function
+  const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
     seoAnalytics.trackUserEngagement(window.location.pathname, {
       timeOnPage,
@@ -113,7 +113,7 @@ export default function App(): React.JSX.Element {
     });
     // Also call the original trackEngagement from useAppInitialization
     trackEngagement();
-  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime]);
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
 
   // Simple SEO manager
   const seoManagerInstance = useMemo(() => ({
@@ -196,25 +196,23 @@ export default function App(): React.JSX.Element {
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
     }
-  }, [seoData, handleScroll, handleClick, preloadResource, seoManagerInstance]);
+  }, [enhancedTrackEngagement]);
 
-  // Main initialization and cleanup effect
+  // Cleanup effect
   React.useEffect(() => {
-    // Track engagement on page unload
-    window.addEventListener('beforeunload', trackEngagement);
     // Cleanup function
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('beforeunload', trackEngagement);
+      window.removeEventListener('beforeunload', enhancedTrackEngagement);
       
       // Final engagement tracking
-      trackEngagement();
+      enhancedTrackEngagement();
       
       // Remove event listeners
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
     };
-  }, [trackEngagement, handleKeyDown, handleScroll, handleClick, seoData, preloadResource]);
+  }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick]);
 
   // Show loading screen while initializing
   if (isLoading) {
