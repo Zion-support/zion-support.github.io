@@ -1,22 +1,20 @@
 /**
- * Advanced Error Recovery System
+ * Error Recovery System
  * Provides comprehensive error handling and recovery mechanisms
  */
 
-interface ErrorContext {
-  component: string;
-  action: string;
+export interface ErrorContext {
+  error: Error;
   timestamp: number;
   userAgent: string;
   url: string;
   stack?: string;
 }
 
-interface RecoveryStrategy {
+export interface RecoveryStrategy {
   name: string;
-  condition: (error: Error, context: ErrorContext) => boolean;
-  action: (error: Error, context: ErrorContext) => Promise<void>;
-  priority: number;
+  condition: (error: Error) => boolean;
+  action: () => Promise<void>;
 }
 
 export class ErrorRecoverySystem {
@@ -26,40 +24,50 @@ export class ErrorRecoverySystem {
   private recoveryStrategies: RecoveryStrategy[] = [];
 
   constructor() {
+    this.setupErrorHandling();
     this.setupRecoveryStrategies();
+  }
+
+  private setupErrorHandling(): void {
+    if (typeof window === 'undefined') return;
+
+    window.addEventListener('error', (event) => {
+      this.handleError(event.error || new Error(event.message));
+    });
+
+    window.addEventListener('unhandledrejection', (event) => {
+      this.handleError(event.reason instanceof Error ? event.reason : new Error(String(event.reason)));
+    });
   }
 
   private setupRecoveryStrategies(): void {
     this.recoveryStrategies = [
       {
         name: 'network-retry',
-        condition: (error, context) => 
+        condition: (error) => 
           error.message.includes('fetch') || error.message.includes('network'),
-        action: async (error, context) => {
+        action: async () => {
           console.log('🔄 Retrying network request...');
           await new Promise(resolve => setTimeout(resolve, 1000));
-        },
-        priority: 1
+        }
       },
       {
         name: 'component-reload',
-        condition: (error, context) => 
-          error.message.includes('component') || context.component !== 'unknown',
-        action: async (error, context) => {
+        condition: (error) => 
+          error.message.includes('component') || error.message.includes('React'),
+        action: async () => {
           console.log('🔄 Reloading component...');
           window.location.reload();
-        },
-        priority: 2
+        }
       },
       {
         name: 'fallback-ui',
-        condition: (error, context) => 
-          error.message.includes('render') || error.message.includes('React'),
-        action: async (error, context) => {
+        condition: (error) => 
+          error.message.includes('render') || error.message.includes('UI'),
+        action: async () => {
           console.log('🔄 Showing fallback UI...');
           // Show fallback UI
-        },
-        priority: 3
+        }
       }
     ];
   }
@@ -78,13 +86,12 @@ export class ErrorRecoverySystem {
 
     this.errorHistory.push(errorContext);
 
-    if (this.errorCount >= this.maxRetries) {
-      console.error('❌ Max retries exceeded, giving up');
-      return false;
+    if (this.errorCount <= this.maxRetries) {
+      this.attemptRecovery(error);
+    } else {
+      this.showFallbackUI();
     }
 
-    this.errorCount++;
-    await this.attemptRecovery(error);
     return true;
   }
 
@@ -92,9 +99,9 @@ export class ErrorRecoverySystem {
     console.log(`Attempting recovery (${this.errorCount}/${this.maxRetries})`);
     
     for (const strategy of this.recoveryStrategies) {
-      if (strategy.condition(error, this.errorHistory[this.errorHistory.length - 1])) {
+      if (strategy.condition(error)) {
         try {
-          await strategy.action(error, this.errorHistory[this.errorHistory.length - 1]);
+          await strategy.action();
           console.log(`✅ Recovery strategy ${strategy.name} executed successfully`);
           return;
         } catch (recoveryError) {
@@ -102,6 +109,15 @@ export class ErrorRecoverySystem {
         }
       }
     }
+
+    // Wait before retry
+    await new Promise(resolve => setTimeout(resolve, 1000 * this.errorCount));
+    this.errorCount++;
+  }
+
+  private showFallbackUI(): void {
+    console.log('🔄 Showing fallback UI...');
+    // Implement fallback UI logic here
   }
 
   public getErrorHistory(): ErrorContext[] {
@@ -118,5 +134,5 @@ export class ErrorRecoverySystem {
   }
 }
 
-// Export singleton instance
 export const errorRecoverySystem = new ErrorRecoverySystem();
+export const errorRecovery = errorRecoverySystem;
