@@ -13,7 +13,7 @@ export interface CacheConfig {
   enablePersistence: boolean;
 }
 
-export interface CacheEntry<T = any> {
+export interface CacheEntry<T = unknown> {
   key: string;
   value: T;
   timestamp: number;
@@ -22,7 +22,7 @@ export interface CacheEntry<T = any> {
   lastAccessed: number;
   compressed?: boolean;
   encrypted?: boolean;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
 }
 
 export interface CacheAnalytics {
@@ -112,11 +112,11 @@ export class AdvancedCacheSystem {
     console.log('Advanced Cache System initialized');
   }
 
-  public set<T>(key: string, value: T, options?: { ttl?: number; metadata?: Record<string, any> }): void {
+  public set<T>(key: string, value: T, options?: { ttl?: number; metadata?: Record<string, unknown> }): void {
     const startTime = performance.now();
     
     try {
-      let processedValue: any = value;
+      let processedValue: unknown = value;
       let compressed = false;
       let encrypted = false;
 
@@ -378,7 +378,7 @@ export class AdvancedCacheSystem {
     console.log('Encryption initialized');
   }
 
-  private shouldCompress(value: any): boolean {
+  private shouldCompress(value: unknown): boolean {
     const size = this.estimateSize(value);
     return size > 1024; // Compress if larger than 1KB
   }
@@ -397,14 +397,14 @@ export class AdvancedCacheSystem {
     }
   }
 
-  private encrypt(data: any): string {
+  private encrypt(data: unknown): string {
     if (!this.encryptionKey) return data;
     
     // Simple encryption simulation (in production, use proper encryption)
     return btoa(JSON.stringify(data) + this.encryptionKey);
   }
 
-  private decrypt(data: string): any {
+  private decrypt(data: string): unknown {
     if (!this.encryptionKey) return data;
     
     try {
@@ -449,7 +449,7 @@ export class AdvancedCacheSystem {
   }
 
   private compressLargeEntries(): void {
-    for (const [key, entry] of this.cache) {
+    for (const [, entry] of this.cache) {
       if (!entry.compressed && this.shouldCompress(entry.value)) {
         entry.value = this.compress(JSON.stringify(entry.value));
         entry.compressed = true;
@@ -477,7 +477,7 @@ export class AdvancedCacheSystem {
       (this.analytics.averageAccessTime * (totalRequests - 1) + accessTime) / totalRequests;
   }
 
-  private estimateSize(obj: any): number {
+  private estimateSize(obj: unknown): number {
     return JSON.stringify(obj).length * 2; // Rough estimate in bytes
   }
 

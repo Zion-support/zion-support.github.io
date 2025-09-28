@@ -26,7 +26,7 @@ export interface ErrorContext {
   userId?: string;
   sessionId?: string;
   stackTrace?: string;
-  additionalData?: Record<string, any>;
+  additionalData?: Record<string, unknown>;
 }
 
 export interface RecoveryStrategy {
@@ -214,7 +214,7 @@ export class AdvancedErrorRecovery {
       name: 'network_retry',
       description: 'Retry network requests with exponential backoff',
       canHandle: (error) => error.name === 'NetworkError' || error.message.includes('fetch'),
-      recover: async (context) => {
+      recover: async () => {
         try {
           // Simulate network retry
           await this.delay(this.calculateRetryDelay(1));
@@ -253,7 +253,7 @@ export class AdvancedErrorRecovery {
       name: 'data_refresh',
       description: 'Refresh data from cache or server',
       canHandle: (error) => error.message.includes('data') || error.message.includes('API'),
-      recover: async (context) => {
+      recover: async () => {
         try {
           // Simulate data refresh
           await this.delay(500);
@@ -271,11 +271,11 @@ export class AdvancedErrorRecovery {
       name: 'memory_cleanup',
       description: 'Clean up memory and retry operation',
       canHandle: (error) => error.name === 'OutOfMemoryError' || error.message.includes('memory'),
-      recover: async (context) => {
+      recover: async () => {
         try {
           // Simulate memory cleanup
           if (typeof window !== 'undefined' && 'gc' in window) {
-            (window as any).gc();
+            (window as unknown as { gc: () => void }).gc();
           }
           return true;
         } catch {
@@ -291,7 +291,7 @@ export class AdvancedErrorRecovery {
       name: 'timeout_retry',
       description: 'Retry operations that timed out',
       canHandle: (error) => error.name === 'TimeoutError' || error.message.includes('timeout'),
-      recover: async (context) => {
+      recover: async () => {
         try {
           // Simulate timeout retry with increased timeout
           await this.delay(1000);

@@ -212,7 +212,7 @@ class PerformanceEnhancer {
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        console.log('FID:', (entry as any).processingStart - entry.startTime);
+        console.log('FID:', (entry as { processingStart: number }).processingStart - entry.startTime);
       });
     }).observe({ entryTypes: ['first-input'] });
 
@@ -221,8 +221,8 @@ class PerformanceEnhancer {
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value;
+        if (!(entry as { hadRecentInput: boolean }).hadRecentInput) {
+          clsValue += (entry as { value: number }).value;
         }
       });
       console.log('CLS:', clsValue);

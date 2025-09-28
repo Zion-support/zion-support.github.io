@@ -16,7 +16,7 @@ export interface SEOConfig {
   twitterCard?: string;
   twitterSite?: string;
   twitterCreator?: string;
-  structuredData?: any[];
+  structuredData?: unknown[];
   robots?: string;
   language?: string;
   alternateLanguages?: Array<{ hreflang: string; href: string }>;
@@ -232,7 +232,7 @@ export class EnhancedSEO {
     }
   }
 
-  private updateStructuredData(structuredData?: any[]): void {
+  private updateStructuredData(structuredData?: unknown[]): void {
     // Remove existing structured data
     this.structuredDataElements.forEach(element => element.remove());
     this.structuredDataElements = [];
@@ -326,9 +326,9 @@ export class EnhancedSEO {
             if (entry.entryType === 'largest-contentful-paint') {
               this.trackSEOMetric('lcp', entry.startTime);
             } else if (entry.entryType === 'first-input') {
-              this.trackSEOMetric('fid', (entry as any).processingStart - entry.startTime);
+              this.trackSEOMetric('fid', (entry as { processingStart: number }).processingStart - entry.startTime);
             } else if (entry.entryType === 'layout-shift') {
-              this.trackSEOMetric('cls', (entry as any).value);
+              this.trackSEOMetric('cls', (entry as { value: number }).value);
             }
           });
         });
@@ -366,10 +366,10 @@ export class EnhancedSEO {
     }
   }
 
-  private validateStructuredData(data: any): void {
+  private validateStructuredData(data: unknown): void {
     // Basic validation for common structured data types
-    if (data['@type'] && data['@context']) {
-      console.log(`Valid structured data found: ${data['@type']}`);
+    if (typeof data === 'object' && data !== null && '@type' in data && '@context' in data) {
+      console.log(`Valid structured data found: ${(data as { '@type': string })['@type']}`);
     } else {
       console.warn('Invalid structured data: missing @type or @context');
     }

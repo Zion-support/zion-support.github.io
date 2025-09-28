@@ -258,7 +258,7 @@ export class EnhancedPerformanceMonitor {
   private monitorMemoryUsage(): void {
     if ('memory' in performance) {
       const checkMemory = () => {
-        const memory = (performance as any).memory;
+        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         const metric: PerformanceMetric = {
           name: 'MemoryUsage',
           value: memory.usedJSHeapSize / 1024 / 1024, // MB
@@ -395,7 +395,7 @@ export class EnhancedPerformanceMonitor {
 
   private getConnectionType(): string | undefined {
     if ('connection' in navigator) {
-      return (navigator as any).connection?.effectiveType;
+      return (navigator as { connection?: { effectiveType: string } }).connection?.effectiveType;
     }
     return undefined;
   }
