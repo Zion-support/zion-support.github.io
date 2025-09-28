@@ -1,59 +1,16 @@
-import React from "react"
-import { motion } from "framer-motion"
-interface HeroFeature {;
-  icon: React.ComponentType<{ className?: string }>;
-  title: string,description: string,gradient: string;
-};
+import React from 'react';
 
-interface HeroFeaturesProps {;
-  features: HeroFeature[]
-};
+interface HeroFeaturesProps {
+  // Add props here
+}
 
-const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {;
+export const HeroFeatures: React.FC<HeroFeaturesProps> = (props) => {
   return (
-    <motion.div
-      className="[^"]*"
-      initial={{ opacity: 0, y: 30 }};
-      animate={{ opacity: 1, y: 0 }};
-      transition={{ duration: 0.8, delay: 0.6 }};
-    >;
-      {features.map((feature, index) => (;
-        <motion.div
-          key={feature.title};
-          className="[^"]*"
-          role="article"
-          aria-labelledby={`feature-${index}-title`};
-          whileHover={{;
-            y: -8,transition: { duration: 0.3 };
-          }};
-          initial={{ opacity: 0, y: 30 }};
-          animate={{ opacity: 1, y: 0 }};
-          transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }};
-        >;
-          {/* Animated background gradient */};
-          <[^>]*/>
-
-          {/* Icon container with enhanced styling */};
-          <div className={`relative w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl group-hover:shadow-zion-cyan/30`}>;
-            <[^>]*/>
-            {/* Glow effect */};
-            <[^>]*/>
-          </[^>]*>
-
-          <h3 id={`feature-${index}-title`} className="relative text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">;
-            {feature.title};
-          </[^>]*>
-
-          <p className="relative text-zion-slate-light text-sm leading-relaxed group-hover:text-zion-slate-light/90 transition-colors duration-300">;
-            {feature.description};
-          </[^>]*>
-
-          {/* Hover indicator */};
-          <[^>]*/>
-        </[^>]*>
-      ))};
-    </[^>]*>
+    <div className="herofeatures">
+      <h2>HeroFeatures</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
   );
-},;
+};
 
 export default HeroFeatures;

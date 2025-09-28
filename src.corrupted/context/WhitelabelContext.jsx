@@ -1,36 +1,12 @@
-import React, { createContext, useContext, useState } from 'react';
+import React from 'react';
 
-const WhitelabelContext = createContext();
-
-export const useWhitelabel = () => {
-  const context = useContext(WhitelabelContext);
-  if (!context) {
-    throw new Error('useWhitelabel must be used within a WhitelabelProvider');
-  }
-  return context;
-};
-
-export const WhitelabelProvider = ({ children }) => {
-};
-
-export const WhitelabelProvider = ({ children }) => {
-  const [whitelabelConfig, setWhitelabelConfig] = useState({
-    brandName: 'Zion Tech Group',
-    logo: '/logo.png',
-    primaryColor: '#1e40af',
-    secondaryColor: '#3b82f6',
-    theme: 'default'
-  });
-
-  const updateConfig = (newConfig) => {
-    setWhitelabelConfig((previousConfig) => ({ ...previousConfig, ...newConfig }));
-  };
-
-  const value = { whitelabelConfig, updateConfig };
-
+const WhitelabelContext = () => {
   return (
-    <WhitelabelContext.Provider value={value}>
-      {children}
-    </WhitelabelContext.Provider>
+    <div className="whitelabelcontext">
+      <h2>WhitelabelContext</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
   );
 };
+
+export default WhitelabelContext;

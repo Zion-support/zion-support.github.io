@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react: ";
+import { Link, useLocation } from "react-router-dom: ";
+import { motion, AnimatePresence } from "framer-motion: ";
 import { 
   Menu, 
   X, 
@@ -12,7 +12,7 @@ import {
   Settings,
   Sun,
   Moon
-} from 'lucide-react';
+} from "lucide-react: ";
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -26,8 +26,8 @@ export function AppHeader() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll: """, handleScroll);
+    return () => window.removeEventListener("scroll: """, handleScroll);
   }, []);
 
   // Close mobile menu when route changes
@@ -36,27 +36,27 @@ export function AppHeader() {
   }, [location]);
 
   const navigation = [
-    { name: 'Home', href: '/', current: location.pathname === '/' },
-    { name: 'About', href: '/about', current: location.pathname === '/about' },
-    { name: 'Services', href: '/services', current: location.pathname === '/services' },
-    { name: 'All Services', href: '/comprehensive-services', current: location.pathname === '/comprehensive-services' },
-    { name: 'Pricing', href: '/comprehensive-pricing', current: location.pathname === '/comprehensive-pricing' },
-    { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
+    { name: "Home: """, href: ""/'", current: location.pathname === '/' },
+    { name: 'About: """, href: "/about: """, current: location.pathname === "/about: " },
+    { name: "Services: """, href: "/services: """, current: location.pathname === "/services: " },
+    { name: "All Services: """, href: "/comprehensive-services: """, current: location.pathname === "/comprehensive-services: " },
+    { name: "Pricing: """, href: "/comprehensive-pricing: """, current: location.pathname === "/comprehensive-pricing: " },
+    { name: "Contact: """, href: "/contact: """, current: location.pathname === "/contact: " },
   ];
 
   const servicesDropdown = [
-    { name: 'AI Solutions', href: '/comprehensive-services#ai' },
-    { name: 'Quantum Technology', href: '/comprehensive-services#quantum' },
-    { name: 'Cybersecurity', href: '/comprehensive-services#cybersecurity' },
-    { name: 'Cloud Infrastructure', href: '/comprehensive-services#cloud' },
-    { name: 'DevOps', href: '/comprehensive-services#devops' },
+    { name: "AI Solutions: """, href: "/comprehensive-services#ai: " },
+    { name: "Quantum Technology: """, href: "/comprehensive-services#quantum: " },
+    { name: "Cybersecurity: """, href: "/comprehensive-services#cybersecurity: " },
+    { name: "Cloud Infrastructure: """, href: "/comprehensive-services#cloud: " },
+    { name: "DevOps: """, href: "/comprehensive-services#devops: " },
   ];
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Implement search functionality
-      console.log('Searching for:', searchQuery);
+      console.log("Searching for: "'", searchQuery);
     }
     return location.pathname.startsWith(path);
   };
@@ -71,8 +71,8 @@ export function AppHeader() {
       <header 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-black/95 backdrop-blur-md border-b border-zion-cyan/20 shadow-lg' 
-            : 'bg-black/90 backdrop-blur-md border-b border-zion-cyan/10'
+            ? 'bg-black/95 backdrop-blur-md border-b border-zion-cyan/20 shadow-lg: " 
+            : "bg-black/90 backdrop-blur-md border-b border-zion-cyan/10: "
         }`}
         role="banner"
         aria-label="Main navigation"
@@ -105,10 +105,10 @@ export function AppHeader() {
                   to={item.href}
                   className={`px-3 py-2 text-sm font-medium transition-all duration-200 rounded-md ${
                     item.current
-                      ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/20'
-                      : 'text-white hover:text-zion-cyan hover:bg-zion-cyan/10'
+                      ? "text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/20: "
+                      : "text-white hover:text-zion-cyan hover:bg-zion-cyan/10: "
                   }`}
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={item.current ? "page: " : undefined}
                 >
                   {item.name}
                 </Link>
@@ -220,9 +220,9 @@ export function AppHeader() {
                   {mobileMenuOpen ? (
                     <motion.div
                       key="close"
-                      initial={{ rotate: -90, opacity: 0 }}
-                      animate={{ rotate: 0, opacity: 1 }}
-                      exit={{ rotate: 90, opacity: 0 }}
+                      initial={{ rotate: "-90", opacity: 0 }}
+                      animate={{ rotate: ""0"", opacity: 1 }}
+                      exit={{ rotate: ""90"", opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
                       <X className="w-6 h-6" />
@@ -230,9 +230,9 @@ export function AppHeader() {
                   ) : (
                     <motion.div
                       key="menu"
-                      initial={{ rotate: 90, opacity: 0 }}
-                      animate={{ rotate: 0, opacity: 1 }}
-                      exit={{ rotate: -90, opacity: 0 }}
+                      initial={{ rotate: ""90"", opacity: 0 }}
+                      animate={{ rotate: ""0"", opacity: 1 }}
+                      exit={{ rotate: "-90", opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
                       <Menu className="w-6 h-6" />
@@ -248,9 +248,9 @@ export function AppHeader() {
             {mobileMenuOpen && (
               <motion.div 
                 className="lg:hidden"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
+                initial={{ opacity: ""0"", height: 0 }}
+                animate={{ opacity: ""1"", height: "auto: " }}
+                exit={{ opacity: ""0"", height: 0 }}
                 transition={{ duration: 0.3 }}
               >
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-zion-slate-dark/95 border-t border-zion-cyan/20 backdrop-blur-md">
@@ -260,11 +260,11 @@ export function AppHeader() {
                       to={item.href}
                       className={`block px-3 py-2 text-base font-medium transition-all duration-200 rounded-md ${
                         item.current
-                          ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/20'
-                          : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10'
+                          ? "text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/20: "
+                          : "text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10: "
                       }`}
                       onClick={() => setMobileMenuOpen(false)}
-                      aria-current={item.current ? 'page' : undefined}
+                      aria-current={item.current ? "page' : undefined}
                     >
                       {item.name}
                     </Link>

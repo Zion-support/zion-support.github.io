@@ -1,29 +1,37 @@
-import { apiClient } from "@/services/api";
+// import apiClient from './apiClient';
 
-export async function rewardOnboarding(userId: string) {
-  await apiClient('/functions/v1/token-manager/earn', {
-    method: 'POST',
-    body: JSON.stringify({ userId, action: 'onboarding', amount: 50 })
-  });
-}
+export const earnOnboardingTokens = async (userId: string): Promise<void> => {
+  // await apiClient('/functions/v1/token-manager/earn', {
+  //   method: 'POST',
+  //   body: JSON.stringify({ userId, action: 'onboarding', amount: 50 })
+  // });
+  console.log('Earn onboarding tokens for:', userId);
+};
 
-export async function earnTokensForPurchase(
-  userId: string,
-  purchaseAmount: number,
-  purchaseType: string
-): Promise<void> {
-  await apiClient('/functions/v1/token-manager/earn', {
-    method: 'POST',
-    body: JSON.stringify({ userId, action: 'purchase', amount: purchaseAmount, purchaseType })
-  });
-}
+export const earnPurchaseTokens = async ({
+  userId,
+  purchaseAmount
+}: {
+  userId: string;
+  purchaseAmount: number;
+}): Promise<void> => {
+  // await apiClient('/functions/v1/token-manager/earn', {
+  //   method: 'POST',
+  //   body: JSON.stringify({ userId, action: 'purchase', amount: purchaseAmount, purchaseType: 'service' })
+  // });
+  console.log('Earn purchase tokens for:', userId, purchaseAmount);
+};
 
-export async function earnTokensForReferral(
-  userId: string,
-  referredUserId: string
-): Promise<void> {
-  await apiClient('/functions/v1/token-manager/earn', {
-    method: 'POST',
-    body: JSON.stringify({ userId, action: 'referral', referredUserId, amount: 100 })
-  });
-}
+export const earnReferralTokens = async ({
+  userId,
+  referredUserId
+}: {
+  userId: string;
+  referredUserId: string;
+}): Promise<void> => {
+  // await apiClient('/functions/v1/token-manager/earn', {
+  //   method: 'POST',
+  //   body: JSON.stringify({ userId, action: 'referral', referredUserId, amount: 100 })
+  // });
+  console.log('Earn referral tokens for:', userId, referredUserId);
+};

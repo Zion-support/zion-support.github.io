@@ -1,65 +1,16 @@
-import React from "react"
-import { Helmet } from "react-helmet-async"
-interface SEOProps {;
-  title: string,description: string;
-  keywords?: string,;
-  ogImage?: string,;
-  ogUrl?: string,;
-  canonicalUrl?: string,;
-  structuredData?: object;
-};
+import React from 'react';
 
-export const EnhancedSEO: React.FC<SEOProps> = ({;
-  title;
-  description,;
-  keywords,;
-  ogImage,;
-  ogUrl,;
-  canonicalUrl,;
-  structuredData;
-}) => {;
-  const defaultOgImage = '/images/zion-tech-group-og.jpg'
-  const defaultKeywords = 'AI, Technology, Business Solutions, Digital Transformation, Zion Tech Group'
-  ;
+interface EnhancedSEOProps {
+  // Add props here
+}
+
+export const EnhancedSEO: React.FC<EnhancedSEOProps> = (props) => {
   return (
-    <Helmet>;
-      {/* Basic Meta Tags */};
-      <title>{title}</[^>]*>
-      <[^>]*/>
-      <[^>]*/>
-      ;
-      {/* Open Graph Meta Tags */};
-      <[^>]*/>
-      <[^>]*/>
-      <[^>]*/>
-      <[^>]*/>
-      <[^>]*/>
-      <[^>]*/>
-      ;
-      {/* Twitter Card Meta Tags */};
-      <[^>]*/>
-      <[^>]*/>
-      <[^>]*/>
-      <[^>]*/>
-      ;
-      {/* Canonical URL */};
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />};&& <link rel="canonical" href={canonicalUrl} />}; <link rel="canonical" href={canonicalUrl} />}
-      ;
-      {/* Structured Data */};
-      {structuredData && (;&& (; (
-        <script type="application/ld+json">;
-          {JSON.stringify(structuredData)};
-        </[^>]*>
-      )};
-      ;
-      {/* Additional SEO Meta Tags */};
-      <[^>]*/>
-      <[^>]*/>
-      <[^>]*/>
-      ;
-      {/* Preconnect to external domains for performance */};
-      <[^>]*/>
-      <[^>]*/>
-    </[^>]*>
+    <div className="enhancedseo">
+      <h2>EnhancedSEO</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
   );
 };
+
+export default EnhancedSEO;

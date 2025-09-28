@@ -1,10 +1,16 @@
-import React from "react"
-import { Loader2 } from "lucide-react"
-export const LoadingOverlay = ({ visible = false }) => {;
-    if (!visible);
-        return null;
-    return (<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">;
-      <[^>]*/>
-    </div>);
+import React from 'react';
+
+interface LoadingOverlayProps {
+  // Add props here
+}
+
+export const LoadingOverlay: React.FC<LoadingOverlayProps> = (props) => {
+  return (
+    <div className="loadingoverlay">
+      <h2>LoadingOverlay</h2>
+      <p>Component implementation coming soon...</p>
+    </div>
+  );
 };
+
 export default LoadingOverlay;

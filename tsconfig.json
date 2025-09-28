@@ -23,7 +23,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/src/*"
+        "src.corrupted/*"
       ]
     },
     "noUnusedLocals": false,
@@ -48,7 +48,7 @@
     "strictNullChecks": false
   },
   "include": [
-    "src/**/*"
+    "src.corrupted/**/*"
   ],
   "exclude": [
     "node_modules",
