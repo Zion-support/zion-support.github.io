@@ -7,12 +7,14 @@ import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { analytics } from './utils/analytics';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
-import { seoOptimizer } from './utils/seoOptimization';
-import { cacheManager } from './utils/cacheManager';
-import { apiClient } from './utils/apiClient';
-import { notificationManager } from './utils/notificationManager';
-import { userFeedback } from './utils/userFeedbackManager';
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+// Available for future use:
+// import { seoManager } from './utils/seoEnhanced';
+// import { seoOptimizer } from './utils/seoOptimization';
+// import { cacheManager } from './utils/cacheManager';
+// import { apiClient } from './utils/apiClient';
+// import { notificationManager } from './utils/notificationManager';
+// import { userFeedback } from './utils/userFeedbackManager';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
@@ -59,8 +61,8 @@ export default function App(): React.JSX.Element {
     AdvancedAutomationSystem.getInstance().initialize();
     
     // Initialize accessibility and security enhancers
-    const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
-    const securityEnhancer = SecurityEnhancer.getInstance();
+    AccessibilityEnhancer.getInstance();
+    SecurityEnhancer.getInstance();
     
     // Get comprehensive enhancements
     const enhancements = getComprehensiveEnhancements({
@@ -102,7 +104,7 @@ export default function App(): React.JSX.Element {
   }), []);
 
   // Simple SEO manager
-  const seoManagerInstance = {
+  const seoManagerInstance = useMemo(() => ({
     updateMetaTags: (data: typeof seoData) => {
       if (typeof document !== 'undefined') {
         document.title = data.title;
@@ -112,7 +114,7 @@ export default function App(): React.JSX.Element {
         }
       }
     }
-  };
+  }), []);
 
   // Track engagement function (enhanced version)
   const enhancedTrackEngagement = useCallback(() => {
@@ -163,7 +165,7 @@ export default function App(): React.JSX.Element {
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-  }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource]);
+  }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource, seoManagerInstance]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
