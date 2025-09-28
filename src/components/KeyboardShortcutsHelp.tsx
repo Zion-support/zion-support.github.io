@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from 'react';
 
-interface KeyboardShortcutsHelpProps {
-  isVisible: boolean;
-  onClose: () => void;
-}
-
 interface Shortcut {
   key: string;
   description: string;
   category: string;
 }
 
+interface KeyboardShortcutsHelpProps {
+  isVisible: boolean;
+  onClose: () => void;
+}
+
 const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible, onClose }) => {
-  const shortcuts = [
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
+
+  const shortcuts: Shortcut[] = [
     { key: 'Ctrl+Shift+D', description: 'Toggle System Dashboard', category: 'Dashboard' },
     { key: 'Ctrl+Shift+P', description: 'Toggle Performance Optimizer', category: 'Performance' },
     { key: 'Ctrl+Shift+M', description: 'Toggle Performance Monitor', category: 'Performance' },
@@ -22,11 +25,6 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
     { key: 'Ctrl+Shift+H', description: 'Show Keyboard Shortcuts', category: 'Help' },
     { key: 'Escape', description: 'Close All Modals', category: 'Navigation' },
   ];
-
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filteredShortcuts, setFilteredShortcuts] = useState(shortcuts);
-
-  if (!isVisible) return null;
 
   useEffect(() => {
     if (searchTerm) {
@@ -39,7 +37,7 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
     } else {
       setFilteredShortcuts(shortcuts);
     }
-  }, [searchTerm]);
+  }, [searchTerm, shortcuts]);
 
   if (!isVisible) return null;
 
@@ -105,6 +103,7 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
               </div>
             )}
           </div>
+        </div>
         
         <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
           <div className="flex items-center justify-between text-sm text-gray-500">
@@ -112,7 +111,6 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
             <span>{shortcuts.length} shortcuts available</span>
           </div>
         </div>
-      </div>
       </div>
     </div>
   );
