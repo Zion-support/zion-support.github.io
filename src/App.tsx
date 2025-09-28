@@ -358,7 +358,10 @@ export default function App(): React.JSX.Element {
         />
 
         {/* Notification System */}
-        <NotificationSystem />
+        <NotificationSystem 
+          notifications={[]}
+          onRemove={() => {}}
+        />
 
         {/* Command Palette */}
         <CommandPalette
