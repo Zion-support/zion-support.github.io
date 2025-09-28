@@ -23,7 +23,7 @@ export interface DataPoint {
   y: number;
   label?: string;
   color?: string;
-  metadata?: Record<string, unknown>;
+  metadata?: Record<string, string | number | boolean>;
 }
 
 export interface ChartData {
@@ -31,7 +31,7 @@ export interface ChartData {
   data: DataPoint[];
   type: 'line' | 'bar' | 'pie' | 'scatter' | 'area';
   color?: string;
-  metadata?: Record<string, unknown>;
+  metadata?: Record<string, string | number | boolean>;
 }
 
 export interface VisualizationOptions {
@@ -50,7 +50,7 @@ export interface VisualizationOptions {
 export class AdvancedDataVisualization {
   private config: ChartConfig;
   private container: HTMLElement | null = null;
-  private charts: Map<string, any> = new Map();
+  private charts: Map<string, { render: () => void; update: (data: DataPoint[]) => void; destroy: () => void }> = new Map();
   private dataStreams: Map<string, DataPoint[]> = new Map();
   private updateIntervals: Map<string, NodeJS.Timeout> = new Map();
 

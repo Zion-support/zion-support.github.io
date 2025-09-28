@@ -8,6 +8,7 @@ import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceOptimizations } from './utils/bundleOptimization';
+import { errorReportingSystem } from './utils/errorReporting';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import './index.css';
 
@@ -64,6 +65,9 @@ export default function App(): React.JSX.Element {
     try {
       // Initialize enhanced systems
       enhancedPerformanceMonitor.startMonitoring();
+      
+      // Initialize error reporting system
+      console.log('Error reporting system initialized');
       
       // Initialize performance optimizations
       performanceOptimizations.preloadCriticalResources();
