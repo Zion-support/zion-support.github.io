@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import { enhancedErrorHandler } from '../utils/enhancedErrorHandling';
 
 interface AIPerformanceDashboardProps {
   isVisible: boolean;

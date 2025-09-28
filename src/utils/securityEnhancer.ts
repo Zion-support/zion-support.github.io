@@ -442,3 +442,6 @@ export const securityEnhancer = new SecurityEnhancer();
 // Export class for custom instances
 export { SecurityEnhancer };
 export type { SecurityConfig, SecurityMetrics, SecurityEvent };
+
+// Default export for compatibility
+export default SecurityEnhancer;

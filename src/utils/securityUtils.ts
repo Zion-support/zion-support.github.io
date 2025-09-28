@@ -96,7 +96,9 @@ class SecurityUtils {
       Object.defineProperty(Element.prototype, 'innerHTML', {
         set: function(value) {
           const sanitized = self.sanitizeHTML(value);
-          originalInnerHTML.set!.call(this, sanitized);
+          if (originalInnerHTML.set) {
+            originalInnerHTML.set.call(this, sanitized);
+          }
         },
         get: originalInnerHTML.get
       });
@@ -133,7 +135,8 @@ class SecurityUtils {
     // Monitor for suspicious console usage
     const originalConsole = { ...console };
     Object.keys(console).forEach(key => {
-      if (typeof (console as any)[key] === 'function') {
+      const consoleMethod = (console as any)[key];
+      if (typeof consoleMethod === 'function') {
         (console as any)[key] = (...args: any[]) => {
           this.logSecurityEvent('console-usage', { method: key, args });
           (originalConsole as any)[key](...args);

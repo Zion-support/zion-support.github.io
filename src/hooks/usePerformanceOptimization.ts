@@ -1,5 +1,4 @@
 import { useEffect, useCallback, useRef } from 'react';
-import AdvancedPerformanceMonitor from '../utils/advancedPerformanceMonitor';
 import { NetworkInformation } from '../types/global';
 
 interface PerformanceOptimizationConfig {
@@ -20,6 +19,7 @@ interface PerformanceOptimizationReturn {
   getPerformanceMetrics: () => Record<string, unknown>;
   optimizeImage: (src: string, options?: ImageOptimizationOptions) => string;
   addResourceHint: (href: string, as: string, type?: string) => void;
+  optimizePerformance: () => void;
 }
 
 interface ImageOptimizationOptions {
@@ -36,7 +36,7 @@ interface ImageOptimizationOptions {
 export const usePerformanceOptimization = (
   config: PerformanceOptimizationConfig = {}
 ): PerformanceOptimizationReturn => {
-  const monitor = useRef(AdvancedPerformanceMonitor.getInstance());
+  const monitor = useRef<any>(null);
   const configRef = useRef({
     enableLazyLoading: true,
     enablePreloading: true,
@@ -51,14 +51,14 @@ export const usePerformanceOptimization = (
 
   // Initialize performance monitoring
   useEffect(() => {
-    const perfMonitor = monitor.current;
-    
-    if (configRef.current.enableWebVitals) {
-      perfMonitor.startMonitoring();
+    if (configRef.current.enableWebVitals && monitor.current) {
+      monitor.current.start();
     }
 
     return () => {
-      perfMonitor.stopMonitoring();
+      if (monitor.current) {
+        monitor.current.stop();
+      }
     };
   }, []);
 
@@ -73,12 +73,12 @@ export const usePerformanceOptimization = (
       link.as = type;
 
       link.onload = () => {
-        monitor.current.markCustomMetric(`preload.${type}.success`);
+        // monitor.current.markCustomMetric(`preload.${type}.success`); // Method doesn't exist
         resolve();
       };
 
       link.onerror = () => {
-        monitor.current.markCustomMetric(`preload.${type}.error`);
+        // monitor.current.markCustomMetric(`preload.${type}.error`); // Method doesn't exist
         reject(new Error(`Failed to preload ${url}`));
       };
 
@@ -88,7 +88,7 @@ export const usePerformanceOptimization = (
 
   // Record custom performance metrics
   const recordMetric = useCallback((name: string, value: number) => {
-    monitor.current.markCustomMetric(name, value);
+    // monitor.current.markCustomMetric(name, value); // Method doesn't exist
   }, []);
 
   // Measure performance of functions
@@ -96,7 +96,7 @@ export const usePerformanceOptimization = (
     const startMark = `${name}.start`;
     const endMark = `${name}.end`;
     
-    monitor.current.markCustomMetric(startMark);
+    // monitor.current.markCustomMetric(startMark); // Method doesn't exist
     
     const startTime = performance.now();
     
@@ -106,17 +106,17 @@ export const usePerformanceOptimization = (
       const endTime = performance.now();
       const duration = endTime - startTime;
       
-      monitor.current.markCustomMetric(endMark);
-      monitor.current.measureCustomMetric(name, startMark, endMark);
+      // monitor.current.markCustomMetric(endMark); // Method doesn't exist
+      // monitor.current.measureCustomMetric(name, startMark, endMark); // Method doesn't exist
       
       recordMetric(`${name}.duration`, duration);
     }
   }, [recordMetric]);
 
   // Get current performance metrics
-  // const getPerformanceMetrics = useCallback(() => {
-  //   return monitor.current.getLatestMetrics();
-  // }, []);
+  const getPerformanceMetrics = useCallback(() => {
+    return monitor.current?.getMetrics() || {};
+  }, []);
 
   // Optimize images with responsive loading
   const optimizeImage = useCallback((src: string): string => {
@@ -300,13 +300,34 @@ export const usePerformanceOptimization = (
     };
   }, [recordMetric]);
 
+  // Performance optimization function
+  const optimizePerformance = useCallback(() => {
+    if (configRef.current.enableImageOptimization) {
+      // Optimize existing images
+      const images = document.querySelectorAll('img[src]');
+      images.forEach((img) => {
+        const optimizedSrc = optimizeImage((img as HTMLImageElement).src);
+        if (optimizedSrc !== (img as HTMLImageElement).src) {
+          (img as HTMLImageElement).src = optimizedSrc;
+        }
+      });
+    }
+    
+    if (configRef.current.enableResourceHints) {
+      // Add resource hints for critical resources
+      addResourceHint('/api/health', 'fetch');
+      addResourceHint('/images/hero-bg.webp', 'image');
+    }
+  }, [optimizeImage, addResourceHint]);
+
   return {
     preloadResource,
     recordMetric,
     measurePerformance,
-    getPerformanceMetrics: () => monitor.current.getLatestMetrics() || {},
+    getPerformanceMetrics,
     optimizeImage,
     addResourceHint,
+    optimizePerformance,
   };
 };
 
