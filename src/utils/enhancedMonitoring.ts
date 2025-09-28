@@ -1,4 +1,4 @@
-// Removed triple slash reference - using import style instead
+// Global types are available through tsconfig.json
 /**
  * Enhanced Monitoring and Analytics System
  * Provides comprehensive monitoring, error tracking, and performance analytics
