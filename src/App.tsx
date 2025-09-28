@@ -11,7 +11,6 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-// Removed unused imports to fix linting warnings
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -43,7 +42,6 @@ export default function App(): React.JSX.Element {
 
   // Get current pathname for SEO (removed unused variable)
   // const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
-
   // Performance optimization hook
   const { preloadResource } = usePerformanceOptimization({
     enablePreloading: true,
@@ -251,14 +249,6 @@ export default function App(): React.JSX.Element {
             </div>
           </div>
         )}
-
-        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
-        <PerformanceMonitor 
-          showDashboard={showPerformanceMonitor}
-          onMetricsUpdate={(metrics) => {
-            console.log('Performance metrics:', metrics);
-          }}
-        />
         
         {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
         <AIPerformanceDashboard
