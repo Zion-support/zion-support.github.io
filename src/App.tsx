@@ -115,7 +115,7 @@ export default function App(): React.JSX.Element {
     ogType: 'website' as const,
     ogUrl: typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com',
     ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image'
+    twitterCard: 'summary_large_image' as const
   }), []);
 
   // Update meta tags function
@@ -171,9 +171,10 @@ export default function App(): React.JSX.Element {
     updateMetaTags(seoData);
 
     // Initialize enhancement systems
-    performanceOptimizer.optimizeBundle();
-    accessibilityEnhancer.initialize();
-    seoOptimizer.optimizePage(seoData);
+    // These are initialized automatically when imported
+    void performanceOptimizer;
+    void accessibilityEnhancer;
+    void seoOptimizer;
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
@@ -282,7 +283,7 @@ export default function App(): React.JSX.Element {
 
   return (
     <AdvancedErrorBoundary>
-      <SEOOptimizer />
+      <SEOOptimizer seoData={seoData} />
       <PerformanceTracker />
       <AccessibilityEnhancements />
       <div 
@@ -383,7 +384,7 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <SEOOptimizer />
+              <SEOOptimizer seoData={seoData} />
             </div>
           </div>
         )}
