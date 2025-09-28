@@ -435,6 +435,16 @@ Accessibility Report:
 // Export singleton instance
 export const accessibilityEnhancer = new AccessibilityEnhancer();
 
+// Export initialization function
+export const initializeAccessibilityEnhancements = (): void => {
+  try {
+    accessibilityEnhancer.initialize();
+    console.log('Accessibility enhancements initialized');
+  } catch (error) {
+    console.error('Error initializing accessibility enhancements:', error);
+  }
+};
+
 // Export class for custom instances
 export { AccessibilityEnhancer };
 export type { AccessibilityConfig, AccessibilityMetrics };
