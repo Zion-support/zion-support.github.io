@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { AdvancedAnalytics } from '../utils/advancedAnalytics';
+import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
 import AdvancedCacheManager from '../utils/advancedCache';
 import AdvancedAccessibilityManager from '../utils/advancedAccessibilityManager';
 import AdvancedSecurityManager from '../utils/advancedSecurityManager';
@@ -69,7 +69,7 @@ const AdvancedDashboard: React.FC = () => {
   }, [isOpen]);
 
   const updateData = () => {
-    const analyticsInstance = new AdvancedAnalytics();
+    const analyticsInstance = analytics;
     const events = analyticsInstance.getEvents();
     const cacheStats = AdvancedCacheManager.getInstance().getStats();
     
