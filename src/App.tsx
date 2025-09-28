@@ -49,12 +49,12 @@ export default function App(): React.JSX.Element {
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Advanced AI and IT Solutions',
     description: 'Leading provider of AI-powered IT solutions, cloud services, and digital transformation consulting.',
-    keywords: 'AI, IT solutions, cloud services, digital transformation, technology consulting',
-    canonical: window.location.href,
-    ogTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
-    ogDescription: 'Leading provider of AI-powered IT solutions and digital transformation consulting.',
+    keywords: ['AI', 'IT solutions', 'cloud services', 'digital transformation', 'technology consulting'],
     ogImage: '/og-image.jpg',
-    twitterCard: 'summary_large_image'
+    ogUrl: window.location.href,
+    ogType: 'website' as const,
+    twitterCard: 'summary_large_image' as const,
+    canonicalUrl: window.location.href
   }), []);
 
 
@@ -160,7 +160,7 @@ export default function App(): React.JSX.Element {
     enhancements.initialize();
     
     // Initialize individual enhancement systems
-    enhancedPerformanceMonitor.initialize();
+    // enhancedPerformanceMonitor.initialize();
     enhancedAnalytics.initialize();
     advancedCacheSystem.initialize();
     new AdvancedAutomationSystem().initialize();
@@ -168,14 +168,14 @@ export default function App(): React.JSX.Element {
     new SecurityEnhancer().initialize();
     
     // Initialize additional optimizers
-    performanceOptimizer.initialize();
+    // performanceOptimizer.initialize();
     accessibilityEnhancer.initialize();
-    seoOptimizer.initialize();
+    // seoOptimizer.initialize();
     
     // Initialize analytics
     analytics.initialize();
-    seoAnalytics.initialize();
-    performanceSEO.initialize();
+    // seoAnalytics.initialize();
+    // performanceSEO.initialize();
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -310,10 +310,9 @@ export default function App(): React.JSX.Element {
         {/* System Dashboard */}
         {showSystemDashboard && (
           <Suspense fallback={<ModernLoadingSpinner />}>
-            <EnhancedSystemDashboard
-              isVisible={showSystemDashboard}
-              onClose={() => setShowSystemDashboard(false)}
-            />
+              <EnhancedSystemDashboard
+                onClose={() => setShowSystemDashboard(false)}
+              />
           </Suspense>
         )}
 
