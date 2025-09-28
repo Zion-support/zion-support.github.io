@@ -26,6 +26,9 @@ import { advancedCacheSystem } from './utils/advancedCacheSystem';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
 import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { SecurityEnhancer } from './utils/securityEnhancer';
+import CommandPalette from './components/CommandPalette';
+import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
+import NotificationSystem, { Notification } from './components/NotificationSystem';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -35,6 +38,9 @@ export default function App(): React.JSX.Element {
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
+  const [showCommandPalette, setShowCommandPalette] = useState(false);
+  const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
+  const [notifications, setNotifications] = useState<Notification[]>([]);
   
   // Performance metrics state
   const [performanceMetrics, setPerformanceMetrics] = useState({
@@ -79,27 +85,103 @@ export default function App(): React.JSX.Element {
     enableImageOptimization: true,
   });
 
+  // Command palette commands
+  const commands = useMemo(() => [
+    {
+      id: 'system-dashboard',
+      title: 'Toggle System Dashboard',
+      description: 'Open/close the system metrics dashboard',
+      category: 'Dashboard',
+      action: () => setShowSystemDashboard(prev => !prev),
+      shortcut: 'Ctrl+Shift+D'
+    },
+    {
+      id: 'performance-optimizer',
+      title: 'Toggle Performance Optimizer',
+      description: 'Open/close the performance optimization panel',
+      category: 'Performance',
+      action: () => setShowPerformanceOptimizer(prev => !prev),
+      shortcut: 'Ctrl+Shift+P'
+    },
+    {
+      id: 'performance-monitor',
+      title: 'Toggle Performance Monitor',
+      description: 'Open/close the performance monitoring panel',
+      category: 'Performance',
+      action: () => setShowPerformanceMonitor(prev => !prev),
+      shortcut: 'Ctrl+Shift+M'
+    },
+    {
+      id: 'ai-dashboard',
+      title: 'Toggle AI Dashboard',
+      description: 'Open/close the AI performance dashboard',
+      category: 'AI',
+      action: () => setShowAIDashboard(prev => !prev),
+      shortcut: 'Ctrl+Shift+A'
+    },
+    {
+      id: 'keyboard-help',
+      title: 'Show Keyboard Shortcuts',
+      description: 'Display all available keyboard shortcuts',
+      category: 'Help',
+      action: () => setShowKeyboardHelp(true),
+      shortcut: 'Ctrl+Shift+H'
+    },
+    {
+      id: 'close-all',
+      title: 'Close All Modals',
+      description: 'Close all open modals and dashboards',
+      category: 'Navigation',
+      action: () => {
+        setShowSystemDashboard(false);
+        setShowPerformanceOptimizer(false);
+        setShowPerformanceMonitor(false);
+        setShowAIDashboard(false);
+        setShowRealTimeMetrics(false);
+        setShowCommandPalette(false);
+        setShowKeyboardHelp(false);
+      },
+      shortcut: 'Escape'
+    }
+  ], []);
+
   // Optimized keyboard handler for system dashboard toggle
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey) {
       event.preventDefault();
-      setShowSystemDashboard(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceOptimizer(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'R') {
-      event.preventDefault();
-      setShowRealTimeMetrics((prev: boolean) => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowPerformanceMonitor(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
-      event.preventDefault();
-      setShowAIDashboard(prev => !prev);
+      switch (event.key) {
+        case 'D':
+          setShowSystemDashboard(prev => !prev);
+          break;
+        case 'P':
+          setShowPerformanceOptimizer(prev => !prev);
+          break;
+        case 'R':
+          setShowRealTimeMetrics(prev => !prev);
+          break;
+        case 'M':
+          setShowPerformanceMonitor(prev => !prev);
+          break;
+        case 'A':
+          setShowAIDashboard(prev => !prev);
+          break;
+        case 'C':
+          setShowCommandPalette(prev => !prev);
+          break;
+        case 'H':
+          setShowKeyboardHelp(prev => !prev);
+          break;
+        case 'Escape':
+          // Close all modals
+          setShowSystemDashboard(false);
+          setShowPerformanceOptimizer(false);
+          setShowPerformanceMonitor(false);
+          setShowAIDashboard(false);
+          setShowRealTimeMetrics(false);
+          setShowCommandPalette(false);
+          setShowKeyboardHelp(false);
+          break;
+      }
     }
   }, []);
 
@@ -438,6 +520,25 @@ export default function App(): React.JSX.Element {
       />
       <SEOOptimizer seoData={seoData} />
       <EnhancedAnalytics />
+      
+      {/* Command Palette */}
+      <CommandPalette
+        isVisible={showCommandPalette}
+        onClose={() => setShowCommandPalette(false)}
+        commands={commands}
+      />
+      
+      {/* Keyboard Shortcuts Help */}
+      <KeyboardShortcutsHelp
+        isVisible={showKeyboardHelp}
+        onClose={() => setShowKeyboardHelp(false)}
+      />
+      
+      {/* Notification System */}
+      <NotificationSystem
+        notifications={notifications}
+        onRemove={(id) => setNotifications(prev => prev.filter(n => n.id !== id))}
+      />
     </EnhancedErrorBoundary>
   );
 }
