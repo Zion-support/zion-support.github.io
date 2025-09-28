@@ -23,10 +23,13 @@ import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
-import { getNotificationManager } from './utils/advancedNotifications';
-import { getThemeManager } from './utils/themeManager';
-import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
-import { getDataVisualization } from './utils/advancedDataVisualization';
+// import { getNotificationManager } from './utils/advancedNotifications';
+// import { getThemeManager } from './utils/themeManager';
+// import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
+// import { getDataVisualization } from './utils/advancedDataVisualization';
+import { performanceOptimizer } from './utils/advancedPerformanceOptimizer';
+import { seoEnhancer } from './utils/advancedSEOEnhancer';
+import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -74,7 +77,7 @@ export default function App(): React.JSX.Element {
   const isLoading = false;
   const loadingProgress = 100;
   const handleScroll = useCallback(() => {}, []);
-  const handleClick = useCallback((event: Event) => {}, []);
+  const handleClick = useCallback((_event: Event) => {}, []);
   const trackEngagement = useCallback(() => {}, []);
 
   // Performance optimization hook - Temporarily disabled
@@ -161,7 +164,7 @@ export default function App(): React.JSX.Element {
       clicks: engagementData.clicks,
     });
     trackEngagement();
-  }, [trackEngagement]);
+  }, [engagementData.startTime, engagementData.scrollDepth, engagementData.clicks, trackEngagement]);
 
   // Memoize the SEO data to prevent unnecessary re-renders
   const memoizedSeoData = useMemo(() => ({
@@ -304,6 +307,20 @@ export default function App(): React.JSX.Element {
       performance.mark('app-init-start');
     }
     
+    // Initialize advanced utilities
+    const initializeUtilities = async () => {
+      try {
+        await performanceOptimizer.initialize();
+        await seoEnhancer.initialize();
+        await accessibilityEnhancer.initialize();
+        console.log('All advanced utilities initialized successfully');
+      } catch (error) {
+        console.error('Failed to initialize some utilities:', error);
+      }
+    };
+
+    initializeUtilities();
+    
     // Track engagement on page unload
     window.addEventListener('beforeunload', enhancedTrackEngagement);
 
@@ -320,6 +337,7 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('beforeunload', enhancedTrackEngagement);
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
+      performanceOptimizer.cleanup();
     };
   }, [handleScroll, handleClick, enhancedTrackEngagement]);
 
