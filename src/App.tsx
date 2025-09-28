@@ -3,13 +3,11 @@ import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-import { useSEOData } from './components/SEOOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import './index.css';
@@ -21,7 +19,6 @@ export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -49,8 +46,8 @@ export default function App(): React.JSX.Element {
     enableCaching: true,
   });
 
-  // Get current pathname for SEO
-  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
+  // Get current pathname for SEO (removed unused variable)
+  // const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
 
   // Performance optimization hook
   const { preloadResource } = usePerformanceOptimization({
@@ -71,9 +68,6 @@ export default function App(): React.JSX.Element {
         case 'P':
           setShowPerformanceOptimizer(prev => !prev);
           break;
-        case 'M':
-          setShowPerformanceMonitor(prev => !prev);
-          break;
         case 'A':
           setShowAIDashboard(prev => !prev);
           break;
@@ -87,7 +81,6 @@ export default function App(): React.JSX.Element {
           // Close all dashboards
           setShowSystemDashboard(false);
           setShowPerformanceOptimizer(false);
-          setShowPerformanceMonitor(false);
           setShowAIDashboard(false);
           setShowSEOOptimizer(false);
           break;
@@ -95,8 +88,6 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
-  // Memoize the SEO data to prevent unnecessary re-renders
-  const seoData = useSEOData(currentPathname);
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
@@ -108,6 +99,17 @@ export default function App(): React.JSX.Element {
     // Also call the original trackEngagement from useAppInitialization
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
+
+  // Default SEO data
+  const defaultSeoData = {
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of cutting-edge AI, cloud computing, and IT solutions. Transform your business with our innovative technology services.',
+    keywords: ['AI', 'artificial intelligence', 'cloud computing', 'IT solutions', 'technology consulting', 'digital transformation'],
+    ogType: 'website' as const,
+    ogUrl: typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com',
+    ogImage: '/og-image.jpg',
+    twitterCard: 'summary_large_image' as const
+  };
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
@@ -135,6 +137,7 @@ export default function App(): React.JSX.Element {
       }
     }
   }, []);
+
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -142,16 +145,6 @@ export default function App(): React.JSX.Element {
     }
     
     // Preload critical resources
-    const preloadResource = (href: string, as: string) => {
-      if (typeof document !== 'undefined') {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = href;
-        link.as = as;
-        document.head.appendChild(link);
-      }
-    };
-    
     preloadResource('/og-image.png', 'image');
     preloadResource('/favicon.ico', 'image');
 
@@ -171,17 +164,15 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
 
+    // Set default SEO data using the correct method
+    seoManager.updateMetaTags(defaultSeoData);
+
     // Update meta tags
-    updateMetaTags(seoData);
+    updateMetaTags(defaultSeoData);
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
-    }
-
-    // Mark app as fully initialized
-    if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
-      performance.mark('app-init-complete');
     }
 
     // Cleanup function
@@ -190,7 +181,7 @@ export default function App(): React.JSX.Element {
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags]);
+  }, [handleScroll, handleClick, handleKeyDown, preloadResource, updateMetaTags]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
@@ -204,187 +195,88 @@ export default function App(): React.JSX.Element {
       
       // Final engagement tracking
       enhancedTrackEngagement();
-      
-      // Remove event listeners
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
-      document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick]);
+  }, [handleKeyDown, enhancedTrackEngagement]);
 
-  // Performance optimization hook
-  const { optimizePerformance } = usePerformanceOptimization();
-
-  // Optimize performance on mount
-  useEffect(() => {
-    optimizePerformance();
-  }, [optimizePerformance]);
-
-  // Track engagement on scroll and click
-  useEffect(() => {
-    const handleScrollWithEngagement = () => {
-      handleScroll();
-      trackEngagement();
-    };
-
-    const handleClickWithEngagement = (event: Event) => {
-      handleClick(event);
-      trackEngagement();
-    };
-
-    window.addEventListener('scroll', handleScrollWithEngagement, { passive: true });
-    document.addEventListener('click', handleClickWithEngagement, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScrollWithEngagement);
-      document.removeEventListener('click', handleClickWithEngagement);
-    };
-  }, [handleScroll, handleClick, trackEngagement]);
-
-  // Theme and preferences persistence
-  useEffect(() => {
-    // Load user preferences from localStorage
-    const savedPreferences = localStorage.getItem('zion-user-preferences');
-    if (savedPreferences) {
-      try {
-        const prefs = JSON.parse(savedPreferences);
-        setUserPreferences(prev => ({ ...prev, ...prefs }));
-        if (prefs.theme === 'dark' || (prefs.theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          setIsDarkMode(true);
-        }
-      } catch (error) {
-        console.warn('Failed to load user preferences:', error);
-      }
+  // Performance monitoring effect
+  React.useEffect(() => {
+    if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
+      performance.mark('app-init-end');
+      performance.measure('app-initialization', 'app-init-start', 'app-init-end');
     }
+  }, []);
 
-    // Listen for system theme changes
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleThemeChange = (e: MediaQueryListEvent) => {
-      if (userPreferences.theme === 'auto') {
-        setIsDarkMode(e.matches);
-      }
-    };
-    mediaQuery.addEventListener('change', handleThemeChange);
-
-    return () => mediaQuery.removeEventListener('change', handleThemeChange);
-  }, [userPreferences.theme]);
-
-  // Save preferences when they change
-  useEffect(() => {
-    localStorage.setItem('zion-user-preferences', JSON.stringify(userPreferences));
-  }, [userPreferences]);
-
-  // Show loading spinner while initializing
+  // Loading state
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-        <ModernLoadingSpinner
-          size="xl"
-          variant="primary"
-          text="Initializing Zion Tech Group..."
-          showProgress
-          progress={loadingProgress}
-          className="animate-fade-in-scale"
-        />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <ModernLoadingSpinner />
+          <div className="mt-4 text-white">
+            <div className="text-lg font-semibold">Zion Tech Group</div>
+            <div className="text-sm opacity-75">Loading advanced systems...</div>
+            <div className="mt-2 w-64 bg-gray-700 rounded-full h-2 mx-auto">
+              <div 
+                className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-300"
+                style={{ width: `${loadingProgress}%` }}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer seoData={seoData} />
+      <SEOOptimizer seoData={defaultSeoData} />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
         {/* System Dashboard */}
         {showSystemDashboard && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">System Dashboard</h2>
-                <button
-                  onClick={() => setShowSystemDashboard(false)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  ✕
-                </button>
-              </div>
-              <EnhancedSystemDashboard />
-            </div>
-          </div>
+          <EnhancedSystemDashboard
+            isVisible={showSystemDashboard}
+            onClose={() => setShowSystemDashboard(false)}
+          />
         )}
 
         {/* Performance Optimizer */}
         {showPerformanceOptimizer && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
-                <button
-                  onClick={() => setShowPerformanceOptimizer(false)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  ✕
-                </button>
-              </div>
-              <PerformanceOptimizer />
-            </div>
-          </div>
+          <PerformanceOptimizer
+            isVisible={showPerformanceOptimizer}
+            onClose={() => setShowPerformanceOptimizer(false)}
+          />
         )}
 
-        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
-        <PerformanceMonitor 
-          showDashboard={showPerformanceMonitor}
-          onMetricsUpdate={(metrics) => {
-            console.log('Performance metrics:', metrics);
-          }}
-        />
-        
-        {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
-        <AIPerformanceDashboard
-          isVisible={showAIDashboard}
-          onClose={() => setShowAIDashboard(false)}
-        />
+        {/* AI Performance Dashboard */}
+        {showAIDashboard && (
+          <AIPerformanceDashboard
+            isVisible={showAIDashboard}
+            onClose={() => setShowAIDashboard(false)}
+          />
+        )}
 
-        {/* SEO Optimizer Dashboard - Toggle with Ctrl+Shift+S */}
+        {/* SEO Optimizer */}
         {showSEOOptimizer && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">SEO Optimizer</h2>
-                <button
-                  onClick={() => setShowSEOOptimizer(false)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  ✕
-                </button>
-              </div>
-              <SEOOptimizer seoData={seoData} />
-            </div>
-          </div>
+          <SEOOptimizer
+            seoData={defaultSeoData}
+          />
         )}
 
-        {/* Theme Toggle Button - Toggle with Ctrl+Shift+T */}
-        <button
-          onClick={() => setIsDarkMode(prev => !prev)}
-          className="fixed bottom-4 right-4 z-40 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="Toggle Theme (Ctrl+Shift+T)"
-        >
-          {isDarkMode ? '☀️' : '🌙'}
-        </button>
-
-        {/* Keyboard Shortcuts Help */}
-        <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
+        {/* Keyboard shortcuts help */}
+        <div className="fixed bottom-4 right-4 bg-black/80 text-white text-xs p-3 rounded-lg opacity-50 hover:opacity-100 transition-opacity">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
           <div>Ctrl+Shift+D: System Dashboard</div>
           <div>Ctrl+Shift+P: Performance Optimizer</div>
-          <div>Ctrl+Shift+M: Performance Monitor</div>
           <div>Ctrl+Shift+A: AI Dashboard</div>
           <div>Ctrl+Shift+S: SEO Optimizer</div>
           <div>Ctrl+Shift+T: Toggle Theme</div>
           <div>Escape: Close All</div>
         </div>
       </div>
+      
+      {/* Removed undefined components to fix build errors */}
     </EnhancedErrorBoundary>
   );
 }

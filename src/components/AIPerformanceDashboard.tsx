@@ -6,18 +6,49 @@ interface AIPerformanceDashboardProps {
   onClose: () => void;
 }
 
+interface PerformanceMetrics {
+  errorRate: number;
+  criticalErrorsToday: number;
+  userImpactScore: number;
+  avgResolutionTime: number;
+  [key: string]: unknown;
+}
+
+interface AIInsights {
+  predictedHighRiskActions: string[];
+  recommendedImprovements: string[];
+  errorTrends: Array<{
+    category: string;
+    trend: 'increasing' | 'decreasing' | 'stable';
+  }>;
+  [key: string]: unknown;
+}
+
+interface ErrorReport {
+  severity: string;
+  lastOccurrence: string | Date;
+  message: string;
+  context: {
+    component?: string;
+    action?: string;
+  };
+  aiPredictedImpact?: number;
+  resolutionSuggestions?: string[];
+  [key: string]: unknown;
+}
+
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
-  const [metrics, setMetrics] = useState<Record<string, unknown> | null>(null);
-  const [insights, setInsights] = useState<Record<string, unknown> | null>(null);
-  const [errors, setErrors] = useState<Record<string, unknown>[]>([]);
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [insights, setInsights] = useState<AIInsights | null>(null);
+  const [errors, setErrors] = useState<ErrorReport[]>([]);
 
   useEffect(() => {
     if (isVisible) {
       const updateData = () => {
         try {
-          setMetrics(enhancedErrorHandler.getPerformanceMetrics());
-          setInsights(enhancedErrorHandler.getAIInsights());
-          setErrors(enhancedErrorHandler.getErrorReports().slice(0, 10));
+          setMetrics(enhancedErrorHandler.getPerformanceMetrics() as PerformanceMetrics);
+          setInsights(enhancedErrorHandler.getAIInsights() as AIInsights);
+          setErrors(enhancedErrorHandler.getErrorReports().slice(0, 10) as unknown as ErrorReport[]);
         } catch (error) {
           console.error('Failed to fetch dashboard data:', error);
         }
@@ -127,14 +158,14 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                 {insights.errorTrends.map((trend: Record<string, unknown>, index: number) => (
                   <div key={index} className="bg-white p-3 rounded border">
                     <div className="flex items-center justify-between">
-                      <span className="font-medium capitalize">{trend.category}</span>
-                      <span className="text-lg">{getTrendIcon(trend.trend)}</span>
+                      <span className="font-medium capitalize">{String(trend.category)}</span>
+                      <span className="text-lg">{getTrendIcon(String(trend.trend))}</span>
                     </div>
                     <div className={`text-sm mt-1 ${
                       trend.trend === 'increasing' ? 'text-red-600' :
                       trend.trend === 'decreasing' ? 'text-green-600' : 'text-gray-600'
                     }`}>
-                      {trend.trend}
+                      {String(trend.trend)}
                     </div>
                   </div>
                 ))}
@@ -163,7 +194,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                         <div className="text-sm text-gray-600">
                           Component: {error.context.component || 'Unknown'} | 
                           Action: {error.context.action || 'Unknown'} |
-                          Count: {error.occurrenceCount}
+                          Count: {String(error.occurrenceCount)}
                         </div>
                         {error.aiPredictedImpact && (
                           <div className="text-sm text-blue-600 mt-1">
