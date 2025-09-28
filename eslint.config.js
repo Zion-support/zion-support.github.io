@@ -90,6 +90,7 @@ export default [
       'cypress/**',
       'server/**',
       'src/pages.disabled/**',
+      'src.corrupted/**',
       'components/layout/**',
       'components/main/**',
       'components/sections/**',

@@ -15,18 +15,9 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-<<<<<<< HEAD
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "src.corrupted/*"
-      ]
-    },
-=======
 
     /* Linting */
     "strict": true,
->>>>>>> 366f0ca472b7b633095eeea402480ac669b10b74
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
@@ -45,9 +36,10 @@
     /* Types */
     "types": ["jest", "node"]
   },
-<<<<<<< HEAD
   "include": [
-    "src.corrupted/**/*"
+    "src/**/*",
+    "src.corrupted/**/*",
+    "index.html"
   ],
   "exclude": [
     "node_modules",
@@ -68,9 +60,6 @@
     "**/*.config.ts",
     "vite.config.ts",
     "vitest.config.ts"
-  ]
-=======
-  "include": ["src", "index.html", "src/types/**/*"],
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
->>>>>>> 366f0ca472b7b633095eeea402480ac669b10b74
 }
