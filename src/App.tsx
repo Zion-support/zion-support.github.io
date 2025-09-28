@@ -15,7 +15,7 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-// import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
+import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import { SEOOptimizer } from './components/SEOOptimizer';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
@@ -45,7 +45,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
-  const [showAdvancedDashboard] = useState(false);
+  const [showAdvancedDashboard, setShowAdvancedDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
@@ -190,13 +190,11 @@ export default function App(): React.JSX.Element {
     description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
     keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology'],
     canonicalUrl: `https://zion.app${currentPathname}`,
-    ogTitle: 'Zion Tech Group - AI & Technology Solutions',
-    ogDescription: 'Transform your business with cutting-edge AI and technology solutions.',
     ogImage: 'https://zion.app/og-image.jpg',
+    ogUrl: `https://zion.app${currentPathname}`,
+    ogType: 'website' as const,
     twitterCard: 'summary_large_image' as const,
-    twitterTitle: 'Zion Tech Group - AI & Technology Solutions',
-    twitterDescription: 'Transform your business with cutting-edge AI and technology solutions.',
-    twitterImage: 'https://zion.app/twitter-image.jpg'
+    siteName: 'Zion Tech Group'
   }), [currentPathname]);
 
   // Performance optimization hook (for future use)
@@ -213,12 +211,17 @@ export default function App(): React.JSX.Element {
       enhancedPerformanceMonitor.startMonitoring();
       
       // Initialize new advanced systems
-      // performanceOptimizer is already initialized as a singleton
-      enhancedSecurityManager.initialize();
-      new AdvancedAutomationSystem().initialize();
+      if ('initialize' in performanceOptimizer) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (performanceOptimizer as any).initialize();
+      }
+      if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
+        enhancedSecurityManager.initialize();
+      }
       // Initialize enhancement systems
-      accessibilityEnhancer.initialize();
-      // securityEnhancer is already initialized in constructor
+      if (accessibilityEnhancer && typeof accessibilityEnhancer.initialize === 'function') {
+        accessibilityEnhancer.initialize();
+      }
       
       // Initialize analytics
       if ('initialize' in analytics) {
@@ -291,12 +294,12 @@ export default function App(): React.JSX.Element {
     // Update Open Graph tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) {
-      ogTitle.setAttribute('content', data.ogTitle);
+      ogTitle.setAttribute('content', data.title);
     }
 
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription) {
-      ogDescription.setAttribute('content', data.ogDescription);
+      ogDescription.setAttribute('content', data.description);
     }
 
     const ogImage = document.querySelector('meta[property="og:image"]');
@@ -312,17 +315,17 @@ export default function App(): React.JSX.Element {
 
     const twitterTitle = document.querySelector('meta[name="twitter:title"]');
     if (twitterTitle) {
-      twitterTitle.setAttribute('content', data.twitterTitle);
+      twitterTitle.setAttribute('content', data.title);
     }
 
     const twitterDescription = document.querySelector('meta[name="twitter:description"]');
     if (twitterDescription) {
-      twitterDescription.setAttribute('content', data.twitterDescription);
+      twitterDescription.setAttribute('content', data.description);
     }
 
     const twitterImage = document.querySelector('meta[name="twitter:image"]');
     if (twitterImage) {
-      twitterImage.setAttribute('content', data.twitterImage);
+      twitterImage.setAttribute('content', data.ogImage);
     }
   }, []);
 
