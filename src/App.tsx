@@ -101,14 +101,14 @@ export default function App(): React.JSX.Element {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
-  // const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
-  // const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
+  const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
+  const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
   const [showComprehensiveMonitoring, setShowComprehensiveMonitoring] = useState(false);
   const [showRealTimePerformance, setShowRealTimePerformance] = useState(false);
   const [showEnhancedCommandPalette, setShowEnhancedCommandPalette] = useState(false);
   const [showSystemStatus, setShowSystemStatus] = useState(true);
   const [showEnhancedNotifications] = useState(true);
-  // const [showKeyboardShortcutsManager, setShowKeyboardShortcutsManager] = useState(false);
+  const [showKeyboardShortcutsManager, setShowKeyboardShortcutsManager] = useState(false);
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
