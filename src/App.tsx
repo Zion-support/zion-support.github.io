@@ -9,39 +9,32 @@ import { analytics } from './utils/analytics';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
-// import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import './index.css';
+import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAnalytics } from './utils/enhancedAnalytics';
+import { advancedCacheSystem } from './utils/advancedCacheSystem';
+import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
+import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
+import { SecurityEnhancer } from './utils/securityEnhancer';
 
-export default function App(): React.JSX.Element {
+function App() {
+  const { isLoading, loadingProgress } = useAppInitialization();
+  const { preloadResource } = usePerformanceOptimization();
+
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
-  // Engagement tracking data (currently unused but available for future features)
-  // const engagementData = useMemo(() => ({
-  //   startTime: Date.now(),
-  //   scrollDepth: 0,
-  //   clicks: 0
-  // }), []);
-  // Initialize app with custom configuration
-  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
-    enablePerformanceMonitoring: true,
-    enableAccessibility: true,
-    enableSecurity: true,
-    enableAnalytics: true,
-    enableNotifications: true,
-    enableCaching: true,
-  });
+  const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
 
-  // Performance optimization hook
-  const { preloadResource } = usePerformanceOptimization({
-    enablePreloading: true,
-    enableResourceHints: true,
-    enableCriticalCSS: true,
-    enableImageOptimization: true,
-  });
+  // Engagement tracking data
+  const engagementData = useMemo(() => ({
+    startTime: Date.now(),
+    scrollDepth: 0,
+    clicks: 0
+  }), []);
 
   // Optimized keyboard handler for system dashboard toggle
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
@@ -71,15 +64,14 @@ export default function App(): React.JSX.Element {
       scrollDepth: engagementData.scrollDepth,
       clicks: engagementData.clicks,
     });
-    trackEngagement();
-  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
+  }, [engagementData]);
 
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
     keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogType: 'website',
+    ogType: 'website' as const,
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const
@@ -101,11 +93,6 @@ export default function App(): React.JSX.Element {
       
       // Update meta description
       let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
-      }
       if (metaDescription) {
         metaDescription.setAttribute('content', data.description);
       }
@@ -122,7 +109,7 @@ export default function App(): React.JSX.Element {
     enhancedAnalytics.initialize();
     advancedCacheSystem.initialize();
     new AdvancedAutomationSystem().initialize();
-    new AccessibilityEnhancer().initialize();
+    // AccessibilityEnhancer doesn't have a public initialize method
     new SecurityEnhancer().initialize();
     
     // Initialize analytics
@@ -135,42 +122,10 @@ export default function App(): React.JSX.Element {
     
     // Initialize performance SEO optimizations
     performanceSEO.optimizeImages();
+    performanceSEO.preloadCriticalResources();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
-
-    // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
     
-    // Initialize advanced optimization systems
-    performanceOptimizer.optimizeBundle();
-    accessibilityEnhancer.initialize();
-    seoOptimizer.optimizePage(seoData);
-
-    // Add performance marks for better monitoring
-    if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
-      performance.mark('app-init-start');
-    }
-    
-    // Preload critical resources
-    preloadResource('/og-image.png', 'image');
-    preloadResource('/favicon.ico', 'image');
-
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
-    document.addEventListener('keydown', handleKeyDown);
-
-    // Initialize basic systems
-    analytics.initialize();
-    
-    // Initialize SEO analytics
-    seoAnalytics.trackPageView(window.location.pathname);
-    
-    // Initialize performance SEO optimizations
-    performanceSEO.optimizeImages();
-    performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
-
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
 
@@ -181,25 +136,20 @@ export default function App(): React.JSX.Element {
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
     }
-    // Track engagement on page unload
-    window.addEventListener('beforeunload', enhancedTrackEngagement);
 
     // Mark app as fully initialized
-    if (typeof window !== 'undefined' && window.performance && 
-        typeof performance.mark === 'function' && 
-        typeof performance.measure === 'function') {
+    if (typeof window !== 'undefined' && 'performance' in window) {
       performance.mark('app-init-complete');
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
 
     // Cleanup function
     return () => {
-      window.removeEventListener('beforeunload', enhancedTrackEngagement);
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
+      window.removeEventListener('scroll', () => {});
+      document.removeEventListener('click', () => {});
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags]);
+  }, [handleKeyDown, seoData, preloadResource, updateMetaTags]);
 
   // Add keyboard event listener
   React.useEffect(() => {
@@ -210,60 +160,41 @@ export default function App(): React.JSX.Element {
     };
   }, [handleKeyDown]);
 
-  // Main initialization and cleanup effect
-  React.useEffect(() => {
-    // Track engagement on page unload
-    window.addEventListener('beforeunload', trackEngagement);
+  // Track engagement on scroll and click
+  const handleScroll = useCallback(() => {
+    if (typeof window !== 'undefined') {
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      engagementData.scrollDepth = Math.max(engagementData.scrollDepth, scrollPercent);
+    }
+  }, [engagementData]);
 
-    // Cleanup function
-    return () => {
-      window.removeEventListener('beforeunload', trackEngagement);
-      
-      // Final engagement tracking
-      trackEngagement();
-    };
-  }, [trackEngagement]);
+  const handleClick = useCallback((event: Event) => {
+    engagementData.clicks++;
+  }, [engagementData]);
 
-  // Real-time performance metrics monitoring
-  useEffect(() => {
-    if (!showRealTimeMetrics) return;
-
-    const updateMetrics = () => {
-      if (typeof window !== 'undefined' && window.performance) {
-        const memory = (window.performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        
-        setPerformanceMetrics(prev => ({
-          memoryUsage: memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0,
-          renderTime: navigation ? Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart) : 0,
-          networkLatency: navigation ? Math.round(navigation.responseEnd - navigation.requestStart) : 0,
-          errorCount: prev.errorCount
-        }));
-      }
-    };
-
-    const interval = setInterval(updateMetrics, 1000);
-    updateMetrics(); // Initial update
-
-    return () => clearInterval(interval);
-  }, [showRealTimeMetrics]);
-
-  // Performance optimization is handled by the hook automatically
+  const trackEngagement = useCallback(() => {
+    const timeOnPage = Date.now() - engagementData.startTime;
+    seoAnalytics.trackUserEngagement(window.location.pathname, {
+      timeOnPage,
+      scrollDepth: engagementData.scrollDepth,
+      clicks: engagementData.clicks,
+    });
+  }, [engagementData]);
 
   // Track engagement on scroll and click
   useEffect(() => {
     const handleScrollWithEngagement = () => {
       handleScroll();
-        trackEngagement();
-      };
+      trackEngagement();
+    };
 
     const handleClickWithEngagement = (event: Event) => {
       handleClick(event);
       trackEngagement();
     };
 
-    window.addEventListener('scroll', handleScrollWithEngagement, { passive: true });
-    document.addEventListener('click', handleClickWithEngagement, { passive: true });
+    window.addEventListener('scroll', handleScrollWithEngagement);
+    document.addEventListener('click', handleClickWithEngagement);
 
     return () => {
       window.removeEventListener('scroll', handleScrollWithEngagement);
@@ -288,7 +219,6 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer seoData={seoData} />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
@@ -328,49 +258,6 @@ export default function App(): React.JSX.Element {
           </div>
         )}
 
-        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
-        <PerformanceMonitor 
-          showDashboard={showPerformanceMonitor}
-          onMetricsUpdate={(metrics) => {
-            console.log('Performance metrics:', metrics);
-          }}
-        />
-        
-        {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
-        <AIPerformanceDashboard
-          isVisible={showAIDashboard}
-          onClose={() => setShowAIDashboard(false)}
-        />
-
-        {/* Real-time Metrics Display - Toggle with Ctrl+Shift+R */}
-        {showRealTimeMetrics && (
-          <div className="fixed top-4 right-4 z-50 bg-black bg-opacity-90 text-white p-4 rounded-lg shadow-lg min-w-[300px]">
-            <div className="flex justify-between items-center mb-3">
-              <h3 className="text-lg font-bold">Real-time Metrics</h3>
-              <button
-                onClick={() => setShowRealTimeMetrics(false)}
-                className="text-gray-300 hover:text-white text-xl"
-              >
-                ✕
-              </button>
-            </div>
-            <div className="space-y-2 text-sm">
-              <div className="flex justify-between">
-                <span>Memory Usage:</span>
-                <span className="text-green-400">{performanceMetrics.memoryUsage} MB</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Render Time:</span>
-                <span className="text-blue-400">{performanceMetrics.renderTime} ms</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Network Latency:</span>
-                <span className="text-yellow-400">{performanceMetrics.networkLatency} ms</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Errors:</span>
-                <span className="text-red-400">{performanceMetrics.errorCount}</span>
-              </div>
         {/* Performance Monitor */}
         {showPerformanceMonitor && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
@@ -388,8 +275,15 @@ export default function App(): React.JSX.Element {
             </div>
           </div>
         )}
-      </div>
+
+        {/* AI Performance Dashboard */}
+        <AIPerformanceDashboard
+          isVisible={showAIDashboard}
+          onClose={() => setShowAIDashboard(false)}
+        />
       </div>
     </EnhancedErrorBoundary>
   );
 }
+
+export default App;
