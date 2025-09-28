@@ -44,34 +44,44 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
   const [isMonitoring, setIsMonitoring] = useState(false);
 
   const updateMetrics = useCallback(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined' || !performance || !performance.getEntriesByType) return;
 
     // Web Vitals
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigation) {
-      setMetrics(prev => ({
-        ...prev,
-        ttfb: navigation.responseStart - navigation.requestStart
-      }));
-    }
+    try {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        setMetrics(prev => ({
+          ...prev,
+          ttfb: navigation.responseStart - navigation.requestStart
+        }));
+      }
 
-    // First Contentful Paint
-    const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
-    if (fcpEntry) {
-      setMetrics(prev => ({
-        ...prev,
-        fcp: fcpEntry.startTime
-      }));
+      // First Contentful Paint
+      if (performance.getEntriesByName) {
+        const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
+        if (fcpEntry) {
+          setMetrics(prev => ({
+            ...prev,
+            fcp: fcpEntry.startTime
+          }));
+        }
+      }
+    } catch (error) {
+      console.warn('Performance metrics unavailable:', error);
     }
 
     // Largest Contentful Paint
-    const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
-    if (lcpEntries.length > 0) {
-      const lcp = lcpEntries[lcpEntries.length - 1];
-      setMetrics(prev => ({
-        ...prev,
-        lcp: lcp.startTime
-      }));
+    try {
+      const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+      if (lcpEntries.length > 0) {
+        const lcp = lcpEntries[lcpEntries.length - 1];
+        setMetrics(prev => ({
+          ...prev,
+          lcp: lcp.startTime
+        }));
+      }
+    } catch (error) {
+      console.warn('LCP metrics unavailable:', error);
     }
 
     // Memory usage

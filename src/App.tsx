@@ -65,7 +65,6 @@ export default function App(): React.JSX.Element {
     // Also call the original trackEngagement from useAppInitialization
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
-
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
