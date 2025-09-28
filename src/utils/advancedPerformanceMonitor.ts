@@ -73,14 +73,11 @@ interface NetworkConnection {
   downlink?: number;
   rtt?: number;
   saveData?: boolean;
+  addEventListener?: (type: string, listener: EventListener) => void;
+  removeEventListener?: (type: string, listener: EventListener) => void;
 }
 
-interface ExtendedNavigator {
-  connection?: NetworkConnection & {
-    addEventListener?: (event: string, listener: () => void) => void;
-    removeEventListener?: (event: string, listener: () => void) => void;
-  };
-}
+// Use type assertion instead of extending Navigator to avoid interface conflicts
 
 interface GoogleAnalytics {
   gtag: (command: string, action: string, parameters?: Record<string, unknown>) => void;
@@ -290,7 +287,7 @@ class AdvancedPerformanceMonitor {
   private initializeNetworkMonitoring(): void {
     if (!('connection' in navigator)) return;
 
-    const connection = (navigator as ExtendedNavigator).connection;
+    const connection = (navigator as Navigator & { connection?: NetworkConnection }).connection;
     if (connection) {
       this.recordMetric('networkInfo', {
         effectiveType: connection.effectiveType,
@@ -301,7 +298,7 @@ class AdvancedPerformanceMonitor {
     }
 
     // Monitor connection changes
-    if (connection && connection.addEventListener) {
+    if (connection?.addEventListener) {
       connection.addEventListener('change', () => {
         this.recordMetric('networkInfo', {
           effectiveType: connection?.effectiveType,
@@ -397,8 +394,9 @@ class AdvancedPerformanceMonitor {
     metrics.forEach(m => Object.keys(m.customMetrics).forEach(k => customKeys.add(k)));
 
     customKeys.forEach(key => {
-      const values = metrics.map(m => m.customMetrics[key]).filter(v => v > 0);
-      if (values.length > 0 && averages.customMetrics) {
+      const values = metrics.map(m => m.customMetrics?.[key]).filter(v => v && v > 0) as number[];
+      if (values.length > 0) {
+        if (!averages.customMetrics) averages.customMetrics = {};
         averages.customMetrics[key] = values.reduce((a, b) => a + b, 0) / values.length;
       }
     });

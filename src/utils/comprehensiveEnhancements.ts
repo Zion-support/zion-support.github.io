@@ -255,18 +255,24 @@ class ComprehensiveEnhancements {
 
   private setupXSSProtection(): void {
     // Monitor for XSS attempts
-    const originalInnerHTML = Element.prototype.innerHTML;
-    Element.prototype.innerHTML = function(this: Element, value: string) {
-      if (typeof value === 'string' && this.containsXSS(value)) {
-        console.warn('XSS attempt blocked');
-        this.securityMetrics.xssAttempts = (this.securityMetrics.xssAttempts || 0) + 1;
-        return;
-      }
-      return originalInnerHTML.call(this, value);
-    };
+    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
+    if (originalInnerHTML) {
+      Object.defineProperty(Element.prototype, 'innerHTML', {
+        set: function(this: Element, value: string) {
+          const element = this as Element & { containsXSS?: (value: string) => boolean; securityMetrics?: { xssAttempts: number } };
+          if (typeof value === 'string' && element.containsXSS && element.containsXSS(value)) {
+            console.warn('XSS attempt blocked');
+            element.securityMetrics = element.securityMetrics || { xssAttempts: 0 };
+            element.securityMetrics.xssAttempts = (element.securityMetrics.xssAttempts || 0) + 1;
+            return;
+          }
+          originalInnerHTML.call(this, value);
+        }
+      });
+    }
 
     // Add XSS detection method
-    (Element.prototype as Element & { containsXSS?: (content: string) => boolean }).containsXSS = function(content: string): boolean {
+    (Element.prototype as Element & { containsXSS?: (content: string) => boolean }).containsXSS = function(this: Element, content: string): boolean {
       const xssPatterns = [
         /<script[^>]*>.*?<\/script>/gi,
         /javascript:/gi,
@@ -280,7 +286,7 @@ class ComprehensiveEnhancements {
   private setupClickjackingProtection(): void {
     // Detect if page is being framed
     if (window.top !== window.self) {
-      window.top!.location = window.location;
+      window.top!.location.href = window.location.href;
     }
 
     // Set frame options
@@ -600,7 +606,7 @@ class ComprehensiveEnhancements {
 
   private setupUserFeedback(): void {
     // Store notification function globally
-    (window as Window & { showNotification?: (message: string, type?: string) => void }).showNotification = this.showNotification.bind(this);
+    (window as Window & { showNotification?: (message: string, type?: 'success' | 'error' | 'warning' | 'info') => void }).showNotification = this.showNotification.bind(this);
   }
 
   private showNotification(message: string, type: 'success' | 'error' | 'warning' | 'info' = 'info'): void {
@@ -659,7 +665,7 @@ class ComprehensiveEnhancements {
     }
   }
 
-  private applyPreferences(preferences: Record<string, unknown>): void {
+  private applyPreferences(preferences: { theme?: string; highContrast?: boolean; fontSize?: string }): void {
     if (preferences.theme === 'dark') {
       document.body.classList.add('dark-theme');
     }
@@ -697,14 +703,18 @@ class ComprehensiveEnhancements {
             case 'largest-contentful-paint':
               this.performanceMetrics.lcp = entry.startTime;
               break;
-            case 'first-input':
-              this.performanceMetrics.fid = entry.processingStart - entry.startTime;
+            case 'first-input': {
+              const fidEntry = entry as PerformanceEntry & { processingStart: number };
+              this.performanceMetrics.fid = fidEntry.processingStart - entry.startTime;
               break;
-            case 'layout-shift':
-              if (!entry.hadRecentInput) {
-                this.performanceMetrics.cls = (this.performanceMetrics.cls || 0) + entry.value;
+            }
+            case 'layout-shift': {
+              const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+              if (!layoutShiftEntry.hadRecentInput) {
+                this.performanceMetrics.cls = (this.performanceMetrics.cls || 0) + (layoutShiftEntry.value || 0);
               }
               break;
+            }
           }
         }
       });

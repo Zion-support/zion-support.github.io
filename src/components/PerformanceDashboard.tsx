@@ -1,6 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import AdvancedPerformanceMonitor from '../utils/advancedPerformanceMonitor';
-import { PerformanceMetrics } from '../types/global';
+/**
+ * Performance Dashboard Component
+ * Real-time performance monitoring and metrics display
+ */
+
+import React, { useEffect, useState, useCallback } from 'react';
+import { Activity, Zap, Clock, Database, Wifi, Cpu, Monitor } from 'lucide-react';
+
+interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  memoryUsage: number;
+  bundleSize: number;
+  networkSpeed: string;
+  cpuUsage: number;
+  storageUsed: number;
+}
 
 interface PerformanceDashboardProps {
   isVisible?: boolean;
@@ -11,415 +28,222 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
   isVisible = false, 
   onClose 
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics[]>([]);
-  const [currentMetrics, setCurrentMetrics] = useState<PerformanceMetrics | null>(null);
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    networkSpeed: 'Unknown',
+    cpuUsage: 0,
+    storageUsed: 0
+  });
+
   const [isMonitoring, setIsMonitoring] = useState(false);
 
-  useEffect(() => {
-    const monitor = AdvancedPerformanceMonitor.getInstance();
-    
-    // Get initial metrics
-    setMetrics(monitor.getMetrics());
-    setCurrentMetrics(monitor.getLatestMetrics());
+  const updateMetrics = useCallback(() => {
+    if (typeof window === 'undefined') return;
 
-    // Start monitoring
-    monitor.startMonitoring();
-    setIsMonitoring(true);
+    // Web Vitals
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigation) {
+      setMetrics(prev => ({
+        ...prev,
+        ttfb: navigation.responseStart - navigation.requestStart
+      }));
+    }
 
-    // Update metrics periodically
-    const interval = setInterval(() => {
-      setMetrics(monitor.getMetrics());
-      setCurrentMetrics(monitor.getLatestMetrics());
-    }, 5000);
+    // First Contentful Paint
+    const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
+    if (fcpEntry) {
+      setMetrics(prev => ({
+        ...prev,
+        fcp: fcpEntry.startTime
+      }));
+    }
 
-    return () => {
-      clearInterval(interval);
-      monitor.stopMonitoring();
-      setIsMonitoring(false);
-    };
-  }, []);
+    // Largest Contentful Paint
+    const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+    if (lcpEntries.length > 0) {
+      const lcp = lcpEntries[lcpEntries.length - 1];
+      setMetrics(prev => ({
+        ...prev,
+        lcp: lcp.startTime
+      }));
+    }
 
-  const formatMetricValue = (value: unknown): string => {
-    if (typeof value === 'number') {
-      if (value < 1) {
-        return value.toFixed(3);
-      } else if (value < 1000) {
-        return `${value.toFixed(1)}ms`;
-      } else {
-        return `${(value / 1000).toFixed(1)}s`;
+    // Memory usage
+    if ('memory' in performance) {
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+      if (memory) {
+        setMetrics(prev => ({
+          ...prev,
+          memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+        }));
       }
     }
-    return String(value);
+
+    // Network information
+    if ('connection' in navigator) {
+      const connection = (navigator as Navigator & { connection?: { effectiveType?: string } }).connection;
+      if (connection) {
+        setMetrics(prev => ({
+          ...prev,
+          networkSpeed: connection.effectiveType || 'Unknown'
+        }));
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isVisible && !isMonitoring) {
+      setIsMonitoring(true);
+      updateMetrics();
+      
+      const interval = setInterval(updateMetrics, 2000);
+      return () => clearInterval(interval);
+    }
+  }, [isVisible, isMonitoring, updateMetrics]);
+
+  const getPerformanceGrade = (metric: number, thresholds: { good: number; poor: number }): string => {
+    if (metric <= thresholds.good) return 'text-green-500';
+    if (metric <= thresholds.poor) return 'text-yellow-500';
+    return 'text-red-500';
   };
 
-  const getMetricColor = (key: string, value: number): string => {
-    const thresholds = {
-      pageLoadTime: 3000,
-      firstContentfulPaint: 1800,
-      largestContentfulPaint: 2500,
-      cumulativeLayoutShift: 0.1,
-      firstInputDelay: 100,
-      totalBlockingTime: 300,
-    };
-
-    const threshold = thresholds[key as keyof typeof thresholds];
-    if (threshold && value > threshold) {
-      return '#e53e3e'; // Red for poor performance
-    } else if (threshold && value > threshold * 0.8) {
-      return '#d69e2e'; // Yellow for warning
-    }
-    return '#38a169'; // Green for good performance
+  const formatMetric = (value: number, unit: string): string => {
+    return `${value.toFixed(1)}${unit}`;
   };
 
   if (!isVisible) return null;
 
   return (
-    <div className="performance-dashboard">
-      <div className="dashboard-header">
-        <h2>Performance Dashboard</h2>
-        <div className="dashboard-controls">
-          <div className={`monitoring-status ${isMonitoring ? 'active' : 'inactive'}`}>
-            {isMonitoring ? '🟢 Monitoring' : '🔴 Stopped'}
-          </div>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto">
+        <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
+            <Monitor className="w-6 h-6 mr-2 text-blue-500" />
+            Performance Dashboard
+          </h2>
           {onClose && (
-            <button onClick={onClose} className="close-button">
+            <button
+              onClick={onClose}
+              className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+            >
+              <span className="sr-only">Close</span>
               ✕
             </button>
           )}
         </div>
+
+        <div className="p-6">
+          {/* Web Vitals Section */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+              <Activity className="w-5 h-5 mr-2 text-green-500" />
+              Web Vitals
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-medium text-gray-600 dark:text-gray-300">FCP</span>
+                  <span className={getPerformanceGrade(metrics.fcp, { good: 1800, poor: 3000 })}>
+                    {formatMetric(metrics.fcp, 'ms')}
+                  </span>
+                </div>
+                <p className="text-xs text-gray-500 dark:text-gray-400">First Contentful Paint</p>
+              </div>
+
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-medium text-gray-600 dark:text-gray-300">LCP</span>
+                  <span className={getPerformanceGrade(metrics.lcp, { good: 2500, poor: 4000 })}>
+                    {formatMetric(metrics.lcp, 'ms')}
+                  </span>
+                </div>
+                <p className="text-xs text-gray-500 dark:text-gray-400">Largest Contentful Paint</p>
+              </div>
+
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-medium text-gray-600 dark:text-gray-300">FID</span>
+                  <span className={getPerformanceGrade(metrics.fid, { good: 100, poor: 300 })}>
+                    {formatMetric(metrics.fid, 'ms')}
+                  </span>
+                </div>
+                <p className="text-xs text-gray-500 dark:text-gray-400">First Input Delay</p>
+              </div>
+
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-medium text-gray-600 dark:text-gray-300">CLS</span>
+                  <span className={getPerformanceGrade(metrics.cls, { good: 0.1, poor: 0.25 })}>
+                    {formatMetric(metrics.cls, '')}
+                  </span>
+                </div>
+                <p className="text-xs text-gray-500 dark:text-gray-400">Cumulative Layout Shift</p>
+              </div>
+            </div>
+          </div>
+
+          {/* System Resources Section */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+              <Cpu className="w-5 h-5 mr-2 text-blue-500" />
+              System Resources
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-medium text-gray-600 dark:text-gray-300">Memory</span>
+                  <Database className="w-4 h-4 text-blue-500" />
+                </div>
+                <p className="text-lg font-semibold text-gray-900 dark:text-white">
+                  {formatMetric(metrics.memoryUsage, ' MB')}
+                </p>
+              </div>
+
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-medium text-gray-600 dark:text-gray-300">Network</span>
+                  <Wifi className="w-4 h-4 text-green-500" />
+                </div>
+                <p className="text-lg font-semibold text-gray-900 dark:text-white">
+                  {metrics.networkSpeed}
+                </p>
+              </div>
+
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-medium text-gray-600 dark:text-gray-300">TTFB</span>
+                  <Clock className="w-4 h-4 text-purple-500" />
+                </div>
+                <p className="text-lg font-semibold text-gray-900 dark:text-white">
+                  {formatMetric(metrics.ttfb, ' ms')}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Performance Tips */}
+          <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
+            <h4 className="text-sm font-semibold text-blue-900 dark:text-blue-100 mb-2 flex items-center">
+              <Zap className="w-4 h-4 mr-2" />
+              Performance Tips
+            </h4>
+            <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
+              <li>• Optimize images and use modern formats (WebP, AVIF)</li>
+              <li>• Minimize JavaScript bundles and use code splitting</li>
+              <li>• Enable compression and caching headers</li>
+              <li>• Use a Content Delivery Network (CDN)</li>
+            </ul>
+          </div>
+        </div>
       </div>
-
-      <div className="dashboard-content">
-        {/* Current Metrics */}
-        {currentMetrics && (
-          <div className="metrics-section">
-            <h3>Current Metrics</h3>
-            <div className="metrics-grid">
-              {Object.entries(currentMetrics).map(([key, value]) => {
-                if (key === 'timestamp' || key === 'customMetrics') return null;
-                
-                const numericValue = typeof value === 'number' ? value : 0;
-                const color = getMetricColor(key, numericValue);
-                
-                return (
-                  <div key={key} className="metric-card">
-                    <div className="metric-label">{key}</div>
-                    <div 
-                      className="metric-value"
-                      style={{ color }}
-                    >
-                      {formatMetricValue(value as unknown)}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
-
-        {/* Custom Metrics */}
-        {currentMetrics?.customMetrics && Object.keys(currentMetrics.customMetrics).length > 0 && (
-          <div className="metrics-section">
-            <h3>Custom Metrics</h3>
-            <div className="metrics-grid">
-              {Object.entries(currentMetrics.customMetrics).map(([key, value]) => (
-                <div key={key} className="metric-card">
-                  <div className="metric-label">{key}</div>
-                  <div className="metric-value">
-                    {formatMetricValue(value)}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Memory Usage */}
-        {currentMetrics?.memoryUsage && (
-          <div className="metrics-section">
-            <h3>Memory Usage</h3>
-            <div className="memory-info">
-              <div className="memory-item">
-                <span className="memory-label">Used:</span>
-                <span className="memory-value">
-                  {((currentMetrics.memoryUsage?.usedJSHeapSize ?? 0) / 1024 / 1024).toFixed(1)} MB
-                </span>
-              </div>
-              <div className="memory-item">
-                <span className="memory-label">Total:</span>
-                <span className="memory-value">
-                  {((currentMetrics.memoryUsage?.totalJSHeapSize ?? 0) / 1024 / 1024).toFixed(1)} MB
-                </span>
-              </div>
-              <div className="memory-item">
-                <span className="memory-label">Limit:</span>
-                <span className="memory-value">
-                  {((currentMetrics.memoryUsage?.jsHeapSizeLimit ?? 0) / 1024 / 1024).toFixed(1)} MB
-                </span>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Network Information */}
-        {currentMetrics?.networkInfo && (
-          <div className="metrics-section">
-            <h3>Network Information</h3>
-            <div className="network-info">
-              <div className="network-item">
-                <span className="network-label">Connection:</span>
-                <span className="network-value">
-                  {currentMetrics.networkInfo?.effectiveType ?? 'unknown'}
-                </span>
-              </div>
-              <div className="network-item">
-                <span className="network-label">Downlink:</span>
-                <span className="network-value">
-                  {currentMetrics.networkInfo?.downlink ?? 0} Mbps
-                </span>
-              </div>
-              <div className="network-item">
-                <span className="network-label">RTT:</span>
-                <span className="network-value">
-                  {currentMetrics.networkInfo?.rtt ?? 0} ms
-                </span>
-              </div>
-              {currentMetrics.networkInfo?.saveData && (
-                <div className="network-item">
-                  <span className="network-label">Data Saver:</span>
-                  <span className="network-value">Enabled</span>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Metrics History */}
-        {metrics.length > 1 && (
-          <div className="metrics-section">
-            <h3>Recent History ({metrics.length} entries)</h3>
-            <div className="history-chart">
-              {metrics.slice(-10).map((metric) => (
-                <div key={metric.timestamp} className="history-item">
-                  <div className="history-time">
-                    {new Date(metric.timestamp).toLocaleTimeString()}
-                  </div>
-                  <div className="history-metrics">
-                    {(metric.pageLoadTime as number) > 0 && (
-                      <span 
-                        className="history-metric"
-                        style={{ color: getMetricColor('pageLoadTime', metric.pageLoadTime as number) }}
-                      >
-                        Load: {formatMetricValue(metric.pageLoadTime)}
-                      </span>
-                    )}
-                    {(metric.firstContentfulPaint as number) > 0 && (
-                      <span 
-                        className="history-metric"
-                        style={{ color: getMetricColor('firstContentfulPaint', metric.firstContentfulPaint as number) }}
-                      >
-                        FCP: {formatMetricValue(metric.firstContentfulPaint)}
-                      </span>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
-
-      <style>{`
-        .performance-dashboard {
-          position: fixed;
-          top: 20px;
-          right: 20px;
-          width: 400px;
-          max-height: 80vh;
-          background: white;
-          border-radius: 12px;
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-          z-index: 1000;
-          overflow: hidden;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-
-        .dashboard-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 1rem;
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          color: white;
-        }
-
-        .dashboard-header h2 {
-          margin: 0;
-          font-size: 1.2rem;
-          font-weight: 600;
-        }
-
-        .dashboard-controls {
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-        }
-
-        .monitoring-status {
-          font-size: 0.8rem;
-          padding: 0.25rem 0.5rem;
-          border-radius: 4px;
-          background: rgba(255, 255, 255, 0.2);
-        }
-
-        .monitoring-status.active {
-          background: rgba(56, 161, 105, 0.8);
-        }
-
-        .close-button {
-          background: none;
-          border: none;
-          color: white;
-          font-size: 1.2rem;
-          cursor: pointer;
-          padding: 0.25rem;
-          border-radius: 4px;
-          transition: background-color 0.2s;
-        }
-
-        .close-button:hover {
-          background: rgba(255, 255, 255, 0.2);
-        }
-
-        .dashboard-content {
-          max-height: calc(80vh - 80px);
-          overflow-y: auto;
-          padding: 1rem;
-        }
-
-        .metrics-section {
-          margin-bottom: 1.5rem;
-        }
-
-        .metrics-section h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1rem;
-          font-weight: 600;
-          color: #2d3748;
-          border-bottom: 2px solid #e2e8f0;
-          padding-bottom: 0.5rem;
-        }
-
-        .metrics-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-          gap: 0.75rem;
-        }
-
-        .metric-card {
-          background: #f7fafc;
-          border-radius: 8px;
-          padding: 0.75rem;
-          text-align: center;
-        }
-
-        .metric-label {
-          font-size: 0.8rem;
-          color: #4a5568;
-          margin-bottom: 0.25rem;
-          text-transform: capitalize;
-        }
-
-        .metric-value {
-          font-size: 1rem;
-          font-weight: 600;
-          color: #2d3748;
-        }
-
-        .memory-info, .network-info {
-          background: #f7fafc;
-          border-radius: 8px;
-          padding: 1rem;
-        }
-
-        .memory-item, .network-item {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 0.5rem;
-        }
-
-        .memory-item:last-child, .network-item:last-child {
-          margin-bottom: 0;
-        }
-
-        .memory-label, .network-label {
-          font-size: 0.9rem;
-          color: #4a5568;
-        }
-
-        .memory-value, .network-value {
-          font-size: 0.9rem;
-          font-weight: 600;
-          color: #2d3748;
-        }
-
-        .history-chart {
-          background: #f7fafc;
-          border-radius: 8px;
-          padding: 1rem;
-          max-height: 200px;
-          overflow-y: auto;
-        }
-
-        .history-item {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 0.5rem 0;
-          border-bottom: 1px solid #e2e8f0;
-        }
-
-        .history-item:last-child {
-          border-bottom: none;
-        }
-
-        .history-time {
-          font-size: 0.8rem;
-          color: #4a5568;
-          min-width: 80px;
-        }
-
-        .history-metrics {
-          display: flex;
-          gap: 0.5rem;
-          flex-wrap: wrap;
-        }
-
-        .history-metric {
-          font-size: 0.8rem;
-          font-weight: 600;
-          background: rgba(255, 255, 255, 0.8);
-          padding: 0.25rem 0.5rem;
-          border-radius: 4px;
-        }
-
-        @media (max-width: 640px) {
-          .performance-dashboard {
-            top: 10px;
-            right: 10px;
-            left: 10px;
-            width: auto;
-            max-height: 90vh;
-          }
-
-          .metrics-grid {
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-          }
-        }
-      `}</style>
     </div>
   );
 };
 
-export { PerformanceDashboard };
 export default PerformanceDashboard;
