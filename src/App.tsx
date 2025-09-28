@@ -63,30 +63,34 @@ export default function App(): React.JSX.Element {
 
   // Initialize comprehensive enhancements
   useEffect(() => {
-    // Initialize enhanced systems
-    enhancedPerformanceMonitor.startMonitoring();
-    enhancedAnalytics.initialize();
-    advancedCacheSystem.initialize();
-    AdvancedAutomationSystem.getInstance().initialize();
-    
-    // Initialize accessibility and security enhancers
-    AccessibilityEnhancer.getInstance();
-    SecurityEnhancer.getInstance();
-    
-    // Get comprehensive enhancements
-    const enhancements = getComprehensiveEnhancements({
-      enableAdvancedPerformance: true,
-      enableSecurityFeatures: true,
-      enableAccessibilityFeatures: true,
-      enableSEOFeatures: true,
-      enableUXFeatures: true,
-      enableAnalytics: true,
-      enableOfflineSupport: true,
-      enablePWA: true
-    });
+    try {
+      // Initialize enhanced systems
+      enhancedPerformanceMonitor.startMonitoring();
+      enhancedAnalytics.initialize();
+      advancedCacheSystem.initialize();
+      AdvancedAutomationSystem.getInstance().initialize();
+      
+      // Initialize accessibility and security enhancers
+      AccessibilityEnhancer.getInstance();
+      SecurityEnhancer.getInstance();
+      
+      // Get comprehensive enhancements
+      const enhancements = getComprehensiveEnhancements({
+        enableAdvancedPerformance: true,
+        enableSecurityFeatures: true,
+        enableAccessibilityFeatures: true,
+        enableSEOFeatures: true,
+        enableUXFeatures: true,
+        enableAnalytics: true,
+        enableOfflineSupport: true,
+        enablePWA: true
+      });
 
-    // Store enhancements globally for debugging
-    (window as unknown as Record<string, unknown>).enhancements = enhancements;
+      // Store enhancements globally for debugging
+      (window as unknown as Record<string, unknown>).enhancements = enhancements;
+    } catch (error) {
+      console.error('Error initializing enhancements:', error);
+    }
   }, []);
 
   // Optimized keyboard handler for system dashboard toggle
@@ -114,105 +118,125 @@ export default function App(): React.JSX.Element {
 
   // Enhanced track engagement function
   const trackEngagement = useCallback(() => {
-    const timeOnPage = Date.now() - engagementData.startTime;
-    seoAnalytics.trackUserEngagement(window.location.pathname, {
-      timeOnPage,
-      scrollDepth: engagementData.scrollDepth,
-      clicks: engagementData.clicks,
-    });
-    // Also call the original trackEngagement from useAppInitialization
-    originalTrackEngagement();
+    try {
+      const timeOnPage = Date.now() - engagementData.startTime;
+      seoAnalytics.trackUserEngagement(window.location.pathname, {
+        timeOnPage,
+        scrollDepth: engagementData.scrollDepth,
+        clicks: engagementData.clicks,
+      });
+      // Also call the original trackEngagement from useAppInitialization
+      originalTrackEngagement();
+    } catch (error) {
+      console.error('Error tracking engagement:', error);
+    }
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, originalTrackEngagement]);
 
   // Simple SEO manager
   const seoManagerInstance = useMemo(() => ({
     updateMetaTags: (data: typeof seoData) => {
-      if (typeof document !== 'undefined') {
-        document.title = data.title;
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-          metaDescription.setAttribute('content', data.description);
+      try {
+        if (typeof document !== 'undefined') {
+          document.title = data.title;
+          const metaDescription = document.querySelector('meta[name="description"]');
+          if (metaDescription) {
+            metaDescription.setAttribute('content', data.description);
+          }
         }
+      } catch (error) {
+        console.error('Error updating meta tags:', error);
       }
     }
   }), []);
   useEffect(() => {
-    // Add performance marks for better monitoring
-    if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
-      performance.mark('app-init-start');
-      
-      // Add performance observer for better monitoring
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'navigation') {
-              console.log('Navigation timing:', entry);
+    try {
+      // Add performance marks for better monitoring
+      if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
+        performance.mark('app-init-start');
+        
+        // Add performance observer for better monitoring
+        if ('PerformanceObserver' in window) {
+          const observer = new PerformanceObserver((list) => {
+            for (const entry of list.getEntries()) {
+              if (entry.entryType === 'navigation') {
+                console.log('Navigation timing:', entry);
+              }
             }
-          }
-        });
-        observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
+          });
+          observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
+        }
       }
+      
+      // Preload critical resources
+      preloadResource('/og-image.png', 'image');
+      preloadResource('/favicon.ico', 'image');
+
+      // Use passive listeners for better performance
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      document.addEventListener('click', handleClick, { passive: true });
+      document.addEventListener('keydown', handleKeyDown);
+
+      // Initialize basic systems
+      analytics.initialize();
+      
+      // Initialize SEO analytics
+      seoAnalytics.trackPageView(window.location.pathname);
+      
+      // Initialize performance SEO optimizations
+      performanceSEO.optimizeImages();
+      performanceSEO.preloadCriticalResources();
+      performanceSEO.optimizeFonts();
+      performanceSEO.optimizeCSS();
+      
+      // Initialize analytics system
+      analytics.initialize();
+      analytics.trackPageView();
+
+      // Set default SEO data using the correct method
+      seoManagerInstance.updateMetaTags(seoData);
+    } catch (error) {
+      console.error('Error in main initialization effect:', error);
     }
-    
-    // Preload critical resources
-    preloadResource('/og-image.png', 'image');
-    preloadResource('/favicon.ico', 'image');
-
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
-    document.addEventListener('keydown', handleKeyDown);
-
-    // Initialize basic systems
-    analytics.initialize();
-    
-    // Initialize SEO analytics
-    seoAnalytics.trackPageView(window.location.pathname);
-    
-    // Initialize performance SEO optimizations
-    performanceSEO.optimizeImages();
-    performanceSEO.preloadCriticalResources();
-    performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
-    
-    // Initialize analytics system
-    analytics.initialize();
-    analytics.trackPageView();
-
-    // Set default SEO data using the correct method
-    seoManagerInstance.updateMetaTags(seoData);
   }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource, seoManagerInstance]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
-    // Mark app as fully initialized
-    if (typeof window !== 'undefined' && window.performance && 
-        typeof performance.mark === 'function' && 
-        typeof performance.measure === 'function') {
-      performance.mark('app-init-complete');
-      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
-    }
+    try {
+      // Mark app as fully initialized
+      if (typeof window !== 'undefined' && window.performance && 
+          typeof performance.mark === 'function' && 
+          typeof performance.measure === 'function') {
+        performance.mark('app-init-complete');
+        performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
+      }
 
-    // Basic performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized');
-    }
+      // Basic performance monitoring
+      if (typeof window !== 'undefined') {
+        console.log('🚀 Zion Tech Group App initialized');
+      }
 
-    // Track engagement on page unload
-    window.addEventListener('beforeunload', trackEngagement);
-    
-    // Cleanup function
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('beforeunload', trackEngagement);
+      // Track engagement on page unload
+      window.addEventListener('beforeunload', trackEngagement);
       
-      // Final engagement tracking
-      trackEngagement();
-      
-      // Remove event listeners
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
-    };
+      // Cleanup function
+      return () => {
+        try {
+          document.removeEventListener('keydown', handleKeyDown);
+          window.removeEventListener('beforeunload', trackEngagement);
+          
+          // Final engagement tracking
+          trackEngagement();
+          
+          // Remove event listeners
+          window.removeEventListener('scroll', handleScroll);
+          document.removeEventListener('click', handleClick);
+        } catch (error) {
+          console.error('Error in cleanup effect:', error);
+        }
+      };
+    } catch (error) {
+      console.error('Error in cleanup effect:', error);
+    }
   }, [trackEngagement, handleKeyDown, handleScroll, handleClick]);
 
   // Show loading screen while initializing
