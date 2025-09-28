@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import AdvancedPerformanceMonitor from '../utils/advancedPerformanceMonitor';
 
-interface PerformanceMetric {
-  name: string;
-  value: number;
-  timestamp: number;
-  category: string;
-  unit?: string;
-}
-
 interface PerformanceDashboardProps {
   isVisible?: boolean;
   onClose?: () => void;
+}
+
+interface PerformanceMetric {
+  timestamp: number;
+  [key: string]: unknown;
 }
 
 const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ 
@@ -46,7 +43,7 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
     };
   }, []);
 
-  const formatMetricValue = (value: number | string): string => {
+  const formatMetricValue = (value: unknown): string => {
     if (typeof value === 'number') {
       if (value < 1) {
         return value.toFixed(3);
@@ -428,4 +425,5 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
   );
 };
 
+export { PerformanceDashboard };
 export default PerformanceDashboard;

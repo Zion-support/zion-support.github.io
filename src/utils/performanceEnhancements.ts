@@ -66,7 +66,6 @@ class PerformanceEnhancer {
     this.monitorCoreWebVitals();
   }
 
-
   /**
    * Monitor Core Web Vitals using Performance Observer
    */
