@@ -73,11 +73,11 @@ interface NetworkConnection {
   downlink?: number;
   rtt?: number;
   saveData?: boolean;
+  addEventListener?: (type: string, listener: EventListener) => void;
+  removeEventListener?: (type: string, listener: EventListener) => void;
 }
 
-interface ExtendedNavigator extends Navigator {
-  connection?: NetworkInformation;
-}
+// Use type assertion instead of extending Navigator to avoid interface conflicts
 
 interface GoogleAnalytics {
   gtag: (command: string, action: string, parameters?: Record<string, unknown>) => void;
@@ -287,7 +287,7 @@ class AdvancedPerformanceMonitor {
   private initializeNetworkMonitoring(): void {
     if (!('connection' in navigator)) return;
 
-    const connection = (navigator as ExtendedNavigator).connection;
+    const connection = (navigator as any).connection as NetworkConnection | undefined;
     if (connection) {
       this.recordMetric('networkInfo', {
         effectiveType: connection.effectiveType,
@@ -298,13 +298,13 @@ class AdvancedPerformanceMonitor {
     }
 
     // Monitor connection changes
-    if (connection && 'addEventListener' in connection) {
+    if (connection?.addEventListener) {
       connection.addEventListener('change', () => {
         this.recordMetric('networkInfo', {
-          effectiveType: connection.effectiveType,
-          downlink: connection.downlink,
-          rtt: connection.rtt,
-          saveData: connection.saveData,
+          effectiveType: connection?.effectiveType,
+          downlink: connection?.downlink,
+          rtt: connection?.rtt,
+          saveData: connection?.saveData,
         });
       });
     }
