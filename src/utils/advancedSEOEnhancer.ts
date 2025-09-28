@@ -355,3 +355,8 @@ SEO Report:
 `;
   }
 }
+
+// Export singleton instance
+export const seoEnhancer = new AdvancedSEOEnhancer();
+export { AdvancedSEOEnhancer };
+export type { SEOConfig, PageSEOData };

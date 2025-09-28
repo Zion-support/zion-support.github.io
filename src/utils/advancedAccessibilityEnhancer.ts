@@ -642,3 +642,8 @@ Accessibility Report:
 `;
   }
 }
+
+// Export singleton instance
+export const accessibilityEnhancer = new AdvancedAccessibilityEnhancer();
+export { AdvancedAccessibilityEnhancer };
+export type { AccessibilityConfig, AccessibilityMetrics };
