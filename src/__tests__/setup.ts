@@ -36,7 +36,7 @@ const mockLocationInstance = {
   port: '3000',
   protocol: 'http:',
   origin: 'http://localhost:3000',
-  ancestorOrigins: [] as DOMStringList,
+  ancestorOrigins: [] as unknown as DOMStringList,
 } as Location;
 delete (window as unknown as { location?: Partial<Location> }).location;
 (window as unknown as { location: Partial<Location> }).location = mockLocationInstance;

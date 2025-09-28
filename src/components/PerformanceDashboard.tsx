@@ -1,22 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import AdvancedPerformanceMonitor from '../utils/advancedPerformanceMonitor';
+import { PerformanceMetrics } from '../types/global';
 
 interface PerformanceDashboardProps {
   isVisible?: boolean;
   onClose?: () => void;
 }
 
-interface PerformanceMetric {
-  timestamp: number;
-  [key: string]: unknown;
-}
-
 const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ 
   isVisible = false, 
   onClose 
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetric[]>([]);
-  const [currentMetrics, setCurrentMetrics] = useState<PerformanceMetric | null>(null);
+  const [metrics, setMetrics] = useState<PerformanceMetrics[]>([]);
+  const [currentMetrics, setCurrentMetrics] = useState<PerformanceMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
 
   useEffect(() => {
@@ -112,7 +108,7 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
                       className="metric-value"
                       style={{ color }}
                     >
-                      {formatMetricValue(value)}
+                      {formatMetricValue(value as unknown)}
                     </div>
                   </div>
                 );
@@ -146,19 +142,19 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
               <div className="memory-item">
                 <span className="memory-label">Used:</span>
                 <span className="memory-value">
-                  {(currentMetrics.memoryUsage.usedJSHeapSize / 1024 / 1024).toFixed(1)} MB
+                  {((currentMetrics.memoryUsage as any).usedJSHeapSize / 1024 / 1024).toFixed(1)} MB
                 </span>
               </div>
               <div className="memory-item">
                 <span className="memory-label">Total:</span>
                 <span className="memory-value">
-                  {(currentMetrics.memoryUsage.totalJSHeapSize / 1024 / 1024).toFixed(1)} MB
+                  {((currentMetrics.memoryUsage as any).totalJSHeapSize / 1024 / 1024).toFixed(1)} MB
                 </span>
               </div>
               <div className="memory-item">
                 <span className="memory-label">Limit:</span>
                 <span className="memory-value">
-                  {(currentMetrics.memoryUsage.jsHeapSizeLimit / 1024 / 1024).toFixed(1)} MB
+                  {((currentMetrics.memoryUsage as any).jsHeapSizeLimit / 1024 / 1024).toFixed(1)} MB
                 </span>
               </div>
             </div>
@@ -173,22 +169,22 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
               <div className="network-item">
                 <span className="network-label">Connection:</span>
                 <span className="network-value">
-                  {currentMetrics.networkInfo.effectiveType}
+                  {(currentMetrics.networkInfo as any).effectiveType}
                 </span>
               </div>
               <div className="network-item">
                 <span className="network-label">Downlink:</span>
                 <span className="network-value">
-                  {currentMetrics.networkInfo.downlink} Mbps
+                  {(currentMetrics.networkInfo as any).downlink} Mbps
                 </span>
               </div>
               <div className="network-item">
                 <span className="network-label">RTT:</span>
                 <span className="network-value">
-                  {currentMetrics.networkInfo.rtt} ms
+                  {(currentMetrics.networkInfo as any).rtt} ms
                 </span>
               </div>
-              {currentMetrics.networkInfo.saveData && (
+              {(currentMetrics.networkInfo as any).saveData && (
                 <div className="network-item">
                   <span className="network-label">Data Saver:</span>
                   <span className="network-value">Enabled</span>
@@ -209,18 +205,18 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
                     {new Date(metric.timestamp).toLocaleTimeString()}
                   </div>
                   <div className="history-metrics">
-                    {metric.pageLoadTime > 0 && (
+                    {(metric.pageLoadTime as number) > 0 && (
                       <span 
                         className="history-metric"
-                        style={{ color: getMetricColor('pageLoadTime', metric.pageLoadTime) }}
+                        style={{ color: getMetricColor('pageLoadTime', metric.pageLoadTime as number) }}
                       >
                         Load: {formatMetricValue(metric.pageLoadTime)}
                       </span>
                     )}
-                    {metric.firstContentfulPaint > 0 && (
+                    {(metric.firstContentfulPaint as number) > 0 && (
                       <span 
                         className="history-metric"
-                        style={{ color: getMetricColor('firstContentfulPaint', metric.firstContentfulPaint) }}
+                        style={{ color: getMetricColor('firstContentfulPaint', metric.firstContentfulPaint as number) }}
                       >
                         FCP: {formatMetricValue(metric.firstContentfulPaint)}
                       </span>

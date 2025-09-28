@@ -195,7 +195,7 @@ export const usePerformanceOptimization = (
           // Handle lazy images
           if (element.tagName === 'IMG' && element.dataset.src) {
             const img = element as HTMLImageElement;
-            img.src = img.dataset.src;
+            img.src = img.dataset.src!;
             img.removeAttribute('data-src');
             observer.unobserve(element);
             
@@ -269,7 +269,7 @@ export const usePerformanceOptimization = (
     const connection = (navigator as unknown as { connection?: { effectiveType?: string } }).connection;
     
     const handleConnectionChange = () => {
-      const effectiveType = connection.effectiveType;
+      const effectiveType = (connection as any).effectiveType;
       
       // Adjust loading strategy based on connection
       if (effectiveType === 'slow-2g' || effectiveType === '2g') {
@@ -287,11 +287,15 @@ export const usePerformanceOptimization = (
       }
     };
 
-    connection.addEventListener('change', handleConnectionChange);
-    handleConnectionChange(); // Initial check
+    if (connection && typeof (connection as any).addEventListener === 'function') {
+      (connection as any).addEventListener('change', handleConnectionChange);
+      handleConnectionChange(); // Initial check
+    }
 
     return () => {
-      connection.removeEventListener('change', handleConnectionChange);
+      if (connection && typeof (connection as any).removeEventListener === 'function') {
+        (connection as any).removeEventListener('change', handleConnectionChange);
+      }
     };
   }, [recordMetric]);
 
@@ -299,7 +303,7 @@ export const usePerformanceOptimization = (
     preloadResource,
     recordMetric,
     measurePerformance,
-    getPerformanceMetrics,
+    getPerformanceMetrics: () => monitor.current.getLatestMetrics() || {},
     optimizeImage,
     addResourceHint,
   };

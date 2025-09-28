@@ -3,18 +3,7 @@
  * Comprehensive performance tracking and optimization system
  */
 
-interface PerformanceMetrics {
-  timestamp: number;
-  pageLoadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-  totalBlockingTime: number;
-  memoryUsage?: MemoryInfo;
-  networkInfo?: NetworkInformation;
-  customMetrics: Record<string, number>;
-}
+import { PerformanceMetrics } from '../types/global';
 
 interface PerformanceThresholds {
   pageLoadTime: number;
@@ -184,7 +173,7 @@ class AdvancedPerformanceMonitor {
       tcp: navigation.connectEnd - navigation.connectStart,
       request: navigation.responseStart - navigation.requestStart,
       response: navigation.responseEnd - navigation.responseStart,
-      processing: navigation.domComplete - navigation.domLoading,
+      processing: navigation.domComplete - ((navigation as any).domLoading || 0),
       load: navigation.loadEventEnd - navigation.loadEventStart,
     };
 
