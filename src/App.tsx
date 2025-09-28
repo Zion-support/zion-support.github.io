@@ -55,6 +55,7 @@ export default function App(): React.JSX.Element {
     structuredData: []
   }), []);
 
+  // Main initialization effect
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
