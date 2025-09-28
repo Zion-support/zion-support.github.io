@@ -1,4 +1,4 @@
-// Global types are available through tsconfig.json
+// Enhanced monitoring types are defined in global.d.ts
 /**
  * Enhanced Monitoring and Analytics System
  * Provides comprehensive monitoring, error tracking, and performance analytics
@@ -29,6 +29,8 @@ interface MonitoringConfig {
   maxRetries: number;
   endpoint: string;
 }
+
+// LayoutShift interface is already defined above, removing duplicate
 
 interface ErrorData {
   message: string;
