@@ -665,7 +665,7 @@ class ComprehensiveEnhancements {
     }
   }
 
-  private applyPreferences(preferences: { theme?: string; highContrast?: boolean; fontSize?: string }): void {
+  private applyPreferences(preferences: { theme?: string; highContrast?: boolean; fontSize?: string; reduceMotion?: boolean }): void {
     if (preferences.theme === 'dark') {
       document.body.classList.add('dark-theme');
     }
