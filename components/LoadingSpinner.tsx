@@ -11,7 +11,7 @@ const sizeClasses: Record<NonNullable<LoadingSpinnerProps["size"]>, string> = {
   md: "w-8 h-8",
   lg: "w-12 h-12"};
 
-export function LoadingSpinner({
+export default function LoadingSpinner({
   size = "md",
   className = "",
   text}: LoadingSpinnerProps) {
