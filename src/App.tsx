@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useMemo, useEffect } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import PerformanceDashboard from './components/PerformanceDashboard';
@@ -197,7 +197,7 @@ export default function App(): React.JSX.Element {
     
     // Initialize new enhancement utilities
     console.log('Initializing performance enhancements...');
-    // performanceEnhancer.initialize(); // Commented out due to private method
+    // performanceEnhancer.initialize(); // Initialize is called in constructor
     performanceEnhancer.optimizeBundle();
     performanceEnhancer.preloadResource('/static/js/main.js', 'script');
     
@@ -334,7 +334,11 @@ export default function App(): React.JSX.Element {
   // Add keyboard event listener
   React.useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    
+    // Cleanup function
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
   }, [handleKeyDown]);
 
   // Main app initialization and cleanup effect
