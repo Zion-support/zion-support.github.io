@@ -262,16 +262,5 @@ export interface PerformanceMetrics {
   violations: string[];
 }
 
-export interface OptimizationSuggestion {
-  id: string;
-  type: 'performance' | 'accessibility' | 'seo' | 'security';
-  title: string;
-  description: string;
-  impact: 'low' | 'medium' | 'high';
-  effort: 'low' | 'medium' | 'high';
-  status: 'pending' | 'in-progress' | 'completed' | 'dismissed';
-  createdAt: number;
-  updatedAt: number;
-}
 
 // All types are already exported as interfaces above
