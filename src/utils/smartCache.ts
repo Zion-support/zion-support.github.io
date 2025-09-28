@@ -28,7 +28,7 @@ export class SmartCache {
       defaultTTL: 5 * 60 * 1000, // 5 minutes
       enableLRU: true,
       enableCompression: false,
-      ...config
+      ...config,
     };
 
     this.startCleanupInterval();
@@ -49,7 +49,7 @@ export class SmartCache {
       timestamp: now,
       expiresAt,
       accessCount: 0,
-      lastAccessed: now
+      lastAccessed: now,
     });
 
     this.addToAccessOrder(key);
@@ -62,7 +62,7 @@ export class SmartCache {
 
   public get<T>(key: string): T | null {
     const item = this.cache.get(key);
-    
+
     if (!item) {
       return null;
     }
@@ -76,7 +76,7 @@ export class SmartCache {
     // Update access info
     item.accessCount++;
     item.lastAccessed = Date.now();
-    
+
     if (this.config.enableLRU) {
       this.updateAccessOrder(key);
     }
@@ -87,12 +87,12 @@ export class SmartCache {
   public has(key: string): boolean {
     const item = this.cache.get(key);
     if (!item) return false;
-    
+
     if (Date.now() > item.expiresAt) {
       this.delete(key);
       return false;
     }
-    
+
     return true;
   }
 
@@ -118,11 +118,20 @@ export class SmartCache {
     mostAccessed: Array<{ key: string; accessCount: number }>;
   } {
     const items = Array.from(this.cache.values());
-    const totalAccesses = items.reduce((sum, item) => sum + item.accessCount, 0);
-    const hitRate = totalAccesses > 0 ? items.filter(item => item.accessCount > 0).length / items.length : 0;
+    const totalAccesses = items.reduce(
+      (sum, item) => sum + item.accessCount,
+      0,
+    );
+    const hitRate =
+      totalAccesses > 0
+        ? items.filter((item) => item.accessCount > 0).length / items.length
+        : 0;
 
     const mostAccessed = items
-      .map((item, index) => ({ key: Array.from(this.cache.keys())[index], accessCount: item.accessCount }))
+      .map((item, index) => ({
+        key: Array.from(this.cache.keys())[index],
+        accessCount: item.accessCount,
+      }))
       .sort((a, b) => b.accessCount - a.accessCount)
       .slice(0, 5);
 
@@ -130,7 +139,7 @@ export class SmartCache {
       size: this.cache.size,
       maxSize: this.config.maxSize,
       hitRate,
-      mostAccessed
+      mostAccessed,
     };
   }
 
@@ -179,7 +188,7 @@ export class SmartCache {
       }
     });
 
-    expiredKeys.forEach(key => this.delete(key));
+    expiredKeys.forEach((key) => this.delete(key));
   }
 }
 

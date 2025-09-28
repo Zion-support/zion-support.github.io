@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface PerformanceMetrics {
   pageLoadTime: number;
@@ -32,7 +32,11 @@ interface UsePerformanceMonitoringOptions {
   samplingRate?: number;
   reportInterval?: number;
   thresholds?: Partial<PerformanceThresholds>;
-  onThresholdExceeded?: (metric: string, value: number, threshold: number) => void;
+  onThresholdExceeded?: (
+    metric: string,
+    value: number,
+    threshold: number,
+  ) => void;
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
 }
 
@@ -42,10 +46,12 @@ const DEFAULT_THRESHOLDS: PerformanceThresholds = {
   largestContentfulPaint: 2500,
   cumulativeLayoutShift: 0.1,
   firstInputDelay: 100,
-  totalBlockingTime: 300
+  totalBlockingTime: 300,
 };
 
-export function usePerformanceMonitoring(options: UsePerformanceMonitoringOptions = {}) {
+export function usePerformanceMonitoring(
+  options: UsePerformanceMonitoringOptions = {},
+) {
   const {
     enableWebVitals = true,
     enableMemoryMonitoring = true,
@@ -55,7 +61,7 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
     reportInterval = 5000,
     thresholds = {},
     onThresholdExceeded,
-    onMetricsUpdate
+    onMetricsUpdate,
   } = options;
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -64,7 +70,7 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
     largestContentfulPaint: 0,
     cumulativeLayoutShift: 0,
     firstInputDelay: 0,
-    totalBlockingTime: 0
+    totalBlockingTime: 0,
   });
 
   const [isMonitoring, setIsMonitoring] = useState(false);
@@ -78,29 +84,44 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
   }, [thresholds]);
 
   // Check if metric exceeds threshold
-  const checkThreshold = useCallback((metric: string, value: number, threshold: number) => {
-    if (value > threshold && onThresholdExceeded) {
-      onThresholdExceeded(metric, value, threshold);
-    }
-  }, [onThresholdExceeded]);
+  const checkThreshold = useCallback(
+    (metric: string, value: number, threshold: number) => {
+      if (value > threshold && onThresholdExceeded) {
+        onThresholdExceeded(metric, value, threshold);
+      }
+    },
+    [onThresholdExceeded],
+  );
 
   // Get memory usage
   const getMemoryUsage = useCallback((): number | undefined => {
-    if (typeof window !== 'undefined' && 'memory' in performance) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      return memory?.usedJSHeapSize ? memory.usedJSHeapSize / 1024 / 1024 : undefined; // Convert to MB
+    if (typeof window !== "undefined" && "memory" in performance) {
+      const memory = (
+        performance as Performance & { memory?: { usedJSHeapSize: number } }
+      ).memory;
+      return memory?.usedJSHeapSize
+        ? memory.usedJSHeapSize / 1024 / 1024
+        : undefined; // Convert to MB
     }
     return undefined;
   }, []);
 
   // Get network information
   const getNetworkInfo = useCallback(() => {
-    if (typeof window !== 'undefined' && 'connection' in navigator) {
-      const connection = (navigator as Navigator & { connection?: { effectiveType?: string; downlink?: number; rtt?: number } }).connection;
+    if (typeof window !== "undefined" && "connection" in navigator) {
+      const connection = (
+        navigator as Navigator & {
+          connection?: {
+            effectiveType?: string;
+            downlink?: number;
+            rtt?: number;
+          };
+        }
+      ).connection;
       return {
-        effectiveType: connection?.effectiveType || 'unknown',
+        effectiveType: connection?.effectiveType || "unknown",
         downlink: connection?.downlink || 0,
-        rtt: connection?.rtt || 0
+        rtt: connection?.rtt || 0,
       };
     }
     return undefined;
@@ -108,9 +129,11 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
 
   // Measure Web Vitals
   const measureWebVitals = useCallback(() => {
-    if (typeof window === 'undefined' || !window.performance) return;
+    if (typeof window === "undefined" || !window.performance) return;
 
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const navigation = performance.getEntriesByType(
+      "navigation",
+    )[0] as PerformanceNavigationTiming;
     if (!navigation) return;
 
     const newMetrics: Partial<PerformanceMetrics> = {};
@@ -118,50 +141,87 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
     // Page Load Time
     const pageLoadTime = navigation.loadEventEnd - navigation.fetchStart;
     newMetrics.pageLoadTime = pageLoadTime;
-    checkThreshold('pageLoadTime', pageLoadTime, thresholdsRef.current.pageLoadTime);
+    checkThreshold(
+      "pageLoadTime",
+      pageLoadTime,
+      thresholdsRef.current.pageLoadTime,
+    );
 
     // First Contentful Paint
-    const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
+    const fcpEntry = performance.getEntriesByName("first-contentful-paint")[0];
     if (fcpEntry) {
       newMetrics.firstContentfulPaint = fcpEntry.startTime;
-      checkThreshold('firstContentfulPaint', fcpEntry.startTime, thresholdsRef.current.firstContentfulPaint);
+      checkThreshold(
+        "firstContentfulPaint",
+        fcpEntry.startTime,
+        thresholdsRef.current.firstContentfulPaint,
+      );
     }
 
     // Largest Contentful Paint
-    const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+    const lcpEntries = performance.getEntriesByType("largest-contentful-paint");
     if (lcpEntries.length > 0) {
       const lcp = lcpEntries[lcpEntries.length - 1] as PerformanceEntry;
       newMetrics.largestContentfulPaint = lcp.startTime;
-      checkThreshold('largestContentfulPaint', lcp.startTime, thresholdsRef.current.largestContentfulPaint);
+      checkThreshold(
+        "largestContentfulPaint",
+        lcp.startTime,
+        thresholdsRef.current.largestContentfulPaint,
+      );
     }
 
     // Cumulative Layout Shift
     let clsValue = 0;
-    const clsEntries = performance.getEntriesByType('layout-shift') as PerformanceEntry[];
-    clsEntries.forEach(entry => {
-      const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+    const clsEntries = performance.getEntriesByType(
+      "layout-shift",
+    ) as PerformanceEntry[];
+    clsEntries.forEach((entry) => {
+      const layoutShiftEntry = entry as PerformanceEntry & {
+        hadRecentInput?: boolean;
+        value?: number;
+      };
       if (!layoutShiftEntry.hadRecentInput) {
         clsValue += layoutShiftEntry.value || 0;
       }
     });
     newMetrics.cumulativeLayoutShift = clsValue;
-    checkThreshold('cumulativeLayoutShift', clsValue, thresholdsRef.current.cumulativeLayoutShift);
+    checkThreshold(
+      "cumulativeLayoutShift",
+      clsValue,
+      thresholdsRef.current.cumulativeLayoutShift,
+    );
 
     // First Input Delay
-    const fidEntries = performance.getEntriesByType('first-input') as PerformanceEntry[];
+    const fidEntries = performance.getEntriesByType(
+      "first-input",
+    ) as PerformanceEntry[];
     if (fidEntries.length > 0) {
-      const fid = fidEntries[0] as PerformanceEntry & { processingStart?: number; startTime?: number };
-      newMetrics.firstInputDelay = (fid.processingStart || 0) - (fid.startTime || 0);
-      checkThreshold('firstInputDelay', newMetrics.firstInputDelay, thresholdsRef.current.firstInputDelay);
+      const fid = fidEntries[0] as PerformanceEntry & {
+        processingStart?: number;
+        startTime?: number;
+      };
+      newMetrics.firstInputDelay =
+        (fid.processingStart || 0) - (fid.startTime || 0);
+      checkThreshold(
+        "firstInputDelay",
+        newMetrics.firstInputDelay,
+        thresholdsRef.current.firstInputDelay,
+      );
     }
 
     // Total Blocking Time
-    const longTasks = performance.getEntriesByType('long-task') as PerformanceEntry[];
+    const longTasks = performance.getEntriesByType(
+      "long-task",
+    ) as PerformanceEntry[];
     const tbt = longTasks.reduce((total, task) => {
       return total + (task.duration - 50);
     }, 0);
     newMetrics.totalBlockingTime = tbt;
-    checkThreshold('totalBlockingTime', tbt, thresholdsRef.current.totalBlockingTime);
+    checkThreshold(
+      "totalBlockingTime",
+      tbt,
+      thresholdsRef.current.totalBlockingTime,
+    );
 
     // Memory usage
     if (enableMemoryMonitoring) {
@@ -173,14 +233,21 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
       newMetrics.networkInfo = getNetworkInfo();
     }
 
-    setMetrics(prev => {
+    setMetrics((prev) => {
       const updated = { ...prev, ...newMetrics };
       if (onMetricsUpdate) {
         onMetricsUpdate(updated);
       }
       return updated;
     });
-  }, [enableMemoryMonitoring, enableNetworkMonitoring, checkThreshold, getMemoryUsage, getNetworkInfo, onMetricsUpdate]);
+  }, [
+    enableMemoryMonitoring,
+    enableNetworkMonitoring,
+    checkThreshold,
+    getMemoryUsage,
+    getNetworkInfo,
+    onMetricsUpdate,
+  ]);
 
   // Start monitoring
   const startMonitoring = useCallback(() => {
@@ -192,25 +259,35 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
     measureWebVitals();
 
     // Set up performance observer for real-time metrics
-    if (enableWebVitals && typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+    if (
+      enableWebVitals &&
+      typeof window !== "undefined" &&
+      "PerformanceObserver" in window
+    ) {
       try {
         const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach(entry => {
-            if (entry.entryType === 'largest-contentful-paint') {
+          entries.forEach((entry) => {
+            if (entry.entryType === "largest-contentful-paint") {
               measureWebVitals();
-            } else if (entry.entryType === 'layout-shift') {
+            } else if (entry.entryType === "layout-shift") {
               measureWebVitals();
-            } else if (entry.entryType === 'first-input') {
+            } else if (entry.entryType === "first-input") {
               measureWebVitals();
             }
           });
         });
 
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'layout-shift', 'first-input'] });
+        observer.observe({
+          entryTypes: [
+            "largest-contentful-paint",
+            "layout-shift",
+            "first-input",
+          ],
+        });
         observerRef.current = observer;
       } catch (error) {
-        console.warn('PerformanceObserver not supported:', error);
+        console.warn("PerformanceObserver not supported:", error);
       }
     }
 
@@ -236,35 +313,42 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
   }, []);
 
   // Record custom metric
-  const recordMetric = useCallback((name: string, value: number, unit: string = 'ms') => {
-    if (!enableCustomMetrics || Math.random() > samplingRate) return;
+  const recordMetric = useCallback(
+    (name: string, value: number, unit: string = "ms") => {
+      if (!enableCustomMetrics || Math.random() > samplingRate) return;
 
-    if (typeof window !== 'undefined' && window.performance && 'mark' in performance) {
-      performance.mark(`${name}-${value}-${unit}`);
-    }
+      if (
+        typeof window !== "undefined" &&
+        window.performance &&
+        "mark" in performance
+      ) {
+        performance.mark(`${name}-${value}-${unit}`);
+      }
 
-    // Update metrics if it's a known metric
-    const metricMap: Record<string, keyof PerformanceMetrics> = {
-      'scrollDepth': 'pageLoadTime', // Map to existing metric for simplicity
-      'userClicks': 'firstInputDelay',
-      'buttonClicks': 'firstInputDelay',
-      'linkClicks': 'firstInputDelay',
-      'inputClicks': 'firstInputDelay',
-      'otherClicks': 'firstInputDelay'
-    };
+      // Update metrics if it's a known metric
+      const metricMap: Record<string, keyof PerformanceMetrics> = {
+        scrollDepth: "pageLoadTime", // Map to existing metric for simplicity
+        userClicks: "firstInputDelay",
+        buttonClicks: "firstInputDelay",
+        linkClicks: "firstInputDelay",
+        inputClicks: "firstInputDelay",
+        otherClicks: "firstInputDelay",
+      };
 
-    const metricKey = metricMap[name];
-    if (metricKey) {
-      setMetrics(prev => ({ ...prev, [metricKey]: value }));
-    }
-  }, [enableCustomMetrics, samplingRate]);
+      const metricKey = metricMap[name];
+      if (metricKey) {
+        setMetrics((prev) => ({ ...prev, [metricKey]: value }));
+      }
+    },
+    [enableCustomMetrics, samplingRate],
+  );
 
   // Preload resource
   const preloadResource = useCallback((href: string, as: string) => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
-    const link = document.createElement('link');
-    link.rel = 'preload';
+    const link = document.createElement("link");
+    link.rel = "preload";
     link.href = href;
     link.as = as;
     document.head.appendChild(link);
@@ -284,6 +368,6 @@ export function usePerformanceMonitoring(options: UsePerformanceMonitoringOption
     stopMonitoring,
     recordMetric,
     preloadResource,
-    measureWebVitals
+    measureWebVitals,
   };
 }

@@ -40,31 +40,31 @@ class BuildOptimizer {
       enableCompression: true,
       enableMinification: true,
       enableSourceMaps: false,
-      targetBrowsers: ['es2020', 'chrome87', 'firefox78', 'safari14'],
-      ...config
+      targetBrowsers: ["es2020", "chrome87", "firefox78", "safari14"],
+      ...config,
     };
   }
 
   public initialize(): void {
     // Initialize build optimizer
-    console.log('Build optimizer initialized');
+    console.log("Build optimizer initialized");
   }
 
   /**
    * Optimize bundle size by analyzing and removing unused code
    */
   public optimizeBundleSize(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     // Remove unused CSS
     this.removeUnusedCSS();
-    
+
     // Remove unused JavaScript
     this.removeUnusedJS();
-    
+
     // Optimize images
     this.optimizeImages();
-    
+
     // Preload critical resources
     this.preloadCriticalResources();
   }
@@ -74,11 +74,14 @@ class BuildOptimizer {
    */
   private removeUnusedCSS(): void {
     const styleSheets = document.styleSheets;
-    
+
     for (let i = 0; i < styleSheets.length; i++) {
       try {
         const sheet = styleSheets[i];
-        if (sheet.ownerNode && (sheet.ownerNode as Element).tagName === 'STYLE') {
+        if (
+          sheet.ownerNode &&
+          (sheet.ownerNode as Element).tagName === "STYLE"
+        ) {
           const rules = sheet.cssRules || sheet.rules;
           if (rules) {
             for (let j = rules.length - 1; j >= 0; j--) {
@@ -94,7 +97,7 @@ class BuildOptimizer {
         }
       } catch (e) {
         // Skip stylesheets that can't be accessed due to CORS
-        console.warn('Could not optimize stylesheet:', e);
+        console.warn("Could not optimize stylesheet:", e);
       }
     }
   }
@@ -105,14 +108,18 @@ class BuildOptimizer {
   private isSelectorUsed(selector: string): boolean {
     try {
       // Simple check for common selectors
-      if (selector.includes('*') || selector.includes('html') || selector.includes('body')) {
+      if (
+        selector.includes("*") ||
+        selector.includes("html") ||
+        selector.includes("body")
+      ) {
         return true;
       }
-      
+
       // Check if elements matching the selector exist
       const elements = document.querySelectorAll(selector);
       return elements.length > 0;
-    } catch (e) {
+    } catch {
       return true; // Assume it's used if we can't check
     }
   }
@@ -123,28 +130,28 @@ class BuildOptimizer {
   private removeUnusedJS(): void {
     // This would typically be done at build time
     // Here we can only do runtime optimizations
-    console.log('JavaScript optimization would be handled at build time');
+    console.log("JavaScript optimization would be handled at build time");
   }
 
   /**
    * Optimize images for better performance
    */
   private optimizeImages(): void {
-    const images = document.querySelectorAll('img');
-    
-    images.forEach(img => {
+    const images = document.querySelectorAll("img");
+
+    images.forEach((img) => {
       // Add loading="lazy" if not already present
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
+      if (!img.hasAttribute("loading")) {
+        img.setAttribute("loading", "lazy");
       }
-      
+
       // Add decoding="async" for better performance
-      if (!img.hasAttribute('decoding')) {
-        img.setAttribute('decoding', 'async');
+      if (!img.hasAttribute("decoding")) {
+        img.setAttribute("decoding", "async");
       }
-      
+
       // Optimize srcset if present
-      if (img.hasAttribute('srcset')) {
+      if (img.hasAttribute("srcset")) {
         this.optimizeSrcset(img);
       }
     });
@@ -154,12 +161,12 @@ class BuildOptimizer {
    * Optimize srcset attribute for better image loading
    */
   private optimizeSrcset(img: HTMLImageElement): void {
-    const srcset = img.getAttribute('srcset');
+    const srcset = img.getAttribute("srcset");
     if (!srcset) return;
 
     // Parse and optimize srcset
-    const sources = srcset.split(',').map(source => {
-      const [url, descriptor] = source.trim().split(' ');
+    const sources = srcset.split(",").map((source) => {
+      const [url, descriptor] = source.trim().split(" ");
       return { url, descriptor };
     });
 
@@ -172,10 +179,10 @@ class BuildOptimizer {
 
     // Update srcset with optimized order
     const optimizedSrcset = sources
-      .map(source => `${source.url} ${source.descriptor}`)
-      .join(', ');
-    
-    img.setAttribute('srcset', optimizedSrcset);
+      .map((source) => `${source.url} ${source.descriptor}`)
+      .join(", ");
+
+    img.setAttribute("srcset", optimizedSrcset);
   }
 
   /**
@@ -183,16 +190,16 @@ class BuildOptimizer {
    */
   private preloadCriticalResources(): void {
     const criticalResources = [
-      '/assets/css/main.css',
-      '/assets/js/main.js',
-      '/assets/js/vendor-react.js'
+      "/assets/css/main.css",
+      "/assets/js/main.js",
+      "/assets/js/vendor-react.js",
     ];
 
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
+    criticalResources.forEach((resource) => {
+      const link = document.createElement("link");
+      link.rel = "preload";
       link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      link.as = resource.endsWith(".css") ? "style" : "script";
       document.head.appendChild(link);
     });
   }
@@ -201,14 +208,15 @@ class BuildOptimizer {
    * Enable service worker for caching
    */
   public enableServiceWorker(): void {
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then(registration => {
-            console.log('SW registered: ', registration);
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("/sw.js")
+          .then((registration) => {
+            console.log("SW registered: ", registration);
           })
-          .catch(registrationError => {
-            console.log('SW registration failed: ', registrationError);
+          .catch((registrationError) => {
+            console.log("SW registration failed: ", registrationError);
           });
       });
     }
@@ -220,15 +228,15 @@ class BuildOptimizer {
   public optimizeFonts(): void {
     // Preload critical fonts
     const criticalFonts = [
-      'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+      "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
     ];
 
-    criticalFonts.forEach(font => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
+    criticalFonts.forEach((font) => {
+      const link = document.createElement("link");
+      link.rel = "preload";
       link.href = font;
-      link.as = 'style';
-      link.crossOrigin = 'anonymous';
+      link.as = "style";
+      link.crossOrigin = "anonymous";
       document.head.appendChild(link);
     });
   }
@@ -239,7 +247,7 @@ class BuildOptimizer {
   public enableCompression(): void {
     // This would typically be handled by the server
     // Here we can only set up client-side optimizations
-    console.log('Compression should be enabled on the server');
+    console.log("Compression should be enabled on the server");
   }
 
   /**
@@ -256,16 +264,16 @@ class BuildOptimizer {
    * Calculate current build metrics
    */
   private calculateMetrics(): void {
-    const scripts = document.querySelectorAll('script[src]');
+    const scripts = document.querySelectorAll("script[src]");
     const styles = document.querySelectorAll('link[rel="stylesheet"]');
-    
+
     let totalSize = 0;
     let chunkCount = scripts.length + styles.length;
-    
+
     // Estimate bundle size (this would be more accurate with actual measurements)
-    scripts.forEach(script => {
-      const src = script.getAttribute('src');
-      if (src && src.includes('assets/js/')) {
+    scripts.forEach((script) => {
+      const src = script.getAttribute("src");
+      if (src && src.includes("assets/js/")) {
         totalSize += 100; // Estimated KB per script
       }
     });
@@ -284,7 +292,7 @@ class BuildOptimizer {
       cssOptimization: true,
       jsOptimization: true,
       overallScore: 85,
-      optimizationLevel: 'High'
+      optimizationLevel: "High",
     };
   }
 
@@ -293,17 +301,17 @@ class BuildOptimizer {
    */
   public generateReport(): string {
     const metrics = this.getMetrics();
-    
+
     return `
 Build Optimization Report
 Generated: ${new Date().toISOString()}
 
 Build Metrics:
-- Bundle Size: ${metrics.bundleSize || 'N/A'}KB
-- Chunk Count: ${metrics.chunkCount || 'N/A'}
-- Load Time: ${metrics.loadTime || 'N/A'}ms
-- Compression Ratio: ${metrics.compressionRatio || 'N/A'}%
-- Tree Shaking Efficiency: ${metrics.treeShakingEfficiency || 'N/A'}%
+- Bundle Size: ${metrics.bundleSize || "N/A"}KB
+- Chunk Count: ${metrics.chunkCount || "N/A"}
+- Load Time: ${metrics.loadTime || "N/A"}ms
+- Compression Ratio: ${metrics.compressionRatio || "N/A"}%
+- Tree Shaking Efficiency: ${metrics.treeShakingEfficiency || "N/A"}%
 
 This report provides insights into the current build optimization state.
 `;

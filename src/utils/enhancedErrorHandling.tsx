@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from "react";
 
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -11,13 +11,16 @@ interface ErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo, errorId: string) => void;
-  level?: 'page' | 'component' | 'critical';
+  level?: "page" | "component" | "critical";
 }
 
 /**
  * Enhanced Error Boundary with advanced error handling, reporting, and recovery
  */
-export class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+export class EnhancedErrorBoundary extends Component<
+  ErrorBoundaryProps,
+  ErrorBoundaryState
+> {
   private retryCount = 0;
   private maxRetries = 3;
   private errorTimeout: NodeJS.Timeout | null = null;
@@ -28,7 +31,7 @@ export class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: ''
+      errorId: "",
     };
   }
 
@@ -37,12 +40,12 @@ export class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
     return {
       hasError: true,
       error,
-      errorId
+      errorId,
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    const { level = 'component', onError } = this.props;
+    const { level = "component", onError } = this.props;
     const { errorId } = this.state;
 
     // Update state with error info
@@ -58,14 +61,14 @@ export class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
 
     // Log error details for debugging
     console.group(`🚨 Error Boundary [${level}]`);
-    console.error('Error:', error);
-    console.error('Error Info:', errorInfo);
-    console.error('Error ID:', errorId);
-    console.error('Component Stack:', errorInfo.componentStack);
+    console.error("Error:", error);
+    console.error("Error Info:", errorInfo);
+    console.error("Error ID:", errorId);
+    console.error("Component Stack:", errorInfo.componentStack);
     console.groupEnd();
 
     // Set up automatic retry for non-critical errors
-    if (level !== 'critical' && this.retryCount < this.maxRetries) {
+    if (level !== "critical" && this.retryCount < this.maxRetries) {
       this.setupRetry();
     }
   }
@@ -74,7 +77,7 @@ export class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
     error: Error,
     errorInfo: ErrorInfo,
     errorId: string,
-    level: string
+    level: string,
   ) => {
     try {
       const errorReport = {
@@ -90,51 +93,54 @@ export class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
         sessionId: this.getSessionId(),
         retryCount: this.retryCount,
         memoryUsage: this.getMemoryUsage(),
-        performanceMetrics: this.getPerformanceMetrics()
+        performanceMetrics: this.getPerformanceMetrics(),
       };
 
       // Send to error reporting service
-      await fetch('/api/error-reporting', {
-        method: 'POST',
+      await fetch("/api/error-reporting", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(errorReport)
+        body: JSON.stringify(errorReport),
       });
 
       // Store locally for offline analysis
       this.storeErrorLocally(errorReport);
     } catch (reportingError) {
-      console.error('Failed to report error:', reportingError);
+      console.error("Failed to report error:", reportingError);
     }
   };
 
   private storeErrorLocally = (errorReport: Record<string, unknown>) => {
     try {
-      const errors = JSON.parse(localStorage.getItem('errorReports') || '[]');
+      const errors = JSON.parse(localStorage.getItem("errorReports") || "[]");
       errors.push(errorReport);
-      
+
       // Keep only last 50 errors
       if (errors.length > 50) {
         errors.splice(0, errors.length - 50);
       }
-      
-      localStorage.setItem('errorReports', JSON.stringify(errors));
+
+      localStorage.setItem("errorReports", JSON.stringify(errors));
     } catch (error) {
-      console.error('Failed to store error locally:', error);
+      console.error("Failed to store error locally:", error);
     }
   };
 
   private setupRetry = () => {
-    this.errorTimeout = setTimeout(() => {
-      this.setState({
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        errorId: ''
-      });
-      this.retryCount++;
-    }, 2000 * (this.retryCount + 1)); // Exponential backoff
+    this.errorTimeout = setTimeout(
+      () => {
+        this.setState({
+          hasError: false,
+          error: null,
+          errorInfo: null,
+          errorId: "",
+        });
+        this.retryCount++;
+      },
+      2000 * (this.retryCount + 1),
+    ); // Exponential backoff
   };
 
   private handleRetry = () => {
@@ -147,7 +153,7 @@ export class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: ''
+      errorId: "",
     });
   };
 
@@ -156,32 +162,50 @@ export class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
   };
 
   private getUserId = (): string => {
-    return localStorage.getItem('userId') || 'anonymous';
+    return localStorage.getItem("userId") || "anonymous";
   };
 
   private getSessionId = (): string => {
-    return sessionStorage.getItem('sessionId') || 'unknown';
+    return sessionStorage.getItem("sessionId") || "unknown";
   };
 
-  private getMemoryUsage = (): { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } | null => {
-    if ('memory' in performance) {
-      const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+  private getMemoryUsage = (): {
+    usedJSHeapSize: number;
+    totalJSHeapSize: number;
+    jsHeapSizeLimit: number;
+  } | null => {
+    if ("memory" in performance) {
+      const memory = (
+        performance as Performance & {
+          memory: {
+            usedJSHeapSize: number;
+            totalJSHeapSize: number;
+            jsHeapSizeLimit: number;
+          };
+        }
+      ).memory;
       return {
         usedJSHeapSize: memory.usedJSHeapSize,
         totalJSHeapSize: memory.totalJSHeapSize,
-        jsHeapSizeLimit: memory.jsHeapSizeLimit
+        jsHeapSizeLimit: memory.jsHeapSizeLimit,
       };
     }
     return null;
   };
 
   private getPerformanceMetrics = (): Record<string, number> => {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const navigation = performance.getEntriesByType(
+      "navigation",
+    )[0] as PerformanceNavigationTiming;
     return {
       loadTime: navigation?.loadEventEnd - navigation?.loadEventStart,
-      domContentLoaded: navigation?.domContentLoadedEventEnd - navigation?.domContentLoadedEventStart,
-      firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime,
-      firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime
+      domContentLoaded:
+        navigation?.domContentLoadedEventEnd -
+        navigation?.domContentLoadedEventStart,
+      firstPaint: performance.getEntriesByName("first-paint")[0]?.startTime,
+      firstContentfulPaint: performance.getEntriesByName(
+        "first-contentful-paint",
+      )[0]?.startTime,
     };
   };
 
@@ -193,7 +217,7 @@ export class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
 
   render() {
     const { hasError, error, errorId } = this.state;
-    const { children, fallback, level = 'component' } = this.props;
+    const { children, fallback, level = "component" } = this.props;
 
     if (hasError) {
       if (fallback) {
@@ -205,16 +229,17 @@ export class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
           <div className="error-boundary-content">
             <div className="error-icon">⚠️</div>
             <h2 className="error-title">
-              {level === 'critical' ? 'Critical Error' : 'Something went wrong'}
+              {level === "critical" ? "Critical Error" : "Something went wrong"}
             </h2>
             <p className="error-message">
-              {level === 'critical' 
-                ? 'A critical error has occurred. Please reload the page.'
-                : 'An unexpected error occurred. We\'re working to fix it.'
-              }
+              {level === "critical"
+                ? "A critical error has occurred. Please reload the page."
+                : "An unexpected error occurred. We're working to fix it."}
             </p>
             <div className="error-details">
-              <p><strong>Error ID:</strong> {errorId}</p>
+              <p>
+                <strong>Error ID:</strong> {errorId}
+              </p>
               {error && (
                 <details className="error-stack">
                   <summary>Technical Details</summary>
@@ -223,8 +248,8 @@ export class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
               )}
             </div>
             <div className="error-actions">
-              {level !== 'critical' && (
-                <button 
+              {level !== "critical" && (
+                <button
                   onClick={this.handleRetry}
                   className="retry-button"
                   aria-label="Retry loading this component"
@@ -232,7 +257,7 @@ export class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
                   Try Again
                 </button>
               )}
-              <button 
+              <button
                 onClick={this.handleReload}
                 className="reload-button"
                 aria-label="Reload the entire page"
@@ -246,7 +271,7 @@ export class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
               </p>
             )}
           </div>
-          
+
           <style>{`
             .error-boundary {
               display: flex;
@@ -373,18 +398,18 @@ export class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
 export const useErrorHandler = () => {
   const handleError = React.useCallback((error: Error, context?: string) => {
     const errorId = `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    
-    console.group(`🚨 Error Handler [${context || 'Unknown'}]`);
-    console.error('Error:', error);
-    console.error('Error ID:', errorId);
-    console.error('Context:', context);
+
+    console.group(`🚨 Error Handler [${context || "Unknown"}]`);
+    console.error("Error:", error);
+    console.error("Error ID:", errorId);
+    console.error("Context:", context);
     console.groupEnd();
 
     // Report error
-    fetch('/api/error-reporting', {
-      method: 'POST',
+    fetch("/api/error-reporting", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         id: errorId,
@@ -392,10 +417,10 @@ export const useErrorHandler = () => {
         stack: error.stack,
         context,
         timestamp: new Date().toISOString(),
-        url: window.location.href
-      })
-    }).catch(reportingError => {
-      console.error('Failed to report error:', reportingError);
+        url: window.location.href,
+      }),
+    }).catch((reportingError) => {
+      console.error("Failed to report error:", reportingError);
     });
 
     return errorId;
@@ -409,7 +434,7 @@ export const useErrorHandler = () => {
  */
 export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType<P>,
-  errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>
+  errorBoundaryProps?: Omit<ErrorBoundaryProps, "children">,
 ) => {
   const WrappedComponent = (props: P) => (
     <EnhancedErrorBoundary {...errorBoundaryProps}>

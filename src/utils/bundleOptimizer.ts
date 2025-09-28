@@ -1,348 +1,415 @@
 /**
- * Advanced Bundle Optimization Utilities
- * Provides intelligent bundle analysis, optimization suggestions, and automated improvements
+ * Bundle Optimizer - Advanced bundle analysis and optimization utilities
+ * Provides comprehensive bundle analysis, optimization suggestions, and automated improvements
  */
 
 interface BundleAnalysis {
   totalSize: number;
   gzipSize: number;
-  brotliSize: number;
   chunks: ChunkAnalysis[];
   duplicates: DuplicateAnalysis[];
-  unusedCode: UnusedCodeAnalysis[];
-  recommendations: OptimizationRecommendation[];
+  unusedExports: string[];
+  optimizationSuggestions: BundleOptimizationSuggestion[];
 }
 
 interface ChunkAnalysis {
   name: string;
   size: number;
   gzipSize: number;
-  brotliSize: number;
   modules: number;
   dependencies: string[];
-  critical: boolean;
-  loadPriority: 'high' | 'medium' | 'low';
+  isVendor: boolean;
+  optimizationPotential: "high" | "medium" | "low";
 }
 
 interface DuplicateAnalysis {
   module: string;
-  occurrences: number;
-  totalSize: number;
   chunks: string[];
-  recommendation: string;
-}
-
-interface UnusedCodeAnalysis {
-  module: string;
   size: number;
-  usage: number; // percentage of code actually used
-  recommendation: string;
+  suggestion: string;
 }
 
-interface OptimizationRecommendation {
-  type: 'split' | 'merge' | 'remove' | 'lazy' | 'preload';
-  priority: 'critical' | 'high' | 'medium' | 'low';
-  title: string;
-  description: string;
-  impact: number; // estimated size reduction in KB
-  effort: 'low' | 'medium' | 'high';
-  action: () => void;
+interface BundleOptimizationSuggestion {
+  type: "critical" | "warning" | "info";
+  category: "size" | "duplicates" | "unused" | "splitting" | "compression";
+  message: string;
+  impact: "high" | "medium" | "low";
+  action: string;
+  estimatedSavings?: number;
+  title?: string;
+  priority?: string;
+  description?: string;
 }
 
 class BundleOptimizer {
   private analysis: BundleAnalysis | null = null;
-  private optimizationHistory: string[] = [];
+  private isAnalyzing = false;
 
   constructor() {
-    this.analyzeBundle();
+    this.initializeBundleAnalysis();
   }
 
-  private async analyzeBundle(): Promise<void> {
-    try {
-      // Simulate bundle analysis based on current build
-      this.analysis = {
-        totalSize: 750, // KB
-        gzipSize: 250, // KB
-        brotliSize: 200, // KB
-        chunks: [
-          {
-            name: 'vendor-react',
-            size: 355,
-            gzipSize: 113,
-            brotliSize: 90,
-            modules: 15,
-            dependencies: ['react', 'react-dom'],
-            critical: true,
-            loadPriority: 'high'
-          },
-          {
-            name: 'components',
-            size: 108,
-            gzipSize: 23,
-            brotliSize: 18,
-            modules: 25,
-            dependencies: ['react', 'framer-motion'],
-            critical: true,
-            loadPriority: 'high'
-          },
-          {
-            name: 'pages',
-            size: 50,
-            gzipSize: 10,
-            brotliSize: 8,
-            modules: 8,
-            dependencies: ['react-router-dom'],
-            critical: false,
-            loadPriority: 'medium'
-          },
-          {
-            name: 'utils',
-            size: 85,
-            gzipSize: 23,
-            brotliSize: 18,
-            modules: 12,
-            dependencies: ['axios', 'clsx'],
-            critical: false,
-            loadPriority: 'low'
-          }
-        ],
-        duplicates: [
-          {
-            module: 'lodash',
-            occurrences: 3,
-            totalSize: 45,
-            chunks: ['vendor', 'utils', 'components'],
-            recommendation: 'Consolidate lodash usage into a single chunk'
-          }
-        ],
-        unusedCode: [
-          {
-            module: 'moment',
-            size: 67,
-            usage: 15,
-            recommendation: 'Replace with date-fns or remove unused features'
-          }
-        ],
-        recommendations: []
-      };
+  private initializeBundleAnalysis(): void {
+    if (typeof window === "undefined") return;
 
-      this.generateRecommendations();
-    } catch (error) {
-      console.error('Bundle analysis failed:', error);
+    // Analyze bundle on page load
+    window.addEventListener("load", () => {
+      this.analyzeBundle();
+    });
+  }
+
+  public async analyzeBundle(): Promise<BundleAnalysis> {
+    if (this.isAnalyzing) {
+      return this.analysis!;
+    }
+
+    this.isAnalyzing = true;
+
+    try {
+      await this.performBundleAnalysis();
+      // Analysis is already set in performBundleAnalysis
+      return (
+        this.analysis || {
+          totalSize: 0,
+          chunks: [],
+          gzipSize: 0,
+          duplicates: [],
+          unusedExports: [],
+          optimizationSuggestions: [],
+        }
+      );
+    } finally {
+      this.isAnalyzing = false;
     }
   }
 
-  private generateRecommendations(): void {
-    if (!this.analysis) return;
+  private async performBundleAnalysis(): Promise<BundleAnalysis> {
+    const chunks = this.analyzeChunks();
+    const duplicates = this.findDuplicates();
+    const unusedExports = this.findUnusedExports();
+    const optimizationSuggestions = this.generateOptimizationSuggestions(
+      chunks,
+      duplicates,
+      unusedExports,
+    );
 
-    const recommendations: OptimizationRecommendation[] = [];
+    const totalSize = chunks.reduce((sum, chunk) => sum + chunk.size, 0);
+    const gzipSize = chunks.reduce((sum, chunk) => sum + chunk.gzipSize, 0);
 
-    // Analyze chunk sizes and suggest splits
-    this.analysis.chunks.forEach(chunk => {
-      if (chunk.size > 200) {
-        recommendations.push({
-          type: 'split',
-          priority: 'high',
-          title: `Split large chunk: ${chunk.name}`,
-          description: `Chunk ${chunk.name} is ${chunk.size}KB. Consider splitting into smaller chunks.`,
-          impact: Math.round(chunk.size * 0.3),
-          effort: 'medium',
-          action: () => this.splitChunk(chunk.name)
+    this.analysis = {
+      totalSize,
+      gzipSize,
+      chunks,
+      duplicates,
+      unusedExports,
+      optimizationSuggestions,
+    };
+
+    return this.analysis;
+  }
+
+  private analyzeChunks(): ChunkAnalysis[] {
+    const chunks: ChunkAnalysis[] = [];
+
+    // Analyze script tags
+    const scripts = document.querySelectorAll("script[src]");
+    scripts.forEach((script) => {
+      const src = script.getAttribute("src");
+      if (src && src.includes("assets")) {
+        const chunkName = this.extractChunkName(src);
+        const size = this.estimateChunkSize(src);
+        const gzipSize = this.estimateGzipSize(size);
+
+        chunks.push({
+          name: chunkName,
+          size,
+          gzipSize,
+          modules: this.estimateModuleCount(src),
+          dependencies: this.analyzeDependencies(src),
+          isVendor: this.isVendorChunk(src),
+          optimizationPotential: this.assessOptimizationPotential(size, src),
         });
       }
     });
 
-    // Analyze duplicates
-    this.analysis.duplicates.forEach(duplicate => {
-      recommendations.push({
-        type: 'remove',
-        priority: 'medium',
-        title: `Remove duplicate: ${duplicate.module}`,
-        description: `${duplicate.module} appears in ${duplicate.occurrences} chunks. Consolidate usage.`,
-        impact: duplicate.totalSize,
-        effort: 'low',
-        action: () => this.consolidateDuplicates(duplicate.module)
+    return chunks;
+  }
+
+  private extractChunkName(src: string): string {
+    const match = src.match(/assets\/js\/([^-/]+)-/);
+    return match ? match[1] : "unknown";
+  }
+
+  private estimateChunkSize(src: string): number {
+    // This is a rough estimation - in a real implementation, you'd fetch the actual file
+    const sizeMap: { [key: string]: number } = {
+      "vendor-react": 700000,
+      vendor: 150000,
+      components: 80000,
+      pages: 50000,
+      utils: 50000,
+      hooks: 3000,
+      main: 10000,
+    };
+
+    const chunkName = this.extractChunkName(src);
+    return sizeMap[chunkName] || 50000; // Default 50KB
+  }
+
+  private estimateGzipSize(size: number): number {
+    // Typical gzip compression ratio is around 0.3-0.4
+    return Math.round(size * 0.35);
+  }
+
+  private estimateModuleCount(src: string): number {
+    // Rough estimation based on chunk size
+    const size = this.estimateChunkSize(src);
+    return Math.round(size / 1000); // Assume 1KB per module
+  }
+
+  private analyzeDependencies(src: string): string[] {
+    // This would require actual bundle analysis
+    // For now, return common dependencies based on chunk name
+    const chunkName = this.extractChunkName(src);
+    const dependencyMap: { [key: string]: string[] } = {
+      "vendor-react": ["react", "react-dom"],
+      vendor: ["lodash", "moment", "axios"],
+      components: ["framer-motion", "lucide-react"],
+      pages: ["react-router-dom"],
+      utils: ["clsx", "tailwind-merge"],
+    };
+
+    return dependencyMap[chunkName] || [];
+  }
+
+  private isVendorChunk(src: string): boolean {
+    const chunkName = this.extractChunkName(src);
+    return chunkName.startsWith("vendor");
+  }
+
+  private assessOptimizationPotential(
+    size: number,
+    src: string,
+  ): "high" | "medium" | "low" {
+    const chunkName = this.extractChunkName(src);
+
+    if (size > 500000) return "high";
+    if (chunkName.startsWith("vendor") && size > 200000) return "high";
+    if (size > 100000) return "medium";
+    return "low";
+  }
+
+  private findDuplicates(): DuplicateAnalysis[] {
+    // This would require actual bundle analysis
+    // For now, return common duplicate patterns
+    return [
+      {
+        module: "lodash",
+        chunks: ["vendor", "components"],
+        size: 50000,
+        suggestion: "Move to shared vendor chunk",
+      },
+      {
+        module: "react",
+        chunks: ["vendor-react", "components"],
+        size: 10000,
+        suggestion: "Ensure single React instance",
+      },
+    ];
+  }
+
+  private findUnusedExports(): string[] {
+    // This would require static analysis
+    // For now, return common unused exports
+    return [
+      "unused-utility-function",
+      "deprecated-component",
+      "old-api-client",
+    ];
+  }
+
+  private generateOptimizationSuggestions(
+    chunks: ChunkAnalysis[],
+    duplicates: DuplicateAnalysis[],
+    unusedExports: string[],
+  ): BundleOptimizationSuggestion[] {
+    const suggestions: BundleOptimizationSuggestion[] = [];
+
+    // Size-based suggestions
+    const largeChunks = chunks.filter((chunk) => chunk.size > 200000);
+    if (largeChunks.length > 0) {
+      suggestions.push({
+        type: "warning",
+        category: "size",
+        message: `${largeChunks.length} chunks are larger than 200KB`,
+        impact: "high",
+        action: "Implement code splitting for large chunks",
+        estimatedSavings: largeChunks.reduce(
+          (sum, chunk) => sum + chunk.size * 0.3,
+          0,
+        ),
       });
-    });
+    }
 
-    // Analyze unused code
-    this.analysis.unusedCode.forEach(unused => {
-      if (unused.usage < 50) {
-        recommendations.push({
-          type: 'remove',
-          priority: 'high',
-          title: `Remove unused code: ${unused.module}`,
-          description: `${unused.module} has ${100 - unused.usage}% unused code.`,
-          impact: Math.round(unused.size * (100 - unused.usage) / 100),
-          effort: 'low',
-          action: () => this.removeUnusedCode(unused.module)
-        });
-      }
-    });
-
-    // Suggest lazy loading for non-critical chunks
-    this.analysis.chunks
-      .filter(chunk => !chunk.critical && chunk.loadPriority === 'low')
-      .forEach(chunk => {
-        recommendations.push({
-          type: 'lazy',
-          priority: 'medium',
-          title: `Lazy load: ${chunk.name}`,
-          description: `Load ${chunk.name} only when needed.`,
-          impact: Math.round(chunk.size * 0.8),
-          effort: 'low',
-          action: () => this.implementLazyLoading(chunk.name)
-        });
+    // Duplicate suggestions
+    if (duplicates.length > 0) {
+      const totalDuplicateSize = duplicates.reduce(
+        (sum, dup) => sum + dup.size,
+        0,
+      );
+      suggestions.push({
+        type: "critical",
+        category: "duplicates",
+        message: `${duplicates.length} duplicate modules found`,
+        impact: "high",
+        action: "Remove duplicate dependencies and optimize chunk splitting",
+        estimatedSavings: totalDuplicateSize,
       });
+    }
 
-    // Suggest preloading for critical chunks
-    this.analysis.chunks
-      .filter(chunk => chunk.critical && chunk.loadPriority === 'high')
-      .forEach(chunk => {
-        recommendations.push({
-          type: 'preload',
-          priority: 'high',
-          title: `Preload critical chunk: ${chunk.name}`,
-          description: `Preload ${chunk.name} for faster initial load.`,
-          impact: Math.round(chunk.size * 0.2),
-          effort: 'low',
-          action: () => this.preloadChunk(chunk.name)
-        });
+    // Unused exports suggestions
+    if (unusedExports.length > 0) {
+      suggestions.push({
+        type: "warning",
+        category: "unused",
+        message: `${unusedExports.length} unused exports detected`,
+        impact: "medium",
+        action: "Remove unused exports and enable tree shaking",
+        estimatedSavings: unusedExports.length * 1000, // Estimate 1KB per unused export
       });
+    }
 
-    this.analysis.recommendations = recommendations;
-  }
+    // Vendor chunk suggestions
+    const vendorChunks = chunks.filter((chunk) => chunk.isVendor);
+    if (vendorChunks.length > 3) {
+      suggestions.push({
+        type: "info",
+        category: "splitting",
+        message: "Too many vendor chunks detected",
+        impact: "medium",
+        action: "Consolidate vendor chunks for better caching",
+        estimatedSavings: 0,
+      });
+    }
 
-  private splitChunk(chunkName: string): void {
-    console.log(`Splitting chunk: ${chunkName}`);
-    this.optimizationHistory.push(`Split chunk: ${chunkName}`);
-    // Implementation would modify webpack/vite config
-  }
+    // Compression suggestions
+    const totalSize = chunks.reduce((sum, chunk) => sum + chunk.size, 0);
+    const gzipSize = chunks.reduce((sum, chunk) => sum + chunk.gzipSize, 0);
+    const compressionRatio = gzipSize / totalSize;
 
-  private consolidateDuplicates(moduleName: string): void {
-    console.log(`Consolidating duplicates: ${moduleName}`);
-    this.optimizationHistory.push(`Consolidated duplicates: ${moduleName}`);
-    // Implementation would modify imports and bundler config
-  }
+    if (compressionRatio > 0.4) {
+      suggestions.push({
+        type: "info",
+        category: "compression",
+        message: "Compression ratio could be improved",
+        impact: "low",
+        action: "Enable Brotli compression and optimize assets",
+        estimatedSavings: totalSize * 0.1,
+      });
+    }
 
-  private removeUnusedCode(moduleName: string): void {
-    console.log(`Removing unused code: ${moduleName}`);
-    this.optimizationHistory.push(`Removed unused code: ${moduleName}`);
-    // Implementation would remove unused imports and code
-  }
-
-  private implementLazyLoading(chunkName: string): void {
-    console.log(`Implementing lazy loading: ${chunkName}`);
-    this.optimizationHistory.push(`Lazy loaded: ${chunkName}`);
-    // Implementation would add dynamic imports
-  }
-
-  private preloadChunk(chunkName: string): void {
-    console.log(`Preloading chunk: ${chunkName}`);
-    this.optimizationHistory.push(`Preloaded: ${chunkName}`);
-    // Implementation would add preload links
+    return suggestions;
   }
 
   public getAnalysis(): BundleAnalysis | null {
     return this.analysis;
   }
 
-  public getRecommendations(): OptimizationRecommendation[] {
-    return this.analysis?.recommendations || [];
+  public getCriticalSuggestions(): BundleOptimizationSuggestion[] {
+    if (!this.analysis) return [];
+    return this.analysis.optimizationSuggestions.filter(
+      (s) => s.type === "critical",
+    );
   }
 
-  public getCriticalRecommendations(): OptimizationRecommendation[] {
-    return this.analysis?.recommendations.filter(r => r.priority === 'critical' || r.priority === 'high') || [];
-  }
-
-  public getOptimizationHistory(): string[] {
-    return [...this.optimizationHistory];
-  }
-
-  public applyRecommendations(recommendations: OptimizationRecommendation[]): void {
-    recommendations.forEach(rec => {
-      try {
-        rec.action();
-        console.log(`Applied optimization: ${rec.title}`);
-      } catch (error) {
-        console.error(`Failed to apply optimization ${rec.title}:`, error);
-      }
-    });
-  }
-
-  public getOptimizationScore(): number {
-    if (!this.analysis) return 0;
-
-    let score = 100;
-    
-    // Deduct points for large chunks
-    this.analysis.chunks.forEach(chunk => {
-      if (chunk.size > 200) score -= 10;
-      if (chunk.size > 500) score -= 20;
-    });
-
-    // Deduct points for duplicates
-    this.analysis.duplicates.forEach(duplicate => {
-      score -= duplicate.occurrences * 5;
-    });
-
-    // Deduct points for unused code
-    this.analysis.unusedCode.forEach(unused => {
-      if (unused.usage < 50) score -= 15;
-    });
-
-    return Math.max(0, score);
+  public getWarningSuggestions(): BundleOptimizationSuggestion[] {
+    if (!this.analysis) return [];
+    return this.analysis.optimizationSuggestions.filter(
+      (s) => s.type === "warning",
+    );
   }
 
   public generateOptimizationReport(): string {
-    if (!this.analysis) return 'No analysis available';
+    if (!this.analysis)
+      return "No analysis available. Run analyzeBundle() first.";
 
-    const score = this.getOptimizationScore();
-    const criticalRecs = this.getCriticalRecommendations();
-    const totalSavings = criticalRecs.reduce((sum, rec) => sum + rec.impact, 0);
+    const {
+      totalSize,
+      gzipSize,
+      chunks,
+      duplicates,
+      unusedExports,
+      optimizationSuggestions,
+    } = this.analysis;
 
-    return `
-Bundle Optimization Report
-==========================
-Optimization Score: ${score}/100
+    let report = "Bundle Optimization Report\n";
+    report += "========================\n\n";
 
-Current Bundle Size: ${this.analysis.totalSize}KB (${this.analysis.gzipSize}KB gzipped)
+    report += `Total Bundle Size: ${(totalSize / 1024).toFixed(1)}KB (${(gzipSize / 1024).toFixed(1)}KB gzipped)\n`;
+    report += `Compression Ratio: ${((gzipSize / totalSize) * 100).toFixed(1)}%\n`;
+    report += `Number of Chunks: ${chunks.length}\n\n`;
 
-Chunk Analysis:
-${this.analysis.chunks.map(chunk => 
-  `- ${chunk.name}: ${chunk.size}KB (${chunk.gzipSize}KB gzipped) - ${chunk.critical ? 'Critical' : 'Non-critical'}`
-).join('\n')}
+    report += "Chunk Analysis:\n";
+    chunks.forEach((chunk) => {
+      report += `- ${chunk.name}: ${(chunk.size / 1024).toFixed(1)}KB (${(chunk.gzipSize / 1024).toFixed(1)}KB gzipped) - ${chunk.optimizationPotential} potential\n`;
+    });
 
-Potential Savings: ${totalSavings}KB
+    if (duplicates.length > 0) {
+      report += "\nDuplicates Found:\n";
+      duplicates.forEach((dup) => {
+        report += `- ${dup.module}: ${(dup.size / 1024).toFixed(1)}KB in ${dup.chunks.join(", ")} - ${dup.suggestion}\n`;
+      });
+    }
 
-Critical Recommendations:
-${criticalRecs.map(rec => 
-  `- ${rec.title}: ${rec.description} (${rec.impact}KB savings)`
-).join('\n')}
+    if (unusedExports.length > 0) {
+      report += "\nUnused Exports:\n";
+      unusedExports.forEach((exportName) => {
+        report += `- ${exportName}\n`;
+      });
+    }
 
-Optimization History:
-${this.optimizationHistory.length > 0 ? this.optimizationHistory.join('\n') : 'No optimizations applied yet'}
-    `.trim();
+    if (optimizationSuggestions.length > 0) {
+      report += "\nOptimization Suggestions:\n";
+      optimizationSuggestions.forEach((suggestion, index) => {
+        const emoji =
+          suggestion.type === "critical"
+            ? "🚨"
+            : suggestion.type === "warning"
+              ? "⚠️"
+              : "ℹ️";
+        report += `${index + 1}. ${emoji} ${suggestion.message}\n`;
+        report += `   Action: ${suggestion.action}\n`;
+        if (suggestion.estimatedSavings) {
+          report += `   Estimated Savings: ${(suggestion.estimatedSavings / 1024).toFixed(1)}KB\n`;
+        }
+      });
+    }
+
+    return report;
   }
 
   public async optimizeBundle(): Promise<void> {
-    const criticalRecs = this.getCriticalRecommendations();
-    this.applyRecommendations(criticalRecs);
-    
-    // Re-analyze after optimizations
+    // This would implement actual optimization strategies
+    // For now, just log suggestions
     await this.analyzeBundle();
+    const criticalSuggestions = this.getCriticalSuggestions();
+
+    if (criticalSuggestions.length > 0) {
+      console.log("🚨 Critical bundle optimizations needed:");
+      criticalSuggestions.forEach((suggestion) => {
+        console.log(`- ${suggestion.message}: ${suggestion.action}`);
+      });
+    }
   }
 }
 
 // Export singleton instance
 export const bundleOptimizer = new BundleOptimizer();
 
-// Export types and class for external use
-export type { 
-  BundleAnalysis, 
-  ChunkAnalysis, 
-  DuplicateAnalysis, 
-  UnusedCodeAnalysis, 
-  OptimizationRecommendation 
+// Export types
+export type {
+  BundleAnalysis,
+  ChunkAnalysis,
+  DuplicateAnalysis,
+  BundleOptimizationSuggestion,
 };
-export { BundleOptimizer };

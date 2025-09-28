@@ -1,17 +1,17 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface AccessibilityPreferences {
   reducedMotion: boolean;
   highContrast: boolean;
-  fontSize: 'small' | 'medium' | 'large';
-  colorScheme: 'light' | 'dark' | 'auto';
+  fontSize: "small" | "medium" | "large";
+  colorScheme: "light" | "dark" | "auto";
   screenReader: boolean;
   keyboardNavigation: boolean;
 }
 
 interface AccessibilityAnnouncement {
   message: string;
-  priority: 'polite' | 'assertive';
+  priority: "polite" | "assertive";
   timeout?: number;
 }
 
@@ -28,7 +28,9 @@ interface UseAccessibilityEnhancementsOptions {
   enableAnnouncements?: boolean;
 }
 
-export function useAccessibilityEnhancements(options: UseAccessibilityEnhancementsOptions = {}) {
+export function useAccessibilityEnhancements(
+  options: UseAccessibilityEnhancementsOptions = {},
+) {
   const {
     enableKeyboardNavigation = true,
     enableScreenReaderSupport = true,
@@ -42,19 +44,21 @@ export function useAccessibilityEnhancements(options: UseAccessibilityEnhancemen
     announceChanges = true,
     enableSkipLinks = true,
     enableFocusTrap = true,
-    enableAnnouncements = true
+    enableAnnouncements = true,
   } = options;
 
   const [preferences, setPreferences] = useState<AccessibilityPreferences>({
     reducedMotion: false,
     highContrast: false,
-    fontSize: 'medium',
-    colorScheme: 'auto',
+    fontSize: "medium",
+    colorScheme: "auto",
     screenReader: false,
-    keyboardNavigation: false
+    keyboardNavigation: false,
   });
 
-  const [announcements, setAnnouncements] = useState<AccessibilityAnnouncement[]>([]);
+  const [announcements, setAnnouncements] = useState<
+    AccessibilityAnnouncement[]
+  >([]);
   const [isFocusTrapped, setIsFocusTrapped] = useState(false);
   const [currentFocusIndex, setCurrentFocusIndex] = useState(0);
   const [focusableElements, setFocusableElements] = useState<HTMLElement[]>([]);
@@ -67,33 +71,34 @@ export function useAccessibilityEnhancements(options: UseAccessibilityEnhancemen
   useEffect(() => {
     const detectPreferences = () => {
       const newPreferences: AccessibilityPreferences = {
-        reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-        highContrast: window.matchMedia('(prefers-contrast: high)').matches,
-        fontSize: 'medium',
-        colorScheme: 'auto',
+        reducedMotion: window.matchMedia("(prefers-reduced-motion: reduce)")
+          .matches,
+        highContrast: window.matchMedia("(prefers-contrast: high)").matches,
+        fontSize: "medium",
+        colorScheme: "auto",
         screenReader: false,
-        keyboardNavigation: false
+        keyboardNavigation: false,
       };
 
       // Detect screen reader
-      if (typeof window !== 'undefined') {
-        const hasScreenReader = 
+      if (typeof window !== "undefined") {
+        const hasScreenReader =
           window.speechSynthesis ||
-          window.navigator.userAgent.includes('NVDA') ||
-          window.navigator.userAgent.includes('JAWS') ||
-          window.navigator.userAgent.includes('VoiceOver');
-        
+          window.navigator.userAgent.includes("NVDA") ||
+          window.navigator.userAgent.includes("JAWS") ||
+          window.navigator.userAgent.includes("VoiceOver");
+
         newPreferences.screenReader = !!hasScreenReader;
       }
 
       // Detect keyboard navigation
       const handleKeyDown = (event: KeyboardEvent) => {
-        if (event.key === 'Tab') {
+        if (event.key === "Tab") {
           newPreferences.keyboardNavigation = true;
-          document.removeEventListener('keydown', handleKeyDown);
+          document.removeEventListener("keydown", handleKeyDown);
         }
       };
-      document.addEventListener('keydown', handleKeyDown);
+      document.addEventListener("keydown", handleKeyDown);
 
       setPreferences(newPreferences);
     };
@@ -102,16 +107,20 @@ export function useAccessibilityEnhancements(options: UseAccessibilityEnhancemen
 
     // Listen for preference changes
     const mediaQueries = [
-      window.matchMedia('(prefers-reduced-motion: reduce)'),
-      window.matchMedia('(prefers-contrast: high)'),
-      window.matchMedia('(prefers-color-scheme: dark)')
+      window.matchMedia("(prefers-reduced-motion: reduce)"),
+      window.matchMedia("(prefers-contrast: high)"),
+      window.matchMedia("(prefers-color-scheme: dark)"),
     ];
 
     const handleMediaChange = () => detectPreferences();
-    mediaQueries.forEach(mq => mq.addEventListener('change', handleMediaChange));
+    mediaQueries.forEach((mq) =>
+      mq.addEventListener("change", handleMediaChange),
+    );
 
     return () => {
-      mediaQueries.forEach(mq => mq.removeEventListener('change', handleMediaChange));
+      mediaQueries.forEach((mq) =>
+        mq.removeEventListener("change", handleMediaChange),
+      );
     };
   }, []);
 
@@ -119,10 +128,10 @@ export function useAccessibilityEnhancements(options: UseAccessibilityEnhancemen
   useEffect(() => {
     if (!enableScreenReaderSupport || !enableAnnouncements) return;
 
-    const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
+    const liveRegion = document.createElement("div");
+    liveRegion.setAttribute("aria-live", "polite");
+    liveRegion.setAttribute("aria-atomic", "true");
+    liveRegion.className = "sr-only";
     liveRegion.style.cssText = `
       position: absolute;
       left: -10000px;
@@ -142,29 +151,32 @@ export function useAccessibilityEnhancements(options: UseAccessibilityEnhancemen
   }, [enableScreenReaderSupport, enableAnnouncements]);
 
   // Announce messages to screen reader
-  const announce = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {
-    if (!enableAnnouncements || !liveRegionRef.current) return;
+  const announce = useCallback(
+    (message: string, priority: "polite" | "assertive" = "polite") => {
+      if (!enableAnnouncements || !liveRegionRef.current) return;
 
-    const announcement: AccessibilityAnnouncement = {
-      message,
-      priority,
-      timeout: priority === 'assertive' ? 5000 : 3000
-    };
+      const announcement: AccessibilityAnnouncement = {
+        message,
+        priority,
+        timeout: priority === "assertive" ? 5000 : 3000,
+      };
 
-    setAnnouncements(prev => [...prev, announcement]);
+      setAnnouncements((prev) => [...prev, announcement]);
 
-    // Update live region
-    liveRegionRef.current.setAttribute('aria-live', priority);
-    liveRegionRef.current.textContent = message;
+      // Update live region
+      liveRegionRef.current.setAttribute("aria-live", priority);
+      liveRegionRef.current.textContent = message;
 
-    // Clear after timeout
-    setTimeout(() => {
-      if (liveRegionRef.current) {
-        liveRegionRef.current.textContent = '';
-      }
-      setAnnouncements(prev => prev.filter(a => a !== announcement));
-    }, announcement.timeout);
-  }, [enableAnnouncements]);
+      // Clear after timeout
+      setTimeout(() => {
+        if (liveRegionRef.current) {
+          liveRegionRef.current.textContent = "";
+        }
+        setAnnouncements((prev) => prev.filter((a) => a !== announcement));
+      }, announcement.timeout);
+    },
+    [enableAnnouncements],
+  );
 
   // Focus management
   const focusElement = useCallback((element: HTMLElement | null) => {
@@ -185,35 +197,43 @@ export function useAccessibilityEnhancements(options: UseAccessibilityEnhancemen
   const focusPrevious = useCallback(() => {
     if (focusableElements.length === 0) return;
 
-    const prevIndex = currentFocusIndex === 0 ? focusableElements.length - 1 : currentFocusIndex - 1;
+    const prevIndex =
+      currentFocusIndex === 0
+        ? focusableElements.length - 1
+        : currentFocusIndex - 1;
     setCurrentFocusIndex(prevIndex);
     focusElement(focusableElements[prevIndex]);
   }, [focusableElements, currentFocusIndex, focusElement]);
 
   // Focus trap
-  const trapFocus = useCallback((container: HTMLElement) => {
-    if (!enableFocusTrap) return;
+  const trapFocus = useCallback(
+    (container: HTMLElement) => {
+      if (!enableFocusTrap) return;
 
-    focusTrapRef.current = container;
-    setIsFocusTrapped(true);
+      focusTrapRef.current = container;
+      setIsFocusTrapped(true);
 
-    const focusableSelectors = [
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
-      'a[href]',
-      '[tabindex]:not([tabindex="-1"])'
-    ].join(', ');
+      const focusableSelectors = [
+        "button:not([disabled])",
+        "input:not([disabled])",
+        "select:not([disabled])",
+        "textarea:not([disabled])",
+        "a[href]",
+        '[tabindex]:not([tabindex="-1"])',
+      ].join(", ");
 
-    const elements = Array.from(container.querySelectorAll(focusableSelectors)) as HTMLElement[];
-    setFocusableElements(elements);
-    setCurrentFocusIndex(0);
+      const elements = Array.from(
+        container.querySelectorAll(focusableSelectors),
+      ) as HTMLElement[];
+      setFocusableElements(elements);
+      setCurrentFocusIndex(0);
 
-    if (elements.length > 0) {
-      focusElement(elements[0]);
-    }
-  }, [enableFocusTrap, focusElement]);
+      if (elements.length > 0) {
+        focusElement(elements[0]);
+      }
+    },
+    [enableFocusTrap, focusElement],
+  );
 
   const releaseFocus = useCallback(() => {
     setIsFocusTrapped(false);
@@ -235,7 +255,7 @@ export function useAccessibilityEnhancements(options: UseAccessibilityEnhancemen
       if (!isFocusTrapped) return;
 
       switch (event.key) {
-        case 'Tab':
+        case "Tab":
           event.preventDefault();
           if (event.shiftKey) {
             focusPrevious();
@@ -243,15 +263,15 @@ export function useAccessibilityEnhancements(options: UseAccessibilityEnhancemen
             focusNext();
           }
           break;
-        case 'Escape':
+        case "Escape":
           releaseFocus();
           break;
-        case 'Home':
+        case "Home":
           event.preventDefault();
           setCurrentFocusIndex(0);
           focusElement(focusableElements[0]);
           break;
-        case 'End': {
+        case "End": {
           event.preventDefault();
           const lastIndex = focusableElements.length - 1;
           setCurrentFocusIndex(lastIndex);
@@ -261,18 +281,26 @@ export function useAccessibilityEnhancements(options: UseAccessibilityEnhancemen
       }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [enableKeyboardNavigation, isFocusTrapped, focusNext, focusPrevious, releaseFocus, focusableElements, focusElement]);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [
+    enableKeyboardNavigation,
+    isFocusTrapped,
+    focusNext,
+    focusPrevious,
+    releaseFocus,
+    focusableElements,
+    focusElement,
+  ]);
 
   // Skip links
   useEffect(() => {
     if (!enableSkipLinks) return;
 
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link';
+    const skipLink = document.createElement("a");
+    skipLink.href = "#main-content";
+    skipLink.textContent = "Skip to main content";
+    skipLink.className = "skip-link";
     skipLink.style.cssText = `
       position: absolute;
       top: -40px;
@@ -285,12 +313,12 @@ export function useAccessibilityEnhancements(options: UseAccessibilityEnhancemen
       transition: top 0.3s;
     `;
 
-    skipLink.addEventListener('focus', () => {
-      skipLink.style.top = '6px';
+    skipLink.addEventListener("focus", () => {
+      skipLink.style.top = "6px";
     });
 
-    skipLink.addEventListener('blur', () => {
-      skipLink.style.top = '-40px';
+    skipLink.addEventListener("blur", () => {
+      skipLink.style.top = "-40px";
     });
 
     document.body.insertBefore(skipLink, document.body.firstChild);
@@ -306,7 +334,7 @@ export function useAccessibilityEnhancements(options: UseAccessibilityEnhancemen
   useEffect(() => {
     if (!enableFocusIndicators) return;
 
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     style.textContent = `
       .focus-visible {
         outline: 2px solid #0066cc;
@@ -325,19 +353,27 @@ export function useAccessibilityEnhancements(options: UseAccessibilityEnhancemen
         border: 0;
       }
       
-      ${preferences.highContrast ? `
+      ${
+        preferences.highContrast
+          ? `
         * {
           filter: contrast(1.2);
         }
-      ` : ''}
+      `
+          : ""
+      }
       
-      ${preferences.reducedMotion ? `
+      ${
+        preferences.reducedMotion
+          ? `
         *, *::before, *::after {
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
         }
-      ` : ''}
+      `
+          : ""
+      }
     `;
 
     document.head.appendChild(style);
@@ -347,27 +383,34 @@ export function useAccessibilityEnhancements(options: UseAccessibilityEnhancemen
         style.parentNode.removeChild(style);
       }
     };
-  }, [enableFocusIndicators, preferences.highContrast, preferences.reducedMotion]);
+  }, [
+    enableFocusIndicators,
+    preferences.highContrast,
+    preferences.reducedMotion,
+  ]);
 
   // Update ARIA labels
-  const updateAriaLabel = useCallback((element: HTMLElement, label: string) => {
-    if (!enableAriaLabels) return;
+  const updateAriaLabel = useCallback(
+    (element: HTMLElement, label: string) => {
+      if (!enableAriaLabels) return;
 
-    element.setAttribute('aria-label', label);
-  }, [enableAriaLabels]);
+      element.setAttribute("aria-label", label);
+    },
+    [enableAriaLabels],
+  );
 
   // Check if element is focusable
   const isFocusable = useCallback((element: HTMLElement): boolean => {
     const focusableSelectors = [
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
-      'a[href]',
-      '[tabindex]:not([tabindex="-1"])'
+      "button:not([disabled])",
+      "input:not([disabled])",
+      "select:not([disabled])",
+      "textarea:not([disabled])",
+      "a[href]",
+      '[tabindex]:not([tabindex="-1"])',
     ];
 
-    return focusableSelectors.some(selector => element.matches(selector));
+    return focusableSelectors.some((selector) => element.matches(selector));
   }, []);
 
   return {
@@ -383,6 +426,6 @@ export function useAccessibilityEnhancements(options: UseAccessibilityEnhancemen
     trapFocus,
     releaseFocus,
     updateAriaLabel,
-    isFocusable
+    isFocusable,
   };
 }
