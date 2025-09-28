@@ -1,5 +1,6 @@
 import { useEffect, useCallback, useRef } from 'react';
 import AdvancedPerformanceMonitor from '../utils/advancedPerformanceMonitor';
+import { NetworkInformation } from '../types/global';
 
 interface PerformanceOptimizationConfig {
   enableLazyLoading?: boolean;
@@ -266,7 +267,7 @@ export const usePerformanceOptimization = (
   useEffect(() => {
     if (!('connection' in navigator)) return;
 
-    const connection = (navigator as unknown as { connection?: { effectiveType?: string } }).connection;
+    const connection = (navigator as unknown as { connection?: NetworkInformation }).connection;
     
     const handleConnectionChange = () => {
       const effectiveType = (connection as NetworkInformation).effectiveType;
@@ -287,14 +288,14 @@ export const usePerformanceOptimization = (
       }
     };
 
-    if (connection && typeof (connection as NetworkInformation).addEventListener === 'function') {
-      (connection as NetworkInformation).addEventListener('change', handleConnectionChange);
+    if (connection && typeof connection.addEventListener === 'function') {
+      connection.addEventListener('change', handleConnectionChange);
       handleConnectionChange(); // Initial check
     }
 
     return () => {
-      if (connection && typeof (connection as NetworkInformation).removeEventListener === 'function') {
-        (connection as NetworkInformation).removeEventListener('change', handleConnectionChange);
+      if (connection && typeof connection.removeEventListener === 'function') {
+        connection.removeEventListener('change', handleConnectionChange);
       }
     };
   }, [recordMetric]);

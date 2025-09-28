@@ -61,9 +61,15 @@ declare global {
   };
 }
 
-// XMLHttpRequest interface extensions
-interface XMLHttpRequest {
-  _url?: string;
-}
+// Service Worker event interface (unused - can be removed if not needed)
+// interface ServiceWorkerEvent extends Event {
+//   request: Request;
+//   respondWith(response: Promise<Response>): void;
+// }
+
+// XMLHttpRequest interface extensions (unused - can be removed if not needed)
+// interface XMLHttpRequest {
+//   _url?: string;
+// }
 
 export {};

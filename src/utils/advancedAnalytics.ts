@@ -103,8 +103,8 @@ class AdvancedAnalytics {
     if (!this.isEnabled) return;
 
     // Track Core Web Vitals
-    import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }: any) => {
-      onCLS((metric: any) => {
+    import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
+      onCLS((metric: { value: number; delta: number; id: string }) => {
         this.trackEvent('web_vital', {
           name: 'CLS',
           value: metric.value,
@@ -113,7 +113,7 @@ class AdvancedAnalytics {
         });
       });
 
-      onINP((metric: any) => {
+      onINP((metric: { value: number; delta: number; id: string }) => {
         this.trackEvent('web_vital', {
           name: 'INP',
           value: metric.value,
@@ -122,7 +122,7 @@ class AdvancedAnalytics {
         });
       });
 
-      onFCP((metric: any) => {
+      onFCP((metric: { value: number; delta: number; id: string }) => {
         this.trackEvent('web_vital', {
           name: 'FCP',
           value: metric.value,
@@ -131,7 +131,7 @@ class AdvancedAnalytics {
         });
       });
 
-      onLCP((metric: any) => {
+      onLCP((metric: { value: number; delta: number; id: string }) => {
         this.trackEvent('web_vital', {
           name: 'LCP',
           value: metric.value,
@@ -140,7 +140,7 @@ class AdvancedAnalytics {
         });
       });
 
-      onTTFB((metric: any) => {
+      onTTFB((metric: { value: number; delta: number; id: string }) => {
         this.trackEvent('web_vital', {
           name: 'TTFB',
           value: metric.value,
