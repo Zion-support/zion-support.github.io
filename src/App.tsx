@@ -11,6 +11,17 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAnalytics } from './utils/enhancedAnalytics';
+import { advancedCacheSystem } from './utils/advancedCacheSystem';
+import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
+import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
+import { SecurityEnhancer } from './utils/securityEnhancer';
+import { performanceOptimizer } from './utils/performanceOptimizer';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
+import { seoOptimizer } from './utils/seoOptimizer';
+import { createAdvancedAppEnhancements } from './utils/advancedAppEnhancements';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -48,6 +59,35 @@ export default function App(): React.JSX.Element {
     enableCriticalCSS: true,
     enableImageOptimization: true,
   });
+
+  // Initialize comprehensive enhancement suite
+  const comprehensiveEnhancements = useMemo(() => {
+    return getComprehensiveEnhancements({
+      enableAdvancedAnalytics: true,
+      enablePerformanceOptimization: true,
+      enableAccessibilityEnhancements: true,
+      enableSecurityFeatures: true,
+      enableAutomation: true,
+      enableCaching: true,
+      enableSEOOptimization: true
+    });
+  }, []);
+
+  // Initialize advanced app enhancements
+  const advancedAppEnhancements = useMemo(() => {
+    return createAdvancedAppEnhancements({
+      enableAdvancedAnalytics: true,
+      enablePerformanceOptimization: true,
+      enableAccessibilityEnhancements: true,
+      enableSecurityFeatures: true,
+      enableAutomation: true,
+      enableCaching: true,
+      enableSEOOptimization: true,
+      enableRealTimeMonitoring: true,
+      enableErrorRecovery: true,
+      enableUserExperienceOptimization: true
+    });
+  }, []);
 
   // Optimized keyboard handler for system dashboard toggle
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
@@ -153,6 +193,24 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
 
+    // Initialize comprehensive enhancement suite
+    if (comprehensiveEnhancements) {
+      comprehensiveEnhancements.initialize();
+    }
+
+    // Initialize advanced app enhancements
+    if (advancedAppEnhancements) {
+      advancedAppEnhancements.initialize();
+    }
+
+    // Initialize advanced systems
+    enhancedAnalytics.initialize();
+    enhancedPerformanceMonitor.start();
+    advancedCacheSystem.initialize();
+    accessibilityEnhancer.initialize();
+    performanceOptimizer.initialize();
+    seoOptimizer.initialize();
+
     // Set default SEO data using the correct method
     // seoManager.updateMetaTags(seoData);
 
@@ -162,6 +220,17 @@ export default function App(): React.JSX.Element {
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
+      
+      // Enhanced performance monitoring
+      if (enhancedPerformanceMonitor) {
+        enhancedPerformanceMonitor.trackAppInitialization();
+      }
+      
+      // Track performance metrics
+      if (typeof performance !== 'undefined' && performance.mark) {
+        performance.mark('app-fully-loaded');
+        performance.measure('app-load-time', 'app-init-start', 'app-fully-loaded');
+      }
     }
 
     // Use passive listeners for better performance
@@ -192,6 +261,20 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
+      
+      // Cleanup enhanced systems
+      if (enhancedPerformanceMonitor) {
+        enhancedPerformanceMonitor.stop();
+      }
+      if (advancedCacheSystem) {
+        advancedCacheSystem.cleanup();
+      }
+      if (comprehensiveEnhancements) {
+        comprehensiveEnhancements.cleanup();
+      }
+      if (advancedAppEnhancements) {
+        advancedAppEnhancements.cleanup();
+      }
     };
   }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags]);
 
