@@ -52,6 +52,7 @@ class AdvancedCachingSystem {
   private isInitialized = false;
   private compressionWorker: Worker | null = null;
   private encryptionKey: string | null = null;
+  private db: IDBDatabase | null = null;
 
   constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
@@ -188,14 +189,17 @@ class AdvancedCachingSystem {
   /**
    * Initialize IndexedDB
    */
-  private async initializeIndexedDB(): Promise<IDBDatabase | void> {
+  private async initializeIndexedDB(): Promise<void> {
     if (typeof indexedDB === 'undefined') return;
 
     return new Promise((resolve, reject) => {
       const request = indexedDB.open('ZionCache', 1);
       
       request.onerror = () => reject(request.error);
-      request.onsuccess = () => resolve(request.result as IDBDatabase);
+      request.onsuccess = () => {
+        this.db = request.result;
+        resolve();
+      };
       
       request.onupgradeneeded = (event) => {
         const db = (event.target as IDBOpenDBRequest).result;
