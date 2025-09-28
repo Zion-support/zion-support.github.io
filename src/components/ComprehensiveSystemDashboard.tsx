@@ -4,9 +4,9 @@ import { XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, L
 import { enhancedSecurityManager } from '../utils/enhancedSecurityManager';
 import { enhancedPerformanceMonitor } from '../utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from '../utils/enhancedAnalytics';
-import { advancedAnalytics } from '../utils/advancedAnalytics';
-import { smartCache } from '../utils/smartCache';
-import { errorRecoverySystem } from '../utils/errorRecovery';
+// import { advancedAnalytics } from '../utils/advancedAnalytics';
+// import { smartCache } from '../utils/smartCache';
+// import { errorRecoverySystem } from '../utils/errorRecovery';
 
 interface SystemMetrics {
   performance: {
@@ -67,7 +67,7 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
       
       // Load analytics data
       const analyticsReport = enhancedAnalytics.generateReport();
-      // const advancedEvents = advancedAnalytics.getEvents();
+      // const advancedEvents = advancedAnalytics?.getEvents();
       
       // Load system metrics
       const systemData = {
@@ -129,9 +129,9 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
   // };
 
   // const clearAllData = () => {
-  //   errorRecoverySystem.reset();
-  //   advancedAnalytics.clearData();
-  //   smartCache.clear();
+  //   // errorRecoverySystem?.reset();
+  //   // advancedAnalytics?.clearData();
+  //   // smartCache?.clear();
   //   setMetrics(null);
   //   setRealTimeData([]);
   // };

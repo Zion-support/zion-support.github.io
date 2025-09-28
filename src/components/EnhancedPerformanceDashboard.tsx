@@ -4,9 +4,7 @@ import {
   CartesianGrid, 
   XAxis, 
   YAxis, 
-  Tooltip, 
-  LineChart, 
-  Line
+  Tooltip
 } from 'recharts';
 import { performanceEnhancements } from '../utils/performanceEnhancements';
 import { bundleOptimizer } from '../utils/bundleOptimizer';

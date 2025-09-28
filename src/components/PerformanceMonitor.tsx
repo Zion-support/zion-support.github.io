@@ -51,7 +51,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDashboard, 
     if (onMetricsUpdate) {
       onMetricsUpdate(updatedMetrics as PerformanceMetrics);
     }
-  }, [onMetricsUpdate]);
+  }, [onMetricsUpdate, metrics]);
 
   useEffect(() => {
     if (!showDashboard) return;
