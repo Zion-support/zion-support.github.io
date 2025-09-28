@@ -76,7 +76,11 @@ export default defineConfig(({ mode }) => ({
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js',
         assetFileNames: 'assets/[ext]/[name]-[hash].[ext]'
-      }
+      },
+      // Enable build parallelization
+      maxParallelFileOps: 5,
+      external: [],
+      plugins: []
     },
     // Optimize build size
     minify: 'terser',
@@ -133,9 +137,13 @@ export default defineConfig(({ mode }) => ({
       'framer-motion',
       'lucide-react',
       'clsx',
-      'tailwind-merge'
+      'tailwind-merge',
+      'axios',
+      'web-vitals'
     ],
-    exclude: ['@testing-library/react', '@testing-library/jest-dom']
+    exclude: ['@testing-library/react', '@testing-library/jest-dom'],
+    // Force optimization for better performance
+    force: true
   },
   // Resolve aliases for cleaner imports
   resolve: {

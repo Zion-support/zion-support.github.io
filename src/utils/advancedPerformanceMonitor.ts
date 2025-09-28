@@ -17,7 +17,6 @@ export interface PerformanceMetrics {
 }
 
 export class AdvancedPerformanceMonitor {
-  private static instance: AdvancedPerformanceMonitor | null = null;
   private metrics: PerformanceMetrics;
   private isMonitoring = false;
   private callbacks: ((metrics: PerformanceMetrics) => void)[] = [];
@@ -38,13 +37,6 @@ export class AdvancedPerformanceMonitor {
       scrollDepth: 0,
       interactions: 0
     };
-  }
-
-  public static getInstance(): AdvancedPerformanceMonitor {
-    if (!AdvancedPerformanceMonitor.instance) {
-      AdvancedPerformanceMonitor.instance = new AdvancedPerformanceMonitor();
-    }
-    return AdvancedPerformanceMonitor.instance;
   }
 
   public start(): void {

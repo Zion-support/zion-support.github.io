@@ -6,8 +6,10 @@ import PerformanceTracker from './components/PerformanceTracker';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
-import { seoOptimizer } from './utils/seoOptimizations';
+// import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
+// import { seoOptimizer } from './utils/seoOptimizations';
+// import { seoEnhancer } from './utils/advancedSEOEnhancer';
+// import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 // Removed unused imports to reduce warnings
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -15,24 +17,25 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 // import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
-import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
+import { SEOOptimizer } from './components/SEOOptimizer';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
+// import { performanceOptimizer } from './utils/performanceOptimizer';
+import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
-// import { getNotificationManager } from './utils/advancedNotifications';
+// import { getNotificationManager, notify } from './utils/advancedNotifications';
 // import { getThemeManager } from './utils/themeManager';
-// import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
-// import { getDataVisualization } from './utils/advancedDataVisualization';
-// import { useAppInitialization } from './hooks/useAppInitialization';
+// import { getKeyboardShortcuts, shortcuts } from './utils/advancedKeyboardShortcuts';
+// import { getDataVisualization, charts } from './utils/advancedDataVisualization';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -81,10 +84,14 @@ export default function App(): React.JSX.Element {
   const isLoading = false;
   const loadingProgress = 100;
   const handleScroll = useCallback(() => {}, []);
+<<<<<<< HEAD
   const handleClick = useCallback((event: Event) => {
     // Handle click events for engagement tracking
     console.debug('Click event captured for engagement tracking', event);
   }, []);
+=======
+  const handleClick = useCallback(() => {}, []);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-b394
   const trackEngagement = useCallback(() => {}, []);
 
   // Performance optimization hook - Temporarily disabled
@@ -97,9 +104,6 @@ export default function App(): React.JSX.Element {
 
   // Get current pathname for SEO
   const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
-
-  // Get SEO data using current pathname
-  const seoData = useSEOData(currentPathname);
 
   // Command palette commands
   const commandPaletteCommands = useMemo(() => [
@@ -162,6 +166,7 @@ export default function App(): React.JSX.Element {
   ], []);
 
   // Optimized keyboard handler for system dashboard toggle - removed unused function
+
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
@@ -201,6 +206,14 @@ export default function App(): React.JSX.Element {
       // Initialize individual enhancement systems
       enhancedPerformanceMonitor.startMonitoring();
       
+      // Initialize new advanced systems
+      performanceOptimizer.initialize();
+      enhancedSecurityManager.initialize();
+      new AdvancedAutomationSystem().initialize();
+      // Initialize enhancement systems
+      new AccessibilityEnhancer();
+      new SecurityEnhancer();
+      
       // Initialize analytics
       if ('initialize' in analytics) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -231,12 +244,6 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeImages();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
-    
-    // Initialize advanced optimization systems
-    // These are initialized automatically when imported
-    void performanceOptimizer;
-    void accessibilityEnhancements;
-    void seoOptimizer;
 
     // Initialize new utility systems
     performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
@@ -245,7 +252,7 @@ export default function App(): React.JSX.Element {
 
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
-  }, [seoData]);
+  }, []);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: typeof memoizedSeoData) => {
@@ -323,17 +330,17 @@ export default function App(): React.JSX.Element {
     // Initialize advanced utilities
     const initializeUtilities = async () => {
       try {
-        // Initialize accessibility enhancements if available
-        if (accessibilityEnhancements && typeof accessibilityEnhancements.initialize === 'function') {
-          await accessibilityEnhancements.initialize();
-        }
-        console.log('Advanced utilities initialized successfully');
+        // performanceOptimizer is already initialized in constructor
+        await seoEnhancer.initialize();
+        await accessibilityEnhancer.initialize();
+        console.log('All advanced utilities initialized successfully');
       } catch (error) {
         console.error('Failed to initialize some utilities:', error);
       }
     };
 
     initializeUtilities();
+    
     // Track engagement on page unload
     window.addEventListener('beforeunload', enhancedTrackEngagement);
 
@@ -550,6 +557,44 @@ export default function App(): React.JSX.Element {
                 </button>
               </div>
               <PerformanceMonitor />
+            </div>
+          </div>
+        )}
+
+        {/* AI Performance Dashboard */}
+        <AIPerformanceDashboard
+          isVisible={showAIDashboard}
+          onClose={() => setShowAIDashboard(false)}
+        />
+
+        {/* Advanced Performance Dashboard */}
+        <AdvancedPerformanceDashboard
+          isVisible={showAdvancedDashboard}
+          onClose={() => setShowAdvancedDashboard(false)}
+        />
+
+        {/* Real-time Metrics */}
+        {showRealTimeMetrics && (
+          <div 
+            className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="real-time-metrics-title"
+            onClick={(e) => e.target === e.currentTarget && setShowRealTimeMetrics(false)}
+          >
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 id="real-time-metrics-title" className="text-2xl font-bold">Real-time Metrics</h2>
+                <button
+                  onClick={() => setShowRealTimeMetrics(false)}
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
+                >
+                  ✕
+                </button>
+              </div>
+              <div className="space-y-4">
+                <p>Real-time performance metrics will be displayed here.</p>
+              </div>
             </div>
           </div>
         )}

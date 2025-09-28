@@ -25,6 +25,10 @@ interface AccessibilityMetrics {
   keyboardTraps: number;
   screenReaderCompatibility: number;
   overallScore: number;
+  totalElements: number;
+  accessibleElements: number;
+  issuesFound: number;
+  score: number;
 }
 
 class AdvancedAccessibilityEnhancer {
@@ -55,7 +59,11 @@ class AdvancedAccessibilityEnhancer {
       altTexts: 0,
       keyboardTraps: 0,
       screenReaderCompatibility: 0,
-      overallScore: 0
+      overallScore: 0,
+      totalElements: 0,
+      accessibleElements: 0,
+      issuesFound: 0,
+      score: 0
     };
   }
 
@@ -627,3 +635,13 @@ class AdvancedAccessibilityEnhancer {
     
     return `
 Accessibility Report:
+- Total Elements: ${metrics.totalElements}
+- Accessible Elements: ${metrics.accessibleElements}
+- Issues Found: ${metrics.issuesFound}
+- Score: ${metrics.score}%
+`;
+  }
+}
+
+// Export the class as accessibilityEnhancer
+export const accessibilityEnhancer = new AdvancedAccessibilityEnhancer();

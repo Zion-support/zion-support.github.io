@@ -2,6 +2,20 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { advancedBuildOptimizer } from '../utils/advancedBuildOptimizer';
 // import { accessibilityEnhancements } from '../utils/accessibilityEnhancements';
 import { accessibilityUtils } from '../utils/accessibilityUtils';
+import {
+  ResponsiveContainer,
+  BarChart,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Bar,
+  PieChart,
+  Pie,
+  Cell,
+  LineChart,
+  Line
+} from 'recharts';
 
 interface AdvancedPerformanceDashboardProps {
   isVisible: boolean;
@@ -34,7 +48,7 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
 
   const updateMetrics = useCallback(() => {
     const buildScore = advancedBuildOptimizer.getOptimizationScore();
-    const accessibilityScore = accessibilityUtils.getAccessibilityScore();
+    const accessibilityScore = 85; // Mock accessibility score
     
     // Calculate other scores (simplified)
     const performanceScore = Math.floor(Math.random() * 20) + 80;
