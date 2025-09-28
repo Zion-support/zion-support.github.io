@@ -246,9 +246,9 @@ class PerformanceOptimizer {
     this.metrics.networkRequests = performance.getEntriesByType('resource').length;
 
     // Update bundle size
-    this.metrics.bundleSize = performance.getEntriesByType('resource')
-      .filter((entry) => entry.name.includes('.js'))
-      .reduce((total: number, entry) => total + ((entry as PerformanceResourceTiming).transferSize || 0), 0);
+    this.metrics.bundleSize = (performance.getEntriesByType('resource') as PerformanceResourceTiming[])
+      .filter((entry: PerformanceResourceTiming) => entry.name.includes('.js'))
+      .reduce((total: number, entry: PerformanceResourceTiming) => total + (entry.transferSize || 0), 0);
   }
 
   public optimizeBundle(): void {

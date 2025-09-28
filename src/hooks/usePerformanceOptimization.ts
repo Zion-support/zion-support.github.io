@@ -1,5 +1,5 @@
 import { useEffect, useCallback, useRef } from 'react';
-import { AdvancedPerformanceMonitor } from '../utils/advancedPerformanceMonitor';
+import { getPerformanceMonitor } from '../utils/advancedPerformanceMonitor';
 import { NetworkInformation } from '../types/global';
 
 interface PerformanceOptimizationConfig {
@@ -20,7 +20,6 @@ interface PerformanceOptimizationReturn {
   getPerformanceMetrics: () => Record<string, unknown>;
   optimizeImage: (src: string, options?: ImageOptimizationOptions) => string;
   addResourceHint: (href: string, as: string, type?: string) => void;
-  optimizePerformance: () => void;
 }
 
 interface ImageOptimizationOptions {
@@ -37,7 +36,7 @@ interface ImageOptimizationOptions {
 export const usePerformanceOptimization = (
   config: PerformanceOptimizationConfig = {}
 ): PerformanceOptimizationReturn => {
-  const monitor = useRef(new AdvancedPerformanceMonitor());
+  const monitor = useRef<any>(null);
   const configRef = useRef({
     enableLazyLoading: true,
     enablePreloading: true,
@@ -55,11 +54,11 @@ export const usePerformanceOptimization = (
     const perfMonitor = monitor.current;
     
     if (configRef.current.enableWebVitals) {
-      perfMonitor.start();
+      perfMonitor?.startMonitoring();
     }
 
     return () => {
-      perfMonitor.stop();
+      perfMonitor?.stopMonitoring();
     };
   }, []);
 
@@ -74,12 +73,12 @@ export const usePerformanceOptimization = (
       link.as = type;
 
       link.onload = () => {
-        // monitor.current.markCustomMetric(`preload.${type}.success`); // Method doesn't exist
+        monitor.current?.markCustomMetric(`preload.${type}.success`);
         resolve();
       };
 
       link.onerror = () => {
-        // monitor.current.markCustomMetric(`preload.${type}.error`); // Method doesn't exist
+        monitor.current?.markCustomMetric(`preload.${type}.error`);
         reject(new Error(`Failed to preload ${url}`));
       };
 
@@ -89,7 +88,7 @@ export const usePerformanceOptimization = (
 
   // Record custom performance metrics
   const recordMetric = useCallback((name: string, value: number) => {
-    // monitor.current.markCustomMetric(name, value); // Method doesn't exist
+    monitor.current?.markCustomMetric(name, value);
   }, []);
 
   // Measure performance of functions
@@ -97,7 +96,7 @@ export const usePerformanceOptimization = (
     const startMark = `${name}.start`;
     const endMark = `${name}.end`;
     
-    // monitor.current.markCustomMetric(startMark); // Method doesn't exist
+    monitor.current?.markCustomMetric(startMark);
     
     const startTime = performance.now();
     
@@ -107,8 +106,8 @@ export const usePerformanceOptimization = (
       const endTime = performance.now();
       const duration = endTime - startTime;
       
-      // monitor.current.markCustomMetric(endMark); // Method doesn't exist
-      // monitor.current.measureCustomMetric(name, startMark, endMark); // Method doesn't exist
+      monitor.current?.markCustomMetric(endMark);
+      monitor.current?.measureCustomMetric(name, startMark, endMark);
       
       recordMetric(`${name}.duration`, duration);
     }
@@ -116,7 +115,7 @@ export const usePerformanceOptimization = (
 
   // Get current performance metrics
   // const getPerformanceMetrics = useCallback(() => {
-  //   return monitor.current.getLatestMetrics();
+  //   return monitor.current.getMetrics();
   // }, []);
 
   // Optimize images with responsive loading
@@ -301,23 +300,13 @@ export const usePerformanceOptimization = (
     };
   }, [recordMetric]);
 
-  const optimizePerformance = () => {
-    // Trigger all optimization techniques
-    monitor.current.start();
-    // Add other optimization logic here
-  };
-
   return {
     preloadResource,
     recordMetric,
     measurePerformance,
-    getPerformanceMetrics: () => {
-      const metrics = monitor.current.getMetrics();
-      return metrics ? Object.fromEntries(Object.entries(metrics)) : {};
-    },
+    getPerformanceMetrics: () => monitor.current?.getMetrics() || {},
     optimizeImage,
     addResourceHint,
-    optimizePerformance,
   };
 };
 
