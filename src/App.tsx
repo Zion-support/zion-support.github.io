@@ -15,7 +15,7 @@ import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 
 // Import enhanced utilities
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitoring';
+// import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitoring';
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
 import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
@@ -59,9 +59,10 @@ const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDash
 // import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import SEOOptimizer, { useSEOData } from './components/SEOOptimizer';
-// import EnhancedAnalytics from './components/EnhancedAnalytics';
+import AdvancedAnalytics from './components/AdvancedAnalytics';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+// import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
@@ -262,7 +263,7 @@ export default function App(): React.JSX.Element {
   useEffect(() => {
     try {
       // Initialize enhanced systems
-      enhancedPerformanceMonitor.initialize();
+      // enhancedPerformanceMonitor.initialize();
       enhancedErrorHandler.initialize();
       enhancedAccessibilityManager.initialize();
       advancedErrorRecovery.initialize();
@@ -334,7 +335,7 @@ export default function App(): React.JSX.Element {
       
       return () => {
         // Cleanup function
-        enhancedPerformanceMonitor.stopMonitoring();
+        // enhancedPerformanceMonitor.stopMonitoring();
       };
     } catch (error) {
       console.error('Error initializing enhancements:', error);
@@ -563,7 +564,7 @@ export default function App(): React.JSX.Element {
       enhancements.initialize();
       
       // Initialize individual enhancement systems
-      enhancedPerformanceMonitor.startMonitoring();
+      // enhancedPerformanceMonitor.startMonitoring();
       
       // Initialize analytics
       if ('initialize' in analytics) {

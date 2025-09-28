@@ -154,22 +154,7 @@ export interface MonitoringMetrics {
   };
 }
 
-// Optimization Suggestion Types
-export interface OptimizationSuggestion {
-  id: string;
-  category: 'performance' | 'seo' | 'accessibility' | 'security';
-  priority: 'high' | 'medium' | 'low';
-  title: string;
-  description: string;
-  impact: 'low' | 'medium' | 'high';
-  effort: 'low' | 'medium' | 'high';
-  implementation?: string;
-  estimatedSavings?: {
-    time?: number;
-    size?: number;
-    score?: number;
-  };
-}
+// Duplicate interface removed - using the one defined above
 
 // Enhanced Performance Metrics
 export interface EnhancedPerformanceMetrics {
