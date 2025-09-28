@@ -1,12 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { enhancedErrorHandler } from '../utils/enhancedErrorHandling';
+import { enhancedErrorHandler, PerformanceMetrics, ErrorReport } from '../utils/enhancedErrorHandling';
 
 interface AIPerformanceDashboardProps {
   isVisible: boolean;
   onClose: () => void;
 }
 
-// Interfaces removed as they were unused - types are defined inline where needed
+interface AIInsights {
+  predictedHighRiskActions: string[];
+  recommendedImprovements: string[];
+  errorTrends: Array<{
+    category: string;
+    trend: "increasing" | "decreasing" | "stable";
+  }>;
+  recommendations: string[];
+  riskScore: number;
+}
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
@@ -127,7 +136,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
           <div className="bg-gray-50 p-4 rounded-lg mb-8">
             <h3 className="text-lg font-semibold mb-3 text-gray-800">📊 Error Trends (7 days)</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {insights.errorTrends.map((trend, index: number) => (
+              {insights.errorTrends.map((trend: any, index: number) => (
                 <div key={index} className="bg-white p-3 rounded border">
                   <div className="flex items-center justify-between">
                     <span className="font-medium capitalize">{String(trend.category)}</span>

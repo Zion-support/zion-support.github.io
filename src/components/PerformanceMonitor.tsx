@@ -41,7 +41,8 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const networkRequests = performance.getEntriesByType('resource').length;
 
     // Estimate bundle size (this would be more accurate with actual bundle analysis)
-    const bundleSize = performance.getEntriesByType('resource')
+    const resourceEntries = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
+    const bundleSize = resourceEntries
       .filter((entry: PerformanceResourceTiming) => entry.name.includes('.js'))
       .reduce((total: number, entry: PerformanceResourceTiming) => total + (entry.transferSize || 0), 0);
 
