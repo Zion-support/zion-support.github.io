@@ -240,7 +240,7 @@ export class AdvancedSEOOptimizer {
   /**
    * Generate Twitter Card data
    */
-  private generateTwitterCardData(title: string, description: string, image: string, _url: string) {
+  private generateTwitterCardData(title: string, description: string, image: string) {
     if (!this.config.enableTwitterCards) return {} as Record<string, unknown>;
 
     return {
