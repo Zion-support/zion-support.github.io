@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Simple curl-based PR merge script
-TOKEN="ghs_ARoJSTvAacep8FvSbjlT0M4kz3PRL70w75Bt"
+TOKEN="${GITHUB_TOKEN}"
 REPO="Zion-Holdings/zion.app"
 
 echo "🚀 Starting PR merge process using curl..."
