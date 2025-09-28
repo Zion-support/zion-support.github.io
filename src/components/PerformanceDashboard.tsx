@@ -228,7 +228,7 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
         )}
       </div>
 
-      <style jsx>{`
+      <style>{`
         .performance-dashboard {
           position: fixed;
           top: 20px;

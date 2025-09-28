@@ -213,7 +213,7 @@ Please describe what you were doing when this error occurred:
             </div>
           </div>
 
-          <style jsx>{`
+          <style>{`
             .error-boundary {
               min-height: 100vh;
               display: flex;
