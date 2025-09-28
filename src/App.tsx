@@ -63,7 +63,6 @@ import { initializePerformanceEnhancements } from './utils/performanceEnhancemen
 import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
-import { advancedAccessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import { advancedSecurityManager } from './utils/advancedSecurityManager';
 import { advancedAnalytics } from './utils/advancedAnalytics';
 import { advancedErrorHandler } from './utils/advancedErrorHandler';
