@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import { enhancedErrorHandler } from '../utils/enhancedErrorHandling';
 
 interface AIPerformanceDashboardProps {
   isVisible: boolean;
@@ -25,10 +24,9 @@ interface AIInsights {
 }
 
 interface ErrorReport {
-  id: string;
-  message: string;
   severity: string;
-  lastOccurrence: string | number;
+  message: string;
+  lastOccurrence: string | Date;
   occurrenceCount: number;
   context: {
     component?: string;
