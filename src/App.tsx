@@ -5,6 +5,7 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
 import { seoAnalytics } from './utils/seoEnhanced';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+// import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
