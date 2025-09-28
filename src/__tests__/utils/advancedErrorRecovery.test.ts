@@ -15,7 +15,7 @@ describe('Advanced Error Recovery System', () => {
       mockFetch
         .mockRejectedValueOnce(new Error('Network error'))
         .mockRejectedValueOnce(new Error('Network error'))
-        .mockResolvedValueOnce(new Response('Success'));
+        .mockResolvedValueOnce('Success');
 
       const result = await advancedErrorRecovery.executeWithRecovery(
         () => fetch('/api/test'),
