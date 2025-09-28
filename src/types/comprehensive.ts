@@ -98,6 +98,23 @@ export interface CacheStats {
   entries: number;
 }
 
+// Performance Metrics Types
+export interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  memory?: {
+    used: number;
+    total: number;
+    limit?: number;
+  } | null;
+  domContentLoaded?: number;
+  domInteractive?: number;
+  violations?: string[];
+}
+
 // Monitoring Dashboard Types
 export interface MonitoringMetrics {
   performance: PerformanceReport | null;
@@ -245,29 +262,4 @@ export interface ErrorRecoveryStrategy {
   fallbackAction?: () => void;
 }
 
-// Export all types
-export type {
-  EnhancedNotification,
-  NotificationAction,
-  PerformanceReport,
-  PerformanceAlert,
-  PerformanceRecommendation,
-  SEOAuditResult,
-  SEOIssue,
-  CacheStats,
-  MonitoringMetrics,
-  OptimizationSuggestion,
-  EnhancedPerformanceMetrics,
-  DataPoint,
-  ChartData,
-  VisualizationOptions,
-  StoredChart,
-  AnalyticsData,
-  EnhancedPerformanceDashboardProps,
-  LazyComponentProps,
-  KeyboardShortcuts,
-  SecuritySystem,
-  SecurityEvent,
-  AccessibilityEnhancement,
-  ErrorRecoveryStrategy,
-};
+// All types are already exported above with their interface declarations

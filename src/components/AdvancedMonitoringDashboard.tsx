@@ -8,6 +8,7 @@ import { clsx } from 'clsx';
 import {performanceAnalytics} from '../utils/advancedPerformanceAnalytics';
 import {seoManager} from '../utils/advancedSEOManager';
 import {apiCache, imageCache, dataCache} from '../utils/advancedCacheManager';
+import type { PerformanceReport, SEOAuditResult, CacheStats } from '../types/comprehensive';
 
 interface MonitoringDashboardProps {
   className?: string;
@@ -273,7 +274,7 @@ export const AdvancedMonitoringDashboard: React.FC<MonitoringDashboardProps> = (
             <h3 className="text-xl font-semibold mb-4">Performance Alerts</h3>
             {metrics.performance?.alerts && metrics.performance.alerts.length > 0 ? (
               <div className="space-y-2">
-                {metrics.performance.alerts.slice(0, 5).map((alert) => (
+                {metrics.performance.alerts.slice(0, 5).map((alert: any) => (
                   <div
                     key={alert.id}
                     className={clsx(
@@ -300,7 +301,7 @@ export const AdvancedMonitoringDashboard: React.FC<MonitoringDashboardProps> = (
             <h3 className="text-xl font-semibold mb-4">SEO Issues</h3>
             {metrics.seo?.issues && metrics.seo.issues.length > 0 ? (
               <div className="space-y-2">
-                {metrics.seo.issues.slice(0, 5).map((issue, index) => (
+                {metrics.seo.issues.slice(0, 5).map((issue: any, index: number) => (
                   <div
                     key={index}
                     className={clsx(
@@ -332,7 +333,7 @@ export const AdvancedMonitoringDashboard: React.FC<MonitoringDashboardProps> = (
                 <div>
                   <h4 className="font-medium text-blue-400 mb-2">Performance</h4>
                   <ul className="space-y-1 text-sm text-gray-300">
-                    {metrics.performance.recommendations.map((rec, index) => (
+                    {metrics.performance.recommendations.map((rec: any, index: number) => (
                       <li key={index} className="flex items-start">
                         <span className="text-blue-500 mr-2">•</span>
                         {rec}
@@ -345,7 +346,7 @@ export const AdvancedMonitoringDashboard: React.FC<MonitoringDashboardProps> = (
                 <div>
                   <h4 className="font-medium text-green-400 mb-2">SEO</h4>
                   <ul className="space-y-1 text-sm text-gray-300">
-                    {metrics.seo.recommendations.map((rec, index) => (
+                    {metrics.seo.recommendations.map((rec: any, index: number) => (
                       <li key={index} className="flex items-start">
                         <span className="text-green-500 mr-2">•</span>
                         {rec}
