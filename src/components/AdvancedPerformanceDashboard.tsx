@@ -1,6 +1,19 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { 
+  ResponsiveContainer, 
+  BarChart, 
+  CartesianGrid, 
+  XAxis, 
+  YAxis, 
+  Tooltip, 
+  Bar, 
+  PieChart, 
+  Pie, 
+  Cell, 
+  LineChart, 
+  Line 
+} from 'recharts';
 import { advancedBuildOptimizer } from '../utils/advancedBuildOptimizer';
-import { accessibilityEnhancements } from '../utils/accessibilityEnhancements';
 import { accessibilityUtils } from '../utils/accessibilityUtils';
 
 interface PerformanceMetrics {
@@ -11,13 +24,6 @@ interface PerformanceMetrics {
   ttfb: number;
   fmp: number;
   tti: number;
-}
-
-interface OptimizationStrategy {
-  name: string;
-  description: string;
-  impact: 'high' | 'medium' | 'low';
-  applied: boolean;
 }
 
 interface PerformanceDashboardProps {
@@ -175,11 +181,6 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
     { name: 'CLS', value: metrics.cls, threshold: 0.1 }
   ] : [];
 
-  const optimizationData = strategies.map(strategy => ({
-    name: strategy.name,
-    impact: strategy.impact,
-    applied: strategy.applied
-  }));
 
   const pieData = [
     { name: 'Applied', value: strategies.filter(s => s.applied).length, color: '#10b981' },
