@@ -18,7 +18,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
   className = '',
-  placeholder,
+  placeholder = '',
   blurDataURL,
   width,
   height,
@@ -87,9 +87,9 @@ const LazyImage: React.FC<LazyImageProps> = ({
           animate={{ opacity: isLoaded ? 0 : 1 }}
           transition={{ duration: 0.3 }}
         >
-          {blurDataURL ? (
+          {blurDataURL || placeholder ? (
             <img
-              src={blurDataURL}
+              src={blurDataURL || placeholder}
               alt=""
               className="w-full h-full object-cover filter blur-sm"
             />

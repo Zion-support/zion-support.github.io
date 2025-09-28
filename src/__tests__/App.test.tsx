@@ -211,8 +211,14 @@ jest.mock('../router', () => {
 
 const renderWithRouter = (ui: React.ReactElement, { route = '/' } = {}) => {
   // Update the existing location mock with new route
-  (window.location as any).pathname = route;
-  (window.location as any).href = `http://localhost:3000${route}`;
+  Object.defineProperty(window.location, 'pathname', {
+    value: route,
+    writable: true
+  });
+  Object.defineProperty(window.location, 'href', {
+    value: `http://localhost:3000${route}`,
+    writable: true
+  });
   return render(ui);
 };
 

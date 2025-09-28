@@ -6,7 +6,6 @@ global.fetch = jest.fn();
 
 // Mock window.location to prevent navigation errors
 // Use a simpler approach that works with JSDOM
-const originalLocation = window.location;
 
 // Create a mock location object
 const mockLocation = {
@@ -22,11 +21,14 @@ const mockLocation = {
   port: '3000',
   protocol: 'http:',
   origin: 'http://localhost:3000',
-  ancestorOrigins: [] as any,
+  ancestorOrigins: [] as DOMStringList,
 };
 
 // Replace window.location with our mock
-(window as any).location = mockLocation;
+Object.defineProperty(window, 'location', {
+  value: mockLocation,
+  writable: true,
+});
 // Mock window.history
 Object.defineProperty(window, 'history', {
   value: {
