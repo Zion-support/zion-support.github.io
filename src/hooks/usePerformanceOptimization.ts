@@ -303,6 +303,9 @@ export const usePerformanceOptimization = (
 
   // Performance optimization function
   const optimizePerformance = useCallback(() => {
+    // Trigger all optimization techniques
+    monitor.current.start();
+    
     if (configRef.current.enableImageOptimization) {
       // Optimize existing images
       const images = document.querySelectorAll('img[src]');

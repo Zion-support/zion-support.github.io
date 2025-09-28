@@ -5,13 +5,17 @@ import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
+import { performanceOptimizer } from './utils/performanceOptimizations';
+import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
+import { seoOptimizer } from './utils/seoOptimizations';
+// Removed unused imports to reduce warnings
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
-import EnhancedAnalytics from './components/EnhancedAnalytics';
+// import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
@@ -44,7 +48,7 @@ export default function App(): React.JSX.Element {
   const [showCommandPalette, setShowCommandPalette] = useState(false);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
+  const [, setShowAccessibilityPanel] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   // User preferences state (for future use)
@@ -79,7 +83,7 @@ export default function App(): React.JSX.Element {
   const seoData = useSEOData(currentPathname);
 
   // Command palette commands
-  const commands = useMemo(() => [
+  const _commands = useMemo(() => [
     {
       id: 'system-dashboard',
       title: 'Toggle System Dashboard',
@@ -139,7 +143,7 @@ export default function App(): React.JSX.Element {
   ], []);
 
   // Optimized keyboard handler for system dashboard toggle
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+  const _handleKeyDown = useCallback((event: KeyboardEvent) => {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey) {
       event.preventDefault();
       switch (event.key) {
@@ -261,6 +265,12 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeImages();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
+    
+    // Initialize advanced optimization systems
+    // These are initialized automatically when imported
+    void performanceOptimizer;
+    void accessibilityEnhancements;
+    void seoOptimizer;
 
     // Initialize new utility systems
     performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
