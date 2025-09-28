@@ -11,6 +11,7 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import ComprehensiveSystemDashboard from './components/ComprehensiveSystemDashboard';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
@@ -23,6 +24,9 @@ import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { seoOptimizer } from './utils/seoOptimizer';
 import { createAdvancedAppEnhancements } from './utils/advancedAppEnhancements';
 import { getPerformanceMonitor } from './utils/advancedPerformanceMonitor';
+import { errorRecovery } from './utils/errorRecovery';
+import { advancedAnalytics } from './utils/advancedAnalytics';
+import { smartCache } from './utils/smartCache';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -34,6 +38,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
+  const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
   // Engagement tracking data
   const engagementData = useMemo(() => ({
     startTime: Date.now(),
@@ -112,6 +117,10 @@ export default function App(): React.JSX.Element {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
       event.preventDefault();
       setShowAIDashboard(prev => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'C') {
+      event.preventDefault();
+      setShowComprehensiveDashboard(prev => !prev);
     }
   }, []);
 
@@ -214,6 +223,10 @@ export default function App(): React.JSX.Element {
       performanceMonitor.start();
     }
 
+    // Initialize new utility systems
+    advancedAnalytics.trackPageView();
+    smartCache.set('app-initialized', true, 300000); // 5 minutes
+
     // Initialize advanced systems
     enhancedAnalytics.initialize();
     enhancedPerformanceMonitor.start();
@@ -289,6 +302,10 @@ export default function App(): React.JSX.Element {
       if (performanceMonitor) {
         performanceMonitor.stop();
       }
+      
+      // Cleanup new utility systems
+      errorRecovery.reset();
+      smartCache.clear();
     };
   }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags]);
 
@@ -407,11 +424,17 @@ export default function App(): React.JSX.Element {
           }}
         />
         
-        {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
-        <AIPerformanceDashboard
-          isVisible={showAIDashboard}
-          onClose={() => setShowAIDashboard(false)}
-        />
+            {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
+            <AIPerformanceDashboard
+              isVisible={showAIDashboard}
+              onClose={() => setShowAIDashboard(false)}
+            />
+
+            {/* Comprehensive System Dashboard - Toggle with Ctrl+Shift+C */}
+            <ComprehensiveSystemDashboard
+              isVisible={showComprehensiveDashboard}
+              onClose={() => setShowComprehensiveDashboard(false)}
+            />
       </div>
     </EnhancedErrorBoundary>
   );
