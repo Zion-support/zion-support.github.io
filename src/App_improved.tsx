@@ -73,15 +73,14 @@ export default function App(): React.JSX.Element {
         await enhancedSecurityManager.initialize();
         
         // Initialize SEO analytics
-        // Initialize SEO analytics
-        seoAnalytics.startTracking();
+        seoAnalytics.trackPageView(window.location.pathname);
         
         // Initialize comprehensive enhancements
         await getComprehensiveEnhancements();
         
         // Setup performance alerts
-        // Setup performance alerts
-        performanceAlerts.startMonitoring();
+        // Initialize performance monitoring with a sample check
+        performanceAlerts.checkMetric('loadTime', Date.now() - performance.now(), 3000);
         
         setIsLoading(false);
         
@@ -220,7 +219,12 @@ export default function App(): React.JSX.Element {
           {uiState.showPerformanceOptimizer && <PerformanceOptimizer />}
           {uiState.showPerformanceMonitor && <PerformanceMonitor />}
           {uiState.showAIDashboard && <AIPerformanceDashboard isVisible={uiState.showAIDashboard} onClose={() => updateUIState({ showAIDashboard: false })} />}
-          {uiState.showSEOOptimizer && <SEOOptimizer />}
+          {uiState.showSEOOptimizer && <SEOOptimizer seoData={{
+            title: 'Zion Tech Group - Advanced AI and IT Solutions',
+            description: 'Leading provider of cutting-edge AI and IT solutions for modern businesses',
+            keywords: 'AI, IT Solutions, Technology, Innovation',
+            canonical: window.location.href
+          }} />}
           {uiState.showKeyboardHelp && <KeyboardShortcutsHelp isVisible={uiState.showKeyboardHelp} onClose={() => updateUIState({ showKeyboardHelp: false })} />}
           {uiState.showCommandPalette && <CommandPalette isVisible={uiState.showCommandPalette} onClose={() => updateUIState({ showCommandPalette: false })} commands={[]} />}
           {uiState.showRealTimeMetrics && <RealTimePerformanceMonitor isVisible={uiState.showRealTimeMetrics} onClose={() => updateUIState({ showRealTimeMetrics: false })} />}
