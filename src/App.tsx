@@ -39,7 +39,6 @@ import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import { enhancedSecuritySystem } from './utils/enhancedSecuritySystem';
 import { enhancedAccessibilitySystem } from './utils/enhancedAccessibilitySystem';
 import { apiCache as apiCacheSystem, imageCache as imageCacheSystem, dataCache as dataCacheSystem } from './utils/enhancedCachingSystem';
-import { enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
 import { advancedAppEnhancements } from './utils/advancedAppEnhancements';
 import { errorHandler, ErrorBoundary } from './utils/errorHandler';
 import { performanceMonitor } from './utils/performanceMonitoring';
@@ -214,23 +213,6 @@ export default function App(): React.JSX.Element {
     clicks: 0
   }), []);
 
-  // Initialize app with custom configuration
-  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
-    enablePerformanceMonitoring: true,
-    enableAccessibility: true,
-    enableSecurity: true,
-    enableAnalytics: true,
-    enableNotifications: true,
-    enableCaching: true,
-  });
-
-  // Performance optimization hook
-  const { preloadResource } = usePerformanceOptimization({
-    enablePreloading: true,
-    enableResourceHints: true,
-    enableCriticalCSS: true,
-    enableImageOptimization: true,
-  });
 
   // Enhanced keyboard handler for all dashboard toggles
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
@@ -268,7 +250,7 @@ export default function App(): React.JSX.Element {
           break;
       }
     }
-  }), []);
+  }, []);
 
   // Main initialization effect
   useEffect(() => {
