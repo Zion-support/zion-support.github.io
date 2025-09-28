@@ -23,7 +23,7 @@ export default function App(): React.JSX.Element {
     clicks: 0
   }), []);
   // Initialize app with custom configuration
-  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
+  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement: originalTrackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSecurity: true,
@@ -41,6 +41,7 @@ export default function App(): React.JSX.Element {
 
   // Initialize comprehensive enhancements
   useEffect(() => {
+    // Get comprehensive enhancements
     const enhancements = getComprehensiveEnhancements({
       enableAdvancedPerformance: true,
       enableSecurityFeatures: true,
@@ -79,8 +80,15 @@ export default function App(): React.JSX.Element {
     structuredData: []
   }), []);
 
-  // Track engagement function (enhanced version)
-  const enhancedTrackEngagement = useCallback(() => {
+  // Engagement tracking data
+  const engagementData = useMemo(() => ({
+    startTime: Date.now(),
+    scrollDepth: 0,
+    clicks: 0
+  }), []);
+
+  // Enhanced track engagement function
+  const trackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
     seoAnalytics.trackUserEngagement(window.location.pathname, {
       timeOnPage,
@@ -88,26 +96,38 @@ export default function App(): React.JSX.Element {
       clicks: engagementData.clicks,
     });
     // Also call the original trackEngagement from useAppInitialization
-    trackEngagement();
-  }, [engagementData, trackEngagement]);
+    originalTrackEngagement();
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, originalTrackEngagement]);
 
-  useEffect(() => {
-    // Simple SEO manager
-    const seoManagerInstance = {
-      updateMetaTags: (data: typeof seoData) => {
-        if (typeof document !== 'undefined') {
-          document.title = data.title;
-          const metaDescription = document.querySelector('meta[name="description"]');
-          if (metaDescription) {
-            metaDescription.setAttribute('content', data.description);
-          }
+  // Simple SEO manager
+  const seoManagerInstance = useMemo(() => ({
+    updateMetaTags: (data: typeof seoData) => {
+      if (typeof document !== 'undefined') {
+        document.title = data.title;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+          metaDescription.setAttribute('content', data.description);
         }
       }
-    };
+    }
+  }), []);
 
+  useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
+      
+      // Add performance observer for better monitoring
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'navigation') {
+              console.log('Navigation timing:', entry);
+            }
+          }
+        });
+        observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
+      }
     }
     
     // Preload critical resources
@@ -133,13 +153,10 @@ export default function App(): React.JSX.Element {
 
     // Set default SEO data using the correct method
     seoManagerInstance.updateMetaTags(seoData);
-  }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource]);
+  }, [seoData, handleScroll, handleClick, handleKeyDown, preloadResource, seoManagerInstance]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
-    // Track engagement on page unload
-    window.addEventListener('beforeunload', enhancedTrackEngagement);
-
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
         typeof performance.mark === 'function' && 
@@ -153,19 +170,22 @@ export default function App(): React.JSX.Element {
       console.log('🚀 Zion Tech Group App initialized');
     }
 
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', trackEngagement);
+    
     // Cleanup function
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('beforeunload', enhancedTrackEngagement);
+      window.removeEventListener('beforeunload', trackEngagement);
       
       // Final engagement tracking
-      enhancedTrackEngagement();
+      trackEngagement();
       
       // Remove event listeners
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
     };
-  }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick, seoData, preloadResource]);
+  }, [trackEngagement, handleKeyDown, handleScroll, handleClick]);
 
   // Show loading screen while initializing
   if (isLoading) {
@@ -183,25 +203,14 @@ export default function App(): React.JSX.Element {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
-        {/* System Dashboard */}
+        {/* System Dashboard - Toggle with Ctrl+Shift+D */}
         {showSystemDashboard && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">System Dashboard</h2>
-                <button
-                  onClick={() => setShowSystemDashboard(false)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  ✕
-                </button>
-              </div>
-              <EnhancedSystemDashboard />
-            </div>
-          </div>
+          <EnhancedSystemDashboard
+            onClose={() => setShowSystemDashboard(false)}
+          />
         )}
-
-        {/* Performance Optimizer */}
+        
+        {/* Performance Optimizer - Toggle with Ctrl+Shift+P */}
         {showPerformanceOptimizer && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
