@@ -87,14 +87,14 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
     return '#10b981';
   };
 
-  const applyOptimization = (suggestion: any) => {
+  const applyOptimization = (suggestion: { action?: () => void; title: string; impact: number }) => {
     if (suggestion.action) {
       suggestion.action();
       updateMetrics();
     }
   };
 
-  const applyBundleOptimization = (recommendation: any) => {
+  const applyBundleOptimization = (recommendation: { type: string; description: string; impact: number }) => {
     bundleOptimizer.applyRecommendations([recommendation]);
     updateMetrics();
   };
@@ -244,7 +244,7 @@ const EnhancedPerformanceDashboard: React.FC<EnhancedPerformanceDashboardProps> 
                 Performance Optimizations
               </h3>
               <div className="space-y-3">
-                {optimizationSuggestions.slice(0, 5).map((suggestion: any, index: number) => (
+                {optimizationSuggestions.slice(0, 5).map((suggestion: { title: string; impact: number; action?: () => void }, index: number) => (
                   <div key={index} className="bg-white dark:bg-gray-700 p-3 rounded border">
                     <div className="flex justify-between items-start mb-2">
                       <h4 className="font-medium text-gray-900 dark:text-white">

@@ -78,7 +78,7 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
           const entries = list.getEntries();
           entries.forEach((entry) => {
             if (entry.entryType === 'layout-shift') {
-              const layoutShiftEntry = entry as any; // LayoutShift type not available
+              const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
               if (!layoutShiftEntry.hadRecentInput) {
                 clsValue += layoutShiftEntry.value;
                 metricsRef.current.cls = clsValue;

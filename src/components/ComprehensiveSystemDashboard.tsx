@@ -42,7 +42,7 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
   onClose
 }) => {
   const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
-  const [realTimeData, setRealTimeData] = useState<any[]>([]);
+  const [realTimeData, setRealTimeData] = useState<{ timestamp: number; value: number; metric: string }[]>([]);
   const [activeTab, setActiveTab] = useState<'overview' | 'performance' | 'security' | 'analytics' | 'system'>('overview');
   const [isLoading, setIsLoading] = useState(true);
 

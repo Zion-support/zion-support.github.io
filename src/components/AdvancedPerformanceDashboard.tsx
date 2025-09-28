@@ -39,7 +39,7 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
     overallScore: 0
   });
 
-  const [realTimeData, setRealTimeData] = useState<any[]>([]);
+  const [realTimeData, setRealTimeData] = useState<{ timestamp: number; value: number; metric: string }[]>([]);
   // const [optimizationData, setOptimizationData] = useState<any[]>([]); // Removed unused variables
   const [optimizationSuggestions, setOptimizationSuggestions] = useState<string[]>([]);
   const [strategies, setStrategies] = useState<OptimizationStrategy[]>([]);
@@ -298,7 +298,7 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
                   cy="50%"
                   outerRadius={80}
                   dataKey="value"
-                  label={(entry: any) => `${entry.name}: ${entry.value}`}
+                  label={(entry: { name: string; value: number }) => `${entry.name}: ${entry.value}`}
                 >
                   {pieData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.color} />
