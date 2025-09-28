@@ -50,7 +50,7 @@ class TestingSystem {
   private initializeTestingEnvironment(): void {
     // Set up test environment
     if (typeof window !== 'undefined') {
-      (window as any).__TESTING_SYSTEM__ = this;
+      (window as Window & { __TESTING_SYSTEM__?: TestingSystem }).__TESTING_SYSTEM__ = this;
     }
   }
 
