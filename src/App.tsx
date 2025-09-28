@@ -40,12 +40,6 @@ import SystemHealthDashboard from './components/SystemHealthDashboard';
 import './index.css';
 
 export default function App(): React.JSX.Element {
-  // Mock SEO data for components
-  const seoData = {
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI-powered IT solutions and innovative technology services',
-    keywords: ['AI', 'IT Solutions', 'Technology', 'Innovation']
-  };
 
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
@@ -239,7 +233,6 @@ export default function App(): React.JSX.Element {
       // Initialize enhancement systems
       // new AccessibilityEnhancer();
       // new SecurityEnhancer();
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2233
       
       // Initialize analytics
       if ('initialize' in analytics) {

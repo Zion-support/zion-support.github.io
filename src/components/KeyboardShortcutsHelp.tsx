@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface KeyboardShortcutsHelpProps {
   isVisible: boolean;
   onClose: () => void;
 }
 
-const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible, onClose }) => {
-  if (!isVisible) return null;
+interface Shortcut {
+  key: string;
+  description: string;
+  category: string;
+}
 
-  const shortcuts = [
+const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible, onClose }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
+
+  const shortcuts: Shortcut[] = [
     { key: 'Ctrl+Shift+D', description: 'Toggle System Dashboard', category: 'Dashboard' },
     { key: 'Ctrl+Shift+P', description: 'Toggle Performance Optimizer', category: 'Performance' },
     { key: 'Ctrl+Shift+M', description: 'Toggle Performance Monitor', category: 'Performance' },
@@ -30,7 +37,7 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
     } else {
       setFilteredShortcuts(shortcuts);
     }
-  }, [searchTerm]);
+  }, [searchTerm, shortcuts]);
 
   if (!isVisible) return null;
 
@@ -94,8 +101,8 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
               <div className="text-center py-8 text-gray-500 dark:text-gray-400">
                 No shortcuts found matching &quot;{searchTerm}&quot;
               </div>
-            </div>
-          ))}
+            )}
+          </div>
         </div>
         
         <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
