@@ -7,7 +7,7 @@ import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
+import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
 import { seoOptimizer } from './utils/seoOptimizations';
 import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
@@ -144,7 +144,7 @@ export default function App(): React.JSX.Element {
     // Initialize advanced optimization systems
     // These are initialized automatically when imported
     void performanceOptimizer;
-    void accessibilityEnhancer;
+    void accessibilityEnhancements;
     void seoOptimizer;
 
     // Set default SEO data using the correct method
