@@ -112,13 +112,10 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
     }
   };
 
-<<<<<<< HEAD
   const exportSystemData = () => {
     const data = {
-      systemStats,
-      performanceMetrics,
-      analyticsData: advancedAnalytics.exportData(),
-      cacheStats: smartCache.getStats(),
+      metrics,
+      realTimeData,
       timestamp: new Date().toISOString()
     };
 
@@ -135,25 +132,14 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
     errorRecoverySystem.reset();
     advancedAnalytics.clearData();
     smartCache.clear();
-    setSystemStats({
-      errorCount: 0,
-      analyticsEvents: 0,
-      cacheSize: 0,
-      cacheHitRate: 0,
-      userBehavior: {
-        pageViews: 0,
-        clicks: 0,
-        scrollDepth: 0,
-        timeOnPage: 0,
-        interactions: 0
-      }
-    });
-=======
+    setMetrics(null);
+    setRealTimeData([]);
+  };
+
   const getScoreColor = (score: number) => {
     if (score >= 90) return '#10B981';
     if (score >= 70) return '#F59E0B';
     return '#EF4444';
->>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
   };
 
   if (!isVisible) return null;
