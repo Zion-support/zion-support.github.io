@@ -53,7 +53,7 @@ class PerformanceOptimizer {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
-          this.metrics.loadTime = entry.loadEventEnd - entry.fetchStart;
+          this.metrics.loadTime = (entry as any).loadEventEnd - (entry as any).fetchStart;
         }
       });
     });

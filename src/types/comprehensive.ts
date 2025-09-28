@@ -24,27 +24,33 @@ export interface NotificationAction {
 
 // Performance Report Types
 export interface PerformanceReport {
-  lcp: number;
-  fcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  bundleSize: number;
-  cacheHitRate: number;
+  timestamp: Date;
+  metrics: {
+    lcp: number;
+    fcp: number;
+    fid: number;
+    cls: number;
+    ttfb: number;
+    loadTime?: number;
+    renderTime?: number;
+    memoryUsage?: number;
+    bundleSize?: number;
+    cacheHitRate?: number;
+  };
   alerts: PerformanceAlert[];
-  recommendations: PerformanceRecommendation[];
+  recommendations: string[];
+  score: number;
 }
 
 export interface PerformanceAlert {
+  id: string;
   type: 'warning' | 'error' | 'info';
-  message: string;
   metric: string;
-  value: number;
   threshold: number;
-  timestamp: number;
+  currentValue: number;
+  message: string;
+  timestamp: Date;
+  resolved: boolean;
 }
 
 export interface PerformanceRecommendation {
@@ -61,14 +67,14 @@ export interface PerformanceRecommendation {
 export interface SEOAuditResult {
   score: number;
   issues: SEOIssue[];
-  recommendations: PerformanceRecommendation[];
-  metadata: {
+  recommendations: string[];
+  metadata?: {
     title: string;
     description: string;
     keywords: string[];
     canonical: string;
   };
-  technical: {
+  technical?: {
     robotsTxt: boolean;
     sitemap: boolean;
     structuredData: boolean;
@@ -85,6 +91,7 @@ export interface SEOIssue {
   column?: number;
   impact: 'high' | 'medium' | 'low';
   fix?: string;
+  suggestion?: string;
 }
 
 // Cache Stats Types
@@ -94,8 +101,9 @@ export interface CacheStats {
   size: number;
   maxSize: number;
   hitRate: number;
-  lastAccessed: number;
-  entries: number;
+  entryCount: number;
+  oldestEntry: number;
+  newestEntry: number;
 }
 
 // Monitoring Dashboard Types
@@ -111,19 +119,22 @@ export interface MonitoringMetrics {
 
 // Optimization Suggestion Types
 export interface OptimizationSuggestion {
-  id: string;
-  category: 'performance' | 'seo' | 'accessibility' | 'security';
-  priority: 'high' | 'medium' | 'low';
-  title: string;
-  description: string;
-  impact: 'low' | 'medium' | 'high';
-  effort: 'low' | 'medium' | 'high';
+  id?: string;
+  category?: 'performance' | 'seo' | 'accessibility' | 'security';
+  priority?: 'high' | 'medium' | 'low';
+  title?: string;
+  description?: string;
+  impact?: 'low' | 'medium' | 'high';
+  effort?: 'low' | 'medium' | 'high';
   implementation?: string;
   estimatedSavings?: {
     time?: number;
     size?: number;
     score?: number;
   };
+  type?: string;
+  message?: string;
+  action?: string;
 }
 
 // Enhanced Performance Metrics
@@ -259,7 +270,9 @@ export interface PerformanceMetrics {
   };
   domContentLoaded?: number;
   domInteractive?: number;
-  violations: string[];
+  violations?: string[];
+  bundleSize?: number;
+  connection?: string;
 }
 
 

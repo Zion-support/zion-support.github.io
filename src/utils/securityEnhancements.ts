@@ -277,7 +277,9 @@ class SecurityEnhancer {
 
     // Additional client-side protection
     if (window.top !== window.self) {
-      window.top.location = window.self.location;
+      if (window.top) {
+        window.top.location.href = window.self.location.href;
+      }
     }
   }
 
@@ -288,7 +290,7 @@ class SecurityEnhancer {
     // Monitor for suspicious network activity
     const originalFetch = window.fetch;
     window.fetch = async (input, init) => {
-      const url = typeof input === 'string' ? input : input.url;
+      const url = typeof input === 'string' ? input : (input as Request).url;
       
       if (this.isSuspiciousURL(url)) {
         this.metrics.suspiciousActivity++;
