@@ -66,19 +66,11 @@ import { analyticsSystem as enhancedAnalyticsSystem } from './utils/enhancedAnal
 import { advancedAppEnhancements } from './utils/advancedAppEnhancements';
 import { errorHandler, ErrorBoundary } from './utils/errorHandler';
 import { performanceMonitor } from './utils/performanceMonitoring';
-<<<<<<< HEAD
 import { advancedErrorReporter } from './utils/advancedErrorReporting';
 import { advancedPerformanceMonitor } from './utils/advancedPerformanceMonitoring';
 import { enhancedSEOOptimizer as enhancedSEOOpt } from './utils/enhancedSEOOptimization';
-=======
 import { advancedErrorHandler } from './utils/advancedErrorHandling';
 import SystemMonitoringDashboard from './components/SystemMonitoringDashboard';
-// import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-// import { advancedCacheSystem } from './utils/advancedCacheSystem';
-// import { enhancedAnalytics } from './utils/enhancedAnalytics';
-// import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
-// import { AccessibilityEnhancer, SecurityEnhancer } from './utils/enhancementClasses';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-cdef
 
 // Lazy load heavy components
 const AdvancedAnalyticsDashboard = lazy(() => import('./components/AdvancedAnalyticsDashboard'));
@@ -176,7 +168,6 @@ const App: React.FC = () => {
     }
   }, []);
 
-<<<<<<< HEAD
   // Advanced error handler
   const advancedErrorHandler = useCallback((error: Error, context?: any) => {
     console.error('Advanced Error:', error, context);
@@ -185,9 +176,11 @@ const App: React.FC = () => {
     // Enhanced error reporting
     if (advancedErrorReporter) {
       advancedErrorReporter.reportError(error, context);
-=======
+    }
+  }, []);
+
   // Performance metrics state
-  const [performanceMetrics, setPerformanceMetrics] = useState({
+  const [performanceMetricsState, setPerformanceMetricsState] = useState({
     memoryUsage: 0,
     renderTime: 0,
     networkLatency: 0,
@@ -286,7 +279,6 @@ const App: React.FC = () => {
       (window as unknown as Record<string, unknown>).analyticsSystem = analyticsSystem;
     } catch (error) {
       console.error('Error initializing enhancements:', error);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-cdef
     }
   }, []);
 
