@@ -49,16 +49,12 @@ const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcu
 const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDashboard'));
 
 // Direct imports
-import WebsiteEnhancements from './components/WebsiteEnhancements';
-import SEOOptimizer from './components/SEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import PerformanceDashboard from './components/PerformanceDashboard';
-import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 // import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
-import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
 import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
