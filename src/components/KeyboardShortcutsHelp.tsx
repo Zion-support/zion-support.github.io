@@ -12,8 +12,6 @@ interface Shortcut {
 }
 
 const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible, onClose }) => {
-  if (!isVisible) return null;
-
   const shortcuts = [
     { key: 'Ctrl+Shift+D', description: 'Toggle System Dashboard', category: 'Dashboard' },
     { key: 'Ctrl+Shift+P', description: 'Toggle Performance Optimizer', category: 'Performance' },
@@ -27,6 +25,8 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
 
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredShortcuts, setFilteredShortcuts] = useState(shortcuts);
+
+  if (!isVisible) return null;
 
   useEffect(() => {
     if (searchTerm) {

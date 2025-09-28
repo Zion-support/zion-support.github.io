@@ -14,15 +14,6 @@ interface PerformanceMetrics {
   [key: string]: unknown;
   }
   
-interface AIInsights {
-  predictedHighRiskActions: string[];
-  recommendedImprovements: string[];
-  errorTrends: Array<{
-    category: string;
-    trend: 'increasing' | 'decreasing' | 'stable';
-  }>;
-  [key: string]: unknown;
-}
 
 interface ErrorReport {
   id: string;
