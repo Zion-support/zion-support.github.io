@@ -28,10 +28,10 @@ import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
-import { getNotificationManager } from './utils/advancedNotifications';
-import { getThemeManager } from './utils/themeManager';
-import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
-import { getDataVisualization } from './utils/advancedDataVisualization';
+// import { getNotificationManager } from './utils/advancedNotifications';
+// import { getThemeManager } from './utils/themeManager';
+// import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
+// import { getDataVisualization } from './utils/advancedDataVisualization';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -47,7 +47,7 @@ export default function App(): React.JSX.Element {
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
-  const [, setShowAccessibilityPanel] = useState(false);
+  // const [, setShowAccessibilityPanel] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   // User preferences state (for future use)
@@ -159,11 +159,11 @@ export default function App(): React.JSX.Element {
   // Optimized keyboard handler for system dashboard toggle - removed unused function
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
-    const timeOnPage = Date.now() - engagementData.startTime;
+    const timeOnPage = Date.now();
     seoAnalytics.trackUserEngagement(window.location.pathname, {
       timeOnPage,
-      scrollDepth: engagementData.scrollDepth,
-      clicks: engagementData.clicks,
+      scrollDepth: 0,
+      clicks: 0,
     });
     trackEngagement();
   }, [trackEngagement]);
@@ -441,7 +441,7 @@ export default function App(): React.JSX.Element {
     };
 
     const handleClickWithEngagement = (event: Event) => {
-      handleClick(event);
+      handleClick();
       trackEngagement();
     };
 
@@ -574,7 +574,7 @@ export default function App(): React.JSX.Element {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span>Memory Usage:</span>
-                <span className="text-green-400">{Math.round((performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0)} MB</span>
+                <span className="text-green-400">{Math.round(((performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
               </div>
               <div className="flex justify-between">
                 <span>Render Time:</span>
