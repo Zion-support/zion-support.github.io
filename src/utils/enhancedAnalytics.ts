@@ -290,8 +290,8 @@ export class EnhancedAnalytics {
         const lcpObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach(entry => {
             this.track('performance', 'web_vital', 'LCP', entry.startTime, {
-              element: (entry as any).element?.tagName,
-              url: (entry as any).url
+              element: (entry as PerformanceEntry & { element?: Element }).element?.tagName,
+              url: (entry as PerformanceEntry & { url?: string }).url
             });
           });
         });
