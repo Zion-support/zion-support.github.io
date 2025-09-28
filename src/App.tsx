@@ -26,6 +26,8 @@ import { advancedCacheSystem } from './utils/advancedCacheSystem';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
 import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { SecurityEnhancer } from './utils/securityEnhancer';
+import { getNotificationManager, notify } from './utils/advancedNotifications';
+import { getThemeManager } from './utils/themeManager';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -180,6 +182,16 @@ export default function App(): React.JSX.Element {
     // seoAnalytics.initialize();
     // performanceSEO.initialize();
     // seoManager.initialize();
+
+    // Initialize new utility systems
+    getNotificationManager();
+    getThemeManager();
+
+    // Show welcome notification
+    notify.success('App Initialized', 'Zion Tech Group application is ready!', {
+      duration: 3000,
+      priority: 'medium'
+    });
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
