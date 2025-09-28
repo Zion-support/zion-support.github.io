@@ -112,7 +112,7 @@ class BuildOptimizer {
       // Check if elements matching the selector exist
       const elements = document.querySelectorAll(selector);
       return elements.length > 0;
-    } catch (e) {
+    } catch {
       return true; // Assume it's used if we can't check
     }
   }

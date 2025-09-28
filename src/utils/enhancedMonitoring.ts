@@ -221,7 +221,7 @@ class EnhancedMonitoring {
       }).observe({ entryTypes: ['first-input'] });
 
       // Cumulative Layout Shift
-      type LayoutShift = PerformanceEntry & { value: number; hadRecentInput?: boolean };
+      // type LayoutShift = PerformanceEntry & { value: number; hadRecentInput?: boolean };
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
