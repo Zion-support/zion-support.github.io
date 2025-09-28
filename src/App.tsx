@@ -39,13 +39,10 @@ const CommandPalette = lazy(() => import('./components/CommandPalette'));
 export default function App(): React.JSX.Element {
   // State for system dashboard
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-<<<<<<< HEAD
-=======
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1fc1
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
