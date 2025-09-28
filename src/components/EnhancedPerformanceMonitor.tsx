@@ -14,12 +14,22 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
   showDetails = false,
   showSuggestions = true
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<EnhancedPerformanceMetrics>({
     fcp: 0,
     lcp: 0,
     fid: 0,
     cls: 0,
-    ttfb: 0
+    ttfb: 0,
+    loadTime: 0,
+    renderTime: 0,
+    memory: {
+      used: 0,
+      total: 0,
+      limit: 0
+    },
+    domContentLoaded: 0,
+    domInteractive: 0,
+    violations: []
   });
 
   const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([]);
@@ -28,7 +38,21 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
 
   const updateMetrics = useCallback(() => {
     const newMetrics = performanceOptimizer.getMetrics();
-    setMetrics(newMetrics);
+    // Convert PerformanceMetrics to EnhancedPerformanceMetrics
+    const enhancedMetrics: EnhancedPerformanceMetrics = {
+      fcp: newMetrics.fcp,
+      lcp: newMetrics.lcp,
+      fid: newMetrics.fid,
+      cls: newMetrics.cls,
+      ttfb: newMetrics.ttfb,
+      loadTime: newMetrics.loadTime || 0,
+      renderTime: newMetrics.renderTime || 0,
+      memory: newMetrics.memory || { used: 0, total: 0, limit: 0 },
+      domContentLoaded: 0, // Will be updated from performance API
+      domInteractive: 0, // Will be updated from performance API
+      violations: [] // Will be updated from performance API
+    };
+    setMetrics(enhancedMetrics);
     
     if (showSuggestions) {
       const newSuggestions = performanceOptimizer.getSuggestions();
@@ -188,8 +212,8 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
           {metrics.memory && (
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">Memory:</span>
-              <span className={getMetricColor(metrics.memory, { good: 50, poor: 100 })}>
-                {metrics.memory.toFixed(1)}MB
+              <span className={getMetricColor(metrics.memory.used, { good: 50, poor: 100 })}>
+                {metrics.memory.used.toFixed(1)}MB
               </span>
             </div>
           )}
