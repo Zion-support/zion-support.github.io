@@ -9,8 +9,9 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import EnhancedUserExperience from './components/EnhancedUserExperience';
 import { analytics } from './utils/analytics';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
@@ -33,13 +34,8 @@ export default function App(): React.JSX.Element {
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
+  const [showUserExperience, setShowUserExperience] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [userPreferences, setUserPreferences] = useState({
-    theme: 'auto',
-    animations: true,
-    notifications: true,
-    analytics: true
-  });
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
@@ -99,6 +95,9 @@ export default function App(): React.JSX.Element {
         case 'S':
           setShowSEOOptimizer(prev => !prev);
           break;
+        case 'U':
+          setShowUserExperience(prev => !prev);
+          break;
         case 'T':
           setIsDarkMode(prev => !prev);
           break;
@@ -109,6 +108,7 @@ export default function App(): React.JSX.Element {
           setShowPerformanceMonitor(false);
           setShowAIDashboard(false);
           setShowSEOOptimizer(false);
+          setShowUserExperience(false);
           break;
       }
     }
@@ -363,6 +363,14 @@ export default function App(): React.JSX.Element {
           />
         )}
 
+        {/* Enhanced User Experience */}
+        {showUserExperience && (
+          <EnhancedUserExperience
+            isVisible={showUserExperience}
+            onClose={() => setShowUserExperience(false)}
+          />
+        )}
+
         {/* Keyboard shortcuts help */}
         <div className="fixed bottom-4 right-4 bg-black/80 text-white text-xs p-3 rounded-lg opacity-50 hover:opacity-100 transition-opacity">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
@@ -371,6 +379,7 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+M: Performance Monitor</div>
           <div>Ctrl+Shift+A: AI Dashboard</div>
           <div>Ctrl+Shift+S: SEO Optimizer</div>
+          <div>Ctrl+Shift+U: User Experience</div>
           <div>Ctrl+Shift+T: Toggle Theme</div>
           <div>Escape: Close All</div>
         </div>
