@@ -171,7 +171,7 @@ export const optimizeMemoryUsage = () => {
   // Clean up event listeners periodically
   const cleanupInterval = setInterval(() => {
     // This would be enhanced with actual cleanup logic
-    if ((performance as any).memory && (performance as any).memory.usedJSHeapSize > 50 * 1024 * 1024) {
+    if ((performance as Performance & { memory?: { usedJSHeapSize: number } }).memory && (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory!.usedJSHeapSize > 50 * 1024 * 1024) {
       // Trigger garbage collection if available
       if (window.gc) {
         window.gc();
