@@ -71,11 +71,6 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
     }
   }, [refreshMetrics, autoRefresh, refreshInterval]);
 
-  const getPerformanceColor = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-600';
-    if (value <= thresholds.poor) return 'text-yellow-600';
-    return 'text-red-600';
-  };
 
   const getPerformanceLabel = (value: number, thresholds: { good: number; poor: number }) => {
     if (value <= thresholds.good) return 'Good';
