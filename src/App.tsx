@@ -160,14 +160,30 @@ export default function App(): React.JSX.Element {
       console.warn('Some enhancement systems failed to initialize:', error);
     }
     
+<<<<<<< HEAD
     // Initialize basic systems
     analytics.initialize();
+=======
+    // Initialize individual enhancement systems
+    enhancedPerformanceMonitor.startMonitoring();
+    enhancedAnalytics.initialize();
+    advancedCacheSystem.initialize();
+    new AdvancedAutomationSystem().initialize();
+    new AccessibilityEnhancer().initialize();
+    new SecurityEnhancer().initialize();
     
-    // Initialize SEO analytics
+    // Initialize analytics
+    analytics.initialize();
     seoAnalytics.trackPageView(window.location.pathname);
+    performanceSEO.optimizeImages();
+    seoManager.updateSEO({
+      title: document.title,
+      description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+      keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content')?.split(',').map(k => k.trim()) || [],
+      canonical: window.location.href
+    });
     
     // Initialize performance SEO optimizations
-    performanceSEO.optimizeImages();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
     
@@ -420,8 +436,13 @@ export default function App(): React.JSX.Element {
         )}
       </div>
       
+<<<<<<< HEAD
       <PerformanceDashboard isVisible={false} onClose={() => {}} />
       <RealTimeMonitor />
+=======
+      {/* Additional components */}
+      <PerformanceDashboard isVisible={false} onClose={() => {}} />
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-1d2d
       <SystemMetricsDashboard 
         isVisible={showSystemDashboard}
         onClose={() => setShowSystemDashboard(false)}
