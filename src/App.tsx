@@ -47,7 +47,7 @@ export default function App(): React.JSX.Element {
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
-  const [, setShowAccessibilityPanel] = useState(false);
+  const [showAccessibilityPanel] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   // User preferences state (for future use)
@@ -159,7 +159,7 @@ export default function App(): React.JSX.Element {
       clicks: engagementData.clicks,
     });
     trackEngagement();
-  }, [trackEngagement]);
+  }, [trackEngagement, engagementData.startTime, engagementData.scrollDepth, engagementData.clicks]);
 
   // Memoize the SEO data to prevent unnecessary re-renders
   const memoizedSeoData = useMemo(() => ({
@@ -582,7 +582,7 @@ export default function App(): React.JSX.Element {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span>Memory Usage:</span>
-                <span className="text-green-400">{Math.round((performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0)} MB</span>
+                <span className="text-green-400">{Math.round((performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize / 1024 / 1024 || 0)} MB</span>
               </div>
               <div className="flex justify-between">
                 <span>Render Time:</span>
