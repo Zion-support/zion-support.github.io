@@ -46,11 +46,6 @@ export default function App(): React.JSX.Element {
   const [showCommandPalette, setShowCommandPalette] = useState(false);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
-<<<<<<< HEAD
-  const [, setShowAccessibilityPanel] = useState(false);
-=======
-  const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3daa
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   // User preferences state (for future use)
@@ -99,118 +94,6 @@ export default function App(): React.JSX.Element {
   // Get SEO data using current pathname
   const seoData = useSEOData(currentPathname);
 
-<<<<<<< HEAD
-  // Command palette commands
-  const _commands = useMemo(() => [
-    {
-      id: 'system-dashboard',
-      title: 'Toggle System Dashboard',
-      description: 'Open/close the system metrics dashboard',
-      category: 'Dashboard',
-      action: () => setShowSystemDashboard(prev => !prev),
-      shortcut: 'Ctrl+Shift+D'
-    },
-    {
-      id: 'performance-optimizer',
-      title: 'Toggle Performance Optimizer',
-      description: 'Open/close the performance optimization panel',
-      category: 'Performance',
-      action: () => setShowPerformanceOptimizer(prev => !prev),
-      shortcut: 'Ctrl+Shift+P'
-    },
-    {
-      id: 'performance-monitor',
-      title: 'Toggle Performance Monitor',
-      description: 'Open/close the performance monitoring panel',
-      category: 'Performance',
-      action: () => setShowPerformanceMonitor(prev => !prev),
-      shortcut: 'Ctrl+Shift+M'
-    },
-    {
-      id: 'ai-dashboard',
-      title: 'Toggle AI Dashboard',
-      description: 'Open/close the AI performance dashboard',
-      category: 'AI',
-      action: () => setShowAIDashboard(prev => !prev),
-      shortcut: 'Ctrl+Shift+A'
-    },
-    {
-      id: 'keyboard-help',
-      title: 'Show Keyboard Shortcuts',
-      description: 'Display all available keyboard shortcuts',
-      category: 'Help',
-      action: () => setShowKeyboardHelp(true),
-      shortcut: 'Ctrl+Shift+H'
-    },
-    {
-      id: 'close-all',
-      title: 'Close All Modals',
-      description: 'Close all open modals and dashboards',
-      category: 'Navigation',
-      action: () => {
-        setShowSystemDashboard(false);
-        setShowPerformanceOptimizer(false);
-        setShowPerformanceMonitor(false);
-        setShowAIDashboard(false);
-        setShowRealTimeMetrics(false);
-        setShowCommandPalette(false);
-        setShowKeyboardHelp(false);
-      },
-      shortcut: 'Escape'
-    }
-  ], []);
-
-  // Optimized keyboard handler for system dashboard toggle
-  const _handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey) {
-      event.preventDefault();
-      switch (event.key) {
-        case 'D':
-          setShowSystemDashboard(prev => !prev);
-          break;
-        case 'P':
-          setShowPerformanceOptimizer(prev => !prev);
-          break;
-        case 'R':
-          setShowRealTimeMetrics(prev => !prev);
-          break;
-        case 'M':
-          setShowPerformanceMonitor(prev => !prev);
-          break;
-        case 'A':
-          setShowAIDashboard(prev => !prev);
-          break;
-        case 'V':
-          setShowAdvancedDashboard(prev => !prev);
-          break;
-        case 'C':
-          setShowCommandPalette(prev => !prev);
-          break;
-        case 'H':
-          setShowKeyboardHelp(prev => !prev);
-          break;
-        case 'S':
-          setShowSEOOptimizer(prev => !prev);
-          break;
-        case 'Escape':
-          // Close all modals and dashboards
-          setShowSystemDashboard(false);
-          setShowPerformanceOptimizer(false);
-          setShowPerformanceMonitor(false);
-          setShowAIDashboard(false);
-          setShowAdvancedDashboard(false);
-          setShowRealTimeMetrics(false);
-          setShowCommandPalette(false);
-          setShowKeyboardHelp(false);
-          setShowSEOOptimizer(false);
-          setShowAccessibilityPanel(false);
-          break;
-      }
-    }
-  }, []);
-=======
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3daa
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
@@ -280,27 +163,11 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeImages();
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
-<<<<<<< HEAD
-    
-    // Initialize advanced optimization systems
-    // These are initialized automatically when imported
-    void performanceOptimizer;
-    void accessibilityEnhancements;
-    void seoOptimizer;
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3daa
 
     // Initialize new utility systems
     performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
     accessibilityUtils.announce('Application initialized');
     securityUtils.getSecurityScore();
-<<<<<<< HEAD
-    
-    // Initialize performance enhancements
-    buildOptimizer.initialize();
-    performanceEnhancer.initialize();
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3daa
 
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
@@ -694,46 +561,6 @@ export default function App(): React.JSX.Element {
           </div>
         )}
 
-<<<<<<< HEAD
-        {/* AI Performance Dashboard */}
-        <AIPerformanceDashboard
-          isVisible={showAIDashboard}
-          onClose={() => setShowAIDashboard(false)}
-        />
-
-        {/* Advanced Performance Dashboard */}
-        <AdvancedPerformanceDashboard
-          isVisible={showAdvancedDashboard}
-          onClose={() => setShowAdvancedDashboard(false)}
-        />
-
-        {/* Real-time Metrics */}
-        {showRealTimeMetrics && (
-          <div 
-            className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="real-time-metrics-title"
-            onClick={(e) => e.target === e.currentTarget && setShowRealTimeMetrics(false)}
-          >
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 id="real-time-metrics-title" className="text-2xl font-bold">Real-time Metrics</h2>
-                <button
-                  onClick={() => setShowRealTimeMetrics(false)}
-                  className="text-gray-500 hover:text-gray-700 text-2xl"
-                >
-                  ✕
-                </button>
-              </div>
-              <div className="space-y-4">
-                <p>Real-time performance metrics will be displayed here.</p>
-              </div>
-            </div>
-          </div>
-        )}
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3daa
         {/* SEO Optimizer - Toggle with Ctrl+Shift+S */}
         {showSEOOptimizer && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
