@@ -51,6 +51,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       
       // Preload critical resources
       addLogEntry('Preloading critical resources...');
+      performanceEnhancer.preloadResource('/api/health', 'script');
       performanceEnhancer.preloadResource('/images/hero-bg.webp', 'image');
       
       // Update metrics
