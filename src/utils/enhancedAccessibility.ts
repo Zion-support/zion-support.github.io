@@ -592,6 +592,7 @@ class EnhancedAccessibilityManager {
    */
   private setupSpeechRecognition(): void {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) return;
     const recognition = new SpeechRecognition();
     
     recognition.continuous = false;

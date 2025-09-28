@@ -3,6 +3,12 @@
  * Provides comprehensive security features and monitoring
  */
 
+declare global {
+  interface Window {
+    __securityEnhancerInstance?: SecurityEnhancer;
+  }
+}
+
 export interface SecurityConfig {
   enableCSP: boolean;
   enableXSSProtection: boolean;
@@ -406,7 +412,7 @@ class SecurityEnhancer {
         throw new Error('Suspicious URL blocked');
       }
       
-      return (originalXHR as typeof XMLHttpRequest.prototype.open).apply(this, [method, url, ...args]);
+      return (originalXHR as any).apply(this, [method, url, ...args]);
     };
   }
 

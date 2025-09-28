@@ -140,7 +140,7 @@ export class EnhancementSuite {
 
   public initialize(): void {
     // Initialize all enhancement modules
-    this.performanceOptimizer = PerformanceOptimizer.getInstance(this.config.performance);
+    this.performanceOptimizer = (PerformanceOptimizer as any).getInstance(this.config.performance);
     this.securityEnhancer = SecurityEnhancer.getInstance();
     this.accessibilityEnhancer = AccessibilityEnhancer.getInstance();
     this.errorHandler = ErrorHandler.getInstance();
