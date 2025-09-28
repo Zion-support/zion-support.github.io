@@ -416,15 +416,7 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
-  // Get SEO data using current pathname
-  const seoData = { 
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI-powered IT solutions, cloud computing, cybersecurity, and digital transformation services for enterprises worldwide.',
-    keywords: 'AI, IT Solutions, Cloud Computing, Cybersecurity, Digital Transformation',
-    image: '/images/og-default.jpg',
-    url: `https://ziontechgroup.com${currentPathname}`,
-    type: 'website' as const
-  };
+  // Get SEO data using current pathname (using seoData from above)
 
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
@@ -491,7 +483,7 @@ export default function App(): React.JSX.Element {
     // accessibilityEnhancer.initialize(); // Method doesn't exist
     // seoOptimizer.optimizePage(seoData); // Method doesn't exist
     // securityEnhancer.initialize(); // Method doesn't exist
-  }, [seoData]);
+  }, [memoizedSeoData]);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: typeof memoizedSeoData) => {
