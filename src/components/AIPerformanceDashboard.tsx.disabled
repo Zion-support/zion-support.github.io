@@ -1,8 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-<<<<<<< HEAD
-=======
 import { enhancedErrorHandler } from '../utils/enhancedErrorHandling';
->>>>>>> 61be861214b50a66fa9f716d0213bc509edae316
 
 interface AIPerformanceDashboardProps {
   isVisible: boolean;

@@ -14,7 +14,7 @@ import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+// import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 // import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import { SEOOptimizer } from './components/SEOOptimizer';
@@ -27,7 +27,7 @@ import { securityUtils } from './utils/securityUtils';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
-import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
+// import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
@@ -202,20 +202,11 @@ export default function App(): React.JSX.Element {
       enhancedPerformanceMonitor.startMonitoring();
       
       // Initialize new advanced systems
-<<<<<<< HEAD
       if ('initialize' in performanceOptimizer) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (performanceOptimizer as any).initialize();
       }
       enhancedSecurityManager.initialize();
-=======
-      // performanceOptimizer.initialize();
-      enhancedSecurityManager.initialize();
-      // new AdvancedAutomationSystem().initialize();
-      // Initialize enhancement systems
-      // new AccessibilityEnhancer();
-      // new SecurityEnhancer();
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7a75
       
       // Initialize analytics
       if ('initialize' in analytics) {
@@ -254,13 +245,8 @@ export default function App(): React.JSX.Element {
     securityUtils.getSecurityScore();
 
     // Set default SEO data using the correct method
-<<<<<<< HEAD
-    // seoManager.updateMetaTags(seoData);
-  }, []);
-=======
     seoManager.updateMetaTags(memoizedSeoData);
   }, [memoizedSeoData]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7a75
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: typeof memoizedSeoData) => {
@@ -570,10 +556,10 @@ export default function App(): React.JSX.Element {
         )}
 
         {/* AI Performance Dashboard */}
-        <AIPerformanceDashboard
+        {/* <AIPerformanceDashboard
           isVisible={showAIDashboard}
           onClose={() => setShowAIDashboard(false)}
-        />
+        /> */}
 
         {/* Advanced Performance Dashboard */}
         <AdvancedPerformanceDashboard
@@ -626,10 +612,10 @@ export default function App(): React.JSX.Element {
         )}
         
         {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
-        <AIPerformanceDashboard
+        {/* <AIPerformanceDashboard
           isVisible={showAIDashboard}
           onClose={() => setShowAIDashboard(false)}
-        />
+        /> */}
 
         {/* Real-time Metrics Display */}
         {showRealTimeMetrics && (
@@ -704,10 +690,10 @@ export default function App(): React.JSX.Element {
           onRemove={(id) => setNotifications(prev => prev.filter(n => n.id !== id))}
         />
         
-        <KeyboardShortcutsHelp
+        {/* <KeyboardShortcutsHelp
           isVisible={showKeyboardHelp}
           onClose={() => setShowKeyboardHelp(false)}
-        />
+        /> */}
         
         <CommandPalette
           isVisible={showCommandPalette}
