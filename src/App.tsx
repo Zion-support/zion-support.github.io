@@ -680,10 +680,11 @@ export default function App(): React.JSX.Element {
           />
         </Suspense>
 
-        <PerformanceDashboard
-          className="fixed bottom-4 left-4 z-30"
-          isVisible={showPerformanceWidget}
-        />
+        {showPerformanceWidget && (
+          <div className="fixed bottom-4 left-4 z-30">
+            <PerformanceDashboard />
+          </div>
+        )}
 
         <Suspense fallback={<ModernLoadingSpinner />}>
           <CommandPalette

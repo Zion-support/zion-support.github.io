@@ -37,24 +37,22 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
   const [isMonitoring, setIsMonitoring] = useState(false);
 
   const updateMetrics = useCallback(() => {
-    const rawMetrics = performanceOptimizer.getMetrics();
-    
-    // Map PerformanceMetrics to EnhancedPerformanceMetrics
-    const newMetrics: EnhancedPerformanceMetrics = {
-      fcp: rawMetrics.fcp,
-      lcp: rawMetrics.lcp,
-      fid: rawMetrics.fid,
-      cls: rawMetrics.cls,
-      ttfb: rawMetrics.ttfb,
-      loadTime: rawMetrics.loadTime || 0,
-      renderTime: rawMetrics.renderTime || 0,
-      memory: rawMetrics.memory || { used: 0, total: 0, limit: 0 },
-      domContentLoaded: performance.timing ? performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart : 0,
-      domInteractive: performance.timing ? performance.timing.domInteractive - performance.timing.navigationStart : 0,
-      violations: []
+    const newMetrics = performanceOptimizer.getMetrics();
+    // Convert PerformanceMetrics to EnhancedPerformanceMetrics
+    const enhancedMetrics: EnhancedPerformanceMetrics = {
+      fcp: newMetrics.fcp,
+      lcp: newMetrics.lcp,
+      fid: newMetrics.fid,
+      cls: newMetrics.cls,
+      ttfb: newMetrics.ttfb,
+      loadTime: newMetrics.loadTime || 0,
+      renderTime: newMetrics.renderTime || 0,
+      memory: newMetrics.memory || { used: 0, total: 0, limit: 0 },
+      domContentLoaded: 0, // Will be updated from performance API
+      domInteractive: 0, // Will be updated from performance API
+      violations: [] // Will be updated from performance API
     };
-    
-    setMetrics(newMetrics);
+    setMetrics(enhancedMetrics);
     
     if (showSuggestions) {
       const newSuggestions = performanceOptimizer.getSuggestions();
@@ -207,7 +205,11 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
       </div>
 
       {/* Additional Metrics */}
+<<<<<<< HEAD
       {metrics.memory && (
+=======
+      {(metrics.memory) && (
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-9b3e
         <div className="space-y-2 text-sm mb-4">
           <h4 className="font-medium text-gray-700 dark:text-gray-300">Additional Metrics</h4>
           
@@ -220,6 +222,7 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
             </div>
           )}
 
+<<<<<<< HEAD
           <div className="flex justify-between">
             <span className="text-gray-600 dark:text-gray-400">DOM Content Loaded:</span>
             <span className="text-gray-900 dark:text-white">
@@ -233,6 +236,25 @@ export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProp
               {metrics.domInteractive.toFixed(0)}ms
             </span>
           </div>
+=======
+          {metrics.domContentLoaded > 0 && (
+            <div className="flex justify-between">
+              <span className="text-gray-600 dark:text-gray-400">DOM Content Loaded:</span>
+              <span className="text-gray-900 dark:text-white">
+                {metrics.domContentLoaded.toFixed(0)}ms
+              </span>
+            </div>
+          )}
+
+          {metrics.domInteractive > 0 && (
+            <div className="flex justify-between">
+              <span className="text-gray-600 dark:text-gray-400">DOM Interactive:</span>
+              <span className="text-blue-500">
+                {metrics.domInteractive.toFixed(0)}ms
+              </span>
+            </div>
+          )}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-9b3e
         </div>
       )}
 
