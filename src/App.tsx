@@ -14,13 +14,8 @@ import './styles/notifications.css';
 import './styles/system-metrics.css';
 import './styles/modern-utilities.css';
 
-// Import essential utility modules only
-import { SEOOptimizer } from './utils/seoUtils';
-import { initializeErrorReporting } from './utils/errorReporting';
-import { initOptimizations } from './utils/buildOptimizations';
-
-// Initialize managers
-const seoManager = SEOOptimizer.getInstance();
+// Import utility managers - simplified for build compatibility
+import { seoOptimizer } from './utils/seoUtils';
 
 export default function App(): React.JSX.Element {
   // State for system metrics dashboard
@@ -39,9 +34,9 @@ export default function App(): React.JSX.Element {
   // Scroll handler
   const handleScroll = useCallback(() => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = (scrollTop / docHeight) * 100;
-    engagementData.scrollDepth = Math.max(engagementData.scrollDepth, scrollPercent);
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollDepth = Math.min((scrollTop / scrollHeight) * 100, 100);
+    engagementData.scrollDepth = scrollDepth;
   }, [engagementData]);
 
   // Click handler
@@ -79,43 +74,48 @@ export default function App(): React.JSX.Element {
     ogType: 'website',
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const,
-    structuredData: [
-      seoManager.generateOrganizationStructuredData(),
-      seoManager.generateWebsiteStructuredData()
-    ]
+    twitterCard: 'summary_large_image' as const
   }), []);
-
-  // Track engagement function
-  const trackEngagement = useCallback(() => {
-    const timeOnPage = Date.now() - engagementData.startTime;
-    console.log('User engagement:', {
-      timeOnPage,
-      scrollDepth: engagementData.scrollDepth,
-      clicks: engagementData.clicks,
-    });
-  }, [engagementData]);
 
   // Main initialization effect
   useEffect(() => {
-    // Initialize error reporting
-    initializeErrorReporting();
-    
-    // Initialize build optimizations
-    initOptimizations();
-    
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
     }
 
-    // Set default SEO data
-    seoManager.updateSEO(seoData);
+    // Initialize SEO optimizer
+    seoOptimizer.updateMetaTags({
+      title: seoData.title,
+      description: seoData.description,
+      keywords: seoData.keywords,
+      image: seoData.ogImage,
+      url: typeof window !== 'undefined' ? window.location.href : '',
+      type: seoData.ogType
+    });
 
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
 
+    // Cleanup function
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
+    };
+  }, [seoData, handleScroll, handleClick]);
+
+  // Add keyboard event listener
+  React.useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
+
+  // Main initialization and cleanup effect
+  React.useEffect(() => {
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
         typeof performance.mark === 'function' && 
@@ -126,19 +126,7 @@ export default function App(): React.JSX.Element {
 
     // Cleanup function
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
-      
-      // Final engagement tracking
-      trackEngagement();
-    };
-  }, [seoData, handleScroll, handleClick, trackEngagement]);
-
-  // Add keyboard event listener
-  useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, [handleKeyDown]);
 
