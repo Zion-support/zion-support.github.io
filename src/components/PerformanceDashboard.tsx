@@ -79,7 +79,7 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
         <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
           <div className="flex items-center justify-between mb-2">
             <h3 className="text-sm font-medium text-gray-600 dark:text-gray-400">FCP</h3>
-            <span className={`text-xs px-2 py-1 rounded ${getPerformanceColor(metrics.fcp, { good: 1800, poor: 3000 })} bg-opacity-10`}>
+            <span className={`text-xs px-2 py-1 rounded ${getMetricColor(metrics.fcp, { good: 1800, poor: 3000 })} bg-opacity-10`}>
               {getPerformanceLabel(metrics.fcp, { good: 1800, poor: 3000 })}
             </span>
           </div>
@@ -91,7 +91,7 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
         <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
           <div className="flex items-center justify-between mb-2">
             <h3 className="text-sm font-medium text-gray-600 dark:text-gray-400">LCP</h3>
-            <span className={`text-xs px-2 py-1 rounded ${getPerformanceColor(metrics.lcp, { good: 2500, poor: 4000 })} bg-opacity-10`}>
+            <span className={`text-xs px-2 py-1 rounded ${getMetricColor(metrics.lcp, { good: 2500, poor: 4000 })} bg-opacity-10`}>
               {getPerformanceLabel(metrics.lcp, { good: 2500, poor: 4000 })}
             </span>
           </div>
@@ -103,7 +103,7 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
         <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
           <div className="flex items-center justify-between mb-2">
             <h3 className="text-sm font-medium text-gray-600 dark:text-gray-400">FID</h3>
-            <span className={`text-xs px-2 py-1 rounded ${getPerformanceColor(metrics.fid, { good: 100, poor: 300 })} bg-opacity-10`}>
+            <span className={`text-xs px-2 py-1 rounded ${getMetricColor(metrics.fid, { good: 100, poor: 300 })} bg-opacity-10`}>
               {getPerformanceLabel(metrics.fid, { good: 100, poor: 300 })}
             </span>
           </div>
@@ -127,7 +127,7 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
         <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
           <div className="flex items-center justify-between mb-2">
             <h3 className="text-sm font-medium text-gray-600 dark:text-gray-400">TTFB</h3>
-            <span className={`text-xs px-2 py-1 rounded ${getPerformanceColor(metrics.ttfb, { good: 800, poor: 1800 })} bg-opacity-10`}>
+            <span className={`text-xs px-2 py-1 rounded ${getMetricColor(metrics.ttfb, { good: 800, poor: 1800 })} bg-opacity-10`}>
               {getPerformanceLabel(metrics.ttfb, { good: 800, poor: 1800 })}
             </span>
           </div>

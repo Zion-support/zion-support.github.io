@@ -212,7 +212,7 @@ export default function App(): React.JSX.Element {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
       event.preventDefault();
       setShowAdvancedMonitoring((prev: boolean) => !prev);
-      analytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+m', action: 'toggle_advanced_monitoring' });
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'cmd+shift+m', action: 'toggle_advanced_monitoring' });
     }
     if (event.key === 'Escape') {
       setShowCommandPalette(false);
@@ -221,7 +221,7 @@ export default function App(): React.JSX.Element {
       setShowPerformanceWidget(false);
       setShowKeyboardHelp(false);
       setShowAdvancedMonitoring(false);
-      analytics.trackEvent('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
+      seoAnalytics.trackEvent('keyboard_shortcut', { shortcut: 'escape', action: 'close_modals' });
     }
   }, []);
 
@@ -302,7 +302,7 @@ export default function App(): React.JSX.Element {
       
       // Initialize analytics system
       seoAnalytics.initialize();
-      seoAnalytics.trackPageView();
+      seoAnalytics.trackPageView(window.location.pathname);
 
       // Set default SEO data using the correct method
       seoManagerInstance.updateMetaTags(seoData);
@@ -392,7 +392,7 @@ export default function App(): React.JSX.Element {
 
   return (
     <PerformanceOptimizer enableMonitoring={true} enableOptimizations={true}>
-      <EnhancedErrorBoundary showDetails={process.env.NODE_ENV === 'development'}>
+      <EnhancedErrorBoundary>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <AppRouter />
         
@@ -453,10 +453,7 @@ export default function App(): React.JSX.Element {
         </Suspense>
 
         <PerformanceDashboard
-          showBundleAnalysis={true}
-          showOptimizationSuggestions={true}
-          autoRefresh={true}
-          refreshInterval={5000}
+          isVisible={showPerformanceWidget}
         />
 
         <Suspense fallback={<ModernLoadingSpinner />}>

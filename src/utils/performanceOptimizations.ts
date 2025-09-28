@@ -3,7 +3,7 @@
  * Collection of utilities for optimizing React application performance
  */
 
-import { useCallback, useMemo, useRef, useEffect, useState } from 'react';
+import React, { useCallback, useMemo, useRef, useEffect, useState } from 'react';
 
 /**
  * Debounce hook for optimizing expensive operations
@@ -51,7 +51,7 @@ export function useDeepMemo<T>(
   factory: () => T,
   deps: React.DependencyList
 ): T {
-  const ref = useRef<{ deps: React.DependencyList; value: T }>();
+  const ref = useRef<{ deps: React.DependencyList; value: T } | null>(null);
 
   if (!ref.current || !deepEqual(ref.current.deps, deps)) {
     ref.current = { deps, value: factory() };
@@ -90,7 +90,7 @@ function deepEqualObject(a: Record<string, unknown>, b: Record<string, unknown>)
   for (const key of keysA) {
     if (a[key] !== b[key]) {
       if (typeof a[key] === 'object' && typeof b[key] === 'object') {
-        if (!deepEqualObject(a[key], b[key])) {
+        if (!deepEqualObject(a[key] as Record<string, unknown>, b[key] as Record<string, unknown>)) {
           return false;
         }
       } else {
@@ -311,19 +311,19 @@ export function collectPerformanceMetrics() {
 export function checkPerformanceBudget(metrics: Record<string, unknown>): string[] {
   const violations: string[] = [];
   
-  if (metrics.loadTime > 3000) {
+  if ((metrics.loadTime as number) > 3000) {
     violations.push('Page load time exceeds 3s budget');
   }
   
-  if (metrics.firstContentfulPaint > 1800) {
+  if ((metrics.firstContentfulPaint as number) > 1800) {
     violations.push('First Contentful Paint exceeds 1.8s budget');
   }
   
-  if (metrics.largestContentfulPaint > 2500) {
+  if ((metrics.largestContentfulPaint as number) > 2500) {
     violations.push('Largest Contentful Paint exceeds 2.5s budget');
   }
   
-  if (metrics.memory && metrics.memory.used > metrics.memory.limit * 0.8) {
+  if (metrics.memory && (metrics.memory as { used: number; limit: number }).used > (metrics.memory as { used: number; limit: number }).limit * 0.8) {
     violations.push('Memory usage exceeds 80% of limit');
   }
   
