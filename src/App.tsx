@@ -95,11 +95,7 @@ export default function App(): React.JSX.Element {
   const seoData = useSEOData(currentPathname);
 
   // Command palette commands
-<<<<<<< HEAD
   const commandPaletteCommands = useMemo(() => [
-=======
-  const commands = useMemo(() => [
->>>>>>> d198976932ef256b976dc7406ae7fd29019b4667
     {
       id: 'system-dashboard',
       title: 'Toggle System Dashboard',
@@ -133,8 +129,6 @@ export default function App(): React.JSX.Element {
       shortcut: 'Ctrl+Shift+A'
     },
     {
-<<<<<<< HEAD
-=======
       id: 'advanced-performance-dashboard',
       title: 'Toggle Advanced Performance Dashboard',
       description: 'Open/close the advanced performance dashboard',
@@ -151,7 +145,6 @@ export default function App(): React.JSX.Element {
       shortcut: 'Ctrl+Shift+Q'
     },
     {
->>>>>>> d198976932ef256b976dc7406ae7fd29019b4667
       id: 'keyboard-help',
       title: 'Show Keyboard Shortcuts',
       description: 'Display all available keyboard shortcuts',
@@ -169,11 +162,8 @@ export default function App(): React.JSX.Element {
         setShowPerformanceOptimizer(false);
         setShowPerformanceMonitor(false);
         setShowAIDashboard(false);
-<<<<<<< HEAD
-=======
         setShowAdvancedPerformanceDashboard(false);
         setShowComprehensiveSystemDashboard(false);
->>>>>>> d198976932ef256b976dc7406ae7fd29019b4667
         setShowRealTimeMetrics(false);
         setShowCommandPalette(false);
         setShowKeyboardHelp(false);
@@ -181,12 +171,6 @@ export default function App(): React.JSX.Element {
       shortcut: 'Escape'
     }
   ], []);
-<<<<<<< HEAD
-
-  // Optimized keyboard handler for system dashboard toggle - removed unused function
-=======
->>>>>>> d198976932ef256b976dc7406ae7fd29019b4667
-
   // Optimized keyboard handler for system dashboard toggle
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey) {
@@ -519,102 +503,6 @@ export default function App(): React.JSX.Element {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth, showRealTimeMetrics]);
 
-<<<<<<< HEAD
-=======
-  // Command palette commands
-  const commandPaletteCommands = [
-    {
-      id: 'toggle-system-dashboard',
-      title: 'Toggle System Dashboard',
-      description: 'Open or close the system dashboard',
-      category: 'Dashboard',
-      action: () => setShowSystemDashboard(!showSystemDashboard),
-      shortcut: 'Ctrl+Shift+D'
-    },
-    {
-      id: 'toggle-performance-optimizer',
-      title: 'Toggle Performance Optimizer',
-      description: 'Open or close the performance optimizer',
-      category: 'Dashboard',
-      action: () => setShowPerformanceOptimizer(!showPerformanceOptimizer),
-      shortcut: 'Ctrl+Shift+P'
-    },
-    {
-      id: 'toggle-performance-monitor',
-      title: 'Toggle Performance Monitor',
-      description: 'Open or close the performance monitor',
-      category: 'Dashboard',
-      action: () => setShowPerformanceMonitor(!showPerformanceMonitor),
-      shortcut: 'Ctrl+Shift+M'
-    },
-    {
-      id: 'toggle-ai-dashboard',
-      title: 'Toggle AI Dashboard',
-      description: 'Open or close the AI performance dashboard',
-      category: 'Dashboard',
-      action: () => setShowAIDashboard(!showAIDashboard),
-      shortcut: 'Ctrl+Shift+A'
-    },
-    {
-      id: 'toggle-seo-optimizer',
-      title: 'Toggle SEO Optimizer',
-      description: 'Open or close the SEO optimizer',
-      category: 'Dashboard',
-      action: () => setShowSEOOptimizer(!showSEOOptimizer),
-      shortcut: 'Ctrl+Shift+S'
-    },
-    {
-      id: 'toggle-theme',
-      title: 'Toggle Theme',
-      description: 'Switch between dark and light theme',
-      category: 'Appearance',
-      action: () => setIsDarkMode(!isDarkMode),
-      shortcut: 'Ctrl+Shift+T'
-    },
-    {
-      id: 'toggle-real-time-monitor',
-      title: 'Toggle Real-Time Monitor',
-      description: 'Open or close the real-time performance monitor',
-      category: 'Dashboard',
-      action: () => setShowRealTimeMonitor(!showRealTimeMonitor),
-      shortcut: 'Ctrl+Shift+R'
-    },
-    {
-      id: 'toggle-system-health',
-      title: 'Toggle System Health',
-      description: 'Open or close the system health dashboard',
-      category: 'Dashboard',
-      action: () => setShowSystemHealth(!showSystemHealth),
-      shortcut: 'Ctrl+Shift+H'
-    },
-    {
-      id: 'show-keyboard-help',
-      title: 'Show Keyboard Shortcuts',
-      description: 'Display all available keyboard shortcuts',
-      category: 'Help',
-      action: () => setShowKeyboardHelp(true),
-      shortcut: 'Ctrl+Shift+K'
-    },
-    {
-      id: 'show-notifications',
-      title: 'Test Notifications',
-      description: 'Show a test notification',
-      category: 'Testing',
-      action: () => {
-        if ((window as any).notifications) {
-          (window as any).notifications.add({
-            type: 'success',
-            title: 'Command Executed',
-            message: 'Test notification sent successfully!',
-            duration: 3000
-          });
-        }
-      },
-      shortcut: 'Ctrl+Shift+N'
-    }
-  ];
-
->>>>>>> d198976932ef256b976dc7406ae7fd29019b4667
   // Track engagement on scroll and click
   useEffect(() => {
     const handleScrollWithEngagement = () => {
@@ -622,13 +510,8 @@ export default function App(): React.JSX.Element {
       trackEngagement();
     };
 
-<<<<<<< HEAD
     const handleClickWithEngagement = () => {
       handleClick();
-=======
-    const handleClickWithEngagement = (event: Event) => {
-      handleClick(event);
->>>>>>> d198976932ef256b976dc7406ae7fd29019b4667
       trackEngagement();
     };
 
