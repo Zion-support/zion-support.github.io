@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
+import React, { useState, useEffect, useCallback } from 'react';
+import { advancedBuildOptimizer } from '../utils/advancedBuildOptimizer';
+import { accessibilityEnhancements } from '../utils/accessibilityEnhancements';
+import { accessibilityUtils } from '../utils/accessibilityUtils';
 
 interface PerformanceMetrics {
   lcp: number;
