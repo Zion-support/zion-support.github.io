@@ -11,9 +11,16 @@ const mockLocation = {
   assign: jest.fn(),
   replace: jest.fn(),
   reload: jest.fn(),
+  search: '',
+  hash: '',
+  origin: 'http://localhost:3000',
+  protocol: 'http:',
+  host: 'localhost:3000',
+  hostname: 'localhost',
+  port: '3000',
 };
 
-// Delete the existing location property and redefine it
+// Mock location by deleting and redefining
 delete (window as any).location;
 (window as any).location = mockLocation;
 
