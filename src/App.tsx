@@ -14,6 +14,7 @@ import EnhancedNotificationSystem from './components/EnhancedNotificationSystem'
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import { SEOOptimizer } from './components/SEOOptimizer';
 import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
@@ -37,6 +38,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
+  const [showAdvancedDashboard, setShowAdvancedDashboard] = useState(false);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
 
@@ -94,6 +96,9 @@ export default function App(): React.JSX.Element {
         case 'A':
           setShowAIDashboard(prev => !prev);
           break;
+        case 'V':
+          setShowAdvancedDashboard(prev => !prev);
+          break;
         case 'R':
           setShowRealTimeMetrics(prev => !prev);
           break;
@@ -109,6 +114,7 @@ export default function App(): React.JSX.Element {
           setShowPerformanceOptimizer(false);
           setShowPerformanceMonitor(false);
           setShowAIDashboard(false);
+          setShowAdvancedDashboard(false);
           setShowRealTimeMetrics(false);
           setShowSEOOptimizer(false);
           break;
@@ -385,6 +391,12 @@ export default function App(): React.JSX.Element {
           onClose={() => setShowAIDashboard(false)}
         />
 
+        {/* Advanced Performance Dashboard */}
+        <AdvancedPerformanceDashboard
+          isVisible={showAdvancedDashboard}
+          onClose={() => setShowAdvancedDashboard(false)}
+        />
+
         {/* Real-time Metrics */}
         {showRealTimeMetrics && (
           <div 
@@ -442,6 +454,7 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+P: Performance Optimizer</div>
           <div>Ctrl+Shift+M: Performance Monitor</div>
           <div>Ctrl+Shift+A: AI Dashboard</div>
+          <div>Ctrl+Shift+V: Advanced Dashboard</div>
           <div>Ctrl+Shift+R: Real-time Metrics</div>
           <div>Ctrl+Shift+S: SEO Optimizer</div>
           <div>Ctrl+Shift+T: Toggle Theme</div>
