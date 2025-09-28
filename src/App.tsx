@@ -21,6 +21,10 @@ import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
 import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { SecurityEnhancer } from './utils/securityEnhancer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
+import { comprehensivePerformanceMonitor } from './utils/comprehensivePerformanceMonitor';
+import { enhancedErrorRecovery } from './utils/enhancedErrorRecovery';
+import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
+import { pwaEnhancements } from './utils/pwaEnhancements';
 import NotificationSystem from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
@@ -155,8 +159,26 @@ export default function App(): React.JSX.Element {
       console.error('Initialization error:', error);
     }
     
+    // Initialize individual enhancement systems
+    enhancedPerformanceMonitor.startMonitoring();
+    comprehensivePerformanceMonitor.startMonitoring();
+    enhancedErrorRecovery.initialize();
+    accessibilityEnhancements.initialize();
+    pwaEnhancements.initialize();
+    
     // Initialize basic systems
     analytics.initialize();
+    
+    // enhancedAnalytics.initialize(); // Method doesn't exist
+    // advancedCacheSystem.initialize(); // Method doesn't exist
+    // new AdvancedAutomationSystem().initialize(); // Method doesn't exist
+    // new AccessibilityEnhancer().initialize(); // Method doesn't exist
+    // new SecurityEnhancer().initialize(); // Method doesn't exist
+    
+    // Initialize analytics
+    // seoAnalytics.initialize(); // Method doesn't exist
+    // performanceSEO.initialize(); // Method doesn't exist
+    // seoManager.initialize(); // Method doesn't exist
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
