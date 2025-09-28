@@ -25,44 +25,16 @@ import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import { enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
 import { advancedAppEnhancements } from './utils/advancedAppEnhancements';
-import { errorHandler, ErrorBoundary } from './utils/errorHandler';
-import { performanceMonitor } from './utils/performanceMonitoring';
-import { advancedErrorHandler } from './utils/advancedErrorHandling';
+import { ErrorBoundary } from './utils/errorHandler';
 import SystemMonitoringDashboard from './components/SystemMonitoringDashboard';
 
 // Lazy load heavy components for better performance
 const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
-const KeyboardShortcutsHelp = lazy(() => import('./components/KeyboardShortcutsHelp'));
-const SystemHealthDashboard = lazy(() => import('./components/SystemHealthDashboard'));
-const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
-const CommandPalette = lazy(() => import('./components/CommandPalette'));
-const AdvancedMonitoringDashboard = lazy(() => import('./components/AdvancedMonitoringDashboard'));
-const ComprehensivePerformanceDashboard = lazy(() => import('./components/ComprehensivePerformanceDashboard'));
-const RealTimePerformanceMonitor = lazy(() => import('./components/RealTimePerformanceMonitor'));
-const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPalette'));
-const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
-const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
-const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
-const SystemStatusIndicator = lazy(() => import('./components/SystemStatusIndicator'));
 const EnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotificationSystem'));
-const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcutsManager'));
-const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDashboard'));
 
 // Additional imports
-import AdvancedAnalytics from './components/AdvancedAnalytics';
-import PerformanceDashboard from './components/PerformanceDashboard';
-// import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { performanceAlerts } from './utils/performanceAlerts';
-import { accessibilityUtils } from './utils/accessibilityUtils';
-import { securityUtils } from './utils/securityUtils';
-import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
-import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
-import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
-import ComprehensiveImprovements from './components/ComprehensiveImprovements';
 
 export default function App(): React.JSX.Element {
-  const navigate = useNavigate();
-  
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
@@ -71,23 +43,8 @@ export default function App(): React.JSX.Element {
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
-  const [showSystemStatus, setShowSystemStatus] = useState(true);
+  const [showSystemStatus] = useState(true);
   const [showEnhancedNotifications] = useState(true);
-  const [showKeyboardShortcutsManager, setShowKeyboardShortcutsManager] = useState(false);
-  const [showComprehensiveImprovements, setShowComprehensiveImprovements] = useState(false);
-  const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
-  const [showSystemHealth, setShowSystemHealth] = useState(false);
-  const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [enhancedNotifications, setEnhancedNotifications] = useState<EnhancedNotification[]>([]);
-
-  // Notification management
-  const removeNotification = useCallback((id: string) => {
-    setNotifications(prev => prev.filter(n => n.id !== id));
-  }, []);
-
-  const removeEnhancedNotification = useCallback((id: string) => {
-    setEnhancedNotifications(prev => prev.filter(n => n.id !== id));
-  }, []);
 
   // Performance metrics state
   const [performanceMetrics, setPerformanceMetrics] = useState({
@@ -212,7 +169,7 @@ export default function App(): React.JSX.Element {
   useEffect(() => {
     try {
       // Initialize comprehensive enhancements first
-      const enhancements = getComprehensiveEnhancements();
+      getComprehensiveEnhancements();
       
       // Initialize individual enhancement systems
       advancedAccessibilityEnhancer.initialize();
