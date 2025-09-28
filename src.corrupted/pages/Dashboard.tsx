@@ -1,18 +1,18 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { ;
-  ArrowRight,;
-  Calendar, ;
-  BarChart3, ;
-  Users, ;
-  TrendingUp, ;
-  Shield, ;
-  Cloud, ;
-  Brain,;
-  Plus,;
-  Settings,;
-  Bell,;
-  Search,;
+  ArrowRight;
+  Calendar;
+  BarChart3;
+  Users;
+  TrendingUp;
+  Shield;
+  Cloud;
+  Brain;
+  Plus;
+  Settings;
+  Bell;
+  Search;
   Filter;
 } from "lucide-react"
 import { SEO } from "../components/SEO"

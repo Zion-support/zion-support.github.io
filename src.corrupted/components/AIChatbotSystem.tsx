@@ -1,54 +1,54 @@
 import React, { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import {;
-  MessageCircle,;
-  Send,;
-  Bot,;
-  User,;
-  Sparkles,;
-  X,;
-  Settings,;
-  Mic,;
-  MicOff,;
-  Paperclip,;
-  RefreshCw,;
-  ThumbsUp,;
-  ThumbsDown,;
-  Clock,;
-  CheckCircle,;
+  MessageCircle;
+  Send;
+  Bot;
+  User;
+  Sparkles;
+  X;
+  Settings;
+  Mic;
+  MicOff;
+  Paperclip;
+  RefreshCw;
+  ThumbsUp;
+  ThumbsDown;
+  Clock;
+  CheckCircle;
   AlertCircle;
 } from "lucide-react"
-interface ChatMessage {;
+interface ChatMessage {
   id: string,content: string,sender: 'user' | 'bot',timestamp: Date,type: 'text' | 'image' | 'file' | 'system',status: 'sending' | 'sent' | 'error'
   metadata?: {;
-    confidence?: number,;
-    suggestions?: string[],;
-    relatedServices?: string[],;
+    confidence?: number;
+    suggestions?: string[];
+    relatedServices?: string[];
     estimatedResponseTime?: number;
-  },;
+  };
 };
 
-interface AIChatbotSystemProps {;
-  showHeader?: boolean,;
-  showSettings?: boolean,;
-  maxMessages?: number,;
-  autoScroll?: boolean,;
+interface AIChatbotSystemProps {
+  showHeader?: boolean;
+  showSettings?: boolean;
+  maxMessages?: number;
+  autoScroll?: boolean;
 };
 
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({;
   showHeader = true;
-  showSettings = true,;
+  showSettings = true;
   autoScroll = true;
 }) => {;
-  const [messages, setMessages] = useState<ChatMessage[]>([]),;
-  const [inputValue, setInputValue] = useState(''),;
-  const [isTyping, setIsTyping] = useState(false),;
-  const [isOpen, setIsOpen] = useState(false),;
-  const [showSettingsPanel, setShowSettingsPanel] = useState(false),;
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [inputValue, setInputValue] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [showSettingsPanel, setShowSettingsPanel] = useState(false);
   const [settings, setSettings] = useState({;
     voiceEnabled: false,autoResponse: true,language: 'en',theme: 'dark',responseSpeed: 'normal'
   });
-  const [isListening, setIsListening] = useState(false),;
+  const [isListening, setIsListening] = useState(false);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -57,50 +57,50 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({;
     if (isOpen && messages.length === 0) {;&& messages.length === 0) {; messages.length === 0) {
       const welcomeMessage: ChatMessage = {;
         id: 'welcome',content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with: \n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",sender: 'bot',timestamp: new Date(),type: 'text',status: 'sent',metadata: {;
-          confidence: 0.95,suggestions: ['Tell me about your servicesGet a quote', 'Technical supportContact information'],;
-          relatedServices: ['AI ConsultingCloud Solutions', 'Digital Transformation'],;
+          confidence: 0.95,suggestions: ['Tell me about your servicesGet a quote', 'Technical supportContact information'];
+          relatedServices: ['AI ConsultingCloud Solutions', 'Digital Transformation'];
           estimatedResponseTime: 2;
         };
       };
-      setMessages([welcomeMessage]),;
+      setMessages([welcomeMessage]);
     };
-  }, [isOpen, messages.length]),;
+  }, [isOpen, messages.length]);
 
   //[^;]*
   useEffect(() => {;
     if (autoScroll && messagesEndRef.current) {;&& messagesEndRef.current) {; messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })
     };
-  }, [messages, autoScroll]),;
+  }, [messages, autoScroll]);
 
   //[^;]*
   const simulateAIResponse = async (userMessage: string) => {;
     setIsTyping(true)
     //[^;]*
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000)),;
+    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
 
     const responses = [;
       {;
-        content: "I'd be happy to help you with that! Zion Tech Group offers comprehensive AI consulting services including machine learning implementation, data analytics, and process automation. Would you like me to provide more specific details about any particular service?",;
-        suggestions: ['AI Consulting detailsMachine Learning services', 'Data AnalyticsProcess Automation'],;
+        content: "I'd be happy to help you with that! Zion Tech Group offers comprehensive AI consulting services including machine learning implementation, data analytics, and process automation. Would you like me to provide more specific details about any particular service?";
+        suggestions: ['AI Consulting detailsMachine Learning services', 'Data AnalyticsProcess Automation'];
         relatedServices: ['AI ConsultingMachine Learning', 'Data Analytics']
-      },;
+      };
       {;
-        content: "Great question! Our cloud migration services help businesses transition smoothly to cloud infrastructure. We provide assessment, planning, implementation, and ongoing support. The typical timeline is 3-6 months depending on complexity.",;
-        suggestions: ['Cloud Migration timelineInfrastructure assessment', 'Implementation processOngoing support'],;
+        content: "Great question! Our cloud migration services help businesses transition smoothly to cloud infrastructure. We provide assessment, planning, implementation, and ongoing support. The typical timeline is 3-6 months depending on complexity.";
+        suggestions: ['Cloud Migration timelineInfrastructure assessment', 'Implementation processOngoing support'];
         relatedServices: ['Cloud MigrationInfrastructure Modernization', 'DevOps Services']
-      },;
+      };
       {;
-        content: "For cybersecurity services, we offer threat detection, incident response, security audits, and employee training. Our team uses advanced tools and follows industry best practices to protect your digital assets.",;
-        suggestions: ['Threat detectionIncident response', 'Security auditsEmployee training'],;
+        content: "For cybersecurity services, we offer threat detection, incident response, security audits, and employee training. Our team uses advanced tools and follows industry best practices to protect your digital assets.";
+        suggestions: ['Threat detectionIncident response', 'Security auditsEmployee training'];
         relatedServices: ['CybersecurityThreat Detection', 'Security Training']
-      },;
+      };
       {;
-        content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",;
-        suggestions: ['Strategy developmentImplementation process', 'Change managementROI examples'],;
+        content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.";
+        suggestions: ['Strategy developmentImplementation process', 'Change managementROI examples'];
         relatedServices: ['Digital TransformationProcess Optimization', 'Change Management']
       };
-    ],;
+    ];
 
     const randomResponse = responses[Math.floor(Math.random() * responses.length)]
 
@@ -109,9 +109,9 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({;
         confidence: 0.85 + Math.random() * 0.1,suggestions: randomResponse.suggestions,relatedServices: randomResponse.relatedServices,estimatedResponseTime: 1 + Math.random() * 2;
       };
     };
-    setMessages(prev => [...prev, botMessage]),;
-    setIsTyping(false),;
-  },;
+    setMessages(prev => [...prev, botMessage]);
+    setIsTyping(false);
+  };
 
   //[^;]*
   const handleSubmit = async (e: React.FormEvent) => {;
@@ -121,18 +121,18 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({;
     const userMessage: ChatMessage = {;
       id: Date.now().toString(),content: inputValue,sender: 'user',timestamp: new Date(),type: 'text',status: 'sent'
     };
-    setMessages(prev => [...prev, userMessage]),;
-    setInputValue(''),;
+    setMessages(prev => [...prev, userMessage]);
+    setInputValue('');
 
     //[^;]*
-    await simulateAIResponse(inputValue),;
-  },;
+    await simulateAIResponse(inputValue);
+  };
 
   //[^;]*
   const toggleVoiceInput = () => {;
-    setIsListening(!isListening),;
+    setIsListening(!isListening);
     //[^;]*
-  },;
+  };
 
   //[^;]*
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
@@ -142,9 +142,9 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({;
         id: Date.now().toString(),content: `Uploaded: ${file.name}`
         sender: 'user',timestamp: new Date(),type: 'file',status: 'sent'
       };
-      setMessages(prev => [...prev, fileMessage]),;
+      setMessages(prev => [...prev, fileMessage]);
     };
-  },;
+  };
 
   //[^;]*
   const handleSuggestionClick = (suggestion: string) => {;
@@ -157,13 +157,13 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({;
         ? { ...msg, metadata: { ...msg.metadata, userRating: rating } };
         : msg;
     ));
-  },;
+  };
 
   //[^;]*
   const clearChat = () => {;
-    setMessages([]),;
-    setChatHistory([]),;
-  },;
+    setMessages([]);
+    setChatHistory([]);
+  };
 
   return (
     <>;

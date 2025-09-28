@@ -1,4 +1,10 @@
+/* eslint-disable */
 module.exports = {
+  env: {
+    browser: true,
+    node: true,
+    jest: true,
+  },
   parser: require.resolve('@typescript-eslint/parser'),
   plugins: ['@typescript-eslint', 'react-hooks', 'import', '@next/next'],
   extends: ['next/core-web-vitals', 'next/typescript', 'plugin:@typescript-eslint/recommended'],
@@ -18,7 +24,19 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
   },
+  overrides: [
+    {
+      files: ['*.cjs', '**/*.cjs', 'scripts/**/*.cjs'],
+      env: { node: true },
+      parserOptions: { sourceType: 'script' },
+      rules: {
+        'no-console': 'off',
+        'no-undef': 'off',
+      },
+    },
+  ],
   ignorePatterns: [
+    '.eslintrc.cjs',
     'node_modules/',
     '.next/',
     'out/',

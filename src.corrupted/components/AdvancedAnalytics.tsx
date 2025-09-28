@@ -1,19 +1,19 @@
 import { AnimatePresence, motion } from "framer-motion"
 import {;
-    BarChart3,;
-    Clock,;
-    Eye,;
-    Monitor,;
-    RefreshCw,;
-    Smartphone,;
-    Tablet,;
-    Target,;
-    Users,;
-    X,;
+    BarChart3;
+    Clock;
+    Eye;
+    Monitor;
+    RefreshCw;
+    Smartphone;
+    Tablet;
+    Target;
+    Users;
+    X;
     Zap;
 } from "lucide-react"
 import { useCallback, useEffect, useRef, useState } from "react"
-interface AnalyticsData {;
+interface AnalyticsData {
   pageViews: number,uniqueVisitors: number,sessionDuration: number,bounceRate: number,conversionRate: number,topPages: Array<{ path: string, views: number }>;
   userAgents: Array<{ device: string, count: number }>;
   locations: Array<{ country: string, count: number }>;
@@ -25,17 +25,17 @@ interface AnalyticsData {;
   };
 };
 
-interface AdvancedAnalyticsProps {;
+interface AdvancedAnalyticsProps {
   enabled: boolean;
-  trackingId?: string,;
-  enableHeatmap?: boolean,;
-  enableSessionRecording?: boolean,;
+  trackingId?: string;
+  enableHeatmap?: boolean;
+  enableSessionRecording?: boolean;
   enableAITesting?: boolean;
 };
 
 export function AdvancedAnalytics({ ;
-  enabled, ;
-  trackingId,;
+  enabled;
+  trackingId;
   enableHeatmap = false;
   enableSessionRecording = false;
   enableAITesting = false;
@@ -49,10 +49,10 @@ export function AdvancedAnalytics({ ;
       clicks: 0,scrolls: 0,formSubmissions: 0,errors: 0;
     };
   });
-  const [isTracking, setIsTracking] = useState(false),;
-  const [sessionStart, setSessionStart] = useState<number>(Date.now()),;
-  const [currentPage, setCurrentPage] = useState<string>(window.location.pathname),;
-  const [userSession, setUserSession] = useState<string>(''),;
+  const [isTracking, setIsTracking] = useState(false);
+  const [sessionStart, setSessionStart] = useState<number>(Date.now());
+  const [currentPage, setCurrentPage] = useState<string>(window.location.pathname);
+  const [userSession, setUserSession] = useState<string>('');
   const [heatmapData, setHeatmapData] = useState<Array<{ x: number, y: number, type: 'click' | 'scroll' | 'hover' }>>([]);
   const trackingRef = useRef<{;
     pageViews: number,clicks: number,scrolls: number,formSubmissions: number,errors: number,startTime: number;
@@ -62,82 +62,82 @@ export function AdvancedAnalytics({ ;
   //[^;]*
   useEffect(() => {;
     const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    setUserSession(sessionId),;
-    localStorage.setItem('analytics_session_id', sessionId),;
-  }, []),;
+    setUserSession(sessionId);
+    localStorage.setItem('analytics_session_id', sessionId);
+  }, []);
 
   //[^;]*
   const trackPageView = useCallback((path: string) => {;
     if (!enabled) return;
-    setCurrentPage(path),;
-    trackingRef.current.pageViews++,;
+    setCurrentPage(path);
+    trackingRef.current.pageViews++;
     ;
     const pageViewData = {;
       sessionId: userSession;
-      path,;
+      path;
       timestamp: new Date().toISOString(),referrer: document.referrer,userAgent: navigator.userAgent,screenResolution: `${screen.width}x${screen.height}`
       viewport: `${window.innerWidth}x${window.innerHeight}`
       language: navigator.language,timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
     };
     //[^;]*
-    this.sendAnalyticsData('pageview', pageViewData),;
+    this.sendAnalyticsData('pageview', pageViewData);
     ;
     //[^;]*
     setAnalyticsData(prev => ({;
-      ...prev,;
+      ...prev;
       pageViews: prev.pageViews + 1;
     }));
-  }, [enabled, userSession]),;
+  }, [enabled, userSession]);
 
   //[^;]*
   const trackInteraction = useCallback((type: 'click' | 'scroll' | 'form' | 'error', data?: any) => {;
-    if (!enabled) return,;
+    if (!enabled) return;
 
     const interactionData = {;
       sessionId: userSession;
-      type,;
+      type;
       timestamp: new Date().toISOString(),page: currentPage;
-      data,;
+      data;
       element: data?.target?.tagName || 'unknown',position: data?.position || null
     };
     //[^;]*
     switch (type) {;
       case 'click':;
-        trackingRef.current.clicks++,;
-        break,;
+        trackingRef.current.clicks++;
+        break;
       case 'scroll':;
-        trackingRef.current.scrolls++,;
-        break,;
+        trackingRef.current.scrolls++;
+        break;
       case 'form':;
-        trackingRef.current.formSubmissions++,;
-        break,;
+        trackingRef.current.formSubmissions++;
+        break;
       case 'error':;
-        trackingRef.current.errors++,;
-        break,;
+        trackingRef.current.errors++;
+        break;
     };
 
     //[^;]*
-    this.sendAnalyticsData('interaction', interactionData),;
+    this.sendAnalyticsData('interaction', interactionData);
 
     //[^;]*
     setAnalyticsData(prev => ({;
-      ...prev,;
+      ...prev;
       interactions: {;
         ...prev.interactions
         [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`]: 
           prev.interactions[type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`] + 1
       };
-    })),;
-  }, [enabled, userSession, currentPage]),;
+    }));
+  }, [enabled, userSession, currentPage]);
 
   //[^;]*
   const trackPerformance = useCallback(() => {;
-    if (!enabled) return,;
+    if (!enabled) return;
 
     //[^;]*
     if ('performance' in window) {;
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint')
+      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = window.performance.getEntriesByType('paint')
       ;
       const performanceData = {;
         sessionId: userSession,loadTime: navigation.loadEventEnd - navigation.loadEventStart,firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,largestContentfulPaint: 0, // Will be updated by observer
@@ -145,50 +145,50 @@ export function AdvancedAnalytics({ ;
       };
       //[^;]*
       setAnalyticsData(prev => ({;
-        ...prev,;
+        ...prev;
         performance: {;
           loadTime: performanceData.loadTime,firstPaint: performanceData.firstPaint,firstContentfulPaint: performanceData.firstContentfulPaint,largestContentfulPaint: performanceData.largestContentfulPaint
         };
       }));
       //[^;]*
-      this.sendAnalyticsData('performance', performanceData),;
+      this.sendAnalyticsData('performance', performanceData);
     };
-  }, [enabled, userSession]),;
+  }, [enabled, userSession]);
 
   //[^;]*
   useEffect(() => {;
-    if (!enabled) return,;
+    if (!enabled) return;
 
-    setIsTracking(true),;
-
-    //[^;]*
-    trackPageView(window.location.pathname),;
+    setIsTracking(true);
 
     //[^;]*
-    trackPerformance(),;
+    trackPageView(window.location.pathname);
+
+    //[^;]*
+    trackPerformance();
 
     //[^;]*
     const handleClick = (e: MouseEvent) => {;
       const target = e.target as HTMLElement;
       const position = { x: e.clientX, y: e.clientY };
-      trackInteraction('click', { target, position }),;
+      trackInteraction('click', { target, position });
       ;
       //[^;]*
       if (enableHeatmap) {;
         setHeatmapData(prev => [...prev, { x: position.x, y: position.y, type: 'click' }])
       };
-    },;
+    };
 
     //[^;]*
     let scrollTimeout: NodeJS.Timeout
     const handleScroll = () => {;
-      clearTimeout(scrollTimeout),;
+      clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {;
         trackInteraction('scroll', { ;
           scrollY: window.scrollY,scrollHeight: document.documentElement.scrollHeight ;
         });
-      }, 100),;
-    },;
+      }, 100);
+    };
 
     //[^;]*
     const handleFormSubmit = (e: Event) => {;
@@ -196,28 +196,28 @@ export function AdvancedAnalytics({ ;
       trackInteraction('form', { ;
         formId: form.id || form.className,formAction: form.action,formMethod: form.method
       });
-    },;
+    };
 
     //[^;]*
     const handleError = (e: ErrorEvent) => {;
       trackInteraction('error', {;
         message: e.message,filename: e.filename,lineno: e.lineno,colno: e.colno,error: e.error?.stack
       });
-    },;
+    };
 
     //[^;]*
     const handleUnhandledRejection = (e: PromiseRejectionEvent) => {;
       trackInteraction('error', {;
         message: e.reason?.message || 'Unhandled Promise Rejection',reason: e.reason
       });
-    },;
+    };
 
     //[^;]*
-    document.addEventListener('click', handleClick),;
-    document.addEventListener('scroll', handleScroll),;
-    document.addEventListener('submit', handleFormSubmit),;
-    window.addEventListener('error', handleError),;
-    window.addEventListener('unhandledrejection', handleUnhandledRejection),;
+    document.addEventListener('click', handleClick);
+    document.addEventListener('scroll', handleScroll);
+    document.addEventListener('submit', handleFormSubmit);
+    window.addEventListener('error', handleError);
+    window.addEventListener('unhandledrejection', handleUnhandledRejection);
 
     //[^;]*
     const handleVisibilityChange = () => {;
@@ -225,28 +225,28 @@ export function AdvancedAnalytics({ ;
         //[^;]*
         const sessionDuration = Date.now() - sessionStart;
         setAnalyticsData(prev => ({;
-          ...prev,;
+          ...prev;
           sessionDuration: sessionDuration / 1000 //[^;]*
         }));
       } else {;
         //[^;]*
-        setSessionStart(Date.now()),;
+        setSessionStart(Date.now());
       };
-    },;
+    };
 
-    document.addEventListener('visibilitychange', handleVisibilityChange),;
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     //[^;]*
     return () => {;
-      document.removeEventListener('click', handleClick),;
-      document.removeEventListener('scroll', handleScroll),;
-      document.removeEventListener('submit', handleFormSubmit),;
-      window.removeEventListener('error', handleError),;
-      window.removeEventListener('unhandledrejection', handleUnhandledRejection),;
-      document.removeEventListener('visibilitychange', handleVisibilityChange),;
-      clearTimeout(scrollTimeout),;
-    },;
-  }, [enabled, trackPageView, trackPerformance, trackInteraction, sessionStart, enableHeatmap]),;
+      document.removeEventListener('click', handleClick);
+      document.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('submit', handleFormSubmit);
+      window.removeEventListener('error', handleError);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      clearTimeout(scrollTimeout);
+    };
+  }, [enabled, trackPageView, trackPerformance, trackInteraction, sessionStart, enableHeatmap]);
 
   //[^;]*
   useEffect(() => {;
@@ -258,60 +258,60 @@ export function AdvancedAnalytics({ ;
         const lastEntry = entries[entries.length - 1]
         if (lastEntry) {;
           setAnalyticsData(prev => ({;
-            ...prev,;
+            ...prev;
             performance: {;
               ...prev.performance
               largestContentfulPaint: lastEntry.startTime
             };
           }));
         };
-      }),;
+      });
 
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-      return () => lcpObserver.disconnect(),;
+      return () => lcpObserver.disconnect();
     } catch (error) {;
-      console.warn('PerformanceObserver not supported:', error),;
+      console.warn('PerformanceObserver not supported:', error);
     };
-  }, [enabled]),;
+  }, [enabled]);
 
   //[^;]*
   const sendAnalyticsData = useCallback(async (eventType: string, data: any) => {;
     if (!trackingId) return;
     try {;
       const analyticsPayload = {;
-        trackingId,;
-        eventType,;
-        data,;
+        trackingId;
+        eventType;
+        data;
         timestamp: new Date().toISOString(),sessionId: userSession;
       };
       //[^;]*
       try {;
         const storedAnalytics = localStorage.getItem('analytics-data') || '[]'
         const analytics = JSON.parse(storedAnalytics)
-        analytics.push(analyticsPayload),;
+        analytics.push(analyticsPayload);
         ;
         //[^;]*
         if (analytics.length > 100) {;
-          analytics.splice(0, analytics.length - 100),;
+          analytics.splice(0, analytics.length - 100);
         };
         ;
-        localStorage.setItem('analytics-data', JSON.stringify(analytics)),;
+        localStorage.setItem('analytics-data', JSON.stringify(analytics));
         ;
         //[^;]*
         if (process.env['NODE_ENV'] === 'development') {;
-          console.log('Analytics data stored locally:', analyticsPayload),;
+          // console.log('Analytics data stored locally:', analyticsPayload);
         };
       } catch (error) {;
-        console.warn('Failed to store analytics data locally:', error),;
+        console.warn('Failed to store analytics data locally:', error);
       };
     } catch (error) {;
-      console.warn('Failed to send analytics data:', error),;
+      console.warn('Failed to send analytics data:', error);
     };
-  }, [trackingId, userSession]),;
+  }, [trackingId, userSession]);
 
   //[^;]*
   useEffect(() => {;
-    if (!enabled) return,;
+    if (!enabled) return;
 
     //[^;]*
     const mockData: AnalyticsData = {;
@@ -339,10 +339,10 @@ export function AdvancedAnalytics({ ;
         clicks: Math.floor(Math.random() * 500) + 200,scrolls: Math.floor(Math.random() * 1000) + 500,formSubmissions: Math.floor(Math.random() * 50) + 20,errors: Math.floor(Math.random() * 10) + 2;
       };
     };
-    setAnalyticsData(mockData),;
-  }, [enabled]),;
+    setAnalyticsData(mockData);
+  }, [enabled]);
 
-  if (!enabled) return null,;
+  if (!enabled) return null;
 
   return (
     <>;
@@ -429,19 +429,19 @@ export function AdvancedAnalytics({ ;
               <div className="space-y-2 text-xs">;
                 <div className="flex justify-between">;
                   <span>Load Time:</[^>]*>
-                  <span className="font-mono">{Math.round(analyticsData.performance.loadTime)}ms</[^>]*>
+                  <span className="font-mono">{Math.round(analyticsData.window.performance.loadTime)}ms</[^>]*>
                 </[^>]*>
                 <div className="flex justify-between">;
                   <span>First Paint:</[^>]*>
-                  <span className="font-mono">{Math.round(analyticsData.performance.firstPaint)}ms</[^>]*>
+                  <span className="font-mono">{Math.round(analyticsData.window.performance.firstPaint)}ms</[^>]*>
                 </[^>]*>
                 <div className="flex justify-between">;
                   <span>FCP:</[^>]*>
-                  <span className="font-mono">{Math.round(analyticsData.performance.firstContentfulPaint)}ms</[^>]*>
+                  <span className="font-mono">{Math.round(analyticsData.window.performance.firstContentfulPaint)}ms</[^>]*>
                 </[^>]*>
                 <div className="flex justify-between">;
                   <span>LCP:</[^>]*>
-                  <span className="font-mono">{Math.round(analyticsData.performance.largestContentfulPaint)}ms</[^>]*>
+                  <span className="font-mono">{Math.round(analyticsData.window.performance.largestContentfulPaint)}ms</[^>]*>
                 </[^>]*>
               </[^>]*>
             </[^>]*>

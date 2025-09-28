@@ -1,19 +1,19 @@
 import { motion } from "framer-motion"
 import {;
-  Award,;
-  Brain,;
-  CheckCircle,;
-  Clock,;
-  Cloud,;
-  ExternalLink,;
-  Mail,;
-  MapPin,;
-  Phone,;
-  Rocket,;
-  Search,;
-  Server,;
-  Shield,;
-  Sparkles,;
+  Award;
+  Brain;
+  CheckCircle;
+  Clock;
+  Cloud;
+  ExternalLink;
+  Mail;
+  MapPin;
+  Phone;
+  Rocket;
+  Search;
+  Server;
+  Shield;
+  Sparkles;
   TrendingUp;
 } from "lucide-react"
 import React, { useState } from "react"
@@ -22,8 +22,8 @@ import { COMPREHENSIVE_IT_INFRASTRUCTURE_2028 } from "../data/comprehensiveITInf
 import { comprehensivePricingGuide2028 } from "../data/comprehensivePricingGuide2028"
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from "../data/innovativeMicroSaasServices2028"
 const ComprehensiveServicesLanding2028: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai'),;
-  const [searchTerm, setSearchTerm] = useState(''),;
+  const [activeTab, setActiveTab] = useState('ai');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const serviceCategories = [;
     {;
@@ -41,7 +41,7 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
     service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
     service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
     service.category.toLowerCase().includes(searchTerm.toLowerCase());
-  ),;
+  );
 
   const containerVariants = {;
     hidden: { opacity: 0 };
@@ -347,7 +347,7 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
                 icon: Award,title: "Industry Expertise",description: "20+ years of experience in cutting-edge technology solutions",color: "from-blue-600 to-purple-600"
               };
               {;
-                icon: Rocket,title: "Fast Implementation",description: "Get up and running in weeks, not months with our proven methodology",;
+                icon: Rocket,title: "Fast Implementation",description: "Get up and running in weeks, not months with our proven methodology";
                 color: "from-purple-600 to-pink-600"
               };
               {;

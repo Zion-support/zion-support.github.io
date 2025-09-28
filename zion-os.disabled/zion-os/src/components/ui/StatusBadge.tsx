@@ -8,8 +8,7 @@ export default function StatusBadge({
   status,
   variant = 'default',
   size = 'md',
-  className = '',
-}: StatusBadgeProps) {
+  className = ''}: StatusBadgeProps) {
   const baseClasses = 'inline-flex items-center font-medium rounded-full',
   const sizeClasses = {
     sm: 'px-2 py-1 text-xs',

@@ -2,27 +2,27 @@ import React from "react"
 import { motion } from "framer-motion"
 import { SEO } from "../../components/SEO"
 import { ;
-  Shield,;
-  Lock, ;
-  Target, ;
-  Zap, ;
-  BarChart3, ;
-  Clock, ;
-  Award, ;
-  Star,;
-  Globe,;
-  Cpu,;
-  Database,;
-  CheckCircle,;
-  Eye,;
-  Users,;
-  AlertTriangle,;
-  TrendingUp,;
-  Search,;
-  Download,;
-  Upload,;
-  Calendar,;
-  Server,;
+  Shield;
+  Lock;
+  Target;
+  Zap;
+  BarChart3;
+  Clock;
+  Award;
+  Star;
+  Globe;
+  Cpu;
+  Database;
+  CheckCircle;
+  Eye;
+  Users;
+  AlertTriangle;
+  TrendingUp;
+  Search;
+  Download;
+  Upload;
+  Calendar;
+  Server;
   FileText;
 } from "lucide-react"
 export default function SecurityHeadersCSP() {;
@@ -47,13 +47,13 @@ export default function SecurityHeadersCSP() {;
     };
   ];
   const benefits = [;
-    "Reduce security vulnerabilities by 80-90% with proper headers",;
-    "Improve security score by 40-60% on security testing platforms",;
-    "Minimize XSS and injection attacks by 95%",;
-    "Enhance compliance with security standards and regulations",;
-    "Improve website security posture and trust indicators",;
+    "Reduce security vulnerabilities by 80-90% with proper headers";
+    "Improve security score by 40-60% on security testing platforms";
+    "Minimize XSS and injection attacks by 95%";
+    "Enhance compliance with security standards and regulations";
+    "Improve website security posture and trust indicators";
     "Reduce security incident response time by 70%"
-  ],;
+  ];
 
   const securityHeaders = [;
     {;
@@ -78,16 +78,16 @@ export default function SecurityHeadersCSP() {;
   const useCases = [;
     {;
       industry: "E-commerce",description: "Secure payment processing, customer data protection, and transaction security"
-    },;
+    };
     {;
       industry: "Financial Services",description: "Banking security, transaction protection, and regulatory compliance"
-    },;
+    };
     {;
       industry: "Healthcare",description: "Patient data security, HIPAA compliance, and medical information protection"
-    },;
+    };
     {;
       industry: "Technology & SaaS",description: "Application security, user data protection, and service security"
-    },;
+    };
     {;
       industry: "Government",description: "Public data security, compliance requirements, and citizen information protection"
     };

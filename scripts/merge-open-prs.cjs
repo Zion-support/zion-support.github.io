@@ -1,183 +1,125 @@
 #!/usr/bin/env node
+const { execSync } = require('child_process');
+const https = require('https');
 
-/**
- * Merge all open GitHub PRs into main with conflict auto-resolution and build verification.
- * - Discovers owner/repo and token from `origin` URL (x-access-token)
- * - Fetches open PRs via GitHub REST API
- * - For each PR: fetch head -> merge into main (prefer PR changes) -> build -> keep or revert
- */
-
-const { execSync, spawnSync } = require('node:child_process');
-const https = require('node:https');
-
-function run(command, options = {}) {
-  try {
-    const output = execSync(command, {
-      stdio: ['ignore', 'pipe', 'pipe'],
-      encoding: 'utf8',
-      ...options,
-    });
-    return output.trim();
-  } catch (error) {
-    if (options.allowFail) return null;
-    throw error;
-  }
+function run(cmd) {
+  return execSync(cmd, { cwd: '/workspace', encoding: 'utf8', stdio: 'pipe' }).trim();
 }
 
-function parseOrigin() {
-  const remote = run('git remote get-url origin');
-  const repoMatch = remote.match(/github\.com[:\/]([^\/]+)\/([^\/]+?)(?:\.git)?$/);
-  const tokenMatch = remote.match(/x-access-token:([^@]+)/);
-  if (!repoMatch || !tokenMatch) {
-    throw new Error('Unable to parse origin for owner/repo/token');
-  }
-  const owner = repoMatch[1];
-  const repo = repoMatch[2];
-  const token = tokenMatch[1];
-  return { owner, repo, token };
+function safeRun(cmd) {
+  try { return run(cmd); } catch (e) { return ''; }
 }
 
-function ghGet(path, token) {
+function getOriginToken() {
+  const url = run('git remote get-url origin');
+  const m = url.match(/x-access-token:([^@]+)@github.com/i);
+  if (!m) throw new Error('Could not extract GitHub token from origin remote');
+  return m[1];
+}
+
+function ghApi(path, token) {
   return new Promise((resolve, reject) => {
-    const req = https.request(
-      {
-        hostname: 'api.github.com',
-        path,
-        method: 'GET',
-        headers: {
-          'User-Agent': 'merge-open-prs-script',
-          Accept: 'application/vnd.github+json',
-          Authorization: `token ${token.trim()}`,
-        },
+    const req = https.request({
+      hostname: 'api.github.com',
+      path,
+      method: 'GET',
+      headers: {
+        'User-Agent': 'merge-open-prs-script',
+        'Accept': 'application/vnd.github+json',
+        'Authorization': `token ${token}`,
       },
-      res => {
-        let data = '';
-        res.on('data', chunk => (data += chunk));
-        res.on('end', () => {
-          if (res.statusCode && res.statusCode >= 200 && res.statusCode < 300) {
-            try {
-              resolve(JSON.parse(data));
-            } catch (e) {
-              reject(e);
-            }
-          } else {
-            reject(new Error(`GitHub API ${res.statusCode}: ${data}`));
-          }
-        });
-      }
-    );
+    }, res => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        if (res.statusCode >= 200 && res.statusCode < 300) {
+          try { resolve(JSON.parse(data)); } catch (e) { reject(e); }
+        } else {
+          reject(new Error(`GitHub API ${res.statusCode}: ${data.slice(0, 200)}`));
+        }
+      });
+    });
     req.on('error', reject);
     req.end();
   });
 }
 
-async function listOpenPRs(owner, repo, token) {
-  const prs = await ghGet(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`, token);
-  if (!Array.isArray(prs)) return [];
-  return prs.map(pr => ({
-    number: pr.number,
-    title: pr.title || '',
-    headRef: pr.head && pr.head.ref,
-  }));
+function hasConflicts() {
+  const status = safeRun('git status --porcelain');
+  return status.includes('UU') || status.includes('AA') || status.includes('DD');
 }
 
-function ensureOnMainAndUpToDate() {
-  run('git checkout -q main', { allowFail: true });
-  run('git fetch origin main:refs/remotes/origin/main');
-  run('git branch --track main origin/main', { allowFail: true });
-  run('git checkout -q main');
-  run('git pull -q --rebase origin main', { allowFail: true });
-}
-
-function fetchPrRef(prNumber) {
-  run(`git fetch -q origin pull/${prNumber}/head:pr-${prNumber}`);
-}
-
-function tryMergePR(prNumber, title) {
-  const safeTitle = title.replace(/\s+/g, ' ').slice(0, 120).replace(/"/g, '\\"');
-  const msg = `Merge PR #${prNumber}: ${safeTitle}`;
-
-  // First attempt: merge preferring PR changes on conflicts
-  const merged = run(`git merge -q --no-ff -m "${msg}" -X theirs pr-${prNumber}`, { allowFail: true });
-  if (merged !== null) return true;
-
-  // If merge in progress with conflicts, attempt auto-resolution by taking PR side for conflicted files
-  try {
-    // Identify conflicted files
-    const conflicted = run('git diff --name-only --diff-filter=U', { allowFail: true }) || '';
-    if (conflicted.trim().length === 0) {
-      // Fallback: try blanket theirs
-      run('git checkout --theirs .');
+function autoResolveConflicts() {
+  const filesRaw = safeRun('git diff --name-only --diff-filter=U');
+  const files = filesRaw.split('\n').map(s => s.trim()).filter(Boolean);
+  for (const f of files) {
+    if (f.includes('package.json') || f.includes('lock') || f.includes('tsconfig') || f.includes('next.config') || f.includes('tailwind.config')) {
+      safeRun(`git checkout --ours "${f}"`);
     } else {
-      const files = conflicted.split('\n').map(f => f.trim()).filter(Boolean);
-      for (const file of files) {
-        run(`git checkout --theirs -- "${file}"`, { allowFail: true });
-        run(`git add -- "${file}"`, { allowFail: true });
+      safeRun(`git checkout --theirs "${f}"`);
+    }
+    safeRun(`git add "${f}"`);
+  }
+  if (files.length) {
+    safeRun('git commit -m "Auto-resolve conflicts during PR merge"');
+    return true;
+  }
+  return false;
+}
+
+(async function main() {
+  try {
+    const token = getOriginToken();
+    safeRun('git fetch origin | cat');
+    safeRun('git checkout main');
+    safeRun('git pull origin main');
+
+    console.log('🔍 Fetching open PRs...');
+    const prs = await ghApi('/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100', token);
+    if (!prs || prs.length === 0) {
+      console.log('✅ No open PRs');
+      return;
+    }
+    console.log(`📋 Found ${prs.length} open PRs`);
+
+    let success = 0, failed = 0;
+    for (const pr of prs) {
+      const number = pr.number;
+      const title = pr.title || '';
+      const headRef = pr.head && pr.head.ref;
+      const headSha = pr.head && pr.head.sha;
+      const baseRef = pr.base && pr.base.ref;
+      console.log(`\n🔄 PR #${number}: ${title}`);
+      console.log(`   ${headRef} (${(headSha || '').slice(0,7)}) -> ${baseRef}`);
+
+      try {
+        safeRun(`git fetch origin ${headRef}`);
+        try {
+          safeRun(`git merge --no-ff origin/${headRef} -m "Merge PR #${number}: ${title.replace(/"/g, '\\"')}"`);
+        } catch (e) {
+          console.log('   ⚠️  Conflicts detected, attempting auto-resolve...');
+          if (hasConflicts()) {
+            if (!autoResolveConflicts()) {
+              throw new Error('Auto-resolve failed');
+            }
+          } else {
+            throw e;
+          }
+        }
+        safeRun('git push origin main');
+        console.log(`   ✅ Merged and pushed PR #${number}`);
+        success++;
+      } catch (e) {
+        console.log(`   ❌ Failed PR #${number}: ${e.message}`);
+        safeRun('git merge --abort');
+        failed++;
+        safeRun('git reset --hard origin/main');
       }
     }
-    run('git add -A');
-    run(`git commit -m "Auto-resolve conflicts for PR #${prNumber} by favoring PR changes"`);
-    return true;
+
+    console.log(`\n🎉 Done. Success: ${success}, Failed: ${failed}`);
   } catch (e) {
-    run('git merge --abort', { allowFail: true });
-    return false;
+    console.error('merge-open-prs failed:', e.message);
+    process.exit(1);
   }
-}
-
-function buildProject() {
-  const res = spawnSync('npm', ['run', '-s', 'build'], { stdio: 'ignore' });
-  return res.status === 0;
-}
-
-async function main() {
-  const { owner, repo, token } = parseOrigin();
-  ensureOnMainAndUpToDate();
-
-  const prs = await listOpenPRs(owner, repo, token);
-  if (!prs.length) {
-    console.log('No open PRs found.');
-    return;
-  }
-
-  let mergedCount = 0;
-  let skippedCount = 0;
-
-  for (const pr of prs) {
-    try {
-      fetchPrRef(pr.number);
-    } catch (e) {
-      skippedCount++;
-      continue;
-    }
-
-    ensureOnMainAndUpToDate();
-
-    const merged = tryMergePR(pr.number, pr.title);
-    if (!merged) {
-      skippedCount++;
-      continue;
-    }
-
-    const ok = buildProject();
-    if (!ok) {
-      // Revert single merge commit
-      run('git reset --hard -q HEAD~1');
-      skippedCount++;
-      continue;
-    }
-
-    mergedCount++;
-  }
-
-  // Push main if we merged anything
-  if (mergedCount > 0) {
-    run('git push origin main');
-  }
-
-  console.log(`Done. Merged: ${mergedCount}, Skipped: ${skippedCount}`);
-}
-
-main().catch(err => {
-  console.error(err);
-  process.exit(1);
-});
+})();

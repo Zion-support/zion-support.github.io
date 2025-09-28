@@ -1,0 +1,45 @@
+/** @type {import('jest').Config} */
+module.exports = {
+<<<<<<< HEAD
+	preset: 'ts-jest',
+	testEnvironment: 'jsdom',
+	roots: ['<rootDir>/src'],
+	testMatch: [
+		'**/__tests__/**/*.[jt]s?(x)',
+		'**/?(*.)+(spec|test).[tj]s?(x)'
+	],
+	testPathIgnorePatterns: [
+		'/node_modules/',
+		'<rootDir>/zion-website/e2e/',
+		'<rootDir>/zion-website/'
+	],
+	transform: {
+		'^.+\\.(ts|tsx)$': [
+			'ts-jest',
+			{
+				tsconfig: '<rootDir>/tsconfig.json',
+				isolatedModules: true
+			}
+		]
+	},
+	moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+=======
+  testEnvironment: 'jest-environment-jsdom',
+  transform: {
+    '^.+\\.(ts|tsx|js|jsx)$': [
+      'babel-jest',
+      {
+        presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
+      },
+    ],
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  testMatch: [
+    '**/__tests__/**/*.(ts|tsx|js|jsx)',
+    '**/?(*.)+(spec|test).(ts|tsx|js|jsx)',
+  ],
+  transformIgnorePatterns: ['/node_modules/'],
+  testPathIgnorePatterns: ['/node_modules/', '/zion-website/', '/e2e/'],
+  setupFilesAfterEnv: [],
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b52e
+};

@@ -2,18 +2,18 @@ import React, { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Link } from "react-router-dom"
 import {;
-  Check, Star, Brain, Cpu, Database, Network, Shield, Zap,;
-  Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp,;
+  Check, Star, Brain, Cpu, Database, Network, Shield, Zap;
+  Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp;
   ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign;
 } from "lucide-react"
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "@/data/innovativeMicroSaasServices2027"
 import { EMERGING_TECH_SERVICES_2027 } from "@/data/emergingTechServices2027"
 export default function ComprehensivePricing2027() {;
-  const [searchQuery, setSearchQuery] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('All'),;
-  const [sortBy, setSortBy] = useState<'price' | 'aiScore' | 'rating'>('price'),;
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
-  const [expandedService, setExpandedService] = useState<string | null>(null),;
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [sortBy, setSortBy] = useState<'price' | 'aiScore' | 'rating'>('price');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [expandedService, setExpandedService] = useState<string | null>(null);
 
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2027, ...EMERGING_TECH_SERVICES_2027]
 
@@ -28,7 +28,7 @@ export default function ComprehensivePricing2027() {;
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
     );
     .sort((a, b) => {;
-      if (sortBy === 'price') return a.price - b.price,;
+      if (sortBy === 'price') return a.price - b.price;
       if (sortBy === 'aiScore') return b.aiScore - a.aiScore
       return b.rating - a.rating
     });
@@ -63,15 +63,15 @@ export default function ComprehensivePricing2027() {;
   };
   const getPriceColor = (price: number) => {;
     if (price < 1000) return 'text-green-400'
-    if (price < 2500) return 'text-yellow-400',;
+    if (price < 2500) return 'text-yellow-400';
     return 'text-red-400'
-  },;
+  };
 
   const getPriceTier = (price: number) => {;
     if (price < 1000) return 'Starter'
-    if (price < 2500) return 'Professional',;
+    if (price < 2500) return 'Professional';
     return 'Enterprise'
-  },;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;
