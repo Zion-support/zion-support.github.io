@@ -6,7 +6,7 @@
 export interface CacheConfig {
   maxSize: number;
   ttl: number; // Time to live in milliseconds
-  strategy: 'lru' | 'lfu' | 'fifo' | 'ttl';
+  strategy: "lru" | "lfu" | "fifo" | "ttl";
   enableCompression: boolean;
   enablePersistence: boolean;
   enableMetrics: boolean;
@@ -63,11 +63,11 @@ class EnhancedCachingSystem<T = unknown> {
     this.config = {
       maxSize: 1000,
       ttl: 300000, // 5 minutes
-      strategy: 'lru',
+      strategy: "lru",
       enableCompression: true,
       enablePersistence: true,
       enableMetrics: true,
-      ...config
+      ...config,
     };
 
     this.metrics = {
@@ -78,7 +78,7 @@ class EnhancedCachingSystem<T = unknown> {
       entryCount: 0,
       averageAccessTime: 0,
       evictionCount: 0,
-      compressionRatio: 0
+      compressionRatio: 0,
     };
   }
 
@@ -94,7 +94,7 @@ class EnhancedCachingSystem<T = unknown> {
     this.startMetricsCollection();
     this.isInitialized = true;
 
-    console.log('✅ Enhanced Caching System initialized');
+    console.log("✅ Enhanced Caching System initialized");
   }
 
   /**
@@ -102,9 +102,9 @@ class EnhancedCachingSystem<T = unknown> {
    */
   get(key: string): T | null {
     const startTime = performance.now();
-    
+
     const entry = this.cache.get(key);
-    
+
     if (!entry) {
       this.metrics.misses++;
       this.updateHitRate();
@@ -122,7 +122,7 @@ class EnhancedCachingSystem<T = unknown> {
     // Update access information
     entry.accessCount++;
     entry.lastAccessed = Date.now();
-    
+
     this.metrics.hits++;
     this.updateHitRate();
     this.updateAverageAccessTime(performance.now() - startTime);
@@ -140,18 +140,18 @@ class EnhancedCachingSystem<T = unknown> {
    */
   set(key: string, value: T, customTtl?: number): void {
     const startTime = performance.now();
-    
+
     // Serialize and measure size
     const serialized = JSON.stringify(value);
     const size = new Blob([serialized]).size;
-    
+
     // Check if we need to evict entries
     this.evictIfNeeded(size);
-    
+
     // Compress if enabled
     let finalValue: T = value;
     let compressed = false;
-    
+
     if (this.config.enableCompression && size > 1024) {
       finalValue = this.compressValue(value);
       compressed = true;
@@ -165,7 +165,7 @@ class EnhancedCachingSystem<T = unknown> {
       accessCount: 1,
       lastAccessed: Date.now(),
       size,
-      compressed
+      compressed,
     };
 
     this.cache.set(key, entry);
@@ -199,7 +199,7 @@ class EnhancedCachingSystem<T = unknown> {
     this.cache.clear();
     this.updateMetrics();
     if (this.config.enablePersistence) {
-      localStorage.removeItem('enhanced-cache');
+      localStorage.removeItem("enhanced-cache");
     }
   }
 
@@ -209,12 +209,12 @@ class EnhancedCachingSystem<T = unknown> {
   has(key: string): boolean {
     const entry = this.cache.get(key);
     if (!entry) return false;
-    
+
     if (this.isExpired(entry)) {
       this.cache.delete(key);
       return false;
     }
-    
+
     return true;
   }
 
@@ -243,7 +243,7 @@ class EnhancedCachingSystem<T = unknown> {
     return {
       memory: memoryUsage,
       performance,
-      efficiency
+      efficiency,
     };
   }
 
@@ -252,7 +252,7 @@ class EnhancedCachingSystem<T = unknown> {
    */
   updateConfig(newConfig: Partial<CacheConfig>): void {
     this.config = { ...this.config, ...newConfig };
-    
+
     // Reinitialize if needed
     if (this.isInitialized) {
       this.initialize();
@@ -289,10 +289,10 @@ class EnhancedCachingSystem<T = unknown> {
         };
       `;
 
-      const blob = new Blob([workerCode], { type: 'application/javascript' });
+      const blob = new Blob([workerCode], { type: "application/javascript" });
       this.compressionWorker = new Worker(URL.createObjectURL(blob));
     } catch (error) {
-      console.warn('Failed to setup compression worker:', error);
+      console.warn("Failed to setup compression worker:", error);
     }
   }
 
@@ -306,7 +306,7 @@ class EnhancedCachingSystem<T = unknown> {
       const compressed = JSON.stringify(serialized);
       return compressed as T;
     } catch (error) {
-      console.warn('Compression failed:', error);
+      console.warn("Compression failed:", error);
       return value;
     }
   }
@@ -319,7 +319,7 @@ class EnhancedCachingSystem<T = unknown> {
       const decompressed = JSON.parse(value as string);
       return JSON.parse(decompressed);
     } catch (error) {
-      console.warn('Decompression failed:', error);
+      console.warn("Decompression failed:", error);
       return value;
     }
   }
@@ -351,23 +351,23 @@ class EnhancedCachingSystem<T = unknown> {
     let freedSpace = 0;
 
     switch (this.config.strategy) {
-      case 'lru':
+      case "lru":
         entries.sort((a, b) => a[1].lastAccessed - b[1].lastAccessed);
         break;
-      case 'lfu':
+      case "lfu":
         entries.sort((a, b) => a[1].accessCount - b[1].accessCount);
         break;
-      case 'fifo':
+      case "fifo":
         entries.sort((a, b) => a[1].timestamp - b[1].timestamp);
         break;
-      case 'ttl':
+      case "ttl":
         entries.sort((a, b) => a[1].timestamp - b[1].timestamp);
         break;
     }
 
     for (const [key, entry] of entries) {
       if (freedSpace >= requiredSpace) break;
-      
+
       this.cache.delete(key);
       freedSpace += entry.size;
       this.metrics.evictionCount++;
@@ -423,8 +423,9 @@ class EnhancedCachingSystem<T = unknown> {
    */
   private updateAverageAccessTime(accessTime: number): void {
     const totalAccesses = this.metrics.hits + this.metrics.misses;
-    this.metrics.averageAccessTime = 
-      (this.metrics.averageAccessTime * (totalAccesses - 1) + accessTime) / totalAccesses;
+    this.metrics.averageAccessTime =
+      (this.metrics.averageAccessTime * (totalAccesses - 1) + accessTime) /
+      totalAccesses;
   }
 
   /**
@@ -432,14 +433,18 @@ class EnhancedCachingSystem<T = unknown> {
    */
   private updateAverageSetTime(setTime: number): void {
     // Simple average calculation
-    this.metrics.averageAccessTime = 
+    this.metrics.averageAccessTime =
       (this.metrics.averageAccessTime + setTime) / 2;
   }
 
   /**
    * Get memory usage statistics
    */
-  private getMemoryUsage(): { used: number; total: number; percentage: number } {
+  private getMemoryUsage(): {
+    used: number;
+    total: number;
+    percentage: number;
+  } {
     const used = this.metrics.totalSize;
     const total = this.config.maxSize * 1024 * 1024;
     const percentage = (used / total) * 100;
@@ -450,28 +455,38 @@ class EnhancedCachingSystem<T = unknown> {
   /**
    * Get performance statistics
    */
-  private getPerformanceStats(): { averageGetTime: number; averageSetTime: number; operationsPerSecond: number } {
+  private getPerformanceStats(): {
+    averageGetTime: number;
+    averageSetTime: number;
+    operationsPerSecond: number;
+  } {
     const totalOperations = this.metrics.hits + this.metrics.misses;
-    const operationsPerSecond = totalOperations > 0 ? 1000 / this.metrics.averageAccessTime : 0;
+    const operationsPerSecond =
+      totalOperations > 0 ? 1000 / this.metrics.averageAccessTime : 0;
 
     return {
       averageGetTime: this.metrics.averageAccessTime,
       averageSetTime: this.metrics.averageAccessTime,
-      operationsPerSecond
+      operationsPerSecond,
     };
   }
 
   /**
    * Get efficiency statistics
    */
-  private getEfficiencyStats(): { hitRate: number; compressionRatio: number; evictionRate: number } {
+  private getEfficiencyStats(): {
+    hitRate: number;
+    compressionRatio: number;
+    evictionRate: number;
+  } {
     const totalOperations = this.metrics.hits + this.metrics.misses;
-    const evictionRate = totalOperations > 0 ? this.metrics.evictionCount / totalOperations : 0;
+    const evictionRate =
+      totalOperations > 0 ? this.metrics.evictionCount / totalOperations : 0;
 
     return {
       hitRate: this.metrics.hitRate,
       compressionRatio: this.metrics.compressionRatio,
-      evictionRate
+      evictionRate,
     };
   }
 
@@ -497,8 +512,8 @@ class EnhancedCachingSystem<T = unknown> {
       }
     }
 
-    expiredKeys.forEach(key => this.cache.delete(key));
-    
+    expiredKeys.forEach((key) => this.cache.delete(key));
+
     if (expiredKeys.length > 0) {
       this.updateMetrics();
       if (this.config.enablePersistence) {
@@ -523,11 +538,11 @@ class EnhancedCachingSystem<T = unknown> {
    * Log cache metrics
    */
   private logMetrics(): void {
-    console.debug('Cache Metrics:', {
+    console.debug("Cache Metrics:", {
       size: this.metrics.entryCount,
       hitRate: `${(this.metrics.hitRate * 100).toFixed(2)}%`,
       memoryUsage: `${(this.metrics.totalSize / 1024 / 1024).toFixed(2)}MB`,
-      compressionRatio: `${(this.metrics.compressionRatio * 100).toFixed(2)}%`
+      compressionRatio: `${(this.metrics.compressionRatio * 100).toFixed(2)}%`,
     });
   }
 
@@ -542,12 +557,12 @@ class EnhancedCachingSystem<T = unknown> {
         entries: Array.from(this.cache.entries()),
         metrics: this.metrics,
         config: this.config,
-        timestamp: Date.now()
+        timestamp: Date.now(),
       };
 
-      localStorage.setItem('enhanced-cache', JSON.stringify(cacheData));
+      localStorage.setItem("enhanced-cache", JSON.stringify(cacheData));
     } catch (error) {
-      console.warn('Failed to persist cache:', error);
+      console.warn("Failed to persist cache:", error);
     }
   }
 
@@ -558,7 +573,7 @@ class EnhancedCachingSystem<T = unknown> {
     if (!this.config.enablePersistence) return;
 
     try {
-      const cacheData = localStorage.getItem('enhanced-cache');
+      const cacheData = localStorage.getItem("enhanced-cache");
       if (!cacheData) return;
 
       const parsed = JSON.parse(cacheData);
@@ -566,17 +581,17 @@ class EnhancedCachingSystem<T = unknown> {
 
       // Only load if cache is not too old (1 hour)
       if (now - parsed.timestamp > 3600000) {
-        localStorage.removeItem('enhanced-cache');
+        localStorage.removeItem("enhanced-cache");
         return;
       }
 
       this.cache = new Map(parsed.entries);
       this.metrics = parsed.metrics;
-      
+
       console.log(`Loaded ${this.cache.size} cache entries from storage`);
     } catch (error) {
-      console.warn('Failed to load cache from storage:', error);
-      localStorage.removeItem('enhanced-cache');
+      console.warn("Failed to load cache from storage:", error);
+      localStorage.removeItem("enhanced-cache");
     }
   }
 
@@ -591,7 +606,7 @@ class EnhancedCachingSystem<T = unknown> {
    * Get cache values
    */
   values(): T[] {
-    return Array.from(this.cache.values()).map(entry => entry.value);
+    return Array.from(this.cache.values()).map((entry) => entry.value);
   }
 
   /**
@@ -609,7 +624,7 @@ class EnhancedCachingSystem<T = unknown> {
       this.compressionWorker.terminate();
       this.compressionWorker = null;
     }
-    
+
     this.cache.clear();
     this.isInitialized = false;
   }
@@ -619,29 +634,29 @@ class EnhancedCachingSystem<T = unknown> {
 export const apiCache = new EnhancedCachingSystem({
   maxSize: 100,
   ttl: 300000, // 5 minutes
-  strategy: 'lru',
+  strategy: "lru",
   enableCompression: true,
-  enablePersistence: true
+  enablePersistence: true,
 });
 
 export const imageCache = new EnhancedCachingSystem({
   maxSize: 500,
   ttl: 1800000, // 30 minutes
-  strategy: 'lru',
+  strategy: "lru",
   enableCompression: false,
-  enablePersistence: true
+  enablePersistence: true,
 });
 
 export const dataCache = new EnhancedCachingSystem({
   maxSize: 200,
   ttl: 600000, // 10 minutes
-  strategy: 'lfu',
+  strategy: "lfu",
   enableCompression: true,
-  enablePersistence: false
+  enablePersistence: false,
 });
 
 // Auto-initialize
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   apiCache.initialize();
   imageCache.initialize();
   dataCache.initialize();

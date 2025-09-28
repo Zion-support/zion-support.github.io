@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { EnhancementSuite } from '../utils/enhancementSuite';
+import React, { useState, useEffect } from "react";
+import { EnhancementSuite } from "../utils/enhancementSuite";
 
 interface HealthReport {
-  overall: 'excellent' | 'good' | 'fair' | 'poor';
+  overall: "excellent" | "good" | "fair" | "poor";
   performance: number;
   security: number;
   accessibility: number;
@@ -43,55 +43,63 @@ const SystemDashboard: React.FC = () => {
   useEffect(() => {
     const loadData = () => {
       try {
-        const health = { 
-          overall: 'good' as const, 
-          performance: 85, 
-          security: 90, 
-          accessibility: 88, 
+        const health = {
+          overall: "good" as const,
+          performance: 85,
+          security: 90,
+          accessibility: 88,
           reliability: 92,
-          recommendations: ['Monitor performance metrics', 'Check security logs']
+          recommendations: [
+            "Monitor performance metrics",
+            "Check security logs",
+          ],
         };
         const systemMetrics = EnhancementSuite.getInstance().getMetrics();
-        
+
         setHealthReport(health);
         setMetrics(systemMetrics);
         setIsLoading(false);
       } catch (error) {
-        console.error('Failed to load system data:', error);
+        console.error("Failed to load system data:", error);
         setIsLoading(false);
       }
     };
 
     loadData();
-    
+
     // Update every 30 seconds
     const interval = setInterval(loadData, 30000);
-    
+
     return () => clearInterval(interval);
   }, []);
 
   const getScoreColor = (score: number): string => {
-    if (score >= 90) return 'text-green-600';
-    if (score >= 75) return 'text-yellow-600';
-    if (score >= 60) return 'text-orange-600';
-    return 'text-red-600';
+    if (score >= 90) return "text-green-600";
+    if (score >= 75) return "text-yellow-600";
+    if (score >= 60) return "text-orange-600";
+    return "text-red-600";
   };
 
   const getOverallColor = (overall: string): string => {
     switch (overall) {
-      case 'excellent': return 'text-green-600 bg-green-50';
-      case 'good': return 'text-blue-600 bg-blue-50';
-      case 'fair': return 'text-yellow-600 bg-yellow-50';
-      case 'poor': return 'text-red-600 bg-red-50';
-      default: return 'text-gray-600 bg-gray-50';
+      case "excellent":
+        return "text-green-600 bg-green-50";
+      case "good":
+        return "text-blue-600 bg-blue-50";
+      case "fair":
+        return "text-yellow-600 bg-yellow-50";
+      case "poor":
+        return "text-red-600 bg-red-50";
+      default:
+        return "text-gray-600 bg-gray-50";
     }
   };
 
   const formatTimestamp = (date: Date | null): string => {
-    if (!date) return 'Never';
-    return new Intl.RelativeTimeFormat('en', { numeric: 'auto' }).format(
+    if (!date) return "Never";
+    return new Intl.RelativeTimeFormat("en", { numeric: "auto" }).format(
       Math.floor((date.getTime() - Date.now()) / (1000 * 60)),
-      'minute'
+      "minute",
     );
   };
 
@@ -99,13 +107,13 @@ const SystemDashboard: React.FC = () => {
     EnhancementSuite.getInstance().initialize();
     // Reload data after optimization
     setTimeout(() => {
-      const health = { 
-        overall: 'good' as const, 
-        performance: 85, 
-        security: 90, 
-        accessibility: 88, 
+      const health = {
+        overall: "good" as const,
+        performance: 85,
+        security: 90,
+        accessibility: 88,
         reliability: 92,
-        recommendations: ['Monitor performance metrics', 'Check security logs']
+        recommendations: ["Monitor performance metrics", "Check security logs"],
       };
       const systemMetrics = EnhancementSuite.getInstance().getMetrics();
       setHealthReport(health);
@@ -145,33 +153,45 @@ const SystemDashboard: React.FC = () => {
       {/* Overall Health */}
       <div className="bg-white rounded-lg shadow-md p-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-gray-800">Overall Health</h2>
-          <span className={`px-3 py-1 rounded-full text-sm font-medium ${getOverallColor(healthReport.overall)}`}>
+          <h2 className="text-xl font-semibold text-gray-800">
+            Overall Health
+          </h2>
+          <span
+            className={`px-3 py-1 rounded-full text-sm font-medium ${getOverallColor(healthReport.overall)}`}
+          >
             {healthReport.overall.toUpperCase()}
           </span>
         </div>
-        
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="text-center">
-            <div className={`text-2xl font-bold ${getScoreColor(healthReport.performance)}`}>
+            <div
+              className={`text-2xl font-bold ${getScoreColor(healthReport.performance)}`}
+            >
               {healthReport.performance}
             </div>
             <div className="text-sm text-gray-600">Performance</div>
           </div>
           <div className="text-center">
-            <div className={`text-2xl font-bold ${getScoreColor(healthReport.security)}`}>
+            <div
+              className={`text-2xl font-bold ${getScoreColor(healthReport.security)}`}
+            >
               {healthReport.security}
             </div>
             <div className="text-sm text-gray-600">Security</div>
           </div>
           <div className="text-center">
-            <div className={`text-2xl font-bold ${getScoreColor(healthReport.accessibility)}`}>
+            <div
+              className={`text-2xl font-bold ${getScoreColor(healthReport.accessibility)}`}
+            >
               {healthReport.accessibility}
             </div>
             <div className="text-sm text-gray-600">Accessibility</div>
           </div>
           <div className="text-center">
-            <div className={`text-2xl font-bold ${getScoreColor(healthReport.reliability)}`}>
+            <div
+              className={`text-2xl font-bold ${getScoreColor(healthReport.reliability)}`}
+            >
               {healthReport.reliability}
             </div>
             <div className="text-sm text-gray-600">Reliability</div>
@@ -181,7 +201,9 @@ const SystemDashboard: React.FC = () => {
 
       {/* Performance Metrics */}
       <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">Performance Metrics</h2>
+        <h2 className="text-xl font-semibold text-gray-800 mb-4">
+          Performance Metrics
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           <div className="text-center">
             <div className="text-lg font-semibold text-blue-600">
@@ -193,7 +215,9 @@ const SystemDashboard: React.FC = () => {
             <div className="text-lg font-semibold text-blue-600">
               {metrics.performance.lcp.toFixed(0)}ms
             </div>
-            <div className="text-sm text-gray-600">Largest Contentful Paint</div>
+            <div className="text-sm text-gray-600">
+              Largest Contentful Paint
+            </div>
           </div>
           <div className="text-center">
             <div className="text-lg font-semibold text-blue-600">
@@ -219,17 +243,23 @@ const SystemDashboard: React.FC = () => {
       {/* Security & Accessibility */}
       <div className="grid md:grid-cols-2 gap-6">
         <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4">Security Status</h2>
+          <h2 className="text-xl font-semibold text-gray-800 mb-4">
+            Security Status
+          </h2>
           <div className="space-y-3">
             <div className="flex justify-between">
               <span className="text-gray-600">Violations:</span>
-              <span className={`font-semibold ${metrics.security.violationCount > 0 ? 'text-red-600' : 'text-green-600'}`}>
+              <span
+                className={`font-semibold ${metrics.security.violationCount > 0 ? "text-red-600" : "text-green-600"}`}
+              >
                 {metrics.security.violationCount}
               </span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600">Rate Limit Hits:</span>
-              <span className={`font-semibold ${metrics.security.rateLimitHits > 0 ? 'text-yellow-600' : 'text-green-600'}`}>
+              <span
+                className={`font-semibold ${metrics.security.rateLimitHits > 0 ? "text-yellow-600" : "text-green-600"}`}
+              >
                 {metrics.security.rateLimitHits}
               </span>
             </div>
@@ -243,17 +273,23 @@ const SystemDashboard: React.FC = () => {
         </div>
 
         <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4">Accessibility Status</h2>
+          <h2 className="text-xl font-semibold text-gray-800 mb-4">
+            Accessibility Status
+          </h2>
           <div className="space-y-3">
             <div className="flex justify-between">
               <span className="text-gray-600">Violations:</span>
-              <span className={`font-semibold ${metrics.accessibility.violationCount > 0 ? 'text-red-600' : 'text-green-600'}`}>
+              <span
+                className={`font-semibold ${metrics.accessibility.violationCount > 0 ? "text-red-600" : "text-green-600"}`}
+              >
                 {metrics.accessibility.violationCount}
               </span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600">Compliance Score:</span>
-              <span className={`font-semibold ${getScoreColor(metrics.accessibility.complianceScore * 100)}`}>
+              <span
+                className={`font-semibold ${getScoreColor(metrics.accessibility.complianceScore * 100)}`}
+              >
                 {Math.round(metrics.accessibility.complianceScore * 100)}%
               </span>
             </div>
@@ -269,16 +305,22 @@ const SystemDashboard: React.FC = () => {
 
       {/* Error Tracking */}
       <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">Error Tracking</h2>
+        <h2 className="text-xl font-semibold text-gray-800 mb-4">
+          Error Tracking
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="text-center">
-            <div className={`text-2xl font-bold ${metrics.errors.totalErrors > 0 ? 'text-yellow-600' : 'text-green-600'}`}>
+            <div
+              className={`text-2xl font-bold ${metrics.errors.totalErrors > 0 ? "text-yellow-600" : "text-green-600"}`}
+            >
               {metrics.errors.totalErrors}
             </div>
             <div className="text-sm text-gray-600">Total Errors</div>
           </div>
           <div className="text-center">
-            <div className={`text-2xl font-bold ${metrics.errors.criticalErrors > 0 ? 'text-red-600' : 'text-green-600'}`}>
+            <div
+              className={`text-2xl font-bold ${metrics.errors.criticalErrors > 0 ? "text-red-600" : "text-green-600"}`}
+            >
               {metrics.errors.criticalErrors}
             </div>
             <div className="text-sm text-gray-600">Critical Errors</div>
@@ -294,7 +336,9 @@ const SystemDashboard: React.FC = () => {
       {/* Recommendations */}
       {healthReport.recommendations.length > 0 && (
         <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4">Recommendations</h2>
+          <h2 className="text-xl font-semibold text-gray-800 mb-4">
+            Recommendations
+          </h2>
           <ul className="space-y-2">
             {healthReport.recommendations.map((recommendation, index) => (
               <li key={index} className="flex items-start">
@@ -308,7 +352,9 @@ const SystemDashboard: React.FC = () => {
 
       {/* Status Indicators */}
       <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">System Status</h2>
+        <h2 className="text-xl font-semibold text-gray-800 mb-4">
+          System Status
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="flex items-center">
             <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>

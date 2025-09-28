@@ -2,7 +2,7 @@
  * Global type definitions for enhanced type safety
  */
 
-import { ErrorInfo, ReactNode } from 'react';
+import { ErrorInfo, ReactNode } from "react";
 
 // Error Boundary Types
 export interface ErrorBoundaryProps {

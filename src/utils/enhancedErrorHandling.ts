@@ -35,12 +35,15 @@ class EnhancedErrorHandler {
    */
   initialize(): void {
     // Capture unhandled promise rejections
-    window.addEventListener('unhandledrejection', this.handleUnhandledRejection.bind(this));
-    
+    window.addEventListener(
+      "unhandledrejection",
+      this.handleUnhandledRejection.bind(this),
+    );
+
     // Capture global JavaScript errors
-    window.addEventListener('error', this.handleGlobalError.bind(this));
-    
-    console.log('✅ Enhanced Error Handler initialized');
+    window.addEventListener("error", this.handleGlobalError.bind(this));
+
+    console.log("✅ Enhanced Error Handler initialized");
   }
 
   /**
@@ -82,7 +85,7 @@ class EnhancedErrorHandler {
    */
   private logError(errorInfo: ErrorInfo): void {
     this.errorLog.unshift(errorInfo);
-    
+
     // Keep only the most recent errors
     if (this.errorLog.length > this.maxLogSize) {
       this.errorLog = this.errorLog.slice(0, this.maxLogSize);
@@ -90,9 +93,9 @@ class EnhancedErrorHandler {
 
     // Store in localStorage for persistence
     try {
-      localStorage.setItem('errorLog', JSON.stringify(this.errorLog));
+      localStorage.setItem("errorLog", JSON.stringify(this.errorLog));
     } catch (error) {
-      console.warn('Failed to store error log:', error);
+      console.warn("Failed to store error log:", error);
     }
   }
 
@@ -104,8 +107,8 @@ class EnhancedErrorHandler {
 
     try {
       // In a real application, you would send this to your error reporting service
-      console.error('Error reported:', errorInfo);
-      
+      console.error("Error reported:", errorInfo);
+
       // Example: Send to external service
       // await fetch('/api/errors', {
       //   method: 'POST',
@@ -113,7 +116,7 @@ class EnhancedErrorHandler {
       //   body: JSON.stringify(errorInfo)
       // });
     } catch (error) {
-      console.warn('Failed to report error:', error);
+      console.warn("Failed to report error:", error);
     }
   }
 
@@ -123,7 +126,11 @@ class EnhancedErrorHandler {
   handleComponentError(
     error: Error,
     component: string,
-    options: ErrorRecoveryOptions = { retryable: false, maxRetries: 0, retryDelay: 1000 }
+    options: ErrorRecoveryOptions = {
+      retryable: false,
+      maxRetries: 0,
+      retryDelay: 1000,
+    },
   ): void {
     const errorInfo: ErrorInfo = {
       message: error.message,
@@ -151,26 +158,28 @@ class EnhancedErrorHandler {
   private attemptRecovery(
     error: Error,
     component: string,
-    options: ErrorRecoveryOptions
+    options: ErrorRecoveryOptions,
   ): void {
     let retryCount = 0;
-    
+
     const retry = () => {
       if (retryCount < options.maxRetries) {
         retryCount++;
-        console.log(`Retrying ${component} (attempt ${retryCount}/${options.maxRetries})`);
-        
+        console.log(
+          `Retrying ${component} (attempt ${retryCount}/${options.maxRetries})`,
+        );
+
         setTimeout(() => {
           try {
             // Attempt to recover by reloading the component or reinitializing
             window.location.reload();
           } catch (retryError) {
-            console.error('Recovery attempt failed:', retryError);
+            console.error("Recovery attempt failed:", retryError);
             retry();
           }
         }, options.retryDelay);
       } else if (options.fallbackAction) {
-        console.log('Max retries reached, executing fallback action');
+        console.log("Max retries reached, executing fallback action");
         options.fallbackAction();
       }
     };
@@ -189,8 +198,8 @@ class EnhancedErrorHandler {
     const recentErrors = this.errorLog.slice(0, 10);
     const errorFrequency: Record<string, number> = {};
 
-    this.errorLog.forEach(error => {
-      const key = error.message.split(':')[0]; // Group by error type
+    this.errorLog.forEach((error) => {
+      const key = error.message.split(":")[0]; // Group by error type
       errorFrequency[key] = (errorFrequency[key] || 0) + 1;
     });
 
@@ -207,9 +216,9 @@ class EnhancedErrorHandler {
   clearErrorLog(): void {
     this.errorLog = [];
     try {
-      localStorage.removeItem('errorLog');
+      localStorage.removeItem("errorLog");
     } catch (error) {
-      console.warn('Failed to clear error log:', error);
+      console.warn("Failed to clear error log:", error);
     }
   }
 
@@ -225,6 +234,6 @@ class EnhancedErrorHandler {
 export const enhancedErrorHandler = new EnhancedErrorHandler();
 
 // Initialize automatically
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   enhancedErrorHandler.initialize();
 }

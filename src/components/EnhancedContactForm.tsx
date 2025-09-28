@@ -1,16 +1,16 @@
-import React, { useState, useRef } from 'react';
-import { 
-  Send, 
-  CheckCircle, 
-  AlertCircle, 
-  Mail, 
-  Phone, 
+import React, { useState, useRef } from "react";
+import {
+  Send,
+  CheckCircle,
+  AlertCircle,
+  Mail,
+  Phone,
   MessageSquare,
   User,
   Building,
   Sparkles,
-  Loader2
-} from 'lucide-react';
+  Loader2,
+} from "lucide-react";
 
 interface FormData {
   name: string;
@@ -26,50 +26,52 @@ interface FormData {
 
 const EnhancedContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    budget: '',
-    timeline: '',
-    message: '',
-    newsletter: false
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    service: "",
+    budget: "",
+    timeline: "",
+    message: "",
+    newsletter: false,
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [currentStep, setCurrentStep] = useState(1);
   const formRef = useRef<HTMLFormElement>(null);
 
   const services = [
-    'AI & Machine Learning',
-    'Cloud Infrastructure',
-    'Cybersecurity',
-    'Quantum Computing',
-    'Digital Transformation',
-    'Custom Development',
-    'Consulting',
-    'Other'
+    "AI & Machine Learning",
+    "Cloud Infrastructure",
+    "Cybersecurity",
+    "Quantum Computing",
+    "Digital Transformation",
+    "Custom Development",
+    "Consulting",
+    "Other",
   ];
 
   const budgets = [
-    'Under $10K',
-    '$10K - $50K',
-    '$50K - $100K',
-    '$100K - $500K',
-    '$500K+',
-    'Not sure yet'
+    "Under $10K",
+    "$10K - $50K",
+    "$50K - $100K",
+    "$100K - $500K",
+    "$500K+",
+    "Not sure yet",
   ];
 
   const timelines = [
-    'ASAP',
-    'Within 1 month',
-    '1-3 months',
-    '3-6 months',
-    '6+ months',
-    'Flexible'
+    "ASAP",
+    "Within 1 month",
+    "1-3 months",
+    "3-6 months",
+    "6+ months",
+    "Flexible",
   ];
 
   const validateStep = (step: number): boolean => {
@@ -77,18 +79,18 @@ const EnhancedContactForm: React.FC = () => {
 
     switch (step) {
       case 1:
-        if (!formData.name.trim()) newErrors.name = 'Name is required';
-        if (!formData.email.trim()) newErrors.email = 'Email is required';
+        if (!formData.name.trim()) newErrors.name = "Name is required";
+        if (!formData.email.trim()) newErrors.email = "Email is required";
         else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-          newErrors.email = 'Please enter a valid email';
+          newErrors.email = "Please enter a valid email";
         }
         break;
       case 2:
-        if (!formData.service) newErrors.service = 'Please select a service';
-        if (!formData.budget) newErrors.budget = 'Please select a budget range';
+        if (!formData.service) newErrors.service = "Please select a service";
+        if (!formData.budget) newErrors.budget = "Please select a budget range";
         break;
       case 3:
-        if (!formData.message.trim()) newErrors.message = 'Message is required';
+        if (!formData.message.trim()) newErrors.message = "Message is required";
         break;
     }
 
@@ -96,51 +98,54 @@ const EnhancedContactForm: React.FC = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleInputChange = (field: keyof FormData, value: string | boolean) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+  const handleInputChange = (
+    field: keyof FormData,
+    value: string | boolean,
+  ) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
     if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: '' }));
+      setErrors((prev) => ({ ...prev, [field]: "" }));
     }
   };
 
   const handleNext = () => {
     if (validateStep(currentStep)) {
-      setCurrentStep(prev => Math.min(prev + 1, 3));
+      setCurrentStep((prev) => Math.min(prev + 1, 3));
     }
   };
 
   const handlePrevious = () => {
-    setCurrentStep(prev => Math.max(prev - 1, 1));
+    setCurrentStep((prev) => Math.max(prev - 1, 1));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateStep(currentStep)) return;
-    
+
     setIsSubmitting(true);
-    setSubmitStatus('idle');
+    setSubmitStatus("idle");
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      setSubmitStatus('success');
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
+      setSubmitStatus("success");
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        budget: '',
-        timeline: '',
-        message: '',
-        newsletter: false
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        service: "",
+        budget: "",
+        timeline: "",
+        message: "",
+        newsletter: false,
       });
       setCurrentStep(1);
     } catch (err) {
-      console.error('Form submission error:', err);
-      setSubmitStatus('error');
+      console.error("Form submission error:", err);
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -170,14 +175,18 @@ const EnhancedContactForm: React.FC = () => {
                   <input
                     type="text"
                     value={formData.name}
-                    onChange={(e) => handleInputChange('name', e.target.value)}
+                    onChange={(e) => handleInputChange("name", e.target.value)}
                     className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                      errors.name ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+                      errors.name
+                        ? "border-red-500"
+                        : "border-gray-300 dark:border-gray-600"
                     } bg-white dark:bg-gray-700 text-gray-900 dark:text-white`}
                     placeholder="Enter your full name"
                   />
                 </div>
-                {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+                {errors.name && (
+                  <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                )}
               </div>
 
               <div>
@@ -189,14 +198,18 @@ const EnhancedContactForm: React.FC = () => {
                   <input
                     type="email"
                     value={formData.email}
-                    onChange={(e) => handleInputChange('email', e.target.value)}
+                    onChange={(e) => handleInputChange("email", e.target.value)}
                     className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                      errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+                      errors.email
+                        ? "border-red-500"
+                        : "border-gray-300 dark:border-gray-600"
                     } bg-white dark:bg-gray-700 text-gray-900 dark:text-white`}
                     placeholder="Enter your email address"
                   />
                 </div>
-                {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+                {errors.email && (
+                  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                )}
               </div>
 
               <div>
@@ -208,7 +221,9 @@ const EnhancedContactForm: React.FC = () => {
                   <input
                     type="text"
                     value={formData.company}
-                    onChange={(e) => handleInputChange('company', e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange("company", e.target.value)
+                    }
                     className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     placeholder="Enter your company name"
                   />
@@ -224,7 +239,7 @@ const EnhancedContactForm: React.FC = () => {
                   <input
                     type="tel"
                     value={formData.phone}
-                    onChange={(e) => handleInputChange('phone', e.target.value)}
+                    onChange={(e) => handleInputChange("phone", e.target.value)}
                     className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     placeholder="Enter your phone number"
                   />
@@ -253,17 +268,23 @@ const EnhancedContactForm: React.FC = () => {
                 </label>
                 <select
                   value={formData.service}
-                  onChange={(e) => handleInputChange('service', e.target.value)}
+                  onChange={(e) => handleInputChange("service", e.target.value)}
                   className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                    errors.service ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+                    errors.service
+                      ? "border-red-500"
+                      : "border-gray-300 dark:border-gray-600"
                   } bg-white dark:bg-gray-700 text-gray-900 dark:text-white`}
                 >
                   <option value="">Select a service</option>
-                  {services.map(service => (
-                    <option key={service} value={service}>{service}</option>
+                  {services.map((service) => (
+                    <option key={service} value={service}>
+                      {service}
+                    </option>
                   ))}
                 </select>
-                {errors.service && <p className="text-red-500 text-sm mt-1">{errors.service}</p>}
+                {errors.service && (
+                  <p className="text-red-500 text-sm mt-1">{errors.service}</p>
+                )}
               </div>
 
               <div>
@@ -272,17 +293,23 @@ const EnhancedContactForm: React.FC = () => {
                 </label>
                 <select
                   value={formData.budget}
-                  onChange={(e) => handleInputChange('budget', e.target.value)}
+                  onChange={(e) => handleInputChange("budget", e.target.value)}
                   className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                    errors.budget ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+                    errors.budget
+                      ? "border-red-500"
+                      : "border-gray-300 dark:border-gray-600"
                   } bg-white dark:bg-gray-700 text-gray-900 dark:text-white`}
                 >
                   <option value="">Select budget range</option>
-                  {budgets.map(budget => (
-                    <option key={budget} value={budget}>{budget}</option>
+                  {budgets.map((budget) => (
+                    <option key={budget} value={budget}>
+                      {budget}
+                    </option>
                   ))}
                 </select>
-                {errors.budget && <p className="text-red-500 text-sm mt-1">{errors.budget}</p>}
+                {errors.budget && (
+                  <p className="text-red-500 text-sm mt-1">{errors.budget}</p>
+                )}
               </div>
 
               <div>
@@ -291,12 +318,16 @@ const EnhancedContactForm: React.FC = () => {
                 </label>
                 <select
                   value={formData.timeline}
-                  onChange={(e) => handleInputChange('timeline', e.target.value)}
+                  onChange={(e) =>
+                    handleInputChange("timeline", e.target.value)
+                  }
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 >
                   <option value="">Select timeline</option>
-                  {timelines.map(timeline => (
-                    <option key={timeline} value={timeline}>{timeline}</option>
+                  {timelines.map((timeline) => (
+                    <option key={timeline} value={timeline}>
+                      {timeline}
+                    </option>
                   ))}
                 </select>
               </div>
@@ -306,10 +337,15 @@ const EnhancedContactForm: React.FC = () => {
                   type="checkbox"
                   id="newsletter"
                   checked={formData.newsletter}
-                  onChange={(e) => handleInputChange('newsletter', e.target.checked)}
+                  onChange={(e) =>
+                    handleInputChange("newsletter", e.target.checked)
+                  }
                   className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                 />
-                <label htmlFor="newsletter" className="text-sm text-gray-700 dark:text-gray-300">
+                <label
+                  htmlFor="newsletter"
+                  className="text-sm text-gray-700 dark:text-gray-300"
+                >
                   Subscribe to our newsletter for tech insights and updates
                 </label>
               </div>
@@ -337,15 +373,19 @@ const EnhancedContactForm: React.FC = () => {
                 <MessageSquare className="absolute left-3 top-3 text-gray-400 w-5 h-5" />
                 <textarea
                   value={formData.message}
-                  onChange={(e) => handleInputChange('message', e.target.value)}
+                  onChange={(e) => handleInputChange("message", e.target.value)}
                   rows={6}
                   className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                    errors.message ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+                    errors.message
+                      ? "border-red-500"
+                      : "border-gray-300 dark:border-gray-600"
                   } bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none`}
                   placeholder="Describe your project, goals, and any specific requirements..."
                 />
               </div>
-              {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+              {errors.message && (
+                <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+              )}
             </div>
           </div>
         );
@@ -356,7 +396,7 @@ const EnhancedContactForm: React.FC = () => {
   };
 
   const renderStatus = () => {
-    if (submitStatus === 'success') {
+    if (submitStatus === "success") {
       return (
         <div className="text-center py-12">
           <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
@@ -364,10 +404,11 @@ const EnhancedContactForm: React.FC = () => {
             Thank You!
           </h3>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Your message has been sent successfully. We&apos;ll get back to you within 24 hours.
+            Your message has been sent successfully. We&apos;ll get back to you
+            within 24 hours.
           </p>
           <button
-            onClick={() => setSubmitStatus('idle')}
+            onClick={() => setSubmitStatus("idle")}
             className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
           >
             Send Another Message
@@ -376,7 +417,7 @@ const EnhancedContactForm: React.FC = () => {
       );
     }
 
-    if (submitStatus === 'error') {
+    if (submitStatus === "error") {
       return (
         <div className="text-center py-12">
           <AlertCircle className="w-16 h-16 text-red-500 mx-auto mb-4" />
@@ -387,7 +428,7 @@ const EnhancedContactForm: React.FC = () => {
             Please try again or contact us directly.
           </p>
           <button
-            onClick={() => setSubmitStatus('idle')}
+            onClick={() => setSubmitStatus("idle")}
             className="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
           >
             Try Again
@@ -411,11 +452,13 @@ const EnhancedContactForm: React.FC = () => {
           </button>
 
           <div className="flex space-x-2">
-            {[1, 2, 3].map(step => (
+            {[1, 2, 3].map((step) => (
               <div
                 key={step}
                 className={`w-3 h-3 rounded-full ${
-                  step <= currentStep ? 'bg-blue-600' : 'bg-gray-300 dark:bg-gray-600'
+                  step <= currentStep
+                    ? "bg-blue-600"
+                    : "bg-gray-300 dark:bg-gray-600"
                 }`}
               />
             ))}

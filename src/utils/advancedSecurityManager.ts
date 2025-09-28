@@ -26,16 +26,16 @@ interface SecurityMetrics {
 }
 
 interface SecurityHeaders {
-  'Content-Security-Policy': string;
-  'Strict-Transport-Security': string;
-  'X-Content-Type-Options': string;
-  'X-Frame-Options': string;
-  'X-XSS-Protection': string;
-  'Referrer-Policy': string;
-  'Permissions-Policy': string;
-  'Cross-Origin-Embedder-Policy': string;
-  'Cross-Origin-Opener-Policy': string;
-  'Cross-Origin-Resource-Policy': string;
+  "Content-Security-Policy": string;
+  "Strict-Transport-Security": string;
+  "X-Content-Type-Options": string;
+  "X-Frame-Options": string;
+  "X-XSS-Protection": string;
+  "Referrer-Policy": string;
+  "Permissions-Policy": string;
+  "Cross-Origin-Embedder-Policy": string;
+  "Cross-Origin-Opener-Policy": string;
+  "Cross-Origin-Resource-Policy": string;
 }
 
 class AdvancedSecurityManager {
@@ -56,7 +56,7 @@ class AdvancedSecurityManager {
       enableFrameOptions: true,
       enableCORS: true,
       enableRateLimiting: true,
-      ...config
+      ...config,
     };
 
     this.metrics = {
@@ -65,7 +65,7 @@ class AdvancedSecurityManager {
       suspiciousRequests: 0,
       blockedRequests: 0,
       securityScore: 0,
-      lastSecurityCheck: new Date()
+      lastSecurityCheck: new Date(),
     };
   }
 
@@ -113,9 +113,9 @@ class AdvancedSecurityManager {
       }
 
       this.isInitialized = true;
-      console.log('🔒 Advanced Security Manager initialized');
+      console.log("🔒 Advanced Security Manager initialized");
     } catch (error) {
-      console.error('Error initializing security manager:', error);
+      console.error("Error initializing security manager:", error);
     }
   }
 
@@ -123,19 +123,21 @@ class AdvancedSecurityManager {
    * Initialize security headers
    */
   private initializeSecurityHeaders(): void {
-    if (typeof document === 'undefined') return;
+    if (typeof document === "undefined") return;
 
     const headers: SecurityHeaders = {
-      'Content-Security-Policy': this.generateCSP(),
-      'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
-      'X-Content-Type-Options': 'nosniff',
-      'X-Frame-Options': 'DENY',
-      'X-XSS-Protection': '1; mode=block',
-      'Referrer-Policy': 'strict-origin-when-cross-origin',
-      'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), payment=()',
-      'Cross-Origin-Embedder-Policy': 'require-corp',
-      'Cross-Origin-Opener-Policy': 'same-origin',
-      'Cross-Origin-Resource-Policy': 'same-origin'
+      "Content-Security-Policy": this.generateCSP(),
+      "Strict-Transport-Security":
+        "max-age=31536000; includeSubDomains; preload",
+      "X-Content-Type-Options": "nosniff",
+      "X-Frame-Options": "DENY",
+      "X-XSS-Protection": "1; mode=block",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Permissions-Policy":
+        "camera=(), microphone=(), geolocation=(), payment=()",
+      "Cross-Origin-Embedder-Policy": "require-corp",
+      "Cross-Origin-Opener-Policy": "same-origin",
+      "Cross-Origin-Resource-Policy": "same-origin",
     };
 
     // Store headers for reference (in production, these would be set by the server)
@@ -158,28 +160,28 @@ class AdvancedSecurityManager {
       "base-uri 'self'",
       "form-action 'self'",
       "frame-ancestors 'none'",
-      "upgrade-insecure-requests"
+      "upgrade-insecure-requests",
     ];
 
-    return directives.join('; ');
+    return directives.join("; ");
   }
 
   /**
    * Initialize Content Security Policy
    */
   private initializeCSP(): void {
-    if (typeof document === 'undefined') return;
+    if (typeof document === "undefined") return;
 
     // Add CSP meta tag
-    const cspMeta = document.createElement('meta');
-    cspMeta.setAttribute('http-equiv', 'Content-Security-Policy');
-    cspMeta.setAttribute('content', this.generateCSP());
+    const cspMeta = document.createElement("meta");
+    cspMeta.setAttribute("http-equiv", "Content-Security-Policy");
+    cspMeta.setAttribute("content", this.generateCSP());
     document.head.appendChild(cspMeta);
 
     // Monitor CSP violations
-    document.addEventListener('securitypolicyviolation', (event) => {
+    document.addEventListener("securitypolicyviolation", (event) => {
       this.metrics.cspViolations++;
-      console.warn('CSP Violation:', event);
+      console.warn("CSP Violation:", event);
       this.updateSecurityScore();
     });
   }
@@ -188,35 +190,35 @@ class AdvancedSecurityManager {
    * Initialize XSS protection
    */
   private initializeXSSProtection(): void {
-    if (typeof document === 'undefined') return;
+    if (typeof document === "undefined") return;
 
     // Monitor for potential XSS attempts
     const originalCreateElement = document.createElement;
-    document.createElement = function(tagName: string) {
+    document.createElement = function (tagName: string) {
       const element = originalCreateElement.call(this, tagName);
-      
+
       // Check for suspicious attributes
       if (element.setAttribute) {
         const originalSetAttribute = element.setAttribute;
-        element.setAttribute = function(name: string, value: string) {
+        element.setAttribute = function (name: string, value: string) {
           if (this.isSuspiciousAttribute(name, value)) {
             this.metrics.xssAttempts++;
-            console.warn('Potential XSS attempt detected:', { name, value });
+            console.warn("Potential XSS attempt detected:", { name, value });
             return;
           }
           return originalSetAttribute.call(this, name, value);
         }.bind(this);
       }
-      
+
       return element;
     }.bind(this);
 
     // Monitor script execution
-    const scripts = document.querySelectorAll('script');
-    scripts.forEach(script => {
+    const scripts = document.querySelectorAll("script");
+    scripts.forEach((script) => {
       if (script.src && !this.isAllowedScript(script.src)) {
         this.metrics.xssAttempts++;
-        console.warn('Suspicious script detected:', script.src);
+        console.warn("Suspicious script detected:", script.src);
       }
     });
   }
@@ -230,10 +232,10 @@ class AdvancedSecurityManager {
       /on\w+\s*=/i,
       /<script/i,
       /eval\s*\(/i,
-      /expression\s*\(/i
+      /expression\s*\(/i,
     ];
 
-    return suspiciousPatterns.some(pattern => pattern.test(value));
+    return suspiciousPatterns.some((pattern) => pattern.test(value));
   }
 
   /**
@@ -241,15 +243,18 @@ class AdvancedSecurityManager {
    */
   private isAllowedScript(src: string): boolean {
     const allowedDomains = [
-      'cdn.jsdelivr.net',
-      'unpkg.com',
-      'fonts.googleapis.com',
-      'fonts.gstatic.com'
+      "cdn.jsdelivr.net",
+      "unpkg.com",
+      "fonts.googleapis.com",
+      "fonts.gstatic.com",
     ];
 
     try {
       const url = new URL(src);
-      return allowedDomains.includes(url.hostname) || url.hostname === window.location.hostname;
+      return (
+        allowedDomains.includes(url.hostname) ||
+        url.hostname === window.location.hostname
+      );
     } catch {
       return false;
     }
@@ -259,16 +264,18 @@ class AdvancedSecurityManager {
    * Initialize clickjacking protection
    */
   private initializeClickjackingProtection(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     // Check if page is in a frame
     if (window !== window.top) {
-      console.warn('Page is loaded in a frame - potential clickjacking attempt');
+      console.warn(
+        "Page is loaded in a frame - potential clickjacking attempt",
+      );
       this.metrics.suspiciousRequests++;
     }
 
     // Add frame busting script
-    const frameBustingScript = document.createElement('script');
+    const frameBustingScript = document.createElement("script");
     frameBustingScript.textContent = `
       if (top !== self) {
         top.location = self.location;
@@ -281,12 +288,12 @@ class AdvancedSecurityManager {
    * Initialize MIME sniffing protection
    */
   private initializeMIMESniffingProtection(): void {
-    if (typeof document === 'undefined') return;
+    if (typeof document === "undefined") return;
 
     // Add meta tag for MIME sniffing protection
-    const mimeMeta = document.createElement('meta');
-    mimeMeta.setAttribute('http-equiv', 'X-Content-Type-Options');
-    mimeMeta.setAttribute('content', 'nosniff');
+    const mimeMeta = document.createElement("meta");
+    mimeMeta.setAttribute("http-equiv", "X-Content-Type-Options");
+    mimeMeta.setAttribute("content", "nosniff");
     document.head.appendChild(mimeMeta);
   }
 
@@ -294,12 +301,12 @@ class AdvancedSecurityManager {
    * Initialize referrer policy
    */
   private initializeReferrerPolicy(): void {
-    if (typeof document === 'undefined') return;
+    if (typeof document === "undefined") return;
 
     // Add referrer policy meta tag
-    const referrerMeta = document.createElement('meta');
-    referrerMeta.setAttribute('name', 'referrer');
-    referrerMeta.setAttribute('content', 'strict-origin-when-cross-origin');
+    const referrerMeta = document.createElement("meta");
+    referrerMeta.setAttribute("name", "referrer");
+    referrerMeta.setAttribute("content", "strict-origin-when-cross-origin");
     document.head.appendChild(referrerMeta);
   }
 
@@ -307,12 +314,12 @@ class AdvancedSecurityManager {
    * Initialize security monitoring
    */
   private initializeSecurityMonitoring(): void {
-    if (typeof document === 'undefined') return;
+    if (typeof document === "undefined") return;
 
     // Monitor DOM changes for security issues
     this.securityObserver = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
-        if (mutation.type === 'childList') {
+        if (mutation.type === "childList") {
           mutation.addedNodes.forEach((node) => {
             if (node.nodeType === Node.ELEMENT_NODE) {
               this.analyzeElement(node as Element);
@@ -324,7 +331,7 @@ class AdvancedSecurityManager {
 
     this.securityObserver.observe(document.body, {
       childList: true,
-      subtree: true
+      subtree: true,
     });
 
     // Monitor for suspicious network requests
@@ -339,19 +346,24 @@ class AdvancedSecurityManager {
    */
   private analyzeElement(element: Element): void {
     // Check for suspicious attributes
-    Array.from(element.attributes).forEach(attr => {
+    Array.from(element.attributes).forEach((attr) => {
       if (this.isSuspiciousAttribute(attr.name, attr.value)) {
         this.metrics.xssAttempts++;
-        console.warn('Suspicious attribute detected:', { name: attr.name, value: attr.value });
+        console.warn("Suspicious attribute detected:", {
+          name: attr.name,
+          value: attr.value,
+        });
       }
     });
 
     // Check for suspicious content
     if (element.textContent) {
-      const suspiciousContent = this.detectSuspiciousContent(element.textContent);
+      const suspiciousContent = this.detectSuspiciousContent(
+        element.textContent,
+      );
       if (suspiciousContent) {
         this.metrics.xssAttempts++;
-        console.warn('Suspicious content detected:', suspiciousContent);
+        console.warn("Suspicious content detected:", suspiciousContent);
       }
     }
   }
@@ -365,7 +377,7 @@ class AdvancedSecurityManager {
       /javascript:/gi,
       /on\w+\s*=/gi,
       /eval\s*\(/gi,
-      /expression\s*\(/gi
+      /expression\s*\(/gi,
     ];
 
     for (const pattern of suspiciousPatterns) {
@@ -382,17 +394,17 @@ class AdvancedSecurityManager {
    * Monitor network requests
    */
   private monitorNetworkRequests(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     // Override fetch to monitor requests
     const originalFetch = window.fetch;
     window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
-      const url = typeof input === 'string' ? input : input.toString();
-      
+      const url = typeof input === "string" ? input : input.toString();
+
       if (this.isSuspiciousRequest(url)) {
         this.metrics.suspiciousRequests++;
-        console.warn('Suspicious request blocked:', url);
-        throw new Error('Suspicious request blocked');
+        console.warn("Suspicious request blocked:", url);
+        throw new Error("Suspicious request blocked");
       }
 
       try {
@@ -412,29 +424,29 @@ class AdvancedSecurityManager {
       /javascript:/i,
       /data:text\/html/i,
       /vbscript:/i,
-      /file:/i
+      /file:/i,
     ];
 
-    return suspiciousPatterns.some(pattern => pattern.test(url));
+    return suspiciousPatterns.some((pattern) => pattern.test(url));
   }
 
   /**
    * Monitor user interactions
    */
   private monitorUserInteractions(): void {
-    if (typeof document === 'undefined') return;
+    if (typeof document === "undefined") return;
 
     // Monitor for rapid clicking (potential bot behavior)
     let clickCount = 0;
     let lastClickTime = 0;
 
-    document.addEventListener('click', (event) => {
+    document.addEventListener("click", (event) => {
       const now = Date.now();
       if (now - lastClickTime < 100) {
         clickCount++;
         if (clickCount > 10) {
           this.metrics.suspiciousRequests++;
-          console.warn('Rapid clicking detected - potential bot behavior');
+          console.warn("Rapid clicking detected - potential bot behavior");
         }
       } else {
         clickCount = 0;
@@ -443,8 +455,8 @@ class AdvancedSecurityManager {
     });
 
     // Monitor for suspicious keyboard patterns
-    let keySequence = '';
-    document.addEventListener('keydown', (event) => {
+    let keySequence = "";
+    document.addEventListener("keydown", (event) => {
       keySequence += event.key;
       if (keySequence.length > 10) {
         keySequence = keySequence.slice(-10);
@@ -452,7 +464,7 @@ class AdvancedSecurityManager {
 
       if (this.isSuspiciousKeySequence(keySequence)) {
         this.metrics.suspiciousRequests++;
-        console.warn('Suspicious keyboard pattern detected:', keySequence);
+        console.warn("Suspicious keyboard pattern detected:", keySequence);
       }
     });
   }
@@ -464,17 +476,17 @@ class AdvancedSecurityManager {
     const suspiciousPatterns = [
       /f12|ctrl\+shift\+i|ctrl\+u/i,
       /alt\+f4|ctrl\+w/i,
-      /ctrl\+shift\+c|ctrl\+shift\+j/i
+      /ctrl\+shift\+c|ctrl\+shift\+j/i,
     ];
 
-    return suspiciousPatterns.some(pattern => pattern.test(sequence));
+    return suspiciousPatterns.some((pattern) => pattern.test(sequence));
   }
 
   /**
    * Initialize rate limiting
    */
   private initializeRateLimiting(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     const rateLimits = new Map<string, { count: number; resetTime: number }>();
     const RATE_LIMIT_WINDOW = 60000; // 1 minute
@@ -483,22 +495,25 @@ class AdvancedSecurityManager {
     // Monitor API calls
     const originalFetch = window.fetch;
     window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
-      const url = typeof input === 'string' ? input : input.toString();
+      const url = typeof input === "string" ? input : input.toString();
       const now = Date.now();
 
-      if (url.includes('/api/')) {
-        const key = 'api_requests';
+      if (url.includes("/api/")) {
+        const key = "api_requests";
         const limit = rateLimits.get(key);
 
         if (limit) {
           if (now < limit.resetTime) {
             if (limit.count >= MAX_REQUESTS) {
               this.metrics.blockedRequests++;
-              throw new Error('Rate limit exceeded');
+              throw new Error("Rate limit exceeded");
             }
             limit.count++;
           } else {
-            rateLimits.set(key, { count: 1, resetTime: now + RATE_LIMIT_WINDOW });
+            rateLimits.set(key, {
+              count: 1,
+              resetTime: now + RATE_LIMIT_WINDOW,
+            });
           }
         } else {
           rateLimits.set(key, { count: 1, resetTime: now + RATE_LIMIT_WINDOW });

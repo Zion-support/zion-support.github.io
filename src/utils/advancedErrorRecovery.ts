@@ -7,7 +7,7 @@ export interface ErrorRecoveryOptions {
   maxRetries: number;
   retryDelay: number;
   exponentialBackoff: boolean;
-  fallbackStrategy: 'graceful' | 'retry' | 'reload' | 'custom';
+  fallbackStrategy: "graceful" | "retry" | "reload" | "custom";
   customRecovery?: () => Promise<void>;
   onRecovery?: (error: Error, attempt: number) => void;
   onFailure?: (error: Error, attempts: number) => void;
@@ -30,7 +30,11 @@ export interface RecoveryStrategy {
 
 class AdvancedErrorRecovery {
   private recoveryStrategies: RecoveryStrategy[] = [];
-  private errorHistory: Array<{ error: Error; context: ErrorContext; timestamp: number }> = [];
+  private errorHistory: Array<{
+    error: Error;
+    context: ErrorContext;
+    timestamp: number;
+  }> = [];
   private maxHistorySize = 100;
   private isInitialized = false;
 
@@ -49,7 +53,7 @@ class AdvancedErrorRecovery {
     this.setupResourceErrorHandler();
     this.isInitialized = true;
 
-    console.log('✅ Advanced Error Recovery System initialized');
+    console.log("✅ Advanced Error Recovery System initialized");
   }
 
   /**
@@ -58,60 +62,60 @@ class AdvancedErrorRecovery {
   private setupDefaultStrategies(): void {
     // Network error recovery
     this.addRecoveryStrategy({
-      name: 'network-retry',
-      canHandle: (error: Error) => 
-        error.message.includes('fetch') || 
-        error.message.includes('network') ||
-        error.message.includes('timeout'),
+      name: "network-retry",
+      canHandle: (error: Error) =>
+        error.message.includes("fetch") ||
+        error.message.includes("network") ||
+        error.message.includes("timeout"),
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       execute: async (_error: Error, _context: ErrorContext) => {
-        console.log('Attempting network error recovery...');
+        console.log("Attempting network error recovery...");
         await this.delay(1000);
         return true; // Signal retry
-      }
+      },
     });
 
     // Chunk loading error recovery
     this.addRecoveryStrategy({
-      name: 'chunk-loading-retry',
-      canHandle: (error: Error) => 
-        error.message.includes('Loading chunk') ||
-        error.message.includes('Loading CSS chunk'),
+      name: "chunk-loading-retry",
+      canHandle: (error: Error) =>
+        error.message.includes("Loading chunk") ||
+        error.message.includes("Loading CSS chunk"),
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       execute: async (_error: Error, _context: ErrorContext) => {
-        console.log('Attempting chunk loading recovery...');
+        console.log("Attempting chunk loading recovery...");
         window.location.reload();
         return true;
-      }
+      },
     });
 
     // Memory error recovery
     this.addRecoveryStrategy({
-      name: 'memory-cleanup',
-      canHandle: (error: Error) => 
-        error.message.includes('out of memory') ||
-        error.message.includes('memory'),
+      name: "memory-cleanup",
+      canHandle: (error: Error) =>
+        error.message.includes("out of memory") ||
+        error.message.includes("memory"),
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       execute: async (_error: Error, _context: ErrorContext) => {
-        console.log('Attempting memory cleanup...');
+        console.log("Attempting memory cleanup...");
         this.performMemoryCleanup();
         return true;
-      }
+      },
     });
 
     // DOM error recovery
     this.addRecoveryStrategy({
-      name: 'dom-recovery',
-      canHandle: (error: Error) => 
-        error.message.includes('DOM') ||
-        error.message.includes('element') ||
-        error.message.includes('querySelector'),
+      name: "dom-recovery",
+      canHandle: (error: Error) =>
+        error.message.includes("DOM") ||
+        error.message.includes("element") ||
+        error.message.includes("querySelector"),
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       execute: async (_error: Error, _context: ErrorContext) => {
-        console.log('Attempting DOM recovery...');
+        console.log("Attempting DOM recovery...");
         await this.delay(500);
         return true;
-      }
+      },
     });
   }
 
@@ -127,33 +131,36 @@ class AdvancedErrorRecovery {
    */
   private setupGlobalErrorHandlers(): void {
     // Global error handler
-    window.addEventListener('error', (event) => {
+    window.addEventListener("error", (event) => {
       const error = new Error(event.message);
       error.stack = event.error?.stack;
-      
+
       const context: ErrorContext = {
-        component: 'Global',
-        action: 'Runtime Error',
+        component: "Global",
+        action: "Runtime Error",
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href,
-        stack: error.stack
+        stack: error.stack,
       };
 
       this.handleError(error, context);
     });
 
     // Promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {
-      const error = event.reason instanceof Error ? event.reason : new Error(String(event.reason));
-      
+    window.addEventListener("unhandledrejection", (event) => {
+      const error =
+        event.reason instanceof Error
+          ? event.reason
+          : new Error(String(event.reason));
+
       const context: ErrorContext = {
-        component: 'Promise',
-        action: 'Unhandled Rejection',
+        component: "Promise",
+        action: "Unhandled Rejection",
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href,
-        stack: error.stack
+        stack: error.stack,
       };
 
       this.handleError(error, context);
@@ -164,12 +171,12 @@ class AdvancedErrorRecovery {
    * Setup unhandled rejection handler
    */
   private setupUnhandledRejectionHandler(): void {
-    window.addEventListener('unhandledrejection', (event) => {
-      console.error('Unhandled promise rejection:', event.reason);
-      
+    window.addEventListener("unhandledrejection", (event) => {
+      console.error("Unhandled promise rejection:", event.reason);
+
       // Try to recover from common promise rejections
-      if (event.reason?.message?.includes('Loading chunk')) {
-        console.log('Chunk loading error detected, attempting recovery...');
+      if (event.reason?.message?.includes("Loading chunk")) {
+        console.log("Chunk loading error detected, attempting recovery...");
         setTimeout(() => window.location.reload(), 1000);
       }
     });
@@ -179,26 +186,34 @@ class AdvancedErrorRecovery {
    * Setup resource error handler
    */
   private setupResourceErrorHandler(): void {
-    window.addEventListener('error', (event) => {
-      if (event.target !== window) {
-        const target = event.target as HTMLElement;
-        console.error(`Resource loading error: ${target.tagName}`, event);
-        
-        // Try to recover from image loading errors
-        if (target.tagName === 'IMG') {
-          const img = target as HTMLImageElement;
-          if (img.src && !img.src.includes('placeholder')) {
-            img.src = '/placeholder-image.png';
+    window.addEventListener(
+      "error",
+      (event) => {
+        if (event.target !== window) {
+          const target = event.target as HTMLElement;
+          console.error(`Resource loading error: ${target.tagName}`, event);
+
+          // Try to recover from image loading errors
+          if (target.tagName === "IMG") {
+            const img = target as HTMLImageElement;
+            if (img.src && !img.src.includes("placeholder")) {
+              img.src = "/placeholder-image.png";
+            }
           }
         }
-      }
-    }, true);
+      },
+      true,
+    );
   }
 
   /**
    * Handle an error with recovery strategies
    */
-  async handleError(error: Error, context: ErrorContext, options?: Partial<ErrorRecoveryOptions>): Promise<boolean> {
+  async handleError(
+    error: Error,
+    context: ErrorContext,
+    options?: Partial<ErrorRecoveryOptions>,
+  ): Promise<boolean> {
     // Add to error history
     this.addToErrorHistory(error, context);
 
@@ -207,7 +222,7 @@ class AdvancedErrorRecovery {
       maxRetries: 3,
       retryDelay: 1000,
       exponentialBackoff: true,
-      fallbackStrategy: 'graceful'
+      fallbackStrategy: "graceful",
     };
 
     const finalOptions = { ...defaultOptions, ...options };
@@ -218,11 +233,16 @@ class AdvancedErrorRecovery {
         try {
           const success = await strategy.execute(error, context);
           if (success) {
-            console.log(`✅ Error recovery successful using strategy: ${strategy.name}`);
+            console.log(
+              `✅ Error recovery successful using strategy: ${strategy.name}`,
+            );
             return true;
           }
         } catch (recoveryError) {
-          console.error(`❌ Recovery strategy ${strategy.name} failed:`, recoveryError);
+          console.error(
+            `❌ Recovery strategy ${strategy.name} failed:`,
+            recoveryError,
+          );
         }
       }
     }
@@ -235,33 +255,35 @@ class AdvancedErrorRecovery {
    * Execute fallback recovery strategy
    */
   private async executeFallbackStrategy(
-    error: Error, 
-    context: ErrorContext, 
-    options: ErrorRecoveryOptions
+    error: Error,
+    context: ErrorContext,
+    options: ErrorRecoveryOptions,
   ): Promise<boolean> {
     switch (options.fallbackStrategy) {
-      case 'retry':
+      case "retry":
         return this.retryOperation(error, context, options);
-      
-      case 'reload':
-        console.log('Reloading page as fallback strategy...');
+
+      case "reload":
+        console.log("Reloading page as fallback strategy...");
         window.location.reload();
         return true;
-      
-      case 'custom':
+
+      case "custom":
         if (options.customRecovery) {
           try {
             await options.customRecovery();
             return true;
           } catch (customError) {
-            console.error('Custom recovery failed:', customError);
+            console.error("Custom recovery failed:", customError);
           }
         }
         break;
-      
-      case 'graceful':
+
+      case "graceful":
       default:
-        console.error('Graceful degradation - continuing with reduced functionality');
+        console.error(
+          "Graceful degradation - continuing with reduced functionality",
+        );
         return false;
     }
 
@@ -272,35 +294,37 @@ class AdvancedErrorRecovery {
    * Retry operation with exponential backoff
    */
   private async retryOperation(
-    error: Error, 
-    context: ErrorContext, 
-    options: ErrorRecoveryOptions
+    error: Error,
+    context: ErrorContext,
+    options: ErrorRecoveryOptions,
   ): Promise<boolean> {
     for (let attempt = 1; attempt <= options.maxRetries; attempt++) {
       try {
-        const delay = options.exponentialBackoff 
+        const delay = options.exponentialBackoff
           ? options.retryDelay * Math.pow(2, attempt - 1)
           : options.retryDelay;
 
         await this.delay(delay);
-        
+
         // Notify about retry attempt
         if (options.onRecovery) {
           options.onRecovery(error, attempt);
         }
 
         // Simulate retry (in real implementation, this would retry the actual operation)
-        console.log(`Retry attempt ${attempt}/${options.maxRetries} for error:`, error.message);
-        
+        console.log(
+          `Retry attempt ${attempt}/${options.maxRetries} for error:`,
+          error.message,
+        );
+
         // For demonstration, we'll assume the retry succeeds after a few attempts
         if (attempt >= 2) {
-          console.log('✅ Operation retry successful');
+          console.log("✅ Operation retry successful");
           return true;
         }
-        
       } catch (retryError) {
         console.error(`Retry attempt ${attempt} failed:`, retryError);
-        
+
         if (attempt === options.maxRetries && options.onFailure) {
           options.onFailure(error, options.maxRetries);
         }
@@ -328,11 +352,11 @@ class AdvancedErrorRecovery {
     }
 
     // Force garbage collection if available
-    if ('gc' in window && typeof (window as any).gc === 'function') {
+    if ("gc" in window && typeof (window as any).gc === "function") {
       ((window as any).gc as () => void)();
     }
 
-    console.log('Memory cleanup performed');
+    console.log("Memory cleanup performed");
   }
 
   /**
@@ -342,7 +366,7 @@ class AdvancedErrorRecovery {
     this.errorHistory.push({
       error,
       context,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     });
 
     // Keep history size manageable
@@ -354,7 +378,11 @@ class AdvancedErrorRecovery {
   /**
    * Get error history
    */
-  getErrorHistory(): Array<{ error: Error; context: ErrorContext; timestamp: number }> {
+  getErrorHistory(): Array<{
+    error: Error;
+    context: ErrorContext;
+    timestamp: number;
+  }> {
     return [...this.errorHistory];
   }
 
@@ -375,28 +403,34 @@ class AdvancedErrorRecovery {
     recentErrors: number;
   } {
     const now = Date.now();
-    const oneHourAgo = now - (60 * 60 * 1000);
-    
+    const oneHourAgo = now - 60 * 60 * 1000;
+
     const recentErrors = this.errorHistory.filter(
-      entry => entry.timestamp > oneHourAgo
+      (entry) => entry.timestamp > oneHourAgo,
     ).length;
 
-    const errorsByComponent = this.errorHistory.reduce((acc, entry) => {
-      acc[entry.context.component] = (acc[entry.context.component] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+    const errorsByComponent = this.errorHistory.reduce(
+      (acc, entry) => {
+        acc[entry.context.component] = (acc[entry.context.component] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>,
+    );
 
-    const errorsByType = this.errorHistory.reduce((acc, entry) => {
-      const type = entry.error.name || 'Unknown';
-      acc[type] = (acc[type] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+    const errorsByType = this.errorHistory.reduce(
+      (acc, entry) => {
+        const type = entry.error.name || "Unknown";
+        acc[type] = (acc[type] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>,
+    );
 
     return {
       totalErrors: this.errorHistory.length,
       errorsByComponent,
       errorsByType,
-      recentErrors
+      recentErrors,
     };
   }
 
@@ -404,7 +438,7 @@ class AdvancedErrorRecovery {
    * Utility function for delays
    */
   private delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
   /**
@@ -412,14 +446,14 @@ class AdvancedErrorRecovery {
    */
   createRetryWrapper<T extends (...args: unknown[]) => Promise<unknown>>(
     fn: T,
-    options?: Partial<ErrorRecoveryOptions>
+    options?: Partial<ErrorRecoveryOptions>,
   ): T {
     return (async (...args: Parameters<T>) => {
       const defaultOptions: ErrorRecoveryOptions = {
         maxRetries: 3,
         retryDelay: 1000,
         exponentialBackoff: true,
-        fallbackStrategy: 'graceful'
+        fallbackStrategy: "graceful",
       };
 
       const finalOptions = { ...defaultOptions, ...options };
@@ -428,20 +462,20 @@ class AdvancedErrorRecovery {
         try {
           return await fn(...args);
         } catch (error) {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const _context: ErrorContext = {
-          component: fn.name || 'Unknown',
-          action: 'Function Execution',
-          timestamp: Date.now(),
-          userAgent: navigator.userAgent,
-          url: window.location.href
-        };
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          const _context: ErrorContext = {
+            component: fn.name || "Unknown",
+            action: "Function Execution",
+            timestamp: Date.now(),
+            userAgent: navigator.userAgent,
+            url: window.location.href,
+          };
 
           if (attempt === finalOptions.maxRetries) {
             throw error;
           }
 
-          const delay = finalOptions.exponentialBackoff 
+          const delay = finalOptions.exponentialBackoff
             ? finalOptions.retryDelay * Math.pow(2, attempt - 1)
             : finalOptions.retryDelay;
 
@@ -456,6 +490,6 @@ class AdvancedErrorRecovery {
 export const advancedErrorRecovery = new AdvancedErrorRecovery();
 
 // Auto-initialize
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   advancedErrorRecovery.initialize();
 }
