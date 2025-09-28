@@ -26,9 +26,6 @@ import { advancedCacheSystem } from './utils/advancedCacheSystem';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
 import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { SecurityEnhancer } from './utils/securityEnhancer';
-import { analytics } from './utils/analytics';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
-import { useSEOData } from './components/SEOOptimizer';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -168,7 +165,7 @@ export default function App(): React.JSX.Element {
       if ('startMonitoring' in enhancedPerformanceMonitor) {
         enhancedPerformanceMonitor.startMonitoring();
       } else if ('initialize' in enhancedPerformanceMonitor) {
-        (enhancedPerformanceMonitor as any).initialize();
+        (enhancedPerformanceMonitor as { initialize: () => void }).initialize();
       }
       enhancedAnalytics.initialize();
       advancedCacheSystem.initialize();
@@ -310,7 +307,7 @@ export default function App(): React.JSX.Element {
       // Final engagement tracking
       trackEngagement();
     };
-  }, [enhancedTrackEngagement, trackEngagement]);
+  }, [enhancedTrackEngagement, trackEngagement, handleKeyDown]);
 
   // Optimize performance on mount
   useEffect(() => {
