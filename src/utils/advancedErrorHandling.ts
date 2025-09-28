@@ -20,7 +20,8 @@ export interface ErrorReport {
   stack?: string;
   context: ErrorContext;
   severity: "low" | "medium" | "high" | "critical";
-  category: "runtime" | "network" | "build" | "user" | "system";
+  category: "runtime" | "network" | "build" | "user" | "system" | "performance";
+  metadata?: Record<string, any>;
   resolved: boolean;
   createdAt: Date;
   resolvedAt?: Date;
@@ -49,14 +50,17 @@ class AdvancedErrorHandler {
     if ("PerformanceObserver" in window) {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
-          if (entry.entryType === "navigation" && entry.loadEventEnd > 0) {
-            const loadTime = entry.loadEventEnd - entry.loadEventStart;
-            if (loadTime > 3000) {
-              this.reportError(new Error(`Slow page load: ${loadTime}ms`), {
-                category: "performance",
-                severity: "medium",
-                metadata: { loadTime },
-              });
+          if (entry.entryType === "navigation") {
+            const navEntry = entry as PerformanceNavigationTiming;
+            if (navEntry.loadEventEnd > 0) {
+              const loadTime = navEntry.loadEventEnd - navEntry.loadEventStart;
+              if (loadTime > 3000) {
+                this.reportError(new Error(`Slow page load: ${loadTime}ms`), {
+                  category: "performance",
+                  severity: "medium",
+                  metadata: { loadTime },
+                });
+              }
             }
           }
         });

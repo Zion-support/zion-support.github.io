@@ -609,7 +609,7 @@ class AdvancedUXOptimizer {
    * Get font size value
    */
   private getFontSizeValue(size: string): string {
-    const sizes = {
+    const sizes: Record<string, string> = {
       'small': '14px',
       'medium': '16px',
       'large': '18px',

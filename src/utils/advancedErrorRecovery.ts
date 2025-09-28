@@ -67,7 +67,7 @@ class AdvancedErrorRecovery {
         error.message.includes("fetch") ||
         error.message.includes("network") ||
         error.message.includes("timeout"),
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+       
       execute: async (_error: Error, _context: ErrorContext) => {
         console.log("Attempting network error recovery...");
         await this.delay(1000);
@@ -81,7 +81,7 @@ class AdvancedErrorRecovery {
       canHandle: (error: Error) =>
         error.message.includes("Loading chunk") ||
         error.message.includes("Loading CSS chunk"),
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+       
       execute: async (_error: Error, _context: ErrorContext) => {
         console.log("Attempting chunk loading recovery...");
         window.location.reload();
@@ -95,7 +95,7 @@ class AdvancedErrorRecovery {
       canHandle: (error: Error) =>
         error.message.includes("out of memory") ||
         error.message.includes("memory"),
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+       
       execute: async (_error: Error, _context: ErrorContext) => {
         console.log("Attempting memory cleanup...");
         this.performMemoryCleanup();
@@ -110,7 +110,7 @@ class AdvancedErrorRecovery {
         error.message.includes("DOM") ||
         error.message.includes("element") ||
         error.message.includes("querySelector"),
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+       
       execute: async (_error: Error, _context: ErrorContext) => {
         console.log("Attempting DOM recovery...");
         await this.delay(500);
@@ -462,7 +462,7 @@ class AdvancedErrorRecovery {
         try {
           return await fn(...args);
         } catch (error) {
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+           
           const _context: ErrorContext = {
             component: fn.name || "Unknown",
             action: "Function Execution",

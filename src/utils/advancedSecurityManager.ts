@@ -194,24 +194,25 @@ class AdvancedSecurityManager {
 
     // Monitor for potential XSS attempts
     const originalCreateElement = document.createElement;
+    const self = this;
     document.createElement = function (tagName: string) {
-      const element = originalCreateElement.call(this, tagName);
+      const element = originalCreateElement.call(document, tagName);
 
       // Check for suspicious attributes
       if (element.setAttribute) {
         const originalSetAttribute = element.setAttribute;
         element.setAttribute = function (name: string, value: string) {
-          if (this.isSuspiciousAttribute(name, value)) {
-            this.metrics.xssAttempts++;
+          if (self.isSuspiciousAttribute(name, value)) {
+            self.metrics.xssAttempts++;
             console.warn("Potential XSS attempt detected:", { name, value });
             return;
           }
           return originalSetAttribute.call(this, name, value);
-        }.bind(this);
+        };
       }
 
       return element;
-    }.bind(this);
+    };
 
     // Monitor script execution
     const scripts = document.querySelectorAll("script");

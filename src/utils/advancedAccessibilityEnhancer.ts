@@ -357,7 +357,7 @@ class AdvancedAccessibilityEnhancer {
     inputs.forEach((input) => {
       const label = document.querySelector(`label[for="${input.id}"]`);
       if (!label) {
-        input.setAttribute("aria-label", input.placeholder || "Input field");
+        input.setAttribute("aria-label", (input as HTMLInputElement).placeholder || "Input field");
       }
     });
   }
@@ -694,6 +694,23 @@ class AdvancedAccessibilityEnhancer {
   private calculateColorContrastScore(): number {
     // Simplified calculation
     return 85; // Placeholder
+  }
+
+  /**
+   * Initialize ARIA labels for form elements
+   */
+  private initializeARIALabels(): void {
+    const inputs = document.querySelectorAll('input, textarea, select');
+    inputs.forEach((input) => {
+      if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
+        const placeholder = (input as HTMLInputElement).placeholder;
+        if (placeholder) {
+          input.setAttribute("aria-label", placeholder);
+        } else {
+          input.setAttribute("aria-label", "Input field");
+        }
+      }
+    });
   }
 
   /**
