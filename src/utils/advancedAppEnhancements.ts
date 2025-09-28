@@ -218,7 +218,7 @@ export class AdvancedAppEnhancements {
     }
   }
 
-  private trackUserInteraction(type: string, target: any): void {
+  private trackUserInteraction(type: string, target: unknown): void {
     // Enhanced user interaction tracking
     console.log(`User interaction: ${type}`, target);
   }

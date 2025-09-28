@@ -2,11 +2,24 @@ import React, { useState, useEffect, useCallback } from 'react';
 import performanceEnhancer from '../utils/performanceEnhancements';
 
 interface PerformanceData {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  bundleSize: number;
-  cacheHitRate: number;
+  dns?: number;
+  tcp?: number;
+  request?: number;
+  response?: number;
+  dom?: number;
+  load?: number;
+  firstPaint?: number;
+  firstContentfulPaint?: number;
+  memory?: {
+    used: number;
+    total: number;
+    limit: number;
+  } | null;
+  loadTime?: number;
+  renderTime?: number;
+  memoryUsage?: number;
+  bundleSize?: number;
+  cacheHitRate?: number;
 }
 
 interface PerformanceOptimizerProps {
@@ -47,12 +60,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     try {
       // Optimize bundle
       addLogEntry('Optimizing bundle...');
-      performanceEnhancer.optimizeBundle();
+      performanceEnhancer.optimizeBundleSize();
       
       // Preload critical resources
       addLogEntry('Preloading critical resources...');
-      performanceEnhancer.preloadResource('/api/health', 'script');
-      performanceEnhancer.preloadResource('/images/hero-bg.webp', 'image');
+      performanceEnhancer.preloadCriticalResources();
       
       // Update metrics
       addLogEntry('Updating performance metrics...');
@@ -127,28 +139,28 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
               <h3 className="text-sm font-medium text-green-600 dark:text-green-400">Memory Usage</h3>
               <p className="text-2xl font-bold text-green-900 dark:text-green-100">
-                {performanceData.memoryUsage.toFixed(2)}MB
+                {performanceData.memoryUsage?.toFixed(2) || '0.00'}MB
               </p>
             </div>
             
             <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
               <h3 className="text-sm font-medium text-purple-600 dark:text-purple-400">Bundle Size</h3>
               <p className="text-2xl font-bold text-purple-900 dark:text-purple-100">
-                {performanceData.bundleSize}KB
+                {performanceData.bundleSize || '0'}KB
               </p>
             </div>
             
             <div className="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg">
               <h3 className="text-sm font-medium text-orange-600 dark:text-orange-400">Render Time</h3>
               <p className="text-2xl font-bold text-orange-900 dark:text-orange-100">
-                {performanceData.renderTime}ms
+                {performanceData.renderTime || '0'}ms
               </p>
             </div>
             
             <div className="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-lg">
               <h3 className="text-sm font-medium text-indigo-600 dark:text-indigo-400">Cache Hit Rate</h3>
               <p className="text-2xl font-bold text-indigo-900 dark:text-indigo-100">
-                {performanceData.cacheHitRate}%
+                {performanceData.cacheHitRate || '0'}%
               </p>
             </div>
           </div>

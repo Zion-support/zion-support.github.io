@@ -44,7 +44,7 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
   const frameCountRef = useRef(0);
   const lastTimeRef = useRef(performance.now());
   const errorCountRef = useRef(0);
-  const [isTracking, setIsTracking] = useState(true);
+  const [isTracking] = useState(true);
 
   // Core Web Vitals tracking
   const trackCoreWebVitals = useCallback(() => {
@@ -63,8 +63,11 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         // Track FID (First Input Delay)
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            metricsRef.current.fid = entry.processingStart - entry.startTime;
+          entries.forEach((entry) => {
+            if (entry.entryType === 'first-input' && 'processingStart' in entry) {
+              const fidEntry = entry as PerformanceEventTiming;
+              metricsRef.current.fid = fidEntry.processingStart - fidEntry.startTime;
+            }
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
@@ -73,10 +76,13 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
-              metricsRef.current.cls = clsValue;
+          entries.forEach((entry) => {
+            if (entry.entryType === 'layout-shift' && 'value' in entry && 'hadRecentInput' in entry) {
+              const clsEntry = entry as any; // LayoutShift type is not available in all environments
+              if (!clsEntry.hadRecentInput) {
+                clsValue += clsEntry.value;
+                metricsRef.current.cls = clsValue;
+              }
             }
           });
         });
@@ -85,8 +91,11 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         // Track TTFB (Time to First Byte)
         const navigationObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            metricsRef.current.ttfb = entry.responseStart - entry.requestStart;
+          entries.forEach((entry) => {
+            if (entry.entryType === 'navigation' && 'responseStart' in entry && 'requestStart' in entry) {
+              const navEntry = entry as PerformanceNavigationTiming;
+              metricsRef.current.ttfb = navEntry.responseStart - navEntry.requestStart;
+            }
           });
         });
         navigationObserver.observe({ entryTypes: ['navigation'] });
@@ -224,30 +233,22 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
   }, [onMetricsUpdate, interval, isTracking, trackCoreWebVitals, trackAdvancedMetrics]);
 
   // Expose control methods
-  const startTracking = useCallback(() => {
-    setIsTracking(true);
-  }, []);
-
-  const stopTracking = useCallback(() => {
-    setIsTracking(false);
-  }, []);
-
-  const resetMetrics = useCallback(() => {
-    metricsRef.current = {
-      loadTime: 0,
-      renderTime: 0,
-      fps: 0,
-      errors: 0,
-      lcp: 0,
-      fid: 0,
-      cls: 0,
-      ttfb: 0,
-      networkLatency: 0,
-      domSize: 0,
-      resourceCount: 0
-    };
-    errorCountRef.current = 0;
-  }, []);
+  // const resetMetrics = useCallback(() => {
+  //   metricsRef.current = {
+  //     loadTime: 0,
+  //     renderTime: 0,
+  //     fps: 0,
+  //     errors: 0,
+  //     lcp: 0,
+  //     fid: 0,
+  //     cls: 0,
+  //     ttfb: 0,
+  //     networkLatency: 0,
+  //     domSize: 0,
+  //     resourceCount: 0
+  //   };
+  //   errorCountRef.current = 0;
+  // }, []);
 
   return null; // This component doesn't render anything
 };

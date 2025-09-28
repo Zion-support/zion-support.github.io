@@ -48,7 +48,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ isVisib
   });
 
   // Performance tracking
-  const { metrics, PerformanceTracker } = usePerformanceTracker({
+  const { PerformanceTracker } = usePerformanceTracker({
     onMetricsUpdate: (newMetrics) => {
       setRealTimeMetrics({
         fps: newMetrics.fps,
@@ -80,7 +80,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ isVisib
     }
   }, [isVisible]);
 
-  const handlePreferenceChange = useCallback((key: string, value: any) => {
+  const handlePreferenceChange = useCallback((key: string, value: unknown) => {
     setUserPreferences(prev => ({
       ...prev,
       [key]: value
