@@ -25,6 +25,10 @@ interface AccessibilityMetrics {
   keyboardTraps: number;
   screenReaderCompatibility: number;
   overallScore: number;
+  totalElements: number;
+  accessibleElements: number;
+  issuesFound: number;
+  score: number;
 }
 
 class AdvancedAccessibilityEnhancer {
@@ -55,7 +59,11 @@ class AdvancedAccessibilityEnhancer {
       altTexts: 0,
       keyboardTraps: 0,
       screenReaderCompatibility: 0,
-      overallScore: 0
+      overallScore: 0,
+      totalElements: 0,
+      accessibleElements: 0,
+      issuesFound: 0,
+      score: 0
     };
   }
 
@@ -627,15 +635,10 @@ class AdvancedAccessibilityEnhancer {
     
     return `
 Accessibility Report:
-==================
-Overall Score: ${metrics.overallScore}/100
-WCAG Compliance: ${metrics.wcagCompliance}%
-Keyboard Navigation: ${metrics.keyboardNavigation ? 'Enabled' : 'Disabled'}
-Screen Reader Support: ${metrics.screenReaderSupport ? 'Enabled' : 'Disabled'}
-Color Contrast: ${metrics.colorContrast ? 'Passed' : 'Failed'}
-Focus Management: ${metrics.focusManagement ? 'Proper' : 'Issues Found'}
-ARIA Labels: ${metrics.ariaLabels ? 'Present' : 'Missing'}
-Semantic HTML: ${metrics.semanticHTML ? 'Proper' : 'Needs Improvement'}
+- Total Elements: ${metrics.totalElements}
+- Accessible Elements: ${metrics.accessibleElements}
+- Issues Found: ${metrics.issuesFound}
+- Score: ${metrics.score}%
 `;
   }
 }
