@@ -75,6 +75,18 @@ export default function App(): React.JSX.Element {
     twitterCard: 'summary_large_image' as const
   }), []);
 
+  // Enhanced engagement tracking function
+  const enhancedTrackEngagement = useCallback(() => {
+    const timeOnPage = Date.now() - engagementData.startTime;
+    seoAnalytics.trackUserEngagement(window.location.pathname, {
+      timeOnPage,
+      scrollDepth: engagementData.scrollDepth,
+      clicks: engagementData.clicks,
+    });
+    // Also call the original trackEngagement from useAppInitialization
+    trackEngagement();
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
+
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
     title: string;
