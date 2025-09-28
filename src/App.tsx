@@ -21,6 +21,10 @@ import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { SecurityEnhancer } from './utils/securityEnhancer';
 import PerformanceTracker from './components/PerformanceTracker';
 import AccessibilityEnhancements from './components/AccessibilityEnhancements';
+import AdvancedAnalyticsDashboard from './components/AdvancedAnalyticsDashboard';
+import PerformanceInsights from './components/PerformanceInsights';
+import UserExperienceMonitor from './components/UserExperienceMonitor';
+import SecurityDashboard from './components/SecurityDashboard';
 import './index.css';
 import './styles/accessibility.css';
 
@@ -30,6 +34,10 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
+  const [showAnalyticsDashboard, setShowAnalyticsDashboard] = useState(false);
+  const [showPerformanceInsights, setShowPerformanceInsights] = useState(false);
+  const [showUXMonitor, setShowUXMonitor] = useState(false);
+  const [showSecurityDashboard, setShowSecurityDashboard] = useState(false);
 
   // Engagement tracking data
   const engagementData = useMemo(() => ({
