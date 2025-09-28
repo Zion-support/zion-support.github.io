@@ -75,8 +75,8 @@ class SecurityEnhancer {
 
     this.config = { ...this.config, ...config };
     
-    // Set up global reference for XMLHttpRequest monitoring
-    (window as any).__securityEnhancerInstance = this;
+    // Set global reference for XMLHttpRequest monitoring
+    (window as { __securityEnhancerInstance?: SecurityEnhancer }).__securityEnhancerInstance = this;
     
     this.setupCSP();
     this.setupXSSProtection();
@@ -371,8 +371,8 @@ class SecurityEnhancer {
     // Monitor for console access attempts (disabled to prevent infinite recursion)
     // const originalConsole = console;
     // Object.keys(console).forEach(key => {
-    //   const originalMethod = (console as any)[key];
-    //   (console as any)[key] = (...args: any[]) => {
+    //   const originalMethod = (console as unknown)[key];
+    //   (console as unknown)[key] = (...args: unknown[]) => {
     //     this.recordSecurityEvent('suspicious', `Console access: ${key}`, 'low', 'console');
     //     return originalMethod.apply(console, args);
     //   };
@@ -397,9 +397,9 @@ class SecurityEnhancer {
 
     // Monitor XMLHttpRequest
     const originalXHR = XMLHttpRequest.prototype.open;
-    (XMLHttpRequest.prototype.open as any) = function(this: XMLHttpRequest, method: string, url: string | URL, ...args: any[]) {
+    (XMLHttpRequest.prototype.open as unknown) = function(this: XMLHttpRequest, method: string, url: string | URL, ...args: unknown[]) {
       // Access the security enhancer instance through a global reference
-      const securityEnhancer = (window as any).__securityEnhancerInstance;
+      const securityEnhancer = (window as { __securityEnhancerInstance?: SecurityEnhancer }).__securityEnhancerInstance;
       if (securityEnhancer && typeof url === 'string' && securityEnhancer.isSuspiciousURL(url)) {
         securityEnhancer.recordSecurityEvent('blocked', `Suspicious XHR URL blocked: ${url}`, 'high', 'network');
         securityEnhancer.metrics.blockedRequests++;
@@ -407,7 +407,7 @@ class SecurityEnhancer {
       }
       
       return (originalXHR as any).apply(this, [method, url, ...args]);
-    };a4c0f85e428f3362469b3f80604b
+    };
   }
 
   private monitorDOMChanges(): void {
