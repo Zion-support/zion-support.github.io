@@ -318,7 +318,7 @@ class EnhancedSEOOptimizer {
     }
 
     this.performanceMetrics.loadTime = entry.loadEventEnd - entry.loadEventStart;
-    this.performanceMetrics.timeToInteractive = entry.domInteractive - entry.navigationStart;
+    this.performanceMetrics.timeToInteractive = entry.domInteractive - (entry.activationStart || 0);
   }
 
   /**

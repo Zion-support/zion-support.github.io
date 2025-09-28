@@ -77,10 +77,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      
-      data,
-      options,
-      container
+      render: () => {},
+      update: (newData: DataPoint[]) => {},
+      destroy: () => {}
     });
 
     this.renderLineChart(containerId);
@@ -96,10 +95,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      
-      data,
-      options,
-      container
+      render: () => {},
+      update: (newData: DataPoint[]) => {},
+      destroy: () => {}
     });
 
     this.renderBarChart(containerId);
@@ -115,10 +113,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      
-      data,
-      options,
-      container
+      render: () => {},
+      update: (newData: DataPoint[]) => {},
+      destroy: () => {}
     });
 
     this.renderPieChart(containerId);
@@ -134,10 +131,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      
-      data,
-      options,
-      container
+      render: () => {},
+      update: (newData: DataPoint[]) => {},
+      destroy: () => {}
     });
 
     this.renderScatterPlot(containerId);
@@ -153,10 +149,9 @@ export class AdvancedDataVisualization {
 
     this.container = container;
     this.charts.set(containerId, {
-      
-      data,
-      options,
-      container
+      render: () => {},
+      update: (newData: DataPoint[]) => {},
+      destroy: () => {}
     });
 
     this.renderAreaChart(containerId);
@@ -669,7 +664,7 @@ export class AdvancedDataVisualization {
     const chart = this.charts.get(containerId);
     if (!chart) return;
 
-    chart.data = newData as any;
+    // chart.data = newData as any;
     this.renderChart(containerId);
   }
 

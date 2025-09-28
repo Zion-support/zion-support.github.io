@@ -273,18 +273,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
 
       // Initialize advanced error recovery
       const { advancedErrorRecovery } = await import('../utils/advancedErrorRecovery');
-      advancedErrorRecovery.initialize({
-        maxRetries: 3,
-        retryDelay: 1000,
-        exponentialBackoff: true,
-        enableUserGuidance: true,
-        enableAutomaticRecovery: true,
-        enableErrorReporting: true,
-        enableFallbackStrategies: true,
-        enableCircuitBreaker: true,
-        circuitBreakerThreshold: 5,
-        circuitBreakerTimeout: 30000
-      });
+      advancedErrorRecovery.initialize();
 
       console.log('✅ Advanced systems initialized successfully');
     } catch (error) {
