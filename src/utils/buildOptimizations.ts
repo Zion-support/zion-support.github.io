@@ -64,7 +64,7 @@ class BuildOptimizer {
     for (let i = 0; i < styleSheets.length; i++) {
       try {
         const sheet = styleSheets[i];
-        if (sheet.ownerNode && sheet.ownerNode.tagName === 'STYLE') {
+        if (sheet.ownerNode && (sheet.ownerNode as Element).tagName === 'STYLE') {
           const rules = sheet.cssRules || sheet.rules;
           if (rules) {
             for (let j = rules.length - 1; j >= 0; j--) {

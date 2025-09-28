@@ -223,7 +223,7 @@ class AdvancedAccessibilityEnhancer {
         const items = component.querySelectorAll('[role="menuitem"], [role="option"], [role="treeitem"]');
         const currentIndex = Array.from(items).indexOf(document.activeElement as Element);
         
-        switch (event.key) {
+        switch ((event as KeyboardEvent).key) {
           case 'ArrowDown':
             event.preventDefault();
             const nextIndex = (currentIndex + 1) % items.length;
