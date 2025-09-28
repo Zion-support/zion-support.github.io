@@ -1,10 +1,5 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 
-interface LayoutShift extends PerformanceEntry {
-  hadRecentInput: boolean;
-  value: number;
-}
-
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -69,8 +64,9 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            const eventEntry = entry as PerformanceEventTiming;
-            metricsRef.current.fid = eventEntry.processingStart - eventEntry.startTime;
+            if (entry.entryType === 'first-input' && 'processingStart' in entry && 'startTime' in entry) {
+              metricsRef.current.fid = (entry as any).processingStart - entry.startTime;
+            }
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
@@ -80,10 +76,11 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            const layoutEntry = entry as LayoutShift;
-            if (!layoutEntry.hadRecentInput) {
-              clsValue += layoutEntry.value;
-              metricsRef.current.cls = clsValue;
+            if (entry.entryType === 'layout-shift' && 'hadRecentInput' in entry && 'value' in entry) {
+              if (!(entry as any).hadRecentInput) {
+                clsValue += (entry as any).value;
+                metricsRef.current.cls = clsValue;
+              }
             }
           });
         });
@@ -93,8 +90,9 @@ export const PerformanceTracker: React.FC<PerformanceTrackerProps> = ({
         const navigationObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            const navEntry = entry as PerformanceNavigationTiming;
-            metricsRef.current.ttfb = navEntry.responseStart - navEntry.requestStart;
+            if (entry.entryType === 'navigation' && 'responseStart' in entry && 'requestStart' in entry) {
+              metricsRef.current.ttfb = (entry as any).responseStart - (entry as any).requestStart;
+            }
           });
         });
         navigationObserver.observe({ entryTypes: ['navigation'] });
