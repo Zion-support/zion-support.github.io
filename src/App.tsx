@@ -17,7 +17,7 @@ import EnhancedNotificationSystem from './components/EnhancedNotificationSystem'
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import { useSEOData, SEOOptimizer } from './components/SEOOptimizer';
+import { SEOOptimizer } from './components/SEOOptimizer';
 import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
@@ -41,18 +41,18 @@ export default function App(): React.JSX.Element {
     clicks: 0
   }), []);
 
-  // Simple SEO manager
-  const seoManager = useMemo(() => ({
-    updateMetaTags: (data: typeof seoData) => {
-      if (typeof document !== 'undefined') {
-        document.title = data.title;
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-          metaDescription.setAttribute('content', data.description);
-        }
-      }
-    }
-  }), []);
+  // Simple SEO manager (unused for now)
+  // const seoManager = useMemo(() => ({
+  //   updateMetaTags: (data: typeof seoData) => {
+  //     if (typeof document !== 'undefined') {
+  //       document.title = data.title;
+  //       const metaDescription = document.querySelector('meta[name="description"]');
+  //       if (metaDescription) {
+  //         metaDescription.setAttribute('content', data.description);
+  //       }
+  //     }
+  //   }
+  // }), []);
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -146,7 +146,7 @@ export default function App(): React.JSX.Element {
       enhancements.initialize();
       
       // Initialize individual enhancement systems
-      enhancedPerformanceMonitor.initialize();
+      enhancedPerformanceMonitor.startMonitoring();
       enhancedAnalytics.initialize();
       advancedCacheSystem.initialize();
       new AdvancedAutomationSystem().initialize();
@@ -158,9 +158,9 @@ export default function App(): React.JSX.Element {
     
     // Initialize analytics
     analytics.initialize();
-    seoAnalytics.initialize();
-    performanceSEO.initialize();
-    seoManager.initialize();
+    seoAnalytics.trackPageView(window.location.pathname);
+    performanceSEO.optimizeImages();
+    // seoManager doesn't have initialize method
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -366,7 +366,7 @@ export default function App(): React.JSX.Element {
         enableAccessibility
         maxNotifications={5}
       />
-      <SEOOptimizer />
+      <SEOOptimizer seoData={seoData} />
       <EnhancedAnalytics />
     </EnhancedErrorBoundary>
   );
