@@ -154,9 +154,9 @@ Please describe what you were doing when this error occurred:
   render(): ReactNode {
     if (this.state.hasError) {
       const canRetry = this.retryCount < this.maxRetries;
-      const timeSinceError = this.state.lastErrorTime 
-        ? Date.now() - this.state.lastErrorTime.getTime()
-        : 0;
+      // const timeSinceError = this.state.lastErrorTime 
+      //   ? Date.now() - this.state.lastErrorTime.getTime()
+      //   : 0;
 
       return (
         <div className="error-boundary">
@@ -164,7 +164,7 @@ Please describe what you were doing when this error occurred:
             <div className="error-icon">⚠️</div>
             <h2 className="error-title">Something went wrong</h2>
             <p className="error-description">
-              We're sorry, but something unexpected happened. Our team has been notified.
+              We&apos;re sorry, but something unexpected happened. Our team has been notified.
             </p>
             
             {process.env.NODE_ENV === 'development' && (

@@ -122,16 +122,16 @@ export const usePerformanceOptimization = (
     if (!configRef.current.enableImageOptimization) return src;
 
     const {
-      width,
-      height,
-      quality = 80,
-      format = 'webp'
+      // width,
+      // height,
+      // quality = 80,
+      // format = 'webp'
     } = options;
 
     // Check if browser supports WebP
-    const supportsWebP = document.createElement('canvas')
-      .toDataURL('image/webp')
-      .indexOf('data:image/webp') === 0;
+    // const supportsWebP = document.createElement('canvas')
+    //   .toDataURL('image/webp')
+    //   .indexOf('data:image/webp') === 0;
 
     // For now, return the original src
     // In a real implementation, this would integrate with an image optimization service
