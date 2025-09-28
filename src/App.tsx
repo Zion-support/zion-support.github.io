@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect, useMemo } from 'react';
+import React, { useCallback, useState, useEffect, useMemo, lazy, Suspense } from 'react';
 import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
@@ -6,12 +6,16 @@ import PerformanceTracker from './components/PerformanceTracker';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { performanceOptimizations } from './utils/bundleOptimization';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
-import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
-import SystemHealthDashboard from './components/SystemHealthDashboard';
 import './index.css';
+
+// Lazy load heavy components for better performance
+const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
+const KeyboardShortcutsHelp = lazy(() => import('./components/KeyboardShortcutsHelp'));
+const SystemHealthDashboard = lazy(() => import('./components/SystemHealthDashboard'));
+const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
 
 export default function App(): React.JSX.Element {
   // State for system dashboard
@@ -20,6 +24,7 @@ export default function App(): React.JSX.Element {
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
+  const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
 
   // Temporary placeholders
   const isLoading = false;
@@ -57,6 +62,20 @@ export default function App(): React.JSX.Element {
     try {
       // Initialize enhanced systems
       enhancedPerformanceMonitor.startMonitoring();
+      
+      // Initialize performance optimizations
+      performanceOptimizations.preloadCriticalResources();
+      performanceOptimizations.addResourceHints();
+      performanceOptimizations.optimizeServiceWorker();
+      
+      // Start memory optimization
+      const cleanupMemoryOptimization = performanceOptimizations.optimizeMemoryUsage();
+      
+      return () => {
+        if (cleanupMemoryOptimization) {
+          cleanupMemoryOptimization();
+        }
+      };
     } catch (error) {
       console.error('Error initializing enhancements:', error);
     }
@@ -75,6 +94,10 @@ export default function App(): React.JSX.Element {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'K') {
       event.preventDefault();
       setShowKeyboardHelp((prev: boolean) => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
+      event.preventDefault();
+      setShowPerformanceWidget((prev: boolean) => !prev);
     }
   }, []);
 
@@ -325,7 +348,9 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <EnhancedSystemDashboard />
+              <Suspense fallback={<ModernLoadingSpinner />}>
+                <EnhancedSystemDashboard />
+              </Suspense>
             </div>
           </div>
         )}
@@ -334,10 +359,12 @@ export default function App(): React.JSX.Element {
         <PerformanceTracker />
         
         {/* System Health Dashboard */}
-        <SystemHealthDashboard
-          isVisible={showSystemHealth}
-          onClose={() => setShowSystemHealth(false)}
-        />
+        <Suspense fallback={<ModernLoadingSpinner />}>
+          <SystemHealthDashboard
+            isVisible={showSystemHealth}
+            onClose={() => setShowSystemHealth(false)}
+          />
+        </Suspense>
 
         {/* New Components */}
         <NotificationSystem
@@ -345,10 +372,19 @@ export default function App(): React.JSX.Element {
           onRemove={(id) => setNotifications(prev => prev.filter(n => n.id !== id))}
         />
         
-        <KeyboardShortcutsHelp
-          isVisible={showKeyboardHelp}
-          onClose={() => setShowKeyboardHelp(false)}
-        />
+        <Suspense fallback={<ModernLoadingSpinner />}>
+          <KeyboardShortcutsHelp
+            isVisible={showKeyboardHelp}
+            onClose={() => setShowKeyboardHelp(false)}
+          />
+        </Suspense>
+
+        <Suspense fallback={<ModernLoadingSpinner />}>
+          <PerformanceWidget
+            isVisible={showPerformanceWidget}
+            onClose={() => setShowPerformanceWidget(false)}
+          />
+        </Suspense>
 
         {/* Theme Toggle Button */}
         <button
