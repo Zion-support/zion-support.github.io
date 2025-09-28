@@ -2,12 +2,29 @@
  * Error Recovery System
  */
 
-export class ErrorRecovery {
+export interface ErrorContext {
+  error: Error;
+  timestamp: number;
+  userAgent: string;
+  url: string;
+  stack?: string;
+}
+
+export interface RecoveryStrategy {
+  name: string;
+  condition: (error: Error) => boolean;
+  action: () => Promise<void>;
+}
+
+export class ErrorRecoverySystem {
   private errorCount = 0;
   private maxRetries = 3;
 
+  private strategies: RecoveryStrategy[] = [];
+
   constructor() {
     this.setupErrorHandling();
+    this.setupRecoveryStrategies();
   }
 
   private setupErrorHandling(): void {
@@ -22,24 +39,59 @@ export class ErrorRecovery {
     });
   }
 
+  private setupRecoveryStrategies(): void {
+    this.strategies = [
+      {
+        name: 'cache_clear',
+        condition: () => true,
+        action: async () => {
+          if ('caches' in window) {
+            const cacheNames = await caches.keys();
+            await Promise.all(cacheNames.map(name => caches.delete(name)));
+          }
+        }
+      },
+      {
+        name: 'page_reload',
+        condition: (error) => error.message.includes('chunk') || error.message.includes('loading'),
+        action: async () => {
+          window.location.reload();
+        }
+      }
+    ];
+  }
   private handleError(error: Error): void {
     console.error('Error Recovery - Error caught:', error);
     this.errorCount++;
 
+    const errorContext: ErrorContext = {
+      error,
+      timestamp: Date.now(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+      stack: error.stack
+    };
+
+    this.errorHistory.push(errorContext);
+
     if (this.errorCount <= this.maxRetries) {
-      this.attemptRecovery();
+      this.attemptRecovery(error);
     } else {
       this.showFallbackUI();
     }
   }
 
-  private async attemptRecovery(): Promise<void> {
+  private async attemptRecovery(error: Error): Promise<void> {
     console.log(`Attempting recovery (${this.errorCount}/${this.maxRetries})`);
     
-    // Clear caches
-    if ('caches' in window) {
-      const cacheNames = await caches.keys();
-      await Promise.all(cacheNames.map(name => caches.delete(name)));
+    // Find appropriate recovery strategy
+    const strategy = this.strategies.find(s => s.condition(error));
+    if (strategy) {
+      try {
+        await strategy.action();
+      } catch (recoveryError) {
+        console.error('Recovery failed:', recoveryError);
+      }
     }
 
     // Wait before retry
@@ -47,33 +99,53 @@ export class ErrorRecovery {
   }
 
   private showFallbackUI(): void {
-    const fallback = document.createElement('div');
-    fallback.innerHTML = `
-      <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-                  background: #f8f9fa; display: flex; align-items: center; 
-                  justify-content: center; z-index: 9999;">
-        <div style="text-align: center; padding: 2rem; background: white; 
-                    border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-          <h2 style="color: #dc3545;">Something went wrong</h2>
-          <p>Please refresh the page to continue.</p>
-          <button onclick="window.location.reload()" 
-                  style="background: #007bff; color: white; border: none; 
-                         padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">
-            Refresh Page
-          </button>
+    console.error('Max retries reached, showing fallback UI');
+    
+    // Create a simple fallback UI
+    const fallbackDiv = document.createElement('div');
+    fallbackDiv.innerHTML = `
+      <div style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        z-index: 9999;
+      ">
+        <div style="text-align: center; padding: 20px;">
+          <h1>Something went wrong</h1>
+          <p>We're having trouble loading the application.</p>
+          <button onclick="window.location.reload()" style="
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          ">Try Again</button>
         </div>
       </div>
     `;
-    document.body.appendChild(fallback);
+    document.body.appendChild(fallbackDiv);
   }
 
   public getErrorCount(): number {
     return this.errorCount;
   }
-
   public reset(): void {
     this.errorCount = 0;
+    this.errorHistory = [];
+  }
+
+  public addRecoveryStrategy(strategy: RecoveryStrategy): void {
+    this.recoveryStrategies.push(strategy);
   }
 }
 
-export const errorRecovery = new ErrorRecovery();
+export const errorRecoverySystem = new ErrorRecoverySystem();
+export const errorRecovery = errorRecoverySystem;
