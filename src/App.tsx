@@ -28,6 +28,9 @@ export default function App(): React.JSX.Element {
     enableCaching: true,
   });
 
+  // Get current pathname for SEO
+  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
+
   // Performance optimization hook
   const { preloadResource } = usePerformanceOptimization({
     enablePreloading: true,
@@ -48,17 +51,6 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
-  // Enhanced track engagement function
-  const enhancedTrackEngagement = useCallback(() => {
-    const timeOnPage = Date.now() - engagementData.startTime;
-    seoAnalytics.trackUserEngagement(window.location.pathname, {
-      timeOnPage,
-      scrollDepth: engagementData.scrollDepth,
-      clicks: engagementData.clicks,
-    });
-    // Also call the original trackEngagement from useAppInitialization
-    trackEngagement();
-  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -84,6 +76,17 @@ export default function App(): React.JSX.Element {
     }
   }), []);
 
+  // Enhanced track engagement function
+  const enhancedTrackEngagement = useCallback(() => {
+    const timeOnPage = Date.now() - engagementData.startTime;
+    seoAnalytics.trackUserEngagement(window.location.pathname, {
+      timeOnPage,
+      scrollDepth: engagementData.scrollDepth,
+      clicks: engagementData.clicks,
+    });
+    // Also call the original trackEngagement from useAppInitialization
+    trackEngagement();
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -161,6 +164,7 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
+      <SEOOptimizer seoData={seoData} />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
