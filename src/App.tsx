@@ -16,6 +16,7 @@ const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDa
 const KeyboardShortcutsHelp = lazy(() => import('./components/KeyboardShortcutsHelp'));
 const SystemHealthDashboard = lazy(() => import('./components/SystemHealthDashboard'));
 const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
+const CommandPalette = lazy(() => import('./components/CommandPalette'));
 
 export default function App(): React.JSX.Element {
   // State for system dashboard
@@ -25,6 +26,7 @@ export default function App(): React.JSX.Element {
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
+  const [showCommandPalette, setShowCommandPalette] = useState(false);
 
   // Temporary placeholders
   const isLoading = false;
@@ -98,6 +100,10 @@ export default function App(): React.JSX.Element {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
       event.preventDefault();
       setShowPerformanceWidget((prev: boolean) => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
+      event.preventDefault();
+      setShowCommandPalette((prev: boolean) => !prev);
     }
   }, []);
 
@@ -327,6 +333,14 @@ export default function App(): React.JSX.Element {
           />
         </Suspense>
 
+        <Suspense fallback={<ModernLoadingSpinner />}>
+          <CommandPalette
+            isVisible={showCommandPalette}
+            onClose={() => setShowCommandPalette(false)}
+            commands={commandPaletteCommands}
+          />
+        </Suspense>
+
         {/* Theme Toggle Button */}
         <button
           onClick={() => setIsDarkMode(!isDarkMode)}
@@ -342,6 +356,7 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+D: System Dashboard</div>
           <div>Ctrl+Shift+H: System Health</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
+          <div>Ctrl+K: Command Palette</div>
           <div>Click Theme Button: Toggle Theme</div>
         </div>
       </div>
