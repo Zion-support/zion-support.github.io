@@ -70,17 +70,23 @@ export interface PerformanceMetrics {
   fid: number;
   cls: number;
   ttfb: number;
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  bundleSize: number;
-  cacheHitRate: number;
+  loadTime?: number;
+  renderTime?: number;
+  memoryUsage?: number;
+  bundleSize?: number;
+  cacheHitRate?: number;
+  memory?: {
+    used: number;
+    total: number;
+    limit: number;
+  };
+  connection?: string;
 }
 
 // Optimization Suggestion Types
 export interface OptimizationSuggestion {
   id: string;
-  type: 'performance' | 'seo' | 'accessibility' | 'security';
+  type: 'performance' | 'seo' | 'accessibility' | 'security' | 'critical' | 'warning';
   title: string;
   description: string;
   impact: 'high' | 'medium' | 'low';
@@ -89,6 +95,9 @@ export interface OptimizationSuggestion {
   actionable: boolean;
   implementation?: string;
   resources?: string[];
+  message?: string;
+  action?: string;
+  category?: string;
 }
 
 // SEO Audit Types
