@@ -206,7 +206,7 @@ Disallow: /api/
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
-            const fid = (entry as any).processingStart - entry.startTime;
+            const fid = (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime;
             console.log('FID:', fid);
           }
         }
@@ -216,8 +216,8 @@ Disallow: /api/
       new PerformanceObserver((list) => {
         let clsValue = 0;
         for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+          if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {
+            clsValue += (entry as PerformanceEntry & { value: number }).value;
           }
         }
         if (clsValue > 0) {
