@@ -106,6 +106,18 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
     }, 100);
   }, [recordMetric, engagementData.clicks]);
 
+  // Track engagement function
+  const trackEngagement = useCallback(() => {
+    const timeOnPage = Date.now() - engagementData.startTime;
+    if (enableAnalytics) {
+      seoAnalytics.trackUserEngagement(window.location.pathname, {
+        timeOnPage,
+        scrollDepth: engagementData.scrollDepth,
+        clicks: engagementData.clicks,
+      });
+    }
+  }, [engagementData, enableAnalytics]);
+
   // Initialize core systems
   const initializeCoreSystems = useCallback(async () => {
     try {
@@ -307,16 +319,6 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
     document.addEventListener('click', handleClick, { passive: true });
 
     // Track engagement on page unload
-    const trackEngagement = () => {
-      const timeOnPage = Date.now() - engagementData.startTime;
-      if (enableAnalytics) {
-        seoAnalytics.trackUserEngagement(window.location.pathname, {
-          timeOnPage,
-          scrollDepth: engagementData.scrollDepth,
-          clicks: engagementData.clicks,
-        });
-      }
-    };
 
     window.addEventListener('beforeunload', trackEngagement);
 
@@ -337,7 +339,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
       // Final engagement tracking
       trackEngagement();
     };
-  }, [initializeCoreSystems, initializeAdvancedSystems, handleScroll, handleClick, engagementData, enableAnalytics]);
+  }, [initializeCoreSystems, initializeAdvancedSystems, handleScroll, handleClick, engagementData, enableAnalytics, trackEngagement]);
 
   return {
     isLoading,
@@ -345,6 +347,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
     engagementData,
     seoData,
     handleScroll,
-    handleClick
+    handleClick,
+    trackEngagement
   };
 }

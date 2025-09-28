@@ -1,21 +1,34 @@
-import React, { useMemo, useEffect, useCallback } from 'react';
+import React, { useMemo, useEffect, useCallback, useState } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
-import { analytics } from './utils/analytics';
-import { seoOptimizer } from './utils/seoOptimization';
-import { cacheManager } from './utils/cacheManager';
-import { apiClient } from './utils/apiClient';
-import { notificationManager } from './utils/notificationManager';
-import { userFeedback } from './utils/userFeedbackManager';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
+import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import './index.css';
+import './styles/notifications.css';
+import './styles/system-metrics.css';
+import './styles/modern-utilities.css';
+
+// Import utility modules
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+import { analytics } from './utils/analytics';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAnalytics } from './utils/enhancedAnalytics';
+import { advancedCacheSystem } from './utils/advancedCacheSystem';
+import { advancedAutomationSystem } from './utils/advancedAutomationSystem';
+import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
+import { SecurityEnhancer } from './utils/securityEnhancer';
+import AdvancedPerformanceMonitor from './utils/advancedPerformanceMonitor';
+
 export default function App(): React.JSX.Element {
+  // State for system dashboard and performance optimizer
+  const [showSystemDashboard, setShowSystemDashboard] = useState(false);
+  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+
   // Initialize app with custom configuration
-  const { isLoading, loadingProgress, engagementData, handleScroll, handleClick } = useAppInitialization({
+  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSecurity: true,
@@ -33,19 +46,25 @@ export default function App(): React.JSX.Element {
 
   // Initialize comprehensive enhancements
   useEffect(() => {
-    const enhancements = getComprehensiveEnhancements({
-      enableAdvancedPerformance: true,
-      enableSecurityFeatures: true,
-      enableAccessibilityFeatures: true,
-      enableSEOFeatures: true,
-      enableUXFeatures: true,
-      enableAnalytics: true,
-      enableOfflineSupport: true,
-      enablePWA: true
-    });
-
-    // Store enhancements globally for debugging
-    (window as Record<string, unknown>).enhancements = enhancements;
+    // Initialize enhanced systems
+    enhancedPerformanceMonitor.startMonitoring();
+    enhancedAnalytics.initialize();
+    advancedCacheSystem.initialize();
+    advancedAutomationSystem.start();
+    
+    // Initialize accessibility and security enhancers
+    const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
+    const securityEnhancer = SecurityEnhancer.getInstance();
+    
+    // Store enhancers globally for debugging
+    (window as Record<string, unknown>).enhancements = {
+      accessibilityEnhancer,
+      securityEnhancer,
+      enhancedPerformanceMonitor,
+      enhancedAnalytics,
+      advancedCacheSystem,
+      advancedAutomationSystem
+    };
   }, []);
 
   // Optimized keyboard handler for system dashboard toggle
@@ -70,6 +89,18 @@ export default function App(): React.JSX.Element {
     twitterCard: 'summary_large_image' as const
   }), []);
 
+  // Simple SEO manager
+  const seoManager = {
+    updateMetaTags: (data: typeof seoData) => {
+      if (typeof document !== 'undefined') {
+        document.title = data.title;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+          metaDescription.setAttribute('content', data.description);
+        }
+      }
+    }
+  };
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -88,76 +119,20 @@ export default function App(): React.JSX.Element {
     performanceSEO.preloadCriticalResources();
     performanceSEO.optimizeFonts();
     
-    // Advanced performance optimizer is now handled by the new utility
-
     // Initialize analytics system
     analytics.initialize();
     analytics.trackPageView();
 
-    // Initialize enhanced SEO optimizer
-    seoOptimizer.updatePageSEO({
-      title: seoData.title,
-      description: seoData.description,
-      keywords: seoData.keywords,
-      image: seoData.ogImage,
-      url: window.location.href,
-      type: seoData.ogType as 'website' | 'article' | 'product'
-    });
-
-    // Initialize enhanced security features
-    // const securityManagerInstance = SecurityManager.getInstance();
-    // securityManagerInstance.monitorSecurityEvents();
-
-    // Initialize cache manager
-    cacheManager.configure({
-      maxSize: 100,
-      ttl: 10 * 60 * 1000, // 10 minutes
-      storageType: 'localStorage',
-      enableCompression: true,
-      enableEncryption: false
-    });
-
-    // Initialize API client
-    apiClient.configure({
-      baseURL: '/api',
-      timeout: 30000,
-      retries: 3,
-      enableCaching: true,
-      enableLogging: process.env.NODE_ENV === 'development'
-    });
-
-    // Initialize notification manager
-    notificationManager.configure({
-      position: 'top-right',
-      duration: 5000,
-      maxNotifications: 5,
-      enableSound: true,
-      enableVibration: true,
-      enableBrowserNotifications: true,
-      theme: 'auto'
-    });
-
-    // Show welcome notification
-    notificationManager.info('Welcome to Zion Tech Group', 'Your advanced technology solutions platform is ready!');
-
-    // Show welcome feedback
-    userFeedback.showSuccess(
-      'Welcome!',
-      'Zion Tech Group is now ready with enhanced performance optimizations and user experience features.'
-    );
-
-    // Preload critical resources
-    preloadResource('/og-image.png', 'image');
-    preloadResource('/favicon.ico', 'image');
-
-    // Set default SEO data
-    seoManager.updateSEO(seoData);
-
+    // Set default SEO data using the correct method
+    seoManager.updateMetaTags(seoData);
+    
+    // Add keyboard event listener
+    document.addEventListener('keydown', handleKeyDown);
 
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-  }, [seoData, handleScroll, handleClick, preloadResource]);
+  }, [handleClick, handleKeyDown, handleScroll, seoData, preloadResource, seoManager]);
 
   // Add keyboard event listener
   React.useEffect(() => {
@@ -167,17 +142,6 @@ export default function App(): React.JSX.Element {
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [handleKeyDown]);
-
-  // Track engagement function
-  const trackEngagement = useCallback(() => {
-    const timeOnPage = Date.now() - engagementData.startTime;
-    seoAnalytics.trackUserEngagement(window.location.pathname, {
-      timeOnPage,
-      scrollDepth: engagementData.scrollDepth,
-      clicks: engagementData.clicks,
-    });
-  }, [engagementData]);
-
   // Main initialization and cleanup effect
   React.useEffect(() => {
     // Track engagement on page unload
@@ -211,12 +175,36 @@ export default function App(): React.JSX.Element {
   // Cleanup function for event listeners
   useEffect(() => {
     return () => {
+      document.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('beforeunload', trackEngagement);
+      
+      // Cleanup new utilities
+      const advancedPerformanceMonitor = AdvancedPerformanceMonitor.getInstance();
+      advancedPerformanceMonitor.stopMonitoring();
+      
+      const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
+      accessibilityEnhancer.cleanup();
+      
+      const securityEnhancer = SecurityEnhancer.getInstance();
+      securityEnhancer.cleanup();
+      
+      // Cleanup enhanced systems
+      enhancedPerformanceMonitor.stopMonitoring();
+      enhancedAnalytics.endSession();
+      
+      // Cleanup advanced systems
+      advancedCacheSystem.clear();
+      advancedAutomationSystem.stop();
+      
+      // Final engagement tracking
+      trackEngagement();
+      
+      // Remove event listeners
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [trackEngagement, handleScroll, handleClick, handleKeyDown]);
+  }, [seoData, handleKeyDown, handleScroll, handleClick, trackEngagement]);
 
   // Show loading screen while initializing
   if (isLoading) {
@@ -233,6 +221,20 @@ export default function App(): React.JSX.Element {
     <EnhancedErrorBoundary>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
+        
+        {/* System Dashboard */}
+        {showSystemDashboard && (
+          <EnhancedSystemDashboard
+            onClose={() => setShowSystemDashboard(false)}
+          />
+        )}
+        
+        {/* Performance Optimizer */}
+        {showPerformanceOptimizer && (
+          <PerformanceOptimizer
+            onClose={() => setShowPerformanceOptimizer(false)}
+          />
+        )}
       </div>
     </EnhancedErrorBoundary>
   );
