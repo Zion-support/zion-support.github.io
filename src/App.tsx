@@ -118,20 +118,36 @@ export default function App(): React.JSX.Element {
 
   // Track engagement function (enhanced version)
   const enhancedTrackEngagement = useCallback(() => {
-    const timeOnPage = Date.now() - engagementData.startTime;
-    seoAnalytics.trackUserEngagement(window.location.pathname, {
-      timeOnPage,
-      scrollDepth: engagementData.scrollDepth,
-      clicks: engagementData.clicks,
-    });
-    // Also call the original trackEngagement from useAppInitialization
-    trackEngagement();
+    try {
+      const timeOnPage = Date.now() - engagementData.startTime;
+      seoAnalytics.trackUserEngagement(window.location.pathname, {
+        timeOnPage,
+        scrollDepth: engagementData.scrollDepth,
+        clicks: engagementData.clicks,
+      });
+      // Also call the original trackEngagement from useAppInitialization
+      trackEngagement();
+    } catch (error) {
+      console.warn('Failed to track engagement:', error);
+    }
   }, [engagementData, trackEngagement]);
 
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
+      
+      // Add performance observer for better monitoring
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'navigation') {
+              console.log('Navigation timing:', entry);
+            }
+          }
+        });
+        observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
+      }
     }
     
     // Preload critical resources
