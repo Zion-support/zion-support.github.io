@@ -5,11 +5,6 @@ import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-import { seoOptimizer } from './utils/seoOptimization';
-import { cacheManager } from './utils/cacheManager';
-import { apiClient } from './utils/apiClient';
-import { notificationManager } from './utils/notificationManager';
-import { userFeedback } from './utils/userFeedbackManager';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import './index.css';
@@ -98,54 +93,6 @@ export default function App(): React.JSX.Element {
 
     // Initialize analytics system
     analytics.trackPageView();
-
-    // Initialize enhanced SEO optimizer
-    seoOptimizer.updatePageSEO({
-      title: seoData.title,
-      description: seoData.description,
-      keywords: seoData.keywords,
-      image: seoData.ogImage,
-      url: window.location.href,
-      type: seoData.ogType as 'website' | 'article' | 'product'
-    });
-
-    // Initialize cache manager
-    cacheManager.configure({
-      maxSize: 100,
-      ttl: 10 * 60 * 1000, // 10 minutes
-      storageType: 'localStorage',
-      enableCompression: true,
-      enableEncryption: false
-    });
-
-    // Initialize API client
-    apiClient.configure({
-      baseURL: '/api',
-      timeout: 30000,
-      retries: 3,
-      enableCaching: true,
-      enableLogging: process.env.NODE_ENV === 'development'
-    });
-
-    // Initialize notification manager
-    notificationManager.configure({
-      position: 'top-right',
-      duration: 5000,
-      maxNotifications: 5,
-      enableSound: true,
-      enableVibration: true,
-      enableBrowserNotifications: true,
-      theme: 'auto'
-    });
-
-    // Show welcome notification
-    notificationManager.info('Welcome to Zion Tech Group', 'Your advanced technology solutions platform is ready!');
-
-    // Show welcome feedback
-    userFeedback.showSuccess(
-      'Welcome!',
-      'Zion Tech Group is now ready with enhanced performance optimizations and user experience features.'
-    );
 
     // Set default SEO data
     seoManager.updateMetaTags(seoData);
