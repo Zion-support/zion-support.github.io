@@ -92,7 +92,7 @@ export class AdvancedDataVisualization {
     this.container = container;
     this.charts.set(containerId, {
       render: () => {},
-      update: (_data: DataPoint[]) => {},
+      update: () => {},
       destroy: () => {},
       data,
       options,
@@ -113,7 +113,7 @@ export class AdvancedDataVisualization {
     this.container = container;
     this.charts.set(containerId, {
       render: () => {},
-      update: (_data: DataPoint[]) => {},
+      update: () => {},
       destroy: () => {},
       data,
       options,
@@ -134,7 +134,7 @@ export class AdvancedDataVisualization {
     this.container = container;
     this.charts.set(containerId, {
       render: () => {},
-      update: (_data: DataPoint[]) => {},
+      update: () => {},
       destroy: () => {},
       data,
       options,
@@ -155,7 +155,7 @@ export class AdvancedDataVisualization {
     this.container = container;
     this.charts.set(containerId, {
       render: () => {},
-      update: (_data: DataPoint[]) => {},
+      update: () => {},
       destroy: () => {},
       data,
       options,
@@ -176,7 +176,7 @@ export class AdvancedDataVisualization {
     this.container = container;
     this.charts.set(containerId, {
       render: () => {},
-      update: (_data: DataPoint[]) => {},
+      update: () => {},
       destroy: () => {},
       data,
       options,

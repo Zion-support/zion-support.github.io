@@ -1,4 +1,4 @@
-// interface AnalyticsEvent {
+interface AnalyticsEvent {
   action: string;
   category: string;
   label?: string;
