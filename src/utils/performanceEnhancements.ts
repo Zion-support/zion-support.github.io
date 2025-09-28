@@ -63,16 +63,15 @@ class PerformanceEnhancer {
    */
   private setupPerformanceMonitoring(): void {
     // Monitor Core Web Vitals
-    try {
-      const { getCLS, getFID, getFCP, getLCP, getTTFB } = require('web-vitals');
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
       getCLS(this.handleWebVital);
       getFID(this.handleWebVital);
       getFCP(this.handleWebVital);
       getLCP(this.handleWebVital);
       getTTFB(this.handleWebVital);
-    } catch (error) {
+    }).catch((error) => {
       console.warn('Web Vitals not available:', error);
-    }
+    });
 
     // Monitor memory usage
     if ('memory' in performance) {

@@ -6,8 +6,8 @@ global.fetch = jest.fn();
 
 // Mock window.location to prevent navigation errors
 // Use delete and redefine approach for JSDOM compatibility
-delete (window as any).location;
-(window as any).location = {
+delete (window as unknown as { location: Location }).location;
+(window as unknown as { location: Location }).location = {
   pathname: '/',
   href: 'http://localhost:3000/',
   assign: jest.fn(),
