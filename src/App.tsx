@@ -29,6 +29,8 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
+  const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
+
   // Engagement tracking data
   const engagementData = useMemo(() => ({
     startTime: Date.now(),
@@ -46,28 +48,13 @@ export default function App(): React.JSX.Element {
     enableCaching: true,
   });
 
-  // Performance optimization hook
-  const { preloadResource } = usePerformanceOptimization({
-    enablePreloading: true,
-    enableResourceHints: true,
-    enableCriticalCSS: true,
-    enableImageOptimization: true,
-  });
+  // Get current pathname for SEO
+  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
 
-  // Enhanced keyboard handler for all dashboard toggles
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey) {
-      event.preventDefault();
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
-      event.preventDefault();
-      setShowAIDashboard((prev: boolean) => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowPerformanceMonitor(prev => !prev);
-    }
-  }, []);
+  // Get SEO data using current pathname
+  const seoData = useSEOData(currentPathname);
+
+  // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
     seoAnalytics.trackUserEngagement(window.location.pathname, {
@@ -77,73 +64,93 @@ export default function App(): React.JSX.Element {
     });
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
+
+  // Memoize the SEO data to prevent unnecessary re-renders
+  const memoizedSeoData = useMemo(() => ({
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology'],
+    canonical: `https://zion.app${currentPathname}`,
+    ogTitle: 'Zion Tech Group - AI & Technology Solutions',
+    ogDescription: 'Transform your business with cutting-edge AI and technology solutions.',
+    ogImage: 'https://zion.app/og-image.jpg',
+    twitterCard: 'summary_large_image',
+    twitterTitle: 'Zion Tech Group - AI & Technology Solutions',
+    twitterDescription: 'Transform your business with cutting-edge AI and technology solutions.',
+    twitterImage: 'https://zion.app/twitter-image.jpg'
+  }), [currentPathname]);
+
+  // Performance optimization hook
+  const { optimizePerformance, clearCache, getPerformanceMetrics } = usePerformanceOptimization();
+
   // Update meta tags function
-  const updateMetaTags = useCallback((data: {
-    title: string;
-    description: string;
-    keywords: string[];
-    ogType: string;
-    ogUrl: string;
-    ogImage: string;
-    twitterCard: string;
-  }) => {
-    if (typeof window !== 'undefined') {
-      // Update title
-      document.title = data.title;
-      
-      // Update meta description
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
-      }
-      if (metaDescription) {
-        metaDescription.setAttribute('content', data.description);
-      }
+  const updateMetaTags = useCallback((data: typeof memoizedSeoData) => {
+    if (typeof document === 'undefined') return;
+
+    // Update title
+    document.title = data.title;
+
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', data.description);
+    }
+
+    // Update meta keywords
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', data.keywords.join(', '));
+    }
+
+    // Update canonical URL
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', data.canonical);
+
+    // Update Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', data.ogTitle);
+    }
+
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', data.ogDescription);
+    }
+
+    const ogImage = document.querySelector('meta[property="og:image"]');
+    if (ogImage) {
+      ogImage.setAttribute('content', data.ogImage);
+    }
+
+    // Update Twitter Card tags
+    const twitterCard = document.querySelector('meta[name="twitter:card"]');
+    if (twitterCard) {
+      twitterCard.setAttribute('content', data.twitterCard);
+    }
+
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle) {
+      twitterTitle.setAttribute('content', data.twitterTitle);
+    }
+
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    if (twitterDescription) {
+      twitterDescription.setAttribute('content', data.twitterDescription);
+    }
+
+    const twitterImage = document.querySelector('meta[name="twitter:image"]');
+    if (twitterImage) {
+      twitterImage.setAttribute('content', data.twitterImage);
     }
   }, []);
 
-  // Initialize comprehensive enhancements
-  useEffect(() => {
-    const enhancements = getComprehensiveEnhancements();
-    // Remove the initialize call since it's private
-    
-    // Initialize individual enhancement systems
-    // Remove initialize calls for classes that don't have this method
-    new AccessibilityEnhancer().initialize();
-    // Add performance marks for better monitoring
-    if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
-      performance.mark('app-init-start');
-    }
-    
-    // Preload critical resources
-    preloadResource('/og-image.png', 'image');
-    preloadResource('/favicon.ico', 'image');
-
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
-    document.addEventListener('keydown', handleKeyDown);
-
-    
-    // Initialize SEO analytics
-    seoAnalytics.trackPageView(window.location.pathname);
-    
-    // Initialize performance SEO optimizations
-    performanceSEO.optimizeImages();
-    performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
-
-    // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
-
-    // Update meta tags
-    updateMetaTags(seoData);
-    // Basic performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized');
-    }
+  // Main initialization and cleanup effect
+  React.useEffect(() => {
     // Track engagement on page unload
     window.addEventListener('beforeunload', enhancedTrackEngagement);
 
@@ -160,40 +167,72 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('beforeunload', enhancedTrackEngagement);
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
-      document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [trackEngagement, handleKeyDown, handleScroll, handleClick, enhancedTrackEngagement, seoData, preloadResource]);
+  }, [handleScroll, handleClick, enhancedTrackEngagement]);
+
+  // SEO and performance effect
+  React.useEffect(() => {
+    // Update meta tags
+    updateMetaTags(memoizedSeoData);
+    
+    // Basic performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('🚀 Zion Tech Group App initialized');
+    }
+  }, [memoizedSeoData, updateMetaTags]);
+
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Ctrl+Shift+D for System Dashboard
+      if (event.ctrlKey && event.shiftKey && event.key === 'D') {
+        event.preventDefault();
+        setShowSystemDashboard(!showSystemDashboard);
+      }
+      // Ctrl+Shift+P for Performance Optimizer
+      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
+        event.preventDefault();
+        setShowPerformanceOptimizer(!showPerformanceOptimizer);
+      }
+      // Ctrl+Shift+M for Performance Monitor
+      if (event.ctrlKey && event.shiftKey && event.key === 'M') {
+        event.preventDefault();
+        setShowPerformanceMonitor(!showPerformanceMonitor);
+      }
+      // Ctrl+Shift+A for AI Dashboard
+      if (event.ctrlKey && event.shiftKey && event.key === 'A') {
+        event.preventDefault();
+        setShowAIDashboard(!showAIDashboard);
+      }
+      // Ctrl+Shift+S for SEO Optimizer
+      if (event.ctrlKey && event.shiftKey && event.key === 'S') {
+        event.preventDefault();
+        setShowSEOOptimizer(!showSEOOptimizer);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer]);
 
   if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-        <ModernLoadingSpinner
-          size="xl"
-          variant="primary"
-          text="Initializing Zion Tech Group..."
-          showProgress
-          progress={loadingProgress}
-          className="animate-fade-in-scale"
-        />
-      </div>
-    );
+    return <ModernLoadingSpinner progress={loadingProgress} />;
   }
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer seoData={seoData} />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="app">
         <AppRouter />
         
-        {/* System Dashboard */}
+        {/* System Dashboard - Toggle with Ctrl+Shift+D */}
         {showSystemDashboard && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">System Dashboard</h2>
+                <h2 className="text-2xl font-bold">System Dashboard</h2>
                 <button
                   onClick={() => setShowSystemDashboard(false)}
-                  className="text-gray-500 hover:text-gray-700"
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
                 >
                   ✕
                 </button>
@@ -203,15 +242,15 @@ export default function App(): React.JSX.Element {
           </div>
         )}
 
-        {/* Performance Optimizer */}
+        {/* Performance Optimizer - Toggle with Ctrl+Shift+P */}
         {showPerformanceOptimizer && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
+                <h2 className="text-2xl font-bold">Performance Optimizer</h2>
                 <button
                   onClick={() => setShowPerformanceOptimizer(false)}
-                  className="text-gray-500 hover:text-gray-700"
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
                 >
                   ✕
                 </button>
@@ -221,15 +260,15 @@ export default function App(): React.JSX.Element {
           </div>
         )}
 
-        {/* Performance Monitor */}
+        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
         {showPerformanceMonitor && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">Performance Monitor</h2>
+                <h2 className="text-2xl font-bold">Performance Monitor</h2>
                 <button
                   onClick={() => setShowPerformanceMonitor(false)}
-                  className="text-gray-500 hover:text-gray-700"
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
                 >
                   ✕
                 </button>
@@ -238,10 +277,26 @@ export default function App(): React.JSX.Element {
             </div>
           </div>
         )}
+
+        {/* SEO Optimizer - Toggle with Ctrl+Shift+S */}
+        {showSEOOptimizer && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold">SEO Optimizer</h2>
+                <button
+                  onClick={() => setShowSEOOptimizer(false)}
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
+                >
+                  ✕
+                </button>
+              </div>
+              <SEOOptimizer />
+            </div>
+          </div>
+        )}
         
         {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
-
-        {/* AI Performance Dashboard */}
         <AIPerformanceDashboard
           isVisible={showAIDashboard}
           onClose={() => setShowAIDashboard(false)}
