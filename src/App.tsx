@@ -197,7 +197,7 @@ export default function App(): React.JSX.Element {
     
     // Initialize new enhancement utilities
     console.log('Initializing performance enhancements...');
-    // performanceEnhancer.initialize(); // Initialize is called in constructor
+    // performanceEnhancer.initialize(); // Commented out due to private method
     performanceEnhancer.optimizeBundle();
     performanceEnhancer.preloadResource('/static/js/main.js', 'script');
     
@@ -329,19 +329,15 @@ export default function App(): React.JSX.Element {
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-  }, []);
+  }, [seoData]);
 
   // Add keyboard event listener
   React.useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
-    
-    // Cleanup function
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
+    return () => document.removeEventListener('keydown', handleKeyDown);
   }, [handleKeyDown]);
 
-  // Main app initialization and cleanup effect
+  // Main initialization and cleanup effect
   React.useEffect(() => {
     // Track engagement on page unload
     window.addEventListener('beforeunload', trackEngagement);
@@ -388,7 +384,7 @@ export default function App(): React.JSX.Element {
       // Final engagement tracking
       trackEngagement();
     };
-  }, [preloadResource, recordMetric, seoData, engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, handleClick, handleKeyDown, handleScroll]);
+  }, [trackEngagement]);
 
   // Show loading screen while initializing
   if (isLoading) {
