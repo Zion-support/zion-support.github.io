@@ -1,4 +1,4 @@
-/// <reference path="../types/global.d.ts" />
+// Enhanced monitoring types are defined in global.d.ts
 /**
  * Enhanced Monitoring and Analytics System
  * Provides comprehensive monitoring, error tracking, and performance analytics
