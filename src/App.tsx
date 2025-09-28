@@ -22,8 +22,8 @@ import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
-// import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
-// import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
+import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
+import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
@@ -234,8 +234,8 @@ export default function App(): React.JSX.Element {
       performanceMonitor.initialize();
       
       // Initialize performance and accessibility enhancements
-      // initializePerformanceEnhancements();
-      // initializeAccessibilityEnhancements();
+      initializePerformanceEnhancements();
+      initializeAccessibilityEnhancements();
       
       // Initialize SEO analytics
       seoAnalytics.trackPageView(window.location.pathname);
