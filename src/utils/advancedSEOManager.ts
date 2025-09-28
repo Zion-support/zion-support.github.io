@@ -3,6 +3,8 @@
  * Comprehensive SEO optimization and management system for the Zion Tech Group website
  */
 
+import { SEOIssue } from '../types/comprehensive';
+
 export interface SEOData {
   title: string;
   description: string;
@@ -45,12 +47,6 @@ export interface SEOAuditResult {
   metrics: SEOMetrics;
 }
 
-export interface SEOIssue {
-  type: 'error' | 'warning' | 'info';
-  message: string;
-  element?: string;
-  suggestion?: string;
-}
 
 export interface SEOMetrics {
   titleLength: number;

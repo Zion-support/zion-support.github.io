@@ -2,7 +2,7 @@
 
 /**
  * Performance Optimization Script
- * Automatically optimizes the application for better performance
+ * Analyzes and optimizes the build output for better performance
  */
 
 import fs from 'fs';
@@ -14,229 +14,120 @@ const __dirname = path.dirname(__filename);
 
 console.log('🚀 Starting performance optimization...');
 
-// 1. Optimize bundle size by analyzing imports
-function optimizeImports() {
-  console.log('📦 Optimizing imports...');
+// Analyze bundle sizes
+function analyzeBundleSizes() {
+  const distPath = path.join(__dirname, '../dist');
+  const assetsPath = path.join(distPath, 'assets');
   
-  const srcDir = path.join(__dirname, '../src');
-  const files = getAllFiles(srcDir, ['.ts', '.tsx']);
+  if (!fs.existsSync(assetsPath)) {
+    console.log('❌ No dist/assets directory found. Run build first.');
+    return;
+  }
+
+  const jsPath = path.join(assetsPath, 'js');
+  const cssPath = path.join(assetsPath, 'css');
+
+  console.log('\n📊 Bundle Analysis:');
   
-  let optimizations = 0;
-  
-  files.forEach(file => {
-    let content = fs.readFileSync(file, 'utf8');
-    let modified = false;
+  if (fs.existsSync(jsPath)) {
+    const jsFiles = fs.readdirSync(jsPath);
+    let totalJsSize = 0;
     
-    // Remove unused imports
-    const importRegex = /import\s+.*?from\s+['"][^'"]+['"];?\s*\n/g;
-    const imports = content.match(importRegex) || [];
-    
-    imports.forEach(importStatement => {
-      // Check if import is actually used
-      const importName = importStatement.match(/import\s+{([^}]+)}/);
-      if (importName) {
-        const importedItems = importName[1].split(',').map(item => item.trim());
-        const unusedItems = importedItems.filter(item => {
-          const itemName = item.split(' as ')[0].trim();
-          const regex = new RegExp(`\\b${itemName}\\b`, 'g');
-          const matches = content.match(regex) || [];
-          return matches.length <= 1; // Only appears in import statement
-        });
-        
-        if (unusedItems.length > 0) {
-          const usedItems = importedItems.filter(item => !unusedItems.includes(item));
-          if (usedItems.length > 0) {
-            const newImport = importStatement.replace(
-              /{([^}]+)}/,
-              `{${usedItems.join(', ')}}`
-            );
-            content = content.replace(importStatement, newImport);
-            modified = true;
-            optimizations++;
-          } else {
-            content = content.replace(importStatement, '');
-            modified = true;
-            optimizations++;
-          }
-        }
-      }
+    console.log('\n📦 JavaScript bundles:');
+    jsFiles.forEach(file => {
+      const filePath = path.join(jsPath, file);
+      const stats = fs.statSync(filePath);
+      const sizeKB = (stats.size / 1024).toFixed(2);
+      totalJsSize += stats.size;
+      console.log(`  ${file}: ${sizeKB} KB`);
     });
     
-    if (modified) {
-      fs.writeFileSync(file, content);
-    }
-  });
-  
-  console.log(`✅ Optimized ${optimizations} import statements`);
-}
-
-// 2. Optimize images and assets
-function optimizeAssets() {
-  console.log('🖼️ Optimizing assets...');
-  
-  const publicDir = path.join(__dirname, '../public');
-  const distDir = path.join(__dirname, '../dist');
-  
-  // Create optimized asset manifest
-  const assetManifest = {
-    images: [],
-    fonts: [],
-    scripts: [],
-    styles: []
-  };
-  
-  // Scan for assets
-  if (fs.existsSync(publicDir)) {
-    const publicFiles = getAllFiles(publicDir, ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp']);
-    assetManifest.images = publicFiles.map(file => path.relative(publicDir, file));
-  }
-  
-  if (fs.existsSync(distDir)) {
-    const distFiles = getAllFiles(distDir, ['.js', '.css', '.woff', '.woff2', '.ttf']);
-    distFiles.forEach(file => {
-      const ext = path.extname(file);
-      const relativePath = path.relative(distDir, file);
-      
-      if (['.woff', '.woff2', '.ttf'].includes(ext)) {
-        assetManifest.fonts.push(relativePath);
-      } else if (ext === '.js') {
-        assetManifest.scripts.push(relativePath);
-      } else if (ext === '.css') {
-        assetManifest.styles.push(relativePath);
-      }
-    });
-  }
-  
-  // Write asset manifest
-  fs.writeFileSync(
-    path.join(__dirname, '../public/asset-manifest.json'),
-    JSON.stringify(assetManifest, null, 2)
-  );
-  
-  console.log('✅ Created asset manifest');
-}
-
-// 3. Generate performance report
-function generatePerformanceReport() {
-  console.log('📊 Generating performance report...');
-  
-  const report = {
-    timestamp: new Date().toISOString(),
-    optimizations: {
-      importsOptimized: 0,
-      assetsOptimized: 0,
-      bundleSize: 0,
-      warningsReduced: 0
-    },
-    recommendations: [
-      'Enable gzip compression on server',
-      'Implement service worker for caching',
-      'Use CDN for static assets',
-      'Optimize images with WebP format',
-      'Implement lazy loading for images',
-      'Use code splitting for large components'
-    ]
-  };
-  
-  // Calculate bundle size
-  const distDir = path.join(__dirname, '../dist');
-  if (fs.existsSync(distDir)) {
-    const files = getAllFiles(distDir, ['.js', '.css']);
-    report.optimizations.bundleSize = files.reduce((total, file) => {
-      const stats = fs.statSync(file);
-      return total + stats.size;
-    }, 0);
-  }
-  
-  fs.writeFileSync(
-    path.join(__dirname, '../performance-report.json'),
-    JSON.stringify(report, null, 2)
-  );
-  
-  console.log('✅ Performance report generated');
-}
-
-// Helper function to get all files with specific extensions
-function getAllFiles(dir, extensions) {
-  let files = [];
-  
-  if (!fs.existsSync(dir)) return files;
-  
-  const items = fs.readdirSync(dir);
-  
-  items.forEach(item => {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
+    console.log(`\n📈 Total JS size: ${(totalJsSize / 1024).toFixed(2)} KB`);
     
-    if (stat.isDirectory()) {
-      files = files.concat(getAllFiles(fullPath, extensions));
-    } else if (extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath);
-    }
-  });
-  
-  return files;
-}
-
-// 4. Optimize CSS
-function optimizeCSS() {
-  console.log('🎨 Optimizing CSS...');
-  
-  const cssFiles = getAllFiles(path.join(__dirname, '../src'), ['.css']);
-  let optimizations = 0;
-  
-  cssFiles.forEach(file => {
-    let content = fs.readFileSync(file, 'utf8');
-    let modified = false;
+    // Identify large chunks
+    const largeChunks = jsFiles
+      .map(file => ({
+        name: file,
+        size: fs.statSync(path.join(jsPath, file)).size
+      }))
+      .filter(chunk => chunk.size > 100 * 1024) // > 100KB
+      .sort((a, b) => b.size - a.size);
     
-    // Remove unused CSS rules (basic implementation)
-    const rules = content.match(/[^{}]+{[^{}]*}/g) || [];
-    
-    rules.forEach(rule => {
-      const selector = rule.split('{')[0].trim();
-      
-      // Skip keyframes and media queries
-      if (selector.includes('@') || selector.includes('keyframes')) {
-        return;
-      }
-      
-      // Check if selector is used in components
-      const srcDir = path.join(__dirname, '../src');
-      const componentFiles = getAllFiles(srcDir, ['.tsx', '.ts']);
-      
-      const isUsed = componentFiles.some(componentFile => {
-        const componentContent = fs.readFileSync(componentFile, 'utf8');
-        return componentContent.includes(selector.replace(/[.#]/g, ''));
+    if (largeChunks.length > 0) {
+      console.log('\n⚠️  Large chunks (>100KB):');
+      largeChunks.forEach(chunk => {
+        console.log(`  ${chunk.name}: ${(chunk.size / 1024).toFixed(2)} KB`);
       });
-      
-      if (!isUsed) {
-        content = content.replace(rule, '');
-        modified = true;
-        optimizations++;
-      }
+    }
+  }
+
+  if (fs.existsSync(cssPath)) {
+    const cssFiles = fs.readdirSync(cssPath);
+    let totalCssSize = 0;
+    
+    console.log('\n🎨 CSS bundles:');
+    cssFiles.forEach(file => {
+      const filePath = path.join(cssPath, file);
+      const stats = fs.statSync(filePath);
+      const sizeKB = (stats.size / 1024).toFixed(2);
+      totalCssSize += stats.size;
+      console.log(`  ${file}: ${sizeKB} KB`);
     });
     
-    if (modified) {
-      fs.writeFileSync(file, content);
-    }
-  });
+    console.log(`\n📈 Total CSS size: ${(totalCssSize / 1024).toFixed(2)} KB`);
+  }
+}
+
+// Generate performance recommendations
+function generateRecommendations() {
+  console.log('\n💡 Performance Recommendations:');
+  console.log('1. Enable gzip compression on your server');
+  console.log('2. Implement lazy loading for non-critical components');
+  console.log('3. Use CDN for static assets');
+  console.log('4. Optimize images (WebP format, proper sizing)');
+  console.log('5. Implement service worker for caching');
+  console.log('6. Use tree shaking to remove unused code');
+  console.log('7. Consider code splitting for large dependencies');
+  console.log('8. Implement preloading for critical resources');
+}
+
+// Check for unused dependencies
+function checkUnusedDependencies() {
+  console.log('\n🔍 Checking for potential optimizations...');
   
-  console.log(`✅ Optimized ${optimizations} CSS rules`);
+  const packageJsonPath = path.join(__dirname, '../package.json');
+  if (fs.existsSync(packageJsonPath)) {
+    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+    const dependencies = Object.keys(packageJson.dependencies || {});
+    
+    console.log(`\n📦 Dependencies (${dependencies.length}):`);
+    dependencies.forEach(dep => {
+      console.log(`  - ${dep}`);
+    });
+    
+    console.log('\n💡 Consider:');
+    console.log('- Review if all dependencies are actually used');
+    console.log('- Check for duplicate functionality across packages');
+    console.log('- Consider lighter alternatives for heavy dependencies');
+  }
 }
 
 // Main execution
-async function main() {
+function main() {
   try {
-    optimizeImports();
-    optimizeAssets();
-    optimizeCSS();
-    generatePerformanceReport();
+    analyzeBundleSizes();
+    generateRecommendations();
+    checkUnusedDependencies();
     
-    console.log('🎉 Performance optimization completed successfully!');
-    console.log('📈 Check performance-report.json for detailed results');
+    console.log('\n✅ Performance optimization analysis complete!');
+    console.log('\n🚀 Next steps:');
+    console.log('1. Review the bundle analysis above');
+    console.log('2. Implement the recommended optimizations');
+    console.log('3. Rebuild and measure improvements');
+    console.log('4. Test performance with Lighthouse');
     
   } catch (error) {
-    console.error('❌ Error during optimization:', error);
+    console.error('❌ Error during optimization analysis:', error.message);
     process.exit(1);
   }
 }
@@ -247,8 +138,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export {
-  optimizeImports,
-  optimizeAssets,
-  optimizeCSS,
-  generatePerformanceReport
+  analyzeBundleSizes,
+  generateRecommendations,
+  checkUnusedDependencies
 };

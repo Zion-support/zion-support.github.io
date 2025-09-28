@@ -128,8 +128,8 @@ class EnhancedSecuritySystem {
       
       // Monitor script tag creation
       if (tagName.toLowerCase() === 'script') {
-        const securitySystem = (window as Record<string, unknown>).__securitySystem;
-        if (securitySystem) {
+        const securitySystem = (window as any).__securitySystem;
+        if (securitySystem && typeof securitySystem.logSecurityEvent === 'function') {
           securitySystem.logSecurityEvent({
             type: 'xss_attempt',
             severity: 'high',
@@ -149,9 +149,10 @@ class EnhancedSecuritySystem {
     if (originalInnerHTML) {
       Object.defineProperty(Element.prototype, 'innerHTML', {
         set: function(value: string) {
-          const securitySystem = (window as Record<string, unknown>).__securitySystem;
-          if (securitySystem && securitySystem.detectSuspiciousContent(value)) {
-            securitySystem.logSecurityEvent({
+          const securitySystem = (window as any).__securitySystem;
+          if (securitySystem && typeof securitySystem.detectSuspiciousContent === 'function' && securitySystem.detectSuspiciousContent(value)) {
+            if (typeof securitySystem.logSecurityEvent === 'function') {
+              securitySystem.logSecurityEvent({
               type: 'xss_attempt',
               severity: 'high',
               message: 'Suspicious content detected in innerHTML',
@@ -160,6 +161,7 @@ class EnhancedSecuritySystem {
               userAgent: navigator.userAgent,
               metadata: { content: value.substring(0, 100) }
             });
+            }
           }
           originalInnerHTML.set?.call(this, value);
         },
@@ -168,7 +170,7 @@ class EnhancedSecuritySystem {
     }
 
     // Store reference for monitoring
-    (window as Record<string, unknown>).__securitySystem = this;
+    (window as any).__securitySystem = this;
   }
 
   /**

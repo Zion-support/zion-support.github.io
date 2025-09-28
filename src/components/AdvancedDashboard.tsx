@@ -10,13 +10,13 @@ interface PerformanceData {
   memoryLimit: number;
 }
 
-interface AnalyticsEvent {
-  name?: string;
-  type?: string;
-  timestamp?: number;
-  properties?: Record<string, unknown>;
-  data?: Record<string, unknown>;
-}
+// interface AnalyticsEvent {
+//   name?: string;
+//   type?: string;
+//   timestamp?: number;
+//   properties?: Record<string, unknown>;
+//   data?: Record<string, unknown>;
+// }
 
 interface AccessibilityData {
   features: string;

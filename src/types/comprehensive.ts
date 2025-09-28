@@ -24,27 +24,33 @@ export interface NotificationAction {
 
 // Performance Report Types
 export interface PerformanceReport {
-  lcp: number;
-  fcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  bundleSize: number;
-  cacheHitRate: number;
+  timestamp: Date;
+  metrics: {
+    lcp: number;
+    fcp: number;
+    fid: number;
+    cls: number;
+    ttfb: number;
+    loadTime?: number;
+    renderTime?: number;
+    memoryUsage?: number;
+    bundleSize?: number;
+    cacheHitRate?: number;
+  };
   alerts: PerformanceAlert[];
-  recommendations: PerformanceRecommendation[];
+  recommendations: string[];
+  score: number;
 }
 
 export interface PerformanceAlert {
+  id: string;
   type: 'warning' | 'error' | 'info';
-  message: string;
   metric: string;
-  value: number;
   threshold: number;
-  timestamp: number;
+  currentValue: number;
+  message: string;
+  timestamp: Date;
+  resolved: boolean;
 }
 
 export interface PerformanceRecommendation {
@@ -52,7 +58,7 @@ export interface PerformanceRecommendation {
   priority: 'high' | 'medium' | 'low';
   title: string;
   description: string;
-  impact: string;
+  impact: 'low' | 'medium' | 'high';
   effort: 'low' | 'medium' | 'high';
   implementation?: string;
 }
@@ -89,14 +95,14 @@ export interface OptimizationSuggestion {
 export interface SEOAuditResult {
   score: number;
   issues: SEOIssue[];
-  recommendations: PerformanceRecommendation[];
-  metadata: {
+  recommendations: string[];
+  metadata?: {
     title: string;
     description: string;
     keywords: string[];
     canonical: string;
   };
-  technical: {
+  technical?: {
     robotsTxt: boolean;
     sitemap: boolean;
     structuredData: boolean;
@@ -106,13 +112,14 @@ export interface SEOAuditResult {
 
 export interface SEOIssue {
   type: 'error' | 'warning' | 'info';
-  category: string;
+  category?: string;
   message: string;
   element?: string;
   line?: number;
   column?: number;
-  impact: 'high' | 'medium' | 'low';
+  impact?: 'high' | 'medium' | 'low';
   fix?: string;
+  suggestion?: string;
 }
 
 // Cache Stats Types
@@ -122,8 +129,9 @@ export interface CacheStats {
   size: number;
   maxSize: number;
   hitRate: number;
-  lastAccessed: number;
-  entries: number;
+  entryCount: number;
+  oldestEntry: number;
+  newestEntry: number;
 }
 
 // Monitoring Dashboard Types
@@ -169,7 +177,7 @@ export interface DataPoint {
 export interface ChartData {
   name: string;
   data: DataPoint[];
-  type: 'line' | 'bar' | 'pie' | 'area';
+  type: 'line' | 'bar' | 'pie' | 'area' | 'scatter';
   color?: string;
 }
 
@@ -182,12 +190,16 @@ export interface VisualizationOptions {
   showGrid?: boolean;
   colors?: string[];
   animation?: boolean;
+  showDataLabels?: boolean;
+  xAxisLabel?: string;
+  yAxisLabel?: string;
 }
 
 export interface StoredChart {
   data: ChartData;
   options: VisualizationOptions;
   container: HTMLElement;
+  type?: 'line' | 'bar' | 'pie' | 'area' | 'scatter';
 }
 
 // Analytics Types

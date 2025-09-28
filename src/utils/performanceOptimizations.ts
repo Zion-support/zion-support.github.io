@@ -53,7 +53,7 @@ class PerformanceOptimizer {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
-          this.metrics.loadTime = entry.loadEventEnd - entry.fetchStart;
+          this.metrics.loadTime = (entry as any).loadEventEnd - (entry as any).fetchStart;
         }
       });
     });
@@ -190,6 +190,182 @@ Performance Report:
 - Bundle Size: ${metrics.bundleSize}KB
 - Cache Hit Rate: ${metrics.cacheHitRate.toFixed(2)}%
     `.trim();
+  }
+
+  /**
+   * Optimize CSS delivery
+   */
+  optimizeCSSDelivery(): void {
+    const criticalCSS = document.querySelector('style[data-critical]');
+    if (criticalCSS) {
+      // Inline critical CSS is already present
+      return;
+    }
+
+    // Load non-critical CSS asynchronously
+    const nonCriticalCSS = document.querySelectorAll('link[rel="stylesheet"][data-non-critical]');
+    nonCriticalCSS.forEach((link) => {
+      link.setAttribute('media', 'print');
+      link.onload = () => {
+        link.setAttribute('media', 'all');
+      };
+    });
+  }
+
+  /**
+   * Optimize JavaScript execution
+   */
+  optimizeJavaScriptExecution(): void {
+    // Defer non-critical JavaScript
+    const scripts = document.querySelectorAll('script[data-defer]');
+    scripts.forEach((script) => {
+      if (!script.hasAttribute('defer')) {
+        script.setAttribute('defer', '');
+      }
+    });
+
+    // Use requestIdleCallback for non-urgent tasks
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => {
+        this.optimizeImages();
+        this.preloadCriticalResources();
+      });
+    } else {
+      // Fallback for browsers without requestIdleCallback
+      setTimeout(() => {
+        this.optimizeImages();
+        this.preloadCriticalResources();
+      }, 100);
+    }
+  }
+
+  /**
+   * Implement resource hints
+   */
+  addResourceHints(): void {
+    const hints = [
+      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: '//cdn.jsdelivr.net' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
+    ];
+
+    hints.forEach((hint) => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      document.head.appendChild(link);
+    });
+  }
+
+  /**
+   * Optimize third-party scripts
+   */
+  optimizeThirdPartyScripts(): void {
+    // Load analytics scripts after page load
+    const analyticsScripts = document.querySelectorAll('script[data-analytics]');
+    analyticsScripts.forEach((script) => {
+      script.setAttribute('defer', '');
+    });
+
+    // Use intersection observer for tracking scripts
+    if ('IntersectionObserver' in window) {
+      const trackingElements = document.querySelectorAll('[data-tracking]');
+      const trackingObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Trigger tracking only when element is visible
+            const element = entry.target as HTMLElement;
+            const event = element.dataset.tracking;
+            if (event && typeof gtag !== 'undefined') {
+              gtag('event', event);
+            }
+          }
+        });
+      });
+
+      trackingElements.forEach((element) => trackingObserver.observe(element));
+    }
+  }
+
+  /**
+   * Implement advanced caching strategies
+   */
+  implementAdvancedCaching(): void {
+    if (!this.config.enableCaching) return;
+
+    // Cache API responses
+    const cacheName = 'zion-website-cache-v1';
+    
+    if ('caches' in window) {
+      caches.open(cacheName).then((cache) => {
+        // Cache static assets
+        const staticAssets = [
+          '/',
+          '/assets/css/main.css',
+          '/assets/js/main.js',
+          '/manifest.json',
+        ];
+
+        cache.addAll(staticAssets).catch((error) => {
+          console.warn('Failed to cache static assets:', error);
+        });
+      });
+    }
+  }
+
+  /**
+   * Monitor and optimize Core Web Vitals
+   */
+  monitorCoreWebVitals(): void {
+    if (typeof window === 'undefined') return;
+
+    // Monitor Largest Contentful Paint (LCP)
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      console.log('LCP:', lastEntry.startTime);
+    });
+
+    // Monitor First Input Delay (FID)
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        console.log('FID:', entry.processingStart - entry.startTime);
+      });
+    });
+
+    // Monitor Cumulative Layout Shift (CLS)
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
+        }
+      });
+      console.log('CLS:', clsValue);
+    });
+
+    try {
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+    } catch (error) {
+      console.warn('Core Web Vitals monitoring not supported:', error);
+    }
+  }
+
+  /**
+   * Initialize all optimizations
+   */
+  initializeOptimizations(): void {
+    this.optimizeCSSDelivery();
+    this.optimizeJavaScriptExecution();
+    this.addResourceHints();
+    this.optimizeThirdPartyScripts();
+    this.implementAdvancedCaching();
+    this.monitorCoreWebVitals();
   }
 
   /**

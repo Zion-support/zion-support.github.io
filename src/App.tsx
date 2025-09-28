@@ -136,6 +136,32 @@ export default function App(): React.JSX.Element {
         });
     }
   }, [addNotification]);
+
+  // Initialize performance optimizations
+  useEffect(() => {
+    // Initialize all performance optimizations
+    performanceOptimizer.initializeOptimizations();
+    
+    // Enable caching
+    performanceOptimizer.enableCaching();
+    
+    // Optimize images
+    performanceOptimizer.optimizeImages();
+    
+    // Preload critical resources
+    performanceOptimizer.preloadCriticalResources();
+    
+    // Add resource hints
+    performanceOptimizer.addResourceHints();
+    
+    // Optimize third-party scripts
+    performanceOptimizer.optimizeThirdPartyScripts();
+    
+    // Monitor Core Web Vitals
+    performanceOptimizer.monitorCoreWebVitals();
+    
+    console.log('Performance optimizations initialized');
+  }, []);
   
   const handleScroll = useCallback(() => {
     // Track scroll depth for analytics
