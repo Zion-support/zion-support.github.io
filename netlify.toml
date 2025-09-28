@@ -44,6 +44,7 @@
   command = "pnpm install && pnpm run build:no-check"
   publish = "dist"
   command_timeout = "30m"
+  functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "22.16.0"
