@@ -14,6 +14,16 @@ interface PerformanceMetrics {
   [key: string]: unknown;
 }
 
+interface AIInsights {
+  predictedHighRiskActions: string[];
+  recommendedImprovements: string[];
+  errorTrends: Array<{
+    category: string;
+    trend: 'increasing' | 'decreasing' | 'stable';
+  }>;
+  [key: string]: unknown;
+}
+
 interface ErrorReport {
   id: string;
   message: string;
@@ -249,8 +259,8 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                       <div key={report.id} className="bg-white p-4 rounded border">
                         <div className="flex justify-between items-start mb-2">
                           <div className="flex items-center space-x-2">
-                            <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity)}`}>
-                              {String(report.severity).toUpperCase()}
+                            <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(report.severity || 'unknown')}`}>
+                              {(report.severity || 'unknown').toUpperCase()}
                             </span>
                             {report.aiPredictedImpact && (
                               <span className={`text-sm font-medium ${getImpactColor(report.aiPredictedImpact)}`}>

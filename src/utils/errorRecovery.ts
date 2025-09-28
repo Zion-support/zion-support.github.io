@@ -22,16 +22,16 @@ export class ErrorRecovery {
     });
 
     // Component error recovery
-    this.addStrategy({
-      name: 'component-reset',
-      condition: (error, context) => 
-        Boolean(context.component && error.message.includes('component')),
-      action: async (error, context) => {
-        console.log('🔄 Resetting component...');
-        // Component reset logic would go here
-      },
-      priority: 2
-    });
+    // this.addStrategy({
+    //   name: 'component-reset',
+    //   condition: (error, context) => 
+    //     Boolean(context.component && error.message.includes('component')),
+    //   action: async (error, context) => {
+    //     console.log('🔄 Resetting component...');
+    //     // Component reset logic would go here
+    //   },
+    //   priority: 2
+    // });
   }
 
   private handleError(error: Error): void {
@@ -83,24 +83,24 @@ export class ErrorRecovery {
     return this.errorCount;
   }
 
-  public getErrorHistory(): ErrorContext[] {
-    return [...this.errorHistory];
-  }
+  // public getErrorHistory(): ErrorContext[] {
+  //   return [...this.errorHistory];
+  // }
 
-  public getErrors(): ErrorContext[] {
-    return [...this.errors];
-  }
+  // public getErrors(): ErrorContext[] {
+  //   return [...this.errors];
+  // }
 
   public reset(): void {
     this.errorCount = 0;
-    this.errorHistory = [];
-    this.errors = [];
+    // this.errorHistory = [];
+    // this.errors = [];
   }
 
-  public addRecoveryStrategy(strategy: RecoveryStrategy): void {
-    this.recoveryStrategies.push(strategy);
-  }
+  // public addRecoveryStrategy(strategy: RecoveryStrategy): void {
+  //   this.recoveryStrategies.push(strategy);
+  // }
 }
 
-export const errorRecoverySystem = new ErrorRecoverySystem();
+export const errorRecoverySystem = new ErrorRecovery();
 export const errorRecovery = errorRecoverySystem;

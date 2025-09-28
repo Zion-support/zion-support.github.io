@@ -40,12 +40,19 @@ import SystemHealthDashboard from './components/SystemHealthDashboard';
 import './index.css';
 
 export default function App(): React.JSX.Element {
+  // Mock SEO data for components
+  const seoData = {
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of AI-powered IT solutions and innovative technology services',
+    keywords: ['AI', 'IT Solutions', 'Technology', 'Innovation']
+  };
+
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
-  const [showAdvancedDashboard] = useState(false);
+  const [showAdvancedDashboard, setShowAdvancedDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
@@ -227,6 +234,12 @@ export default function App(): React.JSX.Element {
       if (accessibilityEnhancer && typeof accessibilityEnhancer.initialize === 'function') {
         accessibilityEnhancer.initialize();
       }
+      enhancedSecurityManager.initialize();
+      // new AdvancedAutomationSystem().initialize();
+      // Initialize enhancement systems
+      // new AccessibilityEnhancer();
+      // new SecurityEnhancer();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2233
       
       // Initialize analytics
       if ('initialize' in analytics) {
@@ -582,7 +595,7 @@ export default function App(): React.JSX.Element {
         />
 
         {/* Advanced Performance Dashboard */}
-        <AdvancedPerformanceDashboard
+        <AIPerformanceDashboard
           isVisible={showAdvancedDashboard}
           onClose={() => setShowAdvancedDashboard(false)}
         />
@@ -652,7 +665,7 @@ export default function App(): React.JSX.Element {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span>Memory Usage:</span>
-                <span className="text-green-400">{Math.round(((performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
+                <span className="text-green-400">{Math.round(((performance as Performance & { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
               </div>
               <div className="flex justify-between">
                 <span>Render Time:</span>
