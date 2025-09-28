@@ -9,7 +9,7 @@ import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import SEOOptimizer, { useSEOData } from './components/SEOOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 // Removed unused imports to fix linting warnings
 import './index.css';
@@ -40,8 +40,8 @@ export default function App(): React.JSX.Element {
     enableCaching: true,
   });
 
-  // Get current pathname for SEO
-  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
+  // Get current pathname for SEO (removed unused variable)
+  // const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
 
   // Performance optimization hook
   const { preloadResource } = usePerformanceOptimization({
