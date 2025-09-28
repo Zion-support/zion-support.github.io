@@ -30,7 +30,7 @@ interface MonitoringConfig {
   endpoint: string;
 }
 
-interface LayoutShift extends PerformanceEntry {
+interface LayoutShiftEntry extends PerformanceEntry {
   hadRecentInput: boolean;
   value: number;
 }
