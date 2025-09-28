@@ -23,6 +23,7 @@ import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
+import PerformanceTracker from './components/PerformanceTracker';
 import { getNotificationManager } from './utils/advancedNotifications';
 import { getThemeManager } from './utils/themeManager';
 import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
@@ -91,6 +92,7 @@ export default function App(): React.JSX.Element {
   // Get SEO data using current pathname
   const seoData = useSEOData(currentPathname);
 
+<<<<<<< HEAD
   // Command palette commands
   const commandPaletteCommands = useMemo(() => [
     {
@@ -152,6 +154,11 @@ export default function App(): React.JSX.Element {
   ], []);
 
   // Optimized keyboard handler for system dashboard toggle - removed unused function
+=======
+  // Command palette commands (removed to reduce warnings)
+
+  // Optimized keyboard handler for system dashboard toggle (commented out to reduce warnings)
+>>>>>>> 8f31276972406891e28b4609e6555eec8bab76ce
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
@@ -430,7 +437,7 @@ export default function App(): React.JSX.Element {
     };
 
     const handleClickWithEngagement = (event: Event) => {
-      handleClick(event);
+      handleClick();
       trackEngagement();
     };
 
