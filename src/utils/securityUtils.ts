@@ -95,7 +95,9 @@ class SecurityUtils {
       Object.defineProperty(Element.prototype, 'innerHTML', {
         set: function(value) {
           const sanitized = this.sanitizeHTML(value);
-          originalInnerHTML.set?.call(this, sanitized);
+          if (originalInnerHTML.set) {
+            originalInnerHTML.set.call(this, sanitized);
+          }
         },
         get: originalInnerHTML.get
       });

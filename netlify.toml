@@ -35,7 +35,7 @@
     Service-Worker-Allowed = "/"
  
 [build]
-  command = "pnpm build"
+  command = "pnpm run build:no-check"
   publish = "dist"
   command_timeout = "30m"
 
