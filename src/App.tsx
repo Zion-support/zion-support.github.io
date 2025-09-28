@@ -660,10 +660,6 @@ export default function App(): React.JSX.Element {
     }
   }, [trackEngagement, handleKeyDown, handleScroll, handleClick]);
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth, showPerformanceMetrics]);
-
 
   // Track engagement on scroll and click
   useEffect(() => {
