@@ -1,154 +1,175 @@
 /**
- * Error Recovery System
- */
-
-export class ErrorRecovery {
-  private errorCount = 0;
-  private maxRetries = 3;
-
-  constructor() {
-    this.setupErrorHandling();
-  }
-
-  private setupErrorHandling(): void {
-    if (typeof window === 'undefined') return;
-
-    window.addEventListener('error', (event) => {
-      this.handleError(event.error || new Error(event.message));
-    });
-
-    window.addEventListener('unhandledrejection', (event) => {
-      this.handleError(event.reason instanceof Error ? event.reason : new Error(String(event.reason)));
-    });
-  }
-
-  private handleError(error: Error): void {
-    console.error('Error Recovery - Error caught:', error);
-    this.errorCount++;
-
-    if (this.errorCount <= this.maxRetries) {
-      this.attemptRecovery();
-    } else {
-      this.showFallbackUI();
-    }
-  }
-
-  private async attemptRecovery(): Promise<void> {
-    console.log(`Attempting recovery (${this.errorCount}/${this.maxRetries})`);
-    
-    // Clear caches
-    if ('caches' in window) {
-      const cacheNames = await caches.keys();
-      await Promise.all(cacheNames.map(name => caches.delete(name)));
-    }
-
-    // Wait before retry
-    await new Promise(resolve => setTimeout(resolve, 1000 * this.errorCount));
-  }
-
-  private showFallbackUI(): void {
-    const fallback = document.createElement('div');
-    fallback.innerHTML = `
-      <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-                  background: #f8f9fa; display: flex; align-items: center; 
-                  justify-content: center; z-index: 9999;">
-        <div style="text-align: center; padding: 2rem; background: white; 
-                    border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-          <h2 style="color: #dc3545;">Something went wrong</h2>
-          <p>Please refresh the page to continue.</p>
-          <button onclick="window.location.reload()" 
-                  style="background: #007bff; color: white; border: none; 
-                         padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">
-            Refresh Page
-          </button>
-        </div>
-      </div>
-    `;
-    document.body.appendChild(fallback);
-  }
-
-  public getErrorCount(): number {
-    return this.errorCount;
-  }
-
-  public reset(): void {
-    this.errorCount = 0;
-  }
-}
-
-export const errorRecoverySystem = new ErrorRecovery();
-export const errorRecovery = errorRecoverySystem;
-
-/**
  * Advanced Error Recovery System
  * Provides comprehensive error handling and recovery mechanisms
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3daa
  */
 
-export class ErrorRecovery {
+interface ErrorContext {
+  component: string;
+  action: string;
+  timestamp: number;
+  userAgent: string;
+  url: string;
+  stack?: string;
+}
+
+interface RecoveryStrategy {
+  name: string;
+  condition: (error: Error, context: ErrorContext) => boolean;
+  action: (error: Error, context: ErrorContext) => void;
+  priority: number;
+}
+
+export class ErrorRecoverySystem {
+  private errorHistory: Error[] = [];
+  private recoveryStrategies: RecoveryStrategy[] = [];
+  private maxHistorySize = 100;
   private errorCount = 0;
   private maxRetries = 3;
 
   constructor() {
     this.setupErrorHandling();
+    this.initializeRecoveryStrategies();
   }
 
   private setupErrorHandling(): void {
     if (typeof window === 'undefined') return;
 
     window.addEventListener('error', (event) => {
-      this.handleError(event.error || new Error(event.message));
+      this.handleError(event.error || new Error(event.message), {
+        component: 'Global',
+        action: 'error',
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
+        url: window.location.href,
+        stack: event.error?.stack
+      });
     });
 
     window.addEventListener('unhandledrejection', (event) => {
-      this.handleError(event.reason instanceof Error ? event.reason : new Error(String(event.reason)));
+      this.handleError(new Error(event.reason), {
+        component: 'Global',
+        action: 'unhandledrejection',
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
+        url: window.location.href
+      });
     });
   }
 
-  private handleError(error: Error): void {
-    console.error('Error Recovery - Error caught:', error);
+  private initializeRecoveryStrategies(): void {
+    this.recoveryStrategies = [
+      {
+        name: 'ChunkLoadError Recovery',
+        condition: (error, context) => 
+          error.message.includes('ChunkLoadError') || error.message.includes('Loading chunk'),
+        action: (error, context) => {
+          console.log('Attempting chunk load recovery');
+          window.location.reload();
+        },
+        priority: 1
+      },
+      {
+        name: 'Network Error Recovery',
+        condition: (error, context) => 
+          error.message.includes('NetworkError') || error.message.includes('fetch'),
+        action: (error, context) => {
+          console.log('Attempting network error recovery');
+          setTimeout(() => {
+            this.errorCount = 0;
+          }, 2000);
+        },
+        priority: 2
+      },
+      {
+        name: 'Component Error Recovery',
+        condition: (error, context) => 
+          Boolean(context.component && error.message.includes('component')),
+        action: (error, context) => {
+          console.log(`Attempting component recovery for ${context.component}`);
+          // Component-specific recovery logic
+        },
+        priority: 3
+      },
+      {
+        name: 'Memory Error Recovery',
+        condition: (error, context) => 
+          error.message.includes('out of memory') || error.message.includes('Memory'),
+        action: (error, context) => {
+          console.log('Attempting memory error recovery');
+          // Clear caches, reduce memory usage
+          if ('caches' in window) {
+            caches.keys().then(names => {
+              names.forEach(name => caches.delete(name));
+            });
+          }
+        },
+        priority: 4
+      },
+      {
+        name: 'Fallback Recovery',
+        condition: () => true, // Always matches as fallback
+        action: (error, context) => {
+          console.log('Applying fallback recovery');
+          // Generic fallback recovery
+        },
+        priority: 999
+      }
+    ];
+  }
+
+  public handleError(error: Error, context: ErrorContext): void {
+    console.error('Error caught by recovery system:', error, context);
+    
+    this.addToHistory(error);
     this.errorCount++;
 
     if (this.errorCount <= this.maxRetries) {
-      this.attemptRecovery();
+      this.attemptRecovery(error, context);
     } else {
-      this.showFallbackUI();
+      this.reportCriticalError(error, context);
     }
   }
 
-  private async attemptRecovery(): Promise<void> {
-    console.log(`Attempting recovery (${this.errorCount}/${this.maxRetries})`);
+  private addToHistory(error: Error): void {
+    this.errorHistory.push(error);
+    if (this.errorHistory.length > this.maxHistorySize) {
+      this.errorHistory.shift();
+    }
+  }
+
+  private attemptRecovery(error: Error, context: ErrorContext): void {
+    console.log(`Attempting recovery for error: ${error.message}`);
     
-    // Clear caches
-    if ('caches' in window) {
-      const cacheNames = await caches.keys();
-      await Promise.all(cacheNames.map(name => caches.delete(name)));
-    }
+    // Find applicable recovery strategies
+    const applicableStrategies = this.recoveryStrategies
+      .filter(strategy => strategy.condition(error, context))
+      .sort((a, b) => a.priority - b.priority);
 
-    // Wait before retry
-    await new Promise(resolve => setTimeout(resolve, 1000 * this.errorCount));
+    // Execute the first applicable strategy
+    if (applicableStrategies.length > 0) {
+      const strategy = applicableStrategies[0];
+      console.log(`Executing recovery strategy: ${strategy.name}`);
+      strategy.action(error, context);
+    }
   }
 
-  private showFallbackUI(): void {
-    const fallback = document.createElement('div');
-    fallback.innerHTML = `
-      <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-                  background: #f8f9fa; display: flex; align-items: center; 
-                  justify-content: center; z-index: 9999;">
-        <div style="text-align: center; padding: 2rem; background: white; 
-                    border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-          <h2 style="color: #dc3545;">Something went wrong</h2>
-          <p>Please refresh the page to continue.</p>
-          <button onclick="window.location.reload()" 
-                  style="background: #007bff; color: white; border: none; 
-                         padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">
-            Refresh Page
-          </button>
-        </div>
-      </div>
-    `;
-    document.body.appendChild(fallback);
+  private reportCriticalError(error: Error, context: ErrorContext): void {
+    console.error('Critical error after max retries:', error, context);
+    
+    // Send error to monitoring service
+    if (typeof window !== 'undefined' && 'navigator' in window) {
+      // In a real implementation, you would send this to your monitoring service
+      console.error('Sending critical error to monitoring service:', {
+        error: error.message,
+        stack: error.stack,
+        context,
+        timestamp: new Date().toISOString()
+      });
+    }
+  }
+
+  public getErrorHistory(): Error[] {
+    return [...this.errorHistory];
   }
 
   public getErrorCount(): number {
@@ -158,12 +179,12 @@ export class ErrorRecovery {
   public reset(): void {
     this.errorCount = 0;
   }
+
+  public clearHistory(): void {
+    this.errorHistory = [];
+  }
 }
 
-<<<<<<< HEAD
 export const errorRecoverySystem = new ErrorRecoverySystem();
-export type { ErrorContext, RecoveryStrategy };
-=======
-export const errorRecoverySystem = new ErrorRecovery();
 export const errorRecovery = errorRecoverySystem;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3daa
+export type { ErrorContext, RecoveryStrategy };

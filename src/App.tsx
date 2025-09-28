@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect } from 'react';
+import React, { useCallback, useState, useEffect, useMemo } from 'react';
 import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
@@ -28,6 +28,7 @@ import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
+import PerformanceTracker from './components/PerformanceTracker';
 import { getNotificationManager } from './utils/advancedNotifications';
 import { getThemeManager } from './utils/themeManager';
 import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
@@ -57,11 +58,17 @@ export default function App(): React.JSX.Element {
   // });
 
   // Engagement tracking data
-  // const engagementData = useMemo(() => ({
-  //   startTime: Date.now(),
-  //   scrollDepth: 0,
-  //   clicks: 0
-  // }), []);
+  const engagementData = useMemo(() => ({
+    startTime: Date.now(),
+    scrollDepth: 0,
+    clicks: 0
+  }), []);
+
+  // Missing state variables
+  const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
+  const [showComprehensivePerformance, setShowComprehensivePerformance] = useState(false);
+  const [showAdvancedSEO, setShowAdvancedSEO] = useState(false);
+  const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
 
   // Initialize app with custom configuration
   // Temporarily disable useAppInitialization to fix build
@@ -77,7 +84,7 @@ export default function App(): React.JSX.Element {
   const isLoading = false;
   const loadingProgress = 100;
   const handleScroll = useCallback(() => {}, []);
-  const handleClick = useCallback(() => {}, []);
+  const handleClick = useCallback((event: Event) => {}, []);
   const trackEngagement = useCallback(() => {}, []);
 
   // Performance optimization hook - Temporarily disabled
