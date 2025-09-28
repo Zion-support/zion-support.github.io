@@ -73,7 +73,7 @@ import { securityUtils } from './utils/securityUtils';
 // import { useAppInitialization } from './hooks/useAppInitialization';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
-import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
 import { advancedSecurityManager } from './utils/advancedSecurityManager';
@@ -195,7 +195,7 @@ export default function App(): React.JSX.Element {
       
       // Initialize new performance and accessibility enhancements
       initializePerformanceEnhancements();
-      initializeAccessibilityEnhancements();
+      accessibilityEnhancer.initialize();
       
       // Initialize advanced optimizers
       advancedPerformanceOptimizer.initialize();
