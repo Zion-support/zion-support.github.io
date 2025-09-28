@@ -20,6 +20,16 @@ interface PerformanceData {
   cacheHitRate: number;
 }
 
+interface LayoutShift {
+  value: number;
+  sources: Array<{
+    node: Element;
+    previousRect: DOMRectReadOnly;
+    currentRect: DOMRectReadOnly;
+  }>;
+  hadRecentInput: boolean;
+}
+
 class PerformanceEnhancer {
   private config: PerformanceConfig;
   private observer: IntersectionObserver | null = null;
@@ -39,7 +49,7 @@ class PerformanceEnhancer {
     this.initialize();
   }
 
-  private initialize(): void {
+  public initialize(): void {
     if (this.config.enableImageOptimization) {
       this.optimizeImages();
     }
@@ -229,8 +239,9 @@ class PerformanceEnhancer {
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (!(entry as LayoutShift).hadRecentInput) {
-          clsValue += (entry as LayoutShift).value;
+        const layoutShift = entry as unknown as LayoutShift;
+        if (!layoutShift.hadRecentInput) {
+          clsValue += layoutShift.value;
         }
       });
       console.log('CLS:', clsValue);

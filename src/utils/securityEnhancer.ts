@@ -403,7 +403,7 @@ class SecurityEnhancer {
 
     // Monitor XMLHttpRequest
     const originalXHR = XMLHttpRequest.prototype.open;
-    (XMLHttpRequest.prototype.open as unknown) = function(this: XMLHttpRequest, method: string, url: string | URL, ...args: unknown[]) {
+    (XMLHttpRequest.prototype.open as any) = function(this: XMLHttpRequest, method: string, url: string | URL, ...args: unknown[]) {
       // Access the security enhancer instance through a global reference
       const securityEnhancer = (window as any).__securityEnhancerInstance;
       if (securityEnhancer && typeof url === 'string' && securityEnhancer.isSuspiciousURL?.(url)) {
