@@ -269,7 +269,7 @@ class ComprehensiveEnhancements {
     }
 
     // Add XSS detection method
-    (Element.prototype as any).containsXSS = function(content: string): boolean {
+    (Element.prototype as any).containsXSS = function(this: any, content: string): boolean {
       const xssPatterns = [
         /<script[^>]*>.*?<\/script>/gi,
         /javascript:/gi,
