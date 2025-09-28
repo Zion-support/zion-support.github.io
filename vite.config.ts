@@ -26,6 +26,8 @@ export default defineConfig({
     target: 'esnext',
     minify: 'terser',
     sourcemap: false,
+    cssCodeSplit: true,
+    reportCompressedSize: true,
     rollupOptions: {
       input: {
         main: './index.html'
@@ -66,6 +68,33 @@ export default defineConfig({
             }
             // All other node_modules go to vendor
             return 'vendor';
+          }
+          // App chunks - more granular splitting
+          if (id.includes('src/pages/')) {
+            return 'pages';
+          }
+          if (id.includes('src/components/')) {
+            // Split large components into separate chunks
+            if (id.includes('Advanced') || id.includes('Comprehensive')) {
+              return 'components-advanced';
+            }
+            if (id.includes('Dashboard') || id.includes('Monitor')) {
+              return 'components-dashboard';
+            }
+            return 'components';
+          }
+          if (id.includes('src/utils/')) {
+            // Split utils by functionality
+            if (id.includes('advanced') || id.includes('comprehensive')) {
+              return 'utils-advanced';
+            }
+            if (id.includes('performance') || id.includes('monitor')) {
+              return 'utils-performance';
+            }
+            return 'utils';
+          }
+          if (id.includes('src/hooks/')) {
+            return 'hooks';
           }
           
           // App chunks - more granular splitting
@@ -118,6 +147,20 @@ export default defineConfig({
     },
     // Optimize chunk size
     chunkSizeWarningLimit: 1000,
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info'],
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
+      },
+      format: {
+        comments: false,
+      },
+    },
   },
   server: {
     port: 3000,

@@ -4,15 +4,23 @@
 
 export interface SecurityThreat {
   id: string;
-  type: 'xss' | 'csrf' | 'injection' | 'data_leak' | 'unauthorized_access' | 'malware' | 'phishing' | 'brute_force';
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  type:
+    | "xss"
+    | "csrf"
+    | "injection"
+    | "data_leak"
+    | "unauthorized_access"
+    | "malware"
+    | "phishing"
+    | "brute_force";
+  severity: "low" | "medium" | "high" | "critical";
   description: string;
   timestamp: number;
   source: string;
   target: string;
   metadata: Record<string, string | number | boolean>;
   blocked: boolean;
-  action: 'block' | 'monitor' | 'alert' | 'quarantine';
+  action: "block" | "monitor" | "alert" | "quarantine";
 }
 
 export interface SecurityPolicy {
@@ -26,10 +34,15 @@ export interface SecurityPolicy {
 
 export interface SecurityRule {
   id: string;
-  type: 'content_security' | 'xss_protection' | 'csrf_protection' | 'data_validation' | 'access_control';
+  type:
+    | "content_security"
+    | "xss_protection"
+    | "csrf_protection"
+    | "data_validation"
+    | "access_control";
   condition: string;
-  action: 'block' | 'allow' | 'monitor' | 'sanitize';
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  action: "block" | "allow" | "monitor" | "sanitize";
+  severity: "low" | "medium" | "high" | "critical";
 }
 
 export interface SecurityMetrics {
@@ -50,10 +63,10 @@ class AdvancedSecuritySystem {
     threatsByType: {},
     threatsBySeverity: {},
     lastThreatTime: 0,
-    securityScore: 100
+    securityScore: 100,
   };
   private maxThreats = 10000;
-  private reportEndpoint = '/api/security-reporting';
+  private reportEndpoint = "/api/security-reporting";
 
   constructor() {
     this.initializeSecuritySystem();
@@ -63,19 +76,19 @@ class AdvancedSecuritySystem {
   private initializeSecuritySystem(): void {
     // Content Security Policy
     this.setupContentSecurityPolicy();
-    
+
     // XSS Protection
     this.setupXSSProtection();
-    
+
     // CSRF Protection
     this.setupCSRFProtection();
-    
+
     // Data Validation
     this.setupDataValidation();
-    
+
     // Access Control
     this.setupAccessControl();
-    
+
     // Threat Monitoring
     this.setupThreatMonitoring();
   }
@@ -93,52 +106,56 @@ class AdvancedSecuritySystem {
       "child-src 'self'",
       "frame-ancestors 'none'",
       "form-action 'self'",
-      "base-uri 'self'"
-    ].join('; ');
+      "base-uri 'self'",
+    ].join("; ");
 
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'Content-Security-Policy';
+    const meta = document.createElement("meta");
+    meta.httpEquiv = "Content-Security-Policy";
     meta.content = csp;
     document.head.appendChild(meta);
   }
 
   private setupXSSProtection(): void {
     // XSS Protection Header
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'X-XSS-Protection';
-    meta.content = '1; mode=block';
+    const meta = document.createElement("meta");
+    meta.httpEquiv = "X-XSS-Protection";
+    meta.content = "1; mode=block";
     document.head.appendChild(meta);
 
     // Input sanitization
     this.setupInputSanitization();
-    
+
     // Output encoding
     this.setupOutputEncoding();
   }
 
   private setupInputSanitization(): void {
     // Monitor form inputs for malicious content
-    document.addEventListener('input', (event) => {
+    document.addEventListener("input", (event) => {
       const target = event.target as HTMLInputElement | HTMLTextAreaElement;
-      if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA')) {
-        this.validateInput(target.value, target.name || 'unknown');
+      if (
+        target &&
+        (target.tagName === "INPUT" || target.tagName === "TEXTAREA")
+      ) {
+        this.validateInput(target.value, target.name || "unknown");
       }
     });
   }
 
   private setupOutputEncoding(): void {
     // Override innerHTML to prevent XSS
-    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML') || 
-                             Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'innerHTML');
-    
+    const originalInnerHTML =
+      Object.getOwnPropertyDescriptor(Element.prototype, "innerHTML") ||
+      Object.getOwnPropertyDescriptor(HTMLElement.prototype, "innerHTML");
+
     if (originalInnerHTML) {
-      Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(value: string) {
+      Object.defineProperty(Element.prototype, "innerHTML", {
+        set: function (value: string) {
           const sanitizedValue = this.sanitizeHTML(value);
           originalInnerHTML.set?.call(this, sanitizedValue);
         },
         get: originalInnerHTML.get,
-        configurable: true
+        configurable: true,
       });
     }
   }
@@ -146,11 +163,11 @@ class AdvancedSecuritySystem {
   private setupCSRFProtection(): void {
     // Generate CSRF token
     const csrfToken = this.generateCSRFToken();
-    sessionStorage.setItem('csrf-token', csrfToken);
+    sessionStorage.setItem("csrf-token", csrfToken);
 
     // Add CSRF token to forms
     this.addCSRFTokenToForms(csrfToken);
-    
+
     // Validate CSRF token on form submissions
     this.validateCSRFToken();
   }
@@ -158,17 +175,19 @@ class AdvancedSecuritySystem {
   private generateCSRFToken(): string {
     const array = new Uint8Array(32);
     crypto.getRandomValues(array);
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+    return Array.from(array, (byte) => byte.toString(16).padStart(2, "0")).join(
+      "",
+    );
   }
 
   private addCSRFTokenToForms(token: string): void {
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
+    const forms = document.querySelectorAll("form");
+    forms.forEach((form) => {
       const existingToken = form.querySelector('input[name="csrf-token"]');
       if (!existingToken) {
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = 'csrf-token';
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = "csrf-token";
         input.value = token;
         form.appendChild(input);
       }
@@ -176,21 +195,23 @@ class AdvancedSecuritySystem {
   }
 
   private validateCSRFToken(): void {
-    document.addEventListener('submit', (event) => {
+    document.addEventListener("submit", (event) => {
       const form = event.target as HTMLFormElement;
-      const formToken = form.querySelector('input[name="csrf-token"]') as HTMLInputElement;
-      const sessionToken = sessionStorage.getItem('csrf-token');
-      
+      const formToken = form.querySelector(
+        'input[name="csrf-token"]',
+      ) as HTMLInputElement;
+      const sessionToken = sessionStorage.getItem("csrf-token");
+
       if (formToken && sessionToken && formToken.value !== sessionToken) {
         event.preventDefault();
         this.reportThreat({
-          type: 'csrf',
-          severity: 'high',
-          description: 'CSRF token validation failed',
-          source: 'form_submission',
-          target: form.action || 'unknown',
+          type: "csrf",
+          severity: "high",
+          description: "CSRF token validation failed",
+          source: "form_submission",
+          target: form.action || "unknown",
           blocked: true,
-          action: 'block'
+          action: "block",
         });
       }
     });
@@ -204,12 +225,12 @@ class AdvancedSecuritySystem {
   }
 
   private setupFormValidation(): void {
-    document.addEventListener('submit', (event) => {
+    document.addEventListener("submit", (event) => {
       const form = event.target as HTMLFormElement;
       const formData = new FormData(form);
-      
+
       for (const [key, value] of formData.entries()) {
-        if (typeof value === 'string') {
+        if (typeof value === "string") {
           this.validateData(value, key);
         }
       }
@@ -219,7 +240,7 @@ class AdvancedSecuritySystem {
   private setupURLValidation(): void {
     // Monitor URL changes for malicious patterns
     let currentUrl = window.location.href;
-    
+
     setInterval(() => {
       if (window.location.href !== currentUrl) {
         this.validateURL(window.location.href);
@@ -230,10 +251,10 @@ class AdvancedSecuritySystem {
 
   private setupFileValidation(): void {
     // Validate file uploads
-    document.addEventListener('change', (event) => {
+    document.addEventListener("change", (event) => {
       const target = event.target as HTMLInputElement;
-      if (target.type === 'file' && target.files) {
-        Array.from(target.files).forEach(file => {
+      if (target.type === "file" && target.files) {
+        Array.from(target.files).forEach((file) => {
           this.validateFile(file);
         });
       }
@@ -249,7 +270,7 @@ class AdvancedSecuritySystem {
 
   private monitorUnauthorizedAccess(): void {
     // Monitor for suspicious patterns
-    window.addEventListener('beforeunload', () => {
+    window.addEventListener("beforeunload", () => {
       this.validateSession();
     });
   }
@@ -258,15 +279,17 @@ class AdvancedSecuritySystem {
     // Session timeout
     let lastActivity = Date.now();
     const sessionTimeout = 30 * 60 * 1000; // 30 minutes
-    
+
     const resetTimer = () => {
       lastActivity = Date.now();
     };
-    
-    ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'].forEach(event => {
-      document.addEventListener(event, resetTimer, true);
-    });
-    
+
+    ["mousedown", "mousemove", "keypress", "scroll", "touchstart"].forEach(
+      (event) => {
+        document.addEventListener(event, resetTimer, true);
+      },
+    );
+
     setInterval(() => {
       if (Date.now() - lastActivity > sessionTimeout) {
         this.handleSessionTimeout();
@@ -282,40 +305,41 @@ class AdvancedSecuritySystem {
   }
 
   private checkGeolocationPermission(): void {
-    if ('geolocation' in navigator) {
+    if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
         () => {}, // Success - permission granted
         (error) => {
           if (error.code === error.PERMISSION_DENIED) {
             this.reportThreat({
-              type: 'unauthorized_access',
-              severity: 'low',
-              description: 'Geolocation permission denied',
-              source: 'geolocation_api',
-              target: 'user_location',
+              type: "unauthorized_access",
+              severity: "low",
+              description: "Geolocation permission denied",
+              source: "geolocation_api",
+              target: "user_location",
               blocked: false,
-              action: 'monitor'
+              action: "monitor",
             });
           }
-        }
+        },
       );
     }
   }
 
   private checkCameraPermission(): void {
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices.getUserMedia({ video: true })
+      navigator.mediaDevices
+        .getUserMedia({ video: true })
         .then(() => {}) // Permission granted
         .catch((error) => {
-          if (error.name === 'NotAllowedError') {
+          if (error.name === "NotAllowedError") {
             this.reportThreat({
-              type: 'unauthorized_access',
-              severity: 'low',
-              description: 'Camera permission denied',
-              source: 'camera_api',
-              target: 'user_camera',
+              type: "unauthorized_access",
+              severity: "low",
+              description: "Camera permission denied",
+              source: "camera_api",
+              target: "user_camera",
               blocked: false,
-              action: 'monitor'
+              action: "monitor",
             });
           }
         });
@@ -324,18 +348,19 @@ class AdvancedSecuritySystem {
 
   private checkMicrophonePermission(): void {
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices.getUserMedia({ audio: true })
+      navigator.mediaDevices
+        .getUserMedia({ audio: true })
         .then(() => {}) // Permission granted
         .catch((error) => {
-          if (error.name === 'NotAllowedError') {
+          if (error.name === "NotAllowedError") {
             this.reportThreat({
-              type: 'unauthorized_access',
-              severity: 'low',
-              description: 'Microphone permission denied',
-              source: 'microphone_api',
-              target: 'user_microphone',
+              type: "unauthorized_access",
+              severity: "low",
+              description: "Microphone permission denied",
+              source: "microphone_api",
+              target: "user_microphone",
               blocked: false,
-              action: 'monitor'
+              action: "monitor",
             });
           }
         });
@@ -355,13 +380,13 @@ class AdvancedSecuritySystem {
     window.eval = (code: string) => {
       if (this.isMaliciousScript(code)) {
         this.reportThreat({
-          type: 'xss',
-          severity: 'critical',
-          description: 'Malicious script execution attempt',
-          source: 'eval_function',
-          target: 'window_object',
+          type: "xss",
+          severity: "critical",
+          description: "Malicious script execution attempt",
+          source: "eval_function",
+          target: "window_object",
           blocked: true,
-          action: 'block'
+          action: "block",
         });
         return;
       }
@@ -376,15 +401,15 @@ class AdvancedSecuritySystem {
       const url = args[0] as string;
       if (this.isSuspiciousURL(url)) {
         this.reportThreat({
-          type: 'data_leak',
-          severity: 'high',
-          description: 'Suspicious data exfiltration attempt',
-          source: 'fetch_api',
+          type: "data_leak",
+          severity: "high",
+          description: "Suspicious data exfiltration attempt",
+          source: "fetch_api",
           target: url,
           blocked: true,
-          action: 'block'
+          action: "block",
         });
-        throw new Error('Blocked suspicious request');
+        throw new Error("Blocked suspicious request");
       }
       return originalFetch(...args);
     };
@@ -395,24 +420,24 @@ class AdvancedSecuritySystem {
     let failedAttempts = 0;
     const maxAttempts = 5;
     const timeWindow = 5 * 60 * 1000; // 5 minutes
-    
-    document.addEventListener('submit', (event) => {
+
+    document.addEventListener("submit", (event) => {
       const form = event.target as HTMLFormElement;
       if (form.querySelector('input[type="password"]')) {
         // This is a login form - monitor for brute force
         failedAttempts++;
-        
+
         if (failedAttempts > maxAttempts) {
           this.reportThreat({
-            type: 'brute_force',
-            severity: 'high',
-            description: 'Potential brute force attack detected',
-            source: 'login_form',
-            target: 'user_authentication',
+            type: "brute_force",
+            severity: "high",
+            description: "Potential brute force attack detected",
+            source: "login_form",
+            target: "user_authentication",
             blocked: true,
-            action: 'block'
+            action: "block",
           });
-          
+
           setTimeout(() => {
             failedAttempts = 0; // Reset after time window
           }, timeWindow);
@@ -424,37 +449,37 @@ class AdvancedSecuritySystem {
   private setupDefaultPolicies(): void {
     // Add default security policies
     this.addPolicy({
-      id: 'xss-protection',
-      name: 'XSS Protection',
-      description: 'Protect against Cross-Site Scripting attacks',
+      id: "xss-protection",
+      name: "XSS Protection",
+      description: "Protect against Cross-Site Scripting attacks",
       rules: [
         {
-          id: 'sanitize-input',
-          type: 'xss_protection',
-          condition: 'input_contains_script',
-          action: 'sanitize',
-          severity: 'high'
-        }
+          id: "sanitize-input",
+          type: "xss_protection",
+          condition: "input_contains_script",
+          action: "sanitize",
+          severity: "high",
+        },
       ],
       enabled: true,
-      priority: 1
+      priority: 1,
     });
 
     this.addPolicy({
-      id: 'csrf-protection',
-      name: 'CSRF Protection',
-      description: 'Protect against Cross-Site Request Forgery',
+      id: "csrf-protection",
+      name: "CSRF Protection",
+      description: "Protect against Cross-Site Request Forgery",
       rules: [
         {
-          id: 'validate-token',
-          type: 'csrf_protection',
-          condition: 'missing_csrf_token',
-          action: 'block',
-          severity: 'high'
-        }
+          id: "validate-token",
+          type: "csrf_protection",
+          condition: "missing_csrf_token",
+          action: "block",
+          severity: "high",
+        },
       ],
       enabled: true,
-      priority: 1
+      priority: 1,
     });
   }
 
@@ -472,15 +497,19 @@ class AdvancedSecuritySystem {
   }
 
   public getAllPolicies(): SecurityPolicy[] {
-    return Array.from(this.policies.values()).sort((a, b) => b.priority - a.priority);
+    return Array.from(this.policies.values()).sort(
+      (a, b) => b.priority - a.priority,
+    );
   }
 
-  public reportThreat(threatInfo: Omit<SecurityThreat, 'id' | 'timestamp' | 'metadata'>): void {
+  public reportThreat(
+    threatInfo: Omit<SecurityThreat, "id" | "timestamp" | "metadata">,
+  ): void {
     const threat: SecurityThreat = {
       id: this.generateThreatId(),
       timestamp: Date.now(),
       metadata: {},
-      ...threatInfo
+      ...threatInfo,
     };
 
     this.threats.set(threat.id, threat);
@@ -490,15 +519,16 @@ class AdvancedSecuritySystem {
     this.applySecurityPolicies(threat);
 
     // Log threat
-    console.warn('Security Threat Detected:', threat);
+    console.warn("Security Threat Detected:", threat);
 
     // Send to server
     this.sendThreatReport(threat);
 
     // Clean up old threats
     if (this.threats.size > this.maxThreats) {
-      const oldestThreat = Array.from(this.threats.entries())
-        .sort(([, a], [, b]) => a.timestamp - b.timestamp)[0];
+      const oldestThreat = Array.from(this.threats.entries()).sort(
+        ([, a], [, b]) => a.timestamp - b.timestamp,
+      )[0];
       this.threats.delete(oldestThreat[0]);
     }
   }
@@ -509,26 +539,29 @@ class AdvancedSecuritySystem {
 
   private updateMetrics(threat: SecurityThreat): void {
     this.metrics.totalThreats++;
-    
+
     if (threat.blocked) {
       this.metrics.blockedThreats++;
     }
 
-    this.metrics.threatsByType[threat.type] = (this.metrics.threatsByType[threat.type] || 0) + 1;
-    this.metrics.threatsBySeverity[threat.severity] = (this.metrics.threatsBySeverity[threat.severity] || 0) + 1;
+    this.metrics.threatsByType[threat.type] =
+      (this.metrics.threatsByType[threat.type] || 0) + 1;
+    this.metrics.threatsBySeverity[threat.severity] =
+      (this.metrics.threatsBySeverity[threat.severity] || 0) + 1;
     this.metrics.lastThreatTime = threat.timestamp;
 
     // Calculate security score
-    const blockedRatio = this.metrics.blockedThreats / this.metrics.totalThreats;
+    const blockedRatio =
+      this.metrics.blockedThreats / this.metrics.totalThreats;
     this.metrics.securityScore = Math.round(blockedRatio * 100);
   }
 
   private applySecurityPolicies(threat: SecurityThreat): void {
     const policies = this.getAllPolicies();
-    
+
     for (const policy of policies) {
       if (!policy.enabled) continue;
-      
+
       for (const rule of policy.rules) {
         if (this.evaluateRule(rule, threat)) {
           this.executeAction(rule.action, threat);
@@ -540,30 +573,31 @@ class AdvancedSecuritySystem {
   private evaluateRule(rule: SecurityRule, threat: SecurityThreat): boolean {
     // Simple rule evaluation - in a real system, this would be more sophisticated
     switch (rule.type) {
-      case 'xss_protection':
-        return threat.type === 'xss';
-      case 'csrf_protection':
-        return threat.type === 'csrf';
-      case 'data_validation':
-        return threat.type === 'injection';
+      case "xss_protection":
+        return threat.type === "xss";
+      case "csrf_protection":
+        return threat.type === "csrf";
+      case "data_validation":
+        return threat.type === "injection";
       default:
         return false;
     }
   }
 
-  private executeAction(action: SecurityRule['action'], threat: SecurityThreat): void {
+  private executeAction(
+    action: SecurityRule["action"],
+    threat: SecurityThreat,
+  ): void {
     switch (action) {
-      case 'block':
+      case "block":
         threat.blocked = true;
-        threat.action = 'block';
+        threat.action = "block";
         break;
-      case 'monitor':
-        threat.action = 'monitor';
-        break;
-      case 'alert':
+      case "monitor":
+        threat.action = "monitor";
         this.sendAlert(threat);
         break;
-      case 'sanitize':
+      case "sanitize":
         this.sanitizeThreat(threat);
         break;
     }
@@ -571,7 +605,7 @@ class AdvancedSecuritySystem {
 
   private sendAlert(threat: SecurityThreat): void {
     // Send security alert
-    console.error('SECURITY ALERT:', threat);
+    console.error("SECURITY ALERT:", threat);
   }
 
   private sanitizeThreat(threat: SecurityThreat): void {
@@ -580,7 +614,7 @@ class AdvancedSecuritySystem {
   }
 
   private sanitizeHTML(input: string): string {
-    const div = document.createElement('div');
+    const div = document.createElement("div");
     div.textContent = input;
     return div.innerHTML;
   }
@@ -588,14 +622,14 @@ class AdvancedSecuritySystem {
   private async sendThreatReport(threat: SecurityThreat): Promise<void> {
     try {
       await fetch(this.reportEndpoint, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(threat),
       });
     } catch (error) {
-      console.error('Failed to send threat report:', error);
+      console.error("Failed to send threat report:", error);
     }
   }
 
@@ -606,19 +640,19 @@ class AdvancedSecuritySystem {
       /javascript:/i,
       /on\w+\s*=/i,
       /eval\s*\(/i,
-      /expression\s*\(/i
+      /expression\s*\(/i,
     ];
 
     for (const pattern of maliciousPatterns) {
       if (pattern.test(input)) {
         this.reportThreat({
-          type: 'xss',
-          severity: 'high',
+          type: "xss",
+          severity: "high",
           description: `Malicious input detected in ${fieldName}`,
           source: fieldName,
-          target: 'form_input',
+          target: "form_input",
           blocked: true,
-          action: 'block'
+          action: "block",
         });
         return false;
       }
@@ -635,19 +669,19 @@ class AdvancedSecuritySystem {
       /javascript:/i,
       /data:/i,
       /vbscript:/i,
-      /file:/i
+      /file:/i,
     ];
 
     for (const pattern of suspiciousPatterns) {
       if (pattern.test(url)) {
         this.reportThreat({
-          type: 'xss',
-          severity: 'medium',
-          description: 'Suspicious URL detected',
-          source: 'url_validation',
+          type: "xss",
+          severity: "medium",
+          description: "Suspicious URL detected",
+          source: "url_validation",
           target: url,
           blocked: true,
-          action: 'block'
+          action: "block",
         });
         return false;
       }
@@ -656,31 +690,37 @@ class AdvancedSecuritySystem {
   }
 
   private validateFile(file: File): boolean {
-    const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'text/plain', 'application/pdf'];
+    const allowedTypes = [
+      "image/jpeg",
+      "image/png",
+      "image/gif",
+      "text/plain",
+      "application/pdf",
+    ];
     const maxSize = 10 * 1024 * 1024; // 10MB
 
     if (!allowedTypes.includes(file.type)) {
       this.reportThreat({
-        type: 'malware',
-        severity: 'medium',
+        type: "malware",
+        severity: "medium",
         description: `Suspicious file type: ${file.type}`,
-        source: 'file_upload',
+        source: "file_upload",
         target: file.name,
         blocked: true,
-        action: 'block'
+        action: "block",
       });
       return false;
     }
 
     if (file.size > maxSize) {
       this.reportThreat({
-        type: 'data_leak',
-        severity: 'low',
+        type: "data_leak",
+        severity: "low",
         description: `File too large: ${file.size} bytes`,
-        source: 'file_upload',
+        source: "file_upload",
         target: file.name,
         blocked: true,
-        action: 'block'
+        action: "block",
       });
       return false;
     }
@@ -696,33 +736,33 @@ class AdvancedSecuritySystem {
       /window\.location/i,
       /document\.write/i,
       /innerHTML/i,
-      /outerHTML/i
+      /outerHTML/i,
     ];
 
-    return maliciousPatterns.some(pattern => pattern.test(code));
+    return maliciousPatterns.some((pattern) => pattern.test(code));
   }
 
   private isSuspiciousURL(url: string): boolean {
     const suspiciousDomains = [
-      'malicious-site.com',
-      'phishing-site.com',
-      'data-exfiltrator.com'
+      "malicious-site.com",
+      "phishing-site.com",
+      "data-exfiltrator.com",
     ];
 
-    return suspiciousDomains.some(domain => url.includes(domain));
+    return suspiciousDomains.some((domain) => url.includes(domain));
   }
 
   private validateSession(): boolean {
-    const sessionToken = sessionStorage.getItem('session-token');
+    const sessionToken = sessionStorage.getItem("session-token");
     if (!sessionToken) {
       this.reportThreat({
-        type: 'unauthorized_access',
-        severity: 'medium',
-        description: 'Invalid session token',
-        source: 'session_validation',
-        target: 'user_session',
+        type: "unauthorized_access",
+        severity: "medium",
+        description: "Invalid session token",
+        source: "session_validation",
+        target: "user_session",
         blocked: true,
-        action: 'block'
+        action: "block",
       });
       return false;
     }
@@ -731,15 +771,15 @@ class AdvancedSecuritySystem {
 
   private handleSessionTimeout(): void {
     this.reportThreat({
-      type: 'unauthorized_access',
-      severity: 'low',
-      description: 'Session timeout',
-      source: 'session_management',
-      target: 'user_session',
+      type: "unauthorized_access",
+      severity: "low",
+      description: "Session timeout",
+      source: "session_management",
+      target: "user_session",
       blocked: false,
-      action: 'monitor'
+      action: "monitor",
     });
-    
+
     // Clear session data
     sessionStorage.clear();
     localStorage.clear();
@@ -751,19 +791,23 @@ class AdvancedSecuritySystem {
   }
 
   public getThreats(): SecurityThreat[] {
-    return Array.from(this.threats.values()).sort((a, b) => b.timestamp - a.timestamp);
+    return Array.from(this.threats.values()).sort(
+      (a, b) => b.timestamp - a.timestamp,
+    );
   }
 
-  public getThreatsByType(type: SecurityThreat['type']): SecurityThreat[] {
-    return this.getThreats().filter(threat => threat.type === type);
+  public getThreatsByType(type: SecurityThreat["type"]): SecurityThreat[] {
+    return this.getThreats().filter((threat) => threat.type === type);
   }
 
-  public getThreatsBySeverity(severity: SecurityThreat['severity']): SecurityThreat[] {
-    return this.getThreats().filter(threat => threat.severity === severity);
+  public getThreatsBySeverity(
+    severity: SecurityThreat["severity"],
+  ): SecurityThreat[] {
+    return this.getThreats().filter((threat) => threat.severity === severity);
   }
 
   public getBlockedThreats(): SecurityThreat[] {
-    return this.getThreats().filter(threat => threat.blocked);
+    return this.getThreats().filter((threat) => threat.blocked);
   }
 
   public clearThreats(): void {
@@ -774,17 +818,21 @@ class AdvancedSecuritySystem {
       threatsByType: {},
       threatsBySeverity: {},
       lastThreatTime: 0,
-      securityScore: 100
+      securityScore: 100,
     };
   }
 
   public exportSecurityReport(): string {
-    return JSON.stringify({
-      timestamp: Date.now(),
-      metrics: this.metrics,
-      policies: this.getAllPolicies(),
-      threats: this.getThreats()
-    }, null, 2);
+    return JSON.stringify(
+      {
+        timestamp: Date.now(),
+        metrics: this.metrics,
+        policies: this.getAllPolicies(),
+        threats: this.getThreats(),
+      },
+      null,
+      2,
+    );
   }
 }
 
@@ -792,7 +840,9 @@ class AdvancedSecuritySystem {
 export const securitySystem = new AdvancedSecuritySystem();
 
 // Convenience functions
-export const reportThreat = (threatInfo: Omit<SecurityThreat, 'id' | 'timestamp' | 'metadata'>) => {
+export const reportThreat = (
+  threatInfo: Omit<SecurityThreat, "id" | "timestamp" | "metadata">,
+) => {
   securitySystem.reportThreat(threatInfo);
 };
 

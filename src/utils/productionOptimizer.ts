@@ -3,7 +3,7 @@
  * Advanced production build optimizations and monitoring
  */
 
-import { logger } from './logger';
+import { logger } from "./logger";
 
 export interface ProductionMetrics {
   buildTime: number;
@@ -17,11 +17,11 @@ export interface ProductionMetrics {
 }
 
 export interface OptimizationResult {
-  type: 'bundle' | 'runtime' | 'memory' | 'network';
+  type: "bundle" | "runtime" | "memory" | "network";
   improvement: number; // Percentage
   description: string;
   implementation: string;
-  priority: 'high' | 'medium' | 'low';
+  priority: "high" | "medium" | "low";
 }
 
 class ProductionOptimizer {
@@ -36,47 +36,51 @@ class ProductionOptimizer {
   private initializeOptimizations(): void {
     this.optimizations = [
       {
-        type: 'bundle',
+        type: "bundle",
         improvement: 25,
-        description: 'Implement code splitting for better loading performance',
-        implementation: 'Use dynamic imports and React.lazy() for route-based splitting',
-        priority: 'high'
+        description: "Implement code splitting for better loading performance",
+        implementation:
+          "Use dynamic imports and React.lazy() for route-based splitting",
+        priority: "high",
       },
       {
-        type: 'bundle',
+        type: "bundle",
         improvement: 15,
-        description: 'Enable tree shaking to remove unused code',
-        implementation: 'Ensure proper ES6 module imports and configure bundler tree-shaking',
-        priority: 'high'
+        description: "Enable tree shaking to remove unused code",
+        implementation:
+          "Ensure proper ES6 module imports and configure bundler tree-shaking",
+        priority: "high",
       },
       {
-        type: 'runtime',
+        type: "runtime",
         improvement: 20,
-        description: 'Implement memoization for expensive calculations',
-        implementation: 'Use React.memo, useMemo, and useCallback for component optimization',
-        priority: 'medium'
+        description: "Implement memoization for expensive calculations",
+        implementation:
+          "Use React.memo, useMemo, and useCallback for component optimization",
+        priority: "medium",
       },
       {
-        type: 'memory',
+        type: "memory",
         improvement: 30,
-        description: 'Implement proper cleanup and memory management',
-        implementation: 'Add cleanup functions for event listeners and timers',
-        priority: 'medium'
+        description: "Implement proper cleanup and memory management",
+        implementation: "Add cleanup functions for event listeners and timers",
+        priority: "medium",
       },
       {
-        type: 'network',
+        type: "network",
         improvement: 40,
-        description: 'Implement service worker for caching',
-        implementation: 'Add service worker with cache-first strategy for static assets',
-        priority: 'high'
+        description: "Implement service worker for caching",
+        implementation:
+          "Add service worker with cache-first strategy for static assets",
+        priority: "high",
       },
       {
-        type: 'bundle',
+        type: "bundle",
         improvement: 10,
-        description: 'Optimize image loading and compression',
-        implementation: 'Use WebP format and lazy loading for images',
-        priority: 'low'
-      }
+        description: "Optimize image loading and compression",
+        implementation: "Use WebP format and lazy loading for images",
+        priority: "low",
+      },
     ];
   }
 
@@ -86,7 +90,7 @@ class ProductionOptimizer {
     }
 
     this.isAnalyzing = true;
-    logger.info('Starting production build analysis', 'ProductionOptimizer');
+    logger.info("Starting production build analysis", "ProductionOptimizer");
 
     try {
       // Simulate production build analysis
@@ -98,15 +102,21 @@ class ProductionOptimizer {
         assetCount: 15,
         unusedExports: 45,
         duplicateModules: 12,
-        compressionRatio: 0.73
+        compressionRatio: 0.73,
       };
 
       this.metrics = mockMetrics;
-      logger.info('Production build analysis completed', 'ProductionOptimizer', mockMetrics);
-      
+      logger.info(
+        "Production build analysis completed",
+        "ProductionOptimizer",
+        mockMetrics,
+      );
+
       return mockMetrics;
     } catch (error) {
-      logger.error('Production build analysis failed', 'ProductionOptimizer', { error });
+      logger.error("Production build analysis failed", "ProductionOptimizer", {
+        error,
+      });
       return this.getDefaultMetrics();
     } finally {
       this.isAnalyzing = false;
@@ -122,27 +132,27 @@ class ProductionOptimizer {
       assetCount: 0,
       unusedExports: 0,
       duplicateModules: 0,
-      compressionRatio: 0
+      compressionRatio: 0,
     };
   }
 
   getOptimizationRecommendations(): OptimizationResult[] {
     if (!this.metrics) {
-      return this.optimizations.filter(opt => opt.priority === 'high');
+      return this.optimizations.filter((opt) => opt.priority === "high");
     }
 
-    return this.optimizations.filter(optimization => {
+    return this.optimizations.filter((optimization) => {
       // Recommend optimizations based on current metrics
-      if (optimization.type === 'bundle' && this.metrics!.bundleSize > 500000) {
+      if (optimization.type === "bundle" && this.metrics!.bundleSize > 500000) {
         return true;
       }
-      if (optimization.type === 'runtime' && this.metrics!.buildTime > 3) {
+      if (optimization.type === "runtime" && this.metrics!.buildTime > 3) {
         return true;
       }
-      if (optimization.type === 'memory' && this.metrics!.unusedExports > 30) {
+      if (optimization.type === "memory" && this.metrics!.unusedExports > 30) {
         return true;
       }
-      return optimization.priority === 'high';
+      return optimization.priority === "high";
     });
   }
 
@@ -151,7 +161,7 @@ class ProductionOptimizer {
 
     const recommendations = this.getOptimizationRecommendations();
     return recommendations.reduce((total, opt) => {
-      return total + (this.metrics!.bundleSize * (opt.improvement / 100));
+      return total + this.metrics!.bundleSize * (opt.improvement / 100);
     }, 0);
   }
 
@@ -174,12 +184,16 @@ class ProductionOptimizer {
 - **Compression Ratio**: ${(metrics.compressionRatio * 100).toFixed(1)}%
 
 ## Recommended Optimizations
-${recommendations.map(opt => `
+${recommendations
+  .map(
+    (opt) => `
 ### ${opt.type.toUpperCase()} - ${opt.description}
 - **Priority**: ${opt.priority}
 - **Expected Improvement**: ${opt.improvement}%
 - **Implementation**: ${opt.implementation}
-`).join('')}
+`,
+  )
+  .join("")}
 
 ## Potential Savings
 - **Estimated Size Reduction**: ${(potentialSavings / 1024).toFixed(2)} KB
@@ -219,44 +233,53 @@ ${recommendations.map(opt => `
 
   // Runtime optimizations
   static optimizeImages(): void {
-    logger.info('Optimizing images for production', 'ProductionOptimizer');
-    
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
+    logger.info("Optimizing images for production", "ProductionOptimizer");
+
+    const images = document.querySelectorAll("img");
+    images.forEach((img) => {
       // Add loading="lazy" for images below the fold
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
+      if (!img.hasAttribute("loading")) {
+        img.setAttribute("loading", "lazy");
       }
-      
+
       // Add decoding="async" for better performance
-      if (!img.hasAttribute('decoding')) {
-        img.setAttribute('decoding', 'async');
+      if (!img.hasAttribute("decoding")) {
+        img.setAttribute("decoding", "async");
       }
     });
   }
 
   static enableServiceWorker(): void {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration => {
-          logger.info('Service Worker registered successfully', 'ProductionOptimizer', {
-            scope: registration.scope
-          });
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("/sw.js")
+        .then((registration) => {
+          logger.info(
+            "Service Worker registered successfully",
+            "ProductionOptimizer",
+            {
+              scope: registration.scope,
+            },
+          );
         })
-        .catch(error => {
-          logger.error('Service Worker registration failed', 'ProductionOptimizer', { error });
+        .catch((error) => {
+          logger.error(
+            "Service Worker registration failed",
+            "ProductionOptimizer",
+            { error },
+          );
         });
     }
   }
 
   static optimizeMemoryUsage(): void {
-    logger.info('Optimizing memory usage', 'ProductionOptimizer');
-    
+    logger.info("Optimizing memory usage", "ProductionOptimizer");
+
     // Clear unused caches
-    if ('caches' in window) {
-      caches.keys().then(cacheNames => {
-        cacheNames.forEach(cacheName => {
-          if (cacheName.includes('unused')) {
+    if ("caches" in window) {
+      caches.keys().then((cacheNames) => {
+        cacheNames.forEach((cacheName) => {
+          if (cacheName.includes("unused")) {
             caches.delete(cacheName);
           }
         });
@@ -265,19 +288,19 @@ ${recommendations.map(opt => `
   }
 
   static preloadCriticalResources(): void {
-    logger.info('Preloading critical resources', 'ProductionOptimizer');
-    
+    logger.info("Preloading critical resources", "ProductionOptimizer");
+
     const criticalResources = [
-      '/og-image.png',
-      '/favicon.ico',
-      '/manifest.json'
+      "/og-image.png",
+      "/favicon.ico",
+      "/manifest.json",
     ];
 
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
+    criticalResources.forEach((resource) => {
+      const link = document.createElement("link");
+      link.rel = "preload";
       link.href = resource;
-      link.as = resource.endsWith('.png') ? 'image' : 'fetch';
+      link.as = resource.endsWith(".png") ? "image" : "fetch";
       document.head.appendChild(link);
     });
   }
@@ -291,5 +314,5 @@ export const {
   optimizeImages,
   enableServiceWorker,
   optimizeMemoryUsage,
-  preloadCriticalResources
+  preloadCriticalResources,
 } = ProductionOptimizer;

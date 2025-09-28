@@ -4,25 +4,31 @@
  */
 
 interface NotificationConfig {
-  position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'top-center' | 'bottom-center';
+  position:
+    | "top-right"
+    | "top-left"
+    | "bottom-right"
+    | "bottom-left"
+    | "top-center"
+    | "bottom-center";
   duration: number;
   maxNotifications: number;
   enableSound: boolean;
   enableVibration: boolean;
   enableBrowserNotifications: boolean;
-  theme: 'light' | 'dark' | 'auto';
+  theme: "light" | "dark" | "auto";
 }
 
 interface NotificationOptions {
   title: string;
   message?: string;
-  type?: 'success' | 'error' | 'warning' | 'info';
+  type?: "success" | "error" | "warning" | "info";
   duration?: number;
   persistent?: boolean;
   actions?: Array<{
     label: string;
     action: () => void;
-    style?: 'primary' | 'secondary';
+    style?: "primary" | "secondary";
   }>;
   icon?: string;
   sound?: string;
@@ -49,13 +55,13 @@ export class NotificationManager {
 
   private constructor() {
     this.config = {
-      position: 'top-right',
+      position: "top-right",
       duration: 5000,
       maxNotifications: 5,
       enableSound: true,
       enableVibration: true,
       enableBrowserNotifications: true,
-      theme: 'auto'
+      theme: "auto",
     };
 
     this.initializeContainer();
@@ -82,7 +88,7 @@ export class NotificationManager {
       id,
       timestamp: Date.now(),
       visible: true,
-      ...options
+      ...options,
     };
 
     this.notifications.set(id, notification);
@@ -101,12 +107,16 @@ export class NotificationManager {
     }
 
     // Play sound if enabled
-    if (this.config.enableSound && options.sound !== 'none') {
+    if (this.config.enableSound && options.sound !== "none") {
       this.playSound(options.sound || this.getDefaultSound(options.type));
     }
 
     // Vibrate if enabled
-    if (this.config.enableVibration && options.vibration && 'vibrate' in navigator) {
+    if (
+      this.config.enableVibration &&
+      options.vibration &&
+      "vibrate" in navigator
+    ) {
       navigator.vibrate(options.vibration);
     }
 
@@ -124,44 +134,60 @@ export class NotificationManager {
     return id;
   }
 
-  public success(title: string, message?: string, options?: Partial<NotificationOptions>): Promise<string> {
+  public success(
+    title: string,
+    message?: string,
+    options?: Partial<NotificationOptions>,
+  ): Promise<string> {
     return this.show({
       title,
       message,
-      type: 'success',
-      icon: '✓',
-      ...options
+      type: "success",
+      icon: "✓",
+      ...options,
     });
   }
 
-  public error(title: string, message?: string, options?: Partial<NotificationOptions>): Promise<string> {
+  public error(
+    title: string,
+    message?: string,
+    options?: Partial<NotificationOptions>,
+  ): Promise<string> {
     return this.show({
       title,
       message,
-      type: 'error',
-      icon: '✕',
+      type: "error",
+      icon: "✕",
       persistent: true,
-      ...options
+      ...options,
     });
   }
 
-  public warning(title: string, message?: string, options?: Partial<NotificationOptions>): Promise<string> {
+  public warning(
+    title: string,
+    message?: string,
+    options?: Partial<NotificationOptions>,
+  ): Promise<string> {
     return this.show({
       title,
       message,
-      type: 'warning',
-      icon: '⚠',
-      ...options
+      type: "warning",
+      icon: "⚠",
+      ...options,
     });
   }
 
-  public info(title: string, message?: string, options?: Partial<NotificationOptions>): Promise<string> {
+  public info(
+    title: string,
+    message?: string,
+    options?: Partial<NotificationOptions>,
+  ): Promise<string> {
     return this.show({
       title,
       message,
-      type: 'info',
-      icon: 'ℹ',
-      ...options
+      type: "info",
+      icon: "ℹ",
+      ...options,
     });
   }
 
@@ -175,12 +201,12 @@ export class NotificationManager {
   }
 
   public clear(): void {
-    this.notifications.forEach(notification => {
+    this.notifications.forEach((notification) => {
       notification.onClose?.();
     });
     this.notifications.clear();
     if (this.container) {
-      this.container.innerHTML = '';
+      this.container.innerHTML = "";
     }
   }
 
@@ -189,17 +215,18 @@ export class NotificationManager {
   }
 
   public getVisibleCount(): number {
-    return Array.from(this.notifications.values()).filter(n => n.visible).length;
+    return Array.from(this.notifications.values()).filter((n) => n.visible)
+      .length;
   }
 
   private initializeContainer(): void {
-    this.container = document.createElement('div');
-    this.container.id = 'notification-container';
-    this.container.className = 'notification-container';
-    
+    this.container = document.createElement("div");
+    this.container.id = "notification-container";
+    this.container.className = "notification-container";
+
     this.updateContainerPosition();
     this.updateContainerTheme();
-    
+
     document.body.appendChild(this.container);
   }
 
@@ -212,53 +239,56 @@ export class NotificationManager {
   private updateContainerTheme(): void {
     if (!this.container) return;
 
-    const theme = this.config.theme === 'auto' ? 
-      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') :
-      this.config.theme;
+    const theme =
+      this.config.theme === "auto"
+        ? window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light"
+        : this.config.theme;
 
-    this.container.setAttribute('data-theme', theme);
+    this.container.setAttribute("data-theme", theme);
   }
 
   private renderNotification(notification: Notification): void {
     if (!this.container) return;
 
-    const element = document.createElement('div');
-    element.className = `notification notification-${notification.type || 'info'}`;
+    const element = document.createElement("div");
+    element.className = `notification notification-${notification.type || "info"}`;
     element.id = `notification-${notification.id}`;
-    element.setAttribute('data-id', notification.id);
+    element.setAttribute("data-id", notification.id);
 
     // Add click handler
     if (notification.onClick) {
-      element.addEventListener('click', notification.onClick);
-      element.style.cursor = 'pointer';
+      element.addEventListener("click", notification.onClick);
+      element.style.cursor = "pointer";
     }
 
     // Build notification content
     element.innerHTML = `
       <div class="notification-content">
         <div class="notification-header">
-          ${notification.icon ? `<span class="notification-icon">${notification.icon}</span>` : ''}
+          ${notification.icon ? `<span class="notification-icon">${notification.icon}</span>` : ""}
           <span class="notification-title">${notification.title}</span>
           <button class="notification-close" aria-label="Close notification">&times;</button>
         </div>
-        ${notification.message ? `<div class="notification-message">${notification.message}</div>` : ''}
-        ${notification.actions ? this.renderActions(notification.actions) : ''}
-        ${notification.progress !== undefined ? `<div class="notification-progress"><div class="notification-progress-bar" style="width: ${notification.progress}%"></div></div>` : ''}
+        ${notification.message ? `<div class="notification-message">${notification.message}</div>` : ""}
+        ${notification.actions ? this.renderActions(notification.actions) : ""}
+        ${notification.progress !== undefined ? `<div class="notification-progress"><div class="notification-progress-bar" style="width: ${notification.progress}%"></div></div>` : ""}
       </div>
     `;
 
     // Add close button handler
-    const closeButton = element.querySelector('.notification-close');
-    closeButton?.addEventListener('click', (e) => {
+    const closeButton = element.querySelector(".notification-close");
+    closeButton?.addEventListener("click", (e) => {
       e.stopPropagation();
       this.remove(notification.id);
     });
 
     // Add action handlers
     if (notification.actions) {
-      notification.actions.forEach(action => {
+      notification.actions.forEach((action) => {
         const button = element.querySelector(`[data-action="${action.label}"]`);
-        button?.addEventListener('click', (e) => {
+        button?.addEventListener("click", (e) => {
           e.stopPropagation();
           action.action();
         });
@@ -269,21 +299,31 @@ export class NotificationManager {
 
     // Animate in
     requestAnimationFrame(() => {
-      element.classList.add('notification-visible');
+      element.classList.add("notification-visible");
     });
   }
 
-  private renderActions(actions: Array<{ label: string; action: () => void; style?: 'primary' | 'secondary' }>): string {
+  private renderActions(
+    actions: Array<{
+      label: string;
+      action: () => void;
+      style?: "primary" | "secondary";
+    }>,
+  ): string {
     return `
       <div class="notification-actions">
-        ${actions.map(action => `
+        ${actions
+          .map(
+            (action) => `
           <button 
-            class="notification-action notification-action-${action.style || 'secondary'}"
+            class="notification-action notification-action-${action.style || "secondary"}"
             data-action="${action.label}"
           >
             ${action.label}
           </button>
-        `).join('')}
+        `,
+          )
+          .join("")}
       </div>
     `;
   }
@@ -291,26 +331,28 @@ export class NotificationManager {
   private removeNotificationElement(id: string): void {
     const element = document.getElementById(`notification-${id}`);
     if (element) {
-      element.classList.remove('notification-visible');
-      element.classList.add('notification-removing');
-      
+      element.classList.remove("notification-visible");
+      element.classList.add("notification-removing");
+
       setTimeout(() => {
         element.remove();
       }, 300); // Match CSS transition duration
     }
   }
 
-  private async showBrowserNotification(notification: Notification): Promise<void> {
+  private async showBrowserNotification(
+    notification: Notification,
+  ): Promise<void> {
     if (!this.permissionGranted) return;
 
     try {
       const browserNotification = new Notification(notification.title, {
         body: notification.message,
-        icon: '/favicon.ico',
-        badge: '/favicon.ico',
+        icon: "/favicon.ico",
+        badge: "/favicon.ico",
         tag: notification.id,
         requireInteraction: notification.persistent,
-        silent: notification.sound === 'none'
+        silent: notification.sound === "none",
       });
 
       browserNotification.onclick = () => {
@@ -326,7 +368,7 @@ export class NotificationManager {
         }, duration);
       }
     } catch (error) {
-      console.warn('Failed to show browser notification:', error);
+      console.warn("Failed to show browser notification:", error);
     }
   }
 
@@ -334,12 +376,12 @@ export class NotificationManager {
     if (!this.config.enableBrowserNotifications) return;
 
     try {
-      if ('Notification' in window) {
+      if ("Notification" in window) {
         const permission = await Notification.requestPermission();
-        this.permissionGranted = permission === 'granted';
+        this.permissionGranted = permission === "granted";
       }
     } catch (error) {
-      console.warn('Failed to request notification permission:', error);
+      console.warn("Failed to request notification permission:", error);
     }
   }
 
@@ -351,19 +393,23 @@ export class NotificationManager {
       audio.volume = 0.3;
       audio.play().catch(() => {
         // Fallback to system sound
-        console.log('🔔'); // Visual sound indicator
+        console.log("🔔"); // Visual sound indicator
       });
     } catch (error) {
-      console.warn('Failed to play notification sound:', error);
+      console.warn("Failed to play notification sound:", error);
     }
   }
 
   private getDefaultSound(type?: string): string {
     switch (type) {
-      case 'success': return 'success';
-      case 'error': return 'error';
-      case 'warning': return 'warning';
-      default: return 'info';
+      case "success":
+        return "success";
+      case "error":
+        return "error";
+      case "warning":
+        return "warning";
+      default:
+        return "info";
     }
   }
 
@@ -386,15 +432,15 @@ export class NotificationManager {
   }
 
   private setupKeyboardShortcuts(): void {
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener("keydown", (e) => {
       // Ctrl/Cmd + Shift + N to clear all notifications
-      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'N') {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === "N") {
         e.preventDefault();
         this.clear();
       }
 
       // Escape to close latest notification
-      if (e.key === 'Escape') {
+      if (e.key === "Escape") {
         const notifications = Array.from(this.notifications.values());
         const latest = notifications[notifications.length - 1];
         if (latest) {
@@ -408,9 +454,9 @@ export class NotificationManager {
     const notification = this.notifications.get(id);
     if (notification) {
       notification.progress = Math.max(0, Math.min(100, progress));
-      
+
       const element = document.getElementById(`notification-${id}`);
-      const progressBar = element?.querySelector('.notification-progress-bar');
+      const progressBar = element?.querySelector(".notification-progress-bar");
       if (progressBar) {
         (progressBar as HTMLElement).style.width = `${notification.progress}%`;
       }
@@ -429,14 +475,14 @@ export class NotificationManager {
 export const notificationManager = NotificationManager.getInstance();
 
 // Auto-configure for production
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   notificationManager.configure({
-    position: 'top-right',
+    position: "top-right",
     duration: 5000,
     maxNotifications: 5,
     enableSound: true,
     enableVibration: true,
     enableBrowserNotifications: true,
-    theme: 'auto'
+    theme: "auto",
   });
 }
