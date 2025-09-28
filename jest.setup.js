@@ -2,7 +2,7 @@
 // Add any global test setup here
 
 // Mock TextEncoder and TextDecoder for React Router v7 compatibility
-import { TextEncoder, TextDecoder } from 'util';
+const { TextEncoder, TextDecoder } = require('util');
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
@@ -78,4 +78,4 @@ global.PerformanceObserver = jest.fn().mockImplementation(() => ({
 }));
 
 // Setup testing library matchers
-import '@testing-library/jest-dom';
+require('@testing-library/jest-dom');

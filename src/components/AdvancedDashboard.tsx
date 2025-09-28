@@ -23,27 +23,27 @@ interface UXData {
 }
 
 interface AnalyticsData {
-  id?: string;
-  startTime?: number;
-  lastActivity?: number;
-  pageViews?: number;
-  events?: Array<{
+  id: string;
+  startTime: number;
+  lastActivity: number;
+  pageViews: number;
+  events: Array<{
     event: string;
-    timestamp: number;
     properties?: Record<string, unknown>;
+    timestamp: number;
   }>;
-  deviceInfo?: {
-    screenResolution?: string;
-    language?: string;
-    timezone?: string;
+  deviceInfo: {
+    screenResolution: string;
+    language: string;
+    timezone: string;
   };
 }
 
 interface CacheData {
-  size?: number;
-  totalSize?: number;
-  maxSize?: number;
-  hitRate?: number;
+  size: number;
+  totalSize: number;
+  maxSize: number;
+  hitRate: number;
 }
 
 interface DashboardData {
@@ -69,8 +69,37 @@ const AdvancedDashboard: React.FC = () => {
   }, [isOpen]);
 
   const updateData = () => {
-    const analytics = AdvancedAnalyticsManager.getInstance().getSessionData();
-    const cache = AdvancedCacheManager.getInstance().getStats();
+    const sessionData = AdvancedAnalyticsManager.getInstance().getSessionData();
+    const cacheStats = AdvancedCacheManager.getInstance().getStats();
+    
+    // Convert session data to analytics data format
+    const analytics: AnalyticsData = sessionData ? {
+      id: sessionData.id,
+      startTime: sessionData.startTime,
+      lastActivity: sessionData.lastActivity,
+      pageViews: sessionData.pageViews,
+      events: sessionData.events,
+      deviceInfo: sessionData.deviceInfo
+    } : {
+      id: '',
+      startTime: 0,
+      lastActivity: 0,
+      pageViews: 0,
+      events: [],
+      deviceInfo: {
+        screenResolution: '',
+        language: '',
+        timezone: ''
+      }
+    };
+
+    // Convert cache stats to proper format
+    const cache: CacheData = {
+      size: typeof cacheStats === 'object' && cacheStats !== null ? (cacheStats as Record<string, unknown>).size as number || 0 : 0,
+      totalSize: typeof cacheStats === 'object' && cacheStats !== null ? (cacheStats as Record<string, unknown>).totalSize as number || 0 : 0,
+      maxSize: typeof cacheStats === 'object' && cacheStats !== null ? (cacheStats as Record<string, unknown>).maxSize as number || 0 : 0,
+      hitRate: typeof cacheStats === 'object' && cacheStats !== null ? (cacheStats as Record<string, unknown>).hitRate as number || 0 : 0
+    };
     
     setData({
       analytics: analytics || {},
@@ -247,7 +276,7 @@ const AdvancedDashboard: React.FC = () => {
                 <h3 className="font-semibold mb-3">Recent Events ({data.analytics.events?.length || 0})</h3>
                 <div className="max-h-64 overflow-y-auto">
                   <div className="space-y-2">
-                    {(data.analytics.events || []).slice(-10).map((event, index: number) => (
+                    {data.analytics.events.slice(-10).map((event, index: number) => (
                       <div key={index} className="bg-white p-2 rounded text-sm">
                         <div className="font-medium">{event.event}</div>
                         <div className="text-gray-600">{new Date(event.timestamp).toLocaleString()}</div>

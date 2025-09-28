@@ -29,8 +29,8 @@ export const SystemMetricsDashboard: React.FC<SystemMetricsDashboardProps> = ({
         const secMetrics = secEnhancer.getMetrics();
         
         setPerformanceMetrics(perfMetrics ? Object.fromEntries(Object.entries(perfMetrics).map(([k, v]) => [k, typeof v === 'number' ? v : 0])) : null);
-        setAccessibilityMetrics(accMetrics ? Object.fromEntries(Object.entries(accMetrics).map(([k, v]) => [k, typeof v === 'number' ? v : 0])) : null);
-        setSecurityMetrics(secMetrics ? Object.fromEntries(Object.entries(secMetrics).map(([k, v]) => [k, typeof v === 'number' ? v : 0])) : null);
+        setAccessibilityMetrics(Object.fromEntries(Object.entries(accMetrics).map(([k, v]) => [k, typeof v === 'number' ? v : 0])));
+        setSecurityMetrics(Object.fromEntries(Object.entries(secMetrics).map(([k, v]) => [k, typeof v === 'number' ? v : 0])));
       };
 
       updateMetrics();

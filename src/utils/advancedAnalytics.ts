@@ -230,7 +230,7 @@ class AdvancedAnalyticsManager {
 
   public identifyUser(userId: string, traits?: Record<string, unknown>): void {
     if (this.session) {
-      (this.session as { userId?: string }).userId = userId;
+      (this.session as UserSession & { userId?: string }).userId = userId;
     }
 
     this.trackEvent('user_identified', {
