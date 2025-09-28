@@ -3,6 +3,18 @@
  * Provides comprehensive monitoring, error tracking, and performance analytics
  */
 
+// Layout Shift interface for CLS monitoring
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: Array<{
+    node: Node;
+    previousRect: DOMRectReadOnly;
+    currentRect: DOMRectReadOnly;
+  }>;
+}
+
 interface MonitoringConfig {
   enableErrorTracking: boolean;
   enablePerformanceMonitoring: boolean;
