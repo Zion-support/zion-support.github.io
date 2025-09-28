@@ -143,7 +143,6 @@ export default function App(): React.JSX.Element {
 
   // Main initialization effect
   useEffect(() => {
-<<<<<<< HEAD
     try {
       const enhancements = getComprehensiveEnhancements();
       enhancements.initialize();
@@ -173,8 +172,9 @@ export default function App(): React.JSX.Element {
       console.error('Error initializing enhancements:', error);
     }
   }, [seoManager]);
-=======
-    // Initialize basic systems
+
+  // Initialize basic systems
+  useEffect(() => {
     analytics.initialize();
     
     // Initialize SEO analytics
@@ -190,7 +190,6 @@ export default function App(): React.JSX.Element {
 
     // Update meta tags
     updateMetaTags(seoData);
->>>>>>> efecc7ca1e26dfc2be0477778624e89a4b0854cf
 
     // Initialize enhancement systems
     performanceOptimizer.optimizeBundle();
