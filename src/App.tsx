@@ -5,26 +5,58 @@ import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import PerformanceDashboard from './components/PerformanceDashboard';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
-import { analytics } from './utils/analytics';
-import { performanceOptimizer } from './utils/performanceOptimizations';
-import { advancedAccessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { useAppInitialization } from './hooks/useAppInitialization';
-import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import SEOOptimizer from './components/SEOOptimizer';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+
+import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
+import { EnhancedNotification } from './types/comprehensive';
+import './index.css';
+
+// Import new advanced systems
+import { seoManager } from './utils/advancedSEOManager';
+
+// Import enhanced utilities
+import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
+import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
+import { enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
+import { advancedAppEnhancements } from './utils/advancedAppEnhancements';
+import { errorHandler, ErrorBoundary } from './utils/errorHandler';
+import { performanceMonitor } from './utils/performanceMonitoring';
+import { advancedErrorHandler } from './utils/advancedErrorHandling';
+import SystemMonitoringDashboard from './components/SystemMonitoringDashboard';
+
+// Lazy load heavy components for better performance
+const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
+const KeyboardShortcutsHelp = lazy(() => import('./components/KeyboardShortcutsHelp'));
+const SystemHealthDashboard = lazy(() => import('./components/SystemHealthDashboard'));
+const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
+const CommandPalette = lazy(() => import('./components/CommandPalette'));
+const AdvancedMonitoringDashboard = lazy(() => import('./components/AdvancedMonitoringDashboard'));
+const ComprehensivePerformanceDashboard = lazy(() => import('./components/ComprehensivePerformanceDashboard'));
+const RealTimePerformanceMonitor = lazy(() => import('./components/RealTimePerformanceMonitor'));
+const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPalette'));
+const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
+const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
+const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
+const SystemStatusIndicator = lazy(() => import('./components/SystemStatusIndicator'));
+const EnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotificationSystem'));
+const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcutsManager'));
+const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDashboard'));
+
+// Additional imports
+import AdvancedAnalytics from './components/AdvancedAnalytics';
+import PerformanceDashboard from './components/PerformanceDashboard';
+// import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
-import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
-import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
-import { initializeAccessibilityEnhancements } from './utils/accessibilityEnhancements';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-b36a
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { AdvancedSEOOptimizer } from './utils/advancedSEOOptimizer';
 import { performanceMonitor, getPerformanceScore, getPerformanceRecommendations } from './utils/performanceMonitoring';
