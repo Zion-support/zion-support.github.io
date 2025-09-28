@@ -337,9 +337,10 @@ class AccessibilityEnhancer {
     });
   }
 
-  private calculateContrastRatio(color: string, backgroundColor: string): number {
+  private calculateContrastRatio(color1: string, color2: string): number {
     // Simplified contrast ratio calculation
     // In a real implementation, you'd parse the colors and calculate luminance
+    console.log('Calculating contrast ratio for:', color1, 'and', color2);
     return 4.5; // Placeholder
   }
 
