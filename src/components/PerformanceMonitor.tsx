@@ -58,18 +58,18 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       fidEntries[0].processingStart - fidEntries[0].startTime : 0;
 
     // Get CLS
-    const clsEntries = performance.getEntriesByType('layout-shift');
+    const clsEntries = performance.getEntriesByType('layout-shift') as PerformanceEntry[];
     const cumulativeLayoutShift = clsEntries.reduce((cls, entry) => {
-      return cls + (entry as any).value;
+      return cls + (entry as PerformanceEntry & { value: number }).value;
     }, 0);
 
     // Get memory usage
-    const memory = (performance as any).memory;
+    const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
     const memoryUsage = memory ? (memory.usedJSHeapSize / 1024 / 1024) : 0;
     const memoryLimit = memory ? (memory.jsHeapSizeLimit / 1024 / 1024) : 0;
 
     // Get connection speed
-    const connection = (navigator as any).connection;
+    const connection = (navigator as Navigator & { connection?: { effectiveType: string } }).connection;
     const connectionSpeed = connection ? connection.effectiveType : 'unknown';
 
     // Determine device type
