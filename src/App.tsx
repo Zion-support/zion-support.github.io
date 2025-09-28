@@ -92,7 +92,6 @@ export default function App(): React.JSX.Element {
   // Get SEO data using current pathname
   const seoData = useSEOData(currentPathname);
 
-<<<<<<< HEAD
   // Command palette commands
   const commandPaletteCommands = useMemo(() => [
     {
@@ -154,11 +153,7 @@ export default function App(): React.JSX.Element {
   ], []);
 
   // Optimized keyboard handler for system dashboard toggle - removed unused function
-=======
-  // Command palette commands (removed to reduce warnings)
 
-  // Optimized keyboard handler for system dashboard toggle (commented out to reduce warnings)
->>>>>>> 8f31276972406891e28b4609e6555eec8bab76ce
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
