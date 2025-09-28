@@ -414,7 +414,7 @@ class SecurityEnhancer {
         throw new Error('Suspicious URL blocked');
       }
       
-      return (originalXHR as any).apply(this, [method, url, ...args]);
+      return (originalXHR as typeof XMLHttpRequest.prototype.open).apply(this, [method, url, ...args] as any);
     };
   }
 
