@@ -589,7 +589,8 @@ export class AdvancedAutomationSystem {
     }
   }
 
-  private async runPreDeploymentChecks(): Promise<void> {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  private async runPreDeploymentChecks(_config: DeploymentConfig): Promise<void> {
     console.log('Running pre-deployment checks...');
     
     // Check system health
@@ -617,19 +618,22 @@ export class AdvancedAutomationSystem {
     }
   }
 
-  private async rollingDeployment(): Promise<boolean> {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  private async rollingDeployment(_config: DeploymentConfig): Promise<boolean> {
     console.log('Performing rolling deployment...');
     await this.delay(2000);
     return true;
   }
 
-  private async blueGreenDeployment(): Promise<boolean> {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  private async blueGreenDeployment(_config: DeploymentConfig): Promise<boolean> {
     console.log('Performing blue-green deployment...');
     await this.delay(3000);
     return true;
   }
 
-  private async canaryDeployment(): Promise<boolean> {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  private async canaryDeployment(_config: DeploymentConfig): Promise<boolean> {
     console.log('Performing canary deployment...');
     await this.delay(4000);
     return true;
@@ -648,7 +652,8 @@ export class AdvancedAutomationSystem {
     await this.runTestSuite('integration');
   }
 
-  private async rollbackDeployment(): Promise<void> {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  private async rollbackDeployment(_config: DeploymentConfig): Promise<void> {
     console.log('Rolling back deployment...');
     await this.delay(2000);
   }

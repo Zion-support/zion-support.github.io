@@ -114,7 +114,7 @@ export class EnhancedAnalytics {
     };
 
     // Track session start
-    this.track('session', 'start', 'session_start', undefined, undefined, {
+    this.track('session', 'start', 'session_start', undefined, {
       sessionId,
       timestamp: now,
       userAgent: navigator.userAgent,
@@ -128,12 +128,13 @@ export class EnhancedAnalytics {
       const target = event.target as HTMLElement;
       if (target) {
         const element = this.getElementInfo(target);
-        this.track('interaction', 'click', element.tagName, element.text, undefined, {
+        this.track('interaction', 'click', element.tagName, undefined, {
           element: element.tagName,
           className: element.className,
           id: element.id,
           href: element.href,
-          position: { x: event.clientX, y: event.clientY }
+          position: { x: event.clientX, y: event.clientY },
+          text: element.text
         });
       }
     }, true);
@@ -142,7 +143,7 @@ export class EnhancedAnalytics {
     document.addEventListener('submit', (event) => {
       const form = event.target as HTMLFormElement;
       if (form) {
-        this.track('form', 'submit', form.action || 'unknown', form.method, undefined, {
+        this.track('form', 'submit', form.action || 'unknown', undefined, {
           formId: form.id,
           formName: form.name,
           action: form.action,
@@ -169,7 +170,7 @@ export class EnhancedAnalytics {
           
           // Track milestone scroll depths
           if ([25, 50, 75, 90, 100].includes(scrollDepth)) {
-            this.track('engagement', 'scroll', `scroll_${scrollDepth}%`, undefined, scrollDepth);
+            this.track('engagement', 'scroll', `scroll_${scrollDepth}%`, scrollDepth);
           }
         }
       }, 150);
@@ -188,7 +189,7 @@ export class EnhancedAnalytics {
         const milestones = [30, 60, 120, 300, 600]; // seconds
         milestones.forEach(milestone => {
           if (timeOnPage >= milestone * 1000 && timeOnPage < (milestone + 30) * 1000) {
-            this.track('engagement', 'time_on_page', `${milestone}s`, undefined, milestone);
+            this.track('engagement', 'time_on_page', `${milestone}s`, milestone);
           }
         });
       }
@@ -219,10 +220,10 @@ export class EnhancedAnalytics {
       if ('performance' in window) {
         const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (perfData) {
-          this.track('performance', 'page_load', 'load_complete', undefined, perfData.loadEventEnd - perfData.navigationStart, {
-            domContentLoaded: perfData.domContentLoadedEventEnd - perfData.navigationStart,
-            loadComplete: perfData.loadEventEnd - perfData.navigationStart,
-            firstByte: perfData.responseStart - perfData.navigationStart
+          this.track('performance', 'page_load', 'load_complete', perfData.loadEventEnd, {
+            domContentLoaded: perfData.domContentLoadedEventEnd,
+            loadComplete: perfData.loadEventEnd,
+            firstByte: perfData.responseStart
           });
         }
       }
@@ -245,7 +246,7 @@ export class EnhancedAnalytics {
       
       movementTimeout = window.setTimeout(() => {
         if (mouseMovements.length > 10) {
-          this.track('interaction', 'mouse_movement', 'mouse_tracking', undefined, mouseMovements.length, {
+          this.track('interaction', 'mouse_movement', 'mouse_tracking', mouseMovements.length, {
             movements: mouseMovements.slice(-10), // Last 10 movements
             duration: mouseMovements[mouseMovements.length - 1].timestamp - mouseMovements[0].timestamp
           });
@@ -256,7 +257,7 @@ export class EnhancedAnalytics {
 
     // Track keyboard usage
     document.addEventListener('keydown', (event) => {
-      this.track('interaction', 'keydown', event.key, undefined, undefined, {
+      this.track('interaction', 'keydown', event.key, undefined, {
         key: event.key,
         code: event.code,
         ctrlKey: event.ctrlKey,
@@ -275,7 +276,7 @@ export class EnhancedAnalytics {
         const fcpObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach(entry => {
             if (entry.name === 'first-contentful-paint') {
-              this.track('performance', 'web_vital', 'FCP', undefined, entry.startTime);
+              this.track('performance', 'web_vital', 'FCP', entry.startTime);
             }
           });
         });
@@ -288,9 +289,9 @@ export class EnhancedAnalytics {
       try {
         const lcpObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach(entry => {
-            this.track('performance', 'web_vital', 'LCP', undefined, entry.startTime, {
-              element: entry.element?.tagName,
-              url: entry.url
+            this.track('performance', 'web_vital', 'LCP', entry.startTime, {
+              element: (entry as PerformanceEntry & { element?: Element }).element?.tagName,
+              url: (entry as PerformanceEntry & { url?: string }).url
             });
           });
         });
@@ -303,9 +304,9 @@ export class EnhancedAnalytics {
       try {
         const fidObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach(entry => {
-            this.track('performance', 'web_vital', 'FID', undefined, (entry as { processingStart: number }).processingStart - entry.startTime, {
+            this.track('performance', 'web_vital', 'FID', (entry as PerformanceEntry & { processingStart?: number }).processingStart! - entry.startTime, {
               eventType: entry.name,
-              target: (entry as { target?: { tagName: string } }).target?.tagName
+              target: (entry as PerformanceEntry & { target?: Element }).target?.tagName
             });
           });
         });
@@ -318,8 +319,8 @@ export class EnhancedAnalytics {
       try {
         const clsObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach(entry => {
-            this.track('performance', 'web_vital', 'CLS', undefined, (entry as { value: number }).value, {
-              sources: (entry as { sources?: Array<{ node?: { tagName: string } }> }).sources?.map((s) => s.node?.tagName)
+            this.track('performance', 'web_vital', 'CLS', (entry as PerformanceEntry & { value?: number }).value!, {
+              sources: (entry as PerformanceEntry & { sources?: Array<{ node?: Element }> }).sources?.map((s) => s.node?.tagName)
             });
           });
         });
@@ -351,11 +352,12 @@ export class EnhancedAnalytics {
       this.currentSession.pageViews++;
     }
 
-    this.track('page', 'view', 'page_view', window.location.pathname, undefined, {
+    this.track('page', 'view', 'page_view', undefined, {
       title: document.title,
       url: window.location.href,
       referrer: document.referrer,
-      timestamp: Date.now()
+      timestamp: Date.now(),
+      pathname: window.location.pathname
     });
   }
 
