@@ -101,7 +101,6 @@ export default function App(): React.JSX.Element {
       }
     }
   }, []);
-
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
