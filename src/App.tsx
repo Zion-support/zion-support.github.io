@@ -97,7 +97,6 @@ export default function App(): React.JSX.Element {
     structuredData: []
   }), []);
 
-<<<<<<< HEAD
   // Engagement tracking data
   const engagementData = useMemo(() => ({
     startTime: Date.now(),
@@ -106,11 +105,7 @@ export default function App(): React.JSX.Element {
   }), []);
 
   // Enhanced track engagement function
-  const enhancedTrackEngagement = useCallback(() => {
-=======
-  // Enhanced track engagement function
   const trackEngagement = useCallback(() => {
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-54b7
     const timeOnPage = Date.now() - engagementData.startTime;
     seoAnalytics.trackUserEngagement(window.location.pathname, {
       timeOnPage,
@@ -118,13 +113,8 @@ export default function App(): React.JSX.Element {
       clicks: engagementData.clicks,
     });
     // Also call the original trackEngagement from useAppInitialization
-<<<<<<< HEAD
-    trackEngagement();
-  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
-=======
     originalTrackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, originalTrackEngagement]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-54b7
 
   // Simple SEO manager
   const seoManagerInstance = useMemo(() => ({
@@ -196,34 +186,23 @@ export default function App(): React.JSX.Element {
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
     }
-<<<<<<< HEAD
-  }, [enhancedTrackEngagement]);
-
-  // Cleanup effect
-  React.useEffect(() => {
-=======
 
     // Track engagement on page unload
     window.addEventListener('beforeunload', trackEngagement);
     
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-54b7
     // Cleanup function
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('beforeunload', enhancedTrackEngagement);
+      window.removeEventListener('beforeunload', trackEngagement);
       
       // Final engagement tracking
-      enhancedTrackEngagement();
+      trackEngagement();
       
       // Remove event listeners
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
     };
-<<<<<<< HEAD
-  }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick]);
-=======
   }, [trackEngagement, handleKeyDown, handleScroll, handleClick]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-54b7
 
   // Show loading screen while initializing
   if (isLoading) {
