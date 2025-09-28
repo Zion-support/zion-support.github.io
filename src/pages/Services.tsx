@@ -153,7 +153,7 @@ export default function Services(): React.JSX.Element {
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
               <p className="text-zion-slate-light mb-8 text-lg">
-                Let's discuss how our AI and IT solutions can drive your success.
+                Let&apos;s discuss how our AI and IT solutions can drive your success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-zion-blue-light to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center group">
