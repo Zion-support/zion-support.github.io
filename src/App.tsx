@@ -24,6 +24,8 @@ import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitorin
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
 import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
+import { enhancedSecuritySystem } from './utils/enhancedSecuritySystem';
+import { enhancedAccessibilitySystem } from './utils/enhancedAccessibilitySystem';
 
 // Lazy load heavy components for better performance
 const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
@@ -200,6 +202,8 @@ export default function App(): React.JSX.Element {
       enhancedAccessibilityManager.initialize();
       advancedErrorRecovery.initialize();
       enhancedSEOOptimizer.initialize();
+      enhancedSecuritySystem.initialize();
+      enhancedAccessibilitySystem.initialize();
       
       // Initialize advanced systems
       void performanceAnalytics; // Initialize performance analytics
@@ -242,6 +246,10 @@ export default function App(): React.JSX.Element {
       
       // Initialize accessibility system
       console.log('Advanced accessibility system initialized');
+      
+      // Log system status
+      console.log('🔒 Security metrics:', enhancedSecuritySystem.getSecurityMetrics());
+      console.log('♿ Accessibility metrics:', enhancedAccessibilitySystem.getAccessibilityMetrics());
       
       // Initialize error reporting system
       console.log('Error reporting system initialized');
