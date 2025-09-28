@@ -93,7 +93,7 @@ class EnhancedAccessibilityManager {
       
       // Handle escape key
       if (event.key === 'Escape') {
-        this.handleEscapeKey(event);
+        this.handleEscapeKey();
       }
       
       // Handle arrow keys for custom components

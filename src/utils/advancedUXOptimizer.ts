@@ -615,7 +615,7 @@ class AdvancedUXOptimizer {
       'large': '18px',
       'extra-large': '20px'
     };
-    return sizes[size] || '16px';
+    return sizes[size as keyof typeof sizes] || '16px';
   }
 
   /**

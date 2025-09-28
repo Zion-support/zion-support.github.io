@@ -73,7 +73,7 @@ export default function App(): React.JSX.Element {
   const seoData = { 
     title: 'Zion Tech Group - Advanced AI and IT Solutions',
     description: 'Leading provider of AI-powered IT solutions, cloud computing, cybersecurity, and digital transformation services for enterprises worldwide.',
-    keywords: ['AI', 'IT Solutions', 'Cloud Computing', 'Cybersecurity', 'Digital Transformation'],
+    keywords: 'AI, IT Solutions, Cloud Computing, Cybersecurity, Digital Transformation',
     image: '/images/og-default.jpg',
     url: `https://ziontechgroup.com${currentPathname}`,
     type: 'website' as const
@@ -136,7 +136,7 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeCSS();
 
     // Set default SEO data using the correct method
-    const seoDataFormatted = { ...seoData, keywords: Array.isArray(seoData.keywords) ? seoData.keywords : [seoData.keywords || 'AI'] };
+    const seoDataFormatted = { ...seoData, keywords: seoData.keywords ? [seoData.keywords] : ['AI'] };
     seoManager.updateMetaTags(seoDataFormatted);
     
     // Initialize advanced optimization systems
