@@ -3,12 +3,8 @@ import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-import { performanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
-import { seoOptimizer } from './utils/seoOptimizations';
-import { useSEOData } from './components/SEOOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -29,14 +25,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
-  const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [userPreferences, setUserPreferences] = useState({
-    theme: 'auto',
-    animations: true,
-    notifications: true,
-    analytics: true
-  });
+  
   // Engagement tracking data
   const engagementData = useMemo(() => ({
     startTime: Date.now(),
@@ -44,18 +33,7 @@ export default function App(): React.JSX.Element {
     clicks: 0
   }), []);
 
-  // Simple SEO manager
-  const seoManager = useMemo(() => ({
-    updateMetaTags: (data: typeof seoData) => {
-      if (typeof document !== 'undefined') {
-        document.title = data.title;
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-          metaDescription.setAttribute('content', data.description);
-        }
-      }
-    }
-  }), []);
+
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -78,37 +56,6 @@ export default function App(): React.JSX.Element {
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey) {
       event.preventDefault();
-<<<<<<< HEAD
-      setShowSystemDashboard((prev: boolean) => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceOptimizer((prev: boolean) => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowPerformanceMonitor((prev: boolean) => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
-      event.preventDefault();
-      setShowAIDashboard((prev: boolean) => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowPerformanceMonitor(prev => !prev);
-    }
-  }, []);
-  // Memoize the SEO data to prevent unnecessary re-renders
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogType: 'website',
-    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const
-  }), []);
-=======
       switch (event.key) {
         case 'D':
           setShowSystemDashboard(prev => !prev);
@@ -122,26 +69,28 @@ export default function App(): React.JSX.Element {
         case 'A':
           setShowAIDashboard(prev => !prev);
           break;
-        case 'S':
-          setShowSEOOptimizer(prev => !prev);
-          break;
-        case 'T':
-          setIsDarkMode(prev => !prev);
-          break;
         case 'Escape':
           // Close all dashboards
           setShowSystemDashboard(false);
           setShowPerformanceOptimizer(false);
           setShowPerformanceMonitor(false);
           setShowAIDashboard(false);
-          setShowSEOOptimizer(false);
           break;
       }
     }
   }, []);
 
   // Memoize the SEO data to prevent unnecessary re-renders
-  const seoData = useSEOData(currentPathname);
+  const seoData = useMemo(() => ({
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
+    ogType: 'website',
+    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
+    ogImage: '/og-image.png',
+    twitterCard: 'summary_large_image' as const
+  }), []);
+
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
@@ -152,7 +101,6 @@ export default function App(): React.JSX.Element {
     });
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
->>>>>>> 17bcf11c6b1010ee452fe390333f96da98337368
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
@@ -180,11 +128,8 @@ export default function App(): React.JSX.Element {
       }
     }
   }, []);
-<<<<<<< HEAD
 
   useEffect(() => {
-<<<<<<< HEAD
-=======
     const enhancements = getComprehensiveEnhancements();
     enhancements.initialize();
     
@@ -198,10 +143,7 @@ export default function App(): React.JSX.Element {
     
     // Initialize analytics
     analytics.initialize();
-    // SEO classes don't have initialize methods, they are used directly
-=======
-  
-  useEffect(() => {
+    
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
@@ -210,10 +152,6 @@ export default function App(): React.JSX.Element {
     // Preload critical resources
     preloadResource('/og-image.png', 'image');
     preloadResource('/favicon.ico', 'image');
-
-    // Initialize basic systems
-    analytics.initialize();
->>>>>>> 17bcf11c6b1010ee452fe390333f96da98337368
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -223,44 +161,6 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeFonts();
     performanceSEO.optimizeCSS();
 
-    // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-fd54
-    // Add performance marks for better monitoring
-    if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
-      performance.mark('app-init-start');
-=======
-    // Update meta tags
-    updateMetaTags(seoData);
-
-    // Basic performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized');
->>>>>>> 17bcf11c6b1010ee452fe390333f96da98337368
-    }
-
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
-    document.addEventListener('keydown', handleKeyDown);
-
-<<<<<<< HEAD
-    // Initialize basic systems
-    analytics.initialize();
-    
-    // Initialize SEO analytics
-    seoAnalytics.trackPageView(window.location.pathname);
-    
-    // Initialize performance SEO optimizations
-    performanceSEO.optimizeImages();
-    performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
-
-    // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
-
     // Update meta tags
     updateMetaTags(seoData);
 
@@ -269,8 +169,6 @@ export default function App(): React.JSX.Element {
       console.log('🚀 Zion Tech Group App initialized');
     }
 
-=======
->>>>>>> 17bcf11c6b1010ee452fe390333f96da98337368
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
         typeof performance.mark === 'function' && 
@@ -290,59 +188,9 @@ export default function App(): React.JSX.Element {
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
-<<<<<<< HEAD
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags]);
-
-  // Add keyboard event listener
-  React.useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
-    
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [handleKeyDown]);
-
-  // Main initialization and cleanup effect
-  React.useEffect(() => {
-    // Track engagement on page unload
-    window.addEventListener('beforeunload', trackEngagement);
-
-    // Cleanup function
-    return () => {
-      window.removeEventListener('beforeunload', trackEngagement);
-      
-      // Final engagement tracking
-      trackEngagement();
-    };
-  }, [trackEngagement]);
-
-  // Performance optimization is handled by the hook automatically
-
-  // Track engagement on scroll and click
-  useEffect(() => {
-    const handleScrollWithEngagement = () => {
-      handleScroll();
-        trackEngagement();
-      };
-
-    const handleClickWithEngagement = (event: Event) => {
-      handleClick(event);
-      trackEngagement();
-    };
-
-    window.addEventListener('scroll', handleScrollWithEngagement, { passive: true });
-    document.addEventListener('click', handleClickWithEngagement, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScrollWithEngagement);
-      document.removeEventListener('click', handleClickWithEngagement);
-    };
-  }, [handleScroll, handleClick, trackEngagement]);
+  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags, enhancedTrackEngagement, trackEngagement]);
 
   // Show loading spinner while initializing
-=======
-  }, [trackEngagement, handleKeyDown, handleScroll, handleClick, enhancedTrackEngagement, seoData, preloadResource, seoManager, updateMetaTags]);
->>>>>>> 17bcf11c6b1010ee452fe390333f96da98337368
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -399,8 +247,6 @@ export default function App(): React.JSX.Element {
           </div>
         )}
 
-<<<<<<< HEAD
-=======
         {/* Performance Monitor */}
         {showPerformanceMonitor && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
@@ -418,7 +264,7 @@ export default function App(): React.JSX.Element {
             </div>
           </div>
         )}
->>>>>>> 17bcf11c6b1010ee452fe390333f96da98337368
+        
         {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
         <PerformanceMonitor 
           showDashboard={showPerformanceMonitor}
