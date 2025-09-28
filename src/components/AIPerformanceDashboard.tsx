@@ -6,18 +6,7 @@ interface AIPerformanceDashboardProps {
   onClose: () => void;
 }
 
-interface ErrorReport {
-  severity: string;
-  message: string;
-  lastOccurrence: string | number;
-  occurrenceCount: number;
-  context: {
-    component?: string;
-    action?: string;
-  };
-  aiPredictedImpact?: number;
-  resolutionSuggestions?: string[];
-}
+// Removed unused interfaces - they were defined but never used in the component
 
 const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
   const [metrics, setMetrics] = useState<{
