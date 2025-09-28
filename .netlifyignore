@@ -21,7 +21,7 @@ __tests__/
 # Ignore build artifacts
 .next/
 .vercel/
-dist/
+# dist/ - Don't ignore dist/ as it contains our build output
 build/
 
 # Ignore logs
