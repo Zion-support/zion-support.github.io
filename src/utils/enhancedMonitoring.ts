@@ -1,3 +1,4 @@
+// Removed triple slash reference - using import style instead
 /**
  * Enhanced Monitoring and Analytics System
  * Provides comprehensive monitoring, error tracking, and performance analytics
@@ -226,10 +227,10 @@ class EnhancedMonitoring {
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (!(entry as LayoutShift).hadRecentInput) {
+          if (!(entry as any).hadRecentInput) {
             this.trackPerformance({
               name: 'CLS',
-              value: (entry as LayoutShift).value,
+              value: (entry as any).value,
               type: 'measure',
               url: window.location.href,
               sessionId: this.sessionId,
