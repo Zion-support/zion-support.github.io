@@ -12,6 +12,8 @@ import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
 import { seoOptimizer } from './utils/seoOptimization';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import AdvancedAnalytics from './components/AdvancedAnalytics';
+import PerformanceDashboard from './components/PerformanceDashboard';
 
 // Import enhanced utilities
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
@@ -59,6 +61,7 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
+// import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
