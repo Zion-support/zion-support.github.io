@@ -10,6 +10,7 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
+import { EnhancedNotification } from './types/comprehensive';
 import './index.css';
 
 // Import new advanced systems
@@ -62,6 +63,7 @@ export default function App(): React.JSX.Element {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [enhancedNotifications, setEnhancedNotifications] = useState<EnhancedNotification[]>([]);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showCommandPalette, setShowCommandPalette] = useState(false);
@@ -746,8 +748,10 @@ export default function App(): React.JSX.Element {
         {showEnhancedNotifications && (
           <Suspense fallback={<ModernLoadingSpinner />}>
             <EnhancedNotificationSystem
-              notifications={notifications}
-              onRemove={removeNotification}
+              notifications={enhancedNotifications}
+              onRemove={(id: string) => {
+                setEnhancedNotifications(prev => prev.filter(n => n.id !== id));
+              }}
               maxNotifications={5}
               position="top-right"
               showSoundToggle={true}

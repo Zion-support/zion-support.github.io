@@ -16,7 +16,7 @@ export const createLazyComponent = <P extends object>(
   const LazyComponent = lazy(importFunc);
 
   const LazyComponentWrapper = React.forwardRef<unknown, P & LazyComponentProps>((props, ref) => {
-    const { delay = 0, ...restProps } = props;
+    const { delay = 0, fallback, ...restProps } = props;
     
     const [show, setShow] = React.useState(delay === 0);
     

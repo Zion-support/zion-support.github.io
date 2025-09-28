@@ -35,7 +35,7 @@ const KeyboardShortcutsManager: React.FC<KeyboardShortcutsManagerProps> = ({
   const [pressedKeys, setPressedKeys] = useState<string[]>([]);
 
   // Default categories
-  const defaultCategories = {
+  const defaultCategories: Record<string, string> = {
     navigation: 'Navigation',
     tools: 'Tools',
     system: 'System',

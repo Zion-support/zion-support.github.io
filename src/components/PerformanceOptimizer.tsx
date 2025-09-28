@@ -48,11 +48,11 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     setMetrics(prev => ({
       ...prev,
-      memory,
+      memory: memory ? { ...memory, limit: memory.limit || 0 } : null,
       loadTime: performanceMetrics.loadTime || 0,
-      domContentLoaded: performanceMetrics.domContentLoaded || 0,
-      domInteractive: performanceMetrics.domInteractive || 0,
-      violations: [...prev.violations, ...violations]
+      domContentLoaded: (performanceMetrics as any).domContentLoaded || 0,
+      domInteractive: (performanceMetrics as any).domInteractive || 0,
+      violations: [...prev.violations, ...(violations || [])]
     }));
   }, []);
 
@@ -237,11 +237,11 @@ export const usePerformanceMonitoring = () => {
     const violations = checkPerformanceBudget(performanceMetrics);
 
     setMetrics({
-      memory,
+      memory: memory ? { ...memory, limit: memory.limit || 0 } : null,
       loadTime: performanceMetrics.loadTime || 0,
-      domContentLoaded: performanceMetrics.domContentLoaded || 0,
-      domInteractive: performanceMetrics.domInteractive || 0,
-      violations
+      domContentLoaded: (performanceMetrics as any).domContentLoaded || 0,
+      domInteractive: (performanceMetrics as any).domInteractive || 0,
+      violations: violations || []
     });
   }, []);
 
