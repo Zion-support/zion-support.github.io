@@ -1,15 +1,9 @@
 import React, { useCallback, useState, useEffect } from 'react';
 import { AppRouter } from './router';
-import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceTracker from './components/PerformanceTracker';
-import AccessibilityEnhancements from './components/AccessibilityEnhancements';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
-import { analytics } from './utils/analytics';
-import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
-import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-import RealTimeMonitor from './components/RealTimeMonitor';
+import { seoAnalytics } from './utils/seoEnhanced';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
@@ -41,10 +35,7 @@ export default function App(): React.JSX.Element {
   const [showCommandPalette, setShowCommandPalette] = useState(false);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
   const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
-  const [showComprehensivePerformance, setShowComprehensivePerformance] = useState(false);
-  const [showAdvancedSEO, setShowAdvancedSEO] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   // User preferences state (for future use)
@@ -75,9 +66,9 @@ export default function App(): React.JSX.Element {
   
   const isLoading = false;
   const loadingProgress = 100;
-  const handleScroll = () => {};
-  const handleClick = (event?: Event) => {};
-  const trackEngagement = () => {};
+  const handleScroll = useCallback(() => {}, []);
+  const handleClick = useCallback(() => {}, []);
+  const trackEngagement = useCallback(() => {}, []);
 
   // Performance optimization hook - Temporarily disabled
   // usePerformanceOptimization({
@@ -93,122 +84,7 @@ export default function App(): React.JSX.Element {
   // Get SEO data using current pathname
   const seoData = useSEOData(currentPathname);
 
-  // Command palette commands
-  const commands = useMemo(() => [
-    {
-      id: 'system-dashboard',
-      title: 'Toggle System Dashboard',
-      description: 'Open/close the system metrics dashboard',
-      category: 'Dashboard',
-      action: () => setShowSystemDashboard(prev => !prev),
-      shortcut: 'Ctrl+Shift+D'
-    },
-    {
-      id: 'performance-optimizer',
-      title: 'Toggle Performance Optimizer',
-      description: 'Open/close the performance optimization panel',
-      category: 'Performance',
-      action: () => setShowPerformanceOptimizer(prev => !prev),
-      shortcut: 'Ctrl+Shift+P'
-    },
-    {
-      id: 'performance-monitor',
-      title: 'Toggle Performance Monitor',
-      description: 'Open/close the performance monitoring panel',
-      category: 'Performance',
-      action: () => setShowPerformanceMonitor(prev => !prev),
-      shortcut: 'Ctrl+Shift+M'
-    },
-    {
-      id: 'ai-dashboard',
-      title: 'Toggle AI Dashboard',
-      description: 'Open/close the AI performance dashboard',
-      category: 'AI',
-      action: () => setShowAIDashboard(prev => !prev),
-      shortcut: 'Ctrl+Shift+A'
-    },
-    {
-      id: 'keyboard-help',
-      title: 'Show Keyboard Shortcuts',
-      description: 'Display all available keyboard shortcuts',
-      category: 'Help',
-      action: () => setShowKeyboardHelp(true),
-      shortcut: 'Ctrl+Shift+H'
-    },
-    {
-      id: 'close-all',
-      title: 'Close All Modals',
-      description: 'Close all open modals and dashboards',
-      category: 'Navigation',
-      action: () => {
-        setShowSystemDashboard(false);
-        setShowPerformanceOptimizer(false);
-        setShowPerformanceMonitor(false);
-        setShowAIDashboard(false);
-        setShowRealTimeMetrics(false);
-        setShowCommandPalette(false);
-        setShowKeyboardHelp(false);
-      },
-      shortcut: 'Escape'
-    }
-  ], []);
 
-  // Optimized keyboard handler for system dashboard toggle
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey) {
-      event.preventDefault();
-      switch (event.key) {
-        case 'D':
-          setShowSystemDashboard(prev => !prev);
-          break;
-        case 'P':
-          setShowPerformanceOptimizer(prev => !prev);
-          break;
-        case 'R':
-          setShowRealTimeMetrics(prev => !prev);
-          break;
-        case 'M':
-          setShowPerformanceMonitor(prev => !prev);
-          break;
-        case 'A':
-          setShowAIDashboard(prev => !prev);
-          break;
-        case 'C':
-          setShowCommandPalette(prev => !prev);
-          break;
-        case 'H':
-          setShowKeyboardHelp(prev => !prev);
-          break;
-        case 'S':
-          setShowSEOOptimizer(prev => !prev);
-          break;
-        case 'Escape':
-          // Close all modals and dashboards
-          setShowSystemDashboard(false);
-          setShowPerformanceOptimizer(false);
-          setShowPerformanceMonitor(false);
-          setShowAIDashboard(false);
-          setShowRealTimeMetrics(false);
-          setShowCommandPalette(false);
-          setShowKeyboardHelp(false);
-          setShowSEOOptimizer(false);
-          setShowAccessibilityPanel(false);
-          break;
-        case 'w':
-          event.preventDefault();
-          setShowWebsiteEnhancements(prev => !prev);
-          break;
-        case 'c':
-          event.preventDefault();
-          setShowComprehensivePerformance(prev => !prev);
-          break;
-        case 'e':
-          event.preventDefault();
-          setShowAdvancedSEO(prev => !prev);
-          break;
-      }
-    }
-  }, []);
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
@@ -218,7 +94,7 @@ export default function App(): React.JSX.Element {
       clicks: engagementData.clicks,
     });
     trackEngagement();
-  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
+  }, [trackEngagement]);
 
   // Memoize the SEO data to prevent unnecessary re-renders
   const memoizedSeoData = useMemo(() => ({
@@ -478,17 +354,6 @@ export default function App(): React.JSX.Element {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth]);
 
-  // Enhanced scroll handler
-  const handleEnhancedScroll = useCallback((event: Event) => {
-    handleScroll();
-    trackEngagement();
-  }, [handleScroll, trackEngagement]);
-
-  // Enhanced click handler
-  const handleEnhancedClick = useCallback((event: Event) => {
-    handleClick(event);
-    trackEngagement();
-  }, [handleClick, trackEngagement]);
 
   // Command palette commands
   const commandPaletteCommands = [
