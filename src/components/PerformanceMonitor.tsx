@@ -8,16 +8,23 @@ interface PerformanceMetrics {
   ttfb: number;
   memoryUsage: number;
   bundleSize: number;
+  renderTime: number;
 }
 
 interface PerformanceMonitorProps {
   showDashboard: boolean;
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  className?: string;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDashboard, onMetricsUpdate }) => {
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
+  showDashboard, 
+  onMetricsUpdate,
+  className = "fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg max-w-sm z-50"
+}) => {
   const [metrics, setMetrics] = useState<Partial<PerformanceMetrics>>({});
   const [isVisible, setIsVisible] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(false);
 
   const updateMetrics = useCallback(() => {
     const newMetrics: Partial<PerformanceMetrics> = {};
@@ -27,31 +34,47 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDashboard, 
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
         newMetrics.ttfb = navigation.responseStart - navigation.requestStart;
+        newMetrics.renderTime = navigation.loadEventEnd - navigation.navigationStart;
       }
 
       // Get memory usage
       if ('memory' in performance) {
-        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+        const memory = (performance as any).memory;
         newMetrics.memoryUsage = memory.usedJSHeapSize;
       }
+
+      // Get paint metrics
+      const paintEntries = performance.getEntriesByType('paint');
+      paintEntries.forEach(entry => {
+        if (entry.name === 'first-contentful-paint') {
+          newMetrics.fcp = entry.startTime;
+        }
+      });
+
+      // Get LCP
+      const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+      if (lcpEntries.length > 0) {
+        newMetrics.lcp = lcpEntries[lcpEntries.length - 1].startTime;
+      }
+
+      // Calculate bundle size (approximate)
+      const scripts = document.querySelectorAll('script[src]');
+      let totalSize = 0;
+      scripts.forEach(script => {
+        const src = script.getAttribute('src');
+        if (src && src.includes('assets')) {
+          // This is a rough estimation - in real implementation you'd fetch and measure
+          totalSize += 100000; // Assume 100KB per script
+        }
+      });
+      newMetrics.bundleSize = totalSize;
     }
 
-    // Estimate bundle size (this would be more accurate with actual bundle analysis)
-    const resourceEntries = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
-    const bundleSize = resourceEntries
-      .filter((entry) => entry.name.includes('.js'))
-      .reduce((total, entry) => total + (entry.transferSize || 0), 0);
-
-    const updatedMetrics = {
-      ...metrics,
-      bundleSize: Math.round(bundleSize / 1024) // Convert to KB
-    };
-
-    setMetrics(updatedMetrics);
+    setMetrics(prev => ({ ...prev, ...newMetrics }));
     if (onMetricsUpdate) {
-      onMetricsUpdate(updatedMetrics as PerformanceMetrics);
+      onMetricsUpdate(newMetrics as PerformanceMetrics);
     }
-  }, [onMetricsUpdate, metrics]);
+  }, [onMetricsUpdate]);
 
   useEffect(() => {
     if (!showDashboard) return;
@@ -93,7 +116,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDashboard, 
     }
 
     // Update metrics periodically
-    const interval = setInterval(updateMetrics, 1000);
+    const interval = setInterval(updateMetrics, 2000);
 
     return () => {
       observer.disconnect();
@@ -103,26 +126,106 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDashboard, 
 
   if (!showDashboard) return null;
 
+  const formatNumber = (value?: number, decimals = 2) => {
+    if (value === undefined || value === null) return 'N/A';
+    return value.toFixed(decimals);
+  };
+
+  const formatBytes = (bytes?: number) => {
+    if (bytes === undefined || bytes === null) return 'N/A';
+    if (bytes === 0) return '0 B';
+    const k = 1024;
+    const sizes = ['B', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  };
+
+  const getPerformanceColor = (value?: number, thresholds: [number, number]) => {
+    if (value === undefined || value === null) return 'text-gray-400';
+    if (value <= thresholds[0]) return 'text-green-400';
+    if (value <= thresholds[1]) return 'text-yellow-400';
+    return 'text-red-400';
+  };
+
   return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg max-w-sm">
+    <div className={className}>
       <div className="flex justify-between items-center mb-2">
-        <h3 className="text-sm font-bold">Performance Monitor</h3>
-        <button
-          onClick={() => setIsVisible(!isVisible)}
-          className="text-xs text-gray-400 hover:text-white"
-        >
-          {isVisible ? '−' : '+'}
-        </button>
+        <h3 className="text-sm font-bold flex items-center">
+          📊 Performance Monitor
+        </h3>
+        <div className="flex space-x-1">
+          <button
+            onClick={() => setIsMinimized(!isMinimized)}
+            className="text-xs text-gray-400 hover:text-white transition-colors"
+            title={isMinimized ? 'Expand' : 'Minimize'}
+          >
+            {isMinimized ? '📈' : '📉'}
+          </button>
+          <button
+            onClick={() => setIsVisible(!isVisible)}
+            className="text-xs text-gray-400 hover:text-white transition-colors"
+            title={isVisible ? 'Hide details' : 'Show details'}
+          >
+            {isVisible ? '👁️' : '👁️‍🗨️'}
+          </button>
+        </div>
       </div>
       
-      {isVisible && (
-        <div className="space-y-1 text-xs">
-          <div>FCP: {metrics.fcp?.toFixed(2) || 'N/A'}ms</div>
-          <div>LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>
-          <div>FID: {metrics.fid?.toFixed(2) || 'N/A'}ms</div>
-          <div>CLS: {metrics.cls?.toFixed(4) || 'N/A'}</div>
-          <div>TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>
-          <div>Memory: {metrics.memoryUsage ? (metrics.memoryUsage / 1024 / 1024).toFixed(2) + 'MB' : 'N/A'}</div>
+      {!isMinimized && (
+        <div className="space-y-2 text-xs">
+          <div className="grid grid-cols-2 gap-2">
+            <div>
+              <span className="text-gray-400">FCP:</span>
+              <span className={`ml-1 ${getPerformanceColor(metrics.fcp, [1800, 3000])}`}>
+                {formatNumber(metrics.fcp)}ms
+              </span>
+            </div>
+            <div>
+              <span className="text-gray-400">LCP:</span>
+              <span className={`ml-1 ${getPerformanceColor(metrics.lcp, [2500, 4000])}`}>
+                {formatNumber(metrics.lcp)}ms
+              </span>
+            </div>
+            <div>
+              <span className="text-gray-400">FID:</span>
+              <span className={`ml-1 ${getPerformanceColor(metrics.fid, [100, 300])}`}>
+                {formatNumber(metrics.fid)}ms
+              </span>
+            </div>
+            <div>
+              <span className="text-gray-400">CLS:</span>
+              <span className={`ml-1 ${getPerformanceColor(metrics.cls, [0.1, 0.25])}`}>
+                {formatNumber(metrics.cls, 3)}
+              </span>
+            </div>
+          </div>
+          
+          {isVisible && (
+            <div className="pt-2 border-t border-gray-600 space-y-1">
+              <div className="flex justify-between">
+                <span className="text-gray-400">TTFB:</span>
+                <span className={getPerformanceColor(metrics.ttfb, [800, 1800])}>
+                  {formatNumber(metrics.ttfb)}ms
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-400">Memory:</span>
+                <span className={getPerformanceColor(metrics.memoryUsage, [50 * 1024 * 1024, 100 * 1024 * 1024])}>
+                  {formatBytes(metrics.memoryUsage)}
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-400">Render:</span>
+                <span className={getPerformanceColor(metrics.renderTime, [3000, 5000])}>
+                  {formatNumber(metrics.renderTime)}ms
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-400">Bundle:</span>
+                <span>{formatBytes(metrics.bundleSize)}</span>
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>
