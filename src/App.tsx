@@ -29,6 +29,10 @@ import { SecurityEnhancer } from './utils/securityEnhancer';
 import { analytics } from './utils/analytics';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { useSEOData } from './components/SEOOptimizer';
+import { performanceAlerts } from './utils/performanceAlerts';
+import { errorRecoverySystem } from './utils/errorRecovery';
+import { accessibilityUtils } from './utils/accessibilityUtils';
+import { securityUtils } from './utils/securityUtils';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -177,6 +181,11 @@ export default function App(): React.JSX.Element {
       new SecurityEnhancer().initialize();
     } catch (error) {
       console.warn('Some enhancement systems failed to initialize:', error);
+      // Use error recovery system
+      errorRecoverySystem.handleError(error as Error, {
+        component: 'App',
+        action: 'initialization'
+      });
     }
     
     // Initialize basic systems
@@ -194,6 +203,11 @@ export default function App(): React.JSX.Element {
     void performanceOptimizer;
     void accessibilityEnhancer;
     void seoOptimizer;
+
+    // Initialize new utility systems
+    performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
+    accessibilityUtils.announce('Application initialized');
+    securityUtils.getSecurityScore();
 
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
