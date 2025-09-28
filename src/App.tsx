@@ -10,10 +10,6 @@ import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import WebsiteEnhancements from './components/WebsiteEnhancements';
-import SEOOptimizer from './components/SEOOptimizer';
-import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import { EnhancedNotification } from './types/comprehensive';
 import './index.css';
 
@@ -54,7 +50,6 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-// import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { performanceAlerts } from './utils/performanceAlerts';
 import { accessibilityUtils } from './utils/accessibilityUtils';
 import { securityUtils } from './utils/securityUtils';
@@ -90,7 +85,7 @@ export default function App(): React.JSX.Element {
   }, []);
 
   const removeEnhancedNotification = useCallback((id: string) => {
-    setEnhancedNotifications(prev => prev.filter(n => n.id !== id));
+    setEnhancedNotifications(prev => prev.filter((n: EnhancedNotification) => n.id !== id));
   }, []);
 
   // Performance metrics state
@@ -178,7 +173,7 @@ export default function App(): React.JSX.Element {
   const memoizedSeoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Transform your business with cutting-edge AI solutions, advanced technology consulting, and innovative digital transformation services.',
-    keywords: 'AI solutions, technology consulting, digital transformation, machine learning, automation',
+    keywords: ['AI solutions', 'technology consulting', 'digital transformation', 'machine learning', 'automation'],
     canonical: 'https://ziontechgroup.com',
     ogType: 'website',
     ogUrl: 'https://ziontechgroup.com',
@@ -232,7 +227,7 @@ export default function App(): React.JSX.Element {
       const enhancements = getComprehensiveEnhancements();
       
       // Initialize individual enhancement systems
-      advancedAccessibilityEnhancer.initialize();
+      // advancedAccessibilityEnhancer.initialize(); // Commented out - function doesn't exist
       enhancedSecurityManager.initialize();
       enhancedAnalyticsSystem.initialize();
       
@@ -241,8 +236,8 @@ export default function App(): React.JSX.Element {
       performanceMonitor.initialize();
       
       // Initialize performance and accessibility enhancements
-      initializePerformanceEnhancements();
-      initializeAccessibilityEnhancements();
+      // initializePerformanceEnhancements(); // Commented out - function doesn't exist
+      // initializeAccessibilityEnhancements(); // Commented out - function doesn't exist
       
       // Initialize SEO analytics
       seoAnalytics.trackPageView(window.location.pathname);
@@ -259,7 +254,7 @@ export default function App(): React.JSX.Element {
       updateMetaTags(memoizedSeoData);
 
       // Initialize enhancement systems
-      performanceOptimizer.optimizeBundleSize();
+      // performanceOptimizer.optimizeBundleSize(); // Commented out - variable doesn't exist
       enhancedAccessibilityManager.initialize();
       enhancedSEOOptimizer.updateSEO(enhancedSeoData);
 
