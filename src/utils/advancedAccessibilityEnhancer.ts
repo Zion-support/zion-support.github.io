@@ -642,3 +642,5 @@ Accessibility Report:
 `;
   }
 }
+
+export const accessibilityEnhancer = new AdvancedAccessibilityEnhancer();

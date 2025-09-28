@@ -355,3 +355,5 @@ SEO Report:
 `;
   }
 }
+
+export const seoEnhancer = new AdvancedSEOEnhancer();
