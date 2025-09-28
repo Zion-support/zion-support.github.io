@@ -203,10 +203,6 @@ class SEOManager {
     document.head.appendChild(meta);
   }
 
-  public getCurrentData(): SEOData | null {
-    return this.currentData;
-  }
-
   public generateBreadcrumbStructuredData(breadcrumbs: { name: string; url: string }[]): Record<string, unknown> {
     return {
       "@context": "https://schema.org",
@@ -294,6 +290,39 @@ class SEOManager {
         "query-input": "required name=search_term_string"
       }
     };
+  }
+
+  private updatePerformanceMeta(data: SEOData): void {
+    // Add performance-related meta tags
+    const performanceMeta = [
+      { name: 'theme-color', content: '#0f172a' },
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+      { name: 'apple-mobile-web-app-title', content: data.title },
+      { name: 'msapplication-TileColor', content: '#0f172a' },
+      { name: 'msapplication-config', content: '/browserconfig.xml' },
+    ];
+
+    performanceMeta.forEach(meta => {
+      this.setMetaTag(meta.name, meta.content);
+    });
+  }
+
+  private updateSecurityMeta(data: SEOData): void {
+    // Add security-related meta tags
+    const securityMeta = [
+      { name: 'referrer', content: 'strict-origin-when-cross-origin' },
+      { name: 'x-ua-compatible', content: 'IE=edge' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes' },
+    ];
+
+    securityMeta.forEach(meta => {
+      this.setMetaTag(meta.name, meta.content);
+    });
+  }
+
+  public getCurrentData(): SEOData | null {
+    return this.currentData;
   }
 }
 
@@ -670,6 +699,16 @@ Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /static/`;
+  }
+
+  private setMetaTag(name: string, content: string): void {
+    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.name = name;
+      document.head.appendChild(meta);
+    }
+    meta.content = content;
   }
 }
 

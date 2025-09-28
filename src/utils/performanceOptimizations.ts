@@ -3,6 +3,26 @@
  * Advanced performance monitoring and optimization utilities
  */
 
+// Type definitions for performance APIs
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  cancelable: boolean;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: LayoutShiftAttribution[];
+}
+
+interface LayoutShiftAttribution {
+  node?: Node;
+  previousRect: DOMRectReadOnly;
+  currentRect: DOMRectReadOnly;
+}
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -206,7 +226,7 @@ Performance Report:
     const nonCriticalCSS = document.querySelectorAll('link[rel="stylesheet"][data-non-critical]');
     nonCriticalCSS.forEach((link) => {
       link.setAttribute('media', 'print');
-      link.onload = () => {
+      (link as HTMLLinkElement).onload = () => {
         link.setAttribute('media', 'all');
       };
     });
@@ -331,7 +351,8 @@ Performance Report:
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        console.log('FID:', entry.processingStart - entry.startTime);
+        const fidEntry = entry as PerformanceEventTiming;
+        console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
       });
     });
 
@@ -340,8 +361,9 @@ Performance Report:
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (!entry.hadRecentInput) {
-          clsValue += entry.value;
+        const clsEntry = entry as LayoutShift;
+        if (!clsEntry.hadRecentInput) {
+          clsValue += clsEntry.value;
         }
       });
       console.log('CLS:', clsValue);
