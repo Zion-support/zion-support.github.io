@@ -291,47 +291,6 @@ class AdvancedPerformanceOptimizer {
     };
   }
 
-  /**
-   * Initialize the performance optimizer
-   */
-  public async initialize(): Promise<void> {
-    if (this.isInitialized) return;
-
-    try {
-      // Initialize performance monitoring
-      this.initializePerformanceMonitoring();
-      
-      // Apply optimizations based on configuration
-      if (this.config.enableImageOptimization) {
-        this.optimizeImages();
-      }
-      
-      if (this.config.enableLazyLoading) {
-        this.initializeLazyLoading();
-      }
-      
-      if (this.config.enablePrefetching) {
-        this.initializePrefetching();
-      }
-      
-      if (this.config.enableResourceHints) {
-        this.addResourceHints();
-      }
-      
-      if (this.config.enableCriticalCSS) {
-        this.optimizeCriticalCSS();
-      }
-      
-      if (this.config.enableBundleOptimization) {
-        this.optimizeBundleLoading();
-      }
-
-      this.isInitialized = true;
-      console.log('🚀 Advanced Performance Optimizer initialized');
-    } catch (error) {
-      console.error('Error initializing performance optimizer:', error);
-    }
-  }
 
   /**
    * Initialize performance monitoring
@@ -388,28 +347,6 @@ class AdvancedPerformanceOptimizer {
     }
   }
 
-  /**
-   * Optimize images for better performance
-   */
-  private optimizeImages(): void {
-    if (typeof window === 'undefined') return;
-
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      // Add loading="lazy" for images below the fold
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
-      }
-
-      // Add decoding="async" for better performance
-      if (!img.hasAttribute('decoding')) {
-        img.setAttribute('decoding', 'async');
-      }
-
-      // Optimize image formats
-      this.optimizeImageFormat(img);
-    });
-  }
 
   /**
    * Optimize image format based on browser support
