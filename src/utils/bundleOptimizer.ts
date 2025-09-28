@@ -64,7 +64,7 @@ class BundleOptimizer {
 
     try {
       await this.performBundleAnalysis();
-      this.analysis = this.analysis;
+      // Analysis is already set in performBundleAnalysis
       return this.analysis;
     } finally {
       this.isAnalyzing = false;
@@ -80,7 +80,7 @@ class BundleOptimizer {
     const totalSize = chunks.reduce((sum, chunk) => sum + chunk.size, 0);
     const gzipSize = chunks.reduce((sum, chunk) => sum + chunk.gzipSize, 0);
 
-    return {
+    this.analysis = {
       totalSize,
       gzipSize,
       chunks,
@@ -88,6 +88,8 @@ class BundleOptimizer {
       unusedExports,
       optimizationSuggestions
     };
+
+    return this.analysis;
   }
 
   private analyzeChunks(): ChunkAnalysis[] {
