@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { advancedBuildOptimizer } from '../utils/advancedBuildOptimizer';
-import { accessibilityEnhancements } from '../utils/accessibilityEnhancements';
-import { accessibilityUtils } from '../utils/accessibilityUtils';
+import React, { useState, useEffect } from 'react';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
+import { advancedPerformanceOptimizer } from '../utils/advancedPerformanceOptimizer';
 
 interface PerformanceMetrics {
   lcp: number;
@@ -29,88 +28,10 @@ const AdvancedPerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
   isVisible,
   onClose
 }) => {
-  const [metrics, setMetrics] = useState({
-    buildScore: 0,
-    accessibilityScore: 0,
-    performanceScore: 0,
-    seoScore: 0,
-    securityScore: 0,
-    overallScore: 0
-  });
-
-  const [realTimeData, setRealTimeData] = useState({
-    memoryUsage: 0,
-    cpuUsage: 0,
-    networkLatency: 0,
-    renderTime: 0,
-    bundleSize: 0,
-    cacheHitRate: 0
-  });
-
-  const [optimizationSuggestions, setOptimizationSuggestions] = useState<string[]>([]);
-
-  const updateMetrics = useCallback(() => {
-    const buildScore = advancedBuildOptimizer.getOptimizationScore();
-    const accessibilityScore = accessibilityUtils.getAccessibilityScore();
-    
-    // Calculate other scores (simplified)
-    const performanceScore = Math.floor(Math.random() * 20) + 80;
-    const seoScore = Math.floor(Math.random() * 15) + 85;
-    const securityScore = Math.floor(Math.random() * 10) + 90;
-    
-    const overallScore = Math.round((buildScore + accessibilityScore + performanceScore + seoScore + securityScore) / 5);
-
-    setMetrics({
-      buildScore,
-      accessibilityScore,
-      performanceScore,
-      seoScore,
-      securityScore,
-      overallScore
-    });
-
-    // Update real-time data
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      setRealTimeData(prev => ({
-        ...prev,
-        memoryUsage: memory.usedJSHeapSize / 1024 / 1024,
-        bundleSize: 758.55, // From build output
-        cacheHitRate: Math.random() * 100
-      }));
-    }
-  }, []);
-
-  const generateSuggestions = useCallback(() => {
-    const suggestions: string[] = [];
-    
-    if (metrics.buildScore < 80) {
-      suggestions.push('Enable code splitting and tree shaking');
-      suggestions.push('Optimize bundle size and compression');
-    }
-    
-    if (metrics.accessibilityScore < 85) {
-      suggestions.push('Add missing ARIA labels and alt text');
-      suggestions.push('Improve keyboard navigation');
-    }
-    
-    if (metrics.performanceScore < 90) {
-      suggestions.push('Implement lazy loading for images');
-      suggestions.push('Optimize critical rendering path');
-    }
-    
-    if (metrics.seoScore < 90) {
-      suggestions.push('Add missing meta tags');
-      suggestions.push('Optimize page structure');
-    }
-    
-    if (metrics.securityScore < 95) {
-      suggestions.push('Implement security headers');
-      suggestions.push('Add content security policy');
-    }
-
-    setOptimizationSuggestions(suggestions);
-  }, [metrics]);
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [strategies, setStrategies] = useState<OptimizationStrategy[]>([]);
+  const [performanceScore, setPerformanceScore] = useState(0);
+  const [realTimeData, setRealTimeData] = useState<any[]>([]);
 
   useEffect(() => {
     if (isVisible) {
