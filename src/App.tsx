@@ -12,7 +12,7 @@ import { advancedAccessibilityEnhancer } from './utils/advancedAccessibilityEnha
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
 import { seoOptimizer } from './utils/seoOptimization';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
@@ -63,7 +63,6 @@ const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDash
 // import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
 import SEOOptimizer, { useSEOData } from './components/SEOOptimizer';
-import AdvancedAnalytics from './components/AdvancedAnalytics';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 // import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
@@ -73,15 +72,8 @@ import { securityUtils } from './utils/securityUtils';
 import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
-import AdvancedAnalytics from './components/AdvancedAnalytics';
-import NotificationSystem, { Notification } from './components/NotificationSystem';
-import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
-import CommandPalette from './components/CommandPalette';
-import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
-import SystemHealthDashboard from './components/SystemHealthDashboard';
 import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
 import ComprehensiveImprovements from './components/ComprehensiveImprovements';
-import './index.css';
 
 export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
@@ -601,21 +593,6 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
-  // Optimized keyboard handler for system dashboard toggle
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
-      event.preventDefault();
-      setShowSystemDashboard((prev: boolean) => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceOptimizer((prev: boolean) => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowPerformanceMonitor(prev => !prev);
-    }
-  }, []);
 
   useEffect(() => {
     try {
@@ -659,7 +636,6 @@ export default function App(): React.JSX.Element {
       if ('initialize' in seoManager) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (seoManager as any).initialize();
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a7b2
       }
     } catch (error) {
       console.warn('Some enhancement systems failed to initialize:', error);
