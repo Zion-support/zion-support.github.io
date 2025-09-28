@@ -21,7 +21,7 @@ interface Notification {
   timestamp: Date;
 }
 
-interface NotificationSystem {
+interface NotificationSystemAPI {
   success: (title: string, message: string, options?: Partial<Notification>) => string;
   error: (title: string, message: string, options?: Partial<Notification>) => string;
   warning: (title: string, message: string, options?: Partial<Notification>) => string;
