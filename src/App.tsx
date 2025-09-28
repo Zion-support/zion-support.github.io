@@ -10,6 +10,7 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import { SEOOptimizer, useSEOData } from './components/SEOOptimizer';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -29,7 +30,7 @@ export default function App(): React.JSX.Element {
   }), []);
 
   // Simple SEO manager
-  const seoManagerInstance = useMemo(() => ({
+  const seoManager = useMemo(() => ({
     updateMetaTags: (data: typeof seoData) => {
       if (typeof document !== 'undefined') {
         document.title = data.title;
