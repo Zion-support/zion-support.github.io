@@ -120,10 +120,10 @@ export default function App(): React.JSX.Element {
   // Initialize comprehensive enhancements
   useEffect(() => {
     const enhancements = getComprehensiveEnhancements();
-    enhancements.initialize();
+    // ComprehensiveEnhancements doesn't have initialize method, it's already initialized
     
     // Initialize individual enhancement systems
-    enhancedPerformanceMonitor.initialize();
+    enhancedPerformanceMonitor.startMonitoring();
     enhancedAnalytics.initialize();
     advancedCacheSystem.initialize();
     new AdvancedAutomationSystem().initialize();
@@ -132,9 +132,8 @@ export default function App(): React.JSX.Element {
     
     // Initialize analytics
     analytics.initialize();
-    seoAnalytics.initialize();
-    performanceSEO.initialize();
-    seoManager.initialize();
+    // AdvancedSEOAnalytics, PerformanceSEO, and SEOManager don't have initialize methods
+    // They are already initialized when instantiated
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
