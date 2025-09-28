@@ -230,7 +230,7 @@ export class AdvancedErrorRecovery {
         lastError = error as Error;
         
         // Check circuit breaker
-        if (this.isCircuitBreakerOpen(errorType)) {
+        if (this.isCircuitBreakerOpenByType(errorType)) {
           throw new Error(`Circuit breaker is open for ${errorType}`);
         }
         
@@ -663,7 +663,7 @@ export class AdvancedErrorRecovery {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
-  private isCircuitBreakerOpen(errorType: string): boolean {
+  private isCircuitBreakerOpenByType(errorType: string): boolean {
     if (!this.config.enableCircuitBreaker) return false;
     
     const breaker = this.circuitBreakers.get(errorType);
