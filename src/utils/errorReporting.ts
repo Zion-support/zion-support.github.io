@@ -17,8 +17,8 @@ export interface ErrorReport {
   resolved: boolean;
 }
 
-export function initializeErrorReporting(config?: any): void {
-  console.log('Error reporting initialized');
+export function initializeErrorReporting(config?: Record<string, unknown>): void {
+  console.log('Error reporting initialized', config);
 }
 
 export interface ErrorMetrics {

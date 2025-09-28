@@ -83,8 +83,8 @@ class PerformanceOptimizer {
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if ((entry as any).processingStart && entry.startTime) {
-          this.metrics.fid = (entry as any).processingStart - entry.startTime;
+        if ((entry as PerformanceEventTiming).processingStart && entry.startTime) {
+          this.metrics.fid = (entry as PerformanceEventTiming).processingStart - entry.startTime;
           this.analyzeMetric('fid', this.metrics.fid);
         }
       });

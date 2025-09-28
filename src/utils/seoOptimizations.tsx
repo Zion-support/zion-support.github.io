@@ -338,7 +338,7 @@ export const seoPerformanceMonitor = {
     if (typeof window !== 'undefined' && 'web-vitals' in window) {
       import('web-vitals').then((webVitals) => {
         if (webVitals.onCLS) webVitals.onCLS(console.log);
-        if ((webVitals as any).onFID) (webVitals as any).onFID(console.log);
+        if ('onFID' in webVitals) (webVitals as { onFID: (callback: (metric: unknown) => void) => void }).onFID(console.log);
         if (webVitals.onFCP) webVitals.onFCP(console.log);
         if (webVitals.onLCP) webVitals.onLCP(console.log);
         if (webVitals.onTTFB) webVitals.onTTFB(console.log);
