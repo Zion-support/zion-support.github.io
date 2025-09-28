@@ -1,13 +1,31 @@
 /**
  * Error Recovery System
+ * Provides comprehensive error handling and recovery mechanisms
  */
 
-export class ErrorRecovery {
+export interface ErrorContext {
+  error: Error;
+  timestamp: number;
+  userAgent: string;
+  url: string;
+  stack?: string;
+}
+
+export interface RecoveryStrategy {
+  name: string;
+  condition: (error: Error) => boolean;
+  action: () => Promise<void>;
+}
+
+export class ErrorRecoverySystem {
   private errorCount = 0;
   private maxRetries = 3;
+  private errorHistory: ErrorContext[] = [];
+  private recoveryStrategies: RecoveryStrategy[] = [];
 
   constructor() {
     this.setupErrorHandling();
+    this.setupRecoveryStrategies();
   }
 
   private setupErrorHandling(): void {
@@ -22,24 +40,76 @@ export class ErrorRecovery {
     });
   }
 
+  private setupRecoveryStrategies(): void {
+    this.recoveryStrategies = [
+      {
+        name: 'cache-clear',
+        condition: (error) => error.message.includes('cache') || error.message.includes('storage'),
+        action: async () => {
+          if ('caches' in window) {
+            const cacheNames = await caches.keys();
+            await Promise.all(cacheNames.map(name => caches.delete(name)));
+          }
+          if ('localStorage' in window) {
+            localStorage.clear();
+          }
+        }
+      },
+      {
+        name: 'memory-clear',
+        condition: (error) => error.message.includes('memory') || error.message.includes('heap'),
+        action: async () => {
+          // Force garbage collection if available
+          if ('gc' in window) {
+            (window as any).gc();
+          }
+        }
+      },
+      {
+        name: 'network-retry',
+        condition: (error) => error.message.includes('network') || error.message.includes('fetch'),
+        action: async () => {
+          // Wait before retry
+          await new Promise(resolve => setTimeout(resolve, 2000));
+        }
+      }
+    ];
+  }
+
   private handleError(error: Error): void {
     console.error('Error Recovery - Error caught:', error);
     this.errorCount++;
 
+    const errorContext: ErrorContext = {
+      error,
+      timestamp: Date.now(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+      stack: error.stack
+    };
+
+    this.errorHistory.push(errorContext);
+
     if (this.errorCount <= this.maxRetries) {
-      this.attemptRecovery();
+      this.attemptRecovery(error);
     } else {
       this.showFallbackUI();
     }
   }
 
-  private async attemptRecovery(): Promise<void> {
+  private async attemptRecovery(error: Error): Promise<void> {
     console.log(`Attempting recovery (${this.errorCount}/${this.maxRetries})`);
     
-    // Clear caches
-    if ('caches' in window) {
-      const cacheNames = await caches.keys();
-      await Promise.all(cacheNames.map(name => caches.delete(name)));
+    // Try recovery strategies
+    for (const strategy of this.recoveryStrategies) {
+      if (strategy.condition(error)) {
+        try {
+          await strategy.action();
+          console.log(`Applied recovery strategy: ${strategy.name}`);
+        } catch (recoveryError) {
+          console.error(`Recovery strategy ${strategy.name} failed:`, recoveryError);
+        }
+      }
     }
 
     // Wait before retry
@@ -71,9 +141,19 @@ export class ErrorRecovery {
     return this.errorCount;
   }
 
+  public getErrorHistory(): ErrorContext[] {
+    return [...this.errorHistory];
+  }
+
   public reset(): void {
     this.errorCount = 0;
+    this.errorHistory = [];
+  }
+
+  public addRecoveryStrategy(strategy: RecoveryStrategy): void {
+    this.recoveryStrategies.push(strategy);
   }
 }
 
-export const errorRecovery = new ErrorRecovery();
+export const errorRecoverySystem = new ErrorRecoverySystem();
+export const errorRecovery = errorRecoverySystem;

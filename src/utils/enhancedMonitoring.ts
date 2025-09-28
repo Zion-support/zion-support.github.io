@@ -1,3 +1,4 @@
+// Removed triple slash reference - using import style instead
 /**
  * Enhanced Monitoring and Analytics System
  * Provides comprehensive monitoring, error tracking, and performance analytics
