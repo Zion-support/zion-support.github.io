@@ -21,6 +21,7 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
     { key: 'Ctrl+Shift+M', description: 'Toggle Performance Monitor', category: 'Performance' },
     { key: 'Ctrl+Shift+A', description: 'Toggle AI Dashboard', category: 'AI' },
     { key: 'Ctrl+Shift+S', description: 'Toggle SEO Optimizer', category: 'SEO' },
+    { key: 'Ctrl+Shift+X', description: 'Toggle Performance Metrics', category: 'Performance' },
     { key: 'Ctrl+Shift+C', description: 'Open Command Palette', category: 'Navigation' },
     { key: 'Ctrl+Shift+H', description: 'Show Keyboard Shortcuts', category: 'Help' },
     { key: 'Escape', description: 'Close All Modals', category: 'Navigation' },
@@ -75,6 +76,34 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
             />
+          </div>
+
+          <div className="space-y-6">
+            {Object.entries(groupedShortcuts).length > 0 ? (
+              Object.entries(groupedShortcuts).map(([category, shortcuts]) => (
+                <div key={category}>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                    {category}
+                  </h3>
+                  <div className="space-y-2">
+                    {shortcuts.map((shortcut, index) => (
+                      <div key={index} className="flex justify-between items-center py-2 px-3 bg-gray-50 dark:bg-gray-700 rounded">
+                        <span className="text-gray-700 dark:text-gray-300">
+                          {shortcut.description}
+                        </span>
+                        <kbd className="px-2 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-200 rounded text-sm font-mono">
+                          {shortcut.key}
+                        </kbd>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="text-center py-8 text-gray-500 dark:text-gray-400">
+                No shortcuts found matching &quot;{searchTerm}&quot;
+              </div>
+            )}
           </div>
         </div>
         

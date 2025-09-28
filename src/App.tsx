@@ -8,9 +8,8 @@ import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
 // import { accessibilityEnhancements } from './utils/accessibilityEnhancements';
 // import { seoOptimizer } from './utils/seoOptimizations';
-// import { seoEnhancer } from './utils/advancedSEOEnhancer';
-import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 // Removed unused imports to reduce warnings
+import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
@@ -33,6 +32,7 @@ import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
+import PerformanceMetricsDashboard from './components/PerformanceMetricsDashboard';
 // import { getNotificationManager, notify } from './utils/advancedNotifications';
 // import { getThemeManager } from './utils/themeManager';
 // import { getKeyboardShortcuts, shortcuts } from './utils/advancedKeyboardShortcuts';
@@ -53,7 +53,8 @@ export default function App(): React.JSX.Element {
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
-  // const [showAccessibilityPanel] = useState(false);
+  const [showAccessibilityPanel] = useState(false);
+  const [showPerformanceMetrics, setShowPerformanceMetrics] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   // User preferences state (for future use)
@@ -97,7 +98,10 @@ export default function App(): React.JSX.Element {
   const isLoading = false;
   const loadingProgress = 100;
   const handleScroll = useCallback(() => {}, []);
-  const handleClick = useCallback((event?: Event) => {}, []);
+  const handleClick = useCallback((event?: Event) => {
+    // Handle click events for engagement tracking
+    console.debug('Click event captured for engagement tracking', event);
+  }, []);
   const trackEngagement = useCallback(() => {}, []);
 
   // Performance optimization hook - Temporarily disabled
@@ -196,7 +200,6 @@ export default function App(): React.JSX.Element {
     twitterCard: 'summary_large_image' as const,
     siteName: 'Zion Tech Group'
   }), [currentPathname]);
-
   // Performance optimization hook (for future use)
   // const { getPerformanceMetrics } = usePerformanceOptimization();
 
@@ -413,6 +416,9 @@ export default function App(): React.JSX.Element {
           case 'K':
             setShowKeyboardHelp(!showKeyboardHelp);
             break;
+          case 'X':
+            setShowPerformanceMetrics(!showPerformanceMetrics);
+            break;
           case 'N':
             // Show notification
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -465,7 +471,7 @@ export default function App(): React.JSX.Element {
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth]);
+  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth, showPerformanceMetrics]);
 
 
   // Track engagement on scroll and click
@@ -697,6 +703,12 @@ export default function App(): React.JSX.Element {
         <SystemHealthDashboard
           isVisible={showSystemHealth}
           onClose={() => setShowSystemHealth(false)}
+        />
+
+        {/* Performance Metrics Dashboard - Toggle with Ctrl+Shift+X */}
+        <PerformanceMetricsDashboard
+          isVisible={showPerformanceMetrics}
+          onClose={() => setShowPerformanceMetrics(false)}
         />
 
         {/* New Components */}

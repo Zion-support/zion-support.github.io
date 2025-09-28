@@ -23,6 +23,7 @@ export function useLazyImage(src: string, placeholder?: string) {
     isLoaded
   };
 }
+>>>>>>> aba880010ab3331c74621236056fb02395946b9c
 
 /**
  * Enhanced lazy loading utility with error boundaries and loading states
@@ -35,7 +36,7 @@ export function createLazyComponent<T extends ComponentType<any>>(
   
   return function LazyWrapper(props: any) {
     return (
-      <Suspense fallback={fallback ? React.createElement(fallback) : <div>Loading...</div>}>
+      <Suspense fallback={fallback ? <fallback /> : <div>Loading...</div>}>
         <LazyComponent {...props} />
       </Suspense>
     );
