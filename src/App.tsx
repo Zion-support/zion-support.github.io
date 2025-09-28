@@ -7,7 +7,7 @@ import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { analytics } from './utils/analytics';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
@@ -48,7 +48,9 @@ export default function App(): React.JSX.Element {
     AdvancedAutomationSystem.getInstance().initialize();
     
     // Initialize accessibility and security enhancers
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const securityEnhancer = SecurityEnhancer.getInstance();
     
     // Get comprehensive enhancements
