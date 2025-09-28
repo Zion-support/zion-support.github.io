@@ -73,16 +73,7 @@ export default function App(): React.JSX.Element {
       SecurityEnhancer.getInstance();
       
       // Get comprehensive enhancements
-      const enhancements = getComprehensiveEnhancements({
-        enableAdvancedPerformance: true,
-        enableSecurityFeatures: true,
-        enableAccessibilityFeatures: true,
-        enableSEOFeatures: true,
-        enableUXFeatures: true,
-        enableAnalytics: true,
-        enableOfflineSupport: true,
-        enablePWA: true
-      });
+      const enhancements = getComprehensiveEnhancements();
 
       // Store enhancements globally for debugging
       (window as unknown as Record<string, unknown>).enhancements = enhancements;
@@ -276,6 +267,7 @@ export default function App(): React.JSX.Element {
         {showAIDashboard && (
           <Suspense fallback={<div>Loading...</div>}>
             <AIPerformanceDashboard
+              isVisible={showAIDashboard}
               onClose={() => setShowAIDashboard(false)}
             />
           </Suspense>
@@ -294,7 +286,11 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <PerformanceOptimizer />
+              <PerformanceOptimizer>
+                <div className="text-center py-8">
+                  <p className="text-gray-600">Performance optimization tools are being loaded...</p>
+                </div>
+              </PerformanceOptimizer>
             </div>
           </div>
         )}
@@ -323,6 +319,7 @@ export default function App(): React.JSX.Element {
         {showComprehensiveImprovements && (
           <Suspense fallback={<div>Loading...</div>}>
             <ComprehensiveImprovements
+              isVisible={showComprehensiveImprovements}
               onClose={() => setShowComprehensiveImprovements(false)}
             />
           </Suspense>

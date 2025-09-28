@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { performanceOptimizer, PerformanceMetrics, OptimizationSuggestion } from '../utils/performanceOptimizer';
 import { accessibilityEnhancer, AccessibilityMetrics, AccessibilityIssue } from '../utils/accessibilityEnhancer';
-import { seoOptimizer, SEOMetrics, SEOIssue } from '../utils/seoOptimizer';
+import { seoOptimizer } from '../utils/seoOptimizer';
+import { SEOMetrics } from '../utils/enhancedSEOOptimizer';
+import { SEOIssue } from '../utils/enhancedSEO';
 
 interface SystemHealth {
   performance: number;

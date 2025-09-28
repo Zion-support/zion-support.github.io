@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { performanceMetrics, PerformanceReport } from '../utils/performanceMetrics';
-import { seoOptimizer, SEOMetrics } from '../utils/seoOptimizer';
+import { seoOptimizer } from '../utils/seoOptimizer';
+import { SEOMetrics } from '../utils/enhancedSEOOptimizer';
 import { accessibilityEnhancer, AccessibilityMetrics } from '../utils/accessibilityEnhancer';
 
 interface PerformanceMetricsDashboardProps {
