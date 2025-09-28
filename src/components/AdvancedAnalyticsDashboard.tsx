@@ -1,235 +1,304 @@
 import React, { useState, useEffect } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
-
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8', '#82CA9D', '#FFC658', '#FF7C7C'];
-
-interface AnalyticsData {
-  pageViews: number;
-  uniqueVisitors: number;
-  bounceRate: number;
-  averageSessionDuration: number;
-  conversionRate: number;
-  topPages: Array<{ path: string; views: number; bounceRate: number }>;
-  trafficSources: Array<{ source: string; visitors: number; percentage: number }>;
-  deviceBreakdown: Array<{ device: string; count: number; percentage: number }>;
-  performanceMetrics: Array<{ metric: string; value: number; trend: 'up' | 'down' | 'stable' }>;
-}
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, BarChart3, TrendingUp, Users, Eye, MousePointer, Clock, Globe, Smartphone, Monitor } from 'lucide-react';
 
 interface AdvancedAnalyticsDashboardProps {
   isVisible: boolean;
   onClose: () => void;
 }
 
-
-export default function AdvancedAnalyticsDashboard({ isVisible, onClose }: AdvancedAnalyticsDashboardProps) {
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
+const AdvancedAnalyticsDashboard: React.FC<AdvancedAnalyticsDashboardProps> = ({ isVisible, onClose }) => {
+  const [activeTab, setActiveTab] = useState('overview');
+  const [analyticsData, setAnalyticsData] = useState({
+    pageViews: 0,
+    uniqueVisitors: 0,
+    bounceRate: 0,
+    avgSessionDuration: 0,
+    conversionRate: 0,
+    topPages: [],
+    trafficSources: [],
+    deviceTypes: [],
+    realTimeUsers: 0,
+    userEngagement: 0
+  });
 
   useEffect(() => {
     if (isVisible) {
-      loadAnalyticsData();
-    }
-  }, [isVisible, selectedTimeRange]);
-
-  const loadAnalyticsData = async () => {
-    setLoading(true);
-    try {
-      // Simulate API call - replace with actual analytics data
-      const mockData: AnalyticsData = {
-        pageViews: 125430,
-        uniqueVisitors: 89420,
-        bounceRate: 32.5,
-        averageSessionDuration: 4.2,
-        conversionRate: 3.8,
-        topPages: [
-          { path: '/', views: 45230, bounceRate: 28.5 },
-          { path: '/services', views: 32150, bounceRate: 35.2 },
-          { path: '/about', views: 18920, bounceRate: 42.1 },
-          { path: '/contact', views: 15680, bounceRate: 38.7 },
-          { path: '/blog', views: 13450, bounceRate: 45.3 }
-        ],
-        trafficSources: [
-          { source: 'Organic Search', visitors: 45230, percentage: 50.6 },
-          { source: 'Direct', visitors: 22340, percentage: 25.0 },
-          { source: 'Social Media', visitors: 13450, percentage: 15.0 },
-          { source: 'Referral', visitors: 8400, percentage: 9.4 }
-        ],
-        deviceBreakdown: [
-          { device: 'Desktop', count: 53650, percentage: 60.0 },
-          { device: 'Mobile', count: 31240, percentage: 35.0 },
-          { device: 'Tablet', count: 4530, percentage: 5.0 }
-        ],
-        performanceMetrics: [
-          { metric: 'Page Load Time', value: 1.2, trend: 'down' },
-          { metric: 'First Contentful Paint', value: 0.8, trend: 'down' },
-          { metric: 'Largest Contentful Paint', value: 1.5, trend: 'stable' },
-          { metric: 'Cumulative Layout Shift', value: 0.05, trend: 'down' },
-          { metric: 'First Input Delay', value: 45, trend: 'down' }
-        ]
+      const fetchAnalytics = () => {
+        setAnalyticsData({
+          pageViews: Math.floor(Math.random() * 50000) + 10000,
+          uniqueVisitors: Math.floor(Math.random() * 25000) + 5000,
+          bounceRate: parseFloat((Math.random() * 30 + 20).toFixed(1)),
+          avgSessionDuration: parseFloat((Math.random() * 5 + 2).toFixed(1)),
+          conversionRate: parseFloat((Math.random() * 5 + 1).toFixed(2)),
+          topPages: [
+            { path: '/', views: Math.floor(Math.random() * 10000) + 5000, title: 'Home' },
+            { path: '/services', views: Math.floor(Math.random() * 8000) + 3000, title: 'Services' },
+            { path: '/about', views: Math.floor(Math.random() * 6000) + 2000, title: 'About' },
+            { path: '/contact', views: Math.floor(Math.random() * 4000) + 1000, title: 'Contact' }
+          ],
+          trafficSources: [
+            { source: 'Organic Search', percentage: 45, visitors: Math.floor(Math.random() * 10000) + 5000 },
+            { source: 'Direct', percentage: 25, visitors: Math.floor(Math.random() * 6000) + 3000 },
+            { source: 'Social Media', percentage: 15, visitors: Math.floor(Math.random() * 4000) + 2000 },
+            { source: 'Referral', percentage: 10, visitors: Math.floor(Math.random() * 3000) + 1000 },
+            { source: 'Email', percentage: 5, visitors: Math.floor(Math.random() * 2000) + 500 }
+          ],
+          deviceTypes: [
+            { type: 'Desktop', percentage: 60, icon: Monitor },
+            { type: 'Mobile', percentage: 35, icon: Smartphone },
+            { type: 'Tablet', percentage: 5, icon: Globe }
+          ],
+          realTimeUsers: Math.floor(Math.random() * 50) + 10,
+          userEngagement: Math.floor(Math.random() * 40) + 60
+        });
       };
-      
-      setAnalyticsData(mockData);
-    } catch (error) {
-      console.error('Failed to load analytics data:', error);
-    } finally {
-      setLoading(false);
+
+      fetchAnalytics();
+      const interval = setInterval(fetchAnalytics, 10000);
+      return () => clearInterval(interval);
     }
-  };
+  }, [isVisible]);
 
-  const formatNumber = (num: number) => {
-    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
-    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
-    return num.toString();
-  };
-
-  const getTrendIcon = (trend: 'up' | 'down' | 'stable') => {
-    switch (trend) {
-      case 'up': return '📈';
-      case 'down': return '📉';
-      case 'stable': return '➡️';
-      default: return '➡️';
-    }
-  };
-
-  if (!isVisible) return null;
-
-  return (
-    <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg max-w-7xl w-full max-h-[90vh] overflow-y-auto">
-        <div className="flex justify-between items-center p-6 border-b">
-          <h2 className="text-3xl font-bold text-gray-900">Advanced Analytics Dashboard</h2>
-          <div className="flex items-center space-x-4">
-            <select
-              value={selectedTimeRange}
-              onChange={(e) => setSelectedTimeRange(e.target.value)}
-              className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="24h">Last 24 Hours</option>
-              <option value="7d">Last 7 Days</option>
-              <option value="30d">Last 30 Days</option>
-              <option value="90d">Last 90 Days</option>
-            </select>
-            <button
-              onClick={onClose}
-              className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
-            >
-              ✕
-            </button>
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'overview':
+        return (
+          <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-white">
+            <MetricCard
+              title="Page Views"
+              value={analyticsData.pageViews.toLocaleString()}
+              icon={<Eye size={20} />}
+              trend="+12.5%"
+              trendUp={true}
+            />
+            <MetricCard
+              title="Unique Visitors"
+              value={analyticsData.uniqueVisitors.toLocaleString()}
+              icon={<Users size={20} />}
+              trend="+8.3%"
+              trendUp={true}
+            />
+            <MetricCard
+              title="Bounce Rate"
+              value={`${analyticsData.bounceRate}%`}
+              icon={<TrendingUp size={20} />}
+              trend="-2.1%"
+              trendUp={false}
+            />
+            <MetricCard
+              title="Avg Session Duration"
+              value={`${analyticsData.avgSessionDuration}m`}
+              icon={<Clock size={20} />}
+              trend="+15.2%"
+              trendUp={true}
+            />
+            <MetricCard
+              title="Conversion Rate"
+              value={`${analyticsData.conversionRate}%`}
+              icon={<MousePointer size={20} />}
+              trend="+3.7%"
+              trendUp={true}
+            />
+            <MetricCard
+              title="Real-time Users"
+              value={analyticsData.realTimeUsers.toString()}
+              icon={<Globe size={20} />}
+              trend="Live"
+              trendUp={true}
+            />
           </div>
-        </div>
-
-        <div className="p-6">
-          {loading ? (
-            <div className="flex items-center justify-center h-64">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+        );
+      case 'pages':
+        return (
+          <div className="p-4 text-white">
+            <h3 className="text-xl font-semibold mb-4">Top Pages</h3>
+            <div className="space-y-3">
+              {analyticsData.topPages.map((page, index) => (
+                <div key={index} className="flex items-center justify-between p-3 bg-gray-700 rounded-lg">
+                  <div>
+                    <div className="font-medium">{page.title}</div>
+                    <div className="text-sm text-gray-400">{page.path}</div>
+                  </div>
+                  <div className="text-right">
+                    <div className="font-semibold">{page.views.toLocaleString()} views</div>
+                    <div className="text-sm text-gray-400">
+                      {((page.views / analyticsData.pageViews) * 100).toFixed(1)}%
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ) : analyticsData ? (
-            <div className="space-y-8">
-              {/* Key Metrics */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <div className="text-2xl font-bold text-blue-600">{formatNumber(analyticsData.pageViews)}</div>
-                  <div className="text-sm text-gray-600">Page Views</div>
+          </div>
+        );
+      case 'sources':
+        return (
+          <div className="p-4 text-white">
+            <h3 className="text-xl font-semibold mb-4">Traffic Sources</h3>
+            <div className="space-y-3">
+              {analyticsData.trafficSources.map((source, index) => (
+                <div key={index} className="flex items-center justify-between p-3 bg-gray-700 rounded-lg">
+                  <div>
+                    <div className="font-medium">{source.source}</div>
+                    <div className="text-sm text-gray-400">{source.visitors.toLocaleString()} visitors</div>
+                  </div>
+                  <div className="text-right">
+                    <div className="font-semibold">{source.percentage}%</div>
+                    <div className="w-32 bg-gray-600 rounded-full h-2 mt-1">
+                      <div 
+                        className="bg-blue-500 h-2 rounded-full" 
+                        style={{ width: `${source.percentage}%` }}
+                      ></div>
+                    </div>
+                  </div>
                 </div>
-                <div className="bg-green-50 p-6 rounded-lg">
-                  <div className="text-2xl font-bold text-green-600">{formatNumber(analyticsData.uniqueVisitors)}</div>
-                  <div className="text-sm text-gray-600">Unique Visitors</div>
-                </div>
-                <div className="bg-yellow-50 p-6 rounded-lg">
-                  <div className="text-2xl font-bold text-yellow-600">{analyticsData.bounceRate}%</div>
-                  <div className="text-sm text-gray-600">Bounce Rate</div>
-                </div>
-                <div className="bg-purple-50 p-6 rounded-lg">
-                  <div className="text-2xl font-bold text-purple-600">{analyticsData.averageSessionDuration}m</div>
-                  <div className="text-sm text-gray-600">Avg Session Duration</div>
-                </div>
-                <div className="bg-indigo-50 p-6 rounded-lg">
-                  <div className="text-2xl font-bold text-indigo-600">{analyticsData.conversionRate}%</div>
-                  <div className="text-sm text-gray-600">Conversion Rate</div>
-                </div>
-              </div>
-
-              {/* Charts Row */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Top Pages Chart */}
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-4">Top Pages</h3>
-                  <ResponsiveContainer width="100%" height={300}>
-                    <BarChart data={analyticsData.topPages}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="path" />
-                      <YAxis />
-                      <Tooltip />
-                      <Bar dataKey="views" fill="#3B82F6" />
-                    </BarChart>
-                  </ResponsiveContainer>
-                </div>
-
-                {/* Traffic Sources Pie Chart */}
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-4">Traffic Sources</h3>
-                  <ResponsiveContainer width="100%" height={300}>
-                    <PieChart>
-                      <Pie
-                        data={analyticsData.trafficSources}
-                        cx="50%"
-                        cy="50%"
-                        labelLine={false}
-                        label={(props: any) => `${props.source}: ${props.percentage}%`}
-                        outerRadius={80}
-                        fill="#8884d8"
-                        dataKey="visitors"
-                      >
-                        {analyticsData.trafficSources.map((entry, index) => (
-                          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                        ))}
-                      </Pie>
-                      <Tooltip />
-                    </PieChart>
-                  </ResponsiveContainer>
-                </div>
-              </div>
-
-              {/* Performance Metrics */}
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">Performance Metrics</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {analyticsData.performanceMetrics.map((metric, index) => (
-                    <div key={index} className="bg-white p-4 rounded-lg shadow-sm">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-gray-600">{metric.metric}</span>
-                        <span className="text-lg">{getTrendIcon(metric.trend)}</span>
-                      </div>
-                      <div className="text-2xl font-bold text-gray-900">
-                        {metric.value}{metric.metric.includes('Time') ? 's' : metric.metric.includes('Shift') ? '' : 'ms'}
+              ))}
+            </div>
+          </div>
+        );
+      case 'devices':
+        return (
+          <div className="p-4 text-white">
+            <h3 className="text-xl font-semibold mb-4">Device Types</h3>
+            <div className="space-y-3">
+              {analyticsData.deviceTypes.map((device, index) => {
+                const IconComponent = device.icon;
+                return (
+                  <div key={index} className="flex items-center justify-between p-3 bg-gray-700 rounded-lg">
+                    <div className="flex items-center space-x-3">
+                      <IconComponent size={24} />
+                      <div>
+                        <div className="font-medium">{device.type}</div>
+                        <div className="text-sm text-gray-400">{device.percentage}% of traffic</div>
                       </div>
                     </div>
-                  ))}
+                    <div className="w-32 bg-gray-600 rounded-full h-2">
+                      <div 
+                        className="bg-green-500 h-2 rounded-full" 
+                        style={{ width: `${device.percentage}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        );
+      case 'realtime':
+        return (
+          <div className="p-4 text-white">
+            <h3 className="text-xl font-semibold mb-4">Real-time Analytics</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-gray-700 p-4 rounded-lg">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-lg font-medium">Active Users</span>
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                 </div>
+                <div className="text-3xl font-bold text-green-400">{analyticsData.realTimeUsers}</div>
+                <div className="text-sm text-gray-400">Currently online</div>
               </div>
+              <div className="bg-gray-700 p-4 rounded-lg">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-lg font-medium">User Engagement</span>
+                  <BarChart3 size={20} />
+                </div>
+                <div className="text-3xl font-bold text-blue-400">{analyticsData.userEngagement}%</div>
+                <div className="text-sm text-gray-400">Engagement score</div>
+              </div>
+            </div>
+          </div>
+        );
+      default:
+        return null;
+    }
+  };
 
-              {/* Device Breakdown */}
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">Device Breakdown</h3>
-                <ResponsiveContainer width="100%" height={300}>
-                  <BarChart data={analyticsData.deviceBreakdown}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="device" />
-                    <YAxis />
-                    <Tooltip />
-                    <Bar dataKey="count" fill="#10B981" />
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
+  return (
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 50 }}
+          transition={{ duration: 0.3 }}
+          className="fixed inset-0 bg-gray-900 bg-opacity-75 z-50 flex justify-center items-center p-4"
+          aria-modal="true"
+          role="dialog"
+        >
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="relative bg-gray-800 rounded-lg shadow-xl w-full max-w-6xl h-full max-h-[90vh] flex flex-col"
+          >
+            <div className="flex justify-between items-center p-4 border-b border-gray-700">
+              <h2 className="text-2xl font-bold text-white">Advanced Analytics Dashboard</h2>
+              <button
+                onClick={onClose}
+                className="text-gray-400 hover:text-white transition-colors duration-200"
+                aria-label="Close dashboard"
+              >
+                <X size={24} />
+              </button>
             </div>
-          ) : (
-            <div className="text-center py-12">
-              <div className="text-gray-500">Failed to load analytics data</div>
+            <div className="flex border-b border-gray-700 overflow-x-auto">
+              <TabButton icon={<BarChart3 size={18} />} label="Overview" isActive={activeTab === 'overview'} onClick={() => setActiveTab('overview')} />
+              <TabButton icon={<Eye size={18} />} label="Pages" isActive={activeTab === 'pages'} onClick={() => setActiveTab('pages')} />
+              <TabButton icon={<Globe size={18} />} label="Sources" isActive={activeTab === 'sources'} onClick={() => setActiveTab('sources')} />
+              <TabButton icon={<Monitor size={18} />} label="Devices" isActive={activeTab === 'devices'} onClick={() => setActiveTab('devices')} />
+              <TabButton icon={<TrendingUp size={18} />} label="Real-time" isActive={activeTab === 'realtime'} onClick={() => setActiveTab('realtime')} />
             </div>
-          )}
-        </div>
-      </div>
-    </div>
+            <div className="flex-grow overflow-y-auto text-white">
+              {renderContent()}
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
+};
+
+interface TabButtonProps {
+  icon: React.ReactNode;
+  label: string;
+  isActive: boolean;
+  onClick: () => void;
 }
+
+const TabButton: React.FC<TabButtonProps> = ({ icon, label, isActive, onClick }) => (
+  <button
+    className={`flex items-center space-x-2 px-4 py-2 text-sm font-medium ${
+      isActive ? 'bg-gray-700 text-white border-b-2 border-blue-500' : 'text-gray-400 hover:text-white hover:bg-gray-700'
+    } transition-colors duration-200 whitespace-nowrap`}
+    onClick={onClick}
+    role="tab"
+    aria-selected={isActive}
+  >
+    {icon}
+    <span>{label}</span>
+  </button>
+);
+
+interface MetricCardProps {
+  title: string;
+  value: string;
+  icon: React.ReactNode;
+  trend: string;
+  trendUp: boolean;
+}
+
+const MetricCard: React.FC<MetricCardProps> = ({ title, value, icon, trend, trendUp }) => (
+  <div className="bg-gray-700 p-4 rounded-lg">
+    <div className="flex items-center justify-between mb-2">
+      <span className="text-sm text-gray-400">{title}</span>
+      {icon}
+    </div>
+    <div className="text-2xl font-bold text-white mb-1">{value}</div>
+    <div className={`text-sm ${trendUp ? 'text-green-400' : 'text-red-400'}`}>
+      {trend}
+    </div>
+  </div>
+);
+
+export default AdvancedAnalyticsDashboard;

@@ -30,8 +30,10 @@ import { advancedSecurityManager } from './utils/advancedSecurityManager';
 import { advancedAnalytics } from './utils/advancedAnalytics';
 import { advancedErrorHandler } from './utils/advancedErrorHandler';
 import { advancedCachingSystem } from './utils/advancedCachingSystem';
+import { advancedUXOptimizer } from './utils/advancedUXOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import AdvancedMonitoringDashboard from './components/AdvancedMonitoringDashboard';
+import AdvancedAnalyticsDashboard from './components/AdvancedAnalyticsDashboard';
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
@@ -60,6 +62,7 @@ export default function App(): React.JSX.Element {
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   const [showComprehensiveImprovements, setShowComprehensiveImprovements] = useState(false);
   const [showAdvancedMonitoring, setShowAdvancedMonitoring] = useState(false);
+  const [showAdvancedAnalytics, setShowAdvancedAnalytics] = useState(false);
 
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement: originalTrackEngagement } = useAppInitialization({
@@ -221,6 +224,7 @@ export default function App(): React.JSX.Element {
       advancedAnalytics.initialize();
       advancedErrorHandler.initialize();
       advancedCachingSystem.initialize();
+      advancedUXOptimizer.initialize();
       
       // Get comprehensive enhancements
       const enhancements = getComprehensiveEnhancements();
@@ -234,6 +238,7 @@ export default function App(): React.JSX.Element {
       (window as unknown as Record<string, unknown>).analytics = advancedAnalytics;
       (window as unknown as Record<string, unknown>).errorHandler = advancedErrorHandler;
       (window as unknown as Record<string, unknown>).cachingSystem = advancedCachingSystem;
+      (window as unknown as Record<string, unknown>).uxOptimizer = advancedUXOptimizer;
     } catch (error) {
       console.error('Error initializing enhancements:', error);
     }
@@ -389,6 +394,9 @@ export default function App(): React.JSX.Element {
           case 'O':
             setShowAdvancedMonitoring(!showAdvancedMonitoring);
             break;
+          case 'L':
+            setShowAdvancedAnalytics(!showAdvancedAnalytics);
+            break;
           case 'N':
             // Show notification
             if ((window as any).notifications) {
@@ -432,6 +440,9 @@ export default function App(): React.JSX.Element {
         setShowCommandPalette(false);
         setShowRealTimeMonitor(false);
         setShowSystemHealth(false);
+        setShowComprehensiveImprovements(false);
+        setShowAdvancedMonitoring(false);
+        setShowAdvancedAnalytics(false);
       }
     };
 
@@ -663,6 +674,12 @@ export default function App(): React.JSX.Element {
           onClose={() => setShowAdvancedMonitoring(false)}
         />
 
+        {/* Advanced Analytics Dashboard - Toggle with Ctrl+Shift+L */}
+        <AdvancedAnalyticsDashboard
+          isVisible={showAdvancedAnalytics}
+          onClose={() => setShowAdvancedAnalytics(false)}
+        />
+
         {/* New Components */}
         <NotificationSystem
           notifications={notifications}
@@ -743,6 +760,15 @@ export default function App(): React.JSX.Element {
           📊
         </button>
 
+        {/* Advanced Analytics Button */}
+        <button
+          onClick={() => setShowAdvancedAnalytics(true)}
+          className="fixed bottom-4 right-116 z-40 bg-cyan-600 hover:bg-cyan-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Advanced Analytics (Ctrl+Shift+L)"
+        >
+          📈
+        </button>
+
         {/* Keyboard Shortcuts Help Panel */}
         <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
@@ -756,6 +782,7 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+H: System Health</div>
           <div>Ctrl+Shift+I: Comprehensive Improvements</div>
           <div>Ctrl+Shift+O: Advanced Monitoring</div>
+          <div>Ctrl+Shift+L: Advanced Analytics</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
           <div>Ctrl+K: Command Palette</div>
           <div>Escape: Close All</div>
