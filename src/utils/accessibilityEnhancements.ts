@@ -205,6 +205,14 @@ export class AccessibilityEnhancements {
   public clearIssues(): void {
     this.issues.clear();
   }
+
+  public getAccessibilityScore(): number {
+    const issues = this.getIssues();
+    const totalChecks = 10; // Total number of accessibility checks
+    const issueCount = issues.length;
+    const score = Math.max(0, Math.floor(((totalChecks - issueCount) / totalChecks) * 100));
+    return score;
+  }
 }
 
 // Export singleton instance
