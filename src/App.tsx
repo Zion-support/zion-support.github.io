@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect, useState, useCallback } from 'react';
+import React, { useMemo, useEffect, useCallback } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
@@ -11,16 +11,21 @@ import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
 import { userFeedback } from './utils/userFeedbackManager';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import RealTimeMonitor from './components/RealTimeMonitor';
-import SystemMetricsDashboard from './components/SystemMetricsDashboard';
-import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import EnhancedAnalytics from './components/EnhancedAnalytics';
+// Performance and system components (imported for potential future use)
+// import PerformanceDashboard from './components/PerformanceDashboard';
+// import RealTimeMonitor from './components/RealTimeMonitor';
+// import SystemMetricsDashboard from './components/SystemMetricsDashboard';
+// import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+// import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
+// import PerformanceOptimizer from './components/PerformanceOptimizer';
+// import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import './index.css';
 export default function App(): React.JSX.Element {
+  // State for system dashboard and performance optimizer (for future use)
+  // const [showSystemDashboard, setShowSystemDashboard] = useState(false);
+  // const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, engagementData, handleScroll, handleClick } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -52,20 +57,20 @@ export default function App(): React.JSX.Element {
     });
 
     // Store enhancements globally for debugging
-    (window as any).enhancements = enhancements;
+    (window as Window & { enhancements?: unknown }).enhancements = enhancements;
   }, []);
 
-  // Optimized keyboard handler for system dashboard toggle
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
-      event.preventDefault();
-      setShowSystemDashboard(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceOptimizer(prev => !prev);
-    }
-  }, []);
+  // Optimized keyboard handler for system dashboard toggle (for future use)
+  // const handleKeyDown = useCallback((event: KeyboardEvent) => {
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
+  //     event.preventDefault();
+  //     setShowSystemDashboard(prev => !prev);
+  //   }
+  //   if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
+  //     event.preventDefault();
+  //     setShowPerformanceOptimizer(prev => !prev);
+  //   }
+  // }, []);
   // Memoize the SEO data to prevent unnecessary re-renders
   const seoData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -164,16 +169,16 @@ export default function App(): React.JSX.Element {
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-  }, [seoData, handleScroll, handleClick]);
+  }, [seoData, handleScroll, handleClick, preloadResource]);
 
-  // Add keyboard event listener
-  React.useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
-    
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [handleKeyDown]);
+  // Add keyboard event listener (for future use)
+  // React.useEffect(() => {
+  //   document.addEventListener("keydown", handleKeyDown);
+  //   
+  //   return () => {
+  //     document.removeEventListener("keydown", handleKeyDown);
+  //   };
+  // }, [handleKeyDown]);
 
   // Track engagement function
   const trackEngagement = useCallback(() => {
@@ -213,6 +218,7 @@ export default function App(): React.JSX.Element {
       performance.mark('app-init-complete');
       performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
     }
+  }, [trackEngagement, handleScroll, handleClick, seoData]);
 
   // Cleanup function for event listeners
   useEffect(() => {
@@ -220,9 +226,9 @@ export default function App(): React.JSX.Element {
       window.removeEventListener('beforeunload', trackEngagement);
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
-      document.removeEventListener('keydown', handleKeyDown);
+      // document.removeEventListener('keydown', handleKeyDown); // Commented for future use
     };
-  }, [trackEngagement, handleScroll, handleClick, handleKeyDown]);
+  }, [trackEngagement, handleScroll, handleClick]);
 
   // Show loading screen while initializing
   if (isLoading) {
