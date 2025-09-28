@@ -19,7 +19,11 @@ interface DashboardMetrics {
   };
 }
 
-export const EnhancedSystemDashboard: React.FC = () => {
+interface EnhancedSystemDashboardProps {
+  onClose?: () => void;
+}
+
+export const EnhancedSystemDashboard: React.FC<EnhancedSystemDashboardProps> = ({ onClose }) => {
   const [metrics, setMetrics] = useState<DashboardMetrics>({
     performance: { score: 0, metrics: [], recommendations: [] },
     analytics: { report: null, funnels: [] },
@@ -417,15 +421,27 @@ export const EnhancedSystemDashboard: React.FC = () => {
     <div className="min-h-screen bg-gray-100 p-6">
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Enhanced System Dashboard</h1>
-          <p className="text-gray-600">
-            Real-time monitoring of performance, analytics, and SEO metrics
-          </p>
-          <div className="mt-4 flex items-center">
-            <div className={`w-3 h-3 rounded-full mr-2 ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
-            <span className="text-sm text-gray-600">
-              {isMonitoring ? 'Monitoring Active' : 'Monitoring Inactive'}
-            </span>
+          <div className="flex justify-between items-start">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">Enhanced System Dashboard</h1>
+              <p className="text-gray-600">
+                Real-time monitoring of performance, analytics, and SEO metrics
+              </p>
+              <div className="mt-4 flex items-center">
+                <div className={`w-3 h-3 rounded-full mr-2 ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
+                <span className="text-sm text-gray-600">
+                  {isMonitoring ? 'Monitoring Active' : 'Monitoring Inactive'}
+                </span>
+              </div>
+            </div>
+            {onClose && (
+              <button
+                onClick={onClose}
+                className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+              >
+                Close
+              </button>
+            )}
           </div>
         </div>
 
