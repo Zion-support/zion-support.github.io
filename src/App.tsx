@@ -3,6 +3,7 @@ import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
@@ -18,7 +19,10 @@ import { advancedCacheSystem } from './utils/advancedCacheSystem';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
 import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { SecurityEnhancer } from './utils/securityEnhancer';
+import PerformanceTracker from './components/PerformanceTracker';
+import AccessibilityEnhancements from './components/AccessibilityEnhancements';
 import './index.css';
+import './styles/accessibility.css';
 
 export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
@@ -33,15 +37,36 @@ export default function App(): React.JSX.Element {
     clicks: 0
   }), []);
 
-  // Simple SEO manager
+  // Enhanced SEO manager with better performance
   const seoManager = useMemo(() => ({
     updateMetaTags: (data: typeof seoData) => {
       if (typeof document !== 'undefined') {
-        document.title = data.title;
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-          metaDescription.setAttribute('content', data.description);
-        }
+        // Batch DOM updates for better performance
+        requestAnimationFrame(() => {
+          document.title = data.title;
+          
+          // Update meta description
+          let metaDescription = document.querySelector('meta[name="description"]');
+          if (!metaDescription) {
+            metaDescription = document.createElement('meta');
+            metaDescription.setAttribute('name', 'description');
+            document.head.appendChild(metaDescription);
+          }
+          if (metaDescription) {
+            metaDescription.setAttribute('content', data.description);
+          }
+          
+          // Update Open Graph tags
+          const ogTitle = document.querySelector('meta[property="og:title"]');
+          if (ogTitle) {
+            ogTitle.setAttribute('content', data.title);
+          }
+          
+          const ogDescription = document.querySelector('meta[property="og:description"]');
+          if (ogDescription) {
+            ogDescription.setAttribute('content', data.description);
+          }
+        });
       }
     }
   }), []);
@@ -63,37 +88,52 @@ export default function App(): React.JSX.Element {
     enableImageOptimization: true,
   });
 
-  // Optimized keyboard handler for system dashboard toggle
+  // Optimized keyboard handler for system dashboard toggle with better performance
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
-      event.preventDefault();
-      setShowSystemDashboard(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceOptimizer(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowPerformanceMonitor(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
-      event.preventDefault();
-      setShowAIDashboard(prev => !prev);
+    // Early return if not a relevant key combination
+    if (!(event.ctrlKey || event.metaKey) || !event.shiftKey) return;
+    
+    const key = event.key.toLowerCase();
+    const handlers: Record<string, () => void> = {
+      'd': () => {
+        event.preventDefault();
+        setShowSystemDashboard(prev => !prev);
+      },
+      'p': () => {
+        event.preventDefault();
+        setShowPerformanceOptimizer(prev => !prev);
+      },
+      'm': () => {
+        event.preventDefault();
+        setShowPerformanceMonitor(prev => !prev);
+      },
+      'a': () => {
+        event.preventDefault();
+        setShowAIDashboard(prev => !prev);
+      }
+    };
+    
+    const handler = handlers[key];
+    if (handler) {
+      handler();
     }
   }, []);
 
   // Get SEO data using current pathname
   const seoData = useSEOData(currentPathname);
-  // Enhanced engagement tracking function
+  // Enhanced engagement tracking function with error handling
   const enhancedTrackEngagement = useCallback(() => {
-    const timeOnPage = Date.now() - engagementData.startTime;
-    seoAnalytics.trackUserEngagement(window.location.pathname, {
-      timeOnPage,
-      scrollDepth: engagementData.scrollDepth,
-      clicks: engagementData.clicks,
-    });
-    trackEngagement();
+    try {
+      const timeOnPage = Date.now() - engagementData.startTime;
+      seoAnalytics.trackUserEngagement(window.location.pathname, {
+        timeOnPage,
+        scrollDepth: engagementData.scrollDepth,
+        clicks: engagementData.clicks,
+      });
+      trackEngagement();
+    } catch (error) {
+      console.warn('Engagement tracking failed:', error);
+    }
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
 
   // Update meta tags function
@@ -124,33 +164,51 @@ export default function App(): React.JSX.Element {
   }, []);
   
   useEffect(() => {
-    const enhancements = getComprehensiveEnhancements();
-    enhancements.initialize();
+    // Initialize systems in priority order for better performance
+    const initializeSystems = async () => {
+      try {
+        // Critical systems first
+        analytics.initialize();
+        seoAnalytics.initialize();
+        
+        // Performance optimizations
+        performanceSEO.initialize();
+        performanceSEO.optimizeImages();
+        performanceSEO.optimizeFonts();
+        performanceSEO.optimizeCSS();
+        
+        // Enhanced systems
+        const enhancements = getComprehensiveEnhancements();
+        enhancements.initialize();
+        
+        // Initialize individual enhancement systems asynchronously
+        Promise.all([
+          enhancedPerformanceMonitor.initialize(),
+          enhancedAnalytics.initialize(),
+          advancedCacheSystem.initialize(),
+        ]).catch(console.error);
+        
+        // Initialize other systems with lower priority
+        setTimeout(() => {
+          try {
+            new AdvancedAutomationSystem().initialize();
+            new AccessibilityEnhancer().initialize();
+            new SecurityEnhancer().initialize();
+          } catch (error) {
+            console.warn('Non-critical system initialization failed:', error);
+          }
+        }, 100);
+        
+        // SEO setup
+        seoAnalytics.trackPageView(window.location.pathname);
+        seoManager.updateMetaTags(seoData);
+        
+      } catch (error) {
+        console.error('System initialization failed:', error);
+      }
+    };
     
-    // Initialize individual enhancement systems
-    enhancedPerformanceMonitor.initialize();
-    enhancedAnalytics.initialize();
-    advancedCacheSystem.initialize();
-    new AdvancedAutomationSystem().initialize();
-    new AccessibilityEnhancer().initialize();
-    new SecurityEnhancer().initialize();
-    
-    // Initialize analytics
-    analytics.initialize();
-    seoAnalytics.initialize();
-    performanceSEO.initialize();
-    seoManager.initialize();
-    
-    // Initialize SEO analytics
-    seoAnalytics.trackPageView(window.location.pathname);
-    
-    // Initialize performance SEO optimizations
-    performanceSEO.optimizeImages();
-    performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
-
-    // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
+    initializeSystems();
 
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -260,8 +318,20 @@ export default function App(): React.JSX.Element {
   }
 
   return (
-    <EnhancedErrorBoundary>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <AdvancedErrorBoundary
+      onError={(error, errorInfo) => {
+        console.error('App error:', error, errorInfo);
+        // Send to error reporting service
+        if (typeof window !== 'undefined' && 'gtag' in window) {
+          (window as { gtag: (event: string, action: string, params: Record<string, unknown>) => void }).gtag('event', 'exception', {
+            description: error.message,
+            fatal: true,
+          });
+        }
+      }}
+    >
+      <EnhancedErrorBoundary>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
         {/* System Dashboard */}
@@ -330,7 +400,27 @@ export default function App(): React.JSX.Element {
           isVisible={showAIDashboard}
           onClose={() => setShowAIDashboard(false)}
         />
-      </div>
-    </EnhancedErrorBoundary>
+        
+        {/* Performance Tracker - Background monitoring */}
+        <PerformanceTracker
+          onMetricsUpdate={(metrics) => {
+            // Log performance metrics for debugging
+            if (process.env.NODE_ENV === 'development') {
+              console.log('Performance metrics:', metrics);
+            }
+          }}
+          interval={10000} // Update every 10 seconds
+        />
+        
+        {/* Accessibility Enhancements */}
+        <AccessibilityEnhancements
+          enableHighContrast={true}
+          enableReducedMotion={true}
+          enableFocusIndicators={true}
+          enableScreenReader={true}
+        />
+        </div>
+      </EnhancedErrorBoundary>
+    </AdvancedErrorBoundary>
   );
 }
