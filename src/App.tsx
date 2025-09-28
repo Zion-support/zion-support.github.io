@@ -91,22 +91,6 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
-  // Memoize the SEO data to prevent unnecessary re-renders
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogType: 'website',
-    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const,
-    structuredData: []
-  }), []);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dbedc5d594bc12bb3a3a2bf9c5844c54c9795bd2
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
@@ -119,30 +103,6 @@ export default function App(): React.JSX.Element {
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
 
-  // Update meta tags function
-  const updateMetaTags = useCallback((data: {
-    title: string;
-    description: string;
-    keywords: string[];
-    ogType: string;
-    ogUrl: string;
-    ogImage: string;
-    twitterCard: string;
-  }) => {
-    if (typeof window !== 'undefined') {
-      // Update title
-      document.title = data.title;
-      
-      // Update meta description
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
-      }
-      if (metaDescription) {
-        metaDescription.setAttribute('content', data.description);
-=======
   // Simple SEO manager
   const seoManagerInstance = useMemo(() => ({
     updateMetaTags: (data: typeof seoData) => {
@@ -152,15 +112,9 @@ export default function App(): React.JSX.Element {
         if (metaDescription) {
           metaDescription.setAttribute('content', data.description);
         }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-1824
       }
     }
-<<<<<<< HEAD
   }), []);
-
-=======
-  }, []);
->>>>>>> dbedc5d594bc12bb3a3a2bf9c5844c54c9795bd2
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -223,24 +177,12 @@ export default function App(): React.JSX.Element {
       
       // Final engagement tracking
       enhancedTrackEngagement();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dbedc5d594bc12bb3a3a2bf9c5844c54c9795bd2
       
       // Remove event listeners
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
     };
-<<<<<<< HEAD
-  }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick, seoData, preloadResource]);
-=======
-    };
-  }, [enhancedTrackEngagement]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b362
-=======
   }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick]);
->>>>>>> dbedc5d594bc12bb3a3a2bf9c5844c54c9795bd2
 
   // Show loading screen while initializing
   if (isLoading) {
