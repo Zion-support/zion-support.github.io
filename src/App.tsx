@@ -10,8 +10,10 @@ import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements'
 import './index.css';
 
 export default function App(): React.JSX.Element {
-  // State for system dashboard and performance optimizer
+  // State for system dashboard and performance optimizer (currently unused)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
   // Initialize app with custom configuration
