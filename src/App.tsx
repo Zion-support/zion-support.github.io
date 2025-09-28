@@ -420,7 +420,7 @@ export default function App(): React.JSX.Element {
         )}
       </div>
       
-      <PerformanceDashboard />
+      <PerformanceDashboard isVisible={false} onClose={() => {}} />
       <RealTimeMonitor />
       <SystemMetricsDashboard 
         isVisible={showSystemDashboard}
