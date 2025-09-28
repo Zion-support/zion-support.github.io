@@ -225,10 +225,10 @@ class EnhancedMonitoring {
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (!(entry as any).hadRecentInput) {
+          if (!(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
             this.trackPerformance({
               name: 'CLS',
-              value: (entry as any).value,
+              value: (entry as PerformanceEntry & { value?: number }).value || 0,
               type: 'measure',
               url: window.location.href,
               sessionId: this.sessionId,

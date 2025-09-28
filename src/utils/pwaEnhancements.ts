@@ -25,7 +25,7 @@ export interface PWAStatus {
   isInstalled: boolean;
   isOnline: boolean;
   isUpdateAvailable: boolean;
-  installPrompt: any;
+  installPrompt: Event | null;
   registration: ServiceWorkerRegistration | null;
 }
 
@@ -33,7 +33,7 @@ export class PWAEnhancements {
   private static instance: PWAEnhancements;
   private config: PWAConfig;
   private status: PWAStatus;
-  private deferredPrompt: any = null;
+  private deferredPrompt: Event | null = null;
   private updateAvailable = false;
 
   public static getInstance(): PWAEnhancements {
@@ -356,5 +356,5 @@ export const pwaEnhancements = PWAEnhancements.getInstance();
 
 // Make it globally available for the update button
 if (typeof window !== 'undefined') {
-  (window as any).pwaEnhancements = pwaEnhancements;
+  (window as Window & { pwaEnhancements?: PWAEnhancements }).pwaEnhancements = pwaEnhancements;
 }

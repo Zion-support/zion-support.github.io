@@ -712,7 +712,7 @@ export class AdvancedDataVisualization {
     }
   }
 
-  private updateDataStream(_streamId: string): void {
+  private updateDataStream(): void {
     // This would be implemented to update real-time data streams
     // Implementation depends on the specific data source
   }

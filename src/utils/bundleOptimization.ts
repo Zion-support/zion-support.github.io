@@ -2,8 +2,10 @@
  * Bundle optimization utilities for better performance
  */
 
+import React from 'react';
+
 // Dynamic imports for code splitting
-export const lazyImport = <T extends React.ComponentType<any>>(
+export const lazyImport = <T extends React.ComponentType<unknown>>(
   importFunc: () => Promise<{ default: T }>
 ) => {
   return React.lazy(importFunc);

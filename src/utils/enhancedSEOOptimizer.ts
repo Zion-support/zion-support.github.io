@@ -14,7 +14,7 @@ interface SEOData {
   twitterCard: string;
   twitterTitle: string;
   twitterDescription: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
 }
 
 interface SEOAnalysis {
@@ -93,7 +93,7 @@ class EnhancedSEOOptimizer {
     this.addStructuredData(structuredData);
   }
 
-  private addStructuredData(data: any): void {
+  private addStructuredData(data: Record<string, unknown>): void {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
