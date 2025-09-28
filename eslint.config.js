@@ -94,7 +94,8 @@ export default [
       'components/layout/**',
       'components/main/**',
       'components/sections/**',
-      'components/ui/**'
+      'components/ui/**',
+      'improvements-implementation.js'
     ]
   }
 ];

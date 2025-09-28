@@ -1,77 +1,81 @@
-import { render } from '@testing-library/react';
-import { screen } from '@testing-library/dom';
-import ErrorBoundary from '../ErrorBoundary';
+import { render } from "@testing-library/react";
+import { screen } from "@testing-library/dom";
+import ErrorBoundary from "../ErrorBoundary";
 
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
-    throw new Error('Test error');
+    throw new Error("Test error");
   }
   return <div>No error</div>;
 };
 
-describe('ErrorBoundary', () => {
+describe("ErrorBoundary", () => {
   beforeEach(() => {
     // Suppress console.error for tests
-    jest.spyOn(console, 'error').mockImplementation(() => {});
+    jest.spyOn(console, "error").mockImplementation(() => {});
   });
 
   afterEach(() => {
     jest.restoreAllMocks();
   });
 
-  it('renders children when there is no error', () => {
+  it("renders children when there is no error", () => {
     render(
       <ErrorBoundary>
         <ThrowError shouldThrow={false} />
-      </ErrorBoundary>
+      </ErrorBoundary>,
     );
-    
-    expect(screen.getByText('No error')).toBeInTheDocument();
+
+    expect(screen.getByText("No error")).toBeInTheDocument();
   });
 
-  it('renders error UI when there is an error', () => {
+  it("renders error UI when there is an error", () => {
     render(
       <ErrorBoundary>
         <ThrowError shouldThrow={true} />
-      </ErrorBoundary>
+      </ErrorBoundary>,
     );
-    
+
     expect(screen.getByText(/Something went wrong/i)).toBeInTheDocument();
-    expect(screen.getByText(/We're sorry, but something unexpected happened/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/We're sorry, but something unexpected happened/i),
+    ).toBeInTheDocument();
   });
 
-  it('logs error to console and renders error message when error occurs', () => {
-    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
-    
+  it("logs error to console and renders error message when error occurs", () => {
+    const consoleSpy = jest
+      .spyOn(console, "error")
+      .mockImplementation(() => {});
+
     render(
       <ErrorBoundary>
         <ThrowError shouldThrow={true} />
-      </ErrorBoundary>
+      </ErrorBoundary>,
     );
-    
+
     expect(consoleSpy).toHaveBeenCalledWith(
-      'Uncaught error:', 
-      expect.any(Error), 
-      expect.any(Object)
+      "Uncaught error:",
+      expect.any(Error),
+      expect.any(Object),
     );
-    
+
     expect(screen.getByText(/Something went wrong/i)).toBeInTheDocument();
-    
+
     consoleSpy.mockRestore();
   });
 
-  it('resets error state when retry button is clicked', () => {
+  it("resets error state when retry button is clicked", () => {
     render(
       <ErrorBoundary>
         <ThrowError shouldThrow={true} />
-      </ErrorBoundary>
+      </ErrorBoundary>,
     );
-    
+
     expect(screen.getByText(/Something went wrong/i)).toBeInTheDocument();
-    
+
     // Click the refresh button (the ErrorBoundary component has "Refresh Page")
-    const refreshButton = screen.getByText('Refresh Page');
+    const refreshButton = screen.getByText("Refresh Page");
     expect(refreshButton).toBeInTheDocument();
   });
 });

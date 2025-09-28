@@ -8,7 +8,7 @@ export enum LogLevel {
   WARN = 1,
   INFO = 2,
   DEBUG = 3,
-  TRACE = 4
+  TRACE = 4,
 }
 
 export interface LogEntry {
@@ -27,7 +27,7 @@ class Logger {
   private maxHistorySize = 1000;
 
   constructor() {
-    this.isProduction = process.env.NODE_ENV === 'production';
+    this.isProduction = process.env.NODE_ENV === "production";
     this.currentLevel = this.isProduction ? LogLevel.WARN : LogLevel.DEBUG;
   }
 
@@ -35,12 +35,17 @@ class Logger {
     return level <= this.currentLevel;
   }
 
-  private formatMessage(level: LogLevel, message: string, context?: string, data?: unknown): string {
+  private formatMessage(
+    level: LogLevel,
+    message: string,
+    context?: string,
+    data?: unknown,
+  ): string {
     const timestamp = new Date().toISOString();
     const levelName = LogLevel[level];
-    const contextStr = context ? `[${context}]` : '';
-    const dataStr = data ? ` ${JSON.stringify(data)}` : '';
-    
+    const contextStr = context ? `[${context}]` : "";
+    const dataStr = data ? ` ${JSON.stringify(data)}` : "";
+
     return `${timestamp} ${levelName}${contextStr}: ${message}${dataStr}`;
   }
 
@@ -51,7 +56,13 @@ class Logger {
     }
   }
 
-  private log(level: LogLevel, message: string, context?: string, data?: unknown, error?: Error): void {
+  private log(
+    level: LogLevel,
+    message: string,
+    context?: string,
+    data?: unknown,
+    error?: Error,
+  ): void {
     if (!this.shouldLog(level)) return;
 
     const entry: LogEntry = {
@@ -60,7 +71,7 @@ class Logger {
       timestamp: new Date(),
       context,
       data,
-      stack: error?.stack
+      stack: error?.stack,
     };
 
     this.addToHistory(entry);
@@ -72,7 +83,12 @@ class Logger {
       }
     } else {
       // In development, log everything
-      const formattedMessage = this.formatMessage(level, message, context, data);
+      const formattedMessage = this.formatMessage(
+        level,
+        message,
+        context,
+        data,
+      );
       switch (level) {
         case LogLevel.ERROR:
           console.error(formattedMessage);
@@ -94,7 +110,12 @@ class Logger {
     }
   }
 
-  error(message: string, context?: string, data?: unknown, error?: Error): void {
+  error(
+    message: string,
+    context?: string,
+    data?: unknown,
+    error?: Error,
+  ): void {
     this.log(LogLevel.ERROR, message, context, data, error);
   }
 
@@ -170,59 +191,91 @@ class Logger {
 export const logger = new Logger();
 
 // Export convenience functions
-export const { error, warn, info, debug, trace, time, timeEnd, group, groupEnd } = logger;
+export const {
+  error,
+  warn,
+  info,
+  debug,
+  trace,
+  time,
+  timeEnd,
+  group,
+  groupEnd,
+} = logger;
 
 // Performance monitoring helpers
 export const performanceLogger = {
   mark: (name: string) => {
-    if (typeof performance !== 'undefined' && performance.mark) {
+    if (typeof performance !== "undefined" && performance.mark) {
       performance.mark(name);
-      logger.debug(`Performance mark: ${name}`, 'Performance');
+      logger.debug(`Performance mark: ${name}`, "Performance");
     }
   },
-  
+
   measure: (name: string, startMark: string, endMark?: string) => {
-    if (typeof performance !== 'undefined' && performance.measure) {
+    if (typeof performance !== "undefined" && performance.measure) {
       try {
         const measure = performance.measure(name, startMark, endMark);
-        logger.debug(`Performance measure: ${name} - ${measure.duration}ms`, 'Performance');
+        logger.debug(
+          `Performance measure: ${name} - ${measure.duration}ms`,
+          "Performance",
+        );
         return measure.duration;
       } catch (err) {
-        logger.warn(`Failed to measure performance: ${name}`, 'Performance', { error: err });
+        logger.warn(`Failed to measure performance: ${name}`, "Performance", {
+          error: err,
+        });
       }
     }
   },
-  
+
   getEntries: (type?: string) => {
-    if (typeof performance !== 'undefined' && performance.getEntriesByType) {
-      return performance.getEntriesByType(type || 'measure');
+    if (typeof performance !== "undefined" && performance.getEntriesByType) {
+      return performance.getEntriesByType(type || "measure");
     }
     return [];
-  }
+  },
 };
 
 // Error boundary helper
-export const logError = (error: Error, context?: string, additionalData?: unknown): void => {
-  logger.error(`Error in ${context || 'Unknown'}: ${error.message}`, context, {
-    ...(typeof additionalData === 'object' && additionalData !== null ? additionalData as Record<string, unknown> : {}),
+export const logError = (
+  error: Error,
+  context?: string,
+  additionalData?: unknown,
+): void => {
+  logger.error(`Error in ${context || "Unknown"}: ${error.message}`, context, {
+    ...(typeof additionalData === "object" && additionalData !== null
+      ? (additionalData as Record<string, unknown>)
+      : {}),
     stack: error.stack,
-    name: error.name
+    name: error.name,
   });
 };
 
 // API call logging
-export const logApiCall = (method: string, url: string, status?: number, duration?: number): void => {
+export const logApiCall = (
+  method: string,
+  url: string,
+  status?: number,
+  duration?: number,
+): void => {
   const level = status && status >= 400 ? LogLevel.ERROR : LogLevel.INFO;
-  (logger as any).log(level, `${method} ${url}`, 'API', {
+  (logger as any).log(level, `${method} ${url}`, "API", {
     status,
-    duration: duration ? `${duration}ms` : undefined
+    duration: duration ? `${duration}ms` : undefined,
   });
 };
 
 // User interaction logging
-export const logUserInteraction = (action: string, element?: string, data?: unknown): void => {
-  logger.debug(`User interaction: ${action}`, 'UserInteraction', {
+export const logUserInteraction = (
+  action: string,
+  element?: string,
+  data?: unknown,
+): void => {
+  logger.debug(`User interaction: ${action}`, "UserInteraction", {
     element,
-    ...(typeof data === 'object' && data !== null ? data as Record<string, unknown> : {})
+    ...(typeof data === "object" && data !== null
+      ? (data as Record<string, unknown>)
+      : {}),
   });
 };
