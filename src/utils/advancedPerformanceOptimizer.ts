@@ -32,6 +32,7 @@ class AdvancedPerformanceOptimizer {
   private observers: PerformanceObserver[] = [];
   private isInitialized = false;
 
+<<<<<<< HEAD
   constructor(config: Partial<OptimizationConfig> = {}) {
     this.config = {
       enableImageOptimization: true,
@@ -48,6 +49,8 @@ class AdvancedPerformanceOptimizer {
     };
     this.initializeStrategies();
   }
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-9541
 
   private initializeStrategies(): void {
     this.strategies = [
@@ -290,6 +293,22 @@ class AdvancedPerformanceOptimizer {
     };
   }
 
+  constructor(config: Partial<OptimizationConfig> = {}) {
+    this.config = {
+      enableImageOptimization: true,
+      enableCodeSplitting: true,
+      enableLazyLoading: true,
+      enablePrefetching: true,
+      enableCompression: true,
+      enableCaching: true,
+      enableServiceWorker: true,
+      enableCriticalCSS: true,
+      enableResourceHints: true,
+      enableBundleOptimization: true,
+      ...config
+    };
+    this.initializeStrategies();
+  }
 
 
   /**
