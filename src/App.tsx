@@ -211,7 +211,7 @@ export default function App(): React.JSX.Element {
 
   const enhancedTrackEngagement = useCallback(() => {
     trackEngagement();
-  }, [trackEngagement, engagementData.clicks, engagementData.scrollDepth, engagementData.startTime]);
+  }, [trackEngagement]);
 
   // Memoize the SEO data to prevent unnecessary re-renders
   const memoizedSeoData = useMemo(() => ({
@@ -222,7 +222,7 @@ export default function App(): React.JSX.Element {
     ogTitle: 'Zion Tech Group - AI & Technology Solutions',
     ogDescription: 'Transform your business with cutting-edge AI and technology solutions.',
     ogImage: 'https://zion.app/og-image.jpg',
-    twitterCard: 'summary_large_image',
+    twitterCard: 'summary_large_image' as const,
     twitterTitle: 'Zion Tech Group - AI & Technology Solutions',
     twitterDescription: 'Transform your business with cutting-edge AI and technology solutions.',
     twitterImage: 'https://zion.app/twitter-image.jpg'
@@ -299,7 +299,7 @@ export default function App(): React.JSX.Element {
 
     // Update meta tags
     updateMetaTags(memoizedSeoData);
-  }, [seoData, memoizedSeoData, updateMetaTags]);
+  }, [seoData, memoizedSeoData]);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: typeof seoData) => {
@@ -317,7 +317,7 @@ export default function App(): React.JSX.Element {
     // Update canonical URL
     const canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonicalLink) {
-      canonicalLink.setAttribute('href', data.canonicalUrl);
+      canonicalLink.setAttribute('href', data.canonicalUrl || '');
     }
   }, []);
 
@@ -385,12 +385,12 @@ export default function App(): React.JSX.Element {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
         
-        setPerformanceMetrics({
-          loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
-          renderTime: navigation ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart : 0,
-          memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0,
-          errorCount: 0 // This would be tracked by error monitoring
-        });
+        // setPerformanceMetrics({
+        //   loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
+        //   renderTime: navigation ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart : 0,
+        //   memoryUsage: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0,
+        //   errorCount: 0 // This would be tracked by error monitoring
+        // });
       }
     };
 

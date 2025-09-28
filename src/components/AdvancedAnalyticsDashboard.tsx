@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
 
 interface AnalyticsData {
   pageViews: number;
@@ -12,6 +12,8 @@ interface AnalyticsData {
   deviceBreakdown: Array<{ device: string; count: number; percentage: number }>;
   performanceMetrics: Array<{ metric: string; value: number; trend: 'up' | 'down' | 'stable' }>;
 }
+
+const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#06B6D4'];
 
 interface AdvancedAnalyticsDashboardProps {
   isVisible: boolean;

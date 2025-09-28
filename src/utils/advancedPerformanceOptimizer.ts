@@ -278,7 +278,9 @@ class AdvancedPerformanceOptimizer {
     key: K,
     value: PerformanceMetrics[K]
   ): void {
-    this.metrics[key] = value;
+    if (this.metrics) {
+      this.metrics[key] = value;
+    }
   }
 
   /**
