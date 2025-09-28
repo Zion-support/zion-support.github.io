@@ -9,16 +9,10 @@ import { performanceOptimizer } from './utils/performanceOptimizations';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
 import { seoOptimizer } from './utils/seoOptimizations';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import RealTimeMonitor from './components/RealTimeMonitor';
-import SystemMetricsDashboard from './components/SystemMetricsDashboard';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
@@ -134,7 +128,7 @@ export default function App(): React.JSX.Element {
     enhancements.initialize();
     
     // Initialize individual enhancement systems
-    enhancedPerformanceMonitor.initialize();
+    enhancedPerformanceMonitor.startMonitoring();
     enhancedAnalytics.initialize();
     advancedCacheSystem.initialize();
     new AdvancedAutomationSystem().initialize();
@@ -143,9 +137,7 @@ export default function App(): React.JSX.Element {
     
     // Initialize analytics
     analytics.initialize();
-    seoAnalytics.initialize();
-    performanceSEO.initialize();
-    seoManager.initialize();
+    // SEO classes don't have initialize methods, they are used directly
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
