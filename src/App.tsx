@@ -22,6 +22,7 @@ import { performanceOptimizer } from './utils/performanceOptimizer';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { seoOptimizer } from './utils/seoOptimizer';
 import { createAdvancedAppEnhancements } from './utils/advancedAppEnhancements';
+import { getPerformanceMonitor } from './utils/advancedPerformanceMonitor';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -87,6 +88,11 @@ export default function App(): React.JSX.Element {
       enableErrorRecovery: true,
       enableUserExperienceOptimization: true
     });
+  }, []);
+
+  // Initialize advanced performance monitor
+  const performanceMonitor = useMemo(() => {
+    return getPerformanceMonitor();
   }, []);
 
   // Optimized keyboard handler for system dashboard toggle
@@ -203,6 +209,11 @@ export default function App(): React.JSX.Element {
       advancedAppEnhancements.initialize();
     }
 
+    // Initialize advanced performance monitor
+    if (performanceMonitor) {
+      performanceMonitor.start();
+    }
+
     // Initialize advanced systems
     enhancedAnalytics.initialize();
     enhancedPerformanceMonitor.start();
@@ -274,6 +285,9 @@ export default function App(): React.JSX.Element {
       }
       if (advancedAppEnhancements) {
         advancedAppEnhancements.cleanup();
+      }
+      if (performanceMonitor) {
+        performanceMonitor.stop();
       }
     };
   }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags]);

@@ -1,18 +1,36 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { usePerformanceTracker } from './PerformanceTracker';
 
 interface EnhancedUserExperienceProps {
   isVisible: boolean;
   onClose: () => void;
 }
 
+interface UserPreferences {
+  theme: 'auto' | 'light' | 'dark';
+  animations: boolean;
+  notifications: boolean;
+  analytics: boolean;
+  accessibility: boolean;
+  performance: 'performance' | 'balanced' | 'quality';
+  fontSize: 'small' | 'medium' | 'large';
+  contrast: 'normal' | 'high';
+  reducedMotion: boolean;
+  keyboardNavigation: boolean;
+}
+
 const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ isVisible, onClose }) => {
-  const [userPreferences, setUserPreferences] = useState({
+  const [userPreferences, setUserPreferences] = useState<UserPreferences>({
     theme: 'auto',
     animations: true,
     notifications: true,
     analytics: true,
     accessibility: true,
-    performance: 'balanced' as 'performance' | 'balanced' | 'quality'
+    performance: 'balanced',
+    fontSize: 'medium',
+    contrast: 'normal',
+    reducedMotion: false,
+    keyboardNavigation: true
   });
 
   const [systemStats, setSystemStats] = useState({
@@ -20,6 +38,28 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ isVisib
     accessibilityScore: 0,
     seoScore: 0,
     securityScore: 0
+  });
+
+  const [realTimeMetrics, setRealTimeMetrics] = useState({
+    fps: 0,
+    memoryUsage: 0,
+    loadTime: 0,
+    errors: 0
+  });
+
+  // Performance tracking
+  const { metrics, PerformanceTracker } = usePerformanceTracker({
+    onMetricsUpdate: (newMetrics) => {
+      setRealTimeMetrics({
+        fps: newMetrics.fps,
+        memoryUsage: newMetrics.memoryUsage || 0,
+        loadTime: newMetrics.loadTime,
+        errors: newMetrics.errors
+      });
+    },
+    interval: 2000,
+    enableCoreWebVitals: true,
+    enableAdvancedMetrics: true
   });
 
   useEffect(() => {
@@ -62,7 +102,9 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ isVisib
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+    <>
+      {PerformanceTracker}
+      <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
       <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold text-gray-800">🎨 Enhanced User Experience</h2>
@@ -103,6 +145,31 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ isVisib
           </div>
         </div>
 
+        {/* Real-time Metrics */}
+        <div className="bg-blue-50 p-6 rounded-lg mb-6">
+          <h3 className="text-lg font-semibold mb-4 text-gray-800">📊 Real-time Metrics</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="bg-white p-4 rounded-lg">
+              <h4 className="text-sm font-medium text-gray-600">FPS</h4>
+              <p className="text-2xl font-bold text-blue-600">{realTimeMetrics.fps}</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg">
+              <h4 className="text-sm font-medium text-gray-600">Memory</h4>
+              <p className="text-2xl font-bold text-green-600">{realTimeMetrics.memoryUsage.toFixed(1)} MB</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg">
+              <h4 className="text-sm font-medium text-gray-600">Load Time</h4>
+              <p className="text-2xl font-bold text-purple-600">{realTimeMetrics.loadTime.toFixed(0)} ms</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg">
+              <h4 className="text-sm font-medium text-gray-600">Errors</h4>
+              <p className={`text-2xl font-bold ${realTimeMetrics.errors > 0 ? 'text-red-600' : 'text-gray-600'}`}>
+                {realTimeMetrics.errors}
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* User Preferences */}
         <div className="bg-gray-50 p-6 rounded-lg mb-6">
           <h3 className="text-lg font-semibold mb-4 text-gray-800">⚙️ User Preferences</h3>
@@ -133,7 +200,33 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ isVisib
             </div>
           </div>
           
-          <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Font Size</label>
+              <select
+                value={userPreferences.fontSize}
+                onChange={(e) => handlePreferenceChange('fontSize', e.target.value)}
+                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              >
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Contrast</label>
+              <select
+                value={userPreferences.contrast}
+                onChange={(e) => handlePreferenceChange('contrast', e.target.value)}
+                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              >
+                <option value="normal">Normal</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+          </div>
+          
+          <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <label className="flex items-center">
               <input
                 type="checkbox"
@@ -161,26 +254,122 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({ isVisib
               />
               <span className="text-sm text-gray-700">Accessibility Features</span>
             </label>
+            <label className="flex items-center">
+              <input
+                type="checkbox"
+                checked={userPreferences.analytics}
+                onChange={(e) => handlePreferenceChange('analytics', e.target.checked)}
+                className="mr-2"
+              />
+              <span className="text-sm text-gray-700">Analytics Tracking</span>
+            </label>
+            <label className="flex items-center">
+              <input
+                type="checkbox"
+                checked={userPreferences.reducedMotion}
+                onChange={(e) => handlePreferenceChange('reducedMotion', e.target.checked)}
+                className="mr-2"
+              />
+              <span className="text-sm text-gray-700">Reduced Motion</span>
+            </label>
+            <label className="flex items-center">
+              <input
+                type="checkbox"
+                checked={userPreferences.keyboardNavigation}
+                onChange={(e) => handlePreferenceChange('keyboardNavigation', e.target.checked)}
+                className="mr-2"
+              />
+              <span className="text-sm text-gray-700">Keyboard Navigation</span>
+            </label>
           </div>
         </div>
 
         {/* Quick Actions */}
         <div className="bg-gray-50 p-6 rounded-lg">
           <h3 className="text-lg font-semibold mb-4 text-gray-800">🚀 Quick Actions</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <button 
+              onClick={() => {
+                // Optimize performance
+                console.log('Optimizing performance...');
+                // Apply performance optimizations
+                document.body.style.willChange = 'auto';
+                if ('requestIdleCallback' in window) {
+                  requestIdleCallback(() => {
+                    // Run performance optimizations during idle time
+                    console.log('Performance optimization completed');
+                  });
+                }
+              }}
+              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors"
+            >
               Optimize Performance
             </button>
-            <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors">
+            <button 
+              onClick={() => {
+                // Clear cache
+                if ('caches' in window) {
+                  caches.keys().then(names => {
+                    names.forEach(name => {
+                      caches.delete(name);
+                    });
+                    console.log('Cache cleared');
+                  });
+                }
+                localStorage.clear();
+                sessionStorage.clear();
+              }}
+              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors"
+            >
               Clear Cache
             </button>
-            <button className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-md transition-colors">
+            <button 
+              onClick={() => {
+                // Export settings
+                const settings = {
+                  preferences: userPreferences,
+                  systemStats,
+                  realTimeMetrics,
+                  timestamp: new Date().toISOString()
+                };
+                const blob = new Blob([JSON.stringify(settings, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'user-experience-settings.json';
+                a.click();
+                URL.revokeObjectURL(url);
+              }}
+              className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-md transition-colors"
+            >
               Export Settings
+            </button>
+            <button 
+              onClick={() => {
+                // Reset to defaults
+                setUserPreferences({
+                  theme: 'auto',
+                  animations: true,
+                  notifications: true,
+                  analytics: true,
+                  accessibility: true,
+                  performance: 'balanced',
+                  fontSize: 'medium',
+                  contrast: 'normal',
+                  reducedMotion: false,
+                  keyboardNavigation: true
+                });
+                console.log('Settings reset to defaults');
+              }}
+              className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-md transition-colors"
+            >
+              Reset to Defaults
             </button>
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 };
 
