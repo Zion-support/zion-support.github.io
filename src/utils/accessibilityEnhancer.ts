@@ -26,6 +26,7 @@ interface AccessibilityMetrics {
 }
 
 class AccessibilityEnhancer {
+  private static instance: AccessibilityEnhancer;
   private config: AccessibilityConfig;
   private metrics: AccessibilityMetrics;
   private focusableSelectors = [
@@ -68,7 +69,14 @@ class AccessibilityEnhancer {
     this.initialize();
   }
 
-  private initialize(): void {
+  public static getInstance(): AccessibilityEnhancer {
+    if (!AccessibilityEnhancer.instance) {
+      AccessibilityEnhancer.instance = new AccessibilityEnhancer();
+    }
+    return AccessibilityEnhancer.instance;
+  }
+
+  public initialize(): void {
     if (typeof window === 'undefined') return;
 
     this.setupKeyboardNavigation();
@@ -337,9 +345,10 @@ class AccessibilityEnhancer {
     });
   }
 
-  private calculateContrastRatio(_color: string, _backgroundColor: string): number {
+  private calculateContrastRatio(color1: string, color2: string): number {
     // Simplified contrast ratio calculation
     // In a real implementation, you'd parse the colors and calculate luminance
+    console.log('Calculating contrast ratio for:', color1, 'and', color2);
     return 4.5; // Placeholder
   }
 

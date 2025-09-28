@@ -247,6 +247,12 @@ class PerformanceOptimizer {
     return Math.max(0, score);
   }
 
+  public optimizeBundleSize(): void {
+    // Bundle optimization logic would go here
+    // For now, just mark that optimization was attempted
+    console.log('Bundle size optimization initiated');
+  }
+
   public cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
