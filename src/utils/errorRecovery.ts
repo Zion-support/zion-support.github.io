@@ -68,18 +68,11 @@ export class ErrorRecovery {
   }
 
   public getErrorCount(): number {
-    return this.errorCount;
+    return this.errorHistory.length;
   }
 
   public reset(): void {
     this.errorCount = 0;
-  }
-
-  getErrorCount(): number {
-    return this.errorHistory.length;
-  }
-
-  reset(): void {
     this.clearHistory();
   }
 }
