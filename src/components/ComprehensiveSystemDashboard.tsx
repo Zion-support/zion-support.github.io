@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell, AreaChart, Area } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
 import { advancedPerformanceOptimizer } from '../utils/advancedPerformanceOptimizer';
 import { enhancedSecurityManager } from '../utils/enhancedSecurityManager';
 import { enhancedPerformanceMonitor } from '../utils/enhancedPerformanceMonitor';
