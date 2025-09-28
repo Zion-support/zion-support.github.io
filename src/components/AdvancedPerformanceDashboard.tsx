@@ -141,12 +141,6 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
     }
   };
 
-  useEffect(() => {
-    if (isVisible) {
-      initializeDashboard();
-    }
-  }, [isVisible]);
-
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-600 bg-green-100';
     if (score >= 70) return 'text-yellow-600 bg-yellow-100';
@@ -173,7 +167,20 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
 
   if (!isVisible) return null;
 
-  // Define pieData for the chart
+  const performanceData = [
+    { name: 'Build Score', value: metrics.buildScore, threshold: 80 },
+    { name: 'Accessibility', value: metrics.accessibilityScore, threshold: 85 },
+    { name: 'Performance', value: metrics.performanceScore, threshold: 90 },
+    { name: 'SEO', value: metrics.seoScore, threshold: 90 },
+    { name: 'Security', value: metrics.securityScore, threshold: 95 }
+  ];
+
+  const optimizationData = strategies.map((strategy: OptimizationStrategy) => ({
+    name: strategy.name,
+    impact: strategy.impact,
+    applied: strategy.applied
+  }));
+
   const pieData = [
     { name: 'Applied', value: strategies.filter((s: OptimizationStrategy) => s.applied).length, color: '#10b981' },
     { name: 'Available', value: strategies.filter((s: OptimizationStrategy) => !s.applied).length, color: '#6b7280' }
@@ -278,8 +285,7 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
                 </ResponsiveContainer>
               </div>
             </div>
-          </div>
-        </div>
+          )}
 
           {/* Real-time Monitoring */}
           {realTimeData.length > 0 && (
@@ -369,6 +375,27 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
           >
             Reload App
           </button>
+          {/* Performance Recommendations */}
+          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg p-6 text-white">
+            <h3 className="text-xl font-semibold mb-2">Performance Recommendations</h3>
+            <div className="space-y-2">
+              {performanceScore < 70 && (
+                <p>• Consider implementing additional optimization strategies</p>
+              )}
+              {metrics && metrics.buildScore < 80 && (
+                <p>• Optimize build process - currently {metrics.buildScore}/100</p>
+              )}
+              {metrics && metrics.accessibilityScore < 85 && (
+                <p>• Improve accessibility - currently {metrics.accessibilityScore}/100</p>
+              )}
+              {metrics && metrics.performanceScore < 90 && (
+                <p>• Enhance performance - currently {metrics.performanceScore}/100</p>
+              )}
+              {performanceScore >= 90 && (
+                <p>• Excellent performance! Keep monitoring for any regressions.</p>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>

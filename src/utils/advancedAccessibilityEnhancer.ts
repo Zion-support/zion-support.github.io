@@ -627,10 +627,10 @@ class AdvancedAccessibilityEnhancer {
     
     return `
 Accessibility Report:
-- Total elements: ${metrics.totalElements}
-- Accessible elements: ${metrics.accessibleElements}
-- Issues found: ${metrics.issues.length}
-- Score: ${metrics.score}/100
+- Total Issues: ${metrics.totalIssues}
+- Critical Issues: ${metrics.criticalIssues}
+- Warning Issues: ${metrics.warningIssues}
+- Passed Checks: ${metrics.passedChecks}
 `;
   }
 }
