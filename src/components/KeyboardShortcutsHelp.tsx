@@ -21,6 +21,7 @@ const KeyboardShortcutsHelp: React.FC<KeyboardShortcutsHelpProps> = ({ isVisible
     { key: 'Ctrl+Shift+M', description: 'Toggle Performance Monitor', category: 'Performance' },
     { key: 'Ctrl+Shift+A', description: 'Toggle AI Dashboard', category: 'AI' },
     { key: 'Ctrl+Shift+S', description: 'Toggle SEO Optimizer', category: 'SEO' },
+    { key: 'Ctrl+Shift+X', description: 'Toggle Performance Metrics', category: 'Performance' },
     { key: 'Ctrl+Shift+C', description: 'Open Command Palette', category: 'Navigation' },
     { key: 'Ctrl+Shift+H', description: 'Show Keyboard Shortcuts', category: 'Help' },
     { key: 'Escape', description: 'Close All Modals', category: 'Navigation' },

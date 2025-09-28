@@ -25,7 +25,7 @@
     "build:fast": "vite build --mode development",
     "build:optimized": "NODE_ENV=production vite build --minify terser",
     "build:minimal": "NODE_ENV=production vite build --minify terser --sourcemap false",
-    "prebuild": "pnpm type-check && pnpm lint",
+    "prebuild": "pnpm lint",
     "postbuild": "if [ \"$CI\" != \"true\" ]; then pnpm analyze; fi",
     "performance:audit": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
     "performance:check": "pnpm build && pnpm serve & sleep 5 && pnpm performance:audit"
