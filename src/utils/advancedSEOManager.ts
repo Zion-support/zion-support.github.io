@@ -16,7 +16,7 @@ export interface SEOData {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
   robots?: string;
   language?: string;
   author?: string;
@@ -146,9 +146,10 @@ class AdvancedSEOManager {
     document.head.appendChild(script);
 
     script.onload = () => {
-      (window as any).dataLayer = (window as any).dataLayer || [];
-      function gtag(...args: any[]) { (window as any).dataLayer.push(args); }
-      (window as any).gtag = gtag;
+      const windowWithDataLayer = window as Window & { dataLayer: unknown[]; gtag: (...args: unknown[]) => void };
+      windowWithDataLayer.dataLayer = windowWithDataLayer.dataLayer || [];
+      function gtag(...args: unknown[]) { windowWithDataLayer.dataLayer.push(args); }
+      windowWithDataLayer.gtag = gtag;
       gtag('js', new Date());
       gtag('config', gaId, {
         page_title: document.title,
@@ -277,7 +278,7 @@ class AdvancedSEOManager {
     meta.content = content;
   }
 
-  private addStructuredData(data: any): void {
+  private addStructuredData(data: Record<string, unknown>): void {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);

@@ -17,7 +17,7 @@ export interface ErrorInfo {
   sessionId: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
   category: 'javascript' | 'network' | 'promise' | 'resource' | 'custom';
-  context: Record<string, any>;
+  context: Record<string, unknown>;
   resolved: boolean;
   resolvedAt?: Date;
   resolvedBy?: string;
@@ -107,14 +107,14 @@ class AdvancedErrorTracker {
     window.addEventListener('error', (event) => {
       if (event.target !== window) {
         this.trackError({
-          message: `Failed to load resource: ${(event.target as any)?.src || (event.target as any)?.href}`,
-          filename: (event.target as any)?.src || (event.target as any)?.href,
+          message: `Failed to load resource: ${(event.target as HTMLElement)?.getAttribute('src') || (event.target as HTMLElement)?.getAttribute('href')}`,
+          filename: (event.target as HTMLElement)?.getAttribute('src') || (event.target as HTMLElement)?.getAttribute('href'),
           category: 'resource',
           severity: 'medium',
           context: {
-            tagName: (event.target as any)?.tagName,
-            src: (event.target as any)?.src,
-            href: (event.target as any)?.href
+            tagName: (event.target as HTMLElement)?.tagName,
+            src: (event.target as HTMLElement)?.getAttribute('src'),
+            href: (event.target as HTMLElement)?.getAttribute('href')
           }
         });
       }
@@ -221,11 +221,11 @@ class AdvancedErrorTracker {
     }
   }
 
-  private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {
+  private determineSeverity(error: unknown): 'low' | 'medium' | 'high' | 'critical' {
     if (!error) return 'medium';
     
     const message = error.message?.toLowerCase() || '';
-    const stack = error.stack?.toLowerCase() || '';
+    // Stack trace is available but not used in this implementation
 
     // Critical errors
     if (message.includes('out of memory') || 
@@ -261,7 +261,7 @@ class AdvancedErrorTracker {
     colno?: number;
     category: 'javascript' | 'network' | 'promise' | 'resource' | 'custom';
     severity: 'low' | 'medium' | 'high' | 'critical';
-    context?: Record<string, any>;
+    context?: Record<string, unknown>;
   }): void {
     if (!this.isEnabled) return;
 
