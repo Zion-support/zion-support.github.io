@@ -201,12 +201,12 @@ class AdvancedSecurityManager {
       if (element.setAttribute) {
         const originalSetAttribute = element.setAttribute;
         element.setAttribute = function (name: string, value: string) {
-          if (self.isSuspiciousAttribute(name, value)) {
-            self.metrics.xssAttempts++;
+          // Check for suspicious attributes
+          if (name.toLowerCase().includes('on') || value.includes('javascript:')) {
             console.warn("Potential XSS attempt detected:", { name, value });
             return;
           }
-          return originalSetAttribute.call(this, name, value);
+          return originalSetAttribute.call(element, name, value);
         };
       }
 

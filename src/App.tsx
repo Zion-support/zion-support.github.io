@@ -84,6 +84,8 @@ import { advancedTestingFramework } from './utils/advancedTestingFramework';
 import { advancedI18n } from './utils/advancedI18n';
 import './index.css';
 
+// Type definitions are imported from components
+
 export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
@@ -105,6 +107,52 @@ export default function App(): React.JSX.Element {
   const [showKeyboardShortcutsManager] = useState(false);
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
+  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [enhancedNotifications, setEnhancedNotifications] = useState<EnhancedNotification[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [loadingProgress, setLoadingProgress] = useState(0);
+  const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
+  const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
+  const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
+  const [userPreferences, setUserPreferences] = useState({
+    theme: 'auto',
+    animations: true,
+    notifications: true,
+    analytics: true
+  });
+
+  const navigate = useNavigate();
+
+  // Missing function definitions
+  const handleScroll = useCallback(() => {
+    // Track scroll depth for analytics
+    const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+    if (scrollDepth > 0 && scrollDepth % 25 === 0) {
+      console.debug('Scroll depth tracked:', { depth: scrollDepth });
+    }
+  }, []);
+
+  const handleClick = useCallback((event?: Event) => {
+    console.debug('Click event captured for engagement tracking', event);
+  }, []);
+
+  const trackEngagement = useCallback(() => {
+    console.debug('User engagement tracked', { 
+      timestamp: Date.now(),
+      session_duration: performance.now()
+    });
+  }, []);
+
+  // SEO data for SEOOptimizer component
+  const seoDataForOptimizer = useMemo(() => ({
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises.',
+    keywords: 'AI solutions, quantum computing, digital transformation, cloud services, enterprise technology',
+    canonical: `https://zion.app${typeof window !== 'undefined' ? window.location.pathname : '/'}`,
+    ogType: 'website',
+    ogImage: '/og-image.png',
+    twitterCard: 'summary_large_image'
+  }), []);
 
   // Initialize app with custom configuration
   // Temporarily disable useAppInitialization to fix build
@@ -185,8 +233,8 @@ export default function App(): React.JSX.Element {
     try {
       
       // Initialize accessibility and security enhancers
-      if (advancedAccessibilityEnhancer && typeof advancedAccessibilityEnhancer.initialize === 'function') {
-        advancedAccessibilityEnhancer.initialize();
+      if (accessibilityEnhancer && typeof accessibilityEnhancer.initialize === 'function') {
+        accessibilityEnhancer.initialize();
       }
       if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
         enhancedSecurityManager.initialize();
@@ -199,19 +247,28 @@ export default function App(): React.JSX.Element {
       // Initialize advanced optimizers
       advancedPerformanceOptimizer.initialize();
       advancedSEOOptimizer.initialize();
-      advancedAccessibilityEnhancer.initialize();
+      accessibilityEnhancer.initialize();
       advancedSecurityManager.initialize();
       advancedAnalytics.initialize();
-      advancedErrorHandler.initialize();
+      // advancedErrorHandler is initialized in constructor
       advancedCachingSystem.initialize();
       advancedUXOptimizer.initialize();
       advancedTestingFramework.initialize();
       advancedI18n.initialize();
       // Store enhancements globally for debugging
-      (window as unknown as Record<string, unknown>).enhancements = enhancements;
+      (window as unknown as Record<string, unknown>).enhancements = {
+        performanceOptimizer: advancedPerformanceOptimizer,
+        seoOptimizer: advancedSEOOptimizer,
+        accessibilityEnhancer: accessibilityEnhancer,
+        securityManager: advancedSecurityManager,
+        analytics: advancedAnalytics,
+        errorHandler: advancedErrorHandler,
+        cachingSystem: advancedCachingSystem,
+        uxOptimizer: advancedUXOptimizer
+      };
       (window as unknown as Record<string, unknown>).performanceOptimizer = advancedPerformanceOptimizer;
       (window as unknown as Record<string, unknown>).seoOptimizer = advancedSEOOptimizer;
-      (window as unknown as Record<string, unknown>).accessibilityEnhancer = advancedAccessibilityEnhancer;
+      (window as unknown as Record<string, unknown>).accessibilityEnhancer = accessibilityEnhancer;
       (window as unknown as Record<string, unknown>).securityManager = advancedSecurityManager;
       (window as unknown as Record<string, unknown>).analytics = advancedAnalytics;
       (window as unknown as Record<string, unknown>).errorHandler = advancedErrorHandler;
