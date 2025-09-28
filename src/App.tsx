@@ -34,7 +34,6 @@ import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
 
 // Import enhanced utilities
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitoring';
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
 import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
@@ -54,7 +53,7 @@ const ComprehensivePerformanceDashboard = lazy(() => import('./components/Compre
 const RealTimePerformanceMonitor = lazy(() => import('./components/RealTimePerformanceMonitor'));
 const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPalette'));
 const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
-const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
+const AccessibilityEnhancerComponent = lazy(() => import('./components/AccessibilityEnhancer'));
 const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
 const SystemStatusIndicator = lazy(() => import('./components/SystemStatusIndicator'));
 const EnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotificationSystem'));
@@ -67,7 +66,6 @@ export default function App(): React.JSX.Element {
   
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
@@ -183,12 +181,6 @@ export default function App(): React.JSX.Element {
     console.debug('Click event captured for engagement tracking', event);
   }, []);
   
-  const originalTrackEngagement = useCallback(() => {
-    console.debug('User engagement tracked', { 
-      timestamp: Date.now(),
-      session_duration: performance.now()
-    });
-  }, []);
 
   // Simulate loading for demonstration
   useEffect(() => {
@@ -444,28 +436,6 @@ export default function App(): React.JSX.Element {
     (window as unknown as Record<string, unknown>).enhancements = enhancements;
   }, []);
 
-  // Optimized keyboard handler for system dashboard toggle
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
-      event.preventDefault();
-      setShowSystemDashboard(prev => !prev);
-    }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
-      event.preventDefault();
-      setShowPerformanceOptimizer(prev => !prev);
-    }
-  }, []);
-  // Memoize the SEO data to prevent unnecessary re-renders
-  const seoData = useMemo(() => ({
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
-    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
-    ogType: 'website',
-    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const,
-    structuredData: []
-  }), []);
 
   // Track engagement function
   const handleTrackEngagement = useCallback(() => {
@@ -475,18 +445,8 @@ export default function App(): React.JSX.Element {
       scrollDepth: engagementData.scrollDepth,
       clicks: engagementData.clicks,
     });
-    // Also call the original trackEngagement from useAppInitialization
-    trackEngagement();
-  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime]);
 
-  // Enhanced track engagement function
-  const enhancedTrackEngagement = useCallback(() => {
-    try {
-      trackEngagement();
-    } catch (error) {
-      console.error('Error tracking engagement:', error);
-    }
-  }, [trackEngagement]);
   // Simple SEO manager
   const seoManagerInstance = useMemo(() => ({
     updateMetaTags: (data: typeof seoData) => {
