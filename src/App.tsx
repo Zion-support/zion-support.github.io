@@ -3,13 +3,11 @@ import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import SEOOptimizer, { useSEOData } from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
@@ -32,7 +30,6 @@ export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
 
   // Engagement tracking data
@@ -41,14 +38,6 @@ export default function App(): React.JSX.Element {
     scrollDepth: 0,
     clicks: 0
   }), []);
-
-  // Track engagement data
-  useEffect(() => {
-    if (engagementData && trackEngagement) {
-      trackEngagement(engagementData);
-    }
-  }, [engagementData, trackEngagement]);
-  
   // Initialize app with custom configuration
   const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
@@ -58,10 +47,6 @@ export default function App(): React.JSX.Element {
     enableNotifications: true,
     enableCaching: true,
   });
-
-  // Get current pathname for SEO
-  const currentPathname = typeof window !== 'undefined' ? window.location.pathname : '/';
-  const seoData = useSEOData(currentPathname);
 
   // Performance optimization hook
   const { preloadResource } = usePerformanceOptimization({
@@ -81,10 +66,6 @@ export default function App(): React.JSX.Element {
       event.preventDefault();
       setShowPerformanceOptimizer(prev => !prev);
     }
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-      event.preventDefault();
-      setShowPerformanceMonitor(prev => !prev);
-    }
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
       event.preventDefault();
       setShowAIDashboard(prev => !prev);
@@ -99,14 +80,9 @@ export default function App(): React.JSX.Element {
     ogType: 'website',
     ogUrl: typeof window !== 'undefined' ? window.location.href : '',
     ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image' as const,
-    structuredData: []
+    twitterCard: 'summary_large_image' as const
   }), []);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dbedc5d594bc12bb3a3a2bf9c5844c54c9795bd2
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
@@ -142,25 +118,10 @@ export default function App(): React.JSX.Element {
       }
       if (metaDescription) {
         metaDescription.setAttribute('content', data.description);
-=======
-  // Simple SEO manager
-  const seoManagerInstance = useMemo(() => ({
-    updateMetaTags: (data: typeof seoData) => {
-      if (typeof document !== 'undefined') {
-        document.title = data.title;
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-          metaDescription.setAttribute('content', data.description);
-        }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-1824
       }
     }
-<<<<<<< HEAD
-  }), []);
-
-=======
   }, []);
->>>>>>> dbedc5d594bc12bb3a3a2bf9c5844c54c9795bd2
+
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
@@ -188,7 +149,10 @@ export default function App(): React.JSX.Element {
     performanceSEO.optimizeCSS();
 
     // Set default SEO data using the correct method
-    seoManagerInstance.updateMetaTags(seoData);
+    seoManager.updateMetaTags(seoData);
+
+    // Update meta tags
+    updateMetaTags(seoData);
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
@@ -209,7 +173,7 @@ export default function App(): React.JSX.Element {
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, seoManagerInstance]);
+  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags]);
 
   // Main initialization and cleanup effect
   React.useEffect(() => {
@@ -218,55 +182,58 @@ export default function App(): React.JSX.Element {
 
     // Cleanup function
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('beforeunload', enhancedTrackEngagement);
       
       // Final engagement tracking
       enhancedTrackEngagement();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dbedc5d594bc12bb3a3a2bf9c5844c54c9795bd2
       
       // Remove event listeners
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
+      document.removeEventListener('keydown', handleKeyDown);
     };
-<<<<<<< HEAD
   }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick, seoData, preloadResource]);
-=======
-    };
-  }, [enhancedTrackEngagement]);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-b362
-=======
-  }, [enhancedTrackEngagement, handleKeyDown, handleScroll, handleClick]);
->>>>>>> dbedc5d594bc12bb3a3a2bf9c5844c54c9795bd2
 
   // Show loading screen while initializing
   if (isLoading) {
     return (
-      <EnhancedErrorBoundary>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-          <ModernLoadingSpinner progress={loadingProgress} />
-        </div>
-      </EnhancedErrorBoundary>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+        <ModernLoadingSpinner
+          size="xl"
+          variant="primary"
+          text="Initializing Zion Tech Group..."
+          showProgress
+          progress={loadingProgress}
+          className="animate-fade-in-scale"
+        />
+      </div>
     );
   }
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer seoData={seoData} />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
         
-        {/* System Dashboard - Toggle with Ctrl+Shift+D */}
+        {/* System Dashboard */}
         {showSystemDashboard && (
-          <EnhancedSystemDashboard
-            onClose={() => setShowSystemDashboard(false)}
-          />
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">System Dashboard</h2>
+                <button
+                  onClick={() => setShowSystemDashboard(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <EnhancedSystemDashboard />
+            </div>
+          </div>
         )}
-        
-        {/* Performance Optimizer - Toggle with Ctrl+Shift+P */}
+
+        {/* Performance Optimizer */}
         {showPerformanceOptimizer && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
@@ -283,14 +250,6 @@ export default function App(): React.JSX.Element {
             </div>
           </div>
         )}
-
-        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
-        <PerformanceMonitor 
-          showDashboard={showPerformanceMonitor}
-          onMetricsUpdate={(metrics) => {
-            console.log('Performance metrics:', metrics);
-          }}
-        />
         
         {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
         <AIPerformanceDashboard
@@ -298,6 +257,20 @@ export default function App(): React.JSX.Element {
           onClose={() => setShowAIDashboard(false)}
         />
       </div>
+      
+      <PerformanceDashboard />
+      <RealTimeMonitor />
+      <SystemMetricsDashboard 
+        isVisible={showSystemDashboard}
+        onClose={() => setShowSystemDashboard(false)}
+      />
+      <EnhancedNotificationSystem 
+        position="top-right"
+        enableAnimations
+        enableAccessibility
+        maxNotifications={5}
+      />
+      <EnhancedAnalytics />
     </EnhancedErrorBoundary>
   );
 }
