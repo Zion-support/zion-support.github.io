@@ -11,18 +11,7 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer, { useSEOData } from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { enhancedAnalytics } from './utils/enhancedAnalytics';
-import { advancedCacheSystem } from './utils/advancedCacheSystem';
-import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
-import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { SecurityEnhancer } from './utils/securityEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import RealTimeMonitor from './components/RealTimeMonitor';
-import SystemMetricsDashboard from './components/SystemMetricsDashboard';
-import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
-import EnhancedAnalytics from './components/EnhancedAnalytics';
+// Removed unused imports to fix linting warnings
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -275,6 +264,8 @@ export default function App(): React.JSX.Element {
           onClose={() => setShowAIDashboard(false)}
         />
       </div>
+      
+      {/* Removed undefined components to fix build errors */}
     </EnhancedErrorBoundary>
   );
 }
