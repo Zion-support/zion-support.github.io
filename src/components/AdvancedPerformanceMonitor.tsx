@@ -49,65 +49,6 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [history, setHistory] = useState<PerformanceMetrics[]>([]);
 
-  // Performance measurement utilities
-  const measurePerformance = useCallback(async () => {
-    if (!('performance' in window)) {
-      console.warn('Performance API not supported');
-      return;
-    }
-
-    try {
-      // Get navigation timing
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      
-      // Get paint timing
-      const paintEntries = performance.getEntriesByType('paint');
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-      const lcp = paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
-
-      // Get layout shift
-      const clsEntries = performance.getEntriesByType('layout-shift') as PerformanceEntry[];
-      const cls = clsEntries.reduce((sum, entry) => {
-        const layoutShiftEntry = entry as PerformanceEntry & { value?: number };
-        return sum + (layoutShiftEntry.value || 0);
-      }, 0);
-
-      // Get memory usage (if available)
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      const memoryUsage = memory ? memory.usedJSHeapSize : 0;
-
-      // Get resource timing
-      const resources = performance.getEntriesByType('resource');
-      const networkRequests = resources.length;
-
-      // Calculate render time
-      const renderStart = performance.now();
-      await new Promise(resolve => requestAnimationFrame(resolve));
-      const renderTime = performance.now() - renderStart;
-
-      const newMetrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstContentfulPaint: fcp,
-        largestContentfulPaint: lcp,
-        cumulativeLayoutShift: cls,
-        firstInputDelay: 0, // Would need to measure this separately
-        timeToInteractive: navigation.domInteractive - (navigation as PerformanceNavigationTiming).navigationStart || 0,
-        bundleSize: 0, // Would need to calculate from actual bundle
-        memoryUsage,
-        renderTime,
-        networkRequests
-      };
-
-      setMetrics(newMetrics);
-      setHistory(prev => [...prev.slice(-9), newMetrics]);
-      
-      // Check for alerts
-      checkPerformanceAlerts(newMetrics);
-    } catch (error) {
-      console.error('Error measuring performance:', error);
-    }
-  }, [checkPerformanceAlerts]);
-
   // Check performance against thresholds and generate alerts
   const checkPerformanceAlerts = useCallback((currentMetrics: PerformanceMetrics) => {
     const newAlerts: PerformanceAlert[] = [];
@@ -161,7 +102,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
       newAlerts.push({
         id: `memory-${Date.now()}`,
         type: 'warning',
-        message: `Memory usage (${(currentMetrics.memoryUsage / 1024 / 1024).toFixed(1)}MB) exceeds threshold (${(thresholds.memoryUsage / 1024 / 1024).toFixed(1)}MB)`,
+        message: `Memory usage (${(currentMetrics.memoryUsage / 1024 / 1024).toFixed(2)}MB) exceeds threshold (${(thresholds.memoryUsage / 1024 / 1024).toFixed(2)}MB)`,
         timestamp: Date.now(),
         resolved: false
       });
@@ -171,6 +112,66 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
       setAlerts(prev => [...prev, ...newAlerts]);
     }
   }, [thresholds]);
+
+  // Performance measurement utilities
+  const measurePerformance = useCallback(async () => {
+    if (!('performance' in window)) {
+      console.warn('Performance API not supported');
+      return;
+    }
+
+    try {
+      // Get navigation timing
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      
+      // Get paint timing
+      const paintEntries = performance.getEntriesByType('paint');
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+      const lcp = paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
+
+      // Get layout shift
+      const clsEntries = performance.getEntriesByType('layout-shift') as PerformanceEntry[];
+      const cls = clsEntries.reduce((sum, entry) => {
+        const layoutShiftEntry = entry as PerformanceEntry & { value?: number };
+        return sum + (layoutShiftEntry.value || 0);
+      }, 0);
+
+      // Get memory usage (if available)
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+      const memoryUsage = memory ? memory.usedJSHeapSize : 0;
+
+      // Get resource timing
+      const resources = performance.getEntriesByType('resource');
+      const networkRequests = resources.length;
+
+      // Calculate render time
+      const renderStart = performance.now();
+      await new Promise(resolve => requestAnimationFrame(resolve));
+      const renderTime = performance.now() - renderStart;
+
+      const newMetrics: PerformanceMetrics = {
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+        firstContentfulPaint: fcp,
+        largestContentfulPaint: lcp,
+        cumulativeLayoutShift: cls,
+        firstInputDelay: 0, // Would need to measure this separately
+        timeToInteractive: navigation.domInteractive - navigation.fetchStart || 0,
+        bundleSize: 0, // Would need to calculate from actual bundle
+        memoryUsage,
+        renderTime,
+        networkRequests
+      };
+
+      setMetrics(newMetrics);
+      setHistory(prev => [...prev.slice(-9), newMetrics]);
+      
+      // Check for alerts
+      checkPerformanceAlerts(newMetrics);
+    } catch (error) {
+      console.error('Error measuring performance:', error);
+    }
+  }, [checkPerformanceAlerts]);
+
 
   // Start monitoring
   const startMonitoring = useCallback(() => {

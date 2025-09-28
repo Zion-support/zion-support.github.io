@@ -77,7 +77,7 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
       
       // Load system metrics
       const systemData = {
-        memoryUsage: (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize / 1024 / 1024 || 0,
+        memoryUsage: ((performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize ?? 0) / 1024 / 1024,
         cpuUsage: Math.random() * 100, // Placeholder
         networkLatency: Math.random() * 100 // Placeholder
       };
@@ -103,12 +103,10 @@ const ComprehensiveSystemDashboard: React.FC<SystemDashboardProps> = ({
       });
 
       // Generate real-time data
-      const realTime = Array.from({ length: 20 }, (_, i) => ({
-        time: new Date(Date.now() - (19 - i) * 1000).toLocaleTimeString(),
-        performance: Math.random() * 100,
-        security: Math.random() * 100,
-        memory: Math.random() * 100,
-        network: Math.random() * 100
+      const realTime: RealTimeDataPoint[] = Array.from({ length: 20 }, (_, i) => ({
+        timestamp: Date.now() - (19 - i) * 1000,
+        value: Math.random() * 100,
+        metric: 'performance'
       }));
       setRealTimeData(realTime);
     } catch (error) {
