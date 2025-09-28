@@ -34,6 +34,7 @@ import { advancedAutomationSystem } from './utils/advancedAutomationSystem';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import performanceEnhancer from './utils/performanceEnhancements';
 import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -44,6 +45,9 @@ export default function App(): React.JSX.Element {
   
   // State for system metrics dashboard
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
+  
+  // State for performance optimizer
+  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
 
   // Track user engagement with throttling for better performance
   const [engagementData, setEngagementData] = useState({
@@ -100,6 +104,10 @@ export default function App(): React.JSX.Element {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'D') {
       event.preventDefault();
       setShowSystemDashboard(prev => !prev);
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'P') {
+      event.preventDefault();
+      setShowPerformanceOptimizer(prev => !prev);
     }
   }, []);
 
@@ -249,6 +257,7 @@ export default function App(): React.JSX.Element {
     
     // Initialize new enhancement utilities
     console.log('Initializing performance enhancements...');
+    performanceEnhancer.initialize();
     performanceEnhancer.optimizeBundle();
     performanceEnhancer.preloadResource('/static/js/main.js', 'script');
     
@@ -444,6 +453,10 @@ export default function App(): React.JSX.Element {
         enableAnimations
         enableAccessibility
         maxNotifications={5}
+      />
+      <PerformanceOptimizer 
+        isVisible={showPerformanceOptimizer}
+        onClose={() => setShowPerformanceOptimizer(false)}
       />
     </>
   );
