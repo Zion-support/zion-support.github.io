@@ -20,6 +20,7 @@ interface PerformanceOptimizationReturn {
   getPerformanceMetrics: () => Record<string, unknown>;
   optimizeImage: (src: string, options?: ImageOptimizationOptions) => string;
   addResourceHint: (href: string, as: string, type?: string) => void;
+  optimizePerformance: () => void;
 }
 
 interface ImageOptimizationOptions {
@@ -300,6 +301,26 @@ export const usePerformanceOptimization = (
     };
   }, [recordMetric]);
 
+  // Performance optimization function
+  const optimizePerformance = useCallback(() => {
+    if (configRef.current.enableImageOptimization) {
+      // Optimize existing images
+      const images = document.querySelectorAll('img[src]');
+      images.forEach((img) => {
+        const optimizedSrc = optimizeImage((img as HTMLImageElement).src);
+        if (optimizedSrc !== (img as HTMLImageElement).src) {
+          (img as HTMLImageElement).src = optimizedSrc;
+        }
+      });
+    }
+    
+    if (configRef.current.enableResourceHints) {
+      // Add resource hints for critical resources
+      addResourceHint('/api/health', 'fetch');
+      addResourceHint('/images/hero-bg.webp', 'image');
+    }
+  }, [optimizeImage, addResourceHint]);
+
   return {
     preloadResource,
     recordMetric,
@@ -307,6 +328,7 @@ export const usePerformanceOptimization = (
     getPerformanceMetrics: () => monitor.current.getLatestMetrics() || {},
     optimizeImage,
     addResourceHint,
+    optimizePerformance,
   };
 };
 

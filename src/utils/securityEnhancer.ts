@@ -39,11 +39,19 @@ interface SecurityEvent {
 }
 
 class SecurityEnhancer {
+  private static instance: SecurityEnhancer;
   private config: SecurityConfig;
   private metrics: SecurityMetrics;
   private securityEvents: SecurityEvent[] = [];
   private blockedDomains: Set<string> = new Set();
   private suspiciousPatterns: RegExp[] = [];
+
+  public static getInstance(): SecurityEnhancer {
+    if (!SecurityEnhancer.instance) {
+      SecurityEnhancer.instance = new SecurityEnhancer();
+    }
+    return SecurityEnhancer.instance;
+  }
 
   constructor(config: Partial<SecurityConfig> = {}) {
     this.config = {
@@ -268,7 +276,9 @@ class SecurityEnhancer {
       this.metrics.securityViolations++;
       
       // Redirect to prevent clickjacking
-      window.top.location = window.location;
+      if (window.top && window.top !== window) {
+        window.top.location.href = window.location.href;
+      }
     }
   }
 
@@ -432,3 +442,6 @@ export const securityEnhancer = new SecurityEnhancer();
 // Export class for custom instances
 export { SecurityEnhancer };
 export type { SecurityConfig, SecurityMetrics, SecurityEvent };
+
+// Default export for compatibility
+export default SecurityEnhancer;

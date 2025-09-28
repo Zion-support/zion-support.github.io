@@ -54,6 +54,13 @@ export const generateStructuredData = (data: any) => {
   document.head.appendChild(script);
 };
 
-export const seoOptimizer = { updateMetaTags, generateStructuredData };
+export const seoOptimizer = { 
+  updateMetaTags, 
+  generateStructuredData,
+  optimizePage: (data: any) => {
+    updateMetaTags(data);
+    generateStructuredData(data);
+  }
+};
 
 export default { updateMetaTags, generateStructuredData };

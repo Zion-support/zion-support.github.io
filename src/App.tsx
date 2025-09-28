@@ -6,7 +6,7 @@ import AccessibilityEnhancements from './components/AccessibilityEnhancements';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { seoOptimizer } from './utils/seoOptimizations';
 import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
@@ -105,7 +105,7 @@ export default function App(): React.JSX.Element {
     seoManager.updateMetaTags(seoData);
     
     // Initialize advanced optimization systems
-    performanceOptimizer.optimizeBundle();
+    performanceOptimizer.optimizeBundleSize();
     accessibilityEnhancer.initialize();
     seoOptimizer.optimizePage(seoData);
 

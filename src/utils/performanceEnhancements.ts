@@ -84,12 +84,12 @@ export const collectPerformanceMetrics = () => {
   
   const metrics = {
     // Navigation timing
-    dns: navigation.dnsLookupEnd - navigation.dnsLookupStart,
+    dns: navigation.domainLookupEnd - navigation.domainLookupStart,
     tcp: navigation.connectEnd - navigation.connectStart,
     request: navigation.responseStart - navigation.requestStart,
     response: navigation.responseEnd - navigation.responseStart,
-    dom: navigation.domContentLoadedEventEnd - navigation.navigationStart,
-    load: navigation.loadEventEnd - navigation.navigationStart,
+    dom: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+    load: navigation.loadEventEnd - navigation.fetchStart,
     
     // Paint timing
     firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
@@ -192,5 +192,8 @@ export default {
   optimizeBundleSize,
   registerServiceWorker,
   inlineCriticalCSS,
-  initializePerformanceEnhancements
+  initializePerformanceEnhancements,
+  getMetrics: collectPerformanceMetrics,
+  optimizeBundle: optimizeBundleSize,
+  preloadResource: preloadCriticalResources
 };
