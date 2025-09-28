@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 interface PerformanceMetrics {
   fps: number;
@@ -47,21 +47,25 @@ const RealTimePerformanceMonitor: React.FC<RealTimePerformanceMonitorProps> = ({
     });
   }, [isMonitoring, maxHistoryLength, calculateFPS]);
 
-  const calculateFPS = (): number => {
+  const lastTimeRef = useRef<number>(0);
+  
+  const calculateFPS = useCallback((): number => {
     if (typeof window === 'undefined' || !window.performance) return 0;
     
     const now = performance.now();
-    const delta = now - (calculateFPS as any).lastTime || 0;
-    (calculateFPS as any).lastTime = now;
+    const delta = now - lastTimeRef.current || 0;
+    lastTimeRef.current = now;
     
     return delta > 0 ? Math.round(1000 / delta) : 0;
-  };
+  }, []);
 
   const getMemoryUsage = (): number => {
-    if (typeof window === 'undefined' || !(window as any).performance?.memory) return 0;
+    if (typeof window === 'undefined') return 0;
     
-    const memory = (window as any).performance.memory;
-    return Math.round(memory.usedJSHeapSize / 1024 / 1024); // MB
+    const perf = window.performance as Performance & { memory?: { usedJSHeapSize: number } };
+    if (!perf.memory) return 0;
+    
+    return Math.round(perf.memory.usedJSHeapSize / 1024 / 1024); // MB
   };
 
   const getRenderTime = (): number => {

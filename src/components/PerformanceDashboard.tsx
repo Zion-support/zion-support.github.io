@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { bundleOptimizer } from '../utils/bundleOptimizer';
 
 interface BundleMetrics {
   totalSize: number;

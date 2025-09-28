@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { performanceMetrics, PerformanceMetric, PerformanceReport } from '../utils/performanceMetrics';
+import { performanceMetrics, PerformanceReport } from '../utils/performanceMetrics';
 import { analyzeSEO, SEOAnalysis } from '../utils/seoOptimizer';
 import { analyzeAccessibility, AccessibilityReport } from '../utils/accessibilityEnhancer';
 
