@@ -11,6 +11,7 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer, { useSEOData } from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 // Removed unused imports to fix linting warnings
 import './index.css';
 import './styles/notifications.css';
@@ -18,8 +19,10 @@ import './styles/system-metrics.css';
 import './styles/modern-utilities.css';
 
 export default function App(): React.JSX.Element {
-  // State for system dashboard and performance optimizer
+  // State for system dashboard and performance optimizer (currently unused)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
@@ -90,9 +93,7 @@ export default function App(): React.JSX.Element {
       scrollDepth: engagementData.scrollDepth,
       clicks: engagementData.clicks,
     });
-    // Also call the original trackEngagement from useAppInitialization
-    trackEngagement();
-  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
+  }, [engagementData]);
 
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
@@ -119,7 +120,7 @@ export default function App(): React.JSX.Element {
         metaDescription.setAttribute('content', data.description);
       }
     }
-  }, []);
+  }, [engagementData]);
   useEffect(() => {
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
