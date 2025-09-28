@@ -118,8 +118,9 @@ class PerformanceEnhancer {
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!layoutShiftEntry.hadRecentInput && layoutShiftEntry.value) {
+            clsValue += layoutShiftEntry.value;
           }
         });
         this.handleWebVital({
@@ -202,6 +203,18 @@ class PerformanceEnhancer {
     
     document.head.appendChild(link);
     this.resourceHints.push({ href, as, type });
+  }
+
+  /**
+   * Prefetch a resource for future use
+   */
+  public prefetchResource(href: string): void {
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = href;
+
+    document.head.appendChild(link);
+    this.resourceHints.push({ href, as: 'fetch' });
   }
 
   /**

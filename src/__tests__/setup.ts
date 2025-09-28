@@ -22,6 +22,7 @@ delete (window as any).location;
   origin: 'http://localhost:3000',
   ancestorOrigins: [] as any,
 };
+
 // Mock window.history
 Object.defineProperty(window, 'history', {
   value: {

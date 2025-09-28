@@ -6,7 +6,7 @@ import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { accessibilityManager } from './utils/accessibility';
 import { PerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
-import { analytics } from './utils/analytics';
+// import { analytics } from './utils/analytics'; // Unused import removed
 import { seoOptimizer } from './utils/seoOptimization';
 import { cacheManager } from './utils/cacheManager';
 import { apiClient } from './utils/apiClient';
@@ -38,7 +38,7 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import AdvancedPerformanceMonitorComponent from './components/AdvancedPerformanceMonitor';
 import ThemeToggle from './components/ThemeToggle';
 import ScrollToTop from './components/ScrollToTop';
-import { analytics } from './utils/advancedAnalytics';
+import { analytics as advancedAnalytics } from './utils/advancedAnalytics';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -322,8 +322,8 @@ export default function App(): React.JSX.Element {
     // Advanced performance optimizer is now handled by the new utility
 
     // Initialize advanced analytics system
-    analytics.enable();
-    analytics.trackEvent('page_view', {
+    advancedAnalytics.enable();
+    advancedAnalytics.trackEvent('page_view', {
       page: window.location.pathname,
       referrer: document.referrer,
       timestamp: Date.now()
