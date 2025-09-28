@@ -1,133 +1,30 @@
-/* Accessibility Styles */
+/* Accessibility Enhancements */
 
-/* High Contrast Mode */
-.accessibility-high-contrast {
-  --color-text: #000000;
-  --color-bg: #ffffff;
-  --color-primary: #0000ff;
-  --color-secondary: #ff0000;
-  --color-accent: #ffff00;
-  --color-border: #000000;
-}
-
-.accessibility-high-contrast * {
-  color: var(--color-text) !important;
-  background-color: var(--color-bg) !important;
-  border-color: var(--color-border) !important;
-}
-
-.accessibility-high-contrast .bg-gradient-to-br,
-.accessibility-high-contrast .bg-gradient-to-r {
-  background: var(--color-bg) !important;
-}
-
-.accessibility-high-contrast .text-transparent {
-  color: var(--color-text) !important;
-  -webkit-background-clip: unset !important;
-  background-clip: unset !important;
-}
-
-/* Large Text Mode */
-.accessibility-large-text {
-  font-size: calc(1rem * var(--accessibility-large-text, 1.2));
-}
-
-.accessibility-large-text h1 {
-  font-size: calc(3rem * var(--accessibility-large-text, 1.2));
-}
-
-.accessibility-large-text h2 {
-  font-size: calc(2.25rem * var(--accessibility-large-text, 1.2));
-}
-
-.accessibility-large-text h3 {
-  font-size: calc(1.875rem * var(--accessibility-large-text, 1.2));
-}
-
-.accessibility-large-text h4 {
-  font-size: calc(1.5rem * var(--accessibility-large-text, 1.2));
-}
-
-.accessibility-large-text h5 {
-  font-size: calc(1.25rem * var(--accessibility-large-text, 1.2));
-}
-
-.accessibility-large-text h6 {
-  font-size: calc(1.125rem * var(--accessibility-large-text, 1.2));
-}
-
-.accessibility-large-text p,
-.accessibility-large-text span,
-.accessibility-large-text div {
-  font-size: calc(1rem * var(--accessibility-large-text, 1.2));
-}
-
-/* Reduced Motion Mode */
-.accessibility-reduced-motion * {
-  animation-duration: 0.01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.01ms !important;
-  scroll-behavior: auto !important;
-}
-
-.accessibility-reduced-motion .animate-pulse,
-.accessibility-reduced-motion .animate-bounce,
-.accessibility-reduced-motion .animate-spin {
-  animation: none !important;
-}
-
-/* Enhanced Focus Mode */
-.accessibility-focus-visible *:focus {
-  outline: 3px solid #0066cc !important;
-  outline-offset: 2px !important;
-  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3) !important;
-}
-
-.accessibility-focus-visible button:focus,
-.accessibility-focus-visible a:focus,
-.accessibility-focus-visible input:focus,
-.accessibility-focus-visible textarea:focus,
-.accessibility-focus-visible select:focus {
-  outline: 3px solid #0066cc !important;
-  outline-offset: 2px !important;
-  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3) !important;
-}
-
-/* Screen Reader Only Content */
+/* Screen reader only content */
 .sr-only {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .sr-only:focus {
-  position: static !important;
-  width: auto !important;
-  height: auto !important;
-  padding: inherit !important;
-  margin: inherit !important;
-  overflow: visible !important;
-  clip: auto !important;
-  white-space: normal !important;
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
 }
 
-/* Focus Management */
-.focus-trap {
-  position: relative;
-}
-
-.focus-trap:focus-within {
-  outline: 2px solid #0066cc;
-  outline-offset: 2px;
-}
-
-/* Skip Links */
+/* Skip links */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -138,13 +35,85 @@
   text-decoration: none;
   z-index: 1000;
   border-radius: 4px;
+  transition: top 0.3s;
 }
 
 .skip-link:focus {
   top: 6px;
 }
 
-/* ARIA Live Regions */
+/* High contrast mode */
+.high-contrast {
+  --text-color: #000000;
+  --bg-color: #ffffff;
+  --border-color: #000000;
+  --accent-color: #0000ff;
+}
+
+.high-contrast * {
+  color: var(--text-color) !important;
+  background-color: var(--bg-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+.high-contrast button,
+.high-contrast a {
+  border: 2px solid var(--border-color) !important;
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+.high-contrast button:hover,
+.high-contrast a:hover {
+  background-color: var(--accent-color) !important;
+  color: var(--bg-color) !important;
+}
+
+/* Reduced motion */
+.reduced-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Focus indicators */
+.focus-indicators *:focus {
+  outline: 3px solid #4f46e5 !important;
+  outline-offset: 2px !important;
+}
+
+.focus-indicators button:focus,
+.focus-indicators a:focus {
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.5) !important;
+}
+
+/* Screen reader optimizations */
+.screen-reader-optimized {
+  /* Ensure proper heading hierarchy */
+}
+
+.screen-reader-optimized h1,
+.screen-reader-optimized h2,
+.screen-reader-optimized h3,
+.screen-reader-optimized h4,
+.screen-reader-optimized h5,
+.screen-reader-optimized h6 {
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Focus management */
+.focus-trap {
+  position: relative;
+}
+
+.focus-trap:focus-within {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+/* ARIA live regions */
 [aria-live] {
   position: absolute;
   left: -10000px;
@@ -153,109 +122,38 @@
   overflow: hidden;
 }
 
-/* High Contrast Button Styles */
-.accessibility-high-contrast button {
-  border: 2px solid var(--color-border) !important;
-  background-color: var(--color-bg) !important;
-  color: var(--color-text) !important;
+/* High contrast focus states */
+.high-contrast .focus-indicators *:focus {
+  outline: 3px solid #ffff00 !important;
+  outline-offset: 2px !important;
 }
 
-.accessibility-high-contrast button:hover,
-.accessibility-high-contrast button:focus {
-  background-color: var(--color-primary) !important;
-  color: var(--color-bg) !important;
-}
-
-/* High Contrast Link Styles */
-.accessibility-high-contrast a {
-  color: var(--color-primary) !important;
-  text-decoration: underline !important;
-}
-
-.accessibility-high-contrast a:hover,
-.accessibility-high-contrast a:focus {
-  color: var(--color-secondary) !important;
-  text-decoration: underline !important;
-}
-
-/* High Contrast Input Styles */
-.accessibility-high-contrast input,
-.accessibility-high-contrast textarea,
-.accessibility-high-contrast select {
-  border: 2px solid var(--color-border) !important;
-  background-color: var(--color-bg) !important;
-  color: var(--color-text) !important;
-}
-
-.accessibility-high-contrast input:focus,
-.accessibility-high-contrast textarea:focus,
-.accessibility-high-contrast select:focus {
-  border-color: var(--color-primary) !important;
-  outline: 2px solid var(--color-primary) !important;
-}
-
-/* Reduced Motion for Framer Motion */
-.accessibility-reduced-motion [data-framer-motion] {
-  animation: none !important;
-  transition: none !important;
-}
-
-.accessibility-reduced-motion .motion-reduce {
-  animation: none !important;
-  transition: none !important;
-}
-
-/* Print Styles for Accessibility */
-@media print {
-  .accessibility-high-contrast {
-    color: #000 !important;
-    background: #fff !important;
-  }
-  
-  .accessibility-high-contrast * {
-    color: #000 !important;
-    background: #fff !important;
-  }
-  
-  .sr-only {
-    position: static !important;
-    width: auto !important;
-    height: auto !important;
-    overflow: visible !important;
-    clip: auto !important;
+/* Reduced motion for prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-/* Dark Mode Accessibility */
+/* High contrast for prefers-contrast: high */
+@media (prefers-contrast: high) {
+  :root {
+    --text-color: #000000;
+    --bg-color: #ffffff;
+    --border-color: #000000;
+    --accent-color: #0000ff;
+  }
+}
+
+/* Dark mode accessibility */
 @media (prefers-color-scheme: dark) {
-  .accessibility-high-contrast {
-    --color-text: #ffffff;
-    --color-bg: #000000;
-    --color-primary: #00ffff;
-    --color-secondary: #ff00ff;
-    --color-accent: #ffff00;
-    --color-border: #ffffff;
-  }
-}
-
-/* Reduced Data Mode */
-@media (prefers-reduced-data: reduce) {
-  .accessibility-reduced-data img {
-    content: attr(alt);
-    background: #f0f0f0;
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 200px;
-    border: 1px solid #ccc;
-  }
-  
-  .accessibility-reduced-data video {
-    display: none;
-  }
-  
-  .accessibility-reduced-data [data-lazy] {
-    display: none;
+  .high-contrast {
+    --text-color: #ffffff;
+    --bg-color: #000000;
+    --border-color: #ffffff;
+    --accent-color: #00ffff;
   }
 }
