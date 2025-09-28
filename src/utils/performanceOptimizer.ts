@@ -132,7 +132,7 @@ class AdvancedPerformanceOptimizer {
   /**
    * Setup Web Vitals monitoring
    */
-  private setupWebVitalsMonitoring(): void {
+  public setupWebVitalsMonitoring(): void {
     if (!('PerformanceObserver' in window)) return;
 
     // First Contentful Paint
