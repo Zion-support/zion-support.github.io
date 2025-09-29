@@ -434,7 +434,6 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "9 min read"
   }
-<<<<<<< HEAD
   ,
   {
     slug: "agentic-workflows-blueprint-2026",
@@ -478,6 +477,33 @@ export const posts: BlogPost[] = [
     title: "Secure Tools Marketplace: Vetting, Sandboxes, and Attestations",
     description: "Bring third‑party tools safely with policy checks, sandboxes, and signed attestations.",
     category: "Security",
+    publishedAt: "2025-10-11",
+    featured: false,
+    readTime: "8 min read"
+  },
+  {
+    slug: "risk-budgets-for-agent-releases-2026",
+    title: "Risk Budgets for Agent Releases: Ship Fast Without Surprises",
+    description: "Budget risky actions, add PR checks, and wire rollbacks for reliable agent releases.",
+    category: "AI Engineering",
+    publishedAt: "2025-10-11",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-telemetry-2026",
+    title: "Privacy‑First Telemetry: Signal‑Rich, PII‑Safe Observability",
+    description: "Scoped IDs, field‑level filters, and retention policies that keep insights high and risk low.",
+    category: "Observability",
+    publishedAt: "2025-10-11",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "cost-aware-inference-routing-2026",
+    title: "Cost‑Aware Inference Routing: Quality Tiers Under Budget",
+    description: "Dynamically route prompts across model tiers based on budgets, SLAs, and eval signals.",
+    category: "Architecture",
     publishedAt: "2025-10-11",
     featured: false,
     readTime: "8 min read"
