@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import {
-  Sparkles,
   ArrowRight,
-  X,
-  Zap,
-  Bot,
   BarChart3,
-  TrendingUp,
+  Bot,
+  Sparkles,
   Star,
+  X,
+  Zap
 } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const PromotionalBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -18,20 +17,20 @@ const PromotionalBanner: React.FC = () => {
   const services = [
     {
       icon: Zap,
-      title: "AI Workflow Automation",
-      description: "Reduce manual tasks by 80%",
+      title: "NEW: GenAI Evals in Production",
+      description: "Policy tests, canaries, rollbacks",
       color: "text-blue-400",
     },
     {
       icon: Bot,
-      title: "AI Virtual Assistant",
-      description: "24/7 intelligent support",
+      title: "Edge Flags at <100ms",
+      description: "Global releases safely at the edge",
       color: "text-purple-400",
     },
     {
       icon: BarChart3,
-      title: "AI Data Analytics",
-      description: "Transform data into insights",
+      title: "North‑Star Metrics Pitfalls",
+      description: "Avoid vanity, ship outcomes",
       color: "text-green-400",
     },
   ];
@@ -62,7 +61,7 @@ const PromotionalBanner: React.FC = () => {
             <div className="flex items-center space-x-2">
               <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
               <span className="text-white font-semibold text-sm">
-                NEW: AI-Powered Micro SAAS Services
+                NEW: Fresh Articles & Insights this week
               </span>
             </div>
             
@@ -83,10 +82,10 @@ const PromotionalBanner: React.FC = () => {
             </div>
             
             <Link
-              to="/ai-micro-saas"
+              to="/blog"
               className="bg-white text-zion-blue px-4 py-2 rounded-lg text-sm font-semibold hover:bg-zion-slate-light transition-all duration-300 flex items-center space-x-1 group"
             >
-              <span>Explore Now</span>
+              <span>Read the latest</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             
