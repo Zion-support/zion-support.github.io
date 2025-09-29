@@ -3,6 +3,14 @@ import Link from 'next/link';
 <<<<<<< HEAD
 import { Clock, ArrowRight } from 'lucide-react';
 import {
+  NewContent2026PromotionalBanner,
+  AIAgentEvalsBanner,
+  AIEthicsFrameworkBanner,
+  MultimodalAIBanner,
+  EthicsSuccessCaseStudyBanner,
+  Comprehensive2026ContentBanner
+} from '../src/components/NewContent2026PromotionalBanners';
+import {
   NewBlogBanner,
   AnalyticsPlatformBanner,
   TechCorpSuccessBanner,
@@ -87,6 +95,12 @@ export default function HomePage() {
       </div>
 <<<<<<< HEAD
       {/* Promotional Banners */}
+      <NewContent2026PromotionalBanner />
+      <Comprehensive2026ContentBanner />
+      <AIAgentEvalsBanner />
+      <AIEthicsFrameworkBanner />
+      <MultimodalAIBanner />
+      <EthicsSuccessCaseStudyBanner />
       <NewContent2026Banner />
       <AIAgentOrchestrationBanner />
       <AISustainabilityBanner />
