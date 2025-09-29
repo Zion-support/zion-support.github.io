@@ -287,5 +287,32 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-09-29",
     readMinutes: 8,
   },
+  {
+    id: "ai-automation-roi-calculator",
+    title: "AI Automation ROI Calculator: Measure Your Business Impact",
+    summary:
+      "A practical framework for calculating returns from AI automation, with templates and examples.",
+    category: "AI Strategy",
+    date: "2025-09-30",
+    readMinutes: 8,
+  },
+  {
+    id: "cloud-native-microservices-2025",
+    title: "Cloud-Native Microservices: Patterns for 2025",
+    summary:
+      "Resilience, contracts, and observability patterns for modern microservices in the cloud.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 10,
+  },
+  {
+    id: "enterprise-ai-governance-framework",
+    title: "Enterprise AI Governance: From Policy to Practice",
+    summary:
+      "A pragmatic governance framework that balances speed, safety, and accountability for AI at scale.",
+    category: "AI Governance",
+    date: "2025-09-30",
+    readMinutes: 9,
+  },
 ];
 

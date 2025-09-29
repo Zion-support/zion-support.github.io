@@ -140,6 +140,16 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
+    slug: "platform-engineering-blueprint-2025",
+    title: "Platform Engineering Blueprint 2025: From Chaos to Clarity",
+    description:
+      "Core capabilities, golden paths, and product thinking to accelerate delivery across hundreds of teams.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-27",
+    featured: true,
+    readTime: "11 min read",
+  },
+  {
     slug: "genai-eval-systems",
     title: "Shipping with Confidence: Evaluation Systems for GenAI Apps",
     description:
@@ -179,6 +189,16 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "12 min read",
   },
+ 
+  {
+    slug: "micro-saas-platform-advantages",
+    title: "Why Micro SAAS Platforms Are the Future of Business Software",
+    description:
+      "Discover the advantages of micro SAAS platforms and how they're transforming how businesses consume and implement software solutions.",
+    category: "Technology",
+    publishedAt: "2025-01-10",
+    featured: false,
+    readTime: "9 min read",
   },
   // Resolved conflict: keep the extended set with readTime for consistency
   {
@@ -350,6 +370,37 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-01-21",
     featured: false,
     readTime: "9 min read",
-  }
+  },
+  {
+    slug: "ai-automation-roi-calculator-2025",
+    title: "AI Automation ROI Calculator: Prove Value Fast",
+    description:
+      "A simple framework and worksheet to quantify savings and payback from AI workflow automation.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "cloud-cost-guardrails-in-practice",
+    title: "Cloud Cost Guardrails in Practice",
+    description:
+      "Requests/limits, autoscaling, and demand shaping patterns that cut spend without slowing teams.",
+    category: "Cloud FinOps",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "5 min read",
+  },
+  {
+    slug: "secure-ml-platform-blueprint",
+    title: "Secure ML Platform Blueprint",
+    description:
+      "Harden data flows, registries, and deployments with pragmatic controls and audits that scale.",
+    category: "Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+ 
 ];
 
