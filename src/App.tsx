@@ -11,7 +11,7 @@ import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
 import { seoOptimizer } from './utils/seoOptimization';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { useSEOData } from './components/SEOOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
