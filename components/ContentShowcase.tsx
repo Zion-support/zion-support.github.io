@@ -19,6 +19,64 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-autonomous-agents-2025',
+    title: 'AI Autonomous Agents 2025: The Future of Business Automation',
+    excerpt: 'Discover how AI autonomous agents are revolutionizing business processes in 2025. Learn implementation strategies, ROI metrics, and real-world success stories.',
+    type: 'article',
+    readTime: '15 min read',
+    category: 'AI Innovation',
+    href: '/blog/ai-autonomous-agents-2025',
+    featured: true,
+    publishedDate: '2025-01-17',
+    metrics: [
+      { value: '85%', label: 'Process Automation' },
+      { value: '300%', label: 'ROI Improvement' }
+    ]
+  },
+  {
+    id: 'ai-security-compliance-2025',
+    title: 'AI Security & Compliance 2025: Complete Guide to Secure AI Implementation',
+    excerpt: 'Master AI security and compliance in 2025. Learn best practices, regulatory requirements, and implementation strategies for secure AI systems.',
+    type: 'article',
+    readTime: '18 min read',
+    category: 'Security & Compliance',
+    href: '/blog/ai-security-compliance-2025',
+    featured: true,
+    publishedDate: '2025-01-17',
+    metrics: [
+      { value: '70%', label: 'Vulnerability Reduction' },
+      { value: '99.9%', label: 'Compliance Rate' }
+    ]
+  },
+  {
+    id: 'manufacturing-ai-transformation',
+    title: 'Manufacturing AI Transformation: 75% Efficiency Gain Through Intelligent Automation',
+    excerpt: 'Discover how a leading automotive parts manufacturer achieved unprecedented efficiency gains, cost savings, and quality improvements through comprehensive AI transformation.',
+    type: 'case-study',
+    category: 'Manufacturing',
+    href: '/case-studies/manufacturing-ai-transformation',
+    featured: true,
+    publishedDate: '2025-01-17',
+    metrics: [
+      { value: '75%', label: 'Efficiency Improvement' },
+      { value: '$3.2M', label: 'Cost Savings' }
+    ]
+  },
+  {
+    id: 'ai-predictive-maintenance',
+    title: 'AI Predictive Maintenance: Reduce Downtime by 85%',
+    excerpt: 'Transform your maintenance operations with AI-powered predictive maintenance. Reduce downtime by 85%, cut costs by 60%, and prevent equipment failures before they happen.',
+    type: 'service',
+    category: 'AI Services',
+    href: '/services/ai-predictive-maintenance',
+    featured: true,
+    publishedDate: '2025-01-17',
+    metrics: [
+      { value: '85%', label: 'Downtime Reduction' },
+      { value: '99.7%', label: 'Prediction Accuracy' }
+    ]
+  },
+  {
     id: 'ai-revolution-2025',
     title: 'AI Revolution 2025: Complete Business Transformation Guide',
     excerpt: 'Discover how AI is reshaping industries and creating unprecedented opportunities for growth in 2025.',

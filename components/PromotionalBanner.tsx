@@ -209,3 +209,47 @@ export const EnterpriseAIBanner = () => (
     autoHide={false}
   />
 );
+
+export const AutonomousAgentsBanner = () => (
+  <PromotionalBanner
+    message="🤖 NEW: AI Autonomous Agents 2025 - The Future of Business Automation is Here"
+    ctaText="Read the Guide"
+    ctaLink="/blog/ai-autonomous-agents-2025"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const SecurityComplianceBanner = () => (
+  <PromotionalBanner
+    message="🛡️ NEW: AI Security & Compliance 2025 - Complete Guide to Secure AI Implementation"
+    ctaText="Learn Security Best Practices"
+    ctaLink="/blog/ai-security-compliance-2025"
+    backgroundColor="bg-gradient-to-r from-red-600 to-orange-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const ManufacturingSuccessBanner = () => (
+  <PromotionalBanner
+    message="🏭 SUCCESS STORY: Manufacturing AI Transformation - 75% Efficiency Gain & $3.2M Savings"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/manufacturing-ai-transformation"
+    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const PredictiveMaintenanceBanner = () => (
+  <PromotionalBanner
+    message="🔧 NEW SERVICE: AI Predictive Maintenance - Reduce Downtime by 85% & Cut Costs by 60%"
+    ctaText="Explore Service"
+    ctaLink="/services/ai-predictive-maintenance"
+    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
