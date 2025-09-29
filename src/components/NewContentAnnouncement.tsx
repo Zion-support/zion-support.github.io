@@ -1,9 +1,23 @@
+import { ArrowRight, Calendar, Clock, Sparkles, TrendingUp, X } from 'lucide-react';
 import React, { useState } from 'react';
-import { X, Sparkles, ArrowRight, Calendar, Clock, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const NewContentAnnouncement: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
+
+  // Encode SVG for safe use in CSS background-image without conflicting quotes
+  const backgroundPatternSvg = `
+    <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" fill-rule="evenodd">
+        <g fill="#ffffff" fill-opacity="0.1">
+          <circle cx="30" cy="30" r="4"/>
+        </g>
+      </g>
+    </svg>
+  `;
+  const backgroundImageStyle = {
+    backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(backgroundPatternSvg)}")`,
+  } as const;
 
   if (!isVisible) return null;
 
