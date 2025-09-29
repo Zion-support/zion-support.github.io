@@ -13,8 +13,48 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  // New featured posts (today)
   {
-<<<<<<< HEAD
+    slug: "shipping-genai-safely-weekly",
+    title: "Ship GenAI Changes Weekly—Safely",
+    description: "Eval gates, canary cohorts, and rollback triggers that let you move fast without breaking trust.",
+    content: `# Ship GenAI Changes Weekly—Safely\n\nLayer evaluation in CI and production to keep quality high while you iterate quickly.`,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "MLOps",
+    tags: ["GenAI", "Evals", "Guardrails"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/mlops-reliability.jpg"
+  },
+  {
+    slug: "edge-experiences-under-100ms",
+    title: "Under 100ms: Designing Edge Experiences",
+    description: "Latency budgets, on-device inference, and cache strategies for delightful real-time UX.",
+    content: `# Under 100ms: Designing Edge Experiences\n\nArchitect for perceived performance with smart caching and edge inference.`,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Architecture",
+    tags: ["Edge", "Performance"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-feature-flags.jpg"
+  },
+  {
+    slug: "north-star-metrics-that-matter",
+    title: "North‑Star Metrics That Actually Drive Product Decisions",
+    description: "Leading indicators, instrumentation plans, and governance to avoid vanity traps.",
+    content: `# North‑Star Metrics That Actually Drive Product Decisions\n\nCreate measurable outcomes that align teams and reduce ambiguity.`,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Product Analytics",
+    tags: ["Metrics", "Product"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/north-star-metrics.jpg"
+  },
+  {
+/* CLEAN MERGE (removed conflict markers) */
     slug: "genai-telemetry-observability-2025",
     title: "GenAI Telemetry: What to Measure in 2025",
     description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
@@ -64,7 +104,7 @@ Use this concise pre‑launch checklist to ensure your AI features meet quality,
     featured: true,
     readTime: "5 min read",
     image: "/images/ai-product-readiness.jpg"
-=======
+/* CLEAN MERGE (removed conflict markers) */
     slug: "genai-evals-in-production-2025",
     title: "GenAI Evals in Production: Policy Tests That Scale",
     description: "From offline suites to online canaries: patterns that keep quality high as usage grows.",
@@ -133,7 +173,6 @@ Avoid vanity KPIs, ambiguous definitions, and missing instrumentation. Replace w
     featured: true,
     readTime: "6 min read",
     image: "/images/north-star-anti-patterns.jpg"
->>>>>>> origin/main
   },
   {
     slug: "real-time-data-pipelines-2025",
