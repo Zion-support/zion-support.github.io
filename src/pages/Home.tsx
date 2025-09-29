@@ -104,10 +104,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🆕 Fresh: MLOps Reliability & Real‑Time Pipelines Guides"
-          description="Canary evals for GenAI and reliable streaming patterns to ship faster with confidence."
+          title="🚀 Fresh: AI Product Launch Checklist + MLOps in 45 Days"
+          description="New guides on taking AI pilots to production and shipping reliable models fast."
           ctaText="Read the latest"
-          ctaLink="/blog"
+          ctaLink="/blog/ai-product-launch-checklist-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
