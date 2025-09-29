@@ -18,6 +18,11 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+    id: "real-time-data-pipelines",
+    title: "Reliable Real‑Time Pipelines: Backpressure, Idempotency, Semantics",
+    summary:
+      "A concise checklist to keep streaming jobs healthy under load without dropping or duplicating events.",
+    category: "Data Engineering",
     date: "2025-09-28",
     readMinutes: 7,
   },
@@ -29,6 +34,24 @@ export const latestInsights: InsightArticle[] = [
     category: "Security",
     date: "2025-08-20",
     readMinutes: 7,
+  },
+  {
+    id: "genai-ops-safety",
+    title: "Operationalizing GenAI Safely and at Scale",
+    summary:
+      "Guardrails, evals, and rollout strategies that keep quality high while shipping fast.",
+    category: "MLOps",
+    date: "2025-09-27",
+    readMinutes: 6,
+  },
+  {
+    id: "north-star-metrics-cheatsheet",
+    title: "North‑Star Metrics: A 5‑Step Cheatsheet",
+    summary:
+      "A quick framework to choose metrics that truly reflect customer value and drive growth.",
+    category: "Product Analytics",
+    date: "2025-09-26",
+    readMinutes: 5,
   },
   {
     id: "cloud-cost-optimization",

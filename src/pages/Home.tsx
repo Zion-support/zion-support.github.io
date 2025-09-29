@@ -105,10 +105,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: Quantum Computing & Edge AI Insights Just Published!"
-          description="Discover practical applications and implementation strategies for the latest technologies"
-          ctaText="Read Now"
-          ctaLink="/blog"
+          title="🚀 New: North‑Star Metrics & Real‑Time Pipelines"
+          description="Fresh guides on growth metrics and reliable streaming architectures."
+          ctaText="Read the latest"
+          ctaLink="/blog/north-star-metrics-that-drive-growth"
           dismissible={true}
         />
         {/* Animated background elements */}

@@ -125,6 +125,65 @@ Don't let your competitors gain an edge. Start your AI automation journey today 
     image: "/images/ai-workflow-automation.jpg"
   },
   {
+    slug: "north-star-metrics-that-drive-growth",
+    title: "North‑Star Metrics That Actually Drive Growth",
+    description: "Define actionable metrics, avoid vanity traps, and align teams to measurable outcomes.",
+    content: `
+# North‑Star Metrics That Actually Drive Growth
+
+Picking the right north‑star metric creates alignment and focus across teams. This guide shows how to choose metrics that correlate with sustainable growth instead of vanity.
+
+## Common Pitfalls
+- Mistaking activity for outcomes
+- Over-optimizing local maxima
+- Ignoring leading indicators
+
+## A Practical Framework
+1. Tie metrics to customer value
+2. Validate correlation with revenue/retention
+3. Define guardrail metrics to prevent gaming
+
+## Implementation Checklist
+- Define candidate metrics and hypotheses
+- Backtest correlation on historical data
+- Roll out with dashboards and weekly reviews
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Product Analytics",
+    tags: ["Metrics", "Growth", "Analytics"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/north-star-metrics.jpg"
+  },
+  {
+    slug: "real-time-data-pipelines-reliability",
+    title: "Building Reliable Real‑Time Data Pipelines",
+    description: "Design patterns, backpressure handling, and exactly‑once semantics for trustworthy streaming.",
+    content: `
+# Building Reliable Real‑Time Data Pipelines
+
+Reliability at streaming scale requires deliberate design: idempotency, checkpointing, and observability.
+
+## Key Patterns
+- Event schemas with evolution policy
+- Exactly-once via transactional sinks
+- Backpressure-aware consumers
+
+## Tooling
+- Kafka + Flink/Spark
+- Protobuf/Avro with schema registry
+- OTEL traces for end-to-end lineage
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "Data Engineering",
+    tags: ["Streaming", "Kafka", "Flink", "Reliability"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/real-time-pipelines.jpg"
+  },
+  {
     slug: "ai-virtual-assistant-best-practices",
     title: "Best Practices for Implementing AI Virtual Assistants in 2025",
     description: "Learn how to successfully implement AI virtual assistants in your business. Discover strategies for training, deployment, and optimization.",
