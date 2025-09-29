@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
+ HEAD
 main
 
 #!/usr/bin/env node
@@ -360,16 +360,14 @@ fixer.run().catch(console.error);
 
           content = content.replace(/
 
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+ 24132684af15a4d83201b2a91ee50324edfabedc
 
 
-<<<<<<< HEAD
+ HEAD
 <<<<<<< HEAD
 main
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+ aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -377,7 +375,7 @@ main
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
+ HEAD
 <<<<<<< HEAD
 const { execSync } = require('child_process');
 
@@ -416,10 +414,7 @@ class ComprehensiveSyntaxFixer {
           
           // Remove merge conflict markers
 
-=======
-
-          content = content.replace(/
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+ aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
@@ -504,21 +499,18 @@ let fixedCount = 0;
 for (const fix of fixes) {
   try {
 
-<<<<<<< HEAD
+ HEAD
 console.log(`✅ Fixed ${fixedCount} files`);
 <<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-59d5
 <<<<<<< HEAD
 
-=======
-const { execSync } = require('child_process');
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+ aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> origin/chore/fix-lint-and-merge
 
           content = content.replace(/
 
-<<<<<<< HEAD
+ HEAD
   ensureReportsDir() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
@@ -548,9 +540,7 @@ main
           content = content.replace(/[\s\S]*?[\s\S]*?
           content = content.replace(/[\s\S]*?
           
-=======
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+ origin/chore/fix-lint-and-merge
           fs.writeFileSync(filePath, content);
           this.log(`✅ Fixed merge conflicts in ${file}`);
         } catch (error) {
@@ -619,8 +609,7 @@ console.log(`✅ Fixed ${fixedCount} files`);
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+ HEAD
+ aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+ HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -43,17 +43,7 @@ const nextConfig = {
         permanent: true } ]} };
 
 module.exports = nextConfig;
-=======
-/** @type {import('next).NextConfig} */
-const nextConfig = {
-
-=======
-  output: export',
-  images: {
-    unoptimized: true},
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+ origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 =======
 >>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

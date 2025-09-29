@@ -2,8 +2,6 @@
 const fs = require("fs")
 const path = require("path")
 const glob = require("glob")
-<<<<<<< HEAD
+ HEAD
       this.log(`Error in Import/Export "Fixer"`)
-=======
-      this.log(`Error in Import/Export "Fixer"`)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+ 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -124,13 +124,12 @@ class ComprehensiveBranchMerger {
       // Simple conflict resolution strategy
       let resolvedContent = content
         // Remove conflict markers and keep the HEAD version (our main branch)
-        .replace(/<<<<<<< HEAD\n([\s\S]*?)=======([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1')
+        .replace(/ HEAD\n([\s\S]*?) [^\n]+\n/g, '$1')
         // Handle cases where there's no HEAD section
-        .replace(/<<<<<<< [^\n]+\n([\s\S]*?)=======([\s\S]*?)>>>>>>> [^\n]+\n/g, '$2')
+        .replace(/ [^\n]+\n([\s\S]*?) [^\n]+\n/g, '$2')
         // Clean up any remaining conflict markers
-        .replace(/<<<<<<< [^\n]+\n/g, '')
-        .replace(/=======\n/g, '')
-        .replace(/>>>>>>> [^\n]+\n/g, '');
+        .replace(/ [^\n]+\n/g, '')
+        .replace(/ [^\n]+\n/g, '');
       
       fs.writeFileSync(filePath, resolvedContent);
       this.log(`✅ Resolved conflicts in: ${filePath}`);

@@ -517,7 +517,11 @@ const Home = () => {
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
+<<<<<<< HEAD
+                    {("featured" in item) && (item as any).featured && (
+=======
                     {('featured' in item) && (item as any).featured && (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-31e1
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>

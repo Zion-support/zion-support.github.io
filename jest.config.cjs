@@ -1,46 +1,30 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  roots: ['<rootDir>/__tests__', '<rootDir>/src'],
-  setupFilesAfterEnv: [ '@testing-library/jest-dom' ],
+  setupFilesAfterEnv: ['@testing-library/jest-dom'],
   moduleNameMapper: {
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    // Minimal mappers to avoid conflicts; project has no tests
-    '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/tests/__mocks__/fileMock.js',
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
   },
-  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+  haste: {
+    throwOnModuleCollision: false,
+  },
   testPathIgnorePatterns: [
     '/node_modules/',
     '/dist/',
     '/build/',
     '/.next/',
     '/out/',
-    '/tests.disabled/',
-    '/automation/',
-    '/automation_backup/',
-    '/backup/',
-    '/backup-pages/',
-    '/backup-merge-conflicts/',
-    '/backup-problematic-files/',
-    '/_conflicted_disabled/',
-    '/apps.backup/',
+    '<rootDir>/automation/backups/',
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/backup/',
+    '<rootDir>/automation/backups/**',
+    '<rootDir>/backup-problematic-files/**',
+    '<rootDir>/backup/**',
   ],
-  modulePathIgnorePatterns: [
-    '/automation/',
-    '/automation_backup/',
-    '/backup/',
-    '/backup-pages/',
-    '/backup-merge-conflicts/',
-    '/backup-problematic-files/',
-    '/_conflicted_disabled/',
-    '/apps.backup/',
-  ],
+  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-    '^.+\\.(js|jsx)$': 'babel-jest' },
-  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
-  coverageDirectory: 'coverage',
-  collectCoverage: false,
-  verbose: false,
-  testEnvironmentOptions: {
-    customExportConditions: ['node', 'node-addons'] } };
+    '^.+\\.(ts|tsx)$': 'ts-jest'
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json']
+};

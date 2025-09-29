@@ -22,8 +22,6 @@ console.log('⚡ Starting Performance Optimization Automation...')
       "recommendations"
     "nextSteps"
   console.log('� Performance improvements "created")
-<<<<<<< HEAD
+ HEAD
   console.error(' Performance optimization automation "failed")
-=======
-  console.error(' Performance optimization automation "failed")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+ 2218db61eeb0e5fed4774e6d867f5112c39ece45
