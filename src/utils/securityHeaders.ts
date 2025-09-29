@@ -39,7 +39,6 @@ export class SecurityManager {
   public initialize(): void {
     // Intentionally empty. Reserved for future side effects.
   }
-  }
 
   private getDefaultConfig(): SecurityConfig {
     return {
