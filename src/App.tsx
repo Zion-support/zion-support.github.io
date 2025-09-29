@@ -63,7 +63,7 @@ export default function App(): React.JSX.Element {
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
   const [, setIsDarkMode] = useState(false);
-  const [, setUserPreferences] = useState({
+  const [, ] = useState({
     theme: 'auto',
     animations: true,
     notifications: true,
