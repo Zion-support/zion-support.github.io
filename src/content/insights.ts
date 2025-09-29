@@ -10,6 +10,30 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "slo-driven-autonomous-ops",
+    title: "SLO‑Driven Autonomous Ops: When to Let Automation Act",
+    summary: "A simple rubric for approvals, budgets, and rollback safeguards in autonomous ops.",
+    category: "AI Operations",
+    date: "2025-10-15",
+    readMinutes: 5,
+  },
+  {
+    id: "agent-trace-design",
+    title: "Designing Agent Traces That Drive Fixes",
+    summary: "Trace shape, spans, and signals that make agent failures diagnosable in minutes.",
+    category: "GenAI",
+    date: "2025-10-15",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-ux-prewarm-techniques",
+    title: "Edge UX Pre‑Warm Techniques: Instant‑Feel AI",
+    summary: "Prefetch, speculative decode, and KV warms to hit sub‑150ms interactions.",
+    category: "Architecture",
+    date: "2025-10-15",
+    readMinutes: 4,
+  },
+  {
     id: "privacy-first-flags-quickstart-2026",
     title: "Privacy‑First Flags Quickstart 2026",
     summary: "Roll out features globally with scoped IDs, edge filters, and health probes.",

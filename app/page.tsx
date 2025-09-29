@@ -73,15 +73,13 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ NEW 2026:</span>
-            <Link href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/agentic-workflow-orchestration-2026" className="underline hover:text-yellow-200">Agentic Workflow Orchestration</Link>
-            <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-customer-data-platforms-2026" className="underline hover:text-yellow-200">Customer Data Platforms</Link>
+            <Link href="/blog/edge-llm-latency-patterns-2026" className="underline hover:text-yellow-200">Edge LLM Latency</Link>
             <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-customer-data-platforms-2026" className="underline hover:text-yellow-200">AI CDPs 2026</a>
+            <Link href="/blog/agent-observability-blueprint-2026" className="underline hover:text-yellow-200">Agent Observability</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/agentic-workflow-orchestration-2026" className="underline hover:text-yellow-200">Agentic Workflow Orchestration</Link>
           </div>
           <Link
             href="/blog"

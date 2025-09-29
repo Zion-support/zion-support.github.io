@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-autonomous-cloud-ops-2026",
+    title: "AI Autonomous Cloud Ops 2026: Self‑Healing, Cost‑Aware Infrastructure",
+    description: "Zero‑touch ops with live SLOs, budgeted actions, and rollback‑ready playbooks.",
+    category: "AI Operations",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-llm-latency-patterns-2026",
+    title: "Edge LLM Latency Patterns 2026: Sub‑150ms Interactions",
+    description: "Streaming, prefetch, and cache tiers for instant‑feel AI UX at global scale.",
+    category: "Architecture",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "agent-observability-blueprint-2026",
+    title: "Agent Observability Blueprint 2026: Traces, Budgets, and Feedback",
+    description: "End‑to‑end traces with budgeted tools, evals, and human‑feedback loops that keep quality high.",
+    category: "GenAI",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "privacy-first-feature-flags-2026",
     title: "Privacy‑First Feature Flags 2026: Global Rolls Without PII Risk",
     description: "Scoped IDs, edge filters, and health checks for instant, safe rollouts under 100ms.",

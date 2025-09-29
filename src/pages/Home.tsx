@@ -136,14 +136,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: AI Risk Budgets, Privacy‑First Flags, Reliable Agent Actions"
-          description="Ship automation safely, roll out globally with privacy, and make agents reliable."
+          title="New 2026: Autonomous Cloud Ops, Edge LLM Latency, Agent Observability"
+          description="Run SLO‑driven ops, deliver instant‑feel AI UX, and observe agents end‑to‑end."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Risk Budgets 2026", category: "AI Governance", link: "/blog/ai-risk-budgets-2026" },
-            { title: "Privacy‑First Feature Flags 2026", category: "Architecture", link: "/blog/privacy-first-feature-flags-2026" },
-            { title: "Reliable Agent Actions 2026", category: "GenAI", link: "/blog/reliable-agent-actions-2026" },
+            { title: "Autonomous Cloud Ops 2026", category: "AI Operations", link: "/blog/ai-autonomous-cloud-ops-2026" },
+            { title: "Edge LLM Latency Patterns 2026", category: "Architecture", link: "/blog/edge-llm-latency-patterns-2026" },
+            { title: "Agent Observability Blueprint 2026", category: "GenAI", link: "/blog/agent-observability-blueprint-2026" },
             { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
             { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" }
           ]}
@@ -290,7 +290,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Edge LLM Caching, Governance Scorecards, Serverless Cost Playbook — read now
+            New: Autonomous Ops, Edge LLM Latency, Agent Observability — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
@@ -551,7 +551,7 @@ const Home = () => {
                 <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Fresh: Edge LLM Caching, KPI Scorecards, Serverless Cost Playbook
+                    Fresh: Autonomous Cloud Ops, Edge LLM Latency, Agent Observability
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles & Insights
@@ -839,15 +839,15 @@ const Home = () => {
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-purple-200 mb-1">AI Operations</div>
-                  <div className="font-semibold text-white">Autonomous Incident Runbooks</div>
+                  <div className="font-semibold text-white">Autonomous Cloud Ops 2026</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-rose-200 mb-1">Architecture</div>
-                  <div className="font-semibold text-white">Privacy‑First Feature Flags</div>
+                  <div className="font-semibold text-white">Edge LLM Latency Patterns</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">AI Strategy</div>
-                  <div className="font-semibold text-white">Platform ROI Scorecards</div>
+                  <div className="text-sm text-blue-200 mb-1">GenAI</div>
+                  <div className="font-semibold text-white">Agent Observability Blueprint</div>
                 </div>
               </div>
             </div>
