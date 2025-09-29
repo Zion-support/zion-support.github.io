@@ -34,6 +34,9 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
+<<<<<<< HEAD
+            <Link href="/blog/ai-metaverse-enterprise-2026" className="underline hover:text-yellow-200">Metaverse Enterprise</Link>
+=======
             <span>✨ NEW 2026:</span>
             <Link href="/blog/ai-next-generation-automation-2026" className="underline hover:text-yellow-200">Next-Gen Automation</Link>
             <span className="hidden md:inline">•</span>
@@ -64,6 +67,7 @@ export default function HomePage() {
             <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum AI</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-innovation-enterprise-success-2026" className="underline hover:text-yellow-200">$50M Success Story</Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-3145
           </div>
           <Link
             href="/blog"

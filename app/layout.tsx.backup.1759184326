@@ -114,7 +114,13 @@ function Footer() {
                 $500M Success Story
                 <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">MEGA SUCCESS</span>
               </Link>
+<<<<<<< HEAD
+              <Link href="/case-studies/ai-2026-mega-transformation-success" className="block text-gray-600 hover:text-blue-600 transition-colors">🏆 $50M Success Story</Link>
+              <Link href="/case-studies/ai-revolutionary-automation-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">⚡ $8M Automation Success</Link>
+              <Link href="/case-studies/ai-2026-breakthrough-innovations-success" className="block text-gray-600 hover:text-blue-600 transition-colors">🔮 $15M Breakthrough Success</Link>
+=======
               <Link href="/case-studies/ai-synthetic-data-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">💰 $15M Synthetic Data ROI</Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-3145
             </div>
           </div>
           <div>
