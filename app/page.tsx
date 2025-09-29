@@ -33,6 +33,7 @@ import {
   InteractiveAICalculatorBanner,
   EnterpriseAIReadinessBanner
 } from '../components/NewContent2026Banners';
+import AIROICalculator from '../components/AIROICalculator';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -48,17 +49,17 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ New on the blog:</span>
-            <a to="/blog/platform-engineering-scorecards-2026" className="underline hover:text-yellow-200">Platform Scorecards 2026</a>
+            <Link href="/blog/ai-multimodal-enterprise-2026" className="underline hover:text-yellow-200">AI Multimodal Enterprise 2026</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-cybersecurity-automation-2025" className="underline hover:text-yellow-200">AI Cybersecurity Automation</a>
+            <Link href="/blog/ai-cybersecurity-automation-2026" className="underline hover:text-yellow-200">AI Cybersecurity Automation 2026</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/edge-ai-blueprint-2026" className="underline hover:text-yellow-200">Edge AI Blueprint 2026</a>
+            <Link href="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability & Green Tech</Link>
           </div>
           <Link
-            to="/blog"
+            href="/content-hub"
             className="bg-white text-indigo-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
           >
-            Read the latest
+            Explore Content Hub
           </Link>
         </div>
       </div>
@@ -322,6 +323,21 @@ export default function HomePage() {
         </div>
       </section>
       
+      {/* AI ROI Calculator Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Calculate Your AI Investment Return
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Get instant insights into potential savings and ROI for AI implementation in your organization
+            </p>
+          </div>
+          <AIROICalculator />
+        </div>
+      </section>
+
       {/* Latest Content Section */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -335,57 +351,57 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link to="/blog/ai-trustworthy-agents-2026" className="group">
+            <Link href="/blog/ai-multimodal-enterprise-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
                     New Article
                   </span>
-                  <span className="text-sm text-gray-500">11 min read</span>
+                  <span className="text-sm text-gray-500">15 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  Trustworthy AI Agents 2026: Safety, Compliance, and Observability
+                  AI Multimodal Enterprise Solutions 2026
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Deploy trustworthy AI agents with guardrails, approvals, and end-to-end observability.
+                  Master multimodal AI for enterprise with vision, audio, and text processing. Achieve 300% ROI.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Article →
                 </div>
               </div>
             </Link>
-            <Link to="/blog/ai-value-stream-analytics-2026" className="group">
+            <Link href="/blog/ai-cybersecurity-automation-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
                     Featured Article
-                  </span>
-                  <span className="text-sm text-gray-500">9 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Value Stream Analytics 2026: Trace ROI from Token to Revenue
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Tie AI cost, latency, and quality to business value with end-to-end tracing.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
-              </div>
-            </Link>
-            <Link to="/blog/ai-autonomous-agents-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Article
                   </span>
                   <span className="text-sm text-gray-500">18 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Autonomous Agents 2025: Enterprise Implementation Guide
+                  AI Cybersecurity Automation 2026
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Master autonomous AI agents with 300% ROI strategies and enterprise-ready deployment patterns.
+                  Deploy autonomous AI cybersecurity systems with 99.7% threat detection accuracy.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-sustainability-green-tech-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Article
+                  </span>
+                  <span className="text-sm text-gray-500">12 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI for Sustainability & Green Tech 2026
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Achieve carbon-neutral AI operations with sustainable practices. Reduce energy consumption by 70%.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Article →
@@ -652,30 +668,57 @@ export default function HomePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <SuccessStory
-              company="TechCorp Inc."
-              industry="E-commerce"
-              challenge="Manual data processing taking 40 hours/week"
-              solution="AI Data Analytics automation"
-              result="90% time reduction, 60% cost savings"
-              metric="$500K saved annually"
-            />
-            <SuccessStory
-              company="HealthTech Solutions"
-              industry="Healthcare"
-              challenge="Customer support overwhelmed with queries"
-              solution="AI Virtual Assistant implementation"
-              result="80% faster response time, 24/7 support"
-              metric="95% customer satisfaction"
-            />
-            <SuccessStory
-              company="FinanceFlow Ltd."
-              industry="Fintech"
-              challenge="Complex workflow bottlenecks"
-              solution="AI Workflow Automation platform"
-              result="75% process efficiency improvement"
-              metric="300% ROI in 6 months"
-            />
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">🏭</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Global Manufacturing Corp</h3>
+                  <p className="text-sm text-gray-500">Manufacturing</p>
+                </div>
+              </div>
+              <div className="space-y-3 text-gray-700">
+                <p><strong>Challenge:</strong> $200M+ excess inventory and 40% demand forecast accuracy</p>
+                <p><strong>Solution:</strong> AI Supply Chain Optimization across 15 countries</p>
+                <p><strong>Result:</strong> $50M annual savings, 99.5% efficiency</p>
+                <div className="text-2xl font-bold text-green-600">$50M Saved</div>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">🏦</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">FinServe Corp</h3>
+                  <p className="text-sm text-gray-500">Financial Services</p>
+                </div>
+              </div>
+              <div className="space-y-3 text-gray-700">
+                <p><strong>Challenge:</strong> Manual financial processes and compliance issues</p>
+                <p><strong>Solution:</strong> AI Finance Automation with 95% accuracy</p>
+                <p><strong>Result:</strong> 95% process reduction, $3M savings</p>
+                <div className="text-2xl font-bold text-blue-600">$3M Saved</div>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">🏪</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">RetailAI Corp</h3>
+                  <p className="text-sm text-gray-500">Retail</p>
+                </div>
+              </div>
+              <div className="space-y-3 text-gray-700">
+                <p><strong>Challenge:</strong> Declining sales and inefficient inventory management</p>
+                <p><strong>Solution:</strong> AI-powered customer analytics and inventory optimization</p>
+                <p><strong>Result:</strong> 150% revenue growth, 80% cost reduction</p>
+                <div className="text-2xl font-bold text-purple-600">150% Growth</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
