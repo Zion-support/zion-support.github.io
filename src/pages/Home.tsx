@@ -265,8 +265,8 @@ const Home = () => {
             <h3 className="text-3xl font-bold text-white">Latest Insights</h3>
             <Link to="/insights" className="text-zion-cyan hover:underline">View all</Link>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {latestInsights.slice(0, 3).map((item) => (
+          <div className="grid md:grid-cols-4 gap-6">
+            {latestInsights.slice(0, 4).map((item) => (
               <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <div className="p-6">
                   <div className="text-xs uppercase tracking-wider text-zion-cyan mb-2">{item.category}</div>
@@ -382,7 +382,7 @@ const Home = () => {
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
                   <p className="text-white/90">
-                    Fresh articles on real-time data pipelines, north-star metrics, and safe, scalable GenAI ops.
+                    New today: vector search at scale, real LLM evals, FinOps guardrails, and zero-trust rollout.
                   </p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
@@ -391,20 +391,14 @@ const Home = () => {
                 </Link>
               </div>
 
-              {/* Inline featured list */}
-              <div className="mt-8 grid gap-6 md:grid-cols-3">
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
-                  <div className="font-semibold text-white">Building Reliable Real-Time Data Pipelines</div>
-                </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-orange-200 mb-1">Product Analytics</div>
-                  <div className="font-semibold text-white">North-Star Metrics That Actually Drive Growth</div>
-                </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
-                  <div className="font-semibold text-white">Operationalizing GenAI Safely and at Scale</div>
-                </div>
+              {/* Inline featured list from latestInsights */}
+              <div className="mt-8 grid gap-6 md:grid-cols-4">
+                {latestInsights.slice(0, 4).map((item) => (
+                  <div key={item.id} className="bg-white/10 rounded-xl p-5">
+                    <div className="text-sm text-blue-200 mb-1">{item.category}</div>
+                    <div className="font-semibold text-white">{item.title}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

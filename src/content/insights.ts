@@ -44,5 +44,41 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-07-18",
     readMinutes: 8,
   },
+  {
+    id: "vector-search-in-production",
+    title: "Vector Search in Production: Patterns That Actually Scale",
+    summary:
+      "What we learned implementing vector databases and retrieval for real-world, high-traffic applications.",
+    category: "AI Engineering",
+    date: "2025-09-29",
+    readMinutes: 7,
+  },
+  {
+    id: "llm-evals-that-matter",
+    title: "LLM Evals That Matter: From Demos to Reliable Systems",
+    summary:
+      "A practical evaluation stack for GenAI systems across quality, safety, latency, and cost.",
+    category: "MLOps",
+    date: "2025-09-29",
+    readMinutes: 9,
+  },
+  {
+    id: "finops-guardrails",
+    title: "FinOps Guardrails: Cut 30% Cloud Spend Without Slowing Teams",
+    summary:
+      "Engineering-friendly cost controls: autoscaling defaults, workload tagging, and policy-as-code.",
+    category: "Cloud FinOps",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "zero-trust-rollout",
+    title: "Zero-Trust Rollout for SaaS: A 6-Week Plan",
+    summary:
+      "Least-privilege, continuous verification, and telemetry-driven detection with minimal friction.",
+    category: "Security",
+    date: "2025-09-29",
+    readMinutes: 8,
+  },
 ];
 
