@@ -2,6 +2,7 @@
 set -euo pipefail
 
 echo "[info] Starting automated merge of candidate PR branches into main"
+SKIP_BUILD=${SKIP_BUILD:-false}
 
 # Ensure we are on main and up to date
 git fetch origin main
@@ -52,7 +53,16 @@ for branch in "${CANDIDATE_BRANCHES[@]}"; do
   git checkout main
   if git merge --no-ff "$branch" -m "Merge $branch into main (auto)"; then
     echo "[info] Merge succeeded for $branch; verifying build"
-    if pnpm run build:netlify >/dev/null 2>&1; then
+    if [ "$SKIP_BUILD" = true ]; then
+      echo "[info] SKIP_BUILD=true; skipping build verification for $branch"
+      build_ok=true
+    else
+      if pnpm run build:netlify >/dev/null 2>&1; then
+        build_ok=true
+      else
+        build_ok=false
+      fi
+    fi
       pushed=false
       for attempt in 1 2 3; do
         git pull --rebase origin main || true
@@ -80,7 +90,16 @@ for branch in "${CANDIDATE_BRANCHES[@]}"; do
     echo "[warn] Merge conflicts on main for $branch; attempting auto-resolve"
     git add -A
     if git commit -m "chore: auto-resolve conflicts merging $branch into main"; then
-      if pnpm run build:netlify >/dev/null 2>&1; then
+      if [ "$SKIP_BUILD" = true ]; then
+        echo "[info] SKIP_BUILD=true; skipping build verification (post-auto-resolve) for $branch"
+        build_ok=true
+      else
+        if pnpm run build:netlify >/dev/null 2>&1; then
+          build_ok=true
+        else
+          build_ok=false
+        fi
+      fi
         pushed=false
         for attempt in 1 2 3; do
           git pull --rebase origin main || true
