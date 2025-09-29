@@ -86,10 +86,9 @@ export default function App(): React.JSX.Element {
 
   // Performance optimization hook
   const { preloadResource } = usePerformanceOptimization({
-    enablePreloading: true,
-    enableResourceHints: true,
-    enableCriticalCSS: true,
-    enableImageOptimization: true,
+    enableMemoryMonitoring: true,
+    enableRenderTracking: true,
+    enableLazyLoading: true,
   });
 
   // Enhanced keyboard handler for all dashboard toggles
