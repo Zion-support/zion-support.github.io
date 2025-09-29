@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { AppRouter } from './router';
 import { initializeErrorReporting } from './utils/errorReporting';
 import { initOptimizations } from './utils/buildOptimizations';
@@ -26,6 +26,9 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import SystemMetricsDashboard from './components/SystemMetricsDashboard';
+import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
+import { useAppInitialization } from './hooks/useAppInitialization';
 
 // Import enhanced utilities
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
@@ -55,8 +58,19 @@ import './styles/modern-utilities.css';
 
 export default function App(): React.JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+
+  const {
+    isLoading: appLoading,
+    loadingProgress,
+    engagementData,
+    seoData,
+    handleScroll,
+    handleClick,
+    trackEngagement
+  } = useAppInitialization();
 
   // Initialize app
   useEffect(() => {
@@ -114,50 +128,97 @@ export default function App(): React.JSX.Element {
     initializeApp();
   }, []);
 
-  // Show loading screen while initializing
-  if (isLoading) {
-    return <ModernLoadingSpinner progress={100} />;
-  }
+  const handleError = useCallback((error: Error, errorInfo: React.ErrorInfo) => {
+    console.error('App Error:', error, errorInfo);
+    setError(error.message);
+  }, []);
+
+  const appContent = useMemo(() => {
+    if (isLoading || appLoading) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <ModernLoadingSpinner progress={loadingProgress || 100} />
+            <p className="mt-4 text-gray-600">Initializing application...</p>
+          </div>
+        </div>
+      );
+    }
+
+    if (error) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <div className="text-red-500 text-6xl mb-4">⚠️</div>
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">Application Error</h1>
+            <p className="text-gray-600 mb-4">{error}</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Reload Application
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    return <AppRouter />;
+  }, [isLoading, appLoading, error, loadingProgress]);
 
   return (
-    <EnhancedErrorBoundary>
-      <AppRouter />
-      
-      {/* Performance Optimizer Modal */}
-      {showPerformanceOptimizer && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-bold">Performance Optimizer</h2>
-              <button
-                onClick={() => setShowPerformanceOptimizer(false)}
-                className="text-gray-500 hover:text-gray-700 text-2xl"
-              >
-                ✕
-              </button>
+    <EnhancedErrorBoundary onError={handleError}>
+      <div className="App">
+        {appContent}
+        
+        {/* Performance Dashboard */}
+        <PerformanceDashboard />
+        
+        {/* Real-time Monitor */}
+        <RealTimeMonitor />
+        
+        {/* System Metrics Dashboard */}
+        <SystemMetricsDashboard
+          isVisible={false}
+          onClose={() => {}}
+        />
+        
+        {/* Enhanced System Dashboard */}
+        <EnhancedSystemDashboard
+          isVisible={false}
+          onClose={() => {}}
+        />
+        
+        {/* Enhanced Notification System */}
+        <EnhancedNotificationSystem
+          notifications={[]}
+          onRemove={() => {}}
+        />
+        
+        {/* Performance Optimizer */}
+        <PerformanceOptimizer
+          isVisible={showPerformanceOptimizer}
+          onClose={() => setShowPerformanceOptimizer(false)}
+        />
+        
+        {/* Performance Monitor Modal */}
+        {showPerformanceMonitor && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold">Performance Monitor</h2>
+                <button
+                  onClick={() => setShowPerformanceMonitor(false)}
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
+                >
+                  ✕
+                </button>
+              </div>
+              <EnhancedSystemDashboard />
             </div>
-            <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
           </div>
-        </div>
-      )}
-
-      {/* Performance Monitor Modal */}
-      {showPerformanceMonitor && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-bold">Performance Monitor</h2>
-              <button
-                onClick={() => setShowPerformanceMonitor(false)}
-                className="text-gray-500 hover:text-gray-700 text-2xl"
-              >
-                ✕
-              </button>
-            </div>
-            <EnhancedSystemDashboard />
-          </div>
-        </div>
-      )}
+        )}
+      </div>
     </EnhancedErrorBoundary>
   );
 }
