@@ -21,8 +21,7 @@ const EnhancedPerformanceMonitor = () => {
     };
 
     const handleMetric = (metric: any) => {
-      if (!metric || typeof metric.name !== 'string' || typeof metric.value !== 'number') return;
-      performanceMetrics[metric.name as keyof PerformanceMetrics] = metric.value;
+      performanceMetrics[metric.name as keyof PerformanceMetrics] = metric.value as number;
       
       // Check if we have all metrics
       if (Object.keys(performanceMetrics).length === 6) {
@@ -33,7 +32,7 @@ const EnhancedPerformanceMonitor = () => {
           (window as any).gtag('event', 'web_vitals', {
             event_category: 'Performance',
             event_label: 'Core Web Vitals',
-            value: Math.round(metric.value as number),
+            value: Math.round(metric.value),
             non_interaction: true,
           });
         }

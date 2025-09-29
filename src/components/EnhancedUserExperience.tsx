@@ -53,10 +53,10 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
   // Performance tracking
   const _performanceMetrics = usePerformanceTracker((newMetrics: any) => {
       setRealTimeMetrics({
-        fps: Number(newMetrics?.fps || 0),
-        memoryUsage: Number(newMetrics?.memoryUsage || 0),
-        loadTime: Number(newMetrics?.loadTime || 0),
-        errors: Number(newMetrics?.errors || 0),
+        fps: newMetrics.fps as number,
+        memoryUsage: (newMetrics.memoryUsage as number) || 0,
+        loadTime: newMetrics.loadTime as number,
+        errors: newMetrics.errors as number,
       });
     }, {
       interval: 2000,
@@ -82,7 +82,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
     }
   }, [isVisible]);
 
-  const handlePreferenceChange = useCallback((key: keyof UserPreferences, value: UserPreferences[keyof UserPreferences]) => {
+  const handlePreferenceChange = useCallback((key: keyof UserPreferences, value: any) => {
     setUserPreferences(prev => ({
       ...prev,
       [key]: value,
@@ -214,7 +214,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
                 <select
                   value={userPreferences.theme}
                   onChange={(e) =>
-                    handlePreferenceChange("theme", e.target.value as UserPreferences['theme'])
+                    handlePreferenceChange("theme", e.target.value)
                   }
                   className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
@@ -230,7 +230,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
                 <select
                   value={userPreferences.performance}
                   onChange={(e) =>
-                    handlePreferenceChange("performance", e.target.value as UserPreferences['performance'])
+                    handlePreferenceChange("performance", e.target.value)
                   }
                   className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
@@ -249,7 +249,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
                 <select
                   value={userPreferences.fontSize}
                   onChange={(e) =>
-                    handlePreferenceChange("fontSize", e.target.value as UserPreferences['fontSize'])
+                    handlePreferenceChange("fontSize", e.target.value)
                   }
                   className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
@@ -265,7 +265,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
                 <select
                   value={userPreferences.contrast}
                   onChange={(e) =>
-                    handlePreferenceChange("contrast", e.target.value as UserPreferences['contrast'])
+                    handlePreferenceChange("contrast", e.target.value)
                   }
                   className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >

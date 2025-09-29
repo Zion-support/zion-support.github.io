@@ -323,7 +323,7 @@ export const posts: BlogPost[] = [
     category: "AI Strategy",
     publishedAt: "2025-01-21",
     featured: true,
-    readTime: "15 min read",
+    readTime: "11 min read",
   },
   {
     slug: "micro-saas-platform-architecture",

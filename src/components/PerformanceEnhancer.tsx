@@ -89,8 +89,8 @@ export const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     const measureFCP = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if ((entry as PerformanceEntry).name === 'first-contentful-paint') {
-            setMetrics(prev => ({ ...prev, fcp: (entry as PerformanceEntry).startTime }));
+          if (entry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
           }
         }
       });
@@ -100,10 +100,8 @@ export const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     const measureLCP = () => {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1] as PerformanceEntry | undefined;
-        if (lastEntry) {
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-        }
+        const lastEntry = entries[entries.length - 1];
+        setMetrics(prev => ({ ...prev, lcp: (lastEntry as any).startTime as number }));
       });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
     };
@@ -112,9 +110,9 @@ export const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          const anyEntry = entry as any;
-          if (!anyEntry.hadRecentInput && typeof anyEntry.value === 'number') {
-            clsValue += anyEntry.value;
+          const e = entry as any;
+          if (!e.hadRecentInput) {
+            clsValue += (e.value as number);
             setMetrics(prev => ({ ...prev, cls: clsValue }));
           }
         }
@@ -123,12 +121,11 @@ export const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     };
 
     const measureMemory = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory as { usedJSHeapSize: number } | undefined;
-        if (!memory) return;
+      if ('memory' in (performance as any)) {
+        const memory = (performance as any).memory as { usedJSHeapSize: number };
         setMetrics(prev => ({ 
           ...prev, 
-          memory: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0
+          memory: memory.usedJSHeapSize / 1024 / 1024 
         }));
       }
     };
