@@ -82,5 +82,33 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "8 min read"
   }
+  ,
+  {
+    slug: "ai-platform-roadmaps-2026",
+    title: "AI Product Roadmaps 2026: From Bet to Business Impact",
+    description: "Outcome-led roadmaps that connect bets to scorecards, trains, and shipped value.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-06",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "genai-guardrails-blueprints-2026",
+    title: "GenAI Guardrails Blueprints: Policy Tests, Canaries, and SLAs",
+    description: "Composable guardrail patterns that scale across products without slowing teams.",
+    category: "GenAI",
+    publishedAt: "2025-10-06",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "cloud-finops-scorecards-2026",
+    title: "Cloud FinOps Scorecards: Guardrails Engineers Actually Use",
+    description: "PR gates, alerts, and budgets that cut waste 25–40% while keeping velocity high.",
+    category: "Cloud",
+    publishedAt: "2025-10-06",
+    featured: false,
+    readTime: "6 min read"
+  }
 ];
 
