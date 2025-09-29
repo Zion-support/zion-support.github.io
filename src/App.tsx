@@ -20,6 +20,7 @@ import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Import enhanced utilities
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
