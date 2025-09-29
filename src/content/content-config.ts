@@ -503,6 +503,19 @@ export const services: Service[] = [
 // Promotional Banners Configuration
 export const promotionalBanners: PromotionalBanner[] = [
   {
+    id: 'fresh-oct-29-2025-ai-sre',
+    message: '🛠️ New: AI SRE Blueprints 2026 + Privacy‑First A/B Testing',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
     id: 'fresh-oct-15-2025',
     message: '🚀 New: AI Governance Routing Blueprint 2026 + Governance Scorecards Service',
     ctaText: 'Explore',
@@ -525,6 +538,19 @@ export const promotionalBanners: PromotionalBanner[] = [
     showClose: true,
     autoHide: true,
     hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-oct-14-2025',
+    message: '✨ New: AI Safety Budgets 2026 + Edge Personalization 2026',
+    ctaText: 'Explore updates',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
     active: true,
     priority: 0
   },
@@ -763,6 +789,19 @@ export const promotionalBanners: PromotionalBanner[] = [
     priority: 3
   }
   ,
+  {
+    id: 'fresh-oct-16-2025-privacy-bluegreen',
+    message: '🔐 New: Privacy‑First Insights 2026 + Blue‑Green Agent Releases 2026',
+    ctaText: 'Explore',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-cyan-700 to-emerald-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
   {
     id: 'fresh-oct-13-2025-new',
     message: '🚀 New: Secure ML Supply Chain, GenAI Routing, Golden Paths ROI',
