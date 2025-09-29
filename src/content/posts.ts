@@ -20,6 +20,36 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
+    slug: "platform-engineering-blueprint-2025",
+    title: "Platform Engineering Blueprint 2025: From Chaos to Clarity",
+    description:
+      "Core capabilities, golden paths, and product thinking to accelerate delivery across hundreds of teams.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-27",
+    featured: true,
+    readTime: "11 min read",
+  },
+  {
+    slug: "genai-eval-systems",
+    title: "Shipping with Confidence: Evaluation Systems for GenAI Apps",
+    description:
+      "Offline + online evals, policy tests, and guardrails to keep quality high as you scale.",
+    category: "GenAI",
+    publishedAt: "2025-09-26",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
+    slug: "opentelemetry-tracing-primer",
+    title: "OpenTelemetry Tracing That Engineers Actually Use",
+    description:
+      "Sampling strategies, semantic conventions, and dashboards that shrink MTTR for complex stacks.",
+    category: "Observability",
+    publishedAt: "2025-09-26",
+    featured: false,
+    readTime: "8 min read",
+  },
+  {
     slug: "ai-virtual-assistant-best-practices",
     title: "Best Practices for Implementing AI Virtual Assistants in 2025",
     description:
