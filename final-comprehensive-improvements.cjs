@@ -52,11 +52,11 @@ class FinalComprehensiveImprovements {
             let modified = false;
 
             // Fix common syntax errors
-            if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+            if (content.includes('') || content.includes('')) {
               // Remove merge conflict markers
               content = content
-                .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-                .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+                .replace(/ HEAD[\s\S]*? [^\n]+/g, '')
+                .replace(/ [^\n]+[\s\S]*? [^\n]+/g, '');
               modified = true;
             }
 

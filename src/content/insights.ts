@@ -5,6 +5,7 @@ export type InsightArticle = {
   category: string;
   date: string; // ISO date string
   readMinutes: number;
+  description?: string;
 };
 
 export const latestInsights: InsightArticle[] = [
@@ -225,7 +226,8 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
     category: "Product Analytics",
-    description: "A look at on‑device models, streaming pipelines, and cost/perf trade‑offs from deployments.",
+    // Extended summary context
+    // A look at on‑device models, streaming pipelines, and cost/perf trade‑offs from deployments.
     date: "2025-09-29",
     readMinutes: 7,
   },

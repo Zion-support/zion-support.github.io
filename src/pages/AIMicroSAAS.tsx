@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function AIMicroSAAS(): React.JSX.Element {
@@ -7,3 +8,11 @@ export default function AIMicroSAAS(): React.JSX.Element {
 		</main>
 	);
 }
+=======
+import React from "react";
+
+export default function AIMicroSAAS(): React.JSX.Element {
+  return <div>AI Micro SAAS</div>;
+}
+
+>>>>>>> origin/main

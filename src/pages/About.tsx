@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function About(): React.JSX.Element {
@@ -8,3 +9,11 @@ export default function About(): React.JSX.Element {
 		</main>
 	);
 }
+=======
+import React from "react";
+
+export default function About(): React.JSX.Element {
+  return <div>About</div>;
+}
+
+>>>>>>> origin/main

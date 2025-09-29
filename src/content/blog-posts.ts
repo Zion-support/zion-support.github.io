@@ -3,12 +3,12 @@ export interface BlogPost {
   title: string;
   description: string;
   content: string;
-  author: string;
+  author?: string;
   date: string;
   category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
+  tags?: string[];
+  featured?: boolean;
+  readTime?: string;
   image?: string;
 }
 
@@ -72,8 +72,10 @@ Understanding what to measure in GenAI systems is crucial for maintaining qualit
 - Visualization
 - Alerting setup
     `,
+    author: "Zion Tech Group Team",
     category: "GenAI",
     date: "2025-09-30",
+    tags: ["Telemetry", "Monitoring", "Metrics"],
     featured: true,
     readTime: "6 min read",
     image: "/images/genai-telemetry.jpg"

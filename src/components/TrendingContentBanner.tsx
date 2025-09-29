@@ -18,13 +18,13 @@ const TrendingContentBanner: React.FC = () => {
 
   const trendingItems = [
     {
-      title: "AI Platform ROI Scorecards",
-      description: "Outcome metrics that drive investment decisions",
-      views: "9.1K",
-      readTime: "7 min",
-      category: "AI Strategy",
+      title: "Policy Tests in CI",
+      description: "Lightweight guardrails in PRs that engineers adopt",
+      views: "11.2K",
+      readTime: "6 min",
+      category: "Engineering",
       icon: TrendingUp,
-      link: "/blog/ai-platform-roi-scorecards-2025",
+      link: "/blog/policy-tests-in-ci-2025",
       badge: "NEW"
     },
     {
@@ -48,14 +48,14 @@ const TrendingContentBanner: React.FC = () => {
       badge: "HOT"
     },
     {
-      title: "Serverless Inference Cost Playbook",
-      description: "40–70% savings without P95 pain",
-      views: "12.1K",
+      title: "Risk Budgets for Edge Rollouts",
+      description: "Zero‑regret deploys with budgets and instant rollback",
+      views: "8.7K",
       readTime: "7 min",
-      category: "GenAI",
+      category: "Architecture",
       icon: Zap,
-      link: "/blog/serverless-inference-cost-playbook-2025",
-      badge: "POPULAR"
+      link: "/blog/risk-budgets-edge-rollouts-2025",
+      badge: "TRENDING"
     }
   ];
 

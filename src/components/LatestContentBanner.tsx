@@ -158,6 +158,16 @@ contentHighlights.push(
     variant: "success" as const
   },
   {
+    id: 15,
+    title: "✅ LLM Policy Tests in CI",
+    description: "Policy tests on every PR keep you fast and safe.",
+    ctaText: "Read How",
+    ctaLink: "/blog/llm-policy-testing-2025",
+    badge: "New",
+    stats: "6 min read",
+    variant: "warning" as const
+  },
+  {
     id: 11,
     title: "💸 Cloud FinOps Guardrails Engineers Actually Use",
     description: "Budgets, alerts, and PR gates that reduce waste 25–40%",
@@ -166,6 +176,26 @@ contentHighlights.push(
     badge: "Hot",
     stats: "6 min read",
     variant: "info" as const
+  },
+  {
+    id: 15,
+    title: "✅ LLM Policy Tests in CI (New Article)",
+    description: "Automate governance—policy tests on every PR keep you fast and safe.",
+    ctaText: "Read How",
+    ctaLink: "/blog/llm-policy-testing-2025",
+    badge: "New",
+    stats: "6 min read",
+    variant: "warning" as const
+  },
+  {
+    id: 16,
+    title: "🧰 GenAI Evals CI Service",
+    description: "Quality gates, canaries, and dashboards to ship LLM features weekly.",
+    ctaText: "Enable Now",
+    ctaLink: "/services/AIAutonomousOperations",
+    badge: "New Service",
+    stats: "$199/mo",
+    variant: "success" as const
   },
   {
     id: 12,
