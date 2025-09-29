@@ -21,14 +21,14 @@ import {
   Award,
   DollarSign,
   Calendar,
-  Calculator,
   Play,
   Download,
   FileText,
   Lightbulb,
   Settings,
   Monitor,
-  Smartphone
+  Smartphone,
+  Calculator
 } from "lucide-react";
 
 const EnterpriseAISolutions = () => {

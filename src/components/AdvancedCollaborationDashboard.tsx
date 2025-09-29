@@ -1,14 +1,40 @@
-/* global HTMLDivElement:false */
-import React, { useEffect, useRef, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { FileText, Mic, MicOff, Play, Plus, Share, Square, Users, Video, VideoOff, X } from 'lucide-react';
-import {
-  advancedCollaborationSystem,
-  ChatMessage,
-  CollaborationSession,
+/* global HTMLDivElement */
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  X, 
+  Users, 
+  Video, 
+  Mic, 
+  MicOff, 
+  VideoOff, 
+  Share, 
+  MessageSquare, 
+  FileText, 
+  Palette, 
+  BarChart3, 
+  Settings,
+  Play,
+  Pause,
+  Square,
+  Download,
+  Upload,
+  Plus,
+  MoreHorizontal,
+  UserPlus,
+  UserMinus,
+  Lock,
+  Unlock,
+  Eye,
+  EyeOff
+} from 'lucide-react';
+import { 
+  advancedCollaborationSystem, 
+  CollaborationSession, 
+  User, 
+  ChatMessage, 
   Poll,
   SharedFile,
-  User,
   WhiteboardElement
 } from '../utils/advancedCollaborationSystem';
 
@@ -39,8 +65,7 @@ const AdvancedCollaborationDashboard: React.FC<AdvancedCollaborationDashboardPro
   const [showCreateSession, setShowCreateSession] = useState(false);
   const [sessionName, setSessionName] = useState('');
   const [sessionType, setSessionType] = useState<CollaborationSession['type']>('meeting');
-  // eslint-disable-next-line no-undef
-  const chatEndRef = useRef<HTMLDivElement>(null);
+  const chatEndRef = useRef<globalThis.HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (isVisible) {
@@ -51,15 +76,15 @@ const AdvancedCollaborationDashboard: React.FC<AdvancedCollaborationDashboardPro
       setSessions(advancedCollaborationSystem.getAllSessions());
       
       // Set up event listeners
-      advancedCollaborationSystem.on('sessionCreated', handleSessionCreated as unknown as (...args: unknown[]) => void);
-      advancedCollaborationSystem.on('sessionStarted', handleSessionStarted as unknown as (...args: unknown[]) => void);
-      advancedCollaborationSystem.on('sessionEnded', handleSessionEnded as unknown as (...args: unknown[]) => void);
-      advancedCollaborationSystem.on('userJoined', handleUserJoined as unknown as (...args: unknown[]) => void);
-      advancedCollaborationSystem.on('userLeft', handleUserLeft as unknown as (...args: unknown[]) => void);
-      advancedCollaborationSystem.on('chatMessage', handleChatMessage as unknown as (...args: unknown[]) => void);
-      advancedCollaborationSystem.on('pollCreated', handlePollCreated as unknown as (...args: unknown[]) => void);
-      advancedCollaborationSystem.on('fileShared', handleFileShared as unknown as (...args: unknown[]) => void);
-      advancedCollaborationSystem.on('whiteboardElementAdded', handleWhiteboardElementAdded as unknown as (...args: unknown[]) => void);
+      advancedCollaborationSystem.on('sessionCreated', (session: unknown) => handleSessionCreated(session as CollaborationSession));
+      advancedCollaborationSystem.on('sessionStarted', (session: unknown) => handleSessionStarted(session as CollaborationSession));
+      advancedCollaborationSystem.on('sessionEnded', (session: unknown) => handleSessionEnded(session as CollaborationSession));
+      advancedCollaborationSystem.on('userJoined', (payload: unknown) => handleUserJoined(payload as { session: CollaborationSession; user: User }));
+      advancedCollaborationSystem.on('userLeft', (payload: unknown) => handleUserLeft(payload as { session: CollaborationSession; userId: string }));
+      advancedCollaborationSystem.on('chatMessage', (message: unknown) => handleChatMessage(message as ChatMessage));
+      advancedCollaborationSystem.on('pollCreated', (poll: unknown) => handlePollCreated(poll as Poll));
+      advancedCollaborationSystem.on('fileShared', (file: unknown) => handleFileShared(file as SharedFile));
+      advancedCollaborationSystem.on('whiteboardElementAdded', (element: unknown) => handleWhiteboardElementAdded(element as WhiteboardElement));
     }
   }, [isVisible]);
 

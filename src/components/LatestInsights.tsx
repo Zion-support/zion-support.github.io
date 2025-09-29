@@ -15,6 +15,7 @@ const LatestInsights: React.FC = () => {
     const daysSince = (Date.now() - new Date(isoDate).getTime()) / (1000 * 60 * 60 * 24);
     return daysSince <= 7;
   };
+
   return (
     <section className="py-20 bg-white/5">
       <div className="container mx-auto px-6">

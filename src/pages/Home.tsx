@@ -1,6 +1,7 @@
 import {
   ArrowRight,
   Award,
+  Brain,
   CheckCircle,
   Globe,
   Rocket,
@@ -20,10 +21,10 @@ import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
+import ROICalculator from "../components/ROICalculator";
 import Header from "../components/Header";
 import LatestContentBanner from "../components/LatestContentBanner";
 import ModernFeatures from "../components/ModernFeatures";
-import ROICalculator from "../components/ROICalculator";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
 
@@ -103,15 +104,7 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
-        
-        {/* Latest Content Banner */}
-        <LatestContentBanner 
-          variant="info"
-          autoRotate={true}
-          rotationInterval={6000}
-        />
-        
-        {/* Content Promotion Banner */}
+        <LatestContentBanner variant="info" autoRotate={true} rotationInterval={6000} />
         <ContentPromotionBanner
           variant="info"
           title="🚀 Fresh: AI Platform Engineering 2025 + Edge AI Latency Budgets"
@@ -174,14 +167,43 @@ const Home = () => {
             <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-xl p-6 mb-8 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
-                <span className="text-lg font-bold text-green-400">LIMITED TIME OFFER</span>
+                <span className="text-lg font-bold text-green-400">🔥 NEW: AI AUTONOMOUS OPERATIONS</span>
                 <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
               </div>
               <p className="text-white text-lg font-semibold mb-2">
-                🎯 Get 50% OFF Your First 3 Months + FREE AI Strategy Consultation
+                🚀 Revolutionary AI that manages your entire infrastructure autonomously - Self-healing, self-optimizing, self-scaling!
+              </p>
+              <p className="text-zion-slate-light text-sm mb-4">
+                Get 50% OFF Your First 3 Months + FREE AI Strategy Consultation • Valid until March 31, 2025
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  to="/services/ai-autonomous-operations"
+                  className="bg-green-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-600 transition-colors text-center"
+                >
+                  Explore AI Autonomous Operations
+                </Link>
+                <Link
+                  to="/contact"
+                  className="border border-green-400 text-green-400 px-6 py-2 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-colors text-center"
+                >
+                  Start Free Trial
+                </Link>
+              </div>
+            </div>
+
+            {/* ROI Success Banner */}
+            <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-400/30 rounded-xl p-6 mb-8 animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <TrendingUp className="w-6 h-6 text-emerald-400 animate-bounce" />
+                <span className="text-lg font-bold text-emerald-400">PROVEN RESULTS</span>
+                <TrendingUp className="w-6 h-6 text-emerald-400 animate-bounce" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                💰 Our Clients Save $2.3M+ Annually with AI Automation
               </p>
               <p className="text-zion-slate-light text-sm">
-                Valid until March 31, 2025 • No setup fees • Cancel anytime
+                500+ companies achieving 200-500% ROI • Average payback in 90 days • 99.9% uptime guarantee
               </p>
             </div>
 
@@ -242,29 +264,43 @@ const Home = () => {
           className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
         />
 
-        {/* Content Showcase */}
-        <ContentShowcase 
-          title="Featured Content & Resources"
-          subtitle="Discover our latest tools, guides, and insights to accelerate your AI journey"
-          maxItems={6}
-        />
-
         {/* New Services Showcase */}
         <section className="container mx-auto px-6 py-20 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-400 text-sm font-medium mb-6 animate-pulse">
-              🔥 HOT NEW SERVICES - 2025
-            </div>
             <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up">
-              Revolutionary AI-Powered Solutions
+              Calculate Your AI Automation ROI
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Transform your business with our cutting-edge AI micro SAAS platform. 
-              From workflow automation to predictive analytics - we've got you covered.
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              See exactly how much you could save with AI workflow automation. 
+              Most companies see ROI within 3 months.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Featured: AI Autonomous Operations */}
+            <div className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl border-2 border-red-500/30 bg-red-500/10 relative">
+              <div className="absolute -top-3 -right-3 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
+                NEW!
+              </div>
+              <div className="bg-red-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-red-500/30 transition-colors border border-red-500/30 shadow-lg">
+                <Brain className="w-8 h-8 text-red-400 group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">
+                AI Autonomous Operations
+              </h3>
+              <p className="text-zion-slate-light mb-4">
+                Revolutionary AI that manages your entire infrastructure autonomously. 
+                Self-healing, self-optimizing, self-scaling.
+              </p>
+              <div className="bg-red-500/20 rounded-lg p-3 mb-4">
+                <div className="text-red-400 font-bold text-lg">🎯 99.9% uptime guaranteed</div>
+                <div className="text-red-300 text-sm">75% cost reduction</div>
+              </div>
+              <Link to="/services/ai-autonomous-operations" className="btn-primary w-full text-center">
+                Explore Now
+              </Link>
+            </div>
+
             <div className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl border-2 border-green-500/30 bg-green-500/10">
               <div className="bg-green-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green-500/30 transition-colors border border-green-500/30 shadow-lg">
                 <Zap className="w-8 h-8 text-green-400 group-hover:scale-110 transition-transform duration-300" />
@@ -325,8 +361,6 @@ const Home = () => {
               </Link>
             </div>
           </div>
-          
-          <ROICalculator className="max-w-6xl mx-auto" />
         </section>
 
         {/* Features Section */}
@@ -575,68 +609,13 @@ const Home = () => {
           showContentPreview={true}
         />
 
-        {/* Content Promotion Section */}
-        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 relative overflow-hidden">
-          <div className="absolute inset-0 bg-black opacity-10"></div>
-          <div className="container mx-auto px-6 text-center relative z-10">
-            <div className="max-w-4xl mx-auto">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6">
-                <Sparkles className="w-4 h-4 mr-2 animate-pulse" />
-                Fresh Content Daily
-              </div>
-              <h2 className="text-4xl font-bold text-white mb-6">
-                New Content Added Every Week
-              </h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Join thousands of professionals who trust our content to stay ahead in AI and technology. 
-                Get instant access to our latest tools, guides, and insights.
-              </p>
-              
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                  <div className="text-3xl mb-3">🛠️</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Interactive Tools</h3>
-                  <p className="text-white/80 text-sm">ROI calculators, assessment tools, and practical resources</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                  <div className="text-3xl mb-3">📚</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Expert Guides</h3>
-                  <p className="text-white/80 text-sm">Step-by-step implementation guides and best practices</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                  <div className="text-3xl mb-3">📊</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Case Studies</h3>
-                  <p className="text-white/80 text-sm">Real-world success stories and lessons learned</p>
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/blog"
-                  className="bg-white text-indigo-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 group"
-                >
-                  <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-                  Explore All Content
-                </Link>
-                <Link
-                  to="/insights"
-                  className="border-2 border-white text-white hover:bg-white hover:text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2"
-                >
-                  <TrendingUp className="w-5 h-5" />
-                  Latest Insights
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Latest Articles */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
-            <div className="mb-10 flex items-end justify-between">
+            <div className="mb-10 flex items-end justify_between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
-                <p className="text-gray-600">Insights from our team to help you move faster.</p>
+                <p className="text-gray-600">Fresh: AI Governance, Golden Paths, Cloud FinOps QA gates, and NEW AI automation guides.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
@@ -679,7 +658,7 @@ const Home = () => {
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-4">
-                  <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <div className="bg_green-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
                     <TrendingUp className="w-6 h-6 text-green-600" />
                   </div>
                   <div>
@@ -693,7 +672,7 @@ const Home = () => {
               
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <div className="bg-blue-100 w-12 h-12 rounded-lg flex items_center justify-center mr-4">
                     <Users className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
@@ -712,7 +691,7 @@ const Home = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Precision Manufacturing</h3>
-                    <p className="text-sm text-gray-600">Manufacturing</p>
+                    <p className="text-sm text_gray-600">Manufacturing</p>
                   </div>
                 </div>
                 <p className="text-gray-600 mb-4">Reduced production waste by 70% with AI data analytics and predictive maintenance.</p>
@@ -723,7 +702,7 @@ const Home = () => {
             <div className="text-center">
               <Link
                 to="/case-studies"
-                className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+                className="bg-gradient_to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
                 <Award className="w-5 h-5" />
                 View All Success Stories
@@ -739,7 +718,7 @@ const Home = () => {
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
                   <p className="text-white/90">
-                    Fresh articles on real-time data pipelines, north-star metrics, and safe, scalable GenAI ops.
+                    Fresh: Secure SBOMs, GenAI evaluation playbook, and Kubernetes cost guardrails.
                   </p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">

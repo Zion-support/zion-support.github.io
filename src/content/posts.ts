@@ -10,64 +10,64 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-security-posture-2025",
+    title: "AI Security Posture 2025: Hardening LLM Apps End-to-End",
+    description:
+      "Threat models, policy tests, and isolation patterns to keep GenAI features safe in production.",
+    category: "Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "llm-evals-blueprint-2025",
+    title: "LLM Evals Blueprint: Offline Suites to Online Guardrails",
+    description:
+      "A practical blueprint to design evals that predict real-world quality and prevent regressions.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "ai-product-launch-checklist-2025",
+    title: "AI Product Launch Checklist: From Pilot to Production",
+    description:
+      "From offline suites to online canaries: patterns that keep quality high as usage grows.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "feature-flags-edge-2025",
+    title: "Feature Flags at the Edge: <100ms Global Releases",
+    description:
+      "Chunking, indexing, and retrieval strategies that actually improve answer quality at lower cost.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:
       "Latency budgets, on‑device models, and caching strategies for lightning‑fast AI UX at the edge.",
     category: "Architecture",
-    publishedAt: "2025-09-29",
+    publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read",
   },
   {
-    slug: "ai-governance-checklist-2025",
-    title: "AI Governance Checklist 2025: Ship Fast Without Breaking Policy",
+    slug: "north-star-metrics-anti-patterns",
+    title: "North‑Star Metrics: 7 Anti‑Patterns to Avoid",
     description:
-      "Practical guardrails, review rituals, and approval flows to keep GenAI initiatives compliant and on‑track.",
-    category: "AI Governance",
-    publishedAt: "2025-09-29",
+      "Common traps that derail metric-driven product development and how to fix them.",
+    category: "Product Analytics",
+    publishedAt: "2025-09-30",
     featured: true,
-    readTime: "5 min read",
-  },
-  {
-    slug: "realtime-feature-flags-edge",
-    title: "Real‑Time Feature Flags at the Edge",
-    description:
-      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
-    category: "Architecture",
-    publishedAt: "2025-09-28",
-    featured: false,
     readTime: "6 min read",
-  },
-  {
-    slug: "prompt-engineering-playbook-v2",
-    title: "Prompt Engineering Playbook v2: Patterns That Survive Production",
-    description:
-      "Composable prompts, eval‑driven iteration, and telemetry for robust GenAI applications.",
-    category: "GenAI",
-    publishedAt: "2025-09-27",
-    featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "edge-inference-patterns-2025",
-    title: "Edge Inference Patterns for Sub‑100ms Experiences",
-    description:
-      "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
-    category: "Platform Engineering",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "9 min read",
-  },
-  {
-    slug: "genai-guardrails-in-the-wild",
-    title: "GenAI Guardrails in the Wild: Evals, Policies, and Drift Control",
-    description:
-      "A field guide to combining offline suites with online policy tests to keep quality high.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "7 min read",
   },
   {
     slug: "mlops-reliability-2025",
@@ -90,6 +90,46 @@ export const posts: BlogPost[] = [
     readTime: "7 min read",
   },
   {
+    slug: "ai-product-launch-checklist-2025",
+    title: "AI Product Launch Checklist: From Pilot to Production",
+    description:
+      "A pragmatic checklist for hardening pilots, proving ROI, and launching AI features safely.",
+    category: "Product",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "edge-inference-patterns-2025",
+    title: "Edge Inference Patterns for Sub‑100ms Experiences",
+    description:
+      "Latency budgets, on‑device models, and caching strategies for lightning‑fast AI UX at the edge.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "ai-governance-checklist-2025",
+    title: "AI Governance Checklist 2025: Ship Fast Without Breaking Policy",
+    description:
+      "Practical guardrails, review rituals, and approval flows to keep GenAI initiatives compliant and on‑track.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "5 min read",
+  },
+  {
+    slug: "prompt-engineering-playbook-v2",
+    title: "Prompt Engineering Playbook v2: Patterns That Survive Production",
+    description:
+      "Composable prompts, eval‑driven iteration, and telemetry for robust GenAI applications.",
+    category: "GenAI",
+    publishedAt: "2025-09-27",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
     slug: "north-star-metrics-framework",
     title: "North‑Star Metrics: A Field‑Tested Framework",
     description:
@@ -98,36 +138,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-27",
     featured: false,
     readTime: "6 min read",
-  },
-  {
-    slug: "platform-scorecards-that-stick",
-    title: "Platform Scorecards That Actually Drive Adoption",
-    description:
-      "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
-    category: "Platform Engineering",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "9 min read",
-  },
-  {
-    slug: "genai-guardrails-in-the-wild",
-    title: "GenAI Guardrails in the Wild: Evals, Policies, and Drift Control",
-    description:
-      "A field guide to combining offline suites with online policy tests to keep quality high.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "7 min read",
-  },
-  {
-    slug: "real-time-data-pipelines-2025",
-    title: "Building Reliable Real‑Time Data Pipelines in 2025",
-    description:
-      "Blueprints for exactly-once semantics, backpressure, and observability from dev to prod.",
-    category: "Data Engineering",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "9 min read",
   },
   {
     slug: "ai-workflow-automation-2025-guide",
@@ -140,16 +150,6 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
-    slug: "genai-eval-systems",
-    title: "Shipping with Confidence: Evaluation Systems for GenAI Apps",
-    description:
-      "Offline + online evals, policy tests, and guardrails to keep quality high as you scale.",
-    category: "GenAI",
-    publishedAt: "2025-09-26",
-    featured: false,
-    readTime: "7 min read",
-  },
-  {
     slug: "platform-engineering-blueprint-2025",
     title: "Platform Engineering Blueprint 2025: From Chaos to Clarity",
     description:
@@ -158,6 +158,16 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-27",
     featured: true,
     readTime: "11 min read",
+  },
+  {
+    slug: "genai-eval-systems",
+    title: "Shipping with Confidence: Evaluation Systems for GenAI Apps",
+    description:
+      "Offline + online evals, policy tests, and guardrails to keep quality high as you scale.",
+    category: "GenAI",
+    publishedAt: "2025-09-26",
+    featured: false,
+    readTime: "7 min read",
   },
   {
     slug: "opentelemetry-tracing-primer",
@@ -207,8 +217,8 @@ export const posts: BlogPost[] = [
       "Capabilities, golden paths, and scorecards to accelerate delivery without sacrificing autonomy.",
     category: "Platform Engineering",
     publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "8 min read",
+    featured: false,
+    readTime: "7 min read",
   },
   {
     slug: "genai-evals-realworld",
@@ -217,7 +227,7 @@ export const posts: BlogPost[] = [
       "Patterns for evaluation harnesses, drift detection, and policy testing that scale with usage.",
     category: "GenAI",
     publishedAt: "2025-09-29",
-    featured: true,
+    featured: false,
     readTime: "6 min read",
   },
   {
@@ -228,7 +238,7 @@ export const posts: BlogPost[] = [
     category: "AI Strategy",
     publishedAt: "2025-09-15",
     featured: false,
-    readTime: "7 min read",
+    readTime: "5 min read",
   },
   {
     slug: "cloud-finops-tactics",
@@ -238,7 +248,7 @@ export const posts: BlogPost[] = [
     category: "Cloud FinOps",
     publishedAt: "2025-09-22",
     featured: false,
-    readTime: "5 min read",
+    readTime: "6 min read",
   },
   {
     slug: "zero-trust-for-saas",
@@ -288,7 +298,7 @@ export const posts: BlogPost[] = [
     category: "Data Science",
     publishedAt: "2025-01-12",
     featured: false,
-    readTime: "7 min read",
+    readTime: "8 min read",
   },
   {
     slug: "devops-automation-guide",
@@ -298,7 +308,7 @@ export const posts: BlogPost[] = [
     category: "DevOps",
     publishedAt: "2025-01-10",
     featured: false,
-    readTime: "8 min read",
+    readTime: "9 min read",
   },
   {
     slug: "microservices-architecture",
@@ -308,7 +318,7 @@ export const posts: BlogPost[] = [
     category: "Software Architecture",
     publishedAt: "2025-01-08",
     featured: false,
-    readTime: "8 min read",
+    readTime: "9 min read",
   },
   {
     slug: "ai-ethics-compliance",
@@ -320,158 +330,128 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "8 min read",
   },
-  // NEW CONTENT - 2025 Latest Articles
+  // New content additions merged
   {
-    slug: "ai-workflow-automation-roi-calculator",
-    title: "AI Workflow Automation ROI Calculator: Measure Your Savings",
+    slug: "ai-automation-roi-playbook-2025",
+    title: "AI Automation ROI Playbook 2025",
     description:
-      "Interactive guide to calculating the ROI of AI workflow automation. Includes templates, case studies, and a free ROI calculator tool.",
-    category: "AI & Automation",
-    publishedAt: "2025-01-22",
+      "Benchmarks, calculators, and rollout plans to prove value in 90 days.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read",
   },
   {
-    slug: "micro-saas-platform-comparison-2025",
-    title: "Micro SAAS Platform Comparison 2025: The Ultimate Guide",
+    slug: "cloud-cost-guardrails-scorecards",
+    title: "Cloud Cost Guardrails: Practical Scorecards That Stick",
     description:
-      "Comprehensive comparison of top micro SAAS platforms. Features, pricing, and recommendations for different business sizes and needs.",
-    category: "Technology",
-    publishedAt: "2025-01-21",
-    featured: true,
-    readTime: "12 min read",
-  },
-  {
-    slug: "ai-virtual-assistant-implementation-checklist",
-    title: "AI Virtual Assistant Implementation Checklist: 25 Critical Steps",
-    description:
-      "Step-by-step checklist for successfully implementing AI virtual assistants. From planning to deployment and optimization.",
-    category: "AI & Automation",
-    publishedAt: "2025-01-20",
-    featured: false,
-    readTime: "8 min read",
-  },
-  {
-    slug: "data-analytics-automation-success-stories",
-    title: "Data Analytics Automation: 10 Success Stories That Will Inspire You",
-    description:
-      "Real-world case studies showing how companies achieved 300% faster insights and 80% cost reduction with AI-powered data analytics.",
-    category: "Data Analytics",
-    publishedAt: "2025-01-19",
-    featured: true,
-    readTime: "15 min read",
-  },
-  {
-    slug: "cybersecurity-ai-threat-detection-2025",
-    title: "AI-Powered Threat Detection: The Future of Cybersecurity",
-    description:
-      "How AI is revolutionizing cybersecurity with advanced threat detection, automated response, and predictive security analytics.",
-    category: "Cybersecurity",
-    publishedAt: "2025-01-18",
-    featured: false,
-    readTime: "10 min read",
-  },
-  {
-    slug: "cloud-edge-computing-hybrid-strategy",
-    title: "Hybrid Cloud-Edge Computing Strategy: Maximizing Performance and Cost Efficiency",
-    description:
-      "Strategic approach to implementing hybrid cloud-edge architectures that optimize performance, reduce latency, and minimize costs.",
-    category: "Cloud Strategy",
-    publishedAt: "2025-01-17",
-    featured: true,
-    readTime: "11 min read",
-  },
-  {
-    slug: "ai-governance-framework-enterprise",
-    title: "Enterprise AI Governance Framework: A Practical Implementation Guide",
-    description:
-      "Comprehensive framework for implementing AI governance in large enterprises. Includes policies, procedures, and compliance strategies.",
-    category: "AI Governance",
-    publishedAt: "2025-01-16",
-    featured: false,
-    readTime: "9 min read",
-  },
-  {
-    slug: "quantum-computing-business-applications-2025",
-    title: "Quantum Computing Business Applications: What's Possible in 2025",
-    description:
-      "Explore real business applications of quantum computing, from optimization problems to cryptography and drug discovery.",
-    category: "Quantum Computing",
-    publishedAt: "2025-01-15",
-    featured: true,
-    readTime: "13 min read",
-  },
-  {
-    slug: "iot-security-best-practices-2025",
-    title: "IoT Security Best Practices 2025: Protecting Your Connected Devices",
-    description:
-      "Essential security strategies for IoT deployments. Learn how to protect connected devices from emerging threats and vulnerabilities.",
-    category: "IoT Security",
-    publishedAt: "2025-01-14",
+      "Requests/limits, SLOs, and CI gates that cut spend 30% without drama.",
+    category: "Cloud FinOps",
+    publishedAt: "2025-09-30",
     featured: false,
     readTime: "7 min read",
   },
   {
-    slug: "digital-transformation-ai-roadmap",
-    title: "Digital Transformation with AI: A 90-Day Roadmap for Success",
+    slug: "ai-governance-playbook-2025",
+    title: "The 2025 AI Governance Playbook for Product Teams",
     description:
-      "Practical roadmap for digital transformation using AI technologies. Includes timeline, milestones, and success metrics.",
-    category: "Digital Transformation",
-    publishedAt: "2025-01-13",
+      "Policy tests, eval systems, and auditability patterns that scale with velocity.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
     featured: true,
-    readTime: "14 min read",
+    readTime: "7 min read",
   },
   {
-    slug: "ai-chatbot-customer-satisfaction-case-study",
-    title: "How AI Chatbots Increased Customer Satisfaction by 45%: A Detailed Case Study",
+    slug: "edge-ai-design-guide",
+    title: "Designing Edge AI Systems: A Field Guide",
     description:
-      "Deep dive into how a Fortune 500 company implemented AI chatbots and achieved remarkable improvements in customer satisfaction and operational efficiency.",
-    category: "Case Studies",
-    publishedAt: "2025-01-12",
+      "Low-latency inference with quantization, caching, and graceful degradation.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-28",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "quantum-computing-business-impact-2025",
+    title: "Quantum Computing's Business Impact: What Every CEO Needs to Know",
+    description:
+      "Explore how quantum computing is revolutionizing cryptography, optimization, and AI. Learn about business applications and strategic implications.",
+    category: "Quantum Computing",
+    publishedAt: "2025-01-22",
     featured: true,
     readTime: "12 min read",
   },
   {
-    slug: "machine-learning-model-deployment-guide",
-    title: "Machine Learning Model Deployment: From Development to Production",
+    slug: "edge-ai-implementation-guide",
+    title: "Edge AI Implementation: Bringing Intelligence to the Edge",
     description:
-      "Complete guide to deploying ML models in production environments. Covers MLOps, monitoring, and best practices for scalability.",
-    category: "Machine Learning",
-    publishedAt: "2025-01-11",
-    featured: false,
-    readTime: "16 min read",
-  },
-  {
-    slug: "blockchain-supply-chain-transparency",
-    title: "Blockchain for Supply Chain Transparency: Real-World Implementation",
-    description:
-      "How blockchain technology is being used to create transparent, traceable supply chains across various industries.",
-    category: "Blockchain",
-    publishedAt: "2025-01-10",
-    featured: false,
+      "Complete guide to implementing edge AI solutions for real-time processing, reduced latency, and improved privacy in enterprise applications.",
+    category: "Edge AI",
+    publishedAt: "2025-01-21",
+    featured: true,
     readTime: "10 min read",
   },
   {
-    slug: "5g-business-transformation-opportunities",
-    title: "5G Business Transformation: Opportunities and Implementation Strategies",
+    slug: "zero-trust-security-implementation",
+    title: "Zero Trust Security: A Practical Implementation Guide",
     description:
-      "Explore how 5G technology is enabling new business models and transforming industries with ultra-low latency and high-speed connectivity.",
-    category: "5G Technology",
-    publishedAt: "2025-01-09",
+      "Step-by-step guide to implementing zero trust security architecture. Learn about micro-segmentation, identity verification, and continuous monitoring.",
+    category: "Cybersecurity",
+    publishedAt: "2025-01-20",
     featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "ai-powered-customer-experience",
+    title: "Transforming Customer Experience with AI: Real-World Case Studies",
+    description:
+      "Discover how leading companies are using AI to enhance customer experience, reduce response times, and increase satisfaction scores.",
+    category: "Customer Experience",
+    publishedAt: "2025-01-19",
+    featured: false,
+    readTime: "8 min read",
+  },
+  {
+    slug: "blockchain-business-applications",
+    title: "Blockchain Beyond Crypto: Business Applications in 2025",
+    description:
+      "Explore practical blockchain applications in supply chain, healthcare, finance, and digital identity management for enterprise solutions.",
+    category: "Blockchain",
+    publishedAt: "2025-01-18",
+    featured: false,
     readTime: "11 min read",
   },
   {
-    slug: "ai-powered-personalization-ecommerce",
-    title: "AI-Powered Personalization in E-commerce: Boosting Sales by 35%",
+    slug: "machine-learning-production-guide",
+    title: "From Model to Production: ML Deployment Best Practices",
     description:
-      "Case studies and strategies for implementing AI-powered personalization in e-commerce platforms to increase customer engagement and sales.",
-    category: "E-commerce",
-    publishedAt: "2025-01-08",
+      "Comprehensive guide to deploying machine learning models in production environments with monitoring, versioning, and scaling strategies.",
+    category: "Machine Learning",
+    publishedAt: "2025-01-17",
+    featured: true,
+    readTime: "13 min read",
+  },
+  {
+    slug: "iot-security-challenges-solutions",
+    title: "IoT Security Challenges and Solutions for Enterprise",
+    description:
+      "Address the growing security challenges in IoT deployments and learn about best practices for securing connected devices and networks.",
+    category: "IoT Security",
+    publishedAt: "2025-01-16",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
+    slug: "automated-testing-ai-qa",
+    title: "Revolutionizing QA with AI-Powered Automated Testing",
+    description:
+      "How AI is transforming software testing through intelligent test generation, automated bug detection, and predictive quality assurance.",
+    category: "Quality Assurance",
+    publishedAt: "2025-01-15",
     featured: false,
     readTime: "9 min read",
   },
-  // APPENDED NEW POSTS
+  // Appended new posts in this branch
   {
     slug: "edge-ai-latency-budgets",
     title: "Edge AI Latency Budgets: Designing for P95 < 150ms",
@@ -498,6 +478,17 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: false,
     readTime: "5 min read",
+  },
+  // Main branch additional post retained
+  {
+    slug: "digital-transformation-ai-strategy",
+    title: "AI-Driven Digital Transformation: A Strategic Framework",
+    description:
+      "Strategic framework for leveraging AI in digital transformation initiatives, including change management and ROI measurement.",
+    category: "Digital Transformation",
+    publishedAt: "2025-01-14",
+    featured: true,
+    readTime: "10 min read",
   }
 ];
 
