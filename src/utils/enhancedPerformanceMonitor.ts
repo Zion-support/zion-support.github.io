@@ -175,7 +175,6 @@ class EnhancedPerformanceMonitor {
     }
   }
 
-<<<<<<< HEAD
   private monitorUserInteractions(): void {
     // Monitor click events
     document.addEventListener('click', (event) => {
@@ -189,7 +188,9 @@ class EnhancedPerformanceMonitor {
       scrollTimeout = window.setTimeout(() => {
         this.trackUserInteraction('scroll', null);
       }, 100);
-=======
+    });
+  }
+
   private trackError(error: Error | unknown): void {
     this.createAlert({
       type: 'warning',
@@ -197,7 +198,6 @@ class EnhancedPerformanceMonitor {
       description: (error instanceof Error ? error.message : String(error)) || 'Unknown error occurred',
       impact: 'medium',
       action: 'Check console for details'
->>>>>>> 04e9da8131cd1239431438dbc5d83bdb4ac130e9
     });
   }
 
