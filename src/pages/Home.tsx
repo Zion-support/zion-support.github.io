@@ -21,6 +21,8 @@ import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
+import LatestContentBanner from "../components/LatestContentBanner";
+import ContentShowcase from "../components/ContentShowcase";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
 
@@ -101,13 +103,20 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
+        {/* Latest Content Banner */}
+        <LatestContentBanner 
+          variant="info"
+          autoRotate={true}
+          rotationInterval={6000}
+        />
+        
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
-          variant="info"
-          title="🚀 NEW: AI Governance, Edge Flags, and GenAI Telemetry posts"
-          description="Fresh articles and quick insights just landed. See what's new this week."
-          ctaText="Read the latest"
-          ctaLink="/blog"
+          variant="success"
+          title="🎯 FREE: AI Workflow Automation ROI Calculator"
+          description="Calculate your potential savings with our interactive ROI calculator tool. Used by 500+ companies."
+          ctaText="Try Calculator"
+          ctaLink="/blog/ai-workflow-automation-roi-calculator"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -144,6 +153,21 @@ const Home = () => {
               Transform your business with our cutting-edge AI solutions, enterprise-grade security, 
               and next-generation cloud infrastructure. Join 500+ companies already scaling with us!
             </p>
+
+            {/* Latest Content Highlights */}
+            <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-400/30 rounded-xl p-6 mb-8 animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
+                <span className="text-lg font-bold text-green-400">LATEST CONTENT</span>
+                <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                🎯 New AI Workflow Automation ROI Calculator + 15 Fresh Articles
+              </p>
+              <p className="text-zion-slate-light text-sm">
+                Interactive tools, case studies, and implementation guides • Updated daily
+              </p>
+            </div>
 
             {/* Special Promotion Banner */}
             <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-xl p-6 mb-8 animate-fade-in">
@@ -215,6 +239,13 @@ const Home = () => {
           showInsights={true}
           showBlogPosts={true}
           className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
+        />
+
+        {/* Content Showcase */}
+        <ContentShowcase 
+          title="Featured Content & Resources"
+          subtitle="Discover our latest tools, guides, and insights to accelerate your AI journey"
+          maxItems={6}
         />
 
         {/* New Services Showcase */}
@@ -540,6 +571,61 @@ const Home = () => {
           subtitle="Get exclusive access to cutting-edge technology insights, industry analysis, and expert guidance delivered to your inbox weekly."
           showContentPreview={true}
         />
+
+        {/* Content Promotion Section */}
+        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="container mx-auto px-6 text-center relative z-10">
+            <div className="max-w-4xl mx-auto">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6">
+                <Sparkles className="w-4 h-4 mr-2 animate-pulse" />
+                Fresh Content Daily
+              </div>
+              <h2 className="text-4xl font-bold text-white mb-6">
+                New Content Added Every Week
+              </h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Join thousands of professionals who trust our content to stay ahead in AI and technology. 
+                Get instant access to our latest tools, guides, and insights.
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                  <div className="text-3xl mb-3">🛠️</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Interactive Tools</h3>
+                  <p className="text-white/80 text-sm">ROI calculators, assessment tools, and practical resources</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                  <div className="text-3xl mb-3">📚</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Expert Guides</h3>
+                  <p className="text-white/80 text-sm">Step-by-step implementation guides and best practices</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                  <div className="text-3xl mb-3">📊</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Case Studies</h3>
+                  <p className="text-white/80 text-sm">Real-world success stories and lessons learned</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/blog"
+                  className="bg-white text-indigo-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 group"
+                >
+                  <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+                  Explore All Content
+                </Link>
+                <Link
+                  to="/insights"
+                  className="border-2 border-white text-white hover:bg-white hover:text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2"
+                >
+                  <TrendingUp className="w-5 h-5" />
+                  Latest Insights
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Latest Articles */}
         <section className="py-20 bg-white">
