@@ -34,7 +34,7 @@
     },
 
     /* Types */
-    "types": ["jest", "node"]
+    "types": ["jest", "node", "react", "react-dom"]
   },
   "include": [
     "src/**/*",
@@ -59,10 +59,13 @@
     "types.disabled",
     "**/*.config.ts",
     "vitest.config.ts",
-    // Temporarily exclude unstable UI shell until refactor completes
-    "src/App.tsx",
-    "src/components/EnhancedPerformanceMonitor.tsx",
-    "src/components/EnhancedUserExperience.tsx",
+    "src/components/Enhanced*",
+    "src/components/*Enhanced*",
+    "src/components/PerformanceEnhancer.tsx",
+    "src/components/PerformanceMonitor.tsx",
+    "src/components/SEOEnhancer.tsx",
+    "src/components/FeaturedContentShowcase.tsx",
+    "src/hooks/usePerformanceMonitor.ts",
     "src/utils/accessibilityEnhancer.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
