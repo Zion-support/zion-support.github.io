@@ -1,5 +1,4 @@
 import React, { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
-// Simplify router to avoid missing pages
 import { AppRouter } from './router';
 
 // import { resourcePreloader } from './utils/resourcePreloader';
@@ -10,16 +9,8 @@ import { AppRouter } from './router';
 // import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
 // import { screenReaderSupport } from './accessibility/screenReaderSupport';
 import './index.css';
-// Comment out optional/missing imports
-// import { performanceMonitor } from './utils/performanceMonitor';
-// import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
-// import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
-// import SEOOptimizer from './components/SEOOptimizer';
-// import AdvancedAnalytics from './components/AdvancedAnalytics';
-// import PerformanceOptimizer from './components/PerformanceOptimizer';
-// import PerformanceMonitor from './components/PerformanceMonitor';
-// import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-// import NotificationSystem from './components/NotificationSystem';
+import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};
@@ -50,7 +41,7 @@ const WebsiteEnhancements = (props: any) => <Placeholder name="WebsiteEnhancemen
 export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [notifications, setNotifications] = useState<any[]>([]);
+  const [notifications, setNotifications] = useState<Array<{id: string; message?: string}>>([]);
 
   const seoDataForOptimizer = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -75,9 +66,13 @@ export default function App(): React.JSX.Element {
           break;
       }
       try {
-      // Initialize new performance and accessibility enhancements (optional)
+        if (enhancedSecurityManager && typeof (enhancedSecurityManager as any).initialize === 'function') {
+          (enhancedSecurityManager as any).initialize();
+        }
+      
+      // Initialize new performance and accessibility enhancements
       initializePerformanceEnhancements();
-      // accessibilityEnhancer.initialize();
+      accessibilityEnhancer.initialize();
       
       // Initialize advanced optimizers
       // Guard optional advanced systems if present in global scope
@@ -93,7 +88,7 @@ export default function App(): React.JSX.Element {
 
       advancedPerformanceOptimizer?.initialize?.();
       advancedSEOOptimizer?.initialize?.();
-      // accessibilityEnhancer.initialize();
+      accessibilityEnhancer.initialize();
       advancedSecurityManager?.initialize?.();
       advancedAnalytics?.initialize?.();
       // advancedErrorHandler is initialized in constructor
@@ -136,7 +131,8 @@ export default function App(): React.JSX.Element {
   }, []);
 
   return (
-    <React.Fragment>
+    <EnhancedErrorBoundary>
+      {/* SEO and analytics components temporarily disabled due to missing modules */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
 
@@ -147,7 +143,7 @@ export default function App(): React.JSX.Element {
                 <h2 className="text-2xl font-bold">Performance Optimizer</h2>
                 <button onClick={() => setShowPerformanceOptimizer(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
               </div>
-              {/* <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} /> */}
+              <div />
             </div>
           </div>
         )}
@@ -159,13 +155,13 @@ export default function App(): React.JSX.Element {
                 <h2 className="text-2xl font-bold">Performance Monitor</h2>
                 <button onClick={() => setShowPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
               </div>
-              {/* <PerformanceMonitor showDashboard={true} /> */}
+              <div />
             </div>
           </div>
         )}
 
-        {/* <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} /> */}
+        <div />
       </div>
-    </React.Fragment>
+    </EnhancedErrorBoundary>
   );
 }
