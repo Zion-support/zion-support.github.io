@@ -1,538 +1,369 @@
 /**
- * Accessibility Enhancer
- * Comprehensive accessibility improvements and monitoring
+ * Advanced Accessibility Enhancement System
+ * Provides comprehensive accessibility features and monitoring
  */
 
-export interface AccessibilityIssue {
-  id: string;
-  type: "error" | "warning" | "info";
-  element: string;
-  message: string;
-  suggestion: string;
-  severity: "high" | "medium" | "low";
-  category: "aria" | "color" | "keyboard" | "semantic" | "focus";
+export interface AccessibilityConfig {
+  keyboardNavigation: boolean;
+  screenReaderSupport: boolean;
+  highContrast: boolean;
+  reducedMotion: boolean;
+  focusManagement: boolean;
+  ariaLabels: boolean;
+  colorContrast: 'AA' | 'AAA';
 }
 
-export interface AccessibilityMetrics {
-  totalIssues: number;
-  errors: number;
-  warnings: number;
-  info: number;
+export interface AccessibilityMetric {
+  type: 'color_contrast' | 'keyboard_navigation' | 'aria_labels' | 'focus_management';
   score: number;
-  lastChecked: number;
+  issues: string[];
+  timestamp: number;
 }
 
-export class AccessibilityEnhancer {
-  private static instance: AccessibilityEnhancer;
-  private issues: AccessibilityIssue[] = [];
-  private isMonitoring = false;
-  private observer: MutationObserver | null = null;
+class AccessibilityEnhancer {
+  private config: AccessibilityConfig;
+  private metrics: AccessibilityMetric[] = [];
+  private isInitialized = false;
+  private focusTrapElements: HTMLElement[] = [];
 
-  static getInstance(): AccessibilityEnhancer {
-    if (!AccessibilityEnhancer.instance) {
-      AccessibilityEnhancer.instance = new AccessibilityEnhancer();
-    }
-    return AccessibilityEnhancer.instance;
+  constructor() {
+    this.config = this.getDefaultConfig();
   }
 
-  /**
-   * Start accessibility monitoring
-   */
-  startMonitoring(): void {
-    if (this.isMonitoring) return;
-
-    this.isMonitoring = true;
-    this.scanForIssues();
-    this.setupMutationObserver();
-    this.setupKeyboardNavigation();
-    this.setupFocusManagement();
-  }
-
-  /**
-   * Stop accessibility monitoring
-   */
-  stopMonitoring(): void {
-    this.isMonitoring = false;
-    if (this.observer) {
-      this.observer.disconnect();
-      this.observer = null;
-    }
-  }
-
-  /**
-   * Get current accessibility issues
-   */
-  getIssues(): AccessibilityIssue[] {
-    return this.issues;
-  }
-
-  /**
-   * Get accessibility metrics
-   */
-  getMetrics(): AccessibilityMetrics {
-    const errors = this.issues.filter((issue) => issue.type === "error").length;
-    const warnings = this.issues.filter(
-      (issue) => issue.type === "warning",
-    ).length;
-    const info = this.issues.filter((issue) => issue.type === "info").length;
-
-    const score = this.calculateAccessibilityScore();
-
+  private getDefaultConfig(): AccessibilityConfig {
     return {
-      totalIssues: this.issues.length,
-      errors,
-      warnings,
-      info,
-      score,
-      lastChecked: Date.now(),
+      keyboardNavigation: true,
+      screenReaderSupport: true,
+      highContrast: false,
+      reducedMotion: false,
+      focusManagement: true,
+      ariaLabels: true,
+      colorContrast: 'AA'
     };
   }
 
-  /**
-   * Scan for accessibility issues
-   */
-  scanForIssues(): void {
-    this.issues = [];
-
-    // Check for missing alt text
-    this.checkAltText();
-
-    // Check for missing ARIA labels
-    this.checkAriaLabels();
-
-    // Check for color contrast
-    this.checkColorContrast();
-
-    // Check for keyboard navigation
-    this.checkKeyboardNavigation();
-
-    // Check for semantic HTML
-    this.checkSemanticHTML();
-
-    // Check for focus management
-    this.checkFocusManagement();
+  public init(): void {
+    if (this.isInitialized || typeof window === 'undefined') return;
+    
+    this.isInitialized = true;
+    this.setupKeyboardNavigation();
+    this.setupFocusManagement();
+    this.setupAriaLabels();
+    this.setupColorContrast();
+    this.setupReducedMotion();
+    this.observeAccessibility();
   }
 
-  /**
-   * Check for missing alt text
-   */
-  private checkAltText(): void {
-    const images = document.querySelectorAll("img");
-    images.forEach((img, index) => {
-      if (!img.alt && !img.getAttribute("aria-label")) {
-        this.addIssue({
-          id: `alt-text-${index}`,
-          type: "error",
-          element: img.tagName,
-          message: "Image missing alt text",
-          suggestion: "Add descriptive alt text or aria-label",
-          severity: "high",
-          category: "aria",
-        });
-      }
-    });
-  }
-
-  /**
-   * Check for missing ARIA labels
-   */
-  private checkAriaLabels(): void {
-    const interactiveElements = document.querySelectorAll(
-      'button, input, select, textarea, [role="button"]',
-    );
-    interactiveElements.forEach((element, index) => {
-      const hasLabel =
-        element.getAttribute("aria-label") ||
-        element.getAttribute("aria-labelledby") ||
-        element.getAttribute("title") ||
-        (element as HTMLElement).textContent?.trim();
-
-      if (!hasLabel) {
-        this.addIssue({
-          id: `aria-label-${index}`,
-          type: "warning",
-          element: element.tagName,
-          message: "Interactive element missing accessible name",
-          suggestion: "Add aria-label, aria-labelledby, or visible text",
-          severity: "medium",
-          category: "aria",
-        });
-      }
-    });
-  }
-
-  /**
-   * Check color contrast
-   */
-  private checkColorContrast(): void {
-    const elements = document.querySelectorAll("*");
-    elements.forEach((element, index) => {
-      const styles = window.getComputedStyle(element);
-      const color = styles.color;
-      const backgroundColor = styles.backgroundColor;
-
-      if (
-        color &&
-        backgroundColor &&
-        color !== "rgba(0, 0, 0, 0)" &&
-        backgroundColor !== "rgba(0, 0, 0, 0)"
-      ) {
-        const contrast = this.calculateContrast(color, backgroundColor);
-        if (contrast < 4.5) {
-          this.addIssue({
-            id: `contrast-${index}`,
-            type: "warning",
-            element: element.tagName,
-            message: `Low color contrast: ${contrast.toFixed(2)}:1`,
-            suggestion: "Increase color contrast to at least 4.5:1",
-            severity: "medium",
-            category: "color",
-          });
-        }
-      }
-    });
-  }
-
-  /**
-   * Check keyboard navigation
-   */
-  private checkKeyboardNavigation(): void {
-    const interactiveElements = document.querySelectorAll(
-      "button, input, select, textarea, a, [tabindex]",
-    );
-    let hasTabIndex = false;
-
-    interactiveElements.forEach((element, index) => {
-      const tabIndex = element.getAttribute("tabindex");
-      if (tabIndex && tabIndex !== "-1") {
-        hasTabIndex = true;
-      }
-    });
-
-    if (!hasTabIndex) {
-      this.addIssue({
-        id: "keyboard-navigation",
-        type: "info",
-        element: "document",
-        message: "No keyboard navigation detected",
-        suggestion: "Ensure all interactive elements are keyboard accessible",
-        severity: "low",
-        category: "keyboard",
-      });
-    }
-  }
-
-  /**
-   * Check semantic HTML
-   */
-  private checkSemanticHTML(): void {
-    const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
-    const hasH1 = document.querySelector("h1");
-
-    if (!hasH1) {
-      this.addIssue({
-        id: "missing-h1",
-        type: "error",
-        element: "document",
-        message: "Missing h1 heading",
-        suggestion: "Add a main h1 heading for the page",
-        severity: "high",
-        category: "semantic",
-      });
-    }
-
-    // Check heading hierarchy
-    let previousLevel = 0;
-    headings.forEach((heading, index) => {
-      const level = parseInt(heading.tagName.charAt(1));
-      if (level > previousLevel + 1) {
-        this.addIssue({
-          id: `heading-hierarchy-${index}`,
-          type: "warning",
-          element: heading.tagName,
-          message: "Heading hierarchy skipped",
-          suggestion: "Use proper heading hierarchy (h1 -> h2 -> h3, etc.)",
-          severity: "medium",
-          category: "semantic",
-        });
-      }
-      previousLevel = level;
-    });
-  }
-
-  /**
-   * Check focus management
-   */
-  private checkFocusManagement(): void {
-    const focusableElements = document.querySelectorAll(
-      'button, input, select, textarea, a, [tabindex]:not([tabindex="-1"])',
-    );
-
-    if (focusableElements.length === 0) {
-      this.addIssue({
-        id: "no-focusable-elements",
-        type: "warning",
-        element: "document",
-        message: "No focusable elements found",
-        suggestion: "Add interactive elements that can receive focus",
-        severity: "medium",
-        category: "focus",
-      });
-    }
-  }
-
-  /**
-   * Setup mutation observer for dynamic content
-   */
-  private setupMutationObserver(): void {
-    if (typeof window === "undefined") return;
-
-    this.observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.type === "childList") {
-          mutation.addedNodes.forEach((node) => {
-            if (node.nodeType === Node.ELEMENT_NODE) {
-              this.scanElement(node as Element);
-            }
-          });
-        }
-      });
-    });
-
-    this.observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-    });
-  }
-
-  /**
-   * Scan a specific element for issues
-   */
-  private scanElement(element: Element): void {
-    // Check for missing alt text
-    if (element.tagName === "IMG") {
-      const img = element as HTMLImageElement;
-      if (!img.alt && !img.getAttribute("aria-label")) {
-        this.addIssue({
-          id: `alt-text-${Date.now()}`,
-          type: "error",
-          element: "img",
-          message: "Image missing alt text",
-          suggestion: "Add descriptive alt text or aria-label",
-          severity: "high",
-          category: "aria",
-        });
-      }
-    }
-
-    // Check for missing ARIA labels on interactive elements
-    if (element.matches('button, input, select, textarea, [role="button"]')) {
-      const hasLabel =
-        element.getAttribute("aria-label") ||
-        element.getAttribute("aria-labelledby") ||
-        element.getAttribute("title") ||
-        element.textContent?.trim();
-
-      if (!hasLabel) {
-        this.addIssue({
-          id: `aria-label-${Date.now()}`,
-          type: "warning",
-          element: element.tagName,
-          message: "Interactive element missing accessible name",
-          suggestion: "Add aria-label, aria-labelledby, or visible text",
-          severity: "medium",
-          category: "aria",
-        });
-      }
-    }
-  }
-
-  /**
-   * Setup keyboard navigation enhancements
-   */
   private setupKeyboardNavigation(): void {
-    document.addEventListener("keydown", (event) => {
+    if (!this.config.keyboardNavigation) return;
+
+    document.addEventListener('keydown', (event) => {
       // Skip to main content
-      if (event.key === "Tab" && event.shiftKey && event.altKey) {
-        event.preventDefault();
-        const main = document.querySelector('main, [role="main"]');
-        if (main) {
-          (main as HTMLElement).focus();
+      if (event.key === 'Tab' && event.shiftKey && document.activeElement === document.body) {
+        const skipLink = document.querySelector('[data-skip-link]') as HTMLElement;
+        if (skipLink) {
+          skipLink.focus();
+          event.preventDefault();
         }
       }
 
       // Escape key handling
-      if (event.key === "Escape") {
-        const modal = document.querySelector(
-          '[role="dialog"]:not([aria-hidden="true"])',
-        );
+      if (event.key === 'Escape') {
+        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]') as HTMLElement;
         if (modal) {
-          const closeButton = modal.querySelector(
-            'button[aria-label*="close"], button[aria-label*="Close"]',
-          );
-          if (closeButton) {
-            (closeButton as HTMLButtonElement).click();
-          }
+          this.closeModal(modal);
+        }
+      }
+
+      // Arrow key navigation for menus
+      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+        const menu = document.querySelector('[role="menu"]:focus-within');
+        if (menu) {
+          this.handleMenuNavigation(event, menu);
         }
       }
     });
   }
 
-  /**
-   * Setup focus management
-   */
   private setupFocusManagement(): void {
-    // Track focus changes
-    document.addEventListener("focusin", (event) => {
-      const target = event.target as HTMLElement;
-      if (target) {
-        // Ensure focus is visible
-        target.style.outline = "2px solid #005fcc";
-        target.style.outlineOffset = "2px";
+    if (!this.config.focusManagement) return;
+
+    // Trap focus in modals
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Tab') {
+        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
+        if (modal) {
+          this.trapFocus(event, modal);
+        }
       }
     });
 
-    document.addEventListener("focusout", (event) => {
+    // Restore focus after modal closes
+    document.addEventListener('click', (event) => {
       const target = event.target as HTMLElement;
-      if (target) {
-        // Remove focus outline
-        target.style.outline = "";
-        target.style.outlineOffset = "";
+      if (target.hasAttribute('data-close-modal')) {
+        this.restoreFocus();
       }
     });
   }
 
-  /**
-   * Add an accessibility issue
-   */
-  private addIssue(issue: AccessibilityIssue): void {
-    // Check if issue already exists
-    const exists = this.issues.some(
-      (existing) =>
-        existing.element === issue.element &&
-        existing.message === issue.message,
-    );
+  private setupAriaLabels(): void {
+    if (!this.config.ariaLabels) return;
 
-    if (!exists) {
-      this.issues.push(issue);
+    // Add aria-labels to interactive elements without labels
+    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
+    
+    interactiveElements.forEach(element => {
+      if (!element.getAttribute('aria-label') && !element.getAttribute('aria-labelledby')) {
+        const text = element.textContent?.trim();
+        if (!text || text.length < 3) {
+          element.setAttribute('aria-label', `Interactive element`);
+        }
+      }
+    });
+
+    // Add role attributes where needed
+    const clickableElements = document.querySelectorAll('[onclick], [data-action]');
+    clickableElements.forEach(element => {
+      if (!element.getAttribute('role')) {
+        element.setAttribute('role', 'button');
+      }
+    });
+  }
+
+  private setupColorContrast(): void {
+    if (typeof window === 'undefined') return;
+
+    // Check color contrast ratios
+    const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');
+    const contrastIssues: string[] = [];
+
+    elements.forEach(element => {
+      const computedStyle = window.getComputedStyle(element);
+      const color = computedStyle.color;
+      const backgroundColor = computedStyle.backgroundColor;
+      
+      if (color && backgroundColor) {
+        const ratio = this.calculateContrastRatio(color, backgroundColor);
+        const requiredRatio = this.config.colorContrast === 'AAA' ? 7 : 4.5;
+        
+        if (ratio < requiredRatio) {
+          contrastIssues.push(`Low contrast on ${element.tagName}: ${ratio.toFixed(2)}:1`);
+        }
+      }
+    });
+
+    if (contrastIssues.length > 0) {
+      this.recordMetric({
+        type: 'color_contrast',
+        score: Math.max(0, 100 - (contrastIssues.length * 10)),
+        issues: contrastIssues,
+        timestamp: Date.now()
+      });
     }
   }
 
-  /**
-   * Calculate color contrast ratio
-   */
-  private calculateContrast(color1: string, color2: string): number {
-    // This is a simplified calculation
-    // In a real implementation, you'd use a proper color contrast library
+  private setupReducedMotion(): void {
+    if (typeof window === 'undefined') return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (prefersReducedMotion) {
+      // Disable animations
+      const style = document.createElement('style');
+      style.textContent = `
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }
+
+  private observeAccessibility(): void {
+    if (typeof window === 'undefined') return;
+
+    // Monitor focus changes
+    document.addEventListener('focusin', (event) => {
+      const target = event.target as HTMLElement;
+      if (target.tabIndex < 0 && target.hasAttribute('tabindex')) {
+        console.warn('Element with negative tabindex received focus:', target);
+      }
+    });
+
+    // Monitor aria-label changes
+    const observer = new (window as any).MutationObserver((mutations: any) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'aria-label') {
+          const element = mutation.target as HTMLElement;
+          if (!element.getAttribute('aria-label')) {
+            console.warn('Element lost aria-label:', element);
+          }
+        }
+      });
+    });
+
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ['aria-label', 'aria-labelledby', 'role']
+    });
+  }
+
+  private handleMenuNavigation(event: Event, menu: HTMLElement): void {
+    const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]'));
+    const currentIndex = menuItems.indexOf(document.activeElement as HTMLElement);
+    
+    if (currentIndex === -1) return;
+
+    let nextIndex: number;
+    if (event.key === 'ArrowDown') {
+      nextIndex = (currentIndex + 1) % menuItems.length;
+    } else {
+      nextIndex = currentIndex === 0 ? menuItems.length - 1 : currentIndex - 1;
+    }
+
+    (menuItems[nextIndex] as HTMLElement).focus();
+    event.preventDefault();
+  }
+
+  private trapFocus(event: Event, modal: HTMLElement): void {
+    const focusableElements = modal.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    
+    if (focusableElements.length === 0) return;
+
+    const firstElement = focusableElements[0] as HTMLElement;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+    if (event.shiftKey) {
+      if (document.activeElement === firstElement) {
+        lastElement.focus();
+        event.preventDefault();
+      }
+    } else {
+      if (document.activeElement === lastElement) {
+        firstElement.focus();
+        event.preventDefault();
+      }
+    }
+  }
+
+  private closeModal(modal: HTMLElement): void {
+    modal.setAttribute('aria-hidden', 'true');
+    modal.style.display = 'none';
+    this.restoreFocus();
+  }
+
+  private restoreFocus(): void {
+    const lastFocusedElement = document.querySelector('[data-last-focused]') as HTMLElement;
+    if (lastFocusedElement) {
+      lastFocusedElement.focus();
+      lastFocusedElement.removeAttribute('data-last-focused');
+    }
+  }
+
+  private calculateContrastRatio(color1: string, color2: string): number {
+    // Simplified contrast ratio calculation
+    // In a real implementation, you'd convert colors to RGB and calculate luminance
     return 4.5; // Placeholder
   }
 
-  /**
-   * Calculate accessibility score (0-100)
-   */
-  private calculateAccessibilityScore(): number {
-    if (this.issues.length === 0) return 100;
-
-    let score = 100;
-    const errors = this.issues.filter((issue) => issue.type === "error").length;
-    const warnings = this.issues.filter(
-      (issue) => issue.type === "warning",
-    ).length;
-
-    score -= errors * 10; // Each error reduces score by 10
-    score -= warnings * 5; // Each warning reduces score by 5
-
-    return Math.max(0, score);
-  }
-
-  /**
-   * Fix common accessibility issues automatically
-   */
-  fixCommonIssues(): void {
-    // Add skip links
-    this.addSkipLinks();
-
-    // Add ARIA landmarks
-    this.addAriaLandmarks();
-
-    // Improve focus management
-    this.improveFocusManagement();
-  }
-
-  /**
-   * Add skip links
-   */
-  private addSkipLinks(): void {
-    const skipLink = document.createElement("a");
-    skipLink.href = "#main-content";
-    skipLink.textContent = "Skip to main content";
-    skipLink.className = "skip-link";
-    skipLink.style.cssText = `
-      position: absolute;
-      top: -40px;
-      left: 6px;
-      background: #000;
-      color: #fff;
-      padding: 8px;
-      text-decoration: none;
-      z-index: 1000;
-    `;
-
-    skipLink.addEventListener("focus", () => {
-      skipLink.style.top = "6px";
-    });
-
-    skipLink.addEventListener("blur", () => {
-      skipLink.style.top = "-40px";
-    });
-
-    document.body.insertBefore(skipLink, document.body.firstChild);
-  }
-
-  /**
-   * Add ARIA landmarks
-   */
-  private addAriaLandmarks(): void {
-    const main = document.querySelector("main");
-    if (main && !main.getAttribute("role")) {
-      main.setAttribute("role", "main");
-    }
-
-    const nav = document.querySelector("nav");
-    if (nav && !nav.getAttribute("role")) {
-      nav.setAttribute("role", "navigation");
-    }
-
-    const header = document.querySelector("header");
-    if (header && !header.getAttribute("role")) {
-      header.setAttribute("role", "banner");
-    }
-
-    const footer = document.querySelector("footer");
-    if (footer && !footer.getAttribute("role")) {
-      footer.setAttribute("role", "contentinfo");
+  private recordMetric(metric: AccessibilityMetric): void {
+    this.metrics.push(metric);
+    
+    // Keep only last 50 metrics
+    if (this.metrics.length > 50) {
+      this.metrics = this.metrics.slice(-50);
     }
   }
 
-  /**
-   * Improve focus management
-   */
-  private improveFocusManagement(): void {
-    // Add focus indicators
-    const style = document.createElement("style");
-    style.textContent = `
-      *:focus {
-        outline: 2px solid #005fcc !important;
-        outline-offset: 2px !important;
+  public getMetrics(): AccessibilityMetric[] {
+    return [...this.metrics];
+  }
+
+  public getAccessibilityScore(): number {
+    if (this.metrics.length === 0) return 100;
+    
+    const totalScore = this.metrics.reduce((sum, metric) => sum + metric.score, 0);
+    return Math.round(totalScore / this.metrics.length);
+  }
+
+  public runAccessibilityAudit(): {
+    score: number;
+    issues: string[];
+    recommendations: string[];
+  } {
+    const issues: string[] = [];
+    const recommendations: string[] = [];
+
+    // Check for missing alt attributes
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (!img.getAttribute('alt')) {
+        issues.push(`Image missing alt attribute: ${img.src}`);
+        recommendations.push('Add descriptive alt text to images');
       }
+    });
+
+    // Check for proper heading hierarchy
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let lastLevel = 0;
+    headings.forEach(heading => {
+      const level = parseInt(heading.tagName.charAt(1));
+      if (level > lastLevel + 1) {
+        issues.push(`Heading hierarchy skip: ${heading.tagName}`);
+        recommendations.push('Maintain proper heading hierarchy (h1 > h2 > h3...)');
+      }
+      lastLevel = level;
+    });
+
+    // Check for form labels
+    const inputs = document.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+      const id = input.getAttribute('id');
+      const label = id ? document.querySelector(`label[for="${id}"]`) : null;
+      const ariaLabel = input.getAttribute('aria-label');
       
-      .skip-link:focus {
-        top: 6px !important;
+      if (!label && !ariaLabel) {
+        issues.push(`Form input missing label: ${input.tagName}`);
+        recommendations.push('Add labels or aria-label to form inputs');
       }
-    `;
-    document.head.appendChild(style);
+    });
+
+    const score = Math.max(0, 100 - (issues.length * 5));
+    
+    return {
+      score,
+      issues,
+      recommendations: [...new Set(recommendations)]
+    };
+  }
+
+  public updateConfig(newConfig: Partial<AccessibilityConfig>): void {
+    this.config = { ...this.config, ...newConfig };
+  }
+
+  public disconnect(): void {
+    this.isInitialized = false;
+    this.metrics = [];
+    this.focusTrapElements = [];
   }
 }
 
 // Export singleton instance
-export const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
+export const accessibilityEnhancer = new AccessibilityEnhancer();
+
+// Auto-initialize on DOM ready
+if (typeof window !== 'undefined') {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      accessibilityEnhancer.init();
+    });
+  } else {
+    accessibilityEnhancer.init();
+  }
+}

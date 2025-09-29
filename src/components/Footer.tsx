@@ -83,10 +83,10 @@ export default function Footer(): React.JSX.Element {
               </li>
               <li>
                 <Link
-                  to="/portfolio"
+                  to="/case-studies"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Portfolio
+                  Case Studies
                 </Link>
               </li>
               <li>

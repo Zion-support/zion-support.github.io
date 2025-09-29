@@ -45,7 +45,7 @@ export class PerformanceMonitor {
         lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
         this.observers.push(lcpObserver);
       } catch {
-        console.warn("LCP observer not supported");
+        // console.warn("LCP observer not supported");
       }
 
       // First Input Delay
@@ -69,7 +69,7 @@ export class PerformanceMonitor {
         fidObserver.observe({ entryTypes: ["first-input"] });
         this.observers.push(fidObserver);
       } catch {
-        console.warn("FID observer not supported");
+        // console.warn("FID observer not supported");
       }
 
       // Cumulative Layout Shift
@@ -93,7 +93,7 @@ export class PerformanceMonitor {
         clsObserver.observe({ entryTypes: ["layout-shift"] });
         this.observers.push(clsObserver);
       } catch {
-        console.warn("CLS observer not supported");
+        // console.warn("CLS observer not supported");
       }
 
       // First Contentful Paint
@@ -110,7 +110,7 @@ export class PerformanceMonitor {
         fcpObserver.observe({ entryTypes: ["paint"] });
         this.observers.push(fcpObserver);
       } catch {
-        console.warn("FCP observer not supported");
+        // console.warn("FCP observer not supported");
       }
     }
   }
@@ -118,7 +118,7 @@ export class PerformanceMonitor {
   private reportMetric(name: string, value: number): void {
     // Log to console in development
     if (process.env.NODE_ENV === "development") {
-      console.log(`Performance Metric - ${name}:`, value);
+      // console.log(`Performance Metric - ${name}:`, value);
     }
 
     // Send to analytics service in production
@@ -202,7 +202,7 @@ export const measurePerformance = (name: string, fn: () => void): void => {
   const duration = endTime - startTime;
 
   if (process.env.NODE_ENV === "development") {
-    console.log(`${name} took ${duration.toFixed(2)}ms`);
+    // console.log(`${name} took ${duration.toFixed(2)}ms`);
   }
 };
 
@@ -216,7 +216,7 @@ export const measureAsyncPerformance = async <T>(
   const duration = endTime - startTime;
 
   if (process.env.NODE_ENV === "development") {
-    console.log(`${name} took ${duration.toFixed(2)}ms`);
+    // console.log(`${name} took ${duration.toFixed(2)}ms`);
   }
 
   return result;

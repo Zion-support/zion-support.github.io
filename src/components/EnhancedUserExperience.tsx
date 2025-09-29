@@ -51,19 +51,18 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
   });
 
   // Performance tracking
-  const { PerformanceTracker } = usePerformanceTracker({
-    onMetricsUpdate: (newMetrics) => {
+  const _performanceMetrics = usePerformanceTracker((newMetrics: unknown) => {
       setRealTimeMetrics({
         fps: newMetrics.fps,
         memoryUsage: newMetrics.memoryUsage || 0,
         loadTime: newMetrics.loadTime,
         errors: newMetrics.errors,
       });
-    },
-    interval: 2000,
-    enableCoreWebVitals: true,
-    enableAdvancedMetrics: true,
-  });
+    }, {
+      interval: 2000,
+      enableCoreWebVitals: true,
+      enableAdvancedMetrics: true,
+    });
 
   useEffect(() => {
     if (isVisible) {
@@ -84,7 +83,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
   }, [isVisible]);
 
   const handlePreferenceChange = useCallback((key: string, value: unknown) => {
-    setUserPreferences((prev) => ({
+    setUserPreferences(prev => ({
       ...prev,
       [key]: value,
     }));
@@ -106,7 +105,6 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
 
   return (
     <>
-      {PerformanceTracker}
       <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
         <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
           <div className="flex justify-between items-center mb-6">
@@ -367,13 +365,13 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
               <button
                 onClick={() => {
                   // Optimize performance
-                  console.log("Optimizing performance...");
+                  // console.log("Optimizing performance...");
                   // Apply performance optimizations
                   document.body.style.willChange = "auto";
                   if ("requestIdleCallback" in window) {
                     requestIdleCallback(() => {
                       // Run performance optimizations during idle time
-                      console.log("Performance optimization completed");
+                      // console.log("Performance optimization completed");
                     });
                   }
                 }}
@@ -389,7 +387,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
                       names.forEach((name) => {
                         caches.delete(name);
                       });
-                      console.log("Cache cleared");
+                      // console.log("Cache cleared");
                     });
                   }
                   localStorage.clear();
@@ -437,7 +435,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
                     reducedMotion: false,
                     keyboardNavigation: true,
                   });
-                  console.log("Settings reset to defaults");
+                  // console.log("Settings reset to defaults");
                 }}
                 className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-md transition-colors"
               >
