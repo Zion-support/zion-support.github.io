@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import {
   Calendar,
@@ -17,6 +17,7 @@ import {
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
+import { posts as latestPosts } from "../content/posts";
 
 interface BlogPost {
   id: number;
@@ -37,9 +38,21 @@ export default function Blog(): React.JSX.Element {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
 
-  const categories = ["All", "AI Solutions", "Case Studies", "Technology", "Industry Insights", "Tutorials"];
+  const categories = [
+    "All",
+    "AI Strategy",
+    "Security",
+    "Edge Computing",
+    "GenAI",
+    "Data Engineering",
+    "Technology",
+    "AI Solutions",
+    "Case Studies",
+    "Industry Insights",
+    "Tutorials",
+  ];
 
-  const blogPosts: BlogPost[] = [
+  const staticPosts: BlogPost[] = [
     {
       id: 1,
       title: "How AI Workflow Automation Transformed a Fortune 500 Company",
@@ -167,6 +180,26 @@ export default function Blog(): React.JSX.Element {
       views: 445,
     },
   ];
+
+  // Map content/posts entries into this page's structure
+  const mappedFromContent: BlogPost[] = useMemo(() => {
+    return latestPosts.map((p, idx) => ({
+      id: 1000 + idx,
+      title: p.title,
+      excerpt: p.description,
+      content: "See full article",
+      author: "Zion Tech Group Team",
+      date: p.publishedAt,
+      readTime: p.readTime || "6 min read",
+      category: p.category,
+      tags: [p.category],
+      image: "/api/placeholder/400/250",
+      featured: Boolean(p.featured),
+      views: 0,
+    }));
+  }, []);
+
+  const blogPosts: BlogPost[] = [...mappedFromContent, ...staticPosts];
 
   const filteredPosts = blogPosts.filter(post => {
     const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;

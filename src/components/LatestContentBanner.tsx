@@ -15,7 +15,7 @@ const contentHighlights = [
     title: "🛡️ NEW: AI Risk Register That Actually Drives Action",
     description: "Turn AI risks into tracked mitigations with owners and policy tests",
     ctaText: "Read Playbook",
-    ctaLink: "/blog/ai-risk-register-2025",
+    ctaLink: "/blog/ai-platform-roi-2025",
     badge: "New",
     stats: "7 min read",
     variant: "warning" as const
@@ -25,7 +25,7 @@ const contentHighlights = [
     title: "📈 Practical AI Evals That Predict Business Outcomes",
     description: "Design scorecards that correlate with revenue, CSAT, and retention",
     ctaText: "See Scorecards",
-    ctaLink: "/blog/practical-evals-scorecards-2025",
+    ctaLink: "/blog/genai-evals-in-production-2025",
     badge: "Featured",
     stats: "6 min read",
     variant: "success" as const
@@ -35,7 +35,7 @@ const contentHighlights = [
     title: "💸 Cloud FinOps Guardrails Engineers Actually Use",
     description: "Budgets, alerts, and PR gates that reduce waste 25–40%",
     ctaText: "Cut Spend",
-    ctaLink: "/blog/cloud-finops-guardrails-2025",
+    ctaLink: "/blog/real-time-data-pipelines-2025",
     badge: "Hot",
     stats: "8 min read",
     variant: "info" as const
@@ -45,7 +45,7 @@ const contentHighlights = [
     title: "🧪 RAG Architectures That Work in Production",
     description: "Freshness, hybrid search, and evals that scale",
     ctaText: "Read Guide",
-    ctaLink: "/blog/practical-rag-in-production-2025",
+    ctaLink: "/blog/edge-cdn-ml-personalization-2025",
     badge: "Popular",
     stats: "8 min read",
     variant: "premium" as const

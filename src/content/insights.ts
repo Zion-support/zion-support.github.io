@@ -9,6 +9,24 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "ai-platform-roi-2025",
+    title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
+    summary:
+      "Tie platform capabilities to adoption, golden paths, SLOs, and product outcomes.",
+    category: "AI Strategy",
+    date: "2025-10-03",
+    readMinutes: 7,
+  },
+  {
+    id: "secure-ml-supply-chain-2025",
+    title: "Secure ML Supply Chain: From SBOMs to Model Lineage",
+    summary:
+      "End‑to‑end provenance for datasets, models, and inference—practical rollout steps.",
+    category: "Security",
+    date: "2025-10-03",
+    readMinutes: 6,
+  },
+  {
     id: "serverless-warm-pools-playbook",
     title: "Serverless Warm Pools: Cut Cold Starts, Not Corners",
     summary:
