@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-safety-budgets-2026",
+    slug: "ai-safety-budgets-2026",
+    title: "AI Safety Budgets 2026: Guardrails That Don’t Block Velocity",
+    description: "Design safety budgets, policy tests, and rollback triggers that let teams ship fast safely.",
+    excerpt: "Ship fast, stay safe: budget risky actions with PR checks and instant rollback.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Governance",
+    tags: ["Governance", "Policy", "Safety", "Evals"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-safety-budgets-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-personalization-2026",
+    slug: "edge-personalization-2026",
+    title: "Edge Personalization 2026: Sub‑100ms Private Experiences",
+    description: "On‑device models, signed configs, and edge KV patterns for private personalization.",
+    excerpt: "Deliver instant, privacy‑first personalization with edge compute and tiny models.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "Edge Computing",
+    tags: ["Edge", "Personalization", "Privacy", "KV"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/edge-personalization-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "secure-ml-supply-chain-2026",
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",

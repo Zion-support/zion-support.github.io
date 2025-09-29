@@ -39,12 +39,18 @@ export default function BlogPage() {
                 <span>•</span>
                 <span>Autonomous AI</span>
               </div>
-              <div className="mt-6">
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <a 
-                  href="/blog/ai-autonomous-infrastructure-2025" 
-                  className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+                  href="/blog/ai-safety-budgets-2026" 
+                  className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block text-center"
                 >
-                  Read Full Article →
+                  AI Safety Budgets 2026 →
+                </a>
+                <a 
+                  href="/blog/edge-personalization-2026" 
+                  className="bg-white/90 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/80 hover:text-blue-700 transition-colors inline-block text-center border border-white"
+                >
+                  Edge Personalization 2026 →
                 </a>
               </div>
             </div>
@@ -53,6 +59,24 @@ export default function BlogPage() {
 
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <BlogPost
+            title="AI Safety Budgets 2026: Guardrails That Don’t Block Velocity"
+            excerpt="Budget risky actions with PR checks and rollback triggers so teams ship fast safely."
+            date="October 13, 2025"
+            category="AI Governance"
+            readTime="7 min"
+            image="🛡️"
+            href="/blog/ai-safety-budgets-2026"
+          />
+          <BlogPost
+            title="Edge Personalization 2026: Sub‑100ms Private Experiences"
+            excerpt="On‑device models, signed configs, and edge KV for privacy‑first personalization."
+            date="October 13, 2025"
+            category="Edge Computing"
+            readTime="8 min"
+            image="⚡"
+            href="/blog/edge-personalization-2026"
+          />
           <BlogPost
             title="Platform Engineering Scorecards 2026: From Golden Paths to Outcomes"
             excerpt="Measure adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery."

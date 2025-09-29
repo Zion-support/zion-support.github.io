@@ -10,6 +10,26 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-safety-budgets-2026",
+    title: "AI Safety Budgets 2026: Guardrails That Don’t Block Velocity",
+    description:
+      "Design safety budgets, PR checks, and rollback triggers that let teams ship fast while staying compliant.",
+    category: "AI Governance",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "edge-personalization-2026",
+    title: "Edge Personalization 2026: <100ms Experiences with On‑Device Intelligence",
+    description:
+      "Patterns for private, real‑time personalization using edge KV, signed configs, and tiny models.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
     slug: "ai-reliable-rag-ops-2026",
     title: "Reliable RAG Ops 2026: Freshness Windows, Drift Alerts, Budgets",
     description: "Keep RAG quality high with TTL windows, drift detectors, and KPI‑tied quality budgets.",
