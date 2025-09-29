@@ -28,3 +28,4 @@ core
 
 # TypeScript build info
 *.tsbuildinfo
+/.pnpm-home
