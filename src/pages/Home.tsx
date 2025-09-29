@@ -157,6 +157,14 @@ const Home = () => {
         </section>
 
         {/* Latest Insights Section */}
+        {/* Promo ribbon for new content */}
+        <div className="container mx-auto px-6">
+          <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
+            <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            New: Platform Engineering blueprint and GenAI guardrails just dropped — read now in Insights
+            <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
+          </div>
+        </div>
         <LatestInsights />
 
         {/* New Services Showcase */}
@@ -364,8 +372,8 @@ const Home = () => {
             <h3 className="text-3xl font-bold text-white">Latest Insights</h3>
             <Link to="/insights" className="text-zion-cyan hover:underline">View all</Link>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {latestInsights.slice(0, 3).map((item) => (
+          <div className="grid md:grid-cols-4 gap-6">
+            {latestInsights.slice(0, 4).map((item) => (
               <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <div className="p-6">
                   <div className="text-xs uppercase tracking-wider text-zion-cyan mb-2">{item.category}</div>

@@ -78,6 +78,14 @@ const Home = React.memo(function Home(): React.JSX.Element {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+				{/* Promo ribbon for new content */}
+				<div className="container mx-auto px-4 pt-4">
+					<div className="mb-6 rounded-full bg-emerald-600/10 border border-emerald-600/30 px-5 py-3 text-emerald-700 text-sm inline-flex items-center gap-2">
+						<span className="inline-flex h-2 w-2 rounded-full bg-emerald-600 animate-pulse"></span>
+						<span>New: Platform Engineering blueprint and GenAI guardrails now available</span>
+						<Link href="/blog" className="text-emerald-700 underline underline-offset-4 hover:text-emerald-900">Read</Link>
+					</div>
+				</div>
 				{/* Hero Section */}
 				<section ref={heroRef} className="pt-20 pb-16">
 					<div className="container mx-auto px-4 max-w-7xl">

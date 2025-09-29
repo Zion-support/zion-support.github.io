@@ -9,6 +9,24 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "platform-blueprints-golden-paths",
+    title: "Golden Paths That Actually Get Used",
+    summary:
+      "How to design developer workflows, templates, and scorecards that reduce cognitive load.",
+    category: "Platform Engineering",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "llm-guardrails-prod",
+    title: "Shipping LLM Guardrails Without Killing Velocity",
+    summary:
+      "Policy-as-code, prompt hygiene, and eval gates that scale from POC to prod.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 7,
+  },
+  {
     id: "edge-ai-case-studies",
     title: "How Edge AI Is Powering Real‑Time Experiences",
     summary:

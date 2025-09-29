@@ -5,7 +5,7 @@ import { latestInsights } from "../content/insights";
 
 const LatestInsights: React.FC = () => {
   const insights = latestInsights
-    .slice(0, 3)
+    .slice(0, 4)
     .map((item) => ({
       id: item.id,
       title: item.title,
@@ -31,8 +31,8 @@ const LatestInsights: React.FC = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {latestInsights.slice(0, 3).map((item) => (
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {latestInsights.slice(0, 4).map((item) => (
             <div
               key={item.id}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"

@@ -50,6 +50,22 @@ export const posts: BlogPost[] = [
     readTime: "9 min read",
   },
   {
+    slug: "platform-engineering-blueprint-2025",
+    title: "A Practical Blueprint for Platform Engineering in 2025",
+    description:
+      "Capabilities, golden paths, and scorecards to accelerate delivery without sacrificing autonomy.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-29",
+  },
+  {
+    slug: "genai-evals-realworld",
+    title: "Real‑World GenAI Evals: From Offline Suites to Online Guardrails",
+    description:
+      "Patterns for evaluation harnesses, drift detection, and policy testing that scale with usage.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+  },
+  {
     slug: "ai-roadmaps",
     title: "Designing High-Impact AI Roadmaps",
     description:
