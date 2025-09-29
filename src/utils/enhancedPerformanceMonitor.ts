@@ -44,8 +44,6 @@ class EnhancedPerformanceMonitor {
 
     this.isMonitoring = true;
     this.setupPerformanceObservers();
-    this.startPeriodicReporting();
-    this.monitorResourceLoading();
     this.monitorUserInteractions();
     this.monitorMemoryUsage();
 
