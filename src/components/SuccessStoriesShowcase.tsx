@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, TrendingUp, Users, Target, Award, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { featuredCaseStudies } from '../content/case-studies';
+import { caseStudies } from '../content/case-studies';
 
 const SuccessStoriesShowcase: React.FC = () => {
   return (
@@ -53,7 +53,7 @@ const SuccessStoriesShowcase: React.FC = () => {
 
         {/* Case Studies Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {featuredCaseStudies.map((study) => (
+          {caseStudies.map((study) => (
             <div
               key={study.id}
               className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 hover:scale-105"
