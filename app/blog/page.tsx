@@ -54,6 +54,24 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="AI Agent Observability 2026: Metrics, Traces, and Guardrails"
+            excerpt="Instrument agents with traces, evals, and policy guardrails to ship reliable autonomy."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="12 min"
+            image="🔎"
+            href="/blog/ai-agent-observability-2026"
+          />
+          <BlogPost
+            title="Customer Journey AI 2026: Real-Time Personalization with CDPs"
+            excerpt="Event-driven CDPs + agents for next-best-action that lifts conversion 20–35%."
+            date="September 29, 2025"
+            category="Personalization"
+            readTime="14 min"
+            image="🛒"
+            href="/blog/ai-customer-journey-ai-2026"
+          />
+          <BlogPost
             title="Agentic Workflow Orchestration 2026: Reliable AI Workflows"
             excerpt="Orchestrate multi-step agents with guardrails, approvals, and observability for measurable ROI."
             date="October 9, 2025"
