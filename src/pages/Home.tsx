@@ -127,10 +127,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: Agent Safety Budgets + Privacy‑First Telemetry"
-          description="Ship fast without surprises. Keep signals rich and PII‑safe with scoped telemetry."
+          title="🚀 Fresh: GenAI Platform Blueprint + Hybrid Vector Search"
+          description="Ship weekly with guardrails. Cut retrieval cost 40%+ with hybrid and freshness."
           ctaText="Read the latest"
-          ctaLink="/blog/agent-safety-budgets-2026"
+          ctaLink="/blog/genai-platform-blueprint-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -468,8 +468,8 @@ const Home = () => {
               {[...latestInsights.slice(0, 2), ...featuredInsights.slice(0, 1)].map((item) => (
               <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
                     {"featured" in item && (item as any).featured && (
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED

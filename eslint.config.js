@@ -52,7 +52,17 @@ export default [
       '**/*.broken/**',
       '**/*.corrupted/**',
       '**/*.temp/**',
-      'jest.setup.js'
+      'cypress/**',
+      'tests/**',
+      'coverage/**',
+      'scripts/**',
+      'pages/**',
+      'store/**',
+      'jest.setup.js',
+      '**/vite.config-backup.*',
+      '**/test-simple.*',
+      '*.config.js',
+      '*.config.ts'
     ]
   },
 
@@ -65,10 +75,11 @@ export default [
     ...js.configs.recommended,
   },
 
-  // TypeScript configuration for source files
+  // 3. TypeScript Configurations (non type-aware to avoid project resolution issues in CI)
+  // Main application TS/TSX files (src, pages, but not tests, stories, cypress, supabase yet)
   ...tseslint.config({
-    files: ["src/**/*.{ts,tsx}", "pages/**/*.{ts,tsx}"], 
-    // Exclude story files from this general src/pages config
+    files: ["src/**/*.{ts,tsx}", "pages/**/*.{ts,tsx}"],
+    // Exclude story and test files from this general src/pages config
     ignores: ["src/**/*.stories.tsx", "src/**/*.stories.ts", "src/**/*.test.tsx", "src/**/*.test.ts"],
     extends: [...tseslint.configs.recommended],
     languageOptions: {

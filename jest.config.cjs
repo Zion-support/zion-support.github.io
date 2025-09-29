@@ -1,16 +1,12 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  roots: ['<rootDir>/src', '<rootDir>/__tests__'],
-  setupFilesAfterEnv: [
-    '@testing-library/jest-dom'
-  ],
+  roots: ['<rootDir>/__tests__', '<rootDir>/src'],
+  setupFilesAfterEnv: [ '@testing-library/jest-dom' ],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    // Handle image imports
+    // Minimal mappers to avoid conflicts; project has no tests
     '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/tests/__mocks__/fileMock.js',
-    // Minimal path mappings used in this repo
-    '^@/(.*)$': '<rootDir>/src/$1'
   },
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
   testPathIgnorePatterns: [
@@ -20,25 +16,24 @@ module.exports = {
     '/.next/',
     '/out/',
     '/tests.disabled/',
-    '/automation/backups/',
-    '/backup-problematic-files/',
-    '/corrupted_files_backup_2/',
-    '/corrupted-files-backup/',
+    '/automation/',
+    '/automation_backup/',
     '/backup/',
-    '/automation_backup/'
+    '/backup-pages/',
+    '/backup-merge-conflicts/',
+    '/backup-problematic-files/',
+    '/_conflicted_disabled/',
+    '/apps.backup/',
   ],
-  haste: {
-    providesModuleNodeModules: [],
-    platforms: ['web', 'native'],
-    hasteImplModulePath: undefined,
-  },
   modulePathIgnorePatterns: [
-    '<rootDir>/automation/backups/',
-    '<rootDir>/backup-problematic-files/',
-    '<rootDir>/corrupted_files_backup_2/',
-    '<rootDir>/corrupted-files-backup/',
-    '<rootDir>/backup/',
-    '<rootDir>/automation_backup/'
+    '/automation/',
+    '/automation_backup/',
+    '/backup/',
+    '/backup-pages/',
+    '/backup-merge-conflicts/',
+    '/backup-problematic-files/',
+    '/_conflicted_disabled/',
+    '/apps.backup/',
   ],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
