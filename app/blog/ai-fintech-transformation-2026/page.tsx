@@ -44,7 +44,7 @@ export default function AIFinTechTransformation2026Page() {
             </span>
           </div>
         </div>
-      </section>
+      </header>
 
       {/* Key Metrics */}
       <section className="py-16 bg-gray-50">
@@ -75,7 +75,7 @@ export default function AIFinTechTransformation2026Page() {
             </div>
           </div>
         </div>
-      </header>
+      </section>
 
       {/* Main Content */}
       <section className="py-16">

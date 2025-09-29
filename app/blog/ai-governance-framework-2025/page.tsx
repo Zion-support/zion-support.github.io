@@ -272,7 +272,7 @@ export default function AIGovernanceFramework2025() {
                 <li>• Risk reduction: 70%+</li>
                 <li>• Audit success rate: 100%</li>
                 <li>• Training completion: 90%+</li>
-                <li>• Incident response time: <24h</li>
+                <li>• Incident response time: &lt;24h</li>
               </ul>
             </div>
 

@@ -1,0 +1,8 @@
+
+export default function ContentValueTestimonials(): React.JSX.Element {
+  return <section aria-label="Content Value Testimonials" />;
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> origin/cursor/create-and-deploy-new-content-225b
