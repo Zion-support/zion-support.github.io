@@ -132,17 +132,10 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-<<<<<<< HEAD
           title="New: Agentic Workflows, Edge LLM Caching, ML SBOMs"
           description="Reliable multi‑step agents, sub‑100ms prompts, and secure ML supply chains."
           ctaText="Explore new content"
           ctaLink="/blog"
-=======
-          title="Fresh: Revolutionary AI Services, Quantum Computing, Zero Trust Security"
-          description="NEW: AI Autonomous Infrastructure, Quantum-AI Hybrid Computing, and Advanced Cybersecurity Solutions."
-          ctaText="Explore new services"
-          ctaLink="/services"
->>>>>>> origin/main
           featuredItems={[
             { title: "AI Autonomous Infrastructure", category: "Infrastructure", link: "/services/ai-autonomous-infrastructure-platform" },
             { title: "Quantum-AI Hybrid Computing", category: "Quantum Computing", link: "/services/quantum-ai-hybrid-computing" },
@@ -284,11 +277,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-<<<<<<< HEAD
             New: On‑Device Agents, GenAI Budgets, Secure Tools Marketplace — read now
-=======
-            New: Agent Safety Budgets, Privacy‑First Telemetry, KPI‑Linked Policy Tests — read now
->>>>>>> origin/main
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
