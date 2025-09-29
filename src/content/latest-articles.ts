@@ -188,7 +188,7 @@ export const latestArticles: LatestArticle[] = [
     tags: ["Feature Flags", "Privacy", "Edge"],
     featured: true,
     readTime: "7 min read",
-    image: "/images/privacy-first-flags-2026.jpg",
+    image: "/images/golden-paths-roi-2026.jpg",
     newBadge: true,
     trending: true
   },
@@ -208,6 +208,7 @@ export const latestArticles: LatestArticle[] = [
     newBadge: true,
     trending: false
   },
+  // deduplicated entries retained below
   {
     id: "reliable-rag-ops-2026",
     slug: "reliable-rag-ops-2026",

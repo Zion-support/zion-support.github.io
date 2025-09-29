@@ -10,11 +10,29 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "realtime-guardrails-platform-2026",
-    title: "Real‑Time Guardrails Platform 2026: KPIs, Canaries, Budgets",
-    description: "Wire policy tests to KPIs with online canaries and budgeted actions that keep velocity high.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-14",
+    slug: "ai-reliable-rag-ops-2026",
+    title: "Reliable RAG Ops 2026: Freshness Windows, Drift Alerts, Budgets",
+    description: "Keep RAG quality high with TTL windows, drift detectors, and KPI‑tied quality budgets.",
+    category: "GenAI",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "platform-engineering-kpis-2026",
+    title: "Platform Engineering KPIs 2026: Adoption, Golden Paths, SLOs",
+    description: "Scorecards that shift the convo from costs to shipped value—adoption, TTFX, SLOs.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "zero-trust-for-genai-2026",
+    title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",
+    description: "Production patterns: egress control, prompt firewalls, and signed artifacts for safe GenAI.",
+    category: "Security",
+    publishedAt: "2025-09-29",
     featured: true,
     readTime: "8 min read"
   },
