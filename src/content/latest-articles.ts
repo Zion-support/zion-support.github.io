@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-incident-budgets-2026-v2",
+    slug: "ai-incident-budgets-2026-v2",
+    title: "AI Incident Budgets v2: Close the Loop in <60s",
+    description: "Budgeted actions with approvals and rollback triggers wired to KPIs for safe, fast incident response.",
+    excerpt: "From detections to actions: measurable, rollback‑ready playbooks under explicit budgets.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-15",
+    category: "Security",
+    tags: ["Incident Response", "Automation", "Guardrails"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-incident-budgets-2026-v2.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-personalization-2026",
+    slug: "edge-personalization-2026",
+    title: "Edge Personalization 2026: Private <100ms Experiences",
+    description: "Signed configs, on‑device caches, and KV patterns for realtime personalization without PII risk.",
+    excerpt: "Design privacy‑preserving personalization with sub‑100ms latency and durable fallbacks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-15",
+    category: "Architecture",
+    tags: ["Edge", "Personalization", "Privacy"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/edge-personalization-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-security-data-leak-prevention-2026",
     slug: "ai-security-data-leak-prevention-2026",
     title: "AI Security 2026: Data‑Leak Prevention with Scoped IDs and Egress Guards",

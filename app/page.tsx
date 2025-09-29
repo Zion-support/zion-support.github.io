@@ -22,16 +22,10 @@ import {
   AIRoadmapsBanner,
   AIFinOpsBanner,
   AIMultimodalEnterpriseBanner,
-  AIEnterpriseAutomationBanner,
   AIDataAnalyticsEnterpriseBanner,
   EnterpriseTransformationSuccessBanner,
   HealthcareTransformationBanner,
   NewContent2026Banner,
-  AIAgentOrchestrationBanner,
-  AISustainabilityBanner,
-  QuantumComputingBanner,
-  SustainabilityCaseStudyBanner,
-  QuantumOptimizationBanner,
   AIOperationalExcellenceBanner,
   AIAgentObservabilityBanner,
   ManufacturingTransformationBanner,
@@ -39,15 +33,10 @@ import {
   AISecurityEnterprise2026Banner,
   AIMultimodalEnterprise2026Banner,
   AISustainabilityTransformationBanner,
-  LatestContent2026Banner
+  LatestContent2026Banner as LatestContent2026BannerAlt,
+  AIEnterpriseAutomationBlueprintBanner
 } from '../components/PromotionalBanner';
 import {
-  NewContent2026Banner as NewContent2026BannerComponent,
-  AutonomousOperationsBanner,
-  FinOpsAdvancedBanner,
-  PlatformArchitectureBanner,
-  AutonomousOperationsSuccessBanner,
-  NewContentShowcaseBanner2026,
   Latest2026ContentBanner as NewLatest2026ContentBanner,
   AIAutonomousCloudOpsBanner,
   AIFinTechTransformationBanner,
@@ -92,7 +81,7 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
-      <LatestContent2026Banner />
+      <LatestContent2026BannerAlt />
       <AISecurityEnterprise2026Banner />
       <AIMultimodalEnterprise2026Banner />
       <AISustainabilityTransformationBanner />
@@ -100,13 +89,13 @@ export default function HomePage() {
       <AIAutonomousCloudOpsBanner />
       <AIFinTechTransformationBanner />
       <AIRetailAutomationBanner />
-      <Latest2026ContentBanner />
+      <LatestContent2026BannerAlt />
       <AIOperationalExcellenceBanner />
       <AIAgentObservabilityBanner />
       <ManufacturingTransformationBanner />
       <NewContent2026Banner />
       <AIMultimodalEnterpriseBanner />
-      <AIEnterpriseAutomationBanner />
+      <AIEnterpriseAutomationBlueprintBanner />
       <AIDataAnalyticsEnterpriseBanner />
       <EnterpriseTransformationSuccessBanner />
       <HealthcareTransformationBanner />
@@ -376,15 +365,6 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
- 
->>>>>>> feature/add-more-content-and-advertise
-=======
->>>>>>> cursor/create-and-deploy-new-content-8830
             <Link href="/blog/agentic-workflow-orchestration-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -402,11 +382,6 @@ export default function HomePage() {
                 <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
               </div>
             </Link>
-<<<<<<< HEAD
- 
- 
-=======
->>>>>>> cursor/create-and-deploy-new-content-8830
             <Link href="/blog/ai-autonomous-operations-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -424,7 +399,6 @@ export default function HomePage() {
                 <div className="flex items-center text-blue-600 font-semibold">Read Complete Guide →</div>
               </div>
             </Link>
-<<<<<<< HEAD
             <Link href="/blog/ai-finops-advanced-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -439,9 +413,7 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   Master advanced AI FinOps with predictive cost optimization, automated financial reporting, and intelligent resource allocation.
                 </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Advanced Guide →
-                </div>
+                <div className="flex items-center text-blue-600 font-semibold">Read Advanced Guide →</div>
               </div>
             </Link>
             <Link href="/case-studies/ai-autonomous-operations-success-2026" className="group">
@@ -458,9 +430,7 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   See how a Fortune 500 manufacturing company achieved $15M ROI with AI autonomous operations. 99.9% uptime, 85% cost reduction.
                 </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  View Case Study →
-                </div>
+                <div className="flex items-center text-blue-600 font-semibold">View Case Study →</div>
               </div>
             </Link>
             <Link href="/blog/ai-platform-architecture-2026" className="group">
@@ -477,17 +447,10 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   Design and implement enterprise-scale AI platforms with microservices, edge computing, and autonomous scaling.
                 </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Architecture Guide →
- 
- 
- 
-=======
->>>>>>> cursor/create-and-deploy-new-content-8830
-            <Link href="/blog/ai-governance-maturity-model-2026" className="group">
-=======
+                <div className="flex items-center text-blue-600 font-semibold">Read Architecture Guide →</div>
+              </div>
+            </Link>
             <Link href="/blog/ai-autonomous-cloud-ops-2026" className="group">
->>>>>>> cursor/create-and-deploy-new-content-4c48
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -504,11 +467,7 @@ export default function HomePage() {
                 <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
               </div>
             </Link>
-<<<<<<< HEAD
-            <Link href="/blog/ai-customer-data-platforms-2026" className="group">
-=======
             <Link href="/blog/ai-fintech-transformation-2026" className="group">
->>>>>>> cursor/create-and-deploy-new-content-4c48
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -522,23 +481,10 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   95% automation, $5M+ savings, and digital banking revolution.
                 </p>
-<<<<<<< HEAD
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
- 
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/ai-trustworthy-agents-2026" className="group">
- 
-            <Link href="/blog/ai-agent-orchestration-2026" className="group">
- 
-=======
                 <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
               </div>
             </Link>
             <Link href="/blog/ai-agent-orchestration-2026" className="group">
->>>>>>> cursor/create-and-deploy-new-content-8830
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -569,9 +515,7 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   Achieve carbon-neutral AI operations with 80% energy reduction and $2M+ savings through sustainable technology.
                 </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
+                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
               </div>
             </Link>
             <Link href="/blog/ai-quantum-computing-2026" className="group">
@@ -588,12 +532,7 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.
                 </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-<<<<<<< HEAD
-                  Read Article →
-=======
-                  Read Guide →
-                </div>
+                <div className="flex items-center text-blue-600 font-semibold">Read Guide →</div>
               </div>
             </Link>
             <Link href="/case-studies/ai-retail-automation-2026" className="group">
@@ -610,10 +549,7 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   See how a Fortune 500 retailer achieved 98% automation, 300% productivity gains, and $8M annual ROI.
                 </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  View Case Study →
->>>>>>> cursor/create-and-deploy-new-content-4c48
-                </div>
+                <div className="flex items-center text-blue-600 font-semibold">View Case Study →</div>
               </div>
             </Link>
             <Link href="/blog/ai-enterprise-automation-2026" className="group">
@@ -649,9 +585,7 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   See how a Fortune 500 company achieved $10M ROI with comprehensive AI transformation. 95% automation, 300% productivity gains.
                 </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  View Case Study →
-                </div>
+                <div className="flex items-center text-blue-600 font-semibold">View Case Study →</div>
               </div>
             </Link>
             <Link href="/blog/ai-governance-framework-2025" className="group">

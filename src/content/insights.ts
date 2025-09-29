@@ -10,6 +10,22 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "ai-incident-budgets-2026-v2",
+    title: "AI Incident Budgets v2: Close the Loop in <60s",
+    summary: "Budget actions with approvals and rollback triggers tied to KPIs for fast, safe containment.",
+    category: "Security",
+    date: "2025-10-15",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-personalization-2026",
+    title: "Edge Personalization 2026: Private <100ms Experiences",
+    summary: "Signed configs, KV caches, and on‑device filters for realtime, privacy‑preserving UX.",
+    category: "Architecture",
+    date: "2025-10-15",
+    readMinutes: 7,
+  },
+  {
     id: "privacy-first-flags-quickstart-2026",
     title: "Privacy‑First Flags Quickstart 2026",
     summary: "Roll out features globally with scoped IDs, edge filters, and health probes.",
