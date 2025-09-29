@@ -123,7 +123,9 @@ class AccessibilityEnhancer {
 
   private setupPerformanceMonitoring(): void {
     if (!this.config.screenReaderSupport) return;
-    
+    if (typeof window === 'undefined' || typeof (globalThis as any).PerformanceObserver === 'undefined') {
+      return;
+    }
     try {
       this.performanceObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -266,7 +268,8 @@ class AccessibilityEnhancer {
     });
 
     // Monitor aria-label changes
-    const observer = new MutationObserver((mutations: MutationRecord[]) => {
+    const observer = typeof (globalThis as any).MutationObserver !== 'undefined'
+      ? new MutationObserver((mutations: MutationRecord[]) => {
       mutations.forEach((mutation) => {
         if (mutation.type === 'attributes' && mutation.attributeName === 'aria-label') {
           const element = mutation.target as Element;
@@ -276,12 +279,14 @@ class AccessibilityEnhancer {
           }
         }
       });
-    });
-
-    observer.observe(document.body, {
-      attributes: true,
-      attributeFilter: ['aria-label', 'aria-labelledby', 'role']
-    });
+      })
+      : null;
+    if (observer) {
+      observer.observe(document.body, {
+        attributes: true,
+        attributeFilter: ['aria-label', 'aria-labelledby', 'role']
+      });
+    }
   }
 
   private handleMenuNavigation(event: KeyboardEvent, menu: HTMLElement): void {
