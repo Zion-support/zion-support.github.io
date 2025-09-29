@@ -1,16 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { Clock, ArrowRight, CheckCircle, TrendingUp, Rocket, Satellite, Zap } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Space Tech Revolution 2026: Autonomous Space Operations & Deep Space Intelligence',
   description: 'Revolutionary AI space technology for autonomous missions, deep space exploration, and orbital operations with 99.9% reliability and $500M+ savings.',
   keywords: 'AI space technology, autonomous space operations, deep space exploration, satellite AI, space missions, 2026',
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1272
 };
 
 export default function AISpaceTechRevolution2026() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
+<<<<<<< HEAD
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-center gap-2 mb-4">
@@ -19,8 +23,12 @@ export default function AISpaceTechRevolution2026() {
           </span>
           <span className="bg-gradient-to-r from-orange-400 to-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
             REVOLUTIONARY
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1272
           </span>
+          <span className="text-gray-500 text-sm">18 min read</span>
         </div>
+<<<<<<< HEAD
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
           AI Space Tech Revolution 2026: Autonomous Space Operations & Deep Space Intelligence
         </h1>
@@ -605,6 +613,8 @@ class AutonomousSpaceMission {
               </p>
             </div>
           </Link>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1272
         </div>
       </section>
     </div>

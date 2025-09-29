@@ -2,14 +2,18 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
+<<<<<<< HEAD
   title: 'AI Zero Trust Security 2026: Complete Enterprise Implementation Guide',
   description: 'Implement zero-trust security architecture with AI-powered threat detection and automated response. 99.7% threat detection accuracy and 24/7 protection.',
   keywords: 'AI zero trust security, enterprise security, threat detection, automated response, cybersecurity',
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1272
 };
 
 export default function AIZeroTrustSecurity2026() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
+<<<<<<< HEAD
       <div className="mb-8">
         <Link href="/blog" className="text-blue-600 hover:text-blue-700 transition-colors">
           ← Back to Blog
@@ -52,10 +56,13 @@ export default function AIZeroTrustSecurity2026() {
             <div className="text-center">
               <div className="text-3xl font-bold text-purple-600">24/7</div>
               <div className="text-sm text-gray-600">Protection</div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1272
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="space-y-8">
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">The Zero Trust Revolution</h2>
@@ -313,20 +320,29 @@ export default function AIZeroTrustSecurity2026() {
           <h3 className="text-2xl font-bold mb-4">Secure Your Enterprise Today</h3>
           <p className="text-xl mb-6 opacity-90">
             Protect your organization with AI-powered zero trust security that adapts to evolving threats.
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1272
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Get Security Assessment
+              Explore Security Services
             </Link>
-            <a
-              href="tel:+13024640950"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
-            >
-              Call +1 302 464 0950
-            </a>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-200 pt-8">
+          <h3 className="text-xl font-bold text-gray-900 mb-4">Related Articles</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link href="/blog/ai-cybersecurity-automation-2026" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+              <h4 className="font-semibold text-gray-900">AI Cybersecurity Automation 2026</h4>
+              <p className="text-sm text-gray-600">Automated security operations and response</p>
+            </Link>
+            <Link href="/blog/ai-enterprise-security-2026" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+              <h4 className="font-semibold text-gray-900">AI Enterprise Security 2026</h4>
+              <p className="text-sm text-gray-600">Comprehensive enterprise security solutions</p>
+            </Link>
           </div>
         </div>
       </article>

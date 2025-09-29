@@ -1,13 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { Clock, ArrowRight, TrendingUp, Users, Shield, Zap, DollarSign, Target } from 'lucide-react';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1272
 
 export const metadata = {
-  title: 'AI Autonomous Enterprise Success 2026: $25M ROI Case Study | Zion Tech Group',
-  description: 'See how a Fortune 500 company achieved $25M ROI with AI autonomous enterprise systems. 99% automation, 90% cost reduction, complete business transformation.',
-  keywords: 'AI case study, autonomous enterprise, Fortune 500, ROI, automation, cost reduction, AI transformation',
-=======
   title: 'AI Autonomous Enterprise Success 2026: $25M ROI Case Study',
+<<<<<<< HEAD
   description: 'See how a Fortune 500 company achieved complete autonomous operations with $25M ROI, 95% automation, and 300% productivity gains in 18 months.',
   keywords: 'AI autonomous enterprise, case study, ROI, automation, Fortune 500, business transformation, 2026 success story',
   openGraph: {
@@ -17,11 +17,15 @@ export const metadata = {
     publishedTime: '2026-01-25T00:00:00Z',
     authors: ['Zion Tech Group'],
   },
+=======
+  description: 'See how a Fortune 500 company achieved $25M ROI with AI autonomous enterprise systems. 99.9% uptime, 90% cost reduction, and complete business transformation.',
+>>>>>>> cursor/create-and-deploy-new-content-1272
 };
 
 export default function AIAutonomousEnterpriseSuccess2026() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
+<<<<<<< HEAD
       <article className="prose prose-lg max-w-none">
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-4">
@@ -513,30 +517,18 @@ export default function AIAutonomousEnterpriseSuccess2026() {
         </div>
       </div>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1272
       <div className="mb-8">
         <div className="flex items-center gap-2 mb-4">
-          <span className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+          <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
             NEW CASE STUDY
           </span>
-          <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-            FEATURED
-          </span>
-        </div>
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-          AI Autonomous Enterprise Success 2026: $25M ROI Case Study
-        </h1>
-        <p className="text-xl text-gray-600 mb-6">
-          Discover how a Fortune 500 manufacturing company achieved $25M ROI with comprehensive AI autonomous 
-          enterprise transformation. Complete business revolution with 99.9% uptime and 90% cost reduction.
-        </p>
-        <div className="flex items-center gap-4 text-sm text-gray-500">
-          <span>📅 January 20, 2026</span>
-          <span>⏱️ 22 min read</span>
-          <span>👁️ 3.2K views</span>
         </div>
       </div>
 
       <div className="prose prose-lg max-w-none">
+<<<<<<< HEAD
         <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">📊 Executive Summary</h2>
           <p className="text-lg text-gray-700 mb-4">
@@ -1066,6 +1058,8 @@ export default function AIAutonomousEnterpriseSuccess2026() {
           <ArrowRight className="w-5 h-5 mr-2 rotate-180" />
           Back to Case Studies
         </Link>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1272
       </div>
     </div>
   );

@@ -66,11 +66,14 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+<<<<<<< HEAD
     id: "ai-incident-command-center-2026",
     slug: "ai-incident-command-center-2026",
     title: "AI Incident Command Center 2026: Faster Containment, Fewer Surprises",
     description: "Stand up a command center with budgeted actions, live traces, and rollback-ready playbooks that contain incidents in under 60 seconds.",
     excerpt: "Close the loop from detections to safe actions with KPI‑wired incident budgets and rollbacks.",
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1272
     author: "Zion Tech Group Team",
     date: "2025-10-29",
     category: "Security",
@@ -86,8 +89,11 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1272
     author: "Zion Tech Group Team",
     date: "2025-10-16",
     category: "Edge Computing",

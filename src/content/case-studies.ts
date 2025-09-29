@@ -400,6 +400,186 @@ export const caseStudies: CaseStudy[] = [
     technologies: ["Smart Grid", "Renewable Energy", "Predictive Analytics", "IoT Sensors", "Grid Automation"],
     duration: "22 months",
     imageUrl: "/images/case-studies/energy-grid-ai.jpg"
+  },
+  {
+    id: "fortune-500-retail-ai-infrastructure",
+    title: "Fortune 500 Retail AI Infrastructure Transformation",
+    company: "RetailMax Corporation",
+    industry: "E-commerce",
+    challenge: "Manual order processing taking 24 hours, high operational costs, and frequent system outages affecting customer satisfaction and revenue.",
+    solution: "Implemented AI autonomous infrastructure platform with self-healing systems, predictive analytics, and automated orchestration across all retail operations.",
+    results: [
+      "75% reduction in operational costs",
+      "99.9% system uptime achieved",
+      "Order processing time reduced from 24 hours to 2 minutes",
+      "Generated $2.3M annual savings",
+      "Improved customer satisfaction by 85%"
+    ],
+    technologies: ["AI Autonomous Infrastructure", "Self-Healing Systems", "Predictive Analytics", "Automated Orchestration", "Real-time Monitoring"],
+    duration: "12 months",
+    imageUrl: "/images/case-studies/fortune-500-retail-ai-infrastructure.jpg"
+  },
+  {
+    id: "multimodal-ai-healthcare-diagnostics",
+    title: "Multimodal AI Healthcare Diagnostics Platform",
+    company: "MedTech Innovations",
+    industry: "Healthcare",
+    challenge: "Manual diagnostic processes were slow and error-prone, with radiologists struggling to analyze multiple data types simultaneously for accurate patient diagnosis.",
+    solution: "Deployed multimodal AI platform that processes medical images, patient records, lab results, and clinical notes simultaneously for comprehensive diagnostic insights.",
+    results: [
+      "90% improvement in diagnostic accuracy",
+      "Diagnosis time reduced from 48 hours to 4 hours",
+      "Detected early-stage diseases with 98% accuracy",
+      "Freed up 70% of specialist time for complex cases",
+      "Saved $8M annually in healthcare costs"
+    ],
+    technologies: ["Multimodal AI", "Computer Vision", "NLP", "Medical Imaging", "Clinical Decision Support"],
+    duration: "14 months",
+    imageUrl: "/images/case-studies/multimodal-ai-healthcare-diagnostics.jpg"
+  },
+  {
+    id: "edge-ai-manufacturing-optimization",
+    title: "Edge AI Manufacturing Optimization Platform",
+    company: "Precision Manufacturing Corp",
+    industry: "Manufacturing",
+    challenge: "Real-time quality control and predictive maintenance were impossible with centralized AI systems, leading to production delays and quality issues.",
+    solution: "Implemented edge AI platform with real-time inference, offline capabilities, and seamless cloud synchronization for distributed manufacturing intelligence.",
+    results: [
+      "Sub-50ms real-time quality detection",
+      "65% reduction in production defects",
+      "Predictive maintenance accuracy of 95%",
+      "Reduced downtime by 80%",
+      "Generated $5.2M annual savings"
+    ],
+    technologies: ["Edge AI", "Real-time Inference", "Predictive Maintenance", "Quality Control", "Edge Computing"],
+    duration: "10 months",
+    imageUrl: "/images/case-studies/edge-ai-manufacturing-optimization.jpg"
+  },
+  {
+    id: "ai-ethics-compliance-banking",
+    title: "AI Ethics & Compliance Framework in Banking",
+    company: "SecureBank International",
+    industry: "Banking",
+    challenge: "AI systems lacked proper ethics oversight and compliance monitoring, creating regulatory risks and potential bias in financial decision-making.",
+    solution: "Implemented comprehensive AI ethics framework with automated compliance monitoring, transparency reporting, and continuous bias detection across all AI systems.",
+    results: [
+      "100% regulatory compliance achieved",
+      "95% stakeholder trust score",
+      "80% reduction in AI-related risks",
+      "90% system transparency achieved",
+      "Prevented $12M in compliance penalties"
+    ],
+    technologies: ["AI Ethics Framework", "Compliance Monitoring", "Bias Detection", "Transparency Reporting", "Risk Assessment"],
+    duration: "8 months",
+    imageUrl: "/images/case-studies/ai-ethics-compliance-banking.jpg"
+  },
+  {
+    id: "quantum-ai-financial-modeling",
+    title: "Quantum-AI Financial Modeling Platform",
+    company: "Quantum Capital Management",
+    industry: "Investment Management",
+    challenge: "Complex financial modeling for $100B portfolio was computationally limited, preventing real-time risk assessment and optimization opportunities.",
+    solution: "Deployed quantum-AI hybrid computing platform combining quantum processing with AI algorithms for exponentially faster financial modeling and risk analysis.",
+    results: [
+      "1000x faster portfolio optimization",
+      "40% improvement in risk-adjusted returns",
+      "Real-time risk assessment capabilities",
+      "Generated $25M additional annual returns",
+      "Achieved industry-leading Sharpe ratios"
+    ],
+    technologies: ["Quantum Computing", "AI Algorithms", "Financial Modeling", "Risk Analysis", "Portfolio Optimization"],
+    duration: "16 months",
+    imageUrl: "/images/case-studies/quantum-ai-financial-modeling.jpg"
+  },
+  {
+    id: "ai-performance-monitoring-telecom",
+    title: "AI Performance Monitoring for Telecom Networks",
+    company: "GlobalTel Communications",
+    industry: "Telecommunications",
+    challenge: "Network performance issues were difficult to predict and resolve, leading to service outages and customer churn across 50+ regions.",
+    solution: "Implemented comprehensive AI performance monitoring platform with real-time observability, predictive analytics, and automated incident response.",
+    results: [
+      "99.9% network reliability achieved",
+      "85% reduction in false positive alerts",
+      "70% improvement in incident resolution time",
+      "Reduced customer churn by 25%",
+      "Generated $15M in operational savings"
+    ],
+    technologies: ["AI Performance Monitoring", "Real-time Observability", "Predictive Analytics", "Network Automation", "Incident Response"],
+    duration: "12 months",
+    imageUrl: "/images/case-studies/ai-performance-monitoring-telecom.jpg"
+  },
+  {
+    id: "zero-trust-ai-security-enterprise",
+    title: "Zero Trust AI Security for Enterprise Systems",
+    company: "Enterprise Security Corp",
+    industry: "Cybersecurity",
+    challenge: "Traditional security models were insufficient for AI systems, creating vulnerabilities and compliance gaps in enterprise environments.",
+    solution: "Implemented zero trust AI security framework with comprehensive threat detection, access controls, and continuous monitoring across all AI systems.",
+    results: [
+      "99.8% threat detection accuracy",
+      "Zero security breaches in 18 months",
+      "100% compliance with security standards",
+      "Reduced incident response time by 90%",
+      "Prevented $20M in potential security losses"
+    ],
+    technologies: ["Zero Trust Security", "AI Threat Detection", "Access Controls", "Continuous Monitoring", "Security Automation"],
+    duration: "10 months",
+    imageUrl: "/images/case-studies/zero-trust-ai-security-enterprise.jpg"
+  },
+  {
+    id: "ai-data-pipeline-optimization-logistics",
+    title: "AI Data Pipeline Optimization for Global Logistics",
+    company: "GlobalLogistics Corp",
+    industry: "Logistics",
+    challenge: "Data processing bottlenecks were limiting real-time decision-making capabilities, affecting supply chain efficiency and customer satisfaction.",
+    solution: "Optimized AI data pipelines with advanced caching, parallel processing, and intelligent routing for high-performance data processing across global operations.",
+    results: [
+      "10x improvement in data processing speed",
+      "1TB/hour data throughput achieved",
+      "70% reduction in processing costs",
+      "99.9% pipeline reliability",
+      "Generated $8M in efficiency savings"
+    ],
+    technologies: ["AI Data Pipelines", "Performance Optimization", "Parallel Processing", "Intelligent Caching", "Real-time Analytics"],
+    duration: "8 months",
+    imageUrl: "/images/case-studies/ai-data-pipeline-optimization-logistics.jpg"
+  },
+  {
+    id: "enterprise-ai-governance-pharmaceuticals",
+    title: "Enterprise AI Governance for Pharmaceutical Research",
+    company: "PharmaTech Innovations",
+    industry: "Pharmaceuticals",
+    challenge: "AI model lifecycle management was fragmented across research teams, creating compliance risks and inconsistent model quality standards.",
+    solution: "Implemented enterprise AI governance platform with model lifecycle management, version control, and compliance monitoring across all research initiatives.",
+    results: [
+      "95% improvement in model quality",
+      "100% compliance with regulatory standards",
+      "5x faster model deployment",
+      "80% reduction in model-related risks",
+      "Accelerated drug discovery by 40%"
+    ],
+    technologies: ["Enterprise AI Governance", "Model Lifecycle Management", "Version Control", "Compliance Monitoring", "Quality Assurance"],
+    duration: "14 months",
+    imageUrl: "/images/case-studies/enterprise-ai-governance-pharmaceuticals.jpg"
+  },
+  {
+    id: "ai-automation-workflows-insurance",
+    title: "AI Automation Workflows for Insurance Claims",
+    company: "InsureTech Solutions",
+    industry: "Insurance",
+    challenge: "Manual claims processing was slow and error-prone, taking weeks to process simple claims and leading to customer dissatisfaction.",
+    solution: "Implemented intelligent automation workflows combining AI, RPA, and business process management for end-to-end claims processing automation.",
+    results: [
+      "Claims processing time reduced from 2 weeks to 24 hours",
+      "95% accuracy in automated claim assessment",
+      "80% reduction in processing costs",
+      "Improved customer satisfaction by 90%",
+      "Generated $12M in operational savings"
+    ],
+    technologies: ["AI Automation", "RPA", "Business Process Management", "Intelligent Workflows", "Claims Processing"],
+    duration: "6 months",
+    imageUrl: "/images/case-studies/ai-automation-workflows-insurance.jpg"
   }
 ];
 
