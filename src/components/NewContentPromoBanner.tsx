@@ -33,11 +33,11 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
-      title: "Secure ML Supply Chain 2026",
-      description: "SBOMs, lineage, and CI policy gates",
+      title: "AI Risk Mitigation Scorecards 2026",
+      description: "Owners, SLAs, and CI policy checks",
       icon: Shield,
-      link: "/blog/ai-secure-ml-supply-chain-2026",
-      category: "Security"
+      link: "/blog/ai-risk-mitigation-scorecards-2026",
+      category: "AI Governance"
     },
     {
       title: "GenAI Routing Under Budgets",
@@ -54,11 +54,11 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       category: "Platform"
     },
     {
-      title: "On‑Device Agents 2026",
-      description: "Private assistants with offline tools",
+      title: "Edge Privacy Telemetry 2026",
+      description: "Scoped IDs and on‑device redaction",
       icon: Brain,
-      link: "/blog/on-device-agents-2026",
-      category: "Edge"
+      link: "/blog/edge-privacy-telemetry-2026",
+      category: "Observability"
     }
   ];
 

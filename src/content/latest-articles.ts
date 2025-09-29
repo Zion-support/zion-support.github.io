@@ -33,6 +33,38 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+    id: "ai-risk-mitigation-scorecards-2026",
+    slug: "ai-risk-mitigation-scorecards-2026",
+    title: "AI Risk Mitigation Scorecards 2026: From Policy to Practice",
+    description: "Scorecards with owners, SLAs, and CI policy checks that drive action and outcomes.",
+    excerpt: "Make risk programs actionable with owned mitigations, policy tests, and measurable SLAs.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-14",
+    category: "AI Governance",
+    tags: ["Risk", "Scorecards", "Policy"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-risk-mitigation-scorecards-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-privacy-telemetry-2026",
+    slug: "edge-privacy-telemetry-2026",
+    title: "Edge Privacy Telemetry 2026: Scoped IDs, Local Caches, DP Noise",
+    description: "Keep insights rich and PII risk low with privacy‑first telemetry patterns at the edge.",
+    excerpt: "Privacy‑preserving analytics at the edge with scoped identifiers and on‑device redaction.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-14",
+    category: "Observability",
+    tags: ["Privacy", "Edge", "Telemetry"],
+    featured: false,
+    readTime: "6 min read",
+    image: "/images/edge-privacy-telemetry-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "genai-routing-blueprint-2026",
     slug: "genai-routing-blueprint-2026",
     title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",

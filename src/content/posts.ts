@@ -19,6 +19,24 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
+    slug: "ai-risk-mitigation-scorecards-2026",
+    title: "AI Risk Mitigation Scorecards 2026: From Policy to Practice",
+    description: "Scorecards with owners, SLAs, and CI policy checks that drive action and outcomes.",
+    category: "AI Governance",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-privacy-telemetry-2026",
+    title: "Edge Privacy Telemetry 2026: Scoped IDs, Local Caches, DP Noise",
+    description: "Keep insights rich and PII risk low with privacy‑first telemetry patterns at the edge.",
+    category: "Observability",
+    publishedAt: "2025-10-14",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
     slug: "genai-routing-blueprint-2026",
     title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",
     description: "Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.",
