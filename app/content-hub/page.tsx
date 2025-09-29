@@ -20,6 +20,7 @@ export default function ContentHub() {
         { title: 'AI Governance Maturity Model 2026', slug: '/blog/ai-governance-maturity-model-2026', readTime: '14 min', featured: true },
         { title: 'AI Autonomous Agents 2025', slug: '/blog/ai-autonomous-agents-2025', readTime: '18 min', featured: false },
         { title: 'AI Governance Framework 2025', slug: '/blog/ai-governance-framework-2025', readTime: '15 min', featured: false },
+        { title: 'AI AgentOps Blueprint 2026', slug: '/blog/ai-agentops-blueprint-2026', readTime: '14 min', featured: true },
       ]
     },
     {
@@ -43,6 +44,7 @@ export default function ContentHub() {
     {
       title: 'AI Analytics & Value',
       articles: [
+        { title: 'AI Revenue Ops Intelligence 2026', slug: '/blog/ai-revenue-ops-intelligence-2026', readTime: '12 min', featured: true },
         { title: 'AI Value Stream Analytics 2026', slug: '/blog/ai-value-stream-analytics-2026', readTime: '9 min', featured: true },
         { title: 'AI Customer Data Platforms 2026', slug: '/blog/ai-customer-data-platforms-2026', readTime: '18 min', featured: true },
         { title: 'AI Trustworthy Agents 2026', slug: '/blog/ai-trustworthy-agents-2026', readTime: '11 min', featured: true },
@@ -60,6 +62,14 @@ export default function ContentHub() {
       industry: 'Manufacturing',
       results: '$50M Savings & 99.5% Efficiency',
       slug: '/case-studies/ai-supply-chain-optimization-2026',
+      featured: true
+    },
+    {
+      title: 'AI Customer Success Automation 2026',
+      company: 'Global SaaS Platform',
+      industry: 'SaaS',
+      results: '92% Retention & $7.8M ARR Lift',
+      slug: '/case-studies/ai-customer-success-automation-2026',
       featured: true
     },
     {

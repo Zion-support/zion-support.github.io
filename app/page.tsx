@@ -81,6 +81,10 @@ export default function HomePage() {
             <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/agentic-workflow-orchestration-2026" className="underline hover:text-yellow-200">Workflow Orchestration</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-revenue-ops-intelligence-2026" className="underline hover:text-yellow-200">RevOps Intelligence</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-agentops-blueprint-2026" className="underline hover:text-yellow-200">AgentOps Blueprint</Link>
           </div>
           <Link
             href="/blog"
@@ -351,6 +355,29 @@ export default function HomePage() {
                 <Link
                   href="/case-studies/ai-finance-automation"
                   className="text-green-600 font-semibold hover:text-green-700 transition-colors"
+                >
+                  Read More →
+                </Link>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">📈</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">AI Revenue Ops Intelligence</h3>
+                  <p className="text-sm text-gray-500">Predictable growth</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Forecast pipeline with 95% accuracy, optimize pricing, and prevent churn with AI.
+              </p>
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-gray-500">Published 2026</div>
+                <Link
+                  href="/blog/ai-revenue-ops-intelligence-2026"
+                  className="text-yellow-600 font-semibold hover:text-yellow-700 transition-colors"
                 >
                   Read More →
                 </Link>
