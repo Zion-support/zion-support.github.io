@@ -34,45 +34,19 @@ const contentItems: ContentItem[] = [
     ]
   },
   {
-    id: 'genai-guardrails-2025',
-    title: 'GenAI Guardrails 2025: Practical Playbook for Reliable AI',
-    excerpt: 'Concrete patterns to ship safe, reliable, auditable GenAI systems in production.',
+    id: 'ai-synthetic-data-2026',
+    title: 'AI Synthetic Data 2026: Secure, Scalable, and Bias-Aware Generation',
+    excerpt: 'Use synthetic data to accelerate AI while protecting privacy and reducing labeling costs.',
     type: 'article',
-    readTime: '11 min read',
-    category: 'AI Reliability',
-    href: '/blog/genai-guardrails-2025',
+    readTime: '12 min read',
+    category: 'Data Platforms',
+    href: '/blog/ai-synthetic-data-2026',
     featured: true,
     publishedDate: '2025-09-29',
     metrics: [
-      { value: '24x7', label: 'Monitoring' },
-      { value: '70%', label: 'Risk Reduction' }
+      { value: '≤1%', label: 'Re-ID Risk' },
+      { value: '50–80%', label: 'Cost Reduction' }
     ]
-  },
-  {
-    id: 'edge-llm-latency-patterns',
-    title: 'Edge LLM Latency Patterns: Sub-200ms Interactions',
-    excerpt: 'Streaming, prefetch, and edge compute patterns to deliver instant-feel AI UX.',
-    type: 'article',
-    readTime: '7 min read',
-    category: 'Performance',
-    href: '/blog/edge-llm-latency-patterns',
-    featured: true,
-    publishedDate: '2025-09-29',
-    metrics: [
-      { value: '<200ms', label: 'P95 Latency' },
-      { value: '99.9%', label: 'Uptime' }
-    ]
-  },
-  {
-    id: 'ai-autonomous-infrastructure-2025',
-    title: 'AI Autonomous Infrastructure 2025: Self-Healing Systems',
-    excerpt: 'Revolutionize enterprise IT with self-healing systems and predictive maintenance.',
-    type: 'article',
-    readTime: '15 min read',
-    category: 'Autonomous AI',
-    href: '/blog/ai-autonomous-infrastructure-2025',
-    featured: false,
-    publishedDate: '2025-01-20'
   },
   {
     id: 'ai-value-stream-analytics-2026',

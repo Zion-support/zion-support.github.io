@@ -59,7 +59,17 @@ export default function HomePage() {
             <span className="hidden md:inline">•</span>
             <Link href="/blog/secure-ml-supply-chain-2026" className="underline hover:text-yellow-200">Secure ML Supply Chain 2026</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-cybersecurity-automation-2025" className="underline hover:text-yellow-200">AI Cybersecurity Automation</Link>
+            <a href="/blog/ai-customer-data-platforms-2026" className="underline hover:text-yellow-200">AI Customer Data Platforms</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-multimodal-enterprise-2026" className="underline hover:text-yellow-200">AI Multimodal Enterprise</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200">Enterprise Automation</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-trustworthy-agents-2026" className="underline hover:text-yellow-200">Trustworthy AI Agents</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-synthetic-data-2026" className="underline hover:text-yellow-200">AI Synthetic Data</a>
           </div>
           <Link
             href="/blog"
