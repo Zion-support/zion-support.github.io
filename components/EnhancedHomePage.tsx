@@ -18,10 +18,9 @@ import {
   RetailSuccessBanner,
   AIContentShowcaseBanner,
   AIRevolutionBanner,
-  AIBusinessTransformationBanner,
-  AIWorkflowAutomationBanner,
-  EnterpriseAISecurityBanner,
-  NewContentShowcaseBanner
+  AIGoToMarketBanner,
+  AIRoadmapsBanner,
+  AIFinOpsBanner
 } from './PromotionalBanner';
 import AITrends2025Banner from './AITrends2025Banner';
 import NewContentBanner from './NewContentBanner';

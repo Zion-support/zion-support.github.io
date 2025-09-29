@@ -19,19 +19,26 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
-    id: 'ai-autonomous-agents-2025',
-    title: 'AI Autonomous Agents 2025: Complete Enterprise Implementation Guide',
-    excerpt: 'Master autonomous AI agents with our comprehensive 2025 guide. Learn deployment strategies, ROI optimization, and enterprise-ready patterns.',
+    id: 'ai-roadmaps-2026',
+    title: 'AI Roadmaps 2026: What to Build Next and Why',
+    excerpt: 'A pragmatic roadmap for 2026 across CX, ops, and platforms with high-ROI bets.',
     type: 'article',
-    readTime: '18 min read',
-    category: 'AI Strategy',
-    href: '/blog/ai-autonomous-agents-2025',
+    readTime: '10 min read',
+    category: 'Strategy',
+    href: '/blog/ai-roadmaps-2026',
     featured: true,
-    publishedDate: '2025-01-25',
-    metrics: [
-      { value: '85%', label: 'Enterprise Adoption' },
-      { value: '300%', label: 'Average ROI' }
-    ]
+    publishedDate: '2025-09-29'
+  },
+  {
+    id: 'ai-finops-scorecards-2025',
+    title: 'AI FinOps Scorecards 2025: Control LLM Spend',
+    excerpt: 'Cut LLM costs 30–70% with scorecards, routing, caching, and prompt budgets.',
+    type: 'article',
+    readTime: '8 min read',
+    category: 'FinOps',
+    href: '/blog/ai-finops-scorecards-2025',
+    featured: true,
+    publishedDate: '2025-09-29'
   },
   {
     id: 'ai-governance-framework-2025',

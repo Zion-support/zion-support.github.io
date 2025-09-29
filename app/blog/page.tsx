@@ -54,46 +54,6 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
-            title="AI Autonomous Infrastructure 2025: Self-Healing Systems"
-            excerpt="Discover how autonomous AI infrastructure is revolutionizing enterprise IT with self-healing systems, predictive maintenance, and intelligent automation."
-            date="January 20, 2025"
-            category="Featured"
-            readTime="15 min"
-            image="🏗️"
-            featured={true}
-            href="/blog/ai-autonomous-infrastructure-2025"
-          />
-          <BlogPost
-            title="AI Customer Service 2025: The Future of Customer Support"
-            excerpt="Discover how AI is revolutionizing customer service with intelligent chatbots, sentiment analysis, and 24/7 availability."
-            date="January 20, 2025"
-            category="Featured"
-            readTime="12 min"
-            image="💬"
-            featured={true}
-            href="/blog/ai-customer-service-2025"
-          />
-          <BlogPost
-            title="AI Healthcare Transformation 2025: Revolutionizing Patient Care"
-            excerpt="Discover how AI is transforming healthcare with predictive diagnostics, personalized treatment plans, and automated patient care systems."
-            date="January 20, 2025"
-            category="Featured"
-            readTime="14 min"
-            image="🏥"
-            featured={true}
-            href="/blog/ai-healthcare-transformation-2025"
-          />
-          <BlogPost
-            title="AI Governance Framework 2025: Building Responsible AI Systems"
-            excerpt="Comprehensive guide to AI governance, ethical frameworks, and regulatory compliance for enterprise AI implementations in 2025."
-            date="January 20, 2025"
-            category="Featured"
-            readTime="16 min"
-            image="⚖️"
-            featured={true}
-            href="/blog/ai-governance-framework-2025"
-          />
-          <BlogPost
             title="AI Roadmaps 2026: What to Build Next and Why"
             excerpt="A pragmatic roadmap for 2026 across CX, ops, and platforms. High-ROI bets with sequencing and metrics."
             date="September 29, 2025"
