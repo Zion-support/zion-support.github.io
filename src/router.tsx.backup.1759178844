@@ -8,8 +8,12 @@ import Post from './pages/Post';
 import AIAutonomousOperations from './pages/services/AIAutonomousOperations';
 import AIPlatformArchitecture from './pages/services/AI-Platform-Architecture';
 import AIIncidentResponsePlaybooks2025 from './pages/blog/ai-incident-response-playbooks-2025/page';
+<<<<<<< HEAD
+import Post from './pages/Post';
+=======
 import CaseStudies from './pages/CaseStudies';
 import Services from './pages/Services';
+>>>>>>> origin/cursor/create-and-deploy-new-content-fb7e
 
 export const AppRouter: React.FC = () => {
   return (

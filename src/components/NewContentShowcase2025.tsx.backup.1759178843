@@ -1,6 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Calendar, Clock, Star, TrendingUp, Sparkles, Award, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { featuredNewContent, trendingNewContent } from '../content/new-content-2025-january';
+import { featuredCaseStudies, trendingCaseStudies } from '../content/new-case-studies-2025';
+import { featuredInsights, trendingInsights } from '../content/new-insights-2025';
+
+const NewContentShowcase2025: React.FC = () => {
+  const featuredBlogs = featuredNewContent.slice(0, 3);
+  const featuredStudies = featuredCaseStudies.slice(0, 3);
+  const featuredInsightsList = featuredInsights.slice(0, 3);
+=======
 import { newContent2025 } from '../content/new-content-2025';
 import { featuredNewServices } from '../content/new-services-2025';
 import { caseStudies } from '../content/case-studies';
@@ -22,6 +32,7 @@ const NewContentShowcase2025: React.FC = () => {
   const latestBlogPosts = newContent2025.filter(item => item.type === 'blog').slice(0, 4);
   const latestCaseStudies = caseStudies.slice(-3);
   const featuredServices = featuredNewServices.slice(0, 3);
+>>>>>>> origin/cursor/create-and-deploy-new-content-fb7e
 
   return (
     <div className="py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -33,11 +44,19 @@ const NewContentShowcase2025: React.FC = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
+<<<<<<< HEAD
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-8">
+            <Star className="w-4 h-4 mr-2 animate-pulse" />
+            BREAKTHROUGH 2025 CONTENT
+            <Star className="w-4 h-4 ml-2 animate-pulse" />
+=======
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 text-sm font-medium mb-4 border border-blue-500/30">
             <Sparkles className="w-4 h-4 mr-2" />
             New in 2025
             <TrendingUp className="w-4 h-4 ml-2" />
+>>>>>>> origin/cursor/create-and-deploy-new-content-fb7e
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Latest <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Innovations</span>
@@ -105,12 +124,173 @@ const NewContentShowcase2025: React.FC = () => {
                       )}
                     </div>
                   </div>
+<<<<<<< HEAD
+                )}
+
+                <Link 
+                  to={`/blog/${post.slug}`}
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center gap-2"
+                >
+                  Read Article
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        {/* New Case Studies */}
+        <div className="mb-20">
+          <div className="flex items-center justify-between mb-12">
+            <h3 className="text-3xl font-bold text-white flex items-center gap-3">
+              <Zap className="w-8 h-8 text-purple-400" />
+              Success Stories
+            </h3>
+            <Link 
+              to="/case-studies" 
+              className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 transition-colors"
+            >
+              View All Case Studies
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {featuredStudies.map((study, index) => (
+              <div 
+                key={study.id}
+                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl p-6 hover:from-white/20 hover:to-white/10 transition-all duration-300 hover:scale-105 border border-white/20"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs uppercase tracking-wider text-purple-300 bg-purple-500/20 px-3 py-1 rounded-full">
+                    {study.industry}
+                  </span>
+                  {study.featured && (
+                    <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black text-xs px-2 py-1 rounded-full font-medium">
+                      FEATURED
+                    </span>
+                  )}
+                </div>
+
+                <h4 className="text-xl font-bold text-white mb-3 line-clamp-2">
+                  {study.title}
+                </h4>
+
+                <p className="text-slate-300 mb-4 text-sm line-clamp-3">
+                  {study.excerpt}
+                </p>
+
+                <div className="mb-4">
+                  <div className="text-sm text-slate-400 mb-2">Company</div>
+                  <div className="text-lg font-bold text-cyan-400">
+                    {study.company}
+                  </div>
+                </div>
+
+                {study.results && (
+                  <div className="grid grid-cols-2 gap-2 mb-4">
+                    {study.results.slice(0, 2).map((result, idx) => (
+                      <div key={idx} className="text-center">
+                        <div className="text-lg font-bold text-green-400">{result.value}</div>
+                        <div className="text-xs text-slate-400">{result.metric}</div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                <div className="flex flex-col gap-2">
+                  <Link 
+                    to={`/case-studies/${study.slug}`}
+                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 inline-flex items-center justify-center gap-2"
+                  >
+                    Read Case Study
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* New Insights */}
+        <div>
+          <div className="flex items-center justify-between mb-12">
+            <h3 className="text-3xl font-bold text-white flex items-center gap-3">
+              <Users className="w-8 h-8 text-cyan-400" />
+              Latest Insights
+            </h3>
+            <Link 
+              to="/insights" 
+              className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-2 transition-colors"
+            >
+              View All Insights
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {featuredInsightsList.map((insight, index) => (
+              <div 
+                key={insight.id}
+                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl p-6 hover:from-white/20 hover:to-white/10 transition-all duration-300 hover:scale-105 border border-white/20"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs uppercase tracking-wider text-cyan-300 bg-cyan-500/20 px-3 py-1 rounded-full">
+                    {insight.category}
+                  </span>
+                  {insight.featured && (
+                    <span className="bg-gradient-to-r from-blue-400 to-cyan-500 text-black text-xs px-2 py-1 rounded-full font-medium">
+                      FEATURED
+                    </span>
+                  )}
+                </div>
+
+                <h4 className="text-xl font-bold text-white mb-3 line-clamp-2">
+                  {insight.title}
+                </h4>
+
+                <p className="text-slate-300 mb-4 text-sm line-clamp-3">
+                  {insight.summary}
+                </p>
+
+                <div className="flex items-center justify-between text-sm text-slate-400 mb-4">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4" />
+                    <span>{new Date(insight.date).toLocaleDateString()}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-4 h-4" />
+                    <span>{insight.readMinutes} min read</span>
+                  </div>
+                </div>
+
+                {insight.metrics && (
+                  <div className="grid grid-cols-2 gap-2 mb-4">
+                    {insight.metrics.slice(0, 2).map((metric, idx) => (
+                      <div key={idx} className="text-center">
+                        <div className="text-lg font-bold text-yellow-400">{metric.value}</div>
+                        <div className="text-xs text-slate-400">{metric.label}</div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                <div className="flex flex-col gap-2">
+                  <Link 
+                    to={`/insights/${insight.slug}`}
+                    className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 inline-flex items-center justify-center gap-2"
+                  >
+                    Read Insight
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+=======
                   
                   <div className="flex-1 flex justify-center">
                     <div className="w-64 h-64 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center border border-blue-500/30">
                       <span className="text-8xl">{banner.icon}</span>
                     </div>
                   </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-fb7e
                 </div>
               </div>
             ))}
