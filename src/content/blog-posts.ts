@@ -32,6 +32,54 @@ Operationalize GenAI with observability that tracks quality, safety, and cost. L
     image: "/images/genai-telemetry.jpg"
   },
   {
+    slug: "ai-governance-blueprint-2025",
+    title: "Enterprise AI Governance Blueprint 2025",
+    description: "Pragmatic roles, rubrics, and policy tests to ship safe AI fast.",
+    content: `
+# Enterprise AI Governance Blueprint 2025
+
+Balance speed and safety with a governance model that product teams actually adopt. Define decision rubrics, lightweight approvals, and policy tests that run in CI and production.
+
+## Core Elements
+- Ownership model across Product, Eng, Legal, and Risk
+- Policy-as-code with CI gates and runtime checks
+- Red/black canaries tied to business KPIs
+
+Adopt this blueprint to accelerate delivery while maintaining trust and compliance.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Governance",
+    tags: ["Governance", "Policy", "Compliance", "Evals"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-governance-blueprint.jpg"
+  },
+  {
+    slug: "cloud-finops-quick-wins-2025",
+    title: "Cloud FinOps Quick Wins: 30% Savings in 60 Days",
+    description: "Right-size, demand-shape, and set guardrails without slowing teams.",
+    content: `
+# Cloud FinOps Quick Wins: 30% Savings in 60 Days
+
+Practical tactics to cut spend fast while preserving developer velocity. Implement budget-aware autoscaling, requests/limits sanity checks, and environment lifecycle controls.
+
+## Playbook
+- Rightsize top 10 services by cost and idle time
+- Enforce requests/limits and QoS tiers
+- Add off-hours shutdown and TTL for preview envs
+
+Deliver measurable savings with engineering-friendly guardrails.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Cloud FinOps",
+    tags: ["FinOps", "Cloud", "Cost", "Guardrails"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/cloud-finops-quick-wins.jpg"
+  },
+  {
     slug: "feature-flags-at-the-edge-2025",
     title: "Feature Flags at the Edge: Instant, Safe Rollouts",
     description: "Design flags for global low-latency delivery, safe rollbacks, and cohort experimentation.",
