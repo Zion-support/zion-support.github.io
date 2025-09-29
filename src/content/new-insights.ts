@@ -366,6 +366,7 @@ newInsights.unshift({
     </ul>
   `
 });
+newInsights.unshift({
   id: "ai-governance-scorecards-2026",
   title: "AI Governance 2026: Scorecards Engineers Actually Use",
   summary: "Outcome‑linked guardrails with PR checks and online canaries that accelerate delivery.",

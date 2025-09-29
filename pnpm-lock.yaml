@@ -104,7 +104,7 @@ importers:
         version: 5.2.0(eslint@9.36.0(jiti@2.6.0))
       eslint-plugin-react-refresh:
         specifier: ^0.4.14
-        version: 0.4.22(eslint@9.36.0(jiti@2.6.0))
+        version: 0.4.14(eslint@9.36.0(jiti@2.6.0))
       globals:
         specifier: 13.24.0
         version: 13.24.0
@@ -2014,17 +2014,6 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-<<<<<<< HEAD
-  globals@15.15.0:
-    resolution: {integrity: sha512-7ACyT3wmyp3I61S4fG682L0VA2RGD9otkqGJIwNUMF1SWUombIIk+af1unuDYgMm082aHYwD+mzJvv9Iu8dsgg==}
-    engines: {node: '>=18'}
-
-=======
->>>>>>> origin/main
-  globals@16.4.0:
-    resolution: {integrity: sha512-ob/2LcVVaVGCYN+r14cnwnoDPUufjiYgSqRhiFD0Q1iI4Odora5RE8Iv1D24hAz5oMophRGkGz+yuvQmmUMnMw==}
-    engines: {node: '>=18'}
-
   globalthis@1.0.4:
     resolution: {integrity: sha512-DpLKbNU4WylpxJykQujfCcwYWiV/Jhm50Goo0wrVILAv5jOr9d+H+UR3PhSCD2rCCEIg0uc+G+muBTwD54JhDQ==}
     engines: {node: '>= 0.4'}
@@ -2926,7 +2915,6 @@ packages:
     engines: {node: '>=0.6.0', teleport: '>=0.2.0'}
     deprecated: |-
       You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
-
       (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
 
   querystringify@2.2.0:
@@ -5669,13 +5657,6 @@ snapshots:
       type-fest: 0.20.2
 
   globals@14.0.0: {}
-
-<<<<<<< HEAD
-  globals@15.15.0: {}
-
-=======
->>>>>>> origin/main
-  globals@16.4.0: {}
 
   globalthis@1.0.4:
     dependencies:
