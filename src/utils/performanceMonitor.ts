@@ -37,115 +37,105 @@ class PerformanceMonitor {
   }
 
   private observeWebVitals(): void {
+    if (!('PerformanceObserver' in window)) return;
+
     // First Input Delay (FID)
-    if ('PerformanceObserver' in window) {
-      try {
-        const fidObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.processingStart && entry.startTime) {
-              const fid = entry.processingStart - entry.startTime;
-              this.recordMetric({
-                name: 'FID',
-                value: fid,
-                timestamp: Date.now(),
-                id: this.generateId()
-              });
-            }
+    try {
+      const fidObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries() as any[]) {
+          if (entry.processingStart && entry.startTime) {
+            const fid = entry.processingStart - entry.startTime;
+            this.recordMetric({
+              name: 'FID',
+              value: fid,
+              timestamp: Date.now(),
+              id: this.generateId()
+            });
           }
         }
       });
-    });
-    fidObserver.observe({ entryTypes: ['first-input'] });
-    this.observers.push(fidObserver);
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      this.observers.push(fidObserver);
+    } catch (e) {
+      console.warn('FID observation failed:', e);
+    }
 
-    // CLS - Cumulative Layout Shift
-    let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
-        if (!entry.hadRecentInput && entry.value !== undefined) {
-          clsValue += entry.value;
+    // Largest Contentful Paint (LCP)
+    try {
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        if (lastEntry) {
+          this.recordMetric({
+            name: 'LCP',
+            value: lastEntry.startTime,
+            timestamp: Date.now(),
+            id: this.generateId()
+          });
         }
       });
-      this.metrics.cls = clsValue;
-    });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
-    this.observers.push(clsObserver);
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      this.observers.push(lcpObserver);
+    } catch (e) {
+      console.warn('LCP observation failed:', e);
+    }
 
-    // FCP - First Contentful Paint
-    const fcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.name === 'first-contentful-paint') {
-          this.metrics.fcp = entry.startTime;
+    // Cumulative Layout Shift (CLS)
+    try {
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries() as any[]) {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value || 0;
+          }
         }
+        this.recordMetric({
+          name: 'CLS',
+          value: clsValue,
+          timestamp: Date.now(),
+          id: this.generateId()
+        });
       });
-    });
-    fcpObserver.observe({ entryTypes: ['paint'] });
-    this.observers.push(fcpObserver);
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      this.observers.push(clsObserver);
+    } catch (e) {
+      console.warn('CLS observation failed:', e);
+    }
 
-    // TTFB - Time to First Byte
-    const ttfbObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'navigation') {
-          this.metrics.ttfb = (entry as PerformanceNavigationTiming).responseStart - (entry as PerformanceNavigationTiming).requestStart;
-        }
+    // First Contentful Paint (FCP)
+    try {
+      const fcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.name === 'first-contentful-paint') {
+            this.recordMetric({
+              name: 'FCP',
+              value: entry.startTime,
+              timestamp: Date.now(),
+              id: this.generateId()
+            });
+          }
+        });
       });
-    });
-    ttfbObserver.observe({ entryTypes: ['navigation'] });
-    this.observers.push(ttfbObserver);
+      fcpObserver.observe({ entryTypes: ['paint'] });
+      this.observers.push(fcpObserver);
+    } catch (e) {
+      console.warn('FCP observation failed:', e);
+    }
+
+    // Time to First Byte (TTFB) can also be derived via navigation observer in observeNavigationTiming
   }
 
   private observeMemoryUsage(): void {
     if ('memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       if (memory) {
-        this.metrics.memoryUsage = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
-      }
-    }
-  }
-
-      // Largest Contentful Paint (LCP)
-      try {
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          if (lastEntry) {
-            this.recordMetric({
-              name: 'LCP',
-              value: lastEntry.startTime,
-              timestamp: Date.now(),
-              id: this.generateId()
-            });
-          }
+        this.metrics.push({
+          name: 'MEMORY_USAGE',
+          value: memory.usedJSHeapSize / memory.jsHeapSizeLimit,
+          timestamp: Date.now(),
+          id: this.generateId(),
         });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-        this.observers.push(lcpObserver);
-      } catch (e) {
-        console.warn('LCP observation failed:', e);
-      }
-
-      // Cumulative Layout Shift (CLS)
-      try {
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value;
-            }
-          }
-          this.recordMetric({
-            name: 'CLS',
-            value: clsValue,
-            timestamp: Date.now(),
-            id: this.generateId()
-          });
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-        this.observers.push(clsObserver);
-      } catch (e) {
-        console.warn('CLS observation failed:', e);
       }
     }
   }

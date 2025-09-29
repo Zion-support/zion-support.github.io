@@ -1,7 +1,6 @@
 import {
   ArrowRight,
   Award,
-  Brain,
   CheckCircle,
   Globe,
   Rocket,
@@ -22,6 +21,8 @@ import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
+import ROICalculator from "../components/ROICalculator";
+import ServiceShowcase from "../components/ServiceShowcase";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
 
@@ -101,21 +102,12 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
-<<<<<<< HEAD
-
+        
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
           title="🚀 NEW: GenAI Evals, Edge Flags, Telemetry + more"
           description="Fresh featured articles just landed. Quality gates, <100ms flags, AI cost guardrails."
-=======
-        
-        {/* Content Promotion Banner */}
-        <ContentPromotionBanner
-          variant="info"
-          title="🚀 Fresh: AI Product Launch Checklist + MLOps in 45 Days"
-          description="New guides on taking AI pilots to production and shipping reliable models fast."
->>>>>>> feat/new-content-and-promo
           ctaText="Read the latest"
           ctaLink="/blog/genai-evals-in-production-2025"
           dismissible={true}
