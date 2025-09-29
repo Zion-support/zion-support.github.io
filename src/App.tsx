@@ -34,6 +34,8 @@ import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 
 // Import enhanced utilities
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
+import { advancedCachingSystem } from './utils/advancedCachingSystem';
+import { advancedAnalyticsInsights } from './utils/advancedAnalyticsInsights';
 import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
 import { enhancedSecuritySystem } from './utils/enhancedSecuritySystem';
 import { enhancedAccessibilitySystem } from './utils/enhancedAccessibilitySystem';
@@ -102,6 +104,8 @@ export default function App(): React.JSX.Element {
         // enhancedSecurityManager.initialize?.(); // Method doesn't exist
         // enhancedAccessibilityManager.initialize?.(); // Method doesn't exist
         enhancedErrorHandler.initialize();
+        advancedCachingSystem.initialize();
+        advancedAnalyticsInsights.initialize();
         enhancedPerformanceMonitor.startMonitoring();
         enhancedSEOOptimizer.initialize();
         
