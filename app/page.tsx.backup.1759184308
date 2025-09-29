@@ -76,8 +76,16 @@ import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBann
 =======
 =======
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
+<<<<<<< HEAD
+import { 
+  NewContent2026MegaSuccessBanner,
+  AICustomerExperienceRevolutionBanner,
+  AISustainabilityTransformationBanner
+} from '../components/NewContent2026MegaSuccessBanner';
+=======
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
+>>>>>>> origin/cursor/create-and-deploy-new-content-9044
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -1207,6 +1215,8 @@ export default function HomePage() {
                 </p>
                 <div className="flex items-center text-purple-600 font-semibold">
                   Read Complete Guide →
+<<<<<<< HEAD
+=======
                 </div>
               </div>
             </Link>
@@ -1221,6 +1231,7 @@ export default function HomePage() {
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Article →
                 </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-9044
               </div>
             </Link>
             <Link href="/blog/ai-agent-security-2026" className="group">

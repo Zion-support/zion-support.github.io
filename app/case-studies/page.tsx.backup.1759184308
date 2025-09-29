@@ -8,6 +8,189 @@ export const metadata = {
 };
 
 export default function CaseStudiesPage() {
+<<<<<<< HEAD
+  const caseStudies = [
+    {
+      id: 'ai-platform-enterprise-success-2026',
+      title: 'AI Platform Enterprise Success: $200M ROI Transformation',
+      company: 'Fortune 500 Manufacturing Corporation',
+      industry: 'Manufacturing',
+      challenge: 'Fragmented AI systems across 15 countries, $50M+ annual operational inefficiencies, and lack of unified data management.',
+      solution: 'Deployed unified AI platform across all operations with 50+ AI models, real-time data processing, and autonomous decision making.',
+      results: [
+        { metric: '$200M', label: 'Operational Savings' },
+        { metric: '95%', label: 'Process Automation' },
+        { metric: '99.9%', label: 'Platform Uptime' },
+        { metric: '18', label: 'Months ROI' }
+      ],
+      testimonial: {
+        quote: "The AI platform transformation delivered unprecedented results. $200M in savings with 95% automation across our global operations.",
+        author: "Sarah Johnson",
+        title: "Chief Technology Officer",
+        company: "Fortune 500 Manufacturing Corporation"
+      },
+      image: "/images/case-studies/ai-platform-enterprise-success.jpg",
+      featured: true,
+      href: "/case-studies/ai-platform-enterprise-success-2026"
+    },
+    {
+      id: 'ai-transformation-mega-success',
+      title: 'AI Transformation Mega Success: $100M ROI in 18 Months',
+      company: 'Fortune 500 Manufacturing Corp',
+      industry: 'Manufacturing',
+      challenge: 'Declining operational efficiency, high customer churn rates, and inability to scale operations.',
+      solution: 'Comprehensive AI transformation with autonomous systems, predictive analytics, and intelligent automation.',
+      results: [
+        { metric: '$100M', label: 'Total ROI' },
+        { metric: '85%', label: 'Cost Reduction' },
+        { metric: '300%', label: 'Efficiency Gain' },
+        { metric: '95%', label: 'Customer Satisfaction' }
+      ],
+      testimonial: {
+        quote: "The AI transformation delivered by Zion Tech Group exceeded all our expectations. We achieved $100M ROI in just 18 months and completely revolutionized our operations.",
+        author: "Michael Chen",
+        title: "CTO",
+        company: "Fortune 500 Manufacturing Corp"
+      },
+      image: "/images/case-studies/ai-transformation-mega-success.jpg",
+      featured: true
+    },
+    {
+      id: 'manufacturing-automation',
+      title: 'Manufacturing Revolution: 95% Defect Reduction',
+      company: 'Precision Manufacturing Corp',
+      industry: 'Manufacturing',
+      challenge: 'High defect rates and inefficient production processes were impacting quality and profitability.',
+      solution: 'Deployed edge AI systems for real-time quality control and predictive maintenance.',
+      results: [
+        { metric: '95%', label: 'Defect Reduction' },
+        { metric: '300%', label: 'Efficiency Gain' },
+        { metric: '$2.5M', label: 'Annual Savings' },
+        { metric: '99.9%', label: 'Uptime' }
+      ],
+      testimonial: {
+        quote: "Edge AI transformed our production lines completely. We've never seen such dramatic improvements in quality and efficiency.",
+        author: "Jennifer Liu",
+        title: "Operations Director",
+        company: "Precision Manufacturing Corp"
+      },
+      image: "/images/case-studies/manufacturing-automation.jpg",
+      featured: true
+    },
+    {
+      id: 'healthcare-ai-implementation',
+      title: 'Healthcare AI: 98% Patient Satisfaction',
+      company: 'MedTech Innovations',
+      industry: 'Healthcare',
+      challenge: 'Patient care coordination and administrative inefficiencies were affecting service quality.',
+      solution: 'Implemented AI virtual assistant for patient support and workflow automation for administrative tasks.',
+      results: [
+        { metric: '98%', label: 'Patient Satisfaction' },
+        { metric: '60%', label: 'Cost Reduction' },
+        { metric: '90%', label: 'Auto-Handling' },
+        { metric: '24/7', label: 'Support Coverage' }
+      ],
+      testimonial: {
+        quote: "The AI virtual assistant handles patient inquiries with incredible accuracy. Our satisfaction scores have never been higher.",
+        author: "Dr. Michael Rodriguez",
+        title: "Chief Medical Officer",
+        company: "MedTech Innovations"
+      },
+      image: "/images/case-studies/healthcare-ai.jpg",
+      featured: false
+    },
+    {
+      id: 'retail-cloud-migration',
+      title: 'Retail Cloud Migration: 45% Cost Savings',
+      company: 'RetailTech Solutions',
+      industry: 'Retail',
+      challenge: 'Legacy infrastructure was expensive to maintain and couldn't scale with business growth.',
+      solution: 'Executed seamless cloud migration with zero downtime and implemented auto-scaling.',
+      results: [
+        { metric: '45%', label: 'Cost Reduction' },
+        { metric: '0%', label: 'Downtime' },
+        { metric: '500%', label: 'Scalability' },
+        { metric: '99.9%', label: 'Reliability' }
+      ],
+      testimonial: {
+        quote: "The cloud migration was flawless. We saved 45% on infrastructure costs while improving performance dramatically.",
+        author: "David Chen",
+        title: "CTO",
+        company: "RetailTech Solutions"
+      },
+      image: "/images/case-studies/retail-cloud.jpg",
+      featured: false
+    },
+    {
+      id: 'startup-devops-automation',
+      title: 'Startup DevOps: 500% Faster Deployments',
+      company: 'Digital Dynamics',
+      industry: 'Technology',
+      challenge: 'Manual deployment processes were slowing down development and causing frequent errors.',
+      solution: 'Built comprehensive CI/CD pipeline with automated testing and deployment.',
+      results: [
+        { metric: '500%', label: 'Faster Deployments' },
+        { metric: '0', label: 'Deployment Errors' },
+        { metric: '10x', label: 'Release Velocity' },
+        { metric: '3 months', label: 'ROI Timeline' }
+      ],
+      testimonial: {
+        quote: "DevOps automation revolutionized our development process. We deploy 10x faster with zero errors.",
+        author: "Amanda Thompson",
+        title: "Engineering Manager",
+        company: "Digital Dynamics"
+      },
+      image: "/images/case-studies/devops-automation.jpg",
+      featured: false
+    },
+    {
+      id: 'enterprise-security',
+      title: 'Enterprise Security: 95% Incident Reduction',
+      company: 'Financial Services Inc',
+      industry: 'Financial Services',
+      challenge: 'Growing cybersecurity threats and compliance requirements needed comprehensive protection.',
+      solution: 'Implemented zero-trust security architecture with advanced threat detection.',
+      results: [
+        { metric: '95%', label: 'Incident Reduction' },
+        { metric: '100%', label: 'Compliance' },
+        { metric: '24/7', label: 'Monitoring' },
+        { metric: '< 15s', label: 'Threat Response' }
+      ],
+      testimonial: {
+        quote: "Our security posture is now industry-leading. We've eliminated 95% of security incidents.",
+        author: "Robert Kim",
+        title: "Security Director",
+        company: "Financial Services Inc"
+      },
+      image: "/images/case-studies/enterprise-security.jpg",
+      featured: false
+    },
+    {
+      id: 'enterprise-ai-transformation-2025',
+      title: 'Enterprise AI Transformation: $5.2M ROI in 18 Months',
+      company: 'Global Manufacturing Corp',
+      industry: 'Manufacturing',
+      challenge: 'Manual processes across operations, high costs, and supply chain inefficiencies were limiting growth.',
+      solution: 'Comprehensive AI transformation across predictive maintenance, supply chain optimization, and customer service.',
+      results: [
+        { metric: '$5.2M', label: 'Total ROI' },
+        { metric: '325%', label: 'Return on Investment' },
+        { metric: '40%', label: 'Efficiency Improvement' },
+        { metric: '95%', label: 'Customer Satisfaction' }
+      ],
+      testimonial: {
+        quote: "The AI transformation exceeded all our expectations. We achieved $5.2M ROI in just 18 months with comprehensive operational improvements across all departments.",
+        author: "Maria Rodriguez",
+        title: "CEO",
+        company: "Global Manufacturing Corp"
+      },
+      image: "/images/case-studies/enterprise-ai-transformation.jpg",
+      featured: true
+    }
+  ];
+
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-9044
   return (
     <div className="animate-fade-in">
       <div className="text-center mb-16 py-12 bg-gradient-to-br from-green-50 to-blue-50">

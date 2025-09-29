@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 'use client';
 import React, { useState } from 'react';
+>>>>>>> origin/cursor/create-and-deploy-new-content-9044
 import Link from 'next/link';
 
 export function EnhancedContentShowcase2026() {

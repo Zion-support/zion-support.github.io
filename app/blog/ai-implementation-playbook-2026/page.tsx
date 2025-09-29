@@ -83,7 +83,7 @@ export default function AIImplementationPlaybook2026() {
             <div className="mt-4 bg-blue-50 p-4 rounded-lg">
               <h4 className="font-semibold text-blue-900 mb-2">Assessment Checklist:</h4>
               <ul className="text-blue-800 space-y-1 text-sm">
-                <li>□ Data quality score > 80%</li>
+                <li>□ Data quality score &gt; 80%</li>
                 <li>□ Executive sponsorship confirmed</li>
                 <li>□ Budget allocated ($1M+ recommended)</li>
                 <li>□ Change management plan ready</li>
@@ -261,7 +261,7 @@ export default function AIImplementationPlaybook2026() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-700">Response Time</span>
-                  <span className="font-bold text-blue-600">< 1s</span>
+                  <span className="font-bold text-blue-600">&lt; 1s</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-700">Data Quality</span>
