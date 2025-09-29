@@ -10,6 +10,56 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "genai-incident-postmortems-2025",
+    title: "GenAI Incident Postmortems: Prevent Repeats with Policy Tests",
+    description:
+      "A practical guide to capturing signals, writing policy tests, and closing the loop so incidents don't recur.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "ai-cost-guardrails-2025",
+    title: "AI Cost Guardrails: Engineering Tactics That Cut Spend 30–60%",
+    description:
+      "Token budgets, route policies, and cache strategies that reduce AI costs without hurting UX.",
+    category: "AI Operations",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "platform-golden-paths-2025",
+    title: "Platform Golden Paths: Faster Delivery with Safer Defaults",
+    description:
+      "Opinionated templates, scorecards, and review rituals that boost adoption and reliability.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "production-rag-evals-2025",
+    title: "Production RAG Evals: Catch Drift Before Customers Do",
+    description:
+      "Hybrid suites, freshness checks, and online canaries that keep answers accurate over time.",
+    category: "GenAI",
+    publishedAt: "2025-10-01",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "ai-adoption-scorecard-2025",
+    title: "AI Adoption Scorecard: Executive Metrics That Drive Outcomes",
+    description:
+      "Define leading indicators, outcome metrics, and review rituals that align AI work to business value.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
     slug: "ai-sales-copilot-2025",
     title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
     description:

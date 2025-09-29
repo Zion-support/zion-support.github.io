@@ -13,6 +13,12 @@ interface SEOOptimizerProps {
   noindex?: boolean;
 }
 
+export interface SEOData {
+  title: string;
+  description: string;
+  canonical: string;
+}
+
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title,
   description,
