@@ -1,19 +1,7 @@
 /* global HTMLDivElement */
-import { AnimatePresence, motion } from 'framer-motion';
-import {
-  FileText,
-  Mic,
-  MicOff,
-  Play,
-  Plus,
-  Share,
-  Square,
-  Users,
-  Video,
-  VideoOff,
-  X
-} from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { FileText, Mic, MicOff, Play, Plus, Share, Square, Users, Video, VideoOff, X } from 'lucide-react';
 import {
   advancedCollaborationSystem,
   ChatMessage,

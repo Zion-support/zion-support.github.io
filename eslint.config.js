@@ -100,7 +100,6 @@ export default [
   "requestIdleCallback": "readonly",
   // Additional DOM types
   "Element": "readonly",
-  "HTMLElement": "readonly",
   "HTMLInputElement": "readonly",
   "HTMLTextAreaElement": "readonly",
   "HTMLSelectElement": "readonly",
