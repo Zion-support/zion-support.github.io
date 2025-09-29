@@ -398,164 +398,149 @@ export const NewContent2026Banner = () => (
   />
 );
 
-// New 2026 Operational Excellence & Observability Banners
+// Additional 2026 Content Banners
 export const AIOperationalExcellenceBanner = () => (
   <PromotionalBanner
-    message="⚙️ NEW: AI Operational Excellence 2026 - 95% Automation & $5M+ Savings with Zero-Touch Operations"
+    message="⚡ NEW: AI Operational Excellence 2026 - 90% Automation & $8M+ Savings with Intelligent Operations"
     ctaText="Read Guide"
     ctaLink="/blog/ai-operational-excellence-2026"
-    backgroundColor="bg-gradient-to-r from-emerald-600 to-teal-600"
+    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
     autoHide={true}
     hideAfter={20}
+  />
+);
+
+export const AIOperationalScorecardsBanner = () => (
+  <PromotionalBanner
+    message="📊 NEW: AI Operational Scorecards 2026 - Measure & Optimize AI Performance with Real-Time Metrics"
+    ctaText="View Scorecards"
+    ctaLink="/blog/ai-operational-scorecards-2026"
+    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const EdgeAIBlueprintBanner = () => (
+  <PromotionalBanner
+    message="🌐 NEW: Edge AI Blueprint 2026 - Sub-50ms Latency with Distributed Intelligence at Scale"
+    ctaText="Read Blueprint"
+    ctaLink="/blog/edge-ai-blueprint-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const PlatformEngineeringScorecardsBanner = () => (
+  <PromotionalBanner
+    message="🏗️ NEW: Platform Engineering Scorecards 2026 - Optimize Developer Experience & Infrastructure ROI"
+    ctaText="View Scorecards"
+    ctaLink="/blog/platform-engineering-scorecards-2026"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    autoHide={true}
+    hideAfter={18}
   />
 );
 
 export const AIAgentObservabilityBanner = () => (
   <PromotionalBanner
-    message="🔍 NEW: AI Agent Observability 2026 - 99.9% Reliability with Real-time Monitoring & 85% Faster Debugging"
+    message="🔍 NEW: AI Agent Observability 2026 - End-to-End Monitoring & Debugging for Autonomous Systems"
     ctaText="Read Guide"
     ctaLink="/blog/ai-agent-observability-2026"
-    backgroundColor="bg-gradient-to-r from-blue-600 to-cyan-600"
+    backgroundColor="bg-gradient-to-r from-teal-600 to-cyan-600"
     autoHide={true}
     hideAfter={20}
   />
 );
 
-export const ManufacturingTransformationBanner = () => (
+export const AIAgentSafetyBlueprintBanner = () => (
   <PromotionalBanner
-    message="🏭 NEW: $12M ROI Manufacturing Case Study - 98% Automation, 400% Productivity Gains & Zero-Defect Production"
-    ctaText="View Case Study"
-    ctaLink="/case-studies/ai-manufacturing-transformation-2026"
-    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
-    autoHide={true}
-    hideAfter={22}
-  />
-);
-
-export const Latest2026ContentBanner = () => (
-  <PromotionalBanner
-    message="✨ LATEST 2026: Operational Excellence, Agent Observability & Manufacturing Success - Premium AI Content"
-    ctaText="Browse Latest"
-    ctaLink="/blog"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
-    autoHide={true}
-    hideAfter={18}
-  />
-);
-
-// New 2026 Content Banners
-export const AISecurityEnterprise2026Banner = () => (
-  <PromotionalBanner
-    message="🛡️ NEW: AI Enterprise Security 2026 - Zero-Trust Architecture with 99.9% Security Compliance"
-    ctaText="Read Article"
-    ctaLink="/blog/ai-enterprise-security-2026"
-    backgroundColor="bg-gradient-to-r from-red-600 to-orange-600"
+    message="🛡️ NEW: AI Agent Safety Blueprint 2026 - Deploy Safe Autonomous Agents with 99.9% Reliability"
+    ctaText="Read Blueprint"
+    ctaLink="/blog/ai-agent-safety-blueprint-2026"
+    backgroundColor="bg-gradient-to-r from-red-600 to-pink-600"
     autoHide={true}
     hideAfter={20}
   />
 );
 
-export const AIMultimodalEnterprise2026Banner = () => (
+export const AISustainabilityGreenTechBanner = () => (
   <PromotionalBanner
-    message="🎯 NEW: AI Multimodal Enterprise 2026 - Vision, Language & Audio Integration with 40% Accuracy Improvement"
+    message="🌱 NEW: AI Sustainability & Green Tech 2026 - Reduce Carbon Footprint by 60% with Eco-Friendly AI"
     ctaText="Read Guide"
-    ctaLink="/blog/ai-multimodal-enterprise-2026"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-export const AISustainabilityTransformationBanner = () => (
-  <PromotionalBanner
-    message="🌱 NEW: AI Sustainability Case Study - 60% Carbon Reduction & $15M Savings for Fortune 500 Energy Company"
-    ctaText="View Case Study"
-    ctaLink="/case-studies/ai-sustainability-transformation-2026"
-    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-export const LatestContent2026Banner = () => (
-  <PromotionalBanner
-    message="✨ LATEST 2026: AI Security, Multimodal AI & Sustainability Transformation - Premium Enterprise Content"
-    ctaText="Explore Latest"
-    ctaLink="/blog"
-    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
-    autoHide={true}
-    hideAfter={18}
-  />
-);
-
-export const AIAgentReliabilityBanner = () => (
-  <PromotionalBanner
-    message="🛡️ NEW: AI Agent Reliability 2026 - Achieve 99.9% uptime with production-ready autonomous systems and fault tolerance"
-    ctaText="Read Guide"
-    ctaLink="/blog/ai-agent-reliability-2026"
-    backgroundColor="bg-gradient-to-r from-blue-600 to-cyan-600"
-    textColor="text-white"
-    autoHide={true}
-    hideAfter={15}
-  />
-);
-
-export const AIMultimodalIntegrationBanner = () => (
-  <PromotionalBanner
-    message="🎯 NEW: Multimodal Enterprise Integration 2026 - Unify vision, voice & text AI for 95% accuracy in context understanding"
-    ctaText="Learn More"
-    ctaLink="/blog/ai-multimodal-enterprise-integration-2026"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
-    textColor="text-white"
-    autoHide={true}
-    hideAfter={15}
-  />
-);
-
-export const AIEnterpriseAutomationBlueprintBanner = () => (
-  <PromotionalBanner
-    message="⚡ FEATURED: Enterprise Automation Blueprint 2026 - Achieve 95% process efficiency and $5M+ savings with zero-touch operations"
-    ctaText="Get Blueprint"
-    ctaLink="/blog/ai-enterprise-automation-blueprint-2026"
-    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
-    textColor="text-white"
-    autoHide={true}
-    hideAfter={15}
-  />
-);
-
-export const AIEthicalFrameworkBanner = () => (
-  <PromotionalBanner
-    message="🛡️ NEW: AI Ethical Framework 2026 - Build trustworthy AI with 90% compliance & $3M savings"
-    ctaText="Read Guide"
-    ctaLink="/blog/ai-ethical-framework-2026"
+    ctaLink="/blog/ai-sustainability-green-tech-2026"
     backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
-    textColor="text-white"
     autoHide={true}
-    hideAfter={15}
+    hideAfter={20}
   />
 );
 
-export const AIEthicsSuccessBanner = () => (
+export const ManufacturingIOTAutomationBanner = () => (
   <PromotionalBanner
-    message="📊 SUCCESS STORY: Fortune 500 achieves 90% AI compliance & $3M savings with ethical framework"
+    message="🏭 NEW: Manufacturing IoT Automation 2026 - 85% Efficiency Gains & $10M+ Savings with Smart Manufacturing"
     ctaText="View Case Study"
-    ctaLink="/case-studies/ai-ethical-framework-success-2026"
-    backgroundColor="bg-gradient-to-r from-emerald-600 to-green-600"
-    textColor="text-white"
+    ctaLink="/case-studies/manufacturing-iot-automation"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-indigo-600"
     autoHide={true}
-    hideAfter={15}
+    hideAfter={20}
   />
 );
 
-export const NewContentShowcase2026Banner = () => (
+export const SupplyChainOptimizationBanner = () => (
   <PromotionalBanner
-    message="🌟 FRESH 2026: Ethical AI Framework, Multimodal Integration & Success Stories - Premium Enterprise Content"
-    ctaText="Explore New Content"
-    ctaLink="/blog"
+    message="📦 NEW: AI Supply Chain Optimization 2026 - 90% Forecast Accuracy & $12M+ Cost Reduction"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-supply-chain-optimization-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AI2026TrendsBanner = () => (
+  <PromotionalBanner
+    message="🔮 NEW: AI Trends 2026 - The Future of Enterprise AI: Autonomous Operations, Edge Intelligence & Quantum AI"
+    ctaText="Read Trends"
+    ctaLink="/blog/ai-trends-2026"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const CognitiveComputingBanner = () => (
+  <PromotionalBanner
+    message="🧠 NEW 2026: AI Cognitive Computing - Next-generation brain-inspired intelligence with human-level reasoning and $20M+ enterprise value"
+    ctaText="Read Article"
+    ctaLink="/blog/ai-cognitive-computing-2026"
     backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
     textColor="text-white"
     autoHide={true}
-    hideAfter={18}
+    hideAfter={15}
+  />
+);
+
+export const AutonomousSystemsBanner = () => (
+  <PromotionalBanner
+    message="🤖 NEW 2026: AI Next-Generation Autonomous Systems - Self-managing enterprise infrastructure with 99.9% autonomy and $15M+ operational savings"
+    ctaText="Learn More"
+    ctaLink="/blog/ai-next-generation-autonomous-systems-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const CognitiveTransformationBanner = () => (
+  <PromotionalBanner
+    message="💡 NEW 2026: AI Cognitive Enterprise Transformation Case Study - See how GlobalTech achieved $25M ROI with human-level AI decision making"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-cognitive-enterprise-transformation-2026"
+    backgroundColor="bg-gradient-to-r from-green-600 to-blue-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
   />
 );

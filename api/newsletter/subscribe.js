@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const { withSentry } = require('../withSentry.cjs');
 const { isValidEmail } = require('../emailUtils.cjs');
 const fs = require('fs');

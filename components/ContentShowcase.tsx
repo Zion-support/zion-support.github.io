@@ -19,6 +19,133 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-autonomous-infrastructure-2026',
+    title: 'AI Autonomous Infrastructure 2026: Self-Managing Systems Guide',
+    excerpt: 'Master autonomous infrastructure with AI-driven self-healing, predictive scaling, and zero-touch operations. Achieve 99.9% uptime and 90% cost reduction.',
+    type: 'article',
+    readTime: '25 min read',
+    category: 'Infrastructure',
+    href: '/blog/ai-autonomous-infrastructure-2026',
+    featured: true,
+    publishedDate: '2026-01-20',
+    metrics: [
+      { value: '99.9%', label: 'Uptime' },
+      { value: '90%', label: 'Cost Reduction' }
+    ]
+  },
+  {
+    id: 'ai-quantum-hybrid-computing-2026',
+    title: 'AI Quantum Hybrid Computing 2026: Next-Generation Intelligence',
+    excerpt: 'Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities. Complete guide to quantum-AI hybrid systems.',
+    type: 'article',
+    readTime: '30 min read',
+    category: 'Quantum Computing',
+    href: '/blog/ai-quantum-hybrid-computing-2026',
+    featured: true,
+    publishedDate: '2026-01-20',
+    metrics: [
+      { value: '1000x', label: 'Faster' },
+      { value: '95%', label: 'Accuracy' }
+    ]
+  },
+  {
+    id: 'ai-transformation-mega-success-2026',
+    title: 'AI Transformation Mega Success 2026: $25M ROI Case Study',
+    excerpt: 'See how a Fortune 500 company achieved $25M ROI with comprehensive AI transformation. 99% automation, 90% cost reduction, and complete business revolution.',
+    type: 'case-study',
+<<<<<<< HEAD
+    category: 'Fortune 500',
+=======
+    readTime: '30 min read',
+    category: 'Case Study',
+>>>>>>> cursor/create-and-deploy-new-content-6fcc
+    href: '/case-studies/ai-transformation-mega-success-2026',
+    featured: true,
+    publishedDate: '2026-01-20',
+    metrics: [
+      { value: '$25M', label: 'ROI' },
+      { value: '99%', label: 'Automation' }
+    ]
+  },
+  {
+<<<<<<< HEAD
+    id: 'ai-zero-trust-security-2026',
+    title: 'AI Zero Trust Security 2026: Complete Implementation Guide',
+    excerpt: 'Master zero trust security with AI-powered threat detection, automated response, and comprehensive protection. Achieve 99.7% threat detection accuracy.',
+    type: 'article',
+    readTime: '28 min read',
+    category: 'Cybersecurity',
+    href: '/blog/ai-zero-trust-security-2026',
+    featured: true,
+    publishedDate: '2026-01-20',
+    metrics: [
+      { value: '99.7%', label: 'Threat Detection' },
+      { value: '0', label: 'Breaches' }
+    ]
+  },
+  {
+    id: 'ai-foundation-models-2026',
+    title: 'AI Foundation Models 2026: Complete Playbook for Enterprise',
+    excerpt: 'Master foundation models for enterprise AI. Complete guide to model selection, deployment, optimization, and governance. Achieve 95% accuracy and 80% cost reduction.',
+    type: 'article',
+    readTime: '32 min read',
+    category: 'Foundation Models',
+    href: '/blog/ai-foundation-models-2026',
+    featured: true,
+    publishedDate: '2026-01-20',
+    metrics: [
+      { value: '95%', label: 'Accuracy' },
+      { value: '80%', label: 'Cost Reduction' }
+    ]
+  },
+  {
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6fcc
+    id: 'ai-governance-maturity-model-2026',
+    title: 'AI Governance Maturity Model 2026: From Ad‑Hoc to Audit‑Ready',
+    excerpt: 'Move from ad‑hoc controls to audit‑ready AI governance with scorecards and KPIs.',
+    type: 'article',
+    readTime: '10 min read',
+    category: 'AI Strategy',
+    href: '/blog/ai-governance-maturity-model-2026',
+    featured: true,
+    publishedDate: '2025-10-15',
+    metrics: [
+      { value: '12', label: 'Scorecard Areas' },
+      { value: '90 days', label: 'To Audit‑Ready' }
+    ]
+  },
+  {
+    id: 'ai-customer-data-platforms-2026',
+    title: 'AI Customer Data Platforms 2026: Real‑Time Personalization at Scale',
+    excerpt: 'Blueprint for AI‑native CDPs powering privacy‑safe, sub‑second personalization.',
+    type: 'article',
+    readTime: '9 min read',
+    category: 'Architecture',
+    href: '/blog/ai-customer-data-platforms-2026',
+    featured: true,
+    publishedDate: '2025-10-15',
+    metrics: [
+      { value: '<1s', label: 'Personalization' },
+      { value: 'PII‑safe', label: 'Privacy' }
+    ]
+  },
+  {
+    id: 'edge-llm-latency-patterns',
+    title: 'Edge LLM Latency Patterns: Sub‑200ms Interactions',
+    excerpt: 'Streaming, prefetch, and edge compute patterns for instant‑feel AI UX.',
+    type: 'article',
+    readTime: '7 min read',
+    category: 'Edge Computing',
+    href: '/blog/edge-llm-latency-patterns',
+    featured: true,
+    publishedDate: '2025-10-15',
+    metrics: [
+      { value: '<200ms', label: 'P95 Latency' },
+      { value: '✔️', label: 'Streaming' }
+    ]
+  },
+  {
     id: 'ai-trustworthy-agents-2026',
     title: 'Trustworthy AI Agents 2026: Safety, Compliance, and Observability',
     excerpt: 'Deploy trustworthy AI agents with guardrails, approvals, and end-to-end observability.',
@@ -34,45 +161,19 @@ const contentItems: ContentItem[] = [
     ]
   },
   {
-    id: 'genai-guardrails-2025',
-    title: 'GenAI Guardrails 2025: Practical Playbook for Reliable AI',
-    excerpt: 'Concrete patterns to ship safe, reliable, auditable GenAI systems in production.',
+    id: 'ai-synthetic-data-2026',
+    title: 'AI Synthetic Data 2026: Secure, Scalable, and Bias-Aware Generation',
+    excerpt: 'Use synthetic data to accelerate AI while protecting privacy and reducing labeling costs.',
     type: 'article',
-    readTime: '11 min read',
-    category: 'AI Reliability',
-    href: '/blog/genai-guardrails-2025',
+    readTime: '12 min read',
+    category: 'Data Platforms',
+    href: '/blog/ai-synthetic-data-2026',
     featured: true,
     publishedDate: '2025-09-29',
     metrics: [
-      { value: '24x7', label: 'Monitoring' },
-      { value: '70%', label: 'Risk Reduction' }
+      { value: '≤1%', label: 'Re-ID Risk' },
+      { value: '50–80%', label: 'Cost Reduction' }
     ]
-  },
-  {
-    id: 'edge-llm-latency-patterns',
-    title: 'Edge LLM Latency Patterns: Sub-200ms Interactions',
-    excerpt: 'Streaming, prefetch, and edge compute patterns to deliver instant-feel AI UX.',
-    type: 'article',
-    readTime: '7 min read',
-    category: 'Performance',
-    href: '/blog/edge-llm-latency-patterns',
-    featured: true,
-    publishedDate: '2025-09-29',
-    metrics: [
-      { value: '<200ms', label: 'P95 Latency' },
-      { value: '99.9%', label: 'Uptime' }
-    ]
-  },
-  {
-    id: 'ai-autonomous-infrastructure-2025',
-    title: 'AI Autonomous Infrastructure 2025: Self-Healing Systems',
-    excerpt: 'Revolutionize enterprise IT with self-healing systems and predictive maintenance.',
-    type: 'article',
-    readTime: '15 min read',
-    category: 'Autonomous AI',
-    href: '/blog/ai-autonomous-infrastructure-2025',
-    featured: false,
-    publishedDate: '2025-01-20'
   },
   {
     id: 'ai-value-stream-analytics-2026',

@@ -1,11 +1,4 @@
-import React from 'react';
 
 export default function EnhancedTestimonials(): React.JSX.Element {
-<<<<<<< HEAD
-	return <section aria-label="Enhanced Testimonials" />;
-=======
-  return <section />;
->>>>>>> origin/main
+  return <section aria-label="Enhanced Testimonials" />;
 }
-
-export default EnhancedTestimonials;

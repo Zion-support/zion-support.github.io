@@ -10,20 +10,20 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
-    id: "agent-blue-green-field-notes",
-    title: "Field Notes: Blue‑Green Releases for Agent Workflows",
-    summary: "Lessons from shipping agent updates with live traces, budgets, and fast rollbacks.",
-    category: "GenAI",
+    id: "ai-incident-budgets-2026-v2",
+    title: "AI Incident Budgets v2: Close the Loop in <60s",
+    summary: "Budget actions with approvals and rollback triggers tied to KPIs for fast, safe containment.",
+    category: "Security",
     date: "2025-10-15",
     readMinutes: 6,
   },
   {
-    id: "privacy-first-analytics-checklist-2026",
-    title: "Privacy‑First Analytics Checklist 2026",
-    summary: "Scoped IDs, field filters, and TTLs to keep insights high and risk low.",
-    category: "Observability",
+    id: "edge-personalization-2026",
+    title: "Edge Personalization 2026: Private <100ms Experiences",
+    summary: "Signed configs, KV caches, and on‑device filters for realtime, privacy‑preserving UX.",
+    category: "Architecture",
     date: "2025-10-15",
-    readMinutes: 5,
+    readMinutes: 7,
   },
   {
     id: "privacy-first-flags-quickstart-2026",

@@ -19,6 +19,24 @@ export interface EnhancedPromotionalBanner {
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   {
+    id: 'fresh-oct-15-2025',
+    message: '✨ New: Incident Budgets v2 + Edge Personalization 2026',
+    ctaText: 'Read now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0,
+    variant: 'info',
+    icon: '🆕',
+    animation: 'fade-in',
+    badge: 'NEW',
+    featured: true
+  },
+  {
     id: 'fresh-oct-14-2025',
     message: '✨ New: Risk Budgets 2026 • Privacy‑First Flags 2026 • Reliable Agent Actions',
     ctaText: 'Read now',
@@ -52,6 +70,24 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🤖',
     animation: 'pulse',
     badge: 'LAUNCH SPECIAL',
+    featured: true
+  },
+  {
+    id: 'fresh-sept-2025-content',
+    message: '📚 NEW: Serverless Inference Cost Playbook + Agent Safety Budgets (2025)',
+    ctaText: 'Read Now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: false,
+    hideAfter: 0,
+    active: true,
+    priority: 0,
+    variant: 'special',
+    icon: '✨',
+    animation: 'pulse',
+    badge: 'NEW',
     featured: true
   },
   {

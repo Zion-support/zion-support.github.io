@@ -34,6 +34,8 @@ import NewContentShowcase2025 from "../components/NewContentShowcase2025";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
+import Latest2026ContentBanner from "../components/Latest2026ContentBanner";
+import NewServices2026Banner from "../components/NewServices2026Banner";
 import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
@@ -126,24 +128,50 @@ const Home = () => {
           />
         ))}
         
+        {/* New 2026 Content Banner */}
+        <Latest2026ContentBanner 
+          className="border-b border-white/10" 
+          variant="hero"
+          autoRotate
+          rotationInterval={8000}
+        />
+        
         <NewContentAnnouncement />
+        {/* New Promo for fresh article */}
+        <div className="border-b border-white/10">
+          <div className="container mx-auto px-6">
+            <div className="mt-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 p-4 text-white flex items-center justify-between">
+              <div className="mr-4">
+                <div className="text-sm font-semibold">🚀 New: Quality‑Tiered GenAI Routing</div>
+                <div className="text-xs text-white/90">Control cost with model tiers, caches, and eval signals—without hurting SLAs.</div>
+              </div>
+              <Link to="/blog/genai-routing-under-budgets-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">
+                Read now
+              </Link>
+            </div>
+          </div>
+        </div>
         <LatestContentBanner 
           className="border-b border-white/10" 
           variant="info"
           autoRotate
           rotationInterval={7000}
         />
+        
+        {/* New 2025 Content Showcase */}
+        <NewContentShowcase2025 />
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Agent Blue‑Green Releases, Edge LLM Caching, Platform SLO Guardrails"
-          description="Ship agents safely with instant rollback, keep prompts fast at the edge, and prevent regressions with SLO scorecards."
+          title="New: Governance Quickstart, Privacy‑First Agents, Inference Cost Playbook"
+          description="Ship fast with KPI‑linked scorecards, private assistants, and budgeted inference."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Agent Blue‑Green Releases 2026", category: "GenAI", link: "/blog/agent-blue-green-releases-2026" },
-            { title: "Edge LLM Safety Caching 2026", category: "Architecture", link: "/blog/edge-llm-safety-caching-2026" },
-            { title: "Platform SLO Guardrails 2026", category: "Platform Engineering", link: "/blog/platform-slo-guardrails-2026" }
+            { title: "AI Governance Scorecards Quickstart 2026", category: "AI Strategy", link: "/blog/ai-governance-scorecards-quickstart-2026" },
+            { title: "Privacy‑First Agents 2026", category: "AI Security", link: "/blog/privacy-first-agents-2026" },
+            { title: "Serverless Inference Cost Playbook 2026", category: "GenAI", link: "/blog/serverless-inference-cost-playbook-2026" },
+            { title: "AI Platform Scorecards ROI 2026", category: "AI Strategy", link: "/blog/ai-platform-scorecards-roi-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -157,7 +185,13 @@ const Home = () => {
         
         {/* New Articles Promotional Banner */}
         <div className="container mx-auto px-6 mt-6">
-          <NewArticlesPromoBanner variant="premium" showCount={3} />
+          <NewArticlesPromoBanner 
+            variant="premium" 
+            showCount={3} 
+            featuredOnly={true}
+            title="Brand New: Routing Blueprint, Secure ML Chain, Golden Paths ROI"
+            description="Cut costs 40–70% with smart routing, secure your ML supply chain, and prove platform value."
+          />
         </div>
         
         {/* New Services Promotional Banner */}
@@ -208,6 +242,41 @@ const Home = () => {
               Transform your business with revolutionary AI solutions that self-heal, optimize, and scale automatically. 
               Join 500+ companies achieving unprecedented results!
             </p>
+
+            {/* New Content Announcement */}
+            <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 rounded-xl p-6 mb-8 animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />
+                <span className="text-lg font-bold text-blue-400">🔥 BREAKTHROUGH CONTENT ALERT</span>
+                <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                📚 Just Published: 3 Revolutionary Articles on AI Autonomous Infrastructure, Quantum-AI Hybrid Computing & AI Content Automation
+              </p>
+              <p className="text-zion-slate-light text-sm mb-4">
+                Discover breakthrough insights on self-healing systems, quantum computing applications, and content automation that scales production 10x.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  to="/blog"
+                  className="bg-blue-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-600 transition-colors text-center"
+                >
+                  Read Latest Articles
+                </Link>
+                <Link
+                  to="/case-studies"
+                  className="border border-blue-400 text-blue-400 px-6 py-2 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-colors text-center"
+                >
+                  View Success Stories
+                </Link>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2 justify-center">
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">AI Infrastructure</span>
+                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">Quantum Computing</span>
+                <span className="bg-green-100/20 text-green-200 px-3 py-1 rounded-full text-xs font-medium border border-green-300/20">Content Automation</span>
+                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">Case Studies</span>
+              </div>
+            </div>
 
             {/* Special Promotion Banner */}
             <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-xl p-6 mb-8 animate-fade-in">
@@ -288,7 +357,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Edge LLM Caching, Governance Scorecards, Serverless Cost Playbook — read now
+            New: Governance Quickstart, Privacy‑First Agents, Inference Cost Playbook — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
@@ -524,7 +593,7 @@ const Home = () => {
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
-                    {"featured" in item && (item as any).featured && (
+                    {("featured" in item) && (item as any).featured && (
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>
@@ -549,7 +618,7 @@ const Home = () => {
                 <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Fresh: Edge LLM Caching, KPI Scorecards, Serverless Cost Playbook
+                Fresh: Governance Quickstart, Privacy‑First Agents, Inference Cost Playbook
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles & Insights
@@ -565,7 +634,11 @@ const Home = () => {
                 <div key={insight.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs uppercase tracking-wider text-indigo-300">{insight.category}</span>
-                    {insight.featured && (
+<<<<<<< HEAD
+                    {'featured' in insight && (insight as any).featured && (
+=======
+                    {("featured" in insight) && (insight as any).featured && (
+>>>>>>> cursor/create-and-deploy-new-content-a3c6
                       <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>
@@ -825,7 +898,7 @@ const Home = () => {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
-                  <p className="text-white/90">New: Autonomous Incident Runbooks, Privacy‑First Feature Flags, Platform ROI Scorecards Quickstart.</p>
+              <p className="text-white/90">New: AI SRE Runbooks 2026, Real‑Time Evals, and Cost‑Aware Agents.</p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
                   Read the latest
@@ -856,18 +929,32 @@ const Home = () => {
         <section className="py-20 bg-gradient-to-r from-emerald-50 to-teal-50 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-100/20 to-teal-100/20"></div>
           <div className="container mx-auto px-6 relative z-10">
-            <NewServicesPromoBanner variant="premium" showCount={3} featuredOnly={true} />
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest AI Services</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Discover our newest AI-powered solutions designed to accelerate your digital transformation.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* New Services Showcase */}
+        <NewServices2026Banner 
+          variant="showcase"
+          showCount={6}
+        />
         <NewServicesShowcase />
 
         {/* Latest Articles Promotional Section */}
         <section className="py-20 bg-gradient-to-r from-purple-50 to-indigo-50 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-100/20 to-indigo-100/20"></div>
           <div className="container mx-auto px-6 relative z-10">
-            <NewArticlesPromoBanner variant="featured" showCount={4} autoRotate={true} />
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Articles & Insights</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Stay ahead with our latest AI insights, technical guides, and industry best practices.
+              </p>
+            </div>
           </div>
         </section>
 

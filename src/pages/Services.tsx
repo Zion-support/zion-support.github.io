@@ -7,4 +7,3 @@ export default function Services(): React.JSX.Element {
 		</main>
 	);
 }
- 

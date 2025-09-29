@@ -38,10 +38,7 @@
     "types": ["react", "react-dom", "jest", "node"]
   },
   "include": [
-    "src/App.tsx",
-    "src/router.tsx",
-    "src/main.tsx",
-    "src/utils/performanceMonitor.ts",
+    "src/**/*",
     "index.html"
   ],
   "exclude": [
