@@ -1,23 +1,22 @@
-import React from 'react';
 import {
   ArrowRight,
-  Shield,
-  Zap,
-  Users,
-  Globe,
-  Star,
   CheckCircle,
-  Sparkles,
+  Globe,
   Rocket,
+  Shield,
+  Sparkles,
+  Star,
   Target,
+  Users,
+  Zap,
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import Header from "../components/Header";
-import ModernFeatures from "../components/ModernFeatures";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
-import { latestInsights } from "../content/insights";
+import Header from "../components/Header";
 import LatestInsights from "../components/LatestInsights";
+import ModernFeatures from "../components/ModernFeatures";
+import { latestInsights } from "../content/insights";
 
 const Home = () => {
   return (
