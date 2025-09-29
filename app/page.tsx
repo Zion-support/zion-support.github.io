@@ -49,7 +49,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              to="/services"
+              href="/services"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore Our Services
@@ -510,6 +510,7 @@ export default function HomePage() {
       <AnalyticsPlatformBanner />
       <HealthTechSuccessBanner />
       <ComprehensiveAIBanner />
+      <NewContentBanner />
 
       {/* CTA Section */}
       <section className="py-20 bg-white">
@@ -582,7 +583,7 @@ function FeaturedServiceCard({
         ))}
       </ul>
       <Link
-        to={href}
+        href={href}
         className={`block w-full text-center py-2 px-4 rounded-lg font-semibold transition-colors ${
           popular
             ? 'bg-blue-600 text-white hover:bg-blue-700'
