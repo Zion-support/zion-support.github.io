@@ -31,6 +31,9 @@ import NewContentShowcase2025 from "../components/NewContentShowcase2025";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
+import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
+import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
+import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
 import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
@@ -138,6 +141,7 @@ const Home = () => {
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
+            { title: "GenAI Security Blueprint 2025", category: "Security", link: "/blog/genai-security-blueprint-2025" },
             { title: "AI Risk Budgets 2026", category: "AI Governance", link: "/blog/ai-risk-budgets-2026" },
             { title: "Privacy‑Preserving Agents 2026", category: "AI Security", link: "/blog/privacy-preserving-agents-2026" },
             { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" },
