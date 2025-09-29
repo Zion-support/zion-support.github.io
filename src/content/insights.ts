@@ -9,6 +9,51 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "autonomous-ops-slo-controllers",
+    title: "Autonomous Ops: SLO‑Driven Controllers That Keep You Green",
+    summary:
+      "Design controllers that watch SLOs and take safe corrective action automatically, with auditability.",
+    category: "AI & Automation",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "cyber-ai-behavioral-analytics",
+    title: "Cyber AI: Behavioral Analytics that Cut False Positives 60%",
+    summary:
+      "Pair signals, context windows, and human feedback to harden detections and accelerate triage.",
+    category: "Security",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "cloud-scorecards-review-rituals",
+    title: "Cloud Scorecards: Review Rituals that Scale Decision Quality",
+    summary:
+      "Lightweight, repeatable scorecards that guide capacity, resilience, and cost decisions across teams.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "genai-evals-live-canaries",
+    title: "GenAI Evals: Shipping with Live Canaries and Policy Tests",
+    summary:
+      "A practical path from notebooks to continuous evaluation with rollback triggers and budgets.",
+    category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 7,
+  },
+  {
+    id: "edge-flags-health-circuits",
+    title: "Edge Flags: Health Circuits for Instant, Safe Rollouts",
+    summary:
+      "Validation, signing, and caching strategies that make rollouts boring—even on Friday.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
     id: "genai-policy-tests-canaries",
     title: "GenAI Policy Tests: From Offline Suites to Online Canaries",
     summary:
