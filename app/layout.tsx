@@ -94,6 +94,7 @@ function Footer() {
                 <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
               </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/blog/ai-2026-mega-trends" className="block text-gray-600 hover:text-blue-600 transition-colors">🔥 AI Mega Trends 2026</Link>
               <Link href="/blog/ai-space-tech-revolution-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Space AI Revolution</Link>
               <Link href="/case-studies/ai-space-mission-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">📊 $100M Mission Success</Link>
@@ -120,6 +121,13 @@ function Footer() {
 >>>>>>> cursor/create-and-deploy-new-content-14a8
 >>>>>>> 422c70c08d297fd40c18d9463be11e41887ef324
 >>>>>>> cursor/create-and-deploy-new-content-33ef
+=======
+              <Link href="/blog/ai-space-tech-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Space AI Technology 2026</Link>
+              <Link href="/blog/ai-synthetic-data-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🔒 Synthetic Data AI 2026</Link>
+              <Link href="/blog/ai-cognitive-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🧠 Cognitive Computing 2026</Link>
+              <Link href="/blog/ai-metaverse-enterprise-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🌐 Metaverse Enterprise 2026</Link>
+              <Link href="/blog/ai-federated-learning-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🔗 Federated Learning 2026</Link>
+>>>>>>> 289767fda7022993135c62d8ba00a63d331a21e8
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Case Studies
                 <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
