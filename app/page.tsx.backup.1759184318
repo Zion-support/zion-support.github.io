@@ -74,9 +74,14 @@ import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBann
 =======
 =======
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
+<<<<<<< HEAD
+import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
+import LatestContent2026Banner from '../components/LatestContent2026Banner';
+=======
 import NewContent2026Banner from '../components/NewContent2026Banner';
 import EnhancedContentPromotion2026 from '../components/EnhancedContentPromotion2026';
 import AITrendsCalculator2026 from '../components/AITrendsCalculator2026';
+>>>>>>> origin/cursor/create-and-deploy-new-content-cbb3
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -121,6 +126,10 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
+=======
       {/* New 2026 Content Promotional Banners */}
       <NewContent2026Banner />
       <RevolutionaryAutomationBanner />
@@ -136,6 +145,7 @@ export default function HomePage() {
       <AIZeroTrustSecurityBanner />
       <AIFoundationModelsBanner />
       <LatestContent2026Banner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-cbb3
       
       {/* New 2026 Content Banners */}
       <NeuralInterfacesBanner />
@@ -332,10 +342,13 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
 =======
       {/* Enhanced Content Promotion */}
       <EnhancedContentPromotion2026 />
       
+>>>>>>> origin/cursor/create-and-deploy-new-content-cbb3
       {/* Enhanced Content Showcase */}
       <EnhancedContentShowcase2026 />
       
