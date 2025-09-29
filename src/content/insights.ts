@@ -661,6 +661,24 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 8,
   },
   {
+    id: "edge-inference-sub-100ms",
+    title: "Edge Inference Patterns for Sub‑100ms Experiences",
+    summary:
+      "On‑device models, caching, and streaming to deliver instant AI UX at the edge.",
+    category: "Architecture",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "platform-engineering-golden-paths",
+    title: "Platform Engineering Golden Paths That Unblock Teams",
+    summary:
+      "Opinionated templates, scorecards, and docs that accelerate delivery across orgs.",
+    category: "Platform Engineering",
+    date: "2025-09-27",
+    readMinutes: 9,
+  },
+  {
     id: "ai-workflow-automation-2025-trends",
     title: "AI Workflow Automation: 2025 Trends That Will Transform Business",
     summary:

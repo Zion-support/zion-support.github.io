@@ -1,6 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
+import { Route, Routes } from 'react-router-dom';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
@@ -16,7 +15,11 @@ export const AppRouter: React.FC = () => {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/services" element={<Services />} />
+      <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+      <Route path="/services/ai-virtual-assistant" element={<AIVirtualAssistant />} />
+      <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/ai-micro-saas" element={<AIMicroSAAS />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/resources" element={<Resources />} />
