@@ -1,0 +1,1 @@
+export default SocialShareSection.js;

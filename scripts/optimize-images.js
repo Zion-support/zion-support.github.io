@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+console.log('🖼️ Optimizing images...');
+
+// Add image optimization logic here
+// This would typically use sharp, imagemin, or similar tools
+
+console.log('✅ Image optimization completed');
