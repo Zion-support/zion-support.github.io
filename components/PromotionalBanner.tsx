@@ -487,3 +487,39 @@ export const LatestContent2026Banner = () => (
     hideAfter={18}
   />
 );
+
+export const AIAgentReliabilityBanner = () => (
+  <PromotionalBanner
+    message="🛡️ NEW: AI Agent Reliability 2026 - Achieve 99.9% uptime with production-ready autonomous systems and fault tolerance"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-agent-reliability-2026"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-cyan-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const AIMultimodalIntegrationBanner = () => (
+  <PromotionalBanner
+    message="🎯 NEW: Multimodal Enterprise Integration 2026 - Unify vision, voice & text AI for 95% accuracy in context understanding"
+    ctaText="Learn More"
+    ctaLink="/blog/ai-multimodal-enterprise-integration-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const AIEnterpriseAutomationBanner = () => (
+  <PromotionalBanner
+    message="⚡ FEATURED: Enterprise Automation Blueprint 2026 - Achieve 95% process efficiency and $5M+ savings with zero-touch operations"
+    ctaText="Get Blueprint"
+    ctaLink="/blog/ai-enterprise-automation-blueprint-2026"
+    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
