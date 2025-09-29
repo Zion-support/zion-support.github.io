@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-breach-drills-2026",
+    title: "AI Breach Drills 2026: Practice Safe Autonomy Under Pressure",
+    description: "Runbook drills for AI systems: budgeted actions, approvals, and instant rollback paths.",
+    category: "Security",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-insights-telemetry-2026",
+    title: "Privacy‑First Insights 2026: Signal‑Rich Analytics Without PII",
+    description: "Scoped IDs, redaction, and retention windows that keep insights high and risk low.",
+    category: "Observability",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "agent-blue-green-releases-2026",
+    title: "Blue‑Green Releases for Agents: Safe Rollouts with Live Traces",
+    description: "Deploy agent updates with canaries, budgeted tool actions, and trace‑driven rollbacks.",
+    category: "GenAI",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "privacy-first-feature-flags-2026",
     title: "Privacy‑First Feature Flags 2026: Global Rolls Without PII Risk",
     description: "Scoped IDs, edge filters, and health checks for instant, safe rollouts under 100ms.",
@@ -28,6 +55,15 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
+    slug: "ai-cost-aware-inference-2026",
+    title: "Cost‑Aware Inference 2026: Warm Pools, Tiers, and SLAs",
+    description: "Cut inference cost 30–60% with adaptive batching, warm pools, and quality tiers under SLAs.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-risk-budgets-2026",
     title: "AI Risk Budgets 2026: Ship Automation Safely at Scale",
     description: "Budget risky actions, approvals, and rollbacks to move fast without surprises.",
@@ -35,6 +71,15 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-14",
     featured: true,
     readTime: "6 min read"
+  },
+  {
+    slug: "production-rag-ops-2026",
+    title: "Production RAG Ops 2026: Freshness Windows and Drift Guards",
+    description: "Operate RAG reliably with TTL freshness windows, drift detection, and KPI‑linked budgets.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "9 min read"
   },
   {
     slug: "zero-trust-for-genai-2026",
