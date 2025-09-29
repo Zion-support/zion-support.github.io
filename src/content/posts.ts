@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "trustworthy-multimodal-agents-2026",
+    title: "Trustworthy Multimodal Agents 2026: Vision + Text + Voice That Ship",
+    description: "Design enterprise‑grade multimodal agents with reliable tools, guardrails, and offline fallbacks.",
+    category: "GenAI",
+    publishedAt: "2025-10-16",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "platform-roi-scorecards-v2-2026",
+    title: "Platform ROI Scorecards v2: Adoption, Golden Paths, and SLOs",
+    description: "A practical system of scorecards that link platform work to shipped business outcomes.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-16",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-first-insights-blueprint-2026",
+    title: "Privacy‑First Insights Blueprint 2026: Signal‑Rich Analytics Without PII",
+    description: "Scoped IDs, redaction, and retention windows that keep insights high and risk low.",
+    category: "Observability",
+    publishedAt: "2025-10-16",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-breach-drills-2026",
     title: "AI Breach Drills 2026: Practice Safe Autonomy Under Pressure",
     description: "Runbook drills for AI systems: budgeted actions, approvals, and instant rollback paths.",

@@ -17,6 +17,54 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "trustworthy-multimodal-agents-2026",
+    slug: "trustworthy-multimodal-agents-2026",
+    title: "Trustworthy Multimodal Agents 2026: Vision + Text + Voice That Ship",
+    description: "Design enterprise‑grade multimodal agents with tool reliability budgets, live traces, and offline fallbacks.",
+    excerpt: "Ship agents that see, read, and speak—safely and reliably in production.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-16",
+    category: "GenAI",
+    tags: ["Agents", "Multimodal", "Tracing", "Reliability"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/multimodal-agents-enterprise-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "platform-roi-scorecards-v2-2026",
+    slug: "platform-roi-scorecards-v2-2026",
+    title: "Platform ROI Scorecards v2: Adoption, Golden Paths, and SLOs",
+    description: "A practical system of scorecards—adoption, golden paths, and SLOs—that link platform work to revenue and retention.",
+    excerpt: "From infrastructure spend to shipped outcomes: scorecards engineers adopt and executives trust.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-16",
+    category: "Platform Engineering",
+    tags: ["Scorecards", "ROI", "SLOs", "Golden Paths"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/platform-engineering-scorecards-v2-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-first-insights-blueprint-2026",
+    slug: "privacy-first-insights-blueprint-2026",
+    title: "Privacy‑First Insights Blueprint 2026: Signal‑Rich Analytics Without PII",
+    description: "Scoped IDs, redaction, and retention windows that keep insights high and risk low.",
+    excerpt: "Ship analytics teams love without PII risk using scoped identifiers and filters.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-16",
+    category: "Observability",
+    tags: ["Privacy", "Telemetry", "Compliance"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/privacy-first-insights-telemetry-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-breach-drills-2026",
     slug: "ai-breach-drills-2026",
     title: "AI Breach Drills 2026: Practice Safe Autonomy Under Pressure",
@@ -93,7 +141,6 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "8 min read",
     image: "/images/platform-engineering-scorecards-v2-2026.jpg",
->>>>>>> origin/main
     newBadge: true,
     trending: true
   },
