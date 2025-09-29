@@ -140,6 +140,16 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
+    slug: "platform-engineering-blueprint-2025",
+    title: "Platform Engineering Blueprint 2025: From Chaos to Clarity",
+    description:
+      "Core capabilities, golden paths, and product thinking to accelerate delivery across hundreds of teams.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-27",
+    featured: true,
+    readTime: "11 min read",
+  },
+  {
     slug: "genai-eval-systems",
     title: "Shipping with Confidence: Evaluation Systems for GenAI Apps",
     description:
@@ -196,6 +206,8 @@ export const posts: BlogPost[] = [
       "Capabilities, golden paths, and scorecards to accelerate delivery without sacrificing autonomy.",
     category: "Platform Engineering",
     publishedAt: "2025-09-29",
+    readTime: "7 min read",
+    featured: true,
   },
   {
     slug: "genai-evals-realworld",
@@ -204,6 +216,8 @@ export const posts: BlogPost[] = [
       "Patterns for evaluation harnesses, drift detection, and policy testing that scale with usage.",
     category: "GenAI",
     publishedAt: "2025-09-29",
+    readTime: "6 min read",
+    featured: true,
   },
   {
     slug: "ai-roadmaps",
@@ -212,6 +226,7 @@ export const posts: BlogPost[] = [
       "A practical framework to align AI investments with measurable business outcomes and reduce time-to-value.",
     category: "AI Strategy",
     publishedAt: "2025-09-15",
+    readTime: "6 min read",
   },
   {
     slug: "cloud-finops-tactics",
@@ -220,6 +235,7 @@ export const posts: BlogPost[] = [
       "Proven tactics for right-sizing, demand shaping, and engineering-friendly guardrails that keep velocity high.",
     category: "Cloud FinOps",
     publishedAt: "2025-09-22",
+    readTime: "5 min read",
   },
   {
     slug: "zero-trust-for-saas",
@@ -228,6 +244,7 @@ export const posts: BlogPost[] = [
       "A pragmatic guide to rolling out least-privilege, continuous verification, and blast radius controls.",
     category: "Security",
     publishedAt: "2025-09-25",
+    readTime: "7 min read",
   },
   {
     slug: "generative-ai-enterprise",
@@ -236,6 +253,8 @@ export const posts: BlogPost[] = [
       "Case studies from Fortune 500 companies showing how GenAI is transforming customer service, content creation, and business operations.",
     category: "AI Innovation",
     publishedAt: "2025-01-20",
+    readTime: "10 min read",
+    featured: true,
   },
   {
     slug: "cloud-migration-best-practices",
@@ -244,6 +263,7 @@ export const posts: BlogPost[] = [
       "Essential strategies for successful cloud migration, including risk mitigation, cost optimization, and timeline management.",
     category: "Cloud Strategy",
     publishedAt: "2025-01-18",
+    readTime: "8 min read",
   },
   {
     slug: "cybersecurity-2025-trends",
@@ -252,6 +272,7 @@ export const posts: BlogPost[] = [
       "Emerging threats, new defense strategies, and the latest security technologies shaping the cybersecurity landscape.",
     category: "Cybersecurity",
     publishedAt: "2025-01-15",
+    readTime: "12 min read",
   },
   {
     slug: "data-analytics-automation",
@@ -260,6 +281,7 @@ export const posts: BlogPost[] = [
       "How AI-powered analytics platforms are revolutionizing business intelligence and enabling real-time decision making.",
     category: "Data Science",
     publishedAt: "2025-01-12",
+    readTime: "9 min read",
   },
   {
     slug: "devops-automation-guide",
@@ -268,6 +290,7 @@ export const posts: BlogPost[] = [
       "Comprehensive strategies for automating CI/CD pipelines, infrastructure management, and deployment processes.",
     category: "DevOps",
     publishedAt: "2025-01-10",
+    readTime: "11 min read",
   },
   {
     slug: "microservices-architecture",
@@ -276,6 +299,7 @@ export const posts: BlogPost[] = [
       "Essential patterns for building scalable, maintainable microservices architectures in modern applications.",
     category: "Software Architecture",
     publishedAt: "2025-01-08",
+    readTime: "10 min read",
   },
   {
     slug: "ai-ethics-compliance",
@@ -284,6 +308,7 @@ export const posts: BlogPost[] = [
       "Framework for developing AI systems that are fair, transparent, and compliant with emerging regulations.",
     category: "AI Governance",
     publishedAt: "2025-01-05",
+    readTime: "9 min read",
   },
   {
     slug: "ai-powered-business-automation-2025",
@@ -329,11 +354,41 @@ export const posts: BlogPost[] = [
     slug: "ai-ethics-responsible-deployment",
     title: "AI Ethics and Responsible Deployment: Building Trust in AI Systems",
     description:
-    	  "Essential guidelines for deploying AI systems responsibly, ensuring fairness, transparency, and accountability in your AI initiatives.",
+      "Essential guidelines for deploying AI systems responsibly, ensuring fairness, transparency, and accountability in your AI initiatives.",
     category: "AI Governance",
     publishedAt: "2025-01-21",
     featured: false,
     readTime: "9 min read",
+  },
+  {
+    slug: "ai-automation-roi-calculator-2025",
+    title: "AI Automation ROI Calculator: Prove Value Fast",
+    description:
+      "A simple framework and worksheet to quantify savings and payback from AI workflow automation.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "cloud-cost-guardrails-in-practice",
+    title: "Cloud Cost Guardrails in Practice",
+    description:
+      "Requests/limits, autoscaling, and demand shaping patterns that cut spend without slowing teams.",
+    category: "Cloud FinOps",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "5 min read",
+  },
+  {
+    slug: "secure-ml-platform-blueprint",
+    title: "Secure ML Platform Blueprint",
+    description:
+      "Harden data flows, registries, and deployments with pragmatic controls and audits that scale.",
+    category: "Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
   },
 ];
 

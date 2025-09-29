@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedErrorBoundarydynamic from '../components/EnhancedErrorBoundary.dynamic'; describe('EnhancedErrorBoundarydynamic',() => { test('renders without crashing',() => { render(<EnhancedErrorBoundarydynamic />); expect( screen.getByTestId('enhancederrorboundary.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedErrorBoundarydynamic />)}); test('handles user interactions',() => { render(<EnhancedErrorBoundarydynamic />)}); test('applies correct styling',() => { render(<EnhancedErrorBoundarydynamic />)})});
-=======
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
@@ -21,4 +18,3 @@ import EnhancedErrorBoundarydynamic from "../components/EnhancedErrorBoundary.dy
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedErrorBoundarydynamic from "./components/EnhancedErrorBoundary.dynamic"; describe("EnhancedErrorBoundarydynamic",() => { test("renders without crashing",() => { render(<EnhancedErrorBoundarydynamic />); expect( screen.getByTestId("enhancederrorboundary.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedErrorBoundarydynamic />)}); test("handles user interactions",() => { render(<EnhancedErrorBoundarydynamic />)}); test("applies correct styling",() => { render(<EnhancedErrorBoundarydynamic />)})});''"
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedErrorBoundarydynamic from '../components/EnhancedErrorBoundary.dynamic'; describe('EnhancedErrorBoundarydynamic',() => { test('renders without crashing',() => { render(<EnhancedErrorBoundarydynamic />); expect( screen.getByTestId('enhancederrorboundary.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedErrorBoundarydynamic />)}); test('handles user interactions',() => { render(<EnhancedErrorBoundarydynamic />)}); test('applies correct styling',() => { render(<EnhancedErrorBoundarydynamic />)})});
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
