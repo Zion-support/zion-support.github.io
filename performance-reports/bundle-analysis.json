@@ -1,0 +1,158 @@
+{
+  "totalSize": 691283,
+  "totalSizeFormatted": "675.08 KB",
+  "fileCount": 30,
+  "files": [
+    {
+      "path": "assets/js/chunk-BydN_B68.js",
+      "size": 311849,
+      "sizeFormatted": "304.54 KB"
+    },
+    {
+      "path": "assets/js/chunk-B1ViRisI.js",
+      "size": 119207,
+      "sizeFormatted": "116.41 KB"
+    },
+    {
+      "path": "assets/js/chunk-BpAiLTmj.js",
+      "size": 91638,
+      "sizeFormatted": "89.49 KB"
+    },
+    {
+      "path": "assets/js/chunk-B88Vkp0P.js",
+      "size": 47630,
+      "sizeFormatted": "46.51 KB"
+    },
+    {
+      "path": "assets/css/main-zNWpGKKW.css",
+      "size": 27130,
+      "sizeFormatted": "26.49 KB"
+    },
+    {
+      "path": "assets/js/Home-BmGF1q4q.js",
+      "size": 14004,
+      "sizeFormatted": "13.68 KB"
+    },
+    {
+      "path": "assets/js/Contact-DY7ijRFq.js",
+      "size": 8873,
+      "sizeFormatted": "8.67 KB"
+    },
+    {
+      "path": "assets/js/EnhancedHome-UDdqCleP.js",
+      "size": 8834,
+      "sizeFormatted": "8.63 KB"
+    },
+    {
+      "path": "assets/js/About-BOOnxpAi.js",
+      "size": 8360,
+      "sizeFormatted": "8.16 KB"
+    },
+    {
+      "path": "sw-enhanced.js",
+      "size": 7084,
+      "sizeFormatted": "6.92 KB"
+    },
+    {
+      "path": "assets/js/Services-BFRffEef.js",
+      "size": 6964,
+      "sizeFormatted": "6.8 KB"
+    },
+    {
+      "path": "assets/js/Portfolio-C6ybZWin.js",
+      "size": 6538,
+      "sizeFormatted": "6.38 KB"
+    },
+    {
+      "path": "offline.html",
+      "size": 6419,
+      "sizeFormatted": "6.27 KB"
+    },
+    {
+      "path": "assets/js/main-M-nKZu2s.js",
+      "size": 6182,
+      "sizeFormatted": "6.04 KB"
+    },
+    {
+      "path": "index.html",
+      "size": 4896,
+      "sizeFormatted": "4.78 KB"
+    },
+    {
+      "path": "assets/js/Blog-BOoVT1ba.js",
+      "size": 3085,
+      "sizeFormatted": "3.01 KB"
+    },
+    {
+      "path": "sw-performance.js",
+      "size": 2451,
+      "sizeFormatted": "2.39 KB"
+    },
+    {
+      "path": "performance-monitor.js",
+      "size": 2079,
+      "sizeFormatted": "2.03 KB"
+    },
+    {
+      "path": "site.webmanifest",
+      "size": 1902,
+      "sizeFormatted": "1.86 KB"
+    },
+    {
+      "path": "assets/js/NotFound-Db4PLAmX.js",
+      "size": 1749,
+      "sizeFormatted": "1.71 KB"
+    },
+    {
+      "path": "assets/js/Analytics-fUTtWjyi.js",
+      "size": 1058,
+      "sizeFormatted": "1.03 KB"
+    },
+    {
+      "path": "manifest.json",
+      "size": 833,
+      "sizeFormatted": "833 Bytes"
+    },
+    {
+      "path": "sitemap.xml",
+      "size": 764,
+      "sizeFormatted": "764 Bytes"
+    },
+    {
+      "path": "asset-manifest.json",
+      "size": 601,
+      "sizeFormatted": "601 Bytes"
+    },
+    {
+      "path": "sw.js",
+      "size": 598,
+      "sizeFormatted": "598 Bytes"
+    },
+    {
+      "path": "robots.txt",
+      "size": 331,
+      "sizeFormatted": "331 Bytes"
+    },
+    {
+      "path": "badge-72x72.png",
+      "size": 67,
+      "sizeFormatted": "67 Bytes"
+    },
+    {
+      "path": "icon-192x192.png",
+      "size": 67,
+      "sizeFormatted": "67 Bytes"
+    },
+    {
+      "path": "icon-512x512.png",
+      "size": 67,
+      "sizeFormatted": "67 Bytes"
+    },
+    {
+      "path": "_redirects",
+      "size": 23,
+      "sizeFormatted": "23 Bytes"
+    }
+  ],
+  "recommendations": []
+}
