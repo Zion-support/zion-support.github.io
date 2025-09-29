@@ -54,6 +54,15 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="AI Data Contracts 2026: Shipping Reliable AI with Measurable Data Quality"
+            excerpt="Cut incidents and drift by enforcing schemas, semantics, and SLAs across pipelines and products."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="10 min"
+            image="📃"
+            href="/blog/ai-data-contracts-2026"
+          />
+          <BlogPost
             title="Platform Engineering Scorecards 2026: From Golden Paths to Outcomes"
             excerpt="Measure adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery."
             date="October 9, 2025"

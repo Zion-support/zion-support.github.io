@@ -12,6 +12,7 @@ export default function ContentHub() {
     {
       title: 'AI Implementation',
       articles: [
+        { title: 'AI Data Contracts 2026', slug: '/blog/ai-data-contracts-2026', readTime: '10 min', featured: true },
         { title: 'AI Multimodal Enterprise Solutions 2026', slug: '/blog/ai-multimodal-enterprise-2026', readTime: '15 min', featured: true },
         { title: 'AI Implementation Playbook 2026', slug: '/blog/ai-implementation-playbook-2026', readTime: '12 min', featured: true },
         { title: 'AI Governance Maturity Model 2026', slug: '/blog/ai-governance-maturity-model-2026', readTime: '14 min', featured: true },
