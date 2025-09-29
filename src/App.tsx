@@ -13,6 +13,7 @@ import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import SEOOptimizer from './components/SEOOptimizer';
+import type { Notification as AppNotification } from './components/NotificationSystem';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
@@ -48,7 +49,7 @@ const WebsiteEnhancements = (props: any) => <Placeholder name="WebsiteEnhancemen
 export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [notifications, setNotifications] = useState<AppNotification[]>([]);
 
   const seoDataForOptimizer = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -73,13 +74,11 @@ export default function App(): React.JSX.Element {
           break;
       }
       try {
-        if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
-        enhancedSecurityManager.initialize();
-      }
+        (enhancedSecurityManager as any)?.initialize?.();
       
       // Initialize new performance and accessibility enhancements
       initializePerformanceEnhancements();
-      accessibilityEnhancer.initialize();
+      (accessibilityEnhancer as any)?.initialize?.();
       
       // Initialize advanced optimizers
       // Guard optional advanced systems if present in global scope
@@ -95,7 +94,7 @@ export default function App(): React.JSX.Element {
 
       advancedPerformanceOptimizer?.initialize?.();
       advancedSEOOptimizer?.initialize?.();
-      accessibilityEnhancer.initialize();
+      (accessibilityEnhancer as any)?.initialize?.();
       advancedSecurityManager?.initialize?.();
       advancedAnalytics?.initialize?.();
       // advancedErrorHandler is initialized in constructor
@@ -139,7 +138,7 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer seoData={seoDataForOptimizer} />
+      <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonical} />
       <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
