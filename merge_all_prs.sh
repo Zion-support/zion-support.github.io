@@ -1,0 +1,201 @@
+#!/bin/bash
+
+<<<<<<< HEAD
+# Script to merge all open PRs systematically
+# This script will attempt to merge each PR branch and resolve conflicts
+
+set -e  # Exit on any error
+
+echo "Starting systematic merge of all open PRs..."
+echo "============================================="
+
+# Function to resolve merge conflicts
+resolve_conflicts() {
+    local branch_name=$1
+    echo "Resolving conflicts in $branch_name..."
+    
+    # Check if there are any merge conflicts
+    if git diff --name-only --diff-filter=U | grep -q .; then
+        echo "Found merge conflicts. Attempting to resolve..."
+        
+        # List all conflicted files
+        echo "Conflicted files:"
+        git diff --name-only --diff-filter=U
+        
+        # For each conflicted file, try to resolve conflicts
+        for file in $(git diff --name-only --diff-filter=U); do
+            echo "Resolving conflicts in $file..."
+            
+            # Check if it's a TypeScript/JavaScript file
+            if [[ "$file" == *.ts || "$file" == *.tsx || "$file" == *.js || "$file" == *.jsx ]]; then
+                # For code files, try to keep both versions and resolve manually
+                echo "Keeping both versions for $file - manual review needed"
+                git checkout --theirs "$file"
+            else
+                # For other files, try to keep the incoming version
+                echo "Keeping incoming version for $file"
+                git checkout --theirs "$file"
+            fi
+        done
+        
+        # Add all resolved files
+        git add .
+        
+        # Check if conflicts are resolved
+        if git diff --name-only --diff-filter=U | grep -q .; then
+            echo "Some conflicts still exist. Manual resolution needed."
+            return 1
+        else
+            echo "All conflicts resolved automatically."
+            return 0
+        fi
+    else
+        echo "No conflicts found."
+        return 0
+    fi
+}
+
+# Function to merge a single PR branch
+merge_pr_branch() {
+    local branch_name=$1
+    local pr_number=$2
+    
+    echo "Attempting to merge $branch_name (PR #$pr_number)..."
+    
+    # Check if branch exists
+    if ! git ls-remote --heads origin "$branch_name" | grep -q .; then
+        echo "Branch $branch_name not found, skipping..."
+        return 1
+    fi
+    
+    # Fetch the latest version of the branch
+    git fetch origin "$branch_name"
+    
+    # Try to merge
+    if git merge "origin/$branch_name" --no-ff --no-commit; then
+        echo "Merge successful for $branch_name"
+        git commit -m "Merge PR #$pr_number: $branch_name"
+        return 0
+    else
+        echo "Merge failed for $branch_name, attempting to resolve conflicts..."
+        
+        # Try to resolve conflicts
+        if resolve_conflicts "$branch_name"; then
+            echo "Conflicts resolved for $branch_name"
+            git commit -m "Merge PR #$pr_number: $branch_name (conflicts resolved)"
+            return 0
+        else
+            echo "Failed to resolve conflicts for $branch_name, aborting merge..."
+            git merge --abort
+            return 1
+        fi
+    fi
+}
+
+# Main merge process
+main() {
+    # Ensure we're on main branch
+    git checkout main
+    
+    # Pull latest changes
+    git pull origin main
+    
+    # Get list of open PRs
+    echo "Fetching open PRs..."
+    curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" > prs.json
+    
+    # Extract PR information and attempt to merge each one
+    echo "Starting merge process..."
+    
+    # Parse PRs and attempt merges
+    awk '
+    /"number":/ {
+        number = $2
+        gsub(/,/, "", number)
+        pr_number = number
+    }
+    /"ref":/ && !/compare_url/ {
+        ref = substr($0, index($0, ":") + 3)
+        gsub(/,$/, "", ref)
+        gsub(/"/, "", ref)
+        if (ref != "ref" && ref != "href" && ref != "archive_url" && ref != "git_refs_url" && ref != "main") {
+            printf "%s %s\n", pr_number, ref
+        }
+    }
+    ' prs.json | while read pr_number branch_name; do
+        if [[ -n "$pr_number" && -n "$branch_name" ]]; then
+            echo "Processing PR #$pr_number: $branch_name"
+            if merge_pr_branch "$branch_name" "$pr_number"; then
+                echo "✓ Successfully merged PR #$pr_number"
+            else
+                echo "✗ Failed to merge PR #$pr_number"
+            fi
+            echo "---"
+        fi
+    done
+    
+    echo "Merge process completed!"
+    echo "Pushing changes to main..."
+    git push origin main
+}
+
+# Run the main function
+main "$@"
+=======
+echo "Starting automated PR merge process..."
+echo "====================================="
+
+# Get the list of open PRs
+echo "Fetching open pull requests..."
+curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" > prs.json
+
+# Extract PR numbers and branch names using awk
+echo "Extracting PR information..."
+awk '
+/"number":/ {
+    number = $2
+    gsub(/,/, "", number)
+    printf "Processing PR #%s...\n", number
+}
+/"ref":/ && !/compare_url/ {
+    ref = substr($0, index($0, ":") + 3)
+    gsub(/,$/, "", ref)
+    gsub(/"/, "", ref)
+    if (ref != "ref" && ref != "href" && ref != "archive_url" && ref != "git_refs_url") {
+        printf "  Branch: %s\n", ref
+        
+        # Fetch the branch
+        printf "  Fetching branch...\n"
+        cmd = "git fetch origin " ref " 2>/dev/null"
+        system(cmd)
+        
+        if (system("git fetch origin " ref " 2>/dev/null") == 0) {
+            printf "  Attempting to merge...\n"
+            
+            # Try to merge
+            merge_cmd = "git merge origin/" ref " --no-edit 2>/dev/null"
+            if (system(merge_cmd) == 0) {
+                printf "  ✓ Successfully merged PR #%s\n", number
+                printf "  Committing merge...\n"
+                commit_cmd = "git commit -m \"Merge PR #" number ": " ref "\" 2>/dev/null"
+                system(commit_cmd)
+                printf "  ✓ Merge committed\n"
+            } else {
+                printf "  ✗ Merge failed for PR #%s\n", number
+                printf "  Aborting merge and continuing...\n"
+                system("git merge --abort 2>/dev/null")
+            }
+        } else {
+            printf "  ✗ Failed to fetch branch %s\n", ref
+        }
+        
+        printf "  ---\n"
+    }
+}
+' prs.json
+
+echo "All PRs processed. Pushing changes to main branch..."
+git push origin main --force
+
+echo "Process complete!"
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

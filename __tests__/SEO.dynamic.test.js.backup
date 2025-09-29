@@ -1,0 +1,40 @@
+
+<<<<<<< HEAD
+
+import { render, screen, fireEvent } from '@testing-library/react';
+import @testing-library/jest-dom';
+import SEOdynamic from "../components/SEO.dynamic";
+
+    render(<SEOdynamic />);
+    expect(screen.getByTestId('seo.dynamic')).toBeInTheDocument()})';
+=======
+    expect(screen && screen.getByTestId('seo ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOdynamic from "./components/SEO ; describe('SEOdynamic', () => { test("renders without crashing",() => { render(<SEOdynamic />); expect(screen && screen.getByTestId("seo && seo.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOdynamic />)}); test("handles user interactions",() => { render(<SEOdynamic />)}); test("applies correct styling"
+
+
+  test('renders without crashing', () => {
+
+    render(<SEO />);'
+    expect(screen.getByTestId('seo.dynamic')).toBeInTheDocument();
+  });'
+>>>>>>> main
+  test('displays correct content', () => {
+    render(<SEOdynamic />);
+    // Add specific content tests based on component});
+  test('handles user interactions', () => {
+    render(<SEOdynamic />);
+    // Add interaction tests based on component functionality});
+  test('applies correct styling', () => {
+<<<<<<< HEAD
+
+    render(<SEOdynamic />);
+    // Add styling tests if needed})});
+
+
+=======
+    render(<SEO />);
+    // Add styling tests if needed
+
+
+
+
+>>>>>>> main

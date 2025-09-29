@@ -1,0 +1,20 @@
+import React from "react";
+
+<<<<<<< HEAD
+type PerformanceMonitorProps = {
+  showDashboard?: boolean;
+};
+
+export default function PerformanceMonitor(props: PerformanceMonitorProps): React.JSX.Element {
+  void props;
+  return <div aria-hidden="true" style={{ display: "none" }} />;
+=======
+interface PerformanceMonitorProps {
+  showDashboard?: boolean;
+}
+
+export default function PerformanceMonitor(_props: PerformanceMonitorProps): React.JSX.Element {
+  return <div>Performance Monitor</div>;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-94f6
+}
+
