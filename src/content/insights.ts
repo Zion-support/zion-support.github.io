@@ -9,10 +9,6 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
-<<<<<<< HEAD
-    id: "ai-governance-rubric",
-    title: "A Lightweight Rubric for AI Governance Decisions",
-=======
     id: "ai-evals-guardrails-quickstart",
     title: "Quickstart: Offline Evals and Guardrails for GenAI",
     summary:
@@ -33,7 +29,6 @@ export const latestInsights: InsightArticle[] = [
   {
     id: "platform-blueprints-golden-paths",
     title: "Golden Paths That Actually Get Used",
->>>>>>> cursor/create-and-deploy-new-content-deeb
     summary:
       "When to require human‑in‑the‑loop, what to log, and how to audit outputs across teams.",
     category: "AI Governance",
@@ -237,6 +232,33 @@ export const latestInsights: InsightArticle[] = [
     category: "Digital Transformation",
     date: "2025-01-05",
     readMinutes: 6,
+  },
+  {
+    id: "edge-inference-patterns",
+    title: "Edge Inference Patterns for Sub‑100ms Experiences",
+    summary:
+      "Latency budgets, on‑device models, and caching strategies for lightning‑fast AI UX at the edge.",
+    category: "Architecture",
+    date: "2025-09-29",
+    readMinutes: 7,
+  },
+  {
+    id: "mlops-reliability-checklist",
+    title: "MLOps Reliability: Shipping GenAI Changes Safely",
+    summary:
+      "Canary evals, shadow deploys, and rollback patterns to iterate quickly without risk.",
+    category: "MLOps",
+    date: "2025-09-29",
+    readMinutes: 9,
+  },
+  {
+    id: "platform-scorecards-that-stick",
+    title: "Platform Scorecards That Actually Drive Adoption",
+    summary:
+      "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
+    category: "Platform Engineering",
+    date: "2025-09-29",
+    readMinutes: 9,
   },
   {
     id: "genai-guardrails-in-production",

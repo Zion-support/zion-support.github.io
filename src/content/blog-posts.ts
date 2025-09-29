@@ -14,7 +14,6 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-<<<<<<< HEAD
     slug: "genai-evals-in-production-2025",
     title: "GenAI Evals in Production: Policy Tests That Scale",
     description: "From offline suites to online canaries: patterns that keep quality high as usage grows.",
@@ -83,7 +82,8 @@ Avoid vanity KPIs, ambiguous definitions, and missing instrumentation. Replace w
     featured: true,
     readTime: "6 min read",
     image: "/images/north-star-anti-patterns.jpg"
-=======
+  },
+  {
     slug: "ai-roadmap-exec-guide-2025",
     title: "Executive Guide: Designing High‑Impact AI Roadmaps in 2025",
     description: "A practical framework to align AI bets with measurable business outcomes and ship value fast.",
@@ -137,7 +137,6 @@ Learn how to combine offline evaluation suites, red‑team tests, and online gua
     featured: true,
     readTime: "7 min read",
     image: "/images/genai-evals-confidence.jpg"
->>>>>>> cursor/create-and-deploy-new-content-deeb
   },
   {
     slug: "real-time-data-pipelines-2025",

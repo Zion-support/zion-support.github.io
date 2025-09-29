@@ -82,7 +82,7 @@ const Home = React.memo(function Home(): React.JSX.Element {
 				<div className="container mx-auto px-4 pt-4">
 					<div className="mb-6 rounded-full bg-emerald-600/10 border border-emerald-600/30 px-5 py-3 text-emerald-700 text-sm inline-flex items-center gap-2">
 						<span className="inline-flex h-2 w-2 rounded-full bg-emerald-600 animate-pulse"></span>
-						<span>New: Platform Engineering blueprint and GenAI guardrails now available</span>
+						<span>New: Edge inference patterns, MLOps reliability, and platform scorecards</span>
 						<Link href="/blog" className="text-emerald-700 underline underline-offset-4 hover:text-emerald-900">Read</Link>
 					</div>
 				</div>
