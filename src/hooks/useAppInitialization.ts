@@ -37,7 +37,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
     enableCaching = true,
   } = config;
 
-  const { preloadResource, recordMetric } = usePerformanceOptimization();
+  const { metrics } = usePerformanceOptimization();
   
   const [isLoading, setIsLoading] = useState(true);
   const [loadingProgress, setLoadingProgress] = useState(0);
@@ -72,9 +72,9 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
     
     // Use requestAnimationFrame for better performance
     requestAnimationFrame(() => {
-      recordMetric('scrollDepth', newScrollDepth);
+      console.debug('Scroll depth:', newScrollDepth);
     });
-  }, [recordMetric, engagementData.scrollDepth]);
+  }, [engagementData.scrollDepth]);
 
   // Optimized click handler with better event delegation
   const handleClick = useCallback((event: Event) => {
@@ -83,7 +83,7 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
     
     // Debounce click tracking
     setTimeout(() => {
-      recordMetric('userClicks', newClicks);
+      console.debug('User clicks:', newClicks);
       
       // Track specific interaction types with better performance
       const target = event.target as HTMLElement;
@@ -91,19 +91,19 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
       
       switch (tagName) {
         case 'button':
-          recordMetric('buttonClicks', 1);
+          console.debug('Button click tracked');
           break;
         case 'a':
-          recordMetric('linkClicks', 1);
+          console.debug('Link click tracked');
           break;
         case 'input':
-          recordMetric('inputClicks', 1);
+          console.debug('Input click tracked');
           break;
         default:
-          recordMetric('otherClicks', 1);
+          console.debug('Other click tracked');
       }
     }, 100);
-  }, [recordMetric, engagementData.clicks]);
+  }, [engagementData.clicks]);
 
   // Track engagement function
   const trackEngagement = useCallback(() => {
@@ -217,8 +217,18 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
       }
 
       // Preload critical resources
-      preloadResource('/og-image.png', 'image');
-      preloadResource('/favicon.ico', 'image');
+      // Preload critical resources
+      const link1 = document.createElement('link');
+      link1.rel = 'preload';
+      link1.href = '/og-image.png';
+      link1.as = 'image';
+      document.head.appendChild(link1);
+      
+      const link2 = document.createElement('link');
+      link2.rel = 'preload';
+      link2.href = '/favicon.ico';
+      link2.as = 'image';
+      document.head.appendChild(link2);
 
       // Set default SEO data
       seoManager.updateSEO(seoData);
@@ -226,9 +236,9 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
       console.log('✅ Core systems initialized successfully');
     } catch (error) {
       console.error('❌ Failed to initialize core systems:', error);
-      recordMetric('initializationError', 1);
+      console.error('Initialization error:', error);
     }
-  }, [enablePerformanceMonitoring, enableAccessibility, enableAnalytics, enableCaching, enableNotifications, preloadResource, recordMetric, seoData]);
+  }, [enablePerformanceMonitoring, enableAccessibility, enableAnalytics, enableCaching, enableNotifications, seoData]);
 
   // Initialize advanced systems
   const initializeAdvancedSystems = useCallback(async () => {
@@ -286,9 +296,9 @@ export function useAppInitialization(config: AppInitializationConfig = {}) {
       console.log('✅ Advanced systems initialized successfully');
     } catch (error) {
       console.error('❌ Failed to initialize advanced systems:', error);
-      recordMetric('advancedInitializationError', 1);
+      console.error('Advanced initialization error:', error);
     }
-  }, [recordMetric]);
+  }, []);
 
   // Simulate loading progress
   useEffect(() => {
