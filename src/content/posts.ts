@@ -10,31 +10,49 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "ai-agents-in-the-enterprise-2026",
-    title: "AI Agents in the Enterprise 2026: From Pilots to Production",
-    description: "Design agent workflows with deterministic tools, traces, and budgets that scale across teams.",
-    category: "GenAI",
+    slug: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
+    description: "Continuous SBOMs for models, datasets, and prompts with attestations and CI policy checks.",
+    category: "Security",
     publishedAt: "2025-10-13",
     featured: true,
-    readTime: "8 min read"
+    readTime: "7 min read"
   },
   {
-    slug: "platform-roi-scorecards-v3-2026",
-    title: "Platform ROI Scorecards v3: Leading Indicators That Move the Business",
-    description: "Adoption, golden-path TTFX, and reliability signals that shift focus from costs to shipped value.",
+    slug: "genai-routing-under-budgets-2026",
+    title: "Quality‑Tiered GenAI Routing: SLAs Without Bill Shock",
+    description: "Route prompts across model tiers with budgets, caches, and eval signals to control cost.",
+    category: "AI Operations",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "platform-golden-paths-kpis-2026",
+    title: "Golden Paths That Move KPIs: Platform Engineering That Pays",
+    description: "Adoption metrics, TTFX, and SLOs as leading indicators of platform ROI in 2026.",
     category: "Platform Engineering",
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "7 min read"
   },
   {
-    slug: "privacy-preserving-agents-2026",
-    title: "Privacy‑Preserving Agents: PII‑Safe Tools, Redaction, and Audits",
-    description: "Blueprint for agents that keep signals rich without leaking PII using scoped IDs and field‑level filters.",
-    category: "AI Security",
-    publishedAt: "2025-10-13",
-    featured: false,
-    readTime: "6 min read"
+    slug: "ai-platform-slos-2026",
+    title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
+    description: "Design SLOs and risk budgets for AI systems with instant rollbacks and KPI‑linked canaries.",
+    category: "AI Operations",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-llm-latency-patterns",
+    title: "Edge LLM Latency Patterns: Sub‑200ms Interactions",
+    description: "Streaming, prefetch, and edge compute patterns for instant‑feel AI UX.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "7 min read"
   },
   {
     slug: "ai-reliable-rag-ops-2026",
@@ -510,33 +528,32 @@ export const posts: BlogPost[] = [
   }
   ,
   {
-    slug: "serverless-inference-cost-playbook-2026",
-    title: "Serverless Inference Cost Playbook 2026: 40–70% Savings",
-    description: "Adaptive batching, warm pools, and quality tiers that cut spend without hurting P95.",
-    category: "AI Operations",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "governance-scorecards-quickstart-2026",
-    title: "Governance Scorecards Quickstart 2026: PR Checks That Speed Teams Up",
-    description: "Wire policy tests to KPIs, add canaries, and keep delivery fast and compliant.",
+    slug: "ai-governance-scorecards-quickstart-2026",
+    title: "AI Governance Scorecards Quickstart 2026: Ship Fast, Stay Safe",
+    description: "Set up KPI‑linked scorecards, PR checks, and rollback‑ready canaries in weeks.",
     category: "AI Strategy",
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "7 min read"
   },
   {
-    slug: "privacy-preserving-analytics-2026",
-    title: "Privacy‑Preserving Analytics 2026: Signal‑Rich, PII‑Safe Telemetry",
-    description: "Scoped IDs, field‑level filters, and retention tiers that unlock insights safely.",
-    category: "Observability",
+    slug: "privacy-first-agents-2026",
+    title: "Privacy‑First Agents 2026: On‑Device Tools, Scoped IDs, Retention Controls",
+    description: "Design assistants with local tools, field‑level filters, and policy‑backed telemetry.",
+    category: "AI Security",
     publishedAt: "2025-10-13",
-    featured: false,
-    readTime: "6 min read"
-  }
-  ,
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "serverless-inference-cost-playbook-2026",
+    title: "Serverless Inference Cost Playbook 2026: Budgets Without P95 Pain",
+    description: "Adaptive batching, warm pools, and tiered quality under explicit budgets.",
+    category: "GenAI",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
   {
     slug: "agentic-workflows-blueprint-2026",
     title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",

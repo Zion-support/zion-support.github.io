@@ -54,22 +54,103 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
-            title="Platform Engineering 2026: From Golden Paths to Outcomes"
-            excerpt="Measure adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery."
-            date="October 9, 2025"
-            category="Platform Engineering"
-            readTime="8 min"
-            image="🧭"
-            href="/blog/ai-platform-engineering-2026"
+            title="AI Evaluation Scorecards 2026: Measure Quality, Cost, and Risk"
+            excerpt="Standardize evals across groundedness, safety, latency, and unit cost with actionable scorecards."
+            date="September 29, 2026"
+            category="Governance"
+            readTime="12 min"
+            image="🧮"
+            href="/blog/ai-evaluation-scorecards-2026"
           />
           <BlogPost
-            title="Reliable RAG 2025: Production Patterns for Grounded Answers"
-            excerpt="Reduce hallucinations and latency with contracts, caching, routing, structured evals, and guardrails."
+            title="AI Agent Security 2026: Hardening Autonomous Systems"
+            excerpt="Layered defenses for agents: policies, isolation, sandboxing, SBOM validation, and continuous guardrails."
+            date="September 29, 2026"
+            category="Security"
+            readTime="14 min"
+            image="🛡️"
+            href="/blog/ai-agent-security-2026"
+          />
+          <BlogPost
+            title="AI Data Privacy 2026: Practical Compliance and Privacy-Preserving AI"
+            excerpt="Blueprint for privacy-by-design with PETs, consent, minimization, redaction, and audits."
             date="September 29, 2025"
-            category="AI Platforms"
-            readTime="9 min"
-            image="📚"
-            href="/blog/ai-reliable-rag-patterns-2025"
+            category="Security"
+            readTime="12 min"
+            image="🗝️"
+            href="/blog/ai-data-privacy-2026"
+          />
+          <BlogPost
+            title="AI Governance Maturity Model 2026: From Ad Hoc to Auditable"
+            excerpt="Staged model to implement accountable AI across policy, risk, security, ops, and value."
+            date="September 29, 2025"
+            category="Governance"
+            readTime="14 min"
+            image="📈"
+            href="/blog/ai-governance-maturity-model-2026"
+          />
+          <BlogPost
+            title="AI Agent Observability 2026: End-to-End Tracing and Guardrails"
+            excerpt="Blueprint for measuring and improving agent reliability with traces, evals, and safety guardrails."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="14 min"
+            image="📏"
+            href="/blog/ai-evaluation-metrics-2026"
+          />
+          <BlogPost
+            title="Agent Safety Testing 2026: Progressive Autonomy with Guardrails"
+            excerpt="Layered defenses: policy tests, sandboxes, approvals, and runtime monitors."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="12 min"
+            image="🧪"
+            href="/blog/agent-safety-testing-2026"
+          />
+          <BlogPost
+            title="AI Agent Observability 2026: Metrics, Traces, and Guardrails"
+            excerpt="Instrument agents with traces, evals, and policy guardrails to ship reliable autonomy."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="12 min"
+            image="🔎"
+            href="/blog/ai-agent-observability-2026"
+          />
+          <BlogPost
+            title="Customer Journey AI 2026: Real-Time Personalization with CDPs"
+            excerpt="Event-driven CDPs + agents for next-best-action that lifts conversion 20–35%."
+            date="September 29, 2025"
+            category="Personalization"
+            readTime="14 min"
+            image="🛒"
+            href="/blog/ai-customer-journey-ai-2026"
+          />
+          <BlogPost
+            title="Agentic Workflow Orchestration 2026: Reliable AI Workflows"
+            excerpt="Orchestrate multi-step agents with guardrails, approvals, and observability for measurable ROI."
+            date="October 9, 2025"
+            category="Architecture"
+            readTime="16 min"
+            image="🧩"
+            href="/blog/agentic-workflow-orchestration-2026"
+          />
+          <BlogPost
+            title="AI Operational Excellence 2026: From SLIs to Self‑Healing Ops"
+            excerpt="Reliability scorecards, policy tests, and automated runbooks for 99.9% uptime."
+            date="October 9, 2025"
+            category="Operations"
+            readTime="14 min"
+            image="🛠️"
+            href="/blog/ai-operational-excellence-2026"
+          />
+          <BlogPost
+            title="AI Customer Data Platforms 2026: Real‑Time Personalization"
+            excerpt="Consent‑aware ingestion, identity resolution, feature stores, and edge delivery."
+            date="October 9, 2025"
+            category="Analytics"
+            readTime="18 min"
+            image="🧬"
+            href="/blog/ai-customer-data-platforms-2026"
           />
           <BlogPost
             title="Platform Engineering Scorecards 2026: From Golden Paths to Outcomes"

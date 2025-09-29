@@ -19,33 +19,48 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
-    id: 'ai-agent-safety-blueprint-2026',
-    title: 'AI Agent Safety Blueprint 2026: Guardrails for Reliable Autonomy',
-    excerpt: 'Blueprint for safe autonomous agents with policy gates, audits, and progressive autonomy.',
+    id: 'ai-governance-maturity-model-2026',
+    title: 'AI Governance Maturity Model 2026: From Ad‑Hoc to Audit‑Ready',
+    excerpt: 'Move from ad‑hoc controls to audit‑ready AI governance with scorecards and KPIs.',
     type: 'article',
-    readTime: '9 min read',
-    category: 'AI Reliability',
-    href: '/blog/ai-agent-safety-blueprint-2026',
+    readTime: '10 min read',
+    category: 'AI Strategy',
+    href: '/blog/ai-governance-maturity-model-2026',
     featured: true,
-    publishedDate: '2025-09-29',
+    publishedDate: '2025-10-15',
     metrics: [
-      { value: '0 incidents', label: 'Prod Incidents' },
-      { value: '95%', label: 'On-policy Actions' }
+      { value: '12', label: 'Scorecard Areas' },
+      { value: '90 days', label: 'To Audit‑Ready' }
     ]
   },
   {
-    id: 'ai-operational-excellence-2026',
-    title: 'AI Operational Excellence 2026: From Pilots to Scaled Impact',
-    excerpt: 'Scale AI reliably with governance, quality gates, FinOps, and value tracking.',
+    id: 'ai-customer-data-platforms-2026',
+    title: 'AI Customer Data Platforms 2026: Real‑Time Personalization at Scale',
+    excerpt: 'Blueprint for AI‑native CDPs powering privacy‑safe, sub‑second personalization.',
     type: 'article',
-    readTime: '12 min read',
-    category: 'Operations',
-    href: '/blog/ai-operational-excellence-2026',
+    readTime: '9 min read',
+    category: 'Architecture',
+    href: '/blog/ai-customer-data-platforms-2026',
     featured: true,
-    publishedDate: '2025-09-29',
+    publishedDate: '2025-10-15',
     metrics: [
-      { value: '30–70%', label: 'Cost Reduction' },
-      { value: '99.9%', label: 'Uptime' }
+      { value: '<1s', label: 'Personalization' },
+      { value: 'PII‑safe', label: 'Privacy' }
+    ]
+  },
+  {
+    id: 'edge-llm-latency-patterns',
+    title: 'Edge LLM Latency Patterns: Sub‑200ms Interactions',
+    excerpt: 'Streaming, prefetch, and edge compute patterns for instant‑feel AI UX.',
+    type: 'article',
+    readTime: '7 min read',
+    category: 'Edge Computing',
+    href: '/blog/edge-llm-latency-patterns',
+    featured: true,
+    publishedDate: '2025-10-15',
+    metrics: [
+      { value: '<200ms', label: 'P95 Latency' },
+      { value: '✔️', label: 'Streaming' }
     ]
   },
   {
