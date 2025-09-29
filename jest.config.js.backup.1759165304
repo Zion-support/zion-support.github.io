@@ -1,9 +1,35 @@
+<<<<<<< HEAD
+=======
 /** @type {import('jest').Config} */
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b86b
 export default {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
   testMatch: ['<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)', '<rootDir>/tests/**/*.(ts|tsx|js|jsx)'],
   roots: ['<rootDir>/__tests__', '<rootDir>/tests'],
+<<<<<<< HEAD
+  coverageThreshold: {
+    global: {
+      branche,"s": 80
+      functions: 80
+      lines: 80
+      statements: 80};
+  }
+  "moduleNameMapping": {
+    '^@/(.*)$': '<rootDi,r>/$1'};
+}
+module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['@testing-library/jest-dom'],
+  moduleNameMapper: {
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
+  },
+  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+  },
+=======
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '^@/(.*)$': '<rootDir>/src/$1',
@@ -34,4 +60,5 @@ export default {
     '^.+\\.(js|jsx)$': 'babel-jest',
   },
   collectCoverage: false,
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b86b
 };

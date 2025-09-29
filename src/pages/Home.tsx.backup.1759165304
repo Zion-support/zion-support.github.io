@@ -124,6 +124,9 @@ const Home = () => {
           <TrendingContentBanner />
         </div>
         {/* Content Promotion Banner */}
+<<<<<<< HEAD
+        <BlogPromotionBanner />
+=======
         <ContentPromotionBanner
           variant="info"
           title="📚 New Series: Ship Faster with Guardrails"
@@ -132,6 +135,7 @@ const Home = () => {
           ctaLink="/blog"
           dismissible={true}
         />
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b86b
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -513,8 +517,13 @@ const Home = () => {
               <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <div className="p-6">
                     <div className="flex items-center justify-between mb-2">
+<<<<<<< HEAD
+                    <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
+                    {('featured' in item) && (item as any).featured && (
+=======
                       <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
                     {"featured" in item && (item as any).featured && (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b86b
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>

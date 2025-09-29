@@ -1,5 +1,6 @@
 import React from "react";
 
-const LatestInsights: React.FC = () => null;
+export default function LatestInsights() {
+  return null;
+}
 
-export default LatestInsights;

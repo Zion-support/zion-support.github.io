@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-const Footer: React.FC = () => {
+export default function Footer() {
   return (
-    <footer style={{ padding: '1rem', textAlign: 'center' }}>
-      <small>© {new Date().getFullYear()} Zion Tech Group</small>
+    <footer className="py-8 text-center text-sm text-zion-slate-light">
+      <div className="container mx-auto px-6">
+        © {new Date().getFullYear()} Zion Tech Group
+      </div>
     </footer>
   );
-};
-
-export default Footer;
+}
 

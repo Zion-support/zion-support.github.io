@@ -1,5 +1,5 @@
 import React from "react";
 
-const EnhancedTestimonials: React.FC = () => null;
-
-export default EnhancedTestimonials;
+export default function EnhancedTestimonials() {
+  return null;
+}

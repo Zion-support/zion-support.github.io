@@ -1,8 +1,5 @@
 import React from "react";
 
-const ContentValueTestimonials: React.FC = () => {
+export default function ContentValueTestimonials() {
   return null;
-};
-
-export default ContentValueTestimonials;
-
+}
