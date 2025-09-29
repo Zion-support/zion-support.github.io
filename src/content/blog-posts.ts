@@ -14,105 +14,6 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "genai-telemetry-observability-2025",
-    title: "GenAI Telemetry: What to Measure in 2025",
-    description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
-    content: `
-# GenAI Telemetry: What to Measure in 2025
-
-Operationalize GenAI with observability that tracks quality, safety, and cost. Learn the critical signals, dashboards, and alerting strategies that prevent regressions and runaway bills.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "GenAI",
-    tags: ["Observability", "Telemetry", "Guardrails", "Quality"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/genai-telemetry.jpg"
-  },
-  {
-    slug: "ai-governance-blueprint-2025",
-    title: "Enterprise AI Governance Blueprint 2025",
-    description: "Pragmatic roles, rubrics, and policy tests to ship safe AI fast.",
-    content: `
-# Enterprise AI Governance Blueprint 2025
-
-Balance speed and safety with a governance model that product teams actually adopt. Define decision rubrics, lightweight approvals, and policy tests that run in CI and production.
-
-## Core Elements
-- Ownership model across Product, Eng, Legal, and Risk
-- Policy-as-code with CI gates and runtime checks
-- Red/black canaries tied to business KPIs
-
-Adopt this blueprint to accelerate delivery while maintaining trust and compliance.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Governance",
-    tags: ["Governance", "Policy", "Compliance", "Evals"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-governance-blueprint.jpg"
-  },
-  {
-    slug: "cloud-finops-quick-wins-2025",
-    title: "Cloud FinOps Quick Wins: 30% Savings in 60 Days",
-    description: "Right-size, demand-shape, and set guardrails without slowing teams.",
-    content: `
-# Cloud FinOps Quick Wins: 30% Savings in 60 Days
-
-Practical tactics to cut spend fast while preserving developer velocity. Implement budget-aware autoscaling, requests/limits sanity checks, and environment lifecycle controls.
-
-## Playbook
-- Rightsize top 10 services by cost and idle time
-- Enforce requests/limits and QoS tiers
-- Add off-hours shutdown and TTL for preview envs
-
-Deliver measurable savings with engineering-friendly guardrails.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "Cloud FinOps",
-    tags: ["FinOps", "Cloud", "Cost", "Guardrails"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/cloud-finops-quick-wins.jpg"
-  },
-  {
-    slug: "feature-flags-at-the-edge-2025",
-    title: "Feature Flags at the Edge: Instant, Safe Rollouts",
-    description: "Design flags for global low-latency delivery, safe rollbacks, and cohort experimentation.",
-    content: `
-# Feature Flags at the Edge: Instant, Safe Rollouts
-
-Architect global feature delivery with edge caching, signed payloads, and cohort targeting to ship faster with confidence.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-28",
-    category: "Architecture",
-    tags: ["Edge", "Flags", "Rollouts", "CD"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/edge-feature-flags.jpg"
-  },
-  {
-    slug: "ai-product-readiness-checks",
-    title: "AI Product Readiness: Pre‑Launch Checks That Matter",
-    description: "From eval gates to safety reviews—everything to validate before shipping AI to users.",
-    content: `
-# AI Product Readiness: Pre‑Launch Checks That Matter
-
-Use this concise pre‑launch checklist to ensure your AI features meet quality, safety, and reliability bars before release.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-27",
-    category: "Product",
-    tags: ["Product", "Launch", "Governance"],
-    featured: true,
-    readTime: "5 min read",
-    image: "/images/ai-product-readiness.jpg"
-  },
-  {
     slug: "genai-evals-in-production-2025",
     title: "GenAI Evals in Production: Policy Tests That Scale",
     description: "From offline suites to online canaries: patterns that keep quality high as usage grows.",
@@ -231,44 +132,34 @@ Implement these patterns to achieve fast, reliable, and cost‑effective streami
     image: "/images/real-time-data-pipelines.jpg"
   },
   {
-    slug: "ai-roadmaps-2025",
-    title: "Designing High-Impact AI Roadmaps in 2025",
-    description: "A pragmatic framework to align AI bets with measurable business outcomes in under 90 days.",
+    slug: "platform-scorecards-that-stick",
+    title: "Platform Scorecards That Actually Drive Adoption",
+    description: "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
     content: `
-# Designing High-Impact AI Roadmaps in 2025
+# Platform Scorecards That Actually Drive Adoption
 
-This guide shows how to pick the right use-cases, define success metrics, and ship value in quarters—not years.
+Align platform engineering with product outcomes by defining capability scorecards that measure adoption, developer experience, and reliability.
 
-## Playbook
-- Align with revenue or cost outcomes
-- Start with decision loops and data readiness
-- Prove value via pilot scorecards
-- Scale with platform thinking
-`,
+## Ingredients of a Useful Scorecard
+- Capabilities mapped to paved roads
+- Golden path time-to-first-success
+- Reliability SLOs per product surface
+- Enablement metrics (docs, templates, DX)
+
+## Anti‑Patterns
+- Vanity operational metrics without user impact
+- Inconsistent scoring across teams
+- Missing feedback loops
+
+Adopt scorecards that drive decisions and investment—not dashboards that collect dust.
+    `,
     author: "Zion Tech Group Team",
     date: "2025-09-29",
-    category: "AI Strategy",
-    tags: ["AI Strategy", "Roadmaps", "Execution"],
+    category: "Platform Engineering",
+    tags: ["Platform", "DX", "Scorecards", "Golden Paths"],
     featured: true,
-    readTime: "6 min read",
-    image: "/images/ai-roadmaps-2025.jpg"
-  },
-  {
-    slug: "cloud-finops-quick-wins",
-    title: "Cloud FinOps: 9 Quick Wins in 90 Days",
-    description: "Practical tactics to cut 25–40% of cloud spend without slowing engineering teams.",
-    content: `
-# Cloud FinOps: 9 Quick Wins
-
-From demand shaping to instance right-sizing and cost-aware CI, these moves deliver fast savings.
-`,
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Cloud FinOps",
-    tags: ["FinOps", "Cloud", "Cost Optimization"],
-    featured: true,
-    readTime: "5 min read",
-    image: "/images/cloud-finops-quick-wins.jpg"
+    readTime: "9 min read",
+    image: "/images/platform-scorecards.jpg"
   },
   {
     slug: "ai-workflow-automation-2025-guide",
