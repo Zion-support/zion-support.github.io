@@ -54,6 +54,15 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="AI Operational Resilience 2026: Designing for Failure and Recovery"
+            excerpt="Blueprint for 99.99% uptime with policy tests, isolation, and automated recovery."
+            date="September 29, 2025"
+            category="Operations"
+            readTime="14 min"
+            image="🧯"
+            href="/blog/ai-operational-resilience-2026"
+          />
+          <BlogPost
             title="AI Agent Observability 2026: Metrics, Traces, and Guardrails"
             excerpt="Instrument agents with traces, evals, and policy guardrails to ship reliable autonomy."
             date="September 29, 2025"
