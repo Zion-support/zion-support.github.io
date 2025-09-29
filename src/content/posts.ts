@@ -10,33 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-    slug: "ai-agent-orchestration-2026",
-    title: "AI Agent Orchestration 2026: Multi-Agent System Architecture",
-    description: "Master multi-agent systems with 95% automation efficiency and $5M+ ROI through advanced orchestration patterns.",
-    category: "AI Orchestration",
-    publishedAt: "2025-01-20",
-    featured: true,
-    readTime: "22 min read"
-  },
-  {
-    slug: "ai-sustainability-green-tech-2026",
-    title: "AI Sustainability & Green Tech 2026: Carbon-Neutral Operations",
-    description: "Achieve carbon-neutral AI operations with 80% energy reduction and $2M+ savings through sustainable technology.",
-    category: "Sustainability",
-    publishedAt: "2025-01-20",
-    featured: true,
-    readTime: "18 min read"
-  },
-  {
-    slug: "ai-quantum-computing-2026",
-    title: "AI Quantum Computing 2026: Next-Generation Intelligence",
-    description: "Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.",
-    category: "Quantum Computing",
-    publishedAt: "2025-01-20",
-    featured: true,
-    readTime: "25 min read"
-=======
     slug: "agent-blue-green-releases-2026",
     title: "Agent Blue‑Green Releases 2026: Safe, Reversible Automation",
     description: "Ship agent changes with policy tests, budgeted actions, and instant rollback toggles.",
@@ -206,7 +179,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "7 min read"
->>>>>>> cursor/create-and-deploy-new-content-d0aa
   },
   {
     slug: "ai-reliable-rag-ops-2026",
@@ -573,7 +545,6 @@ export const posts: BlogPost[] = [
   }
   ,
   {
-<<<<<<< HEAD
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
     description: "Continuous SBOMs for models, datasets, and prompts with attestations and CI policy checks.",
@@ -620,7 +591,7 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   }
   ,
-=======
+  {
     slug: "agent-evals-scorecards-2026",
     title: "Agent Evals 2026: Scorecards That Predict Outcomes",
     description: "Design online evals and KPI‑linked scorecards that correlate with revenue and CSAT.",
@@ -638,7 +609,6 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "7 min read"
   },
->>>>>>> cursor/create-and-deploy-new-content-d0aa
   {
     slug: "agentic-workflows-blueprint-2026",
     title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",

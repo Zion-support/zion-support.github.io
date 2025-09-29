@@ -19,6 +19,42 @@ export interface EnhancedPromotionalBanner {
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   {
+    id: 'fresh-sep-29-2025-bluegreen-slo-caching',
+    message: '🆕 New: Agent Blue‑Green Releases • Edge LLM Caching • Platform SLOs',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0,
+    variant: 'info',
+    icon: '🆕',
+    animation: 'fade-in',
+    badge: 'NEW',
+    featured: true
+  },
+  {
+    id: 'spotlight-bluegreen-article',
+    message: '🚀 Agent Blue‑Green Releases 2026: Safe, Reversible Automation',
+    ctaText: 'Read Article',
+    ctaLink: '/blog/agent-blue-green-releases-2026',
+    backgroundColor: 'bg-gradient-to-r from-orange-600 to-red-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 1,
+    variant: 'premium',
+    icon: '🚀',
+    animation: 'slide-in',
+    badge: 'FEATURED',
+    featured: true
+  },
+  {
     id: 'fresh-oct-15-2025',
     message: '✨ New: Incident Budgets v2 + Edge Personalization 2026',
     ctaText: 'Read now',
