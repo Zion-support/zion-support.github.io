@@ -1,10 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
 import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
 import NewContent2027Showcase from '../components/NewContent2027Showcase';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import { NewContent2026PromotionalBanners } from '../components/NewContent2026PromotionalBanners';
 import { Clock, ArrowRight } from 'lucide-react';
+>>>>>>> origin/cursor/create-and-deploy-new-content-ac92
 import {
   NewBlogBanner,
   AnalyticsPlatformBanner,
@@ -68,6 +71,9 @@ import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+<<<<<<< HEAD
+import NextGenAutonomousBanner from '../components/NextGenAutonomousBanner';
+=======
 import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
 =======
 import AIROICalculator from '../src/components/AIROICalculator';
@@ -78,6 +84,7 @@ import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBann
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
+>>>>>>> origin/cursor/create-and-deploy-new-content-ac92
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -92,8 +99,28 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
+<<<<<<< HEAD
+            <Link href="/blog/ai-space-tech-2026" className="underline hover:text-yellow-200">Space AI Technology</Link>
+=======
+<<<<<<< HEAD
+            <span>🚀 BREAKTHROUGH 2027:</span>
+            <Link href="/blog/ai-2027-breakthrough-technologies" className="underline hover:text-yellow-200">AI Breakthrough Technologies</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-autonomous-enterprise-operations-2027" className="underline hover:text-yellow-200">Autonomous Enterprise Ops</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-quantum-neural-networks-2027" className="underline hover:text-yellow-200">Quantum Neural Networks</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-2027-transformation-mega-success" className="underline hover:text-yellow-200">$500M Success Story</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/services/ai-2027-solutions" className="underline hover:text-yellow-200">AI 2027 Solutions</Link>
+          </div>
+          <Link
+            href="/blog"
+            className="bg-white text-purple-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
+=======
             <span>🚀 NEW 2026 Content:</span>
             <a to="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
+>>>>>>> origin/cursor/create-and-deploy-new-content-ac92
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-synthetic-data-2026" className="underline hover:text-yellow-200">Synthetic Data AI</Link>
             <span className="hidden md:inline">•</span>
@@ -125,11 +152,29 @@ export default function HomePage() {
           <Link
             href="/blog"
             className="bg-white text-green-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
+>>>>>>> 59d88f3fb2db9c8a1ae47f14226e443771749dc6
           >
             Explore 2027 Content
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
+      {/* Revolutionary 2027 Content Banner */}
+      <Revolutionary2027ContentBanner />
+      
+      {/* New 2027 Content Showcase */}
+      <NewContent2027Showcase />
+      
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
+      
+      {/* Latest 2026 Content Banner */}
+      <LatestContent2026Banner />
+      
+      {/* New Content Promotional Banners */}
+      <NewContent2026PromotionalBanners />
+      
+=======
       {/* Promotional Banners */}
       <Latest2026ContentBanner />
       <AIAdvancedAutomationBanner />
@@ -179,6 +224,7 @@ export default function HomePage() {
       <NewBlogBanner />
       <WorkflowAutomationBanner />
       <AIAnalyticsBanner />
+>>>>>>> 59d88f3fb2db9c8a1ae47f14226e443771749dc6
       
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
