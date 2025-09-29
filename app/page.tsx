@@ -39,6 +39,7 @@ import {
   AITechnologyBreakthroughBanner,
   EnterpriseAITransformationBanner
 } from '../components/PromotionalBanner';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -158,6 +159,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
 
       {/* Featured Services */}
       <section className="py-20 bg-white">
