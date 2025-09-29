@@ -424,19 +424,12 @@ const Resources = () => {
                         <Download className="w-4 h-4 mr-1" />
                         {resource.downloadCount} downloads
                       </div>
-<<<<<<< HEAD
-                        <div className="flex items-center text-gray-500 text-sm">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {(resource as any).readTime || (resource as any).duration || `${(resource as any).pages || 0} pages`}
-                        </div>
-=======
                       <div className="flex items-center text-gray-500 text-sm">
                         <Clock className="w-4 h-4 mr-1" />
                         {typeof (resource as any).duration === 'string'
                           ? (resource as any).duration
                           : ((resource as any).readTime || `${(resource as any).pages || 0} pages`)}
                       </div>
->>>>>>> cursor/check-fix-push-and-merge-to-main-84db
                     </div>
 
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -535,13 +528,9 @@ const Resources = () => {
                         </div>
                         <div className="flex items-center">
                           <Clock className="w-4 h-4 mr-1" />
-<<<<<<< HEAD
-                          {(resource as any).readTime || (resource as any).duration || `${(resource as any).pages || 0} pages`}
-=======
                           {typeof (resource as any).duration === 'string'
                             ? (resource as any).duration
                             : ((resource as any).readTime || `${(resource as any).pages || 0} pages`)}
->>>>>>> cursor/check-fix-push-and-merge-to-main-84db
                         </div>
                       </div>
 
