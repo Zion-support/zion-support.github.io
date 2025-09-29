@@ -59,6 +59,8 @@ export default function HomePage() {
             <a href="/blog/ai-operational-excellence-2026" className="underline hover:text-yellow-200">AI Operational Excellence 2026</a>
             <span className="hidden md:inline">•</span>
             <a href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-governance-metrics-2026" className="underline hover:text-yellow-200">Governance Metrics</a>
           </div>
           <Link
             href="/blog"
@@ -393,6 +395,25 @@ export default function HomePage() {
                 </h3>
                 <p className="text-gray-600 mb-4">
                   Master multimodal AI for enterprise with vision, language, and audio processing. 85% efficiency gains and $2M+ ROI.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-governance-metrics-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Governance
+                  </span>
+                  <span className="text-sm text-gray-500">12 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Governance Metrics 2026: Measure Safety, Cost, and Value
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Instrument AI with safety, reliability, cost, latency, and value metrics.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Article →

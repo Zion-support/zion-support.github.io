@@ -54,6 +54,15 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="AI Governance Metrics 2026: Measure Safety, Cost, and Value"
+            excerpt="A 2026 playbook to instrument AI with safety, reliability, cost, latency, and value KPIs."
+            date="September 29, 2025"
+            category="Governance"
+            readTime="12 min"
+            image="📏"
+            href="/blog/ai-governance-metrics-2026"
+          />
+          <BlogPost
             title="AI Agent Observability 2026: End-to-End Tracing and Guardrails"
             excerpt="Blueprint for measuring and improving agent reliability with traces, evals, and safety guardrails."
             date="September 29, 2025"
