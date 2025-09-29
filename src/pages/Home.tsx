@@ -114,10 +114,17 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
+<<<<<<< HEAD
           title="📣 New: AI Risk Register, Practical Evals, and Cloud FinOps Guardrails"
           description="Ship faster and safer: operationalize risks, tie evals to outcomes, and cut cloud waste."
           ctaText="Read the updates"
           ctaLink="/blog/ai-risk-register-2025"
+=======
+          title="🚀 Fresh: AI Platform ROI + Secure ML Supply Chain"
+          description="New frameworks on platform ROI and end-to-end ML supply chain security."
+          ctaText="Read the latest"
+          ctaLink="/blog/ai-platform-roi-2025"
+>>>>>>> cursor/create-and-deploy-new-content-a3e4
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -700,12 +707,15 @@ const Home = () => {
             <div className="mb-10 flex items-end justify-between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
-                <p className="text-gray-600">Fresh: AI Governance, Golden Paths, Cloud FinOps QA gates, and NEW AI automation guides.</p>
+                <p className="text-gray-600">Fresh: AI Platform ROI, Secure ML Supply Chain, and Enterprise RAG Blueprint.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
             <div className="grid gap-8 md:grid-cols-3">
-              {posts.slice(0, 3).map((post) => (
+              {[...posts]
+                .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+                .slice(0, 3)
+                .map((post) => (
                 <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                   <div className="p-6">
                     <div className="text-sm text-indigo-600 font-medium mb-2">{post.category}</div>
@@ -802,9 +812,15 @@ const Home = () => {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
+<<<<<<< HEAD
               <p className="text-white/90">
                 New: AI Risk Register, Boosting LTV with AI, and Data Contracts in Practice.
               </p>
+=======
+                  <p className="text-white/90">
+                    New: AI Platform ROI scorecards, securing the ML supply chain, and Enterprise RAG v2.
+                  </p>
+>>>>>>> cursor/create-and-deploy-new-content-a3e4
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
                   Read the latest
@@ -815,6 +831,7 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
+<<<<<<< HEAD
                   <div className="text-sm text-blue-200 mb-1">AI Strategy</div>
                   <div className="font-semibold text-white">Designing High‑Impact AI Product Roadmaps</div>
                 </div>
@@ -825,6 +842,18 @@ const Home = () => {
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-purple-200 mb-1">MLOps</div>
                   <div className="font-semibold text-white">Online Evals for GenAI: From Shadow to Guardrails</div>
+=======
+                  <div className="text-sm text-purple-200 mb-1">AI Strategy</div>
+                  <div className="font-semibold text-white">AI Platform ROI Scorecards</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-blue-200 mb-1">GenAI</div>
+                  <div className="font-semibold text-white">Enterprise RAG Blueprint v2</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-rose-200 mb-1">Security</div>
+                  <div className="font-semibold text-white">Secure ML Supply Chain</div>
+>>>>>>> cursor/create-and-deploy-new-content-a3e4
                 </div>
               </div>
             </div>
