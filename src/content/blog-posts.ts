@@ -14,6 +14,105 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "genai-telemetry-observability-2025",
+    title: "GenAI Telemetry: What to Measure in 2025",
+    description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
+    content: `
+# GenAI Telemetry: What to Measure in 2025
+
+Operationalize GenAI with observability that tracks quality, safety, and cost. Learn the critical signals, dashboards, and alerting strategies that prevent regressions and runaway bills.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["Observability", "Telemetry", "Guardrails", "Quality"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/genai-telemetry.jpg"
+  },
+  {
+    slug: "ai-governance-blueprint-2025",
+    title: "Enterprise AI Governance Blueprint 2025",
+    description: "Pragmatic roles, rubrics, and policy tests to ship safe AI fast.",
+    content: `
+# Enterprise AI Governance Blueprint 2025
+
+Balance speed and safety with a governance model that product teams actually adopt. Define decision rubrics, lightweight approvals, and policy tests that run in CI and production.
+
+## Core Elements
+- Ownership model across Product, Eng, Legal, and Risk
+- Policy-as-code with CI gates and runtime checks
+- Red/black canaries tied to business KPIs
+
+Adopt this blueprint to accelerate delivery while maintaining trust and compliance.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Governance",
+    tags: ["Governance", "Policy", "Compliance", "Evals"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-governance-blueprint.jpg"
+  },
+  {
+    slug: "cloud-finops-quick-wins-2025",
+    title: "Cloud FinOps Quick Wins: 30% Savings in 60 Days",
+    description: "Right-size, demand-shape, and set guardrails without slowing teams.",
+    content: `
+# Cloud FinOps Quick Wins: 30% Savings in 60 Days
+
+Practical tactics to cut spend fast while preserving developer velocity. Implement budget-aware autoscaling, requests/limits sanity checks, and environment lifecycle controls.
+
+## Playbook
+- Rightsize top 10 services by cost and idle time
+- Enforce requests/limits and QoS tiers
+- Add off-hours shutdown and TTL for preview envs
+
+Deliver measurable savings with engineering-friendly guardrails.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Cloud FinOps",
+    tags: ["FinOps", "Cloud", "Cost", "Guardrails"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/cloud-finops-quick-wins.jpg"
+  },
+  {
+    slug: "feature-flags-at-the-edge-2025",
+    title: "Feature Flags at the Edge: Instant, Safe Rollouts",
+    description: "Design flags for global low-latency delivery, safe rollbacks, and cohort experimentation.",
+    content: `
+# Feature Flags at the Edge: Instant, Safe Rollouts
+
+Architect global feature delivery with edge caching, signed payloads, and cohort targeting to ship faster with confidence.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "Architecture",
+    tags: ["Edge", "Flags", "Rollouts", "CD"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-feature-flags.jpg"
+  },
+  {
+    slug: "ai-product-readiness-checks",
+    title: "AI Product Readiness: Pre‑Launch Checks That Matter",
+    description: "From eval gates to safety reviews—everything to validate before shipping AI to users.",
+    content: `
+# AI Product Readiness: Pre‑Launch Checks That Matter
+
+Use this concise pre‑launch checklist to ensure your AI features meet quality, safety, and reliability bars before release.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-27",
+    category: "Product",
+    tags: ["Product", "Launch", "Governance"],
+    featured: true,
+    readTime: "5 min read",
+    image: "/images/ai-product-readiness.jpg"
+  },
+  {
     slug: "genai-evals-in-production-2025",
     title: "GenAI Evals in Production: Policy Tests That Scale",
     description: "From offline suites to online canaries: patterns that keep quality high as usage grows.",

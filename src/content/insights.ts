@@ -18,6 +18,51 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+    id: "secure-ml-platform-checklist",
+    title: "Secure ML Platform: A 12‑Point Checklist",
+    summary:
+      "Pragmatic controls for data flows, registries, deployment targets, and drift monitoring.",
+    category: "Security",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-cdn-cache-budgeting",
+    title: "Edge CDN Cache Budgeting: Hit‑Rate Wins Without Stale Bugs",
+    summary:
+      "Decide TTLs, validation circuits, and negative caching for reliable, fast UX.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "ai-cost-quick-wins",
+    title: "AI Cost Quick Wins: Cut 25% Without Slowing Teams",
+    summary:
+      "Target redundant workflows, compress context, and cache prompts to reduce spend fast.",
+    category: "AI Strategy",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "model-policy-tests-playbook",
+    title: "A Playbook for Model Policy Tests",
+    summary:
+      "Define disallowed patterns, add detectors, and wire policy checks into CI and runtime.",
+    category: "AI Governance",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-cache-stale-while-revalidate",
+    title: "Stale‑While‑Revalidate in Practice",
+    summary:
+      "Deliver instant responses while safely refreshing data in the background at the edge.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
     id: "edge-flags-validation",
     title: "Edge Flags: Validation Circuits That Prevent Bad Rolls",
     summary:

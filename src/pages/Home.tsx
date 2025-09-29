@@ -103,10 +103,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: Real‑Time Pipelines, Edge Inference, and Platform Scorecards"
-          description="New articles + insights: reliable streaming, sub‑100ms edge patterns, and metrics that drive adoption."
-          ctaText="See what's new"
-          ctaLink="/blog"
+          title="🚀 New: AI Governance Blueprint + Cloud FinOps Quick Wins"
+          description="Ship safe AI fast and cut cloud costs by 30% in 60 days."
+          ctaText="Read the latest"
+          ctaLink="/blog/ai-governance-blueprint-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
