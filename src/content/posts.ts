@@ -10,12 +10,15 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
     slug: "ai-autonomous-infrastructure-2026",
     title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
     description: "Blueprints and scorecards to operate self‑healing platforms with budgets and safe automation.",
     category: "Platform Engineering",
-=======
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-platform-slos-2026",
     title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
     description: "Design SLOs and risk budgets for AI systems with instant rollbacks and KPI‑linked canaries.",
@@ -47,10 +50,27 @@ export const posts: BlogPost[] = [
     title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
     description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
     category: "Cybersecurity",
->>>>>>> cursor/create-and-deploy-new-content-6196
     publishedAt: "2025-10-12",
     featured: true,
-    readTime: "9 min read"
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-trustworthy-tooling-2026",
+    title: "Trustworthy AI Tooling 2026: Signed Tools, Attestations, Policy Tests",
+    description: "A practical toolbox for operating AI safely: signed tools, provenance, and CI policy checks.",
+    category: "AI Governance",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-observability-kpis-2026",
+    title: "Edge Observability KPIs: User‑Centric Traces Under 100ms",
+    description: "Design telemetry that reflects user experience across edge, CDN, and app layers without PII risk.",
+    category: "Observability",
+    publishedAt: "2025-10-14",
+    featured: false,
+    readTime: "6 min read"
   },
   {
     slug: "quantum-ai-hybrid-blueprint-2026",

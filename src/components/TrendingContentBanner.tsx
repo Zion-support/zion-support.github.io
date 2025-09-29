@@ -28,6 +28,16 @@ const TrendingContentBanner: React.FC = () => {
       badge: "HOT"
     },
     {
+      title: "Trustworthy AI Tooling 2026",
+      description: "Signed tools, provenance, and CI policy checks.",
+      views: "11.2K",
+      readTime: "7 min",
+      category: "AI Governance",
+      icon: Shield,
+      link: "/blog/ai-trustworthy-tooling-2026",
+      badge: "NEW"
+    },
+    {
       title: "Zero‑Trust for GenAI 2026",
       description: "Prompt firewalls, egress controls, and signed outputs at scale.",
       views: "10.9K",
@@ -35,6 +45,16 @@ const TrendingContentBanner: React.FC = () => {
       category: "Security",
       icon: Shield,
       link: "/blog/zero-trust-for-genai-2026",
+      badge: "TRENDING"
+    },
+    {
+      title: "Edge Observability KPIs",
+      description: "User‑centric traces across edge, CDN, and app layers.",
+      views: "9.7K",
+      readTime: "6 min",
+      category: "Observability",
+      icon: Cloud,
+      link: "/blog/edge-observability-kpis-2026",
       badge: "TRENDING"
     },
     {

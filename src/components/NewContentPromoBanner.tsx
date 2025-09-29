@@ -40,6 +40,13 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       category: "Edge"
     },
     {
+      title: "Trustworthy AI Tooling 2026",
+      description: "Signed tools, attestations, and CI policy checks",
+      icon: Shield,
+      link: "/blog/ai-trustworthy-tooling-2026",
+      category: "Governance"
+    },
+    {
       title: "GenAI Budgets & Quality Tiers",
       description: "Cut spend 30–60% without hurting UX",
       icon: Zap,
@@ -52,6 +59,13 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       icon: Shield,
       link: "/blog/secure-tools-marketplace-2026",
       category: "Security"
+    },
+    {
+      title: "Edge Observability KPIs",
+      description: "User‑centric traces without PII risk",
+      icon: Cloud,
+      link: "/blog/edge-observability-kpis-2026",
+      category: "Observability"
     },
     {
       title: "Privacy‑First Observability",
