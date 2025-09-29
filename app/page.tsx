@@ -86,6 +86,8 @@ import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+import NewContent2026Banner from '../components/NewContent2026Banner';
+import LatestAIInnovations2026Banner from '../components/LatestAIInnovations2026Banner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -98,6 +100,12 @@ export default function HomePage() {
     <div className="animate-fade-in">
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
+      
+      {/* New Content 2026 Banner */}
+      <NewContent2026Banner />
+      
+      {/* Latest AI Innovations Banner */}
+      <LatestAIInnovations2026Banner />
       
       {/* New Content Promo Strip */}
       <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
