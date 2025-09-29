@@ -669,5 +669,104 @@ posts.push(
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "8 min read"
+<<<<<<< HEAD
+  },
+  {
+    slug: "privacy-first-insights-telemetry-2026",
+    title: "Privacy‑First Insights 2026: DP Telemetry Without PII Risk",
+    description: "Scoped IDs, field‑level redaction, and aggregation windows for signal‑rich product analytics.",
+    category: "Observability",
+    publishedAt: "2025-10-16",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "agent-blue-green-releases-2026",
+    title: "Blue‑Green Agent Releases 2026: Safe Rollouts with Live Traces",
+    description: "Deploy agent updates with canaries, budgeted tool actions, and trace‑driven rollbacks.",
+    category: "GenAI",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-platform-scorecards-roi-2026",
+    title: "AI Platform Scorecards 2026: Proving ROI with Leading Indicators",
+    description: "Link platform telemetry to adoption, retention, and revenue with actionable scorecards.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-10",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "production-rag-quality-budgets-2026",
+    title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
+    description: "Keep answers accurate and on‑budget with freshness windows, async warmups, and layered evals.",
+    category: "GenAI",
+    publishedAt: "2025-10-10",
+    featured: true,
+    readTime: "9 min read"
+  }
+);
+
+// Merge: include upstream new posts and our new posts
+posts.push(
+  // Upstream additions
+  {
+    slug: "agentic-observability-scorecards-2026",
+    title: "Agentic Observability Scorecards 2026: Traces that Predict Outcomes",
+    description: "Correlate traces with KPIs using lightweight scorecards that prevent regressions without slowing delivery.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-privacy-cdn-2026",
+    title: "Edge Privacy CDN 2026: Scoped IDs, Local Filters, Zero PII",
+    description: "Ship privacy-first experiences with scoped identifiers, on-device filters, and DP-friendly telemetry.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "platform-golden-paths-slos-2026",
+    title: "Platform Golden Paths + SLOs 2026: Adoption that Drives ROI",
+    description: "Design golden paths wired to SLOs and adoption metrics that link platform work to revenue.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  // Our additional October 2025 content
+  {
+    slug: "ai-data-lineage-for-genai-2026",
+    title: "AI Data Lineage for GenAI 2026: Traceability That Scales",
+    description: "Track prompts, datasets, and model outputs with signed SBOMs and audit‑ready lineage.",
+    category: "AI Governance",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-secure-feature-stores-2026",
+    title: "Edge Secure Feature Stores 2026: Sub‑100ms Signals Without PII",
+    description: "Signed configs, on‑device caches, and scoped IDs for private, real‑time features.",
+    category: "Architecture",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "llm-evaluation-playbooks-2026",
+    title: "LLM Evaluation Playbooks 2026: Online Canaries That Predict Outcomes",
+    description: "Design evals that correlate with KPIs using scorecards, PR checks, and live canaries.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "8 min read"
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-f2b3
   }
 );
