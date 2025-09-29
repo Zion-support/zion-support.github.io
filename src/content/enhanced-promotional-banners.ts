@@ -19,6 +19,24 @@ export interface EnhancedPromotionalBanner {
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   {
+    id: 'fresh-sept-29-2025-ai-drills-privacy-bluegreen',
+    message: '🚀 New: AI Drills 2026 • Privacy‑First Insights • Agent Blue‑Green',
+    ctaText: 'Explore new articles',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-fuchsia-600 to-purple-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0,
+    variant: 'info',
+    icon: '✨',
+    animation: 'fade-in',
+    badge: 'NEW',
+    featured: true
+  },
+  {
     id: 'fresh-oct-14-2025',
     message: '✨ New: Risk Budgets 2026 • Privacy‑First Flags 2026 • Reliable Agent Actions',
     ctaText: 'Read now',

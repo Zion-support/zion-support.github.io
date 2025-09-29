@@ -10,6 +10,34 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-incident-simulation-drills-2026",
+    title: "AI Incident Simulation Drills 2026: Practicing Budgeted Autonomy",
+    description: "Tabletop to live-fire: simulate risky tool actions with approvals, budgets, and instant rollback.
+",
+    category: "Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-insights-scorecards-2026",
+    title: "Privacy‑First Insights Scorecards 2026: Signal‑Rich Without PII",
+    description: "Scoped IDs, field‑level filters, and retention windows wired to KPI scorecards.",
+    category: "Observability",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "agent-blue-green-rollouts-2026",
+    title: "Agent Blue‑Green Rollouts 2026: Canaries, Budgets, and Traces",
+    description: "Release agents safely with tiered routes, budgeted actions, and live rollback triggers.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-breach-drills-2026",
     title: "AI Breach Drills 2026: Practice Safe Autonomy Under Pressure",
     description: "Runbook drills for AI systems: budgeted actions, approvals, and instant rollback paths.",
