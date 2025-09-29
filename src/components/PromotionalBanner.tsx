@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Zap, Bot, BarChart3 } from 'lucide-react';
 
 interface PromotionalBannerProps {
   title: string;

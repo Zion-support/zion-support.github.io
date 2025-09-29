@@ -106,15 +106,11 @@ const Home = () => {
         <Header />
         <LatestContentBanner variant="info" autoRotate={true} rotationInterval={6000} />
         <ContentPromotionBanner
-          title="New: AI Sales Copilot, Event‑Driven at Scale, Zero‑Downtime Migrations"
-          description="Fresh 2025 content: grounded AI copilots for sales, resilient EDA contracts, and safe schema rollouts."
-          ctaText="Explore new content"
-          ctaLink="/blog"
-          variant="info"
           title="🚀 Fresh: AI Platform Engineering 2025 + Edge AI Latency Budgets"
           description="New long-form guide and 3 brand-new articles across Platform, Governance, and MLOps."
           ctaText="Read the latest"
           ctaLink="/blog/ai-platform-engineering-2025"
+          variant="info"
           dismissible={true}
         />
 
@@ -124,7 +120,7 @@ const Home = () => {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <div className="bg-white/20 rounded-full p-2">
-                  <BookOpen className="w-5 h-5" />
+                  <Sparkles className="w-5 h-5" />
                 </div>
                 <div>
                   <div className="font-bold text-lg">🎉 NEW: 50+ Free Resources Available!</div>
@@ -737,7 +733,7 @@ const Home = () => {
               <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300">
                 <div className="flex items-center mb-4">
                   <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                    <BookOpen className="w-6 h-6 text-blue-600" />
+                    <Sparkles className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900">Latest Blog Posts</h3>
@@ -748,7 +744,7 @@ const Home = () => {
                   {posts.slice(0, 3).map((post) => (
                     <div key={post.slug} className="border-l-4 border-blue-500 pl-4">
                       <h4 className="font-semibold text-gray-900 text-sm mb-1">{post.title}</h4>
-                      <p className="text-xs text-gray-600">{post.category} • {post.readTime}</p>
+                    <p className="text-xs text-gray-600">{post.category}</p>
                     </div>
                   ))}
                 </div>
