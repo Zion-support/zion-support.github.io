@@ -22,6 +22,10 @@ import { useSEOData } from './components/SEOOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
+import { performanceOptimizer as advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
+import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
+import { seoOptimizer } from './utils/advancedSEOOptimizer';
+import { securityEnhancer } from './utils/advancedSecurityEnhancer';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
@@ -112,6 +116,12 @@ export default function App(): React.JSX.Element {
         // enhancedAccessibilityManager.initialize?.(); // Method doesn't exist
         // enhancedPerformanceMonitor.initialize?.(); // Method doesn't exist
         // enhancedSEOOptimizer.initialize?.(); // Method doesn't exist
+        
+        // Initialize advanced optimizations
+        advancedPerformanceOptimizer.optimize();
+        accessibilityEnhancer.getMetrics();
+        seoOptimizer.getMetrics();
+        securityEnhancer.getMetrics();
         
         // Initialize performance optimizations
         // performanceOptimizer.initialize?.(); // Method doesn't exist
