@@ -1,4 +1,4 @@
-/* global HTMLInputElement, HTMLTextAreaElement, HTMLSelectElement */
+// Removed unnecessary global redeclarations; relying on TypeScript DOM lib
 import { CheckCircle, Send } from 'lucide-react';
 import React, { useState } from 'react';
 
