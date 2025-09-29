@@ -9,15 +9,6 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
-    id: "serverless-warm-pools-playbook",
-    title: "Serverless Warm Pools: Cut Cold Starts, Not Corners",
-    summary:
-      "Adaptive warmers, concurrency hints, and budgets to keep P95 low without overspend.",
-    category: "Architecture",
-    date: "2025-09-30",
-    readMinutes: 4,
-  },
-  {
     id: "ai-governance-at-scale-2025",
     title: "AI Governance at Scale: Policies That Enable Speed",
     summary:
@@ -54,48 +45,39 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 5,
   },
   {
-    id: "ai-governance-rubric",
-    title: "A Lightweight Rubric for AI Governance Decisions",
+    id: "cloud-finops-qa-gates",
+    title: "Cloud FinOps QA Gates That Engineers Actually Use",
     summary:
-      "When to require human‑in‑the‑loop, what to log, and how to audit outputs across teams.",
-    category: "AI Governance",
-    date: "2025-09-29",
+      "Guardrails and review loops that reduce cost without slowing delivery.",
+    category: "Cloud FinOps",
+    date: "2025-09-30",
     readMinutes: 5,
   },
   {
-    id: "edge-cache-invalidation",
-    title: "Edge Cache Invalidation Strategies That Won't Wake You Up",
+    id: "ai-roadmaps-that-ship",
+    title: "AI Roadmaps That Ship: From Strategy to Weekly Wins",
     summary:
-      "Versioned keys, background warming, and circuit breakers for resilient edge experiences.",
-    category: "Architecture",
-    date: "2025-09-28",
+      "Eval gates, ROI scorecards, and delivery rituals that keep momentum high.",
+    category: "AI Strategy",
+    date: "2025-09-30",
     readMinutes: 6,
   },
   {
-    id: "genai-telemetry-metrics",
-    title: "GenAI Telemetry: The 8 Metrics That Predict Drift",
+    id: "ai-cost-guardrails-insight",
+    title: "AI Cost Guardrails: Telemetry That Drives the Right Decisions",
     summary:
-      "Capture inputs, policies, and human feedback signals to detect regressions before users do.",
-    category: "GenAI",
-    date: "2025-09-27",
-    readMinutes: 7,
-  },
-  {
-    id: "observability-otel-traces-that-matter",
-    title: "OpenTelemetry in Production: Traces That Engineers Actually Use",
-    summary:
-      "Sampling strategies, semantic conventions, and dashboards that shrink MTTR for complex stacks.",
-    category: "Observability",
-    date: "2025-09-29",
+      "Dashboards, alerts, and review cadences that reduce AI spend without surprises.",
+    category: "AI Operations",
+    date: "2025-10-01",
     readMinutes: 6,
   },
   {
-    id: "feature-flags-edge-realtime",
-    title: "Real‑Time Feature Flags at the Edge",
+    id: "platform-golden-paths-insight",
+    title: "Golden Paths That Teams Actually Use",
     summary:
-      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
-    category: "Architecture",
-    date: "2025-09-28",
+      "Make paved roads the fastest option with templates, CLIs, and visible scorecards.",
+    category: "Platform Engineering",
+    date: "2025-10-01",
     readMinutes: 6,
   },
 ];

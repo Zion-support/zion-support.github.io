@@ -1,4 +1,4 @@
-import React, { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { AppRouter } from './router';
 
 // import { resourcePreloader } from './utils/resourcePreloader';
@@ -15,10 +15,10 @@ import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import SEOOptimizer from './components/SEOOptimizer';
 import type { Notification as AppNotification } from './components/NotificationSystem';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};
@@ -75,10 +75,9 @@ export default function App(): React.JSX.Element {
       }
       try {
         (enhancedSecurityManager as any)?.initialize?.();
-      
-      // Initialize new performance and accessibility enhancements
-      initializePerformanceEnhancements();
-      (accessibilityEnhancer as any)?.initialize?.();
+        // Initialize new performance and accessibility enhancements
+        initializePerformanceEnhancements();
+        (accessibilityEnhancer as any)?.initialize?.();
       
       // Initialize advanced optimizers
       // Guard optional advanced systems if present in global scope
