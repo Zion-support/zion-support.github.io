@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-guardrails-policy-tests-2026",
+    slug: "ai-guardrails-policy-tests-2026",
+    title: "AI Guardrails Policy Tests 2026: Ship Fast, Stay Safe",
+    description: "Lightweight policy tests, PR gates, and KPI‑linked canaries that teams actually adopt.",
+    excerpt: "Guardrails that speed teams up: measurable policy tests wired to product outcomes.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Strategy",
+    tags: ["Guardrails", "Policy", "Evals", "Canaries"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-guardrails-scorecards.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-retrieval-blueprint-2026",
+    slug: "edge-retrieval-blueprint-2026",
+    title: "Edge Retrieval Blueprint 2026: Hybrid Search Under 100ms",
+    description: "Blend sparse + dense retrieval with geo caches and freshness windows for private, real‑time answers.",
+    excerpt: "A practical playbook for sub‑100ms retrieval at the edge without PII risk.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "Edge Computing",
+    tags: ["Edge", "Retrieval", "Hybrid Search", "Caching"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/edge-ai-blueprint-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "reliable-rag-ops-2026",
     slug: "reliable-rag-ops-2026",
     title: "Reliable RAG Ops 2026: Freshness, Drift, and Quality Budgets",

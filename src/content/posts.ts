@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-guardrails-policy-tests-2026",
+    title: "AI Guardrails Policy Tests 2026: Ship Fast, Stay Safe",
+    description: "Lightweight policy tests, PR gates, and online canaries wired to KPIs that teams actually adopt.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-retrieval-blueprint-2026",
+    title: "Edge Retrieval Blueprint 2026: Hybrid Search Under 100ms",
+    description: "Blend sparse + dense with geo caches and freshness windows for private, real‑time answers at the edge.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-reliable-rag-ops-2026",
     title: "Reliable RAG Ops 2026: Freshness Windows, Drift Alerts, Budgets",
     description: "Keep RAG quality high with TTL windows, drift detectors, and KPI‑tied quality budgets.",
