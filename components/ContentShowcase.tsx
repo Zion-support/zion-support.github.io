@@ -19,47 +19,47 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
-    id: 'ai-edge-computing-2025',
-    title: 'AI Edge Computing 2025: Revolutionizing Real-Time Intelligence',
-    excerpt: 'Discover how AI edge computing is transforming industries with sub-50ms response times, 90% bandwidth reduction, and autonomous decision-making.',
+    id: 'ai-business-transformation-2025',
+    title: 'AI Business Transformation 2025: Complete Strategic Guide',
+    excerpt: 'Master AI transformation with our comprehensive 2025 guide. Learn proven strategies, implementation frameworks, and ROI optimization techniques that deliver 300% ROI improvement.',
     type: 'article',
-    readTime: '16 min read',
-    category: 'Edge Computing',
-    href: '/blog/ai-edge-computing-2025',
+    readTime: '15 min read',
+    category: 'AI Strategy',
+    href: '/blog/ai-business-transformation-2025',
     featured: true,
     publishedDate: '2025-01-20',
     metrics: [
-      { value: '<50ms', label: 'Response Time' },
-      { value: '90%', label: 'Bandwidth Reduction' }
+      { value: '300%', label: 'ROI Improvement' },
+      { value: '80%', label: 'Efficiency Gain' }
     ]
   },
   {
-    id: 'ai-cybersecurity-2025',
-    title: 'AI Cybersecurity 2025: Next-Generation Threat Detection',
-    excerpt: 'Explore how AI is revolutionizing cybersecurity with 99.7% threat detection accuracy, zero-trust architecture, and autonomous incident response.',
+    id: 'ai-customer-experience-2025',
+    title: 'AI-Powered Customer Experience 2025: Revolutionizing Customer Interactions',
+    excerpt: 'Discover how AI is transforming customer experience in 2025. Learn about advanced personalization, intelligent automation, and omnichannel strategies that deliver 90% customer satisfaction.',
     type: 'article',
-    readTime: '14 min read',
-    category: 'Cybersecurity',
-    href: '/blog/ai-cybersecurity-2025',
+    readTime: '12 min read',
+    category: 'Customer Experience',
+    href: '/blog/ai-customer-experience-2025',
     featured: true,
     publishedDate: '2025-01-20',
     metrics: [
-      { value: '99.7%', label: 'Threat Detection' },
-      { value: '85%', label: 'Faster Response' }
+      { value: '90%', label: 'Customer Satisfaction' },
+      { value: '70%', label: 'Cost Reduction' }
     ]
   },
   {
-    id: 'ai-finance-automation',
-    title: 'AI Finance Automation: 95% Process Reduction & $3M Savings',
-    excerpt: 'See how a leading financial services company achieved 95% process automation, $3M annual savings, and 99.9% accuracy.',
+    id: 'enterprise-ai-transformation-2025',
+    title: 'Enterprise AI Transformation: 300% ROI in 12 Months',
+    excerpt: 'Learn how a Fortune 500 manufacturing company achieved unprecedented results through comprehensive AI transformation, including $15M in annual cost savings and 80% operational efficiency gains.',
     type: 'case-study',
-    category: 'FinTech',
-    href: '/case-studies/ai-finance-automation',
+    category: 'Enterprise AI',
+    href: '/case-studies/enterprise-ai-transformation-2025',
     featured: true,
     publishedDate: '2025-01-20',
     metrics: [
-      { value: '95%', label: 'Process Automation' },
-      { value: '$3M', label: 'Annual Savings' }
+      { value: '300%', label: 'ROI Achievement' },
+      { value: '$15M', label: 'Annual Savings' }
     ]
   },
   {
