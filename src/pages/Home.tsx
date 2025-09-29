@@ -104,10 +104,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: Real‑Time Data Pipelines + North‑Star Metrics Insight"
-          description="New long‑form guide on streaming reliability and a concise metrics playbook."
+          title="🚀 Fresh: AI Product Launch Checklist + MLOps in 45 Days"
+          description="New guides on taking AI pilots to production and shipping reliable models fast."
           ctaText="Read the latest"
-          ctaLink="/blog/real-time-data-pipelines-2025"
+          ctaLink="/blog/ai-product-launch-checklist-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -659,19 +659,19 @@ const Home = () => {
                 </Link>
               </div>
 
-              {/* Inline featured list */}
+              {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">AI Governance</div>
-                  <div className="font-semibold text-white">AI Governance Checklist 2025</div>
+                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
+                  <div className="font-semibold text-white">MLOps Reliability: Shipping GenAI Changes Safely</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-orange-200 mb-1">Architecture</div>
-                  <div className="font-semibold text-white">Real‑Time Feature Flags at the Edge</div>
+                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
+                  <div className="font-semibold text-white">Reliable Real‑Time Data Pipelines in 2025</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">GenAI</div>
-                  <div className="font-semibold text-white">GenAI Telemetry: Metrics That Predict Drift</div>
+                  <div className="text-sm text-rose-200 mb-1">Product Analytics</div>
+                  <div className="font-semibold text-white">North‑Star Metrics: A Field‑Tested Framework</div>
                 </div>
               </div>
             </div>

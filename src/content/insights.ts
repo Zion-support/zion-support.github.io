@@ -48,7 +48,7 @@ export const latestInsights: InsightArticle[] = [
     id: "north-star-metrics-insight",
     title: "North‑Star Metrics: A Field Guide",
     summary:
-      "Pick metrics that drive behavior, align teams, and forecast outcomes without vanity noise.",
+      "A practical approach to defining leading indicators that align teams to outcomes.",
     category: "Product Analytics",
     date: "2025-09-28",
     readMinutes: 7,
