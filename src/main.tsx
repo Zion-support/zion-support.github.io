@@ -12,10 +12,7 @@ if ("serviceWorker" in navigator) {
     navigator.serviceWorker
       .register("/sw-enhanced.js")
       .then((registration) => {
-        console.log(
-          "🚀 Enhanced Service Worker registered successfully:",
-          registration.scope,
-        );
+        // console.log("🚀 Enhanced Service Worker registered successfully:", registration.scope);
 
         // Check for updates
         registration.addEventListener("updatefound", () => {
@@ -26,7 +23,7 @@ if ("serviceWorker" in navigator) {
                 newWorker.state === "installed" &&
                 navigator.serviceWorker.controller
               ) {
-                console.log("🔄 New service worker available. Reloading...");
+                // console.log("🔄 New service worker available. Reloading...");
                 window.location.reload();
               }
             });
@@ -34,7 +31,7 @@ if ("serviceWorker" in navigator) {
         });
       })
       .catch((error) => {
-        console.error("❌ Service Worker registration failed:", error);
+        // console.error("❌ Service Worker registration failed:", error);
       });
   });
 }

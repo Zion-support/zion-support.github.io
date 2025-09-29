@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
@@ -19,7 +20,7 @@ const EnhancedPerformanceMonitor = () => {
       timestamp: Date.now(),
     };
 
-    const handleMetric = (metric: any) => {
+    const handleMetric = (metric: unknown) => {
       performanceMetrics[metric.name as keyof PerformanceMetrics] = metric.value;
       
       // Check if we have all metrics

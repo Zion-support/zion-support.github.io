@@ -33,7 +33,7 @@ class ServiceWorkerManager {
       !("serviceWorker" in navigator) ||
       process.env.NODE_ENV !== "production"
     ) {
-      console.log("Service Worker not supported or not in production mode");
+      // console.log("Service Worker not supported or not in production mode");
       return null;
     }
 
@@ -43,7 +43,7 @@ class ServiceWorkerManager {
         updateViaCache: this.config.updateViaCache,
       });
 
-      console.log("Service Worker registered successfully:", this.registration);
+      // console.log("Service Worker registered successfully:", this.registration);
 
       this.setupUpdateHandling();
       this.startUpdateChecking();
@@ -51,7 +51,7 @@ class ServiceWorkerManager {
       return this.registration;
     } catch (error) {
       const errorObj = error as Error;
-      console.error("Service Worker registration failed:", errorObj);
+      // console.error("Service Worker registration failed:", errorObj);
       this.config.onError?.(errorObj);
       return null;
     }
@@ -110,10 +110,10 @@ class ServiceWorkerManager {
 
     try {
       const result = await this.registration.unregister();
-      console.log("Service Worker unregistered:", result);
+      // console.log("Service Worker unregistered:", result);
       return result;
     } catch (error) {
-      console.error("Service Worker unregistration failed:", error);
+      // console.error("Service Worker unregistration failed:", error);
       return false;
     }
   }

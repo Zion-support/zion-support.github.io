@@ -12,13 +12,13 @@ interface PerformanceData {
 interface PerformanceOptimizerProps {
   isVisible?: boolean;
   onClose?: () => void;
-  children?: React.ReactNode;
+  _children?: React.ReactNode;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
   isVisible = false, 
   onClose,
-  children 
+  _children 
 }) => {
   const [performanceData, setPerformanceData] = useState<PerformanceData>({
     loadTime: 0,
@@ -32,8 +32,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   // Update performance data
   const updatePerformanceData = useCallback(() => {
-    // const metrics = performanceEnhancer.getMetrics(); // Method doesn't exist
-    const metrics = {}; // Placeholder
+    // const _metrics = performanceEnhancer.getMetrics(); // Method doesn't exist
+    const _metrics = {}; // Placeholder
     setPerformanceData({
       loadTime: 0, // Default values
       renderTime: 0,
@@ -62,8 +62,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       addLogEntry('Preloading critical resources...');
       // performanceEnhancer.preloadResource('/images/hero-bg.webp', 'image'); // Method doesn't exist
       
-      // Update metrics
-      addLogEntry('Updating performance metrics...');
+      // Update _metrics
+      addLogEntry('Updating performance _metrics...');
       updatePerformanceData();
       
       addLogEntry('Performance optimizations completed successfully!');

@@ -1,142 +1,102 @@
 import js from '@eslint/js';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
   {
     ignores: [
-      'node_modules/**',
-      '.next/**',
       'dist/**',
-      'build/**',
-      'out/**',
-      'coverage/**',
+      'node_modules/**',
+      '*.config.js',
+      '*.config.ts',
       'public/**',
       'backup/**',
-      'backups/**',
-      'backup-*/**',
-      'pages/**',
-      'pages.*/*',
-      'pages_*/*',
-      'pages-*/**',
-      'apps/**',
-      'app/**',
-      'api/**',
-      'scripts/**',
-      'cypress/**',
-      'tests/**',
-      '__tests__/**',
-      'automation/**',
-      'automation_backup/**',
-      'optimization-reports/**',
-      'test-*/**',
-      'test-results/**',
-      'test-reports/**',
-      '**/*.generated.*',
-      '**/*.backup.*',
-      '**/*.disabled.*',
-      '**/*.corrupted.*',
-    ],
+      'src.corrupted/**'
+    ]
   },
   {
-    files: ['src/**/*.{js,jsx}'],
+    files: ['**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: 'module',
-      parserOptions: { ecmaFeatures: { jsx: true } },
       globals: {
-        window: 'readonly',
-        document: 'readonly',
-        navigator: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        console: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        requestAnimationFrame: 'readonly',
-        cancelAnimationFrame: 'readonly',
-        fetch: 'readonly',
-        URL: 'readonly',
-        URLSearchParams: 'readonly',
-        Blob: 'readonly',
-        PerformanceObserver: 'readonly',
-        PerformanceNavigationTiming: 'readonly',
-        PerformanceEntry: 'readonly',
-        performance: 'readonly',
-        caches: 'readonly',
-        NodeJS: 'readonly',
-        process: 'readonly',
+        ...Object.fromEntries(
+          Object.entries({
+  "document": "readonly",
+  "window": "readonly",
+  "localStorage": "readonly",
+  "sessionStorage": "readonly",
+  "navigator": "readonly",
+  "performance": "readonly",
+  "console": "readonly",
+  "setTimeout": "readonly",
+  "clearTimeout": "readonly",
+  "setInterval": "readonly",
+  "clearInterval": "readonly",
+  "caches": "readonly",
+  "URL": "readonly",
+  "Blob": "readonly",
+  "process": "readonly",
+  "NodeJS": "readonly",
+  "Window": "readonly",
+  "MouseEvent": "readonly",
+  "Navigator": "readonly",
+  "PerformanceResourceTiming": "readonly",
+  "HTMLMetaElement": "readonly",
+  "HTMLLinkElement": "readonly",
+  "HTMLElement": "readonly",
+  "Event": "readonly",
+  "EventTarget": "readonly",
+  "ErrorEvent": "readonly",
+  "PromiseRejectionEvent": "readonly",
+  "PerformanceObserver": "readonly",
+  "PerformanceEntry": "readonly",
+  "PerformanceNavigationTiming": "readonly",
+  "Performance": "readonly",
+  "ServiceWorkerRegistration": "readonly",
+  "ServiceWorkerUpdateViaCache": "readonly",
+  "gtag": "readonly",
+  "requestIdleCallback": "readonly"
+}).map(([key, value]) => [key, value])
+        )
       },
-    },
-    plugins: { react, 'react-hooks': reactHooks },
-    rules: {
-      ...js.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'warn',
-      'react/react-in-jsx-scope': 'off',
-    },
-  },
-  {
-    files: ['src/**/*.{ts,tsx}'],
-    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
       parser: tsparser,
-      ecmaVersion: 2021,
-      sourceType: 'module',
-      parserOptions: { ecmaFeatures: { jsx: true }, project: false },
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        navigator: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        console: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        requestAnimationFrame: 'readonly',
-        cancelAnimationFrame: 'readonly',
-        fetch: 'readonly',
-        URL: 'readonly',
-        URLSearchParams: 'readonly',
-        Blob: 'readonly',
-        HTMLElement: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        HTMLSelectElement: 'readonly',
-        PerformanceObserver: 'readonly',
-        PerformanceNavigationTiming: 'readonly',
-        PerformanceEntry: 'readonly',
-        Performance: 'readonly',
-        performance: 'readonly',
-        caches: 'readonly',
-        ServiceWorkerRegistration: 'readonly',
-        ServiceWorkerUpdateViaCache: 'readonly',
-        PromiseRejectionEvent: 'readonly',
-        ErrorEvent: 'readonly',
-        NodeJS: 'readonly',
-        process: 'readonly',
-      },
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
     },
-    plugins: { '@typescript-eslint': tseslint, react, 'react-hooks': reactHooks },
+    plugins: {
+      '@typescript-eslint': tseslint,
+      'react': react,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh
+    },
     rules: {
       ...js.configs.recommended.rules,
       ...tseslint.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
+      
       'no-console': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off',
+      'no-undef': 'error',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'react/no-unescaped-entities': 'warn',
+      'react/react-in-jsx-scope': 'off', // Not needed with React 17+
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true }
+      ]
     },
-  },
+    settings: {
+      react: {
+        version: 'detect'
+      }
+    }
+  }
 ];
-

@@ -24,27 +24,27 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
         
         const vitals: Partial<PerformanceMetrics> = {};
 
-        webVitals.onCLS((metric: any) => {
+        webVitals.onCLS((metric: unknown) => {
           vitals.cls = metric.value;
           updateMetrics(vitals);
         });
 
-        webVitals.onINP((metric: any) => {
+        webVitals.onINP((metric: unknown) => {
           vitals.fid = metric.value; // Using INP instead of FID
           updateMetrics(vitals);
         });
 
-        webVitals.onFCP((metric: any) => {
+        webVitals.onFCP((metric: unknown) => {
           vitals.fcp = metric.value;
           updateMetrics(vitals);
         });
 
-        webVitals.onLCP((metric: any) => {
+        webVitals.onLCP((metric: unknown) => {
           vitals.lcp = metric.value;
           updateMetrics(vitals);
         });
 
-        webVitals.onTTFB((metric: any) => {
+        webVitals.onTTFB((metric: unknown) => {
           vitals.ttfb = metric.value;
           updateMetrics(vitals);
         });

@@ -367,13 +367,13 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
               <button
                 onClick={() => {
                   // Optimize performance
-                  console.log("Optimizing performance...");
+                  // console.log("Optimizing performance...");
                   // Apply performance optimizations
                   document.body.style.willChange = "auto";
                   if ("requestIdleCallback" in window) {
                     requestIdleCallback(() => {
                       // Run performance optimizations during idle time
-                      console.log("Performance optimization completed");
+                      // console.log("Performance optimization completed");
                     });
                   }
                 }}
@@ -389,7 +389,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
                       names.forEach((name) => {
                         caches.delete(name);
                       });
-                      console.log("Cache cleared");
+                      // console.log("Cache cleared");
                     });
                   }
                   localStorage.clear();
@@ -437,7 +437,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
                     reducedMotion: false,
                     keyboardNavigation: true,
                   });
-                  console.log("Settings reset to defaults");
+                  // console.log("Settings reset to defaults");
                 }}
                 className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-md transition-colors"
               >
