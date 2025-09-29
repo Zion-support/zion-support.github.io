@@ -286,6 +286,44 @@ export const newInsights = [
 
 // Added: October 7, 2025
 newInsights.unshift({
+  id: "platform-engineering-scorecards-2026",
+  title: "Platform Engineering Scorecards 2026: Golden Paths that Drive Outcomes",
+  summary: "Make progress measurable with adoption, golden‑path TTFX, and reliability SLOs.",
+  category: "Platform Engineering",
+  date: "2025-10-09",
+  readMinutes: 8,
+  featured: true,
+  tags: ["Scorecards", "Golden Paths", "SLOs"],
+  content: `
+    <h2>Evidence Over Opinions</h2>
+    <p>Scorecards that engineers actually use—tied to day‑to‑day work and shipped value.</p>
+    <ul>
+      <li>Golden‑path time‑to‑first‑success</li>
+      <li>Reliability SLOs on core workflows</li>
+      <li>Adoption by team and product</li>
+    </ul>
+  `
+});
+
+newInsights.unshift({
+  id: "ai-cybersecurity-automation-2025",
+  title: "AI Cybersecurity Automation: From Detections to Autonomic Response",
+  summary: "Close the loop with safe, policy‑backed automation and incident SLAs under 60s.",
+  category: "Cybersecurity",
+  date: "2025-10-09",
+  readMinutes: 7,
+  featured: true,
+  tags: ["Security", "Automation", "Response"],
+  content: `
+    <h2>Operate Safely</h2>
+    <p>Behavioral detections feed runbooks with guardrails: approvals, budgets, and rollbacks.</p>
+    <ul>
+      <li>Policy tests in CI for risky changes</li>
+      <li>Auto‑containment with human‑in‑the‑loop</li>
+      <li>Measurable MTTR and resilience</li>
+    </ul>
+  `
+});
   id: "ai-governance-scorecards-2026",
   title: "AI Governance 2026: Scorecards Engineers Actually Use",
   summary: "Outcome‑linked guardrails with PR checks and online canaries that accelerate delivery.",

@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "platform-engineering-scorecards-2026",
+    title: "Platform Engineering Scorecards 2026: From Golden Paths to Outcomes",
+    description: "Measure what matters: adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-cybersecurity-automation-2025",
+    title: "AI Cybersecurity Automation: From Detections to Autonomic Response",
+    description: "Behavioral detections, policy tests, and runbooks that auto-contain incidents under 60 seconds.",
+    category: "Security",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-ai-blueprint-2026",
+    title: "Edge AI Blueprint 2026: Private, Real‑Time Intelligence at Scale",
+    description: "Signed configs, tiny models, and geo budgets for <100ms on‑device decisions with privacy by design.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-platform-roi-2025",
     title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
     description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",
