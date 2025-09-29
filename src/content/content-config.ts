@@ -203,6 +203,43 @@ export const blogPosts: BlogPost[] = [
     slug: '/blog/ai-virtual-assistants-customer-service',
     tags: ['AI', 'Virtual Assistant', 'Customer Service', 'NLP']
   }
+  ,
+  {
+    id: 'serverless-inference-costs-2025',
+    title: 'Serverless Inference Cost Playbook 2025',
+    excerpt: 'Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.',
+    date: 'October 05, 2025',
+    category: 'AI Infrastructure',
+    readTime: '9 min',
+    image: '🧰',
+    featured: true,
+    slug: '/blog/serverless-inference-cost-playbook-2025',
+    tags: ['Serverless', 'Inference', 'Cost', 'AI Infra']
+  },
+  {
+    id: 'production-rag-architectures-2025',
+    title: 'RAG Architectures That Actually Work in Production',
+    excerpt: 'Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.',
+    date: 'October 04, 2025',
+    category: 'GenAI',
+    readTime: '12 min',
+    image: '📚',
+    featured: true,
+    slug: '/blog/production-rag-architectures-2025',
+    tags: ['RAG', 'Vector Search', 'Evals', 'GenAI']
+  },
+  {
+    id: 'secure-genai-guardrails-2025',
+    title: 'Secure GenAI: Policy‑First Guardrails That Scale',
+    excerpt: 'Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.',
+    date: 'October 03, 2025',
+    category: 'Security',
+    readTime: '8 min',
+    image: '🛡️',
+    featured: false,
+    slug: '/blog/secure-genai-guardrails-2025',
+    tags: ['GenAI', 'Security', 'Compliance']
+  }
 ];
 
 // Case Studies Configuration
@@ -648,6 +685,20 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 16,
     active: true,
     priority: 3
+  }
+  ,
+  {
+    id: 'fresh-content-oct-2025',
+    message: '🚀 Fresh: Serverless Inference, Production RAG, Secure GenAI',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-cyan-600 to-blue-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0
   }
 ];
 

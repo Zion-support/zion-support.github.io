@@ -35,7 +35,7 @@
     },
 
     /* Types */
-    "types": ["jest", "node"]
+    "types": ["react", "react-dom", "jest", "node"]
   },
   "include": [
     "src/App.tsx",
