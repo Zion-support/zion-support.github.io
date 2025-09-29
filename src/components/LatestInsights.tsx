@@ -40,6 +40,12 @@ const LatestInsights: React.FC = () => {
               <div className="flex items-center justify-between mb-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">
                   <span>{item.category}</span>
+                  {(() => {
+                    const daysSince = (Date.now() - new Date(item.date).getTime()) / (1000 * 60 * 60 * 24);
+                    return daysSince <= 7 ? (
+                      <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">New</span>
+                    ) : null;
+                  })()}
                 </div>
                 <span className="text-xs text-zion-slate-light">{new Date(item.date).toLocaleDateString()}</span>
               </div>

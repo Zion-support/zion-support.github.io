@@ -9,6 +9,42 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "enterprise-genai-guardrails",
+    title: "Enterprise Guardrails for Responsible GenAI",
+    summary:
+      "A pragmatic framework for policy testing, safety evaluations, and alignment with governance standards.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 7,
+  },
+  {
+    id: "edge-inference-patterns",
+    title: "Edge Inference Patterns for Sub‑100ms Experiences",
+    summary:
+      "Latency budgets, caching strategies, and model quantization techniques for lightning‑fast UX.",
+    category: "Architecture",
+    date: "2025-09-28",
+    readMinutes: 6,
+  },
+  {
+    id: "ciso-zero-trust-scorecard",
+    title: "A CISO’s Zero‑Trust Scorecard",
+    summary:
+      "Measure progress with identity controls, least privilege, continuous verification, and blast‑radius limits.",
+    category: "Security",
+    date: "2025-09-28",
+    readMinutes: 8,
+  },
+  {
+    id: "finops-slo-coupling",
+    title: "Coupling FinOps With SLOs That Engineers Support",
+    summary:
+      "Unify reliability targets and cost controls with guardrails that keep developer velocity high.",
+    category: "Cloud FinOps",
+    date: "2025-09-27",
+    readMinutes: 7,
+  },
+  {
     id: "genai-eval-playbook-2025",
     title: "A Practical Evaluation Playbook for GenAI Apps",
     summary:
