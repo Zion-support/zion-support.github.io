@@ -10,6 +10,16 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "edge-inference-patterns-2025",
+    title: "Edge Inference Patterns for Sub‑100ms Experiences",
+    description:
+      "Latency budgets, on‑device models, and caching strategies for lightning‑fast AI UX at the edge.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
     slug: "ai-governance-checklist-2025",
     title: "AI Governance Checklist 2025: Ship Fast Without Breaking Policy",
     description:
