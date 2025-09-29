@@ -68,6 +68,20 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       category: "AI Ops"
     },
     {
+      title: "Production Agent Actions 2026",
+      description: "Deterministic tools with live traces",
+      icon: Brain,
+      link: "/blog/production-agent-actions-2026",
+      category: "GenAI"
+    },
+    {
+      title: "Platform Golden Paths 2026",
+      description: "Paved roads that move KPIs",
+      icon: TrendingUp,
+      link: "/blog/platform-golden-paths-kpis-2026",
+      category: "Platform"
+    },
+    {
       title: "Golden Paths that Move KPIs",
       description: "Platform engineering that pays",
       icon: TrendingUp,
