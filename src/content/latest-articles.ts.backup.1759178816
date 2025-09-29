@@ -17,6 +17,13 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+<<<<<<< HEAD
+    id: "autonomous-infra-blueprint-2026",
+    slug: "autonomous-infra-blueprint-2026",
+    title: "Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
+    description: "Playbooks for AI‑driven infra that recovers, optimizes, and scales automatically—safely.",
+    excerpt: "From budgets to rollbacks: runbooks and controls to trust automation in prod.",
+=======
     id: "ai-risk-mitigation-scorecards-2026",
     slug: "ai-risk-mitigation-scorecards-2026",
     title: "AI Risk Mitigation Scorecards 2026: PR Gates That Speed Teams Up",
@@ -54,6 +61,7 @@ export const latestArticles: LatestArticle[] = [
     title: "AI Enterprise Security 2026: Zero-Trust Architecture for AI Systems",
     description: "Comprehensive guide to implementing zero-trust security architecture for enterprise AI systems. Learn about AI-specific security challenges, best practices, and implementation strategies.",
     excerpt: "Implement AI-specific zero-trust principles with model validation and data lineage tracking for 99.9% security compliance.",
+>>>>>>> origin/cursor/create-and-deploy-new-content-87dc
     author: "Zion Tech Group Team",
     date: "2025-10-14",
     category: "AI Operations",

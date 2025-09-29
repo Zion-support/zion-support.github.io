@@ -1,9 +1,15 @@
 
+<<<<<<< HEAD
+=======
 interface PerformanceMonitorProps {
+>>>>>>> origin/cursor/create-and-deploy-new-content-87dc
 	showDashboard?: boolean;
 }
 
 export default function PerformanceMonitor(_props: PerformanceMonitorProps): React.JSX.Element {
 	return <div aria-label="Performance Monitor" />;
+<<<<<<< HEAD
+=======
 }
 
+>>>>>>> origin/cursor/create-and-deploy-new-content-87dc
