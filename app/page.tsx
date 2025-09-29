@@ -38,7 +38,6 @@ import {
   SupplyChainOptimizationBanner,
   AI2026TrendsBanner
 } from '../components/PromotionalBanner';
-=======
 import { 
   AIAutonomousCloudOpsBanner,
   AIFinTechTransformationBanner,
@@ -49,22 +48,18 @@ import {
   AutonomousOperationsSuccessBanner,
   NewContentShowcaseBanner2026
 } from '../components/NewContent2026Banners';
-<<<<<<< HEAD
 import { 
   NewContent2026PromotionalBanner,
   AIInnovation2026Banner,
   SuccessStory2026Banner,
   AIRevolution2026Banner
-=======
-import {
-  AIAutonomousInfrastructureBanner,
-  AIQuantumComputingBanner,
-  AITransformationSuccessBanner,
-  AIZeroTrustSecurityBanner,
-  AIFoundationModelsBanner,
-  LatestContent2026Banner
->>>>>>> cursor/create-and-deploy-new-content-6fcc
 } from '../components/NewContent2026PromotionalBanners';
+import {
+  AISustainabilityTransformationBanner,
+  AIAutonomousEnterpriseBanner,
+  AIInnovation2026ShowcaseBanner,
+  LatestAIInnovations2026Banner
+} from '../components/NewContent2026SustainabilityBanners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -105,19 +100,10 @@ export default function HomePage() {
         </div>
       </div>
       {/* New 2026 Content Promotional Banners */}
-<<<<<<< HEAD
-      <NewContent2026PromotionalBanner />
-      <AIInnovation2026Banner />
-      <SuccessStory2026Banner />
-      <AIRevolution2026Banner />
-=======
-      <AIAutonomousInfrastructureBanner />
-      <AIQuantumComputingBanner />
-      <AITransformationSuccessBanner />
-      <AIZeroTrustSecurityBanner />
-      <AIFoundationModelsBanner />
-      <LatestContent2026Banner />
->>>>>>> cursor/create-and-deploy-new-content-6fcc
+      <AISustainabilityTransformationBanner />
+      <AIAutonomousEnterpriseBanner />
+      <AIInnovation2026ShowcaseBanner />
+      <LatestAIInnovations2026Banner />
       
       {/* Additional Promotional Banners */}
       <NewContentShowcase2026Banner />
@@ -267,73 +253,73 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">🚀</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900">Next-Gen Automation</h3>
-                  <p className="text-sm text-gray-500">99% efficiency</p>
-                </div>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Revolutionary AI automation guide showing how to achieve 99% process automation 
-                with intelligent, self-evolving systems that drive $10M+ savings.
-              </p>
-              <div className="flex items-center justify-between">
-                <div className="text-sm text-gray-500">25 min read</div>
-                <Link
-                  href="/blog/ai-next-generation-automation-2026"
-                  className="text-blue-600 font-semibold hover:text-blue-700 transition-colors"
-                >
-                  Read Guide →
-                </Link>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-100 to-purple-100 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">💬</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900">Customer Experience Revolution</h3>
-                  <p className="text-sm text-gray-500">95% satisfaction</p>
-                </div>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Transform customer service with hyper-personalization, predictive support, 
-                and intelligent automation that delivers 95% satisfaction rates.
-              </p>
-              <div className="flex items-center justify-between">
-                <div className="text-sm text-gray-500">20 min read</div>
-                <Link
-                  href="/blog/ai-customer-experience-revolution-2026"
-                  className="text-pink-600 font-semibold hover:text-pink-700 transition-colors"
-                >
-                  Read Guide →
-                </Link>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
-              <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-100 to-blue-100 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">🏆</span>
+                  <span className="text-2xl">🌱</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">$25M Success Story</h3>
-                  <p className="text-sm text-gray-500">Fortune 500 case study</p>
+                  <h3 className="text-xl font-bold text-gray-900">AI Sustainability</h3>
+                  <p className="text-sm text-gray-500">Carbon neutral</p>
                 </div>
               </div>
               <p className="text-gray-600 mb-4">
-                See how a Fortune 500 company achieved $25M ROI with comprehensive AI transformation. 
-                99% automation, 90% cost reduction, and complete business revolution.
+                Achieve carbon-neutral AI operations with 80% energy reduction and $2M+ savings 
+                through sustainable technology and green infrastructure.
+              </p>
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-gray-500">18 min read</div>
+                <Link
+                  href="/blog/ai-sustainability-green-tech-2026"
+                  className="text-green-600 font-semibold hover:text-green-700 transition-colors"
+                >
+                  Read Guide →
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">🏢</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Autonomous Enterprise</h3>
+                  <p className="text-sm text-gray-500">99.9% uptime</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Complete self-managing operations with zero-touch business management, 
+                predictive analytics, and self-optimizing systems delivering $25M+ ROI.
               </p>
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-500">30 min read</div>
                 <Link
-                  href="/case-studies/ai-transformation-mega-success-2026"
-                  className="text-green-600 font-semibold hover:text-green-700 transition-colors"
+                  href="/blog/ai-autonomous-enterprise-2026"
+                  className="text-purple-600 font-semibold hover:text-purple-700 transition-colors"
+                >
+                  Read Guide →
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-100 to-red-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">📊</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">$10M Success Story</h3>
+                  <p className="text-sm text-gray-500">Sustainability case study</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                See how a Fortune 500 company achieved carbon neutrality and $10M ROI with 
+                comprehensive AI sustainability transformation and green technology.
+              </p>
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-gray-500">15 min read</div>
+                <Link
+                  href="/case-studies/ai-sustainability-transformation-2026"
+                  className="text-orange-600 font-semibold hover:text-orange-700 transition-colors"
                 >
                   View Case Study →
                 </Link>
@@ -862,7 +848,9 @@ export default function HomePage() {
                 </p>
                 <div className="flex items-center text-purple-600 font-semibold">
                   Read Complete Guide →
-=======
+                </div>
+              </div>
+            </Link>
             <Link href="/blog/ai-evaluation-scorecards-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -925,7 +913,6 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-=======
             <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
