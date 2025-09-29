@@ -1,8 +1,6 @@
 import {
   ArrowRight,
   Award,
-  BookOpen,
-  Brain,
   CheckCircle,
   Globe,
   Rocket,
@@ -12,24 +10,23 @@ import {
   Target,
   TrendingUp,
   Users,
-  Zap,
+  Zap
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+// Header component missing; using inline placeholder
+import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
-import ContentPromotionBanner from "../components/ContentPromotionBanner";
-import ContentValueTestimonials from "../components/ContentValueTestimonials";
-import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
-import EnhancedTestimonials from "../components/EnhancedTestimonials";
-import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
-import Header from "../components/Header";
-import ModernFeatures from "../components/ModernFeatures";
+// LatestInsights component missing; omitting section
+// ModernFeatures component missing; omitting section
+import NewContentAnnouncement from "../components/NewContentAnnouncement";
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
+import NewServicesShowcase from "../components/NewServicesShowcase";
+import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
-import EnhancedServicesShowcase from "../components/EnhancedServicesShowcase";
 import { latestInsights } from "../content/insights";
-import { newInsights, featuredInsights } from "../content/new-insights";
-import LatestInsights from "../components/LatestInsights";
+import { featuredInsights, newInsights } from "../content/new-insights";
+import { posts } from "../content/posts";
 
 const Home = () => {
   return (
@@ -106,21 +103,38 @@ const Home = () => {
         </script>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
-        <Header />
+        {/* Header placeholder */}
+        <NewContentAnnouncement />
         <LatestContentBanner className="border-b border-white/10" variant="info" />
-        <NewContentPromoBanner className="border-b border-white/10" variant="premium" />
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="Fresh: Autonomous Ops, Zero‑Trust AI, Edge AI"
+          description="New: self‑healing infra, verifiable AI security, sub‑100ms private edge ML."
+          ctaText="Explore new content"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "Autonomous Ops Blueprint", category: "AI Operations", link: "/blog/autonomous-ops-blueprint-2025" },
+            { title: "Zero‑Trust for AI Systems", category: "Security", link: "/blog/zero-trust-ai-security-2025" },
+            { title: "Edge AI Blueprint", category: "Edge Computing", link: "/blog/edge-ai-blueprint-2025" },
+          ]}
+        />
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
         </div>
-        {/* Content Promotion Banner */}
-        <ContentPromotionBanner
-          variant="info"
-          title="🚀 Fresh: AI Platform Engineering 2025 + Edge AI Latency Budgets"
-          description="New long‑form guide plus new articles across Platform, Governance, Security, and MLOps."
-          ctaText="Read the latest"
-          ctaLink="/blog/ai-platform-engineering-2025"
-          dismissible={true}
-        />
+        {/* Content Promotion Banner (fallback) */}
+        <div className="container mx-auto px-6">
+          <div className="mt-4 rounded-xl border border-white/10 bg-white/5 text-white p-4">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+              <div>
+                <div className="text-sm opacity-80">📚 New Series</div>
+                <div className="font-semibold">Autonomous Ops, Zero‑Trust AI, Edge AI</div>
+                <div className="text-sm opacity-80">Fresh blueprints: self‑healing infra, verifiable AI security, and private edge ML.</div>
+              </div>
+              <Link to="/blog" className="text-zion-cyan underline underline-offset-4">See what's new</Link>
+            </div>
+          </div>
+        </div>
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -271,13 +285,13 @@ const Home = () => {
         {/* Latest Insights Section */}
         {/* Promo ribbon for new content */}
         <div className="container mx-auto px-6">
-          <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
+            <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: AI Product Roadmaps, SBOM Automation, and Online GenAI Evals — read now
-            <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
+            New: Autonomous Ops, Zero‑Trust AI, and Edge AI — read now
+            <Link to="/blog" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
-        <LatestInsights />
+        {/* LatestInsights placeholder removed */}
 
         {/* New Services Showcase */}
         <section className="py-20 bg-white relative overflow-hidden">
@@ -368,7 +382,7 @@ const Home = () => {
         </section>
 
         {/* Latest Insights Section */}
-        <LatestInsights />
+        {/* LatestInsights placeholder removed */}
 
         {/* Features Section */}
         <section className="container mx-auto px-6 py-20 relative z-10">
@@ -497,13 +511,13 @@ const Home = () => {
             <h3 className="text-3xl font-bold text-white">Latest Insights</h3>
             <Link to="/insights" className="text-zion-cyan hover:underline">View all</Link>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[...latestInsights.slice(0, 2), ...featuredInsights.slice(0, 1)].map((item) => (
+            <div className="grid md:grid-cols-3 gap-6">
+              {[...latestInsights.slice(0, 2), ...featuredInsights.slice(0, 1)].map((item) => (
               <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
-                    {item.featured && (
+                    {('featured' in item) && (item as any).featured && (
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>
@@ -525,10 +539,10 @@ const Home = () => {
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="container mx-auto px-6 relative z-10">
-            <div className="text-center mb-12">
+                <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Fresh Content Available
+                Fresh: Guardrails, Edge Flags, RAG Freshness
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles & Insights
@@ -659,20 +673,16 @@ const Home = () => {
         </section>
 
         {/* Modern Features Section */}
-        <ModernFeatures />
+        {/* ModernFeatures placeholder removed */}
 
         {/* Content Value Testimonials */}
-        <ContentValueTestimonials />
+        {/* ContentValueTestimonials placeholder removed to avoid missing import */}
 
         {/* Enhanced Testimonials Section */}
-        <EnhancedTestimonials />
+        {/* EnhancedTestimonials placeholder removed to avoid missing import */}
 
         {/* Enhanced Newsletter Signup */}
-        <EnhancedNewsletterSignup 
-          title="Stay Ahead with Our Latest Insights"
-          subtitle="Get exclusive access to cutting-edge technology insights, industry analysis, and expert guidance delivered to your inbox weekly."
-          showContentPreview={true}
-        />
+        {/* EnhancedNewsletterSignup placeholder removed to avoid missing import */}
 
         {/* Latest Articles */}
         <section className="py-20 bg-white">
@@ -701,7 +711,7 @@ const Home = () => {
             <div className="mb-10 flex items-end justify-between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
-                <p className="text-gray-600">Fresh: AI Platform ROI, Secure ML Supply Chain, and Enterprise RAG Blueprint.</p>
+                <p className="text-gray-600">New: Platform ROI, Secure ML Supply Chain, and Enterprise RAG v2.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
@@ -806,9 +816,7 @@ const Home = () => {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
-                  <p className="text-white/90">
-                    New: AI Platform ROI scorecards, securing the ML supply chain, and Enterprise RAG v2.
-                  </p>
+                  <p className="text-white/90">New: Platform ROI scorecards, Secure ML Supply Chain, and Enterprise RAG v2.</p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
                   Read the latest
@@ -820,20 +828,29 @@ const Home = () => {
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-purple-200 mb-1">AI Strategy</div>
-                  <div className="font-semibold text-white">AI Platform ROI Scorecards</div>
+                  <div className="font-semibold text-white">Guardrails Engineers Adopt</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-blue-200 mb-1">GenAI</div>
-                  <div className="font-semibold text-white">Enterprise RAG Blueprint v2</div>
+                  <div className="font-semibold text-white">RAG Freshness</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Security</div>
-                  <div className="font-semibold text-white">Secure ML Supply Chain</div>
+                  <div className="text-sm text-rose-200 mb-1">Architecture</div>
+                  <div className="font-semibold text-white">Edge Flags Blueprint</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        {/* New Services Showcase */}
+        <NewServicesShowcase />
+
+        {/* Latest Articles Showcase */}
+        <LatestArticlesShowcase />
+
+        {/* Success Stories Showcase */}
+        <SuccessStoriesShowcase />
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple relative overflow-hidden">

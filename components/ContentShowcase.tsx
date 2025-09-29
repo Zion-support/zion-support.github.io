@@ -19,6 +19,80 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-governance-framework-2025',
+    title: 'AI Governance Framework 2025: Enterprise-Ready Implementation Guide',
+    excerpt: 'Master AI governance with our comprehensive framework covering risk management, compliance, and ethical deployment strategies.',
+    type: 'article',
+    readTime: '15 min read',
+    category: 'AI Governance',
+    href: '/blog/ai-governance-framework-2025',
+    featured: true,
+    publishedDate: '2025-01-20',
+    metrics: [
+      { value: '70%', label: 'Risk Reduction' },
+      { value: '12', label: 'Framework Areas' }
+    ]
+  },
+  {
+    id: 'ai-mlops-vector-databases-2025',
+    title: 'AI MLOps with Vector Databases 2025: Production-Ready RAG Architecture',
+    excerpt: 'Master MLOps for AI applications with vector databases. Learn production-ready RAG architecture and scalable deployment patterns.',
+    type: 'article',
+    readTime: '18 min read',
+    category: 'MLOps',
+    href: '/blog/ai-mlops-vector-databases-2025',
+    featured: true,
+    publishedDate: '2025-01-20',
+    metrics: [
+      { value: '<50ms', label: 'Search Latency' },
+      { value: '10M+', label: 'Vector Capacity' }
+    ]
+  },
+  {
+    id: 'fintech-ai-risk-compliance-2025',
+    title: 'FinTech AI Risk Compliance 2025: 70% Risk Reduction with Automated Governance',
+    excerpt: 'See how a leading fintech company achieved 70% AI risk reduction and regulatory compliance with automated governance frameworks.',
+    type: 'case-study',
+    category: 'FinTech',
+    href: '/case-studies/fintech-ai-risk-compliance-2025',
+    featured: true,
+    publishedDate: '2025-01-20',
+    metrics: [
+      { value: '70%', label: 'Risk Reduction' },
+      { value: '$2.5M', label: 'Cost Savings' }
+    ]
+  },
+  {
+    id: 'ai-risk-register',
+    title: 'AI Risk Register: Practical Framework for Managing AI Risks',
+    excerpt: 'Production-ready risk register covering model, data, privacy, security, ethics, and ops.',
+    type: 'article',
+    readTime: '10 min read',
+    category: 'AI Reliability',
+    href: '/blog/ai-risk-register',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '12', label: 'Risk Areas' },
+      { value: '24x7', label: 'Monitoring' }
+    ]
+  },
+  {
+    id: 'practical-rag-in-production',
+    title: 'Practical RAG in Production: Patterns that Actually Work',
+    excerpt: 'Battle-tested RAG patterns for groundedness, latency, and cost at scale.',
+    type: 'article',
+    readTime: '9 min read',
+    category: 'AI Platforms',
+    href: '/blog/practical-rag-in-production',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '30–70%', label: 'Cost Reduction' },
+      { value: '<200ms', label: 'P95 Latency' }
+    ]
+  },
+  {
     id: 'ai-revolution-2025',
     title: 'AI Revolution 2025: Complete Business Transformation Guide',
     excerpt: 'Discover how AI is reshaping industries and creating unprecedented opportunities for growth in 2025.',
@@ -101,6 +175,50 @@ const contentItems: ContentItem[] = [
     metrics: [
       { value: 'Real-time', label: 'Insights' },
       { value: '85%', label: 'Forecast Accuracy' }
+    ]
+  },
+  {
+    id: 'ai-customer-service-2025',
+    title: 'AI-Powered Customer Service Revolution',
+    excerpt: 'Discover how AI is transforming customer service with 80% faster response times and 90% cost reduction.',
+    type: 'article',
+    readTime: '15 min read',
+    category: 'Customer Service',
+    href: '/blog/ai-customer-service-2025',
+    featured: true,
+    publishedDate: '2025-01-17',
+    metrics: [
+      { value: '80%', label: 'Faster Response' },
+      { value: '90%', label: 'Cost Reduction' }
+    ]
+  },
+  {
+    id: 'ai-healthcare-transformation-2025',
+    title: 'AI Healthcare Transformation Guide',
+    excerpt: 'How AI is revolutionizing patient care with 40% better diagnostics and 60% improved outcomes.',
+    type: 'article',
+    readTime: '18 min read',
+    category: 'Healthcare',
+    href: '/blog/ai-healthcare-transformation-2025',
+    featured: true,
+    publishedDate: '2025-01-17',
+    metrics: [
+      { value: '40%', label: 'Better Diagnostics' },
+      { value: '60%', label: 'Improved Outcomes' }
+    ]
+  },
+  {
+    id: 'retail-ai-transformation',
+    title: 'RetailAI Corp: 150% Revenue Growth',
+    excerpt: 'See how RetailAI Corp achieved 150% revenue growth and 80% cost reduction with AI transformation.',
+    type: 'case-study',
+    category: 'Retail',
+    href: '/case-studies/retail-ai-transformation',
+    featured: true,
+    publishedDate: '2025-01-17',
+    metrics: [
+      { value: '150%', label: 'Revenue Growth' },
+      { value: '80%', label: 'Cost Reduction' }
     ]
   }
 ];
@@ -244,11 +362,11 @@ export default function ContentShowcase({
           {/* Content Statistics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-8 border-t border-gray-200">
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">15+</div>
+              <div className="text-2xl font-bold text-purple-600">18+</div>
               <div className="text-sm text-gray-600">AI Articles</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">8+</div>
+              <div className="text-2xl font-bold text-purple-600">10+</div>
               <div className="text-sm text-gray-600">Case Studies</div>
             </div>
             <div className="text-center">
@@ -256,7 +374,7 @@ export default function ContentShowcase({
               <div className="text-sm text-gray-600">AI Services</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">50K+</div>
+              <div className="text-2xl font-bold text-purple-600">75K+</div>
               <div className="text-sm text-gray-600">Monthly Readers</div>
             </div>
           </div>

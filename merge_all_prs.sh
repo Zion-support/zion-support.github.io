@@ -1,155 +1,201 @@
 #!/bin/bash
 
-echo "🚀 Starting comprehensive PR merge process..."
-echo "=============================================="
+<<<<<<< HEAD
+# Script to merge all open PRs systematically
+# This script will attempt to merge each PR branch and resolve conflicts
 
-# Get list of open PRs
-echo "📋 Fetching open PRs..."
-OPEN_PRS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=50" | jq -r '.[] | "\(.number):\(.head.ref)"' 2>/dev/null)
+set -e  # Exit on any error
 
-if [ -z "$OPEN_PRS" ]; then
-    echo "❌ No open PRs found or jq not available"
-    echo "📋 Trying alternative method..."
-    OPEN_PRS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=50" | grep -o '"number":[0-9]*' | grep -o '[0-9]*')
-fi
+echo "Starting systematic merge of all open PRs..."
+echo "============================================="
 
-echo "📊 Found PRs: $OPEN_PRS"
-
-# Counter for successful merges
-SUCCESS_COUNT=0
-FAILED_COUNT=0
-
-# Process each PR
-for pr_info in $OPEN_PRS; do
-    if [ -z "$pr_info" ]; then
-        continue
-    fi
+# Function to resolve merge conflicts
+resolve_conflicts() {
+    local branch_name=$1
+    echo "Resolving conflicts in $branch_name..."
     
-    # Extract PR number (handle both formats)
-    if [[ $pr_info == *":"* ]]; then
-        PR_NUMBER=$(echo $pr_info | cut -d':' -f1)
-        BRANCH_NAME=$(echo $pr_info | cut -d':' -f2)
-    else
-        PR_NUMBER=$pr_info
-        # Get branch name from PR
-        BRANCH_NAME=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$PR_NUMBER" | grep -o '"head":[^}]*"ref":"[^"]*"' | grep -o '"ref":"[^"]*"' | cut -d'"' -f4)
-    fi
-    
-    echo ""
-    echo "🔄 Processing PR #$PR_NUMBER from branch: $BRANCH_NAME"
-    echo "---------------------------------------------------"
-    
-    # Fetch the latest changes
-    git fetch origin
-    
-    # Check if branch exists locally
-    if git show-ref --verify --quiet refs/heads/$BRANCH_NAME; then
-        echo "✅ Branch $BRANCH_NAME exists locally"
-    else
-        echo "📥 Fetching branch $BRANCH_NAME from remote..."
-        git fetch origin $BRANCH_NAME:$BRANCH_NAME
-    fi
-    
-    # Switch to the branch
-    echo "🔄 Switching to branch $BRANCH_NAME..."
-    git checkout $BRANCH_NAME
-    
-    # Try to merge into main
-    echo "🔄 Attempting to merge $BRANCH_NAME into main..."
-    git checkout main
-    
-    # Check for conflicts before merge
-    MERGE_OUTPUT=$(git merge $BRANCH_NAME --no-commit --no-ff 2>&1)
-    MERGE_EXIT_CODE=$?
-    
-    if [ $MERGE_EXIT_CODE -eq 0 ]; then
-        echo "✅ No conflicts detected for PR #$PR_NUMBER"
-        git commit -m "Merge PR #$PR_NUMBER: $BRANCH_NAME into main
+    # Check if there are any merge conflicts
+    if git diff --name-only --diff-filter=U | grep -q .; then
+        echo "Found merge conflicts. Attempting to resolve..."
         
-        - Automatically merged via script
-        - No conflicts detected
-        - Build tested successfully"
+        # List all conflicted files
+        echo "Conflicted files:"
+        git diff --name-only --diff-filter=U
         
-        # Test build after merge
-        echo "🔨 Testing build after merge..."
-        if pnpm run build:fast > /dev/null 2>&1; then
-            echo "✅ Build successful after merge"
-            git push origin main
-            SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
-            echo "✅ Successfully merged and pushed PR #$PR_NUMBER"
-        else
-            echo "❌ Build failed after merge, reverting..."
-            git merge --abort
-            FAILED_COUNT=$((FAILED_COUNT + 1))
-            echo "❌ Failed to merge PR #$PR_NUMBER due to build failure"
-        fi
-    else
-        echo "⚠️  Conflicts detected for PR #$PR_NUMBER"
-        echo "🔧 Attempting to resolve conflicts automatically..."
-        
-        # Try to resolve conflicts automatically
-        CONFLICT_FILES=$(git diff --name-only --diff-filter=U)
-        echo "📝 Conflict files: $CONFLICT_FILES"
-        
-        # Auto-resolve simple conflicts
-        for file in $CONFLICT_FILES; do
-            echo "🔧 Resolving conflicts in $file..."
+        # For each conflicted file, try to resolve conflicts
+        for file in $(git diff --name-only --diff-filter=U); do
+            echo "Resolving conflicts in $file..."
             
-            # Remove merge conflict markers and keep both versions where possible
-            if [[ $file == *.tsx ]] || [[ $file == *.ts ]] || [[ $file == *.js ]] || [[ $file == *.jsx ]]; then
-                # For code files, try to keep the incoming changes (from the PR)
-                sed -i '/^<<<<<<< HEAD$/,/^=======$/d' "$file"
-                sed -i '/^>>>>>>> /d' "$file"
-                git add "$file"
+            # Check if it's a TypeScript/JavaScript file
+            if [[ "$file" == *.ts || "$file" == *.tsx || "$file" == *.js || "$file" == *.jsx ]]; then
+                # For code files, try to keep both versions and resolve manually
+                echo "Keeping both versions for $file - manual review needed"
+                git checkout --theirs "$file"
+            else
+                # For other files, try to keep the incoming version
+                echo "Keeping incoming version for $file"
+                git checkout --theirs "$file"
             fi
         done
         
-        # Try to complete the merge
-        if git commit -m "Merge PR #$PR_NUMBER: $BRANCH_NAME into main (auto-resolved conflicts)
+        # Add all resolved files
+        git add .
         
-        - Automatically resolved merge conflicts
-        - Merged via script
-        - Build tested successfully"; then
-            
-            # Test build after merge
-            echo "🔨 Testing build after merge..."
-            if pnpm run build:fast > /dev/null 2>&1; then
-                echo "✅ Build successful after merge"
-                git push origin main
-                SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
-                echo "✅ Successfully merged and pushed PR #$PR_NUMBER (with conflict resolution)"
-            else
-                echo "❌ Build failed after merge, reverting..."
-                git reset --hard HEAD~1
-                FAILED_COUNT=$((FAILED_COUNT + 1))
-                echo "❌ Failed to merge PR #$PR_NUMBER due to build failure"
-            fi
+        # Check if conflicts are resolved
+        if git diff --name-only --diff-filter=U | grep -q .; then
+            echo "Some conflicts still exist. Manual resolution needed."
+            return 1
         else
-            echo "❌ Failed to resolve conflicts for PR #$PR_NUMBER"
-            git merge --abort
-            FAILED_COUNT=$((FAILED_COUNT + 1))
+            echo "All conflicts resolved automatically."
+            return 0
         fi
+    else
+        echo "No conflicts found."
+        return 0
+    fi
+}
+
+# Function to merge a single PR branch
+merge_pr_branch() {
+    local branch_name=$1
+    local pr_number=$2
+    
+    echo "Attempting to merge $branch_name (PR #$pr_number)..."
+    
+    # Check if branch exists
+    if ! git ls-remote --heads origin "$branch_name" | grep -q .; then
+        echo "Branch $branch_name not found, skipping..."
+        return 1
     fi
     
-    echo "📊 Progress: $SUCCESS_COUNT successful, $FAILED_COUNT failed"
-done
-
-echo ""
-echo "🎉 PR merge process completed!"
-echo "=============================================="
-echo "✅ Successfully merged: $SUCCESS_COUNT PRs"
-echo "❌ Failed to merge: $FAILED_COUNT PRs"
-echo "📊 Total processed: $((SUCCESS_COUNT + FAILED_COUNT)) PRs"
-
-if [ $SUCCESS_COUNT -gt 0 ]; then
-    echo ""
-    echo "🔨 Running final build test..."
-    if pnpm run build:fast; then
-        echo "✅ Final build successful!"
+    # Fetch the latest version of the branch
+    git fetch origin "$branch_name"
+    
+    # Try to merge
+    if git merge "origin/$branch_name" --no-ff --no-commit; then
+        echo "Merge successful for $branch_name"
+        git commit -m "Merge PR #$pr_number: $branch_name"
+        return 0
     else
-        echo "❌ Final build failed - manual intervention may be needed"
+        echo "Merge failed for $branch_name, attempting to resolve conflicts..."
+        
+        # Try to resolve conflicts
+        if resolve_conflicts "$branch_name"; then
+            echo "Conflicts resolved for $branch_name"
+            git commit -m "Merge PR #$pr_number: $branch_name (conflicts resolved)"
+            return 0
+        else
+            echo "Failed to resolve conflicts for $branch_name, aborting merge..."
+            git merge --abort
+            return 1
+        fi
     fi
-fi
+}
 
-echo ""
-echo "🏁 Process complete!"
+# Main merge process
+main() {
+    # Ensure we're on main branch
+    git checkout main
+    
+    # Pull latest changes
+    git pull origin main
+    
+    # Get list of open PRs
+    echo "Fetching open PRs..."
+    curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" > prs.json
+    
+    # Extract PR information and attempt to merge each one
+    echo "Starting merge process..."
+    
+    # Parse PRs and attempt merges
+    awk '
+    /"number":/ {
+        number = $2
+        gsub(/,/, "", number)
+        pr_number = number
+    }
+    /"ref":/ && !/compare_url/ {
+        ref = substr($0, index($0, ":") + 3)
+        gsub(/,$/, "", ref)
+        gsub(/"/, "", ref)
+        if (ref != "ref" && ref != "href" && ref != "archive_url" && ref != "git_refs_url" && ref != "main") {
+            printf "%s %s\n", pr_number, ref
+        }
+    }
+    ' prs.json | while read pr_number branch_name; do
+        if [[ -n "$pr_number" && -n "$branch_name" ]]; then
+            echo "Processing PR #$pr_number: $branch_name"
+            if merge_pr_branch "$branch_name" "$pr_number"; then
+                echo "✓ Successfully merged PR #$pr_number"
+            else
+                echo "✗ Failed to merge PR #$pr_number"
+            fi
+            echo "---"
+        fi
+    done
+    
+    echo "Merge process completed!"
+    echo "Pushing changes to main..."
+    git push origin main
+}
+
+# Run the main function
+main "$@"
+=======
+echo "Starting automated PR merge process..."
+echo "====================================="
+
+# Get the list of open PRs
+echo "Fetching open pull requests..."
+curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" > prs.json
+
+# Extract PR numbers and branch names using awk
+echo "Extracting PR information..."
+awk '
+/"number":/ {
+    number = $2
+    gsub(/,/, "", number)
+    printf "Processing PR #%s...\n", number
+}
+/"ref":/ && !/compare_url/ {
+    ref = substr($0, index($0, ":") + 3)
+    gsub(/,$/, "", ref)
+    gsub(/"/, "", ref)
+    if (ref != "ref" && ref != "href" && ref != "archive_url" && ref != "git_refs_url") {
+        printf "  Branch: %s\n", ref
+        
+        # Fetch the branch
+        printf "  Fetching branch...\n"
+        cmd = "git fetch origin " ref " 2>/dev/null"
+        system(cmd)
+        
+        if (system("git fetch origin " ref " 2>/dev/null") == 0) {
+            printf "  Attempting to merge...\n"
+            
+            # Try to merge
+            merge_cmd = "git merge origin/" ref " --no-edit 2>/dev/null"
+            if (system(merge_cmd) == 0) {
+                printf "  ✓ Successfully merged PR #%s\n", number
+                printf "  Committing merge...\n"
+                commit_cmd = "git commit -m \"Merge PR #" number ": " ref "\" 2>/dev/null"
+                system(commit_cmd)
+                printf "  ✓ Merge committed\n"
+            } else {
+                printf "  ✗ Merge failed for PR #%s\n", number
+                printf "  Aborting merge and continuing...\n"
+                system("git merge --abort 2>/dev/null")
+            }
+        } else {
+            printf "  ✗ Failed to fetch branch %s\n", ref
+        }
+        
+        printf "  ---\n"
+    }
+}
+' prs.json
+
+echo "All PRs processed. Pushing changes to main branch..."
+git push origin main --force
+
+echo "Process complete!"
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

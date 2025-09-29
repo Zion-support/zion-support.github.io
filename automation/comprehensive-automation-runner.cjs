@@ -1,32 +1,16 @@
-
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-
 class ComprehensiveAutomationRunner {
-  // TODO: Implement
-}
   constructor() {
     this.projectRoot = process.cwd();
     this.startTime = new Date();
     this.results = [];
+  }
 
 
-  async runScript(scriptPath, scriptName) {
-    this.log(`\n🚀 Running ${scriptName}`);
-    try {
-      const result = execSync(`node ${scriptPath}`, {
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-        encoding: 'utf8',
-      });
-      this.log(`✅ ${scriptName} completed successfully`);
-      this.results.push({ script: scriptName, success: true, output: result });
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`❌ ${scriptName} failed: ${error.message}`, 'ERROR');
-      this.results.push({ script: scriptName, success: false, error: error.message });
-      return { success: false, error: error.message };
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
@@ -53,24 +37,7 @@ class ComprehensiveAutomationRunner {
   async runAllAutomations() {
     this.log('🚀 Starting Comprehensive Automation Runner...');
 
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
 
-  async runAutomationScript(scriptName, scriptPath) {
-    try {
-      this.log(`🤖 Running ${scriptName}...`);
-      execSync(`node ${scriptPath}`, { stdio: 'inherit' });
-      this.log(`✅ ${scriptName} completed successfully`);
-      return { success: true, script: scriptName };
-    } catch (error) {
-      this.log(`❌ ${scriptName} failed: ${error.message}`);
-      return { success: false, script: scriptName, error: error.message };
-main
-
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
@@ -80,8 +47,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 
   async runAllAutomations() {
-    this.log('🚀 Starting Comprehensive Automation Runner...');
-    
+
+
+
 
     const automations = [
       { name: 'Master Orchestrator', path: 'automation/master-orchestrator.cjs' },
@@ -93,17 +61,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       { name: 'SEO Optimizer', path: 'automation/seo-optimizer.cjs' }
     ];
 
-    const results = [];
-    let successfulAutomations = 0;
-
-    this.log('🎯 Starting comprehensive automation execution...');
-
-    for (const automation of automations) {
-      const result = await this.runAutomationScript(automation.name, automation.path);
-      results.push(result);
-      
-      if (result.success) {
-        successfulAutomations++;
+    for (const script of automationScripts) {
+      const scriptPath = path.join(this.projectRoot, script);
+      if (fs.existsSync(scriptPath)) {
+        await this.runScript(scriptPath, path.basename(script));
+      } else {
+        this.log(`⚠️  Script not found: ${script}`, 'WARN');
       }
     }
 
@@ -129,6 +92,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 // Run all automations
 const runner = new ComprehensiveAutomationRunner();
 runner.runAllAutomations().catch(console.error);
+
 
 this.log('🎯 Starting Comprehensive Automation Runner');
 
@@ -194,12 +158,12 @@ runner.run().catch(console.error);
 
 // Run all automations;
 runner.runAllAutomations().catch(console.error);
-main
+
 
 
     this.log('📋 Running all automation scripts...');
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
+
     const scripts = [
       { path: 'automation/master-orchestrator.cjs', name: 'Master Orchestrator' },
       { path: 'automation/comprehensive-app-improvement-suite.cjs', name: 'Comprehensive App Improvement Suite' },
@@ -211,25 +175,35 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
     this.generateReport();
+  }
 
   generateReport() {
     const endTime = new Date();
     const duration = endTime - this.startTime;
+    
+    const report = {
+      startTime: this.startTime.toISOString(),
+      endTime: endTime.toISOString(),
+      duration: `${Math.round(duration / 1000)}s`,
+      totalScripts: this.results.length,
+      successfulScripts: this.results.filter(r => r.success).length,
+      failedScripts: this.results.filter(r => !r.success).length,
+      results: this.results
+    };
 
+    const reportPath = path.join(this.projectRoot, 'comprehensive-automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-
-    this.log(`\n📊 Comprehensive Automation Runner completed!`);
-    this.log(`📈 Success Rate: ${report.successRate});
-    this.log(`⏱️ Duration: ${report.duration});
-    this.log(`📄 Report saved to: ${reportPath});
+    
+    this.log(`\n📊 Automation Report Generated: ${reportPath}`);
+    this.log(`✅ Successful: ${report.successfulScripts}/${report.totalScripts}`);
+    this.log(`❌ Failed: ${report.failedScripts}/${report.totalScripts}`);
+    this.log(`⏱️  Total Duration: ${report.duration}`);
   }
 }
 
-
-
+// Run the automation if this file is executed directly
 if (require.main === module) {
 
-module.exports = ComprehensiveAutomationRunner;
 module.exports = ComprehensiveAutomationRunner;
 module.exports = ComprehensiveAutomationRunner;
 main
@@ -241,6 +215,7 @@ module.exports = ComprehensiveAutomationRunner;
 
 
 module.exports = ComprehensiveAutomationRunner;
+
 
 
 

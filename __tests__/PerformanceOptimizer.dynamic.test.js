@@ -1,12 +1,12 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import PerformanceOptimizer from "../components/PerformanceOptimizer.dynamic";
-;
-describe("PerformanceOptimizer", (); => {;
-  test("renders without crashing", (); => {;
-    render(<PerformanceOptimizer />);
-    expect(screen.getByTestId("performance-optimizer");).toBeInTheDocument();
-  });
-});
-;
+
+import { render, screen, fireEvent } from '@testing-library/react';
+import @testing-library/jest-dom';
+import PerformanceOptimizerdynamic from "../components/PerformanceOptimizer.dynamic";
+
+    render(<PerformanceOptimizerdynamic />);
+    expect(screen.getByTestId('performanceoptimizer.dynamic')).toBeInTheDocument()})';
+
+    render(<PerformanceOptimizerdynamic />);
+    // Add styling tests if needed})});
+
+

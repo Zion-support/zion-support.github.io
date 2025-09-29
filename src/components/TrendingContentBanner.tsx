@@ -1,241 +1,171 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { TrendingUp, Eye, Clock, Star, ArrowRight, Flame, BookOpen, Zap } from 'lucide-react';
+import { 
+  TrendingUp, 
+  ArrowRight, 
+  Eye, 
+  Clock, 
+  Star,
+  BookOpen,
+  Zap,
+  Brain,
+  Cloud,
+  Shield
+} from 'lucide-react';
 
-interface TrendingContentBannerProps {
-  className?: string;
-  autoRotate?: boolean;
-  rotationInterval?: number;
-}
-
-interface TrendingItem {
-  id: string;
-  title: string;
-  category: string;
-  readTime: string;
-  views: string;
-  link: string;
-  isNew?: boolean;
-  isHot?: boolean;
-}
-
-export const TrendingContentBanner: React.FC<TrendingContentBannerProps> = ({
-  className = '',
-  autoRotate = true,
-  rotationInterval = 5000
-}) => {
+const TrendingContentBanner: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const trendingContent: TrendingItem[] = [
+  const trendingItems = [
     {
-      id: 'serverless-inference-cost-playbook-2025',
-      title: 'Serverless AI Inference Cost Playbook: 40–70% Savings',
-      category: 'AI Solutions',
-      readTime: '7 min read',
-      views: '1.2K views',
-      link: '/blog/serverless-inference-cost-playbook-2025',
-      isNew: true,
-      isHot: true
+      title: "AI Platform ROI Scorecards",
+      description: "Outcome metrics that drive investment decisions",
+      views: "9.1K",
+      readTime: "7 min",
+      category: "AI Strategy",
+      icon: TrendingUp,
+      link: "/blog/ai-platform-roi-scorecards-2025",
+      badge: "NEW"
     },
     {
-      id: 'practical-rag-in-production-2025',
-      title: 'Practical RAG in Production: Freshness, Hybrid Search, Evals',
-      category: 'GenAI',
-      readTime: '8 min read',
-      views: '980 views',
-      link: '/blog/practical-rag-in-production-2025',
-      isNew: true,
-      isHot: true
+      title: "Secure ML Supply Chain",
+      description: "SBOMs, attestations, and policy gates",
+      views: "10.4K",
+      readTime: "8 min",
+      category: "Security",
+      icon: Shield,
+      link: "/blog/secure-ml-supply-chain-attestations-2025",
+      badge: "TRENDING"
     },
     {
-      id: 'secure-genai-guardrails-2025',
-      title: 'Secure GenAI: Policy‑First Guardrails That Scale',
-      category: 'Security',
-      readTime: '6 min read',
-      views: '1.6K views',
-      link: '/blog/secure-genai-guardrails-2025',
-      isNew: true,
-      isHot: true
+      title: "Enterprise RAG Blueprint v2",
+      description: "Freshness, hybrid search, and evals",
+      views: "7.9K",
+      readTime: "9 min",
+      category: "GenAI",
+      icon: Brain,
+      link: "/blog/enterprise-rag-blueprint-v2-2025",
+      badge: "HOT"
     },
     {
-      id: 'edge-ai-revolution',
-      title: 'Edge AI: The Computing Revolution Happening at the Edge',
-      category: 'Edge Computing',
-      readTime: '13 min read',
-      views: '2.7K views',
-      link: '/blog/edge-computing-ai-revolution-2025',
-      isHot: false
-    },
-    {
-      id: 'quantum-computing-business',
-      title: 'Quantum Computing in Business: Real Applications Beyond the Hype',
-      category: 'Quantum Computing',
-      readTime: '11 min read',
-      views: '3.1K views',
-      link: '/blog/quantum-computing-business-applications-2025',
-      isHot: false
+      title: "Serverless Inference Cost Playbook",
+      description: "40–70% savings without P95 pain",
+      views: "12.1K",
+      readTime: "7 min",
+      category: "GenAI",
+      icon: Zap,
+      link: "/blog/serverless-inference-cost-playbook-2025",
+      badge: "POPULAR"
     }
   ];
 
   useEffect(() => {
-    if (!autoRotate) return;
-
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        (prevIndex + 1) % trendingContent.length
-      );
-    }, rotationInterval);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % trendingItems.length);
+    }, 4000);
 
     return () => clearInterval(interval);
-  }, [autoRotate, rotationInterval, trendingContent.length]);
+  }, [trendingItems.length]);
 
-  const currentItem = trendingContent[currentIndex];
+  const currentItem = trendingItems[currentIndex];
 
-  const getCategoryColor = (category: string) => {
-    const colors: { [key: string]: string } = {
-      'AI Ethics': 'bg-blue-100 text-blue-800',
-      'IoT Security': 'bg-green-100 text-green-800',
-      'Quantum Computing': 'bg-purple-100 text-purple-800',
-      'Edge Computing': 'bg-orange-100 text-orange-800',
-      'Cybersecurity': 'bg-red-100 text-red-800',
-      'AI & Automation': 'bg-indigo-100 text-indigo-800',
-      'Data Analytics': 'bg-teal-100 text-teal-800',
-      'Platform Engineering': 'bg-yellow-100 text-yellow-800'
-    };
-    return colors[category] || 'bg-gray-100 text-gray-800';
+  const getBadgeColor = (badge: string) => {
+    switch (badge) {
+      case 'HOT': return 'bg-red-500 text-white';
+      case 'NEW': return 'bg-green-500 text-white';
+      case 'TRENDING': return 'bg-blue-500 text-white';
+      case 'POPULAR': return 'bg-purple-500 text-white';
+      default: return 'bg-gray-500 text-white';
+    }
   };
 
-  return (
-    <div className={`bg-gradient-to-r from-white to-gray-50 border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 ${className}`}>
-      {/* Header */}
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-3">
-          <div className="bg-gradient-to-r from-red-500 to-orange-500 p-2 rounded-lg">
-            <TrendingUp className="w-5 h-5 text-white" />
-          </div>
-          <div>
-            <h3 className="font-bold text-gray-900">🔥 Trending Now</h3>
-            <p className="text-sm text-gray-600">Most popular content this week</p>
-          </div>
-        </div>
-        
-        {/* Navigation dots */}
-        <div className="flex gap-1">
-          {trendingContent.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full transition-colors ${
-                index === currentIndex ? 'bg-red-500' : 'bg-gray-300'
-              }`}
-              aria-label={`Go to item ${index + 1}`}
-            />
-          ))}
-        </div>
-      </div>
+  const Icon = currentItem.icon;
 
-      {/* Main content */}
-      <div className="relative overflow-hidden">
-        <div className="transition-all duration-500 ease-in-out">
+  return (
+    <div className="bg-gradient-to-r from-zion-blue/20 to-zion-purple/20 backdrop-blur-lg rounded-2xl border border-white/10 p-6 hover:shadow-2xl transition-all duration-500 group">
+      <div className="flex items-center justify-between">
+        <div className="flex-1">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="flex items-center gap-2">
+              <TrendingUp className="w-5 h-5 text-zion-cyan animate-pulse" />
+              <span className="text-sm font-semibold text-zion-cyan">TRENDING NOW</span>
+            </div>
+            <div className={`px-2 py-1 rounded-full text-xs font-bold ${getBadgeColor(currentItem.badge)} animate-bounce`}>
+              {currentItem.badge}
+            </div>
+          </div>
+
           <div className="flex items-start gap-4">
-            {/* Content info */}
+            <div className="bg-zion-blue/20 p-3 rounded-lg group-hover:bg-zion-blue/30 transition-colors">
+              <Icon className="w-6 h-6 text-zion-cyan group-hover:scale-110 transition-transform" />
+            </div>
+            
             <div className="flex-1">
-              {/* Badges */}
-              <div className="flex items-center gap-2 mb-3">
-                <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(currentItem.category)}`}>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-xs font-medium text-zion-slate-light uppercase tracking-wider">
                   {currentItem.category}
                 </span>
-                {currentItem.isNew && (
-                  <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 flex items-center gap-1">
-                    <Zap className="w-3 h-3" />
-                    NEW
-                  </span>
-                )}
-                {currentItem.isHot && (
-                  <span className="px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 flex items-center gap-1">
-                  <Flame className="w-3 h-3" />
-                    HOT
-                  </span>
-                )}
               </div>
-
-              {/* Title */}
-              <h4 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
+              
+              <h3 className="text-lg font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                 {currentItem.title}
-              </h4>
+              </h3>
+              
+              <p className="text-zion-slate-light text-sm mb-3">
+                {currentItem.description}
+              </p>
 
-              {/* Meta info */}
-              <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
+              <div className="flex items-center gap-4 text-xs text-zion-slate-light">
                 <div className="flex items-center gap-1">
-                  <Eye className="w-4 h-4" />
-                  <span>{currentItem.views}</span>
+                  <Eye className="w-3 h-3" />
+                  <span>{currentItem.views} views</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <Clock className="w-4 h-4" />
-                  <span>{currentItem.readTime}</span>
+                  <Clock className="w-3 h-3" />
+                  <span>{currentItem.readTime} read</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                  <span>4.8</span>
+                  <Star className="w-3 h-3 text-yellow-400" />
+                  <span>4.9/5</span>
                 </div>
-              </div>
-
-              {/* CTA */}
-              <Link
-                to={currentItem.link}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
-              >
-                <BookOpen className="w-4 h-4" />
-                Read Article
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-
-            {/* Trending indicator */}
-            <div className="flex flex-col items-center gap-2">
-              <div className="bg-gradient-to-r from-red-500 to-orange-500 p-3 rounded-full">
-                <TrendingUp className="w-6 h-6 text-white" />
-              </div>
-              <div className="text-center">
-                <div className="text-lg font-bold text-red-600">#{currentIndex + 1}</div>
-                <div className="text-xs text-gray-500">Trending</div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-end gap-3">
+          <Link
+            to={currentItem.link}
+            className="bg-zion-cyan text-white hover:bg-zion-blue-light px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2 group/btn"
+          >
+            <BookOpen className="w-4 h-4" />
+            Read Now
+            <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+          </Link>
+
+          {/* Navigation dots */}
+          <div className="flex gap-2">
+            {trendingItems.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === currentIndex 
+                    ? 'bg-zion-cyan scale-125' 
+                    : 'bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))}
           </div>
         </div>
       </div>
 
-      {/* Bottom section - Quick access to all trending */}
-      <div className="mt-6 pt-4 border-t border-gray-200">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-gray-600">More trending content:</span>
-          </div>
-          <Link
-            to="/trending"
-            className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors flex items-center gap-1"
-          >
-            View All Trending
-            <ArrowRight className="w-3 h-3" />
-          </Link>
-        </div>
-        
-        {/* Quick preview of other trending items */}
-        <div className="flex gap-2 mt-3 overflow-x-auto">
-          {trendingContent.slice(0, 3).map((item, index) => (
-            <Link
-              key={item.id}
-              to={item.link}
-              className={`flex-shrink-0 px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                index === currentIndex 
-                  ? 'bg-blue-100 text-blue-800' 
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-              }`}
-            >
-              {item.category}
-            </Link>
-          ))}
-        </div>
+      {/* Progress bar */}
+      <div className="mt-4 w-full bg-white/10 rounded-full h-1">
+        <div 
+          className="bg-gradient-to-r from-zion-cyan to-zion-blue-light h-1 rounded-full transition-all duration-100 ease-linear"
+          style={{ width: `${((currentIndex + 1) / trendingItems.length) * 100}%` }}
+        />
       </div>
     </div>
   );

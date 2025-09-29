@@ -1,14 +1,26 @@
-// import path from 'path';
 
-// const DATA_DIR = path.join(process.cwd(), 'datakyc');
-// const FILE = path.join(DATA_DIR, 'profiles.json') // Removed unused variable
 
-function load(): Record<string, unknown> {
+
+
+
+const DATA_DIR = path.join(process.cwd(), 'datakyc')
+const FILE = path.join(DATA_DIR, 'profiles.json')
+function load(): Record<string, KycProfile> {
   try {
-    return {};
+
+
+
+
+
+
+
   } catch {
     return {};
   }
 }
 
-export { load };
+
+
+
+
+

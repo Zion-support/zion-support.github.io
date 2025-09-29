@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import React from 'react';
 import { 
   NewBlogBanner, 
   AnalyticsPlatformBanner, 
@@ -8,14 +8,15 @@ import {
   AIAnalyticsBanner,
   HealthTechSuccessBanner,
   ComprehensiveAIBanner,
-  EnterpriseAIBanner
+  EnterpriseAIBanner,
+  NewContentBanner,
+  CustomerServiceAIBanner,
+  HealthcareAIBanner,
+  RetailSuccessBanner,
+  AIContentShowcaseBanner,
+  AIRevolutionBanner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
-=======
-import { Link } from 'react-router-dom';
-import React from 'react';
-import { AnalyticsPlatformBanner, NewBlogBanner, NewContentBanner } from '../components/PromotionalBanner';
->>>>>>> cursor/create-and-deploy-new-content-04db
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -27,6 +28,11 @@ export default function HomePage() {
   return (
     <div className="animate-fade-in">
       {/* Promotional Banners */}
+      <AIContentShowcaseBanner />
+      <CustomerServiceAIBanner />
+      <HealthcareAIBanner />
+      <RetailSuccessBanner />
+      <AIRevolutionBanner />
       <NewBlogBanner />
       <WorkflowAutomationBanner />
       <AIAnalyticsBanner />
@@ -144,10 +150,9 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
-=======
+      
       {/* Latest Content Section */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -298,22 +303,62 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/services/ai-analytics-platform" className="group">
+            <Link to="/blog/ai-customer-service-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Service
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Article
                   </span>
-                  <span className="text-sm text-gray-500">AI Analytics</span>
+                  <span className="text-sm text-gray-500">15 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Analytics Platform Launch
+                  AI-Powered Customer Service Revolution
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Transform your data into actionable insights with our new AI-powered analytics platform.
+                  80% faster response times, 90% cost reduction - discover how AI is transforming customer support.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
-                  Explore Platform →
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+
+            <Link to="/blog/ai-healthcare-transformation-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Featured Article
+                  </span>
+                  <span className="text-sm text-gray-500">18 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Healthcare Transformation Guide
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  40% better diagnostics, 60% improved outcomes - how AI is revolutionizing patient care.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+
+            <Link to="/case-studies/retail-ai-transformation" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Success Story
+                  </span>
+                  <span className="text-sm text-gray-500">Retail</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  RetailAI Corp: 150% Revenue Growth
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how RetailAI Corp achieved 150% revenue growth and 80% cost reduction with AI transformation.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
                 </div>
               </div>
             </Link>
@@ -329,7 +374,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
->>>>>>> cursor/create-and-deploy-new-content-04db
 
       {/* Success Stories */}
       <section className="py-20 bg-gray-50">

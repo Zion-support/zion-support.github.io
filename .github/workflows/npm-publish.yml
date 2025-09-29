@@ -1,10 +1,7 @@
-# This workflow is disabled since this is a Next.js application, not an npm package
-# To enable npm publishing, this repository would need to be converted to a package library
-
-name: NPM Package Publishing (DISABLED)
+name: Package Validation
 
 on:
-  # Disabled - no npm package to publish
+  # Disabled - no triggers
   # push:
   #   branches:
   #     - main
@@ -14,10 +11,28 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    if: false  # Always skip this job
+
     steps:
-      - name: Skip publishing
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test --if-present
+
+      - name: Build project
+        run: npm run build
+
+      - name: Validate package
         run: |
-          echo "This workflow is disabled"
-          echo "This is a Next.js application, not an npm package"
-          echo "To enable npm publishing, convert this to a package library"
+          echo "Package validation completed successfully"
+          echo "Package name: $(npm run --silent echo:name)"
+          echo "Package version: $(npm run --silent echo:version)"
+          echo "Package is private: $(npm run --silent echo:private)"

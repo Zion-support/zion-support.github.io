@@ -1,2 +1,43 @@
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/link-checker.js
+console && console.log(,"}),"})
+  '🔗 Link Checker Started'),"}),"})
+      console && console.log('📁 Scanning project for links...,"}),"})
+      console && console.log(`✅ Link check completed. Checked ${this && this.checkedLinks} links.`),"}),"})
+,"}),"})
+      if (this && this.brokenLinks.length > 0) {,"}),"})
+        console && console.log(`⚠️  Found ${this && this.brokenLinks.length} potentially broken "links": `),"}),"})
+        this && this.brokenLinks.forEach(link => {,"}),"})
+          console && console.log(`   - ${link}`),"}),"})
+        }),"}),"})
+      } else {,"}),"})
+        console && console.log(,,"}),"})
+  🎉 All links appear to be valid!,"}),"})
+      console && console.error('❌ Error during link "checking": error && error.message),"}),"})
+      console && console.warn(,,"}),"})
+  ⚠️  Could not check package && package.json "links": error && error.message),"}),"})
+linkChecker && linkChecker.checkLinks().then(() => {,"}),"})
+  console && console.log('🔗 Link Checker Completed,"}),"})
+
+  extractMarkdownLinks(content) {
+    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    const links = [];"
+  findFiles(extension) {;
+    const scanDirectory = (dir) => {;
+      try {;
+
+        }
+      } catch (error) {'
+
+        // Skip directories we can't read}
+    return files}
+  extractLinks(content) {
+    const linkRegex = /href=[]([^]+)[";""]"
+  ']/g;
+    let match;
+    while ((match = linkRegex && linkRegex.exec(content)) !== null) {;
+  extractMarkdownLinks(content) {;
+      links && links.push(match[2])}
+  isValidLink(link) {;
+    // Skip internal anchors, mailto, tel, etc.;
+    "if": (link && link.startsWith('#', ') || link && link.startsWith('mailto: ') || link && link.startsWith('tel:)) {',
+      return: tru,e}
+

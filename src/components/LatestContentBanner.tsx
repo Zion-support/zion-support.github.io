@@ -15,7 +15,7 @@ const contentHighlights = [
     title: "🛡️ NEW: AI Risk Register That Actually Drives Action",
     description: "Turn AI risks into tracked mitigations with owners and policy tests",
     ctaText: "Read Playbook",
-    ctaLink: "/blog/ai-risk-register-2025",
+    ctaLink: "/blog/ai-platform-roi-2025",
     badge: "New",
     stats: "7 min read",
     variant: "warning" as const
@@ -25,7 +25,7 @@ const contentHighlights = [
     title: "📈 Practical AI Evals That Predict Business Outcomes",
     description: "Design scorecards that correlate with revenue, CSAT, and retention",
     ctaText: "See Scorecards",
-    ctaLink: "/blog/practical-evals-scorecards-2025",
+    ctaLink: "/blog/genai-evals-in-production-2025",
     badge: "Featured",
     stats: "6 min read",
     variant: "success" as const
@@ -35,7 +35,7 @@ const contentHighlights = [
     title: "💸 Cloud FinOps Guardrails Engineers Actually Use",
     description: "Budgets, alerts, and PR gates that reduce waste 25–40%",
     ctaText: "Cut Spend",
-    ctaLink: "/blog/cloud-finops-guardrails-2025",
+    ctaLink: "/blog/real-time-data-pipelines-2025",
     badge: "Hot",
     stats: "8 min read",
     variant: "info" as const
@@ -45,7 +45,7 @@ const contentHighlights = [
     title: "🧪 RAG Architectures That Work in Production",
     description: "Freshness, hybrid search, and evals that scale",
     ctaText: "Read Guide",
-    ctaLink: "/blog/practical-rag-in-production-2025",
+    ctaLink: "/blog/edge-cdn-ml-personalization-2025",
     badge: "Popular",
     stats: "8 min read",
     variant: "premium" as const
@@ -70,10 +70,9 @@ const contentHighlights = [
     badge: "New",
     stats: "8 min read",
     variant: "info" as const
-  }
-  ,
+  },
   {
-    id: 5,
+    id: 6,
     title: "🧭 NEW: AI Platform Engineering 2025",
     description: "Golden paths, eval systems, and governance for safe, fast AI delivery",
     ctaText: "Read Guide",
@@ -83,7 +82,7 @@ const contentHighlights = [
     variant: "info" as const
   },
   {
-    id: 6,
+    id: 7,
     title: "🔍 AI Agent Observability",
     description: "Traces, policy tests, and human feedback that keep quality high",
     ctaText: "Learn How",
@@ -93,7 +92,7 @@ const contentHighlights = [
     variant: "success" as const
   },
   {
-    id: 7,
+    id: 8,
     title: "🛡️ Secure RAG 2025",
     description: "Authorization-aware retrieval and prompt firewalls for enterprise RAG",
     ctaText: "See Patterns",
@@ -105,15 +104,120 @@ const contentHighlights = [
   ,
   {
     id: 8,
-    title: "📚 New: AI Platform ROI + Secure ML Supply Chain",
-    description: "Fresh long-form guides on platform scorecards and end-to-end ML provenance.",
-    ctaText: "Read Now",
-    ctaLink: "/blog/ai-platform-roi-2025",
+    title: "📚 New: Practical RAG in Production (2025)",
+    description: "Freshness, hybrid search, and continuous evals for grounded responses.",
+    ctaText: "Read Guide",
+    ctaLink: "/blog/practical-rag-in-production-2025",
     badge: "New",
-    stats: "Featured",
+    stats: "8 min read",
     variant: "info" as const
   }
+  ,
+  {
+    id: 9,
+    title: "💸 Cloud FinOps Guardrails Engineers Use",
+    description: "Budgets, alerts, and PR gates that cut waste 25–40%.",
+    ctaText: "Cut Spend",
+    ctaLink: "/blog/cloud-finops-guardrails-2025",
+    badge: "New",
+    stats: "7 min read",
+    variant: "success" as const
+  },
+  {
+    id: 10,
+    title: "🧪 RAG That Works in Production",
+    description: "Freshness, hybrid search, and evals that correlate with outcomes.",
+    ctaText: "Read Guide",
+    ctaLink: "/blog/practical-rag-in-production-2025",
+    badge: "Trending",
+    stats: "9 min read",
+    variant: "premium" as const
+  }
 ];
+
+// Additions
+contentHighlights.push(
+  {
+    id: 9,
+    title: "🧠 Enterprise RAG Blueprint v2",
+    description: "Hybrid search, freshness, and auth-aware retrieval with layered evals.",
+    ctaText: "Read Guide",
+    ctaLink: "/blog/enterprise-rag-blueprint-2025",
+    badge: "New",
+    stats: "9 min read",
+    variant: "premium" as const
+  },
+  {
+    id: 10,
+    title: "💸 FinOps Scorecards Engineers Use",
+    description: "Guardrails and PR checks that cut cloud waste 25–40%.",
+    ctaText: "See Playbook",
+    ctaLink: "/blog/finops-scorecards-2025",
+    badge: "Featured",
+    stats: "6 min read",
+    variant: "success" as const
+  },
+  {
+    id: 11,
+    title: "💸 Cloud FinOps Guardrails Engineers Actually Use",
+    description: "Budgets, alerts, and PR gates that reduce waste 25–40%",
+    ctaText: "Cut Spend",
+    ctaLink: "/blog/cloud-finops-guardrails-2025",
+    badge: "Hot",
+    stats: "6 min read",
+    variant: "info" as const
+  },
+  {
+    id: 15,
+    title: "✅ LLM Policy Tests in CI (New Article)",
+    description: "Automate governance—policy tests on every PR keep you fast and safe.",
+    ctaText: "Read How",
+    ctaLink: "/blog/llm-policy-testing-2025",
+    badge: "New",
+    stats: "6 min read",
+    variant: "warning" as const
+  },
+  {
+    id: 16,
+    title: "🧰 GenAI Evals CI Service",
+    description: "Quality gates, canaries, and dashboards to ship LLM features weekly.",
+    ctaText: "Enable Now",
+    ctaLink: "/services/AIAutonomousOperations",
+    badge: "New Service",
+    stats: "$199/mo",
+    variant: "success" as const
+  },
+  {
+    id: 12,
+    title: "📈 Practical AI Evals That Predict Business Outcomes",
+    description: "Scorecards that correlate with revenue, CSAT, and retention",
+    ctaText: "See Scorecards",
+    ctaLink: "/blog/practical-evals-scorecards-2025",
+    badge: "Featured",
+    stats: "6 min read",
+    variant: "success" as const
+  },
+  {
+    id: 13,
+    title: "🧰 Serverless Inference Cost Playbook",
+    description: "Adaptive batching, warm pools, and quality tiers without P95 pain",
+    ctaText: "Optimize",
+    ctaLink: "/blog/serverless-inference-cost-playbook-2025",
+    badge: "Guide",
+    stats: "7 min read",
+    variant: "success" as const
+  },
+  {
+    id: 14,
+    title: "🏗️ AI Platform Architecture",
+    description: "Build enterprise-grade AI systems that scale from data pipelines to model serving",
+    ctaText: "Explore",
+    ctaLink: "/services/AI-Platform-Architecture",
+    badge: "New Service",
+    stats: "Production Ready",
+    variant: "premium" as const
+  }
+);
 
 export const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
   className = "",

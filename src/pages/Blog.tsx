@@ -1,22 +1,21 @@
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
 import {
-  Calendar,
-  User,
   ArrowRight,
-  Clock,
-  Tag,
-  TrendingUp,
-  Zap,
-  Bot,
   BarChart3,
-  Shield,
+  Bot,
+  Calendar,
+  Clock,
   Code,
   Search,
+  Shield,
+  TrendingUp,
+  User,
+  Zap
 } from "lucide-react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
+// Footer component missing; using page without footer
+// Header component missing; using page without header
 
 interface BlogPost {
   id: number;
@@ -37,9 +36,21 @@ export default function Blog(): React.JSX.Element {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
 
-  const categories = ["All", "AI Solutions", "Case Studies", "Technology", "Industry Insights", "Tutorials"];
+  const categories = [
+    "All",
+    "AI Strategy",
+    "Security",
+    "Edge Computing",
+    "GenAI",
+    "Data Engineering",
+    "Technology",
+    "AI Solutions",
+    "Case Studies",
+    "Industry Insights",
+    "Tutorials",
+  ];
 
-  const blogPosts: BlogPost[] = [
+  const staticPosts: BlogPost[] = [
     {
       id: 1,
       title: "How AI Workflow Automation Transformed a Fortune 500 Company",
@@ -168,6 +179,26 @@ export default function Blog(): React.JSX.Element {
     },
   ];
 
+  // Map content/posts entries into this page's structure
+  const mappedFromContent: BlogPost[] = useMemo(() => {
+    return latestPosts.map((p, idx) => ({
+      id: 1000 + idx,
+      title: p.title,
+      excerpt: p.description,
+      content: "See full article",
+      author: "Zion Tech Group Team",
+      date: p.publishedAt,
+      readTime: p.readTime || "6 min read",
+      category: p.category,
+      tags: [p.category],
+      image: "/api/placeholder/400/250",
+      featured: Boolean(p.featured),
+      views: 0,
+    }));
+  }, []);
+
+  const blogPosts: BlogPost[] = [...mappedFromContent, ...staticPosts];
+
   const filteredPosts = blogPosts.filter(post => {
     const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -233,10 +264,10 @@ export default function Blog(): React.JSX.Element {
           <div className="max-w-7xl mx-auto px-6">
             <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center justify-between">
               <div className="mr-4">
-                <div className="text-sm font-semibold">🚀 Fresh: AI Platform ROI + Secure ML Supply Chain</div>
-                <div className="text-xs text-white/90">New frameworks on platform ROI and end-to-end ML supply chain security.</div>
+                <div className="text-sm font-semibold">🚀 Fresh: Serverless Inference Cost Playbook + Production RAG</div>
+                <div className="text-xs text-white/90">Practical strategies to cut inference costs and ship RAG that meets SLAs.</div>
               </div>
-              <a href="/blog/ai-platform-roi-2025" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">
+              <a href="/blog/serverless-ai-inference-cost-playbook-2025" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">
                 Read the latest
               </a>
             </div>

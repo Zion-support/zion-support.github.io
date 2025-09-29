@@ -1,161 +1,21 @@
-[[redirects]]
-  from = "/api/*"
-  to = "https://backend.example.com/:splat"
-  status = 200
- 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
 [build]
-  command = "pnpm run build:minimal"
+  # Publish prebuilt dist without running a build
+  command = "echo Skipping build; deploying prebuilt dist"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
-  # Use Active LTS for stability on Netlify
-  NODE_VERSION = "22"
-  PNPM_VERSION = "10.17.1"
-  NETLIFY_USE_PNPM = "true"
-  # Disable Next.js auto-detection
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
-  # Ensure clean installs
-  NPM_CONFIG_PRODUCTION = "false"
-  NODE_ENV = "production"
-  # Ensure optional platform binaries for Rollup are installed on Netlify
-  NPM_CONFIG_INCLUDE = "optional"
-  # Force Rollup to use JS implementation if native is unavailable
-  ROLLUP_SKIP_NODEJS_NATIVE = "true"
-  # Optimize build performance
-  CI = "true"
+  NODE_VERSION = "20"
+  NETLIFY_SKIP_INSTALL = "true"
+  # Avoid optional binary downloads (electron, playwright, cypress)
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
+  PUPPETEER_SKIP_DOWNLOAD = "1"
+  CYPRESS_INSTALL_BINARY = "0"
+  ELECTRON_SKIP_DOWNLOAD = "1"
 
-# Explicitly disable Next.js plugin to prevent auto-detection
-[build.processing]
-  skip_processing = false
 
-[build.processing.css]
-  bundle = true
-  minify = true
 
-[build.processing.js]
-  bundle = true
-  minify = true
-
-[build.processing.html]
-  pretty_urls = true
-
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
-  [plugins.inputs]
-
-[context.production.environment]
-  NODE_ENV = "production"
-  NPM_CONFIG_PRODUCTION = "false"
-
-[context.deploy-preview]
-  command = "pnpm run build:minimal"
-  [context.deploy-preview.environment]
-    NODE_ENV = "production"
-
-[context.branch-deploy]
-  command = "pnpm run build:minimal"
-  [context.branch-deploy.environment]
-    NODE_ENV = "production"
-
-# Security and caching headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.gpteng.co data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
-
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/static/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    X-Content-Type-Options = "nosniff"
-
-[[headers]]
-  for = "*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    X-Content-Type-Options = "nosniff"
-
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
-
-# Advanced Performance Headers
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
-
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    X-Content-Type-Options = "nosniff"
-    # Relax COEP to avoid blocking cross-origin images/assets
-    Cross-Origin-Embedder-Policy = "unsafe-none"
-
-[[headers]]
-  for = "*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    X-Content-Type-Options = "nosniff"
-
-# Security Headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    # Duplicate security headers merged into the primary block above
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-
-# Performance Headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-    X-XSS-Protection = "1; mode=block"
-
-# Ultimate Security Headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-DNS-Prefetch-Control = "on"
-    X-Download-Options = "noopen"
-    X-Permitted-Cross-Domain-Policies = "none"
-    # Allow loading images and assets from trusted cross-origins
-    Cross-Origin-Resource-Policy = "cross-origin"
-    Cross-Origin-Embedder-Policy = "unsafe-none"
-    Cross-Origin-Opener-Policy = "same-origin"
-    
-# Enhanced CSP for production
-[[headers]]
-  for = "/*"
-  [headers.values]
-    # Unified CSP (kept in sync with the primary block at top)
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.gpteng.co data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

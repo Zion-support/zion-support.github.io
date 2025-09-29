@@ -20,6 +20,54 @@ export const newInsights = [
     `
   },
   {
+    id: "guardrails-scorecards-evals-2025",
+    title: "Guardrails Engineers Adopt: Scorecards, PR Gates, Online Canaries",
+    summary: "Lightweight, outcome‑linked guardrails that speed delivery while managing risk.",
+    category: "AI Strategy",
+    date: "2025-09-29",
+    readMinutes: 7,
+    featured: true,
+    tags: ["Guardrails", "Scorecards", "Evals"],
+    content: `
+      <h2>Ship Faster, Safer</h2>
+      <p>Connect scorecards to product KPIs. Use PR gates for risky changes and run online canaries tied to outcomes.</p>
+      <h3>Playbook</h3>
+      <ul>
+        <li>Adoption‑friendly scorecards</li>
+        <li>Small, meaningful PR checks</li>
+        <li>Budgeted online evals</li>
+      </ul>
+    `
+  },
+  {
+    id: "edge-flags-blueprint-2025",
+    title: "Edge Flags Blueprint: Zero‑Regret Rollouts",
+    summary: "<100ms global flags with segmented canaries, budgets, and instant rollback.",
+    category: "Architecture",
+    date: "2025-09-29",
+    readMinutes: 6,
+    featured: false,
+    tags: ["Edge", "Flags", "Delivery"],
+    content: `
+      <h2>Progressive Delivery</h2>
+      <p>Segment by geo and account, cap risk with budgets, and stream telemetry for evidence‑based releases.</p>
+    `
+  },
+  {
+    id: "rag-freshness-ttl-2025",
+    title: "RAG Freshness: TTL Budgets and Versioned Corpora",
+    summary: "Prevent stale answers with freshness windows and warm caches.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 8,
+    featured: true,
+    tags: ["RAG", "Freshness", "Search"],
+    content: `
+      <h2>Operate with Freshness</h2>
+      <p>Use TTL windows, async warmups, and versioned corpora to keep retrieval accurate at scale.</p>
+    `
+  },
+  {
     id: "secure-ml-supply-chain",
     title: "Secure ML Supply Chain: Lineage, SBOMs, and Egress Controls",
     summary: "Lock down datasets, models, and inference routes with provenance, signed artifacts, and policy checks in CI/CD.",
@@ -192,6 +240,46 @@ export const newInsights = [
       
       <h3>Building Your Micro-SaaS</h3>
       <p>Start with customer discovery, validate your problem-solution fit, and iterate rapidly based on user feedback.</p>
+    `
+  },
+  {
+    id: "enterprise-rag-blueprint-2025",
+    title: "Enterprise RAG Blueprint v2: Freshness, Security, and Evals",
+    summary: "Production-ready RAG patterns: hybrid search, auth-aware retrieval, freshness controls, and layered evaluation.",
+    category: "GenAI",
+    date: "2025-10-04",
+    readMinutes: 9,
+    featured: true,
+    tags: ["RAG", "GenAI", "Search", "Security"],
+    content: `
+      <h2>Why RAG v2</h2>
+      <p>Move beyond naive vector search with hybrid retrieval, freshness windows, and authorization-aware filters.</p>
+      <h3>Operate with Confidence</h3>
+      <ul>
+        <li>Offline evals aligned to business KPIs</li>
+        <li>Online canaries with rollback triggers</li>
+        <li>Prompt firewalls and red-teaming</li>
+      </ul>
+    `
+  },
+  {
+    id: "finops-scorecards-2025",
+    title: "Cloud FinOps Scorecards Engineers Actually Use",
+    summary: "Guardrails, PR checks, and budgets that cut waste 25–40% while preserving delivery speed.",
+    category: "Cloud",
+    date: "2025-10-04",
+    readMinutes: 6,
+    featured: true,
+    tags: ["FinOps", "Cloud", "Governance"],
+    content: `
+      <h2>Scorecards That Matter</h2>
+      <p>Connect spend to product goals, set guardrails engineers respect, and automate waste prevention.</p>
+      <h3>Playbook</h3>
+      <ul>
+        <li>PR gates for risky resources</li>
+        <li>Budgets + alerts by environment</li>
+        <li>Continuous right-sizing</li>
+      </ul>
     `
   }
 ];
