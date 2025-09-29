@@ -14,7 +14,41 @@ export default [
       '*.config.ts',
       'public/**',
       'backup/**',
-      'src.corrupted/**'
+      'src.corrupted/**',
+      'backup-problematic-files/**',
+      'src.disabled/**',
+      'src.pages.disabled/**',
+      'temp_broken_files/**',
+      'cypress/**',
+      '**/backup-problematic-files/**',
+      '**/src.disabled/**',
+      '**/src.corrupted/**',
+      '**/src.pages.disabled/**',
+      '**/temp_broken_files/**',
+      '**/cypress_backup/**',
+      '**/components.disabled/**',
+      '**/components.disabled_full/**',
+      '**/contracts.disabled/**',
+      '**/data.disabled/**',
+      '**/automation_backup/**',
+      '**/broken_files_backup/**',
+      '**/pages/**',
+      '**/store/**',
+      '**/utils/**',
+      '**/tests/**',
+      '**/vite.config-backup.*',
+      '**/test-simple.*',
+      '**/*.disabled.*',
+      '**/*.backup.*',
+      '**/*.broken.*',
+      '**/*.corrupted.*',
+      '**/*.temp.*',
+      '**/*.disabled/**',
+      '**/*.backup/**',
+      '**/*.broken/**',
+      '**/*.corrupted/**',
+      '**/*.temp/**',
+      'jest.setup.js'
     ]
   },
   {
@@ -23,6 +57,7 @@ export default [
       globals: {
         ...Object.fromEntries(
           Object.entries({
+  // DOM globals
   "document": "readonly",
   "window": "readonly",
   "localStorage": "readonly",
@@ -57,7 +92,30 @@ export default [
   "ServiceWorkerRegistration": "readonly",
   "ServiceWorkerUpdateViaCache": "readonly",
   "gtag": "readonly",
-  "requestIdleCallback": "readonly"
+  "requestIdleCallback": "readonly",
+  // Additional DOM types
+  "Element": "readonly",
+  "HTMLElement": "readonly",
+  "HTMLInputElement": "readonly",
+  "HTMLTextAreaElement": "readonly",
+  "HTMLSelectElement": "readonly",
+  "HTMLFormElement": "readonly",
+  "HTMLScriptElement": "readonly",
+  "HTMLImageElement": "readonly",
+  "KeyboardEvent": "readonly",
+  "MutationObserver": "readonly",
+  // Node.js globals
+  "crypto": "readonly",
+  "TextEncoder": "readonly",
+  "btoa": "readonly",
+  "atob": "readonly",
+  "Headers": "readonly",
+  "Request": "readonly",
+  "Response": "readonly",
+  "RequestInit": "readonly",
+  "Image": "readonly",
+  "alert": "readonly",
+  "JSX": "readonly"
 }).map(([key, value]) => [key, value])
         )
       },

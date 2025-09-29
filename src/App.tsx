@@ -1,5 +1,13 @@
 import React from 'react';
 import { AppRouter } from './router';
+
+import { resourcePreloader } from './utils/resourcePreloader';
+import { criticalCSSManager } from './utils/criticalCSSManager';
+import { sriUtility } from './security/sriUtility';
+import { csrfProtection } from './security/csrfProtection';
+import { structuredDataManager } from './seo/structuredDataManager';
+import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
+import { screenReaderSupport } from './accessibility/screenReaderSupport';
 import './index.css';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager } from './utils/securityHeaders';

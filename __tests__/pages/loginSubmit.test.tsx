@@ -3,7 +3,7 @@ import Login from '@/pages/Login';
 import { useRouter } from 'next/router';
 import nextRouterMock from 'next-router-mock';
 
-/* eslint-disable @typescript-eslint/no-require-imports */
+ 
 jest.mock('next/router', () => nextRouterMock);
 
 // Mock Sentry and toast to avoid network / UI noise

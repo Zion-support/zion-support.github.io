@@ -51,19 +51,18 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
   });
 
   // Performance tracking
-  const { PerformanceTracker } = usePerformanceTracker({
-    onMetricsUpdate: (newMetrics) => {
+  const performanceMetrics = usePerformanceTracker((newMetrics: any) => {
       setRealTimeMetrics({
         fps: newMetrics.fps,
         memoryUsage: newMetrics.memoryUsage || 0,
         loadTime: newMetrics.loadTime,
         errors: newMetrics.errors,
       });
-    },
-    interval: 2000,
-    enableCoreWebVitals: true,
-    enableAdvancedMetrics: true,
-  });
+    }, {
+      interval: 2000,
+      enableCoreWebVitals: true,
+      enableAdvancedMetrics: true,
+    });
 
   useEffect(() => {
     if (isVisible) {
@@ -106,7 +105,6 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
 
   return (
     <>
-      {PerformanceTracker}
       <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
         <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
           <div className="flex justify-between items-center mb-6">

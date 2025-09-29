@@ -20,7 +20,7 @@ const EnhancedPerformanceMonitor = () => {
       timestamp: Date.now(),
     };
 
-    const handleMetric = (metric: unknown) => {
+    const handleMetric = (metric: any) => {
       performanceMetrics[metric.name as keyof PerformanceMetrics] = metric.value;
       
       // Check if we have all metrics

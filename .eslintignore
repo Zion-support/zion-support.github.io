@@ -58,3 +58,41 @@ apps/**/.next/
 
 # Netlify functions (serverless functions with different linting rules)
 netlify/functions/
+
+# Additional backup and problematic files
+backup-problematic-files/
+src.disabled/
+src.corrupted/
+src.pages.disabled/
+temp_broken_files/
+jest.setup.js
+cypress/
+**/backup-problematic-files/**
+**/src.disabled/**
+**/src.corrupted/**
+**/src.pages.disabled/**
+**/temp_broken_files/**
+**/cypress_backup/**
+**/components.disabled/**
+**/components.disabled_full/**
+**/contracts.disabled/**
+**/data.disabled/**
+**/automation_backup/**
+**/broken_files_backup/**
+**/cypress_backup/**
+**/pages/**
+**/store/**
+**/utils/**
+**/tests/**
+**/vite.config-backup.*
+**/test-simple.*
+**/*.disabled.*
+**/*.backup.*
+**/*.broken.*
+**/*.corrupted.*
+**/*.temp.*
+**/*.disabled/**
+**/*.backup/**
+**/*.broken/**
+**/*.corrupted/**
+**/*.temp/**

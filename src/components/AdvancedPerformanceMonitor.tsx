@@ -8,6 +8,14 @@ interface PerformanceMetrics {
   ttfb: number;
 }
 
+interface WebVitalMetric {
+  name: string;
+  value: number;
+  delta: number;
+  id: string;
+  navigationType: string;
+}
+
 interface AdvancedPerformanceMonitorProps {
   className?: string;
 }
@@ -24,27 +32,27 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
         
         const vitals: Partial<PerformanceMetrics> = {};
 
-        webVitals.onCLS((metric: unknown) => {
+        webVitals.onCLS((metric: WebVitalMetric) => {
           vitals.cls = metric.value;
           updateMetrics(vitals);
         });
 
-        webVitals.onINP((metric: unknown) => {
+        webVitals.onINP((metric: WebVitalMetric) => {
           vitals.fid = metric.value; // Using INP instead of FID
           updateMetrics(vitals);
         });
 
-        webVitals.onFCP((metric: unknown) => {
+        webVitals.onFCP((metric: WebVitalMetric) => {
           vitals.fcp = metric.value;
           updateMetrics(vitals);
         });
 
-        webVitals.onLCP((metric: unknown) => {
+        webVitals.onLCP((metric: WebVitalMetric) => {
           vitals.lcp = metric.value;
           updateMetrics(vitals);
         });
 
-        webVitals.onTTFB((metric: unknown) => {
+        webVitals.onTTFB((metric: WebVitalMetric) => {
           vitals.ttfb = metric.value;
           updateMetrics(vitals);
         });
