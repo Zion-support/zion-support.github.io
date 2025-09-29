@@ -47,10 +47,14 @@ import ContentRecommendationSystem from '../components/ContentRecommendationSyst
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
+<<<<<<< HEAD
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
 import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
+=======
+import NextGenAutonomousBanner from '../components/NextGenAutonomousBanner';
+>>>>>>> cursor/create-and-deploy-new-content-a364
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -74,7 +78,21 @@ export default function HomePage() {
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</Link>
             <span className="hidden md:inline">•</span>
+<<<<<<< HEAD
             <a to="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</a>
+=======
+            <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="underline hover:text-yellow-200">Cognitive Computing</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-space-tech-revolution-2026" className="underline hover:text-yellow-200">Space Tech</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-next-generation-autonomous-systems-2026" className="underline hover:text-yellow-200">Next-Gen Autonomous</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-mega-transformation-2026" className="underline hover:text-yellow-200">$50M ROI Case Study</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-next-generation-autonomous-success-2026" className="underline hover:text-yellow-200">$35M ROI Case Study</Link>
+>>>>>>> cursor/create-and-deploy-new-content-a364
           </div>
           <Link
             to="/blog"
@@ -121,8 +139,25 @@ export default function HomePage() {
       {/* New Content Promotional Banner 2026 */}
       <NewContentPromotionalBanner2026 />
       
+<<<<<<< HEAD
       {/* AI Innovation Showcase Banner 2026 */}
       <AIInnovationShowcaseBanner2026 />
+=======
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
+      
+      {/* Latest 2026 Content Banner */}
+      <LatestContent2026Banner />
+      
+      {/* Next-Generation Autonomous Systems Banner */}
+      <NextGenAutonomousBanner />
+      
+      {/* New Content Promotional Banners */}
+      <NewContent2026PromotionalBanners />
+      
+      {/* Interactive Content Recommendation */}
+      <InteractiveContentRecommendation />
+>>>>>>> cursor/create-and-deploy-new-content-a364
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
