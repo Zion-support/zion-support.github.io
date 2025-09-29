@@ -123,7 +123,7 @@ export default function App(): React.JSX.Element {
   }, []);
 
   return (
-    <EnhancedErrorBoundary>
+    <div>
       <SEOOptimizer seoData={seoDataForOptimizer} />
       <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -155,6 +155,6 @@ export default function App(): React.JSX.Element {
 
         <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
       </div>
-    </EnhancedErrorBoundary>
+    </div>
   );
 }
