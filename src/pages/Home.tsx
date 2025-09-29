@@ -115,10 +115,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 New: AI Governance Blueprint 2025 + Feature Flags at the Edge"
-          description="Ship faster with strong guardrails. Learn sub‑100ms global releases and scalable AI governance."
+          title="🆕 New: LLM Cost Optimization + Edge LLM Latency"
+          description="Cut spend 30–70% and deliver sub-200ms AI UX with proven patterns."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-governance-blueprint-2025"
+          ctaLink="/blog/llm-cost-optimization-2025"
           dismissible={true}
         />
         {/* Animated background elements */}

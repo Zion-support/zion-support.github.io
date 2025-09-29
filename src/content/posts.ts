@@ -10,6 +10,46 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "llm-cost-optimization-2025",
+    title: "LLM Cost Optimization in 2025: Practical Strategies",
+    description:
+      "Cut LLM spend by 30–70% with routing, caching, batching, and quantization while preserving quality.",
+    category: "AI Platforms",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "edge-llm-latency-patterns",
+    title: "Edge LLM Latency Patterns: Sub-200ms Interactions",
+    description:
+      "Streaming, prefetch, and edge compute patterns to deliver instant-feel AI UX.",
+    category: "Performance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "customer-journey-agents-qa",
+    title: "Customer Journey Agents: Planning, Safety, and QA Gates",
+    description:
+      "Design multi‑step agents with plan→act→verify loops, policy tests, and auditable outcomes that move KPIs.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "edge-personalization-under-100ms",
+    title: "Edge Personalization Under 100ms: CDN + On‑Device ML",
+    description:
+      "Signed configs, edge KV, and tiny models for private, real‑time personalization that scales globally.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
     slug: "ai-sales-copilot-2025",
     title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
     description:
