@@ -209,3 +209,58 @@ export const EnterpriseAIBanner = () => (
     autoHide={false}
   />
 );
+
+export const CustomerServiceAIBanner = () => (
+  <PromotionalBanner
+    message="💬 New Article: AI-Powered Customer Service Revolution - 80% Faster Response Times, 90% Cost Reduction"
+    ctaText="Read Article"
+    ctaLink="/blog/ai-customer-service-2025"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const HealthcareAIBanner = () => (
+  <PromotionalBanner
+    message="🏥 Featured: AI Healthcare Transformation Guide - 40% Better Diagnostics, 60% Improved Outcomes"
+    ctaText="Explore Healthcare AI"
+    ctaLink="/blog/ai-healthcare-transformation-2025"
+    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const RetailSuccessBanner = () => (
+  <PromotionalBanner
+    message="🛍️ Success Story: RetailAI Corp Achieved 150% Revenue Growth with AI Transformation"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/retail-ai-transformation"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    autoHide={true}
+    hideAfter={25}
+  />
+);
+
+export const AIContentShowcaseBanner = () => (
+  <PromotionalBanner
+    message="📚 Fresh Content: New AI Articles & Case Studies - Customer Service, Healthcare, Retail Success Stories"
+    ctaText="Browse All Content"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const AIRevolutionBanner = () => (
+  <PromotionalBanner
+    message="🚀 AI Revolution 2025: Complete Business Transformation Guide - Latest Trends, Strategies & Implementation"
+    ctaText="Read Complete Guide"
+    ctaLink="/blog/ai-revolution-2025"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-purple-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
