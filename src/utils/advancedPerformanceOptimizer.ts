@@ -351,7 +351,7 @@ class AdvancedPerformanceOptimizer {
    */
   private async loadComponent(componentName: string): Promise<void> {
     try {
-      const module = await import(`../components/${componentName}`);
+      const module = await import(`../components/${componentName}.tsx`);
       // Component loaded successfully
       console.log(`Component ${componentName} loaded`);
     } catch (error) {
