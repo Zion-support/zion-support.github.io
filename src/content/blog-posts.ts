@@ -44,6 +44,86 @@ Adopt this scorecard to align investments with measurable outcomes.
     image: "/images/ai-adoption-scorecard.jpg"
   },
   {
+    slug: "ai-governance-at-scale-2025",
+    title: "AI Governance at Scale: Policies That Enable Speed",
+    description: "From offline eval suites to online policy tests and approvals that keep velocity high without breaking trust.",
+    content: `
+# AI Governance at Scale: Policies That Enable Speed
+
+Move beyond ad‑hoc reviews with a policy‑first model that accelerates delivery while protecting users and brands.
+
+## Core Practices
+- Standardized offline evaluation suites in CI
+- Online policy tests tied to risk thresholds
+- Approval flows with audit trails
+
+## Operating Cadence
+- Weekly guardrail reviews
+- Drift monitoring and auto‑rollback
+- Clear ownership and escalation paths
+
+Ship faster with confidence by combining policy, telemetry, and automation.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Governance",
+    tags: ["Governance", "Policy", "Evals", "Guardrails"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-governance-at-scale.jpg"
+  },
+  {
+    slug: "edge-observability-blueprint-2025",
+    title: "Edge Observability Blueprint 2025: Sub‑100ms Reliability",
+    description: "Telemetry, budgets, and circuit patterns that make edge experiences fast and trustworthy.",
+    content: `
+# Edge Observability Blueprint 2025: Sub‑100ms Reliability
+
+Design observability for globally distributed, latency‑sensitive apps.
+
+## What to Measure
+- Per‑hop latency budgets and error budgets
+- Cache hit rates and stale‑while‑revalidate windows
+- Circuit breaker trips and fallback success
+
+## Tooling
+- OpenTelemetry with edge spans
+- Synthetic probes from metro regions
+- Real‑user monitoring with P95/P99 focus
+
+Build dashboards engineers actually use to keep experiences snappy worldwide.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Observability",
+    tags: ["Edge", "Observability", "Reliability", "Tracing"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-observability-blueprint.jpg"
+  },
+  {
+    slug: "platform-engineering-scorecards-2025",
+    title: "Platform Engineering Scorecards that Drive Adoption",
+    description: "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
+    content: `
+# Platform Engineering Scorecards that Drive Adoption
+
+Score what matters: paved roads, time‑to‑first‑success, reliability SLOs, and enablement signals.
+
+## Anti‑Patterns
+- Vanity ops metrics
+- Inconsistent scoring
+- Missing feedback loops
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Platform Engineering",
+    tags: ["Platform", "Scorecards", "DX"],
+    featured: false,
+    readTime: "6 min read",
+    image: "/images/platform-engineering-scorecards.jpg"
+  },
+  {
     slug: "genai-incident-postmortems-2025",
     title: "GenAI Incident Postmortems: Prevent Repeats with Policy Tests",
     description: "A practical guide to capturing signals, writing policy tests, and closing the loop so incidents don't recur.",
