@@ -284,7 +284,6 @@ const Home = () => {
               Most companies see ROI within 3 months.
             </p>
           </div>
-<<<<<<< HEAD
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Featured: AI Autonomous Operations */}
@@ -371,10 +370,8 @@ const Home = () => {
               </Link>
             </div>
           </div>
-=======
           
           <ROICalculator className="max-w-6xl mx-auto" />
->>>>>>> cursor/check-fix-push-and-merge-to-main-2936
         </section>
 
         {/* Features Section */}

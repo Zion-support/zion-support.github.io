@@ -136,15 +136,15 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredContent.map((item, index) => (
             <div
-              key={`${item.type}-${item.slug || item.id}-${index}`}
+              key={`${item.type}-${(item as any).slug ?? (item as any).id}-${index}`}
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
             >
               {/* Image */}
               <div className="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
-                {item.type === 'blog' && (item as BlogPost).image ? (
+                {item.type === 'blog' && (item as any).image ? (
                   <img
-                    src={(item as BlogPost).image}
-                    alt={(item as BlogPost).title}
+                    src={(item as any).image}
+                    alt={(item as any).title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 ) : (
