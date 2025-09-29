@@ -1,47 +1,9 @@
 import React from "react";
-import { ArrowRight, Newspaper, Lightbulb, Shield } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
-type Insight = {
-  title: string;
-  description: string;
-  date: string;
-  category: string;
-  icon: React.ReactNode;
-  ctaHref: string;
-};
+import { latestInsights } from "../content/insights";
 
 const LatestInsights: React.FC = () => {
-  const insights: Insight[] = [
-    {
-      title: "2025 State of AI for Enterprises",
-      description:
-        "Key trends, ROI benchmarks, and a practical roadmap to deploy production AI safely.",
-      date: "Sept 2025",
-      category: "Report",
-      icon: <Newspaper className="w-6 h-6" />,
-      ctaHref: "/services",
-    },
-    {
-      title: "Designing Trustworthy Cybersecurity Pipelines",
-      description:
-        "A reference architecture for continuous security with zero-trust, SIEM, and SOAR.",
-      date: "Sept 2025",
-      category: "Guide",
-      icon: <Shield className="w-6 h-6" />,
-      ctaHref: "/services",
-    },
-    {
-      title: "From POC to Production: Shipping GenAI Apps",
-      description:
-        "Patterns for reliability, evaluation, and cost control when scaling GenAI workloads.",
-      date: "Sept 2025",
-      category: "Playbook",
-      icon: <Lightbulb className="w-6 h-6" />,
-      ctaHref: "/services",
-    },
-  ];
-
   return (
     <section className="py-20 bg-white/5">
       <div className="container mx-auto px-6">
@@ -51,7 +13,7 @@ const LatestInsights: React.FC = () => {
             <p className="text-zion-slate-light">Research, guides, and playbooks from our team.</p>
           </div>
           <Link
-            to="/services"
+            to="/insights"
             className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
@@ -60,24 +22,23 @@ const LatestInsights: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {insights.map((item, index) => (
+          {latestInsights.slice(0, 3).map((item) => (
             <div
-              key={index}
+              key={item.id}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">
-                  {item.icon}
                   <span>{item.category}</span>
                 </div>
-                <span className="text-xs text-zion-slate-light">{item.date}</span>
+                <span className="text-xs text-zion-slate-light">{new Date(item.date).toLocaleDateString()}</span>
               </div>
 
               <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
-              <p className="text-zion-slate-light mb-6 leading-relaxed">{item.description}</p>
+              <p className="text-zion-slate-light mb-6 leading-relaxed">{item.summary}</p>
 
               <Link
-                to={item.ctaHref}
+                to="/insights"
                 className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
               >
                 Read more
@@ -89,7 +50,7 @@ const LatestInsights: React.FC = () => {
 
         <div className="mt-8 sm:hidden">
           <Link
-            to="/services"
+            to="/insights"
             className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
