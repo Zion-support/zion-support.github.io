@@ -90,7 +90,7 @@ const SuccessStoriesShowcase: React.FC = () => {
                       <div className="text-sm font-semibold text-blue-700">{result}</div>
                     </div>
                   ))}
-                </div>
+                </ul>
 
                 {/* Technologies */}
                 <div className="mb-4">
@@ -107,18 +107,7 @@ const SuccessStoriesShowcase: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Testimonial */}
-                {study.testimonial && (
-                  <div className="bg-gray-50 rounded-lg p-4 mb-4">
-                    <p className="text-gray-700 text-sm italic mb-2">
-                      "{study.testimonial.quote}"
-                    </p>
-                    <div className="text-sm">
-                      <div className="font-semibold text-gray-900">{study.testimonial.author}</div>
-                      <div className="text-gray-600">{study.testimonial.title}</div>
-                    </div>
-                  </div>
-                )}
+                {/* Optional testimonial section could go here if available */}
 
                 {/* CTA */}
                 <Link
