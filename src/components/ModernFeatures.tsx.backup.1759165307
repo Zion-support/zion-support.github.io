@@ -1,6 +1,11 @@
 import React from "react";
 
+<<<<<<< HEAD
+export default function ModernFeatures() {
+  return null;
+=======
 export default function ModernFeatures(): React.JSX.Element {
   return <section aria-hidden="true" style={{ display: "none" }} />;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8261
 }
 

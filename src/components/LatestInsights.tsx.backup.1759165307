@@ -1,6 +1,11 @@
 import React from "react";
 
+<<<<<<< HEAD
+export default function LatestInsights() {
+  return null;
+=======
 export default function LatestInsights(): React.JSX.Element {
   return <section aria-hidden="true" style={{ display: "none" }} />;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8261
 }
 

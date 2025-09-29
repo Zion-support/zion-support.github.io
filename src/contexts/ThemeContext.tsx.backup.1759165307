@@ -2,6 +2,17 @@ import React, { createContext, useContext, useMemo, useState } from "react";
 
 type Theme = "light" | "dark";
 
+<<<<<<< HEAD
+interface ThemeContextValue {
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
+  toggleTheme: () => void;
+}
+
+const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
+
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
+=======
 type ThemeContextValue = {
   theme: Theme;
   setTheme: (theme: Theme) => void;
@@ -11,6 +22,7 @@ type ThemeContextValue = {
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8261
   const [theme, setTheme] = useState<Theme>("light");
 
   const value = useMemo<ThemeContextValue>(() => ({
@@ -24,7 +36,11 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       {children}
     </ThemeContext.Provider>
   );
+<<<<<<< HEAD
+}
+=======
 };
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8261
 
 export function useTheme(): ThemeContextValue {
   const ctx = useContext(ThemeContext);

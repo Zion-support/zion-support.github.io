@@ -23,6 +23,14 @@ export default [
     ignores: [
       'dist/**',
       'node_modules/**',
+<<<<<<< HEAD
+      'dist/**',
+      'build/**',
+      '.next/**',
+      'out/**',
+      'coverage/**',
+      '*.config.*',
+=======
       '*.config.js',
       '*.config.ts',
       'public/**',
@@ -35,6 +43,7 @@ export default [
       'src.pages.disabled/**',
       'automation/**',
       'temp_broken_files/**',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8261
       'cypress/**',
       '**/backup-problematic-files/**',
       '**/src.disabled/**',
@@ -53,10 +62,15 @@ export default [
       '**/broken_files_backup/**',
       '**/pages/**',
       '**/store/**',
+<<<<<<< HEAD
+      '**/tests/**',
+      '**/vite.config-backup.*',
+=======
       // Keep utils lintable for CI
       '**/tests/**',
       '**/vite.config-backup.*',
       '**/test-simple.*',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8261
       '**/*.disabled.*',
       '**/*.backup.*',
       '**/*.broken.*',
@@ -68,10 +82,16 @@ export default [
       '**/*.corrupted/**',
       '**/*.temp/**',
       'jest.setup.js',
+<<<<<<< HEAD
+      'scripts/**',
+      'coverage/**',
+      '*.d.ts'
+=======
       // Additional common folders/files to ignore
       'coverage/**',
       'scripts/**',
       '*.d.ts',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8261
     ]
   },
 
@@ -96,10 +116,22 @@ export default [
   },
 
   // 3. TypeScript Configurations
+<<<<<<< HEAD
+  // Main application TS/TSX files (src, pages) - non type-aware to avoid tsconfig include issues
+  ...tseslint.config({
+    files: ["src/**/*.{ts,tsx}", "pages/**/*.{ts,tsx}"],
+    ignores: [
+      "src/**/*.stories.tsx",
+      "src/**/*.stories.ts",
+      "src/**/*.test.tsx",
+      "src/**/*.test.ts",
+    ],
+=======
   // Main application TS/TSX files (src, pages)
   ...tseslint.config({
     files: ["src/**/*.{ts,tsx}", "pages/**/*.{ts,tsx}"],
     ignores: ["src/**/*.stories.tsx", "src/**/*.stories.ts", "src/**/*.test.tsx", "src/**/*.test.ts"],
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8261
     extends: [...tseslint.configs.recommended],
     languageOptions: {
       globals: { ...browserGlobals },
@@ -201,8 +233,17 @@ export default [
       "stories/**/*.stories.tsx",
       "stories/**/*.stories.ts",
     ],
+<<<<<<< HEAD
+    extends: [...tseslint.configs.recommendedTypeChecked],
+    languageOptions: {
+      parserOptions: {
+        project: "./.storybook/tsconfig.json",
+        tsconfigRootDir: import.meta.dirname,
+      },
+=======
     extends: [...tseslint.configs.recommended],
     languageOptions: {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8261
       globals: { ...browserGlobals },
     },
     rules: {
@@ -222,8 +263,17 @@ export default [
   // Supabase functions configuration
   ...tseslint.config({
     files: ["supabase/functions/**/*.ts"],
+<<<<<<< HEAD
+    extends: [...tseslint.configs.recommendedTypeChecked],
+    languageOptions: {
+      parserOptions: {
+        project: "./supabase/functions/tsconfig.json",
+        tsconfigRootDir: import.meta.dirname,
+      },
+=======
     extends: [...tseslint.configs.recommended],
     languageOptions: {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8261
       globals: { ...nodeGlobals },
     },
     rules: {
@@ -243,9 +293,19 @@ export default [
     files: ["cypress/**/*.ts", "cypress/**/*.tsx"], // Target Cypress TS files
     extends: [...tseslint.configs.recommendedTypeChecked], // Use type-aware linting
     languageOptions: {
+<<<<<<< HEAD
+      parserOptions: {
+        project: "./cypress/tsconfig.json", // Point to Cypress's tsconfig
+        tsconfigRootDir: import.meta.dirname,
+      },
+      globals: { // Cypress globals are typically provided by the plugin below
+        ...browserGlobals, // Cypress runs in browser
+        ...nodeGlobals,   // For tasks/plugins if any TS is used there
+=======
       globals: {
         ...browserGlobals,
         ...nodeGlobals,
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8261
       },
     },
     rules: {

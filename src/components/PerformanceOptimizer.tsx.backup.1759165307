@@ -1,5 +1,10 @@
 import React from "react";
 
+<<<<<<< HEAD
+export default function PerformanceOptimizer({ isVisible, onClose }: { isVisible?: boolean; onClose?: () => void }) {
+  return null;
+}
+=======
 type PerformanceOptimizerProps = {
   isVisible?: boolean;
   onClose?: () => void;
@@ -13,3 +18,4 @@ export default function PerformanceOptimizer(props: PerformanceOptimizerProps): 
   );
 }
 
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8261

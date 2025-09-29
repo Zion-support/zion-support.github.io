@@ -1,11 +1,9 @@
 import React from "react";
 
-export default function Footer() {
+export default function Footer(): React.JSX.Element {
   return (
-    <footer className="py-8 text-center text-sm text-zion-slate-light">
-      <div className="container mx-auto px-6">
-        © {new Date().getFullYear()} Zion Tech Group
-      </div>
+    <footer className="py-8 text-center text-sm text-slate-500">
+      © {new Date().getFullYear()} Zion Tech Group
     </footer>
   );
 }

@@ -1,6 +1,12 @@
 import React from "react";
 
+<<<<<<< HEAD
+export default function ContentValueTestimonials() {
+  return null;
+}
+=======
 export default function ContentValueTestimonials(): React.JSX.Element {
   return <section aria-hidden="true" style={{ display: "none" }} />;
 }
 
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8261

@@ -1,5 +1,19 @@
 import React, { useEffect } from "react";
 
+<<<<<<< HEAD
+const AdvancedAnalytics: React.FC<{
+  enableConversionTracking?: boolean;
+  enablePerformanceTracking?: boolean;
+  enableErrorTracking?: boolean;
+}> = () => {
+  useEffect(() => {
+    // no-op placeholder
+  }, []);
+  return null;
+};
+
+export default AdvancedAnalytics;
+=======
 type AdvancedAnalyticsProps = {
   enableConversionTracking?: boolean;
   enablePerformanceTracking?: boolean;
@@ -27,4 +41,5 @@ export default function AdvancedAnalytics(props: AdvancedAnalyticsProps): React.
   }
   return <></>;
 }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8261
 

@@ -1,21 +1,17 @@
 import React from "react";
 
-export default function ContentPromotionBanner({
-  title,
-  description,
-  ctaText,
-  ctaLink,
-  variant,
-  className,
-  dismissible,
-}: {
+type Props = {
+  variant?: string;
   title?: string;
   description?: string;
   ctaText?: string;
   ctaLink?: string;
-  variant?: string;
-  className?: string;
   dismissible?: boolean;
-}) {
-  return null;
+  className?: string;
+};
+
+export default function ContentPromotionBanner(props: Props): React.JSX.Element {
+  void props;
+  return <div aria-hidden="true" style={{ display: "none" }} />;
 }
+
