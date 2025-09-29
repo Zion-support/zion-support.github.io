@@ -18,6 +18,33 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+    id: "ai-cost-quick-wins",
+    title: "AI Cost Quick Wins: Cut 25% Without Slowing Teams",
+    summary:
+      "Target redundant workflows, compress context, and cache prompts to reduce spend fast.",
+    category: "AI Strategy",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "model-policy-tests-playbook",
+    title: "A Playbook for Model Policy Tests",
+    summary:
+      "Define disallowed patterns, add detectors, and wire policy checks into CI and runtime.",
+    category: "AI Governance",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-cache-stale-while-revalidate",
+    title: "Stale‑While‑Revalidate in Practice",
+    summary:
+      "Deliver instant responses while safely refreshing data in the background at the edge.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
     id: "edge-flags-validation",
     title: "Edge Flags: Validation Circuits That Prevent Bad Rolls",
     summary:
@@ -85,6 +112,42 @@ export const latestInsights: InsightArticle[] = [
     title: "North‑Star Metrics: A Field Guide",
     summary:
       "A practical approach to defining leading indicators that align teams to outcomes.",
+    category: "Product Analytics",
+    date: "2025-09-28",
+    readMinutes: 7,
+  },
+  {
+    id: "kubernetes-cost-guardrails",
+    title: "Kubernetes Cost Guardrails That Engineers Don’t Hate",
+    summary:
+      "Limit waste with sensible defaults: requests/limits, QoS, autoscaling, and cost-aware CI policies.",
+    category: "Cloud",
+    date: "2025-09-28",
+    readMinutes: 7,
+  },
+  {
+    id: "ciso-zero-trust-scorecard",
+    title: "A CISO’s Zero‑Trust Scorecard",
+    summary:
+      "Measure progress with identity controls, least privilege, continuous verification, and blast‑radius limits.",
+    category: "Security",
+    date: "2025-09-28",
+    readMinutes: 8,
+  },
+  {
+    id: "zero-trust-sdls",
+    title: "Zero-Trust SDLC: Shipping Secure Software Without Slowing Down",
+    summary:
+      "Embed policy-as-code, automated threat modeling, and continuous verification into delivery workflows.",
+    category: "Security",
+    date: "2025-09-28",
+    readMinutes: 8,
+  },
+  {
+    id: "analytics-ltv-playbook",
+    title: "An Operator’s Playbook for LTV:CPA Ratio",
+    summary:
+      "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
     category: "Product Analytics",
     date: "2025-09-28",
     readMinutes: 7,
@@ -250,6 +313,43 @@ export const latestInsights: InsightArticle[] = [
     category: "GenAI",
     date: "2025-09-29",
     readMinutes: 8,
+  },
+  {
+    id: "ai-automation-roi-calculator",
+    title: "AI Automation ROI Calculator: Measure Your Business Impact",
+    summary:
+      "A practical framework for calculating returns from AI automation, with templates and examples.",
+    category: "AI Strategy",
+    date: "2025-09-30",
+    readMinutes: 8,
+  },
+  {
+    id: "cloud-native-microservices-2025",
+    title: "Cloud-Native Microservices: Patterns for 2025",
+    summary:
+      "Resilience, contracts, and observability patterns for modern microservices in the cloud.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 10,
+  },
+  {
+    id: "enterprise-ai-governance-framework",
+    title: "Enterprise AI Governance: From Policy to Practice",
+    summary:
+      "A pragmatic governance framework that balances speed, safety, and accountability for AI at scale.",
+    category: "AI Governance",
+    date: "2025-09-30",
+    readMinutes: 9,
+  },
+  {
+    id: "ai-security-best-practices",
+    title: "AI Security Best Practices: Protecting Your AI Systems",
+    summary:
+      "Essential security practices for AI systems, covering model protection, data privacy, and adversarial defense strategies.",
+    category: "Security",
+    date: "2025-01-21",
+    readMinutes: 11,
+
   },
 ];
 

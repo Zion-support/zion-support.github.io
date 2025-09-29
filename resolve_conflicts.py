@@ -18,24 +18,6 @@ def resolve_conflicts_in_file(file_path):
         return False
     
     # Check if file has conflicts
-    if '<<<<<<< HEAD' not in content:
-        return True
-    
-    # Split content into lines
-    lines = content.split('\n')
-    resolved_lines = []
-    i = 0
-    
-    while i < len(lines):
-        line = lines[i]
-        
-        if line.startswith('<<<<<<< HEAD'):
-            # Found start of conflict
-            conflict_start = i
-            i += 1
-            
-            # Find the middle separator
-            while i < len(lines) and not lines[i].startswith('======='):
                 i += 1
             
             if i >= len(lines):
@@ -48,7 +30,6 @@ def resolve_conflicts_in_file(file_path):
             i += 1
             
             # Find the end separator
-            while i < len(lines) and not lines[i].startswith('>>>>>>>'):
                 i += 1
             
             if i >= len(lines):

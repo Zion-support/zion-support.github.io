@@ -156,12 +156,6 @@ npm run dev  # Use the same package manager you specified in setup.sh
 
 **Edit a file directly in GitHub**
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-## Notes
-- Default model is `gpt-4o-mini`. You can set `OPENAI_MODEL` to any GPT-4 family model available to your key.
-- For enterprise usage, add authentication and stronger rate limiting.
-=======
 - Navigate to the desired file(s).
 - Click the "Edit" button (pencil icon) at the top right of the file view.
 - Make your changes and commit the changes.
@@ -273,9 +267,6 @@ browser to view detailed coverage information.
 When tests run on GitHub Actions, the workflow uploads the `coverage` directory
 using `actions/upload-artifact@v3`. Visit a workflow run and download the
 `coverage-report` artifact to retrieve the generated HTML coverage report.
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 ## Notes
 - Default model is `gpt-4o-mini`. You can set `OPENAI_MODEL` to any GPT-4 family model available to your key.
 - For enterprise usage, add authentication and stronger rate limiting.
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
