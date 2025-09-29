@@ -26,7 +26,20 @@ import {
   AIDataAnalyticsEnterpriseBanner,
   EnterpriseTransformationSuccessBanner,
   HealthcareTransformationBanner,
-  NewContent2026Banner
+  NewContent2026Banner,
+  AIAgentOrchestrationBanner,
+  AISustainabilityBanner,
+  QuantumComputingBanner,
+  SustainabilityCaseStudyBanner,
+  QuantumOptimizationBanner,
+  AIOperationalExcellenceBanner,
+  AIAgentObservabilityBanner,
+  ManufacturingTransformationBanner,
+  Latest2026ContentBanner,
+  AISecurityEnterprise2026Banner,
+  AIMultimodalEnterprise2026Banner,
+  AISustainabilityTransformationBanner,
+  LatestContent2026Banner
 } from '../components/PromotionalBanner';
 import {
   NewContent2026Banner as NewContent2026BannerComponent,
@@ -34,7 +47,11 @@ import {
   FinOpsAdvancedBanner,
   PlatformArchitectureBanner,
   AutonomousOperationsSuccessBanner,
-  NewContentShowcaseBanner2026
+  NewContentShowcaseBanner2026,
+  Latest2026ContentBanner as NewLatest2026ContentBanner,
+  AIAutonomousCloudOpsBanner,
+  AIFinTechTransformationBanner,
+  AIRetailAutomationBanner
 } from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
@@ -55,16 +72,20 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-            <span>✨ Latest 2026 content:</span>
-            <a href="/blog/agentic-workflow-orchestration-2026" className="underline hover:text-yellow-200">Agentic Workflow Orchestration</a>
+            <span>✨ NEW 2026:</span>
+            <Link href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</Link>
             <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-governance-maturity-model-2026" className="underline hover:text-yellow-200">AI Governance Maturity</a>
+            <Link href="/blog/agentic-workflow-orchestration-2026" className="underline hover:text-yellow-200">Agentic Workflow Orchestration</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-customer-data-platforms-2026" className="underline hover:text-yellow-200">Customer Data Platforms</Link>
             <span className="hidden md:inline">•</span>
             <a href="/blog/ai-customer-data-platforms-2026" className="underline hover:text-yellow-200">AI CDPs 2026</a>
             <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-finops-advanced-2026" className="underline hover:text-yellow-200">AI FinOps Advanced</a>
+            <a href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</a>
             <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-platform-architecture-2026" className="underline hover:text-yellow-200">Platform Architecture</a>
+            <a href="/blog/ai-customer-journey-ai-2026" className="underline hover:text-yellow-200">Customer Journey AI</a>
           </div>
           <Link
             href="/blog"

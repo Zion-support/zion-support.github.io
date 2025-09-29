@@ -1,4 +1,52 @@
 import React from 'react';
+
+export const metadata = {
+  title: 'AI Operational Excellence 2026: From SLIs to Self‑Healing Ops',
+  description:
+    'Practical blueprint to reach operational excellence with AI: reliability scorecards, SLO automation, policy tests, and self-healing runbooks.',
+};
+
+export default function AIOperationalExcellence2026() {
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <header className="mb-10">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          AI Operational Excellence 2026
+        </h1>
+        <p className="text-lg text-gray-600">
+          From SLIs and SLOs to autonomous, self‑healing operations. Cut incidents 70%,
+          speed MTTR by 90%, and raise developer velocity without sacrificing safety.
+        </p>
+        <div className="mt-4 text-sm text-gray-500">Published October 9, 2025 • 14 min read</div>
+      </header>
+
+      <article className="prose prose-lg max-w-none">
+        <h2>Why Operational Excellence Needs AI</h2>
+        <p>
+          Traditional SRE practices plateau without intelligent automation. AI unlocks proactive
+          anomaly detection, automated remediation, and guardrailed change management that keep
+          systems healthy while teams focus on value delivery.
+        </p>
+
+        <h3>Blueprint</h3>
+        <ul>
+          <li>Reliability scorecards tied to customer journeys</li>
+          <li>Policy tests that block risky configs before deploy</li>
+          <li>Event routing to runbooks with safe‑action approvals</li>
+          <li>Automated post‑incident learning loops</li>
+        </ul>
+
+        <h3>Outcomes</h3>
+        <p>
+          Enterprises report 99.9%+ uptime, 30–60% infra savings, and dramatic MTTR
+          improvements when combining SRE rigor with AI assistance.
+        </p>
+      </article>
+    </div>
+  );
+}
+
+import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {

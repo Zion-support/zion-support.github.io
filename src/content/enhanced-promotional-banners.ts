@@ -19,6 +19,24 @@ export interface EnhancedPromotionalBanner {
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   {
+    id: 'fresh-oct-14-2025',
+    message: '✨ New: Risk Budgets 2026 • Privacy‑First Flags 2026 • Reliable Agent Actions',
+    ctaText: 'Read now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0,
+    variant: 'info',
+    icon: '🆕',
+    animation: 'fade-in',
+    badge: 'NEW',
+    featured: true
+  },
+  {
     id: 'ai-autonomous-infrastructure-launch',
     message: '🚀 NEW: AI Autonomous Infrastructure Platform - Self-Healing Systems That Scale',
     ctaText: 'Start Free Trial',
