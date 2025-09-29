@@ -808,8 +808,37 @@ posts.push(
   }
 );
 
-// Additional October 2025 content for promotion
+// Merge: include upstream new posts and our new posts
 posts.push(
+  // Upstream additions
+  {
+    slug: "agentic-observability-scorecards-2026",
+    title: "Agentic Observability Scorecards 2026: Traces that Predict Outcomes",
+    description: "Correlate traces with KPIs using lightweight scorecards that prevent regressions without slowing delivery.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-privacy-cdn-2026",
+    title: "Edge Privacy CDN 2026: Scoped IDs, Local Filters, Zero PII",
+    description: "Ship privacy-first experiences with scoped identifiers, on-device filters, and DP-friendly telemetry.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "platform-golden-paths-slos-2026",
+    title: "Platform Golden Paths + SLOs 2026: Adoption that Drives ROI",
+    description: "Design golden paths wired to SLOs and adoption metrics that link platform work to revenue.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  // Our additional October 2025 content
   {
     slug: "ai-data-lineage-for-genai-2026",
     title: "AI Data Lineage for GenAI 2026: Traceability That Scales",
