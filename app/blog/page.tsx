@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 export const metadata = {
   title: 'AI & Tech Blog | Zion Tech Group',
   description: 'Latest insights on AI trends, technology innovations, and business automation strategies.',
@@ -45,42 +46,23 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
-<<<<<<< HEAD
-            title="AI Revolution 2025: Complete Business Transformation Guide"
-            excerpt="Discover how AI is reshaping industries and creating unprecedented opportunities for growth in 2025. Complete strategy guide with implementation roadmap."
-            date="January 17, 2025"
-            category="Featured"
-            readTime="12 min"
-            image="🚀"
+            title="Practical RAG Blueprint 2025: High-Quality Retrieval-Augmented Generation"
+            excerpt="A pragmatic blueprint to ship reliable, low-latency, and cost-efficient RAG systems in production."
+            date="September 29, 2025"
+            category="RAG"
+            readTime="10 min"
+            image="🧭"
             featured={true}
-            href="/blog/ai-revolution-2025"
+            href="/blog/practical-rag-blueprint-2025"
           />
           <BlogPost
-            title="AI Workflow Automation: Complete Implementation Guide"
-            excerpt="Master AI workflow automation with our comprehensive guide. Reduce manual work by 80% and improve efficiency across all departments."
-            date="January 17, 2025"
-            category="Guide"
-            readTime="15 min"
-            image="⚙️"
-            featured={true}
-            href="/blog/ai-workflow-automation-guide"
-          />
-          <BlogPost
-            title="AI Analytics Implementation: Transform Data into Insights"
-            excerpt="Learn how to implement AI-powered analytics that transform raw data into actionable business insights with real-time dashboards and predictive modeling."
-            date="January 17, 2025"
-            category="Analytics"
-            readTime="18 min"
-            image="📊"
-            featured={true}
-            href="/blog/ai-analytics-implementation"
-=======
             title="LLM Cost Optimization in 2025: Practical Strategies"
             excerpt="Cut LLM spend by 30–70% with routing, caching, batching, and quantization while preserving quality."
             date="September 29, 2025"
             category="AI Platforms"
             readTime="9 min"
             image="💸"
+            href="/blog/llm-cost-optimization-2025"
           />
           <BlogPost
             title="Edge LLM Latency Patterns: Sub-200ms Interactions"
@@ -89,6 +71,7 @@ export default function BlogPage() {
             category="Performance"
             readTime="7 min"
             image="⚡"
+            href="/blog/edge-llm-latency-patterns"
           />
           <BlogPost
             title="GenAI Guardrails 2025: Practical Playbook for Reliable AI"
@@ -97,7 +80,7 @@ export default function BlogPage() {
             category="AI Reliability"
             readTime="11 min"
             image="🛡️"
->>>>>>> cursor/create-and-deploy-new-content-04db
+            href="/blog/genai-guardrails-2025"
           />
           <BlogPost
             title="AI Agents in the Enterprise: 2025 Adoption Playbook"
