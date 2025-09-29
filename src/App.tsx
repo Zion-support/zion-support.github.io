@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
+import AdvancedSEO from './components/AdvancedSEO';
 import PerformanceTracker from './components/PerformanceTracker';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
@@ -433,6 +435,11 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
+      <AdvancedSEO 
+        title="Zion Tech Group - Leading AI & IT Solutions"
+        description="Transform your business with cutting-edge AI and IT solutions from Zion Tech Group. Enterprise security, AI innovation, and expert consulting services."
+        keywords={["AI solutions", "IT consulting", "enterprise security", "digital transformation", "machine learning", "cloud services"]}
+      />
       <SEOOptimizer seoData={seoDataForOptimizer} />
       <AdvancedAnalytics 
         enableHeatmaps={true}
@@ -568,6 +575,9 @@ export default function App(): React.JSX.Element {
             console.log('Performance metrics updated:', metrics);
           }}
         />
+
+        {/* Enhanced Performance Monitor */}
+        <EnhancedPerformanceMonitor />
 
         {/* Accessibility Enhancer */}
         <AccessibilityEnhancer />

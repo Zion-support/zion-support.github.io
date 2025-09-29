@@ -15,6 +15,7 @@ import ComprehensiveMonitoringDashboard from "./components/ComprehensiveMonitori
 
 // Lazy load components for better performance
 const Home = lazy(() => import("./pages/Home"));
+const EnhancedHome = lazy(() => import("./pages/EnhancedHome"));
 const Blog = lazy(() => import("./pages/Blog"));
 const Contact = lazy(() => import("./pages/Contact"));
 const About = lazy(() => import("./pages/About"));
@@ -56,6 +57,15 @@ export const router = createBrowserRouter(
   [
     {
       path: "/",
+      element: (
+        <Layout>
+          <EnhancedHome />
+        </Layout>
+      ),
+      errorElement: <ErrorFallback />,
+    },
+    {
+      path: "/classic",
       element: (
         <Layout>
           <Home />
