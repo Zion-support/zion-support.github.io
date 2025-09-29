@@ -261,16 +261,23 @@ const Home = () => {
 
         {/* Latest Insights */}
         <section className="container mx-auto px-6 py-16 relative z-10">
-          <div className="flex items-center justify-between mb-8">
-            <h3 className="text-3xl font-bold text-white">Latest Insights</h3>
-            <Link to="/insights" className="text-zion-cyan hover:underline">View all</Link>
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8 border border-zion-cyan/30">
+              <Sparkles className="w-4 h-4 mr-2" />
+              Fresh Content & Insights
+            </div>
+            <h3 className="text-4xl font-bold text-white mb-4">Latest from Our Blog</h3>
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Stay ahead with our latest research, case studies, and practical guides on cutting-edge technology.
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
             {latestInsights.slice(0, 3).map((item) => (
-              <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+              <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl group">
                 <div className="p-6">
-                  <div className="text-xs uppercase tracking-wider text-zion-cyan mb-2">{item.category}</div>
-                  <h4 className="text-xl font-semibold text-white mb-2">{item.title}</h4>
+                  <div className="text-xs uppercase tracking-wider text-zion-cyan mb-2 font-medium">{item.category}</div>
+                  <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors">{item.title}</h4>
                   <p className="text-zion-slate-light mb-4">{item.summary}</p>
                   <div className="text-sm text-zion-slate flex items-center justify-between">
                     <span>{new Date(item.date).toLocaleDateString()}</span>
@@ -279,6 +286,16 @@ const Home = () => {
                 </div>
               </article>
             ))}
+          </div>
+
+          <div className="text-center">
+            <Link 
+              to="/blog" 
+              className="bg-gradient-to-r from-zion-blue-light to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 inline-flex items-center gap-2 group"
+            >
+              Explore All Articles
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </section>
 
@@ -375,35 +392,54 @@ const Home = () => {
         <EnhancedTestimonials />
 
         {/* New Content Promo */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gradient-to-br from-zion-slate-dark to-zion-blue-dark">
           <div className="container mx-auto px-6">
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-                <div className="max-w-2xl">
-                  <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
-                  <p className="text-white/90">
-                    Fresh articles on real-time data pipelines, north-star metrics, and safe, scalable GenAI ops.
-                  </p>
+            <div className="bg-gradient-to-r from-zion-blue to-zion-purple rounded-2xl p-8 md:p-12 text-white relative overflow-hidden">
+              <div className="absolute inset-0 bg-black opacity-10"></div>
+              <div className="relative z-10">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+                  <div className="max-w-2xl">
+                    <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-4">
+                      <Sparkles className="w-4 h-4 mr-2" />
+                      New Content Available
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Latest from Zion Insights</h2>
+                    <p className="text-white/90 text-lg">
+                      Fresh articles on AI operations, cloud optimization, security best practices, and cutting-edge technology trends.
+                    </p>
+                  </div>
+                  <Link 
+                    to="/blog" 
+                    className="bg-white text-zion-blue hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  >
+                    Explore All Articles
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
                 </div>
-                <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
-                  Read the latest
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </div>
 
-              {/* Inline featured list */}
-              <div className="mt-8 grid gap-6 md:grid-cols-3">
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
-                  <div className="font-semibold text-white">Building Reliable Real-Time Data Pipelines</div>
+                {/* Featured articles grid */}
+                <div className="mt-10 grid gap-6 md:grid-cols-3">
+                  {latestInsights.slice(0, 3).map((item, index) => (
+                    <div key={item.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group">
+                      <div className="text-sm text-zion-cyan mb-2 font-medium">{item.category}</div>
+                      <div className="font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors">{item.title}</div>
+                      <div className="text-white/80 text-sm">{item.summary}</div>
+                      <div className="mt-3 text-xs text-white/60 flex items-center justify-between">
+                        <span>{new Date(item.date).toLocaleDateString()}</span>
+                        <span>{item.readMinutes} min read</span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-orange-200 mb-1">Product Analytics</div>
-                  <div className="font-semibold text-white">North-Star Metrics That Actually Drive Growth</div>
-                </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
-                  <div className="font-semibold text-white">Operationalizing GenAI Safely and at Scale</div>
+
+                {/* Additional CTA */}
+                <div className="mt-8 text-center">
+                  <Link 
+                    to="/insights" 
+                    className="text-white/90 hover:text-white underline font-medium"
+                  >
+                    View all insights and case studies →
+                  </Link>
                 </div>
               </div>
             </div>
