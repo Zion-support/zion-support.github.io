@@ -14,10 +14,6 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/main
     slug: "genai-telemetry-observability-2025",
     title: "GenAI Telemetry: What to Measure in 2025",
     description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
@@ -67,8 +63,6 @@ Use this concise pre‑launch checklist to ensure your AI features meet quality,
     featured: true,
     readTime: "5 min read",
     image: "/images/ai-product-readiness.jpg"
-<<<<<<< HEAD
-=======
   },
   {
     slug: "genai-evals-in-production-2025",
@@ -139,7 +133,6 @@ Avoid vanity KPIs, ambiguous definitions, and missing instrumentation. Replace w
     featured: true,
     readTime: "6 min read",
     image: "/images/north-star-anti-patterns.jpg"
->>>>>>> origin/main
   },
   {
     slug: "real-time-data-pipelines-2025",
