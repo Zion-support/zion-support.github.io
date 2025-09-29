@@ -140,7 +140,7 @@ export const router = createBrowserRouter(
       path: "/performance",
       element: (
         <Layout>
-          <EnhancedPerformanceDashboard isVisible={true} onClose={() => {}} />
+          <EnhancedPerformanceDashboard />
         </Layout>
       ),
       errorElement: <ErrorFallback />,

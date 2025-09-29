@@ -1,129 +1,40 @@
 /**
  * Advanced Error Recovery System
- * Comprehensive error handling and recovery mechanisms
+ * Enhanced error handling and recovery mechanisms
  */
 
-export interface ErrorRecoveryOptions {
-  maxRetries: number;
-  retryDelay: number;
-  exponentialBackoff: boolean;
-  fallbackStrategy: "graceful" | "retry" | "reload" | "custom";
-  customRecovery?: () => Promise<void>;
-  onRecovery?: (error: Error, attempt: number) => void;
-  onFailure?: (error: Error, attempts: number) => void;
-}
-
-export interface ErrorContext {
-  component: string;
-  action: string;
+interface ErrorContext {
+  error: Error;
   timestamp: number;
-  userAgent: string;
   url: string;
-  stack?: string;
+  userAgent: string;
+  componentStack?: string;
 }
 
-export interface RecoveryStrategy {
-  name: string;
-  canHandle: (error: Error) => boolean;
-  execute: (error: Error, context: ErrorContext) => Promise<boolean>;
+interface RecoveryResult {
+  success: boolean;
+  strategy: string;
+  message: string;
+  timestamp: number;
 }
 
 class AdvancedErrorRecovery {
-  private recoveryStrategies: RecoveryStrategy[] = [];
-  private errorHistory: Array<{
-    error: Error;
-    context: ErrorContext;
-    timestamp: number;
-  }> = [];
-  private maxHistorySize = 100;
-  private isInitialized = false;
+  private errorHistory: ErrorContext[] = [];
+  private recoveryHistory: RecoveryResult[] = [];
+  private isInitialized: boolean = false;
+  private maxHistorySize: number = 50;
 
   constructor() {
-    this.setupDefaultStrategies();
+    this.setupGlobalErrorHandlers();
   }
 
   /**
    * Initialize the error recovery system
    */
-  initialize(): void {
+  public initialize(): void {
     if (this.isInitialized) return;
-
-    this.setupGlobalErrorHandlers();
-    this.setupUnhandledRejectionHandler();
-    this.setupResourceErrorHandler();
     this.isInitialized = true;
-
-    console.log("✅ Advanced Error Recovery System initialized");
-  }
-
-  /**
-   * Setup default recovery strategies
-   */
-  private setupDefaultStrategies(): void {
-    // Network error recovery
-    this.addRecoveryStrategy({
-      name: "network-retry",
-      canHandle: (error: Error) =>
-        error.message.includes("fetch") ||
-        error.message.includes("network") ||
-        error.message.includes("timeout"),
-       
-      execute: async (_error: Error, _context: ErrorContext) => {
-        console.log("Attempting network error recovery...");
-        await this.delay(1000);
-        return true; // Signal retry
-      },
-    });
-
-    // Chunk loading error recovery
-    this.addRecoveryStrategy({
-      name: "chunk-loading-retry",
-      canHandle: (error: Error) =>
-        error.message.includes("Loading chunk") ||
-        error.message.includes("Loading CSS chunk"),
-       
-      execute: async (_error: Error, _context: ErrorContext) => {
-        console.log("Attempting chunk loading recovery...");
-        window.location.reload();
-        return true;
-      },
-    });
-
-    // Memory error recovery
-    this.addRecoveryStrategy({
-      name: "memory-cleanup",
-      canHandle: (error: Error) =>
-        error.message.includes("out of memory") ||
-        error.message.includes("memory"),
-       
-      execute: async (_error: Error, _context: ErrorContext) => {
-        console.log("Attempting memory cleanup...");
-        this.performMemoryCleanup();
-        return true;
-      },
-    });
-
-    // DOM error recovery
-    this.addRecoveryStrategy({
-      name: "dom-recovery",
-      canHandle: (error: Error) =>
-        error.message.includes("DOM") ||
-        error.message.includes("element") ||
-        error.message.includes("querySelector"),
-       
-      execute: async (_error: Error, _context: ErrorContext) => {
-        console.log("Attempting DOM recovery...");
-        await this.delay(500);
-        return true;
-      },
-    });
-  }
-
-  /**
-   * Add a custom recovery strategy
-   */
-  addRecoveryStrategy(strategy: RecoveryStrategy): void {
-    this.recoveryStrategies.push(strategy);
+    console.log('Advanced Error Recovery System initialized');
   }
 
   /**
@@ -131,365 +42,195 @@ class AdvancedErrorRecovery {
    */
   private setupGlobalErrorHandlers(): void {
     // Global error handler
-    window.addEventListener("error", (event) => {
-      const error = new Error(event.message);
-      error.stack = event.error?.stack;
-
+    window.addEventListener('error', (event) => {
       const context: ErrorContext = {
-        component: "Global",
-        action: "Runtime Error",
+        error: event.error || new Error(event.message),
         timestamp: Date.now(),
-        userAgent: navigator.userAgent,
         url: window.location.href,
-        stack: error.stack,
+        userAgent: navigator.userAgent,
+        componentStack: event.filename
       };
-
-      this.handleError(error, context);
+      
+      this.handleError(context);
     });
 
-    // Promise rejection handler
-    window.addEventListener("unhandledrejection", (event) => {
-      const error =
-        event.reason instanceof Error
-          ? event.reason
-          : new Error(String(event.reason));
-
+    // Unhandled promise rejection handler
+    window.addEventListener('unhandledrejection', (event) => {
       const context: ErrorContext = {
-        component: "Promise",
-        action: "Unhandled Rejection",
+        error: event.reason instanceof Error ? event.reason : new Error(String(event.reason)),
         timestamp: Date.now(),
-        userAgent: navigator.userAgent,
         url: window.location.href,
-        stack: error.stack,
+        userAgent: navigator.userAgent
       };
-
-      this.handleError(error, context);
+      
+      this.handleError(context);
     });
   }
 
   /**
-   * Setup unhandled rejection handler
+   * Handle error with recovery strategies
    */
-  private setupUnhandledRejectionHandler(): void {
-    window.addEventListener("unhandledrejection", (event) => {
-      console.error("Unhandled promise rejection:", event.reason);
-
-      // Try to recover from common promise rejections
-      if (event.reason?.message?.includes("Loading chunk")) {
-        console.log("Chunk loading error detected, attempting recovery...");
-        setTimeout(() => window.location.reload(), 1000);
-      }
-    });
-  }
-
-  /**
-   * Setup resource error handler
-   */
-  private setupResourceErrorHandler(): void {
-    window.addEventListener(
-      "error",
-      (event) => {
-        if (event.target !== window) {
-          const target = event.target as HTMLElement;
-          console.error(`Resource loading error: ${target.tagName}`, event);
-
-          // Try to recover from image loading errors
-          if (target.tagName === "IMG") {
-            const img = target as HTMLImageElement;
-            if (img.src && !img.src.includes("placeholder")) {
-              img.src = "/placeholder-image.png";
-            }
-          }
-        }
-      },
-      true,
-    );
-  }
-
-  /**
-   * Handle an error with recovery strategies
-   */
-  async handleError(
-    error: Error,
-    context: ErrorContext,
-    options?: Partial<ErrorRecoveryOptions>,
-  ): Promise<boolean> {
-    // Add to error history
-    this.addToErrorHistory(error, context);
-
-    // Default options
-    const defaultOptions: ErrorRecoveryOptions = {
-      maxRetries: 3,
-      retryDelay: 1000,
-      exponentialBackoff: true,
-      fallbackStrategy: "graceful",
-    };
-
-    const finalOptions = { ...defaultOptions, ...options };
-
-    // Try recovery strategies
-    for (const strategy of this.recoveryStrategies) {
-      if (strategy.canHandle(error)) {
-        try {
-          const success = await strategy.execute(error, context);
-          if (success) {
-            console.log(
-              `✅ Error recovery successful using strategy: ${strategy.name}`,
-            );
-            return true;
-          }
-        } catch (recoveryError) {
-          console.error(
-            `❌ Recovery strategy ${strategy.name} failed:`,
-            recoveryError,
-          );
-        }
-      }
-    }
-
-    // Fallback to default recovery based on strategy
-    return this.executeFallbackStrategy(error, context, finalOptions);
-  }
-
-  /**
-   * Execute fallback recovery strategy
-   */
-  private async executeFallbackStrategy(
-    error: Error,
-    context: ErrorContext,
-    options: ErrorRecoveryOptions,
-  ): Promise<boolean> {
-    switch (options.fallbackStrategy) {
-      case "retry":
-        return this.retryOperation(error, context, options);
-
-      case "reload":
-        console.log("Reloading page as fallback strategy...");
-        window.location.reload();
-        return true;
-
-      case "custom":
-        if (options.customRecovery) {
-          try {
-            await options.customRecovery();
-            return true;
-          } catch (customError) {
-            console.error("Custom recovery failed:", customError);
-          }
-        }
-        break;
-
-      case "graceful":
-      default:
-        console.error(
-          "Graceful degradation - continuing with reduced functionality",
-        );
-        return false;
-    }
-
-    return false;
-  }
-
-  /**
-   * Retry operation with exponential backoff
-   */
-  private async retryOperation(
-    error: Error,
-    context: ErrorContext,
-    options: ErrorRecoveryOptions,
-  ): Promise<boolean> {
-    for (let attempt = 1; attempt <= options.maxRetries; attempt++) {
+  private async handleError(context: ErrorContext): Promise<void> {
+    this.addToErrorHistory(context);
+    
+    // Try different recovery strategies
+    const strategies = [
+      this.retryStrategy,
+      this.fallbackStrategy,
+      this.gracefulDegradationStrategy
+    ];
+    
+    for (const strategy of strategies) {
       try {
-        const delay = options.exponentialBackoff
-          ? options.retryDelay * Math.pow(2, attempt - 1)
-          : options.retryDelay;
-
-        await this.delay(delay);
-
-        // Notify about retry attempt
-        if (options.onRecovery) {
-          options.onRecovery(error, attempt);
+        const success = await strategy(context);
+        if (success) {
+          this.addToRecoveryHistory({
+            success: true,
+            strategy: strategy.name,
+            message: 'Recovery successful',
+            timestamp: Date.now()
+          });
+          return;
         }
-
-        // Simulate retry (in real implementation, this would retry the actual operation)
-        console.log(
-          `Retry attempt ${attempt}/${options.maxRetries} for error:`,
-          error.message,
-        );
-
-        // For demonstration, we'll assume the retry succeeds after a few attempts
-        if (attempt >= 2) {
-          console.log("✅ Operation retry successful");
-          return true;
-        }
-      } catch (retryError) {
-        console.error(`Retry attempt ${attempt} failed:`, retryError);
-
-        if (attempt === options.maxRetries && options.onFailure) {
-          options.onFailure(error, options.maxRetries);
-        }
+      } catch (strategyError) {
+        console.error(`Strategy ${strategy.name} failed:`, strategyError);
       }
     }
+    
+    // If no strategy succeeded, log the error
+    console.error('No recovery strategy succeeded for error:', context.error);
+  }
 
+  /**
+   * Retry strategy
+   */
+  private async retryStrategy(context: ErrorContext): Promise<boolean> {
+    if (context.error.name === 'NetworkError' || context.error.message.includes('fetch')) {
+      try {
+        // Simple retry logic
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        const response = await fetch(context.url, { method: 'HEAD' });
+        return response.ok;
+      } catch (error) {
+        return false;
+      }
+    }
     return false;
   }
 
   /**
-   * Perform memory cleanup
+   * Fallback strategy
    */
-  private performMemoryCleanup(): void {
-    // Clear performance marks and measures
-    if (performance.clearMarks) {
-      performance.clearMarks();
+  private async fallbackStrategy(context: ErrorContext): Promise<boolean> {
+    try {
+      // Show user-friendly error message
+      this.showUserFriendlyError(context.error);
+      return true;
+    } catch (error) {
+      return false;
     }
-    if (performance.clearMeasures) {
-      performance.clearMeasures();
-    }
+  }
 
-    // Clear error history if it's too large
-    if (this.errorHistory.length > this.maxHistorySize) {
-      this.errorHistory = this.errorHistory.slice(-this.maxHistorySize / 2);
+  /**
+   * Graceful degradation strategy
+   */
+  private async gracefulDegradationStrategy(context: ErrorContext): Promise<boolean> {
+    try {
+      // Enable graceful degradation
+      document.body.classList.add('graceful-degradation');
+      return true;
+    } catch (error) {
+      return false;
     }
-
-    // Force garbage collection if available
-    if ("gc" in window && typeof (window as any).gc === "function") {
-      ((window as any).gc as () => void)();
-    }
-
-    console.log("Memory cleanup performed");
   }
 
   /**
    * Add error to history
    */
-  private addToErrorHistory(error: Error, context: ErrorContext): void {
-    this.errorHistory.push({
-      error,
-      context,
-      timestamp: Date.now(),
-    });
-
-    // Keep history size manageable
+  private addToErrorHistory(context: ErrorContext): void {
+    this.errorHistory.push(context);
     if (this.errorHistory.length > this.maxHistorySize) {
       this.errorHistory = this.errorHistory.slice(-this.maxHistorySize);
     }
   }
 
   /**
-   * Get error history
+   * Add recovery result to history
    */
-  getErrorHistory(): Array<{
-    error: Error;
-    context: ErrorContext;
-    timestamp: number;
-  }> {
-    return [...this.errorHistory];
+  private addToRecoveryHistory(result: RecoveryResult): void {
+    this.recoveryHistory.push(result);
+    if (this.recoveryHistory.length > this.maxHistorySize) {
+      this.recoveryHistory = this.recoveryHistory.slice(-this.maxHistorySize);
+    }
   }
 
   /**
-   * Clear error history
+   * Show user-friendly error message
    */
-  clearErrorHistory(): void {
-    this.errorHistory = [];
+  private showUserFriendlyError(error: Error): void {
+    const errorMessage = this.getUserFriendlyMessage(error);
+    
+    const notification = document.createElement('div');
+    notification.className = 'error-notification';
+    notification.innerHTML = `
+      <div class="error-content">
+        <h3>Something went wrong</h3>
+        <p>${errorMessage}</p>
+        <button onclick="this.parentElement.parentElement.remove()">Dismiss</button>
+      </div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+      if (notification.parentElement) {
+        notification.remove();
+      }
+    }, 10000);
+  }
+
+  /**
+   * Get user-friendly error message
+   */
+  private getUserFriendlyMessage(error: Error): string {
+    const messages: Record<string, string> = {
+      'NetworkError': 'Unable to connect to the server. Please check your internet connection.',
+      'TypeError': 'Something unexpected happened. Please try refreshing the page.',
+      'ReferenceError': 'A technical issue occurred. Please try again.',
+      'SyntaxError': 'There was a problem loading the page. Please refresh.',
+      'RangeError': 'The application encountered an issue. Please try again.',
+      'URIError': 'There was a problem with the URL. Please check the address.',
+      'EvalError': 'A security issue was detected. Please refresh the page.'
+    };
+    
+    return messages[error.name] || 'An unexpected error occurred. Please try refreshing the page.';
   }
 
   /**
    * Get error statistics
    */
-  getErrorStatistics(): {
-    totalErrors: number;
-    errorsByComponent: Record<string, number>;
-    errorsByType: Record<string, number>;
-    recentErrors: number;
-  } {
-    const now = Date.now();
-    const oneHourAgo = now - 60 * 60 * 1000;
-
-    const recentErrors = this.errorHistory.filter(
-      (entry) => entry.timestamp > oneHourAgo,
-    ).length;
-
-    const errorsByComponent = this.errorHistory.reduce(
-      (acc, entry) => {
-        acc[entry.context.component] = (acc[entry.context.component] || 0) + 1;
-        return acc;
-      },
-      {} as Record<string, number>,
-    );
-
-    const errorsByType = this.errorHistory.reduce(
-      (acc, entry) => {
-        const type = entry.error.name || "Unknown";
-        acc[type] = (acc[type] || 0) + 1;
-        return acc;
-      },
-      {} as Record<string, number>,
-    );
-
+  public getErrorStatistics(): any {
+    const totalErrors = this.errorHistory.length;
+    const successfulRecoveries = this.recoveryHistory.filter(r => r.success).length;
+    
     return {
-      totalErrors: this.errorHistory.length,
-      errorsByComponent,
-      errorsByType,
-      recentErrors,
+      totalErrors,
+      successfulRecoveries,
+      recoveryRate: totalErrors > 0 ? (successfulRecoveries / totalErrors) * 100 : 0,
+      recentErrors: this.errorHistory.slice(-10),
+      recentRecoveries: this.recoveryHistory.slice(-10)
     };
   }
 
   /**
-   * Utility function for delays
+   * Clear error history
    */
-  private delay(ms: number): Promise<void> {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
-
-  /**
-   * Create a retry wrapper for functions
-   */
-  createRetryWrapper<T extends (...args: unknown[]) => Promise<unknown>>(
-    fn: T,
-    options?: Partial<ErrorRecoveryOptions>,
-  ): T {
-    return (async (...args: Parameters<T>) => {
-      const defaultOptions: ErrorRecoveryOptions = {
-        maxRetries: 3,
-        retryDelay: 1000,
-        exponentialBackoff: true,
-        fallbackStrategy: "graceful",
-      };
-
-      const finalOptions = { ...defaultOptions, ...options };
-
-      for (let attempt = 1; attempt <= finalOptions.maxRetries; attempt++) {
-        try {
-          return await fn(...args);
-        } catch (error) {
-           
-          const _context: ErrorContext = {
-            component: fn.name || "Unknown",
-            action: "Function Execution",
-            timestamp: Date.now(),
-            userAgent: navigator.userAgent,
-            url: window.location.href,
-          };
-
-          if (attempt === finalOptions.maxRetries) {
-            throw error;
-          }
-
-          const delay = finalOptions.exponentialBackoff
-            ? finalOptions.retryDelay * Math.pow(2, attempt - 1)
-            : finalOptions.retryDelay;
-
-          await this.delay(delay);
-        }
-      }
-    }) as T;
+  public clearHistory(): void {
+    this.errorHistory = [];
+    this.recoveryHistory = [];
   }
 }
 
 // Export singleton instance
 export const advancedErrorRecovery = new AdvancedErrorRecovery();
-
-// Auto-initialize
-if (typeof window !== "undefined") {
-  advancedErrorRecovery.initialize();
-}
+export default AdvancedErrorRecovery;

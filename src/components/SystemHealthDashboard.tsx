@@ -1,503 +1,493 @@
-import React, { useState, useEffect, useCallback } from "react";
-import {
-  Heart,
-  Shield,
-  Zap,
-  Database,
-  Globe,
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Heart, 
+  Activity, 
+  Cpu, 
+  MemoryStick, 
+  HardDrive, 
+  Network, 
+  Shield, 
   AlertTriangle,
   CheckCircle,
   XCircle,
+  RefreshCw,
+  TrendingUp,
+  TrendingDown,
   Clock,
-} from "lucide-react";
+  Users,
+  Globe,
+  Database,
+  Server,
+  Zap
+} from 'lucide-react';
 
-interface SystemHealthMetrics {
+interface SystemMetric {
+  name: string;
+  value: number;
+  unit: string;
+  status: 'healthy' | 'warning' | 'critical';
+  trend: 'up' | 'down' | 'stable';
+  threshold: {
+    warning: number;
+    critical: number;
+  };
+  description: string;
+}
+
+interface SystemHealth {
+  overall: 'excellent' | 'good' | 'warning' | 'critical';
+  metrics: SystemMetric[];
+  services: ServiceStatus[];
+  alerts: SystemAlert[];
   timestamp: number;
-  status: "healthy" | "warning" | "critical";
-  services: {
-    api: "up" | "down" | "degraded";
-    database: "up" | "down" | "degraded";
-    cdn: "up" | "down" | "degraded";
-    monitoring: "up" | "down" | "degraded";
-  };
-  performance: {
-    responseTime: number;
-    uptime: number;
-    errorRate: number;
-    throughput: number;
-  };
-  resources: {
-    cpu: number;
-    memory: number;
-    disk: number;
-    network: number;
-  };
 }
 
-interface SystemHealthDashboardProps {
-  isVisible: boolean;
-  onClose: () => void;
-  refreshInterval?: number;
+interface ServiceStatus {
+  name: string;
+  status: 'running' | 'stopped' | 'error' | 'maintenance';
+  uptime: number;
+  lastCheck: number;
+  responseTime: number;
+  description: string;
 }
 
-const SystemHealthDashboard: React.FC<SystemHealthDashboardProps> = ({
-  isVisible,
-  onClose,
-  refreshInterval = 5000,
-}) => {
-  const [healthMetrics, setHealthMetrics] = useState<SystemHealthMetrics>({
-    timestamp: Date.now(),
-    status: "healthy",
-    services: {
-      api: "up",
-      database: "up",
-      cdn: "up",
-      monitoring: "up",
-    },
-    performance: {
-      responseTime: 150,
-      uptime: 99.9,
-      errorRate: 0.1,
-      throughput: 1000,
-    },
-    resources: {
-      cpu: 25,
-      memory: 45,
-      disk: 60,
-      network: 80,
-    },
-  });
+interface SystemAlert {
+  id: string;
+  type: 'info' | 'warning' | 'error' | 'critical';
+  message: string;
+  timestamp: number;
+  acknowledged: boolean;
+  service?: string;
+}
 
-  const [healthHistory, setHealthHistory] = useState<SystemHealthMetrics[]>([]);
-  const [isMonitoring, setIsMonitoring] = useState(false);
+const SystemHealthDashboard: React.FC = () => {
+  const [systemHealth, setSystemHealth] = useState<SystemHealth | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [autoRefresh, setAutoRefresh] = useState(true);
+  const [refreshInterval, setRefreshInterval] = useState(10000);
+  const [selectedService, setSelectedService] = useState<string | null>(null);
 
-  // Simulate health check
-  const performHealthCheck = useCallback((): SystemHealthMetrics => {
-    const now = Date.now();
+  const generateMockData = useCallback((): SystemHealth => {
+    const metrics: SystemMetric[] = [
+      {
+        name: 'CPU Usage',
+        value: Math.random() * 100,
+        unit: '%',
+        status: Math.random() > 0.7 ? 'healthy' : Math.random() > 0.4 ? 'warning' : 'critical',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
+        threshold: { warning: 70, critical: 90 },
+        description: 'Current CPU utilization across all cores'
+      },
+      {
+        name: 'Memory Usage',
+        value: Math.random() * 100,
+        unit: '%',
+        status: Math.random() > 0.8 ? 'healthy' : Math.random() > 0.5 ? 'warning' : 'critical',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
+        threshold: { warning: 80, critical: 95 },
+        description: 'RAM utilization percentage'
+      },
+      {
+        name: 'Disk Usage',
+        value: Math.random() * 100,
+        unit: '%',
+        status: Math.random() > 0.9 ? 'healthy' : Math.random() > 0.7 ? 'warning' : 'critical',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
+        threshold: { warning: 85, critical: 95 },
+        description: 'Storage space utilization'
+      },
+      {
+        name: 'Network Latency',
+        value: Math.random() * 200 + 10,
+        unit: 'ms',
+        status: Math.random() > 0.8 ? 'healthy' : Math.random() > 0.5 ? 'warning' : 'critical',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
+        threshold: { warning: 100, critical: 200 },
+        description: 'Average network response time'
+      },
+      {
+        name: 'Active Connections',
+        value: Math.random() * 1000 + 100,
+        unit: '',
+        status: Math.random() > 0.7 ? 'healthy' : Math.random() > 0.4 ? 'warning' : 'critical',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
+        threshold: { warning: 800, critical: 1000 },
+        description: 'Number of active network connections'
+      },
+      {
+        name: 'Error Rate',
+        value: Math.random() * 5,
+        unit: '%',
+        status: Math.random() > 0.8 ? 'healthy' : Math.random() > 0.5 ? 'warning' : 'critical',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
+        threshold: { warning: 2, critical: 5 },
+        description: 'Percentage of failed requests'
+      }
+    ];
 
-    // Simulate some realistic variations
-    const baseResponseTime = 150 + Math.random() * 50;
-    const baseErrorRate = 0.1 + Math.random() * 0.2;
-    const baseCpu = 25 + Math.random() * 20;
-    const baseMemory = 45 + Math.random() * 15;
+    const services: ServiceStatus[] = [
+      {
+        name: 'Web Server',
+        status: Math.random() > 0.1 ? 'running' : 'error',
+        uptime: Math.random() * 99.9 + 0.1,
+        lastCheck: Date.now() - Math.random() * 60000,
+        responseTime: Math.random() * 100 + 10,
+        description: 'Main web application server'
+      },
+      {
+        name: 'Database',
+        status: Math.random() > 0.05 ? 'running' : 'error',
+        uptime: Math.random() * 99.9 + 0.1,
+        lastCheck: Date.now() - Math.random() * 60000,
+        responseTime: Math.random() * 50 + 5,
+        description: 'Primary database server'
+      },
+      {
+        name: 'Cache Server',
+        status: Math.random() > 0.08 ? 'running' : 'error',
+        uptime: Math.random() * 99.9 + 0.1,
+        lastCheck: Date.now() - Math.random() * 60000,
+        responseTime: Math.random() * 20 + 2,
+        description: 'Redis cache server'
+      },
+      {
+        name: 'CDN',
+        status: Math.random() > 0.02 ? 'running' : 'error',
+        uptime: Math.random() * 99.9 + 0.1,
+        lastCheck: Date.now() - Math.random() * 60000,
+        responseTime: Math.random() * 30 + 5,
+        description: 'Content delivery network'
+      },
+      {
+        name: 'API Gateway',
+        status: Math.random() > 0.03 ? 'running' : 'error',
+        uptime: Math.random() * 99.9 + 0.1,
+        lastCheck: Date.now() - Math.random() * 60000,
+        responseTime: Math.random() * 80 + 10,
+        description: 'API gateway and load balancer'
+      }
+    ];
 
-    // Determine overall status
-    let status: "healthy" | "warning" | "critical" = "healthy";
-    if (baseResponseTime > 300 || baseErrorRate > 0.5 || baseCpu > 80) {
-      status = "warning";
-    }
-    if (baseResponseTime > 500 || baseErrorRate > 1.0 || baseCpu > 95) {
-      status = "critical";
+    const alerts: SystemAlert[] = [
+      {
+        id: 'alert-1',
+        type: Math.random() > 0.7 ? 'warning' : 'info',
+        message: 'High CPU usage detected on server-01',
+        timestamp: Date.now() - Math.random() * 3600000,
+        acknowledged: Math.random() > 0.5,
+        service: 'Web Server'
+      },
+      {
+        id: 'alert-2',
+        type: Math.random() > 0.8 ? 'error' : 'warning',
+        message: 'Database connection pool near capacity',
+        timestamp: Date.now() - Math.random() * 1800000,
+        acknowledged: Math.random() > 0.3,
+        service: 'Database'
+      },
+      {
+        id: 'alert-3',
+        type: 'info',
+        message: 'Scheduled maintenance completed successfully',
+        timestamp: Date.now() - Math.random() * 7200000,
+        acknowledged: true,
+        service: 'Cache Server'
+      }
+    ];
+
+    const criticalCount = metrics.filter(m => m.status === 'critical').length;
+    const warningCount = metrics.filter(m => m.status === 'warning').length;
+    const errorServices = services.filter(s => s.status === 'error').length;
+    
+    let overall: 'excellent' | 'good' | 'warning' | 'critical';
+    if (criticalCount > 0 || errorServices > 0) {
+      overall = 'critical';
+    } else if (warningCount > 2) {
+      overall = 'warning';
+    } else if (warningCount > 0) {
+      overall = 'good';
+    } else {
+      overall = 'excellent';
     }
 
     return {
-      timestamp: now,
-      status,
-      services: {
-        api: status === "critical" ? "degraded" : "up",
-        database: "up",
-        cdn: "up",
-        monitoring: "up",
-      },
-      performance: {
-        responseTime: Math.round(baseResponseTime),
-        uptime: 99.9 - Math.random() * 0.1,
-        errorRate: Math.round(baseErrorRate * 100) / 100,
-        throughput: 1000 + Math.random() * 200,
-      },
-      resources: {
-        cpu: Math.round(baseCpu),
-        memory: Math.round(baseMemory),
-        disk: 60 + Math.random() * 5,
-        network: 80 + Math.random() * 10,
-      },
+      overall,
+      metrics,
+      services,
+      alerts,
+      timestamp: Date.now()
     };
   }, []);
 
-  // Start health monitoring
-  const startMonitoring = useCallback(() => {
-    setIsMonitoring(true);
-    const interval = setInterval(() => {
-      const newMetrics = performHealthCheck();
-      setHealthMetrics(newMetrics);
-      setHealthHistory((prev) => [newMetrics, ...prev.slice(0, 19)]); // Keep last 20 readings
-    }, refreshInterval);
-
-    return () => clearInterval(interval);
-  }, [performHealthCheck, refreshInterval]);
-
-  // Stop monitoring
-  const stopMonitoring = useCallback(() => {
-    setIsMonitoring(false);
-  }, []);
+  const refreshData = useCallback(() => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setSystemHealth(generateMockData());
+      setIsLoading(false);
+    }, 500);
+  }, [generateMockData]);
 
   useEffect(() => {
-    if (isVisible && !isMonitoring) {
-      const cleanup = startMonitoring();
-      return cleanup;
-    }
-    if (!isVisible && isMonitoring) {
-      stopMonitoring();
-    }
-  }, [isVisible, isMonitoring, startMonitoring, stopMonitoring]);
+    refreshData();
+  }, [refreshData]);
 
-  // Get status color
+  useEffect(() => {
+    if (!autoRefresh) return;
+
+    const interval = setInterval(refreshData, refreshInterval);
+    return () => clearInterval(interval);
+  }, [autoRefresh, refreshInterval, refreshData]);
+
   const getStatusColor = (status: string) => {
     switch (status) {
-      case "healthy":
-      case "up":
-        return "text-green-400";
-      case "warning":
-      case "degraded":
-        return "text-yellow-400";
-      case "critical":
-      case "down":
-        return "text-red-400";
+      case 'healthy':
+      case 'running':
+      case 'excellent':
+        return 'text-green-600 bg-green-50 border-green-200';
+      case 'warning':
+        return 'text-yellow-600 bg-yellow-50 border-yellow-200';
+      case 'critical':
+      case 'error':
+        return 'text-red-600 bg-red-50 border-red-200';
+      case 'stopped':
+        return 'text-gray-600 bg-gray-50 border-gray-200';
+      case 'maintenance':
+        return 'text-blue-600 bg-blue-50 border-blue-200';
       default:
-        return "text-gray-400";
+        return 'text-gray-600 bg-gray-50 border-gray-200';
     }
   };
 
-  // Get status icon
   const getStatusIcon = (status: string) => {
     switch (status) {
-      case "healthy":
-      case "up":
-        return <CheckCircle className="w-5 h-5 text-green-400" />;
-      case "warning":
-      case "degraded":
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
-      case "critical":
-      case "down":
-        return <XCircle className="w-5 h-5 text-red-400" />;
+      case 'healthy':
+      case 'running':
+      case 'excellent':
+        return <CheckCircle className="w-4 h-4 text-green-500" />;
+      case 'warning':
+        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
+      case 'critical':
+      case 'error':
+        return <XCircle className="w-4 h-4 text-red-500" />;
+      case 'stopped':
+        return <XCircle className="w-4 h-4 text-gray-500" />;
+      case 'maintenance':
+        return <Clock className="w-4 h-4 text-blue-500" />;
       default:
-        return <Clock className="w-5 h-5 text-gray-400" />;
+        return <Activity className="w-4 h-4 text-gray-500" />;
     }
   };
 
-  // Get resource color
-  const getResourceColor = (value: number) => {
-    if (value <= 50) return "text-green-400";
-    if (value <= 80) return "text-yellow-400";
-    return "text-red-400";
+  const getTrendIcon = (trend: string) => {
+    switch (trend) {
+      case 'up':
+        return <TrendingUp className="w-3 h-3 text-red-500" />;
+      case 'down':
+        return <TrendingDown className="w-3 h-3 text-green-500" />;
+      default:
+        return <div className="w-3 h-3 bg-gray-300 rounded-full" />;
+    }
   };
 
-  if (!isVisible) return null;
+  const getAlertColor = (type: string) => {
+    switch (type) {
+      case 'info':
+        return 'text-blue-600 bg-blue-50 border-blue-200';
+      case 'warning':
+        return 'text-yellow-600 bg-yellow-50 border-yellow-200';
+      case 'error':
+        return 'text-orange-600 bg-orange-50 border-orange-200';
+      case 'critical':
+        return 'text-red-600 bg-red-50 border-red-200';
+      default:
+        return 'text-gray-600 bg-gray-50 border-gray-200';
+    }
+  };
+
+  if (!systemHealth) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <RefreshCw className="w-8 h-8 animate-spin text-blue-500" />
+      </div>
+    );
+  }
 
   return (
-    <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
-      <div className="bg-gray-900 rounded-lg p-6 max-w-6xl w-full max-h-[90vh] overflow-y-auto">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-white flex items-center gap-2">
-            <Heart className="w-6 h-6 text-red-400" />
-            System Health Dashboard
-          </h2>
-          <button
-            onClick={onClose}
-            className="text-gray-400 hover:text-white text-2xl"
-            aria-label="Close system health dashboard"
+    <div className="p-6 bg-white rounded-lg shadow-lg">
+      <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center space-x-3">
+          <Heart className="w-8 h-8 text-red-500" />
+          <h2 className="text-2xl font-bold text-gray-800">System Health Dashboard</h2>
+        </div>
+        <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
+            <label className="text-sm font-medium text-gray-600">Auto Refresh:</label>
+            <input
+              type="checkbox"
+              checked={autoRefresh}
+              onChange={(e) => setAutoRefresh(e.target.checked)}
+              className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+            />
+          </div>
+          <select
+            value={refreshInterval}
+            onChange={(e) => setRefreshInterval(Number(e.target.value))}
+            className="px-3 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            ✕
+            <option value={5000}>5s</option>
+            <option value={10000}>10s</option>
+            <option value={30000}>30s</option>
+            <option value={60000}>1m</option>
+          </select>
+          <button
+            onClick={refreshData}
+            disabled={isLoading}
+            className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:opacity-50 flex items-center space-x-2"
+          >
+            <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
+            <span>Refresh</span>
           </button>
         </div>
+      </div>
 
-        {/* Overall Status */}
-        <div className="bg-gray-800 rounded-lg p-6 mb-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              {getStatusIcon(healthMetrics.status)}
-              <div>
-                <h3 className="text-xl font-semibold text-white">
-                  System Status
-                </h3>
-                <p
-                  className={`text-lg font-medium ${getStatusColor(healthMetrics.status)}`}
-                >
-                  {healthMetrics.status.toUpperCase()}
-                </p>
+      {/* Overall Health Status */}
+      <div className={`p-6 rounded-lg border-2 ${getStatusColor(systemHealth.overall)} mb-6`}>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-3">
+            {getStatusIcon(systemHealth.overall)}
+            <div>
+              <h3 className="text-xl font-bold">Overall System Health</h3>
+              <p className="text-sm opacity-75">Last updated: {new Date(systemHealth.timestamp).toLocaleTimeString()}</p>
+            </div>
+          </div>
+          <div className="text-right">
+            <p className="text-3xl font-bold capitalize">{systemHealth.overall}</p>
+            <p className="text-sm opacity-75">
+              {systemHealth.metrics.filter(m => m.status === 'healthy').length} / {systemHealth.metrics.length} metrics healthy
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Metrics Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+        {systemHealth.metrics.map((metric, index) => (
+          <motion.div
+            key={metric.name}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            className={`p-4 rounded-lg border-2 ${getStatusColor(metric.status)}`}
+          >
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center space-x-2">
+                {getStatusIcon(metric.status)}
+                <h4 className="font-semibold">{metric.name}</h4>
+              </div>
+              <div className="flex items-center space-x-1">
+                {getTrendIcon(metric.trend)}
+                <span className="text-sm text-gray-500">
+                  {metric.trend === 'up' ? '↗' : metric.trend === 'down' ? '↘' : '→'}
+                </span>
               </div>
             </div>
-            <div className="text-right">
-              <p className="text-sm text-gray-400">Last Updated</p>
-              <p className="text-white">
-                {new Date(healthMetrics.timestamp).toLocaleTimeString()}
-              </p>
+            
+            <div className="text-2xl font-bold mb-2">
+              {metric.value.toFixed(metric.unit === '%' ? 1 : 0)}
+              {metric.unit && <span className="text-sm text-gray-500 ml-1">{metric.unit}</span>}
             </div>
-          </div>
-        </div>
-
-        {/* Services Status */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          <div className="bg-gray-800 rounded-lg p-4">
-            <div className="flex items-center justify-between mb-2">
-              <Globe className="w-5 h-5 text-blue-400" />
-              <span className="text-sm text-gray-400">API Service</span>
+            
+            <div className="text-sm text-gray-600 mb-3">
+              {metric.description}
             </div>
-            <div className="flex items-center gap-2">
-              {getStatusIcon(healthMetrics.services.api)}
-              <span
-                className={`font-medium ${getStatusColor(healthMetrics.services.api)}`}
-              >
-                {healthMetrics.services.api.toUpperCase()}
-              </span>
-            </div>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg p-4">
-            <div className="flex items-center justify-between mb-2">
-              <Database className="w-5 h-5 text-green-400" />
-              <span className="text-sm text-gray-400">Database</span>
-            </div>
-            <div className="flex items-center gap-2">
-              {getStatusIcon(healthMetrics.services.database)}
-              <span
-                className={`font-medium ${getStatusColor(healthMetrics.services.database)}`}
-              >
-                {healthMetrics.services.database.toUpperCase()}
-              </span>
-            </div>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg p-4">
-            <div className="flex items-center justify-between mb-2">
-              <Shield className="w-5 h-5 text-purple-400" />
-              <span className="text-sm text-gray-400">CDN</span>
-            </div>
-            <div className="flex items-center gap-2">
-              {getStatusIcon(healthMetrics.services.cdn)}
-              <span
-                className={`font-medium ${getStatusColor(healthMetrics.services.cdn)}`}
-              >
-                {healthMetrics.services.cdn.toUpperCase()}
-              </span>
-            </div>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg p-4">
-            <div className="flex items-center justify-between mb-2">
-              <Zap className="w-5 h-5 text-yellow-400" />
-              <span className="text-sm text-gray-400">Monitoring</span>
-            </div>
-            <div className="flex items-center gap-2">
-              {getStatusIcon(healthMetrics.services.monitoring)}
-              <span
-                className={`font-medium ${getStatusColor(healthMetrics.services.monitoring)}`}
-              >
-                {healthMetrics.services.monitoring.toUpperCase()}
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* Performance Metrics */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          <div className="bg-gray-800 rounded-lg p-4">
-            <div className="flex items-center justify-between mb-2">
-              <Clock className="w-5 h-5 text-blue-400" />
-              <span className="text-sm text-gray-400">Response Time</span>
-            </div>
-            <div
-              className={`text-2xl font-bold ${getResourceColor(healthMetrics.performance.responseTime / 10)}`}
-            >
-              {healthMetrics.performance.responseTime}ms
-            </div>
-            <div className="text-xs text-gray-400 mt-1">Average</div>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg p-4">
-            <div className="flex items-center justify-between mb-2">
-              <Heart className="w-5 h-5 text-green-400" />
-              <span className="text-sm text-gray-400">Uptime</span>
-            </div>
-            <div
-              className={`text-2xl font-bold ${getResourceColor(100 - healthMetrics.performance.uptime)}`}
-            >
-              {healthMetrics.performance.uptime.toFixed(2)}%
-            </div>
-            <div className="text-xs text-gray-400 mt-1">30 days</div>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg p-4">
-            <div className="flex items-center justify-between mb-2">
-              <AlertTriangle className="w-5 h-5 text-red-400" />
-              <span className="text-sm text-gray-400">Error Rate</span>
-            </div>
-            <div
-              className={`text-2xl font-bold ${getResourceColor(healthMetrics.performance.errorRate * 100)}`}
-            >
-              {healthMetrics.performance.errorRate.toFixed(2)}%
-            </div>
-            <div className="text-xs text-gray-400 mt-1">Last hour</div>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg p-4">
-            <div className="flex items-center justify-between mb-2">
-              <Zap className="w-5 h-5 text-purple-400" />
-              <span className="text-sm text-gray-400">Throughput</span>
-            </div>
-            <div className="text-2xl font-bold text-blue-400">
-              {healthMetrics.performance.throughput.toFixed(0)}
-            </div>
-            <div className="text-xs text-gray-400 mt-1">Requests/min</div>
-          </div>
-        </div>
-
-        {/* Resource Usage */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          <div className="bg-gray-800 rounded-lg p-4">
-            <div className="flex items-center justify-between mb-2">
-              <Zap className="w-5 h-5 text-orange-400" />
-              <span className="text-sm text-gray-400">CPU Usage</span>
-            </div>
-            <div
-              className={`text-2xl font-bold ${getResourceColor(healthMetrics.resources.cpu)}`}
-            >
-              {healthMetrics.resources.cpu}%
-            </div>
-            <div className="w-full bg-gray-700 rounded-full h-2 mt-2">
+            
+            <div className="w-full bg-gray-200 rounded-full h-2">
               <div
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  healthMetrics.resources.cpu <= 50
-                    ? "bg-green-400"
-                    : healthMetrics.resources.cpu <= 80
-                      ? "bg-yellow-400"
-                      : "bg-red-400"
-                }`}
-                style={{ width: `${healthMetrics.resources.cpu}%` }}
-              />
-            </div>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg p-4">
-            <div className="flex items-center justify-between mb-2">
-              <Database className="w-5 h-5 text-blue-400" />
-              <span className="text-sm text-gray-400">Memory</span>
-            </div>
-            <div
-              className={`text-2xl font-bold ${getResourceColor(healthMetrics.resources.memory)}`}
-            >
-              {healthMetrics.resources.memory}%
-            </div>
-            <div className="w-full bg-gray-700 rounded-full h-2 mt-2">
-              <div
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  healthMetrics.resources.memory <= 50
-                    ? "bg-green-400"
-                    : healthMetrics.resources.memory <= 80
-                      ? "bg-yellow-400"
-                      : "bg-red-400"
-                }`}
-                style={{ width: `${healthMetrics.resources.memory}%` }}
-              />
-            </div>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg p-4">
-            <div className="flex items-center justify-between mb-2">
-              <Shield className="w-5 h-5 text-green-400" />
-              <span className="text-sm text-gray-400">Disk</span>
-            </div>
-            <div
-              className={`text-2xl font-bold ${getResourceColor(healthMetrics.resources.disk)}`}
-            >
-              {healthMetrics.resources.disk}%
-            </div>
-            <div className="w-full bg-gray-700 rounded-full h-2 mt-2">
-              <div
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  healthMetrics.resources.disk <= 50
-                    ? "bg-green-400"
-                    : healthMetrics.resources.disk <= 80
-                      ? "bg-yellow-400"
-                      : "bg-red-400"
-                }`}
-                style={{ width: `${healthMetrics.resources.disk}%` }}
-              />
-            </div>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg p-4">
-            <div className="flex items-center justify-between mb-2">
-              <Globe className="w-5 h-5 text-purple-400" />
-              <span className="text-sm text-gray-400">Network</span>
-            </div>
-            <div
-              className={`text-2xl font-bold ${getResourceColor(100 - healthMetrics.resources.network)}`}
-            >
-              {healthMetrics.resources.network}%
-            </div>
-            <div className="w-full bg-gray-700 rounded-full h-2 mt-2">
-              <div
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  healthMetrics.resources.network >= 80
-                    ? "bg-green-400"
-                    : healthMetrics.resources.network >= 60
-                      ? "bg-yellow-400"
-                      : "bg-red-400"
-                }`}
-                style={{ width: `${healthMetrics.resources.network}%` }}
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Health History */}
-        <div className="bg-gray-800 rounded-lg p-4 mb-6">
-          <h3 className="text-lg font-semibold text-white mb-4">
-            Health History
-          </h3>
-          <div className="flex items-end gap-1 h-20">
-            {healthHistory.slice(0, 20).map((metric, index) => (
-              <div
-                key={index}
-                className={`rounded-t flex-1 min-w-[4px] transition-all duration-300 ${
-                  metric.status === "healthy"
-                    ? "bg-green-400"
-                    : metric.status === "warning"
-                      ? "bg-yellow-400"
-                      : "bg-red-400"
+                  metric.status === 'healthy' ? 'bg-green-500' :
+                  metric.status === 'warning' ? 'bg-yellow-500' : 'bg-red-500'
                 }`}
                 style={{
-                  height: `${metric.status === "healthy" ? 100 : metric.status === "warning" ? 60 : 30}%`,
-                  minHeight: "2px",
+                  width: `${Math.min((metric.value / metric.threshold.critical) * 100, 100)}%`
                 }}
               />
-            ))}
-          </div>
-          <div className="flex justify-between items-center mt-2 text-xs text-gray-400">
-            <span>20 minutes ago</span>
-            <span>Now</span>
-          </div>
-        </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
 
-        {/* Control Panel */}
-        <div className="flex justify-between items-center pt-4 border-t border-gray-700">
-          <div className="flex items-center gap-4">
-            <span className="text-sm text-gray-400">
-              Refresh: {refreshInterval}ms
-            </span>
-            <span className="text-sm text-gray-400">
-              Monitoring: {isMonitoring ? "Active" : "Inactive"}
-            </span>
-          </div>
-          <div className="flex gap-2">
-            <button
-              onClick={isMonitoring ? stopMonitoring : startMonitoring}
-              className={`px-4 py-2 rounded text-sm font-medium transition-colors ${
-                isMonitoring
-                  ? "bg-red-600 hover:bg-red-700 text-white"
-                  : "bg-green-600 hover:bg-green-700 text-white"
+      {/* Services Status */}
+      <div className="mb-6">
+        <h3 className="text-lg font-semibold mb-4 flex items-center space-x-2">
+          <Server className="w-5 h-5" />
+          <span>Services Status</span>
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {systemHealth.services.map((service, index) => (
+            <motion.div
+              key={service.name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className={`p-4 rounded-lg border-2 ${getStatusColor(service.status)} cursor-pointer hover:shadow-md transition-shadow`}
+              onClick={() => setSelectedService(selectedService === service.name ? null : service.name)}
+            >
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center space-x-2">
+                  {getStatusIcon(service.status)}
+                  <h4 className="font-semibold">{service.name}</h4>
+                </div>
+                <span className="text-sm text-gray-500">
+                  {service.responseTime.toFixed(0)}ms
+                </span>
+              </div>
+              
+              <div className="text-sm text-gray-600 mb-2">
+                {service.description}
+              </div>
+              
+              <div className="text-sm text-gray-500">
+                Uptime: {service.uptime.toFixed(2)}%
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Alerts */}
+      <div>
+        <h3 className="text-lg font-semibold mb-4 flex items-center space-x-2">
+          <AlertTriangle className="w-5 h-5" />
+          <span>System Alerts</span>
+        </h3>
+        <div className="space-y-2">
+          {systemHealth.alerts.map((alert, index) => (
+            <motion.div
+              key={alert.id}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className={`p-3 rounded-lg border ${getAlertColor(alert.type)} ${
+                alert.acknowledged ? 'opacity-60' : ''
               }`}
             >
-              {isMonitoring ? "Stop" : "Start"} Monitoring
-            </button>
-            <button
-              onClick={() => setHealthHistory([])}
-              className="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded text-sm font-medium transition-colors"
-            >
-              Clear History
-            </button>
-          </div>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2">
+                  <span className="text-sm font-medium capitalize">{alert.type}</span>
+                  <span className="text-sm">{alert.message}</span>
+                  {alert.service && (
+                    <span className="text-xs px-2 py-1 bg-white bg-opacity-50 rounded">
+                      {alert.service}
+                    </span>
+                  )}
+                </div>
+                <div className="text-xs text-gray-500">
+                  {new Date(alert.timestamp).toLocaleString()}
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>

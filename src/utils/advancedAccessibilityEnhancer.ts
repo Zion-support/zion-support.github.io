@@ -131,16 +131,19 @@ class AdvancedAccessibilityEnhancer {
           element.click();
         }
         break;
-      case 'Escape':
+      case 'Escape': {
         // Close modals or dropdowns
-        const modal = element.closest('[role="dialog"]');
-        if (modal) {
-          const closeButton = modal.querySelector('[aria-label="Close"]');
-          if (closeButton) {
-            (closeButton as HTMLElement).click();
+        {
+          const modal = element.closest('[role="dialog"]');
+          if (modal) {
+            const closeButton = modal.querySelector('[aria-label="Close"]');
+            if (closeButton) {
+              (closeButton as HTMLElement).click();
+            }
           }
         }
         break;
+      }
       case 'ArrowDown':
       case 'ArrowUp':
         // Handle dropdown navigation
