@@ -22,6 +22,7 @@ import { useSEOData } from './components/SEOOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
+import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import { seoOptimizer as advancedSeoOptimizer } from './utils/advancedSEOOptimizer';
@@ -100,6 +101,7 @@ export default function App(): React.JSX.Element {
         // Initialize enhanced systems
         // enhancedSecurityManager.initialize?.(); // Method doesn't exist
         // enhancedAccessibilityManager.initialize?.(); // Method doesn't exist
+        enhancedErrorHandler.initialize();
         enhancedPerformanceMonitor.startMonitoring();
         enhancedSEOOptimizer.initialize();
         

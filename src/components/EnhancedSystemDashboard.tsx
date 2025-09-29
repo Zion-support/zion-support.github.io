@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import {
   enhancedPerformanceMonitor,
-  PerformanceMetric,
+  PerformanceMetrics,
 } from "../utils/enhancedPerformanceMonitor";
 import {
   enhancedAnalytics,
@@ -14,10 +14,18 @@ import {
   SEORecommendation,
 } from "../utils/enhancedSEO";
 
+interface DashboardPerformanceMetric {
+  name: string;
+  category: string;
+  value: number;
+  severity: 'good' | 'needs-improvement' | 'poor';
+  description: string;
+}
+
 interface DashboardMetrics {
   performance: {
     score: number;
-    metrics: PerformanceMetric[];
+    metrics: DashboardPerformanceMetric[];
     recommendations: string[];
   };
   analytics: {
@@ -86,10 +94,14 @@ export const EnhancedSystemDashboard: React.FC<
       console.warn("Failed to generate SEO report:", error);
     }
 
+    // Get performance metrics
+    const performanceMetricsData = enhancedPerformanceMonitor.getMetrics();
+    const dashboardMetrics = convertToDashboardMetrics(performanceMetricsData);
+    
     setMetrics({
       performance: {
         score: performanceScore,
-        metrics: [], // Placeholder - no metrics available
+        metrics: dashboardMetrics,
         recommendations: performanceRecommendations,
       },
       analytics: {
@@ -125,8 +137,48 @@ export const EnhancedSystemDashboard: React.FC<
     };
   }, [startMonitoring, stopMonitoring]);
 
+  const convertToDashboardMetrics = (metrics: PerformanceMetrics): DashboardPerformanceMetric[] => {
+    return [
+      {
+        name: 'Largest Contentful Paint',
+        category: 'Core Web Vitals',
+        value: metrics.coreWebVitals.lcp,
+        severity: metrics.coreWebVitals.lcp < 2500 ? 'good' : metrics.coreWebVitals.lcp < 4000 ? 'needs-improvement' : 'poor',
+        description: 'Time for the largest content element to render'
+      },
+      {
+        name: 'First Input Delay',
+        category: 'Core Web Vitals',
+        value: metrics.coreWebVitals.fid,
+        severity: metrics.coreWebVitals.fid < 100 ? 'good' : metrics.coreWebVitals.fid < 300 ? 'needs-improvement' : 'poor',
+        description: 'Time between first user interaction and browser response'
+      },
+      {
+        name: 'Cumulative Layout Shift',
+        category: 'Core Web Vitals',
+        value: metrics.coreWebVitals.cls,
+        severity: metrics.coreWebVitals.cls < 0.1 ? 'good' : metrics.coreWebVitals.cls < 0.25 ? 'needs-improvement' : 'poor',
+        description: 'Visual stability measure'
+      },
+      {
+        name: 'Memory Usage',
+        category: 'Performance',
+        value: metrics.memoryUsage,
+        severity: metrics.memoryUsage < 50 ? 'good' : metrics.memoryUsage < 100 ? 'needs-improvement' : 'poor',
+        description: 'Current memory usage in MB'
+      },
+      {
+        name: 'Load Time',
+        category: 'Performance',
+        value: metrics.loadTime,
+        severity: metrics.loadTime < 3000 ? 'good' : metrics.loadTime < 5000 ? 'needs-improvement' : 'poor',
+        description: 'Page load time in milliseconds'
+      }
+    ];
+  };
+
   const calculatePerformanceScore = (
-    performanceMetrics: Map<string, PerformanceMetric[]>,
+    performanceMetrics: Map<string, DashboardPerformanceMetric[]>,
   ): number => {
     const allMetrics = Array.from(performanceMetrics.values()).flat();
     if (allMetrics.length === 0) return 100;

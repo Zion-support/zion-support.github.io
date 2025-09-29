@@ -417,5 +417,6 @@ Performance Score: ${score}/100
 
 // Export singleton instance
 export const enhancedPerformanceMonitor = new EnhancedPerformanceMonitor();
+export type { PerformanceMetrics, CoreWebVitals, PerformanceAlert };
 export { EnhancedPerformanceMonitor };
 export default EnhancedPerformanceMonitor;
