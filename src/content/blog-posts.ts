@@ -249,6 +249,114 @@ Use this concise pre‑launch checklist to ensure your AI features meet quality,
 >>>>>>> origin/cursor/build-vite-project-with-pnpm-e73d
   },
   {
+    slug: "llm-evals-production-guide",
+    title: "LLM Evals in Production: A Practical Guide",
+    description:
+      "Design offline suites and online guardrails that actually catch regressions before users do.",
+    content: `
+# LLM Evals in Production: A Practical Guide
+
+Evaluation is the backbone of reliable GenAI applications. This guide shows how to combine offline suites with online guardrails to detect quality regressions before users do.
+
+## Core Principles
+
+- Offline coverage for known failure modes
+- Online policy tests for safety, PIIs, and jailbreaks
+- Canary cohorts with shadow traffic
+- Auto-rollback on quality regression
+
+## Implementation
+
+1. Define task-specific metrics and acceptance thresholds
+2. Create golden datasets and synthetic edge cases
+3. Add pre-merge evals in CI
+4. Instrument runtime quality signals
+5. Roll out behind flags with canaries
+
+## Tooling
+
+- Prompt registries and templates
+- Dataset versioning
+- Drift detection and alerts
+
+Ship faster with confidence by treating evals as product, not a one-off.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["LLM", "Evaluation", "Guardrails", "Quality"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/llm-evals-production.jpg",
+  },
+  {
+    slug: "rags-best-practices-2025",
+    title: "RAG Systems 2025: Best Practices That Scale",
+    description:
+      "Chunking, retrieval, and caching strategies for reliable, low-latency RAG in production.",
+    content: `
+# RAG Systems 2025: Best Practices That Scale
+
+Modern RAG stacks demand careful design across chunking, retrieval, ranking, and caching.
+
+## Checklist
+
+- Domain-aware chunking and semantic titles
+- Retrieval fusion with recency boosts
+- Hybrid search (BM25 + dense)
+- Query routing and caching
+- Grounding evidence in responses
+
+## Ops
+
+- Offline evals for answer faithfulness
+- Online guardrails for hallucinations
+- Cost budgets with cache hit SLAs
+
+Design for correctness first, then optimize latency and cost.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["RAG", "Vector Search", "Retrieval", "Latency"],
+    featured: true,
+    readTime: "10 min read",
+    image: "/images/rag-best-practices.jpg",
+  },
+  {
+    slug: "cost-optimized-genai-architectures",
+    title: "Cost-Optimized GenAI Architectures: Ship More for Less",
+    description:
+      "Routing, caching, and model selection patterns that cut GenAI spend without hurting UX.",
+    content: `
+# Cost-Optimized GenAI Architectures: Ship More for Less
+
+This guide covers pragmatic techniques to reduce spend while maintaining quality.
+
+## Patterns
+
+- Response caching keyed by intent and context
+- Tiered model routing with quality thresholds
+- Early-exit and truncation strategies
+- Distillation to smaller assistants
+
+## Measurement
+
+- Per-feature cost budgets
+- Cost per successful task as a north star
+- Alerting on budget regressions
+
+Spend less, ship more—without compromising user experience.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "Architecture",
+    tags: ["Cost", "Routing", "Caching", "GenAI"],
+    featured: false,
+    readTime: "7 min read",
+    image: "/images/cost-optimized-genai.jpg",
+  },
+  {
     slug: "real-time-data-pipelines-2025",
     title: "Building Reliable Real‑Time Data Pipelines in 2025",
     description: "Blueprints for exactly-once semantics, backpressure, and observability from dev to prod.",

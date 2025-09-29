@@ -31,6 +31,36 @@ export const posts: BlogPost[] = [
     readTime: "7 min read",
   },
   {
+    slug: "llm-evals-production-guide",
+    title: "LLM Evals in Production: A Practical Guide",
+    description:
+      "Combine offline suites with online guardrails to catch quality regressions before users do.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "rags-best-practices-2025",
+    title: "RAG Systems 2025: Best Practices That Scale",
+    description:
+      "Hybrid retrieval, grounding, and caching strategies for reliable, low-latency RAG.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "10 min read",
+  },
+  {
+    slug: "cost-optimized-genai-architectures",
+    title: "Cost-Optimized GenAI Architectures: Ship More for Less",
+    description:
+      "Routing, caching, and model selection patterns that reduce spend without hurting UX.",
+    category: "Architecture",
+    publishedAt: "2025-09-28",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:
