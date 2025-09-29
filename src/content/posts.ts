@@ -10,6 +10,36 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-autonomous-operations-2025",
+    title: "AI Autonomous Operations: Self‑Healing, Self‑Optimizing, Self‑Scaling",
+    description:
+      "How autonomous agents run infra with policy tests, safety rails, and ROI you can measure in weeks.",
+    category: "AI & Automation",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-cdn-cache-strategies-2025",
+    title: "Edge CDN Cache Strategies: Fast UX Without Stale Bugs",
+    description:
+      "Design TTLs, validation circuits, background warming, and negative caching for resilient edge experiences.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "ai-automation-roi-scorecards",
+    title: "AI Automation ROI Scorecards: Proving Value in 90 Days",
+    description:
+      "Outcome metrics, cost baselines, and exec‑ready scorecards that make AI wins obvious.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
     slug: "ai-security-posture-2025",
     title: "AI Security Posture 2025: Hardening LLM Apps End-to-End",
     description:

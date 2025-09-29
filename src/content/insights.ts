@@ -9,6 +9,24 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "ai-autonomous-ops-intro",
+    title: "AI Autonomous Operations: From Runbooks to Self‑Managing Systems",
+    summary:
+      "Policy tests, health circuits, and closed‑loop optimization that shrink toil to near zero.",
+    category: "AI & Automation",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-roi-scorecards",
+    title: "AI ROI Scorecards That Executives Trust",
+    summary:
+      "Pick leading indicators, instrument baselines, and report outcomes without vanity metrics.",
+    category: "AI Strategy",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
     id: "genai-policy-tests-canaries",
     title: "GenAI Policy Tests: From Offline Suites to Online Canaries",
     summary:
