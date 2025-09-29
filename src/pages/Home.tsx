@@ -21,6 +21,8 @@ import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
+import NewContentPromotionBanner from "../components/NewContentPromotionBanner";
+import EnhancedServicesShowcase from "../components/EnhancedServicesShowcase";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
 
@@ -100,6 +102,17 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        
+        {/* New Content Promotion Banner */}
+        <NewContentPromotionBanner
+          variant="success"
+          title="🎉 NEW: 10+ Fresh Articles on AI, Quantum Computing & Cybersecurity"
+          description="Explore our latest insights on quantum computing business impact, edge AI implementation, zero trust security, and more cutting-edge technologies."
+          ctaText="Read Latest Articles"
+          ctaLink="/blog"
+          dismissible={true}
+          showFeaturedContent={true}
+        />
         
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
@@ -217,83 +230,8 @@ const Home = () => {
           className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
         />
 
-        {/* New Services Showcase */}
-        <section className="container mx-auto px-6 py-20 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-400 text-sm font-medium mb-6 animate-pulse">
-              🔥 HOT NEW SERVICES - 2025
-            </div>
-            <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up">
-              Revolutionary AI-Powered Solutions
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Transform your business with our cutting-edge AI micro SAAS platform. 
-              From workflow automation to predictive analytics - we've got you covered.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl border-2 border-green-500/30 bg-green-500/10">
-              <div className="bg-green-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green-500/30 transition-colors border border-green-500/30 shadow-lg">
-                <Zap className="w-8 h-8 text-green-400 group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">
-                AI Workflow Automation
-              </h3>
-              <p className="text-zion-slate-light mb-4">
-                Reduce manual tasks by 80% with intelligent process automation. 
-                Starting at just $99/month.
-              </p>
-              <div className="bg-green-500/20 rounded-lg p-3 mb-4">
-                <div className="text-green-400 font-bold text-lg">💰 Save $50,000+ annually</div>
-                <div className="text-green-300 text-sm">Average ROI in 3 months</div>
-              </div>
-              <Link to="/services/ai-workflow-automation" className="btn-primary w-full text-center">
-                Start Free Trial
-              </Link>
-            </div>
-
-            <div className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl border-2 border-blue-500/30 bg-blue-500/10">
-              <div className="bg-blue-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-500/30 transition-colors border border-blue-500/30 shadow-lg">
-                <Users className="w-8 h-8 text-blue-400 group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">
-                AI Virtual Assistant
-              </h3>
-              <p className="text-zion-slate-light mb-4">
-                24/7 intelligent customer support and business operations. 
-                Starting at just $79/month.
-              </p>
-              <div className="bg-blue-500/20 rounded-lg p-3 mb-4">
-                <div className="text-blue-400 font-bold text-lg">📈 40% increase in conversions</div>
-                <div className="text-blue-300 text-sm">90% faster response time</div>
-              </div>
-              <Link to="/services/ai-virtual-assistant" className="btn-primary w-full text-center">
-                Get Started Now
-              </Link>
-            </div>
-
-            <div className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl border-2 border-purple-500/30 bg-purple-500/10">
-              <div className="bg-purple-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-500/30 transition-colors border border-purple-500/30 shadow-lg">
-                <Target className="w-8 h-8 text-purple-400 group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">
-                AI Data Analytics
-              </h3>
-              <p className="text-zion-slate-light mb-4">
-                Transform data into actionable insights with machine learning. 
-                Starting at just $149/month.
-              </p>
-              <div className="bg-purple-500/20 rounded-lg p-3 mb-4">
-                <div className="text-purple-400 font-bold text-lg">🎯 60% better decisions</div>
-                <div className="text-purple-300 text-sm">70% risk reduction</div>
-              </div>
-              <Link to="/services/ai-data-analytics" className="btn-primary w-full text-center">
-                View Demo
-              </Link>
-            </div>
-          </div>
-        </section>
+        {/* Enhanced Services Showcase */}
+        <EnhancedServicesShowcase />
 
         {/* Features Section */}
         <section className="container mx-auto px-6 py-20 relative z-10">
