@@ -181,21 +181,26 @@ class SecurityEnhancements {
 
   private setupXSSProtection(): void {
     // Monitor for potential XSS attempts
-    const originalInnerHTML = Element.prototype.innerHTML;
+    const originalDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
     const originalOuterHTML = Element.prototype.outerHTML;
     const originalInsertAdjacentHTML = Element.prototype.insertAdjacentHTML;
 
     // Override innerHTML setter
     Object.defineProperty(Element.prototype, 'innerHTML', {
       set: function(value: string) {
-        if (this.detectXSSAttempt(value)) {
+        if (this.detectXSSAttempt && this.detectXSSAttempt(value)) {
           console.warn('Potential XSS attempt detected in innerHTML');
           return;
         }
-        originalInnerHTML.call(this, value);
+        if (originalDescriptor && originalDescriptor.set) {
+          originalDescriptor.set.call(this, value);
+        }
       },
       get: function() {
-        return originalInnerHTML.call(this);
+        if (originalDescriptor && originalDescriptor.get) {
+          return originalDescriptor.get.call(this);
+        }
+        return '';
       },
     });
 
@@ -368,20 +373,12 @@ class SecurityEnhancements {
     let queryCount = 0;
     const queryThreshold = 100;
 
-    Document.prototype.querySelector = function(...args) {
+    Document.prototype.querySelector = function(selector: string) {
       queryCount++;
       if (queryCount > queryThreshold) {
-        this.handleSecurityEvent({
-          type: 'suspicious',
-          severity: 'medium',
-          message: 'Excessive DOM queries detected',
-          details: { queryCount, selector: args[0] },
-          blocked: false,
-          userAgent: navigator.userAgent,
-          url: window.location.href,
-        });
+        console.warn('Excessive DOM queries detected', { queryCount, selector });
       }
-      return originalQuerySelector.apply(this, args);
+      return originalQuerySelector.call(this, selector);
     };
   }
 
@@ -542,4 +539,4 @@ export const securityEnhancements = new SecurityEnhancements();
 
 // Export class and types
 export { SecurityEnhancements };
-export type { SecurityConfig, SecurityEvent, SecurityMetrics };
+// Types are already exported above as interfaces

@@ -429,4 +429,4 @@ export const advancedCachingSystem = new AdvancedCachingSystem();
 
 // Export class for custom instances
 export { AdvancedCachingSystem };
-export type { CacheConfig, CacheItem, CacheMetrics };
+// Types are already exported above as interfaces

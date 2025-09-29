@@ -394,4 +394,4 @@ export const advancedMonitoringSystem = new AdvancedMonitoringSystem();
 
 // Export class and types
 export { AdvancedMonitoringSystem };
-export type { MonitoringMetrics, MonitoringAlert };
+// Types are already exported above as interfaces

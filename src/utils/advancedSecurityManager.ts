@@ -387,4 +387,4 @@ export const advancedSecurityManager = new AdvancedSecurityManager();
 
 // Export class for custom instances
 export { AdvancedSecurityManager };
-export type { SecurityConfig, SecurityMetrics, SecurityThreat };
+// Types are already exported above as interfaces
