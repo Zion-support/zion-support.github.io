@@ -19,6 +19,36 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-trustworthy-agents-2026',
+    title: 'Trustworthy AI Agents 2026: Safety, Compliance, and Observability',
+    excerpt: 'Deploy trustworthy AI agents with guardrails, approvals, and end-to-end observability.',
+    type: 'article',
+    readTime: '11 min read',
+    category: 'Autonomous AI',
+    href: '/blog/ai-trustworthy-agents-2026',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '0.3%', label: 'Policy Violations' },
+      { value: '99.7%', label: 'On-policy Actions' }
+    ]
+  },
+  {
+    id: 'ai-value-stream-analytics-2026',
+    title: 'AI Value Stream Analytics 2026: Trace ROI from Token to Revenue',
+    excerpt: 'Tie AI cost, latency, and quality to business value with end-to-end tracing.',
+    type: 'article',
+    readTime: '9 min read',
+    category: 'Analytics',
+    href: '/blog/ai-value-stream-analytics-2026',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '$/win', label: 'Cost per Outcome' },
+      { value: '<200ms', label: 'P95 Latency' }
+    ]
+  },
+  {
     id: 'ai-roadmaps-2026',
     title: 'AI Roadmaps 2026: What to Build Next and Why',
     excerpt: 'A pragmatic roadmap for 2026 across CX, ops, and platforms with high-ROI bets.',
