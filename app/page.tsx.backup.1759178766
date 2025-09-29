@@ -27,6 +27,47 @@ import {
   EnterpriseTransformationSuccessBanner,
   HealthcareTransformationBanner,
   NewContent2026Banner,
+<<<<<<< HEAD
+  AIAgentOrchestrationBanner,
+  AISustainabilityBanner,
+  QuantumComputingBanner,
+  SustainabilityCaseStudyBanner,
+  QuantumOptimizationBanner,
+  AIOperationalExcellenceBanner,
+  AIAgentObservabilityBanner,
+  ManufacturingTransformationBanner,
+  Latest2026ContentBanner,
+  AISecurityEnterprise2026Banner,
+  AIMultimodalEnterprise2026Banner,
+  AISustainabilityTransformationBanner,
+  LatestContent2026Banner,
+  AIEthicalFrameworkBanner,
+  AIEthicsSuccessBanner,
+  NewContentShowcase2026Banner,
+  AIEnterpriseTransformationBanner,
+  AIEnterpriseSuccessBanner,
+  LatestEnterpriseContentBanner
+} from '../components/PromotionalBanner';
+import {
+  NewContent2026Banner as NewContent2026BannerComponent,
+  AutonomousOperationsBanner,
+  FinOpsAdvancedBanner,
+  PlatformArchitectureBanner,
+  AutonomousOperationsSuccessBanner,
+  NewContentShowcaseBanner2026,
+  LatestContent2026Banner,
+  AISecurityEnterprise2026Banner,
+  AIMultimodalEnterprise2026Banner,
+  AISustainabilityTransformationBanner,
+  NewLatest2026ContentBanner,
+  AIAutonomousCloudOpsBanner,
+  AIFinTechTransformationBanner,
+  AIRetailAutomationBanner,
+  Latest2026ContentBanner,
+  AIOperationalExcellenceBanner,
+  AIAgentObservabilityBanner,
+  ManufacturingTransformationBanner
+=======
   Latest2026ContentBanner,
   LatestContent2026Banner,
   AISecurityEnterprise2026Banner,
@@ -39,6 +80,7 @@ import {
   AIAutonomousCloudOpsBanner,
   AIFinTechTransformationBanner,
   AIRetailAutomationBanner
+>>>>>>> origin/cursor/create-and-deploy-new-content-65bf
 } from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
@@ -974,7 +1016,12 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
+<<<<<<< HEAD
+
+            <Link href="/blog/agent-benchmarking-2026" className="group">
+=======
             <Link href="/blog/ai-autonomous-operations-2026" className="group">
+>>>>>>> origin/cursor/create-and-deploy-new-content-65bf
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -1037,6 +1084,9 @@ export default function HomePage() {
                   AI Business Intelligence 2026: Next-Generation Decision Making
                 </h3>
                 <p className="text-gray-600 mb-4">
+<<<<<<< HEAD
+                  Transform your business with AI-powered BI that delivers real-time insights, predictive analytics, and 400% faster growth.
+=======
                   Master autonomous AI operations with zero-touch infrastructure management, predictive maintenance, and self-healing systems.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">Read Complete Guide →</div>
@@ -1055,6 +1105,7 @@ export default function HomePage() {
                 </h3>
                 <p className="text-gray-600 mb-4">
                   Master advanced AI FinOps with predictive cost optimization, automated financial reporting, and intelligent resource allocation.
+>>>>>>> origin/cursor/create-and-deploy-new-content-65bf
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">Read Advanced Guide →</div>
               </div>
@@ -1090,7 +1141,13 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   Design and implement enterprise-scale AI platforms with microservices, edge computing, and autonomous scaling.
                 </p>
+<<<<<<< HEAD
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Architecture Guide →
+                 </div>
+=======
                 <div className="flex items-center text-blue-600 font-semibold">Read Architecture Guide →</div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-65bf
               </div>
             </Link>
             <Link href="/blog/ai-autonomous-cloud-ops-2026" className="group">
@@ -1173,7 +1230,13 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.
                 </p>
+<<<<<<< HEAD
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+=======
                 <div className="flex items-center text-blue-600 font-semibold">Read Guide →</div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-65bf
               </div>
             </Link>
             <Link href="/blog/ai-enterprise-transformation-2026" className="group">
@@ -1190,6 +1253,11 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   Master enterprise AI transformation with proven strategies, ROI frameworks, and real-world case studies. Achieve 95% automation and $10M+ savings.
                 </p>
+<<<<<<< HEAD
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Complete Guide →
+                </div>
+=======
                 <div className="flex items-center text-blue-600 font-semibold">View Case Study →</div>
               </div>
             </Link>
@@ -1208,6 +1276,7 @@ export default function HomePage() {
                   Transform your enterprise with AI automation. 95% process efficiency, $5M+ savings, and zero-touch operations.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-65bf
               </div>
             </Link>
             <Link href="/case-studies/ai-enterprise-transformation-success-2026" className="group">
