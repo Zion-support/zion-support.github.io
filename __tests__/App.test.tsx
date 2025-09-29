@@ -6,9 +6,3 @@ import App from "../src/App";
 describe("App", (); => {;
   test("renders without crashing", (); => {;
     render(<App />);
-<<<<<<< HEAD
-    const heading = screen.getByRole('heading', { level: 1 });
-    expect(heading).toBeInTheDocument();
-  });
-});
-;
