@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Comprehensive script to merge all cursor branches
+# Comprehensive script to merge all open PRs from GitHub API
 set -e
 
-echo "🚀 Starting comprehensive merge of all cursor branches..."
+echo "🚀 Starting comprehensive merge of all open PRs..."
 echo "⏰ Started at: $(date)"
 echo "---"
 
@@ -11,7 +11,7 @@ echo "---"
 SUCCESSFUL_MERGES=0
 FAILED_MERGES=0
 CONFLICT_RESOLUTIONS=0
-SKIPPED_BRANCHES=0
+SKIPPED_DRAFTS=0
 
 # Function to log messages with timestamps
 log_message() {
@@ -115,35 +115,66 @@ merge_branch() {
     fi
 }
 
-# Get all cursor branches
-log_message "📋 Fetching all cursor branches..."
-CURSOR_BRANCHES=$(git branch -r | grep "cursor/create-and-deploy-new-content" | sed 's/origin\///' | head -50)
+# Get the list of open PRs and extract branch information
+log_message "📋 Fetching open PRs from GitHub..."
+curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" > prs.json
 
-# Process each branch
-log_message "🔄 Processing cursor branches..."
-for branch in $CURSOR_BRANCHES; do
-    echo ""
-    echo "=========================================="
-    echo "🔄 Processing branch: $branch"
-    echo "=========================================="
-    
-    if merge_branch "$branch"; then
-        log_message "✅ Branch $branch processed successfully"
-    else
-        log_message "❌ Branch $branch processing failed"
+# Extract PR information and process each one
+log_message "🔄 Processing open PRs..."
+awk '
+/"number":/ {
+    number = $2
+    gsub(/,/, "", number)
+    pr_number = number
+}
+/"draft":/ {
+    draft = $2
+    gsub(/,/, "", draft)
+    gsub(/"/, "", draft)
+}
+/"head":/ {
+    in_head = 1
+}
+/"ref":/ && in_head {
+    ref = substr($0, index($0, ":") + 3)
+    gsub(/,$/, "", ref)
+    gsub(/"/, "", ref)
+    if (ref != "ref" && ref != "href" && ref != "archive_url" && ref != "git_refs_url") {
+        printf "%s|%s|%s\n", pr_number, ref, draft
+        in_head = 0
+    }
+}
+' prs.json | while IFS='|' read -r pr_number branch_name is_draft; do
+    if [ -n "$pr_number" ] && [ -n "$branch_name" ]; then
+        echo ""
+        echo "=========================================="
+        echo "🔄 Processing PR #$pr_number from branch: $branch_name"
+        echo "=========================================="
+        
+        # Skip draft PRs but still try to merge the branch
+        if [ "$is_draft" = "true" ]; then
+            log_message "📝 PR #$pr_number is a draft, but attempting to merge branch..."
+            SKIPPED_DRAFTS=$((SKIPPED_DRAFTS + 1))
+        fi
+        
+        if merge_branch "$branch_name"; then
+            log_message "✅ PR #$pr_number processed successfully"
+        else
+            log_message "❌ PR #$pr_number processing failed"
+        fi
+        
+        echo "=========================================="
+        echo ""
+        
+        # Push changes every 3 successful merges to avoid losing work
+        if [ $((SUCCESSFUL_MERGES % 3)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
+            log_message "💾 Pushing progress to remote..."
+            git push origin main
+        fi
+        
+        # Small delay to avoid overwhelming the system
+        sleep 2
     fi
-    
-    echo "=========================================="
-    echo ""
-    
-    # Push changes every 5 successful merges to avoid losing work
-    if [ $((SUCCESSFUL_MERGES % 5)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
-        log_message "💾 Pushing progress to remote..."
-        git push origin main
-    fi
-    
-    # Small delay to avoid overwhelming the system
-    sleep 1
 done
 
 # Final push
@@ -152,12 +183,12 @@ git push origin main
 
 # Summary
 echo ""
-echo "🎉 Cursor branch merge process completed!"
+echo "🎉 Open PR merge process completed!"
 echo "📊 Final Summary:"
 echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
 echo "   🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
-echo "   ⏭️  Branches skipped: $SKIPPED_BRANCHES"
+echo "   ⏭️  Draft PRs processed: $SKIPPED_DRAFTS"
 echo "⏰ Completed at: $(date)"
 
 # Cleanup recommendations
@@ -167,3 +198,6 @@ echo "   1. Review the merged changes: git log --oneline -20"
 echo "   2. Test the application thoroughly"
 echo "   3. Consider cleaning up old feature branches"
 echo "   4. Run tests to ensure everything works correctly"
+
+# Cleanup temporary files
+rm -f prs.json
