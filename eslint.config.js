@@ -4,7 +4,8 @@ import globals from "globals";
 import tseslint from "typescript-eslint";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
-import cypressPlugin from "eslint-plugin-cypress/flat"; // Corrected import for flat config
+// Temporarily disable Cypress plugin to avoid missing dependency during CI
+// import cypressPlugin from "eslint-plugin-cypress/flat";
 
 // Cleaned global objects
 const browserGlobals = Object.fromEntries(
@@ -17,46 +18,40 @@ const serviceWorkerGlobals = Object.fromEntries(
   Object.entries(globals.serviceworker).map(([key, value]) => [key.trim(), value])
 );
 
-
 export default [
-  // 1. Global Ignores
   {
     ignores: [
       'dist/**',
       'node_modules/**',
-      'public/**',
-      'backup/**',
-      'backup-pages/**',
-      'backup-merge-conflicts/**',
+      'dist/**',
+      'build/**',
+      '.next/**',
+      'out/**',
+      'coverage/**',
+      '*.config.*',
+      'cypress/**',
       '**/backup-problematic-files/**',
+      '**/src.disabled/**',
+      '**/src.corrupted/**',
+      '**/src.pages.disabled/**',
+      '**/temp_broken_files/**',
+      '**/automation/**',
+      '**/backup-pages/**',
+      '**/backup-merge-conflicts/**',
+      '**/cypress_backup/**',
       '**/components.disabled/**',
       '**/components.disabled_full/**',
       '**/contracts.disabled/**',
       '**/data.disabled/**',
       '**/automation_backup/**',
       '**/broken_files_backup/**',
-      '**/cypress_backup/**',
+      '**/vite.config-backup.*',
       '**/*.disabled.*',
       '**/*.backup.*',
       '**/*.broken.*',
       '**/*.corrupted.*',
       '**/*.temp.*',
-      '**/*.disabled/**',
-      '**/*.backup/**',
-      '**/*.broken/**',
-      '**/*.corrupted/**',
-      '**/*.temp/**',
-      'cypress/**',
-      'tests/**',
-      'coverage/**',
-      'scripts/**',
-      'pages/**',
-      'store/**',
-      'jest.setup.js',
-      '**/vite.config-backup.*',
-      '**/test-simple.*',
-      '*.config.js',
-      '*.config.ts'
+      'jest.setup.js'
     ]
   },
 
@@ -80,14 +75,18 @@ export default [
     languageOptions: { globals: { ...serviceWorkerGlobals } },
   },
 
-  // 3. TypeScript Configurations (non type-aware to avoid project resolution issues in CI)
+  // 3. TypeScript Configurations
   // Main application TS/TSX files (src, pages, but not tests, stories, cypress, supabase yet)
   ...tseslint.config({
-    files: ["src/**/*.{ts,tsx}", "pages/**/*.{ts,tsx}"],
-    // Exclude story and test files from this general src/pages config
+    files: ["src/**/*.{ts,tsx}", "pages/**/*.{ts,tsx}"], 
+    // Exclude story files from this general src/pages config
     ignores: ["src/**/*.stories.tsx", "src/**/*.stories.ts", "src/**/*.test.tsx", "src/**/*.test.ts"],
-    extends: [...tseslint.configs.recommended],
+    extends: [...tseslint.configs.recommendedTypeChecked],
     languageOptions: {
+      parserOptions: {
+        project: ["./tsconfig.json"], // Simplified to only tsconfig.json
+        tsconfigRootDir: import.meta.dirname,
+      },
       globals: { ...browserGlobals },
     },
     plugins: { "react-hooks": reactHooks, "react-refresh": reactRefresh },
@@ -96,23 +95,27 @@ export default [
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
-      "@typescript-eslint/no-unsafe-assignment": "off",
-      "@typescript-eslint/no-unsafe-member-access": "off",
-      "@typescript-eslint/no-unsafe-call": "off",
-      "@typescript-eslint/no-unsafe-return": "off",
-      "@typescript-eslint/no-unsafe-argument": "off",
-      "@typescript-eslint/restrict-template-expressions": "off",
-      "@typescript-eslint/no-floating-promises": "off",
-      "@typescript-eslint/no-misused-promises": "off",
+      "@typescript-eslint/no-unsafe-assignment": "warn",
+      "@typescript-eslint/no-unsafe-member-access": "warn",
+      "@typescript-eslint/no-unsafe-call": "warn",
+      "@typescript-eslint/no-unsafe-return": "warn",
+      "@typescript-eslint/no-unsafe-argument": "warn",
+      "@typescript-eslint/restrict-template-expressions": "warn",
+      "@typescript-eslint/no-floating-promises": ["warn", { ignoreVoid: true }],
+      "@typescript-eslint/no-misused-promises": ["warn", { checksVoidReturn: false }],
     },
   }),
 
   // Config for vite.config.ts, tailwind.config.ts etc. (Node environment TS files)
-  // This specifically targets config files at the root.
+  // This should specifically target config files at the root.
   ...tseslint.config({
-    files: ["vite.config.ts", "tailwind.config.ts", "cypress.config.ts", "vitest.config.ts"],
-    extends: [...tseslint.configs.recommended],
+    files: ["vite.config.ts", "tailwind.config.ts", "cypress.config.ts", "vitest.config.ts"], // Explicit list
+    extends: [...tseslint.configs.recommendedTypeChecked],
     languageOptions: {
+      parserOptions: {
+        project: ["./tsconfig.node.json"], // Use tsconfig.node.json
+        tsconfigRootDir: import.meta.dirname,
+      },
       globals: { ...nodeGlobals },
     },
     rules: {
@@ -127,9 +130,13 @@ export default [
   // Test files configuration (__tests__ directory)
   ...tseslint.config({
     files: ["__tests__/**/*.{ts,tsx}"],
-    extends: [...tseslint.configs.recommended],
+    extends: [...tseslint.configs.recommendedTypeChecked],
     languageOptions: {
-      globals: { ...globals.jest, ...browserGlobals },
+      parserOptions: {
+        project: "./__tests__/tsconfig.json",
+        tsconfigRootDir: import.meta.dirname,
+      },
+      globals: { ...globals.jest, ...browserGlobals }, // Jest and browser globals
     },
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
@@ -145,11 +152,15 @@ export default [
 
   // Test files configuration (tests/ directory)
   ...tseslint.config({
-    files: ["tests/**/*.{ts,tsx,js,jsx}"],
-    ignores: ["tests/e2e/**"],
-    extends: [...tseslint.configs.recommended],
+    files: ["tests/**/*.{ts,tsx,js,jsx}"], // Include JS/JSX as per its tsconfig
+    ignores: ["tests/e2e/**"], // e2e tests inside 'tests' might be Playwright, not Jest
+    extends: [...tseslint.configs.recommendedTypeChecked],
     languageOptions: {
-      globals: { ...globals.jest, ...browserGlobals },
+      parserOptions: {
+        project: "./tests/tsconfig.json",
+        tsconfigRootDir: import.meta.dirname,
+      },
+      globals: { ...globals.jest, ...browserGlobals }, // Jest and browser globals
     },
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
@@ -174,8 +185,14 @@ export default [
       "stories/**/*.stories.tsx",
       "stories/**/*.stories.ts", // Added .ts stories
     ],
-    extends: [...tseslint.configs.recommended],
-    languageOptions: { globals: { ...browserGlobals } },
+    extends: [...tseslint.configs.recommendedTypeChecked],
+    languageOptions: {
+      parserOptions: {
+        project: "./.storybook/tsconfig.json",
+        tsconfigRootDir: import.meta.dirname,
+      },
+      globals: { ...browserGlobals },
+    },
     rules: {
       "import/no-anonymous-default-export": "off",
       "react-refresh/only-export-components": "off",
@@ -193,8 +210,14 @@ export default [
   // Supabase functions configuration
   ...tseslint.config({
     files: ["supabase/functions/**/*.ts"],
-    extends: [...tseslint.configs.recommended],
-    languageOptions: { globals: { ...nodeGlobals } },
+    extends: [...tseslint.configs.recommendedTypeChecked],
+    languageOptions: {
+      parserOptions: {
+        project: "./supabase/functions/tsconfig.json",
+        tsconfigRootDir: import.meta.dirname,
+      },
+      globals: { ...nodeGlobals },
+    },
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-unsafe-assignment": "off",
@@ -209,10 +232,17 @@ export default [
   
   // Cypress TypeScript Configuration
   ...tseslint.config({
-    files: ["cypress/**/*.ts", "cypress/**/*.tsx"],
-    extends: [...tseslint.configs.recommended],
+    files: ["cypress/**/*.ts", "cypress/**/*.tsx"], // Target Cypress TS files
+    extends: [...tseslint.configs.recommendedTypeChecked], // Use type-aware linting
     languageOptions: {
-      globals: { ...browserGlobals, ...nodeGlobals },
+      parserOptions: {
+        project: "./cypress/tsconfig.json", // Point to Cypress's tsconfig
+        tsconfigRootDir: import.meta.dirname,
+      },
+      globals: { // Cypress globals are typically provided by the plugin below
+        ...browserGlobals, // Cypress runs in browser
+        ...nodeGlobals,   // For tasks/plugins if any TS is used there
+      },
     },
     rules: {
       "@typescript-eslint/no-namespace": "off", // Cypress often uses namespaces in d.ts
@@ -224,34 +254,5 @@ export default [
       // Specific to Cypress tests, might not need strict method binding
       "@typescript-eslint/unbound-method": "off", 
     }
-  }),
-
-  // Cypress Global Configuration (Plugin for JS and TS files)
-  // This spread should bring in necessary plugins, rules, and languageOptions (globals)
-  {
-    files: ["cypress/**/*.{js,ts,tsx}"], // Target all Cypress files
-    ...cypressPlugin.configs.recommended, // Spread the recommended config
-    // Add any custom overrides *after* spreading the recommended config
-    // For example, if you need to override a specific rule:
-    rules: {
-      ...cypressPlugin.configs.recommended.rules, // Start with recommended rules
-      // "some-cypress-rule-to-override": "off", // Example override
-      // Ensure TS overrides from the TS-specific Cypress block are respected if needed,
-      // or merge them here if this is the sole Cypress block for TS files.
-      // Given we have a separate tseslint.config for cypress TS, this block's TS rules
-      // might primarily affect JS files in Cypress or provide a base.
-    }
-  },
-  // Specific for cypress/support/commands.js if it's not a module and needs commonjs
-  // This might need to be adjusted if cypressPlugin.configs.recommended sets a default sourceType
-  {
-    files: ["cypress/support/commands.js"],
-    languageOptions: {
-        sourceType: "commonjs",
-         globals: { // Ensure Cypress globals are also here
-          ...(cypressPlugin.configs.recommended.languageOptions?.globals || {}),
-          ...nodeGlobals, // If it uses any Node features like 'require'
-        }
-    }
-  }
+  })
 ];

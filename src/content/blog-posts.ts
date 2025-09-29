@@ -3,12 +3,12 @@ export interface BlogPost {
   title: string;
   description: string;
   content: string;
-  author: string;
+  author?: string;
   date: string;
   category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
+  tags?: string[];
+  featured?: boolean;
+  readTime?: string;
   image?: string;
 }
 

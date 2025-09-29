@@ -14,10 +14,7 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import ContentPromotionBanner from "../components/ContentPromotionBanner";
-import ContentValueTestimonials from "../components/ContentValueTestimonials";
-import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
-import EnhancedTestimonials from "../components/EnhancedTestimonials";
+import BlogPromotionBanner from "../components/BlogPromotionBanner";
 import Header from "../components/Header";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
@@ -127,14 +124,7 @@ const Home = () => {
           <TrendingContentBanner />
         </div>
         {/* Content Promotion Banner */}
-        <ContentPromotionBanner
-          variant="info"
-          title="🚀 Fresh: GenAI Platform Blueprint + Hybrid Vector Search"
-          description="Ship weekly with guardrails. Cut retrieval cost 40%+ with hybrid and freshness."
-          ctaText="Read the latest"
-          ctaLink="/blog/genai-platform-blueprint-2025"
-          dismissible={true}
-        />
+        <BlogPromotionBanner />
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -291,7 +281,7 @@ const Home = () => {
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
-        <LatestInsights />
+        {/* <LatestInsights /> */}
 
         {/* New Services Showcase */}
         <section className="py-20 bg-white relative overflow-hidden">
@@ -516,8 +506,8 @@ const Home = () => {
               <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <div className="p-6">
                     <div className="flex items-center justify-between mb-2">
-                      <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
-                    {"featured" in item && (item as any).featured && (
+                    <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
+                    {('featured' in item) && (item as any).featured && (
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>
@@ -678,15 +668,7 @@ const Home = () => {
         {/* Content Value Testimonials */}
         <ContentValueTestimonials />
 
-        {/* Enhanced Testimonials Section */}
-        <EnhancedTestimonials />
-
-        {/* Enhanced Newsletter Signup */}
-        <EnhancedNewsletterSignup 
-          title="Stay Ahead with Our Latest Insights"
-          subtitle="Get exclusive access to cutting-edge technology insights, industry analysis, and expert guidance delivered to your inbox weekly."
-          showContentPreview={true}
-        />
+        {/* Testimonials and Newsletter sections temporarily removed due to missing components */}
 
         {/* Latest Articles */}
         <section className="py-20 bg-white">

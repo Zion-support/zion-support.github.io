@@ -1,5 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+<<<<<<< HEAD
+=======
 import {
   Mail,
   Phone,
@@ -15,84 +17,21 @@ import {
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 // import EnhancedContactForm from "../components/EnhancedContactForm";
+>>>>>>> origin/main
 
 export default function Contact(): React.JSX.Element {
-  const contactInfo = [
-    {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email Us",
-      details: "hello@ziontechgroup.com",
-      description: "Send us an email anytime",
-    },
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: "Call Us",
-      details: "+1 (555) 123-4567",
-      description: "Mon-Fri from 9am to 6pm",
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />,
-      title: "Visit Us",
-      details: "123 Tech Street, San Francisco, CA 94105",
-      description: "Come say hello at our office",
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Response Time",
-      details: "Within 24 hours",
-      description: "We respond to all inquiries quickly",
-    },
-  ];
-
-  const stats = [
-    {
-      icon: <Users className="w-8 h-8" />,
-      value: "500+",
-      label: "Happy Clients",
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
-      value: "99.9%",
-      label: "Satisfaction Rate",
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      value: "50+",
-      label: "Countries Served",
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      value: "24/7",
-      label: "Support Available",
-    },
-  ];
-
   return (
     <>
       <Helmet>
-        <title>
-          Contact Zion Tech Group - Get in Touch | AI & Technology Solutions
-        </title>
-        <meta
-          name="description"
-          content="Contact Zion Tech Group for AI solutions, cloud services, and technology consulting. Get expert advice and start your digital transformation journey."
-        />
-        <meta
-          name="keywords"
-          content="contact, AI consulting, technology solutions, cloud services, digital transformation"
-        />
-        <meta
-          property="og:title"
-          content="Contact Zion Tech Group - Get in Touch"
-        />
-        <meta
-          property="og:description"
-          content="Contact us for AI solutions, cloud services, and technology consulting"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/contact" />
-        <link rel="canonical" href="https://ziontechgroup.com/contact" />
+        <title>Contact - Zion Tech Group</title>
       </Helmet>
+<<<<<<< HEAD
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center p-8">
+          <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
+          <p>Reach out to our team at contact@ziontechgroup.com.</p>
+        </div>
+=======
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
         <Header />
@@ -310,6 +249,7 @@ export default function Contact(): React.JSX.Element {
         </section>
 
         <Footer />
+>>>>>>> origin/main
       </div>
     </>
   );
