@@ -16,44 +16,154 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
+import PromotionalBanner from "../components/PromotionalBanner";
+import FeaturedContent from "../components/FeaturedContent";
+import ServiceShowcase from "../components/ServiceShowcase";
+import SEOOptimizer, { generateStructuredData } from "../components/SEOOptimizer";
 import { latestInsights } from "../content/insights";
 
 const Home = () => {
+  // Sample data for promotional banner
+  const promotionalBannerData = {
+    type: 'announcement' as const,
+    title: 'New AI Services Now Available',
+    description: 'Transform your business with our latest AI-powered solutions',
+    ctaText: 'Explore Now',
+    ctaLink: '/services',
+    badge: 'New Release',
+    autoHide: true,
+    autoHideDelay: 8000
+  };
+
+  // Sample featured content data
+  const featuredContentData = [
+    {
+      id: '1',
+      title: 'AI Implementation Guide: From Strategy to Success',
+      description: 'Comprehensive guide to implementing AI solutions in your organization. Learn best practices, common pitfalls, and success strategies.',
+      type: 'whitepaper' as const,
+      category: 'AI Solutions',
+      author: 'Dr. Sarah Chen',
+      publishDate: '2024-01-15',
+      readTime: 15,
+      viewCount: 2847,
+      rating: 4.9,
+      featured: true,
+      image: '/api/placeholder/400/300',
+      url: '/resources'
+    },
+    {
+      id: '2',
+      title: 'Global Retail Chain AI Transformation',
+      description: 'See how we helped RetailMax Corporation optimize inventory management and customer experience across 500+ stores.',
+      type: 'case-study' as const,
+      category: 'Case Studies',
+      author: 'Zion Tech Team',
+      publishDate: '2024-01-10',
+      readTime: 8,
+      viewCount: 1923,
+      rating: 4.8,
+      featured: true,
+      image: '/api/placeholder/400/300',
+      url: '/case-studies'
+    },
+    {
+      id: '3',
+      title: 'The Future of AI in Business: 2024 Trends',
+      description: 'Join our experts as they discuss the latest AI trends and how they\'re reshaping business operations.',
+      type: 'webinar' as const,
+      category: 'Webinars',
+      author: 'Dr. Alex Kumar',
+      publishDate: '2024-01-20',
+      readTime: 45,
+      viewCount: 12543,
+      rating: 4.7,
+      featured: true,
+      image: '/api/placeholder/400/300',
+      url: '/resources'
+    }
+  ];
+
+  // Sample services data
+  const servicesData = [
+    {
+      id: 'ai-workflow',
+      name: 'AI Workflow Automation',
+      description: 'Transform business operations with intelligent process automation that reduces manual tasks by 80% and improves efficiency by 60%.',
+      shortDescription: 'Intelligent process automation for maximum efficiency',
+      icon: <Zap className="w-8 h-8" />,
+      features: ['Process Recognition', 'Visual Designer', 'Smart Triggers', 'Performance Monitoring'],
+      benefits: ['Reduce manual tasks by 80%', 'Improve efficiency by 60%', 'Cut costs by 40%'],
+      pricing: { starting: '$99/month', popular: true },
+      rating: 4.9,
+      reviewCount: 127,
+      category: 'AI Solutions',
+      tags: ['Automation', 'AI', 'Workflow', 'Efficiency'],
+      image: '/api/placeholder/400/300',
+      url: '/services',
+      stats: [
+        { label: 'Efficiency Gain', value: '+60%', icon: <TrendingUp className="w-5 h-5" /> },
+        { label: 'Cost Reduction', value: '-40%', icon: <Target className="w-5 h-5" /> },
+        { label: 'Manual Tasks', value: '-80%', icon: <Users className="w-5 h-5" /> }
+      ]
+    },
+    {
+      id: 'ai-assistant',
+      name: 'AI Virtual Assistant',
+      description: '24/7 intelligent customer support and business operations with natural language processing and multi-channel support capabilities.',
+      shortDescription: '24/7 intelligent customer support and operations',
+      icon: <Users className="w-8 h-8" />,
+      features: ['Natural Language Processing', 'Multi-channel Support', '24/7 Availability', 'Personalized Interactions'],
+      benefits: ['Reduce response time by 90%', 'Increase conversions by 40%', 'Save 30+ hours/week'],
+      pricing: { starting: '$79/month' },
+      rating: 4.8,
+      reviewCount: 89,
+      category: 'AI Solutions',
+      tags: ['AI Assistant', 'Customer Support', 'Automation'],
+      image: '/api/placeholder/400/300',
+      url: '/services',
+      stats: [
+        { label: 'Response Time', value: '-90%', icon: <Clock className="w-5 h-5" /> },
+        { label: 'Conversions', value: '+40%', icon: <TrendingUp className="w-5 h-5" /> },
+        { label: 'Time Saved', value: '30h/week', icon: <Clock className="w-5 h-5" /> }
+      ]
+    },
+    {
+      id: 'ai-analytics',
+      name: 'AI Data Analytics',
+      description: 'Transform data into actionable insights with machine learning, predictive analytics, and real-time dashboards.',
+      shortDescription: 'Transform data into actionable insights',
+      icon: <Target className="w-8 h-8" />,
+      features: ['Predictive Analytics', 'Real-time Dashboards', 'Data Integration', 'Automated Insights'],
+      benefits: ['Improve decisions by 60%', 'Increase retention by 45%', 'Reduce risks by 70%'],
+      pricing: { starting: '$149/month' },
+      rating: 4.9,
+      reviewCount: 156,
+      category: 'AI Solutions',
+      tags: ['Analytics', 'Data Science', 'Machine Learning'],
+      image: '/api/placeholder/400/300',
+      url: '/services',
+      stats: [
+        { label: 'Better Decisions', value: '+60%', icon: <TrendingUp className="w-5 h-5" /> },
+        { label: 'Retention', value: '+45%', icon: <Users className="w-5 h-5" /> },
+        { label: 'Risk Reduction', value: '-70%', icon: <Shield className="w-5 h-5" /> }
+      ]
+    }
+  ];
+
   return (
     <>
-      <Helmet>
-        <title>
-          Zion Tech Group - Leading AI & IT Solutions | Transform Your Business
-        </title>
-        <meta
-          name="description"
-          content="Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. Enterprise security, AI innovation, and expert consulting services."
-        />
-        <meta
-          name="keywords"
-          content="AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation"
-        />
-        <meta
-          property="og:title"
-          content="Zion Tech Group - Leading AI & IT Solutions"
-        />
-        <meta
-          property="og:description"
-          content="Transform your business with cutting-edge AI and IT solutions"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Zion Tech Group - Leading AI & IT Solutions"
-        />
-        <meta
-          name="twitter:description"
-          content="Transform your business with cutting-edge AI and IT solutions"
-        />
-        <link rel="canonical" href="https://ziontechgroup.com" />
-      </Helmet>
+      {/* Promotional Banner */}
+      <PromotionalBanner {...promotionalBannerData} />
+      
+      <SEOOptimizer
+        title="Leading AI & IT Solutions | Transform Your Business"
+        description="Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. Enterprise security, AI innovation, and expert consulting services."
+        keywords="AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation, business automation, data analytics"
+        canonicalUrl="/"
+        ogImage="/api/placeholder/1200/630"
+        structuredData={generateStructuredData.organization()}
+      />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         {/* Animated background elements */}
@@ -259,28 +369,21 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Latest Insights */}
-        <section className="container mx-auto px-6 py-16 relative z-10">
-          <div className="flex items-center justify-between mb-8">
-            <h3 className="text-3xl font-bold text-white">Latest Insights</h3>
-            <Link to="/insights" className="text-zion-cyan hover:underline">View all</Link>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {latestInsights.slice(0, 3).map((item) => (
-              <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                <div className="p-6">
-                  <div className="text-xs uppercase tracking-wider text-zion-cyan mb-2">{item.category}</div>
-                  <h4 className="text-xl font-semibold text-white mb-2">{item.title}</h4>
-                  <p className="text-zion-slate-light mb-4">{item.summary}</p>
-                  <div className="text-sm text-zion-slate flex items-center justify-between">
-                    <span>{new Date(item.date).toLocaleDateString()}</span>
-                    <span>{item.readMinutes} min read</span>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
+        {/* Featured Content */}
+        <FeaturedContent 
+          title="Latest Insights & Resources"
+          subtitle="Discover our latest insights, case studies, and resources to accelerate your digital transformation"
+          items={featuredContentData}
+          maxItems={3}
+        />
+
+        {/* Service Showcase */}
+        <ServiceShowcase 
+          title="Featured AI Services"
+          subtitle="Transform your business with our cutting-edge AI solutions designed for modern enterprises"
+          services={servicesData}
+          maxItems={3}
+        />
 
         {/* Testimonials Section */}
         <section className="bg-zion-slate-dark py-20 relative overflow-hidden">

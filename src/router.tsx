@@ -6,6 +6,9 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import Insights from './pages/Insights';
+import CaseStudies from './pages/CaseStudies';
+import Resources from './pages/Resources';
+import Pricing from './pages/Pricing';
 
 export const AppRouter: React.FC = () => {
   return (
@@ -16,6 +19,9 @@ export const AppRouter: React.FC = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/insights" element={<Insights />} />
+      <Route path="/case-studies" element={<CaseStudies />} />
+      <Route path="/resources" element={<Resources />} />
+      <Route path="/pricing" element={<Pricing />} />
     </Routes>
   );
 };
