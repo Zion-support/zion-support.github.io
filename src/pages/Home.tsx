@@ -577,7 +577,11 @@ const Home = () => {
                 <div key={insight.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs uppercase tracking-wider text-indigo-300">{insight.category}</span>
+<<<<<<< HEAD
                     {insight.featured && (
+=======
+                    {("featured" in insight) && (insight as any).featured && (
+>>>>>>> cursor/create-and-deploy-new-content-befc
                       <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>
