@@ -1,0 +1,13 @@
+import React from "react";
+
+export default function About(): React.JSX.Element {
+  return (
+    <div className="container mx-auto px-6 py-12">
+      <h1 className="text-3xl font-bold mb-4">About Zion Tech Group</h1>
+      <p className="text-gray-700">
+        We deliver innovative AI and IT solutions. This placeholder page unblocks the build pending full content.
+      </p>
+    </div>
+  );
+}
+
