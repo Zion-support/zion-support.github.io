@@ -19,6 +19,33 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
+    slug: "serverless-inference-cost-playbook-2026",
+    title: "Serverless Inference 2026: Cost Playbook Without P95 Pain",
+    description: "Cut GenAI inference spend 40–70% with adaptive batching, warm pools, and tiered quality.",
+    category: "AI Solutions",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "rag-architectures-production-2026",
+    title: "RAG Architectures 2026: Patterns That Work in Production",
+    description: "Production patterns for chunking, freshness, hybrid search, and layered evals.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "secure-genai-policy-first-2026",
+    title: "Secure GenAI 2026: Policy‑First Guardrails That Scale",
+    description: "Prompt isolation, PII redaction, scoped egress, and policy tests at scale.",
+    category: "Security",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "8 min read"
+  },
+  {
     slug: "platform-engineering-kpis-2026",
     title: "Platform Engineering KPIs 2026: Adoption, Golden Paths, SLOs",
     description: "Scorecards that shift the convo from costs to shipped value—adoption, TTFX, SLOs.",
