@@ -10,39 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-=======
-    slug: "ai-product-launch-checklist-2025",
-    title: "AI Product Launch Checklist: From Pilot to Production",
-    description:
-      "A pragmatic checklist for hardening pilots, proving ROI, and launching AI features safely.",
-    category: "Product",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "7 min read",
-  },
-  {
-    slug: "mlops-in-45-days",
-    title: "MLOps in 45 Days: Shipping Reliable Models Fast",
-    description:
-      "Reference pipelines, eval gates, and rollout patterns to move from notebook to prod quickly.",
-    category: "MLOps",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "practical-rag-architecture",
-    title: "Practical RAG Architecture That Scales",
-    description:
-      "Chunking, indexing, and retrieval strategies that actually improve answer quality at lower cost.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "6 min read",
-  },
-  {
->>>>>>> cursor/create-and-deploy-new-content-83a1
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:
