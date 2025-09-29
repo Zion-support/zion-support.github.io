@@ -1203,6 +1203,55 @@ export const latestArticles: LatestArticle[] = [
     newBadge: true,
     trending: true
   }
+  ,
+  {
+    id: "reliable-evals-in-ci-2026",
+    slug: "reliable-evals-in-ci-2026",
+    title: "Reliable Evals in CI 2026: Ship Fast, Stay Safe",
+    description: "Lightweight policy tests and online canaries wired to KPIs to prevent regressions without slowing delivery.",
+    excerpt: "Automate governance with CI policy tests and KPI‑linked canaries that protect velocity.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-14",
+    category: "AI Governance",
+    tags: ["Policy", "Evals", "Canaries", "KPIs"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/reliable-evals-in-ci-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-first-feature-flags-2026",
+    slug: "privacy-first-feature-flags-2026",
+    title: "Privacy‑First Feature Flags 2026: Global Rollouts Under 100ms",
+    description: "Scoped IDs, on‑device filters, and geo budgets for safe, private progressive delivery at the edge.",
+    excerpt: "Blueprint for zero‑regret rollouts using edge compute, KV, and privacy‑preserving telemetry.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-14",
+    category: "Architecture",
+    tags: ["Feature Flags", "Edge", "Privacy", "Progressive Delivery"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/privacy-first-feature-flags-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "serverless-inference-cost-playbook-2026",
+    slug: "serverless-inference-cost-playbook-2026",
+    title: "Serverless Inference Cost Playbook 2026",
+    description: "Cut GenAI inference spend 40–70% with adaptive batching, warm pools, and quality tiers without hurting P95.",
+    excerpt: "A tactical guide to reduce inference costs while maintaining latency and quality.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-14",
+    category: "Cost Optimization",
+    tags: ["Serverless", "Inference", "Cost", "Optimization"],
+    featured: true,
+    readTime: "11 min read",
+    image: "/images/serverless-inference-cost-playbook-2026.jpg",
+    newBadge: true,
+    trending: true
+  }
 ];
 
 // Newly added featured articles (auto used by showcases and banners)
