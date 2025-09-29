@@ -54,6 +54,11 @@ class AccessibilityEnhancer {
     this.observeAccessibility();
   }
 
+  // Backwards-compatible alias for older call sites
+  public initialize(): void {
+    this.init();
+  }
+
   private setupKeyboardNavigation(): void {
     if (!this.config.keyboardNavigation) return;
 
