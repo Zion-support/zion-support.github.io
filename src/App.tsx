@@ -49,12 +49,8 @@ export default function App(): React.JSX.Element {
 
   const seoDataForOptimizer = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises.',
-    keywords: 'AI solutions, quantum computing, digital transformation, cloud services, enterprise technology',
-    canonical: `https://zion.app${typeof window !== 'undefined' ? window.location.pathname : '/'}`,
-    ogType: 'website',
-    ogImage: '/og-image.png',
-    twitterCard: 'summary_large_image'
+    description: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
+    canonical: typeof window !== 'undefined' ? window.location.href : 'https://zion.app/',
   }), []);
 
   // Simple hotkeys for demo toggles
@@ -147,9 +143,7 @@ export default function App(): React.JSX.Element {
                 <h2 className="text-2xl font-bold">Performance Optimizer</h2>
                 <button onClick={() => setShowPerformanceOptimizer(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
               </div>
-              <PerformanceOptimizer>
-                <div>Performance optimization in progress...</div>
-              </PerformanceOptimizer>
+              <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
             </div>
           </div>
         )}
