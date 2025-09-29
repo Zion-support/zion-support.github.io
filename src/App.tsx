@@ -1,15 +1,23 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
+import { AppRouter } from './router';
+
+// import { resourcePreloader } from './utils/resourcePreloader';
+// import { criticalCSSManager } from './utils/criticalCSSManager';
+// import { sriUtility } from './security/sriUtility';
+// import { csrfProtection } from './security/csrfProtection';
+// import { structuredDataManager } from './seo/structuredDataManager';
+// import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
+// import { screenReaderSupport } from './accessibility/screenReaderSupport';
+import './index.css';
+import { performanceMonitor } from './utils/performanceMonitor';
+import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
+import SEOOptimizer from './components/SEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer, { SEOOptimizerProps } from './components/SEOOptimizer';
-import './index.css';
-import { AppRouter } from './router';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};
@@ -65,6 +73,10 @@ export default function App(): React.JSX.Element {
           break;
       }
       try {
+        if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
+        enhancedSecurityManager.initialize();
+      }
+      
       // Initialize new performance and accessibility enhancements
       initializePerformanceEnhancements();
       accessibilityEnhancer.initialize();
@@ -81,16 +93,10 @@ export default function App(): React.JSX.Element {
       const advancedTestingFramework = (window as any).advancedTestingFramework;
       const advancedI18n = (window as any).advancedI18n;
 
-      if (advancedSecurityManager && typeof (advancedSecurityManager as any).initialize === 'function') {
-        (advancedSecurityManager as any).initialize();
-      }
-
-      // Initialize new performance and accessibility enhancements
-      initializePerformanceEnhancements();
-      accessibilityEnhancer.initialize();
-
       advancedPerformanceOptimizer?.initialize?.();
       advancedSEOOptimizer?.initialize?.();
+      accessibilityEnhancer.initialize();
+      advancedSecurityManager?.initialize?.();
       advancedAnalytics?.initialize?.();
       // advancedErrorHandler is initialized in constructor
       advancedCachingSystem?.initialize?.();
@@ -133,7 +139,11 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer seoData={seoDataForOptimizer} />
+      <SEOOptimizer
+        title={seoDataForOptimizer.title}
+        description={seoDataForOptimizer.description}
+        canonicalUrl={new URL(seoDataForOptimizer.canonical).pathname}
+      />
       <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />

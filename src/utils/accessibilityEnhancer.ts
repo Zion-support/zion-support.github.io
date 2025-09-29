@@ -110,11 +110,14 @@ class AccessibilityEnhancer {
     this.mutationObserver?.disconnect();
     this.performanceObserver?.disconnect();
     
+<<<<<<< HEAD
     // Cleanup event listeners
     document.removeEventListener('keydown', this.handleKeyDown);
     document.removeEventListener('focusin', this.handleFocusIn);
     document.removeEventListener('focusout', this.handleFocusOut);
     
+=======
+>>>>>>> origin/main
     this.isInitialized = false;
     this.focusTrapElements = [];
   }
@@ -137,6 +140,11 @@ class AccessibilityEnhancer {
       console.warn('PerformanceObserver not supported:', error);
     }
   }
+
+  /**
+   * Backward-compatible initialize alias
+   */
+  // Removed duplicate initialize method to avoid no-dupe-class-members ESLint error
 
   private setupKeyboardNavigation(): void {
     if (!this.config.keyboardNavigation) return;

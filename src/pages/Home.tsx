@@ -1,9 +1,9 @@
 import {
   ArrowRight,
   Award,
+  BookOpen,
   Brain,
   CheckCircle,
-  Download,
   Globe,
   Rocket,
   Shield,
@@ -16,7 +16,6 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { memo, useMemo } from "react";
 import LatestContentBanner from "../components/LatestContentBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
@@ -32,11 +31,7 @@ import { latestInsights } from "../content/insights";
 import { newInsights, featuredInsights } from "../content/new-insights";
 import LatestInsights from "../components/LatestInsights";
 
-const Home = memo(() => {
-  // Memoize expensive computations
-  const memoizedInsights = useMemo(() => latestInsights.slice(0, 6), []);
-  const memoizedFeaturedInsights = useMemo(() => featuredInsights.slice(0, 4), []);
-  
+const Home = () => {
   return (
     <>
       <Helmet>
@@ -120,10 +115,10 @@ const Home = memo(() => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: AI Platform ROI + Secure ML Supply Chain"
-          description="New frameworks on platform ROI and end-to-end ML supply chain security."
+          title="🚀 Fresh: AI Platform Engineering 2025 + Edge AI Latency Budgets"
+          description="New long‑form guide plus new articles across Platform, Governance, Security, and MLOps."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-platform-roi-2025"
+          ctaLink="/blog/ai-platform-engineering-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -872,8 +867,6 @@ const Home = memo(() => {
       </div>
     </>
   );
-});
-
-Home.displayName = 'Home';
+};
 
 export default Home;
