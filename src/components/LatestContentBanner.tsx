@@ -158,6 +158,16 @@ contentHighlights.push(
     variant: "success" as const
   },
   {
+    id: 15,
+    title: "✅ LLM Policy Tests in CI",
+    description: "Policy tests on every PR keep you fast and safe.",
+    ctaText: "Read How",
+    ctaLink: "/blog/llm-policy-testing-2025",
+    badge: "New",
+    stats: "6 min read",
+    variant: "warning" as const
+  },
+  {
     id: 11,
     title: "💸 Cloud FinOps Guardrails Engineers Actually Use",
     description: "Budgets, alerts, and PR gates that reduce waste 25–40%",
