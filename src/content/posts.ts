@@ -10,6 +10,36 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-risk-register-2025",
+    title: "AI Risk Register: Practical Guardrails Teams Actually Use",
+    description:
+      "From PII controls to rollout gates—stand up a living risk register that keeps AI changes safe.",
+    category: "AI Governance",
+    publishedAt: "2025-10-02",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "ltv-boost-with-ai-2025",
+    title: "Boost LTV with AI: Personalization That Respects Policy",
+    description:
+      "Journey scoring, next‑best‑action, and policy tests that lift retention without creeping users out.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-02",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "data-contracts-2025",
+    title: "Data Contracts in Practice: Faster Shipping with Fewer Breakages",
+    description:
+      "Schemas, owners, and validation that stop silent analytics failures and API breakages.",
+    category: "Data Engineering",
+    publishedAt: "2025-10-02",
+    featured: false,
+    readTime: "8 min read",
+  },
+  {
     slug: "genai-incident-postmortems-2025",
     title: "GenAI Incident Postmortems: Prevent Repeats with Policy Tests",
     description:
