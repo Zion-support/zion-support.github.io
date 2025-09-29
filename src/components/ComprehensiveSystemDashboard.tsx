@@ -4,446 +4,296 @@ import { accessibilityEnhancer, AccessibilityMetrics, AccessibilityIssue } from 
 import { seoOptimizer } from '../utils/seoOptimizer';
 import { SEOIssue } from '../types/comprehensive';
 
-interface SystemHealth {
-  performance: number;
-  accessibility: number;
-  seo: number;
-  overall: number;
+interface ComprehensiveSystemDashboardProps {
+  isVisible: boolean;
+  onClose: () => void;
 }
 
-interface DashboardData {
-  systemHealth: SystemHealth;
-  performanceMetrics: PerformanceMetrics | null;
-  accessibilityMetrics: AccessibilityMetrics;
-  seoMetrics: { score: number };
-  optimizationSuggestions: OptimizationSuggestion[];
-  accessibilityIssues: AccessibilityIssue[];
-  seoIssues: SEOIssue[];
-  lastUpdated: number;
-}
+/**
+ * Comprehensive System Dashboard
+ * Advanced monitoring and management interface
+ */
+const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> = ({
+  isVisible,
+  onClose,
+}) => {
+  const [activeTab, setActiveTab] = useState<'overview' | 'performance' | 'accessibility' | 'seo' | 'security'>('overview');
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [accessibilityMetrics, setAccessibilityMetrics] = useState<AccessibilityMetrics | null>(null);
+  const [seoIssues, setSeoIssues] = useState<SEOIssue[]>([]);
+  const [alerts, setAlerts] = useState<Array<{
+    id: string;
+    type: 'error' | 'warning' | 'info';
+    message: string;
+    timestamp: number;
+  }>>([]);
 
-const ComprehensiveSystemDashboard: React.FC = () => {
-  const [data, setData] = useState<DashboardData | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<'overview' | 'performance' | 'accessibility' | 'seo'>('overview');
-  const [isMonitoring, setIsMonitoring] = useState(false);
+  useEffect(() => {
+    if (isVisible) {
+      // Initialize metrics
+      const loadMetrics = async () => {
+        try {
+          const perfMetrics = await performanceOptimizer.getMetrics();
+          setMetrics(perfMetrics);
 
-  // Initialize monitoring systems
-  const initializeMonitoring = useCallback(() => {
-    try {
-      performanceOptimizer.startMonitoring();
-      accessibilityEnhancer.startMonitoring();
-      seoOptimizer.initialize();
-      setIsMonitoring(true);
-    } catch (error) {
-      console.error('Error initializing monitoring systems:', error);
-    }
-  }, []);
+          const accMetrics = await accessibilityEnhancer.getMetrics();
+          setAccessibilityMetrics(accMetrics);
 
-  // Stop monitoring systems
-  const stopMonitoring = useCallback(() => {
-    try {
-      performanceOptimizer.stopMonitoring();
-      accessibilityEnhancer.stopMonitoring();
-      // seoOptimizer doesn't have stopMonitoring method
-      setIsMonitoring(false);
-    } catch (error) {
-      console.error('Error stopping monitoring systems:', error);
-    }
-  }, []);
-
-  // Update dashboard data
-  const updateDashboardData = useCallback(() => {
-    try {
-      const performanceMetrics = performanceOptimizer.getMetrics();
-      const performanceReport = performanceOptimizer.generateReport();
-      const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-      const accessibilityIssues = accessibilityEnhancer.getIssues();
-      // const seoMetrics = seoOptimizer.getMetrics(); // Method doesn't exist
-      // const seoIssues = seoOptimizer.getIssues(); // Method doesn't exist
-      const seoMetrics = { score: 85 }; // Placeholder
-      const seoIssues: SEOIssue[] = []; // Placeholder
-
-      const systemHealth: SystemHealth = {
-        performance: 85, // Placeholder score
-        accessibility: accessibilityMetrics.score,
-        seo: seoMetrics.score,
-        overall: Math.round((85 + accessibilityMetrics.score + seoMetrics.score) / 3)
+          const seoData = await seoOptimizer.analyzeSEO();
+          setSeoIssues(seoData.issues || []);
+        } catch (error) {
+          console.error('Error loading metrics:', error);
+        }
       };
 
-      setData({
-        systemHealth,
-        performanceMetrics,
-        accessibilityMetrics,
-        seoMetrics,
-        optimizationSuggestions: [], // Placeholder
-        accessibilityIssues,
-        seoIssues,
-        lastUpdated: Date.now()
-      });
+      loadMetrics();
+    }
+  }, [isVisible]);
+
+  const handleOptimize = useCallback(async (type: string) => {
+    try {
+      switch (type) {
+        case 'performance':
+          await performanceOptimizer.optimize();
+          break;
+        case 'accessibility':
+          await accessibilityEnhancer.enhance();
+          break;
+        case 'seo':
+          await seoOptimizer.optimize();
+          break;
+      }
+      
+      // Refresh metrics
+      const perfMetrics = await performanceOptimizer.getMetrics();
+      setMetrics(perfMetrics);
     } catch (error) {
-      console.error('Error updating dashboard data:', error);
+      console.error('Error optimizing:', error);
     }
   }, []);
 
-  // Load initial data
-  useEffect(() => {
-    const loadData = async () => {
-      setIsLoading(true);
-      initializeMonitoring();
-      
-      // Wait a bit for monitoring to initialize
-      setTimeout(() => {
-        updateDashboardData();
-        setIsLoading(false);
-      }, 1000);
-    };
-
-    loadData();
-
-    // Set up periodic updates
-    const interval = setInterval(updateDashboardData, 5000);
-
-    return () => {
-      clearInterval(interval);
-      stopMonitoring();
-    };
-  }, [initializeMonitoring, updateDashboardData, stopMonitoring]);
-
-  // Handle tab change
-  const handleTabChange = (tab: 'overview' | 'performance' | 'accessibility' | 'seo') => {
-    setActiveTab(tab);
-  };
-
-  // Get health status color
-  const getHealthColor = (score: number): string => {
-    if (score >= 90) return 'text-green-600';
-    if (score >= 70) return 'text-yellow-600';
-    return 'text-red-600';
-  };
-
-  // Get health status text
-  const getHealthStatus = (score: number): string => {
-    if (score >= 90) return 'Excellent';
-    if (score >= 70) return 'Good';
-    if (score >= 50) return 'Needs Improvement';
-    return 'Poor';
-  };
-
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-      </div>
-    );
-  }
-
-  if (!data) {
-    return (
-      <div className="text-center py-8">
-        <p className="text-gray-500">Unable to load dashboard data</p>
-      </div>
-    );
-  }
+  if (!isVisible) return null;
 
   return (
-    <div className="max-w-7xl mx-auto p-6">
-      {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">
-          Comprehensive System Dashboard
-        </h1>
-        <p className="text-gray-600">
-          Real-time monitoring of performance, accessibility, and SEO metrics
-        </p>
-        <div className="mt-4 flex items-center space-x-4">
-          <div className={`px-3 py-1 rounded-full text-sm font-medium ${
-            isMonitoring ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-          }`}>
-            {isMonitoring ? 'Monitoring Active' : 'Monitoring Inactive'}
-          </div>
-          <span className="text-sm text-gray-500">
-            Last updated: {new Date(data.lastUpdated).toLocaleTimeString()}
-          </span>
-        </div>
-      </div>
-
-      {/* System Health Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-        <div className="bg-white rounded-lg shadow p-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm font-medium text-gray-600">Overall Health</p>
-              <p className={`text-2xl font-bold ${getHealthColor(data.systemHealth.overall)}`}>
-                {data.systemHealth.overall}%
-              </p>
-              <p className="text-sm text-gray-500">{getHealthStatus(data.systemHealth.overall)}</p>
-            </div>
-            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
-            </div>
-          </div>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white rounded-lg shadow-xl max-w-6xl w-full mx-4 max-h-[90vh] overflow-hidden">
+        <div className="flex items-center justify-between p-6 border-b">
+          <h2 className="text-2xl font-bold text-gray-900">Comprehensive System Dashboard</h2>
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-gray-600 transition-colors"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm font-medium text-gray-600">Performance</p>
-              <p className={`text-2xl font-bold ${getHealthColor(data.systemHealth.performance)}`}>
-                {data.systemHealth.performance}%
-              </p>
-              <p className="text-sm text-gray-500">{getHealthStatus(data.systemHealth.performance)}</p>
-            </div>
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
+        <div className="flex">
+          <div className="w-64 bg-gray-50 border-r">
+            <nav className="p-4">
+              {[
+                { id: 'overview', label: 'Overview', icon: '📊' },
+                { id: 'performance', label: 'Performance', icon: '⚡' },
+                { id: 'accessibility', label: 'Accessibility', icon: '♿' },
+                { id: 'seo', label: 'SEO', icon: '🔍' },
+                { id: 'security', label: 'Security', icon: '🔒' },
+              ].map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id as any)}
+                  className={`w-full flex items-center space-x-3 px-3 py-2 rounded-lg text-left transition-colors ${
+                    activeTab === tab.id
+                      ? 'bg-blue-100 text-blue-700'
+                      : 'text-gray-700 hover:bg-gray-100'
+                  }`}
+                >
+                  <span className="text-lg">{tab.icon}</span>
+                  <span>{tab.label}</span>
+                </button>
+              ))}
+            </nav>
           </div>
-        </div>
 
-        <div className="bg-white rounded-lg shadow p-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm font-medium text-gray-600">Accessibility</p>
-              <p className={`text-2xl font-bold ${getHealthColor(data.systemHealth.accessibility)}`}>
-                {data.systemHealth.accessibility}%
-              </p>
-              <p className="text-sm text-gray-500">{getHealthStatus(data.systemHealth.accessibility)}</p>
-            </div>
-            <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-lg shadow p-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm font-medium text-gray-600">SEO</p>
-              <p className={`text-2xl font-bold ${getHealthColor(data.systemHealth.seo)}`}>
-                {data.systemHealth.seo}%
-              </p>
-              <p className="text-sm text-gray-500">{getHealthStatus(data.systemHealth.seo)}</p>
-            </div>
-            <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Tabs */}
-      <div className="mb-6">
-        <nav className="flex space-x-8">
-          {[
-            { id: 'overview', label: 'Overview' },
-            { id: 'performance', label: 'Performance' },
-            { id: 'accessibility', label: 'Accessibility' },
-            { id: 'seo', label: 'SEO' }
-          ].map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => handleTabChange(tab.id as any)}
-              className={`py-2 px-1 border-b-2 font-medium text-sm ${
-                activeTab === tab.id
-                  ? 'border-blue-500 text-blue-600'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </nav>
-      </div>
-
-      {/* Tab Content */}
-      <div className="bg-white rounded-lg shadow">
-        {activeTab === 'overview' && (
-          <div className="p-6">
-            <h2 className="text-xl font-semibold mb-4">System Overview</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-medium mb-3">Issues Summary</h3>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">Performance Issues:</span>
-                    <span className="text-sm font-medium">{data.optimizationSuggestions.length}</span>
+          <div className="flex-1 p-6 overflow-y-auto">
+            {activeTab === 'overview' && (
+              <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="bg-blue-50 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-blue-900 mb-2">Performance Score</h3>
+                    <div className="text-3xl font-bold text-blue-600">
+                      {metrics ? Math.round(metrics.overallScore) : '--'}
+                    </div>
+                    <div className="text-sm text-blue-700 mt-1">out of 100</div>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">Accessibility Issues:</span>
-                    <span className="text-sm font-medium">{data.accessibilityIssues.length}</span>
+                  
+                  <div className="bg-green-50 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-green-900 mb-2">Accessibility Score</h3>
+                    <div className="text-3xl font-bold text-green-600">
+                      {accessibilityMetrics ? Math.round(accessibilityMetrics.overallScore) : '--'}
+                    </div>
+                    <div className="text-sm text-green-700 mt-1">out of 100</div>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">SEO Issues:</span>
-                    <span className="text-sm font-medium">{data.seoIssues.length}</span>
+                  
+                  <div className="bg-purple-50 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-purple-900 mb-2">SEO Issues</h3>
+                    <div className="text-3xl font-bold text-purple-600">
+                      {seoIssues.length}
+                    </div>
+                    <div className="text-sm text-purple-700 mt-1">issues found</div>
+                  </div>
+                </div>
+
+                <div className="bg-white border rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Alerts</h3>
+                  {alerts.length === 0 ? (
+                    <p className="text-gray-500">No recent alerts</p>
+                  ) : (
+                    alerts.map((alert) => (
+                      <div key={alert.id} className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg mb-2">
+                        <div className={`w-2 h-2 rounded-full ${
+                          alert.type === 'error' ? 'bg-red-500' :
+                          alert.type === 'warning' ? 'bg-yellow-500' : 'bg-blue-500'
+                        }`} />
+                        <div className="flex-1">
+                          <p className="text-sm font-medium text-gray-900">{alert.message}</p>
+                          <div className="text-xs mt-2 text-gray-600">
+                            {new Date(alert.timestamp).toLocaleString()}
+                          </div>
+                        </div>
+                      </div>
+                    ))
+                  )}
+                </div>
+              </div>
+            )}
+
+            {activeTab === 'performance' && metrics && (
+              <div className="space-y-6">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-semibold text-gray-900">Performance Metrics</h3>
+                  <button
+                    onClick={() => handleOptimize('performance')}
+                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Optimize Performance
+                  </button>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-white border rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Core Web Vitals</h4>
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-600">LCP</span>
+                        <span className="font-semibold">{metrics.lcp}ms</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-600">FID</span>
+                        <span className="font-semibold">{metrics.fid}ms</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-600">CLS</span>
+                        <span className="font-semibold">{metrics.cls}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white border rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Optimization Suggestions</h4>
+                    <div className="space-y-2">
+                      {metrics.suggestions?.slice(0, 3).map((suggestion, index) => (
+                        <div key={index} className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                          <p className="text-sm text-yellow-800">{suggestion.description}</p>
+                          <div className="text-xs text-yellow-600 mt-1">
+                            Impact: {suggestion.impact}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
-              <div>
-                <h3 className="text-lg font-medium mb-3">Quick Actions</h3>
-                <div className="space-y-2">
+            )}
+
+            {activeTab === 'accessibility' && accessibilityMetrics && (
+              <div className="space-y-6">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-semibold text-gray-900">Accessibility Metrics</h3>
                   <button
-                    onClick={() => accessibilityEnhancer.fixCommonIssues()}
-                    className="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded hover:bg-blue-100"
+                    onClick={() => handleOptimize('accessibility')}
+                    className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
                   >
-                    Fix Common Accessibility Issues
+                    Enhance Accessibility
                   </button>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-white border rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Issues Found</h4>
+                    <div className="space-y-3">
+                      {accessibilityMetrics.issues?.slice(0, 5).map((issue, index) => (
+                        <div key={index} className="p-3 bg-red-50 border border-red-200 rounded-lg">
+                          <p className="text-sm font-medium text-red-800">{issue.type}</p>
+                          <p className="text-xs text-red-600 mt-1">{issue.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="bg-white border rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Improvements</h4>
+                    <div className="space-y-2">
+                      {accessibilityMetrics.improvements?.slice(0, 3).map((improvement, index) => (
+                        <div key={index} className="p-3 bg-green-50 border border-green-200 rounded-lg">
+                          <p className="text-sm text-green-800">{improvement}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeTab === 'seo' && (
+              <div className="space-y-6">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-semibold text-gray-900">SEO Analysis</h3>
                   <button
-                    onClick={() => console.log('SEO optimization clicked')}
-                    className="w-full text-left px-3 py-2 text-sm bg-green-50 text-green-700 rounded hover:bg-green-100"
+                    onClick={() => handleOptimize('seo')}
+                    className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
                   >
                     Optimize SEO
                   </button>
                 </div>
-              </div>
-            </div>
-          </div>
-        )}
 
-        {activeTab === 'performance' && (
-          <div className="p-6">
-            <h2 className="text-xl font-semibold mb-4">Performance Metrics</h2>
-            {data.performanceMetrics ? (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div>
-                  <h3 className="text-lg font-medium mb-3">Core Web Vitals</h3>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span className="text-sm text-gray-600">LCP:</span>
-                      <span className="text-sm font-medium">{data.performanceMetrics.lcp.toFixed(0)}ms</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-sm text-gray-600">FID:</span>
-                      <span className="text-sm font-medium">{data.performanceMetrics.fid.toFixed(0)}ms</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-sm text-gray-600">CLS:</span>
-                      <span className="text-sm font-medium">{data.performanceMetrics.cls.toFixed(3)}</span>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium mb-3">Resource Metrics</h3>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span className="text-sm text-gray-600">Load Time:</span>
-                      <span className="text-sm font-medium">{data.performanceMetrics.loadTime?.toFixed(0) || 'N/A'}ms</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-sm text-gray-600">Memory Usage:</span>
-                      <span className="text-sm font-medium">{data.performanceMetrics.memoryUsage ? (data.performanceMetrics.memoryUsage / 1024 / 1024).toFixed(1) : 'N/A'}MB</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-sm text-gray-600">Network Requests:</span>
-                      <span className="text-sm font-medium">N/A</span>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium mb-3">Optimization Suggestions</h3>
-                  <div className="space-y-2 max-h-48 overflow-y-auto">
-                    {data.optimizationSuggestions.map((suggestion, index) => (
-                      <div key={index} className="p-2 bg-yellow-50 rounded text-sm">
-                        <div className="font-medium text-yellow-800">{suggestion.title}</div>
-                        <div className="text-yellow-700">{suggestion.description}</div>
+                <div className="bg-white border rounded-lg p-6">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Issues Found</h4>
+                  <div className="space-y-3">
+                    {seoIssues.slice(0, 5).map((issue, index) => (
+                      <div key={index} className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                        <p className="text-sm font-medium text-yellow-800">{issue.type}</p>
+                        <p className="text-xs text-yellow-600 mt-1">{issue.description}</p>
+                        <div className="text-xs text-yellow-600 mt-1">
+                          Priority: {issue.priority}
+                        </div>
                       </div>
                     ))}
                   </div>
                 </div>
               </div>
-            ) : (
-              <p className="text-gray-500">Performance metrics not available</p>
+            )}
+
+            {activeTab === 'security' && (
+              <div className="space-y-6">
+                <h3 className="text-xl font-semibold text-gray-900">Security Dashboard</h3>
+                <div className="bg-white border rounded-lg p-6">
+                  <p className="text-gray-600">Security monitoring features coming soon...</p>
+                </div>
+              </div>
             )}
           </div>
-        )}
-
-        {activeTab === 'accessibility' && (
-          <div className="p-6">
-            <h2 className="text-xl font-semibold mb-4">Accessibility Metrics</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-medium mb-3">Issues Breakdown</h3>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">Total Issues:</span>
-                    <span className="text-sm font-medium">{data.accessibilityMetrics.totalIssues}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-red-600">Errors:</span>
-                    <span className="text-sm font-medium">{data.accessibilityMetrics.errors}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-yellow-600">Warnings:</span>
-                    <span className="text-sm font-medium">{data.accessibilityMetrics.warnings}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-blue-600">Info:</span>
-                    <span className="text-sm font-medium">{data.accessibilityMetrics.info}</span>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium mb-3">Recent Issues</h3>
-                <div className="space-y-2 max-h-48 overflow-y-auto">
-                  {data.accessibilityIssues.slice(0, 5).map((issue, index) => (
-                    <div key={index} className="p-2 bg-red-50 rounded text-sm">
-                      <div className="font-medium text-red-800">{issue.message}</div>
-                      <div className="text-red-700">{issue.suggestion}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {activeTab === 'seo' && (
-          <div className="p-6">
-            <h2 className="text-xl font-semibold mb-4">SEO Metrics</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-medium mb-3">Page Analysis</h3>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">Page Title:</span>
-                    <span className="text-sm font-medium truncate max-w-xs">N/A</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">Meta Description:</span>
-                    <span className="text-sm font-medium">N/A</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">Images:</span>
-                    <span className="text-sm font-medium">N/A</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">Links:</span>
-                    <span className="text-sm font-medium">N/A</span>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium mb-3">SEO Issues</h3>
-                <div className="space-y-2 max-h-48 overflow-y-auto">
-                  {data.seoIssues.slice(0, 5).map((issue, index) => (
-                    <div key={index} className="p-2 bg-orange-50 rounded text-sm">
-                      <div className="font-medium text-orange-800">{issue.message}</div>
-                      <div className="text-orange-700">{issue.suggestion}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
+        </div>
       </div>
     </div>
   );

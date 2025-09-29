@@ -1,25 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { AppRouter } from './router';
-import { initializeErrorReporting } from './utils/errorReporting';
-import { initOptimizations } from './utils/buildOptimizations';
-import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
-import { accessibilityManager } from './utils/accessibility';
-import { PerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
-import { analytics } from './utils/analytics';
-import { seoOptimizer } from './utils/seoOptimization';
-import { cacheManager } from './utils/cacheManager';
-import { apiClient } from './utils/apiClient';
-import { notificationManager } from './utils/notificationManager';
-import { userFeedback } from './utils/userFeedbackManager';
+import { useAppInitialization } from './hooks/useAppInitialization';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import RealTimeMonitor from './components/RealTimeMonitor';
-import { performanceOptimizer } from './utils/performanceOptimizer';
-import { enhancedPerformanceOptimizer } from './utils/enhancedPerformance';
-import { enhancedSecurityManager } from './utils/enhancedSecurity';
-import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
+import SystemMetricsDashboard from './components/SystemMetricsDashboard';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
@@ -28,27 +14,39 @@ import './styles/notifications.css';
 import './styles/system-metrics.css';
 import './styles/modern-utilities.css';
 
-export default function App(): React.JSX.Element {
+export default function App(): React.ReactElement {
+  const [isInitialized, setIsInitialized] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  // Initialize app
+  const {
+    performanceMetrics,
+    systemMetrics,
+    accessibilityMetrics,
+    seoMetrics,
+    securityMetrics,
+    isLoading: appLoading,
+    error: appError
+  } = useAppInitialization();
+
   useEffect(() => {
     const initializeApp = async () => {
       try {
-        // Initialize error reporting
-        initializeErrorReporting();
+        setIsLoading(true);
+        setError(null);
         
-        // Initialize optimizations
-        initOptimizations();
+        // Add performance marks for better monitoring
+        if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
+          performance.mark('app-init-start');
+        }
         
-        // Initialize basic systems (only call methods that exist)
-        console.log('🚀 Zion Tech Group App initialized');
+        // Simulate initialization time
+        await new Promise(resolve => setTimeout(resolve, 1000));
         
-        setIsLoading(false);
-      } catch (error) {
-        console.error('Failed to initialize app:', error);
+        setIsInitialized(true);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to initialize app');
+      } finally {
         setIsLoading(false);
       }
     };
@@ -56,82 +54,84 @@ export default function App(): React.JSX.Element {
     initializeApp();
   }, []);
 
-  // Keyboard shortcuts
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey) {
-        switch (event.key) {
-          case 'O':
-            event.preventDefault();
-            setShowPerformanceOptimizer(true);
-            break;
-          case 'M':
-            event.preventDefault();
-            setShowPerformanceMonitor(true);
-            break;
-        }
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+  const handleError = useCallback((error: Error, errorInfo: React.ErrorInfo) => {
+    console.error('App Error:', error, errorInfo);
+    setError(error.message);
   }, []);
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <ModernLoadingSpinner
-          size="xl"
-          text="Initializing Zion Tech Group..."
-          showProgress={true}
-          progress={85}
-        />
-      </div>
-    );
-  }
+  const appContent = useMemo(() => {
+    if (isLoading || appLoading) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <ModernLoadingSpinner size="xl" />
+            <p className="mt-4 text-gray-600">Initializing application...</p>
+          </div>
+        </div>
+      );
+    }
+
+    if (error || appError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <div className="text-red-500 text-6xl mb-4">⚠️</div>
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">Application Error</h1>
+            <p className="text-gray-600 mb-4">{error || appError}</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Reload Application
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    return <AppRouter />;
+  }, [isLoading, appLoading, error, appError]);
 
   return (
-    <EnhancedErrorBoundary>
-      <div className="min-h-screen bg-gray-50">
-        <AppRouter />
+    <EnhancedErrorBoundary onError={handleError}>
+      <div className="App">
+        {appContent}
         
-        {/* Performance Optimizer Modal */}
-        {showPerformanceOptimizer && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold">Performance Optimizer</h2>
-                <button
-                  onClick={() => setShowPerformanceOptimizer(false)}
-                  className="text-gray-500 hover:text-gray-700 text-2xl"
-                >
-                  ✕
-                </button>
-              </div>
-              <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)}>
-                <div>Performance optimization in progress...</div>
-              </PerformanceOptimizer>
-            </div>
-          </div>
-        )}
-
-        {/* Performance Monitor Modal */}
-        {showPerformanceMonitor && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold">Performance Monitor</h2>
-                <button
-                  onClick={() => setShowPerformanceMonitor(false)}
-                  className="text-gray-500 hover:text-gray-700 text-2xl"
-                >
-                  ✕
-                </button>
-              </div>
-              <EnhancedSystemDashboard />
-            </div>
-          </div>
-        )}
+        {/* Performance Dashboard */}
+        <PerformanceDashboard
+          isVisible={false}
+          onClose={() => {}}
+        />
+        
+        {/* Real-time Monitor */}
+        <RealTimeMonitor
+          isVisible={false}
+          onClose={() => {}}
+        />
+        
+        {/* System Metrics Dashboard */}
+        <SystemMetricsDashboard
+          isVisible={false}
+          onClose={() => {}}
+        />
+        
+        {/* Enhanced System Dashboard */}
+        <EnhancedSystemDashboard
+          isVisible={false}
+          onClose={() => {}}
+        />
+        
+        {/* Enhanced Notification System */}
+        <EnhancedNotificationSystem
+          notifications={[]}
+          onRemove={() => {}}
+        />
+        
+        {/* Performance Optimizer */}
+        <PerformanceOptimizer
+          isVisible={false}
+          onClose={() => {}}
+        />
       </div>
     </EnhancedErrorBoundary>
   );
