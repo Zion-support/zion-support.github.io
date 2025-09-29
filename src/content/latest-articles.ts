@@ -17,20 +17,6 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
-<<<<<<< HEAD
-    id: "ai-enterprise-security-2026",
-    slug: "ai-enterprise-security-2026",
-    title: "AI Enterprise Security 2026: Zero-Trust Architecture for AI Systems",
-    description: "Comprehensive guide to implementing zero-trust security architecture for enterprise AI systems. Learn about AI-specific security challenges, best practices, and implementation strategies.",
-    excerpt: "Implement AI-specific zero-trust principles with model validation and data lineage tracking for 99.9% security compliance.",
-    author: "Zion Tech Group Team",
-    date: "2026-01-20",
-    category: "AI Security",
-    tags: ["AI Security", "Zero Trust", "Enterprise", "Governance"],
-    featured: true,
-    readTime: "15 min read",
-    image: "/images/ai-enterprise-security-2026.jpg",
-=======
     id: "zero-trust-for-genai-2026",
     slug: "zero-trust-for-genai-2026",
     title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",
@@ -43,41 +29,10 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "8 min read",
     image: "/images/zero-trust-for-genai-2026.jpg",
->>>>>>> feature/add-more-content-and-advertise
     newBadge: true,
     trending: true
   },
   {
-<<<<<<< HEAD
-    id: "ai-multimodal-enterprise-2026",
-    slug: "ai-multimodal-enterprise-2026",
-    title: "AI Multimodal Enterprise 2026: Vision, Language, and Audio Integration",
-    description: "Complete guide to implementing multimodal AI systems in enterprise environments. Learn about vision-language models, audio processing, and cross-modal reasoning for business applications.",
-    excerpt: "Implement multimodal AI systems that process text, images, and audio simultaneously with 40% improvement in accuracy.",
-    author: "Zion Tech Group Team",
-    date: "2026-01-19",
-    category: "Multimodal AI",
-    tags: ["Multimodal AI", "Vision Language", "Enterprise AI", "Integration"],
-    featured: true,
-    readTime: "18 min read",
-    image: "/images/ai-multimodal-enterprise-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-sustainability-transformation-2026",
-    slug: "ai-sustainability-transformation-2026",
-    title: "AI Sustainability Transformation 2026: $15M Green Tech Implementation",
-    description: "How a Fortune 500 energy company achieved 60% reduction in carbon footprint and $15M annual savings through comprehensive AI sustainability transformation.",
-    excerpt: "Achieve 60% carbon reduction and $15M savings with AI-driven sustainability transformation for Fortune 500 energy companies.",
-    author: "Zion Tech Group Team",
-    date: "2026-01-18",
-    category: "Case Study",
-    tags: ["Sustainability", "Green Tech", "Energy", "Case Study"],
-    featured: true,
-    readTime: "12 min read",
-    image: "/images/ai-sustainability-transformation-2026.jpg",
-=======
     id: "quantum-ai-hybrid-blueprint-2026",
     slug: "quantum-ai-hybrid-blueprint-2026",
     title: "Quantum‑AI Hybrid Blueprint 2026: Practical Near‑Term Wins",
@@ -90,7 +45,6 @@ export const latestArticles: LatestArticle[] = [
     featured: false,
     readTime: "9 min read",
     image: "/images/quantum-ai-hybrid-blueprint-2026.jpg",
->>>>>>> feature/add-more-content-and-advertise
     newBadge: true,
     trending: true
   },
@@ -142,54 +96,7 @@ export const latestArticles: LatestArticle[] = [
     newBadge: true,
     trending: true
   },
-  {
-    id: "secure-ml-supply-chain-2026",
-    slug: "secure-ml-supply-chain-2026",
-    title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
-    description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
-    excerpt: "Stop ML supply‑chain drift with automated SBOMs, attestations, and CI policy gates.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "Security",
-    tags: ["ML", "Supply Chain", "SBOM", "Security"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/secure-ml-supply-chain-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "genai-routing-blueprint-2026",
-    slug: "genai-routing-blueprint-2026",
-    title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",
-    description: "Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.",
-    excerpt: "A practical guide to keep costs predictable without hurting UX or outcomes.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "GenAI",
-    tags: ["Routing", "Quality Tiers", "Budgets", "Caching"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/genai-routing-blueprint-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "golden-paths-roi-2026",
-    slug: "golden-paths-roi-2026",
-    title: "Golden Paths ROI 2026: Scorecards that Prove Platform Value",
-    description: "Link developer journeys to SLOs, adoption, and revenue with actionable scorecards.",
-    excerpt: "Shift platform conversations from infra spend to shipped outcomes and ROI.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "Platform Engineering",
-    tags: ["Golden Paths", "Scorecards", "ROI"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/golden-paths-roi-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
+  // deduplicated entries retained below
   {
     id: "reliable-rag-ops-2026",
     slug: "reliable-rag-ops-2026",
