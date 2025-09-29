@@ -73,6 +73,7 @@ import {
   AICostOptimizationBanner,
   AICostOptimizationShowcase
 } from '../components/AICostOptimizationBanner';
+import { Revolutionary2026ContentBanner } from '../components/Revolutionary2026ContentBanner';
 import { EnhancedContentShowcase2026 } from '../components/EnhancedContentShowcase2026';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
@@ -113,6 +114,9 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
+      
       {/* New 2026 Content Promotional Banners */}
       <RevolutionaryAutomationBanner />
       <AIRevolutionaryAutomationBanner />
