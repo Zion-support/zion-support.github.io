@@ -22,6 +22,7 @@ import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
+import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
 
@@ -111,6 +112,10 @@ const Home = () => {
           ctaLink="/blog/serverless-inference-cost-playbook-2025"
           dismissible={true}
         />
+        {/* New Content Promo Banner */}
+        <div className="container mx-auto px-6 mt-6 relative z-10">
+          <NewContentPromoBanner variant="premium" />
+        </div>
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>

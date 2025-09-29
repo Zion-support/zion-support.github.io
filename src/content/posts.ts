@@ -10,6 +10,36 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-ethics-implementation-guide-2025",
+    title: "AI Ethics Implementation Guide: Policies That Unblock Delivery",
+    description:
+      "Concrete controls, approval flows, and policy tests that keep AI shipping fast without risking brand or compliance.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "iot-security-best-practices-2025",
+    title: "IoT Security 2025: A Field Guide to Hardening at Scale",
+    description:
+      "Device identity, fleet patching, and secure update channels—practical playbooks for resilient IoT deployments.",
+    category: "Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "11 min read",
+  },
+  {
+    slug: "enterprise-genai-adoption-roadmap-2025",
+    title: "Enterprise GenAI Adoption Roadmap: From POCs to Reliable ROI",
+    description:
+      "Org design, guardrails, and evaluation programs that turn pilots into production impact in under 90 days.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
     slug: "ai-sales-copilot-2025",
     title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
     description:
