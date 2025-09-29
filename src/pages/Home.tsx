@@ -104,8 +104,8 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: Platform Engineering Blueprint + GenAI Guardrails"
-          description="Fresh guides on golden paths for 100+ teams and policy tests that scale"
+          title="🚀 NEW: Edge Inference, OTel That Matters, GenAI Guardrails"
+          description="Sub‑100ms patterns, tail‑based sampling, and production‑ready GenAI policy tests"
           ctaText="Read the latest"
           ctaLink="/blog"
           dismissible={true}

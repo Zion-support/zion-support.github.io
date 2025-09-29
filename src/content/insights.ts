@@ -9,6 +9,33 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "edge-inference-latency-budgeting",
+    title: "Edge Inference Latency Budgeting: Hitting Sub‑100ms",
+    summary:
+      "A simple budgeting worksheet for network, model, and render paths to deliver instant AI UX.",
+    category: "Architecture",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
+  {
+    id: "otel-tail-based-sampling",
+    title: "Tail‑Based Sampling That Surfaces Real Incidents",
+    summary:
+      "Configure signal‑driven sampling and semantic attributes to catch the 1% that matters.",
+    category: "Observability",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "genai-policy-tests",
+    title: "GenAI Policy Tests You Can Ship This Week",
+    summary:
+      "Starter suite of safety checks, jailbreak tests, and canary prompts wired into CI/CD.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
     id: "observability-otel-traces-that-matter",
     title: "OpenTelemetry in Production: Traces That Engineers Actually Use",
     summary:

@@ -1,4 +1,3 @@
-/* global HTMLInputElement, HTMLTextAreaElement, HTMLSelectElement */
 import React, { useState } from 'react';
 import { Send, CheckCircle } from 'lucide-react';
 
@@ -11,6 +10,8 @@ interface FormData {
   budget: string;
   message: string;
 }
+
+type FormElement = HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
 
 export default function EnhancedContactForm(): React.JSX.Element {
   const [formData, setFormData] = useState<FormData>({
@@ -26,7 +27,9 @@ export default function EnhancedContactForm(): React.JSX.Element {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<any>) => {
+  const handleChange = (
+    e: React.ChangeEvent<FormElement>
+  ) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,

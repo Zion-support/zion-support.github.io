@@ -125,6 +125,75 @@ Don't let your competitors gain an edge. Start your AI automation journey today 
     image: "/images/ai-workflow-automation.jpg"
   },
   {
+    slug: "edge-inference-patterns-2025",
+    title: "Edge Inference Patterns for Sub‑100ms Experiences",
+    description: "Latency budgets, on‑device models, and caching strategies for lightning‑fast AI UX at the edge.",
+    content: `
+# Edge Inference Patterns for Sub‑100ms Experiences
+
+Delivering sub‑100ms end‑to‑end latency requires precise engineering across the entire request path. This guide covers practical patterns for model placement, on‑device inference, token streaming, speculative decoding, and edge caching to achieve perceptibly instant AI interactions.
+
+## Key Patterns
+- On‑device or nearest‑pop model placement
+- Response streaming with partial hydration
+- Aggressive caching with TTL + background refresh
+- Quantization and distillation for smaller, faster models
+
+## Results
+Teams regularly cut p95 latency by 40‑60% while reducing infra cost 20‑30%.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Architecture",
+    tags: ["Edge AI", "Latency", "Inference", "Performance"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-inference-patterns.jpg"
+  },
+  {
+    slug: "observability-otel-traces-that-matter",
+    title: "OpenTelemetry in Production: Traces That Engineers Actually Use",
+    description: "Sampling, semantic conventions, and dashboards that shrink MTTR for complex stacks.",
+    content: `
+# OpenTelemetry in Production: Traces That Engineers Actually Use
+
+Most tracing fails to move MTTR. We outline a pragmatic approach: choose business‑aligned spans, adopt stable semantic conventions, configure tail‑based sampling, and wire golden dashboards that engineers open first during incidents.
+
+## What Works
+- Task‑oriented spans with consistent attributes
+- Tail‑based sampling on error/latency signals
+- SLO‑anchored dashboards and alerting
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Observability",
+    tags: ["OpenTelemetry", "Tracing", "SRE", "MTTR"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/otel-traces.jpg"
+  },
+  {
+    slug: "genai-guardrails-at-scale",
+    title: "GenAI Guardrails at Scale: From Evals to Enforcement",
+    description: "A practical blueprint for policy tests, classifiers, and kill‑switches that keep your GenAI safe in prod.",
+    content: `
+# GenAI Guardrails at Scale: From Evals to Enforcement
+
+Go beyond prompt hardening with layered controls: offline eval suites, online policy tests, output classifiers, and circuit‑breakers that fail safe. Includes reference architectures and rollout plans.
+
+## Outcomes
+- 40% reduction in incident rate
+- Faster iteration via automated policy tests
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["GenAI", "Safety", "Guardrails", "Evals"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-guardrails.jpg"
+  },
+  {
     slug: "ai-virtual-assistant-best-practices",
     title: "Best Practices for Implementing AI Virtual Assistants in 2025",
     description: "Learn how to successfully implement AI virtual assistants in your business. Discover strategies for training, deployment, and optimization.",

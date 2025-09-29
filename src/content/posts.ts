@@ -10,6 +10,36 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "reliable-realtime-pipelines",
+    title: "Building Reliable Real‑Time Data Pipelines",
+    description:
+      "Design patterns for exactly‑once semantics, idempotency keys, and backpressure control.",
+    category: "Data Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "north-star-metrics-that-work",
+    title: "North‑Star Metrics That Actually Drive Growth",
+    description:
+      "Avoid vanity traps with leading indicators tied to activation, retention, and revenue.",
+    category: "Product Analytics",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "5 min read",
+  },
+  {
+    slug: "operationalizing-genai-safely",
+    title: "Operationalizing GenAI Safely and at Scale",
+    description:
+      "Blueprint for evals, policy tests, canaries, and rollback strategies in production.",
+    category: "MLOps",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:
