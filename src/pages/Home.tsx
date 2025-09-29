@@ -105,10 +105,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 New: AI Adoption Scorecard + GenAI Incident Postmortems"
-          description="Executive metrics that drive outcomes, plus policy tests that prevent repeat incidents."
+          title="🚀 Fresh: AI Governance at Scale + Cloud FinOps QA Gates"
+          description="Policies that enable speed, plus QA gates that cut spend without slowing teams."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-adoption-scorecard-2025"
+          ctaLink="/blog/ai-governance-at-scale-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
