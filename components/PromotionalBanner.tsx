@@ -398,62 +398,47 @@ export const NewContent2026Banner = () => (
   />
 );
 
-// AI Agent Orchestration 2026 Banner
-export const AIAgentOrchestrationBanner = () => (
+// New 2026 Operational Excellence & Observability Banners
+export const AIOperationalExcellenceBanner = () => (
   <PromotionalBanner
-    message="⚡ AI Agent Orchestration 2026: Master multi-agent systems with 95% automation efficiency and $5M+ ROI!"
-    ctaText="Learn More"
-    ctaLink="/blog/ai-agent-orchestration-2026"
+    message="⚙️ NEW: AI Operational Excellence 2026 - 95% Automation & $5M+ Savings with Zero-Touch Operations"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-operational-excellence-2026"
+    backgroundColor="bg-gradient-to-r from-emerald-600 to-teal-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AIAgentObservabilityBanner = () => (
+  <PromotionalBanner
+    message="🔍 NEW: AI Agent Observability 2026 - 99.9% Reliability with Real-time Monitoring & 85% Faster Debugging"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-agent-observability-2026"
     backgroundColor="bg-gradient-to-r from-blue-600 to-cyan-600"
     autoHide={true}
     hideAfter={20}
   />
 );
 
-// AI Sustainability Banner
-export const AISustainabilityBanner = () => (
+export const ManufacturingTransformationBanner = () => (
   <PromotionalBanner
-    message="🌱 AI Sustainability 2026: Achieve carbon-neutral AI operations with 80% energy reduction and $2M+ savings!"
-    ctaText="Go Green"
-    ctaLink="/blog/ai-sustainability-green-tech-2026"
-    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
+    message="🏭 NEW: $12M ROI Manufacturing Case Study - 98% Automation, 400% Productivity Gains & Zero-Defect Production"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-manufacturing-transformation-2026"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
     autoHide={true}
     hideAfter={22}
   />
 );
 
-// Quantum Computing Banner
-export const QuantumComputingBanner = () => (
+export const Latest2026ContentBanner = () => (
   <PromotionalBanner
-    message="⚛️ Quantum Computing 2026: Harness 1000x faster optimization and revolutionary AI capabilities!"
-    ctaText="Discover Quantum AI"
-    ctaLink="/blog/ai-quantum-computing-2026"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-// Sustainability Case Study Banner
-export const SustainabilityCaseStudyBanner = () => (
-  <PromotionalBanner
-    message="📊 New Case Study: See how a Fortune 500 company achieved 85% energy reduction and $3.2M savings!"
-    ctaText="View Case Study"
-    ctaLink="/case-studies/ai-sustainability-transformation-2026"
-    backgroundColor="bg-gradient-to-r from-emerald-600 to-green-600"
+    message="✨ LATEST 2026: Operational Excellence, Agent Observability & Manufacturing Success - Premium AI Content"
+    ctaText="Browse Latest"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
     autoHide={true}
     hideAfter={18}
-  />
-);
-
-// Quantum Optimization Case Study Banner
-export const QuantumOptimizationBanner = () => (
-  <PromotionalBanner
-    message="🚀 Quantum Optimization Success: 1000x faster logistics with $12M savings - See the full case study!"
-    ctaText="Read Case Study"
-    ctaLink="/case-studies/ai-quantum-optimization-2026"
-    backgroundColor="bg-gradient-to-r from-violet-600 to-purple-600"
-    autoHide={true}
-    hideAfter={20}
   />
 );
