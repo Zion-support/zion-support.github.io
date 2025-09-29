@@ -15,6 +15,7 @@ import {
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
+import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
 import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
@@ -166,6 +167,11 @@ const Home = () => {
           </div>
         </div>
         <LatestInsights />
+
+        {/* Featured content showcase to highlight new articles and insights */}
+        <div className="bg-white">
+          <FeaturedContentShowcase className="py-12" />
+        </div>
 
         {/* New Services Showcase */}
         <section className="container mx-auto px-6 py-20 relative z-10">

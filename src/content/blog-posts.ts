@@ -14,6 +14,61 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-roadmap-exec-guide-2025",
+    title: "Executive Guide: Designing High‑Impact AI Roadmaps in 2025",
+    description: "A practical framework to align AI bets with measurable business outcomes and ship value fast.",
+    content: `
+# Executive Guide: Designing High‑Impact AI Roadmaps in 2025
+
+Leaders need a clear, outcome‑driven approach to AI initiatives. This guide covers portfolio selection, capability roadmaps, and delivery rituals that keep value flowing.
+
+## What Makes a Good AI Bet
+- Tied to a measurable KPI
+- Well‑scoped user value and data availability
+- Clear guardrails, privacy, and compliance path
+
+## Delivery Rhythm
+- Quarterly bets, monthly reviews, weekly demos
+- Offline + online evals wired into CI/CD
+- Tight feedback loops with product and risk teams
+
+Adopt this approach to consistently turn AI ideas into shipped outcomes.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Strategy",
+    tags: ["AI Roadmap", "Product", "Governance"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-roadmap-exec-guide.jpg"
+  },
+  {
+    slug: "shipping-evals-in-prod-2025",
+    title: "Shipping GenAI With Confidence: Evals That Catch Regressions",
+    description: "How to wire offline suites and policy tests into CI and observe quality in prod.",
+    content: `
+# Shipping GenAI With Confidence: Evals That Catch Regressions
+
+Learn how to combine offline evaluation suites, red‑team tests, and online guardrails to prevent quality drift as you iterate.
+
+## Core Practices
+- Scenario libraries mapped to KPIs
+- Policy tests for safety and brand
+- Canary cohorts with automatic rollback
+
+## Tooling Tips
+- Golden datasets, versioned prompts, reproducible seeds
+- Eval dashboards and alerting
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["Evaluation", "Policy", "Observability"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/genai-evals-confidence.jpg"
+  },
+  {
     slug: "real-time-data-pipelines-2025",
     title: "Building Reliable Real‑Time Data Pipelines in 2025",
     description: "Blueprints for exactly-once semantics, backpressure, and observability from dev to prod.",
