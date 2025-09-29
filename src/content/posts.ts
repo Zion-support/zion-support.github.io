@@ -179,7 +179,6 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "12 min read",
   },
-  },
   {
     slug: "platform-engineering-blueprint-2025",
     title: "A Practical Blueprint for Platform Engineering in 2025",
