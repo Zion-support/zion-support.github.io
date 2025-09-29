@@ -92,33 +92,32 @@ export const posts: BlogPost[] = [
   }
   ,
   {
-    slug: "ai-operational-scorecards-2026",
-    title: "AI Operational Scorecards 2026: Guardrails That Drive Outcomes",
-    description: "From policy to practice: PR checks, canaries, and SLOs that teams adopt.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "edge-llm-caching-blueprint-2025",
-    title: "Edge LLM Caching: Latency Budgets, KV Patterns, and Cost Control",
-    description: "Sub-100ms prompts with signed configs, tiered caches, and freshness windows.",
-    category: "Architecture",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "agentic-workflows-blueprint-2026",
-    title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Policy Tests",
-    description: "Composable tools, deterministic routes, and observability that keep agents reliable.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
+    slug: "secure-agents-runtime-2026",
+    title: "Secure AI Agents Runtime: Sandboxes, Egress Policies, and Traces",
+    description: "A production checklist for running AI agents safely with isolation, policy gates, and observability.",
+    category: "AI Security",
+    publishedAt: "2025-10-09",
     featured: true,
     readTime: "8 min read"
   },
   {
+    slug: "edge-e2e-observability-2026",
+    title: "Edge E2E Observability: User-Centric Tracing and <100ms Telemetry",
+    description: "Blueprint for capturing user-centric telemetry across edge, CDN, and app layers without latency tax.",
+    category: "Architecture",
+    publishedAt: "2025-10-09",
+    featured: false,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-cost-controllers-2026",
+    title: "AI Cost Controllers: Budgets, Tiered Quality, and Guardrails",
+    description: "Keep GenAI spend predictable with dynamic budgets, tiered models, and policy‑backed routes.",
+    category: "Cloud",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "6 min read"
+  },
     slug: "ai-governance-blueprint-2025",
     title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
     description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.",

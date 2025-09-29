@@ -1,7 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-<<<<<<< HEAD
-=======
 import {
   Mail,
   Phone,
@@ -17,7 +15,6 @@ import {
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 // import EnhancedContactForm from "../components/EnhancedContactForm";
->>>>>>> origin/main
 
 export default function Contact(): React.JSX.Element {
   return (
@@ -25,13 +22,6 @@ export default function Contact(): React.JSX.Element {
       <Helmet>
         <title>Contact - Zion Tech Group</title>
       </Helmet>
-<<<<<<< HEAD
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center p-8">
-          <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
-          <p>Reach out to our team at contact@ziontechgroup.com.</p>
-        </div>
-=======
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
         <Header />
@@ -249,7 +239,6 @@ export default function Contact(): React.JSX.Element {
         </section>
 
         <Footer />
->>>>>>> origin/main
       </div>
     </>
   );
