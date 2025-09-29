@@ -23,6 +23,7 @@ import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import ROICalculator from "../components/ROICalculator";
 import Header from "../components/Header";
+import LatestContentBanner from "../components/LatestContentBanner";
 import ModernFeatures from "../components/ModernFeatures";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
@@ -103,13 +104,18 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        <LatestContentBanner variant="info" autoRotate={true} rotationInterval={6000} />
         <ContentPromotionBanner
           title="New: AI Sales Copilot, Event‑Driven at Scale, Zero‑Downtime Migrations"
           description="Fresh 2025 content: grounded AI copilots for sales, resilient EDA contracts, and safe schema rollouts."
           ctaText="Explore new content"
           ctaLink="/blog"
           variant="info"
-          className="border-b border-white/10"
+          title="🚀 Fresh: AI Platform Engineering 2025 + Edge AI Latency Budgets"
+          description="New long-form guide and 3 brand-new articles across Platform, Governance, and MLOps."
+          ctaText="Read the latest"
+          ctaLink="/blog/ai-platform-engineering-2025"
+          dismissible={true}
         />
 
         {/* New Content Promotion Banner */}
@@ -185,6 +191,21 @@ const Home = () => {
               Transform your business with our cutting-edge AI solutions, enterprise-grade security, 
               and next-generation cloud infrastructure. Join 500+ companies already scaling with us!
             </p>
+
+            {/* Latest Content Highlights */}
+            <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-400/30 rounded-xl p-6 mb-8 animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
+                <span className="text-lg font-bold text-green-400">LATEST CONTENT</span>
+                <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                🎯 New: AI Platform Engineering 2025 + Edge AI Latency Budgets
+              </p>
+              <p className="text-zion-slate-light text-sm">
+                Long-form guide and 3 new posts across Platform, Governance, and MLOps
+              </p>
+            </div>
 
             {/* Special Promotion Banner */}
             <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-xl p-6 mb-8 animate-fade-in">
@@ -656,28 +677,7 @@ const Home = () => {
         {/* Latest Articles */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
-            {/* New Content Announcement */}
-            <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-400/30 rounded-xl p-6 mb-10">
-              <div className="flex items-center gap-3 mb-3">
-                <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
-                <span className="text-lg font-bold text-purple-700">📚 NEW CONTENT ALERT</span>
-                <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
-              </div>
-              <p className="text-gray-700 font-semibold mb-2">
-                🚀 Just Published: 5 Revolutionary Articles on AI Automation, Cloud Infrastructure, and Enterprise AI Implementation
-              </p>
-              <p className="text-gray-600 text-sm mb-4">
-                Discover the latest insights on AI-powered business automation, next-gen cloud infrastructure, and strategic AI roadmaps for 2025.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">AI Automation</span>
-                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Cloud Strategy</span>
-                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">AI Governance</span>
-                <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">Platform Engineering</span>
-              </div>
-            </div>
-            
-            <div className="mb-10 flex items-end justify-between">
+            <div className="mb-10 flex items-end justify_between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
                 <p className="text-gray-600">Fresh: AI Governance, Golden Paths, Cloud FinOps QA gates, and NEW AI automation guides.</p>
@@ -845,7 +845,7 @@ const Home = () => {
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-4">
-                  <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <div className="bg_green-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
                     <TrendingUp className="w-6 h-6 text-green-600" />
                   </div>
                   <div>
@@ -859,7 +859,7 @@ const Home = () => {
               
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <div className="bg-blue-100 w-12 h-12 rounded-lg flex items_center justify-center mr-4">
                     <Users className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
@@ -878,7 +878,7 @@ const Home = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Precision Manufacturing</h3>
-                    <p className="text-sm text-gray-600">Manufacturing</p>
+                    <p className="text-sm text_gray-600">Manufacturing</p>
                   </div>
                 </div>
                 <p className="text-gray-600 mb-4">Reduced production waste by 70% with AI data analytics and predictive maintenance.</p>
@@ -889,7 +889,7 @@ const Home = () => {
             <div className="text-center">
               <Link
                 to="/case-studies"
-                className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+                className="bg-gradient_to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
                 <Award className="w-5 h-5" />
                 View All Success Stories
@@ -913,20 +913,20 @@ const Home = () => {
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
-
+              
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
-                  <div className="font-semibold text-white">MLOps Reliability: Shipping GenAI Changes Safely</div>
+                  <div className="text-sm text-purple-200 mb-1">Platform Engineering</div>
+                  <div className="font-semibold text-white">AI Platform Engineering 2025: Golden Paths that Ship Outcomes</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
-                  <div className="font-semibold text-white">Reliable Real‑Time Data Pipelines in 2025</div>
+                  <div className="text-sm text-blue-200 mb-1">Architecture</div>
+                  <div className="font-semibold text-white">Edge AI Latency Budgets: Designing for P95 &lt; 150ms</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Product Analytics</div>
-                  <div className="font-semibold text-white">North‑Star Metrics: A Field‑Tested Framework</div>
+                  <div className="text-sm text-rose-200 mb-1">MLOps</div>
+                  <div className="font-semibold text-white">Cost-Aware MLOps: Shipping Improvements Without Surprises</div>
                 </div>
               </div>
             </div>
