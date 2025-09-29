@@ -12,7 +12,14 @@ import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
 import { seoOptimizer } from './utils/seoOptimization';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { useSEOData } from './components/SEOOptimizer';
+import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAccessibilityManager } from './utils/enhancedAccessibilityManager';
+import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
+import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 
 // Import enhanced utilities
@@ -314,7 +321,7 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
-  // Enhanced keyboard shortcuts
+  // Enhanced keyboard shortcuts and system initialization
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       // Dashboard shortcuts
@@ -356,9 +363,7 @@ export default function App(): React.JSX.Element {
             break;
           case 'N':
             // Show notification
-             
             if ((window as any).notifications) {
-               
               (window as any).notifications.add({
                 type: 'info',
                 title: 'Notification Test',
@@ -369,9 +374,7 @@ export default function App(): React.JSX.Element {
             break;
           case 'C':
             // Clear notifications
-             
             if ((window as any).notifications) {
-               
               (window as any).notifications.clear();
             }
             break;
@@ -404,8 +407,46 @@ export default function App(): React.JSX.Element {
       }
     };
 
+    // Initialize basic systems
+    analytics.initialize();
+    
+    // Initialize SEO analytics
+    seoAnalytics.trackPageView(window.location.pathname);
+    
+    // Initialize performance SEO optimizations
+    performanceSEO.optimizeImages();
+    performanceSEO.optimizeFonts();
+    performanceSEO.optimizeCSS();
+
+    // Initialize enhanced monitoring systems
+    enhancedPerformanceMonitor.getAlerts();
+    enhancedAccessibilityManager.getIssues();
+    enhancedSEOOptimizer.getIssues();
+
+    // Basic performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('🚀 Zion Tech Group App initialized');
+    }
+
+    // Mark app as fully initialized
+    if (typeof window !== 'undefined' && window.performance && 
+        typeof performance.mark === 'function' && 
+        typeof performance.measure === 'function') {
+      performance.mark('app-init-complete');
+      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
+    }
+
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
   // Track engagement on scroll and click
