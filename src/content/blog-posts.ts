@@ -14,57 +14,152 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-<<<<<<< HEAD
-    slug: "genai-telemetry-observability-2025",
-    title: "GenAI Telemetry: What to Measure in 2025",
-    description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
+    slug: "ai-platform-roi-2025",
+    title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
+    description: "A pragmatic framework to tie platform capabilities to product outcomes with clear owner reviews.",
     content: `
-# GenAI Telemetry: What to Measure in 2025
+# AI Platform ROI Scorecards: Proving Value Quarter by Quarter
 
-Operationalize GenAI with observability that tracks quality, safety, and cost. Learn the critical signals, dashboards, and alerting strategies that prevent regressions and runaway bills.
+Platform investments stall without measurable value signals. This guide introduces a lightweight ROI scorecard that connects platform capabilities to adoption, golden paths, reliability SLOs, and business outcomes.
+
+## Scorecard Dimensions
+- Adoption and paved-road usage
+- Time-to-first-success on golden paths
+- Reliability SLO adherence per product surface
+- Enablement signals: docs, templates, SDK ergonomics
+
+## Operating Rhythm
+- Monthly review with product + platform owners
+- Red/amber flags with remediation owners and dates
+- Clear cut/scale decisions based on evidence deltas
+
+Implement this to keep platform work focused and value-centric.
     `,
     author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "GenAI",
-    tags: ["Observability", "Telemetry", "Guardrails", "Quality"],
+    date: "2025-10-03",
+    category: "AI Strategy",
+    tags: ["Platform", "ROI", "Scorecards", "Product"],
     featured: true,
     readTime: "7 min read",
-    image: "/images/genai-telemetry.jpg"
+    image: "/images/ai-platform-roi.jpg"
   },
   {
-    slug: "feature-flags-at-the-edge-2025",
-    title: "Feature Flags at the Edge: Instant, Safe Rollouts",
-    description: "Design flags for global low-latency delivery, safe rollbacks, and cohort experimentation.",
+    slug: "secure-ml-supply-chain-2025",
+    title: "Secure ML Supply Chain: From SBOMs to Model Lineage",
+    description: "Practical controls for datasets, models, and inference routes to prevent tampering and drift.",
     content: `
-# Feature Flags at the Edge: Instant, Safe Rollouts
+# Secure ML Supply Chain: From SBOMs to Model Lineage
 
-Architect global feature delivery with edge caching, signed payloads, and cohort targeting to ship faster with confidence.
+Modern ML requires end-to-end provenance and controls: dataset SBOMs, data-use policies, model lineage, signed artifacts, and runtime egress controls.
+
+## Controls That Matter
+- Dataset SBOMs and data contracts
+- Signed training artifacts and configs
+- Model lineage with approval trails
+- Inference-time egress allowlists and DPI
+
+## Rollout
+- Start read-only with visibility dashboards
+- Add PR gates on risky changes
+- Enforce gradually with exceptions flow
     `,
     author: "Zion Tech Group Team",
-    date: "2025-09-28",
-    category: "Architecture",
-    tags: ["Edge", "Flags", "Rollouts", "CD"],
+    date: "2025-10-03",
+    category: "Security",
+    tags: ["ML", "Supply Chain", "Security", "SBOM"],
     featured: true,
     readTime: "6 min read",
-    image: "/images/edge-feature-flags.jpg"
+    image: "/images/secure-ml-supply-chain.jpg"
   },
   {
-    slug: "ai-product-readiness-checks",
-    title: "AI Product Readiness: Pre‑Launch Checks That Matter",
-    description: "From eval gates to safety reviews—everything to validate before shipping AI to users.",
+    slug: "edge-cdn-ml-personalization-2025",
+    title: "Edge CDN + On‑Device ML: Personalization Under 100ms",
+    description: "Combine edge KV, signed configs, and tiny models for private, real‑time personalization.",
     content: `
-# AI Product Readiness: Pre‑Launch Checks That Matter
+# Edge CDN + On‑Device ML: Personalization Under 100ms
 
-Use this concise pre‑launch checklist to ensure your AI features meet quality, safety, and reliability bars before release.
+Deliver relevant experiences without server hops by pushing lightweight models and features to the edge and device.
+
+## Building Blocks
+- Edge KV for features and eligibility
+- Signed payloads and validation circuits
+- Distilled models (ONNX/TF Lite) running on device
+
+## Reliability
+- Versioning, background warmups, and circuit breakers
+- Observability with client↔edge traces
     `,
     author: "Zion Tech Group Team",
-    date: "2025-09-27",
-    category: "Product",
-    tags: ["Product", "Launch", "Governance"],
+    date: "2025-09-30",
+    category: "Edge Computing",
+    tags: ["Edge", "Personalization", "CDN", "On‑Device ML"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-personalization.jpg"
+  },
+  {
+    slug: "ai-sales-copilot-2025",
+    title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
+    description: "How to wire CRMs, build prompt libraries, and add evals that boost win‑rates without risk.",
+    content: `
+# AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals
+
+Sales copilots fail without context and measurement. This guide shows how to ground prompts in CRM data, build reusable prompt libraries, and add offline + online evals that correlate with win‑rates.
+
+## What To Ground
+- Opportunities, last touches, stakeholders
+- Product limits, pricing, legal constraints
+
+## Evals That Predict Outcomes
+- Prospect relevance scoring
+- Objection handling quality
+- Call‑to‑action clarity
+
+Wire telemetry to track outcomes and iterate with confidence.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Strategy",
+    tags: ["Sales", "Copilot", "CRM", "Evals"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/ai-sales-copilot.jpg"
+  },
+  {
+    slug: "zero-downtime-migrations-2025",
+    title: "Zero‑Downtime Migrations: Patterns that Keep Pages Green",
+    description: "Dual‑write, read‑shadowing, and progressive delivery to ship schema changes safely.",
+    content: `
+# Zero‑Downtime Migrations: Patterns that Keep Pages Green
+
+Avoid 2am incidents with dual‑write, read‑shadowing, backfills with idempotency, and progressive cutovers behind flags. Includes checklists and rollback playbooks.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Platform Engineering",
+    tags: ["Migrations", "Zero Downtime", "Databases"],
+    featured: false,
+    readTime: "5 min read",
+    image: "/images/zero-downtime.jpg"
+  },
+  {
+    slug: "agent-telemetry-traces-2025",
+    title: "Agent Telemetry: What to Trace and Why It Matters",
+    description: "From tool call spans to prompt metadata—what to capture to debug and improve agent behavior.",
+    content: `
+# Agent Telemetry: What to Trace and Why It Matters
+
+Capture spans for tool calls, retries, and model routes. Attach prompt, input size, and guardrail outcomes. Build dashboards that correlate failures to fixes.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["Telemetry", "Agents", "Tracing"],
     featured: true,
     readTime: "5 min read",
-    image: "/images/ai-product-readiness.jpg"
-=======
+    image: "/images/agent-telemetry.jpg"
+  },
+  {
     slug: "genai-evals-in-production-2025",
     title: "GenAI Evals in Production: Policy Tests That Scale",
     description: "From offline suites to online canaries: patterns that keep quality high as usage grows.",
@@ -133,7 +228,6 @@ Avoid vanity KPIs, ambiguous definitions, and missing instrumentation. Replace w
     featured: true,
     readTime: "6 min read",
     image: "/images/north-star-anti-patterns.jpg"
->>>>>>> origin/main
   },
   {
     slug: "real-time-data-pipelines-2025",

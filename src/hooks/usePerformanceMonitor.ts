@@ -30,18 +30,18 @@ export const usePerformanceMonitor = () => {
             prev
               ? {
                   ...prev,
-                  fid: (entry as unknown).processingStart - entry.startTime,
+                  fid: (entry as any).processingStart - entry.startTime,
                 }
               : ({
-                  fid: (entry as unknown).processingStart - entry.startTime,
+                  fid: (entry as any).processingStart - entry.startTime,
                 } as PerformanceMetrics),
           );
         }
         if (entry.entryType === "layout-shift") {
           setMetrics((prev) =>
             prev
-              ? { ...prev, cls: (prev?.cls || 0) + ((entry as unknown).value || 0) }
-              : ({ cls: (entry as unknown).value || 0 } as PerformanceMetrics),
+              ? { ...prev, cls: (prev?.cls || 0) + ((entry as any).value || 0) }
+              : ({ cls: (entry as any).value || 0 } as PerformanceMetrics),
           );
         }
       });

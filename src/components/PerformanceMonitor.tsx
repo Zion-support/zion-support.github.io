@@ -30,9 +30,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDashboard, 
       }
 
       // Get memory usage
-      if ('memory' in performance) {
-        const memory = (performance as unknown).memory;
-        newMetrics.memoryUsage = memory.usedJSHeapSize;
+      const perfAny = performance as unknown as { memory?: { usedJSHeapSize?: number } };
+      if (perfAny.memory && typeof perfAny.memory.usedJSHeapSize === 'number') {
+        newMetrics.memoryUsage = perfAny.memory.usedJSHeapSize;
       }
     }
 

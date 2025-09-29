@@ -11,12 +11,12 @@ import {
   Bot,
   BarChart3,
   Shield,
-  Cloud,
   Code,
   Search,
 } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import BlogPromotionBanner from "../components/BlogPromotionBanner";
 
 interface BlogPost {
   id: number;
@@ -53,6 +53,48 @@ export default function Blog(): React.JSX.Element {
       image: "/api/placeholder/400/250",
       featured: true,
       views: 1250,
+    },
+    {
+      id: 7,
+      title: "Serverless AI Inference: The Cost Optimization Playbook",
+      excerpt: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",
+      content: "Full article content here...",
+      author: "Zion Tech Group Team",
+      date: "2025-09-29",
+      readTime: "9 min read",
+      category: "AI Solutions",
+      tags: ["Serverless", "Inference", "Cost"],
+      image: "/api/placeholder/400/250",
+      featured: true,
+      views: 421,
+    },
+    {
+      id: 8,
+      title: "RAG Architectures That Actually Work in Production",
+      excerpt: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.",
+      content: "Full article content here...",
+      author: "Zion Tech Group Team",
+      date: "2025-09-28",
+      readTime: "12 min read",
+      category: "AI Solutions",
+      tags: ["RAG", "Vector Search", "Evals"],
+      image: "/api/placeholder/400/250",
+      featured: true,
+      views: 368,
+    },
+    {
+      id: 9,
+      title: "Secure GenAI: Policy‑First Guardrails That Scale",
+      excerpt: "Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.",
+      content: "Full article content here...",
+      author: "Zion Tech Group Team",
+      date: "2025-09-27",
+      readTime: "8 min read",
+      category: "Technology",
+      tags: ["GenAI", "Security", "Compliance"],
+      image: "/api/placeholder/400/250",
+      featured: false,
+      views: 297,
     },
     {
       id: 2,
@@ -185,6 +227,21 @@ export default function Blog(): React.JSX.Element {
 
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         <Header />
+
+        {/* New Content Promo Banner */}
+        <div className="border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center justify-between">
+              <div className="mr-4">
+                <div className="text-sm font-semibold">🚀 Fresh: AI Platform ROI + Secure ML Supply Chain</div>
+                <div className="text-xs text-white/90">New frameworks on platform ROI and end-to-end ML supply chain security.</div>
+              </div>
+              <a href="/blog/ai-platform-roi-2025" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">
+                Read the latest
+              </a>
+            </div>
+          </div>
+        </div>
 
         {/* Hero Section */}
         <section className="container mx-auto px-6 py-20">
@@ -389,27 +446,9 @@ export default function Blog(): React.JSX.Element {
             )}
           </div>
 
-          {/* Newsletter CTA */}
+          {/* Blog Promotion Banner */}
           <div className="mt-20">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Stay Updated with Our Latest Insights
-              </h3>
-              <p className="text-zion-slate-light mb-6">
-                Get the latest articles, case studies, and industry insights delivered directly to your inbox.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                />
-                <button className="bg-gradient-to-r from-zion-blue-light to-zion-purple-light text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center">
-                  Subscribe
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
-              </div>
-            </div>
+            <BlogPromotionBanner />
           </div>
         </section>
 

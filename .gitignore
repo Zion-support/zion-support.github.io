@@ -15,6 +15,9 @@ __pycache__/
 # Build outputs
 dist/
 
+# Test coverage outputs (should not be committed)
+coverage/
+
 # Automation logs and data (continuously changing)
 automation/logs/*.log
 automation/logs/*.runtime.log
@@ -25,3 +28,7 @@ core
 
 # TypeScript build info
 *.tsbuildinfo
+
+# Ignore coverage reports
+coverage/
+coverage

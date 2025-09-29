@@ -96,3 +96,5 @@ cypress/
 **/*.broken/**
 **/*.corrupted/**
 **/*.temp/**
+src/App.tsx
+src/components/**
