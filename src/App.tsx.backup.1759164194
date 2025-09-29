@@ -12,12 +12,21 @@ import './index.css';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
+<<<<<<< HEAD
+import SEOOptimizer from './components/SEOOptimizer';
+// Define safe local placeholders for optional components that may not exist
+const PerformanceOptimizer: React.FC<{ isVisible?: boolean; onClose?: () => void }> = () => null;
+const PerformanceMonitor: React.FC<{ showDashboard?: boolean }> = () => null;
+const EnhancedErrorBoundary: React.FC<{ children?: React.ReactNode }> = ({ children }) => <>{children}</>;
+const NotificationSystem: React.FC<{ notifications?: Array<{ id: string }>; onRemove?: (id: string) => void }> = () => null;
+=======
 import SEOOptimizer from './components/SEO';
 const AdvancedAnalytics = () => null;
 const PerformanceOptimizer = (props: any) => null;
 const PerformanceMonitor = (props: any) => null;
 const EnhancedErrorBoundary = ({ children }: { children: React.ReactNode }) => <>{children}</>;
 import NotificationSystem from './components/NotificationSystem';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-72a1
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};
@@ -144,7 +153,11 @@ export default function App(): React.JSX.Element {
         description={seoDataForOptimizer.description}
         canonicalUrl={seoDataForOptimizer.canonicalUrl}
       />
+<<<<<<< HEAD
+      {/* AdvancedAnalytics placeholder removed as component is optional */}
+=======
       <AdvancedAnalytics />
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-72a1
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
 

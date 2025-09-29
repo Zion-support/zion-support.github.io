@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import React, { createContext, useContext, useMemo, useState } from "react";
+
+type Theme = "light" | "dark";
+
+interface ThemeContextValue {
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
+=======
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 type Theme = 'light' | 'dark';
@@ -5,11 +14,37 @@ type Theme = 'light' | 'dark';
 interface ThemeContextValue {
   theme: Theme;
   setTheme: (next: Theme) => void;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-72a1
   toggleTheme: () => void;
 }
 
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
+<<<<<<< HEAD
+export const ThemeProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
+  const [theme, setTheme] = useState<Theme>("light");
+
+  const value = useMemo<ThemeContextValue>(() => ({
+    theme,
+    setTheme,
+    toggleTheme: () => setTheme((prev) => (prev === "light" ? "dark" : "light")),
+  }), [theme]);
+
+  return (
+    <ThemeContext.Provider value={value}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
+
+export const useTheme = (): ThemeContextValue => {
+  const ctx = useContext(ThemeContext);
+  if (!ctx) {
+    throw new Error("useTheme must be used within a ThemeProvider");
+  }
+  return ctx;
+};
+=======
 export function ThemeProvider({ children }: { children: React.ReactNode }): JSX.Element {
   const [theme, setThemeState] = useState<Theme>('light');
 
@@ -45,4 +80,5 @@ export function useTheme(): ThemeContextValue {
   }
   return ctx;
 }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-72a1
 
