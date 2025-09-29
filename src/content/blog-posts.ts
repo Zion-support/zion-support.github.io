@@ -2086,6 +2086,82 @@ Achieve low‑latency inference at the edge with quantization, pruning, warm cac
     readTime: "6 min read",
     image: "/images/edge-ai-design.jpg"
   }
+  ,
+  // 2025-09-30 New long-form content
+  {
+    slug: "ai-agent-observability-2025",
+    title: "AI Agent Observability: Traces, Policies, and Human Feedback",
+    description: "Instrument agent reasoning with traces, policy tests, and human feedback to keep quality high.",
+    content: `
+# AI Agent Observability: Traces, Policies, and Human Feedback
+
+Production agent systems require visibility into reasoning loops, tool calls, and policy boundaries. This guide shows how to implement:
+
+## Tracing
+- Correlate user requests to agent steps and tool invocations
+- Capture prompt/response metadata with redaction for PII
+- Tie spans to evaluation results and incidents
+
+## Policy Tests
+- Pre-merge checks for disallowed behaviors
+- Runtime guards with circuit breakers
+- Audit logs with minimal data retention
+
+## Human Feedback
+- Lightweight thumbs-up/down with reasons
+- Sampling flows for detailed ratings
+- Use feedback to prioritize eval gaps
+
+Ship agents you can actually trust and iterate safely.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["GenAI", "Observability", "Guardrails"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/agent-observability.jpg"
+  },
+  {
+    slug: "cost-aware-evals",
+    title: "Cost‑Aware Evals: Quality at Half the Token Budget",
+    description: "Cut eval costs with compression, caching, and hybrid retrieval—without losing accuracy.",
+    content: `
+# Cost‑Aware Evals: Quality at Half the Token Budget
+
+Eval the things that matter—and do it efficiently. We cover:
+- Prompt compression and summarization caches
+- Golden questions + probabilistic sampling
+- Hybrid retrieval with small models + selective LLM grading
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "MLOps",
+    tags: ["MLOps", "Evals", "Cost"],
+    featured: false,
+    readTime: "6 min read",
+    image: "/images/cost-aware-evals.jpg"
+  },
+  {
+    slug: "secure-rag-2025",
+    title: "Secure RAG 2025: Data Controls That Survive Production",
+    description: "Authorization-aware retrieval, PII minimization, and prompt firewalls for enterprise RAG.",
+    content: `
+# Secure RAG 2025: Data Controls That Survive Production
+
+Enterprises need retrieval that respects authorization and privacy. We outline:
+- Index-time and query-time access controls
+- PII minimization and selective redaction
+- Prompt firewalls and output scanning
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Security",
+    tags: ["RAG", "Security", "Privacy"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/secure-rag.jpg"
+  }
 ];
 
 export default blogPosts;

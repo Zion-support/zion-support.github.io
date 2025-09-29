@@ -522,5 +522,33 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-01-08",
     readMinutes: 5,
   },
+  // 2025-09-30 Fresh insights
+  {
+    id: "agent-telemetry-traces",
+    title: "Agent Telemetry: What to Trace and Why It Matters",
+    summary:
+      "From tool call spans to prompt metadata—what to capture to debug and improve agent behavior.",
+    category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "rag-eval-checklist",
+    title: "RAG Eval Checklist: Precision Without Over-Spending",
+    summary:
+      "A pragmatic checklist for measuring retrieval quality with minimal token use.",
+    category: "MLOps",
+    date: "2025-09-30",
+    readMinutes: 4,
+  },
+  {
+    id: "policy-tests-at-runtime",
+    title: "Policy Tests at Runtime: Guardrails That Scale",
+    summary:
+      "How to run lightweight policy checks in production without hurting UX.",
+    category: "AI Governance",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
 ];
 

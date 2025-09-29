@@ -491,5 +491,36 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "6 min read",
   },
+  // 2025-09-30 New additions
+  {
+    slug: "ai-agent-observability-2025",
+    title: "AI Agent Observability: Traces, Policies, and Human Feedback",
+    description:
+      "How to observe agent loops with traces, policy checks, and RLHF-style feedback to prevent regressions.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "cost-aware-evals",
+    title: "Cost‑Aware Evals: Quality at Half the Token Budget",
+    description:
+      "Compression, caching, and hybrid retrieval tactics that preserve quality while cutting spend.",
+    category: "MLOps",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "5 min read",
+  },
+  {
+    slug: "secure-rag-2025",
+    title: "Secure RAG 2025: Data Controls That Survive Production",
+    description:
+      "PII minimization, authorization-aware retrieval, and prompt firewalls for safe enterprise RAG.",
+    category: "Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
 ];
 

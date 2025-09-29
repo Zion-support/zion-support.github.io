@@ -17,20 +17,20 @@ const PromotionalBanner: React.FC = () => {
   const services = [
     {
       icon: Zap,
-      title: "NEW: GenAI Evals in Production",
-      description: "Policy tests, canaries, rollbacks",
+      title: "NEW: AI Agent Observability",
+      description: "Traces, policy checks, human feedback",
       color: "text-blue-400",
     },
     {
       icon: Bot,
-      title: "Edge Flags at <100ms",
-      description: "Global releases safely at the edge",
+      title: "Secure RAG 2025",
+      description: "Auth-aware retrieval & prompt firewalls",
       color: "text-purple-400",
     },
     {
       icon: BarChart3,
-      title: "North‑Star Metrics Pitfalls",
-      description: "Avoid vanity, ship outcomes",
+      title: "Cost‑Aware Evals",
+      description: "Quality at half the token budget",
       color: "text-green-400",
     },
   ];
