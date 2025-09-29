@@ -1,352 +1,234 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
 interface ContentItem {
   id: string;
   title: string;
   description: string;
-  type: 'article' | 'case-study' | 'guide' | 'video';
-  category: string;
+  type: 'article' | 'case-study' | 'guide';
   readTime: string;
-  publishDate: string;
-  featured: boolean;
-  tags: string[];
   metrics: {
-    views: number;
-    rating: number;
-    saves: number;
-  };
+    value: string;
+    label: string;
+    color: string;
+  }[];
   href: string;
+  featured?: boolean;
+  new?: boolean;
 }
 
 const contentItems: ContentItem[] = [
   {
-    id: 'autonomous-devops-2026',
-    title: 'AI Autonomous DevOps 2026: Complete Self-Healing Infrastructure Guide',
-    description: 'Transform your DevOps operations with AI-powered autonomous infrastructure management. Achieve 99.9% uptime, 90% cost reduction, and zero-touch operations.',
-    type: 'guide',
-    category: 'AI Operations',
+    id: 'breakthrough-innovations',
+    title: 'AI 2026 Breakthrough Innovations',
+    description: 'Revolutionary technologies reshaping enterprise operations with quantum AI, autonomous systems, and $50B+ market growth.',
+    type: 'article',
+    readTime: '45 min read',
+    metrics: [
+      { value: '95%', label: 'Automation', color: 'text-blue-600' },
+      { value: '$25M+', label: 'Average ROI', color: 'text-green-600' },
+      { value: '1000x', label: 'Performance', color: 'text-purple-600' }
+    ],
+    href: '/blog/ai-2026-breakthrough-innovations',
+    featured: true,
+    new: true
+  },
+  {
+    id: 'mega-success-case-study',
+    title: '$25M ROI Success Story',
+    description: 'Fortune 500 manufacturing company achieved unprecedented success with 99% automation and complete business revolution.',
+    type: 'case-study',
+    readTime: '30 min read',
+    metrics: [
+      { value: '$25M', label: 'Total ROI', color: 'text-green-600' },
+      { value: '99%', label: 'Automation', color: 'text-blue-600' },
+      { value: '18', label: 'Months', color: 'text-purple-600' }
+    ],
+    href: '/case-studies/ai-transformation-mega-success-2026',
+    featured: true,
+    new: true
+  },
+  {
+    id: 'quantum-computing',
+    title: 'AI Quantum Computing 2026',
+    description: 'Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.',
+    type: 'article',
     readTime: '25 min read',
-    publishDate: '2026-01-20',
-    featured: true,
-    tags: ['Autonomous DevOps', 'Self-Healing', 'Infrastructure', 'Automation'],
-    metrics: { views: 3247, rating: 4.9, saves: 189 },
-    href: '/blog/ai-autonomous-devops-2026'
+    metrics: [
+      { value: '1000x', label: 'Faster', color: 'text-purple-600' },
+      { value: '95%', label: 'Accuracy', color: 'text-blue-600' },
+      { value: '$12M', label: 'Returns', color: 'text-green-600' }
+    ],
+    href: '/blog/ai-quantum-computing-2026',
+    new: true
   },
   {
-    id: 'edge-computing-optimization-2026',
-    title: 'AI Edge Computing Optimization 2026: Sub-50ms Latency Solutions',
-    description: 'Unlock the power of AI at the edge with sub-50ms latency, 99.9% reliability, and intelligent edge orchestration for real-time applications.',
+    id: 'autonomous-enterprise',
+    title: 'AI Autonomous Enterprise 2026',
+    description: 'Complete guide to self-managing business operations with zero-touch management and predictive analytics.',
     type: 'guide',
-    category: 'AI Operations',
-    readTime: '22 min read',
-    publishDate: '2026-01-20',
-    featured: true,
-    tags: ['Edge Computing', 'Low Latency', 'Real-time', 'Optimization'],
-    metrics: { views: 2156, rating: 4.8, saves: 134 },
-    href: '/blog/ai-edge-computing-optimization-2026'
+    readTime: '30 min read',
+    metrics: [
+      { value: '99.9%', label: 'Uptime', color: 'text-green-600' },
+      { value: '90%', label: 'Cost Reduction', color: 'text-blue-600' },
+      { value: 'Zero', label: 'Touch Ops', color: 'text-purple-600' }
+    ],
+    href: '/blog/ai-autonomous-enterprise-2026',
+    new: true
   },
   {
-    id: 'autonomous-manufacturing-2026',
-    title: 'AI Autonomous Manufacturing Success 2026: $15M ROI Case Study',
-    description: 'See how a Fortune 500 manufacturer achieved 98% automation, 400% productivity gains, and $15M annual ROI with AI autonomous manufacturing systems.',
+    id: 'sustainability-green-tech',
+    title: 'AI Sustainability & Green Tech 2026',
+    description: 'Achieve carbon-neutral AI operations with 80% energy reduction and $2M+ savings through sustainable technology.',
+    type: 'article',
+    readTime: '18 min read',
+    metrics: [
+      { value: '80%', label: 'Energy Saved', color: 'text-green-600' },
+      { value: '$2M+', label: 'Savings', color: 'text-blue-600' },
+      { value: '100%', label: 'Carbon Neutral', color: 'text-purple-600' }
+    ],
+    href: '/blog/ai-sustainability-green-tech-2026',
+    new: true
+  },
+  {
+    id: 'retail-automation',
+    title: 'AI Retail Automation 2026',
+    description: 'See how a Fortune 500 retailer achieved 98% automation, 300% productivity gains, and $8M annual ROI.',
     type: 'case-study',
-    category: 'Manufacturing',
-    readTime: '18 min read',
-    publishDate: '2026-01-20',
-    featured: true,
-    tags: ['Manufacturing', 'ROI', 'Automation', 'Case Study'],
-    metrics: { views: 4456, rating: 4.9, saves: 267 },
-    href: '/case-studies/ai-autonomous-manufacturing-success-2026'
-  },
-  {
-    id: 'operational-excellence-2026',
-    title: 'AI Operational Excellence 2026: Complete Enterprise Implementation Guide',
-    description: 'Transform your enterprise operations with 95% automation rates, $5M+ savings, and zero-touch operations.',
-    type: 'guide',
-    category: 'Enterprise AI',
-    readTime: '18 min read',
-    publishDate: '2026-01-20',
-    featured: true,
-    tags: ['Operational Excellence', 'Automation', 'Enterprise', 'ROI'],
-    metrics: { views: 2847, rating: 4.9, saves: 156 },
-    href: '/blog/ai-operational-excellence-2026'
-  },
-  {
-    id: 'enterprise-agents-blueprint-2026',
-    title: 'AI Enterprise Agents Blueprint 2026: Production-Grade Patterns',
-    description: 'Blueprint for designing, deploying, and operating enterprise AI agents with governance, observability, and ROI.',
-    type: 'guide',
-    category: 'Enterprise AI',
-    readTime: '18 min read',
-    publishDate: '2026-01-25',
-    featured: true,
-    tags: ['Agents', 'Orchestration', 'Governance', 'ROI'],
-    metrics: { views: 0, rating: 5.0, saves: 0 },
-    href: '/blog/ai-enterprise-agents-blueprint-2026'
-  },
-  {
-    id: 'agent-observability-2026',
-    title: 'AI Agent Observability 2026: Complete Monitoring & Debugging Guide',
-    description: 'Achieve 99.9% AI agent reliability with comprehensive observability and real-time monitoring.',
-    type: 'guide',
-    category: 'AI Operations',
-    readTime: '11 min read',
-    publishDate: '2026-01-20',
-    featured: true,
-    tags: ['Observability', 'Monitoring', 'Debugging', 'Reliability'],
-    metrics: { views: 1923, rating: 4.8, saves: 89 },
-    href: '/blog/ai-agent-observability-2026'
-  },
-  {
-    id: 'manufacturing-transformation-2026',
-    title: 'AI Manufacturing Transformation 2026: $12M ROI Case Study',
-    description: 'See how a global manufacturing leader achieved 98% automation, 400% productivity gains, and $12M annual ROI.',
-    type: 'case-study',
-    category: 'Manufacturing',
-    readTime: '15 min read',
-    publishDate: '2026-01-20',
-    featured: true,
-    tags: ['Manufacturing', 'ROI', 'Automation', 'Case Study'],
-    metrics: { views: 3456, rating: 4.9, saves: 234 },
-    href: '/case-studies/ai-manufacturing-transformation-2026'
-  },
-  {
-    id: 'multimodal-enterprise-2026',
-    title: 'AI Multimodal Enterprise 2026: Complete Implementation Guide',
-    description: 'Master multimodal AI for enterprise with vision, language, and audio processing. 85% efficiency gains and $2M+ ROI.',
-    type: 'guide',
-    category: 'Multimodal AI',
-    readTime: '22 min read',
-    publishDate: '2026-01-15',
-    featured: true,
-    tags: ['Multimodal', 'Vision', 'Language', 'Audio'],
-    metrics: { views: 2156, rating: 4.7, saves: 123 },
-    href: '/blog/ai-multimodal-enterprise-2026'
-  },
-  {
-    id: 'enterprise-automation-2026',
-    title: 'AI Enterprise Automation 2026: Complete Business Process Transformation',
-    description: 'Transform your enterprise with AI automation. 95% process efficiency, $5M+ savings, and zero-touch operations.',
-    type: 'guide',
-    category: 'Process Automation',
-    readTime: '18 min read',
-    publishDate: '2026-01-18',
-    featured: true,
-    tags: ['Automation', 'Process', 'Transformation', 'Efficiency'],
-    metrics: { views: 1876, rating: 4.8, saves: 98 },
-    href: '/blog/ai-enterprise-automation-2026'
-  },
-  {
-    id: 'trustworthy-agents-2026',
-    title: 'Trustworthy AI Agents 2026: Safety, Compliance, and Observability',
-    description: 'Deploy trustworthy AI agents with guardrails, approvals, and end-to-end observability.',
-    type: 'guide',
-    category: 'AI Safety',
-    readTime: '11 min read',
-    publishDate: '2026-01-12',
-    featured: true,
-    tags: ['Trustworthy', 'Safety', 'Compliance', 'Agents'],
-    metrics: { views: 1678, rating: 4.6, saves: 87 },
-    href: '/blog/ai-trustworthy-agents-2026'
+    readTime: '20 min read',
+    metrics: [
+      { value: '98%', label: 'Automation', color: 'text-blue-600' },
+      { value: '300%', label: 'Productivity', color: 'text-green-600' },
+      { value: '$8M', label: 'Annual ROI', color: 'text-purple-600' }
+    ],
+    href: '/case-studies/ai-retail-automation-2026',
+    new: true
   }
 ];
 
-const categories = ['All', 'Enterprise AI', 'AI Operations', 'Manufacturing', 'Multimodal AI', 'Process Automation', 'AI Safety'];
-
 export default function EnhancedContentShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [filteredContent, setFilteredContent] = useState(contentItems);
-  const [sortBy, setSortBy] = useState('featured');
-  const [searchQuery, setSearchQuery] = useState('');
-
-  useEffect(() => {
-    let filtered = contentItems;
-
-    // Filter by category
-    if (selectedCategory !== 'All') {
-      filtered = filtered.filter(item => item.category === selectedCategory);
-    }
-
-    // Filter by search query
-    if (searchQuery) {
-      filtered = filtered.filter(item => 
-        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      );
-    }
-
-    // Sort content
-    switch (sortBy) {
-      case 'featured':
-        filtered = filtered.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
-        break;
-      case 'views':
-        filtered = filtered.sort((a, b) => b.metrics.views - a.metrics.views);
-        break;
-      case 'rating':
-        filtered = filtered.sort((a, b) => b.metrics.rating - a.metrics.rating);
-        break;
-      case 'newest':
-        filtered = filtered.sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
-        break;
-    }
-
-    setFilteredContent(filtered);
-  }, [selectedCategory, sortBy, searchQuery]);
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'guide': return '📚';
-      case 'case-study': return '📊';
-      case 'article': return '📝';
-      case 'video': return '🎥';
-      default: return '📄';
-    }
-  };
-
-  const getCategoryColor = (category: string) => {
-    const colors: { [key: string]: string } = {
-      'Enterprise AI': 'bg-blue-100 text-blue-800',
-      'AI Operations': 'bg-green-100 text-green-800',
-      'Manufacturing': 'bg-orange-100 text-orange-800',
-      'Multimodal AI': 'bg-purple-100 text-purple-800',
-      'Process Automation': 'bg-teal-100 text-teal-800',
-      'AI Safety': 'bg-red-100 text-red-800'
-    };
-    return colors[category] || 'bg-gray-100 text-gray-800';
-  };
+  const featuredItems = contentItems.filter(item => item.featured);
+  const regularItems = contentItems.filter(item => !item.featured);
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 mb-6">
+            <span className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+              ✨ LATEST 2026 CONTENT
+            </span>
+          </div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Interactive Content Hub
+            Revolutionary AI Content & Success Stories
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our comprehensive library of AI guides, case studies, and insights. Filter, search, and discover content tailored to your needs.
+            Discover the latest AI innovations, transformation guides, and real-world success stories 
+            that are reshaping businesses in 2026
           </p>
         </div>
 
-        {/* Search and Filter Controls */}
-        <div className="bg-white rounded-xl shadow-lg p-6 mb-12 border border-gray-200">
-          <div className="flex flex-col lg:flex-row gap-4 mb-6">
-            {/* Search */}
-            <div className="flex-1">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search content, tags, or categories..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-                <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-                  🔍
+        {/* Featured Content */}
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+          {featuredItems.map((item) => (
+            <div key={item.id} className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group">
+              <div className="relative h-64 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600">
+                <div className="absolute inset-0 bg-black opacity-20"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">
+                        {item.type === 'article' ? '📝' : item.type === 'case-study' ? '📊' : '📋'}
+                      </span>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
+                    <p className="text-indigo-100">{item.type === 'case-study' ? 'Success Story' : 'Innovation Guide'}</p>
+                  </div>
+                </div>
+                <div className="absolute top-4 left-4">
+                  <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    {item.new ? 'NEW 2026' : 'FEATURED'}
+                  </span>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="flex items-center gap-4 mb-4">
+                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                    item.type === 'article' ? 'bg-blue-100 text-blue-600' :
+                    item.type === 'case-study' ? 'bg-green-100 text-green-600' :
+                    'bg-purple-100 text-purple-600'
+                  }`}>
+                    {item.type === 'case-study' ? 'Case Study' : 'Article'}
+                  </span>
+                  <span className="text-gray-500 text-sm">{item.readTime}</span>
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                  {item.title}
+                </h4>
+                <p className="text-gray-600 mb-6">
+                  {item.description}
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="flex gap-6">
+                    {item.metrics.map((metric, index) => (
+                      <div key={index} className="text-center">
+                        <div className={`text-2xl font-bold ${metric.color}`}>{metric.value}</div>
+                        <div className="text-xs text-gray-500">{metric.label}</div>
+                      </div>
+                    ))}
+                  </div>
+                  <Link
+                    href={item.href}
+                    className="bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                  >
+                    Read More →
+                  </Link>
                 </div>
               </div>
             </div>
-
-            {/* Sort */}
-            <div className="lg:w-48">
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                <option value="featured">Featured First</option>
-                <option value="newest">Newest First</option>
-                <option value="views">Most Views</option>
-                <option value="rating">Highest Rated</option>
-              </select>
-            </div>
-          </div>
-
-          {/* Category Filters */}
-          <div className="flex flex-wrap gap-2">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  selectedCategory === category
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
+          ))}
         </div>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((item) => (
+        {/* Additional Content Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {regularItems.map((item) => (
             <Link key={item.id} href={item.href} className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-                {/* Header */}
-                <div className="p-6 pb-4">
-                  <div className="flex items-start justify-between mb-3">
-                    <div className="flex items-center gap-2">
-                      <span className="text-2xl">{getTypeIcon(item.type)}</span>
-                      <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getCategoryColor(item.category)}`}>
-                        {item.category}
-                      </span>
-                    </div>
-                    {item.featured && (
-                      <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-semibold">
-                        ⭐ Featured
-                      </span>
-                    )}
-                  </div>
-
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {item.description}
-                  </p>
-
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    {item.tags.slice(0, 3).map((tag) => (
-                      <span key={tag} className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Metrics */}
-                  <div className="flex items-center gap-4 text-sm text-gray-500">
-                    <div className="flex items-center gap-1">
-                      <span>👁️</span>
-                      <span>{item.metrics.views.toLocaleString()}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <span>⭐</span>
-                      <span>{item.metrics.rating}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <span>💾</span>
-                      <span>{item.metrics.saves}</span>
-                    </div>
-                    <span>{item.readTime}</span>
-                  </div>
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-indigo-200 hover:scale-105">
+                <div className="flex items-center gap-2 mb-4">
+                  {item.new && (
+                    <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                      NEW 2026
+                    </span>
+                  )}
+                  <span className={`text-sm font-medium ${
+                    item.type === 'article' ? 'text-blue-600' :
+                    item.type === 'case-study' ? 'text-green-600' :
+                    'text-purple-600'
+                  }`}>
+                    {item.type === 'case-study' ? '📊 Case Study' : '📝 Article'}
+                  </span>
                 </div>
-
-                {/* Footer */}
-                <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">
-                      {new Date(item.publishDate).toLocaleDateString()}
-                    </span>
-                    <span className="text-blue-600 font-semibold group-hover:text-blue-700 transition-colors">
-                      Read {item.type === 'case-study' ? 'Case Study' : 'Article'} →
-                    </span>
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  {item.description}
+                </p>
+                <div className="flex gap-4 mb-4">
+                  {item.metrics.slice(0, 2).map((metric, index) => (
+                    <div key={index} className="text-center">
+                      <div className={`text-lg font-bold ${metric.color}`}>{metric.value}</div>
+                      <div className="text-xs text-gray-500">{metric.label}</div>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-4 h-4 mr-1">⏱️</span>
+                    {item.readTime}
+                  </div>
+                  <div className="flex items-center text-indigo-600 font-semibold text-sm group-hover:text-indigo-700 transition-colors">
+                    Read More →
                   </div>
                 </div>
               </div>
@@ -354,36 +236,26 @@ export default function EnhancedContentShowcase() {
           ))}
         </div>
 
-        {/* Results Summary */}
-        <div className="mt-12 text-center">
-          <p className="text-gray-600">
-            Showing {filteredContent.length} of {contentItems.length} content items
-            {selectedCategory !== 'All' && ` in ${selectedCategory}`}
-            {searchQuery && ` matching "${searchQuery}"`}
-          </p>
-        </div>
-
-        {/* CTA */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              Can't Find What You're Looking For?
-            </h3>
-            <p className="text-lg mb-6 opacity-90">
-              Our expert team creates custom content and solutions tailored to your specific needs.
+        {/* CTA Section */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Stay Updated with Latest AI Innovations</h3>
+            <p className="text-indigo-100 mb-6 max-w-2xl mx-auto">
+              Get weekly insights on AI trends, breakthrough technologies, and success stories 
+              that are transforming businesses worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                href="/blog"
+                className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Request Custom Content
+                Explore All Content
               </Link>
               <Link
-                href="/blog"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >
-                Browse All Content
+                Get Free Consultation
               </Link>
             </div>
           </div>

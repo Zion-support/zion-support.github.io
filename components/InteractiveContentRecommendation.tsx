@@ -1,341 +1,300 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import { Clock, ArrowRight, TrendingUp, Star, Zap, Brain, Rocket } from 'lucide-react';
 
-interface Recommendation {
-  id: string;
-  title: string;
-  excerpt: string;
-  type: 'article' | 'case-study' | 'guide' | 'service';
-  category: string;
-  href: string;
-  readTime?: string;
-  metrics?: {
-    value: string;
-    label: string;
-  }[];
-  reason: string;
-  confidence: number;
-}
+export default function InteractiveContentRecommendation() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedROI, setSelectedROI] = useState('all');
 
-const recommendations: Recommendation[] = [
-  {
-    id: 'ai-autonomous-infrastructure-2026',
-    title: 'AI Autonomous Infrastructure 2026: Self-Managing Systems Guide',
-    excerpt: 'Master autonomous infrastructure with AI-driven self-healing, predictive scaling, and zero-touch operations.',
-    type: 'article',
-    category: 'Infrastructure',
-    href: '/blog/ai-autonomous-infrastructure-2026',
-    readTime: '25 min read',
-    metrics: [
-      { value: '99.9%', label: 'Uptime' },
-      { value: '90%', label: 'Cost Reduction' }
-    ],
-    reason: 'Based on your interest in automation and infrastructure',
-    confidence: 95
-  },
-  {
-    id: 'ai-quantum-hybrid-computing-2026',
-    title: 'AI Quantum Hybrid Computing 2026: Next-Generation Intelligence',
-    excerpt: 'Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.',
-    type: 'article',
-    category: 'Quantum Computing',
-    href: '/blog/ai-quantum-hybrid-computing-2026',
-    readTime: '30 min read',
-    metrics: [
-      { value: '1000x', label: 'Faster' },
-      { value: '95%', label: 'Accuracy' }
-    ],
-    reason: 'Recommended for cutting-edge AI innovation',
-    confidence: 92
-  },
-  {
-    id: 'ai-transformation-mega-success-2026',
-    title: 'AI Transformation Mega Success 2026: $25M ROI Case Study',
-    excerpt: 'See how a Fortune 500 company achieved $25M ROI with comprehensive AI transformation.',
-    type: 'case-study',
-    category: 'Case Study',
-    href: '/case-studies/ai-transformation-mega-success-2026',
-    readTime: '30 min read',
-    metrics: [
-      { value: '$25M', label: 'ROI' },
-      { value: '99%', label: 'Automation' }
-    ],
-    reason: 'High-value transformation insights for your industry',
-    confidence: 88
-  },
-  {
-    id: 'ai-zero-trust-security-2026',
-    title: 'AI Zero Trust Security 2026: Enterprise Security Revolution',
-    excerpt: 'Revolutionary zero trust security architecture powered by AI with 99.7% threat detection accuracy.',
-    type: 'article',
-    category: 'Security',
-    href: '/blog/ai-zero-trust-security-2026',
-    readTime: '20 min read',
-    metrics: [
-      { value: '99.7%', label: 'Threat Detection' },
-      { value: 'Zero', label: 'Trust' }
-    ],
-    reason: 'Essential for enterprise security transformation',
-    confidence: 90
-  },
-  {
-    id: 'ai-foundation-models-2026',
-    title: 'AI Foundation Models Playbook 2026: Complete Implementation Guide',
-    excerpt: 'Complete guide to foundation models selection, deployment, and optimization for enterprise AI.',
-    type: 'guide',
-    category: 'AI Strategy',
-    href: '/blog/ai-foundation-models-2026',
-    readTime: '35 min read',
-    metrics: [
-      { value: '12', label: 'Model Types' },
-      { value: '70%', label: 'Cost Savings' }
-    ],
-    reason: 'Comprehensive guide for AI model selection',
-    confidence: 87
-  },
-  {
-    id: 'ai-governance-framework-2025',
-    title: 'AI Governance Framework 2025: Enterprise Implementation Guide',
-    excerpt: 'Master AI governance with comprehensive framework covering risk management and compliance.',
-    type: 'article',
-    category: 'AI Governance',
-    href: '/blog/ai-governance-framework-2025',
-    readTime: '15 min read',
-    metrics: [
-      { value: '70%', label: 'Risk Reduction' },
-      { value: '12', label: 'Framework Areas' }
-    ],
-    reason: 'Critical for AI risk management and compliance',
-    confidence: 85
-  }
-];
-
-interface InteractiveContentRecommendationProps {
-  title?: string;
-  subtitle?: string;
-  maxRecommendations?: number;
-  showConfidence?: boolean;
-}
-
-export default function InteractiveContentRecommendation({
-  title = "AI-Powered Content Recommendations",
-  subtitle = "Discover content tailored to your interests and industry. Our AI analyzes your preferences to suggest the most relevant articles and case studies.",
-  maxRecommendations = 6,
-  showConfidence = true
-}: InteractiveContentRecommendationProps) {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedType, setSelectedType] = useState<string>('all');
-  const [filteredRecommendations, setFilteredRecommendations] = useState<Recommendation[]>(recommendations);
-
-  const categories = ['all', ...Array.from(new Set(recommendations.map(r => r.category)))];
-  const types = ['all', ...Array.from(new Set(recommendations.map(r => r.type)))];
-
-  useEffect(() => {
-    let filtered = recommendations;
-
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(r => r.category === selectedCategory);
+  const contentItems = [
+    {
+      id: 1,
+      title: 'AI Cognitive Computing Breakthrough 2026',
+      category: 'cognitive',
+      roi: 'high',
+      type: 'article',
+      readTime: '35 min',
+      metrics: { accuracy: '99.9%', roi: '$15M+' },
+      description: 'Revolutionary brain-inspired AI architectures achieving unprecedented accuracy and efficiency.',
+      href: '/blog/ai-cognitive-computing-breakthrough-2026',
+      icon: Brain,
+      color: 'purple'
+    },
+    {
+      id: 2,
+      title: 'AI Space Technology Revolution 2026',
+      category: 'space',
+      roi: 'mega',
+      type: 'article',
+      readTime: '28 min',
+      metrics: { market: '$50B+', autonomous: '99.9%' },
+      description: 'Autonomous space operations and $50B+ market opportunities in space AI technology.',
+      href: '/blog/ai-space-tech-revolution-2026',
+      icon: Rocket,
+      color: 'blue'
+    },
+    {
+      id: 3,
+      title: 'AI Mega Transformation: $50M ROI Case Study',
+      category: 'transformation',
+      roi: 'mega',
+      type: 'case-study',
+      readTime: '22 min',
+      metrics: { roi: '$50M', automation: '99.9%' },
+      description: 'Fortune 500 company achieves $50M ROI with comprehensive AI transformation.',
+      href: '/case-studies/ai-mega-transformation-2026',
+      icon: Star,
+      color: 'green'
+    },
+    {
+      id: 4,
+      title: 'AI Agent Orchestration 2026: Multi-Agent Systems',
+      category: 'automation',
+      roi: 'high',
+      type: 'article',
+      readTime: '22 min',
+      metrics: { automation: '95%', roi: '$5M+' },
+      description: 'Master multi-agent systems with advanced orchestration patterns and enterprise deployment.',
+      href: '/blog/ai-agent-orchestration-2026',
+      icon: Zap,
+      color: 'blue'
+    },
+    {
+      id: 5,
+      title: 'AI Autonomous Enterprise 2026: Self-Managing Operations',
+      category: 'autonomous',
+      roi: 'high',
+      type: 'article',
+      readTime: '30 min',
+      metrics: { efficiency: '95%', savings: '$25M+' },
+      description: 'Complete self-managing business operations with zero-touch AI management systems.',
+      href: '/blog/ai-autonomous-enterprise-2026',
+      icon: TrendingUp,
+      color: 'green'
+    },
+    {
+      id: 6,
+      title: 'AI Quantum Computing 2026: Next-Generation Intelligence',
+      category: 'quantum',
+      roi: 'mega',
+      type: 'article',
+      readTime: '25 min',
+      metrics: { speed: '1000x', accuracy: '95%' },
+      description: 'Harness quantum computing for AI breakthroughs with revolutionary capabilities.',
+      href: '/blog/ai-quantum-computing-2026',
+      icon: Brain,
+      color: 'purple'
     }
+  ];
 
-    if (selectedType !== 'all') {
-      filtered = filtered.filter(r => r.type === selectedType);
-    }
+  const filteredContent = contentItems.filter(item => {
+    const categoryMatch = selectedCategory === 'all' || item.category === selectedCategory;
+    const roiMatch = selectedROI === 'all' || item.roi === selectedROI;
+    return categoryMatch && roiMatch;
+  });
 
-    // Sort by confidence score
-    filtered = filtered.sort((a, b) => b.confidence - a.confidence);
-
-    setFilteredRecommendations(filtered.slice(0, maxRecommendations));
-  }, [selectedCategory, selectedType, maxRecommendations]);
-
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'article':
-        return 'bg-blue-100 text-blue-800';
-      case 'guide':
-        return 'bg-emerald-100 text-emerald-800';
-      case 'case-study':
-        return 'bg-green-100 text-green-800';
-      case 'service':
-        return 'bg-purple-100 text-purple-800';
-      default:
-        return 'bg-gray-100 text-gray-800';
-    }
+  const getColorClasses = (color: string) => {
+    const colors = {
+      purple: 'from-purple-500 to-purple-600 border-purple-200 hover:border-purple-300',
+      blue: 'from-blue-500 to-blue-600 border-blue-200 hover:border-blue-300',
+      green: 'from-green-500 to-green-600 border-green-200 hover:border-green-300'
+    };
+    return colors[color as keyof typeof colors] || colors.blue;
   };
 
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'article':
-        return '📄';
-      case 'guide':
-        return '📚';
-      case 'case-study':
-        return '📈';
-      case 'service':
-        return '🚀';
-      default:
-        return '📄';
-    }
-  };
-
-  const getConfidenceColor = (confidence: number) => {
-    if (confidence >= 90) return 'text-green-600';
-    if (confidence >= 80) return 'text-yellow-600';
-    return 'text-orange-600';
+  const getROIColor = (roi: string) => {
+    const colors = {
+      mega: 'bg-gradient-to-r from-yellow-400 to-orange-500',
+      high: 'bg-gradient-to-r from-green-500 to-blue-500',
+      medium: 'bg-gradient-to-r from-blue-500 to-purple-500'
+    };
+    return colors[roi as keyof typeof colors] || colors.medium;
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-medium mb-6">
-            <span className="w-4 h-4 mr-2">🤖</span>
-            AI-Powered Recommendations
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-6">
+            <span className="w-4 h-4 mr-2">✨</span>
+            AI-Powered Content Discovery
           </div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            {title}
+            Personalized AI Content Recommendations
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {subtitle}
+            Discover the most relevant AI content tailored to your interests. Our intelligent system analyzes 
+            industry trends, ROI potential, and content quality to recommend the best articles and case studies.
           </p>
         </div>
 
-        {/* Filter Controls */}
-        <div className="flex flex-wrap gap-4 justify-center mb-12">
-          <div className="flex items-center gap-2">
-            <label className="text-sm font-medium text-gray-700">Category:</label>
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-            >
-              {categories.map(category => (
-                <option key={category} value={category}>
-                  {category === 'all' ? 'All Categories' : category}
-                </option>
-              ))}
-            </select>
-          </div>
-          
-          <div className="flex items-center gap-2">
-            <label className="text-sm font-medium text-gray-700">Type:</label>
-            <select
-              value={selectedType}
-              onChange={(e) => setSelectedType(e.target.value)}
-              className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-            >
-              {types.map(type => (
-                <option key={type} value={type}>
-                  {type === 'all' ? 'All Types' : type.replace('-', ' ')}
-                </option>
-              ))}
-            </select>
+        {/* Interactive Filters */}
+        <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-3">Filter by Category</label>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { value: 'all', label: 'All Content', count: contentItems.length },
+                  { value: 'cognitive', label: 'Cognitive Computing', count: contentItems.filter(item => item.category === 'cognitive').length },
+                  { value: 'space', label: 'Space Technology', count: contentItems.filter(item => item.category === 'space').length },
+                  { value: 'transformation', label: 'Transformation', count: contentItems.filter(item => item.category === 'transformation').length },
+                  { value: 'automation', label: 'Automation', count: contentItems.filter(item => item.category === 'automation').length },
+                  { value: 'autonomous', label: 'Autonomous Systems', count: contentItems.filter(item => item.category === 'autonomous').length },
+                  { value: 'quantum', label: 'Quantum Computing', count: contentItems.filter(item => item.category === 'quantum').length }
+                ].map(filter => (
+                  <button
+                    key={filter.value}
+                    onClick={() => setSelectedCategory(filter.value)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      selectedCategory === filter.value
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {filter.label} ({filter.count})
+                  </button>
+                ))}
+              </div>
+            </div>
+            
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-3">Filter by ROI Potential</label>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { value: 'all', label: 'All ROI Levels', count: contentItems.length },
+                  { value: 'mega', label: 'Mega ROI ($25M+)', count: contentItems.filter(item => item.roi === 'mega').length },
+                  { value: 'high', label: 'High ROI ($5M+)', count: contentItems.filter(item => item.roi === 'high').length },
+                  { value: 'medium', label: 'Medium ROI ($1M+)', count: contentItems.filter(item => item.roi === 'medium').length }
+                ].map(filter => (
+                  <button
+                    key={filter.value}
+                    onClick={() => setSelectedROI(filter.value)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      selectedROI === filter.value
+                        ? 'bg-green-600 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {filter.label} ({filter.count})
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Recommendations Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {filteredRecommendations.map((recommendation) => (
-            <div key={recommendation.id} className="group">
-              <Link href={recommendation.href}>
-                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-indigo-200 hover:scale-105">
-                  {/* Header */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-2">
-                      <span className="text-2xl">{getTypeIcon(recommendation.type)}</span>
-                      <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getTypeColor(recommendation.type)}`}>
-                        {recommendation.category}
+        {/* Content Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          {filteredContent.map(item => {
+            const IconComponent = item.icon;
+            const colorClasses = getColorClasses(item.color);
+            const roiColor = getROIColor(item.roi);
+            
+            return (
+              <Link key={item.id} href={item.href} className="group">
+                <div className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border-2 hover:scale-105 ${colorClasses.split(' ')[2]}`}>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className={`w-12 h-12 bg-gradient-to-r ${colorClasses.split(' ')[0]} ${colorClasses.split(' ')[1]} rounded-lg flex items-center justify-center`}>
+                      <IconComponent className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <span className={`${roiColor} text-white px-2 py-1 rounded-full text-xs font-semibold`}>
+                        {item.roi === 'mega' ? 'MEGA ROI' : item.roi === 'high' ? 'HIGH ROI' : 'MEDIUM ROI'}
                       </span>
                     </div>
-                    {showConfidence && (
-                      <div className={`text-sm font-semibold ${getConfidenceColor(recommendation.confidence)}`}>
-                        {recommendation.confidence}% match
-                      </div>
-                    )}
                   </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors line-clamp-2">
-                    {recommendation.title}
+                  
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-sm text-blue-600 font-medium capitalize">
+                      {item.type === 'case-study' ? '📊 Case Study' : '📝 Article'}
+                    </span>
+                    <span className="text-sm text-gray-500">{item.readTime} read</span>
+                  </div>
+                  
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    {item.title}
                   </h3>
-
-                  {/* Excerpt */}
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {recommendation.excerpt}
+                  
+                  <p className="text-gray-600 text-sm mb-4">
+                    {item.description}
                   </p>
-
-                  {/* Metrics */}
-                  {recommendation.metrics && (
-                    <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-                      <div className="grid grid-cols-2 gap-2">
-                        {recommendation.metrics.map((metric, index) => (
-                          <div key={index} className="text-center">
-                            <div className="text-sm font-bold text-indigo-600">{metric.value}</div>
-                            <div className="text-xs text-gray-600">{metric.label}</div>
-                          </div>
-                        ))}
+                  
+                  <div className="flex gap-4 mb-4">
+                    {Object.entries(item.metrics).map(([key, value]) => (
+                      <div key={key} className="text-center">
+                        <div className="text-lg font-bold text-blue-600">{value}</div>
+                        <div className="text-xs text-gray-500 capitalize">{key}</div>
                       </div>
-                    </div>
-                  )}
-
-                  {/* Reason */}
-                  <div className="mb-4 p-3 bg-indigo-50 rounded-lg">
-                    <p className="text-sm text-indigo-700">
-                      <span className="font-semibold">Why recommended:</span> {recommendation.reason}
-                    </p>
+                    ))}
                   </div>
-
-                  {/* Footer */}
-                  <div className="flex items-center justify-between text-sm text-gray-500">
-                    <span>{recommendation.readTime}</span>
-                    <div className="flex items-center text-indigo-600 font-semibold group-hover:text-indigo-700 transition-colors">
-                      {recommendation.type === 'service' ? 'Explore Service →' : 
-                       recommendation.type === 'case-study' ? 'View Case Study →' :
-                       recommendation.type === 'guide' ? 'Read Guide →' : 'Read Article →'}
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center text-sm text-gray-500">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {item.readTime}
+                    </div>
+                    <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
+                      {item.type === 'case-study' ? 'View Case Study' : 'Read Article'} →
                     </div>
                   </div>
                 </div>
               </Link>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        {/* Action Buttons */}
-        <div className="text-center space-y-4">
+        {/* Results Summary */}
+        <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+          <h3 className="text-xl font-bold text-gray-900 mb-4">
+            Showing {filteredContent.length} of {contentItems.length} Content Items
+          </h3>
+          <p className="text-gray-600 mb-6">
+            {filteredContent.length > 0 
+              ? `Found ${filteredContent.length} ${selectedCategory === 'all' ? '' : 'category-specific'} content items with ${selectedROI === 'all' ? 'all ROI levels' : selectedROI + ' ROI potential'}.`
+              : 'No content matches your current filters. Try adjusting your selection.'
+            }
+          </p>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/blog"
-              className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
-              <span className="w-5 h-5 mr-2">📚</span>
+              <TrendingUp className="w-5 h-5 mr-2" />
               Explore All Content
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
+            
             <Link
               href="/case-studies"
-              className="inline-flex items-center border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-600 hover:text-white transition-colors"
+              className="inline-flex items-center border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
             >
-              <span className="w-5 h-5 mr-2">📈</span>
-              View Case Studies
+              <Star className="w-5 h-5 mr-2" />
+              View All Case Studies
             </Link>
           </div>
-          
-          {/* AI Recommendation Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-8 border-t border-gray-200">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-indigo-600">95%</div>
-              <div className="text-sm text-gray-600">Accuracy</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-indigo-600">50+</div>
-              <div className="text-sm text-gray-600">Content Items</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-indigo-600">10K+</div>
-              <div className="text-sm text-gray-600">Users Served</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-indigo-600">85%</div>
-              <div className="text-sm text-gray-600">Engagement</div>
-            </div>
+        </div>
+
+        {/* Trending Topics */}
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold text-gray-900 text-center mb-6">Trending AI Topics</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              { tag: '#CognitiveComputing2026', color: 'bg-purple-100 text-purple-800' },
+              { tag: '#SpaceTechRevolution', color: 'bg-blue-100 text-blue-800' },
+              { tag: '#MegaTransformation', color: 'bg-green-100 text-green-800' },
+              { tag: '#50MillionROI', color: 'bg-yellow-100 text-yellow-800' },
+              { tag: '#AutonomousEnterprise', color: 'bg-indigo-100 text-indigo-800' },
+              { tag: '#QuantumAI', color: 'bg-pink-100 text-pink-800' }
+            ].map(topic => (
+              <span
+                key={topic.tag}
+                className={`${topic.color} px-4 py-2 rounded-full text-sm font-medium hover:scale-105 transition-transform cursor-pointer`}
+              >
+                {topic.tag}
+              </span>
+            ))}
           </div>
         </div>
       </div>

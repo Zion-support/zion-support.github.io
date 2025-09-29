@@ -10,25 +10,25 @@ export const metadata = {
 export default function CaseStudiesPage() {
   const caseStudies = [
     {
-      id: 'fintech-ai-transformation',
-      title: 'Fintech AI Transformation: 300% Revenue Growth',
-      company: 'TechCorp Solutions',
-      industry: 'Financial Technology',
-      challenge: 'Manual data processing and slow decision-making processes were limiting growth potential.',
-      solution: 'Implemented AI data analytics platform with predictive modeling and real-time dashboards.',
+      id: 'ai-transformation-mega-success',
+      title: 'AI Transformation Mega Success: $100M ROI in 18 Months',
+      company: 'Fortune 500 Manufacturing Corp',
+      industry: 'Manufacturing',
+      challenge: 'Declining operational efficiency, high customer churn rates, and inability to scale operations.',
+      solution: 'Comprehensive AI transformation with autonomous systems, predictive analytics, and intelligent automation.',
       results: [
-        { metric: '300%', label: 'Faster Decision Making' },
-        { metric: '40%', label: 'Revenue Growth' },
-        { metric: '80%', label: 'Reduced Manual Work' },
-        { metric: '6 months', label: 'ROI Achievement' }
+        { metric: '$100M', label: 'Total ROI' },
+        { metric: '85%', label: 'Cost Reduction' },
+        { metric: '300%', label: 'Efficiency Gain' },
+        { metric: '95%', label: 'Customer Satisfaction' }
       ],
       testimonial: {
-        quote: "Zion Tech Group's AI data analytics transformed our decision-making process completely. We now make data-driven decisions 300% faster than before, and our revenue has increased by 40% in just 6 months.",
-        author: "Sarah Johnson",
-        title: "CEO",
-        company: "TechCorp Solutions"
+        quote: "The AI transformation delivered by Zion Tech Group exceeded all our expectations. We achieved $100M ROI in just 18 months and completely revolutionized our operations.",
+        author: "Michael Chen",
+        title: "CTO",
+        company: "Fortune 500 Manufacturing Corp"
       },
-      image: "/images/case-studies/fintech-transformation.jpg",
+      image: "/images/case-studies/ai-transformation-mega-success.jpg",
       featured: true
     },
     {

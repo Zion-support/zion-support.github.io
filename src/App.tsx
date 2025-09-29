@@ -1,23 +1,20 @@
 import React, { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
 import { AppRouter } from './router';
-
-// import { resourcePreloader } from './utils/resourcePreloader';
-// import { criticalCSSManager } from './utils/criticalCSSManager';
-// import { sriUtility } from './security/sriUtility';
-// import { csrfProtection } from './security/csrfProtection';
-// import { structuredDataManager } from './seo/structuredDataManager';
-// import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
-// import { screenReaderSupport } from './accessibility/screenReaderSupport';
 import './index.css';
+
+// Import enhancement components
+import PerformanceMonitor from './components/PerformanceMonitor';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import SecurityEnhancer from './components/SecurityEnhancer';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import AnalyticsMonitor from './components/AnalyticsMonitor';
+import { LoadingSpinner } from './components/LoadingStates';
+
+// Legacy imports for compatibility
 import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
-const SEOOptimizer = (props: any) => null;
-const AdvancedAnalytics = (props: any) => null;
-const PerformanceOptimizer = (props: any) => null;
-const PerformanceMonitor = (props: any) => null;
-const EnhancedErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
-const NotificationSystem: React.FC<{ notifications: any[]; onRemove: (id: string) => void }> = () => null;
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};
@@ -138,32 +135,90 @@ export default function App(): React.JSX.Element {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <AppRouter />
+    <EnhancedErrorBoundary>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Enhancement Components */}
+        <PerformanceMonitor />
+        <SEOOptimizer {...seoDataForOptimizer} />
+        <AccessibilityEnhancer />
+        <SecurityEnhancer />
+        <AnalyticsMonitor />
+        
+        {/* Main Application */}
+        <Suspense fallback={
+          <div className="flex items-center justify-center min-h-screen">
+            <LoadingSpinner size="xl" />
+          </div>
+        }>
+          <AppRouter />
+        </Suspense>
 
+        {/* Performance Optimizer Modal */}
         {showPerformanceOptimizer && (
           <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-2xl font-bold">Performance Optimizer</h2>
-                <button onClick={() => setShowPerformanceOptimizer(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
+                <button 
+                  onClick={() => setShowPerformanceOptimizer(false)} 
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
+                  aria-label="Close performance optimizer"
+                >
+                  ✕
+                </button>
               </div>
-              <div />
+              <div className="space-y-4">
+                <p className="text-gray-600">Performance optimization tools and settings.</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="p-4 border rounded-lg">
+                    <h3 className="font-semibold mb-2">Resource Optimization</h3>
+                    <p className="text-sm text-gray-600">Optimize images, scripts, and stylesheets</p>
+                  </div>
+                  <div className="p-4 border rounded-lg">
+                    <h3 className="font-semibold mb-2">Caching Strategy</h3>
+                    <p className="text-sm text-gray-600">Configure caching for better performance</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}
 
+        {/* Performance Monitor Modal */}
         {showPerformanceMonitor && (
           <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center">
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-2xl font-bold">Performance Monitor</h2>
-                <button onClick={() => setShowPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
+                <button 
+                  onClick={() => setShowPerformanceMonitor(false)} 
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
+                  aria-label="Close performance monitor"
+                >
+                  ✕
+                </button>
               </div>
-              <div />
+              <div className="space-y-4">
+                <p className="text-gray-600">Real-time performance metrics and monitoring.</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="p-4 border rounded-lg">
+                    <h3 className="font-semibold mb-2">Core Web Vitals</h3>
+                    <p className="text-sm text-gray-600">LCP, FID, CLS metrics</p>
+                  </div>
+                  <div className="p-4 border rounded-lg">
+                    <h3 className="font-semibold mb-2">Resource Timing</h3>
+                    <p className="text-sm text-gray-600">Load times and resource usage</p>
+                  </div>
+                  <div className="p-4 border rounded-lg">
+                    <h3 className="font-semibold mb-2">User Experience</h3>
+                    <p className="text-sm text-gray-600">Interaction and engagement metrics</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}
       </div>
-    );
+    </EnhancedErrorBoundary>
+  );
 }

@@ -55,24 +55,6 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     featured: true
   },
   {
-    id: 'fresh-content-sep-2025',
-    message: '✨ New: Blue‑Green Agent Releases + Edge Feature Flags + Cost Controllers',
-    ctaText: 'Explore new posts',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 20,
-    active: true,
-    priority: 0,
-    variant: 'info',
-    icon: '✨',
-    animation: 'fade-in',
-    badge: 'NEW',
-    featured: true
-  },
-  {
     id: 'ai-autonomous-infrastructure-launch',
     message: '🚀 NEW: AI Autonomous Infrastructure Platform - Self-Healing Systems That Scale',
     ctaText: 'Start Free Trial',
@@ -91,7 +73,6 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     featured: true
   },
   {
-<<<<<<< HEAD
     id: 'agent-release-checklists-banner',
     message: '✅ New: Agent Release Checklists + KPI‑Linked Canaries',
     ctaText: 'Read now',
@@ -107,23 +88,6 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '✅',
     animation: 'fade-in',
     badge: 'NEW CONTENT',
-=======
-    id: 'fresh-sept-2025-content',
-    message: '📚 NEW: Serverless Inference Cost Playbook + Agent Safety Budgets (2025)',
-    ctaText: 'Read Now',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: false,
-    hideAfter: 0,
-    active: true,
-    priority: 0,
-    variant: 'special',
-    icon: '✨',
-    animation: 'pulse',
-    badge: 'NEW',
->>>>>>> cursor/create-and-deploy-new-content-9df8
     featured: true
   },
   {
