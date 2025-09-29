@@ -17,7 +17,8 @@ import {
   HealthcareAIBanner,
   RetailSuccessBanner,
   AIContentShowcaseBanner,
-  AIRevolutionBanner
+  AIRevolutionBanner,
+  AIGoToMarketBanner
 } from './PromotionalBanner';
 import AITrends2025Banner from './AITrends2025Banner';
 import ServicesShowcase from './ServicesShowcase';
@@ -161,6 +162,7 @@ export default function EnhancedHomePage({
         <HealthcareAIBanner />
         <RetailSuccessBanner />
         <AIRevolutionBanner />
+        <AIGoToMarketBanner />
         <NewBlogBanner />
         <WorkflowAutomationBanner />
         <AIAnalyticsBanner />
@@ -351,10 +353,17 @@ export default function EnhancedHomePage({
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="text-2xl">📊</div>
+                    <div className="text-2xl">🧠</div>
                     <div>
-                      <h4 className="font-semibold mb-1">AI Analytics Implementation</h4>
-                      <p className="text-sm opacity-90">Transform data into insights</p>
+                      <h4 className="font-semibold mb-1">AI Agents Adoption Playbook</h4>
+                      <p className="text-sm opacity-90">Deploy autonomous agents with ROI</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="text-2xl">🛡️</div>
+                    <div>
+                      <h4 className="font-semibold mb-1">GenAI Guardrails 2025</h4>
+                      <p className="text-sm opacity-90">Make AI outputs safe and reliable</p>
                     </div>
                   </div>
                 </div>

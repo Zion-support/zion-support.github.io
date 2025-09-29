@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function ModernFeatures(): React.JSX.Element {
-  return <section />;
-}
+const ModernFeatures: React.FC = () => {
+  return <section aria-label="Modern features" />;
+};
 
+export default ModernFeatures;
