@@ -223,3 +223,19 @@ export const caseStudies: CaseStudy[] = [
     imageUrl: "/images/case-studies/quantum-portfolio.jpg"
   }
 ];
+
+// Export featured case studies (first 4 for homepage showcase)
+export const featuredCaseStudies = caseStudies.slice(0, 4).map(study => ({
+  ...study,
+  metrics: [
+    { value: study.results[0]?.split(' ')[0] || '95%', label: 'Improvement' },
+    { value: study.results[1]?.split(' ')[0] || '$2M+', label: 'Savings' },
+    { value: study.results[2]?.split(' ')[0] || '99%', label: 'Success Rate' },
+    { value: study.duration, label: 'Duration' }
+  ],
+  testimonial: {
+    quote: "This transformation exceeded our expectations and delivered measurable results from day one.",
+    author: "CTO",
+    title: study.company
+  }
+}));
