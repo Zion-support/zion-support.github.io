@@ -1,0 +1,247 @@
+
+> operator-reminder-workflow@1.0.0 type-check
+> tsc --noEmit
+
+src/components/AIListingGenerator.tsx(2,26): error TS2307: Cannot find module '@/hooks/use-toast' or its corresponding type declarations.
+src/components/AIListingGenerator.tsx(5,26): error TS2307: Cannot find module '@/components/ui/textarea' or its corresponding type declarations.
+src/components/AIListingGenerator.tsx(6,70): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/components/AIListingGenerator.tsx(8,38): error TS2307: Cannot find module '@/components/icons' or its corresponding type declarations.
+src/components/AIListingGenerator.tsx(71,46): error TS2339: Property 'functions' does not exist on type '{ from: (_table: string) => { select: (_columns: string) => { eq: (_column: string, _value: unknown) => { order: (_column: string, _options: unknown) => { data: any[]; error: any; }; }; }; update: (_data: unknown) => { eq: (_column: string, _value: unknown) => { ...; }; }; delete: () => { ...; }; }; }'.
+src/components/AIMatchingResults.tsx(2,33): error TS2307: Cannot find module '@/lib/ai-matchmaking' or its corresponding type declarations.
+src/components/AIMatchingResults.tsx(3,35): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/components/AIMatchingResults.tsx(5,53): error TS2307: Cannot find module '@/components/ui/avatar' or its corresponding type declarations.
+src/components/AIMatchingResults.tsx(7,57): error TS2307: Cannot find module '@/components/icons' or its corresponding type declarations.
+src/components/AIMatchingResults.tsx(9,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+src/components/AIMatchingResults.tsx(79,79): error TS2322: Type '{ children: (Element | Element[])[]; defaultValue: string; value: string; onValueChange: Dispatch<SetStateAction<string>>; className: string; }' is not assignable to type 'IntrinsicAttributes & TabsProps & { children?: ReactNode; }'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & TabsProps & { children?: ReactNode; }'.
+src/components/AIMatchmaker.tsx(2,23): error TS2307: Cannot find module '@/hooks/use-toast' or its corresponding type declarations.
+src/components/AIMatchmaker.tsx(4,58): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/components/AIMatchmaker.tsx(6,42): error TS2307: Cannot find module '@/lib/ai-matchmaking' or its corresponding type declarations.
+src/components/AIMatchmaker.tsx(7,26): error TS2307: Cannot find module '@/components/ui/textarea' or its corresponding type declarations.
+src/components/CategoryCard.tsx(2,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+src/components/CategoryCard.tsx(3,25): error TS2307: Cannot find module '@/lib/slugify' or its corresponding type declarations.
+src/components/ChatAssistant/ChatAssistant.tsx(2,29): error TS2307: Cannot find module './ChatMessage' or its corresponding type declarations.
+src/components/ChatAssistant/ChatAssistant.tsx(3,27): error TS2307: Cannot find module './ChatInput' or its corresponding type declarations.
+src/components/ChatAssistant/ChatAssistant.tsx(4,53): error TS2307: Cannot find module '@/components/ui/avatar' or its corresponding type declarations.
+src/components/ChatAssistant/ChatAssistant.tsx(97,13): error TS2322: Type '"icon"' is not assignable to type '"sm" | "md" | "lg"'.
+src/components/DynamicListingPage.tsx(3,33): error TS2307: Cannot find module '@/components/GradientHeading' or its corresponding type declarations.
+src/components/DynamicListingPage.tsx(7,79): error TS2307: Cannot find module '@/components/ui/select' or its corresponding type declarations.
+src/components/DynamicListingPage.tsx(8,10): error TS2614: Module '"@/components/ui/skeleton"' has no exported member 'Skeleton'. Did you mean to use 'import Skeleton from "@/components/ui/skeleton"' instead?
+src/components/DynamicListingPage.tsx(9,24): error TS2307: Cannot find module '@/components/ui/slider' or its corresponding type declarations.
+src/components/DynamicListingPage.tsx(10,45): error TS2307: Cannot find module '@/types/listings' or its corresponding type declarations.
+src/components/DynamicListingPage.tsx(12,23): error TS2307: Cannot find module '@/hooks/use-toast' or its corresponding type declarations.
+src/components/DynamicListingPage.tsx(20,8): error TS2307: Cannot find module '@/components/ui/pagination' or its corresponding type declarations.
+src/components/DynamicListingPage.tsx(279,21): error TS2322: Type '"icon"' is not assignable to type '"sm" | "md" | "lg"'.
+src/components/DynamicListingPage.tsx(295,21): error TS2322: Type '"icon"' is not assignable to type '"sm" | "md" | "lg"'.
+src/components/DynamicListingPage.tsx(363,21): error TS2322: Type '{ key: any; listing: ProductListing; view: ListingView; onRequestQuote: (listingId: string) => void; detailBasePath: string; }' is not assignable to type 'IntrinsicAttributes & ProductListingCardProps & { children?: ReactNode; }'.
+  Property 'detailBasePath' does not exist on type 'IntrinsicAttributes & ProductListingCardProps & { children?: ReactNode; }'.
+src/components/HeroSection.tsx(3,33): error TS2307: Cannot find module '@/components/GradientHeading' or its corresponding type declarations.
+src/components/InstallPrompt.tsx(5,44): error TS2304: Cannot find name 'BeforeInstallPromptEvent'.
+src/components/InstallPrompt.tsx(8,25): error TS2304: Cannot find name 'BeforeInstallPromptEvent'.
+src/components/ModeToggle.tsx(12,7): error TS2322: Type '"icon"' is not assignable to type '"sm" | "md" | "lg"'.
+src/components/PerformanceWrapper.tsx(2,34): error TS2307: Cannot find module '../hooks/useLazyLoad' or its corresponding type declarations.
+src/components/PerformanceWrapper.tsx(8,41): error TS2552: Cannot find name 'ComponentTypeg'. Did you mean 'ComponentType'?
+src/components/PerformanceWrapper.tsx(8,56): error TS2304: Cannot find name 'div'.
+src/components/PerformanceWrapper.tsx(68,8): error TS2322: Type 'P' is not assignable to type 'IntrinsicAttributes & ((PropsWithoutRef<P> & RefAttributes<Component<P, any, any>>) | PropsWithRef<P & { ...; }>)'.
+  Type 'object' is not assignable to type 'IntrinsicAttributes & ((PropsWithoutRef<P> & RefAttributes<Component<P, any, any>>) | PropsWithRef<P & { ...; }>)'.
+    Type 'P' is not assignable to type 'IntrinsicAttributes & PropsWithRef<P & { children?: ReactNode; }>'.
+      Type 'object' is not assignable to type 'IntrinsicAttributes & PropsWithRef<P & { children?: ReactNode; }>'.
+        Type 'object' is not assignable to type 'PropsWithRef<P & { children?: ReactNode; }>'.
+          Type 'P' is not assignable to type 'PropsWithRef<P & { children?: ReactNode; }>'.
+            Type 'object' is not assignable to type 'PropsWithRef<P & { children?: ReactNode; }>'.
+src/components/ProductCard.tsx(3,99): error TS2307: Cannot find module '@/components/ui/dialog' or its corresponding type declarations.
+src/components/ProductCard.tsx(5,27): error TS2307: Cannot find module '@/utils/getStripe' or its corresponding type declarations.
+src/components/ProductCard.tsx(6,25): error TS2307: Cannot find module '@/hooks/useAuth' or its corresponding type declarations.
+src/components/ProductListingCard.tsx(4,32): error TS2307: Cannot find module '@/types/listings' or its corresponding type declarations.
+src/components/ProductListingCard.tsx(6,32): error TS2307: Cannot find module '@/components/FavoriteButton' or its corresponding type declarations.
+src/components/ProductListingCard.tsx(162,17): error TS2322: Type '(e: React.MouseEvent) => void' is not assignable to type '() => void'.
+  Target signature provides too few arguments. Expected 1 or more, but got 0.
+src/components/ProductSubmissionForm.tsx(6,25): error TS2307: Cannot find module '@/hooks/useAuth' or its corresponding type declarations.
+src/components/ProductSubmissionForm.tsx(7,26): error TS2307: Cannot find module '@/hooks/use-toast' or its corresponding type declarations.
+src/components/ProductSubmissionForm.tsx(18,8): error TS2307: Cannot find module '@/components/ui/form' or its corresponding type declarations.
+src/components/ProductSubmissionForm.tsx(21,26): error TS2307: Cannot find module '@/components/ui/textarea' or its corresponding type declarations.
+src/components/ProductSubmissionForm.tsx(22,29): error TS2307: Cannot find module '@/components/ui/aspect-ratio' or its corresponding type declarations.
+src/components/ProductSubmissionForm.tsx(24,36): error TS2307: Cannot find module '@/components/listing/AIListingGenerator' or its corresponding type declarations.
+src/components/ProductSubmissionForm.tsx(119,10): error TS2339: Property 'insert' does not exist on type '{ select: (_columns: string) => { eq: (_column: string, _value: unknown) => { order: (_column: string, _options: unknown) => { data: any[]; error: any; }; }; }; update: (_data: unknown) => { eq: (_column: string, _value: unknown) => { ...; }; }; delete: () => { ...; }; }'.
+src/components/ProductSubmissionForm.tsx(130,55): error TS2339: Property 'storage' does not exist on type '{ from: (_table: string) => { select: (_columns: string) => { eq: (_column: string, _value: unknown) => { order: (_column: string, _options: unknown) => { data: any[]; error: any; }; }; }; update: (_data: unknown) => { eq: (_column: string, _value: unknown) => { ...; }; }; delete: () => { ...; }; }; }'.
+src/components/ProductSubmissionForm.tsx(139,50): error TS2339: Property 'storage' does not exist on type '{ from: (_table: string) => { select: (_columns: string) => { eq: (_column: string, _value: unknown) => { order: (_column: string, _options: unknown) => { data: any[]; error: any; }; }; }; update: (_data: unknown) => { eq: (_column: string, _value: unknown) => { ...; }; }; delete: () => { ...; }; }; }'.
+src/components/ProductSubmissionForm.tsx(144,17): error TS2339: Property 'error' does not exist on type '{ eq: (_column2: string, _value2: unknown) => { error: any; }; }'.
+src/components/ProductSubmissionForm.tsx(176,58): error TS2322: Type '{ children: Element[]; value: string; onValueChange: Dispatch<SetStateAction<string>>; className: string; }' is not assignable to type 'IntrinsicAttributes & TabsProps & { children?: ReactNode; }'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & TabsProps & { children?: ReactNode; }'.
+src/components/QuoteRequestForm/ServiceTypeStep.tsx(2,57): error TS2307: Cannot find module '@/types/quotes' or its corresponding type declarations.
+src/components/QuoteRequestForm/ServiceTypeStep.tsx(4,22): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/components/QuoteRequestForm/ServiceTypeStep.tsx(7,34): error TS2307: Cannot find module '@/utils/sentry' or its corresponding type declarations.
+src/components/QuoteRequestForm/ServiceTypeStep.tsx(9,29): error TS2307: Cannot find module '@/hooks/useDebounce' or its corresponding type declarations.
+src/components/QuoteRequestForm/ServiceTypeStep.tsx(10,30): error TS2307: Cannot find module '@/hooks/useIsMounted' or its corresponding type declarations.
+src/components/SearchBar.tsx(4,41): error TS2307: Cannot find module '@/components/search/AutocompleteSuggestions' or its corresponding type declarations.
+src/components/SearchBar.tsx(5,34): error TS2307: Cannot find module '@/types/search' or its corresponding type declarations.
+src/components/SearchBar.tsx(6,29): error TS2307: Cannot find module '@/hooks/useDebounce' or its corresponding type declarations.
+src/components/ThemeProvider.tsx(3,6): error TS2300: Duplicate identifier 'Theme'.
+src/components/ThemeProvider.tsx(5,13): error TS2300: Duplicate identifier 'Theme'.
+src/components/TrustedBySection.tsx(3,35): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/components/TrustedBySection.tsx(29,12): error TS2304: Cannot find name 'trustedCompanies'.
+src/components/analytics/AnalyticsSummary.tsx(2,35): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/components/analytics/AnalyticsSummary.tsx(17,10): error TS2339: Property 'single' does not exist on type '{ order: (_column: string, _options: unknown) => { data: any[]; error: any; }; }'.
+src/components/analytics/AnalyticsSummary.tsx(26,10): error TS2339: Property 'is' does not exist on type '{ order: (_column: string, _options: unknown) => { data: any[]; error: any; }; }'.
+src/components/analytics/AnalyticsSummary.tsx(37,10): error TS2339: Property 'single' does not exist on type '{ order: (_column: string, _options: unknown) => { data: any[]; error: any; }; }'.
+src/components/analytics/AnalyticsSummary.tsx(45,10): error TS2339: Property 'order' does not exist on type '{ eq: (_column: string, _value: unknown) => { order: (_column: string, _options: unknown) => { data: any[]; error: any; }; }; }'.
+src/components/analytics/PageViewsTable.tsx(4,75): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/components/analytics/PageViewsTable.tsx(6,79): error TS2307: Cannot find module '@/components/ui/select' or its corresponding type declarations.
+src/components/analytics/PageViewsTable.tsx(32,10): error TS2339: Property 'gte' does not exist on type '{ order: (_column: string, _options: unknown) => { data: any[]; error: any; }; }'.
+src/components/analytics/UserBehaviorStats.tsx(4,75): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/components/analytics/UserBehaviorStats.tsx(6,79): error TS2307: Cannot find module '@/components/ui/select' or its corresponding type declarations.
+src/components/analytics/UserBehaviorStats.tsx(8,32): error TS2307: Cannot find module './AnalyticsChart' or its corresponding type declarations.
+src/components/analytics/UserBehaviorStats.tsx(22,46): error TS2339: Property 'rpc' does not exist on type '{ from: (_table: string) => { select: (_columns: string) => { eq: (_column: string, _value: unknown) => { order: (_column: string, _options: unknown) => { data: any[]; error: any; }; }; }; update: (_data: unknown) => { eq: (_column: string, _value: unknown) => { ...; }; }; delete: () => { ...; }; }; }'.
+src/components/analytics/UserBehaviorStats.tsx(36,12): error TS2339: Property 'gte' does not exist on type '{ eq: (_column: string, _value: unknown) => { order: (_column: string, _options: unknown) => { data: any[]; error: any; }; }; }'.
+src/components/auth/login/LoginCard.tsx(4,29): error TS2307: Cannot find module './SocialLogin' or its corresponding type declarations.
+src/components/auth/login/LoginForm.tsx(8,25): error TS2307: Cannot find module '@/hooks/useAuth' or its corresponding type declarations.
+src/components/auth/login/LoginForm.tsx(9,27): error TS2307: Cannot find module '@/services/authService' or its corresponding type declarations.
+src/components/auth/login/LoginForm.tsx(19,8): error TS2307: Cannot find module '@/components/ui/form' or its corresponding type declarations.
+src/components/auth/login/LoginForm.tsx(20,41): error TS2307: Cannot find module '@/components/ui/alert' or its corresponding type declarations.
+src/components/community/PostCard.tsx(5,59): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/components/community/PostCard.tsx(7,53): error TS2307: Cannot find module '@/components/ui/avatar' or its corresponding type declarations.
+src/components/community/PostCard.tsx(9,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+src/components/community/PostCard.tsx(10,27): error TS2307: Cannot find module '@/types/community' or its corresponding type declarations.
+src/components/community/PostCard.tsx(11,30): error TS2307: Cannot find module '@/components/profile/ProfileBadge' or its corresponding type declarations.
+src/components/disputes/DisputesList.tsx(3,40): error TS2307: Cannot find module '@/types/disputes' or its corresponding type declarations.
+src/components/disputes/DisputesList.tsx(13,8): error TS2307: Cannot find module '@/components/ui/table' or its corresponding type declarations.
+src/components/disputes/DisputesList.tsx(100,11): error TS2322: Type '"default" | "outline"' is not assignable to type '"primary" | "secondary" | "outline" | "ghost" | "danger"'.
+  Type '"default"' is not assignable to type '"primary" | "secondary" | "outline" | "ghost" | "danger"'.
+src/components/disputes/DisputesList.tsx(107,11): error TS2322: Type '"default" | "outline"' is not assignable to type '"primary" | "secondary" | "outline" | "ghost" | "danger"'.
+  Type '"default"' is not assignable to type '"primary" | "secondary" | "outline" | "ghost" | "danger"'.
+src/components/disputes/DisputesList.tsx(114,11): error TS2322: Type '"default" | "outline"' is not assignable to type '"primary" | "secondary" | "outline" | "ghost" | "danger"'.
+  Type '"default"' is not assignable to type '"primary" | "secondary" | "outline" | "ghost" | "danger"'.
+src/components/disputes/DisputesList.tsx(121,11): error TS2322: Type '"default" | "outline"' is not assignable to type '"primary" | "secondary" | "outline" | "ghost" | "danger"'.
+  Type '"default"' is not assignable to type '"primary" | "secondary" | "outline" | "ghost" | "danger"'.
+src/components/disputes/DisputesList.tsx(128,11): error TS2322: Type '"default" | "outline"' is not assignable to type '"primary" | "secondary" | "outline" | "ghost" | "danger"'.
+  Type '"default"' is not assignable to type '"primary" | "secondary" | "outline" | "ghost" | "danger"'.
+src/components/header/Header.tsx(4,22): error TS2307: Cannot find module './Logo' or its corresponding type declarations.
+src/components/header/Header.tsx(5,26): error TS2307: Cannot find module './UserMenu' or its corresponding type declarations.
+src/components/header/Header.tsx(9,25): error TS2307: Cannot find module '@/hooks/useAuth' or its corresponding type declarations.
+src/components/header/Header.tsx(12,43): error TS2307: Cannot find module '@/data/marketplaceData' or its corresponding type declarations.
+src/components/header/Header.tsx(28,11): error TS2339: Property 'isWhitelabel' does not exist on type 'WhitelabelContextType'.
+src/components/header/Header.tsx(28,25): error TS2339: Property 'primaryColor' does not exist on type 'WhitelabelContextType'.
+src/components/header/LanguageSelector.tsx(6,8): error TS2304: Cannot find name 'Globe'.
+src/components/header/MobileBottomNav.tsx(4,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+src/components/header/MobileBottomNav.tsx(5,25): error TS2307: Cannot find module '@/hooks/useAuth' or its corresponding type declarations.
+src/components/header/MobileBottomNav.tsx(6,30): error TS2307: Cannot find module '@/hooks/useFavorites' or its corresponding type declarations.
+src/components/header/MobileMenu.tsx(5,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+src/components/header/MobileMenu.tsx(6,25): error TS2307: Cannot find module '@/hooks/useAuth' or its corresponding type declarations.
+src/components/header/MobileMenu.tsx(81,33): error TS2322: Type '"icon"' is not assignable to type '"sm" | "md" | "lg"'.
+src/components/hiring-tracker/KanbanBoard.tsx(5,55): error TS2307: Cannot find module '@/lib/dnd-stub' or its corresponding type declarations.
+src/components/hiring-tracker/KanbanBoard.tsx(6,36): error TS2307: Cannot find module '@/hooks/useJobApplications' or its corresponding type declarations.
+src/components/hiring-tracker/KanbanBoard.tsx(7,51): error TS2307: Cannot find module '@/types/jobs' or its corresponding type declarations.
+src/components/hiring-tracker/KanbanBoard.tsx(8,58): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/components/hiring-tracker/KanbanBoard.tsx(11,23): error TS2307: Cannot find module '@/hooks/use-toast' or its corresponding type declarations.
+src/components/hiring-tracker/KanbanBoard.tsx(12,30): error TS2307: Cannot find module './KanbanColumn' or its corresponding type declarations.
+src/components/hiring-tracker/KanbanBoard.tsx(13,29): error TS2307: Cannot find module '@/hooks/use-mobile' or its corresponding type declarations.
+src/components/jobs/JobMatches.tsx(2,75): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/components/jobs/JobMatches.tsx(3,34): error TS2307: Cannot find module '@/components/jobs/EmptyMatchesCard' or its corresponding type declarations.
+src/components/jobs/JobMatches.tsx(4,30): error TS2307: Cannot find module '@/components/jobs/JobMatchCard' or its corresponding type declarations.
+src/components/jobs/JobMatches.tsx(5,31): error TS2307: Cannot find module '@/hooks/useJobMatches' or its corresponding type declarations.
+src/components/jobs/TranslatableJobForm.tsx(4,26): error TS2307: Cannot find module '@/components/ui/textarea' or its corresponding type declarations.
+src/components/jobs/TranslatableJobForm.tsx(6,35): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/components/jobs/TranslatableJobForm.tsx(7,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+src/components/jobs/TranslatableJobForm.tsx(9,39): error TS2307: Cannot find module '@/hooks/useTranslationService' or its corresponding type declarations.
+src/components/jobs/TranslatableJobForm.tsx(10,23): error TS2305: Module '"@/context/LanguageContext"' has no exported member 'SupportedLanguage'.
+src/components/jobs/TranslatableJobForm.tsx(20,11): error TS2339: Property 'currentLanguage' does not exist on type 'LanguageContextType'.
+src/components/notifications/NotificationList.tsx(3,28): error TS2307: Cannot find module '@/components/ui/scroll-area' or its corresponding type declarations.
+src/components/notifications/NotificationList.tsx(6,34): error TS2307: Cannot find module './NotificationItem' or its corresponding type declarations.
+src/components/notifications/NotificationList.tsx(7,30): error TS2307: Cannot find module '@/context/notifications' or its corresponding type declarations.
+src/components/profile/ProfileHero.tsx(1,24): error TS2307: Cannot find module '@/components/ui/avatar' or its corresponding type declarations.
+src/components/profile/ProfileHero.tsx(2,29): error TS2307: Cannot find module '@/components/ui/aspect-ratio' or its corresponding type declarations.
+src/components/profile/ProfileHero.tsx(5,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+src/components/profile/TalentOnboardingForm.tsx(8,8): error TS2307: Cannot find module '@/components/ui/form' or its corresponding type declarations.
+src/components/profile/TalentOnboardingForm.tsx(10,26): error TS2307: Cannot find module '@/components/ui/textarea' or its corresponding type declarations.
+src/components/profile/TalentOnboardingForm.tsx(14,8): error TS2307: Cannot find module '@/components/ui/select' or its corresponding type declarations.
+src/components/profile/TalentOnboardingForm.tsx(15,29): error TS2307: Cannot find module '@/components/ui/aspect-ratio' or its corresponding type declarations.
+src/components/profile/TalentOnboardingForm.tsx(16,27): error TS2307: Cannot find module '@/components/ui/separator' or its corresponding type declarations.
+src/components/profile/TalentOnboardingForm.tsx(17,23): error TS2307: Cannot find module '@/components/ui/use-toast' or its corresponding type declarations.
+src/components/profile/TalentOnboardingForm.tsx(22,25): error TS2307: Cannot find module '@/hooks/useAuth' or its corresponding type declarations.
+src/components/profile/TalentOnboardingForm.tsx(23,42): error TS2307: Cannot find module '@/hooks/useTalentProfileEnhancer' or its corresponding type declarations.
+src/components/profile/TalentOnboardingForm.tsx(141,47): error TS2339: Property 'storage' does not exist on type '{ from: (_table: string) => { select: (_columns: string) => { eq: (_column: string, _value: unknown) => { order: (_column: string, _options: unknown) => { data: any[]; error: any; }; }; }; update: (_data: unknown) => { eq: (_column: string, _value: unknown) => { ...; }; }; delete: () => { ...; }; }; }'.
+src/components/profile/TalentOnboardingForm.tsx(151,46): error TS2339: Property 'storage' does not exist on type '{ from: (_table: string) => { select: (_columns: string) => { eq: (_column: string, _value: unknown) => { order: (_column: string, _options: unknown) => { data: any[]; error: any; }; }; }; update: (_data: unknown) => { eq: (_column: string, _value: unknown) => { ...; }; }; delete: () => { ...; }; }; }'.
+src/components/projects/milestones/MilestoneActivities.tsx(4,58): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/components/projects/milestones/MilestoneActivities.tsx(5,53): error TS2307: Cannot find module '@/components/ui/avatar' or its corresponding type declarations.
+src/components/quote/QuoteWizard.tsx(2,45): error TS2307: Cannot find module '@/hooks/useQuoteWizard' or its corresponding type declarations.
+src/components/quote/QuoteWizard.tsx(3,33): error TS2307: Cannot find module '@/hooks/useDelayedError' or its corresponding type declarations.
+src/components/quote/QuoteWizard.tsx(4,22): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/components/quote/QuoteWizard.tsx(6,26): error TS2307: Cannot find module '@/components/ui/textarea' or its corresponding type declarations.
+src/components/quote/QuoteWizard.tsx(7,53): error TS2307: Cannot find module '@/components/ui/alert' or its corresponding type declarations.
+src/components/quote/QuoteWizard.tsx(9,26): error TS2307: Cannot find module '@/hooks/use-toast' or its corresponding type declarations.
+src/components/quote/QuoteWizard.tsx(149,19): error TS2322: Type '(e: any) => void' is not assignable to type '() => void'.
+  Target signature provides too few arguments. Expected 1 or more, but got 0.
+src/components/search/EnhancedSearchInput.tsx(5,41): error TS2307: Cannot find module '@/components/search/AutocompleteSuggestions' or its corresponding type declarations.
+src/components/search/EnhancedSearchInput.tsx(6,34): error TS2307: Cannot find module '@/types/search' or its corresponding type declarations.
+src/components/search/FilterSidebar.tsx(3,26): error TS2307: Cannot find module '@/components/ui/checkbox' or its corresponding type declarations.
+src/components/search/FilterSidebar.tsx(5,31): error TS2307: Cannot find module '@/types/search' or its corresponding type declarations.
+src/components/search/MarketplaceSearch.tsx(3,33): error TS2307: Cannot find module '@/hooks/useAutocomplete' or its corresponding type declarations.
+src/components/search/MarketplaceSearch.tsx(4,32): error TS2307: Cannot find module '@/types/listings' or its corresponding type declarations.
+src/components/support/ChatBotPanel.tsx(4,28): error TS2307: Cannot find module '@/components/ui/scroll-area' or its corresponding type declarations.
+src/components/support/ChatBotPanel.tsx(5,23): error TS2307: Cannot find module '@/hooks/use-toast' or its corresponding type declarations.
+src/components/support/ChatBotPanel.tsx(162,13): error TS2322: Type '"icon"' is not assignable to type '"sm" | "md" | "lg"'.
+src/components/talent/TalentCard.tsx(3,22): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/components/talent/TalentCard.tsx(6,26): error TS2307: Cannot find module '@/hooks/use-toast' or its corresponding type declarations.
+src/components/talent/TalentCard.tsx(7,31): error TS2307: Cannot find module '@/types/talent' or its corresponding type declarations.
+src/components/talent/TalentCard.tsx(108,17): error TS2322: Type '(e: React.MouseEvent) => void' is not assignable to type '() => void'.
+  Target signature provides too few arguments. Expected 1 or more, but got 0.
+src/components/talent/TalentCard.tsx(173,17): error TS2322: Type '(e: React.MouseEvent) => void' is not assignable to type '() => void'.
+  Target signature provides too few arguments. Expected 1 or more, but got 0.
+src/components/talent/TalentCard.tsx(182,15): error TS2322: Type '(e: any) => void' is not assignable to type '() => void'.
+  Target signature provides too few arguments. Expected 1 or more, but got 0.
+src/components/talent/TalentDetails.tsx(2,31): error TS2307: Cannot find module '@/types/talent' or its corresponding type declarations.
+src/components/talent/TalentGrid.tsx(3,31): error TS2307: Cannot find module '@/types/talent' or its corresponding type declarations.
+src/components/talent/TalentResults.tsx(2,31): error TS2307: Cannot find module '@/types/talent' or its corresponding type declarations.
+src/components/talent/TalentResults.tsx(3,31): error TS2307: Cannot find module '@/components/talent/ActiveFilters' or its corresponding type declarations.
+src/components/talent/TalentResults.tsx(4,31): error TS2307: Cannot find module '@/components/talent/ResultsHeader' or its corresponding type declarations.
+src/components/transactions/PaymentButton.tsx(4,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+src/components/transactions/PaymentButton.tsx(5,25): error TS2307: Cannot find module '@/hooks/useAuth' or its corresponding type declarations.
+src/components/transactions/PaymentButton.tsx(6,23): error TS2307: Cannot find module '@/hooks/use-toast' or its corresponding type declarations.
+src/components/transactions/PaymentButton.tsx(55,46): error TS2339: Property 'functions' does not exist on type '{ from: (_table: string) => { select: (_columns: string) => { eq: (_column: string, _value: unknown) => { order: (_column: string, _options: unknown) => { data: any[]; error: any; }; }; }; update: (_data: unknown) => { eq: (_column: string, _value: unknown) => { ...; }; }; delete: () => { ...; }; }; }'.
+src/components/transactions/TransactionHistory.tsx(5,25): error TS2307: Cannot find module '@/hooks/useAuth' or its corresponding type declarations.
+src/components/transactions/TransactionHistory.tsx(6,26): error TS2307: Cannot find module '@/hooks/use-toast' or its corresponding type declarations.
+src/components/transactions/TransactionHistory.tsx(8,87): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/components/transactions/TransactionHistory.tsx(60,10): error TS2339: Property 'or' does not exist on type '{ eq: (_column: string, _value: unknown) => { order: (_column: string, _options: unknown) => { data: any[]; error: any; }; }; }'.
+src/components/transactions/TransactionHistory.tsx(82,46): error TS2339: Property 'functions' does not exist on type '{ from: (_table: string) => { select: (_columns: string) => { eq: (_column: string, _value: unknown) => { order: (_column: string, _options: unknown) => { data: any[]; error: any; }; }; }; update: (_data: unknown) => { eq: (_column: string, _value: unknown) => { ...; }; }; delete: () => { ...; }; }; }'.
+src/components/transactions/TransactionHistory.tsx(193,15): error TS2322: Type '"default" | "outline"' is not assignable to type '"primary" | "secondary" | "outline" | "ghost" | "danger"'.
+  Type '"default"' is not assignable to type '"primary" | "secondary" | "outline" | "ghost" | "danger"'.
+src/components/transactions/TransactionHistory.tsx(201,15): error TS2322: Type '"default" | "outline"' is not assignable to type '"primary" | "secondary" | "outline" | "ghost" | "danger"'.
+  Type '"default"' is not assignable to type '"primary" | "secondary" | "outline" | "ghost" | "danger"'.
+src/components/transactions/TransactionHistory.tsx(209,15): error TS2322: Type '"default" | "outline"' is not assignable to type '"primary" | "secondary" | "outline" | "ghost" | "danger"'.
+  Type '"default"' is not assignable to type '"primary" | "secondary" | "outline" | "ghost" | "danger"'.
+src/components/transactions/TransactionHistory.tsx(217,15): error TS2322: Type '"default" | "outline"' is not assignable to type '"primary" | "secondary" | "outline" | "ghost" | "danger"'.
+  Type '"default"' is not assignable to type '"primary" | "secondary" | "outline" | "ghost" | "danger"'.
+src/components/ui/badge.tsx(2,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+src/components/ui/carousel.tsx(5,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+src/components/ui/carousel.tsx(65,7): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'CreatePluginType<LoosePluginType, {}>[]'.
+  Type '{}' is missing the following properties from type 'CreatePluginType<LoosePluginType, {}>[]': length, pop, push, concat, and 28 more.
+src/components/ui/carousel.tsx(206,7): error TS2322: Type 'string' is not assignable to type '"sm" | "md" | "lg"'.
+src/components/ui/carousel.tsx(235,7): error TS2322: Type 'string' is not assignable to type '"sm" | "md" | "lg"'.
+src/components/ui/input-otp.tsx(5,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+src/components/ui/input-otp.tsx(36,60): error TS2339: Property 'slots' does not exist on type 'unknown'.
+src/components/ui/input.tsx(3,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+src/components/ui/lazy-load.tsx(3,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+src/components/ui/lazy-load.tsx(63,7): error TS2322: Type '{ style: { height: string | number; width: string | number; }; className: string; }' is not assignable to type 'IntrinsicAttributes & SkeletonCardProps & { children?: ReactNode; }'.
+  Property 'style' does not exist on type 'IntrinsicAttributes & SkeletonCardProps & { children?: ReactNode; }'.
+src/components/ui/tabs.tsx(2,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+src/components/ui/toast.tsx(6,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+src/components/ui/toaster.tsx(10,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+src/components/wallet/TokenDisplay.tsx(3,27): error TS2307: Cannot find module '@/hooks/useWallet' or its corresponding type declarations.
+src/components/wallet/TokenDisplay.tsx(4,75): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.
+src/context/WalletContext.tsx(67,32): error TS2554: Expected 0 arguments, but got 1.
+src/context/WalletContext.tsx(91,17): error TS2339: Property 'getState' does not exist on type '{ open: <View extends Views>(options?: OpenOptions<View>) => Promise<void>; close: () => Promise<void>; }'.
+src/context/WalletContext.tsx(97,59): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Eip1193Provider'.
+  Property 'request' is missing in type '{}' but required in type 'Eip1193Provider'.
+src/context/WalletContext.tsx(115,19): error TS2554: Expected 0 arguments, but got 1.
+src/context/WalletContext.tsx(128,17): error TS2339: Property 'getState' does not exist on type '{ open: <View extends Views>(options?: OpenOptions<View>) => Promise<void>; close: () => Promise<void>; }'.
+src/context/WalletContext.tsx(153,17): error TS2339: Property 'getState' does not exist on type '{ open: <View extends Views>(options?: OpenOptions<View>) => Promise<void>; close: () => Promise<void>; }'.
+src/context/WalletContext.tsx(155,22): error TS2339: Property 'disconnect' does not exist on type '{ open: <View extends Views>(options?: OpenOptions<View>) => Promise<void>; close: () => Promise<void>; }'.
+src/context/notifications/NotificationProvider.tsx(12,45): error TS2552: Cannot find name 'useStateg'. Did you mean 'useState'?
+src/context/notifications/NotificationProvider.tsx(12,55): error TS2304: Cannot find name 'div'.
+src/layout/AppHeader.tsx(3,30): error TS2307: Cannot find module '@/context/MessagingContext' or its corresponding type declarations.
+src/layout/AppHeader.tsx(5,22): error TS2307: Cannot find module '@/components/header/Logo' or its corresponding type declarations.
+src/layout/AppHeader.tsx(10,29): error TS2307: Cannot find module '@/hooks/use-mobile' or its corresponding type declarations.
+src/layout/MainNavigation.tsx(3,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+src/layout/MainNavigation.tsx(4,25): error TS2307: Cannot find module '@/hooks/useAuth' or its corresponding type declarations.
+src/layout/MainNavigation.tsx(6,30): error TS2307: Cannot find module '@/hooks/useFavorites' or its corresponding type declarations.
+src/utils/errorReporting.ts(49,9): error TS2353: Object literal may only specify known properties, and 'line' does not exist in type 'Partial<ErrorReport> & { message: string; severity: "medium" | "low" | "high" | "critical"; }'.

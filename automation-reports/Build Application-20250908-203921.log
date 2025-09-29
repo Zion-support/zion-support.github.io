@@ -1,0 +1,79 @@
+
+> operator-reminder-workflow@1.0.0 prebuild
+> echo 'Skipping prebuild checks'
+
+Skipping prebuild checks
+
+> operator-reminder-workflow@1.0.0 build
+> NODE_ENV=production vite build
+
+vite v6.3.6 building for production...
+transforming...
+✓ 108 modules transformed.
+rendering chunks...
+[plugin vite:reporter] 
+(!) /workspace/src/pages/NotFound.tsx is dynamically imported by /workspace/src/App.tsx but also statically imported by /workspace/src/layout/AppLayout.tsx, dynamic import will not move module into another chunk.
+
+computing gzip size...
+dist/index.html                    0.72 kB │ gzip:  0.40 kB
+dist/assets/Home-DhPSkjxT.js       1.61 kB │ gzip:  0.57 kB
+dist/assets/About-HU2l2-FA.js      1.89 kB │ gzip:  0.73 kB
+dist/assets/Contact-D_ayC0nk.js    3.42 kB │ gzip:  1.07 kB
+dist/assets/index-DoECzV-r.js    242.27 kB │ gzip: 76.78 kB
+✓ built in 1.24s
+
+> operator-reminder-workflow@1.0.0 postbuild
+> echo 'Build completed successfully' && npm run optimize
+
+Build completed successfully
+
+> operator-reminder-workflow@1.0.0 optimize
+> node scripts/optimize-build.js
+
+[1m
+🚀 Build Optimization Report[0m
+[1m==================================================[0m
+[36m
+📊 Bundle Size Analysis[0m
+[36m==================================================[0m
+[33m
+📁 File Sizes:[0m
+[31m  index-DoECzV-r.js: 236.59 KB[0m
+[32m  Contact-D_ayC0nk.js: 3.34 KB[0m
+[32m  About-HU2l2-FA.js: 1.84 KB[0m
+[32m  Home-DhPSkjxT.js: 1.57 KB[0m
+[1m
+📈 Total Bundle Size: 243.34 KB (0.24 MB)[0m
+[35m
+💡 Optimization Recommendations:[0m
+[33m  ⚠️  Some files are large. Consider:[0m
+[33m     - Splitting large chunks[0m
+[33m     - Lazy loading components[0m
+[33m     - Optimizing images and assets[0m
+[34m
+🔍 Dependency Analysis:[0m
+[32m  ✓ react-dom: ^18.2.0[0m
+[32m  ✓ react-router-dom: ^6.22.0[0m
+[32m  ✓ @tanstack/react-query: ^5.17.19[0m
+[32m  ✓ framer-motion: ^11.0.3[0m
+[32m  ✓ lucide-react: ^0.323.0[0m
+[36m
+🔧 Build Configuration Check[0m
+[36m==================================================[0m
+[32m  ✓ Minification enabled[0m
+[32m  ✓ Source maps disabled in production[0m
+[32m  ✓ CSS code splitting enabled[0m
+[32m  ✓ Manual chunk splitting configured[0m
+[32m  ✓ Bundle analyzer configured[0m
+[36m
+📋 Summary:[0m
+[32m  ✅ Bundle size is good[0m
+[35m
+🎯 Next Steps:[0m
+[34m  1. Run npm run build:analyze for detailed bundle analysis[0m
+[34m  2. Consider implementing code splitting for large components[0m
+[34m  3. Use dynamic imports for route-based code splitting[0m
+[34m  4. Optimize images and assets[0m
+[34m  5. Remove unused dependencies[0m
+[32m
+✨ Build optimization complete![0m
