@@ -22,6 +22,9 @@ import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
+import NewContentPromoBanner from "../components/NewContentPromoBanner";
+import TrendingContentBanner from "../components/TrendingContentBanner";
+import EnhancedServicesShowcase from "../components/EnhancedServicesShowcase";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
 
@@ -101,14 +104,18 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
-
+        <LatestContentBanner className="border-b border-white/10" variant="info" />
+        <NewContentPromoBanner className="border-b border-white/10" variant="premium" />
+        <div className="container mx-auto px-6 mt-6">
+          <TrendingContentBanner />
+        </div>
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: Serverless Inference Cost Playbook + Practical RAG"
-          description="Cut inference spend 40–70% and ship RAG that actually works in prod."
-          ctaText="Read the latest"
-          ctaLink="/blog/serverless-inference-cost-playbook-2025"
+          title="📣 New: AI Cost Guardrails + Golden Paths Deep Dives"
+          description="Keep quality while slashing AI spend, and ship faster with paved paths."
+          ctaText="Read the updates"
+          ctaLink="/blog/ai-cost-guardrails-deep-dive-2025"
           dismissible={true}
         />
         {/* Animated background elements */}

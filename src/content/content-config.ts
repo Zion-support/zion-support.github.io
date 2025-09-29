@@ -394,6 +394,19 @@ export const promotionalBanners: PromotionalBanner[] = [
     priority: 1
   },
   {
+    id: 'oct-launch-content-2025',
+    message: '📣 New: AI Cost Guardrails + Golden Paths deep dives just dropped',
+    ctaText: 'Read the updates',
+    ctaLink: '/blog/ai-cost-guardrails-deep-dive-2025',
+    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-fuchsia-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0
+  },
+  {
     id: 'analytics-platform-banner',
     message: '🚀 Launch: AI Analytics Platform - Transform Data into Actionable Insights',
     ctaText: 'Explore Platform',
@@ -465,6 +478,11 @@ export const getRecentContent = (limit: number = 3) => {
   ];
   
   return allContent
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    // Sort by date when present; otherwise fall back to a stable order
+    .sort((a, b) => {
+      const dateA = (a as any).date ? new Date((a as any).date).getTime() : 0;
+      const dateB = (b as any).date ? new Date((b as any).date).getTime() : 0;
+      return dateB - dateA;
+    })
     .slice(0, limit);
 };
