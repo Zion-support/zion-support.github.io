@@ -93,13 +93,23 @@ function Footer() {
                 Blog
                 <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
               </Link>
-              <Link href="/blog/ai-neural-interfaces-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🧠 Neural Interfaces 2026</Link>
-              <Link href="/blog/ai-space-tech-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Space AI Technology</Link>
-              <Link href="/blog/ai-synthetic-data-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🔒 Synthetic Data AI</Link>
+              <Link href="/blog/ai-neural-interfaces-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🧠 Neural Interfaces 2026
+                <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
+              </Link>
+              <Link href="/blog/ai-space-tech-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🚀 Space AI Technology
+                <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
+              </Link>
+              <Link href="/blog/ai-synthetic-data-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🔒 Synthetic Data AI
+                <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
+              </Link>
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Case Studies
                 <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
               </Link>
+              <Link href="/case-studies/ai-neural-interface-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">$5M ROI Neural Interface Case Study</Link>
             </div>
           </div>
           <div>
