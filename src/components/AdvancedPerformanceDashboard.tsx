@@ -1,486 +1,318 @@
-import React, { useState, useEffect, useCallback } from "react";
-import {
-  ResponsiveContainer,
-  CartesianGrid,
-  XAxis,
-  YAxis,
-  Tooltip,
-  PieChart,
-  Pie,
-  Cell,
-  LineChart,
-  Line,
-} from "recharts";
-// import { advancedBuildOptimizer } from '../utils/advancedBuildOptimizer';
-// import { accessibilityUtils } from '../utils/accessibilityUtils';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Activity, 
+  Zap, 
+  Cpu, 
+  MemoryStick, 
+  Network, 
+  Clock, 
+  TrendingUp, 
+  AlertTriangle,
+  CheckCircle,
+  XCircle,
+  RefreshCw
+} from 'lucide-react';
 
-interface AdvancedPerformanceDashboardProps {
-  isVisible: boolean;
-  onClose: () => void;
-}
-
-interface OptimizationStrategy {
+interface PerformanceMetric {
   name: string;
-  description: string;
-  impact: "high" | "medium" | "low";
-  applied: boolean;
+  value: number;
+  unit: string;
+  status: 'good' | 'warning' | 'critical';
+  trend: 'up' | 'down' | 'stable';
+  threshold: {
+    warning: number;
+    critical: number;
+  };
 }
 
-const AdvancedPerformanceDashboard: React.FC<
-  AdvancedPerformanceDashboardProps
-> = ({ isVisible, onClose }) => {
-  const [metrics, setMetrics] = useState({
-    buildScore: 0,
-    accessibilityScore: 0,
-    performanceScore: 0,
-    seoScore: 0,
-    securityScore: 0,
-    overallScore: 0,
-  });
+interface PerformanceData {
+  metrics: PerformanceMetric[];
+  timestamp: number;
+  overallHealth: 'excellent' | 'good' | 'warning' | 'critical';
+}
 
-  interface RealTimeDataPoint {
-    timestamp: number;
-    value: number;
-    metric: string;
-  }
+const AdvancedPerformanceDashboard: React.FC = () => {
+  const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [autoRefresh, setAutoRefresh] = useState(true);
+  const [refreshInterval, setRefreshInterval] = useState(5000);
 
-  const [realTimeData, setRealTimeData] = useState<RealTimeDataPoint[]>([]);
-  // const [optimizationData, setOptimizationData] = useState<any[]>([]); // Removed unused variables
-  const [optimizationSuggestions, setOptimizationSuggestions] = useState<
-    string[]
-  >([]);
-  const [strategies, setStrategies] = useState<OptimizationStrategy[]>([]);
+  const generateMockData = useCallback((): PerformanceData => {
+    const metrics: PerformanceMetric[] = [
+      {
+        name: 'First Contentful Paint',
+        value: Math.random() * 2000 + 800,
+        unit: 'ms',
+        status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
+        threshold: { warning: 1500, critical: 2500 }
+      },
+      {
+        name: 'Largest Contentful Paint',
+        value: Math.random() * 3000 + 1200,
+        unit: 'ms',
+        status: Math.random() > 0.6 ? 'good' : Math.random() > 0.3 ? 'warning' : 'critical',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
+        threshold: { warning: 2500, critical: 4000 }
+      },
+      {
+        name: 'Cumulative Layout Shift',
+        value: Math.random() * 0.3,
+        unit: '',
+        status: Math.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
+        threshold: { warning: 0.1, critical: 0.25 }
+      },
+      {
+        name: 'First Input Delay',
+        value: Math.random() * 200 + 50,
+        unit: 'ms',
+        status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
+        threshold: { warning: 100, critical: 300 }
+      },
+      {
+        name: 'Time to Interactive',
+        value: Math.random() * 4000 + 2000,
+        unit: 'ms',
+        status: Math.random() > 0.6 ? 'good' : Math.random() > 0.3 ? 'warning' : 'critical',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
+        threshold: { warning: 3000, critical: 5000 }
+      },
+      {
+        name: 'Memory Usage',
+        value: Math.random() * 100 + 200,
+        unit: 'MB',
+        status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
+        threshold: { warning: 300, critical: 500 }
+      }
+    ];
 
-  const updateMetrics = useCallback(async () => {
-    try {
-      // Simulate performance metrics
-      const newMetrics = {
-        buildScore: Math.floor(Math.random() * 20) + 80,
-        accessibilityScore: Math.floor(Math.random() * 15) + 85,
-        performanceScore: Math.floor(Math.random() * 25) + 75,
-        seoScore: Math.floor(Math.random() * 20) + 80,
-        securityScore: Math.floor(Math.random() * 10) + 90,
-        overallScore: 0,
-      };
-
-      newMetrics.overallScore = Math.round(
-        (newMetrics.buildScore +
-          newMetrics.accessibilityScore +
-          newMetrics.performanceScore +
-          newMetrics.seoScore +
-          newMetrics.securityScore) /
-          5,
-      );
-
-      setMetrics(newMetrics);
-
-      // Update real-time data
-      const newDataPoint: RealTimeDataPoint = {
-        timestamp: Date.now(),
-        value: Math.floor(Math.random() * 2000) + 500,
-        metric: "lcp",
-      };
-
-      setRealTimeData((prev) => [...prev.slice(-9), newDataPoint]);
-
-      // Update optimization suggestions
-      const suggestions = [
-        "Enable code splitting for better initial load times",
-        "Implement service worker for offline functionality",
-        "Optimize images with WebP format",
-        "Add critical CSS inlining",
-        "Implement resource hints for faster loading",
-      ];
-      setOptimizationSuggestions(suggestions);
-
-      // Update strategies
-      const newStrategies: OptimizationStrategy[] = [
-        {
-          name: "Code Splitting",
-          description: "Split code into smaller chunks for faster loading",
-          impact: "high",
-          applied: Math.random() > 0.5,
-        },
-        {
-          name: "Image Optimization",
-          description: "Optimize images for web performance",
-          impact: "medium",
-          applied: Math.random() > 0.3,
-        },
-        {
-          name: "Caching Strategy",
-          description: "Implement effective caching mechanisms",
-          impact: "high",
-          applied: Math.random() > 0.4,
-        },
-      ];
-      setStrategies(newStrategies);
-    } catch (error) {
-      console.error("Failed to update metrics:", error);
+    const criticalCount = metrics.filter(m => m.status === 'critical').length;
+    const warningCount = metrics.filter(m => m.status === 'warning').length;
+    
+    let overallHealth: 'excellent' | 'good' | 'warning' | 'critical';
+    if (criticalCount > 0) {
+      overallHealth = 'critical';
+    } else if (warningCount > 2) {
+      overallHealth = 'warning';
+    } else if (warningCount > 0) {
+      overallHealth = 'good';
+    } else {
+      overallHealth = 'excellent';
     }
+
+    return {
+      metrics,
+      timestamp: Date.now(),
+      overallHealth
+    };
   }, []);
 
-  const generateSuggestions = useCallback(() => {
-    const suggestions: string[] = [];
+  const refreshData = useCallback(() => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setPerformanceData(generateMockData());
+      setIsLoading(false);
+    }, 500);
+  }, [generateMockData]);
 
-    if (metrics.buildScore < 80) {
-      suggestions.push("Enable code splitting and tree shaking");
-      suggestions.push("Optimize bundle size and compression");
-    }
+  useEffect(() => {
+    refreshData();
+  }, [refreshData]);
 
-    if (metrics.accessibilityScore < 85) {
-      suggestions.push("Add missing ARIA labels and alt text");
-      suggestions.push("Improve keyboard navigation");
-    }
+  useEffect(() => {
+    if (!autoRefresh) return;
 
-    if (metrics.performanceScore < 90) {
-      suggestions.push("Implement lazy loading for images");
-      suggestions.push("Optimize critical rendering path");
-    }
+    const interval = setInterval(refreshData, refreshInterval);
+    return () => clearInterval(interval);
+  }, [autoRefresh, refreshInterval, refreshData]);
 
-    if (metrics.seoScore < 90) {
-      suggestions.push("Add missing meta tags");
-      suggestions.push("Optimize page structure");
-    }
-
-    if (metrics.securityScore < 95) {
-      suggestions.push("Implement security headers");
-      suggestions.push("Add content security policy");
-    }
-
-    setOptimizationSuggestions(suggestions);
-  }, [metrics]);
-
-  // Removed unused function to reduce warnings
-  // const initializeDashboard = async () => {
-  //   try {
-  //     const score = advancedBuildOptimizer.getOptimizationScore();
-  //     const report = advancedBuildOptimizer.generateOptimizationReport();
-  //
-  //     setMetrics({
-  //       buildScore: score,
-  //       accessibilityScore: accessibilityUtils.getAccessibilityScore(),
-  //       performanceScore: Math.floor(Math.random() * 20) + 80,
-  //       seoScore: Math.floor(Math.random() * 15) + 85,
-  //       securityScore: Math.floor(Math.random() * 10) + 90,
-  //       overallScore: score
-  //     });
-  //     setStrategies([]);
-  //   } catch (error) {
-  //     console.error('Failed to initialize dashboard:', error);
-  //   }
-  // };
-
-  // Removed unused getScoreColor function
-
-  const exportReport = useCallback(() => {
-    const report = {
-      timestamp: new Date().toISOString(),
-      metrics,
-      suggestions: optimizationSuggestions,
-      strategies: strategies.filter((s) => s.applied),
-    };
-
-    const blob = new Blob([JSON.stringify(report, null, 2)], {
-      type: "application/json",
-    });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `performance-report-${Date.now()}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
-  }, [metrics, optimizationSuggestions, strategies]);
-
-  const getImpactColor = (impact: string) => {
-    switch (impact) {
-      case "high":
-        return "#ef4444";
-      case "medium":
-        return "#f59e0b";
-      case "low":
-        return "#10b981";
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'good':
+        return <CheckCircle className="w-4 h-4 text-green-500" />;
+      case 'warning':
+        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
+      case 'critical':
+        return <XCircle className="w-4 h-4 text-red-500" />;
       default:
-        return "#6b7280";
+        return <Activity className="w-4 h-4 text-gray-500" />;
     }
   };
 
-  useEffect(() => {
-    if (isVisible) {
-      updateMetrics();
-      generateSuggestions();
-
-      const interval = setInterval(updateMetrics, 2000);
-      return () => clearInterval(interval);
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'good':
+        return 'text-green-600 bg-green-50 border-green-200';
+      case 'warning':
+        return 'text-yellow-600 bg-yellow-50 border-yellow-200';
+      case 'critical':
+        return 'text-red-600 bg-red-50 border-red-200';
+      default:
+        return 'text-gray-600 bg-gray-50 border-gray-200';
     }
-  }, [isVisible, updateMetrics, generateSuggestions]);
+  };
 
-  if (!isVisible) return null;
+  const getTrendIcon = (trend: string) => {
+    switch (trend) {
+      case 'up':
+        return <TrendingUp className="w-3 h-3 text-red-500" />;
+      case 'down':
+        return <TrendingUp className="w-3 h-3 text-green-500 rotate-180" />;
+      default:
+        return <div className="w-3 h-3 bg-gray-300 rounded-full" />;
+    }
+  };
 
-  // Removed unused performanceData and optimizationDataMap variables
-  const pieData = [
-    { name: "Build", value: metrics.buildScore, color: "#3b82f6" },
-    {
-      name: "Accessibility",
-      value: metrics.accessibilityScore,
-      color: "#10b981",
-    },
-    { name: "Performance", value: metrics.performanceScore, color: "#f59e0b" },
-    { name: "SEO", value: metrics.seoScore, color: "#8b5cf6" },
-    { name: "Security", value: metrics.securityScore, color: "#ef4444" },
-  ];
+  const getOverallHealthColor = (health: string) => {
+    switch (health) {
+      case 'excellent':
+        return 'text-green-600 bg-green-100';
+      case 'good':
+        return 'text-blue-600 bg-blue-100';
+      case 'warning':
+        return 'text-yellow-600 bg-yellow-100';
+      case 'critical':
+        return 'text-red-600 bg-red-100';
+      default:
+        return 'text-gray-600 bg-gray-100';
+    }
+  };
+
+  if (!performanceData) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <RefreshCw className="w-8 h-8 animate-spin text-blue-500" />
+      </div>
+    );
+  }
+
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white dark:bg-gray-900 rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
-        <div className="p-6">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-              Advanced Performance Dashboard
-            </h2>
-            <button
-              onClick={onClose}
-              className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-            >
-              ✕
-            </button>
+    <div className="p-6 bg-white rounded-lg shadow-lg">
+      <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center space-x-3">
+          <Activity className="w-8 h-8 text-blue-500" />
+          <h2 className="text-2xl font-bold text-gray-800">Advanced Performance Dashboard</h2>
+        </div>
+        <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
+            <label className="text-sm font-medium text-gray-600">Auto Refresh:</label>
+            <input
+              type="checkbox"
+              checked={autoRefresh}
+              onChange={(e) => setAutoRefresh(e.target.checked)}
+              className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+            />
           </div>
+          <select
+            value={refreshInterval}
+            onChange={(e) => setRefreshInterval(Number(e.target.value))}
+            className="px-3 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value={1000}>1s</option>
+            <option value={2000}>2s</option>
+            <option value={5000}>5s</option>
+            <option value={10000}>10s</option>
+          </select>
+          <button
+            onClick={refreshData}
+            disabled={isLoading}
+            className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:opacity-50 flex items-center space-x-2"
+          >
+            <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
+            <span>Refresh</span>
+          </button>
+        </div>
+      </div>
 
-          {/* Overall Score */}
-          <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 rounded-lg mb-6">
-            <h3 className="text-xl font-semibold mb-2">
-              Overall Performance Score
-            </h3>
-            <div className="text-4xl font-bold">{metrics.overallScore}/100</div>
-            <div className="mt-2 text-blue-100">
-              {metrics.overallScore >= 90
-                ? "Excellent"
-                : metrics.overallScore >= 80
-                  ? "Good"
-                  : metrics.overallScore >= 70
-                    ? "Fair"
-                    : "Needs Improvement"}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+        <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-6 rounded-lg text-white">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-blue-100 text-sm">Overall Health</p>
+              <p className="text-2xl font-bold capitalize">{performanceData.overallHealth}</p>
             </div>
-          </div>
-
-          {/* Metrics Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-            <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                Build Score
-              </h4>
-              <div className="text-2xl font-bold text-blue-600">
-                {metrics.buildScore}/100
-              </div>
-            </div>
-            <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                Accessibility Score
-              </h4>
-              <div className="text-2xl font-bold text-green-600">
-                {metrics.accessibilityScore}/100
-              </div>
-            </div>
-            <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                Performance Score
-              </h4>
-              <div className="text-2xl font-bold text-yellow-600">
-                {metrics.performanceScore}/100
-              </div>
-            </div>
-            <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                SEO Score
-              </h4>
-              <div className="text-2xl font-bold text-purple-600">
-                {metrics.seoScore}/100
-              </div>
-            </div>
-            <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                Security Score
-              </h4>
-              <div className="text-2xl font-bold text-red-600">
-                {metrics.securityScore}/100
-              </div>
-            </div>
-          </div>
-
-          {/* Optimization Suggestions */}
-          <div className="bg-gray-50 p-6 rounded-lg mb-6">
-            <h3 className="text-lg font-semibold mb-4 text-gray-800">
-              💡 Optimization Suggestions
-            </h3>
-            <div className="space-y-2">
-              {optimizationSuggestions.map((suggestion, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-3 rounded-lg border-l-4 border-blue-500"
-                >
-                  <p className="text-sm text-gray-700">{suggestion}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Optimization Status Chart */}
-          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 mb-6">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Optimization Status
-            </h3>
-            <ResponsiveContainer width="100%" height={300}>
-              <PieChart>
-                <Pie
-                  data={pieData}
-                  cx="50%"
-                  cy="50%"
-                  outerRadius={80}
-                  dataKey="value"
-                  label={(props: any) => `${props.name}: ${props.value}`}
-                >
-                  {pieData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={entry.color} />
-                  ))}
-                </Pie>
-                <Tooltip />
-              </PieChart>
-            </ResponsiveContainer>
-          </div>
-
-          {/* Real-time Monitoring */}
-          {realTimeData.length > 0 && (
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 mb-6">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                Real-time Performance Monitoring
-              </h3>
-              <ResponsiveContainer width="100%" height={300}>
-                <LineChart data={realTimeData}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="time" />
-                  <YAxis />
-                  <Tooltip />
-                  <Line
-                    type="monotone"
-                    dataKey="lcp"
-                    stroke="#ef4444"
-                    name="LCP (ms)"
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="fcp"
-                    stroke="#f59e0b"
-                    name="FCP (ms)"
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="ttfb"
-                    stroke="#3b82f6"
-                    name="TTFB (ms)"
-                  />
-                </LineChart>
-              </ResponsiveContainer>
-            </div>
-          )}
-
-          {/* Optimization Strategies */}
-          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 mb-6">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Optimization Strategies
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {strategies.map(
-                (strategy: OptimizationStrategy, index: number) => (
-                  <div
-                    key={index}
-                    className={`p-4 rounded-lg border ${
-                      strategy.applied
-                        ? "bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800"
-                        : "bg-gray-50 border-gray-200 dark:bg-gray-700 dark:border-gray-600"
-                    }`}
-                  >
-                    <div className="flex items-center justify-between mb-2">
-                      <h4 className="font-medium text-gray-900 dark:text-white">
-                        {strategy.name}
-                      </h4>
-                      <span
-                        className="px-2 py-1 rounded-full text-xs font-medium"
-                        style={{
-                          backgroundColor: getImpactColor(strategy.impact),
-                          color: "white",
-                        }}
-                      >
-                        {strategy.impact}
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                      {strategy.description}
-                    </p>
-                    <div className="mt-2 flex items-center">
-                      <div
-                        className={`w-2 h-2 rounded-full mr-2 ${
-                          strategy.applied ? "bg-green-500" : "bg-gray-400"
-                        }`}
-                      />
-                      <span className="text-xs text-gray-500 dark:text-gray-400">
-                        {strategy.applied ? "Applied" : "Available"}
-                      </span>
-                    </div>
-                  </div>
-                ),
-              )}
-            </div>
-          </div>
-
-          {/* Actions */}
-          <div className="flex flex-wrap gap-4">
-            <button
-              onClick={exportReport}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors"
-            >
-              Export Report
-            </button>
-            <button
-              onClick={updateMetrics}
-              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors"
-            >
-              Refresh Metrics
-            </button>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-md transition-colors"
-            >
-              Reload App
-            </button>
-          </div>
-
-          {/* Performance Insights */}
-          <div className="mt-6 bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-            <h4 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">
-              Performance Insights
-            </h4>
-            <div className="text-sm text-blue-800 dark:text-blue-200">
-              {metrics.overallScore < 70 && (
-                <p>
-                  • Performance needs immediate attention. Focus on critical
-                  metrics.
-                </p>
-              )}
-              {metrics.overallScore >= 70 && metrics.overallScore < 90 && (
-                <p>• Good performance with room for optimization.</p>
-              )}
-              {metrics && metrics.buildScore < 80 && (
-                <p>
-                  • Optimize build process - currently {metrics.buildScore}/100
-                </p>
-              )}
-              {metrics.overallScore >= 90 && (
-                <p>
-                  • Excellent performance! Keep monitoring for any regressions.
-                </p>
-              )}
-            </div>
+            <Activity className="w-8 h-8 text-blue-200" />
           </div>
         </div>
+
+        <div className="bg-gradient-to-r from-green-500 to-green-600 p-6 rounded-lg text-white">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-green-100 text-sm">Good Metrics</p>
+              <p className="text-2xl font-bold">
+                {performanceData.metrics.filter(m => m.status === 'good').length}
+              </p>
+            </div>
+            <CheckCircle className="w-8 h-8 text-green-200" />
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 p-6 rounded-lg text-white">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-yellow-100 text-sm">Warning Metrics</p>
+              <p className="text-2xl font-bold">
+                {performanceData.metrics.filter(m => m.status === 'warning').length}
+              </p>
+            </div>
+            <AlertTriangle className="w-8 h-8 text-yellow-200" />
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {performanceData.metrics.map((metric, index) => (
+          <motion.div
+            key={metric.name}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            className={`p-4 rounded-lg border-2 ${getStatusColor(metric.status)}`}
+          >
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center space-x-2">
+                {getStatusIcon(metric.status)}
+                <h3 className="font-semibold">{metric.name}</h3>
+              </div>
+              <div className="flex items-center space-x-2">
+                {getTrendIcon(metric.trend)}
+                <span className="text-sm text-gray-500">
+                  {metric.trend === 'up' ? 'Increasing' : metric.trend === 'down' ? 'Decreasing' : 'Stable'}
+                </span>
+              </div>
+            </div>
+            
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-2xl font-bold">
+                {metric.value.toFixed(metric.unit === '' ? 3 : 0)}
+                {metric.unit && <span className="text-sm text-gray-500 ml-1">{metric.unit}</span>}
+              </span>
+              <span className="text-sm text-gray-500">
+                Threshold: {metric.threshold.warning}{metric.unit} / {metric.threshold.critical}{metric.unit}
+              </span>
+            </div>
+
+            <div className="w-full bg-gray-200 rounded-full h-2">
+              <div
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  metric.status === 'good' ? 'bg-green-500' :
+                  metric.status === 'warning' ? 'bg-yellow-500' : 'bg-red-500'
+                }`}
+                style={{
+                  width: `${Math.min((metric.value / metric.threshold.critical) * 100, 100)}%`
+                }}
+              />
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      <div className="mt-6 text-center text-sm text-gray-500">
+        Last updated: {new Date(performanceData.timestamp).toLocaleTimeString()}
       </div>
     </div>
   );

@@ -48,6 +48,9 @@ const ComprehensivePerformanceDashboard = lazy(() => import('./components/Compre
 const ComprehensiveMonitoringDashboard = lazy(() => import('./components/ComprehensiveMonitoringDashboard'));
 const PerformanceOptimizationPanel = lazy(() => import('./components/PerformanceOptimizationPanel'));
 const RealTimePerformanceMonitor = lazy(() => import('./components/RealTimePerformanceMonitor'));
+const AdvancedPerformanceDashboard = lazy(() => import('./components/AdvancedPerformanceDashboard'));
+const AdvancedErrorDashboard = lazy(() => import('./components/AdvancedErrorDashboard'));
+const ComprehensiveAnalyticsDashboard = lazy(() => import('./components/ComprehensiveAnalyticsDashboard'));
 const AdvancedAnalytics = lazy(() => import('./components/AdvancedAnalytics'));
 const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard'));
 const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPalette'));
@@ -114,6 +117,8 @@ export default function App(): React.JSX.Element {
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
+  const [showErrorDashboard, setShowErrorDashboard] = useState(false);
+  const [showAnalyticsDashboard, setShowAnalyticsDashboard] = useState(false);
   const [userPreferences, setUserPreferences] = useState({
     theme: 'auto',
     animations: true,
@@ -210,6 +215,22 @@ export default function App(): React.JSX.Element {
       shortcut: 'Ctrl+Shift+H'
     },
     {
+      id: 'error-dashboard',
+      title: 'Error Dashboard',
+      description: 'Open advanced error monitoring dashboard',
+      category: 'Monitoring',
+      action: () => setShowErrorDashboard(true),
+      shortcut: 'Ctrl+Shift+E'
+    },
+    {
+      id: 'analytics-dashboard',
+      title: 'Analytics Dashboard',
+      description: 'Open comprehensive analytics dashboard',
+      category: 'Analytics',
+      action: () => setShowAnalyticsDashboard(true),
+      shortcut: 'Ctrl+Shift+L'
+    },
+    {
       id: 'close-all',
       title: 'Close All Modals',
       description: 'Close all open modals and dashboards',
@@ -222,6 +243,8 @@ export default function App(): React.JSX.Element {
         setShowRealTimeMetrics(false);
         setShowCommandPalette(false);
         setShowKeyboardHelp(false);
+        setShowErrorDashboard(false);
+        setShowAnalyticsDashboard(false);
       },
       shortcut: 'Escape'
     }
@@ -337,6 +360,12 @@ export default function App(): React.JSX.Element {
           case 'H':
             setShowSystemHealth(!showSystemHealth);
             break;
+          case 'E':
+            setShowErrorDashboard(!showErrorDashboard);
+            break;
+          case 'L':
+            setShowAnalyticsDashboard(!showAnalyticsDashboard);
+            break;
           case 'K':
             setShowKeyboardHelp(!showKeyboardHelp);
             break;
@@ -386,6 +415,8 @@ export default function App(): React.JSX.Element {
         setShowKeyboardHelp(false);
         setShowCommandPalette(false);
         setShowRealTimeMonitor(false);
+        setShowErrorDashboard(false);
+        setShowAnalyticsDashboard(false);
         setShowSystemHealth(false);
       }
     };
@@ -569,6 +600,42 @@ export default function App(): React.JSX.Element {
           isVisible={showSystemHealth}
           onClose={() => setShowSystemHealth(false)}
         />
+
+        {/* Error Dashboard */}
+        {showErrorDashboard && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold">Error Dashboard</h2>
+                <button
+                  onClick={() => setShowErrorDashboard(false)}
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
+                >
+                  ✕
+                </button>
+              </div>
+              <AdvancedErrorDashboard />
+            </div>
+          </div>
+        )}
+
+        {/* Analytics Dashboard */}
+        {showAnalyticsDashboard && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold">Analytics Dashboard</h2>
+                <button
+                  onClick={() => setShowAnalyticsDashboard(false)}
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
+                >
+                  ✕
+                </button>
+              </div>
+              <ComprehensiveAnalyticsDashboard />
+            </div>
+          </div>
+        )}
 
         {/* New Components */}
         <NotificationSystem
@@ -845,6 +912,24 @@ export default function App(): React.JSX.Element {
           🏥
         </button>
 
+        {/* Error Dashboard Button */}
+        <button
+          onClick={() => setShowErrorDashboard(true)}
+          className="fixed bottom-4 right-80 z-40 bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Error Dashboard (Ctrl+Shift+E)"
+        >
+          🐛
+        </button>
+
+        {/* Analytics Dashboard Button */}
+        <button
+          onClick={() => setShowAnalyticsDashboard(true)}
+          className="fixed bottom-4 right-92 z-40 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Analytics Dashboard (Ctrl+Shift+L)"
+        >
+          📊
+        </button>
+
         {/* Keyboard Shortcuts Help Panel */}
         <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
@@ -856,6 +941,8 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+T: Toggle Theme</div>
           <div>Ctrl+Shift+R: Real-Time Monitor</div>
           <div>Ctrl+Shift+H: System Health</div>
+          <div>Ctrl+Shift+E: Error Dashboard</div>
+          <div>Ctrl+Shift+L: Analytics Dashboard</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
           <div>Ctrl+K: Command Palette</div>
           <div>Escape: Close All</div>
@@ -863,4 +950,4 @@ export default function App(): React.JSX.Element {
       </div>
     </EnhancedErrorBoundary>
   );
-  }
+}
