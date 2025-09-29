@@ -94,10 +94,28 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "8 min read",
     image: "/images/edge-privacy-playbooks-2026.jpg",
+<<<<<<< HEAD
+    excerpt: "Set up lightweight, KPI‑aligned canaries that catch issues early and keep teams fast.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Governance",
+    tags: ["Canaries", "Evals", "KPIs"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/kpi-linked-canaries-2025.jpg",
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-01d1
     newBadge: true,
     trending: true
   },
   {
+<<<<<<< HEAD
+    id: "secure-ml-supply-chain-2026",
+    slug: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
+    description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
+    excerpt: "Stop ML supply‑chain drift with automated SBOMs, attestations, and CI policy gates.",
+=======
     id: "ai-sre-blueprints-2026",
     slug: "ai-sre-blueprints-2026",
     title: "AI SRE Blueprints 2026: Reliability Budgets, Rollbacks, and Live Traces",
@@ -137,6 +155,7 @@ export const latestArticles: LatestArticle[] = [
     excerpt: "Cut latency and cost with tiered caches, signed configs, and TTL windows.",
 =======
 =======
+>>>>>>> origin/cursor/create-and-deploy-new-content-01d1
     author: "Zion Tech Group Team",
     date: "2025-10-16",
     category: "Edge Computing",
