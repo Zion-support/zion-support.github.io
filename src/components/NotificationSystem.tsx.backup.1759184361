@@ -1,5 +1,19 @@
 import React from 'react';
 
+<<<<<<< HEAD
+export interface Notification {
+  id: string;
+  message: string;
+  type?: 'info' | 'success' | 'warning' | 'error';
+}
+
+const NotificationSystem: React.FC<{ notifications: Notification[]; onRemove: (id: string) => void }> = () => {
+  return null;
+};
+
+export default NotificationSystem;
+
+=======
 export type Notification = { id: string; message: string };
 
 type NotificationSystemProps = {
@@ -17,3 +31,4 @@ export default function NotificationSystem({ notifications, onRemove }: Notifica
     </div>
   );
 }
+>>>>>>> origin/cursor/create-and-deploy-new-content-225b

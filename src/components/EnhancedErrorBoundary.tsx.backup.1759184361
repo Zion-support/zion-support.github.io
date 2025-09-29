@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React from "react";
+>>>>>>> origin/cursor/create-and-deploy-new-content-225b
 
 class EnhancedErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean }> {
   constructor(props: { children: React.ReactNode }) {
@@ -19,4 +23,9 @@ class EnhancedErrorBoundary extends React.Component<{ children: React.ReactNode 
     return this.props.children;
   }
 }
+<<<<<<< HEAD
+
+export default EnhancedErrorBoundary;
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-225b
 

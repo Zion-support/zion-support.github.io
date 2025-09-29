@@ -207,6 +207,12 @@ const NewContentPromoBanner = () => {
           })}
         </div>
 
+<<<<<<< HEAD
+        <div className="text-center mt-12">
+          <a
+            href="/blog"
+            className="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
+=======
               <Link
                 to="/services"
                 className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
@@ -238,6 +244,7 @@ const NewContentPromoBanner = () => {
             onClick={() => setIsDismissed(true)}
             className="ml-4 p-2 hover:bg-white/10 rounded-full transition-colors"
             aria-label="Dismiss banner"
+>>>>>>> origin/cursor/create-and-deploy-new-content-225b
           >
             View All Content →
           </a>
