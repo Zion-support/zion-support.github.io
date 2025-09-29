@@ -58,6 +58,8 @@ function Header() {
                 🚀 NEW 2026
               <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                 BREAKTHROUGH 2026
+              <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                🚀 REVOLUTIONARY 2026
               </span>
             </Link>
           </div>
@@ -69,6 +71,8 @@ function Header() {
               </span>
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                 FEATURED
+              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                $150M+ ROI
               </span>
             </Link>
           </div>
@@ -111,7 +115,7 @@ function Footer() {
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors">All Case Studies</Link>
               <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Blog
-                <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">🚀 NEW</span>
+                <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">🚀 REVOLUTIONARY</span>
               </Link>
               <Link href="/blog/ai-2026-mega-breakthroughs" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 AI 2026 Mega Breakthroughs</Link>
               <Link href="/blog/ai-cost-optimization-2026-advanced" className="block text-gray-600 hover:text-blue-600 transition-colors">💰 90% Cost Reduction Guide</Link>
@@ -172,17 +176,16 @@ function Footer() {
                 🧠 Cognitive Superintelligence 2026
                 <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">MEGA</span>
               </Link>
-              <Link href="/blog/ai-metaverse-enterprise-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                🌐 Metaverse Enterprise 2026
-                <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">REVOLUTION</span>
+              <Link href="/case-studies/ai-mega-transformation-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                📊 $150M ROI Success Story
+                <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
               </Link>
               <Link href="/blog/ai-neural-interfaces-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🧠 Neural Interfaces 2026</Link>
               <Link href="/blog/ai-space-tech-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Space AI Technology</Link>
-              <Link href="/blog/ai-synthetic-data-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🔒 Synthetic Data AI</Link>
               <Link href="/blog/ai-quantum-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">⚛️ Quantum Computing AI</Link>
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Case Studies
-                <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
+                <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">$150M+ ROI</span>
               </Link>
               <Link href="/case-studies/ai-cognitive-superintelligence-mega-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🧠 $750M Cognitive AI Success
