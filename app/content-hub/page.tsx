@@ -29,15 +29,15 @@ export default function ContentHub() {
             <div className="text-gray-600">Total Articles</div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-green-600 mb-2">25</div>
+            <div className="text-3xl font-bold text-green-600 mb-2">30</div>
             <div className="text-gray-600">New 2026 Content</div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-purple-600 mb-2">15</div>
+            <div className="text-3xl font-bold text-purple-600 mb-2">18</div>
             <div className="text-gray-600">Categories</div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-orange-600 mb-2">$2.5B+</div>
+            <div className="text-3xl font-bold text-orange-600 mb-2">$5B+</div>
             <div className="text-gray-600">Total ROI Documented</div>
           </div>
         </div>
@@ -45,6 +45,110 @@ export default function ContentHub() {
         {/* Featured Content */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Content</h2>
+          <div className="grid lg:grid-cols-2 gap-8">
+            <Link href="/blog/ai-innovation-2026-comprehensive-guide" className="group">
+              <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200 hover:border-indigo-200">
+                <div className="relative h-64 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600">
+                  <div className="absolute inset-0 bg-black opacity-20"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                        <span className="text-2xl">🚀</span>
+                      </div>
+                      <h3 className="text-2xl font-bold mb-2">AI Innovation Guide</h3>
+                      <p className="text-indigo-100">Complete 2026 Guide</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      NEW 2026
+                    </span>
+                  </div>
+                </div>
+                <div className="p-8">
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm font-medium">Guide</span>
+                    <span className="text-gray-500 text-sm">25 min read</span>
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                    AI Innovation 2026: The Complete Guide to Next-Generation Technologies
+                  </h4>
+                  <p className="text-gray-600 mb-6">
+                    Comprehensive guide to AI innovations in 2026 including neural interfaces, quantum computing, autonomous systems, and enterprise transformation strategies.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-6">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-indigo-600">$2.5T</div>
+                        <div className="text-xs text-gray-500">Market Size</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-purple-600">95%</div>
+                        <div className="text-xs text-gray-500">Adoption</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center text-indigo-600 font-semibold text-sm group-hover:text-indigo-700 transition-colors">
+                      Read More →
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/case-studies/ai-retail-transformation-2026-mega-success" className="group">
+              <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200 hover:border-indigo-200">
+                <div className="relative h-64 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600">
+                  <div className="absolute inset-0 bg-black opacity-20"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                        <span className="text-2xl">💰</span>
+                      </div>
+                      <h3 className="text-2xl font-bold mb-2">$1.2B Retail Success</h3>
+                      <p className="text-green-100">Mega Transformation</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      FEATURED
+                    </span>
+                  </div>
+                </div>
+                <div className="p-8">
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">Case Study</span>
+                    <span className="text-gray-500 text-sm">18 min read</span>
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                    AI Retail Transformation 2026: $1.2B Revenue Growth Success Story
+                  </h4>
+                  <p className="text-gray-600 mb-6">
+                    How a Fortune 500 retail chain achieved $1.2B revenue growth through AI-powered customer experience, inventory optimization, and autonomous operations.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-6">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-green-600">$1.2B</div>
+                        <div className="text-xs text-gray-500">Revenue Growth</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-blue-600">45%</div>
+                        <div className="text-xs text-gray-500">Satisfaction</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center text-indigo-600 font-semibold text-sm group-hover:text-indigo-700 transition-colors">
+                      Read More →
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+
+        {/* Latest Content Grid */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Latest Content</h2>
           <div className="grid lg:grid-cols-2 gap-8">
             <Link href="/blog/ai-brain-computer-interfaces-2026" className="group">
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200 hover:border-indigo-200">
