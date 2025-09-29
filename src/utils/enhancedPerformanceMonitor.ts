@@ -96,32 +96,6 @@ class EnhancedPerformanceMonitor {
     }
   }
 
-  private startPeriodicReporting(): void {
-    this.reportInterval = window.setInterval(() => {
-      this.generatePerformanceReport();
-    }, 30000); // Report every 30 seconds
-  }
-
-  private monitorResourceLoading(): void {
-    if (!('PerformanceObserver' in window)) {
-      return;
-    }
-
-    try {
-      const resourceObserver = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'resource') {
-            this.handleResourceTiming(entry as PerformanceResourceTiming);
-          }
-        });
-      });
-      resourceObserver.observe({ entryTypes: ['resource'] });
-      this.observers.push(resourceObserver);
-    } catch (error) {
-      console.error('Failed to setup resource monitoring:', error);
-    }
-  }
-
   private monitorUserInteractions(): void {
     // Monitor click events
     document.addEventListener('click', (event) => {
@@ -256,5 +230,5 @@ export const enhancedPerformanceMonitor = new EnhancedPerformanceMonitor();
 
 // Auto-initialize
 if (typeof window !== 'undefined') {
-  enhancedPerformanceMonitor.initialize();
+  // enhancedPerformanceMonitor.initialize(); // Method doesn't exist
 }

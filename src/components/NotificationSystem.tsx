@@ -25,9 +25,6 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
     Notification[]
   >([]);
 
-  useEffect(() => {
-    setVisibleNotifications(notifications);
-  }, [notifications]);
 
   const handleRemove = useCallback(
     (id: string) => {

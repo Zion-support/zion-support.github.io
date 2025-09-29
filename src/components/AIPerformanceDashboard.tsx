@@ -37,10 +37,6 @@ interface ErrorReport {
   resolutionSuggestions?: string[];
   [key: string]: unknown;
 }
-const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({
-  isVisible,
-  onClose,
-}) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [insights, setInsights] = useState<{
     predictedHighRiskActions: string[];
@@ -49,17 +45,6 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({
   } | null>(null);
   const [errorReports, setErrorReports] = useState<ErrorReport[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-
-  const loadPerformanceData = useCallback(async () => {
-    setIsLoading(true);
-    try {
-      // Simulate AI-powered performance analysis
-      const mockMetrics: PerformanceMetrics = {
-        errorRate: Math.random() * 5,
-        criticalErrorsToday: Math.floor(Math.random() * 10),
-        userImpactScore: Math.random() * 100,
-        avgResolutionTime: Math.random() * 120,
-      };
 
       const mockInsights: AIInsights = {
         predictedHighRiskActions: [
@@ -116,17 +101,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({
       setInsights(mockInsights);
       setErrorReports(mockErrorReports);
     } catch (error) {
-      enhancedErrorHandler.handleComponentError(
-        error as Error,
-        "AIPerformanceDashboard",
-        {
-          retryable: true,
-          maxRetries: 3,
-          retryDelay: 1000,
-          component: "AIPerformanceDashboard",
-          action: "loadPerformanceData",
-        },
-      );
+      console.error("Failed to load AI performance data:", error);
     } finally {
       setIsLoading(false);
     }
@@ -189,12 +164,6 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({
         </div>
 
         <div className="p-6">
-          {isLoading ? (
-            <div className="flex items-center justify-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
-            </div>
-          ) : (
-            <div className="space-y-6">
               {/* Performance Metrics */}
               {metrics && (
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -369,9 +338,6 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({
                     </div>
                   )}
                 </div>
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </div>

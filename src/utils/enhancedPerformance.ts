@@ -279,7 +279,7 @@ class EnhancedPerformanceOptimizer {
       observer.observe(img);
     });
 
-    this.observers.push(observer as any);
+    this.intersectionObservers.push(observer);
   }
 
   /**
@@ -345,7 +345,6 @@ class EnhancedPerformanceOptimizer {
   /**
    * Trigger optimization based on poor performance
    */
-   
   private triggerOptimization(metric: string, _value: number): void {
     switch (metric) {
       case 'LCP':
