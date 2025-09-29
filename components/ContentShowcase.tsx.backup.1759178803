@@ -19,6 +19,15 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+<<<<<<< HEAD
+    id: 'ai-platform-cost-optimization-2026',
+    title: 'AI Platform Cost Optimization 2026: Cut Spend 30–70% Safely',
+    excerpt: 'Scorecards, routing, caching, quantization, and guardrails to control AI platform costs without slowing product teams.',
+    type: 'article',
+    readTime: '12 min read',
+    category: 'FinOps',
+    href: '/blog/ai-platform-cost-optimization-2026',
+=======
     id: 'ai-agent-safety-blueprint-2026',
     title: 'AI Agent Safety Blueprint 2026: Guardrails for Reliable Autonomy',
     excerpt: 'Blueprint for safe autonomous agents with policy gates, audits, and progressive autonomy.',
@@ -41,11 +50,31 @@ const contentItems: ContentItem[] = [
     readTime: '12 min read',
     category: 'Operations',
     href: '/blog/ai-operational-excellence-2026',
+>>>>>>> origin/cursor/create-and-deploy-new-content-6c16
     featured: true,
     publishedDate: '2025-09-29',
     metrics: [
       { value: '30–70%', label: 'Cost Reduction' },
+<<<<<<< HEAD
+      { value: '<200ms', label: 'P95 Latency' }
+    ]
+  },
+  {
+    id: 'ai-agent-evaluations-2026',
+    title: 'AI Agent Evaluations 2026: Evals, Sandboxes, and Scorecards',
+    excerpt: 'Ship reliable agents with scenario evals, safety sandboxes, and business outcome scorecards wired to CI.',
+    type: 'article',
+    readTime: '10 min read',
+    category: 'AI Reliability',
+    href: '/blog/ai-agent-evaluations-2026',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '99.7%', label: 'On-policy Actions' },
+      { value: '24x7', label: 'Monitoring' }
+=======
       { value: '99.9%', label: 'Uptime' }
+>>>>>>> origin/cursor/create-and-deploy-new-content-6c16
     ]
   },
   {
