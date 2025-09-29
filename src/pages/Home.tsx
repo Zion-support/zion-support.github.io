@@ -268,6 +268,17 @@ const Home = () => {
           </div>
         </section>
 
+        {/* Latest Insights Section */}
+        {/* Promo ribbon for new content */}
+        <div className="container mx-auto px-6">
+          <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
+            <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            New: AI Product Roadmaps, SBOM Automation, and Online GenAI Evals — read now
+            <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
+          </div>
+        </div>
+        <LatestInsights />
+
         {/* New Services Showcase */}
         <section className="py-20 bg-white relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50"></div>
@@ -805,16 +816,16 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">AI Governance</div>
-                  <div className="font-semibold text-white">AI Risk Register: Guardrails That Teams Use</div>
-                </div>
-                <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-blue-200 mb-1">AI Strategy</div>
-                  <div className="font-semibold text-white">Boost LTV with AI (Without Creeping Users Out)</div>
+                  <div className="font-semibold text-white">Designing High‑Impact AI Product Roadmaps</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-emerald-200 mb-1">Data Engineering</div>
-                  <div className="font-semibold text-white">Data Contracts in Practice</div>
+                  <div className="text-sm text-red-200 mb-1">Security</div>
+                  <div className="font-semibold text-white">Automating SBOMs and Supply‑Chain Security in CI</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
+                  <div className="font-semibold text-white">Online Evals for GenAI: From Shadow to Guardrails</div>
                 </div>
               </div>
             </div>
