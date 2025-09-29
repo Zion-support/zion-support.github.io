@@ -701,6 +701,19 @@ export const promotionalBanners: PromotionalBanner[] = [
   }
   ,
   {
+    id: 'fresh-oct-13-2025',
+    message: '🚀 New: Secure ML Supply Chain, GenAI Routing, Golden Paths ROI',
+    ctaText: 'Explore the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
     id: 'fresh-content-oct-2025',
     message: '🚀 Fresh: Serverless Inference, Production RAG, Secure GenAI',
     ctaText: 'Read the latest',
