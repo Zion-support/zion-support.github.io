@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { 
   NewBlogBanner, 
   AnalyticsPlatformBanner, 
@@ -22,6 +23,8 @@ import {
   AIFinOpsBanner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
+import AISustainabilityBanner from '../components/AISustainabilityBanner';
+import AIMultimodalBanner from '../components/AIMultimodalBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -37,14 +40,14 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ New on the blog:</span>
-            <a to="/blog/platform-engineering-scorecards-2026" className="underline hover:text-yellow-200">Platform Scorecards 2026</a>
+            <Link href="/blog/ai-multimodal-enterprise-2025" className="underline hover:text-yellow-200">AI Multimodal Enterprise 2025</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-cybersecurity-automation-2025" className="underline hover:text-yellow-200">AI Cybersecurity Automation</a>
+            <Link href="/blog/ai-sustainability-green-tech-2025" className="underline hover:text-yellow-200">AI Sustainability Green Tech</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/edge-ai-blueprint-2026" className="underline hover:text-yellow-200">Edge AI Blueprint 2026</a>
+            <Link href="/blog/ai-cybersecurity-automation-2025" className="underline hover:text-yellow-200">AI Cybersecurity Automation</Link>
           </div>
           <Link
-            to="/blog"
+            href="/blog"
             className="bg-white text-indigo-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
           >
             Read the latest
@@ -52,6 +55,8 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <AISustainabilityBanner />
+      <AIMultimodalBanner />
       <NewContentShowcaseBanner />
       <AIRoadmapsBanner />
       <AIFinOpsBanner />
@@ -312,7 +317,64 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link to="/blog/ai-trustworthy-agents-2026" className="group">
+            <Link href="/blog/ai-multimodal-enterprise-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Article
+                  </span>
+                  <span className="text-sm text-gray-500">15 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Multimodal Enterprise 2025: Vision, Voice & Data Integration
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Discover how multimodal AI is transforming enterprise operations with 300% faster decision-making.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-sustainability-green-tech-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Featured Article
+                  </span>
+                  <span className="text-sm text-gray-500">12 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI for Sustainability: Green Tech Solutions 2025
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Achieve 50% carbon reduction and $3M annual savings with AI-powered environmental solutions.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link href="/case-studies/ai-sustainability-manufacturing-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Success Story
+                  </span>
+                  <span className="text-sm text-gray-500">Manufacturing</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Sustainability Manufacturing: 50% Carbon Reduction
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how a leading manufacturer achieved 50% carbon reduction and $3M annual savings.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-trustworthy-agents-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">

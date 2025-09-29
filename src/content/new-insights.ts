@@ -365,8 +365,9 @@ newInsights.unshift({
       <li>Measurable MTTR and resilience</li>
     </ul>
   `
-});
-  id: "ai-governance-scorecards-2026",
+}),
+  {
+    id: "ai-governance-scorecards-2026",
   title: "AI Governance 2026: Scorecards Engineers Actually Use",
   summary: "Outcome‑linked guardrails with PR checks and online canaries that accelerate delivery.",
   category: "AI Strategy",
@@ -384,7 +385,8 @@ newInsights.unshift({
       <li>Live canaries with rollback triggers</li>
     </ul>
   `
-});
+  },
+];
 
 export const featuredInsights = newInsights.filter(insight => insight.featured);
 export const latestInsights = newInsights.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 
 export default function Services(): React.JSX.Element {
@@ -8,11 +8,3 @@ export default function Services(): React.JSX.Element {
 		</main>
 	);
 }
-=======
-import React from "react";
-
-export default function Services(): React.JSX.Element {
-  return <div>Services</div>;
-}
-
->>>>>>> origin/main
