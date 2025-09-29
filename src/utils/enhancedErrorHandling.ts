@@ -150,19 +150,19 @@ class EnhancedErrorHandler {
   private setupNetworkErrorMonitoring(): void {
     // Monitor fetch requests
     const originalFetch = window.fetch;
-    window.fetch = async (...args: any[]) => {
+    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
       try {
-        const response = await originalFetch.apply(window, args);
+        const response = await originalFetch(input, init);
         
         if (!response.ok) {
           this.handleError(new Error(`HTTP ${response.status}: ${response.statusText}`), {
             component: 'fetch',
             action: 'http_error',
             metadata: {
-              url: args[0],
+              url: typeof input === 'string' ? input : input.toString(),
               status: response.status,
               statusText: response.statusText,
-              method: args[1]?.method || 'GET'
+              method: init?.method || 'GET'
             }
           });
         }
@@ -173,8 +173,8 @@ class EnhancedErrorHandler {
           component: 'fetch',
           action: 'network_error',
           metadata: {
-            url: args[0],
-            method: args[1]?.method || 'GET'
+            url: typeof input === 'string' ? input : input.toString(),
+            method: init?.method || 'GET'
           }
         });
         throw error;
@@ -512,5 +512,6 @@ Error Rate: ${metrics.errorRate.toFixed(2)} errors/minute
 
 // Export singleton instance
 export const enhancedErrorHandler = new EnhancedErrorHandler();
-export { EnhancedErrorHandler, ErrorReport, ErrorContext, ErrorMetrics };
+export type { ErrorReport, ErrorContext, ErrorMetrics };
+export { EnhancedErrorHandler };
 export default EnhancedErrorHandler;
