@@ -1,103 +1,69 @@
-import {
-  ArrowRight,
-  BarChart3,
-  Bot,
-  Sparkles,
-  Star,
-  X,
-  Zap
-} from "lucide-react";
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
 
-const PromotionalBanner: React.FC = () => {
+interface PromotionalBannerProps {
+  title: string;
+  description: string;
+  ctaText: string;
+  ctaLink: string;
+  backgroundColor?: string;
+  textColor?: string;
+  autoHide?: boolean;
+  hideDelay?: number;
+}
+
+const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
+  title,
+  description,
+  ctaText,
+  ctaLink,
+  backgroundColor = 'bg-gradient-to-r from-blue-600 to-indigo-600',
+  textColor = 'text-white',
+  autoHide = false,
+  hideDelay = 5000
+}) => {
   const [isVisible, setIsVisible] = useState(true);
-  const [currentService, setCurrentService] = useState(0);
-
-  const services = [
-    {
-      icon: Zap,
-      title: "NEW: GenAI Evals in Production",
-      description: "Policy tests, canaries, rollbacks",
-      color: "text-blue-400",
-    },
-    {
-      icon: Bot,
-      title: "Edge Flags at <100ms",
-      description: "Global releases safely at the edge",
-      color: "text-purple-400",
-    },
-    {
-      icon: BarChart3,
-      title: "North‑Star Metrics Pitfalls",
-      description: "Avoid vanity, ship outcomes",
-      color: "text-green-400",
-    },
-  ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentService((prev) => (prev + 1) % services.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [services.length]);
+    if (autoHide) {
+      const timer = setTimeout(() => {
+        setIsVisible(false);
+      }, hideDelay);
+      return () => clearTimeout(timer);
+    }
+  }, [autoHide, hideDelay]);
 
   if (!isVisible) return null;
 
   return (
-    <div className="relative bg-gradient-to-r from-zion-blue via-zion-purple to-zion-cyan overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/90 via-zion-purple/90 to-zion-cyan/90"></div>
-      <div className="absolute inset-0">
-        <div className="absolute -top-10 -left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
-        <div className="absolute top-5 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: "1s" }}></div>
-        <div className="absolute -bottom-5 left-1/3 w-12 h-12 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: "2s" }}></div>
-      </div>
-
-      <div className="relative z-10 container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
-              <span className="text-white font-semibold text-sm">
-                NEW: Fresh Articles & Insights this week
-              </span>
-            </div>
-            
-            <div className="hidden md:flex items-center space-x-2 text-white">
-              {(() => {
-                const Icon = services[currentService].icon;
-                return <Icon className={`w-4 h-4 ${services[currentService].color}`} />;
-              })()}
-              <span className="text-sm font-medium">{services[currentService].title}</span>
-              <span className="text-xs text-zion-slate-light">- {services[currentService].description}</span>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-3">
-            <div className="hidden sm:flex items-center space-x-2 text-white">
-              <Star className="w-4 h-4 text-yellow-400 fill-current" />
-              <span className="text-sm">Trusted by 1000+ users</span>
-            </div>
-            
-            <Link
-              to="/blog"
-              className="bg-white text-zion-blue px-4 py-2 rounded-lg text-sm font-semibold hover:bg-zion-slate-light transition-all duration-300 flex items-center space-x-1 group"
-            >
-              <span>Read the latest</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            
-            <button
-              onClick={() => setIsVisible(false)}
-              className="text-white hover:text-zion-slate-light transition-colors"
-              aria-label="Close banner"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
+    <div className={`${backgroundColor} ${textColor} py-4 px-4 relative overflow-hidden`}>
+      <div className="max-w-6xl mx-auto flex items-center justify-between flex-wrap gap-4">
+        <div className="flex-1 min-w-0">
+          <h3 className="font-semibold text-lg mb-1">{title}</h3>
+          <p className="text-sm opacity-90">{description}</p>
         </div>
+        <div className="flex items-center gap-4">
+          <a
+            href={ctaLink}
+            className="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap"
+          >
+            {ctaText}
+          </a>
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-white hover:text-gray-200 transition-colors p-1"
+            aria-label="Close banner"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-4 -right-4 w-24 h-24 bg-white opacity-10 rounded-full animate-pulse"></div>
+        <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-white opacity-5 rounded-full animate-pulse delay-1000"></div>
       </div>
     </div>
   );
