@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect, useMemo, useCallback, Suspense } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AppRouter } from './router';
 
 // import { resourcePreloader } from './utils/resourcePreloader';
@@ -12,6 +13,12 @@ import './index.css';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
+import SEOOptimizer from './components/SEOOptimizer';
+import AdvancedAnalytics from './components/AdvancedAnalytics';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import NotificationSystem from './components/NotificationSystem';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 
 export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
