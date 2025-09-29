@@ -105,8 +105,8 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: Quantum Computing & Edge AI Insights Just Published!"
-          description="Discover practical applications and implementation strategies for the latest technologies"
+          title="🚀 NEW: Serverless Inference, Production RAG, and Secure GenAI"
+          description="Fresh deep-dives on cost optimization, reliable RAG patterns, and enterprise guardrails"
           ctaText="Read Now"
           ctaLink="/blog"
           dismissible={true}

@@ -14,6 +14,104 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "serverless-ai-inference-cost-playbook",
+    title: "Serverless AI Inference: The Cost Optimization Playbook",
+    description: "Practical tactics to cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality.
+    ",
+    content: `
+# Serverless AI Inference: The Cost Optimization Playbook
+
+Shipping AI features is easy. Running them efficiently at scale is hard. This playbook covers the pragmatic techniques we use to reduce inference costs while improving reliability and UX.
+
+## What You'll Learn
+- Adaptive batching without impact to P95 latency
+- Warm pool sizing and burst protection
+- Caching and response-tiering patterns
+- Instance class right‑sizing and autoscaling guardrails
+
+## Quick Wins
+1. Route low‑risk calls to smaller models with output checks.
+2. Add response caching with key normalization and TTLs.
+3. Use warm pools sized by arrival rate and cold‑start budget.
+
+## Implementation Patterns
+- Token‑budget aware request shaping
+- Dynamic quality tiers (best‑effort → premium)
+- Observability: cost per request, per feature, per tenant
+
+## Results
+Teams typically see 40–70% reduction in monthly inference costs within 4–6 weeks while maintaining or improving satisfaction scores.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Engineering",
+    tags: ["Serverless", "Inference", "Cost Optimization", "Scaling", "Observability"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/serverless-ai-inference.jpg"
+  },
+  {
+    slug: "rag-architectures-that-work",
+    title: "RAG Architectures That Actually Work in Production",
+    description: "Field‑tested patterns for retrieval, chunking, freshness, and evals that keep quality high in real apps.",
+    content: `
+# RAG Architectures That Actually Work in Production
+
+Production RAG systems fail for predictable reasons: poor chunking, stale indexes, weak evals, and missing guardrails. Here's how to fix them.
+
+## Core Patterns
+- Task‑aware chunking with structure‑preserving splits
+- Freshness with streaming upserts and tombstones
+- Query rewriting and hybrid search (BM25 + dense)
+- Function routing for multi‑tool agents
+
+## Quality Systems
+- Offline evals with golden sets and policy tests
+- Online evals: interceptors, drift detection, and user feedback
+
+## Ops
+- Backpressure, retries, and idempotency keys
+- Cost/latency SLOs and error budgets for RAG
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "AI Engineering",
+    tags: ["RAG", "Vector Search", "Quality", "Evals", "Production"],
+    featured: true,
+    readTime: "12 min read",
+    image: "/images/rag-architectures.jpg"
+  },
+  {
+    slug: "secure-genai-guardrails",
+    title: "Secure GenAI: Policy‑First Guardrails That Scale",
+    description: "From prompt injection defenses to PII redaction and allowlists—how to ship safely without slowing teams.",
+    content: `
+# Secure GenAI: Policy‑First Guardrails That Scale
+
+Security and safety must be designed in—not bolted on. We outline a policy‑first approach that balances developer velocity with real‑world protections.
+
+## Guardrail Layers
+- Input sanitization and prompt isolation
+- Output filters: PII, secrets, brand, and compliance
+- Tooling allowlists and network egress controls
+
+## Governance
+- Versioned policies, approvals, and change logs
+- Red‑team scenarios and incident drills
+
+## Platform Patterns
+- Central policy service with lightweight SDKs
+- Evidence capture for audits and SOC 2
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-27",
+    category: "Security",
+    tags: ["GenAI", "Security", "Safety", "Compliance", "Guardrails"],
+    featured: false,
+    readTime: "8 min read",
+    image: "/images/secure-genai-guardrails.jpg"
+  },
+  {
     slug: "ai-workflow-automation-2025-guide",
     title: "The Complete Guide to AI Workflow Automation in 2025",
     description: "Discover how AI workflow automation is revolutionizing business operations. Learn implementation strategies, benefits, and real-world case studies.",
