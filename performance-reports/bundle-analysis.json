@@ -1,52 +1,52 @@
 {
-  "totalSize": 691283,
-  "totalSizeFormatted": "675.08 KB",
-  "fileCount": 30,
+  "totalSize": 1390159,
+  "totalSizeFormatted": "1.33 MB",
+  "fileCount": 31,
   "files": [
     {
-      "path": "assets/js/chunk-BydN_B68.js",
-      "size": 311849,
-      "sizeFormatted": "304.54 KB"
+      "path": "assets/js/chunk-BljIJr8J.js",
+      "size": 451358,
+      "sizeFormatted": "440.78 KB"
     },
     {
-      "path": "assets/js/chunk-B1ViRisI.js",
-      "size": 119207,
-      "sizeFormatted": "116.41 KB"
+      "path": "assets/js/chunk-D-p4vVZE.js",
+      "size": 337236,
+      "sizeFormatted": "329.33 KB"
     },
     {
-      "path": "assets/js/chunk-BpAiLTmj.js",
-      "size": 91638,
-      "sizeFormatted": "89.49 KB"
+      "path": "assets/js/chunk-DiY-rko-.js",
+      "size": 248640,
+      "sizeFormatted": "242.81 KB"
     },
     {
-      "path": "assets/js/chunk-B88Vkp0P.js",
-      "size": 47630,
-      "sizeFormatted": "46.51 KB"
+      "path": "assets/js/chunk-DHd3r1Ze.js",
+      "size": 224625,
+      "sizeFormatted": "219.36 KB"
     },
     {
-      "path": "assets/css/main-zNWpGKKW.css",
-      "size": 27130,
-      "sizeFormatted": "26.49 KB"
+      "path": "assets/css/main-BrdaYVLl.css",
+      "size": 27109,
+      "sizeFormatted": "26.47 KB"
     },
     {
-      "path": "assets/js/Home-BmGF1q4q.js",
-      "size": 14004,
-      "sizeFormatted": "13.68 KB"
+      "path": "assets/js/Home-DPf4I0Z6.js",
+      "size": 14049,
+      "sizeFormatted": "13.72 KB"
     },
     {
-      "path": "assets/js/Contact-DY7ijRFq.js",
-      "size": 8873,
-      "sizeFormatted": "8.67 KB"
+      "path": "assets/js/Contact-CMV60jg_.js",
+      "size": 8920,
+      "sizeFormatted": "8.71 KB"
     },
     {
-      "path": "assets/js/EnhancedHome-UDdqCleP.js",
-      "size": 8834,
-      "sizeFormatted": "8.63 KB"
+      "path": "assets/js/EnhancedHome-0uVDw-BL.js",
+      "size": 8890,
+      "sizeFormatted": "8.68 KB"
     },
     {
-      "path": "assets/js/About-BOOnxpAi.js",
-      "size": 8360,
-      "sizeFormatted": "8.16 KB"
+      "path": "assets/js/About-vxphPwvz.js",
+      "size": 8405,
+      "sizeFormatted": "8.21 KB"
     },
     {
       "path": "sw-enhanced.js",
@@ -54,14 +54,19 @@
       "sizeFormatted": "6.92 KB"
     },
     {
-      "path": "assets/js/Services-BFRffEef.js",
-      "size": 6964,
-      "sizeFormatted": "6.8 KB"
+      "path": "assets/js/Services-CbfYLrNd.js",
+      "size": 7012,
+      "sizeFormatted": "6.85 KB"
     },
     {
-      "path": "assets/js/Portfolio-C6ybZWin.js",
-      "size": 6538,
-      "sizeFormatted": "6.38 KB"
+      "path": "assets/js/main-CnRTvuSh.js",
+      "size": 6836,
+      "sizeFormatted": "6.68 KB"
+    },
+    {
+      "path": "assets/js/Portfolio-DSY2dc5j.js",
+      "size": 6586,
+      "sizeFormatted": "6.43 KB"
     },
     {
       "path": "offline.html",
@@ -69,19 +74,19 @@
       "sizeFormatted": "6.27 KB"
     },
     {
-      "path": "assets/js/main-M-nKZu2s.js",
-      "size": 6182,
-      "sizeFormatted": "6.04 KB"
+      "path": "assets/js/chunk-DZ8LzmDP.js",
+      "size": 6202,
+      "sizeFormatted": "6.06 KB"
     },
     {
       "path": "index.html",
-      "size": 4896,
-      "sizeFormatted": "4.78 KB"
+      "size": 4975,
+      "sizeFormatted": "4.86 KB"
     },
     {
-      "path": "assets/js/Blog-BOoVT1ba.js",
-      "size": 3085,
-      "sizeFormatted": "3.01 KB"
+      "path": "assets/js/Blog-Ch0sd7jV.js",
+      "size": 3128,
+      "sizeFormatted": "3.05 KB"
     },
     {
       "path": "sw-performance.js",
@@ -99,14 +104,14 @@
       "sizeFormatted": "1.86 KB"
     },
     {
-      "path": "assets/js/NotFound-Db4PLAmX.js",
-      "size": 1749,
-      "sizeFormatted": "1.71 KB"
+      "path": "assets/js/NotFound-DLQql-aS.js",
+      "size": 1796,
+      "sizeFormatted": "1.75 KB"
     },
     {
-      "path": "assets/js/Analytics-fUTtWjyi.js",
-      "size": 1058,
-      "sizeFormatted": "1.03 KB"
+      "path": "assets/js/Analytics-B2Pqz8V0.js",
+      "size": 1106,
+      "sizeFormatted": "1.08 KB"
     },
     {
       "path": "manifest.json",
