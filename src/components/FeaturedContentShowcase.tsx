@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BlogPost, blogPosts } from '../content/blog-posts';
+import { Star, Calendar, Clock, Eye, ArrowRight, TrendingUp } from 'lucide-react';
+import { BlogPost, posts } from '../content/posts';
 import { InsightArticle, latestInsights } from '../content/insights';
 import { Star, Calendar, Clock, Eye, ArrowRight, TrendingUp } from 'lucide-react';
 
@@ -23,6 +24,18 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
 }) => {
   const [activeTab, setActiveTab] = useState<'all' | 'blog' | 'insights'>('all');
 
+  type NormalizedItem = {
+    type: 'blog' | 'insights';
+    title: string;
+    description: string;
+    category: string;
+    date: string;
+    readTime: string;
+    views?: string;
+    href: string;
+    tags: string[];
+  };
+
   // Get featured blog posts
   const featuredBlogPosts = blogPosts
     .filter(post => post.featured)
@@ -38,15 +51,19 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
   const allContent = [
     ...featuredBlogPosts.map(post => ({ ...post, type: 'blog' as const, date: post.date })),
     ...latestInsightsList.map(insight => ({
-      ...insight,
       type: 'insights' as const,
+      title: insight.title,
       description: insight.summary,
-      readTime: `${insight.readMinutes} min read`,
+      category: insight.category,
+      date: insight.date,
+      readTime: `${insight.readMinutes} min`,
+      views: undefined,
       href: `/insights/${insight.id}`,
-      tags: [] as string[]
-    }))
-  ].sort((a, b) => new Date((b as any).date).getTime() - new Date((a as any).date).getTime())
-   .slice(0, maxItems);
+      tags: []
+    })),
+  ]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, maxItems);
 
   const featuredContent = allContent;
 
@@ -156,7 +173,7 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
               key={`${item.type}-${item.type === 'blog' ? (item as BlogPost).slug : (item as InsightArticle).id}-${index}`}
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
             >
-              {/* Image */}
+              {/* Image / Placeholder */}
               <div className="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
                 {item.type === 'blog' && (item as BlogPost).image ? (
                   <img
