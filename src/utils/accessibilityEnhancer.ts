@@ -28,59 +28,6 @@ class AccessibilityEnhancer {
   private resizeObserver?: ResizeObserver;
   private mutationObserver?: MutationObserver;
   private performanceObserver?: PerformanceObserver;
-  // Event handlers defined as arrow functions to preserve context and allow proper removal
-  private handleKeyDown = (event: KeyboardEvent): void => {
-    if (event.key === 'Tab' && (event as KeyboardEvent).shiftKey && document.activeElement === document.body) {
-      const skipLink = document.querySelector('[data-skip-link]');
-      if (skipLink) {
-        (skipLink as HTMLElement).focus();
-        event.preventDefault();
-      }
-    }
-
-    if (event.key === 'Escape') {
-      const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
-      if (modal) {
-        this.closeModal(modal as HTMLElement);
-      }
-    }
-
-    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-      const menu = document.querySelector('[role="menu"]:focus-within') as HTMLElement | null;
-      if (menu) {
-        this.handleMenuNavigation(event as KeyboardEvent, menu);
-      }
-    }
-  };
-
-  private handleFocusIn = (event: FocusEvent): void => {
-    const target = event.target as HTMLElement | null;
-    if (target) {
-      const previous = document.querySelector('[data-last-focused]') as HTMLElement | null;
-      if (previous) {
-        previous.removeAttribute('data-last-focused');
-      }
-      target.setAttribute('data-last-focused', 'true');
-    }
-  };
-
-  private handleFocusOut = (_event: FocusEvent): void => {
-    // Intentionally left as a no-op for now; reserved for future enhancements
-  };
-
-  // Bound event handlers referenced by addEventListener/removeEventListener
-  // These are intentionally minimal; concrete behavior can be layered on later
-  private onKeyDown = (_event: KeyboardEvent): void => {
-    // no-op default implementation
-  };
-
-  private onClick = (_event: MouseEvent): void => {
-    // no-op default implementation
-  };
-
-  private onFocusIn = (_event: FocusEvent): void => {
-    // no-op default implementation
-  };
 
   constructor() {
     this.config = this.getDefaultConfig();
@@ -125,9 +72,7 @@ class AccessibilityEnhancer {
     this.performanceObserver?.disconnect();
     
     // Cleanup event listeners
-    document.removeEventListener('keydown', this.handleKeyDown);
-    document.removeEventListener('focusin', this.handleFocusIn);
-    document.removeEventListener('focusout', this.handleFocusOut);
+    // Note: listeners were added with inline lambdas; no-op here as we don't hold references
     
     this.isInitialized = false;
     this.focusTrapElements = [];
@@ -153,13 +98,39 @@ class AccessibilityEnhancer {
   }
 
   /**
-   * Backward-compatible initialize alias handled by init()
-   * (Removed duplicate initialize method to avoid no-dupe-class-members ESLint error)
+   * Backward-compatible initialize alias
    */
+  
+
   private setupKeyboardNavigation(): void {
     if (!this.config.keyboardNavigation) return;
 
-    document.addEventListener('keydown', this.handleKeyDown);
+    document.addEventListener('keydown', (event) => {
+      // Skip to main content
+      if (event.key === 'Tab' && event.shiftKey && document.activeElement === document.body) {
+        const skipLink = document.querySelector('[data-skip-link]');
+        if (skipLink) {
+          (skipLink as HTMLElement).focus();
+          event.preventDefault();
+        }
+      }
+
+      // Escape key handling
+      if (event.key === 'Escape') {
+        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
+        if (modal) {
+          this.closeModal(modal as HTMLElement);
+        }
+      }
+
+      // Arrow key navigation for menus
+      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+        const menu = document.querySelector('[role="menu"]:focus-within') as HTMLElement | null;
+        if (menu) {
+          this.handleMenuNavigation(event as KeyboardEvent, menu);
+        }
+      }
+    });
   }
 
   private setupFocusManagement(): void {
@@ -182,10 +153,6 @@ class AccessibilityEnhancer {
         this.restoreFocus();
       }
     });
-
-    // Track focus changes using bound handlers so they can be removed in destroy()
-    document.addEventListener('focusin', this.handleFocusIn);
-    document.addEventListener('focusout', this.handleFocusOut);
   }
 
   private setupAriaLabels(): void {
