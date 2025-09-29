@@ -248,7 +248,8 @@ Remember: The goal is not to prevent all incidents, but to respond to them effec
         description: "Reduction in incident costs"
       }
     ],
-    relatedPosts: ["ai-governance-framework-2025", "zero-trust-implementation-playbook", "ai-cybersecurity-automation"]
+    relatedPosts: ["ai-governance-framework-2025", "zero-trust-implementation-playbook", "ai-cybersecurity-automation"],
+    slug: "ai-incident-response-playbooks-2025"
   },
   {
     id: "privacy-preserving-analytics-2025",
@@ -605,7 +606,61 @@ Remember: Privacy is not a barrier to innovation—it's a foundation for sustain
         description: "Regulatory compliance achieved"
       }
     ],
-    relatedPosts: ["ai-governance-framework-2025", "zero-trust-implementation-playbook", "finops-ai-cost-optimization"]
+    relatedPosts: ["ai-governance-framework-2025", "zero-trust-implementation-playbook", "finops-ai-cost-optimization"],
+    slug: "privacy-preserving-analytics-2025"
+  },
+  {
+    id: "zero-trust-for-ai-agents-2026",
+    title: "Zero‑Trust for AI Agents 2026: Sandboxes, Scopes, and Egress Controls",
+    description: "Design agent systems with hardened policies, isolated tools, and safe network egress to prevent data loss and lateral movement.",
+    excerpt: "Blueprint for securing AI agents with policy‑first guardrails and auditable actions.",
+    content: `# Zero‑Trust for AI Agents 2026\n\nSecure agent architectures with sandboxed tools, scoped tokens, PII redaction, and policy tests.`,
+    category: "AI Security",
+    tags: ["Zero Trust", "AI Agents", "Security", "Compliance"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedAt: "2025-10-09T10:00:00Z",
+    updatedAt: "2025-10-09T10:00:00Z",
+    readTime: "10 min read",
+    author: "Priya Natarajan",
+    authorBio: "Security architect focused on safe AI automation.",
+    image: "/images/zero-trust-agents-2026.jpg",
+    seo: {
+      metaTitle: "Zero‑Trust for AI Agents 2026",
+      metaDescription: "Blueprint for securing AI agents with sandboxed tools and policy‑first guardrails.",
+      keywords: ["zero trust", "ai agents", "security", "policy"]
+    },
+    metrics: [
+      { label: "Incident Reduction", value: "90%", description: "Fewer security incidents" }
+    ],
+    relatedPosts: ["ai-incident-response-playbooks-2025", "privacy-preserving-analytics-2025"],
+    slug: "zero-trust-for-ai-agents-2026"
+  },
+  {
+    id: "platform-engineering-scorecards-2026",
+    title: "Platform Engineering Scorecards 2026: Adoption, SLOs, and ROI",
+    description: "Practical governance scorecards that align platform capabilities to developer adoption, SLOs, and business outcomes.",
+    excerpt: "Make platform investments measurable and accountable with scorecards engineers use.",
+    content: `# Platform Engineering Scorecards 2026\n\nTie adoption, SLOs, and ROI with actionable metrics and policy tests.`,
+    category: "Platform Engineering",
+    tags: ["Scorecards", "SLOs", "ROI", "Governance"],
+    featured: true,
+    newBadge: true,
+    trending: false,
+    publishedAt: "2025-10-08T12:00:00Z",
+    updatedAt: "2025-10-08T12:00:00Z",
+    readTime: "11 min read",
+    author: "Alex Thompson",
+    authorBio: "Platform engineering lead.",
+    image: "/images/platform-scorecards-2026.jpg",
+    seo: {
+      metaTitle: "Platform Engineering Scorecards 2026",
+      metaDescription: "Governance scorecards that drive platform adoption and ROI.",
+      keywords: ["platform", "scorecards", "roi", "slos"]
+    },
+    relatedPosts: ["edge-llm-caching-blueprint-2026"],
+    slug: "platform-engineering-scorecards-2026"
   },
   {
     id: "edge-llm-caching-blueprint-2026",
@@ -983,7 +1038,8 @@ Remember: The best caching strategy is the one that delivers the right balance o
         description: "Cache effectiveness"
       }
     ],
-    relatedPosts: ["ai-autonomous-infrastructure-2025", "finops-ai-cost-optimization", "ai-incident-response-playbooks-2025"]
+    relatedPosts: ["ai-autonomous-infrastructure-2025", "finops-ai-cost-optimization", "ai-incident-response-playbooks-2025"],
+    slug: "edge-llm-caching-blueprint-2026"
   }
 ];
 
