@@ -105,10 +105,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: Serverless Inference Cost Playbook + Practical RAG"
-          description="Cut inference spend 40–70% and ship RAG that actually works in prod."
+          title="🚀 New: AI Adoption Scorecard + GenAI Incident Postmortems"
+          description="Executive metrics that drive outcomes, plus policy tests that prevent repeat incidents."
           ctaText="Read the latest"
-          ctaLink="/blog/serverless-inference-cost-playbook-2025"
+          ctaLink="/blog/ai-adoption-scorecard-2025"
           dismissible={true}
         />
         {/* Animated background elements */}

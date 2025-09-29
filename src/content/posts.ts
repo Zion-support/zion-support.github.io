@@ -10,6 +10,26 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "genai-incident-postmortems-2025",
+    title: "GenAI Incident Postmortems: Prevent Repeats with Policy Tests",
+    description:
+      "A practical guide to capturing signals, writing policy tests, and closing the loop so incidents don't recur.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "ai-adoption-scorecard-2025",
+    title: "AI Adoption Scorecard: Executive Metrics That Drive Outcomes",
+    description:
+      "Define leading indicators, outcome metrics, and review rituals that align AI work to business value.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
     slug: "ai-sales-copilot-2025",
     title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
     description:
@@ -17,6 +37,36 @@ export const posts: BlogPost[] = [
     category: "AI Strategy",
     publishedAt: "2025-09-30",
     featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "practical-rag-blueprint-2025",
+    title: "Practical RAG Blueprint 2025: Retrieval That Actually Improves Answers",
+    description:
+      "Architect chunking, embeddings, and routing that raise answer quality while lowering cost.",
+    category: "GenAI",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "shipping-genai-safely-guardrails",
+    title: "Shipping GenAI Safely: Policy Tests, Canaries, and Rollbacks",
+    description:
+      "A practical playbook for offline evals, online canaries, and rollback plans that prevent regressions.",
+    category: "AI Governance",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "edge-caching-playbook-2025",
+    title: "Edge Caching Playbook: Sub‑100ms at Global Scale",
+    description:
+      "Versioned keys, background warming, and cache‑aside patterns for resilient, fast UX.",
+    category: "Architecture",
+    publishedAt: "2025-10-01",
+    featured: false,
     readTime: "6 min read",
   },
   {

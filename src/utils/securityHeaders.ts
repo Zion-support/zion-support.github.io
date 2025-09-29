@@ -35,9 +35,10 @@ export class SecurityManager {
     this.config = this.getDefaultConfig();
   }
 
-  // Optional lifecycle initializer for compatibility with callers that expect it
+  // No-op initializer to provide a stable optional init hook for callers
   public initialize(): void {
-    // no-op; reserved for future setup hooks
+    // Intentionally empty. Reserved for future side effects.
+  }
   }
 
   private getDefaultConfig(): SecurityConfig {
