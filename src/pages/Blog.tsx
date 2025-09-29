@@ -16,25 +16,7 @@ import {
 } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
-import {
-  Calendar,
-  User,
-  ArrowRight,
-  Clock,
-  Tag,
-  TrendingUp,
-  Zap,
-  Bot,
-  BarChart3,
-  Shield,
-  Cloud,
-  Code,
-  Search,
-} from "lucide-react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import BlogPromotionBanner from "../components/BlogPromotionBanner";
 
 interface BlogPost {
   id: number;
@@ -407,27 +389,9 @@ export default function Blog(): React.JSX.Element {
             )}
           </div>
 
-          {/* Newsletter CTA */}
+          {/* Blog Promotion Banner */}
           <div className="mt-20">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Stay Updated with Our Latest Insights
-              </h3>
-              <p className="text-zion-slate-light mb-6">
-                Get the latest articles, case studies, and industry insights delivered directly to your inbox.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                />
-                <button className="bg-gradient-to-r from-zion-blue-light to-zion-purple-light text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center">
-                  Subscribe
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
-              </div>
-            </div>
+            <BlogPromotionBanner />
           </div>
         </section>
 

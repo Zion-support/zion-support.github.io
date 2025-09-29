@@ -27,16 +27,28 @@ resolve_conflicts() {
     echo "🔧 Resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
-        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
-            echo "⚙️  Config file detected, keeping main version..."
-        elif [[ "$file" == "README.md" || "$file" == "LICENSE" ]]; then
-            echo "📚 Documentation file, keeping both versions where possible..."
-            # Remove conflict markers but try to preserve content
+    if grep -q '^<<<<<<< ' "$file"; then
+        # Prefer ours for critical config files
+        if [[ "$file" == "next.config.js" || "$file" == "next.config.mjs" || "$file" == "tsconfig.json" || "$file" == "tsconfig.node.json" || "$file" == "tailwind.config.js" || "$file" == "postcss.config.js" || "$file" == "vite.config.ts" || "$file" == "eslint.config.js" || "$file" == "netlify.toml" ]]; then
+            echo "⚙️  Config file detected, preferring main (ours) version..."
+            git checkout --ours -- "$file"
+        # Prefer theirs for docs to incorporate external updates
+        elif [[ "$file" == "README.md" || "$file" == "LICENSE" || "$file" == *.md ]]; then
+            echo "📚 Documentation file detected, preferring incoming (theirs) version..."
+            git checkout --theirs -- "$file"
         else
-            echo "📝 Regular file, attempting to merge both versions..."
-            # Remove conflict markers and try to keep both versions
+            echo "📝 Regular file, attempting to keep both sides without markers..."
+            # Strip conflict markers and keep both sides by turning the separator into a blank line
+            # This preserves content from both ours and theirs in order
+            sed -i -e '/^<<<<<<< /d' -e '/^=======/c\\' -e '/^>>>>>>> /d' "$file"
         fi
-        
+
+        # Ensure no markers remain. If any still exist, fall back to ours.
+        if grep -q '^<<<<<<< ' "$file"; then
+            echo "⚠️  Conflict markers remain in $file, falling back to ours..."
+            git checkout --ours -- "$file"
+        fi
+
         echo "✅ Resolved conflicts in $file"
         CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
     fi

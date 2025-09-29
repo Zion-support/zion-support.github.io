@@ -19,6 +19,7 @@ import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
+import ROICalculator from "../components/ROICalculator";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import { latestInsights } from "../content/insights";
@@ -100,6 +101,14 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        <ContentPromotionBanner
+          title="Fresh: GenAI Evals, Edge Flags, and North‑Star Metrics"
+          description="New insights just dropped. Explore the latest articles and stay ahead."
+          ctaText="Read the latest"
+          ctaLink="/blog"
+          variant="info"
+          className="border-b border-white/10"
+        />
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -164,33 +173,40 @@ const Home = () => {
               </div>
             </div>
 
-            {/* New Content Announcement */}
+            {/* New Content Promo Banner */}
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-8 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
-                <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
-                <span className="text-lg font-bold text-purple-400">📚 FRESH CONTENT ALERT</span>
-                <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
+                <span className="inline-flex h-2 w-2 rounded-full bg-purple-400 animate-pulse"></span>
+                <span className="text-lg font-bold text-purple-400">FRESH CONTENT ALERT</span>
+                <span className="inline-flex h-2 w-2 rounded-full bg-purple-400 animate-pulse"></span>
               </div>
               <p className="text-white text-lg font-semibold mb-2">
-                🎯 Just Published: 5 Revolutionary Articles on AI Autonomous Operations, Next-Gen Cybersecurity, and Cloud-Native Architecture
+                📚 25+ New AI Articles & ROI Case Studies Published This Month
               </p>
-              <p className="text-zion-slate-light text-sm mb-4">
-                Discover cutting-edge insights on AI-powered infrastructure management, advanced threat detection, and scalable cloud architectures.
+              <p className="text-zion-slate-light text-sm mb-3">
+                Exclusive insights on AI automation, micro SAAS trends, and $50B market opportunities
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link
-                  to="/blog"
-                  className="bg-purple-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-600 transition-colors text-center"
-                >
-                  Read Latest Articles
-                </Link>
-                <Link
-                  to="/insights"
-                  className="border border-purple-400 text-purple-400 px-6 py-2 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-colors text-center"
-                >
-                  View Insights
-                </Link>
+              <div className="flex flex-wrap justify-center gap-2 text-xs">
+                <span className="bg-purple-500/30 px-2 py-1 rounded">AI ROI Stories</span>
+                <span className="bg-purple-500/30 px-2 py-1 rounded">Market Analysis</span>
+                <span className="bg-purple-500/30 px-2 py-1 rounded">Implementation Guides</span>
+                <span className="bg-purple-500/30 px-2 py-1 rounded">Success Stories</span>
               </div>
+            </div>
+
+            {/* ROI Success Banner */}
+            <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-400/30 rounded-xl p-6 mb-8 animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <TrendingUp className="w-6 h-6 text-emerald-400 animate-bounce" />
+                <span className="text-lg font-bold text-emerald-400">PROVEN RESULTS</span>
+                <TrendingUp className="w-6 h-6 text-emerald-400 animate-bounce" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                💰 Our Clients Save $2.3M+ Annually with AI Automation
+              </p>
+              <p className="text-zion-slate-light text-sm">
+                500+ companies achieving 200-500% ROI • Average payback in 90 days • 99.9% uptime guarantee
+              </p>
             </div>
 
             {/* Stats */}
@@ -253,15 +269,12 @@ const Home = () => {
         {/* New Services Showcase */}
         <section className="container mx-auto px-6 py-20 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-400 text-sm font-medium mb-6 animate-pulse">
-              🔥 HOT NEW SERVICES - 2025
-            </div>
             <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up">
-              Revolutionary AI-Powered Solutions
+              Calculate Your AI Automation ROI
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Transform your business with our cutting-edge AI micro SAAS platform. 
-              From workflow automation to predictive analytics - we've got you covered.
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              See exactly how much you could save with AI workflow automation. 
+              Most companies see ROI within 3 months.
             </p>
           </div>
 
@@ -350,8 +363,6 @@ const Home = () => {
               </Link>
             </div>
           </div>
-
-          <ROICalculator className="max-w-6xl mx-auto" />
         </section>
 
         {/* Features Section */}
@@ -607,27 +618,27 @@ const Home = () => {
             <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-400/30 rounded-xl p-6 mb-10">
               <div className="flex items-center gap-3 mb-3">
                 <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
-                <span className="text-lg font-bold text-purple-700">📚 FRESH CONTENT ALERT</span>
+                <span className="text-lg font-bold text-purple-700">📚 NEW CONTENT ALERT</span>
                 <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
               </div>
               <p className="text-gray-700 font-semibold mb-2">
-                🎯 Just Published: 5 Revolutionary Articles on AI Autonomous Operations, Next-Gen Cybersecurity, and Cloud-Native Architecture
+                🚀 Just Published: 5 Revolutionary Articles on AI Automation, Cloud Infrastructure, and Enterprise AI Implementation
               </p>
               <p className="text-gray-600 text-sm mb-4">
-                Discover cutting-edge insights on AI-powered infrastructure management, advanced threat detection, and scalable cloud architectures for 2025.
+                Discover the latest insights on AI-powered business automation, next-gen cloud infrastructure, and strategic AI roadmaps for 2025.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">AI Autonomous Ops</span>
-                <span className="bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-medium">AI Cybersecurity</span>
-                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Cloud Architecture</span>
+                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">AI Automation</span>
+                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Cloud Strategy</span>
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">AI Governance</span>
+                <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">Platform Engineering</span>
               </div>
             </div>
             
             <div className="mb-10 flex items-end justify-between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
-                <p className="text-gray-600">Fresh insights on AI autonomous operations, cybersecurity, and cloud architecture from our expert team.</p>
+                <p className="text-gray-600">Fresh: AI Governance, Golden Paths, Cloud FinOps QA gates, and NEW AI automation guides.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
@@ -730,7 +741,7 @@ const Home = () => {
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
                   <p className="text-white/90">
-                    Fresh articles on real-time data pipelines, north-star metrics, and safe, scalable GenAI ops.
+                    Fresh: Secure SBOMs, GenAI evaluation playbook, and Kubernetes cost guardrails.
                   </p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">

@@ -60,26 +60,26 @@ class AccessibilityEnhancer {
     document.addEventListener('keydown', (event) => {
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey && document.activeElement === document.body) {
-        const skipLink = document.querySelector('[data-skip-link]') as HTMLElement;
+        const skipLink = document.querySelector('[data-skip-link]');
         if (skipLink) {
-          skipLink.focus();
+          (skipLink as HTMLElement).focus();
           event.preventDefault();
         }
       }
 
       // Escape key handling
       if (event.key === 'Escape') {
-        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]') as HTMLElement;
+        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
         if (modal) {
-          this.closeModal(modal);
+          this.closeModal(modal as HTMLElement);
         }
       }
 
       // Arrow key navigation for menus
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      if ((event as KeyboardEvent).key === 'ArrowDown' || (event as KeyboardEvent).key === 'ArrowUp') {
         const menu = document.querySelector('[role="menu"]:focus-within');
         if (menu) {
-          this.handleMenuNavigation(event, menu as HTMLElement);
+          this.handleMenuNavigation(event as KeyboardEvent, menu as HTMLElement);
         }
       }
     });
@@ -90,10 +90,10 @@ class AccessibilityEnhancer {
 
     // Trap focus in modals
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Tab') {
+      if ((event as KeyboardEvent).key === 'Tab') {
         const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
         if (modal) {
-          this.trapFocus(event, modal as HTMLElement);
+          this.trapFocus(event as KeyboardEvent, modal as HTMLElement);
         }
       }
     });
@@ -114,10 +114,11 @@ class AccessibilityEnhancer {
     const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
     
     interactiveElements.forEach(element => {
-      if (!element.getAttribute('aria-label') && !element.getAttribute('aria-labelledby')) {
-        const text = element.textContent?.trim();
+      const el = element as HTMLElement;
+      if (!el.getAttribute('aria-label') && !el.getAttribute('aria-labelledby')) {
+        const text = el.textContent?.trim();
         if (!text || text.length < 3) {
-          element.setAttribute('aria-label', `Interactive element`);
+          el.setAttribute('aria-label', `Interactive element`);
         }
       }
     });
@@ -125,8 +126,9 @@ class AccessibilityEnhancer {
     // Add role attributes where needed
     const clickableElements = document.querySelectorAll('[onclick], [data-action]');
     clickableElements.forEach(element => {
-      if (!element.getAttribute('role')) {
-        element.setAttribute('role', 'button');
+      const el = element as HTMLElement;
+      if (!el.getAttribute('role')) {
+        el.setAttribute('role', 'button');
       }
     });
   }
@@ -139,7 +141,8 @@ class AccessibilityEnhancer {
     const contrastIssues: string[] = [];
 
     elements.forEach(element => {
-      const computedStyle = window.getComputedStyle(element);
+      const el = element as HTMLElement;
+      const computedStyle = window.getComputedStyle(el);
       const color = computedStyle.color;
       const backgroundColor = computedStyle.backgroundColor;
       
@@ -148,7 +151,7 @@ class AccessibilityEnhancer {
         const requiredRatio = this.config.colorContrast === 'AAA' ? 7 : 4.5;
         
         if (ratio < requiredRatio) {
-          contrastIssues.push(`Low contrast on ${element.tagName}: ${ratio.toFixed(2)}:1`);
+          contrastIssues.push(`Low contrast on ${el.tagName}: ${ratio.toFixed(2)}:1`);
         }
       }
     });
@@ -195,12 +198,13 @@ class AccessibilityEnhancer {
     });
 
     // Monitor aria-label changes
-    const observer = new (window as any).MutationObserver((mutations: MutationRecord[]) => {
-      mutations.forEach((mutation: MutationRecord) => {
+    const observer = new MutationObserver((mutations: MutationRecord[]) => {
+      mutations.forEach((mutation) => {
         if (mutation.type === 'attributes' && mutation.attributeName === 'aria-label') {
-          const element = mutation.target as HTMLElement;
-          if (!element.getAttribute('aria-label')) {
-            console.warn('Element lost aria-label:', element);
+          const element = mutation.target as Element;
+          const el = element as HTMLElement;
+          if (!el.getAttribute('aria-label')) {
+            console.warn('Element lost aria-label:', el);
           }
         }
       });
@@ -303,8 +307,9 @@ class AccessibilityEnhancer {
     // Check for missing alt attributes
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-      if (!img.getAttribute('alt')) {
-        issues.push(`Image missing alt attribute: ${img.src}`);
+      const imageEl = img as HTMLImageElement;
+      if (!imageEl.getAttribute('alt')) {
+        issues.push(`Image missing alt attribute: ${imageEl.src}`);
         recommendations.push('Add descriptive alt text to images');
       }
     });
@@ -313,7 +318,7 @@ class AccessibilityEnhancer {
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let lastLevel = 0;
     headings.forEach(heading => {
-      const level = parseInt(heading.tagName.charAt(1));
+      const level = parseInt((heading as HTMLElement).tagName.charAt(1));
       if (level > lastLevel + 1) {
         issues.push(`Heading hierarchy skip: ${heading.tagName}`);
         recommendations.push('Maintain proper heading hierarchy (h1 > h2 > h3...)');
@@ -324,12 +329,13 @@ class AccessibilityEnhancer {
     // Check for form labels
     const inputs = document.querySelectorAll('input, select, textarea');
     inputs.forEach(input => {
-      const id = input.getAttribute('id');
+      const el = input as HTMLElement;
+      const id = el.getAttribute('id');
       const label = id ? document.querySelector(`label[for="${id}"]`) : null;
-      const ariaLabel = input.getAttribute('aria-label');
+      const ariaLabel = el.getAttribute('aria-label');
       
       if (!label && !ariaLabel) {
-        issues.push(`Form input missing label: ${input.tagName}`);
+        issues.push(`Form input missing label: ${(el as HTMLElement).tagName}`);
         recommendations.push('Add labels or aria-label to form inputs');
       }
     });

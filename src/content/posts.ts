@@ -10,6 +10,86 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-security-posture-2025",
+    title: "AI Security Posture 2025: Hardening LLM Apps End-to-End",
+    description:
+      "Threat models, policy tests, and isolation patterns to keep GenAI features safe in production.",
+    category: "Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "llm-evals-blueprint-2025",
+    title: "LLM Evals Blueprint: Offline Suites to Online Guardrails",
+    description:
+      "A practical blueprint to design evals that predict real-world quality and prevent regressions.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "ai-product-launch-checklist-2025",
+    title: "AI Product Launch Checklist: From Pilot to Production",
+    description:
+      "From offline suites to online canaries: patterns that keep quality high as usage grows.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "feature-flags-edge-2025",
+    title: "Feature Flags at the Edge: <100ms Global Releases",
+    description:
+      "Chunking, indexing, and retrieval strategies that actually improve answer quality at lower cost.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "edge-inference-patterns-2025",
+    title: "Edge Inference Patterns for Sub‑100ms Experiences",
+    description:
+      "Latency budgets, on‑device models, and caching strategies for lightning‑fast AI UX at the edge.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "north-star-metrics-anti-patterns",
+    title: "North‑Star Metrics: 7 Anti‑Patterns to Avoid",
+    description:
+      "Common traps that derail metric-driven product development and how to fix them.",
+    category: "Product Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "mlops-reliability-2025",
+    title: "MLOps Reliability: Shipping GenAI Changes Safely",
+    description:
+      "Canary evals, shadow deploys, and rollback patterns to keep quality high while iterating fast.",
+    category: "MLOps",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "realtime-data-pipelines-2025",
+    title: "Reliable Real‑Time Data Pipelines in 2025",
+    description:
+      "Exactly‑once semantics, backpressure control, and pragmatic observability for streaming systems.",
+    category: "Data Engineering",
+    publishedAt: "2025-09-28",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
     description:
@@ -18,26 +98,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read",
-  },
-  {
-    slug: "mlops-in-45-days",
-    title: "MLOps in 45 Days: Shipping Reliable Models Fast",
-    description:
-      "Reference pipelines, eval gates, and rollout patterns to move from notebook to prod quickly.",
-    category: "MLOps",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "practical-rag-architecture",
-    title: "Practical RAG Architecture That Scales",
-    description:
-      "Chunking, indexing, and retrieval strategies that actually improve answer quality at lower cost.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "6 min read",
   },
   {
     slug: "edge-inference-patterns-2025",
@@ -60,16 +120,6 @@ export const posts: BlogPost[] = [
     readTime: "5 min read",
   },
   {
-    slug: "realtime-feature-flags-edge",
-    title: "Real‑Time Feature Flags at the Edge",
-    description:
-      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
-    category: "Architecture",
-    publishedAt: "2025-09-28",
-    featured: false,
-    readTime: "6 min read",
-  },
-  {
     slug: "prompt-engineering-playbook-v2",
     title: "Prompt Engineering Playbook v2: Patterns That Survive Production",
     description:
@@ -78,46 +128,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-27",
     featured: true,
     readTime: "8 min read",
-  },
-  {
-    slug: "platform-scorecards-that-stick",
-    title: "Platform Scorecards That Actually Drive Adoption",
-    description:
-      "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
-    category: "Platform Engineering",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "9 min read",
-  },
-  {
-    slug: "genai-guardrails-in-the-wild",
-    title: "GenAI Guardrails in the Wild: Evals, Policies, and Drift Control",
-    description:
-      "A field guide to combining offline suites with online policy tests to keep quality high.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "7 min read",
-  },
-  {
-    slug: "mlops-reliability-2025",
-    title: "MLOps Reliability: Shipping GenAI Changes Safely",
-    description:
-      "Canary evals, shadow deploys, and rollback patterns to keep quality high while iterating fast.",
-    category: "MLOps",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "9 min read",
-  },
-  {
-    slug: "realtime-data-pipelines-2025",
-    title: "Reliable Real‑Time Data Pipelines in 2025",
-    description:
-      "Exactly‑once semantics, backpressure control, and pragmatic observability for streaming systems.",
-    category: "Data Engineering",
-    publishedAt: "2025-09-28",
-    featured: true,
-    readTime: "7 min read",
   },
   {
     slug: "north-star-metrics-framework",
@@ -348,7 +358,7 @@ export const posts: BlogPost[] = [
     category: "AI Strategy",
     publishedAt: "2025-01-21",
     featured: true,
-    readTime: "15 min read",
+    readTime: "11 min read",
   },
   {
     slug: "micro-saas-platform-architecture",
@@ -409,6 +419,77 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-01-17",
     featured: true,
     readTime: "12 min read",
+  },
+  {
+    slug: "genai-evals-in-production-2025",
+    title: "GenAI Evals in Production: Policy Tests That Scale",
+    description:
+      "Layered evals and rollout controls that keep GenAI quality high as usage grows.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "feature-flags-edge-2025",
+    title: "Feature Flags at the Edge: <100ms Global Releases",
+    description:
+      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "north-star-metrics-anti-patterns",
+    title: "North‑Star Metrics: 7 Anti‑Patterns to Avoid",
+    description:
+      "Avoid vanity KPIs and misaligned metrics with practices that drive outcomes.",
+    category: "Product Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  // New content additions
+  {
+    slug: "ai-automation-roi-playbook-2025",
+    title: "AI Automation ROI Playbook 2025",
+    description:
+      "Benchmarks, calculators, and rollout plans to prove value in 90 days.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "cloud-cost-guardrails-scorecards",
+    title: "Cloud Cost Guardrails: Practical Scorecards That Stick",
+    description:
+      "Requests/limits, SLOs, and CI gates that cut spend 30% without drama.",
+    category: "Cloud FinOps",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
+    slug: "ai-governance-playbook-2025",
+    title: "The 2025 AI Governance Playbook for Product Teams",
+    description:
+      "Policy tests, eval systems, and auditability patterns that scale with velocity.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "edge-ai-design-guide",
+    title: "Designing Edge AI Systems: A Field Guide",
+    description:
+      "Low-latency inference with quantization, caching, and graceful degradation.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-28",
+    featured: false,
+    readTime: "6 min read",
   },
 ];
 

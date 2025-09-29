@@ -32,7 +32,7 @@ const EnhancedPerformanceMonitor = () => {
           (window as any).gtag('event', 'web_vitals', {
             event_category: 'Performance',
             event_label: 'Core Web Vitals',
-            value: Math.round(metric.value as number),
+            value: Math.round(m.value),
             non_interaction: true,
           });
         }
