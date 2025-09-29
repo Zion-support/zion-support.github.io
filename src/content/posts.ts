@@ -10,46 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "llm-cost-optimization-2025",
-    title: "LLM Cost Optimization in 2025: Practical Strategies",
-    description:
-      "Cut LLM spend by 30–70% with routing, caching, batching, and quantization while preserving quality.",
-    category: "AI Platforms",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "9 min read",
-  },
-  {
-    slug: "edge-llm-latency-patterns",
-    title: "Edge LLM Latency Patterns: Sub-200ms Interactions",
-    description:
-      "Streaming, prefetch, and edge compute patterns to deliver instant-feel AI UX.",
-    category: "Performance",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read",
-  },
-  {
-    slug: "customer-journey-agents-qa",
-    title: "Customer Journey Agents: Planning, Safety, and QA Gates",
-    description:
-      "Design multi‑step agents with plan→act→verify loops, policy tests, and auditable outcomes that move KPIs.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read",
-  },
-  {
-    slug: "edge-personalization-under-100ms",
-    title: "Edge Personalization Under 100ms: CDN + On‑Device ML",
-    description:
-      "Signed configs, edge KV, and tiny models for private, real‑time personalization that scales globally.",
-    category: "Edge Computing",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read",
-  },
-  {
     slug: "ai-sales-copilot-2025",
     title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
     description:
@@ -109,16 +69,7 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "8 min read",
   },
-  {
-    slug: "ai-product-launch-checklist-2025",
-    title: "AI Product Launch Checklist: From Pilot to Production",
-    description:
-      "From offline suites to online canaries: patterns that keep quality high as usage grows.",
-    category: "GenAI",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read",
-  },
+  
   {
     slug: "feature-flags-edge-2025",
     title: "Feature Flags at the Edge: <100ms Global Releases",
@@ -128,16 +79,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: false,
     readTime: "6 min read",
-  },
-  {
-    slug: "ai-governance-at-scale-2025",
-    title: "AI Governance at Scale: Policies That Enable Speed",
-    description:
-      "From offline eval suites to online policy tests and approvals that keep velocity high without breaking trust.",
-    category: "AI Governance",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read",
   },
   {
     slug: "edge-inference-patterns-2025",
@@ -150,52 +91,12 @@ export const posts: BlogPost[] = [
     readTime: "7 min read",
   },
   {
-    slug: "ai-governance-blueprint-2025",
-    title: "AI Governance Blueprint 2025: Speed Without Surprises",
-    description:
-      "Decision rights, eval policies, and approval flows that let teams ship fast and safe.",
-    category: "AI Governance",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read",
-  },
-  {
     slug: "edge-observability-blueprint",
     title: "Edge Observability Blueprint: Sub‑100ms Reliability",
     description:
       "Telemetry, budgets, and circuit patterns that make edge experiences fast and trustworthy.",
     category: "Observability",
     publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read",
-  },
-  {
-    slug: "north-star-metrics-anti-patterns",
-    title: "North‑Star Metrics: 7 Anti‑Patterns to Avoid",
-    description:
-      "Common traps that derail metric-driven product development and how to fix them.",
-    category: "Product Analytics",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read",
-  },
-  {
-    slug: "mlops-reliability-2025",
-    title: "MLOps Reliability: Shipping GenAI Changes Safely",
-    description:
-      "Canary evals, shadow deploys, and rollback patterns to keep quality high while iterating fast.",
-    category: "MLOps",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "9 min read",
-  },
-  {
-    slug: "realtime-data-pipelines-2025",
-    title: "Reliable Real‑Time Data Pipelines in 2025",
-    description:
-      "Exactly‑once semantics, backpressure control, and pragmatic observability for streaming systems.",
-    category: "Data Engineering",
-    publishedAt: "2025-09-28",
     featured: true,
     readTime: "7 min read",
   },
@@ -534,130 +435,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-01-21",
     featured: false,
     readTime: "9 min read",
-  },
-  // Newly added posts (2025-09-30 / 2025-09-29)
-  {
-    slug: "serverless-inference-cost-playbook-2025",
-    title: "Serverless AI Inference Cost Playbook: 40–70% Savings Without P95 Pain",
-    description:
-      "Adaptive batching, warm pools, and tiered quality to cut spend while keeping latency sane.",
-    category: "AI Solutions",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read",
-  },
-  {
-    slug: "practical-rag-in-production-2025",
-    title: "Practical RAG in Production: Freshness, Hybrid Search, and Evals",
-    description:
-      "Battle-tested patterns for chunking, freshness policies, hybrid retrieval, and eval harnesses.",
-    category: "GenAI",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "secure-genai-guardrails-2025",
-    title: "Secure GenAI: Policy‑First Guardrails That Scale",
-    description:
-      "Prompt isolation, PII controls, and egress policies—ship safely without slowing teams.",
-    category: "Security",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "6 min read",
-  },
-  // New content additions (Oct 2025)
-  {
-    slug: "ai-platform-roi-2025",
-    title: "AI Platform ROI: Scorecards That Drive Investment Decisions",
-    description:
-      "A practical framework to quantify AI platform value with adoption, DX, and outcome metrics.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-01",
-    featured: true,
-    readTime: "7 min read",
-  },
-  {
-    slug: "secure-ml-supply-chain-2025",
-    title: "Securing the ML Supply Chain: Models, Data, and Dependencies",
-    description:
-      "SBOMs for models, dataset provenance, and runtime guardrails to protect AI systems end-to-end.",
-    category: "Security",
-    publishedAt: "2025-10-01",
-    featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "enterprise-rag-blueprint-v2",
-    title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, and Evals",
-    description:
-      "An updated blueprint with freshness SLAs, hybrid retrieval, reranking, and evaluation harnesses.",
-    category: "GenAI",
-    publishedAt: "2025-10-01",
-    featured: true,
-    readTime: "9 min read",
-  },
-  // Sept 30, 2025 fresh additions
-  {
-    slug: "ai-sales-copilot-playbook-2025",
-    title: "AI Sales Copilot: A 90‑Day Playbook for Revenue Teams",
-    description:
-      "Proven workflows, guardrails, and KPIs to deploy an AI copilot that actually lifts win‑rates.",
-    category: "GenAI",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "cost-aware-ml-platforms-2025",
-    title: "Cost‑Aware ML Platforms: Ship Faster Without Blowing the Budget",
-    description:
-      "Budgets, autoscaling, and policy checks that keep training and inference spend under control.",
-    category: "MLOps",
-    publishedAt: "2025-09-30",
-    featured: false,
-    readTime: "7 min read",
-  },
-  {
-    slug: "ai-security-red-teaming-checklist",
-    title: "AI Security Red‑Teaming: The Field Checklist",
-    description:
-      "End‑to‑end test plan for prompt injection, data exfil, jailbreaks, and supply‑chain risks.",
-    category: "Security",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read",
-  },
-  // Summaries for newly added long-form content
-  {
-    slug: "ai-platform-engineering-2025",
-    title: "AI Platform Engineering 2025: Golden Paths that Ship Outcomes",
-    description:
-      "A field guide to platform capabilities, eval systems, and governance that unlock safe, fast AI delivery.",
-    category: "Platform Engineering",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "10 min read",
-  },
-  {
-    slug: "ai-agent-observability-2025",
-    title: "AI Agent Observability: Traces, Policies, and Human Feedback",
-    description:
-      "Instrument agents with traces and policy tests, and close the loop with human feedback for trustworthy systems.",
-    category: "GenAI",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read",
-  },
-  {
-    slug: "secure-rag-2025",
-    title: "Secure RAG 2025: Data Controls That Survive Production",
-    description:
-      "Authorization-aware retrieval, PII minimization, and prompt firewalls for enterprise-grade RAG.",
-    category: "Security",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read",
   },
 ];
 
