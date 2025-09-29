@@ -83,11 +83,11 @@ const SuccessStoriesShowcase: React.FC = () => {
               {/* Results */}
               <div className="p-6">
                 <h4 className="font-semibold text-gray-900 mb-4">Key Results</h4>
+                {/* Map first four result highlights as pseudo-metrics */}
                 <div className="grid grid-cols-2 gap-4 mb-4">
-                  {study.metrics.slice(0, 4).map((metric, index) => (
+                  {study.results.slice(0, 4).map((result, index) => (
                     <div key={index} className="text-center p-3 bg-gray-50 rounded-lg">
-                      <div className="text-xl font-bold text-blue-600">{metric.value}</div>
-                      <div className="text-xs text-gray-600">{metric.label}</div>
+                      <div className="text-sm font-semibold text-blue-700">{result}</div>
                     </div>
                   ))}
                 </div>
