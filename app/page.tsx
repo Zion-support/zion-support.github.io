@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Clock, ArrowRight } from 'lucide-react';
-import {
-  NewBlogBanner,
-  AnalyticsPlatformBanner,
+import Link from 'next/link';
+import { 
+  NewBlogBanner, 
+  AnalyticsPlatformBanner, 
   TechCorpSuccessBanner,
   WorkflowAutomationBanner,
   AIAnalyticsBanner,
@@ -35,10 +34,8 @@ import {
   QuantumOptimizationBanner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
-import FeaturedServiceCard from '../components/FeaturedServiceCard';
-import SuccessStory from '../components/SuccessStory';
-import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
-import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+import AISustainabilityBanner from '../components/AISustainabilityBanner';
+import AIMultimodalBanner from '../components/AIMultimodalBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -53,37 +50,24 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-            <span>🚀 NEW 2026 Content:</span>
-            <a to="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
+            <span>✨ New on the blog:</span>
+            <Link href="/blog/ai-multimodal-enterprise-2025" className="underline hover:text-yellow-200">AI Multimodal Enterprise 2025</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</a>
+            <Link href="/blog/ai-sustainability-green-tech-2025" className="underline hover:text-yellow-200">AI Sustainability Green Tech</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</a>
-            <span className="hidden md:inline">•</span>
-            <a to="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</a>
-            <span className="hidden md:inline">•</span>
-            <a to="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</a>
+            <Link href="/blog/ai-cybersecurity-automation-2025" className="underline hover:text-yellow-200">AI Cybersecurity Automation</Link>
           </div>
           <Link
-            to="/blog"
-            className="bg-white text-green-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
+            href="/blog"
+            className="bg-white text-indigo-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
           >
             Read the latest
           </Link>
         </div>
       </div>
       {/* Promotional Banners */}
-      <NewContent2026Banner />
-      <AIAgentOrchestrationBanner />
       <AISustainabilityBanner />
-      <QuantumComputingBanner />
-      <SustainabilityCaseStudyBanner />
-      <QuantumOptimizationBanner />
-      <AIMultimodalEnterpriseBanner />
-      <AIEnterpriseAutomationBanner />
-      <AIDataAnalyticsEnterpriseBanner />
-      <EnterpriseTransformationSuccessBanner />
-      <HealthcareTransformationBanner />
+      <AIMultimodalBanner />
       <NewContentShowcaseBanner />
       <AIRoadmapsBanner />
       <AIFinOpsBanner />
@@ -759,7 +743,64 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link to="/blog/ai-agent-orchestration-2026" className="group">
+            <Link href="/blog/ai-multimodal-enterprise-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Article
+                  </span>
+                  <span className="text-sm text-gray-500">15 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Multimodal Enterprise 2025: Vision, Voice & Data Integration
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Discover how multimodal AI is transforming enterprise operations with 300% faster decision-making.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-sustainability-green-tech-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Featured Article
+                  </span>
+                  <span className="text-sm text-gray-500">12 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI for Sustainability: Green Tech Solutions 2025
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Achieve 50% carbon reduction and $3M annual savings with AI-powered environmental solutions.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link href="/case-studies/ai-sustainability-manufacturing-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Success Story
+                  </span>
+                  <span className="text-sm text-gray-500">Manufacturing</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Sustainability Manufacturing: 50% Carbon Reduction
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how a leading manufacturer achieved 50% carbon reduction and $3M annual savings.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-trustworthy-agents-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">

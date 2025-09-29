@@ -2,9 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export default function LatestInsights(): React.JSX.Element {
-<<<<<<< HEAD
-  return <section aria-label="Latest Insights" />;
-=======
+
   return (
     <section aria-label="Latest Insights" className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-6">

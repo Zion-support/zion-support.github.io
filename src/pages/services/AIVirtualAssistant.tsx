@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 export default function AIVirtualAssistant(): React.JSX.Element {
@@ -6,5 +7,3 @@ export default function AIVirtualAssistant(): React.JSX.Element {
 			<h1>AI Virtual Assistant</h1>
 		</main>
 	);
-}
-

@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 export default function AIWorkflowAutomation(): React.JSX.Element {
@@ -6,5 +7,3 @@ export default function AIWorkflowAutomation(): React.JSX.Element {
 			<h1>AI Workflow Automation</h1>
 		</main>
 	);
-}
-
