@@ -72,6 +72,45 @@ export interface PromotionalBanner {
 // Blog Posts Configuration
 export const blogPosts: BlogPost[] = [
   {
+    id: 'fresh-oct-16-2025',
+    message: '🚀 New: AI Agent Reliability Playbook 2026 + Privacy‑Safe Feature Flags',
+    ctaText: 'Read now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-fuchsia-600 to-purple-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'agent-reliability-2026-banner',
+    message: '🧩 AI Agent Reliability 2026: Deterministic Tools + Budgeted Actions',
+    ctaText: 'Read Playbook',
+    ctaLink: '/blog/ai-agent-reliability-playbook-2026',
+    backgroundColor: 'bg-gradient-to-r from-sky-600 to-indigo-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'privacy-safe-flags-2026-banner',
+    message: '🔒 Privacy‑Safe Feature Flags 2026: Scoped IDs + Edge Filters',
+    ctaText: 'Explore',
+    ctaLink: '/blog/privacy-safe-feature-flags-2026',
+    backgroundColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 1
+  },
+  {
     id: 'ai-platform-engineering-2025',
     title: 'AI Platform Engineering 2025: Scorecards, Trains, and Golden Paths',
     excerpt: 'Practical platform patterns that link capabilities to adoption, SLOs, and ROI.',

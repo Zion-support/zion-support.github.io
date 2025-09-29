@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-agent-reliability-playbook-2026",
+    title: "AI Agent Reliability Playbook 2026: Deterministic Tools and Budgeted Actions",
+    description: "Design agents that don’t surprise you: deterministic tools, live traces, and KPI‑aligned risk budgets.",
+    category: "GenAI",
+    publishedAt: "2025-10-16",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-safe-feature-flags-2026",
+    title: "Privacy‑Safe Feature Flags 2026: Scoped IDs, Edge Filters, Zero‑Regret",
+    description: "Global progressive delivery without PII: scoped identifiers, edge filters, budgets, and instant rollbacks.",
+    category: "Architecture",
+    publishedAt: "2025-10-16",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-breach-drills-2026",
     title: "AI Breach Drills 2026: Practicing Safe Autonomy Under Budget",
     description: "Run realistic breach simulations with budgeted actions, approval gates, and instant rollback.",

@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-agent-reliability-playbook-2026",
+    slug: "ai-agent-reliability-playbook-2026",
+    title: "AI Agent Reliability Playbook 2026: Deterministic Tools and Budgeted Actions",
+    description: "Design agents that don’t surprise you: deterministic tools, live traces, and KPI‑aligned risk budgets.",
+    excerpt: "Ship reliable agents with deterministic tools, budgeted actions, and observability that prevents regressions.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-16",
+    category: "GenAI",
+    tags: ["Agents", "Reliability", "Tracing", "Budgets"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-agent-reliability-playbook-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-safe-feature-flags-2026",
+    slug: "privacy-safe-feature-flags-2026",
+    title: "Privacy‑Safe Feature Flags 2026: Scoped IDs, Edge Filters, Zero‑Regret",
+    description: "Roll out features globally with scoped identifiers, on‑device filters, and instant rollbacks under 100ms.",
+    excerpt: "Global progressive delivery without PII: scoped IDs, edge filters, budgets, and rollbacks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-16",
+    category: "Architecture",
+    tags: ["Feature Flags", "Privacy", "Edge", "Progressive Delivery"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/privacy-safe-feature-flags-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-breach-drills-2026",
     slug: "ai-breach-drills-2026",
     title: "AI Breach Drills 2026: Practice Safe Autonomy Under Pressure",
@@ -93,7 +125,6 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "8 min read",
     image: "/images/platform-engineering-scorecards-v2-2026.jpg",
->>>>>>> origin/main
     newBadge: true,
     trending: true
   },

@@ -136,14 +136,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: AI Breach Drills, Privacy‑First Insights, Blue‑Green Agent Releases"
-          description="Rehearse safe autonomy, ship signal‑rich analytics without PII, and roll out agents safely."
+          title="New: Agent Reliability 2026 + Privacy‑Safe Feature Flags 2026"
+          description="Deterministic agent tools with budgeted actions, plus zero‑regret rollouts without PII."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Breach Drills 2026", category: "Security", link: "/blog/ai-breach-drills-2026" },
-            { title: "Privacy‑First Insights 2026", category: "Observability", link: "/blog/privacy-first-insights-telemetry-2026" },
-            { title: "Blue‑Green Agent Releases 2026", category: "GenAI", link: "/blog/agent-blue-green-releases-2026" }
+            { title: "Agent Reliability Playbook 2026", category: "GenAI", link: "/blog/ai-agent-reliability-playbook-2026" },
+            { title: "Privacy‑Safe Feature Flags 2026", category: "Architecture", link: "/blog/privacy-safe-feature-flags-2026" },
+            { title: "Privacy‑First Insights 2026", category: "Observability", link: "/blog/privacy-first-insights-telemetry-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
