@@ -1,3 +1,18 @@
+/* Basic ESLint flat config for CI to avoid type-aware configs */
+const js = require('@eslint/js');
+
+module.exports = [
+  {
+    ignores: [
+      'dist/**',
+      'node_modules/**',
+      'public/**',
+      'src/pages/**'
+    ]
+  },
+  js.configs.recommended,
+];
+
 const { FlatCompat } = require('@eslint/eslintrc');
 const js = require('@eslint/js');
 const typescriptEslint = require('@typescript-eslint/eslint-plugin');

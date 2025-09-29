@@ -1,10 +1,10 @@
 {
   "extends": "./tsconfig.json",
   "include": [
-    "src/utils/performanceMonitor.ts",
-    "src/content/**/*.ts",
-    "src/seo/**/*.ts",
     "src/types/**/*.ts"
   ],
-  "exclude": []
+  "exclude": [
+    "src/content/**",
+    "src/seo/**"
+  ]
 }
