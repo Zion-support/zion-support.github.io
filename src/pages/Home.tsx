@@ -8,10 +8,22 @@ import {
   Sparkles,
   Star,
   Target,
+  TrendingUp,
+  Users,
+  Zap,
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import ContentPromotionBanner from "../components/ContentPromotionBanner";
+import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
+import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
+import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
+import Header from "../components/Header";
+import LatestInsights from "../components/LatestInsights";
+import ModernFeatures from "../components/ModernFeatures";
+import { latestInsights } from "../content/insights";
+import { posts } from "../content/posts";
 
 const Home = () => {
   return (
@@ -22,11 +34,11 @@ const Home = () => {
         </title>
         <meta
           name="description"
-          content="Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. Enterprise security, AI innovation, and expert consulting services."
+          content="Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security. Expert consulting services with proven results."
         />
         <meta
           name="keywords"
-          content="AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation"
+          content="AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation, AI workflow automation, quantum computing, edge AI, zero trust security, micro SAAS platforms, AI virtual assistant, data analytics"
         />
         <meta
           property="og:title"
@@ -34,7 +46,7 @@ const Home = () => {
         />
         <meta
           property="og:description"
-          content="Transform your business with cutting-edge AI and IT solutions"
+          content="Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security. Expert consulting with proven results."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
@@ -45,13 +57,60 @@ const Home = () => {
         />
         <meta
           name="twitter:description"
-          content="Transform your business with cutting-edge AI and IT solutions"
+          content="Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security."
         />
         <link rel="canonical" href="https://ziontechgroup.com" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "description": "Leading AI and IT solutions provider specializing in AI workflow automation, quantum computing, edge AI, and zero trust security.",
+            "url": "https://ziontechgroup.com",
+            "logo": "https://ziontechgroup.com/logo.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-555-ZION-TECH",
+              "contactType": "customer service",
+              "availableLanguage": "English"
+            },
+            "sameAs": [
+              "https://linkedin.com/company/zion-tech-group",
+              "https://twitter.com/ziontechgroup"
+            ],
+            "foundingDate": "2020",
+            "numberOfEmployees": "50-100",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "US"
+            },
+            "services": [
+              "AI Workflow Automation",
+              "AI Virtual Assistant",
+              "AI Data Analytics",
+              "Quantum Computing Consulting",
+              "Edge AI Solutions",
+              "Zero Trust Security",
+              "Cybersecurity",
+              "Cloud Infrastructure"
+            ]
+          })}
+        </script>
       </Helmet>
-      <AdvertisingBanner />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        
+        {/* Content Promotion Banner */}
+        <ContentPromotionBanner
+          variant="info"
+          title="🚀 NEW: Quantum Computing & Edge AI Insights Just Published!"
+          description="Discover practical applications and implementation strategies for the latest technologies"
+          ctaText="Read Now"
+          ctaLink="/blog"
+          dismissible={true}
+        />
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -149,8 +208,7 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Latest Insights Section */}
-        {/* Promo ribbon for new content */}
+        {/* Latest Insights Section - Promo ribbon and grid */}
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -169,6 +227,15 @@ const Home = () => {
             <Link to="/blog" className="text-indigo-200 underline underline-offset-4 hover:text-white">Read now</Link>
           </div>
         </div>
+        {/* Featured Content Showcase */}
+        <FeaturedContentShowcase 
+          title="Latest Technology Insights & Trends"
+          subtitle="Stay ahead with our cutting-edge research, expert analysis, and actionable insights from the world of AI, cybersecurity, and emerging technologies"
+          maxItems={6}
+          showInsights={true}
+          showBlogPosts={true}
+          className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
+        />
 
         {/* New Services Showcase */}
         <section className="container mx-auto px-6 py-20 relative z-10">
@@ -481,9 +548,151 @@ const Home = () => {
         {/* Modern Features Section */}
         <ModernFeatures />
 
+        {/* Content Value Testimonials */}
+        <ContentValueTestimonials />
+
         {/* Enhanced Testimonials Section */}
         <EnhancedTestimonials />
 
+        {/* Enhanced Newsletter Signup */}
+        <EnhancedNewsletterSignup 
+          title="Stay Ahead with Our Latest Insights"
+          subtitle="Get exclusive access to cutting-edge technology insights, industry analysis, and expert guidance delivered to your inbox weekly."
+          showContentPreview={true}
+        />
+
+        {/* Latest Articles */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="mb-10 flex items-end justify-between">
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
+                <p className="text-gray-600">Insights from our team to help you move faster.</p>
+              </div>
+              <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
+            </div>
+            <div className="grid gap-8 md:grid-cols-3">
+              {posts.slice(0, 3).map((post) => (
+                <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                  <div className="p-6">
+                    <div className="text-sm text-indigo-600 font-medium mb-2">{post.category}</div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{post.title}</h3>
+                    <p className="text-gray-600 mb-4">{post.description}</p>
+                    <Link to={`/blog/${post.slug}`} className="text-indigo-700 font-medium hover:text-indigo-800">Read more →</Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+            
+            {/* Blog CTA */}
+            <div className="mt-12 text-center">
+              <Link
+                to="/blog"
+                className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                <ArrowRight className="w-5 h-5" />
+                Explore All Articles
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Case Studies Preview */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                See how companies like yours are transforming their operations with our AI solutions.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                    <TrendingUp className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">RetailMax Corporation</h3>
+                    <p className="text-sm text-gray-600">E-commerce</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">Reduced order processing time from 24 hours to 2 minutes with AI workflow automation.</p>
+                <div className="text-2xl font-bold text-green-600">99% Time Reduction</div>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                    <Users className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">First National Bank</h3>
+                    <p className="text-sm text-gray-600">Banking</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">Reduced customer wait times from 45 minutes to 2 minutes with AI virtual assistant.</p>
+                <div className="text-2xl font-bold text-blue-600">95% Faster Response</div>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                    <Target className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Precision Manufacturing</h3>
+                    <p className="text-sm text-gray-600">Manufacturing</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">Reduced production waste by 70% with AI data analytics and predictive maintenance.</p>
+                <div className="text-2xl font-bold text-purple-600">70% Waste Reduction</div>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <Link
+                to="/case-studies"
+                className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                <Award className="w-5 h-5" />
+                View All Success Stories
+              </Link>
+            </div>
+          </div>
+        </section>
+        {/* New Content Promo */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+                <div className="max-w-2xl">
+                  <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
+                  <p className="text-white/90">
+                    Fresh articles on real-time data pipelines, north-star metrics, and safe, scalable GenAI ops.
+                  </p>
+                </div>
+                <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
+                  Read the latest
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+
+              {/* Inline featured list */}
+              <div className="mt-8 grid gap-6 md:grid-cols-3">
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
+                  <div className="font-semibold text-white">Building Reliable Real-Time Data Pipelines</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-orange-200 mb-1">Product Analytics</div>
+                  <div className="font-semibold text-white">North-Star Metrics That Actually Drive Growth</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
+                  <div className="font-semibold text-white">Operationalizing GenAI Safely and at Scale</div>
+                </div>
               </div>
             </div>
           </div>

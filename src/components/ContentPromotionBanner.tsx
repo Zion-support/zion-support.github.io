@@ -1,121 +1,98 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, TrendingUp, Zap } from 'lucide-react';
 
-export default function ContentPromotionBanner() {
-  const featuredContent = [
-    {
-      title: "Enterprise AI Automation: Beyond Chatbots",
-      category: "AI Strategy",
-      readTime: "8 min read",
-      isNew: true,
-    },
-    {
-      title: "Cloud-Native Security Architecture",
-      category: "Cloud Security", 
-      readTime: "9 min read",
-      isNew: true,
-    },
-    {
-      title: "GenAI Productivity: 300% Faster Development",
-      category: "Developer Tools",
-      readTime: "7 min read",
-      isNew: true,
-    },
-  ];
+interface ContentPromotionBannerProps {
+  variant?: 'default' | 'success' | 'warning' | 'info';
+  title: string;
+  description?: string;
+  ctaText: string;
+  ctaLink: string;
+  className?: string;
+  dismissible?: boolean;
+  onDismiss?: () => void;
+}
+
+export const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
+  variant = 'default',
+  title,
+  description,
+  ctaText,
+  ctaLink,
+  className = "",
+  dismissible = false,
+  onDismiss
+}) => {
+  const [isVisible, setIsVisible] = React.useState(true);
+
+  const handleDismiss = () => {
+    setIsVisible(false);
+    onDismiss?.();
+  };
+
+  if (!isVisible) return null;
+
+  const variantStyles = {
+    default: 'bg-gradient-to-r from-blue-600 to-purple-600',
+    success: 'bg-gradient-to-r from-green-600 to-emerald-600',
+    warning: 'bg-gradient-to-r from-orange-600 to-red-600',
+    info: 'bg-gradient-to-r from-cyan-600 to-blue-600'
+  };
 
   return (
-    <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 md:p-12 text-white relative overflow-hidden">
+    <div className={`relative overflow-hidden ${variantStyles[variant]} ${className}`}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-x-12 animate-pulse"></div>
       </div>
       
       <div className="relative z-10">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-          <div className="max-w-2xl">
-            <div className="flex items-center gap-2 mb-4">
-              <TrendingUp className="w-5 h-5 text-yellow-300" />
-              <span className="text-sm font-medium text-yellow-300 uppercase tracking-wide">
-                Fresh Content
-              </span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Latest from Zion Insights
-            </h2>
-            <p className="text-white/90 text-lg leading-relaxed">
-              Fresh articles on AI automation, cloud security, and developer productivity. 
-              Stay ahead with expert analysis and practical guides.
-            </p>
-          </div>
-          
-          <div className="flex flex-col gap-4">
-            <Link 
-              to="/blog" 
-              className="bg-white text-indigo-700 hover:bg-indigo-50 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg"
-            >
-              <BookOpen className="w-5 h-5" />
-              Explore All Articles
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            
-            <Link 
-              to="/case-studies" 
-              className="border-2 border-white text-white hover:bg-white hover:text-indigo-700 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105"
-            >
-              <Zap className="w-5 h-5" />
-              View Case Studies
-            </Link>
-          </div>
-        </div>
-
-        {/* Featured Content Cards */}
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {featuredContent.map((item, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-xs uppercase tracking-wider text-blue-200 bg-blue-500/20 px-3 py-1 rounded-full">
-                  {item.category}
-                </span>
-                {item.isNew && (
-                  <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full font-medium">
-                    NEW
-                  </span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="flex-shrink-0">
+                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-white">
+                  {title}
+                </h3>
+                {description && (
+                  <p className="text-sm text-white/90 mt-1">
+                    {description}
+                  </p>
                 )}
               </div>
-              <h3 className="font-bold text-white mb-2 line-clamp-2">
-                {item.title}
-              </h3>
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-white/70">
-                  {item.readTime}
-                </span>
-                <ArrowRight className="w-4 h-4 text-white/70" />
-              </div>
             </div>
-          ))}
-        </div>
-
-        {/* Stats */}
-        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/20">
-          <div className="text-center">
-            <div className="text-2xl font-bold text-white">50+</div>
-            <div className="text-sm text-white/80">Articles Published</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-white">10K+</div>
-            <div className="text-sm text-white/80">Monthly Readers</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-white">15</div>
-            <div className="text-sm text-white/80">Expert Authors</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-white">4.9★</div>
-            <div className="text-sm text-white/80">Reader Rating</div>
+            
+            <div className="flex items-center space-x-4">
+              <Link
+                to={ctaLink}
+                className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap"
+              >
+                {ctaText}
+              </Link>
+              
+              {dismissible && (
+                <button
+                  onClick={handleDismiss}
+                  className="text-white/80 hover:text-white transition-colors"
+                  aria-label="Dismiss banner"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default ContentPromotionBanner;
