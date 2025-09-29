@@ -913,6 +913,38 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/secure-tools-marketplace.jpg",
     newBadge: true,
     trending: false
+  },
+  {
+    id: "ai-governance-in-practice-2026",
+    slug: "ai-governance-in-practice-2026",
+    title: "AI Governance in Practice 2026: Scorecards, PR Gates, Online Evals",
+    description: "Lightweight guardrails wired to KPIs: scorecards, PR checks, and live canaries that keep teams fast.",
+    excerpt: "Adopt governance engineers actually use—measurable, automated, and velocity‑friendly.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Strategy",
+    tags: ["Governance", "Scorecards", "Evals"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-governance-in-practice-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-privacy-by-design-2026",
+    slug: "edge-privacy-by-design-2026",
+    title: "Edge Privacy by Design 2026: On‑Device Filters, Scoped IDs, <100ms",
+    description: "Ship privacy‑first intelligence with on‑device redaction, signed configs, and geo budgets.",
+    excerpt: "Blueprint for private, low‑latency edge decisions without PII exposure.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "Edge Computing",
+    tags: ["Edge", "Privacy", "On‑device"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/edge-privacy-by-design-2026.jpg",
+    newBadge: true,
+    trending: true
   }
 ];
 

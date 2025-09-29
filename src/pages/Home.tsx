@@ -133,16 +133,15 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Risk‑Budgeted Runbooks, Zero‑Trust Agents, Privacy‑Safe Flags"
-          description="Ship safe automation with risk budgets, sandboxed agents, and privacy‑preserving rollouts."
+          title="New: AI Governance in Practice + Edge Privacy by Design"
+          description="Scorecards, PR gates, online evals — plus on‑device privacy under 100ms."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Runbooks with Risk Budgets 2026", category: "AI Operations", link: "/blog/ai-runbooks-with-risk-budgets-2026" },
-            { title: "Zero‑Trust for AI Agents 2026", category: "AI Security", link: "/blog/zero-trust-for-ai-agents-2026" },
-            { title: "Privacy‑Preserving Feature Flags 2026", category: "Architecture", link: "/blog/privacy-preserving-feature-flags-2026" },
+            { title: "AI Governance in Practice 2026", category: "AI Strategy", link: "/blog/ai-governance-in-practice-2026" },
+            { title: "Edge Privacy by Design 2026", category: "Edge Computing", link: "/blog/edge-privacy-by-design-2026" },
             { title: "Platform Scorecards 2026", category: "Platform Engineering", link: "/blog/platform-engineering-scorecards-2026" },
-            { title: "Edge AI Blueprint 2026", category: "Edge Computing", link: "/blog/edge-ai-blueprint-2026" }
+            { title: "Zero‑Trust for AI Agents 2026", category: "AI Security", link: "/blog/zero-trust-for-ai-agents-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -280,7 +279,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Risk‑Budgeted Runbooks, Zero‑Trust Agents, Privacy‑Safe Flags — read now
+            New: AI Governance in Practice + Edge Privacy by Design — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
