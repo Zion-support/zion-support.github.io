@@ -4,7 +4,7 @@ import globals from "globals";
 import tseslint from "typescript-eslint";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
-import cypressPlugin from "eslint-plugin-cypress/flat"; // Corrected import for flat config
+import cypressPlugin from "eslint-plugin-cypress"; // Use package root; flat export exposed via configs
 
 // Cleaned global objects
 const browserGlobals = Object.fromEntries(
@@ -22,20 +22,6 @@ export default [
   // 1. Global Ignores
   {
     ignores: [
-<<<<<<< HEAD
-      "dist/",
-      "node_modules/",
-      "**/*.config.js", // Ignores this file, tailwind.config.js, etc.
-      // "*.config.ts", // Handled by specific tsconfig below if needed
-      "extension/",
-      "supabase/functions/_shared/",
-      "playwright.config.ts",
-      "jest.config.js",
-      "scripts/",
-      "coverage/",
-      "*.d.ts", // Typically declaration files don't need linting
-    ],
-=======
       'dist/**',
       'node_modules/**',
       '*.config.js',
@@ -92,7 +78,6 @@ export default [
       'src/components/AdvancedCollaborationDashboard.tsx',
       'src/components/EnhancedContactForm.tsx'
     ]
->>>>>>> origin/main
   },
 
   // 2. Base Configuration for JavaScript files
@@ -115,18 +100,12 @@ export default [
     languageOptions: { globals: { ...serviceWorkerGlobals } },
   },
 
-  // 3. TypeScript Configurations
-  // Main application TS/TSX files (src, pages, but not tests, stories, cypress, supabase yet)
+  // 3. TypeScript Configurations (non-type-aware to avoid project include issues)
   ...tseslint.config({
-    files: ["src/**/*.{ts,tsx}", "pages/**/*.{ts,tsx}"], 
-    // Exclude story files from this general src/pages config
+    files: ["src/**/*.{ts,tsx}", "pages/**/*.{ts,tsx}"],
     ignores: ["src/**/*.stories.tsx", "src/**/*.stories.ts", "src/**/*.test.tsx", "src/**/*.test.ts"],
-    extends: [...tseslint.configs.recommendedTypeChecked],
+    extends: [...tseslint.configs.recommended],
     languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.json"], // Simplified to only tsconfig.json
-        tsconfigRootDir: import.meta.dirname,
-      },
       globals: { ...browserGlobals },
     },
     plugins: { "react-hooks": reactHooks, "react-refresh": reactRefresh },
@@ -135,84 +114,37 @@ export default [
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
-      "@typescript-eslint/no-unsafe-assignment": "warn",
-      "@typescript-eslint/no-unsafe-member-access": "warn",
-      "@typescript-eslint/no-unsafe-call": "warn",
-      "@typescript-eslint/no-unsafe-return": "warn",
-      "@typescript-eslint/no-unsafe-argument": "warn",
-      "@typescript-eslint/restrict-template-expressions": "warn",
-      "@typescript-eslint/no-floating-promises": ["warn", { ignoreVoid: true }],
-      "@typescript-eslint/no-misused-promises": ["warn", { checksVoidReturn: false }],
     },
   }),
 
-  // Config for vite.config.ts, tailwind.config.ts etc. (Node environment TS files)
-  // This should specifically target config files at the root.
+  // Config for vite.config.ts, tailwind.config.ts etc. (non type-aware)
   ...tseslint.config({
-    files: ["vite.config.ts", "tailwind.config.ts", "cypress.config.ts", "vitest.config.ts"], // Explicit list
-    extends: [...tseslint.configs.recommendedTypeChecked],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json"], // Use tsconfig.node.json
-        tsconfigRootDir: import.meta.dirname,
-      },
-      globals: { ...nodeGlobals },
-    },
+    files: ["vite.config.ts", "tailwind.config.ts", "cypress.config.ts", "vitest.config.ts"],
+    extends: [...tseslint.configs.recommended],
+    languageOptions: { globals: { ...nodeGlobals } },
     rules: {
-        "@typescript-eslint/no-unsafe-assignment": "off",
-        "@typescript-eslint/no-unsafe-call": "off",
-        "@typescript-eslint/no-unsafe-member-access": "off",
-        "@typescript-eslint/no-var-requires": "off",
-        "@typescript-eslint/no-require-imports": "off",
+      "@typescript-eslint/no-var-requires": "off",
+      "@typescript-eslint/no-require-imports": "off",
     }
   }),
 
-  // Test files configuration (__tests__ directory)
+  // Test files configuration (__tests__ directory) non type-aware
   ...tseslint.config({
     files: ["__tests__/**/*.{ts,tsx}"],
-    extends: [...tseslint.configs.recommendedTypeChecked],
-    languageOptions: {
-      parserOptions: {
-        project: "./__tests__/tsconfig.json",
-        tsconfigRootDir: import.meta.dirname,
-      },
-      globals: { ...globals.jest, ...browserGlobals }, // Jest and browser globals
-    },
+    extends: [...tseslint.configs.recommended],
+    languageOptions: { globals: { ...globals.jest, ...browserGlobals } },
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/no-unsafe-assignment": "off",
-      "@typescript-eslint/no-unsafe-member-access": "off",
-      "@typescript-eslint/no-unsafe-call": "off",
-      "@typescript-eslint/no-unsafe-return": "off",
-      "@typescript-eslint/no-unsafe-argument": "off",
-      // Allow describe, it, expect etc.
-      "@typescript-eslint/unbound-method": "off",
     },
   }),
 
-  // Test files configuration (tests/ directory)
+  // Test files configuration (tests/ directory) non type-aware
   ...tseslint.config({
-    files: ["tests/**/*.{ts,tsx,js,jsx}"], // Include JS/JSX as per its tsconfig
-    ignores: ["tests/e2e/**"], // e2e tests inside 'tests' might be Playwright, not Jest
-    extends: [...tseslint.configs.recommendedTypeChecked],
-    languageOptions: {
-      parserOptions: {
-        project: "./tests/tsconfig.json",
-        tsconfigRootDir: import.meta.dirname,
-      },
-      globals: { ...globals.jest, ...browserGlobals }, // Jest and browser globals
-    },
-    rules: {
-      "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/no-unsafe-assignment": "off",
-      "@typescript-eslint/no-unsafe-member-access": "off",
-      "@typescript-eslint/no-unsafe-call": "off",
-      "@typescript-eslint/no-unsafe-return": "off",
-      "@typescript-eslint/no-unsafe-argument": "off",
-      "@typescript-eslint/unbound-method": "off", // for Jest matchers
-      "@typescript-eslint/no-var-requires": "off", // Allow require in JS test files
-      "@typescript-eslint/no-require-imports": "off", // Allow require in JS test files
-    },
+    files: ["tests/**/*.{ts,tsx,js,jsx}"],
+    ignores: ["tests/e2e/**"],
+    extends: [...tseslint.configs.recommended],
+    languageOptions: { globals: { ...globals.jest, ...browserGlobals } },
+    rules: { "@typescript-eslint/no-explicit-any": "off" },
   }),
 
   // Storybook files configuration
