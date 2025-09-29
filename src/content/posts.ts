@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "agentic-workflows-blueprint-2026",
+    title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Guardrails",
+    description: "Design agentic systems with reliable tools, structured traces, and safety guardrails that scale.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-llm-caching-blueprint-2025",
+    title: "Edge LLM Caching: Sub‑100ms Latency with Budgets and Freshness",
+    description: "Blueprint for low‑latency inference using edge KV, TTL windows, and cost budgets.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-operational-scorecards-2026",
+    title: "AI Operational Scorecards 2026: Tie Capabilities to Outcomes",
+    description: "Simple scorecards that connect AI features to adoption, reliability, and revenue KPIs.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-incident-response-2026",
     title: "AI Incident Response 2026: Playbooks, Canaries, and SLAs",
     description: "Practical incident response for AI features with on-call playbooks and KPI-linked canaries.",
