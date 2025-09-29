@@ -83,7 +83,7 @@ export default function PromotionalBanner({
 // Pre-configured banner variants
 export const NewContentBanner = () => (
   <PromotionalBanner
-    message="🎉 New: AI Roadmaps 2026, GenAI Guardrails Blueprints, FinOps Scorecards"
+    message="🎉 New: AI Security DLP, Multimodal Agents, Scorecards v2 (2026)"
     ctaText="Read the latest"
     ctaLink="/blog"
     backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
@@ -343,7 +343,7 @@ export const AIMultimodalEnterpriseBanner = () => (
   />
 );
 
-export const AIEnterpriseAutomationBanner = () => (
+export const AIEnterpriseAutomationGuideBanner = () => (
   <PromotionalBanner
     message="⚙️ NEW: AI Enterprise Automation 2026 - 95% Process Automation & $5M+ Savings with Zero-Touch Operations"
     ctaText="Read Guide"
@@ -440,5 +440,86 @@ export const Latest2026ContentBanner = () => (
     backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
     autoHide={true}
     hideAfter={18}
+  />
+);
+
+// New 2026 Content Banners
+export const AISecurityEnterprise2026Banner = () => (
+  <PromotionalBanner
+    message="🛡️ NEW: AI Enterprise Security 2026 - Zero-Trust Architecture with 99.9% Security Compliance"
+    ctaText="Read Article"
+    ctaLink="/blog/ai-enterprise-security-2026"
+    backgroundColor="bg-gradient-to-r from-red-600 to-orange-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AIMultimodalEnterprise2026Banner = () => (
+  <PromotionalBanner
+    message="🎯 NEW: AI Multimodal Enterprise 2026 - Vision, Language & Audio Integration with 40% Accuracy Improvement"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-multimodal-enterprise-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AISustainabilityTransformationBanner = () => (
+  <PromotionalBanner
+    message="🌱 NEW: AI Sustainability Case Study - 60% Carbon Reduction & $15M Savings for Fortune 500 Energy Company"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-sustainability-transformation-2026"
+    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const LatestContent2026Banner = () => (
+  <PromotionalBanner
+    message="✨ LATEST 2026: AI Security, Multimodal AI & Sustainability Transformation - Premium Enterprise Content"
+    ctaText="Explore Latest"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const AIAgentReliabilityBanner = () => (
+  <PromotionalBanner
+    message="🛡️ NEW: AI Agent Reliability 2026 - Achieve 99.9% uptime with production-ready autonomous systems and fault tolerance"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-agent-reliability-2026"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-cyan-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const AIMultimodalIntegrationBanner = () => (
+  <PromotionalBanner
+    message="🎯 NEW: Multimodal Enterprise Integration 2026 - Unify vision, voice & text AI for 95% accuracy in context understanding"
+    ctaText="Learn More"
+    ctaLink="/blog/ai-multimodal-enterprise-integration-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const AIEnterpriseAutomationBlueprintBanner = () => (
+  <PromotionalBanner
+    message="⚡ FEATURED: Enterprise Automation Blueprint 2026 - Achieve 95% process efficiency and $5M+ savings with zero-touch operations"
+    ctaText="Get Blueprint"
+    ctaLink="/blog/ai-enterprise-automation-blueprint-2026"
+    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
   />
 );
