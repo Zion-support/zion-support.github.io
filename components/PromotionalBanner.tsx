@@ -331,45 +331,68 @@ export const NewContentShowcaseBanner = () => (
   />
 );
 
-export const EnterpriseAIImplementationBanner = () => (
+// New 2026 Content Banners
+export const AIMultimodalEnterpriseBanner = () => (
   <PromotionalBanner
-    message="🏢 New: Enterprise AI Implementation 2025 - Complete Guide with Proven Strategies & $5M ROI Case Study"
-    ctaText="Read Complete Guide"
-    ctaLink="/blog/ai-enterprise-implementation-2025"
-    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    message="🎯 NEW: AI Multimodal Enterprise 2026 - 85% Efficiency Gains & $2M+ ROI with Vision, Language & Audio AI"
+    ctaText="Read Article"
+    ctaLink="/blog/ai-multimodal-enterprise-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
     autoHide={true}
     hideAfter={20}
   />
 );
 
-export const MLOpsBestPracticesBanner = () => (
+export const AIEnterpriseAutomationBanner = () => (
   <PromotionalBanner
-    message="🔧 New: MLOps Best Practices 2025 - Production-Ready ML Systems with 80% Faster Deployment"
-    ctaText="Read MLOps Guide"
-    ctaLink="/blog/ai-mlops-best-practices-2025"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
-    autoHide={true}
-    hideAfter={18}
-  />
-);
-
-export const EnterpriseTransformationCaseStudyBanner = () => (
-  <PromotionalBanner
-    message="🏆 Success Story: Enterprise AI Transformation - $5.2M ROI in 18 Months with 325% Return on Investment"
-    ctaText="View Case Study"
-    ctaLink="/case-studies/enterprise-ai-transformation-2025"
+    message="⚙️ NEW: AI Enterprise Automation 2026 - 95% Process Automation & $5M+ Savings with Zero-Touch Operations"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-enterprise-automation-2026"
     backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
     autoHide={true}
     hideAfter={22}
   />
 );
 
-export const LatestContentShowcaseBanner = () => (
+export const AIDataAnalyticsEnterpriseBanner = () => (
   <PromotionalBanner
-    message="🚀 Latest Content: Enterprise AI Implementation, MLOps Best Practices, $5M ROI Case Study - Fresh 2025 Insights"
-    ctaText="Explore New Content"
-    ctaLink="/blog"
+    message="📊 NEW: AI Data Analytics Enterprise 2026 - 90% Faster Insights & $3M+ ROI with Predictive Intelligence"
+    ctaText="Read Article"
+    ctaLink="/blog/ai-data-analytics-enterprise-2026"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-indigo-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const EnterpriseTransformationSuccessBanner = () => (
+  <PromotionalBanner
+    message="🏆 NEW: $10M ROI Case Study - Fortune 500 AI Transformation with 95% Automation & 300% Productivity Gains"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-enterprise-transformation-success-2026"
     backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    autoHide={true}
+    hideAfter={25}
+  />
+);
+
+export const HealthcareTransformationBanner = () => (
+  <PromotionalBanner
+    message="🏥 NEW: AI Healthcare Transformation 2026 - 40% Better Diagnostics & 60% Improved Outcomes Case Study"
+    ctaText="View Success Story"
+    ctaLink="/case-studies/ai-healthcare-transformation-2026"
+    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const NewContent2026Banner = () => (
+  <PromotionalBanner
+    message="🚀 NEW 2026 Content: Multimodal AI, Enterprise Automation, Data Analytics & Success Stories - Latest AI Insights"
+    ctaText="Explore 2026 Content"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
     autoHide={true}
     hideAfter={18}
   />
