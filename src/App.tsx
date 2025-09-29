@@ -6,7 +6,6 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
 import AdvancedSEO from './components/AdvancedSEO';
 import PerformanceTracker from './components/PerformanceTracker';
-import PerformanceMonitor from './components/PerformanceMonitor';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
@@ -19,17 +18,14 @@ import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibilityManager';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 
 // Import enhanced utilities
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitoring';
-import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
+import { enhancedAccessibilityManager as enhancedAccessibilityManagerV2 } from './utils/enhancedAccessibility';
 import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
-import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import { enhancedSecuritySystem } from './utils/enhancedSecuritySystem';
 import { enhancedAccessibilitySystem } from './utils/enhancedAccessibilitySystem';
 import { apiCache as apiCacheSystem, imageCache as imageCacheSystem, dataCache as dataCacheSystem } from './utils/enhancedCachingSystem';
@@ -49,7 +45,7 @@ import { EnhancedNotification } from './types/comprehensive';
 import './index.css';
 
 // Lazy load heavy components for better performance
-const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
+const LazyEnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
 const KeyboardShortcutsHelp = lazy(() => import('./components/KeyboardShortcutsHelp'));
 const SystemHealthDashboard = lazy(() => import('./components/SystemHealthDashboard'));
 const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
@@ -71,7 +67,6 @@ const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcu
 const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDashboard'));
 // import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
-import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceEnhancer from './components/PerformanceEnhancer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
@@ -561,7 +556,7 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <EnhancedSystemDashboard />
+              <LazyEnhancedSystemDashboard />
             </div>
           </div>
         )}
