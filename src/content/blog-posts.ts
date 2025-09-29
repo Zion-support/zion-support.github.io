@@ -275,6 +275,40 @@ Adopt these patterns to move fast without breaking trust.
     image: "/images/genai-evals.jpg"
   },
   {
+    slug: "ai-governance-guardrails-2025",
+    title: "AI Governance Guardrails: Ship Fast Without Breaking Policy",
+    description: "Policy-as-code, approval rituals, and eval gates that scale with adoption.",
+    content: `
+# AI Governance Guardrails: Ship Fast Without Breaking Policy
+
+Implement policy-as-code, measurable quality bars, and streamlined approvals to keep velocity high and risk low.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Governance",
+    tags: ["AI Governance", "Policy", "Risk", "Compliance"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-governance-guardrails.jpg"
+  },
+  {
+    slug: "otel-traces-that-matter-2025",
+    title: "OpenTelemetry Traces That Engineers Actually Use",
+    description: "Sampling, semantic conventions, and dashboards that reduce MTTR.",
+    content: `
+# OpenTelemetry Traces That Engineers Actually Use
+
+Pragmatic guidance on trace sampling, attributes, and visualization for faster incident resolution.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Observability",
+    tags: ["OpenTelemetry", "Tracing", "Observability", "SRE"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/otel-traces.jpg"
+  },
+  {
     slug: "feature-flags-edge-2025",
     title: "Feature Flags at the Edge: <100ms Global Releases",
     description: "Consistency models, cache strategies, and validation flows for instant global rollouts.",

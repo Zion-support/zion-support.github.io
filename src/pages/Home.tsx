@@ -18,6 +18,7 @@ import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
+import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
@@ -302,6 +303,11 @@ const Home = () => {
           </div>
         </div>
         <LatestInsights />
+
+        {/* Featured Content Showcase */}
+        <section className="relative z-10">
+          <FeaturedContentShowcase className="mt-8" />
+        </section>
 
         {/* New Services Showcase */}
         <section className="py-20 bg-white relative overflow-hidden">
