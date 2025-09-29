@@ -9,6 +9,33 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "ai-sales-copilot-insights",
+    title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
+    summary:
+      "How to wire CRMs, build prompt libraries, and add evals that boost win‑rates without risk.",
+    category: "AI Strategy",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "eda-contracts-replays",
+    title: "Event‑Driven Architecture: Contracts, Idempotency, and Safe Replays",
+    summary:
+      "Version events, enforce schemas, and run backfills without double‑processing.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "zero-downtime-migrations",
+    title: "Zero‑Downtime Migrations: Patterns that Keep Pages Green",
+    summary:
+      "Dual‑write, read‑shadowing, and progressive delivery to ship schema changes safely.",
+    category: "Platform Engineering",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
+  {
     id: "ai-autonomous-ops-intro",
     title: "AI Autonomous Operations: From Runbooks to Self‑Managing Systems",
     summary:

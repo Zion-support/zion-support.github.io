@@ -102,8 +102,8 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         <ContentPromotionBanner
-          title="New: AI Autonomous Ops, ROI Scorecards, and Edge Caching"
-          description="Fresh 2025 content added. Explore autonomous operations, exec‑ready ROI, and resilient edge patterns."
+          title="New: AI Sales Copilot, Event‑Driven at Scale, Zero‑Downtime Migrations"
+          description="Fresh 2025 content: grounded AI copilots for sales, resilient EDA contracts, and safe schema rollouts."
           ctaText="Explore new content"
           ctaLink="/blog"
           variant="info"

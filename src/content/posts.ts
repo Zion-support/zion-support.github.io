@@ -10,6 +10,36 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-sales-copilot-playbook-2025",
+    title: "AI Sales Copilot: A Practical Playbook for 2025",
+    description:
+      "Prompt libraries, CRM grounding, and evals that lift rep productivity without hallucinations.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "event-driven-architectures-at-scale",
+    title: "Event‑Driven Architectures at Scale: Contracts, Idempotency, Backfills",
+    description:
+      "Design versioned events, enforce schemas, and ship reliable replays without double effects.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "8 min read",
+  },
+  {
+    slug: "zero-downtime-migrations-2025",
+    title: "Zero‑Downtime Migrations: Blue/Green Data and Progressive Delivery",
+    description:
+      "Techniques for shipping schema changes safely with dual‑write, shadow reads, and kill switches.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
     slug: "ai-autonomous-operations-2025",
     title: "AI Autonomous Operations: Self‑Healing, Self‑Optimizing, Self‑Scaling",
     description:
