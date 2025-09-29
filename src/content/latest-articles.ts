@@ -17,6 +17,54 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "agentic-workflows-blueprint-2026",
+    slug: "agentic-workflows-blueprint-2026",
+    title: "Agentic Workflows Blueprint 2026: Tools, Traces, Policy Tests",
+    description: "Design reliable multi‑tool agents with traceability, CI policy tests, and rollback‑ready routes.",
+    excerpt: "A practical blueprint for building agentic workflows that are observable, governed, and fast.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Engineering",
+    tags: ["Agents", "Workflows", "Policy", "Tracing"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/agentic-workflows-blueprint-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-platform-roi-scorecards-2025",
+    slug: "ai-platform-roi-scorecards-2025",
+    title: "AI Platform ROI Scorecards: Connect Capabilities to Outcomes",
+    description: "Make AI investment value visible with scorecards that tie to adoption, retention, and revenue.",
+    excerpt: "A lightweight, actionable system to prove AI platform ROI quarter by quarter.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Strategy",
+    tags: ["ROI", "Scorecards", "Platform"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-platform-roi-scorecards.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-config-signed-personalization-2025",
+    slug: "edge-config-signed-personalization-2025",
+    title: "Signed Edge Configs: Private Personalization Under 100ms",
+    description: "Deliver low‑latency personalization using signed configs, KV caches, and on‑device signals.",
+    excerpt: "Practical patterns to keep P95 low while improving relevance and privacy.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Edge Computing",
+    tags: ["Edge", "Personalization", "Caching"],
+    featured: false,
+    readTime: "6 min read",
+    image: "/images/signed-edge-configs.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "secure-agents-runtime-2026",
     slug: "secure-agents-runtime-2026",
     title: "Secure AI Agents Runtime: Sandboxes, Egress Policies, and Traces",
@@ -704,6 +752,39 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/secure-rag-2025.jpg",
     newBadge: true,
     trending: false
+  }
+  ,
+  {
+    id: "agentic-workflows-blueprint-2026",
+    slug: "agentic-workflows-blueprint-2026",
+    title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",
+    description: "Design reliable multi‑tool agents with deterministic tools, live traces, and risk budgets.",
+    excerpt: "A production playbook for building agent workflows that teams can trust.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-10",
+    category: "GenAI",
+    tags: ["Agents", "Tracing", "Guardrails"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/agentic-workflows-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-first-observability-2026",
+    slug: "privacy-first-observability-2026",
+    title: "Privacy‑First Observability: User‑Centric Traces Without PII Leaks",
+    description: "Implement privacy filters, scoped IDs, and retention policies that keep signals rich and safe.",
+    excerpt: "Observability patterns that balance insight with compliance across stacks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-10",
+    category: "Observability",
+    tags: ["Privacy", "Tracing", "Compliance"],
+    featured: false,
+    readTime: "7 min read",
+    image: "/images/privacy-first-observability.jpg",
+    newBadge: true,
+    trending: true
   }
 ];
 

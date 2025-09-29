@@ -126,8 +126,17 @@ export default function BlogPage() {
             date="September 29, 2025"
             category="AI Reliability"
             readTime="11 min"
-            image="🛡️"
+            image="🧰"
             href="/blog/genai-guardrails-2025"
+          />
+          <BlogPost
+            title="GenAI Guardrails 2025: Practical Playbook for Reliable AI"
+            excerpt="Concrete patterns to make generative AI systems safe, reliable, and auditable in production."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="11 min"
+            image="🛡️"
+            href="/blog/ai-agents-in-the-enterprise-2025"
           />
           <BlogPost
             title="AI Agents in the Enterprise: 2025 Adoption Playbook"

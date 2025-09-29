@@ -193,6 +193,21 @@ const contentItems: ContentItem[] = [
     ]
   },
   {
+    id: 'ai-agents-in-the-enterprise-2025',
+    title: 'AI Agents in the Enterprise: 2025 Adoption Playbook',
+    excerpt: 'A practical playbook for deploying autonomous AI agents across revenue ops and IT with measurable ROI.',
+    type: 'article',
+    readTime: '10 min read',
+    category: 'Autonomous AI',
+    href: '/blog/ai-agents-in-the-enterprise-2025',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '3x', label: 'Pipeline Lift' },
+      { value: '60%', label: 'Ticket Deflection' }
+    ]
+  },
+  {
     id: 'ai-healthcare-transformation-2025',
     title: 'AI Healthcare Transformation Guide',
     excerpt: 'How AI is revolutionizing patient care with 40% better diagnostics and 60% improved outcomes.',
@@ -350,6 +365,12 @@ export default function ContentShowcase({
               className="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg hover:shadow-xl"
             >
               View All Content
+            </Link>
+            <Link
+              href="/blog/ai-agents-in-the-enterprise-2025"
+              className="inline-block border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-600 hover:text-white transition-colors"
+            >
+              Read: AI Agents Playbook
             </Link>
             <Link
               href="/case-studies"
