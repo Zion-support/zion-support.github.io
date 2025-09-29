@@ -410,6 +410,24 @@ export const posts: BlogPost[] = [
   }
   ,
   {
+    slug: "agent-evals-scorecards-2026",
+    title: "Agent Evals 2026: Scorecards That Predict Outcomes",
+    description: "Design online evals and KPI‑linked scorecards that correlate with revenue and CSAT.",
+    category: "GenAI",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-preserving-agents-2026",
+    title: "Privacy‑Preserving Agents: Scoped IDs, Redaction, and On‑Device Caches",
+    description: "Ship assistant workflows that are insight‑rich without PII risk using scoped IDs and local caches.",
+    category: "AI Security",
+    publishedAt: "2025-10-13",
+    featured: false,
+    readTime: "7 min read"
+  },
+  {
     slug: "agentic-workflows-blueprint-2026",
     title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",
     description: "Design reliable multi‑tool agents with deterministic tools, live traces, and risk budgets.",
@@ -518,5 +536,33 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-12",
     featured: false,
     readTime: "6 min read"
+  }
+  ,
+  {
+    slug: "ai-autonomous-incident-runbooks-2025",
+    title: "AI Autonomous Incident Runbooks: Budgeted Actions and Instant Rollback",
+    description: "Design incident playbooks with explicit budgets, approvals, and safe automated rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-feature-flags-2025",
+    title: "Privacy‑First Feature Flags: Zero‑Regret Rollouts at the Edge",
+    description: "Scoped IDs, on‑device filters, and geo budgets for safe global releases under 100ms.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "platform-roi-scorecards-quickstart-2025",
+    title: "Platform ROI Scorecards: A Practical Quickstart",
+    description: "Link platform telemetry to adoption and revenue with scorecards engineers actually use.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
   }
 ];

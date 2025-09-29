@@ -81,6 +81,38 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+    id: "agent-evals-scorecards-2026",
+    slug: "agent-evals-scorecards-2026",
+    title: "Agent Evals 2026: Scorecards That Predict Outcomes",
+    description: "Online evals wired to KPIs—scorecards that correlate with revenue, CSAT, and retention.",
+    excerpt: "A practical playbook for evals that protect velocity and predict business outcomes.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "GenAI",
+    tags: ["Evals", "Scorecards", "KPIs"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/agent-evals-scorecards-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-preserving-agents-2026",
+    slug: "privacy-preserving-agents-2026",
+    title: "Privacy‑Preserving Agents: Scoped IDs, Redaction, and On‑Device Caches",
+    description: "Build assistants that keep insights high and PII risk low with scoped identifiers and local caches.",
+    excerpt: "Implement privacy by design for agent workflows without losing observability.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Security",
+    tags: ["Privacy", "Agents", "Security"],
+    featured: false,
+    readTime: "7 min read",
+    image: "/images/privacy-preserving-agents-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "platform-kpis-2026",
     slug: "platform-kpis-2026",
     title: "Platform KPIs 2026: Adoption, Golden Paths, and SLOs",
@@ -913,6 +945,55 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/secure-tools-marketplace.jpg",
     newBadge: true,
     trending: false
+  }
+  ,
+  {
+    id: "ai-autonomous-incident-runbooks-2025",
+    slug: "ai-autonomous-incident-runbooks-2025",
+    title: "AI Autonomous Incident Runbooks: Budgeted Actions and Instant Rollback",
+    description: "Design incident playbooks with explicit budgets, approvals, and safe automated rollback.",
+    excerpt: "Close the loop from detection to safe action using budgets, approvals, and telemetry.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Operations",
+    tags: ["Runbooks", "Automation", "Risk Budgets"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-autonomous-incident-runbooks-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-first-feature-flags-2025",
+    slug: "privacy-first-feature-flags-2025",
+    title: "Privacy‑First Feature Flags: Zero‑Regret Rollouts at the Edge",
+    description: "Scoped IDs, on‑device filters, and geo budgets for safe global releases under 100ms.",
+    excerpt: "Blueprint for privacy‑preserving progressive delivery using edge compute and KV.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Architecture",
+    tags: ["Feature Flags", "Edge", "Privacy"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/privacy-first-feature-flags-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "platform-roi-scorecards-quickstart-2025",
+    slug: "platform-roi-scorecards-quickstart-2025",
+    title: "Platform ROI Scorecards: A Practical Quickstart",
+    description: "Link platform telemetry to adoption and revenue with scorecards engineers actually use.",
+    excerpt: "Adoption, golden‑path TTFX, and SLOs as leading indicators of ROI.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Strategy",
+    tags: ["Scorecards", "Platform", "ROI"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/platform-roi-scorecards-quickstart-2025.jpg",
+    newBadge: true,
+    trending: true
   }
 ];
 

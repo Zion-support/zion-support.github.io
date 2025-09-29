@@ -171,10 +171,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: Incident Playbooks + Privacy‑Preserving Analytics"
-          description="Budgeted actions, approvals, and DP‑backed telemetry you can ship today."
+          title="🚀 Fresh: Autonomous Runbooks + Privacy‑First Flags"
+          description="Budgeted actions, approvals, and zero‑regret rollouts you can ship today."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-incident-response-playbooks-2025"
+          ctaLink="/blog/ai-autonomous-incident-runbooks-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -815,7 +815,7 @@ const Home = () => {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
-              <p className="text-white/90">New: Platform Engineering Scorecards 2026, AI Cybersecurity Automation, and Edge AI Blueprint 2026.</p>
+                  <p className="text-white/90">New: Autonomous Incident Runbooks, Privacy‑First Feature Flags, Platform ROI Scorecards Quickstart.</p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
                   Read the latest
@@ -826,16 +826,16 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">Platform Engineering</div>
-                  <div className="font-semibold text-white">Platform Scorecards 2026</div>
+                  <div className="text-sm text-purple-200 mb-1">AI Operations</div>
+                  <div className="font-semibold text-white">Autonomous Incident Runbooks</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Security</div>
-                  <div className="font-semibold text-white">AI Cybersecurity Automation</div>
+                  <div className="text-sm text-rose-200 mb-1">Architecture</div>
+                  <div className="font-semibold text-white">Privacy‑First Feature Flags</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Edge Computing</div>
-                  <div className="font-semibold text-white">Edge AI Blueprint 2026</div>
+                  <div className="text-sm text-blue-200 mb-1">AI Strategy</div>
+                  <div className="font-semibold text-white">Platform ROI Scorecards</div>
                 </div>
               </div>
             </div>
