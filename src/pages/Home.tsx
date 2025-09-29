@@ -22,6 +22,8 @@ import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
+import ROICalculator from "../components/ROICalculator";
+import ServiceShowcase from "../components/ServiceShowcase";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
 
@@ -175,6 +177,42 @@ const Home = () => {
               </div>
             </div>
 
+            {/* New Content Promo Banner */}
+            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-8 animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <span className="inline-flex h-2 w-2 rounded-full bg-purple-400 animate-pulse"></span>
+                <span className="text-lg font-bold text-purple-400">FRESH CONTENT ALERT</span>
+                <span className="inline-flex h-2 w-2 rounded-full bg-purple-400 animate-pulse"></span>
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                📚 25+ New AI Articles & ROI Case Studies Published This Month
+              </p>
+              <p className="text-zion-slate-light text-sm mb-3">
+                Exclusive insights on AI automation, micro SAAS trends, and $50B market opportunities
+              </p>
+              <div className="flex flex-wrap justify-center gap-2 text-xs">
+                <span className="bg-purple-500/30 px-2 py-1 rounded">AI ROI Stories</span>
+                <span className="bg-purple-500/30 px-2 py-1 rounded">Market Analysis</span>
+                <span className="bg-purple-500/30 px-2 py-1 rounded">Implementation Guides</span>
+                <span className="bg-purple-500/30 px-2 py-1 rounded">Success Stories</span>
+              </div>
+            </div>
+
+            {/* ROI Success Banner */}
+            <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-400/30 rounded-xl p-6 mb-8 animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <TrendingUp className="w-6 h-6 text-emerald-400 animate-bounce" />
+                <span className="text-lg font-bold text-emerald-400">PROVEN RESULTS</span>
+                <TrendingUp className="w-6 h-6 text-emerald-400 animate-bounce" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                💰 Our Clients Save $2.3M+ Annually with AI Automation
+              </p>
+              <p className="text-zion-slate-light text-sm">
+                500+ companies achieving 200-500% ROI • Average payback in 90 days • 99.9% uptime guarantee
+              </p>
+            </div>
+
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">
               <div className="text-center group hover:scale-105 transition-all duration-300">
@@ -232,18 +270,18 @@ const Home = () => {
           className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
         />
 
-        {/* New Services Showcase */}
+        {/* Service Showcase */}
+        <ServiceShowcase />
+
+        {/* ROI Calculator Section */}
         <section className="container mx-auto px-6 py-20 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-400 text-sm font-medium mb-6 animate-pulse">
-              🔥 HOT NEW SERVICES - 2025
-            </div>
             <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up">
-              Revolutionary AI-Powered Solutions
+              Calculate Your AI Automation ROI
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Transform your business with our cutting-edge AI micro SAAS platform. 
-              From workflow automation to predictive analytics - we've got you covered.
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              See exactly how much you could save with AI workflow automation. 
+              Most companies see ROI within 3 months.
             </p>
           </div>
 
@@ -332,6 +370,8 @@ const Home = () => {
               </Link>
             </div>
           </div>
+
+          <ROICalculator className="max-w-6xl mx-auto" />
         </section>
 
         {/* Features Section */}

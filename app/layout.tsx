@@ -49,16 +49,34 @@ function Header() {
         </Link>
         <div className="hidden md:flex gap-6">
           <Link 
-            href="/about" 
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
-          >
-            About
-          </Link>
-          <Link 
             href="/services" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
           >
             Services
+          </Link>
+          <Link 
+            href="/pricing" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            Pricing
+          </Link>
+          <Link 
+            href="/case-studies" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            Case Studies
+          </Link>
+          <Link 
+            href="/testimonials" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            Testimonials
+          </Link>
+          <Link 
+            href="/blog" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            Blog
           </Link>
           <Link 
             href="/contact" 
@@ -97,39 +115,39 @@ function Footer() {
                 All Services
               </Link>
               <Link 
-                href="/services/micro-saas" 
+                href="/pricing" 
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
-                Micro SaaS
+                Pricing Plans
               </Link>
               <Link 
-                href="/services/ai-services" 
+                href="/case-studies" 
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
-                AI Services
+                Case Studies
               </Link>
               <Link 
-                href="/services/it-services" 
+                href="/testimonials" 
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
-                IT Services
+                Testimonials
               </Link>
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Company</h3>
+            <h3 className="font-semibold text-gray-900 mb-3">Resources</h3>
             <div className="space-y-2">
               <Link 
-                href="/" 
+                href="/blog" 
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
-                Home
+                Blog & Insights
               </Link>
               <Link 
                 href="/contact" 
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
-                Contact
+                Contact Us
               </Link>
               <a 
                 href="https://ziontechgroup.com" 

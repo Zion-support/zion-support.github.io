@@ -35,37 +35,8 @@ def resolve_conflicts_in_file(filepath):
         with open(filepath, 'r') as f:
             content = f.read()
         
-        if '<<<<<<< HEAD' not in content:
-            return True, "No conflicts found"
-        
-        # Create backup
-        backup_path = f"{filepath}.backup.{int(datetime.now().timestamp())}"
-        with open(backup_path, 'w') as f:
-            f.write(content)
-        
-        # Strategy: Keep HEAD version (remove conflict markers)
-        if 'src/App.tsx' in filepath:
-            print("📱 App.tsx detected, keeping comprehensive version...")
-        elif 'package.json' in filepath or 'package-lock.json' in filepath:
-            print("📦 Package file detected, keeping main version...")
-        elif any(config in filepath for config in ['netlify.toml', 'tsconfig.json', 'tailwind.config.js']):
-            print("⚙️ Config file detected, keeping main version...")
-        else:
-            print("📝 Regular file, keeping HEAD version...")
-        
-        # Remove conflict markers
-        lines = content.split('\n')
-        resolved_lines = []
-        skip_until = None
-        
-        for line in lines:
-            if line.strip() == '<<<<<<< HEAD':
-                skip_until = '======='
                 continue
-            elif line.strip() == '=======':
-                skip_until = '>>>>>>>'
                 continue
-            elif line.strip().startswith('>>>>>>>'):
                 skip_until = None
                 continue
             elif skip_until is None:

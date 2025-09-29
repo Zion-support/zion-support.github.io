@@ -5,7 +5,6 @@ set -e
 
 echo "🚀 Starting comprehensive merge of all open PRs..."
 echo "⏰ Started at: $(date)"
-echo "=========================================="
 
 # Create a backup branch
 BACKUP_BRANCH="backup-main-$(date +%Y%m%d-%H%M%S)"
@@ -28,32 +27,14 @@ resolve_conflicts() {
     echo "🔧 Resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "⚠️  Found conflicts in $file, resolving..."
-        
-        # Create a backup of the conflicted file
-        cp "$file" "${file}.backup.$(date +%s)"
-        
-        # Strategy: Keep both versions where possible, prefer main branch for critical files
-        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
-            echo "📦 Critical file detected, keeping main version and merging dependencies..."
-            # For package files, we'll need special handling
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
         elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
             echo "⚙️  Config file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
         elif [[ "$file" == "README.md" || "$file" == "LICENSE" ]]; then
             echo "📚 Documentation file, keeping both versions where possible..."
             # Remove conflict markers but try to preserve content
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
         else
             echo "📝 Regular file, attempting to merge both versions..."
             # Remove conflict markers and try to keep both versions
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
         fi
         
         echo "✅ Resolved conflicts in $file"
@@ -142,9 +123,7 @@ awk '
 }' | while IFS='|' read -r pr_number branch_name; do
     if [ -n "$pr_number" ] && [ -n "$branch_name" ]; then
         echo ""
-        echo "=========================================="
         echo "🔄 Processing PR #$pr_number from branch: $branch_name"
-        echo "=========================================="
         
         if merge_branch "$branch_name"; then
             echo "✅ PR #$pr_number processed successfully"
@@ -152,7 +131,6 @@ awk '
             echo "❌ PR #$pr_number processing failed"
         fi
         
-        echo "=========================================="
         echo ""
         
         # Push changes every 10 successful merges to avoid losing work
@@ -172,9 +150,7 @@ echo "📋 Processing additional branches from remote..."
 # Get all remote branches that start with cursor/ and are not main
 for branch in $(git branch -r | grep "origin/cursor/" | grep -v "origin/main" | sed 's/origin\///'); do
     echo ""
-    echo "=========================================="
     echo "🔄 Processing additional branch: $branch"
-    echo "=========================================="
     
     if merge_branch "$branch"; then
         echo "✅ Branch $branch processed successfully"
@@ -182,7 +158,6 @@ for branch in $(git branch -r | grep "origin/cursor/" | grep -v "origin/main" | 
         echo "❌ Branch $branch processing failed"
     fi
     
-    echo "=========================================="
     echo ""
     
     # Push changes every 10 successful merges
