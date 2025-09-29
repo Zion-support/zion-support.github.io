@@ -28,6 +28,26 @@ const TrendingContentBanner: React.FC = () => {
       badge: "HOT"
     },
     {
+      title: "AI Safety Budgets 2026",
+      description: "Budgeted actions, approvals, and rollbacks that keep AI features safe.",
+      views: "13.2K",
+      readTime: "7 min",
+      category: "AI Governance",
+      icon: Shield,
+      link: "/blog/ai-safety-budgets-2026",
+      badge: "NEW"
+    },
+    {
+      title: "Edge Personalization 2026",
+      description: "Private, sub‑100ms personalization with signed configs and caches.",
+      views: "9.7K",
+      readTime: "8 min",
+      category: "Edge Computing",
+      icon: Zap,
+      link: "/blog/edge-personalization-2026",
+      badge: "HOT"
+    },
+    {
       title: "Zero‑Trust for GenAI 2026",
       description: "Prompt firewalls, egress, signed outputs for safe GenAI.",
       views: "11.8K",
