@@ -13,11 +13,49 @@ import InteractiveContentRecommendation from '../components/InteractiveContentRe
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
+import LatestAIInnovations2026Banner from '../components/LatestAIInnovations2026Banner';
+import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
 
 export const metadata = {
-  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
-  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation',
+  title: 'Zion Tech Group — Revolutionary AI Solutions & Enterprise IT Services 2026',
+  description: 'Transform your business with cutting-edge AI innovations, neural interfaces, quantum computing, and autonomous systems. 300% ROI, 99.9% uptime, $50M+ success stories.',
+  keywords: 'AI services 2026, neural interfaces, quantum computing, autonomous AI, enterprise automation, micro SaaS, IT services, cloud migration, DevOps, SRE, AI innovation, space technology, synthetic data, brain-computer interface',
+  openGraph: {
+    title: 'Zion Tech Group — Revolutionary AI Solutions & Enterprise IT Services 2026',
+    description: 'Transform your business with cutting-edge AI innovations, neural interfaces, quantum computing, and autonomous systems. 300% ROI, 99.9% uptime, $50M+ success stories.',
+    url: 'https://ziontechgroup.com',
+    siteName: 'Zion Tech Group',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: '/og-image-ai-2026.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group - Revolutionary AI Solutions 2026',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group — Revolutionary AI Solutions & Enterprise IT Services 2026',
+    description: 'Transform your business with cutting-edge AI innovations, neural interfaces, quantum computing, and autonomous systems. 300% ROI, 99.9% uptime, $50M+ success stories.',
+    images: ['/og-image-ai-2026.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://ziontechgroup.com',
+  },
 };
 
 export default function HomePage() {
@@ -49,8 +87,14 @@ export default function HomePage() {
       {/* AI Innovation 2026 Promotional Banner */}
       <AIInnovation2026PromotionalBanner />
       
+      {/* Latest AI Innovations 2026 Banner */}
+      <LatestAIInnovations2026Banner />
+      
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
+      
+      {/* Revolutionary Content Showcase 2026 */}
+      <RevolutionaryContentShowcase2026 />
       
       {/* Latest 2026 Content Banner */}
       <LatestContent2026Banner />
