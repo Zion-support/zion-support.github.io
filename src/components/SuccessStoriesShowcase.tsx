@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, TrendingUp, Users, Target, Award, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { featuredCaseStudies } from '../content/case-studies';
+import { caseStudies } from '../content/case-studies';
 
 const SuccessStoriesShowcase: React.FC = () => {
   return (
@@ -53,7 +53,7 @@ const SuccessStoriesShowcase: React.FC = () => {
 
         {/* Case Studies Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {featuredCaseStudies.map((study) => (
+          {caseStudies.map((study) => (
             <div
               key={study.id}
               className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 hover:scale-105"
@@ -83,11 +83,11 @@ const SuccessStoriesShowcase: React.FC = () => {
               {/* Results */}
               <div className="p-6">
                 <h4 className="font-semibold text-gray-900 mb-4">Key Results</h4>
+                {/* Map first four result highlights as pseudo-metrics */}
                 <div className="grid grid-cols-2 gap-4 mb-4">
-                  {study.metrics.slice(0, 4).map((metric, index) => (
+                  {study.results.slice(0, 4).map((result, index) => (
                     <div key={index} className="text-center p-3 bg-gray-50 rounded-lg">
-                      <div className="text-xl font-bold text-blue-600">{metric.value}</div>
-                      <div className="text-xs text-gray-600">{metric.label}</div>
+                      <div className="text-sm font-semibold text-blue-700">{result}</div>
                     </div>
                   ))}
                 </div>
