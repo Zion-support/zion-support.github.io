@@ -24,7 +24,7 @@ export default function Services(): React.JSX.Element {
     {
       title: "AI Solutions",
       description:
-        "Custom artificial intelligence solutions to automate processes and gain insights from your data.",
+        "Transform your business with cutting-edge artificial intelligence solutions that automate processes, predict outcomes, and unlock hidden insights from your data.",
       icon: Zap,
       features: [
         "Machine Learning Models",
@@ -35,11 +35,13 @@ export default function Services(): React.JSX.Element {
       color: "from-blue-500 to-purple-600",
       bgColor: "bg-blue-50",
       textColor: "text-blue-600",
+      successStory: "Helped a Fortune 500 retailer increase sales by 35% through AI-powered demand forecasting and personalized recommendations.",
+      caseStudy: "Read our case study on how we implemented AI-driven inventory management for a major e-commerce platform.",
     },
     {
       title: "Cloud Infrastructure",
       description:
-        "Scalable and secure cloud infrastructure solutions for modern businesses.",
+        "Build resilient, scalable cloud infrastructure that grows with your business. From migration to optimization, we ensure maximum performance and security.",
       icon: Cloud,
       features: [
         "AWS/Azure/GCP Migration",
@@ -50,11 +52,13 @@ export default function Services(): React.JSX.Element {
       color: "from-cyan-500 to-blue-600",
       bgColor: "bg-cyan-50",
       textColor: "text-cyan-600",
+      successStory: "Reduced infrastructure costs by 45% while improving performance by 60% for a SaaS startup through strategic cloud optimization.",
+      caseStudy: "Learn how we migrated a legacy system to AWS, achieving 99.9% uptime and 50% cost savings.",
     },
     {
       title: "Data Analytics",
       description:
-        "Transform your data into actionable insights with our advanced analytics solutions.",
+        "Turn your data into a competitive advantage with advanced analytics, real-time dashboards, and AI-powered insights that drive strategic decisions.",
       icon: BarChart3,
       features: [
         "Business Intelligence",
@@ -65,6 +69,8 @@ export default function Services(): React.JSX.Element {
       color: "from-green-500 to-emerald-600",
       bgColor: "bg-green-50",
       textColor: "text-green-600",
+      successStory: "Enabled a healthcare provider to reduce patient wait times by 40% through predictive analytics and resource optimization.",
+      caseStudy: "Discover how we built a real-time analytics platform that helped a logistics company reduce delivery times by 25%.",
     },
     {
       title: "Cybersecurity",
@@ -221,6 +227,35 @@ export default function Services(): React.JSX.Element {
                 </button>
               </div>
             ))}
+          </div>
+
+          {/* Success Stories Section */}
+          <div className="mt-20">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Success Stories
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+                Real results from real clients who trusted us with their digital transformation
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              {services.slice(0, 3).map((service, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${service.color} mb-6`}>
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
+                  <p className="text-zion-slate-light mb-4 text-sm leading-relaxed">
+                    {service.successStory}
+                  </p>
+                  <button className="text-zion-cyan hover:text-white text-sm font-semibold transition-colors">
+                    {service.caseStudy}
+                  </button>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* CTA Section */}

@@ -107,5 +107,86 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-09-29",
     readMinutes: 8,
   },
+  {
+    id: "ai-transformation-roadmap",
+    title: "AI Transformation Roadmap: From Pilot to Production",
+    summary:
+      "Strategic framework for scaling AI initiatives across enterprise organizations with measurable ROI.",
+    category: "AI Strategy",
+    date: "2025-01-22",
+    readMinutes: 10,
+  },
+  {
+    id: "cloud-native-security",
+    title: "Cloud-Native Security: Protecting Modern Applications",
+    summary:
+      "Essential security patterns for containerized applications, serverless functions, and microservices architectures.",
+    category: "Cloud Security",
+    date: "2025-01-20",
+    readMinutes: 7,
+  },
+  {
+    id: "data-governance-2025",
+    title: "Data Governance in the Age of AI: 2025 Framework",
+    summary:
+      "Comprehensive approach to data quality, privacy, and compliance for AI-powered organizations.",
+    category: "Data Governance",
+    date: "2025-01-18",
+    readMinutes: 9,
+  },
+  {
+    id: "automation-roi-metrics",
+    title: "Measuring Automation ROI: Beyond Cost Savings",
+    summary:
+      "Advanced metrics for quantifying the business impact of automation initiatives across operations.",
+    category: "Business Intelligence",
+    date: "2025-01-15",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-computing-strategy",
+    title: "Edge Computing Strategy: Bringing AI Closer to Data",
+    summary:
+      "Strategic considerations for deploying AI workloads at the edge for improved performance and privacy.",
+    category: "Edge Computing",
+    date: "2025-01-12",
+    readMinutes: 8,
+  },
+  {
+    id: "digital-transformation-playbook",
+    title: "Digital Transformation Playbook for Mid-Market Companies",
+    summary:
+      "Proven strategies for accelerating digital transformation initiatives in resource-constrained environments.",
+    category: "Digital Strategy",
+    date: "2025-01-10",
+    readMinutes: 11,
+  },
+  {
+    id: "api-security-best-practices",
+    title: "API Security Best Practices: Protecting Your Digital Assets",
+    summary:
+      "Comprehensive guide to securing APIs in modern applications with authentication, authorization, and monitoring.",
+    category: "API Security",
+    date: "2025-01-08",
+    readMinutes: 7,
+  },
+  {
+    id: "machine-learning-ops",
+    title: "MLOps in Production: Scaling Machine Learning Systems",
+    summary:
+      "Operational excellence for machine learning systems: deployment, monitoring, and continuous improvement.",
+    category: "MLOps",
+    date: "2025-01-05",
+    readMinutes: 9,
+  },
+  {
+    id: "blockchain-business-applications",
+    title: "Blockchain Beyond Crypto: Business Applications in 2025",
+    summary:
+      "Real-world blockchain use cases in supply chain, identity management, and smart contracts for enterprises.",
+    category: "Blockchain",
+    date: "2025-01-03",
+    readMinutes: 8,
+  },
 ];
 
