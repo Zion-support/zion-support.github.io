@@ -9,6 +9,24 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "journey-agents-qa-gates",
+    title: "Journey Agents: QA Gates That Prevent Bad Actions",
+    summary:
+      "Define pre‑checks, post‑checks, and rollbacks so multi‑step agents remain safe and effective.",
+    category: "AI Strategy",
+    date: "2025-09-30",
+    readMinutes: 4,
+  },
+  {
+    id: "edge-model-distillation",
+    title: "Edge Model Distillation: Tiny Models, Big Impact",
+    summary:
+      "Compress foundation models into fast, private on‑device predictors with measurable utility.",
+    category: "Edge Computing",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
       id: "serverless-warm-pools-playbook",
       title: "Serverless Warm Pools: Cut Cold Starts, Not Corners",
       summary:

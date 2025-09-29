@@ -104,11 +104,11 @@ const Home = () => {
 
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
-          variant="info"
-          title="🚀 Fresh: AI Governance at Scale + Edge Observability Blueprint"
-          description="Policies that enable speed, and sub‑100ms reliability with real‑world telemetry."
+          variant="success"
+          title="🚀 New: Customer Journey Agents + Edge Personalization Under 100ms"
+          description="Plan→Act→Verify agents that move KPIs, plus CDN + on‑device ML for private, real‑time UX."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-governance-at-scale-2025"
+          ctaLink="/blog/customer-journey-agents-qa"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -722,16 +722,16 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
-                  <div className="font-semibold text-white">MLOps Reliability: Shipping GenAI Changes Safely</div>
+                  <div className="text-sm text-indigo-200 mb-1">AI Strategy</div>
+                  <div className="font-semibold text-white">Customer Journey Agents: Planning, Safety, QA Gates</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
-                  <div className="font-semibold text-white">Reliable Real‑Time Data Pipelines in 2025</div>
+                  <div className="text-sm text-green-200 mb-1">Edge Computing</div>
+                  <div className="font-semibold text-white">Edge Personalization: CDN + On‑Device ML</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Product Analytics</div>
-                  <div className="font-semibold text-white">North‑Star Metrics: A Field‑Tested Framework</div>
+                  <div className="text-sm text-blue-200 mb-1">Architecture</div>
+                  <div className="font-semibold text-white">Zero‑Downtime Cutover Checklist</div>
                 </div>
               </div>
             </div>

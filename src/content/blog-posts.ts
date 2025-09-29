@@ -14,6 +14,60 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-customer-journey-agents-2025",
+    title: "Customer Journey Agents: Orchestrating Multi‑Step Outcomes with Confidence",
+    description: "Design agentic workflows that plan, verify, and complete tasks across channels with auditability.",
+    content: `
+# Customer Journey Agents: Orchestrating Multi‑Step Outcomes with Confidence
+
+Multi‑step agents can boost conversions and reduce churn—but only when they're grounded in data and instrumented for quality.
+
+## Patterns That Work
+- Plan → Act → Verify loops with explicit success criteria
+- Tool contracts with idempotent operations and compensations
+- Human‑in‑the‑loop for high‑risk branches
+
+## Governance & Evals
+- Policy tests for PII, tone, compliance
+- Offline scenarios + online canaries tied to business KPIs
+
+Ship agents that actually move metrics—not just demos.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Strategy",
+    tags: ["Agents", "Orchestration", "CX", "Evals"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/customer-journey-agents.jpg"
+  },
+  {
+    slug: "edge-cdn-ml-personalization-2025",
+    title: "Edge CDN + On‑Device ML: Personalization Under 100ms",
+    description: "Combine edge KV, signed configs, and tiny models for private, real‑time personalization.",
+    content: `
+# Edge CDN + On‑Device ML: Personalization Under 100ms
+
+Deliver relevant experiences without server hops by pushing lightweight models and features to the edge and device.
+
+## Building Blocks
+- Edge KV for features and eligibility
+- Signed payloads and validation circuits
+- Distilled models (ONNX/TF Lite) running on device
+
+## Reliability
+- Versioning, background warmups, and circuit breakers
+- Observability with client↔edge traces
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Edge Computing",
+    tags: ["Edge", "Personalization", "CDN", "On‑Device ML"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-personalization.jpg"
+  },
+  {
     slug: "ai-sales-copilot-2025",
     title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
     description: "How to wire CRMs, build prompt libraries, and add evals that boost win‑rates without risk.",

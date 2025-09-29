@@ -10,6 +10,26 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "customer-journey-agents-qa",
+    title: "Customer Journey Agents: Planning, Safety, and QA Gates",
+    description:
+      "Design multi‑step agents with plan→act→verify loops, policy tests, and auditable outcomes that move KPIs.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "edge-personalization-under-100ms",
+    title: "Edge Personalization Under 100ms: CDN + On‑Device ML",
+    description:
+      "Signed configs, edge KV, and tiny models for private, real‑time personalization that scales globally.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
     slug: "ai-sales-copilot-2025",
     title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
     description:
