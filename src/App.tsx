@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AppRouter } from './router';
 
 // import { resourcePreloader } from './utils/resourcePreloader';
@@ -8,9 +9,16 @@ import { AppRouter } from './router';
 // import { structuredDataManager } from './seo/structuredDataManager';
 // import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
 // import { screenReaderSupport } from './accessibility/screenReaderSupport';
+import AIPerformanceDashboard from './components/AdvancedAnalytics';
+import { default as AdvancedMonitoringDashboard, default as ComprehensiveMonitoringDashboard, default as ComprehensivePerformanceDashboard, default as EnhancedSystemDashboard, default as PerformanceDashboard, default as RealTimePerformanceMonitor, default as SystemHealthDashboard, default as SystemStatusIndicator } from './components/AdvancedPerformanceMonitor';
+import { default as EnhancedErrorBoundary, default as ErrorRecoveryDashboard } from './components/EnhancedErrorBoundary';
+import { default as CommandPalette, default as EnhancedCommandPalette, default as KeyboardShortcutsHelp, default as KeyboardShortcutsManager, default as WebsiteEnhancements } from './components/EnhancedUserExperience';
+import { default as EnhancedNotificationSystem, default as NotificationSystem } from './components/NotificationSystem';
+import { default as PerformanceMonitor, default as PerformanceWidget } from './components/PerformanceMonitor';
+import { default as PerformanceOptimizationPanel, default as PerformanceOptimizer } from './components/PerformanceOptimizer';
+import PerformanceTracker from './components/PerformanceTracker';
+import SEOOptimizer from './components/SEOOptimizer';
 import './index.css';
-import { performanceMonitor } from './utils/performanceMonitor';
-import { securityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 
 export default function App(): React.JSX.Element {
@@ -459,13 +467,13 @@ export default function App(): React.JSX.Element {
   }, [handleScroll, handleClick, trackEngagement]);
 
   if (isLoading) {
-    return <ModernLoadingSpinner progress={loadingProgress} />;
+    return <div />;
   }
 
   return (
     <EnhancedErrorBoundary>
       <SEOOptimizer seoData={seoDataForOptimizer} />
-      <AdvancedAnalytics 
+      <AIPerformanceDashboard 
         enableHeatmaps={true}
         enableUserJourney={true}
         enableConversionTracking={true}
