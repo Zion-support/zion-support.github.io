@@ -9,6 +9,42 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "genai-eval-playbook-2025",
+    title: "A Practical Evaluation Playbook for GenAI Apps",
+    summary:
+      "How to stand up robust offline and online evals, define quality bars, and ship with confidence.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 8,
+  },
+  {
+    id: "platform-blueprints-ref-arch",
+    title: "Reference Architectures for Modern Data & AI Platforms",
+    summary:
+      "Battle-tested blueprints for ingestion, governance, semantic layers, and real-time activation.",
+    category: "Architecture",
+    date: "2025-09-28",
+    readMinutes: 10,
+  },
+  {
+    id: "security-sbom-supply-chain",
+    title: "Shipping a Secure SBOM and Hardening Your Supply Chain",
+    summary:
+      "Step-by-step guidance to produce SBOMs, lock dependencies, and detect tampering early.",
+    category: "Security",
+    date: "2025-09-27",
+    readMinutes: 7,
+  },
+  {
+    id: "cloud-cost-qa-automation",
+    title: "QA Gates That Keep Cloud Costs From Creeping",
+    summary:
+      "Cost-aware tests, CI policies, and dashboards that prevent regressions before they ship.",
+    category: "Cloud FinOps",
+    date: "2025-09-27",
+    readMinutes: 6,
+  },
+  {
     id: "ai-platform-roadmap-2025",
     title: "Our AI Platform Roadmap for 2025",
     summary:
