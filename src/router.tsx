@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
+import Post from './pages/Post';
 import Resources from './pages/Resources';
 import Post from './pages/Post';
 import AIAutonomousOperations from './pages/services/AIAutonomousOperations';
@@ -19,6 +20,7 @@ export const AppRouter: React.FC = () => {
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:slug" element={<Post />} />
       <Route path="/resources" element={<Resources />} />
+      <Route path="/blog/:slug" element={<Post />} />
       <Route path="/blog/ai-incident-response-playbooks-2025" element={<AIIncidentResponsePlaybooks2025 />} />
       <Route path="/services/ai-autonomous-operations" element={<AIAutonomousOperations />} />
       <Route path="/services/AI-Platform-Architecture" element={<AIPlatformArchitecture />} />

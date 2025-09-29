@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "realtime-guardrails-platform-2026",
+    title: "Real‑Time Guardrails Platform 2026: KPIs, Canaries, Budgets",
+    description: "Wire policy tests to KPIs with online canaries and budgeted actions that keep velocity high.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-feature-flags-roi-2026",
+    title: "Edge Feature Flags ROI: Sub‑100ms Global Rollouts That Pay Back",
+    description: "Consistent flags, geo budgets, and instant rollback that reduce risk and prove value fast.",
+    category: "Architecture",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "enterprise-rag-ops-v3-2026",
+    title: "Enterprise RAG Ops v3: Freshness Windows, Hybrid Search, Drift Gates",
+    description: "Production RAG with versioned corpora, TTL budgets, and eval‑driven routing under cost targets.",
+    category: "GenAI",
+    publishedAt: "2025-10-14",
+    featured: false,
+    readTime: "9 min read"
+  },
+  {
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
     description: "Continuous SBOMs for models, datasets, and prompts with attestations and CI policy checks.",

@@ -163,15 +163,17 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Governance Quickstart, Privacy‑First Agents, Inference Cost Playbook"
-          description="Ship fast with KPI‑linked scorecards, private assistants, and budgeted inference."
+          title="New: Real‑Time Guardrails, Edge Flags ROI, Enterprise RAG v3"
+          description="Policy tests wired to KPIs, sub‑100ms global rollouts, and RAG that stays fresh."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Governance Scorecards Quickstart 2026", category: "AI Strategy", link: "/blog/ai-governance-scorecards-quickstart-2026" },
-            { title: "Privacy‑First Agents 2026", category: "AI Security", link: "/blog/privacy-first-agents-2026" },
-            { title: "Serverless Inference Cost Playbook 2026", category: "GenAI", link: "/blog/serverless-inference-cost-playbook-2026" },
-            { title: "AI Platform Scorecards ROI 2026", category: "AI Strategy", link: "/blog/ai-platform-scorecards-roi-2026" }
+            { title: "Real‑Time Guardrails Platform 2026", category: "AI Strategy", link: "/blog/realtime-guardrails-platform-2026" },
+            { title: "Edge Feature Flags ROI", category: "Architecture", link: "/blog/edge-feature-flags-roi-2026" },
+            { title: "Enterprise RAG Ops v3", category: "GenAI", link: "/blog/enterprise-rag-ops-v3-2026" },
+            { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
+            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" },
+            { title: "Golden Paths ROI 2026", category: "Platform Engineering", link: "/blog/golden-paths-roi-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -202,10 +204,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: Autonomous Runbooks + Privacy‑First Flags"
-          description="Budgeted actions, approvals, and zero‑regret rollouts you can ship today."
+          title="🚀 Fresh: Real‑Time Guardrails + Edge Flags ROI"
+          description="KPI‑linked policy tests and sub‑100ms global rollouts you can ship today."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-autonomous-incident-runbooks-2025"
+          ctaLink="/blog/realtime-guardrails-platform-2026"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -634,11 +636,7 @@ const Home = () => {
                 <div key={insight.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs uppercase tracking-wider text-indigo-300">{insight.category}</span>
-<<<<<<< HEAD
-                    {'featured' in insight && (insight as any).featured && (
-=======
                     {("featured" in insight) && (insight as any).featured && (
->>>>>>> cursor/create-and-deploy-new-content-a3c6
                       <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>
