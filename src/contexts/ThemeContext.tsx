@@ -2,15 +2,15 @@ import React, { createContext, useContext, useMemo, useState } from "react";
 
 type Theme = "light" | "dark";
 
-type ThemeContextValue = {
+interface ThemeContextValue {
   theme: Theme;
   setTheme: (theme: Theme) => void;
   toggleTheme: () => void;
-};
+}
 
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
-export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("light");
 
   const value = useMemo<ThemeContextValue>(() => ({
@@ -24,7 +24,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       {children}
     </ThemeContext.Provider>
   );
-};
+}
 
 export function useTheme(): ThemeContextValue {
   const ctx = useContext(ThemeContext);

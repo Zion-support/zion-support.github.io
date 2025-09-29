@@ -4,6 +4,7 @@ import PerformanceOptimizer from './PerformanceOptimizer';
 import AccessibilityEnhancer from './AccessibilityEnhancer';
 import SEOEnhancer from './SEOEnhancer';
 import ContentShowcase from './ContentShowcase';
+import NewContentShowcase from '../src/components/NewContentShowcase';
 import { 
   NewBlogBanner, 
   AnalyticsPlatformBanner, 
@@ -18,11 +19,21 @@ import {
   RetailSuccessBanner,
   AIContentShowcaseBanner,
   AIRevolutionBanner,
-  AIGoToMarketBanner
+  AIGoToMarketBanner,
+  AIRoadmapsBanner,
+  AIFinOpsBanner
 } from './PromotionalBanner';
 import AITrends2025Banner from './AITrends2025Banner';
+import NewContentBanner from './NewContentBanner';
 import ServicesShowcase from './ServicesShowcase';
 import CustomerTestimonials from './CustomerTestimonials';
+import { 
+  AIBusinessTransformationBanner,
+  AICustomerExperienceBanner,
+  EnterpriseAITransformationBanner,
+  LatestAIInsightsBanner,
+  AIServicesShowcaseBanner
+} from './NewContentPromotionalBanners';
 
 interface EnhancedHomePageProps {
   showDebug?: boolean;
@@ -156,13 +167,19 @@ export default function EnhancedHomePage({
 
       <div className="animate-fade-in">
         {/* Promotional Banners */}
-        <AITrends2025Banner />
+        <NewContentShowcaseBanner />
+        <LatestAIInsightsBanner />
+        <AIBusinessTransformationBanner />
+        <AIWorkflowAutomationBanner />
+        <EnterpriseAISecurityBanner />
         <AIContentShowcaseBanner />
         <CustomerServiceAIBanner />
         <HealthcareAIBanner />
         <RetailSuccessBanner />
         <AIRevolutionBanner />
         <AIGoToMarketBanner />
+        <AIRoadmapsBanner />
+        <AIFinOpsBanner />
         <NewBlogBanner />
         <WorkflowAutomationBanner />
         <AIAnalyticsBanner />
@@ -298,11 +315,17 @@ export default function EnhancedHomePage({
         {/* Services Showcase */}
         <ServicesShowcase />
         
+        {/* AI Services Showcase Banner */}
+        <AIServicesShowcaseBanner />
+        
         {/* Customer Testimonials */}
         <CustomerTestimonials />
         
         {/* Dynamic Content Showcase */}
         <ContentShowcase />
+
+        {/* New Content Highlights */}
+        <NewContentShowcase variant="compact" className="max-w-6xl mx-auto px-4" />
         
         {/* Enhanced Newsletter Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-teal-600 text-white relative overflow-hidden">

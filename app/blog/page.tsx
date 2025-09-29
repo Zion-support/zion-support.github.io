@@ -26,18 +26,26 @@ export default function BlogPage() {
                 Featured Article
               </span>
               <h2 className="text-3xl font-bold mb-4">
-                The Future of AI in Business: 2025 Trends and Predictions
+                AI Autonomous Infrastructure 2025: Self-Healing Systems for Enterprise IT
               </h2>
               <p className="text-lg opacity-90 mb-6">
-                Explore the latest AI trends shaping business operations, from autonomous workflows 
-                to predictive analytics, and discover how companies are gaining competitive advantages.
+                Discover how autonomous AI infrastructure is revolutionizing enterprise IT with self-healing systems, 
+                predictive maintenance, and intelligent automation that reduces downtime by 90%.
               </p>
               <div className="flex items-center gap-4 text-sm">
-                <span>January 17, 2025</span>
+                <span>January 20, 2025</span>
                 <span>•</span>
-                <span>8 min read</span>
+                <span>15 min read</span>
                 <span>•</span>
-                <span>AI Trends</span>
+                <span>Autonomous AI</span>
+              </div>
+              <div className="mt-6">
+                <a 
+                  href="/blog/ai-autonomous-infrastructure-2025" 
+                  className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+                >
+                  Read Full Article →
+                </a>
               </div>
             </div>
           </div>
@@ -45,6 +53,42 @@ export default function BlogPage() {
 
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <BlogPost
+            title="AI Roadmaps 2026: What to Build Next and Why"
+            excerpt="A pragmatic roadmap for 2026 across CX, ops, and platforms. High-ROI bets with sequencing and metrics."
+            date="September 29, 2025"
+            category="Strategy"
+            readTime="10 min"
+            image="🗺️"
+            href="/blog/ai-roadmaps-2026"
+          />
+          <BlogPost
+            title="Reliable RAG 2025: Production Patterns for Grounded Answers"
+            excerpt="Reduce hallucinations and latency with hardened RAG patterns: contracts, caching, routing, and evals."
+            date="September 29, 2025"
+            category="AI Platforms"
+            readTime="9 min"
+            image="📚"
+            href="/blog/ai-reliable-rag-2025"
+          />
+          <BlogPost
+            title="AI Agent Safety Blueprint 2026: Guardrails for Reliable Autonomy"
+            excerpt="Blueprint for safe autonomous agents with policy gates, audits, and progressive autonomy."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="9 min"
+            image="🛡️"
+            href="/blog/ai-agent-safety-blueprint-2026"
+          />
+          <BlogPost
+            title="AI FinOps Scorecards 2025: Control LLM Spend Without Slowing Teams"
+            excerpt="Practical scorecards and controls to cut LLM costs 30–70% with team-friendly governance."
+            date="September 29, 2025"
+            category="FinOps"
+            readTime="8 min"
+            image="📉"
+            href="/blog/ai-finops-scorecards-2025"
+          />
           <BlogPost
             title="AI Go-To-Market 2025: Proven Plays for Fast Adoption"
             excerpt="Practical GTM playbook for AI products: positioning, enterprise readiness, and repeatable pipeline plays."

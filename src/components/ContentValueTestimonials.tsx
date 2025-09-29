@@ -1,8 +1,11 @@
-import React from "react";
+import React from 'react';
 
-const ContentValueTestimonials: React.FC = () => {
-  return <section aria-label="Testimonials" />;
-};
+export default function ContentValueTestimonials(): React.JSX.Element {
+<<<<<<< HEAD
+	return <section aria-label="Content Value Testimonials" />;
+=======
+  return <section />;
+>>>>>>> origin/main
+}
 
 export default ContentValueTestimonials;
-

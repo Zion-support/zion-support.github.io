@@ -5,9 +5,34 @@ export type InsightArticle = {
   category: string;
   date: string; // ISO date string
   readMinutes: number;
+  description?: string;
 };
 
 export const latestInsights: InsightArticle[] = [
+  {
+    id: "agent-safety-budgets-2026",
+    title: "Agent Safety Budgets 2026: Ship Fast Without Surprises",
+    summary: "Budget risky actions, add PR checks, and wire rollbacks for reliable agent releases.",
+    category: "GenAI",
+    date: "2025-10-11",
+    readMinutes: 7,
+  },
+  {
+    id: "privacy-first-telemetry-2026",
+    title: "Privacy‑First Telemetry: Signal‑Rich, PII‑Safe",
+    summary: "Scoped IDs, field‑level filters, and retention policies that keep insights high and risk low.",
+    category: "Observability",
+    date: "2025-10-11",
+    readMinutes: 6,
+  },
+  {
+    id: "cost-aware-inference-routing-2026",
+    title: "Cost‑Aware Inference Routing: Quality Tiers Under Budget",
+    summary: "Dynamically route prompts across model tiers based on budgets, SLAs, and eval signals.",
+    category: "Architecture",
+    date: "2025-10-11",
+    readMinutes: 8,
+  },
   {
     id: "ai-risk-register-checklist",
     title: "AI Risk Register Checklist",

@@ -3,22 +3,6 @@
   "compilerOptions": {
     "noEmit": true
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "vite.config.ts",
-    "jest.config.cjs"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "build",
-    "coverage",
-    "out",
-    "__tests__",
-    "tests",
-    "src/pages/**",
-    "hooks/usePerformanceMonitor.ts"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "build", "coverage"]
 }
-

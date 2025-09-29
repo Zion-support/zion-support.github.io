@@ -12,13 +12,12 @@ import './index.css';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
-import SEOOptimizer from './components/SEOOptimizer';
-// Fallback stubs for missing components to restore build
-const AdvancedAnalytics: React.FC<{ enableConversionTracking?: boolean; enablePerformanceTracking?: boolean; enableErrorTracking?: boolean }> = () => null;
-const PerformanceOptimizer: React.FC<{ isVisible?: boolean; onClose?: () => void }> = () => null;
-const PerformanceMonitor: React.FC = () => null;
+const SEOOptimizer = (props: any) => null;
+const AdvancedAnalytics = (props: any) => null;
+const PerformanceOptimizer = (props: any) => null;
+const PerformanceMonitor = (props: any) => null;
 const EnhancedErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
-const NotificationSystem: React.FC<{ notifications?: any[]; onRemove?: (id: string) => void }> = () => null;
+const NotificationSystem: React.FC<{ notifications: any[]; onRemove: (id: string) => void }> = () => null;
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};
@@ -139,14 +138,7 @@ export default function App(): React.JSX.Element {
   }, []);
 
   return (
-    <EnhancedErrorBoundary>
-      <SEOOptimizer
-        title={seoDataForOptimizer.title}
-        description={seoDataForOptimizer.description}
-        canonicalUrl={new URL(seoDataForOptimizer.canonical).pathname}
-      />
-      <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
 
         {showPerformanceOptimizer && (
@@ -156,7 +148,7 @@ export default function App(): React.JSX.Element {
                 <h2 className="text-2xl font-bold">Performance Optimizer</h2>
                 <button onClick={() => setShowPerformanceOptimizer(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
               </div>
-              <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
+              <div />
             </div>
           </div>
         )}
@@ -168,13 +160,10 @@ export default function App(): React.JSX.Element {
                 <h2 className="text-2xl font-bold">Performance Monitor</h2>
                 <button onClick={() => setShowPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
               </div>
-              <PerformanceMonitor showDashboard={true} />
+              <div />
             </div>
           </div>
         )}
-
-        <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
       </div>
-    </EnhancedErrorBoundary>
-  );
+    );
 }

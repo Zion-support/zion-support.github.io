@@ -115,7 +115,7 @@ export const CaseStudyBanner = () => (
 
 export const NewBlogBanner = () => (
   <PromotionalBanner
-    message="🔥 Fresh Insights: AI Roadmaps 2026, Guardrails Blueprints, FinOps Scorecards"
+    message="🔥 Fresh Insights: AI Roadmaps 2026 and FinOps Scorecards 2025 now live"
     ctaText="Browse Latest Posts"
     ctaLink="/blog"
     backgroundColor="bg-gradient-to-r from-orange-600 to-pink-600"
@@ -175,6 +175,28 @@ export const AIAnalyticsBanner = () => (
     backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
     autoHide={true}
     hideAfter={18}
+  />
+);
+
+export const AIRoadmapsBanner = () => (
+  <PromotionalBanner
+    message="🗺️ New: AI Roadmaps 2026 — What to Build Next and Why"
+    ctaText="Read Roadmap"
+    ctaLink="/blog/ai-roadmaps-2026"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-teal-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AIFinOpsBanner = () => (
+  <PromotionalBanner
+    message="📉 New: AI FinOps Scorecards 2025 — Control LLM Spend"
+    ctaText="Read Scorecards"
+    ctaLink="/blog/ai-finops-scorecards-2025"
+    backgroundColor="bg-gradient-to-r from-amber-600 to-pink-600"
+    autoHide={true}
+    hideAfter={20}
   />
 );
 
@@ -265,13 +287,46 @@ export const AIRevolutionBanner = () => (
   />
 );
 
-export const AIGoToMarketBanner = () => (
+export const AutonomousAgentsBanner = () => (
   <PromotionalBanner
-    message="📣 New: AI Go-To-Market 2025 — Proven Plays for Fast Adoption"
-    ctaText="Read the Playbook"
-    ctaLink="/blog/ai-go-to-market-2025"
-    backgroundColor="bg-gradient-to-r from-emerald-600 to-teal-600"
+    message="🤖 New: AI Autonomous Agents 2025 - Complete Enterprise Implementation Guide with 300% ROI Strategies"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-autonomous-agents-2025"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
     autoHide={true}
     hideAfter={22}
+  />
+);
+
+export const AIGovernanceBanner = () => (
+  <PromotionalBanner
+    message="🛡️ Featured: AI Governance Framework 2025 - 70% Risk Reduction with Enterprise-Ready Implementation"
+    ctaText="Read Framework"
+    ctaLink="/blog/ai-governance-framework-2025"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    autoHide={true}
+    hideAfter={25}
+  />
+);
+
+export const FinTechSuccessBanner = () => (
+  <PromotionalBanner
+    message="🏦 Success Story: FinTech Achieved 70% Risk Reduction & $2.5M Savings with AI Governance"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/fintech-ai-risk-compliance-2025"
+    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const NewContentShowcaseBanner = () => (
+  <PromotionalBanner
+    message="📚 Fresh Content: AI Autonomous Agents, Governance Framework, FinTech Success Stories - Latest 2025 Insights"
+    ctaText="Browse All Content"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-teal-600 to-cyan-600"
+    autoHide={true}
+    hideAfter={18}
   />
 );
