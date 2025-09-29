@@ -38,6 +38,7 @@ import {
   AIAutonomousEnterpriseBanner,
   AINeuralInterfacesBanner
 } from '../components/PromotionalBanner';
+import NewContent2025Banner from '../components/NewContent2025Banner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -61,21 +62,18 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-            <span>🔥 LATEST 2026:</span>
-            <Link href="/blog/ai-2026-mega-trends" className="underline hover:text-yellow-200">AI Mega Trends</Link>
+            <span>🔥 LATEST 2025-2026:</span>
+            <Link href="/blog/ai-edge-computing-2025" className="underline hover:text-yellow-200">AI Edge Computing</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200">Enterprise Automation</Link>
+            <Link href="/blog/ai-cybersecurity-2025" className="underline hover:text-yellow-200">AI Cybersecurity</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/fintech-ai-risk-compliance-2025" className="underline hover:text-yellow-200">FinTech Case Study</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-2026-mega-trends" className="underline hover:text-yellow-200">AI Mega Trends</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-autonomous-enterprise-2026" className="underline hover:text-yellow-200">Autonomous Enterprise</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-neural-interfaces-2026" className="underline hover:text-yellow-200">Neural Interfaces</Link>
-            <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200">$25M Success Story</Link>
-            <Link href="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-autonomous-enterprise-transformation-2026" className="underline hover:text-yellow-200">$15M ROI Case Study</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</Link>
           </div>
           <Link
             href="/blog"
@@ -85,6 +83,7 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
       {/* Ultimate 2026 Content Banner */}
       <UltimateContent2026Banner />
       {/* Revolutionary 2026 Content Banner */}
@@ -98,6 +97,11 @@ export default function HomePage() {
       
       {/* Advanced AI Innovation 2026 Banner */}
       <AdvancedAIInnovation2026Banner />
+=======
+      
+      {/* New 2025 Content Banner */}
+      <NewContent2025Banner />
+>>>>>>> cursor/create-and-deploy-new-content-f377
       
       {/* Promotional Banners */}
       <AIAutonomousEnterpriseBanner />
@@ -408,11 +412,100 @@ export default function HomePage() {
 
           {/* Featured Recommendations */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+<<<<<<< HEAD
             <Link href="/blog/ai-autonomous-enterprise-2026" className="group">
+              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-green-200 hover:scale-105">
+=======
+            <Link href="/blog/ai-edge-computing-2025" className="group">
+              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
+>>>>>>> cursor/create-and-deploy-new-content-f377
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW 2025
+                  </span>
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    FEATURED
+                  </span>
+                </div>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm text-blue-600 font-medium">📝 Article</span>
+                  <span className="text-sm text-gray-500">Edge Computing</span>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Edge Computing 2025: Real-Time Intelligence at the Edge
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Achieve sub-50ms response times with AI processing at the edge. Perfect for autonomous vehicles and IoT devices.
+                </p>
+                <div className="flex gap-4 mb-4">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-blue-600">&lt;50ms</div>
+                    <div className="text-xs text-gray-500">Response Time</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-blue-600">99.9%</div>
+                    <div className="text-xs text-gray-500">Uptime</div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Clock className="w-4 h-4 mr-1" />
+                    12 min read
+                  </div>
+                  <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
+                    Read More →
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/blog/ai-cybersecurity-2025" className="group">
+              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-red-200 hover:scale-105">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW 2025
+                  </span>
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    FEATURED
+                  </span>
+                </div>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm text-red-600 font-medium">📝 Article</span>
+                  <span className="text-sm text-gray-500">Cybersecurity</span>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors">
+                  AI Cybersecurity 2025: Next-Gen Protection
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Revolutionary threat detection with 99.7% accuracy and autonomous incident response for enterprise security.
+                </p>
+                <div className="flex gap-4 mb-4">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-red-600">99.7%</div>
+                    <div className="text-xs text-gray-500">Accuracy</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-red-600">&lt;1s</div>
+                    <div className="text-xs text-gray-500">Response</div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Clock className="w-4 h-4 mr-1" />
+                    15 min read
+                  </div>
+                  <div className="flex items-center text-red-600 font-semibold text-sm group-hover:text-red-700 transition-colors">
+                    Read More →
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/case-studies/fintech-ai-risk-compliance-2025" className="group">
               <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-green-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    NEW 2026
+                    NEW 2025
                   </span>
                   <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                     BREAKTHROUGH
@@ -545,31 +638,31 @@ export default function HomePage() {
                   </span>
                 </div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm text-blue-600 font-medium">📊 Case Study</span>
-                  <span className="text-sm text-gray-500">Sustainability</span>
+                  <span className="text-sm text-green-600 font-medium">📊 Case Study</span>
+                  <span className="text-sm text-gray-500">FinTech</span>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Sustainability Transformation 2026: $10M ROI Case Study
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
+                  FinTech AI Risk Compliance: 70% Risk Reduction & $2.5M Savings
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  See how a Fortune 500 company achieved carbon neutrality and $10M ROI with comprehensive AI sustainability transformation.
+                  See how a leading fintech achieved 70% risk reduction with automated governance frameworks and AI-powered compliance.
                 </p>
                 <div className="flex gap-4 mb-4">
                   <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">$10M</div>
-                    <div className="text-xs text-gray-500">ROI</div>
+                    <div className="text-lg font-bold text-green-600">70%</div>
+                    <div className="text-xs text-gray-500">Risk Reduction</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">100%</div>
-                    <div className="text-xs text-gray-500">Carbon Neutral</div>
+                    <div className="text-lg font-bold text-green-600">$2.5M</div>
+                    <div className="text-xs text-gray-500">Savings</div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-gray-500">
                     <Clock className="w-4 h-4 mr-1" />
-                    15 min read
+                    8 min read
                   </div>
-                  <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
+                  <div className="flex items-center text-green-600 font-semibold text-sm group-hover:text-green-700 transition-colors">
                     Read More →
                   </div>
                 </div>
