@@ -115,10 +115,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: AI Platform Engineering 2025 + Edge AI Latency Budgets"
-          description="New long‑form guide plus new articles across Platform, Governance, Security, and MLOps."
+          title="🚀 Fresh: AI Platform ROI + Secure ML Supply Chain"
+          description="New frameworks on platform ROI and end‑to‑end ML supply chain security."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-platform-engineering-2025"
+          ctaLink="/blog/ai-platform-roi-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
