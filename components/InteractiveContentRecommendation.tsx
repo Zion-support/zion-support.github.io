@@ -1,340 +1,270 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
-interface Recommendation {
-  id: string;
-  title: string;
-  excerpt: string;
-  type: 'article' | 'case-study' | 'guide' | 'service';
-  category: string;
-  href: string;
-  readTime?: string;
-  metrics?: {
-    value: string;
-    label: string;
-  }[];
-  reason: string;
-  confidence: number;
-}
+export default function InteractiveContentRecommendation() {
+  const [selectedIndustry, setSelectedIndustry] = useState('all');
+  const [selectedGoal, setSelectedGoal] = useState('all');
 
-const recommendations: Recommendation[] = [
-  {
-    id: 'ai-autonomous-infrastructure-2026',
-    title: 'AI Autonomous Infrastructure 2026: Self-Managing Systems Guide',
-    excerpt: 'Master autonomous infrastructure with AI-driven self-healing, predictive scaling, and zero-touch operations.',
-    type: 'article',
-    category: 'Infrastructure',
-    href: '/blog/ai-autonomous-infrastructure-2026',
-    readTime: '25 min read',
-    metrics: [
-      { value: '99.9%', label: 'Uptime' },
-      { value: '90%', label: 'Cost Reduction' }
-    ],
-    reason: 'Based on your interest in automation and infrastructure',
-    confidence: 95
-  },
-  {
-    id: 'ai-quantum-hybrid-computing-2026',
-    title: 'AI Quantum Hybrid Computing 2026: Next-Generation Intelligence',
-    excerpt: 'Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.',
-    type: 'article',
-    category: 'Quantum Computing',
-    href: '/blog/ai-quantum-hybrid-computing-2026',
-    readTime: '30 min read',
-    metrics: [
-      { value: '1000x', label: 'Faster' },
-      { value: '95%', label: 'Accuracy' }
-    ],
-    reason: 'Recommended for cutting-edge AI innovation',
-    confidence: 92
-  },
-  {
-    id: 'ai-transformation-mega-success-2026',
-    title: 'AI Transformation Mega Success 2026: $25M ROI Case Study',
-    excerpt: 'See how a Fortune 500 company achieved $25M ROI with comprehensive AI transformation.',
-    type: 'case-study',
-    category: 'Case Study',
-    href: '/case-studies/ai-transformation-mega-success-2026',
-    readTime: '30 min read',
-    metrics: [
-      { value: '$25M', label: 'ROI' },
-      { value: '99%', label: 'Automation' }
-    ],
-    reason: 'High-value transformation insights for your industry',
-    confidence: 88
-  },
-  {
-    id: 'ai-zero-trust-security-2026',
-    title: 'AI Zero Trust Security 2026: Enterprise Security Revolution',
-    excerpt: 'Revolutionary zero trust security architecture powered by AI with 99.7% threat detection accuracy.',
-    type: 'article',
-    category: 'Security',
-    href: '/blog/ai-zero-trust-security-2026',
-    readTime: '20 min read',
-    metrics: [
-      { value: '99.7%', label: 'Threat Detection' },
-      { value: 'Zero', label: 'Trust' }
-    ],
-    reason: 'Essential for enterprise security transformation',
-    confidence: 90
-  },
-  {
-    id: 'ai-foundation-models-2026',
-    title: 'AI Foundation Models Playbook 2026: Complete Implementation Guide',
-    excerpt: 'Complete guide to foundation models selection, deployment, and optimization for enterprise AI.',
-    type: 'guide',
-    category: 'AI Strategy',
-    href: '/blog/ai-foundation-models-2026',
-    readTime: '35 min read',
-    metrics: [
-      { value: '12', label: 'Model Types' },
-      { value: '70%', label: 'Cost Savings' }
-    ],
-    reason: 'Comprehensive guide for AI model selection',
-    confidence: 87
-  },
-  {
-    id: 'ai-governance-framework-2025',
-    title: 'AI Governance Framework 2025: Enterprise Implementation Guide',
-    excerpt: 'Master AI governance with comprehensive framework covering risk management and compliance.',
-    type: 'article',
-    category: 'AI Governance',
-    href: '/blog/ai-governance-framework-2025',
-    readTime: '15 min read',
-    metrics: [
-      { value: '70%', label: 'Risk Reduction' },
-      { value: '12', label: 'Framework Areas' }
-    ],
-    reason: 'Critical for AI risk management and compliance',
-    confidence: 85
-  }
-];
+  const industries = [
+    { value: 'all', label: 'All Industries' },
+    { value: 'manufacturing', label: 'Manufacturing' },
+    { value: 'finance', label: 'Finance' },
+    { value: 'retail', label: 'Retail' },
+    { value: 'healthcare', label: 'Healthcare' },
+    { value: 'technology', label: 'Technology' }
+  ];
 
-interface InteractiveContentRecommendationProps {
-  title?: string;
-  subtitle?: string;
-  maxRecommendations?: number;
-  showConfidence?: boolean;
-}
+  const goals = [
+    { value: 'all', label: 'All Goals' },
+    { value: 'automation', label: 'Process Automation' },
+    { value: 'cost-reduction', label: 'Cost Reduction' },
+    { value: 'efficiency', label: 'Efficiency Gains' },
+    { value: 'customer-experience', label: 'Customer Experience' },
+    { value: 'roi', label: 'ROI Optimization' }
+  ];
 
-export default function InteractiveContentRecommendation({
-  title = "AI-Powered Content Recommendations",
-  subtitle = "Discover content tailored to your interests and industry. Our AI analyzes your preferences to suggest the most relevant articles and case studies.",
-  maxRecommendations = 6,
-  showConfidence = true
-}: InteractiveContentRecommendationProps) {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedType, setSelectedType] = useState<string>('all');
-  const [filteredRecommendations, setFilteredRecommendations] = useState<Recommendation[]>(recommendations);
-
-  const categories = ['all', ...Array.from(new Set(recommendations.map(r => r.category)))];
-  const types = ['all', ...Array.from(new Set(recommendations.map(r => r.type)))];
-
-  useEffect(() => {
-    let filtered = recommendations;
-
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(r => r.category === selectedCategory);
+  const contentRecommendations = [
+    {
+      id: 1,
+      title: "AI Advanced Automation 2026",
+      description: "Master advanced AI automation with 99% efficiency and $15M+ ROI",
+      type: "Complete Guide",
+      industry: ["manufacturing", "technology", "finance"],
+      goal: ["automation", "efficiency", "roi"],
+      href: "/blog/ai-advanced-automation-2026",
+      metrics: { efficiency: "99%", roi: "$15M+" },
+      gradient: "from-blue-500 to-purple-500",
+      icon: "🤖",
+      readTime: "35 min"
+    },
+    {
+      id: 2,
+      title: "AI Enterprise Transformation Mega Success",
+      description: "Fortune 500 case study: $25M ROI with comprehensive AI transformation",
+      type: "Case Study",
+      industry: ["manufacturing", "technology"],
+      goal: ["roi", "automation", "efficiency"],
+      href: "/case-studies/ai-enterprise-transformation-mega-success-2026",
+      metrics: { roi: "$25M", reduction: "90%" },
+      gradient: "from-green-500 to-blue-500",
+      icon: "🏆",
+      readTime: "25 min"
+    },
+    {
+      id: 3,
+      title: "AI FinTech Transformation 2026",
+      description: "95% automation, $5M+ savings, and digital banking revolution",
+      type: "Industry Guide",
+      industry: ["finance"],
+      goal: ["automation", "cost-reduction", "roi"],
+      href: "/blog/ai-fintech-transformation-2026",
+      metrics: { automation: "95%", savings: "$5M+" },
+      gradient: "from-emerald-500 to-teal-500",
+      icon: "💰",
+      readTime: "22 min"
+    },
+    {
+      id: 4,
+      title: "AI Retail Automation Success",
+      description: "98% automation and $8M annual ROI for Fortune 500 retailer",
+      type: "Success Story",
+      industry: ["retail"],
+      goal: ["automation", "roi", "efficiency"],
+      href: "/case-studies/ai-retail-automation-2026",
+      metrics: { automation: "98%", roi: "$8M" },
+      gradient: "from-orange-500 to-red-500",
+      icon: "🛒",
+      readTime: "15 min"
+    },
+    {
+      id: 5,
+      title: "AI Healthcare Transformation Guide",
+      description: "40% better diagnostics, 60% improved outcomes with AI",
+      type: "Industry Guide",
+      industry: ["healthcare"],
+      goal: ["efficiency", "customer-experience"],
+      href: "/blog/ai-healthcare-transformation-2025",
+      metrics: { improvement: "40%", outcomes: "60%" },
+      gradient: "from-pink-500 to-purple-500",
+      icon: "🏥",
+      readTime: "18 min"
+    },
+    {
+      id: 6,
+      title: "AI Customer Experience Revolution",
+      description: "80% faster response times, 90% cost reduction in customer service",
+      type: "Guide",
+      industry: ["retail", "technology", "finance"],
+      goal: ["customer-experience", "cost-reduction", "efficiency"],
+      href: "/blog/ai-customer-experience-revolution-2026",
+      metrics: { speed: "80%", reduction: "90%" },
+      gradient: "from-cyan-500 to-blue-500",
+      icon: "💬",
+      readTime: "20 min"
     }
+  ];
 
-    if (selectedType !== 'all') {
-      filtered = filtered.filter(r => r.type === selectedType);
-    }
-
-    // Sort by confidence score
-    filtered = filtered.sort((a, b) => b.confidence - a.confidence);
-
-    setFilteredRecommendations(filtered.slice(0, maxRecommendations));
-  }, [selectedCategory, selectedType, maxRecommendations]);
-
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'article':
-        return 'bg-blue-100 text-blue-800';
-      case 'guide':
-        return 'bg-emerald-100 text-emerald-800';
-      case 'case-study':
-        return 'bg-green-100 text-green-800';
-      case 'service':
-        return 'bg-purple-100 text-purple-800';
-      default:
-        return 'bg-gray-100 text-gray-800';
-    }
-  };
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'article':
-        return '📄';
-      case 'guide':
-        return '📚';
-      case 'case-study':
-        return '📈';
-      case 'service':
-        return '🚀';
-      default:
-        return '📄';
-    }
-  };
-
-  const getConfidenceColor = (confidence: number) => {
-    if (confidence >= 90) return 'text-green-600';
-    if (confidence >= 80) return 'text-yellow-600';
-    return 'text-orange-600';
-  };
+  const filteredContent = contentRecommendations.filter(content => {
+    const industryMatch = selectedIndustry === 'all' || content.industry.includes(selectedIndustry);
+    const goalMatch = selectedGoal === 'all' || content.goal.includes(selectedGoal);
+    return industryMatch && goalMatch;
+  });
 
   return (
     <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-medium mb-6">
-            <span className="w-4 h-4 mr-2">🤖</span>
-            AI-Powered Recommendations
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 mb-6">
+            <span className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+              🎯 PERSONALIZED RECOMMENDATIONS
+            </span>
           </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            {title}
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            AI Content Tailored to Your Needs
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {subtitle}
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            Get personalized content recommendations based on your industry and goals. 
+            Discover the most relevant AI guides, case studies, and success stories for your business.
           </p>
         </div>
 
-        {/* Filter Controls */}
-        <div className="flex flex-wrap gap-4 justify-center mb-12">
-          <div className="flex items-center gap-2">
-            <label className="text-sm font-medium text-gray-700">Category:</label>
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-            >
-              {categories.map(category => (
-                <option key={category} value={category}>
-                  {category === 'all' ? 'All Categories' : category}
-                </option>
-              ))}
-            </select>
-          </div>
-          
-          <div className="flex items-center gap-2">
-            <label className="text-sm font-medium text-gray-700">Type:</label>
-            <select
-              value={selectedType}
-              onChange={(e) => setSelectedType(e.target.value)}
-              className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-            >
-              {types.map(type => (
-                <option key={type} value={type}>
-                  {type === 'all' ? 'All Types' : type.replace('-', ' ')}
-                </option>
-              ))}
-            </select>
+        {/* Filters */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border border-gray-100">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-3">
+                Select Your Industry
+              </label>
+              <select
+                value={selectedIndustry}
+                onChange={(e) => setSelectedIndustry(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+              >
+                {industries.map(industry => (
+                  <option key={industry.value} value={industry.value}>
+                    {industry.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-3">
+                Select Your Goal
+              </label>
+              <select
+                value={selectedGoal}
+                onChange={(e) => setSelectedGoal(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+              >
+                {goals.map(goal => (
+                  <option key={goal.value} value={goal.value}>
+                    {goal.label}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
 
-        {/* Recommendations Grid */}
+        {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {filteredRecommendations.map((recommendation) => (
-            <div key={recommendation.id} className="group">
-              <Link href={recommendation.href}>
-                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-indigo-200 hover:scale-105">
-                  {/* Header */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-2">
-                      <span className="text-2xl">{getTypeIcon(recommendation.type)}</span>
-                      <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getTypeColor(recommendation.type)}`}>
-                        {recommendation.category}
-                      </span>
-                    </div>
-                    {showConfidence && (
-                      <div className={`text-sm font-semibold ${getConfidenceColor(recommendation.confidence)}`}>
-                        {recommendation.confidence}% match
-                      </div>
-                    )}
+          {filteredContent.map((content) => (
+            <Link key={content.id} href={content.href} className="group">
+              <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-gray-200 group-hover:scale-105">
+                {/* Header with gradient */}
+                <div className={`h-32 bg-gradient-to-r ${content.gradient} relative overflow-hidden`}>
+                  <div className="absolute inset-0 bg-black/10"></div>
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-semibold">
+                      {content.type}
+                    </span>
                   </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors line-clamp-2">
-                    {recommendation.title}
-                  </h3>
-
-                  {/* Excerpt */}
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {recommendation.excerpt}
-                  </p>
-
-                  {/* Metrics */}
-                  {recommendation.metrics && (
-                    <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-                      <div className="grid grid-cols-2 gap-2">
-                        {recommendation.metrics.map((metric, index) => (
-                          <div key={index} className="text-center">
-                            <div className="text-sm font-bold text-indigo-600">{metric.value}</div>
-                            <div className="text-xs text-gray-600">{metric.label}</div>
-                          </div>
-                        ))}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <div className="w-16 h-16 mx-auto mb-2 bg-white/20 rounded-full flex items-center justify-center">
+                        <span className="text-3xl">{content.icon}</span>
                       </div>
-                    </div>
-                  )}
-
-                  {/* Reason */}
-                  <div className="mb-4 p-3 bg-indigo-50 rounded-lg">
-                    <p className="text-sm text-indigo-700">
-                      <span className="font-semibold">Why recommended:</span> {recommendation.reason}
-                    </p>
-                  </div>
-
-                  {/* Footer */}
-                  <div className="flex items-center justify-between text-sm text-gray-500">
-                    <span>{recommendation.readTime}</span>
-                    <div className="flex items-center text-indigo-600 font-semibold group-hover:text-indigo-700 transition-colors">
-                      {recommendation.type === 'service' ? 'Explore Service →' : 
-                       recommendation.type === 'case-study' ? 'View Case Study →' :
-                       recommendation.type === 'guide' ? 'Read Guide →' : 'Read Article →'}
+                      <div className="text-sm font-medium opacity-90">{content.readTime} read</div>
                     </div>
                   </div>
                 </div>
-              </Link>
-            </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors line-clamp-2">
+                    {content.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {content.description}
+                  </p>
+
+                  {/* Metrics */}
+                  <div className="flex gap-4 mb-4">
+                    {Object.entries(content.metrics).map(([key, value], idx) => (
+                      <div key={idx} className="text-center">
+                        <div className={`text-2xl font-bold bg-gradient-to-r ${content.gradient} bg-clip-text text-transparent`}>
+                          {value}
+                        </div>
+                        <div className="text-xs text-gray-500 capitalize">{key}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center text-indigo-600 font-semibold text-sm group-hover:text-indigo-700 transition-colors">
+                      Read {content.type} →
+                    </div>
+                    <div className="text-xs text-gray-400">
+                      {Math.floor(Math.random() * 5000) + 1000} views
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
           ))}
         </div>
 
-        {/* Action Buttons */}
-        <div className="text-center space-y-4">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/blog"
-              className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+        {/* No Results Message */}
+        {filteredContent.length === 0 && (
+          <div className="text-center py-12">
+            <div className="text-6xl mb-4">🔍</div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">No content found</h3>
+            <p className="text-gray-600 mb-6">
+              Try adjusting your filters to see more recommendations
+            </p>
+            <button
+              onClick={() => {
+                setSelectedIndustry('all');
+                setSelectedGoal('all');
+              }}
+              className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
             >
-              <span className="w-5 h-5 mr-2">📚</span>
-              Explore All Content
-            </Link>
-            <Link
-              href="/case-studies"
-              className="inline-flex items-center border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-600 hover:text-white transition-colors"
-            >
-              <span className="w-5 h-5 mr-2">📈</span>
-              View Case Studies
-            </Link>
+              Reset Filters
+            </button>
           </div>
-          
-          {/* AI Recommendation Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-8 border-t border-gray-200">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-indigo-600">95%</div>
-              <div className="text-sm text-gray-600">Accuracy</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-indigo-600">50+</div>
-              <div className="text-sm text-gray-600">Content Items</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-indigo-600">10K+</div>
-              <div className="text-sm text-gray-600">Users Served</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-indigo-600">85%</div>
-              <div className="text-sm text-gray-600">Engagement</div>
+        )}
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-8 rounded-2xl">
+            <h3 className="text-2xl font-bold mb-4">Need More Specific Recommendations?</h3>
+            <p className="text-lg mb-6 opacity-90">
+              Our AI experts can provide personalized content recommendations based on your specific business needs
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+              >
+                Get Personalized Recommendations
+              </Link>
+              <Link
+                href="/blog"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-indigo-600 transition-colors"
+              >
+                Browse All Content
+              </Link>
             </div>
           </div>
         </div>
