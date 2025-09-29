@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { AppRouter } from './router';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import './index.css';
 
 export default function App(): React.JSX.Element {
   return (
-    <div className="min-h-screen">
-      <AppRouter />
-    </div>
+    <EnhancedErrorBoundary>
+      <div className="min-h-screen">
+        <AppRouter />
+      </div>
+    </EnhancedErrorBoundary>
   );
 }

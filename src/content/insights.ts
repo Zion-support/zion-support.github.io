@@ -279,6 +279,7 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+>>>>>>> origin/main
     id: "genai-guardrails-in-production",
     title: "GenAI Guardrails in Production: Policy Tests That Scale",
     summary:
@@ -286,6 +287,24 @@ export const latestInsights: InsightArticle[] = [
     category: "GenAI",
     date: "2025-09-29",
     readMinutes: 8,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+=======
+  },
+  // NEW INSIGHTS - Latest 2025 Content
+  {
+    id: "ai-workflow-automation-roi-insights",
+    title: "AI Workflow Automation ROI: 15 Companies Share Their Results",
+    summary:
+      "Real ROI data from companies that implemented AI workflow automation. Average savings of $2.3M annually with 6-month payback periods.",
+    category: "AI & Automation",
+    date: "2025-01-22",
+    readMinutes: 5,
+>>>>>>> cursor/check-fix-push-and-merge-to-main-40d4
   },
   {
     id: "ai-automation-roi-calculator",
@@ -351,5 +370,73 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-09-30",
     readMinutes: 5,
   },
+<<<<<<< HEAD
+=======
+  {
+    id: "iot-security-incident-analysis",
+    title: "IoT Security Incidents: Lessons from Recent Breaches",
+    summary:
+      "Analysis of recent IoT security breaches and key lessons for protecting connected devices in enterprise environments.",
+    category: "IoT Security",
+    date: "2025-01-14",
+    readMinutes: 4,
+>>>>>>> origin/main
+  },
+  {
+    id: "digital-transformation-success-factors",
+    title: "Digital Transformation Success Factors: What Actually Works",
+    summary:
+      "Research-backed insights on the key factors that determine digital transformation success, based on analysis of 500+ projects.",
+    category: "Digital Transformation",
+    date: "2025-01-13",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-chatbot-customer-satisfaction-data",
+    title: "AI Chatbot Impact on Customer Satisfaction: The Numbers Don't Lie",
+    summary:
+      "Statistical analysis showing how AI chatbots improve customer satisfaction scores, reduce response times, and increase resolution rates.",
+    category: "Case Studies",
+    date: "2025-01-12",
+    readMinutes: 5,
+  },
+  {
+    id: "ml-model-deployment-challenges",
+    title: "ML Model Deployment: Common Challenges and Solutions",
+    summary:
+      "Top challenges in ML model deployment and proven solutions from industry leaders, including monitoring, scaling, and maintenance.",
+    category: "Machine Learning",
+    date: "2025-01-11",
+    readMinutes: 7,
+  },
+  {
+    id: "blockchain-supply-chain-adoption",
+    title: "Blockchain in Supply Chain: Real Adoption Numbers",
+    summary:
+      "Current adoption rates of blockchain in supply chain management across different industries and regions.",
+    category: "Blockchain",
+    date: "2025-01-10",
+    readMinutes: 4,
+  },
+  {
+    id: "5g-business-applications-reality",
+    title: "5G Business Applications: What's Actually Working",
+    summary:
+      "Real-world 5G business applications that are delivering measurable ROI, from smart factories to autonomous vehicles.",
+    category: "5G Technology",
+    date: "2025-01-09",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-ecommerce-personalization-roi",
+    title: "AI E-commerce Personalization: ROI and Implementation Insights",
+    summary:
+      "How AI-powered personalization is driving revenue growth in e-commerce, with specific metrics and implementation strategies.",
+    category: "E-commerce",
+    date: "2025-01-08",
+    readMinutes: 5,
+  },
+>>>>>>> origin/main
+>>>>>>> cursor/check-fix-push-and-merge-to-main-40d4
 ];
 
