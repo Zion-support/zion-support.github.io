@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "policy-tests-in-ci-2025",
+    slug: "policy-tests-in-ci-2025",
+    title: "Policy Tests in CI: Fast Guardrails Engineers Adopt",
+    description: "Lightweight checks for risky changes that prevent regressions without blocking teams.",
+    excerpt: "Adopt small, meaningful CI policy tests tied to product KPIs for real impact.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Engineering Excellence",
+    tags: ["Policy", "CI", "Guardrails"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/policy-tests-in-ci.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "risk-budgets-edge-rollouts-2025",
+    slug: "risk-budgets-edge-rollouts-2025",
+    title: "Risk Budgets for Edge Rollouts: Ship Fast With Confidence",
+    description: "Define budgets, wire telemetry, and enable instant rollback for zero‑regret deploys.",
+    excerpt: "A pragmatic pattern for progressive delivery under strict risk envelopes.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Architecture",
+    tags: ["Edge", "Feature Flags", "Budgets"],
+    featured: false,
+    readTime: "7 min read",
+    image: "/images/risk-budgets-edge.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-governance-scorecards-2026",
     slug: "ai-governance-scorecards-2026",
     title: "AI Governance 2026: Scorecards Engineers Actually Use",

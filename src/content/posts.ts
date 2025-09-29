@@ -149,6 +149,33 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: false,
     readTime: "6 min read",
+  },
+  {
+    slug: "ai-risk-register-outcomes-2025",
+    title: "AI Risk Register That Drives Outcomes: Owners, SLAs, and Policy Tests",
+    description: "Make risk programs actionable with owned mitigations, CI policy checks, and measurable SLAs.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "zero-regret-rollouts-edge-flags-2025",
+    title: "Zero‑Regret Rollouts: Edge Flags with Budgets and Instant Rollback",
+    description: "Segmented rollouts with risk budgets, telemetry, and rollback triggers under 100ms.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "online-genai-evals-canaries-2025",
+    title: "Online GenAI Evals: Canary Checks That Keep Velocity High",
+    description: "Run lightweight, KPI‑linked canaries in prod to prevent regressions while shipping weekly.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
   }
 ];
 
