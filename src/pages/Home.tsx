@@ -14,7 +14,11 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import ContentPromotionBanner from "../components/ContentPromotionBanner";
+import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
+import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
+import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
 import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
@@ -30,11 +34,11 @@ const Home = () => {
         </title>
         <meta
           name="description"
-          content="Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. Enterprise security, AI innovation, and expert consulting services."
+          content="Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security. Expert consulting services with proven results."
         />
         <meta
           name="keywords"
-          content="AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation"
+          content="AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation, AI workflow automation, quantum computing, edge AI, zero trust security, micro SAAS platforms, AI virtual assistant, data analytics"
         />
         <meta
           property="og:title"
@@ -42,7 +46,7 @@ const Home = () => {
         />
         <meta
           property="og:description"
-          content="Transform your business with cutting-edge AI and IT solutions"
+          content="Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security. Expert consulting with proven results."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
@@ -53,12 +57,60 @@ const Home = () => {
         />
         <meta
           name="twitter:description"
-          content="Transform your business with cutting-edge AI and IT solutions"
+          content="Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security."
         />
         <link rel="canonical" href="https://ziontechgroup.com" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "description": "Leading AI and IT solutions provider specializing in AI workflow automation, quantum computing, edge AI, and zero trust security.",
+            "url": "https://ziontechgroup.com",
+            "logo": "https://ziontechgroup.com/logo.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-555-ZION-TECH",
+              "contactType": "customer service",
+              "availableLanguage": "English"
+            },
+            "sameAs": [
+              "https://linkedin.com/company/zion-tech-group",
+              "https://twitter.com/ziontechgroup"
+            ],
+            "foundingDate": "2020",
+            "numberOfEmployees": "50-100",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "US"
+            },
+            "services": [
+              "AI Workflow Automation",
+              "AI Virtual Assistant",
+              "AI Data Analytics",
+              "Quantum Computing Consulting",
+              "Edge AI Solutions",
+              "Zero Trust Security",
+              "Cybersecurity",
+              "Cloud Infrastructure"
+            ]
+          })}
+        </script>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        
+        {/* Content Promotion Banner */}
+        <ContentPromotionBanner
+          variant="info"
+          title="🚀 NEW: Quantum Computing & Edge AI Insights Just Published!"
+          description="Discover practical applications and implementation strategies for the latest technologies"
+          ctaText="Read Now"
+          ctaLink="/blog"
+          dismissible={true}
+        />
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -156,16 +208,15 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Latest Insights Section */}
-        {/* Promo ribbon for new content */}
-        <div className="container mx-auto px-6">
-          <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
-            <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Platform Engineering blueprint and GenAI guardrails just dropped — read now in Insights
-            <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
-          </div>
-        </div>
-        <LatestInsights />
+        {/* Featured Content Showcase */}
+        <FeaturedContentShowcase 
+          title="Latest Technology Insights & Trends"
+          subtitle="Stay ahead with our cutting-edge research, expert analysis, and actionable insights from the world of AI, cybersecurity, and emerging technologies"
+          maxItems={6}
+          showInsights={true}
+          showBlogPosts={true}
+          className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
+        />
 
         {/* New Services Showcase */}
         <section className="container mx-auto px-6 py-20 relative z-10">
@@ -478,8 +529,18 @@ const Home = () => {
         {/* Modern Features Section */}
         <ModernFeatures />
 
+        {/* Content Value Testimonials */}
+        <ContentValueTestimonials />
+
         {/* Enhanced Testimonials Section */}
         <EnhancedTestimonials />
+
+        {/* Enhanced Newsletter Signup */}
+        <EnhancedNewsletterSignup 
+          title="Stay Ahead with Our Latest Insights"
+          subtitle="Get exclusive access to cutting-edge technology insights, industry analysis, and expert guidance delivered to your inbox weekly."
+          showContentPreview={true}
+        />
 
         {/* Latest Articles */}
         <section className="py-20 bg-white">
