@@ -71,11 +71,6 @@ class AccessibilityEnhancer {
     this.mutationObserver?.disconnect();
     this.performanceObserver?.disconnect();
     
-    // Cleanup event listeners
-    document.removeEventListener('keydown', this.handleKeyDown.bind(this));
-    document.removeEventListener('focusin', this.handleFocusIn.bind(this));
-    document.removeEventListener('focusout', this.handleFocusOut.bind(this));
-    
     this.isInitialized = false;
     this.focusTrapElements = [];
   }
@@ -100,11 +95,9 @@ class AccessibilityEnhancer {
   }
 
   /**
-   * Backward-compatible initialize alias
+   * Backward-compatible initialize alias handled by init()
+   * (Removed duplicate initialize definition to satisfy no-dupe-class-members)
    */
-  public initialize(): void {
-    this.init();
-  }
 
   private setupKeyboardNavigation(): void {
     if (!this.config.keyboardNavigation) return;
