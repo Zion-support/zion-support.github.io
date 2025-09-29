@@ -14,6 +14,64 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-platform-roi-2025",
+    title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
+    description: "A pragmatic framework to tie platform capabilities to product outcomes with clear owner reviews.",
+    content: `
+# AI Platform ROI Scorecards: Proving Value Quarter by Quarter
+
+Platform investments stall without measurable value signals. This guide introduces a lightweight ROI scorecard that connects platform capabilities to adoption, golden paths, reliability SLOs, and business outcomes.
+
+## Scorecard Dimensions
+- Adoption and paved-road usage
+- Time-to-first-success on golden paths
+- Reliability SLO adherence per product surface
+- Enablement signals: docs, templates, SDK ergonomics
+
+## Operating Rhythm
+- Monthly review with product + platform owners
+- Red/amber flags with remediation owners and dates
+- Clear cut/scale decisions based on evidence deltas
+
+Implement this to keep platform work focused and value-centric.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-10-03",
+    category: "AI Strategy",
+    tags: ["Platform", "ROI", "Scorecards", "Product"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-platform-roi.jpg"
+  },
+  {
+    slug: "secure-ml-supply-chain-2025",
+    title: "Secure ML Supply Chain: From SBOMs to Model Lineage",
+    description: "Practical controls for datasets, models, and inference routes to prevent tampering and drift.",
+    content: `
+# Secure ML Supply Chain: From SBOMs to Model Lineage
+
+Modern ML requires end-to-end provenance and controls: dataset SBOMs, data-use policies, model lineage, signed artifacts, and runtime egress controls.
+
+## Controls That Matter
+- Dataset SBOMs and data contracts
+- Signed training artifacts and configs
+- Model lineage with approval trails
+- Inference-time egress allowlists and DPI
+
+## Rollout
+- Start read-only with visibility dashboards
+- Add PR gates on risky changes
+- Enforce gradually with exceptions flow
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-10-03",
+    category: "Security",
+    tags: ["ML", "Supply Chain", "Security", "SBOM"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/secure-ml-supply-chain.jpg"
+  },
+  {
     slug: "ai-adoption-scorecard-2025",
     title: "AI Adoption Scorecard: Executive Metrics That Drive Outcomes",
     description: "Define leading indicators, outcome metrics, and review rituals that align AI work to business value.",
