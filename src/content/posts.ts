@@ -10,8 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-=======
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
     description:
@@ -42,7 +40,6 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
   },
   {
->>>>>>> cursor/create-and-deploy-new-content-83a1
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:
@@ -347,6 +344,37 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-01-21",
     featured: false,
     readTime: "9 min read",
+  },
+  // New content additions
+  {
+    slug: "agentic-workflows-in-production",
+    title: "Agentic Workflows in Production: Patterns That Don’t Break",
+    description:
+      "Control loops, guardrails, and human checkpoints to deploy autonomous agents safely.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "cost-aware-mlops",
+    title: "Cost‑Aware MLOps: Shipping Quality Under a Budget",
+    description:
+      "Right‑size evals, caching, and rollout to reduce spend without sacrificing reliability.",
+    category: "MLOps",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "edge-observability-toolbox",
+    title: "Edge Observability Toolbox for Sub‑Second UX",
+    description:
+      "What to log, sample, and alert on for distributed edge apps and functions.",
+    category: "Observability",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "5 min read",
   },
 ];
 
