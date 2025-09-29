@@ -128,5 +128,12 @@
     "website"
   ],
   "author": "Zion Tech Group",
-  "license": "MIT"
+  "license": "MIT",
+  "pnpm": {
+    "allowedBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "esbuild",
+      "unrs-resolver"
+    ]
+  }
 }
