@@ -37,6 +37,24 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     featured: true
   },
   {
+    id: 'fresh-sept-2025-content',
+    message: '📚 NEW: Serverless Inference Cost Playbook + Agent Safety Budgets (2025)',
+    ctaText: 'Read Now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: false,
+    hideAfter: 0,
+    active: true,
+    priority: 0,
+    variant: 'special',
+    icon: '✨',
+    animation: 'pulse',
+    badge: 'NEW',
+    featured: true
+  },
+  {
     id: 'quantum-ai-hybrid-computing',
     message: '⚛️ BREAKTHROUGH: Quantum-AI Hybrid Computing - 1000x Faster Processing Power',
     ctaText: 'Schedule Demo',

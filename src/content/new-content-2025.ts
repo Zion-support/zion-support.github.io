@@ -75,6 +75,58 @@ export const newContent2025: NewContentItem[] = [
     }
   },
   {
+    id: "serverless-ai-inference-cost-playbook-2025",
+    title: "Serverless AI Inference Cost Playbook (2025)",
+    description: "Cut model serving costs by 40–70% with adaptive batching, warm pools, and precision routing.",
+    excerpt: "A hands-on guide to reduce inference costs while keeping p95 low and reliability high.",
+    type: "blog",
+    category: "Engineering",
+    tags: ["FinOps", "Inference", "Serverless", "Latency"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-09-29",
+    readTime: "11 min read",
+    author: "Zion Tech Group",
+    image: "/images/serverless-inference-cost-playbook.jpg",
+    url: "/blog/serverless-ai-inference-cost-playbook-2025",
+    cta: {
+      primary: "Read Playbook",
+      secondary: "Get Cost Review"
+    },
+    metrics: [
+      { label: "Cost Reduction", value: "40–70%", description: "Observed savings range" },
+      { label: "Latency Target", value: "< 250ms p95", description: "Interactive UX" },
+      { label: "Reliability", value: "> 99.9%", description: "SLO adherence" }
+    ]
+  },
+  {
+    id: "agent-safety-budgets-2025",
+    title: "Agent Safety Budgets (2025): Practical Guardrails That Ship",
+    description: "Constrain autonomous agents with KPI-linked safety, privacy, and cost budgets.",
+    excerpt: "Policy-as-code, runtime enforcement, and auditable telemetry to ship safe AI.",
+    type: "blog",
+    category: "AI Governance",
+    tags: ["Safety", "Compliance", "Privacy", "Agents"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-09-29",
+    readTime: "9 min read",
+    author: "Zion Tech Group",
+    image: "/images/agent-safety-budgets.jpg",
+    url: "/blog/agent-safety-budgets-2025",
+    cta: {
+      primary: "Read Article",
+      secondary: "Request Workshop"
+    },
+    metrics: [
+      { label: "Risk Reduction", value: "70%", description: "Fewer incidents" },
+      { label: "Auditability", value: "100%", description: "Traceable decisions" },
+      { label: "Time to Ship", value: "< 2 weeks", description: "Guardrails live" }
+    ]
+  },
+  {
     id: "quantum-machine-learning-guide",
     title: "Quantum Machine Learning: Breaking the Barriers of Classical Computing",
     description: "Explore how quantum machine learning is solving previously impossible problems and revolutionizing AI capabilities across industries.",
