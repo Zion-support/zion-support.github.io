@@ -3,6 +3,13 @@
   to = "https://backend.example.com/:splat"
   status = 200
  
+[[_redirects]]
+  
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
 [build]
   command = "pnpm run build:optimized"
   publish = "dist"
