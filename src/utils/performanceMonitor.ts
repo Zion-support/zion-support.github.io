@@ -37,13 +37,15 @@ class PerformanceMonitor {
   }
 
   private observeWebVitals(): void {
-    // First Input Delay (FID)
     if ('PerformanceObserver' in window) {
+      // FID - First Input Delay
       try {
         const fidObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            if (entry.processingStart && entry.startTime) {
-              const fid = entry.processingStart - entry.startTime;
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const firstInput = entry as any;
+            if (firstInput.processingStart && firstInput.startTime) {
+              const fid = firstInput.processingStart - firstInput.startTime;
               this.recordMetric({
                 name: 'FID',
                 value: fid,
@@ -52,61 +54,14 @@ class PerformanceMonitor {
               });
             }
           }
-        }
-      });
-    });
-    fidObserver.observe({ entryTypes: ['first-input'] });
-    this.observers.push(fidObserver);
-
-    // CLS - Cumulative Layout Shift
-    let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
-        if (!entry.hadRecentInput && entry.value !== undefined) {
-          clsValue += entry.value;
-        }
-      });
-      this.metrics.cls = clsValue;
-    });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
-    this.observers.push(clsObserver);
-
-    // FCP - First Contentful Paint
-    const fcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.name === 'first-contentful-paint') {
-          this.metrics.fcp = entry.startTime;
-        }
-      });
-    });
-    fcpObserver.observe({ entryTypes: ['paint'] });
-    this.observers.push(fcpObserver);
-
-    // TTFB - Time to First Byte
-    const ttfbObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'navigation') {
-          this.metrics.ttfb = (entry as PerformanceNavigationTiming).responseStart - (entry as PerformanceNavigationTiming).requestStart;
-        }
-      });
-    });
-    ttfbObserver.observe({ entryTypes: ['navigation'] });
-    this.observers.push(ttfbObserver);
-  }
-
-  private observeMemoryUsage(): void {
-    if ('memory' in performance) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      if (memory) {
-        this.metrics.memoryUsage = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+        this.observers.push(fidObserver);
+      } catch (e) {
+        console.warn('FID observation failed:', e);
       }
-    }
-  }
 
-      // Largest Contentful Paint (LCP)
+      // LCP - Largest Contentful Paint
       try {
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
@@ -126,13 +81,15 @@ class PerformanceMonitor {
         console.warn('LCP observation failed:', e);
       }
 
-      // Cumulative Layout Shift (CLS)
+      // CLS - Cumulative Layout Shift
       try {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value;
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const layoutShift = entry as any;
+            if (!layoutShift.hadRecentInput && typeof layoutShift.value === 'number') {
+              clsValue += layoutShift.value;
             }
           }
           this.recordMetric({
@@ -146,6 +103,63 @@ class PerformanceMonitor {
         this.observers.push(clsObserver);
       } catch (e) {
         console.warn('CLS observation failed:', e);
+      }
+
+      // FCP - First Contentful Paint
+      try {
+        const fcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            if (entry.name === 'first-contentful-paint') {
+              this.recordMetric({
+                name: 'FCP',
+                value: entry.startTime,
+                timestamp: Date.now(),
+                id: this.generateId()
+              });
+            }
+          });
+        });
+        fcpObserver.observe({ entryTypes: ['paint'] });
+        this.observers.push(fcpObserver);
+      } catch (e) {
+        console.warn('FCP observation failed:', e);
+      }
+
+      // TTFB - Time to First Byte
+      try {
+        const ttfbObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            if (entry.entryType === 'navigation') {
+              const nav = entry as PerformanceNavigationTiming;
+              this.recordMetric({
+                name: 'TTFB',
+                value: nav.responseStart - nav.requestStart,
+                timestamp: Date.now(),
+                id: this.generateId()
+              });
+            }
+          });
+        });
+        ttfbObserver.observe({ entryTypes: ['navigation'] });
+        this.observers.push(ttfbObserver);
+      } catch (e) {
+        console.warn('TTFB observation failed:', e);
+      }
+    }
+  }
+
+  private observeMemoryUsage(): void {
+    if ('memory' in performance) {
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      if (memory) {
+        this.recordMetric({
+          name: 'MEMORY_USAGE',
+          value: memory.usedJSHeapSize / memory.jsHeapSizeLimit,
+          timestamp: Date.now(),
+          id: this.generateId()
+        });
       }
     }
   }
