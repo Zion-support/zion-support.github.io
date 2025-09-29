@@ -55,9 +55,9 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ New on the blog:</span>
-            <Link href="/blog/platform-engineering-scorecards-2026" className="underline hover:text-yellow-200">Platform Scorecards 2026</Link>
+            <Link href="/blog/edge-llm-caching-blueprint-2026" className="underline hover:text-yellow-200">Edge LLM Caching Blueprint 2026</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-reliable-rag-2025" className="underline hover:text-yellow-200">Reliable RAG 2025</Link>
+            <Link href="/blog/platform-engineering-scorecards-2026" className="underline hover:text-yellow-200">Platform Scorecards 2026</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-roadmaps-2026" className="underline hover:text-yellow-200">AI Roadmaps 2026</Link>
           </div>
