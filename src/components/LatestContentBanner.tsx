@@ -15,7 +15,7 @@ const contentHighlights = [
     title: "🛡️ NEW: AI Risk Register That Actually Drives Action",
     description: "Turn AI risks into tracked mitigations with owners and policy tests",
     ctaText: "Read Playbook",
-    ctaLink: "/blog/ai-risk-register-2025",
+    ctaLink: "/blog/ai-platform-roi-2025",
     badge: "New",
     stats: "7 min read",
     variant: "warning" as const
@@ -25,7 +25,7 @@ const contentHighlights = [
     title: "📈 Practical AI Evals That Predict Business Outcomes",
     description: "Design scorecards that correlate with revenue, CSAT, and retention",
     ctaText: "See Scorecards",
-    ctaLink: "/blog/practical-evals-scorecards-2025",
+    ctaLink: "/blog/genai-evals-in-production-2025",
     badge: "Featured",
     stats: "6 min read",
     variant: "success" as const
@@ -35,7 +35,7 @@ const contentHighlights = [
     title: "💸 Cloud FinOps Guardrails Engineers Actually Use",
     description: "Budgets, alerts, and PR gates that reduce waste 25–40%",
     ctaText: "Cut Spend",
-    ctaLink: "/blog/cloud-finops-guardrails-2025",
+    ctaLink: "/blog/real-time-data-pipelines-2025",
     badge: "Hot",
     stats: "8 min read",
     variant: "info" as const
@@ -45,7 +45,7 @@ const contentHighlights = [
     title: "🧪 RAG Architectures That Work in Production",
     description: "Freshness, hybrid search, and evals that scale",
     ctaText: "Read Guide",
-    ctaLink: "/blog/practical-rag-in-production-2025",
+    ctaLink: "/blog/edge-cdn-ml-personalization-2025",
     badge: "Popular",
     stats: "8 min read",
     variant: "premium" as const
@@ -104,13 +104,34 @@ const contentHighlights = [
   ,
   {
     id: 8,
-    title: "📚 New: AI Platform ROI + Secure ML Supply Chain",
-    description: "Fresh long-form guides on platform scorecards and end-to-end ML provenance.",
-    ctaText: "Read Now",
-    ctaLink: "/blog/ai-platform-roi-2025",
+    title: "📚 New: Practical RAG in Production (2025)",
+    description: "Freshness, hybrid search, and continuous evals for grounded responses.",
+    ctaText: "Read Guide",
+    ctaLink: "/blog/practical-rag-in-production-2025",
     badge: "New",
-    stats: "Featured",
+    stats: "8 min read",
     variant: "info" as const
+  }
+  ,
+  {
+    id: 9,
+    title: "💸 Cloud FinOps Guardrails Engineers Use",
+    description: "Budgets, alerts, and PR gates that cut waste 25–40%.",
+    ctaText: "Cut Spend",
+    ctaLink: "/blog/cloud-finops-guardrails-2025",
+    badge: "New",
+    stats: "7 min read",
+    variant: "success" as const
+  },
+  {
+    id: 10,
+    title: "🧪 RAG That Works in Production",
+    description: "Freshness, hybrid search, and evals that correlate with outcomes.",
+    ctaText: "Read Guide",
+    ctaLink: "/blog/practical-rag-in-production-2025",
+    badge: "Trending",
+    stats: "9 min read",
+    variant: "premium" as const
   }
 ];
 
@@ -134,6 +155,36 @@ contentHighlights.push(
     ctaLink: "/blog/finops-scorecards-2025",
     badge: "Featured",
     stats: "6 min read",
+    variant: "success" as const
+  },
+  {
+    id: 11,
+    title: "💸 Cloud FinOps Guardrails Engineers Actually Use",
+    description: "Budgets, alerts, and PR gates that reduce waste 25–40%",
+    ctaText: "Cut Spend",
+    ctaLink: "/blog/cloud-finops-guardrails-2025",
+    badge: "Hot",
+    stats: "6 min read",
+    variant: "info" as const
+  },
+  {
+    id: 12,
+    title: "📈 Practical AI Evals That Predict Business Outcomes",
+    description: "Scorecards that correlate with revenue, CSAT, and retention",
+    ctaText: "See Scorecards",
+    ctaLink: "/blog/practical-evals-scorecards-2025",
+    badge: "Featured",
+    stats: "6 min read",
+    variant: "success" as const
+  },
+  {
+    id: 13,
+    title: "🧰 Serverless Inference Cost Playbook",
+    description: "Adaptive batching, warm pools, and quality tiers without P95 pain",
+    ctaText: "Optimize",
+    ctaLink: "/blog/serverless-inference-cost-playbook-2025",
+    badge: "Guide",
+    stats: "7 min read",
     variant: "success" as const
   }
 );

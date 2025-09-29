@@ -28,11 +28,19 @@ class AccessibilityEnhancer {
   private resizeObserver?: ResizeObserver;
   private mutationObserver?: MutationObserver;
   private performanceObserver?: PerformanceObserver;
+  
+  // Stored event handlers (defined to satisfy type checks and potential cleanup)
+  private handleKeyDown(event: KeyboardEvent): void {
+    // Intentionally empty: listeners are attached inline in setup methods
+  }
 
-  // Event handler placeholders to match removeEventListener references
-  private handleKeyDown(_event: KeyboardEvent): void {}
-  private handleFocusIn(_event: FocusEvent): void {}
-  private handleFocusOut(_event: FocusEvent): void {}
+  private handleFocusIn(event: FocusEvent): void {
+    // Intentionally empty: listeners are attached inline in setup methods
+  }
+
+  private handleFocusOut(event: FocusEvent): void {
+    // Intentionally empty: listeners are attached inline in setup methods
+  }
 
   constructor() {
     this.config = this.getDefaultConfig();
@@ -52,7 +60,6 @@ class AccessibilityEnhancer {
 
   public initialize(): void {
     if (this.isInitialized || typeof window === 'undefined') return;
-    
     this.isInitialized = true;
     this.setupKeyboardNavigation();
     this.setupFocusManagement();
@@ -75,6 +82,11 @@ class AccessibilityEnhancer {
     this.resizeObserver?.disconnect();
     this.mutationObserver?.disconnect();
     this.performanceObserver?.disconnect();
+    
+    // Cleanup event listeners
+    document.removeEventListener('keydown', this.onKeyDown);
+    document.removeEventListener('click', this.onClick);
+    document.removeEventListener('focusin', this.onFocusIn);
     
     this.isInitialized = false;
     this.focusTrapElements = [];
@@ -102,59 +114,16 @@ class AccessibilityEnhancer {
   /**
    * Backward-compatible initialize alias
    */
-  // Removed duplicate initialize method to avoid no-dupe-class-members ESLint error
+  
 
   private setupKeyboardNavigation(): void {
     if (!this.config.keyboardNavigation) return;
-
-    document.addEventListener('keydown', (event) => {
-      // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && document.activeElement === document.body) {
-        const skipLink = document.querySelector('[data-skip-link]');
-        if (skipLink) {
-          (skipLink as HTMLElement).focus();
-          event.preventDefault();
-        }
-      }
-
-      // Escape key handling
-      if (event.key === 'Escape') {
-        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
-        if (modal) {
-          this.closeModal(modal as HTMLElement);
-        }
-      }
-
-      // Arrow key navigation for menus
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-        const menu = document.querySelector('[role="menu"]:focus-within') as HTMLElement | null;
-        if (menu) {
-          this.handleMenuNavigation(event as KeyboardEvent, menu);
-        }
-      }
-    });
+    document.addEventListener('keydown', this.onKeyDown);
   }
 
   private setupFocusManagement(): void {
     if (!this.config.focusManagement) return;
-
-    // Trap focus in modals
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Tab') {
-        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]') as HTMLElement | null;
-        if (modal) {
-          this.trapFocus(event as KeyboardEvent, modal);
-        }
-      }
-    });
-
-    // Restore focus after modal closes
-    document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement;
-      if (target.hasAttribute('data-close-modal')) {
-        this.restoreFocus();
-      }
-    });
+    document.addEventListener('click', this.onClick);
   }
 
   private setupAriaLabels(): void {
@@ -240,12 +209,7 @@ class AccessibilityEnhancer {
     if (typeof window === 'undefined') return;
 
     // Monitor focus changes
-    document.addEventListener('focusin', (event) => {
-      const target = event.target as HTMLElement;
-      if (target.tabIndex < 0 && target.hasAttribute('tabindex')) {
-        console.warn('Element with negative tabindex received focus:', target);
-      }
-    });
+    document.addEventListener('focusin', this.onFocusIn);
 
     // Monitor aria-label changes
     const observer = new MutationObserver((mutations: MutationRecord[]) => {

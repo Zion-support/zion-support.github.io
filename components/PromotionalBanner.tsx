@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 
 interface PromotionalBannerProps {
   message: string;
@@ -83,7 +83,7 @@ export default function PromotionalBanner({
 // Pre-configured banner variants
 export const NewContentBanner = () => (
   <PromotionalBanner
-    message="🎉 New: Practical RAG Blueprint + GenAI Guardrails Playbook"
+    message="🎉 New: AI Risk Register + Practical RAG in Production"
     ctaText="Read the latest"
     ctaLink="/blog"
     backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
@@ -115,7 +115,7 @@ export const CaseStudyBanner = () => (
 
 export const NewBlogBanner = () => (
   <PromotionalBanner
-    message="🔥 Fresh Insights: RAG Quality Playbook, Edge LLM Latency, AI Reliability Scorecards"
+    message="🔥 Fresh Insights: AI Risk Register, Practical RAG, Edge LLM Latency"
     ctaText="Browse Latest Posts"
     ctaLink="/blog"
     backgroundColor="bg-gradient-to-r from-orange-600 to-pink-600"
@@ -207,5 +207,49 @@ export const EnterpriseAIBanner = () => (
     ctaLink="/contact"
     backgroundColor="bg-gradient-to-r from-blue-600 to-indigo-600"
     autoHide={false}
+  />
+);
+
+export const CustomerSupportAIBanner = () => (
+  <PromotionalBanner
+    message="💬 New Article: AI-Powered Customer Support in 2025 - 80% Faster Response Times"
+    ctaText="Read Article"
+    ctaLink="/blog/ai-powered-customer-support-2025"
+    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const CloudNativeBanner = () => (
+  <PromotionalBanner
+    message="☁️ New Guide: Cloud-Native Architecture in 2025 - Build for Scale and Resilience"
+    ctaText="Read Guide"
+    ctaLink="/blog/cloud-native-architecture-2025"
+    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const RetailTechSuccessBanner = () => (
+  <PromotionalBanner
+    message="📚 Fresh Content: AI Risk Register & Practical RAG now live"
+    ctaText="Explore All"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
+    autoHide={true}
+    hideAfter={25}
+  />
+);
+
+export const ManufacturingIoTSuccessBanner = () => (
+  <PromotionalBanner
+    message="🏭 Success Story: Manufacturing Company Achieved 75% Efficiency Gain with IoT Automation"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/manufacturing-iot-automation"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    autoHide={true}
+    hideAfter={25}
   />
 );

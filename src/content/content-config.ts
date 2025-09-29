@@ -381,10 +381,23 @@ export const services: Service[] = [
 // Promotional Banners Configuration
 export const promotionalBanners: PromotionalBanner[] = [
   {
+    id: 'fresh-content-oct-2025',
+    message: '✨ New: Platform ROI, Secure ML Supply Chain, and Enterprise RAG v2',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog/ai-platform-roi-2025',
+    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 15,
+    active: true,
+    priority: 0
+  },
+  {
     id: 'new-blog-banner',
-    message: '🔥 New: AI Revolution 2025 Guide - Complete Business Transformation Strategy',
+    message: '🔥 New: AI Platform Engineering 2025 + Secure ML Supply Chain',
     ctaText: 'Read Now',
-    ctaLink: '/blog/ai-revolution-2025',
+    ctaLink: '/blog/ai-platform-engineering-2025',
     backgroundColor: 'bg-gradient-to-r from-orange-600 to-red-600',
     textColor: 'text-white',
     showClose: true,
@@ -457,6 +470,45 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 0,
     active: true,
     priority: 4
+  },
+  {
+    id: 'cloud-finops-guardrails-banner',
+    message: '💸 Cloud FinOps Guardrails Engineers Actually Use',
+    ctaText: 'Cut Spend',
+    ctaLink: '/blog/cloud-finops-guardrails-2025',
+    backgroundColor: 'bg-gradient-to-r from-sky-600 to-blue-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 2
+  },
+  {
+    id: 'practical-evals-2025-banner',
+    message: '📈 Practical AI Evals That Predict Business Outcomes',
+    ctaText: 'See Scorecards',
+    ctaLink: '/blog/practical-evals-scorecards-2025',
+    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 2
+  },
+  {
+    id: 'serverless-inference-costs-banner',
+    message: '🧰 Serverless Inference Cost Playbook',
+    ctaText: 'Optimize',
+    ctaLink: '/blog/serverless-inference-cost-playbook-2025',
+    backgroundColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 3
   }
 ];
 
