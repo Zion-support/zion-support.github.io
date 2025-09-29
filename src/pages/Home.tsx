@@ -18,6 +18,8 @@ import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
 import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
 import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
+import NewContent2026Banner from "../components/NewContent2026Banner";
+import NewServices2026Banner from "../components/NewServices2026Banner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
@@ -306,6 +308,20 @@ const Home = () => {
 
         {/* New Content Showcase 2025 */}
         <NewContentShowcase2025 />
+
+        {/* New Content 2026 Banner */}
+        <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
+          <div className="container mx-auto px-6">
+            <NewContent2026Banner variant="hero" showCount={6} autoRotate={true} />
+          </div>
+        </section>
+
+        {/* New Services 2026 Banner */}
+        <section className="py-20 bg-gradient-to-r from-emerald-50 to-teal-50">
+          <div className="container mx-auto px-6">
+            <NewServices2026Banner variant="premium" showCount={4} featuredOnly={true} />
+          </div>
+        </section>
 
         {/* New Services Showcase */}
         <section className="py-20 bg-white relative overflow-hidden">
