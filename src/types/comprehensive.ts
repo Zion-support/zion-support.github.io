@@ -81,6 +81,8 @@ export interface PerformanceMetrics {
     limit: number;
   };
   connection?: string;
+  overallScore?: number;
+  suggestions?: OptimizationSuggestion[];
 }
 
 // Optimization Suggestion Types
@@ -129,6 +131,24 @@ export interface SEOIssue {
   impact?: "high" | "medium" | "low";
   fix?: string;
   suggestion?: string;
+  description?: string;
+  priority?: string;
+}
+
+export interface AccessibilityMetrics {
+  totalIssues: number;
+  errors: number;
+  warnings: number;
+  info: number;
+  score: number;
+  lastChecked: number;
+  overallScore?: number;
+  issues?: Array<{
+    type: "error" | "warning" | "info";
+    message: string;
+    category?: string;
+  }>;
+  improvements?: string[];
 }
 
 // Cache Stats Types
@@ -277,4 +297,4 @@ export interface ErrorRecoveryStrategy {
   fallbackAction?: () => void;
 }
 
-// All types are already exported above
+// All types are already exported above as interfaces

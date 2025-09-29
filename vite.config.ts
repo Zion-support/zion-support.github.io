@@ -28,6 +28,7 @@ export default defineConfig({
     sourcemap: false,
     cssCodeSplit: true,
     reportCompressedSize: true,
+    assetsInlineLimit: 4096,
     rollupOptions: {
       input: {
         main: './index.html'
@@ -40,36 +41,118 @@ export default defineConfig({
       output: {
         // Manual chunk splitting for better caching
         manualChunks: (id) => {
+          // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
-            // Consolidate all vendor chunks into fewer, larger chunks
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
-              return 'react-vendor';
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor-react';
             }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@headlessui')) {
-              return 'ui-vendor';
+            if (id.includes('react-router')) {
+              return 'vendor-router';
             }
-            if (id.includes('lodash') || id.includes('date-fns') || id.includes('axios')) {
-              return 'utils-vendor';
+            if (id.includes('framer-motion')) {
+              return 'vendor-framer';
             }
-            // Group all other node_modules into a single vendor chunk
+            if (id.includes('lucide-react')) {
+              return 'vendor-icons';
+            }
+            if (id.includes('recharts')) {
+              return 'vendor-charts';
+            }
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'vendor-utils';
+            }
+            if (id.includes('axios')) {
+              return 'vendor-http';
+            }
+            if (id.includes('web-vitals')) {
+              return 'vendor-vitals';
+            }
+            if (id.includes('@types')) {
+              return 'vendor-types';
+            }
+            if (id.includes('eslint') || id.includes('prettier')) {
+              return 'vendor-dev';
+            }
+            if (id.includes('typescript')) {
+              return 'vendor-ts';
+            }
+            if (id.includes('vite')) {
+              return 'vendor-vite';
+            }
+            // Split remaining vendor by size
+            if (id.includes('node_modules')) {
+              const size = id.length;
+              if (size > 100) return 'vendor-large';
+              if (size > 50) return 'vendor-medium';
+              return 'vendor-small';
+            }
             return 'vendor';
           }
-          // Consolidate component chunks
-          if (id.includes('src/components/')) {
-            return 'components';
-          }
-          // Consolidate utility chunks
-          if (id.includes('src/utils/')) {
-            return 'utils';
-          }
-          // Consolidate hooks
-          if (id.includes('src/hooks/')) {
-            return 'hooks';
-          }
-          // Consolidate pages
+          // App chunks - more granular splitting
           if (id.includes('src/pages/')) {
             return 'pages';
           }
+          if (id.includes('src/components/')) {
+            // Split large components into separate chunks
+            if (id.includes('Advanced') || id.includes('Comprehensive')) {
+              return 'components-advanced';
+            }
+            if (id.includes('Dashboard') || id.includes('Monitor')) {
+              return 'components-dashboard';
+            }
+            if (id.includes('Performance') || id.includes('Analytics')) {
+              return 'components-performance';
+            }
+            if (id.includes('Error') || id.includes('Recovery')) {
+              return 'components-error';
+            }
+            if (id.includes('Security') || id.includes('Auth')) {
+              return 'components-security';
+            }
+            if (id.includes('SEO') || id.includes('Meta')) {
+              return 'components-seo';
+            }
+            return 'components';
+          }
+          if (id.includes('src/utils/')) {
+            // Split utils by functionality
+            if (id.includes('advanced') || id.includes('comprehensive')) {
+              return 'utils-advanced';
+            }
+            if (id.includes('performance') || id.includes('monitor')) {
+              return 'utils-performance';
+            }
+            if (id.includes('error') || id.includes('recovery')) {
+              return 'utils-error';
+            }
+            if (id.includes('security') || id.includes('auth')) {
+              return 'utils-security';
+            }
+            if (id.includes('seo') || id.includes('analytics')) {
+              return 'utils-seo';
+            }
+            if (id.includes('cache') || id.includes('storage')) {
+              return 'utils-cache';
+            }
+            if (id.includes('api') || id.includes('http')) {
+              return 'utils-api';
+            }
+            return 'utils';
+          }
+          if (id.includes('src/hooks/')) {
+            return 'hooks';
+          }
+          if (id.includes('src/styles/')) {
+            return 'styles';
+          }
+          if (id.includes('src/types/')) {
+            return 'types';
+          }
+          if (id.includes('src/constants/')) {
+            return 'constants';
+          }
+          // Default fallback
+          return 'app';
         },
         chunkFileNames: (chunkInfo) => {
           const facadeModuleId = chunkInfo.facadeModuleId
@@ -94,14 +177,25 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info'],
-        passes: 2,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 3,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        dead_code: true,
+        unused: true,
       },
       mangle: {
         safari10: true,
+        toplevel: true,
+        properties: {
+          regex: /^_/
+        }
       },
       format: {
         comments: false,
+        ascii_only: true,
       },
     },
   },

@@ -202,7 +202,6 @@ export class EnhancedAnalyticsSystem {
   public generateReport(): string {
     return `
 Analytics Report:
-===============
 Page Views: ${this.metrics.pageViews}
 Unique Visitors: ${this.metrics.uniqueVisitors}
 Session Duration: ${this.metrics.sessionDuration.toFixed(2)}s

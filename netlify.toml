@@ -4,7 +4,7 @@
   status = 200
 
 [build]
-  command = "pnpm run build:no-check"
+  command = "pnpm run build:optimized"
   publish = "dist"
   command_timeout = "30m"
 
@@ -35,7 +35,7 @@
 [build.processing.html]
   pretty_urls = true
 
-# Security headers
+# Security Headers for all pages
 [[headers]]
   for = "/*"
   [headers.values]
@@ -45,98 +45,44 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
 
-# Caching headers
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.woff2"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.woff"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.ttf"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# HTML caching
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
-
-# Service worker
-[[headers]]
-  for = "/sw.js"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
-
-[context.production.environment]
-  NODE_ENV = "production"
-  NPM_CONFIG_PRODUCTION = "false"
-  VITE_BUILD_OPTIMIZE = "true"
-
-[context.deploy-preview]
-  command = "pnpm run build:no-check"
-  [context.deploy-preview.environment]
-    NODE_ENV = "production"
-
-[context.branch-deploy]
-  command = "pnpm run build:no-check"
-  [context.branch-deploy.environment]
-    NODE_ENV = "production"
-# Advanced Performance Headers
+# Cache Headers for static assets
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
     X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
 
 [[headers]]
-  for = "*.js"
+  for = "/*.js"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
     X-Content-Type-Options = "nosniff"
     Cross-Origin-Embedder-Policy = "require-corp"
 
 [[headers]]
-  for = "*.css"
+  for = "/*.css"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
     X-Content-Type-Options = "nosniff"
 
-# Security Headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+# Netlify Plugins
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+  [plugins.inputs]
 
-# Performance Headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-    X-XSS-Protection = "1; mode=block"
+# Environment-specific configurations
+[context.production.environment]
+  NODE_ENV = "production"
+  NPM_CONFIG_PRODUCTION = "false"
+  VITE_BUILD_OPTIMIZE = "true"
+
+[context.deploy-preview]
+  command = "pnpm run build:optimized"
+  [context.deploy-preview.environment]
+    NODE_ENV = "production"
+
+[context.branch-deploy]
+  command = "pnpm run build:optimized"
+  [context.branch-deploy.environment]
+    NODE_ENV = "production"

@@ -1,10 +1,10 @@
 // Comprehensive Enhancement Suite
 // Integrates performance, security, and accessibility improvements
 
-import { performanceOptimizer } from "./performanceOptimizer";
-import { SecurityEnhancer } from "./securityEnhancer";
-import { AccessibilityEnhancer } from "./accessibilityEnhancer";
-import { ErrorHandler } from "./errorHandling";
+import { performanceOptimizer } from './performanceOptimizer';
+import { SecurityEnhancer } from './securityEnhancer';
+import { AccessibilityEnhancer } from './accessibilityEnhancer';
+import { ErrorHandler } from './errorHandling';
 
 interface EnhancementConfig {
   performance: {
@@ -92,7 +92,7 @@ export class EnhancementSuite {
         enableCodeSplitting: true,
         enableServiceWorker: true,
         enablePrefetching: true,
-        ...config.performance,
+        ...config.performance
       },
       security: {
         enableCSP: true,
@@ -103,7 +103,7 @@ export class EnhancementSuite {
         enableInputSanitization: true,
         enableRateLimiting: true,
         enableContentTypeOptions: true,
-        ...config.security,
+        ...config.security
       },
       accessibility: {
         enableARIALabels: true,
@@ -113,7 +113,7 @@ export class EnhancementSuite {
         enableFocusManagement: true,
         enableAriaEnhancements: true,
         enableMotionReduction: true,
-        ...config.accessibility,
+        ...config.accessibility
       },
       errorHandling: {
         enableGlobalErrorHandling: true,
@@ -122,14 +122,12 @@ export class EnhancementSuite {
         enableErrorReporting: true,
         enableErrorRecovery: true,
         maxErrors: 100,
-        ...config.errorHandling,
-      },
+        ...config.errorHandling
+      }
     };
   }
 
-  public static getInstance(
-    config?: Partial<EnhancementConfig>,
-  ): EnhancementSuite {
+  public static getInstance(config?: Partial<EnhancementConfig>): EnhancementSuite {
     if (!EnhancementSuite.instance) {
       EnhancementSuite.instance = new EnhancementSuite(config);
     }
@@ -137,13 +135,13 @@ export class EnhancementSuite {
   }
 
   public cleanup(): void {
-    console.log("EnhancementSuite cleanup");
+    console.log('EnhancementSuite cleanup');
   }
 
   public initialize(): void {
     // Initialize all enhancement modules
-    // performanceOptimizer is already initialized as singleton
-    this.securityEnhancer = new SecurityEnhancer();
+    // Performance optimizer is already initialized as singleton
+    this.securityEnhancer = SecurityEnhancer.getInstance();
     this.accessibilityEnhancer = new AccessibilityEnhancer();
     this.errorHandler = ErrorHandler.getInstance();
 
@@ -159,26 +157,19 @@ export class EnhancementSuite {
     this.setupIntegrations();
 
     // Log initialization
-    console.log("🚀 Enhancement Suite initialized with:", {
-      performance: Object.keys(this.config.performance).filter(
-        (key) =>
-          this.config.performance[key as keyof typeof this.config.performance],
+    console.log('🚀 Enhancement Suite initialized with:', {
+      performance: Object.keys(this.config.performance).filter(key => 
+        this.config.performance[key as keyof typeof this.config.performance]
       ),
-      security: Object.keys(this.config.security).filter(
-        (key) => this.config.security[key as keyof typeof this.config.security],
+      security: Object.keys(this.config.security).filter(key => 
+        this.config.security[key as keyof typeof this.config.security]
       ),
-      accessibility: Object.keys(this.config.accessibility).filter(
-        (key) =>
-          this.config.accessibility[
-            key as keyof typeof this.config.accessibility
-          ],
+      accessibility: Object.keys(this.config.accessibility).filter(key => 
+        this.config.accessibility[key as keyof typeof this.config.accessibility]
       ),
-      errorHandling: Object.keys(this.config.errorHandling).filter(
-        (key) =>
-          this.config.errorHandling[
-            key as keyof typeof this.config.errorHandling
-          ],
-      ),
+      errorHandling: Object.keys(this.config.errorHandling).filter(key => 
+        this.config.errorHandling[key as keyof typeof this.config.errorHandling]
+      )
     });
   }
 
@@ -187,7 +178,7 @@ export class EnhancementSuite {
     // Performance + Security: Secure performance monitoring
     // Security + Accessibility: Secure accessibility features
     // Performance + Accessibility: Optimized accessibility features
-    console.log("🔗 Cross-module integrations established");
+    console.log('🔗 Cross-module integrations established');
   }
 
   private startMetricsCollection(): void {
@@ -197,7 +188,7 @@ export class EnhancementSuite {
 
     this.metricsInterval = setInterval(() => {
       const metrics = this.getMetrics();
-      console.log("📊 System Metrics:", metrics);
+      console.log('📊 System Metrics:', metrics);
     }, 30000); // Collect metrics every 30 seconds
   }
 
@@ -215,7 +206,7 @@ export class EnhancementSuite {
         lcp: 0,
         fid: 0,
         cls: 0,
-        ttfb: 0,
+        ttfb: 0
       },
       security: {
         violationCount: 0,
@@ -223,7 +214,7 @@ export class EnhancementSuite {
         rateLimitHits: 0,
         blockedRequests: 0,
         cspViolations: 0,
-        xssAttempts: 0,
+        xssAttempts: 0
       },
       accessibility: {
         violationCount: 0,
@@ -232,13 +223,13 @@ export class EnhancementSuite {
         ariaLabelsCount: 0,
         keyboardNavigationScore: 0,
         screenReaderCompatibility: 0,
-        colorContrastScore: 0,
+        colorContrastScore: 0
       },
       errors: {
         totalErrors: 0,
         criticalErrors: 0,
-        lastError: null,
-      },
+        lastError: null
+      }
     };
   }
 

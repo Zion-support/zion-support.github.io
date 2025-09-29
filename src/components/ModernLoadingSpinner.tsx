@@ -1,116 +1,96 @@
-import React from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from 'react';
 
-interface ModernLoadingSpinnerProps {
-  size?: "sm" | "md" | "lg" | "xl";
-  variant?: "primary" | "secondary" | "accent";
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'primary' | 'secondary' | 'white' | 'gray';
   text?: string;
-  showProgress?: boolean;
+  fullScreen?: boolean;
   progress?: number;
-  className?: string;
+  showProgress?: boolean;
 }
 
-const sizeClasses = {
-  sm: "w-4 h-4",
-  md: "w-8 h-8",
-  lg: "w-12 h-12",
-  xl: "w-16 h-16",
-};
-
-const variantClasses = {
-  primary: "text-blue-600",
-  secondary: "text-gray-600",
-  accent: "text-purple-600",
-};
-
-export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
-  size = "md",
-  variant = "primary",
+export const ModernLoadingSpinner = ({
+  size = 'md',
+  color = 'primary',
   text,
+  fullScreen = false,
+  progress,
   showProgress = false,
-  progress = 0,
-  className = "",
-}) => {
-  const spinnerVariants = {
-    animate: {
-      rotate: 360,
-      transition: {
-        duration: 1,
-        repeat: Infinity,
-        ease: "linear" as const,
-      },
-    },
+}: LoadingSpinnerProps) => {
+  const [dots, setDots] = useState('');
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDots(prev => {
+        if (prev === '...') return '';
+        return prev + '.';
+      });
+    }, 500);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16',
   };
 
-  const pulseVariants = {
-    animate: {
-      scale: [1, 1.2, 1],
-      opacity: [0.5, 1, 0.5],
-      transition: {
-        duration: 1.5,
-        repeat: Infinity,
-        ease: "easeInOut" as const,
-      },
-    },
+  const colorClasses = {
+    primary: 'text-purple-600',
+    secondary: 'text-pink-600',
+    white: 'text-white',
+    gray: 'text-gray-600',
   };
 
-  return (
-    <div
-      className={`flex flex-col items-center justify-center space-y-4 ${className}`}
-    >
+  const spinner = (
+    <div className={`animate-spin rounded-full border-2 border-gray-200 border-t-current ${sizeClasses[size]} ${colorClasses[color]}`} />
+  );
+
+  const content = (
+    <div className="flex flex-col items-center justify-center space-y-4">
       <div className="relative">
-        {/* Outer rotating ring */}
-        <motion.div
-          className={`${sizeClasses[size]} border-4 border-gray-200 border-t-4 rounded-full ${variantClasses[variant]}`}
-          variants={spinnerVariants}
-          animate="animate"
-        />
-
-        {/* Inner pulsing dot */}
-        <motion.div
-          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-current rounded-full ${variantClasses[variant]}`}
-          variants={pulseVariants}
-          animate="animate"
-        />
+        {spinner}
+        {showProgress && progress !== undefined && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="text-xs font-semibold text-gray-700">
+              {Math.round(progress)}%
+            </span>
+          </div>
+        )}
       </div>
-
-      {/* Progress bar */}
-      {showProgress && (
-        <div className="w-32 bg-gray-200 rounded-full h-2 overflow-hidden">
-          <motion.div
-            className={`h-full ${variant === "primary" ? "bg-blue-600" : variant === "secondary" ? "bg-gray-600" : "bg-purple-600"}`}
-            initial={{ width: 0 }}
-            animate={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+      
+      {text && (
+        <div className="text-center">
+          <p className={`text-sm font-medium ${colorClasses[color]}`}>
+            {text}{dots}
+          </p>
+        </div>
+      )}
+      
+      {showProgress && progress !== undefined && (
+        <div className="w-48 bg-gray-200 rounded-full h-2">
+          <div
+            className="bg-gradient-to-r from-purple-600 to-pink-600 h-2 rounded-full transition-all duration-300 ease-out"
+            style={{ width: `${progress}%` }}
           />
         </div>
       )}
-
-      {/* Loading text */}
-      {text && (
-        <motion.p
-          className={`text-sm font-medium ${variantClasses[variant]} text-center`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
-          {text}
-        </motion.p>
-      )}
-
-      {/* Progress percentage */}
-      {showProgress && (
-        <motion.span
-          className={`text-xs font-semibold ${variantClasses[variant]}`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-        >
-          {Math.round(progress)}%
-        </motion.span>
-      )}
     </div>
   );
+
+  if (fullScreen) {
+    return (
+      <div className="fixed inset-0 bg-white bg-opacity-90 backdrop-blur-sm z-50 flex items-center justify-center">
+        <div className="bg-white rounded-lg shadow-xl p-8 max-w-sm w-full mx-4">
+          {content}
+        </div>
+      </div>
+    );
+  }
+
+  return content;
 };
 
 export default ModernLoadingSpinner;

@@ -717,7 +717,6 @@ class AdvancedI18n {
     
     const report = `
 I18n Report:
-===========
 Active Locale: ${metrics.activeLocale}
 Fallback Locale: ${metrics.fallbackLocale}
 Supported Locales: ${metrics.locales.join(', ')}
