@@ -4,6 +4,9 @@ import { Clock, ArrowRight } from 'lucide-react';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import { NewContent2026PromotionalBanners } from '../components/NewContent2026PromotionalBanners';
 import AIInnovation2026PromotionalBanner from '../components/AIInnovation2026PromotionalBanner';
+import UltimateContent2026Banner from '../components/UltimateContent2026Banner';
+import RevolutionaryAI2026Banner from '../components/RevolutionaryAI2026Banner';
+import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -48,6 +51,12 @@ export default function HomePage() {
       </div>
       {/* AI Innovation 2026 Promotional Banner */}
       <AIInnovation2026PromotionalBanner />
+      
+      {/* Ultimate Content 2026 Banner */}
+      <UltimateContent2026Banner />
+      
+      {/* Revolutionary AI 2026 Banner */}
+      <RevolutionaryAI2026Banner />
       
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
@@ -1864,6 +1873,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Enhanced Newsletter Signup */}
+      <EnhancedNewsletterSignup />
 
       {/* CTA Section */}
       <section className="py-20 bg-white">
