@@ -80,112 +80,69 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  }
-  ,
+  },
   {
-    slug: "llm-policy-testing-2025",
-    title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
-    description: "Automate governance with policy-as-code on every PR and online canaries.",
-    category: "AI Governance",
-    publishedAt: "2025-09-29",
+    slug: "secure-ml-supply-chain",
+    title: "Secure ML Supply Chain: Lineage, SBOMs, and Egress Controls",
+    description: "Lock down datasets, models, and inference routes with provenance and policy tests in CI/CD.",
+    category: "Security",
+    publishedAt: "2025-10-03",
     featured: true,
     readTime: "6 min read"
   },
   {
-    slug: "edge-zero-downtime-releases-2025",
-    title: "Zero‑Downtime Releases at the Edge: Patterns That Work",
-    description: "Shadow reads, budgets, and instant rollback with edge compute and KV.",
+    slug: "enterprise-rag-blueprint-v2",
+    title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, and Evals",
+    description: "Production patterns that keep responses grounded and useful with hybrid search and live evals.",
+    category: "GenAI",
+    publishedAt: "2025-10-02",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "serverless-inference-cost-playbook",
+    title: "Serverless AI Inference: The Cost Optimization Playbook",
+    description: "Cut spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",
     category: "Architecture",
     publishedAt: "2025-09-29",
     featured: false,
-    readTime: "7 min read"
-  }
-  ,
-  {
-    slug: "ai-governance-blueprint-2025",
-    title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
-    description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-29",
-    featured: true,
     readTime: "9 min read"
   },
   {
-    slug: "real-time-genai-guardrails-2025",
-    title: "Real‑Time GenAI Guardrails: Inline Filters, Canaries, and Evals",
-    description: "How to run fast with live canaries, inline moderation, and KPI‑linked evals at scale.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
+    slug: "policy-first-genai-guardrails",
+    title: "Secure GenAI: Policy‑First Guardrails That Scale",
+    description: "Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.",
+    category: "Security",
+    publishedAt: "2025-09-27",
     featured: false,
     readTime: "8 min read"
-  }
-  ,
-  {
-    slug: "ai-governance-scorecards-2026",
-    title: "AI Governance 2026: Scorecards Engineers Actually Use",
-    description: "Guardrails wired to product KPIs with PR checks and online canaries that speed teams up.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-07",
-    featured: true,
-    readTime: "7 min read"
   },
   {
-    slug: "freshness-aware-rag-v2",
-    title: "Freshness‑Aware RAG v2: TTL Budgets and Versioned Corpora",
-    description: "Keep answers accurate with freshness windows, async warmups, and KPI‑aligned evaluation.",
-    category: "GenAI",
-    publishedAt: "2025-10-07",
-    featured: true,
-    readTime: "8 min read"
-  }
-  ,
-  {
-    slug: "ai-platform-roadmaps-2026",
-    title: "AI Product Roadmaps 2026: From Bet to Business Impact",
-    description: "Outcome-led roadmaps that connect bets to scorecards, trains, and shipped value.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-06",
-    featured: true,
-    readTime: "9 min read"
+    slug: "edge-ai-latency-budgets",
+    title: "Edge AI Latency Budgets: Meet P95 Without Overbuild",
+    description: "Placement, caching, and feature flags for reliable latency when models run at the edge.",
+    category: "Edge AI",
+    publishedAt: "2025-09-26",
+    featured: false,
+    readTime: "6 min read"
   },
   {
-    slug: "genai-guardrails-blueprints-2026",
-    title: "GenAI Guardrails Blueprints: Policy Tests, Canaries, and SLAs",
-    description: "Composable guardrail patterns that scale across products without slowing teams.",
-    category: "GenAI",
-    publishedAt: "2025-10-06",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "cloud-finops-scorecards-2026",
-    title: "Cloud FinOps Scorecards: Guardrails Engineers Actually Use",
-    description: "PR gates, alerts, and budgets that cut waste 25–40% while keeping velocity high.",
+    slug: "cloud-governance-scorecards",
+    title: "Cloud Governance Scorecards: Faster Approvals, Safer Deploys",
+    description: "Policy tests, evidence capture, and automated checks that speed delivery and reduce risk.",
     category: "Cloud",
-    publishedAt: "2025-10-06",
+    publishedAt: "2025-09-25",
     featured: false,
-    readTime: "6 min read"
-  }
-  ,
-  {
-    slug: "genai-platform-blueprint-2025",
-    title: "GenAI Platform Blueprint: Shipping Weekly With Guardrails",
-    description:
-      "Reference architecture for prompts, tools, evals, and policy tests that let teams move fast safely.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "8 min read",
+    readTime: "7 min read"
   },
   {
-    slug: "cost-optimized-vector-search",
-    title: "Cost‑Optimized Vector Search: Hybrid, Caching, and Freshness",
-    description:
-      "Design decisions to cut retrieval cost 40%+ while improving answer quality with hybrid search and freshness windows.",
-    category: "Architecture",
+    slug: "genai-online-evals",
+    title: "GenAI Online Evals: Canary What Matters",
+    description: "Live evals in production with guardrails and rollback triggers tied to real outcomes.",
+    category: "GenAI",
     publishedAt: "2025-09-29",
     featured: false,
-    readTime: "6 min read",
-  }
+    readTime: "7 min read"
+  },
 ];
 
