@@ -1,16 +1,10 @@
 import React from "react";
 
-interface Props {
-  variant?: string;
-  title?: string;
-  description?: string;
-  ctaText?: string;
-  ctaLink?: string;
-  dismissible?: boolean;
-  className?: string;
-}
+const ContentPromotionBanner: React.FC<{ className?: string }> = ({ className }) => {
+  return (
+    <section className={className || "py-6"} aria-label="Content promotion banner" />
+  );
+};
 
-export default function ContentPromotionBanner(_props: Props): React.JSX.Element {
-  return <div />;
-}
+export default ContentPromotionBanner;
 

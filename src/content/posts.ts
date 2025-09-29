@@ -28,6 +28,86 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
+    slug: "ai-product-launch-checklist-2025",
+    title: "AI Product Launch Checklist: From Pilot to Production",
+    description:
+      "A pragmatic checklist for hardening pilots, proving ROI, and launching AI features safely.",
+    category: "Product",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "mlops-in-45-days",
+    title: "MLOps in 45 Days: Shipping Reliable Models Fast",
+    description:
+      "Reference pipelines, eval gates, and rollout patterns to move from notebook to prod quickly.",
+    category: "MLOps",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "practical-rag-architecture",
+    title: "Practical RAG Architecture That Scales",
+    description:
+      "Chunking, indexing, and retrieval strategies that actually improve answer quality at lower cost.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "edge-inference-patterns-2025",
+    title: "Edge Inference Patterns for Sub‑100ms Experiences",
+    description:
+      "Latency budgets, on‑device models, and caching strategies for lightning‑fast AI UX at the edge.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "ai-governance-checklist-2025",
+    title: "AI Governance Checklist 2025: Ship Fast Without Breaking Policy",
+    description:
+      "Practical guardrails, review rituals, and approval flows to keep GenAI initiatives compliant and on‑track.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "5 min read",
+  },
+  {
+    slug: "realtime-feature-flags-edge",
+    title: "Real‑Time Feature Flags at the Edge",
+    description:
+      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
+    category: "Architecture",
+    publishedAt: "2025-09-28",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "prompt-engineering-playbook-v2",
+    title: "Prompt Engineering Playbook v2: Patterns That Survive Production",
+    description:
+      "Composable prompts, eval‑driven iteration, and telemetry for robust GenAI applications.",
+    category: "GenAI",
+    publishedAt: "2025-09-27",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "platform-scorecards-that-stick",
+    title: "Platform Scorecards That Actually Drive Adoption",
+    description:
+      "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "privacy-preserving-rag-2026",
     title: "Privacy‑Preserving RAG: Redaction, Scoping, and Audit Trails",
     description: "Protect sensitive data in RAG with redaction, auth‑scoped corpora, and audit trails.",
@@ -225,7 +305,7 @@ export const posts: BlogPost[] = [
     category: "GenAI",
     publishedAt: "2025-09-29",
     featured: true,
-    readTime: "7 min read"
+    readTime: "7 min read",
   },
   {
     slug: "llm-policy-testing-2025",
@@ -233,9 +313,109 @@ export const posts: BlogPost[] = [
     description: "Automate governance with lightweight policy tests on every PR and release train.",
     category: "AI Governance",
     publishedAt: "2025-10-08",
-    featured: true,
-    readTime: "6 min read"
+    readTime: "7 min read"
   },
+  {
+    slug: "ai-roadmaps",
+    title: "Designing High-Impact AI Roadmaps",
+    description:
+      "A practical framework to align AI investments with measurable business outcomes and reduce time-to-value.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-15",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "cloud-finops-tactics",
+    title: "Cutting Cloud Spend Without Slowing Teams",
+    description:
+      "Proven tactics for right-sizing, demand shaping, and engineering-friendly guardrails that keep velocity high.",
+    category: "Cloud FinOps",
+    publishedAt: "2025-09-22",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "zero-trust-for-saas",
+    title: "Zero-Trust in Practice for SaaS",
+    description:
+      "A pragmatic guide to rolling out least-privilege, continuous verification, and blast radius controls.",
+    category: "Security",
+    publishedAt: "2025-09-25",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
+    slug: "generative-ai-enterprise",
+    title: "Generative AI in Enterprise: Real-World Success Stories",
+    description:
+      "Case studies from Fortune 500 companies showing how GenAI is transforming customer service, content creation, and business operations.",
+    category: "AI Innovation",
+    publishedAt: "2025-01-20",
+    featured: false,
+    readTime: "9 min read",
+  },
+  {
+    slug: "cloud-migration-best-practices",
+    title: "Cloud Migration Best Practices: Lessons from 100+ Projects",
+    description:
+      "Essential strategies for successful cloud migration, including risk mitigation, cost optimization, and timeline management.",
+    category: "Cloud Strategy",
+    publishedAt: "2025-01-18",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
+    slug: "cybersecurity-2025-trends",
+    title: "Cybersecurity Trends 2025: What Every CISO Needs to Know",
+    description:
+      "Emerging threats, new defense strategies, and the latest security technologies shaping the cybersecurity landscape.",
+    category: "Cybersecurity",
+    publishedAt: "2025-01-15",
+    featured: false,
+    readTime: "8 min read",
+  },
+  {
+    slug: "data-analytics-automation",
+    title: "Automating Data Analytics: From Insight to Action",
+    description:
+      "How AI-powered analytics platforms are revolutionizing business intelligence and enabling real-time decision making.",
+    category: "Data Science",
+    publishedAt: "2025-01-12",
+    featured: false,
+    readTime: "8 min read",
+  },
+  {
+    slug: "devops-automation-guide",
+    title: "The Complete Guide to DevOps Automation",
+    description:
+      "Comprehensive strategies for automating CI/CD pipelines, infrastructure management, and deployment processes.",
+    category: "DevOps",
+    publishedAt: "2025-01-10",
+    featured: false,
+    readTime: "10 min read",
+  },
+  {
+    slug: "microservices-architecture",
+    title: "Microservices Architecture: Design Patterns and Best Practices",
+    description:
+      "Essential patterns for building scalable, maintainable microservices architectures in modern applications.",
+    category: "Software Architecture",
+    publishedAt: "2025-01-08",
+    featured: false,
+    readTime: "9 min read",
+  },
+  {
+    slug: "ai-ethics-compliance",
+    title: "AI Ethics and Compliance: Building Responsible AI Systems",
+    description:
+      "Framework for developing AI systems that are fair, transparent, and compliant with emerging regulations.",
+    category: "AI Governance",
+    publishedAt: "2025-01-05",
+    featured: false,
+    readTime: "8 min read",
+  },
+  // removed conflicting branch entries
   {
     slug: "finops-scorecards-2025",
     title: "FinOps Scorecards: Guardrails Engineers Actually Use",
@@ -255,4 +435,3 @@ export const posts: BlogPost[] = [
     readTime: "9 min read"
   }
 ];
-

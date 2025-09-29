@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function LatestInsights(): React.JSX.Element {
-  return <section />;
-}
+const LatestInsights: React.FC = () => {
+  return <section aria-label="Latest insights" />;
+};
 
+export default LatestInsights;

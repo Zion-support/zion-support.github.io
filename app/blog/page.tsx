@@ -46,6 +46,15 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="AI Go-To-Market 2025: Proven Plays for Fast Adoption"
+            excerpt="Practical GTM playbook for AI products: positioning, enterprise readiness, and repeatable pipeline plays."
+            date="September 29, 2025"
+            category="Growth"
+            readTime="8 min"
+            image="📣"
+            href="/blog/ai-go-to-market-2025"
+          />
+          <BlogPost
             title="AI Risk Register: Practical Framework for Managing AI Risks"
             excerpt="Production-ready risk register across model, data, privacy, security, and ops with monitoring."
             date="September 29, 2025"

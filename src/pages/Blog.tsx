@@ -16,6 +16,7 @@ import { Helmet } from "react-helmet-async";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
 const Header = () => <header />;
 const Footer = () => <footer />;
+import { posts as contentPosts } from "../content/posts";
 
 interface BlogPost {
   id: number;
