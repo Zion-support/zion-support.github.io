@@ -44,6 +44,7 @@ export default function ContentHub() {
       articles: [
         { title: 'AI Value Stream Analytics 2026', slug: '/blog/ai-value-stream-analytics-2026', readTime: '9 min', featured: true },
         { title: 'AI Trustworthy Agents 2026', slug: '/blog/ai-trustworthy-agents-2026', readTime: '11 min', featured: true },
+        { title: 'AI Platform ROI 2025', slug: '/blog/ai-platform-roi-2025', readTime: '10 min', featured: false },
         { title: 'AI Roadmaps 2026', slug: '/blog/ai-roadmaps-2026', readTime: '8 min', featured: false },
         { title: 'AI Customer Data Platforms 2026', slug: '/blog/ai-customer-data-platforms-2026', readTime: '9 min', featured: true },
         { title: 'AI FinOps Scorecards 2025', slug: '/blog/ai-finops-scorecards-2025', readTime: '7 min', featured: false },

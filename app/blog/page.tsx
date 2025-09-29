@@ -63,13 +63,22 @@ export default function BlogPage() {
             href="/blog/secure-ml-supply-chain-2026"
           />
           <BlogPost
-            title="GenAI Routing Blueprint 2026: Latency, Quality, Cost—All Three"
-            excerpt="Multi‑model routing with contracts, evals, caching, and adaptive policies to hit SLOs at lower cost."
-            date="October 9, 2025"
-            category="GenAI"
-            readTime="9 min"
-            image="🧭"
-            href="/blog/genai-routing-blueprint-2026"
+            title="AI Platform ROI 2025: Measuring Value from Token to Revenue"
+            excerpt="Trace tokens to business value with platform scorecards that link cost, latency, and quality to revenue."
+            date="September 29, 2025"
+            category="Analytics"
+            readTime="10 min"
+            image="💹"
+            href="/blog/ai-platform-roi-2025"
+          />
+          <BlogPost
+            title="AI Governance Maturity Model 2026: From Ad Hoc to Auditable"
+            excerpt="Staged model to implement accountable AI across policy, risk, security, ops, and value."
+            date="September 29, 2025"
+            category="Governance"
+            readTime="14 min"
+            image="📈"
+            href="/blog/ai-governance-maturity-model-2026"
           />
           <BlogPost
             title="AI Agent Observability 2026: Metrics, Traces, and Guardrails"
