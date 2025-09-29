@@ -461,10 +461,15 @@ export const getRecentContent = (limit: number = 3) => {
   const allContent = [
     ...blogPosts.map(post => ({ ...post, type: 'blog' as const })),
     ...caseStudies.map(study => ({ ...study, type: 'case-study' as const })),
-    ...services.map(service => ({ ...service, type: 'service' as const }))
+    ...services.map(service => ({ ...service, type: 'service' as const, date: '1970-01-01' }))
   ];
   
   return allContent
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .sort((a, b) => {
+      const getDate = (item: typeof allContent[number]) => {
+        return 'date' in item && typeof (item as any).date === 'string' ? (item as any).date : '1970-01-01';
+      };
+      return new Date(getDate(b)).getTime() - new Date(getDate(a)).getTime();
+    })
     .slice(0, limit);
 };

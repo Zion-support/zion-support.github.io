@@ -13,17 +13,39 @@ interface SEOOptimizerProps {
   noindex?: boolean;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title,
-  description,
-  keywords,
-  canonicalUrl,
-  ogImage = '/api/placeholder/1200/630',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  noindex = false
-}) => {
+// Backwards compatible prop to support { seoData: { title, description, canonical } }
+type SEOOptimizerBackwardProps =
+  | SEOOptimizerProps
+  | { seoData: { title: string; description: string; canonical?: string } };
+
+const SEOOptimizer: React.FC<SEOOptimizerBackwardProps> = (props) => {
+  const isBackward = (p: any): p is { seoData: { title: string; description: string; canonical?: string } } =>
+    !!p && typeof p === 'object' && 'seoData' in p;
+
+  const {
+    title,
+    description,
+    keywords,
+    canonicalUrl,
+    ogImage = '/api/placeholder/1200/630',
+    ogType = 'website',
+    twitterCard = 'summary_large_image',
+    structuredData,
+    noindex = false
+  } = isBackward(props)
+    ? {
+        title: props.seoData.title,
+        description: props.seoData.description,
+        keywords: undefined,
+        canonicalUrl: props.seoData.canonical,
+        ogImage: '/api/placeholder/1200/630',
+        ogType: 'website',
+        twitterCard: 'summary_large_image',
+        structuredData: undefined,
+        noindex: false
+      }
+    : (props as SEOOptimizerProps);
+
   const siteName = 'Zion Tech Group';
   const siteUrl = 'https://ziontechgroup.com';
   const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;

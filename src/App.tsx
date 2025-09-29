@@ -48,7 +48,7 @@ const WebsiteEnhancements = (props: any) => <Placeholder name="WebsiteEnhancemen
 export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [notifications, setNotifications] = useState<import('./components/NotificationSystem').Notification[]>([]);
 
   const seoDataForOptimizer = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -73,9 +73,9 @@ export default function App(): React.JSX.Element {
           break;
       }
       try {
-        if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
-        enhancedSecurityManager.initialize();
-      }
+        if (enhancedSecurityManager && typeof (enhancedSecurityManager as any).initialize === 'function') {
+          (enhancedSecurityManager as any).initialize();
+        }
       
       // Initialize new performance and accessibility enhancements
       initializePerformanceEnhancements();
