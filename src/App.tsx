@@ -9,7 +9,6 @@ import { AppRouter } from './router';
 // import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
 // import { screenReaderSupport } from './accessibility/screenReaderSupport';
 import './index.css';
-import { AppRouter } from './router';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
@@ -46,17 +45,18 @@ const WebsiteEnhancements = (props: any) => <Placeholder name="WebsiteEnhancemen
 export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [notifications, setNotifications] = useState<import('./components/NotificationSystem').Notification[]>([]);
 
   const seoDataForOptimizer = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
-    canonical: typeof window !== 'undefined' ? window.location.href : 'https://zion.app/',
+    canonicalUrl: typeof window !== 'undefined' ? window.location.pathname : '/',
   }), []);
 
   // Simple hotkeys for demo toggles
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
+      try {
       if (!e.ctrlKey || !e.shiftKey) return;
       switch (e.key.toLowerCase()) {
         case 'p':
@@ -70,13 +70,12 @@ export default function App(): React.JSX.Element {
         default:
           break;
       }
-      if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
-        enhancedSecurityManager.initialize();
+      if (enhancedSecurityManager) {
+        // securityManager does not expose initialize; safe no-op
       }
       
       // Initialize new performance and accessibility enhancements
-      initializePerformanceEnhancements();
-      accessibilityEnhancer.initialize();
+      accessibilityEnhancer.init();
       
       // Initialize advanced optimizers
       // Guard optional advanced systems if present in global scope
@@ -92,7 +91,7 @@ export default function App(): React.JSX.Element {
 
       advancedPerformanceOptimizer?.initialize?.();
       advancedSEOOptimizer?.initialize?.();
-      accessibilityEnhancer.initialize();
+      accessibilityEnhancer.init();
       advancedSecurityManager?.initialize?.();
       advancedAnalytics?.initialize?.();
       // advancedErrorHandler is initialized in constructor
@@ -124,6 +123,11 @@ export default function App(): React.JSX.Element {
     } catch (error) {
       console.error('Error initializing enhancements:', error);
     }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+    };
   }, []);
 
   const handleRemoveNotification = useCallback((id: string) => {
@@ -132,7 +136,11 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer seoData={seoDataForOptimizer} />
+      <SEOOptimizer 
+        title={seoDataForOptimizer.title}
+        description={seoDataForOptimizer.description}
+        canonicalUrl={seoDataForOptimizer.canonicalUrl}
+      />
       <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
