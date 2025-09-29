@@ -225,5 +225,95 @@ export const posts: BlogPost[] = [
     category: "AI Governance",
     publishedAt: "2025-01-05",
   },
+  {
+    slug: "ai-powered-customer-experience-2025",
+    title: "AI-Powered Customer Experience: The Next Frontier in 2025",
+    description:
+      "How AI is revolutionizing customer experience with predictive personalization, real-time support, and intelligent automation.",
+    category: "Customer Experience",
+    publishedAt: "2025-01-22",
+    featured: true,
+    readTime: "11 min read",
+  },
+  {
+    slug: "blockchain-enterprise-adoption",
+    title: "Blockchain in Enterprise: Real-World Adoption Stories",
+    description:
+      "Case studies from Fortune 500 companies showing how blockchain is transforming supply chain, finance, and digital identity.",
+    category: "Blockchain",
+    publishedAt: "2025-01-21",
+    featured: false,
+    readTime: "9 min read",
+  },
+  {
+    slug: "iot-security-2025-comprehensive-guide",
+    title: "IoT Security 2025: A Comprehensive Guide for Businesses",
+    description:
+      "Complete security framework for IoT deployments including device authentication, network segmentation, and threat monitoring.",
+    category: "IoT Security",
+    publishedAt: "2025-01-20",
+    featured: true,
+    readTime: "13 min read",
+  },
+  {
+    slug: "5g-business-applications-2025",
+    title: "5G Business Applications: Transforming Industries in 2025",
+    description:
+      "Explore how 5G is enabling new business models in healthcare, manufacturing, retail, and smart cities.",
+    category: "5G Technology",
+    publishedAt: "2025-01-19",
+    featured: false,
+    readTime: "10 min read",
+  },
+  {
+    slug: "digital-transformation-roadmap-2025",
+    title: "Digital Transformation Roadmap: A Strategic Guide for 2025",
+    description:
+      "Step-by-step framework for successful digital transformation including technology selection, change management, and ROI measurement.",
+    category: "Digital Strategy",
+    publishedAt: "2025-01-18",
+    featured: true,
+    readTime: "12 min read",
+  },
+  {
+    slug: "ai-chatbot-implementation-best-practices",
+    title: "AI Chatbot Implementation: Best Practices for Maximum ROI",
+    description:
+      "Learn how to implement AI chatbots that deliver real business value, from design to deployment and optimization.",
+    category: "AI & Automation",
+    publishedAt: "2025-01-17",
+    featured: false,
+    readTime: "8 min read",
+  },
+  {
+    slug: "cloud-native-architecture-patterns",
+    title: "Cloud-Native Architecture Patterns for Modern Applications",
+    description:
+      "Essential patterns for building scalable, resilient cloud-native applications using microservices, containers, and serverless.",
+    category: "Cloud Architecture",
+    publishedAt: "2025-01-16",
+    featured: false,
+    readTime: "14 min read",
+  },
+  {
+    slug: "machine-learning-model-deployment",
+    title: "Machine Learning Model Deployment: Production-Ready Strategies",
+    description:
+      "Best practices for deploying ML models in production environments, including monitoring, versioning, and scaling strategies.",
+    category: "Machine Learning",
+    publishedAt: "2025-01-15",
+    featured: false,
+    readTime: "11 min read",
+  },
+  {
+    slug: "cybersecurity-automation-2025",
+    title: "Cybersecurity Automation: Reducing Response Time by 90%",
+    description:
+      "How automated security tools and AI-powered threat detection are revolutionizing cybersecurity operations.",
+    category: "Cybersecurity",
+    publishedAt: "2025-01-14",
+    featured: true,
+    readTime: "9 min read",
+  },
 ];
 

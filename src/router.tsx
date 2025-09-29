@@ -6,6 +6,8 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import AIMicroSAAS from './pages/AIMicroSAAS';
 import Blog from './pages/Blog';
+import CaseStudies from './pages/CaseStudies';
+import Resources from './pages/Resources';
 
 export const AppRouter: React.FC = () => {
   return (
@@ -16,6 +18,8 @@ export const AppRouter: React.FC = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/ai-micro-saas" element={<AIMicroSAAS />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/case-studies" element={<CaseStudies />} />
+      <Route path="/resources" element={<Resources />} />
     </Routes>
   );
 };
