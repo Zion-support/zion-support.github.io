@@ -4,28 +4,40 @@
  */
 
 export interface AccessibilityIssue {
+  id: string;
   type: string;
-  element: Element;
+  element: string;
   message: string;
+  suggestion: string;
   severity: 'low' | 'medium' | 'high';
+  category: string;
+}
+
+export interface AccessibilityMetrics {
+  totalIssues: number;
+  errors: number;
+  warnings: number;
+  info: number;
+  score: number;
+  lastChecked: number;
 }
 
 export class AccessibilityEnhancer {
   private issues: AccessibilityIssue[] = [];
   private observer: MutationObserver | null = null;
+  private isMonitoring: boolean = false;
 
   constructor() {
     this.initialize();
   }
 
   private initialize(): void {
-    // Initialize accessibility monitoring
+    this.isMonitoring = true;
     this.setupMutationObserver();
     this.addKeyboardNavigation();
     this.enhanceFormElements();
   }
 
-<<<<<<< HEAD
   private setupMutationObserver(): void {
     this.observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
@@ -46,7 +58,6 @@ export class AccessibilityEnhancer {
   }
 
   private addKeyboardNavigation(): void {
-    // Add keyboard navigation support
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Tab') {
         this.highlightFocusedElement();
@@ -55,7 +66,6 @@ export class AccessibilityEnhancer {
   }
 
   private enhanceFormElements(): void {
-    // Enhance form elements for accessibility
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
       const inputs = form.querySelectorAll('input, textarea, select');
@@ -71,7 +81,6 @@ export class AccessibilityEnhancer {
   }
 
   private checkAccessibility(element: Element): void {
-    // Check for common accessibility issues
     this.checkImageAltText(element);
     this.checkFormLabels(element);
     this.checkHeadingStructure(element);
@@ -80,14 +89,104 @@ export class AccessibilityEnhancer {
 
   private checkImageAltText(element: Element): void {
     const images = element.querySelectorAll('img');
-    images.forEach(img => {
-      if (!img.getAttribute('alt')) {
-        this.issues.push({
-          type: 'missing-alt-text',
-          element: img,
-          message: 'Image is missing alt text',
-          severity: 'high'
-=======
+    images.forEach((img, index) => {
+      if (!img.getAttribute('alt') && !img.getAttribute('aria-label')) {
+        this.addIssue({
+          id: `alt-text-${index}`,
+          type: 'error',
+          element: img.tagName,
+          message: 'Image missing alt text',
+          suggestion: 'Add descriptive alt text or aria-label',
+          severity: 'high',
+          category: 'aria'
+        });
+      }
+    });
+  }
+
+  private checkFormLabels(element: Element): void {
+    const inputs = element.querySelectorAll('input, textarea, select');
+    inputs.forEach((input, index) => {
+      if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
+        const label = document.querySelector(`label[for="${input.id}"]`);
+        if (!label) {
+          this.addIssue({
+            id: `form-label-${index}`,
+            type: 'error',
+            element: input.tagName,
+            message: 'Form element is missing a label',
+            suggestion: 'Add a label or aria-label',
+            severity: 'high',
+            category: 'forms'
+          });
+        }
+      }
+    });
+  }
+
+  private checkHeadingStructure(element: Element): void {
+    const headings = element.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let lastLevel = 0;
+    
+    headings.forEach((heading, index) => {
+      const level = parseInt(heading.tagName.charAt(1));
+      if (level > lastLevel + 1) {
+        this.addIssue({
+          id: `heading-structure-${index}`,
+          type: 'warning',
+          element: heading.tagName,
+          message: 'Heading level skipped',
+          suggestion: 'Use sequential heading levels',
+          severity: 'medium',
+          category: 'semantics'
+        });
+      }
+      lastLevel = level;
+    });
+  }
+
+  private checkColorContrast(element: Element): void {
+    const textElements = element.querySelectorAll('p, span, div, a, button');
+    textElements.forEach((el, index) => {
+      const styles = window.getComputedStyle(el);
+      const color = styles.color;
+      const backgroundColor = styles.backgroundColor;
+      
+      if (color && backgroundColor) {
+        if (this.hasLowContrast(color, backgroundColor)) {
+          this.addIssue({
+            id: `contrast-${index}`,
+            type: 'warning',
+            element: el.tagName,
+            message: 'Text may have insufficient color contrast',
+            suggestion: 'Increase color contrast to meet WCAG guidelines',
+            severity: 'medium',
+            category: 'color'
+          });
+        }
+      }
+    });
+  }
+
+  private hasLowContrast(color: string, backgroundColor: string): boolean {
+    // Simplified contrast check - would need proper WCAG calculation in production
+    return false; // Placeholder
+  }
+
+  private highlightFocusedElement(): void {
+    const focused = document.activeElement;
+    if (focused) {
+      focused.setAttribute('data-keyboard-focused', 'true');
+      setTimeout(() => {
+        focused.removeAttribute('data-keyboard-focused');
+      }, 2000);
+    }
+  }
+
+  private addIssue(issue: AccessibilityIssue): void {
+    this.issues.push(issue);
+  }
+
   /**
    * Stop accessibility monitoring
    */
@@ -129,136 +228,6 @@ export class AccessibilityEnhancer {
   }
 
   /**
-   * Scan for accessibility issues
-   */
-  scanForIssues(): void {
-    this.issues = [];
-
-    // Check for missing alt text
-    this.checkAltText();
-
-    // Check for missing ARIA labels
-    this.checkAriaLabels();
-
-    // Check for color contrast
-    this.checkColorContrast();
-
-    // Check for keyboard navigation
-    this.checkKeyboardNavigation();
-
-    // Check for semantic HTML
-    this.checkSemanticHTML();
-
-    // Check for focus management
-    this.checkFocusManagement();
-  }
-
-  /**
-   * Check for missing alt text
-   */
-  private checkAltText(): void {
-    const images = document.querySelectorAll("img");
-    images.forEach((img, index) => {
-      if (!img.alt && !img.getAttribute("aria-label")) {
-        this.addIssue({
-          id: `alt-text-${index}`,
-          type: "error",
-          element: img.tagName,
-          message: "Image missing alt text",
-          suggestion: "Add descriptive alt text or aria-label",
-          severity: "high",
-          category: "aria",
->>>>>>> be2cbcf051275c419d2c81e49d4d41f7252f5fa0
-        });
-      }
-    });
-  }
-
-<<<<<<< HEAD
-  private checkFormLabels(element: Element): void {
-    const inputs = element.querySelectorAll('input, textarea, select');
-    inputs.forEach(input => {
-      if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
-        const label = document.querySelector(`label[for="${input.id}"]`);
-        if (!label) {
-          this.issues.push({
-            type: 'missing-form-label',
-            element: input,
-            message: 'Form element is missing a label',
-            severity: 'high'
-=======
-  /**
-   * Check for missing ARIA labels
-   */
-  private checkAriaLabels(): void {
-    const interactiveElements = document.querySelectorAll(
-      'button, input, select, textarea, [role="button"]',
-    );
-    interactiveElements.forEach((element, index) => {
-      const hasLabel =
-        element.getAttribute("aria-label") ||
-        element.getAttribute("aria-labelledby") ||
-        element.getAttribute("title") ||
-        (element as HTMLElement).textContent?.trim();
-
-      if (!hasLabel) {
-        this.addIssue({
-          id: `aria-label-${index}`,
-          type: "warning",
-          element: element.tagName,
-          message: "Interactive element missing accessible name",
-          suggestion: "Add aria-label, aria-labelledby, or visible text",
-          severity: "medium",
-          category: "aria",
-        });
-      }
-    });
-  }
-
-  /**
-   * Check color contrast
-   */
-  private checkColorContrast(): void {
-    const elements = document.querySelectorAll("*");
-    elements.forEach((element, index) => {
-      const styles = window.getComputedStyle(element);
-      const color = styles.color;
-      const backgroundColor = styles.backgroundColor;
-
-      if (
-        color &&
-        backgroundColor &&
-        color !== "rgba(0, 0, 0, 0)" &&
-        backgroundColor !== "rgba(0, 0, 0, 0)"
-      ) {
-        const contrast = this.calculateContrast(color, backgroundColor);
-        if (contrast < 4.5) {
-          this.addIssue({
-            id: `contrast-${index}`,
-            type: "warning",
-            element: element.tagName,
-            message: `Low color contrast: ${contrast.toFixed(2)}:1`,
-            suggestion: "Increase color contrast to at least 4.5:1",
-            severity: "medium",
-            category: "color",
->>>>>>> be2cbcf051275c419d2c81e49d4d41f7252f5fa0
-          });
-        }
-      }
-    });
-  }
-
-
-<<<<<<< HEAD
-  private checkColorContrast(element: Element): void {
-    // Basic color contrast check (simplified)
-    const textElements = element.querySelectorAll('p, span, div, a, button');
-    textElements.forEach(el => {
-      const styles = window.getComputedStyle(el);
-      const color = styles.color;
-      const backgroundColor = styles.backgroundColor;
-=======
-  /**
    * Calculate accessibility score (0-100)
    */
   private calculateAccessibilityScore(): number {
@@ -280,13 +249,8 @@ export class AccessibilityEnhancer {
    * Fix common accessibility issues automatically
    */
   fixCommonIssues(): void {
-    // Add skip links
     this.addSkipLinks();
-
-    // Add ARIA landmarks
     this.addAriaLandmarks();
-
-    // Improve focus management
     this.improveFocusManagement();
   }
 
@@ -349,61 +313,14 @@ export class AccessibilityEnhancer {
    * Improve focus management
    */
   private improveFocusManagement(): void {
-    // Add focus indicators
     const style = document.createElement("style");
     style.textContent = `
       *:focus {
         outline: 2px solid #005fcc !important;
         outline-offset: 2px !important;
       }
->>>>>>> be2cbcf051275c419d2c81e49d4d41f7252f5fa0
-      
-      if (color && backgroundColor) {
-        // Simplified contrast check - in real implementation would use WCAG formulas
-        if (this.hasLowContrast(color, backgroundColor)) {
-          this.issues.push({
-            type: 'low-contrast',
-            element: el,
-            message: 'Text may have insufficient color contrast',
-            severity: 'medium'
-          });
-        }
-      }
-    });
-  }
-
-  private hasLowContrast(color: string, backgroundColor: string): boolean {
-    // Simplified contrast check - would need proper WCAG calculation in production
-    return false; // Placeholder
-  }
-
-  private highlightFocusedElement(): void {
-    const focused = document.activeElement;
-    if (focused) {
-      focused.setAttribute('data-keyboard-focused', 'true');
-      setTimeout(() => {
-        focused.removeAttribute('data-keyboard-focused');
-      }, 2000);
-    }
-  }
-
-  public getIssues(): AccessibilityIssue[] {
-    return this.issues;
-  }
-
-  public getAccessibilityScore(): number {
-    if (this.issues.length === 0) return 100;
-    
-    const totalPenalty = this.issues.reduce((penalty, issue) => {
-      switch (issue.severity) {
-        case 'high': return penalty + 10;
-        case 'medium': return penalty + 5;
-        case 'low': return penalty + 2;
-        default: return penalty;
-      }
-    }, 0);
-    
-    return Math.max(0, 100 - totalPenalty);
+    `;
+    document.head.appendChild(style);
   }
 
   public destroy(): void {
