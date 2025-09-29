@@ -663,5 +663,36 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "7 min read",
   },
+  // Sept 30, 2025 fresh additions
+  {
+    slug: "ai-sales-copilot-playbook-2025",
+    title: "AI Sales Copilot: A 90‑Day Playbook for Revenue Teams",
+    description:
+      "Proven workflows, guardrails, and KPIs to deploy an AI copilot that actually lifts win‑rates.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "cost-aware-ml-platforms-2025",
+    title: "Cost‑Aware ML Platforms: Ship Faster Without Blowing the Budget",
+    description:
+      "Budgets, autoscaling, and policy checks that keep training and inference spend under control.",
+    category: "MLOps",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
+    slug: "ai-security-red-teaming-checklist",
+    title: "AI Security Red‑Teaming: The Field Checklist",
+    description:
+      "End‑to‑end test plan for prompt injection, data exfil, jailbreaks, and supply‑chain risks.",
+    category: "Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
 ];
 

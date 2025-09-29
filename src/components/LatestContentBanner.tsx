@@ -50,6 +50,17 @@ const contentHighlights = [
     stats: "15 min read",
     variant: "premium" as const
   }
+  ,
+  {
+    id: 5,
+    title: "🧭 PLAYBOOK: AI Sales Copilot (90‑Day Plan)",
+    description: "Workflows, guardrails, and KPIs to lift win‑rates with an AI copilot",
+    ctaText: "Read Playbook",
+    ctaLink: "/blog/ai-sales-copilot-playbook-2025",
+    badge: "New",
+    stats: "8 min read",
+    variant: "info" as const
+  }
 ];
 
 export const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
