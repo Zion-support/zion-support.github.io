@@ -787,14 +787,6 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 9,
   },
   {
-=======
-      "Step-by-step guide to implementing Zero Trust security architecture without breaking your existing workflows.",
-    category: "Security",
-    date: "2025-01-15",
-    readMinutes: 9,
-  },
-  {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0e01
     id: "ai-virtual-assistant-roi",
     title: "AI Virtual Assistants: Measuring ROI and Business Impact",
     summary:
@@ -885,6 +877,8 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-b023
     id: "ai-automation-roi-calculator",
     title: "AI Automation ROI Calculator: Measure Your Business Impact",
     summary:
