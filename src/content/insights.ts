@@ -45,18 +45,56 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 7,
   },
   {
+    id: "ai-reliability-scorecards",
+    title: "AI Reliability Scorecards: What to Track Weekly",
+    summary:
+      "Outcome-linked metrics, eval pass rates, and incident burndown that keep quality high.",
+    category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "rag-quality-playbook-2025",
+    title: "RAG Quality Playbook 2025: Freshness, Grounding, and Evals",
+    summary:
+      "Combat staleness, leakage, and hallucinations with practical retrieval and eval patterns.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-llm-latency-budgeting",
+    title: "Edge LLMs: A Practical Guide to Sub‑100ms Latency Budgets",
+    summary:
+      "Where the milliseconds go and how to claw them back across client, edge, and model.",
+    category: "Edge Computing",
+    date: "2025-09-30",
+    readMinutes: 4,
+  },
+  {
+    id: "serverless-warm-pools-playbook",
+    title: "Serverless Warm Pools: Cut Cold Starts, Not Corners",
+    summary:
+      "Adaptive warmers, concurrency hints, and budgets to keep P95 low without overspend.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 4,
+  },
+  {
     id: "governance-policy-testing",
     title: "Governance for AI: Policy Testing That Scales",
     summary:
       "Pair signals, context windows, and human feedback to harden detections and accelerate triage.",
     category: "Security",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
     id: "edge-observability-blueprint",
     title: "Edge Observability Blueprint: Sub‑100ms Reliability",
     summary:
       "Latency budgets, client ↔ edge traces, and error budgets that keep UX snappy.",
     category: "Observability",
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9d64
     date: "2025-09-30",
     readMinutes: 5,
   },
@@ -132,7 +170,6 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-10-01",
     readMinutes: 6,
   },
-<<<<<<< HEAD
   {
     id: "platform-golden-paths-insight",
     title: "Golden Paths That Teams Actually Use",
@@ -242,7 +279,6 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-09-29",
     readMinutes: 8,
   },
-=======
   // Fresh insights
   {
     id: "secure-ml-supply-chain",
@@ -262,6 +298,5 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-10-01",
     readMinutes: 5,
   },
->>>>>>> cursor/create-and-deploy-new-content-a3e4
 ];
 
