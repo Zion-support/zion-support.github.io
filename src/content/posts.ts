@@ -67,7 +67,6 @@ export const posts: BlogPost[] = [
     category: "AI Strategy",
     publishedAt: "2025-09-29",
     featured: true,
-<<<<<<< HEAD
     readTime: "8 min",
   },
   {
@@ -99,9 +98,8 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-27",
     featured: false,
     readTime: "8 min",
-=======
-    readTime: "7 min read"
   },
+  // New posts
   {
     slug: "enterprise-rag-blueprint-2025",
     title: "Enterprise RAG Blueprint v2: Freshness, Security, and Evals",
@@ -109,7 +107,7 @@ export const posts: BlogPost[] = [
     category: "GenAI",
     publishedAt: "2025-10-04",
     featured: true,
-    readTime: "9 min read"
+    readTime: "9 min",
   },
   {
     slug: "finops-scorecards-2025",
@@ -118,8 +116,34 @@ export const posts: BlogPost[] = [
     category: "Cloud",
     publishedAt: "2025-10-04",
     featured: true,
-    readTime: "6 min read"
->>>>>>> cursor/create-and-deploy-new-content-ccd1
+    readTime: "6 min",
+  },
+  {
+    slug: "ai-platform-roi-2025",
+    title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
+    description: "A pragmatic framework to tie platform capabilities to adoption, golden paths, reliability SLOs, and outcomes.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "7 min",
+  },
+  {
+    slug: "secure-ml-supply-chain-2025",
+    title: "Secure ML Supply Chain: From SBOMs to Model Lineage",
+    description: "Practical controls for datasets, models, and inference routes to prevent tampering and drift.",
+    category: "Security",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "6 min",
+  },
+  {
+    slug: "edge-cdn-ml-personalization-2025",
+    title: "Edge CDN + On‑Device ML: Personalization Under 100ms",
+    description: "Combine edge KV, signed configs, and tiny models for private, real‑time personalization.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min",
   }
 ];
 

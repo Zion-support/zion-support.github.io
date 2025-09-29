@@ -381,6 +381,19 @@ export const services: Service[] = [
 // Promotional Banners Configuration
 export const promotionalBanners: PromotionalBanner[] = [
   {
+    id: 'fresh-content-oct-2025',
+    message: '✨ New: Platform ROI, Secure ML Supply Chain, and Enterprise RAG v2',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog/ai-platform-roi-2025',
+    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 15,
+    active: true,
+    priority: 0
+  },
+  {
     id: 'new-blog-banner',
     message: '🔥 New: AI Revolution 2025 Guide - Complete Business Transformation Strategy',
     ctaText: 'Read Now',
