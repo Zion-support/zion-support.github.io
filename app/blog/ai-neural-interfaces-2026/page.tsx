@@ -88,7 +88,7 @@ export default function AINeuralInterfaces2026() {
                 Control computers, smartphones, and IoT devices through direct neural commands with sub-100ms latency.
               </p>
               <div className="bg-purple-50 p-3 rounded-lg">
-                <div className="text-sm text-purple-800 font-semibold">Latency: <100ms</div>
+                <div className="text-sm text-purple-800 font-semibold">Latency: &lt;100ms</div>
                 <div className="text-xs text-purple-600">Faster than touch input</div>
               </div>
             </div>

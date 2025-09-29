@@ -169,7 +169,7 @@ export default function AIEthicalFramework2026() {
           <div className="bg-gray-50 p-6 rounded-lg">
             <h4 className="font-semibold mb-3">Bias and Fairness</h4>
             <ul className="space-y-2 text-sm">
-              <li>• Bias incident rate: <5%</li>
+              <li>• Bias incident rate: &lt;5%</li>
               <li>• Fairness score: 85%+</li>
               <li>• Demographic parity: 90%+</li>
               <li>• Equal opportunity: 90%+</li>

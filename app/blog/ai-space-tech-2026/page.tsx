@@ -279,8 +279,8 @@ export default function AISpaceTech2026() {
                   </p>
                   <div className="bg-blue-50 p-3 rounded-lg">
                     <div className="text-sm text-blue-800">
-                      <strong>Recovery Time:</strong> <5 minutes<br/>
-                      <strong>Coverage Loss:</strong> <1% during failures
+                      <strong>Recovery Time:</strong> &lt;5 minutes<br/>
+                      <strong>Coverage Loss:</strong> &lt;1% during failures
                     </div>
                   </div>
                 </div>

@@ -85,7 +85,6 @@ export const posts: BlogPost[] = [
     slug: "ai-breach-drills-2026",
     title: "AI Breach Drills 2026: Practicing Safe Autonomy Under Budget",
     description: "Run realistic breach simulations with budgeted actions, approval gates, and instant rollback.",
->>>>>>> chore/add-sept-29-content
     category: "Security",
     publishedAt: "2025-10-13",
     featured: true,

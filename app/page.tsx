@@ -8,7 +8,6 @@ import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
-import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
 
@@ -954,7 +953,6 @@ export default function HomePage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">Stay ahead with our latest content, case studies, and AI innovations</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link href="/blog/agentic-workflow-orchestration-2026" className="group">
             <Link href="/case-studies/ai-retail-automation-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -988,7 +986,9 @@ export default function HomePage() {
                 </p>
                 <div className="flex items-center text-purple-600 font-semibold">
                   Read Complete Guide →
-=======
+                </div>
+              </div>
+            </Link>
             <Link href="/blog/ai-evaluation-scorecards-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -1051,7 +1051,6 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-=======
             <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -1181,6 +1180,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
+            <Link href="/blog/ai-enterprise-automation-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">

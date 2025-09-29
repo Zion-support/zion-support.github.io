@@ -237,7 +237,7 @@ export default function AIMultimodalEnterpriseIntegration2026() {
             <ul className="space-y-2 text-sm">
               <li>• Automation efficiency: 95%+</li>
               <li>• Processing time reduction: 80%+</li>
-              <li>• Manual intervention rate: <5%</li>
+              <li>• Manual intervention rate: &lt;5%</li>
               <li>• System uptime: 99.9%+</li>
             </ul>
           </div>
@@ -245,7 +245,7 @@ export default function AIMultimodalEnterpriseIntegration2026() {
             <h4 className="font-semibold mb-3">Accuracy and Quality</h4>
             <ul className="space-y-2 text-sm">
               <li>• Cross-modal accuracy: 90%+</li>
-              <li>• False positive rate: <2%</li>
+              <li>• False positive rate: &lt;2%</li>
               <li>• User satisfaction: 85%+</li>
               <li>• Error reduction: 75%+</li>
             </ul>
