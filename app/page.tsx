@@ -58,7 +58,7 @@ export default function HomePage() {
               Explore Our Services
             </Link>
             <a
-              href="tel:+13024640950"
+              to="tel:+13024640950"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
               Call +1 302 464 0950
@@ -103,7 +103,7 @@ export default function HomePage() {
               description="Transform data into actionable insights with predictive modeling and real-time dashboards"
               price="$199/month"
               features={['Predictive Analytics', 'Real-time Dashboards', 'Data Integration']}
-              href="/services/ai-data-analytics"
+              to="/services/ai-data-analytics"
               popular={true}
             />
             <FeaturedServiceCard
@@ -111,7 +111,7 @@ export default function HomePage() {
               description="Automate business processes with intelligent workflow design and smart triggers"
               price="$149/month"
               features={['Process Automation', 'Smart Triggers', 'Performance Monitoring']}
-              href="/services/ai-workflow-automation"
+              to="/services/ai-workflow-automation"
               popular={false}
             />
             <FeaturedServiceCard
@@ -119,7 +119,7 @@ export default function HomePage() {
               description="24/7 intelligent customer support with natural language processing"
               price="$99/month"
               features={['24/7 Support', 'Multi-channel', 'Personalized Responses']}
-              href="/services/ai-virtual-assistant"
+              to="/services/ai-virtual-assistant"
               popular={false}
             />
             <FeaturedServiceCard
@@ -127,7 +127,7 @@ export default function HomePage() {
               description="Seamless migration to cloud infrastructure with zero downtime"
               price="$2,999"
               features={['Zero Downtime', 'Security Compliance', 'Cost Optimization']}
-              href="/services/cloud-migration"
+              to="/services/cloud-migration"
               popular={false}
             />
             <FeaturedServiceCard
@@ -135,7 +135,7 @@ export default function HomePage() {
               description="Automate CI/CD pipelines and infrastructure management"
               price="$399/month"
               features={['CI/CD Pipelines', 'Infrastructure as Code', 'Auto-scaling']}
-              href="/services/devops-automation"
+              to="/services/devops-automation"
               popular={false}
             />
             <FeaturedServiceCard
@@ -143,7 +143,7 @@ export default function HomePage() {
               description="Advanced threat detection and zero-trust security architecture"
               price="$599/month"
               features={['Threat Detection', 'Zero-trust Architecture', 'Compliance']}
-              href="/services/cybersecurity-consulting"
+              to="/services/cybersecurity-consulting"
               popular={false}
             />
           </div>
@@ -478,7 +478,7 @@ export default function HomePage() {
               </div>
               <div className="mt-6 pt-4 border-t border-white/20">
                 <Link
-                  href="/blog"
+                  to="/blog"
                   className="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
                 >
                   View All Content →
@@ -505,13 +505,13 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+13024640950"
+              to="tel:+13024640950"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg"
             >
               Call +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com"
+              to="mailto:kleber@ziontechgroup.com"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
               Get Free Consultation
@@ -532,14 +532,14 @@ function FeaturedServiceCard({
   description,
   price,
   features,
-  href,
+  to,
   popular = false,
 }: {
   title: string;
   description: string;
   price: string;
   features: string[];
-  href: string;
+  to: string;
   popular?: boolean;
 }) {
   return (
@@ -565,7 +565,7 @@ function FeaturedServiceCard({
         ))}
       </ul>
       <Link
-        to={href}
+        to={to}
         className={`block w-full text-center py-2 px-4 rounded-lg font-semibold transition-colors ${
           popular
             ? 'bg-blue-600 text-white hover:bg-blue-700'
