@@ -17,6 +17,8 @@ import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import PerformanceMetrics from './components/PerformanceMetrics';
 import SEOOptimizer from './components/SEOOptimizer';
 import ComprehensiveSystemDashboard from './components/ComprehensiveSystemDashboard';
 import './index.css';
@@ -28,6 +30,8 @@ export default function App(): React.JSX.Element {
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+  const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
+  const [showPerformanceMetrics, setShowPerformanceMetrics] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
