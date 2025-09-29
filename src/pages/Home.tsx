@@ -361,7 +361,7 @@ const Home = () => {
         </section>
 
         {/* Latest Insights Section */}
-        <LatestInsights />
+        {/* <LatestInsights /> */}
 
         {/* Features Section */}
         <section className="container mx-auto px-6 py-20 relative z-10">
@@ -655,7 +655,7 @@ const Home = () => {
         {/* <ModernFeatures /> */}
 
         {/* Content Value Testimonials */}
-        <ContentValueTestimonials />
+        {/* <ContentValueTestimonials /> */}
 
         {/* Testimonials and Newsletter sections temporarily removed due to missing components */}
 

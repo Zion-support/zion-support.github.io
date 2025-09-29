@@ -131,7 +131,7 @@ export default function App(): React.JSX.Element {
   }, []);
 
   return (
-    <EnhancedErrorBoundary>
+    <React.Fragment>
       {/* SEO and analytics components temporarily disabled due to missing modules */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
@@ -162,6 +162,6 @@ export default function App(): React.JSX.Element {
 
         <div />
       </div>
-    </EnhancedErrorBoundary>
+    </React.Fragment>
   );
 }
