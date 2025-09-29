@@ -3,6 +3,7 @@ import {
   Award,
   Brain,
   CheckCircle,
+  Download,
   Globe,
   Rocket,
   Shield,
@@ -20,7 +21,9 @@ import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
+import ROICalculator from "../components/ROICalculator";
 import Header from "../components/Header";
+import LatestContentBanner from "../components/LatestContentBanner";
 import ModernFeatures from "../components/ModernFeatures";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
@@ -101,14 +104,59 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        <LatestContentBanner variant="info" autoRotate={true} rotationInterval={6000} />
         <ContentPromotionBanner
           title="New: AI Sales Copilot, Event‑Driven at Scale, Zero‑Downtime Migrations"
           description="Fresh 2025 content: grounded AI copilots for sales, resilient EDA contracts, and safe schema rollouts."
           ctaText="Explore new content"
           ctaLink="/blog"
           variant="info"
-          className="border-b border-white/10"
+          title="🚀 Fresh: AI Platform Engineering 2025 + Edge AI Latency Budgets"
+          description="New long-form guide and 3 brand-new articles across Platform, Governance, and MLOps."
+          ctaText="Read the latest"
+          ctaLink="/blog/ai-platform-engineering-2025"
+          dismissible={true}
         />
+
+        {/* New Content Promotion Banner */}
+        <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white py-4">
+          <div className="container mx-auto px-6">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <div className="bg-white/20 rounded-full p-2">
+                  <BookOpen className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="font-bold text-lg">🎉 NEW: 50+ Free Resources Available!</div>
+                  <div className="text-sm opacity-90">Whitepapers, guides, tools, and templates to accelerate your transformation</div>
+                </div>
+              </div>
+              <Link to="/resources" className="bg-white text-green-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Browse Resources
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Success Stories Banner */}
+        <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4">
+          <div className="container mx-auto px-6">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <div className="bg-white/20 rounded-full p-2">
+                  <Award className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="font-bold text-lg">🏆 Success Stories: $50M+ in Client Savings</div>
+                  <div className="text-sm opacity-90">See how we've helped 500+ companies achieve extraordinary results</div>
+                </div>
+              </div>
+              <Link to="/case-studies" className="bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                View Case Studies
+              </Link>
+            </div>
+          </div>
+        </div>
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -143,6 +191,21 @@ const Home = () => {
               Transform your business with our cutting-edge AI solutions, enterprise-grade security, 
               and next-generation cloud infrastructure. Join 500+ companies already scaling with us!
             </p>
+
+            {/* Latest Content Highlights */}
+            <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-400/30 rounded-xl p-6 mb-8 animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
+                <span className="text-lg font-bold text-green-400">LATEST CONTENT</span>
+                <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                🎯 New: AI Platform Engineering 2025 + Edge AI Latency Budgets
+              </p>
+              <p className="text-zion-slate-light text-sm">
+                Long-form guide and 3 new posts across Platform, Governance, and MLOps
+              </p>
+            </div>
 
             {/* Special Promotion Banner */}
             <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-xl p-6 mb-8 animate-fade-in">
@@ -265,6 +328,11 @@ const Home = () => {
           showBlogPosts={true}
           className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
         />
+
+        {/* Featured content showcase to highlight new articles and insights */}
+        <div className="bg-white">
+          <FeaturedContentShowcase className="py-12" />
+        </div>
 
         {/* New Services Showcase */}
         <section className="container mx-auto px-6 py-20 relative z-10">
@@ -614,28 +682,7 @@ const Home = () => {
         {/* Latest Articles */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
-            {/* New Content Announcement */}
-            <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-400/30 rounded-xl p-6 mb-10">
-              <div className="flex items-center gap-3 mb-3">
-                <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
-                <span className="text-lg font-bold text-purple-700">📚 NEW CONTENT ALERT</span>
-                <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
-              </div>
-              <p className="text-gray-700 font-semibold mb-2">
-                🚀 Just Published: 5 Revolutionary Articles on AI Automation, Cloud Infrastructure, and Enterprise AI Implementation
-              </p>
-              <p className="text-gray-600 text-sm mb-4">
-                Discover the latest insights on AI-powered business automation, next-gen cloud infrastructure, and strategic AI roadmaps for 2025.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">AI Automation</span>
-                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Cloud Strategy</span>
-                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">AI Governance</span>
-                <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">Platform Engineering</span>
-              </div>
-            </div>
-            
-            <div className="mb-10 flex items-end justify-between">
+            <div className="mb-10 flex items-end justify_between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
                 <p className="text-gray-600">Fresh: AI Governance, Golden Paths, Cloud FinOps QA gates, and NEW AI automation guides.</p>
@@ -668,6 +715,128 @@ const Home = () => {
           </div>
         </section>
 
+        {/* New Content Showcase Section */}
+        <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-800 text-sm font-medium mb-6">
+                <Sparkles className="w-4 h-4 mr-2" />
+                Fresh Content • Updated Daily
+              </div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                🆕 Latest from Zion Tech Group
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Stay ahead with our newest insights, case studies, and resources. 
+                Fresh content added daily to help you succeed.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              {/* Latest Blog Posts */}
+              <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                    <BookOpen className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900">Latest Blog Posts</h3>
+                    <p className="text-sm text-gray-600">Fresh insights daily</p>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  {posts.slice(0, 3).map((post) => (
+                    <div key={post.slug} className="border-l-4 border-blue-500 pl-4">
+                      <h4 className="font-semibold text-gray-900 text-sm mb-1">{post.title}</h4>
+                      <p className="text-xs text-gray-600">{post.category} • {post.readTime}</p>
+                    </div>
+                  ))}
+                </div>
+                <Link to="/blog" className="mt-4 block text-blue-600 font-semibold hover:text-blue-800">
+                  Read all posts →
+                </Link>
+              </div>
+
+              {/* Latest Case Studies */}
+              <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                    <Award className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900">Success Stories</h3>
+                    <p className="text-sm text-gray-600">Real results, real clients</p>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="border-l-4 border-green-500 pl-4">
+                    <h4 className="font-semibold text-gray-900 text-sm mb-1">RetailMax: 99% Time Reduction</h4>
+                    <p className="text-xs text-gray-600">E-commerce • $2.3M savings</p>
+                  </div>
+                  <div className="border-l-4 border-green-500 pl-4">
+                    <h4 className="font-semibold text-gray-900 text-sm mb-1">First National Bank: 95% Faster</h4>
+                    <p className="text-xs text-gray-600">Banking • 97% satisfaction</p>
+                  </div>
+                  <div className="border-l-4 border-green-500 pl-4">
+                    <h4 className="font-semibold text-gray-900 text-sm mb-1">Precision Manufacturing: 70% Waste Reduction</h4>
+                    <p className="text-xs text-gray-600">Manufacturing • $3.2M savings</p>
+                  </div>
+                </div>
+                <Link to="/case-studies" className="mt-4 block text-green-600 font-semibold hover:text-green-800">
+                  View all case studies →
+                </Link>
+              </div>
+
+              {/* Latest Resources */}
+              <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                    <Download className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900">Free Resources</h3>
+                    <p className="text-sm text-gray-600">50+ downloads available</p>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="border-l-4 border-purple-500 pl-4">
+                    <h4 className="font-semibold text-gray-900 text-sm mb-1">AI Implementation Guide</h4>
+                    <p className="text-xs text-gray-600">PDF Guide • 12,847 downloads</p>
+                  </div>
+                  <div className="border-l-4 border-purple-500 pl-4">
+                    <h4 className="font-semibold text-gray-900 text-sm mb-1">Cybersecurity Assessment Tool</h4>
+                    <p className="text-xs text-gray-600">Interactive Tool • 8,923 downloads</p>
+                  </div>
+                  <div className="border-l-4 border-purple-500 pl-4">
+                    <h4 className="font-semibold text-gray-900 text-sm mb-1">Cloud Migration Whitepaper</h4>
+                    <p className="text-xs text-gray-600">Whitepaper • 15,234 downloads</p>
+                  </div>
+                </div>
+                <Link to="/resources" className="mt-4 block text-purple-600 font-semibold hover:text-purple-800">
+                  Browse all resources →
+                </Link>
+              </div>
+            </div>
+
+            {/* Newsletter Signup */}
+            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white text-center">
+              <h3 className="text-2xl font-bold mb-2">Never Miss New Content</h3>
+              <p className="text-indigo-100 mb-6">Get our latest articles, case studies, and resources delivered to your inbox weekly.</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500"
+                />
+                <button className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Subscribe
+                </button>
+              </div>
+              <p className="text-xs text-indigo-200 mt-3">No spam, unsubscribe anytime. Join 10,000+ subscribers.</p>
+            </div>
+          </div>
+        </section>
+
         {/* Case Studies Preview */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-6">
@@ -681,7 +850,7 @@ const Home = () => {
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-4">
-                  <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <div className="bg_green-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
                     <TrendingUp className="w-6 h-6 text-green-600" />
                   </div>
                   <div>
@@ -695,7 +864,7 @@ const Home = () => {
               
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <div className="bg-blue-100 w-12 h-12 rounded-lg flex items_center justify-center mr-4">
                     <Users className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
@@ -714,7 +883,7 @@ const Home = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Precision Manufacturing</h3>
-                    <p className="text-sm text-gray-600">Manufacturing</p>
+                    <p className="text-sm text_gray-600">Manufacturing</p>
                   </div>
                 </div>
                 <p className="text-gray-600 mb-4">Reduced production waste by 70% with AI data analytics and predictive maintenance.</p>
@@ -725,7 +894,7 @@ const Home = () => {
             <div className="text-center">
               <Link
                 to="/case-studies"
-                className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+                className="bg-gradient_to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
                 <Award className="w-5 h-5" />
                 View All Success Stories
@@ -749,20 +918,20 @@ const Home = () => {
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
-
+              
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
-                  <div className="font-semibold text-white">MLOps Reliability: Shipping GenAI Changes Safely</div>
+                  <div className="text-sm text-purple-200 mb-1">Platform Engineering</div>
+                  <div className="font-semibold text-white">AI Platform Engineering 2025: Golden Paths that Ship Outcomes</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
-                  <div className="font-semibold text-white">Reliable Real‑Time Data Pipelines in 2025</div>
+                  <div className="text-sm text-blue-200 mb-1">Architecture</div>
+                  <div className="font-semibold text-white">Edge AI Latency Budgets: Designing for P95 &lt; 150ms</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Product Analytics</div>
-                  <div className="font-semibold text-white">North‑Star Metrics: A Field‑Tested Framework</div>
+                  <div className="text-sm text-rose-200 mb-1">MLOps</div>
+                  <div className="font-semibold text-white">Cost-Aware MLOps: Shipping Improvements Without Surprises</div>
                 </div>
               </div>
             </div>

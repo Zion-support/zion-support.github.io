@@ -3,7 +3,7 @@
 type MetricName = 'CLS' | 'FID' | 'FCP' | 'LCP' | 'TTFB' | 'SLOW_RESOURCE' | 'MEMORY_USAGE';
 
 interface PerformanceMetric {
-  name: string;
+  name: WebVitalName | 'SLOW_RESOURCE';
   value: number;
   timestamp: number;
   id: string;
@@ -14,8 +14,14 @@ class PerformanceMonitor {
 	private observers: PerformanceObserver[] = [];
 	private initialized = false;
 
-  constructor() {
-    this.init();
+  public initialize(): void {
+    if (this.alreadyInitialized || typeof window === 'undefined' || typeof PerformanceObserver === 'undefined') {
+      return;
+    }
+    this.alreadyInitialized = true;
+    this.observePaint();
+    this.observeNavigation();
+    this.observeFirstInput();
   }
 
   private init(): void {
