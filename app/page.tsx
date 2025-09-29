@@ -34,6 +34,9 @@ import {
   SustainabilityCaseStudyBanner,
   QuantumOptimizationBanner
 } from '../components/PromotionalBanner';
+import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
+import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
+import InteractiveContentRecommendation2026 from '../components/InteractiveContentRecommendation2026';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -72,6 +75,9 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+      {/* New 2026 Content Mega Banner */}
+      <NewContent2026MegaBanner />
+      
       {/* Promotional Banners */}
       <NewContent2026Banner />
       <AIAgentOrchestrationBanner />
@@ -247,6 +253,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Enhanced 2026 Content Showcase */}
+      <EnhancedContentShowcase2026 />
+      
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
       
@@ -254,162 +263,7 @@ export default function HomePage() {
       <InteractiveContentShowcase />
       
       {/* Interactive Content Recommendations */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-6">
-              <span className="w-4 h-4 mr-2">✨</span>
-              AI-Powered Recommendations
-            </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Personalized Content Recommendations
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover content tailored to your interests and industry. Our AI analyzes your preferences to suggest the most relevant articles and case studies.
-            </p>
-          </div>
-
-          {/* Featured Recommendations */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link to="/blog/ai-agent-orchestration-2026" className="group">
-              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    NEW 2026
-                  </span>
-                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    FEATURED
-                  </span>
-                </div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm text-blue-600 font-medium">📝 Article</span>
-                  <span className="text-sm text-gray-500">AI Orchestration</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Agent Orchestration 2026: Multi-Agent System Architecture
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Master multi-agent systems with 95% automation efficiency and $5M+ ROI through advanced orchestration patterns.
-                </p>
-                <div className="flex gap-4 mb-4">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">95%</div>
-                    <div className="text-xs text-gray-500">Automation</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">$5M+</div>
-                    <div className="text-xs text-gray-500">ROI</div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center text-sm text-gray-500">
-                    <Clock className="w-4 h-4 mr-1" />
-                    22 min read
-                  </div>
-                  <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
-                    Read More →
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            <Link to="/case-studies/ai-sustainability-transformation-2026" className="group">
-              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    NEW 2026
-                  </span>
-                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    FEATURED
-                  </span>
-                </div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm text-blue-600 font-medium">📊 Case Study</span>
-                  <span className="text-sm text-gray-500">Sustainability</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Sustainability Transformation 2026: $10M ROI Case Study
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  See how a Fortune 500 company achieved carbon neutrality and $10M ROI with comprehensive AI sustainability transformation.
-                </p>
-                <div className="flex gap-4 mb-4">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">$10M</div>
-                    <div className="text-xs text-gray-500">ROI</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">100%</div>
-                    <div className="text-xs text-gray-500">Carbon Neutral</div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center text-sm text-gray-500">
-                    <Clock className="w-4 h-4 mr-1" />
-                    15 min read
-                  </div>
-                  <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
-                    Read More →
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            <Link to="/blog/ai-quantum-computing-2026" className="group">
-              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    NEW 2026
-                  </span>
-                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    FEATURED
-                  </span>
-                </div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm text-blue-600 font-medium">📝 Article</span>
-                  <span className="text-sm text-gray-500">Quantum Computing</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Quantum Computing 2026: Next-Generation Intelligence
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.
-                </p>
-                <div className="flex gap-4 mb-4">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">1000x</div>
-                    <div className="text-xs text-gray-500">Faster</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">95%</div>
-                    <div className="text-xs text-gray-500">Accuracy</div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center text-sm text-gray-500">
-                    <Clock className="w-4 h-4 mr-1" />
-                    25 min read
-                  </div>
-                  <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
-                    Read More →
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          <div className="text-center">
-            <Link
-              to="/blog"
-              className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-            >
-              <span className="w-5 h-5 mr-2">✨</span>
-              Explore All Content
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      <InteractiveContentRecommendation2026 />
 
       {/* Dynamic Content Showcase */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
