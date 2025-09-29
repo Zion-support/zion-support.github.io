@@ -133,14 +133,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Incident Playbooks, Privacy‑Preserving Analytics, Edge LLM Caching"
-          description="Contain incidents under 60s, ship insights without PII risk, and get sub‑100ms prompts."
+          title="New: AI Platform SLOs, RAG Evals in the Loop, Edge Flags"
+          description="Budget risk, prevent regressions with evals, and ship <100ms global releases."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Incident Response Playbooks", category: "Cybersecurity", link: "/blog/ai-incident-response-playbooks-2025" },
-            { title: "Privacy‑Preserving Analytics", category: "Observability", link: "/blog/privacy-preserving-analytics-2025" },
-            { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" },
+            { title: "AI Platform SLOs 2026", category: "AI Operations", link: "/blog/ai-platform-slos-2026" },
+            { title: "RAG Evals in the Loop", category: "GenAI", link: "/blog/rag-evals-in-the-loop-2026" },
+            { title: "Edge Feature Flags 2026", category: "Architecture", link: "/blog/edge-feature-flags-2026" },
             { title: "AI Governance Scorecards 2026", category: "AI Strategy", link: "/blog/ai-governance-scorecards-2026" },
             { title: "Platform Scorecards ROI 2026", category: "Platform Engineering", link: "/blog/platform-engineering-scorecards-2026" }
           ]}
@@ -280,7 +280,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Incident Playbooks, Privacy‑Preserving Analytics, Edge LLM Caching — read now
+            New: AI Platform SLOs, RAG Evals, Edge Feature Flags — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
@@ -541,7 +541,7 @@ const Home = () => {
                 <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Fresh: Incident Playbooks, Privacy‑Preserving Analytics, Edge LLM Caching
+                Fresh: AI Platform SLOs, RAG Evals, Edge Feature Flags
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles & Insights
@@ -811,7 +811,7 @@ const Home = () => {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
-              <p className="text-white/90">New: Platform Engineering Scorecards 2026, AI Cybersecurity Automation, and Edge AI Blueprint 2026.</p>
+              <p className="text-white/90">New: AI Platform SLOs 2026, RAG Evals in the Loop, and Edge Feature Flags 2026.</p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
                   Read the latest
