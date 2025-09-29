@@ -90,6 +90,42 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 7,
   },
   {
+    id: "kubernetes-cost-guardrails",
+    title: "Kubernetes Cost Guardrails That Engineers Don't Hate",
+    summary:
+      "Limit waste with sensible defaults: requests/limits, QoS, autoscaling, and cost-aware CI policies.",
+    category: "Cloud",
+    date: "2025-09-28",
+    readMinutes: 7,
+  },
+  {
+    id: "ciso-zero-trust-scorecard",
+    title: "A CISO's Zero‑Trust Scorecard",
+    summary:
+      "Measure progress with identity controls, least privilege, continuous verification, and blast‑radius limits.",
+    category: "Security",
+    date: "2025-09-28",
+    readMinutes: 8,
+  },
+  {
+    id: "zero-trust-sdls",
+    title: "Zero-Trust SDLC: Shipping Secure Software Without Slowing Down",
+    summary:
+      "Embed policy-as-code, automated threat modeling, and continuous verification into delivery workflows.",
+    category: "Security",
+    date: "2025-09-28",
+    readMinutes: 8,
+  },
+  {
+    id: "analytics-ltv-playbook",
+    title: "An Operator's Playbook for LTV:CPA Ratio",
+    summary:
+      "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
+    category: "Product Analytics",
+    date: "2025-09-28",
+    readMinutes: 7,
+  },
+  {
     id: "secure-ml-pipelines",
     title: "Securing Machine Learning Pipelines in Production",
     summary:

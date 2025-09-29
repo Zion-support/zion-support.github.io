@@ -100,14 +100,13 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
-
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: GenAI Evals, Edge Flags, and North‑Star Metrics"
-          description="Fresh articles just landed. Explore our latest insights and frameworks."
+          title="🚀 Fresh: GenAI Evals, Edge Flags, and North‑Star Metrics"
+          description="New posts on safe GenAI rollouts, <100ms edge flags, and product metrics."
           ctaText="Read the latest"
-          ctaLink="/blog"
+          ctaLink="/blog/genai-evals-in-production-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
