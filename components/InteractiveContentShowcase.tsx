@@ -28,6 +28,18 @@ const contentItems: ContentItem[] = [
     href: '/blog/ai-cost-calculator-2026'
   },
   {
+    id: 'enterprise-agents-blueprint-2026',
+    title: 'AI Enterprise Agents Blueprint 2026: Production-Grade Patterns',
+    description: 'Design and operate enterprise AI agents with safety, observability, and ROI.',
+    type: 'guide',
+    category: 'Implementation',
+    readTime: '18 min read',
+    publishedDate: '2026-01-25',
+    featured: true,
+    tags: ['agents', 'orchestration', 'governance'],
+    href: '/blog/ai-enterprise-agents-blueprint-2026'
+  },
+  {
     id: '2',
     title: 'AI Implementation Playbook 2026: Complete Enterprise Guide',
     description: 'Master AI implementation with our comprehensive enterprise guide. Achieve 300% ROI with proven methodologies.',
