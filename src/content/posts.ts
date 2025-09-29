@@ -73,15 +73,8 @@ export const posts: BlogPost[] = [
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
     description:
-      "From offline suites to online canaries: patterns that keep quality high as usage grows.",
-    category: "GenAI",
-=======
-    slug: "ai-governance-at-scale-2025",
-    title: "AI Governance at Scale: Policies That Enable Speed",
-    description:
-      "From offline eval suites to online policy tests and approvals that keep velocity high without breaking trust.",
-    category: "AI Governance",
->>>>>>> origin/main
+      "A pragmatic checklist for hardening pilots, proving ROI, and launching AI features safely.",
+    category: "Product",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read",
@@ -117,7 +110,6 @@ export const posts: BlogPost[] = [
     readTime: "7 min read",
   },
   {
-<<<<<<< HEAD
     slug: "north-star-metrics-anti-patterns",
     title: "North‑Star Metrics: 7 Anti‑Patterns to Avoid",
     description:
@@ -144,18 +136,6 @@ export const posts: BlogPost[] = [
       "Exactly‑once semantics, backpressure control, and pragmatic observability for streaming systems.",
     category: "Data Engineering",
     publishedAt: "2025-09-28",
-    featured: true,
-    readTime: "7 min read",
-  },
-  {
-=======
->>>>>>> origin/main
-    slug: "ai-product-launch-checklist-2025",
-    title: "AI Product Launch Checklist: From Pilot to Production",
-    description:
-      "A pragmatic checklist for hardening pilots, proving ROI, and launching AI features safely.",
-    category: "Product",
-    publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read",
   },
@@ -484,6 +464,37 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-01-21",
     featured: false,
     readTime: "9 min read",
+  },
+  // Newly added posts (2025-09-30 / 2025-09-29)
+  {
+    slug: "serverless-inference-cost-playbook-2025",
+    title: "Serverless AI Inference Cost Playbook: 40–70% Savings Without P95 Pain",
+    description:
+      "Adaptive batching, warm pools, and tiered quality to cut spend while keeping latency sane.",
+    category: "AI Solutions",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "practical-rag-in-production-2025",
+    title: "Practical RAG in Production: Freshness, Hybrid Search, and Evals",
+    description:
+      "Battle-tested patterns for chunking, freshness policies, hybrid retrieval, and eval harnesses.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "secure-genai-guardrails-2025",
+    title: "Secure GenAI: Policy‑First Guardrails That Scale",
+    description:
+      "Prompt isolation, PII controls, and egress policies—ship safely without slowing teams.",
+    category: "Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read",
   },
 ];
 
