@@ -54,6 +54,24 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="Trustworthy AI Audits 2026: From Policies to Proof"
+            excerpt="Turn AI policies into audit-ready evidence with measurable controls and continuous assurance."
+            date="October 9, 2025"
+            category="AI Reliability"
+            readTime="12 min"
+            image="✅"
+            href="/blog/trustworthy-ai-audits-2026"
+          />
+          <BlogPost
+            title="GenAI Product Security 2026: Secure-by-Design Patterns"
+            excerpt="Practical controls for model safety, data privacy, runtime hardening, and supply chain."
+            date="October 9, 2025"
+            category="Security"
+            readTime="14 min"
+            image="🛡️"
+            href="/blog/genai-product-security-2026"
+          />
+          <BlogPost
             title="Agentic Workflow Orchestration 2026: Reliable AI Workflows"
             excerpt="Orchestrate multi-step agents with guardrails, approvals, and observability for measurable ROI."
             date="October 9, 2025"
