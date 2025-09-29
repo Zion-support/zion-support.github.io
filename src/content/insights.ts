@@ -18,6 +18,42 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+    id: "mlops-canary-scorecards",
+    title: "MLOps Canary Scorecards: Ship Weekly Without Surprises",
+    summary:
+      "A simple set of online metrics and thresholds to detect regressions during canary rollouts.",
+    category: "MLOps",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "genai-finops-controls",
+    title: "GenAI FinOps Controls: Spend Less Without Losing Quality",
+    summary:
+      "Budget-aware routing, per-feature token caps, and auto-downgrade patterns that teams actually adopt.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-cache-playbook-2025",
+    title: "Edge Cache Playbook 2025: Versioned Keys and Health Probes",
+    summary:
+      "Reduce stale reads and thundering herds with versioning, background warming, and circuit breakers.",
+    category: "Architecture",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
+  {
+    id: "platform-adoption-metrics",
+    title: "Measuring Platform Adoption: Metrics That Drive Decisions",
+    summary:
+      "Move beyond vanity metrics with capability scorecards, paved road uptake, and DX signals.",
+    category: "Platform Engineering",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
     id: "edge-flags-validation",
     title: "Edge Flags: Validation Circuits That Prevent Bad Rolls",
     summary:

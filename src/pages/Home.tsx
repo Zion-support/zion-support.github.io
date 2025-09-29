@@ -105,10 +105,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: AI Product Launch Checklist + MLOps in 45 Days"
-          description="New guides on taking AI pilots to production and shipping reliable models fast."
+          title="🚀 New: GenAI Evals + Platform Blueprint + Edge Flags"
+          description="Fresh articles and insights: real‑world GenAI evals, platform engineering blueprint, and edge feature flags."
           ctaText="Read the latest"
-          ctaLink="/blog/genai-evals-in-production-2025"
+          ctaLink="/blog/genai-evals-realworld"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -710,7 +710,7 @@ const Home = () => {
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
                   <p className="text-white/90">
-                    Fresh articles on real-time data pipelines, north-star metrics, and safe, scalable GenAI ops.
+                    Fresh articles on GenAI evals in production, platform scorecards, and edge flags validation.
                   </p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
@@ -722,16 +722,16 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
-                  <div className="font-semibold text-white">MLOps Reliability: Shipping GenAI Changes Safely</div>
+                  <div className="text-sm text-pink-200 mb-1">GenAI</div>
+                  <div className="font-semibold text-white">Real‑World GenAI Evals: Offline Suites to Online Guardrails</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
-                  <div className="font-semibold text-white">Reliable Real‑Time Data Pipelines in 2025</div>
+                  <div className="text-sm text-yellow-200 mb-1">Platform Engineering</div>
+                  <div className="font-semibold text-white">Platform Engineering Blueprint: Capabilities and Paved Roads</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Product Analytics</div>
-                  <div className="font-semibold text-white">North‑Star Metrics: A Field‑Tested Framework</div>
+                  <div className="text-sm text-violet-200 mb-1">Architecture</div>
+                  <div className="font-semibold text-white">Edge Flags: &lt;100ms Global Releases</div>
                 </div>
               </div>
             </div>
