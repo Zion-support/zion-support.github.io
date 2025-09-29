@@ -19,6 +19,50 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-edge-computing-2025',
+    title: 'AI Edge Computing 2025: Revolutionizing Real-Time Intelligence',
+    excerpt: 'Discover how AI edge computing is transforming industries with sub-50ms response times, 90% bandwidth reduction, and autonomous decision-making.',
+    type: 'article',
+    readTime: '16 min read',
+    category: 'Edge Computing',
+    href: '/blog/ai-edge-computing-2025',
+    featured: true,
+    publishedDate: '2025-01-20',
+    metrics: [
+      { value: '<50ms', label: 'Response Time' },
+      { value: '90%', label: 'Bandwidth Reduction' }
+    ]
+  },
+  {
+    id: 'ai-cybersecurity-2025',
+    title: 'AI Cybersecurity 2025: Next-Generation Threat Detection',
+    excerpt: 'Explore how AI is revolutionizing cybersecurity with 99.7% threat detection accuracy, zero-trust architecture, and autonomous incident response.',
+    type: 'article',
+    readTime: '14 min read',
+    category: 'Cybersecurity',
+    href: '/blog/ai-cybersecurity-2025',
+    featured: true,
+    publishedDate: '2025-01-20',
+    metrics: [
+      { value: '99.7%', label: 'Threat Detection' },
+      { value: '85%', label: 'Faster Response' }
+    ]
+  },
+  {
+    id: 'ai-finance-automation',
+    title: 'AI Finance Automation: 95% Process Reduction & $3M Savings',
+    excerpt: 'See how a leading financial services company achieved 95% process automation, $3M annual savings, and 99.9% accuracy.',
+    type: 'case-study',
+    category: 'FinTech',
+    href: '/case-studies/ai-finance-automation',
+    featured: true,
+    publishedDate: '2025-01-20',
+    metrics: [
+      { value: '95%', label: 'Process Automation' },
+      { value: '$3M', label: 'Annual Savings' }
+    ]
+  },
+  {
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Enterprise-Ready Implementation Guide',
     excerpt: 'Master AI governance with our comprehensive framework covering risk management, compliance, and ethical deployment strategies.',

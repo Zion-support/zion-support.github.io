@@ -14,7 +14,11 @@ import {
   HealthcareAIBanner,
   RetailSuccessBanner,
   AIContentShowcaseBanner,
-  AIRevolutionBanner
+  AIRevolutionBanner,
+  AIEdgeComputingBanner,
+  AICybersecurityBanner,
+  AIFinanceAutomationBanner,
+  LatestContentBanner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
 
@@ -28,6 +32,10 @@ export default function HomePage() {
   return (
     <div className="animate-fade-in">
       {/* Promotional Banners */}
+      <LatestContentBanner />
+      <AIEdgeComputingBanner />
+      <AICybersecurityBanner />
+      <AIFinanceAutomationBanner />
       <AIContentShowcaseBanner />
       <CustomerServiceAIBanner />
       <HealthcareAIBanner />
@@ -146,12 +154,128 @@ export default function HomePage() {
               to="/services/cybersecurity-consulting"
               popular={false}
             />
+            <FeaturedServiceCard
+              title="AI Edge Computing"
+              description="Real-time AI processing at the edge with sub-50ms response times"
+              price="$799/month"
+              features={['Sub-50ms Latency', 'Edge Intelligence', 'Offline Capability']}
+              to="/services/ai-edge-computing"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="AI Finance Automation"
+              description="Automate financial processes with 95% accuracy and $3M+ savings"
+              price="$1,299/month"
+              features={['95% Automation', 'Fraud Detection', 'Real-time Reporting']}
+              to="/services/ai-finance-automation"
+              popular={false}
+            />
           </div>
         </div>
       </section>
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
+
+      {/* Latest Innovations Section */}
+      <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Latest AI Innovations & Breakthroughs
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Stay ahead with cutting-edge AI technologies and revolutionary solutions that are transforming industries
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Edge Computing AI</h3>
+                  <p className="text-sm text-gray-500">Real-time intelligence</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Achieve sub-50ms response times with AI processing at the edge of networks. 
+                Perfect for autonomous vehicles, IoT devices, and real-time applications.
+              </p>
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-gray-500">Published Jan 20, 2025</div>
+                <Link
+                  to="/blog/ai-edge-computing-2025"
+                  className="text-cyan-600 font-semibold hover:text-cyan-700 transition-colors"
+                >
+                  Read More →
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">🛡️</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">AI Cybersecurity</h3>
+                  <p className="text-sm text-gray-500">Next-gen protection</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Revolutionary threat detection with 99.7% accuracy. Autonomous incident response 
+                and zero-trust architecture for enterprise-grade security.
+              </p>
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-gray-500">Published Jan 20, 2025</div>
+                <Link
+                  to="/blog/ai-cybersecurity-2025"
+                  className="text-red-600 font-semibold hover:text-red-700 transition-colors"
+                >
+                  Read More →
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">💰</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Finance Automation</h3>
+                  <p className="text-sm text-gray-500">$3M+ savings achieved</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                See how AI automation achieved 95% process reduction and $3M annual savings 
+                for a leading financial services company.
+              </p>
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-gray-500">Published Jan 20, 2025</div>
+                <Link
+                  to="/case-studies/ai-finance-automation"
+                  className="text-green-600 font-semibold hover:text-green-700 transition-colors"
+                >
+                  Read More →
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link
+              to="/blog"
+              className="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Explore All Innovations
+            </Link>
+          </div>
+        </div>
+      </section>
       
       {/* Latest Content Section */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
