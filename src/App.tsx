@@ -162,4 +162,6 @@ export default function App(): React.JSX.Element {
 
         <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
       </div>
+    </div>
+  );
 }

@@ -9,17 +9,10 @@ import Blog from './pages/Blog';
 import Resources from './pages/Resources';
 import Tools from './pages/Tools';
 import EnterpriseAISolutions from './pages/EnterpriseAISolutions';
-<<<<<<< HEAD
 import CaseStudies from './pages/CaseStudies';
 import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
 import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
 import AIDataAnalytics from './pages/services/AIDataAnalytics';
-=======
-import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
-import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
-import AIDataAnalytics from './pages/services/AIDataAnalytics';
-import CaseStudies from './pages/CaseStudies';
->>>>>>> origin/main
 
 export const AppRouter: React.FC = () => {
   return (

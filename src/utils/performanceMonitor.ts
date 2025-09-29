@@ -1,6 +1,6 @@
 // Minimal, type-safe Performance Monitor
 
-type MetricName = 'CLS' | 'FID' | 'FCP' | 'LCP' | 'TTFB' | 'SLOW_RESOURCE';
+type MetricName = 'CLS' | 'FID' | 'FCP' | 'LCP' | 'TTFB' | 'SLOW_RESOURCE' | 'MEMORY_USAGE';
 
 interface PerformanceMetric {
   name: MetricName;
@@ -21,9 +21,9 @@ class PerformanceMonitor {
   }
 
   private init(): void {
-    if (this.isInitialized || typeof window === 'undefined') return;
+    if (this.initialized || typeof window === 'undefined') return;
 
-    this.isInitialized = true;
+    this.initialized = true;
     this.observeWebVitals();
     this.observeResourceTiming();
     this.observeNavigationTiming();

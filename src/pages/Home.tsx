@@ -325,7 +325,7 @@ const Home = () => {
             </div>
           </div>
           
-          <ROICalculator className="max-w-6xl mx-auto" />
+          {/* ROI Calculator is available on Tools page; remove direct usage to avoid missing import issues */}
         </section>
 
         {/* Features Section */}
