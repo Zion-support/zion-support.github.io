@@ -50,7 +50,12 @@ import {
   NewContentShowcaseBanner2026,
   AINeuralArchitectureOptimizationBanner,
   AIFederatedLearningBanner,
-  FederatedLearningSuccessBanner
+  FederatedLearningSuccessBanner,
+  AIPredictions2026Banner,
+  AIEnterpriseAutomationBanner,
+  ManufacturingExcellenceBanner,
+  AIInnovationShowcaseBanner,
+  AIROICalculatorBanner
 } from '../components/NewContent2026Banners';
 import AITrends2025Banner from '../src/components/AITrends2025Banner';
 import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBanner';
@@ -62,16 +67,88 @@ import InteractiveContentShowcase from '../components/InteractiveContentShowcase
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
+import InteractiveAICalculator from '../components/InteractiveAICalculator';
 
 export const metadata = {
-  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
-  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation',
+  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 2026 AI Transformation',
+  description: 'Transform your business with cutting-edge AI solutions. 95% automation, $5M+ savings, zero-touch operations. Enterprise-grade AI, micro SaaS, and IT solutions for 2026.',
+  keywords: 'AI services 2026, micro SaaS, IT services, AI transformation, enterprise automation, AI predictions 2026, manufacturing AI, financial services AI, AI ROI calculator, business process automation',
+  openGraph: {
+    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 2026 AI Transformation',
+    description: 'Transform your business with cutting-edge AI solutions. 95% automation, $5M+ savings, zero-touch operations.',
+    type: 'website',
+    url: 'https://ziontechgroup.com',
+    siteName: 'Zion Tech Group',
+    images: [
+      {
+        url: 'https://ziontechgroup.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group AI Transformation 2026',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 2026 AI Transformation',
+    description: 'Transform your business with cutting-edge AI solutions. 95% automation, $5M+ savings, zero-touch operations.',
+    images: ['https://ziontechgroup.com/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://ziontechgroup.com',
+  },
 };
 
 export default function HomePage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://ziontechgroup.com"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "description": "AI Transformation Services",
+      "price": "From $99/month",
+      "priceCurrency": "USD"
+    }
+  };
+
   return (
     <div className="animate-fade-in">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* New Content Promo Strip */}
       <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
@@ -101,6 +178,13 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+      {/* New Content 2026 Banners */}
+      <AIPredictions2026Banner />
+      <AIEnterpriseAutomationBanner />
+      <ManufacturingExcellenceBanner />
+      <AIInnovationShowcaseBanner />
+      <AIROICalculatorBanner />
+      
       {/* Promotional Banners */}
       <Latest2026ContentBanner />
       <NewContentShowcase2026Banner />
@@ -272,22 +356,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* AI ROI Calculator Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Calculate Your AI Transformation ROI
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover the potential return on investment for AI transformation in your organization. 
-              Get personalized insights and recommendations based on your specific industry and requirements.
-            </p>
-          </div>
-          
-          <AIROICalculator />
-        </div>
-      </section>
+      {/* Interactive AI ROI Calculator Section */}
+      <InteractiveAICalculator />
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
