@@ -724,3 +724,34 @@ posts.push(
     readTime: "8 min read"
   }
 );
+
+// Additional fresh content to surface on homepage
+posts.push(
+  {
+    slug: "agent-blue-green-releases-2026",
+    title: "Blue‑Green Agent Releases 2026: Safe, Reversible, and Observed",
+    description: "Release multi‑tool agents with blue‑green routes, live traces, and instant rollback.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-feature-flags-geo-budgets-2026",
+    title: "Edge Feature Flags 2026: Geo Budgets, Local Filters, Instant Rollback",
+    description: "Global releases under 100ms with scoped IDs, geo budgets, and deterministic fallbacks.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-cost-controllers-2026",
+    title: "Agent Cost Controllers 2026: Tiered Quality Under Defined Budgets",
+    description: "Keep costs predictable with tiered quality, adaptive caches, and KPI‑linked budgets.",
+    category: "AI Operations",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  }
+);
