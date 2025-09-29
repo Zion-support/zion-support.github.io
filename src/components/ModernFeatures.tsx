@@ -1,24 +1,38 @@
 import React from 'react';
 import { 
-  Zap, 
-  Shield, 
-  Globe, 
-  Brain, 
-  Cloud, 
-  Lock, 
-  TrendingUp, 
-  Users,
   CheckCircle
 } from 'lucide-react';
 
-export default function ModernFeatures(): React.JSX.Element {
-<<<<<<< HEAD
-	return <section aria-label="Modern Features" />;
-=======
-  return <section />;
->>>>>>> origin/main
+interface FeatureItem {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
 }
 
+const features: FeatureItem[] = [
+  {
+    title: 'Reliability First',
+    description: 'SLOs, budgets, and guardrails baked into every workflow.',
+    icon: <CheckCircle className="w-6 h-6 text-green-500" />
+  },
+  {
+    title: 'Security by Design',
+    description: 'Least-privilege, attestations, and policy tests across the SDLC.',
+    icon: <CheckCircle className="w-6 h-6 text-green-500" />
+  },
+  {
+    title: 'Performance Obsessed',
+    description: 'Latency budgets, edge patterns, and efficient retrieval at scale.',
+    icon: <CheckCircle className="w-6 h-6 text-green-500" />
+  },
+  {
+    title: 'Measurable Outcomes',
+    description: 'Scorecards tied to adoption, golden paths, and shipped value.',
+    icon: <CheckCircle className="w-6 h-6 text-green-500" />
+  }
+];
+
+export default function ModernFeatures(): React.JSX.Element {
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-6">
@@ -75,6 +89,4 @@ export default function ModernFeatures(): React.JSX.Element {
       </div>
     </div>
   );
-};
-
-export default ModernFeatures;
+}
