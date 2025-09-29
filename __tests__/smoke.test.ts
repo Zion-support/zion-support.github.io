@@ -1,3 +1,5 @@
-<<<<<<< HEAD
-describe("smoke", () => {
-  it("true is truthy", () => {
+describe('smoke', () => {
+  it('runs', () => {
+    expect(true).toBe(true);
+  });
+});

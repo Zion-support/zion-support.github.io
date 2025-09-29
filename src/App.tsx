@@ -13,11 +13,12 @@ import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import SEOOptimizer from './components/SEOOptimizer';
-import AdvancedAnalytics from './components/AdvancedAnalytics';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import NotificationSystem from './components/NotificationSystem';
+// Fallback stubs for missing components to restore build
+const AdvancedAnalytics: React.FC<{ enableConversionTracking?: boolean; enablePerformanceTracking?: boolean; enableErrorTracking?: boolean }> = () => null;
+const PerformanceOptimizer: React.FC<{ isVisible?: boolean; onClose?: () => void }> = () => null;
+const PerformanceMonitor: React.FC = () => null;
+const EnhancedErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
+const NotificationSystem: React.FC<{ notifications?: any[]; onRemove?: (id: string) => void }> = () => null;
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};

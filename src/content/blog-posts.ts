@@ -74,6 +74,8 @@ Understanding what to measure in GenAI systems is crucial for maintaining qualit
     `,
     category: "GenAI",
     date: "2025-09-30",
+    author: "Zion Tech Group Team",
+    tags: ["GenAI", "Telemetry", "Monitoring"],
     featured: true,
     readTime: "6 min read",
     image: "/images/genai-telemetry.jpg"

@@ -19,7 +19,6 @@ import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
-<<<<<<< HEAD
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
@@ -28,12 +27,6 @@ import NewContentAnnouncement from "../components/NewContentAnnouncement";
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
-=======
-import LatestContentBanner from "../components/LatestContentBanner";
-import LatestInsights from "../components/LatestInsights";
-import ModernFeatures from "../components/ModernFeatures";
-import NewContentPromoBanner from "../components/NewContentPromoBanner";
->>>>>>> content/oct-2025-updates
 import TrendingContentBanner from "../components/TrendingContentBanner";
 import { latestInsights } from "../content/insights";
 import { featuredInsights, newInsights } from "../content/new-insights";
