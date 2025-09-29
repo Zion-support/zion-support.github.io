@@ -32,3 +32,4 @@ core
 # Ignore coverage reports
 coverage/
 coverage
+coverage/
