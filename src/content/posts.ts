@@ -465,5 +465,134 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "9 min read",
   },
+ 
+  // Newly added posts (2025-09-30 / 2025-09-29)
+  {
+    slug: "serverless-inference-cost-playbook-2025",
+    title: "Serverless AI Inference Cost Playbook: 40–70% Savings Without P95 Pain",
+    description:
+      "Adaptive batching, warm pools, and tiered quality to cut spend while keeping latency sane.",
+    category: "AI Solutions",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "practical-rag-in-production-2025",
+    title: "Practical RAG in Production: Freshness, Hybrid Search, and Evals",
+    description:
+      "Battle-tested patterns for chunking, freshness policies, hybrid retrieval, and eval harnesses.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "secure-genai-guardrails-2025",
+    title: "Secure GenAI: Policy‑First Guardrails That Scale",
+    description:
+      "Prompt isolation, PII controls, and egress policies—ship safely without slowing teams.",
+    category: "Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read",
+  },
+  // New content additions (Oct 2025)
+  {
+    slug: "ai-platform-roi-2025",
+    title: "AI Platform ROI: Scorecards That Drive Investment Decisions",
+    description:
+      "A practical framework to quantify AI platform value with adoption, DX, and outcome metrics.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "7 min read",
+  },
+ 
+  {
+    slug: "secure-ml-supply-chain-2025",
+    title: "Securing the ML Supply Chain: Models, Data, and Dependencies",
+    description:
+      "SBOMs for models, dataset provenance, and runtime guardrails to protect AI systems end-to-end.",
+    category: "Security",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "enterprise-rag-blueprint-v2",
+    title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, and Evals",
+    description:
+      "An updated blueprint with freshness SLAs, hybrid retrieval, reranking, and evaluation harnesses.",
+    category: "GenAI",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "9 min read",
+  },
+  // Sept 30, 2025 fresh additions
+  {
+    slug: "ai-sales-copilot-playbook-2025",
+    title: "AI Sales Copilot: A 90‑Day Playbook for Revenue Teams",
+    description:
+      "Proven workflows, guardrails, and KPIs to deploy an AI copilot that actually lifts win‑rates.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "cost-aware-ml-platforms-2025",
+    title: "Cost‑Aware ML Platforms: Ship Faster Without Blowing the Budget",
+    description:
+      "Budgets, autoscaling, and policy checks that keep training and inference spend under control.",
+    category: "MLOps",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
+    slug: "ai-security-red-teaming-checklist",
+    title: "AI Security Red‑Teaming: The Field Checklist",
+    description:
+      "End‑to‑end test plan for prompt injection, data exfil, jailbreaks, and supply‑chain risks.",
+    category: "Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+ 
+  // Summaries for newly added long-form content
+  {
+    slug: "ai-platform-engineering-2025",
+    title: "AI Platform Engineering 2025: Golden Paths that Ship Outcomes",
+    description:
+      "A field guide to platform capabilities, eval systems, and governance that unlock safe, fast AI delivery.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read",
+  },
+  {
+    slug: "ai-agent-observability-2025",
+    title: "AI Agent Observability: Traces, Policies, and Human Feedback",
+    description:
+      "Instrument agents with traces and policy tests, and close the loop with human feedback for trustworthy systems.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "secure-rag-2025",
+    title: "Secure RAG 2025: Data Controls That Survive Production",
+    description:
+      "Authorization-aware retrieval, PII minimization, and prompt firewalls for enterprise-grade RAG.",
+    category: "Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+ 
+ 
 ];
 
