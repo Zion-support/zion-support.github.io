@@ -18,6 +18,16 @@ const TrendingContentBanner: React.FC = () => {
 
   const trendingItems = [
     {
+      title: "AI Disaster Recovery Playbooks",
+      description: "Failovers, warm pools, and rollback drills under 60 minutes.",
+      views: "11.2K",
+      readTime: "7 min",
+      category: "AI Operations",
+      icon: TrendingUp,
+      link: "/blog/ai-disaster-recovery-playbooks-2025",
+      badge: "NEW"
+    },
+    {
       title: "AI Autonomous Infrastructure 2026",
       description: "Self‑healing, self‑optimizing, self‑scaling platforms with budgets.",
       views: "12.4K",
@@ -56,6 +66,16 @@ const TrendingContentBanner: React.FC = () => {
       icon: Zap,
       link: "/blog/edge-llm-caching-blueprint-2026",
       badge: "POPULAR"
+    },
+    {
+      title: "GenAI Data Governance Quickstart",
+      description: "Policy tests, lineage, consent scopes, and KPI‑linked checks.",
+      views: "9.8K",
+      readTime: "6 min",
+      category: "AI Governance",
+      icon: Shield,
+      link: "/blog/genai-data-governance-quickstart-2025",
+      badge: "HOT"
     }
   ];
 

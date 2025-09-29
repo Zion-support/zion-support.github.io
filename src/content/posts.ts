@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-disaster-recovery-playbooks-2025",
+    title: "AI Disaster Recovery Playbooks: 60‑Minute Recovery Drills",
+    description: "Tested runbooks for AI outages: fallback routes, warm pools, and rollback triggers tied to SLAs.",
+    category: "AI Operations",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-data-governance-quickstart-2025",
+    title: "GenAI Data Governance Quickstart: Policies, Lineage, and SLAs",
+    description: "Stand up practical guardrails in weeks: policy tests, dataset lineage, consent scopes, and KPI‑linked checks.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
     description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",

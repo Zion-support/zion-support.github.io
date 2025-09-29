@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-disaster-recovery-playbooks-2025",
+    slug: "ai-disaster-recovery-playbooks-2025",
+    title: "AI Disaster Recovery Playbooks: 60‑Minute Recovery Drills",
+    description: "Tested runbooks for AI outages: fallback routes, warm pools, and rollback triggers tied to SLAs.",
+    excerpt: "Practice quarterly drills: failover routes, budgeted actions, and instant rollback.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Operations",
+    tags: ["Runbooks", "Reliability", "SLA"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-disaster-recovery-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-data-governance-quickstart-2025",
+    slug: "genai-data-governance-quickstart-2025",
+    title: "GenAI Data Governance Quickstart: Policies, Lineage, and SLAs",
+    description: "Stand up practical guardrails in weeks: policy tests, dataset lineage, consent scopes, and KPI‑linked checks.",
+    excerpt: "A pragmatic path to governance that speeds teams up instead of slowing them down.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Governance",
+    tags: ["Policy", "Lineage", "Compliance"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/genai-data-governance-quickstart-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "secure-ml-supply-chain-2026",
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
