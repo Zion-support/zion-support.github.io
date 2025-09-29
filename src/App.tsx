@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, Suspense } from 'react';
 import { AppRouter } from './router';
 import './index.css';
 import { performanceMonitor } from './utils/performanceMonitor';
