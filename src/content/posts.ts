@@ -743,7 +743,7 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "5 min read",
   },
-<<<<<<< HEAD
+ 
   {
     slug: "secure-rag-2025",
     title: "Secure RAG 2025: Data Controls That Survive Production",
@@ -754,7 +754,6 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "8 min read",
   },
-=======
->>>>>>> origin/main
+ 
 ];
 
