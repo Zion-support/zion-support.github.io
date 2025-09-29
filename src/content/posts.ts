@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-e2e-tracing-2025",
+    title: "E2E AI Tracing: From Prompt to Outcome KPIs",
+    description: "Connect prompts, tools, and UX to measurable KPIs to prove ROI and prevent regressions.",
+    category: "Observability",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-personalization-2025",
+    title: "Edge Personalization: Privacy‑First, Sub‑100ms Experiences",
+    description: "On‑device signals, signed configs, and micro‑models for private, fast personalization.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "policy-tests-quickstart-2025",
+    title: "Policy Tests Quickstart: Ship Fast, Stay Safe",
+    description: "Lightweight CI policy tests that catch risks while preserving engineering velocity.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
     description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",

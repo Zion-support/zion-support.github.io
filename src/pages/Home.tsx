@@ -136,20 +136,16 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Reliable RAG Ops, Platform KPIs, AI Incident Budgets"
-          description="Keep RAG fresh, prove platform ROI, and contain incidents under 60s—safely."
+          title="New: E2E AI Tracing, Edge Personalization, CI Policy Tests"
+          description="Trace prompts to outcomes, personalize privately at the edge, and ship faster with CI policy tests."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
+            { title: "E2E AI Tracing", category: "Observability", link: "/blog/ai-e2e-tracing-2025" },
+            { title: "Edge Personalization", category: "Edge Computing", link: "/blog/edge-personalization-2025" },
+            { title: "Policy Tests Quickstart", category: "AI Governance", link: "/blog/policy-tests-quickstart-2025" },
             { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
-            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" },
-            { title: "Golden Paths ROI 2026", category: "Platform Engineering", link: "/blog/golden-paths-roi-2026" },
-            { title: "Reliable RAG Ops 2026", category: "GenAI", link: "/blog/reliable-rag-ops-2026" },
-            { title: "Platform KPIs 2026", category: "Platform Engineering", link: "/blog/platform-kpis-2026" },
-            { title: "AI Incident Budgets 2026", category: "Security", link: "/blog/ai-incident-budgets-2026" },
-            { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
-            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" },
-            { title: "Golden Paths ROI 2026", category: "Platform Engineering", link: "/blog/golden-paths-roi-2026" }
+            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -548,7 +544,7 @@ const Home = () => {
                 <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Fresh: Edge LLM Caching, KPI Scorecards, Serverless Cost Playbook
+                Fresh: E2E AI Tracing, Edge Personalization, CI Policy Tests
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles & Insights
@@ -829,16 +825,16 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">AI Operations</div>
-                  <div className="font-semibold text-white">Autonomous Incident Runbooks</div>
+                  <div className="text-sm text-purple-200 mb-1">Observability</div>
+                  <div className="font-semibold text-white">E2E AI Tracing</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Architecture</div>
-                  <div className="font-semibold text-white">Privacy‑First Feature Flags</div>
+                  <div className="text-sm text-rose-200 mb-1">Edge Computing</div>
+                  <div className="font-semibold text-white">Edge Personalization</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">AI Strategy</div>
-                  <div className="font-semibold text-white">Platform ROI Scorecards</div>
+                  <div className="text-sm text-blue-200 mb-1">AI Governance</div>
+                  <div className="font-semibold text-white">Policy Tests Quickstart</div>
                 </div>
               </div>
             </div>
