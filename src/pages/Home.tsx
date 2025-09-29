@@ -114,14 +114,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="Fresh: AI Roadmaps, SBOM for ML, Online GenAI Evals"
-          description="New guides and playbooks to accelerate safe AI delivery in 2025."
+          title="Fresh: AI ROI Scorecards, Secure ML Supply Chain, Enterprise RAG v2"
+          description="New guides to prove platform value, secure ML supply chains, and stabilize GenAI quality."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Product Roadmaps 2025", category: "AI Strategy", link: "/blog/ai-product-roadmaps-2025" },
-            { title: "SBOM for ML Supply Chain", category: "Security", link: "/blog/sbom-automation-ml-supply-chain" },
-            { title: "Online GenAI Evals", category: "GenAI", link: "/blog/online-genai-evals-2025" },
+            { title: "AI Platform ROI Scorecards", category: "AI Strategy", link: "/blog/ai-platform-roi-2025" },
+            { title: "Secure ML Supply Chain", category: "Security", link: "/blog/secure-ml-supply-chain-2025" },
+            { title: "Enterprise RAG v2", category: "GenAI", link: "/blog/genai-evals-in-production-2025" },
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -296,9 +296,9 @@ const Home = () => {
         {/* Latest Insights Section */}
         {/* Promo ribbon for new content */}
         <div className="container mx-auto px-6">
-          <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
+            <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: AI Product Roadmaps, SBOM Automation, and Online GenAI Evals — read now
+            New: AI Platform ROI Scorecards, Secure ML Supply Chain, and Enterprise RAG v2 — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
@@ -558,7 +558,7 @@ const Home = () => {
             <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Fresh Content Available
+                Fresh: ROI Scorecards, ML SBOM, Enterprise RAG v2
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles & Insights
@@ -734,6 +734,8 @@ const Home = () => {
                 <p className="text-gray-600">Fresh: AI Platform ROI, Secure ML Supply Chain, and Enterprise RAG Blueprint.</p>
                 <p className="text-gray-600">Insights from our team to help you move faster.</p>
                 <p className="text-gray-600">Fresh: GenAI Telemetry, Edge Flags, Product Readiness, and more.</p>
+                <p className="text-gray-600">New: Platform ROI, Secure ML Supply Chain, and Enterprise RAG v2.</p>
+>>>>>>> 6bf91968c6d7c34ee813c38b277ccbb4f761d63e
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
@@ -842,6 +844,8 @@ const Home = () => {
                     New: AI Platform ROI scorecards, securing the ML supply chain, and Enterprise RAG v2.
                     Fresh reads: GenAI guardrails that scale, validation circuits for edge flags, and north‑star metrics that drive outcomes.
                   </p>
+                  <p className="text-white/90">New: Platform ROI scorecards, Secure ML Supply Chain, and Enterprise RAG v2.</p>
+>>>>>>> 6bf91968c6d7c34ee813c38b277ccbb4f761d63e
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
                   Read the latest
@@ -857,7 +861,7 @@ const Home = () => {
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-blue-200 mb-1">GenAI</div>
-                  <div className="font-semibold text-white">Enterprise RAG Blueprint v2</div>
+                  <div className="font-semibold text-white">Enterprise RAG v2</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-rose-200 mb-1">Security</div>

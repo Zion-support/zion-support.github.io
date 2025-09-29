@@ -6,9 +6,48 @@ export interface BlogPost {
   publishedAt: string;
   featured?: boolean;
   readTime?: string;
+  image?: string;
+  tags?: string[];
 }
 
 export const posts: BlogPost[] = [
+  {
+    slug: "ai-autonomous-operations-2025",
+    title: "AI Autonomous Operations: Self‑Healing, Self‑Optimizing Infra",
+    description: "Design SLO‑driven controllers, safe remediations, and policy‑guarded runbooks.",
+    category: "Infrastructure",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "enterprise-ai-roadmap-2025",
+    title: "Enterprise AI Roadmap 2025: From Pilots to Platform",
+    description: "Operating model, platform capabilities, and productized use‑cases that compound.",
+    category: "Strategy",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "9 min",
+  },
+  {
+    slug: "cloud-native-ai-platforms-2025",
+    title: "Cloud‑Native AI Platforms: Multi‑Region, Cost‑Aware, Governed",
+    description: "Reference architecture for elastic GPUs, feature stores, evals, and guardrails.",
+    category: "Cloud",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "7 min read"
+  },
+  // New posts
+  {
+    slug: "quantum-computing-business-applications-2025",
+    title: "Quantum Computing: Practical Business Applications in 2025",
+    description: "Where quantum adds value today: portfolio, routing, scheduling, and pricing.",
+    category: "Quantum",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "6 min read"
+  },
   {
     slug: "ai-platform-roi-2025",
     title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
@@ -259,6 +298,24 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
+    slug: "serverless-ai-inference-cost-playbook-2025",
+    title: "Serverless AI Inference: The Cost Optimization Playbook",
+    description: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "9 min",
+  },
+  {
+    slug: "production-rag-architectures-that-work-2025",
+    title: "RAG Architectures That Actually Work in Production",
+    description: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.",
+    category: "GenAI",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
     slug: "secure-ml-supply-chain-2025",
     title: "Secure ML Supply Chain: From SBOMs to Model Lineage",
     description: "End-to-end provenance and controls for datasets, models, and inference routes.",
@@ -358,7 +415,7 @@ export const posts: BlogPost[] = [
     category: "AI Strategy",
     publishedAt: "2025-09-29",
     featured: true,
-    readTime: "9 min read"
+    readTime: "9 min",
   },
   {
     slug: "real-time-genai-guardrails-2025",
@@ -472,5 +529,34 @@ export const posts: BlogPost[] = [
   },
  
  
+  ,
+  {
+    slug: "ai-risk-register-checklist-2025",
+    title: "AI Risk Register Checklist: Owners, Policy Tests, Dashboards",
+    description: "Make AI risk real with accountable owners, measurable policies, and visible scorecards.",
+    category: "AI Governance",
+    publishedAt: "2025-10-06",
+    featured: true,
+    readTime: "5 min read"
+  },
+  {
+    slug: "rag-freshness-strategies-2025",
+    title: "RAG Freshness Strategies: Versioned Chunks, TTLs, Async Warmups",
+    description: "Keep retrieval results fresh with versioned corpora, TTL budgets, and background warmups.",
+    category: "GenAI",
+    publishedAt: "2025-10-06",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "edge-feature-flags-zero-regret-2025",
+    title: "Edge Feature Flags: Zero‑Regret Rollouts with Instant Rollback",
+    description: "Segmented canaries by geo and account with budget caps and telemetry at the edge.",
+    category: "Architecture",
+    publishedAt: "2025-10-06",
+    featured: false,
+    readTime: "6 min read"
+  }
+>>>>>>> 6bf91968c6d7c34ee813c38b277ccbb4f761d63e
 ];
 

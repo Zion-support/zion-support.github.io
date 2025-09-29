@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import React from 'react';
 import { 
   NewBlogBanner, 
   AnalyticsPlatformBanner, 
@@ -8,14 +8,13 @@ import {
   AIAnalyticsBanner,
   HealthTechSuccessBanner,
   ComprehensiveAIBanner,
-  EnterpriseAIBanner
+  EnterpriseAIBanner,
+  NewAIAutomationBanner,
+  EnterpriseSecurityBanner,
+  RetailTransformationBanner,
+  NewContentShowcaseBanner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
-=======
-import { Link } from 'react-router-dom';
-import React from 'react';
-import { AnalyticsPlatformBanner, NewBlogBanner, NewContentBanner } from '../components/PromotionalBanner';
->>>>>>> cursor/create-and-deploy-new-content-04db
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -27,7 +26,10 @@ export default function HomePage() {
   return (
     <div className="animate-fade-in">
       {/* Promotional Banners */}
-      <NewBlogBanner />
+      <NewContentShowcaseBanner />
+      <NewAIAutomationBanner />
+      <EnterpriseSecurityBanner />
+      <RetailTransformationBanner />
       <WorkflowAutomationBanner />
       <AIAnalyticsBanner />
       
@@ -144,10 +146,9 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
-=======
+      
       {/* Latest Content Section */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -329,7 +330,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
->>>>>>> cursor/create-and-deploy-new-content-04db
 
       {/* Success Stories */}
       <section className="py-20 bg-gray-50">
