@@ -10,6 +10,8 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
+=======
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
     description:
@@ -40,33 +42,14 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
   },
   {
-    slug: "edge-inference-blueprints",
-    title: "Edge Inference Blueprints: Sub‑100ms UX in Production",
+>>>>>>> cursor/create-and-deploy-new-content-83a1
+    slug: "edge-inference-patterns-2025",
+    title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:
-      "Practical patterns for on‑device models, caching, and streaming that keep latency under 100ms.",
+      "Latency budgets, on‑device models, and caching strategies for lightning‑fast AI UX at the edge.",
     category: "Architecture",
     publishedAt: "2025-09-29",
     featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "platform-scorecards-that-stick",
-    title: "Platform Scorecards That Actually Drive Adoption",
-    description:
-      "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
-    category: "Platform Engineering",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "9 min read",
-  },
-  {
-    slug: "genai-guardrails-in-the-wild",
-    title: "GenAI Guardrails in the Wild: Evals, Policies, and Drift Control",
-    description:
-      "A field guide to combining offline suites with online policy tests to keep quality high.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: false,
     readTime: "7 min read",
   },
   {
@@ -100,13 +83,23 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
-    slug: "edge-inference-patterns-2025",
-    title: "Edge Inference Patterns for Sub‑100ms Experiences",
+    slug: "platform-scorecards-that-stick",
+    title: "Platform Scorecards That Actually Drive Adoption",
     description:
-      "Latency budgets, on‑device models, and caching strategies for lightning‑fast AI UX at the edge.",
-    category: "Architecture",
+      "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
+    category: "Platform Engineering",
     publishedAt: "2025-09-29",
     featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "genai-guardrails-in-the-wild",
+    title: "GenAI Guardrails in the Wild: Evals, Policies, and Drift Control",
+    description:
+      "A field guide to combining offline suites with online policy tests to keep quality high.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: false,
     readTime: "7 min read",
   },
   {
@@ -136,16 +129,6 @@ export const posts: BlogPost[] = [
       "A practical method to align teams to measurable outcomes and avoid vanity KPIs.",
     category: "Product Analytics",
     publishedAt: "2025-09-27",
-    featured: false,
-    readTime: "6 min read",
-  },
-  {
-    slug: "north-star-metrics-that-drive-growth",
-    title: "North‑Star Metrics That Actually Drive Growth",
-    description:
-      "Define actionable metrics, avoid vanity traps, and align teams to measurable outcomes.",
-    category: "Product Analytics",
-    publishedAt: "2025-09-29",
     featured: false,
     readTime: "6 min read",
   },
@@ -314,6 +297,56 @@ export const posts: BlogPost[] = [
       "Framework for developing AI systems that are fair, transparent, and compliant with emerging regulations.",
     category: "AI Governance",
     publishedAt: "2025-01-05",
+  },
+  {
+    slug: "ai-powered-business-automation-2025",
+    title: "AI-Powered Business Automation: The Complete 2025 Guide",
+    description:
+      "Transform your business operations with cutting-edge AI automation. Learn implementation strategies, ROI calculations, and real-world success stories.",
+    category: "AI & Automation",
+    publishedAt: "2025-01-21",
+    featured: true,
+    readTime: "12 min read",
+  },
+  {
+    slug: "next-gen-cloud-infrastructure",
+    title: "Next-Generation Cloud Infrastructure: Scaling for 2025 and Beyond",
+    description:
+      "Discover the latest cloud technologies and infrastructure patterns that are reshaping how businesses scale their operations.",
+    category: "Cloud Strategy",
+    publishedAt: "2025-01-21",
+    featured: true,
+    readTime: "10 min read",
+  },
+  {
+    slug: "enterprise-ai-implementation-roadmap",
+    title: "Enterprise AI Implementation: A Strategic Roadmap for 2025",
+    description:
+      "Navigate the complexities of enterprise AI adoption with our comprehensive roadmap covering strategy, implementation, and governance.",
+    category: "AI Strategy",
+    publishedAt: "2025-01-21",
+    featured: true,
+    readTime: "15 min read",
+  },
+  {
+    slug: "micro-saas-platform-architecture",
+    title: "Building Scalable Micro SAAS Platforms: Architecture Patterns and Best Practices",
+    description:
+      "Learn how to design and implement micro SAAS platforms that can scale to millions of users while maintaining performance and reliability.",
+    category: "Platform Engineering",
+    publishedAt: "2025-01-21",
+    featured: false,
+    readTime: "11 min read",
+  },
+  {
+    slug: "ai-ethics-responsible-deployment",
+    title: "AI Ethics and Responsible Deployment: Building Trust in AI Systems",
+    description:
+      "Essential guidelines for deploying AI systems responsibly, ensuring fairness, transparency, and accountability in your AI initiatives.",
+    category: "AI Governance",
+    publishedAt: "2025-01-21",
+    featured: false,
+    readTime: "9 min read",
   },
 ];
 

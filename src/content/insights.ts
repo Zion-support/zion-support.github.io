@@ -9,6 +9,33 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "genai-policy-tests-canaries",
+    title: "GenAI Policy Tests: From Offline Suites to Online Canaries",
+    summary:
+      "How to combine offline evals with live canaries to catch regressions before customers do.",
+    category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-flags-validation",
+    title: "Edge Flags: Validation Circuits That Prevent Bad Rolls",
+    summary:
+      "Design health checks, signed payloads, and roll-forward playbooks to keep flags safe.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "north-star-metrics-pitfalls",
+    title: "North‑Star Metrics Pitfalls: Fixing Vanity and Ambiguity",
+    summary:
+      "Replace vanity KPIs with leading indicators and consistent instrumentation.",
+    category: "Product Analytics",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
     id: "ai-governance-rubric",
     title: "A Lightweight Rubric for AI Governance Decisions",
     summary:
@@ -63,28 +90,58 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
-    id: "canary-evals-for-genai",
-    title: "Canary Evals for GenAI: What to Measure Before You Ship",
+    id: "feature-flags-edge-realtime",
+    title: "Real‑Time Feature Flags at the Edge",
     summary:
-      "Define offline gates and online guardrails to prevent silent regressions in LLM features.",
-    category: "MLOps",
-    date: "2025-09-29",
-    readMinutes: 5,
-  },
-  {
-    id: "streaming-backpressure-patterns",
-    title: "Taming Backpressure in Streaming Systems",
-    summary:
-      "Practical patterns for smoothing bursts, protecting downstreams, and keeping SLAs green.",
-    category: "Data Engineering",
+      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
+    category: "Architecture",
     date: "2025-09-28",
     readMinutes: 6,
   },
   {
-    id: "north-star-metrics-that-drive-growth",
-    title: "North‑Star Metrics That Actually Drive Growth",
+    id: "north-star-metrics-insight",
+    title: "North‑Star Metrics: A Field Guide",
     summary:
       "A practical approach to defining leading indicators that align teams to outcomes.",
+<<<<<<< HEAD
+    category: "Product Analytics",
+    date: "2025-09-28",
+    readMinutes: 7,
+  },
+  {
+    id: "kubernetes-cost-guardrails",
+    title: "Kubernetes Cost Guardrails That Engineers Don’t Hate",
+    summary:
+      "Limit waste with sensible defaults: requests/limits, QoS, autoscaling, and cost-aware CI policies.",
+    category: "Cloud",
+    date: "2025-09-28",
+    readMinutes: 7,
+  },
+  {
+    id: "ciso-zero-trust-scorecard",
+    title: "A CISO’s Zero‑Trust Scorecard",
+    summary:
+      "Measure progress with identity controls, least privilege, continuous verification, and blast‑radius limits.",
+    category: "Security",
+    date: "2025-09-28",
+    readMinutes: 8,
+  },
+  {
+    id: "zero-trust-sdls",
+    title: "Zero-Trust SDLC: Shipping Secure Software Without Slowing Down",
+    summary:
+      "Embed policy-as-code, automated threat modeling, and continuous verification into delivery workflows.",
+    category: "Security",
+    date: "2025-09-28",
+    readMinutes: 8,
+  },
+  {
+    id: "analytics-ltv-playbook",
+    title: "An Operator’s Playbook for LTV:CPA Ratio",
+    summary:
+      "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
+=======
+>>>>>>> origin/main
     category: "Product Analytics",
     date: "2025-09-28",
     readMinutes: 7,
@@ -117,6 +174,7 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 8,
   },
   {
+<<<<<<< HEAD
     id: "ai-workflow-automation-2025-trends",
     title: "AI Workflow Automation: 2025 Trends That Will Transform Business",
     summary:
@@ -250,6 +308,51 @@ export const latestInsights: InsightArticle[] = [
     category: "GenAI",
     date: "2025-09-29",
     readMinutes: 8,
+=======
+    id: "ai-automation-roi-calculator",
+    title: "AI Automation ROI Calculator: Measure Your Business Impact",
+    summary:
+      "A practical framework for calculating the return on investment from AI automation initiatives, with real-world case studies and templates.",
+    category: "AI Strategy",
+    date: "2025-01-21",
+    readMinutes: 8,
+  },
+  {
+    id: "cloud-native-microservices-2025",
+    title: "Cloud-Native Microservices: Patterns for 2025",
+    summary:
+      "Essential patterns and practices for building scalable, resilient microservices architectures in modern cloud environments.",
+    category: "Architecture",
+    date: "2025-01-21",
+    readMinutes: 10,
+  },
+  {
+    id: "enterprise-ai-governance-framework",
+    title: "Enterprise AI Governance Framework: From Strategy to Implementation",
+    summary:
+      "Comprehensive governance framework for enterprise AI adoption, covering policy, risk management, and operational excellence.",
+    category: "AI Governance",
+    date: "2025-01-21",
+    readMinutes: 12,
+  },
+  {
+    id: "saas-platform-scaling-strategies",
+    title: "SAAS Platform Scaling Strategies: From Startup to Enterprise",
+    summary:
+      "Proven strategies for scaling SAAS platforms from early-stage to enterprise, covering technical and business considerations.",
+    category: "Platform Engineering",
+    date: "2025-01-21",
+    readMinutes: 9,
+  },
+  {
+    id: "ai-security-best-practices",
+    title: "AI Security Best Practices: Protecting Your AI Systems",
+    summary:
+      "Essential security practices for AI systems, covering model protection, data privacy, and adversarial defense strategies.",
+    category: "Security",
+    date: "2025-01-21",
+    readMinutes: 11,
+>>>>>>> cursor/create-and-deploy-new-content-0173
   },
 ];
 
