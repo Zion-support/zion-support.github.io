@@ -479,6 +479,19 @@ export const promotionalBanners: PromotionalBanner[] = [
     priority: 0
   },
   {
+    id: 'fresh-oct-12-2025',
+    message: '🚀 New: AI Platform SLOs, RAG Evals in the Loop, Edge Flags 2026',
+    ctaText: 'Explore new content',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
     id: 'fresh-content-oct-2025',
     message: '✨ New: Governance Scorecards 2026, Freshness‑Aware RAG v2, Edge Flags 2026',
     ctaText: 'Read the latest',
