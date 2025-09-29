@@ -11,7 +11,7 @@ interface PerformanceMetric {
 }
 
 class PerformanceMonitor {
-  private recordedMetrics: RecordedMetric[] = [];
+  private metrics: PerformanceMetric[] = [];
   private observers: PerformanceObserver[] = [];
   private isInitialized = false;
 
@@ -93,7 +93,7 @@ class PerformanceMonitor {
     } catch (e) {
       console.warn('LCP observation failed:', e);
     }
-
+  }
   private observeResourceTiming(): void {
     if (typeof window === 'undefined' || !("PerformanceObserver" in window)) return;
     try {
@@ -109,7 +109,7 @@ class PerformanceMonitor {
     } catch (e) {
       console.warn('Resource timing observation failed:', e);
     }
-
+  }
   private observeNavigationTiming(): void {
     if (typeof window === 'undefined' || !("PerformanceObserver" in window)) return;
     try {
