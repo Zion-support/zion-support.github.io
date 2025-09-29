@@ -14,6 +14,7 @@ import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase20
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
+import LatestContent2026MegaBanner from '../components/LatestContent2026MegaBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -29,15 +30,15 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>🚀 BREAKTHROUGH 2026:</span>
-            <Link href="/blog/ai-autonomous-enterprise-2026" className="underline hover:text-yellow-200 font-semibold">Autonomous Enterprise</Link>
+            <Link href="/blog/ai-neural-architecture-search-2026" className="underline hover:text-yellow-200 font-semibold">Neural Architecture Search</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-quantum-optimization-2026" className="underline hover:text-yellow-200 font-semibold">Quantum AI (1000x Faster)</Link>
+            <Link href="/blog/ai-synthetic-data-2026" className="underline hover:text-yellow-200 font-semibold">Synthetic Data Revolution</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200 font-semibold">$25M ROI Success Story</Link>
+            <Link href="/blog/ai-space-tech-revolution-2026" className="underline hover:text-yellow-200 font-semibold">Space Tech Revolution</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">Agent Orchestration</Link>
+            <Link href="/case-studies/ai-neural-architecture-success-2026" className="underline hover:text-yellow-200 font-semibold">$25M Manufacturing Success</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-platform-architecture-2026" className="underline hover:text-yellow-200">Platform Architecture</Link>
+            <Link href="/case-studies/ai-synthetic-data-success-2026" className="underline hover:text-yellow-200 font-semibold">$18M Healthcare Success</Link>
           </div>
           <Link
             href="/blog"
@@ -61,6 +62,9 @@ export default function HomePage() {
       
       {/* Latest Content Promotional Banner */}
       <LatestContentPromotionalBanner />
+      
+      {/* Latest Content 2026 Mega Banner */}
+      <LatestContent2026MegaBanner />
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
