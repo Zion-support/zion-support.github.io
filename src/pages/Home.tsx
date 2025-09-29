@@ -16,6 +16,8 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
+import PromotionalBanner from "../components/PromotionalBanner";
+import FeaturedServices from "../components/FeaturedServices";
 
 const Home = () => {
   return (
@@ -54,6 +56,7 @@ const Home = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
+        <PromotionalBanner />
         <Header />
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -343,6 +346,9 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        {/* Featured Services Section */}
+        <FeaturedServices />
 
         {/* Modern Features Section */}
         <ModernFeatures />
