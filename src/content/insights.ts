@@ -107,5 +107,32 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-09-29",
     readMinutes: 8,
   },
+  {
+    id: "ai-architecture-foundations",
+    title: "AI Architecture Foundations for Reliable Systems",
+    summary:
+      "Core patterns for building robust AI apps: contracts, canaries, fallbacks, and circuit breakers.",
+    category: "AI Engineering",
+    date: "2025-09-29",
+    readMinutes: 7,
+  },
+  {
+    id: "data-contracts-in-practice",
+    title: "Data Contracts in Practice: Stop Silent Breakages",
+    summary:
+      "How to define, validate, and enforce data contracts to keep pipelines healthy and predictable.",
+    category: "Data",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "incident-response-for-ml",
+    title: "Incident Response for ML Systems",
+    summary:
+      "Runbooks, SLOs, and on-call playbooks tailored for data drift, model degradation, and outages.",
+    category: "MLOps",
+    date: "2025-09-29",
+    readMinutes: 8,
+  },
 ];
 

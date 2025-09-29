@@ -362,7 +362,10 @@ const Home = () => {
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
             <div className="grid gap-8 md:grid-cols-3">
-              {posts.slice(0, 3).map((post) => (
+              {[...posts]
+                .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+                .slice(0, 3)
+                .map((post) => (
                 <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                   <div className="p-6">
                     <div className="text-sm text-indigo-600 font-medium mb-2">{post.category}</div>
