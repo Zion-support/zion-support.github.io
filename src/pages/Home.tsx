@@ -161,7 +161,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: AI Governance playbook, Golden Path scorecards, and Cloud FinOps QA gates — read now
+            New: Secure SBOM guide, GenAI Eval Playbook, and K8s Cost Guardrails — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
@@ -590,7 +590,7 @@ const Home = () => {
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
                   <p className="text-white/90">
-                    Fresh articles on real-time data pipelines, north-star metrics, and safe, scalable GenAI ops.
+                    Fresh: Secure SBOMs, GenAI evaluation playbook, and Kubernetes cost guardrails.
                   </p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
@@ -602,16 +602,16 @@ const Home = () => {
               {/* Inline featured list */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
-                  <div className="font-semibold text-white">Building Reliable Real-Time Data Pipelines</div>
+                  <div className="text-sm text-emerald-200 mb-1">Security</div>
+                  <div className="font-semibold text-white">Shipping a Secure SBOM & Supply Chain Hardening</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-orange-200 mb-1">Product Analytics</div>
-                  <div className="font-semibold text-white">North-Star Metrics That Actually Drive Growth</div>
+                  <div className="text-sm text-purple-200 mb-1">GenAI</div>
+                  <div className="font-semibold text-white">A Practical Evaluation Playbook for GenAI Apps</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
-                  <div className="font-semibold text-white">Operationalizing GenAI Safely and at Scale</div>
+                  <div className="text-sm text-indigo-200 mb-1">Cloud FinOps</div>
+                  <div className="font-semibold text-white">Kubernetes Cost Guardrails That Engineers Don’t Hate</div>
                 </div>
               </div>
             </div>

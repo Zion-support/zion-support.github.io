@@ -18,6 +18,33 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+    id: "secure-sbom-supply-chain",
+    title: "Shipping a Secure SBOM and Hardening Your Supply Chain",
+    summary:
+      "Produce SBOMs, verify provenance, and add CI policy gates to cut risk.",
+    category: "Security",
+    date: "2025-09-29",
+    readMinutes: 7,
+  },
+  {
+    id: "k8s-cost-guardrails",
+    title: "Kubernetes Cost Guardrails That Engineers Don’t Hate",
+    summary:
+      "Sane defaults, autoscaling, and cost-aware tests that prevent waste without pain.",
+    category: "Cloud FinOps",
+    date: "2025-09-28",
+    readMinutes: 6,
+  },
+  {
+    id: "genai-eval-playbook",
+    title: "A Practical Evaluation Playbook for GenAI Apps",
+    summary:
+      "Design eval harnesses and policy tests that scale with usage and complexity.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 8,
+  },
+  {
     id: "governance-policy-testing",
     title: "Governance for AI: Policy Testing That Scales",
     summary:

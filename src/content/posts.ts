@@ -20,6 +20,36 @@ export const posts: BlogPost[] = [
     readTime: "7 min read",
   },
   {
+    slug: "secure-supply-chain-sbom-2025",
+    title: "Shipping a Secure SBOM and Hardening Your Supply Chain",
+    description:
+      "Produce SBOMs, verify provenance, and add CI policy gates to cut supply-chain risk.",
+    category: "Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "kubernetes-cost-guardrails-2025",
+    title: "Kubernetes Cost Guardrails That Engineers Don’t Hate",
+    description:
+      "Requests/limits, QoS, autoscaling, and cost-aware CI tests that prevent waste.",
+    category: "Cloud FinOps",
+    publishedAt: "2025-09-28",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "genai-eval-playbook-2025",
+    title: "A Practical Evaluation Playbook for GenAI Apps",
+    description:
+      "Offline + online evals, policy tests, and guardrails to keep quality high as you scale.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
     slug: "ai-governance-checklist-2025",
     title: "AI Governance Checklist 2025: Ship Fast Without Breaking Policy",
     description:
