@@ -28,7 +28,7 @@ import {
   HealthcareTransformationBanner,
   NewContent2026Banner
 } from '../components/PromotionalBanner';
-import NewContentShowcaseBanner from '../src/components/NewContentShowcaseBanner';
+import NewContent2026Banner from '../components/NewContent2026Banner';
 import AITrends2025Banner from '../src/components/AITrends2025Banner';
 import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBanner';
 import AIROICalculator from '../src/components/AIROICalculator';
@@ -74,8 +74,10 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
-      {/* Promotional Banners */}
+      {/* New 2026 Content Banner */}
       <NewContent2026Banner />
+      
+      {/* Promotional Banners */}
       <AIMultimodalEnterpriseBanner />
       <AIEnterpriseAutomationBanner />
       <AIDataAnalyticsEnterpriseBanner />
