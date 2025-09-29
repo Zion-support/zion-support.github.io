@@ -38,7 +38,6 @@ import {
   SupplyChainOptimizationBanner,
   AI2026TrendsBanner
 } from '../components/PromotionalBanner';
-=======
 import { 
   AIAutonomousCloudOpsBanner,
   AIFinTechTransformationBanner,
@@ -49,13 +48,6 @@ import {
   AutonomousOperationsSuccessBanner,
   NewContentShowcaseBanner2026
 } from '../components/NewContent2026Banners';
-<<<<<<< HEAD
-import { 
-  NewContent2026PromotionalBanner,
-  AIInnovation2026Banner,
-  SuccessStory2026Banner,
-  AIRevolution2026Banner
-=======
 import {
   AIAutonomousInfrastructureBanner,
   AIQuantumComputingBanner,
@@ -63,7 +55,6 @@ import {
   AIZeroTrustSecurityBanner,
   AIFoundationModelsBanner,
   LatestContent2026Banner
->>>>>>> cursor/create-and-deploy-new-content-6fcc
 } from '../components/NewContent2026PromotionalBanners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';

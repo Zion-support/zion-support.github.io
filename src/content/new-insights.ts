@@ -345,18 +345,18 @@ newInsights.unshift({
       <li>Adoption by team and product</li>
     </ul>
   `
-});
+  }),
 
-newInsights.unshift({
-  id: "ai-cybersecurity-automation-2025",
-  title: "AI Cybersecurity Automation: From Detections to Autonomic Response",
-  summary: "Close the loop with safe, policy‑backed automation and incident SLAs under 60s.",
-  category: "Cybersecurity",
-  date: "2025-10-09",
-  readMinutes: 7,
-  featured: true,
-  tags: ["Security", "Automation", "Response"],
-  content: `
+  {
+    id: "ai-cybersecurity-automation-2025",
+    title: "AI Cybersecurity Automation: From Detections to Autonomic Response",
+    summary: "Close the loop with safe, policy‑backed automation and incident SLAs under 60s.",
+    category: "Cybersecurity",
+    date: "2025-10-09",
+    readMinutes: 7,
+    featured: true,
+    tags: ["Security", "Automation", "Response"],
+    content: `
     <h2>Operate Safely</h2>
     <p>Behavioral detections feed runbooks with guardrails: approvals, budgets, and rollbacks.</p>
     <ul>
@@ -365,17 +365,17 @@ newInsights.unshift({
       <li>Measurable MTTR and resilience</li>
     </ul>
   `
-}),
+  },
   {
     id: "ai-governance-scorecards-2026",
-  title: "AI Governance 2026: Scorecards Engineers Actually Use",
-  summary: "Outcome‑linked guardrails with PR checks and online canaries that accelerate delivery.",
-  category: "AI Strategy",
-  date: "2025-10-07",
-  readMinutes: 7,
-  featured: true,
-  tags: ["Governance", "Policy", "Scorecards"],
-  content: `
+    title: "AI Governance 2026: Scorecards Engineers Actually Use",
+    summary: "Outcome‑linked guardrails with PR checks and online canaries that accelerate delivery.",
+    category: "AI Strategy",
+    date: "2025-10-07",
+    readMinutes: 7,
+    featured: true,
+    tags: ["Governance", "Policy", "Scorecards"],
+    content: `
     <h2>Guardrails That Ship</h2>
     <p>Adopt scorecards tied to KPIs, small PR checks for risky changes, and budgeted online canaries.</p>
     <h3>What to Implement</h3>
