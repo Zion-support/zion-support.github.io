@@ -34,11 +34,19 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
   const featuredContent = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       title: "AI Platform SLOs 2026",
       description: "Budgets, rollbacks, and KPI‑linked canaries",
       icon: Brain,
       link: "/blog/ai-platform-slos-2026",
       category: "AI Ops"
+=======
+      title: "AI Risk Mitigation Scorecards 2026",
+      description: "Owners, SLAs, and CI policy checks",
+      icon: Shield,
+      link: "/blog/ai-risk-mitigation-scorecards-2026",
+      category: "AI Governance"
+>>>>>>> origin/main
     },
     {
       title: "Production Agent Actions 2026",
@@ -62,6 +70,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       category: "Platform"
     },
     {
+<<<<<<< HEAD
       title: "Edge Feature Flags 2026",
       description: "<100ms global releases with budgets",
 =======
@@ -92,6 +101,13 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       icon: TrendingUp,
       link: "/blog/ai-incident-response-playbooks-2025",
       category: "Security"
+=======
+      title: "Edge Privacy Telemetry 2026",
+      description: "Scoped IDs and on‑device redaction",
+      icon: Brain,
+      link: "/blog/edge-privacy-telemetry-2026",
+      category: "Observability"
+>>>>>>> origin/main
     }
   ];
 

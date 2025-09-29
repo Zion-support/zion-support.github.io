@@ -19,6 +19,36 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-agent-safety-blueprint-2026',
+    title: 'AI Agent Safety Blueprint 2026: Guardrails for Reliable Autonomy',
+    excerpt: 'Blueprint for safe autonomous agents with policy gates, audits, and progressive autonomy.',
+    type: 'article',
+    readTime: '9 min read',
+    category: 'AI Reliability',
+    href: '/blog/ai-agent-safety-blueprint-2026',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '0 incidents', label: 'Prod Incidents' },
+      { value: '95%', label: 'On-policy Actions' }
+    ]
+  },
+  {
+    id: 'ai-operational-excellence-2026',
+    title: 'AI Operational Excellence 2026: From Pilots to Scaled Impact',
+    excerpt: 'Scale AI reliably with governance, quality gates, FinOps, and value tracking.',
+    type: 'article',
+    readTime: '12 min read',
+    category: 'Operations',
+    href: '/blog/ai-operational-excellence-2026',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '30–70%', label: 'Cost Reduction' },
+      { value: '99.9%', label: 'Uptime' }
+    ]
+  },
+  {
     id: 'ai-trustworthy-agents-2026',
     title: 'Trustworthy AI Agents 2026: Safety, Compliance, and Observability',
     excerpt: 'Deploy trustworthy AI agents with guardrails, approvals, and end-to-end observability.',

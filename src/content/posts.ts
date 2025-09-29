@@ -10,40 +10,31 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "ai-sre-runbooks-2026",
-    title: "AI SRE Runbooks 2026: Budgeted Actions with Instant Rollback",
-    description: "Design AI-assisted incident runbooks with approvals, budgets, and safe automation under 60s.",
-    category: "SRE",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "real-time-evals-prod-2026",
-    title: "Real‑Time Evals in Prod: Canary Scores that Predict KPIs",
-    description: "Operationalize online evals and link them to product KPIs for safe, fast delivery.",
+    slug: "ai-agents-in-the-enterprise-2026",
+    title: "AI Agents in the Enterprise 2026: From Pilots to Production",
+    description: "Design agent workflows with deterministic tools, traces, and budgets that scale across teams.",
     category: "GenAI",
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "8 min read"
   },
   {
-    slug: "privacy-first-feature-flags-2026",
-    title: "Privacy‑First Feature Flags: Geo, Account, and Scope Budgets",
-    description: "Blueprint for privacy‑aware flags with scoped IDs, DP noise, and instant rollback.",
-    category: "Architecture",
-    publishedAt: "2025-10-13",
-    featured: false,
-    readTime: "6 min read"
-  },
-  {
-    slug: "cost-aware-agents-2026",
-    title: "Cost‑Aware Agent Workflows: Tiered Quality Without UX Regressions",
-    description: "Route tools by budget and SLA with traces and fallback behaviors users trust.",
-    category: "AI Operations",
+    slug: "platform-roi-scorecards-v3-2026",
+    title: "Platform ROI Scorecards v3: Leading Indicators That Move the Business",
+    description: "Adoption, golden-path TTFX, and reliability signals that shift focus from costs to shipped value.",
+    category: "Platform Engineering",
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "7 min read"
+  },
+  {
+    slug: "privacy-preserving-agents-2026",
+    title: "Privacy‑Preserving Agents: PII‑Safe Tools, Redaction, and Audits",
+    description: "Blueprint for agents that keep signals rich without leaking PII using scoped IDs and field‑level filters.",
+    category: "AI Security",
+    publishedAt: "2025-10-13",
+    featured: false,
+    readTime: "6 min read"
   },
   {
     slug: "ai-reliable-rag-ops-2026",
@@ -326,6 +317,70 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "7 min read",
   },
+  // New additions to ensure advertised links resolve across homepage and banners
+  {
+    slug: "ai-autonomous-infrastructure-2026",
+    title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
+    description: "Design platform primitives with budgets, safety gates, and traces for reliable autonomy.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "zero-trust-for-genai-2026",
+    title: "Zero‑Trust for GenAI 2026: Prompt Firewalls, Egress Policies, Signed Outputs",
+    description: "Ship GenAI safely at scale with isolation, redaction, and verifiable outputs.",
+    category: "Security",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "quantum-ai-hybrid-blueprint-2026",
+    title: "Quantum‑AI Hybrid Blueprint 2026: Near‑Term Wins with Orchestrated QC",
+    description: "Combine quantum libraries with AI orchestration for practical, measurable impact.",
+    category: "Quantum",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-llm-caching-blueprint-2026",
+    title: "Edge LLM Caching Blueprint 2026: Sub‑100ms at Scale",
+    description: "Tiered caches, signed configs, and freshness windows for fast, affordable prompts.",
+    category: "Architecture",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "reliable-rag-ops-2026",
+    title: "Reliable RAG Ops 2026: Freshness, Drift, and Quality Budgets",
+    description: "Operate RAG at scale with TTL windows, drift monitors, and KPI‑tied budgets.",
+    category: "GenAI",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "platform-kpis-2026",
+    title: "Platform KPIs 2026: Adoption, Golden Paths, and SLOs",
+    description: "Scorecards engineers adopt—link platform telemetry to shipped business outcomes.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "ai-incident-budgets-2026",
+    title: "AI Incident Budgets 2026: Playbooks That Contain in <60s",
+    description: "Budgeted actions, approvals, and rollback triggers for safe automation under pressure.",
+    category: "Security",
+    publishedAt: "2025-10-12",
+    featured: false,
+    readTime: "6 min read",
+  },
   {
     slug: "llm-policy-testing-2025",
     title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
@@ -455,23 +510,33 @@ export const posts: BlogPost[] = [
   }
   ,
   {
-    slug: "agent-evals-scorecards-2026",
-    title: "Agent Evals 2026: Scorecards That Predict Outcomes",
-    description: "Design online evals and KPI‑linked scorecards that correlate with revenue and CSAT.",
-    category: "GenAI",
+    slug: "serverless-inference-cost-playbook-2026",
+    title: "Serverless Inference Cost Playbook 2026: 40–70% Savings",
+    description: "Adaptive batching, warm pools, and quality tiers that cut spend without hurting P95.",
+    category: "AI Operations",
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "8 min read"
   },
   {
-    slug: "privacy-preserving-agents-2026",
-    title: "Privacy‑Preserving Agents: Scoped IDs, Redaction, and On‑Device Caches",
-    description: "Ship assistant workflows that are insight‑rich without PII risk using scoped IDs and local caches.",
-    category: "AI Security",
+    slug: "governance-scorecards-quickstart-2026",
+    title: "Governance Scorecards Quickstart 2026: PR Checks That Speed Teams Up",
+    description: "Wire policy tests to KPIs, add canaries, and keep delivery fast and compliant.",
+    category: "AI Strategy",
     publishedAt: "2025-10-13",
-    featured: false,
+    featured: true,
     readTime: "7 min read"
   },
+  {
+    slug: "privacy-preserving-analytics-2026",
+    title: "Privacy‑Preserving Analytics 2026: Signal‑Rich, PII‑Safe Telemetry",
+    description: "Scoped IDs, field‑level filters, and retention tiers that unlock insights safely.",
+    category: "Observability",
+    publishedAt: "2025-10-13",
+    featured: false,
+    readTime: "6 min read"
+  }
+  ,
   {
     slug: "agentic-workflows-blueprint-2026",
     title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",

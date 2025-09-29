@@ -147,23 +147,44 @@ const Home = () => {
           autoRotate
           rotationInterval={7000}
         />
-        <NewContentPromoBanner 
+          <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Data Lineage for GenAI, Edge Feature Stores, LLM Evals"
-          description="Audit‑ready lineage, sub‑100ms private features, and online canaries that predict outcomes."
+          title="New: Serverless Inference, Governance Scorecards, Privacy‑Preserving Analytics"
+          description="Cut inference costs 40–70%, speed delivery with PR checks, and ship PII‑safe telemetry."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Data Lineage for GenAI 2026", category: "AI Governance", link: "/blog/ai-data-lineage-for-genai-2026" },
-            { title: "Edge Secure Feature Stores 2026", category: "Architecture", link: "/blog/edge-secure-feature-stores-2026" },
-            { title: "LLM Evaluation Playbooks 2026", category: "AI Strategy", link: "/blog/llm-evaluation-playbooks-2026" }
+            { title: "Serverless Inference Cost Playbook 2026", category: "AI Operations", link: "/blog/serverless-inference-cost-playbook-2026" },
+            { title: "Governance Scorecards Quickstart 2026", category: "AI Strategy", link: "/blog/governance-scorecards-quickstart-2026" },
+            { title: "Privacy‑Preserving Analytics 2026", category: "Observability", link: "/blog/privacy-preserving-analytics-2026" },
+            { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
         </div>
         
+        {/* New Comprehensive Promotional Banner */}
+        <div className="container mx-auto px-6 mt-6">
+          <ComprehensivePromoBanner variant="hero" showCount={4} />
+        </div>
+        
+        {/* New Articles Promotional Banner */}
+        <div className="container mx-auto px-6 mt-6">
+          <NewArticlesPromoBanner 
+            variant="premium" 
+            showCount={3} 
+            featuredOnly={true}
+            title="Brand New: Routing Blueprint, Secure ML Chain, Golden Paths ROI"
+            description="Cut costs 40–70% with smart routing, secure your ML supply chain, and prove platform value."
+          />
+        </div>
+        
+        {/* New Services Promotional Banner */}
+        <div className="container mx-auto px-6 mt-6">
+          <NewServicesPromoBanner variant="showcase" showCount={3} featuredOnly={true} />
+        </div>
         
         {/* Content Promotion Banner */}
         <ContentPromotionBanner

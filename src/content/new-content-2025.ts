@@ -397,6 +397,85 @@ export const newContent2025: NewContentItem[] = [
       }
     ]
   }
+  ,
+  {
+    id: "genai-routing-blueprint-2026",
+    title: "GenAI Routing Blueprint 2026: Fast, Cheap, and Grounded",
+    description: "Design intent-aware routers, fallback tiers, and caches to hit quality SLOs at a fraction of the cost.",
+    excerpt: "Route by intent, cache by value, and tier by SLO to cut spend 40–70% without hurting UX.",
+    type: "blog",
+    category: "GenAI Architecture",
+    tags: ["Routing", "Caching", "SLOs", "Cost"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-09-29",
+    readTime: "10 min read",
+    author: "Zion Tech Group",
+    image: "/images/genai-routing-blueprint-2026.jpg",
+    url: "/blog/genai-routing-blueprint-2026",
+    cta: {
+      primary: "Read Article",
+      secondary: "Get Routing Starter"
+    },
+    metrics: [
+      { label: "P95 Latency", value: "< 300ms", description: "With warm pools + caches" },
+      { label: "Cost", value: "-60%", description: "Savings from tiering + cache" },
+      { label: "Groundedness", value: "+30%", description: "With citation policy tests" }
+    ]
+  },
+  {
+    id: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: Attestations, Policy Tests, SBOMs",
+    description: "Ship verifiably secure models and tools with signed artifacts, provenance, and CI policy tests.",
+    excerpt: "From data to deployment: secure each link with attestations, SBOMs, and automated policy checks.",
+    type: "whitepaper",
+    category: "Security",
+    tags: ["Supply Chain", "Attestation", "SBOM", "Policy"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-09-28",
+    readTime: "18 min read",
+    author: "Security Team",
+    image: "/images/secure-ml-supply-chain-2026.jpg",
+    url: "/whitepapers/secure-ml-supply-chain-2026",
+    cta: {
+      primary: "Download Whitepaper",
+      secondary: "View Checklists"
+    },
+    metrics: [
+      { label: "Incident Risk", value: "-80%", description: "Post‑rollout reduction" },
+      { label: "Auditability", value: "100%", description: "Signed builds + trace" },
+      { label: "Lead Time", value: "-35%", description: "Fewer reworks via policy tests" }
+    ]
+  },
+  {
+    id: "golden-paths-roi-2026",
+    title: "Golden Paths ROI 2026: Proving Platform Value Quarterly",
+    description: "Build developer golden paths with scorecards that tie adoption to shipped business outcomes.",
+    excerpt: "Instrument your platform with KPIs that teams adopt—show ROI without vanity metrics.",
+    type: "blog",
+    category: "Platform Engineering",
+    tags: ["Golden Paths", "ROI", "KPIs", "Platform"],
+    featured: true,
+    newBadge: true,
+    trending: false,
+    publishedDate: "2025-09-27",
+    readTime: "9 min read",
+    author: "Zion Tech Group",
+    image: "/images/golden-paths-roi-2026.jpg",
+    url: "/blog/golden-paths-roi-2026",
+    cta: {
+      primary: "Read Article",
+      secondary: "Get Scorecard Kit"
+    },
+    metrics: [
+      { label: "Dev Adoption", value: "+45%", description: "Within two quarters" },
+      { label: "Lead Time", value: "-30%", description: "Golden path pipelines" },
+      { label: "Change Fail %", value: "-25%", description: "With guardrails + tests" }
+    ]
+  }
 ];
 
 export const featuredNewContent = newContent2025.filter(item => item.featured);

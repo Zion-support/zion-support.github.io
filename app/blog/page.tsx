@@ -54,40 +54,22 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
-            title="Trustworthy AI Audits 2026: From Policies to Proof"
-            excerpt="Turn AI policies into audit-ready evidence with measurable controls and continuous assurance."
+            title="Platform Engineering 2026: From Golden Paths to Outcomes"
+            excerpt="Measure adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery."
             date="October 9, 2025"
-            category="AI Reliability"
-            readTime="12 min"
-            image="✅"
-            href="/blog/trustworthy-ai-audits-2026"
+            category="Platform Engineering"
+            readTime="8 min"
+            image="🧭"
+            href="/blog/ai-platform-engineering-2026"
           />
           <BlogPost
-            title="GenAI Product Security 2026: Secure-by-Design Patterns"
-            excerpt="Practical controls for model safety, data privacy, runtime hardening, and supply chain."
-            date="October 9, 2025"
-            category="Security"
-            readTime="14 min"
-            image="🛡️"
-            href="/blog/genai-product-security-2026"
-          />
-          <BlogPost
-            title="AI Agent Observability 2026: Metrics, Traces, and Guardrails"
-            excerpt="Instrument agents with traces, evals, and policy guardrails to ship reliable autonomy."
+            title="Reliable RAG 2025: Production Patterns for Grounded Answers"
+            excerpt="Reduce hallucinations and latency with contracts, caching, routing, structured evals, and guardrails."
             date="September 29, 2025"
-            category="AI Reliability"
-            readTime="14 min"
-            image="📏"
-            href="/blog/ai-llm-evaluation-2026"
-          />
-          <BlogPost
-            title="Agent Benchmarking 2026: Tasks, Trails, and Real-World Scores"
-            excerpt="Benchmark agents with goal‑conditioned tasks, replayable trails, and outcome scores that predict field success."
-            date="September 29, 2025"
-            category="Autonomous AI"
-            readTime="16 min"
-            image="🧪"
-            href="/blog/agent-benchmarking-2026"
+            category="AI Platforms"
+            readTime="9 min"
+            image="📚"
+            href="/blog/ai-reliable-rag-patterns-2025"
           />
           <BlogPost
             title="Platform Engineering Scorecards 2026: From Golden Paths to Outcomes"
@@ -383,17 +365,7 @@ function BlogPost({
   image,
   featured = false,
   href,
-}: {
-  title: string;
-  excerpt: string;
-  date: string;
-  category: string;
-  readTime: string;
-  image: string;
-  featured?: boolean;
-  href?: string;
-  children?: React.ReactNode;
-}) {
+}: any) {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'Featured':
@@ -417,7 +389,7 @@ function BlogPost({
     }
   };
 
-  const ContentWrapper = ({ children }: { children: React.ReactNode }) => {
+  const ContentWrapper = ({ children }: any) => {
     if (href) {
       return (
         <Link href={href} className="block">
