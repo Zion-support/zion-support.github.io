@@ -21,7 +21,8 @@ const EnhancedPerformanceMonitor = () => {
     };
 
     const handleMetric = (metric: any) => {
-      performanceMetrics[metric.name as keyof PerformanceMetrics] = metric.value as number;
+      if (!metric || typeof metric.name !== 'string' || typeof metric.value !== 'number') return;
+      performanceMetrics[metric.name as keyof PerformanceMetrics] = metric.value;
       
       // Check if we have all metrics
       if (Object.keys(performanceMetrics).length === 6) {

@@ -111,9 +111,10 @@ export const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     const measureCLS = () => {
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries() as any) {
-          if (!entry.hadRecentInput) {
-            clsValue += (entry.value as number);
+        for (const entry of list.getEntries()) {
+          const anyEntry = entry as any;
+          if (!anyEntry.hadRecentInput && typeof anyEntry.value === 'number') {
+            clsValue += anyEntry.value;
             setMetrics(prev => ({ ...prev, cls: clsValue }));
           }
         }
@@ -124,6 +125,7 @@ export const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     const measureMemory = () => {
       if ('memory' in performance) {
         const memory = (performance as any).memory as { usedJSHeapSize: number } | undefined;
+        if (!memory) return;
         setMetrics(prev => ({ 
           ...prev, 
           memory: memory ? memory.usedJSHeapSize / 1024 / 1024 : 0

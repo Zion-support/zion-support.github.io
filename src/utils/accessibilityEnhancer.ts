@@ -60,7 +60,7 @@ class AccessibilityEnhancer {
     document.addEventListener('keydown', (event) => {
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey && document.activeElement === document.body) {
-        const skipLink = document.querySelector('[data-skip-link]') as HTMLElement;
+        const skipLink = document.querySelector('[data-skip-link]') as HTMLElement | null;
         if (skipLink) {
           skipLink.focus();
           event.preventDefault();
@@ -69,7 +69,7 @@ class AccessibilityEnhancer {
 
       // Escape key handling
       if (event.key === 'Escape') {
-        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]') as HTMLElement;
+        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]') as HTMLElement | null;
         if (modal) {
           this.closeModal(modal);
         }
@@ -77,9 +77,9 @@ class AccessibilityEnhancer {
 
       // Arrow key navigation for menus
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-        const menu = document.querySelector('[role="menu"]:focus-within');
+        const menu = document.querySelector('[role="menu"]:focus-within') as HTMLElement | null;
         if (menu) {
-          this.handleMenuNavigation(event, menu as HTMLElement);
+          this.handleMenuNavigation(event as KeyboardEvent, menu);
         }
       }
     });
@@ -91,9 +91,9 @@ class AccessibilityEnhancer {
     // Trap focus in modals
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Tab') {
-        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
+        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]') as HTMLElement | null;
         if (modal) {
-          this.trapFocus(event, modal as HTMLElement);
+          this.trapFocus(event as KeyboardEvent, modal);
         }
       }
     });
@@ -111,7 +111,7 @@ class AccessibilityEnhancer {
     if (!this.config.ariaLabels) return;
 
     // Add aria-labels to interactive elements without labels
-    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
+    const interactiveElements = document.querySelectorAll<HTMLElement>('button, a, input, select, textarea');
     
     interactiveElements.forEach(element => {
       if (!element.getAttribute('aria-label') && !element.getAttribute('aria-labelledby')) {
@@ -123,8 +123,8 @@ class AccessibilityEnhancer {
     });
 
     // Add role attributes where needed
-    const clickableElements = document.querySelectorAll('[onclick], [data-action]');
-    clickableElements.forEach(element => {
+    const clickableElements = document.querySelectorAll<HTMLElement>('[onclick], [data-action]');
+    clickableElements.forEach((element: HTMLElement) => {
       if (!element.getAttribute('role')) {
         element.setAttribute('role', 'button');
       }
