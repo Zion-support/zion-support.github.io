@@ -50,6 +50,7 @@ import {
   NewContentShowcaseBanner2026
 } from '../components/NewContent2026Banners';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   NewContent2026PromotionalBanner,
   AIInnovation2026Banner,
@@ -65,6 +66,10 @@ import {
   LatestContent2026Banner
 >>>>>>> cursor/create-and-deploy-new-content-6fcc
 } from '../components/NewContent2026PromotionalBanners';
+=======
+import { NewContent2026PromotionalBanners } from '../components/NewContent2026PromotionalBanners';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+>>>>>>> cursor/create-and-deploy-new-content-e8cb
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -81,6 +86,9 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
+      
       {/* New Content Promo Strip */}
       <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
@@ -94,7 +102,7 @@ export default function HomePage() {
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-foundation-models-2026" className="underline hover:text-yellow-200">Foundation Models Playbook</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-autonomous-enterprise-transformation-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
+            <Link href="/case-studies/ai-transformation-mega-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
           </div>
           <Link
             href="/blog"
@@ -104,6 +112,7 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
       {/* New 2026 Content Promotional Banners */}
 <<<<<<< HEAD
       <NewContent2026PromotionalBanner />
@@ -120,6 +129,10 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-6fcc
       
       {/* Additional Promotional Banners */}
+=======
+      {/* Promotional Banners */}
+      <NewContent2026PromotionalBanners />
+>>>>>>> cursor/create-and-deploy-new-content-e8cb
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
       <AIEthicsSuccessBanner />

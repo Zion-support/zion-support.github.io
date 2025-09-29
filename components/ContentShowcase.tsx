@@ -36,7 +36,11 @@ const contentItems: ContentItem[] = [
   {
     id: 'ai-quantum-hybrid-computing-2026',
     title: 'AI Quantum Hybrid Computing 2026: Next-Generation Intelligence',
+<<<<<<< HEAD
     excerpt: 'Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities. Complete guide to quantum-AI hybrid systems.',
+=======
+    excerpt: 'Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities. Complete guide to quantum-AI integration.',
+>>>>>>> cursor/create-and-deploy-new-content-e8cb
     type: 'article',
     readTime: '30 min read',
     category: 'Quantum Computing',
@@ -44,8 +48,13 @@ const contentItems: ContentItem[] = [
     featured: true,
     publishedDate: '2026-01-20',
     metrics: [
+<<<<<<< HEAD
       { value: '1000x', label: 'Faster' },
       { value: '95%', label: 'Accuracy' }
+=======
+      { value: '1000x', label: 'Faster Optimization' },
+      { value: '95%', label: 'Accuracy Improvement' }
+>>>>>>> cursor/create-and-deploy-new-content-e8cb
     ]
   },
   {
@@ -54,11 +63,15 @@ const contentItems: ContentItem[] = [
     excerpt: 'See how a Fortune 500 company achieved $25M ROI with comprehensive AI transformation. 99% automation, 90% cost reduction, and complete business revolution.',
     type: 'case-study',
 <<<<<<< HEAD
+<<<<<<< HEAD
     category: 'Fortune 500',
 =======
     readTime: '30 min read',
     category: 'Case Study',
 >>>>>>> cursor/create-and-deploy-new-content-6fcc
+=======
+    category: 'Success Story',
+>>>>>>> cursor/create-and-deploy-new-content-e8cb
     href: '/case-studies/ai-transformation-mega-success-2026',
     featured: true,
     publishedDate: '2026-01-20',
@@ -68,6 +81,7 @@ const contentItems: ContentItem[] = [
     ]
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: 'ai-zero-trust-security-2026',
     title: 'AI Zero Trust Security 2026: Complete Implementation Guide',
@@ -101,6 +115,8 @@ const contentItems: ContentItem[] = [
   {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6fcc
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e8cb
     id: 'ai-governance-maturity-model-2026',
     title: 'AI Governance Maturity Model 2026: From Ad‑Hoc to Audit‑Ready',
     excerpt: 'Move from ad‑hoc controls to audit‑ready AI governance with scorecards and KPIs.',
