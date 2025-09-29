@@ -32,7 +32,12 @@ import {
   AISustainabilityBanner,
   QuantumComputingBanner,
   SustainabilityCaseStudyBanner,
-  QuantumOptimizationBanner
+  QuantumOptimizationBanner,
+  AINeuralInterfacesBanner,
+  AISpaceTechBanner,
+  AISustainabilityTransformationBanner,
+  AIQuantumOptimizationBanner,
+  Revolutionary2026TechBanner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
@@ -73,6 +78,11 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <Revolutionary2026TechBanner />
+      <AINeuralInterfacesBanner />
+      <AISpaceTechBanner />
+      <AISustainabilityTransformationBanner />
+      <AIQuantumOptimizationBanner />
       <NewContent2026Banner />
       <AIAgentOrchestrationBanner />
       <AISustainabilityBanner />
