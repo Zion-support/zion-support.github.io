@@ -5,17 +5,8 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
-<<<<<<< HEAD
-import Post from './pages/Post';
-import Insights from './pages/Insights';
-import CaseStudies from './pages/CaseStudies';
-import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
-import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
-import AIDataAnalytics from './pages/services/AIDataAnalytics';
-=======
 import Portfolio from './pages/Portfolio';
 import Resources from './pages/Resources';
->>>>>>> origin/cursor/create-and-deploy-new-content-7ace
 
 export const AppRouter: React.FC = () => {
   return (
@@ -29,13 +20,8 @@ export const AppRouter: React.FC = () => {
       <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog" element={<Blog />} />
-<<<<<<< HEAD
-      <Route path="/blog/:slug" element={<Post />} />
-      <Route path="/insights" element={<Insights />} />
-=======
       <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/resources" element={<Resources />} />
->>>>>>> origin/cursor/create-and-deploy-new-content-7ace
     </Routes>
   );
 };

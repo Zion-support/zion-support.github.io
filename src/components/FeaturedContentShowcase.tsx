@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BlogPost, blogPosts } from '../content/blog-posts';
+import { BlogPost, posts } from '../content/posts';
 import { InsightArticle, latestInsights } from '../content/insights';
 
 interface FeaturedContentShowcaseProps {
@@ -23,9 +23,9 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
   const [activeTab, setActiveTab] = useState<'all' | 'blog' | 'insights'>('all');
 
   // Get featured blog posts
-  const featuredBlogPosts = blogPosts
+  const featuredBlogPosts = posts
     .filter(post => post.featured)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
     .slice(0, 3);
 
   // Get latest insights
@@ -35,13 +35,13 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
 
   // Combine content for display
   const allContent = [
-    ...featuredBlogPosts.map(post => ({ ...post, type: 'blog' as const })),
+    ...featuredBlogPosts.map(post => ({ ...post, type: 'blog' as const, date: post.publishedAt })),
     ...latestInsightsList.map(insight => ({ ...insight, type: 'insights' as const }))
   ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
    .slice(0, maxItems);
 
   const filteredContent = activeTab === 'all' ? allContent : 
-    activeTab === 'blog' ? featuredBlogPosts.map(post => ({ ...post, type: 'blog' as const })) :
+    activeTab === 'blog' ? featuredBlogPosts.map(post => ({ ...post, type: 'blog' as const, date: post.publishedAt })) :
     latestInsightsList.map(insight => ({ ...insight, type: 'insights' as const }));
 
   const getCategoryColor = (category: string) => {
@@ -161,7 +161,7 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
                 </div>
                 <div className="absolute top-4 right-4">
                   <span className="bg-white/20 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full">
-                    {item.type === 'blog' ? (item as BlogPost).readTime : `${(item as InsightArticle).readMinutes} min read`}
+                    {item.type === 'blog' ? (item as BlogPost).readTime || '5 min read' : `${(item as InsightArticle).readMinutes} min read`}
                   </span>
                 </div>
               </div>

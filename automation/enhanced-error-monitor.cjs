@@ -99,10 +99,6 @@ class EnhancedErrorMonitor {
     const errors = [];
     
     // Check for syntax errors
-<<<<<<< HEAD
-  }
-=======
-    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
       errors.push({
         type: 'merge_conflict',
         message: 'Merge conflict markers detected',
@@ -217,7 +213,6 @@ class EnhancedErrorMonitor {
     // Remove merge conflict markers and keep the latest version
     return content
       .replace(/[\s\S]*?[\s\S]*?      .replace(/[\s\S]*?      .replace(/[\s\S]*?  }
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 
   fixSyntaxErrors(content, error) {
     switch (error.message) {

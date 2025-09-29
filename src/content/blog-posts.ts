@@ -14,6 +14,182 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/main
+    slug: "genai-telemetry-observability-2025",
+    title: "GenAI Telemetry: What to Measure in 2025",
+    description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
+    content: `
+# GenAI Telemetry: What to Measure in 2025
+
+Operationalize GenAI with observability that tracks quality, safety, and cost. Learn the critical signals, dashboards, and alerting strategies that prevent regressions and runaway bills.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["Observability", "Telemetry", "Guardrails", "Quality"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/genai-telemetry.jpg"
+  },
+  {
+    slug: "feature-flags-at-the-edge-2025",
+    title: "Feature Flags at the Edge: Instant, Safe Rollouts",
+    description: "Design flags for global low-latency delivery, safe rollbacks, and cohort experimentation.",
+    content: `
+# Feature Flags at the Edge: Instant, Safe Rollouts
+
+Architect global feature delivery with edge caching, signed payloads, and cohort targeting to ship faster with confidence.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "Architecture",
+    tags: ["Edge", "Flags", "Rollouts", "CD"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-feature-flags.jpg"
+  },
+  {
+    slug: "ai-product-readiness-checks",
+    title: "AI Product Readiness: Pre‑Launch Checks That Matter",
+    description: "From eval gates to safety reviews—everything to validate before shipping AI to users.",
+    content: `
+# AI Product Readiness: Pre‑Launch Checks That Matter
+
+Use this concise pre‑launch checklist to ensure your AI features meet quality, safety, and reliability bars before release.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-27",
+    category: "Product",
+    tags: ["Product", "Launch", "Governance"],
+    featured: true,
+    readTime: "5 min read",
+    image: "/images/ai-product-readiness.jpg"
+<<<<<<< HEAD
+=======
+  },
+  {
+    slug: "genai-evals-in-production-2025",
+    title: "GenAI Evals in Production: Policy Tests That Scale",
+    description: "From offline suites to online canaries: patterns that keep quality high as usage grows.",
+    content: `
+# GenAI Evals in Production: Policy Tests That Scale
+
+Shipping GenAI features safely requires layered evaluation: offline suites, pre-merge policy checks, and online canaries tied to business KPIs.
+
+## What To Measure
+- Response quality vs. baselines
+- Policy violations (PII, hallucinations, toxicity)
+- Drift signals and feedback rates
+
+## Rollout Controls
+- Feature flags for cohort routing
+- Auto-rollback on regression
+- Shadow traffic with red/black comparison
+
+Adopt these patterns to move fast without breaking trust.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["GenAI", "Evals", "Guardrails", "Quality"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-evals.jpg"
+  },
+  {
+    slug: "feature-flags-edge-2025",
+    title: "Feature Flags at the Edge: <100ms Global Releases",
+    description: "Consistency models, cache strategies, and validation flows for instant global rollouts.",
+    content: `
+# Feature Flags at the Edge: <100ms Global Releases
+
+Push safe experiments globally with edge caches, signed payloads, and validation circuits that prevent stale or invalid configs.
+
+## Key Patterns
+- Versioned keys + background warmup
+- Request coalescing and negative caching
+- Health probes and circuit breakers
+
+These techniques unlock reliable, real-time experimentation at scale.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Architecture",
+    tags: ["Edge", "Feature Flags", "Architecture", "CD"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-flags.jpg"
+  },
+  {
+    slug: "north-star-metrics-anti-patterns",
+    title: "North‑Star Metrics: 7 Anti‑Patterns to Avoid",
+    description: "Common traps that derail metric-driven product development and how to fix them.",
+    content: `
+# North‑Star Metrics: 7 Anti‑Patterns to Avoid
+
+Avoid vanity KPIs, ambiguous definitions, and missing instrumentation. Replace with leading indicators, event-level telemetry, and clear ownership.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Product Analytics",
+    tags: ["Metrics", "Growth", "Product"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/north-star-anti-patterns.jpg"
+>>>>>>> origin/main
+  },
+  {
+    slug: "real-time-data-pipelines-2025",
+    title: "Building Reliable Real‑Time Data Pipelines in 2025",
+    description: "Blueprints for exactly-once semantics, backpressure, and observability from dev to prod.",
+    content: `
+# Building Reliable Real‑Time Data Pipelines in 2025
+
+Designing real‑time data systems that are reliable, observable, and affordable requires deliberate choices across ingestion, processing, storage, and delivery.
+
+## Reliability Principles
+
+- Idempotency at boundaries
+- At‑least‑once transport with de‑duplication
+- Exactly‑once within stateful processors via transactions
+
+## Latency Budgeting
+
+Define clear P50/P95 targets and allocate budgets across hops: ingestion, processing, storage, API, and client render.
+
+## Backpressure & Flow Control
+
+Use bounded mailboxes, dynamic batching, and adaptive windowing. Prefer pull‑based fan‑out where feasible.
+
+## Observability
+
+Emit structured events for lag, watermark, drop/retry counts, and window completeness. Correlate with trace IDs end‑to‑end.
+
+## Cost Controls
+
+Right‑size retention tiers, compress cold streams, and autoscale consumers by lag not CPU.
+
+## Reference Stack
+
+- Kafka / Redpanda for transport
+- Flink / Spark Structured Streaming for stateful ops
+- Iceberg / Delta for durable lakes
+- ClickHouse / Druid for serving analytics
+
+Implement these patterns to achieve fast, reliable, and cost‑effective streaming systems.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Data Engineering",
+    tags: ["Streaming", "Kafka", "Flink", "Observability", "Reliability"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/real-time-data-pipelines.jpg"
+  },
+  {
     slug: "genai-telemetry-observability-2025",
     title: "GenAI Telemetry: What to Measure in 2025",
     description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
@@ -65,52 +241,38 @@ Use this concise pre‑launch checklist to ensure your AI features meet quality,
     image: "/images/ai-product-readiness.jpg"
   },
   {
-    slug: "real-time-data-pipelines-2025",
-    title: "Building Reliable Real‑Time Data Pipelines in 2025",
-    description: "Blueprints for exactly-once semantics, backpressure, and observability from dev to prod.",
+    slug: "ai-cost-optimization-guardrails-2025",
+    title: "AI Cost Guardrails: Keep Quality High While Cutting Spend",
+    description: "Practical controls for token budgets, eval-triggered rollbacks, and model right-sizing.",
     content: `
-# Building Reliable Real‑Time Data Pipelines in 2025
+# AI Cost Guardrails: Keep Quality High While Cutting Spend
 
-Designing real‑time data systems that are reliable, observable, and affordable requires deliberate choices across ingestion, processing, storage, and delivery.
-
-## Reliability Principles
-
-- Idempotency at boundaries
-- At‑least‑once transport with de‑duplication
-- Exactly‑once within stateful processors via transactions
-
-## Latency Budgeting
-
-Define clear P50/P95 targets and allocate budgets across hops: ingestion, processing, storage, API, and client render.
-
-## Backpressure & Flow Control
-
-Use bounded mailboxes, dynamic batching, and adaptive windowing. Prefer pull‑based fan‑out where feasible.
-
-## Observability
-
-Emit structured events for lag, watermark, drop/retry counts, and window completeness. Correlate with trace IDs end‑to‑end.
-
-## Cost Controls
-
-Right‑size retention tiers, compress cold streams, and autoscale consumers by lag not CPU.
-
-## Reference Stack
-
-- Kafka / Redpanda for transport
-- Flink / Spark Structured Streaming for stateful ops
-- Iceberg / Delta for durable lakes
-- ClickHouse / Druid for serving analytics
-
-Implement these patterns to achieve fast, reliable, and cost‑effective streaming systems.
+Implement budget-aware routing, auto-downgrade on saturation, and per-feature token caps with clear SLOs so teams move fast without runaway bills.
     `,
     author: "Zion Tech Group Team",
     date: "2025-09-29",
-    category: "Data Engineering",
-    tags: ["Streaming", "Kafka", "Flink", "Observability", "Reliability"],
+    category: "GenAI",
+    tags: ["FinOps", "Quality", "Governance"],
     featured: true,
-    readTime: "9 min read",
-    image: "/images/real-time-data-pipelines.jpg"
+    readTime: "6 min read",
+    image: "/images/ai-cost-guardrails.jpg"
+  },
+  {
+    slug: "shipping-evals-in-ci-2025",
+    title: "Ship Faster with Evals in CI: A Practical Guide",
+    description: "Turn regressions into red builds. Wire offline evals into your pipeline today.",
+    content: `
+# Ship Faster with Evals in CI: A Practical Guide
+
+Wire offline evals into CI so quality gates block risky changes before they reach users. Learn data selection, goldens, and score thresholds that correlate with outcomes.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "MLOps",
+    tags: ["CI", "Evals", "Guardrails"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/evals-in-ci.jpg"
   },
   {
     slug: "platform-scorecards-that-stick",

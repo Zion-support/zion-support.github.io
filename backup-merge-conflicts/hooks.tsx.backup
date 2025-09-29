@@ -1,21 +1,8 @@
-<<<<<<< HEAD:backup-merge-conflicts/hooks.tsx.backup
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useDispatch, useSelector  } from 'react-redux';  export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ';
-;';;';
-=======
 import { useDispatch,useSelector } from 'react-redux'; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
 import { useDispatch, useSelector  } from 'react-redux';  export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ';';';
 import { useDispatch,useSelector } from 'react-redux'; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; '; ;';';
->>>>>>> main
->>>>>>> main
-=======
 import { useDispatch, useSelector  } from 'react-redux';  export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ';
 ;';;';
 import { useDispatch,useSelector } from 'react-redux'; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector;
 import { useDispatch, useSelector  } from 'react-redux';  export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ';';';
 import { useDispatch,useSelector } from 'react-redux'; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; '; ;';';
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/store/hooks.tsx
