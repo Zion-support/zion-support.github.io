@@ -219,7 +219,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                               </span>
                             )}
                           </div>
-                          <span className="text-xs text-gray-500">{report.lastOccurrence}</span>
+                          <span className="text-xs text-gray-500">{report.lastOccurrence instanceof Date ? report.lastOccurrence.toLocaleString() : report.lastOccurrence}</span>
                         </div>
                         <p className="text-sm text-gray-700 mb-2">{report.message}</p>
                         {report.context.component && (

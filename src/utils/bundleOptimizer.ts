@@ -3,6 +3,8 @@
  * Advanced bundle size optimization and code splitting tools
  */
 
+import React from 'react';
+
 export interface BundleMetrics {
   totalSize: number;
   gzippedSize: number;

@@ -176,7 +176,7 @@ export default function App(): React.JSX.Element {
       enhancedAnalytics.initialize();
       advancedCacheSystem.initialize();
       new AdvancedAutomationSystem().initialize();
-      new AccessibilityEnhancer().initialize();
+      // new AccessibilityEnhancer().initialize();
       new SecurityEnhancer().initialize();
     } catch (error) {
       console.warn('Some enhancement systems failed to initialize:', error);
@@ -203,10 +203,10 @@ export default function App(): React.JSX.Element {
     seoManager.updateMetaTags(seoData);
     
     // Initialize advanced optimization systems
-    performanceOptimizer.optimizeBundle();
-    accessibilityEnhancer.initialize();
-    seoOptimizer.optimizePage(seoData);
-    securityEnhancer.initialize();
+    // performanceOptimizer.optimizeBundle();
+    // accessibilityEnhancer.initialize();
+    // seoOptimizer.optimizePage(seoData);
+    // securityEnhancer.initialize();
 
     // Update meta tags
     updateMetaTags(seoData);
@@ -457,7 +457,10 @@ export default function App(): React.JSX.Element {
         </div>
       </div>
       
-      <PerformanceDashboard />
+      <PerformanceDashboard 
+        isVisible={false} 
+        onClose={() => {}} 
+      />
       <RealTimeMonitor />
       <SystemMetricsDashboard 
         isVisible={showSystemDashboard}
