@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import LatestContentBanner from "../components/LatestContentBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import LatestContentBanner from "../components/LatestContentBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";

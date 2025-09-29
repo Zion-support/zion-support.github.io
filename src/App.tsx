@@ -12,10 +12,11 @@ import './index.css';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
-import SEOOptimizer, { SEOData } from './components/SEOOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
+import type { Notification as AppNotification } from './components/NotificationSystem';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import NotificationSystem, { Notification as UINotification } from './components/NotificationSystem';
+import NotificationSystem from './components/NotificationSystem';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 
@@ -48,9 +49,9 @@ const WebsiteEnhancements = (props: any) => <Placeholder name="WebsiteEnhancemen
 export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [notifications, setNotifications] = useState<UINotification[]>([]);
+  const [notifications, setNotifications] = useState<AppNotification[]>([]);
 
-  const seoDataForOptimizer: SEOData = useMemo(() => ({
+  const seoDataForOptimizer = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
     canonical: typeof window !== 'undefined' ? window.location.href : 'https://zion.app/',
@@ -73,13 +74,10 @@ export default function App(): React.JSX.Element {
           break;
       }
       try {
-        if (enhancedSecurityManager && typeof (enhancedSecurityManager as any).initialize === 'function') {
-          (enhancedSecurityManager as any).initialize();
-        }
-      
+        (enhancedSecurityManager as any)?.initialize?.();
         // Initialize new performance and accessibility enhancements
         initializePerformanceEnhancements();
-        accessibilityEnhancer.initialize();
+        (accessibilityEnhancer as any)?.initialize?.();
       
       // Initialize advanced optimizers
       // Guard optional advanced systems if present in global scope
@@ -95,7 +93,7 @@ export default function App(): React.JSX.Element {
 
       advancedPerformanceOptimizer?.initialize?.();
       advancedSEOOptimizer?.initialize?.();
-      accessibilityEnhancer.initialize();
+      (accessibilityEnhancer as any)?.initialize?.();
       advancedSecurityManager?.initialize?.();
       advancedAnalytics?.initialize?.();
       // advancedErrorHandler is initialized in constructor

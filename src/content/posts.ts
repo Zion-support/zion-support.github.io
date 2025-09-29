@@ -220,6 +220,16 @@ export const posts: BlogPost[] = [
     readTime: "7 min read",
   },
   {
+    slug: "ai-product-launch-checklist-2025",
+    title: "AI Product Launch Checklist: From Pilot to Production",
+    description:
+      "A pragmatic checklist for hardening pilots, proving ROI, and launching AI features safely.",
+    category: "Product",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
     slug: "mlops-in-45-days",
     title: "MLOps in 45 Days: Shipping Reliable Models Fast",
     description:
