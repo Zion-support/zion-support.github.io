@@ -42,6 +42,7 @@ jest.mock("../../utils/advancedPerformanceMonitor", () => ({
   },
 }));
 
+describe("PerformanceDashboard", () => {
   beforeEach(() => {
     // Mock performance API
     Object.defineProperty(window, "performance", {
@@ -62,6 +63,13 @@ jest.mock("../../utils/advancedPerformanceMonitor", () => ({
     });
   });
 
+  it("renders dashboard when visible", () => {
+    render(<PerformanceDashboard isVisible={true} />);
+
+    expect(screen.getByText("Performance Dashboard")).toBeInTheDocument();
+    expect(screen.getByText("Web Vitals")).toBeInTheDocument();
+  });
+
   it("does not render when not visible", () => {
     render(<PerformanceDashboard isVisible={false} />);
 
@@ -76,10 +84,21 @@ jest.mock("../../utils/advancedPerformanceMonitor", () => ({
     });
   });
 
+  it("shows close button when onClose prop is provided", () => {
+    const mockOnClose = jest.fn();
+    render(<PerformanceDashboard isVisible={true} onClose={mockOnClose} />);
+
+    const closeButton = screen.getByRole("button", { name: /close/i });
+    expect(closeButton).toBeInTheDocument();
+
     fireEvent.click(closeButton);
     expect(mockOnClose).toHaveBeenCalled();
   });
 
+  it("displays monitoring status", () => {
+    render(<PerformanceDashboard isVisible={true} />);
+
+    expect(screen.getByText("Performance Tips")).toBeInTheDocument();
   });
 
   it("has proper accessibility attributes", () => {
