@@ -103,13 +103,14 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
           title="🚀 Fresh: AI Product Launch Checklist + MLOps in 45 Days"
           description="New guides on taking AI pilots to production and shipping reliable models fast."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-cost-savings-playbook-2025"
+          ctaLink="/blog/genai-evals-in-production-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -764,16 +765,16 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">AI Strategy</div>
-                  <div className="font-semibold text-white">AI Automation ROI Calculator: Prove Value Fast</div>
+                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
+                  <div className="font-semibold text-white">MLOps Reliability: Shipping GenAI Changes Safely</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Cloud FinOps</div>
-                  <div className="font-semibold text-white">Cloud Cost Guardrails in Practice</div>
+                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
+                  <div className="font-semibold text-white">Reliable Real‑Time Data Pipelines in 2025</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Security</div>
-                  <div className="font-semibold text-white">Secure ML Platform Blueprint</div>
+                  <div className="text-sm text-rose-200 mb-1">Product Analytics</div>
+                  <div className="font-semibold text-white">North‑Star Metrics: A Field‑Tested Framework</div>
                 </div>
               </div>
             </div>

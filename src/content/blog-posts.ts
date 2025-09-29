@@ -14,6 +14,7 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    
     slug: "genai-telemetry-observability-2025",
     title: "GenAI Telemetry: What to Measure in 2025",
     description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
