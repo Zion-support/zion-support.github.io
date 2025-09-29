@@ -20,6 +20,36 @@ export const posts: BlogPost[] = [
     readTime: "7 min read",
   },
   {
+    slug: "ai-cost-guardrails-2025",
+    title: "AI Cost Guardrails: Engineering Tactics That Cut Spend 30–60%",
+    description:
+      "Token budgets, route policies, and cache strategies that reduce AI costs without hurting UX.",
+    category: "AI Operations",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "platform-golden-paths-2025",
+    title: "Platform Golden Paths: Faster Delivery with Safer Defaults",
+    description:
+      "Opinionated templates, scorecards, and review rituals that boost adoption and reliability.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "production-rag-evals-2025",
+    title: "Production RAG Evals: Catch Drift Before Customers Do",
+    description:
+      "Hybrid suites, freshness checks, and online canaries that keep answers accurate over time.",
+    category: "GenAI",
+    publishedAt: "2025-10-01",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
     slug: "ai-adoption-scorecard-2025",
     title: "AI Adoption Scorecard: Executive Metrics That Drive Outcomes",
     description:

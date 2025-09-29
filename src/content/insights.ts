@@ -72,5 +72,23 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-09-30",
     readMinutes: 6,
   },
+  {
+    id: "ai-cost-guardrails-insight",
+    title: "AI Cost Guardrails: Telemetry That Drives the Right Decisions",
+    summary:
+      "Dashboards, alerts, and review cadences that reduce AI spend without surprises.",
+    category: "AI Operations",
+    date: "2025-10-01",
+    readMinutes: 5,
+  },
+  {
+    id: "platform-golden-paths-insight",
+    title: "Golden Paths That Teams Actually Use",
+    summary:
+      "Make paved roads the fastest option with templates, CLIs, and visible scorecards.",
+    category: "Platform Engineering",
+    date: "2025-10-01",
+    readMinutes: 6,
+  },
 ];
 

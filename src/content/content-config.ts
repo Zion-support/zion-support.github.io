@@ -394,6 +394,19 @@ export const promotionalBanners: PromotionalBanner[] = [
     priority: 1
   },
   {
+    id: 'oct-launch-content-2025',
+    message: '📣 New: AI Cost Guardrails + Golden Paths deep dives just dropped',
+    ctaText: 'Read the updates',
+    ctaLink: '/blog/ai-cost-guardrails-deep-dive-2025',
+    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-fuchsia-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0
+  },
+  {
     id: 'analytics-platform-banner',
     message: '🚀 Launch: AI Analytics Platform - Transform Data into Actionable Insights',
     ctaText: 'Explore Platform',
