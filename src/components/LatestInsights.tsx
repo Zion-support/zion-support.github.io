@@ -4,6 +4,16 @@ import { Link } from "react-router-dom";
 import { latestInsights } from "../content/insights";
 
 const LatestInsights: React.FC = () => {
+  const insights = latestInsights
+    .slice(0, 3)
+    .map((item) => ({
+      id: item.id,
+      title: item.title,
+      description: item.summary,
+      date: new Date(item.date).toLocaleDateString(),
+      category: item.category,
+      href: "/insights",
+    }));
   return (
     <section className="py-20 bg-white/5">
       <div className="container mx-auto px-6">
@@ -12,7 +22,7 @@ const LatestInsights: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Latest Insights</h2>
             <p className="text-zion-slate-light">Research, guides, and playbooks from our team.</p>
           </div>
-          <Link
+            <Link
             to="/insights"
             className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >

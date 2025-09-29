@@ -45,40 +45,40 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 8,
   },
   {
-    id: "realtime-data-pipelines",
-    title: "Building Reliable Real-Time Data Pipelines",
+    id: "real-time-pipelines-reliability",
+    title: "Building Reliable Real‑Time Data Pipelines",
     summary:
-      "Patterns and trade-offs for event-driven architectures that scale, stay observable, and minimize latency.",
+      "Patterns for exactly‑once semantics, schema evolution, and backpressure handling in streaming systems.",
     category: "Data Engineering",
     date: "2025-09-20",
-    readMinutes: 8,
-  },
-  {
-    id: "north-star-metrics-growth",
-    title: "North-Star Metrics That Actually Drive Growth",
-    summary:
-      "How to define actionable metrics, avoid vanity traps, and align teams around measurable outcomes.",
-    category: "Product Analytics",
-    date: "2025-09-22",
-    readMinutes: 6,
-  },
-  {
-    id: "zerotrust-saas-practice",
-    title: "Zero-Trust in Practice for SaaS",
-    summary:
-      "A pragmatic guide to rolling out least-privilege, continuous verification, and blast radius controls.",
-    category: "Security",
-    date: "2025-09-24",
     readMinutes: 7,
   },
   {
-    id: "operationalizing-genai-scale",
+    id: "north-star-metrics",
+    title: "North‑Star Metrics That Actually Drive Growth",
+    summary:
+      "Define actionable metrics, avoid vanity traps, and align teams to measurable outcomes.",
+    category: "Product Analytics",
+    date: "2025-09-22",
+    readMinutes: 5,
+  },
+  {
+    id: "operationalizing-genai",
     title: "Operationalizing GenAI Safely and at Scale",
     summary:
-      "Practical blueprints for evaluation, monitoring, and guardrails across the GenAI lifecycle.",
+      "Practical blueprints for evaluation, policy testing, and observability across the GenAI lifecycle.",
     category: "MLOps",
-    date: "2025-09-26",
+    date: "2025-09-25",
     readMinutes: 9,
+  },
+  {
+    id: "zero-trust-saas",
+    title: "Zero‑Trust in Practice for SaaS",
+    summary:
+      "Least‑privilege by default, continuous verification, and blast radius controls that actually work.",
+    category: "Security",
+    date: "2025-09-24",
+    readMinutes: 6,
   },
 ];
 
