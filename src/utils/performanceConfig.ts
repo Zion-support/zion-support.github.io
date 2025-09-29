@@ -33,12 +33,12 @@ export const performanceConfig = {
 export const performanceMonitor = {
   trackWebVitals: () => {
     if (typeof window !== 'undefined' && 'web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
+      import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+        onCLS(console.log);
+        onINP(console.log);
+        onFCP(console.log);
+        onLCP(console.log);
+        onTTFB(console.log);
       });
     }
   },
@@ -46,10 +46,10 @@ export const performanceMonitor = {
   collectMetrics: () => {
     const metrics = {
       loadTime: performance.now(),
-      memoryUsage: performance.memory ? {
-        used: performance.memory.usedJSHeapSize,
-        total: performance.memory.totalJSHeapSize,
-        limit: performance.memory.jsHeapSizeLimit
+      memoryUsage: (performance as any).memory ? {
+        used: (performance as any).memory.usedJSHeapSize,
+        total: (performance as any).memory.totalJSHeapSize,
+        limit: (performance as any).memory.jsHeapSizeLimit
       } : null,
       timing: performance.timing ? {
         domContentLoaded: performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart,
@@ -61,7 +61,7 @@ export const performanceMonitor = {
     return metrics;
   },
   
-  trackError: (error, context = {}) => {
+  trackError: (error: any, context = {}) => {
     console.error('Performance Error:', error, context);
     
     if (typeof gtag !== 'undefined') {
