@@ -94,12 +94,13 @@ function Footer() {
                 Blog
                 <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
               </Link>
-              <Link href="/blog/ai-autonomous-enterprise-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Autonomous Enterprise 2026</Link>
-              <Link href="/blog/ai-quantum-optimization-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Quantum AI Optimization</Link>
+              <Link href="/blog/ai-autonomous-enterprise-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Autonomous Enterprise 2026</Link>
+              <Link href="/blog/ai-quantum-optimization-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">⚡ Quantum AI (1000x Faster)</Link>
+              <Link href="/blog/ai-agent-orchestration-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🤖 Agent Orchestration</Link>
+              <Link href="/blog/ai-platform-architecture-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🏗️ Platform Architecture</Link>
               <Link href="/blog/ai-neural-interfaces-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🧠 Neural Interfaces 2026</Link>
               <Link href="/blog/ai-space-tech-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Space AI Technology</Link>
-              <Link href="/blog/ai-synthetic-data-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🔒 Synthetic Data AI</Link>
-              <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">$25M ROI Success Story</Link>
+              <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">💰 $25M ROI Success Story</Link>
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Case Studies
                 <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
