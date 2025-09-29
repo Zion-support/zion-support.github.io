@@ -671,3 +671,34 @@ posts.push(
     readTime: "8 min read"
   }
 );
+
+// Additional November 2025 posts
+posts.push(
+  {
+    slug: "genai-routing-under-budgets-2026",
+    title: "Quality‑Tiered GenAI Routing 2026: SLAs Without Surprise Bills",
+    description: "Route prompts across model tiers with caches and eval signals to control cost without hurting UX.",
+    category: "GenAI",
+    publishedAt: "2025-11-01",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "on-device-agents-offline-tools-2026",
+    title: "On‑Device Agents 2026: Offline‑Capable Tools and Private Caches",
+    description: "Design assistants that work offline with local tools, secure storage, and seamless fallbacks.",
+    category: "Edge Computing",
+    publishedAt: "2025-11-01",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "zero-trust-observability-2026",
+    title: "Zero‑Trust Observability 2026: Signed Traces and Least‑Privilege Telemetry",
+    description: "Ship audit‑ready traces with scoped IDs, signed spans, and role‑aware data access.",
+    category: "Security",
+    publishedAt: "2025-11-01",
+    featured: false,
+    readTime: "6 min read"
+  }
+);
