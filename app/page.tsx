@@ -50,6 +50,7 @@ import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import LatestAIInnovations2026Banner from '../components/LatestAIInnovations2026Banner';
 =======
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
+import NewContent2026Banner from '../components/NewContent2026Banner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 2026 AI Solutions',
@@ -480,6 +481,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* New Content 2026 Banner */}
+      <NewContent2026Banner />
 
       {/* New Content 2026 Showcase */}
       <NewContent2026Showcase />
