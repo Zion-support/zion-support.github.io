@@ -50,7 +50,14 @@ import {
   NewContentShowcaseBanner2026,
   AINeuralArchitectureOptimizationBanner,
   AIFederatedLearningBanner,
-  FederatedLearningSuccessBanner
+  FederatedLearningSuccessBanner,
+  AIAdvancedAutomationBanner,
+  AIEnterpriseSecurityBanner,
+  AIAdvancedAutomationSuccessBanner,
+  AIInnovationShowcaseBanner,
+  AIQuantumComputingBanner,
+  AIEthicsGovernanceBanner,
+  AIFutureTrendsBanner
 } from '../components/NewContent2026Banners';
 import AITrends2025Banner from '../src/components/AITrends2025Banner';
 import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBanner';
@@ -77,21 +84,21 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ NEW 2026:</span>
+            <Link href="/blog/ai-advanced-automation-2026" className="underline hover:text-yellow-200">Advanced Automation</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-enterprise-security-2026" className="underline hover:text-yellow-200">Enterprise Security</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-advanced-automation-success-2026" className="underline hover:text-yellow-200">$15M ROI Case Study</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum AI</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-ethical-framework-2026" className="underline hover:text-yellow-200">AI Ethics Framework</Link>
+            <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-agent-evals-2026" className="underline hover:text-yellow-200">Agent Evals</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-ethical-framework-2026" className="underline hover:text-yellow-200">AI Ethical Framework</Link>
+            <Link href="/blog/ai-multimodal-enterprise-integration-2026" className="underline hover:text-yellow-200">Multimodal AI</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-multimodal-enterprise-integration-2026" className="underline hover:text-yellow-200">Multimodal AI Integration</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-agentic-crm-automation-2026" className="underline hover:text-yellow-200">Agentic CRM Automation</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-ethical-framework-success-2026" className="underline hover:text-yellow-200">Ethics Success Story</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/agentic-workflow-orchestration-2026" className="underline hover:text-yellow-200">Workflow Orchestration</Link>
+            <Link href="/blog/ai-agentic-crm-automation-2026" className="underline hover:text-yellow-200">Agentic CRM</Link>
           </div>
           <Link
             href="/blog"
@@ -102,6 +109,13 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <AIAdvancedAutomationBanner />
+      <AIEnterpriseSecurityBanner />
+      <AIAdvancedAutomationSuccessBanner />
+      <AIInnovationShowcaseBanner />
+      <AIQuantumComputingBanner />
+      <AIEthicsGovernanceBanner />
+      <AIFutureTrendsBanner />
       <Latest2026ContentBanner />
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
@@ -431,6 +445,57 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Link href="/blog/ai-advanced-automation-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW 2026
+                  </span>
+                  <span className="text-sm text-gray-500">25 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Advanced Automation 2026: Complete Enterprise Transformation
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Master advanced AI automation with 95% efficiency gains, $10M+ ROI, and zero-touch operations.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">Read Complete Guide →</div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-enterprise-security-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW 2026
+                  </span>
+                  <span className="text-sm text-gray-500">22 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors">
+                  AI Enterprise Security 2026: Next-Generation Cybersecurity
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Protect your enterprise with AI-powered security that delivers 99.9% threat detection.
+                </p>
+                <div className="flex items-center text-red-600 font-semibold">Read Security Guide →</div>
+              </div>
+            </Link>
+            <Link href="/case-studies/ai-advanced-automation-success-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW CASE STUDY
+                  </span>
+                  <span className="text-sm text-gray-500">Fortune 500</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
+                  AI Advanced Automation Success: $15M ROI Case Study
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how a Fortune 500 company achieved $15M ROI with 98% process efficiency.
+                </p>
+                <div className="flex items-center text-green-600 font-semibold">View Case Study →</div>
+              </div>
+            </Link>
             <Link href="/blog/ai-agent-evals-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
