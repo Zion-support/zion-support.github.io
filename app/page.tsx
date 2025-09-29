@@ -80,6 +80,11 @@ import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
+import { 
+  NewContent2026MegaSuccessBanner,
+  AICustomerExperienceRevolutionBanner,
+  AISustainabilityTransformationBanner
+} from '../components/NewContent2026MegaSuccessBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -95,15 +100,15 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ NEW 2026:</span>
+            <Link href="/blog/ai-next-generation-automation-2026" className="underline hover:text-yellow-200">Next-Gen Automation</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-transformation-mega-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-customer-experience-revolution-2026" className="underline hover:text-yellow-200">Customer Experience</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">Sustainability Guide</Link>
+            <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-autonomous-infrastructure-2026" className="underline hover:text-yellow-200">Autonomous Infrastructure</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-quantum-hybrid-computing-2026" className="underline hover:text-yellow-200">Quantum AI</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-zero-trust-security-2026" className="underline hover:text-yellow-200">Zero Trust Security</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-foundation-models-2026" className="underline hover:text-yellow-200">Foundation Models Playbook</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-autonomous-enterprise-transformation-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
           </div>
           <Link
             href="/blog"
@@ -114,6 +119,9 @@ export default function HomePage() {
         </div>
       </div>
       {/* New 2026 Content Promotional Banners */}
+      <NewContent2026MegaSuccessBanner />
+      <AICustomerExperienceRevolutionBanner />
+      <AISustainabilityTransformationBanner />
       <RevolutionaryAutomationBanner />
       <AIRevolutionaryAutomationBanner />
       <AICostOptimizationBanner />
@@ -219,16 +227,16 @@ export default function HomePage() {
               href="/blog/ai-next-generation-automation-2026"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
             >
-              🚀 Read Latest AI Guide
+              🚀 Read Next-Gen Automation Guide
             </Link>
             <Link
-              href="/case-studies/ai-transformation-mega-success-2026"
+              href="/blog/ai-transformation-mega-success-2026"
               className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
             >
-              📈 View $25M Success Story
+              📈 View $25M ROI Case Study
             </Link>
             <a
-              to="tel:+13024640950"
+              href="tel:+13024640950"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
               Call +1 302 464 0950
