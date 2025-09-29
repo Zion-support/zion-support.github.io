@@ -142,7 +142,7 @@ export default function App(): React.JSX.Element {
       <SEOOptimizer
         title={seoDataForOptimizer.title}
         description={seoDataForOptimizer.description}
-        canonicalUrl={new URL(seoDataForOptimizer.canonical).pathname}
+        canonicalUrl={seoDataForOptimizer.canonicalUrl}
       />
       <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

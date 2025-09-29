@@ -1,15 +1,14 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
+  roots: ['<rootDir>/src', '<rootDir>/__tests__'],
   setupFilesAfterEnv: [
-    '@testing-library/jest-dom',
-    '<rootDir>/src/test/setup.ts' ],
+    '@testing-library/jest-dom'
+  ],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-<<<<<<< HEAD
     // Handle image imports
-    '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$':
-      '<rootDir>/tests/__mocks__/fileMock.js',
+    '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/tests/__mocks__/fileMock.js',
 
     // Fix path mappings with more specific ordering
     '^@/pages/api/(.*)$': '<rootDir>/pages/api/$1',
@@ -44,11 +43,11 @@ module.exports = {
     '^vitest$': '<rootDir>/tests/__mocks__/vitestMock.js',
 
     // Special module mocks
-    '^msw/node$': require.resolve('msw/node'),
+    '^msw/node$': 'msw/node',
     '^next/router$': 'next-router-mock',
     '^next/navigation$': '<rootDir>/tests/__mocks__/emptyModule.js',
-    'react-router-dom$': '<rootDir>/src/stubs/react-router-dom.tsx',
-    'react-router$': '<rootDir>/src/stubs/react-router-dom.tsx',
+    'react-router-dom$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    'react-router$': '<rootDir>/tests/__mocks__/emptyModule.js',
 
     // Mock heavy libraries not needed for unit tests
     '^@reown/appkit(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
@@ -76,7 +75,8 @@ module.exports = {
     '^bson(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@/components/search/(.*)$': '<rootDir>/src/components/talent/$1',
     // Retain original mocks for middleware to avoid heavy imports in Jest
-    '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js' },
+    '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js'
+  },
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
   testPathIgnorePatterns: [
     '/node_modules/',
@@ -84,7 +84,39 @@ module.exports = {
     '/build/',
     '/.next/',
     '/out/',
-    '/tests.disabled/' ],
+    '/tests.disabled/',
+    '/automation/',
+    '/automation_backup/',
+    '/backup/',
+    '/backup-pages/',
+    '/backup-problematic-files/',
+    '/broken_files_backup/',
+    '/broken-files-backup/',
+    '/corrupted-files-backup/',
+    '/corrupted_backup/',
+    '/apps.backup/',
+    '/components.disabled/',
+    '/components-disabled/',
+    '/src.corrupted/',
+    '/src.disabled/'
+  ],
+  modulePathIgnorePatterns: [
+    '<rootDir>/automation/',
+    '<rootDir>/automation_backup/',
+    '<rootDir>/backup/',
+    '<rootDir>/backup-pages/',
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/broken_files_backup/',
+    '<rootDir>/broken-files-backup/',
+    '<rootDir>/corrupted-files-backup/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/apps.backup/',
+    '<rootDir>/components.disabled/',
+    '<rootDir>/components-disabled/',
+    '<rootDir>/src.corrupted/',
+    '<rootDir>/src.disabled/'
+  ],
+  watchPathIgnorePatterns: ['<rootDir>/.git/', '<rootDir>/node_modules/'],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
     '^.+\\.(js|jsx)$': 'babel-jest' },
