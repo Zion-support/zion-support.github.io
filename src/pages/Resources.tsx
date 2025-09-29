@@ -1,24 +1,24 @@
-import React, { useMemo, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import {
-  Download,
-  FileText,
   BookOpen,
-  Shield,
-  TrendingUp,
-  Globe,
-  Search,
-  ExternalLink,
-  Clock,
-  Star,
-  Cloud,
-  Smartphone,
-  Database,
-  Play,
   CheckCircle,
+  Clock,
+  Cloud,
+  Database,
+  Download,
+  ExternalLink,
+  FileText,
+  Globe,
   Lightbulb,
-  Monitor
+  Monitor,
+  Play,
+  Search,
+  Shield,
+  Smartphone,
+  Star,
+  TrendingUp
 } from 'lucide-react';
+import { useMemo, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const Resources = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -314,6 +314,7 @@ const Resources = () => {
   };
 
   // counts are computed in the category definitions above
+  const categoriesWithCounts = categories;
 
   const filteredResources = resources.filter(resource => {
     const matchesCategory = selectedCategory === 'all' || resource.category === selectedCategory;
@@ -323,7 +324,6 @@ const Resources = () => {
     return matchesCategory && matchesSearch;
   });
 
-  // featuredResources is already computed above
   // featuredResources is already computed above
   return (
     <>
@@ -413,17 +413,15 @@ const Resources = () => {
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{resource.title}</h3>
                     <p className="text-gray-600 mb-4">{resource.description}</p>
 
-                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center text-gray-500 text-sm">
                         <Download className="w-4 h-4 mr-1" />
                         {resource.downloadCount} downloads
                       </div>
-                      {resource.duration && (
-                        <div className="flex items-center text-gray-500 text-sm">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {resource.duration}
-                        </div>
-                      )}
+                      <div className="flex items-center text-gray-500 text-sm">
+                        <Clock className="w-4 h-4 mr-1" />
+                        {(resource as any).readTime || (resource as any).duration || `${(resource as any).pages || 0} pages`}
+                      </div>
                     </div>
 
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -461,7 +459,7 @@ const Resources = () => {
                   />
                 </div>
                 <div className="flex gap-2 overflow-x-auto">
-                  {categories.map((category) => (
+                  {categoriesWithCounts.map((category) => (
                     <button
                       key={category.id}
                       onClick={() => setSelectedCategory(category.id)}
@@ -486,7 +484,7 @@ const Resources = () => {
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center justify-between mb-8">
                 <h2 className="text-3xl font-bold text-gray-900">
-                  {selectedCategory === 'all' ? 'All Resources' : categories.find(c => c.id === selectedCategory)?.name}
+                  {selectedCategory === 'all' ? 'All Resources' : categoriesWithCounts.find(c => c.id === selectedCategory)?.name}
                 </h2>
                 <span className="text-gray-600">{filteredResources.length} resources</span>
               </div>
@@ -520,12 +518,10 @@ const Resources = () => {
                           <Download className="w-4 h-4 mr-1" />
                           {resource.downloadCount}
                         </div>
-                        {resource.duration && (
-                          <div className="flex items-center">
-                            <Clock className="w-4 h-4 mr-1" />
-                            {resource.duration}
-                          </div>
-                        )}
+                        <div className="flex items-center">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {(resource as any).readTime || (resource as any).duration || `${(resource as any).pages || 0} pages`}
+                        </div>
                       </div>
 
                       <div className="flex flex-wrap gap-1 mb-4">
