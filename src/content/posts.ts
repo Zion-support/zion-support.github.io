@@ -197,7 +197,7 @@ export const posts: BlogPost[] = [
     category: "Technology",
     publishedAt: "2025-01-10",
     featured: false,
-    readTime: "9 min read",
+  readTime: "9 min read",
   },
   // Additional curated posts (resolved from merge)
   {
@@ -368,7 +368,7 @@ export const posts: BlogPost[] = [
     category: "AI Governance",
     publishedAt: "2025-01-21",
     featured: false,
-    readTime: "9 min read",
+  readTime: "9 min read",
   },
   {
     slug: "ai-autonomous-operations-revolution",

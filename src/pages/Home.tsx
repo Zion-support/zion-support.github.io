@@ -350,6 +350,8 @@ const Home = () => {
               </Link>
             </div>
           </div>
+
+          <ROICalculator className="max-w-6xl mx-auto" />
         </section>
 
         {/* Features Section */}
