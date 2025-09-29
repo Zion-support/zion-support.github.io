@@ -1,0 +1,15 @@
+import React from "react";
+
+<<<<<<< HEAD
+export default function EnhancedNewsletterSignup({ title, subtitle, showContentPreview }: { title?: string; subtitle?: string; showContentPreview?: boolean }) {
+  return null;
+}
+=======
+type Props = { title?: string; subtitle?: string; showContentPreview?: boolean };
+
+export default function EnhancedNewsletterSignup(props: Props): React.JSX.Element {
+  void props;
+  return <section aria-hidden="true" style={{ display: "none" }} />;
+}
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8261

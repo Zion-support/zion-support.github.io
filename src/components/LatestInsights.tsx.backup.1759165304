@@ -1,0 +1,12 @@
+import React from "react";
+
+<<<<<<< HEAD
+const LatestInsights: React.FC = () => null;
+
+export default LatestInsights;
+=======
+export default function LatestInsights() {
+  return null;
+}
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b86b

@@ -1,0 +1,3 @@
+    res && res.status(200).json({ 
+      "success": tru e, "message": 'Web vitals data received',
+      "metric": dat a && a.name, "value": dat a && a.value 
