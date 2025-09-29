@@ -6,6 +6,10 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import Post from './pages/Post';
+import CaseStudies from './pages/CaseStudies';
+import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
+import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
+import AIDataAnalytics from './pages/services/AIDataAnalytics';
 
 export const AppRouter: React.FC = () => {
   return (
@@ -13,6 +17,10 @@ export const AppRouter: React.FC = () => {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/services" element={<Services />} />
+      <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+      <Route path="/services/ai-virtual-assistant" element={<AIVirtualAssistant />} />
+      <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
+      <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:slug" element={<Post />} />

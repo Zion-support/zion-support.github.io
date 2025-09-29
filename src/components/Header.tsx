@@ -40,10 +40,10 @@ export default function Header() {
               Services
             </Link>
             <Link
-              to="/portfolio"
+              to="/case-studies"
               className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
             >
-              Portfolio
+              Case Studies
             </Link>
             <Link
               to="/insights"
@@ -117,11 +117,11 @@ export default function Header() {
                 Services
               </Link>
               <Link
-                to="/portfolio"
+                to="/case-studies"
                 className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Portfolio
+                Case Studies
               </Link>
               <Link
                 to="/insights"
