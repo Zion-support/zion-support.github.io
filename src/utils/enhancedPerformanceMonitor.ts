@@ -96,7 +96,6 @@ class EnhancedPerformanceMonitor {
     }
   }
 
-<<<<<<< HEAD
   private startPeriodicReporting(): void {
     this.reportInterval = window.setInterval(() => {
       this.generatePerformanceReport();
@@ -120,7 +119,9 @@ class EnhancedPerformanceMonitor {
       this.observers.push(resourceObserver);
     } catch (error) {
       console.error('Failed to setup resource monitoring:', error);
-=======
+    }
+  }
+
   private processPerformanceEntry(entry: PerformanceEntry): void {
     switch (entry.entryType) {
       case 'paint':
@@ -172,7 +173,6 @@ class EnhancedPerformanceMonitor {
         }
         break;
       }
->>>>>>> 560fc59d9c785b60bacd032c96f8fbb6b417bd56
     }
   }
 
