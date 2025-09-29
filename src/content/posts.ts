@@ -8,6 +8,30 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "platform-golden-paths",
+    title: "Golden Paths: The Missing Lever in Platform Engineering",
+    description:
+      "Blueprints, scaffolds, and scorecards that standardize quality and speed up delivery across teams.",
+    category: "Platform",
+    publishedAt: "2025-09-29",
+  },
+  {
+    slug: "cost-aware-cicd",
+    title: "Cost‑Aware CI/CD: Policies That Cut Waste Pre‑Merge",
+    description:
+      "Shift‑left FinOps with budgets, artifact retention rules, and test selection that save real money.",
+    category: "Cloud FinOps",
+    publishedAt: "2025-09-29",
+  },
+  {
+    slug: "ai-supply-chain-security",
+    title: "AI Supply Chain Security: From SBOMs to Runtime Policy",
+    description:
+      "Threat modeling models, datasets, and extensions; implementing verifiable provenance and policy gates.",
+    category: "Security",
+    publishedAt: "2025-09-29",
+  },
+  {
     slug: "ai-roadmaps",
     title: "Designing High-Impact AI Roadmaps",
     description:

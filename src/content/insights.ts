@@ -9,6 +9,33 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "platform-engineering-golden-paths",
+    title: "Golden Paths in Platform Engineering: Ship Faster, Safer",
+    summary:
+      "How paved roads, templates, and scorecards reduce cognitive load and accelerate delivery.",
+    category: "Platform",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "finops-unit-economics",
+    title: "Unit Economics in the Cloud: FinOps That Engineers Love",
+    summary:
+      "Design dashboards, budgets, and guardrails that improve cost without blocking delivery.",
+    category: "Cloud FinOps",
+    date: "2025-09-29",
+    readMinutes: 7,
+  },
+  {
+    id: "secure-ai-supply-chain",
+    title: "Securing the AI Supply Chain: Models, Data, and Dependencies",
+    summary:
+      "A layered approach to provenance, SBOMs for models, and runtime policy enforcement.",
+    category: "Security",
+    date: "2025-09-29",
+    readMinutes: 9,
+  },
+  {
     id: "edge-ai-case-studies",
     title: "How Edge AI Is Powering Real‑Time Experiences",
     summary:

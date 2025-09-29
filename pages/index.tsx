@@ -179,6 +179,21 @@ const Home = React.memo(function Home(): React.JSX.Element {
 							))}
 						</div>
 
+						{/* New This Week Promo */}
+						<div className="mt-12">
+							<div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-6 md:p-8 text-white">
+								<div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+									<div>
+										<h3 className="text-2xl font-bold mb-1">New this week</h3>
+										<p className="text-white/90">Golden Paths, Cost‑Aware CI/CD, and AI Supply Chain Security</p>
+									</div>
+									<Link href="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-5 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
+										<span>Explore updates</span>
+									</Link>
+								</div>
+							</div>
+						</div>
+
 						<div className="text-center mt-10">
 							<Link href="/blog" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">View all insights</Link>
 						</div>
