@@ -10,12 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-    slug: "agent-release-checklists-2025",
-    title: "Agent Release Checklists: Ship Fast Without Surprises",
-    description: "Budget risky actions, add PR checks, and bake rollback triggers into every agent release.",
-    category: "AI Engineering",
-=======
     slug: "ai-governance-scorecards-quickstart-2026-v2",
     title: "AI Governance Scorecards v2 (2026): Ship Fast, Stay Safe",
     description: "Updated, lightweight scorecards + PR checks + canaries that predict outcomes without slowing teams.",
@@ -65,47 +59,16 @@ export const posts: BlogPost[] = [
     title: "Agent Blue‑Green Releases 2026: Safe, Reversible Automation",
     description: "Ship agent changes with policy tests, budgeted actions, and instant rollback toggles.",
     category: "GenAI",
->>>>>>> cursor/create-and-deploy-new-content-9df8
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read"
   },
   {
-<<<<<<< HEAD
-    slug: "kpi-linked-canaries-2025",
-    title: "KPI‑Linked Canaries: Evals That Protect Velocity",
-    description: "Wire online canaries to KPIs so teams ship weekly without regressions or surprise costs.",
-    category: "AI Governance",
-=======
-    slug: "edge-llm-safety-caching-2026",
-    title: "Edge LLM Safety Caching 2026: Sub‑100ms Prompts with Guardrails",
-    description: "Tiered KV, signed configs, and inline filters that keep prompts fast and safe at the edge.",
-    category: "Architecture",
->>>>>>> cursor/create-and-deploy-new-content-9df8
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "6 min read"
   },
   {
-<<<<<<< HEAD
-    slug: "secure-ml-supply-chain-2026",
-    title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
-    description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
-=======
-    slug: "platform-slo-guardrails-2026",
-    title: "Platform SLO Guardrails 2026: Scorecards that Prevent Regressions",
-    description: "Wire golden paths to SLOs with pre‑merge policy tests and live canaries that keep teams fast.",
-    category: "Platform Engineering",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "ai-breach-drills-2026",
-    title: "AI Breach Drills 2026: Practicing Safe Autonomy Under Budget",
-    description: "Run realistic breach simulations with budgeted actions, approval gates, and instant rollback.",
->>>>>>> chore/add-sept-29-content
->>>>>>> cursor/create-and-deploy-new-content-9df8
     category: "Security",
     publishedAt: "2025-10-13",
     featured: true,
@@ -128,27 +91,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "7 min read"
-<<<<<<< HEAD
-=======
-  },
-  {
-    slug: "ai-platform-slos-2026",
-    title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
-    description: "Design SLOs and risk budgets for AI systems with instant rollbacks and KPI‑linked canaries.",
-    category: "AI Operations",
-    publishedAt: "2025-10-12",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "edge-llm-latency-patterns",
-    title: "Edge LLM Latency Patterns: Sub‑200ms Interactions",
-    description: "Streaming, prefetch, and edge compute patterns for instant‑feel AI UX.",
-    category: "Edge Computing",
-    publishedAt: "2025-10-15",
-    featured: true,
-    readTime: "7 min read"
->>>>>>> cursor/create-and-deploy-new-content-9df8
   },
   {
     slug: "ai-reliable-rag-ops-2026",
@@ -160,66 +102,12 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
-<<<<<<< HEAD
-=======
-    slug: "ai-autonomous-infrastructure-2026",
-    title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
-    description: "Blueprints and scorecards to operate self‑healing platforms with budgets and safe automation.",
-    category: "Platform Engineering",
-    publishedAt: "2025-10-12",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "quantum-ai-hybrid-blueprint-2026",
-    title: "Quantum‑AI Hybrid Blueprint 2026: Practical Wins in 12 Months",
-    description: "Near‑term plays that combine QC libraries with AI orchestration for measurable ROI.",
-    category: "Quantum Computing",
-    publishedAt: "2025-10-12",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
->>>>>>> cursor/create-and-deploy-new-content-9df8
     slug: "platform-engineering-kpis-2026",
     title: "Platform Engineering KPIs 2026: Adoption, Golden Paths, SLOs",
     description: "Scorecards that shift the convo from costs to shipped value—adoption, TTFX, SLOs.",
     category: "Platform Engineering",
     publishedAt: "2025-10-12",
     featured: true,
-<<<<<<< HEAD
-    readTime: "7 min read"
-  },
-  {
-    slug: "ai-incident-budget-playbooks-2026",
-    title: "AI Incident Budgets: Playbooks That Contain in <60s",
-    description: "Budget risky actions, approvals, and rollback triggers for safe, fast incident response.",
-=======
-    readTime: "6 min read"
-  },
-  {
-    slug: "ai-incident-response-playbooks-2025",
-    title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
-    description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
-    category: "Cybersecurity",
-    publishedAt: "2025-10-12",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "quantum-ai-hybrid-blueprint-2026",
-    title: "Quantum‑AI Hybrid Blueprint 2026: Practical Wins in 12 Months",
-    description: "Near‑term plays that combine QC libraries with AI orchestration for measurable ROI.",
-    category: "Quantum Computing",
-    publishedAt: "2025-10-12",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "zero-trust-for-genai-2026",
-    title: "Zero‑Trust for GenAI: Prompt Firewalls, Egress Policies, and Audit Trails",
-    description: "Contain risks with auth‑aware retrieval, policy gates, and signed outputs at scale.",
->>>>>>> cursor/create-and-deploy-new-content-9df8
     category: "Security",
     publishedAt: "2025-10-12",
     featured: false,
@@ -636,33 +524,6 @@ export const posts: BlogPost[] = [
   }
   ,
   {
-<<<<<<< HEAD
-    slug: "agent-evals-scorecards-2026",
-    title: "Agent Evals 2026: Scorecards That Predict Outcomes",
-    description: "Design online evals and KPI‑linked scorecards that correlate with revenue and CSAT.",
-=======
-    slug: "ai-governance-scorecards-quickstart-2026",
-    title: "AI Governance Scorecards Quickstart 2026: Ship Fast, Stay Safe",
-    description: "Set up KPI‑linked scorecards, PR checks, and rollback‑ready canaries in weeks.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "privacy-first-agents-2026",
-    title: "Privacy‑First Agents 2026: On‑Device Tools, Scoped IDs, Retention Controls",
-    description: "Design assistants with local tools, field‑level filters, and policy‑backed telemetry.",
-    category: "AI Security",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "serverless-inference-cost-playbook-2026",
-    title: "Serverless Inference Cost Playbook 2026: Budgets Without P95 Pain",
-    description: "Adaptive batching, warm pools, and tiered quality under explicit budgets.",
->>>>>>> cursor/create-and-deploy-new-content-9df8
     category: "GenAI",
     publishedAt: "2025-10-13",
     featured: true,
@@ -807,90 +668,3 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   }
 ];
-<<<<<<< HEAD
-=======
-
-// Newly added content (auto-advertised on Home via latest sort)
-posts.push(
-  {
-    slug: "ai-threat-hunting-with-llms-2026",
-    title: "AI Threat Hunting with LLMs 2026: Signals, Sandboxes, and Speed",
-    description: "Operational playbooks to augment analysts with safe LLM tooling, live traces, and budgeted actions.",
-    category: "Security",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "llm-production-runbooks-2026",
-    title: "LLM Production Runbooks 2026: Rollbacks, Budgets, and Canary Evals",
-    description: "Battle-tested runbooks for safe LLM releases—risk budgets, rollback triggers, and KPI-linked canaries.",
-    category: "AI Operations",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "agentic-observability-scorecards-2026",
-    title: "Agentic Observability Scorecards 2026: Traces that Predict Outcomes",
-    description: "Design KPI‑linked traces and scorecards that prevent regressions without slowing teams.",
-    category: "Observability",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "7 min read"
-  }
-);
-
-// Additional November 2025 posts
-posts.push(
-  {
-    slug: "genai-routing-under-budgets-2026",
-    title: "Quality‑Tiered GenAI Routing 2026: SLAs Without Surprise Bills",
-    description: "Route prompts across model tiers with caches and eval signals to control cost without hurting UX.",
-    category: "GenAI",
-    publishedAt: "2025-11-01",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "on-device-agents-offline-tools-2026",
-    title: "On‑Device Agents 2026: Offline‑Capable Tools and Private Caches",
-    description: "Design assistants that work offline with local tools, secure storage, and seamless fallbacks.",
-    category: "Edge Computing",
-    publishedAt: "2025-11-01",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "zero-trust-observability-2026",
-    title: "Zero‑Trust Observability 2026: Signed Traces and Least‑Privilege Telemetry",
-    description: "Ship audit‑ready traces with scoped IDs, signed spans, and role‑aware data access.",
-    category: "Security",
-    publishedAt: "2025-11-01",
-    featured: false,
-    readTime: "6 min read"
-  }
-);
-
-// September 29, 2025 new posts (auto‑advertised on Home via latest sort)
-posts.push(
-  {
-    slug: "ai-sre-runbooks-2026",
-    title: "AI SRE Runbooks 2026: Error Budgets, Rollbacks, and Live Traces",
-    description: "Design SRE guardrails for AI systems: quality budgets, rollback triggers, and trace‑driven remediation.",
-    category: "AI Operations",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "privacy-first-data-pipelines-2026",
-    title: "Privacy‑First Data Pipelines 2026: Scoped IDs, Redaction, and DP",
-    description: "Blueprint for signal‑rich analytics without PII risk using scoped identifiers, field‑level filters, and DP noise.",
-    category: "Observability",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "7 min read"
-  }
-);
->>>>>>> cursor/create-and-deploy-new-content-9df8

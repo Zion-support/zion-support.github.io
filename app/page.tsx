@@ -41,6 +41,7 @@ import {
   NewContent2026Showcase,
   InteractiveContentBanner
 } from '../components/NewContent2026Banners';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -79,6 +80,9 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
+      
       {/* New 2026 Content Banners */}
       <NeuralInterfacesBanner />
       <SpaceTechBanner />
