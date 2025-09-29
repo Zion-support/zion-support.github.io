@@ -19,6 +19,24 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
+    slug: "cloud-finops-guardrails-2025",
+    title: "Cloud FinOps Guardrails Engineers Actually Use",
+    description: "Budgets, alerts, and PR gates that reduce waste 25–40% without harming P95.",
+    category: "Cloud",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "practical-rag-in-production-2025",
+    title: "RAG Architectures That Actually Work in Production",
+    description: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.",
+    category: "GenAI",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "secure-ml-supply-chain-2025",
     title: "Secure ML Supply Chain: From SBOMs to Model Lineage",
     description: "End-to-end provenance and controls for datasets, models, and inference routes.",
