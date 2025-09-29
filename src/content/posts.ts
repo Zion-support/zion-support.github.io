@@ -11,13 +11,12 @@ export interface BlogPost {
 export const posts: BlogPost[] = [
   {
     slug: "ai-platform-roi-2025",
-    title: "AI Platform ROI: Scorecards That Drive Adoption",
-    description:
-      "Connect capabilities to golden paths, platform SLOs, and adoption metrics to make cut/scale decisions.",
+    title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
+    description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",
     category: "AI Strategy",
     publishedAt: "2025-10-03",
     featured: true,
-    readTime: "7 min read",
+    readTime: "7 min read"
   },
   {
     slug: "secure-ml-supply-chain-2025",
@@ -60,6 +59,15 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
+    slug: "edge-cdn-ml-personalization-2025",
+    title: "Edge CDN + On‑Device ML: Personalization Under 100ms",
+    description: "Combine edge KV, signed configs, and tiny models for private, real‑time personalization.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "edge-ai-latency-budgets",
     title: "Edge AI Latency Budgets: Meet P95 Without Overbuild",
     description:
@@ -97,6 +105,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-04",
     featured: true,
     readTime: "7 min read"
+<<<<<<< HEAD
   },
   {
     slug: "practical-rag-in-production-2025",
@@ -107,5 +116,68 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "8 min read"
   }
+=======
+  },
+  {
+    slug: "enterprise-rag-blueprint-v2",
+    title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, and Evals",
+    description:
+      "Production patterns that keep responses grounded and useful with hybrid search and live evals.",
+    category: "GenAI",
+    publishedAt: "2025-10-02",
+    featured: true,
+    readTime: "11 min",
+  },
+  {
+    slug: "serverless-inference-cost-playbook",
+    title: "Serverless AI Inference: The Cost Optimization Playbook",
+    description:
+      "Cut spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "9 min",
+  },
+  {
+    slug: "policy-first-genai-guardrails",
+    title: "Secure GenAI: Policy‑First Guardrails That Scale",
+    description:
+      "Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.",
+    category: "Security",
+    publishedAt: "2025-09-27",
+    featured: false,
+    readTime: "8 min",
+  },
+  {
+    slug: "edge-ai-latency-budgets",
+    title: "Edge AI Latency Budgets: Meet P95 Without Overbuild",
+    description:
+      "Placement, caching, and feature flags for reliable latency when models run at the edge.",
+    category: "Edge AI",
+    publishedAt: "2025-09-26",
+    featured: false,
+    readTime: "6 min",
+  },
+  {
+    slug: "cloud-governance-scorecards",
+    title: "Cloud Governance Scorecards: Faster Approvals, Safer Deploys",
+    description:
+      "Policy tests, evidence capture, and automated checks that speed delivery and reduce risk.",
+    category: "Cloud",
+    publishedAt: "2025-09-25",
+    featured: false,
+    readTime: "7 min",
+  },
+  {
+    slug: "genai-online-evals",
+    title: "GenAI Online Evals: Canary What Matters",
+    description:
+      "Live evals in production with guardrails and rollback triggers tied to real outcomes.",
+    category: "GenAI",
+    publishedAt: "2025-09-24",
+    featured: false,
+    readTime: "7 min",
+  },
+>>>>>>> b290bb21b6100b5a858047bf603c392c5eab4ee4
 ];
 
