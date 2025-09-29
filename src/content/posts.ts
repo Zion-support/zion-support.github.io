@@ -10,19 +10,13 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-    slug: "ai-autonomous-infrastructure-2026",
-    title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
-    description: "Blueprints and scorecards to operate self‑healing platforms with budgets and safe automation.",
-    category: "Platform Engineering",
-=======
     slug: "ai-platform-slos-2026",
     title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
     description: "Design SLOs and risk budgets for AI systems with instant rollbacks and KPI‑linked canaries.",
     category: "AI Operations",
     publishedAt: "2025-10-12",
     featured: true,
-    readTime: "7 min read"
+    readTime: "9 min read"
   },
   {
     slug: "rag-evals-in-the-loop-2026",
@@ -47,10 +41,9 @@ export const posts: BlogPost[] = [
     title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
     description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
     category: "Cybersecurity",
->>>>>>> cursor/create-and-deploy-new-content-6196
     publishedAt: "2025-10-12",
     featured: true,
-    readTime: "9 min read"
+    readTime: "7 min read"
   },
   {
     slug: "quantum-ai-hybrid-blueprint-2026",
@@ -60,6 +53,25 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "8 min read"
+  },
+  // Fresh content added today to surface on homepage
+  {
+    slug: "ai-privacy-preserving-telemetry-2026",
+    title: "AI Privacy‑Preserving Telemetry: Signal Without Sensitive Data",
+    description: "Design telemetry with scoped IDs, redaction at source, and DP‑backed analytics.",
+    category: "Observability",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "platform-scorecards-roi-2026",
+    title: "Platform Scorecards ROI 2026: Tie Capabilities to Business Outcomes",
+    description: "Lightweight scorecards linking platform features to adoption, SLOs, and value delivered.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
   },
   {
     slug: "zero-trust-for-genai-2026",

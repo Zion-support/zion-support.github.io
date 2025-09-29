@@ -17,52 +17,6 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
-<<<<<<< HEAD
-    id: "ai-autonomous-infrastructure-2026",
-    slug: "ai-autonomous-infrastructure-2026",
-    title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
-    description: "Operate self‑healing platforms with budgets, safe automation, and clear SLOs.",
-    excerpt: "Playbooks and scorecards to run autonomous platforms reliably—with approvals and rollbacks.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-12",
-    category: "Platform Engineering",
-    tags: ["Autonomous", "SRE", "Scorecards", "SLOs"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-autonomous-infrastructure-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "quantum-ai-hybrid-blueprint-2026",
-    slug: "quantum-ai-hybrid-blueprint-2026",
-    title: "Quantum‑AI Hybrid Blueprint 2026: Practical Wins in 12 Months",
-    description: "Combine quantum libraries with AI orchestration to unlock near‑term ROI.",
-    excerpt: "A pragmatic approach to quantum‑AI workflows that deliver measurable business value.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-12",
-    category: "Quantum Computing",
-    tags: ["Quantum", "AI", "Optimization"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/quantum-ai-hybrid-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "zero-trust-for-genai-2026",
-    slug: "zero-trust-for-genai-2026",
-    title: "Zero‑Trust for GenAI: Prompt Firewalls, Egress Policies, and Audit Trails",
-    description: "Enterprise patterns to keep AI interactions safe without slowing delivery.",
-    excerpt: "Implement auth‑aware retrieval, policy gates, and signed outputs with observability.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-12",
-    category: "Security",
-    tags: ["Zero Trust", "GenAI", "Security"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/zero-trust-for-genai-2026.jpg",
-=======
     id: "ai-platform-slos-2026",
     slug: "ai-platform-slos-2026",
     title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
@@ -107,7 +61,6 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "6 min read",
     image: "/images/edge-feature-flags-2026.jpg",
->>>>>>> cursor/create-and-deploy-new-content-6196
     newBadge: true,
     trending: true
   },
