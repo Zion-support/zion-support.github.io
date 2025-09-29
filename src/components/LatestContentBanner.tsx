@@ -102,6 +102,17 @@ const contentHighlights = [
     stats: "8 min read",
     variant: "warning" as const
   }
+  ,
+  {
+    id: 8,
+    title: "📚 New: AI Platform ROI + Secure ML Supply Chain",
+    description: "Fresh long-form guides on platform scorecards and end-to-end ML provenance.",
+    ctaText: "Read Now",
+    ctaLink: "/blog/ai-platform-roi-2025",
+    badge: "New",
+    stats: "Featured",
+    variant: "info" as const
+  }
 ];
 
 export const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
