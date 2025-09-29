@@ -165,6 +165,82 @@ const Home = () => {
               </div>
             </div>
 
+            {/* Additional Promotional Banners */}
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              {/* AI Micro SAAS Platform Banner */}
+              <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 animate-fade-in">
+                <div className="flex items-center gap-3 mb-3">
+                  <Sparkles className="w-5 h-5 text-purple-400 animate-pulse" />
+                  <span className="text-base font-bold text-purple-400">💎 AI MICRO SAAS PLATFORM</span>
+                </div>
+                <p className="text-white font-semibold mb-2">
+                  Complete AI-powered micro SAAS solutions starting at $79/month
+                </p>
+                <p className="text-zion-slate-light text-sm mb-4">
+                  Workflow Automation • Virtual Assistant • Data Analytics
+                </p>
+                <Link
+                  to="/services"
+                  className="bg-purple-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-600 transition-colors text-sm"
+                >
+                  Explore All Services
+                </Link>
+              </div>
+
+              {/* Enterprise Solutions Banner */}
+              <div className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-400/30 rounded-xl p-6 animate-fade-in">
+                <div className="flex items-center gap-3 mb-3">
+                  <Sparkles className="w-5 h-5 text-blue-400 animate-pulse" />
+                  <span className="text-base font-bold text-blue-400">🏢 ENTERPRISE SOLUTIONS</span>
+                </div>
+                <p className="text-white font-semibold mb-2">
+                  Custom AI solutions for enterprise-scale operations
+                </p>
+                <p className="text-zion-slate-light text-sm mb-4">
+                  Zero Trust Security • Quantum Computing • Edge AI
+                </p>
+                <Link
+                  to="/contact"
+                  className="bg-blue-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-600 transition-colors text-sm"
+                >
+                  Schedule Consultation
+                </Link>
+              </div>
+            </div>
+
+            {/* Limited Time Offer Banner */}
+            <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-xl p-6 mb-8 animate-fade-in">
+              <div className="text-center">
+                <div className="flex items-center justify-center gap-3 mb-3">
+                  <span className="text-lg font-bold text-red-400 animate-pulse">⚡ LIMITED TIME OFFER</span>
+                  <Sparkles className="w-5 h-5 text-red-400 animate-pulse" />
+                </div>
+                <p className="text-white text-xl font-bold mb-2">
+                  🎯 Get Your Complete AI Transformation Package for 70% OFF!
+                </p>
+                <p className="text-zion-slate-light mb-4">
+                  Includes: AI Strategy Consultation + Implementation + 6 Months Support + Training
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <Link
+                    to="/contact"
+                    className="bg-red-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-600 transition-colors text-center text-lg"
+                  >
+                    Claim 70% Discount Now
+                  </Link>
+                  <Link
+                    to="/services"
+                    className="border border-red-400 text-red-400 px-8 py-3 rounded-lg font-semibold hover:bg-red-400 hover:text-white transition-colors text-center"
+                  >
+                    View Package Details
+                  </Link>
+                </div>
+                <p className="text-red-300 text-sm mt-3">
+                  ⏰ Offer expires March 31, 2025 • Only 50 spots available
+                </p>
+              </div>
+            </div>
+
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">
               <div className="text-center group hover:scale-105 transition-all duration-300">
@@ -221,6 +297,124 @@ const Home = () => {
           showBlogPosts={true}
           className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
         />
+
+        {/* New Content Announcement Section */}
+        <section className="py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-gray-900 relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-20"></div>
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 mb-6">
+                <Sparkles className="w-5 h-5 text-purple-400 animate-pulse mr-2" />
+                <span className="text-lg font-bold text-purple-400">📚 JUST PUBLISHED</span>
+                <Sparkles className="w-5 h-5 text-purple-400 animate-pulse ml-2" />
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Revolutionary AI & Technology Content
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+                Discover our latest comprehensive guides on AI Autonomous Operations, Cloud-Native Microservices, 
+                and Enterprise AI Governance - all designed to transform your business in 2025.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              {/* Featured Article 1 */}
+              <div className="bg-gradient-to-br from-purple-800/30 to-blue-800/30 rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">NEW!</div>
+                  <span className="text-purple-300 text-sm font-medium">AI & Automation</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  AI Autonomous Operations: The Future of Self-Managing Infrastructure
+                </h3>
+                <p className="text-zion-slate-light mb-4">
+                  Discover how AI autonomous operations are revolutionizing infrastructure management with self-healing systems and predictive maintenance.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-purple-300 text-sm">15 min read</span>
+                  <Link 
+                    to="/blog/ai-autonomous-operations-2025"
+                    className="text-purple-400 hover:text-purple-300 font-semibold text-sm"
+                  >
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+
+              {/* Featured Article 2 */}
+              <div className="bg-gradient-to-br from-blue-800/30 to-cyan-800/30 rounded-xl p-6 border border-blue-400/20 hover:border-blue-400/40 transition-all duration-300 hover:scale-105">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">NEW!</div>
+                  <span className="text-blue-300 text-sm font-medium">Cloud Architecture</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  Cloud-Native Microservices Architecture: Building for Scale in 2025
+                </h3>
+                <p className="text-zion-slate-light mb-4">
+                  Master cloud-native microservices with proven patterns, best practices, and real-world implementation strategies.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-blue-300 text-sm">18 min read</span>
+                  <Link 
+                    to="/blog/cloud-native-microservices-architecture-2025"
+                    className="text-blue-400 hover:text-blue-300 font-semibold text-sm"
+                  >
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+
+              {/* Featured Article 3 */}
+              <div className="bg-gradient-to-br from-green-800/30 to-emerald-800/30 rounded-xl p-6 border border-green-400/20 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">NEW!</div>
+                  <span className="text-green-300 text-sm font-medium">AI Governance</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  Enterprise AI Governance Framework: From Strategy to Implementation
+                </h3>
+                <p className="text-zion-slate-light mb-4">
+                  Comprehensive guide to implementing enterprise AI governance with frameworks, best practices, and real-world strategies.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-green-300 text-sm">20 min read</span>
+                  <Link 
+                    to="/blog/enterprise-ai-governance-framework-2025"
+                    className="text-green-400 hover:text-green-300 font-semibold text-sm"
+                  >
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Section */}
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-400/30 rounded-xl p-8 max-w-4xl mx-auto">
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  🚀 Ready to Transform Your Business with AI?
+                </h3>
+                <p className="text-zion-slate-light mb-6">
+                  Get instant access to all our latest content plus exclusive AI implementation guides, templates, and expert consultations.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link
+                    to="/blog"
+                    className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 hover:scale-105"
+                  >
+                    Explore All Articles
+                  </Link>
+                  <Link
+                    to="/contact"
+                    className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-colors"
+                  >
+                    Get Free Consultation
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* New Services Showcase */}
         <section className="container mx-auto px-6 py-20 relative z-10">
