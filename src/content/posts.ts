@@ -63,5 +63,24 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "7 min read"
   }
+  ,
+  {
+    slug: "ai-governance-blueprint-2025",
+    title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
+    description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "real-time-genai-guardrails-2025",
+    title: "Real‑Time GenAI Guardrails: Inline Filters, Canaries, and Evals",
+    description: "How to run fast with live canaries, inline moderation, and KPI‑linked evals at scale.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "8 min read"
+  }
 ];
 
