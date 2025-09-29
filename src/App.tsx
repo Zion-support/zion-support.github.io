@@ -14,16 +14,16 @@ import { notificationManager } from './utils/notificationManager';
 import { userFeedback } from './utils/userFeedbackManager';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import RealTimeMonitor from './components/RealTimeMonitor';
-import { advancedPerformanceOptimizer } from './utils/performanceOptimizer';
+import { performanceOptimizer } from './utils/performanceOptimizer';
 import { enhancedPerformanceOptimizer } from './utils/enhancedPerformance';
 import { enhancedSecurityManager } from './utils/enhancedSecurity';
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
-import AdvancedPerformanceMonitor from './utils/advancedPerformanceMonitor';
-import AccessibilityEnhancer from './utils/accessibilityEnhancer';
+import { getPerformanceMonitor } from './utils/advancedPerformanceMonitor';
+import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import SecurityEnhancer from './utils/securityEnhancer';
 import SystemMetricsDashboard from './components/SystemMetricsDashboard';
 import AdvancedAccessibilityManager from './utils/advancedAccessibilityManager';
-import AdvancedSecurityManager from './utils/advancedSecurityManager';
+import { AdvancedSecurityManager } from './utils/advancedSecurityManager';
 import EnhancedUXManager from './utils/enhancedUXManager';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics } from './utils/enhancedAnalytics';
@@ -176,7 +176,7 @@ export default function App(): React.JSX.Element {
     enhancedAccessibilityManager.initialize();
     
     // Initialize advanced performance monitor
-    const advancedPerformanceMonitor = AdvancedPerformanceMonitor.getInstance();
+    const advancedPerformanceMonitor = getPerformanceMonitor();
     advancedPerformanceMonitor.updateConfig({
       enableWebVitals: true,
       enableMemoryMonitoring: true,
@@ -196,8 +196,8 @@ export default function App(): React.JSX.Element {
     advancedPerformanceMonitor.startMonitoring();
     
     // Initialize new advanced performance optimizer
-    import('./utils/performanceOptimizer').then(({ advancedPerformanceOptimizer }) => {
-      advancedPerformanceOptimizer.startMonitoring();
+    import('./utils/performanceOptimizer').then(({ performanceOptimizer }) => {
+      performanceOptimizer.startMonitoring();
       console.log('🚀 Advanced Performance Optimizer initialized');
     }).catch((error) => {
       console.error('❌ Failed to initialize advanced performance optimizer:', error);
@@ -286,7 +286,7 @@ export default function App(): React.JSX.Element {
     });
     
     // Initialize advanced performance optimizer
-    advancedPerformanceOptimizer.addResourceHints();
+    performanceOptimizer.addResourceHints();
     
     // Initialize new enhancement utilities
     console.log('Initializing performance enhancements...');
@@ -301,8 +301,8 @@ export default function App(): React.JSX.Element {
     console.log('Initializing accessibility enhancements...');
     // const accessibilityMetrics = accessibilityEnhancer.getAccessibilityMetrics();
     // console.log('Accessibility Metrics:', accessibilityMetrics);
-    advancedPerformanceOptimizer.optimizeCriticalCSS();
-    advancedPerformanceOptimizer.setupWebVitalsMonitoring();
+    performanceOptimizer.optimizeCriticalCSS();
+    performanceOptimizer.setupWebVitalsMonitoring();
     
     // Register service worker with optimized configuration
     import('./utils/serviceWorker').then(({ serviceWorkerManager }) => {
@@ -449,7 +449,7 @@ export default function App(): React.JSX.Element {
       memoryMonitor.stopMonitoring();
       
       // Cleanup new utilities
-      const advancedPerformanceMonitor = AdvancedPerformanceMonitor.getInstance();
+      const advancedPerformanceMonitor = getPerformanceMonitor();
       advancedPerformanceMonitor.stopMonitoring();
       
       const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
