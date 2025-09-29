@@ -39,6 +39,7 @@ import {
   AIQuantumOptimizationBanner,
   Revolutionary2026TechBanner
 } from '../components/PromotionalBanner';
+import Revolutionary2026ContentMegaBanner from '../components/Revolutionary2026ContentMegaBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -103,6 +104,9 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+      {/* Revolutionary 2026 Content Mega Banner */}
+      <Revolutionary2026ContentMegaBanner />
+      
       {/* Promotional Banners */}
       <Revolutionary2026TechBanner />
       <AINeuralInterfacesBanner />
