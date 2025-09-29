@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import EnhancedContactForm from "../components/EnhancedContactForm";
+// import EnhancedContactForm from "../components/EnhancedContactForm";
 
 export default function Contact(): React.JSX.Element {
   const contactInfo = [
@@ -177,7 +177,14 @@ export default function Contact(): React.JSX.Element {
               </p>
             </div>
 
-            <EnhancedContactForm />
+            <div id="contact-form" className="max-w-xl mx-auto">
+              <form className="space-y-4">
+                <input className="w-full p-3 border rounded" placeholder="Your name" />
+                <input className="w-full p-3 border rounded" placeholder="Your email" />
+                <textarea className="w-full p-3 border rounded" placeholder="How can we help?" rows={5} />
+                <button className="px-6 py-3 bg-blue-600 text-white rounded">Send</button>
+              </form>
+            </div>
           </div>
         </section>
 
