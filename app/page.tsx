@@ -57,6 +57,8 @@ export default function HomePage() {
             <a href="/blog/ai-value-stream-analytics-2026" className="underline hover:text-yellow-200">Value Stream Analytics</a>
             <span className="hidden md:inline">•</span>
             <a href="/blog/ai-multimodal-enterprise-2026" className="underline hover:text-yellow-200">AI Multimodal Enterprise</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-platform-roi-2025" className="underline hover:text-yellow-200">AI Platform ROI</a>
           </div>
           <Link
             href="/blog"

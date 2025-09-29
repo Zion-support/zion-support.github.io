@@ -63,6 +63,15 @@ export default function BlogPage() {
             href="/blog/ai-data-privacy-2026"
           />
           <BlogPost
+            title="AI Platform ROI 2025: Measuring Value from Token to Revenue"
+            excerpt="Trace tokens to business value with platform scorecards that link cost, latency, and quality to revenue."
+            date="September 29, 2025"
+            category="Analytics"
+            readTime="10 min"
+            image="💹"
+            href="/blog/ai-platform-roi-2025"
+          />
+          <BlogPost
             title="AI Governance Maturity Model 2026: From Ad Hoc to Auditable"
             excerpt="Staged model to implement accountable AI across policy, risk, security, ops, and value."
             date="September 29, 2025"
