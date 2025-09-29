@@ -52,6 +52,14 @@ import {
   AIFederatedLearningBanner,
   FederatedLearningSuccessBanner
 } from '../components/NewContent2026Banners';
+import {
+  NewContent2026PromotionalBanner,
+  AIAgentEvalsBanner,
+  AIEthicsFrameworkBanner,
+  MultimodalAIBanner,
+  EthicsSuccessCaseStudyBanner,
+  Comprehensive2026ContentBanner
+} from '../src/components/NewContent2026PromotionalBanners';
 import AITrends2025Banner from '../src/components/AITrends2025Banner';
 import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBanner';
 import AIROICalculator from '../src/components/AIROICalculator';
@@ -102,6 +110,12 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <NewContent2026PromotionalBanner />
+      <Comprehensive2026ContentBanner />
+      <AIAgentEvalsBanner />
+      <AIEthicsFrameworkBanner />
+      <MultimodalAIBanner />
+      <EthicsSuccessCaseStudyBanner />
       <Latest2026ContentBanner />
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
