@@ -27,6 +27,10 @@ import TrendingContentBanner from "../components/TrendingContentBanner";
 import { latestInsights } from "../content/insights";
 import { featuredInsights, newInsights } from "../content/new-insights";
 import { posts } from "../content/posts";
+import NewServicesShowcase from "../components/NewServicesShowcase";
+import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
+import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
+import NewContentAnnouncement from "../components/NewContentAnnouncement";
 
 const Home = () => {
   return (
@@ -104,6 +108,7 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        <NewContentAnnouncement />
         <LatestContentBanner className="border-b border-white/10" variant="info" />
         <NewContentPromoBanner className="border-b border-white/10" variant="premium" />
         <div className="container mx-auto px-6 mt-6">
@@ -831,6 +836,15 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        {/* New Services Showcase */}
+        <NewServicesShowcase />
+
+        {/* Latest Articles Showcase */}
+        <LatestArticlesShowcase />
+
+        {/* Success Stories Showcase */}
+        <SuccessStoriesShowcase />
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple relative overflow-hidden">
