@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
+import LatestInsights from "../components/LatestInsights";
 
 const Home = () => {
   return (
@@ -136,6 +137,9 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        {/* Latest Insights Section */}
+        <LatestInsights />
 
         {/* Features Section */}
         <section className="container mx-auto px-6 py-20 relative z-10">
