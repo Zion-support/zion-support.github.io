@@ -314,5 +314,14 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-09-30",
     readMinutes: 9,
   },
+  {
+    id: "ai-security-best-practices",
+    title: "AI Security Best Practices: Protecting Your AI Systems",
+    summary:
+      "Essential security practices for AI systems, covering model protection, data privacy, and adversarial defense strategies.",
+    category: "Security",
+    date: "2025-01-21",
+    readMinutes: 11,
+  },
 ];
 
