@@ -466,10 +466,11 @@ export const getRecentContent = (limit: number = 3) => {
   ];
   
   return allContent
+    // Sort by date when present; otherwise fall back to a stable order
     .sort((a, b) => {
-      const aDate = (a as any).date ? new Date((a as any).date).getTime() : 0;
-      const bDate = (b as any).date ? new Date((b as any).date).getTime() : 0;
-      return bDate - aDate;
+      const dateA = (a as any).date ? new Date((a as any).date).getTime() : 0;
+      const dateB = (b as any).date ? new Date((b as any).date).getTime() : 0;
+      return dateB - dateA;
     })
     .slice(0, limit);
 };
