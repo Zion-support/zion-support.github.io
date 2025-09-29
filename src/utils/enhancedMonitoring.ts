@@ -207,13 +207,15 @@ class EnhancedMonitoring {
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-              url: window.location.href,
-              sessionId: this.sessionId,
-              userId: this.userId,
-              timestamp: Date.now(),
-              metadata: { entry },
-            });
-          }
+          this.logMetric({
+            type: 'layout-shift',
+            value: (entry as any).value,
+            url: window.location.href,
+            sessionId: this.sessionId,
+            userId: this.userId,
+            timestamp: Date.now(),
+            metadata: { entry },
+          });
         });
       }).observe({ entryTypes: ["layout-shift"] });
 

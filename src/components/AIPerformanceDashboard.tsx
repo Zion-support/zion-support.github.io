@@ -45,8 +45,6 @@ interface ErrorReport {
   } | null>(null);
   const [errorReports, setErrorReports] = useState<ErrorReport[]>([]);
 
-      };
-
       const mockInsights: AIInsights = {
         predictedHighRiskActions: [
           "High memory usage detected in component rendering",

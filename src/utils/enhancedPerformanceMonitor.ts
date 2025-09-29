@@ -96,9 +96,6 @@ class EnhancedPerformanceMonitor {
     }
   }
 
-    }
-  }
-
   private monitorUserInteractions(): void {
     // Monitor click events
     document.addEventListener('click', (event) => {

@@ -62,8 +62,6 @@ jest.mock("../../utils/advancedPerformanceMonitor", () => ({
     });
   });
 
-  });
-
   it("does not render when not visible", () => {
     render(<PerformanceDashboard isVisible={false} />);
 
