@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const Header: React.FC = () => {
+export default function Header(): React.JSX.Element {
   return (
-    <header style={{ padding: '1rem' }}>
-      <a href="/" aria-label="Home">Zion Tech Group</a>
+    <header className="w-full py-4 px-6 bg-gray-900 text-white">
+      <div className="container mx-auto">Zion Tech Group</div>
     </header>
   );
-};
+}
 
-export default Header;
