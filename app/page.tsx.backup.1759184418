@@ -65,9 +65,16 @@ import InteractiveContentShowcase from '../components/InteractiveContentShowcase
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 =======
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
+<<<<<<< HEAD
+import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
+import LatestContent2026Banner from '../components/LatestContent2026Banner';
+import NewContent2026FeaturedBanner from '../components/NewContent2026FeaturedBanner';
+import LatestBreakthroughContent2026 from '../components/LatestBreakthroughContent2026';
+=======
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import LatestAIInnovations2026Banner from '../components/LatestAIInnovations2026Banner';
+>>>>>>> origin/cursor/create-and-deploy-new-content-edac
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 2026 AI Solutions',
@@ -217,6 +224,16 @@ export default function HomePage() {
       <AIInnovationShowcaseBanner />
       <AIROICalculatorBanner />
       
+<<<<<<< HEAD
+      {/* Promotional Banners */}
+      <NewContent2026PromotionalBanner />
+      <Comprehensive2026ContentBanner />
+      <AIAgentEvalsBanner />
+      <AIEthicsFrameworkBanner />
+      <MultimodalAIBanner />
+      <EthicsSuccessCaseStudyBanner />
+      <Latest2026ContentBanner />
+=======
       {/* Latest AI Innovations 2026 Banner */}
       <LatestAIInnovations2026Banner />
       
@@ -229,6 +246,7 @@ export default function HomePage() {
       <LatestContent2026Banner />
       
       {/* Additional Promotional Banners */}
+>>>>>>> origin/cursor/create-and-deploy-new-content-edac
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
       <AIEthicsSuccessBanner />
@@ -676,9 +694,15 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* Interactive AI ROI Calculator Section */}
+      <InteractiveAICalculator />
+
+=======
       {/* Enhanced Content Showcase */}
       <EnhancedContentShowcase />
       
+>>>>>>> origin/cursor/create-and-deploy-new-content-edac
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
       
