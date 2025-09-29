@@ -353,8 +353,7 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-<<<<<<< HEAD
-            <Link href="/blog/ai-governance-maturity-model-2026" className="group">
+            <Link href="/blog/ai-trustworthy-agents-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -392,7 +391,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link href="/blog/ai-operational-excellence-2026" className="group">
+            <Link href="/blog/ai-multimodal-enterprise-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
