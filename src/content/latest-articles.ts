@@ -17,20 +17,6 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
-<<<<<<< HEAD
-    id: "ai-enterprise-security-2026",
-    slug: "ai-enterprise-security-2026",
-    title: "AI Enterprise Security 2026: Zero-Trust Architecture for AI Systems",
-    description: "Comprehensive guide to implementing zero-trust security architecture for enterprise AI systems. Learn about AI-specific security challenges, best practices, and implementation strategies.",
-    excerpt: "Implement AI-specific zero-trust principles with model validation and data lineage tracking for 99.9% security compliance.",
-    author: "Zion Tech Group Team",
-    date: "2026-01-20",
-    category: "AI Security",
-    tags: ["AI Security", "Zero Trust", "Enterprise", "Governance"],
-    featured: true,
-    readTime: "15 min read",
-    image: "/images/ai-enterprise-security-2026.jpg",
-=======
     id: "zero-trust-for-genai-2026",
     slug: "zero-trust-for-genai-2026",
     title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",
@@ -43,41 +29,10 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "8 min read",
     image: "/images/zero-trust-for-genai-2026.jpg",
->>>>>>> feature/add-more-content-and-advertise
     newBadge: true,
     trending: true
   },
   {
-<<<<<<< HEAD
-    id: "ai-multimodal-enterprise-2026",
-    slug: "ai-multimodal-enterprise-2026",
-    title: "AI Multimodal Enterprise 2026: Vision, Language, and Audio Integration",
-    description: "Complete guide to implementing multimodal AI systems in enterprise environments. Learn about vision-language models, audio processing, and cross-modal reasoning for business applications.",
-    excerpt: "Implement multimodal AI systems that process text, images, and audio simultaneously with 40% improvement in accuracy.",
-    author: "Zion Tech Group Team",
-    date: "2026-01-19",
-    category: "Multimodal AI",
-    tags: ["Multimodal AI", "Vision Language", "Enterprise AI", "Integration"],
-    featured: true,
-    readTime: "18 min read",
-    image: "/images/ai-multimodal-enterprise-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-sustainability-transformation-2026",
-    slug: "ai-sustainability-transformation-2026",
-    title: "AI Sustainability Transformation 2026: $15M Green Tech Implementation",
-    description: "How a Fortune 500 energy company achieved 60% reduction in carbon footprint and $15M annual savings through comprehensive AI sustainability transformation.",
-    excerpt: "Achieve 60% carbon reduction and $15M savings with AI-driven sustainability transformation for Fortune 500 energy companies.",
-    author: "Zion Tech Group Team",
-    date: "2026-01-18",
-    category: "Case Study",
-    tags: ["Sustainability", "Green Tech", "Energy", "Case Study"],
-    featured: true,
-    readTime: "12 min read",
-    image: "/images/ai-sustainability-transformation-2026.jpg",
-=======
     id: "quantum-ai-hybrid-blueprint-2026",
     slug: "quantum-ai-hybrid-blueprint-2026",
     title: "Quantum‑AI Hybrid Blueprint 2026: Practical Near‑Term Wins",
@@ -90,7 +45,6 @@ export const latestArticles: LatestArticle[] = [
     featured: false,
     readTime: "9 min read",
     image: "/images/quantum-ai-hybrid-blueprint-2026.jpg",
->>>>>>> feature/add-more-content-and-advertise
     newBadge: true,
     trending: true
   },
