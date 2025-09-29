@@ -34,6 +34,8 @@ import NewContentShowcase2025 from "../components/NewContentShowcase2025";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
+import Latest2026ContentBanner from "../components/Latest2026ContentBanner";
+import NewServices2026Banner from "../components/NewServices2026Banner";
 import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
@@ -125,6 +127,14 @@ const Home = () => {
             className="border-b border-white/10"
           />
         ))}
+        
+        {/* New 2026 Content Banner */}
+        <Latest2026ContentBanner 
+          className="border-b border-white/10" 
+          variant="hero"
+          autoRotate
+          rotationInterval={8000}
+        />
         
         <NewContentAnnouncement />
         {/* New Promo for fresh article */}
@@ -922,6 +932,10 @@ const Home = () => {
         </section>
 
         {/* New Services Showcase */}
+        <NewServices2026Banner 
+          variant="showcase"
+          showCount={6}
+        />
         <NewServicesShowcase />
 
         {/* Latest Articles Promotional Section */}
