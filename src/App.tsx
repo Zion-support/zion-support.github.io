@@ -2,7 +2,7 @@ import React, { useCallback, useState, useEffect, useMemo } from 'react';
 import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+// import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 // import { useSEOData } from './components/SEOOptimizer';
@@ -18,6 +18,9 @@ import { advancedCacheSystem } from './utils/advancedCacheSystem';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
 import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { SecurityEnhancer } from './utils/securityEnhancer';
+import { advancedPerformanceMetrics } from './utils/advancedPerformanceMetrics';
+import { enhancedAccessibility } from './utils/enhancedAccessibility';
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -153,6 +156,10 @@ export default function App(): React.JSX.Element {
     new AccessibilityEnhancer().initialize();
     new SecurityEnhancer().initialize();
     
+    // Initialize new advanced systems
+    advancedPerformanceMetrics.initialize();
+    enhancedAccessibility.initialize();
+    
     // Initialize analytics
     analytics.initialize();
     // SEO analytics and performance SEO don't have initialize methods
@@ -284,7 +291,7 @@ export default function App(): React.JSX.Element {
   }
 
   return (
-    <EnhancedErrorBoundary>
+    <AdvancedErrorBoundary enableRecovery={true} showDetails={process.env.NODE_ENV === 'development'}>
       <SEOOptimizer seoData={seoData} />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
@@ -406,6 +413,6 @@ export default function App(): React.JSX.Element {
           <div>Escape: Close All</div>
         </div>
       </div>
-    </EnhancedErrorBoundary>
+    </AdvancedErrorBoundary>
   );
 }

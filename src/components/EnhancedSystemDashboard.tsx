@@ -2,6 +2,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { enhancedPerformanceMonitor, PerformanceMetric, OptimizationRecommendation } from '../utils/enhancedPerformanceMonitor';
 import { enhancedAnalytics, AnalyticsReport, ConversionFunnel } from '../utils/enhancedAnalytics';
 import { enhancedSEO, SEOReport, SEORecommendation } from '../utils/enhancedSEO';
+import { advancedPerformanceMetrics, PerformanceReport } from '../utils/advancedPerformanceMetrics';
+import { enhancedAccessibility, AccessibilityMetrics } from '../utils/enhancedAccessibility';
 
 interface DashboardMetrics {
   performance: {
@@ -17,6 +19,8 @@ interface DashboardMetrics {
     report: SEOReport | null;
     recommendations: SEORecommendation[];
   };
+  advancedPerformance: PerformanceReport | null;
+  accessibility: AccessibilityMetrics | null;
 }
 
 interface EnhancedSystemDashboardProps {
@@ -27,7 +31,9 @@ export const EnhancedSystemDashboard: React.FC<EnhancedSystemDashboardProps> = (
   const [metrics, setMetrics] = useState<DashboardMetrics>({
     performance: { score: 0, metrics: [], recommendations: [] },
     analytics: { report: null, funnels: [] },
-    seo: { report: null, recommendations: [] }
+    seo: { report: null, recommendations: [] },
+    advancedPerformance: null,
+    accessibility: null
   });
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [activeTab, setActiveTab] = useState<'performance' | 'analytics' | 'seo'>('performance');
@@ -67,6 +73,22 @@ export const EnhancedSystemDashboard: React.FC<EnhancedSystemDashboardProps> = (
       console.warn('Failed to generate SEO report:', error);
     }
 
+    // Get advanced performance metrics
+    let advancedPerformanceReport: PerformanceReport | null = null;
+    try {
+      advancedPerformanceReport = advancedPerformanceMetrics.getPerformanceReport();
+    } catch (error) {
+      console.warn('Failed to get advanced performance report:', error);
+    }
+
+    // Get accessibility metrics
+    let accessibilityMetrics: AccessibilityMetrics | null = null;
+    try {
+      accessibilityMetrics = enhancedAccessibility.getMetrics();
+    } catch (error) {
+      console.warn('Failed to get accessibility metrics:', error);
+    }
+
     setMetrics({
       performance: {
         score: performanceScore,
@@ -80,7 +102,9 @@ export const EnhancedSystemDashboard: React.FC<EnhancedSystemDashboardProps> = (
       seo: {
         report: seoReport,
         recommendations: seoRecommendations
-      }
+      },
+      advancedPerformance: advancedPerformanceReport,
+      accessibility: accessibilityMetrics
     });
   }, []);
 
