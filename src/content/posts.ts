@@ -20,6 +20,16 @@ export const posts: BlogPost[] = [
     readTime: "7 min read",
   },
   {
+    slug: "genai-evals-in-production-2025",
+    title: "Online GenAI Evals: Canary Checks That Keep You Fast",
+    description:
+      "Lightweight online evals tied to KPIs to prevent regressions while shipping weekly.",
+    category: "GenAI",
+    publishedAt: "2025-10-05",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
     slug: "mlops-in-45-days",
     title: "MLOps in 45 Days: Shipping Reliable Models Fast",
     description:
