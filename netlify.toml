@@ -7,7 +7,6 @@
   command = "pnpm build:no-check"
   publish = "dist"
   command_timeout = "30m"
-  environment = { NODE_ENV = "production", CI = "true" }
 
 [build.environment]
   NODE_VERSION = "20.18.0"
