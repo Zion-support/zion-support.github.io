@@ -1,7 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-
-<<<<<<< HEAD
 export default function NewContent2026Banner() {
   return (
     <div className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white">
@@ -106,6 +104,7 @@ export default function NewContent2026Banner() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 export const NewContent2026Banner = () => {
@@ -212,3 +211,6 @@ export const NewContent2026Banner = () => {
 
 export default NewContent2026Banner;
 >>>>>>> cursor/create-and-deploy-new-content-9df8
+=======
+}
+>>>>>>> 2f29bdac4256365f008e5434e82655bc9e367178

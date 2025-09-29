@@ -140,6 +140,28 @@ export default function ServicesPage() {
         'Reduce security incidents by 95%',
         '24/7 security monitoring'
       ]
+    },
+    {
+      id: 'ai-synthetic-data-generation',
+      title: 'AI Synthetic Data Generation',
+      description: 'Generate privacy-preserving synthetic data with 90% privacy protection and $3M+ savings.',
+      price: '$4,999',
+      features: [
+        'Privacy-Preserving Generation',
+        'Unlimited Scale Data',
+        'Regulatory Compliance',
+        'Custom Scenarios',
+        'Quality Validation',
+        'Real-time Generation'
+      ],
+      popular: true,
+      icon: '🔒',
+      benefits: [
+        '90% privacy protection guaranteed',
+        '50% faster AI development',
+        '$3M+ annual cost savings',
+        'Full GDPR/HIPAA compliance'
+      ]
     }
   ];
 

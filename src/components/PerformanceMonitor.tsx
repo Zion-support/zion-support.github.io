@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -23,15 +22,6 @@ const PerformanceMonitor: React.FC = () => {
     if (typeof window === 'undefined' || process.env.NODE_ENV !== 'production') {
       return;
     }
-=======
-import React from 'react';
-
-const PerformanceMonitor: React.FC<{ showDashboard?: boolean }> = () => {
-  return <div role="note" aria-label="PerformanceMonitor placeholder" />;
-};
-
-export default PerformanceMonitor;
->>>>>>> cursor/create-and-deploy-new-content-9df8
 
     // Measure Core Web Vitals
     const measureWebVitals = async () => {
@@ -75,66 +65,46 @@ export default PerformanceMonitor;
         // Time to First Byte (TTFB)
         const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigationEntry) {
-          const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-          setMetrics(prev => ({ ...prev, ttfb }));
+          setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
         }
 
-        // Send metrics to analytics (optional)
-        const sendMetrics = async () => {
-          try {
-            await fetch('/api/analytics', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                type: 'performance',
-                metrics: {
-                  url: window.location.href,
-                  timestamp: Date.now(),
-                  ...metrics,
-                },
-              }),
-            });
-          } catch (error) {
-            console.warn('Failed to send performance metrics:', error);
-          }
+        // Cleanup observers
+        return () => {
+          lcpObserver.disconnect();
+          fidObserver.disconnect();
+          clsObserver.disconnect();
         };
-
-        // Send metrics after 5 seconds
-        setTimeout(sendMetrics, 5000);
-
       } catch (error) {
-        console.warn('Performance monitoring error:', error);
+        console.warn('Performance monitoring failed:', error);
       }
     };
 
-    measureWebVitals();
+    // Start measuring after a short delay to ensure page is loaded
+    const timer = setTimeout(measureWebVitals, 1000);
 
-    // Cleanup observers
-    return () => {
-      if (typeof window !== 'undefined') {
-        // Cleanup is handled by the observers themselves
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Send metrics to analytics service (optional)
+  useEffect(() => {
+    if (metrics.fcp && metrics.lcp && metrics.fid && metrics.cls && metrics.ttfb) {
+      // Send to your analytics service
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'Core Web Vitals',
+          fcp: Math.round(metrics.fcp),
+          lcp: Math.round(metrics.lcp),
+          fid: Math.round(metrics.fid * 1000), // Convert to milliseconds
+          cls: Math.round(metrics.cls * 1000), // Convert to milliseconds
+          ttfb: Math.round(metrics.ttfb),
+        });
       }
-    };
+    }
   }, [metrics]);
 
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
-    return null;
-  }
-
-  // Development mode: show performance metrics
-  return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <div className="font-bold mb-2">Performance Metrics</div>
-      <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-      <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-      <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
-      <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'Loading...'}</div>
-      <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
-    </div>
-  );
+  // This component doesn't render anything visible
+  return null;
 };
 
 export default PerformanceMonitor;
