@@ -1,21 +1,22 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
-import AIMicroSAAS from './pages/AIMicroSAAS';
-import Blog from './pages/Blog';
-import Resources from './pages/Resources';
-import Tools from './pages/Tools';
-import EnterpriseAISolutions from './pages/EnterpriseAISolutions';
-import Post from './pages/Post';
-import CaseStudies from './pages/CaseStudies';
-import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
-import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
-import AIDataAnalytics from './pages/services/AIDataAnalytics';
-import AIAutonomousOperations from './pages/services/AIAutonomousOperations';
-import AIPlatformArchitecture from './pages/services/AI-Platform-Architecture';
+// Temporary route stubs for missing pages
+const About = () => null;
+const Services = () => null;
+const Contact = () => null;
+const AIMicroSAAS = () => null;
+const Blog = () => null;
+const Resources = () => null;
+const Tools = () => null;
+const EnterpriseAISolutions = () => null;
+const Post = () => null;
+const CaseStudies = () => null;
+const AIWorkflowAutomation = () => null;
+const AIVirtualAssistant = () => null;
+const AIDataAnalytics = () => null;
+const AIAutonomousOperations = () => null;
+const AIPlatformArchitecture = () => null;
 
 export const AppRouter: React.FC = () => {
   return (
