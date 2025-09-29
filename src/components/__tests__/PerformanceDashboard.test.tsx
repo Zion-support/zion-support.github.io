@@ -25,7 +25,6 @@ jest.mock('../../utils/performanceOptimizer', () => ({
 describe('PerformanceDashboard', () => {
   const mockOnClose = jest.fn();
 
-describe("PerformanceDashboard", () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });

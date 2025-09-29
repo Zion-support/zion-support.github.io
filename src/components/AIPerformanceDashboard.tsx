@@ -45,20 +45,6 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({
   const [errorReports, setErrorReports] = useState<ErrorReport[]>([]);
 
   const loadPerformanceData = useCallback(async () => {
-<<<<<<< HEAD
-    try {
-      setIsLoading(true);
-      
-      // Mock data for demonstration
-      const mockMetrics: PerformanceMetrics = {
-        errorRate: 2.3,
-        criticalErrorsToday: 5,
-        userImpactScore: 78,
-        avgResolutionTime: 4.2,
-      };
-
-      const mockInsights: AIInsights = {
-=======
     setIsLoading(true);
     try {
       // Simulate AI-powered performance analysis
@@ -76,7 +62,6 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({
       };
 
       const mockInsights = {
->>>>>>> 7ea1bb1fe213557f3676c1444a0258ff188b4a8e
         predictedHighRiskActions: [
           'Database connection timeout',
           'Memory leak in image processing',
@@ -274,11 +259,8 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({
                   ))}
                 </div>
               </div>
-<<<<<<< HEAD
-=======
             </div>
           )}
->>>>>>> 7ea1bb1fe213557f3676c1444a0258ff188b4a8e
         </div>
       </div>
     </div>
