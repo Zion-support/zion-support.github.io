@@ -79,12 +79,10 @@ export default function App(): React.JSX.Element {
         
         // Initialize analytics
         analytics.initialize();
-        
         // Initialize advanced optimizations
         advancedPerformanceOptimizer.optimize();
         accessibilityEnhancer.getMetrics();
         securityEnhancer.getMetrics();
-        
         console.log('App initialized successfully');
       } catch (error) {
         console.error('Failed to initialize app:', error);
