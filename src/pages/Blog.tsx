@@ -11,12 +11,11 @@ import {
   User,
   Zap
 } from "lucide-react";
-import React, { useMemo, useState } from "react";
-import { latestArticles, featuredArticles } from "../content/latest-articles";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
-const Footer: React.FC = () => null;
-import Header from "../components/Header";
+// Footer component missing; using page without footer
+// Header component missing; using page without header
 
 interface BlogPost {
   id: number;
@@ -180,21 +179,21 @@ export default function Blog(): React.JSX.Element {
     },
   ];
 
-  // Map content entries into this page's structure
+  // Map content/posts entries into this page's structure
   const mappedFromContent: BlogPost[] = useMemo(() => {
-    return latestArticles.map((a, index) => ({
-      id: index + 1000,
-      title: a.title,
-      excerpt: a.excerpt || a.description,
-      content: a.description,
-      author: a.author,
-      date: a.date,
-      readTime: a.readTime,
-      category: a.category,
-      tags: a.tags,
-      image: a.image || "/api/placeholder/400/250",
-      featured: a.featured,
-      views: a.trending ? 1000 : 250
+    return latestPosts.map((p, idx) => ({
+      id: 1000 + idx,
+      title: p.title,
+      excerpt: p.description,
+      content: "See full article",
+      author: "Zion Tech Group Team",
+      date: p.publishedAt,
+      readTime: p.readTime || "6 min read",
+      category: p.category,
+      tags: [p.category],
+      image: "/api/placeholder/400/250",
+      featured: Boolean(p.featured),
+      views: 0,
     }));
   }, []);
 
@@ -258,16 +257,17 @@ export default function Blog(): React.JSX.Element {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-        {/* New Content Promo Banner */
-        }
+        <Header />
+
+        {/* New Content Promo Banner */}
         <div className="border-b border-white/10">
           <div className="max-w-7xl mx-auto px-6">
-              <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-fuchsia-600 to-purple-600 p-4 text-white flex items-center justify-between">
+            <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center justify-between">
               <div className="mr-4">
-                <div className="text-sm font-semibold">🚀 Fresh: Governance Quickstart + Privacy‑First Agents</div>
-                <div className="text-xs text-white/90">Ship KPI‑linked guardrails and private assistants under real budgets.</div>
+                <div className="text-sm font-semibold">🚀 Fresh: Serverless Inference Cost Playbook + Production RAG</div>
+                <div className="text-xs text-white/90">Practical strategies to cut inference costs and ship RAG that meets SLAs.</div>
               </div>
-              <a href="/blog/ai-governance-scorecards-quickstart-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">
+              <a href="/blog/serverless-ai-inference-cost-playbook-2025" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">
                 Read the latest
               </a>
             </div>
@@ -482,6 +482,8 @@ export default function Blog(): React.JSX.Element {
             <BlogPromotionBanner />
           </div>
         </section>
+
+        <Footer />
       </div>
     </>
   );

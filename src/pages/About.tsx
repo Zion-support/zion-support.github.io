@@ -1,10 +1,8 @@
 import React from 'react';
 
-export default function About(): React.JSX.Element {
-	return (
-		<main style={{ padding: '2rem' }}>
-			<h1>About</h1>
-			<p>Zion Tech Group</p>
-		</main>
-	);
-}
+const About: React.FC = () => {
+  return <div className="container mx-auto px-6 py-16 text-white">About</div>;
+};
+
+export default About;
+

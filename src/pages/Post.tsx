@@ -1,75 +1,10 @@
-import React from "react";
-import { Link, useParams } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import { Calendar, Clock, ArrowLeft } from "lucide-react";
-import { posts } from "../content/posts";
+import React from 'react';
+import { useParams } from 'react-router-dom';
 
-export default function Post(): React.JSX.Element {
+const Post: React.FC = () => {
   const { slug } = useParams();
-  const post = posts.find((p) => p.slug === slug);
+  return <div className="container mx-auto px-6 py-16 text-white">Post: {slug}</div>;
+};
 
-  if (!post) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="container mx-auto px-6 py-20">
-          <div className="max-w-2xl">
-            <Link to="/blog" className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light">
-              <ArrowLeft className="w-4 h-4 mr-2" /> Back to Blog
-            </Link>
-            <h1 className="text-3xl font-bold mt-6">Article not found</h1>
-            <p className="text-zion-slate-light mt-2">The article you are looking for may have been moved or removed.</p>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <>
-      <Helmet>
-        <title>{post.title} - Zion Tech Group</title>
-        <meta name="description" content={post.description} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.description} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://ziontechgroup.com/blog/${post.slug}`} />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="container mx-auto px-6 py-12">
-          <div className="max-w-3xl mx-auto">
-            <Link to="/blog" className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light">
-              <ArrowLeft className="w-4 h-4 mr-2" /> Back to Blog
-            </Link>
-
-            <h1 className="text-4xl font-bold mt-4 mb-3">{post.title}</h1>
-            <p className="text-zion-slate-light mb-6">{post.description}</p>
-
-            <div className="flex items-center gap-4 text-sm text-zion-slate-light mb-10">
-              <div className="flex items-center">
-                <Calendar className="w-4 h-4 mr-1" />
-                {new Date(post.publishedAt).toLocaleDateString()}
-              </div>
-              {post.readTime && (
-                <div className="flex items-center">
-                  <Clock className="w-4 h-4 mr-1" />
-                  {post.readTime}
-                </div>
-              )}
-              <div className="px-2 py-1 rounded-full bg-white/10 border border-white/20 text-white text-xs">
-                {post.category}
-              </div>
-            </div>
-
-            <div className="prose prose-invert prose-zinc max-w-none">
-              <p>
-                This article is part of our ongoing series. Full content coming soon. In the meantime, explore our detailed playbooks and blueprints across the blog.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
+export default Post;
 
