@@ -95,6 +95,9 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+      {/* New 2026 Content Banner */}
+      <NewContent2026BannerComponent />
+      
       {/* Promotional Banners */}
       <Revolutionary2026ContentBanner />
       <AIAutonomousInfrastructureBanner />
