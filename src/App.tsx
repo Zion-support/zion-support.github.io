@@ -11,6 +11,7 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
+import { Notification as AppNotification } from './components/NotificationSystem';
 
 // Temporary fallbacks for referenced components not present in repo
 const Placeholder: React.FC<{ name: string }> = ({ name }) => (
@@ -38,12 +39,12 @@ const WebsiteEnhancements = (props: any) => <Placeholder name="WebsiteEnhancemen
 export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [notifications, setNotifications] = useState<AppNotification[]>([]);
 
   const seoDataForOptimizer = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
-    canonical: typeof window !== 'undefined' ? window.location.href : 'https://zion.app/',
+    canonicalPath: typeof window !== 'undefined' ? window.location.pathname : '/',
   }), []);
 
   // Simple hotkeys for demo toggles
@@ -64,13 +65,8 @@ export default function App(): React.JSX.Element {
             break;
         }
 
-        if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
-          enhancedSecurityManager.initialize();
-        }
-        
-        // Initialize new performance and accessibility enhancements
-        initializePerformanceEnhancements();
-        accessibilityEnhancer.initialize();
+        // Initialize accessibility enhancements
+        accessibilityEnhancer.init();
         
         // Initialize advanced optimizers
         // Guard optional advanced systems if present in global scope
@@ -86,8 +82,7 @@ export default function App(): React.JSX.Element {
 
         advancedPerformanceOptimizer?.initialize?.();
         advancedSEOOptimizer?.initialize?.();
-        accessibilityEnhancer.initialize();
-        advancedSecurityManager?.initialize?.();
+        accessibilityEnhancer.init();
         advancedAnalytics?.initialize?.();
         // advancedErrorHandler is initialized in constructor
         advancedCachingSystem?.initialize?.();
@@ -132,7 +127,11 @@ export default function App(): React.JSX.Element {
 
   return (
     <div>
-      <SEOOptimizer seoData={seoDataForOptimizer} />
+      <SEOOptimizer
+        title={seoDataForOptimizer.title}
+        description={seoDataForOptimizer.description}
+        canonicalUrl={seoDataForOptimizer.canonicalPath}
+      />
       <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />

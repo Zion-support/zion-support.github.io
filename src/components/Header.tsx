@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import HeaderPromoBanner from './HeaderPromoBanner';
+import { Sparkles, X, Menu } from 'lucide-react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Star, Calendar, Clock, Eye, ArrowRight, TrendingUp } from 'lucide-react';
 import { BlogPost, posts } from '../content/posts';
 import { InsightArticle, latestInsights } from '../content/insights';
 
@@ -16,6 +17,15 @@ interface FeaturedContent {
   tags: string[];
 }
 
+interface FeaturedContentShowcaseProps {
+  title?: string;
+  subtitle?: string;
+  maxItems?: number;
+  showInsights?: boolean;
+  showBlogPosts?: boolean;
+  className?: string;
+}
+
 export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = ({
   title = "Latest Insights & Trends",
   subtitle = "Stay ahead with our latest research, insights, and industry analysis",
@@ -25,6 +35,18 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
   className = ""
 }) => {
   const [activeTab, setActiveTab] = useState<'all' | 'blog' | 'insights'>('all');
+
+  type NormalizedItem = {
+    type: 'blog' | 'insights';
+    title: string;
+    description: string;
+    category: string;
+    date: string;
+    readTime: string;
+    views?: string;
+    href: string;
+    tags: string[];
+  };
 
   // Get featured blog posts
   const featuredBlogPosts = posts
@@ -38,15 +60,43 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
     .slice(0, 3);
 
   // Combine content for display
-  const allContent = [
-    ...featuredBlogPosts.map(post => ({ ...post, type: 'blog' as const, date: post.publishedAt })),
-    ...latestInsightsList.map(insight => ({ ...insight, type: 'insights' as const }))
-  ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-   .slice(0, maxItems);
+  const allContent: NormalizedItem[] = [
+    ...featuredBlogPosts.map(post => ({
+      type: 'blog' as const,
+      title: post.title,
+      description: post.description,
+      category: post.category,
+      date: post.publishedAt,
+      readTime: post.readTime ?? '5 min',
+      views: undefined as string | undefined,
+      href: `/blog/${post.slug}`,
+      tags: [] as string[],
+      slug: post.slug,
+    })),
+    ...latestInsightsList.map(insight => ({
+      type: 'insights' as const,
+      title: insight.title,
+      description: insight.summary,
+      category: insight.category,
+      date: insight.date,
+      readTime: `${insight.readMinutes} min`,
+      views: undefined as string | undefined,
+      href: `/insights/${insight.id}`,
+      tags: [] as string[],
+      id: insight.id,
+    })),
+  ]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, maxItems);
 
-  const filteredContent = activeTab === 'all' ? allContent : 
-    activeTab === 'blog' ? featuredBlogPosts.map(post => ({ ...post, type: 'blog' as const, date: post.publishedAt })) :
-    latestInsightsList.map(insight => ({ ...insight, type: 'insights' as const }));
+  const featuredContent = allContent;
+
+  const filteredContent: NormalizedItem[] =
+    activeTab === 'all'
+      ? allContent
+      : activeTab === 'blog'
+        ? allContent.filter(item => item.type === 'blog')
+        : allContent.filter(item => item.type === 'insights');
 
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
@@ -153,21 +203,13 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
               key={`${item.type}-${(item as any).slug ?? (item as any).id}-${index}`}
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
             >
-              {/* Image */}
+              {/* Image / Placeholder */}
               <div className="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
-                {item.type === 'blog' && (item as BlogPost).image ? (
-                  <img
-                    src={(item as BlogPost).image}
-                    alt={(item as BlogPost).title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="text-white text-4xl font-bold opacity-80">
-                      {item.type === 'blog' ? '📝' : '💡'}
-                    </div>
+                <div className="w-full h-full flex items-center justify-center">
+                  <div className="text-white text-4xl font-bold opacity-80">
+                    {item.type === 'blog' ? '📝' : '💡'}
                   </div>
-                )}
+                </div>
                 <div className="absolute top-4 left-4">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
                     {item.category}
@@ -175,38 +217,38 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
                 </div>
                 <div className="absolute top-4 right-4">
                   <span className="bg-white/20 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full">
-                    {item.type === 'blog' ? (item as BlogPost).readTime || '5 min read' : `${(item as InsightArticle).readMinutes} min read`}
+                    {item.readTime}
                   </span>
                 </div>
               </div>
               
               <h3 className="text-lg font-semibold text-gray-900 mb-3 line-clamp-2">
-                {content.title}
+                {item.title}
               </h3>
               
               <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                {content.description}
+                {item.description}
               </p>
               
               <div className="flex items-center gap-3 mb-4 text-xs text-gray-500">
                 <div className="flex items-center gap-1">
                   <Calendar className="w-3 h-3" />
-                  {new Date(content.date).toLocaleDateString()}
+                  {new Date(item.date).toLocaleDateString()}
                 </div>
                 <div className="flex items-center gap-1">
                   <Clock className="w-3 h-3" />
-                  {content.readTime}
+                  {item.readTime}
                 </div>
-                {content.views && (
+                {(item as any).views && (
                   <div className="flex items-center gap-1">
                     <Eye className="w-3 h-3" />
-                    {content.views}
+                    {(item as any).views}
                   </div>
                 )}
               </div>
               
               <div className="flex flex-wrap gap-1 mb-4">
-                {content.tags.slice(0, 2).map((tag, tagIndex) => (
+                {item.tags?.slice(0, 2).map((tag: string, tagIndex: number) => (
                   <span key={tagIndex} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded border">
                     #{tag}
                   </span>
@@ -214,7 +256,7 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
               </div>
               
               <Link 
-                to={content.href}
+                to={item.href}
                 className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 font-medium text-sm group"
               >
                 Read More

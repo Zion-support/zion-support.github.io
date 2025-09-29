@@ -27,7 +27,8 @@ import {
   Lightbulb,
   Settings,
   Monitor,
-  Smartphone
+  Smartphone,
+  Calculator
 } from "lucide-react";
 
 const EnterpriseAISolutions = () => {
