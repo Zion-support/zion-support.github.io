@@ -1,24 +1,24 @@
-import React, { useMemo, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import {
-  Download,
-  FileText,
   BookOpen,
-  Shield,
-  TrendingUp,
-  Globe,
-  Search,
-  ExternalLink,
-  Clock,
-  Star,
-  Cloud,
-  Smartphone,
-  Database,
-  Play,
   CheckCircle,
+  Clock,
+  Cloud,
+  Database,
+  Download,
+  ExternalLink,
+  FileText,
+  Globe,
+  Lightbulb,
   Monitor,
-  Lightbulb
+  Play,
+  Search,
+  Shield,
+  Smartphone,
+  Star,
+  TrendingUp
 } from 'lucide-react';
+import { useMemo, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const Resources = () => {
   const [searchTerm, setSearchTerm] = useState('');
