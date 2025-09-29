@@ -359,15 +359,6 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
- 
->>>>>>> feature/add-more-content-and-advertise
-=======
->>>>>>> cursor/create-and-deploy-new-content-8830
             <Link href="/blog/agentic-workflow-orchestration-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -385,11 +376,6 @@ export default function HomePage() {
                 <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
               </div>
             </Link>
-<<<<<<< HEAD
- 
- 
-=======
->>>>>>> cursor/create-and-deploy-new-content-8830
             <Link href="/blog/ai-autonomous-operations-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -407,7 +393,6 @@ export default function HomePage() {
                 <div className="flex items-center text-blue-600 font-semibold">Read Complete Guide →</div>
               </div>
             </Link>
-<<<<<<< HEAD
             <Link href="/blog/ai-finops-advanced-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -462,15 +447,10 @@ export default function HomePage() {
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Architecture Guide →
- 
- 
- 
-=======
->>>>>>> cursor/create-and-deploy-new-content-8830
-            <Link href="/blog/ai-governance-maturity-model-2026" className="group">
-=======
+                 </div>
+              </div>
+            </Link>
             <Link href="/blog/ai-autonomous-cloud-ops-2026" className="group">
->>>>>>> cursor/create-and-deploy-new-content-4c48
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -487,11 +467,7 @@ export default function HomePage() {
                 <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
               </div>
             </Link>
-<<<<<<< HEAD
-            <Link href="/blog/ai-customer-data-platforms-2026" className="group">
-=======
             <Link href="/blog/ai-fintech-transformation-2026" className="group">
->>>>>>> cursor/create-and-deploy-new-content-4c48
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -505,23 +481,10 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   95% automation, $5M+ savings, and digital banking revolution.
                 </p>
-<<<<<<< HEAD
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
- 
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/ai-trustworthy-agents-2026" className="group">
- 
-            <Link href="/blog/ai-agent-orchestration-2026" className="group">
- 
-=======
                 <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
               </div>
             </Link>
             <Link href="/blog/ai-agent-orchestration-2026" className="group">
->>>>>>> cursor/create-and-deploy-new-content-8830
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
