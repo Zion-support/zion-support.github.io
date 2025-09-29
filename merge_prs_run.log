@@ -1027,3 +1027,343 @@ Everything up-to-date
 Switched to branch 'fix/netlify-pnpm'
 Updating files:  40% (25016/62016)Updating files:  41% (25427/62016)Updating files:  42% (26047/62016)Updating files:  42% (26511/62016)Updating files:  43% (26667/62016)Updating files:  44% (27288/62016)Updating files:  45% (27908/62016)Updating files:  45% (28046/62016)Updating files:  46% (28528/62016)Updating files:  47% (29148/62016)Updating files:  48% (29768/62016)Updating files:  49% (30388/62016)Updating files:  50% (31008/62016)Updating files:  51% (31629/62016)Updating files:  52% (32249/62016)Updating files:  53% (32869/62016)Updating files:  54% (33489/62016)Updating files:  55% (34109/62016)Updating files:  55% (34521/62016)Updating files:  56% (34729/62016)Updating files:  57% (35350/62016)Updating files:  58% (35970/62016)Updating files:  59% (36590/62016)Updating files:  60% (37210/62016)Updating files:  61% (37830/62016)Updating files:  62% (38450/62016)Updating files:  63% (39071/62016)Updating files:  64% (39691/62016)Updating files:  64% (39859/62016)Updating files:  64% (40309/62016)Updating files:  65% (40311/62016)Updating files:  66% (40931/62016)Updating files:  67% (41551/62016)Updating files:  68% (42171/62016)Updating files:  69% (42792/62016)Updating files:  70% (43412/62016)Updating files:  71% (44032/62016)Updating files:  72% (44652/62016)Updating files:  73% (45272/62016)Updating files:  74% (45892/62016)Updating files:  75% (46512/62016)Updating files:  75% (46969/62016)Updating files:  76% (47133/62016)Updating files:  77% (47753/62016)Updating files:  78% (48373/62016)Updating files:  79% (48993/62016)Updating files:  80% (49613/62016)Updating files:  81% (50233/62016)Updating files:  82% (50854/62016)Updating files:  83% (51474/62016)Updating files:  84% (52094/62016)Updating files:  85% (52714/62016)Updating files:  86% (53334/62016)Updating files:  87% (53954/62016)Updating files:  88% (54575/62016)Updating files:  88% (54611/62016)Updating files:  89% (55195/62016)Updating files:  90% (55815/62016)Updating files:  91% (56435/62016)Updating files:  92% (57055/62016)Updating files:  93% (57675/62016)Updating files:  94% (58296/62016)Updating files:  95% (58916/62016)Updating files:  96% (59536/62016)Updating files:  97% (60156/62016)Updating files:  98% (60776/62016)Updating files:  99% (61396/62016)Updating files:  99% (61882/62016)Updating files: 100% (62016/62016)Updating files: 100% (62016/62016), done.
 HEAD is now at d720b1240952 chore(netlify): use pnpm via Corepack, frozen lockfile for builds
+🚀 Starting comprehensive PR merge process...
+⏰ Started at: 2025-09-29 09:23:50.419591
+==================================================
+🔄 Switching to main branch...
+📥 Pulling latest changes from main...
+🔎 Fetching open PRs for Zion-Holdings/zion.app...
+ℹ️ No PRs from API or token missing. Falling back to git refs for PR heads...
+📋 Found 30 open PR(s) to process.
+
+==================================================
+🔄 Processing PR #23678 from branch/ref: refs/pull/23678/head
+==================================================
+🔄 Attempting to merge branch: pr-23678 (PR #23678)...
+📍 Using local branch pr-23678
+✅ Successfully merged pr-23678
+✅ PR #23678 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23677 from branch/ref: refs/pull/23677/head
+==================================================
+🔄 Attempting to merge branch: pr-23677 (PR #23677)...
+📍 Using local branch pr-23677
+✅ Successfully merged pr-23677
+✅ PR #23677 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23676 from branch/ref: refs/pull/23676/head
+==================================================
+🔄 Attempting to merge branch: pr-23676 (PR #23676)...
+📍 Using local branch pr-23676
+✅ Successfully merged pr-23676
+✅ PR #23676 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23675 from branch/ref: refs/pull/23675/head
+==================================================
+🔄 Attempting to merge branch: pr-23675 (PR #23675)...
+📍 Using local branch pr-23675
+✅ Successfully merged pr-23675
+✅ PR #23675 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23674 from branch/ref: refs/pull/23674/head
+==================================================
+🔄 Attempting to merge branch: pr-23674 (PR #23674)...
+📍 Using local branch pr-23674
+✅ Successfully merged pr-23674
+✅ PR #23674 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23673 from branch/ref: refs/pull/23673/head
+==================================================
+🔄 Attempting to merge branch: pr-23673 (PR #23673)...
+📍 Using local branch pr-23673
+✅ Successfully merged pr-23673
+✅ PR #23673 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23672 from branch/ref: refs/pull/23672/head
+==================================================
+🔄 Attempting to merge branch: pr-23672 (PR #23672)...
+📍 Using local branch pr-23672
+✅ Successfully merged pr-23672
+✅ PR #23672 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23671 from branch/ref: refs/pull/23671/head
+==================================================
+🔄 Attempting to merge branch: pr-23671 (PR #23671)...
+📍 Using local branch pr-23671
+✅ Successfully merged pr-23671
+✅ PR #23671 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23670 from branch/ref: refs/pull/23670/head
+==================================================
+🔄 Attempting to merge branch: pr-23670 (PR #23670)...
+📍 Using local branch pr-23670
+✅ Successfully merged pr-23670
+✅ PR #23670 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23669 from branch/ref: refs/pull/23669/head
+==================================================
+🔄 Attempting to merge branch: pr-23669 (PR #23669)...
+📍 Using local branch pr-23669
+✅ Successfully merged pr-23669
+✅ PR #23669 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23668 from branch/ref: refs/pull/23668/head
+==================================================
+🔄 Attempting to merge branch: pr-23668 (PR #23668)...
+📍 Using local branch pr-23668
+✅ Successfully merged pr-23668
+✅ PR #23668 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23667 from branch/ref: refs/pull/23667/head
+==================================================
+🔄 Attempting to merge branch: pr-23667 (PR #23667)...
+📍 Using local branch pr-23667
+✅ Successfully merged pr-23667
+✅ PR #23667 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23666 from branch/ref: refs/pull/23666/head
+==================================================
+🔄 Attempting to merge branch: pr-23666 (PR #23666)...
+📍 Using local branch pr-23666
+✅ Successfully merged pr-23666
+✅ PR #23666 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23665 from branch/ref: refs/pull/23665/head
+==================================================
+🔄 Attempting to merge branch: pr-23665 (PR #23665)...
+📍 Using local branch pr-23665
+✅ Successfully merged pr-23665
+✅ PR #23665 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23664 from branch/ref: refs/pull/23664/head
+==================================================
+🔄 Attempting to merge branch: pr-23664 (PR #23664)...
+📍 Using local branch pr-23664
+✅ Successfully merged pr-23664
+✅ PR #23664 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23663 from branch/ref: refs/pull/23663/head
+==================================================
+🔄 Attempting to merge branch: pr-23663 (PR #23663)...
+📍 Using local branch pr-23663
+✅ Successfully merged pr-23663
+✅ PR #23663 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23662 from branch/ref: refs/pull/23662/head
+==================================================
+🔄 Attempting to merge branch: pr-23662 (PR #23662)...
+📍 Using local branch pr-23662
+✅ Successfully merged pr-23662
+✅ PR #23662 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23661 from branch/ref: refs/pull/23661/head
+==================================================
+🔄 Attempting to merge branch: pr-23661 (PR #23661)...
+📍 Using local branch pr-23661
+✅ Successfully merged pr-23661
+✅ PR #23661 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23660 from branch/ref: refs/pull/23660/head
+==================================================
+🔄 Attempting to merge branch: pr-23660 (PR #23660)...
+📍 Using local branch pr-23660
+✅ Successfully merged pr-23660
+✅ PR #23660 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23659 from branch/ref: refs/pull/23659/head
+==================================================
+🔄 Attempting to merge branch: pr-23659 (PR #23659)...
+📍 Using local branch pr-23659
+✅ Successfully merged pr-23659
+✅ PR #23659 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23658 from branch/ref: refs/pull/23658/head
+==================================================
+🔄 Attempting to merge branch: pr-23658 (PR #23658)...
+📍 Using local branch pr-23658
+✅ Successfully merged pr-23658
+✅ PR #23658 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23657 from branch/ref: refs/pull/23657/head
+==================================================
+🔄 Attempting to merge branch: pr-23657 (PR #23657)...
+📍 Using local branch pr-23657
+✅ Successfully merged pr-23657
+✅ PR #23657 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23656 from branch/ref: refs/pull/23656/head
+==================================================
+🔄 Attempting to merge branch: pr-23656 (PR #23656)...
+📍 Using local branch pr-23656
+✅ Successfully merged pr-23656
+✅ PR #23656 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23655 from branch/ref: refs/pull/23655/head
+==================================================
+🔄 Attempting to merge branch: pr-23655 (PR #23655)...
+📍 Using local branch pr-23655
+✅ Successfully merged pr-23655
+✅ PR #23655 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23654 from branch/ref: refs/pull/23654/head
+==================================================
+🔄 Attempting to merge branch: pr-23654 (PR #23654)...
+📍 Using local branch pr-23654
+✅ Successfully merged pr-23654
+✅ PR #23654 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23653 from branch/ref: refs/pull/23653/head
+==================================================
+🔄 Attempting to merge branch: pr-23653 (PR #23653)...
+📍 Using local branch pr-23653
+✅ Successfully merged pr-23653
+✅ PR #23653 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23652 from branch/ref: refs/pull/23652/head
+==================================================
+🔄 Attempting to merge branch: pr-23652 (PR #23652)...
+📍 Using local branch pr-23652
+✅ Successfully merged pr-23652
+✅ PR #23652 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23651 from branch/ref: refs/pull/23651/head
+==================================================
+🔄 Attempting to merge branch: pr-23651 (PR #23651)...
+📍 Using local branch pr-23651
+✅ Successfully merged pr-23651
+✅ PR #23651 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23650 from branch/ref: refs/pull/23650/head
+==================================================
+🔄 Attempting to merge branch: pr-23650 (PR #23650)...
+📍 Using local branch pr-23650
+✅ Successfully merged pr-23650
+✅ PR #23650 processed successfully
+==================================================
+
+
+==================================================
+🔄 Processing PR #23649 from branch/ref: refs/pull/23649/head
+==================================================
+🔄 Attempting to merge branch: pr-23649 (PR #23649)...
+📍 Using local branch pr-23649
+✅ Successfully merged pr-23649
+✅ PR #23649 processed successfully
+==================================================
+
+🔨 Testing build after merges...
+❌ Build failed after merges
+🔧 Attempting to fix build issues...
+❌ Build still failing: ✘ [ERROR] Expected ")" but found "."
+
+    vite.config.ts:69:18:
+      69 │             if (id.includes('framer-motion') || id.includes('lucid...
+         │                   ^
+         ╵                   )
+
+failed to load config from /workspace/vite.config.ts
+error during build:
+Error: Build failed with 1 error:
+vite.config.ts:69:18: ERROR: Expected ")" but found "."
+    at failureErrorWithLog (/workspace/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:1467:15)
+    at /workspace/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:926:25
+    at runOnEndCallbacks (/workspace/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:1307:45)
+    at buildResponseToResult (/workspace/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:924:7)
+    at /workspace/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:951:16
+    at responseCallbacks.<computed> (/workspace/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:603:9)
+    at handleIncomingPacket (/workspace/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:658:12)
+    at Socket.readFromStdout (/workspace/node_modules/.pnpm/esbuild@0.25.10/node_modules/esbuild/lib/main.js:581:7)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+
+💾 Pushing changes to remote...
+
+🎉 PR merge process completed!
+📊 Final Summary:
+   ✅ Successful merges: 30
+   ❌ Failed merges: 0
+⏰ Completed at: 2025-09-29 09:24:19.704827
