@@ -1,177 +1,225 @@
 # Zion Tech Group Website
 
-A modern, high-performance website built with React, TypeScript, and Vite.
+# Welcome to your Lovable project
 
-## 🚀 Features
+## 🌟 Features
 
-- **Performance Optimized**: Built with Vite for lightning-fast development and optimized production builds
-- **Type Safe**: Full TypeScript support with strict type checking
-- **Responsive Design**: Mobile-first design with Tailwind CSS
-- **SEO Optimized**: Dynamic meta tags, structured data, and search engine optimization
-- **Accessibility**: WCAG 2.1 AA compliant with comprehensive accessibility features
-- **Monitoring**: Real-time performance monitoring and analytics
-- **Error Handling**: Advanced error boundaries and recovery systems
-- **Security**: Enhanced security headers and CSP policies
+**URL**: https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32
 
-## 🛠️ Development
+## 🚀 Tech Stack
 
-### Prerequisites
+There are several ways of editing your application.
 
-- Node.js 18+
-- pnpm 8+
+**Use Lovable**
 
-### Installation
+Simply visit the [Lovable Project](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and start prompting.
+
+Changes made via Lovable will be committed automatically to this repo.
+
+**Use your preferred IDE**
+
+The application uses Supabase for all authentication functionality:
+- User registration and login
+- Email verification and password reset
+- Social authentication (Google, Facebook, GitHub, Microsoft, Twitter)
+- Session management and profile handling
+
+### Required Environment Variables
+
+A comprehensive list of environment variables can be found in the `.env.example` file. For local development, create a `.env.local` file and populate it with the necessary values based on `.env.example`. For production deployment (e.g., on Netlify), these variables must be configured in your hosting provider's UI.
+
+**Key variables include:**
+
+-   **Supabase Configuration:**
+    -   `NEXT_PUBLIC_SUPABASE_URL`
+    -   `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+    -   `SUPABASE_SERVICE_ROLE_KEY` (for server-side operations)
+-   **NextAuth.js Configuration:**
+    -   `NEXTAUTH_SECRET` (a randomly generated string for signing tokens)
+    -   `NEXTAUTH_URL` (the canonical URL of your application)
+-   **OAuth Provider Credentials:**
+    -   `GOOGLE_CLIENT_ID` & `GOOGLE_CLIENT_SECRET`
+    -   `FACEBOOK_CLIENT_ID` & `FACEBOOK_CLIENT_SECRET`
+    -   `GITHUB_CLIENT_ID` & `GITHUB_CLIENT_SECRET`
+    -   `MICROSOFT_CLIENT_ID` & `MICROSOFT_CLIENT_SECRET` (and potentially `MICROSOFT_TENANT_ID`)
+    -   Other provider credentials as needed.
+-   **Internal Authentication Service:**
+    -   `INTERNAL_AUTH_SERVICE_URL` (if used for specific flows like registration)
+
+Ensure all variables marked as required in `.env.example` or in specific documentation (like `docs/SUPABASE_AUTHENTICATION_SETUP.md`) are correctly set.
+
+### 📚 Detailed Setup Guides
+
+- **[Supabase Authentication Setup](docs/SUPABASE_AUTHENTICATION_SETUP.md)** - Complete guide for configuring Supabase authentication
+- **[Netlify Deployment Guide](docs/NETLIFY_DEPLOYMENT_GUIDE.md)** - Step-by-step Netlify deployment with environment variables
+- **[Optional Two-Factor Authentication](TWO_FACTOR_AUTHENTICATION_SUMMARY.md)** - Overview of enabling 2FA in the IPO portal
+- **[Logging Guidelines](docs/LOGGING_GUIDELINES.md)** - Usage instructions for the project logger
+- **Collect Logs** - `npm run logs:collect` bundles recent logs under `logs/archive/`
+- **Analyze Logs** - `npm run logs:summary` scans collected logs and reports missing translation keys
+- **CSV Log Summary** - `npm run logs:summary:csv` outputs a CSV report of error counts per log file
+- **Health Check** - `npm run logs:health` prints a quick system status report
+- You can skip external connectivity tests by setting `DISABLE_EXTERNAL_SERVICE_CHECKS=true` when running
+  the health check (useful for offline environments)
+- **Demo Bug Logger** - `npm run bug:demo` generates sample bug reports
+- **Bug Log Summary** - `npm run bug:summary` shows a quick breakdown of logged bugs
+- **Missing Key Log** - Any translation keys not found at runtime are appended to `logs/missing-keys.log`
+- **Bug Logging** - Run `python3 main_app.py` to generate sample bug logs in `logs/bug/bug_log.json`. Use `python3 bug_logger.py --summary` to view a summary of logged issues.
+
+### CDN for Static Assets
+
+To improve performance, the application can serve static assets from a CDN.
+Set `NEXT_PUBLIC_CDN_URL` to your CDN domain (e.g., `https://cdn.yourdomain.com`).
+When this variable is provided in production builds, Next.js will prefix asset
+URLs so they are loaded from the CDN.
+
+### Quick Setup Verification
+
+After setting up environment variables, verify your configuration:
 
 ```bash
-pnpm install
+# Check environment setup
+npx ts-node --transpile-only scripts/check-env.ts
+
+# Test Supabase connection (in browser console)
+console.log('Supabase configured:', !!window.location.origin.includes('localhost') || !!process.env.NEXT_PUBLIC_SUPABASE_URL)
 ```
 
-### Development Server
+## 🛠️ Installation
 
-```bash
-pnpm dev
+### Background tasks
+
+The Django backend runs scheduled jobs using Celery. To process abandoned cart emails locally run:
+
+```sh
+celery -A backend.celery worker -B
 ```
 
-### Build
+**Edit a file directly in GitHub**
 
-```bash
-# Development build
-pnpm build
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-# Production build
-pnpm run build:optimized
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-# Fast build (no minification)
-pnpm run build:fast
+4. **Open your browser**
+   Navigate to `http://localhost:5173`
 
-# Minimal build (optimized for size)
-pnpm run build:minimal
+## 📜 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
+
+## 🎨 Customization
+
+### Colors and Theme
+
+Simply open [Lovable](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and click on Share -> Publish.
+
+## Can I connect a custom domain to my Lovable project?
+
+Yes, you can!
+
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+## Integrations
+
+See [docs/Integrations.md](docs/Integrations.md) for information on the Zion Assistant browser extension and Slack bot.
+
+## Product Media
+
+Product listings now support rich media. The `product_listings` table includes new
+`video_url` and `model_url` fields for MP4 videos and GLB 3D models. Upload media
+through the product submission form and view it in the gallery tabs (Images, Video, 3D).
+
+## Troubleshooting
+
+### Network Issues
+
+If you see errors related to missing modules like 'react', 'react-dom', or 'lucide-react', your environment may not have internet access to download these dependencies. Options to resolve this:
+
+1. Ensure you have internet connectivity
+2. Configure proxy settings if needed: `npm config set proxy http://your-proxy:port`
+3. Use a pre-downloaded `node_modules` directory if available
+
+### Package Manager Issues
+
+If you encounter errors running `bun install` (for example, integrity check failures), delete any `bun.lockb` file and run `npm install` instead. This project relies on npm and is not guaranteed to work with Bun. Adding `bun.lockb` to `.gitignore` ensures Bun isn't accidentally used.
+
+For pnpm errors showing "This project is configured to use npm", use `./setup.sh npm` instead as the project may have npm-specific configurations.
+
+If you see a warning about `rimraf@3.0.2` being deprecated, run:
+
+```sh
+npm install rimraf@latest --save-dev
 ```
 
-### Performance
+This updates the dependency to a supported v5 release.
 
-```bash
-# Performance audit
-pnpm run performance:audit
+To prevent memory leaks from the deprecated `inflight` package, the project pins
+`glob` to version `10.4.5` via the `resolutions` field in `package.json`. Run
+`npm install` to ensure this version is installed.
 
-# Bundle analysis
-pnpm run build:analyze
+To suppress npm warnings about `@humanwhocodes/config-array`, the `resolutions`
+block maps it to `@eslint/config-array`. Run `npm install` to apply this
+override.
 
-# Performance optimization
-pnpm run optimize:all
+### Whitelabel Tenant Errors
+
+If the app logs **"Error loading tenant"** during startup, the request to the
+Supabase edge function that provides whitelabel settings failed. Confirm that
+`VITE_SUPABASE_URL`/`VITE_SUPABASE_ANON_KEY` (or the Next.js style
+`NEXT_PUBLIC_SUPABASE_URL`/`NEXT_PUBLIC_SUPABASE_ANON_KEY`) are set in your
+environment and that you have network connectivity. The tenant hook will retry
+a few times before giving up.
+
+## Testing
+
+Run unit tests with:
+
+```sh
+npm run test
 ```
 
-### Testing
+To watch tests during development:
 
-```bash
-# Run tests
-pnpm test
-
-# Run tests with coverage
-pnpm run test:coverage
-
-# Run tests in watch mode
-pnpm run test:watch
+```sh
+npm run test:watch
 ```
 
-### Linting & Formatting
+### End-to-End Tests
 
-```bash
-# Lint code
-pnpm lint
+Open Cypress for interactive debugging:
 
-# Fix linting issues
-pnpm run lint:fix
-
-# Format code
-pnpm format
-
-# Check formatting
-pnpm run format:check
+```sh
+npm run cypress:open
 ```
 
-## 🎯 Performance Features
+Run the Cypress suite headlessly:
 
-- **Bundle Splitting**: Automatic code splitting for optimal loading
-- **Tree Shaking**: Dead code elimination for smaller bundles
-- **Image Optimization**: Automatic image compression and optimization
-- **CSS Optimization**: Purged and minified CSS
-- **Service Worker**: Offline support and caching
-- **Preloading**: Critical resource preloading
-- **Lazy Loading**: Component lazy loading for better performance
-
-## 🔧 Advanced Features
-
-- **System Dashboard**: Comprehensive system monitoring (Ctrl+Shift+D)
-- **Performance Optimizer**: Real-time performance optimization (Ctrl+Shift+P)
-- **SEO Optimizer**: Dynamic SEO management (Ctrl+Shift+S)
-- **AI Dashboard**: AI-powered analytics (Ctrl+Shift+A)
-- **Accessibility Panel**: Accessibility testing and optimization
-- **Error Recovery**: Advanced error handling and recovery
-
-## 📊 Monitoring & Analytics
-
-- **Performance Monitoring**: Real-time Core Web Vitals tracking
-- **Error Tracking**: Comprehensive error logging and reporting
-- **User Analytics**: Engagement and behavior tracking
-- **SEO Analytics**: Search performance monitoring
-
-## 🚀 Deployment
-
-The project is optimized for deployment on Netlify with:
-
-- **Build Optimization**: Optimized build configuration
-- **Security Headers**: Enhanced security policies
-- **Caching**: Optimized caching strategies
-- **CDN**: Global content delivery network
-
-## 📁 Project Structure
-
-```
-src/
-├── components/          # React components
-├── pages/              # Page components
-├── hooks/              # Custom React hooks
-├── utils/              # Utility functions
-├── styles/             # Global styles
-└── types/              # TypeScript type definitions
+```sh
+npm run cypress:run
 ```
 
-## 🎨 Design System
+### Coverage Report
 
-Built with Tailwind CSS and includes:
+After running `npm run test`, open `coverage/lcov-report/index.html` in your
+browser to view detailed coverage information.
 
-- **Color Palette**: Consistent color system
-- **Typography**: Optimized font loading and rendering
-- **Spacing**: Consistent spacing system
-- **Components**: Reusable component library
+## Observability
 
-## 🔒 Security
+For instructions on structured logging, Prometheus metrics, and Sentry error reporting, see [docs/observability.md](docs/observability.md).
 
-- **CSP Headers**: Content Security Policy implementation
-- **XSS Protection**: Cross-site scripting protection
-- **CSRF Protection**: Cross-site request forgery protection
-- **Secure Headers**: Security headers for all responses
-
-## 📈 Performance Metrics
-
-- **Lighthouse Score**: 95+ across all categories
-- **Core Web Vitals**: All metrics in the "Good" range
-- **Bundle Size**: Optimized for minimal bundle size
-- **Load Time**: Sub-second initial load times
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests and linting
-5. Submit a pull request
-
-## 📄 License
-
-MIT License - see LICENSE file for details
-
-## 🆘 Support
-
-For support, email support@ziontechgroup.com or visit our website.
+When tests run on GitHub Actions, the workflow uploads the `coverage` directory
+using `actions/upload-artifact@v4`. Visit a workflow run and download the
+`coverage-report` artifact to retrieve the generated HTML coverage report.
+# Trigger new build with clean netlify.toml

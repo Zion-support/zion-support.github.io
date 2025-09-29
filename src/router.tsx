@@ -1,171 +1,31 @@
-import React, { Suspense, lazy } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import SkipLink from "./components/SkipLink";
-import ScrollToTop from "./components/ScrollToTop";
-import ErrorBoundary from "./components/ErrorBoundary";
-import ErrorFallback from "./components/ErrorFallback";
-import EnhancedErrorBoundary from "./components/EnhancedErrorBoundary";
-import { PageLoader } from "./components/EnhancedLoadingSpinner";
-import SystemDashboard from "./components/SystemDashboard";
-import AccessibilityTester from "./components/AccessibilityTester";
-import PerformanceProfiler from "./components/PerformanceProfiler";
-import ComprehensiveMonitoringDashboard from "./components/ComprehensiveMonitoringDashboard";
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import Blog from './pages/Blog';
+import Resources from './pages/Resources';
+import AIAutonomousOperations from './pages/services/AIAutonomousOperations';
+import AIPlatformArchitecture from './pages/services/AI-Platform-Architecture';
+import AIIncidentResponsePlaybooks2025 from './pages/blog/ai-incident-response-playbooks-2025/page';
+import AIBreachDrills2026 from './pages/blog/ai-breach-drills-2026/page';
+import PrivacyFirstInsightsTelemetry2026 from './pages/blog/privacy-first-insights-telemetry-2026/page';
+import AgentBlueGreenReleases2026 from './pages/blog/agent-blue-green-releases-2026/page';
+import Post from './pages/Post';
 
-// Lazy load components for better performance
-const Home = lazy(() => import("./pages/Home"));
-const Blog = lazy(() => import("./pages/Blog"));
-const Contact = lazy(() => import("./pages/Contact"));
-const About = lazy(() => import("./pages/About"));
-const Services = lazy(() => import("./pages/Services"));
-const Portfolio = lazy(() => import("./pages/Portfolio"));
-const Analytics = lazy(() => import("./pages/Analytics"));
-const NotFound = lazy(() => import("./pages/NotFound"));
-const ModernFeatures = lazy(() => import("./components/ModernFeatures"));
-const EnhancedPerformanceDashboard = lazy(
-  () => import("./components/EnhancedPerformanceDashboard"),
-);
-
-// Layout component
-export const Layout: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => (
-  <div className="min-h-screen bg-white">
-    <SkipLink />
-    <ScrollToTop />
-    <Header />
-
-    <main id="main-content">
-      <Suspense fallback={<PageLoader text="Loading page..." />}>
-        {children}
-      </Suspense>
-    </main>
-
-    <Footer />
-
-    {/* Development Tools */}
-    <SystemDashboard />
-    <AccessibilityTester />
-    <PerformanceProfiler />
-  </div>
-);
-
-// Create router with future flags
-export const router = createBrowserRouter(
-  [
-    {
-      path: "/",
-      element: (
-        <Layout>
-          <Home />
-        </Layout>
-      ),
-      errorElement: <ErrorFallback />,
-    },
-    {
-      path: "/blog",
-      element: (
-        <Layout>
-          <Blog />
-        </Layout>
-      ),
-      errorElement: <ErrorFallback />,
-    },
-    {
-      path: "/contact",
-      element: (
-        <Layout>
-          <Contact />
-        </Layout>
-      ),
-      errorElement: <ErrorFallback />,
-    },
-    {
-      path: "/about",
-      element: (
-        <Layout>
-          <About />
-        </Layout>
-      ),
-      errorElement: <ErrorFallback />,
-    },
-    {
-      path: "/services",
-      element: (
-        <Layout>
-          <Services />
-        </Layout>
-      ),
-      errorElement: <ErrorFallback />,
-    },
-    {
-      path: "/portfolio",
-      element: (
-        <Layout>
-          <Portfolio />
-        </Layout>
-      ),
-      errorElement: <ErrorFallback />,
-    },
-    {
-      path: "/monitoring",
-      element: (
-        <Layout>
-          <ComprehensiveMonitoringDashboard />
-        </Layout>
-      ),
-      errorElement: <ErrorFallback />,
-    },
-    {
-      path: "/features",
-      element: (
-        <Layout>
-          <ModernFeatures />
-        </Layout>
-      ),
-      errorElement: <ErrorFallback />,
-    },
-    {
-      path: "/performance",
-      element: (
-        <Layout>
-          <EnhancedPerformanceDashboard isVisible={true} onClose={() => {}} />
-        </Layout>
-      ),
-      errorElement: <ErrorFallback />,
-    },
-    {
-      path: "/analytics",
-      element: (
-        <Layout>
-          <Analytics />
-        </Layout>
-      ),
-      errorElement: <ErrorFallback />,
-    },
-    {
-      path: "*",
-      element: (
-        <Layout>
-          <NotFound />
-        </Layout>
-      ),
-      errorElement: <ErrorFallback />,
-    },
-  ],
-  {
-    future: {
-      v7_relativeSplatPath: true,
-    },
-  },
-);
-
-// Router component for backward compatibility
-export const AppRouter: React.FC = () => (
-  <EnhancedErrorBoundary>
-    <ErrorBoundary fallback={<ErrorFallback />}>
-      <RouterProvider router={router} />
-    </ErrorBoundary>
-  </EnhancedErrorBoundary>
-);
+export const AppRouter: React.FC = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<Post />} />
+      <Route path="/blog/ai-breach-drills-2026" element={<AIBreachDrills2026 />} />
+      <Route path="/blog/privacy-first-insights-telemetry-2026" element={<PrivacyFirstInsightsTelemetry2026 />} />
+      <Route path="/blog/agent-blue-green-releases-2026" element={<AgentBlueGreenReleases2026 />} />
+      <Route path="/resources" element={<Resources />} />
+      <Route path="/blog/ai-incident-response-playbooks-2025" element={<AIIncidentResponsePlaybooks2025 />} />
+      <Route path="/services/ai-autonomous-operations" element={<AIAutonomousOperations />} />
+      <Route path="/services/AI-Platform-Architecture" element={<AIPlatformArchitecture />} />
+    </Routes>
+  );
+};

@@ -1,151 +1,199 @@
-import React, { useEffect } from "react";
-
-interface SEOData {
-  title: string;
-  description: string;
-  keywords?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  canonical?: string;
-}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
-  seoData: SEOData;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: any;
+  noindex?: boolean;
 }
 
-export const useSEOData = (pathname: string): SEOData => {
-  const defaultSEO: SEOData = {
-    title: "Zion Tech Group - Advanced AI and IT Solutions",
-    description:
-      "Leading provider of AI-powered technology solutions, cloud services, and digital transformation consulting.",
-    keywords:
-      "AI, artificial intelligence, technology solutions, cloud services, digital transformation",
-    ogTitle: "Zion Tech Group - Advanced AI and IT Solutions",
-    ogDescription:
-      "Leading provider of AI-powered technology solutions, cloud services, and digital transformation consulting.",
-    ogImage: "/og-image.png",
-    canonical: `https://ziontechgroup.com${pathname}`,
-  };
-
-  // Customize SEO data based on pathname
-  switch (pathname) {
-    case "/about":
-      return {
-        ...defaultSEO,
-        title: "About Us - Zion Tech Group",
-        description:
-          "Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and technology solutions.",
-        ogTitle: "About Us - Zion Tech Group",
-      };
-    case "/services":
-      return {
-        ...defaultSEO,
-        title: "Our Services - Zion Tech Group",
-        description:
-          "Explore our comprehensive range of AI, cloud, and technology services designed to transform your business.",
-        ogTitle: "Our Services - Zion Tech Group",
-      };
-    case "/contact":
-      return {
-        ...defaultSEO,
-        title: "Contact Us - Zion Tech Group",
-        description:
-          "Get in touch with our team of experts to discuss your technology needs and project requirements.",
-        ogTitle: "Contact Us - Zion Tech Group",
-      };
-    default:
-      return defaultSEO;
-  }
+type SEOData = {
+  title: string;
+  description: string;
+  canonical?: string;
 };
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ seoData }) => {
-  useEffect(() => {
-    if (typeof document === "undefined") return;
+// Support both explicit props and a combined seoData prop for convenience
+const SEOOptimizer: React.FC<SEOOptimizerProps & { seoData?: SEOData }> = ({
+  title,
+  description,
+  keywords,
+  canonicalUrl,
+  ogImage = '/api/placeholder/1200/630',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData,
+  noindex = false,
+  seoData
+}) => {
+  if (seoData) {
+    title = seoData.title;
+    description = seoData.description;
+    canonicalUrl = seoData.canonical;
+  }
 
-    // Update title
-    document.title = seoData.title;
+  // Fallbacks if minimal props were provided
+  title = title ?? 'Zion Tech Group';
+  description = description ?? 'Advanced AI and IT solutions.';
+  const siteName = 'Zion Tech Group';
+  const siteUrl = 'https://ziontechgroup.com';
+  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;
 
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement("meta");
-      metaDescription.setAttribute("name", "description");
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute("content", seoData.description);
+  const defaultKeywords = 'AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation, business automation, data analytics';
+  const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
 
-    // Update keywords
-    if (seoData.keywords) {
-      let metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (!metaKeywords) {
-        metaKeywords = document.createElement("meta");
-        metaKeywords.setAttribute("name", "keywords");
-        document.head.appendChild(metaKeywords);
-      }
-      metaKeywords.setAttribute("content", seoData.keywords);
-    }
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{title} | {siteName}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={finalKeywords} />
+      <link rel="canonical" href={fullCanonicalUrl} />
+      
+      {/* Robots */}
+      {noindex && <meta name="robots" content="noindex, nofollow" />}
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={fullCanonicalUrl} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:site_name" content={siteName} />
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter Card */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="publisher" content="Zion Tech Group" />
+      <meta name="copyright" content="Zion Tech Group" />
+      <meta name="language" content="en" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="rating" content="general" />
+      
+      {/* Mobile Optimization */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#1e40af" />
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
+      
+      {/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    </Helmet>
+  );
+};
 
-    // Update Open Graph tags
-    const ogTags = [
-      { property: "og:title", content: seoData.ogTitle || seoData.title },
-      {
-        property: "og:description",
-        content: seoData.ogDescription || seoData.description,
-      },
-      { property: "og:image", content: seoData.ogImage || "/og-image.png" },
-      {
-        property: "og:url",
-        content: seoData.canonical || window.location.href,
-      },
-      { property: "og:type", content: "website" },
-    ];
+// Utility function to generate structured data for different page types
+export const generateStructuredData = {
+  organization: () => ({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "description": "Leading AI and IT solutions provider specializing in digital transformation, cybersecurity, and business automation.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "url": "https://ziontechgroup.com/contact"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup"
+    ]
+  }),
 
-    ogTags.forEach(({ property, content }) => {
-      let meta = document.querySelector(`meta[property="${property}"]`);
-      if (!meta) {
-        meta = document.createElement("meta");
-        meta.setAttribute("property", property);
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute("content", content);
-    });
-
-    // Update canonical URL
-    if (seoData.canonical) {
-      let canonical = document.querySelector('link[rel="canonical"]');
-      if (!canonical) {
-        canonical = document.createElement("link");
-        canonical.setAttribute("rel", "canonical");
-        document.head.appendChild(canonical);
-      }
-      canonical.setAttribute("href", seoData.canonical);
-    }
-
-    // Add structured data
-    const structuredData = {
-      "@context": "https://schema.org",
+  service: (serviceData: any) => ({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": serviceData.name,
+    "description": serviceData.description,
+    "provider": {
       "@type": "Organization",
-      name: "Zion Tech Group",
-      url: "https://ziontechgroup.com",
-      logo: "https://ziontechgroup.com/logo.png",
-      description: seoData.description,
-      sameAs: [
-        "https://linkedin.com/company/zion-tech-group",
-        "https://twitter.com/ziontechgroup",
-      ],
-    };
-
-    let script = document.querySelector('script[type="application/ld+json"]');
-    if (!script) {
-      script = document.createElement("script");
-      script.setAttribute("type", "application/ld+json");
-      document.head.appendChild(script);
+      "name": "Zion Tech Group"
+    },
+    "category": serviceData.category,
+    "offers": {
+      "@type": "Offer",
+      "price": serviceData.pricing?.starting,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
     }
-    script.textContent = JSON.stringify(structuredData);
-  }, [seoData]);
+  }),
 
-  return null;
+  article: (articleData: any) => ({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": articleData.title,
+    "description": articleData.description,
+    "author": {
+      "@type": "Person",
+      "name": articleData.author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ziontechgroup.com/logo.png"
+      }
+    },
+    "datePublished": articleData.publishDate,
+    "dateModified": articleData.publishDate,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://ziontechgroup.com${articleData.url}`
+    }
+  }),
+
+  breadcrumb: (breadcrumbs: Array<{name: string, url: string}>) => ({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbs.map((crumb, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": crumb.name,
+      "item": `https://ziontechgroup.com${crumb.url}`
+    }))
+  }),
+
+  faq: (faqs: Array<{question: string, answer: string}>) => ({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  })
 };
 
 export default SEOOptimizer;
