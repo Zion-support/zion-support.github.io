@@ -279,7 +279,6 @@ const Resources = () => {
   ];
 
   const categories = [
-<<<<<<< HEAD
     { id: 'all', name: 'All', icon: Lightbulb, count: resources.length },
     { id: 'AI & Machine Learning', name: 'AI & Machine Learning', icon: Lightbulb, count: resources.filter(r => r.category === 'AI & Machine Learning').length },
     { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: resources.filter(r => r.category === 'Cybersecurity').length },
@@ -292,22 +291,6 @@ const Resources = () => {
 
   const featuredResources = useMemo(() => resources.filter(resource => resource.featured), [resources]);
   const otherResources = useMemo(() => resources.filter(resource => !resource.featured), [resources]);
-=======
-    { id: 'ai', name: "AI & Machine Learning", icon: Lightbulb, count: 12 },
-    { id: 'security', name: "Cybersecurity", icon: Shield, count: 8 },
-    { id: 'cloud', name: "Cloud & DevOps", icon: Cloud, count: 8 },
-    { id: 'digital', name: "Digital Transformation", icon: TrendingUp, count: 6 },
-    { id: 'mobile', name: "Mobile Development", icon: Smartphone, count: 3 },
-    { id: 'analytics', name: "Data Analytics", icon: Database, count: 4 },
-    { id: 'web', name: "Web Development", icon: Monitor, count: 3 }
-  ];
-
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');
-
-  const featuredResources = resources.filter(resource => resource.featured);
-  const otherResources = resources.filter(resource => !resource.featured);
->>>>>>> cursor/create-and-deploy-new-content-d0c7
 
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.name === category);
@@ -330,26 +313,14 @@ const Resources = () => {
     }
   };
 
-<<<<<<< HEAD
-  // counts are computed in the category definitions above
-=======
-  // Calculate category counts (derived)
+  // Calculate category counts (derived) based on explicit names
   const categoriesWithCounts = useMemo(() => {
-    const counts: Record<string, number> = {};
+    const countsByName: Record<string, number> = {};
     resources.forEach(r => {
-      const key =
-        r.category === 'AI & Machine Learning' ? 'ai' :
-        r.category === 'Cybersecurity' ? 'security' :
-        r.category === 'Cloud & DevOps' ? 'cloud' :
-        r.category === 'Digital Transformation' ? 'digital' :
-        r.category === 'Mobile Development' ? 'mobile' :
-        r.category === 'Data Analytics' ? 'analytics' :
-        r.category === 'Web Development' ? 'web' : 'other';
-      counts[key] = (counts[key] || 0) + 1;
+      countsByName[r.category] = (countsByName[r.category] || 0) + 1;
     });
-    return categories.map(c => ({ ...c, count: counts[c.id] || 0 }));
+    return categories.map(c => ({ ...c, count: countsByName[c.name] || (c.id === 'all' ? resources.length : 0) }));
   }, [resources]);
->>>>>>> cursor/create-and-deploy-new-content-d0c7
 
   const filteredResources = resources.filter(resource => {
     const matchesCategory = selectedCategory === 'all' || resource.category === selectedCategory;
@@ -359,13 +330,7 @@ const Resources = () => {
     return matchesCategory && matchesSearch;
   });
 
-<<<<<<< HEAD
-  // featuredResources is already computed above
-  // featuredResources is already computed above
-=======
   // featuredResources already computed above
-
->>>>>>> cursor/create-and-deploy-new-content-d0c7
   return (
     <>
       <Helmet>
@@ -459,19 +424,12 @@ const Resources = () => {
                         <Download className="w-4 h-4 mr-1" />
                         {resource.downloadCount} downloads
                       </div>
-<<<<<<< HEAD
                       <div className="flex items-center text-gray-500 text-sm">
                         <Clock className="w-4 h-4 mr-1" />
                         {typeof (resource as any).duration === 'string'
                           ? (resource as any).duration
-                          : `${(resource as any).pages || 0} pages`}
+                          : ((resource as any).readTime || `${(resource as any).pages || 0} pages`)}
                       </div>
-=======
-                        <div className="flex items-center text-gray-500 text-sm">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {(resource as any).readTime || (resource as any).duration || '—'}
-                        </div>
->>>>>>> cursor/create-and-deploy-new-content-d0c7
                     </div>
 
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -570,13 +528,9 @@ const Resources = () => {
                         </div>
                         <div className="flex items-center">
                           <Clock className="w-4 h-4 mr-1" />
-<<<<<<< HEAD
                           {typeof (resource as any).duration === 'string'
                             ? (resource as any).duration
-                            : `${(resource as any).pages || 0} pages`}
-=======
-                          {(resource as any).readTime || (resource as any).duration || '—'}
->>>>>>> cursor/create-and-deploy-new-content-d0c7
+                            : ((resource as any).readTime || `${(resource as any).pages || 0} pages`)}
                         </div>
                       </div>
 
