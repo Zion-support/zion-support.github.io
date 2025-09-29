@@ -1078,6 +1078,11 @@ export const getRecentContent = (limit: number = 3) => {
 export { 
   newBlogPosts2025, featuredBlogPosts, trendingBlogPosts, 
   newServices2025, featuredServices, trendingServices,
+<<<<<<< HEAD
+  newContent2026January, featuredNewContent2026January, trendingNewContent2026January,
+  newServices2026, featuredServices2026, trendingServices2026
+};
+=======
   newContentJanuary2025, featuredNewContent, trendingNewContent,
   newCaseStudies2025, featuredCaseStudies, trendingCaseStudies,
   newInsights2025, featuredInsights, trendingInsights
@@ -1125,3 +1130,4 @@ promotionalBanners.unshift(
     priority: 0
   }
 );
+>>>>>>> origin/cursor/create-and-deploy-new-content-5bc7
