@@ -1,573 +1,389 @@
 /**
  * Advanced Security Manager
- * Comprehensive security utilities and monitoring for the Zion Tech Group website
+ * Comprehensive security utilities for the Zion Tech Group website
  */
 
-interface SecurityConfig {
+export interface SecurityConfig {
   enableCSP: boolean;
   enableHSTS: boolean;
   enableXSSProtection: boolean;
-  enableClickjackingProtection: boolean;
-  enableMIMESniffingProtection: boolean;
-  enableReferrerPolicy: boolean;
-  enableContentTypeOptions: boolean;
-  enableFrameOptions: boolean;
-  enableCORS: boolean;
-  enableRateLimiting: boolean;
+  enableCSRFProtection: boolean;
+  enableContentSecurityPolicy: boolean;
+  enableSecureHeaders: boolean;
 }
 
-interface SecurityMetrics {
-  cspViolations: number;
-  xssAttempts: number;
-  suspiciousRequests: number;
-  blockedRequests: number;
+export interface SecurityMetrics {
+  threatsBlocked: number;
+  suspiciousActivity: number;
   securityScore: number;
-  lastSecurityCheck: Date;
+  lastScan: number;
 }
 
-interface SecurityHeaders {
-  'Content-Security-Policy': string;
-  'Strict-Transport-Security': string;
-  'X-Content-Type-Options': string;
-  'X-Frame-Options': string;
-  'X-XSS-Protection': string;
-  'Referrer-Policy': string;
-  'Permissions-Policy': string;
-  'Cross-Origin-Embedder-Policy': string;
-  'Cross-Origin-Opener-Policy': string;
-  'Cross-Origin-Resource-Policy': string;
+export interface SecurityThreat {
+  id: string;
+  type: 'xss' | 'csrf' | 'injection' | 'malware' | 'phishing';
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  description: string;
+  timestamp: number;
+  blocked: boolean;
 }
 
 class AdvancedSecurityManager {
   private config: SecurityConfig;
-  private metrics: SecurityMetrics;
-  private isInitialized = false;
-  private securityObserver: MutationObserver | null = null;
+  private metrics: SecurityMetrics = {
+    threatsBlocked: 0,
+    suspiciousActivity: 0,
+    securityScore: 100,
+    lastScan: Date.now()
+  };
+  private threats: SecurityThreat[] = [];
 
   constructor(config: Partial<SecurityConfig> = {}) {
     this.config = {
       enableCSP: true,
       enableHSTS: true,
       enableXSSProtection: true,
-      enableClickjackingProtection: true,
-      enableMIMESniffingProtection: true,
-      enableReferrerPolicy: true,
-      enableContentTypeOptions: true,
-      enableFrameOptions: true,
-      enableCORS: true,
-      enableRateLimiting: true,
+      enableCSRFProtection: true,
+      enableContentSecurityPolicy: true,
+      enableSecureHeaders: true,
       ...config
-    };
-
-    this.metrics = {
-      cspViolations: 0,
-      xssAttempts: 0,
-      suspiciousRequests: 0,
-      blockedRequests: 0,
-      securityScore: 0,
-      lastSecurityCheck: new Date()
     };
   }
 
   /**
-   * Initialize the security manager
+   * Initialize security measures
    */
-  public async initialize(): Promise<void> {
-    if (this.isInitialized) return;
-
+  async initialize(): Promise<void> {
     try {
-      // Initialize security headers
-      this.initializeSecurityHeaders();
-
-      // Initialize content security policy
-      if (this.config.enableCSP) {
-        this.initializeCSP();
+      if (this.config.enableContentSecurityPolicy) {
+        this.setupContentSecurityPolicy();
       }
 
-      // Initialize XSS protection
+      if (this.config.enableSecureHeaders) {
+        this.setupSecureHeaders();
+      }
+
       if (this.config.enableXSSProtection) {
-        this.initializeXSSProtection();
+        this.setupXSSProtection();
       }
 
-      // Initialize clickjacking protection
-      if (this.config.enableClickjackingProtection) {
-        this.initializeClickjackingProtection();
+      if (this.config.enableCSRFProtection) {
+        this.setupCSRFProtection();
       }
 
-      // Initialize MIME sniffing protection
-      if (this.config.enableMIMESniffingProtection) {
-        this.initializeMIMESniffingProtection();
-      }
-
-      // Initialize referrer policy
-      if (this.config.enableReferrerPolicy) {
-        this.initializeReferrerPolicy();
-      }
-
-      // Initialize security monitoring
-      this.initializeSecurityMonitoring();
-
-      // Initialize rate limiting
-      if (this.config.enableRateLimiting) {
-        this.initializeRateLimiting();
-      }
-
-      this.isInitialized = true;
-      console.log('🔒 Advanced Security Manager initialized');
+      this.startSecurityMonitoring();
     } catch (error) {
-      console.error('Error initializing security manager:', error);
+      console.error('Failed to initialize security manager:', error);
     }
   }
 
   /**
-   * Initialize security headers
+   * Setup Content Security Policy
    */
-  private initializeSecurityHeaders(): void {
-    if (typeof document === 'undefined') return;
-
-    const headers: SecurityHeaders = {
-      'Content-Security-Policy': this.generateCSP(),
-      'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
-      'X-Content-Type-Options': 'nosniff',
-      'X-Frame-Options': 'DENY',
-      'X-XSS-Protection': '1; mode=block',
-      'Referrer-Policy': 'strict-origin-when-cross-origin',
-      'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), payment=()',
-      'Cross-Origin-Embedder-Policy': 'require-corp',
-      'Cross-Origin-Opener-Policy': 'same-origin',
-      'Cross-Origin-Resource-Policy': 'same-origin'
-    };
-
-    // Store headers for reference (in production, these would be set by the server)
-    (window as any).securityHeaders = headers;
-  }
-
-  /**
-   * Generate Content Security Policy
-   */
-  private generateCSP(): string {
-    const directives = [
+  private setupContentSecurityPolicy(): void {
+    const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://unpkg.com",
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "font-src 'self' https://fonts.gstatic.com",
-      "img-src 'self' data: https: blob:",
-      "connect-src 'self' https://api.zion.app https://analytics.google.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+      "style-src 'self' 'unsafe-inline'",
+      "img-src 'self' data: https:",
+      "font-src 'self' https:",
+      "connect-src 'self' https:",
       "frame-src 'none'",
       "object-src 'none'",
       "base-uri 'self'",
-      "form-action 'self'",
-      "frame-ancestors 'none'",
-      "upgrade-insecure-requests"
-    ];
+      "form-action 'self'"
+    ].join('; ');
 
-    return directives.join('; ');
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'Content-Security-Policy';
+    meta.content = csp;
+    document.head.appendChild(meta);
   }
 
   /**
-   * Initialize Content Security Policy
+   * Setup secure headers
    */
-  private initializeCSP(): void {
-    if (typeof document === 'undefined') return;
+  private setupSecureHeaders(): void {
+    // This would typically be done server-side
+    // For client-side, we can only set some headers via meta tags
+    const headers = [
+      { name: 'X-Content-Type-Options', value: 'nosniff' },
+      { name: 'X-Frame-Options', value: 'DENY' },
+      { name: 'X-XSS-Protection', value: '1; mode=block' },
+      { name: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' }
+    ];
 
-    // Add CSP meta tag
-    const cspMeta = document.createElement('meta');
-    cspMeta.setAttribute('http-equiv', 'Content-Security-Policy');
-    cspMeta.setAttribute('content', this.generateCSP());
-    document.head.appendChild(cspMeta);
-
-    // Monitor CSP violations
-    document.addEventListener('securitypolicyviolation', (event) => {
-      this.metrics.cspViolations++;
-      console.warn('CSP Violation:', event);
-      this.updateSecurityScore();
+    headers.forEach(header => {
+      const meta = document.createElement('meta');
+      meta.httpEquiv = header.name;
+      meta.content = header.value;
+      document.head.appendChild(meta);
     });
   }
 
   /**
-   * Initialize XSS protection
+   * Setup XSS Protection
    */
-  private initializeXSSProtection(): void {
-    if (typeof document === 'undefined') return;
-
-    // Monitor for potential XSS attempts
+  private setupXSSProtection(): void {
+    // Sanitize user input
     const originalCreateElement = document.createElement;
     document.createElement = function(tagName: string) {
       const element = originalCreateElement.call(this, tagName);
       
-      // Check for suspicious attributes
-      if (element.setAttribute) {
-        const originalSetAttribute = element.setAttribute;
-        element.setAttribute = function(name: string, value: string) {
-          if (this.isSuspiciousAttribute(name, value)) {
-            this.metrics.xssAttempts++;
-            console.warn('Potential XSS attempt detected:', { name, value });
-            return;
+      // Add input sanitization for form elements
+      if (tagName === 'input' || tagName === 'textarea') {
+        element.addEventListener('input', (event) => {
+          const target = event.target as HTMLInputElement;
+          if (target.value) {
+            target.value = target.value.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
           }
-          return originalSetAttribute.call(this, name, value);
-        }.bind(this);
+        });
       }
       
       return element;
-    }.bind(this);
-
-    // Monitor script execution
-    const scripts = document.querySelectorAll('script');
-    scripts.forEach(script => {
-      if (script.src && !this.isAllowedScript(script.src)) {
-        this.metrics.xssAttempts++;
-        console.warn('Suspicious script detected:', script.src);
-      }
-    });
-  }
-
-  /**
-   * Check if attribute is suspicious
-   */
-  private isSuspiciousAttribute(name: string, value: string): boolean {
-    const suspiciousPatterns = [
-      /javascript:/i,
-      /on\w+\s*=/i,
-      /<script/i,
-      /eval\s*\(/i,
-      /expression\s*\(/i
-    ];
-
-    return suspiciousPatterns.some(pattern => pattern.test(value));
-  }
-
-  /**
-   * Check if script is allowed
-   */
-  private isAllowedScript(src: string): boolean {
-    const allowedDomains = [
-      'cdn.jsdelivr.net',
-      'unpkg.com',
-      'fonts.googleapis.com',
-      'fonts.gstatic.com'
-    ];
-
-    try {
-      const url = new URL(src);
-      return allowedDomains.includes(url.hostname) || url.hostname === window.location.hostname;
-    } catch {
-      return false;
-    }
-  }
-
-  /**
-   * Initialize clickjacking protection
-   */
-  private initializeClickjackingProtection(): void {
-    if (typeof window === 'undefined') return;
-
-    // Check if page is in a frame
-    if (window !== window.top) {
-      console.warn('Page is loaded in a frame - potential clickjacking attempt');
-      this.metrics.suspiciousRequests++;
-    }
-
-    // Add frame busting script
-    const frameBustingScript = document.createElement('script');
-    frameBustingScript.textContent = `
-      if (top !== self) {
-        top.location = self.location;
-      }
-    `;
-    document.head.appendChild(frameBustingScript);
-  }
-
-  /**
-   * Initialize MIME sniffing protection
-   */
-  private initializeMIMESniffingProtection(): void {
-    if (typeof document === 'undefined') return;
-
-    // Add meta tag for MIME sniffing protection
-    const mimeMeta = document.createElement('meta');
-    mimeMeta.setAttribute('http-equiv', 'X-Content-Type-Options');
-    mimeMeta.setAttribute('content', 'nosniff');
-    document.head.appendChild(mimeMeta);
-  }
-
-  /**
-   * Initialize referrer policy
-   */
-  private initializeReferrerPolicy(): void {
-    if (typeof document === 'undefined') return;
-
-    // Add referrer policy meta tag
-    const referrerMeta = document.createElement('meta');
-    referrerMeta.setAttribute('name', 'referrer');
-    referrerMeta.setAttribute('content', 'strict-origin-when-cross-origin');
-    document.head.appendChild(referrerMeta);
-  }
-
-  /**
-   * Initialize security monitoring
-   */
-  private initializeSecurityMonitoring(): void {
-    if (typeof document === 'undefined') return;
-
-    // Monitor DOM changes for security issues
-    this.securityObserver = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.type === 'childList') {
-          mutation.addedNodes.forEach((node) => {
-            if (node.nodeType === Node.ELEMENT_NODE) {
-              this.analyzeElement(node as Element);
-            }
-          });
-        }
-      });
-    });
-
-    this.securityObserver.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-
-    // Monitor for suspicious network requests
-    this.monitorNetworkRequests();
-
-    // Monitor for suspicious user interactions
-    this.monitorUserInteractions();
-  }
-
-  /**
-   * Analyze element for security issues
-   */
-  private analyzeElement(element: Element): void {
-    // Check for suspicious attributes
-    Array.from(element.attributes).forEach(attr => {
-      if (this.isSuspiciousAttribute(attr.name, attr.value)) {
-        this.metrics.xssAttempts++;
-        console.warn('Suspicious attribute detected:', { name: attr.name, value: attr.value });
-      }
-    });
-
-    // Check for suspicious content
-    if (element.textContent) {
-      const suspiciousContent = this.detectSuspiciousContent(element.textContent);
-      if (suspiciousContent) {
-        this.metrics.xssAttempts++;
-        console.warn('Suspicious content detected:', suspiciousContent);
-      }
-    }
-  }
-
-  /**
-   * Detect suspicious content
-   */
-  private detectSuspiciousContent(content: string): string | null {
-    const suspiciousPatterns = [
-      /<script[^>]*>.*?<\/script>/gi,
-      /javascript:/gi,
-      /on\w+\s*=/gi,
-      /eval\s*\(/gi,
-      /expression\s*\(/gi
-    ];
-
-    for (const pattern of suspiciousPatterns) {
-      const match = content.match(pattern);
-      if (match) {
-        return match[0];
-      }
-    }
-
-    return null;
-  }
-
-  /**
-   * Monitor network requests
-   */
-  private monitorNetworkRequests(): void {
-    if (typeof window === 'undefined') return;
-
-    // Override fetch to monitor requests
-    const originalFetch = window.fetch;
-    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
-      const url = typeof input === 'string' ? input : input.toString();
-      
-      if (this.isSuspiciousRequest(url)) {
-        this.metrics.suspiciousRequests++;
-        console.warn('Suspicious request blocked:', url);
-        throw new Error('Suspicious request blocked');
-      }
-
-      try {
-        return await originalFetch(input, init);
-      } catch (error) {
-        this.metrics.blockedRequests++;
-        throw error;
-      }
     };
   }
 
   /**
-   * Check if request is suspicious
+   * Setup CSRF Protection
    */
-  private isSuspiciousRequest(url: string): boolean {
+  private setupCSRFProtection(): void {
+    // Generate CSRF token
+    const token = this.generateCSRFToken();
+    sessionStorage.setItem('csrf_token', token);
+
+    // Add token to all forms
+    document.addEventListener('submit', (event) => {
+      const form = event.target as HTMLFormElement;
+      if (form.method.toLowerCase() === 'post') {
+        const tokenInput = document.createElement('input');
+        tokenInput.type = 'hidden';
+        tokenInput.name = 'csrf_token';
+        tokenInput.value = token;
+        form.appendChild(tokenInput);
+      }
+    });
+  }
+
+  /**
+   * Start security monitoring
+   */
+  private startSecurityMonitoring(): void {
+    // Monitor for suspicious activity
+    this.monitorSuspiciousActivity();
+    
+    // Monitor for malware patterns
+    this.monitorMalwarePatterns();
+    
+    // Monitor for phishing attempts
+    this.monitorPhishingAttempts();
+  }
+
+  /**
+   * Monitor suspicious activity
+   */
+  private monitorSuspiciousActivity(): void {
+    // Monitor for rapid requests
+    let requestCount = 0;
+    const requestWindow = 60000; // 1 minute
+    
+    const originalFetch = window.fetch;
+    window.fetch = async (...args) => {
+      requestCount++;
+      
+      if (requestCount > 100) {
+        this.recordThreat({
+          id: `suspicious_${Date.now()}`,
+          type: 'injection',
+          severity: 'medium',
+          description: 'High request frequency detected',
+          timestamp: Date.now(),
+          blocked: false
+        });
+      }
+      
+      return originalFetch.apply(this, args);
+    };
+
+    // Reset counter every minute
+    setInterval(() => {
+      requestCount = 0;
+    }, requestWindow);
+  }
+
+  /**
+   * Monitor malware patterns
+   */
+  private monitorMalwarePatterns(): void {
+    // Check for suspicious scripts
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            const element = node as Element;
+            if (element.tagName === 'SCRIPT') {
+              const script = element as HTMLScriptElement;
+              if (script.src && this.isSuspiciousURL(script.src)) {
+                this.recordThreat({
+                  id: `malware_${Date.now()}`,
+                  type: 'malware',
+                  severity: 'high',
+                  description: `Suspicious script detected: ${script.src}`,
+                  timestamp: Date.now(),
+                  blocked: true
+                });
+                
+                // Block the script
+                script.remove();
+              }
+            }
+          }
+        });
+      });
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  }
+
+  /**
+   * Monitor phishing attempts
+   */
+  private monitorPhishingAttempts(): void {
+    // Check for suspicious links
+    document.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+      const link = target.closest('a');
+      
+      if (link && link.href) {
+        if (this.isSuspiciousURL(link.href)) {
+          this.recordThreat({
+            id: `phishing_${Date.now()}`,
+            type: 'phishing',
+            severity: 'high',
+            description: `Suspicious link clicked: ${link.href}`,
+            timestamp: Date.now(),
+            blocked: true
+          });
+          
+          event.preventDefault();
+          alert('This link appears to be suspicious and has been blocked for your security.');
+        }
+      }
+    });
+  }
+
+  /**
+   * Check if URL is suspicious
+   */
+  private isSuspiciousURL(url: string): boolean {
     const suspiciousPatterns = [
-      /javascript:/i,
-      /data:text\/html/i,
-      /vbscript:/i,
-      /file:/i
+      /bit\.ly/i,
+      /tinyurl\.com/i,
+      /goo\.gl/i,
+      /t\.co/i,
+      /phishing/i,
+      /malware/i,
+      /virus/i
     ];
 
     return suspiciousPatterns.some(pattern => pattern.test(url));
   }
 
   /**
-   * Monitor user interactions
+   * Record security threat
    */
-  private monitorUserInteractions(): void {
-    if (typeof document === 'undefined') return;
-
-    // Monitor for rapid clicking (potential bot behavior)
-    let clickCount = 0;
-    let lastClickTime = 0;
-
-    document.addEventListener('click', (event) => {
-      const now = Date.now();
-      if (now - lastClickTime < 100) {
-        clickCount++;
-        if (clickCount > 10) {
-          this.metrics.suspiciousRequests++;
-          console.warn('Rapid clicking detected - potential bot behavior');
-        }
-      } else {
-        clickCount = 0;
-      }
-      lastClickTime = now;
-    });
-
-    // Monitor for suspicious keyboard patterns
-    let keySequence = '';
-    document.addEventListener('keydown', (event) => {
-      keySequence += event.key;
-      if (keySequence.length > 10) {
-        keySequence = keySequence.slice(-10);
-      }
-
-      if (this.isSuspiciousKeySequence(keySequence)) {
-        this.metrics.suspiciousRequests++;
-        console.warn('Suspicious keyboard pattern detected:', keySequence);
-      }
-    });
-  }
-
-  /**
-   * Check if key sequence is suspicious
-   */
-  private isSuspiciousKeySequence(sequence: string): boolean {
-    const suspiciousPatterns = [
-      /f12|ctrl\+shift\+i|ctrl\+u/i,
-      /alt\+f4|ctrl\+w/i,
-      /ctrl\+shift\+c|ctrl\+shift\+j/i
-    ];
-
-    return suspiciousPatterns.some(pattern => pattern.test(sequence));
-  }
-
-  /**
-   * Initialize rate limiting
-   */
-  private initializeRateLimiting(): void {
-    if (typeof window === 'undefined') return;
-
-    const rateLimits = new Map<string, { count: number; resetTime: number }>();
-    const RATE_LIMIT_WINDOW = 60000; // 1 minute
-    const MAX_REQUESTS = 100;
-
-    // Monitor API calls
-    const originalFetch = window.fetch;
-    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
-      const url = typeof input === 'string' ? input : input.toString();
-      const now = Date.now();
-
-      if (url.includes('/api/')) {
-        const key = 'api_requests';
-        const limit = rateLimits.get(key);
-
-        if (limit) {
-          if (now < limit.resetTime) {
-            if (limit.count >= MAX_REQUESTS) {
-              this.metrics.blockedRequests++;
-              throw new Error('Rate limit exceeded');
-            }
-            limit.count++;
-          } else {
-            rateLimits.set(key, { count: 1, resetTime: now + RATE_LIMIT_WINDOW });
-          }
-        } else {
-          rateLimits.set(key, { count: 1, resetTime: now + RATE_LIMIT_WINDOW });
-        }
-      }
-
-      return originalFetch(input, init);
-    };
+  private recordThreat(threat: SecurityThreat): void {
+    this.threats.push(threat);
+    this.metrics.threatsBlocked++;
+    this.updateSecurityScore();
+    
+    console.warn('Security threat detected:', threat);
   }
 
   /**
    * Update security score
    */
   private updateSecurityScore(): void {
-    let score = 100;
+    const threatCount = this.threats.length;
+    const recentThreats = this.threats.filter(t => Date.now() - t.timestamp < 3600000); // Last hour
+    
+    this.metrics.securityScore = Math.max(0, 100 - (threatCount * 5) - (recentThreats.length * 10));
+  }
 
-    // Deduct points for violations
-    score -= this.metrics.cspViolations * 5;
-    score -= this.metrics.xssAttempts * 10;
-    score -= this.metrics.suspiciousRequests * 3;
-    score -= this.metrics.blockedRequests * 2;
-
-    this.metrics.securityScore = Math.max(0, score);
-    this.metrics.lastSecurityCheck = new Date();
+  /**
+   * Generate CSRF token
+   */
+  private generateCSRFToken(): string {
+    const array = new Uint8Array(32);
+    crypto.getRandomValues(array);
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
   }
 
   /**
    * Get security metrics
    */
-  public getMetrics(): SecurityMetrics {
-    this.updateSecurityScore();
+  getMetrics(): SecurityMetrics {
     return { ...this.metrics };
   }
 
   /**
-   * Generate security report
+   * Get security threats
    */
-  public generateReport(): string {
-    const metrics = this.getMetrics();
-    const report = `
-Security Report:
-===============
-Security Score: ${metrics.securityScore}/100
-CSP Violations: ${metrics.cspViolations}
-XSS Attempts: ${metrics.xssAttempts}
-Suspicious Requests: ${metrics.suspiciousRequests}
-Blocked Requests: ${metrics.blockedRequests}
-Last Check: ${metrics.lastSecurityCheck.toISOString()}
-    `;
-
-    return report.trim();
+  getThreats(): SecurityThreat[] {
+    return [...this.threats];
   }
 
   /**
-   * Cleanup resources
+   * Scan for vulnerabilities
    */
-  public cleanup(): void {
-    if (this.securityObserver) {
-      this.securityObserver.disconnect();
-      this.securityObserver = null;
-    }
+  async scanVulnerabilities(): Promise<void> {
+    this.metrics.lastScan = Date.now();
+    
+    // Check for common vulnerabilities
+    this.checkForVulnerabilities();
+  }
 
-    this.isInitialized = false;
+  /**
+   * Check for common vulnerabilities
+   */
+  private checkForVulnerabilities(): void {
+    // Check for insecure forms
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+      if (form.action && !form.action.startsWith('https://')) {
+        this.recordThreat({
+          id: `insecure_form_${Date.now()}`,
+          type: 'injection',
+          severity: 'medium',
+          description: 'Form submitted over insecure connection',
+          timestamp: Date.now(),
+          blocked: false
+        });
+      }
+    });
+
+    // Check for insecure images
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (img.src && !img.src.startsWith('https://') && !img.src.startsWith('data:')) {
+        this.recordThreat({
+          id: `insecure_image_${Date.now()}`,
+          type: 'injection',
+          severity: 'low',
+          description: 'Image loaded over insecure connection',
+          timestamp: Date.now(),
+          blocked: false
+        });
+      }
+    });
   }
 }
 
-// Export singleton instance
+// Create and export singleton instance
 export const advancedSecurityManager = new AdvancedSecurityManager();
 
 // Export class for custom instances
 export { AdvancedSecurityManager };
-export type { SecurityConfig, SecurityMetrics, SecurityHeaders };

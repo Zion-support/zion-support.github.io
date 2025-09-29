@@ -35,11 +35,11 @@ export const SystemMonitoringDashboard: React.FC = () => {
 
   const updateMetrics = useCallback(() => {
     // Performance metrics
-    const performance = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const loadTime = performance ? performance.loadEventEnd - performance.loadEventStart : 0;
+    const navEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const loadTime = navEntry ? navEntry.loadEventEnd - navEntry.loadEventStart : 0;
     
     // Memory usage (if available)
-    const memoryInfo = (performance as any).memory || {};
+    const memoryInfo = (window as any).performance?.memory || {};
     const memoryUsage = memoryInfo.usedJSHeapSize / memoryInfo.totalJSHeapSize * 100 || 0;
     
     // Error stats
@@ -59,7 +59,7 @@ export const SystemMonitoringDashboard: React.FC = () => {
         unresolved: errorStats.unresolved,
         critical: errorStats.bySeverity.critical || 0
       },
-      uptime: Date.now() - performance.timing.navigationStart
+      uptime: navEntry ? Date.now() - navEntry.fetchStart : 0
     }));
   }, [getStats]);
 

@@ -140,8 +140,8 @@ export class EnhancementSuite {
 
   public initialize(): void {
     // Initialize all enhancement modules
-    // performanceOptimizer is already initialized as singleton
-    this.securityEnhancer = new SecurityEnhancer();
+    // Performance optimizer is already initialized as singleton
+    this.securityEnhancer = SecurityEnhancer.getInstance();
     this.accessibilityEnhancer = new AccessibilityEnhancer();
     this.errorHandler = ErrorHandler.getInstance();
 

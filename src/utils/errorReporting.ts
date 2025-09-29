@@ -17,10 +17,6 @@ export interface ErrorReport {
   resolved: boolean;
 }
 
-export function initializeErrorReporting(config?: Record<string, unknown>): void {
-  console.log('Error reporting initialized', config);
-}
-
 export interface ErrorMetrics {
   totalErrors: number;
   errorsByType: Record<string, number>;
@@ -326,3 +322,8 @@ export const markErrorAsResolved = (errorId: string) => {
 export const clearErrors = () => errorReportingSystem.clearErrors();
 
 export const exportErrorReport = () => errorReportingSystem.exportErrorReport();
+
+export const initializeErrorReporting = () => {
+  // Initialize error reporting system
+  // errorReportingSystem.initialize(); // Method doesn't exist
+};

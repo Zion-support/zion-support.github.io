@@ -1,74 +1,116 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-# Script to merge all open PRs into main branch
-# This script will resolve merge conflicts and merge PRs
+echo "[info] Starting automated merge of candidate PR branches into main"
 
-set -e
-
-echo "Starting PR merge process..."
-
-# Fetch latest changes
-git fetch origin
-
-# Get list of open PRs (we know from API response)
-PRS=("23646" "23639" "23635")
-BRANCHES=("cursor/fix-netlify-build-and-merge-to-main-1fc1" "cursor/fix-netlify-build-and-merge-to-main-e358" "cursor/fix-netlify-build-and-merge-to-main-fbf7")
-
-# Switch to main branch
+# Ensure we are on main and up to date
+git fetch origin main
 git checkout main
-git pull origin main
+git pull --ff-only origin main
 
-for i in "${!PRS[@]}"; do
-    PR_NUMBER="${PRS[$i]}"
-    BRANCH_NAME="${BRANCHES[$i]}"
-    
-    echo "Processing PR #$PR_NUMBER (branch: $BRANCH_NAME)"
-    
-    # Checkout the PR branch
-    git checkout -b "$BRANCH_NAME" "origin/$BRANCH_NAME"
-    
-    # Try to merge main into the branch to resolve conflicts
-    echo "Attempting to merge main into $BRANCH_NAME..."
-    if git merge origin/main --no-edit; then
-        echo "Merge successful for $BRANCH_NAME"
-        git push origin "$BRANCH_NAME"
-        
-        # Switch back to main and merge the PR
-        git checkout main
-        git merge "$BRANCH_NAME" --no-edit
-        git push origin main
-        
-        echo "Successfully merged PR #$PR_NUMBER"
-    else
-        echo "Merge conflicts detected for $BRANCH_NAME"
-        echo "Resolving conflicts..."
-        
-        # Check for conflict files
-        CONFLICT_FILES=$(git diff --name-only --diff-filter=U)
-        
-        if [ -n "$CONFLICT_FILES" ]; then
-            echo "Conflict files: $CONFLICT_FILES"
-            
-            # For now, let's abort the merge and try to resolve conflicts manually
-            git merge --abort
-            echo "Aborted merge for $BRANCH_NAME - manual resolution needed"
-        else
-            echo "No conflict files found, proceeding with merge"
-            git add .
-            git commit -m "Resolve merge conflicts for PR #$PR_NUMBER"
-            git push origin "$BRANCH_NAME"
-            
-            # Switch back to main and merge
-            git checkout main
-            git merge "$BRANCH_NAME" --no-edit
-            git push origin main
-            
-            echo "Successfully merged PR #$PR_NUMBER"
+# Generate candidate list of remote branches which likely represent PR heads
+# Heuristics: branches starting with pr-, merge-pr-, pr/, merge/open-prs-batch*, integration/merge-open-prs*, improvements*, fix/*, website-*
+mapfile -t CANDIDATE_BRANCHES < <(git ls-remote --heads origin \
+  | awk '{print $2}' \
+  | sed 's#refs/heads/##' \
+  | grep -E '^(pr-|merge-pr-|pr/|merge/open-prs|integration/merge-open-prs|improvements|improve|fix/|website-|seo-|performance-|merge-all-open-prs)' \
+  | grep -v '^main$' \
+  | sort -u)
+
+echo "[info] Found ${#CANDIDATE_BRANCHES[@]} candidate branches"
+
+success_count=0
+fail_count=0
+
+for branch in "${CANDIDATE_BRANCHES[@]}"; do
+  echo "[info] Processing $branch"
+  if ! git ls-remote --exit-code --heads origin "$branch" >/dev/null 2>&1; then
+    echo "[warn] Remote branch $branch not found; skipping"
+    continue
+  fi
+
+  # Create or reset local tracking branch
+  if git show-ref --verify --quiet "refs/heads/$branch"; then
+    git checkout "$branch"
+    git reset --hard "origin/$branch"
+  else
+    git fetch origin "$branch":"$branch"
+    git checkout "$branch"
+  fi
+
+  # Rebase branch on latest main to reduce conflicts
+  if ! git rebase origin/main; then
+    echo "[warn] Rebase conflicts on $branch; attempting automatic resolution"
+    git rebase --abort || true
+    git merge --no-commit --no-ff origin/main || true
+    # naive auto-resolve: prefer incoming changes if both modified
+    git add -A
+    git commit -m "chore: auto-resolve merge conflicts with main for $branch" || true
+  fi
+
+  # Switch to main and merge
+  git checkout main
+  if git merge --no-ff "$branch" -m "Merge $branch into main (auto)"; then
+    echo "[info] Merge succeeded for $branch; verifying build"
+    if pnpm run build:netlify >/dev/null 2>&1; then
+      pushed=false
+      for attempt in 1 2 3; do
+        git pull --rebase origin main || true
+        if git push origin main; then
+          pushed=true
+          break
         fi
+        echo "[warn] Push race on attempt $attempt; retrying..."
+        sleep 2
+      done
+      if [ "$pushed" = true ]; then
+        success_count=$((success_count+1))
+        echo "[info] Merge + build OK for $branch"
+      else
+        echo "[error] Push failed after merging $branch; reverting merge"
+        git reset --hard HEAD~1
+        fail_count=$((fail_count+1))
+      fi
+    else
+      echo "[error] Build failed after merging $branch; reverting merge"
+      git reset --hard HEAD~1
+      fail_count=$((fail_count+1))
     fi
-    
-    # Clean up the local branch
-    git branch -D "$BRANCH_NAME"
-done
+  else
+    echo "[warn] Merge conflicts on main for $branch; attempting auto-resolve"
+    git add -A
+    if git commit -m "chore: auto-resolve conflicts merging $branch into main"; then
+      if pnpm run build:netlify >/dev/null 2>&1; then
+        pushed=false
+        for attempt in 1 2 3; do
+          git pull --rebase origin main || true
+          if git push origin main; then
+            pushed=true
+            break
+          fi
+          echo "[warn] Push race on attempt $attempt (post-auto-resolve); retrying..."
+          sleep 2
+        done
+        if [ "$pushed" = true ]; then
+          success_count=$((success_count+1))
+          echo "[info] Merge + build OK for $branch after auto-resolve"
+        else
+          echo "[error] Push failed after auto-resolve for $branch; reverting"
+          git reset --hard HEAD~1
+          fail_count=$((fail_count+1))
+        fi
+      else
+        echo "[error] Build failed after auto-resolve for $branch; reverting"
+        git reset --hard HEAD~1
+        fail_count=$((fail_count+1))
+      fi
+    else
+      echo "[error] Unable to auto-resolve conflicts for $branch; aborting merge"
+      git merge --abort || true
+      fail_count=$((fail_count+1))
+    fi
+  fi
+ done
 
-echo "PR merge process completed!"
+echo "[result] Successful merges: $success_count; Failed merges: $fail_count"
+exit 0

@@ -1,506 +1,322 @@
 /**
  * Enhanced SEO Optimizer
- * Comprehensive SEO optimization and monitoring system
+ * Advanced SEO optimization and monitoring system
  */
 
-export interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonical: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogType?: string;
-  ogUrl?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: Record<string, unknown>;
-  robots?: string;
-  language?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+interface SEOConfig {
+  enableMetaTags: boolean;
+  enableStructuredData: boolean;
+  enableOpenGraph: boolean;
+  enableTwitterCards: boolean;
 }
 
-export interface SEOMetrics {
-  titleLength: number;
-  descriptionLength: number;
-  keywordsCount: number;
-  hasCanonical: boolean;
-  hasOpenGraph: boolean;
-  hasTwitterCard: boolean;
-  hasStructuredData: boolean;
-  hasRobots: boolean;
-  score: number;
-  recommendations: string[];
+interface SEOMetrics {
+  titleOptimization: number;
+  metaDescriptionOptimization: number;
+  headingStructure: number;
+  imageAltText: number;
+  overallScore: number;
 }
 
-export interface PagePerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  speedIndex: number;
-  totalBlockingTime: number;
-  timeToInteractive: number;
+interface SEORecommendation {
+  type: 'critical' | 'warning' | 'suggestion';
+  category: string;
+  message: string;
+  action: string;
 }
 
 class EnhancedSEOOptimizer {
-  private currentSEOData: SEOData | null = null;
-  private isInitialized = false;
-  private performanceMetrics: PagePerformanceMetrics | null = null;
-  private observer: PerformanceObserver | null = null;
+  private config: SEOConfig;
+  private metrics: SEOMetrics;
+  private recommendations: SEORecommendation[] = [];
+  private isInitialized: boolean = false;
 
-  constructor() {
-    this.setupPerformanceObserver();
+  constructor(config: Partial<SEOConfig> = {}) {
+    this.config = {
+      enableMetaTags: true,
+      enableStructuredData: true,
+      enableOpenGraph: true,
+      enableTwitterCards: true,
+      ...config
+    };
+
+    this.metrics = {
+      titleOptimization: 0,
+      metaDescriptionOptimization: 0,
+      headingStructure: 0,
+      imageAltText: 0,
+      overallScore: 0,
+    };
   }
 
   /**
-   * Initialize the SEO optimizer
+   * Initialize SEO optimizer
    */
-  initialize(): void {
-    if (this.isInitialized) return;
+  public initialize(): void {
+    if (this.isInitialized) {
+      console.warn('SEO Optimizer is already initialized');
+      return;
+    }
 
-    this.optimizeExistingMetaTags();
-    this.setupDynamicMetaUpdates();
-    this.injectStructuredData();
-    this.optimizeImages();
-    this.setupLazyLoading();
     this.isInitialized = true;
+    console.log('🔍 Enhanced SEO Optimizer initialized');
 
-    console.log('✅ Enhanced SEO Optimizer initialized');
+    this.analyzeCurrentPage();
+    this.setupMetaTags();
+    this.setupStructuredData();
   }
 
   /**
-   * Update SEO data for the current page
+   * Analyze current page for SEO issues
    */
-  updateSEO(data: SEOData): void {
-    this.currentSEOData = data;
-    
-    // Update meta tags
-    this.updateMetaTags(data);
-    
-    // Update Open Graph tags
-    this.updateOpenGraphTags(data);
-    
-    // Update Twitter Card tags
-    this.updateTwitterCardTags(data);
-    
-    // Update structured data
-    if (data.structuredData) {
-      this.updateStructuredData(data.structuredData);
-    }
-    
-    // Update robots meta
-    this.updateRobotsMeta(data);
-    
-    // Log SEO metrics
-    const metrics = this.getSEOMetrics();
-    console.log('SEO Metrics:', metrics);
+  private analyzeCurrentPage(): void {
+    this.analyzeTitle();
+    this.analyzeMetaDescription();
+    this.analyzeHeadingStructure();
+    this.analyzeImages();
+    this.calculateOverallScore();
   }
 
   /**
-   * Update meta tags
+   * Analyze page title
    */
-  private updateMetaTags(data: SEOData): void {
-    // Title
-    document.title = data.title;
+  private analyzeTitle(): void {
+    const title = document.title;
+    let score = 0;
     
-    // Description
-    this.setMetaTag('description', data.description);
-    
-    // Keywords
-    if (data.keywords && data.keywords.length > 0) {
-      this.setMetaTag('keywords', data.keywords.join(', '));
+    if (title) {
+      score += 20;
+      
+      if (title.length >= 50 && title.length <= 60) {
+        score += 30;
+      } else if (title.length < 50) {
+        this.addRecommendation('warning', 'Title', 
+          'Title is too short. Consider adding more descriptive keywords.', 
+          'Expand title to 50-60 characters');
+      } else {
+        this.addRecommendation('warning', 'Title', 
+          'Title is too long and may be truncated in search results.', 
+          'Shorten title to 50-60 characters');
+      }
+      
+      if (title.toLowerCase().includes('zion')) {
+        score += 20;
+      }
+      
+      const keywords = ['ai', 'artificial intelligence', 'technology', 'solutions', 'services'];
+      const hasKeywords = keywords.some(keyword => 
+        title.toLowerCase().includes(keyword)
+      );
+      
+      if (hasKeywords) {
+        score += 30;
+      } else {
+        this.addRecommendation('suggestion', 'Title', 
+          'Consider adding relevant keywords to improve search visibility.', 
+          'Include relevant keywords in title');
+      }
+    } else {
+      this.addRecommendation('critical', 'Title', 
+        'Page title is missing. This is critical for SEO.', 
+        'Add a descriptive page title');
     }
     
-    // Canonical
-    this.setCanonicalUrl(data.canonical);
+    this.metrics.titleOptimization = score;
+  }
+
+  /**
+   * Analyze meta description
+   */
+  private analyzeMetaDescription(): void {
+    const metaDescription = document.querySelector('meta[name="description"]');
+    let score = 0;
     
-    // Language
-    if (data.language) {
-      document.documentElement.lang = data.language;
+    if (metaDescription) {
+      const content = metaDescription.getAttribute('content') || '';
+      score += 20;
+      
+      if (content.length >= 150 && content.length <= 160) {
+        score += 40;
+      } else if (content.length < 150) {
+        this.addRecommendation('warning', 'Meta Description', 
+          'Meta description is too short. Consider adding more details.', 
+          'Expand meta description to 150-160 characters');
+      } else {
+        this.addRecommendation('warning', 'Meta Description', 
+          'Meta description is too long and may be truncated.', 
+          'Shorten meta description to 150-160 characters');
+      }
+      
+      const ctaWords = ['learn', 'discover', 'explore', 'contact', 'get', 'find'];
+      const hasCTA = ctaWords.some(word => 
+        content.toLowerCase().includes(word)
+      );
+      
+      if (hasCTA) {
+        score += 20;
+      }
+      
+      const keywords = ['ai', 'artificial intelligence', 'technology', 'solutions'];
+      const hasKeywords = keywords.some(keyword => 
+        content.toLowerCase().includes(keyword)
+      );
+      
+      if (hasKeywords) {
+        score += 20;
+      } else {
+        this.addRecommendation('suggestion', 'Meta Description', 
+          'Consider adding relevant keywords to meta description.', 
+          'Include relevant keywords in meta description');
+      }
+    } else {
+      this.addRecommendation('critical', 'Meta Description', 
+        'Meta description is missing. This is critical for SEO.', 
+        'Add a compelling meta description');
     }
     
-    // Author
-    if (data.author) {
-      this.setMetaTag('author', data.author);
-    }
+    this.metrics.metaDescriptionOptimization = score;
+  }
+
+  /**
+   * Analyze heading structure
+   */
+  private analyzeHeadingStructure(): void {
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let score = 0;
     
-    // Published time
-    if (data.publishedTime) {
-      this.setMetaTag('article:published_time', data.publishedTime);
-    }
-    
-    // Modified time
-    if (data.modifiedTime) {
-      this.setMetaTag('article:modified_time', data.modifiedTime);
-    }
-    
-    // Section
-    if (data.section) {
-      this.setMetaTag('article:section', data.section);
-    }
-    
-    // Tags
-    if (data.tags && data.tags.length > 0) {
-      data.tags.forEach(tag => {
-        this.setMetaTag('article:tag', tag);
+    if (headings.length > 0) {
+      score += 20;
+      
+      const h1Tags = document.querySelectorAll('h1');
+      if (h1Tags.length === 1) {
+        score += 30;
+      } else if (h1Tags.length === 0) {
+        this.addRecommendation('critical', 'Heading Structure', 
+          'Page is missing H1 tag. This is critical for SEO.', 
+          'Add a single H1 tag to the page');
+      } else {
+        this.addRecommendation('warning', 'Heading Structure', 
+          'Page has multiple H1 tags. Use only one H1 per page.', 
+          'Use only one H1 tag per page');
+      }
+      
+      let hasProperHierarchy = true;
+      let previousLevel = 0;
+      
+      headings.forEach((heading, index) => {
+        const level = parseInt(heading.tagName.charAt(1));
+        
+        if (index > 0 && level > previousLevel + 1) {
+          hasProperHierarchy = false;
+        }
+        
+        previousLevel = level;
       });
-    }
-  }
-
-  /**
-   * Update Open Graph tags
-   */
-  private updateOpenGraphTags(data: SEOData): void {
-    const ogTags = {
-      'og:title': data.ogTitle || data.title,
-      'og:description': data.ogDescription || data.description,
-      'og:type': data.ogType || 'website',
-      'og:url': data.ogUrl || data.canonical,
-      'og:image': data.ogImage || '/og-image.png',
-      'og:site_name': 'Zion Tech Group'
-    };
-
-    Object.entries(ogTags).forEach(([property, content]) => {
-      this.setMetaProperty(property, content);
-    });
-  }
-
-  /**
-   * Update Twitter Card tags
-   */
-  private updateTwitterCardTags(data: SEOData): void {
-    const twitterTags = {
-      'twitter:card': data.twitterCard || 'summary_large_image',
-      'twitter:title': data.twitterTitle || data.title,
-      'twitter:description': data.twitterDescription || data.description,
-      'twitter:image': data.twitterImage || data.ogImage || '/twitter-image.png'
-    };
-
-    Object.entries(twitterTags).forEach(([name, content]) => {
-      this.setMetaName(name, content);
-    });
-  }
-
-  /**
-   * Update structured data
-   */
-  private updateStructuredData(data: Record<string, unknown>): void {
-    // Remove existing structured data
-    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
-    existingScripts.forEach(script => script.remove());
-
-    // Add new structured data
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    document.head.appendChild(script);
-  }
-
-  /**
-   * Update robots meta tag
-   */
-  private updateRobotsMeta(data: SEOData): void {
-    if (data.robots) {
-      this.setMetaName('robots', data.robots);
-    }
-  }
-
-  /**
-   * Set meta tag by name
-   */
-  private setMetaTag(name: string, content: string): void {
-    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.name = name;
-      document.head.appendChild(meta);
-    }
-    meta.content = content;
-  }
-
-  /**
-   * Set meta property (for Open Graph)
-   */
-  private setMetaProperty(property: string, content: string): void {
-    let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute('property', property);
-      document.head.appendChild(meta);
-    }
-    meta.content = content;
-  }
-
-  /**
-   * Set meta name (for Twitter Cards)
-   */
-  private setMetaName(name: string, content: string): void {
-    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.name = name;
-      document.head.appendChild(meta);
-    }
-    meta.content = content;
-  }
-
-  /**
-   * Set canonical URL
-   */
-  private setCanonicalUrl(url: string): void {
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    canonical.href = url;
-  }
-
-  /**
-   * Setup performance observer for Core Web Vitals
-   */
-  private setupPerformanceObserver(): void {
-    if (!('PerformanceObserver' in window)) return;
-
-    try {
-      this.observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          switch (entry.entryType) {
-            case 'navigation':
-              this.handleNavigationTiming(entry as PerformanceNavigationTiming);
-              break;
-            case 'paint':
-              this.handlePaintTiming(entry as PerformancePaintTiming);
-              break;
-            case 'largest-contentful-paint':
-              this.handleLCPTiming(entry as PerformanceEntry);
-              break;
-            case 'first-input':
-              this.handleFIDTiming(entry as PerformanceEventTiming);
-              break;
-            case 'cumulative-layout-shift':
-              this.handleCLSTiming(entry as PerformanceEntry);
-              break;
-          }
+      
+      if (hasProperHierarchy) {
+        score += 30;
+      } else {
+        this.addRecommendation('warning', 'Heading Structure', 
+          'Heading hierarchy is not properly structured.', 
+          'Maintain proper heading hierarchy (H1 > H2 > H3)');
+      }
+      
+      const keywords = ['ai', 'artificial intelligence', 'technology', 'solutions'];
+      let hasKeywordsInHeadings = false;
+      
+      headings.forEach(heading => {
+        const text = heading.textContent?.toLowerCase() || '';
+        if (keywords.some(keyword => text.includes(keyword))) {
+          hasKeywordsInHeadings = true;
         }
       });
-
-      const supportedEntryTypes = [
-        'navigation',
-        'paint',
-        'largest-contentful-paint',
-        'first-input',
-        'cumulative-layout-shift'
-      ].filter(type => PerformanceObserver.supportedEntryTypes.includes(type));
-
-      this.observer.observe({ entryTypes: supportedEntryTypes });
-    } catch (error) {
-      console.warn('Failed to setup performance observer:', error);
+      
+      if (hasKeywordsInHeadings) {
+        score += 20;
+      } else {
+        this.addRecommendation('suggestion', 'Heading Structure', 
+          'Consider including relevant keywords in headings.', 
+          'Include relevant keywords in headings');
+      }
+    } else {
+      this.addRecommendation('critical', 'Heading Structure', 
+        'Page has no heading tags. This is critical for SEO.', 
+        'Add heading tags to structure content');
     }
+    
+    this.metrics.headingStructure = score;
   }
 
   /**
-   * Handle navigation timing
+   * Analyze images for alt text
    */
-  private handleNavigationTiming(entry: PerformanceNavigationTiming): void {
-    if (!this.performanceMetrics) {
-      this.performanceMetrics = {} as PagePerformanceMetrics;
+  private analyzeImages(): void {
+    const images = document.querySelectorAll('img');
+    let score = 0;
+    
+    if (images.length > 0) {
+      let imagesWithAlt = 0;
+      
+      images.forEach(img => {
+        const alt = img.getAttribute('alt');
+        if (alt && alt.trim().length > 0) {
+          imagesWithAlt++;
+        }
+      });
+      
+      const altPercentage = (imagesWithAlt / images.length) * 100;
+      score = altPercentage;
+      
+      if (altPercentage < 100) {
+        this.addRecommendation('warning', 'Images', 
+          `${Math.round(100 - altPercentage)}% of images are missing alt text.`, 
+          'Add descriptive alt text to all images');
+      }
+      
+      const decorativeImages = Array.from(images).filter(img => {
+        const alt = img.getAttribute('alt');
+        return alt === '' || alt === 'decorative';
+      });
+      
+      if (decorativeImages.length > 0) {
+        score += 10;
+      }
     }
-
-    this.performanceMetrics.loadTime = entry.loadEventEnd - entry.loadEventStart;
-    this.performanceMetrics.timeToInteractive = entry.domInteractive - (entry.activationStart || 0);
+    
+    this.metrics.imageAltText = score;
   }
 
   /**
-   * Handle paint timing
+   * Setup meta tags
    */
-  private handlePaintTiming(entry: PerformancePaintTiming): void {
-    if (!this.performanceMetrics) {
-      this.performanceMetrics = {} as PagePerformanceMetrics;
-    }
-
-    if (entry.name === 'first-contentful-paint') {
-      this.performanceMetrics.firstContentfulPaint = entry.startTime;
-    }
-  }
-
-  /**
-   * Handle Largest Contentful Paint timing
-   */
-  private handleLCPTiming(entry: PerformanceEntry): void {
-    if (!this.performanceMetrics) {
-      this.performanceMetrics = {} as PagePerformanceMetrics;
-    }
-
-    this.performanceMetrics.largestContentfulPaint = entry.startTime;
-  }
-
-  /**
-   * Handle First Input Delay timing
-   */
-  private handleFIDTiming(entry: PerformanceEventTiming): void {
-    if (!this.performanceMetrics) {
-      this.performanceMetrics = {} as PagePerformanceMetrics;
-    }
-
-    this.performanceMetrics.firstInputDelay = entry.processingStart - entry.startTime;
-  }
-
-  /**
-   * Handle Cumulative Layout Shift timing
-   */
-  private handleCLSTiming(entry: PerformanceEntry): void {
-    if (!this.performanceMetrics) {
-      this.performanceMetrics = {} as PagePerformanceMetrics;
-    }
-
-    this.performanceMetrics.cumulativeLayoutShift = (entry as PerformanceEntry & { value?: number }).value || 0;
-  }
-
-  /**
-   * Get SEO metrics and score
-   */
-  getSEOMetrics(): SEOMetrics {
-    const title = document.title;
-    const description = this.getMetaContent('description');
-    const keywords = this.getMetaContent('keywords');
-    const canonical = document.querySelector('link[rel="canonical"]');
-    const ogTags = document.querySelectorAll('meta[property^="og:"]');
-    const twitterTags = document.querySelectorAll('meta[name^="twitter:"]');
-    const structuredData = document.querySelector('script[type="application/ld+json"]');
-    const robots = this.getMetaContent('robots');
-
-    const recommendations: string[] = [];
-
-    // Title analysis
-    if (title.length < 30) {
-      recommendations.push('Title is too short (recommended: 30-60 characters)');
-    } else if (title.length > 60) {
-      recommendations.push('Title is too long (recommended: 30-60 characters)');
-    }
-
-    // Description analysis
-    if (!description) {
-      recommendations.push('Missing meta description');
-    } else if (description.length < 120) {
-      recommendations.push('Meta description is too short (recommended: 120-160 characters)');
-    } else if (description.length > 160) {
-      recommendations.push('Meta description is too long (recommended: 120-160 characters)');
-    }
-
-    // Keywords analysis
-    if (!keywords) {
-      recommendations.push('Missing meta keywords');
-    }
-
-    // Canonical URL analysis
-    if (!canonical) {
-      recommendations.push('Missing canonical URL');
-    }
-
-    // Open Graph analysis
-    if (ogTags.length === 0) {
-      recommendations.push('Missing Open Graph tags');
-    }
-
-    // Twitter Card analysis
-    if (twitterTags.length === 0) {
-      recommendations.push('Missing Twitter Card tags');
-    }
-
-    // Structured data analysis
-    if (!structuredData) {
-      recommendations.push('Missing structured data');
-    }
-
-    // Calculate score
-    let score = 100;
-    score -= title.length < 30 || title.length > 60 ? 10 : 0;
-    score -= !description ? 15 : (description.length < 120 || description.length > 160 ? 10 : 0);
-    score -= !keywords ? 5 : 0;
-    score -= !canonical ? 10 : 0;
-    score -= ogTags.length === 0 ? 15 : 0;
-    score -= twitterTags.length === 0 ? 10 : 0;
-    score -= !structuredData ? 15 : 0;
-    score -= !robots ? 5 : 0;
-
-    return {
-      titleLength: title.length,
-      descriptionLength: description?.length || 0,
-      keywordsCount: keywords ? keywords.split(',').length : 0,
-      hasCanonical: !!canonical,
-      hasOpenGraph: ogTags.length > 0,
-      hasTwitterCard: twitterTags.length > 0,
-      hasStructuredData: !!structuredData,
-      hasRobots: !!robots,
-      score: Math.max(0, score),
-      recommendations
-    };
-  }
-
-  /**
-   * Get meta content by name
-   */
-  private getMetaContent(name: string): string | null {
-    const meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
-    return meta?.content || null;
-  }
-
-  /**
-   * Optimize existing meta tags
-   */
-  private optimizeExistingMetaTags(): void {
-    // Ensure viewport meta tag exists
+  private setupMetaTags(): void {
+    if (!this.config.enableMetaTags) return;
+    
     if (!document.querySelector('meta[name="viewport"]')) {
       const viewport = document.createElement('meta');
       viewport.name = 'viewport';
-      viewport.content = 'width=device-width, initial-scale=1.0';
+      viewport.content = 'width=device-width, initial-scale=1';
       document.head.appendChild(viewport);
     }
-
-    // Ensure charset meta tag exists
+    
     if (!document.querySelector('meta[charset]')) {
       const charset = document.createElement('meta');
-      charset.setAttribute('charset', 'UTF-8');
-      document.head.insertBefore(charset, document.head.firstChild);
+      charset.setAttribute('charset', 'utf-8');
+      document.head.appendChild(charset);
     }
   }
 
   /**
-   * Setup dynamic meta updates
+   * Setup structured data
    */
-  private setupDynamicMetaUpdates(): void {
-    // Update page title on focus/blur for better UX
-    let originalTitle = document.title;
+  private setupStructuredData(): void {
+    if (!this.config.enableStructuredData) return;
     
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) {
-        document.title = '👋 ' + originalTitle;
-      } else {
-        document.title = originalTitle;
-      }
-    });
-  }
-
-  /**
-   * Inject default structured data
-   */
-  private injectStructuredData(): void {
-    const defaultStructuredData = {
+    const organizationSchema = {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
-      "description": "Leading AI and technology solutions provider",
+      "description": "Advanced AI and IT Solutions Provider",
       "url": window.location.origin,
       "logo": `${window.location.origin}/logo.png`,
       "sameAs": [
@@ -510,98 +326,95 @@ class EnhancedSEOOptimizer {
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1-555-0123",
-        "contactType": "customer service"
+        "contactType": "customer service",
+        "email": "info@ziontech.com"
       }
     };
-
-    this.updateStructuredData(defaultStructuredData);
+    
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(organizationSchema);
+    document.head.appendChild(script);
   }
 
   /**
-   * Optimize images for SEO
+   * Add SEO recommendation
    */
-  private optimizeImages(): void {
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-      // Add alt text if missing
-      if (!img.alt) {
-        img.alt = img.title || 'Image';
-      }
-
-      // Add loading="lazy" for better performance
-      if (!img.loading) {
-        img.loading = 'lazy';
-      }
+  private addRecommendation(type: 'critical' | 'warning' | 'suggestion', category: string, message: string, action: string): void {
+    this.recommendations.push({
+      type,
+      category,
+      message,
+      action
     });
   }
 
   /**
-   * Setup lazy loading
+   * Calculate overall SEO score
    */
-  private setupLazyLoading(): void {
-    // Intersection Observer for lazy loading
-    if ('IntersectionObserver' in window) {
-      const lazyImages = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.removeAttribute('data-src');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
-
-      lazyImages.forEach(img => imageObserver.observe(img));
-    }
+  private calculateOverallScore(): void {
+    const scores = [
+      this.metrics.titleOptimization,
+      this.metrics.metaDescriptionOptimization,
+      this.metrics.headingStructure,
+      this.metrics.imageAltText
+    ];
+    
+    this.metrics.overallScore = scores.reduce((sum, score) => sum + score, 0) / scores.length;
   }
 
   /**
-   * Generate sitemap
+   * Get current metrics
    */
-  generateSitemap(pages: string[]): string {
-    const baseUrl = window.location.origin;
+  public getMetrics(): SEOMetrics {
+    return { ...this.metrics };
+  }
+
+  /**
+   * Get SEO recommendations
+   */
+  public getRecommendations(): SEORecommendation[] {
+    return [...this.recommendations];
+  }
+
+  /**
+   * Generate SEO report
+   */
+  public generateReport(): string {
+    const metrics = this.getMetrics();
+    const recommendations = this.getRecommendations();
     
-    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
-    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-    
-    pages.forEach(page => {
-      sitemap += '  <url>\n';
-      sitemap += `    <loc>${baseUrl}${page}</loc>\n`;
-      sitemap += `    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>\n`;
-      sitemap += '    <changefreq>weekly</changefreq>\n';
-      sitemap += '    <priority>0.8</priority>\n';
-      sitemap += '  </url>\n';
+    let report = `
+🔍 Enhanced SEO Report
+=====================
+Overall Score: ${metrics.overallScore.toFixed(1)}/100
+
+📊 SEO Metrics:
+- Title Optimization: ${metrics.titleOptimization.toFixed(1)}/100
+- Meta Description: ${metrics.metaDescriptionOptimization.toFixed(1)}/100
+- Heading Structure: ${metrics.headingStructure.toFixed(1)}/100
+- Image Alt Text: ${metrics.imageAltText.toFixed(1)}/100
+
+📋 Recommendations (${recommendations.length}):
+`;
+
+    recommendations.forEach((rec, index) => {
+      report += `${index + 1}. [${rec.type.toUpperCase()}] ${rec.message}\n   Action: ${rec.action}\n\n`;
     });
     
-    sitemap += '</urlset>';
-    
-    return sitemap;
-  }
-
-  /**
-   * Get current performance metrics
-   */
-  getPerformanceMetrics(): PagePerformanceMetrics | null {
-    return this.performanceMetrics;
+    return report;
   }
 
   /**
    * Cleanup
    */
-  cleanup(): void {
-    if (this.observer) {
-      this.observer.disconnect();
-      this.observer = null;
-    }
+  public cleanup(): void {
+    this.recommendations = [];
+    this.isInitialized = false;
   }
 }
 
 // Export singleton instance
 export const enhancedSEOOptimizer = new EnhancedSEOOptimizer();
-
-// Auto-initialize
-if (typeof window !== 'undefined') {
-  enhancedSEOOptimizer.initialize();
-}
+export { EnhancedSEOOptimizer };
+export default EnhancedSEOOptimizer;

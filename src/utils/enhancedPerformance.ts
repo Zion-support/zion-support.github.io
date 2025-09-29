@@ -54,7 +54,6 @@ class EnhancedPerformanceOptimizer {
     }
   };
 
-  private observers: (PerformanceObserver | IntersectionObserver)[] = [];
   private performanceObservers: PerformanceObserver[] = [];
   private intersectionObservers: IntersectionObserver[] = [];
   private isInitialized = false;
@@ -346,7 +345,6 @@ class EnhancedPerformanceOptimizer {
   /**
    * Trigger optimization based on poor performance
    */
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   private triggerOptimization(metric: string, _value: number): void {
     switch (metric) {
       case 'LCP':

@@ -81,7 +81,10 @@ class PerformanceMonitor {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if ('processingStart' in entry && entry.startTime) {
-          this.metrics.fid = ((entry as PerformanceEntry & { processingStart?: number }).processingStart || 0) - entry.startTime;
+          const processingStart = (entry as PerformanceEntry & { processingStart?: number }).processingStart;
+          if (processingStart) {
+            this.metrics.fid = processingStart - entry.startTime;
+          }
         }
       });
     });

@@ -43,7 +43,7 @@ export class PerformanceOptimizer {
       renderTime: 0,
       memoryUsage: 0,
       bundleSize: 0,
-      cacheHitRate: 0
+      cacheHitRate: 0,
     };
 
     this.config = {
@@ -51,7 +51,7 @@ export class PerformanceOptimizer {
       enableCodeSplitting: true,
       enableImageOptimization: true,
       enableCaching: true,
-      enableCompression: true
+      enableCompression: true,
     };
   }
 
@@ -80,14 +80,14 @@ export class PerformanceOptimizer {
     if (!this.config.enableLazyLoading) return;
 
     // Intersection Observer for lazy loading
-    if ('IntersectionObserver' in window) {
+    if ("IntersectionObserver" in window) {
       const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src;
-              img.removeAttribute('data-src');
+              img.removeAttribute("data-src");
               imageObserver.unobserve(img);
             }
           }
@@ -95,7 +95,7 @@ export class PerformanceOptimizer {
       });
 
       // Observe all images with data-src attribute
-      document.querySelectorAll('img[data-src]').forEach(img => {
+      document.querySelectorAll("img[data-src]").forEach((img) => {
         imageObserver.observe(img);
       });
     }
@@ -108,14 +108,14 @@ export class PerformanceOptimizer {
     if (!this.config.enableImageOptimization) return;
 
     // Add responsive image support
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
+    const images = document.querySelectorAll("img");
+    images.forEach((img) => {
+      if (!img.hasAttribute("loading")) {
+        img.setAttribute("loading", "lazy");
       }
-      
-      if (!img.hasAttribute('decoding')) {
-        img.setAttribute('decoding', 'async');
+
+      if (!img.hasAttribute("decoding")) {
+        img.setAttribute("decoding", "async");
       }
     });
   }
@@ -127,13 +127,14 @@ export class PerformanceOptimizer {
     if (!this.config.enableCaching) return;
 
     // Service Worker registration for caching
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration => {
-          console.log('Service Worker registered:', registration);
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("/sw.js")
+        .then((registration) => {
+          console.log("Service Worker registered:", registration);
         })
-        .catch(error => {
-          console.error('Service Worker registration failed:', error);
+        .catch((error) => {
+          console.error("Service Worker registration failed:", error);
         });
     }
   }
@@ -145,9 +146,9 @@ export class PerformanceOptimizer {
     if (!this.config.enableCompression) return;
 
     // Enable gzip compression headers
-    if ('CompressionStream' in window) {
+    if ("CompressionStream" in window) {
       // Browser supports compression streams
-      console.log('Compression streams supported');
+      console.log("Compression streams supported");
     }
   }
 
@@ -157,10 +158,10 @@ export class PerformanceOptimizer {
   private startPerformanceMonitoring(): void {
     // Monitor Core Web Vitals
     this.monitorCoreWebVitals();
-    
+
     // Monitor resource loading
     this.monitorResourceLoading();
-    
+
     // Monitor memory usage
     this.monitorMemoryUsage();
   }
@@ -174,28 +175,32 @@ export class PerformanceOptimizer {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       this.metrics.loadTime = lastEntry.startTime;
-    }).observe({ entryTypes: ['largest-contentful-paint'] });
+    }).observe({ entryTypes: ["largest-contentful-paint"] });
 
     // First Input Delay (FID)
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach(entry => {
-        console.log('FID:', (entry as unknown as { processingStart: number }).processingStart - entry.startTime);
+      entries.forEach((entry) => {
+        console.log(
+          "FID:",
+          (entry as unknown as { processingStart: number }).processingStart -
+            entry.startTime,
+        );
       });
-    }).observe({ entryTypes: ['first-input'] });
+    }).observe({ entryTypes: ["first-input"] });
 
     // Cumulative Layout Shift (CLS)
     new PerformanceObserver((list) => {
       let clsValue = 0;
       const entries = list.getEntries();
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         const layoutShiftEntry = entry as LayoutShiftEntry;
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value;
         }
       });
-      console.log('CLS:', clsValue);
-    }).observe({ entryTypes: ['layout-shift'] });
+      console.log("CLS:", clsValue);
+    }).observe({ entryTypes: ["layout-shift"] });
   }
 
   /**
@@ -204,36 +209,36 @@ export class PerformanceOptimizer {
   private monitorResourceLoading(): void {
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach(entry => {
-        if (entry.entryType === 'resource') {
+      entries.forEach((entry) => {
+        if (entry.entryType === "resource") {
           const resourceEntry = entry as PerformanceResourceTiming;
-          console.log('Resource loaded:', {
+          console.log("Resource loaded:", {
             name: resourceEntry.name,
             duration: resourceEntry.duration,
-            size: resourceEntry.transferSize
+            size: resourceEntry.transferSize,
           });
         }
       });
     });
 
-    observer.observe({ entryTypes: ['resource'] });
+    observer.observe({ entryTypes: ["resource"] });
   }
 
   /**
    * Monitor memory usage
    */
   private monitorMemoryUsage(): void {
-    if ('memory' in performance) {
+    if ("memory" in performance) {
       const memory = (performance as PerformanceWithMemory).memory;
       this.metrics.memoryUsage = memory?.usedJSHeapSize || 0;
-      
+
       // Log memory usage every 30 seconds
       setInterval(() => {
         const currentMemory = (performance as PerformanceWithMemory).memory;
-        console.log('Memory usage:', {
+        console.log("Memory usage:", {
           used: currentMemory?.usedJSHeapSize || 0,
           total: currentMemory?.totalJSHeapSize || 0,
-          limit: currentMemory?.jsHeapSizeLimit || 0
+          limit: currentMemory?.jsHeapSizeLimit || 0,
         });
       }, 30000);
     }
@@ -257,11 +262,11 @@ export class PerformanceOptimizer {
    * Optimize images based on device capabilities
    */
   public optimizeImages(): void {
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
+    const images = document.querySelectorAll("img");
+    images.forEach((img) => {
       // Add WebP support detection
       const supportsWebP = this.supportsWebP();
-      if (supportsWebP && !img.src.includes('.webp')) {
+      if (supportsWebP && !img.src.includes(".webp")) {
         // Convert to WebP format
         this.convertToWebP(img);
       }
@@ -272,27 +277,27 @@ export class PerformanceOptimizer {
    * Check if browser supports WebP
    */
   private supportsWebP(): boolean {
-    const canvas = document.createElement('canvas');
+    const canvas = document.createElement("canvas");
     canvas.width = 1;
     canvas.height = 1;
-    return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+    return canvas.toDataURL("image/webp").indexOf("data:image/webp") === 0;
   }
 
   /**
    * Convert image to WebP format
    */
   private convertToWebP(img: HTMLImageElement): void {
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+
     if (!ctx) return;
 
     canvas.width = img.naturalWidth;
     canvas.height = img.naturalHeight;
-    
+
     ctx.drawImage(img, 0, 0);
-    
-    const webpDataUrl = canvas.toDataURL('image/webp', 0.8);
+
+    const webpDataUrl = canvas.toDataURL("image/webp", 0.8);
     img.src = webpDataUrl;
   }
 
@@ -301,16 +306,16 @@ export class PerformanceOptimizer {
    */
   public preloadCriticalResources(): void {
     const criticalResources = [
-      '/fonts/main-font.woff2',
-      '/css/critical.css',
-      '/js/main.js'
+      "/fonts/main-font.woff2",
+      "/css/critical.css",
+      "/js/main.js",
     ];
 
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
+    criticalResources.forEach((resource) => {
+      const link = document.createElement("link");
+      link.rel = "preload";
       link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      link.as = resource.endsWith(".css") ? "style" : "script";
       document.head.appendChild(link);
     });
   }
@@ -325,7 +330,7 @@ export class PerformanceOptimizer {
       renderTime: 0,
       memoryUsage: 0,
       bundleSize: 0,
-      cacheHitRate: 0
+      cacheHitRate: 0,
     };
   }
 }
@@ -334,6 +339,6 @@ export class PerformanceOptimizer {
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
 
 // Auto-initialize when module is loaded
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   performanceOptimizer.initialize();
 }

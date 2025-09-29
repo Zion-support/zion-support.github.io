@@ -33,7 +33,7 @@ export function createLazyComponent<T extends ComponentType<Record<string, unkno
 ) {
   const LazyComponent = lazy(importFunc);
   
-  return function LazyWrapper(props: Record<string, unknown>) {
+  return function LazyWrapper(props: any) {
     return (
       <Suspense fallback={fallback ? React.createElement(fallback) : <div>Loading...</div>}>
         <LazyComponent {...(props as any)} />
@@ -150,12 +150,9 @@ export function useImageLazyLoading(
   const [imageSrc, setImageSrc] = useState(placeholder || '');
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
-  const [hasError, setHasError] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!elementRef.current) return;
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -163,42 +160,30 @@ export function useImageLazyLoading(
           observer.disconnect();
         }
       },
-      { 
-        threshold: 0.1,
-        rootMargin: '50px'
-      }
+      { threshold: 0.1 }
     );
 
-    observer.observe(elementRef.current);
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
 
     return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
-    if (isInView && src && !hasError) {
+    if (isInView && src) {
       const img = new Image();
-      
       img.onload = () => {
         setImageSrc(src);
         setIsLoaded(true);
-        setHasError(false);
       };
-      
-      img.onerror = () => {
-        setHasError(true);
-        setIsLoaded(false);
-        console.warn(`Failed to load image: ${src}`);
-      };
-      
       img.src = src;
     }
-  }, [isInView, src, hasError]);
+  }, [isInView, src]);
 
   return {
     elementRef,
     imageSrc,
-    isLoaded,
-    hasError,
-    isInView
+    isLoaded
   };
 }

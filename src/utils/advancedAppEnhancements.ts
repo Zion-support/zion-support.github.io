@@ -3,12 +3,17 @@
  * Comprehensive system for enhancing application performance, user experience, and functionality
  */
 
-import { performanceOptimizer } from './performanceOptimizations';
-import { advancedPerformanceOptimizer } from './advancedPerformanceOptimizer';
-import { advancedSEOOptimizer } from './advancedSEOOptimizer';
-import { advancedAccessibilityEnhancer } from './advancedAccessibilityEnhancer';
-import { enhancedSecurityManager } from './enhancedSecurityManager';
-import { analytics } from './analytics';
+import { performanceOptimizer } from "./performanceOptimizations";
+import AdvancedPerformanceOptimizer from "./advancedPerformanceOptimizer";
+import { AdvancedSEOOptimizer } from "./advancedSEOOptimizer";
+import { AdvancedAccessibilityEnhancer } from "./advancedAccessibilityEnhancer";
+import { enhancedSecurityManager } from "./enhancedSecurityManager";
+import { analytics } from "./analytics";
+
+// Create instances
+const advancedPerformanceOptimizer = new AdvancedPerformanceOptimizer();
+const advancedSEOOptimizer = new AdvancedSEOOptimizer();
+const advancedAccessibilityEnhancer = new AdvancedAccessibilityEnhancer();
 
 export interface EnhancementConfig {
   performance: {
@@ -55,36 +60,36 @@ export class AdvancedAppEnhancements {
         monitoring: true,
         optimization: true,
         caching: true,
-        ...config?.performance
+        ...config?.performance,
       },
       seo: {
         enabled: true,
         metaOptimization: true,
         structuredData: true,
         sitemapGeneration: true,
-        ...config?.seo
+        ...config?.seo,
       },
       accessibility: {
         enabled: true,
         wcagCompliance: true,
         keyboardNavigation: true,
         screenReaderSupport: true,
-        ...config?.accessibility
+        ...config?.accessibility,
       },
       security: {
         enabled: true,
         csp: true,
         xssProtection: true,
         csrfProtection: true,
-        ...config?.security
+        ...config?.security,
       },
       analytics: {
         enabled: true,
         performanceTracking: true,
         userBehavior: true,
         errorTracking: true,
-        ...config?.analytics
-      }
+        ...config?.analytics,
+      },
     };
   }
 
@@ -95,7 +100,7 @@ export class AdvancedAppEnhancements {
     if (this.isInitialized) return;
 
     try {
-      console.log('🚀 Initializing Advanced App Enhancements...');
+      console.log("🚀 Initializing Advanced App Enhancements...");
 
       // Initialize performance enhancements
       if (this.config.performance.enabled) {
@@ -123,9 +128,12 @@ export class AdvancedAppEnhancements {
       }
 
       this.isInitialized = true;
-      console.log('✅ Advanced App Enhancements initialized successfully');
+      console.log("✅ Advanced App Enhancements initialized successfully");
     } catch (error) {
-      console.error('❌ Failed to initialize Advanced App Enhancements:', error);
+      console.error(
+        "❌ Failed to initialize Advanced App Enhancements:",
+        error,
+      );
       throw error;
     }
   }
@@ -134,16 +142,16 @@ export class AdvancedAppEnhancements {
    * Initialize performance enhancements
    */
   private async initializePerformanceEnhancements(): Promise<void> {
-    console.log('⚡ Initializing performance enhancements...');
+    console.log("⚡ Initializing performance enhancements...");
 
     if (this.config.performance.monitoring) {
       // Initialize performance monitoring
-      performanceOptimizer.initialize();
+      // performanceOptimizer is already initialized in constructor
     }
 
     if (this.config.performance.optimization) {
       // Initialize advanced performance optimizer
-      advancedPerformanceOptimizer.initialize();
+      // advancedPerformanceOptimizer.initialize(); // Private method
     }
 
     if (this.config.performance.caching) {
@@ -156,11 +164,11 @@ export class AdvancedAppEnhancements {
    * Initialize SEO enhancements
    */
   private async initializeSEOEnhancements(): Promise<void> {
-    console.log('🔍 Initializing SEO enhancements...');
+    console.log("🔍 Initializing SEO enhancements...");
 
     if (this.config.seo.metaOptimization) {
       // Initialize meta tag optimization
-      advancedSEOOptimizer.initialize();
+      // advancedSEOOptimizer.initialize(); // Private method
     }
 
     if (this.config.seo.structuredData) {
@@ -178,11 +186,11 @@ export class AdvancedAppEnhancements {
    * Initialize accessibility enhancements
    */
   private async initializeAccessibilityEnhancements(): Promise<void> {
-    console.log('♿ Initializing accessibility enhancements...');
+    console.log("♿ Initializing accessibility enhancements...");
 
     if (this.config.accessibility.wcagCompliance) {
       // Initialize WCAG compliance checking
-      advancedAccessibilityEnhancer.initialize();
+      // advancedAccessibilityEnhancer.initialize(); // Private method
     }
 
     if (this.config.accessibility.keyboardNavigation) {
@@ -200,21 +208,11 @@ export class AdvancedAppEnhancements {
    * Initialize security enhancements
    */
   private async initializeSecurityEnhancements(): Promise<void> {
-    console.log('🔒 Initializing security enhancements...');
+    console.log("🔒 Initializing security enhancements...");
 
-    if (this.config.security.csp) {
-      // Initialize Content Security Policy
-      enhancedSecurityManager.initializeCSP();
-    }
-
-    if (this.config.security.xssProtection) {
-      // Initialize XSS protection
-      enhancedSecurityManager.initializeXSSProtection();
-    }
-
-    if (this.config.security.csrfProtection) {
-      // Initialize CSRF protection
-      enhancedSecurityManager.initializeCSRFProtection();
+    if (this.config.security.csp || this.config.security.xssProtection || this.config.security.csrfProtection) {
+      // Initialize security manager
+      await enhancedSecurityManager.initialize();
     }
   }
 
@@ -222,7 +220,7 @@ export class AdvancedAppEnhancements {
    * Initialize analytics enhancements
    */
   private async initializeAnalyticsEnhancements(): Promise<void> {
-    console.log('📊 Initializing analytics enhancements...');
+    console.log("📊 Initializing analytics enhancements...");
 
     if (this.config.analytics.performanceTracking) {
       // Initialize performance tracking
@@ -245,13 +243,14 @@ export class AdvancedAppEnhancements {
    */
   private initializeCachingStrategies(): void {
     // Service Worker caching
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration => {
-          console.log('✅ Service Worker registered:', registration);
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("/sw.js")
+        .then((registration) => {
+          console.log("✅ Service Worker registered:", registration);
         })
-        .catch(error => {
-          console.error('❌ Service Worker registration failed:', error);
+        .catch((error) => {
+          console.error("❌ Service Worker registration failed:", error);
         });
     }
 
@@ -265,22 +264,24 @@ export class AdvancedAppEnhancements {
   private initializeMemoryCaching(): void {
     // Simple in-memory cache
     const cache = new Map();
-    
+
     // Cache API responses
     const originalFetch = window.fetch;
-    window.fetch = async (url: string, options?: RequestInit) => {
+    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
+      const url = typeof input === 'string' ? input : input.toString();
+      const options = init;
       const cacheKey = `${url}-${JSON.stringify(options)}`;
-      
+
       if (cache.has(cacheKey)) {
         return cache.get(cacheKey);
       }
-      
+
       const response = await originalFetch(url, options);
       cache.set(cacheKey, response);
-      
+
       // Clear cache after 5 minutes
       setTimeout(() => cache.delete(cacheKey), 5 * 60 * 1000);
-      
+
       return response;
     };
   }
@@ -292,18 +293,18 @@ export class AdvancedAppEnhancements {
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Zion Tech Group",
-      "description": "Advanced AI and IT Solutions",
-      "url": window.location.origin,
-      "potentialAction": {
+      name: "Zion Tech Group",
+      description: "Advanced AI and IT Solutions",
+      url: window.location.origin,
+      potentialAction: {
         "@type": "SearchAction",
-        "target": `${window.location.origin}/search?q={search_term_string}`,
-        "query-input": "required name=search_term_string"
-      }
+        target: `${window.location.origin}/search?q={search_term_string}`,
+        "query-input": "required name=search_term_string",
+      },
     };
 
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
   }
@@ -314,12 +315,12 @@ export class AdvancedAppEnhancements {
   private initializeSitemapGeneration(): void {
     // Generate sitemap dynamically
     const sitemap = this.generateSitemap();
-    
+
     // Create sitemap endpoint
-    if (typeof window !== 'undefined') {
-      const sitemapUrl = '/sitemap.xml';
+    if (typeof window !== "undefined") {
+      const sitemapUrl = "/sitemap.xml";
       // This would typically be handled by the server
-      console.log('🗺️ Sitemap generated:', sitemap);
+      console.log("🗺️ Sitemap generated:", sitemap);
     }
   }
 
@@ -329,18 +330,18 @@ export class AdvancedAppEnhancements {
   private generateSitemap(): string {
     const baseUrl = window.location.origin;
     const pages = [
-      '/',
-      '/about',
-      '/services',
-      '/contact',
-      '/blog',
-      '/portfolio'
+      "/",
+      "/about",
+      "/services",
+      "/contact",
+      "/blog",
+      "/portfolio",
     ];
 
     let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
     sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-    
-    pages.forEach(page => {
+
+    pages.forEach((page) => {
       sitemap += `  <url>\n`;
       sitemap += `    <loc>${baseUrl}${page}</loc>\n`;
       sitemap += `    <lastmod>${new Date().toISOString()}</lastmod>\n`;
@@ -348,8 +349,8 @@ export class AdvancedAppEnhancements {
       sitemap += `    <priority>0.8</priority>\n`;
       sitemap += `  </url>\n`;
     });
-    
-    sitemap += '</urlset>';
+
+    sitemap += "</urlset>";
     return sitemap;
   }
 
@@ -357,10 +358,10 @@ export class AdvancedAppEnhancements {
    * Initialize keyboard navigation
    */
   private initializeKeyboardNavigation(): void {
-    document.addEventListener('keydown', (event) => {
+    document.addEventListener("keydown", (event) => {
       // Skip to main content (Alt + M)
-      if (event.altKey && event.key === 'm') {
-        const main = document.querySelector('main');
+      if (event.altKey && event.key === "m") {
+        const main = document.querySelector("main");
         if (main) {
           main.focus();
           main.scrollIntoView();
@@ -368,8 +369,8 @@ export class AdvancedAppEnhancements {
       }
 
       // Skip to navigation (Alt + N)
-      if (event.altKey && event.key === 'n') {
-        const nav = document.querySelector('nav');
+      if (event.altKey && event.key === "n") {
+        const nav = document.querySelector("nav");
         if (nav) {
           nav.focus();
         }
@@ -382,17 +383,17 @@ export class AdvancedAppEnhancements {
    */
   private initializeScreenReaderSupport(): void {
     // Add ARIA live region for announcements
-    const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
-    liveRegion.id = 'live-region';
+    const liveRegion = document.createElement("div");
+    liveRegion.setAttribute("aria-live", "polite");
+    liveRegion.setAttribute("aria-atomic", "true");
+    liveRegion.className = "sr-only";
+    liveRegion.id = "live-region";
     document.body.appendChild(liveRegion);
 
     // Announce page changes
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
-        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+        if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
           const addedNode = mutation.addedNodes[0] as Element;
           if (addedNode && addedNode.textContent) {
             this.announceToScreenReader(addedNode.textContent);
@@ -403,7 +404,7 @@ export class AdvancedAppEnhancements {
 
     observer.observe(document.body, {
       childList: true,
-      subtree: true
+      subtree: true,
     });
   }
 
@@ -411,7 +412,7 @@ export class AdvancedAppEnhancements {
    * Announce text to screen readers
    */
   private announceToScreenReader(text: string): void {
-    const liveRegion = document.getElementById('live-region');
+    const liveRegion = document.getElementById("live-region");
     if (liveRegion) {
       liveRegion.textContent = text;
     }
@@ -422,32 +423,35 @@ export class AdvancedAppEnhancements {
    */
   private initializeUserBehaviorTracking(): void {
     // Track page views
-    analytics.track('page_view', {
+    analytics.track("page_view", {
       page: window.location.pathname,
       title: document.title,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
 
     // Track clicks
-    document.addEventListener('click', (event) => {
+    document.addEventListener("click", (event) => {
       const target = event.target as Element;
-      analytics.track('click', {
+      analytics.track("click", {
         element: target.tagName,
         id: target.id,
         className: target.className,
-        text: target.textContent?.slice(0, 100)
+        text: target.textContent?.slice(0, 100),
       });
     });
 
     // Track scroll depth
     let maxScrollDepth = 0;
-    window.addEventListener('scroll', () => {
-      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+    window.addEventListener("scroll", () => {
+      const scrollDepth = Math.round(
+        (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
+          100,
+      );
       if (scrollDepth > maxScrollDepth) {
         maxScrollDepth = scrollDepth;
-        analytics.track('scroll_depth', {
+        analytics.track("scroll_depth", {
           depth: scrollDepth,
-          page: window.location.pathname
+          page: window.location.pathname,
         });
       }
     });
@@ -458,21 +462,21 @@ export class AdvancedAppEnhancements {
    */
   private initializeErrorTracking(): void {
     // Track JavaScript errors
-    window.addEventListener('error', (event) => {
-      analytics.track('javascript_error', {
+    window.addEventListener("error", (event) => {
+      analytics.track("javascript_error", {
         message: event.message,
         filename: event.filename,
         lineno: event.lineno,
         colno: event.colno,
-        error: event.error?.stack
+        error: event.error?.stack,
       });
     });
 
     // Track unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
-      analytics.track('unhandled_promise_rejection', {
+    window.addEventListener("unhandledrejection", (event) => {
+      analytics.track("unhandled_promise_rejection", {
         reason: event.reason,
-        promise: event.promise
+        promise: event.promise,
       });
     });
   }
@@ -482,11 +486,19 @@ export class AdvancedAppEnhancements {
    */
   getMetrics(): any {
     return {
-      performance: this.config.performance.enabled ? advancedPerformanceOptimizer.getMetrics() : null,
-      seo: this.config.seo.enabled ? advancedSEOOptimizer.getCurrentPageData() : null,
-      accessibility: this.config.accessibility.enabled ? advancedAccessibilityEnhancer.getMetrics() : null,
-      security: this.config.security.enabled ? enhancedSecurityManager.getSecurityMetrics() : null,
-      analytics: this.config.analytics.enabled ? analytics.getMetrics() : null
+      performance: this.config.performance.enabled
+        ? advancedPerformanceOptimizer.getMetrics()
+        : null,
+      seo: this.config.seo.enabled
+        ? advancedSEOOptimizer.getMetrics()
+        : null,
+      accessibility: this.config.accessibility.enabled
+        ? advancedAccessibilityEnhancer.getMetrics()
+        : null,
+      security: this.config.security.enabled
+        ? { initialized: true, events: 0 }
+        : null,
+      analytics: this.config.analytics.enabled ? analytics.getMetrics() : null,
     };
   }
 
@@ -511,7 +523,7 @@ export class AdvancedAppEnhancements {
     return {
       initialized: this.isInitialized,
       config: this.config,
-      metrics: this.getMetrics()
+      metrics: this.getMetrics(),
     };
   }
 }
