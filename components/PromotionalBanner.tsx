@@ -287,46 +287,46 @@ export const AIRevolutionBanner = () => (
   />
 );
 
-export const AIBusinessTransformationBanner = () => (
+export const EnterpriseAITransformationBanner = () => (
   <PromotionalBanner
-    message="🎯 NEW: AI Business Transformation 2025 - Complete Implementation Guide with Real-World Case Studies"
+    message="🏢 NEW: Enterprise AI Transformation 2025 Guide - Achieve 300% ROI with Complete Implementation Framework"
     ctaText="Read Guide"
-    ctaLink="/blog/ai-business-transformation-2025"
-    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
-    autoHide={true}
-    hideAfter={18}
-  />
-);
-
-export const AIWorkflowAutomationBanner = () => (
-  <PromotionalBanner
-    message="⚙️ BREAKING: AI Automation Workflows 2025 - Reduce Manual Work by 80% with Proven Strategies"
-    ctaText="Learn More"
-    ctaLink="/blog/ai-automation-workflows-2025"
+    ctaLink="/blog/ai-enterprise-transformation-2025"
     backgroundColor="bg-gradient-to-r from-emerald-600 to-teal-600"
     autoHide={true}
     hideAfter={22}
   />
 );
 
-export const EnterpriseAISecurityBanner = () => (
+export const AutonomousOperationsBanner = () => (
   <PromotionalBanner
-    message="🛡️ CRITICAL: Enterprise AI Security 2025 - Comprehensive Security Framework for AI Systems"
-    ctaText="Secure Your AI"
-    ctaLink="/blog/enterprise-ai-security-2025"
-    backgroundColor="bg-gradient-to-r from-red-600 to-orange-600"
+    message="🤖 FEATURED: AI Autonomous Operations 2025 - Self-Healing Systems Reduce Downtime by 90%"
+    ctaText="Explore Autonomous AI"
+    ctaLink="/blog/ai-autonomous-operations-2025"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const Fortune500SuccessBanner = () => (
+  <PromotionalBanner
+    message="🏆 SUCCESS STORY: Fortune 500 Company Achieved $15M ROI in 12 Months with AI Transformation"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/enterprise-ai-transformation-success"
+    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
     autoHide={true}
     hideAfter={25}
   />
 );
 
-export const NewContentShowcaseBanner = () => (
+export const NewContent2025Banner = () => (
   <PromotionalBanner
-    message="📚 FRESH CONTENT: New AI Guides & Security Frameworks - Business Transformation, Workflow Automation, Enterprise Security"
-    ctaText="Browse All Content"
+    message="📈 NEW CONTENT: Enterprise AI Transformation, Autonomous Operations & Fortune 500 Success Stories"
+    ctaText="Browse Latest"
     ctaLink="/blog"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
     autoHide={true}
-    hideAfter={20}
+    hideAfter={18}
   />
 );
