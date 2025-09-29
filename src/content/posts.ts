@@ -11,7 +11,6 @@ export interface BlogPost {
 export const posts: BlogPost[] = [
   {
     slug: "ai-platform-roi-2025",
-<<<<<<< HEAD
     title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
     description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",
     category: "AI Strategy",
@@ -63,25 +62,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  }
-=======
-    title: "AI Platform ROI: Scorecards That Drive Adoption",
-    description:
-      "Connect capabilities to golden paths, platform SLOs, and adoption metrics to make cut/scale decisions.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-03",
-    featured: true,
-    readTime: "7 min",
-  },
-  {
-    slug: "secure-ml-supply-chain",
-    title: "Secure ML Supply Chain: Lineage, SBOMs, and Egress Controls",
-    description:
-      "Lock down datasets, models, and inference routes with provenance and policy tests in CI/CD.",
-    category: "Security",
-    publishedAt: "2025-10-03",
-    featured: true,
-    readTime: "6 min",
   },
   {
     slug: "enterprise-rag-blueprint-v2",
@@ -143,6 +123,5 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "7 min",
   },
->>>>>>> cursor/create-and-deploy-new-content-b69e
 ];
 
