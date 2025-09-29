@@ -10,7 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
     description:
@@ -41,12 +40,8 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
   },
   {
-    slug: "edge-inference-blueprints",
-    title: "Edge Inference Blueprints: Sub‑100ms UX in Production",
-=======
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
->>>>>>> feat/content-promo
     description:
       "Latency budgets, on‑device models, and caching strategies for lightning‑fast AI UX at the edge.",
     category: "Architecture",
@@ -85,13 +80,8 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
-<<<<<<< HEAD
-    slug: "edge-inference-patterns-2025",
-    title: "Edge Inference Patterns for Sub‑100ms Experiences",
-=======
     slug: "platform-scorecards-that-stick",
     title: "Platform Scorecards That Actually Drive Adoption",
->>>>>>> feat/content-promo
     description:
       "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
     category: "Platform Engineering",
@@ -314,6 +304,37 @@ export const posts: BlogPost[] = [
       "Framework for developing AI systems that are fair, transparent, and compliant with emerging regulations.",
     category: "AI Governance",
     publishedAt: "2025-01-05",
+  },
+  // New content items (2025-09-29)
+  {
+    slug: "genai-telemetry-metrics-that-matter",
+    title: "GenAI Telemetry: The Metrics That Predict Drift",
+    description:
+      "Capture inputs, policy outcomes, and feedback loops to prevent silent regressions before users notice.",
+    category: "MLOps",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "edge-flags-realtime-rollouts",
+    title: "Edge Feature Flags: Real‑Time Global Rollouts That Stick",
+    description:
+      "Patterns for cache‑safe flags, consistency checks, and instant rollbacks across regions.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "north-star-metrics-starter-kit",
+    title: "North‑Star Metrics Starter Kit",
+    description:
+      "Practical templates and examples to define leading indicators that align to outcomes.",
+    category: "Product Analytics",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "5 min read",
   },
 ];
 

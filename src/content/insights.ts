@@ -45,7 +45,24 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
-<<<<<<< HEAD
+    id: "feature-flags-edge-realtime",
+    title: "Real‑Time Feature Flags at the Edge",
+    summary:
+      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
+    category: "Architecture",
+    date: "2025-09-28",
+    readMinutes: 6,
+  },
+  {
+    id: "north-star-metrics-insight",
+    title: "North‑Star Metrics: A Field Guide",
+    summary:
+      "A practical approach to defining leading indicators that align teams to outcomes.",
+    category: "Product Analytics",
+    date: "2025-09-28",
+    readMinutes: 7,
+  },
+  {
     id: "canary-evals-for-genai",
     title: "Canary Evals for GenAI: What to Measure Before You Ship",
     summary:
@@ -60,29 +77,8 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "Practical patterns for smoothing bursts, protecting downstreams, and keeping SLAs green.",
     category: "Data Engineering",
-=======
-    id: "feature-flags-edge-realtime",
-    title: "Real‑Time Feature Flags at the Edge",
-    summary:
-      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
-    category: "Architecture",
->>>>>>> feat/content-promo
     date: "2025-09-28",
     readMinutes: 6,
-  },
-  {
-<<<<<<< HEAD
-    id: "north-star-metrics-that-drive-growth",
-    title: "North‑Star Metrics That Actually Drive Growth",
-=======
-    id: "north-star-metrics-insight",
-    title: "North‑Star Metrics: A Field Guide",
->>>>>>> feat/content-promo
-    summary:
-      "A practical approach to defining leading indicators that align teams to outcomes.",
-    category: "Product Analytics",
-    date: "2025-09-28",
-    readMinutes: 7,
   },
   {
     id: "secure-ml-pipelines",
