@@ -25,29 +25,14 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-<<<<<<< HEAD
-            <span>✨ NEW 2026:</span>
-            <Link href="/blog/ai-neural-interfaces-2026" className="underline hover:text-yellow-200">Neural Interfaces</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-space-tech-2026" className="underline hover:text-yellow-200">Space AI Tech</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-synthetic-data-2026" className="underline hover:text-yellow-200">Synthetic Data</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-neural-interface-success-2026" className="underline hover:text-yellow-200">$100M ROI Success</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/services/ai-neural-interfaces" className="underline hover:text-yellow-200">Neural Interface Services</Link>
-=======
             <span>🚀 BREAKING 2026:</span>
-            <Link href="/blog/ai-next-generation-autonomous-systems-2026" className="underline hover:text-yellow-200">Next-Gen Autonomous Systems</Link>
+            <Link href="/blog/ai-quantum-computing-breakthrough-2026" className="underline hover:text-yellow-200">Quantum AI Breakthrough</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-neural-architecture-optimization-2026" className="underline hover:text-yellow-200">Neural Architecture Optimization</Link>
+            <Link href="/blog/ai-autonomous-enterprise-2026" className="underline hover:text-yellow-200">Autonomous Enterprise</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-synthetic-data-2026" className="underline hover:text-yellow-200">Privacy-Preserving AI</Link>
+            <Link href="/case-studies/ai-quantum-enterprise-transformation-2026" className="underline hover:text-yellow-200">$50M ROI Success</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/services/ai-synthetic-data-generation" className="underline hover:text-yellow-200">Synthetic Data Service</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-autonomous-infrastructure-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
->>>>>>> cursor/create-and-deploy-new-content-f94c
+            <Link href="/services/ai-synthetic-data-generation" className="underline hover:text-yellow-200">Quantum AI Services</Link>
           </div>
           <Link
             href="/blog"
@@ -82,22 +67,22 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              href="/blog/ai-neural-interfaces-2026"
+              href="/blog/ai-quantum-computing-breakthrough-2026"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
             >
-              🧠 Neural Interfaces 2026
+              ⚛️ Quantum AI Breakthrough
             </Link>
             <Link
-              href="/blog/ai-space-tech-2026"
+              href="/blog/ai-autonomous-enterprise-2026"
               className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
             >
-              🚀 Space AI Technology
+              🤖 Autonomous Enterprise
             </Link>
             <Link
-              href="/case-studies/ai-neural-interface-success-2026"
+              href="/case-studies/ai-quantum-enterprise-transformation-2026"
               className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-teal-700 transition-all shadow-lg hover:shadow-xl"
             >
-              📊 $25M Success Story
+              📊 $50M ROI Success
             </Link>
             <a
               href="tel:+13024640950"
