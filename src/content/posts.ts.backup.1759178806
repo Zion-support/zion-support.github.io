@@ -10,15 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
+    slug: "ai-guardrails-policy-tests-2026",
+    title: "AI Guardrails Policy Tests 2026: Ship Fast, Stay Safe",
+    description: "Lightweight policy tests, PR gates, and online canaries wired to KPIs that teams actually adopt.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-retrieval-blueprint-2026",
+    title: "Edge Retrieval Blueprint 2026: Hybrid Search Under 100ms",
+    description: "Blend sparse + dense with geo caches and freshness windows for private, real‑time answers at the edge.",
+    category: "Edge Computing",
+=======
     slug: "ai-agents-in-the-enterprise-2026",
     title: "AI Agents in the Enterprise 2026: From Pilots to Production",
     description: "Design agent workflows with deterministic tools, traces, and budgets that scale across teams.",
     category: "GenAI",
+>>>>>>> origin/cursor/create-and-deploy-new-content-f34d
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "8 min read"
   },
   {
+<<<<<<< HEAD
+=======
     slug: "platform-roi-scorecards-v3-2026",
     title: "Platform ROI Scorecards v3: Leading Indicators That Move the Business",
     description: "Adoption, golden-path TTFX, and reliability signals that shift focus from costs to shipped value.",
@@ -37,6 +55,7 @@ export const posts: BlogPost[] = [
     readTime: "6 min read"
   },
   {
+>>>>>>> origin/cursor/create-and-deploy-new-content-f34d
     slug: "ai-reliable-rag-ops-2026",
     title: "Reliable RAG Ops 2026: Freshness Windows, Drift Alerts, Budgets",
     description: "Keep RAG quality high with TTL windows, drift detectors, and KPI‑tied quality budgets.",

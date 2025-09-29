@@ -150,6 +150,22 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
+<<<<<<< HEAD
+          title="New: Guardrails Policy Tests 2026 + Edge Retrieval Blueprint"
+          description="Ship fast with measurable guardrails and sub‑100ms hybrid retrieval at the edge."
+          ctaText="Explore new content"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "AI Guardrails Policy Tests 2026", category: "AI Strategy", link: "/blog/ai-guardrails-policy-tests-2026" },
+            { title: "Edge Retrieval Blueprint 2026", category: "Edge Computing", link: "/blog/edge-retrieval-blueprint-2026" },
+            { title: "Reliable RAG Ops 2026", category: "GenAI", link: "/blog/reliable-rag-ops-2026" },
+            { title: "Platform KPIs 2026", category: "Platform Engineering", link: "/blog/platform-kpis-2026" },
+            { title: "Privacy‑Preserving Analytics", category: "Observability", link: "/blog/privacy-preserving-analytics-2025" },
+            { title: "AI Incident Budgets 2026", category: "Security", link: "/blog/ai-incident-budgets-2026" },
+            { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
+            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" },
+            { title: "Golden Paths ROI 2026", category: "Platform Engineering", link: "/blog/golden-paths-roi-2026" }
+=======
           title="New: Enterprise AI Agents, Platform ROI v3, Privacy‑Preserving Agents"
           description="Ship trustworthy agents, prove platform ROI, and keep telemetry PII‑safe."
           ctaText="Explore new content"
@@ -160,6 +176,7 @@ const Home = () => {
             { title: "Privacy‑Preserving Agents", category: "AI Security", link: "/blog/privacy-preserving-agents-2026" },
             { title: "Reliable RAG Ops 2026", category: "GenAI", link: "/blog/reliable-rag-ops-2026" },
             { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" }
+>>>>>>> origin/cursor/create-and-deploy-new-content-f34d
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
