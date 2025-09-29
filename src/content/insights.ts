@@ -9,133 +9,34 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
-    id: "platform-blueprints-golden-paths",
-    title: "Golden Paths That Actually Get Used",
+    id: "ai-governance-rubric",
+    title: "A Lightweight Rubric for AI Governance Decisions",
     summary:
-      "How to design developer workflows, templates, and scorecards that reduce cognitive load.",
-    category: "Platform Engineering",
+      "When to require human‑in‑the‑loop, what to log, and how to audit outputs across teams.",
+    category: "AI Governance",
     date: "2025-09-29",
-    readMinutes: 6,
+    readMinutes: 5,
   },
   {
-    id: "governance-policy-testing",
-    title: "Governance for AI: Policy Testing That Scales",
+    id: "edge-cache-invalidation",
+    title: "Edge Cache Invalidation Strategies That Won't Wake You Up",
     summary:
-      "From prompt policies to red‑team playbooks: techniques to continuously validate AI behavior.",
-    category: "Risk & Compliance",
-    date: "2025-09-29",
-    readMinutes: 8,
-  },
-  {
-    id: "ltv-cpa-playbook",
-    title: "An Operator’s Playbook for LTV:CPA Ratio",
-    summary:
-      "Instrumentation, cohorting, and experimentation to consistently improve unit economics.",
-    category: "Product Analytics",
-    date: "2025-09-29",
-    readMinutes: 6,
-  },
-  {
-    id: "reliable-real-time-pipelines",
-    title: "Building Reliable Real‑Time Data Pipelines",
-    summary:
-      "Exactly‑once semantics, schema evolution, and backpressure handling in streaming systems.",
-    category: "Data Engineering",
-    date: "2025-09-29",
-    readMinutes: 7,
-  },
-  {
-    id: "llm-guardrails-prod",
-    title: "Shipping LLM Guardrails Without Killing Velocity",
-    summary:
-      "Policy-as-code, prompt hygiene, and eval gates that scale from POC to prod.",
-    category: "GenAI",
-    date: "2025-09-29",
-    readMinutes: 7,
-  },
-  {
-    id: "edge-ai-case-studies",
-    title: "How Edge AI Is Powering Real‑Time Experiences",
-    summary:
-      "A look at on‑device models, streaming pipelines, and cost/perf trade‑offs from 3 deployments.",
-    category: "AI Engineering",
-    date: "2025-09-29",
-    readMinutes: 7,
-  },
-  {
-    id: "platform-engineering-golden-paths",
-    title: "Golden Paths for Platform Engineering: Reduce Cognitive Load",
-    summary:
-      "Standardized templates, scorecards, and paved roads that keep product teams shipping.",
-    category: "Platform Engineering",
-    date: "2025-09-29",
-    readMinutes: 6,
-  },
-  {
-    id: "data-contracts-in-practice",
-    title: "Data Contracts in Practice: Stop Breaking Your Dashboards",
-    summary:
-      "Contract-first schemas, change management, and lineage that make analytics reliable again.",
-    category: "Data Engineering",
+      "Versioned keys, background warming, and circuit breakers for resilient edge experiences.",
+    category: "Architecture",
     date: "2025-09-28",
-    readMinutes: 7,
-  },
-  {
-    id: "ml-in-prod-e2e",
-    title: "ML in Production: An End-to-End Delivery Blueprint",
-    summary:
-      "From labeling to rollout: evals, feature stores, and shadow deploys that derisk launches.",
-    category: "MLOps",
-    date: "2025-09-27",
-    readMinutes: 9,
-  },
-  {
-    id: "security-threat-modeling-sprints",
-    title: "Threat Modeling Sprints That Teams Actually Enjoy",
-    summary:
-      "Lightweight rituals, checklists, and tooling to embed security without slowing velocity.",
-    category: "Security",
-    date: "2025-09-27",
     readMinutes: 6,
   },
   {
-    id: "governance-ai-policy-testing",
-    title: "Governance for AI: Policy Testing That Scales",
+    id: "genai-telemetry-metrics",
+    title: "GenAI Telemetry: The 8 Metrics That Predict Drift",
     summary:
-      "From prompt policies to red‑team playbooks: techniques to continuously validate AI behavior.",
-    category: "Risk & Compliance",
-    date: "2025-09-29",
-    readMinutes: 8,
-  },
-  {
-    id: "llm-security-redteaming",
-    title: "LLM Security: A Practical Red‑Teaming Handbook",
-    summary:
-      "Common attack surfaces, jailbreak detection, and layered defenses for enterprise LLM apps.",
-    category: "Security",
-    date: "2025-09-29",
-    readMinutes: 10,
-  },
-  {
-    id: "ai-buy-build-economics-2025",
-    title: "Buy vs. Build for AI: 2025 Economics and Decision Tree",
-    summary:
-      "A CFO‑friendly model for TCO, data gravity, and competitive differentiation in AI investments.",
-    category: "Strategy",
-    date: "2025-09-29",
+      "Capture inputs, policies, and human feedback signals to detect regressions before users do.",
+    category: "GenAI",
+    date: "2025-09-27",
     readMinutes: 7,
   },
   {
-    id: "genai-eval-playbook-2025",
-    title: "A Practical Evaluation Playbook for GenAI Apps",
-    summary:
-      "How to stand up robust offline and online evals, define quality bars, and ship with confidence.",
-    category: "GenAI",
-    date: "2025-09-29",
-    readMinutes: 8,
-  },
-  {
-    id: "observability-opentelemetry-guide",
+    id: "observability-otel-traces-that-matter",
     title: "OpenTelemetry in Production: Traces That Engineers Actually Use",
     summary:
       "Sampling strategies, semantic conventions, and dashboards that shrink MTTR for complex stacks.",
@@ -157,6 +58,7 @@ export const latestInsights: InsightArticle[] = [
     title: "North‑Star Metrics: A Field Guide",
     summary:
       "A practical approach to defining leading indicators that align teams to outcomes.",
+<<<<<<< HEAD
     category: "Product Analytics",
     date: "2025-09-28",
     readMinutes: 7,
@@ -193,62 +95,10 @@ export const latestInsights: InsightArticle[] = [
     title: "An Operator’s Playbook for LTV:CPA Ratio",
     summary:
       "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
+=======
+>>>>>>> origin/main
     category: "Product Analytics",
-    date: "2025-09-29",
-    readMinutes: 6,
-  },
-  {
-    id: "cloud-cost-qa-automation",
-    title: "QA Gates That Keep Cloud Costs From Creeping",
-    summary:
-      "Cost-aware tests, CI policies, and dashboards that prevent regressions before they ship.",
-    category: "Cloud FinOps",
-    date: "2025-09-27",
-    readMinutes: 6,
-  },
-  {
-    id: "security-sbom-supply-chain",
-    title: "Shipping a Secure SBOM and Hardening Your Supply Chain",
-    summary:
-      "Step-by-step guidance to produce SBOMs, lock dependencies, and detect tampering early.",
-    category: "Security",
-    date: "2025-09-27",
-    readMinutes: 7,
-  },
-  {
-    id: "operationalizing-genai",
-    title: "Operationalizing GenAI Safely and at Scale",
-    summary:
-      "Practical blueprints for evaluation, policy testing, and observability across the GenAI lifecycle.",
-    category: "MLOps",
-    date: "2025-09-25",
-    readMinutes: 9,
-  },
-  {
-    id: "zero-trust-saas",
-    title: "Zero‑Trust in Practice for SaaS",
-    summary:
-      "Least‑privilege by default, continuous verification, and blast radius controls that actually work.",
-    category: "Security",
-    date: "2025-09-24",
-    readMinutes: 6,
-  },
-  {
-    id: "north-star-metrics",
-    title: "North‑Star Metrics That Actually Drive Growth",
-    summary:
-      "Define actionable metrics, avoid vanity traps, and align teams to measurable outcomes.",
-    category: "Product Analytics",
-    date: "2025-09-22",
-    readMinutes: 5,
-  },
-  {
-    id: "real-time-pipelines-reliability",
-    title: "Building Reliable Real‑Time Data Pipelines",
-    summary:
-      "Patterns for exactly‑once semantics, schema evolution, and backpressure handling in streaming systems.",
-    category: "Data Engineering",
-    date: "2025-09-20",
+    date: "2025-09-28",
     readMinutes: 7,
   },
   {
@@ -276,6 +126,141 @@ export const latestInsights: InsightArticle[] = [
       "A no‑nonsense playbook for data quality, lineage, and access controls you can adopt this quarter.",
     category: "Data",
     date: "2025-07-18",
+    readMinutes: 8,
+  },
+  {
+    id: "ai-workflow-automation-2025-trends",
+    title: "AI Workflow Automation: 2025 Trends That Will Transform Business",
+    summary:
+      "Discover the latest trends in AI workflow automation that are reshaping how businesses operate and compete in 2025.",
+    category: "AI & Automation",
+    date: "2025-01-17",
+    readMinutes: 6,
+  },
+  {
+    id: "quantum-computing-business-ready",
+    title: "Quantum Computing: When Will It Be Business-Ready?",
+    summary:
+      "An honest assessment of quantum computing's current capabilities and realistic timeline for business applications.",
+    category: "Quantum Computing",
+    date: "2025-01-17",
+    readMinutes: 7,
+  },
+  {
+    id: "edge-ai-real-world-deployments",
+    title: "Edge AI: Real-World Deployments That Are Working Today",
+    summary:
+      "Case studies from manufacturing, healthcare, and retail showing how edge AI is delivering measurable results.",
+    category: "Edge Computing",
+    date: "2025-01-16",
+    readMinutes: 8,
+  },
+  {
+    id: "zero-trust-implementation-guide",
+    title: "Zero Trust Implementation: A Practical Guide for 2025",
+    summary:
+      "Step-by-step guide to implementing Zero Trust security architecture without breaking your existing workflows.",
+    category: "Security",
+    date: "2025-01-15",
+    readMinutes: 9,
+  },
+  {
+    id: "ai-virtual-assistant-roi",
+    title: "AI Virtual Assistants: Measuring ROI and Business Impact",
+    summary:
+      "How to quantify the business value of AI virtual assistants and ensure your investment delivers real results.",
+    category: "AI & Automation",
+    date: "2025-01-14",
+    readMinutes: 5,
+  },
+  {
+    id: "micro-saas-platform-selection",
+    title: "Choosing the Right Micro SAAS Platforms for Your Business",
+    summary:
+      "A framework for evaluating and selecting micro SAAS platforms that align with your business goals and budget.",
+    category: "Technology",
+    date: "2025-01-13",
+    readMinutes: 6,
+  },
+  {
+    id: "data-analytics-ai-transformation",
+    title: "Data Analytics Transformation: From Static Reports to AI Insights",
+    summary:
+      "How AI is transforming traditional data analytics into dynamic, predictive, and actionable business intelligence.",
+    category: "Data Analytics",
+    date: "2025-01-12",
+    readMinutes: 7,
+  },
+  {
+    id: "cybersecurity-threat-landscape-2025",
+    title: "2025 Cybersecurity Threat Landscape: What Businesses Need to Know",
+    summary:
+      "The evolving threat landscape and emerging security challenges that businesses must prepare for in 2025.",
+    category: "Security",
+    date: "2025-01-11",
+    readMinutes: 8,
+  },
+  {
+    id: "cloud-edge-hybrid-architecture",
+    title: "Cloud-Edge Hybrid Architecture: Best Practices for 2025",
+    summary:
+      "Designing and implementing hybrid cloud-edge architectures that optimize performance, cost, and security.",
+    category: "Cloud Computing",
+    date: "2025-01-10",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-ethics-business-implementation",
+    title: "AI Ethics in Business: Practical Implementation Guidelines",
+    summary:
+      "How to implement ethical AI practices in your business operations while maintaining competitive advantage.",
+    category: "AI Ethics",
+    date: "2025-01-09",
+    readMinutes: 7,
+  },
+  {
+    id: "iot-security-best-practices",
+    title: "IoT Security: Best Practices for Connected Device Protection",
+    summary:
+      "Comprehensive security strategies for protecting IoT devices and networks from emerging threats.",
+    category: "IoT Security",
+    date: "2025-01-08",
+    readMinutes: 6,
+  },
+  {
+    id: "blockchain-business-applications",
+    title: "Blockchain Beyond Cryptocurrency: Real Business Applications",
+    summary:
+      "Exploring practical blockchain applications in supply chain, finance, and digital identity management.",
+    category: "Blockchain",
+    date: "2025-01-07",
+    readMinutes: 8,
+  },
+  {
+    id: "5g-business-transformation",
+    title: "5G and Business Transformation: Opportunities and Challenges",
+    summary:
+      "How 5G technology is enabling new business models and transforming industries across the globe.",
+    category: "5G Technology",
+    date: "2025-01-06",
+    readMinutes: 7,
+  },
+  {
+    id: "digital-transformation-2025",
+    title: "Digital Transformation in 2025: Trends and Strategies",
+    summary:
+      "The latest trends in digital transformation and how businesses can adapt to stay competitive.",
+    category: "Digital Transformation",
+    date: "2025-01-05",
+    readMinutes: 6,
+  },
+  {
+    id: "genai-guardrails-in-production",
+    title: "GenAI Guardrails in Production: Policy Tests That Scale",
+    summary:
+      "From offline eval suites to online canaries: patterns that keep quality and safety high as usage grows.",
+    category: "GenAI",
+    date: "2025-09-29",
     readMinutes: 8,
   },
 ];

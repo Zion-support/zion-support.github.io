@@ -133,76 +133,6 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
   },
   {
-    slug: "edge-cache-invalidation-strategies",
-    title: "Edge Cache Invalidation Strategies That Won't Wake You Up",
-    description:
-      "Versioned keys, background warming, and circuit breakers for resilient edge experiences.",
-    category: "Architecture",
-    publishedAt: "2025-09-28",
-    featured: false,
-    readTime: "6 min read",
-  },
-  {
-    slug: "otel-traces-that-matter",
-    title: "OpenTelemetry in Production: Traces That Engineers Actually Use",
-    description:
-      "Sampling strategies, semantic conventions, and dashboards that shrink MTTR for complex stacks.",
-    category: "Observability",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "7 min read",
-  },
-  {
-    slug: "platform-scorecards-that-stick",
-    title: "Platform Scorecards That Actually Drive Adoption",
-    description:
-      "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
-    category: "Platform Engineering",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "9 min read",
-  },
-  {
-    slug: "north-star-metrics-that-drive-growth",
-    title: "North‑Star Metrics That Actually Drive Growth",
-    description:
-      "Define actionable metrics, avoid vanity traps, and align teams to measurable outcomes.",
-    category: "Product Analytics",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "6 min read",
-  },
-  {
-    slug: "ai-governance-checklist-2025",
-    title: "AI Governance Checklist 2025: Ship Fast Without Breaking Policy",
-    description:
-      "Practical guardrails, review rituals, and approval flows to keep GenAI initiatives compliant and on‑track.",
-    category: "AI Governance",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "5 min read",
-  },
-  {
-    slug: "realtime-feature-flags-edge",
-    title: "Real‑Time Feature Flags at the Edge",
-    description:
-      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
-    category: "Architecture",
-    publishedAt: "2025-09-28",
-    featured: false,
-    readTime: "6 min read",
-  },
-  {
-    slug: "prompt-engineering-playbook-v2",
-    title: "Prompt Engineering Playbook v2: Patterns That Survive Production",
-    description:
-      "Composable prompts, eval‑driven iteration, and telemetry for robust GenAI applications.",
-    category: "GenAI",
-    publishedAt: "2025-09-27",
-    featured: true,
-    readTime: "8 min read",
-  },
-  {
     slug: "ai-workflow-automation-2025-guide",
     title: "The Complete Guide to AI Workflow Automation in 2025",
     description:
@@ -211,36 +141,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-01-17",
     featured: true,
     readTime: "8 min read",
-  },
-  {
-    slug: "ai-governance-policy-testing-playbook",
-    title: "AI Governance Playbook: Policy Testing That Scales",
-    description:
-      "Guardrails that don't slow teams: policy-as-code, prompt hygiene, and continuous evaluation.",
-    category: "AI Governance",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "9 min read",
-  },
-  {
-    slug: "platform-scorecards-golden-paths",
-    title: "Golden Path Scorecards That Reduce Cognitive Load",
-    description:
-      "Design templates, scorecards, and paved roads that keep product teams shipping fast.",
-    category: "Platform Engineering",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "6 min read",
-  },
-  {
-    slug: "cloud-finops-qa-gates",
-    title: "QA Gates That Keep Cloud Costs From Creeping",
-    description:
-      "Practical CI policies, cost-aware tests, and dashboards to prevent regressions before they ship.",
-    category: "Cloud FinOps",
-    publishedAt: "2025-09-27",
-    featured: false,
-    readTime: "7 min read",
   },
   {
     slug: "platform-engineering-blueprint-2025",
