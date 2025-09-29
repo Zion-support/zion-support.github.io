@@ -96,6 +96,7 @@ function Footer() {
               <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🧠 Cognitive Computing Breakthrough</Link>
               <Link href="/blog/ai-autonomous-business-systems-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🤖 Autonomous Business Systems</Link>
               <Link href="/blog/ai-quantum-hybrid-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">⚛️ Quantum Hybrid Computing</Link>
+              <Link href="/case-studies/ai-sustainability-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🌱 $10M Sustainability ROI</Link>
               <Link href="/case-studies/ai-autonomous-business-systems-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">📊 $15M ROI Success Story</Link>
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Case Studies
