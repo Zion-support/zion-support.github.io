@@ -213,6 +213,38 @@ const Home = () => {
               </p>
             </div>
 
+            {/* New Content Highlight */}
+            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-8 animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
+                <span className="text-lg font-bold text-purple-400">NEW CONTENT ALERT</span>
+                <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                📚 15+ New Articles & 20+ Fresh Insights Added This Week!
+              </p>
+              <p className="text-zion-slate-light text-sm mb-4">
+                AI Ethics, IoT Security, Quantum Computing, Edge AI, and Zero Trust guides from our expert team
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  to="/blog"
+                  className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+                >
+                  <Sparkles className="w-4 h-4" />
+                  Explore New Articles
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/insights"
+                  className="border border-white/30 hover:border-white/50 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+                >
+                  <TrendingUp className="w-4 h-4" />
+                  Browse Insights
+                </Link>
+              </div>
+            </div>
+
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">
               <div className="text-center group hover:scale-105 transition-all duration-300">
@@ -262,9 +294,9 @@ const Home = () => {
 
         {/* Featured Content Showcase */}
         <FeaturedContentShowcase 
-          title="Latest Technology Insights & Trends"
-          subtitle="Stay ahead with our cutting-edge research, expert analysis, and actionable insights from the world of AI, cybersecurity, and emerging technologies"
-          maxItems={6}
+          title="🔥 Fresh Technology Insights & Expert Analysis"
+          subtitle="Discover our latest research, cutting-edge analysis, and actionable insights from AI, cybersecurity, quantum computing, and emerging technologies. 15+ new articles and 20+ fresh insights added this week!"
+          maxItems={8}
           showInsights={true}
           showBlogPosts={true}
           className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
@@ -650,9 +682,17 @@ const Home = () => {
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
-            <div className="grid gap-8 md:grid-cols-3">
+            
+            {/* Featured new articles */}
+            <div className="grid gap-8 md:grid-cols-3 mb-12">
               {posts.slice(0, 3).map((post) => (
-                <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow relative">
+                  {post.featured && (
+                    <div className="absolute -top-2 -right-2 bg-gradient-to-r from-red-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                      <Sparkles className="w-3 h-3" />
+                      NEW
+                    </div>
+                  )}
                   <div className="p-6">
                     <div className="text-sm text-indigo-600 font-medium mb-2">{post.category}</div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">{post.title}</h3>
@@ -662,15 +702,42 @@ const Home = () => {
                 </article>
               ))}
             </div>
+
+            {/* Content highlights */}
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 mb-8">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">🚀 This Week's Content Highlights</h3>
+                <p className="text-gray-600">Fresh insights and expert analysis on the latest technology trends</p>
+              </div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <div className="text-2xl font-bold text-blue-600 mb-1">15+</div>
+                  <div className="text-sm text-gray-600">New Articles</div>
+                </div>
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <div className="text-2xl font-bold text-purple-600 mb-1">20+</div>
+                  <div className="text-sm text-gray-600">Fresh Insights</div>
+                </div>
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <div className="text-2xl font-bold text-green-600 mb-1">5</div>
+                  <div className="text-sm text-gray-600">New Categories</div>
+                </div>
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <div className="text-2xl font-bold text-orange-600 mb-1">10K+</div>
+                  <div className="text-sm text-gray-600">Weekly Readers</div>
+                </div>
+              </div>
+            </div>
             
             {/* Blog CTA */}
-            <div className="mt-12 text-center">
+            <div className="text-center">
               <Link
                 to="/blog"
                 className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
+                <Sparkles className="w-5 h-5" />
+                Explore All New Articles
                 <ArrowRight className="w-5 h-5" />
-                Explore All Articles
               </Link>
             </div>
           </div>

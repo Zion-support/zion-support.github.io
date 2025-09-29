@@ -1012,6 +1012,176 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 11,
   }
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0c52
+    id: "ai-ethics-implementation-framework",
+    title: "AI Ethics Implementation Framework: From Principles to Practice",
+    summary:
+      "A step-by-step framework for implementing ethical AI practices in your organization, including governance, technical implementation, and monitoring strategies.",
+    category: "AI Ethics",
+    date: "2025-01-20",
+    readMinutes: 4,
+  },
+  {
+    id: "iot-security-threat-landscape-2025",
+    title: "IoT Security Threat Landscape: What's New in 2025",
+    summary:
+      "Emerging IoT security threats and attack vectors that organizations need to prepare for, including AI-powered attacks and supply chain vulnerabilities.",
+    category: "IoT Security",
+    date: "2025-01-18",
+    readMinutes: 3,
+  },
+  {
+    id: "blockchain-business-applications-beyond-crypto",
+    title: "Blockchain Beyond Cryptocurrency: Real Business Applications",
+    summary:
+      "Exploring practical blockchain applications in supply chain, finance, and digital identity management that deliver measurable business value.",
+    category: "Blockchain",
+    date: "2025-01-17",
+    readMinutes: 5,
+  },
+  {
+    id: "5g-business-transformation-opportunities",
+    title: "5G and Business Transformation: Opportunities and Challenges",
+    summary:
+      "How 5G technology is enabling new business models and transforming industries across the globe with real-world implementation examples.",
+    category: "5G Technology",
+    date: "2025-01-16",
+    readMinutes: 4,
+  },
+  {
+    id: "digital-transformation-2025-trends",
+    title: "Digital Transformation in 2025: Trends and Strategies",
+    summary:
+      "The latest trends in digital transformation and how businesses can adapt to stay competitive in an increasingly digital world.",
+    category: "Digital Transformation",
+    date: "2025-01-15",
+    readMinutes: 6,
+  },
+  {
+    id: "cloud-edge-hybrid-architecture-best-practices",
+    title: "Cloud-Edge Hybrid Architecture: Best Practices for 2025",
+    summary:
+      "Designing and implementing hybrid cloud-edge architectures that optimize performance, cost, and security for modern applications.",
+    category: "Cloud Computing",
+    date: "2025-01-14",
+    readMinutes: 5,
+  },
+  {
+    id: "cybersecurity-threat-landscape-2025",
+    title: "2025 Cybersecurity Threat Landscape: What Businesses Need to Know",
+    summary:
+      "The evolving threat landscape and emerging security challenges that businesses must prepare for in 2025, including AI-powered attacks.",
+    category: "Security",
+    date: "2025-01-13",
+    readMinutes: 4,
+  },
+  {
+    id: "data-analytics-ai-transformation",
+    title: "Data Analytics Transformation: From Static Reports to AI Insights",
+    summary:
+      "How AI is transforming traditional data analytics into dynamic, predictive, and actionable business intelligence that drives real results.",
+    category: "Data Analytics",
+    date: "2025-01-12",
+    readMinutes: 4,
+  },
+  {
+    id: "micro-saas-platform-selection-framework",
+    title: "Choosing the Right Micro SAAS Platforms for Your Business",
+    summary:
+      "A framework for evaluating and selecting micro SAAS platforms that align with your business goals and budget constraints.",
+    category: "Technology",
+    date: "2025-01-11",
+    readMinutes: 3,
+  },
+  {
+    id: "ai-virtual-assistant-roi-measurement",
+    title: "AI Virtual Assistants: Measuring ROI and Business Impact",
+    summary:
+      "How to quantify the business value of AI virtual assistants and ensure your investment delivers real, measurable results.",
+    category: "AI & Automation",
+    date: "2025-01-10",
+    readMinutes: 4,
+  },
+  {
+    id: "zero-trust-implementation-practical-guide",
+    title: "Zero Trust Implementation: A Practical Guide for 2025",
+    summary:
+      "Step-by-step guide to implementing Zero Trust security architecture without breaking your existing workflows or productivity.",
+    category: "Security",
+    date: "2025-01-09",
+    readMinutes: 5,
+  },
+  {
+    id: "edge-ai-real-world-deployments",
+    title: "Edge AI: Real-World Deployments That Are Working Today",
+    summary:
+      "Case studies from manufacturing, healthcare, and retail showing how edge AI is delivering measurable results and competitive advantages.",
+    category: "Edge Computing",
+    date: "2025-01-08",
+    readMinutes: 6,
+  },
+  {
+    id: "quantum-computing-business-ready-assessment",
+    title: "Quantum Computing: When Will It Be Business-Ready?",
+    summary:
+      "An honest assessment of quantum computing's current capabilities and realistic timeline for business applications and ROI.",
+    category: "Quantum Computing",
+    date: "2025-01-07",
+    readMinutes: 4,
+  },
+  {
+    id: "ai-workflow-automation-2025-trends",
+    title: "AI Workflow Automation: 2025 Trends That Will Transform Business",
+    summary:
+      "Discover the latest trends in AI workflow automation that are reshaping how businesses operate and compete in 2025.",
+    category: "AI & Automation",
+    date: "2025-01-06",
+    readMinutes: 5,
+  },
+  {
+    id: "data-governance-starter-guide",
+    title: "Data Governance Starter Guide for Mid‑Market Teams",
+    summary:
+      "A no‑nonsense playbook for data quality, lineage, and access controls you can adopt this quarter to improve data management.",
+    category: "Data",
+    date: "2025-01-05",
+    readMinutes: 6,
+  },
+  {
+    id: "cloud-cost-optimization-90-days",
+    title: "Cloud Cost Optimization: 9 Wins in 90 Days",
+    summary:
+      "How we helped three clients reduce cloud spend by 32% on average without sacrificing performance or development velocity.",
+    category: "Cloud",
+    date: "2025-01-04",
+    readMinutes: 4,
+  },
+  {
+    id: "secure-ml-pipelines-production",
+    title: "Securing Machine Learning Pipelines in Production",
+    summary:
+      "Practical steps to harden data flows, model registries, and deployment targets for ML systems in production environments.",
+    category: "Security",
+    date: "2025-01-03",
+    readMinutes: 5,
+  },
+  {
+    id: "platform-engineering-blueprint-2025",
+    title: "Platform Engineering Blueprint 2025",
+    summary:
+      "Golden paths, paved roads, and product thinking to scale developer experience across hundreds of teams efficiently.",
+    category: "Platform Engineering",
+    date: "2025-01-02",
+    readMinutes: 7,
+  },
+  {
+    id: "observability-otel-traces-that-matter",
+    title: "OpenTelemetry in Production: Traces That Engineers Actually Use",
+    summary:
+      "Sampling strategies, semantic conventions, and dashboards that shrink MTTR for complex stacks and improve debugging efficiency.",
+    category: "Observability",
+    date: "2025-01-01",
+    readMinutes: 6,
+  }
+>>>>>>> origin/cursor/create-and-deploy-new-content-4fae
 ];
 
