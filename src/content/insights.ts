@@ -9,60 +9,6 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
-<<<<<<< HEAD
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
     id: "serverless-warm-pools-playbook",
     title: "Serverless Warm Pools: Cut Cold Starts, Not Corners",
     summary:
@@ -104,18 +50,19 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "Version events, enforce schemas, and run backfills without double‑processing.",
     category: "Architecture",
-=======
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
     id: "ai-governance-at-scale-2025",
     title: "AI Governance at Scale: Policies That Enable Speed",
     summary:
       "A pragmatic model for approvals, policy tests, and observability that unlocks faster AI delivery.",
     category: "AI Governance",
->>>>>>> origin/main
     date: "2025-09-30",
     readMinutes: 6,
   },
   {
-<<<<<<< HEAD
     id: "zero-downtime-migrations",
     title: "Zero‑Downtime Migrations: Patterns that Keep Pages Green",
     summary:
@@ -139,21 +86,19 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "Pick leading indicators, instrument baselines, and report outcomes without vanity metrics.",
     category: "AI Strategy",
-=======
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
     id: "edge-observability-blueprint",
     title: "Edge Observability Blueprint: Sub‑100ms Reliability",
     summary:
       "Latency budgets, client ↔ edge traces, and error budgets that keep UX snappy.",
     category: "Observability",
->>>>>>> origin/main
     date: "2025-09-30",
     readMinutes: 5,
   },
   {
-<<<<<<< HEAD
->>>>>>> feature/new-content-and-promo
-=======
->>>>>>> origin/main
     id: "genai-policy-tests-canaries",
     title: "GenAI Policy Tests: From Offline Suites to Online Canaries",
     summary:
