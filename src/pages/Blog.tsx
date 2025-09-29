@@ -67,6 +67,57 @@ const Blog: React.FC = () => {
               <a href="#" className="text-emerald-600 font-medium hover:text-emerald-700">Read more →</a>
             </div>
           </article>
+
+        {/* Article 4 */}
+        <article className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div className="p-6">
+            <div className="text-sm text-blue-600 font-medium mb-2">Data Engineering</div>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-3">Building Reliable Real-Time Data Pipelines</h2>
+            <p className="text-gray-600 mb-4">
+              Patterns and trade-offs for event-driven architectures that scale, stay observable, and minimize latency.
+            </p>
+            <ul className="list-disc list-inside text-gray-600 space-y-1 mb-4">
+              <li>Exactly-once semantics strategies</li>
+              <li>Schema evolution without downtime</li>
+              <li>Cost-aware streaming with backpressure</li>
+            </ul>
+            <a href="#" className="text-blue-600 font-medium hover:text-blue-700">Read more →</a>
+          </div>
+        </article>
+
+        {/* Article 5 */}
+        <article className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div className="p-6">
+            <div className="text-sm text-orange-600 font-medium mb-2">Product Analytics</div>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-3">North-Star Metrics That Actually Drive Growth</h2>
+            <p className="text-gray-600 mb-4">
+              How to define actionable metrics, avoid vanity traps, and align teams around measurable outcomes.
+            </p>
+            <ul className="list-disc list-inside text-gray-600 space-y-1 mb-4">
+              <li>Activation vs. retention trade-offs</li>
+              <li>Cohort-based experimentation</li>
+              <li>Leading indicators for monetization</li>
+            </ul>
+            <a href="#" className="text-orange-600 font-medium hover:text-orange-700">Read more →</a>
+          </div>
+        </article>
+
+        {/* Article 6 */}
+        <article className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div className="p-6">
+            <div className="text-sm text-purple-600 font-medium mb-2">MLOps</div>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-3">Operationalizing GenAI Safely and at Scale</h2>
+            <p className="text-gray-600 mb-4">
+              Practical blueprints for evaluation, monitoring, and guardrails across the GenAI lifecycle.
+            </p>
+            <ul className="list-disc list-inside text-gray-600 space-y-1 mb-4">
+              <li>Evaluation harnesses and benchmarks</li>
+              <li>Prompt, policy, and safety testing</li>
+              <li>Observability for drift and hallucinations</li>
+            </ul>
+            <a href="#" className="text-purple-600 font-medium hover:text-purple-700">Read more →</a>
+          </div>
+        </article>
         </div>
 
         {/* Newsletter CTA */}
