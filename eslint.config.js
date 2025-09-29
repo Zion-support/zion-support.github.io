@@ -141,7 +141,10 @@ export default [
       ...reactHooks.configs.recommended.rules,
       
       'no-console': 'warn',
-      'no-undef': 'error',
+      // Types like HTMLDivElement are provided by TypeScript; disable base rule
+      'no-undef': 'off',
+      // Allow re-declaration patterns common with TypeScript ambient types
+      'no-redeclare': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
       'react/no-unescaped-entities': 'warn',
