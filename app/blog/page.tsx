@@ -54,6 +54,24 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="AI Supply Chain Automation 2026: Real-Time, Resilient, Efficient"
+            excerpt="Autonomous forecasting, planning, and fulfillment with policy guardrails and ROI scorecards."
+            date="October 10, 2025"
+            category="Operations"
+            readTime="14 min"
+            image="📦"
+            href="/blog/ai-supply-chain-automation-2026"
+          />
+          <BlogPost
+            title="AI Go-To-Market Plays 2026: Enterprise Adoption that Sticks"
+            excerpt="Positioning, proof, procurement, and post‑sale value to accelerate pipeline."
+            date="October 10, 2025"
+            category="Growth"
+            readTime="12 min"
+            image="📣"
+            href="/blog/ai-go-to-market-plays-2026"
+          />
+          <BlogPost
             title="Platform Engineering Scorecards 2026: From Golden Paths to Outcomes"
             excerpt="Measure adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery."
             date="October 9, 2025"
