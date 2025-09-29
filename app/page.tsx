@@ -14,6 +14,8 @@ import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase20
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
+import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
+import InteractiveContentRecommendation2026 from '../components/InteractiveContentRecommendation2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -29,26 +31,29 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>🚀 BREAKTHROUGH 2026:</span>
-            <Link href="/blog/ai-autonomous-enterprise-2026" className="underline hover:text-yellow-200 font-semibold">Autonomous Enterprise</Link>
+            <Link href="/blog/ai-2026-mega-breakthrough" className="underline hover:text-yellow-200 font-semibold">Mega Breakthrough Guide</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-mega-transformation-success-2026" className="underline hover:text-yellow-200 font-semibold">$150M ROI Success Story</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-quantum-optimization-2026" className="underline hover:text-yellow-200 font-semibold">Quantum AI (1000x Faster)</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200 font-semibold">$25M ROI Success Story</Link>
+            <Link href="/blog/ai-autonomous-enterprise-2026" className="underline hover:text-yellow-200">Autonomous Enterprise</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">Agent Orchestration</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-platform-architecture-2026" className="underline hover:text-yellow-200">Platform Architecture</Link>
+            <Link href="/content-hub" className="underline hover:text-yellow-200">Content Hub</Link>
           </div>
           <Link
-            href="/blog"
+            href="/content-hub"
             className="bg-white text-indigo-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
           >
-            Explore All Content →
+            Explore Content Hub →
           </Link>
         </div>
       </div>
       {/* AI Innovation 2026 Promotional Banner */}
       <AIInnovation2026PromotionalBanner />
+      
+      {/* New Content 2026 Mega Banner */}
+      <NewContent2026MegaBanner />
       
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
@@ -1870,6 +1875,9 @@ export default function HomePage() {
 
       {/* Interactive Content Recommendation */}
       <InteractiveContentRecommendation />
+
+      {/* Interactive Content Recommendation 2026 */}
+      <InteractiveContentRecommendation2026 />
 
       {/* CTA Section */}
       <section className="py-20 bg-white">
