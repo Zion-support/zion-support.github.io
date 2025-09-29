@@ -93,14 +93,17 @@ function Footer() {
                 Blog
                 <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
               </Link>
-              <Link href="/blog/ai-autonomous-enterprise-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Autonomous Enterprise 2026</Link>
-              <Link href="/blog/ai-quantum-hybrid-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">⚡ Quantum AI Computing</Link>
-              <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">📊 $25M Success Story</Link>
-              <Link href="/case-studies/ai-sustainability-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🌱 $10M Sustainability ROI</Link>
+              <Link href="/blog/ai-2026-mega-breakthroughs" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 AI Mega Breakthroughs 2026</Link>
+              <Link href="/blog/ai-quantum-computing-breakthrough-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">⚡ Quantum AI (1000x Faster)</Link>
+              <Link href="/blog/ai-sustainability-green-tech-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🌱 Carbon Neutral AI</Link>
+              <Link href="/blog/ai-future-workplace-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🏢 Future Workplace 2026</Link>
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Case Studies
                 <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
               </Link>
+              <Link href="/case-studies/ai-mega-transformation-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">📊 $100M ROI Success</Link>
+              <Link href="/case-studies/ai-quantum-optimization-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🔬 Quantum Optimization</Link>
+              <Link href="/case-studies/ai-sustainability-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🌍 Carbon Neutral Success</Link>
             </div>
           </div>
           <div>

@@ -29,15 +29,15 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>🚀 BREAKTHROUGH 2026:</span>
-            <Link href="/blog/ai-autonomous-enterprise-2026" className="underline hover:text-yellow-200 font-semibold">Autonomous Enterprise</Link>
+            <Link href="/blog/ai-2026-mega-breakthroughs" className="underline hover:text-yellow-200 font-semibold">Mega Breakthroughs</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-quantum-optimization-2026" className="underline hover:text-yellow-200 font-semibold">Quantum AI (1000x Faster)</Link>
+            <Link href="/blog/ai-quantum-computing-breakthrough-2026" className="underline hover:text-yellow-200 font-semibold">Quantum AI (1000x Faster)</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200 font-semibold">$25M ROI Success Story</Link>
+            <Link href="/case-studies/ai-mega-transformation-success-2026" className="underline hover:text-yellow-200 font-semibold">$100M ROI Success</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">Agent Orchestration</Link>
+            <Link href="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">Carbon Neutral AI</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-platform-architecture-2026" className="underline hover:text-yellow-200">Platform Architecture</Link>
+            <Link href="/blog/ai-future-workplace-2026" className="underline hover:text-yellow-200">Future Workplace</Link>
           </div>
           <Link
             href="/blog"
@@ -77,16 +77,16 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              href="/blog/ai-innovation-2026-revolution"
+              href="/blog/ai-2026-mega-breakthroughs"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
             >
-              🚀 Read AI Innovation Guide 2026
+              🚀 Read AI Mega Breakthroughs 2026
             </Link>
             <Link
-              href="/case-studies/ai-innovation-enterprise-success-2026"
+              href="/case-studies/ai-mega-transformation-success-2026"
               className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
             >
-              🏆 View $50M Success Story
+              🏆 View $100M Success Story
             </Link>
             <a
               href="tel:+13024640950"
