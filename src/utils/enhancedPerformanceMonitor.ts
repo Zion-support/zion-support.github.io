@@ -326,8 +326,11 @@ class EnhancedPerformanceMonitor {
     impact: 'high' | 'medium' | 'low';
     action: string;
   }): void {
-    console.warn(`Performance Alert: ${alert.title} - ${alert.description}`);
-    // In a real implementation, this would send to a monitoring service
+    console.warn(`Performance Alert [${alert.type.toUpperCase()}]: ${alert.title}`, {
+      description: alert.description,
+      impact: alert.impact,
+      action: alert.action
+    });
   }
 
   public cleanup(): void {
