@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-governance-scorecards-quickstart-2026-v2",
+    title: "AI Governance Scorecards v2 (2026): Ship Fast, Stay Safe",
+    description: "Updated, lightweight scorecards + PR checks + canaries that predict outcomes without slowing teams.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-personalization-private-2026",
+    title: "Edge Personalization 2026: Private <100ms Experiences",
+    description: "Signed configs, on‑device caches, and KV patterns for realtime personalization without PII risk.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "edge-llm-caching-v2-2026",
     title: "Edge LLM Caching v2: Tiered KV, TTL Windows, Sub‑100ms",
     description: "Tiered KV caches, signed configs, and freshness windows for fast, affordable prompts.",

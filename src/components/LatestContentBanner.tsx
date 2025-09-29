@@ -138,6 +138,16 @@ const contentHighlights = [
 // Additions
 contentHighlights.push(
   {
+    id: 19,
+    title: "📊 Scorecards v2: Ship Fast, Stay Safe",
+    description: "Lightweight platform scorecards + PR checks that predict outcomes.",
+    ctaText: "Read Update",
+    ctaLink: "/blog/ai-governance-scorecards-quickstart-2026-v2",
+    badge: "Update",
+    stats: "7 min read",
+    variant: "info" as const
+  },
+  {
     id: 9,
     title: "🧠 Enterprise RAG Blueprint v2",
     description: "Hybrid search, freshness, and auth-aware retrieval with layered evals.",
