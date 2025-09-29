@@ -1,102 +1,160 @@
 import js from '@eslint/js';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
-  js.configs.recommended,
   {
-    files: ["**/*.{js,jsx,ts,tsx}"],
+    ignores: [
+      'dist/**',
+      'node_modules/**',
+      '*.config.js',
+      '*.config.ts',
+      'public/**',
+      'backup/**',
+      'src.corrupted/**',
+      'backup-problematic-files/**',
+      'src.disabled/**',
+      'src.pages.disabled/**',
+      'temp_broken_files/**',
+      'cypress/**',
+      '**/backup-problematic-files/**',
+      '**/src.disabled/**',
+      '**/src.corrupted/**',
+      '**/src.pages.disabled/**',
+      '**/temp_broken_files/**',
+      '**/cypress_backup/**',
+      '**/components.disabled/**',
+      '**/components.disabled_full/**',
+      '**/contracts.disabled/**',
+      '**/data.disabled/**',
+      '**/automation_backup/**',
+      '**/broken_files_backup/**',
+      '**/pages/**',
+      '**/store/**',
+      '**/utils/**',
+      '**/tests/**',
+      '**/vite.config-backup.*',
+      '**/test-simple.*',
+      '**/*.disabled.*',
+      '**/*.backup.*',
+      '**/*.broken.*',
+      '**/*.corrupted.*',
+      '**/*.temp.*',
+      '**/*.disabled/**',
+      '**/*.backup/**',
+      '**/*.broken/**',
+      '**/*.corrupted/**',
+      '**/*.temp/**',
+      'jest.setup.js'
+    ]
+  },
+  {
+    files: ['**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
-      parser: typescriptParser,
+      globals: {
+        ...Object.fromEntries(
+          Object.entries({
+  // DOM globals
+  "document": "readonly",
+  "window": "readonly",
+  "localStorage": "readonly",
+  "sessionStorage": "readonly",
+  "navigator": "readonly",
+  "performance": "readonly",
+  "console": "readonly",
+  "setTimeout": "readonly",
+  "clearTimeout": "readonly",
+  "setInterval": "readonly",
+  "clearInterval": "readonly",
+  "caches": "readonly",
+  "URL": "readonly",
+  "Blob": "readonly",
+  "process": "readonly",
+  "NodeJS": "readonly",
+  "Window": "readonly",
+  "MouseEvent": "readonly",
+  "Navigator": "readonly",
+  "PerformanceResourceTiming": "readonly",
+  "HTMLMetaElement": "readonly",
+  "HTMLLinkElement": "readonly",
+  "HTMLElement": "readonly",
+  "Event": "readonly",
+  "EventTarget": "readonly",
+  "ErrorEvent": "readonly",
+  "PromiseRejectionEvent": "readonly",
+  "PerformanceObserver": "readonly",
+  "PerformanceEntry": "readonly",
+  "PerformanceNavigationTiming": "readonly",
+  "Performance": "readonly",
+  "ServiceWorkerRegistration": "readonly",
+  "ServiceWorkerUpdateViaCache": "readonly",
+  "gtag": "readonly",
+  "requestIdleCallback": "readonly",
+  // Additional DOM types
+  "Element": "readonly",
+  "HTMLElement": "readonly",
+  "HTMLInputElement": "readonly",
+  "HTMLTextAreaElement": "readonly",
+  "HTMLSelectElement": "readonly",
+  "HTMLFormElement": "readonly",
+  "HTMLScriptElement": "readonly",
+  "HTMLImageElement": "readonly",
+  "KeyboardEvent": "readonly",
+  "MutationObserver": "readonly",
+  // Node.js globals
+  "crypto": "readonly",
+  "TextEncoder": "readonly",
+  "btoa": "readonly",
+  "atob": "readonly",
+  "Headers": "readonly",
+  "Request": "readonly",
+  "Response": "readonly",
+  "RequestInit": "readonly",
+  "Image": "readonly",
+  "alert": "readonly",
+  "JSX": "readonly"
+}).map(([key, value]) => [key, value])
+        )
+      },
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      parser: tsparser,
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
         ecmaFeatures: {
           jsx: true
         }
-      },
-      globals: {
-        window: "readonly",
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        fetch: 'readonly',
-        setTimeout: 'readonly',
-        navigator: 'readonly',
-        PerformanceObserver: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        JSX: 'readonly'
       }
     },
     plugins: {
-      '@typescript-eslint': typescript,
+      '@typescript-eslint': tseslint,
       'react': react,
-      'react-hooks': reactHooks
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh
     },
     rules: {
-      ...typescript.configs.recommended.rules,
+      ...js.configs.recommended.rules,
+      ...tseslint.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      '@typescript-eslint/no-unused-vars': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-this-alias': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react/no-unescaped-entities': 'off',
-      'react-hooks/exhaustive-deps': 'off',
-      'no-undef': 'off',
-      'no-extra-semi': 'warn'
+      
+      'no-console': 'warn',
+      'no-undef': 'error',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'react/no-unescaped-entities': 'warn',
+      'react/react-in-jsx-scope': 'off', // Not needed with React 17+
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true }
+      ]
     },
     settings: {
       react: {
         version: 'detect'
       }
     }
-  },
-  {
-    ignores: [
-      "node_modules/**",
-      'dist/**',
-      'build/**',
-      '.next/**',
-      'temp-broken-components/**',
-      '**/*.min.js',
-      '**/*.bundle.js',
-      'app_disabled/**',
-      'app-disabled/**',
-      'app.disabled/**',
-      'components.disabled/**',
-      'components_disabled/**',
-      'pages.disabled/**',
-      'recovered-branches/**',
-      'coverage/**',
-      'scripts/**',
-      'services/**',
-      'data/**',
-      'broken_components/**',
-      'zion-website/**',
-      'zion-os/**',
-      'zion-os.disabled/**',
-      'zion_academy/**',
-      'zion.app/**',
-      'public/**',
-      'next-env.d.ts',
-      'tailwind.config.js',
-      'app.conflicted.*/**',
-      'pages/**',
-      'cypress/**',
-      'server/**',
-      'src/pages.disabled/**',
-      'src.corrupted/**',
-      'components/layout/**',
-      'components/main/**',
-      'components/sections/**',
-      'components/ui/**',
-      'improvements-implementation.js'
-    ]
   }
 ];
