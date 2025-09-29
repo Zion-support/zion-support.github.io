@@ -287,5 +287,131 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-07-18",
     readMinutes: 8,
   },
+  {
+    id: "ai-automation-roi-breakdown",
+    title: "AI Automation ROI: Real Numbers from 50+ Implementations",
+    summary:
+      "Detailed breakdown of cost savings, efficiency gains, and revenue increases from AI workflow automation across industries.",
+    category: "ROI Analysis",
+    date: "2025-01-25",
+    readMinutes: 6,
+  },
+  {
+    id: "micro-saas-market-opportunity",
+    title: "The $50B Micro SAAS Market: Where to Invest in 2025",
+    summary:
+      "Market analysis revealing the fastest-growing micro SAAS segments and investment opportunities for businesses.",
+    category: "Market Research",
+    date: "2025-01-24",
+    readMinutes: 7,
+  },
+  {
+    id: "ai-virtual-assistant-adoption",
+    title: "AI Virtual Assistant Adoption: 95% Customer Satisfaction Rates",
+    summary:
+      "Case studies showing how companies achieved 95% customer satisfaction and 40% cost reduction with AI assistants.",
+    category: "Customer Experience",
+    date: "2025-01-23",
+    readMinutes: 5,
+  },
+  {
+    id: "data-analytics-transformation",
+    title: "Data Analytics Transformation: From Insights to Action",
+    summary:
+      "How AI-powered analytics platforms are helping businesses make 60% better decisions and reduce risks by 70%.",
+    category: "Data Analytics",
+    date: "2025-01-22",
+    readMinutes: 8,
+  },
+  {
+    id: "ai-implementation-timeline",
+    title: "AI Implementation Timeline: From Zero to ROI in 90 Days",
+    summary:
+      "Step-by-step roadmap for implementing AI solutions with realistic timelines and milestone expectations.",
+    category: "Implementation",
+    date: "2025-01-21",
+    readMinutes: 6,
+  },
+  {
+    id: "automation-cost-savings-report",
+    title: "Automation Cost Savings Report: $2.3M Annual Waste Eliminated",
+    summary:
+      "Comprehensive analysis of how AI automation eliminates manual process waste and delivers measurable ROI.",
+    category: "Cost Optimization",
+    date: "2025-01-20",
+    readMinutes: 7,
+  },
+  {
+    id: "ai-security-framework-2025",
+    title: "AI Security Framework 2025: Protecting Intelligent Systems",
+    summary:
+      "Essential security measures and compliance requirements for AI systems in enterprise environments.",
+    category: "Security",
+    date: "2025-01-19",
+    readMinutes: 9,
+  },
+  {
+    id: "competitive-advantage-ai-strategies",
+    title: "Competitive Advantage Through AI: Strategic Implementation",
+    summary:
+      "How market leaders are using AI to gain competitive advantage and capture market share in 2025.",
+    category: "Strategy",
+    date: "2025-01-18",
+    readMinutes: 8,
+  },
+  {
+    id: "ai-roi-success-stories",
+    title: "AI ROI Success Stories: 200-500% Returns Achieved",
+    summary:
+      "Real-world examples of companies achieving exceptional ROI through strategic AI implementation.",
+    category: "Success Stories",
+    date: "2025-01-17",
+    readMinutes: 10,
+  },
+  {
+    id: "micro-saas-growth-metrics",
+    title: "Micro SAAS Growth Metrics: Scaling Strategies That Work",
+    summary:
+      "Key performance indicators and growth strategies for scaling micro SAAS platforms successfully.",
+    category: "Growth Strategy",
+    date: "2025-01-16",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-workflow-automation-benefits",
+    title: "AI Workflow Automation: 80% Task Reduction Achieved",
+    summary:
+      "Quantified benefits of AI workflow automation including time savings, cost reduction, and efficiency gains.",
+    category: "Automation",
+    date: "2025-01-15",
+    readMinutes: 5,
+  },
+  {
+    id: "future-of-work-ai-impact",
+    title: "The Future of Work: AI's Impact on Industry Transformation",
+    summary:
+      "Analysis of how AI is reshaping work across industries and the opportunities it creates for businesses.",
+    category: "Future of Work",
+    date: "2025-01-14",
+    readMinutes: 7,
+  },
+  {
+    id: "predictive-analytics-business-value",
+    title: "Predictive Analytics: Turning Data into Business Value",
+    summary:
+      "How predictive analytics and AI are helping businesses forecast trends and optimize operations for maximum profit.",
+    category: "Predictive Analytics",
+    date: "2025-01-13",
+    readMinutes: 8,
+  },
+  {
+    id: "ai-implementation-best-practices",
+    title: "AI Implementation Best Practices: From Planning to Production",
+    summary:
+      "Comprehensive guide to successfully implementing AI solutions with practical checklists and proven methodologies.",
+    category: "Implementation",
+    date: "2025-01-12",
+    readMinutes: 9,
+  },
 ];
 
