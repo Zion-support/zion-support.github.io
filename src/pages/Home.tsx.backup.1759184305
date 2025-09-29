@@ -137,12 +137,42 @@ const Home = () => {
         />
         <NewContentPromoBanner 
           className="border-b border-white/10" 
+<<<<<<< HEAD
+          variant="premium" 
+          title="New: AI Incident Command Center 2026 + Edge Privacy Playbooks"
+          description="Contain incidents in <60s with budgeted actions and ship privacy‑first analytics without PII."
+          ctaText="Explore new content"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "AI Incident Command Center 2026", category: "Security", link: "/blog/ai-incident-command-center-2026" },
+            { title: "Edge Privacy Playbooks 2026", category: "Edge Computing", link: "/blog/edge-privacy-playbooks-2026" },
+            { title: "AI SRE Blueprints 2026", category: "AI Operations", link: "/blog/ai-sre-blueprints-2026" }
+          ]}
+=======
           variant="premium"
+>>>>>>> cursor/create-and-deploy-new-content-6afb
         />
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
         </div>
         
+<<<<<<< HEAD
+        {/* New Comprehensive Promotional Banner */}
+        <div className="container mx-auto px-6 mt-6">
+          <ComprehensivePromoBanner variant="hero" showCount={4} />
+        </div>
+        
+        {/* New Articles Promotional Banner */}
+        <div className="container mx-auto px-6 mt-6">
+          <NewArticlesPromoBanner variant="premium" showCount={3} />
+        </div>
+        
+        {/* New Services Promotional Banner */}
+        <div className="container mx-auto px-6 mt-6">
+          <NewServicesPromoBanner variant="showcase" showCount={3} featuredOnly={true} />
+        </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6afb
         
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
@@ -542,7 +572,11 @@ const Home = () => {
                 <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
+                Fresh: Edge LLM Caching, KPI Scorecards, Serverless Cost Playbook
+=======
                 Fresh: AI Autonomous Infrastructure, Quantum-AI Hybrid Computing, Success Stories
+>>>>>>> origin/cursor/create-and-deploy-new-content-2ae7
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles, Services & Success Stories
@@ -557,10 +591,19 @@ const Home = () => {
               <Link to="/blog/ai-autonomous-infrastructure-platform" className="group">
                 <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center justify-between mb-4">
+<<<<<<< HEAD
+                    <span className="text-xs uppercase tracking-wider text-indigo-300">{insight.category}</span>
+                    {insight.featured && (
+                      <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-medium">
+                        FEATURED
+                      </span>
+                    )}
+=======
                     <span className="text-xs uppercase tracking-wider text-indigo-300">AI Infrastructure</span>
                     <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-medium">
                       NEW
                     </span>
+>>>>>>> origin/cursor/create-and-deploy-new-content-2ae7
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-yellow-300">AI Autonomous Infrastructure Platform</h3>
                   <p className="text-indigo-100 mb-4 text-sm">Revolutionary self-healing, self-optimizing systems that reduce costs by 75% and achieve 99.9% uptime.</p>
