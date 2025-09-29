@@ -46,8 +46,8 @@ function Header() {
           <div className="relative group">
             <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Blog
-              <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                NEW 2026
+              <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                🚀 NEW 2026
               </span>
             </Link>
           </div>
@@ -55,7 +55,7 @@ function Header() {
             <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Case Studies
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                FEATURED
+                💰 $50M+ ROI
               </span>
             </Link>
           </div>
@@ -91,16 +91,14 @@ function Footer() {
             <div className="space-y-2">
               <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Blog
-                <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
+                <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">🚀 NEW</span>
               </Link>
-              <Link href="/blog/ai-2026-mega-trends" className="block text-gray-600 hover:text-blue-600 transition-colors">🔥 AI Mega Trends 2026</Link>
-              <Link href="/blog/ai-space-tech-revolution-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Space AI Revolution</Link>
-              <Link href="/case-studies/ai-space-mission-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">📊 $100M Mission Success</Link>
-              <Link href="/case-studies/ai-autonomous-enterprise-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🏢 $15M Enterprise ROI</Link>
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Case Studies
-                <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
+                <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">💰 $50M+ ROI</span>
               </Link>
+              <Link href="/case-studies/ai-neural-interface-healthcare-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🏥 $15M Healthcare Success</Link>
+              <Link href="/case-studies/ai-space-tech-mission-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🛰️ $50M Space Mission Success</Link>
             </div>
           </div>
           <div>

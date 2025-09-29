@@ -3,9 +3,14 @@ import Link from 'next/link';
 import { Clock, ArrowRight, CheckCircle, TrendingUp, Leaf, DollarSign, Zap } from 'lucide-react';
 
 export const metadata = {
+<<<<<<< HEAD
   title: 'AI Sustainability Transformation 2026: $10M ROI Case Study - Fortune 500 Success',
   description: 'See how a Fortune 500 company achieved carbon neutrality and $10M ROI with comprehensive AI sustainability transformation and green technology integration.',
   keywords: 'AI sustainability, carbon neutrality, green technology, Fortune 500 case study, AI transformation ROI, environmental AI',
+=======
+  title: 'AI Sustainability Transformation 2026: $10M ROI Case Study',
+  description: 'See how a Fortune 500 company achieved carbon neutrality and $10M ROI with comprehensive AI sustainability transformation and green technology.',
+>>>>>>> cursor/create-and-deploy-new-content-aa72
 };
 
 export default function AISustainabilityTransformation2026() {
@@ -15,6 +20,7 @@ export default function AISustainabilityTransformation2026() {
       <div className="mb-8">
         <div className="flex items-center gap-2 mb-4">
           <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+<<<<<<< HEAD
             NEW 2026
           </span>
           <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -630,6 +636,20 @@ export default function AISustainabilityTransformation2026() {
               </p>
             </div>
           </Link>
+=======
+        </div>
+      </div>
+
+      <div className="prose prose-lg max-w-none">
+        <div className="bg-gradient-to-r from-green-50 to-teal-50 p-6 rounded-xl mb-8">
+              <div className="text-sm text-gray-600">Waste Reduction</div>
+            </div>
+          </div>
+        </div>
+
+            </Link>
+          </div>
+>>>>>>> cursor/create-and-deploy-new-content-aa72
         </div>
       </div>
     </div>

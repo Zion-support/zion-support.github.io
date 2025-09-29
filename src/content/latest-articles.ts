@@ -66,11 +66,6 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
-    id: "agent-release-checklists-2025",
-    slug: "agent-release-checklists-2025",
-    title: "Agent Release Checklists: Ship Fast Without Surprises",
-    description: "Budget risky actions, add PR checks, and bake rollback triggers into every agent release.",
-    excerpt: "A pragmatic checklist for reliable agent releases with budgets, tests, and rollbacks.",
     author: "Zion Tech Group Team",
     date: "2025-10-29",
     category: "Security",
@@ -82,71 +77,10 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
-    id: "kpi-linked-canaries-2025",
-    slug: "kpi-linked-canaries-2025",
-    title: "KPI‑Linked Canaries: Evals That Protect Velocity",
-    description: "Wire online canaries to KPIs so teams ship weekly without regressions or surprise costs.",
-    excerpt: "Set up lightweight, KPI‑aligned canaries that catch issues early and keep teams fast.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "AI Governance",
-    tags: ["Canaries", "Evals", "KPIs"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/kpi-linked-canaries-2025.jpg",
     newBadge: true,
     trending: true
   },
   {
-    id: "secure-ml-supply-chain-2026",
-    slug: "secure-ml-supply-chain-2026",
-    title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
-    description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
-    excerpt: "Stop ML supply‑chain drift with automated SBOMs, attestations, and CI policy gates.",
-=======
-    id: "ai-sre-blueprints-2026",
-    slug: "ai-sre-blueprints-2026",
-    title: "AI SRE Blueprints 2026: Reliability Budgets, Rollbacks, and Live Traces",
-    description: "Operational patterns to keep AI systems reliable: explicit budgets, instant rollbacks, and user‑centric traces.",
-    excerpt: "Ship AI safely with SRE playbooks: budgets, traces, and deterministic fallbacks.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-15",
-    category: "Security",
-    tags: ["Incident Response", "Automation", "Guardrails"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-incident-budgets-2026-v2.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "privacy-first-ab-testing-2026",
-    slug: "privacy-first-ab-testing-2026",
-    title: "Privacy‑First A/B Testing 2026: Scoped IDs and On‑Device Filters",
-    description: "Design experiments that preserve user privacy with scoped identifiers, retention windows, and on‑device filters.",
-    excerpt: "Run compliant experiments without losing signal—scoped IDs, local filters, and TTLs.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-20",
-    category: "Quantum Computing",
-    tags: ["Quantum AI", "Quantum Computing", "Optimization", "Performance"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/privacy-first-ab-testing-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-agent-observability-2026",
-    slug: "edge-agent-observability-2026",
-    title: "Edge Agent Observability 2026: Live Traces, Budgets, and Fallbacks",
-    description: "Observe multi‑tool agents with user‑centric traces, budgeted actions, and deterministic fallbacks at the edge.",
-    excerpt: "User‑centric traces and safety budgets for agents running at the edge.",
-=======
-    id: "edge-llm-caching-v2-2026",
-    slug: "edge-llm-caching-v2-2026",
-    title: "Edge LLM Caching v2: Tiered KV, TTL Windows, Sub‑100ms Prompts",
-    description: "Advance your edge prompt performance with tiered KV caches, signed configs, and freshness windows that balance latency and accuracy.",
-    excerpt: "Cut latency and cost with tiered caches, signed configs, and TTL windows.",
     author: "Zion Tech Group Team",
     date: "2025-10-16",
     category: "Edge Computing",
@@ -164,12 +98,6 @@ export const latestArticles: LatestArticle[] = [
     description: "Sub‑100ms, zero‑regret rollouts using scoped IDs, local filters, and telemetry‑driven rollback.",
     excerpt: "Zero‑regret rollouts with privacy by design: scoped IDs and local filters.",
     author: "Zion Tech Group Team",
-    date: "2025-10-16",
-    category: "Architecture",
-    tags: ["Feature Flags", "Privacy", "Edge"],
-    featured: false,
-    readTime: "7 min read",
-    image: "/images/privacy-preserving-feature-flags-2026.jpg",
     newBadge: true,
     trending: true
   },
@@ -270,8 +198,6 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
- 
- 
     id: "agent-evals-scorecards-2026",
     slug: "agent-evals-scorecards-2026",
     title: "Agent Evals 2026: Scorecards That Predict Outcomes",

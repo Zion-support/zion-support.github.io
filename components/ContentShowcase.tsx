@@ -57,7 +57,9 @@ const contentItems: ContentItem[] = [
     title: 'AI Autonomous Enterprise Transformation 2026: $25M ROI Case Study',
     excerpt: 'See how a Fortune 500 company achieved $25M ROI with comprehensive AI transformation. 99% automation, 90% cost reduction, and complete business revolution.',
     type: 'case-study',
-    readTime: '30 min read',
+    href: '/case-studies/ai-transformation-mega-success-2026',
+=======
+>>>>>>> cursor/create-and-deploy-new-content-aa72
     category: 'Enterprise Transformation',
     href: '/case-studies/ai-autonomous-enterprise-transformation-2026',
     featured: true,
@@ -70,6 +72,9 @@ const contentItems: ContentItem[] = [
     ]
   },
   {
+=======
+>>>>>>> c52084ad473a5b64cedbe0b58750591f18f661da
+>>>>>>> cursor/create-and-deploy-new-content-aa72
     id: 'ai-governance-maturity-model-2026',
     title: 'AI Governance Maturity Model 2026: From Ad‑Hoc to Audit‑Ready',
     excerpt: 'Move from ad‑hoc controls to audit‑ready AI governance with scorecards and KPIs.',
