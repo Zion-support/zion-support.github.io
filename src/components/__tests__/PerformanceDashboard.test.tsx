@@ -42,6 +42,7 @@ jest.mock("../../utils/advancedPerformanceMonitor", () => ({
   },
 }));
 
+describe("PerformanceDashboard", () => {
   beforeEach(() => {
     // Mock performance API
     Object.defineProperty(window, "performance", {

@@ -37,6 +37,8 @@ interface ErrorReport {
   resolutionSuggestions?: string[];
   [key: string]: unknown;
 }
+
+const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [insights, setInsights] = useState<{
     predictedHighRiskActions: string[];
@@ -45,6 +47,18 @@ interface ErrorReport {
   } | null>(null);
   const [errorReports, setErrorReports] = useState<ErrorReport[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  const loadPerformanceData = useCallback(async () => {
+    try {
+      setIsLoading(true);
+      
+      // Mock data for demonstration
+      const mockMetrics: PerformanceMetrics = {
+        errorRate: 2.3,
+        criticalErrorsToday: 5,
+        userImpactScore: 78,
+        avgResolutionTime: 4.2,
+      };
 
       const mockInsights: AIInsights = {
         predictedHighRiskActions: [
@@ -338,6 +352,7 @@ interface ErrorReport {
                     </div>
                   )}
                 </div>
+              </div>
         </div>
       </div>
     </div>
