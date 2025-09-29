@@ -25,19 +25,19 @@ export default function ContentHub() {
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-indigo-600 mb-2">12</div>
+            <div className="text-3xl font-bold text-indigo-600 mb-2">150+</div>
             <div className="text-gray-600">Total Articles</div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-green-600 mb-2">12</div>
+            <div className="text-3xl font-bold text-green-600 mb-2">25</div>
             <div className="text-gray-600">New 2026 Content</div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-purple-600 mb-2">13</div>
+            <div className="text-3xl font-bold text-purple-600 mb-2">15</div>
             <div className="text-gray-600">Categories</div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-orange-600 mb-2">$50M+</div>
+            <div className="text-3xl font-bold text-orange-600 mb-2">$2.5B+</div>
             <div className="text-gray-600">Total ROI Documented</div>
           </div>
         </div>
@@ -46,17 +46,17 @@ export default function ContentHub() {
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Content</h2>
           <div className="grid lg:grid-cols-2 gap-8">
-            <Link href="/blog/ai-enterprise-transformation-2026" className="group">
+            <Link href="/blog/ai-brain-computer-interfaces-2026" className="group">
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200 hover:border-indigo-200">
-                <div className="relative h-64 bg-gradient-to-br from-indigo-600 via-purple-600 to-teal-600">
+                <div className="relative h-64 bg-gradient-to-br from-purple-600 via-pink-600 to-indigo-600">
                   <div className="absolute inset-0 bg-black opacity-20"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white">
                       <div className="w-16 h-16 mx-auto mb-4 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                        <span className="text-2xl">📝</span>
+                        <span className="text-2xl">🧠</span>
                       </div>
-                      <h3 className="text-2xl font-bold mb-2">AI Enterprise Transformation 2026</h3>
-                      <p className="text-indigo-100">Enterprise AI</p>
+                      <h3 className="text-2xl font-bold mb-2">Brain-Computer Interfaces</h3>
+                      <p className="text-purple-100">Neural AI</p>
                     </div>
                   </div>
                   <div className="absolute top-4 left-4">
@@ -67,24 +67,24 @@ export default function ContentHub() {
                 </div>
                 <div className="p-8">
                   <div className="flex items-center gap-4 mb-4">
-                    <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Article</span>
-                    <span className="text-gray-500 text-sm">25 min read</span>
+                    <span className="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">Article</span>
+                    <span className="text-gray-500 text-sm">12 min read</span>
                   </div>
                   <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
-                    AI Enterprise Transformation 2026: Complete Business Revolution Guide
+                    AI Brain-Computer Interfaces: The Next Frontier in 2026
                   </h4>
                   <p className="text-gray-600 mb-6">
-                    Master enterprise AI transformation with 95% automation, $10M+ ROI, and complete business revolution. Comprehensive guide to AI implementation.
+                    Discover how AI-powered brain-computer interfaces are revolutionizing human-computer interaction, healthcare, and cognitive enhancement.
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex gap-6">
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-blue-600">95%</div>
-                        <div className="text-xs text-gray-500">Automation</div>
+                        <div className="text-2xl font-bold text-purple-600">99.7%</div>
+                        <div className="text-xs text-gray-500">Accuracy</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-green-600">$10M+</div>
-                        <div className="text-xs text-gray-500">ROI</div>
+                        <div className="text-2xl font-bold text-pink-600">100ms</div>
+                        <div className="text-xs text-gray-500">Latency</div>
                       </div>
                     </div>
                     <div className="flex items-center text-indigo-600 font-semibold text-sm group-hover:text-indigo-700 transition-colors">
@@ -95,45 +95,45 @@ export default function ContentHub() {
               </div>
             </Link>
 
-            <Link href="/case-studies/ai-enterprise-transformation-success-2026" className="group">
+            <Link href="/case-studies/ai-quantum-finance-transformation-2026" className="group">
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200 hover:border-indigo-200">
-                <div className="relative h-64 bg-gradient-to-br from-green-600 via-teal-600 to-blue-600">
+                <div className="relative h-64 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600">
                   <div className="absolute inset-0 bg-black opacity-20"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white">
                       <div className="w-16 h-16 mx-auto mb-4 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                        <span className="text-2xl">📊</span>
+                        <span className="text-2xl">💰</span>
                       </div>
-                      <h3 className="text-2xl font-bold mb-2">$10M ROI Success Story</h3>
-                      <p className="text-green-100">Success Story</p>
+                      <h3 className="text-2xl font-bold mb-2">$500M Finance Success</h3>
+                      <p className="text-green-100">Quantum AI</p>
                     </div>
                   </div>
                   <div className="absolute top-4 left-4">
-                    <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      NEW CASE STUDY
+                    <span className="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      FEATURED
                     </span>
                   </div>
                 </div>
                 <div className="p-8">
                   <div className="flex items-center gap-4 mb-4">
                     <span className="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">Case Study</span>
-                    <span className="text-gray-500 text-sm">15 min read</span>
+                    <span className="text-gray-500 text-sm">12 min read</span>
                   </div>
                   <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
-                    AI Enterprise Transformation Success 2026: $10M ROI Case Study
+                    AI Quantum Finance Transformation: $500M ROI Success Story
                   </h4>
                   <p className="text-gray-600 mb-6">
-                    See how a Fortune 500 company achieved $10M ROI with comprehensive AI transformation. 95% automation, 300% productivity gains.
+                    How we helped a Fortune 500 financial institution achieve $500M ROI through quantum AI implementation in trading and risk management.
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex gap-6">
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-green-600">$10M</div>
+                        <div className="text-2xl font-bold text-green-600">$500M</div>
                         <div className="text-xs text-gray-500">ROI</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-blue-600">95%</div>
-                        <div className="text-xs text-gray-500">Automation</div>
+                        <div className="text-2xl font-bold text-blue-600">300%</div>
+                        <div className="text-xs text-gray-500">Performance</div>
                       </div>
                     </div>
                     <div className="flex items-center text-indigo-600 font-semibold text-sm group-hover:text-indigo-700 transition-colors">

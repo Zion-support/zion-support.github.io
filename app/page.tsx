@@ -11,6 +11,7 @@ import InteractiveContentRecommendation from '../components/InteractiveContentRe
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
+import NewContent2026Showcase from '../components/NewContent2026Showcase';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -26,15 +27,15 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ NEW 2026:</span>
-            <Link href="/blog/ai-neural-interfaces-2026" className="underline hover:text-yellow-200">Neural Interfaces</Link>
+            <Link href="/blog/ai-brain-computer-interfaces-2026" className="underline hover:text-yellow-200">Brain-Computer Interfaces</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-space-tech-2026" className="underline hover:text-yellow-200">Space AI Tech</Link>
+            <Link href="/blog/ai-quantum-machine-learning-2026" className="underline hover:text-yellow-200">Quantum ML</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-synthetic-data-2026" className="underline hover:text-yellow-200">Synthetic Data</Link>
+            <Link href="/blog/ai-autonomous-enterprise-systems-2026" className="underline hover:text-yellow-200">Autonomous Systems</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-neural-interface-success-2026" className="underline hover:text-yellow-200">$100M ROI Success</Link>
+            <Link href="/case-studies/ai-quantum-finance-transformation-2026" className="underline hover:text-yellow-200">$500M Finance Success</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/services/ai-neural-interfaces" className="underline hover:text-yellow-200">Neural Interface Services</Link>
+            <Link href="/case-studies/ai-space-mission-automation-2026" className="underline hover:text-yellow-200">$2B Space Success</Link>
           </div>
           <Link
             href="/blog"
@@ -53,6 +54,8 @@ export default function HomePage() {
       {/* New Content Promotional Banners */}
       <NewContent2026PromotionalBanners />
       
+      {/* New Content 2026 Showcase */}
+      <NewContent2026Showcase />
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -69,22 +72,28 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              href="/blog/ai-neural-interfaces-2026"
+              href="/blog/ai-brain-computer-interfaces-2026"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
             >
-              🧠 Neural Interfaces 2026
+              🧠 Brain-Computer Interfaces
             </Link>
             <Link
-              href="/blog/ai-space-tech-2026"
+              href="/blog/ai-quantum-machine-learning-2026"
               className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
             >
-              🚀 Space AI Technology
+              ⚛️ Quantum Machine Learning
             </Link>
             <Link
-              href="/case-studies/ai-neural-interface-success-2026"
+              href="/case-studies/ai-quantum-finance-transformation-2026"
               className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-teal-700 transition-all shadow-lg hover:shadow-xl"
             >
-              📊 $25M Success Story
+              💰 $500M Finance Success
+            </Link>
+            <Link
+              href="/case-studies/ai-space-mission-automation-2026"
+              className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-red-700 transition-all shadow-lg hover:shadow-xl"
+            >
+              🚀 $2B Space Success
             </Link>
             <a
               href="tel:+13024640950"
