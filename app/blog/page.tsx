@@ -54,6 +54,24 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="AI Evaluation Metrics 2026: From Evals to Outcomes"
+            excerpt="Design evals, scorecards, and KPI links that tie AI quality to business value."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="14 min"
+            image="📏"
+            href="/blog/ai-evaluation-metrics-2026"
+          />
+          <BlogPost
+            title="Agent Safety Testing 2026: Progressive Autonomy with Guardrails"
+            excerpt="Layered defenses: policy tests, sandboxes, approvals, and runtime monitors."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="12 min"
+            image="🧪"
+            href="/blog/agent-safety-testing-2026"
+          />
+          <BlogPost
             title="AI Agent Observability 2026: Metrics, Traces, and Guardrails"
             excerpt="Instrument agents with traces, evals, and policy guardrails to ship reliable autonomy."
             date="September 29, 2025"

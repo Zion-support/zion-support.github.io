@@ -19,6 +19,36 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-evaluation-metrics-2026',
+    title: 'AI Evaluation Metrics 2026: From Evals to Outcomes',
+    excerpt: 'Design evals, scorecards, and KPI links that tie AI quality to business value.',
+    type: 'article',
+    readTime: '14 min read',
+    category: 'AI Reliability',
+    href: '/blog/ai-evaluation-metrics-2026',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: 'P95', label: 'Latency Target' },
+      { value: '$/win', label: 'Cost per Outcome' }
+    ]
+  },
+  {
+    id: 'agent-safety-testing-2026',
+    title: 'Agent Safety Testing 2026: Progressive Autonomy with Guardrails',
+    excerpt: 'Layered defenses: policy tests, sandboxes, approvals, and runtime monitors.',
+    type: 'article',
+    readTime: '12 min read',
+    category: 'AI Reliability',
+    href: '/blog/agent-safety-testing-2026',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '<1%', label: 'Policy Violations' },
+      { value: '24x7', label: 'Monitoring' }
+    ]
+  },
+  {
     id: 'ai-trustworthy-agents-2026',
     title: 'Trustworthy AI Agents 2026: Safety, Compliance, and Observability',
     excerpt: 'Deploy trustworthy AI agents with guardrails, approvals, and end-to-end observability.',
