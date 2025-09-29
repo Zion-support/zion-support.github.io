@@ -54,13 +54,40 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
-            title="AI Autonomous Cloud Operations 2026"
-            excerpt="Self-healing infrastructure with 99.9% uptime, predictive scaling, and policy-driven operations."
+            title="Secure ML Supply Chain 2026: End‑to‑End Hardening Blueprint"
+            excerpt="Signed artifacts, policy tests, SBOMs, and continuous verification across data, models, and runtime."
             date="October 9, 2025"
-            category="Cloud"
-            readTime="18 min"
-            image="☁️"
-            href="/blog/ai-autonomous-cloud-ops-2026"
+            category="Security"
+            readTime="10 min"
+            image="🔐"
+            href="/blog/secure-ml-supply-chain-2026"
+          />
+          <BlogPost
+            title="GenAI Routing Blueprint 2026: Latency, Quality, Cost—All Three"
+            excerpt="Multi‑model routing with contracts, evals, caching, and adaptive policies to hit SLOs at lower cost."
+            date="October 9, 2025"
+            category="GenAI"
+            readTime="9 min"
+            image="🧭"
+            href="/blog/genai-routing-blueprint-2026"
+          />
+          <BlogPost
+            title="AI Agent Observability 2026: Metrics, Traces, and Guardrails"
+            excerpt="Instrument agents with traces, evals, and policy guardrails to ship reliable autonomy."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="12 min"
+            image="🔎"
+            href="/blog/ai-agent-observability-2026"
+          />
+          <BlogPost
+            title="Customer Journey AI 2026: Real-Time Personalization with CDPs"
+            excerpt="Event-driven CDPs + agents for next-best-action that lifts conversion 20–35%."
+            date="September 29, 2025"
+            category="Personalization"
+            readTime="14 min"
+            image="🛒"
+            href="/blog/ai-customer-journey-ai-2026"
           />
           <BlogPost
             title="Agentic Workflow Orchestration 2026: Reliable AI Workflows"
