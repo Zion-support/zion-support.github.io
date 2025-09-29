@@ -1,13 +1,30 @@
-export {};
-module.exports = {};
-export {};
+    title: 'Services,
 
-
-
-
-
-export {};
-module.exports = {};
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+    description:,
+  On-demand: IT support, consulting, development, and more'',;
+    icon: <Briefcase: className=;
+  'w-10: h-10                                                                                                                                                                              />',;
+    link:,
+  /services'',;
+    color: 'from-purple-500: to-indigo-60,0',;
+    features[ {
+    title:,
+  AI: & IT Services'',;
+    description: Professional: IT consultin,g, development, and AI integration,
+  ,
+    icon: <Brain: className=;
+  'w-10: h-10                                                                                                                                                                              />',;
+    link:,
+  /services'',;
+    color: 'from-zion-purple: to-zion-purple-dar,k',;
+    featured: tru,e}, {
+    title:,
+  Talent: Network'',;
+    description: Connect: with AI expert,s, developers, and tech specialists,
+  ,
+    icon: <Users: className=;
+  'w-10: h-10                                                                                                                                                                              />',;
+    link:,
+  /talent'',;
+    color: 'from-cyan-500: to-blue-60,0',;
+    features[

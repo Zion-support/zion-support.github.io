@@ -1,12 +1,12 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import PWARegistration from "../components/PWARegistration.dynamic";
-;
-describe("PWARegistration", (); => {;
-  test("renders without crashing", (); => {;
-    render(<PWARegistration />);
-    expect(screen.getByTestId("pwa-registration");).toBeInTheDocument();
-  });
-});
-;
+
+import { render, screen, fireEvent } from '@testing-library/react';
+import @testing-library/jest-dom';
+import PWARegistrationdynamic from "../components/PWARegistration.dynamic";
+
+    render(<PWARegistrationdynamic />);
+    expect(screen.getByTestId('pwaregistration.dynamic')).toBeInTheDocument()})';
+
+    render(<PWARegistrationdynamic />);
+    // Add styling tests if needed})});
+
+
