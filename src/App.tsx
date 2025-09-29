@@ -82,7 +82,6 @@ export default function App(): React.JSX.Element {
         // Initialize analytics
         analytics.initialize();
         
-<<<<<<< HEAD
         // Initialize performance monitoring
         // PerformanceMonitor.initialize?.(); // Method doesn't exist
         
@@ -113,9 +112,6 @@ export default function App(): React.JSX.Element {
         // Initialize performance optimizations
         // performanceOptimizer.initialize?.(); // Method doesn't exist
         // enhancedPerformanceOptimizer.initialize?.(); // Method doesn't exist
-        
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ec79
         console.log('App initialized successfully');
       } catch (error) {
         console.error('Failed to initialize app:', error);
@@ -134,55 +130,6 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-<<<<<<< HEAD
-      <div className="App">
-        {appContent}
-        
-        {/* Performance Dashboard */}
-        <PerformanceDashboard />
-        
-        {/* Real-time Monitor */}
-        <RealTimeMonitor />
-        
-        {/* System Metrics Dashboard */}
-        <SystemMetricsDashboard
-          isVisible={false}
-          onClose={() => {}}
-        />
-        
-        {/* Enhanced System Dashboard */}
-        <EnhancedSystemDashboard
-          isVisible={false}
-          onClose={() => {}}
-        />
-        
-        {/* Enhanced Notification System */}
-        <EnhancedNotificationSystem
-          notifications={[]}
-          onRemove={() => {}}
-        />
-        
-        {/* Performance Optimizer */}
-        <PerformanceOptimizer
-          isVisible={showPerformanceOptimizer}
-          onClose={() => setShowPerformanceOptimizer(false)}
-        />
-        
-        {/* Performance Monitor Modal */}
-        {showPerformanceMonitor && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold">Performance Monitor</h2>
-                <button
-                  onClick={() => setShowPerformanceMonitor(false)}
-                  className="text-gray-500 hover:text-gray-700 text-2xl"
-                >
-                  ✕
-                </button>
-              </div>
-              <EnhancedSystemDashboard />
-=======
       <AppRouter />
       
       {/* Performance Optimizer Modal */}
@@ -197,14 +144,9 @@ export default function App(): React.JSX.Element {
               >
                 ✕
               </button>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ec79
             </div>
             <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
           </div>
-<<<<<<< HEAD
-        )}
-      </div>
-=======
         </div>
       )}
 
@@ -279,7 +221,6 @@ export default function App(): React.JSX.Element {
           </div>
         </div>
       )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ec79
     </EnhancedErrorBoundary>
   );
 }
