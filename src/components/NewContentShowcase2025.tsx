@@ -1,297 +1,292 @@
-import React from 'react';
-import { ArrowRight, Calendar, Clock, Star, TrendingUp, Users, Zap } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, Calendar, Clock, Star, TrendingUp, Sparkles, Award, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { featuredNewContent, trendingNewContent } from '../content/new-content-2025-january';
-import { featuredCaseStudies, trendingCaseStudies } from '../content/new-case-studies-2025';
-import { featuredInsights, trendingInsights } from '../content/new-insights-2025';
+import { newContent2025 } from '../content/new-content-2025';
+import { featuredNewServices } from '../content/new-services-2025';
+import { caseStudies } from '../content/case-studies';
+import { promotionalBanners2025 } from '../content/promotional-banners-2025';
 
 const NewContentShowcase2025: React.FC = () => {
-  const featuredBlogs = featuredNewContent.slice(0, 3);
-  const featuredStudies = featuredCaseStudies.slice(0, 3);
-  const featuredInsightsList = featuredInsights.slice(0, 3);
+  const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentBannerIndex((prev) => (prev + 1) % promotionalBanners2025.slice(0, 3).length);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const featuredBanners = promotionalBanners2025.slice(0, 3);
+  const latestBlogPosts = newContent2025.filter(item => item.type === 'blog').slice(0, 4);
+  const latestCaseStudies = caseStudies.slice(-3);
+  const featuredServices = featuredNewServices.slice(0, 3);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+    <div className="py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/20 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/20 rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ animationDelay: "2s" }}></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-8">
-            <Star className="w-4 h-4 mr-2 animate-pulse" />
-            BREAKTHROUGH 2025 CONTENT
-            <Star className="w-4 h-4 ml-2 animate-pulse" />
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 text-sm font-medium mb-4 border border-blue-500/30">
+            <Sparkles className="w-4 h-4 mr-2" />
+            New in 2025
+            <TrendingUp className="w-4 h-4 ml-2" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Revolutionary AI Solutions
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Latest <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Innovations</span>
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Discover our latest breakthrough content and cutting-edge AI services that are transforming industries worldwide.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our newest AI solutions, breakthrough case studies, and cutting-edge services that are transforming industries worldwide.
           </p>
         </div>
 
-        {/* New Blog Articles */}
-        <div className="mb-20">
-          <div className="flex items-center justify-between mb-12">
-            <h3 className="text-3xl font-bold text-white flex items-center gap-3">
-              <TrendingUp className="w-8 h-8 text-blue-400" />
-              Latest Articles
-            </h3>
-            <Link 
-              to="/blog" 
-              className="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-2 transition-colors"
-            >
-              View All Articles
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {featuredBlogs.map((post, index) => (
-              <article 
-                key={post.id} 
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20"
+        {/* Rotating Hero Banner */}
+        <div className="mb-16">
+          <div className="relative bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-blue-500/30 overflow-hidden">
+            {featuredBanners.map((banner, index) => (
+              <div
+                key={banner.id}
+                className={`transition-all duration-1000 ${
+                  index === currentBannerIndex
+                    ? 'opacity-100 translate-x-0'
+                    : index < currentBannerIndex
+                    ? 'opacity-0 -translate-x-full absolute inset-0'
+                    : 'opacity-0 translate-x-full absolute inset-0'
+                }`}
               >
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs uppercase tracking-wider text-blue-300 bg-blue-500/20 px-3 py-1 rounded-full">
-                    {post.category}
-                  </span>
-                  {post.featured && (
-                    <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
-                      FEATURED
-                    </span>
-                  )}
-                </div>
-                
-                <h4 className="text-xl font-bold text-white mb-3 line-clamp-2">
-                  {post.title}
-                </h4>
-                
-                <p className="text-slate-300 mb-4 text-sm line-clamp-3">
-                  {post.excerpt}
-                </p>
-
-                <div className="flex items-center justify-between text-sm text-slate-400 mb-4">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>{new Date(post.publishedAt).toLocaleDateString()}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
-                    <span>{post.readTime}</span>
-                  </div>
-                </div>
-
-                {post.metrics && (
-                  <div className="grid grid-cols-2 gap-2 mb-4">
-                    {post.metrics.slice(0, 2).map((metric, idx) => (
-                      <div key={idx} className="text-center">
-                        <div className="text-lg font-bold text-green-400">{metric.value}</div>
-                        <div className="text-xs text-slate-400">{metric.label}</div>
+                <div className="flex flex-col lg:flex-row items-center gap-8">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-medium rounded-full">
+                        {banner.badge}
+                      </span>
+                      <span className="text-blue-300 text-sm">{banner.category}</span>
+                    </div>
+                    <h3 className="text-3xl font-bold text-white mb-4">
+                      {banner.title}
+                    </h3>
+                    <p className="text-gray-300 text-lg mb-6">
+                      {banner.description}
+                    </p>
+                    
+                    {banner.metrics && (
+                      <div className="flex flex-wrap gap-6 mb-6">
+                        {banner.metrics.map((metric, idx) => (
+                          <div key={idx} className="text-center">
+                            <div className="text-2xl font-bold text-blue-400">{metric.value}</div>
+                            <div className="text-sm text-gray-400">{metric.label}</div>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                )}
+                    )}
 
-                <Link 
-                  to={`/blog/${post.slug}`}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center gap-2"
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <Link
+                        to={banner.ctaUrls.primary}
+                        className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+                      >
+                        {banner.cta.primary}
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
+                      {banner.ctaUrls.secondary && (
+                        <Link
+                          to={banner.ctaUrls.secondary}
+                          className="inline-flex items-center px-6 py-3 border border-blue-500/50 text-blue-300 font-medium rounded-lg hover:bg-blue-500/10 transition-all duration-300"
+                        >
+                          {banner.cta.secondary}
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                  
+                  <div className="flex-1 flex justify-center">
+                    <div className="w-64 h-64 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center border border-blue-500/30">
+                      <span className="text-8xl">{banner.icon}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Latest Blog Posts */}
+          <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 rounded-xl p-6 border border-blue-500/30">
+            <div className="flex items-center gap-2 mb-6">
+              <Award className="w-5 h-5 text-blue-400" />
+              <h3 className="text-xl font-bold text-white">Latest Insights</h3>
+            </div>
+            
+            <div className="space-y-4">
+              {latestBlogPosts.map((post) => (
+                <Link
+                  key={post.id}
+                  to={post.url}
+                  className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300 group"
                 >
-                  Read Article
-                  <ArrowRight className="w-4 h-4" />
+                  <div className="flex items-start gap-3">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs font-medium rounded">
+                          {post.category}
+                        </span>
+                        {post.newBadge && (
+                          <span className="px-2 py-1 bg-green-500/20 text-green-300 text-xs font-medium rounded">
+                            NEW
+                          </span>
+                        )}
+                      </div>
+                      <h4 className="text-white font-medium mb-1 group-hover:text-blue-300 transition-colors">
+                        {post.title}
+                      </h4>
+                      <p className="text-gray-400 text-sm mb-2 line-clamp-2">
+                        {post.excerpt}
+                      </p>
+                      <div className="flex items-center gap-4 text-xs text-gray-500">
+                        <span className="flex items-center gap-1">
+                          <Clock className="w-3 h-3" />
+                          {post.readTime}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Calendar className="w-3 h-3" />
+                          {new Date(post.publishedDate).toLocaleDateString()}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </Link>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        {/* New Case Studies */}
-        <div className="mb-20">
-          <div className="flex items-center justify-between mb-12">
-            <h3 className="text-3xl font-bold text-white flex items-center gap-3">
-              <Zap className="w-8 h-8 text-purple-400" />
-              Success Stories
-            </h3>
-            <Link 
-              to="/case-studies" 
-              className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 transition-colors"
+              ))}
+            </div>
+            
+            <Link
+              to="/blog"
+              className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium mt-4"
             >
-              View All Case Studies
-              <ArrowRight className="w-4 h-4" />
+              View all insights
+              <ArrowRight className="w-4 h-4 ml-1" />
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {featuredStudies.map((study, index) => (
-              <div 
-                key={study.id}
-                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl p-6 hover:from-white/20 hover:to-white/10 transition-all duration-300 hover:scale-105 border border-white/20"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs uppercase tracking-wider text-purple-300 bg-purple-500/20 px-3 py-1 rounded-full">
-                    {study.industry}
-                  </span>
-                  {study.featured && (
-                    <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black text-xs px-2 py-1 rounded-full font-medium">
-                      FEATURED
-                    </span>
-                  )}
-                </div>
-
-                <h4 className="text-xl font-bold text-white mb-3 line-clamp-2">
-                  {study.title}
-                </h4>
-
-                <p className="text-slate-300 mb-4 text-sm line-clamp-3">
-                  {study.excerpt}
-                </p>
-
-                <div className="mb-4">
-                  <div className="text-sm text-slate-400 mb-2">Company</div>
-                  <div className="text-lg font-bold text-cyan-400">
-                    {study.company}
-                  </div>
-                </div>
-
-                {study.results && (
-                  <div className="grid grid-cols-2 gap-2 mb-4">
-                    {study.results.slice(0, 2).map((result, idx) => (
-                      <div key={idx} className="text-center">
-                        <div className="text-lg font-bold text-green-400">{result.value}</div>
-                        <div className="text-xs text-slate-400">{result.metric}</div>
+          {/* Featured Services */}
+          <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-xl p-6 border border-purple-500/30">
+            <div className="flex items-center gap-2 mb-6">
+              <Star className="w-5 h-5 text-purple-400" />
+              <h3 className="text-xl font-bold text-white">Featured Services</h3>
+            </div>
+            
+            <div className="space-y-4">
+              {featuredServices.map((service) => (
+                <Link
+                  key={service.id}
+                  to={`/services/${service.id}`}
+                  className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300 group"
+                >
+                  <div className="flex items-start gap-3">
+                    <div className="text-2xl">{service.icon}</div>
+                    <div className="flex-1">
+                      <h4 className="text-white font-medium mb-1 group-hover:text-purple-300 transition-colors">
+                        {service.title}
+                      </h4>
+                      <p className="text-gray-400 text-sm mb-2 line-clamp-2">
+                        {service.description}
+                      </p>
+                      <div className="flex flex-wrap gap-1">
+                        {service.features.slice(0, 2).map((feature, idx) => (
+                          <span key={idx} className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded">
+                            {feature}
+                          </span>
+                        ))}
                       </div>
-                    ))}
+                    </div>
                   </div>
-                )}
-
-                <div className="flex flex-col gap-2">
-                  <Link 
-                    to={`/case-studies/${study.slug}`}
-                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 inline-flex items-center justify-center gap-2"
-                  >
-                    Read Case Study
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* New Insights */}
-        <div>
-          <div className="flex items-center justify-between mb-12">
-            <h3 className="text-3xl font-bold text-white flex items-center gap-3">
-              <Users className="w-8 h-8 text-cyan-400" />
-              Latest Insights
-            </h3>
-            <Link 
-              to="/insights" 
-              className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-2 transition-colors"
+                </Link>
+              ))}
+            </div>
+            
+            <Link
+              to="/services"
+              className="inline-flex items-center text-purple-400 hover:text-purple-300 text-sm font-medium mt-4"
             >
-              View All Insights
-              <ArrowRight className="w-4 h-4" />
+              Explore all services
+              <ArrowRight className="w-4 h-4 ml-1" />
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {featuredInsightsList.map((insight, index) => (
-              <div 
-                key={insight.id}
-                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl p-6 hover:from-white/20 hover:to-white/10 transition-all duration-300 hover:scale-105 border border-white/20"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs uppercase tracking-wider text-cyan-300 bg-cyan-500/20 px-3 py-1 rounded-full">
-                    {insight.category}
-                  </span>
-                  {insight.featured && (
-                    <span className="bg-gradient-to-r from-blue-400 to-cyan-500 text-black text-xs px-2 py-1 rounded-full font-medium">
-                      FEATURED
-                    </span>
-                  )}
-                </div>
-
-                <h4 className="text-xl font-bold text-white mb-3 line-clamp-2">
-                  {insight.title}
-                </h4>
-
-                <p className="text-slate-300 mb-4 text-sm line-clamp-3">
-                  {insight.summary}
-                </p>
-
-                <div className="flex items-center justify-between text-sm text-slate-400 mb-4">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>{new Date(insight.date).toLocaleDateString()}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
-                    <span>{insight.readMinutes} min read</span>
-                  </div>
-                </div>
-
-                {insight.metrics && (
-                  <div className="grid grid-cols-2 gap-2 mb-4">
-                    {insight.metrics.slice(0, 2).map((metric, idx) => (
-                      <div key={idx} className="text-center">
-                        <div className="text-lg font-bold text-yellow-400">{metric.value}</div>
-                        <div className="text-xs text-slate-400">{metric.label}</div>
+          {/* Success Stories */}
+          <div className="bg-gradient-to-br from-green-900/20 to-blue-900/20 rounded-xl p-6 border border-green-500/30">
+            <div className="flex items-center gap-2 mb-6">
+              <Users className="w-5 h-5 text-green-400" />
+              <h3 className="text-xl font-bold text-white">Success Stories</h3>
+            </div>
+            
+            <div className="space-y-4">
+              {latestCaseStudies.map((study) => (
+                <Link
+                  key={study.id}
+                  to={`/case-studies/${study.id}`}
+                  className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300 group"
+                >
+                  <div className="flex items-start gap-3">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="px-2 py-1 bg-green-500/20 text-green-300 text-xs font-medium rounded">
+                          {study.industry}
+                        </span>
                       </div>
-                    ))}
+                      <h4 className="text-white font-medium mb-1 group-hover:text-green-300 transition-colors">
+                        {study.title}
+                      </h4>
+                      <p className="text-gray-400 text-sm mb-2">
+                        {study.company}
+                      </p>
+                      <div className="text-xs text-green-400 font-medium">
+                        {study.results[0]}
+                      </div>
+                    </div>
                   </div>
-                )}
-
-                <div className="flex flex-col gap-2">
-                  <Link 
-                    to={`/insights/${insight.slug}`}
-                    className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 inline-flex items-center justify-center gap-2"
-                  >
-                    Read Insight
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
-            ))}
+                </Link>
+              ))}
+            </div>
+            
+            <Link
+              to="/case-studies"
+              className="inline-flex items-center text-green-400 hover:text-green-300 text-sm font-medium mt-4"
+            >
+              View all case studies
+              <ArrowRight className="w-4 h-4 ml-1" />
+            </Link>
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-400/30 rounded-2xl p-8">
-            <h4 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h4>
-            <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-              Join 500+ companies already using our AI solutions to achieve unprecedented results. 
-              Get started with a free consultation today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
-              >
-                <Users className="w-5 h-5" />
-                Start Free Consultation
-              </Link>
-              <Link 
-                to="/case-studies"
-                className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
-              >
-                View Success Stories
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
+        <div className="text-center mt-12">
+          <div className="inline-flex flex-col sm:flex-row gap-4">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Get Started Today
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link
+              to="/resources"
+              className="inline-flex items-center px-8 py-4 border border-blue-500/50 text-blue-300 font-medium rounded-lg hover:bg-blue-500/10 transition-all duration-300"
+            >
+              Explore Resources
+            </Link>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

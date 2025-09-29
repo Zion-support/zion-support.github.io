@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-import React from "react";
-
-interface AdvancedAnalyticsProps {
-	enableConversionTracking?: boolean;
-	enablePerformanceTracking?: boolean;
-	enableErrorTracking?: boolean;
-}
-
-export default function AdvancedAnalytics(_props: AdvancedAnalyticsProps): React.JSX.Element | null {
-	return null;
-=======
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
 interface AdvancedAnalyticsProps {
   enableConversionTracking?: boolean;
@@ -18,11 +6,12 @@ interface AdvancedAnalyticsProps {
   enableErrorTracking?: boolean;
 }
 
-export default function AdvancedAnalytics(props: AdvancedAnalyticsProps): React.JSX.Element {
+const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = () => {
   useEffect(() => {
-    void props;
-  }, [props]);
-  return <></>;
->>>>>>> origin/main
-}
+    // no-op stub to satisfy imports in App during build
+  }, []);
+  return null;
+};
+
+export default AdvancedAnalytics;
 

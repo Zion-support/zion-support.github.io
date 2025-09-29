@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 
-export default function CaseStudies(): React.JSX.Element {
-	return (
-		<main style={{ padding: '2rem' }}>
-			<h1>Case Studies</h1>
-		</main>
-	);
-=======
-import React from "react";
+const CaseStudies: React.FC = () => {
+  return <div className="container mx-auto px-6 py-16 text-white">Case Studies</div>;
+};
 
-export default function CaseStudies(): React.JSX.Element {
-  return <div>Case Studies</div>;
->>>>>>> origin/main
-}
+export default CaseStudies;
 
