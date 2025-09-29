@@ -1,7 +1,7 @@
-import { j as jsxRuntimeExports, H as Helmet, S as Sparkles, i as Rocket, L as Link, Z as Zap, c as CircleCheckBig, A as ArrowRight, e as Shield, U as Users, G as Globe, a as Star, T as TrendingUp, g as Target, b as Award, r as reactExports, k as Search, l as User, d as Calendar, C as Clock, m as Bot, n as Code, o as ChartColumn, F as FileText, f as BookOpen, p as Cloud, q as Smartphone, D as Database, P as Play, s as Download, t as Lightbulb, M as Monitor, u as ExternalLink, B as Brain, v as Settings, w as Routes, x as Route, y as ReactDOM, R as React, z as HelmetProvider, I as BrowserRouter } from './chunk-BSZrwKU_.js';
-import { H as Header_default, E as EnhancedPromotionalBanner_default, N as NewContentAnnouncement_default, L as LatestContentBanner_default, a as NewContentPromoBanner_default, T as TrendingContentBanner_default, C as ComprehensivePromoBanner, b as NewArticlesPromoBanner, c as NewServicesPromoBanner, d as ContentPromotionBanner, e as NewContentShowcase_default, f as NewContentShowcase2025_default, M as ModernFeatures, g as NewServicesShowcase_default, h as LatestArticlesShowcase_default, S as SuccessStoriesShowcase_default, F as Footer, l as latestArticles, B as BlogPromotionBanner_default } from './chunk-dqCHBQum.js';
+import { j as jsxRuntimeExports, H as Helmet, S as Sparkles, R as Rocket, L as Link, Z as Zap, c as CircleCheckBig, A as ArrowRight, d as Shield, U as Users, G as Globe, b as Star, T as TrendingUp, h as Target, g as Award, r as reactExports, k as Search, l as User, a as Calendar, C as Clock, m as Bot, n as Code, o as ChartColumn, F as FileText, f as BookOpen, e as Cloud, p as Smartphone, D as Database, P as Play, q as Download, s as Lightbulb, M as Monitor, t as ExternalLink, B as Brain, u as Settings, v as useParams, w as Routes, x as Route, y as ReactDOM, z as React, I as HelmetProvider, J as BrowserRouter } from './chunk-CZyMeqQ_.js';
+import { H as Header_default, E as EnhancedPromotionalBanner_default, N as NewContentAnnouncement_default, L as LatestContentBanner_default, a as NewContentPromoBanner_default, T as TrendingContentBanner_default, C as ContentPromotionBanner, b as NewContentShowcase_default, c as NewContentShowcase2025_default, M as ModernFeatures, d as NewServicesShowcase_default, e as LatestArticlesShowcase_default, S as SuccessStoriesShowcase_default, F as Footer, l as latestArticles, B as BlogPromotionBanner_default } from './chunk-05s7keYu.js';
 import { s as securityManager, a as accessibilityEnhancer } from './chunk-DX-FpWyO.js';
-import './chunk-BgOa9EPF.js';
+import './chunk-D60KS-FH.js';
 
 true              &&(function polyfill() {
   const relList = document.createElement("link").relList;
@@ -42,6 +42,24 @@ true              &&(function polyfill() {
 }());
 
 const enhancedPromotionalBanners = [
+  {
+    id: "fresh-oct-14-2025",
+    message: "✨ New: Risk Budgets 2026 • Privacy‑First Flags 2026 • Reliable Agent Actions",
+    ctaText: "Read now",
+    ctaLink: "/blog",
+    backgroundColor: "bg-gradient-to-r from-indigo-700 to-purple-700",
+    textColor: "text-white",
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0,
+    variant: "info",
+    icon: "🆕",
+    animation: "fade-in",
+    badge: "NEW",
+    featured: true
+  },
   {
     id: "ai-autonomous-infrastructure-launch",
     message: "🚀 NEW: AI Autonomous Infrastructure Platform - Self-Healing Systems That Scale",
@@ -300,6 +318,38 @@ const getFeaturedBanners = () => {
 };
 
 const latestInsights = [
+  {
+    id: "agent-blue-green-field-notes",
+    title: "Field Notes: Blue‑Green Releases for Agent Workflows",
+    summary: "Lessons from shipping agent updates with live traces, budgets, and fast rollbacks.",
+    category: "GenAI",
+    date: "2025-10-15",
+    readMinutes: 6
+  },
+  {
+    id: "privacy-first-analytics-checklist-2026",
+    title: "Privacy‑First Analytics Checklist 2026",
+    summary: "Scoped IDs, field filters, and TTLs to keep insights high and risk low.",
+    category: "Observability",
+    date: "2025-10-15",
+    readMinutes: 5
+  },
+  {
+    id: "privacy-first-flags-quickstart-2026",
+    title: "Privacy‑First Flags Quickstart 2026",
+    summary: "Roll out features globally with scoped IDs, edge filters, and health probes.",
+    category: "Architecture",
+    date: "2025-10-14",
+    readMinutes: 5
+  },
+  {
+    id: "reliable-agent-actions-checklist-2026",
+    title: "Reliable Agent Actions: A Production Checklist",
+    summary: "Deterministic tools, sandboxing, and live traces for trustworthy automation.",
+    category: "GenAI",
+    date: "2025-10-14",
+    readMinutes: 6
+  },
   {
     id: "agent-safety-budgets-2026",
     title: "Agent Safety Budgets 2026: Ship Fast Without Surprises",
@@ -744,580 +794,43 @@ const latestInsights = [
 
 const posts = [
   {
-    slug: "zero-trust-for-genai-2026",
-    title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",
-    description: "Production patterns: egress control, prompt firewalls, and signed artifacts for safe GenAI.",
-    category: "Security",
-    publishedAt: "2025-09-29",
+    slug: "ai-cognitive-computing-2026",
+    title: "AI Cognitive Computing 2026: Brain-Inspired Intelligence",
+    description: "Next-generation brain-inspired intelligence with human-level reasoning and $20M+ enterprise value creation.",
+    content: "Full article content here...",
+    author: "Zion Tech Group Team",
+    date: "2026-01-26",
+    category: "Cognitive AI",
+    tags: ["Cognitive Computing", "Brain-Inspired AI", "Human-Level Reasoning", "Enterprise AI"],
     featured: true,
-    readTime: "8 min read"
+    readTime: "32 min read",
+    image: "/images/ai-cognitive-computing-2026.jpg"
   },
   {
-    slug: "quantum-ai-hybrid-blueprint-2026",
-    title: "Quantum‑AI Hybrid Blueprint 2026: Practical Near‑Term Wins",
-    description: "Blend quantum libraries with AI orchestration to unlock optimization wins today.",
-    category: "Quantum",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "9 min read"
-  },
-  {
-    slug: "secure-ml-supply-chain-2026",
-    title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
-    description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
-    category: "Security",
-    publishedAt: "2025-10-13",
+    slug: "ai-next-generation-autonomous-systems-2026",
+    title: "AI Next-Generation Autonomous Systems 2026",
+    description: "Self-managing enterprise infrastructure with 99.9% autonomy and $15M+ operational savings.",
+    content: "Full article content here...",
+    author: "Zion Tech Group Team",
+    date: "2026-01-26",
+    category: "Autonomous Systems",
+    tags: ["Autonomous Systems", "Self-Managing", "Enterprise Infrastructure", "AI Operations"],
     featured: true,
-    readTime: "7 min read"
+    readTime: "28 min read",
+    image: "/images/ai-next-generation-autonomous-systems-2026.jpg"
   },
   {
-    slug: "genai-routing-blueprint-2026",
-    title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",
-    description: "Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.",
-    category: "GenAI",
-    publishedAt: "2025-10-13",
+    slug: "ai-agent-orchestration-2026",
+    title: "AI Agent Orchestration 2026: Multi-Agent System Architecture",
+    description: "Master multi-agent systems with 95% automation efficiency and $5M+ ROI through advanced orchestration patterns.",
+    content: "Full article content here...",
+    author: "Zion Tech Group Team",
+    date: "2026-01-26",
+    category: "AI Orchestration",
+    tags: ["AI Agents", "Orchestration", "Automation", "Enterprise"],
     featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "golden-paths-roi-2026",
-    title: "Golden Paths ROI 2026: Scorecards that Prove Platform Value",
-    description: "Link developer journeys to SLOs, adoption, and revenue with actionable scorecards.",
-    category: "Platform Engineering",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "ai-reliable-rag-ops-2026",
-    title: "Reliable RAG Ops 2026: Freshness Windows, Drift Alerts, Budgets",
-    description: "Keep RAG quality high with TTL windows, drift detectors, and KPI‑tied quality budgets.",
-    category: "GenAI",
-    publishedAt: "2025-10-12",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "platform-engineering-kpis-2026",
-    title: "Platform Engineering KPIs 2026: Adoption, Golden Paths, SLOs",
-    description: "Scorecards that shift the convo from costs to shipped value—adoption, TTFX, SLOs.",
-    category: "Platform Engineering",
-    publishedAt: "2025-10-12",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "ai-incident-budget-playbooks-2026",
-    title: "AI Incident Budgets: Playbooks That Contain in <60s",
-    description: "Budget risky actions, approvals, and rollback triggers for safe, fast incident response.",
-    category: "Security",
-    publishedAt: "2025-10-12",
-    featured: false,
-    readTime: "6 min read"
-  },
-  {
-    slug: "platform-engineering-scorecards-2026",
-    title: "Platform Engineering Scorecards 2026: From Golden Paths to Outcomes",
-    description: "Measure what matters: adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery.",
-    category: "Platform Engineering",
-    publishedAt: "2025-10-09",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "ai-cybersecurity-automation-2025",
-    title: "AI Cybersecurity Automation: From Detections to Autonomic Response",
-    description: "Behavioral detections, policy tests, and runbooks that auto-contain incidents under 60 seconds.",
-    category: "Security",
-    publishedAt: "2025-10-09",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "edge-ai-blueprint-2026",
-    title: "Edge AI Blueprint 2026: Private, Real‑Time Intelligence at Scale",
-    description: "Signed configs, tiny models, and geo budgets for <100ms on‑device decisions with privacy by design.",
-    category: "Edge Computing",
-    publishedAt: "2025-10-09",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "ai-platform-roi-2025",
-    title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
-    description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-03",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "secure-ml-supply-chain-2025",
-    title: "Secure ML Supply Chain: From SBOMs to Model Lineage",
-    description: "End-to-end provenance and controls for datasets, models, and inference routes.",
-    category: "Security",
-    publishedAt: "2025-10-03",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "edge-cdn-ml-personalization-2025",
-    title: "Edge CDN + On‑Device ML: Personalization Under 100ms",
-    description: "Combine edge KV, signed configs, and tiny models for private, real‑time personalization.",
-    category: "Edge Computing",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "ai-sales-copilot-2025",
-    title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
-    description: "Wire CRMs, build prompt libraries, and add evals that correlate with win‑rates.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "genai-evals-in-production-2025",
-    title: "GenAI Evals in Production: Policy Tests That Scale",
-    description: "Layered evaluation: offline suites, pre-merge checks, and online canaries tied to KPIs.",
-    category: "GenAI",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "feature-flags-edge-2025",
-    title: "Feature Flags at the Edge: <100ms Global Releases",
-    description: "Consistency models, cache strategies, and validation flows for instant global rollouts.",
-    category: "Architecture",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "secure-agents-runtime-2026",
-    title: "Secure AI Agents Runtime: Sandboxes, Egress Policies, and Traces",
-    description: "A production checklist for running AI agents safely with isolation, policy gates, and observability.",
-    category: "AI Security",
-    publishedAt: "2025-10-09",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "edge-e2e-observability-2026",
-    title: "Edge E2E Observability: User-Centric Tracing and <100ms Telemetry",
-    description: "Blueprint for capturing user-centric telemetry across edge, CDN, and app layers without latency tax.",
-    category: "Architecture",
-    publishedAt: "2025-10-09",
-    featured: false,
-    readTime: "7 min read"
-  },
-  {
-    slug: "ai-cost-controllers-2026",
-    title: "AI Cost Controllers: Budgets, Tiered Quality, and Guardrails",
-    description: "Keep GenAI spend predictable with dynamic budgets, tiered models, and policy‑backed routes.",
-    category: "Cloud",
-    publishedAt: "2025-10-09",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "ai-governance-blueprint-2025",
-    title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
-    description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "real-time-genai-guardrails-2025",
-    title: "Real‑Time GenAI Guardrails: Inline Filters, Canaries, and Evals",
-    description: "How to run fast with live canaries, inline moderation, and KPI‑linked evals at scale.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "8 min read"
-  },
-  {
-    slug: "ai-governance-scorecards-2026",
-    title: "AI Governance 2026: Scorecards Engineers Actually Use",
-    description: "Guardrails wired to product KPIs with PR checks and online canaries that speed teams up.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-07",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "freshness-aware-rag-v2",
-    title: "Freshness‑Aware RAG v2: TTL Budgets and Versioned Corpora",
-    description: "Keep answers accurate with freshness windows, async warmups, and KPI‑aligned evaluation.",
-    category: "GenAI",
-    publishedAt: "2025-10-07",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "ai-platform-roadmaps-2026",
-    title: "AI Product Roadmaps 2026: From Bet to Business Impact",
-    description: "Outcome-led roadmaps that connect bets to scorecards, trains, and shipped value.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-06",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "genai-guardrails-blueprints-2026",
-    title: "GenAI Guardrails Blueprints: Policy Tests, Canaries, and SLAs",
-    description: "Composable guardrail patterns that scale across products without slowing teams.",
-    category: "GenAI",
-    publishedAt: "2025-10-06",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "cloud-finops-scorecards-2026",
-    title: "Cloud FinOps Scorecards: Guardrails Engineers Actually Use",
-    description: "PR gates, alerts, and budgets that cut waste 25–40% while keeping velocity high.",
-    category: "Cloud",
-    publishedAt: "2025-10-06",
-    featured: false,
-    readTime: "6 min read"
-  },
-  {
-    slug: "genai-platform-blueprint-2025",
-    title: "GenAI Platform Blueprint: Shipping Weekly With Guardrails",
-    description: "Reference architecture for prompts, tools, evals, and policy tests that let teams move fast safely.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "cost-optimized-vector-search",
-    title: "Cost‑Optimized Vector Search: Hybrid, Caching, and Freshness",
-    description: "Design decisions to cut retrieval cost 40%+ while improving answer quality with hybrid search and freshness windows.",
-    category: "Architecture",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "6 min read"
-  },
-  {
-    slug: "ai-risk-register-outcomes-2025",
-    title: "AI Risk Register That Drives Outcomes: Owners, SLAs, and Policy Tests",
-    description: "Make risk programs actionable with owned mitigations, CI policy checks, and measurable SLAs.",
-    category: "AI Governance",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "zero-regret-rollouts-edge-flags-2025",
-    title: "Zero‑Regret Rollouts: Edge Flags with Budgets and Instant Rollback",
-    description: "Segmented rollouts with risk budgets, telemetry, and rollback triggers under 100ms.",
-    category: "Architecture",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "online-genai-evals-canaries-2025",
-    title: "Online GenAI Evals: Canary Checks That Keep Velocity High",
-    description: "Run lightweight, KPI‑linked canaries in prod to prevent regressions while shipping weekly.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "llm-policy-testing-2025",
-    title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
-    description: "Automate governance with lightweight policy tests on every PR and release train.",
-    category: "AI Governance",
-    publishedAt: "2025-10-08",
-    readTime: "7 min read"
-  },
-  {
-    slug: "ai-roadmaps",
-    title: "Designing High-Impact AI Roadmaps",
-    description: "A practical framework to align AI investments with measurable business outcomes and reduce time-to-value.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-15",
-    featured: false,
-    readTime: "6 min read"
-  },
-  {
-    slug: "cloud-finops-tactics",
-    title: "Cutting Cloud Spend Without Slowing Teams",
-    description: "Proven tactics for right-sizing, demand shaping, and engineering-friendly guardrails that keep velocity high.",
-    category: "Cloud FinOps",
-    publishedAt: "2025-09-22",
-    featured: false,
-    readTime: "6 min read"
-  },
-  {
-    slug: "zero-trust-for-saas",
-    title: "Zero-Trust in Practice for SaaS",
-    description: "A pragmatic guide to rolling out least-privilege, continuous verification, and blast radius controls.",
-    category: "Security",
-    publishedAt: "2025-09-25",
-    featured: false,
-    readTime: "7 min read"
-  },
-  {
-    slug: "generative-ai-enterprise",
-    title: "Generative AI in Enterprise: Real-World Success Stories",
-    description: "Case studies from Fortune 500 companies showing how GenAI is transforming customer service, content creation, and business operations.",
-    category: "AI Innovation",
-    publishedAt: "2025-01-20",
-    featured: false,
-    readTime: "9 min read"
-  },
-  {
-    slug: "cloud-migration-best-practices",
-    title: "Cloud Migration Best Practices: Lessons from 100+ Projects",
-    description: "Essential strategies for successful cloud migration, including risk mitigation, cost optimization, and timeline management.",
-    category: "Cloud Strategy",
-    publishedAt: "2025-01-18",
-    featured: false,
-    readTime: "7 min read"
-  },
-  {
-    slug: "cybersecurity-2025-trends",
-    title: "Cybersecurity Trends 2025: What Every CISO Needs to Know",
-    description: "Emerging threats, new defense strategies, and the latest security technologies shaping the cybersecurity landscape.",
-    category: "Cybersecurity",
-    publishedAt: "2025-01-15",
-    featured: false,
-    readTime: "8 min read"
-  },
-  {
-    slug: "data-analytics-automation",
-    title: "Automating Data Analytics: From Insight to Action",
-    description: "How AI-powered analytics platforms are revolutionizing business intelligence and enabling real-time decision making.",
-    category: "Data Science",
-    publishedAt: "2025-01-12",
-    featured: false,
-    readTime: "8 min read"
-  },
-  {
-    slug: "devops-automation-guide",
-    title: "The Complete Guide to DevOps Automation",
-    description: "Comprehensive strategies for automating CI/CD pipelines, infrastructure management, and deployment processes.",
-    category: "DevOps",
-    publishedAt: "2025-01-10",
-    featured: false,
-    readTime: "10 min read"
-  },
-  {
-    slug: "microservices-architecture",
-    title: "Microservices Architecture: Design Patterns and Best Practices",
-    description: "Essential patterns for building scalable, maintainable microservices architectures in modern applications.",
-    category: "Software Architecture",
-    publishedAt: "2025-01-08",
-    featured: false,
-    readTime: "9 min read"
-  },
-  {
-    slug: "ai-ethics-compliance",
-    title: "AI Ethics and Compliance: Building Responsible AI Systems",
-    description: "Framework for developing AI systems that are fair, transparent, and compliant with emerging regulations.",
-    category: "AI Governance",
-    publishedAt: "2025-01-05",
-    featured: false,
-    readTime: "8 min read"
-  },
-  // removed conflicting branch entries
-  {
-    slug: "finops-scorecards-2025",
-    title: "FinOps Scorecards: Guardrails Engineers Actually Use",
-    description: "Budgets, PR checks, and alerts that cut cloud waste 25–40% without slowing teams.",
-    category: "Cloud",
-    publishedAt: "2025-10-08",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "enterprise-rag-blueprint-2025",
-    title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, Auth",
-    description: "A pragmatic blueprint for RAG at scale with freshness windows and layered evals.",
-    category: "GenAI",
-    publishedAt: "2025-10-08",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "agent-evals-scorecards-2026",
-    title: "Agent Evals 2026: Scorecards That Predict Outcomes",
-    description: "Design online evals and KPI‑linked scorecards that correlate with revenue and CSAT.",
-    category: "GenAI",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "privacy-preserving-agents-2026",
-    title: "Privacy‑Preserving Agents: Scoped IDs, Redaction, and On‑Device Caches",
-    description: "Ship assistant workflows that are insight‑rich without PII risk using scoped IDs and local caches.",
-    category: "AI Security",
-    publishedAt: "2025-10-13",
-    featured: false,
-    readTime: "7 min read"
-  },
-  {
-    slug: "agentic-workflows-blueprint-2026",
-    title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",
-    description: "Design reliable multi‑tool agents with deterministic tools, live traces, and risk budgets.",
-    category: "GenAI",
-    publishedAt: "2025-10-10",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "privacy-first-observability-2026",
-    title: "Privacy‑First Observability: User‑Centric Traces Without PII Leaks",
-    description: "Implement privacy filters, scoped IDs, and retention policies that keep signals rich and safe.",
-    category: "Observability",
-    publishedAt: "2025-10-10",
-    featured: false,
-    readTime: "7 min read"
-  },
-  {
-    slug: "on-device-agents-2026",
-    title: "On‑Device Agents 2026: Private Tools That Work Offline",
-    description: "Ship fast, privacy‑first assistants with on‑device tools, local caches, and fallback routes.",
-    category: "Edge Computing",
-    publishedAt: "2025-10-11",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "genai-budgets-and-quality-tiers-2026",
-    title: "GenAI Budgets and Quality Tiers: Control Cost Without Hurting UX",
-    description: "Tier models, cache prompts, and budget traffic by SLA to cut spend 30–60%.",
-    category: "AI Operations",
-    publishedAt: "2025-10-11",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "secure-tools-marketplace-2026",
-    title: "Secure Tools Marketplace: Vetting, Sandboxes, and Attestations",
-    description: "Bring third‑party tools safely with policy checks, sandboxes, and signed attestations.",
-    category: "Security",
-    publishedAt: "2025-10-11",
-    featured: false,
-    readTime: "8 min read"
-  },
-  {
-    slug: "risk-budgets-for-agent-releases-2026",
-    title: "Risk Budgets for Agent Releases: Ship Fast Without Surprises",
-    description: "Budget risky actions, add PR checks, and wire rollbacks for reliable agent releases.",
-    category: "AI Engineering",
-    publishedAt: "2025-10-11",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "privacy-first-telemetry-2026",
-    title: "Privacy‑First Telemetry: Signal‑Rich, PII‑Safe Observability",
-    description: "Scoped IDs, field‑level filters, and retention policies that keep insights high and risk low.",
-    category: "Observability",
-    publishedAt: "2025-10-11",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "cost-aware-inference-routing-2026",
-    title: "Cost‑Aware Inference Routing: Quality Tiers Under Budget",
-    description: "Dynamically route prompts across model tiers based on budgets, SLAs, and eval signals.",
-    category: "Architecture",
-    publishedAt: "2025-10-11",
-    featured: false,
-    readTime: "8 min read"
-  },
-  {
-    slug: "ai-governance-scorecards-quickstart-2025",
-    title: "AI Governance Scorecards Quickstart: Ship Fast, Stay Safe",
-    description: "A practical starter for scorecards, PR checks, and KPI‑linked canaries teams adopt in weeks.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "edge-llm-caching-blueprint-2026",
-    title: "Edge LLM Caching Blueprint 2026: Sub‑100ms at Scale",
-    description: "Tiered caches, signed configs, and freshness windows for fast, affordable prompts.",
-    category: "Architecture",
-    publishedAt: "2025-10-10",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "ai-agent-slo-playbooks-2026",
-    title: "AI Agent SLO Playbooks: Budgets, Rollbacks, and Live Traces",
-    description: "Turn agent incidents into fast, measurable recoveries with SLOs and budgeted actions.",
-    category: "AI Operations",
-    publishedAt: "2025-10-12",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "hybrid-vector-search-patterns-2026",
-    title: "Hybrid Vector Search Patterns: Quality Under Cost and Freshness Budgets",
-    description: "Blend sparse + dense retrieval with TTL windows to improve answer quality at lower cost.",
-    category: "GenAI",
-    publishedAt: "2025-10-12",
-    featured: false,
-    readTime: "6 min read"
-  },
-  {
-    slug: "ai-autonomous-incident-runbooks-2025",
-    title: "AI Autonomous Incident Runbooks: Budgeted Actions and Instant Rollback",
-    description: "Design incident playbooks with explicit budgets, approvals, and safe automated rollback.",
-    category: "AI Operations",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "privacy-first-feature-flags-2025",
-    title: "Privacy‑First Feature Flags: Zero‑Regret Rollouts at the Edge",
-    description: "Scoped IDs, on‑device filters, and geo budgets for safe global releases under 100ms.",
-    category: "Architecture",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "platform-roi-scorecards-quickstart-2025",
-    title: "Platform ROI Scorecards: A Practical Quickstart",
-    description: "Link platform telemetry to adoption and revenue with scorecards engineers actually use.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "ai-supply-chain-optimization-2025",
-    title: "AI Supply Chain Optimization: 65% Faster Deliveries Under Budget",
-    description: "From demand sensing to route optimization—AI patterns that cut costs and boost OTIF.",
-    category: "Applied AI",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "privacy-first-observability-quickstart-2025",
-    title: "Privacy‑First Observability Quickstart: Scoped IDs and Redaction",
-    description: "Ship signal‑rich telemetry without PII risk using scoped identifiers and field‑level filters.",
-    category: "Observability",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "6 min read"
+    readTime: "22 min read",
+    image: "/images/ai-agent-orchestration-2026.jpg"
   }
 ];
 
@@ -1431,23 +944,19 @@ const Home = () => {
         {
           className: "border-b border-white/10",
           variant: "premium",
-          title: "New: AI Risk Budgets, Privacy‑First Flags, Reliable Agent Actions",
-          description: "Ship automation safely, roll out globally with privacy, and make agents reliable.",
+          title: "New: AI Cognitive Computing, Autonomous Systems, Enterprise Transformation",
+          description: "Revolutionary 2026 content: Brain-inspired AI, self-managing infrastructure, and $25M+ ROI transformations.",
           ctaText: "Explore new content",
           ctaLink: "/blog",
           featuredItems: [
-            { title: "AI Risk Budgets 2025", category: "AI Governance", link: "/blog/ai-risk-budgets-2025" },
-            { title: "Privacy‑First Feature Flags 2026", category: "Architecture", link: "/blog/privacy-first-feature-flags-2026" },
-            { title: "Reliable Agent Actions 2026", category: "GenAI", link: "/blog/reliable-agent-actions-2026" },
-            { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
-            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" }
+            { title: "AI Cognitive Computing 2026", category: "Cognitive AI", link: "/blog/ai-cognitive-computing-2026" },
+            { title: "AI Next-Generation Autonomous Systems 2026", category: "Autonomous Systems", link: "/blog/ai-next-generation-autonomous-systems-2026" },
+            { title: "AI Cognitive Enterprise Transformation 2026", category: "Enterprise AI", link: "/case-studies/ai-cognitive-enterprise-transformation-2026" },
+            { title: "AI Agent Orchestration 2026", category: "AI Orchestration", link: "/blog/ai-agent-orchestration-2026" }
           ]
         }
       ),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-6 mt-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx(TrendingContentBanner_default, {}) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-6 mt-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx(ComprehensivePromoBanner, { variant: "hero", showCount: 4 }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-6 mt-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx(NewArticlesPromoBanner, { variant: "premium", showCount: 3 }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-6 mt-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx(NewServicesPromoBanner, { variant: "showcase", showCount: 3, featuredOnly: true }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         ContentPromotionBanner,
         {
@@ -1975,12 +1484,18 @@ const Home = () => {
       ] }) }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "py-20 bg-gradient-to-r from-emerald-50 to-teal-50 relative overflow-hidden", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-r from-emerald-100/20 to-teal-100/20" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-6 relative z-10", children: /* @__PURE__ */ jsxRuntimeExports.jsx(NewServicesPromoBanner, { variant: "premium", showCount: 3, featuredOnly: true }) })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-6 relative z-10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl font-bold text-gray-900 mb-4", children: "Latest AI Services" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-600 max-w-3xl mx-auto", children: "Discover our newest AI-powered solutions designed to accelerate your digital transformation." })
+        ] }) })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(NewServicesShowcase_default, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "py-20 bg-gradient-to-r from-purple-50 to-indigo-50 relative overflow-hidden", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-r from-purple-100/20 to-indigo-100/20" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-6 relative z-10", children: /* @__PURE__ */ jsxRuntimeExports.jsx(NewArticlesPromoBanner, { variant: "featured", showCount: 4, autoRotate: true }) })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-6 relative z-10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl font-bold text-gray-900 mb-4", children: "Latest Articles & Insights" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-600 max-w-3xl mx-auto", children: "Stay ahead with our latest AI insights, technical guides, and industry best practices." })
+        ] }) })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(LatestArticlesShowcase_default, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsx(SuccessStoriesShowcase_default, {}),
@@ -2334,10 +1849,14 @@ function Blog() {
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "border-b border-white/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "max-w-7xl mx-auto px-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-4 mb-2 rounded-xl bg-gradient-to-r from-fuchsia-600 to-purple-600 p-4 text-white flex items-center justify-between", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mr-4", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm font-semibold", children: "🚀 Fresh: AI Risk Budgets 2025" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs text-white/90", children: "Ship automation safely with budgeted actions, approvals, and rollback triggers." })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm font-semibold", children: "🚀 Fresh: AI Breach Drills • Blue‑Green Agent Releases • Privacy‑First Insights" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs text-white/90", children: "Rehearse safe autonomy, roll out agents with canaries, and ship signal‑rich analytics without PII." })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/blog/ai-risk-budgets-2025", className: "bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap", children: "Read the latest" })
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap gap-2", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/blog/ai-breach-drills-2026", className: "bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap", children: "Breach Drills" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/blog/agent-blue-green-releases-2026", className: "bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap", children: "Agent Releases" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/blog/privacy-first-insights-telemetry-2026", className: "bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap", children: "Privacy‑First Insights" })
+        ] })
       ] }) }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "container mx-auto px-6 py-20", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-16", children: [
@@ -3435,15 +2954,176 @@ const AIIncidentResponsePlaybooks2025 = () => {
     ] })
   ] }) });
 };
-var page_default = AIIncidentResponsePlaybooks2025;
+var page_default$3 = AIIncidentResponsePlaybooks2025;
+
+const AIBreachDrills2026 = () => {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "min-h-screen bg-white", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4 py-16 max-w-4xl", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-12", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-sm text-gray-500 mb-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Security" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "•" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "October 29, 2025" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "•" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "8 min read" })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-4xl md:text-5xl font-bold text-gray-900 mb-6", children: "AI Breach Drills 2026: Practicing Safe Autonomy Under Budget" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-600 leading-relaxed", children: "Run realistic breach simulations for AI systems with budgeted actions, approval gates, and instant rollback. This guide shows how to operationalize drills that improve resilience without risking production." })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("article", { className: "prose prose-lg max-w-none", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { children: "Why run AI breach drills?" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "As AI systems gain permissions, practicing incident response becomes essential. Breach drills validate guardrails, train responders, and surface gaps before attackers do." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { children: "Core principles" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Budgeted actions with explicit ceilings" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Pre-approved rollback and isolation paths" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Live traces for every tool invocation" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Post-drill scorecards tied to SLAs" })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { children: "Sample drill plan" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("pre", { className: "text-sm overflow-x-auto", children: `
+drill "exfiltration-attempt" {
+  scope = "staging"
+  budgets = { network_egress = "100MB", write_ops = 200 }
+  steps = [
+    "trip honeypot prompt",
+    "attempt forbidden egress",
+    "validate containment runbook"
+  ]
+  success_criteria = ["rollback under 60s", "alerts in < 15s"]
+}
+` }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { children: "What good looks like" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Drills should be automatable in CI, leave immutable traces, and improve a small set of scorecards: time-to-contain, false positive rate, and rollback reliability." })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-12 text-center bg-gray-900 text-white rounded-lg p-8", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold mb-4", children: "Make drills a feature, not a fire drill" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300 mb-6", children: "Embed drill runners in release trains with budgeted actions and approvals." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap justify-center gap-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/contact", className: "bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors", children: "Talk to an expert" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/services/ai-cybersecurity-suite", className: "border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors", children: "Explore Security Services" })
+      ] })
+    ] })
+  ] }) });
+};
+var page_default$2 = AIBreachDrills2026;
+
+const PrivacyFirstInsightsTelemetry2026 = () => {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "min-h-screen bg-white", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4 py-16 max-w-4xl", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-12", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-sm text-gray-500 mb-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Observability" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "•" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "October 29, 2025" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "•" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "7 min read" })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-4xl md:text-5xl font-bold text-gray-900 mb-6", children: "Privacy‑First Insights 2026: Signal‑Rich Telemetry Without PII" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-600 leading-relaxed", children: "Capture user‑centric insights without processing personal data. Scoped identifiers, field‑level filters, and edge redaction deliver high‑quality analytics and low risk." })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("article", { className: "prose prose-lg max-w-none", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { children: "Design goals" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Zero PII collection by default" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Scoped identifiers and rotating salts" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Edge redaction and sampling" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Purpose‑bound retention policies" })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { children: "Scoped ID pattern" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("pre", { className: "text-sm overflow-x-auto", children: `
+function computeScopedId(userId, scope, salt) {
+  return hmac(salt + ':' + scope, userId).slice(0, 24)
+}
+// scope = "session", "device", or "feature" depending on use case
+` }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { children: "Field‑level filters" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Define allow‑lists for event fields and drop payloads that do not match schemas. Enforce at the CDN/edge to prevent sensitive data ingress." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { children: "Scorecards that matter" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Time‑to‑first‑value (TTFV)" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Golden path completion rate" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Error regression budget burn" })
+      ] })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-12 text-center bg-gray-900 text-white rounded-lg p-8", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold mb-4", children: "Ship insights your lawyers love" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300 mb-6", children: "Adopt privacy‑first analytics patterns with scoped IDs and edge filters." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap justify-center gap-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/contact", className: "bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors", children: "Start a privacy review" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/services/ai-automation-platform", className: "border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors", children: "Explore Platform Services" })
+      ] })
+    ] })
+  ] }) });
+};
+var page_default$1 = PrivacyFirstInsightsTelemetry2026;
+
+const AgentBlueGreenReleases2026 = () => {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "min-h-screen bg-white", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4 py-16 max-w-4xl", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-12", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-sm text-gray-500 mb-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "GenAI" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "•" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "October 15, 2025" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "•" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "8 min read" })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-4xl md:text-5xl font-bold text-gray-900 mb-6", children: "Blue‑Green Releases for Agents: Safe Rollouts with Live Traces" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-600 leading-relaxed", children: "Deploy agent updates with confidence using blue‑green strategies, KPI‑linked canaries, and trace‑driven rollbacks. This guide shows how to minimize blast radius while keeping velocity high." })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("article", { className: "prose prose-lg max-w-none", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { children: "Release strategy" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Run canaries against critical journeys with KPI budgets" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Gate risky tool actions behind approvals and timeboxed budgets" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Capture live traces for every tool invocation" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Automate rollback with pre‑validated paths" })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { children: "Example rollout plan" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("pre", { className: "text-sm overflow-x-auto", children: `
+release "agent-v42" {
+  strategy = "blue_green"
+  canaries = ["checkout", "refunds", "account_update"]
+  budgets = { tools = 200, egress_mb = 50 }
+  rollback = { trigger = "kpi_regression", max_time = "60s" }
+}
+` }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { children: "Scorecards that matter" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Time‑to‑rollback under 60s" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Regression budget burn by KPI" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Tool failure rate within SLA" })
+      ] })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-12 text-center bg-gray-900 text-white rounded-lg p-8", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold mb-4", children: "Ship fast, stay safe" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300 mb-6", children: "We help teams wire budgets, traces, and rollbacks into every agent release." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap justify-center gap-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/contact", className: "bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors", children: "Talk to an expert" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/services/ai-automation-platform", className: "border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors", children: "Explore Platform Services" })
+      ] })
+    ] })
+  ] }) });
+};
+var page_default = AgentBlueGreenReleases2026;
+
+function Post() {
+  const { slug } = useParams();
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+    "Post: ",
+    slug
+  ] });
+}
 
 const AppRouter = () => {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(Routes, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Home_default, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/contact", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Contact, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/blog", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Blog, {}) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/blog/:slug", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Post, {}) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/blog/ai-breach-drills-2026", element: /* @__PURE__ */ jsxRuntimeExports.jsx(page_default$2, {}) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/blog/privacy-first-insights-telemetry-2026", element: /* @__PURE__ */ jsxRuntimeExports.jsx(page_default$1, {}) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/blog/agent-blue-green-releases-2026", element: /* @__PURE__ */ jsxRuntimeExports.jsx(page_default, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/resources", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Resources_default, {}) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/blog/ai-incident-response-playbooks-2025", element: /* @__PURE__ */ jsxRuntimeExports.jsx(page_default, {}) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/blog/ai-incident-response-playbooks-2025", element: /* @__PURE__ */ jsxRuntimeExports.jsx(page_default$3, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/services/ai-autonomous-operations", element: /* @__PURE__ */ jsxRuntimeExports.jsx(AIAutonomousOperations_default, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/services/AI-Platform-Architecture", element: /* @__PURE__ */ jsxRuntimeExports.jsx(AI_Platform_Architecture_default, {}) })
   ] });

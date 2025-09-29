@@ -1,4 +1,4 @@
-import { r as requireScheduler, i as invariant$1, s as shallowEqual } from './chunk-BgOa9EPF.js';
+import { r as requireScheduler, i as invariant$1, s as shallowEqual } from './chunk-D60KS-FH.js';
 
 function getDefaultExportFromCjs(x) {
   return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, "default") ? x["default"] : x;
@@ -1397,6 +1397,11 @@ function useNavigateUnstable() {
   return navigate;
 }
 reactExports.createContext(null);
+function useParams() {
+  let { matches } = reactExports.useContext(RouteContext);
+  let routeMatch = matches[matches.length - 1];
+  return routeMatch ? routeMatch.params : {};
+}
 function useResolvedPath(to, { relative } = {}) {
   let { matches } = reactExports.useContext(RouteContext);
   let { pathname: locationPathname } = useLocation();
@@ -4305,4 +4310,4 @@ const __iconNode = [
 ];
 const Zap = createLucideIcon("zap", __iconNode);
 
-export { ArrowRight as A, Brain as B, Clock as C, Database as D, Eye as E, FileText as F, Globe as G, Helmet as H, BrowserRouter as I, Link as L, Monitor as M, Play as P, React as R, Sparkles as S, TrendingUp as T, Users as U, X, Zap as Z, Star as a, Award as b, CircleCheckBig as c, Calendar as d, Shield as e, BookOpen as f, Target as g, getDefaultExportFromCjs as h, Rocket as i, jsxRuntimeExports as j, Search as k, User as l, Bot as m, Code as n, ChartColumn as o, Cloud as p, Smartphone as q, reactExports as r, Download as s, Lightbulb as t, ExternalLink as u, Settings as v, Routes as w, Route as x, ReactDOM as y, HelmetProvider as z };
+export { ArrowRight as A, Brain as B, Clock as C, Database as D, Eye as E, FileText as F, Globe as G, Helmet as H, HelmetProvider as I, BrowserRouter as J, Link as L, Monitor as M, Play as P, Rocket as R, Sparkles as S, TrendingUp as T, Users as U, X, Zap as Z, Calendar as a, Star as b, CircleCheckBig as c, Shield as d, Cloud as e, BookOpen as f, Award as g, Target as h, getDefaultExportFromCjs as i, jsxRuntimeExports as j, Search as k, User as l, Bot as m, Code as n, ChartColumn as o, Smartphone as p, Download as q, reactExports as r, Lightbulb as s, ExternalLink as t, Settings as u, useParams as v, Routes as w, Route as x, ReactDOM as y, React as z };

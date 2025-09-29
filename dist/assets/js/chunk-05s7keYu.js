@@ -1,1119 +1,7 @@
-import { j as jsxRuntimeExports, r as reactExports, S as Sparkles, T as TrendingUp, a as Star, C as Clock, L as Link, A as ArrowRight, Z as Zap, b as Award, R as React, c as CircleCheckBig, X, d as Calendar, e as Shield, B as Brain, f as BookOpen, U as Users, g as Target, E as Eye } from './chunk-BSZrwKU_.js';
+import { j as jsxRuntimeExports, r as reactExports, L as Link, A as ArrowRight, X, S as Sparkles, T as TrendingUp, C as Clock, a as Calendar, b as Star, c as CircleCheckBig, d as Shield, e as Cloud, Z as Zap, B as Brain, f as BookOpen, U as Users, g as Award, h as Target, E as Eye } from './chunk-CZyMeqQ_.js';
 
 function ContentPromotionBanner(_props) {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { "aria-label": "Content Promotion Banner" });
-}
-
-const newArticles2025 = [
-  {
-    id: "ai-autonomous-infrastructure-2025",
-    slug: "ai-autonomous-infrastructure-2025",
-    title: "AI Autonomous Infrastructure: The Future of Self-Managing Systems",
-    description: "Discover how AI-powered autonomous infrastructure is revolutionizing enterprise operations with self-healing, self-optimizing, and self-scaling capabilities.",
-    excerpt: "Transform your infrastructure management with AI that never sleeps, never makes mistakes, and continuously optimizes performance.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-30",
-    category: "AI Operations",
-    tags: ["Autonomous Infrastructure", "AI", "Self-Healing", "Automation"],
-    featured: true,
-    readTime: "12 min read",
-    image: "/images/ai-autonomous-infrastructure.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "quantum-ai-hybrid-computing-2025",
-    slug: "quantum-ai-hybrid-computing-2025",
-    title: "Quantum-AI Hybrid Computing: Breaking Computational Barriers",
-    description: "Explore the revolutionary combination of quantum computing and artificial intelligence, delivering unprecedented processing power for complex business problems.",
-    excerpt: "Unlock exponential computational power with quantum-AI hybrid systems that solve problems impossible for traditional computers.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-29",
-    category: "Quantum Computing",
-    tags: ["Quantum Computing", "AI", "Hybrid Systems", "Computational Power"],
-    featured: true,
-    readTime: "15 min read",
-    image: "/images/quantum-ai-hybrid.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "ai-cybersecurity-next-generation-2025",
-    slug: "ai-cybersecurity-next-generation-2025",
-    title: "Next-Generation AI Cybersecurity: Zero-Trust with Intelligence",
-    description: "Learn how advanced AI cybersecurity systems are creating impenetrable digital fortresses with zero-trust architecture and behavioral analytics.",
-    excerpt: "Build an unbreachable security perimeter with AI that learns, adapts, and evolves to counter emerging threats in real-time.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-28",
-    category: "Cybersecurity",
-    tags: ["AI Security", "Zero Trust", "Behavioral Analytics", "Threat Detection"],
-    featured: true,
-    readTime: "10 min read",
-    image: "/images/ai-cybersecurity-next-gen.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "edge-ai-real-time-intelligence-2025",
-    slug: "edge-ai-real-time-intelligence-2025",
-    title: "Edge AI: Real-Time Intelligence at the Network Edge",
-    description: "Discover how Edge AI is bringing real-time intelligence to IoT devices, autonomous vehicles, and smart cities with sub-millisecond response times.",
-    excerpt: "Experience the power of AI processing at the edge, delivering instant decisions without cloud dependency.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-27",
-    category: "Edge Computing",
-    tags: ["Edge AI", "Real-time Processing", "IoT", "Autonomous Systems"],
-    featured: true,
-    readTime: "11 min read",
-    image: "/images/edge-ai-real-time.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
-  },
-  {
-    id: "ai-content-generation-enterprise-2025",
-    slug: "ai-content-generation-enterprise-2025",
-    title: "Enterprise AI Content Generation: Scale Your Content Strategy",
-    description: "Master enterprise-grade AI content generation that maintains brand voice, ensures quality, and scales content production by 1000%.",
-    excerpt: "Transform your content strategy with AI that understands your brand, maintains consistency, and delivers quality at scale.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-26",
-    category: "Content AI",
-    tags: ["Content Generation", "AI Writing", "Brand Voice", "Content Strategy"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-content-enterprise.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
-  },
-  {
-    id: "ai-customer-insights-advanced-2025",
-    slug: "ai-customer-insights-advanced-2025",
-    title: "Advanced AI Customer Insights: Predicting Behavior Before It Happens",
-    description: "Unlock the power of predictive customer analytics with AI that anticipates needs, predicts churn, and personalizes experiences at scale.",
-    excerpt: "Stay ahead of customer needs with AI that predicts behavior patterns and delivers personalized experiences before customers even ask.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-25",
-    category: "Customer Analytics",
-    tags: ["Customer Insights", "Predictive Analytics", "Personalization", "Churn Prediction"],
-    featured: false,
-    readTime: "8 min read",
-    image: "/images/ai-customer-insights-advanced.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
-  },
-  {
-    id: "genai-evals-production-2025",
-    slug: "genai-evals-production-2025",
-    title: "GenAI Evals in Production: Quality Gates That Actually Work",
-    description: "Implement production-ready GenAI evaluation systems with automated quality gates, performance monitoring, and continuous improvement loops.",
-    excerpt: "Ensure your GenAI systems deliver consistent quality with automated evaluation pipelines that catch issues before users do.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-24",
-    category: "GenAI Quality",
-    tags: ["GenAI", "Quality Gates", "Evaluation", "Production Monitoring"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/genai-evals-production.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
-  },
-  {
-    id: "ai-platform-roi-measurement-2025",
-    slug: "ai-platform-roi-measurement-2025",
-    title: "AI Platform ROI Measurement: Quantifying Business Impact",
-    description: "Learn how to measure and maximize ROI from AI platform investments with proven frameworks and success metrics.",
-    excerpt: "Turn AI investments into measurable business outcomes with comprehensive ROI frameworks and success tracking.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-23",
-    category: "AI Strategy",
-    tags: ["AI ROI", "Business Metrics", "Platform Investment", "Success Measurement"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/ai-platform-roi.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
-  },
-  {
-    id: "edge-llm-caching-blueprint-2026",
-    slug: "edge-llm-caching-blueprint-2026",
-    title: "Edge LLM Caching Blueprint 2026: Sub‑100ms Prompts at Scale",
-    description: "Architect edge‑accelerated LLM inference using regional caches, warm pools, and cost‑aware routing for lightning‑fast responses.",
-    excerpt: "Deliver sub‑100ms prompts with regional caches, warm pools, and adaptive routing.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Architecture",
-    tags: ["Edge AI", "LLM Inference", "Caching", "Performance"],
-    featured: true,
-    readTime: "13 min read",
-    image: "/images/edge-llm-caching-blueprint-2026.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "ai-governance-scorecards-quickstart-2025",
-    slug: "ai-governance-scorecards-quickstart-2025",
-    title: "AI Governance Scorecards: A Practical Quickstart",
-    description: "Stand up pragmatic governance scorecards tied to KPIs, risks, and evaluation policies that teams actually use.",
-    excerpt: "Ship governance that sticks: KPI‑linked scorecards, policy tests, and clear owners.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-28",
-    category: "AI Strategy",
-    tags: ["Governance", "Evals", "Policy", "Risk"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-governance-scorecards-quickstart-2025.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "serverless-ai-inference-cost-playbook-2025",
-    slug: "serverless-ai-inference-cost-playbook-2025",
-    title: "Serverless AI Inference Cost Playbook (2025)",
-    description: "Cut inference costs 40–70% with adaptive batching, warm pools, and demand shaping without degrading SLOs.",
-    excerpt: "A tactical guide to reduce AI inference spend while maintaining performance.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-26",
-    category: "Cost Optimization",
-    tags: ["Serverless", "Cost", "Inference", "Optimization"],
-    featured: true,
-    readTime: "11 min read",
-    image: "/images/serverless-ai-inference-cost-playbook-2025.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "ai-platform-architecture-2026",
-    slug: "ai-platform-architecture-2026",
-    title: "AI Platform Architecture 2026: Building Scalable, Cost-Effective AI Systems",
-    description: "Comprehensive guide to designing AI platforms that scale efficiently, reduce costs by 70%, and deliver consistent performance across all workloads.",
-    excerpt: "Master the architecture patterns that power next-generation AI platforms with proven scalability and cost optimization strategies.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-31",
-    category: "AI Architecture",
-    tags: ["AI Platform", "Architecture", "Scalability", "Cost Optimization"],
-    featured: true,
-    readTime: "14 min read",
-    image: "/images/ai-platform-architecture-2026.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "ai-incident-response-playbooks-2025",
-    slug: "ai-incident-response-playbooks-2025",
-    title: "AI Incident Response Playbooks: Automated Recovery in Under 60 Seconds",
-    description: "Design AI incident response systems that detect, analyze, and resolve issues automatically with comprehensive playbooks and intelligent automation.",
-    excerpt: "Build bulletproof AI systems with automated incident response that recovers from failures faster than human teams ever could.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-30",
-    category: "AI Operations",
-    tags: ["Incident Response", "Automation", "Recovery", "Playbooks"],
-    featured: true,
-    readTime: "11 min read",
-    image: "/images/ai-incident-response-playbooks-2025.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "multi-modal-ai-applications-2026",
-    slug: "multi-modal-ai-applications-2026",
-    title: "Multi-Modal AI Applications 2026: Vision, Language, and Audio Integration",
-    description: "Explore cutting-edge multi-modal AI applications that combine computer vision, natural language processing, and audio processing for revolutionary user experiences.",
-    excerpt: "Unlock the power of multi-modal AI with applications that see, hear, and understand like humans, delivering unprecedented user experiences.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-29",
-    category: "AI Innovation",
-    tags: ["Multi-Modal AI", "Computer Vision", "NLP", "Audio Processing"],
-    featured: true,
-    readTime: "13 min read",
-    image: "/images/multi-modal-ai-applications-2026.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
-  },
-  {
-    id: "ai-ethics-framework-2026",
-    slug: "ai-ethics-framework-2026",
-    title: "AI Ethics Framework 2026: Building Responsible AI Systems",
-    description: "Comprehensive framework for developing ethical AI systems that are fair, transparent, accountable, and aligned with human values.",
-    excerpt: "Create AI systems that are not just powerful, but also ethical, fair, and aligned with human values and societal good.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-28",
-    category: "AI Ethics",
-    tags: ["AI Ethics", "Responsible AI", "Fairness", "Transparency"],
-    featured: true,
-    readTime: "10 min read",
-    image: "/images/ai-ethics-framework-2026.jpg",
-    newBadge: true,
-    trending: false,
-    featuredInHomepage: false
-  },
-  {
-    id: "ai-performance-monitoring-2025",
-    slug: "ai-performance-monitoring-2025",
-    title: "AI Performance Monitoring: Real-Time Quality Assurance",
-    description: "Implement comprehensive AI performance monitoring systems that track model performance, detect drift, and ensure consistent quality in production.",
-    excerpt: "Monitor AI systems in real-time with comprehensive performance tracking, drift detection, and automated quality assurance.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-27",
-    category: "AI Monitoring",
-    tags: ["Performance Monitoring", "Model Drift", "Quality Assurance", "Real-Time"],
-    featured: false,
-    readTime: "9 min read",
-    image: "/images/ai-performance-monitoring-2025.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
-  }
-];
-const homepageFeaturedArticles = newArticles2025.filter((article) => article.featuredInHomepage);
-
-const newServices = [
-  {
-    id: "edge-llm-caching",
-    slug: "edge-llm-caching",
-    title: "Edge LLM Caching & On‑Device Inference",
-    description: "Sub‑100ms prompts with privacy by default. Ship on‑device agents, encrypted caches, and edge toolchains.",
-    category: "AI Engineering",
-    pricing: {
-      starting: "$1,999/month",
-      popular: true,
-      features: ["On‑device inference", "Encrypted caches", "Edge tool routing", "Fallback orchestration"]
-    },
-    features: [
-      "On‑device Model Execution",
-      "Encrypted Semantic Caches",
-      "Intent‑Aware Tool Routing",
-      "Offline‑First Orchestration",
-      "Latency Budgets & SLOs",
-      "Privacy‑Preserving Telemetry",
-      "Edge Rollouts & Canarying",
-      "Cross‑Vendor Model Fallbacks"
-    ],
-    metrics: [
-      { value: "<100ms", label: "Median Prompt" },
-      { value: "35%", label: "Cost Reduction" },
-      { value: "99.99%", label: "Offline Reliability" }
-    ],
-    testimonial: {
-      quote: "We hit 90ms median prompts and improved trust with on‑device execution.",
-      author: "Priya Desai",
-      company: "FinEdge"
-    },
-    cta: {
-      primary: "Enable Edge",
-      secondary: "See Architecture"
-    },
-    icon: "🚀",
-    featured: true,
-    tags: ["Edge", "LLM", "Caching", "Privacy", "Latency"],
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ml-sbom-security",
-    slug: "ml-sbom-security",
-    title: "ML SBOMs & Secure Model Supply Chain",
-    description: "Prove and protect your AI supply chain with SBOMs, signed models, and policy‑as‑code.",
-    category: "Security",
-    pricing: {
-      starting: "$2,499/month",
-      popular: false,
-      features: ["Model SBOMs", "Signature verification", "Policy‑as‑code", "Vuln scanning"]
-    },
-    features: [
-      "Model & Dataset SBOMs",
-      "Signed Artifacts & Attestations",
-      "Policy‑as‑Code Enforcement",
-      "Dependency & Prompt Supply Scanning",
-      "Runtime Guardrails",
-      "Compliance Reporting",
-      "Key Management Integrations",
-      "CICD Gates & Release Controls"
-    ],
-    metrics: [
-      { value: "85%", label: "Risk Reduction" },
-      { value: "<1d", label: "Audit Prep" },
-      { value: "99.9%", label: "Signature Coverage" }
-    ],
-    testimonial: {
-      quote: "Security and compliance reviews now take hours instead of weeks.",
-      author: "Jon Ruiz",
-      company: "RegSecure"
-    },
-    cta: {
-      primary: "Secure Models",
-      secondary: "View Controls"
-    },
-    icon: "🔐",
-    featured: true,
-    tags: ["Security", "SBOM", "Compliance", "Policy", "Supply Chain"],
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-autonomous-infrastructure-platform",
-    slug: "ai-autonomous-infrastructure-platform",
-    title: "AI Autonomous Infrastructure Platform",
-    description: "Revolutionary AI-powered infrastructure that automatically heals, optimizes, and scales without human intervention. Achieve 99.9% uptime with self-managing systems.",
-    category: "AI Infrastructure",
-    pricing: {
-      starting: "$2,999/month",
-      popular: true,
-      features: ["Self-healing systems", "Auto-scaling", "Predictive maintenance", "Real-time optimization"]
-    },
-    features: [
-      "Autonomous System Healing",
-      "Intelligent Auto-Scaling",
-      "Predictive Maintenance",
-      "Real-time Performance Optimization",
-      "Anomaly Detection & Response",
-      "Zero-downtime Updates",
-      "Multi-cloud Orchestration",
-      "Advanced Monitoring & Analytics"
-    ],
-    metrics: [
-      { value: "99.9%", label: "System Uptime" },
-      { value: "75%", label: "Cost Reduction" },
-      { value: "90%", label: "Faster Recovery" }
-    ],
-    testimonial: {
-      quote: "The AI Autonomous Infrastructure Platform has revolutionized our operations. We've achieved 99.9% uptime with minimal human intervention.",
-      author: "Dr. Jennifer Chen",
-      company: "TechFlow Systems"
-    },
-    cta: {
-      primary: "Start Free Trial",
-      secondary: "View Demo"
-    },
-    icon: "🤖",
-    featured: true,
-    tags: ["Autonomous Systems", "Infrastructure", "AI", "Self-Healing", "Automation"],
-    newBadge: true,
-    trending: true,
-    specialOffer: {
-      title: "Launch Special",
-      description: "50% OFF First 3 Months",
-      discount: "50%",
-      validUntil: "March 31, 2025"
-    }
-  },
-  {
-    id: "quantum-ai-hybrid-computing",
-    slug: "quantum-ai-hybrid-computing",
-    title: "Quantum-AI Hybrid Computing Solutions",
-    description: "Breakthrough quantum-AI hybrid computing platform that delivers unprecedented computational power for complex business optimization and machine learning.",
-    category: "Quantum Computing",
-    pricing: {
-      starting: "$4,999/month",
-      popular: false,
-      features: ["Quantum algorithms", "AI optimization", "Complex problem solving", "Real-time processing"]
-    },
-    features: [
-      "Quantum Algorithm Integration",
-      "AI-Quantum Hybrid Processing",
-      "Complex Optimization Solutions",
-      "Real-time Quantum Computing",
-      "Machine Learning Acceleration",
-      "Business Intelligence Enhancement",
-      "Risk Analysis & Modeling",
-      "Custom Quantum Applications"
-    ],
-    metrics: [
-      { value: "1000x", label: "Faster Processing" },
-      { value: "95%", label: "Accuracy Improvement" },
-      { value: "300%", label: "ROI Increase" }
-    ],
-    testimonial: {
-      quote: "Quantum-AI hybrid computing has given us a massive competitive advantage. The processing power is incredible.",
-      author: "Michael Rodriguez",
-      company: "Quantum Capital"
-    },
-    cta: {
-      primary: "Schedule Demo",
-      secondary: "Learn More"
-    },
-    icon: "⚛️",
-    featured: true,
-    tags: ["Quantum Computing", "AI", "Optimization", "Machine Learning", "Business Intelligence"],
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-cybersecurity-zero-trust",
-    slug: "ai-cybersecurity-zero-trust",
-    title: "AI-Powered Zero Trust Cybersecurity",
-    description: "Next-generation AI-driven zero trust security architecture that provides comprehensive protection against evolving cyber threats with real-time adaptation.",
-    category: "Cybersecurity",
-    pricing: {
-      starting: "$1,999/month",
-      popular: true,
-      features: ["AI threat detection", "Zero trust architecture", "Real-time protection", "Compliance automation"]
-    },
-    features: [
-      "AI-Powered Threat Detection",
-      "Dynamic Zero Trust Architecture",
-      "Real-time Threat Response",
-      "Behavioral Analytics",
-      "Automated Compliance",
-      "Multi-layered Security",
-      "Incident Response Automation",
-      "Security Intelligence Platform"
-    ],
-    metrics: [
-      { value: "99.9%", label: "Threat Detection" },
-      { value: "60%", label: "Faster Response" },
-      { value: "85%", label: "False Positive Reduction" }
-    ],
-    testimonial: {
-      quote: "The AI cybersecurity system provides unmatched protection. We've eliminated 99.9% of threats before they become incidents.",
-      author: "Sarah Thompson",
-      company: "SecureTech Corp"
-    },
-    cta: {
-      primary: "Security Audit",
-      secondary: "View Platform"
-    },
-    icon: "🛡️",
-    featured: true,
-    tags: ["Cybersecurity", "Zero Trust", "AI Security", "Threat Detection", "Compliance"],
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-content-generation-automation",
-    slug: "ai-content-generation-automation",
-    title: "AI Content Generation Automation Platform",
-    description: "Revolutionary AI platform that generates high-quality, brand-consistent content at scale while maintaining SEO optimization and brand voice.",
-    category: "Content AI",
-    pricing: {
-      starting: "$799/month",
-      popular: false,
-      features: ["Content generation", "Brand consistency", "SEO optimization", "Multi-format support"]
-    },
-    features: [
-      "Intelligent Content Generation",
-      "Brand Voice Consistency",
-      "SEO Optimization",
-      "Multi-format Content Creation",
-      "Quality Assurance Automation",
-      "Content Strategy Planning",
-      "Performance Analytics",
-      "Collaborative Workflows"
-    ],
-    metrics: [
-      { value: "10x", label: "Content Production" },
-      { value: "95%", label: "Brand Consistency" },
-      { value: "80%", label: "Time Savings" }
-    ],
-    testimonial: {
-      quote: "AI content generation has transformed our marketing. We produce 10x more content while maintaining perfect brand consistency.",
-      author: "Emily Johnson",
-      company: "MarketingPro Solutions"
-    },
-    cta: {
-      primary: "Start Trial",
-      secondary: "See Examples"
-    },
-    icon: "📝",
-    featured: false,
-    tags: ["Content Generation", "AI", "Marketing", "SEO", "Brand Consistency"],
-    newBadge: true,
-    trending: false
-  },
-  {
-    id: "ai-customer-experience-platform",
-    slug: "ai-customer-experience-platform",
-    title: "AI Customer Experience Transformation Platform",
-    description: "Comprehensive AI platform that transforms customer experiences through intelligent personalization, predictive analytics, and seamless automation.",
-    category: "Customer Experience",
-    pricing: {
-      starting: "$1,499/month",
-      popular: false,
-      features: ["Personalization", "Predictive analytics", "Customer journey mapping", "Real-time insights"]
-    },
-    features: [
-      "Intelligent Personalization",
-      "Predictive Customer Analytics",
-      "Journey Mapping & Optimization",
-      "Real-time Customer Insights",
-      "Multi-channel Engagement",
-      "Sentiment Analysis",
-      "Automated Customer Service",
-      "Performance Optimization"
-    ],
-    metrics: [
-      { value: "45%", label: "Revenue Increase" },
-      { value: "90%", label: "Customer Satisfaction" },
-      { value: "70%", label: "Engagement Boost" }
-    ],
-    testimonial: {
-      quote: "The AI customer experience platform has revolutionized our customer relationships. Revenue increased 45% in just 6 months.",
-      author: "David Kim",
-      company: "CustomerFirst Inc"
-    },
-    cta: {
-      primary: "Transform CX",
-      secondary: "View Results"
-    },
-    icon: "💬",
-    featured: false,
-    tags: ["Customer Experience", "Personalization", "Predictive Analytics", "Customer Journey", "Engagement"],
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-supply-chain-optimization",
-    slug: "ai-supply-chain-optimization",
-    title: "AI Supply Chain Optimization Platform",
-    description: "Advanced AI platform for supply chain optimization featuring predictive analytics, intelligent routing, and automated inventory management.",
-    category: "Supply Chain",
-    pricing: {
-      starting: "$2,499/month",
-      popular: false,
-      features: ["Predictive analytics", "Route optimization", "Inventory management", "Demand forecasting"]
-    },
-    features: [
-      "Predictive Supply Chain Analytics",
-      "Intelligent Route Optimization",
-      "Automated Inventory Management",
-      "Demand Forecasting",
-      "Risk Assessment & Mitigation",
-      "Supplier Performance Analytics",
-      "Cost Optimization",
-      "Real-time Visibility"
-    ],
-    metrics: [
-      { value: "65%", label: "Faster Deliveries" },
-      { value: "40%", label: "Cost Reduction" },
-      { value: "95%", label: "On-Time Delivery" }
-    ],
-    testimonial: {
-      quote: "AI supply chain optimization has transformed our logistics. We're 65% faster and 40% more cost-effective than before.",
-      author: "Lisa Wang",
-      company: "LogisticsMax"
-    },
-    cta: {
-      primary: "Optimize Now",
-      secondary: "View Case Study"
-    },
-    icon: "🚚",
-    featured: false,
-    tags: ["Supply Chain", "Logistics", "Predictive Analytics", "Optimization", "Cost Reduction"],
-    newBadge: true,
-    trending: false
-  }
-];
-
-function ComprehensivePromoBanner({
-  className = "",
-  variant = "hero",
-  showCount = 4
-}) {
-  const [isVisible, setIsVisible] = reactExports.useState(true);
-  const [activeTab, setActiveTab] = reactExports.useState("content");
-  if (!isVisible) {
-    return null;
-  }
-  const getVariantStyles = () => {
-    switch (variant) {
-      case "compact":
-        return {
-          container: "bg-gradient-to-r from-indigo-600 to-purple-600 border-indigo-400/30 p-4",
-          text: "text-white",
-          accent: "text-indigo-200",
-          button: "bg-white text-indigo-600 hover:bg-indigo-50",
-          buttonSecondary: "border-white text-white hover:bg-white hover:text-indigo-600"
-        };
-      case "full":
-        return {
-          container: "bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 border-purple-400/30 p-8",
-          text: "text-white",
-          accent: "text-purple-200",
-          button: "bg-white text-purple-600 hover:bg-purple-50",
-          buttonSecondary: "border-white text-white hover:bg-white hover:text-purple-600"
-        };
-      default:
-        return {
-          container: "bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 border-blue-400/30 p-6",
-          text: "text-white",
-          accent: "text-blue-200",
-          button: "bg-white text-blue-600 hover:bg-blue-50",
-          buttonSecondary: "border-white text-white hover:bg-white hover:text-blue-600"
-        };
-    }
-  };
-  const styles = getVariantStyles();
-  const featuredArticles = homepageFeaturedArticles.slice(0, 2);
-  const featuredServicesList = newServices.filter((s) => s.featured).slice(0, 2);
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `${styles.container} ${className} border rounded-xl mb-8 relative overflow-hidden`, children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 opacity-10", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent transform -skew-x-12 animate-shimmer" }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative z-10", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-4", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "w-6 h-6 animate-pulse" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `text-lg font-bold ${styles.text}`, children: "🚀 2025 TRANSFORMATION SUITE" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(TrendingUp, { className: "w-5 h-5 animate-bounce" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "button",
-          {
-            onClick: () => setIsVisible(false),
-            className: `${styles.accent} hover:${styles.text} transition-colors`,
-            "aria-label": "Dismiss banner",
-            children: "✕"
-          }
-        )
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: `text-xl font-bold ${styles.text} mb-2`, children: "🎯 Revolutionary AI Solutions + Expert Insights = Business Transformation" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: `${styles.accent} text-sm mb-4`, children: "Get the complete package: cutting-edge AI services, autonomous infrastructure, quantum computing solutions, and expert guidance through our latest articles." })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex gap-2 mb-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "button",
-          {
-            onClick: () => setActiveTab("content"),
-            className: `px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${activeTab === "content" ? "bg-white text-blue-600" : "bg-white/10 text-white hover:bg-white/20"}`,
-            children: "📚 Latest Articles"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "button",
-          {
-            onClick: () => setActiveTab("services"),
-            className: `px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${activeTab === "services" ? "bg-white text-blue-600" : "bg-white/10 text-white hover:bg-white/20"}`,
-            children: "🛠️ New Services"
-          }
-        )
-      ] }),
-      activeTab === "content" && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-4 mb-6", children: featuredArticles.map((article) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/15 transition-all duration-300", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-start justify-between mb-3", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 mb-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-white/20 px-2 py-1 rounded text-xs font-medium", children: article.category }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-medium flex items-center gap-1", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { className: "w-3 h-3" }),
-              "NEW"
-            ] })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: `font-semibold ${styles.text} mb-2 line-clamp-2`, children: article.title }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: `${styles.accent} text-sm mb-3 line-clamp-2`, children: article.excerpt }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-4 text-xs", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "flex items-center gap-1", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(Clock, { className: "w-3 h-3" }),
-              article.readTime
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: new Date(article.date).toLocaleDateString() })
-          ] })
-        ] }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          Link,
-          {
-            to: `/blog/${article.slug}`,
-            className: `${styles.button} px-4 py-2 rounded-lg font-semibold text-sm inline-flex items-center gap-2 transition-all duration-300 hover:scale-105 w-full justify-center`,
-            children: [
-              "Read Article",
-              /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4" })
-            ]
-          }
-        )
-      ] }, article.id)) }),
-      activeTab === "services" && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-4 mb-6", children: featuredServicesList.map((service) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/15 transition-all duration-300", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-start justify-between mb-3", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-2xl", children: service.icon }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 mb-1", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: `font-semibold ${styles.text} text-sm`, children: service.title }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-white/20 px-2 py-1 rounded text-xs font-medium", children: service.category })
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: `${styles.accent} text-xs mb-2 line-clamp-2`, children: service.description }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `font-bold ${styles.text} text-sm`, children: service.pricing.starting }),
-              service.pricing.popular && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-green-400 text-black px-2 py-1 rounded text-xs font-medium", children: "POPULAR" })
-            ] })
-          ] })
-        ] }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          Link,
-          {
-            to: `/services/${service.id}`,
-            className: `${styles.button} px-4 py-2 rounded-lg font-semibold text-sm inline-flex items-center gap-2 transition-all duration-300 hover:scale-105 w-full justify-center`,
-            children: [
-              "Explore Service",
-              /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4" })
-            ]
-          }
-        )
-      ] }, service.id)) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col sm:flex-row gap-3 justify-center mb-4", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          Link,
-          {
-            to: "/services",
-            className: `${styles.button} px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105`,
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(Zap, { className: "w-4 h-4" }),
-              "Explore All Services",
-              /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4" })
-            ]
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          Link,
-          {
-            to: "/blog",
-            className: `${styles.button} px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105`,
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(Award, { className: "w-4 h-4" }),
-              "Read All Articles",
-              /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4" })
-            ]
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          Link,
-          {
-            to: "/contact",
-            className: `${styles.buttonSecondary} border px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105`,
-            children: "Get Free Consultation"
-          }
-        )
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white/10 rounded-lg p-4 border border-white/20", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: `${styles.text} font-bold text-lg mb-2`, children: "🔥 EXCLUSIVE 2025 TRANSFORMATION PACKAGE" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: `${styles.accent} text-sm mb-3`, children: "Get 50% OFF AI Autonomous Operations + FREE AI Strategy Consultation + Complete Article Library Access" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col sm:flex-row gap-2 justify-center", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            Link,
-            {
-              to: "/contact",
-              className: "bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-bold text-sm inline-flex items-center gap-2 transition-all duration-300 hover:scale-105",
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { className: "w-4 h-4" }),
-                "Claim Your Package",
-                /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4" })
-              ]
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `${styles.accent} text-xs flex items-center justify-center`, children: "Valid until March 31, 2025" })
-        ] })
-      ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `text-2xl font-bold ${styles.text}`, children: "500+" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `${styles.accent} text-xs`, children: "Projects Delivered" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `text-2xl font-bold ${styles.text}`, children: "99.9%" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `${styles.accent} text-xs`, children: "Success Rate" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `text-2xl font-bold ${styles.text}`, children: "24/7" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `${styles.accent} text-xs`, children: "Expert Support" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `text-2xl font-bold ${styles.text}`, children: "$2M+" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `${styles.accent} text-xs`, children: "Cost Savings" })
-        ] })
-      ] })
-    ] })
-  ] });
-}
-
-function NewArticlesPromoBanner({
-  className = "",
-  variant = "default",
-  showCount = 3,
-  autoRotate = false
-}) {
-  const [currentIndex, setCurrentIndex] = reactExports.useState(0);
-  const [isVisible, setIsVisible] = reactExports.useState(true);
-  const articles = homepageFeaturedArticles.slice(0, showCount);
-  const currentArticle = autoRotate ? articles[currentIndex] : articles[0];
-  React.useEffect(() => {
-    if (autoRotate && articles.length > 1) {
-      const interval = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % articles.length);
-      }, 5e3);
-      return () => clearInterval(interval);
-    }
-  }, [autoRotate, articles.length]);
-  if (!isVisible || articles.length === 0) {
-    return null;
-  }
-  const getVariantStyles = () => {
-    switch (variant) {
-      case "premium":
-        return {
-          container: "bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 border-purple-400/30",
-          text: "text-white",
-          accent: "text-purple-200",
-          button: "bg-white text-purple-600 hover:bg-purple-50",
-          buttonSecondary: "border-white text-white hover:bg-white hover:text-purple-600"
-        };
-      case "featured":
-        return {
-          container: "bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 border-emerald-400/30",
-          text: "text-white",
-          accent: "text-emerald-200",
-          button: "bg-white text-emerald-600 hover:bg-emerald-50",
-          buttonSecondary: "border-white text-white hover:bg-white hover:text-emerald-600"
-        };
-      default:
-        return {
-          container: "bg-gradient-to-r from-blue-500 to-indigo-600 border-blue-400/30",
-          text: "text-white",
-          accent: "text-blue-200",
-          button: "bg-white text-blue-600 hover:bg-blue-50",
-          buttonSecondary: "border-white text-white hover:bg-white hover:text-blue-600"
-        };
-    }
-  };
-  const styles = getVariantStyles();
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `${styles.container} ${className} border rounded-xl p-6 mb-8 relative overflow-hidden`, children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 opacity-10", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent transform -skew-x-12 animate-shimmer" }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative z-10", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-4", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "w-6 h-6 animate-pulse" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `text-lg font-bold ${styles.text}`, children: "🚀 FRESH CONTENT ALERT" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(TrendingUp, { className: "w-5 h-5 animate-bounce" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "button",
-          {
-            onClick: () => setIsVisible(false),
-            className: `${styles.accent} hover:${styles.text} transition-colors`,
-            "aria-label": "Dismiss banner",
-            children: "✕"
-          }
-        )
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-4", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: `text-xl font-bold ${styles.text} mb-2`, children: "🎯 Just Published: Revolutionary AI Articles That Will Transform Your Business" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: `${styles.accent} text-sm mb-4`, children: "Discover cutting-edge insights on AI Autonomous Infrastructure, Quantum-AI Hybrid Computing, Next-Gen Cybersecurity, and Enterprise AI Implementation strategies." })
-      ] }),
-      currentArticle && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start justify-between", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 mb-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-white/20 px-2 py-1 rounded-full text-xs font-medium", children: currentArticle.category }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-medium flex items-center gap-1", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { className: "w-3 h-3" }),
-              "NEW"
-            ] })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: `font-semibold ${styles.text} mb-1`, children: currentArticle.title }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: `${styles.accent} text-sm mb-2`, children: currentArticle.excerpt }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-4 text-xs", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "flex items-center gap-1", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(Clock, { className: "w-3 h-3" }),
-              currentArticle.readTime
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: new Date(currentArticle.date).toLocaleDateString() })
-          ] })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "ml-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          Link,
-          {
-            to: `/blog/${currentArticle.slug}`,
-            className: `${styles.button} px-4 py-2 rounded-lg font-semibold text-sm inline-flex items-center gap-2 transition-all duration-300 hover:scale-105`,
-            children: [
-              "Read Now",
-              /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4" })
-            ]
-          }
-        ) })
-      ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-4 mb-4", children: articles.slice(0, 3).map((article, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 mb-1", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-white/20 px-2 py-1 rounded text-xs font-medium", children: article.category }),
-          article.trending && /* @__PURE__ */ jsxRuntimeExports.jsx(TrendingUp, { className: "w-3 h-3 text-yellow-400" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h5", { className: `font-medium ${styles.text} text-sm mb-1 line-clamp-2`, children: article.title }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between text-xs", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: styles.accent, children: article.readTime }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            Link,
-            {
-              to: `/blog/${article.slug}`,
-              className: `${styles.accent} hover:${styles.text} transition-colors`,
-              children: "Read →"
-            }
-          )
-        ] })
-      ] }, article.id)) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col sm:flex-row gap-3 justify-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          Link,
-          {
-            to: "/blog",
-            className: `${styles.button} px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105`,
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "w-4 h-4" }),
-              "Explore All Articles",
-              /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4" })
-            ]
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          Link,
-          {
-            to: "/insights",
-            className: `${styles.buttonSecondary} border px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105`,
-            children: "View Insights"
-          }
-        )
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-4 flex flex-wrap gap-2 justify-center", children: ["AI Autonomous Ops", "Quantum Computing", "AI Security", "Edge AI", "Content AI", "GenAI Evals"].map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-white/10 text-white px-3 py-1 rounded-full text-xs font-medium border border-white/20", children: tag }, tag)) })
-    ] })
-  ] });
-}
-
-function NewServicesPromoBanner({
-  className = "",
-  variant = "default",
-  showCount = 3,
-  featuredOnly = false
-}) {
-  const [isVisible, setIsVisible] = reactExports.useState(true);
-  const services = featuredOnly ? newServices.filter((service) => service.featured).slice(0, showCount) : newServices.slice(0, showCount);
-  if (!isVisible || services.length === 0) {
-    return null;
-  }
-  const getVariantStyles = () => {
-    switch (variant) {
-      case "premium":
-        return {
-          container: "bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 border-emerald-400/30",
-          text: "text-white",
-          accent: "text-emerald-200",
-          button: "bg-white text-emerald-600 hover:bg-emerald-50",
-          buttonSecondary: "border-white text-white hover:bg-white hover:text-emerald-600",
-          card: "bg-white/10 backdrop-blur-sm border-white/20"
-        };
-      case "showcase":
-        return {
-          container: "bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 border-purple-400/30",
-          text: "text-white",
-          accent: "text-purple-200",
-          button: "bg-white text-purple-600 hover:bg-purple-50",
-          buttonSecondary: "border-white text-white hover:bg-white hover:text-purple-600",
-          card: "bg-white/10 backdrop-blur-sm border-white/20"
-        };
-      default:
-        return {
-          container: "bg-gradient-to-r from-blue-600 to-indigo-600 border-blue-400/30",
-          text: "text-white",
-          accent: "text-blue-200",
-          button: "bg-white text-blue-600 hover:bg-blue-50",
-          buttonSecondary: "border-white text-white hover:bg-white hover:text-blue-600",
-          card: "bg-white/10 backdrop-blur-sm border-white/20"
-        };
-    }
-  };
-  const styles = getVariantStyles();
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `${styles.container} ${className} border rounded-xl p-6 mb-8 relative overflow-hidden`, children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 opacity-10", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent transform -skew-x-12 animate-shimmer" }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative z-10", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-4", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "w-6 h-6 animate-pulse" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `text-lg font-bold ${styles.text}`, children: "🚀 NEW SERVICES LAUNCH" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(TrendingUp, { className: "w-5 h-5 animate-bounce" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "button",
-          {
-            onClick: () => setIsVisible(false),
-            className: `${styles.accent} hover:${styles.text} transition-colors`,
-            "aria-label": "Dismiss banner",
-            children: "✕"
-          }
-        )
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: `text-xl font-bold ${styles.text} mb-2`, children: "🎯 Revolutionary AI Services That Will Transform Your Business" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: `${styles.accent} text-sm mb-4`, children: "Discover our newest AI-powered services: Autonomous Operations, Quantum Optimization, AI Cybersecurity Suite, Edge AI Platform, and Content Generation Platform." })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6", children: services.map((service) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `${styles.card} rounded-lg p-4 hover:bg-white/15 transition-all duration-300 hover:scale-105`, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start justify-between mb-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-2xl", children: service.icon }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: `font-semibold ${styles.text} text-sm mb-1`, children: service.title }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-white/20 px-2 py-1 rounded text-xs font-medium", children: service.category })
-            ] })
-          ] }),
-          service.newBadge && /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-medium flex items-center gap-1", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { className: "w-3 h-3" }),
-            "NEW"
-          ] })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: `${styles.accent} text-xs mb-3 line-clamp-2`, children: service.description }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `font-bold ${styles.text} text-sm`, children: service.pricing.starting }),
-            service.pricing.popular && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-green-400 text-black px-2 py-1 rounded text-xs font-medium", children: "POPULAR" })
-          ] }),
-          service.pricing.discount && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-red-400 text-white px-2 py-1 rounded text-xs font-medium", children: service.pricing.discount })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-3", children: service.benefits.slice(0, 2).map((benefit, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 mb-1", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(CircleCheckBig, { className: "w-3 h-3 text-green-400 flex-shrink-0" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `${styles.accent} text-xs`, children: benefit })
-        ] }, index)) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex gap-2", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          Link,
-          {
-            to: `/services/${service.id}`,
-            className: `${styles.button} px-3 py-2 rounded text-xs font-semibold inline-flex items-center gap-1 transition-all duration-300 hover:scale-105 flex-1 justify-center`,
-            children: [
-              "Learn More",
-              /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-3 h-3" })
-            ]
-          }
-        ) })
-      ] }, service.id)) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col sm:flex-row gap-3 justify-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          Link,
-          {
-            to: "/services",
-            className: `${styles.button} px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105`,
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(Zap, { className: "w-4 h-4" }),
-              "Explore All Services",
-              /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4" })
-            ]
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          Link,
-          {
-            to: "/contact",
-            className: `${styles.buttonSecondary} border px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105`,
-            children: "Get Free Consultation"
-          }
-        )
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-4 p-3 bg-white/10 rounded-lg border border-white/20", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: `${styles.text} font-semibold text-sm mb-1`, children: "🔥 Limited Time Offer: Get 50% OFF Your First 3 Months" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: `${styles.accent} text-xs`, children: "Plus FREE AI Strategy Consultation • Valid until March 31, 2025" })
-      ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-4 flex flex-wrap gap-2 justify-center", children: ["AI Autonomous Ops", "Quantum Computing", "AI Security", "Edge AI", "Content Generation", "Customer Insights"].map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-white/10 text-white px-3 py-1 rounded-full text-xs font-medium border border-white/20", children: tag }, tag)) })
-    ] })
-  ] });
 }
 
 const EnhancedPromotionalBanner = ({
@@ -1227,1051 +115,89 @@ var Header_default = Header;
 
 const latestArticles = [
   {
-    id: "zero-trust-for-genai-2026",
-    slug: "zero-trust-for-genai-2026",
-    title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",
-    description: "Production patterns: egress control, prompt firewalls, and signed outputs at scale.",
-    excerpt: "Ship GenAI safely with layered controls: prompt firewalls, egress policies, signing.",
+    id: "ai-cognitive-computing-2026",
+    slug: "ai-cognitive-computing-2026",
+    title: "AI Cognitive Computing 2026: Brain-Inspired Intelligence",
+    description: "Next-generation brain-inspired intelligence with human-level reasoning and $20M+ enterprise value creation.",
+    excerpt: "Discover cognitive computing systems that achieve human-level decision-making capabilities.",
     author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Security",
-    tags: ["GenAI", "Security", "Zero‑Trust"],
+    date: "2026-01-26",
+    category: "Cognitive AI",
+    tags: ["Cognitive Computing", "Brain-Inspired AI", "Human-Level Reasoning", "Enterprise AI"],
     featured: true,
-    readTime: "8 min read",
-    image: "/images/zero-trust-for-genai-2026.jpg",
+    readTime: "32 min read",
+    image: "/images/ai-cognitive-computing-2026.jpg",
     newBadge: true,
     trending: true
   },
   {
-    id: "quantum-ai-hybrid-blueprint-2026",
-    slug: "quantum-ai-hybrid-blueprint-2026",
-    title: "Quantum‑AI Hybrid Blueprint 2026: Practical Near‑Term Wins",
-    description: "Blend quantum libraries with AI orchestration to unlock optimization wins today.",
-    excerpt: "Near‑term value from QC + AI: routing patterns and orchestration tips.",
+    id: "ai-next-generation-autonomous-systems-2026",
+    slug: "ai-next-generation-autonomous-systems-2026",
+    title: "AI Next-Generation Autonomous Systems 2026",
+    description: "Self-managing enterprise infrastructure with 99.9% autonomy and $15M+ operational savings.",
+    excerpt: "Discover how next-generation autonomous AI systems are revolutionizing enterprise infrastructure.",
     author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Quantum",
-    tags: ["Quantum", "AI", "Optimization"],
-    featured: false,
-    readTime: "9 min read",
-    image: "/images/quantum-ai-hybrid-blueprint-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "secure-ml-supply-chain-2026",
-    slug: "secure-ml-supply-chain-2026",
-    title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
-    description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
-    excerpt: "Stop ML supply‑chain drift with automated SBOMs, attestations, and CI policy gates.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "Security",
-    tags: ["ML", "Supply Chain", "SBOM", "Security"],
+    date: "2026-01-26",
+    category: "Autonomous Systems",
+    tags: ["Autonomous Systems", "Self-Managing", "Enterprise Infrastructure", "AI Operations"],
     featured: true,
-    readTime: "7 min read",
-    image: "/images/secure-ml-supply-chain-2026.jpg",
+    readTime: "28 min read",
+    image: "/images/ai-next-generation-autonomous-systems-2026.jpg",
     newBadge: true,
     trending: true
   },
   {
-    id: "genai-routing-blueprint-2026",
-    slug: "genai-routing-blueprint-2026",
-    title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",
-    description: "Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.",
-    excerpt: "A practical guide to keep costs predictable without hurting UX or outcomes.",
+    id: "ai-agent-orchestration-2026",
+    slug: "ai-agent-orchestration-2026",
+    title: "AI Agent Orchestration 2026: Multi-Agent System Architecture",
+    description: "Master multi-agent systems with 95% automation efficiency and $5M+ ROI through advanced orchestration patterns.",
+    excerpt: "Learn enterprise-grade AI agent coordination strategies that scale and deliver unprecedented automation efficiency.",
     author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "GenAI",
-    tags: ["Routing", "Quality Tiers", "Budgets", "Caching"],
+    date: "2026-01-26",
+    category: "AI Orchestration",
+    tags: ["AI Agents", "Orchestration", "Automation", "Enterprise"],
     featured: true,
-    readTime: "8 min read",
-    image: "/images/genai-routing-blueprint-2026.jpg",
+    readTime: "22 min read",
+    image: "/images/ai-agent-orchestration-2026.jpg",
     newBadge: true,
     trending: true
   },
   {
-    id: "golden-paths-roi-2026",
-    slug: "golden-paths-roi-2026",
-    title: "Golden Paths ROI 2026: Scorecards that Prove Platform Value",
-    description: "Link developer journeys to SLOs, adoption, and revenue with actionable scorecards.",
-    excerpt: "Shift platform conversations from infra spend to shipped outcomes and ROI.",
+    id: "ai-quantum-computing-2026",
+    slug: "ai-quantum-computing-2026",
+    title: "AI Quantum Computing 2026: Next-Generation Intelligence",
+    description: "Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.",
+    excerpt: "Learn how quantum-AI integration is transforming enterprise computing with unprecedented performance gains.",
     author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "Platform Engineering",
-    tags: ["Golden Paths", "Scorecards", "ROI"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/golden-paths-roi-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "secure-ml-supply-chain-2026",
-    slug: "secure-ml-supply-chain-2026",
-    title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
-    description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
-    excerpt: "Stop ML supply‑chain drift with automated SBOMs, attestations, and CI policy gates.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "Security",
-    tags: ["ML", "Supply Chain", "SBOM", "Security"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/secure-ml-supply-chain-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "genai-routing-blueprint-2026",
-    slug: "genai-routing-blueprint-2026",
-    title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",
-    description: "Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.",
-    excerpt: "A practical guide to keep costs predictable without hurting UX or outcomes.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "GenAI",
-    tags: ["Routing", "Quality Tiers", "Budgets", "Caching"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/genai-routing-blueprint-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "golden-paths-roi-2026",
-    slug: "golden-paths-roi-2026",
-    title: "Golden Paths ROI 2026: Scorecards that Prove Platform Value",
-    description: "Link developer journeys to SLOs, adoption, and revenue with actionable scorecards.",
-    excerpt: "Shift platform conversations from infra spend to shipped outcomes and ROI.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "Platform Engineering",
-    tags: ["Golden Paths", "Scorecards", "ROI"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/golden-paths-roi-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "reliable-rag-ops-2026",
-    slug: "reliable-rag-ops-2026",
-    title: "Reliable RAG Ops 2026: Freshness, Drift, and Quality Budgets",
-    description: "Operate RAG at scale with TTL freshness windows, drift monitors, and KPI‑tied budgets.",
-    excerpt: "A production playbook to keep RAG answers accurate without blowing budgets.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-12",
-    category: "GenAI",
-    tags: ["RAG", "Freshness", "Quality"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/reliable-rag-ops-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "agent-evals-scorecards-2026",
-    slug: "agent-evals-scorecards-2026",
-    title: "Agent Evals 2026: Scorecards That Predict Outcomes",
-    description: "Online evals wired to KPIs—scorecards that correlate with revenue, CSAT, and retention.",
-    excerpt: "A practical playbook for evals that protect velocity and predict business outcomes.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "GenAI",
-    tags: ["Evals", "Scorecards", "KPIs"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/agent-evals-scorecards-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "privacy-preserving-agents-2026",
-    slug: "privacy-preserving-agents-2026",
-    title: "Privacy‑Preserving Agents: Scoped IDs, Redaction, and On‑Device Caches",
-    description: "Build assistants that keep insights high and PII risk low with scoped identifiers and local caches.",
-    excerpt: "Implement privacy by design for agent workflows without losing observability.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "AI Security",
-    tags: ["Privacy", "Agents", "Security"],
-    featured: false,
-    readTime: "7 min read",
-    image: "/images/privacy-preserving-agents-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "platform-kpis-2026",
-    slug: "platform-kpis-2026",
-    title: "Platform KPIs 2026: Adoption, Golden Paths, and SLOs",
-    description: "Scorecards engineers adopt—link platform telemetry to shipped business outcomes.",
-    excerpt: "From costs to value: KPIs that prove platform ROI quarter by quarter.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-12",
-    category: "Platform Engineering",
-    tags: ["KPIs", "Scorecards", "Platform"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/platform-kpis-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-incident-budgets-2026",
-    slug: "ai-incident-budgets-2026",
-    title: "AI Incident Budgets: Playbooks That Contain in <60s",
-    description: "Budgeted actions, approvals, and rollback triggers for safe automation under pressure.",
-    excerpt: "Close the loop from detections to actions with KPI‑wired incident budgets.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-12",
-    category: "Security",
-    tags: ["Incident Response", "Automation", "Guardrails"],
-    featured: false,
-    readTime: "6 min read",
-    image: "/images/ai-incident-budgets-2026.jpg",
-    newBadge: true,
-    trending: false
-  },
-  {
-    id: "ai-incident-response-playbooks-2025",
-    slug: "ai-incident-response-playbooks-2025",
-    title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
-    description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
-    excerpt: "Design incident playbooks with budgeted actions, approvals, and telemetry that close the loop fast.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Cybersecurity",
-    tags: ["IR", "Automation", "Guardrails"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-incident-response-playbooks-2025.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "privacy-preserving-analytics-2025",
-    slug: "privacy-preserving-analytics-2025",
-    title: "Privacy‑Preserving Analytics: Ship Insights Without PII Risk",
-    description: "On-device redaction, scoped IDs, and DP noise for compliant, decision-grade telemetry.",
-    excerpt: "A practical blueprint for analytics that respect privacy while keeping signals rich.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Observability",
-    tags: ["Privacy", "Telemetry", "Compliance"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/privacy-preserving-analytics-2025.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "platform-engineering-scorecards-2026",
-    slug: "platform-engineering-scorecards-2026",
-    title: "Platform Engineering Scorecards 2026: Golden Paths that Drive Outcomes",
-    description: "Adoption, golden-path TTFX, and SLOs as leading indicators of platform ROI.",
-    excerpt: "A pragmatic scorecard system engineers actually use—wired to shipped value.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-09",
-    category: "Platform Engineering",
-    tags: ["Scorecards", "Golden Paths", "ROI", "Platform"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/platform-engineering-scorecards-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-cybersecurity-automation-2025",
-    slug: "ai-cybersecurity-automation-2025",
-    title: "AI Cybersecurity Automation: Autonomic Response Under 60s",
-    description: "Behavioral detections, policy tests, and playbooks that auto-contain incidents fast.",
-    excerpt: "From detections to actions: close the loop with safe automation and SLAs.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-09",
-    category: "Cybersecurity",
-    tags: ["Security", "Automation", "Detection", "Response"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-cybersecurity-automation.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-ai-blueprint-2026",
-    slug: "edge-ai-blueprint-2026",
-    title: "Edge AI Blueprint 2026: Privacy‑Preserving Intelligence <100ms",
-    description: "Signed configs, geo budgets, and tiny models for reliable edge decisions.",
-    excerpt: "A field guide to building private, low‑latency edge AI systems at scale.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-09",
-    category: "Edge Computing",
-    tags: ["Edge AI", "Latency", "Privacy", "On‑device"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/edge-ai-blueprint-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "llm-policy-testing-2025",
-    slug: "llm-policy-testing-2025",
-    title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
-    description: "Automate governance with lightweight policy tests on every PR and release train.",
-    excerpt: "Policy tests wired to CI keep AI features safe without slowing delivery.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-08",
-    category: "AI Governance",
-    tags: ["Policy", "CI", "Governance", "Evals"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/ai-governance-blueprint.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-operational-scorecards-2026",
-    slug: "ai-operational-scorecards-2026",
-    title: "AI Operational Scorecards 2026: Guardrails That Drive Outcomes",
-    description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs engineers adopt",
-    excerpt: "From policy to practice: scorecards that correlate with outcomes and speed teams up.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-09",
-    category: "AI Strategy",
-    tags: ["Governance", "Scorecards", "Evals"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-operational-scorecards.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-llm-caching-blueprint-2025",
-    slug: "edge-llm-caching-blueprint-2025",
-    title: "Edge LLM Caching: Latency Budgets, KV Patterns, and Cost Control",
-    description: "Sub-100ms prompts with tiered caches, signed configs, and freshness windows.",
-    excerpt: "Cut latency and cost with edge caches and deterministic fallbacks.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-09",
-    category: "Architecture",
-    tags: ["Edge", "Caching", "LLM"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/edge-llm-caching.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "finops-scorecards-2025",
-    slug: "finops-scorecards-2025",
-    title: "FinOps Scorecards: Guardrails Engineers Actually Use",
-    description: "Budgets, PR checks, and alerts that cut cloud waste 25–40% without slowing teams.",
-    excerpt: "A practical FinOps playbook with scorecards tied to product goals.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-08",
-    category: "Cloud",
-    tags: ["FinOps", "Cloud", "Budgets", "Governance"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/cloud-finops-guardrails.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "enterprise-rag-blueprint-2025",
-    slug: "enterprise-rag-blueprint-2025",
-    title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, Auth",
-    description: "A pragmatic blueprint for RAG at scale with freshness windows and layered evals.",
-    excerpt: "Keep answers accurate with freshness windows and hybrid retrieval patterns.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-08",
-    category: "GenAI",
-    tags: ["RAG", "Freshness", "Hybrid Search", "Auth"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/enterprise-rag-v2.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-governance-scorecards-2026",
-    slug: "ai-governance-scorecards-2026",
-    title: "AI Governance 2026: Scorecards Engineers Actually Use",
-    description: "Practical guardrails wired to KPIs, PR checks, and online canaries that teams adopt.",
-    excerpt: "Move beyond heavy process. Ship fast with measurable guardrails, policy tests, and rollback‑ready canaries.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-07",
-    category: "AI Strategy",
-    tags: ["Governance", "Policy", "Scorecards", "Evals"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-governance-scorecards-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "freshness-aware-rag-v2",
-    slug: "freshness-aware-rag-v2",
-    title: "Freshness‑Aware RAG v2: TTL Budgets, Async Warmups, and SLAs",
-    description: "A production playbook for freshness with hybrid search, versioned corpora, and policy‑backed SLAs.",
-    excerpt: "Keep answers accurate with freshness windows, budgeted warmups, and KPI‑aligned evaluation.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-07",
-    category: "GenAI",
-    tags: ["RAG", "Freshness", "Hybrid Search", "SLAs"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/freshness-aware-rag-v2.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-flags-blueprint-2026",
-    slug: "edge-flags-blueprint-2026",
-    title: "Edge Flags Blueprint 2026: <100ms Global Releases with Budgets",
-    description: "Segmented rollouts, risk budgets, and instant rollback powered by edge compute and KV.",
-    excerpt: "Blueprint for zero‑regret rollouts: geo/account targeting, budgets, and telemetry‑driven decisions.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-07",
-    category: "Architecture",
-    tags: ["Edge", "Feature Flags", "Progressive Delivery"],
-    featured: false,
-    readTime: "6 min read",
-    image: "/images/edge-flags-blueprint-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-platform-roadmaps-2026",
-    slug: "ai-platform-roadmaps-2026",
-    title: "AI Product Roadmaps 2026: From Bet to Business Impact",
-    description: "Outcome-led roadmaps that connect bets to scorecards, release trains, and shipped value.",
-    excerpt: "A practical system for roadmapping AI that ties every bet to measurable business outcomes and reliable delivery.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-06",
-    category: "AI Strategy",
-    tags: ["Roadmaps", "Delivery", "Scorecards", "AI"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-product-roadmaps-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "genai-guardrails-blueprints-2026",
-    slug: "genai-guardrails-blueprints-2026",
-    title: "GenAI Guardrails Blueprints 2026: Policy Tests, Canaries, and SLAs",
-    description: "Composable guardrail patterns that scale without slowing teams or blocking delivery.",
-    excerpt: "Blueprints for ship-fast, stay-safe guardrails: inline filters, policy tests in CI, KPI-linked canaries, and SLOs.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-06",
-    category: "GenAI",
-    tags: ["Guardrails", "Policy", "Evals", "Canaries"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/genai-guardrails-blueprints-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "cloud-finops-scorecards-2026",
-    slug: "cloud-finops-scorecards-2026",
-    title: "Cloud FinOps Scorecards 2026: Guardrails Engineers Actually Use",
-    description: "PR gates, alerts, and budgets that cut waste 25–40% while keeping velocity high.",
-    excerpt: "A modern FinOps playbook with scorecards wired to product goals and automated waste prevention.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-06",
-    category: "Cloud",
-    tags: ["FinOps", "Cloud", "Optimization", "Governance"],
-    featured: false,
-    readTime: "6 min read",
-    image: "/images/cloud-finops-scorecards-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-risk-register-2025",
-    slug: "ai-risk-register-2025",
-    title: "AI Risk Register That Drives Action",
-    description: "From static lists to owned mitigations with policy tests and SLAs.",
-    excerpt: "Make your AI risk program measurable and actionable with owners, timelines, and CI policy tests.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-04",
-    category: "AI Governance",
-    tags: ["Risk", "Governance", "Policy", "Compliance"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-risk-register.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-guardrails-scorecards-2025",
-    slug: "ai-guardrails-scorecards-2025",
-    title: "AI Guardrails That Engineers Adopt: Scorecards, PR Gates, Evals",
-    description: "Practical guardrails wired to your SDLC: measurable, fast, and adoption‑friendly.",
-    excerpt: "Guardrails that actually get used: scorecards tied to KPIs, lightweight PR checks, and online canaries.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "AI Strategy",
-    tags: ["Guardrails", "Scorecards", "Evals"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-guardrails-scorecards.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-flags-zero-regret-2025",
-    slug: "edge-flags-zero-regret-2025",
-    title: "Zero‑Regret Rollouts with Edge Flags",
-    description: "Global progressive delivery with geo/account segmentation, budgets, and instant rollback.",
-    excerpt: "Blueprint for <100ms feature flags at the edge with safety budgets and telemetry.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Architecture",
-    tags: ["Edge", "Feature Flags", "Delivery"],
-    featured: false,
-    readTime: "6 min read",
-    image: "/images/edge-flags-zero-regret.jpg",
-    newBadge: true,
-    trending: false
-  },
-  {
-    id: "freshness-aware-rag-2025",
-    slug: "freshness-aware-rag-2025",
-    title: "Freshness‑Aware RAG: TTL Windows and Versioned Corpora",
-    description: "Keep retrieval accurate with TTL budgets, async warmups, and audit trails.",
-    excerpt: "A practical guide to freshness controls in enterprise RAG.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "GenAI",
-    tags: ["RAG", "Freshness", "Search"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/freshness-aware-rag.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-product-roadmaps-2025",
-    slug: "ai-product-roadmaps-2025",
-    title: "AI Product Roadmaps 2025: From Vision to Velocity",
-    description: "Outcome-driven roadmaps with scorecards, release trains, and guardrails that ship.",
-    excerpt: "A pragmatic playbook for building AI product roadmaps that actually deliver—linking strategy to shipped value.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-05",
-    category: "AI Strategy",
-    tags: ["Roadmaps", "Scorecards", "Delivery", "AI"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-product-roadmaps.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "sbom-automation-ml-supply-chain",
-    slug: "sbom-automation-ml-supply-chain",
-    title: "Automating SBOM for the ML Supply Chain",
-    description: "From models to datasets to prompts—continuous SBOMs with policy gates and attestations.",
-    excerpt: "How to build living SBOMs for ML assets, wire policy checks, and stop supply‑chain drift.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-05",
-    category: "Security",
-    tags: ["SBOM", "Supply Chain", "ML", "Security"],
-    featured: false,
-    readTime: "7 min read",
-    image: "/images/sbom-ml-supply-chain.jpg",
-    newBadge: true,
-    trending: false
-  },
-  {
-    id: "online-genai-evals-2025",
-    slug: "online-genai-evals-2025",
-    title: "Online GenAI Evals: Canary Checks That Keep You Fast",
-    description: "Lightweight online evals tied to KPIs to prevent regressions while shipping weekly.",
-    excerpt: "Stand up live canaries, budgeted evals, and dashboards that protect velocity without red tape.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-05",
-    category: "GenAI",
-    tags: ["Evals", "Canaries", "Guardrails", "Observability"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/online-genai-evals.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "practical-rag-in-production-2025",
-    slug: "practical-rag-in-production-2025",
-    title: "Practical RAG in Production",
-    description: "Freshness, hybrid search, and evals that scale beyond the demo.",
-    excerpt: "A production-ready approach to RAG with freshness guarantees and layered evaluation.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-04",
-    category: "GenAI",
-    tags: ["RAG", "Search", "Evals"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/practical-rag-2025.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-platform-engineering-2025",
-    slug: "ai-platform-engineering-2025",
-    title: "AI Platform Engineering 2025: The Complete Guide to Building Scalable AI Infrastructure",
-    description: "Comprehensive guide to building enterprise-grade AI platforms that scale. Learn about MLOps, model governance, and infrastructure best practices.",
-    excerpt: "Building AI platforms that can handle enterprise-scale workloads requires careful planning, robust infrastructure, and proven engineering practices. This guide covers everything from initial architecture to production deployment.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-17",
-    category: "Platform Engineering",
-    tags: ["AI", "Platform Engineering", "MLOps", "Infrastructure", "Scalability"],
-    featured: true,
-    readTime: "15 min read",
-    image: "/images/ai-platform-engineering.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "enterprise-rag-blueprint-v2",
-    slug: "enterprise-rag-blueprint-v2",
-    title: "Enterprise RAG Blueprint v2: Advanced Retrieval-Augmented Generation for Business",
-    description: "Next-generation RAG implementation strategies for enterprise applications. Learn advanced techniques for document retrieval, context management, and response generation.",
-    excerpt: "Retrieval-Augmented Generation (RAG) has evolved significantly. This blueprint covers advanced techniques for enterprise-scale RAG implementations with improved accuracy and performance.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-16",
-    category: "AI Strategy",
-    tags: ["RAG", "Enterprise AI", "Document Processing", "NLP", "Knowledge Management"],
-    featured: true,
-    readTime: "12 min read",
-    image: "/images/enterprise-rag-v2.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-autonomous-operations-guide",
-    slug: "ai-autonomous-operations-guide",
-    title: "AI Autonomous Operations: Building Self-Healing Infrastructure Systems",
-    description: "Learn how to implement AI-driven autonomous operations that can self-heal, self-optimize, and self-scale without human intervention.",
-    excerpt: "Autonomous operations represent the future of infrastructure management. This guide shows you how to build systems that can manage themselves with minimal human oversight.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-15",
-    category: "AI Operations",
-    tags: ["Autonomous Operations", "Infrastructure", "AI", "Self-Healing", "Automation"],
-    featured: true,
-    readTime: "10 min read",
-    image: "/images/ai-autonomous-ops.jpg",
-    newBadge: true,
-    trending: false
-  },
-  {
-    id: "quantum-computing-business-guide",
-    slug: "quantum-computing-business-guide",
-    title: "Quantum Computing for Business: Practical Applications and ROI Analysis",
-    description: "Explore real-world quantum computing applications for business. Learn about quantum advantage, implementation strategies, and measurable ROI.",
-    excerpt: "Quantum computing is moving from research to practical business applications. Discover how forward-thinking companies are already using quantum solutions to solve complex problems.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-14",
+    date: "2026-01-26",
     category: "Quantum Computing",
-    tags: ["Quantum Computing", "Business Applications", "ROI", "Optimization", "Technology"],
-    featured: false,
-    readTime: "11 min read",
-    image: "/images/quantum-business.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-ai-implementation-guide",
-    slug: "edge-ai-implementation-guide",
-    title: "Edge AI Implementation Guide: Bringing Intelligence to the Edge",
-    description: "Complete guide to implementing AI at the edge for real-time processing, reduced latency, and enhanced privacy.",
-    excerpt: "Edge AI is revolutionizing how we deploy artificial intelligence. Learn the strategies, tools, and best practices for successful edge AI implementation.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-13",
-    category: "Edge Computing",
-    tags: ["Edge AI", "Real-time Processing", "IoT", "Latency", "Privacy"],
-    featured: false,
-    readTime: "13 min read",
-    image: "/images/edge-ai-guide.jpg",
-    newBadge: true,
-    trending: false
-  },
-  {
-    id: "zero-trust-security-implementation",
-    slug: "zero-trust-security-implementation",
-    title: "Zero Trust Security Implementation: A Complete Enterprise Guide",
-    description: "Comprehensive guide to implementing Zero Trust security architecture in enterprise environments. Learn best practices and implementation strategies.",
-    excerpt: "Zero Trust is no longer optional for enterprise security. This guide provides a complete roadmap for implementing Zero Trust architecture in your organization.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-12",
-    category: "Cybersecurity",
-    tags: ["Zero Trust", "Security", "Enterprise", "Architecture", "Implementation"],
-    featured: false,
-    readTime: "14 min read",
-    image: "/images/zero-trust-guide.jpg",
-    newBadge: false,
-    trending: true
-  },
-  {
-    id: "ai-content-generation-best-practices",
-    slug: "ai-content-generation-best-practices",
-    title: "AI Content Generation: Best Practices for Quality and Brand Consistency",
-    description: "Learn how to use AI for content generation while maintaining quality, brand voice, and SEO optimization.",
-    excerpt: "AI content generation can transform your content strategy, but success requires careful planning and execution. Discover the best practices for AI-generated content.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-11",
-    category: "Content AI",
-    tags: ["Content Generation", "AI", "SEO", "Brand Consistency", "Marketing"],
-    featured: false,
-    readTime: "8 min read",
-    image: "/images/ai-content-generation.jpg",
-    newBadge: true,
-    trending: false
-  },
-  {
-    id: "mlops-reliability-patterns",
-    slug: "mlops-reliability-patterns",
-    title: "MLOps Reliability Patterns: Building Robust Machine Learning Systems",
-    description: "Essential patterns and practices for building reliable, production-ready machine learning systems with proper monitoring and governance.",
-    excerpt: "MLOps reliability requires more than just deploying models. Learn the essential patterns for building robust, production-ready ML systems.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-10",
-    category: "MLOps",
-    tags: ["MLOps", "Reliability", "Machine Learning", "Production", "Monitoring"],
-    featured: false,
-    readTime: "9 min read",
-    image: "/images/mlops-reliability.jpg",
-    newBadge: false,
-    trending: true
-  },
-  {
-    id: "ai-supply-chain-optimization-2025",
-    slug: "ai-supply-chain-optimization-2025",
-    title: "AI Supply Chain Optimization: 65% Faster Deliveries, 40% Lower Cost",
-    description: "Demand sensing, dynamic routing, and smart inventory that lift OTIF while cutting cost.",
-    excerpt: "Achieve 65% faster deliveries with AI‑powered planning, routing, and SLA‑aware orchestration.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Applied AI",
-    tags: ["Supply Chain", "Optimization", "Routing", "Forecasting"],
+    tags: ["Quantum AI", "Quantum Computing", "Optimization", "Performance"],
     featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-supply-chain-optimization.jpg",
+    readTime: "25 min read",
+    image: "/images/ai-quantum-computing-2026.jpg",
     newBadge: true,
     trending: true
   },
   {
-    id: "privacy-first-observability-quickstart-2025",
-    slug: "privacy-first-observability-quickstart-2025",
-    title: "Privacy‑First Observability Quickstart: Scoped IDs, Redaction, Retention",
-    description: "Stand up privacy‑safe telemetry with scoped identifiers, field‑level filters, and TTL policies.",
-    excerpt: "Ship insights without PII risk in under a week using proven building blocks.",
+    id: "ai-sustainability-green-tech-2026",
+    slug: "ai-sustainability-green-tech-2026",
+    title: "AI Sustainability & Green Tech 2026: Carbon-Neutral Operations",
+    description: "Achieve carbon-neutral AI operations with 80% energy reduction and $2M+ savings through sustainable technology.",
+    excerpt: "Learn how forward-thinking companies are implementing green AI strategies for environmental and business benefits.",
     author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Observability",
-    tags: ["Privacy", "Telemetry", "Compliance"],
-    featured: false,
-    readTime: "7 min read",
-    image: "/images/privacy-first-observability-quickstart.jpg",
-    newBadge: true,
-    trending: false
-  },
-  {
-    id: "ai-platform-scorecards-roi-2026",
-    slug: "ai-platform-scorecards-roi-2026",
-    title: "AI Platform Scorecards 2026: Proving ROI with Leading Indicators",
-    description: "A practical system to link platform telemetry to adoption, retention, and revenue using scorecards engineers actually adopt.",
-    excerpt: "Design scorecards that shift conversations from infra spend to shipped business outcomes.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-10",
-    category: "AI Strategy",
-    tags: ["Scorecards", "ROI", "Platform Engineering"],
+    date: "2026-01-26",
+    category: "Sustainability",
+    tags: ["Green AI", "Sustainability", "Carbon Neutral", "Energy Efficiency"],
     featured: true,
-    readTime: "8 min read",
-    image: "/images/ai-platform-scorecards-roi-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "production-rag-quality-budgets-2026",
-    slug: "production-rag-quality-budgets-2026",
-    title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
-    description: "Run RAG at scale with explicit quality budgets, freshness controls, and KPI-aligned SLAs that avoid regressions.",
-    excerpt: "Keep answers accurate and on‑budget with freshness windows, async warmups, and layered evals.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-10",
-    category: "GenAI",
-    tags: ["RAG", "Freshness", "Evals", "SLAs"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/production-rag-quality-budgets-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-governance-blueprint-2025",
-    slug: "ai-governance-blueprint-2025",
-    title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
-    description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.",
-    excerpt: "Move beyond slideware: adopt scorecards, policy tests, and measurable guardrails that accelerate delivery while satisfying risk.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "AI Strategy",
-    tags: ["AI Governance", "Policy", "Risk", "Compliance", "Scorecards"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-governance-blueprint.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "genai-guardrails-realtime-2025",
-    slug: "genai-guardrails-realtime-2025",
-    title: "Real‑Time GenAI Guardrails: Inline Filters, Canaries, and Evals",
-    description: "Run fast with live canaries, inline moderation, and KPI‑linked evals that prevent regressions.",
-    excerpt: "A field guide to guardrails that actually work in production without blocking velocity.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "GenAI",
-    tags: ["Guardrails", "Evals", "Safety", "Observability", "GenAI"],
-    featured: false,
-    readTime: "8 min read",
-    image: "/images/genai-guardrails.jpg",
-    newBadge: true,
-    trending: false
-  },
-  {
-    id: "cloud-finops-guardrails-2025",
-    slug: "cloud-finops-guardrails-2025",
-    title: "Cloud FinOps Guardrails Engineers Actually Use",
-    description: "Budgets, alerts, and PR gates that cut waste 25–40% while preserving delivery speed.",
-    excerpt: "A practical FinOps playbook: actionable guardrails, scorecards tied to product goals, and automated waste prevention.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Cloud",
-    tags: ["FinOps", "Cloud", "Governance"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/cloud-finops-guardrails.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "practical-evals-scorecards-2025",
-    slug: "practical-evals-scorecards-2025",
-    title: "Practical AI Evals That Predict Business Outcomes",
-    description: "Design scorecards that correlate with revenue, CSAT, and retention.",
-    excerpt: "Move beyond BLEU: build evals that predict outcomes and prevent regressions in production.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "GenAI",
-    tags: ["Evals", "Scorecards", "GenAI"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/practical-evals-2025.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-agent-observability-2025",
-    slug: "ai-agent-observability-2025",
-    title: "AI Agent Observability: Traces, Policy Tests, and Feedback Loops",
-    description: "Keep quality high with traces, inline policy tests, and human-in-the-loop signals.",
-    excerpt: "A field guide to observing multi-step AI agents without slowing them down.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "GenAI",
-    tags: ["Observability", "Agents", "Safety"],
-    featured: false,
-    readTime: "7 min read",
-    image: "/images/ai-agent-observability.jpg",
-    newBadge: true,
-    trending: false
-  },
-  {
-    id: "serverless-inference-cost-playbook-2025",
-    slug: "serverless-inference-cost-playbook-2025",
-    title: "Serverless Inference Cost Playbook",
-    description: "Adaptive batching, warm pools, and quality tiers without P95 pain.",
-    excerpt: "Cut GenAI inference costs while preserving latency and quality with proven patterns.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "GenAI",
-    tags: ["Inference", "Cost", "Optimization"],
-    featured: false,
-    readTime: "7 min read",
-    image: "/images/serverless-inference-costs.jpg",
-    newBadge: true,
-    trending: false
-  },
-  {
-    id: "ai-sales-copilot-playbook-2025",
-    slug: "ai-sales-copilot-playbook-2025",
-    title: "AI Sales Copilot: A 90‑Day Plan",
-    description: "Workflows, guardrails, and KPIs to lift win‑rates with an AI copilot.",
-    excerpt: "A pragmatic plan to deploy a sales copilot that sellers actually use.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Applied AI",
-    tags: ["Sales", "Copilot", "Playbook"],
-    featured: false,
-    readTime: "8 min read",
-    image: "/images/ai-sales-copilot.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "secure-rag-2025",
-    slug: "secure-rag-2025",
-    title: "Secure RAG 2025: Authorization‑Aware Retrieval and Prompt Firewalls",
-    description: "Enterprise patterns for safe, compliant retrieval‑augmented generation.",
-    excerpt: "Implement auth-aware retrieval, freshness windows, and prompt firewalls without blocking teams.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "AI Security",
-    tags: ["RAG", "Security", "Governance"],
-    featured: false,
-    readTime: "8 min read",
-    image: "/images/secure-rag-2025.jpg",
-    newBadge: true,
-    trending: false
-  },
-  {
-    id: "agentic-workflows-blueprint-2026",
-    slug: "agentic-workflows-blueprint-2026",
-    title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",
-    description: "Design reliable multi‑tool agents with deterministic tools, live traces, and risk budgets.",
-    excerpt: "A production playbook for building agent workflows that teams can trust.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-10",
-    category: "GenAI",
-    tags: ["Agents", "Tracing", "Guardrails"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/agentic-workflows-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "privacy-first-observability-2026",
-    slug: "privacy-first-observability-2026",
-    title: "Privacy‑First Observability: User‑Centric Traces Without PII Leaks",
-    description: "Implement privacy filters, scoped IDs, and retention policies that keep signals rich and safe.",
-    excerpt: "Observability patterns that balance insight with compliance across stacks.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-10",
-    category: "Observability",
-    tags: ["Privacy", "Tracing", "Compliance"],
-    featured: false,
-    readTime: "7 min read",
-    image: "/images/privacy-first-observability.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "on-device-agents-2026",
-    slug: "on-device-agents-2026",
-    title: "On‑Device Agents 2026: Private Tools That Work Offline",
-    description: "Ship fast, privacy‑first assistants with on‑device tools, local caches, and fallback routes.",
-    excerpt: "Design assistants that keep working with limited connectivity and strict privacy.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-11",
-    category: "Edge Computing",
-    tags: ["Agents", "Edge", "Privacy"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/on-device-agents-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "genai-budgets-and-quality-tiers-2026",
-    slug: "genai-budgets-and-quality-tiers-2026",
-    title: "GenAI Budgets and Quality Tiers: Control Cost Without Hurting UX",
-    description: "Tier models, cache prompts, and budget traffic by SLA to cut spend 30–60%.",
-    excerpt: "Practical controls to keep GenAI bills predictable while preserving experience.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-11",
-    category: "AI Operations",
-    tags: ["FinOps", "Quality Tiers", "Budgets"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/genai-budgets-quality-tiers.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "secure-tools-marketplace-2026",
-    slug: "secure-tools-marketplace-2026",
-    title: "Secure Tools Marketplace: Vetting, Sandboxes, and Attestations",
-    description: "Bring third‑party tools safely with policy checks, sandboxes, and signed attestations.",
-    excerpt: "A safe path to ecosystem extensibility without compromising security or velocity.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-11",
-    category: "Security",
-    tags: ["Security", "Supply Chain", "Sandboxing"],
-    featured: false,
-    readTime: "8 min read",
-    image: "/images/secure-tools-marketplace.jpg",
-    newBadge: true,
-    trending: false
-  },
-  {
-    id: "ai-autonomous-incident-runbooks-2025",
-    slug: "ai-autonomous-incident-runbooks-2025",
-    title: "AI Autonomous Incident Runbooks: Budgeted Actions and Instant Rollback",
-    description: "Design incident playbooks with explicit budgets, approvals, and safe automated rollback.",
-    excerpt: "Close the loop from detection to safe action using budgets, approvals, and telemetry.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "AI Operations",
-    tags: ["Runbooks", "Automation", "Risk Budgets"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-autonomous-incident-runbooks-2025.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "privacy-first-feature-flags-2025",
-    slug: "privacy-first-feature-flags-2025",
-    title: "Privacy‑First Feature Flags: Zero‑Regret Rollouts at the Edge",
-    description: "Scoped IDs, on‑device filters, and geo budgets for safe global releases under 100ms.",
-    excerpt: "Blueprint for privacy‑preserving progressive delivery using edge compute and KV.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Architecture",
-    tags: ["Feature Flags", "Edge", "Privacy"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/privacy-first-feature-flags-2025.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "platform-roi-scorecards-quickstart-2025",
-    slug: "platform-roi-scorecards-quickstart-2025",
-    title: "Platform ROI Scorecards: A Practical Quickstart",
-    description: "Link platform telemetry to adoption and revenue with scorecards engineers actually use.",
-    excerpt: "Adoption, golden‑path TTFX, and SLOs as leading indicators of ROI.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "AI Strategy",
-    tags: ["Scorecards", "Platform", "ROI"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/platform-roi-scorecards-quickstart-2025.jpg",
+    readTime: "18 min read",
+    image: "/images/ai-sustainability-green-tech-2026.jpg",
     newBadge: true,
     trending: true
   }
 ];
-const featuredArticles = latestArticles.filter((article) => article.featured);
-const trendingArticles = latestArticles.filter((article) => article.trending);
 
 const LatestArticlesShowcase = () => {
-  const displayArticles = [...featuredArticles.slice(0, 2), ...trendingArticles.slice(0, 1)];
+  const displayArticles = latestArticles.filter((article) => article.featured).slice(0, 3);
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-20 bg-white", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-16", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-600 text-sm font-medium mb-8 border border-blue-500/20", children: [
@@ -2641,6 +567,26 @@ contentHighlights.push(
     badge: "New Service",
     stats: "Production Ready",
     variant: "premium"
+  },
+  {
+    id: 17,
+    title: "🛠️ AI SRE Blueprints 2026",
+    description: "Error budgets, rollback triggers, and live traces for reliable AI",
+    ctaText: "Read Blueprint",
+    ctaLink: "/blog/ai-sre-blueprints-2026",
+    badge: "New",
+    stats: "8 min read",
+    variant: "info"
+  },
+  {
+    id: 18,
+    title: "🔒 Privacy‑First A/B Testing",
+    description: "Insights without PII using scoped IDs and DP noise",
+    ctaText: "Learn How",
+    ctaLink: "/blog/privacy-first-ab-testing-2026",
+    badge: "New",
+    stats: "7 min read",
+    variant: "success"
   }
 );
 const LatestContentBanner = ({
@@ -2906,6 +852,41 @@ const NewContentPromoBanner = ({
     warning: "bg-gradient-to-r from-orange-500 to-red-500 text-white border-orange-400/30"
   };
   const featuredContent = [
+    {
+      title: "AI Safety Budgets 2026",
+      description: "Guardrails wired to KPIs, approvals, rollbacks",
+      icon: Shield,
+      link: "/blog/ai-safety-budgets-2026",
+      category: "AI Strategy"
+    },
+    {
+      title: "Edge Privacy for ML 2026",
+      description: "On‑device filters and scoped identifiers",
+      icon: Cloud,
+      link: "/blog/edge-privacy-ml-2026",
+      category: "Edge"
+    },
+    {
+      title: "Agent Evals in Prod 2026",
+      description: "Online checks that predict outcomes",
+      icon: TrendingUp,
+      link: "/blog/agent-evals-in-prod-2026",
+      category: "GenAI"
+    },
+    {
+      title: "Cost‑Aware Inference 2026",
+      description: "Warm pools and quality tiers under SLAs",
+      icon: Zap,
+      link: "/blog/ai-cost-aware-inference-2026",
+      category: "GenAI"
+    },
+    {
+      title: "Production RAG Ops 2026",
+      description: "Freshness windows and drift guards",
+      icon: Cloud,
+      link: "/blog/production-rag-ops-2026",
+      category: "GenAI"
+    },
     {
       title: "Secure ML Supply Chain 2026",
       description: "SBOMs, lineage, and CI policy gates",
@@ -3555,6 +1536,390 @@ const newCaseStudies = [
       position: "CEO, Global Logistics Solutions"
     },
     image: "/images/logistics-ai-case-study.jpg",
+    newBadge: true,
+    trending: false
+  }
+];
+
+const newServices = [
+  {
+    id: "ai-governance-scorecards-2026",
+    slug: "ai-governance-scorecards-2026",
+    title: "AI Governance Scorecards 2026",
+    description: "Scorecards, PR checks, and KPI‑linked canaries that prove AI program ROI while keeping teams fast.",
+    category: "AI Strategy",
+    pricing: {
+      starting: "$2,499/month",
+      popular: true,
+      features: ["Scorecard design", "CI policy tests", "Online canaries", "SLO playbooks"]
+    },
+    features: [
+      "Outcome‑linked scorecards",
+      "Lightweight PR checks",
+      "KPI‑linked online canaries",
+      "Guardrails that speed teams up",
+      "Executive dashboards",
+      "Adoption & Golden‑Path KPIs",
+      "Incident & Rollback Budgets",
+      "Compliance evidence automation"
+    ],
+    metrics: [
+      { value: "30–60%", label: "Time‑to‑Value Improvement" },
+      { value: "25–40%", label: "Cloud Waste Reduction" },
+      { value: "+15pts", label: "Developer Happiness" }
+    ],
+    testimonial: {
+      quote: "We finally have guardrails engineers adopt—and execs trust the scorecards.",
+      author: "Amira Patel",
+      company: "Northstar Platform"
+    },
+    cta: {
+      primary: "See Scorecards",
+      secondary: "Book Workshop"
+    },
+    icon: "📊",
+    featured: true,
+    tags: ["Governance", "Scorecards", "Policy", "Canaries"],
+    newBadge: true,
+    trending: true,
+    specialOffer: {
+      title: "Quarterly Pilot",
+      description: "Launch in 30 days with 3 scorecards and PR checks",
+      discount: "20%",
+      validUntil: "December 31, 2025"
+    }
+  },
+  {
+    id: "edge-llm-caching",
+    slug: "edge-llm-caching",
+    title: "Edge LLM Caching & On‑Device Inference",
+    description: "Sub‑100ms prompts with privacy by default. Ship on‑device agents, encrypted caches, and edge toolchains.",
+    category: "AI Engineering",
+    pricing: {
+      starting: "$1,999/month",
+      popular: true,
+      features: ["On‑device inference", "Encrypted caches", "Edge tool routing", "Fallback orchestration"]
+    },
+    features: [
+      "On‑device Model Execution",
+      "Encrypted Semantic Caches",
+      "Intent‑Aware Tool Routing",
+      "Offline‑First Orchestration",
+      "Latency Budgets & SLOs",
+      "Privacy‑Preserving Telemetry",
+      "Edge Rollouts & Canarying",
+      "Cross‑Vendor Model Fallbacks"
+    ],
+    metrics: [
+      { value: "<100ms", label: "Median Prompt" },
+      { value: "35%", label: "Cost Reduction" },
+      { value: "99.99%", label: "Offline Reliability" }
+    ],
+    testimonial: {
+      quote: "We hit 90ms median prompts and improved trust with on‑device execution.",
+      author: "Priya Desai",
+      company: "FinEdge"
+    },
+    cta: {
+      primary: "Enable Edge",
+      secondary: "See Architecture"
+    },
+    icon: "🚀",
+    featured: true,
+    tags: ["Edge", "LLM", "Caching", "Privacy", "Latency"],
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ml-sbom-security",
+    slug: "ml-sbom-security",
+    title: "ML SBOMs & Secure Model Supply Chain",
+    description: "Prove and protect your AI supply chain with SBOMs, signed models, and policy‑as‑code.",
+    category: "Security",
+    pricing: {
+      starting: "$2,499/month",
+      popular: false,
+      features: ["Model SBOMs", "Signature verification", "Policy‑as‑code", "Vuln scanning"]
+    },
+    features: [
+      "Model & Dataset SBOMs",
+      "Signed Artifacts & Attestations",
+      "Policy‑as‑Code Enforcement",
+      "Dependency & Prompt Supply Scanning",
+      "Runtime Guardrails",
+      "Compliance Reporting",
+      "Key Management Integrations",
+      "CICD Gates & Release Controls"
+    ],
+    metrics: [
+      { value: "85%", label: "Risk Reduction" },
+      { value: "<1d", label: "Audit Prep" },
+      { value: "99.9%", label: "Signature Coverage" }
+    ],
+    testimonial: {
+      quote: "Security and compliance reviews now take hours instead of weeks.",
+      author: "Jon Ruiz",
+      company: "RegSecure"
+    },
+    cta: {
+      primary: "Secure Models",
+      secondary: "View Controls"
+    },
+    icon: "🔐",
+    featured: true,
+    tags: ["Security", "SBOM", "Compliance", "Policy", "Supply Chain"],
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-autonomous-infrastructure-platform",
+    slug: "ai-autonomous-infrastructure-platform",
+    title: "AI Autonomous Infrastructure Platform",
+    description: "Revolutionary AI-powered infrastructure that automatically heals, optimizes, and scales without human intervention. Achieve 99.9% uptime with self-managing systems.",
+    category: "AI Infrastructure",
+    pricing: {
+      starting: "$2,999/month",
+      popular: true,
+      features: ["Self-healing systems", "Auto-scaling", "Predictive maintenance", "Real-time optimization"]
+    },
+    features: [
+      "Autonomous System Healing",
+      "Intelligent Auto-Scaling",
+      "Predictive Maintenance",
+      "Real-time Performance Optimization",
+      "Anomaly Detection & Response",
+      "Zero-downtime Updates",
+      "Multi-cloud Orchestration",
+      "Advanced Monitoring & Analytics"
+    ],
+    metrics: [
+      { value: "99.9%", label: "System Uptime" },
+      { value: "75%", label: "Cost Reduction" },
+      { value: "90%", label: "Faster Recovery" }
+    ],
+    testimonial: {
+      quote: "The AI Autonomous Infrastructure Platform has revolutionized our operations. We've achieved 99.9% uptime with minimal human intervention.",
+      author: "Dr. Jennifer Chen",
+      company: "TechFlow Systems"
+    },
+    cta: {
+      primary: "Start Free Trial",
+      secondary: "View Demo"
+    },
+    icon: "🤖",
+    featured: true,
+    tags: ["Autonomous Systems", "Infrastructure", "AI", "Self-Healing", "Automation"],
+    newBadge: true,
+    trending: true,
+    specialOffer: {
+      title: "Launch Special",
+      description: "50% OFF First 3 Months",
+      discount: "50%",
+      validUntil: "March 31, 2025"
+    }
+  },
+  {
+    id: "quantum-ai-hybrid-computing",
+    slug: "quantum-ai-hybrid-computing",
+    title: "Quantum-AI Hybrid Computing Solutions",
+    description: "Breakthrough quantum-AI hybrid computing platform that delivers unprecedented computational power for complex business optimization and machine learning.",
+    category: "Quantum Computing",
+    pricing: {
+      starting: "$4,999/month",
+      popular: false,
+      features: ["Quantum algorithms", "AI optimization", "Complex problem solving", "Real-time processing"]
+    },
+    features: [
+      "Quantum Algorithm Integration",
+      "AI-Quantum Hybrid Processing",
+      "Complex Optimization Solutions",
+      "Real-time Quantum Computing",
+      "Machine Learning Acceleration",
+      "Business Intelligence Enhancement",
+      "Risk Analysis & Modeling",
+      "Custom Quantum Applications"
+    ],
+    metrics: [
+      { value: "1000x", label: "Faster Processing" },
+      { value: "95%", label: "Accuracy Improvement" },
+      { value: "300%", label: "ROI Increase" }
+    ],
+    testimonial: {
+      quote: "Quantum-AI hybrid computing has given us a massive competitive advantage. The processing power is incredible.",
+      author: "Michael Rodriguez",
+      company: "Quantum Capital"
+    },
+    cta: {
+      primary: "Schedule Demo",
+      secondary: "Learn More"
+    },
+    icon: "⚛️",
+    featured: true,
+    tags: ["Quantum Computing", "AI", "Optimization", "Machine Learning", "Business Intelligence"],
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-cybersecurity-zero-trust",
+    slug: "ai-cybersecurity-zero-trust",
+    title: "AI-Powered Zero Trust Cybersecurity",
+    description: "Next-generation AI-driven zero trust security architecture that provides comprehensive protection against evolving cyber threats with real-time adaptation.",
+    category: "Cybersecurity",
+    pricing: {
+      starting: "$1,999/month",
+      popular: true,
+      features: ["AI threat detection", "Zero trust architecture", "Real-time protection", "Compliance automation"]
+    },
+    features: [
+      "AI-Powered Threat Detection",
+      "Dynamic Zero Trust Architecture",
+      "Real-time Threat Response",
+      "Behavioral Analytics",
+      "Automated Compliance",
+      "Multi-layered Security",
+      "Incident Response Automation",
+      "Security Intelligence Platform"
+    ],
+    metrics: [
+      { value: "99.9%", label: "Threat Detection" },
+      { value: "60%", label: "Faster Response" },
+      { value: "85%", label: "False Positive Reduction" }
+    ],
+    testimonial: {
+      quote: "The AI cybersecurity system provides unmatched protection. We've eliminated 99.9% of threats before they become incidents.",
+      author: "Sarah Thompson",
+      company: "SecureTech Corp"
+    },
+    cta: {
+      primary: "Security Audit",
+      secondary: "View Platform"
+    },
+    icon: "🛡️",
+    featured: true,
+    tags: ["Cybersecurity", "Zero Trust", "AI Security", "Threat Detection", "Compliance"],
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-content-generation-automation",
+    slug: "ai-content-generation-automation",
+    title: "AI Content Generation Automation Platform",
+    description: "Revolutionary AI platform that generates high-quality, brand-consistent content at scale while maintaining SEO optimization and brand voice.",
+    category: "Content AI",
+    pricing: {
+      starting: "$799/month",
+      popular: false,
+      features: ["Content generation", "Brand consistency", "SEO optimization", "Multi-format support"]
+    },
+    features: [
+      "Intelligent Content Generation",
+      "Brand Voice Consistency",
+      "SEO Optimization",
+      "Multi-format Content Creation",
+      "Quality Assurance Automation",
+      "Content Strategy Planning",
+      "Performance Analytics",
+      "Collaborative Workflows"
+    ],
+    metrics: [
+      { value: "10x", label: "Content Production" },
+      { value: "95%", label: "Brand Consistency" },
+      { value: "80%", label: "Time Savings" }
+    ],
+    testimonial: {
+      quote: "AI content generation has transformed our marketing. We produce 10x more content while maintaining perfect brand consistency.",
+      author: "Emily Johnson",
+      company: "MarketingPro Solutions"
+    },
+    cta: {
+      primary: "Start Trial",
+      secondary: "See Examples"
+    },
+    icon: "📝",
+    featured: false,
+    tags: ["Content Generation", "AI", "Marketing", "SEO", "Brand Consistency"],
+    newBadge: true,
+    trending: false
+  },
+  {
+    id: "ai-customer-experience-platform",
+    slug: "ai-customer-experience-platform",
+    title: "AI Customer Experience Transformation Platform",
+    description: "Comprehensive AI platform that transforms customer experiences through intelligent personalization, predictive analytics, and seamless automation.",
+    category: "Customer Experience",
+    pricing: {
+      starting: "$1,499/month",
+      popular: false,
+      features: ["Personalization", "Predictive analytics", "Customer journey mapping", "Real-time insights"]
+    },
+    features: [
+      "Intelligent Personalization",
+      "Predictive Customer Analytics",
+      "Journey Mapping & Optimization",
+      "Real-time Customer Insights",
+      "Multi-channel Engagement",
+      "Sentiment Analysis",
+      "Automated Customer Service",
+      "Performance Optimization"
+    ],
+    metrics: [
+      { value: "45%", label: "Revenue Increase" },
+      { value: "90%", label: "Customer Satisfaction" },
+      { value: "70%", label: "Engagement Boost" }
+    ],
+    testimonial: {
+      quote: "The AI customer experience platform has revolutionized our customer relationships. Revenue increased 45% in just 6 months.",
+      author: "David Kim",
+      company: "CustomerFirst Inc"
+    },
+    cta: {
+      primary: "Transform CX",
+      secondary: "View Results"
+    },
+    icon: "💬",
+    featured: false,
+    tags: ["Customer Experience", "Personalization", "Predictive Analytics", "Customer Journey", "Engagement"],
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-supply-chain-optimization",
+    slug: "ai-supply-chain-optimization",
+    title: "AI Supply Chain Optimization Platform",
+    description: "Advanced AI platform for supply chain optimization featuring predictive analytics, intelligent routing, and automated inventory management.",
+    category: "Supply Chain",
+    pricing: {
+      starting: "$2,499/month",
+      popular: false,
+      features: ["Predictive analytics", "Route optimization", "Inventory management", "Demand forecasting"]
+    },
+    features: [
+      "Predictive Supply Chain Analytics",
+      "Intelligent Route Optimization",
+      "Automated Inventory Management",
+      "Demand Forecasting",
+      "Risk Assessment & Mitigation",
+      "Supplier Performance Analytics",
+      "Cost Optimization",
+      "Real-time Visibility"
+    ],
+    metrics: [
+      { value: "65%", label: "Faster Deliveries" },
+      { value: "40%", label: "Cost Reduction" },
+      { value: "95%", label: "On-Time Delivery" }
+    ],
+    testimonial: {
+      quote: "AI supply chain optimization has transformed our logistics. We're 65% faster and 40% more cost-effective than before.",
+      author: "Lisa Wang",
+      company: "LogisticsMax"
+    },
+    cta: {
+      primary: "Optimize Now",
+      secondary: "View Case Study"
+    },
+    icon: "🚚",
+    featured: false,
+    tags: ["Supply Chain", "Logistics", "Predictive Analytics", "Optimization", "Cost Reduction"],
     newBadge: true,
     trending: false
   }
@@ -4765,6 +3130,96 @@ Remember: The best caching strategy is the one that delivers the right balance o
     ],
     relatedPosts: ["ai-autonomous-infrastructure-2025", "finops-ai-cost-optimization", "ai-incident-response-playbooks-2025"],
     slug: "edge-llm-caching-blueprint-2026"
+  },
+  {
+    id: "genai-routing-under-budgets-2026",
+    title: "Quality‑Tiered GenAI Routing: SLAs Without Bill Shock",
+    description: "Route prompts across model tiers with budgets, caches, and eval signals to control cost.",
+    excerpt: "Keep experience high under tight budgets with deterministic routing and caches.",
+    content: `# Quality‑Tiered GenAI Routing
+
+Design routing that meets SLAs under strict budgets using quality tiers, caches, and eval signals.`,
+    category: "AI Operations",
+    tags: ["Budgets", "Quality Tiers", "Routing"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedAt: "2025-10-13T09:00:00Z",
+    updatedAt: "2025-10-13T09:00:00Z",
+    readTime: "6 min read",
+    author: "Zion Tech Group Team",
+    authorBio: "AI platform engineers focused on reliability and cost control.",
+    image: "/images/genai-routing-2026.jpg",
+    seo: {
+      metaTitle: "Quality‑Tiered GenAI Routing: SLAs Without Bill Shock",
+      metaDescription: "Route prompts across model tiers with budgets, caches, and eval signals to control cost.",
+      keywords: ["genai routing", "quality tiers", "ai budgets"]
+    },
+    metrics: [
+      { label: "Cost Reduction", value: "35%", description: "Spend reduction with routing" }
+    ],
+    relatedPosts: ["edge-llm-caching-blueprint-2026", "serverless-ai-inference-cost-playbook-2025"],
+    slug: "genai-routing-under-budgets-2026"
+  },
+  {
+    id: "platform-golden-paths-kpis-2026",
+    title: "Golden Paths That Move KPIs: Platform Engineering That Pays",
+    description: "Adoption metrics, TTFX, and SLOs as leading indicators of platform ROI in 2026.",
+    excerpt: "A scorecard system that links platform investments to shipped business outcomes.",
+    content: `# Platform Golden Paths That Move KPIs
+
+Measure adoption, TTFX, and SLOs as leading indicators of ROI.`,
+    category: "Platform Engineering",
+    tags: ["Golden Paths", "ROI", "Scorecards"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedAt: "2025-10-13T09:05:00Z",
+    updatedAt: "2025-10-13T09:05:00Z",
+    readTime: "7 min read",
+    author: "Zion Tech Group Team",
+    authorBio: "Platform engineering team focused on developer experience and ROI.",
+    image: "/images/platform-golden-paths-kpis-2026.jpg",
+    seo: {
+      metaTitle: "Golden Paths That Move KPIs: Platform Engineering That Pays",
+      metaDescription: "Adoption, TTFX, and SLOs as leading indicators of platform ROI.",
+      keywords: ["platform engineering", "golden paths", "roi"]
+    },
+    metrics: [
+      { label: "Developer Adoption", value: "+40%", description: "Increase via golden paths" }
+    ],
+    relatedPosts: ["platform-engineering-scorecards-2026", "ai-platform-scorecards-roi-2026"],
+    slug: "platform-golden-paths-kpis-2026"
+  },
+  {
+    id: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
+    description: "Continuous SBOMs for models, datasets, and prompts with attestations and CI policy checks.",
+    excerpt: "A practical guide to securing the ML supply chain with provenance and guardrails.",
+    content: `# Secure ML Supply Chain 2026
+
+Track lineage for datasets, models, and prompts; enforce policy gates in CI/CD.`,
+    category: "AI Security",
+    tags: ["SBOM", "Supply Chain", "Security"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedAt: "2025-10-13T09:10:00Z",
+    updatedAt: "2025-10-13T09:10:00Z",
+    readTime: "7 min read",
+    author: "Zion Tech Group Team",
+    authorBio: "Security architects focused on ML supply chain integrity.",
+    image: "/images/secure-ml-supply-chain-2026.jpg",
+    seo: {
+      metaTitle: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
+      metaDescription: "Continuous SBOMs, attestations, and CI policy checks for ML assets.",
+      keywords: ["ml sbom", "model lineage", "ai supply chain security"]
+    },
+    metrics: [
+      { label: "Incident Reduction", value: "60%", description: "Supply‑chain incident drop" }
+    ],
+    relatedPosts: ["privacy-preserving-agents-2026", "ai-risk-budgets-2026"],
+    slug: "secure-ml-supply-chain-2026"
   }
 ];
 const featuredBlogPosts$1 = newBlogPosts2025.filter((post) => post.featured);
@@ -6013,6 +4468,42 @@ var NewServicesShowcase_default = NewServicesShowcase;
 
 const caseStudies = [
   {
+    id: "ai-sustainability-transformation-2026",
+    title: "AI Sustainability Transformation 2026: Carbon-Neutral Operations",
+    company: "Global Manufacturing Corp",
+    industry: "Manufacturing",
+    challenge: "Massive AI infrastructure consuming 45MW of power daily, generating 35,000 tons of CO2 annually, with energy costs exceeding $18M per year and mounting regulatory pressure for carbon neutrality.",
+    solution: "Implemented comprehensive AI sustainability transformation including solar-powered data centers, optimized algorithms, carbon offset programs, and intelligent automation systems across 25 facilities.",
+    results: [
+      "Achieved 100% carbon neutral operations",
+      "Reduced energy consumption by 80%",
+      "Generated $10M total ROI",
+      "Achieved 95% automation efficiency",
+      "Eliminated 35,000 tons CO2 annually"
+    ],
+    technologies: ["Solar Energy", "AI Optimization", "Carbon Offsets", "Smart Manufacturing", "Predictive Analytics"],
+    duration: "18 months",
+    imageUrl: "/images/case-studies/ai-sustainability-transformation-2026.jpg"
+  },
+  {
+    id: "ai-quantum-optimization-2026",
+    title: "AI Quantum Optimization 2026: 1000x Speed Improvement",
+    company: "FinanceCorp International",
+    industry: "Financial Services",
+    challenge: "Portfolio optimization for $50B in assets taking 8 hours on classical computers, limiting real-time trading opportunities and costing $2M annually in suboptimal allocations.",
+    solution: "Implemented quantum-enhanced AI optimization system using variational quantum algorithms with hybrid quantum-classical processing for real-time portfolio optimization and decision making.",
+    results: [
+      "Achieved 1000x speed improvement (8 hours → 30 seconds)",
+      "Generated $12M additional annual returns",
+      "Improved optimization accuracy by 95%",
+      "Enabled real-time portfolio rebalancing",
+      "Reduced portfolio risk by 40%"
+    ],
+    technologies: ["Quantum Computing", "Variational Quantum Algorithms", "AI/ML", "Portfolio Optimization", "Real-time Analytics"],
+    duration: "12 months",
+    imageUrl: "/images/case-studies/ai-quantum-optimization-2026.jpg"
+  },
+  {
     id: "fintech-ai-platform",
     title: "AI-Powered Financial Analytics Platform",
     company: "FinTech Solutions Inc.",
@@ -6517,6 +5008,26 @@ const TrendingContentBanner = () => {
       badge: "HOT"
     },
     {
+      title: "AI Safety Budgets 2026",
+      description: "Budgeted actions, approvals, and rollbacks that keep AI features safe.",
+      views: "13.2K",
+      readTime: "7 min",
+      category: "AI Governance",
+      icon: Shield,
+      link: "/blog/ai-safety-budgets-2026",
+      badge: "NEW"
+    },
+    {
+      title: "Edge Personalization 2026",
+      description: "Private, sub‑100ms personalization with signed configs and caches.",
+      views: "9.7K",
+      readTime: "8 min",
+      category: "Edge Computing",
+      icon: Zap,
+      link: "/blog/edge-personalization-2026",
+      badge: "HOT"
+    },
+    {
       title: "Zero‑Trust for GenAI 2026",
       description: "Prompt firewalls, egress, signed outputs for safe GenAI.",
       views: "11.8K",
@@ -6788,4 +5299,4 @@ const BlogPromotionBanner = ({
 };
 var BlogPromotionBanner_default = BlogPromotionBanner;
 
-export { BlogPromotionBanner_default as B, ComprehensivePromoBanner as C, EnhancedPromotionalBanner_default as E, Footer as F, Header_default as H, LatestContentBanner_default as L, ModernFeatures as M, NewContentAnnouncement_default as N, SuccessStoriesShowcase_default as S, TrendingContentBanner_default as T, NewContentPromoBanner_default as a, NewArticlesPromoBanner as b, NewServicesPromoBanner as c, ContentPromotionBanner as d, NewContentShowcase_default as e, NewContentShowcase2025_default as f, NewServicesShowcase_default as g, LatestArticlesShowcase_default as h, latestArticles as l };
+export { BlogPromotionBanner_default as B, ContentPromotionBanner as C, EnhancedPromotionalBanner_default as E, Footer as F, Header_default as H, LatestContentBanner_default as L, ModernFeatures as M, NewContentAnnouncement_default as N, SuccessStoriesShowcase_default as S, TrendingContentBanner_default as T, NewContentPromoBanner_default as a, NewContentShowcase_default as b, NewContentShowcase2025_default as c, NewServicesShowcase_default as d, LatestArticlesShowcase_default as e, latestArticles as l };
