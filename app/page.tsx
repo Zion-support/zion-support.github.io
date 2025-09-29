@@ -11,6 +11,8 @@ import InteractiveContentRecommendation from '../components/InteractiveContentRe
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
+import LatestContentBanner2026 from '../components/LatestContentBanner2026';
+import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -21,29 +23,11 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-      {/* New Content Promo Strip */}
-      <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
-          <div className="flex items-center gap-2 text-sm md:text-base">
-            <span>✨ NEW 2026:</span>
-            <Link href="/blog/ai-autonomous-infrastructure-2026" className="underline hover:text-yellow-200">Autonomous Infrastructure</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-quantum-hybrid-computing-2026" className="underline hover:text-yellow-200">Quantum AI</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-zero-trust-security-2026" className="underline hover:text-yellow-200">Zero Trust Security</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-foundation-models-2026" className="underline hover:text-yellow-200">Foundation Models Playbook</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-autonomous-enterprise-transformation-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
-          </div>
-          <Link
-            href="/blog"
-            className="bg-white text-indigo-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
-          >
-            Read the latest
-          </Link>
-        </div>
-      </div>
+      {/* Latest Content Banner 2026 */}
+      <LatestContentBanner2026 />
+      {/* Revolutionary Content Showcase 2026 */}
+      <RevolutionaryContentShowcase2026 />
+      
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
       
