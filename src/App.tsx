@@ -9,22 +9,19 @@ import PerformanceTracker from './components/PerformanceTracker';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-<<<<<<< HEAD
 import { performanceOptimizer } from './utils/performanceOptimizations';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
 import { seoOptimizer } from './utils/seoOptimization';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-=======
 import { useSEOData } from './components/SEOOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibilityManager';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
->>>>>>> 4b999e7e8499b1d439e8efecb8a451947461db54
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 
 // Import enhanced utilities
@@ -375,24 +372,14 @@ export default function App(): React.JSX.Element {
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
 
-<<<<<<< HEAD
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-=======
-    // Update meta tags
-    updateMetaTags(seoData);
 
     // Initialize enhanced monitoring systems
     enhancedPerformanceMonitor.getAlerts();
     enhancedAccessibilityManager.getIssues();
     enhancedSEOOptimizer.getIssues();
-
-    // Basic performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized');
-    }
->>>>>>> 4b999e7e8499b1d439e8efecb8a451947461db54
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
