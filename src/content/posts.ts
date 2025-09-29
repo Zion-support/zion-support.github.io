@@ -10,8 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-=======
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
     description:
@@ -42,7 +40,6 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
   },
   {
->>>>>>> cursor/create-and-deploy-new-content-83a1
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:
@@ -347,6 +344,27 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-01-21",
     featured: false,
     readTime: "9 min read",
+  },
+  // New content additions
+  {
+    slug: "ai-automation-roi-playbook-2025",
+    title: "AI Automation ROI Playbook 2025",
+    description:
+      "Benchmarks, calculators, and rollout plans to prove value in 90 days.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "cloud-cost-guardrails-scorecards",
+    title: "Cloud Cost Guardrails: Practical Scorecards That Stick",
+    description:
+      "Requests/limits, SLOs, and CI gates that cut spend 30% without drama.",
+    category: "Cloud FinOps",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "7 min read",
   },
 ];
 

@@ -85,7 +85,6 @@ export const latestInsights: InsightArticle[] = [
     title: "North‑Star Metrics: A Field Guide",
     summary:
       "A practical approach to defining leading indicators that align teams to outcomes.",
-<<<<<<< HEAD
     category: "Product Analytics",
     date: "2025-09-28",
     readMinutes: 7,
@@ -122,8 +121,6 @@ export const latestInsights: InsightArticle[] = [
     title: "An Operator’s Playbook for LTV:CPA Ratio",
     summary:
       "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
-=======
->>>>>>> origin/main
     category: "Product Analytics",
     date: "2025-09-28",
     readMinutes: 7,
@@ -156,7 +153,6 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 8,
   },
   {
-<<<<<<< HEAD
     id: "ai-workflow-automation-2025-trends",
     title: "AI Workflow Automation: 2025 Trends That Will Transform Business",
     summary:
@@ -290,7 +286,8 @@ export const latestInsights: InsightArticle[] = [
     category: "GenAI",
     date: "2025-09-29",
     readMinutes: 8,
-=======
+  },
+  {
     id: "ai-automation-roi-calculator",
     title: "AI Automation ROI Calculator: Measure Your Business Impact",
     summary:
@@ -334,7 +331,25 @@ export const latestInsights: InsightArticle[] = [
     category: "Security",
     date: "2025-01-21",
     readMinutes: 11,
->>>>>>> cursor/create-and-deploy-new-content-0173
+  },
+  // New insight additions
+  {
+    id: "ai-roadmap-quickstart",
+    title: "AI Roadmap Quickstart: 90 Days to First Value",
+    summary:
+      "A focused plan to ship one high‑impact use case with measurable ROI.",
+    category: "AI Strategy",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "cloud-finops-quickwins",
+    title: "Cloud FinOps Quick Wins: 30% Savings Without Slowing Down",
+    summary:
+      "Guardrails, linting, and CI policies that reduce spend and improve reliability.",
+    category: "Cloud",
+    date: "2025-09-30",
+    readMinutes: 5,
   },
 ];
 
