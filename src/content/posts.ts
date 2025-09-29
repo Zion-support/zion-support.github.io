@@ -71,7 +71,7 @@ export const posts: BlogPost[] = [
     category: "AI Strategy",
     publishedAt: "2025-09-29",
     featured: true,
-    readTime: "9 min read"
+    readTime: "9 min",
   },
   {
     slug: "real-time-genai-guardrails-2025",
