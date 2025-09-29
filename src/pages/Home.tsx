@@ -1,5 +1,6 @@
 import {
   ArrowRight,
+  Award,
   CheckCircle,
   Globe,
   Rocket,
@@ -7,6 +8,7 @@ import {
   Sparkles,
   Star,
   Target,
+  TrendingUp,
   Users,
   Zap,
 } from "lucide-react";
@@ -17,6 +19,7 @@ import Header from "../components/Header";
 import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
 import { latestInsights } from "../content/insights";
+import { posts } from "../content/posts";
 
 const Home = () => {
   return (
@@ -86,10 +89,25 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              Leading the future of technology with innovative solutions,
-              cutting-edge AI, and transformative digital experiences that drive
-              real business results. Experience the power of next-generation technology.
+              🚀 <strong>NEW IN 2025:</strong> Revolutionary AI-Powered Micro SAAS Platform! 
+              Transform your business with our cutting-edge AI solutions, enterprise-grade security, 
+              and next-generation cloud infrastructure. Join 500+ companies already scaling with us!
             </p>
+
+            {/* Special Promotion Banner */}
+            <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-xl p-6 mb-8 animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
+                <span className="text-lg font-bold text-green-400">LIMITED TIME OFFER</span>
+                <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                🎯 Get 50% OFF Your First 3 Months + FREE AI Strategy Consultation
+              </p>
+              <p className="text-zion-slate-light text-sm">
+                Valid until March 31, 2025 • No setup fees • Cancel anytime
+              </p>
+            </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">
@@ -140,6 +158,84 @@ const Home = () => {
 
         {/* Latest Insights Section */}
         <LatestInsights />
+
+        {/* New Services Showcase */}
+        <section className="container mx-auto px-6 py-20 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-400 text-sm font-medium mb-6 animate-pulse">
+              🔥 HOT NEW SERVICES - 2025
+            </div>
+            <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up">
+              Revolutionary AI-Powered Solutions
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Transform your business with our cutting-edge AI micro SAAS platform. 
+              From workflow automation to predictive analytics - we've got you covered.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl border-2 border-green-500/30 bg-green-500/10">
+              <div className="bg-green-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green-500/30 transition-colors border border-green-500/30 shadow-lg">
+                <Zap className="w-8 h-8 text-green-400 group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">
+                AI Workflow Automation
+              </h3>
+              <p className="text-zion-slate-light mb-4">
+                Reduce manual tasks by 80% with intelligent process automation. 
+                Starting at just $99/month.
+              </p>
+              <div className="bg-green-500/20 rounded-lg p-3 mb-4">
+                <div className="text-green-400 font-bold text-lg">💰 Save $50,000+ annually</div>
+                <div className="text-green-300 text-sm">Average ROI in 3 months</div>
+              </div>
+              <Link to="/services/ai-workflow-automation" className="btn-primary w-full text-center">
+                Start Free Trial
+              </Link>
+            </div>
+
+            <div className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl border-2 border-blue-500/30 bg-blue-500/10">
+              <div className="bg-blue-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-500/30 transition-colors border border-blue-500/30 shadow-lg">
+                <Users className="w-8 h-8 text-blue-400 group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">
+                AI Virtual Assistant
+              </h3>
+              <p className="text-zion-slate-light mb-4">
+                24/7 intelligent customer support and business operations. 
+                Starting at just $79/month.
+              </p>
+              <div className="bg-blue-500/20 rounded-lg p-3 mb-4">
+                <div className="text-blue-400 font-bold text-lg">📈 40% increase in conversions</div>
+                <div className="text-blue-300 text-sm">90% faster response time</div>
+              </div>
+              <Link to="/services/ai-virtual-assistant" className="btn-primary w-full text-center">
+                Get Started Now
+              </Link>
+            </div>
+
+            <div className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl border-2 border-purple-500/30 bg-purple-500/10">
+              <div className="bg-purple-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-500/30 transition-colors border border-purple-500/30 shadow-lg">
+                <Target className="w-8 h-8 text-purple-400 group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">
+                AI Data Analytics
+              </h3>
+              <p className="text-zion-slate-light mb-4">
+                Transform data into actionable insights with machine learning. 
+                Starting at just $149/month.
+              </p>
+              <div className="bg-purple-500/20 rounded-lg p-3 mb-4">
+                <div className="text-purple-400 font-bold text-lg">🎯 60% better decisions</div>
+                <div className="text-purple-300 text-sm">70% risk reduction</div>
+              </div>
+              <Link to="/services/ai-data-analytics" className="btn-primary w-full text-center">
+                View Demo
+              </Link>
+            </div>
+          </div>
+        </section>
 
         {/* Features Section */}
         <section className="container mx-auto px-6 py-20 relative z-10">
@@ -377,6 +473,107 @@ const Home = () => {
         {/* Enhanced Testimonials Section */}
         <EnhancedTestimonials />
 
+        {/* Latest Articles */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="mb-10 flex items-end justify-between">
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
+                <p className="text-gray-600">Insights from our team to help you move faster.</p>
+              </div>
+              <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
+            </div>
+            <div className="grid gap-8 md:grid-cols-3">
+              {posts.slice(0, 3).map((post) => (
+                <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                  <div className="p-6">
+                    <div className="text-sm text-indigo-600 font-medium mb-2">{post.category}</div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{post.title}</h3>
+                    <p className="text-gray-600 mb-4">{post.description}</p>
+                    <Link to={`/blog/${post.slug}`} className="text-indigo-700 font-medium hover:text-indigo-800">Read more →</Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+            
+            {/* Blog CTA */}
+            <div className="mt-12 text-center">
+              <Link
+                to="/blog"
+                className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                <ArrowRight className="w-5 h-5" />
+                Explore All Articles
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Case Studies Preview */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                See how companies like yours are transforming their operations with our AI solutions.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                    <TrendingUp className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">RetailMax Corporation</h3>
+                    <p className="text-sm text-gray-600">E-commerce</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">Reduced order processing time from 24 hours to 2 minutes with AI workflow automation.</p>
+                <div className="text-2xl font-bold text-green-600">99% Time Reduction</div>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                    <Users className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">First National Bank</h3>
+                    <p className="text-sm text-gray-600">Banking</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">Reduced customer wait times from 45 minutes to 2 minutes with AI virtual assistant.</p>
+                <div className="text-2xl font-bold text-blue-600">95% Faster Response</div>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                    <Target className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Precision Manufacturing</h3>
+                    <p className="text-sm text-gray-600">Manufacturing</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">Reduced production waste by 70% with AI data analytics and predictive maintenance.</p>
+                <div className="text-2xl font-bold text-purple-600">70% Waste Reduction</div>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <Link
+                to="/case-studies"
+                className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                <Award className="w-5 h-5" />
+                View All Success Stories
+              </Link>
+            </div>
+          </div>
+        </section>
         {/* New Content Promo */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
