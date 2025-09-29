@@ -33,6 +33,19 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
+<<<<<<< HEAD
+      title: "AI Risk Mitigation Scorecards 2026",
+      description: "Owners, SLAs, and CI policy checks",
+      icon: Shield,
+      link: "/blog/ai-risk-mitigation-scorecards-2026",
+      category: "AI Governance"
+    },
+    {
+      title: "Production Agent Actions 2026",
+      description: "Deterministic tools with live traces",
+      icon: Brain,
+      link: "/blog/production-agent-actions-2026",
+=======
       title: "AI Safety Budgets 2026",
       description: "Guardrails wired to KPIs, approvals, rollbacks",
       icon: Shield,
@@ -58,6 +71,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       description: "Warm pools and quality tiers under SLAs",
       icon: Zap,
       link: "/blog/ai-cost-aware-inference-2026",
+>>>>>>> origin/cursor/create-and-deploy-new-content-76a3
       category: "GenAI"
     },
     {
@@ -75,44 +89,11 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       category: "Platform"
     },
     {
-<<<<<<< HEAD
-      title: "Edge Feature Flags 2026",
-      description: "<100ms global releases with budgets",
-=======
-      title: "Quality‑Tiered GenAI Routing 2026",
-      description: "Control cost with tiers, caches, and eval signals",
-      icon: Zap,
-      link: "/blog/genai-routing-under-budgets-2026",
-      category: "GenAI"
-    },
-    {
-      title: "On‑Device Agents 2026",
-      description: "Offline‑capable tools, private caches, safe fallbacks",
-      icon: Cloud,
-      link: "/blog/on-device-agents-offline-tools-2026",
-      category: "Edge"
-    },
-    {
-      title: "Zero‑Trust Observability 2026",
-      description: "Signed traces and least‑privilege telemetry",
->>>>>>> cursor/create-and-deploy-new-content-6a55
-      icon: Shield,
-      link: "/blog/zero-trust-observability-2026",
-      category: "Security"
-    },
-    {
-      title: "AI Incident Response Playbooks",
-      description: "Contain incidents in under 60 seconds",
-      icon: TrendingUp,
-      link: "/blog/ai-incident-response-playbooks-2025",
-      category: "Security"
-=======
       title: "Edge Privacy Telemetry 2026",
       description: "Scoped IDs and on‑device redaction",
       icon: Brain,
       link: "/blog/edge-privacy-telemetry-2026",
       category: "Observability"
->>>>>>> origin/main
     }
   ];
 

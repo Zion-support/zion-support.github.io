@@ -157,10 +157,14 @@ const Home = () => {
           autoRotate
           rotationInterval={7000}
         />
+<<<<<<< HEAD
+          <NewContentPromoBanner 
+=======
         
         {/* New 2025 Content Showcase */}
         <NewContentShowcase2025 />
         <NewContentPromoBanner 
+>>>>>>> origin/cursor/create-and-deploy-new-content-fb7e
           className="border-b border-white/10" 
           variant="premium" 
           title="New: Governance Quickstart, Privacy‑First Agents, Inference Cost Playbook"

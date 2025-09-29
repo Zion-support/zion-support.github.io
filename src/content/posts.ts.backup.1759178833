@@ -10,38 +10,45 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "secure-ml-supply-chain-2026",
-    title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
-    description: "Continuous SBOMs for models, datasets, and prompts with attestations and CI policy checks.",
-    category: "Security",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "genai-routing-under-budgets-2026",
-    title: "Quality‑Tiered GenAI Routing: SLAs Without Bill Shock",
-    description: "Route prompts across model tiers with budgets, caches, and eval signals to control cost.",
-    category: "AI Operations",
+<<<<<<< HEAD
+    slug: "ai-governance-scorecards-quickstart-2026",
+    title: "AI Governance Scorecards Quickstart 2026: Ship Fast, Stay Safe",
+    description: "A practical starter for scorecards, PR checks, and KPI‑linked canaries teams adopt in weeks.",
+    category: "AI Strategy",
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "6 min read"
   },
   {
-    slug: "platform-golden-paths-kpis-2026",
-    title: "Golden Paths That Move KPIs: Platform Engineering That Pays",
-    description: "Adoption metrics, TTFX, and SLOs as leading indicators of platform ROI in 2026.",
-    category: "Platform Engineering",
+    slug: "ai-operational-excellence-blueprint-2026",
+    title: "AI Operational Excellence Blueprint 2026",
+    description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs engineers adopt.",
+    category: "AI Strategy",
     publishedAt: "2025-10-13",
     featured: true,
-    readTime: "7 min read"
+    readTime: "8 min read"
   },
   {
-    slug: "ai-platform-slos-2026",
-    title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
-    description: "Design SLOs and risk budgets for AI systems with instant rollbacks and KPI‑linked canaries.",
-    category: "AI Operations",
-    publishedAt: "2025-10-12",
+    slug: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
+    description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
+    category: "Security",
+    publishedAt: "2025-10-13",
+=======
+    slug: "ai-governance-maturity-model-2026",
+    title: "AI Governance Maturity Model 2026: From Ad‑Hoc to Audit‑Ready",
+    description: "Move from ad‑hoc controls to audit‑ready AI governance with scorecards and KPIs.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "ai-customer-data-platforms-2026",
+    title: "AI Customer Data Platforms 2026: Real‑Time Personalization at Scale",
+    description: "Blueprint for AI‑native CDPs powering privacy‑safe, sub‑second personalization.",
+    category: "Architecture",
+    publishedAt: "2025-10-15",
     featured: true,
     readTime: "9 min read"
   },
@@ -51,10 +58,41 @@ export const posts: BlogPost[] = [
     description: "Streaming, prefetch, and edge compute patterns for instant‑feel AI UX.",
     category: "Edge Computing",
     publishedAt: "2025-10-15",
+>>>>>>> origin/cursor/create-and-deploy-new-content-3f1b
     featured: true,
     readTime: "7 min read"
   },
   {
+<<<<<<< HEAD
+    slug: "genai-routing-blueprint-2026",
+    title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",
+    description: "Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.",
+    category: "GenAI",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "platform-roi-scorecards-v3-2026",
+    title: "Platform ROI Scorecards v3: Leading Indicators That Move the Business",
+    description: "Adoption, golden-path TTFX, and reliability signals that shift focus from costs to shipped value.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-preserving-agents-2026",
+    title: "Privacy‑Preserving Agents: PII‑Safe Tools, Redaction, and Audits",
+    description: "Blueprint for agents that keep signals rich without leaking PII using scoped IDs and field‑level filters.",
+    category: "AI Security",
+    publishedAt: "2025-10-13",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-3f1b
     slug: "ai-reliable-rag-ops-2026",
     title: "Reliable RAG Ops 2026: Freshness Windows, Drift Alerts, Budgets",
     description: "Keep RAG quality high with TTL windows, drift detectors, and KPI‑tied quality budgets.",
@@ -752,18 +790,4 @@ posts.push(
     featured: true,
     readTime: "8 min read"
   }
-);
-
-// Frontpage promo slugs — ensure article cards resolve (merged)
-posts.unshift(
-  { slug: "ai-evaluation-scorecards-2026", title: "AI Evaluation Scorecards 2026: Quality, Cost, Risk at a Glance", description: "Standardize evals with scorecards that track quality, latency, cost, and risk—wired to CI and trains.", category: "AI Strategy", publishedAt: "2025-09-29", featured: true, readTime: "12 min read" },
-  { slug: "ai-agent-security-2026", title: "AI Agent Security 2026: Isolation, Egress, and Signed Actions", description: "Harden multi‑tool agents with isolation, policy‑enforced egress, and signed action trails.", category: "Security", publishedAt: "2025-09-29", featured: true, readTime: "14 min read" },
-  { slug: "ai-customer-data-platforms-2026", title: "AI Customer Data Platforms 2026: Real‑Time Personalization Under Budgets", description: "Feature stores + privacy filters + evals—measurable lifts without overruns.", category: "AI Strategy", publishedAt: "2025-09-29", featured: true, readTime: "11 min read" }
-);
-
-// Additional November 2025 posts (from origin/main)
-posts.push(
-  { slug: "genai-routing-under-budgets-2026", title: "Quality‑Tiered GenAI Routing 2026: SLAs Without Surprise Bills", description: "Route prompts across model tiers with caches and eval signals to control cost without hurting UX.", category: "GenAI", publishedAt: "2025-11-01", featured: true, readTime: "7 min read" },
-  { slug: "on-device-agents-offline-tools-2026", title: "On‑Device Agents 2026: Offline‑Capable Tools and Private Caches", description: "Design assistants that work offline with local tools, secure storage, and seamless fallbacks.", category: "Edge Computing", publishedAt: "2025-11-01", featured: true, readTime: "8 min read" },
-  { slug: "zero-trust-observability-2026", title: "Zero‑Trust Observability 2026: Signed Traces and Least‑Privilege Telemetry", description: "Ship audit‑ready traces with scoped IDs, signed spans, and role‑aware data access.", category: "Security", publishedAt: "2025-11-01", featured: false, readTime: "6 min read" }
 );
