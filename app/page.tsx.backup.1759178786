@@ -37,8 +37,13 @@ import {
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
+<<<<<<< HEAD
+import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+=======
 // duplicates removed
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
+>>>>>>> origin/cursor/create-and-deploy-new-content-b93d
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -54,9 +59,15 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ New on the blog:</span>
+<<<<<<< HEAD
+            <Link href="/blog/edge-llm-caching-blueprint-2026" className="underline hover:text-yellow-200">Edge LLM Caching Blueprint 2026</Link>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-autonomous-operations-2026" className="underline hover:text-yellow-200">AI Autonomous Operations</a>
+=======
             <Link href="/blog/ai-platform-engineering-2026" className="underline hover:text-yellow-200">Platform Engineering 2026</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-reliable-rag-patterns-2025" className="underline hover:text-yellow-200">Reliable RAG 2025</Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-b93d
             <span className="hidden md:inline">•</span>
             <a href="/blog/ai-finops-advanced-2026" className="underline hover:text-yellow-200">AI FinOps Advanced</a>
             <span className="hidden md:inline">•</span>
