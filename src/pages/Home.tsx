@@ -18,7 +18,6 @@ import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
-import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
@@ -114,14 +113,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="Fresh: AI ROI Scorecards, Secure ML Supply Chain, Enterprise RAG v2"
-          description="New guides to prove platform value, secure ML supply chains, and stabilize GenAI quality."
+          title="Fresh: Guardrails That Ship, Edge Flags Blueprint, RAG Freshness"
+          description="New: outcome‑linked guardrails, zero‑regret edge rollouts, and freshness‑aware RAG."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Platform ROI Scorecards", category: "AI Strategy", link: "/blog/ai-platform-roi-2025" },
-            { title: "Secure ML Supply Chain", category: "Security", link: "/blog/secure-ml-supply-chain-2025" },
-            { title: "Enterprise RAG v2", category: "GenAI", link: "/blog/genai-evals-in-production-2025" },
+            { title: "Guardrails Engineers Adopt", category: "AI Strategy", link: "/blog/guardrails-scorecards-evals-2025" },
+            { title: "Edge Flags Blueprint", category: "Architecture", link: "/blog/edge-flags-blueprint-2025" },
+            { title: "RAG Freshness", category: "GenAI", link: "/blog/rag-freshness-ttl-2025" },
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -129,11 +128,11 @@ const Home = () => {
         </div>
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
-          variant="success"
-          title="🚀 New: Customer Journey Agents + Edge Personalization Under 100ms"
-          description="Plan→Act→Verify agents that move KPIs, plus CDN + on‑device ML for private, real‑time UX."
-          ctaText="Read the latest"
-          ctaLink="/blog/customer-journey-agents-qa"
+          variant="info"
+          title="📚 New Series: Ship Faster with Guardrails"
+          description="AI roadmaps, ML SBOM automation, and online eval canaries now live."
+          ctaText="See what's new"
+          ctaLink="/blog"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -288,16 +287,11 @@ const Home = () => {
         <div className="container mx-auto px-6">
             <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: AI Platform ROI Scorecards, Secure ML Supply Chain, and Enterprise RAG v2 — read now
+            New: Guardrails That Ship, Edge Flags Blueprint, and RAG Freshness — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
         <LatestInsights />
-
-        {/* Featured Content Showcase */}
-        <section className="relative z-10">
-          <FeaturedContentShowcase className="mt-8" />
-        </section>
 
         {/* New Services Showcase */}
         <section className="py-20 bg-white relative overflow-hidden">
@@ -545,10 +539,10 @@ const Home = () => {
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="container mx-auto px-6 relative z-10">
-            <div className="text-center mb-12">
+                <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Fresh: ROI Scorecards, ML SBOM, Enterprise RAG v2
+                Fresh: Guardrails, Edge Flags, RAG Freshness
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles & Insights
@@ -721,9 +715,6 @@ const Home = () => {
             <div className="mb-10 flex items-end justify-between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
-                <p className="text-gray-600">Fresh: AI Platform ROI, Secure ML Supply Chain, and Enterprise RAG Blueprint.</p>
-                <p className="text-gray-600">Insights from our team to help you move faster.</p>
-                <p className="text-gray-600">Fresh: GenAI Telemetry, Edge Flags, Product Readiness, and more.</p>
                 <p className="text-gray-600">New: Platform ROI, Secure ML Supply Chain, and Enterprise RAG v2.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
@@ -829,10 +820,6 @@ const Home = () => {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
-                  <p className="text-white/90">
-                    New: AI Platform ROI scorecards, securing the ML supply chain, and Enterprise RAG v2.
-                    Fresh reads: GenAI guardrails that scale, validation circuits for edge flags, and north‑star metrics that drive outcomes.
-                  </p>
                   <p className="text-white/90">New: Platform ROI scorecards, Secure ML Supply Chain, and Enterprise RAG v2.</p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
@@ -845,45 +832,15 @@ const Home = () => {
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-purple-200 mb-1">AI Strategy</div>
-                  <div className="font-semibold text-white">AI Platform ROI Scorecards</div>
+                  <div className="font-semibold text-white">Guardrails Engineers Adopt</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-blue-200 mb-1">GenAI</div>
-                  <div className="font-semibold text-white">Enterprise RAG v2</div>
+                  <div className="font-semibold text-white">RAG Freshness</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Security</div>
-                  <div className="font-semibold text-white">Secure ML Supply Chain</div>
-                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
-                  <div className="font-semibold text-white">Blue/Green for LLMs: Evals as Release Gates</div>
-                </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">GenAI</div>
-                  <div className="font-semibold text-white">Agent Observability: Traces, Tokens, Outcomes</div>
-                </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Data Engineering</div>
-                  <div className="font-semibold text-white">Real‑Time Feature Stores That Don’t Break the Bank</div>
-                  <div className="text-sm text-purple-200 mb-1">GenAI</div>
-                  <div className="font-semibold text-white">Shipping GenAI Safely: Guardrails That Don’t Slow You Down</div>
-                </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Architecture</div>
-                  <div className="font-semibold text-white">Validation Circuits for Edge Feature Flags</div>
-                </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Product Analytics</div>
-                  <div className="font-semibold text-white">North‑Star Metrics: How to Measure What Matters</div>
-                  <div className="text-sm text-indigo-200 mb-1">AI Strategy</div>
-                  <div className="font-semibold text-white">Customer Journey Agents: Planning, Safety, QA Gates</div>
-                </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-green-200 mb-1">Edge Computing</div>
-                  <div className="font-semibold text-white">Edge Personalization: CDN + On‑Device ML</div>
-                </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Architecture</div>
-                  <div className="font-semibold text-white">Zero‑Downtime Cutover Checklist</div>
+                  <div className="text-sm text-rose-200 mb-1">Architecture</div>
+                  <div className="font-semibold text-white">Edge Flags Blueprint</div>
                 </div>
               </div>
             </div>

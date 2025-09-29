@@ -419,6 +419,34 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
+    slug: "guardrails-scorecards-evals-2025",
+    title: "Guardrails Engineers Adopt: Scorecards, PR Gates, Online Canaries",
+    description: "Outcome‑linked guardrails that accelerate delivery and reduce risk.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-flags-blueprint-2025",
+    title: "Edge Flags Blueprint: Zero‑Regret Rollouts",
+    description: "<100ms global flags with segmented canaries, budgets, and instant rollback.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
+    slug: "rag-freshness-ttl-2025",
+    title: "RAG Freshness: TTL Budgets and Versioned Corpora",
+    description: "Prevent stale answers with freshness windows and warm caches.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  }
+  ,
+  {
     slug: "ai-governance-blueprint-2025",
     title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
     description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.",
