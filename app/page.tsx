@@ -28,15 +28,15 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>🚀 REVOLUTIONARY 2026:</span>
-            <Link href="/blog/ai-innovation-2026-revolution" className="underline hover:text-yellow-200">AI Innovation Guide</Link>
+            <Link href="/blog/ai-neural-interfaces-2026" className="underline hover:text-yellow-200">🧠 Neural Interfaces</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-innovation-enterprise-success-2026" className="underline hover:text-yellow-200">$50M Success Story</Link>
+            <Link href="/blog/ai-space-tech-2026" className="underline hover:text-yellow-200">🚀 Space AI Tech</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200">Enterprise Automation</Link>
+            <Link href="/case-studies/ai-synthetic-data-2026" className="underline hover:text-yellow-200">$15M Synthetic Data ROI</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum AI</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
+            <Link href="/case-studies/ai-innovation-enterprise-success-2026" className="underline hover:text-yellow-200">$50M Success Story</Link>
           </div>
           <Link
             href="/blog"
