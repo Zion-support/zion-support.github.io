@@ -116,6 +116,41 @@ export const caseStudies: CaseStudy[] = [
   }
   ,
   {
+    id: "retail-genai-assistants",
+    title: "GenAI Retail Assistants at Scale",
+    company: "RetailMax Corporation",
+    industry: "E-commerce",
+    challenge: "High support volume and slow product discovery led to churn and high OpEx.",
+    solution: "Deployed multilingual GenAI assistants with tools for search, recommendations, and order support across 22 regions.",
+    results: [
+      "Cut support tickets by 48%",
+      "Increased conversion rate by 32%",
+      "Reduced CAC payback from 9 to 5 months",
+      "$6.1M annual cost savings"
+    ],
+    technologies: ["LLM Tools", "Retrieval", "React", "Kubernetes", "ClickHouse"],
+    duration: "10 weeks",
+    imageUrl: "/images/case-studies/retail-genai-assistants.jpg"
+  },
+  {
+    id: "edge-vision-quality-inspection",
+    title: "Edge Vision Quality Inspection",
+    company: "Precision Manufacturing",
+    industry: "Manufacturing",
+    challenge: "Manual inspection missed defects and slowed throughput across 12 plants.",
+    solution: "Implemented on‑device vision models with active learning, latency budgets, and automated divert flows.",
+    results: [
+      "70% defect reduction",
+      "+22% line throughput",
+      "$3.4M annual scrap savings",
+      "P95 inference 38ms"
+    ],
+    technologies: ["Edge AI", "OpenVINO", "gRPC", "Rust", "Kafka"],
+    duration: "12 weeks",
+    imageUrl: "/images/case-studies/edge-vision-quality.jpg"
+  }
+  ,
+  {
     id: "telco-edge-observability",
     title: "Telco Edge Observability Overhaul",
     company: "GlobalTel Communications",
