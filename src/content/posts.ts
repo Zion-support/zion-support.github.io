@@ -188,7 +188,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-01-10",
     featured: false,
     readTime: "9 min read",
-<<<<<<< HEAD
   },
   {
     slug: "platform-engineering-blueprint-2025",
@@ -336,8 +335,6 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "9 min read",
   },
-=======
-  }
->>>>>>> feat/new-content-and-promo
+  
 ];
 
