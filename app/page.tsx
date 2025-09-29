@@ -21,6 +21,16 @@ import {
   AIRoadmapsBanner,
   AIFinOpsBanner
 } from '../components/PromotionalBanner';
+import {
+  AIMultimodalAgentsBanner,
+  AIEnterpriseAutomationBanner,
+  AIEdgeComputingBanner,
+  ManufacturingSuccessBanner,
+  LatestAIInsightsBanner,
+  AIBusinessTransformationBanner,
+  AIWorkflowAutomationBanner,
+  EnterpriseAISecurityBanner
+} from '../components/NewContentPromotionalBanners';
 import ContentShowcase from '../components/ContentShowcase';
 
 export const metadata = {
@@ -52,6 +62,14 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <LatestAIInsightsBanner />
+      <AIMultimodalAgentsBanner />
+      <AIEnterpriseAutomationBanner />
+      <AIEdgeComputingBanner />
+      <ManufacturingSuccessBanner />
+      <AIBusinessTransformationBanner />
+      <AIWorkflowAutomationBanner />
+      <EnterpriseAISecurityBanner />
       <NewContentShowcaseBanner />
       <AIRoadmapsBanner />
       <AIFinOpsBanner />
@@ -312,6 +330,82 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Link to="/blog/ai-multimodal-agents-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Article
+                  </span>
+                  <span className="text-sm text-gray-500">15 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Multimodal Agents 2025: Vision, Voice, and Text Integration
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Discover how multimodal AI agents are revolutionizing enterprise workflows with vision, voice, and text processing capabilities.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link to="/blog/ai-enterprise-automation-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Featured Article
+                  </span>
+                  <span className="text-sm text-gray-500">20 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Enterprise Automation 2025: Complete Business Transformation Guide
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Transform your enterprise with AI automation. Learn strategies, implementation patterns, and achieve 300% ROI.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Guide →
+                </div>
+              </div>
+            </Link>
+            <Link to="/blog/ai-edge-computing-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Article
+                  </span>
+                  <span className="text-sm text-gray-500">12 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Edge Computing 2025: Real-Time Intelligence at the Network Edge
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Experience the future of AI with edge computing solutions that deliver sub-50ms response times and offline capabilities.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link to="/case-studies/ai-manufacturing-transformation-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Success Story
+                  </span>
+                  <span className="text-sm text-gray-500">Manufacturing</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Manufacturing Transformation: 90% Efficiency Gain & $3M Savings
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how a leading automotive manufacturer achieved 90% efficiency improvement and $3M annual savings with AI transformation.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
             <Link to="/blog/ai-trustworthy-agents-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">

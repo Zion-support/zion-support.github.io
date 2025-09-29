@@ -12,12 +12,48 @@ import {
 } from 'lucide-react';
 
 export default function ModernFeatures(): React.JSX.Element {
-<<<<<<< HEAD
-	return <section aria-label="Modern Features" />;
-=======
-  return <section />;
->>>>>>> origin/main
-}
+  const features = [
+    {
+      icon: <Zap className="w-12 h-12" />,
+      title: "Lightning Fast",
+      description: "Optimized performance with sub-second response times and efficient resource utilization."
+    },
+    {
+      icon: <Shield className="w-12 h-12" />,
+      title: "Enterprise Security",
+      description: "Bank-level security with end-to-end encryption and comprehensive compliance standards."
+    },
+    {
+      icon: <Globe className="w-12 h-12" />,
+      title: "Global Scale",
+      description: "Worldwide infrastructure with 99.9% uptime and multi-region deployment capabilities."
+    },
+    {
+      icon: <Brain className="w-12 h-12" />,
+      title: "AI-Powered",
+      description: "Intelligent automation and machine learning for smarter, more efficient operations."
+    },
+    {
+      icon: <Cloud className="w-12 h-12" />,
+      title: "Cloud Native",
+      description: "Built for the cloud with auto-scaling, microservices architecture, and modern DevOps practices."
+    },
+    {
+      icon: <Lock className="w-12 h-12" />,
+      title: "Data Privacy",
+      description: "GDPR compliant with advanced privacy controls and data protection mechanisms."
+    },
+    {
+      icon: <TrendingUp className="w-12 h-12" />,
+      title: "Scalable Growth",
+      description: "Designed to grow with your business, handling increased load and complexity seamlessly."
+    },
+    {
+      icon: <Users className="w-12 h-12" />,
+      title: "Team Collaboration",
+      description: "Enhanced productivity with real-time collaboration tools and seamless integration capabilities."
+    }
+  ];
 
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -75,6 +111,4 @@ export default function ModernFeatures(): React.JSX.Element {
       </div>
     </div>
   );
-};
-
-export default ModernFeatures;
+}
