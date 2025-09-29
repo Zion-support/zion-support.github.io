@@ -105,8 +105,8 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: AI Governance at Scale + Edge Observability Blueprint"
-          description="Policies that enable speed, and sub‑100ms reliability with real‑world telemetry."
+          title="🚀 Fresh: AI Governance at Scale + Cloud FinOps QA Gates"
+          description="Policies that enable speed, plus QA gates that cut spend without slowing teams."
           ctaText="Read the latest"
           ctaLink="/blog/ai-governance-at-scale-2025"
           dismissible={true}
