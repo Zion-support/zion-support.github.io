@@ -72,12 +72,12 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 5,
   },
   {
-    id: "edge-cache-invalidation",
-    title: "Edge Cache Invalidation Strategies That Won't Wake You Up",
+    id: "observability-otel-traces-that-matter",
+    title: "OpenTelemetry in Production: Traces That Engineers Actually Use",
     summary:
-      "Versioned keys, background warming, and circuit breakers for resilient edge experiences.",
-    category: "Architecture",
-    date: "2025-09-28",
+      "Sampling strategies, semantic conventions, and dashboards that shrink MTTR for complex stacks.",
+    category: "Observability",
+    date: "2025-09-29",
     readMinutes: 6,
   },
   {
@@ -88,15 +88,6 @@ export const latestInsights: InsightArticle[] = [
     category: "GenAI",
     date: "2025-09-27",
     readMinutes: 7,
-  },
-  {
-    id: "observability-otel-traces-that-matter",
-    title: "OpenTelemetry in Production: Traces That Engineers Actually Use",
-    summary:
-      "Sampling strategies, semantic conventions, and dashboards that shrink MTTR for complex stacks.",
-    category: "Observability",
-    date: "2025-09-29",
-    readMinutes: 6,
   },
   {
     id: "feature-flags-edge-realtime",
@@ -180,7 +171,6 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 8,
   },
   {
-<<<<<<< HEAD
     id: "ai-workflow-automation-2025-trends",
     title: "AI Workflow Automation: 2025 Trends That Will Transform Business",
 =======
@@ -311,7 +301,6 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 9,
   },
   {
-<<<<<<< HEAD
     id: "digital-transformation-2025",
     title: "Digital Transformation in 2025: Trends and Strategies",
     summary:
@@ -328,7 +317,8 @@ export const latestInsights: InsightArticle[] = [
     category: "GenAI",
     date: "2025-09-29",
     readMinutes: 8,
-=======
+  },
+  {
     id: "ai-automation-roi-calculator",
     title: "AI Automation ROI Calculator: Measure Your Business Impact",
     summary:
@@ -363,7 +353,8 @@ export const latestInsights: InsightArticle[] = [
     category: "Security",
     date: "2025-01-21",
     readMinutes: 11,
->>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1815
   },
 ];
 
