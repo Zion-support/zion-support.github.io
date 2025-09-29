@@ -20,6 +20,7 @@ import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
+import ROICalculator from "../components/ROICalculator";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import { latestInsights } from "../content/insights";
