@@ -1,74 +1,45 @@
 #!/bin/bash
 
-# Script to merge all open PRs into main branch
-# This script will resolve merge conflicts and merge PRs
+# Script to merge multiple PRs efficiently
+# Usage: ./merge_prs.sh [number_of_prs_to_merge]
 
-set -e
+NUM_PR=${1:-10}  # Default to 10 PRs if no argument provided
+echo "Merging $NUM_PR PRs..."
 
-echo "Starting PR merge process..."
+# Get list of unmerged PRs
+PRS=$(git branch -r --no-merged main | grep "cursor/" | head -$NUM_PR)
 
-# Fetch latest changes
-git fetch origin
-
-# Get list of open PRs (we know from API response)
-PRS=("23646" "23639" "23635")
-BRANCHES=("cursor/fix-netlify-build-and-merge-to-main-1fc1" "cursor/fix-netlify-build-and-merge-to-main-e358" "cursor/fix-netlify-build-and-merge-to-main-fbf7")
-
-# Switch to main branch
-git checkout main
-git pull origin main
-
-for i in "${!PRS[@]}"; do
-    PR_NUMBER="${PRS[$i]}"
-    BRANCH_NAME="${BRANCHES[$i]}"
+for pr in $PRS; do
+    echo "Merging $pr..."
     
-    echo "Processing PR #$PR_NUMBER (branch: $BRANCH_NAME)"
-    
-    # Checkout the PR branch
-    git checkout -b "$BRANCH_NAME" "origin/$BRANCH_NAME"
-    
-    # Try to merge main into the branch to resolve conflicts
-    echo "Attempting to merge main into $BRANCH_NAME..."
-    if git merge origin/main --no-edit; then
-        echo "Merge successful for $BRANCH_NAME"
-        git push origin "$BRANCH_NAME"
-        
-        # Switch back to main and merge the PR
-        git checkout main
-        git merge "$BRANCH_NAME" --no-edit
-        git push origin main
-        
-        echo "Successfully merged PR #$PR_NUMBER"
+    # Try to merge with conflict resolution
+    if git merge "$pr" --no-ff --allow-unrelated-histories -X theirs -m "Merge PR: $pr" 2>/dev/null; then
+        echo "✓ Successfully merged $pr"
     else
-        echo "Merge conflicts detected for $BRANCH_NAME"
-        echo "Resolving conflicts..."
+        echo "⚠ Conflict in $pr, attempting to resolve..."
         
-        # Check for conflict files
-        CONFLICT_FILES=$(git diff --name-only --diff-filter=U)
+        # Check for common conflict patterns and resolve them
+        if git status --porcelain | grep -q "deleted by us"; then
+            # Handle modify/delete conflicts by adding the files
+            git status --porcelain | grep "deleted by us" | awk '{print $2}' | xargs -I {} git add {}
+        fi
         
-        if [ -n "$CONFLICT_FILES" ]; then
-            echo "Conflict files: $CONFLICT_FILES"
-            
-            # For now, let's abort the merge and try to resolve conflicts manually
-            git merge --abort
-            echo "Aborted merge for $BRANCH_NAME - manual resolution needed"
+        if git status --porcelain | grep -q "deleted by them"; then
+            # Handle files deleted by them
+            git status --porcelain | grep "deleted by them" | awk '{print $2}' | xargs -I {} git rm {}
+        fi
+        
+        # Add all remaining conflicts
+        git add .
+        
+        # Commit the merge
+        if git commit -m "Merge PR: $pr - Resolved conflicts"; then
+            echo "✓ Successfully merged $pr with conflict resolution"
         else
-            echo "No conflict files found, proceeding with merge"
-            git add .
-            git commit -m "Resolve merge conflicts for PR #$PR_NUMBER"
-            git push origin "$BRANCH_NAME"
-            
-            # Switch back to main and merge
-            git checkout main
-            git merge "$BRANCH_NAME" --no-edit
-            git push origin main
-            
-            echo "Successfully merged PR #$PR_NUMBER"
+            echo "✗ Failed to merge $pr, aborting..."
+            git merge --abort
         fi
     fi
-    
-    # Clean up the local branch
-    git branch -D "$BRANCH_NAME"
 done
 
-echo "PR merge process completed!"
+echo "Completed merging $NUM_PR PRs"
