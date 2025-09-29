@@ -82,7 +82,6 @@ export default function App(): React.JSX.Element {
         // Initialize analytics
         analytics.initialize();
         
-<<<<<<< HEAD
         // Initialize performance monitoring
         // PerformanceMonitor.initialize?.(); // Method doesn't exist
         
@@ -114,8 +113,6 @@ export default function App(): React.JSX.Element {
         // performanceOptimizer.initialize?.(); // Method doesn't exist
         // enhancedPerformanceOptimizer.initialize?.(); // Method doesn't exist
         
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ec79
         console.log('App initialized successfully');
       } catch (error) {
         console.error('Failed to initialize app:', error);
@@ -134,7 +131,6 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-<<<<<<< HEAD
       <div className="App">
         {appContent}
         
@@ -182,8 +178,11 @@ export default function App(): React.JSX.Element {
                 </button>
               </div>
               <EnhancedSystemDashboard />
-=======
-      <AppRouter />
+            </div>
+          </div>
+        )}
+        
+        <AppRouter />
       
       {/* Performance Optimizer Modal */}
       {showPerformanceOptimizer && (
@@ -197,14 +196,9 @@ export default function App(): React.JSX.Element {
               >
                 ✕
               </button>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ec79
             </div>
             <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
           </div>
-<<<<<<< HEAD
-        )}
-      </div>
-=======
         </div>
       )}
 
@@ -279,7 +273,7 @@ export default function App(): React.JSX.Element {
           </div>
         </div>
       )}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ec79
+      </div>
     </EnhancedErrorBoundary>
   );
 }
