@@ -44,67 +44,84 @@ Adopt this scorecard to align investments with measurable outcomes.
     image: "/images/ai-adoption-scorecard.jpg"
   },
   {
-    slug: "ai-cost-guardrails-deep-dive-2025",
-    title: "AI Cost Guardrails Deep Dive: Keep Quality, Slash Spend",
-    description: "Practical architectures for token budgets, multi-route policies, and intelligent caching.",
+    slug: "ai-governance-at-scale-2025",
+    title: "AI Governance at Scale: Policies That Enable Speed",
+    description: "From offline eval suites to online policy tests and approvals that keep velocity high without breaking trust.",
     content: `
-# AI Cost Guardrails Deep Dive: Keep Quality, Slash Spend
+# AI Governance at Scale: Policies That Enable Speed
 
-Engineering teams can reduce AI spend by 30–60% with guardrails that preserve UX. This deep dive covers reference architectures, rollout plans, and telemetry you need to make it stick.
+Move beyond ad‑hoc reviews with a policy‑first model that accelerates delivery while protecting users and brands.
 
-## Architecture
-- Token budgets per surface with budget-aware routing
-- Multi-provider policy with quality tiers and fallbacks
-- Result caching with semantic keys and TTL strategies
+## Core Practices
+- Standardized offline evaluation suites in CI
+- Online policy tests tied to risk thresholds
+- Approval flows with audit trails
 
-## Telemetry
-- Per-route cost and latency histograms
-- Token usage by surface and intent
-- Cache hit rate and reuse effectiveness
+## Operating Cadence
+- Weekly guardrail reviews
+- Drift monitoring and auto‑rollback
+- Clear ownership and escalation paths
 
-## Rollout
-- Start with read-only dashboards
-- Introduce soft budgets with alerts
-- Enforce budgets behind feature flags
-
-Ship faster with spend you can defend.
+Ship faster with confidence by combining policy, telemetry, and automation.
     `,
     author: "Zion Tech Group Team",
-    date: "2025-10-01",
-    category: "AI Operations",
-    tags: ["Cost", "Guardrails", "AI", "Platform"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-cost-guardrails.jpg"
-  },
-  {
-    slug: "golden-paths-that-stick-2025",
-    title: "Golden Paths That Stick: Templates, Scorecards, and Reviews",
-    description: "How to create opinionated paths teams actually adopt—without stifling flexibility.",
-    content: `
-# Golden Paths That Stick: Templates, Scorecards, and Reviews
-
-Golden paths fail when they are optional docs without incentives. This guide shows how to pair templates with scorecards and lightweight reviews that improve delivery and reliability.
-
-## Ingredients
-- Production-ready templates with paved integrations
-- Scorecards aligned to outcomes, not vanity metrics
-- Weekly office hours and async PR rituals
-
-## Adoption Levers
-- Default repo scaffolds and CLI generators
-- Clear deprecation and migration guides
-- Leadership-visible dashboards
-
-Build paths engineers love because they speed them up.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-10-01",
-    category: "Platform Engineering",
-    tags: ["Golden Paths", "Templates", "DX"],
+    date: "2025-09-30",
+    category: "AI Governance",
+    tags: ["Governance", "Policy", "Evals", "Guardrails"],
     featured: true,
     readTime: "8 min read",
-    image: "/images/golden-paths.jpg"
+    image: "/images/ai-governance-at-scale.jpg"
+  },
+  {
+    slug: "edge-observability-blueprint-2025",
+    title: "Edge Observability Blueprint 2025: Sub‑100ms Reliability",
+    description: "Telemetry, budgets, and circuit patterns that make edge experiences fast and trustworthy.",
+    content: `
+# Edge Observability Blueprint 2025: Sub‑100ms Reliability
+
+Design observability for globally distributed, latency‑sensitive apps.
+
+## What to Measure
+- Per‑hop latency budgets and error budgets
+- Cache hit rates and stale‑while‑revalidate windows
+- Circuit breaker trips and fallback success
+
+## Tooling
+- OpenTelemetry with edge spans
+- Synthetic probes from metro regions
+- Real‑user monitoring with P95/P99 focus
+
+Build dashboards engineers actually use to keep experiences snappy worldwide.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Observability",
+    tags: ["Edge", "Observability", "Reliability", "Tracing"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-observability-blueprint.jpg"
+  },
+  {
+    slug: "platform-engineering-scorecards-2025",
+    title: "Platform Engineering Scorecards that Drive Adoption",
+    description: "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
+    content: `
+# Platform Engineering Scorecards that Drive Adoption
+
+Score what matters: paved roads, time‑to‑first‑success, reliability SLOs, and enablement signals.
+
+## Anti‑Patterns
+- Vanity ops metrics
+- Inconsistent scoring
+- Missing feedback loops
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Platform Engineering",
+    tags: ["Platform", "Scorecards", "DX"],
+    featured: false,
+    readTime: "6 min read",
+    image: "/images/platform-engineering-scorecards.jpg"
   },
   {
     slug: "genai-incident-postmortems-2025",
