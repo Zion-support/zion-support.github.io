@@ -129,10 +129,17 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
+<<<<<<< HEAD
+          title="🚀 Fresh: AI Platform ROI + Secure ML Supply Chain"
+          description="New frameworks on platform ROI and end-to-end ML supply chain security."
+          ctaText="Read the latest"
+          ctaLink="/blog/ai-platform-roi-2025"
+=======
           title="📚 New: Governance Scorecards, Freshness‑Aware RAG v2, Edge Flags 2026"
           description="Outcome‑linked guardrails, freshness budgets with hybrid search, and <100ms global rollouts."
           ctaText="See what's new"
           ctaLink="/blog"
+>>>>>>> origin/cursor/create-and-deploy-new-content-0219
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -517,7 +524,11 @@ const Home = () => {
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
+<<<<<<< HEAD
+                    {"featured" in item && (item as any).featured && (
+=======
                     {('featured' in item) && (item as any).featured && (
+>>>>>>> origin/cursor/create-and-deploy-new-content-0219
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>

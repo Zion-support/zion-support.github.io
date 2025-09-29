@@ -83,6 +83,25 @@ export const posts: BlogPost[] = [
   }
   ,
   {
+    slug: "llm-policy-testing-2025",
+    title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
+    description: "Automate governance with policy-as-code on every PR and online canaries.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "edge-zero-downtime-releases-2025",
+    title: "Zero‑Downtime Releases at the Edge: Patterns That Work",
+    description: "Shadow reads, budgets, and instant rollback with edge compute and KV.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "7 min read"
+  }
+  ,
+  {
     slug: "ai-governance-blueprint-2025",
     title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
     description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.",
@@ -98,6 +117,25 @@ export const posts: BlogPost[] = [
     category: "GenAI",
     publishedAt: "2025-09-29",
     featured: false,
+    readTime: "8 min read"
+  }
+  ,
+  {
+    slug: "ai-governance-scorecards-2026",
+    title: "AI Governance 2026: Scorecards Engineers Actually Use",
+    description: "Guardrails wired to product KPIs with PR checks and online canaries that speed teams up.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-07",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "freshness-aware-rag-v2",
+    title: "Freshness‑Aware RAG v2: TTL Budgets and Versioned Corpora",
+    description: "Keep answers accurate with freshness windows, async warmups, and KPI‑aligned evaluation.",
+    category: "GenAI",
+    publishedAt: "2025-10-07",
+    featured: true,
     readTime: "8 min read"
   }
   ,
