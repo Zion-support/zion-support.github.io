@@ -503,6 +503,32 @@ export const services: Service[] = [
 // Promotional Banners Configuration
 export const promotionalBanners: PromotionalBanner[] = [
   {
+    id: 'fresh-oct-15-2025',
+    message: '🚀 New: AI Governance Routing Blueprint 2026 + Governance Scorecards Service',
+    ctaText: 'Explore',
+    ctaLink: '/blog/ai-governance-routing-blueprint-2026',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-oct-13-2025-new-content',
+    message: '🚀 New: AI Safety Budgets 2026 + Edge Personalization 2026',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
     id: 'fresh-oct-8-2025',
     message: '✨ New: AI Platform Engineering, Serverless Cost Playbook, Cloud FinOps Guardrails',
     ctaText: 'Read now',
