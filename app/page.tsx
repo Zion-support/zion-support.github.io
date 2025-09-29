@@ -75,21 +75,12 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-<<<<<<< HEAD
-            <span>✨ NEW 2026:</span>
-            <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-fintech-transformation-2026" className="underline hover:text-yellow-200">FinTech Transformation</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-retail-automation-2026" className="underline hover:text-yellow-200">Retail Automation</Link>
-=======
             <span>✨ New on the blog:</span>
-            <Link href="/blog/ai-agent-reliability-2026" className="underline hover:text-yellow-200">AI Agent Reliability 2026</Link>
+            <Link href="/blog/ai-data-mesh-2026" className="underline hover:text-yellow-200">AI Data Mesh 2026</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-agent-reliability-2026" className="underline hover:text-yellow-200">Agent Reliability</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-multimodal-enterprise-integration-2026" className="underline hover:text-yellow-200">Multimodal Integration</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-enterprise-automation-blueprint-2026" className="underline hover:text-yellow-200">Enterprise Automation Blueprint</Link>
->>>>>>> cursor/create-and-deploy-new-content-0b3c
           </div>
           <Link
             href="/blog"
@@ -100,7 +91,6 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
-<<<<<<< HEAD
       <LatestContent2026Banner />
       <AISecurityEnterprise2026Banner />
       <AIMultimodalEnterprise2026Banner />
@@ -109,11 +99,9 @@ export default function HomePage() {
       <AIAutonomousCloudOpsBanner />
       <AIFinTechTransformationBanner />
       <AIRetailAutomationBanner />
-=======
       <AIAgentReliabilityBanner />
       <AIMultimodalIntegrationBanner />
       <AIEnterpriseAutomationBlueprintBanner />
->>>>>>> cursor/create-and-deploy-new-content-0b3c
       <Latest2026ContentBanner />
       <AIOperationalExcellenceBanner />
       <AIAgentObservabilityBanner />
@@ -395,35 +383,19 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Link href="/blog/agentic-workflow-orchestration-2026" className="group">
-=======
-            <Link href="/blog/ai-agent-reliability-2026" className="group">
->>>>>>> cursor/create-and-deploy-new-content-0b3c
+            <Link href="/blog/ai-data-mesh-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
                     NEW 2026
                   </span>
-<<<<<<< HEAD
-                  <span className="text-sm text-gray-500">16 min read</span>
+                  <span className="text-sm text-gray-500">19 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  Agentic Workflow Orchestration 2026: Reliable AI Workflows
+                  AI Data Mesh 2026: Federated Data for Autonomous Enterprises
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Orchestrate multi-step agents with guardrails, approvals, and observability for measurable ROI.
-=======
-                  <span className="text-sm text-gray-500">15 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Agent Reliability 2026: Building Production-Ready Autonomous Systems
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Master AI agent reliability with 99.9% uptime, fault tolerance, and autonomous recovery systems.
->>>>>>> cursor/create-and-deploy-new-content-0b3c
+                  Build a domain-driven AI Data Mesh with golden data products, governance, and platform automation.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Guide →
