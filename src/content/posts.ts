@@ -20,6 +20,26 @@ export const posts: BlogPost[] = [
     readTime: "7 min read",
   },
   {
+    slug: "platform-engineering-golden-paths",
+    title: "Golden Paths That Unblock 100+ Teams",
+    description:
+      "Scorecards, paved roads, and self-serve platforms that cut lead time to value by 60%.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "genai-guardrails-at-scale",
+    title: "GenAI Guardrails at Scale: From Evals to Enforcement",
+    description:
+      "A practical blueprint for policy tests, classifiers, and kill‑switches that keep your GenAI safe in prod.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
     slug: "north-star-metrics-that-drive-growth",
     title: "North‑Star Metrics That Actually Drive Growth",
     description:

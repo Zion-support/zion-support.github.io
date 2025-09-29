@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 import { latestInsights } from "../content/insights";
 
 const LatestInsights: React.FC = () => {
+  const isNew = (isoDate: string): boolean => {
+    const daysSince = (Date.now() - new Date(isoDate).getTime()) / (1000 * 60 * 60 * 24);
+    return daysSince <= 7;
+  };
   return (
     <section className="py-20 bg-white/5">
       <div className="container mx-auto px-6">
@@ -20,7 +24,8 @@ const LatestInsights: React.FC = () => {
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
-
+        <div className="grid md:grid-cols-3 gap-6">
+          {latestInsights.slice(0, 6).map((item) => (
             <div
               key={item.id}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
@@ -28,12 +33,9 @@ const LatestInsights: React.FC = () => {
               <div className="flex items-center justify-between mb-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">
                   <span>{item.category}</span>
-                  {(() => {
-                    const daysSince = (Date.now() - new Date(item.date).getTime()) / (1000 * 60 * 60 * 24);
-                    return daysSince <= 7 ? (
-                      <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">New</span>
-                    ) : null;
-                  })()}
+                  {isNew(item.date) ? (
+                    <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">New</span>
+                  ) : null}
                 </div>
                 <div className="flex items-center gap-2">
                   {isNew(item.date) && (
