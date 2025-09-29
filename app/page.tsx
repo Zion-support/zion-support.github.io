@@ -61,10 +61,6 @@ export default function HomePage() {
             <Link href="/blog/ai-customer-data-platforms-2026" className="underline hover:text-yellow-200">Customer Data Platforms</Link>
             <span className="hidden md:inline">•</span>
             <a href="/blog/ai-customer-data-platforms-2026" className="underline hover:text-yellow-200">AI CDPs 2026</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-finops-advanced-2026" className="underline hover:text-yellow-200">AI FinOps Advanced</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-platform-architecture-2026" className="underline hover:text-yellow-200">Platform Architecture</a>
           </div>
           <Link
             href="/blog"
