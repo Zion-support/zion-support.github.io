@@ -88,6 +88,10 @@ function Footer() {
             <h3 className="font-semibold text-gray-900 mb-3">Services</h3>
             <div className="space-y-2">
               <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">All Services</Link>
+              <Link href="/services/ai-2027-revolutionary-solutions" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🚀 AI 2027 Revolutionary Solutions
+                <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
+              </Link>
               <Link href="/services/ai-autonomous-cloud-ops" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Autonomous Cloud Ops</Link>
               <Link href="/services/ai-fintech-transformation" className="block text-gray-600 hover:text-blue-600 transition-colors">AI FinTech Transformation</Link>
               <Link href="/services/ai-retail-automation" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Retail Automation</Link>
@@ -97,15 +101,19 @@ function Footer() {
           <div>
             <h3 className="font-semibold text-gray-900 mb-3">Latest 2027 Content</h3>
             <div className="space-y-2">
+              <Link href="/blog/ai-2027-future-predictions" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🔮 AI 2027 Predictions
+                <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
+              </Link>
+              <Link href="/case-studies/fortune-500-ai-transformation-2027" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $75M ROI Success
+                <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
+              </Link>
+              <Link href="/services/ai-2027-revolutionary-solutions" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🚀 AI 2027 Solutions
+                <span className="bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
+              </Link>
               <Link href="/case-studies/ai-neural-interface-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">💰 $12M ROI Neural Interface</Link>
-=======
-              <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors">Blog</Link>
-              <Link href="/blog/ai-autonomous-infrastructure-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Autonomous Infrastructure</Link>
-              <Link href="/blog/ai-quantum-hybrid-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Quantum AI Computing</Link>
-              <Link href="/blog/ai-zero-trust-security-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Zero Trust Security</Link>
-              <Link href="/blog/ai-foundation-models-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Foundation Models</Link>
-              <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors">All Case Studies</Link>
-=======
               <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Blog
                 <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">🚀 NEW</span>

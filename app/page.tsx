@@ -1,8 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import MegaContent2026Banner from '../components/MegaContent2026Banner';
-import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
-=======
 import { Clock, ArrowRight } from 'lucide-react';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import { NewContent2026PromotionalBanners } from '../components/NewContent2026PromotionalBanners';
@@ -56,6 +53,8 @@ import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBa
 import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
 import LatestContent2026MegaBanner from '../components/LatestContent2026MegaBanner';
 import AICostOptimizationBanner from '../components/AICostOptimizationBanner';
+import AI2027RevolutionaryBanner from '../components/AI2027RevolutionaryBanner';
+import NewContent2027ShowcaseBanner from '../components/NewContent2027ShowcaseBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 2026 AI Solutions',
@@ -459,6 +458,10 @@ export default function HomePage() {
       <NewBlogBanner />
       <WorkflowAutomationBanner />
       <AIAnalyticsBanner />
+      
+      {/* New 2027 Content Banners */}
+      <AI2027RevolutionaryBanner />
+      <NewContent2027ShowcaseBanner />
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
