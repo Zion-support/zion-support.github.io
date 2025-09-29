@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { ArrowRight, Zap, Star, TrendingUp, Users, DollarSign } from 'lucide-react';
 
 export default function AI2026MegaBreakthroughBanner() {
@@ -224,7 +223,6 @@ export default function AI2026MegaBreakthroughBanner() {
             >
               Get Your AI Strategy
             </a>
-=======
 import { ArrowRight, Zap, Star, TrendingUp, Users } from 'lucide-react';
 
 export default function AI2026MegaBreakthroughBanner() {
@@ -505,7 +503,6 @@ export default function AI2026MegaBreakthroughBanner() {
                 <div className="text-sm opacity-90">Payback Period</div>
               </div>
             </div>
->>>>>>> cursor/create-and-deploy-new-content-ff76
           </div>
         </div>
       </div>

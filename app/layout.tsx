@@ -56,8 +56,10 @@ function Header() {
               Blog
               <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
                 🚀 NEW 2026
+              </span>
               <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                 BREAKTHROUGH 2026
+              </span>
               <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                 🚀 REVOLUTIONARY 2026
               </span>
@@ -71,6 +73,7 @@ function Header() {
               </span>
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                 FEATURED
+              </span>
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                 $150M+ ROI
               </span>

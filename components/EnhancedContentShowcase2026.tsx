@@ -20,8 +20,6 @@ export function EnhancedContentShowcase2026() {
           </p>
         </div>
         
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Featured Content Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {/* Revolutionary Automation Feature */}
@@ -36,20 +34,17 @@ export function EnhancedContentShowcase2026() {
                   <h3 className="text-2xl font-bold mb-2">Revolutionary AI Automation</h3>
                   <p className="text-purple-100">99% Process Automation</p>
                 </div>
-=======
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg flex items-center justify-center">
                 <span className="text-2xl">🚀</span>
->>>>>>> cursor/create-and-deploy-new-content-9e9b
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900">AI Autonomous Systems</h3>
                 <p className="text-sm text-gray-500">Self-evolving AI</p>
               </div>
             </div>
-<<<<<<< HEAD
             <div className="p-8">
               <div className="flex items-center gap-4 mb-4">
                 <span className="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">Article</span>
@@ -132,7 +127,6 @@ export function EnhancedContentShowcase2026() {
                   Read More →
                 </Link>
               </div>
-=======
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
             <div className="flex items-center gap-3 mb-6">
@@ -164,7 +158,6 @@ export function EnhancedContentShowcase2026() {
               <div className="w-12 h-12 bg-gradient-to-r from-green-100 to-blue-100 rounded-lg flex items-center justify-center">
                 <span className="text-2xl">🧠</span>
               </div>
-=======
             <p className="text-gray-600 mb-4">
               Revolutionary AI systems that create, modify, and improve themselves without human intervention. 
               Achieve 95% autonomous operation and $50M+ cost savings.
@@ -185,7 +178,6 @@ export function EnhancedContentShowcase2026() {
               <div className="w-12 h-12 bg-gradient-to-r from-green-100 to-blue-100 rounded-lg flex items-center justify-center">
                 <span className="text-2xl">🧠</span>
               </div>
->>>>>>> cursor/create-and-deploy-new-content-9e9b
               <div>
                 <h3 className="text-xl font-bold text-gray-900">Neural Architecture Optimization</h3>
                 <p className="text-sm text-gray-500">Automated design</p>
@@ -228,13 +220,10 @@ export function EnhancedContentShowcase2026() {
               >
                 Read Guide →
               </Link>
->>>>>>> cursor/create-and-deploy-new-content-ff76
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Additional Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <Link href="/blog/ai-autonomous-operations-2026" className="group">
@@ -356,7 +345,6 @@ export function EnhancedContentShowcase2026() {
               </div>
             </div>
           </Link>
-=======
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
             <div className="flex items-center gap-3 mb-6">
@@ -377,7 +365,6 @@ export function EnhancedContentShowcase2026() {
               <Link
                 href="/case-studies/ai-autonomous-enterprise-success-2026"
                 className="text-orange-600 font-semibold hover:text-orange-700 transition-colors"
-=======
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
             <div className="flex items-center gap-3 mb-6">
@@ -423,7 +410,6 @@ export function EnhancedContentShowcase2026() {
               <Link
                 href="/case-studies/ai-sustainability-transformation-2026"
                 className="text-green-600 font-semibold hover:text-green-700 transition-colors"
->>>>>>> cursor/create-and-deploy-new-content-9e9b
               >
                 View Case Study →
               </Link>
@@ -454,29 +440,22 @@ export function EnhancedContentShowcase2026() {
               </Link>
             </div>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-ff76
         </div>
 
         <div className="text-center">
           <Link
             href="/blog"
-<<<<<<< HEAD
-<<<<<<< HEAD
             className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
           >
             <span className="w-5 h-5 mr-2">🚀</span>
             Explore All AI Content
             <ArrowRight className="w-5 h-5 ml-2" />
-=======
             className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
           >
             Explore All AI Content
->>>>>>> cursor/create-and-deploy-new-content-ff76
-=======
             className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
           >
             Explore All AI Content
->>>>>>> cursor/create-and-deploy-new-content-9e9b
           </Link>
         </div>
       </div>

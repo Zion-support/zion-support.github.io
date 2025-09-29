@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { ArrowRight, Brain, Rocket, Database, Zap, Shield, Users } from 'lucide-react';
 
 export function NewContent2026Banners() {
@@ -64,7 +63,6 @@ export function NewContent2026Banners() {
                 <div className="text-sm opacity-90">Market Value</div>
               </div>
             </div>
-=======
 import { Brain, Rocket, Shield, ArrowRight, Zap, Target, Users } from 'lucide-react';
 
 // Neural Interfaces Banner
@@ -295,7 +293,6 @@ export function NewContent2026Showcase() {
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-blue-500 text-white text-sm font-medium mb-6">
             <span className="w-4 h-4 mr-2">🚀</span>
             NEW 2026 CONTENT
->>>>>>> cursor/create-and-deploy-new-content-9e9b
           </div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
             Revolutionary AI Technologies for 2026
@@ -304,7 +301,6 @@ export function NewContent2026Showcase() {
             Explore our latest research and case studies on cutting-edge AI technologies that are transforming industries and creating unprecedented opportunities.
           </p>
         </div>
-<<<<<<< HEAD
       </section>
 
       {/* Space Technology Banner */}
@@ -425,7 +421,6 @@ export function NewContent2026Showcase() {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
                 <div className="text-3xl font-bold text-yellow-300 mb-2">$8B</div>
                 <div className="text-sm opacity-90">Market Value</div>
-=======
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Neural Interfaces Card */}
@@ -565,12 +560,10 @@ export function NewContent2026Showcase() {
                 >
                   Read More →
                 </Link>
->>>>>>> cursor/create-and-deploy-new-content-9e9b
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
 
       {/* Success Story Banner */}
@@ -635,7 +628,6 @@ export function NewContent2026Showcase() {
         </div>
       </section>
     </>
-=======
 
         <div className="text-center mt-12">
           <Link
@@ -649,6 +641,5 @@ export function NewContent2026Showcase() {
         </div>
       </div>
     </div>
->>>>>>> cursor/create-and-deploy-new-content-9e9b
   );
 }

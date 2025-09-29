@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Target } from 'lucide-react';
 
@@ -303,7 +302,6 @@ export default function UltimateContentShowcase2026() {
             </div>
           </div>
         </motion.div>
-=======
 
 export default function UltimateContentShowcase2026() {
   return (
@@ -567,7 +565,6 @@ export default function UltimateContentShowcase2026() {
             Access All Premium Content
           </Link>
         </div>
->>>>>>> cursor/create-and-deploy-new-content-1272
       </div>
     </section>
   );
