@@ -101,21 +101,12 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
-<<<<<<< HEAD
 
-        {/* Content Promotion Banner */}
-        <ContentPromotionBanner
-          variant="info"
-          title="🚀 NEW: GenAI Evals, Edge Flags, Telemetry + more"
-          description="Fresh featured articles just landed. Quality gates, <100ms flags, AI cost guardrails."
-=======
-        
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
           title="🚀 Fresh: AI Product Launch Checklist + MLOps in 45 Days"
           description="New guides on taking AI pilots to production and shipping reliable models fast."
->>>>>>> feat/new-content-and-promo
           ctaText="Read the latest"
           ctaLink="/blog/genai-evals-in-production-2025"
           dismissible={true}
@@ -616,7 +607,7 @@ const Home = () => {
             <div className="mb-10 flex items-end justify-between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
-                <p className="text-gray-600">Insights from our team to help you move faster.</p>
+                <p className="text-gray-600">Fresh: AI Governance, Golden Paths, Cloud FinOps QA gates, and NEW AI automation guides.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
