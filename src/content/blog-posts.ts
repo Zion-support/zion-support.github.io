@@ -14,6 +14,52 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-risk-register-2025",
+    title: "AI Risk Register: From Lists to Actionable Mitigations",
+    description: "Practical templates and policy tests to turn AI risks into owned mitigations with timelines.",
+    content: `
+# AI Risk Register: From Lists to Actionable Mitigations
+
+Most AI risk registers fail because they are static and ownerless. This playbook shows how to operationalize risks with clear owners, timelines, and automated policy tests in CI and production.
+
+## What To Track
+- Data privacy and usage boundaries
+- Model safety and harmful output controls
+- Prompt injection and tool misuse risks
+- IP protection and provenance
+
+## Make It Actionable
+- Add owners and due dates
+- Define policy tests mapped to each risk
+- Track status in dashboards visible to leadership
+- Escalate automatically on SLA breaches
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-10-04",
+    category: "AI Governance",
+    tags: ["Risk", "Governance", "Policy Tests", "Compliance"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-risk-register.jpg"
+  },
+  {
+    slug: "practical-rag-in-production-2025",
+    title: "Practical RAG in Production: Freshness, Hybrid Search, and Evals",
+    description: "A proven blueprint for production RAG: chunking, freshness, scoring, and layered evals.",
+    content: `
+# Practical RAG in Production
+
+Build RAG that sustains quality over time with freshness strategies, hybrid lexical+vector search, and evaluation layers tied to business KPIs.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-10-04",
+    category: "GenAI",
+    tags: ["RAG", "Search", "Evals", "Quality"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/practical-rag-2025.jpg"
+  },
+  {
     slug: "ai-platform-roi-2025",
     title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
     description: "A pragmatic framework to tie platform capabilities to product outcomes with clear owner reviews.",

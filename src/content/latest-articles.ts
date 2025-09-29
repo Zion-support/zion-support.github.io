@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-risk-register-2025",
+    slug: "ai-risk-register-2025",
+    title: "AI Risk Register That Drives Action",
+    description: "From static lists to owned mitigations with policy tests and SLAs.",
+    excerpt: "Make your AI risk program measurable and actionable with owners, timelines, and CI policy tests.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-04",
+    category: "AI Governance",
+    tags: ["Risk", "Governance", "Policy", "Compliance"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-risk-register.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "practical-rag-in-production-2025",
+    slug: "practical-rag-in-production-2025",
+    title: "Practical RAG in Production",
+    description: "Freshness, hybrid search, and evals that scale beyond the demo.",
+    excerpt: "A production-ready approach to RAG with freshness guarantees and layered evaluation.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-04",
+    category: "GenAI",
+    tags: ["RAG", "Search", "Evals"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/practical-rag-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-platform-engineering-2025",
     slug: "ai-platform-engineering-2025",
     title: "AI Platform Engineering 2025: The Complete Guide to Building Scalable AI Infrastructure",
