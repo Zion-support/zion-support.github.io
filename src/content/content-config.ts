@@ -381,6 +381,19 @@ export const services: Service[] = [
 // Promotional Banners Configuration
 export const promotionalBanners: PromotionalBanner[] = [
   {
+    id: 'new-oct-2025-content-banner',
+    message: '✨ New: AI Incident Response, Observability Scorecards, Privacy‑Preserving RAG',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 15,
+    active: true,
+    priority: 0
+  },
+  {
     id: 'fresh-content-oct-2025',
     message: '✨ New: Governance Scorecards 2026, Freshness‑Aware RAG v2, Edge Flags 2026',
     ctaText: 'Read the latest',

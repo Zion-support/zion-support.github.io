@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-incident-response-2026",
+    title: "AI Incident Response 2026: Playbooks, Canaries, and SLAs",
+    description: "Practical incident response for AI features with on-call playbooks and KPI-linked canaries.",
+    category: "AI Operations",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "platform-observability-scorecards-2026",
+    title: "Platform Observability Scorecards: Tie Telemetry to Business Outcomes",
+    description: "Connect traces, errors, and latency to adoption, retention, and revenue with actionable scorecards.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-preserving-rag-2026",
+    title: "Privacy‑Preserving RAG: Redaction, Scoping, and Audit Trails",
+    description: "Protect sensitive data in RAG with redaction, auth‑scoped corpora, and audit trails.",
+    category: "AI Security",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-platform-roi-2025",
     title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
     description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",
