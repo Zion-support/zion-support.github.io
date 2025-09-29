@@ -77,9 +77,9 @@ class AccessibilityEnhancer {
 
       // Arrow key navigation for menus
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-        const menu = document.querySelector('[role="menu"]:focus-within');
+        const menu = document.querySelector('[role="menu"]:focus-within') as HTMLElement | null;
         if (menu) {
-          this.handleMenuNavigation(event, menu);
+          this.handleMenuNavigation(event as KeyboardEvent, menu);
         }
       }
     });
@@ -91,9 +91,9 @@ class AccessibilityEnhancer {
     // Trap focus in modals
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Tab') {
-        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
+        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]') as HTMLElement | null;
         if (modal) {
-          this.trapFocus(event, modal);
+          this.trapFocus(event as KeyboardEvent, modal);
         }
       }
     });
@@ -212,7 +212,7 @@ class AccessibilityEnhancer {
     });
   }
 
-  private handleMenuNavigation(event: Event, menu: HTMLElement): void {
+  private handleMenuNavigation(event: KeyboardEvent, menu: HTMLElement): void {
     const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]'));
     const currentIndex = menuItems.indexOf(document.activeElement as HTMLElement);
     
@@ -229,7 +229,7 @@ class AccessibilityEnhancer {
     event.preventDefault();
   }
 
-  private trapFocus(event: Event, modal: HTMLElement): void {
+  private trapFocus(event: KeyboardEvent, modal: HTMLElement): void {
     const focusableElements = modal.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
