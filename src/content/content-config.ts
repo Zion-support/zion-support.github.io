@@ -394,6 +394,45 @@ export const promotionalBanners: PromotionalBanner[] = [
     priority: 0
   },
   {
+    id: 'agentic-workflows-2026-banner',
+    message: '🧩 Agentic Workflows Blueprint 2026: Tools, Traces, Policy Tests',
+    ctaText: 'Read Blueprint',
+    ctaLink: '/blog/agentic-workflows-blueprint-2026',
+    backgroundColor: 'bg-gradient-to-r from-sky-600 to-indigo-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'edge-llm-caching-2025-banner',
+    message: '⚡ Edge LLM Caching: Sub‑100ms Prompts with Tiered KV',
+    ctaText: 'Explore Guide',
+    ctaLink: '/blog/edge-llm-caching-blueprint-2025',
+    backgroundColor: 'bg-gradient-to-r from-orange-600 to-amber-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 15,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'ai-operational-scorecards-2026-banner',
+    message: '📈 AI Operational Scorecards 2026: Guardrails That Drive Outcomes',
+    ctaText: 'See Scorecards',
+    ctaLink: '/blog/ai-operational-scorecards-2026',
+    backgroundColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 1
+  },
+  {
     id: 'governance-scorecards-2026',
     message: '📚 AI Governance 2026: Scorecards Engineers Actually Use',
     ctaText: 'Read Article',
