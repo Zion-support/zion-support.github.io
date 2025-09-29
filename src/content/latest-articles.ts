@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "zero-trust-for-genai-2026",
+    slug: "zero-trust-for-genai-2026",
+    title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",
+    description: "Production patterns: egress control, prompt firewalls, and signed outputs at scale.",
+    excerpt: "Ship GenAI safely with layered controls: prompt firewalls, egress policies, signing.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Security",
+    tags: ["GenAI", "Security", "Zero‑Trust"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/zero-trust-for-genai-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "quantum-ai-hybrid-blueprint-2026",
+    slug: "quantum-ai-hybrid-blueprint-2026",
+    title: "Quantum‑AI Hybrid Blueprint 2026: Practical Near‑Term Wins",
+    description: "Blend quantum libraries with AI orchestration to unlock optimization wins today.",
+    excerpt: "Near‑term value from QC + AI: routing patterns and orchestration tips.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Quantum",
+    tags: ["Quantum", "AI", "Optimization"],
+    featured: false,
+    readTime: "9 min read",
+    image: "/images/quantum-ai-hybrid-blueprint-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "secure-ml-supply-chain-2026",
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
