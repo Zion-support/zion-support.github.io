@@ -81,6 +81,7 @@ export default [
   "HTMLMetaElement": "readonly",
   "HTMLLinkElement": "readonly",
   "HTMLElement": "readonly",
+  "HTMLDivElement": "readonly",
   "Event": "readonly",
   "EventTarget": "readonly",
   "ErrorEvent": "readonly",
@@ -95,7 +96,6 @@ export default [
   "requestIdleCallback": "readonly",
   // Additional DOM types
   "Element": "readonly",
-  "HTMLElement": "readonly",
   "HTMLInputElement": "readonly",
   "HTMLTextAreaElement": "readonly",
   "HTMLSelectElement": "readonly",

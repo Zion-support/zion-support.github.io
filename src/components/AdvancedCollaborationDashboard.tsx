@@ -8,24 +8,10 @@ import {
   MicOff, 
   VideoOff, 
   Share, 
-  MessageSquare, 
   FileText, 
-  Palette, 
-  BarChart3, 
-  Settings,
   Play,
-  Pause,
   Square,
-  Download,
-  Upload,
-  Plus,
-  MoreHorizontal,
-  UserPlus,
-  UserMinus,
-  Lock,
-  Unlock,
-  Eye,
-  EyeOff
+  Plus
 } from 'lucide-react';
 import { 
   advancedCollaborationSystem, 
