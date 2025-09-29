@@ -336,7 +336,7 @@ const AdvancedPerformanceDashboard: React.FC<
                   cy="50%"
                   outerRadius={80}
                   dataKey="value"
-                  label={(props: any) => `${props.name}: ${props.value}`}
+                  label={(entry: any) => `${entry.name}: ${entry.value}`}
                 >
                   {pieData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.color} />

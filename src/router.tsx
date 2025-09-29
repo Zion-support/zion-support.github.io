@@ -15,11 +15,13 @@ import ComprehensiveMonitoringDashboard from "./components/ComprehensiveMonitori
 
 // Lazy load components for better performance
 const Home = lazy(() => import("./pages/Home"));
+const EnhancedHome = lazy(() => import("./pages/EnhancedHome"));
 const Blog = lazy(() => import("./pages/Blog"));
 const Contact = lazy(() => import("./pages/Contact"));
 const About = lazy(() => import("./pages/About"));
 const Services = lazy(() => import("./pages/Services"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
+const Analytics = lazy(() => import("./pages/Analytics"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const ModernFeatures = lazy(() => import("./components/ModernFeatures"));
 const EnhancedPerformanceDashboard = lazy(
@@ -55,6 +57,15 @@ export const router = createBrowserRouter(
   [
     {
       path: "/",
+      element: (
+        <Layout>
+          <EnhancedHome />
+        </Layout>
+      ),
+      errorElement: <ErrorFallback />,
+    },
+    {
+      path: "/classic",
       element: (
         <Layout>
           <Home />
@@ -130,6 +141,15 @@ export const router = createBrowserRouter(
       element: (
         <Layout>
           <EnhancedPerformanceDashboard isVisible={true} onClose={() => {}} />
+        </Layout>
+      ),
+      errorElement: <ErrorFallback />,
+    },
+    {
+      path: "/analytics",
+      element: (
+        <Layout>
+          <Analytics />
         </Layout>
       ),
       errorElement: <ErrorFallback />,

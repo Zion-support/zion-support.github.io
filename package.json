@@ -56,10 +56,13 @@
     "perf:optimize": "node scripts/advanced-performance-optimizer.cjs && pnpm run perf:monitor",
     "optimize:final": "node scripts/final-optimization.cjs",
     "optimize:production": "node scripts/production-optimizer.cjs",
-    "deploy:production": "pnpm run optimize:all && echo \"Ready for production deployment\""
+    "deploy:production": "pnpm run optimize:all && echo \"Ready for production deployment\"",
+    "enhance:performance": "node scripts/performance-enhancer.js",
+    "build:enhanced": "pnpm run enhance:performance && pnpm run build:netlify"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.13",
+    "@types/recharts": "^2.0.1",
     "axios": "^1.12.2",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.22",

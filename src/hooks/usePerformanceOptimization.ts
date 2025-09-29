@@ -23,20 +23,20 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   } = options;
 
   const renderCountRef = useRef(0);
-  const lastRenderTimeRef = useRef(performance.now());
+  const lastRenderTimeRef = useRef(typeof performance !== 'undefined' ? performance.now() : Date.now());
   const debounceTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Track render performance
   useEffect(() => {
     if (enableRenderTracking) {
       renderCountRef.current += 1;
-      lastRenderTimeRef.current = performance.now();
+      lastRenderTimeRef.current = typeof performance !== 'undefined' ? performance.now() : Date.now();
     }
   });
 
   // Memory monitoring
   const memoryUsage = useMemo(() => {
-    if (!enableMemoryMonitoring || !(performance as any).memory) return null;
+    if (!enableMemoryMonitoring || typeof performance === 'undefined' || !(performance as any).memory) return null;
     
     const memory = (performance as any).memory;
     return {
@@ -65,7 +65,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   // Performance metrics
   const metrics: PerformanceMetrics = useMemo(() => ({
-    loadTime: performance.now(),
+    loadTime: typeof performance !== 'undefined' ? performance.now() : Date.now(),
     memoryUsage: memoryUsage?.used || null,
     renderCount: renderCountRef.current,
     lastRenderTime: lastRenderTimeRef.current

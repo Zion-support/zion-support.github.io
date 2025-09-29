@@ -86,7 +86,7 @@ const Home = () => {
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
               Leading the future of technology with innovative solutions,
               cutting-edge AI, and transformative digital experiences that drive
-              real business results.
+              real business results. Experience the power of next-generation technology.
             </p>
 
             {/* Stats */}
