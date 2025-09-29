@@ -12,6 +12,11 @@ export const latestInsights: InsightArticle[] = [
     id: "ai-risk-register-checklist",
     title: "AI Risk Register Checklist",
     summary: "Owners, policy tests, and dashboards that make risk programs real.",
+    category: "AI Governance",
+    date: "2025-10-06",
+    readMinutes: 5,
+  },
+  {
     id: "eval-systems-online-canaries",
     title: "Eval Systems That Scale: Online Canaries and Policy Gates",
     summary:
@@ -59,6 +64,12 @@ export const latestInsights: InsightArticle[] = [
   {
     id: "ai-governance-rubric",
     title: "A Lightweight Rubric for AI Governance Decisions",
+    summary: "Practical decision framework for AI governance with clear criteria and ownership.",
+    category: "AI Governance",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
     id: "platform-blueprints-golden-paths",
     title: "Golden Paths That Actually Get Used",
     summary:
@@ -95,7 +106,12 @@ export const latestInsights: InsightArticle[] = [
     id: "rag-freshness-strategies",
     title: "RAG Freshness Strategies",
     summary: "Invalidate staleness with versioned chunks, TTLs, and async warmups.",
-    id: "ai-governance-rubric",
+    category: "GenAI",
+    date: "2025-10-06",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-governance-rubric-v2",
     title: "A Lightweight Rubric for AI Governance Decisions",
     summary:
       "Decision criteria for when to add controls, how to validate, and who owns risk.",
@@ -204,12 +220,10 @@ export const latestInsights: InsightArticle[] = [
   },
   {
     id: "analytics-ltv-playbook",
-    title: "An Operator’s Playbook for LTV:CPA Ratio",
+    title: "An Operator's Playbook for LTV:CPA Ratio",
     summary:
       "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
     category: "Product Analytics",
-      "A look at on‑device models, streaming pipelines, and cost/perf trade‑offs from deployments.",
-    category: "AI Engineering",
     date: "2025-09-29",
     readMinutes: 7,
   },
@@ -443,7 +457,11 @@ export const latestInsights: InsightArticle[] = [
     category: "Platform Engineering",
     date: "2025-10-05",
     readMinutes: 4,
-      "Essential security practices for AI systems, covering model protection, data privacy, and adversarial defense strategies.",
+  },
+  {
+    id: "ai-security-best-practices",
+    title: "AI Security Best Practices for Enterprise Deployment",
+    summary: "Essential security practices for AI systems, covering model protection, data privacy, and adversarial defense strategies.",
     category: "Security",
     date: "2025-01-21",
     readMinutes: 11,
