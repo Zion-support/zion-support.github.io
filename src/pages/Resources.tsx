@@ -415,22 +415,9 @@ const Resources = () => {
 
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center text-gray-500 text-sm">
-                        <Download className="w-4 h-4 mr-1" />
-                        {resource.downloadCount} downloads
+                        <Clock className="w-4 h-4 mr-1" />
+                        {typeof (resource as any).duration === 'string' ? (resource as any).duration : `${(resource as any).pages || 0} pages`}
                       </div>
-<<<<<<< HEAD
-                      {resource.duration && (
-                        <div className="flex items-center text-gray-500 text-sm">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {resource.duration}
-                        </div>
-                      )}
-=======
-                    <div className="flex items-center text-gray-500 text-sm">
-                      <Clock className="w-4 h-4 mr-1" />
-                      {typeof (resource as any).duration === 'string' ? (resource as any).duration : `${(resource as any).pages || 0} pages`}
-                    </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-fdc1
                     </div>
 
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -524,22 +511,9 @@ const Resources = () => {
 
                       <div className="flex items-center justify-between mb-4 text-sm text-gray-500">
                         <div className="flex items-center">
-                          <Download className="w-4 h-4 mr-1" />
-                          {resource.downloadCount}
-                        </div>
-<<<<<<< HEAD
-                        {resource.duration && (
-                          <div className="flex items-center">
-                            <Clock className="w-4 h-4 mr-1" />
-                            {resource.duration}
-                          </div>
-                        )}
-=======
-                        <div className="flex items-center">
                           <Clock className="w-4 h-4 mr-1" />
                           {typeof (resource as any).duration === 'string' ? (resource as any).duration : `${(resource as any).pages || 0} pages`}
                         </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-fdc1
                       </div>
 
                       <div className="flex flex-wrap gap-1 mb-4">

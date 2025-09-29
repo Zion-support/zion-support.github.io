@@ -75,13 +75,6 @@ export const posts: BlogPost[] = [
     description:
       "From offline suites to online canaries: patterns that keep quality high as usage grows.",
     category: "GenAI",
-=======
-    slug: "ai-governance-at-scale-2025",
-    title: "AI Governance at Scale: Policies That Enable Speed",
-    description:
-      "From offline eval suites to online policy tests and approvals that keep velocity high without breaking trust.",
-    category: "AI Governance",
->>>>>>> origin/main
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read",
@@ -97,11 +90,31 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
   },
   {
+    slug: "ai-governance-at-scale-2025",
+    title: "AI Governance at Scale: Policies That Enable Speed",
+    description:
+      "From offline eval suites to online policy tests and approvals that keep velocity high without breaking trust.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:
       "Latency budgets, on‑device models, and caching strategies for lightning‑fast AI UX at the edge.",
     category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "ai-governance-blueprint-2025",
+    title: "AI Governance Blueprint 2025: Speed Without Surprises",
+    description:
+      "Decision rights, eval policies, and approval flows that let teams ship fast and safe.",
+    category: "AI Governance",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read",
@@ -117,7 +130,6 @@ export const posts: BlogPost[] = [
     readTime: "7 min read",
   },
   {
-<<<<<<< HEAD
     slug: "north-star-metrics-anti-patterns",
     title: "North‑Star Metrics: 7 Anti‑Patterns to Avoid",
     description:
@@ -148,8 +160,6 @@ export const posts: BlogPost[] = [
     readTime: "7 min read",
   },
   {
-=======
->>>>>>> origin/main
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
     description:

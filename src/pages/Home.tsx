@@ -105,10 +105,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: AI Governance at Scale + Edge Observability Blueprint"
-          description="Policies that enable speed, and sub‑100ms reliability with real‑world telemetry."
+          title="🚀 New: AI Governance Blueprint 2025 + Feature Flags at the Edge"
+          description="Ship faster with strong guardrails. Learn sub‑100ms global releases and scalable AI governance."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-governance-at-scale-2025"
+          ctaLink="/blog/ai-governance-blueprint-2025"
           dismissible={true}
         />
         {/* Animated background elements */}

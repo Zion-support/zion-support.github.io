@@ -9,60 +9,6 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
-<<<<<<< HEAD
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
-  {
     id: "serverless-warm-pools-playbook",
     title: "Serverless Warm Pools: Cut Cold Starts, Not Corners",
     summary:
@@ -99,61 +45,24 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 5,
   },
   {
-    id: "eda-contracts-replays",
-    title: "Event‑Driven Architecture: Contracts, Idempotency, and Safe Replays",
-    summary:
-      "Version events, enforce schemas, and run backfills without double‑processing.",
-    category: "Architecture",
-=======
     id: "ai-governance-at-scale-2025",
     title: "AI Governance at Scale: Policies That Enable Speed",
     summary:
       "A pragmatic model for approvals, policy tests, and observability that unlocks faster AI delivery.",
     category: "AI Governance",
->>>>>>> origin/main
     date: "2025-09-30",
     readMinutes: 6,
   },
   {
-<<<<<<< HEAD
-    id: "zero-downtime-migrations",
-    title: "Zero‑Downtime Migrations: Patterns that Keep Pages Green",
-    summary:
-      "Dual‑write, read‑shadowing, and progressive delivery to ship schema changes safely.",
-    category: "Platform Engineering",
-    date: "2025-09-29",
-    readMinutes: 5,
-  },
-  {
-    id: "ai-autonomous-ops-intro",
-    title: "AI Autonomous Operations: From Runbooks to Self‑Managing Systems",
-    summary:
-      "Policy tests, health circuits, and closed‑loop optimization that shrink toil to near zero.",
-    category: "AI & Automation",
-    date: "2025-09-30",
-    readMinutes: 6,
-  },
-  {
-    id: "ai-roi-scorecards",
-    title: "AI ROI Scorecards That Executives Trust",
-    summary:
-      "Pick leading indicators, instrument baselines, and report outcomes without vanity metrics.",
-    category: "AI Strategy",
-=======
     id: "edge-observability-blueprint",
     title: "Edge Observability Blueprint: Sub‑100ms Reliability",
     summary:
       "Latency budgets, client ↔ edge traces, and error budgets that keep UX snappy.",
     category: "Observability",
->>>>>>> origin/main
     date: "2025-09-30",
     readMinutes: 5,
   },
   {
-<<<<<<< HEAD
->>>>>>> feature/new-content-and-promo
-=======
->>>>>>> origin/main
     id: "genai-policy-tests-canaries",
     title: "GenAI Policy Tests: From Offline Suites to Online Canaries",
     summary:
