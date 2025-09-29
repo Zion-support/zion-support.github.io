@@ -33,7 +33,7 @@ export const metadata = {
   title: 'AI Sustainability Transformation 2026: $15M Green Tech Implementation',
   description: 'How a Fortune 500 energy company achieved 60% reduction in carbon footprint and $15M annual savings through comprehensive AI sustainability transformation.',
   keywords: 'AI sustainability, green tech, carbon reduction, energy optimization, environmental AI, sustainable technology',
->>>>>>> cursor/create-and-deploy-new-content-d0aa
+>>>>>>> cursor/create-and-deploy-new-content-f9a2
 };
 
 export default function AISustainabilityTransformation2026() {
@@ -733,7 +733,7 @@ export default function AISustainabilityTransformation2026() {
           </div>
         </div>
       </article>
->>>>>>> cursor/create-and-deploy-new-content-d0aa
+>>>>>>> cursor/create-and-deploy-new-content-f9a2
     </div>
   );
 }
