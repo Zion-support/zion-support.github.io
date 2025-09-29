@@ -2960,6 +2960,32 @@ Ready to transform your AI infrastructure? Contact Zion Tech Group today for a f
     featured: false,
     readTime: "12 min read",
     image: "/images/cloud-native-ai.jpg"
+  },
+  {
+    slug: "ai-governance-in-practice-2026",
+    title: "AI Governance in Practice 2026: Scorecards, PR Gates, Online Evals",
+    description: "Lightweight guardrails wired to KPIs: scorecards, PR checks, and live canaries that keep teams fast.",
+    content: `\n# AI Governance in Practice 2026\n\nMove beyond slideware with governance engineers actually adopt. Wire scorecards to KPIs, add lightweight PR gates, and run online evals and canaries that protect velocity.\n\n## What to Implement\n- KPI-linked scorecards\n- PR checks for risky changes\n- Canary evals with rollback\n- Ownership and SLAs\n\n## Outcomes\n- Fewer regressions\n- Faster delivery\n- Measurable compliance\n`,
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Strategy",
+    tags: ["Governance", "Scorecards", "Evals"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-governance-in-practice-2026.jpg"
+  },
+  {
+    slug: "edge-privacy-by-design-2026",
+    title: "Edge Privacy by Design 2026: On‑Device Filters, Scoped IDs, <100ms",
+    description: "Ship privacy‑first intelligence with on‑device redaction, signed configs, and geo budgets.",
+    content: `\n# Edge Privacy by Design 2026\n\nBlueprint for private, low‑latency edge decisions: on‑device PII filters, scoped IDs, signed payloads, and geo budgets that keep responses under 100ms.\n\n## Building Blocks\n- On-device redaction\n- Scoped, rotating identifiers\n- Signed configs and payloads\n- Edge budgets and fallbacks\n`,
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "Edge Computing",
+    tags: ["Edge", "Privacy", "On‑device"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/edge-privacy-by-design-2026.jpg"
   }
 ];
 

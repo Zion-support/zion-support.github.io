@@ -150,17 +150,15 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Reliable RAG Ops, Platform KPIs, AI Incident Budgets"
-          description="Keep RAG fresh, prove platform ROI, and contain incidents under 60s—safely."
+          title="New: AI Governance in Practice + Edge Privacy by Design"
+          description="Scorecards, PR gates, online evals — plus on‑device privacy under 100ms."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Reliable RAG Ops 2026", category: "GenAI", link: "/blog/reliable-rag-ops-2026" },
-            { title: "Platform KPIs 2026", category: "Platform Engineering", link: "/blog/platform-kpis-2026" },
-            { title: "AI Incident Budgets 2026", category: "Security", link: "/blog/ai-incident-budgets-2026" },
-            { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
-            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" },
-            { title: "Golden Paths ROI 2026", category: "Platform Engineering", link: "/blog/golden-paths-roi-2026" }
+            { title: "AI Governance in Practice 2026", category: "AI Strategy", link: "/blog/ai-governance-in-practice-2026" },
+            { title: "Edge Privacy by Design 2026", category: "Edge Computing", link: "/blog/edge-privacy-by-design-2026" },
+            { title: "Platform Scorecards 2026", category: "Platform Engineering", link: "/blog/platform-engineering-scorecards-2026" },
+            { title: "Zero‑Trust for AI Agents 2026", category: "AI Security", link: "/blog/zero-trust-for-ai-agents-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -326,7 +324,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Edge LLM Caching, Governance Scorecards, Serverless Cost Playbook — read now
+            New: AI Governance in Practice + Edge Privacy by Design — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
