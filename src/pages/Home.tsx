@@ -29,7 +29,6 @@ import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import NewContentShowcase from "../components/NewContentShowcase";
 import NewContentShowcase2025 from "../components/NewContentShowcase2025";
 import NewServicesShowcase from "../components/NewServicesShowcase";
-import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
 import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
@@ -134,16 +133,16 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Risk‑Budgeted Runbooks, Zero‑Trust Agents, Privacy‑Safe Flags"
-          description="Ship safe automation with risk budgets, sandboxed agents, and privacy‑preserving rollouts."
+          title="New: Reliable RAG Ops, Platform KPIs, AI Incident Budgets"
+          description="Keep RAG fresh, prove platform ROI, and contain incidents under 60s—safely."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Runbooks with Risk Budgets 2026", category: "AI Operations", link: "/blog/ai-runbooks-with-risk-budgets-2026" },
-            { title: "Zero‑Trust for AI Agents 2026", category: "AI Security", link: "/blog/zero-trust-for-ai-agents-2026" },
-            { title: "Privacy‑Preserving Feature Flags 2026", category: "Architecture", link: "/blog/privacy-preserving-feature-flags-2026" },
-            { title: "Platform Scorecards 2026", category: "Platform Engineering", link: "/blog/platform-engineering-scorecards-2026" },
-            { title: "Edge AI Blueprint 2026", category: "Edge Computing", link: "/blog/edge-ai-blueprint-2026" }
+            { title: "Reliable RAG Ops 2026", category: "GenAI", link: "/blog/reliable-rag-ops-2026" },
+            { title: "Platform KPIs 2026", category: "Platform Engineering", link: "/blog/platform-kpis-2026" },
+            { title: "AI Incident Budgets 2026", category: "Security", link: "/blog/ai-incident-budgets-2026" },
+            { title: "Privacy‑Preserving Analytics", category: "Observability", link: "/blog/privacy-preserving-analytics-2025" },
+            { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -281,7 +280,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Risk‑Budgeted Runbooks, Zero‑Trust Agents, Privacy‑Safe Flags — read now
+            New: Edge LLM Caching, Governance Scorecards, Serverless Cost Playbook — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
@@ -542,7 +541,7 @@ const Home = () => {
                 <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Fresh: Risk‑Budgeted Runbooks, Zero‑Trust Agents, Privacy‑Safe Flags
+                Fresh: Edge LLM Caching, KPI Scorecards, Serverless Cost Playbook
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles & Insights
@@ -812,7 +811,7 @@ const Home = () => {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
-              <p className="text-white/90">New: AI Platform SLOs 2026, RAG Evals in the Loop, and Edge Feature Flags 2026.</p>
+              <p className="text-white/90">New: Platform Engineering Scorecards 2026, AI Cybersecurity Automation, and Edge AI Blueprint 2026.</p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
                   Read the latest
