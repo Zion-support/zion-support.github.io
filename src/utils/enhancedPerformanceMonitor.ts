@@ -51,16 +51,6 @@ class EnhancedPerformanceMonitor {
     console.log("Enhanced Performance Monitor started");
   }
 
-  private createAlert(alert: Omit<PerformanceAlert, 'id'>): void {
-    const newAlert: PerformanceAlert = {
-      ...alert,
-      id: `alert-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-    };
-    
-    this.alerts.push(newAlert);
-    console.warn(`Performance Alert: ${alert.title} - ${alert.description}`);
-  }
-
   private setupPerformanceObservers(): void {
     if (!('PerformanceObserver' in window)) {
       return;
@@ -131,11 +121,6 @@ class EnhancedPerformanceMonitor {
     }
   }
 
-  private createAlert(alert: any): void {
-    // Create alert logic
-    console.warn('Performance Alert:', alert);
-  }
-
   private processPerformanceEntry(entry: PerformanceEntry): void {
     switch (entry.entryType) {
       case 'paint':
@@ -145,8 +130,6 @@ class EnhancedPerformanceMonitor {
             title: 'Slow First Contentful Paint',
             description: `FCP is ${entry.startTime.toFixed(0)}ms`,
             impact: 'high',
-            category: 'performance',
-            effort: 'medium',
             action: 'Optimize critical rendering path'
           });
         }
@@ -158,8 +141,6 @@ class EnhancedPerformanceMonitor {
             title: 'Slow Largest Contentful Paint',
             description: `LCP is ${entry.startTime.toFixed(0)}ms`,
             impact: 'high',
-            category: 'performance',
-            effort: 'medium',
             action: 'Optimize images and largest content'
           });
         }
@@ -173,8 +154,6 @@ class EnhancedPerformanceMonitor {
             title: 'Slow First Input Delay',
             description: `FID is ${fid.toFixed(0)}ms`,
             impact: 'medium',
-            category: 'performance',
-            effort: 'high',
             action: 'Reduce JavaScript execution time'
           });
         }
@@ -188,8 +167,6 @@ class EnhancedPerformanceMonitor {
             title: 'High Cumulative Layout Shift',
             description: `CLS is ${clsEntry.value.toFixed(3)}`,
             impact: 'medium',
-            category: 'performance',
-            effort: 'medium',
             action: 'Fix layout shift issues'
           });
         }
@@ -322,9 +299,15 @@ class EnhancedPerformanceMonitor {
     console.log("Enhanced Performance Monitor stopped");
   }
 
-  private createAlert(alert: any): void {
-    // Simple alert creation - could be enhanced with proper alert system
+  private createAlert(alert: {
+    type: 'critical' | 'warning' | 'info';
+    title: string;
+    description: string;
+    impact: 'high' | 'medium' | 'low';
+    action: string;
+  }): void {
     console.warn(`Performance Alert: ${alert.title} - ${alert.description}`);
+    // In a real implementation, this would send to a monitoring service
   }
 
   public cleanup(): void {
