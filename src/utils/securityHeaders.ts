@@ -39,6 +39,7 @@ export class SecurityManager {
   public initialize(): void {
     // Intentionally empty. Reserved for future side effects.
   }
+
   private getDefaultConfig(): SecurityConfig {
     return {
       csp: {
@@ -75,6 +76,8 @@ export class SecurityManager {
       }
     };
   }
+
+  // Note: initialize() is intentionally defined once; keep this single alias
 
   public getCSPDirective(): string {
     const { csp } = this.config;

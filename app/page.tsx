@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { NewBlogBanner, AnalyticsPlatformBanner, TechCorpSuccessBanner } from '../components/PromotionalBanner';
+import { NewBlogBanner, AnalyticsPlatformBanner, TechCorpSuccessBanner, NewContentBanner } from '../components/PromotionalBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -12,6 +12,7 @@ export default function HomePage() {
     <div className="animate-fade-in">
       {/* Promotional Banners */}
       <NewBlogBanner />
+      <NewContentBanner />
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -139,6 +140,25 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Link href="/blog/genai-guardrails-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Article
+                  </span>
+                  <span className="text-sm text-gray-500">11 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  GenAI Guardrails 2025: Practical Playbook for Reliable AI
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Practical patterns to ship safe, reliable, and auditable GenAI systems in production.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
             <Link href="/blog/ai-revolution-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -192,6 +212,26 @@ export default function HomePage() {
                 </h3>
                 <p className="text-gray-600 mb-4">
                   See how TechCorp achieved $500K annual savings and 90% efficiency improvement with AI transformation.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/case-studies/finserve-genai-risk-mitigation" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Success Story
+                  </span>
+                  <span className="text-sm text-gray-500">Fintech</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  FinServe: GenAI Risk Mitigation & Compliance
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  How a fintech leader cut AI risk by 70% and achieved audit-ready compliance.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   View Case Study →

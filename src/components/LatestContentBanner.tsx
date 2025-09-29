@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { ArrowRight, Clock, Sparkles, Star, TrendingUp } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, TrendingUp, Clock, Star } from 'lucide-react';
 
 interface LatestContentBannerProps {
   className?: string;
@@ -12,52 +12,63 @@ interface LatestContentBannerProps {
 const contentHighlights = [
   {
     id: 1,
-    title: "🚀 NEW: AI Workflow Automation ROI Calculator",
-    description: "Measure your potential savings with our free interactive ROI calculator",
-    ctaText: "Calculate ROI",
-    ctaLink: "/blog/ai-workflow-automation-roi-calculator",
-    badge: "Featured Tool",
-    stats: "500+ companies using",
-    variant: "success" as const
-  },
-  {
-    id: 2,
-    title: "📊 LATEST: Micro SAAS Platform Comparison 2025",
-    description: "Comprehensive guide to choosing the right platform for your business",
-    ctaText: "Read Guide",
-    ctaLink: "/blog/micro-saas-platform-comparison-2025",
-    badge: "New Release",
-    stats: "12 min read",
-    variant: "info" as const
-  },
-  {
-    id: 3,
-    title: "🎯 HOT: AI Virtual Assistant Implementation Checklist",
-    description: "25 critical steps for successful AI assistant deployment",
-    ctaText: "Get Checklist",
-    ctaLink: "/blog/ai-virtual-assistant-implementation-checklist",
-    badge: "Popular",
-    stats: "1.2k downloads",
+    title: "🛡️ NEW: AI Risk Register That Actually Drives Action",
+    description: "Turn AI risks into tracked mitigations with owners and policy tests",
+    ctaText: "Read Playbook",
+    ctaLink: "/blog/ai-risk-register-2025",
+    badge: "New",
+    stats: "7 min read",
     variant: "warning" as const
   },
   {
+    id: 2,
+    title: "📈 Practical AI Evals That Predict Business Outcomes",
+    description: "Design scorecards that correlate with revenue, CSAT, and retention",
+    ctaText: "See Scorecards",
+    ctaLink: "/blog/practical-evals-scorecards-2025",
+    badge: "Featured",
+    stats: "6 min read",
+    variant: "success" as const
+  },
+  {
+    id: 3,
+    title: "💸 Cloud FinOps Guardrails Engineers Actually Use",
+    description: "Budgets, alerts, and PR gates that reduce waste 25–40%",
+    ctaText: "Cut Spend",
+    ctaLink: "/blog/cloud-finops-guardrails-2025",
+    badge: "Hot",
+    stats: "8 min read",
+    variant: "info" as const
+  },
+  {
     id: 4,
-    title: "💡 INSIGHT: Data Analytics Automation Success Stories",
-    description: "10 companies share how they achieved 300% faster insights",
-    ctaText: "Read Stories",
-    ctaLink: "/blog/data-analytics-automation-success-stories",
-    badge: "Case Study",
-    stats: "15 min read",
+    title: "🧪 RAG Architectures That Work in Production",
+    description: "Freshness, hybrid search, and evals that scale",
+    ctaText: "Read Guide",
+    ctaLink: "/blog/practical-rag-in-production-2025",
+    badge: "Popular",
+    stats: "8 min read",
     variant: "premium" as const
   },
   {
     id: 5,
-    title: "🧪 NEW: Agent Telemetry – What to Trace",
-    description: "From tool call spans to prompt metadata—debug and improve agents faster",
-    ctaText: "See Guide",
-    ctaLink: "/blog/agent-telemetry-traces-2025",
+    title: "🧰 Serverless Inference Cost Playbook",
+    description: "Adaptive batching, warm pools, and quality tiers without P95 pain",
+    ctaText: "Optimize",
+    ctaLink: "/blog/serverless-inference-cost-playbook-2025",
+    badge: "Guide",
+    stats: "7 min read",
+    variant: "success" as const
+  }
+  ,
+  {
+    id: 5,
+    title: "🧭 PLAYBOOK: AI Sales Copilot (90‑Day Plan)",
+    description: "Workflows, guardrails, and KPIs to lift win‑rates with an AI copilot",
+    ctaText: "Read Playbook",
+    ctaLink: "/blog/ai-sales-copilot-playbook-2025",
     badge: "New",
-    stats: "5 min read",
+    stats: "8 min read",
     variant: "info" as const
   }
 ];

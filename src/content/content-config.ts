@@ -474,15 +474,17 @@ export const getRecentContent = (limit: number = 3) => {
   const allContent = [
     ...blogPosts.map(post => ({ ...post, type: 'blog' as const })),
     ...caseStudies.map(study => ({ ...study, type: 'case-study' as const })),
-    ...services.map(service => ({ ...service, type: 'service' as const }))
+    // Services do not have a date; attach a synthetic date far in the past to satisfy sorting
+    ...services.map(service => ({ ...service, type: 'service' as const, date: '1970-01-01' }))
   ];
   
   return allContent
-    // Sort by date when present; otherwise fall back to a stable order
     .sort((a, b) => {
-      const dateA = (a as any).date ? new Date((a as any).date).getTime() : 0;
-      const dateB = (b as any).date ? new Date((b as any).date).getTime() : 0;
-      return dateB - dateA;
+      const ad = (a as any).date as string | undefined;
+      const bd = (b as any).date as string | undefined;
+      const at = ad ? new Date(ad).getTime() : 0;
+      const bt = bd ? new Date(bd).getTime() : 0;
+      return bt - at;
     })
     .slice(0, limit);
 };
