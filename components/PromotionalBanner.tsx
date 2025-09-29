@@ -397,3 +397,114 @@ export const NewContent2026Banner = () => (
     hideAfter={18}
   />
 );
+
+// Additional 2026 Content Banners
+export const AIOperationalExcellenceBanner = () => (
+  <PromotionalBanner
+    message="⚡ NEW: AI Operational Excellence 2026 - 90% Automation & $8M+ Savings with Intelligent Operations"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-operational-excellence-2026"
+    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AIOperationalScorecardsBanner = () => (
+  <PromotionalBanner
+    message="📊 NEW: AI Operational Scorecards 2026 - Measure & Optimize AI Performance with Real-Time Metrics"
+    ctaText="View Scorecards"
+    ctaLink="/blog/ai-operational-scorecards-2026"
+    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const EdgeAIBlueprintBanner = () => (
+  <PromotionalBanner
+    message="🌐 NEW: Edge AI Blueprint 2026 - Sub-50ms Latency with Distributed Intelligence at Scale"
+    ctaText="Read Blueprint"
+    ctaLink="/blog/edge-ai-blueprint-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const PlatformEngineeringScorecardsBanner = () => (
+  <PromotionalBanner
+    message="🏗️ NEW: Platform Engineering Scorecards 2026 - Optimize Developer Experience & Infrastructure ROI"
+    ctaText="View Scorecards"
+    ctaLink="/blog/platform-engineering-scorecards-2026"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const AIAgentObservabilityBanner = () => (
+  <PromotionalBanner
+    message="🔍 NEW: AI Agent Observability 2026 - End-to-End Monitoring & Debugging for Autonomous Systems"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-agent-observability-2026"
+    backgroundColor="bg-gradient-to-r from-teal-600 to-cyan-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AIAgentSafetyBlueprintBanner = () => (
+  <PromotionalBanner
+    message="🛡️ NEW: AI Agent Safety Blueprint 2026 - Deploy Safe Autonomous Agents with 99.9% Reliability"
+    ctaText="Read Blueprint"
+    ctaLink="/blog/ai-agent-safety-blueprint-2026"
+    backgroundColor="bg-gradient-to-r from-red-600 to-pink-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AISustainabilityGreenTechBanner = () => (
+  <PromotionalBanner
+    message="🌱 NEW: AI Sustainability & Green Tech 2026 - Reduce Carbon Footprint by 60% with Eco-Friendly AI"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-sustainability-green-tech-2026"
+    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const ManufacturingIOTAutomationBanner = () => (
+  <PromotionalBanner
+    message="🏭 NEW: Manufacturing IoT Automation 2026 - 85% Efficiency Gains & $10M+ Savings with Smart Manufacturing"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/manufacturing-iot-automation"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-indigo-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const SupplyChainOptimizationBanner = () => (
+  <PromotionalBanner
+    message="📦 NEW: AI Supply Chain Optimization 2026 - 90% Forecast Accuracy & $12M+ Cost Reduction"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-supply-chain-optimization-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AI2026TrendsBanner = () => (
+  <PromotionalBanner
+    message="🔮 NEW: AI Trends 2026 - The Future of Enterprise AI: Autonomous Operations, Edge Intelligence & Quantum AI"
+    ctaText="Read Trends"
+    ctaLink="/blog/ai-trends-2026"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
