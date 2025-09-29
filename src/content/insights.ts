@@ -9,6 +9,24 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "ai-governance-at-scale-2025",
+    title: "AI Governance at Scale: Policies That Enable Speed",
+    summary:
+      "A pragmatic model for approvals, policy tests, and observability that unlocks faster AI delivery.",
+    category: "AI Governance",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-observability-blueprint",
+    title: "Edge Observability Blueprint: Sub‑100ms Reliability",
+    summary:
+      "Latency budgets, client ↔ edge traces, and error budgets that keep UX snappy.",
+    category: "Observability",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
     id: "genai-policy-tests-canaries",
     title: "GenAI Policy Tests: From Offline Suites to Online Canaries",
     summary:
