@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-supply-chain-copilot-2026",
+    title: "AI Supply Chain Copilot 2026: OTIF Wins Under Budget",
+    description: "Forecasting, sourcing, and routing copilots that cut cost 25–40% while lifting OTIF.",
+    category: "Applied AI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "enterprise-agent-risk-budgets-2026",
+    title: "Enterprise Agent Risk Budgets: Safe Autonomy at Scale",
+    description: "Explicit budgets, approvals, and rollback triggers for agent actions across orgs.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "zero-trust-for-genai-2026",
     title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",
     description: "Production patterns: egress control, prompt firewalls, and signed artifacts for safe GenAI.",

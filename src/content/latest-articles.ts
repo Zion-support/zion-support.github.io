@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-supply-chain-copilot-2026",
+    slug: "ai-supply-chain-copilot-2026",
+    title: "AI Supply Chain Copilot 2026: OTIF Wins Under Budget",
+    description: "Forecasting, sourcing, and routing copilots that cut cost 25–40% while lifting OTIF.",
+    excerpt: "Copilots for planning, sourcing, and routing that improve OTIF and margins.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Applied AI",
+    tags: ["Supply Chain", "Copilot", "Optimization"],
+    featured: true,
+    readTime: "10 min read",
+    image: "/images/ai-supply-chain-copilot-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "enterprise-agent-risk-budgets-2026",
+    slug: "enterprise-agent-risk-budgets-2026",
+    title: "Enterprise Agent Risk Budgets: Safe Autonomy at Scale",
+    description: "Explicit budgets, approvals, and rollback triggers for agent actions across orgs.",
+    excerpt: "Risk budgets that keep autonomous agents safe, fast, and auditable.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Governance",
+    tags: ["Agents", "Risk Budgets", "Governance"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/enterprise-agent-risk-budgets-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "zero-trust-for-genai-2026",
     slug: "zero-trust-for-genai-2026",
     title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",
