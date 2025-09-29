@@ -9,15 +9,23 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+<<<<<<< HEAD
     id: "enterprise-genai-guardrails",
     title: "Enterprise Guardrails for Responsible GenAI",
     summary:
       "A pragmatic framework for policy testing, safety evaluations, and alignment with governance standards.",
     category: "GenAI",
+=======
+    id: "edge-ai-case-studies",
+    title: "How Edge AI Is Powering Real‑Time Experiences",
+    summary: "A look at on‑device models, streaming pipelines, and cost/perf trade‑offs from 3 deployments.",
+    category: "AI Engineering",
+>>>>>>> cursor/create-and-deploy-new-content-aa3a
     date: "2025-09-29",
     readMinutes: 7,
   },
   {
+<<<<<<< HEAD
     id: "edge-inference-patterns",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     summary:
@@ -42,6 +50,50 @@ export const latestInsights: InsightArticle[] = [
       "Unify reliability targets and cost controls with guardrails that keep developer velocity high.",
     category: "Cloud FinOps",
     date: "2025-09-27",
+=======
+    id: "governance-ai-policy-testing",
+    title: "Governance for AI: Policy Testing That Scales",
+    summary:
+      "From prompt policies to red‑team playbooks: techniques to continuously validate AI behavior.",
+    category: "Risk & Compliance",
+    date: "2025-09-29",
+    readMinutes: 8,
+  },
+  {
+    id: "modernization-catalog-strangler",
+    title: "Modernization That Sticks: Catalogs, Contracts, and the Strangler Fig",
+    summary:
+      "Practical steps to decouple legacy systems with service catalogs and contract‑first delivery.",
+    category: "Architecture",
+    date: "2025-09-29",
+    readMinutes: 9,
+  },
+  {
+    id: "observability-opentelemetry-guide",
+    title: "OpenTelemetry in Production: Traces That Engineers Actually Use",
+    summary:
+      "Sampling strategies, semantic conventions, and dashboards that shrink MTTR for complex stacks.",
+    category: "Observability",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "llm-security-redteaming",
+    title: "LLM Security: A Practical Red‑Teaming Handbook",
+    summary:
+      "Common attack surfaces, jailbreak detection, and layered defenses for enterprise LLM apps.",
+    category: "Security",
+    date: "2025-09-29",
+    readMinutes: 10,
+  },
+  {
+    id: "ai-buy-build-economics-2025",
+    title: "Buy vs. Build for AI: 2025 Economics and Decision Tree",
+    summary:
+      "A CFO‑friendly model for TCO, data gravity, and competitive differentiation in AI investments.",
+    category: "Strategy",
+    date: "2025-09-29",
+>>>>>>> cursor/create-and-deploy-new-content-aa3a
     readMinutes: 7,
   },
   {
