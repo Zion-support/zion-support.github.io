@@ -206,14 +206,12 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                   <div className="bg-white border rounded-lg p-6">
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">Optimization Suggestions</h4>
                     <div className="space-y-2">
-                      {metrics.suggestions?.map((suggestion, index) => (
+                      {(metrics.suggestions ?? []).map((suggestion, index) => (
                         <div key={index} className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
                           <p className="text-sm text-yellow-800">{suggestion.title || suggestion.description}</p>
                           <div className="text-xs text-yellow-600 mt-1">
                             Impact: {suggestion.impact}
                           </div>
-                        </div>
-                      )) || []}
                         </div>
                       ))}
                     </div>
@@ -295,9 +293,6 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                         <p className="text-xs text-yellow-600 mt-1">{issue.message}</p>
                         <div className="text-xs text-yellow-600 mt-1">
                           Impact: {issue.impact || issue.priority || 'medium'}
-                        </div>
-                      </div>
-                    ))}
                         </div>
                       </div>
                     ))}
