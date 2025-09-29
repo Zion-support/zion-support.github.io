@@ -93,9 +93,6 @@ importers:
       eslint:
         specifier: ^9.15.0
         version: 9.36.0(jiti@2.6.0)
-      eslint-plugin-cypress:
-        specifier: ^5.1.1
-        version: 5.1.1(eslint@9.36.0(jiti@2.6.0))
       eslint-plugin-react:
         specifier: ^7.37.2
         version: 7.37.5(eslint@9.36.0(jiti@2.6.0))
@@ -1767,11 +1764,6 @@ packages:
     resolution: {integrity: sha512-2NlIDTwUWJN0mRPQOdtQBzbUHvdGY2P1VXSyU83Q3xKxM7WHX2Ql8dKq782Q9TgQUNOLEzEYu9bzLNj1q88I5w==}
     engines: {node: '>=6.0'}
     hasBin: true
-
-  eslint-plugin-cypress@5.1.1:
-    resolution: {integrity: sha512-LxTmZf1LLh9EklZBVvKNEZj71X9tCJnlYDviAJGsOgEVc6jz+tBODSpm02CS/9eJOfRqGsmVyvIw7LHXQ13RaA==}
-    peerDependencies:
-      eslint: '>=9'
 
   eslint-plugin-react-hooks@5.2.0:
     resolution: {integrity: sha512-+f15FfK64YQwZdJNELETdn5ibXEUQmW1DZL6KXhNnc2heoy/sg9VJJeT7n8TlMWouzWqSWavFkIhHyIbIAEapg==}
@@ -5352,11 +5344,6 @@ snapshots:
       esutils: 2.0.3
     optionalDependencies:
       source-map: 0.6.1
-
-  eslint-plugin-cypress@5.1.1(eslint@9.36.0(jiti@2.6.0)):
-    dependencies:
-      eslint: 9.36.0(jiti@2.6.0)
-      globals: 16.4.0
 
   eslint-plugin-react-hooks@5.2.0(eslint@9.36.0(jiti@2.6.0)):
     dependencies:
