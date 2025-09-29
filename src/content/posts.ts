@@ -10,6 +10,42 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "agentops-slo-handbook-2025",
+    title: "AgentOps SLO Handbook: Keeping Autonomous Systems Reliable",
+    description: "Define SLOs, budgets, and rollback-ready canaries for agent workflows in production.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "zero-trust-ai-pipelines-2025",
+    title: "Zero‑Trust for AI Pipelines: Auth, Policy Tests, and Attestations",
+    description: "Harden datasets, prompts, and tools with signed artifacts and CI policy gates.",
+    category: "Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-rag-cdn-2025",
+    title: "Edge RAG + CDN: Fresh Answers with Sub‑100ms Latency",
+    description: "Hybrid retrieval at the edge with freshness windows, signed configs, and tiered caches.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-evals-bluebook-2025",
+    title: "GenAI Evals Bluebook: KPIs, Canaries, and Policy Tests",
+    description: "Build eval suites that predict outcomes and prevent regressions across teams.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-platform-roi-2025",
     title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
     description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",

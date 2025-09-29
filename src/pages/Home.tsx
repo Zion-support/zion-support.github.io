@@ -110,14 +110,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="Fresh: Agentic Workflows, Edge LLM Caching, Operational Scorecards"
-          description="New: agentic tools + traces, sub‑100ms edge LLM caching, and outcome‑driven scorecards."
+          title="Fresh: AgentOps SLOs, Zero‑Trust AI Pipelines, Edge RAG + CDN"
+          description="New: SLOs with budgets and canaries, zero‑trust AI supply chains, and sub‑100ms RAG at the edge."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Agentic Workflows Blueprint", category: "GenAI", link: "/blog/agentic-workflows-blueprint-2026" },
-            { title: "Edge LLM Caching", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2025" },
-            { title: "Operational Scorecards 2026", category: "AI Strategy", link: "/blog/ai-operational-scorecards-2026" },
+            { title: "AgentOps SLO Handbook", category: "GenAI", link: "/blog/agentops-slo-handbook-2025" },
+            { title: "Zero‑Trust for AI Pipelines", category: "Security", link: "/blog/zero-trust-ai-pipelines-2025" },
+            { title: "Edge RAG + CDN", category: "Architecture", link: "/blog/edge-rag-cdn-2025" },
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
