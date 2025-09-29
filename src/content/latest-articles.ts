@@ -1191,6 +1191,42 @@ export const latestArticles: LatestArticle[] = [
   }
 ];
 
+// Newly added featured articles (auto used by showcases and banners)
+latestArticles.unshift(
+  {
+    id: "ai-threat-hunting-with-llms-2026",
+    slug: "ai-threat-hunting-with-llms-2026",
+    title: "AI Threat Hunting with LLMs 2026: Signals, Sandboxes, and Speed",
+    description: "Augment analysts with safe LLM tooling, live traces, and budgeted actions for faster hunts.",
+    excerpt: "Operational playbooks to make LLMs an accelerator for your SOC—without extra risk.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "Security",
+    tags: ["Threat Hunting", "LLMs", "Security"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-threat-hunting-llms-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "llm-production-runbooks-2026",
+    slug: "llm-production-runbooks-2026",
+    title: "LLM Production Runbooks 2026: Rollbacks, Budgets, and Canary Evals",
+    description: "Battle‑tested runbooks for safe LLM releases—risk budgets, rollback triggers, and KPI‑linked canaries.",
+    excerpt: "Release LLM changes confidently with measurable guardrails and fast rollbacks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Operations",
+    tags: ["Runbooks", "Evals", "Budgets"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/llm-production-runbooks-2026.jpg",
+    newBadge: true,
+    trending: true
+  }
+);
+
 export const featuredArticles = latestArticles.filter(article => article.featured);
 export const trendingArticles = latestArticles.filter(article => article.trending);
 export const newArticles = latestArticles.filter(article => article.newBadge);
