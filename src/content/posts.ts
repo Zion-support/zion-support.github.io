@@ -120,6 +120,7 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "12 min read",
   },
+ 
   {
     slug: "micro-saas-platform-advantages",
     title: "Why Micro SAAS Platforms Are the Future of Business Software",
@@ -130,6 +131,7 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "9 min read",
   },
+  // Resolved conflict: keep the extended set with readTime for consistency
   {
     slug: "platform-engineering-blueprint-2025",
     title: "A Practical Blueprint for Platform Engineering in 2025",
