@@ -447,6 +447,30 @@ class AdvancedPerformanceOptimizer {
   }
 
   /**
+   * Generate a human-readable performance report
+   */
+  public generateReport(): string {
+    const metrics = this.getMetrics();
+    const recommendations = this.getRecommendations();
+    const lines: string[] = [];
+    lines.push('Performance Report');
+    lines.push('===================');
+    lines.push(`Load Time: ${metrics.loadTime.toFixed(2)} ms`);
+    lines.push(`Render Time: ${metrics.renderTime.toFixed(2)} ms`);
+    lines.push(`Memory Usage: ${metrics.memoryUsage.toFixed(2)} MB`);
+    lines.push(`Bundle Size (est.): ${metrics.bundleSize} KB`);
+    lines.push(`Cache Hit Rate: ${metrics.cacheHitRate.toFixed(2)}%`);
+    lines.push(`Compression Ratio: ${metrics.compressionRatio.toFixed(2)}%`);
+    lines.push(`Image Optimization Ratio: ${metrics.imageOptimizationRatio.toFixed(2)}%`);
+    lines.push(`Code Splitting Ratio: ${metrics.codeSplittingRatio.toFixed(2)}%`);
+    if (recommendations.length > 0) {
+      lines.push('\nRecommendations:');
+      recommendations.forEach((r, i) => lines.push(`${i + 1}. ${r}`));
+    }
+    return lines.join('\n');
+  }
+
+  /**
    * Cleanup observers
    */
   public cleanup(): void {
@@ -459,3 +483,4 @@ class AdvancedPerformanceOptimizer {
 // Export singleton instance
 export const advancedPerformanceOptimizer = new AdvancedPerformanceOptimizer();
 export default AdvancedPerformanceOptimizer;
+export { AdvancedPerformanceOptimizer };
