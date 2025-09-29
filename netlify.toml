@@ -9,12 +9,13 @@
   status = 200
 
 [build]
-  command = "pnpm run build:optimized"
+  command = "pnpm run netlify:build"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
-  NODE_VERSION = "22.16.0"
+  # Use Active LTS for stability on Netlify
+  NODE_VERSION = "20"
   PNPM_VERSION = "10.17.1"
   NETLIFY_USE_PNPM = "true"
   # Disable Next.js auto-detection
@@ -49,11 +50,11 @@
   NPM_CONFIG_PRODUCTION = "false"
 
 [context.deploy-preview]
-  command = "pnpm run build:optimized"
+  command = "pnpm run netlify:build"
   [context.deploy-preview.environment]
     NODE_ENV = "production"
 
 [context.branch-deploy]
-  command = "pnpm run build:optimized"
+  command = "pnpm run netlify:build"
   [context.branch-deploy.environment]
     NODE_ENV = "production"
