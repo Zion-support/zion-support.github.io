@@ -1,0 +1,54 @@
+{
+  "timestamp": "2025-09-29T09:45:01.282Z",
+  "totalSize": 663959,
+  "jsFiles": 18,
+  "cssFiles": 1,
+  "largestJsFiles": [
+    {
+      "name": "assets/js/chunk-BydN_B68.js",
+      "size": 311849
+    },
+    {
+      "name": "assets/js/chunk-B-DRqlIk.js",
+      "size": 99887
+    },
+    {
+      "name": "assets/js/chunk-CtPPjFiw.js",
+      "size": 72276
+    },
+    {
+      "name": "assets/js/chunk-B88Vkp0P.js",
+      "size": 47630
+    },
+    {
+      "name": "assets/js/Home-BCzm6gEe.js",
+      "size": 13999
+    },
+    {
+      "name": "assets/js/Contact--b26CdWO.js",
+      "size": 8873
+    },
+    {
+      "name": "assets/js/EnhancedHome-BUWFXPOI.js",
+      "size": 8834
+    },
+    {
+      "name": "assets/js/About-CP-h_3P0.js",
+      "size": 8360
+    },
+    {
+      "name": "sw-enhanced.js",
+      "size": 7084
+    },
+    {
+      "name": "assets/js/Services-DaT-k4Zy.js",
+      "size": 6964
+    }
+  ],
+  "largestCssFiles": [
+    {
+      "name": "assets/css/main-CC3Iwm5K.css",
+      "size": 27052
+    }
+  ]
+}

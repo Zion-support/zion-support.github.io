@@ -1,0 +1,163 @@
+{
+  "totalSize": 1390159,
+  "totalSizeFormatted": "1.33 MB",
+  "fileCount": 31,
+  "files": [
+    {
+      "path": "assets/js/chunk-BljIJr8J.js",
+      "size": 451358,
+      "sizeFormatted": "440.78 KB"
+    },
+    {
+      "path": "assets/js/chunk-D-p4vVZE.js",
+      "size": 337236,
+      "sizeFormatted": "329.33 KB"
+    },
+    {
+      "path": "assets/js/chunk-DiY-rko-.js",
+      "size": 248640,
+      "sizeFormatted": "242.81 KB"
+    },
+    {
+      "path": "assets/js/chunk-DHd3r1Ze.js",
+      "size": 224625,
+      "sizeFormatted": "219.36 KB"
+    },
+    {
+      "path": "assets/css/main-BrdaYVLl.css",
+      "size": 27109,
+      "sizeFormatted": "26.47 KB"
+    },
+    {
+      "path": "assets/js/Home-DPf4I0Z6.js",
+      "size": 14049,
+      "sizeFormatted": "13.72 KB"
+    },
+    {
+      "path": "assets/js/Contact-CMV60jg_.js",
+      "size": 8920,
+      "sizeFormatted": "8.71 KB"
+    },
+    {
+      "path": "assets/js/EnhancedHome-0uVDw-BL.js",
+      "size": 8890,
+      "sizeFormatted": "8.68 KB"
+    },
+    {
+      "path": "assets/js/About-vxphPwvz.js",
+      "size": 8405,
+      "sizeFormatted": "8.21 KB"
+    },
+    {
+      "path": "sw-enhanced.js",
+      "size": 7084,
+      "sizeFormatted": "6.92 KB"
+    },
+    {
+      "path": "assets/js/Services-CbfYLrNd.js",
+      "size": 7012,
+      "sizeFormatted": "6.85 KB"
+    },
+    {
+      "path": "assets/js/main-CnRTvuSh.js",
+      "size": 6836,
+      "sizeFormatted": "6.68 KB"
+    },
+    {
+      "path": "assets/js/Portfolio-DSY2dc5j.js",
+      "size": 6586,
+      "sizeFormatted": "6.43 KB"
+    },
+    {
+      "path": "offline.html",
+      "size": 6419,
+      "sizeFormatted": "6.27 KB"
+    },
+    {
+      "path": "assets/js/chunk-DZ8LzmDP.js",
+      "size": 6202,
+      "sizeFormatted": "6.06 KB"
+    },
+    {
+      "path": "index.html",
+      "size": 4975,
+      "sizeFormatted": "4.86 KB"
+    },
+    {
+      "path": "assets/js/Blog-Ch0sd7jV.js",
+      "size": 3128,
+      "sizeFormatted": "3.05 KB"
+    },
+    {
+      "path": "sw-performance.js",
+      "size": 2451,
+      "sizeFormatted": "2.39 KB"
+    },
+    {
+      "path": "performance-monitor.js",
+      "size": 2079,
+      "sizeFormatted": "2.03 KB"
+    },
+    {
+      "path": "site.webmanifest",
+      "size": 1902,
+      "sizeFormatted": "1.86 KB"
+    },
+    {
+      "path": "assets/js/NotFound-DLQql-aS.js",
+      "size": 1796,
+      "sizeFormatted": "1.75 KB"
+    },
+    {
+      "path": "assets/js/Analytics-B2Pqz8V0.js",
+      "size": 1106,
+      "sizeFormatted": "1.08 KB"
+    },
+    {
+      "path": "manifest.json",
+      "size": 833,
+      "sizeFormatted": "833 Bytes"
+    },
+    {
+      "path": "sitemap.xml",
+      "size": 764,
+      "sizeFormatted": "764 Bytes"
+    },
+    {
+      "path": "asset-manifest.json",
+      "size": 601,
+      "sizeFormatted": "601 Bytes"
+    },
+    {
+      "path": "sw.js",
+      "size": 598,
+      "sizeFormatted": "598 Bytes"
+    },
+    {
+      "path": "robots.txt",
+      "size": 331,
+      "sizeFormatted": "331 Bytes"
+    },
+    {
+      "path": "badge-72x72.png",
+      "size": 67,
+      "sizeFormatted": "67 Bytes"
+    },
+    {
+      "path": "icon-192x192.png",
+      "size": 67,
+      "sizeFormatted": "67 Bytes"
+    },
+    {
+      "path": "icon-512x512.png",
+      "size": 67,
+      "sizeFormatted": "67 Bytes"
+    },
+    {
+      "path": "_redirects",
+      "size": 23,
+      "sizeFormatted": "23 Bytes"
+    }
+  ],
+  "recommendations": []
+}
