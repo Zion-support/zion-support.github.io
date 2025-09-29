@@ -150,6 +150,16 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
+<<<<<<< HEAD
+          title="New: Agent Blue‑Green + Canaries, Scoped IDs Privacy Analytics"
+          description="Ship agent updates safely and keep analytics signal‑rich without PII risk."
+          ctaText="Explore new content"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "Agent Releases 2026", category: "GenAI", link: "/blog/agent-blue-green-canary-scorecards-2026" },
+            { title: "Privacy‑First Analytics 2026", category: "Observability", link: "/blog/ai-privacy-filters-scoped-ids-2026" },
+            { title: "AI Breach Drills 2026", category: "Security", link: "/blog/ai-breach-drills-2026" }
+=======
           title="New: Guardrails Policy Tests 2026 + Edge Retrieval Blueprint"
           description="Ship fast with measurable guardrails and sub‑100ms hybrid retrieval at the edge."
           ctaText="Explore new content"
@@ -164,6 +174,7 @@ const Home = () => {
             { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
             { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" },
             { title: "Golden Paths ROI 2026", category: "Platform Engineering", link: "/blog/golden-paths-roi-2026" }
+>>>>>>> origin/cursor/create-and-deploy-new-content-745b
           ]}
         />
         <div className="container mx-auto px-6 mt-6">

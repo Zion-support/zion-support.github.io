@@ -10,24 +10,77 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
+    slug: "ai-sre-runbooks-2026",
+    title: "AI SRE Runbooks 2026: Budgeted Actions with Instant Rollback",
+    description: "Design AI-assisted incident runbooks with approvals, budgets, and safe automation under 60s.",
+    category: "SRE",
+=======
     slug: "ai-guardrails-policy-tests-2026",
     title: "AI Guardrails Policy Tests 2026: Ship Fast, Stay Safe",
     description: "Lightweight policy tests, PR gates, and online canaries wired to KPIs that teams actually adopt.",
     category: "AI Strategy",
+>>>>>>> origin/cursor/create-and-deploy-new-content-745b
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "7 min read"
   },
   {
+<<<<<<< HEAD
+    slug: "ai-risk-mitigation-scorecards-2026",
+    title: "AI Risk Mitigation Scorecards 2026: From Policy to Practice",
+    description: "Scorecards with owners, SLAs, and CI policy checks that drive action and outcomes.",
+    category: "AI Governance",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-privacy-telemetry-2026",
+    title: "Edge Privacy Telemetry 2026: Scoped IDs, Local Caches, DP Noise",
+    description: "Keep insights rich and PII risk low with privacy‑first telemetry patterns at the edge.",
+    category: "Observability",
+    publishedAt: "2025-10-14",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-routing-blueprint-2026",
+    title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",
+    description: "Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.",
+    category: "GenAI",
+=======
     slug: "edge-retrieval-blueprint-2026",
     title: "Edge Retrieval Blueprint 2026: Hybrid Search Under 100ms",
     description: "Blend sparse + dense with geo caches and freshness windows for private, real‑time answers at the edge.",
     category: "Edge Computing",
+>>>>>>> origin/cursor/create-and-deploy-new-content-745b
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "8 min read"
   },
   {
+<<<<<<< HEAD
+    slug: "privacy-first-feature-flags-2026",
+    title: "Privacy‑First Feature Flags: Geo, Account, and Scope Budgets",
+    description: "Blueprint for privacy‑aware flags with scoped IDs, DP noise, and instant rollback.",
+    category: "Architecture",
+    publishedAt: "2025-10-13",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
+    slug: "cost-aware-agents-2026",
+    title: "Cost‑Aware Agent Workflows: Tiered Quality Without UX Regressions",
+    description: "Route tools by budget and SLA with traces and fallback behaviors users trust.",
+    category: "AI Operations",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-745b
     slug: "ai-reliable-rag-ops-2026",
     title: "Reliable RAG Ops 2026: Freshness Windows, Drift Alerts, Budgets",
     description: "Keep RAG quality high with TTL windows, drift detectors, and KPI‑tied quality budgets.",

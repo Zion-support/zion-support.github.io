@@ -17,6 +17,13 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+<<<<<<< HEAD
+    id: "agent-blue-green-canary-scorecards-2026",
+    slug: "agent-blue-green-canary-scorecards-2026",
+    title: "Agent Releases 2026: Blue‑Green, Canaries, and Scorecards",
+    description: "A practical playbook for safe agent rollouts with canary budgets, live traces, and rollback paths tied to KPIs.",
+    excerpt: "Ship agent updates confidently with blue‑green, budgeted canaries, and rollbacks.",
+=======
     id: "ai-guardrails-policy-tests-2026",
     slug: "ai-guardrails-policy-tests-2026",
     title: "AI Guardrails Policy Tests 2026: Ship Fast, Stay Safe",
@@ -54,6 +61,7 @@ export const latestArticles: LatestArticle[] = [
     title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
     description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
     excerpt: "Stop ML supply‑chain drift with automated SBOMs, attestations, and CI policy gates.",
+>>>>>>> origin/cursor/create-and-deploy-new-content-745b
     author: "Zion Tech Group Team",
     date: "2025-10-16",
     category: "GenAI",
