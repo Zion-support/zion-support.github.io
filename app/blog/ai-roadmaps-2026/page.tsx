@@ -1,3 +1,51 @@
+import { Link } from 'react-router-dom';
+import React from 'react';
+
+export const metadata = {
+  title: 'AI Roadmaps 2026: What to Build Next and Why',
+  description: 'A pragmatic roadmap for 2026 across CX, ops, and platforms with high-ROI sequencing and metrics.',
+};
+
+export default function AIRoadmaps2026() {
+  return (
+    <div className="animate-fade-in">
+      <div className="text-center mb-12 py-10 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Roadmaps 2026</h1>
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          A pragmatic roadmap for 2026 across customer experience, operations, and platforms. High-ROI bets with
+          clear sequencing, governance, and measurable outcomes.
+        </p>
+        <div className="text-sm text-gray-500 mt-3">September 29, 2025 • 10 min read • Strategy</div>
+      </div>
+
+      <div className="max-w-3xl mx-auto px-4 prose prose-lg">
+        <h2>Executive Summary</h2>
+        <p>
+          Focus 2026 investments on revenue-facing copilots, reliable automation, and platform hardening. Sequence
+          by impact and readiness: start with high-intent workflows, then scale with shared services.
+        </p>
+
+        <h2>Priority Tracks</h2>
+        <ul>
+          <li>Revenue copilots: guided selling, account planning, proposal assist</li>
+          <li>Ops automation: intake triage, reconciliations, exception handling</li>
+          <li>Platform: evals, risk register, observability, cost governance</li>
+        </ul>
+
+        <h2>Milestones & Metrics</h2>
+        <p>
+          Define quarterly milestones with target adoption, cycle-time reduction, quality gates, and cost-per-outcome.
+          Use scorecards for teams to balance speed, reliability, and spend.
+        </p>
+
+        <div className="mt-8">
+          <Link to="/blog" className="text-blue-600 font-semibold">← Back to Blog</Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 import React from 'react';
 
 export const metadata = {
