@@ -114,8 +114,6 @@ const Home = () => {
         </div>
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
-<<<<<<< HEAD
-=======
           variant="info"
           title="🚀 New: AI Governance Blueprint 2025 + Feature Flags at the Edge"
           description="Ship faster with strong guardrails. Learn sub‑100ms global releases and scalable AI governance."
