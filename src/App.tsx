@@ -1,17 +1,44 @@
-import React, { useCallback, useEffect, useMemo, useState, lazy, Suspense } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { AppRouter } from './router';
+import { initializeErrorReporting } from './utils/errorReporting';
+import { initOptimizations } from './utils/buildOptimizations';
+import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+import { accessibilityManager } from './utils/accessibility';
+import { PerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
+import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
+import { analytics } from './utils/analytics';
+import { seoOptimizer } from './utils/seoOptimization';
+import { cacheManager } from './utils/cacheManager';
+import { apiClient } from './utils/apiClient';
+import { notificationManager } from './utils/notificationManager';
+import { userFeedback } from './utils/userFeedbackManager';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import RealTimeMonitor from './components/RealTimeMonitor';
+import { performanceOptimizer } from './utils/performanceOptimizer';
+import { enhancedPerformanceOptimizer } from './utils/enhancedPerformance';
+import { enhancedSecurityManager } from './utils/enhancedSecurity';
+import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
+import { AdvancedPerformanceMonitor, getPerformanceMonitor } from './utils/advancedPerformanceMonitor';
+import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
+import SecurityEnhancer from './utils/securityEnhancer';
+import SystemMetricsDashboard from './components/SystemMetricsDashboard';
+import AdvancedAccessibilityManager from './utils/advancedAccessibilityManager';
+import { AdvancedSecurityManager } from './utils/advancedSecurityManager';
+import EnhancedUXManager from './utils/enhancedUXManager';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAnalytics } from './utils/enhancedAnalytics';
+import { enhancedSEO } from './utils/enhancedSEO';
+import { advancedCacheSystem } from './utils/advancedCacheSystem';
+import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
+import { advancedAutomationSystem } from './utils/advancedAutomationSystem';
+import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+import performanceEnhancer from './utils/performanceEnhancements';
+import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
-import AdvancedSEO from './components/AdvancedSEO';
-import PerformanceTracker from './components/PerformanceTracker';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
-import { analytics } from './utils/analytics';
-import { performanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
-import { seoOptimizer } from './utils/seoOptimization';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
+// import { modernAccessibilityEnhancer } from './utils/modernAccessibilityEnhancer';
+// import { modernPerformanceMonitor } from './utils/modernPerformanceMonitor';
 import { useSEOData } from './components/SEOOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
@@ -20,9 +47,6 @@ import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import RealTimeMonitor from './components/RealTimeMonitor';
-import SystemMetricsDashboard from './components/SystemMetricsDashboard';
 
 // Import enhanced utilities
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
@@ -36,6 +60,9 @@ import { analyticsSystem as enhancedAnalyticsSystem } from './utils/enhancedAnal
 import { performanceAnalytics } from './utils/advancedPerformanceAnalytics';
 import { errorTracker } from './utils/advancedErrorTracker';
 import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
+
+// Import comprehensive systems
+// import enhancedErrorRecovery from './utils/comprehensiveErrorRecovery';
 
 // Import types
 import NotificationSystem, { Notification } from './components/NotificationSystem';
@@ -90,6 +117,7 @@ import { advancedCachingSystem } from './utils/advancedCachingSystem';
 import { advancedUXOptimizer } from './utils/advancedUXOptimizer';
 import { advancedTestingFramework } from './utils/advancedTestingFramework';
 import { advancedI18n } from './utils/advancedI18n';
+>>>>>>> 097b44c55e2d31eda03bffc20c8a0c9e4523d4eb
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -227,7 +255,7 @@ export default function App(): React.JSX.Element {
     enhancedAccessibilityManager.initialize();
     
     // Initialize advanced performance monitor
-    const advancedPerformanceMonitor = AdvancedPerformanceMonitor.getInstance();
+    const advancedPerformanceMonitor = getPerformanceMonitor();
     advancedPerformanceMonitor.updateConfig({
       enableWebVitals: true,
       enableMemoryMonitoring: true,
@@ -247,8 +275,8 @@ export default function App(): React.JSX.Element {
     advancedPerformanceMonitor.startMonitoring();
     
     // Initialize new advanced performance optimizer
-    import('./utils/performanceOptimizer').then(({ advancedPerformanceOptimizer }) => {
-      advancedPerformanceOptimizer.startMonitoring();
+    import('./utils/performanceOptimizer').then(({ performanceOptimizer }) => {
+      performanceOptimizer.startMonitoring();
       console.log('🚀 Advanced Performance Optimizer initialized');
     }).catch((error) => {
       console.error('❌ Failed to initialize advanced performance optimizer:', error);
@@ -337,7 +365,7 @@ export default function App(): React.JSX.Element {
     });
     
     // Initialize advanced performance optimizer
-    advancedPerformanceOptimizer.addResourceHints();
+    performanceOptimizer.addResourceHints();
     
     // Initialize new enhancement utilities
     console.log('Initializing performance enhancements...');
@@ -352,8 +380,8 @@ export default function App(): React.JSX.Element {
     console.log('Initializing accessibility enhancements...');
     // const accessibilityMetrics = accessibilityEnhancer.getAccessibilityMetrics();
     // console.log('Accessibility Metrics:', accessibilityMetrics);
-    advancedPerformanceOptimizer.optimizeCriticalCSS();
-    advancedPerformanceOptimizer.setupWebVitalsMonitoring();
+    performanceOptimizer.optimizeCriticalCSS();
+    performanceOptimizer.setupWebVitalsMonitoring();
     
     // Register service worker with optimized configuration
     import('./utils/serviceWorker').then(({ serviceWorkerManager }) => {
@@ -500,7 +528,7 @@ export default function App(): React.JSX.Element {
       memoryMonitor.stopMonitoring();
       
       // Cleanup new utilities
-      const advancedPerformanceMonitor = AdvancedPerformanceMonitor.getInstance();
+      const advancedPerformanceMonitor = getPerformanceMonitor();
       advancedPerformanceMonitor.stopMonitoring();
       
       const accessibilityEnhancer = AccessibilityEnhancer.getInstance();
@@ -558,483 +586,6 @@ export default function App(): React.JSX.Element {
         isVisible={showPerformanceOptimizer}
         onClose={() => setShowPerformanceOptimizer(false)}
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <AppRouter />
-        
-        {/* System Dashboard - Toggle with Ctrl+Shift+D */}
-        {showSystemDashboard && (
-          <div 
-            className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="system-dashboard-title"
-          >
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold">System Dashboard</h2>
-                <button
-                  onClick={() => setShowSystemDashboard(false)}
-                  className="text-gray-500 hover:text-gray-700 text-2xl"
-                >
-                  ✕
-                </button>
-              </div>
-              <LazyEnhancedSystemDashboard />
-            </div>
-          </div>
-        )}
-
-        {/* Performance Optimizer - Toggle with Ctrl+Shift+P */}
-        {showPerformanceOptimizer && (
-          <div 
-            className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="performance-optimizer-title"
-          >
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold">Performance Optimizer</h2>
-                <button
-                  onClick={() => setShowPerformanceOptimizer(false)}
-                  className="text-gray-500 hover:text-gray-700 text-2xl"
-                >
-                  ✕
-                </button>
-              </div>
-              <PerformanceOptimizer>
-                <div>Performance optimization in progress...</div>
-              </PerformanceOptimizer>
-            </div>
-          </div>
-        )}
-
-        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
-        {showPerformanceMonitor && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold">Performance Monitor</h2>
-                <button
-                  onClick={() => setShowPerformanceMonitor(false)}
-                  className="text-gray-500 hover:text-gray-700 text-2xl"
-                >
-                  ✕
-                </button>
-              </div>
-              <PerformanceMonitor enabled={true} showDetails={true} />
-            </div>
-          </div>
-        )}
-
-        <AIPerformanceDashboard
-          isVisible={showAIDashboard}
-          onClose={() => setShowAIDashboard(false)}
-        />
-
-        {/* Real-time Metrics Display */}
-        {showRealTimeMetrics && (
-          <div className="fixed top-4 right-4 z-50 bg-black bg-opacity-90 text-white p-4 rounded-lg shadow-lg min-w-[300px]">
-            <div className="flex justify-between items-center mb-3">
-              <h3 className="text-lg font-bold">Real-time Metrics</h3>
-              <button
-                onClick={() => setShowRealTimeMetrics(false)}
-                className="text-gray-300 hover:text-white text-xl"
-              >
-                ✕
-              </button>
-            </div>
-            <div className="space-y-2 text-sm">
-              <div className="flex justify-between">
-                <span>Memory Usage:</span>
-                <span className="text-green-400">{Math.round(((performance as { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize || 0) / 1024 / 1024)} MB</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Render Time:</span>
-                <span className="text-blue-400">{Math.round(performance.now())} ms</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Network Latency:</span>
-                <span className="text-yellow-400">0 ms</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Errors:</span>
-                <span className="text-red-400">0</span>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Real-Time Performance Monitor */}
-        <RealTimePerformanceMonitor
-          isVisible={showRealTimeMonitor}
-          onClose={() => setShowRealTimeMonitor(false)}
-        />
-
-        {/* Website Enhancements */}
-        <WebsiteEnhancements 
-          isVisible={showWebsiteEnhancements} 
-          onClose={() => setShowWebsiteEnhancements(false)} 
-        />
-
-        {/* Performance Enhancer */}
-        <PerformanceEnhancer 
-          enabled={true}
-          showMetrics={showPerformanceEnhancer}
-          onMetricsUpdate={(metrics) => {
-            console.log('Performance metrics updated:', metrics);
-          }}
-        />
-
-        {/* Enhanced Performance Monitor */}
-        <EnhancedPerformanceMonitor />
-
-        {/* Accessibility Enhancer */}
-        <AccessibilityEnhancer />
-
-        {/* Advanced Performance Monitor */}
-        <AdvancedPerformanceMonitor />
-
-        {/* Enhanced SEO */}
-        <EnhancedSEO 
-          title="Zion Tech Group - Advanced AI and IT Solutions"
-          description="Leading provider of AI-powered IT solutions, cloud services, cybersecurity, and digital transformation services."
-          keywords={['AI solutions', 'IT consulting', 'cloud services', 'cybersecurity', 'digital transformation']}
-        />
-
-        {/* Comprehensive Performance Monitor */}
-        {/* ComprehensivePerformanceMonitor - Temporarily disabled */}
-        {/* <ComprehensivePerformanceMonitor 
-          isVisible={showComprehensivePerformance} 
-          onClose={() => setShowComprehensivePerformance(false)} 
-        /> */}
-
-        {/* Advanced SEO Optimizer - Temporarily disabled */}
-        {/* <AdvancedSEOOptimizer 
-          isVisible={showAdvancedSEO} 
-          onClose={() => setShowAdvancedSEO(false)} 
-        /> */}
-
-        {/* Performance Tracker */}
-        <PerformanceTracker />
-
-        {/* System Health Dashboard */}
-        <SystemHealthDashboard
-          isVisible={showSystemHealth}
-          onClose={() => setShowSystemHealth(false)}
-        />
-
-        {/* New Components */}
-        <NotificationSystem
-          notifications={notifications}
-          onRemove={(id) => setNotifications(prev => prev.filter(n => n.id !== id))}
-        />
-        
-        <Suspense fallback={<ModernLoadingSpinner />}>
-          <KeyboardShortcutsHelp
-            isVisible={showKeyboardHelp}
-            onClose={() => setShowKeyboardHelp(false)}
-          />
-        </Suspense>
-
-        <Suspense fallback={<ModernLoadingSpinner />}>
-          <PerformanceWidget
-            isVisible={showPerformanceWidget}
-            onClose={() => setShowPerformanceWidget(false)}
-          />
-        </Suspense>
-
-        {showPerformanceWidget && (
-          <div className="fixed bottom-4 left-4 z-30">
-            <PerformanceDashboard />
-          </div>
-        )}
-
-        <Suspense fallback={<ModernLoadingSpinner />}>
-          <CommandPalette
-            isVisible={showCommandPalette}
-            onClose={() => setShowCommandPalette(false)}
-            commands={[
-              {
-                id: 'home',
-                title: 'Go to Home',
-                description: 'Navigate to the home page',
-                category: 'Navigation',
-                action: () => navigate('/'),
-                shortcut: 'Ctrl+H'
-              },
-              {
-                id: 'about',
-                title: 'Go to About',
-                description: 'Navigate to the about page',
-                category: 'Navigation',
-                action: () => navigate('/about'),
-                shortcut: 'Ctrl+A'
-              },
-              {
-                id: 'services',
-                title: 'Go to Services',
-                description: 'Navigate to the services page',
-                category: 'Navigation',
-                action: () => navigate('/services'),
-                shortcut: 'Ctrl+S'
-              },
-              {
-                id: 'contact',
-                title: 'Go to Contact',
-                description: 'Navigate to the contact page',
-                category: 'Navigation',
-                action: () => navigate('/contact'),
-                shortcut: 'Ctrl+C'
-              }
-            ]}
-          />
-        </Suspense>
-
-        {showAdvancedMonitoring && (
-          <Suspense fallback={<ModernLoadingSpinner />}>
-            <AdvancedMonitoringDashboard
-              showRealTime={true}
-              refreshInterval={5000}
-            />
-          </Suspense>
-        )}
-
-        {showRealTimePerformance && (
-          <Suspense fallback={<ModernLoadingSpinner />}>
-            <RealTimePerformanceMonitor
-              isVisible={showRealTimePerformance}
-              onClose={() => setShowRealTimePerformance(false)}
-            />
-          </Suspense>
-        )}
-
-        {showEnhancedCommandPalette && (
-          <Suspense fallback={<ModernLoadingSpinner />}>
-            <EnhancedCommandPalette
-              isVisible={showEnhancedCommandPalette}
-              onClose={() => setShowEnhancedCommandPalette(false)}
-            />
-          </Suspense>
-        )}
-
-        {showComprehensiveDashboard && (
-          <Suspense fallback={<ModernLoadingSpinner />}>
-            <ComprehensivePerformanceDashboard />
-          </Suspense>
-        )}
-
-        {showComprehensiveMonitoring && (
-          <Suspense fallback={<ModernLoadingSpinner />}>
-            <ComprehensiveMonitoringDashboard />
-          </Suspense>
-        )}
-
-        {/* Performance Optimization Panel */}
-        <Suspense fallback={null}>
-          <PerformanceOptimizationPanel />
-        </Suspense>
-
-        {/* Error Recovery Dashboard */}
-        <Suspense fallback={null}>
-          <ErrorRecoveryDashboard />
-        </Suspense>
-
-        {/* System Status Indicator */}
-        {showSystemStatus && (
-          <Suspense fallback={<ModernLoadingSpinner />}>
-            <SystemStatusIndicator
-              refreshInterval={30000}
-              showDetails={true}
-            />
-          </Suspense>
-        )}
-
-        {/* Enhanced Notification System */}
-        {showEnhancedNotifications && (
-          <Suspense fallback={<ModernLoadingSpinner />}>
-            <EnhancedNotificationSystem
-              notifications={enhancedNotifications}
-              onRemove={(id: string) => {
-                setEnhancedNotifications(prev => prev.filter(n => n.id !== id));
-              }}
-              maxNotifications={5}
-              position="top-right"
-              showSoundToggle={true}
-              showHistoryToggle={true}
-            />
-          </Suspense>
-        )}
-
-        {/* Keyboard Shortcuts Manager */}
-        {showKeyboardShortcutsManager && (
-          <Suspense fallback={<ModernLoadingSpinner />}>
-            <KeyboardShortcutsManager
-              shortcuts={[
-                {
-                  id: 'toggle-system-dashboard',
-                  keys: ['ctrl', 'shift', 'd'],
-                  description: 'Toggle System Dashboard',
-                  category: 'system',
-                  action: () => setShowSystemDashboard(!showSystemDashboard),
-                  enabled: true,
-                  global: true
-                },
-                {
-                  id: 'toggle-system-health',
-                  keys: ['ctrl', 'shift', 'h'],
-                  description: 'Toggle System Health Dashboard',
-                  category: 'system',
-                  action: () => setShowSystemHealth(!showSystemHealth),
-                  enabled: true,
-                  global: true
-                },
-                {
-                  id: 'toggle-performance-monitor',
-                  keys: ['ctrl', 'shift', 'r'],
-                  description: 'Toggle Real-Time Performance Monitor',
-                  category: 'tools',
-                  action: () => setShowRealTimePerformance(!showRealTimePerformance),
-                  enabled: true,
-                  global: true
-                },
-                {
-                  id: 'toggle-command-palette',
-                  keys: ['ctrl', 'k'],
-                  description: 'Toggle Enhanced Command Palette',
-                  category: 'navigation',
-                  action: () => setShowEnhancedCommandPalette(!showEnhancedCommandPalette),
-                  enabled: true,
-                  global: true
-                },
-                {
-                  id: 'toggle-theme',
-                  keys: ['ctrl', 'shift', 't'],
-                  description: 'Toggle Theme (Light/Dark)',
-                  category: 'view',
-                  action: () => setIsDarkMode(!isDarkMode),
-                  enabled: true,
-                  global: true
-                },
-                {
-                  id: 'toggle-system-status',
-                  keys: ['ctrl', 'shift', 's'],
-                  description: 'Toggle System Status Indicator',
-                  category: 'system',
-                  action: () => setShowSystemStatus(!showSystemStatus),
-                  enabled: true,
-                  global: true
-                },
-                {
-                  id: 'toggle-comprehensive-monitoring',
-                  keys: ['ctrl', 'shift', 'm'],
-                  description: 'Toggle Comprehensive Monitoring Dashboard',
-                  category: 'monitoring',
-                  action: () => setShowComprehensiveMonitoring(!showComprehensiveMonitoring),
-                  enabled: true,
-                  global: true
-                }
-              ]}
-              onShortcutTriggered={(shortcut) => {
-                console.log('Shortcut triggered:', shortcut.description);
-              }}
-              showHelpPanel={true}
-              enableGlobalShortcuts={true}
-            />
-          </Suspense>
-        )}
-        <KeyboardShortcutsHelp
-          isVisible={showKeyboardHelp}
-          onClose={() => setShowKeyboardHelp(false)}
-        />
-        
-        <CommandPalette
-          isVisible={showCommandPalette}
-          onClose={() => setShowCommandPalette(false)}
-          commands={commandPaletteCommands}
-        />
-
-        {/* Theme Toggle Button */}
-        <button
-          onClick={() => setIsDarkMode(!isDarkMode)}
-          className="fixed bottom-4 right-4 z-40 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="Toggle Theme (Ctrl+Shift+T)"
-        >
-          {isDarkMode ? '☀️' : '🌙'}
-        </button>
-
-        {/* Keyboard Shortcuts Help Button */}
-        <button
-          onClick={() => setShowKeyboardHelp(true)}
-          className="fixed bottom-4 right-20 z-40 bg-gray-600 hover:bg-gray-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="Keyboard Shortcuts (Ctrl+/)"
-        >
-          ⌨️
-        </button>
-
-        {/* Command Palette Button */}
-        <button
-          onClick={() => setShowCommandPalette(true)}
-          className="fixed bottom-4 right-36 z-40 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="Command Palette (Ctrl+K)"
-        >
-          ⌘
-        </button>
-
-        {/* Real-Time Monitor Button */}
-        <button
-          onClick={() => setShowRealTimeMonitor(true)}
-          className="fixed bottom-4 right-52 z-40 bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="Real-Time Monitor (Ctrl+Shift+R)"
-        >
-          📊
-        </button>
-
-        {/* System Health Button */}
-        <button
-          onClick={() => setShowSystemHealth(true)}
-          className="fixed bottom-4 right-68 z-40 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="System Health (Ctrl+Shift+H)"
-        >
-          🏥
-        </button>
-
-        {/* Performance Enhancer Button */}
-        <button
-          onClick={() => setShowPerformanceEnhancer(!showPerformanceEnhancer)}
-          className="fixed bottom-4 right-84 z-40 bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="Performance Enhancer (Ctrl+Shift+E)"
-        >
-          ⚡
-        </button>
-
-        {/* Accessibility Enhancer Button */}
-        <button
-          onClick={() => setShowAccessibilityEnhancer(!showAccessibilityEnhancer)}
-          className="fixed bottom-4 right-100 z-40 bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
-          title="Accessibility Enhancer (Ctrl+Shift+X)"
-        >
-          ♿
-        </button>
-
-        {/* Keyboard Shortcuts Help Panel */}
-        <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
-          <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
-          <div>Ctrl+Shift+D: System Dashboard</div>
-          <div>Ctrl+Shift+P: Performance Optimizer</div>
-          <div>Ctrl+Shift+M: Performance Monitor</div>
-          <div>Ctrl+Shift+A: AI Dashboard</div>
-          <div>Ctrl+Shift+S: SEO Optimizer</div>
-          <div>Ctrl+Shift+T: Toggle Theme</div>
-          <div>Ctrl+Shift+R: Real-Time Monitor</div>
-          <div>Ctrl+Shift+H: System Health</div>
-          <div>Ctrl+Shift+E: Performance Enhancer</div>
-          <div>Ctrl+Shift+X: Accessibility Enhancer</div>
-          <div>Ctrl+Shift+K: Keyboard Help</div>
-          <div>Ctrl+K: Command Palette</div>
-          <div>Escape: Close All</div>
-        </div>
-      </div>
     </EnhancedErrorBoundary>
   );
 }
