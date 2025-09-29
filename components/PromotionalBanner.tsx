@@ -287,46 +287,35 @@ export const AIRevolutionBanner = () => (
   />
 );
 
-export const AIEdgeComputingBanner = () => (
+export const AIAgentsEnterpriseBanner = () => (
   <PromotionalBanner
-    message="⚡ NEW: AI Edge Computing 2025 - Sub-50ms Response Times, 90% Bandwidth Reduction, Real-Time Intelligence"
-    ctaText="Read Article"
-    ctaLink="/blog/ai-edge-computing-2025"
-    backgroundColor="bg-gradient-to-r from-cyan-600 to-teal-600"
+    message="🤖 New Guide: AI Agents in the Enterprise - 2025 Adoption Playbook with Proven ROI Strategies"
+    ctaText="Read Playbook"
+    ctaLink="/blog/ai-agents-in-the-enterprise-2025"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const TechCorpSuccessBanner = () => (
+  <PromotionalBanner
+    message="🏆 New Case Study: TechCorp Achieved 90% Efficiency Gain & $500K Annual Savings with AI Transformation"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/techcorp-ai-transformation"
+    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
     autoHide={true}
     hideAfter={22}
   />
 );
 
-export const AICybersecurityBanner = () => (
+export const NewContentShowcaseBanner = () => (
   <PromotionalBanner
-    message="🛡️ BREAKING: AI Cybersecurity 2025 - 99.7% Threat Detection, Zero-Trust Architecture, Autonomous Response"
-    ctaText="Explore Security AI"
-    ctaLink="/blog/ai-cybersecurity-2025"
-    backgroundColor="bg-gradient-to-r from-red-600 to-orange-600"
-    autoHide={true}
-    hideAfter={25}
-  />
-);
-
-export const AIFinanceAutomationBanner = () => (
-  <PromotionalBanner
-    message="💰 SUCCESS STORY: AI Finance Automation - 95% Process Reduction, $3M Annual Savings, 99.9% Accuracy"
-    ctaText="View Case Study"
-    ctaLink="/case-studies/ai-finance-automation"
-    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
-    autoHide={true}
-    hideAfter={25}
-  />
-);
-
-export const LatestContentBanner = () => (
-  <PromotionalBanner
-    message="🔥 FRESH CONTENT: Edge Computing, Cybersecurity, Finance Automation - Latest AI Innovations & Success Stories"
-    ctaText="Browse All Content"
+    message="📚 Fresh Content Alert: AI Revolution Guide, Enterprise AI Agents Playbook & TechCorp Success Story"
+    ctaText="Explore New Content"
     ctaLink="/blog"
-    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
     autoHide={true}
-    hideAfter={20}
+    hideAfter={25}
   />
 );

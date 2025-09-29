@@ -14,10 +14,8 @@ import {
   RetailSuccessBanner,
   AIContentShowcaseBanner,
   AIRevolutionBanner,
-  AIEdgeComputingBanner,
-  AICybersecurityBanner,
-  AIFinanceAutomationBanner,
-  LatestContentBanner
+  AIAgentsEnterpriseBanner,
+  NewContentShowcaseBanner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
 
@@ -31,10 +29,9 @@ export default function HomePage() {
   return (
     <div className="animate-fade-in">
       {/* Promotional Banners */}
-      <LatestContentBanner />
-      <AIEdgeComputingBanner />
-      <AICybersecurityBanner />
-      <AIFinanceAutomationBanner />
+      <NewContentShowcaseBanner />
+      <AIAgentsEnterpriseBanner />
+      <TechCorpSuccessBanner />
       <AIContentShowcaseBanner />
       <CustomerServiceAIBanner />
       <HealthcareAIBanner />
