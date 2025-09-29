@@ -112,22 +112,22 @@ const Home = () => {
         <LatestContentBanner 
           className="border-b border-white/10" 
           variant="info"
-          title="New: AI Platform Engineering, Serverless Cost Playbook, FinOps Guardrails"
-          description="Fresh articles on platform ROI, cutting serverless costs, and practical FinOps guardrails."
+          title="New: AI Risk Mitigation, Privacy‑Preserving Agents, KPI‑Linked Policy Tests"
+          description="Fresh guides on policy gates, private agents, and KPI‑linked CI tests."
           ctaText="Read now"
           ctaLink="/blog"
         />
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="Fresh: Platform Engineering 2025, Serverless Inference Costs, Cloud FinOps"
-          description="Outcome‑linked platforms, cost‑efficient inference, and guardrails that reduce waste."
+          title="Fresh: Risk Mitigation 2026, Privacy‑Preserving Agents, KPI Policy Tests"
+          description="Guardrails wired to KPIs, privacy‑first agent design, and CI tests teams adopt."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Platform Engineering 2025", category: "Platform", link: "/blog/ai-platform-engineering-2025" },
-            { title: "Serverless Cost Playbook", category: "GenAI", link: "/blog/serverless-inference-cost-playbook-2025" },
-            { title: "Cloud FinOps Guardrails", category: "Cloud", link: "/blog/cloud-finops-guardrails-2025" },
+            { title: "AI Risk Mitigation Playbook 2026", category: "AI Governance", link: "/blog/ai-risk-mitigation-playbook-2026" },
+            { title: "Privacy‑Preserving Agents", category: "AI Security", link: "/blog/privacy-preserving-agents-2026" },
+            { title: "KPI‑Linked Policy Tests", category: "Engineering", link: "/blog/kpi-linked-policy-tests-2025" },
           ]}
         />
         <div className="container mx-auto px-6 mt-6">

@@ -281,7 +281,6 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
   },
   {
-<<<<<<< HEAD
     slug: "ai-risk-register-outcomes-2025",
     title: "AI Risk Register That Drives Outcomes: Owners, SLAs, and Policy Tests",
     description: "Make risk programs actionable with owned mitigations, CI policy checks, and measurable SLAs.",
@@ -289,76 +288,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read"
-=======
-    slug: "ai-workflow-automation-2025-guide",
-    title: "The Complete Guide to AI Workflow Automation in 2025",
-    description:
-      "Discover how AI workflow automation is revolutionizing business operations. Learn implementation strategies, benefits, and real-world case studies.",
-    category: "AI & Automation",
-    publishedAt: "2025-01-17",
-    featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "genai-eval-systems",
-    title: "Shipping with Confidence: Evaluation Systems for GenAI Apps",
-    description:
-      "Offline + online evals, policy tests, and guardrails to keep quality high as you scale.",
-    category: "GenAI",
-    publishedAt: "2025-09-26",
-    featured: false,
-    readTime: "7 min read",
-  },
-  {
-    slug: "opentelemetry-tracing-primer",
-    title: "OpenTelemetry Tracing That Engineers Actually Use",
-    description:
-      "Sampling strategies, semantic conventions, and dashboards that shrink MTTR for complex stacks.",
-    category: "Observability",
-    publishedAt: "2025-09-26",
-    featured: false,
-    readTime: "8 min read",
-  },
-  {
-    slug: "ai-virtual-assistant-best-practices",
-    title: "Best Practices for Implementing AI Virtual Assistants in 2025",
-    description:
-      "Learn how to successfully implement AI virtual assistants in your business. Discover strategies for training, deployment, and optimization.",
-    category: "AI & Automation",
-    publishedAt: "2025-01-15",
-    featured: true,
-    readTime: "10 min read",
-  },
-  {
-    slug: "data-analytics-ai-transformation",
-    title: "How AI is Transforming Data Analytics in 2025",
-    description:
-      "Explore the revolutionary impact of AI on data analytics. Learn about predictive analytics, automated insights, and real-time decision making.",
-    category: "Data Analytics",
-    publishedAt: "2025-01-12",
-    featured: false,
-    readTime: "12 min read",
-  },
-  {
-    slug: "micro-saas-platform-advantages",
-    title: "Why Micro SAAS Platforms Are the Future of Business Software",
-    description:
-      "Discover the advantages of micro SAAS platforms and how they're transforming how businesses consume and implement software solutions.",
-    category: "Technology",
-    publishedAt: "2025-01-10",
-    featured: false,
-    readTime: "9 min read",
-  },
-  {
-    slug: "platform-engineering-blueprint-2025",
-    title: "A Practical Blueprint for Platform Engineering in 2025",
-    description:
-      "Capabilities, golden paths, and scorecards to accelerate delivery without sacrificing autonomy.",
-    category: "Platform Engineering",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "8 min read",
->>>>>>> origin/feat/add-sept-content-and-home-promo
   },
   {
     slug: "zero-regret-rollouts-edge-flags-2025",
@@ -376,8 +305,7 @@ export const posts: BlogPost[] = [
     category: "GenAI",
     publishedAt: "2025-09-29",
     featured: true,
-<<<<<<< HEAD
-    readTime: "7 min read"
+    readTime: "7 min read",
   },
   {
     slug: "llm-policy-testing-2025",
@@ -385,8 +313,7 @@ export const posts: BlogPost[] = [
     description: "Automate governance with lightweight policy tests on every PR and release train.",
     category: "AI Governance",
     publishedAt: "2025-10-08",
-=======
-    readTime: "7 min read",
+    readTime: "7 min read"
   },
   {
     slug: "ai-roadmaps",
@@ -488,17 +415,7 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "8 min read",
   },
-  {
-    slug: "ai-powered-business-automation-2025",
-    title: "AI-Powered Business Automation: The Complete 2025 Guide",
-    description:
-      "Transform your business operations with cutting-edge AI automation. Learn implementation strategies, ROI calculations, and real-world success stories.",
-    category: "AI & Automation",
-    publishedAt: "2025-01-21",
->>>>>>> origin/feat/add-sept-content-and-home-promo
-    featured: true,
-    readTime: "6 min read"
-  },
+  // removed conflicting branch entries
   {
     slug: "finops-scorecards-2025",
     title: "FinOps Scorecards: Guardrails Engineers Actually Use",
@@ -515,30 +432,6 @@ export const posts: BlogPost[] = [
     category: "GenAI",
     publishedAt: "2025-10-08",
     featured: true,
-<<<<<<< HEAD
     readTime: "9 min read"
-=======
-    readTime: "15 min read",
-  },
-  {
-    slug: "micro-saas-platform-architecture",
-    title: "Building Scalable Micro SAAS Platforms: Architecture Patterns and Best Practices",
-    description:
-      "Learn how to design and implement micro SAAS platforms that can scale to millions of users while maintaining performance and reliability.",
-    category: "Platform Engineering",
-    publishedAt: "2025-01-21",
-    featured: false,
-    readTime: "11 min read",
-  },
-  {
-    slug: "ai-ethics-responsible-deployment",
-    title: "AI Ethics and Responsible Deployment: Building Trust in AI Systems",
-    description:
-      "Essential guidelines for deploying AI systems responsibly, ensuring fairness, transparency, and accountability in your AI initiatives.",
-    category: "AI Governance",
-    publishedAt: "2025-01-21",
-    featured: false,
-    readTime: "9 min read",
->>>>>>> origin/feat/add-sept-content-and-home-promo
   }
 ];
