@@ -136,20 +136,16 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Reliable RAG Ops, Platform KPIs, AI Incident Budgets"
-          description="Keep RAG fresh, prove platform ROI, and contain incidents under 60s—safely."
+          title="New: AI Risk Budgets, Privacy‑First Flags, Reliable Agent Actions"
+          description="Ship automation safely, roll out globally with privacy, and make agents reliable."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
+            { title: "AI Risk Budgets 2025", category: "AI Governance", link: "/blog/ai-risk-budgets-2025" },
+            { title: "Privacy‑First Feature Flags 2026", category: "Architecture", link: "/blog/privacy-first-feature-flags-2026" },
+            { title: "Reliable Agent Actions 2026", category: "GenAI", link: "/blog/reliable-agent-actions-2026" },
             { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
-            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" },
-            { title: "Golden Paths ROI 2026", category: "Platform Engineering", link: "/blog/golden-paths-roi-2026" },
-            { title: "Reliable RAG Ops 2026", category: "GenAI", link: "/blog/reliable-rag-ops-2026" },
-            { title: "Platform KPIs 2026", category: "Platform Engineering", link: "/blog/platform-kpis-2026" },
-            { title: "AI Incident Budgets 2026", category: "Security", link: "/blog/ai-incident-budgets-2026" },
-            { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
-            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" },
-            { title: "Golden Paths ROI 2026", category: "Platform Engineering", link: "/blog/golden-paths-roi-2026" }
+            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
