@@ -351,7 +351,23 @@ class AdvancedPerformanceOptimizer {
    */
   private async loadComponent(componentName: string): Promise<void> {
     try {
-      const module = await import(`../components/${componentName}`);
+      // Use Vite's import.meta.glob for safe dynamic imports with explicit extensions
+      const modules = import.meta.glob('../components/**/*.{tsx,ts,jsx,js}');
+      const possiblePaths = [
+        `../components/${componentName}.tsx`,
+        `../components/${componentName}.ts`,
+        `../components/${componentName}.jsx`,
+        `../components/${componentName}.js`,
+        `../components/${componentName}/index.tsx`,
+        `../components/${componentName}/index.ts`,
+        `../components/${componentName}/index.jsx`,
+        `../components/${componentName}/index.js`,
+      ];
+      const loader = possiblePaths.map((p) => modules[p] as (() => Promise<unknown>) | undefined).find(Boolean);
+      if (!loader) {
+        throw new Error(`Component path not found for ${componentName}`);
+      }
+      const module = await loader();
       // Component loaded successfully
       console.log(`Component ${componentName} loaded`);
     } catch (error) {
