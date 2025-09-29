@@ -9,6 +9,33 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+      id: "ai-reliability-scorecards",
+      title: "AI Reliability Scorecards: What to Track Weekly",
+      summary:
+      "Outcome-linked metrics, eval pass rates, and incident burndown that keep quality high.",
+      category: "GenAI",
+      date: "2025-09-30",
+      readMinutes: 5,
+  },
+  {
+      id: "rag-quality-playbook-2025",
+      title: "RAG Quality Playbook 2025: Freshness, Grounding, and Evals",
+      summary:
+      "Combat staleness, leakage, and hallucinations with practical retrieval and eval patterns.",
+      category: "Architecture",
+      date: "2025-09-30",
+      readMinutes: 6,
+  },
+  {
+      id: "edge-llm-latency-budgeting",
+      title: "Edge LLMs: A Practical Guide to Sub‑100ms Latency Budgets",
+      summary:
+      "Where the milliseconds go and how to claw them back across client, edge, and model.",
+      category: "Edge Computing",
+      date: "2025-09-30",
+      readMinutes: 4,
+  },
+  {
       id: "serverless-warm-pools-playbook",
       title: "Serverless Warm Pools: Cut Cold Starts, Not Corners",
       summary:
