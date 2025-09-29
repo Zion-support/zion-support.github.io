@@ -135,12 +135,42 @@ const Home = () => {
         />
         <NewContentPromoBanner 
           className="border-b border-white/10" 
+<<<<<<< HEAD
+          variant="premium" 
+          title="New: AI Incident Command Center 2026 + Edge Privacy Playbooks"
+          description="Contain incidents in <60s with budgeted actions and ship privacy‑first analytics without PII."
+          ctaText="Explore new content"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "AI Incident Command Center 2026", category: "Security", link: "/blog/ai-incident-command-center-2026" },
+            { title: "Edge Privacy Playbooks 2026", category: "Edge Computing", link: "/blog/edge-privacy-playbooks-2026" },
+            { title: "AI SRE Blueprints 2026", category: "AI Operations", link: "/blog/ai-sre-blueprints-2026" }
+          ]}
+=======
           variant="premium"
+>>>>>>> cursor/create-and-deploy-new-content-6afb
         />
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
         </div>
         
+<<<<<<< HEAD
+        {/* New Comprehensive Promotional Banner */}
+        <div className="container mx-auto px-6 mt-6">
+          <ComprehensivePromoBanner variant="hero" showCount={4} />
+        </div>
+        
+        {/* New Articles Promotional Banner */}
+        <div className="container mx-auto px-6 mt-6">
+          <NewArticlesPromoBanner variant="premium" showCount={3} />
+        </div>
+        
+        {/* New Services Promotional Banner */}
+        <div className="container mx-auto px-6 mt-6">
+          <NewServicesPromoBanner variant="showcase" showCount={3} featuredOnly={true} />
+        </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6afb
         
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
@@ -185,41 +215,6 @@ const Home = () => {
               Transform your business with revolutionary AI solutions that self-heal, optimize, and scale automatically. 
               Join 500+ companies achieving unprecedented results!
             </p>
-
-            {/* New Content Announcement */}
-            <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 rounded-xl p-6 mb-8 animate-fade-in">
-              <div className="flex items-center justify-center gap-3 mb-3">
-                <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />
-                <span className="text-lg font-bold text-blue-400">🔥 BREAKTHROUGH CONTENT ALERT</span>
-                <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />
-              </div>
-              <p className="text-white text-lg font-semibold mb-2">
-                📚 Just Published: 3 Revolutionary Articles on AI Autonomous Infrastructure, Quantum-AI Hybrid Computing & AI Content Automation
-              </p>
-              <p className="text-zion-slate-light text-sm mb-4">
-                Discover breakthrough insights on self-healing systems, quantum computing applications, and content automation that scales production 10x.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link
-                  to="/blog"
-                  className="bg-blue-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-600 transition-colors text-center"
-                >
-                  Read Latest Articles
-                </Link>
-                <Link
-                  to="/case-studies"
-                  className="border border-blue-400 text-blue-400 px-6 py-2 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-colors text-center"
-                >
-                  View Success Stories
-                </Link>
-              </div>
-              <div className="mt-4 flex flex-wrap gap-2 justify-center">
-                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">AI Infrastructure</span>
-                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">Quantum Computing</span>
-                <span className="bg-green-100/20 text-green-200 px-3 py-1 rounded-full text-xs font-medium border border-green-300/20">Content Automation</span>
-                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">Case Studies</span>
-              </div>
-            </div>
 
             {/* Special Promotion Banner */}
             <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-xl p-6 mb-8 animate-fade-in">
@@ -868,12 +863,7 @@ const Home = () => {
         <section className="py-20 bg-gradient-to-r from-emerald-50 to-teal-50 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-100/20 to-teal-100/20"></div>
           <div className="container mx-auto px-6 relative z-10">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest AI Services</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Discover our newest AI-powered solutions designed to accelerate your digital transformation.
-              </p>
-            </div>
+            <NewServicesPromoBanner variant="premium" showCount={3} featuredOnly={true} />
           </div>
         </section>
 
@@ -884,12 +874,7 @@ const Home = () => {
         <section className="py-20 bg-gradient-to-r from-purple-50 to-indigo-50 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-100/20 to-indigo-100/20"></div>
           <div className="container mx-auto px-6 relative z-10">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Articles & Insights</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Stay ahead with our latest AI insights, technical guides, and industry best practices.
-              </p>
-            </div>
+            <NewArticlesPromoBanner variant="featured" showCount={4} autoRotate={true} />
           </div>
         </section>
 
