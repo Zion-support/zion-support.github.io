@@ -54,6 +54,33 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="AI Agent Evals 2026: Shipping Reliable Autonomy"
+            excerpt="Practical eval frameworks, traces, and policy gates to ship trustworthy agents at scale."
+            date="October 9, 2025"
+            category="AI Reliability"
+            readTime="14 min"
+            image="🧪"
+            href="/blog/ai-agent-evals-2026"
+          />
+          <BlogPost
+            title="AI Agent Observability 2026: Metrics, Traces, and Guardrails"
+            excerpt="Instrument agents with traces, evals, and policy guardrails to ship reliable autonomy."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="12 min"
+            image="🔎"
+            href="/blog/ai-agent-observability-2026"
+          />
+          <BlogPost
+            title="Customer Journey AI 2026: Real-Time Personalization with CDPs"
+            excerpt="Event-driven CDPs + agents for next-best-action that lifts conversion 20–35%."
+            date="September 29, 2025"
+            category="Personalization"
+            readTime="14 min"
+            image="🛒"
+            href="/blog/ai-customer-journey-ai-2026"
+          />
+          <BlogPost
             title="Agentic Workflow Orchestration 2026: Reliable AI Workflows"
             excerpt="Orchestrate multi-step agents with guardrails, approvals, and observability for measurable ROI."
             date="October 9, 2025"
@@ -63,21 +90,21 @@ export default function BlogPage() {
             href="/blog/agentic-workflow-orchestration-2026"
           />
           <BlogPost
-            title="AI Governance Maturity Model 2026"
-            excerpt="Move from ad-hoc to audit-ready governance with measurable business value."
+            title="AI Operational Excellence 2026: From SLIs to Self‑Healing Ops"
+            excerpt="Reliability scorecards, policy tests, and automated runbooks for 99.9% uptime."
             date="October 9, 2025"
-            category="Governance"
-            readTime="10 min"
-            image="🛡️"
-            href="/blog/ai-governance-maturity-model-2026"
+            category="Operations"
+            readTime="14 min"
+            image="🛠️"
+            href="/blog/ai-operational-excellence-2026"
           />
           <BlogPost
-            title="AI Customer Data Platforms 2026"
-            excerpt="Blueprint for AI-native CDPs delivering real-time personalization at scale."
+            title="AI Customer Data Platforms 2026: Real‑Time Personalization"
+            excerpt="Consent‑aware ingestion, identity resolution, feature stores, and edge delivery."
             date="October 9, 2025"
-            category="Personalization"
-            readTime="9 min"
-            image="📇"
+            category="Analytics"
+            readTime="18 min"
+            image="🧬"
             href="/blog/ai-customer-data-platforms-2026"
           />
           <BlogPost

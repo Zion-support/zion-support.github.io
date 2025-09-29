@@ -83,7 +83,7 @@ export default function PromotionalBanner({
 // Pre-configured banner variants
 export const NewContentBanner = () => (
   <PromotionalBanner
-    message="🎉 New: AI Roadmaps 2026, GenAI Guardrails Blueprints, FinOps Scorecards"
+    message="🎉 New: AI Security DLP, Multimodal Agents, Scorecards v2 (2026)"
     ctaText="Read the latest"
     ctaLink="/blog"
     backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
@@ -343,7 +343,7 @@ export const AIMultimodalEnterpriseBanner = () => (
   />
 );
 
-export const AIEnterpriseAutomationBanner = () => (
+export const AIEnterpriseAutomationGuideBanner = () => (
   <PromotionalBanner
     message="⚙️ NEW: AI Enterprise Automation 2026 - 95% Process Automation & $5M+ Savings with Zero-Touch Operations"
     ctaText="Read Guide"
@@ -512,7 +512,7 @@ export const AIMultimodalIntegrationBanner = () => (
   />
 );
 
-export const AIEnterpriseAutomationBanner = () => (
+export const AIEnterpriseAutomationBlueprintBanner = () => (
   <PromotionalBanner
     message="⚡ FEATURED: Enterprise Automation Blueprint 2026 - Achieve 95% process efficiency and $5M+ savings with zero-touch operations"
     ctaText="Get Blueprint"
@@ -521,5 +521,41 @@ export const AIEnterpriseAutomationBanner = () => (
     textColor="text-white"
     autoHide={true}
     hideAfter={15}
+  />
+);
+
+export const AIEthicalFrameworkBanner = () => (
+  <PromotionalBanner
+    message="🛡️ NEW: AI Ethical Framework 2026 - Build trustworthy AI with 90% compliance & $3M savings"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-ethical-framework-2026"
+    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const AIEthicsSuccessBanner = () => (
+  <PromotionalBanner
+    message="📊 SUCCESS STORY: Fortune 500 achieves 90% AI compliance & $3M savings with ethical framework"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-ethical-framework-success-2026"
+    backgroundColor="bg-gradient-to-r from-emerald-600 to-green-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const NewContentShowcase2026Banner = () => (
+  <PromotionalBanner
+    message="🌟 FRESH 2026: Ethical AI Framework, Multimodal Integration & Success Stories - Premium Enterprise Content"
+    ctaText="Explore New Content"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={18}
   />
 );
