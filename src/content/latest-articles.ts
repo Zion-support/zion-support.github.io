@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-governance-scorecards-quickstart-2026",
+    slug: "ai-governance-scorecards-quickstart-2026",
+    title: "AI Governance Scorecards Quickstart 2026: Ship Fast, Stay Safe",
+    description: "A practical starter for scorecards, PR checks, and KPI‑linked canaries teams adopt in weeks.",
+    excerpt: "Start with outcome‑linked scorecards and CI policy tests that teams actually adopt.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Strategy",
+    tags: ["Scorecards", "Governance", "Evals"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/ai-governance-scorecards-quickstart-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-operational-excellence-blueprint-2026",
+    slug: "ai-operational-excellence-blueprint-2026",
+    title: "AI Operational Excellence Blueprint 2026",
+    description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs engineers adopt.",
+    excerpt: "From policy to practice: playbooks that correlate with outcomes and speed teams up.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Strategy",
+    tags: ["Guardrails", "KPIs", "SLOs"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-operational-excellence-blueprint-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-enterprise-security-2026",
     slug: "ai-enterprise-security-2026",
     title: "AI Enterprise Security 2026: Zero-Trust Architecture for AI Systems",
