@@ -28,6 +28,86 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
+    slug: "ai-product-launch-checklist-2025",
+    title: "AI Product Launch Checklist: From Pilot to Production",
+    description:
+      "A pragmatic checklist for hardening pilots, proving ROI, and launching AI features safely.",
+    category: "Product",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "mlops-in-45-days",
+    title: "MLOps in 45 Days: Shipping Reliable Models Fast",
+    description:
+      "Reference pipelines, eval gates, and rollout patterns to move from notebook to prod quickly.",
+    category: "MLOps",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "practical-rag-architecture",
+    title: "Practical RAG Architecture That Scales",
+    description:
+      "Chunking, indexing, and retrieval strategies that actually improve answer quality at lower cost.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "edge-inference-patterns-2025",
+    title: "Edge Inference Patterns for Sub‑100ms Experiences",
+    description:
+      "Latency budgets, on‑device models, and caching strategies for lightning‑fast AI UX at the edge.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "ai-governance-checklist-2025",
+    title: "AI Governance Checklist 2025: Ship Fast Without Breaking Policy",
+    description:
+      "Practical guardrails, review rituals, and approval flows to keep GenAI initiatives compliant and on‑track.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "5 min read",
+  },
+  {
+    slug: "realtime-feature-flags-edge",
+    title: "Real‑Time Feature Flags at the Edge",
+    description:
+      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
+    category: "Architecture",
+    publishedAt: "2025-09-28",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "prompt-engineering-playbook-v2",
+    title: "Prompt Engineering Playbook v2: Patterns That Survive Production",
+    description:
+      "Composable prompts, eval‑driven iteration, and telemetry for robust GenAI applications.",
+    category: "GenAI",
+    publishedAt: "2025-09-27",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "platform-scorecards-that-stick",
+    title: "Platform Scorecards That Actually Drive Adoption",
+    description:
+      "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "privacy-preserving-rag-2026",
     title: "Privacy‑Preserving RAG: Redaction, Scoping, and Audit Trails",
     description: "Protect sensitive data in RAG with redaction, auth‑scoped corpora, and audit trails.",
@@ -255,4 +335,3 @@ export const posts: BlogPost[] = [
     readTime: "9 min read"
   }
 ];
-
