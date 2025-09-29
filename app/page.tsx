@@ -21,6 +21,10 @@ import {
   AIRoadmapsBanner,
   AIFinOpsBanner
 } from '../components/PromotionalBanner';
+import NewContentShowcaseBanner from '../src/components/NewContentShowcaseBanner';
+import AITrends2025Banner from '../src/components/AITrends2025Banner';
+import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBanner';
+import AIROICalculator from '../src/components/AIROICalculator';
 import ContentShowcase from '../components/ContentShowcase';
 
 export const metadata = {
@@ -34,6 +38,8 @@ export default function HomePage() {
     <div className="animate-fade-in">
       {/* Promotional Banners */}
       <NewContentShowcaseBanner />
+      <AITrends2025Banner />
+      <NewServicesShowcaseBanner />
       <AIRoadmapsBanner />
       <AIFinOpsBanner />
       <AutonomousAgentsBanner />
@@ -174,6 +180,23 @@ export default function HomePage() {
               popular={false}
             />
           </div>
+        </div>
+      </section>
+
+      {/* AI ROI Calculator Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Calculate Your AI Transformation ROI
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover the potential return on investment for AI transformation in your organization. 
+              Get personalized insights and recommendations based on your specific industry and requirements.
+            </p>
+          </div>
+          
+          <AIROICalculator />
         </div>
       </section>
 
