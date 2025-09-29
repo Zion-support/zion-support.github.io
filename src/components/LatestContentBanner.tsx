@@ -104,12 +104,12 @@ const contentHighlights = [
   ,
   {
     id: 8,
-    title: "📚 New: AI Platform ROI + Secure ML Supply Chain",
-    description: "Fresh long-form guides on platform scorecards and end-to-end ML provenance.",
-    ctaText: "Read Now",
-    ctaLink: "/blog/ai-platform-roi-2025",
+    title: "📚 New: Practical RAG in Production (2025)",
+    description: "Freshness, hybrid search, and continuous evals for grounded responses.",
+    ctaText: "Read Guide",
+    ctaLink: "/blog/practical-rag-in-production-2025",
     badge: "New",
-    stats: "Featured",
+    stats: "8 min read",
     variant: "info" as const
   }
   ,
