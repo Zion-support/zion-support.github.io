@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { posts } from '../content/posts';
 
 const Blog: React.FC = () => {
   return (
@@ -17,56 +19,17 @@ const Blog: React.FC = () => {
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {/* Article 1 */}
-          <article className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-            <div className="p-6">
-              <div className="text-sm text-indigo-600 font-medium mb-2">AI Strategy</div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-3">Designing High-Impact AI Roadmaps</h2>
-              <p className="text-gray-600 mb-4">
-                A practical framework to align AI investments with measurable business outcomes and reduce time-to-value.
-              </p>
-              <ul className="list-disc list-inside text-gray-600 space-y-1 mb-4">
-                <li>Value-first use case selection</li>
-                <li>Data readiness and governance</li>
-                <li>Risk and compliance guardrails</li>
-              </ul>
-              <a href="#" className="text-indigo-600 font-medium hover:text-indigo-700">Read more →</a>
-            </div>
-          </article>
-
-          {/* Article 2 */}
-          <article className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-            <div className="p-6">
-              <div className="text-sm text-pink-600 font-medium mb-2">Cloud FinOps</div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-3">Cutting Cloud Spend Without Slowing Teams</h2>
-              <p className="text-gray-600 mb-4">
-                Proven tactics for right-sizing, demand shaping, and engineering-friendly guardrails that keep velocity high.
-              </p>
-              <ul className="list-disc list-inside text-gray-600 space-y-1 mb-4">
-                <li>Smart autoscaling defaults</li>
-                <li>Cost-aware CI/CD policies</li>
-                <li>Workload tagging and accountability</li>
-              </ul>
-              <a href="#" className="text-pink-600 font-medium hover:text-pink-700">Read more →</a>
-            </div>
-          </article>
-
-          {/* Article 3 */}
-          <article className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-            <div className="p-6">
-              <div className="text-sm text-emerald-600 font-medium mb-2">Security</div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-3">Zero-Trust in Practice for SaaS</h2>
-              <p className="text-gray-600 mb-4">
-                A pragmatic guide to rolling out least-privilege, continuous verification, and blast radius controls.
-              </p>
-              <ul className="list-disc list-inside text-gray-600 space-y-1 mb-4">
-                <li>Identity as the new perimeter</li>
-                <li>Policy-as-code examples</li>
-                <li>Telemetry-driven detection</li>
-              </ul>
-              <a href="#" className="text-emerald-600 font-medium hover:text-emerald-700">Read more →</a>
-            </div>
-          </article>
+          {posts.map((post) => (
+            <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+              <div className="p-6">
+                <div className="text-sm text-indigo-600 font-medium mb-2">{post.category}</div>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-3">{post.title}</h2>
+                <p className="text-gray-600 mb-4">{post.description}</p>
+                <div className="text-sm text-gray-500 mb-4">{new Date(post.publishedAt).toLocaleDateString()}</div>
+                <Link to={`/blog/${post.slug}`} className="text-indigo-600 font-medium hover:text-indigo-700">Read more →</Link>
+              </div>
+            </article>
+          ))}
         </div>
 
         {/* Newsletter CTA */}

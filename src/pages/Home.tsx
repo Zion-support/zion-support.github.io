@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
+import { posts } from "../content/posts";
 
 const Home = () => {
   return (
@@ -349,6 +350,31 @@ const Home = () => {
 
         {/* Enhanced Testimonials Section */}
         <EnhancedTestimonials />
+
+        {/* Latest Articles */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="mb-10 flex items-end justify-between">
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
+                <p className="text-gray-600">Insights from our team to help you move faster.</p>
+              </div>
+              <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
+            </div>
+            <div className="grid gap-8 md:grid-cols-3">
+              {posts.slice(0, 3).map((post) => (
+                <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                  <div className="p-6">
+                    <div className="text-sm text-indigo-600 font-medium mb-2">{post.category}</div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{post.title}</h3>
+                    <p className="text-gray-600 mb-4">{post.description}</p>
+                    <Link to={`/blog/${post.slug}`} className="text-indigo-700 font-medium hover:text-indigo-800">Read more →</Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* New Content Promo */}
         <section className="py-20 bg-white">

@@ -1,5 +1,6 @@
+/* global HTMLInputElement, HTMLTextAreaElement, HTMLSelectElement */
 import React, { useState } from 'react';
-import { Mail, Send, CheckCircle } from 'lucide-react';
+import { Send, CheckCircle } from 'lucide-react';
 
 interface FormData {
   name: string;
