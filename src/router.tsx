@@ -3,14 +3,14 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
+import PostBySlug from './pages/blog/PostBySlug';
 import Resources from './pages/Resources';
+import Post from './pages/Post';
 import AIAutonomousOperations from './pages/services/AIAutonomousOperations';
 import AIPlatformArchitecture from './pages/services/AI-Platform-Architecture';
 import AIIncidentResponsePlaybooks2025 from './pages/blog/ai-incident-response-playbooks-2025/page';
-import AIBreachDrills2026 from './pages/blog/ai-breach-drills-2026/page';
-import PrivacyFirstInsightsTelemetry2026 from './pages/blog/privacy-first-insights-telemetry-2026/page';
-import AgentBlueGreenReleases2026 from './pages/blog/agent-blue-green-releases-2026/page';
-import Post from './pages/Post';
+import CaseStudies from './pages/CaseStudies';
+import Services from './pages/Services';
 
 export const AppRouter: React.FC = () => {
   return (
@@ -18,14 +18,14 @@ export const AppRouter: React.FC = () => {
       <Route path="/" element={<Home />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog" element={<Blog />} />
-      <Route path="/blog/:slug" element={<Post />} />
-      <Route path="/blog/ai-breach-drills-2026" element={<AIBreachDrills2026 />} />
-      <Route path="/blog/privacy-first-insights-telemetry-2026" element={<PrivacyFirstInsightsTelemetry2026 />} />
-      <Route path="/blog/agent-blue-green-releases-2026" element={<AgentBlueGreenReleases2026 />} />
+      <Route path="/blog/:slug" element={<PostBySlug />} />
       <Route path="/resources" element={<Resources />} />
+      <Route path="/blog/:slug" element={<Post />} />
       <Route path="/blog/ai-incident-response-playbooks-2025" element={<AIIncidentResponsePlaybooks2025 />} />
       <Route path="/services/ai-autonomous-operations" element={<AIAutonomousOperations />} />
       <Route path="/services/AI-Platform-Architecture" element={<AIPlatformArchitecture />} />
+      <Route path="/case-studies" element={<CaseStudies />} />
+      <Route path="/services" element={<Services />} />
     </Routes>
   );
 };

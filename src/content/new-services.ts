@@ -38,51 +38,86 @@ export interface NewService {
 
 export const newServices: NewService[] = [
   {
-    id: "ai-governance-scorecards-2026",
-    slug: "ai-governance-scorecards-2026",
-    title: "AI Governance Scorecards 2026",
-    description: "Scorecards, PR checks, and KPI‑linked canaries that prove AI program ROI while keeping teams fast.",
-    category: "AI Strategy",
+    id: "ai-runbooks-risk-budgets",
+    slug: "ai-runbooks-risk-budgets",
+    title: "AI Runbooks with Risk Budgets",
+    description: "Budgeted actions, approvals, and rollback gates so teams ship automation with confidence.",
+    category: "AI Operations",
     pricing: {
-      starting: "$2,499/month",
-      popular: true,
-      features: ["Scorecard design", "CI policy tests", "Online canaries", "SLO playbooks"]
+      starting: "$1,499/month",
+      popular: false,
+      features: ["Risk budgets", "Approval workflows", "Rollback gates", "Incident SLAs"]
     },
     features: [
-      "Outcome‑linked scorecards",
-      "Lightweight PR checks",
-      "KPI‑linked online canaries",
-      "Guardrails that speed teams up",
-      "Executive dashboards",
-      "Adoption & Golden‑Path KPIs",
-      "Incident & Rollback Budgets",
-      "Compliance evidence automation"
+      "Budgeted Actions & Guardrails",
+      "Approval & Change Controls",
+      "Rollback Triggers & Gates",
+      "Policy Tests in CI",
+      "KPI‑Linked Canaries",
+      "Incident SLOs & Scorecards",
+      "Observability & Traces",
+      "Templates & Playbooks"
     ],
     metrics: [
-      { value: "30–60%", label: "Time‑to‑Value Improvement" },
-      { value: "25–40%", label: "Cloud Waste Reduction" },
-      { value: "+15pts", label: "Developer Happiness" }
+      { value: "<60s", label: "Containment Time" },
+      { value: "40%", label: "Incident Reduction" },
+      { value: "3x", label: "Faster Releases" }
     ],
     testimonial: {
-      quote: "We finally have guardrails engineers adopt—and execs trust the scorecards.",
-      author: "Amira Patel",
-      company: "Northstar Platform"
+      quote: "We shipped safe automation in weeks and cut incidents by 40%.",
+      author: "Nina Patel",
+      company: "RetailMax"
     },
     cta: {
-      primary: "See Scorecards",
-      secondary: "Book Workshop"
+      primary: "Get Playbooks",
+      secondary: "See Templates"
     },
-    icon: "📊",
+    icon: "📘",
     featured: true,
-    tags: ["Governance", "Scorecards", "Policy", "Canaries"],
+    tags: ["Runbooks", "Risk Budgets", "Automation"],
     newBadge: true,
-    trending: true,
-    specialOffer: {
-      title: "Quarterly Pilot",
-      description: "Launch in 30 days with 3 scorecards and PR checks",
-      discount: "20%",
-      validUntil: "December 31, 2025"
-    }
+    trending: true
+  },
+  {
+    id: "privacy-preserving-feature-flags",
+    slug: "privacy-preserving-feature-flags",
+    title: "Privacy‑Preserving Feature Flags",
+    description: "Edge flags with scoped IDs, on‑device filters, and budgets for zero‑regret rollouts.",
+    category: "Architecture",
+    pricing: {
+      starting: "$999/month",
+      popular: true,
+      features: ["Edge KV", "Scoped IDs", "Geo/account targeting", "Instant rollback"]
+    },
+    features: [
+      "<100ms Edge Delivery",
+      "Scoped IDs & On‑Device Filters",
+      "Risk Budgets & Instant Rollback",
+      "Geo & Account Targeting",
+      "Signed Configs & Audit Trails",
+      "Progressive Delivery Controls",
+      "Privacy‑Safe Telemetry",
+      "Policy Gates in CI"
+    ],
+    metrics: [
+      { value: "<100ms", label: "Global Rollouts" },
+      { value: "25%", label: "Waste Reduction" },
+      { value: "0", label: "PII in Telemetry" }
+    ],
+    testimonial: {
+      quote: "We ship globally under 100ms with built‑in budgets and private telemetry.",
+      author: "Omar Haddad",
+      company: "Streamly"
+    },
+    cta: {
+      primary: "Enable Edge Flags",
+      secondary: "View Blueprint"
+    },
+    icon: "🏁",
+    featured: true,
+    tags: ["Edge", "Flags", "Privacy", "Budgets"],
+    newBadge: true,
+    trending: true
   },
   {
     id: "edge-llm-caching",
