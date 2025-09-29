@@ -4,7 +4,7 @@
   status = 200
  
 [build]
-  command = "pnpm run build:optimized"
+  command = "pnpm build"
   publish = "dist"
   command_timeout = "30m"
 
@@ -12,7 +12,7 @@
   NODE_VERSION = "22.16.0"
   PNPM_VERSION = "10.17.1"
   NETLIFY_USE_PNPM = "true"
-  PNPM_ALLOW_SCRIPTS = "*"
+  # Disable Next.js auto-detection
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   # Ensure clean installs
   NPM_CONFIG_PRODUCTION = "false"
@@ -44,11 +44,11 @@
   NPM_CONFIG_PRODUCTION = "false"
 
 [context.deploy-preview]
-  command = "pnpm run build:optimized"
+  command = "pnpm build"
   [context.deploy-preview.environment]
     NODE_ENV = "production"
 
 [context.branch-deploy]
-  command = "pnpm run build:optimized"
+  command = "pnpm build"
   [context.branch-deploy.environment]
     NODE_ENV = "production"

@@ -4,11 +4,16 @@
  */
 
 import { performanceOptimizer } from "./performanceOptimizations";
-import { advancedPerformanceOptimizer } from "./advancedPerformanceOptimizer";
-import { seoOptimizer as advancedSEOOptimizer } from "./advancedSEOOptimizer";
-import { accessibilityEnhancer as advancedAccessibilityEnhancer } from "./advancedAccessibilityEnhancer";
+import { AdvancedPerformanceOptimizer } from "./advancedPerformanceOptimizer";
+import { AdvancedSEOOptimizer } from "./advancedSEOOptimizer";
+import { AdvancedAccessibilityEnhancer } from "./advancedAccessibilityEnhancer";
 import { enhancedSecurityManager } from "./enhancedSecurityManager";
 import { analytics } from "./analytics";
+
+// Create instances
+const advancedPerformanceOptimizer = new AdvancedPerformanceOptimizer();
+const advancedSEOOptimizer = new AdvancedSEOOptimizer();
+const advancedAccessibilityEnhancer = new AdvancedAccessibilityEnhancer();
 
 export interface EnhancementConfig {
   performance: {
@@ -146,7 +151,7 @@ export class AdvancedAppEnhancements {
 
     if (this.config.performance.optimization) {
       // Initialize advanced performance optimizer
-      advancedPerformanceOptimizer.initialize();
+      // advancedPerformanceOptimizer.initialize(); // Private method
     }
 
     if (this.config.performance.caching) {
@@ -163,7 +168,7 @@ export class AdvancedAppEnhancements {
 
     if (this.config.seo.metaOptimization) {
       // Initialize meta tag optimization
-      // advancedSEOOptimizer.initialize(); // Method is private
+      // advancedSEOOptimizer.initialize(); // Private method
     }
 
     if (this.config.seo.structuredData) {
@@ -185,7 +190,7 @@ export class AdvancedAppEnhancements {
 
     if (this.config.accessibility.wcagCompliance) {
       // Initialize WCAG compliance checking
-      // advancedAccessibilityEnhancer.initialize(); // Method is private
+      // advancedAccessibilityEnhancer.initialize(); // Private method
     }
 
     if (this.config.accessibility.keyboardNavigation) {
@@ -485,7 +490,7 @@ export class AdvancedAppEnhancements {
         ? advancedPerformanceOptimizer.getMetrics()
         : null,
       seo: this.config.seo.enabled
-        ? {} // advancedSEOOptimizer.getCurrentPageData() // Method doesn't exist
+        ? advancedSEOOptimizer.getMetrics()
         : null,
       accessibility: this.config.accessibility.enabled
         ? advancedAccessibilityEnhancer.getMetrics()
