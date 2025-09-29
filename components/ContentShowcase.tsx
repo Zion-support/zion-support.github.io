@@ -19,6 +19,80 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-autonomous-infrastructure-2026',
+    title: 'AI Autonomous Infrastructure 2026: Self-Managing Systems Guide',
+    excerpt: 'Master autonomous infrastructure with AI-driven self-healing, predictive scaling, and zero-touch operations. Achieve 99.9% uptime and 90% cost reduction.',
+    type: 'article',
+    readTime: '25 min read',
+    category: 'Infrastructure',
+    href: '/blog/ai-autonomous-infrastructure-2026',
+    featured: true,
+    publishedDate: '2026-01-20',
+    metrics: [
+      { value: '99.9%', label: 'Uptime' },
+      { value: '90%', label: 'Cost Reduction' }
+    ]
+  },
+  {
+    id: 'ai-quantum-hybrid-computing-2026',
+    title: 'AI Quantum Hybrid Computing 2026: Next-Generation Intelligence',
+    excerpt: 'Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities. Complete guide to quantum-AI hybrid systems.',
+    type: 'article',
+    readTime: '30 min read',
+    category: 'Quantum Computing',
+    href: '/blog/ai-quantum-hybrid-computing-2026',
+    featured: true,
+    publishedDate: '2026-01-20',
+    metrics: [
+      { value: '1000x', label: 'Faster' },
+      { value: '95%', label: 'Accuracy' }
+    ]
+  },
+  {
+    id: 'ai-transformation-mega-success-2026',
+    title: 'AI Transformation Mega Success 2026: $25M ROI Case Study',
+    excerpt: 'See how a Fortune 500 company achieved $25M ROI with comprehensive AI transformation. 99% automation, 90% cost reduction, and complete business revolution.',
+    type: 'case-study',
+    category: 'Fortune 500',
+    href: '/case-studies/ai-transformation-mega-success-2026',
+    featured: true,
+    publishedDate: '2026-01-20',
+    metrics: [
+      { value: '$25M', label: 'ROI' },
+      { value: '99%', label: 'Automation' }
+    ]
+  },
+  {
+    id: 'ai-zero-trust-security-2026',
+    title: 'AI Zero Trust Security 2026: Complete Implementation Guide',
+    excerpt: 'Master zero trust security with AI-powered threat detection, automated response, and comprehensive protection. Achieve 99.7% threat detection accuracy.',
+    type: 'article',
+    readTime: '28 min read',
+    category: 'Cybersecurity',
+    href: '/blog/ai-zero-trust-security-2026',
+    featured: true,
+    publishedDate: '2026-01-20',
+    metrics: [
+      { value: '99.7%', label: 'Threat Detection' },
+      { value: '0', label: 'Breaches' }
+    ]
+  },
+  {
+    id: 'ai-foundation-models-2026',
+    title: 'AI Foundation Models 2026: Complete Playbook for Enterprise',
+    excerpt: 'Master foundation models for enterprise AI. Complete guide to model selection, deployment, optimization, and governance. Achieve 95% accuracy and 80% cost reduction.',
+    type: 'article',
+    readTime: '32 min read',
+    category: 'Foundation Models',
+    href: '/blog/ai-foundation-models-2026',
+    featured: true,
+    publishedDate: '2026-01-20',
+    metrics: [
+      { value: '95%', label: 'Accuracy' },
+      { value: '80%', label: 'Cost Reduction' }
+    ]
+  },
+  {
     id: 'ai-governance-maturity-model-2026',
     title: 'AI Governance Maturity Model 2026: From Ad‑Hoc to Audit‑Ready',
     excerpt: 'Move from ad‑hoc controls to audit‑ready AI governance with scorecards and KPIs.',

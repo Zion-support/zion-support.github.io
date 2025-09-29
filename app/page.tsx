@@ -49,6 +49,12 @@ import {
   AutonomousOperationsSuccessBanner,
   NewContentShowcaseBanner2026
 } from '../components/NewContent2026Banners';
+import { 
+  NewContent2026PromotionalBanner,
+  AIInnovation2026Banner,
+  SuccessStory2026Banner,
+  AIRevolution2026Banner
+} from '../components/NewContent2026PromotionalBanners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -87,7 +93,13 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
-      {/* Promotional Banners */}
+      {/* New 2026 Content Promotional Banners */}
+      <NewContent2026PromotionalBanner />
+      <AIInnovation2026Banner />
+      <SuccessStory2026Banner />
+      <AIRevolution2026Banner />
+      
+      {/* Additional Promotional Banners */}
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
       <AIEthicsSuccessBanner />
