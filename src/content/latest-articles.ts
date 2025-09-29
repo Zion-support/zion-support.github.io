@@ -16,6 +16,55 @@ export interface LatestArticle {
 }
 
 export const latestArticles: LatestArticle[] = [
+  // Sept 29, 2025 — New high-signal additions to advertise on Home & Blog
+  {
+    id: "ai-evaluation-scorecards-2026",
+    slug: "ai-evaluation-scorecards-2026",
+    title: "AI Evaluation Scorecards 2026: Quality, Cost, Risk at a Glance",
+    description: "Standardize evals across teams with scorecards that track quality, latency, cost, and risk—wired to CI and release trains.",
+    excerpt: "A practical scorecard system for AI that predicts outcomes and prevents regressions.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Strategy",
+    tags: ["Evals", "Scorecards", "Governance", "Quality"],
+    featured: true,
+    readTime: "12 min read",
+    image: "/images/ai-evaluation-scorecards-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-agent-security-2026",
+    slug: "ai-agent-security-2026",
+    title: "AI Agent Security 2026: Isolation, Egress, and Signed Actions",
+    description: "Harden multi‑tool agents with process isolation, policy‑enforced egress, and signed action trails that auditors trust.",
+    excerpt: "Ship reliable agent automations with layered defenses and auditable traces.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Security",
+    tags: ["Agents", "Security", "Isolation", "Egress"],
+    featured: true,
+    readTime: "14 min read",
+    image: "/images/ai-agent-security-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-customer-data-platforms-2026",
+    slug: "ai-customer-data-platforms-2026",
+    title: "AI Customer Data Platforms 2026: Real‑Time Personalization Under Budgets",
+    description: "Blueprint for CDPs that combine feature stores, privacy filters, and evals to deliver measurable lifts without overruns.",
+    excerpt: "A pragmatic CDP architecture for realtime AI personalization with guardrails.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Strategy",
+    tags: ["CDP", "Personalization", "Privacy", "Evals"],
+    featured: true,
+    readTime: "11 min read",
+    image: "/images/ai-cdp-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
   {
     id: "ai-governance-scorecards-quickstart-2026",
     slug: "ai-governance-scorecards-quickstart-2026",

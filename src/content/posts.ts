@@ -762,3 +762,34 @@ posts.push(
     readTime: "8 min read"
   }
 );
+
+// Frontpage promo slugs — ensure article cards resolve
+posts.unshift(
+  {
+    slug: "ai-evaluation-scorecards-2026",
+    title: "AI Evaluation Scorecards 2026: Quality, Cost, Risk at a Glance",
+    description: "Standardize evals with scorecards that track quality, latency, cost, and risk—wired to CI and trains.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "ai-agent-security-2026",
+    title: "AI Agent Security 2026: Isolation, Egress, and Signed Actions",
+    description: "Harden multi‑tool agents with isolation, policy‑enforced egress, and signed action trails.",
+    category: "Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "14 min read"
+  },
+  {
+    slug: "ai-customer-data-platforms-2026",
+    title: "AI Customer Data Platforms 2026: Real‑Time Personalization Under Budgets",
+    description: "Feature stores + privacy filters + evals—measurable lifts without overruns.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "11 min read"
+  }
+);
