@@ -44,8 +44,8 @@ export default function App(): React.JSX.Element {
         initOptimizations();
         
         // Initialize SEO
-        seoManager.initialize();
-        seoAnalytics.trackPageView();
+        // seoManager.initialize?.(); // Method doesn't exist
+        seoAnalytics.trackPageView(window.location.pathname);
         
         // Initialize accessibility
         accessibilityManager.initialize();
@@ -54,29 +54,29 @@ export default function App(): React.JSX.Element {
         analytics.initialize();
         
         // Initialize performance monitoring
-        PerformanceMonitor.initialize();
+        // PerformanceMonitor.initialize?.(); // Method doesn't exist
         
         // Initialize caching
-        cacheManager.initialize();
+        // cacheManager.initialize?.(); // Method doesn't exist
         
         // Initialize API client
-        apiClient.initialize();
+        // apiClient.initialize?.(); // Method doesn't exist
         
         // Initialize notifications
-        notificationManager.initialize();
+        // notificationManager.initialize?.(); // Method doesn't exist
         
         // Initialize user feedback
-        userFeedback.initialize();
+        // userFeedback.initialize?.(); // Method doesn't exist
         
         // Initialize enhanced systems
-        enhancedSecurityManager.initialize();
-        enhancedAccessibilityManager.initialize();
-        enhancedPerformanceMonitor.initialize();
-        enhancedSEOOptimizer.initialize();
+        // enhancedSecurityManager.initialize?.(); // Method doesn't exist
+        // enhancedAccessibilityManager.initialize?.(); // Method doesn't exist
+        // enhancedPerformanceMonitor.initialize?.(); // Method doesn't exist
+        // enhancedSEOOptimizer.initialize?.(); // Method doesn't exist
         
         // Initialize performance optimizations
-        performanceOptimizer.initialize();
-        enhancedPerformanceOptimizer.initialize();
+        // performanceOptimizer.initialize?.(); // Method doesn't exist
+        // enhancedPerformanceOptimizer.initialize?.(); // Method doesn't exist
         
         console.log('App initialized successfully');
       } catch (error) {
