@@ -104,8 +104,8 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🆕 Fresh: MLOps Reliability & Real‑Time Pipelines Guides"
-          description="Canary evals for GenAI and reliable streaming patterns to ship faster with confidence."
+          title="🆕 New: AI Governance Playbook + Edge AI Design Guide"
+          description="Policy tests that scale with velocity and sub‑100ms edge inference patterns."
           ctaText="Read the latest"
           ctaLink="/blog"
           dismissible={true}

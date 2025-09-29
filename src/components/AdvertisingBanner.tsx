@@ -160,7 +160,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
         </div>
       </div>
       
-      <style jsx>{`
+      <style>{`
         @keyframes progress {
           from { width: 100%; }
           to { width: 0%; }

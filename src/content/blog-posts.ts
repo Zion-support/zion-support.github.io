@@ -1876,6 +1876,52 @@ Ready to implement Zero Trust security? Contact our team for a free security ass
     readTime: "14 min read",
     image: "/images/zero-trust-security.jpg"
   }
+  ,
+  {
+    slug: "ai-governance-playbook-2025",
+    title: "The 2025 AI Governance Playbook for Product Teams",
+    description: "Practical guardrails: policy tests, red-teaming, data retention, and auditability baked into delivery.",
+    content: `
+# The 2025 AI Governance Playbook for Product Teams
+
+Shipping AI responsibly requires concrete guardrails that scale with usage and velocity. This playbook distills what works across policy tests, safety red‑teaming, evaluation suites, and auditability.
+
+## What to Instrument
+- Input/output logging with PII minimization
+- Policy tests in CI and pre‑merge checks
+- Online canaries with rollback triggers
+
+## Team Operating Model
+- Clear ownership for datasets, prompts, and policies
+- Weekly eval reviews tied to business KPIs
+
+Adopt these patterns to move fast without breaking trust.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Governance",
+    tags: ["AI", "Governance", "Safety", "Policy Tests"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-governance-playbook.jpg"
+  },
+  {
+    slug: "edge-ai-design-guide",
+    title: "Designing Edge AI Systems: A Field Guide",
+    description: "Model optimization, caching, and failover patterns for resilient sub‑100ms edge inference.",
+    content: `
+# Designing Edge AI Systems: A Field Guide
+
+Achieve low‑latency inference at the edge with quantization, pruning, warm caches, and graceful degradation.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "Edge Computing",
+    tags: ["Edge AI", "Inference", "Latency"],
+    featured: false,
+    readTime: "6 min read",
+    image: "/images/edge-ai-design.jpg"
+  }
 ];
 
 export default blogPosts;

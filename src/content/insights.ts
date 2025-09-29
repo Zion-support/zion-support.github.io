@@ -18,6 +18,24 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 5,
   },
   {
+    id: "ai-governance-playbook",
+    title: "AI Governance Playbook: Policy Tests That Scale",
+    summary:
+      "Bake safety into delivery with policy tests, audit trails, and eval reviews.",
+    category: "AI Governance",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
+  {
+    id: "edge-ai-design",
+    title: "Edge AI Design Patterns for Sub‑100ms UX",
+    summary:
+      "Quantization, caching, and graceful degrade strategies for reliable edge inference.",
+    category: "Edge Computing",
+    date: "2025-09-28",
+    readMinutes: 6,
+  },
+  {
     id: "edge-cache-invalidation",
     title: "Edge Cache Invalidation Strategies That Won't Wake You Up",
     summary:
