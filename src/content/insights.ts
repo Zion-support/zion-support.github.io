@@ -9,8 +9,40 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+<<<<<<< HEAD
     id: "platform-blueprints-golden-paths",
     title: "Golden Paths That Actually Get Used",
+=======
+    id: "genai-policy-tests-canaries",
+    title: "GenAI Policy Tests: From Offline Suites to Online Canaries",
+    summary:
+      "How to combine offline evals with live canaries to catch regressions before customers do.",
+    category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-flags-validation",
+    title: "Edge Flags: Validation Circuits That Prevent Bad Rolls",
+    summary:
+      "Design health checks, signed payloads, and roll-forward playbooks to keep flags safe.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "north-star-metrics-pitfalls",
+    title: "North‑Star Metrics Pitfalls: Fixing Vanity and Ambiguity",
+    summary:
+      "Replace vanity KPIs with leading indicators and consistent instrumentation.",
+    category: "Product Analytics",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "ai-governance-rubric",
+    title: "A Lightweight Rubric for AI Governance Decisions",
+>>>>>>> cursor/create-and-deploy-new-content-40aa
     summary:
       "How to design developer workflows, templates, and scorecards that reduce cognitive load.",
     category: "Platform Engineering",
