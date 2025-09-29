@@ -2,14 +2,22 @@ import React from 'react';
 import Link from 'next/link';
 import { Clock, ArrowRight, CheckCircle, Rocket, Satellite, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 export const metadata = {
   title: 'AI Space Technology 2026: Autonomous Space Operations & Deep Space Intelligence',
   description: 'Revolutionary AI space technology for autonomous missions, deep space exploration, and orbital operations with 99.9% reliability and $500M+ cost savings.',
   keywords: 'AI space technology, autonomous space operations, deep space AI, satellite intelligence, space exploration 2026',
+=======
+export const metadata: Metadata = {
+  title: 'AI Space Technology 2026: Autonomous Space Operations & Interplanetary Intelligence',
+  description: 'Explore the revolutionary AI technologies transforming space exploration in 2026. Autonomous spacecraft, Mars colonization AI, and interplanetary communication systems.',
+  keywords: 'space AI, autonomous spacecraft, Mars colonization, space exploration, satellite AI, interplanetary intelligence',
+>>>>>>> cursor/create-and-deploy-new-content-5d6a
 };
 
 export default function AISpaceTech2026() {
   return (
+<<<<<<< HEAD
     <div className="max-w-4xl mx-auto px-4 py-8">
       {/* Header */}
       <div className="mb-8">
@@ -32,6 +40,44 @@ export default function AISpaceTech2026() {
           <div className="flex items-center gap-2">
             <Rocket className="w-5 h-5" />
             <span>Space Technology</span>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-cyan-50">
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-r from-indigo-600 via-blue-600 to-cyan-600 text-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <span className="bg-white/20 px-4 py-2 rounded-full text-sm font-semibold">
+                🚀 SPACE AI 2026
+              </span>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              AI Space Technology 2026:
+              <span className="block text-yellow-200">Autonomous Space Operations</span>
+            </h1>
+            <p className="text-xl mb-8 max-w-4xl mx-auto opacity-90">
+              Discover how AI is revolutionizing space exploration with autonomous spacecraft, intelligent Mars colonization systems, 
+              and next-generation interplanetary communication networks that are making humanity a multi-planetary species.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                <div className="text-2xl font-bold">99.9%</div>
+                <div className="text-sm opacity-90">Autonomy Rate</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                <div className="text-2xl font-bold">Mars Ready</div>
+                <div className="text-sm opacity-90">2026 Mission</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                <div className="text-2xl font-bold">1000x</div>
+                <div className="text-sm opacity-90">Faster Discovery</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                <div className="text-2xl font-bold">$100B+</div>
+                <div className="text-sm opacity-90">Market Value</div>
+              </div>
+            </div>
+>>>>>>> cursor/create-and-deploy-new-content-5d6a
           </div>
         </div>
         <p className="text-xl text-gray-700 leading-relaxed">
@@ -188,6 +234,7 @@ export default function AISpaceTech2026() {
                   <div className="text-2xl font-bold text-purple-600">50+</div>
                   <div className="text-gray-600">Satellites Coordinated</div>
                 </div>
+<<<<<<< HEAD
                 <div className="text-center">
                   <div className="text-2xl font-bold text-blue-600">99.8%</div>
                   <div className="text-gray-600">Synchronization Accuracy</div>
@@ -196,12 +243,15 @@ export default function AISpaceTech2026() {
                   <div className="text-2xl font-bold text-green-600">10x</div>
                   <div className="text-gray-600">Mission Capability</div>
                 </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5d6a
               </div>
             </div>
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Deep Space AI */}
       <section id="deep-space-ai" className="mb-12">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Deep Space AI Systems</h2>
@@ -532,6 +582,31 @@ export default function AISpaceTech2026() {
                   <span>AI-powered space manufacturing</span>
                 </li>
               </ul>
+=======
+      {/* Future Vision */}
+      <section className="py-16 bg-gradient-to-r from-indigo-600 via-blue-600 to-cyan-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6">The Future of Space AI</h2>
+          <p className="text-xl mb-8 opacity-90">
+            As we advance toward 2030, AI will enable humanity to establish permanent settlements on Mars, 
+            mine asteroids for resources, and begin the exploration of distant star systems.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl mb-4">🏠</div>
+              <h3 className="text-xl font-bold mb-2">Mars Cities</h3>
+              <p className="text-sm opacity-90">Self-sustaining cities with AI-managed infrastructure</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl mb-4">☄️</div>
+              <h3 className="text-xl font-bold mb-2">Asteroid Mining</h3>
+              <p className="text-sm opacity-90">Autonomous mining operations on resource-rich asteroids</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl mb-4">🌌</div>
+              <h3 className="text-xl font-bold mb-2">Interstellar Probes</h3>
+              <p className="text-sm opacity-90">AI-powered probes exploring nearby star systems</p>
+>>>>>>> cursor/create-and-deploy-new-content-5d6a
             </div>
           </div>
         </div>
@@ -557,6 +632,7 @@ export default function AISpaceTech2026() {
             Schedule Mission Consultation
           </Link>
         </div>
+<<<<<<< HEAD
       </div>
 
       {/* Related Content */}
@@ -585,6 +661,9 @@ export default function AISpaceTech2026() {
           </Link>
         </div>
       </div>
+=======
+      </section>
+>>>>>>> cursor/create-and-deploy-new-content-5d6a
     </div>
   );
 }
