@@ -35,9 +35,27 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
 
   // Combine content for display
   const allContent = [
-    ...featuredBlogPosts.map(post => ({ ...post, type: 'blog' as const })),
-    ...latestInsightsList.map(insight => ({ ...insight, type: 'insights' as const }))
-  ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    ...featuredBlogPosts.map(post => ({
+      type: 'blog' as const,
+      slug: post.slug,
+      title: post.title,
+      description: post.description,
+      date: post.date,
+      category: post.category,
+      featured: post.featured,
+      readTime: post.readTime,
+      image: (post as any).image
+    })),
+    ...latestInsightsList.map(insight => ({
+      type: 'insights' as const,
+      id: insight.id,
+      title: insight.title,
+      summary: insight.summary,
+      date: insight.date,
+      category: insight.category,
+      readMinutes: insight.readMinutes
+    }))
+  ].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
    .slice(0, maxItems);
 
   const filteredContent = activeTab === 'all' ? allContent : 
