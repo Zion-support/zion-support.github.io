@@ -466,9 +466,9 @@ export const getRecentContent = (limit: number = 3) => {
   
   return allContent
     .sort((a, b) => {
-      const dateA = (a as any).date ? new Date((a as any).date).getTime() : 0;
-      const dateB = (b as any).date ? new Date((b as any).date).getTime() : 0;
-      return dateB - dateA;
+      const aTime = 'date' in a ? new Date((a as any).date).getTime() : 0;
+      const bTime = 'date' in b ? new Date((b as any).date).getTime() : 0;
+      return bTime - aTime;
     })
     .slice(0, limit);
 };
