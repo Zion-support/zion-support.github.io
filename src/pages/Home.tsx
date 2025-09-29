@@ -18,6 +18,8 @@ import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
 import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
 import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
+import NewContent2026Banner from "../components/NewContent2026Banner";
+import NewServices2026Banner from "../components/NewServices2026Banner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
@@ -135,6 +137,7 @@ const Home = () => {
         />
         <NewContentPromoBanner 
           className="border-b border-white/10" 
+<<<<<<< HEAD
           variant="premium" 
           title="New: AI Incident Command Center 2026 + Edge Privacy Playbooks"
           description="Contain incidents in <60s with budgeted actions and ship privacy‑first analytics without PII."
@@ -145,11 +148,15 @@ const Home = () => {
             { title: "Edge Privacy Playbooks 2026", category: "Edge Computing", link: "/blog/edge-privacy-playbooks-2026" },
             { title: "AI SRE Blueprints 2026", category: "AI Operations", link: "/blog/ai-sre-blueprints-2026" }
           ]}
+=======
+          variant="premium"
+>>>>>>> cursor/create-and-deploy-new-content-6afb
         />
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
         </div>
         
+<<<<<<< HEAD
         {/* New Comprehensive Promotional Banner */}
         <div className="container mx-auto px-6 mt-6">
           <ComprehensivePromoBanner variant="hero" showCount={4} />
@@ -164,6 +171,8 @@ const Home = () => {
         <div className="container mx-auto px-6 mt-6">
           <NewServicesPromoBanner variant="showcase" showCount={3} featuredOnly={true} />
         </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6afb
         
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
@@ -299,6 +308,20 @@ const Home = () => {
 
         {/* New Content Showcase 2025 */}
         <NewContentShowcase2025 />
+
+        {/* New Content 2026 Banner */}
+        <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
+          <div className="container mx-auto px-6">
+            <NewContent2026Banner variant="hero" showCount={6} autoRotate={true} />
+          </div>
+        </section>
+
+        {/* New Services 2026 Banner */}
+        <section className="py-20 bg-gradient-to-r from-emerald-50 to-teal-50">
+          <div className="container mx-auto px-6">
+            <NewServices2026Banner variant="premium" showCount={4} featuredOnly={true} />
+          </div>
+        </section>
 
         {/* New Services Showcase */}
         <section className="py-20 bg-white relative overflow-hidden">

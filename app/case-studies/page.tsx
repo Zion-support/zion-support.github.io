@@ -10,6 +10,29 @@ export const metadata = {
 export default function CaseStudiesPage() {
   const caseStudies = [
     {
+      id: 'ai-platform-enterprise-success-2026',
+      title: 'AI Platform Enterprise Success: $200M ROI Transformation',
+      company: 'Fortune 500 Manufacturing Corporation',
+      industry: 'Manufacturing',
+      challenge: 'Fragmented AI systems across 15 countries, $50M+ annual operational inefficiencies, and lack of unified data management.',
+      solution: 'Deployed unified AI platform across all operations with 50+ AI models, real-time data processing, and autonomous decision making.',
+      results: [
+        { metric: '$200M', label: 'Operational Savings' },
+        { metric: '95%', label: 'Process Automation' },
+        { metric: '99.9%', label: 'Platform Uptime' },
+        { metric: '18', label: 'Months ROI' }
+      ],
+      testimonial: {
+        quote: "The AI platform transformation delivered unprecedented results. $200M in savings with 95% automation across our global operations.",
+        author: "Sarah Johnson",
+        title: "Chief Technology Officer",
+        company: "Fortune 500 Manufacturing Corporation"
+      },
+      image: "/images/case-studies/ai-platform-enterprise-success.jpg",
+      featured: true,
+      href: "/case-studies/ai-platform-enterprise-success-2026"
+    },
+    {
       id: 'ai-transformation-mega-success',
       title: 'AI Transformation Mega Success: $100M ROI in 18 Months',
       company: 'Fortune 500 Manufacturing Corp',

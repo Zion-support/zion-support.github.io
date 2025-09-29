@@ -1,3 +1,14 @@
+// eslint.config.js
+import js from "@eslint/js";
+import globals from "globals";
+import tseslint from "@typescript-eslint/eslint-plugin";
+import tsParser from "@typescript-eslint/parser";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import cypressPlugin from "eslint-plugin-cypress";
+
+const browserGlobals = globals.browser;
+const nodeGlobals = globals.node;
 
 export default [
   // Global ignores
@@ -35,7 +46,6 @@ export default [
       '**/broken_files_backup/**',
       '**/vite.config-backup.*',
       '**/test-simple.*',
-      
       '**/*.disabled.*',
       '**/*.backup.*',
       '**/*.broken.*',
@@ -75,7 +85,7 @@ export default [
     files: ["src/**/*.{ts,tsx}", "pages/**/*.{ts,tsx}"],
     // Exclude story and test files from this general src/pages config
     ignores: ["src/**/*.stories.tsx", "src/**/*.stories.ts", "src/**/*.test.tsx", "src/**/*.test.ts"],
-    extends: [...tseslint.configs.recommended],
+    extends: [tseslint.configs.recommended],
     languageOptions: {
       parserOptions: {},
       globals: { ...browserGlobals },
@@ -99,7 +109,7 @@ export default [
   // TypeScript configuration for config files
   ...tseslint.config({
     files: ["vite.config.ts", "tailwind.config.ts", "cypress.config.ts", "vitest.config.ts"], // Explicit list
-    extends: [...tseslint.configs.recommended],
+    extends: [tseslint.configs.recommended],
     languageOptions: {
       parserOptions: {},
       globals: { ...nodeGlobals },
@@ -113,7 +123,7 @@ export default [
   // Test files configuration
   ...tseslint.config({
     files: ["__tests__/**/*.{ts,tsx}"],
-    extends: [...tseslint.configs.recommended],
+    extends: [tseslint.configs.recommended],
     languageOptions: {
       parserOptions: {},
       globals: { ...globals.jest, ...browserGlobals }, // Jest and browser globals
@@ -131,7 +141,7 @@ export default [
   ...tseslint.config({
     files: ["tests/**/*.{ts,tsx,js,jsx}"], // Include JS/JSX as per its tsconfig
     ignores: ["tests/e2e/**"], // e2e tests inside 'tests' might be Playwright, not Jest
-    extends: [...tseslint.configs.recommended],
+    extends: [tseslint.configs.recommended],
     languageOptions: {
       parserOptions: {},
       globals: { ...globals.jest, ...browserGlobals }, // Jest and browser globals
@@ -159,7 +169,7 @@ export default [
       "stories/**/*.stories.tsx",
       "stories/**/*.stories.ts", // Added .ts stories
     ],
-    extends: [...tseslint.configs.recommended],
+    extends: [tseslint.configs.recommended],
     languageOptions: {
       parserOptions: {},
       globals: { ...browserGlobals },
@@ -171,7 +181,7 @@ export default [
   },
   {
     files: ["supabase/functions/**/*.ts"],
-    extends: [...tseslint.configs.recommended],
+    extends: [tseslint.configs.recommended],
     languageOptions: {
       parserOptions: {},
       globals: { ...nodeGlobals },
@@ -191,7 +201,7 @@ export default [
   // Cypress TypeScript Configuration
   ...tseslint.config({
     files: ["cypress/**/*.ts", "cypress/**/*.tsx"], // Target Cypress TS files
-    extends: [...tseslint.configs.recommended], // Use non-type-aware to avoid parserOptions.project issues
+    extends: [tseslint.configs.recommended], // Use non-type-aware to avoid parserOptions.project issues
     languageOptions: {
       parserOptions: {},
       globals: { // Cypress globals are typically provided by the plugin below

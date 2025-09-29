@@ -17,11 +17,19 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+<<<<<<< HEAD
     id: "ai-incident-command-center-2026",
     slug: "ai-incident-command-center-2026",
     title: "AI Incident Command Center 2026: Faster Containment, Fewer Surprises",
     description: "Stand up a command center with budgeted actions, live traces, and rollback-ready playbooks that contain incidents in under 60 seconds.",
     excerpt: "Close the loop from detections to safe actions with KPI‑wired incident budgets and rollbacks.",
+=======
+    id: "agent-release-checklists-2025",
+    slug: "agent-release-checklists-2025",
+    title: "Agent Release Checklists: Ship Fast Without Surprises",
+    description: "Budget risky actions, add PR checks, and bake rollback triggers into every agent release.",
+    excerpt: "A pragmatic checklist for reliable agent releases with budgets, tests, and rollbacks.",
+>>>>>>> cursor/create-and-deploy-new-content-6afb
     author: "Zion Tech Group Team",
     date: "2025-10-29",
     category: "Security",
@@ -33,6 +41,7 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+<<<<<<< HEAD
     id: "edge-privacy-playbooks-2026",
     slug: "edge-privacy-playbooks-2026",
     title: "Edge Privacy Playbooks 2026: Scoped IDs, Local Filters, DP Noise",
@@ -45,64 +54,103 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "8 min read",
     image: "/images/edge-privacy-playbooks-2026.jpg",
+=======
+    id: "kpi-linked-canaries-2025",
+    slug: "kpi-linked-canaries-2025",
+    title: "KPI‑Linked Canaries: Evals That Protect Velocity",
+    description: "Wire online canaries to KPIs so teams ship weekly without regressions or surprise costs.",
+    excerpt: "Set up lightweight, KPI‑aligned canaries that catch issues early and keep teams fast.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Governance",
+    tags: ["Canaries", "Evals", "KPIs"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/kpi-linked-canaries-2025.jpg",
     newBadge: true,
     trending: true
   },
   {
+    id: "secure-ml-supply-chain-2026",
+    slug: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
+    description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
+    excerpt: "Stop ML supply‑chain drift with automated SBOMs, attestations, and CI policy gates.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-15",
+    category: "Security",
+    tags: ["Incident Response", "Automation", "Guardrails"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-incident-budgets-2026-v2.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-personalization-2026",
+    slug: "edge-personalization-2026",
+    title: "Edge Personalization 2026: Private <100ms Experiences",
+    description: "Signed configs, on‑device caches, and KV patterns for realtime personalization without PII risk.",
+    excerpt: "Design privacy‑preserving personalization with sub‑100ms latency and durable fallbacks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-15",
+    category: "Architecture",
+    tags: ["Edge", "Personalization", "Privacy"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/edge-personalization-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+{
+    id: "ai-quantum-computing-2026",
+    slug: "ai-quantum-computing-2026",
+    title: "AI Quantum Computing 2026: Next-Generation Intelligence",
+    description: "Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.",
+    excerpt: "Learn how quantum-AI integration is transforming enterprise computing with unprecedented performance gains.",
+    author: "Zion Tech Group Team",
+    date: "2025-01-20",
+    category: "Quantum Computing",
+    tags: ["Quantum AI", "Quantum Computing", "Optimization", "Performance"],
+    featured: true,
+    readTime: "25 min read",
+    image: "/images/ai-quantum-computing-2026.jpg",
+>>>>>>> cursor/create-and-deploy-new-content-6afb
+    newBadge: true,
+    trending: true
+  },
+  {
+<<<<<<< HEAD
     id: "ai-safety-budgets-2026",
     slug: "ai-safety-budgets-2026",
     title: "AI Safety Budgets 2026: Guardrails That Don’t Slow Teams",
     description: "Set explicit risk budgets, approvals, and rollback triggers that keep delivery fast and safe.",
     excerpt: "Ship faster with measurable safety budgets wired to KPIs and release trains.",
+=======
+    id: "edge-agent-observability-2026",
+    slug: "edge-agent-observability-2026",
+    title: "Edge Agent Observability 2026: Live Traces, Budgets, and Fallbacks",
+    description: "Observe multi‑tool agents with user‑centric traces, budgeted actions, and deterministic fallbacks at the edge.",
+    excerpt: "User‑centric traces and safety budgets for agents running at the edge.",
+>>>>>>> cursor/create-and-deploy-new-content-6afb
     author: "Zion Tech Group Team",
-    date: "2025-10-17",
-    category: "AI Strategy",
-    tags: ["Guardrails", "Budgets", "Delivery"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-safety-budgets-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "edge-privacy-ml-2026",
-    slug: "edge-privacy-ml-2026",
-    title: "Edge Privacy for ML 2026: On‑Device Filters and Scoped IDs",
-    description: "Design telemetry and inference with local filters, signed configs, and retention windows.",
-    excerpt: "Keep insights rich without PII using on‑device redaction and scoped identifiers.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-17",
+    date: "2025-10-16",
     category: "Edge Computing",
-    tags: ["Privacy", "Edge", "Telemetry"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/edge-privacy-ml-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "agent-evals-in-prod-2026",
-    slug: "agent-evals-in-prod-2026",
-    title: "Agent Evals in Production 2026: Online Checks That Predict Outcomes",
-    description: "Wire agent evals to KPIs with lightweight canaries, scorecards, and rollback‑ready signals.",
-    excerpt: "Prevent regressions while shipping weekly with online evals tied to outcomes.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-17",
-    category: "GenAI",
-    tags: ["Agents", "Evals", "Scorecards"],
+    tags: ["Agents", "Observability", "Edge"],
     featured: true,
     readTime: "7 min read",
-    image: "/images/agent-evals-in-prod-2026.jpg",
+    image: "/images/edge-agent-observability-2026.jpg",
     newBadge: true,
     trending: true
   },
   {
-    id: "ai-breach-drills-2026",
-    slug: "ai-breach-drills-2026",
-    title: "AI Breach Drills 2026: Practice Safe Autonomy Under Pressure",
-    description: "Runbook drills for AI systems: budgeted actions, approvals, and instant rollback paths.",
-    excerpt: "Turn incidents into rehearsals—budgeted actions, approvals, and rollback checkpoints.",
+    id: "privacy-preserving-feature-flags-2026",
+    slug: "privacy-preserving-feature-flags-2026",
+    title: "Privacy‑Preserving Feature Flags 2026: Geo Budgets and On‑Device Filters",
+    description: "Sub‑100ms, zero‑regret rollouts using scoped IDs, local filters, and telemetry‑driven rollback.",
+    excerpt: "Zero‑regret rollouts with privacy by design: scoped IDs and local filters.",
     author: "Zion Tech Group Team",
+<<<<<<< HEAD
     date: "2025-10-15",
     category: "Security",
     tags: ["Incident Response", "Automation", "Guardrails"],
@@ -141,10 +189,19 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "7 min read",
     image: "/images/edge-agent-observability-2026.jpg",
+=======
+    date: "2025-10-16",
+    category: "Architecture",
+    tags: ["Feature Flags", "Privacy", "Edge"],
+    featured: false,
+    readTime: "7 min read",
+    image: "/images/privacy-preserving-feature-flags-2026.jpg",
+>>>>>>> cursor/create-and-deploy-new-content-6afb
     newBadge: true,
     trending: true
   },
   {
+<<<<<<< HEAD
     id: "privacy-preserving-feature-flags-2026",
     slug: "privacy-preserving-feature-flags-2026",
     title: "Privacy‑Preserving Feature Flags 2026: Geo Budgets and On‑Device Filters",
@@ -161,6 +218,8 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6afb
     id: "privacy-first-insights-telemetry-2026",
     slug: "privacy-first-insights-telemetry-2026",
     title: "Privacy‑First Insights 2026: Signal‑Rich Analytics Without PII",
@@ -209,6 +268,7 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+<<<<<<< HEAD
     id: "ai-safety-budgets-2026",
     slug: "ai-safety-budgets-2026",
     title: "AI Safety Budgets 2026: Guardrails You Can Ship",
@@ -241,6 +301,8 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6afb
     id: "platform-engineering-scorecards-v2-2026",
     slug: "platform-engineering-scorecards-v2-2026",
     title: "Platform Engineering Scorecards v2: Leading Indicators that Drive ROI",
@@ -401,6 +463,11 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+<<<<<<< HEAD
+=======
+ 
+ 
+>>>>>>> cursor/create-and-deploy-new-content-6afb
     id: "agent-evals-scorecards-2026",
     slug: "agent-evals-scorecards-2026",
     title: "Agent Evals 2026: Scorecards That Predict Outcomes",
