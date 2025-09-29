@@ -10,69 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-    slug: "edge-inference-blueprints",
-    title: "Edge Inference Blueprints: Sub‑100ms UX in Production",
-    description:
-      "Practical patterns for on‑device models, caching, and streaming that keep latency under 100ms.",
-    category: "Architecture",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "platform-scorecards-that-stick",
-    title: "Platform Scorecards That Actually Drive Adoption",
-    description:
-      "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
-    category: "Platform Engineering",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "9 min read",
-  },
-  {
-    slug: "genai-guardrails-in-the-wild",
-    title: "GenAI Guardrails in the Wild: Evals, Policies, and Drift Control",
-    description:
-      "A field guide to combining offline suites with online policy tests to keep quality high.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "7 min read",
-  },
-  {
-=======
-    slug: "ai-governance-checklist-2025",
-    title: "AI Governance Checklist 2025: Ship Fast Without Breaking Policy",
-    description:
-      "Practical guardrails, review rituals, and approval flows to keep GenAI initiatives compliant and on‑track.",
-    category: "AI Governance",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "5 min read",
-  },
-  {
-    slug: "realtime-feature-flags-edge",
-    title: "Real‑Time Feature Flags at the Edge",
-    description:
-      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
-    category: "Architecture",
-    publishedAt: "2025-09-28",
-    featured: false,
-    readTime: "6 min read",
-  },
-  {
-    slug: "prompt-engineering-playbook-v2",
-    title: "Prompt Engineering Playbook v2: Patterns That Survive Production",
-    description:
-      "Composable prompts, eval‑driven iteration, and telemetry for robust GenAI applications.",
-    category: "GenAI",
-    publishedAt: "2025-09-27",
-    featured: true,
-    readTime: "8 min read",
-  },
-  {
->>>>>>> feat/new-content-and-promo
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:
@@ -103,6 +40,36 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
+    slug: "edge-cache-invalidation-strategies",
+    title: "Edge Cache Invalidation Strategies That Won't Wake You Up",
+    description:
+      "Versioned keys, background warming, and circuit breakers for resilient edge experiences.",
+    category: "Architecture",
+    publishedAt: "2025-09-28",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "otel-traces-that-matter",
+    title: "OpenTelemetry in Production: Traces That Engineers Actually Use",
+    description:
+      "Sampling strategies, semantic conventions, and dashboards that shrink MTTR for complex stacks.",
+    category: "Observability",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
+    slug: "platform-scorecards-that-stick",
+    title: "Platform Scorecards That Actually Drive Adoption",
+    description:
+      "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
     slug: "north-star-metrics-that-drive-growth",
     title: "North‑Star Metrics That Actually Drive Growth",
     description:
@@ -111,6 +78,36 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: false,
     readTime: "6 min read",
+  },
+  {
+    slug: "ai-governance-checklist-2025",
+    title: "AI Governance Checklist 2025: Ship Fast Without Breaking Policy",
+    description:
+      "Practical guardrails, review rituals, and approval flows to keep GenAI initiatives compliant and on‑track.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "5 min read",
+  },
+  {
+    slug: "realtime-feature-flags-edge",
+    title: "Real‑Time Feature Flags at the Edge",
+    description:
+      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
+    category: "Architecture",
+    publishedAt: "2025-09-28",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "prompt-engineering-playbook-v2",
+    title: "Prompt Engineering Playbook v2: Patterns That Survive Production",
+    description:
+      "Composable prompts, eval‑driven iteration, and telemetry for robust GenAI applications.",
+    category: "GenAI",
+    publishedAt: "2025-09-27",
+    featured: true,
+    readTime: "8 min read",
   },
   {
     slug: "ai-workflow-automation-2025-guide",
