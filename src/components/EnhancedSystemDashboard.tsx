@@ -32,6 +32,7 @@ interface DashboardMetrics {
 }
 
 interface EnhancedSystemDashboardProps {
+  isVisible?: boolean;
   onClose?: () => void;
 }
 

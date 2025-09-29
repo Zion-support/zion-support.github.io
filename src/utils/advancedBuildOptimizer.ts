@@ -463,7 +463,6 @@ export class AdvancedBuildOptimizer {
 
     const report = `
 Build Optimization Report:
-========================
 Bundle Size: ${this.metrics.bundleSize} KB
 Chunk Count: ${this.metrics.chunkCount}
 Load Time: ${this.metrics.loadTime.toFixed(2)}ms

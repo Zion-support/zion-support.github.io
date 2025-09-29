@@ -377,7 +377,6 @@ class LoadingOptimizer {
 
     return `
 Loading Performance Report
-==========================
 Loading Score: ${score}/100
 
 Key Metrics:
