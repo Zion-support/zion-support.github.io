@@ -112,24 +112,22 @@ const Home = () => {
         <LatestContentBanner 
           className="border-b border-white/10" 
           variant="info"
-          title="New: AI Platform Engineering, Serverless Cost Playbook, FinOps Guardrails"
-          description="Fresh articles on platform ROI, cutting serverless costs, and practical FinOps guardrails."
+          title="New: AI Risk Mitigation, Privacy‑Preserving Agents, KPI‑Linked Policy Tests"
+          description="Fresh guides on policy gates, private agents, and KPI‑linked CI tests."
           ctaText="Read now"
           ctaLink="/blog"
         />
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="Fresh: AI Platform Engineering, Serverless Inference, AgentOps SLOs, Zero‑Trust AI"
-          description="Latest: Platform engineering patterns, cost‑efficient inference, SLOs with budgets, and zero‑trust AI supply chains."
+          title="Fresh: Risk Mitigation 2026, Privacy‑Preserving Agents, KPI Policy Tests"
+          description="Guardrails wired to KPIs, privacy‑first agent design, and CI tests teams adopt."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Platform Engineering 2025", category: "Platform", link: "/blog/ai-platform-engineering-2025" },
-            { title: "Serverless Cost Playbook", category: "GenAI", link: "/blog/serverless-inference-cost-playbook-2025" },
-            { title: "AgentOps SLO Handbook", category: "GenAI", link: "/blog/agentops-slo-handbook-2025" },
-            { title: "Zero‑Trust for AI Pipelines", category: "Security", link: "/blog/zero-trust-ai-pipelines-2025" },
-            { title: "Cloud FinOps Guardrails", category: "Cloud", link: "/blog/cloud-finops-guardrails-2025" },
+            { title: "AI Risk Mitigation Playbook 2026", category: "AI Governance", link: "/blog/ai-risk-mitigation-playbook-2026" },
+            { title: "Privacy‑Preserving Agents", category: "AI Security", link: "/blog/privacy-preserving-agents-2026" },
+            { title: "KPI‑Linked Policy Tests", category: "Engineering", link: "/blog/kpi-linked-policy-tests-2025" },
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -788,17 +786,18 @@ const Home = () => {
 
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
-                {["agentic-workflows-blueprint-2025","edge-llm-caching-2025","llm-policy-testing-2025"].map((slug) => {
-                  const item = posts.find(p => p.slug === slug);
-                  if (!item) return null;
-                  const color = slug === "agentic-workflows-blueprint-2025" ? "text-purple-200" : slug === "edge-llm-caching-2025" ? "text-blue-200" : "text-rose-200";
-                  return (
-                    <div key={slug} className="bg-white/10 rounded-xl p-5">
-                      <div className={`text-sm ${color} mb-1`}>{item.category}</div>
-                      <div className="font-semibold text-white">{item.title}</div>
-                    </div>
-                  );
-                })}
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-purple-200 mb-1">GenAI</div>
+                  <div className="font-semibold text-white">Agentic Workflows Blueprint</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-blue-200 mb-1">Architecture</div>
+                  <div className="font-semibold text-white">Edge LLM Caching</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-rose-200 mb-1">Security</div>
+                  <div className="font-semibold text-white">Secure ML Supply Chain</div>
+                </div>
               </div>
             </div>
           </div>
