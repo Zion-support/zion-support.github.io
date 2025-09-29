@@ -1,0 +1,293 @@
+import React from 'react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { 
+  Calendar, 
+  User, 
+  ArrowRight, 
+  Tag,
+  Clock,
+  TrendingUp,
+  Lightbulb,
+  Shield,
+  Zap,
+  Globe
+} from "lucide-react";
+
+const Blog = () => {
+  const blogPosts = [
+    {
+      id: 1,
+      title: "The Future of AI in Enterprise: 2024 Trends and Predictions",
+      excerpt: "Explore the latest AI trends transforming enterprise operations and what to expect in the coming year.",
+      content: "Artificial Intelligence is revolutionizing how enterprises operate, from customer service automation to predictive analytics. This comprehensive guide covers the key trends shaping the future of AI in business.",
+      author: "Dr. Sarah Mitchell",
+      date: "2024-01-15",
+      readTime: "8 min read",
+      category: "AI & Machine Learning",
+      image: "/api/placeholder/600/400",
+      tags: ["AI", "Enterprise", "Trends", "Technology"],
+      featured: true
+    },
+    {
+      id: 2,
+      title: "Cybersecurity Best Practices for Remote Work Environments",
+      excerpt: "Essential security measures to protect your remote workforce and maintain business continuity.",
+      content: "With the rise of remote work, cybersecurity has become more critical than ever. Learn the essential practices to secure your distributed teams.",
+      author: "Michael Chen",
+      date: "2024-01-12",
+      readTime: "6 min read",
+      category: "Cybersecurity",
+      image: "/api/placeholder/600/400",
+      tags: ["Security", "Remote Work", "Best Practices"],
+      featured: false
+    },
+    {
+      id: 3,
+      title: "Cloud Migration Strategies: A Step-by-Step Guide",
+      excerpt: "Navigate the complexities of cloud migration with our proven strategies and expert insights.",
+      content: "Moving to the cloud requires careful planning and execution. This guide provides a comprehensive roadmap for successful cloud migration.",
+      author: "Emily Rodriguez",
+      date: "2024-01-10",
+      readTime: "10 min read",
+      category: "Cloud Solutions",
+      image: "/api/placeholder/600/400",
+      tags: ["Cloud", "Migration", "Strategy"],
+      featured: true
+    },
+    {
+      id: 4,
+      title: "Digital Transformation: Lessons from Industry Leaders",
+      excerpt: "Real-world case studies and insights from companies that successfully transformed their digital operations.",
+      content: "Learn from the experiences of industry leaders who have successfully navigated digital transformation challenges.",
+      author: "David Thompson",
+      date: "2024-01-08",
+      readTime: "7 min read",
+      category: "Digital Transformation",
+      image: "/api/placeholder/600/400",
+      tags: ["Digital Transformation", "Case Studies", "Leadership"],
+      featured: false
+    },
+    {
+      id: 5,
+      title: "Building Scalable Microservices Architecture",
+      excerpt: "Design and implement microservices that can grow with your business needs.",
+      content: "Microservices architecture offers flexibility and scalability. Discover how to build robust, scalable systems.",
+      author: "Lisa Wang",
+      date: "2024-01-05",
+      readTime: "9 min read",
+      category: "Software Development",
+      image: "/api/placeholder/600/400",
+      tags: ["Microservices", "Architecture", "Scalability"],
+      featured: false
+    },
+    {
+      id: 6,
+      title: "Data Analytics: Turning Information into Business Value",
+      excerpt: "Unlock the power of your data with advanced analytics and business intelligence solutions.",
+      content: "Transform raw data into actionable insights that drive business growth and competitive advantage.",
+      author: "James Wilson",
+      date: "2024-01-03",
+      readTime: "5 min read",
+      category: "Data Analytics",
+      image: "/api/placeholder/600/400",
+      tags: ["Data Analytics", "Business Intelligence", "Insights"],
+      featured: false
+    }
+  ];
+
+  const categories = [
+    { name: "AI & Machine Learning", icon: Lightbulb, count: 12 },
+    { name: "Cybersecurity", icon: Shield, count: 8 },
+    { name: "Cloud Solutions", icon: Globe, count: 15 },
+    { name: "Digital Transformation", icon: TrendingUp, count: 10 },
+    { name: "Software Development", icon: Zap, count: 18 }
+  ];
+
+  const featuredPosts = blogPosts.filter(post => post.featured);
+  const recentPosts = blogPosts.filter(post => !post.featured);
+
+  return (
+    <>
+      <Helmet>
+        <title>Tech Blog & Insights | Zion Tech Group</title>
+        <meta name="description" content="Stay updated with the latest technology trends, AI insights, and industry best practices from Zion Tech Group experts." />
+        <meta name="keywords" content="tech blog, AI insights, cybersecurity, cloud computing, digital transformation" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
+        <Header />
+        
+        {/* Hero Section */}
+        <section className="container mx-auto px-6 py-20 relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-slide-up">
+              Tech Blog & Insights
+            </h1>
+            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
+              Stay ahead of the curve with expert insights, industry trends, and cutting-edge technology solutions.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              {categories.slice(0, 5).map((category, index) => (
+                <div key={index} className="bg-zion-blue/20 backdrop-blur-sm border border-zion-blue/30 rounded-full px-4 py-2 text-zion-cyan">
+                  <category.icon className="w-4 h-4 inline mr-2" />
+                  {category.name} ({category.count})
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Posts */}
+        <section className="container mx-auto px-6 py-16">
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">Featured Articles</h2>
+            <p className="text-zion-slate-light text-center">Handpicked insights from our experts</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            {featuredPosts.map((post) => (
+              <article key={post.id} className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="relative overflow-hidden rounded-lg mb-6">
+                  <img 
+                    src={post.image} 
+                    alt={post.title}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-zion-cyan text-zion-blue-dark px-3 py-1 rounded-full text-sm font-semibold">
+                      Featured
+                    </span>
+                  </div>
+                </div>
+                
+                <div className="mb-4">
+                  <span className="text-zion-cyan text-sm font-medium">{post.category}</span>
+                  <h3 className="text-xl font-bold text-white mt-2 mb-3 group-hover:text-zion-cyan transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-zion-slate-light mb-4">{post.excerpt}</p>
+                </div>
+                
+                <div className="flex items-center justify-between text-sm text-zion-slate mb-4">
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center">
+                      <User className="w-4 h-4 mr-1" />
+                      {post.author}
+                    </div>
+                    <div className="flex items-center">
+                      <Calendar className="w-4 h-4 mr-1" />
+                      {new Date(post.date).toLocaleDateString()}
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {post.readTime}
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {post.tags.map((tag, index) => (
+                    <span key={index} className="bg-zion-slate-dark text-zion-slate-light px-2 py-1 rounded text-xs">
+                      <Tag className="w-3 h-3 inline mr-1" />
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                
+                <Link 
+                  to={`/blog/${post.id}`}
+                  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light transition-colors font-semibold group/link"
+                >
+                  Read More
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />
+                </Link>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* Recent Posts */}
+        <section className="bg-zion-slate-dark py-16">
+          <div className="container mx-auto px-6">
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4 text-center">Latest Articles</h2>
+              <p className="text-zion-slate-light text-center">Stay updated with our latest insights</p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {recentPosts.map((post) => (
+                <article key={post.id} className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                  <div className="relative overflow-hidden rounded-lg mb-4">
+                    <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  
+                  <div className="mb-4">
+                    <span className="text-zion-cyan text-sm font-medium">{post.category}</span>
+                    <h3 className="text-lg font-bold text-white mt-2 mb-3 group-hover:text-zion-cyan transition-colors">
+                      {post.title}
+                    </h3>
+                    <p className="text-zion-slate-light text-sm mb-4">{post.excerpt}</p>
+                  </div>
+                  
+                  <div className="flex items-center justify-between text-xs text-zion-slate mb-4">
+                    <div className="flex items-center">
+                      <User className="w-3 h-3 mr-1" />
+                      {post.author}
+                    </div>
+                    <div className="flex items-center">
+                      <Calendar className="w-3 h-3 mr-1" />
+                      {new Date(post.date).toLocaleDateString()}
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="w-3 h-3 mr-1" />
+                      {post.readTime}
+                    </div>
+                  </div>
+                  
+                  <Link 
+                    to={`/blog/${post.id}`}
+                    className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light transition-colors font-semibold text-sm group/link"
+                  >
+                    Read More
+                    <ArrowRight className="w-3 h-3 ml-1 group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Newsletter Signup */}
+        <section className="py-16 bg-gradient-to-r from-zion-blue to-zion-purple">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Stay Updated</h2>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+              Get the latest tech insights, industry trends, and expert advice delivered to your inbox.
+            </p>
+            <div className="max-w-md mx-auto flex gap-4">
+              <input 
+                type="email" 
+                placeholder="Enter your email" 
+                className="flex-1 px-4 py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              />
+              <button className="bg-zion-cyan text-zion-blue-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-blue-light transition-colors">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default Blog;

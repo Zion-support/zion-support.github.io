@@ -10,12 +10,16 @@ import {
   Sparkles,
   Rocket,
   Target,
+  FileText,
+  Award,
+  BookOpen,
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
+import AdvertisingBanner from "../components/AdvertisingBanner";
 
 const Home = () => {
   return (
@@ -53,6 +57,7 @@ const Home = () => {
         />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
+      <AdvertisingBanner />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         {/* Animated background elements */}
@@ -349,6 +354,74 @@ const Home = () => {
 
         {/* Enhanced Testimonials Section */}
         <EnhancedTestimonials />
+
+        {/* Promotional Content Section */}
+        <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/10 to-zion-purple/10 opacity-50"></div>
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up">
+                Latest News & Updates
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+                Stay informed with our latest insights, case studies, and industry developments.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="bg-zion-cyan/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-cyan/30 transition-colors border border-zion-cyan/30">
+                  <FileText className="w-8 h-8 text-zion-cyan group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">New Blog Post</h3>
+                <p className="text-zion-slate-light mb-4">
+                  "The Future of AI in Enterprise: 2024 Trends and Predictions" - Read our comprehensive analysis of emerging AI technologies.
+                </p>
+                <Link 
+                  to="/blog"
+                  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light transition-colors font-semibold group/link"
+                >
+                  Read Article
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
+              <div className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="bg-zion-purple/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-purple/30 transition-colors border border-zion-purple/30">
+                  <Award className="w-8 h-8 text-zion-purple-light group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Case Study</h3>
+                <p className="text-zion-slate-light mb-4">
+                  "Enterprise AI Platform for Fortune 500 Retailer" - Discover how we helped a major retailer achieve 40% cost reduction.
+                </p>
+                <Link 
+                  to="/portfolio"
+                  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light transition-colors font-semibold group/link"
+                >
+                  View Case Study
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
+              <div className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="bg-zion-blue-light/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-blue-light/30 transition-colors border border-zion-blue-light/30">
+                  <BookOpen className="w-8 h-8 text-zion-blue-light group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Free Resources</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Download our latest whitepaper: "The Complete Guide to AI Implementation in Enterprise" - 50 pages of expert insights.
+                </p>
+                <Link 
+                  to="/resources"
+                  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light transition-colors font-semibold group/link"
+                >
+                  Download Free
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple relative overflow-hidden">

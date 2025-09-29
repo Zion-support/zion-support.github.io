@@ -52,6 +52,12 @@ export default function Header() {
               Blog
             </Link>
             <Link
+              to="/resources"
+              className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
+            >
+              Resources
+            </Link>
+            <Link
               to="/contact"
               className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
             >
@@ -123,6 +129,13 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog
+              </Link>
+              <Link
+                to="/resources"
+                className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Resources
               </Link>
               <Link
                 to="/contact"
