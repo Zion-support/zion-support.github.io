@@ -72,9 +72,7 @@ class AccessibilityEnhancer {
     this.performanceObserver?.disconnect();
     
     // Cleanup event listeners
-    document.removeEventListener('keydown', this.handleKeyDown.bind(this));
-    document.removeEventListener('focusin', this.handleFocusIn.bind(this));
-    document.removeEventListener('focusout', this.handleFocusOut.bind(this));
+    // Note: listeners were added with inline lambdas; no-op here as we don't hold references
     
     this.isInitialized = false;
     this.focusTrapElements = [];
@@ -102,9 +100,7 @@ class AccessibilityEnhancer {
   /**
    * Backward-compatible initialize alias
    */
-  public initialize(): void {
-    this.init();
-  }
+  
 
   private setupKeyboardNavigation(): void {
     if (!this.config.keyboardNavigation) return;
