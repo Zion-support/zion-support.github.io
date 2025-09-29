@@ -10,39 +10,34 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-    slug: "ai-governance-risk-playbook-2025",
-    title: "AI Governance Risk Playbook 2025: Practical Controls That Work",
-=======
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
->>>>>>> cursor/create-and-deploy-new-content-a1d5
     description:
-      "Actionable controls, approval flows, and monitoring that keep GenAI initiatives safe and compliant.",
-    category: "AI Governance",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read",
-  },
-  {
-    slug: "edge-e2e-observability",
-    title: "End‑to‑End Observability for Edge Apps",
-    description:
-      "Trace user actions across edge, APIs, and clients with budgets that prevent regressions.",
-    category: "Observability",
-    publishedAt: "2025-09-30",
+      "A pragmatic checklist for hardening pilots, proving ROI, and launching AI features safely.",
+    category: "Product",
+    publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read",
   },
   {
-    slug: "cost-aware-mlops",
-    title: "Cost‑Aware MLOps: Quality Gates Without Exploding Spend",
+    slug: "mlops-in-45-days",
+    title: "MLOps in 45 Days: Shipping Reliable Models Fast",
     description:
-      "Right‑size evals, cache embeddings, and enforce rollout policies to control inference costs.",
+      "Reference pipelines, eval gates, and rollout patterns to move from notebook to prod quickly.",
     category: "MLOps",
-    publishedAt: "2025-09-30",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "practical-rag-architecture",
+    title: "Practical RAG Architecture That Scales",
+    description:
+      "Chunking, indexing, and retrieval strategies that actually improve answer quality at lower cost.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
     featured: false,
-    readTime: "5 min read",
+    readTime: "6 min read",
   },
   {
     slug: "edge-inference-patterns-2025",
@@ -93,26 +88,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "9 min read",
-  },
-  {
-    slug: "genai-telemetry-metrics-2025",
-    title: "GenAI Telemetry: 8 Metrics That Predict Drift",
-    description:
-      "Capture inputs, policies, and feedback to detect regressions before users do.",
-    category: "MLOps",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "5 min read",
-  },
-  {
-    slug: "feature-flags-edge-realtime",
-    title: "Real‑Time Feature Flags at the Edge",
-    description:
-      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
-    category: "Architecture",
-    publishedAt: "2025-09-28",
-    featured: false,
-    readTime: "6 min read",
   },
   {
     slug: "genai-guardrails-in-the-wild",
@@ -319,6 +294,96 @@ export const posts: BlogPost[] = [
       "Framework for developing AI systems that are fair, transparent, and compliant with emerging regulations.",
     category: "AI Governance",
     publishedAt: "2025-01-05",
+  },
+  {
+    slug: "ai-powered-business-automation-2025",
+    title: "AI-Powered Business Automation: The Complete 2025 Guide",
+    description:
+      "Transform your business operations with cutting-edge AI automation. Learn implementation strategies, ROI calculations, and real-world success stories.",
+    category: "AI & Automation",
+    publishedAt: "2025-01-21",
+    featured: true,
+    readTime: "12 min read",
+  },
+  {
+    slug: "next-gen-cloud-infrastructure",
+    title: "Next-Generation Cloud Infrastructure: Scaling for 2025 and Beyond",
+    description:
+      "Discover the latest cloud technologies and infrastructure patterns that are reshaping how businesses scale their operations.",
+    category: "Cloud Strategy",
+    publishedAt: "2025-01-21",
+    featured: true,
+    readTime: "10 min read",
+  },
+  {
+    slug: "enterprise-ai-implementation-roadmap",
+    title: "Enterprise AI Implementation: A Strategic Roadmap for 2025",
+    description:
+      "Navigate the complexities of enterprise AI adoption with our comprehensive roadmap covering strategy, implementation, and governance.",
+    category: "AI Strategy",
+    publishedAt: "2025-01-21",
+    featured: true,
+    readTime: "15 min read",
+  },
+  {
+    slug: "micro-saas-platform-architecture",
+    title: "Building Scalable Micro SAAS Platforms: Architecture Patterns and Best Practices",
+    description:
+      "Learn how to design and implement micro SAAS platforms that can scale to millions of users while maintaining performance and reliability.",
+    category: "Platform Engineering",
+    publishedAt: "2025-01-21",
+    featured: false,
+    readTime: "11 min read",
+  },
+  {
+    slug: "ai-ethics-responsible-deployment",
+    title: "AI Ethics and Responsible Deployment: Building Trust in AI Systems",
+    description:
+      "Essential guidelines for deploying AI systems responsibly, ensuring fairness, transparency, and accountability in your AI initiatives.",
+    category: "AI Governance",
+    publishedAt: "2025-01-21",
+    featured: false,
+    readTime: "9 min read",
+  },
+  {
+    slug: "ai-autonomous-operations-revolution",
+    title: "The AI Autonomous Operations Revolution: Self-Managing Infrastructure",
+    description:
+      "Discover how AI autonomous operations are revolutionizing infrastructure management. Learn about self-healing systems, predictive maintenance, and autonomous scaling.",
+    category: "AI & Automation",
+    publishedAt: "2025-01-20",
+    featured: true,
+    readTime: "11 min read",
+  },
+  {
+    slug: "next-gen-cybersecurity-ai-powered-defense",
+    title: "Next-Generation Cybersecurity: AI-Powered Defense Systems",
+    description:
+      "Explore how AI is revolutionizing cybersecurity with intelligent threat detection, automated response, and predictive security analytics.",
+    category: "Cybersecurity",
+    publishedAt: "2025-01-19",
+    featured: true,
+    readTime: "13 min read",
+  },
+  {
+    slug: "cloud-native-microservices-2025",
+    title: "Cloud-Native Microservices: Patterns for 2025",
+    description:
+      "Essential patterns and practices for building scalable, resilient microservices architectures in modern cloud environments.",
+    category: "Architecture",
+    publishedAt: "2025-01-18",
+    featured: true,
+    readTime: "10 min read",
+  },
+  {
+    slug: "enterprise-ai-governance-framework",
+    title: "Enterprise AI Governance Framework: From Strategy to Implementation",
+    description:
+      "Comprehensive governance framework for enterprise AI adoption, covering policy, risk management, and operational excellence.",
+    category: "AI Governance",
+    publishedAt: "2025-01-17",
+    featured: true,
+    readTime: "12 min read",
   },
 ];
 
