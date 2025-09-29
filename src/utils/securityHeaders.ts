@@ -35,9 +35,11 @@ export class SecurityManager {
     this.config = this.getDefaultConfig();
   }
 
-  // No-op initializer to provide a stable optional init hook for callers
+  // Added for compatibility with callers expecting an initialize() lifecycle
   public initialize(): void {
-    // Intentionally empty. Reserved for future side effects.
+    // No-op initialization hook; retained for API compatibility
+    // Could precompute CSP header string or perform runtime checks here
+    void this.config;
   }
 
   private getDefaultConfig(): SecurityConfig {
@@ -76,8 +78,6 @@ export class SecurityManager {
       }
     };
   }
-
-
 
   public getCSPDirective(): string {
     const { csp } = this.config;

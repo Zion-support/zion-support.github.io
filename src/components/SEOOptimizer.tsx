@@ -1,9 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export interface SEOOptimizerProps {
-  title: string;
-  description: string;
+interface SEOOptimizerProps {
+  title?: string;
+  description?: string;
   keywords?: string;
   canonicalUrl?: string;
   ogImage?: string;
@@ -13,13 +13,14 @@ export interface SEOOptimizerProps {
   noindex?: boolean;
 }
 
-export interface SEOData {
+type SEOData = {
   title: string;
   description: string;
-  canonical: string;
-}
+  canonical?: string;
+};
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+// Support both explicit props and a combined seoData prop for convenience
+const SEOOptimizer: React.FC<SEOOptimizerProps & { seoData?: SEOData }> = ({
   title,
   description,
   keywords,
@@ -28,8 +29,18 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,
-  noindex = false
+  noindex = false,
+  seoData
 }) => {
+  if (seoData) {
+    title = seoData.title;
+    description = seoData.description;
+    canonicalUrl = seoData.canonical;
+  }
+
+  // Fallbacks if minimal props were provided
+  title = title ?? 'Zion Tech Group';
+  description = description ?? 'Advanced AI and IT solutions.';
   const siteName = 'Zion Tech Group';
   const siteUrl = 'https://ziontechgroup.com';
   const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;
