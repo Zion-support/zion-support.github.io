@@ -390,5 +390,65 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "7 min read",
   },
+  {
+    slug: "llm-blue-green-evals",
+    title: "Blue/Green for LLMs: Evals as Release Gates",
+    description:
+      "Ship LLM changes with confidence using blue/green cohorts tied to online evals and guardrails.",
+    category: "MLOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "agent-observability-playbook",
+    title: "Agent Observability: Traces, Tokens, and Task Outcomes",
+    description:
+      "A practical telemetry model for agentic systems covering spans, retries, function calls, and cost.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
+    slug: "multi-tenant-guardrails",
+    title: "Multi‑Tenant Guardrails Without Slowing Teams",
+    description:
+      "Policy packs, namespace isolation, and per‑tenant budgets that scale across dozens of products.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "5 min read",
+  },
+  {
+    slug: "finetune-to-rag-transition",
+    title: "When to Switch from Fine‑Tuning to RAG (and Back)",
+    description:
+      "Decision framework weighing cost, latency, data churn, and quality for production GenAI.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "real-time-feature-stores",
+    title: "Real‑Time Feature Stores That Don’t Break the Bank",
+    description:
+      "Online/offline sync, freshness SLAs, and caching strategies that balance accuracy and spend.",
+    category: "Data Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "cost-aware-routing",
+    title: "Cost‑Aware Routing Across Models and Vendors",
+    description:
+      "SLO‑driven policy routing that blends quality, latency, and dollar budgets automatically.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "6 min read",
+  },
 ];
 
