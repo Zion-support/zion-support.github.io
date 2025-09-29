@@ -45,18 +45,11 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 7,
   },
   {
-    id: "governance-policy-testing",
-    title: "Governance for AI: Policy Testing That Scales",
-    summary:
-      "Pair signals, context windows, and human feedback to harden detections and accelerate triage.",
-    category: "Security",
     id: "edge-observability-blueprint",
     title: "Edge Observability Blueprint: Sub‑100ms Reliability",
     summary:
       "Latency budgets, client ↔ edge traces, and error budgets that keep UX snappy.",
     category: "Observability",
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9d64
     date: "2025-09-30",
     readMinutes: 5,
   },
@@ -132,7 +125,6 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-10-01",
     readMinutes: 6,
   },
-<<<<<<< HEAD
   {
     id: "platform-golden-paths-insight",
     title: "Golden Paths That Teams Actually Use",
@@ -242,7 +234,6 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-09-29",
     readMinutes: 8,
   },
-=======
   // Fresh insights
   {
     id: "secure-ml-supply-chain",
@@ -262,6 +253,5 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-10-01",
     readMinutes: 5,
   },
->>>>>>> cursor/create-and-deploy-new-content-a3e4
 ];
 

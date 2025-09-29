@@ -345,8 +345,6 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "9 min read",
   },
-<<<<<<< HEAD
-=======
   // Newly added posts (2025-09-30 / 2025-09-29)
   {
     slug: "serverless-inference-cost-playbook-2025",
@@ -409,6 +407,5 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "9 min read",
   },
->>>>>>> cursor/create-and-deploy-new-content-a3e4
 ];
 
