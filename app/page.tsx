@@ -61,27 +61,37 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-      {/* New Content Promo Strip */}
-      <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
-          <div className="flex items-center gap-2 text-sm md:text-base">
-            <span>🚀 NEW 2026 Content:</span>
-            <a to="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
-            <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</a>
-            <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</a>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</Link>
-            <span className="hidden md:inline">•</span>
-            <a to="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</a>
+      {/* Enhanced New Content Promo Strip */}
+      <div className="w-full bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-10"></div>
+        <div className="relative max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center gap-3 md:gap-6 justify-between">
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+            <div className="flex items-center gap-2">
+              <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">🚀 NEW 2026</span>
+              <span className="text-lg font-semibold">Revolutionary AI Content:</span>
+            </div>
+            <div className="flex flex-wrap items-center gap-2 md:gap-4 text-sm md:text-base">
+              <Link href="/blog/ai-agent-orchestration-2026" className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-md transition-colors">AI Agent Orchestration</Link>
+              <Link href="/blog/ai-sustainability-green-tech-2026" className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-md transition-colors">AI Sustainability</Link>
+              <Link href="/blog/ai-quantum-computing-2026" className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-md transition-colors">Quantum Computing</Link>
+              <Link href="/case-studies/ai-sustainability-transformation-2026" className="bg-green-500/80 hover:bg-green-500 px-3 py-1 rounded-md transition-colors font-semibold">$10M ROI Case Study</Link>
+              <Link href="/case-studies/ai-quantum-optimization-2026" className="bg-purple-500/80 hover:bg-purple-500 px-3 py-1 rounded-md transition-colors font-semibold">1000x Speed Improvement</Link>
+            </div>
           </div>
-          <Link
-            to="/blog"
-            className="bg-white text-green-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
-          >
-            Read the latest
-          </Link>
+          <div className="flex gap-2">
+            <Link
+              href="/blog"
+              className="bg-white text-green-700 hover:bg-gray-100 px-4 py-2 rounded-md text-sm font-semibold transition-colors shadow-lg"
+            >
+              📚 Read Latest
+            </Link>
+            <Link
+              href="/case-studies"
+              className="bg-yellow-400 text-black hover:bg-yellow-500 px-4 py-2 rounded-md text-sm font-semibold transition-colors shadow-lg"
+            >
+              📊 View Case Studies
+            </Link>
+          </div>
         </div>
       </div>
       {/* Promotional Banners */}
@@ -123,6 +133,9 @@ export default function HomePage() {
       
       {/* AI Innovation Showcase Banner 2026 */}
       <AIInnovationShowcaseBanner2026 />
+      
+      {/* New Content 2026 Showcase Banner */}
+      <NewContent2026ShowcaseBanner />
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -270,11 +283,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Dynamic Content Showcase */}
-      <ContentShowcase />
-      
       {/* Interactive Content Hub */}
       <InteractiveContentShowcase />
+      
+      {/* Dynamic Content Showcase */}
+      <ContentShowcase />
       
       {/* Interactive Content Recommendations */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
