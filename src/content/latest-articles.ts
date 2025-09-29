@@ -17,6 +17,22 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-autonomous-cloud-ops-2026",
+    slug: "ai-autonomous-cloud-ops-2026",
+    title: "AI Autonomous Cloud Operations 2026",
+    description: "Self-healing cloud with policy-backed automations and KPI-aligned guardrails.",
+    excerpt: "Design a self-healing, policy-driven cloud that delivers 99.9% uptime and up to 90% cost reduction.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Operations",
+    tags: ["Cloud", "Automation", "Guardrails", "SRE"],
+    featured: true,
+    readTime: "18 min read",
+    image: "/images/ai-autonomous-cloud-ops-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "zero-trust-for-genai-2026",
     slug: "zero-trust-for-genai-2026",
     title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",

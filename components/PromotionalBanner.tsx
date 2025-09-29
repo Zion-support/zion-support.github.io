@@ -83,9 +83,9 @@ export default function PromotionalBanner({
 // Pre-configured banner variants
 export const NewContentBanner = () => (
   <PromotionalBanner
-    message="🎉 New: AI Roadmaps 2026, GenAI Guardrails Blueprints, FinOps Scorecards"
-    ctaText="Read the latest"
-    ctaLink="/blog"
+    message="🎉 New: AI Autonomous Cloud Ops 2026 — 99.9% uptime with zero‑touch ops"
+    ctaText="Read the article"
+    ctaLink="/blog/ai-autonomous-cloud-ops-2026"
     backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
     autoHide={true}
     hideAfter={18}
