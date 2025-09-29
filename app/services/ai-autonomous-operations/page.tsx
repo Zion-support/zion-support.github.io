@@ -1,385 +1,293 @@
 import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Brain, Shield, Zap, Users, TrendingUp, CheckCircle, Star } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import {
+  Brain,
+  Shield,
+  Zap,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Users,
+  Award,
+  Target,
+  Clock,
+  DollarSign,
+  BarChart3,
+  Settings,
+  Activity,
+} from 'lucide-react';
 
-export const metadata = {
-  title: 'AI Autonomous Operations - Zion Tech Group',
-  description: 'Revolutionary AI-powered autonomous operations platform that manages your entire infrastructure without human intervention. Self-healing, self-optimizing, and self-scaling.',
-  keywords: 'AI autonomous operations, self-healing infrastructure, AIOps, autonomous systems, intelligent automation',
-};
+export default function AIAutonomousOperationsPage() {
+  const features = [
+    {
+      icon: Brain,
+      title: "Self-Healing Infrastructure",
+      description: "Automatically detects and resolves issues before they impact your business operations.",
+      benefits: ["99.9% uptime guarantee", "Instant problem resolution", "Zero manual intervention"]
+    },
+    {
+      icon: Zap,
+      title: "Self-Optimizing Performance",
+      description: "Continuously monitors and optimizes system performance for maximum efficiency.",
+      benefits: ["75% cost reduction", "60% performance improvement", "Real-time optimization"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Self-Scaling Resources",
+      description: "Intelligently scales resources based on demand patterns and business needs.",
+      benefits: ["Automatic scaling", "Predictive capacity planning", "Cost-effective resource usage"]
+    },
+    {
+      icon: Shield,
+      title: "Advanced Security",
+      description: "AI-powered security monitoring and threat detection with automatic response.",
+      benefits: ["Real-time threat detection", "Automated security patches", "Compliance monitoring"]
+    }
+  ];
 
-export default function AIAutonomousOperations() {
+  const stats = [
+    { icon: Users, value: "500+", label: "Companies Using AI Ops" },
+    { icon: Award, value: "99.9%", label: "Uptime SLA" },
+    { icon: DollarSign, value: "75%", label: "Cost Reduction" },
+    { icon: Star, value: "4.9/5", label: "Client Rating" },
+  ];
+
+  const useCases = [
+    {
+      title: "E-commerce Platform",
+      description: "Automatically handled Black Friday traffic spikes with zero downtime",
+      result: "300% traffic increase handled seamlessly"
+    },
+    {
+      title: "Financial Services",
+      description: "Prevented security breaches and ensured compliance automatically",
+      result: "100% compliance rate achieved"
+    },
+    {
+      title: "Manufacturing",
+      description: "Optimized production line efficiency with predictive maintenance",
+      result: "40% reduction in downtime"
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
-              NEW: Revolutionary AI Autonomous Operations
+    <>
+      <Helmet>
+        <title>AI Autonomous Operations - Zion Tech Group | Self-Managing Infrastructure</title>
+        <meta
+          name="description"
+          content="Revolutionary AI Autonomous Operations that manages your entire infrastructure autonomously. Self-healing, self-optimizing, self-scaling with 99.9% uptime guarantee."
+        />
+        <meta
+          name="keywords"
+          content="AI autonomous operations, self-healing infrastructure, AI ops, infrastructure automation, self-managing systems"
+        />
+        <meta property="og:title" content="AI Autonomous Operations - Zion Tech Group" />
+        <meta
+          property="og:description"
+          content="Revolutionary AI that manages your entire infrastructure autonomously - Self-healing, self-optimizing, self-scaling!"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/services/ai-autonomous-operations" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Autonomous Operations - Zion Tech Group" />
+        <meta
+          name="twitter:description"
+          content="Revolutionary AI that manages your entire infrastructure autonomously"
+        />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-autonomous-operations" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-red-900 via-red-800 to-orange-900">
+        {/* Hero Section */}
+        <section className="container mx-auto px-6 py-20 relative">
+          <div className="text-center max-w-5xl mx-auto">
+            {/* Badge */}
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-red-500/20 text-red-400 text-sm font-medium mb-8 border border-red-500/30">
+              <Brain className="w-4 h-4 mr-2 animate-pulse" />
+              Revolutionary AI Technology - 2025
             </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              AI Autonomous Operations
+
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+                AI Autonomous Operations
+              </span>
             </h1>
-            
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              The world's first truly autonomous infrastructure management platform. 
-              Your systems run themselves, optimize themselves, and heal themselves.
+
+            <p className="text-xl md:text-2xl text-red-100 mb-8 leading-relaxed max-w-3xl mx-auto">
+              🚀 Revolutionary AI that manages your entire infrastructure autonomously - 
+              Self-healing, self-optimizing, self-scaling! Experience the future of infrastructure management.
             </p>
-            
+
+            {/* Special Offer Banner */}
+            <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-xl p-6 mb-8">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Star className="w-6 h-6 text-green-400 animate-pulse" />
+                <span className="text-lg font-bold text-green-400">🎯 LIMITED TIME OFFER</span>
+                <Star className="w-6 h-6 text-green-400 animate-pulse" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                50% OFF Your First 3 Months + FREE AI Strategy Consultation
+              </p>
+              <p className="text-red-100 text-sm mb-4">
+                Valid until March 31, 2025 • Transform your infrastructure today
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <button className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors">
+                  Start Free Trial
+                </button>
+                <button className="border border-green-400 text-green-400 px-6 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-colors">
+                  Schedule Demo
+                </button>
+              </div>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center group hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl font-bold text-red-400 group-hover:text-orange-400 transition-colors">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-red-200">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="container mx-auto px-6 py-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              How AI Autonomous Operations Works
+            </h2>
+            <p className="text-xl text-red-100 max-w-3xl mx-auto">
+              Our revolutionary AI system continuously monitors, learns, and optimizes your infrastructure without human intervention.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="bg-red-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-red-500/30">
+                  <feature.icon className="w-8 h-8 text-red-400" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-red-100 mb-6 leading-relaxed">
+                  {feature.description}
+                </p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-red-100">
+                      <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
+                      <span className="text-sm">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="bg-red-900/50 py-20">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Real-World Success Stories
+              </h2>
+              <p className="text-xl text-red-100 max-w-2xl mx-auto">
+                See how companies are transforming their operations with AI Autonomous Operations
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                  <div className="bg-gradient-to-r from-red-500 to-orange-500 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                    <Target className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
+                  <p className="text-red-100 mb-4 leading-relaxed">{useCase.description}</p>
+                  <div className="text-red-400 font-bold text-lg">{useCase.result}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="container mx-auto px-6 py-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose AI Autonomous Operations?
+            </h2>
+            <p className="text-xl text-red-100 max-w-2xl mx-auto">
+              Experience unprecedented levels of reliability, efficiency, and cost savings
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="bg-red-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 border border-red-500/30">
+                <Clock className="w-10 h-10 text-red-400" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">24/7 Monitoring</h3>
+              <p className="text-red-100">
+                Continuous monitoring and optimization with zero downtime. Your infrastructure never sleeps.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-red-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 border border-red-500/30">
+                <DollarSign className="w-10 h-10 text-red-400" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Cost Optimization</h3>
+              <p className="text-red-100">
+                Reduce operational costs by up to 75% through intelligent resource management and optimization.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-red-500/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 border border-red-500/30">
+                <BarChart3 className="w-10 h-10 text-red-400" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Performance Gains</h3>
+              <p className="text-red-100">
+                Achieve up to 60% performance improvement through continuous optimization and predictive scaling.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-gradient-to-r from-red-600 to-orange-600 py-20">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Infrastructure?
+            </h2>
+            <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
+              Join 500+ companies already using AI Autonomous Operations to revolutionize their infrastructure management.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
-              >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                href="#demo"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-              >
-                Watch Demo
-              </Link>
+              <button className="bg-white text-red-600 hover:bg-red-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 group">
+                <Settings className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+                Start Your Free Trial
+              </button>
+              <button className="border-2 border-white text-white hover:bg-white hover:text-red-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
+                <Activity className="w-5 h-5" />
+                Schedule Demo
+              </button>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Features Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Autonomous by Design
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI doesn't just monitor your systems—it actively manages, optimizes, and evolves them continuously.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="bg-green-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Self-Healing Infrastructure</h3>
-              <p className="text-gray-600 mb-6">
-                Automatically detects, diagnoses, and resolves issues before they impact your users. 
-                Our AI learns from every incident to prevent future occurrences.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
-                  Real-time anomaly detection
-                </li>
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
-                  Automated incident response
-                </li>
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
-                  Predictive failure prevention
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                <Zap className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Intelligent Optimization</h3>
-              <p className="text-gray-600 mb-6">
-                Continuously optimizes performance, costs, and resource allocation based on real-time demand patterns 
-                and business objectives.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 mr-2 text-blue-500" />
-                  Dynamic resource scaling
-                </li>
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 mr-2 text-blue-500" />
-                  Cost optimization algorithms
-                </li>
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 mr-2 text-blue-500" />
-                  Performance tuning
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="bg-purple-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                <Brain className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Continuous Learning</h3>
-              <p className="text-gray-600 mb-6">
-                Our AI learns from every interaction, improving its decision-making capabilities over time 
-                and adapting to your unique environment.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 mr-2 text-purple-500" />
-                  Machine learning models
-                </li>
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 mr-2 text-purple-500" />
-                  Pattern recognition
-                </li>
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 mr-2 text-purple-500" />
-                  Adaptive algorithms
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-gray-900 text-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Proven Results</h2>
-            <p className="text-xl text-gray-300">
-              See how autonomous operations transform businesses
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Uptime Improvement</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">75%</div>
-              <div className="text-gray-300">Cost Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">90%</div>
-              <div className="text-gray-300">Faster Resolution</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-yellow-400 mb-2">24/7</div>
-              <div className="text-gray-300">Autonomous Monitoring</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-xl text-gray-600">
-              Choose the plan that fits your autonomous operations needs
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Starter</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-6">
-                $299<span className="text-lg text-gray-500">/month</span>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-3 text-green-500" />
-                  <span>Up to 10 systems</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-3 text-green-500" />
-                  <span>Basic self-healing</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-3 text-green-500" />
-                  <span>24/7 monitoring</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-3 text-green-500" />
-                  <span>Email support</span>
-                </li>
-              </ul>
-              <Link
-                href="/contact"
-                className="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
-              >
-                Get Started
-              </Link>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 border-2 border-blue-500 relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                  Most Popular
-                </span>
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Professional</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-6">
-                $799<span className="text-lg text-gray-500">/month</span>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-3 text-green-500" />
-                  <span>Up to 50 systems</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-3 text-green-500" />
-                  <span>Advanced self-healing</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-3 text-green-500" />
-                  <span>Intelligent optimization</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-3 text-green-500" />
-                  <span>Priority support</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-3 text-green-500" />
-                  <span>Custom integrations</span>
-                </li>
-              </ul>
-              <Link
-                href="/contact"
-                className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-600 transition-colors"
-              >
-                Start Free Trial
-              </Link>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Enterprise</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-6">
-                Custom
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-3 text-green-500" />
-                  <span>Unlimited systems</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-3 text-green-500" />
-                  <span>Full autonomous control</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-3 text-green-500" />
-                  <span>Custom AI models</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-3 text-green-500" />
-                  <span>Dedicated support</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-3 text-green-500" />
-                  <span>On-premise deployment</span>
-                </li>
-              </ul>
-              <Link
-                href="/contact"
-                className="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
-              >
-                Contact Sales
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              What Our Clients Say
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <div className="flex mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-600 mb-6 italic">
-                "AI Autonomous Operations transformed our infrastructure. We've seen a 99.9% uptime improvement 
-                and reduced our operational costs by 75%. It's like having a team of expert engineers working 24/7."
-              </p>
-              <div>
-                <div className="font-semibold text-gray-900">Sarah Chen</div>
-                <div className="text-sm text-gray-500">CTO, TechFlow Inc.</div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <div className="flex mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-600 mb-6 italic">
-                "The self-healing capabilities are incredible. Issues that used to take hours to resolve 
-                are now fixed automatically in minutes. Our team can focus on innovation instead of firefighting."
-              </p>
-              <div>
-                <div className="font-semibold text-gray-900">Michael Rodriguez</div>
-                <div className="text-sm text-gray-500">VP Engineering, CloudScale</div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <div className="flex mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-600 mb-6 italic">
-                "This is the future of infrastructure management. The AI learns from our environment 
-                and continuously improves. We've never had such reliable and efficient operations."
-              </p>
-              <div>
-                <div className="font-semibold text-gray-900">Jennifer Park</div>
-                <div className="text-sm text-gray-500">Director of Operations, DataFirst</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Go Autonomous?
-          </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-            Join the future of infrastructure management. Start your free trial today and experience 
-            truly autonomous operations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
-            >
-              Start Free Trial
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link
-              href="/contact"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-            >
-              Schedule Demo
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 }

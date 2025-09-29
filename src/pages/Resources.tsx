@@ -137,17 +137,157 @@ const Resources = () => {
       tags: ["DevOps", "Checklist", "Implementation"],
       featured: false,
       downloadUrl: "/resources/devops-implementation-checklist.pdf"
+    },
+    {
+      id: 9,
+      title: "AI ROI Calculator 2025",
+      type: "Tool",
+      icon: TrendingUp,
+      description: "Interactive calculator to estimate ROI for AI implementations including automation, analytics, and virtual assistants.",
+      downloadCount: "3.2k",
+      rating: 4.9,
+      pages: "Interactive",
+      category: "AI & Machine Learning",
+      tags: ["AI", "ROI", "Calculator", "Business Case"],
+      featured: true,
+      downloadUrl: "/resources/ai-roi-calculator-2025.xlsx"
+    },
+    {
+      id: 10,
+      title: "Zero Trust Security Implementation Guide",
+      type: "Whitepaper",
+      icon: Shield,
+      description: "Complete guide to implementing Zero Trust security architecture with step-by-step instructions and best practices.",
+      downloadCount: "2.8k",
+      rating: 4.8,
+      pages: 45,
+      category: "Cybersecurity",
+      tags: ["Zero Trust", "Security", "Architecture", "Implementation"],
+      featured: true,
+      downloadUrl: "/resources/zero-trust-implementation-guide.pdf"
+    },
+    {
+      id: 11,
+      title: "Enterprise AI Strategy Template",
+      type: "Template",
+      icon: FileText,
+      description: "Comprehensive template for developing AI strategy including assessment frameworks, roadmaps, and success metrics.",
+      downloadCount: "1.9k",
+      rating: 4.7,
+      pages: 30,
+      category: "AI & Machine Learning",
+      tags: ["AI Strategy", "Template", "Planning", "Framework"],
+      featured: false,
+      downloadUrl: "/resources/enterprise-ai-strategy-template.docx"
+    },
+    {
+      id: 12,
+      title: "Webinar: Future of AI in Business",
+      type: "Webinar",
+      icon: Play,
+      description: "Expert discussion on AI trends, challenges, and opportunities for businesses in 2025 and beyond.",
+      downloadCount: "4.1k",
+      rating: 4.9,
+      duration: "60 min",
+      category: "AI & Machine Learning",
+      tags: ["AI", "Future", "Business", "Trends", "Webinar"],
+      featured: true,
+      downloadUrl: "/resources/future-ai-business-webinar.mp4"
+    },
+    {
+      id: 13,
+      title: "Cloud Cost Optimization Playbook",
+      type: "Playbook",
+      icon: Cloud,
+      description: "Proven strategies and tactics for reducing cloud costs while maintaining performance and reliability.",
+      downloadCount: "2.3k",
+      rating: 4.8,
+      pages: 35,
+      category: "Cloud & DevOps",
+      tags: ["Cloud", "Cost Optimization", "Strategy", "Best Practices"],
+      featured: false,
+      downloadUrl: "/resources/cloud-cost-optimization-playbook.pdf"
+    },
+    {
+      id: 14,
+      title: "AI Ethics Assessment Tool",
+      type: "Tool",
+      icon: Shield,
+      description: "Interactive assessment tool to evaluate AI systems for bias, fairness, and ethical considerations.",
+      downloadCount: "1.7k",
+      rating: 4.6,
+      pages: "Interactive",
+      category: "AI & Machine Learning",
+      tags: ["AI Ethics", "Assessment", "Bias", "Fairness"],
+      featured: false,
+      downloadUrl: "/resources/ai-ethics-assessment-tool.xlsx"
+    },
+    {
+      id: 15,
+      title: "Digital Transformation Readiness Assessment",
+      type: "Assessment",
+      icon: TrendingUp,
+      description: "Comprehensive assessment tool to evaluate your organization's readiness for digital transformation.",
+      downloadCount: "2.6k",
+      rating: 4.8,
+      pages: "Interactive",
+      category: "Digital Transformation",
+      tags: ["Assessment", "Readiness", "Digital Transformation", "Strategy"],
+      featured: true,
+      downloadUrl: "/resources/digital-transformation-assessment.xlsx"
+    },
+    {
+      id: 16,
+      title: "Microservices Architecture Patterns",
+      type: "Technical Guide",
+      icon: Database,
+      description: "Essential patterns and anti-patterns for designing scalable microservices architectures.",
+      downloadCount: "1.8k",
+      rating: 4.7,
+      pages: 28,
+      category: "Web Development",
+      tags: ["Microservices", "Architecture", "Patterns", "Scalability"],
+      featured: false,
+      downloadUrl: "/resources/microservices-architecture-patterns.pdf"
+    },
+    {
+      id: 17,
+      title: "Executive Brief: AI Investment Priorities",
+      type: "Executive Brief",
+      icon: TrendingUp,
+      description: "Strategic insights for executives on prioritizing AI investments and maximizing business value.",
+      downloadCount: "1.4k",
+      rating: 4.8,
+      pages: 12,
+      category: "AI & Machine Learning",
+      tags: ["AI Investment", "Strategy", "Executive", "Business Value"],
+      featured: false,
+      downloadUrl: "/resources/ai-investment-priorities-executive-brief.pdf"
+    },
+    {
+      id: 18,
+      title: "Cybersecurity Incident Response Playbook",
+      type: "Playbook",
+      icon: Shield,
+      description: "Step-by-step guide for responding to cybersecurity incidents with templates and best practices.",
+      downloadCount: "2.1k",
+      rating: 4.9,
+      pages: 40,
+      category: "Cybersecurity",
+      tags: ["Incident Response", "Security", "Playbook", "Emergency"],
+      featured: true,
+      downloadUrl: "/resources/cybersecurity-incident-response-playbook.pdf"
     }
   ];
 
   const categories = [
-    { name: "AI & Machine Learning", icon: Lightbulb, count: 8 },
-    { name: "Cybersecurity", icon: Shield, count: 5 },
-    { name: "Cloud & DevOps", icon: Cloud, count: 6 },
-    { name: "Digital Transformation", icon: TrendingUp, count: 4 },
+    { name: "AI & Machine Learning", icon: Lightbulb, count: 12 },
+    { name: "Cybersecurity", icon: Shield, count: 8 },
+    { name: "Cloud & DevOps", icon: Cloud, count: 8 },
+    { name: "Digital Transformation", icon: TrendingUp, count: 6 },
     { name: "Mobile Development", icon: Smartphone, count: 3 },
     { name: "Data Analytics", icon: Database, count: 4 },
-    { name: "Web Development", icon: Monitor, count: 2 }
+    { name: "Web Development", icon: Monitor, count: 3 }
   ];
 
   const featuredResources = resources.filter(resource => resource.featured);
@@ -168,6 +308,8 @@ const Resources = () => {
       case "Tool": return Database;
       case "Webinar": return Play;
       case "Checklist": return CheckCircle;
+      case "Template": return FileText;
+      case "Assessment": return TrendingUp;
       default: return FileText;
     }
   };
