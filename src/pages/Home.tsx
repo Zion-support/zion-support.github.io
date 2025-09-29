@@ -162,22 +162,18 @@ const Home = () => {
         <NewContentShowcase2025 />
         <NewContentPromoBanner 
           className="border-b border-white/10" 
-<<<<<<< HEAD
-          variant="premium"
-=======
           variant="premium" 
-          title="New: AI SRE Blueprints, Privacy‑First A/B Testing, Agent Blue‑Green"
-          description="Reliability budgets and traces, compliant experiments with scoped IDs, and safe agent releases with canaries."
+          title="New: AI Foundation Models, Operational Excellence, $8M ROI Success"
+          description="Complete enterprise guides for foundation models, 90% automation, and proven ROI strategies."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI SRE Blueprints 2026", category: "AI Operations", link: "/blog/ai-sre-blueprints-2026" },
-            { title: "Privacy‑First A/B Testing 2026", category: "Observability", link: "/blog/privacy-first-ab-testing-2026" },
-            { title: "Agent Blue‑Green Releases 2026", category: "GenAI", link: "/blog/agent-blue-green-releases-2026" },
-            { title: "Edge LLM Safety Caching 2026", category: "Architecture", link: "/blog/edge-llm-safety-caching-2026" },
-            { title: "Platform SLO Guardrails 2026", category: "Platform Engineering", link: "/blog/platform-slo-guardrails-2026" }
+            { title: "AI Foundation Models 2026", category: "AI Architecture", link: "/blog/ai-foundation-models-2026" },
+            { title: "AI Operational Excellence 2026", category: "AI Operations", link: "/blog/ai-operational-excellence-2026" },
+            { title: "Foundation Models Success Story", category: "Case Study", link: "/case-studies/ai-foundation-models-success-2026" },
+            { title: "AI Agent Orchestration 2026", category: "GenAI", link: "/blog/ai-agent-orchestration-2026" },
+            { title: "AI Platform Architecture 2026", category: "Architecture", link: "/blog/ai-platform-architecture-2026" }
           ]}
->>>>>>> cursor/create-and-deploy-new-content-9df8
         />
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
@@ -639,11 +635,7 @@ const Home = () => {
                 <div key={insight.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs uppercase tracking-wider text-indigo-300">{insight.category}</span>
-<<<<<<< HEAD
-                    {('featured' in (insight as any)) && (insight as any).featured && (
-=======
                     {("featured" in insight) && (insight as any).featured && (
->>>>>>> cursor/create-and-deploy-new-content-446a
                       <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>

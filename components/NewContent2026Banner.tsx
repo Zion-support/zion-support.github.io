@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 
-<<<<<<< HEAD
 export default function NewContent2026Banner() {
   return (
     <div className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white">
