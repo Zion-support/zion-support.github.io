@@ -84,7 +84,7 @@ class EnhancedPerformanceMonitor {
           });
         }
         break;
-      case 'first-input':
+      case 'first-input': {
         const fidEntry = entry as PerformanceEventTiming;
         const fid = fidEntry.processingStart - fidEntry.startTime;
         if (fid > 100) {
@@ -97,7 +97,8 @@ class EnhancedPerformanceMonitor {
           });
         }
         break;
-      case 'layout-shift':
+      }
+      case 'layout-shift': {
         const clsEntry = entry as PerformanceEntry & { value: number };
         if (clsEntry.value > 0.1) {
           this.createAlert({
@@ -109,6 +110,7 @@ class EnhancedPerformanceMonitor {
           });
         }
         break;
+      }
     }
   }
 
