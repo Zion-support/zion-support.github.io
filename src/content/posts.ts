@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "multi-modal-agents-2026",
+    title: "Multi‑Modal Agents 2026: Tools, Vision, and Structured Actions",
+    description: "Blueprint for shipping multi‑modal agents with safe tools, online evals, and KPIs.",
+    category: "GenAI",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-observability-2026",
+    title: "Edge Observability 2026: Sub‑100ms Traces Without PII",
+    description: "User‑centric telemetry at the edge with scoped IDs, filters, and retention budgets.",
+    category: "Observability",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "secure-data-lakes-2026",
+    title: "Secure Data Lakes 2026: Row‑Level Auth, SBOMs, Attestations",
+    description: "Make data lakes AI‑ready with provenance, policy gates, and fine‑grained access.",
+    category: "Security",
+    publishedAt: "2025-10-14",
+    featured: false,
+    readTime: "8 min read"
+  },
+  {
     slug: "zero-trust-for-genai-2026",
     title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",
     description: "Production patterns: egress control, prompt firewalls, and signed artifacts for safe GenAI.",

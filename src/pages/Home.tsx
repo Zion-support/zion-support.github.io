@@ -136,14 +136,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: AI Risk Budgets, Privacy‑First Flags, Reliable Agent Actions"
-          description="Ship automation safely, roll out globally with privacy, and make agents reliable."
+          title="New: Multi‑Modal Agents, Edge Observability, Secure Data Lakes"
+          description="Ship multi‑modal agents safely, trace at the edge without PII, secure data lakes."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Risk Budgets 2025", category: "AI Governance", link: "/blog/ai-risk-budgets-2025" },
-            { title: "Privacy‑First Feature Flags 2026", category: "Architecture", link: "/blog/privacy-first-feature-flags-2026" },
-            { title: "Reliable Agent Actions 2026", category: "GenAI", link: "/blog/reliable-agent-actions-2026" },
+            { title: "Multi‑Modal Agents 2026", category: "GenAI", link: "/blog/multi-modal-agents-2026" },
+            { title: "Edge Observability 2026", category: "Observability", link: "/blog/edge-observability-2026" },
+            { title: "Secure Data Lakes 2026", category: "Security", link: "/blog/secure-data-lakes-2026" },
             { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
             { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" }
           ]}
