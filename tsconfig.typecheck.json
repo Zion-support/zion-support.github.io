@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "files": [
+    "src/content/blog-posts.ts",
+    "src/content/insights.ts",
+    "src/content/posts.ts",
+    "src/pages/Home.tsx",
+    "src/utils/performanceMonitor.ts",
+    "src/main.tsx"
+  ]
+}
