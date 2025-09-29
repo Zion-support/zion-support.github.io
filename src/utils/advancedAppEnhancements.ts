@@ -4,7 +4,7 @@
  */
 
 import { performanceOptimizer } from "./performanceOptimizations";
-import { AdvancedPerformanceOptimizer } from "./advancedPerformanceOptimizer";
+import AdvancedPerformanceOptimizer from "./advancedPerformanceOptimizer";
 import { AdvancedSEOOptimizer } from "./advancedSEOOptimizer";
 import { AdvancedAccessibilityEnhancer } from "./advancedAccessibilityEnhancer";
 import { enhancedSecurityManager } from "./enhancedSecurityManager";
