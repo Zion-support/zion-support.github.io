@@ -81,6 +81,7 @@ export default [
   "HTMLMetaElement": "readonly",
   "HTMLLinkElement": "readonly",
   "HTMLElement": "readonly",
+  "HTMLDivElement": "readonly",
   "Event": "readonly",
   "EventTarget": "readonly",
   "ErrorEvent": "readonly",
