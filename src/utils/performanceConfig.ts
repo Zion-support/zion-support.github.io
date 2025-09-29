@@ -32,34 +32,24 @@ export const performanceConfig = {
 // Performance monitoring utilities
 export const performanceMonitor = {
   trackWebVitals: () => {
-    if (typeof window !== 'undefined') {
-      import('web-vitals').then((webVitals: any) => {
-        if ('getCLS' in webVitals && typeof webVitals.getCLS === 'function') {
-          webVitals.getCLS(console.log);
-        }
-        if ('getFID' in webVitals && typeof webVitals.getFID === 'function') {
-          webVitals.getFID(console.log);
-        }
-        if ('getFCP' in webVitals && typeof webVitals.getFCP === 'function') {
-          webVitals.getFCP(console.log);
-        }
-        if ('getLCP' in webVitals && typeof webVitals.getLCP === 'function') {
-          webVitals.getLCP(console.log);
-        }
-        if ('getTTFB' in webVitals && typeof webVitals.getTTFB === 'function') {
-          webVitals.getTTFB(console.log);
-        }
-      }).catch(console.error);
+    if (typeof window !== 'undefined' && 'web-vitals' in window) {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
+      });
     }
   },
   
   collectMetrics: () => {
     const metrics = {
       loadTime: performance.now(),
-      memoryUsage: (performance as any).memory ? {
-        used: (performance as any).memory.usedJSHeapSize,
-        total: (performance as any).memory.totalJSHeapSize,
-        limit: (performance as any).memory.jsHeapSizeLimit
+      memoryUsage: performance.memory ? {
+        used: performance.memory.usedJSHeapSize,
+        total: performance.memory.totalJSHeapSize,
+        limit: performance.memory.jsHeapSizeLimit
       } : null,
       timing: performance.timing ? {
         domContentLoaded: performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart,
@@ -71,7 +61,7 @@ export const performanceMonitor = {
     return metrics;
   },
   
-  trackError: (error: Error, context: Record<string, any> = {}) => {
+  trackError: (error, context = {}) => {
     console.error('Performance Error:', error, context);
     
     if (typeof gtag !== 'undefined') {
