@@ -133,6 +133,7 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
+<<<<<<< HEAD
           title="New: AI Platform SLOs, RAG Evals in the Loop, Edge Flags"
           description="Budget risk, prevent regressions with evals, and ship <100ms global releases."
           ctaText="Explore new content"
@@ -143,6 +144,18 @@ const Home = () => {
             { title: "Edge Feature Flags 2026", category: "Architecture", link: "/blog/edge-feature-flags-2026" },
             { title: "AI Governance Scorecards 2026", category: "AI Strategy", link: "/blog/ai-governance-scorecards-2026" },
             { title: "Platform Scorecards ROI 2026", category: "Platform Engineering", link: "/blog/platform-engineering-scorecards-2026" }
+=======
+          title="New: Risk‑Budgeted Runbooks, Zero‑Trust Agents, Privacy‑Safe Flags"
+          description="Ship safe automation with risk budgets, sandboxed agents, and privacy‑preserving rollouts."
+          ctaText="Explore new content"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "AI Runbooks with Risk Budgets 2026", category: "AI Operations", link: "/blog/ai-runbooks-with-risk-budgets-2026" },
+            { title: "Zero‑Trust for AI Agents 2026", category: "AI Security", link: "/blog/zero-trust-for-ai-agents-2026" },
+            { title: "Privacy‑Preserving Feature Flags 2026", category: "Architecture", link: "/blog/privacy-preserving-feature-flags-2026" },
+            { title: "Platform Scorecards 2026", category: "Platform Engineering", link: "/blog/platform-engineering-scorecards-2026" },
+            { title: "Edge AI Blueprint 2026", category: "Edge Computing", link: "/blog/edge-ai-blueprint-2026" }
+>>>>>>> origin/main
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -280,7 +293,11 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<<<<<<< HEAD
             New: AI Platform SLOs, RAG Evals, Edge Feature Flags — read now
+=======
+            New: Risk‑Budgeted Runbooks, Zero‑Trust Agents, Privacy‑Safe Flags — read now
+>>>>>>> origin/main
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
@@ -541,7 +558,11 @@ const Home = () => {
                 <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
                 Fresh: AI Platform SLOs, RAG Evals, Edge Feature Flags
+=======
+                Fresh: Risk‑Budgeted Runbooks, Zero‑Trust Agents, Privacy‑Safe Flags
+>>>>>>> origin/main
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles & Insights
