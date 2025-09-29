@@ -10,31 +10,44 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "agent-safety-budgets-2026",
-    title: "Agent Safety Budgets: Ship Fast Without Surprises",
-    description: "Budget risky actions, wire rollback triggers, and add KPI‑linked canaries to agent releases.",
-    category: "AI Engineering",
-    publishedAt: "2025-10-12",
+    slug: "ai-risk-mitigation-playbook-2026",
+    title: "AI Risk Mitigation Playbook 2026: Guardrails That Ship",
+    description:
+      "Policy gates, budgeted risks, and KPI‑linked checks that keep teams fast and compliant.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read"
   },
   {
-    slug: "privacy-first-telemetry-2026-guide",
-    title: "Privacy‑First Telemetry: Signal‑Rich Traces Without PII Leaks",
-    description: "Scoped IDs, field‑level filters, and retention policies that keep insights high and risk low.",
-    category: "Observability",
-    publishedAt: "2025-10-12",
+    slug: "privacy-preserving-agents-2026",
+    title: "Privacy‑Preserving Agents: Isolation, Redaction, and Least Privilege",
+    description:
+      "Design agents with data minimization, scoped tools, and audit trails for regulated environments.",
+    category: "AI Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "kpi-linked-policy-tests-2025",
+    title: "KPI‑Linked Policy Tests: Governance That Engineers Adopt",
+    description:
+      "Turn governance into lightweight CI checks tied to product KPIs and release trains.",
+    category: "Engineering",
+    publishedAt: "2025-09-29",
     featured: true,
     readTime: "6 min read"
   },
   {
-    slug: "kpi-linked-policy-tests-2026",
-    title: "KPI‑Linked Policy Tests: Governance That Speeds Teams Up",
-    description: "Lightweight PR checks and online canaries tied to outcomes—fast feedback without red tape.",
-    category: "AI Governance",
-    publishedAt: "2025-10-12",
+    slug: "serverless-ai-inference-cost-playbook-2025",
+    title: "Serverless AI Inference: The Cost Optimization Playbook",
+    description:
+      "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",
+    category: "AI Solutions",
+    publishedAt: "2025-09-29",
     featured: true,
-    readTime: "6 min read"
+    readTime: "9 min read"
   },
   {
     slug: "ai-incident-response-2026",
