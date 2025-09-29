@@ -34,6 +34,19 @@ const contentItems: ContentItem[] = [
     href: '/blog/ai-operational-excellence-2026'
   },
   {
+    id: 'enterprise-agents-blueprint-2026',
+    title: 'AI Enterprise Agents Blueprint 2026: Production-Grade Patterns',
+    description: 'Blueprint for designing, deploying, and operating enterprise AI agents with governance, observability, and ROI.',
+    type: 'guide',
+    category: 'Enterprise AI',
+    readTime: '18 min read',
+    publishDate: '2026-01-25',
+    featured: true,
+    tags: ['Agents', 'Orchestration', 'Governance', 'ROI'],
+    metrics: { views: 0, rating: 5.0, saves: 0 },
+    href: '/blog/ai-enterprise-agents-blueprint-2026'
+  },
+  {
     id: 'agent-observability-2026',
     title: 'AI Agent Observability 2026: Complete Monitoring & Debugging Guide',
     description: 'Achieve 99.9% AI agent reliability with comprehensive observability and real-time monitoring.',
