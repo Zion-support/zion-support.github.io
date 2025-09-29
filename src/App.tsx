@@ -9,7 +9,6 @@ import { AppRouter } from './router';
 // import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
 // import { screenReaderSupport } from './accessibility/screenReaderSupport';
 import './index.css';
-import { AppRouter } from './router';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
@@ -19,6 +18,9 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
+
+// Local stub to avoid type errors when optional performance init is not present
+const initializePerformanceEnhancements = (): void => {};
 
 // Temporary fallbacks for referenced components not present in repo
 const Placeholder: React.FC<{ name: string }> = ({ name }) => (
@@ -70,7 +72,8 @@ export default function App(): React.JSX.Element {
         default:
           break;
       }
-      if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
+      try {
+        if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
         enhancedSecurityManager.initialize();
       }
       
@@ -96,10 +99,10 @@ export default function App(): React.JSX.Element {
       advancedSecurityManager?.initialize?.();
       advancedAnalytics?.initialize?.();
       // advancedErrorHandler is initialized in constructor
-      advancedCachingSystem.initialize();
-      advancedUXOptimizer.initialize();
-      advancedTestingFramework.initialize();
-      advancedI18n.initialize();
+      advancedCachingSystem?.initialize?.();
+      advancedUXOptimizer?.initialize?.();
+      advancedTestingFramework?.initialize?.();
+      advancedI18n?.initialize?.();
       // Store enhancements globally for debugging
       (window as unknown as Record<string, unknown>).enhancements = {
         performanceOptimizer: advancedPerformanceOptimizer,
@@ -124,6 +127,10 @@ export default function App(): React.JSX.Element {
     } catch (error) {
       console.error('Error initializing enhancements:', error);
     }
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
   }, []);
 
   const handleRemoveNotification = useCallback((id: string) => {

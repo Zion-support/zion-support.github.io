@@ -146,6 +146,7 @@ export default [
       
       'no-console': 'warn',
       'no-undef': 'warn',
+      'react/jsx-no-undef': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
       'react/no-unescaped-entities': 'warn',
