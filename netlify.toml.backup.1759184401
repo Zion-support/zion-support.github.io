@@ -1,6 +1,11 @@
 [build]
+<<<<<<< HEAD
+  # Publish prebuilt dist without running a build
+  command = "echo Skipping build - deploying prebuilt dist"
+=======
   # Build the Vite React application
   command = "pnpm run build:optimized"
+>>>>>>> origin/cursor/netlify-build-with-nextjs-error-e71d
   publish = "dist"
   command_timeout = "30m"
 
