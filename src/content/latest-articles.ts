@@ -1261,3 +1261,55 @@ latestArticles.unshift(
 export const featuredArticles = latestArticles.filter(article => article.featured);
 export const trendingArticles = latestArticles.filter(article => article.trending);
 export const newArticles = latestArticles.filter(article => article.newBadge);
+
+// September 29, 2025 additions
+latestArticles.unshift(
+  {
+    id: "agentic-observability-scorecards-2026",
+    slug: "agentic-observability-scorecards-2026",
+    title: "Agentic Observability Scorecards 2026: Traces that Predict Outcomes",
+    description: "Correlate agent traces with KPIs using lightweight scorecards that prevent regressions without slowing delivery.",
+    excerpt: "Link traces to outcomes—scorecards that keep agents fast and reliable.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["Agents", "Observability", "Scorecards"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/agentic-observability-scorecards-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-privacy-cdn-2026",
+    slug: "edge-privacy-cdn-2026",
+    title: "Edge Privacy CDN 2026: Scoped IDs, Local Filters, Zero PII",
+    description: "Deliver privacy-first, sub-100ms experiences with scoped identifiers, on-device filters, and DP-friendly telemetry.",
+    excerpt: "Private by design at the edge—fast experiences without PII risk.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Architecture",
+    tags: ["Edge", "Privacy", "Telemetry"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-privacy-cdn-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "platform-golden-paths-slos-2026",
+    slug: "platform-golden-paths-slos-2026",
+    title: "Platform Golden Paths + SLOs 2026: Adoption that Drives ROI",
+    description: "Design golden paths wired to SLOs and adoption metrics that link platform work to revenue.",
+    excerpt: "From infra costs to shipped value—scorecards that change the conversation.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Platform Engineering",
+    tags: ["Golden Paths", "SLOs", "ROI"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/platform-golden-paths-slos-2026.jpg",
+    newBadge: true,
+    trending: true
+  }
+);

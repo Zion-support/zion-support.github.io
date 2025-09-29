@@ -773,3 +773,34 @@ posts.push(
     readTime: "6 min read"
   }
 );
+
+// September 29, 2025 additions
+posts.push(
+  {
+    slug: "agentic-observability-scorecards-2026",
+    title: "Agentic Observability Scorecards 2026: Traces that Predict Outcomes",
+    description: "Correlate traces with KPIs using lightweight scorecards that prevent regressions without slowing delivery.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-privacy-cdn-2026",
+    title: "Edge Privacy CDN 2026: Scoped IDs, Local Filters, Zero PII",
+    description: "Ship privacy-first experiences with scoped identifiers, on-device filters, and DP-friendly telemetry.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "platform-golden-paths-slos-2026",
+    title: "Platform Golden Paths + SLOs 2026: Adoption that Drives ROI",
+    description: "Design golden paths wired to SLOs and adoption metrics that link platform work to revenue.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
