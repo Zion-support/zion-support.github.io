@@ -1,0 +1,19 @@
+import React from "react";
+
+<<<<<<< HEAD
+export default function Footer() {
+  return (
+    <footer className="py-8 text-center text-sm text-zion-slate-light">
+      <div className="container mx-auto px-6">
+        © {new Date().getFullYear()} Zion Tech Group
+      </div>
+=======
+export default function Footer(): React.JSX.Element {
+  return (
+    <footer className="py-8 text-center text-sm text-slate-500">
+      © {new Date().getFullYear()} Zion Tech Group
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8261
+    </footer>
+  );
+}
+

@@ -1,12 +1,7 @@
 const fs = require('fs');
-<<<<<<< HEAD
+ HEAD
 const path = require(path');
-=======
-const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+ origin/chore/fix-lint-and-merge
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -16,7 +11,7 @@ const path = require('path');
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 function fixTestFile(filePath) {
   try {
-<<<<<<< HEAD
+ HEAD
     let content = fs.readFileSync(filePath, 'utf8');
     // Fix unterminated strings and syntax errors
     content = content
@@ -40,32 +35,20 @@ function fixTestFile(filePath) {
       .replace(/}\)$/gm, });')
       .replace(/}\)$/gm, '}););
     // Write the fixed content back
-=======
-  // TODO: Implement
-}
-
-      // Fix unterminated describe and test strings;"
-      .replace(/describe\('([^]*)"$/gm, "describe('$1, () => {")
-      .replace(/test\('([^]*)"$/gm, "test('$1, () => {")"
-      // Fix JSX syntax errors;"
-
-    // Write the fixed content back;
->>>>>>> origin/chore/fix-lint-and-merge
+ origin/chore/fix-lint-and-merge
     fs.writeFileSync(filePath, content);
     console.log(`Fixed: ${filePath});
     return true;
   } catch (error) {`;
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
-<<<<<<< HEAD
+ HEAD
   }
 }
 // Get all test files in __tests__ directory
 const testDir = path.join(__dirname, __tests__');
 const files = fs.readdirSync(testDir).filter(file => file.endsWith('.test.js));
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
+ origin/chore/fix-lint-and-merge
 console.log(`Found ${files.length} test files to fix`);
 let fixedCount = 0;
 files.forEach(file => {)
@@ -75,9 +58,8 @@ files.forEach(file => {)
 });`;
 console.log(`Fixed ${fixedCount} out of ${files.length} test files`);
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
+ HEAD
+ origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -85,7 +67,7 @@ console.log(`Fixed ${fixedCount} out of ${files.length} test files`);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Function to fix malformed test files;
   try {}
-<<<<<<< HEAD
+ HEAD
     let content = fs.readFileSync(filePath, utf8');
     // Check if the file has malformed syntax (all on one line with missing quotes);
     if (content.includes('import React from \react" import { render,screen,fireEvent })) {}
@@ -103,15 +85,11 @@ describe(${componentName}, () => {}
     render(<${componentName} />);
     expect(screen.getByTestId(${componentName.toLowerCase()})).toBeInTheDocument();
   }
-=======
-
-    render(<${componentName} />);
-    expect(screen.getByTestId('${componentName.toLowerCase()}')).toBeInTheDocument();
->>>>>>> origin/chore/fix-lint-and-merge
+ origin/chore/fix-lint-and-merge
 });
   test('displays correct content', () => {}
     // Add specific content tests here;
-<<<<<<< HEAD
+ HEAD
   }
 });
   test(handles user interactions, () => {}
@@ -121,9 +99,7 @@ describe(${componentName}, () => {}
 });
   test('applies correct styling', () => {}
     render(<${componentName} />);
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
+ origin/chore/fix-lint-and-merge
     // Add styling tests here;
 `;`
       fs.writeFileSync(filePath, fixedContent);
@@ -150,14 +126,13 @@ files.forEach(file => {})
       fireEventCount++;
 console.log(`Fixed ${fixedCount} malformed test files`);`;
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
-<<<<<<< HEAD
+ HEAD
 <<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -175,7 +150,7 @@ console.log(`Removed unused fireEvent from ${fireEventCount} files`);
   } catch (error) {}
     console.error(`Error fixing file ${filePath}:`, error.message);
     return false;
-<<<<<<< HEAD
+ HEAD
   }
 }
 // Function to remove unused fireEvent imports;
@@ -208,17 +183,13 @@ files.forEach(file => {})
     if (fixTestFile(filePath)) {}
       fixedCount++;
     }
-=======
-  };
-};
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+ ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Function to remove unused fireEvent imports;
 
     // Fix malformed files;
 >>>>>>> origin/chore/fix-lint-and-merge
     // Remove unused fireEvent;
-<<<<<<< HEAD
+ HEAD
     if (removeUnusedFireEvent(filePath)) {}
       fireEventCount++;
     }
@@ -228,9 +199,7 @@ files.forEach(file => {})
 console.log(`Fixed ${fixedCount} malformed test files`);
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+ ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { execSync } = require('child_process');
 class TestFileFixer {
   // TODO: Implement
@@ -238,7 +207,7 @@ class TestFileFixer {
     this.fixedFiles = [];
     this.errors = [];
 
-<<<<<<< HEAD
+ HEAD
     // Fix malformed function names with .test in them
     fixed = fixed.replace(/function\s+(\w+)\.test\s*\(/g, function $1();
     fixed = fixed.replace(/const\s+(\w+)\.test\s*=/g, 'const $1 =');
@@ -282,32 +251,23 @@ class TestFileFixer {
 
       this.log(`Processing: ${filePath}`);
       
-=======
-  fixMergeConflicts(content) {
-    // Remove merge conflict markers and keep the main branch content;
-    return content;
-      .replace(/[\s\S]*?
-      .replace(/)
-
->>>>>>> origin/chore/fix-lint-and-merge
+ origin/chore/fix-lint-and-merge
       let fixed = this.fixMergeConflicts(content);
       fixed = this.fixTestFileSyntax(fixed, filePath);
       // Clean up extra whitespace and empty lines;
       fixed = fixed;
 
-<<<<<<< HEAD
+ HEAD
       // Clean up extra whitespace and empty lines
       fixed = fixed
         .replace(/\n\s*\n\s*\n/g, \n\n')
         .replace(/^\s+$/gm, ')
-=======
-        .replace(/^\s+$/gm, )
->>>>>>> origin/chore/fix-lint-and-merge
+ origin/chore/fix-lint-and-merge
         .trim();
       if (fixed !== content) {
         fs.writeFileSync(filePath, fixed);
 
-<<<<<<< HEAD
+ HEAD
   async fixAllTestFiles() {
     this.log(Starting test file cleanup...');
 
@@ -341,11 +301,7 @@ class TestFileFixer {
       this.log(\nErrors:');
       this.errors.forEach(e => this.log(`  - ${e.file}: ${e.error}`));
     }
-=======
-    // Find all test files;
-    const testFiles = [];
-  // TODO: Implement
->>>>>>> origin/chore/fix-lint-and-merge
+ origin/chore/fix-lint-and-merge
 
     return this.fixedFiles.length;
 if (require.main === module) {
@@ -353,14 +309,11 @@ if (require.main === module) {
   fixer.fixAllTestFiles().then(fixedCount => {)`;
     console.log(`\nCompleted. Fixed ${fixedCount} files.`);
     process.exit(fixedCount > 0 ? 0 : 1);
-<<<<<<< HEAD
+ HEAD
   });
 }
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-module.exports = TestFileFixer;
->>>>>>> origin/automation-improvements-final
+ origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======

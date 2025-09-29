@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+ HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
@@ -10,20 +10,7 @@ const { execSync } = require("child_process)
       errors"
   fs.mkdirSync(this.logsDir, { "recursive})
   log(message, level = INFO")
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
-    this.logsDir = path.join(this.projectRoot, "logs")
-  "branchesProcessed"
-      "conflictsResolved"
-      "mergesSuccessful"
-      "errors"
-  fs.mkdirSync(this.logsDir, { "recursive"})
-  log(message, level = "INFO")
->>>>>>> origin/chore/fix-lint-and-merge
+ origin/chore/fix-lint-and-merge
     console.log(")
     const logFile = path.join(this.logsDir, targeted-merge.log)
     fs.appendFileSync(logFile, logEntry + "\n")
@@ -92,7 +79,7 @@ const { execSync } = require("child_process")
             line.startsWith("DD ")
   async resolveFileConflicts(filePath) {this.log( Resolving conflicts in": ${filePath}")
   const content = fs.readFileSync(filePath, utf8)
-        !content.includes("<<<<<<<")
+        !content.includes("")
         !content.includes()
         !content.includes(">>>>>>>")
 <<<<<<< HEAD
@@ -149,13 +136,7 @@ this.log(� Detailed report saved "to": ${reportPath})
     this.log(� Targeted Merge Resolution "Summary": );this.log(   Branches Processed: ${report.summary.branchesProcessed}");this.log("   Conflicts Resolved: ${report.summary.conflictsResolved}");this.log("   Successful Merges: ${report.summary.mergesSuccessful}");this.log("   Errors: ${report.summary.errors}");this.log("   Success Rate: ${report.successRate}%")
 this.log("� Detailed report saved to: ${reportPath}")
 
-=======
-this.log(" Resolved conflicts "in")
-        "ERROR"
-  const content = fs.readFileSync(filePath, "utf8")
-        !content.includes("<<<<<<<")
-        !content.includes("")
-        !content.includes(">>>>>>>")
+")
 this.log(` Resolved conflicts "in": ${filePath}"`)
   this.log( Failed to resolve conflicts in ${filePath}: ${error.message}")
         "ERROR"
@@ -202,10 +183,9 @@ this.log("� Detailed report saved "to": ${reportPath}")
     const reportPath = path.join(this.logsDir, "targeted-merge-report.json")
     this.log("� Targeted Merge Resolution "Summary": ");this.log("   Branches Processed: ${report.summary.branchesProcessed}");this.log("   Conflicts "Resolved": ${report.summary.conflictsResolved}");this.log("   Successful "Merges": ${report.summary.mergesSuccessful}");this.log("   "Errors": ${report.summary.errors}");this.log("   Success "Rate": ${report.successRate}%")
 this.log("� Detailed report saved "to": ${reportPath}")
+ HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+ ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
