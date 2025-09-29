@@ -914,6 +914,55 @@ export const latestArticles: LatestArticle[] = [
     newBadge: true,
     trending: false
   }
+  ,
+  {
+    id: "ai-autonomous-incident-runbooks-2025",
+    slug: "ai-autonomous-incident-runbooks-2025",
+    title: "AI Autonomous Incident Runbooks: Budgeted Actions and Instant Rollback",
+    description: "Design incident playbooks with explicit budgets, approvals, and safe automated rollback.",
+    excerpt: "Close the loop from detection to safe action using budgets, approvals, and telemetry.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Operations",
+    tags: ["Runbooks", "Automation", "Risk Budgets"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-autonomous-incident-runbooks-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-first-feature-flags-2025",
+    slug: "privacy-first-feature-flags-2025",
+    title: "Privacy‑First Feature Flags: Zero‑Regret Rollouts at the Edge",
+    description: "Scoped IDs, on‑device filters, and geo budgets for safe global releases under 100ms.",
+    excerpt: "Blueprint for privacy‑preserving progressive delivery using edge compute and KV.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Architecture",
+    tags: ["Feature Flags", "Edge", "Privacy"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/privacy-first-feature-flags-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "platform-roi-scorecards-quickstart-2025",
+    slug: "platform-roi-scorecards-quickstart-2025",
+    title: "Platform ROI Scorecards: A Practical Quickstart",
+    description: "Link platform telemetry to adoption and revenue with scorecards engineers actually use.",
+    excerpt: "Adoption, golden‑path TTFX, and SLOs as leading indicators of ROI.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Strategy",
+    tags: ["Scorecards", "Platform", "ROI"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/platform-roi-scorecards-quickstart-2025.jpg",
+    newBadge: true,
+    trending: true
+  }
 ];
 
 export const featuredArticles = latestArticles.filter(article => article.featured);

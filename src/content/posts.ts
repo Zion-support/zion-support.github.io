@@ -511,4 +511,32 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "6 min read"
   }
+  ,
+  {
+    slug: "ai-autonomous-incident-runbooks-2025",
+    title: "AI Autonomous Incident Runbooks: Budgeted Actions and Instant Rollback",
+    description: "Design incident playbooks with explicit budgets, approvals, and safe automated rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-feature-flags-2025",
+    title: "Privacy‑First Feature Flags: Zero‑Regret Rollouts at the Edge",
+    description: "Scoped IDs, on‑device filters, and geo budgets for safe global releases under 100ms.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "platform-roi-scorecards-quickstart-2025",
+    title: "Platform ROI Scorecards: A Practical Quickstart",
+    description: "Link platform telemetry to adoption and revenue with scorecards engineers actually use.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  }
 ];
