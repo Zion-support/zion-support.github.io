@@ -22,7 +22,9 @@ import {
   EnterpriseAIImplementationBanner,
   MLOpsBestPracticesBanner,
   EnterpriseTransformationCaseStudyBanner,
-  LatestContentShowcaseBanner
+  LatestContentShowcaseBanner,
+  AIRoadmapsBanner,
+  AIFinOpsBanner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
@@ -37,12 +39,33 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* New Content Promo Strip */}
+      <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+        <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
+          <div className="flex items-center gap-2 text-sm md:text-base">
+            <span>✨ New on the blog:</span>
+            <a to="/blog/platform-engineering-scorecards-2026" className="underline hover:text-yellow-200">Platform Scorecards 2026</a>
+            <span className="hidden md:inline">•</span>
+            <a to="/blog/ai-cybersecurity-automation-2025" className="underline hover:text-yellow-200">AI Cybersecurity Automation</a>
+            <span className="hidden md:inline">•</span>
+            <a to="/blog/edge-ai-blueprint-2026" className="underline hover:text-yellow-200">Edge AI Blueprint 2026</a>
+          </div>
+          <Link
+            to="/blog"
+            className="bg-white text-indigo-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
+          >
+            Read the latest
+          </Link>
+        </div>
+      </div>
       {/* Promotional Banners */}
       <LatestContentShowcaseBanner />
       <EnterpriseAIImplementationBanner />
       <MLOpsBestPracticesBanner />
       <EnterpriseTransformationCaseStudyBanner />
       <NewContentShowcaseBanner />
+      <AIRoadmapsBanner />
+      <AIFinOpsBanner />
       <AutonomousAgentsBanner />
       <AIGovernanceBanner />
       <FinTechSuccessBanner />
