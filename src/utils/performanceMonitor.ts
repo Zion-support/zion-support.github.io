@@ -28,8 +28,8 @@ class PerformanceMonitor {
   }
 
   private observeWebVitals(): void {
-    // First Input Delay (FID)
     if ('PerformanceObserver' in window) {
+      // FID - First Input Delay
       try {
         const fidObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
@@ -51,7 +51,7 @@ class PerformanceMonitor {
         console.warn('FID observation failed:', e);
       }
 
-      // Largest Contentful Paint (LCP)
+      // LCP - Largest Contentful Paint
       try {
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
@@ -71,7 +71,7 @@ class PerformanceMonitor {
         console.warn('LCP observation failed:', e);
       }
 
-      // Cumulative Layout Shift (CLS)
+      // CLS - Cumulative Layout Shift
       try {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
