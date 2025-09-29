@@ -350,6 +350,24 @@ const Home = () => {
         {/* Enhanced Testimonials Section */}
         <EnhancedTestimonials />
 
+        {/* New Content Promo */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div>
+                <h2 className="text-3xl font-bold mb-2">Introducing Zion Insights</h2>
+                <p className="text-white/90 max-w-2xl">
+                  Explore our latest articles and case studies on AI strategy, cloud FinOps, and security best practices.
+                </p>
+              </div>
+              <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
+                Read the latest
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
