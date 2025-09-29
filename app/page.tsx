@@ -30,7 +30,11 @@ import {
   AIOperationalExcellenceBanner,
   AIAgentObservabilityBanner,
   ManufacturingTransformationBanner,
-  Latest2026ContentBanner
+  Latest2026ContentBanner,
+  NewAICybersecurityBanner,
+  NewAIEdgeComputingBanner,
+  NewFinanceAutomationBanner,
+  FreshContentShowcaseBanner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
@@ -54,12 +58,12 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-            <span>✨ New on the blog:</span>
-            <Link href="/blog/platform-engineering-scorecards-2026" className="underline hover:text-yellow-200">Platform Scorecards 2026</Link>
+            <span>✨ New content:</span>
+            <Link href="/blog/ai-cybersecurity-2025" className="underline hover:text-yellow-200">AI Cybersecurity 2025</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-reliable-rag-2025" className="underline hover:text-yellow-200">Reliable RAG 2025</Link>
+            <Link href="/blog/ai-edge-computing-2025" className="underline hover:text-yellow-200">Edge Computing AI</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-roadmaps-2026" className="underline hover:text-yellow-200">AI Roadmaps 2026</Link>
+            <Link href="/case-studies/ai-finance-automation" className="underline hover:text-yellow-200">Finance Automation Case Study</Link>
           </div>
           <Link
             href="/blog"
@@ -70,6 +74,10 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <FreshContentShowcaseBanner />
+      <NewAICybersecurityBanner />
+      <NewAIEdgeComputingBanner />
+      <NewFinanceAutomationBanner />
       <Latest2026ContentBanner />
       <AIOperationalExcellenceBanner />
       <AIAgentObservabilityBanner />
@@ -251,37 +259,12 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">⚡</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900">Edge Computing AI</h3>
-                  <p className="text-sm text-gray-500">Real-time intelligence</p>
-                </div>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Achieve sub-50ms response times with AI processing at the edge of networks. 
-                Perfect for autonomous vehicles, IoT devices, and real-time applications.
-              </p>
-              <div className="flex items-center justify-between">
-                <div className="text-sm text-gray-500">Published Jan 20, 2025</div>
-                <Link
-                  href="/blog/ai-edge-computing-2025"
-                  className="text-cyan-600 font-semibold hover:text-cyan-700 transition-colors"
-                >
-                  Read More →
-                </Link>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
-              <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
                   <span className="text-2xl">🛡️</span>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">AI Cybersecurity</h3>
-                  <p className="text-sm text-gray-500">Next-gen protection</p>
+                  <p className="text-sm text-gray-500">99.7% accuracy</p>
                 </div>
               </div>
               <p className="text-gray-600 mb-4">
@@ -293,6 +276,31 @@ export default function HomePage() {
                 <Link
                   href="/blog/ai-cybersecurity-2025"
                   className="text-red-600 font-semibold hover:text-red-700 transition-colors"
+                >
+                  Read More →
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Edge Computing AI</h3>
+                  <p className="text-sm text-gray-500">Sub-50ms response</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Achieve sub-50ms response times with AI processing at the edge of networks. 
+                Perfect for autonomous vehicles, IoT devices, and real-time applications.
+              </p>
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-gray-500">Published Jan 20, 2025</div>
+                <Link
+                  href="/blog/ai-edge-computing-2025"
+                  className="text-cyan-600 font-semibold hover:text-cyan-700 transition-colors"
                 >
                   Read More →
                 </Link>
@@ -349,6 +357,66 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Link href="/blog/ai-cybersecurity-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW
+                  </span>
+                  <span className="text-sm text-gray-500">12 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Cybersecurity 2025: Next-Gen Protection
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  99.7% threat detection accuracy with autonomous incident response and zero-trust architecture.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            
+            <Link href="/blog/ai-edge-computing-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW
+                  </span>
+                  <span className="text-sm text-gray-500">15 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  Edge Computing AI 2025: Real-time Intelligence
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Achieve sub-50ms response times with AI processing at the edge of networks.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Guide →
+                </div>
+              </div>
+            </Link>
+            
+            <Link href="/case-studies/ai-finance-automation" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW Case Study
+                  </span>
+                  <span className="text-sm text-gray-500">12 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Finance Automation: $3M+ Savings
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  95% process automation and $3M annual savings achieved for a leading financial services company.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
+            
             <Link href="/blog/ai-trustworthy-agents-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">

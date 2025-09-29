@@ -442,3 +442,48 @@ export const Latest2026ContentBanner = () => (
     hideAfter={18}
   />
 );
+
+// New Content Banners for Latest Articles
+export const NewAICybersecurityBanner = () => (
+  <PromotionalBanner
+    message="🛡️ NEW: AI Cybersecurity 2025 - 99.7% Threat Detection Accuracy with Autonomous Response"
+    ctaText="Read Article"
+    ctaLink="/blog/ai-cybersecurity-2025"
+    backgroundColor="bg-gradient-to-r from-red-600 to-orange-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const NewAIEdgeComputingBanner = () => (
+  <PromotionalBanner
+    message="⚡ NEW: Edge Computing AI 2025 - Sub-50ms Response Times for Real-time Intelligence"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-edge-computing-2025"
+    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const NewFinanceAutomationBanner = () => (
+  <PromotionalBanner
+    message="💰 NEW: AI Finance Automation Case Study - $3M+ Savings with 95% Process Automation"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-finance-automation"
+    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const FreshContentShowcaseBanner = () => (
+  <PromotionalBanner
+    message="🚀 FRESH CONTENT: AI Cybersecurity, Edge Computing & Finance Automation - Latest 2025 Insights"
+    ctaText="Explore All Content"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
