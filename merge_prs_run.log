@@ -1,320 +1,1029 @@
-🚀 Starting comprehensive PR merge process...
-⏰ Started at: 2025-09-29 09:26:40.812457
-==================================================
-🔄 Switching to main branch...
-📥 Pulling latest changes from main...
-🔎 Fetching open PRs for Zion-Holdings/zion.app...
-ℹ️ No PRs from API or token missing. Falling back to git refs for PR heads...
-📋 Found 30 open PR(s) to process.
-
-==================================================
-🔄 Processing PR #23678 from branch/ref: refs/pull/23678/head
-==================================================
-🔄 Attempting to merge branch: pr-23678 (PR #23678)...
-📍 Using local branch pr-23678
-✅ Successfully merged pr-23678
-✅ PR #23678 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23677 from branch/ref: refs/pull/23677/head
-==================================================
-🔄 Attempting to merge branch: pr-23677 (PR #23677)...
-📍 Using local branch pr-23677
-✅ Successfully merged pr-23677
-✅ PR #23677 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23676 from branch/ref: refs/pull/23676/head
-==================================================
-🔄 Attempting to merge branch: pr-23676 (PR #23676)...
-📍 Using local branch pr-23676
-✅ Successfully merged pr-23676
-✅ PR #23676 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23675 from branch/ref: refs/pull/23675/head
-==================================================
-🔄 Attempting to merge branch: pr-23675 (PR #23675)...
-📍 Using local branch pr-23675
-✅ Successfully merged pr-23675
-✅ PR #23675 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23674 from branch/ref: refs/pull/23674/head
-==================================================
-🔄 Attempting to merge branch: pr-23674 (PR #23674)...
-📍 Using local branch pr-23674
-✅ Successfully merged pr-23674
-✅ PR #23674 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23673 from branch/ref: refs/pull/23673/head
-==================================================
-🔄 Attempting to merge branch: pr-23673 (PR #23673)...
-📍 Using local branch pr-23673
-✅ Successfully merged pr-23673
-✅ PR #23673 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23672 from branch/ref: refs/pull/23672/head
-==================================================
-🔄 Attempting to merge branch: pr-23672 (PR #23672)...
-📍 Using local branch pr-23672
-✅ Successfully merged pr-23672
-✅ PR #23672 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23671 from branch/ref: refs/pull/23671/head
-==================================================
-🔄 Attempting to merge branch: pr-23671 (PR #23671)...
-📍 Using local branch pr-23671
-✅ Successfully merged pr-23671
-✅ PR #23671 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23670 from branch/ref: refs/pull/23670/head
-==================================================
-🔄 Attempting to merge branch: pr-23670 (PR #23670)...
-📍 Using local branch pr-23670
-✅ Successfully merged pr-23670
-✅ PR #23670 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23669 from branch/ref: refs/pull/23669/head
-==================================================
-🔄 Attempting to merge branch: pr-23669 (PR #23669)...
-📍 Using local branch pr-23669
-✅ Successfully merged pr-23669
-✅ PR #23669 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23668 from branch/ref: refs/pull/23668/head
-==================================================
-🔄 Attempting to merge branch: pr-23668 (PR #23668)...
-📍 Using local branch pr-23668
-✅ Successfully merged pr-23668
-✅ PR #23668 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23667 from branch/ref: refs/pull/23667/head
-==================================================
-🔄 Attempting to merge branch: pr-23667 (PR #23667)...
-📍 Using local branch pr-23667
-✅ Successfully merged pr-23667
-✅ PR #23667 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23666 from branch/ref: refs/pull/23666/head
-==================================================
-🔄 Attempting to merge branch: pr-23666 (PR #23666)...
-📍 Using local branch pr-23666
-✅ Successfully merged pr-23666
-✅ PR #23666 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23665 from branch/ref: refs/pull/23665/head
-==================================================
-🔄 Attempting to merge branch: pr-23665 (PR #23665)...
-📍 Using local branch pr-23665
-✅ Successfully merged pr-23665
-✅ PR #23665 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23664 from branch/ref: refs/pull/23664/head
-==================================================
-🔄 Attempting to merge branch: pr-23664 (PR #23664)...
-📍 Using local branch pr-23664
-✅ Successfully merged pr-23664
-✅ PR #23664 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23663 from branch/ref: refs/pull/23663/head
-==================================================
-🔄 Attempting to merge branch: pr-23663 (PR #23663)...
-📍 Using local branch pr-23663
-✅ Successfully merged pr-23663
-✅ PR #23663 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23662 from branch/ref: refs/pull/23662/head
-==================================================
-🔄 Attempting to merge branch: pr-23662 (PR #23662)...
-📍 Using local branch pr-23662
-✅ Successfully merged pr-23662
-✅ PR #23662 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23661 from branch/ref: refs/pull/23661/head
-==================================================
-🔄 Attempting to merge branch: pr-23661 (PR #23661)...
-📍 Using local branch pr-23661
-✅ Successfully merged pr-23661
-✅ PR #23661 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23660 from branch/ref: refs/pull/23660/head
-==================================================
-🔄 Attempting to merge branch: pr-23660 (PR #23660)...
-📍 Using local branch pr-23660
-✅ Successfully merged pr-23660
-✅ PR #23660 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23659 from branch/ref: refs/pull/23659/head
-==================================================
-🔄 Attempting to merge branch: pr-23659 (PR #23659)...
-📍 Using local branch pr-23659
-✅ Successfully merged pr-23659
-✅ PR #23659 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23658 from branch/ref: refs/pull/23658/head
-==================================================
-🔄 Attempting to merge branch: pr-23658 (PR #23658)...
-📍 Using local branch pr-23658
-✅ Successfully merged pr-23658
-✅ PR #23658 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23657 from branch/ref: refs/pull/23657/head
-==================================================
-🔄 Attempting to merge branch: pr-23657 (PR #23657)...
-📍 Using local branch pr-23657
-✅ Successfully merged pr-23657
-✅ PR #23657 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23656 from branch/ref: refs/pull/23656/head
-==================================================
-🔄 Attempting to merge branch: pr-23656 (PR #23656)...
-📍 Using local branch pr-23656
-✅ Successfully merged pr-23656
-✅ PR #23656 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23655 from branch/ref: refs/pull/23655/head
-==================================================
-🔄 Attempting to merge branch: pr-23655 (PR #23655)...
-📍 Using local branch pr-23655
-✅ Successfully merged pr-23655
-✅ PR #23655 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23654 from branch/ref: refs/pull/23654/head
-==================================================
-🔄 Attempting to merge branch: pr-23654 (PR #23654)...
-📍 Using local branch pr-23654
-✅ Successfully merged pr-23654
-✅ PR #23654 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23653 from branch/ref: refs/pull/23653/head
-==================================================
-🔄 Attempting to merge branch: pr-23653 (PR #23653)...
-📍 Using local branch pr-23653
-✅ Successfully merged pr-23653
-✅ PR #23653 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23652 from branch/ref: refs/pull/23652/head
-==================================================
-🔄 Attempting to merge branch: pr-23652 (PR #23652)...
-📍 Using local branch pr-23652
-✅ Successfully merged pr-23652
-✅ PR #23652 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23651 from branch/ref: refs/pull/23651/head
-==================================================
-🔄 Attempting to merge branch: pr-23651 (PR #23651)...
-📍 Using local branch pr-23651
-✅ Successfully merged pr-23651
-✅ PR #23651 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23650 from branch/ref: refs/pull/23650/head
-==================================================
-🔄 Attempting to merge branch: pr-23650 (PR #23650)...
-📍 Using local branch pr-23650
-✅ Successfully merged pr-23650
-✅ PR #23650 processed successfully
-==================================================
-
-
-==================================================
-🔄 Processing PR #23649 from branch/ref: refs/pull/23649/head
-==================================================
-🔄 Attempting to merge branch: pr-23649 (PR #23649)...
-📍 Using local branch pr-23649
-✅ Successfully merged pr-23649
-✅ PR #23649 processed successfully
-==================================================
-
-🔨 Testing build after merges...
-✅ Build successful after merges
-💾 Pushing changes to remote...
-❌ Could not push to main: To https://github.com/Zion-Holdings/zion.app
- ! [rejected]                  main -> main (fetch first)
-error: failed to push some refs to 'https://github.com/Zion-Holdings/zion.app'
-hint: Updates were rejected because the remote contains work that you do not
-hint: have locally. This is usually caused by another repository pushing to
-hint: the same ref. If you want to integrate the remote changes, use
-hint: 'git pull' before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-
+[info] Starting automated merge of candidate PR branches into main
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+   453cb9aeff9e..87507fc1f93e  main       -> origin/main
+Already on 'main'
+Your branch is behind 'origin/main' by 7 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Updating d975d5d229d4..87507fc1f93e
+Fast-forward
+ final-optimization-report.json         |   2 +-
+ netlify.toml                           |  13 +-
+ src/App.tsx                            |   4 +
+ src/utils/advancedAnalyticsInsights.ts | 674 +++++++++++++++++++++++++++++
+ src/utils/advancedCachingSystem.ts     | 748 +++++++++++++++++++--------------
+ src/utils/enhancedErrorHandling.ts     |  15 +-
+ 6 files changed, 1132 insertions(+), 324 deletions(-)
+ create mode 100644 src/utils/advancedAnalyticsInsights.ts
+[info] Found 263 candidate branches
+[info] Processing fix/ai-it-innovations-factory
+Switched to branch 'fix/ai-it-innovations-factory'
+Updating files:  62% (4879/7766)Updating files:  63% (4893/7766)Updating files:  64% (4971/7766)Updating files:  65% (5048/7766)Updating files:  66% (5126/7766)Updating files:  67% (5204/7766)Updating files:  68% (5281/7766)Updating files:  69% (5359/7766)Updating files:  70% (5437/7766)Updating files:  71% (5514/7766)Updating files:  72% (5592/7766)Updating files:  73% (5670/7766)Updating files:  74% (5747/7766)Updating files:  75% (5825/7766)Updating files:  76% (5903/7766)Updating files:  77% (5980/7766)Updating files:  78% (6058/7766)Updating files:  79% (6136/7766)Updating files:  80% (6213/7766)Updating files:  81% (6291/7766)Updating files:  82% (6369/7766)Updating files:  83% (6446/7766)Updating files:  84% (6524/7766)Updating files:  85% (6602/7766)Updating files:  86% (6679/7766)Updating files:  87% (6757/7766)Updating files:  88% (6835/7766)Updating files:  89% (6912/7766)Updating files:  90% (6990/7766)Updating files:  91% (7068/7766)Updating files:  92% (7145/7766)Updating files:  93% (7223/7766)Updating files:  94% (7301/7766)Updating files:  95% (7378/7766)Updating files:  96% (7456/7766)Updating files:  97% (7534/7766)Updating files:  98% (7611/7766)Updating files:  99% (7689/7766)Updating files: 100% (7766/7766)Updating files: 100% (7766/7766), done.
+HEAD is now at 5ca57039e237 chore(sync): fast autonomous sync
+Successfully rebased and updated refs/heads/fix/ai-it-innovations-factory.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/ai-it-innovations-factory; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/ai-it-innovations-factory
+[info] Processing fix/black-screen-issue
+Switched to branch 'fix/black-screen-issue'
+HEAD is now at 669338711cac Feat: Implement Global Theme & Enhance Navigation UI
+Successfully rebased and updated refs/heads/fix/black-screen-issue.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/black-screen-issue; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/black-screen-issue
+[info] Processing fix/blank-screen-home-dynamic-import
+Switched to branch 'fix/blank-screen-home-dynamic-import'
+HEAD is now at 918618827c92 Fix: Resolve blank screen by correcting dynamic imports in Home page
+Successfully rebased and updated refs/heads/fix/blank-screen-home-dynamic-import.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/blank-screen-home-dynamic-import; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Current branch main is up to date.
+To https://github.com/Zion-Holdings/zion.app
+   87507fc1f93e..9239639447d0  main -> main
+[info] Merge + build OK for fix/blank-screen-home-dynamic-import
+[info] Processing fix/blank-screen-issue
+Switched to branch 'fix/blank-screen-issue'
+HEAD is now at 5d178e140f89 fix: Resolve blank screen by correcting webpack externals
+Successfully rebased and updated refs/heads/fix/blank-screen-issue.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/blank-screen-issue; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/blank-screen-issue
+[info] Processing fix/broken-links-and-layout
+Switched to branch 'fix/broken-links-and-layout'
+HEAD is now at 9c8ae448ff45 Fix broken links: add services dynamic pages, adjust Services links; integrate enhanced header/footer; improve catch-all; build passes
+Successfully rebased and updated refs/heads/fix/broken-links-and-layout.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/broken-links-and-layout; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/broken-links-and-layout
+[info] Processing fix/broken-links-and-missing-pages
+Switched to branch 'fix/broken-links-and-missing-pages'
+HEAD is now at 7443587f3e9c fix: resolve broken links, add missing pages, improve nav (header/footer/sidebar); build passes; link check 0 broken
+Successfully rebased and updated refs/heads/fix/broken-links-and-missing-pages.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/broken-links-and-missing-pages; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/broken-links-and-missing-pages
+[info] Processing fix/broken-links-and-nav
+Switched to branch 'fix/broken-links-and-nav'
+HEAD is now at 8b15a7bde9f8 Fix broken links and nav; add missing pages
+Successfully rebased and updated refs/heads/fix/broken-links-and-nav.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/broken-links-and-nav; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/broken-links-and-nav
+[info] Processing fix/build-cleanups
+Switched to branch 'fix/build-cleanups'
+Updating files:  88% (28010/31781)Updating files:  89% (28286/31781)Updating files:  90% (28603/31781)Updating files:  91% (28921/31781)Updating files:  92% (29239/31781)Updating files:  93% (29557/31781)Updating files:  94% (29875/31781)Updating files:  95% (30192/31781)Updating files:  96% (30510/31781)Updating files:  97% (30828/31781)Updating files:  98% (31146/31781)Updating files:  99% (31464/31781)Updating files: 100% (31781/31781)Updating files: 100% (31781/31781), done.
+HEAD is now at c91b157212f3 Build fixes: Next config, type fixes, dependencies, Footer/Header cleanup; successful next build
+Successfully rebased and updated refs/heads/fix/build-cleanups.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/build-cleanups; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/build-cleanups
+[info] Processing fix/build-conflicts
+Switched to branch 'fix/build-conflicts'
+Updating files:  14% (5144/35092)Updating files:  14% (5154/35092)Updating files:  15% (5264/35092)Updating files:  16% (5615/35092)Updating files:  17% (5966/35092)Updating files:  18% (6317/35092)Updating files:  19% (6668/35092)Updating files:  20% (7019/35092)Updating files:  21% (7370/35092)Updating files:  22% (7721/35092)Updating files:  23% (8072/35092)Updating files:  24% (8423/35092)Updating files:  25% (8773/35092)Updating files:  26% (9124/35092)Updating files:  27% (9475/35092)Updating files:  28% (9826/35092)Updating files:  29% (10177/35092)Updating files:  30% (10528/35092)Updating files:  31% (10879/35092)Updating files:  32% (11230/35092)Updating files:  33% (11581/35092)Updating files:  34% (11932/35092)Updating files:  35% (12283/35092)Updating files:  36% (12634/35092)Updating files:  37% (12985/35092)Updating files:  38% (13335/35092)Updating files:  39% (13686/35092)Updating files:  40% (14037/35092)Updating files:  41% (14388/35092)Updating files:  42% (14739/35092)Updating files:  43% (15090/35092)Updating files:  44% (15441/35092)Updating files:  44% (15464/35092)Updating files:  45% (15792/35092)Updating files:  46% (16143/35092)Updating files:  47% (16494/35092)Updating files:  48% (16845/35092)Updating files:  49% (17196/35092)Updating files:  50% (17546/35092)Updating files:  51% (17897/35092)Updating files:  52% (18248/35092)Updating files:  53% (18599/35092)Updating files:  54% (18950/35092)Updating files:  55% (19301/35092)Updating files:  56% (19652/35092)Updating files:  57% (20003/35092)Updating files:  58% (20354/35092)Updating files:  59% (20705/35092)Updating files:  60% (21056/35092)Updating files:  61% (21407/35092)Updating files:  62% (21758/35092)Updating files:  63% (22108/35092)Updating files:  64% (22459/35092)Updating files:  65% (22810/35092)Updating files:  66% (23161/35092)Updating files:  67% (23512/35092)Updating files:  67% (23665/35092)Updating files:  68% (23863/35092)Updating files:  69% (24214/35092)Updating files:  70% (24565/35092)Updating files:  71% (24916/35092)Updating files:  72% (25267/35092)Updating files:  73% (25618/35092)Updating files:  74% (25969/35092)Updating files:  75% (26319/35092)Updating files:  76% (26670/35092)Updating files:  77% (27021/35092)Updating files:  78% (27372/35092)Updating files:  79% (27723/35092)Updating files:  80% (28074/35092)Updating files:  81% (28425/35092)Updating files:  82% (28776/35092)Updating files:  83% (29127/35092)Updating files:  84% (29478/35092)Updating files:  85% (29829/35092)Updating files:  86% (30180/35092)Updating files:  87% (30531/35092)Updating files:  88% (30881/35092)Updating files:  89% (31232/35092)Updating files:  90% (31583/35092)Updating files:  91% (31934/35092)Updating files:  92% (32285/35092)Updating files:  93% (32636/35092)Updating files:  94% (32987/35092)Updating files:  95% (33338/35092)Updating files:  96% (33689/35092)Updating files:  97% (34040/35092)Updating files:  98% (34391/35092)Updating files:  98% (34415/35092)Updating files:  99% (34742/35092)Updating files: 100% (35092/35092)Updating files: 100% (35092/35092), done.
+HEAD is now at ab92f52d116b Remove login page and optimize routes manifest
+Successfully rebased and updated refs/heads/fix/build-conflicts.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/build-conflicts; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/build-conflicts
+[info] Processing fix/build-errors-and-ga-warning
+Switched to branch 'fix/build-errors-and-ga-warning'
+HEAD is now at 4b3ebf3363a9 Fix: Resolve build errors and VITE_GA_ID warning
+Successfully rebased and updated refs/heads/fix/build-errors-and-ga-warning.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/build-errors-and-ga-warning; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/build-errors-and-ga-warning
+[info] Processing fix/build-errors-and-merge-to-main
+Switched to branch 'fix/build-errors-and-merge-to-main'
+Updating files:  53% (16880/31393)Updating files:  54% (16953/31393)Updating files:  55% (17267/31393)Updating files:  56% (17581/31393)Updating files:  57% (17895/31393)Updating files:  58% (18208/31393)Updating files:  59% (18522/31393)Updating files:  60% (18836/31393)Updating files:  61% (19150/31393)Updating files:  62% (19464/31393)Updating files:  63% (19778/31393)Updating files:  64% (20092/31393)Updating files:  65% (20406/31393)Updating files:  66% (20720/31393)Updating files:  67% (21034/31393)Updating files:  68% (21348/31393)Updating files:  69% (21662/31393)Updating files:  70% (21976/31393)Updating files:  71% (22290/31393)Updating files:  72% (22603/31393)Updating files:  73% (22917/31393)Updating files:  74% (23231/31393)Updating files:  75% (23545/31393)Updating files:  76% (23859/31393)Updating files:  77% (24173/31393)Updating files:  78% (24487/31393)Updating files:  79% (24801/31393)Updating files:  80% (25115/31393)Updating files:  81% (25429/31393)Updating files:  82% (25743/31393)Updating files:  83% (26057/31393)Updating files:  84% (26371/31393)Updating files:  85% (26685/31393)Updating files:  86% (26998/31393)Updating files:  87% (27312/31393)Updating files:  88% (27626/31393)Updating files:  89% (27940/31393)Updating files:  90% (28254/31393)Updating files:  90% (28279/31393)Updating files:  91% (28568/31393)Updating files:  92% (28882/31393)Updating files:  93% (29196/31393)Updating files:  94% (29510/31393)Updating files:  95% (29824/31393)Updating files:  96% (30138/31393)Updating files:  97% (30452/31393)Updating files:  98% (30766/31393)Updating files:  99% (31080/31393)Updating files: 100% (31393/31393)Updating files: 100% (31393/31393), done.
+HEAD is now at 74eaa8f70ace Remove legacy service worker and manifest files, update components
+Successfully rebased and updated refs/heads/fix/build-errors-and-merge-to-main.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/build-errors-and-merge-to-main; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/build-errors-and-merge-to-main
+[info] Processing fix/build-stabilization
+Switched to branch 'fix/build-stabilization'
+Updating files:  68% (27496/40340)Updating files:  69% (27835/40340)Updating files:  70% (28238/40340)Updating files:  70% (28385/40340)Updating files:  71% (28642/40340)Updating files:  72% (29045/40340)Updating files:  73% (29449/40340)Updating files:  74% (29852/40340)Updating files:  75% (30255/40340)Updating files:  76% (30659/40340)Updating files:  77% (31062/40340)Updating files:  78% (31466/40340)Updating files:  79% (31869/40340)Updating files:  80% (32272/40340)Updating files:  81% (32676/40340)Updating files:  81% (32763/40340)Updating files:  82% (33079/40340)Updating files:  83% (33483/40340)Updating files:  84% (33886/40340)Updating files:  85% (34289/40340)Updating files:  86% (34693/40340)Updating files:  87% (35096/40340)Updating files:  88% (35500/40340)Updating files:  89% (35903/40340)Updating files:  90% (36306/40340)Updating files:  91% (36710/40340)Updating files:  92% (37113/40340)Updating files:  93% (37517/40340)Updating files:  94% (37920/40340)Updating files:  95% (38323/40340)Updating files:  96% (38727/40340)Updating files:  97% (39130/40340)Updating files:  98% (39534/40340)Updating files:  99% (39937/40340)Updating files: 100% (40340/40340)Updating files: 100% (40340/40340), done.
+HEAD is now at 13680d167757 fix: resolve merge conflicts, repair corrupted files, stabilize Next build (quarantine broken pages), add CompatLink, fix PostCSS, update configs
+Successfully rebased and updated refs/heads/fix/build-stabilization.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/build-stabilization; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+   9239639447d0..50b94dbe6d7f  main       -> origin/main
+Updating 9239639447d0..50b94dbe6d7f
+Fast-forward
+ automation-merge-log.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Everything up-to-date
+[info] Merge + build OK for fix/build-stabilization
+[info] Processing fix/categories-api-error
+Switched to branch 'fix/categories-api-error'
+HEAD is now at f77eaea802e4 Fix: Resolve API error for marketplace categories and enhance error handling
+Successfully rebased and updated refs/heads/fix/categories-api-error.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/categories-api-error; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/categories-api-error
+[info] Processing fix/ci
+Switched to branch 'fix/ci'
+HEAD is now at 1a4f959e405f chore(sync): empty commit to trigger PR
+Successfully rebased and updated refs/heads/fix/ci.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/ci; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/ci
+[info] Processing fix/ci-merge-clean-2
+Switched to branch 'fix/ci-merge-clean-2'
+Updating files:  48% (23496/48782)Updating files:  49% (23904/48782)Updating files:  50% (24391/48782)Updating files:  51% (24879/48782)Updating files:  52% (25367/48782)Updating files:  53% (25855/48782)Updating files:  54% (26343/48782)Updating files:  55% (26831/48782)Updating files:  56% (27318/48782)Updating files:  57% (27806/48782)Updating files:  58% (28294/48782)Updating files:  59% (28782/48782)Updating files:  60% (29270/48782)Updating files:  61% (29758/48782)Updating files:  62% (30245/48782)Updating files:  62% (30648/48782)Updating files:  63% (30733/48782)Updating files:  64% (31221/48782)Updating files:  65% (31709/48782)Updating files:  66% (32197/48782)Updating files:  67% (32684/48782)Updating files:  68% (33172/48782)Updating files:  69% (33660/48782)Updating files:  70% (34148/48782)Updating files:  71% (34636/48782)Updating files:  72% (35124/48782)Updating files:  73% (35611/48782)Updating files:  74% (36099/48782)Updating files:  75% (36587/48782)Updating files:  76% (37075/48782)Updating files:  77% (37563/48782)Updating files:  78% (38050/48782)Updating files:  79% (38538/48782)Updating files:  80% (39026/48782)Updating files:  81% (39514/48782)Updating files:  82% (40002/48782)Updating files:  82% (40277/48782)Updating files:  83% (40490/48782)Updating files:  84% (40977/48782)Updating files:  85% (41465/48782)Updating files:  86% (41953/48782)Updating files:  87% (42441/48782)Updating files:  88% (42929/48782)Updating files:  89% (43416/48782)Updating files:  90% (43904/48782)Updating files:  91% (44392/48782)Updating files:  92% (44880/48782)Updating files:  93% (45368/48782)Updating files:  94% (45856/48782)Updating files:  95% (46343/48782)Updating files:  96% (46831/48782)Updating files:  97% (47319/48782)Updating files:  98% (47807/48782)Updating files:  99% (48295/48782)Updating files: 100% (48782/48782)Updating files: 100% (48782/48782), done.
+HEAD is now at 485ff08360ec Merge branch 'cursor/check-fix-push-and-merge-to-main-b5e4'
+Successfully rebased and updated refs/heads/fix/ci-merge-clean-2.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/ci-merge-clean-2; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+   50b94dbe6d7f..265883f85cce  main       -> origin/main
+Updating 50b94dbe6d7f..265883f85cce
+Fast-forward
+ netlify.toml | 2 --
+ 1 file changed, 2 deletions(-)
+Everything up-to-date
+[info] Merge + build OK for fix/ci-merge-clean-2
+[info] Processing fix/config-clean
+Switched to branch 'fix/config-clean'
+Updating files:  41% (31870/77433)Updating files:  42% (32522/77433)Updating files:  43% (33297/77433)Updating files:  44% (34071/77433)Updating files:  45% (34845/77433)Updating files:  46% (35620/77433)Updating files:  47% (36394/77433)Updating files:  48% (37168/77433)Updating files:  49% (37943/77433)Updating files:  50% (38717/77433)Updating files:  51% (39491/77433)Updating files:  52% (40266/77433)Updating files:  53% (41040/77433)Updating files:  54% (41814/77433)Updating files:  55% (42589/77433)Updating files:  56% (43363/77433)Updating files:  57% (44137/77433)Updating files:  57% (44827/77433)Updating files:  58% (44912/77433)Updating files:  59% (45686/77433)Updating files:  60% (46460/77433)Updating files:  61% (47235/77433)Updating files:  62% (48009/77433)Updating files:  63% (48783/77433)Updating files:  64% (49558/77433)Updating files:  65% (50332/77433)Updating files:  66% (51106/77433)Updating files:  67% (51881/77433)Updating files:  68% (52655/77433)Updating files:  69% (53429/77433)Updating files:  69% (53481/77433)Updating files:  70% (54204/77433)Updating files:  71% (54978/77433)Updating files:  72% (55752/77433)Updating files:  73% (56527/77433)Updating files:  74% (57301/77433)Updating files:  75% (58075/77433)Updating files:  76% (58850/77433)Updating files:  77% (59624/77433)Updating files:  78% (60398/77433)Updating files:  79% (61173/77433)Updating files:  80% (61947/77433)Updating files:  81% (62721/77433)Updating files:  81% (62943/77433)Updating files:  82% (63496/77433)Updating files:  83% (64270/77433)Updating files:  84% (65044/77433)Updating files:  85% (65819/77433)Updating files:  86% (66593/77433)Updating files:  87% (67367/77433)Updating files:  88% (68142/77433)Updating files:  89% (68916/77433)Updating files:  90% (69690/77433)Updating files:  91% (70465/77433)Updating files:  92% (71239/77433)Updating files:  93% (72013/77433)Updating files:  94% (72788/77433)Updating files:  95% (73562/77433)Updating files:  96% (74336/77433)Updating files:  97% (75111/77433)Updating files:  98% (75885/77433)Updating files:  98% (76505/77433)Updating files:  99% (76659/77433)Updating files: 100% (77433/77433)Updating files: 100% (77433/77433), done.
+HEAD is now at 5e9f821d8bcc fix(config): resolve merge markers in next.config.mjs and eslint.config.js; build now succeeds
+Successfully rebased and updated refs/heads/fix/config-clean.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/config-clean; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/config-clean
+[info] Processing fix/dependency-lockfile
+Switched to branch 'fix/dependency-lockfile'
+HEAD is now at a2ebdd4bb7df chore: regenerate lockfile with legacy peer deps
+Successfully rebased and updated refs/heads/fix/dependency-lockfile.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/dependency-lockfile; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/dependency-lockfile
+[info] Processing fix/diagnose-blank-screen
+Switched to branch 'fix/diagnose-blank-screen'
+HEAD is now at a385db6010bc feat: Reduce error suppression for blank screen diagnosis
+Successfully rebased and updated refs/heads/fix/diagnose-blank-screen.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/diagnose-blank-screen; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/diagnose-blank-screen
+[info] Processing fix/gha-workflows
+Switched to branch 'fix/gha-workflows'
+HEAD is now at 053aac9b7eb0 chore(sync): empty commit to trigger PR
+Successfully rebased and updated refs/heads/fix/gha-workflows.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/gha-workflows; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/gha-workflows
+[info] Processing fix/guest-checkout-validation-feedback
+Switched to branch 'fix/guest-checkout-validation-feedback'
+HEAD is now at dc393f5092a1 fix: Add validation feedback to Guest Checkout modal
+Successfully rebased and updated refs/heads/fix/guest-checkout-validation-feedback.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/guest-checkout-validation-feedback; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/guest-checkout-validation-feedback
+[info] Processing fix/health-endpoint-env-exposure
+Switched to branch 'fix/health-endpoint-env-exposure'
+HEAD is now at 4b111c3a5e20 Fix: Remove environment variable exposure from /api/health endpoint
+Successfully rebased and updated refs/heads/fix/health-endpoint-env-exposure.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/health-endpoint-env-exposure; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/health-endpoint-env-exposure
+[info] Processing fix/home-page-404
+Switched to branch 'fix/home-page-404'
+HEAD is now at 2b8e40b5457c Fix: Resolve 404 error on home page and add integration test
+Successfully rebased and updated refs/heads/fix/home-page-404.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/home-page-404; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/home-page-404
+[info] Processing fix/i18n-initialization
+Switched to branch 'fix/i18n-initialization'
+HEAD is now at 579bf1b6318c Jules was unable to complete the task in time. Please review the work done so far and provide feedback for Jules to continue.
+Successfully rebased and updated refs/heads/fix/i18n-initialization.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/i18n-initialization; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/i18n-initialization
+[info] Processing fix/issue-8-language-switcher-nav-only
+Switched to branch 'fix/issue-8-language-switcher-nav-only'
+HEAD is now at 0be6d7359dee Fix: Apply translations globally, not just to nav
+Successfully rebased and updated refs/heads/fix/issue-8-language-switcher-nav-only.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/issue-8-language-switcher-nav-only; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/issue-8-language-switcher-nav-only
+[info] Processing fix/links-and-nav
+Switched to branch 'fix/links-and-nav'
+Updating files:  61% (30410/49052)Updating files:  62% (30413/49052)Updating files:  63% (30903/49052)Updating files:  64% (31394/49052)Updating files:  65% (31884/49052)Updating files:  66% (32375/49052)Updating files:  67% (32865/49052)Updating files:  68% (33356/49052)Updating files:  69% (33846/49052)Updating files:  70% (34337/49052)Updating files:  71% (34827/49052)Updating files:  72% (35318/49052)Updating files:  73% (35808/49052)Updating files:  74% (36299/49052)Updating files:  75% (36789/49052)Updating files:  76% (37280/49052)Updating files:  77% (37771/49052)Updating files:  77% (38001/49052)Updating files:  78% (38261/49052)Updating files:  79% (38752/49052)Updating files:  80% (39242/49052)Updating files:  81% (39733/49052)Updating files:  82% (40223/49052)Updating files:  83% (40714/49052)Updating files:  84% (41204/49052)Updating files:  85% (41695/49052)Updating files:  86% (42185/49052)Updating files:  87% (42676/49052)Updating files:  88% (43166/49052)Updating files:  89% (43657/49052)Updating files:  90% (44147/49052)Updating files:  91% (44638/49052)Updating files:  92% (45128/49052)Updating files:  93% (45619/49052)Updating files:  94% (46109/49052)Updating files:  95% (46600/49052)Updating files:  96% (47090/49052)Updating files:  97% (47581/49052)Updating files:  98% (48071/49052)Updating files:  99% (48562/49052)Updating files: 100% (49052/49052)Updating files: 100% (49052/49052), done.
+HEAD is now at d5575cc02931 chore: add react-router-dom for layouts; build successful
+Successfully rebased and updated refs/heads/fix/links-and-nav.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/links-and-nav; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/links-and-nav
+[info] Processing fix/links-nav-2029
+Switched to branch 'fix/links-nav-2029'
+HEAD is now at 501a14003817 chore: finalize merge despite lints (CI will handle)
+Successfully rebased and updated refs/heads/fix/links-nav-2029.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/links-nav-2029; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/links-nav-2029
+[info] Processing fix/logging-frontend-tests-initial-setup
+Switched to branch 'fix/logging-frontend-tests-initial-setup'
+HEAD is now at ecb86d1b4ec2 feat: Enhance logging and initial Jest test fixes
+Successfully rebased and updated refs/heads/fix/logging-frontend-tests-initial-setup.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/logging-frontend-tests-initial-setup; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+   265883f85cce..ebdbe6b7b4c6  main       -> origin/main
+Updating 265883f85cce..ebdbe6b7b4c6
+Fast-forward
+ netlify.toml | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Everything up-to-date
+[info] Merge + build OK for fix/logging-frontend-tests-initial-setup
+[info] Processing fix/login-button-validation
+Switched to branch 'fix/login-button-validation'
+HEAD is now at bed43e6e4ea9 test: update failing tests to pass CI
+Successfully rebased and updated refs/heads/fix/login-button-validation.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/login-button-validation; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+   ebdbe6b7b4c6..b571466333c0  main       -> origin/main
+Updating ebdbe6b7b4c6..b571466333c0
+Fast-forward
+ netlify.toml | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Everything up-to-date
+[info] Merge + build OK for fix/login-button-validation
+[info] Processing fix/merge-conflict-dispute-detail
+Switched to branch 'fix/merge-conflict-dispute-detail'
+HEAD is now at c5e038ccd0dd Fix: Resolve merge conflict in DisputeDetail.tsx
+Successfully rebased and updated refs/heads/fix/merge-conflict-dispute-detail.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/merge-conflict-dispute-detail; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/merge-conflict-dispute-detail
+[info] Processing fix/multi-faceted-loading-errors
+Switched to branch 'fix/multi-faceted-loading-errors'
+HEAD is now at fbfab73145da Fix: Update Content Security Policy in index.html
+Successfully rebased and updated refs/heads/fix/multi-faceted-loading-errors.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/multi-faceted-loading-errors; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/multi-faceted-loading-errors
+[info] Processing fix/nav-links-trailing-slashes
+Switched to branch 'fix/nav-links-trailing-slashes'
+HEAD is now at b23fecfb4311 fix: add trailing slashes for key service routes, create cookies page, repair sidebar commas; build passes
+Successfully rebased and updated refs/heads/fix/nav-links-trailing-slashes.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/nav-links-trailing-slashes; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/nav-links-trailing-slashes
+[info] Processing fix/netlify-build
+Switched to branch 'fix/netlify-build'
+Updating files:  21% (31946/148544)Updating files:  22% (32680/148544)Updating files:  23% (34166/148544)Updating files:  24% (35651/148544)Updating files:  24% (37012/148544)Updating files:  25% (37136/148544)Updating files:  26% (38622/148544)Updating files:  27% (40107/148544)Updating files:  28% (41593/148544)Updating files:  29% (43078/148544)Updating files:  30% (44564/148544)Updating files:  31% (46049/148544)Updating files:  32% (47535/148544)Updating files:  33% (49020/148544)Updating files:  33% (50084/148544)Updating files:  34% (50505/148544)Updating files:  35% (51991/148544)Updating files:  36% (53476/148544)Updating files:  37% (54962/148544)Updating files:  38% (56447/148544)Updating files:  38% (56467/148544)Updating files:  39% (57933/148544)Updating files:  40% (59418/148544)Updating files:  41% (60904/148544)Updating files:  42% (62389/148544)Updating files:  43% (63874/148544)Updating files:  44% (65360/148544)Updating files:  45% (66845/148544)Updating files:  46% (68331/148544)Updating files:  47% (69816/148544)Updating files:  48% (71302/148544)Updating files:  49% (72787/148544)Updating files:  50% (74272/148544)Updating files:  51% (75758/148544)Updating files:  52% (77243/148544)Updating files:  53% (78729/148544)Updating files:  54% (80214/148544)Updating files:  55% (81700/148544)Updating files:  56% (83185/148544)Updating files:  57% (84671/148544)Updating files:  58% (86156/148544)Updating files:  59% (87641/148544)Updating files:  60% (89127/148544)Updating files:  61% (90612/148544)Updating files:  62% (92098/148544)Updating files:  62% (92805/148544)Updating files:  63% (93583/148544)Updating files:  64% (95069/148544)Updating files:  65% (96554/148544)Updating files:  66% (98040/148544)Updating files:  67% (99525/148544)Updating files:  68% (101010/148544)Updating files:  69% (102496/148544)Updating files:  70% (103981/148544)Updating files:  71% (105467/148544)Updating files:  72% (106952/148544)Updating files:  73% (108438/148544)Updating files:  74% (109923/148544)Updating files:  75% (111408/148544)Updating files:  76% (112894/148544)Updating files:  77% (114379/148544)Updating files:  78% (115865/148544)Updating files:  79% (117350/148544)Updating files:  80% (118836/148544)Updating files:  81% (120321/148544)Updating files:  82% (121807/148544)Updating files:  83% (123292/148544)Updating files:  84% (124777/148544)Updating files:  85% (126263/148544)Updating files:  86% (127748/148544)Updating files:  86% (128398/148544)Updating files:  87% (129234/148544)Updating files:  88% (130719/148544)Updating files:  89% (132205/148544)Updating files:  90% (133690/148544)Updating files:  91% (135176/148544)Updating files:  92% (136661/148544)Updating files:  93% (138146/148544)Updating files:  94% (139632/148544)Updating files:  95% (141117/148544)Updating files:  96% (142603/148544)Updating files:  96% (143275/148544)Updating files:  97% (144088/148544)Updating files:  97% (145033/148544)Updating files:  98% (145574/148544)Updating files:  99% (147059/148544)Updating files: 100% (148544/148544)Updating files: 100% (148544/148544), done.
+HEAD is now at 3e64935dc45f fix(netlify): resolve Next.js app/pages conflict and remove deprecated appDir config
+Successfully rebased and updated refs/heads/fix/netlify-build.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-build; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-build
+[info] Processing fix/netlify-build-1758196178
+Switched to branch 'fix/netlify-build-1758196178'
+Updating files:  16% (36382/218085)Updating files:  17% (37075/218085)Updating files:  18% (39256/218085)Updating files:  18% (39633/218085)Updating files:  19% (41437/218085)Updating files:  20% (43617/218085)Updating files:  20% (44909/218085)Updating files:  21% (45798/218085)Updating files:  22% (47979/218085)Updating files:  23% (50160/218085)Updating files:  24% (52341/218085)Updating files:  25% (54522/218085)Updating files:  26% (56703/218085)Updating files:  27% (58883/218085)Updating files:  27% (59843/218085)Updating files:  28% (61064/218085)Updating files:  29% (63245/218085)Updating files:  30% (65426/218085)Updating files:  31% (67607/218085)Updating files:  32% (69788/218085)Updating files:  33% (71969/218085)Updating files:  34% (74149/218085)Updating files:  35% (76330/218085)Updating files:  36% (78511/218085)Updating files:  37% (80692/218085)Updating files:  38% (82873/218085)Updating files:  39% (85054/218085)Updating files:  40% (87234/218085)Updating files:  41% (89415/218085)Updating files:  42% (91596/218085)Updating files:  43% (93777/218085)Updating files:  44% (95958/218085)Updating files:  45% (98139/218085)Updating files:  45% (100040/218085)Updating files:  46% (100320/218085)Updating files:  47% (102500/218085)Updating files:  48% (104681/218085)Updating files:  49% (106862/218085)Updating files:  50% (109043/218085)Updating files:  51% (111224/218085)Updating files:  52% (113405/218085)Updating files:  53% (115586/218085)Updating files:  54% (117766/218085)Updating files:  55% (119947/218085)Updating files:  56% (122128/218085)Updating files:  57% (124309/218085)Updating files:  58% (126490/218085)Updating files:  59% (128671/218085)Updating files:  60% (130851/218085)Updating files:  61% (133032/218085)Updating files:  62% (135213/218085)Updating files:  62% (137038/218085)Updating files:  63% (137394/218085)Updating files:  64% (139575/218085)Updating files:  65% (141756/218085)Updating files:  66% (143937/218085)Updating files:  67% (146117/218085)Updating files:  68% (148298/218085)Updating files:  69% (150479/218085)Updating files:  70% (152660/218085)Updating files:  71% (154841/218085)Updating files:  72% (157022/218085)Updating files:  73% (159203/218085)Updating files:  74% (161383/218085)Updating files:  75% (163564/218085)Updating files:  76% (165745/218085)Updating files:  77% (167926/218085)Updating files:  78% (170107/218085)Updating files:  79% (172288/218085)Updating files:  79% (174436/218085)Updating files:  80% (174468/218085)Updating files:  81% (176649/218085)Updating files:  82% (178830/218085)Updating files:  83% (181011/218085)Updating files:  84% (183192/218085)Updating files:  85% (185373/218085)Updating files:  86% (187554/218085)Updating files:  87% (189734/218085)Updating files:  87% (190745/218085)Updating files:  88% (191915/218085)Updating files:  89% (194096/218085)Updating files:  90% (196277/218085)Updating files:  90% (197473/218085)Updating files:  91% (198458/218085)Updating files:  92% (200639/218085)Updating files:  93% (202820/218085)Updating files:  94% (205000/218085)Updating files:  95% (207181/218085)Updating files:  96% (209362/218085)Updating files:  97% (211543/218085)Updating files:  98% (213724/218085)Updating files:  98% (215423/218085)Updating files:  99% (215905/218085)Updating files: 100% (218085/218085)Updating files: 100% (218085/218085), done.
+HEAD is now at bdb08179e48c chore(netlify): trigger deploy and confirm build works under zion-website base
+Successfully rebased and updated refs/heads/fix/netlify-build-1758196178.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-build-1758196178; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-build-1758196178
+[info] Processing fix/netlify-build-20250908-132150
+Switched to branch 'fix/netlify-build-20250908-132150'
+Updating files:  38% (17801/46026)Updating files:  39% (17951/46026)Updating files:  40% (18411/46026)Updating files:  41% (18871/46026)Updating files:  42% (19331/46026)Updating files:  43% (19792/46026)Updating files:  44% (20252/46026)Updating files:  45% (20712/46026)Updating files:  46% (21172/46026)Updating files:  47% (21633/46026)Updating files:  48% (22093/46026)Updating files:  48% (22332/46026)Updating files:  49% (22553/46026)Updating files:  50% (23013/46026)Updating files:  51% (23474/46026)Updating files:  52% (23934/46026)Updating files:  53% (24394/46026)Updating files:  54% (24855/46026)Updating files:  55% (25315/46026)Updating files:  56% (25775/46026)Updating files:  57% (26235/46026)Updating files:  58% (26696/46026)Updating files:  59% (27156/46026)Updating files:  60% (27616/46026)Updating files:  61% (28076/46026)Updating files:  62% (28537/46026)Updating files:  62% (28956/46026)Updating files:  63% (28997/46026)Updating files:  64% (29457/46026)Updating files:  65% (29917/46026)Updating files:  66% (30378/46026)Updating files:  67% (30838/46026)Updating files:  68% (31298/46026)Updating files:  69% (31758/46026)Updating files:  70% (32219/46026)Updating files:  71% (32679/46026)Updating files:  72% (33139/46026)Updating files:  73% (33599/46026)Updating files:  74% (34060/46026)Updating files:  75% (34520/46026)Updating files:  76% (34980/46026)Updating files:  77% (35441/46026)Updating files:  78% (35901/46026)Updating files:  79% (36361/46026)Updating files:  80% (36821/46026)Updating files:  81% (37282/46026)Updating files:  81% (37676/46026)Updating files:  82% (37742/46026)Updating files:  83% (38202/46026)Updating files:  84% (38662/46026)Updating files:  85% (39123/46026)Updating files:  86% (39583/46026)Updating files:  87% (40043/46026)Updating files:  88% (40503/46026)Updating files:  89% (40964/46026)Updating files:  90% (41424/46026)Updating files:  91% (41884/46026)Updating files:  92% (42344/46026)Updating files:  93% (42805/46026)Updating files:  94% (43265/46026)Updating files:  95% (43725/46026)Updating files:  96% (44185/46026)Updating files:  97% (44646/46026)Updating files:  98% (45106/46026)Updating files:  98% (45339/46026)Updating files:  99% (45566/46026)Updating files: 100% (46026/46026)Updating files: 100% (46026/46026), done.
+HEAD is now at a312b38a6aa1 netlify: remove compress plugin; use prebuilt dist publish
+Successfully rebased and updated refs/heads/fix/netlify-build-20250908-132150.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-build-20250908-132150; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-build-20250908-132150
+[info] Processing fix/netlify-build-20250909140209
+Switched to branch 'fix/netlify-build-20250909140209'
+Updating files:  48% (16598/34483)Updating files:  49% (16897/34483)Updating files:  50% (17242/34483)Updating files:  51% (17587/34483)Updating files:  52% (17932/34483)Updating files:  53% (18276/34483)Updating files:  54% (18621/34483)Updating files:  55% (18966/34483)Updating files:  56% (19311/34483)Updating files:  57% (19656/34483)Updating files:  58% (20001/34483)Updating files:  59% (20345/34483)Updating files:  60% (20690/34483)Updating files:  61% (21035/34483)Updating files:  62% (21380/34483)Updating files:  63% (21725/34483)Updating files:  63% (21965/34483)Updating files:  64% (22070/34483)Updating files:  65% (22414/34483)Updating files:  66% (22759/34483)Updating files:  67% (23104/34483)Updating files:  68% (23449/34483)Updating files:  69% (23794/34483)Updating files:  70% (24139/34483)Updating files:  71% (24483/34483)Updating files:  72% (24828/34483)Updating files:  73% (25173/34483)Updating files:  74% (25518/34483)Updating files:  75% (25863/34483)Updating files:  76% (26208/34483)Updating files:  77% (26552/34483)Updating files:  78% (26897/34483)Updating files:  79% (27242/34483)Updating files:  80% (27587/34483)Updating files:  81% (27932/34483)Updating files:  82% (28277/34483)Updating files:  83% (28621/34483)Updating files:  84% (28966/34483)Updating files:  85% (29311/34483)Updating files:  86% (29656/34483)Updating files:  87% (30001/34483)Updating files:  87% (30070/34483)Updating files:  88% (30346/34483)Updating files:  89% (30690/34483)Updating files:  90% (31035/34483)Updating files:  91% (31380/34483)Updating files:  92% (31725/34483)Updating files:  93% (32070/34483)Updating files:  94% (32415/34483)Updating files:  95% (32759/34483)Updating files:  96% (33104/34483)Updating files:  97% (33449/34483)Updating files:  98% (33794/34483)Updating files:  99% (34139/34483)Updating files: 100% (34483/34483)Updating files: 100% (34483/34483), done.
+HEAD is now at e981c226f6da chore(build): add no-op optimize step to satisfy Netlify postbuild and local builds
+Successfully rebased and updated refs/heads/fix/netlify-build-20250909140209.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-build-20250909140209; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-build-20250909140209
+[info] Processing fix/netlify-build-20250910152318
+Switched to branch 'fix/netlify-build-20250910152318'
+Updating files:  40% (25179/62016)Updating files:  41% (25427/62016)Updating files:  42% (26047/62016)Updating files:  43% (26667/62016)Updating files:  43% (26937/62016)Updating files:  44% (27288/62016)Updating files:  45% (27908/62016)Updating files:  46% (28528/62016)Updating files:  47% (29148/62016)Updating files:  47% (29357/62016)Updating files:  48% (29768/62016)Updating files:  49% (30388/62016)Updating files:  50% (31008/62016)Updating files:  51% (31629/62016)Updating files:  52% (32249/62016)Updating files:  53% (32869/62016)Updating files:  54% (33489/62016)Updating files:  55% (34109/62016)Updating files:  56% (34729/62016)Updating files:  57% (35350/62016)Updating files:  58% (35970/62016)Updating files:  59% (36590/62016)Updating files:  60% (37210/62016)Updating files:  60% (37416/62016)Updating files:  61% (37830/62016)Updating files:  62% (38450/62016)Updating files:  63% (39071/62016)Updating files:  64% (39691/62016)Updating files:  64% (40307/62016)Updating files:  65% (40311/62016)Updating files:  66% (40931/62016)Updating files:  67% (41551/62016)Updating files:  68% (42171/62016)Updating files:  69% (42792/62016)Updating files:  70% (43412/62016)Updating files:  71% (44032/62016)Updating files:  71% (44115/62016)Updating files:  72% (44652/62016)Updating files:  73% (45272/62016)Updating files:  74% (45892/62016)Updating files:  75% (46512/62016)Updating files:  76% (47133/62016)Updating files:  77% (47753/62016)Updating files:  78% (48373/62016)Updating files:  79% (48993/62016)Updating files:  80% (49613/62016)Updating files:  81% (50233/62016)Updating files:  82% (50854/62016)Updating files:  83% (51474/62016)Updating files:  83% (52030/62016)Updating files:  84% (52094/62016)Updating files:  85% (52714/62016)Updating files:  86% (53334/62016)Updating files:  87% (53954/62016)Updating files:  88% (54575/62016)Updating files:  89% (55195/62016)Updating files:  90% (55815/62016)Updating files:  91% (56435/62016)Updating files:  92% (57055/62016)Updating files:  93% (57675/62016)Updating files:  93% (58186/62016)Updating files:  94% (58296/62016)Updating files:  95% (58916/62016)Updating files:  96% (59536/62016)Updating files:  97% (60156/62016)Updating files:  98% (60776/62016)Updating files:  99% (61396/62016)Updating files: 100% (62016/62016)Updating files: 100% (62016/62016), done.
+HEAD is now at 9bae692309e5 chore: ensure branch contains latest local changes
+Successfully rebased and updated refs/heads/fix/netlify-build-20250910152318.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-build-20250910152318; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-build-20250910152318
+[info] Processing fix/netlify-build-20250918-105457
+Switched to branch 'fix/netlify-build-20250918-105457'
+Updating files:  16% (36624/216622)Updating files:  17% (36826/216622)Updating files:  18% (38992/216622)Updating files:  19% (41159/216622)Updating files:  19% (41928/216622)Updating files:  20% (43325/216622)Updating files:  21% (45491/216622)Updating files:  22% (47657/216622)Updating files:  23% (49824/216622)Updating files:  24% (51990/216622)Updating files:  25% (54156/216622)Updating files:  25% (55890/216622)Updating files:  26% (56322/216622)Updating files:  27% (58488/216622)Updating files:  28% (60655/216622)Updating files:  29% (62821/216622)Updating files:  30% (64987/216622)Updating files:  31% (67153/216622)Updating files:  32% (69320/216622)Updating files:  33% (71486/216622)Updating files:  34% (73652/216622)Updating files:  35% (75818/216622)Updating files:  36% (77984/216622)Updating files:  37% (80151/216622)Updating files:  38% (82317/216622)Updating files:  39% (84483/216622)Updating files:  39% (86641/216622)Updating files:  40% (86649/216622)Updating files:  41% (88816/216622)Updating files:  42% (90982/216622)Updating files:  43% (93148/216622)Updating files:  44% (95314/216622)Updating files:  45% (97480/216622)Updating files:  46% (99647/216622)Updating files:  47% (101813/216622)Updating files:  48% (103979/216622)Updating files:  49% (106145/216622)Updating files:  50% (108311/216622)Updating files:  51% (110478/216622)Updating files:  52% (112644/216622)Updating files:  53% (114810/216622)Updating files:  54% (116976/216622)Updating files:  55% (119143/216622)Updating files:  56% (121309/216622)Updating files:  57% (123475/216622)Updating files:  58% (125641/216622)Updating files:  58% (127305/216622)Updating files:  59% (127807/216622)Updating files:  60% (129974/216622)Updating files:  61% (132140/216622)Updating files:  62% (134306/216622)Updating files:  63% (136472/216622)Updating files:  64% (138639/216622)Updating files:  65% (140805/216622)Updating files:  66% (142971/216622)Updating files:  67% (145137/216622)Updating files:  68% (147303/216622)Updating files:  69% (149470/216622)Updating files:  70% (151636/216622)Updating files:  71% (153802/216622)Updating files:  72% (155968/216622)Updating files:  73% (158135/216622)Updating files:  74% (160301/216622)Updating files:  75% (162467/216622)Updating files:  75% (162654/216622)Updating files:  76% (164633/216622)Updating files:  77% (166799/216622)Updating files:  78% (168966/216622)Updating files:  79% (171132/216622)Updating files:  80% (173298/216622)Updating files:  81% (175464/216622)Updating files:  82% (177631/216622)Updating files:  83% (179797/216622)Updating files:  84% (181963/216622)Updating files:  85% (184129/216622)Updating files:  86% (186295/216622)Updating files:  86% (187402/216622)Updating files:  87% (188462/216622)Updating files:  87% (189301/216622)Updating files:  88% (190628/216622)Updating files:  89% (192794/216622)Updating files:  90% (194960/216622)Updating files:  91% (197127/216622)Updating files:  92% (199293/216622)Updating files:  93% (201459/216622)Updating files:  94% (203625/216622)Updating files:  94% (204327/216622)Updating files:  95% (205791/216622)Updating files:  96% (207958/216622)Updating files:  97% (210124/216622)Updating files:  98% (212290/216622)Updating files:  99% (214456/216622)Updating files:  99% (215800/216622)Updating files: 100% (216622/216622)Updating files: 100% (216622/216622), done.
+HEAD is now at 91afdf3d7d8a ci(netlify): use yarn build for Vite static site; remove Next plugin/functions
+Successfully rebased and updated refs/heads/fix/netlify-build-20250918-105457.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-build-20250918-105457; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+   b571466333c0..65bd0ae7c7e1  main       -> origin/main
+Updating b571466333c0..65bd0ae7c7e1
+Fast-forward
+ netlify.toml | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-build-20250918-105457
+[info] Processing fix/netlify-build-20250918-115922
+Switched to branch 'fix/netlify-build-20250918-115922'
+Updating files:  15% (33920/218086)Updating files:  16% (34894/218086)Updating files:  17% (37075/218086)Updating files:  17% (38218/218086)Updating files:  18% (39256/218086)Updating files:  18% (41036/218086)Updating files:  19% (41437/218086)Updating files:  20% (43618/218086)Updating files:  21% (45799/218086)Updating files:  22% (47979/218086)Updating files:  23% (50160/218086)Updating files:  23% (51822/218086)Updating files:  24% (52341/218086)Updating files:  25% (54522/218086)Updating files:  26% (56703/218086)Updating files:  27% (58884/218086)Updating files:  28% (61065/218086)Updating files:  28% (62158/218086)Updating files:  29% (63245/218086)Updating files:  30% (65426/218086)Updating files:  31% (67607/218086)Updating files:  32% (69788/218086)Updating files:  33% (71969/218086)Updating files:  34% (74150/218086)Updating files:  35% (76331/218086)Updating files:  36% (78511/218086)Updating files:  37% (80692/218086)Updating files:  38% (82873/218086)Updating files:  39% (85054/218086)Updating files:  40% (87235/218086)Updating files:  41% (89416/218086)Updating files:  42% (91597/218086)Updating files:  43% (93777/218086)Updating files:  44% (95958/218086)Updating files:  44% (96430/218086)Updating files:  45% (98139/218086)Updating files:  46% (100320/218086)Updating files:  47% (102501/218086)Updating files:  48% (104682/218086)Updating files:  49% (106863/218086)Updating files:  50% (109043/218086)Updating files:  51% (111224/218086)Updating files:  52% (113405/218086)Updating files:  53% (115586/218086)Updating files:  54% (117767/218086)Updating files:  55% (119948/218086)Updating files:  56% (122129/218086)Updating files:  57% (124310/218086)Updating files:  58% (126490/218086)Updating files:  58% (127342/218086)Updating files:  59% (128671/218086)Updating files:  60% (130852/218086)Updating files:  61% (133033/218086)Updating files:  62% (135214/218086)Updating files:  63% (137395/218086)Updating files:  64% (139576/218086)Updating files:  65% (141756/218086)Updating files:  66% (143937/218086)Updating files:  67% (146118/218086)Updating files:  68% (148299/218086)Updating files:  69% (150480/218086)Updating files:  70% (152661/218086)Updating files:  70% (153976/218086)Updating files:  71% (154842/218086)Updating files:  72% (157022/218086)Updating files:  73% (159203/218086)Updating files:  74% (161384/218086)Updating files:  75% (163565/218086)Updating files:  76% (165746/218086)Updating files:  77% (167927/218086)Updating files:  78% (170108/218086)Updating files:  79% (172288/218086)Updating files:  80% (174469/218086)Updating files:  81% (176650/218086)Updating files:  82% (178831/218086)Updating files:  82% (179337/218086)Updating files:  83% (181012/218086)Updating files:  84% (183193/218086)Updating files:  85% (185374/218086)Updating files:  86% (187554/218086)Updating files:  87% (189735/218086)Updating files:  87% (190746/218086)Updating files:  88% (191916/218086)Updating files:  89% (194097/218086)Updating files:  90% (196278/218086)Updating files:  90% (197189/218086)Updating files:  91% (198459/218086)Updating files:  92% (200640/218086)Updating files:  93% (202820/218086)Updating files:  94% (205001/218086)Updating files:  95% (207182/218086)Updating files:  96% (209363/218086)Updating files:  97% (211544/218086)Updating files:  97% (213683/218086)Updating files:  98% (213725/218086)Updating files:  99% (215906/218086)Updating files: 100% (218086/218086)Updating files: 100% (218086/218086), done.
+HEAD is now at 599533fb524a chore(netlify): trigger rebuild and align config with Node 20 Netlify env
+Successfully rebased and updated refs/heads/fix/netlify-build-20250918-115922.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-build-20250918-115922; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+   65bd0ae7c7e1..443a143c8259  main       -> origin/main
+Updating 65bd0ae7c7e1..443a143c8259
+Fast-forward
+ current_prs.json | 4 +++-
+ pr_ids.txt       | 5 +++++
+ pr_list.txt      | 0
+ recent_prs.txt   | 5 +++++
+ 4 files changed, 13 insertions(+), 1 deletion(-)
+ create mode 100644 pr_ids.txt
+ create mode 100644 pr_list.txt
+ create mode 100644 recent_prs.txt
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-build-20250918-115922
+[info] Processing fix/netlify-build-and-docs-cleanup
+Switched to branch 'fix/netlify-build-and-docs-cleanup'
+Updating files:  16% (35784/216624)Updating files:  17% (36827/216624)Updating files:  17% (37663/216624)Updating files:  18% (38993/216624)Updating files:  19% (41159/216624)Updating files:  20% (43325/216624)Updating files:  21% (45492/216624)Updating files:  21% (47340/216624)Updating files:  22% (47658/216624)Updating files:  23% (49824/216624)Updating files:  24% (51990/216624)Updating files:  25% (54156/216624)Updating files:  26% (56323/216624)Updating files:  27% (58489/216624)Updating files:  27% (59918/216624)Updating files:  28% (60655/216624)Updating files:  29% (62821/216624)Updating files:  30% (64988/216624)Updating files:  31% (67154/216624)Updating files:  32% (69320/216624)Updating files:  33% (71486/216624)Updating files:  34% (73653/216624)Updating files:  35% (75819/216624)Updating files:  36% (77985/216624)Updating files:  37% (80151/216624)Updating files:  38% (82318/216624)Updating files:  39% (84484/216624)Updating files:  40% (86650/216624)Updating files:  41% (88816/216624)Updating files:  42% (90983/216624)Updating files:  43% (93149/216624)Updating files:  44% (95315/216624)Updating files:  44% (95979/216624)Updating files:  45% (97481/216624)Updating files:  46% (99648/216624)Updating files:  47% (101814/216624)Updating files:  48% (103980/216624)Updating files:  49% (106146/216624)Updating files:  50% (108312/216624)Updating files:  51% (110479/216624)Updating files:  52% (112645/216624)Updating files:  53% (114811/216624)Updating files:  54% (116977/216624)Updating files:  55% (119144/216624)Updating files:  56% (121310/216624)Updating files:  57% (123476/216624)Updating files:  58% (125642/216624)Updating files:  59% (127809/216624)Updating files:  60% (129975/216624)Updating files:  60% (130177/216624)Updating files:  61% (132141/216624)Updating files:  62% (134307/216624)Updating files:  63% (136474/216624)Updating files:  64% (138640/216624)Updating files:  65% (140806/216624)Updating files:  66% (142972/216624)Updating files:  67% (145139/216624)Updating files:  68% (147305/216624)Updating files:  69% (149471/216624)Updating files:  70% (151637/216624)Updating files:  71% (153804/216624)Updating files:  71% (155567/216624)Updating files:  72% (155970/216624)Updating files:  73% (158136/216624)Updating files:  74% (160302/216624)Updating files:  75% (162468/216624)Updating files:  76% (164635/216624)Updating files:  77% (166801/216624)Updating files:  78% (168967/216624)Updating files:  79% (171133/216624)Updating files:  80% (173300/216624)Updating files:  81% (175466/216624)Updating files:  82% (177632/216624)Updating files:  83% (179798/216624)Updating files:  84% (181965/216624)Updating files:  84% (182002/216624)Updating files:  85% (184131/216624)Updating files:  86% (186297/216624)Updating files:  87% (188463/216624)Updating files:  87% (189301/216624)Updating files:  88% (190630/216624)Updating files:  89% (192796/216624)Updating files:  90% (194962/216624)Updating files:  90% (196169/216624)Updating files:  91% (197128/216624)Updating files:  92% (199295/216624)Updating files:  93% (201461/216624)Updating files:  94% (203627/216624)Updating files:  95% (205793/216624)Updating files:  96% (207960/216624)Updating files:  97% (210126/216624)Updating files:  97% (210689/216624)Updating files:  98% (212292/216624)Updating files:  99% (214458/216624)Updating files: 100% (216624/216624)Updating files: 100% (216624/216624), done.
+HEAD is now at 362fc54d010e chore: clean automation README merge markers; confirm Netlify Vite build works (npm run build:netlify)
+Successfully rebased and updated refs/heads/fix/netlify-build-and-docs-cleanup.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-build-and-docs-cleanup; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-build-and-docs-cleanup
+[info] Processing fix/netlify-build-configuration
+Switched to branch 'fix/netlify-build-configuration'
+Updating files:  51% (15993/30919)Updating files:  52% (16078/30919)Updating files:  53% (16388/30919)Updating files:  54% (16697/30919)Updating files:  55% (17006/30919)Updating files:  56% (17315/30919)Updating files:  57% (17624/30919)Updating files:  58% (17934/30919)Updating files:  59% (18243/30919)Updating files:  60% (18552/30919)Updating files:  61% (18861/30919)Updating files:  62% (19170/30919)Updating files:  63% (19479/30919)Updating files:  63% (19719/30919)Updating files:  64% (19789/30919)Updating files:  65% (20098/30919)Updating files:  66% (20407/30919)Updating files:  67% (20716/30919)Updating files:  68% (21025/30919)Updating files:  69% (21335/30919)Updating files:  70% (21644/30919)Updating files:  71% (21953/30919)Updating files:  72% (22262/30919)Updating files:  73% (22571/30919)Updating files:  74% (22881/30919)Updating files:  75% (23190/30919)Updating files:  76% (23499/30919)Updating files:  77% (23808/30919)Updating files:  78% (24117/30919)Updating files:  79% (24427/30919)Updating files:  80% (24736/30919)Updating files:  81% (25045/30919)Updating files:  82% (25354/30919)Updating files:  83% (25663/30919)Updating files:  84% (25972/30919)Updating files:  85% (26282/30919)Updating files:  86% (26591/30919)Updating files:  87% (26900/30919)Updating files:  88% (27209/30919)Updating files:  89% (27518/30919)Updating files:  89% (27586/30919)Updating files:  90% (27828/30919)Updating files:  91% (28137/30919)Updating files:  92% (28446/30919)Updating files:  93% (28755/30919)Updating files:  94% (29064/30919)Updating files:  95% (29374/30919)Updating files:  96% (29683/30919)Updating files:  97% (29992/30919)Updating files:  98% (30301/30919)Updating files:  99% (30610/30919)Updating files: 100% (30919/30919)Updating files: 100% (30919/30919), done.
+HEAD is now at 98889efc6355 Remove unused React and ReactDOM production code
+Successfully rebased and updated refs/heads/fix/netlify-build-configuration.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-build-configuration; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-build-configuration
+[info] Processing fix/netlify-build-errors-resolved
+Switched to branch 'fix/netlify-build-errors-resolved'
+HEAD is now at cc058946cda7 fix: resolve remaining merge conflict markers
+Successfully rebased and updated refs/heads/fix/netlify-build-errors-resolved.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-build-errors-resolved; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-build-errors-resolved
+[info] Processing fix/netlify-build-final
+Switched to branch 'fix/netlify-build-final'
+HEAD is now at c401b8e2aa59 fix: resolve merge conflicts and maintain TypeScript fixes
+Successfully rebased and updated refs/heads/fix/netlify-build-final.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-build-final; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-build-final
+[info] Processing fix/netlify-build-healthcheck
+Switched to branch 'fix/netlify-build-healthcheck'
+HEAD is now at 4a4c793c434c Merge branch 'main' into fix/netlify-build-healthcheck
+Successfully rebased and updated refs/heads/fix/netlify-build-healthcheck.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-build-healthcheck; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-build-healthcheck
+[info] Processing fix/netlify-build-lockfile
+Switched to branch 'fix/netlify-build-lockfile'
+Updating files:  51% (15992/31030)Updating files:  52% (16136/31030)Updating files:  53% (16446/31030)Updating files:  54% (16757/31030)Updating files:  55% (17067/31030)Updating files:  56% (17377/31030)Updating files:  57% (17688/31030)Updating files:  58% (17998/31030)Updating files:  59% (18308/31030)Updating files:  60% (18618/31030)Updating files:  61% (18929/31030)Updating files:  62% (19239/31030)Updating files:  63% (19549/31030)Updating files:  63% (19739/31030)Updating files:  64% (19860/31030)Updating files:  65% (20170/31030)Updating files:  66% (20480/31030)Updating files:  67% (20791/31030)Updating files:  68% (21101/31030)Updating files:  69% (21411/31030)Updating files:  70% (21721/31030)Updating files:  71% (22032/31030)Updating files:  72% (22342/31030)Updating files:  73% (22652/31030)Updating files:  74% (22963/31030)Updating files:  75% (23273/31030)Updating files:  76% (23583/31030)Updating files:  77% (23894/31030)Updating files:  78% (24204/31030)Updating files:  79% (24514/31030)Updating files:  80% (24824/31030)Updating files:  81% (25135/31030)Updating files:  82% (25445/31030)Updating files:  83% (25755/31030)Updating files:  84% (26066/31030)Updating files:  85% (26376/31030)Updating files:  86% (26686/31030)Updating files:  87% (26997/31030)Updating files:  88% (27307/31030)Updating files:  89% (27617/31030)Updating files:  89% (27659/31030)Updating files:  90% (27927/31030)Updating files:  91% (28238/31030)Updating files:  92% (28548/31030)Updating files:  93% (28858/31030)Updating files:  94% (29169/31030)Updating files:  95% (29479/31030)Updating files:  96% (29789/31030)Updating files:  97% (30100/31030)Updating files:  98% (30410/31030)Updating files:  99% (30720/31030)Updating files: 100% (31030/31030)Updating files: 100% (31030/31030), done.
+HEAD is now at 604fdb612921 chore(build): sync package-lock.json to fix Netlify npm ci and build
+Successfully rebased and updated refs/heads/fix/netlify-build-lockfile.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-build-lockfile; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-build-lockfile
+[info] Processing fix/netlify-build-pnpm
+Switched to branch 'fix/netlify-build-pnpm'
+Updating files:  40% (25056/62017)Updating files:  41% (25427/62017)Updating files:  42% (26048/62017)Updating files:  43% (26668/62017)Updating files:  43% (26811/62017)Updating files:  44% (27288/62017)Updating files:  45% (27908/62017)Updating files:  46% (28528/62017)Updating files:  46% (28737/62017)Updating files:  47% (29148/62017)Updating files:  48% (29769/62017)Updating files:  49% (30389/62017)Updating files:  50% (31009/62017)Updating files:  51% (31629/62017)Updating files:  52% (32249/62017)Updating files:  53% (32870/62017)Updating files:  54% (33490/62017)Updating files:  55% (34110/62017)Updating files:  56% (34730/62017)Updating files:  57% (35350/62017)Updating files:  58% (35970/62017)Updating files:  58% (36502/62017)Updating files:  59% (36591/62017)Updating files:  60% (37211/62017)Updating files:  61% (37831/62017)Updating files:  62% (38451/62017)Updating files:  63% (39071/62017)Updating files:  64% (39691/62017)Updating files:  64% (40307/62017)Updating files:  65% (40312/62017)Updating files:  66% (40932/62017)Updating files:  67% (41552/62017)Updating files:  68% (42172/62017)Updating files:  69% (42792/62017)Updating files:  70% (43412/62017)Updating files:  71% (44033/62017)Updating files:  71% (44557/62017)Updating files:  72% (44653/62017)Updating files:  73% (45273/62017)Updating files:  74% (45893/62017)Updating files:  75% (46513/62017)Updating files:  76% (47133/62017)Updating files:  77% (47754/62017)Updating files:  78% (48374/62017)Updating files:  79% (48994/62017)Updating files:  80% (49614/62017)Updating files:  81% (50234/62017)Updating files:  82% (50854/62017)Updating files:  83% (51475/62017)Updating files:  83% (51887/62017)Updating files:  84% (52095/62017)Updating files:  85% (52715/62017)Updating files:  86% (53335/62017)Updating files:  87% (53955/62017)Updating files:  88% (54575/62017)Updating files:  89% (55196/62017)Updating files:  90% (55816/62017)Updating files:  91% (56436/62017)Updating files:  92% (57056/62017)Updating files:  93% (57676/62017)Updating files:  93% (58186/62017)Updating files:  94% (58296/62017)Updating files:  95% (58917/62017)Updating files:  96% (59537/62017)Updating files:  97% (60157/62017)Updating files:  98% (60777/62017)Updating files:  99% (61397/62017)Updating files: 100% (62017/62017)Updating files: 100% (62017/62017), done.
+HEAD is now at a891ad4031f0 Merge branch 'cursor/fix-netlify-build-and-merge-to-main-9ad8' to fix Netlify build by pinning Node 22.12.0
+Successfully rebased and updated refs/heads/fix/netlify-build-pnpm.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-build-pnpm; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+   443a143c8259..91a963128a0e  main       -> origin/main
+Updating 443a143c8259..91a963128a0e
+Fast-forward
+ final-optimization-report.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-build-pnpm
+[info] Processing fix/netlify-build-require-error
+Switched to branch 'fix/netlify-build-require-error'
+HEAD is now at a6a0456821cb Fix: Resolve module type conflict for deploy-optimization script
+Successfully rebased and updated refs/heads/fix/netlify-build-require-error.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-build-require-error; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-build-require-error
+[info] Processing fix/netlify-build-trigger
+Switched to branch 'fix/netlify-build-trigger'
+Updating files:  16% (36166/216667)Updating files:  17% (36834/216667)Updating files:  18% (39001/216667)Updating files:  18% (40564/216667)Updating files:  19% (41167/216667)Updating files:  20% (43334/216667)Updating files:  21% (45501/216667)Updating files:  22% (47667/216667)Updating files:  23% (49834/216667)Updating files:  24% (52001/216667)Updating files:  24% (53558/216667)Updating files:  25% (54167/216667)Updating files:  26% (56334/216667)Updating files:  27% (58501/216667)Updating files:  28% (60667/216667)Updating files:  29% (62834/216667)Updating files:  30% (65001/216667)Updating files:  31% (67167/216667)Updating files:  32% (69334/216667)Updating files:  33% (71501/216667)Updating files:  34% (73667/216667)Updating files:  34% (75295/216667)Updating files:  35% (75834/216667)Updating files:  36% (78001/216667)Updating files:  37% (80167/216667)Updating files:  38% (82334/216667)Updating files:  39% (84501/216667)Updating files:  40% (86667/216667)Updating files:  41% (88834/216667)Updating files:  42% (91001/216667)Updating files:  43% (93167/216667)Updating files:  44% (95334/216667)Updating files:  45% (97501/216667)Updating files:  46% (99667/216667)Updating files:  47% (101834/216667)Updating files:  48% (104001/216667)Updating files:  49% (106167/216667)Updating files:  50% (108334/216667)Updating files:  51% (110501/216667)Updating files:  51% (111918/216667)Updating files:  52% (112667/216667)Updating files:  53% (114834/216667)Updating files:  54% (117001/216667)Updating files:  55% (119167/216667)Updating files:  56% (121334/216667)Updating files:  57% (123501/216667)Updating files:  58% (125667/216667)Updating files:  59% (127834/216667)Updating files:  60% (130001/216667)Updating files:  61% (132167/216667)Updating files:  62% (134334/216667)Updating files:  63% (136501/216667)Updating files:  64% (138667/216667)Updating files:  65% (140834/216667)Updating files:  66% (143001/216667)Updating files:  67% (145167/216667)Updating files:  68% (147334/216667)Updating files:  69% (149501/216667)Updating files:  69% (149523/216667)Updating files:  70% (151667/216667)Updating files:  71% (153834/216667)Updating files:  72% (156001/216667)Updating files:  73% (158167/216667)Updating files:  74% (160334/216667)Updating files:  75% (162501/216667)Updating files:  76% (164667/216667)Updating files:  77% (166834/216667)Updating files:  78% (169001/216667)Updating files:  79% (171167/216667)Updating files:  80% (173334/216667)Updating files:  81% (175501/216667)Updating files:  82% (177667/216667)Updating files:  83% (179834/216667)Updating files:  83% (181784/216667)Updating files:  84% (182001/216667)Updating files:  85% (184167/216667)Updating files:  86% (186334/216667)Updating files:  87% (188501/216667)Updating files:  87% (189303/216667)Updating files:  88% (190667/216667)Updating files:  89% (192834/216667)Updating files:  90% (195001/216667)Updating files:  91% (197167/216667)Updating files:  91% (197691/216667)Updating files:  92% (199334/216667)Updating files:  93% (201501/216667)Updating files:  94% (203667/216667)Updating files:  95% (205834/216667)Updating files:  96% (208001/216667)Updating files:  97% (210167/216667)Updating files:  97% (212079/216667)Updating files:  98% (212334/216667)Updating files:  99% (214501/216667)Updating files: 100% (216667/216667)Updating files: 100% (216667/216667), done.
+HEAD is now at 9c224b8199e4 chore(netlify): bump timestamp to trigger deploy
+Successfully rebased and updated refs/heads/fix/netlify-build-trigger.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-build-trigger; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-build-trigger
+[info] Processing fix/netlify-build-v4-16
+Switched to branch 'fix/netlify-build-v4-16'
+Updating files:  50% (16046/31782)Updating files:  51% (16209/31782)Updating files:  52% (16527/31782)Updating files:  53% (16845/31782)Updating files:  54% (17163/31782)Updating files:  55% (17481/31782)Updating files:  56% (17798/31782)Updating files:  57% (18116/31782)Updating files:  58% (18434/31782)Updating files:  59% (18752/31782)Updating files:  60% (19070/31782)Updating files:  61% (19388/31782)Updating files:  62% (19705/31782)Updating files:  63% (20023/31782)Updating files:  64% (20341/31782)Updating files:  64% (20346/31782)Updating files:  65% (20659/31782)Updating files:  66% (20977/31782)Updating files:  67% (21294/31782)Updating files:  68% (21612/31782)Updating files:  69% (21930/31782)Updating files:  70% (22248/31782)Updating files:  71% (22566/31782)Updating files:  72% (22884/31782)Updating files:  73% (23201/31782)Updating files:  74% (23519/31782)Updating files:  75% (23837/31782)Updating files:  76% (24155/31782)Updating files:  77% (24473/31782)Updating files:  78% (24790/31782)Updating files:  79% (25108/31782)Updating files:  80% (25426/31782)Updating files:  81% (25744/31782)Updating files:  82% (26062/31782)Updating files:  83% (26380/31782)Updating files:  84% (26697/31782)Updating files:  85% (27015/31782)Updating files:  86% (27333/31782)Updating files:  87% (27651/31782)Updating files:  88% (27969/31782)Updating files:  89% (28286/31782)Updating files:  90% (28604/31782)Updating files:  91% (28922/31782)Updating files:  91% (28930/31782)Updating files:  92% (29240/31782)Updating files:  93% (29558/31782)Updating files:  94% (29876/31782)Updating files:  95% (30193/31782)Updating files:  96% (30511/31782)Updating files:  97% (30829/31782)Updating files:  98% (31147/31782)Updating files:  99% (31465/31782)Updating files: 100% (31782/31782)Updating files: 100% (31782/31782), done.
+HEAD is now at 79ec02cb1659 chore(netlify): bump rebuild trigger to v4.16 and ensure Vite SPA build settings for Netlify
+Successfully rebased and updated refs/heads/fix/netlify-build-v4-16.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-build-v4-16; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-build-v4-16
+[info] Processing fix/netlify-categories-export
+Switched to branch 'fix/netlify-categories-export'
+HEAD is now at 5418ef0d78ac Fix: Force static export for /categories page
+Successfully rebased and updated refs/heads/fix/netlify-categories-export.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-categories-export; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-categories-export
+[info] Processing fix/netlify-config-sync
+Switched to branch 'fix/netlify-config-sync'
+Updating files:  16% (35972/216631)Updating files:  17% (36828/216631)Updating files:  18% (38994/216631)Updating files:  18% (40561/216631)Updating files:  19% (41160/216631)Updating files:  20% (43327/216631)Updating files:  21% (45493/216631)Updating files:  22% (47659/216631)Updating files:  23% (49826/216631)Updating files:  24% (51992/216631)Updating files:  24% (52794/216631)Updating files:  25% (54158/216631)Updating files:  26% (56325/216631)Updating files:  27% (58491/216631)Updating files:  28% (60657/216631)Updating files:  29% (62823/216631)Updating files:  30% (64990/216631)Updating files:  30% (66411/216631)Updating files:  31% (67156/216631)Updating files:  32% (69322/216631)Updating files:  33% (71489/216631)Updating files:  34% (73655/216631)Updating files:  35% (75821/216631)Updating files:  36% (77988/216631)Updating files:  37% (80154/216631)Updating files:  38% (82320/216631)Updating files:  39% (84487/216631)Updating files:  40% (86653/216631)Updating files:  41% (88819/216631)Updating files:  42% (90986/216631)Updating files:  43% (93152/216631)Updating files:  44% (95318/216631)Updating files:  45% (97484/216631)Updating files:  46% (99651/216631)Updating files:  47% (101817/216631)Updating files:  47% (102276/216631)Updating files:  48% (103983/216631)Updating files:  49% (106150/216631)Updating files:  50% (108316/216631)Updating files:  51% (110482/216631)Updating files:  52% (112649/216631)Updating files:  53% (114815/216631)Updating files:  54% (116981/216631)Updating files:  55% (119148/216631)Updating files:  56% (121314/216631)Updating files:  57% (123480/216631)Updating files:  58% (125646/216631)Updating files:  59% (127813/216631)Updating files:  60% (129979/216631)Updating files:  61% (132145/216631)Updating files:  62% (134312/216631)Updating files:  62% (135375/216631)Updating files:  63% (136478/216631)Updating files:  64% (138644/216631)Updating files:  65% (140811/216631)Updating files:  66% (142977/216631)Updating files:  67% (145143/216631)Updating files:  68% (147310/216631)Updating files:  69% (149476/216631)Updating files:  70% (151642/216631)Updating files:  71% (153809/216631)Updating files:  72% (155975/216631)Updating files:  73% (158141/216631)Updating files:  74% (160307/216631)Updating files:  75% (162474/216631)Updating files:  75% (163196/216631)Updating files:  76% (164640/216631)Updating files:  77% (166806/216631)Updating files:  78% (168973/216631)Updating files:  79% (171139/216631)Updating files:  80% (173305/216631)Updating files:  81% (175472/216631)Updating files:  82% (177638/216631)Updating files:  83% (179804/216631)Updating files:  84% (181971/216631)Updating files:  85% (184137/216631)Updating files:  85% (184271/216631)Updating files:  86% (186303/216631)Updating files:  87% (188469/216631)Updating files:  87% (189301/216631)Updating files:  88% (190636/216631)Updating files:  89% (192802/216631)Updating files:  90% (194968/216631)Updating files:  91% (197135/216631)Updating files:  92% (199301/216631)Updating files:  93% (201467/216631)Updating files:  94% (203634/216631)Updating files:  94% (204054/216631)Updating files:  95% (205800/216631)Updating files:  96% (207966/216631)Updating files:  97% (210133/216631)Updating files:  98% (212299/216631)Updating files:  99% (214465/216631)Updating files:  99% (215811/216631)Updating files: 100% (216631/216631)Updating files: 100% (216631/216631), done.
+HEAD is now at 6d1b16ad0879 netlify: deploy Next.js app in zion-website via @netlify/plugin-nextjs; set base, publish
+Successfully rebased and updated refs/heads/fix/netlify-config-sync.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-config-sync; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 1; retrying...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 2; retrying...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 3; retrying...
+[error] Push failed after merging fix/netlify-config-sync; reverting merge
+HEAD is now at 443a143c8259 Sync with remote main before push
+[info] Processing fix/netlify-conflicting-paths
+Switched to branch 'fix/netlify-conflicting-paths'
+HEAD is now at db85eff500de Fix: Resolve conflicting paths in Next.js build
+Successfully rebased and updated refs/heads/fix/netlify-conflicting-paths.
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Merge made by the 'ort' strategy.
+ final-optimization-report.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[info] Merge succeeded for fix/netlify-conflicting-paths; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Successfully rebased and updated refs/heads/main.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 1; retrying...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 2; retrying...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 3; retrying...
+[error] Push failed after merging fix/netlify-conflicting-paths; reverting merge
+HEAD is now at 443a143c8259 Sync with remote main before push
+[info] Processing fix/netlify-csp
+Switched to branch 'fix/netlify-csp'
+Updating files:  48% (16482/34313)Updating files:  49% (16814/34313)Updating files:  50% (17157/34313)Updating files:  51% (17500/34313)Updating files:  52% (17843/34313)Updating files:  53% (18186/34313)Updating files:  54% (18530/34313)Updating files:  55% (18873/34313)Updating files:  56% (19216/34313)Updating files:  57% (19559/34313)Updating files:  58% (19902/34313)Updating files:  59% (20245/34313)Updating files:  60% (20588/34313)Updating files:  61% (20931/34313)Updating files:  62% (21275/34313)Updating files:  63% (21618/34313)Updating files:  64% (21961/34313)Updating files:  65% (22304/34313)Updating files:  66% (22647/34313)Updating files:  67% (22990/34313)Updating files:  68% (23333/34313)Updating files:  69% (23676/34313)Updating files:  70% (24020/34313)Updating files:  71% (24363/34313)Updating files:  72% (24706/34313)Updating files:  73% (25049/34313)Updating files:  74% (25392/34313)Updating files:  75% (25735/34313)Updating files:  76% (26078/34313)Updating files:  77% (26422/34313)Updating files:  78% (26765/34313)Updating files:  78% (26819/34313)Updating files:  79% (27108/34313)Updating files:  80% (27451/34313)Updating files:  81% (27794/34313)Updating files:  82% (28137/34313)Updating files:  83% (28480/34313)Updating files:  84% (28823/34313)Updating files:  85% (29167/34313)Updating files:  86% (29510/34313)Updating files:  87% (29853/34313)Updating files:  88% (30196/34313)Updating files:  89% (30539/34313)Updating files:  90% (30882/34313)Updating files:  91% (31225/34313)Updating files:  92% (31568/34313)Updating files:  93% (31912/34313)Updating files:  94% (32255/34313)Updating files:  95% (32598/34313)Updating files:  96% (32941/34313)Updating files:  97% (33284/34313)Updating files:  98% (33627/34313)Updating files:  99% (33970/34313)Updating files:  99% (33981/34313)Updating files: 100% (34313/34313)Updating files: 100% (34313/34313), done.
+HEAD is now at 886d10a142f1 fix(netlify): remove duplicate CSP header and merge marker; move env vars to [build.environment]
+Successfully rebased and updated refs/heads/fix/netlify-csp.
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Merge made by the 'ort' strategy.
+ final-optimization-report.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[info] Merge succeeded for fix/netlify-csp; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+   91a963128a0e..dd3ed7c85655  main       -> origin/main
+Successfully rebased and updated refs/heads/main.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 1; retrying...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 2; retrying...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 3; retrying...
+[error] Push failed after merging fix/netlify-csp; reverting merge
+HEAD is now at 91a963128a0e build(vite): fix duplicated manualChunks block and malformed output config
+[info] Processing fix/netlify-dist-publish
+Switched to branch 'fix/netlify-dist-publish'
+Updating files:  36% (16866/46026)Updating files:  37% (17030/46026)Updating files:  38% (17490/46026)Updating files:  39% (17951/46026)Updating files:  40% (18411/46026)Updating files:  41% (18871/46026)Updating files:  42% (19331/46026)Updating files:  43% (19792/46026)Updating files:  44% (20252/46026)Updating files:  45% (20712/46026)Updating files:  46% (21172/46026)Updating files:  47% (21633/46026)Updating files:  48% (22093/46026)Updating files:  48% (22333/46026)Updating files:  49% (22553/46026)Updating files:  50% (23013/46026)Updating files:  51% (23474/46026)Updating files:  52% (23934/46026)Updating files:  53% (24394/46026)Updating files:  54% (24855/46026)Updating files:  55% (25315/46026)Updating files:  56% (25775/46026)Updating files:  57% (26235/46026)Updating files:  58% (26696/46026)Updating files:  59% (27156/46026)Updating files:  60% (27616/46026)Updating files:  61% (28076/46026)Updating files:  62% (28537/46026)Updating files:  62% (28765/46026)Updating files:  63% (28997/46026)Updating files:  64% (29457/46026)Updating files:  65% (29917/46026)Updating files:  66% (30378/46026)Updating files:  67% (30838/46026)Updating files:  68% (31298/46026)Updating files:  69% (31758/46026)Updating files:  70% (32219/46026)Updating files:  71% (32679/46026)Updating files:  72% (33139/46026)Updating files:  73% (33599/46026)Updating files:  74% (34060/46026)Updating files:  75% (34520/46026)Updating files:  76% (34980/46026)Updating files:  77% (35441/46026)Updating files:  78% (35901/46026)Updating files:  79% (36361/46026)Updating files:  80% (36821/46026)Updating files:  81% (37282/46026)Updating files:  81% (37505/46026)Updating files:  82% (37742/46026)Updating files:  83% (38202/46026)Updating files:  84% (38662/46026)Updating files:  85% (39123/46026)Updating files:  86% (39583/46026)Updating files:  87% (40043/46026)Updating files:  88% (40503/46026)Updating files:  89% (40964/46026)Updating files:  90% (41424/46026)Updating files:  91% (41884/46026)Updating files:  92% (42344/46026)Updating files:  93% (42805/46026)Updating files:  94% (43265/46026)Updating files:  95% (43725/46026)Updating files:  96% (44185/46026)Updating files:  97% (44646/46026)Updating files:  98% (45106/46026)Updating files:  98% (45305/46026)Updating files:  99% (45566/46026)Updating files: 100% (46026/46026)Updating files: 100% (46026/46026), done.
+HEAD is now at 67d78c40ce3e Netlify: publish dist and fix conflicted dist/index.html
+Successfully rebased and updated refs/heads/fix/netlify-dist-publish.
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Merge made by the 'ort' strategy.
+ netlify.toml | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+[info] Merge succeeded for fix/netlify-dist-publish; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+   dd3ed7c85655..d8039e383ab9  main       -> origin/main
+Successfully rebased and updated refs/heads/main.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 1; retrying...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 2; retrying...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 3; retrying...
+[error] Push failed after merging fix/netlify-dist-publish; reverting merge
+HEAD is now at dd3ed7c85655 fix(merge): resolve netlify.toml conflict, standardize on pnpm netlify:build
+[info] Processing fix/netlify-invalid-plugin-event
+Switched to branch 'fix/netlify-invalid-plugin-event'
+HEAD is now at e436a5f0f5d2 Remove plugin name from module exports
+Successfully rebased and updated refs/heads/fix/netlify-invalid-plugin-event.
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Merge made by the 'ort' strategy.
+ src/App.tsx                                |    5 +-
+ src/utils/advancedAccessibilityEnhancer.ts |  710 ++++++++--------
+ src/utils/advancedSecuritySystem.ts        | 1240 +++++++++++++---------------
+ 3 files changed, 908 insertions(+), 1047 deletions(-)
+[info] Merge succeeded for fix/netlify-invalid-plugin-event; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Successfully rebased and updated refs/heads/main.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 1; retrying...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 2; retrying...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 3; retrying...
+[error] Push failed after merging fix/netlify-invalid-plugin-event; reverting merge
+HEAD is now at dd3ed7c85655 fix(merge): resolve netlify.toml conflict, standardize on pnpm netlify:build
+[info] Processing fix/netlify-nextjs-plugin-removal
+Switched to branch 'fix/netlify-nextjs-plugin-removal'
+HEAD is now at dbc113ceaad0 fix: completely remove @netlify/plugin-nextjs plugin and add comprehensive documentation
+Successfully rebased and updated refs/heads/fix/netlify-nextjs-plugin-removal.
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Merge made by the 'ort' strategy.
+ src/App.tsx                                |    5 +-
+ src/utils/advancedAccessibilityEnhancer.ts |  710 ++++++++--------
+ src/utils/advancedSecuritySystem.ts        | 1240 +++++++++++++---------------
+ 3 files changed, 908 insertions(+), 1047 deletions(-)
+[info] Merge succeeded for fix/netlify-nextjs-plugin-removal; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Successfully rebased and updated refs/heads/main.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 1; retrying...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 2; retrying...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 3; retrying...
+[error] Push failed after merging fix/netlify-nextjs-plugin-removal; reverting merge
+HEAD is now at dd3ed7c85655 fix(merge): resolve netlify.toml conflict, standardize on pnpm netlify:build
+[info] Processing fix/netlify-next-plugin
+Switched to branch 'fix/netlify-next-plugin'
+Updating files:  13% (28510/205475)Updating files:  14% (28767/205475)Updating files:  15% (30822/205475)Updating files:  16% (32876/205475)Updating files:  16% (34130/205475)Updating files:  17% (34931/205475)Updating files:  18% (36986/205475)Updating files:  19% (39041/205475)Updating files:  20% (41095/205475)Updating files:  21% (43150/205475)Updating files:  22% (45205/205475)Updating files:  22% (47103/205475)Updating files:  23% (47260/205475)Updating files:  24% (49314/205475)Updating files:  25% (51369/205475)Updating files:  26% (53424/205475)Updating files:  27% (55479/205475)Updating files:  28% (57533/205475)Updating files:  29% (59588/205475)Updating files:  30% (61643/205475)Updating files:  31% (63698/205475)Updating files:  32% (65752/205475)Updating files:  33% (67807/205475)Updating files:  33% (68532/205475)Updating files:  34% (69862/205475)Updating files:  35% (71917/205475)Updating files:  36% (73971/205475)Updating files:  37% (76026/205475)Updating files:  38% (78081/205475)Updating files:  39% (80136/205475)Updating files:  40% (82190/205475)Updating files:  41% (84245/205475)Updating files:  42% (86300/205475)Updating files:  43% (88355/205475)Updating files:  44% (90409/205475)Updating files:  45% (92464/205475)Updating files:  46% (94519/205475)Updating files:  47% (96574/205475)Updating files:  48% (98628/205475)Updating files:  49% (100683/205475)Updating files:  50% (102738/205475)Updating files:  50% (104521/205475)Updating files:  51% (104793/205475)Updating files:  52% (106847/205475)Updating files:  53% (108902/205475)Updating files:  54% (110957/205475)Updating files:  55% (113012/205475)Updating files:  56% (115066/205475)Updating files:  57% (117121/205475)Updating files:  58% (119176/205475)Updating files:  59% (121231/205475)Updating files:  60% (123285/205475)Updating files:  61% (125340/205475)Updating files:  62% (127395/205475)Updating files:  63% (129450/205475)Updating files:  64% (131504/205475)Updating files:  65% (133559/205475)Updating files:  66% (135614/205475)Updating files:  66% (137091/205475)Updating files:  67% (137669/205475)Updating files:  68% (139723/205475)Updating files:  69% (141778/205475)Updating files:  70% (143833/205475)Updating files:  71% (145888/205475)Updating files:  72% (147942/205475)Updating files:  73% (149997/205475)Updating files:  74% (152052/205475)Updating files:  75% (154107/205475)Updating files:  76% (156161/205475)Updating files:  77% (158216/205475)Updating files:  78% (160271/205475)Updating files:  79% (162326/205475)Updating files:  79% (162856/205475)Updating files:  80% (164380/205475)Updating files:  81% (166435/205475)Updating files:  82% (168490/205475)Updating files:  83% (170545/205475)Updating files:  84% (172599/205475)Updating files:  85% (174654/205475)Updating files:  86% (176709/205475)Updating files:  87% (178764/205475)Updating files:  87% (180135/205475)Updating files:  88% (180818/205475)Updating files:  88% (180867/205475)Updating files:  89% (182873/205475)Updating files:  90% (184928/205475)Updating files:  91% (186983/205475)Updating files:  92% (189037/205475)Updating files:  93% (191092/205475)Updating files:  94% (193147/205475)Updating files:  95% (195202/205475)Updating files:  96% (197256/205475)Updating files:  96% (197966/205475)Updating files:  97% (199311/205475)Updating files:  98% (201366/205475)Updating files:  99% (203421/205475)Updating files: 100% (205475/205475)Updating files: 100% (205475/205475), done.
+HEAD is now at a66f9d1ef3b7 netlify: enable @netlify/plugin-nextjs and remove SPA catch-all; build zion-website
+Successfully rebased and updated refs/heads/fix/netlify-next-plugin.
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Merge made by the 'ort' strategy.
+ src/App.tsx                                |    5 +-
+ src/utils/advancedAccessibilityEnhancer.ts |  710 ++++++++--------
+ src/utils/advancedSecuritySystem.ts        | 1240 +++++++++++++---------------
+ 3 files changed, 908 insertions(+), 1047 deletions(-)
+[info] Merge succeeded for fix/netlify-next-plugin; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Successfully rebased and updated refs/heads/main.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 1; retrying...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 2; retrying...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 3; retrying...
+[error] Push failed after merging fix/netlify-next-plugin; reverting merge
+HEAD is now at dd3ed7c85655 fix(merge): resolve netlify.toml conflict, standardize on pnpm netlify:build
+[info] Processing fix/netlify-next-routing
+Switched to branch 'fix/netlify-next-routing'
+Updating files:  15% (34092/218083)Updating files:  16% (34894/218083)Updating files:  17% (37075/218083)Updating files:  17% (38821/218083)Updating files:  18% (39255/218083)Updating files:  18% (40702/218083)Updating files:  19% (41436/218083)Updating files:  20% (43617/218083)Updating files:  21% (45798/218083)Updating files:  22% (47979/218083)Updating files:  23% (50160/218083)Updating files:  23% (51547/218083)Updating files:  24% (52340/218083)Updating files:  25% (54521/218083)Updating files:  26% (56702/218083)Updating files:  27% (58883/218083)Updating files:  28% (61064/218083)Updating files:  29% (63245/218083)Updating files:  29% (64389/218083)Updating files:  30% (65425/218083)Updating files:  31% (67606/218083)Updating files:  32% (69787/218083)Updating files:  33% (71968/218083)Updating files:  34% (74149/218083)Updating files:  35% (76330/218083)Updating files:  36% (78510/218083)Updating files:  37% (80691/218083)Updating files:  38% (82872/218083)Updating files:  39% (85053/218083)Updating files:  40% (87234/218083)Updating files:  41% (89415/218083)Updating files:  42% (91595/218083)Updating files:  43% (93776/218083)Updating files:  44% (95957/218083)Updating files:  45% (98138/218083)Updating files:  45% (99976/218083)Updating files:  46% (100319/218083)Updating files:  47% (102500/218083)Updating files:  48% (104680/218083)Updating files:  49% (106861/218083)Updating files:  50% (109042/218083)Updating files:  51% (111223/218083)Updating files:  52% (113404/218083)Updating files:  53% (115584/218083)Updating files:  54% (117765/218083)Updating files:  55% (119946/218083)Updating files:  56% (122127/218083)Updating files:  57% (124308/218083)Updating files:  58% (126489/218083)Updating files:  58% (128649/218083)Updating files:  59% (128669/218083)Updating files:  60% (130850/218083)Updating files:  61% (133031/218083)Updating files:  62% (135212/218083)Updating files:  63% (137393/218083)Updating files:  64% (139574/218083)Updating files:  65% (141754/218083)Updating files:  66% (143935/218083)Updating files:  67% (146116/218083)Updating files:  68% (148297/218083)Updating files:  69% (150478/218083)Updating files:  70% (152659/218083)Updating files:  71% (154839/218083)Updating files:  72% (157020/218083)Updating files:  72% (157169/218083)Updating files:  73% (159201/218083)Updating files:  74% (161382/218083)Updating files:  75% (163563/218083)Updating files:  76% (165744/218083)Updating files:  77% (167924/218083)Updating files:  78% (170105/218083)Updating files:  79% (172286/218083)Updating files:  80% (174467/218083)Updating files:  81% (176648/218083)Updating files:  82% (178829/218083)Updating files:  83% (181009/218083)Updating files:  83% (182936/218083)Updating files:  84% (183190/218083)Updating files:  85% (185371/218083)Updating files:  86% (187552/218083)Updating files:  87% (189733/218083)Updating files:  87% (190746/218083)Updating files:  88% (191914/218083)Updating files:  89% (194094/218083)Updating files:  90% (196275/218083)Updating files:  91% (198456/218083)Updating files:  91% (198930/218083)Updating files:  92% (200637/218083)Updating files:  93% (202818/218083)Updating files:  94% (204999/218083)Updating files:  95% (207179/218083)Updating files:  96% (209360/218083)Updating files:  97% (211541/218083)Updating files:  98% (213722/218083)Updating files:  99% (215903/218083)Updating files:  99% (216581/218083)Updating files: 100% (218083/218083)Updating files: 100% (218083/218083), done.
+HEAD is now at e8f41e87299c netlify: remove SPA fallback; use @netlify/plugin-nextjs routing
+Successfully rebased and updated refs/heads/fix/netlify-next-routing.
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Merge made by the 'ort' strategy.
+ src/App.tsx                                |    5 +-
+ src/utils/advancedAccessibilityEnhancer.ts |  710 ++++++++--------
+ src/utils/advancedSecuritySystem.ts        | 1240 +++++++++++++---------------
+ 3 files changed, 908 insertions(+), 1047 deletions(-)
+[info] Merge succeeded for fix/netlify-next-routing; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Successfully rebased and updated refs/heads/main.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 1; retrying...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 2; retrying...
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/Zion-Holdings/zion.app/'
+[warn] Push race on attempt 3; retrying...
+[error] Push failed after merging fix/netlify-next-routing; reverting merge
+HEAD is now at dd3ed7c85655 fix(merge): resolve netlify.toml conflict, standardize on pnpm netlify:build
+[info] Processing fix/netlify-node
+Switched to branch 'fix/netlify-node'
+Updating files:  40% (24892/61234)Updating files:  41% (25106/61234)Updating files:  42% (25719/61234)Updating files:  42% (26242/61234)Updating files:  43% (26331/61234)Updating files:  44% (26943/61234)Updating files:  44% (27474/61234)Updating files:  45% (27556/61234)Updating files:  46% (28168/61234)Updating files:  47% (28780/61234)Updating files:  48% (29393/61234)Updating files:  49% (30005/61234)Updating files:  50% (30617/61234)Updating files:  51% (31230/61234)Updating files:  52% (31842/61234)Updating files:  53% (32455/61234)Updating files:  54% (33067/61234)Updating files:  55% (33679/61234)Updating files:  55% (33736/61234)Updating files:  56% (34292/61234)Updating files:  57% (34904/61234)Updating files:  58% (35516/61234)Updating files:  59% (36129/61234)Updating files:  60% (36741/61234)Updating files:  61% (37353/61234)Updating files:  62% (37966/61234)Updating files:  63% (38578/61234)Updating files:  64% (39190/61234)Updating files:  64% (39259/61234)Updating files:  65% (39803/61234)Updating files:  66% (40415/61234)Updating files:  67% (41027/61234)Updating files:  68% (41640/61234)Updating files:  69% (42252/61234)Updating files:  69% (42559/61234)Updating files:  70% (42864/61234)Updating files:  71% (43477/61234)Updating files:  72% (44089/61234)Updating files:  73% (44701/61234)Updating files:  74% (45314/61234)Updating files:  75% (45926/61234)Updating files:  76% (46538/61234)Updating files:  77% (47151/61234)Updating files:  78% (47763/61234)Updating files:  79% (48375/61234)Updating files:  80% (48988/61234)Updating files:  81% (49600/61234)Updating files:  82% (50212/61234)Updating files:  82% (50282/61234)Updating files:  83% (50825/61234)Updating files:  84% (51437/61234)Updating files:  85% (52049/61234)Updating files:  86% (52662/61234)Updating files:  87% (53274/61234)Updating files:  88% (53886/61234)Updating files:  89% (54499/61234)Updating files:  90% (55111/61234)Updating files:  91% (55723/61234)Updating files:  92% (56336/61234)Updating files:  92% (56411/61234)Updating files:  93% (56948/61234)Updating files:  94% (57560/61234)Updating files:  95% (58173/61234)Updating files:  96% (58785/61234)Updating files:  97% (59397/61234)Updating files:  98% (60010/61234)Updating files:  99% (60622/61234)Updating files: 100% (61234/61234)Updating files: 100% (61234/61234), done.
+HEAD is now at 668dc202232d chore(netlify): use Node 22 to match local .nvmrc and build
+Successfully rebased and updated refs/heads/fix/netlify-node.
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Merge made by the 'ort' strategy.
+ src/App.tsx                                |    5 +-
+ src/utils/advancedAccessibilityEnhancer.ts |  710 ++++++++--------
+ src/utils/advancedSecuritySystem.ts        | 1240 +++++++++++++---------------
+ 3 files changed, 908 insertions(+), 1047 deletions(-)
+[info] Merge succeeded for fix/netlify-node; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+   d8039e383ab9..8cb78a314424  main       -> origin/main
+Successfully rebased and updated refs/heads/main.
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-node
+[info] Processing fix/netlify-node-20
+Switched to branch 'fix/netlify-node-20'
+Updating files:  10% (23191/217098)Updating files:  11% (23881/217098)Updating files:  12% (26052/217098)Updating files:  13% (28223/217098)Updating files:  14% (30394/217098)Updating files:  15% (32565/217098)Updating files:  16% (34736/217098)Updating files:  16% (36596/217098)Updating files:  17% (36907/217098)Updating files:  18% (39078/217098)Updating files:  18% (39112/217098)Updating files:  19% (41249/217098)Updating files:  20% (43420/217098)Updating files:  20% (43969/217098)Updating files:  21% (45591/217098)Updating files:  22% (47762/217098)Updating files:  23% (49933/217098)Updating files:  24% (52104/217098)Updating files:  25% (54275/217098)Updating files:  25% (54903/217098)Updating files:  26% (56446/217098)Updating files:  27% (58617/217098)Updating files:  28% (60788/217098)Updating files:  29% (62959/217098)Updating files:  30% (65130/217098)Updating files:  31% (67301/217098)Updating files:  32% (69472/217098)Updating files:  33% (71643/217098)Updating files:  34% (73814/217098)Updating files:  35% (75985/217098)Updating files:  36% (78156/217098)Updating files:  37% (80327/217098)Updating files:  38% (82498/217098)Updating files:  39% (84669/217098)Updating files:  40% (86840/217098)Updating files:  41% (89011/217098)Updating files:  42% (91182/217098)Updating files:  43% (93353/217098)Updating files:  44% (95524/217098)Updating files:  44% (97211/217098)Updating files:  45% (97695/217098)Updating files:  46% (99866/217098)Updating files:  47% (102037/217098)Updating files:  48% (104208/217098)Updating files:  49% (106379/217098)Updating files:  50% (108549/217098)Updating files:  51% (110720/217098)Updating files:  52% (112891/217098)Updating files:  53% (115062/217098)Updating files:  54% (117233/217098)Updating files:  55% (119404/217098)Updating files:  55% (120020/217098)Updating files:  56% (121575/217098)Updating files:  57% (123746/217098)Updating files:  58% (125917/217098)Updating files:  59% (128088/217098)Updating files:  60% (130259/217098)Updating files:  61% (132430/217098)Updating files:  62% (134601/217098)Updating files:  63% (136772/217098)Updating files:  64% (138943/217098)Updating files:  65% (141114/217098)Updating files:  66% (143285/217098)Updating files:  67% (145456/217098)Updating files:  67% (145600/217098)Updating files:  68% (147627/217098)Updating files:  69% (149798/217098)Updating files:  70% (151969/217098)Updating files:  71% (154140/217098)Updating files:  72% (156311/217098)Updating files:  73% (158482/217098)Updating files:  74% (160653/217098)Updating files:  75% (162824/217098)Updating files:  76% (164995/217098)Updating files:  77% (167166/217098)Updating files:  78% (169337/217098)Updating files:  79% (171508/217098)Updating files:  80% (173679/217098)Updating files:  81% (175850/217098)Updating files:  81% (176285/217098)Updating files:  82% (178021/217098)Updating files:  83% (180192/217098)Updating files:  84% (182363/217098)Updating files:  85% (184534/217098)Updating files:  86% (186705/217098)Updating files:  87% (188876/217098)Updating files:  87% (189760/217098)Updating files:  87% (190412/217098)Updating files:  88% (191047/217098)Updating files:  89% (193218/217098)Updating files:  90% (195389/217098)Updating files:  91% (197560/217098)Updating files:  92% (199731/217098)Updating files:  93% (201902/217098)Updating files:  94% (204073/217098)Updating files:  95% (206244/217098)Updating files:  95% (207785/217098)Updating files:  96% (208415/217098)Updating files:  97% (210586/217098)Updating files:  98% (212757/217098)Updating files:  99% (214928/217098)Updating files:  99% (216278/217098)Updating files: 100% (217098/217098)Updating files: 100% (217098/217098), done.
+HEAD is now at e2c0e3caf634 Remove unused configuration files and scripts
+Successfully rebased and updated refs/heads/fix/netlify-node-20.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-node-20; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Already up to date.
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-node-20
+[info] Processing fix/netlify-node-22-16-0
+Switched to branch 'fix/netlify-node-22-16-0'
+Updating files:  40% (24844/62017)Updating files:  41% (25427/62017)Updating files:  42% (26048/62017)Updating files:  42% (26484/62017)Updating files:  43% (26668/62017)Updating files:  44% (27288/62017)Updating files:  45% (27908/62017)Updating files:  45% (28045/62017)Updating files:  46% (28528/62017)Updating files:  47% (29148/62017)Updating files:  48% (29769/62017)Updating files:  49% (30389/62017)Updating files:  50% (31009/62017)Updating files:  51% (31629/62017)Updating files:  52% (32249/62017)Updating files:  53% (32870/62017)Updating files:  54% (33490/62017)Updating files:  55% (34110/62017)Updating files:  56% (34730/62017)Updating files:  56% (35210/62017)Updating files:  57% (35350/62017)Updating files:  58% (35970/62017)Updating files:  59% (36591/62017)Updating files:  60% (37211/62017)Updating files:  61% (37831/62017)Updating files:  62% (38451/62017)Updating files:  63% (39071/62017)Updating files:  64% (39691/62017)Updating files:  64% (40307/62017)Updating files:  65% (40312/62017)Updating files:  66% (40932/62017)Updating files:  67% (41552/62017)Updating files:  68% (42172/62017)Updating files:  69% (42792/62017)Updating files:  70% (43412/62017)Updating files:  71% (44033/62017)Updating files:  71% (44189/62017)Updating files:  72% (44653/62017)Updating files:  73% (45273/62017)Updating files:  74% (45893/62017)Updating files:  75% (46513/62017)Updating files:  76% (47133/62017)Updating files:  77% (47754/62017)Updating files:  78% (48374/62017)Updating files:  79% (48994/62017)Updating files:  80% (49614/62017)Updating files:  81% (50234/62017)Updating files:  82% (50854/62017)Updating files:  83% (51475/62017)Updating files:  83% (51949/62017)Updating files:  84% (52095/62017)Updating files:  85% (52715/62017)Updating files:  86% (53335/62017)Updating files:  87% (53955/62017)Updating files:  88% (54575/62017)Updating files:  89% (55196/62017)Updating files:  90% (55816/62017)Updating files:  91% (56436/62017)Updating files:  92% (57056/62017)Updating files:  93% (57676/62017)Updating files:  93% (58112/62017)Updating files:  94% (58296/62017)Updating files:  95% (58917/62017)Updating files:  96% (59537/62017)Updating files:  97% (60157/62017)Updating files:  98% (60777/62017)Updating files:  99% (61397/62017)Updating files: 100% (62017/62017)Updating files: 100% (62017/62017), done.
+HEAD is now at 8a286f0dc67f chore(deploy): trigger Netlify build after local success
+Successfully rebased and updated refs/heads/fix/netlify-node-22-16-0.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[info] Merge succeeded for fix/netlify-node-22-16-0; verifying build
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+   8cb78a314424..9caebf8bd762  main       -> origin/main
+Updating 8cb78a314424..9caebf8bd762
+Fast-forward
+ netlify.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Everything up-to-date
+[info] Merge + build OK for fix/netlify-node-22-16-0
+[info] Processing fix/netlify-pnpm
+Switched to branch 'fix/netlify-pnpm'
+Updating files:  40% (25016/62016)Updating files:  41% (25427/62016)Updating files:  42% (26047/62016)Updating files:  42% (26511/62016)Updating files:  43% (26667/62016)Updating files:  44% (27288/62016)Updating files:  45% (27908/62016)Updating files:  45% (28046/62016)Updating files:  46% (28528/62016)Updating files:  47% (29148/62016)Updating files:  48% (29768/62016)Updating files:  49% (30388/62016)Updating files:  50% (31008/62016)Updating files:  51% (31629/62016)Updating files:  52% (32249/62016)Updating files:  53% (32869/62016)Updating files:  54% (33489/62016)Updating files:  55% (34109/62016)Updating files:  55% (34521/62016)Updating files:  56% (34729/62016)Updating files:  57% (35350/62016)Updating files:  58% (35970/62016)Updating files:  59% (36590/62016)Updating files:  60% (37210/62016)Updating files:  61% (37830/62016)Updating files:  62% (38450/62016)Updating files:  63% (39071/62016)Updating files:  64% (39691/62016)Updating files:  64% (39859/62016)Updating files:  64% (40309/62016)Updating files:  65% (40311/62016)Updating files:  66% (40931/62016)Updating files:  67% (41551/62016)Updating files:  68% (42171/62016)Updating files:  69% (42792/62016)Updating files:  70% (43412/62016)Updating files:  71% (44032/62016)Updating files:  72% (44652/62016)Updating files:  73% (45272/62016)Updating files:  74% (45892/62016)Updating files:  75% (46512/62016)Updating files:  75% (46969/62016)Updating files:  76% (47133/62016)Updating files:  77% (47753/62016)Updating files:  78% (48373/62016)Updating files:  79% (48993/62016)Updating files:  80% (49613/62016)Updating files:  81% (50233/62016)Updating files:  82% (50854/62016)Updating files:  83% (51474/62016)Updating files:  84% (52094/62016)Updating files:  85% (52714/62016)Updating files:  86% (53334/62016)Updating files:  87% (53954/62016)Updating files:  88% (54575/62016)Updating files:  88% (54611/62016)Updating files:  89% (55195/62016)Updating files:  90% (55815/62016)Updating files:  91% (56435/62016)Updating files:  92% (57055/62016)Updating files:  93% (57675/62016)Updating files:  94% (58296/62016)Updating files:  95% (58916/62016)Updating files:  96% (59536/62016)Updating files:  97% (60156/62016)Updating files:  98% (60776/62016)Updating files:  99% (61396/62016)Updating files:  99% (61882/62016)Updating files: 100% (62016/62016)Updating files: 100% (62016/62016), done.
+HEAD is now at d720b1240952 chore(netlify): use pnpm via Corepack, frozen lockfile for builds
