@@ -124,7 +124,7 @@ class AdvancedSecurityEnhancer {
 
   private setupSecureCookies(): void {
     // Add secure cookie handling
-    const originalSetCookie = document.cookie;
+    let originalSetCookie = document.cookie;
     
     // Override cookie setting to ensure security
     Object.defineProperty(document, 'cookie', {

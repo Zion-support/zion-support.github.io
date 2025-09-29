@@ -254,7 +254,7 @@ class AdvancedPerformanceOptimizer {
 
     lazyComponents.forEach((component) => {
       // Preload components that are likely to be used
-      import(/* webpackChunkName: "lazy-[request]" */ `../${component}`)
+      import(/* webpackChunkName: "lazy-[request]" */ `../${component}.tsx`)
         .then((module) => {
           console.log(`Preloaded component: ${component}`);
         })
