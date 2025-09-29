@@ -69,5 +69,29 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-09-30",
     readMinutes: 6,
   },
+  {
+    id: "ai-scorecards-that-ship",
+    title: "AI Scorecards That Ship",
+    summary: "Tie initiatives to KPIs with lightweight scorecards and weekly operating rhythms.",
+    category: "AI Strategy",
+    date: "2025-10-05",
+    readMinutes: 4,
+  },
+  {
+    id: "edge-feature-flags",
+    title: "Edge Feature Flags: Zero‑Regret Rollouts",
+    summary: "Canary by segment and geography with instant rollback and budget caps at the edge.",
+    category: "Architecture",
+    date: "2025-10-05",
+    readMinutes: 5,
+  },
+  {
+    id: "cloud-governance-scorecards",
+    title: "Cloud Governance with Scorecards",
+    summary: "Turn policies into dashboards and PR checks—spend less time arguing, more shipping.",
+    category: "Platform Engineering",
+    date: "2025-10-05",
+    readMinutes: 4,
+  },
 ];
 

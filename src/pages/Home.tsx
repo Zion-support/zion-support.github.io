@@ -110,17 +110,29 @@ const Home = () => {
         <Header />
         <NewContentAnnouncement />
         <LatestContentBanner className="border-b border-white/10" variant="info" />
-        <NewContentPromoBanner className="border-b border-white/10" variant="premium" />
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="Fresh: AI Roadmaps, SBOM for ML, Online GenAI Evals"
+          description="New guides and playbooks to accelerate safe AI delivery in 2025."
+          ctaText="Explore new content"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "AI Product Roadmaps 2025", category: "AI Strategy", link: "/blog/ai-product-roadmaps-2025" },
+            { title: "SBOM for ML Supply Chain", category: "Security", link: "/blog/sbom-automation-ml-supply-chain" },
+            { title: "Online GenAI Evals", category: "GenAI", link: "/blog/online-genai-evals-2025" },
+          ]}
+        />
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
         </div>
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="📚 New: AI Governance Blueprint 2025"
-          description="Practical guardrails that ship: scorecards, policy tests, and change‑control."
-          ctaText="Read now"
-          ctaLink="/blog/ai-governance-blueprint-2025"
+          title="📚 New Series: Ship Faster with Guardrails"
+          description="AI roadmaps, ML SBOM automation, and online eval canaries now live."
+          ctaText="See what's new"
+          ctaLink="/blog"
           dismissible={true}
         />
         {/* Animated background elements */}
