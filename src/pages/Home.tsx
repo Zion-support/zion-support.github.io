@@ -105,8 +105,13 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
+<<<<<<< HEAD
           title="🚀 Fresh: Serverless Inference Cost Playbook + Practical RAG"
           description="Cut inference spend 40–70% and ship RAG that actually works in prod."
+=======
+          title="🚀 Fresh: AI Governance at Scale + Cloud FinOps QA Gates"
+          description="Policies that enable speed, plus QA gates that cut spend without slowing teams."
+>>>>>>> cursor/create-and-deploy-new-content-9c51
           ctaText="Read the latest"
           ctaLink="/blog/serverless-inference-cost-playbook-2025"
           dismissible={true}
