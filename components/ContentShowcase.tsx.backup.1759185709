@@ -37,7 +37,10 @@ const contentItems: ContentItem[] = [
   },
   {
     id: 'ai-quantum-hybrid-computing-2026',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-1066
     title: 'AI Quantum Hybrid Computing 2026: Next-Generation Intelligence Revolution',
     excerpt: 'Explore the revolutionary potential of quantum-AI hybrid computing. Achieve 1000x faster optimization, 95% accuracy improvements, and breakthrough capabilities.',
     type: 'article',
@@ -47,7 +50,10 @@ const contentItems: ContentItem[] = [
     featured: true,
     publishedDate: '2026-01-25',
     metrics: [
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-1066
       { value: '1000x', label: 'Faster Optimization' },
       { value: '95%', label: 'Accuracy Improvement' },
       { value: '$50M+', label: 'ROI Potential' },
@@ -59,7 +65,10 @@ const contentItems: ContentItem[] = [
     title: 'AI Autonomous Enterprise Transformation 2026: $25M ROI Case Study',
     excerpt: 'See how a Fortune 500 company achieved $25M ROI with comprehensive AI transformation. 99% automation, 90% cost reduction, and complete business revolution.',
     type: 'case-study',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-1066
     category: 'Success Story',
     href: '/case-studies/ai-transformation-mega-success-2026',
     category: 'Enterprise Transformation',
@@ -74,8 +83,13 @@ const contentItems: ContentItem[] = [
     ]
   },
   {
+<<<<<<< HEAD
 =======
 =======
+>>>>>>> cursor/create-and-deploy-new-content-e8cb
+=======
+>>>>>>> c52084ad473a5b64cedbe0b58750591f18f661da
+>>>>>>> origin/cursor/create-and-deploy-new-content-1066
     id: 'ai-governance-maturity-model-2026',
     title: 'AI Governance Maturity Model 2026: From Ad‑Hoc to Audit‑Ready',
     excerpt: 'Move from ad‑hoc controls to audit‑ready AI governance with scorecards and KPIs.',

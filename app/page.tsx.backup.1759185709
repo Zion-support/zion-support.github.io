@@ -1,5 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
+import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
+import { Clock, ArrowRight, Brain, Zap, TrendingUp } from 'lucide-react';
+=======
 import MegaContent2026Banner from '../components/MegaContent2026Banner';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 =======
@@ -56,6 +61,7 @@ import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBa
 import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
 import LatestContent2026MegaBanner from '../components/LatestContent2026MegaBanner';
 import AICostOptimizationBanner from '../components/AICostOptimizationBanner';
+>>>>>>> origin/cursor/create-and-deploy-new-content-1066
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 2026 AI Solutions',
@@ -161,6 +167,19 @@ export default function HomePage() {
 
   return (
     <div className="animate-fade-in">
+<<<<<<< HEAD
+            <Link href="/blog/ai-quantum-computing-breakthrough-2026" className="underline hover:text-yellow-200 font-semibold">Quantum AI (1000x Faster)</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-ethical-framework-success-2026" className="underline hover:text-yellow-200">Ethics Success Story</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-autonomous-ai-systems-2026" className="underline hover:text-yellow-200">Autonomous AI Systems</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-cognitive-computing-2026" className="underline hover:text-yellow-200">Cognitive Computing</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-synthetic-data-2026" className="underline hover:text-yellow-200">Synthetic Data</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200">$25M ROI Success</Link>
+=======
             <Link href="/blog/ai-agent-orchestration-advanced-2026" className="underline hover:text-yellow-200">Agent Orchestration</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-agent-orchestration-mega-success-2026" className="underline hover:text-yellow-200">$15M Orchestration Success</Link>
@@ -194,6 +213,7 @@ export default function HomePage() {
             <Link href="/blog/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">Quantum AI (1000x Faster)</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-autonomous-enterprise-2026" className="underline hover:text-yellow-200">Autonomous Enterprise</Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-1066
           </div>
           <Link
             href="/blog"
@@ -203,6 +223,23 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
+      {/* Featured New Content 2026 */}
+      <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                🔥 JUST PUBLISHED
+              </span>
+            </div>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Revolutionary AI Content & Success Stories
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover the latest AI innovations, transformation guides, and real-world success stories 
+              that are reshaping businesses in 2026
+=======
 
       {/* Featured 2026 Content Banner */}
       <section className="py-16 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
@@ -459,6 +496,7 @@ export default function HomePage() {
       <NewBlogBanner />
       <WorkflowAutomationBanner />
       <AIAnalyticsBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-1066
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -524,6 +562,8 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
       {/* Latest 2026 Content Showcase */}
       <NewContent2026ShowcaseBanner />
       
@@ -739,6 +779,7 @@ export default function HomePage() {
         </div>
       </section>
 
+>>>>>>> origin/cursor/create-and-deploy-new-content-1066
       {/* Featured Services */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -1852,6 +1893,8 @@ export default function HomePage() {
                 </p>
                 <div className="flex items-center text-purple-600 font-semibold">
                   Read Complete Guide →
+<<<<<<< HEAD
+=======
               </div>
             </Link>
             <Link href="/blog/ai-evaluation-scorecards-2026" className="group">
@@ -1877,6 +1920,7 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">Layered defenses for autonomous agents with isolation and policies.</p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Article →
+>>>>>>> origin/cursor/create-and-deploy-new-content-1066
                 </div>
               </div>
             </Link>
@@ -1916,8 +1960,11 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
+<<<<<<< HEAD
+=======
               </div>
             </Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-1066
             <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">

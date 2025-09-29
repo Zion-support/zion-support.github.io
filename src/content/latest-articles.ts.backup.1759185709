@@ -82,12 +82,67 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+<<<<<<< HEAD
+    id: "edge-privacy-playbooks-2026",
+    slug: "edge-privacy-playbooks-2026",
+    title: "Edge Privacy Playbooks 2026: Scoped IDs, Local Filters, DP Noise",
+    description: "Practical patterns to keep insights rich and risk low with on‑device filtering, scoped identifiers, and differential privacy.",
+    excerpt: "Ship privacy‑first analytics and personalization without PII using scoped IDs and local filters.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-29",
+    category: "Edge Computing",
+    tags: ["Privacy", "Edge", "Telemetry"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/edge-privacy-playbooks-2026.jpg",
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-1066
     newBadge: true,
     trending: true
   },
   {
+<<<<<<< HEAD
+    id: "ai-sre-blueprints-2026",
+    slug: "ai-sre-blueprints-2026",
+    title: "AI SRE Blueprints 2026: Reliability Budgets, Rollbacks, and Live Traces",
+    description: "Operational patterns to keep AI systems reliable: explicit budgets, instant rollbacks, and user‑centric traces.",
+    excerpt: "Ship AI safely with SRE playbooks: budgets, traces, and deterministic fallbacks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-15",
+    category: "Security",
+    tags: ["Incident Response", "Automation", "Guardrails"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-incident-budgets-2026-v2.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-first-ab-testing-2026",
+    slug: "privacy-first-ab-testing-2026",
+    title: "Privacy‑First A/B Testing 2026: Scoped IDs and On‑Device Filters",
+    description: "Design experiments that preserve user privacy with scoped identifiers, retention windows, and on‑device filters.",
+    excerpt: "Run compliant experiments without losing signal—scoped IDs, local filters, and TTLs.",
+    author: "Zion Tech Group Team",
+    date: "2025-01-20",
+    category: "Quantum Computing",
+    tags: ["Quantum AI", "Quantum Computing", "Optimization", "Performance"],
+    featured: true,
+    readTime: "25 min read",
+    image: "/images/ai-quantum-computing-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-llm-caching-v2-2026",
+    slug: "edge-llm-caching-v2-2026",
+    title: "Edge LLM Caching v2: Tiered KV, TTL Windows, Sub‑100ms Prompts",
+    description: "Advance your edge prompt performance with tiered KV caches, signed configs, and freshness windows that balance latency and accuracy.",
+    excerpt: "Cut latency and cost with tiered caches, signed configs, and TTL windows.",
 =======
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-1066
     author: "Zion Tech Group Team",
     date: "2025-10-16",
     category: "Edge Computing",
