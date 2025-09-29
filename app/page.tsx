@@ -30,7 +30,11 @@ import {
   AIOperationalExcellenceBanner,
   AIAgentObservabilityBanner,
   ManufacturingTransformationBanner,
-  Latest2026ContentBanner
+  Latest2026ContentBanner,
+  AISecurityEnterprise2026Banner,
+  AIMultimodalEnterprise2026Banner,
+  AISustainabilityTransformationBanner,
+  LatestContent2026Banner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
@@ -70,6 +74,10 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <LatestContent2026Banner />
+      <AISecurityEnterprise2026Banner />
+      <AIMultimodalEnterprise2026Banner />
+      <AISustainabilityTransformationBanner />
       <Latest2026ContentBanner />
       <AIOperationalExcellenceBanner />
       <AIAgentObservabilityBanner />
