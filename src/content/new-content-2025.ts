@@ -399,6 +399,64 @@ export const newContent2025: NewContentItem[] = [
   }
 ];
 
+// Append newly published 2026 content surfaced on the homepage banners
+newContent2025.unshift(
+  {
+    id: "edge-llm-safety-caching-2026",
+    title: "Edge LLM Safety Caching 2026: Sub‑100ms with Guardrails",
+    description: "Tiered caches, signed configs, and privacy filters for fast, safe prompts at the edge.",
+    excerpt: "Cut latency and cost while keeping privacy and reliability high using edge safety caches.",
+    type: "blog",
+    category: "Architecture",
+    tags: ["Edge", "Caching", "Privacy"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-10-18",
+    readTime: "7 min read",
+    author: "Zion Tech Group",
+    image: "/images/edge-llm-safety-caching-2026.jpg",
+    url: "/blog/edge-llm-safety-caching-2026",
+    cta: { primary: "Read Article" }
+  },
+  {
+    id: "platform-slo-guardrails-2026",
+    title: "Platform SLO Guardrails 2026: Scorecards that Prevent Regressions",
+    description: "Wire SLOs to adoption and delivery with PR checks, canaries, and rollback triggers.",
+    excerpt: "A practical system of SLO guardrails that teams adopt and leaders trust.",
+    type: "blog",
+    category: "Platform Engineering",
+    tags: ["SLOs", "Scorecards", "Guardrails"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-10-18",
+    readTime: "8 min read",
+    author: "Zion Tech Group",
+    image: "/images/platform-slo-guardrails-2026.jpg",
+    url: "/blog/platform-slo-guardrails-2026",
+    cta: { primary: "Read Article" }
+  },
+  {
+    id: "secure-tool-marketplace-2026",
+    title: "Secure Tool Marketplace 2026: Sandboxes, Vetting, and Attestations",
+    description: "Bring third‑party tools safely with sandboxes, policy checks, and signed attestations.",
+    excerpt: "Grow your ecosystem without sacrificing security or delivery speed.",
+    type: "blog",
+    category: "Security",
+    tags: ["Marketplace", "Security", "Sandbox"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-10-18",
+    readTime: "7 min read",
+    author: "Zion Tech Group",
+    image: "/images/secure-tool-marketplace-2026.jpg",
+    url: "/blog/secure-tool-marketplace-2026",
+    cta: { primary: "Read Article" }
+  }
+);
+
 export const featuredNewContent = newContent2025.filter(item => item.featured);
 export const trendingNewContent = newContent2025.filter(item => item.trending);
 export const latestNewContent = newContent2025
