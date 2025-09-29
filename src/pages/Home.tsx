@@ -132,14 +132,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Agentic Workflows, Edge LLM Caching, ML SBOMs"
-          description="Reliable multi‑step agents, sub‑100ms prompts, and secure ML supply chains."
+          title="New: Edge LLM Caching, Governance Scorecards, Serverless Cost Playbook"
+          description="Sub‑100ms prompts, KPI‑tied governance that sticks, and 40–70% AI cost savings."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
             { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" },
             { title: "AI Governance Scorecards Quickstart", category: "AI Strategy", link: "/blog/ai-governance-scorecards-quickstart-2025" },
-            { title: "AI Autonomous Infrastructure", category: "Infrastructure", link: "/services/ai-autonomous-infrastructure-platform" },
+            { title: "Serverless AI Inference Cost Playbook 2025", category: "Cost Optimization", link: "/blog/serverless-ai-inference-cost-playbook-2025" },
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -277,7 +277,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: On‑Device Agents, GenAI Budgets, Secure Tools Marketplace — read now
+            New: Edge LLM Caching, Governance Scorecards, Serverless Cost Playbook — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
@@ -535,7 +535,7 @@ const Home = () => {
                 <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Fresh: Agent Safety Budgets, Privacy‑First Telemetry, Cost‑Aware Routing
+                Fresh: Edge LLM Caching, KPI Scorecards, Serverless Cost Playbook
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles & Insights

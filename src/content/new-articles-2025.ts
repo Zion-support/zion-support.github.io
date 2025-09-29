@@ -153,6 +153,58 @@ export const newArticles2025: NewArticle[] = [
     trending: true,
     featuredInHomepage: false
   }
+  ,
+  {
+    id: "edge-llm-caching-blueprint-2026",
+    slug: "edge-llm-caching-blueprint-2026",
+    title: "Edge LLM Caching Blueprint 2026: Sub‑100ms Prompts at Scale",
+    description: "Architect edge‑accelerated LLM inference using regional caches, warm pools, and cost‑aware routing for lightning‑fast responses.",
+    excerpt: "Deliver sub‑100ms prompts with regional caches, warm pools, and adaptive routing.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Architecture",
+    tags: ["Edge AI", "LLM Inference", "Caching", "Performance"],
+    featured: true,
+    readTime: "13 min read",
+    image: "/images/edge-llm-caching-blueprint-2026.jpg",
+    newBadge: true,
+    trending: true,
+    featuredInHomepage: true
+  },
+  {
+    id: "ai-governance-scorecards-quickstart-2025",
+    slug: "ai-governance-scorecards-quickstart-2025",
+    title: "AI Governance Scorecards: A Practical Quickstart",
+    description: "Stand up pragmatic governance scorecards tied to KPIs, risks, and evaluation policies that teams actually use.",
+    excerpt: "Ship governance that sticks: KPI‑linked scorecards, policy tests, and clear owners.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "AI Strategy",
+    tags: ["Governance", "Evals", "Policy", "Risk"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/ai-governance-scorecards-quickstart-2025.jpg",
+    newBadge: true,
+    trending: true,
+    featuredInHomepage: true
+  },
+  {
+    id: "serverless-ai-inference-cost-playbook-2025",
+    slug: "serverless-ai-inference-cost-playbook-2025",
+    title: "Serverless AI Inference Cost Playbook (2025)",
+    description: "Cut inference costs 40–70% with adaptive batching, warm pools, and demand shaping without degrading SLOs.",
+    excerpt: "A tactical guide to reduce AI inference spend while maintaining performance.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-26",
+    category: "Cost Optimization",
+    tags: ["Serverless", "Cost", "Inference", "Optimization"],
+    featured: true,
+    readTime: "11 min read",
+    image: "/images/serverless-ai-inference-cost-playbook-2025.jpg",
+    newBadge: true,
+    trending: true,
+    featuredInHomepage: true
+  }
 ];
 
 export const featuredNewArticles = newArticles2025.filter(article => article.featured);
