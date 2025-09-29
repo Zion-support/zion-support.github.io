@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import AIMicroSAAS from './pages/AIMicroSAAS';
 import Blog from './pages/Blog';
 
 export const AppRouter: React.FC = () => {
@@ -12,11 +13,8 @@ export const AppRouter: React.FC = () => {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/services" element={<Services />} />
-      <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
-      <Route path="/services/ai-virtual-assistant" element={<AIVirtualAssistant />} />
-      <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
-      <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/ai-micro-saas" element={<AIMicroSAAS />} />
       <Route path="/blog" element={<Blog />} />
     </Routes>
   );
