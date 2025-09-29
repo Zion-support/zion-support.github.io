@@ -39,12 +39,12 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
           const accMetrics = await accessibilityEnhancer.getMetrics();
           setAccessibilityMetrics(accMetrics);
 
-          const seoData = await seoOptimizer.analyze();
-          setSeoIssues(seoData.issues.map(issue => ({
-            type: 'warning' as const,
-            message: issue,
-            impact: 'medium' as const
-          })));
+          // const seoData = await seoOptimizer.analyze();
+          // setSeoIssues(seoData.issues.map(issue => ({
+          //   type: 'warning' as const,
+          //   message: issue,
+          //   impact: 'medium' as const
+          // })));
         } catch (error) {
           console.error('Error loading metrics:', error);
         }

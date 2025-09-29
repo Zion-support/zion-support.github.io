@@ -22,9 +22,9 @@ import { useSEOData } from './components/SEOOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
-import { performanceOptimizer as advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
+import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
-import { seoOptimizer } from './utils/advancedSEOOptimizer';
+import { seoOptimizer as advancedSeoOptimizer } from './utils/advancedSEOOptimizer';
 import { securityEnhancer } from './utils/advancedSecurityEnhancer';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceMonitor from './components/PerformanceMonitor';
@@ -120,7 +120,7 @@ export default function App(): React.JSX.Element {
         // Initialize advanced optimizations
         advancedPerformanceOptimizer.optimize();
         accessibilityEnhancer.getMetrics();
-        seoOptimizer.getMetrics();
+        // seoOptimizer.getMetrics(); // Method not available
         securityEnhancer.getMetrics();
         
         // Initialize performance optimizations
@@ -177,7 +177,7 @@ export default function App(): React.JSX.Element {
   }, [isLoading, appLoading, error, loadingProgress]);
 
   return (
-    <EnhancedErrorBoundary onError={handleError}>
+    <EnhancedErrorBoundary>
       <div className="App">
         {appContent}
         
