@@ -10,9 +10,82 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "secure-ml-supply-chain-2026",
-    title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
-    description: "Continuous SBOMs for models, datasets, and prompts with attestations and CI policy checks.",
+    slug: "ai-governance-scorecards-quickstart-2026-v2",
+    title: "AI Governance Scorecards v2 (2026): Ship Fast, Stay Safe",
+    description: "Updated, lightweight scorecards + PR checks + canaries that predict outcomes without slowing teams.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-personalization-private-2026",
+    title: "Edge Personalization 2026: Private <100ms Experiences",
+    description: "Signed configs, on‑device caches, and KV patterns for realtime personalization without PII risk.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-llm-caching-v2-2026",
+    title: "Edge LLM Caching v2: Tiered KV, TTL Windows, Sub‑100ms",
+    description: "Tiered KV caches, signed configs, and freshness windows for fast, affordable prompts.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "agent-release-trains-2026",
+    title: "Agent Release Trains 2026: Weekly Ships with Canary Budgets",
+    description: "KPI‑wired canaries, live traces, and rollback templates for safe agent releases.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-first-scorecards-2026",
+    title: "Privacy‑First Scorecards: Scoped IDs That Teams Use",
+    description: "Design scorecards with scoped identifiers and retention windows to keep insights rich without PII risk.",
+    category: "Observability",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-blue-green-releases-2026",
+    title: "Agent Blue‑Green Releases 2026: Safe, Reversible Automation",
+    description: "Ship agent changes with policy tests, budgeted actions, and instant rollback toggles.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-llm-safety-caching-2026",
+    title: "Edge LLM Safety Caching 2026: Sub‑100ms Prompts with Guardrails",
+    description: "Tiered KV, signed configs, and inline filters that keep prompts fast and safe at the edge.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "platform-slo-guardrails-2026",
+    title: "Platform SLO Guardrails 2026: Scorecards that Prevent Regressions",
+    description: "Wire golden paths to SLOs with pre‑merge policy tests and live canaries that keep teams fast.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-breach-drills-2026",
+    title: "AI Breach Drills 2026: Practicing Safe Autonomy Under Budget",
+    description: "Run realistic breach simulations with budgeted actions, approval gates, and instant rollback.",
+>>>>>>> chore/add-sept-29-content
     category: "Security",
     publishedAt: "2025-10-13",
     featured: true,
