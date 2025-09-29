@@ -65,6 +65,33 @@ export const posts: BlogPost[] = [
   }
   ,
   {
+    slug: "secure-agents-runtime-2026",
+    title: "Secure AI Agents Runtime: Sandboxes, Egress Policies, and Traces",
+    description: "A production checklist for running AI agents safely with isolation, policy gates, and observability.",
+    category: "AI Security",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-e2e-observability-2026",
+    title: "Edge E2E Observability: User-Centric Tracing and <100ms Telemetry",
+    description: "Blueprint for capturing user-centric telemetry across edge, CDN, and app layers without latency tax.",
+    category: "Architecture",
+    publishedAt: "2025-10-09",
+    featured: false,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-cost-controllers-2026",
+    title: "AI Cost Controllers: Budgets, Tiered Quality, and Guardrails",
+    description: "Keep GenAI spend predictable with dynamic budgets, tiered models, and policy‑backed routes.",
+    category: "Cloud",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "ai-governance-blueprint-2025",
     title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
     description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.",
