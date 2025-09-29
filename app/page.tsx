@@ -255,7 +255,7 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
-      {/* Promotional Banners */}
+      {/* NEW 2026 Content Promotional Banners */}
       <Latest2026ContentBanner />
       {/* 2026 Banners from PromotionalBanner */}
       {/* AISecurityEnterprise2026Banner is not exported here; skipping */}
