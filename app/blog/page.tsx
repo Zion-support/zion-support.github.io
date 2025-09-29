@@ -54,6 +54,24 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="Secure ML Supply Chain 2026: End‑to‑End Hardening Blueprint"
+            excerpt="Signed artifacts, policy tests, SBOMs, and continuous verification across data, models, and runtime."
+            date="October 9, 2025"
+            category="Security"
+            readTime="10 min"
+            image="🔐"
+            href="/blog/secure-ml-supply-chain-2026"
+          />
+          <BlogPost
+            title="GenAI Routing Blueprint 2026: Latency, Quality, Cost—All Three"
+            excerpt="Multi‑model routing with contracts, evals, caching, and adaptive policies to hit SLOs at lower cost."
+            date="October 9, 2025"
+            category="GenAI"
+            readTime="9 min"
+            image="🧭"
+            href="/blog/genai-routing-blueprint-2026"
+          />
+          <BlogPost
             title="Platform Engineering Scorecards 2026: From Golden Paths to Outcomes"
             excerpt="Measure adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery."
             date="October 9, 2025"

@@ -57,7 +57,7 @@ export default function HomePage() {
             <span>✨ New on the blog:</span>
             <Link href="/blog/platform-engineering-scorecards-2026" className="underline hover:text-yellow-200">Platform Scorecards 2026</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-reliable-rag-2025" className="underline hover:text-yellow-200">Reliable RAG 2025</Link>
+            <Link href="/blog/secure-ml-supply-chain-2026" className="underline hover:text-yellow-200">Secure ML Supply Chain 2026</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-roadmaps-2026" className="underline hover:text-yellow-200">AI Roadmaps 2026</Link>
           </div>
