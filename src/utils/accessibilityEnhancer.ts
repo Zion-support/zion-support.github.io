@@ -54,11 +54,6 @@ class AccessibilityEnhancer {
     this.observeAccessibility();
   }
 
-  public initialize(): void {
-    // Alias for init() to match callers
-    this.init();
-  }
-
   private setupKeyboardNavigation(): void {
     if (!this.config.keyboardNavigation) return;
 
@@ -372,9 +367,9 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
 if (typeof window !== 'undefined') {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-      accessibilityEnhancer.initialize();
+      accessibilityEnhancer.init();
     });
   } else {
-    accessibilityEnhancer.initialize();
+    accessibilityEnhancer.init();
   }
 }

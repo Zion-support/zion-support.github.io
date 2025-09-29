@@ -96,7 +96,7 @@ export const latestInsights: InsightArticle[] = [
       "Latency budgets, client ↔ edge traces, and error budgets that keep UX snappy.",
     category: "Observability",
     date: "2025-09-30",
-    readMinutes: 5,
+    readMinutes: 6,
   },
   {
     id: "cloud-scorecards-review-rituals",
