@@ -158,6 +158,24 @@ export default function BlogPage() {
             href="/blog/devops-automation-scaling"
           />
           <BlogPost
+            title="AI-Powered Customer Support in 2025: The Future is Here"
+            excerpt="Discover how AI is revolutionizing customer support with intelligent chatbots, sentiment analysis, and 24/7 availability."
+            date="January 17, 2025"
+            category="Customer Support"
+            readTime="8 min"
+            image="💬"
+            href="/blog/ai-powered-customer-support-2025"
+          />
+          <BlogPost
+            title="Cloud-Native Architecture in 2025: Building for Scale and Resilience"
+            excerpt="Master cloud-native architecture patterns, microservices design, and container orchestration for scalable applications."
+            date="January 17, 2025"
+            category="Cloud Architecture"
+            readTime="12 min"
+            image="☁️"
+            href="/blog/cloud-native-architecture-2025"
+          />
+          <BlogPost
             title="The Rise of AI Virtual Assistants in Customer Service"
             excerpt="Discover how AI virtual assistants are revolutionizing customer support with 24/7 availability, natural language processing, and personalized interactions."
             date="January 3, 2025"
