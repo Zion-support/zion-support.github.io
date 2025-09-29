@@ -1,12 +1,11 @@
 [build]
-  # Publish prebuilt dist without running a build
-  command = "echo \"Skipping build; deploying prebuilt dist\""
+  # Build the Vite React application
+  command = "pnpm run build:optimized"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
-  NETLIFY_SKIP_INSTALL = "true"
   # Avoid optional binary downloads (electron, playwright, cypress)
   PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
   PUPPETEER_SKIP_DOWNLOAD = "1"
