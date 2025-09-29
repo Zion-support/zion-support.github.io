@@ -10,11 +10,20 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "agent-blue-green-releases-2026",
-    title: "Agent Blue‑Green Releases 2026: Safe, Reversible Automation",
-    description: "Ship agent changes with policy tests, budgeted actions, and instant rollback toggles.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
+    slug: "ai-autonomous-infrastructure-2026",
+    title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
+    description: "Blueprints and scorecards to operate self‑healing platforms with budgets and safe automation.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-platform-slos-2026",
+    title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
+    description: "Design SLOs and risk budgets for AI systems with instant rollbacks and KPI‑linked canaries.",
+    category: "AI Operations",
+    publishedAt: "2025-10-12",
     featured: true,
     readTime: "7 min read"
   },
@@ -190,9 +199,36 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
-    slug: "ai-incident-budget-playbooks-2026",
-    title: "AI Incident Budgets: Playbooks That Contain in <60s",
-    description: "Budget risky actions, approvals, and rollback triggers for safe, fast incident response.",
+    slug: "edge-feature-flags-2026",
+    title: "Edge Feature Flags 2026: <100ms Global Releases with Budgets",
+    description: "Geo/account targeting, budgets, and instant rollback using edge compute and KV.",
+    category: "Architecture",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "ai-incident-response-playbooks-2025",
+    title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
+    description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
+    category: "Cybersecurity",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "quantum-ai-hybrid-blueprint-2026",
+    title: "Quantum‑AI Hybrid Blueprint 2026: Practical Wins in 12 Months",
+    description: "Near‑term plays that combine QC libraries with AI orchestration for measurable ROI.",
+    category: "Quantum Computing",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "zero-trust-for-genai-2026",
+    title: "Zero‑Trust for GenAI: Prompt Firewalls, Egress Policies, and Audit Trails",
+    description: "Contain risks with auth‑aware retrieval, policy gates, and signed outputs at scale.",
     category: "Security",
     publishedAt: "2025-10-12",
     featured: false,

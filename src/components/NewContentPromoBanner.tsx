@@ -33,74 +33,32 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
-      title: "AI Safety Budgets 2026",
-      description: "Guardrails wired to KPIs, approvals, rollbacks",
-      icon: Shield,
-      link: "/blog/ai-safety-budgets-2026",
-      category: "AI Strategy"
-    },
-    {
-      title: "Edge Privacy for ML 2026",
-      description: "On‑device filters and scoped identifiers",
-      icon: Cloud,
-      link: "/blog/edge-privacy-ml-2026",
-      category: "Edge"
-    },
-    {
-      title: "Agent Evals in Prod 2026",
-      description: "Online checks that predict outcomes",
-      icon: TrendingUp,
-      link: "/blog/agent-evals-in-prod-2026",
-      category: "GenAI"
-    },
-    {
-      title: "Cost‑Aware Inference 2026",
-      description: "Warm pools and quality tiers under SLAs",
-      icon: Zap,
-      link: "/blog/ai-cost-aware-inference-2026",
-      category: "GenAI"
-    },
-    {
-      title: "Production RAG Ops 2026",
-      description: "Freshness windows and drift guards",
-      icon: Cloud,
-      link: "/blog/production-rag-ops-2026",
-      category: "GenAI"
-    },
-    {
-      title: "Secure ML Supply Chain 2026",
-      description: "SBOMs, lineage, and CI policy gates",
-      icon: Shield,
-      link: "/blog/ai-secure-ml-supply-chain-2026",
-      category: "Security"
-    },
-    {
-      title: "Zero‑Trust for GenAI 2026",
-      description: "Prompt firewalls, egress, signed outputs",
-      icon: Shield,
-      link: "/blog/zero-trust-for-genai-2026",
-      category: "Security"
-    },
-    {
-      title: "GenAI Routing Under Budgets",
-      description: "Quality tiers without bill shock",
-      icon: Zap,
-      link: "/blog/genai-routing-under-budgets-2026",
+      title: "AI Platform SLOs 2026",
+      description: "Budgets, rollbacks, and KPI‑linked canaries",
+      icon: Brain,
+      link: "/blog/ai-platform-slos-2026",
       category: "AI Ops"
     },
     {
-      title: "Golden Paths that Move KPIs",
-      description: "Platform engineering that pays",
-      icon: TrendingUp,
-      link: "/blog/platform-golden-paths-kpis-2026",
-      category: "Platform"
+      title: "RAG Evals in the Loop 2026",
+      description: "Prevent regressions while shipping weekly",
+      icon: Zap,
+      link: "/blog/rag-evals-in-the-loop-2026",
+      category: "GenAI"
     },
     {
-      title: "On‑Device Agents 2026",
-      description: "Private assistants with offline tools",
-      icon: Brain,
-      link: "/blog/on-device-agents-2026",
-      category: "Edge"
+      title: "Edge Feature Flags 2026",
+      description: "<100ms global releases with budgets",
+      icon: Shield,
+      link: "/blog/edge-feature-flags-2026",
+      category: "Architecture"
+    },
+    {
+      title: "AI Incident Response Playbooks",
+      description: "Contain incidents in under 60 seconds",
+      icon: TrendingUp,
+      link: "/blog/ai-incident-response-playbooks-2025",
+      category: "Security"
     }
   ];
 
