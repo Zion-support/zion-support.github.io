@@ -622,5 +622,46 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "9 min read",
   },
+  // Fresh additions
+  {
+    slug: "serverless-ai-inference-cost-playbook",
+    title: "Serverless AI Inference: The Cost Optimization Playbook",
+    description:
+      "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "rag-architectures-that-work",
+    title: "RAG Architectures That Actually Work in Production",
+    description:
+      "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "12 min read",
+  },
+  {
+    slug: "secure-genai-policy-first-guardrails",
+    title: "Secure GenAI: Policy‑First Guardrails That Scale",
+    description:
+      "Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.",
+    category: "Security",
+    publishedAt: "2025-09-27",
+    featured: false,
+    readTime: "8 min read",
+  },
+  {
+    slug: "serverless-edge-feature-flags",
+    title: "Serverless + Edge Flags: Real‑Time Experiments at Global Scale",
+    description:
+      "Combine serverless with edge‑cached flags for instant rollouts, consistency, and safe rollbacks.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "7 min read",
+  },
 ];
 

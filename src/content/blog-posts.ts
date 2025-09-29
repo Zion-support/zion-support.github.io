@@ -2087,6 +2087,80 @@ Achieve low‑latency inference at the edge with quantization, pruning, warm cac
     image: "/images/edge-ai-design.jpg"
   }
   ,
+  {
+    slug: "serverless-ai-inference-cost-playbook",
+    title: "Serverless AI Inference: The Cost Optimization Playbook",
+    description: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",
+    content: `
+# Serverless AI Inference: The Cost Optimization Playbook
+
+Serverless platforms are ideal for bursty AI inference, but naive deployments waste money and hurt latency. This playbook shows how to design for both cost and performance.
+
+## Core Tactics
+
+- Adaptive batching with concurrency hints
+- Warm pool management per model/size
+- Request coalescing for popular prompts
+- Tiered quality (fast/cheap vs. high‑fidelity) with guardrails
+
+## Architecture
+
+- Event queue with token‑aware shaper
+- Per‑model workers with warm sets
+- Budget controllers and SLO‑based routing
+
+## Rollout
+
+- Shadow mode > canary > global
+- Track P50/P95/P99, error rate, and $/1k tokens
+
+Adopt these patterns to cut cost 40–70% without sacrificing experience.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["Serverless", "Inference", "Cost", "Latency"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/serverless-inference.jpg"
+  },
+  {
+    slug: "rag-architectures-that-work",
+    title: "RAG Architectures That Actually Work in Production",
+    description: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.",
+    content: `
+# RAG Architectures That Actually Work in Production
+
+Production RAG needs more than a vector DB. This guide covers battle‑tested patterns that preserve accuracy as content evolves.
+
+## Content Pipeline
+
+- Incremental ingests with changefeeds
+- Domain‑aware chunking and rich metadata
+- Deduplication and canonicalization
+
+## Retrieval
+
+- Hybrid search (BM25 + dense + filters)
+- Freshness boosters and recency decay
+- Diversification and re‑ranking
+
+## Quality System
+
+- Offline evals with labeled sets
+- Online metrics tied to task success
+- Safety checks and policy tests
+
+Ship RAG that survives real traffic, drift, and cost pressure.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["RAG", "Vector Search", "Evals", "Quality"],
+    featured: true,
+    readTime: "12 min read",
+    image: "/images/rag-architectures.jpg"
+  },
   // New banner-linked articles (lightweight content stubs)
   {
     slug: "ai-workflow-automation-roi-calculator",
