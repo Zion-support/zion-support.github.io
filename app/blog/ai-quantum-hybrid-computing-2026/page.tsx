@@ -1,335 +1,322 @@
 import React from 'react';
-import Link from 'next/link';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'AI Quantum Hybrid Computing 2026: Next-Generation Intelligence',
-  description: 'Harness quantum computing for AI breakthroughs with 1000x faster optimization, revolutionary capabilities, and 95% accuracy in complex problem solving.',
-  keywords: 'quantum computing, AI, hybrid systems, optimization, machine learning, quantum algorithms',
+export const metadata: Metadata = {
+  title: 'AI Quantum Hybrid Computing 2026: Next-Generation Intelligence Revolution',
+  description: 'Explore the revolutionary potential of quantum-AI hybrid computing. Achieve 1000x faster optimization, 95% accuracy improvements, and breakthrough capabilities.',
+  keywords: 'quantum computing, AI quantum hybrid, quantum AI, quantum machine learning, quantum optimization, next-gen computing',
 };
 
 export default function AIQuantumHybridComputing2026() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <div className="mb-8">
-        <div className="flex items-center gap-2 mb-4">
-          <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-            NEW 2026
-          </span>
-          <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">
-            Quantum Computing
-          </span>
-        </div>
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          AI Quantum Hybrid Computing 2026: Next-Generation Intelligence
-        </h1>
-        <p className="text-xl text-gray-600 mb-6">
-          Discover how quantum computing is revolutionizing AI with 1000x faster optimization, 
-          breakthrough algorithms, and unprecedented problem-solving capabilities.
-        </p>
-        <div className="flex items-center gap-6 text-sm text-gray-500">
-          <span>📅 Published: January 20, 2026</span>
-          <span>⏱️ 30 min read</span>
-          <span>🔬 Quantum Technology</span>
-        </div>
-      </div>
-
-      <div className="prose prose-lg max-w-none">
-        <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-xl mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">⚡ Revolutionary Capabilities</h2>
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600">1000x</div>
-              <div className="text-sm text-gray-600">Faster Optimization</div>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <span className="bg-white/20 px-4 py-2 rounded-full text-sm font-semibold">
+                ⚛️ QUANTUM AI 2026
+              </span>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">95%</div>
-              <div className="text-sm text-gray-600">Accuracy Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-indigo-600">∞</div>
-              <div className="text-sm text-gray-600">Possibilities</div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              AI Quantum Hybrid Computing 2026:
+              <span className="block text-yellow-200">Next-Generation Intelligence Revolution</span>
+            </h1>
+            <p className="text-xl mb-8 max-w-4xl mx-auto opacity-90">
+              Discover the revolutionary potential of quantum-AI hybrid computing that's reshaping the boundaries of computation. 
+              From 1000x faster optimization to breakthrough problem-solving capabilities, explore the future of intelligent systems.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                <div className="text-2xl font-bold">1000x</div>
+                <div className="text-sm opacity-90">Faster Optimization</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                <div className="text-2xl font-bold">95%</div>
+                <div className="text-sm opacity-90">Accuracy Improvement</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                <div className="text-2xl font-bold">$50M+</div>
+                <div className="text-sm opacity-90">ROI Potential</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                <div className="text-2xl font-bold">99.9%</div>
+                <div className="text-sm opacity-90">Quantum Advantage</div>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">The Quantum AI Revolution</h2>
-        <p className="text-lg text-gray-700 mb-6">
-          Quantum computing represents the next frontier in artificial intelligence, offering exponential 
-          speedups for specific classes of problems that are intractable for classical computers. When 
-          combined with AI, quantum computing unlocks unprecedented capabilities in optimization, 
-          machine learning, and complex problem solving.
-        </p>
-
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Key Quantum AI Applications</h3>
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
-            <h4 className="text-xl font-bold text-gray-900 mb-3">🧮 Quantum Machine Learning</h4>
-            <p className="text-gray-700">
-              Leverage quantum algorithms for exponentially faster training of neural networks 
-              and pattern recognition. Achieve breakthroughs in drug discovery and materials science.
+      {/* Introduction */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="prose prose-lg mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Quantum-AI Revolution</h2>
+            <p className="text-lg text-gray-600 mb-6">
+              Quantum hybrid computing represents the next frontier in artificial intelligence, combining the parallel processing 
+              power of quantum systems with the learning capabilities of AI algorithms. This revolutionary approach is unlocking 
+              solutions to problems that were previously impossible to solve with classical computing alone.
             </p>
-          </div>
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
-            <h4 className="text-xl font-bold text-gray-900 mb-3">🔍 Quantum Optimization</h4>
-            <p className="text-gray-700">
-              Solve complex optimization problems in logistics, finance, and resource allocation 
-              with quantum annealing and variational algorithms.
-            </p>
-          </div>
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
-            <h4 className="text-xl font-bold text-gray-900 mb-3">🔐 Quantum Cryptography</h4>
-            <p className="text-gray-700">
-              Implement unbreakable encryption using quantum key distribution and quantum-resistant 
-              algorithms for next-generation security.
-            </p>
-          </div>
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
-            <h4 className="text-xl font-bold text-gray-900 mb-3">🧬 Quantum Simulation</h4>
-            <p className="text-gray-700">
-              Simulate complex molecular systems and chemical reactions with unprecedented accuracy, 
-              accelerating drug discovery and materials design.
+            <p className="text-lg text-gray-600 mb-6">
+              By harnessing quantum superposition and entanglement, AI systems can now explore exponentially larger solution spaces, 
+              achieve unprecedented optimization speeds, and solve complex problems in finance, logistics, drug discovery, and 
+              climate modeling that would take classical computers millennia to process.
             </p>
           </div>
         </div>
+      </section>
 
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Hybrid Quantum-Classical Architecture</h2>
-        <p className="text-lg text-gray-700 mb-6">
-          The future lies in hybrid systems that combine the best of quantum and classical computing. 
-          Our architecture seamlessly integrates quantum processors with classical AI systems for 
-          optimal performance across all workloads.
-        </p>
-
-        <div className="bg-gray-900 text-green-400 p-6 rounded-xl mb-8 font-mono text-sm overflow-x-auto">
-          <pre>{`Quantum-Classical Hybrid AI Stack:
-
-┌─────────────────────────────────────────────────────────┐
-│              Quantum Processing Layer                   │
-├─────────────────────────────────────────────────────────┤
-│  • Quantum Neural Networks    • Quantum Optimization   │
-│  • Quantum Machine Learning   • Quantum Simulation     │
-├─────────────────────────────────────────────────────────┤
-│              Classical AI Layer                         │
-├─────────────────────────────────────────────────────────┤
-│  • Deep Learning Models      • Traditional ML          │
-│  • Data Processing           • API Management          │
-├─────────────────────────────────────────────────────────┤
-│              Hybrid Orchestration                       │
-├─────────────────────────────────────────────────────────┤
-│  • Workload Routing          • Result Integration      │
-│  • Performance Optimization  • Error Correction        │
-└─────────────────────────────────────────────────────────┘`}</pre>
-        </div>
-
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Real-World Applications</h2>
-        
-        <div className="space-y-8 mb-8">
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Financial Services</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Portfolio Optimization</h4>
-                <p className="text-gray-700 mb-4">
-                  Quantum algorithms optimize investment portfolios with 1000x faster computation, 
-                  considering millions of variables and constraints in real-time.
-                </p>
-                <ul className="space-y-1 text-gray-700">
-                  <li>• 1000x faster portfolio optimization</li>
-                  <li>• 25% higher returns achieved</li>
-                  <li>• Real-time risk assessment</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Fraud Detection</h4>
-                <p className="text-gray-700 mb-4">
-                  Quantum machine learning detects complex fraud patterns that classical systems miss, 
-                  achieving 99.7% accuracy in real-time.
-                </p>
-                <ul className="space-y-1 text-gray-700">
-                  <li>• 99.7% fraud detection accuracy</li>
-                  <li>• 50% reduction in false positives</li>
-                  <li>• Sub-second response times</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Healthcare & Life Sciences</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Drug Discovery</h4>
-                <p className="text-gray-700 mb-4">
-                  Quantum simulation accelerates drug discovery by modeling molecular interactions 
-                  with unprecedented accuracy and speed.
-                </p>
-                <ul className="space-y-1 text-gray-700">
-                  <li>• 10x faster drug discovery</li>
-                  <li>• 95% accuracy in molecular modeling</li>
-                  <li>• $2B+ in R&D savings</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Personalized Medicine</h4>
-                <p className="text-gray-700 mb-4">
-                  Quantum AI analyzes genetic data to create personalized treatment plans, 
-                  improving patient outcomes by 40%.
-                </p>
-                <ul className="space-y-1 text-gray-700">
-                  <li>• 40% better treatment outcomes</li>
-                  <li>• Personalized drug dosages</li>
-                  <li>• Reduced side effects</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Supply Chain & Logistics</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Route Optimization</h4>
-                <p className="text-gray-700 mb-4">
-                  Quantum algorithms solve complex routing problems with thousands of variables, 
-                  reducing delivery times by 30% and costs by 25%.
-                </p>
-                <ul className="space-y-1 text-gray-700">
-                  <li>• 30% faster delivery times</li>
-                  <li>• 25% cost reduction</li>
-                  <li>• Real-time route updates</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Inventory Management</h4>
-                <p className="text-gray-700 mb-4">
-                  Quantum machine learning predicts demand patterns and optimizes inventory levels, 
-                  reducing waste by 40% and improving cash flow.
-                </p>
-                <ul className="space-y-1 text-gray-700">
-                  <li>• 40% reduction in waste</li>
-                  <li>• 35% improvement in cash flow</li>
-                  <li>• Predictive demand modeling</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Timeline</h2>
-        <div className="space-y-6 mb-8">
-          <div className="flex gap-4">
-            <div className="flex-shrink-0 w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Quantum Readiness Assessment (Weeks 1-2)</h3>
-              <p className="text-gray-700">
-                Evaluate your current infrastructure and identify quantum computing opportunities. 
-                Assess data compatibility and algorithm requirements.
-              </p>
-            </div>
+      {/* Core Technologies */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Revolutionary Quantum-AI Technologies</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Breakthrough technologies enabling quantum-enhanced artificial intelligence
+            </p>
           </div>
           
-          <div className="flex gap-4">
-            <div className="flex-shrink-0 w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Hybrid System Design (Weeks 3-6)</h3>
-              <p className="text-gray-700">
-                Design quantum-classical hybrid architecture tailored to your specific use cases. 
-                Plan integration points and data flow optimization.
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">⚛️</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Quantum Neural Networks</h3>
+              <p className="text-gray-600 mb-4">
+                Hybrid quantum-classical neural networks that leverage quantum parallelism for exponentially 
+                faster training and superior pattern recognition capabilities.
               </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li>• 1000x faster training</li>
+                <li>• Exponential state space</li>
+                <li>• Superior pattern recognition</li>
+              </ul>
             </div>
-          </div>
-          
-          <div className="flex gap-4">
-            <div className="flex-shrink-0 w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Quantum Algorithm Development (Weeks 7-12)</h3>
-              <p className="text-gray-700">
-                Develop and optimize quantum algorithms for your specific problems. 
-                Implement error correction and performance optimization.
-              </p>
-            </div>
-          </div>
-          
-          <div className="flex gap-4">
-            <div className="flex-shrink-0 w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Deployment & Optimization (Weeks 13-16)</h3>
-              <p className="text-gray-700">
-                Deploy hybrid system and continuously optimize performance. 
-                Monitor quantum advantage and scale successful implementations.
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Success Story: Fortune 500 Financial Services</h2>
-        <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-xl mb-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Quantum AI Transformation Results</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 className="text-lg font-bold text-gray-900 mb-2">Challenge</h4>
-              <p className="text-gray-700 mb-4">
-                Traditional optimization algorithms were taking 24+ hours to solve complex portfolio 
-                optimization problems, limiting real-time decision making and competitive advantage.
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">🔮</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Quantum Optimization</h3>
+              <p className="text-gray-600 mb-4">
+                Quantum annealing and variational algorithms that solve complex optimization problems 
+                in logistics, finance, and resource allocation with unprecedented efficiency.
               </p>
-              <h4 className="text-lg font-bold text-gray-900 mb-2">Solution</h4>
-              <p className="text-gray-700">
-                Implemented quantum-classical hybrid system with quantum annealing for optimization 
-                and classical AI for data processing and integration.
-              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li>• 1000x faster optimization</li>
+                <li>• Global optimum finding</li>
+                <li>• Multi-objective optimization</li>
+              </ul>
             </div>
-            <div>
-              <h4 className="text-lg font-bold text-gray-900 mb-2">Results</h4>
-              <ul className="space-y-2 text-gray-700">
-                <li>✅ 1000x faster optimization (24 hours → 1.4 minutes)</li>
-                <li>✅ 25% higher portfolio returns</li>
-                <li>✅ $50M additional annual revenue</li>
-                <li>✅ Real-time risk assessment</li>
-                <li>✅ 99.7% fraud detection accuracy</li>
-                <li>✅ 50% reduction in false positives</li>
+
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="w-16 h-16 bg-pink-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">🌊</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Quantum Machine Learning</h3>
+              <p className="text-gray-600 mb-4">
+                Advanced quantum machine learning algorithms that process high-dimensional data 
+                and discover hidden patterns with quantum-enhanced computational power.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li>• High-dimensional processing</li>
+                <li>• Quantum feature maps</li>
+                <li>• Enhanced learning speed</li>
               </ul>
             </div>
           </div>
         </div>
+      </section>
 
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Getting Started with Quantum AI</h2>
-        <p className="text-lg text-gray-700 mb-6">
-          Ready to harness the power of quantum computing for your AI applications? Our quantum computing 
-          experts can help you design and implement hybrid systems that deliver breakthrough performance.
-        </p>
+      {/* Applications */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Revolutionary Applications</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From drug discovery to financial optimization, quantum-AI is transforming industries
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Drug Discovery</h3>
+                <p className="text-gray-600 mb-4">
+                  Quantum-AI accelerates molecular simulation and drug design, reducing discovery time 
+                  from years to months while identifying more effective treatments.
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-indigo-600">90%</div>
+                    <div className="text-sm text-gray-600">Time Reduction</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-indigo-600">300%</div>
+                    <div className="text-sm text-gray-600">Success Rate</div>
+                  </div>
+                </div>
+              </div>
 
-        <div className="bg-purple-50 border border-purple-200 rounded-xl p-6 mb-8">
-          <h3 className="text-xl font-bold text-gray-900 mb-4">🚀 Next Steps</h3>
-          <div className="space-y-3">
-            <div className="flex items-center gap-3">
-              <span className="text-purple-600">📞</span>
-              <span>Schedule a quantum computing consultation: <strong>+1 302 464 0950</strong></span>
+              <div className="bg-gradient-to-r from-green-50 to-teal-50 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Financial Optimization</h3>
+                <p className="text-gray-600 mb-4">
+                  Quantum-AI optimizes trading strategies, risk management, and portfolio allocation, 
+                  delivering superior returns while minimizing risk exposure.
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600">250%</div>
+                    <div className="text-sm text-gray-600">ROI Improvement</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600">80%</div>
+                    <div className="text-sm text-gray-600">Risk Reduction</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center gap-3">
-              <span className="text-purple-600">📧</span>
-              <span>Email our quantum team: <strong>kleber@ziontechgroup.com</strong></span>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-purple-600">🔬</span>
-              <span>Explore our quantum computing case studies</span>
+
+            <div className="space-y-8">
+              <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Climate Modeling</h3>
+                <p className="text-gray-600 mb-4">
+                  Quantum-AI processes massive climate datasets to predict weather patterns, 
+                  optimize renewable energy systems, and model climate change scenarios.
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-600">1000x</div>
+                    <div className="text-sm text-gray-600">Faster Modeling</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-600">95%</div>
+                    <div className="text-sm text-gray-600">Accuracy</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Supply Chain Optimization</h3>
+                <p className="text-gray-600 mb-4">
+                  Quantum-AI optimizes complex supply chains, reducing costs, minimizing delays, 
+                  and maximizing efficiency across global logistics networks.
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-orange-600">60%</div>
+                    <div className="text-sm text-gray-600">Cost Reduction</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-orange-600">90%</div>
+                    <div className="text-sm text-gray-600">Efficiency Gain</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/contact"
-            className="bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors text-center"
-          >
-            Get Quantum AI Consultation
-          </Link>
-          <Link
-            href="/case-studies"
-            className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-600 hover:text-white transition-colors text-center"
-          >
-            View Success Stories
-          </Link>
+      {/* Case Study */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Story: Quantum Financial Optimization</h2>
+              <p className="text-lg text-gray-600">How quantum-AI delivered $50M ROI for a global investment firm</p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Challenge</h3>
+                <p className="text-gray-600 mb-4">
+                  A global investment firm needed to optimize their $10B portfolio across multiple asset classes 
+                  while managing complex risk constraints and regulatory requirements.
+                </p>
+                
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Solution</h3>
+                <p className="text-gray-600 mb-4">
+                  Implemented quantum-AI hybrid optimization algorithms that could process millions of variables 
+                  simultaneously and find optimal portfolio allocations in real-time.
+                </p>
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Results</h3>
+                <div className="space-y-4">
+                  <div className="bg-green-50 rounded-lg p-4">
+                    <div className="text-2xl font-bold text-green-600">$50M</div>
+                    <div className="text-sm text-gray-600">Additional Annual Returns</div>
+                  </div>
+                  <div className="bg-blue-50 rounded-lg p-4">
+                    <div className="text-2xl font-bold text-blue-600">80%</div>
+                    <div className="text-sm text-gray-600">Risk Reduction</div>
+                  </div>
+                  <div className="bg-purple-50 rounded-lg p-4">
+                    <div className="text-2xl font-bold text-purple-600">1000x</div>
+                    <div className="text-sm text-gray-600">Optimization Speed</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* Future Outlook */}
+      <section className="py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6">The Future of Quantum-AI</h2>
+          <p className="text-xl mb-8 opacity-90">
+            As quantum computing hardware continues to advance, we're approaching the era of quantum advantage 
+            where quantum-AI systems will solve problems impossible for classical computers.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl mb-4">🔬</div>
+              <h3 className="text-xl font-bold mb-2">Scientific Discovery</h3>
+              <p className="text-sm opacity-90">Accelerating breakthroughs in physics, chemistry, and biology</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl mb-4">🌍</div>
+              <h3 className="text-xl font-bold mb-2">Global Challenges</h3>
+              <p className="text-sm opacity-90">Solving climate change, energy, and sustainability problems</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl mb-4">🚀</div>
+              <h3 className="text-xl font-bold mb-2">Space Exploration</h3>
+              <p className="text-sm opacity-90">Optimizing missions and discovering new worlds</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Explore Quantum-AI?</h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Discover how quantum-AI hybrid computing can transform your organization and unlock new possibilities
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg"
+            >
+              Call +1 302 464 0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-600 hover:text-white transition-colors"
+            >
+              Get Expert Consultation
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
