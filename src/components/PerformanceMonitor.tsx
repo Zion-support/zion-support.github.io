@@ -30,11 +30,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDashboard, 
       }
 
       // Get memory usage
-      if ('memory' in performance) {
-        const memory = (performance as any).memory as { usedJSHeapSize?: number } | undefined;
-        if (memory && typeof memory.usedJSHeapSize === 'number') {
-          newMetrics.memoryUsage = memory.usedJSHeapSize;
-        }
+      if ('memory' in (performance as any)) {
+        const memory = (performance as any).memory as { usedJSHeapSize: number };
+        newMetrics.memoryUsage = memory.usedJSHeapSize;
       }
     }
 
@@ -59,8 +57,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDashboard, 
             setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
             break;
           case 'first-input': {
-            const fidEntry = entry as PerformanceEntry & { processingStart: number };
-            setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
+            const fidEntry = entry as PerformanceEntry & { processingStart?: number };
+            setMetrics(prev => ({ ...prev, fid: ((fidEntry.processingStart || 0) - entry.startTime) }));
             break;
           }
           case 'layout-shift': {
