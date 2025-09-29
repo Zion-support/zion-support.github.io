@@ -86,6 +86,8 @@ import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
+import LatestAIInnovations2026Banner from '../components/LatestAIInnovations2026Banner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -494,6 +496,12 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New 2026 Content Showcase */}
+      <NewContent2026ShowcaseBanner />
+      
+      {/* Latest AI Innovations */}
+      <LatestAIInnovations2026Banner />
+      
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
       
