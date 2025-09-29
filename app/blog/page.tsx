@@ -45,7 +45,6 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
-<<<<<<< HEAD
             title="AI Revolution 2025: Complete Business Transformation Guide"
             excerpt="Discover how AI is reshaping industries and creating unprecedented opportunities for growth in 2025. Complete strategy guide with implementation roadmap."
             date="January 17, 2025"
@@ -74,13 +73,15 @@ export default function BlogPage() {
             image="📊"
             featured={true}
             href="/blog/ai-analytics-implementation"
-=======
+          />
+          <BlogPost
             title="LLM Cost Optimization in 2025: Practical Strategies"
             excerpt="Cut LLM spend by 30–70% with routing, caching, batching, and quantization while preserving quality."
             date="September 29, 2025"
             category="AI Platforms"
             readTime="9 min"
             image="💸"
+            href="/blog/llm-cost-optimization-2025"
           />
           <BlogPost
             title="Edge LLM Latency Patterns: Sub-200ms Interactions"
@@ -89,6 +90,7 @@ export default function BlogPage() {
             category="Performance"
             readTime="7 min"
             image="⚡"
+            href="/blog/edge-llm-latency-patterns"
           />
           <BlogPost
             title="GenAI Guardrails 2025: Practical Playbook for Reliable AI"
@@ -97,7 +99,7 @@ export default function BlogPage() {
             category="AI Reliability"
             readTime="11 min"
             image="🛡️"
->>>>>>> cursor/create-and-deploy-new-content-04db
+            href="/blog/genai-guardrails-2025"
           />
           <BlogPost
             title="AI Agents in the Enterprise: 2025 Adoption Playbook"
@@ -134,6 +136,24 @@ export default function BlogPage() {
             readTime="8 min"
             image="⚙️"
             href="/blog/devops-automation-scaling"
+          />
+          <BlogPost
+            title="AI-Powered Customer Support in 2025: The Future is Here"
+            excerpt="Discover how AI is revolutionizing customer support with intelligent chatbots, sentiment analysis, and 24/7 availability."
+            date="January 17, 2025"
+            category="Customer Support"
+            readTime="8 min"
+            image="💬"
+            href="/blog/ai-powered-customer-support-2025"
+          />
+          <BlogPost
+            title="Cloud-Native Architecture in 2025: Building for Scale and Resilience"
+            excerpt="Master cloud-native architecture patterns, microservices design, and container orchestration for scalable applications."
+            date="January 17, 2025"
+            category="Cloud Architecture"
+            readTime="12 min"
+            image="☁️"
+            href="/blog/cloud-native-architecture-2025"
           />
           <BlogPost
             title="The Rise of AI Virtual Assistants in Customer Service"
