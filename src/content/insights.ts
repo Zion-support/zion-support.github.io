@@ -945,12 +945,93 @@ export const latestInsights: InsightArticle[] = [
       "Exploring practical blockchain applications in supply chain, finance, and digital identity management that deliver measurable business value.",
     category: "Blockchain",
 =======
-    id: "generative-ai-enterprise-readiness",
-    title: "Enterprise Generative AI Readiness Checklist",
+    id: "real-time-data-pipelines-blueprint",
+    title: "Real-Time Data Pipelines: Blueprint for Production Success",
     summary:
-      "A practical framework to assess your organization's readiness for generative AI implementation and adoption.",
-    category: "AI Strategy",
->>>>>>> origin/cursor/create-and-deploy-new-content-392d
+      "Architecture patterns, monitoring strategies, and reliability patterns for streaming data at enterprise scale.",
+    category: "Data Engineering",
+    date: "2025-01-21",
+    readMinutes: 7,
+  },
+  {
+    id: "platform-scorecards-adoption",
+    title: "Platform Scorecards: Metrics That Actually Drive Team Adoption",
+    summary:
+      "Designing scorecards that align platform work with business outcomes and accelerate developer productivity.",
+    category: "Platform Engineering",
+    date: "2025-01-21",
+    readMinutes: 6,
+  },
+  {
+    id: "genai-production-deployment",
+    title: "GenAI in Production: Deployment Patterns That Scale",
+    summary:
+      "From model serving to monitoring: practical patterns for deploying generative AI applications in production.",
+    category: "GenAI",
+    date: "2025-01-21",
+    readMinutes: 8,
+  },
+  {
+    id: "microservices-observability-real-world",
+    title: "Microservices Observability: Real-World Implementation Patterns",
+    summary:
+      "Distributed tracing, metrics, and logging strategies that actually work in complex microservices environments.",
+    category: "Observability",
+    date: "2025-01-20",
+    readMinutes: 7,
+  },
+  {
+    id: "cloud-native-security-patterns",
+    title: "Cloud-Native Security: Protecting Modern Applications",
+    summary:
+      "Security strategies for containerized applications, serverless functions, and cloud-native infrastructure.",
+    category: "Security",
+    date: "2025-01-20",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-automation-roi-metrics",
+    title: "AI Automation ROI: Measuring What Actually Matters",
+    summary:
+      "Key metrics and frameworks for quantifying the business impact of AI workflow automation investments.",
+    category: "AI & Automation",
+    date: "2025-01-19",
+    readMinutes: 5,
+  },
+  {
+    id: "edge-computing-use-cases",
+    title: "Edge Computing: Real-World Use Cases That Drive Value",
+    summary:
+      "Practical applications of edge computing across industries, from IoT to real-time analytics.",
+    category: "Edge Computing",
+    date: "2025-01-19",
+    readMinutes: 6,
+  },
+  {
+    id: "data-governance-implementation",
+    title: "Data Governance: Practical Implementation Strategies",
+    summary:
+      "Step-by-step approach to implementing data governance that balances compliance with business agility.",
+    category: "Data Governance",
+    date: "2025-01-18",
+    readMinutes: 8,
+  },
+  {
+    id: "fintech-ai-innovations",
+    title: "FinTech AI Innovations: Transforming Financial Services",
+    summary:
+      "How AI is revolutionizing financial services through intelligent automation and personalized experiences.",
+    category: "FinTech",
+    date: "2025-01-18",
+    readMinutes: 7,
+  },
+  {
+    id: "sustainable-tech-trends",
+    title: "Sustainable Technology: Green IT Trends for 2025",
+    summary:
+      "Emerging trends in sustainable technology practices that reduce environmental impact while maintaining performance.",
+    category: "Sustainability",
+>>>>>>> origin/cursor/create-and-deploy-new-content-6ec2
     date: "2025-01-17",
     readMinutes: 5,
   },
@@ -1099,51 +1180,42 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   }
 =======
-    id: "kubernetes-cost-optimization",
-    title: "Kubernetes Cost Optimization: Reduce Spend by 40%",
+    id: "ai-chatbot-best-practices",
+    title: "AI Chatbots: Best Practices for Enterprise Implementation",
     summary:
-      "Proven strategies for optimizing Kubernetes costs without sacrificing performance or reliability.",
-    category: "Cloud FinOps",
-    date: "2025-01-15",
-    readMinutes: 5,
-  },
-  {
-    id: "ai-model-deployment-strategies",
-    title: "AI Model Deployment Strategies: From Development to Production",
-    summary:
-      "Best practices for deploying AI models in production environments with proper monitoring and governance.",
-    category: "MLOps",
-    date: "2025-01-14",
-    readMinutes: 7,
-  },
-  {
-    id: "event-driven-architecture-patterns",
-    title: "Event-Driven Architecture Patterns for Scalable Systems",
-    summary:
-      "Design patterns and implementation strategies for building resilient event-driven systems.",
-    category: "Architecture",
-    date: "2025-01-14",
-    readMinutes: 8,
-  },
-  {
-    id: "api-security-modern-enterprise",
-    title: "API Security for Modern Enterprise: Beyond Basic Authentication",
-    summary:
-      "Advanced API security strategies for enterprise environments including OAuth, rate limiting, and threat protection.",
-    category: "Security",
-    date: "2025-01-13",
+      "Design patterns, training strategies, and deployment approaches for enterprise-grade AI chatbots.",
+    category: "AI & Automation",
+    date: "2025-01-17",
     readMinutes: 6,
   },
   {
-    id: "data-mesh-architecture-guide",
-    title: "Data Mesh Architecture: Decentralized Data Management",
+    id: "quantum-computing-business-applications",
+    title: "Quantum Computing: Business Applications Beyond Hype",
     summary:
-      "Understanding data mesh principles and how to implement decentralized data architecture at scale.",
-    category: "Data Architecture",
-    date: "2025-01-13",
-    readMinutes: 9,
-  }
->>>>>>> origin/cursor/create-and-deploy-new-content-392d
+      "Realistic assessment of quantum computing applications that are ready for business implementation today.",
+    category: "Quantum Computing",
+    date: "2025-01-16",
+    readMinutes: 7,
+  },
+  {
+    id: "cybersecurity-ai-defense",
+    title: "AI-Powered Cybersecurity: Next-Generation Defense Strategies",
+    summary:
+      "How AI is enhancing cybersecurity through intelligent threat detection, automated response, and predictive analytics.",
+    category: "Cybersecurity",
+    date: "2025-01-16",
+    readMinutes: 8,
+  },
+  {
+    id: "devops-automation-trends",
+    title: "DevOps Automation: Trends Shaping the Future of Software Delivery",
+    summary:
+      "Latest trends in DevOps automation, from AI-powered CI/CD to intelligent infrastructure management.",
+    category: "DevOps",
+    date: "2025-01-15",
+    readMinutes: 6,
+  },
+>>>>>>> origin/cursor/create-and-deploy-new-content-6ec2
 ];
 
 export default latestInsights;

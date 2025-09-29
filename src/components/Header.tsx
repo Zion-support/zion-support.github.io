@@ -53,9 +53,21 @@ export default function Header() {
             </Link>
             <Link
               to="/blog"
-              className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-purple-600 transition-colors font-medium relative group"
             >
               Blog
+              <span className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-1.5 py-0.5 rounded-full animate-pulse">
+                NEW
+              </span>
+            </Link>
+            <Link
+              to="/insights"
+              className="text-gray-700 hover:text-purple-600 transition-colors font-medium relative group"
+            >
+              Insights
+              <span className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs px-1.5 py-0.5 rounded-full animate-pulse">
+                HOT
+              </span>
             </Link>
             <Link
               to="/resources"
@@ -140,10 +152,23 @@ export default function Header() {
               </Link>
               <Link
                 to="/blog"
-                className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
+                className="text-gray-700 hover:text-purple-600 transition-colors font-medium relative group"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog
+                <span className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-1.5 py-0.5 rounded-full animate-pulse">
+                  NEW
+                </span>
+              </Link>
+              <Link
+                to="/insights"
+                className="text-gray-700 hover:text-purple-600 transition-colors font-medium relative group"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Insights
+                <span className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs px-1.5 py-0.5 rounded-full animate-pulse">
+                  HOT
+                </span>
               </Link>
               <Link
                 to="/resources"

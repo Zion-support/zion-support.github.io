@@ -370,6 +370,7 @@ const Home = () => {
           maxItems={8}
           showInsights={true}
           showBlogPosts={true}
+          showFeatured={true}
           className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
         />
 
