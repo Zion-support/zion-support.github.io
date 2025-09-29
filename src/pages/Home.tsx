@@ -141,9 +141,9 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              🚀 <strong>NEW IN 2025:</strong> Revolutionary AI-Powered Micro SAAS Platform! 
-              Transform your business with our cutting-edge AI solutions, enterprise-grade security, 
-              and next-generation cloud infrastructure. Join 500+ companies already scaling with us!
+              🚀 <strong>BREAKING:</strong> Revolutionary AI-Powered Micro SAAS Platform + 12+ New Expert Articles! 
+              Transform your business with cutting-edge AI solutions, cloud-native architecture, 
+              and zero-trust security. Join 500+ companies already scaling with our latest insights!
             </p>
 
             {/* Special Promotion Banner */}

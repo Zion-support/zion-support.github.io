@@ -1,13 +1,16 @@
 import React from 'react';
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import HeaderPromoBanner from './HeaderPromoBanner';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto px-4">
+    <>
+      <HeaderPromoBanner />
+      <header className="bg-white shadow-lg sticky top-0 z-50">
+        <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
@@ -173,7 +176,8 @@ export default function Header() {
             </nav>
           </div>
         )}
-      </div>
-    </header>
+        </div>
+      </header>
+    </>
   );
 }

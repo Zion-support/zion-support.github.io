@@ -928,8 +928,6 @@ export const latestInsights: InsightArticle[] = [
     category: "GenAI",
     date: "2025-09-29",
     readMinutes: 8,
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-40fa
   },
   {
     id: "iot-security-threat-landscape-2025",
@@ -946,6 +944,13 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "Exploring practical blockchain applications in supply chain, finance, and digital identity management that deliver measurable business value.",
     category: "Blockchain",
+=======
+    id: "generative-ai-enterprise-readiness",
+    title: "Enterprise Generative AI Readiness Checklist",
+    summary:
+      "A practical framework to assess your organization's readiness for generative AI implementation and adoption.",
+    category: "AI Strategy",
+>>>>>>> origin/cursor/create-and-deploy-new-content-392d
     date: "2025-01-17",
     readMinutes: 5,
   },
@@ -1094,69 +1099,51 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   }
 =======
-    id: "ai-roi-measurement-framework",
-    title: "Measuring AI ROI: A Practical Framework for Business Leaders",
+    id: "kubernetes-cost-optimization",
+    title: "Kubernetes Cost Optimization: Reduce Spend by 40%",
     summary:
-      "Quantify AI investments with metrics that matter: efficiency gains, cost reduction, and revenue impact.",
-    category: "Business Strategy",
-    date: "2025-01-22",
-    readMinutes: 6,
-  },
-  {
-    id: "enterprise-ai-adoption-patterns",
-    title: "Enterprise AI Adoption: Common Patterns and Pitfalls",
-    summary:
-      "Learn from 100+ enterprise AI implementations: what works, what doesn't, and how to avoid common mistakes.",
-    category: "Enterprise AI",
-    date: "2025-01-21",
-    readMinutes: 7,
-  },
-  {
-    id: "ai-data-quality-standards",
-    title: "AI Data Quality: Standards That Drive Success",
-    summary:
-      "Establish data quality standards that ensure your AI models perform consistently in production environments.",
-    category: "Data Quality",
-    date: "2025-01-20",
+      "Proven strategies for optimizing Kubernetes costs without sacrificing performance or reliability.",
+    category: "Cloud FinOps",
+    date: "2025-01-15",
     readMinutes: 5,
   },
   {
-    id: "ai-vendor-selection-criteria",
-    title: "AI Vendor Selection: Key Criteria for Enterprise Buyers",
+    id: "ai-model-deployment-strategies",
+    title: "AI Model Deployment Strategies: From Development to Production",
     summary:
-      "Evaluate AI vendors with confidence using this comprehensive framework covering technical, business, and support factors.",
-    category: "Vendor Management",
-    date: "2025-01-19",
+      "Best practices for deploying AI models in production environments with proper monitoring and governance.",
+    category: "MLOps",
+    date: "2025-01-14",
+    readMinutes: 7,
+  },
+  {
+    id: "event-driven-architecture-patterns",
+    title: "Event-Driven Architecture Patterns for Scalable Systems",
+    summary:
+      "Design patterns and implementation strategies for building resilient event-driven systems.",
+    category: "Architecture",
+    date: "2025-01-14",
     readMinutes: 8,
   },
   {
-    id: "ai-change-management-guide",
-    title: "AI Change Management: Getting Teams to Adopt New Technologies",
+    id: "api-security-modern-enterprise",
+    title: "API Security for Modern Enterprise: Beyond Basic Authentication",
     summary:
-      "Overcome resistance and drive adoption with proven change management strategies for AI implementations.",
-    category: "Change Management",
-    date: "2025-01-18",
+      "Advanced API security strategies for enterprise environments including OAuth, rate limiting, and threat protection.",
+    category: "Security",
+    date: "2025-01-13",
     readMinutes: 6,
   },
   {
-    id: "ai-performance-monitoring",
-    title: "AI Performance Monitoring: Keeping Models Running Smoothly",
+    id: "data-mesh-architecture-guide",
+    title: "Data Mesh Architecture: Decentralized Data Management",
     summary:
-      "Monitor AI model performance in real-time with automated alerts, drift detection, and performance dashboards.",
-    category: "AI Operations",
-    date: "2025-01-17",
-    readMinutes: 7,
-  },
-  {
-    id: "ai-cost-optimization-strategies",
-    title: "AI Cost Optimization: Strategies for Maximum Efficiency",
-    summary:
-      "Reduce AI infrastructure costs by 40% with these proven optimization strategies and best practices.",
-    category: "Cost Optimization",
-    date: "2025-01-16",
-    readMinutes: 5,
-  },
->>>>>>> origin/cursor/create-and-deploy-new-content-c3fd
+      "Understanding data mesh principles and how to implement decentralized data architecture at scale.",
+    category: "Data Architecture",
+    date: "2025-01-13",
+    readMinutes: 9,
+  }
+>>>>>>> origin/cursor/create-and-deploy-new-content-392d
 ];
 
 export default latestInsights;
