@@ -134,6 +134,8 @@ const Home = () => {
           ctaText="See what's new"
           title="🚀 NEW THIS WEEK: LLM Blue/Green Evals, Agent Observability, Real‑Time Feature Stores"
           description="Ship LLM updates safely, get deep agent telemetry, and keep features fresh without breaking budgets."
+          title="🚀 NEW THIS WEEK: GenAI Guardrails, Edge Flags, North‑Star Metrics"
+          description="Brand-new guides on eval systems, validation circuits, and outcome-driven metrics."
           ctaText="Read the latest"
           ctaLink="/blog"
           dismissible={true}
@@ -826,6 +828,7 @@ const Home = () => {
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
                   <p className="text-white/90">
                     New: AI Platform ROI scorecards, securing the ML supply chain, and Enterprise RAG v2.
+                    Fresh reads: GenAI guardrails that scale, validation circuits for edge flags, and north‑star metrics that drive outcomes.
                   </p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
@@ -857,6 +860,16 @@ const Home = () => {
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-rose-200 mb-1">Data Engineering</div>
                   <div className="font-semibold text-white">Real‑Time Feature Stores That Don’t Break the Bank</div>
+                  <div className="text-sm text-purple-200 mb-1">GenAI</div>
+                  <div className="font-semibold text-white">Shipping GenAI Safely: Guardrails That Don’t Slow You Down</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-blue-200 mb-1">Architecture</div>
+                  <div className="font-semibold text-white">Validation Circuits for Edge Feature Flags</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-rose-200 mb-1">Product Analytics</div>
+                  <div className="font-semibold text-white">North‑Star Metrics: How to Measure What Matters</div>
                 </div>
               </div>
             </div>

@@ -12,6 +12,55 @@ export const latestInsights: InsightArticle[] = [
     id: "ai-risk-register-checklist",
     title: "AI Risk Register Checklist",
     summary: "Owners, policy tests, and dashboards that make risk programs real.",
+    id: "eval-systems-online-canaries",
+    title: "Eval Systems That Scale: Online Canaries and Policy Gates",
+    summary:
+      "Move from ad-hoc checks to layered evals with CI gates and production canaries tied to KPIs.",
+    category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-flags-validation-blueprints",
+    title: "Blueprints: Validating Edge Flags Before They Break Prod",
+    summary:
+      "Versioned keys, negative caching, and health probes that prevent bad flag rolls globally.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "genai-policy-tests-canaries",
+    title: "GenAI Policy Tests: From Offline Suites to Online Canaries",
+    summary:
+      "How to combine offline evals with live canaries to catch regressions before customers do.",
+    category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-flags-validation",
+    title: "Edge Flags: Validation Circuits That Prevent Bad Rolls",
+    summary:
+      "Design health checks, signed payloads, and roll-forward playbooks to keep flags safe.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "north-star-metrics-pitfalls",
+    title: "North‑Star Metrics Pitfalls: Fixing Vanity and Ambiguity",
+    summary:
+      "Replace vanity KPIs with leading indicators and consistent instrumentation.",
+    category: "Product Analytics",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "ai-governance-rubric",
+    title: "A Lightweight Rubric for AI Governance Decisions",
+    summary:
+      "When to require human‑in‑the‑loop, what to log, and how to audit outputs across teams.",
     category: "AI Governance",
     date: "2025-10-04",
     readMinutes: 4,
