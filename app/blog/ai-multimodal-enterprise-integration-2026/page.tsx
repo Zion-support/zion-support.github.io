@@ -45,22 +45,23 @@ export default function AIMultimodalEnterpriseIntegration2026() {
         </p>
 
         <div className="grid md:grid-cols-2 gap-6 mb-8">
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h4 className="font-semibold mb-3">Automation Metrics</h4>
-            <ul className="space-y-2 text-sm">
-              <li>• Automation efficiency: 95%+</li>
-              <li>• Processing time reduction: 80%+</li>
-              <li>• Manual intervention rate: &lt;5%</li>
-              <li>• System uptime: 99.9%+</li>
+          <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
+            <h3 className="font-semibold text-blue-900 mb-3">Input Modalities</h3>
+            <ul className="list-disc pl-6 text-blue-700 text-sm">
+              <li><strong>Text:</strong> Documents, emails, chat messages</li>
+              <li><strong>Images:</strong> Photos, diagrams, charts</li>
+              <li><strong>Audio:</strong> Voice recordings, music, sounds</li>
+              <li><strong>Video:</strong> Recordings, live streams</li>
+              <li><strong>Structured Data:</strong> Databases, APIs, sensors</li>
             </ul>
           </div>
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h4 className="font-semibold mb-3">Accuracy and Quality</h4>
-            <ul className="space-y-2 text-sm">
-              <li>• Cross-modal accuracy: 90%+</li>
-              <li>• False positive rate: &lt;2%</li>
-              <li>• User satisfaction: 85%+</li>
-              <li>• Error reduction: 75%+</li>
+          <div className="bg-green-50 p-6 rounded-lg border border-green-200">
+            <h3 className="font-semibold text-green-900 mb-3">Processing Layers</h3>
+            <ul className="list-disc pl-6 text-green-700 text-sm">
+              <li><strong>Feature Extraction:</strong> Convert raw data to embeddings</li>
+              <li><strong>Fusion:</strong> Combine cross-modal representations</li>
+              <li><strong>Reasoning:</strong> Apply logic and inference</li>
+              <li><strong>Output Generation:</strong> Produce actionable insights</li>
             </ul>
           </div>
         </div>

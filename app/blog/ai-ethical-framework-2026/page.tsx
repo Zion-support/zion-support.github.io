@@ -54,13 +54,13 @@ export default function AIEthicalFramework2026() {
               <li>Minimized bias-related lawsuits</li>
             </ul>
           </div>
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h4 className="font-semibold mb-3">Bias and Fairness</h4>
-            <ul className="space-y-2 text-sm">
-              <li>• Bias incident rate: &lt;5%</li>
-              <li>• Fairness score: 85%+</li>
-              <li>• Demographic parity: 90%+</li>
-              <li>• Equal opportunity: 90%+</li>
+          <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
+            <h3 className="font-semibold text-blue-900 mb-3">Competitive Advantage</h3>
+            <ul className="list-disc pl-6 text-blue-700 text-sm">
+              <li>Enhanced customer trust and loyalty</li>
+              <li>Improved stakeholder confidence</li>
+              <li>Better talent attraction and retention</li>
+              <li>Increased market differentiation</li>
             </ul>
           </div>
         </div>
