@@ -22,20 +22,6 @@ export default [
   // 1. Global Ignores
   {
     ignores: [
-<<<<<<< HEAD
-      "dist/",
-      "node_modules/",
-      "**/*.config.js", // Ignores this file, tailwind.config.js, etc.
-      // "*.config.ts", // Handled by specific tsconfig below if needed
-      "extension/",
-      "supabase/functions/_shared/",
-      "playwright.config.ts",
-      "jest.config.js",
-      "scripts/",
-      "coverage/",
-      "*.d.ts", // Typically declaration files don't need linting
-    ],
-=======
       'dist/**',
       'node_modules/**',
       '*.config.js',
@@ -92,7 +78,6 @@ export default [
       'src/components/AdvancedCollaborationDashboard.tsx',
       'src/components/EnhancedContactForm.tsx'
     ]
->>>>>>> origin/main
   },
 
   // 2. Base Configuration for JavaScript files
