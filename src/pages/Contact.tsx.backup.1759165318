@@ -12,7 +12,10 @@ import {
   Zap,
   Sparkles,
 } from "lucide-react";
+<<<<<<< HEAD
+=======
 // Fallback placeholders for missing components
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
 const Header = () => null;
 const Footer = () => null;
 const EnhancedContactForm = () => null;

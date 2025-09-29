@@ -14,6 +14,23 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
+const ContentPromotionBanner = (props: any) => null;
+const ContentValueTestimonials = () => null;
+const EnhancedNewsletterSignup = (_props: any) => null;
+const EnhancedTestimonials = () => null;
+const Header = () => null;
+import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
+import LatestContentBanner from "../components/LatestContentBanner";
+const LatestInsights = () => null;
+const ModernFeatures = () => null;
+// Removed Advanced components that may not exist in this branch
+import NewContentAnnouncement from "../components/NewContentAnnouncement";
+import NewContentPromoBanner from "../components/NewContentPromoBanner";
+import NewServicesShowcase from "../components/NewServicesShowcase";
+import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
+import TrendingContentBanner from "../components/TrendingContentBanner";
+=======
 // Fallback for missing ContentPromotionBanner
 const ContentPromotionBanner = (props: any) => <div className="hidden" />;
 // Fallbacks for missing components
@@ -32,6 +49,7 @@ const NewContentPromoBanner = (props: any) => null;
 const NewServicesShowcase = () => null;
 const SuccessStoriesShowcase = () => null;
 const TrendingContentBanner = () => null;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
 import { latestInsights } from "../content/insights";
 import { featuredInsights, newInsights } from "../content/new-insights";
 import { posts } from "../content/posts";
@@ -521,7 +539,11 @@ const Home = () => {
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
+<<<<<<< HEAD
+                    {"featured" in item && (item as any).featured && (
+=======
                     {("featured" in item) && (item as any).featured && (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>

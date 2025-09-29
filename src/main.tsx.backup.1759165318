@@ -2,6 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+<<<<<<< HEAD
+// ThemeProvider removed due to missing context during build
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
 import App from "./App";
 import "./index.css";
 

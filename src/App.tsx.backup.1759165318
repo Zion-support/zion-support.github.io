@@ -12,7 +12,18 @@ import './index.css';
 // import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
+<<<<<<< HEAD
+// Fallback lightweight stubs for missing components to allow build
+const SEOOptimizer = (props: { title: string; description: string; canonicalUrl: string }) => null;
+const AdvancedAnalytics = (_props: any) => null;
+const PerformanceOptimizer = (_props: any) => null;
+const PerformanceMonitor = (_props: any) => null;
+const EnhancedErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
+type Notification = { id: string; message?: string };
+const NotificationSystem: React.FC<{ notifications: Notification[]; onRemove: (id: string) => void }> = () => null;
+=======
 import SEOOptimizer from './components/SEOOptimizer';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};
@@ -133,6 +144,10 @@ export default function App(): React.JSX.Element {
   }, []);
 
   return (
+<<<<<<< HEAD
+    <EnhancedErrorBoundary>
+      {/* SEO and analytics components temporarily disabled due to missing modules */}
+=======
     <>
       <SEOOptimizer
         title={seoDataForOptimizer.title}
@@ -140,6 +155,7 @@ export default function App(): React.JSX.Element {
         canonicalUrl={new URL(seoDataForOptimizer.canonical).pathname}
       />
       <Placeholder name="AdvancedAnalytics" />
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
 
@@ -150,7 +166,11 @@ export default function App(): React.JSX.Element {
                 <h2 className="text-2xl font-bold">Performance Optimizer</h2>
                 <button onClick={() => setShowPerformanceOptimizer(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
               </div>
+<<<<<<< HEAD
+              <div />
+=======
               <Placeholder name="PerformanceOptimizer" />
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
             </div>
           </div>
         )}
@@ -162,12 +182,20 @@ export default function App(): React.JSX.Element {
                 <h2 className="text-2xl font-bold">Performance Monitor</h2>
                 <button onClick={() => setShowPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
               </div>
+<<<<<<< HEAD
+              <div />
+=======
               <Placeholder name="PerformanceMonitor" />
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
             </div>
           </div>
         )}
 
+<<<<<<< HEAD
+        <div />
+=======
         <></>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
       </div>
     </>
   );

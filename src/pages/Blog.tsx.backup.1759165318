@@ -14,9 +14,14 @@ import {
 import React, { useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
+<<<<<<< HEAD
+const Footer = () => null;
+const Header = () => null;
+=======
 // Fallbacks for missing components
 const Header = () => null;
 const Footer = () => null;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-549e
 
 interface BlogPost {
   id: number;
