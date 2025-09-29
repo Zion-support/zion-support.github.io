@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+ HEAD
   "timestamp": new Date().toISOString(),
   "checks": {},
   "status": 'healthy'};
@@ -87,16 +87,7 @@ if (healthCheck.status === 'healthy') {
   
   process.exit(1);
 }
-=======
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-console.log('🏥 Starting Health Check...');
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+ cursor/fix-syntax-push-and-merge-to-main-0308
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require("fs");
 const path = require("path");
@@ -110,11 +101,8 @@ class HealthChecker {
     this.errors = [];
   }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+ HEAD
+ cursor/fix-syntax-push-and-merge-to-main-0308
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
@@ -126,7 +114,7 @@ class HealthChecker {
   // TODO: Implement
   constructor() {
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
+ HEAD
     this.checks = [];
     this.errors = [];
   }
@@ -135,9 +123,7 @@ class HealthChecker {
 <<<<<<< HEAD
   log(message) {
     console.log(`🏥 [Health Check] ${message}`);
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+ origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

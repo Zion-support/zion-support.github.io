@@ -19,7 +19,6 @@ import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
-<<<<<<< HEAD
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
@@ -28,12 +27,6 @@ import NewContentAnnouncement from "../components/NewContentAnnouncement";
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
-=======
-import LatestContentBanner from "../components/LatestContentBanner";
-import LatestInsights from "../components/LatestInsights";
-import ModernFeatures from "../components/ModernFeatures";
-import NewContentPromoBanner from "../components/NewContentPromoBanner";
->>>>>>> content/oct-2025-updates
 import TrendingContentBanner from "../components/TrendingContentBanner";
 import { latestInsights } from "../content/insights";
 import { featuredInsights, newInsights } from "../content/new-insights";
@@ -136,17 +129,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-<<<<<<< HEAD
           title="📚 New Series: Ship Faster with Guardrails"
           description="AI roadmaps, ML SBOM automation, and online eval canaries now live."
           ctaText="See what's new"
           ctaLink="/blog"
-=======
-          title="🚀 Fresh: GenAI Platform Blueprint + Hybrid Vector Search"
-          description="Ship weekly with guardrails. Cut retrieval cost 40%+ with hybrid and freshness."
-          ctaText="Read the latest"
-          ctaLink="/blog/genai-platform-blueprint-2025"
->>>>>>> content/oct-2025-updates
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -531,11 +517,7 @@ const Home = () => {
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
-<<<<<<< HEAD
                     {('featured' in item) && (item as any).featured && (
-=======
-                    {"featured" in item && (item as any).featured && (
->>>>>>> content/oct-2025-updates
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>
