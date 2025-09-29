@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "autonomous-infrastructure-2026",
+    title: "Autonomous Infrastructure 2026: From Runbooks to Reality",
+    description: "Risk budgets, safe rollbacks, and self‑healing patterns for production infra.",
+    category: "AI Operations",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "quantum-ai-roi-2026",
+    title: "Quantum‑AI ROI 2026: Where Hybrid Wins Today",
+    description: "Workload selection, reference topologies, and scorecards for real ROI.",
+    category: "Quantum Computing",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-first-feature-flags-2026",
+    title: "Privacy‑First Feature Flags 2026: Scoped IDs and On‑Device Filters",
+    description: "Global rollouts with privacy by design under strict latency budgets.",
+    category: "Architecture",
+    publishedAt: "2025-10-14",
+    featured: false,
+    readTime: "7 min read"
+  },
+  {
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
     description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
