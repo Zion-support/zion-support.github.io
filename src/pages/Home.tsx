@@ -132,14 +132,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Agentic Workflows, Edge LLM Caching, ML SBOMs"
-          description="Reliable multi‑step agents, sub‑100ms prompts, and secure ML supply chains."
+          title="New: Incident Playbooks & Privacy‑Preserving Analytics"
+          description="Contain incidents under 60s with safe automations, ship insights without PII risk."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
+            { title: "AI Incident Response Playbooks", category: "Cybersecurity", link: "/blog/ai-incident-response-playbooks-2025" },
+            { title: "Privacy‑Preserving Analytics", category: "Observability", link: "/blog/privacy-preserving-analytics-2025" },
             { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" },
-            { title: "AI Governance Scorecards Quickstart", category: "AI Strategy", link: "/blog/ai-governance-scorecards-quickstart-2025" },
-            { title: "AI Autonomous Infrastructure", category: "Infrastructure", link: "/services/ai-autonomous-infrastructure-platform" },
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -164,10 +164,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: Serverless Inference Cost Playbook + Production RAG"
-          description="Adaptive batching, warm pools, and freshness‑aware RAG that meets SLAs."
+          title="🚀 Fresh: Incident Playbooks + Privacy‑Preserving Analytics"
+          description="Budgeted actions, approvals, and DP‑backed telemetry you can ship today."
           ctaText="Read the latest"
-          ctaLink="/blog/serverless-ai-inference-cost-playbook-2025"
+          ctaLink="/blog/ai-incident-response-playbooks-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -212,8 +212,8 @@ const Home = () => {
                 <span className="text-lg font-bold text-green-400">🔥 BREAKTHROUGH: AI AUTONOMOUS INFRASTRUCTURE</span>
                 <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
               </div>
-              <p className="text-white text-lg font-semibold mb-2">
-                🤖 Revolutionary AI Infrastructure that self-heals, self-optimizes, and self-scales automatically - Achieve 99.9% uptime with zero human intervention!
+            <p className="text-white text-lg font-semibold mb-2">
+                🤖 Revolutionary AI Infrastructure that self-heals, self-optimizes, and self-scales automatically — plus new playbooks for safe automation.
               </p>
               <p className="text-zion-slate-light text-sm mb-4">
                 Get 50% OFF Your First 3 Months + FREE AI Strategy Consultation • Valid until March 31, 2025
