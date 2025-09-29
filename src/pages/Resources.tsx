@@ -420,7 +420,9 @@ const Resources = () => {
                       </div>
                       <div className="flex items-center text-gray-500 text-sm">
                         <Clock className="w-4 h-4 mr-1" />
-                        {typeof (resource as any).duration === 'string' ? (resource as any).duration : `${(resource as any).pages || 0} pages`}
+                        {typeof (resource as any).duration === 'string'
+                          ? (resource as any).duration
+                          : `${(resource as any).pages || 0} pages`}
                       </div>
                     </div>
 
@@ -520,7 +522,9 @@ const Resources = () => {
                         </div>
                         <div className="flex items-center">
                           <Clock className="w-4 h-4 mr-1" />
-                          {typeof (resource as any).duration === 'string' ? (resource as any).duration : `${(resource as any).pages || 0} pages`}
+                          {typeof (resource as any).duration === 'string'
+                            ? (resource as any).duration
+                            : `${(resource as any).pages || 0} pages`}
                         </div>
                       </div>
 

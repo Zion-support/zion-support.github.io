@@ -46,6 +46,14 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="AI Agents in the Enterprise: 2025 Adoption Playbook"
+            excerpt="A practical playbook for deploying autonomous AI agents across revenue ops and IT with measurable ROI."
+            date="September 29, 2025"
+            category="Autonomous AI"
+            readTime="10 min"
+            image="🧠"
+          />
+          <BlogPost
             title="AI Workflow Automation: Transforming Business Operations"
             excerpt="Discover how AI-powered workflow automation is revolutionizing business processes, reducing manual work by 80% and improving efficiency across industries."
             date="January 15, 2025"
