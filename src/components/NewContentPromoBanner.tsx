@@ -33,25 +33,25 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
-      title: "Policy Tests in CI",
-      description: "Lightweight checks that prevent regressions and speed delivery",
+      title: "Agent Safety Budgets 2026",
+      description: "Budget risky actions, add PR checks, wire instant rollbacks",
       icon: TrendingUp,
-      link: "/blog/policy-tests-in-ci-2025",
-      category: "Engineering"
-    },
-    {
-      title: "Secure ML Supply Chain",
-      description: "SBOMs, attestations, and policy gates that scale",
-      icon: Shield,
-      link: "/blog/secure-ml-supply-chain-attestations-2025",
-      category: "Security"
-    },
-    {
-      title: "Enterprise RAG Blueprint v2",
-      description: "Freshness, hybrid search, and evaluation at scale",
-      icon: Brain,
-      link: "/blog/enterprise-rag-blueprint-v2-2025",
+      link: "/blog/agent-safety-budgets-2026",
       category: "GenAI"
+    },
+    {
+      title: "Privacy‑First Telemetry",
+      description: "Signal‑rich traces with scoped IDs and PII filters",
+      icon: Shield,
+      link: "/blog/privacy-first-telemetry-blueprint-2026",
+      category: "Observability"
+    },
+    {
+      title: "Cost‑Aware Inference Routing",
+      description: "Tiered models by budget, SLA, and eval signals",
+      icon: Brain,
+      link: "/blog/cost-aware-inference-routing-2026",
+      category: "Architecture"
     },
     {
       title: "Risk Budgets for Edge Rollouts",
@@ -147,7 +147,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
             {/* Stats */}
               <div className="flex items-center gap-6 mt-4 text-sm text-white/80">
               <div className="flex items-center gap-1">
-                <span className="font-semibold">4</span>
+                <span className="font-semibold">6</span>
                 <span>New Articles</span>
               </div>
               <div className="flex items-center gap-1">

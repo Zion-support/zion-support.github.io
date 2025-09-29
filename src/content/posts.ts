@@ -10,6 +10,63 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
+=======
+    slug: "agent-safety-budgets-2026",
+    title: "Agent Safety Budgets 2026: Ship Fast Without Surprises",
+    description: "Budget risky actions, add PR checks, and wire rollbacks for reliable agent releases.",
+    category: "GenAI",
+    publishedAt: "2025-10-11",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-telemetry-blueprint-2026",
+    title: "Privacy‑First Telemetry Blueprint: Signal‑Rich, PII‑Safe",
+    description: "Scoped IDs, field‑level filters, and retention policies that keep insights high and risk low.",
+    category: "Observability",
+    publishedAt: "2025-10-11",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "cost-aware-inference-routing-2026",
+    title: "Cost‑Aware Inference Routing: Quality Tiers Under Budget",
+    description: "Dynamically route prompts across model tiers based on budgets, SLAs, and eval signals.",
+    category: "Architecture",
+    publishedAt: "2025-10-11",
+    featured: false,
+    readTime: "8 min read"
+  },
+  {
+    slug: "agentic-workflows-blueprint-2026",
+    title: "Agentic Workflows Blueprint 2026: Tools, Traces, Policy Tests",
+    description: "Design reliable multi‑tool agents with traceability, CI policy tests, and rollback‑ready routes.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-platform-roi-scorecards-2025",
+    title: "AI Platform ROI Scorecards: Connect Capabilities to Outcomes",
+    description: "Make AI investment value visible with scorecards tied to adoption, retention, and revenue.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "signed-edge-configs-personalization-2025",
+    title: "Signed Edge Configs: Private Personalization Under 100ms",
+    description: "Deliver low‑latency personalization using signed configs, KV caches, and on‑device signals.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
+>>>>>>> cursor/create-and-deploy-new-content-c669
     slug: "ai-incident-response-2026",
     title: "AI Incident Response 2026: Playbooks, Canaries, and SLAs",
     description: "Practical incident response for AI features with on-call playbooks and KPI-linked canaries.",
