@@ -28,6 +28,7 @@ export default defineConfig({
     sourcemap: false,
     cssCodeSplit: true,
     reportCompressedSize: true,
+    assetsInlineLimit: 4096,
     rollupOptions: {
       input: {
         main: './index.html'
@@ -122,14 +123,25 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info'],
-        passes: 2,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 3,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        dead_code: true,
+        unused: true,
       },
       mangle: {
         safari10: true,
+        toplevel: true,
+        properties: {
+          regex: /^_/
+        }
       },
       format: {
         comments: false,
+        ascii_only: true,
       },
     },
   },
