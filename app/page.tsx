@@ -9,10 +9,10 @@ import {
   HealthTechSuccessBanner,
   ComprehensiveAIBanner,
   EnterpriseAIBanner,
-  NewAIAutomationBanner,
-  EnterpriseSecurityBanner,
-  RetailTransformationBanner,
-  NewContentShowcaseBanner
+  CustomerSupportAIBanner,
+  CloudNativeBanner,
+  RetailTechSuccessBanner,
+  ManufacturingIoTSuccessBanner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
 
@@ -26,10 +26,11 @@ export default function HomePage() {
   return (
     <div className="animate-fade-in">
       {/* Promotional Banners */}
-      <NewContentShowcaseBanner />
-      <NewAIAutomationBanner />
-      <EnterpriseSecurityBanner />
-      <RetailTransformationBanner />
+      <NewBlogBanner />
+      <CustomerSupportAIBanner />
+      <CloudNativeBanner />
+      <RetailTechSuccessBanner />
+      <ManufacturingIoTSuccessBanner />
       <WorkflowAutomationBanner />
       <AIAnalyticsBanner />
       
@@ -146,9 +147,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Dynamic Content Showcase */}
-      <ContentShowcase />
-      
       {/* Latest Content Section */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -299,22 +297,82 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/services/ai-analytics-platform" className="group">
+            <Link to="/blog/ai-powered-customer-support-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Service
+                  <span className="bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Article
                   </span>
-                  <span className="text-sm text-gray-500">AI Analytics</span>
+                  <span className="text-sm text-gray-500">Customer Support</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Analytics Platform Launch
+                  AI-Powered Customer Support in 2025
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Transform your data into actionable insights with our new AI-powered analytics platform.
+                  Discover how AI is revolutionizing customer support with 80% faster response times and intelligent automation.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
-                  Explore Platform →
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+
+            <Link to="/blog/cloud-native-architecture-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Guide
+                  </span>
+                  <span className="text-sm text-gray-500">Cloud Architecture</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  Cloud-Native Architecture in 2025
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Master cloud-native patterns, microservices design, and container orchestration for scalable applications.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Guide →
+                </div>
+              </div>
+            </Link>
+
+            <Link to="/case-studies/retailtech-ai-transformation" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Success Story
+                  </span>
+                  <span className="text-sm text-gray-500">Retail Technology</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  RetailTech: 95% Efficiency Gain
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how a retail tech company achieved 95% efficiency improvement and $1.2M annual savings.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
+
+            <Link to="/case-studies/manufacturing-iot-automation" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Success Story
+                  </span>
+                  <span className="text-sm text-gray-500">Manufacturing</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  Manufacturing: 75% Efficiency with IoT
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Learn how IoT automation and predictive maintenance delivered 75% efficiency improvement.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
                 </div>
               </div>
             </Link>
@@ -330,6 +388,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Dynamic Content Showcase */}
+      <ContentShowcase />
 
       {/* Success Stories */}
       <section className="py-20 bg-gray-50">

@@ -104,13 +104,34 @@ const contentHighlights = [
   ,
   {
     id: 8,
-    title: "📚 New: AI Platform ROI + Secure ML Supply Chain",
-    description: "Fresh long-form guides on platform scorecards and end-to-end ML provenance.",
-    ctaText: "Read Now",
-    ctaLink: "/blog/ai-platform-roi-2025",
+    title: "📚 New: Practical RAG in Production (2025)",
+    description: "Freshness, hybrid search, and continuous evals for grounded responses.",
+    ctaText: "Read Guide",
+    ctaLink: "/blog/practical-rag-in-production-2025",
     badge: "New",
-    stats: "Featured",
+    stats: "8 min read",
     variant: "info" as const
+  }
+  ,
+  {
+    id: 9,
+    title: "💸 Cloud FinOps Guardrails Engineers Use",
+    description: "Budgets, alerts, and PR gates that cut waste 25–40%.",
+    ctaText: "Cut Spend",
+    ctaLink: "/blog/cloud-finops-guardrails-2025",
+    badge: "New",
+    stats: "7 min read",
+    variant: "success" as const
+  },
+  {
+    id: 10,
+    title: "🧪 RAG That Works in Production",
+    description: "Freshness, hybrid search, and evals that correlate with outcomes.",
+    ctaText: "Read Guide",
+    ctaLink: "/blog/practical-rag-in-production-2025",
+    badge: "Trending",
+    stats: "9 min read",
+    variant: "premium" as const
   }
 ];
 
