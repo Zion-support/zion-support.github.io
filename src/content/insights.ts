@@ -9,23 +9,15 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
-<<<<<<< HEAD
     id: "enterprise-genai-guardrails",
     title: "Enterprise Guardrails for Responsible GenAI",
     summary:
       "A pragmatic framework for policy testing, safety evaluations, and alignment with governance standards.",
     category: "GenAI",
-=======
-    id: "edge-ai-case-studies",
-    title: "How Edge AI Is Powering Real‑Time Experiences",
-    summary: "A look at on‑device models, streaming pipelines, and cost/perf trade‑offs from 3 deployments.",
-    category: "AI Engineering",
->>>>>>> cursor/create-and-deploy-new-content-aa3a
     date: "2025-09-29",
     readMinutes: 7,
   },
   {
-<<<<<<< HEAD
     id: "edge-inference-patterns",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     summary:
@@ -36,7 +28,7 @@ export const latestInsights: InsightArticle[] = [
   },
   {
     id: "ciso-zero-trust-scorecard",
-    title: "A CISO’s Zero‑Trust Scorecard",
+    title: "A CISO's Zero‑Trust Scorecard",
     summary:
       "Measure progress with identity controls, least privilege, continuous verification, and blast‑radius limits.",
     category: "Security",
@@ -50,50 +42,6 @@ export const latestInsights: InsightArticle[] = [
       "Unify reliability targets and cost controls with guardrails that keep developer velocity high.",
     category: "Cloud FinOps",
     date: "2025-09-27",
-=======
-    id: "governance-ai-policy-testing",
-    title: "Governance for AI: Policy Testing That Scales",
-    summary:
-      "From prompt policies to red‑team playbooks: techniques to continuously validate AI behavior.",
-    category: "Risk & Compliance",
-    date: "2025-09-29",
-    readMinutes: 8,
-  },
-  {
-    id: "modernization-catalog-strangler",
-    title: "Modernization That Sticks: Catalogs, Contracts, and the Strangler Fig",
-    summary:
-      "Practical steps to decouple legacy systems with service catalogs and contract‑first delivery.",
-    category: "Architecture",
-    date: "2025-09-29",
-    readMinutes: 9,
-  },
-  {
-    id: "observability-opentelemetry-guide",
-    title: "OpenTelemetry in Production: Traces That Engineers Actually Use",
-    summary:
-      "Sampling strategies, semantic conventions, and dashboards that shrink MTTR for complex stacks.",
-    category: "Observability",
-    date: "2025-09-29",
-    readMinutes: 6,
-  },
-  {
-    id: "llm-security-redteaming",
-    title: "LLM Security: A Practical Red‑Teaming Handbook",
-    summary:
-      "Common attack surfaces, jailbreak detection, and layered defenses for enterprise LLM apps.",
-    category: "Security",
-    date: "2025-09-29",
-    readMinutes: 10,
-  },
-  {
-    id: "ai-buy-build-economics-2025",
-    title: "Buy vs. Build for AI: 2025 Economics and Decision Tree",
-    summary:
-      "A CFO‑friendly model for TCO, data gravity, and competitive differentiation in AI investments.",
-    category: "Strategy",
-    date: "2025-09-29",
->>>>>>> cursor/create-and-deploy-new-content-aa3a
     readMinutes: 7,
   },
   {
@@ -238,6 +186,87 @@ export const latestInsights: InsightArticle[] = [
       "Least‑privilege by default, continuous verification, and blast radius controls that actually work.",
     category: "Security",
     date: "2025-09-24",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-automation-enterprise-2025",
+    title: "Enterprise AI Automation: Beyond Chatbots to Business Transformation",
+    summary:
+      "How Fortune 500 companies are using AI to automate complex workflows, reduce costs by 40%, and accelerate decision-making.",
+    category: "AI Strategy",
+    date: "2025-01-17",
+    readMinutes: 8,
+  },
+  {
+    id: "cloud-native-security-architecture",
+    title: "Building Bulletproof Cloud-Native Security Architecture",
+    summary:
+      "Zero-trust principles, service mesh security, and runtime protection for modern cloud applications.",
+    category: "Cloud Security",
+    date: "2025-01-16",
+    readMinutes: 9,
+  },
+  {
+    id: "genai-productivity-boost",
+    title: "GenAI Productivity: 300% Faster Development with Smart Tooling",
+    summary:
+      "Real case studies showing how AI coding assistants, automated testing, and intelligent documentation transform development teams.",
+    category: "Developer Tools",
+    date: "2025-01-15",
+    readMinutes: 7,
+  },
+  {
+    id: "data-mesh-implementation-guide",
+    title: "Data Mesh Implementation: From Theory to Production Success",
+    summary:
+      "Step-by-step guide to implementing data mesh architecture, including governance, ownership models, and technology choices.",
+    category: "Data Architecture",
+    date: "2025-01-14",
+    readMinutes: 10,
+  },
+  {
+    id: "kubernetes-cost-optimization-advanced",
+    title: "Advanced Kubernetes Cost Optimization: 60% Savings Without Performance Loss",
+    summary:
+      "Advanced techniques for right-sizing workloads, implementing spot instances, and using cluster autoscaling effectively.",
+    category: "Cloud Optimization",
+    date: "2025-01-13",
+    readMinutes: 8,
+  },
+  {
+    id: "mlops-production-ready",
+    title: "MLOps at Scale: Production-Ready Machine Learning Operations",
+    summary:
+      "Complete MLOps pipeline setup including model versioning, A/B testing, monitoring, and automated retraining.",
+    category: "MLOps",
+    date: "2025-01-12",
+    readMinutes: 11,
+  },
+  {
+    id: "cybersecurity-ai-defense",
+    title: "AI-Powered Cybersecurity: Next-Generation Threat Detection",
+    summary:
+      "How machine learning is revolutionizing threat detection, incident response, and security operations centers.",
+    category: "Cybersecurity",
+    date: "2025-01-11",
+    readMinutes: 9,
+  },
+  {
+    id: "microservices-observability",
+    title: "Microservices Observability: From Chaos to Clarity",
+    summary:
+      "Comprehensive observability strategy for microservices including distributed tracing, metrics, and alerting.",
+    category: "Observability",
+    date: "2025-01-10",
+    readMinutes: 7,
+  },
+  {
+    id: "serverless-cost-analysis",
+    title: "Serverless Cost Analysis: When to Use and When to Avoid",
+    summary:
+      "Detailed cost modeling for serverless vs. traditional infrastructure, including hidden costs and optimization strategies.",
+    category: "Cloud Economics",
+    date: "2025-01-09",
     readMinutes: 6,
   },
 ];

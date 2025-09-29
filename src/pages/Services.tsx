@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import {
   ArrowRight,
   CheckCircle,
@@ -16,6 +17,7 @@ import {
 } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ContentPromotionBanner from "../components/ContentPromotionBanner";
 
 export default function Services(): React.JSX.Element {
   const [selectedService, setSelectedService] = useState(0);
@@ -223,6 +225,11 @@ export default function Services(): React.JSX.Element {
             ))}
           </div>
 
+          {/* Content Promotion Section */}
+          <div className="mt-20">
+            <ContentPromotionBanner />
+          </div>
+
           {/* CTA Section */}
           <div className="text-center mt-20">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto">
@@ -234,13 +241,19 @@ export default function Services(): React.JSX.Element {
                 success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-zion-blue-light to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center group">
+                <Link 
+                  to="/contact"
+                  className="bg-gradient-to-r from-zion-blue-light to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center group"
+                >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </button>
-                <button className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300">
+                </Link>
+                <Link 
+                  to="/contact"
+                  className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                >
                   Schedule Consultation
-                </button>
+                </Link>
               </div>
             </div>
           </div>

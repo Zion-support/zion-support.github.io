@@ -18,6 +18,8 @@ import ModernFeatures from "../components/ModernFeatures";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import { latestInsights } from "../content/insights";
 import LatestInsights from "../components/LatestInsights";
+import ContentPromotionBanner from "../components/ContentPromotionBanner";
+import NewsletterSignup from "../components/NewsletterSignup";
 
 const Home = () => {
   return (
@@ -137,6 +139,11 @@ const Home = () => {
               </Link>
             </div>
           </div>
+        </section>
+
+        {/* Content Promotion Banner */}
+        <section className="container mx-auto px-6 py-16 relative z-10">
+          <ContentPromotionBanner />
         </section>
 
         {/* Latest Insights Section */}
@@ -378,39 +385,10 @@ const Home = () => {
         {/* Enhanced Testimonials Section */}
         <EnhancedTestimonials />
 
-        {/* New Content Promo */}
+        {/* Newsletter Signup Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-                <div className="max-w-2xl">
-                  <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
-                  <p className="text-white/90">
-                    Fresh articles on real-time data pipelines, north-star metrics, and safe, scalable GenAI ops.
-                  </p>
-                </div>
-                <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
-                  Read the latest
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </div>
-
-              {/* Inline featured list */}
-              <div className="mt-8 grid gap-6 md:grid-cols-3">
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
-                  <div className="font-semibold text-white">Building Reliable Real-Time Data Pipelines</div>
-                </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-orange-200 mb-1">Product Analytics</div>
-                  <div className="font-semibold text-white">North-Star Metrics That Actually Drive Growth</div>
-                </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
-                  <div className="font-semibold text-white">Operationalizing GenAI Safely and at Scale</div>
-                </div>
-              </div>
-            </div>
+            <NewsletterSignup />
           </div>
         </section>
 
