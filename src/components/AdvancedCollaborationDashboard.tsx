@@ -64,7 +64,7 @@ const AdvancedCollaborationDashboard: React.FC<AdvancedCollaborationDashboardPro
   const [showCreateSession, setShowCreateSession] = useState(false);
   const [sessionName, setSessionName] = useState('');
   const [sessionType, setSessionType] = useState<CollaborationSession['type']>('meeting');
-  const chatEndRef = useRef<HTMLDivElement>(null);
+  const chatEndRef = useRef(null as unknown as HTMLDivElement | null);
 
   useEffect(() => {
     if (isVisible) {
@@ -75,15 +75,16 @@ const AdvancedCollaborationDashboard: React.FC<AdvancedCollaborationDashboardPro
       setSessions(advancedCollaborationSystem.getAllSessions());
       
       // Set up event listeners
-      advancedCollaborationSystem.on('sessionCreated', handleSessionCreated);
-      advancedCollaborationSystem.on('sessionStarted', handleSessionStarted);
-      advancedCollaborationSystem.on('sessionEnded', handleSessionEnded);
-      advancedCollaborationSystem.on('userJoined', handleUserJoined);
-      advancedCollaborationSystem.on('userLeft', handleUserLeft);
-      advancedCollaborationSystem.on('chatMessage', handleChatMessage);
-      advancedCollaborationSystem.on('pollCreated', handlePollCreated);
-      advancedCollaborationSystem.on('fileShared', handleFileShared);
-      advancedCollaborationSystem.on('whiteboardElementAdded', handleWhiteboardElementAdded);
+      // Cast to any to avoid strict variadic listener typing mismatch in this UI layer
+      (advancedCollaborationSystem as any).on('sessionCreated', handleSessionCreated);
+      (advancedCollaborationSystem as any).on('sessionStarted', handleSessionStarted);
+      (advancedCollaborationSystem as any).on('sessionEnded', handleSessionEnded);
+      (advancedCollaborationSystem as any).on('userJoined', handleUserJoined);
+      (advancedCollaborationSystem as any).on('userLeft', handleUserLeft);
+      (advancedCollaborationSystem as any).on('chatMessage', handleChatMessage);
+      (advancedCollaborationSystem as any).on('pollCreated', handlePollCreated);
+      (advancedCollaborationSystem as any).on('fileShared', handleFileShared);
+      (advancedCollaborationSystem as any).on('whiteboardElementAdded', handleWhiteboardElementAdded);
     }
   }, [isVisible]);
 
