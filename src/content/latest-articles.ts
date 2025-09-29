@@ -33,6 +33,54 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+    id: "ai-governance-scorecards-quickstart-2026",
+    slug: "ai-governance-scorecards-quickstart-2026",
+    title: "AI Governance Scorecards Quickstart 2026: Ship Fast, Stay Safe",
+    description: "Lightweight scorecards, PR checks, and canaries that predict outcomes without slowing teams.",
+    excerpt: "Kickstart scorecards and guardrails in weeks—wired to KPIs and delivery speed.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-16",
+    category: "AI Strategy",
+    tags: ["Scorecards", "Governance", "Canaries"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/ai-governance-scorecards-quickstart-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-agent-observability-2026",
+    slug: "edge-agent-observability-2026",
+    title: "Edge Agent Observability 2026: Live Traces, Budgets, and Fallbacks",
+    description: "Observe multi‑tool agents with user‑centric traces, budgeted actions, and deterministic fallbacks at the edge.",
+    excerpt: "User‑centric traces and safety budgets for agents running at the edge.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-16",
+    category: "Edge Computing",
+    tags: ["Agents", "Observability", "Edge"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-agent-observability-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-preserving-feature-flags-2026",
+    slug: "privacy-preserving-feature-flags-2026",
+    title: "Privacy‑Preserving Feature Flags 2026: Geo Budgets and On‑Device Filters",
+    description: "Sub‑100ms, zero‑regret rollouts using scoped IDs, local filters, and telemetry‑driven rollback.",
+    excerpt: "Zero‑regret rollouts with privacy by design: scoped IDs and local filters.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-16",
+    category: "Architecture",
+    tags: ["Feature Flags", "Privacy", "Edge"],
+    featured: false,
+    readTime: "7 min read",
+    image: "/images/privacy-preserving-feature-flags-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "privacy-first-insights-telemetry-2026",
     slug: "privacy-first-insights-telemetry-2026",
     title: "Privacy‑First Insights 2026: Signal‑Rich Analytics Without PII",
@@ -93,7 +141,6 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "8 min read",
     image: "/images/platform-engineering-scorecards-v2-2026.jpg",
->>>>>>> origin/main
     newBadge: true,
     trending: true
   },
