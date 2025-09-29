@@ -254,5 +254,24 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "9 min read"
   }
+  ,
+  {
+    slug: "agentic-workflows-blueprint-2026",
+    title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",
+    description: "Design reliable multi‑tool agents with deterministic tools, live traces, and risk budgets.",
+    category: "GenAI",
+    publishedAt: "2025-10-10",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "privacy-first-observability-2026",
+    title: "Privacy‑First Observability: User‑Centric Traces Without PII Leaks",
+    description: "Implement privacy filters, scoped IDs, and retention policies that keep signals rich and safe.",
+    category: "Observability",
+    publishedAt: "2025-10-10",
+    featured: false,
+    readTime: "7 min read"
+  }
 ];
 

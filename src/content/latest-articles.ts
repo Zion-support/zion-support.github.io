@@ -657,6 +657,39 @@ export const latestArticles: LatestArticle[] = [
     newBadge: true,
     trending: false
   }
+  ,
+  {
+    id: "agentic-workflows-blueprint-2026",
+    slug: "agentic-workflows-blueprint-2026",
+    title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",
+    description: "Design reliable multi‑tool agents with deterministic tools, live traces, and risk budgets.",
+    excerpt: "A production playbook for building agent workflows that teams can trust.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-10",
+    category: "GenAI",
+    tags: ["Agents", "Tracing", "Guardrails"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/agentic-workflows-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-first-observability-2026",
+    slug: "privacy-first-observability-2026",
+    title: "Privacy‑First Observability: User‑Centric Traces Without PII Leaks",
+    description: "Implement privacy filters, scoped IDs, and retention policies that keep signals rich and safe.",
+    excerpt: "Observability patterns that balance insight with compliance across stacks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-10",
+    category: "Observability",
+    tags: ["Privacy", "Tracing", "Compliance"],
+    featured: false,
+    readTime: "7 min read",
+    image: "/images/privacy-first-observability.jpg",
+    newBadge: true,
+    trending: true
+  }
 ];
 
 export const featuredArticles = latestArticles.filter(article => article.featured);

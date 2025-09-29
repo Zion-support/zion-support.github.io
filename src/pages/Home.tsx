@@ -115,14 +115,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="Fresh: Agentic Workflows, Edge LLM Caching, Operational Scorecards"
-          description="New: agentic tools + traces, sub‑100ms edge LLM caching, and outcome‑driven scorecards."
+          title="Fresh: Agentic Workflows, Privacy‑First Observability, Edge LLM Caching"
+          description="New: agentic tools + traces, privacy‑first user‑centric observability, and sub‑100ms edge LLM caching."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Agentic Workflows Blueprint", category: "GenAI", link: "/blog/agentic-workflows-blueprint-2026" },
+            { title: "Agentic Workflows Blueprint 2026", category: "GenAI", link: "/blog/agentic-workflows-blueprint-2026" },
             { title: "Edge LLM Caching", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2025" },
-            { title: "Operational Scorecards 2026", category: "AI Strategy", link: "/blog/ai-operational-scorecards-2026" },
+            { title: "Privacy‑First Observability", category: "Observability", link: "/blog/privacy-first-observability-2026" },
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -295,7 +295,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
             <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Agentic Workflows, Edge LLM Caching, and Operational Scorecards — read now
+            New: Agentic Workflows, Privacy‑First Observability, and Edge LLM Caching — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
@@ -553,7 +553,7 @@ const Home = () => {
                 <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Fresh: Agentic Workflows, Edge LLM Caching, Operational Scorecards
+                Fresh: Agentic Workflows, Privacy‑First Observability, Edge LLM Caching
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles & Insights
@@ -825,15 +825,15 @@ const Home = () => {
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-purple-200 mb-1">GenAI</div>
-                  <div className="font-semibold text-white">Agentic Workflows Blueprint</div>
+                  <div className="font-semibold text-white">Agentic Workflows Blueprint 2026</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-blue-200 mb-1">Architecture</div>
                   <div className="font-semibold text-white">Edge LLM Caching</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Security</div>
-                  <div className="font-semibold text-white">Secure ML Supply Chain</div>
+                  <div className="text-sm text-rose-200 mb-1">Observability</div>
+                  <div className="font-semibold text-white">Privacy‑First Observability</div>
                 </div>
               </div>
             </div>
