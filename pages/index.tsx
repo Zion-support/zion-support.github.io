@@ -1,9 +1,8 @@
-import React from "react";
+import { motion, useInView } from "framer-motion";
 import Head from "next/head";
 import Link from "next/link";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { latestInsights } from "../src/content/insights";
-import { useState, useEffect, useCallback, useMemo, useRef } from "react";
-import { motion, useInView } from "framer-motion";
 // import { AnimatePresence } from "framer-motion";
 // import dynamic from "next/dynamic";
 

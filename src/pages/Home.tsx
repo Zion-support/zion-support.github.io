@@ -1,23 +1,22 @@
-import React from 'react';
 import {
   ArrowRight,
-  Shield,
-  Zap,
-  Users,
-  Globe,
-  Star,
   CheckCircle,
-  Sparkles,
+  Globe,
   Rocket,
+  Shield,
+  Sparkles,
+  Star,
   Target,
+  Users,
+  Zap,
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import Header from "../components/Header";
-import ModernFeatures from "../components/ModernFeatures";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
-import NewsletterSignup from "../components/NewsletterSignup";
-import { posts } from "../content/posts";
+import Header from "../components/Header";
+import LatestInsights from "../components/LatestInsights";
+import ModernFeatures from "../components/ModernFeatures";
+import { latestInsights } from "../content/insights";
 
 const Home = () => {
   return (
@@ -138,6 +137,9 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        {/* Latest Insights Section */}
+        <LatestInsights />
 
         {/* Features Section */}
         <section className="container mx-auto px-6 py-20 relative z-10">
@@ -260,6 +262,29 @@ const Home = () => {
           </div>
         </section>
 
+        {/* Latest Insights */}
+        <section className="container mx-auto px-6 py-16 relative z-10">
+          <div className="flex items-center justify-between mb-8">
+            <h3 className="text-3xl font-bold text-white">Latest Insights</h3>
+            <Link to="/insights" className="text-zion-cyan hover:underline">View all</Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {latestInsights.slice(0, 3).map((item) => (
+              <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="p-6">
+                  <div className="text-xs uppercase tracking-wider text-zion-cyan mb-2">{item.category}</div>
+                  <h4 className="text-xl font-semibold text-white mb-2">{item.title}</h4>
+                  <p className="text-zion-slate-light mb-4">{item.summary}</p>
+                  <div className="text-sm text-zion-slate flex items-center justify-between">
+                    <span>{new Date(item.date).toLocaleDateString()}</span>
+                    <span>{item.readMinutes} min read</span>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
         {/* Testimonials Section */}
         <section className="bg-zion-slate-dark py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/10 to-zion-purple/10 opacity-50"></div>
@@ -288,7 +313,7 @@ const Home = () => {
                 <p className="text-zion-slate-light mb-6 italic">
                   &ldquo;Zion Tech Group transformed our entire digital
                   infrastructure. Their AI solutions increased our efficiency by
-                  300% and reduced costs by 45%.&rdquo;
+                  300%.&rdquo;
                 </p>
                 <div>
                   <div className="font-semibold text-white">Sarah Johnson</div>
@@ -309,7 +334,7 @@ const Home = () => {
                 <p className="text-zion-slate-light mb-6 italic">
                   &ldquo;Outstanding team and exceptional results. They
                   delivered our mobile app ahead of schedule and under
-                  budget. The ROI was immediate.&rdquo;
+                  budget.&rdquo;
                 </p>
                 <div>
                   <div className="font-semibold text-white">Michael Chen</div>
@@ -331,7 +356,7 @@ const Home = () => {
                 </div>
                 <p className="text-zion-slate-light mb-6 italic">
                   &ldquo;The security solutions they implemented gave us
-                  complete peace of mind. Zero breaches since implementation. Highly recommended!&rdquo;
+                  complete peace of mind. Highly recommended!&rdquo;
                 </p>
                 <div>
                   <div className="font-semibold text-white">
@@ -340,47 +365,6 @@ const Home = () => {
                   <div className="text-sm text-zion-slate">
                     Security Director, FinanceFirst
                   </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Additional Testimonials */}
-            <div className="grid md:grid-cols-2 gap-8 mt-12">
-              <div className="card text-center hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                <div className="flex justify-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 text-yellow-400 fill-current animate-pulse"
-                      style={{ animationDelay: `${i * 0.1}s` }}
-                    />
-                  ))}
-                </div>
-                <p className="text-zion-slate-light mb-6 italic">
-                  &ldquo;Their cloud migration strategy saved us $2M annually while improving performance by 60%. The team's expertise is unmatched.&rdquo;
-                </p>
-                <div>
-                  <div className="font-semibold text-white">David Kim</div>
-                  <div className="text-sm text-zion-slate">VP of Engineering, CloudScale Inc.</div>
-                </div>
-              </div>
-
-              <div className="card text-center hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                <div className="flex justify-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 text-yellow-400 fill-current animate-pulse"
-                      style={{ animationDelay: `${i * 0.1}s` }}
-                    />
-                  ))}
-                </div>
-                <p className="text-zion-slate-light mb-6 italic">
-                  &ldquo;Zion's data analytics platform helped us identify new revenue streams worth $5M. Their insights are game-changing.&rdquo;
-                </p>
-                <div>
-                  <div className="font-semibold text-white">Lisa Martinez</div>
-                  <div className="text-sm text-zion-slate">Chief Data Officer, DataDriven Corp</div>
                 </div>
               </div>
             </div>
@@ -393,121 +377,39 @@ const Home = () => {
         {/* Enhanced Testimonials Section */}
         <EnhancedTestimonials />
 
-        {/* Latest Articles */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="mb-10 flex items-end justify-between">
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
-                <p className="text-gray-600">Insights from our team to help you move faster.</p>
-              </div>
-              <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
-            </div>
-            <div className="grid gap-8 md:grid-cols-3">
-              {posts.slice(0, 3).map((post) => (
-                <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                  <div className="p-6">
-                    <div className="text-sm text-indigo-600 font-medium mb-2">{post.category}</div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{post.title}</h3>
-                    <p className="text-gray-600 mb-4">{post.description}</p>
-                    <Link to={`/blog/${post.slug}`} className="text-indigo-700 font-medium hover:text-indigo-800">Read more →</Link>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* New Content Promo */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-              <div>
-                <h2 className="text-3xl font-bold mb-2">🔥 Fresh Content Just Released!</h2>
-                <p className="text-white/90 max-w-2xl mb-4">
-                  Explore our latest articles covering AI transformation roadmaps, cloud-native security, and digital transformation strategies. 
-                  <span className="block mt-2 font-semibold">10+ new articles added this month!</span>
-                </p>
-                <div className="flex flex-wrap gap-2 text-sm">
-                  <span className="bg-white/20 px-3 py-1 rounded-full">AI Strategy</span>
-                  <span className="bg-white/20 px-3 py-1 rounded-full">Cloud Security</span>
-                  <span className="bg-white/20 px-3 py-1 rounded-full">Data Governance</span>
-                  <span className="bg-white/20 px-3 py-1 rounded-full">MLOps</span>
+            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+                <div className="max-w-2xl">
+                  <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
+                  <p className="text-white/90">
+                    Fresh articles on real-time data pipelines, north-star metrics, and safe, scalable GenAI ops.
+                  </p>
                 </div>
-              </div>
-              <div className="flex flex-col gap-3">
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
-                  Read Latest Articles
+                  Read the latest
                   <ArrowRight className="w-5 h-5" />
                 </Link>
-                <Link to="/insights" className="border border-white text-white hover:bg-white hover:text-indigo-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto transition-all">
-                  View All Insights
-                </Link>
+              </div>
+
+              {/* Inline featured list */}
+              <div className="mt-8 grid gap-6 md:grid-cols-3">
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
+                  <div className="font-semibold text-white">Building Reliable Real-Time Data Pipelines</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-orange-200 mb-1">Product Analytics</div>
+                  <div className="font-semibold text-white">North-Star Metrics That Actually Drive Growth</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
+                  <div className="font-semibold text-white">Operationalizing GenAI Safely and at Scale</div>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Featured Content Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Content</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Stay ahead with our latest insights on emerging technologies and industry best practices
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-100">
-                <div className="bg-gradient-to-r from-blue-500 to-purple-600 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                  <Sparkles className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">AI Transformation Roadmap</h3>
-                <p className="text-gray-600 mb-6">
-                  Strategic framework for scaling AI initiatives across enterprise organizations with measurable ROI.
-                </p>
-                <Link to="/blog/ai-transformation-roadmap" className="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center gap-1">
-                  Read Article
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-100">
-                <div className="bg-gradient-to-r from-green-500 to-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Cloud-Native Security</h3>
-                <p className="text-gray-600 mb-6">
-                  Essential security patterns for containerized applications, serverless functions, and microservices architectures.
-                </p>
-                <Link to="/blog/cloud-native-security" className="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center gap-1">
-                  Read Article
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-100">
-                <div className="bg-gradient-to-r from-purple-500 to-pink-600 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                  <Target className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Digital Transformation Playbook</h3>
-                <p className="text-gray-600 mb-6">
-                  Proven strategies for accelerating digital transformation initiatives in resource-constrained environments.
-                </p>
-                <Link to="/blog/digital-transformation-playbook" className="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center gap-1">
-                  Read Article
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Newsletter Signup */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-            <NewsletterSignup />
           </div>
         </section>
 

@@ -9,40 +9,175 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
-    id: "genai-evals-guardrails",
-    title: "Production-Grade GenAI: Evals, Guardrails, and Monitoring",
+    id: "edge-ai-case-studies",
+    title: "How Edge AI Is Powering Real‑Time Experiences",
     summary:
-      "A field-tested approach to shipping GenAI safely: evaluate quality, enforce policy, and observe drift.",
-    category: "AI",
+      "A look at on‑device models, streaming pipelines, and cost/perf trade‑offs from 3 deployments.",
+    category: "AI Engineering",
+    date: "2025-09-29",
+    readMinutes: 7,
+  },
+  {
+    id: "governance-ai-policy-testing",
+    title: "Governance for AI: Policy Testing That Scales",
+    summary:
+      "From prompt policies to red‑team playbooks: techniques to continuously validate AI behavior.",
+    category: "Risk & Compliance",
+    date: "2025-09-29",
+    readMinutes: 8,
+  },
+  {
+    id: "llm-security-redteaming",
+    title: "LLM Security: A Practical Red‑Teaming Handbook",
+    summary:
+      "Common attack surfaces, jailbreak detection, and layered defenses for enterprise LLM apps.",
+    category: "Security",
+    date: "2025-09-29",
+    readMinutes: 10,
+  },
+  {
+    id: "ai-buy-build-economics-2025",
+    title: "Buy vs. Build for AI: 2025 Economics and Decision Tree",
+    summary:
+      "A CFO‑friendly model for TCO, data gravity, and competitive differentiation in AI investments.",
+    category: "Strategy",
+    date: "2025-09-29",
+    readMinutes: 7,
+  },
+  {
+    id: "genai-eval-playbook-2025",
+    title: "A Practical Evaluation Playbook for GenAI Apps",
+    summary:
+      "How to stand up robust offline and online evals, define quality bars, and ship with confidence.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 8,
+  },
+  {
+    id: "observability-opentelemetry-guide",
+    title: "OpenTelemetry in Production: Traces That Engineers Actually Use",
+    summary:
+      "Sampling strategies, semantic conventions, and dashboards that shrink MTTR for complex stacks.",
+    category: "Observability",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "modernization-catalog-strangler",
+    title: "Modernization That Sticks: Catalogs, Contracts, and the Strangler Fig",
+    summary:
+      "Practical steps to decouple legacy systems with service catalogs and contract‑first delivery.",
+    category: "Architecture",
+    date: "2025-09-29",
+    readMinutes: 9,
+  },
+  {
+    id: "edge-inference-patterns",
+    title: "Edge Inference Patterns for Sub‑100ms Experiences",
+    summary:
+      "Latency budgets, caching strategies, and model quantization techniques for lightning‑fast UX.",
+    category: "Architecture",
+    date: "2025-09-28",
+    readMinutes: 6,
+  },
+  {
+    id: "platform-blueprints-ref-arch",
+    title: "Reference Architectures for Modern Data & AI Platforms",
+    summary:
+      "Battle-tested blueprints for ingestion, governance, semantic layers, and real-time activation.",
+    category: "Architecture",
+    date: "2025-09-28",
+    readMinutes: 10,
+  },
+  {
+    id: "kubernetes-cost-guardrails",
+    title: "Kubernetes Cost Guardrails That Engineers Don’t Hate",
+    summary:
+      "Limit waste with sensible defaults: requests/limits, QoS, autoscaling, and cost-aware CI policies.",
+    category: "Cloud",
+    date: "2025-09-28",
+    readMinutes: 7,
+  },
+  {
+    id: "ciso-zero-trust-scorecard",
+    title: "A CISO’s Zero‑Trust Scorecard",
+    summary:
+      "Measure progress with identity controls, least privilege, continuous verification, and blast‑radius limits.",
+    category: "Security",
     date: "2025-09-28",
     readMinutes: 8,
   },
   {
-    id: "serverless-cost-controls",
-    title: "Taming Serverless Costs at Scale",
+    id: "zero-trust-sdls",
+    title: "Zero-Trust SDLC: Shipping Secure Software Without Slowing Down",
     summary:
-      "Practical levers for keeping Lambda, Cloud Functions, and event systems fast without surprise bills.",
-    category: "Cloud",
-    date: "2025-09-26",
+      "Embed policy-as-code, automated threat modeling, and continuous verification into delivery workflows.",
+    category: "Security",
+    date: "2025-09-28",
+    readMinutes: 8,
+  },
+  {
+    id: "analytics-ltv-playbook",
+    title: "An Operator’s Playbook for LTV:CPA Ratio",
+    summary:
+      "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
+    category: "Product Analytics",
+    date: "2025-09-29",
     readMinutes: 6,
   },
   {
-    id: "zero-trust-blueprint",
-    title: "Zero-Trust Blueprint for SaaS Platforms",
+    id: "cloud-cost-qa-automation",
+    title: "QA Gates That Keep Cloud Costs From Creeping",
     summary:
-      "A pragmatic rollout plan covering identity, least-privilege, continuous verification, and segmentation.",
+      "Cost-aware tests, CI policies, and dashboards that prevent regressions before they ship.",
+    category: "Cloud FinOps",
+    date: "2025-09-27",
+    readMinutes: 6,
+  },
+  {
+    id: "security-sbom-supply-chain",
+    title: "Shipping a Secure SBOM and Hardening Your Supply Chain",
+    summary:
+      "Step-by-step guidance to produce SBOMs, lock dependencies, and detect tampering early.",
     category: "Security",
-    date: "2025-09-24",
+    date: "2025-09-27",
     readMinutes: 7,
   },
   {
-    id: "ai-platform-roadmap-2025",
-    title: "Our AI Platform Roadmap for 2025",
+    id: "operationalizing-genai",
+    title: "Operationalizing GenAI Safely and at Scale",
     summary:
-      "A transparent look at the capabilities, milestones, and enterprise features we are shipping next year.",
-    category: "Product",
-    date: "2025-09-01",
+      "Practical blueprints for evaluation, policy testing, and observability across the GenAI lifecycle.",
+    category: "MLOps",
+    date: "2025-09-25",
+    readMinutes: 9,
+  },
+  {
+    id: "zero-trust-saas",
+    title: "Zero‑Trust in Practice for SaaS",
+    summary:
+      "Least‑privilege by default, continuous verification, and blast radius controls that actually work.",
+    category: "Security",
+    date: "2025-09-24",
     readMinutes: 6,
+  },
+  {
+    id: "north-star-metrics",
+    title: "North‑Star Metrics That Actually Drive Growth",
+    summary:
+      "Define actionable metrics, avoid vanity traps, and align teams to measurable outcomes.",
+    category: "Product Analytics",
+    date: "2025-09-22",
+    readMinutes: 5,
+  },
+  {
+    id: "real-time-pipelines-reliability",
+    title: "Building Reliable Real‑Time Data Pipelines",
+    summary:
+      "Patterns for exactly‑once semantics, schema evolution, and backpressure handling in streaming systems.",
+    category: "Data Engineering",
+    date: "2025-09-20",
+    readMinutes: 7,
   },
   {
     id: "secure-ml-pipelines",
@@ -69,123 +204,6 @@ export const latestInsights: InsightArticle[] = [
       "A no‑nonsense playbook for data quality, lineage, and access controls you can adopt this quarter.",
     category: "Data",
     date: "2025-07-18",
-    readMinutes: 8,
-  },
-  {
-    id: "vector-search-in-production",
-    title: "Vector Search in Production: Patterns That Actually Scale",
-    summary:
-      "What we learned implementing vector databases and retrieval for real-world, high-traffic applications.",
-    category: "AI Engineering",
-    date: "2025-09-29",
-    readMinutes: 7,
-  },
-  {
-    id: "llm-evals-that-matter",
-    title: "LLM Evals That Matter: From Demos to Reliable Systems",
-    summary:
-      "A practical evaluation stack for GenAI systems across quality, safety, latency, and cost.",
-    category: "MLOps",
-    date: "2025-09-29",
-    readMinutes: 9,
-  },
-  {
-    id: "finops-guardrails",
-    title: "FinOps Guardrails: Cut 30% Cloud Spend Without Slowing Teams",
-    summary:
-      "Engineering-friendly cost controls: autoscaling defaults, workload tagging, and policy-as-code.",
-    category: "Cloud FinOps",
-    date: "2025-09-29",
-    readMinutes: 6,
-  },
-  {
-    id: "zero-trust-rollout",
-    title: "Zero-Trust Rollout for SaaS: A 6-Week Plan",
-    summary:
-      "Least-privilege, continuous verification, and telemetry-driven detection with minimal friction.",
-    category: "Security",
-    date: "2025-09-29",
-    readMinutes: 8,
-  },
-  {
-    id: "ai-transformation-roadmap",
-    title: "AI Transformation Roadmap: From Pilot to Production",
-    summary:
-      "Strategic framework for scaling AI initiatives across enterprise organizations with measurable ROI.",
-    category: "AI Strategy",
-    date: "2025-01-22",
-    readMinutes: 10,
-  },
-  {
-    id: "cloud-native-security",
-    title: "Cloud-Native Security: Protecting Modern Applications",
-    summary:
-      "Essential security patterns for containerized applications, serverless functions, and microservices architectures.",
-    category: "Cloud Security",
-    date: "2025-01-20",
-    readMinutes: 7,
-  },
-  {
-    id: "data-governance-2025",
-    title: "Data Governance in the Age of AI: 2025 Framework",
-    summary:
-      "Comprehensive approach to data quality, privacy, and compliance for AI-powered organizations.",
-    category: "Data Governance",
-    date: "2025-01-18",
-    readMinutes: 9,
-  },
-  {
-    id: "automation-roi-metrics",
-    title: "Measuring Automation ROI: Beyond Cost Savings",
-    summary:
-      "Advanced metrics for quantifying the business impact of automation initiatives across operations.",
-    category: "Business Intelligence",
-    date: "2025-01-15",
-    readMinutes: 6,
-  },
-  {
-    id: "edge-computing-strategy",
-    title: "Edge Computing Strategy: Bringing AI Closer to Data",
-    summary:
-      "Strategic considerations for deploying AI workloads at the edge for improved performance and privacy.",
-    category: "Edge Computing",
-    date: "2025-01-12",
-    readMinutes: 8,
-  },
-  {
-    id: "digital-transformation-playbook",
-    title: "Digital Transformation Playbook for Mid-Market Companies",
-    summary:
-      "Proven strategies for accelerating digital transformation initiatives in resource-constrained environments.",
-    category: "Digital Strategy",
-    date: "2025-01-10",
-    readMinutes: 11,
-  },
-  {
-    id: "api-security-best-practices",
-    title: "API Security Best Practices: Protecting Your Digital Assets",
-    summary:
-      "Comprehensive guide to securing APIs in modern applications with authentication, authorization, and monitoring.",
-    category: "API Security",
-    date: "2025-01-08",
-    readMinutes: 7,
-  },
-  {
-    id: "machine-learning-ops",
-    title: "MLOps in Production: Scaling Machine Learning Systems",
-    summary:
-      "Operational excellence for machine learning systems: deployment, monitoring, and continuous improvement.",
-    category: "MLOps",
-    date: "2025-01-05",
-    readMinutes: 9,
-  },
-  {
-    id: "blockchain-business-applications",
-    title: "Blockchain Beyond Crypto: Business Applications in 2025",
-    summary:
-      "Real-world blockchain use cases in supply chain, identity management, and smart contracts for enterprises.",
-    category: "Blockchain",
-    date: "2025-01-03",
     readMinutes: 8,
   },
 ];
