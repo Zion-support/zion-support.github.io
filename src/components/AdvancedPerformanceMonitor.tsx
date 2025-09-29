@@ -20,31 +20,31 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
     // Load web vitals
     const loadWebVitals = async () => {
       try {
-        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
+        const webVitals = await import('web-vitals');
         
         const vitals: Partial<PerformanceMetrics> = {};
 
-        getCLS((metric) => {
+        webVitals.onCLS((metric: any) => {
           vitals.cls = metric.value;
           updateMetrics(vitals);
         });
 
-        getFID((metric) => {
-          vitals.fid = metric.value;
+        webVitals.onINP((metric: any) => {
+          vitals.fid = metric.value; // Using INP instead of FID
           updateMetrics(vitals);
         });
 
-        getFCP((metric) => {
+        webVitals.onFCP((metric: any) => {
           vitals.fcp = metric.value;
           updateMetrics(vitals);
         });
 
-        getLCP((metric) => {
+        webVitals.onLCP((metric: any) => {
           vitals.lcp = metric.value;
           updateMetrics(vitals);
         });
 
-        getTTFB((metric) => {
+        webVitals.onTTFB((metric: any) => {
           vitals.ttfb = metric.value;
           updateMetrics(vitals);
         });

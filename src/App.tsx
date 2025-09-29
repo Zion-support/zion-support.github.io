@@ -570,13 +570,7 @@ export default function App(): React.JSX.Element {
         />
 
         {/* Accessibility Enhancer */}
-        <AccessibilityEnhancer 
-          enabled={true}
-          showMetrics={showAccessibilityEnhancer}
-          onMetricsUpdate={(metrics) => {
-            console.log('Accessibility metrics updated:', metrics);
-          }}
-        />
+        <AccessibilityEnhancer />
 
         {/* Advanced Performance Monitor */}
         <AdvancedPerformanceMonitor />
