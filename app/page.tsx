@@ -55,7 +55,7 @@ import {
   AIInnovation2026Banner,
   SuccessStory2026Banner,
   AIRevolution2026Banner
-=======
+} from '../components/NewContent2026PromotionalBanners';
 import {
   AIAutonomousInfrastructureBanner,
   AIQuantumComputingBanner,
@@ -63,8 +63,17 @@ import {
   AIZeroTrustSecurityBanner,
   AIFoundationModelsBanner,
   LatestContent2026Banner
->>>>>>> cursor/create-and-deploy-new-content-6fcc
 } from '../components/NewContent2026PromotionalBanners';
+import { 
+  RevolutionaryAutomationBanner,
+  AIRevolutionaryAutomationBanner,
+  RevolutionaryAutomationShowcase
+} from '../components/RevolutionaryAutomationBanner';
+import { 
+  AICostOptimizationBanner,
+  AICostOptimizationShowcase
+} from '../components/AICostOptimizationBanner';
+import { EnhancedContentShowcase2026 } from '../components/EnhancedContentShowcase2026';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -105,19 +114,19 @@ export default function HomePage() {
         </div>
       </div>
       {/* New 2026 Content Promotional Banners */}
-<<<<<<< HEAD
+      <RevolutionaryAutomationBanner />
+      <AIRevolutionaryAutomationBanner />
+      <AICostOptimizationBanner />
       <NewContent2026PromotionalBanner />
       <AIInnovation2026Banner />
       <SuccessStory2026Banner />
       <AIRevolution2026Banner />
-=======
       <AIAutonomousInfrastructureBanner />
       <AIQuantumComputingBanner />
       <AITransformationSuccessBanner />
       <AIZeroTrustSecurityBanner />
       <AIFoundationModelsBanner />
       <LatestContent2026Banner />
->>>>>>> cursor/create-and-deploy-new-content-6fcc
       
       {/* Additional Promotional Banners */}
       <NewContentShowcase2026Banner />
@@ -246,6 +255,15 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Enhanced Content Showcase */}
+      <EnhancedContentShowcase2026 />
+      
+      {/* Revolutionary Automation Showcase */}
+      <RevolutionaryAutomationShowcase />
+      
+      {/* AI Cost Optimization Showcase */}
+      <AICostOptimizationShowcase />
+      
       {/* Featured New Content Showcase */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
         <div className="max-w-6xl mx-auto px-4">
