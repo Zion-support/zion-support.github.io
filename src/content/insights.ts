@@ -9,10 +9,6 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
-<<<<<<< HEAD
-    id: "platform-blueprints-golden-paths",
-    title: "Golden Paths That Actually Get Used",
-=======
     id: "genai-policy-tests-canaries",
     title: "GenAI Policy Tests: From Offline Suites to Online Canaries",
     summary:
@@ -42,7 +38,6 @@ export const latestInsights: InsightArticle[] = [
   {
     id: "ai-governance-rubric",
     title: "A Lightweight Rubric for AI Governance Decisions",
->>>>>>> cursor/create-and-deploy-new-content-40aa
     summary:
       "How to design developer workflows, templates, and scorecards that reduce cognitive load.",
     category: "Platform Engineering",
