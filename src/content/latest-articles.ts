@@ -81,6 +81,54 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+    id: "ai-governance-blueprint-2026",
+    slug: "ai-governance-blueprint-2026",
+    title: "AI Governance 2026: Policy Tests, Canaries, and Scorecards",
+    description: "Ship fast, stay safe: lightweight policy tests, KPI‑linked canaries, and scorecards teams adopt.",
+    excerpt: "Practical guardrails that accelerate delivery while satisfying risk and compliance.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Strategy",
+    tags: ["Governance", "Policy", "Canaries", "Scorecards"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-governance-blueprint-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-privacy-personalization-2026",
+    slug: "edge-privacy-personalization-2026",
+    title: "Edge Privacy‑Preserving Personalization: <100ms with On‑Device ML",
+    description: "Signed configs, local embeddings, and geo budgets for private, real‑time personalization.",
+    excerpt: "Deliver relevant experiences without data exfiltration using on‑device models and edge KV.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Edge Computing",
+    tags: ["Edge", "Personalization", "Privacy"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/edge-privacy-personalization-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "agent-release-risk-budgets-2026",
+    slug: "agent-release-risk-budgets-2026",
+    title: "Agent Releases 2026: Risk Budgets, Rollbacks, and Live Traces",
+    description: "Budget risky actions, wire rollbacks, and add traces that keep agent releases safe.",
+    excerpt: "A pragmatic playbook for shipping multi‑tool agents with confidence and speed.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Operations",
+    tags: ["Agents", "Releases", "Risk Budgets", "Tracing"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/agent-release-risk-budgets-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "platform-engineering-scorecards-v2-2026",
     slug: "platform-engineering-scorecards-v2-2026",
     title: "Platform Engineering Scorecards v2: Leading Indicators that Drive ROI",
@@ -93,7 +141,6 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "8 min read",
     image: "/images/platform-engineering-scorecards-v2-2026.jpg",
->>>>>>> origin/main
     newBadge: true,
     trending: true
   },
