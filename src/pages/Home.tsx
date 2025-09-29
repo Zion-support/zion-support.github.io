@@ -109,18 +109,25 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         <NewContentAnnouncement />
-        <LatestContentBanner className="border-b border-white/10" variant="info" />
+        <LatestContentBanner 
+          className="border-b border-white/10" 
+          variant="info"
+          title="New: AI Platform Engineering, Serverless Cost Playbook, FinOps Guardrails"
+          description="Fresh articles on platform ROI, cutting serverless costs, and practical FinOps guardrails."
+          ctaText="Read now"
+          ctaLink="/blog"
+        />
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="Fresh: Guardrails That Ship, Edge Flags Blueprint, RAG Freshness"
-          description="New: outcome‑linked guardrails, zero‑regret edge rollouts, and freshness‑aware RAG."
+          title="Fresh: Platform Engineering 2025, Serverless Inference Costs, Cloud FinOps"
+          description="Outcome‑linked platforms, cost‑efficient inference, and guardrails that reduce waste."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Guardrails Engineers Adopt", category: "AI Strategy", link: "/blog/guardrails-scorecards-evals-2025" },
-            { title: "Edge Flags Blueprint", category: "Architecture", link: "/blog/edge-flags-blueprint-2025" },
-            { title: "RAG Freshness", category: "GenAI", link: "/blog/rag-freshness-ttl-2025" },
+            { title: "AI Platform Engineering 2025", category: "Platform", link: "/blog/ai-platform-engineering-2025" },
+            { title: "Serverless Cost Playbook", category: "GenAI", link: "/blog/serverless-inference-cost-playbook-2025" },
+            { title: "Cloud FinOps Guardrails", category: "Cloud", link: "/blog/cloud-finops-guardrails-2025" },
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -285,9 +292,9 @@ const Home = () => {
         {/* Latest Insights Section */}
         {/* Promo ribbon for new content */}
         <div className="container mx-auto px-6">
-            <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
+          <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Guardrails That Ship, Edge Flags Blueprint, and RAG Freshness — read now
+            New: Platform Engineering 2025, Serverless Cost Playbook, FinOps Guardrails — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>

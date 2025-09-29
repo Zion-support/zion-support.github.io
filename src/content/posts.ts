@@ -10,6 +10,51 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-platform-engineering-2025",
+    title: "AI Platform Engineering 2025: Scorecards, Trains, and Golden Paths",
+    description: "Practical platform patterns that link capabilities to adoption, SLOs, and ROI.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "serverless-inference-cost-playbook-2025",
+    title: "Serverless Inference Cost Playbook: Latency Budgets Without Bill Shock",
+    description: "Concurrency shaping, tiered models, and result caching to cut spend 35–60%.",
+    category: "GenAI",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "cloud-finops-guardrails-2025",
+    title: "Cloud FinOps Guardrails Engineers Actually Use",
+    description: "PR checks, budgets, and alerts that reduce waste while keeping teams fast.",
+    category: "Cloud",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "enterprise-rag-v2-2025",
+    title: "Enterprise RAG v2: Freshness Windows, Guardrails, and KPIs",
+    description: "Design RAG that stays accurate with freshness TTLs, evals, and safe tools.",
+    category: "GenAI",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-flags-blueprint-2026",
+    title: "Edge Flags Blueprint 2026: <100ms Global Releases",
+    description: "Consistency, rollout strategies, and instant rollback with edge compute and KV.",
+    category: "Architecture",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "llm-policy-testing-2025",
     title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
     description: "Automate governance with policy tests on every PR, tied to KPIs and SLAs.",
