@@ -565,4 +565,32 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "7 min read"
   }
+  ,
+  {
+    slug: "reliable-evals-in-ci-2026",
+    title: "Reliable Evals in CI 2026: Ship Fast, Stay Safe",
+    description: "CI policy tests and KPI‑linked canaries that prevent regressions without slowing delivery.",
+    category: "AI Governance",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-feature-flags-2026",
+    title: "Privacy‑First Feature Flags 2026: Global Rollouts Under 100ms",
+    description: "Scoped IDs, on‑device filters, and geo budgets for privacy‑preserving progressive delivery.",
+    category: "Architecture",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "serverless-inference-cost-playbook-2026",
+    title: "Serverless Inference Cost Playbook 2026",
+    description: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",
+    category: "Cost Optimization",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "11 min read"
+  }
 ];
