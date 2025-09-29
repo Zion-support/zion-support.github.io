@@ -18,25 +18,17 @@ const serviceWorkerGlobals = Object.fromEntries(
   Object.entries(globals.serviceworker).map(([key, value]) => [key.trim(), value])
 );
 
-
 export default [
-  // 1. Global Ignores
   {
     ignores: [
       'dist/**',
       'node_modules/**',
-      '*.config.js',
-      '*.config.ts',
-      'public/**',
-      'backup/**',
-      'backup-pages/**',
-      'backup-merge-conflicts/**',
-      'src.corrupted/**',
-      'backup-problematic-files/**',
-      'src.disabled/**',
-      'src.pages.disabled/**',
-      'automation/**',
-      'temp_broken_files/**',
+      'dist/**',
+      'build/**',
+      '.next/**',
+      'out/**',
+      'coverage/**',
+      '*.config.*',
       'cypress/**',
       '**/backup-problematic-files/**',
       '**/src.disabled/**',
@@ -262,7 +254,5 @@ export default [
       // Specific to Cypress tests, might not need strict method binding
       "@typescript-eslint/unbound-method": "off", 
     }
-  }),
-
-  // Cypress configuration temporarily removed
+  })
 ];
