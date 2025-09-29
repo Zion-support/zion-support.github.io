@@ -12,6 +12,7 @@
   NODE_VERSION = "22.16.0"
   PNPM_VERSION = "10.17.1"
   NETLIFY_USE_PNPM = "true"
+  PNPM_ALLOW_SCRIPTS = "*"
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   NPM_CONFIG_PRODUCTION = "false"
   NODE_ENV = "production"
