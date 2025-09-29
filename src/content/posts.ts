@@ -438,5 +438,26 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "6 min read",
   }
+  ,
+  {
+    slug: "genai-platform-blueprint-2025",
+    title: "GenAI Platform Blueprint: Shipping Weekly With Guardrails",
+    description:
+      "Reference architecture for prompts, tools, evals, and policy tests that let teams move fast safely.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "cost-optimized-vector-search",
+    title: "Cost‑Optimized Vector Search: Hybrid, Caching, and Freshness",
+    description:
+      "Design decisions to cut retrieval cost 40%+ while improving answer quality with hybrid search and freshness windows.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "6 min read",
+  }
 ];
 

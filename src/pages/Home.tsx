@@ -1,7 +1,6 @@
 import {
   ArrowRight,
   Award,
-  Brain,
   CheckCircle,
   Globe,
   Rocket,
@@ -11,24 +10,23 @@ import {
   Target,
   TrendingUp,
   Users,
-  Zap,
+  Zap
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import LatestContentBanner from "../components/LatestContentBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
-import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
+import LatestContentBanner from "../components/LatestContentBanner";
+import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import TrendingContentBanner from "../components/TrendingContentBanner";
-import EnhancedServicesShowcase from "../components/EnhancedServicesShowcase";
 import { latestInsights } from "../content/insights";
-import { newInsights, featuredInsights } from "../content/new-insights";
-import LatestInsights from "../components/LatestInsights";
+import { featuredInsights, newInsights } from "../content/new-insights";
+import { posts } from "../content/posts";
 
 const Home = () => {
   return (
@@ -114,10 +112,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: AI Platform ROI + Secure ML Supply Chain"
-          description="New frameworks on platform ROI and end-to-end ML supply chain security."
+          title="🚀 Fresh: GenAI Platform Blueprint + Hybrid Vector Search"
+          description="Ship weekly with guardrails. Cut retrieval cost 40%+ with hybrid and freshness."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-platform-roi-2025"
+          ctaLink="/blog/genai-platform-blueprint-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -502,7 +500,7 @@ const Home = () => {
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
-                    {item.featured && (
+                    {"featured" in item && (item as any).featured && (
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>
