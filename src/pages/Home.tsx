@@ -1,6 +1,7 @@
 import {
   ArrowRight,
   Award,
+  BookOpen,
   Brain,
   CheckCircle,
   Globe,
@@ -113,6 +114,7 @@ const Home = () => {
         </div>
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
+<<<<<<< HEAD
           variant="info"
 <<<<<<< HEAD
           title="📣 New: AI Risk Register, Practical Evals, and Cloud FinOps Guardrails"
@@ -125,6 +127,13 @@ const Home = () => {
           ctaText="Read the latest"
           ctaLink="/blog/ai-platform-roi-2025"
 >>>>>>> cursor/create-and-deploy-new-content-a3e4
+=======
+          title="🚀 Fresh: AI Platform Engineering 2025 + Edge AI Latency Budgets"
+          description="New long‑form guide plus new articles across Platform, Governance, Security, and MLOps."
+          ctaText="Read the latest"
+          ctaLink="/blog/ai-platform-engineering-2025"
+          variant="info"
+>>>>>>> cursor/create-and-deploy-new-content-d0c7
           dismissible={true}
         />
         {/* Animated background elements */}
