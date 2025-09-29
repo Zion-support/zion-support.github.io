@@ -50,10 +50,10 @@ const UltimateSystemManager: React.FC = () => {
       performanceOptimizer.startMonitoring();
 
       // Initialize accessibility monitoring
-      accessibilityEnhancer.startMonitoring();
+      // accessibilityEnhancer.startMonitoring?.(); // Method doesn't exist
 
       // Initialize SEO monitoring
-      seoOptimizer.initialize();
+      // seoOptimizer.initialize?.(); // Method is private
 
       // Resolve any merge conflicts
       const mergeResult = await advancedMergeResolver.resolveAllConflicts();
@@ -363,7 +363,7 @@ const UltimateSystemManager: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <button
-              onClick={() => accessibilityEnhancer.fixCommonIssues()}
+              onClick={() => console.log('Accessibility fix not implemented')}
               className="p-4 text-left bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors"
             >
               <div className="font-medium text-purple-800">Fix Accessibility Issues</div>
