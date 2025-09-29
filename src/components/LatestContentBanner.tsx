@@ -11,6 +11,26 @@ interface LatestContentBannerProps {
 
 const contentHighlights = [
   {
+    id: 0,
+    title: "✅ LLM Policy Tests in CI (New Article)",
+    description: "Automate governance—policy tests on every PR keep you fast and safe.",
+    ctaText: "Read How",
+    ctaLink: "/blog/llm-policy-testing-2025",
+    badge: "New",
+    stats: "6 min read",
+    variant: "warning" as const
+  },
+  {
+    id: 99,
+    title: "📈 Practical Evals & Scorecards That Predict Outcomes",
+    description: "Scorecards that correlate with revenue, CSAT, and retention.",
+    ctaText: "See Scorecards",
+    ctaLink: "/blog/practical-evals-scorecards-2025",
+    badge: "Featured",
+    stats: "7 min read",
+    variant: "success" as const
+  },
+  {
     id: 1,
     title: "🛡️ NEW: AI Risk Register That Actually Drives Action",
     description: "Turn AI risks into tracked mitigations with owners and policy tests",
