@@ -20,6 +20,36 @@ export const posts: BlogPost[] = [
     readTime: "7 min read",
   },
   {
+    slug: "ai-cost-savings-playbook-2025",
+    title: "AI Cost Savings Playbook: 12 Wins in 12 Weeks",
+    description:
+      "A tactical guide to capture near-term savings from automation, dedup, and demand shaping.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "llm-evals-blue-green",
+    title: "Blue/Green for LLM Evals: Safe Model Changes at Scale",
+    description:
+      "Route traffic between model variants with eval gates, error budgets, and automated rollback.",
+    category: "MLOps",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
+    slug: "edge-caching-handbook",
+    title: "The Edge Caching Handbook for Product Engineers",
+    description:
+      "TTL math, revalidation, and signed URLs that keep UX fast without correctness regressions.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
     slug: "mlops-in-45-days",
     title: "MLOps in 45 Days: Shipping Reliable Models Fast",
     description:

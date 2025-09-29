@@ -105,10 +105,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: AI ROI Calculator, Cloud Cost Guardrails, Secure ML Platform"
-          description="Prove value fast, cut spend without friction, and ship safer ML—fresh articles now live."
+          title="📚 Fresh Content: AI Cost Wins, LLM Evals, and Edge Caching"
+          description="New articles and quick insights just dropped — save costs, ship safer model changes, and speed up your edge."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-automation-roi-calculator-2025"
+          ctaLink="/blog/ai-cost-savings-playbook-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
