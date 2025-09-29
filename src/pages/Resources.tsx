@@ -1,26 +1,29 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Download, 
-  FileText, 
-  Video, 
-  BookOpen, 
-  Calculator, 
-  Shield, 
-  Zap,
-  Target,
+import {
+  Download,
+  FileText,
+  BookOpen,
+  Shield,
   TrendingUp,
-  Users,
   Globe,
   Search,
-  Filter,
-  ArrowRight,
   ExternalLink,
   Clock,
-  Star
+  Star,
+  Cloud,
+  Smartphone,
+  Database,
+  Play,
+  CheckCircle,
+  Monitor,
+  Lightbulb
 } from 'lucide-react';
 
 const Resources = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<'all' | string>('all');
+
   const resources = [
     {
       id: 1,
@@ -277,17 +280,18 @@ const Resources = () => {
   ];
 
   const categories = [
-    { name: "AI & Machine Learning", icon: Lightbulb, count: 12 },
-    { name: "Cybersecurity", icon: Shield, count: 8 },
-    { name: "Cloud & DevOps", icon: Cloud, count: 8 },
-    { name: "Digital Transformation", icon: TrendingUp, count: 6 },
-    { name: "Mobile Development", icon: Smartphone, count: 3 },
-    { name: "Data Analytics", icon: Database, count: 4 },
-    { name: "Web Development", icon: Monitor, count: 3 }
+    { id: 'all', name: "All", icon: Lightbulb, count: resources.length },
+    { id: 'AI & Machine Learning', name: "AI & Machine Learning", icon: Lightbulb, count: 0 },
+    { id: 'Cybersecurity', name: "Cybersecurity", icon: Shield, count: 0 },
+    { id: 'Cloud & DevOps', name: "Cloud & DevOps", icon: Cloud, count: 0 },
+    { id: 'Digital Transformation', name: "Digital Transformation", icon: TrendingUp, count: 0 },
+    { id: 'Mobile Development', name: "Mobile Development", icon: Smartphone, count: 0 },
+    { id: 'Data Analytics', name: "Data Analytics", icon: Database, count: 0 },
+    { id: 'Web Development', name: "Web Development", icon: Monitor, count: 0 }
   ];
 
-  const featuredResources = resources.filter(resource => resource.featured);
-  const otherResources = resources.filter(resource => !resource.featured);
+  const featuredResources = useMemo(() => resources.filter(resource => resource.featured), [resources]);
+  const otherResources = useMemo(() => resources.filter(resource => !resource.featured), [resources]);
 
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.name === category);
@@ -308,7 +312,7 @@ const Resources = () => {
       case "Assessment": return TrendingUp;
       default: return FileText;
     }
-  ];
+  };
 
   // Calculate category counts
   categories.forEach(category => {
@@ -326,8 +330,6 @@ const Resources = () => {
                          resource.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-
-  const featuredResources = resources.filter(r => r.featured);
 
   return (
     <>
