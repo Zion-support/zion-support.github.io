@@ -210,46 +210,46 @@ export const EnterpriseAIBanner = () => (
   />
 );
 
-export const NewAIAutomationBanner = () => (
+export const CustomerSupportAIBanner = () => (
   <PromotionalBanner
-    message="⚡ New Guide: AI-Powered Business Automation - Complete 2025 Implementation Strategy"
-    ctaText="Read Guide"
-    ctaLink="/blog/ai-powered-business-automation-2025"
+    message="💬 New Article: AI-Powered Customer Support in 2025 - 80% Faster Response Times"
+    ctaText="Read Article"
+    ctaLink="/blog/ai-powered-customer-support-2025"
     backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
     autoHide={true}
     hideAfter={20}
   />
 );
 
-export const EnterpriseSecurityBanner = () => (
+export const CloudNativeBanner = () => (
   <PromotionalBanner
-    message="🔒 Essential: Enterprise AI Security Best Practices - Protect Your AI Systems in 2025"
-    ctaText="Learn More"
-    ctaLink="/blog/enterprise-ai-security-best-practices"
-    backgroundColor="bg-gradient-to-r from-red-600 to-orange-600"
-    autoHide={true}
-    hideAfter={18}
-  />
-);
-
-export const RetailTransformationBanner = () => (
-  <PromotionalBanner
-    message="🏪 Success Story: Retail Giant Achieved 400% ROI with AI Transformation in 8 Months"
-    ctaText="View Case Study"
-    ctaLink="/case-studies/retail-giant-ai-transformation"
-    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
+    message="☁️ New Guide: Cloud-Native Architecture in 2025 - Build for Scale and Resilience"
+    ctaText="Read Guide"
+    ctaLink="/blog/cloud-native-architecture-2025"
+    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
     autoHide={true}
     hideAfter={22}
   />
 );
 
-export const NewContentShowcaseBanner = () => (
+export const RetailTechSuccessBanner = () => (
   <PromotionalBanner
-    message="📚 Fresh Content: AI Automation Guide, Enterprise Security, Retail Transformation Case Study"
-    ctaText="Explore All"
-    ctaLink="/blog"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
+    message="🛍️ Success Story: RetailTech Achieved 95% Efficiency Gain and $1.2M Annual Savings"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/retailtech-ai-transformation"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
     autoHide={true}
-    hideAfter={15}
+    hideAfter={25}
+  />
+);
+
+export const ManufacturingIoTSuccessBanner = () => (
+  <PromotionalBanner
+    message="🏭 Success Story: Manufacturing Company Achieved 75% Efficiency Gain with IoT Automation"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/manufacturing-iot-automation"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    autoHide={true}
+    hideAfter={25}
   />
 );

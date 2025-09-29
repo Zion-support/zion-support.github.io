@@ -158,6 +158,48 @@ export default function CaseStudiesPage() {
           />
 
           <CaseStudy
+            company="RetailTech Solutions"
+            industry="Retail Technology"
+            challenge="Manual processes limiting growth and efficiency"
+            solution="Comprehensive AI transformation with intelligent automation"
+            results={[
+              "95% reduction in manual processing",
+              "80% faster order processing",
+              "99.9% system uptime achieved",
+              "90% reduction in processing errors"
+            ]}
+            metrics={{
+              "Efficiency Gain": "95%",
+              "Annual Savings": "$1.2M",
+              "Processing Speed": "80% faster",
+              "System Uptime": "99.9%"
+            }}
+            logo="🛍️"
+            href="/case-studies/retailtech-ai-transformation"
+          />
+
+          <CaseStudy
+            company="Precision Manufacturing Corp"
+            industry="Manufacturing"
+            challenge="Manual monitoring and reactive maintenance causing downtime"
+            solution="IoT automation with predictive maintenance algorithms"
+            results={[
+              "75% improvement in overall efficiency",
+              "60% reduction in unplanned downtime",
+              "95% accuracy in predictive maintenance",
+              "87% faster quality inspections"
+            ]}
+            metrics={{
+              "Efficiency Gain": "75%",
+              "Annual Savings": "$800K",
+              "Downtime Reduction": "60%",
+              "Predictive Accuracy": "95%"
+            }}
+            logo="🏭"
+            href="/case-studies/manufacturing-iot-automation"
+          />
+
+          <CaseStudy
             company="LogisticsPlus"
             industry="Logistics"
             challenge="Route optimization for 500+ daily deliveries"
@@ -213,6 +255,7 @@ function CaseStudy({
   results,
   metrics,
   logo,
+  href,
 }: {
   company: string;
   industry: string;
@@ -221,9 +264,22 @@ function CaseStudy({
   results: string[];
   metrics: Record<string, string>;
   logo: string;
+  href?: string;
 }) {
+  const ContentWrapper = ({ children }: { children: React.ReactNode }) => {
+    if (href) {
+      return (
+        <Link href={href} className="block">
+          {children}
+        </Link>
+      );
+    }
+    return <>{children}</>;
+  };
+
   return (
-    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
+    <ContentWrapper>
+      <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 cursor-pointer">
       <div className="flex items-center mb-4">
         <div className="text-3xl mr-3">{logo}</div>
         <div>
@@ -266,5 +322,6 @@ function CaseStudy({
         </div>
       </div>
     </div>
-  );
-}
+      </ContentWrapper>
+    );
+  }
