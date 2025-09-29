@@ -64,7 +64,7 @@ const AdvancedCollaborationDashboard: React.FC<AdvancedCollaborationDashboardPro
   const [showCreateSession, setShowCreateSession] = useState(false);
   const [sessionName, setSessionName] = useState('');
   const [sessionType, setSessionType] = useState<CollaborationSession['type']>('meeting');
-  const chatEndRef = useRef<HTMLDivElement>(null);
+  const chatEndRef = useRef(null);
 
   useEffect(() => {
     if (isVisible) {
