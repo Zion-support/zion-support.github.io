@@ -461,10 +461,15 @@ export const getRecentContent = (limit: number = 3) => {
   const allContent = [
     ...blogPosts.map(post => ({ ...post, type: 'blog' as const })),
     ...caseStudies.map(study => ({ ...study, type: 'case-study' as const })),
-    ...services.map(service => ({ ...service, type: 'service' as const }))
+    // Services do not have a date; attach a synthetic date far in the past to satisfy sorting
+    ...services.map(service => ({ ...service, type: 'service' as const, date: '1970-01-01' }))
   ];
   
   return allContent
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .sort((a, b) => {
+      const dateA = (a as any).date ? new Date((a as any).date).getTime() : 0;
+      const dateB = (b as any).date ? new Date((b as any).date).getTime() : 0;
+      return dateB - dateA;
+    })
     .slice(0, limit);
 };

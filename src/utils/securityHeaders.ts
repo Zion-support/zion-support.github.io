@@ -72,6 +72,11 @@ export class SecurityManager {
     };
   }
 
+  public initialize(): void {
+    // Placeholder initialization hook for runtime environments
+    // Could attach headers or perform environment-specific setup if needed
+  }
+
   public getCSPDirective(): string {
     const { csp } = this.config;
     const directives: string[] = [];
