@@ -3,6 +3,7 @@ import {
   Award,
   Brain,
   CheckCircle,
+  Download,
   Globe,
   Rocket,
   Shield,

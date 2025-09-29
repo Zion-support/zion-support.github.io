@@ -16,23 +16,13 @@ import {
   Database,
   Play,
   CheckCircle,
-<<<<<<< HEAD
-  Monitor,
-  Lightbulb
-=======
   Lightbulb,
   Monitor
->>>>>>> cursor/check-fix-push-and-merge-to-main-2fc7
 } from 'lucide-react';
 
 const Resources = () => {
   const [searchTerm, setSearchTerm] = useState('');
-<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
-=======
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
->>>>>>> cursor/check-fix-push-and-merge-to-main-2fc7
   const resources = [
     {
       id: 1,
