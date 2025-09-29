@@ -136,17 +136,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Reliable RAG Ops, Platform KPIs, AI Incident Budgets"
-          description="Keep RAG fresh, prove platform ROI, and contain incidents under 60s—safely."
+          title="New: Real‑Time Guardrails, Edge Flags ROI, Enterprise RAG v3"
+          description="Policy tests wired to KPIs, sub‑100ms global rollouts, and RAG that stays fresh."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
-            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" },
-            { title: "Golden Paths ROI 2026", category: "Platform Engineering", link: "/blog/golden-paths-roi-2026" },
-            { title: "Reliable RAG Ops 2026", category: "GenAI", link: "/blog/reliable-rag-ops-2026" },
-            { title: "Platform KPIs 2026", category: "Platform Engineering", link: "/blog/platform-kpis-2026" },
-            { title: "AI Incident Budgets 2026", category: "Security", link: "/blog/ai-incident-budgets-2026" },
+            { title: "Real‑Time Guardrails Platform 2026", category: "AI Strategy", link: "/blog/realtime-guardrails-platform-2026" },
+            { title: "Edge Feature Flags ROI", category: "Architecture", link: "/blog/edge-feature-flags-roi-2026" },
+            { title: "Enterprise RAG Ops v3", category: "GenAI", link: "/blog/enterprise-rag-ops-v3-2026" },
             { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
             { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" },
             { title: "Golden Paths ROI 2026", category: "Platform Engineering", link: "/blog/golden-paths-roi-2026" }
@@ -174,10 +171,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: Autonomous Runbooks + Privacy‑First Flags"
-          description="Budgeted actions, approvals, and zero‑regret rollouts you can ship today."
+          title="🚀 Fresh: Real‑Time Guardrails + Edge Flags ROI"
+          description="KPI‑linked policy tests and sub‑100ms global rollouts you can ship today."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-autonomous-incident-runbooks-2025"
+          ctaLink="/blog/realtime-guardrails-platform-2026"
           dismissible={true}
         />
         {/* Animated background elements */}
