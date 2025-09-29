@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <Link href="/blog/ai-enterprise-automation-2026" className="group">
             <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border border-gray-100 hover:border-green-200 hover:scale-105">
@@ -44,6 +45,8 @@ import Link from 'next/link';
               Discover the 15 mega trends reshaping enterprise AI. From autonomous operations 
               to quantum computing, learn how to capitalize on $50B+ market opportunities.
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ff76
 
 export default function LatestContent2026Banner() {
   return (
@@ -457,6 +460,7 @@ export default function LatestContent2026Banner() {
           <Link
             href="/blog"
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
           >
             <span className="w-5 h-5 mr-2">📚</span>
@@ -473,6 +477,11 @@ export default function LatestContent2026Banner() {
           >
             Explore All AI Content
 >>>>>>> cursor/create-and-deploy-new-content-1272
+=======
+            className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl hover:scale-105"
+          >
+            Explore All AI Content
+>>>>>>> cursor/create-and-deploy-new-content-ff76
           </Link>
         </div>
       </div>

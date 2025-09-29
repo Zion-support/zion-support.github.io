@@ -1,3 +1,7 @@
+<<<<<<< HEAD:src/pages/Home.tsx.backup.1759185684
+=======
+import React from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-ff76:src/pages/Home.tsx
 import {
   ArrowRight,
   Award,
@@ -14,6 +18,7 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { latestArticles } from '../content/latest-articles';
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
 import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
@@ -162,6 +167,7 @@ const Home = () => {
           />
         </div>
         
+<<<<<<< HEAD:src/pages/Home.tsx.backup.1759185684
 <<<<<<< HEAD
 =======
         {/* New Comprehensive Promotional Banner */}
@@ -180,6 +186,8 @@ const Home = () => {
         </div>
 >>>>>>> origin/cursor/create-and-deploy-new-content-e0ce
         
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ff76:src/pages/Home.tsx
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"

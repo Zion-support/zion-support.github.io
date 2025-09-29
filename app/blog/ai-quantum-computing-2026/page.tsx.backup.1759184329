@@ -1,12 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD:app/blog/ai-quantum-computing-2026/page.tsx.backup.1759184329
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ff76:app/blog/ai-quantum-computing-2026/page.tsx
 import { ArrowRight, Clock, Zap, Brain, Shield, Atom, TrendingUp } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Quantum Computing 2026: 1000x Performance Revolution',
   description: 'Discover how quantum computing is revolutionizing AI in 2026. Achieve 1000x performance improvements, solve impossible problems, and unlock unprecedented business value.',
   keywords: 'quantum AI, quantum computing, AI performance, quantum machine learning, quantum optimization, AI breakthrough',
+<<<<<<< HEAD:app/blog/ai-quantum-computing-2026/page.tsx.backup.1759184329
 =======
 
 export const metadata = {
@@ -14,12 +18,17 @@ export const metadata = {
   description: 'Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities. Discover the future of quantum-enhanced AI.',
   keywords: 'quantum computing, AI quantum, quantum AI, quantum optimization, quantum machine learning',
 >>>>>>> origin/cursor/create-and-deploy-new-content-8672
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ff76:app/blog/ai-quantum-computing-2026/page.tsx
 };
 
 export default function AIQuantumComputing2026() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
+<<<<<<< HEAD:app/blog/ai-quantum-computing-2026/page.tsx.backup.1759184329
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ff76:app/blog/ai-quantum-computing-2026/page.tsx
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-center gap-2 mb-4">
@@ -173,6 +182,7 @@ export default function AIQuantumComputing2026() {
                   <span className="font-bold text-purple-600">90% reduction</span>
                 </div>
               </div>
+<<<<<<< HEAD:app/blog/ai-quantum-computing-2026/page.tsx.backup.1759184329
 =======
       <div className="mb-8">
         <div className="flex items-center gap-2 mb-4">
@@ -297,6 +307,10 @@ export default function AIQuantumComputing2026() {
           </div>
 
 <<<<<<< HEAD
+=======
+            </div>
+
+>>>>>>> cursor/create-and-deploy-new-content-ff76:app/blog/ai-quantum-computing-2026/page.tsx
             <div className="bg-white border border-gray-200 rounded-xl p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Quantum Optimization</h3>
               <div className="space-y-3">
@@ -657,6 +671,7 @@ export default function AIQuantumComputing2026() {
               <p className="text-gray-600 mt-2">Master the art of building fully autonomous business operations</p>
             </div>
           </Link>
+<<<<<<< HEAD:app/blog/ai-quantum-computing-2026/page.tsx.backup.1759184329
 =======
           <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
             <h3 className="text-xl font-bold text-gray-900 mb-4">🧬 Drug Discovery</h3>
@@ -809,6 +824,8 @@ export default function AIQuantumComputing2026() {
             </Link>
           </div>
 >>>>>>> origin/cursor/create-and-deploy-new-content-8672
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ff76:app/blog/ai-quantum-computing-2026/page.tsx
         </div>
       </div>
     </div>
