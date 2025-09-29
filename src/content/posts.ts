@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "edge-rate-limiter-blueprint-2026",
+    title: "Edge Rate Limiter 2026: Globally Consistent, Sub‑10ms Budgets",
+    description: "Design a multi‑region, token‑bucket limiter with consistent hashing and KV to protect APIs and GenAI tools without hurting UX.",
+    category: "Architecture",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "agent-red-teaming-2026",
+    title: "Agent Red‑Teaming 2026: Simulation Labs That Prevent Real Incidents",
+    description: "Build realistic attack labs for agents: jailbreak corpora, tool fuzzers, and KPI‑linked failure budgets you can ship.",
+    category: "AI Security",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "privacy-first-feature-flags-2026",
     title: "Privacy‑First Feature Flags 2026: Global Rolls Without PII Risk",
     description: "Scoped IDs, edge filters, and health checks for instant, safe rollouts under 100ms.",

@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "edge-rate-limiter-blueprint-2026",
+    slug: "edge-rate-limiter-blueprint-2026",
+    title: "Edge Rate Limiter 2026: Globally Consistent, Sub‑10ms Budgets",
+    description: "Design a multi‑region, token‑bucket limiter with consistent hashing and KV to protect APIs and GenAI tools without hurting UX.",
+    excerpt: "Protect APIs and GenAI with global token buckets, KV, and predictable P95.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-15",
+    category: "Architecture",
+    tags: ["Edge", "Rate Limiting", "KV", "Budgets"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-rate-limiter-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "agent-red-teaming-2026",
+    slug: "agent-red-teaming-2026",
+    title: "Agent Red‑Teaming 2026: Simulation Labs That Prevent Real Incidents",
+    description: "Build realistic attack labs for agents: jailbreak corpora, tool fuzzers, and KPI‑linked failure budgets you can ship.",
+    excerpt: "Ship resilient agents using red‑team labs wired to outcomes and budgets.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-15",
+    category: "AI Security",
+    tags: ["Agents", "Security", "Red Team", "Evals"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/agent-red-teaming-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-security-data-leak-prevention-2026",
     slug: "ai-security-data-leak-prevention-2026",
     title: "AI Security 2026: Data‑Leak Prevention with Scoped IDs and Egress Guards",
