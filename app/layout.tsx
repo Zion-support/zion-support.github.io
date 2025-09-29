@@ -61,6 +61,18 @@ function Header() {
             Services
           </Link>
           <Link 
+            href="/case-studies" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            Case Studies
+          </Link>
+          <Link 
+            href="/blog" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            Blog
+          </Link>
+          <Link 
             href="/contact" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
           >
@@ -97,22 +109,28 @@ function Footer() {
                 All Services
               </Link>
               <Link 
-                href="/services/micro-saas" 
+                href="/services/ai-chatbot" 
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
-                Micro SaaS
+                AI Chatbot
               </Link>
               <Link 
-                href="/services/ai-services" 
+                href="/services/ai-analytics-platform" 
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
-                AI Services
+                AI Analytics
               </Link>
               <Link 
-                href="/services/it-services" 
+                href="/services/cybersecurity-automation" 
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
-                IT Services
+                Cybersecurity
+              </Link>
+              <Link 
+                href="/case-studies" 
+                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
+              >
+                Case Studies
               </Link>
             </div>
           </div>

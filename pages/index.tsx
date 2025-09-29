@@ -3,6 +3,10 @@ import Head from "next/head";
 import Link from "next/link";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { latestInsights } from "../src/content/insights";
+import { NewContentBanner, LimitedTimeBanner, CaseStudyBanner } from "../components/PromotionalBanner";
+import FeaturedServicesSection from "../components/FeaturedServicesSection";
+import { CompactCaseStudiesSection } from "../components/CaseStudiesSection";
+import { CompactTestimonialsSection } from "../components/TestimonialsCarousel";
 // import { AnimatePresence } from "framer-motion";
 // import dynamic from "next/dynamic";
 
@@ -78,14 +82,9 @@ const Home = React.memo(function Home(): React.JSX.Element {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-				{/* Promo ribbon for new content */}
-				<div className="container mx-auto px-4 pt-4">
-					<div className="mb-6 rounded-full bg-emerald-600/10 border border-emerald-600/30 px-5 py-3 text-emerald-700 text-sm inline-flex items-center gap-2">
-						<span className="inline-flex h-2 w-2 rounded-full bg-emerald-600 animate-pulse"></span>
-						<span>New: Platform Engineering blueprint and GenAI guardrails now available</span>
-						<Link href="/blog" className="text-emerald-700 underline underline-offset-4 hover:text-emerald-900">Read</Link>
-					</div>
-				</div>
+				{/* Promotional Banners */}
+				<NewContentBanner />
+				<CaseStudyBanner />
 				{/* Hero Section */}
 				<section ref={heroRef} className="pt-20 pb-16">
 					<div className="container mx-auto px-4 max-w-7xl">
@@ -165,6 +164,21 @@ const Home = React.memo(function Home(): React.JSX.Element {
 					</section>
 				)}
 
+				{/* Featured Services Section */}
+				<FeaturedServicesSection 
+					title="Popular AI Solutions"
+					subtitle="Transform your business with our most requested AI-powered services"
+					maxServices={3}
+					showMetrics={true}
+					showTestimonials={true}
+				/>
+
+				{/* Case Studies Section */}
+				<CompactCaseStudiesSection />
+
+				{/* Testimonials Section */}
+				<CompactTestimonialsSection />
+
 				{/* Latest Insights Promo */}
 				<section className="py-16 bg-white">
 					<div className="container mx-auto px-4 max-w-7xl">
@@ -189,6 +203,32 @@ const Home = React.memo(function Home(): React.JSX.Element {
 
 						<div className="text-center mt-10">
 							<Link href="/blog" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">View all insights</Link>
+						</div>
+					</div>
+				</section>
+
+				{/* Final CTA Section */}
+				<section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+					<div className="container mx-auto px-4 max-w-6xl text-center">
+						<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+							Ready to Transform Your Business?
+						</h2>
+						<p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+							Join hundreds of successful companies that have revolutionized their operations with our AI solutions.
+						</p>
+						<div className="flex flex-col sm:flex-row gap-4 justify-center">
+							<Link
+								href="/contact"
+								className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+							>
+								Get Started Today
+							</Link>
+							<Link
+								href="/case-studies"
+								className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
+							>
+								View Case Studies
+							</Link>
 						</div>
 					</div>
 				</section>
