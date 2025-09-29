@@ -77,10 +77,7 @@ export class SecurityManager {
     };
   }
 
-  public initialize(): void {
-    // Placeholder initialization hook for runtime environments
-    // Could attach headers or perform environment-specific setup if needed
-  }
+  // Note: initialize() is intentionally defined once; keep this single alias
 
   public getCSPDirective(): string {
     const { csp } = this.config;
