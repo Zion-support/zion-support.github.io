@@ -1142,7 +1142,7 @@ export default function HomePage() {
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Article
+                    Featured Article
                   </span>
                   <span className="text-sm text-gray-500">22 min read</span>
                 </div>
