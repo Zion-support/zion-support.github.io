@@ -73,12 +73,12 @@ function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Content</h3>
+            <h3 className="font-semibold text-gray-900 mb-3">Latest Content</h3>
             <div className="space-y-2">
               <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors">Blog</Link>
-              <Link href="/blog/ai-autonomous-cloud-ops-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Autonomous Ops</Link>
-              <Link href="/blog/ai-fintech-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">FinTech Transformation</Link>
-              <Link href="/case-studies/ai-retail-automation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Retail Case Study</Link>
+              <Link href="/blog/ai-autonomous-enterprise-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Autonomous Enterprise 2026</Link>
+              <Link href="/blog/ai-quantum-optimization-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Quantum AI Optimization</Link>
+              <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">$25M ROI Success Story</Link>
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors">All Case Studies</Link>
             </div>
           </div>
