@@ -48,6 +48,20 @@ import {
   AutonomousOperationsSuccessBanner,
   NewContentShowcaseBanner2026
 } from '../components/NewContent2026Banners';
+<<<<<<< HEAD
+import { 
+  NewContent2026PromotionalBanner,
+  AIInnovation2026Banner,
+  SuccessStory2026Banner,
+  AIRevolution2026Banner
+} from '../components/NewContent2026PromotionalBanners';
+import {
+  AISustainabilityTransformationBanner,
+  AIAutonomousEnterpriseBanner,
+  AIInnovation2026ShowcaseBanner,
+  LatestAIInnovations2026Banner
+} from '../components/NewContent2026SustainabilityBanners';
+=======
 import {
   AIEnterpriseAutomation2026Banner,
   AIQuantumComputing2026Banner,
@@ -58,6 +72,7 @@ import {
 import AITrends2025Banner from '../src/components/AITrends2025Banner';
 import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBanner';
 import AIROICalculator from '../src/components/AIROICalculator';
+>>>>>>> origin/cursor/create-and-deploy-new-content-95ea
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -115,6 +130,10 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ NEW 2026:</span>
+<<<<<<< HEAD
+            <span>🚀 BREAKING 2026:</span>
+            <Link href="/blog/ai-quantum-computing-breakthrough-2026" className="underline hover:text-yellow-200">Quantum AI Breakthrough</Link>
+=======
             <Link href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200">Enterprise Automation</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum AI Computing</Link>
@@ -122,6 +141,7 @@ export default function HomePage() {
             <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-agent-evals-2026" className="underline hover:text-yellow-200">Agent Evals</Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-95ea
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-autonomous-enterprise-2026" className="underline hover:text-yellow-200">Autonomous Enterprise</Link>
             <span className="hidden md:inline">•</span>
@@ -132,6 +152,15 @@ export default function HomePage() {
             <span>🚀 REVOLUTIONARY 2026:</span>
             <Link href="/blog/ai-neural-interfaces-2026" className="underline hover:text-yellow-200">🧠 Neural Interfaces</Link>
             <span className="hidden md:inline">•</span>
+<<<<<<< HEAD
+            <Link href="/blog/ai-space-tech-2026" className="underline hover:text-yellow-200">🚀 Space AI Tech</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-synthetic-data-2026" className="underline hover:text-yellow-200">$15M Synthetic Data ROI</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum AI</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-innovation-enterprise-success-2026" className="underline hover:text-yellow-200">$50M Success Story</Link>
+=======
             <Link href="/blog/ai-innovation-2026-comprehensive-guide" className="underline hover:text-yellow-200">AI Innovation Guide</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-retail-transformation-2026-mega-success" className="underline hover:text-yellow-200">$1.2B Retail Success</Link>
@@ -143,6 +172,7 @@ export default function HomePage() {
             <Link href="/case-studies/ai-space-mission-automation-2026" className="underline hover:text-yellow-200">$2B Space Success</Link>
 =======
             <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-95ea
           </div>
           <Link
             href="/blog"
@@ -152,6 +182,13 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
+
+      {/* New Content 2026 Mega Banner */}
+      <NewContent2026MegaBanner />
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
+=======
       {/* Promotional Banners */}
       <RevolutionaryContent2026Banner />
       <AIEnterpriseAutomation2026Banner />
@@ -198,6 +235,7 @@ export default function HomePage() {
       <NewBlogBanner />
       <WorkflowAutomationBanner />
       <AIAnalyticsBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-95ea
       
       {/* Latest 2026 Content Banner */}
       <LatestContent2026Banner />
@@ -1192,6 +1230,8 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+<<<<<<< HEAD
+=======
             <Link href="/blog/ai-enterprise-automation-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -1243,6 +1283,7 @@ export default function HomePage() {
                 <div className="flex items-center text-blue-600 font-semibold">View Case Study →</div>
               </div>
             </Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-95ea
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center">
