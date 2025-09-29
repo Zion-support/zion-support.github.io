@@ -10,8 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-=======
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
     description:
@@ -42,7 +40,6 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
   },
   {
->>>>>>> cursor/create-and-deploy-new-content-83a1
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:
