@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 
 interface PromotionalBannerProps {
   message: string;
@@ -83,7 +83,7 @@ export default function PromotionalBanner({
 // Pre-configured banner variants
 export const NewContentBanner = () => (
   <PromotionalBanner
-    message="🎉 New: Practical RAG Blueprint + GenAI Guardrails Playbook"
+    message="🎉 New: AI Risk Register + Practical RAG in Production"
     ctaText="Read the latest"
     ctaLink="/blog"
     backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
@@ -115,7 +115,7 @@ export const CaseStudyBanner = () => (
 
 export const NewBlogBanner = () => (
   <PromotionalBanner
-    message="🔥 Fresh Insights: RAG Quality Playbook, Edge LLM Latency, AI Reliability Scorecards"
+    message="🔥 Fresh Insights: AI Risk Register, Practical RAG, Edge LLM Latency"
     ctaText="Browse Latest Posts"
     ctaLink="/blog"
     backgroundColor="bg-gradient-to-r from-orange-600 to-pink-600"

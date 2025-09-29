@@ -9,6 +9,22 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "ai-risk-register-checklist",
+    title: "AI Risk Register Checklist",
+    summary: "Owners, policy tests, and dashboards that make risk programs real.",
+    category: "AI Governance",
+    date: "2025-10-04",
+    readMinutes: 4,
+  },
+  {
+    id: "rag-freshness-strategies",
+    title: "RAG Freshness Strategies",
+    summary: "Invalidate staleness with versioned chunks, TTLs, and async warmups.",
+    category: "GenAI",
+    date: "2025-10-04",
+    readMinutes: 5,
+  },
+  {
     id: "serverless-warm-pools-playbook",
     title: "Serverless Warm Pools: Cut Cold Starts, Not Corners",
     summary:
