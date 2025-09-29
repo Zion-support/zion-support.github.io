@@ -50,7 +50,11 @@ export default function HomePage() {
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-autonomous-enterprise-2026" className="underline hover:text-yellow-200">Autonomous Enterprise</Link>
             <span className="hidden md:inline">•</span>
+<<<<<<< HEAD
+            <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum AI</Link>
+=======
             <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-8672
             <span className="hidden md:inline">•</span>
             <Link href="/services/ai-synthetic-data-generation" className="underline hover:text-yellow-200">Quantum AI Services</Link>
 =======
@@ -73,7 +77,38 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
+      <AISpaceTech2026Banner />
+      <AISyntheticData2026Banner />
+      <AICognitiveComputing2026Banner />
+      <AIMetaverseEnterprise2026Banner />
+      <AIFederatedLearning2026Banner />
+      <AIAutonomousEnterpriseBanner />
+      <AINeuralInterfacesBanner />
+      <NewContent2026Banner />
+      {/* Removed unavailable banner components to fix imports */}
+      <AIMultimodalEnterpriseBanner />
+      <AIEnterpriseAutomationGuideBanner />
+      <AIDataAnalyticsEnterpriseBanner />
+      <EnterpriseTransformationSuccessBanner />
+      <HealthcareTransformationBanner />
+      <NewContentShowcaseBanner />
+      <AIRoadmapsBanner />
+      <AIFinOpsBanner />
+      <AutonomousAgentsBanner />
+      <AIGovernanceBanner />
+      <FinTechSuccessBanner />
+      <AIContentShowcaseBanner />
+      <CustomerServiceAIBanner />
+      <HealthcareAIBanner />
+      <RetailSuccessBanner />
+      <AIRevolutionBanner />
+      <NewBlogBanner />
+      <WorkflowAutomationBanner />
+      <AIAnalyticsBanner />
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-8672
       
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
@@ -87,6 +122,10 @@ export default function HomePage() {
       {/* New Content Promotional Banners */}
       <NewContent2026PromotionalBanners />
       
+<<<<<<< HEAD
+      {/* Latest 2026 Content Mega Banner */}
+      <Latest2026ContentMegaBanner />
+=======
       {/* New 2026 Content Banners */}
       <section className="py-16 bg-gradient-to-r from-emerald-600 to-teal-600 text-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
@@ -125,6 +164,7 @@ export default function HomePage() {
       
 =======
 =======
+>>>>>>> origin/cursor/create-and-deploy-new-content-8672
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <div className="max-w-4xl mx-auto px-4">
@@ -427,6 +467,16 @@ export default function HomePage() {
       {/* Enhanced Content Showcase 2026 */}
       <EnhancedContentShowcase2026 />
       
+<<<<<<< HEAD
+      {/* Interactive AI Calculator */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <InteractiveAICalculator />
+        </div>
+      </section>
+      
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-8672
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
       
@@ -500,6 +550,51 @@ export default function HomePage() {
               </div>
             </Link>
 
+<<<<<<< HEAD
+            <Link href="/case-studies/ai-space-mission-success-2026" className="group">
+              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-purple-200 hover:scale-105">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW 2026
+                  </span>
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    CASE STUDY
+                  </span>
+                </div>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm text-purple-600 font-medium">📊 Case Study</span>
+                  <span className="text-sm text-gray-500">Space Technology</span>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                  AI Space Mission Success 2026: $2.5B Cost Savings Case Study
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  See how Global Space Consortium achieved 99.9% mission success rate and $2.5B cost savings with AI space technology.
+                </p>
+                <div className="flex gap-4 mb-4">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-purple-600">$2.5B</div>
+                    <div className="text-xs text-gray-500">Savings</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-purple-600">99.9%</div>
+                    <div className="text-xs text-gray-500">Success Rate</div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Clock className="w-4 h-4 mr-1" />
+                    22 min read
+                  </div>
+                  <div className="flex items-center text-purple-600 font-semibold text-sm group-hover:text-purple-700 transition-colors">
+                    Read More →
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-8672
             <Link href="/case-studies/ai-sustainability-transformation-2026" className="group">
               <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
@@ -598,6 +693,8 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
       {/* Latest 2026 Content Spotlight */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -704,6 +801,7 @@ export default function HomePage() {
         </div>
       </section>
 
+>>>>>>> origin/cursor/create-and-deploy-new-content-8672
       {/* Success Stories */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
