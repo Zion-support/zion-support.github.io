@@ -127,10 +127,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: GenAI Platform Blueprint + Hybrid Vector Search"
-          description="Ship weekly with guardrails. Cut retrieval cost 40%+ with hybrid and freshness."
+          title="🚀 Fresh: Agent Safety Budgets + Privacy‑First Telemetry"
+          description="Ship fast without surprises. Keep signals rich and PII‑safe with scoped telemetry."
           ctaText="Read the latest"
-          ctaLink="/blog/genai-platform-blueprint-2025"
+          ctaLink="/blog/ai-incident-response-2026"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -240,11 +240,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-<<<<<<< HEAD
-            New: On‑Device Agents, GenAI Budgets, Secure Tools Marketplace — read now
-=======
-            New: Platform Engineering 2025, Serverless Cost Playbook, FinOps Guardrails — read now
->>>>>>> origin/main
+            New: Agent Safety Budgets, Privacy‑First Telemetry, Cost‑Aware Routing — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
@@ -499,7 +495,7 @@ const Home = () => {
                 <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Fresh: Agentic Workflows, Edge LLM Caching, Operational Scorecards
+                Fresh: Agent Safety Budgets, Privacy‑First Telemetry, Cost‑Aware Routing
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles & Insights
