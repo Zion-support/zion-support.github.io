@@ -1,16 +1,19 @@
 {
-  "timestamp": "2025-09-28T23:36:07.668Z",
-  "buildTime": 8576,
-  "bundleSize": 1280050,
+  "timestamp": "2025-09-29T02:49:50.620Z",
+  "buildTime": 8969,
+  "bundleSize": 1306277,
   "linting": {
-    "warnings": 3,
-    "errors": 1
+    "warnings": 1,
+    "errors": 0
   },
   "improvements": [
     "Dependencies check completed - 41 total dependencies",
     "No high-severity security vulnerabilities found",
-    "Build test passed in 8576ms",
-    "Bundle analysis completed - Total size: 1250.05 KB"
+    "Found 3 images that could be optimized",
+    "Identified 3 images for optimization",
+    "Build test passed in 8969ms",
+    "Bundle analysis completed - Total size: 1275.66 KB",
+    "Linting passed with 1 warnings"
   ],
   "errors": []
 }
