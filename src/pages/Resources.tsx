@@ -16,14 +16,23 @@ import {
   Database,
   Play,
   CheckCircle,
+<<<<<<< HEAD
   Monitor,
   Lightbulb
+=======
+  Lightbulb,
+  Monitor
+>>>>>>> cursor/check-fix-push-and-merge-to-main-2fc7
 } from 'lucide-react';
 
 const Resources = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<'all' | string>('all');
+<<<<<<< HEAD
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
+=======
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+>>>>>>> cursor/check-fix-push-and-merge-to-main-2fc7
   const resources = [
     {
       id: 1,
@@ -280,14 +289,14 @@ const Resources = () => {
   ];
 
   const categories = [
-    { id: 'all', name: "All", icon: Lightbulb, count: resources.length },
-    { id: 'AI & Machine Learning', name: "AI & Machine Learning", icon: Lightbulb, count: 0 },
-    { id: 'Cybersecurity', name: "Cybersecurity", icon: Shield, count: 0 },
-    { id: 'Cloud & DevOps', name: "Cloud & DevOps", icon: Cloud, count: 0 },
-    { id: 'Digital Transformation', name: "Digital Transformation", icon: TrendingUp, count: 0 },
-    { id: 'Mobile Development', name: "Mobile Development", icon: Smartphone, count: 0 },
-    { id: 'Data Analytics', name: "Data Analytics", icon: Database, count: 0 },
-    { id: 'Web Development', name: "Web Development", icon: Monitor, count: 0 }
+    { id: 'all', name: 'All', icon: Lightbulb, count: resources.length },
+    { id: 'AI & Machine Learning', name: 'AI & Machine Learning', icon: Lightbulb, count: resources.filter(r => r.category === 'AI & Machine Learning').length },
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: resources.filter(r => r.category === 'Cybersecurity').length },
+    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: Cloud, count: resources.filter(r => r.category === 'Cloud & DevOps').length },
+    { id: 'Digital Transformation', name: 'Digital Transformation', icon: TrendingUp, count: resources.filter(r => r.category === 'Digital Transformation').length },
+    { id: 'Mobile Development', name: 'Mobile Development', icon: Smartphone, count: resources.filter(r => r.category === 'Mobile Development').length },
+    { id: 'Data Analytics', name: 'Data Analytics', icon: Database, count: resources.filter(r => r.category === 'Data Analytics').length },
+    { id: 'Web Development', name: 'Web Development', icon: Monitor, count: resources.filter(r => r.category === 'Web Development').length }
   ];
 
   const featuredResources = useMemo(() => resources.filter(resource => resource.featured), [resources]);
@@ -314,14 +323,7 @@ const Resources = () => {
     }
   };
 
-  // Calculate category counts
-  categories.forEach(category => {
-    if (category.id === 'all') {
-      category.count = resources.length;
-    } else {
-      category.count = resources.filter(r => r.category === category.id).length;
-    }
-  });
+  // counts are computed in the category definitions above
 
   const filteredResources = resources.filter(resource => {
     const matchesCategory = selectedCategory === 'all' || resource.category === selectedCategory;
@@ -331,6 +333,8 @@ const Resources = () => {
     return matchesCategory && matchesSearch;
   });
 
+  // featuredResources is already computed above
+  // featuredResources is already computed above
   return (
     <>
       <Helmet>
@@ -424,10 +428,12 @@ const Resources = () => {
                         <Download className="w-4 h-4 mr-1" />
                         {resource.downloadCount} downloads
                       </div>
-                      <div className="flex items-center text-gray-500 text-sm">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {resource.readTime}
-                      </div>
+                      {resource.duration && (
+                        <div className="flex items-center text-gray-500 text-sm">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {resource.duration}
+                        </div>
+                      )}
                     </div>
 
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -524,10 +530,12 @@ const Resources = () => {
                           <Download className="w-4 h-4 mr-1" />
                           {resource.downloadCount}
                         </div>
-                        <div className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {resource.readTime}
-                        </div>
+                        {resource.duration && (
+                          <div className="flex items-center">
+                            <Clock className="w-4 h-4 mr-1" />
+                            {resource.duration}
+                          </div>
+                        )}
                       </div>
 
                       <div className="flex flex-wrap gap-1 mb-4">
