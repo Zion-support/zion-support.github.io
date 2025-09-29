@@ -4,7 +4,7 @@ import { initializeErrorReporting } from './utils/errorReporting';
 import { initOptimizations } from './utils/buildOptimizations';
 import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { accessibilityManager } from './utils/accessibility';
-import { PerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
+import { ResourceMonitor, MemoryMonitor } from './utils/performance';
 import { analytics } from './utils/analytics';
 import { seoOptimizer } from './utils/seoOptimization';
 import { cacheManager } from './utils/cacheManager';
