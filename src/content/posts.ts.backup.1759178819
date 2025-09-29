@@ -537,15 +537,41 @@ export const posts: BlogPost[] = [
   }
   ,
   {
+<<<<<<< HEAD
+    slug: "serverless-inference-cost-playbook-2026",
+    title: "Serverless Inference Cost Playbook 2026: 40–70% Savings",
+    description: "Adaptive batching, warm pools, and quality tiers that cut spend without hurting P95.",
+    category: "AI Operations",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "governance-scorecards-quickstart-2026",
+    title: "Governance Scorecards Quickstart 2026: PR Checks That Speed Teams Up",
+    description: "Wire policy tests to KPIs, add canaries, and keep delivery fast and compliant.",
+=======
     slug: "ai-governance-scorecards-quickstart-2026",
     title: "AI Governance Scorecards Quickstart 2026: Ship Fast, Stay Safe",
     description: "Set up KPI‑linked scorecards, PR checks, and rollback‑ready canaries in weeks.",
+>>>>>>> origin/cursor/create-and-deploy-new-content-afb4
     category: "AI Strategy",
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "7 min read"
   },
   {
+<<<<<<< HEAD
+    slug: "privacy-preserving-analytics-2026",
+    title: "Privacy‑Preserving Analytics 2026: Signal‑Rich, PII‑Safe Telemetry",
+    description: "Scoped IDs, field‑level filters, and retention tiers that unlock insights safely.",
+    category: "Observability",
+    publishedAt: "2025-10-13",
+    featured: false,
+    readTime: "6 min read"
+  }
+  ,
+=======
     slug: "privacy-first-agents-2026",
     title: "Privacy‑First Agents 2026: On‑Device Tools, Scoped IDs, Retention Controls",
     description: "Design assistants with local tools, field‑level filters, and policy‑backed telemetry.",
@@ -563,6 +589,7 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "7 min read"
   },
+>>>>>>> origin/cursor/create-and-deploy-new-content-afb4
   {
     slug: "agentic-workflows-blueprint-2026",
     title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",

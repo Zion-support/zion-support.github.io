@@ -33,6 +33,13 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+<<<<<<< HEAD
+    id: "customer-ai-copilots-2026",
+    slug: "customer-ai-copilots-2026",
+    title: "Customer AI Copilots 2026: Outcomes, Guardrails, and Adoption",
+    description: "Grounded prompts, KPI‑linked evals, and policy‑tested guardrails that teams trust.",
+    excerpt: "Design AI copilots sellers actually use—wired to product outcomes from day one.",
+=======
     id: "ai-governance-scorecards-quickstart-2026",
     slug: "ai-governance-scorecards-quickstart-2026",
     title: "AI Governance Scorecards Quickstart 2026: Ship Fast, Stay Safe",
@@ -86,6 +93,7 @@ export const latestArticles: LatestArticle[] = [
     title: "Quantum‑AI Hybrid Blueprint 2026: Practical Wins in 12 Months",
     description: "Combine quantum libraries with AI orchestration to unlock near‑term ROI.",
     excerpt: "A pragmatic approach to quantum‑AI workflows that deliver measurable business value.",
+>>>>>>> origin/cursor/create-and-deploy-new-content-afb4
     author: "Zion Tech Group Team",
     date: "2025-09-29",
     category: "Applied AI",
