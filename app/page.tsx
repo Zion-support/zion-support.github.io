@@ -26,43 +26,16 @@ import {
   AIDataAnalyticsEnterpriseBanner,
   EnterpriseTransformationSuccessBanner,
   HealthcareTransformationBanner,
-  NewContent2026Banner,
-  AIAgentOrchestrationBanner,
-  AISustainabilityBanner,
-  QuantumComputingBanner,
-  SustainabilityCaseStudyBanner,
-<<<<<<< HEAD
-  QuantumOptimizationBanner,
-  AIOperationalExcellenceBanner,
-  AIAgentObservabilityBanner,
-  ManufacturingTransformationBanner,
-  Latest2026ContentBanner,
-  AISecurityEnterprise2026Banner,
-  AIMultimodalEnterprise2026Banner,
-  AISustainabilityTransformationBanner,
-  LatestContent2026Banner
+  NewContent2026Banner
 } from '../components/PromotionalBanner';
-=======
-  QuantumOptimizationBanner
-} from '../../components/PromotionalBanner';
->>>>>>> feature/add-more-content-and-advertise
 import {
   NewContent2026Banner as NewContent2026BannerComponent,
   AutonomousOperationsBanner,
   FinOpsAdvancedBanner,
   PlatformArchitectureBanner,
   AutonomousOperationsSuccessBanner,
-<<<<<<< HEAD
-  NewContentShowcaseBanner2026,
-  Latest2026ContentBanner as NewLatest2026ContentBanner,
-  AIAutonomousCloudOpsBanner,
-  AIFinTechTransformationBanner,
-  AIRetailAutomationBanner
-} from '../components/NewContent2026Banners';
-=======
   NewContentShowcaseBanner2026
-} from '../../components/NewContent2026Banners';
->>>>>>> feature/add-more-content-and-advertise
+} from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -82,17 +55,16 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-<<<<<<< HEAD
-            <span>✨ NEW 2026:</span>
-            <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-fintech-transformation-2026" className="underline hover:text-yellow-200">FinTech Transformation</Link>
-=======
             <span>✨ Latest 2026 content:</span>
-            <a href="/blog/ai-autonomous-operations-2026" className="underline hover:text-yellow-200">AI Autonomous Operations</a>
->>>>>>> feature/add-more-content-and-advertise
+            <a href="/blog/agentic-workflow-orchestration-2026" className="underline hover:text-yellow-200">Agentic Workflow Orchestration</a>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-retail-automation-2026" className="underline hover:text-yellow-200">Retail Automation</Link>
+            <a href="/blog/ai-governance-maturity-model-2026" className="underline hover:text-yellow-200">AI Governance Maturity</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-customer-data-platforms-2026" className="underline hover:text-yellow-200">AI CDPs 2026</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-finops-advanced-2026" className="underline hover:text-yellow-200">AI FinOps Advanced</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-platform-architecture-2026" className="underline hover:text-yellow-200">Platform Architecture</a>
           </div>
           <Link
             href="/blog"
@@ -116,11 +88,6 @@ export default function HomePage() {
       <AIAgentObservabilityBanner />
       <ManufacturingTransformationBanner />
       <NewContent2026Banner />
-      <AIAgentOrchestrationBanner />
-      <AISustainabilityBanner />
-      <QuantumComputingBanner />
-      <SustainabilityCaseStudyBanner />
-      <QuantumOptimizationBanner />
       <AIMultimodalEnterpriseBanner />
       <AIEnterpriseAutomationBanner />
       <AIDataAnalyticsEnterpriseBanner />
@@ -395,9 +362,12 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  
 >>>>>>> feature/add-more-content-and-advertise
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8830
             <Link href="/blog/agentic-workflow-orchestration-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -412,13 +382,14 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   Orchestrate multi-step agents with guardrails, approvals, and observability for measurable ROI.
                 </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
+                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
               </div>
             </Link>
+<<<<<<< HEAD
  
  
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8830
             <Link href="/blog/ai-autonomous-operations-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -433,11 +404,10 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   Master autonomous AI operations with zero-touch infrastructure management, predictive maintenance, and self-healing systems.
                 </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Complete Guide →
-                </div>
+                <div className="flex items-center text-blue-600 font-semibold">Read Complete Guide →</div>
               </div>
             </Link>
+<<<<<<< HEAD
             <Link href="/blog/ai-finops-advanced-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -495,6 +465,8 @@ export default function HomePage() {
  
  
  
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8830
             <Link href="/blog/ai-governance-maturity-model-2026" className="group">
 =======
             <Link href="/blog/ai-autonomous-cloud-ops-2026" className="group">
@@ -512,9 +484,7 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   Self-healing infrastructure with 99.9% uptime and 90% cost reduction.
                 </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
+                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
               </div>
             </Link>
 <<<<<<< HEAD
@@ -535,6 +505,7 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   95% automation, $5M+ savings, and digital banking revolution.
                 </p>
+<<<<<<< HEAD
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Article →
  
@@ -545,6 +516,12 @@ export default function HomePage() {
  
             <Link href="/blog/ai-agent-orchestration-2026" className="group">
  
+=======
+                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-agent-orchestration-2026" className="group">
+>>>>>>> cursor/create-and-deploy-new-content-8830
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -558,9 +535,7 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   Master multi-agent systems with 95% automation efficiency and $5M+ ROI through advanced orchestration patterns.
                 </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
+                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
               </div>
             </Link>
             <Link href="/blog/ai-sustainability-green-tech-2026" className="group">

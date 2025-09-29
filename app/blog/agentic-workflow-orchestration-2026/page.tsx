@@ -1,17 +1,8 @@
 import React from 'react';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'Agentic Workflow Orchestration 2026: Designing Reliable AI Workflows',
   description: 'Blueprint for building reliable, observable, and compliant agentic workflows. Covers planning, tool-use, guardrails, human-in-the-loop, and ROI tracking.',
-  keywords: 'agentic workflows, AI orchestration, workflow orchestration, AI reliability, human-in-the-loop, observability, governance',
-  openGraph: {
-    title: 'Agentic Workflow Orchestration 2026: Designing Reliable AI Workflows',
-    description: 'Blueprint for building reliable, observable, and compliant agentic workflows with measurable ROI.',
-    type: 'article',
-    publishedTime: '2026-01-30T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  },
 };
 
 export default function AgenticWorkflowOrchestration2026() {
@@ -154,18 +145,8 @@ export default function AgenticWorkflowOrchestration2026() {
             We help enterprises design, implement, and operate agentic workflows with best-in-class guardrails and observability.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/contact"
-              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
-            >
-              Get Free Consultation
-            </Link>
-            <Link
-              href="/services/ai-enterprise-automation"
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
-            >
-              Explore AI Enterprise Automation
-            </Link>
+            <a href="/contact" className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center">Get Free Consultation</a>
+            <a href="/services/ai-enterprise-automation" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center">Explore AI Enterprise Automation</a>
           </div>
         </div>
 
