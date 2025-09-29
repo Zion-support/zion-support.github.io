@@ -37,8 +37,7 @@ import InteractiveContentShowcase from '../components/InteractiveContentShowcase
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
-import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
-import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+// duplicates removed
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 
 export const metadata = {
@@ -55,9 +54,9 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ New on the blog:</span>
-            <Link href="/blog/platform-engineering-scorecards-2026" className="underline hover:text-yellow-200">Platform Scorecards 2026</Link>
+            <Link href="/blog/ai-platform-engineering-2026" className="underline hover:text-yellow-200">Platform Engineering 2026</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-reliable-rag-2025" className="underline hover:text-yellow-200">Reliable RAG 2025</Link>
+            <Link href="/blog/ai-reliable-rag-patterns-2025" className="underline hover:text-yellow-200">Reliable RAG 2025</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-roadmaps-2026" className="underline hover:text-yellow-200">AI Roadmaps 2026</Link>
           </div>

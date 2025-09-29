@@ -54,6 +54,24 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="Platform Engineering 2026: From Golden Paths to Outcomes"
+            excerpt="Measure adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery."
+            date="October 9, 2025"
+            category="Platform Engineering"
+            readTime="8 min"
+            image="🧭"
+            href="/blog/ai-platform-engineering-2026"
+          />
+          <BlogPost
+            title="Reliable RAG 2025: Production Patterns for Grounded Answers"
+            excerpt="Reduce hallucinations and latency with contracts, caching, routing, structured evals, and guardrails."
+            date="September 29, 2025"
+            category="AI Platforms"
+            readTime="9 min"
+            image="📚"
+            href="/blog/ai-reliable-rag-patterns-2025"
+          />
+          <BlogPost
             title="Platform Engineering Scorecards 2026: From Golden Paths to Outcomes"
             excerpt="Measure adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery."
             date="October 9, 2025"
@@ -347,16 +365,7 @@ function BlogPost({
   image,
   featured = false,
   href,
-}: {
-  title: string;
-  excerpt: string;
-  date: string;
-  category: string;
-  readTime: string;
-  image: string;
-  featured?: boolean;
-  href?: string;
-}) {
+}: any) {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'Featured':
@@ -380,7 +389,7 @@ function BlogPost({
     }
   };
 
-  const ContentWrapper = ({ children }: { children: React.ReactNode }) => {
+  const ContentWrapper = ({ children }: any) => {
     if (href) {
       return (
         <Link href={href} className="block">
