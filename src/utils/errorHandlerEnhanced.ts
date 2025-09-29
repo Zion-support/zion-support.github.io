@@ -301,3 +301,4 @@ export const enhancedErrorHandler = new EnhancedErrorHandler();
 
 // Export class and types
 export { EnhancedErrorHandler };
+// Types are already exported above as interfaces
