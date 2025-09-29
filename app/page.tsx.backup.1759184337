@@ -1,5 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import { NewContent2026PromotionalBanners } from '../components/NewContent2026PromotionalBanners';
+=======
 import {
   NewBlogBanner,
   AnalyticsPlatformBanner,
@@ -60,6 +64,7 @@ import {
   AIInnovation2026ShowcaseBanner,
   LatestAIInnovations2026Banner
 } from '../components/NewContent2026SustainabilityBanners';
+>>>>>>> origin/cursor/create-and-deploy-new-content-befc
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -155,6 +160,9 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
+      
+=======
 
       {/* New Content 2026 Mega Banner */}
       <NewContent2026MegaBanner />
@@ -169,6 +177,7 @@ export default function HomePage() {
       <AIAutonomousEnterpriseBanner />
       <AIInnovation2026ShowcaseBanner />
       <LatestAIInnovations2026Banner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-befc
       
       {/* Next-Generation Autonomous Systems Banner */}
       <NextGenAutonomousBanner />

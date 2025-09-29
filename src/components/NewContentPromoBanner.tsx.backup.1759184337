@@ -13,6 +13,8 @@ import {
 const NewContentPromoBanner = () => {
   const newContent = [
     {
+<<<<<<< HEAD
+=======
       title: "AI Safety Budgets 2026",
       description: "Guardrails wired to KPIs, approvals, rollbacks",
       icon: Shield,
@@ -55,6 +57,7 @@ const NewContentPromoBanner = () => {
       category: "Platform"
     },
     {
+>>>>>>> origin/cursor/create-and-deploy-new-content-befc
       title: "Quality‑Tiered GenAI Routing 2026",
       description: "Control cost with tiers, caches, and eval signals",
       icon: Zap,
@@ -88,6 +91,8 @@ const NewContentPromoBanner = () => {
       icon: Brain,
       link: "/blog/edge-privacy-telemetry-2026",
       category: "Observability"
+<<<<<<< HEAD
+=======
       title: "AI Autonomous Enterprise 2026",
       description: "Complete self-managing operations guide",
       icon: Brain,
@@ -143,6 +148,7 @@ const NewContentPromoBanner = () => {
       link: "/blog/ai-roadmaps-2026",
       category: "AI Strategy"
 =======
+>>>>>>> origin/cursor/create-and-deploy-new-content-befc
     }
   ];
 
