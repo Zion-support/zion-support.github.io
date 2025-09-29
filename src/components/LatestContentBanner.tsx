@@ -70,10 +70,9 @@ const contentHighlights = [
     badge: "New",
     stats: "8 min read",
     variant: "info" as const
-  }
-  ,
+  },
   {
-    id: 5,
+    id: 6,
     title: "🧭 NEW: AI Platform Engineering 2025",
     description: "Golden paths, eval systems, and governance for safe, fast AI delivery",
     ctaText: "Read Guide",
@@ -83,7 +82,7 @@ const contentHighlights = [
     variant: "info" as const
   },
   {
-    id: 6,
+    id: 7,
     title: "🔍 AI Agent Observability",
     description: "Traces, policy tests, and human feedback that keep quality high",
     ctaText: "Learn How",
@@ -93,7 +92,7 @@ const contentHighlights = [
     variant: "success" as const
   },
   {
-    id: 7,
+    id: 8,
     title: "🛡️ Secure RAG 2025",
     description: "Authorization-aware retrieval and prompt firewalls for enterprise RAG",
     ctaText: "See Patterns",
