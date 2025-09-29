@@ -728,6 +728,25 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "6 min read"
   }
+  ,
+  {
+    slug: "ai-sre-blueprints-2026",
+    title: "AI SRE Blueprints 2026: Error Budgets, Rollbacks, and Live Traces",
+    description: "Design SRE guardrails for AI systems: quality/error budgets, rollback triggers, and trace-driven remediation.",
+    category: "AI Operations",
+    publishedAt: "2025-10-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-first-ab-testing-2026",
+    title: "Privacy‑First A/B Testing 2026: Insights Without PII",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant experiments that still drive decisions.",
+    category: "Analytics",
+    publishedAt: "2025-10-29",
+    featured: false,
+    readTime: "7 min read"
+  }
 ];
 
 // Newly added content (auto-advertised on Home via latest sort)

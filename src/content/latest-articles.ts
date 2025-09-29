@@ -947,6 +947,38 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+    id: "ai-sre-blueprints-2026",
+    slug: "ai-sre-blueprints-2026",
+    title: "AI SRE Blueprints 2026: Error Budgets, Rollbacks, and Live Traces",
+    description: "Design SRE guardrails for AI systems: quality/error budgets, rollback triggers, and trace-driven remediation.",
+    excerpt: "Keep reliability high with explicit error budgets, rollback paths, and live traces.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-29",
+    category: "AI Operations",
+    tags: ["SRE", "Budgets", "Rollbacks", "Tracing"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-sre-blueprints-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-first-ab-testing-2026",
+    slug: "privacy-first-ab-testing-2026",
+    title: "Privacy‑First A/B Testing 2026: Insights Without PII",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant experiments that still drive decisions.",
+    excerpt: "Run powerful experiments without collecting PII using scoped identifiers and differential privacy.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-29",
+    category: "Analytics",
+    tags: ["A/B Testing", "Privacy", "DP"],
+    featured: false,
+    readTime: "7 min read",
+    image: "/images/privacy-first-ab-testing-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "production-rag-quality-budgets-2026",
     slug: "production-rag-quality-budgets-2026",
     title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
