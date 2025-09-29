@@ -21,6 +21,45 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'autonomous-devops-2026',
+    title: 'AI Autonomous DevOps 2026: Complete Self-Healing Infrastructure Guide',
+    description: 'Transform your DevOps operations with AI-powered autonomous infrastructure management. Achieve 99.9% uptime, 90% cost reduction, and zero-touch operations.',
+    type: 'guide',
+    category: 'AI Operations',
+    readTime: '25 min read',
+    publishDate: '2026-01-20',
+    featured: true,
+    tags: ['Autonomous DevOps', 'Self-Healing', 'Infrastructure', 'Automation'],
+    metrics: { views: 3247, rating: 4.9, saves: 189 },
+    href: '/blog/ai-autonomous-devops-2026'
+  },
+  {
+    id: 'edge-computing-optimization-2026',
+    title: 'AI Edge Computing Optimization 2026: Sub-50ms Latency Solutions',
+    description: 'Unlock the power of AI at the edge with sub-50ms latency, 99.9% reliability, and intelligent edge orchestration for real-time applications.',
+    type: 'guide',
+    category: 'AI Operations',
+    readTime: '22 min read',
+    publishDate: '2026-01-20',
+    featured: true,
+    tags: ['Edge Computing', 'Low Latency', 'Real-time', 'Optimization'],
+    metrics: { views: 2156, rating: 4.8, saves: 134 },
+    href: '/blog/ai-edge-computing-optimization-2026'
+  },
+  {
+    id: 'autonomous-manufacturing-2026',
+    title: 'AI Autonomous Manufacturing Success 2026: $15M ROI Case Study',
+    description: 'See how a Fortune 500 manufacturer achieved 98% automation, 400% productivity gains, and $15M annual ROI with AI autonomous manufacturing systems.',
+    type: 'case-study',
+    category: 'Manufacturing',
+    readTime: '18 min read',
+    publishDate: '2026-01-20',
+    featured: true,
+    tags: ['Manufacturing', 'ROI', 'Automation', 'Case Study'],
+    metrics: { views: 4456, rating: 4.9, saves: 267 },
+    href: '/case-studies/ai-autonomous-manufacturing-success-2026'
+  },
+  {
     id: 'operational-excellence-2026',
     title: 'AI Operational Excellence 2026: Complete Enterprise Implementation Guide',
     description: 'Transform your enterprise operations with 95% automation rates, $5M+ savings, and zero-touch operations.',
