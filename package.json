@@ -30,7 +30,7 @@
     "performance:audit": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
     "performance:check": "pnpm build && pnpm serve & sleep 5 && pnpm performance:audit",
     "optimize": "node scripts/optimize-build.js",
-    "build:netlify": "pnpm run build:no-check",
+    "build:netlify": "pnpm run build:optimized",
     "build:ci": "pnpm run lint && pnpm run build:no-check && pnpm run test:ci",
     "health-check": "pnpm run type-check && pnpm run lint && pnpm run build:no-check",
     "preview:optimized": "vite preview --port 3000 --host",
@@ -58,7 +58,12 @@
     "optimize:production": "node scripts/production-optimizer.cjs",
     "deploy:production": "pnpm run optimize:all && echo \"Ready for production deployment\"",
     "enhance:performance": "node scripts/performance-enhancer.js",
-    "build:enhanced": "pnpm run enhance:performance && pnpm run build:netlify"
+    "build:enhanced": "pnpm run enhance:performance && pnpm run build:netlify",
+    "netlify:build": "pnpm run build:optimized",
+    "netlify:preview": "pnpm run preview:optimized",
+    "netlify:deploy": "pnpm run build:optimized && echo \"Build completed successfully for Netlify deployment\"",
+    "netlify:optimize": "node scripts/netlify-optimizer.js",
+    "netlify:full": "pnpm run netlify:optimize && pnpm run build:optimized"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.13",
