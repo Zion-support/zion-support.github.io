@@ -18,44 +18,44 @@ const TrendingContentBanner: React.FC = () => {
 
   const trendingItems = [
     {
-      title: "Policy Tests in CI",
-      description: "Lightweight guardrails in PRs that engineers adopt",
-      views: "11.2K",
-      readTime: "6 min",
-      category: "Engineering",
-      icon: TrendingUp,
-      link: "/blog/policy-tests-in-ci-2025",
-      badge: "NEW"
-    },
-    {
-      title: "Secure ML Supply Chain",
-      description: "SBOMs, attestations, and policy gates",
-      views: "10.4K",
-      readTime: "8 min",
-      category: "Security",
-      icon: Shield,
-      link: "/blog/secure-ml-supply-chain-attestations-2025",
-      badge: "TRENDING"
-    },
-    {
-      title: "Enterprise RAG Blueprint v2",
-      description: "Freshness, hybrid search, and evals",
-      views: "7.9K",
+      title: "AI Autonomous Infrastructure 2026",
+      description: "Self‑healing, self‑optimizing, self‑scaling platforms with budgets.",
+      views: "12.4K",
       readTime: "9 min",
-      category: "GenAI",
-      icon: Brain,
-      link: "/blog/enterprise-rag-blueprint-v2-2025",
+      category: "Platform Engineering",
+      icon: TrendingUp,
+      link: "/blog/ai-autonomous-infrastructure-2026",
       badge: "HOT"
     },
     {
-      title: "Risk Budgets for Edge Rollouts",
-      description: "Zero‑regret deploys with budgets and instant rollback",
-      views: "8.7K",
+      title: "Zero‑Trust for GenAI 2026",
+      description: "Prompt firewalls, egress controls, and signed outputs at scale.",
+      views: "10.9K",
       readTime: "7 min",
+      category: "Security",
+      icon: Shield,
+      link: "/blog/zero-trust-for-genai-2026",
+      badge: "TRENDING"
+    },
+    {
+      title: "Quantum‑AI Hybrid Blueprint 2026",
+      description: "Near‑term wins by combining QC libs with AI orchestration.",
+      views: "9.1K",
+      readTime: "8 min",
+      category: "Quantum",
+      icon: Brain,
+      link: "/blog/quantum-ai-hybrid-blueprint-2026",
+      badge: "NEW"
+    },
+    {
+      title: "Edge LLM Caching Blueprint 2026",
+      description: "Sub‑100ms prompts via tiered caches and freshness windows.",
+      views: "8.9K",
+      readTime: "6 min",
       category: "Architecture",
       icon: Zap,
-      link: "/blog/risk-budgets-edge-rollouts-2025",
-      badge: "TRENDING"
+      link: "/blog/edge-llm-caching-blueprint-2026",
+      badge: "POPULAR"
     }
   ];
 

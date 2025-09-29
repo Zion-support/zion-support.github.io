@@ -10,28 +10,28 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "ai-incident-response-playbooks-2025",
-    title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
-    description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
-    category: "Cybersecurity",
+    slug: "ai-autonomous-infrastructure-2026",
+    title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
+    description: "Blueprints and scorecards to operate self‑healing platforms with budgets and safe automation.",
+    category: "Platform Engineering",
     publishedAt: "2025-10-12",
     featured: true,
-    readTime: "7 min read"
+    readTime: "9 min read"
   },
   {
-    slug: "privacy-preserving-analytics-2025",
-    title: "Privacy‑Preserving Analytics: Ship Insights Without PII Risk",
-    description: "On-device redaction, scoped IDs, and DP noise for compliant, decision-grade telemetry.",
-    category: "Observability",
+    slug: "quantum-ai-hybrid-blueprint-2026",
+    title: "Quantum‑AI Hybrid Blueprint 2026: Practical Wins in 12 Months",
+    description: "Near‑term plays that combine QC libraries with AI orchestration for measurable ROI.",
+    category: "Quantum Computing",
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "8 min read"
   },
   {
-    slug: "edge-llm-caching-blueprint-2026",
-    title: "Edge LLM Caching Blueprint 2026: Sub‑100ms at Scale",
-    description: "Tiered caches, signed configs, and freshness windows for fast, affordable prompts.",
-    category: "Architecture",
+    slug: "zero-trust-for-genai-2026",
+    title: "Zero‑Trust for GenAI: Prompt Firewalls, Egress Policies, and Audit Trails",
+    description: "Contain risks with auth‑aware retrieval, policy gates, and signed outputs at scale.",
+    category: "Security",
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "7 min read"
