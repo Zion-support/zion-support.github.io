@@ -156,6 +156,40 @@ const Home = React.memo(function Home(): React.JSX.Element {
 						</div>
 					</section>
 				)}
+
+				{/* Latest Insights Promo */}
+				<section className="py-16 bg-white">
+					<div className="container mx-auto px-4 max-w-7xl">
+						<div className="text-center mb-10">
+							<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Latest Insights</h2>
+							<p className="text-lg text-gray-600">New guides and case studies from our team</p>
+						</div>
+						<div className="grid md:grid-cols-3 gap-8">
+							<div className="bg-gray-50 rounded-lg p-6">
+								<div className="text-sm text-indigo-600 font-medium mb-2">AI Strategy</div>
+								<h3 className="text-xl font-semibold text-gray-900 mb-2">Designing High-Impact AI Roadmaps</h3>
+								<p className="text-gray-600 mb-3">Align AI investments to measurable outcomes and reduce time-to-value.</p>
+								<Link href="/blog" className="text-indigo-600 font-medium hover:text-indigo-700">Read more →</Link>
+							</div>
+							<div className="bg-gray-50 rounded-lg p-6">
+								<div className="text-sm text-pink-600 font-medium mb-2">Cloud FinOps</div>
+								<h3 className="text-xl font-semibold text-gray-900 mb-2">Cutting Cloud Spend Without Slowing Teams</h3>
+								<p className="text-gray-600 mb-3">Right-sizing, demand shaping, and guardrails that keep velocity high.</p>
+								<Link href="/blog" className="text-pink-600 font-medium hover:text-pink-700">Read more →</Link>
+							</div>
+							<div className="bg-gray-50 rounded-lg p-6">
+								<div className="text-sm text-emerald-600 font-medium mb-2">Security</div>
+								<h3 className="text-xl font-semibold text-gray-900 mb-2">Zero-Trust in Practice for SaaS</h3>
+								<p className="text-gray-600 mb-3">Pragmatic least-privilege, continuous verification, and blast radius controls.</p>
+								<Link href="/blog" className="text-emerald-600 font-medium hover:text-emerald-700">Read more →</Link>
+							</div>
+						</div>
+
+						<div className="text-center mt-10">
+							<Link href="/blog" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">View all insights</Link>
+						</div>
+					</div>
+				</section>
 			</div>
 		</>
 	);
