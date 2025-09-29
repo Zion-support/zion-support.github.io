@@ -539,8 +539,6 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
   },
  
- 
-  ,
   {
     slug: "ai-risk-register-checklist-2025",
     title: "AI Risk Register Checklist: Owners, Policy Tests, Dashboards",
