@@ -39,6 +39,7 @@ import {
   AIQuantumOptimizationBanner,
   Revolutionary2026TechBanner
 } from '../components/PromotionalBanner';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -81,6 +82,7 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <Revolutionary2026ContentBanner />
       <Revolutionary2026TechBanner />
       <AINeuralInterfacesBanner />
       <AISpaceTechBanner />
@@ -135,10 +137,16 @@ export default function HomePage() {
               Explore Our Services
             </Link>
             <Link
-              href="/case-studies/ai-sustainability-transformation-2026"
+              href="/blog/ai-autonomous-business-systems-2026"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
+            >
+              🤖 Autonomous AI Systems
+            </Link>
+            <Link
+              href="/case-studies/ai-autonomous-enterprise-success-2026"
               className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-red-700 transition-all shadow-lg hover:shadow-xl"
             >
-              🌱 $10M Sustainability ROI
+              🌱 $25M Success Story
             </Link>
             <a
               href="tel:+13024640950"
@@ -238,6 +246,14 @@ export default function HomePage() {
               popular={false}
             />
             <FeaturedServiceCard
+              title="AI Autonomous Business Systems"
+              description="Fully autonomous AI systems with 99% automation efficiency and $15M+ ROI"
+              price="From $5,000/month"
+              features={['99% Automation', '24/7 Operations', '$15M+ ROI']}
+              to="/services/ai-autonomous-business-systems"
+              popular={true}
+            />
+            <FeaturedServiceCard
               title="AI Finance Automation"
               description="Automate financial processes with 95% accuracy and $3M+ savings"
               price="$1,299/month"
@@ -290,8 +306,8 @@ export default function HomePage() {
 
           {/* Featured Recommendations */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link to="/blog/ai-agent-orchestration-2026" className="group">
-              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
+            <Link to="/blog/ai-autonomous-business-systems-2026" className="group">
+              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-purple-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                     NEW 2026
@@ -301,39 +317,39 @@ export default function HomePage() {
                   </span>
                 </div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm text-blue-600 font-medium">📝 Article</span>
-                  <span className="text-sm text-gray-500">AI Orchestration</span>
+                  <span className="text-sm text-purple-600 font-medium">📝 Article</span>
+                  <span className="text-sm text-gray-500">Autonomous Systems</span>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Agent Orchestration 2026: Multi-Agent System Architecture
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                  AI Autonomous Business Systems 2026: Complete Self-Managing Operations
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  Master multi-agent systems with 95% automation efficiency and $5M+ ROI through advanced orchestration patterns.
+                  Transform your enterprise with fully autonomous AI systems achieving 99% automation efficiency and $15M+ ROI.
                 </p>
                 <div className="flex gap-4 mb-4">
                   <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">95%</div>
+                    <div className="text-lg font-bold text-purple-600">99%</div>
                     <div className="text-xs text-gray-500">Automation</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">$5M+</div>
+                    <div className="text-lg font-bold text-purple-600">$15M+</div>
                     <div className="text-xs text-gray-500">ROI</div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-gray-500">
                     <Clock className="w-4 h-4 mr-1" />
-                    22 min read
+                    25 min read
                   </div>
-                  <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
+                  <div className="flex items-center text-purple-600 font-semibold text-sm group-hover:text-purple-700 transition-colors">
                     Read More →
                   </div>
                 </div>
               </div>
             </Link>
 
-            <Link to="/case-studies/ai-sustainability-transformation-2026" className="group">
-              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
+            <Link to="/case-studies/ai-autonomous-enterprise-success-2026" className="group">
+              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-green-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                     NEW 2026
@@ -343,31 +359,31 @@ export default function HomePage() {
                   </span>
                 </div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm text-blue-600 font-medium">📊 Case Study</span>
-                  <span className="text-sm text-gray-500">Sustainability</span>
+                  <span className="text-sm text-green-600 font-medium">📊 Case Study</span>
+                  <span className="text-sm text-gray-500">Fortune 500</span>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Sustainability Transformation 2026: $10M ROI Case Study
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
+                  AI Autonomous Enterprise Success 2026: $25M ROI Case Study
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  See how a Fortune 500 company achieved carbon neutrality and $10M ROI with comprehensive AI sustainability transformation.
+                  See how a Fortune 500 manufacturing company achieved $25M annual savings and 98% automation efficiency.
                 </p>
                 <div className="flex gap-4 mb-4">
                   <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">$10M</div>
-                    <div className="text-xs text-gray-500">ROI</div>
+                    <div className="text-lg font-bold text-green-600">$25M</div>
+                    <div className="text-xs text-gray-500">Savings</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">100%</div>
-                    <div className="text-xs text-gray-500">Carbon Neutral</div>
+                    <div className="text-lg font-bold text-green-600">98%</div>
+                    <div className="text-xs text-gray-500">Automation</div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-gray-500">
                     <Clock className="w-4 h-4 mr-1" />
-                    15 min read
+                    18 min read
                   </div>
-                  <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
+                  <div className="flex items-center text-green-600 font-semibold text-sm group-hover:text-green-700 transition-colors">
                     Read More →
                   </div>
                 </div>
