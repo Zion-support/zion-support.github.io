@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Customer Data Platforms 2026 — Real-Time Personalization',
@@ -43,7 +42,7 @@ export default function AICustomerDataPlatforms2026Page() {
       </div>
 
       <div className="mt-10">
-        <Link href="/blog" className="text-indigo-600 font-semibold hover:text-indigo-700">← Back to Blog</Link>
+        <a href="/blog" className="text-indigo-600 font-semibold hover:text-indigo-700">← Back to Blog</a>
       </div>
     </div>
   );
