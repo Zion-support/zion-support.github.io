@@ -73,6 +73,12 @@ export default defineConfig({
             if (id.includes('eslint') || id.includes('prettier')) {
               return 'vendor-dev';
             }
+            if (id.includes('typescript')) {
+              return 'vendor-ts';
+            }
+            if (id.includes('vite')) {
+              return 'vendor-vite';
+            }
             // Split remaining vendor by size
             if (id.includes('node_modules')) {
               const size = id.length;
@@ -100,6 +106,12 @@ export default defineConfig({
             if (id.includes('Error') || id.includes('Recovery')) {
               return 'components-error';
             }
+            if (id.includes('Security') || id.includes('Auth')) {
+              return 'components-security';
+            }
+            if (id.includes('SEO') || id.includes('Meta')) {
+              return 'components-seo';
+            }
             return 'components';
           }
           if (id.includes('src/utils/')) {
@@ -119,6 +131,12 @@ export default defineConfig({
             if (id.includes('seo') || id.includes('analytics')) {
               return 'utils-seo';
             }
+            if (id.includes('cache') || id.includes('storage')) {
+              return 'utils-cache';
+            }
+            if (id.includes('api') || id.includes('http')) {
+              return 'utils-api';
+            }
             return 'utils';
           }
           if (id.includes('src/hooks/')) {
@@ -126,6 +144,12 @@ export default defineConfig({
           }
           if (id.includes('src/styles/')) {
             return 'styles';
+          }
+          if (id.includes('src/types/')) {
+            return 'types';
+          }
+          if (id.includes('src/constants/')) {
+            return 'constants';
           }
           // Default fallback
           return 'app';
