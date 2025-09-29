@@ -42,6 +42,7 @@ import {
   AIMetaverseEnterprise2026Banner,
   AIFederatedLearning2026Banner
 } from '../components/NewContent2026Banners';
+import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -428,18 +429,21 @@ export default function HomePage() {
       <InteractiveContentShowcase />
       
       {/* Interactive Content Recommendations */}
+      <InteractiveContentRecommendation />
+
+      {/* Additional Content Recommendations */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-6">
               <span className="w-4 h-4 mr-2">✨</span>
-              AI-Powered Recommendations
+              Featured Content
             </div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Personalized Content Recommendations
+              Latest AI Innovations & Breakthroughs
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover content tailored to your interests and industry. Our AI analyzes your preferences to suggest the most relevant articles and case studies.
+              Discover our most popular and impactful content that's transforming businesses worldwide.
             </p>
           </div>
 

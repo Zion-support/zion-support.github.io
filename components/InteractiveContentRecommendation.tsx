@@ -1,205 +1,203 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Clock, TrendingUp, Star, Heart, Zap, Users, Target } from 'lucide-react';
-
-interface ContentItem {
-  id: string;
-  title: string;
-  description: string;
-  type: 'blog' | 'case-study';
-  category: string;
-  readTime: string;
-  icon: React.ReactNode;
-  color: string;
-  href: string;
-  featured?: boolean;
-}
-
-const contentItems: ContentItem[] = [
-  {
-    id: 'ai-business-transformation',
-    title: 'AI Business Transformation 2026',
-    description: 'Master AI business transformation with comprehensive strategies for 400% ROI and complete enterprise automation.',
-    type: 'blog',
-    category: 'Business Strategy',
-    readTime: '25 min',
-    icon: <TrendingUp className="w-6 h-6" />,
-    color: 'from-blue-500 to-purple-500',
-    href: '/blog/ai-business-transformation-2026',
-    featured: true
-  },
-  {
-    id: 'ai-customer-experience',
-    title: 'AI Customer Experience Revolution',
-    description: 'Revolutionize customer experience with AI-powered solutions achieving 300% satisfaction improvement.',
-    type: 'blog',
-    category: 'Customer Experience',
-    readTime: '22 min',
-    icon: <Heart className="w-6 h-6" />,
-    color: 'from-pink-500 to-purple-500',
-    href: '/blog/ai-customer-experience-revolution-2026',
-    featured: true
-  },
-  {
-    id: 'ai-autonomous-enterprise',
-    title: 'Autonomous Enterprise 2026',
-    description: 'Complete guide to building self-managing business operations with 99% automation and $25M ROI.',
-    type: 'blog',
-    category: 'Enterprise AI',
-    readTime: '30 min',
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-green-500 to-blue-500',
-    href: '/blog/ai-autonomous-enterprise-2026',
-    featured: true
-  },
-  {
-    id: 'ai-quantum-optimization',
-    title: 'Quantum AI Optimization',
-    description: 'Harness quantum computing for AI breakthroughs with 1000x faster optimization and $12M+ returns.',
-    type: 'blog',
-    category: 'Quantum AI',
-    readTime: '25 min',
-    icon: <Target className="w-6 h-6" />,
-    color: 'from-purple-500 to-indigo-500',
-    href: '/blog/ai-quantum-optimization-2026',
-    featured: true
-  },
-  {
-    id: 'business-transformation-success',
-    title: '$50M Transformation Success',
-    description: 'Fortune 500 case study showing how AI business transformation achieved $50M ROI and 95% automation.',
-    type: 'case-study',
-    category: 'Success Stories',
-    readTime: '20 min',
-    icon: <Star className="w-6 h-6" />,
-    color: 'from-green-500 to-teal-500',
-    href: '/case-studies/ai-business-transformation-success-2026',
-    featured: true
-  },
-  {
-    id: 'autonomous-enterprise-success',
-    title: 'Autonomous Enterprise Success',
-    description: '$25M ROI achieved through autonomous business operations and 99% automation in Fortune 500 company.',
-    type: 'case-study',
-    category: 'Success Stories',
-    readTime: '15 min',
-    icon: <Users className="w-6 h-6" />,
-    color: 'from-blue-500 to-green-500',
-    href: '/case-studies/ai-autonomous-enterprise-success-2026',
-    featured: true
-  }
-];
 
 export default function InteractiveContentRecommendation() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedType, setSelectedType] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const categories = ['all', 'Business Strategy', 'Customer Experience', 'Enterprise AI', 'Quantum AI', 'Success Stories'];
-  const types = ['all', 'blog', 'case-study'];
+  const contentCategories = [
+    { id: 'all', label: 'All Content', icon: '📚' },
+    { id: 'ai-systems', label: 'AI Systems', icon: '🤖' },
+    { id: 'case-studies', label: 'Case Studies', icon: '📊' },
+    { id: 'sustainability', label: 'Sustainability', icon: '🌱' },
+    { id: 'automation', label: 'Automation', icon: '⚡' },
+    { id: 'optimization', label: 'Optimization', icon: '🎯' }
+  ];
 
-  const filteredContent = contentItems.filter(item => {
-    const categoryMatch = selectedCategory === 'all' || item.category === selectedCategory;
-    const typeMatch = selectedType === 'all' || item.type === selectedType;
-    return categoryMatch && typeMatch;
-  });
+  const contentItems = [
+    {
+      id: 1,
+      title: 'AI Autonomous AI Systems 2026',
+      description: 'Self-evolving intelligence revolution with 95% autonomous operation',
+      category: 'ai-systems',
+      type: 'blog',
+      readTime: '28 min',
+      metrics: { value: '95%', label: 'Autonomous' },
+      color: 'purple',
+      href: '/blog/ai-autonomous-ai-systems-2026'
+    },
+    {
+      id: 2,
+      title: 'Neural Architecture Optimization 2026',
+      description: 'Automated deep learning design 1000x faster than human experts',
+      category: 'optimization',
+      type: 'blog',
+      readTime: '32 min',
+      metrics: { value: '1000x', label: 'Faster' },
+      color: 'green',
+      href: '/blog/ai-neural-architecture-optimization-2026'
+    },
+    {
+      id: 3,
+      title: 'AI Sustainable Tech 2026',
+      description: 'Green AI for carbon-neutral operations with 80% energy reduction',
+      category: 'sustainability',
+      type: 'blog',
+      readTime: '25 min',
+      metrics: { value: '80%', label: 'Energy Saved' },
+      color: 'teal',
+      href: '/blog/ai-sustainable-tech-2026'
+    },
+    {
+      id: 4,
+      title: '$25M ROI Success Story',
+      description: 'Fortune 500 autonomous enterprise transformation case study',
+      category: 'case-studies',
+      type: 'case-study',
+      readTime: '22 min',
+      metrics: { value: '$25M', label: 'ROI' },
+      color: 'orange',
+      href: '/case-studies/ai-autonomous-enterprise-success-2026'
+    },
+    {
+      id: 5,
+      title: 'AI Space Technology 2026',
+      description: 'Revolutionary space AI systems with 99.9% mission success rate',
+      category: 'ai-systems',
+      type: 'blog',
+      readTime: '28 min',
+      metrics: { value: '99.9%', label: 'Success' },
+      color: 'blue',
+      href: '/blog/ai-space-tech-2026'
+    },
+    {
+      id: 6,
+      title: 'AI Synthetic Data 2026',
+      description: 'Privacy-preserving AI development with 100% compliance',
+      category: 'ai-systems',
+      type: 'blog',
+      readTime: '32 min',
+      metrics: { value: '100%', label: 'Privacy' },
+      color: 'green',
+      href: '/blog/ai-synthetic-data-2026'
+    },
+    {
+      id: 7,
+      title: 'AI Cognitive Computing 2026',
+      description: 'Next-generation intelligence with 1000x faster optimization',
+      category: 'ai-systems',
+      type: 'blog',
+      readTime: '25 min',
+      metrics: { value: '1000x', label: 'Faster' },
+      color: 'indigo',
+      href: '/blog/ai-cognitive-computing-2026'
+    },
+    {
+      id: 8,
+      title: '$10M Sustainability Success',
+      description: 'Carbon neutral transformation with comprehensive AI implementation',
+      category: 'sustainability',
+      type: 'case-study',
+      readTime: '18 min',
+      metrics: { value: '$10M', label: 'ROI' },
+      color: 'green',
+      href: '/case-studies/ai-sustainability-transformation-2026'
+    }
+  ];
+
+  const filteredContent = selectedCategory === 'all' 
+    ? contentItems 
+    : contentItems.filter(item => item.category === selectedCategory);
+
+  const getColorClasses = (color: string) => {
+    const colorMap = {
+      purple: 'from-purple-500 to-blue-500',
+      green: 'from-green-500 to-teal-500',
+      teal: 'from-teal-500 to-cyan-500',
+      orange: 'from-orange-500 to-red-500',
+      blue: 'from-blue-500 to-indigo-500',
+      indigo: 'from-indigo-500 to-purple-500'
+    };
+    return colorMap[color] || 'from-gray-500 to-gray-600';
+  };
 
   return (
-    <div className="w-full bg-gradient-to-br from-gray-50 via-white to-blue-50 py-16">
+    <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <span className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-              🎯 INTELLIGENT CONTENT RECOMMENDATIONS
-            </span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-6">
+            <span className="w-4 h-4 mr-2">✨</span>
+            AI-Powered Recommendations
           </div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Discover Your Perfect AI Content
+            Personalized Content Recommendations
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get personalized content recommendations based on your interests and goals. 
-            Explore our comprehensive library of AI guides, case studies, and success stories.
+            Discover content tailored to your interests and industry. Our AI analyzes your preferences 
+            to suggest the most relevant articles and case studies.
           </p>
         </div>
 
-        {/* Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
-          <div className="flex flex-wrap gap-2">
-            {categories.map(category => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
-                  selectedCategory === category
-                    ? 'bg-indigo-600 text-white'
-                    : 'bg-white text-gray-600 hover:bg-indigo-50 hover:text-indigo-600 border border-gray-200'
-                }`}
-              >
-                {category === 'all' ? 'All Categories' : category}
-              </button>
-            ))}
-          </div>
-          <div className="flex gap-2">
-            {types.map(type => (
-              <button
-                key={type}
-                onClick={() => setSelectedType(type)}
-                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
-                  selectedType === type
-                    ? 'bg-purple-600 text-white'
-                    : 'bg-white text-gray-600 hover:bg-purple-50 hover:text-purple-600 border border-gray-200'
-                }`}
-              >
-                {type === 'all' ? 'All Types' : type === 'blog' ? 'Blog Posts' : 'Case Studies'}
-              </button>
-            ))}
-          </div>
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {contentCategories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+                selectedCategory === category.id
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+              }`}
+            >
+              <span className="mr-2">{category.icon}</span>
+              {category.label}
+            </button>
+          ))}
         </div>
 
         {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {filteredContent.map(item => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {filteredContent.map((item) => (
             <Link key={item.id} href={item.href} className="group">
-              <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-all hover:-translate-y-1">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center text-white`}>
-                    {item.icon}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className={`text-xs px-2 py-1 rounded-full font-semibold ${
-                        item.type === 'blog' 
-                          ? 'bg-blue-100 text-blue-700' 
-                          : 'bg-green-100 text-green-700'
-                      }`}>
-                        {item.type === 'blog' ? 'Blog' : 'Case Study'}
-                      </span>
-                      {item.featured && (
-                        <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                          FEATURED
-                        </span>
-                      )}
-                    </div>
-                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">
-                      {item.title}
-                    </h3>
-                  </div>
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-gray-200 hover:scale-105">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className={`bg-gradient-to-r ${getColorClasses(item.color)} text-white px-2 py-1 rounded-full text-xs font-semibold`}>
+                    NEW 2026
+                  </span>
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    {item.type === 'case-study' ? 'CASE STUDY' : 'ARTICLE'}
+                  </span>
                 </div>
                 
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm text-gray-500">{item.readTime} read</span>
+                  <span className="text-sm text-gray-500 capitalize">{item.category}</span>
+                </div>
+                
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  {item.title}
+                </h3>
+                
+                <p className="text-gray-600 text-sm mb-4">
                   {item.description}
                 </p>
                 
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4 text-xs text-gray-500">
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
-                      <span>{item.readTime}</span>
+                <div className="flex gap-4 mb-4">
+                  <div className="text-center">
+                    <div className={`text-lg font-bold bg-gradient-to-r ${getColorClasses(item.color)} bg-clip-text text-transparent`}>
+                      {item.metrics.value}
                     </div>
-                    <div className="text-gray-400">•</div>
-                    <div>{item.category}</div>
+                    <div className="text-xs text-gray-500">{item.metrics.label}</div>
                   </div>
-                  <div className="flex items-center text-indigo-600 font-semibold text-sm group-hover:text-indigo-700 transition-colors">
-                    Read More <ArrowRight className="w-4 h-4 ml-1" />
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="w-4 h-4 mr-1">⏱️</span>
+                    {item.readTime}
+                  </div>
+                  <div className={`flex items-center font-semibold text-sm group-hover:opacity-80 transition-opacity bg-gradient-to-r ${getColorClasses(item.color)} bg-clip-text text-transparent`}>
+                    {item.type === 'case-study' ? 'View Case Study' : 'Read Article'} →
                   </div>
                 </div>
               </div>
@@ -207,16 +205,17 @@ export default function InteractiveContentRecommendation() {
           ))}
         </div>
 
-        {/* Call to Action */}
         <div className="text-center">
           <Link
             href="/blog"
-            className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
+            className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
           >
-            Explore All AI Content
+            <span className="w-5 h-5 mr-2">✨</span>
+            Explore All Content
+            <span className="w-5 h-5 ml-2">→</span>
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
