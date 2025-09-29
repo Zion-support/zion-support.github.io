@@ -11,6 +11,8 @@ interface FormData {
   message: string;
 }
 
+type FormElement = HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
+
 export default function EnhancedContactForm(): React.JSX.Element {
   const [formData, setFormData] = useState<FormData>({
     name: '',
