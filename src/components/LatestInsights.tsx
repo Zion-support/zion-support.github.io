@@ -3,6 +3,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { latestInsights } from "../content/insights";
 
+const isNew = (isoDate: string) => {
+  const published = new Date(isoDate).getTime();
+  const now = Date.now();
+  const sevenDaysMs = 7 * 24 * 60 * 60 * 1000;
+  return now - published <= sevenDaysMs;
+};
+
 const LatestInsights: React.FC = () => {
   return (
     <section className="py-20 bg-white/5">
@@ -12,7 +19,7 @@ const LatestInsights: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Latest Insights</h2>
             <p className="text-zion-slate-light">Research, guides, and playbooks from our team.</p>
           </div>
-            <Link
+          <Link
             to="/insights"
             className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
@@ -21,6 +28,8 @@ const LatestInsights: React.FC = () => {
           </Link>
         </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {latestInsights.slice(0, 4).map((item) => (
             <div
               key={item.id}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
@@ -28,19 +37,11 @@ const LatestInsights: React.FC = () => {
               <div className="flex items-center justify-between mb-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">
                   <span>{item.category}</span>
-                  {(() => {
-                    const daysSince = (Date.now() - new Date(item.date).getTime()) / (1000 * 60 * 60 * 24);
-                    return daysSince <= 7 ? (
-                      <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">New</span>
-                    ) : null;
-                  })()}
+                  {isNew(item.date) ? (
+                    <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">New</span>
+                  ) : null}
                 </div>
                 <div className="flex items-center gap-2">
-                  {isNew(item.date) && (
-                    <span className="inline-flex items-center gap-1 text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full bg-green-400/20 text-green-200 border border-green-300/30">
-                      New
-                    </span>
-                  )}
                   <span className="text-xs text-zion-slate-light">{new Date(item.date).toLocaleDateString()}</span>
                 </div>
               </div>

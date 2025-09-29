@@ -26,6 +26,26 @@ export const posts: BlogPost[] = [
       "Define actionable metrics, avoid vanity traps, and align teams to measurable outcomes.",
     category: "Product Analytics",
     publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "platform-engineering-golden-paths",
+    title: "Platform Engineering Golden Paths That Unblock Teams",
+    description:
+      "Opinionated templates, scorecards, and docs that accelerate delivery across orgs.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-27",
+    featured: false,
+    readTime: "9 min read",
+  },
+  {
+    slug: "north-star-metrics-that-drive-growth",
+    title: "North‑Star Metrics That Actually Drive Growth",
+    description:
+      "Define actionable metrics, avoid vanity traps, and align teams to measurable outcomes.",
+    category: "Product Analytics",
+    publishedAt: "2025-09-29",
     featured: false,
     readTime: "6 min read",
   },
