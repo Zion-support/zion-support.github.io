@@ -9,6 +9,33 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+      id: "rag-routing-evals",
+      title: "RAG Routing with Evals: Send Queries Where They Win",
+      summary:
+      "Use intent detection, collection scores, and offline evals to route to the best retriever.",
+      category: "GenAI",
+      date: "2025-10-01",
+      readMinutes: 5,
+  },
+  {
+      id: "policy-tests-in-prod",
+      title: "Policy Tests in Production: Guardrails Without Friction",
+      summary:
+      "Lightweight policies, exemptions, and telemetry that keep teams fast and safe.",
+      category: "AI Governance",
+      date: "2025-10-01",
+      readMinutes: 4,
+  },
+  {
+      id: "latency-budgets-at-edge",
+      title: "Latency Budgets at the Edge: Design for P95, Not Happy Path",
+      summary:
+      "Budgeting, cache strategy, and fail‑open tactics for consistent sub‑100ms UX.",
+      category: "Architecture",
+      date: "2025-10-01",
+      readMinutes: 5,
+  },
+  {
       id: "ai-reliability-scorecards",
       title: "AI Reliability Scorecards: What to Track Weekly",
       summary:
