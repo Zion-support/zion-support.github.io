@@ -699,6 +699,97 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 20,
     active: true,
     priority: 0
+  },
+  {
+    id: 'ai-incident-response-playbooks-2025',
+    message: '🛡️ NEW: AI Incident Response Playbooks 2025 - Budgeted Actions & Approvals',
+    ctaText: 'Read Playbooks',
+    ctaLink: '/blog/ai-incident-response-playbooks-2025',
+    backgroundColor: 'bg-gradient-to-r from-red-600 to-orange-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'privacy-preserving-analytics-2025',
+    message: '🔒 NEW: Privacy-Preserving Analytics - DP-Backed Telemetry You Can Ship Today',
+    ctaText: 'Explore Guide',
+    ctaLink: '/blog/privacy-preserving-analytics-2025',
+    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'edge-llm-caching-2026',
+    message: '⚡ NEW: Edge LLM Caching Blueprint 2026 - Sub-100ms Prompts at Scale',
+    ctaText: 'Read Blueprint',
+    ctaLink: '/blog/edge-llm-caching-blueprint-2026',
+    backgroundColor: 'bg-gradient-to-r from-green-600 to-emerald-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'ai-autonomous-infrastructure-service',
+    message: '🤖 NEW SERVICE: AI Autonomous Infrastructure Platform - Self-Healing Systems',
+    ctaText: 'Explore Service',
+    ctaLink: '/services/ai-autonomous-infrastructure-platform',
+    backgroundColor: 'bg-gradient-to-r from-blue-600 to-cyan-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 22,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'quantum-ai-hybrid-computing-service',
+    message: '⚛️ NEW SERVICE: Quantum-AI Hybrid Computing - 1000x Faster Problem Solving',
+    ctaText: 'Learn More',
+    ctaLink: '/services/quantum-ai-hybrid-computing',
+    backgroundColor: 'bg-gradient-to-r from-purple-600 to-pink-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 22,
+    active: true,
+    priority: 2
+  },
+  {
+    id: 'zero-trust-security-ai-service',
+    message: '🔐 NEW SERVICE: Zero Trust Security with AI - 90% Incident Reduction',
+    ctaText: 'Get Protected',
+    ctaLink: '/services/zero-trust-security-ai',
+    backgroundColor: 'bg-gradient-to-r from-gray-700 to-gray-900',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 22,
+    active: true,
+    priority: 2
+  },
+  {
+    id: 'ai-governance-scorecards-service',
+    message: '📊 NEW SERVICE: AI Governance Scorecards - 100% Compliance Automation',
+    ctaText: 'Start Governance',
+    ctaLink: '/services/ai-governance-scorecards',
+    backgroundColor: 'bg-gradient-to-r from-teal-600 to-cyan-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 22,
+    active: true,
+    priority: 3
   }
 ];
 
@@ -725,11 +816,17 @@ export const getContentByTag = (tag: string) => {
   };
 };
 
+// Import new content
+import { newBlogPosts2025, featuredBlogPosts, trendingBlogPosts } from './new-blog-posts-2025';
+import { newServices2025, featuredServices, trendingServices } from './new-services-2025';
+
 export const getRecentContent = (limit: number = 3) => {
   const allContent = [
     ...blogPosts.map(post => ({ ...post, type: 'blog' as const })),
+    ...newBlogPosts2025.map(post => ({ ...post, type: 'blog' as const, date: post.publishedAt })),
     ...caseStudies.map(study => ({ ...study, type: 'case-study' as const })),
-    ...services.map(service => ({ ...service, type: 'service' as const }))
+    ...services.map(service => ({ ...service, type: 'service' as const })),
+    ...newServices2025.map(service => ({ ...service, type: 'service' as const, date: '2025-01-30' }))
   ];
   
   return allContent
@@ -740,3 +837,6 @@ export const getRecentContent = (limit: number = 3) => {
     })
     .slice(0, limit);
 };
+
+// Export new content for use in components
+export { newBlogPosts2025, featuredBlogPosts, trendingBlogPosts, newServices2025, featuredServices, trendingServices };
