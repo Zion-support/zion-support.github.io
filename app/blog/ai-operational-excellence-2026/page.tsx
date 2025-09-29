@@ -1,9 +1,130 @@
 import React from 'react';
 
 export const metadata = {
+<<<<<<< HEAD
   title: 'AI Operational Excellence 2026: From SLIs to Self‑Healing Ops',
   description:
     'Practical blueprint to reach operational excellence with AI: reliability scorecards, SLO automation, policy tests, and self-healing runbooks.',
+=======
+  title: 'AI Operational Excellence 2026: From Pilots to Scaled Impact | Zion Tech Group',
+  description: 'Blueprint to scale AI reliably with governance, quality, cost controls, and value tracking across the enterprise.',
+  keywords: 'AI operational excellence 2026, AI governance, AI quality, AI cost controls, AI value tracking, scale AI',
+};
+
+export default function AIOperationalExcellence2026() {
+  return (
+    <article className="max-w-4xl mx-auto px-4 py-12">
+      <div className="prose prose-lg max-w-none">
+        <header className="mb-12">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+              Operations
+            </span>
+            <span className="text-gray-500">•</span>
+            <span className="text-gray-600">September 29, 2025</span>
+          </div>
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            AI Operational Excellence 2026: From Pilots to Scaled Impact
+          </h1>
+          <p className="text-xl text-gray-600 leading-relaxed">
+            A pragmatic blueprint to move beyond pilots. Institutionalize governance, quality, cost, and value
+            measurement so AI programs scale reliably across the enterprise.
+          </p>
+          <div className="flex items-center gap-6 mt-8 text-sm text-gray-500">
+            <span>12 min read</span>
+            <span>•</span>
+            <span>Enterprise Operations</span>
+            <span>•</span>
+            <span>Production AI</span>
+          </div>
+        </header>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">The Four Pillars</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <div className="text-3xl mb-3">🧭</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Governance</h3>
+              <p className="text-gray-600">Policies, approvals, and accountability from model intake through runtime operations.</p>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <div className="text-3xl mb-3">✅</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Quality</h3>
+              <p className="text-gray-600">Contracts, evals, and SLOs tied to groundedness, latency, and accuracy.</p>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <div className="text-3xl mb-3">💸</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Cost</h3>
+              <p className="text-gray-600">Token budgets, routing, and caching with per-feature cost visibility.</p>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <div className="text-3xl mb-3">📈</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Value</h3>
+              <p className="text-gray-600">Trace work from token to top-line and efficiency outcomes.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Operating Model</h2>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>Central platform with federated domain teams</li>
+            <li>Policy gates for autonomy levels and high-risk workflows</li>
+            <li>Golden paths, templates, and starter kits</li>
+            <li>Scorecards for teams covering quality, cost, and value</li>
+          </ul>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">30-60-90 Day Plan</h2>
+          <div className="space-y-6">
+            <div className="bg-gradient-to-br from-blue-50 to-teal-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-2">Days 1–30: Foundation</h3>
+              <ul className="list-disc list-inside text-gray-700 space-y-1">
+                <li>Define AI SLOs and acceptance criteria</li>
+                <li>Instrument tracing and cost telemetry</li>
+                <li>Stand up policy approvals and change mgmt</li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-2">Days 31–60: Controls</h3>
+              <ul className="list-disc list-inside text-gray-700 space-y-1">
+                <li>Roll out eval suites and regression gates</li>
+                <li>Enable model routing and caching</li>
+                <li>Create cost and value scorecards</li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-orange-50 to-pink-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-2">Days 61–90: Scale</h3>
+              <ul className="list-disc list-inside text-gray-700 space-y-1">
+                <li>Onboard 3–5 domains to golden paths</li>
+                <li>Publish quarterly AI operating review</li>
+                <li>Automate drift detection and rollback</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <div className="bg-gradient-to-r from-blue-600 to-teal-600 rounded-xl p-8 text-white text-center">
+          <h2 className="text-2xl font-bold mb-4">Ready to Scale AI with Confidence?</h2>
+          <p className="text-lg mb-6 opacity-90">We help enterprises set up governance, quality, cost, and value systems that unlock durable impact.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Talk to Experts</a>
+            <a href="/services" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Explore Services</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+import React from 'react';
+
+export const metadata = {
+	title: 'AI Operational Excellence 2026: From Pilots to Scaled Impact',
+	description:
+		'Practical blueprint to scale AI operations: governance, reliability, cost, and value tracking.'
+>>>>>>> b694fbf4b178 (feat(content): add AI Operational Excellence 2026 and AI Enterprise Automation 2026; advertise across blog, content hub, and homepage; resolve promo strip conflict)
 };
 
 export default function AIOperationalExcellence2026() {

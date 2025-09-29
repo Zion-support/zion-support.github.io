@@ -54,8 +54,31 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+<<<<<<< HEAD
             title="AI Agent Observability 2026: Metrics, Traces, and Guardrails"
             excerpt="Instrument agents with traces, evals, and policy guardrails to ship reliable autonomy."
+=======
+            title="AI Enterprise Automation 2026: Complete Business Process Transformation"
+            excerpt="Transform your enterprise with AI automation. 95% process efficiency, multimillion-dollar savings, and zero-touch operations."
+            date="September 29, 2025"
+            category="Automation"
+            readTime="18 min"
+            image="🤖"
+            href="/blog/ai-enterprise-automation-2026"
+          />
+          <BlogPost
+            title="AI Operational Excellence 2026: From Pilots to Scaled Impact"
+            excerpt="Blueprint to scale AI reliably with governance, quality, cost controls, and value tracking."
+            date="September 29, 2025"
+            category="Operations"
+            readTime="12 min"
+            image="🧭"
+            href="/blog/ai-operational-excellence-2026"
+          />
+          <BlogPost
+            title="AI Operational Excellence 2026: From Pilots to Scaled Impact"
+            excerpt="Blueprint to scale AI reliably with governance, quality, cost controls, and value tracking."
+>>>>>>> b694fbf4b178 (feat(content): add AI Operational Excellence 2026 and AI Enterprise Automation 2026; advertise across blog, content hub, and homepage; resolve promo strip conflict)
             date="September 29, 2025"
             category="AI Reliability"
             readTime="12 min"

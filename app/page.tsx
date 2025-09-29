@@ -74,13 +74,21 @@ export default function HomePage() {
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-multimodal-enterprise-integration-2026" className="underline hover:text-yellow-200">Multimodal AI Integration</Link>
             <span className="hidden md:inline">•</span>
+<<<<<<< HEAD
             <Link href="/case-studies/ai-ethical-framework-success-2026" className="underline hover:text-yellow-200">Ethics Success Story</Link>
+=======
+            <a href="/blog/ai-multimodal-enterprise-2026" className="underline hover:text-yellow-200">AI Multimodal Enterprise</a>
+>>>>>>> b694fbf4b178 (feat(content): add AI Operational Excellence 2026 and AI Enterprise Automation 2026; advertise across blog, content hub, and homepage; resolve promo strip conflict)
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</Link>
             <span className="hidden md:inline">•</span>
+<<<<<<< HEAD
             <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/agentic-workflow-orchestration-2026" className="underline hover:text-yellow-200">Workflow Orchestration</Link>
+=======
+            <a href="/blog/ai-operational-excellence-2026" className="underline hover:text-yellow-200">AI Operational Excellence 2026</a>
+>>>>>>> b694fbf4b178 (feat(content): add AI Operational Excellence 2026 and AI Enterprise Automation 2026; advertise across blog, content hub, and homepage; resolve promo strip conflict)
           </div>
           <Link
             href="/blog"
