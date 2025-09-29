@@ -43,6 +43,8 @@ function Header() {
         <div className="hidden md:flex gap-6">
           <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
           <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
+          <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">Blog</Link>
+          <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">Case Studies</Link>
           <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
         </div>
         <button className="md:hidden p-2" aria-label="Toggle menu">
@@ -70,11 +72,13 @@ function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Company</h3>
+            <h3 className="font-semibold text-gray-900 mb-3">Content</h3>
             <div className="space-y-2">
-              <Link href="/" className="block text-gray-600 hover:text-blue-600 transition-colors">Home</Link>
-              <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">Contact</Link>
-              <a href="https://ziontechgroup.com" className="block text-gray-600 hover:text-blue-600 transition-colors">Main Website</a>
+              <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors">Blog</Link>
+              <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors">Case Studies</Link>
+              <Link href="/blog/ai-metaverse-enterprise-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Metaverse Enterprise</Link>
+              <Link href="/blog/ai-neural-interfaces-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Neural Interfaces</Link>
+              <Link href="/blog/ai-space-tech-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Space Technology</Link>
             </div>
           </div>
           <div>

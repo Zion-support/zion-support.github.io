@@ -13,6 +13,42 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
+    id: "ai-sustainability-transformation-2026",
+    title: "AI Sustainability Transformation 2026: Carbon-Neutral Operations",
+    company: "Global Manufacturing Corp",
+    industry: "Manufacturing",
+    challenge: "Massive AI infrastructure consuming 45MW of power daily, generating 35,000 tons of CO2 annually, with energy costs exceeding $18M per year and mounting regulatory pressure for carbon neutrality.",
+    solution: "Implemented comprehensive AI sustainability transformation including solar-powered data centers, optimized algorithms, carbon offset programs, and intelligent automation systems across 25 facilities.",
+    results: [
+      "Achieved 100% carbon neutral operations",
+      "Reduced energy consumption by 80%",
+      "Generated $10M total ROI",
+      "Achieved 95% automation efficiency",
+      "Eliminated 35,000 tons CO2 annually"
+    ],
+    technologies: ["Solar Energy", "AI Optimization", "Carbon Offsets", "Smart Manufacturing", "Predictive Analytics"],
+    duration: "18 months",
+    imageUrl: "/images/case-studies/ai-sustainability-transformation-2026.jpg"
+  },
+  {
+    id: "ai-quantum-optimization-2026",
+    title: "AI Quantum Optimization 2026: 1000x Speed Improvement",
+    company: "FinanceCorp International",
+    industry: "Financial Services",
+    challenge: "Portfolio optimization for $50B in assets taking 8 hours on classical computers, limiting real-time trading opportunities and costing $2M annually in suboptimal allocations.",
+    solution: "Implemented quantum-enhanced AI optimization system using variational quantum algorithms with hybrid quantum-classical processing for real-time portfolio optimization and decision making.",
+    results: [
+      "Achieved 1000x speed improvement (8 hours → 30 seconds)",
+      "Generated $12M additional annual returns",
+      "Improved optimization accuracy by 95%",
+      "Enabled real-time portfolio rebalancing",
+      "Reduced portfolio risk by 40%"
+    ],
+    technologies: ["Quantum Computing", "Variational Quantum Algorithms", "AI/ML", "Portfolio Optimization", "Real-time Analytics"],
+    duration: "12 months",
+    imageUrl: "/images/case-studies/ai-quantum-optimization-2026.jpg"
+  },
+  {
     id: "fintech-ai-platform",
     title: "AI-Powered Financial Analytics Platform",
     company: "FinTech Solutions Inc.",
