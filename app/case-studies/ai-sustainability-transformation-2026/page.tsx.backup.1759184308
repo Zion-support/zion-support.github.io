@@ -1,12 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD:app/case-studies/ai-sustainability-transformation-2026/page.tsx.backup.1759184308
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ff76:app/case-studies/ai-sustainability-transformation-2026/page.tsx
 import { Clock, ArrowRight, CheckCircle, TrendingUp, Leaf, DollarSign, Zap } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Sustainability Transformation 2026: $10M ROI Case Study - Fortune 500 Success',
   description: 'See how a Fortune 500 company achieved carbon neutrality and $10M ROI with comprehensive AI sustainability transformation and green technology integration.',
   keywords: 'AI sustainability, carbon neutrality, green technology, Fortune 500 case study, AI transformation ROI, environmental AI',
+<<<<<<< HEAD:app/case-studies/ai-sustainability-transformation-2026/page.tsx.backup.1759184308
 =======
 import {
   Leaf,
@@ -28,6 +32,8 @@ export const metadata: Metadata = {
     authors: ['Zion Tech Group Team'],
   },
 >>>>>>> origin/cursor/create-and-deploy-new-content-9044
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ff76:app/case-studies/ai-sustainability-transformation-2026/page.tsx
 };
 
 export default function AISustainabilityTransformation2026Page() {

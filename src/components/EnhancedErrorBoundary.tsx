@@ -20,3 +20,4 @@ class EnhancedErrorBoundary extends React.Component<{ children: React.ReactNode 
   }
 }
 
+export default EnhancedErrorBoundary;

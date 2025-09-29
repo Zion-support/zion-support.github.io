@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Clock, ArrowRight, TrendingUp, Zap, Brain, Shield, Globe, Rocket } from 'lucide-react';
 
 export const metadata = {
+<<<<<<< HEAD:app/blog/ai-2026-mega-trends/page.tsx.backup.1759184329
 <<<<<<< HEAD
   title: 'AI Mega Trends 2026: The $50B+ Opportunity Reshaping Enterprise',
   description: 'Discover the 15 mega trends reshaping enterprise AI in 2026. From autonomous operations to quantum computing, learn how to capitalize on $50B+ market opportunities.',
@@ -12,12 +13,20 @@ export const metadata = {
   description: 'Discover the 15 mega trends reshaping enterprise AI in 2026. From autonomous operations to quantum computing, learn how to capitalize on $50B+ market opportunities.',
   keywords: 'AI trends 2026, enterprise AI, autonomous operations, quantum computing, AI transformation',
 >>>>>>> origin/cursor/create-and-deploy-new-content-8672
+=======
+  title: 'AI Mega Trends 2026: The $50B+ Opportunity Reshaping Enterprise',
+  description: 'Discover the 15 mega trends reshaping enterprise AI in 2026. From autonomous operations to quantum computing, learn how to capitalize on $50B+ market opportunities.',
+  keywords: 'AI trends 2026, enterprise AI, autonomous operations, quantum computing, AI market opportunities',
+>>>>>>> cursor/create-and-deploy-new-content-ff76:app/blog/ai-2026-mega-trends/page.tsx
 };
 
 export default function AIMegaTrends2026() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
+<<<<<<< HEAD:app/blog/ai-2026-mega-trends/page.tsx.backup.1759184329
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ff76:app/blog/ai-2026-mega-trends/page.tsx
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-center gap-2 mb-4">
@@ -296,6 +305,7 @@ export default function AIMegaTrends2026() {
           </Link>
         </div>
       </section>
+<<<<<<< HEAD:app/blog/ai-2026-mega-trends/page.tsx.backup.1759184329
 =======
       <div className="mb-8">
         <div className="flex items-center gap-2 mb-4">
@@ -477,6 +487,8 @@ export default function AIMegaTrends2026() {
         </div>
       </div>
 >>>>>>> origin/cursor/create-and-deploy-new-content-8672
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ff76:app/blog/ai-2026-mega-trends/page.tsx
     </div>
   );
 }

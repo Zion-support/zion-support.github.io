@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
@@ -728,17 +729,6 @@ export const AISustainabilityCaseStudyBanner = () => (
   />
 );
 
-export const NewContent2026Banner = () => (
-  <PromotionalBanner
-    message="✨ NEW 2026: Neural Architecture Optimization, Space AI Technology & Sustainability Success Stories"
-    ctaText="Discover Latest"
-    ctaLink="/blog"
-    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
-    textColor="text-white"
-    autoHide={true}
-    hideAfter={25}
-  />
-);
 
 export const AITechnologyBreakthroughBanner = () => (
   <PromotionalBanner

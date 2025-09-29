@@ -39,13 +39,13 @@ import {
   AITechnologyBreakthroughBanner,
   EnterpriseAITransformationBanner
 } from '../components/PromotionalBanner';
+import LatestContent2026Banner from '../components/LatestContent2026Banner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
-import InteractiveContentRecommendation2026 from '../components/InteractiveContentRecommendation2026';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
@@ -69,24 +69,26 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>🚀 NEW 2026 Content:</span>
-            <a to="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
+            <Link href="/blog/ai-neural-interfaces-2026" className="underline hover:text-yellow-200">Neural Interfaces</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</a>
+            <Link href="/blog/ai-space-tech-2026" className="underline hover:text-yellow-200">Space AI</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</a>
+            <Link href="/blog/ai-synthetic-data-2026" className="underline hover:text-yellow-200">Synthetic Data</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</Link>
+            <Link href="/case-studies/ai-neural-interface-healthcare-2026" className="underline hover:text-yellow-200">$15M Healthcare ROI</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</a>
+            <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</Link>
           </div>
           <Link
-            to="/blog"
+            href="/blog"
             className="bg-white text-green-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
           >
             Read the latest
           </Link>
         </div>
       </div>
+      {/* Promotional Banners */}
+      <LatestContent2026Banner />
       <NewContent2026Banner />
       <AINeuralArchitectureBanner />
       <AISpaceTechBanner />
@@ -104,6 +106,8 @@ export default function HomePage() {
       <EnterpriseTransformationSuccessBanner />
       <HealthcareTransformationBanner />
       <NewContentShowcaseBanner />
+      <AITrends2025Banner />
+      <NewServicesShowcaseBanner />
       <AIRoadmapsBanner />
       <AIFinOpsBanner />
       <AutonomousAgentsBanner />
@@ -282,9 +286,6 @@ export default function HomePage() {
       {/* Interactive Content Hub */}
       <InteractiveContentShowcase />
       
-      {/* Interactive Content Recommendations 2026 */}
-      <InteractiveContentRecommendation2026 />
-      
       {/* Interactive Content Recommendations */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -423,135 +424,6 @@ export default function HomePage() {
                     15 min read
                   </div>
                   <div className="flex items-center text-green-600 font-semibold text-sm group-hover:text-green-700 transition-colors">
-                    Read More →
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Additional Content Grid */}
-          <div className="grid md:grid-cols-3 gap-8">
-            <Link href="/blog/ai-cognitive-enterprise-2026" className="group">
-              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-purple-200 hover:scale-105">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    NEW 2026
-                  </span>
-                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    BREAKTHROUGH
-                  </span>
-                </div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm text-purple-600 font-medium">📝 Article</span>
-                  <span className="text-sm text-gray-500">Cognitive AI</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                  AI Cognitive Enterprise 2026: The Future of Intelligent Business Operations
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Discover how cognitive AI is revolutionizing enterprise operations with 95% automation efficiency and $15M+ ROI.
-                </p>
-                <div className="flex gap-4 mb-4">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-purple-600">95%</div>
-                    <div className="text-xs text-gray-500">Automation</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-purple-600">$15M+</div>
-                    <div className="text-xs text-gray-500">ROI</div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center text-sm text-gray-500">
-                    <Clock className="w-4 h-4 mr-1" />
-                    28 min read
-                  </div>
-                  <div className="flex items-center text-purple-600 font-semibold text-sm group-hover:text-purple-700 transition-colors">
-                    Read More →
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/blog/ai-space-missions-2026" className="group">
-              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    NEW 2026
-                  </span>
-                  <span className="bg-gradient-to-r from-orange-400 to-red-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    REVOLUTIONARY
-                  </span>
-                </div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm text-blue-600 font-medium">📝 Article</span>
-                  <span className="text-sm text-gray-500">Space Technology</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Space Missions 2026: Autonomous Space Operations & Deep Space Intelligence
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Revolutionary AI space technology for autonomous missions with 99.9% reliability and $500M+ savings.
-                </p>
-                <div className="flex gap-4 mb-4">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">99.9%</div>
-                    <div className="text-xs text-gray-500">Reliability</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">$500M+</div>
-                    <div className="text-xs text-gray-500">Savings</div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center text-sm text-gray-500">
-                    <Clock className="w-4 h-4 mr-1" />
-                    32 min read
-                  </div>
-                  <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
-                    Read More →
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/case-studies/ai-cognitive-enterprise-success-2026" className="group">
-              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-indigo-200 hover:scale-105">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    NEW 2026
-                  </span>
-                  <span className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    FEATURED
-                  </span>
-                </div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm text-indigo-600 font-medium">📊 Case Study</span>
-                  <span className="text-sm text-gray-500">Fortune 500</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
-                  AI Cognitive Enterprise Success 2026: $15M ROI Case Study
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  See how a Fortune 500 company achieved $15.2M ROI and 95% automation efficiency with cognitive AI.
-                </p>
-                <div className="flex gap-4 mb-4">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-indigo-600">$15.2M</div>
-                    <div className="text-xs text-gray-500">ROI</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-indigo-600">95%</div>
-                    <div className="text-xs text-gray-500">Automation</div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center text-sm text-gray-500">
-                    <Clock className="w-4 h-4 mr-1" />
-                    15 min read
-                  </div>
-                  <div className="flex items-center text-indigo-600 font-semibold text-sm group-hover:text-indigo-700 transition-colors">
                     Read More →
                   </div>
                 </div>
