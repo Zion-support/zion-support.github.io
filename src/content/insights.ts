@@ -198,8 +198,6 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
     category: "Product Analytics",
-      "A look at on‑device models, streaming pipelines, and cost/perf trade‑offs from deployments.",
-    category: "AI Engineering",
     date: "2025-09-29",
     readMinutes: 7,
   },
@@ -433,10 +431,6 @@ export const latestInsights: InsightArticle[] = [
     category: "Platform Engineering",
     date: "2025-10-05",
     readMinutes: 4,
-      "Essential security practices for AI systems, covering model protection, data privacy, and adversarial defense strategies.",
-    category: "Security",
-    date: "2025-01-21",
-    readMinutes: 11,
   },
 ];
 

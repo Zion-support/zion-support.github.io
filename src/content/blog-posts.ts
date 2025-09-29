@@ -17,9 +17,6 @@ export const blogPosts: BlogPost[] = [
     slug: "ai-risk-register-2025",
     title: "AI Risk Register: From Lists to Actionable Mitigations",
     description: "Practical templates and policy tests to turn AI risks into owned mitigations with timelines.",
-    slug: "genai-telemetry-observability-2025",
-    title: "GenAI Telemetry: What to Measure in 2025",
-    description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
     content: `
 # AI Risk Register: From Lists to Actionable Mitigations
 
@@ -207,6 +204,8 @@ Capture spans for tool calls, retries, and model routes. Attach prompt, input si
     featured: true,
     readTime: "5 min read",
     image: "/images/agent-telemetry.jpg"
+  },
+  {
     slug: "shipping-genai-safely-guardrails",
     title: "Shipping GenAI Safely: Guardrails That Don’t Slow You Down",
     description: "Layered evaluation systems with policy gates and online canaries to ship fast with confidence.",

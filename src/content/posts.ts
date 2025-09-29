@@ -428,7 +428,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: false,
     readTime: "8 min read"
-  }
+  },
   // New content additions
   {
     slug: "agentic-workflows-in-production",
@@ -530,9 +530,7 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "6 min read",
   },
- 
- 
-  ,
+
   {
     slug: "ai-risk-register-checklist-2025",
     title: "AI Risk Register Checklist: Owners, Policy Tests, Dashboards",
