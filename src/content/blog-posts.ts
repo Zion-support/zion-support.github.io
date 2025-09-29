@@ -2159,8 +2159,7 @@ Ready to implement Zero Trust security? Contact our team for a free security ass
     featured: true,
     readTime: "14 min read",
     image: "/images/zero-trust-security.jpg"
-  }
-  ,
+  },
   {
     slug: "serverless-ai-inference-cost-playbook",
     title: "Serverless AI Inference: The Cost Optimization Playbook",
@@ -2249,7 +2248,6 @@ Adopt these patterns to move fast without breaking trust.
     featured: true,
     readTime: "7 min read",
     image: "/images/ai-governance-playbook.jpg"
-  
   },
   {
     slug: "serverless-inference-cost-playbook-2025",
