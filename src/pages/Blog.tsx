@@ -1,22 +1,21 @@
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
 import {
-  Calendar,
-  User,
   ArrowRight,
-  Clock,
-  Tag,
-  TrendingUp,
-  Zap,
-  Bot,
   BarChart3,
-  Shield,
+  Bot,
+  Calendar,
+  Clock,
   Code,
   Search,
+  Shield,
+  TrendingUp,
+  User,
+  Zap
 } from "lucide-react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 interface BlogPost {
   id: number;
