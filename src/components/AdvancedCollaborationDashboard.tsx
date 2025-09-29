@@ -51,6 +51,7 @@ const AdvancedCollaborationDashboard: React.FC<AdvancedCollaborationDashboardPro
   const [showCreateSession, setShowCreateSession] = useState(false);
   const [sessionName, setSessionName] = useState('');
   const [sessionType, setSessionType] = useState<CollaborationSession['type']>('meeting');
+  // eslint-disable-next-line no-undef
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

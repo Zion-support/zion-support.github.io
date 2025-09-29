@@ -15,48 +15,6 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   // New featured posts (today)
   {
-=======
-    slug: "shipping-genai-safely-weekly",
-    title: "Ship GenAI Changes Weekly—Safely",
-    description: "Eval gates, canary cohorts, and rollback triggers that let you move fast without breaking trust.",
-    content: `# Ship GenAI Changes Weekly—Safely\n\nLayer evaluation in CI and production to keep quality high while you iterate quickly.`,
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "MLOps",
-    tags: ["GenAI", "Evals", "Guardrails"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/mlops-reliability.jpg"
-  },
-  {
-    slug: "edge-experiences-under-100ms",
-    title: "Under 100ms: Designing Edge Experiences",
-    description: "Latency budgets, on-device inference, and cache strategies for delightful real-time UX.",
-    content: `# Under 100ms: Designing Edge Experiences\n\nArchitect for perceived performance with smart caching and edge inference.`,
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Architecture",
-    tags: ["Edge", "Performance"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/edge-feature-flags.jpg"
-  },
-  {
-    slug: "north-star-metrics-that-matter",
-    title: "North‑Star Metrics That Actually Drive Product Decisions",
-    description: "Leading indicators, instrumentation plans, and governance to avoid vanity traps.",
-    content: `# North‑Star Metrics That Actually Drive Product Decisions\n\nCreate measurable outcomes that align teams and reduce ambiguity.`,
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Product Analytics",
-    tags: ["Metrics", "Product"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/north-star-metrics.jpg"
-  },
-  {
-/* CLEAN MERGE (removed conflict markers) */
->>>>>>> origin/cursor/create-and-deploy-new-content-59f6
     slug: "genai-telemetry-observability-2025",
     title: "GenAI Telemetry: What to Measure in 2025",
     description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
@@ -106,6 +64,76 @@ Use this concise pre‑launch checklist to ensure your AI features meet quality,
     featured: true,
     readTime: "5 min read",
     image: "/images/ai-product-readiness.jpg"
+=======
+    slug: "genai-evals-in-production-2025",
+    title: "GenAI Evals in Production: Policy Tests That Scale",
+    description: "From offline suites to online canaries: patterns that keep quality high as usage grows.",
+    content: `
+# GenAI Evals in Production: Policy Tests That Scale
+
+Shipping GenAI features safely requires layered evaluation: offline suites, pre-merge policy checks, and online canaries tied to business KPIs.
+
+## What To Measure
+- Response quality vs. baselines
+- Policy violations (PII, hallucinations, toxicity)
+- Drift signals and feedback rates
+
+## Rollout Controls
+- Feature flags for cohort routing
+- Auto-rollback on regression
+- Shadow traffic with red/black comparison
+
+Adopt these patterns to move fast without breaking trust.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["GenAI", "Evals", "Guardrails", "Quality"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-evals.jpg"
+  },
+  {
+    slug: "feature-flags-edge-2025",
+    title: "Feature Flags at the Edge: <100ms Global Releases",
+    description: "Consistency models, cache strategies, and validation flows for instant global rollouts.",
+    content: `
+# Feature Flags at the Edge: <100ms Global Releases
+
+Push safe experiments globally with edge caches, signed payloads, and validation circuits that prevent stale or invalid configs.
+
+## Key Patterns
+- Versioned keys + background warmup
+- Request coalescing and negative caching
+- Health probes and circuit breakers
+
+These techniques unlock reliable, real-time experimentation at scale.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Architecture",
+    tags: ["Edge", "Feature Flags", "Architecture", "CD"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-flags.jpg"
+  },
+  {
+    slug: "north-star-metrics-anti-patterns",
+    title: "North‑Star Metrics: 7 Anti‑Patterns to Avoid",
+    description: "Common traps that derail metric-driven product development and how to fix them.",
+    content: `
+# North‑Star Metrics: 7 Anti‑Patterns to Avoid
+
+Avoid vanity KPIs, ambiguous definitions, and missing instrumentation. Replace with leading indicators, event-level telemetry, and clear ownership.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Product Analytics",
+    tags: ["Metrics", "Growth", "Product"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/north-star-anti-patterns.jpg"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6717
   },
   {
     slug: "real-time-data-pipelines-2025",
