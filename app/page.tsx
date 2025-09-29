@@ -39,6 +39,7 @@ import {
   AITechnologyBreakthroughBanner,
   EnterpriseAITransformationBanner
 } from '../components/PromotionalBanner';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -78,6 +79,7 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <Revolutionary2026ContentBanner />
       <NewContent2026Banner />
       <AINeuralArchitectureBanner />
       <AISpaceTechBanner />
