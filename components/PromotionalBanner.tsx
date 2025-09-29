@@ -264,3 +264,47 @@ export const AIRevolutionBanner = () => (
     hideAfter={20}
   />
 );
+
+export const EnterpriseAITransformationBanner = () => (
+  <PromotionalBanner
+    message="🏢 NEW: Enterprise AI Transformation 2025 Guide - Achieve 300% ROI with Complete Implementation Framework"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-enterprise-transformation-2025"
+    backgroundColor="bg-gradient-to-r from-emerald-600 to-teal-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const AutonomousOperationsBanner = () => (
+  <PromotionalBanner
+    message="🤖 FEATURED: AI Autonomous Operations 2025 - Self-Healing Systems Reduce Downtime by 90%"
+    ctaText="Explore Autonomous AI"
+    ctaLink="/blog/ai-autonomous-operations-2025"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const Fortune500SuccessBanner = () => (
+  <PromotionalBanner
+    message="🏆 SUCCESS STORY: Fortune 500 Company Achieved $15M ROI in 12 Months with AI Transformation"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/enterprise-ai-transformation-success"
+    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
+    autoHide={true}
+    hideAfter={25}
+  />
+);
+
+export const NewContent2025Banner = () => (
+  <PromotionalBanner
+    message="📈 NEW CONTENT: Enterprise AI Transformation, Autonomous Operations & Fortune 500 Success Stories"
+    ctaText="Browse Latest"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
