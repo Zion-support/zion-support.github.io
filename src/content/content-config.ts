@@ -465,6 +465,15 @@ export const getRecentContent = (limit: number = 3) => {
   ];
   
   return allContent
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .sort((a, b) => {
+      const getDate = (item: typeof allContent[number]): number => {
+        if ((item as any).date) {
+          const parsed = new Date((item as any).date).getTime();
+          return Number.isNaN(parsed) ? 0 : parsed;
+        }
+        return 0;
+      };
+      return getDate(b) - getDate(a);
+    })
     .slice(0, limit);
 };

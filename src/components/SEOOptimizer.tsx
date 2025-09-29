@@ -2,8 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   keywords?: string;
   canonicalUrl?: string;
   ogImage?: string;
@@ -14,8 +14,8 @@ interface SEOOptimizerProps {
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title,
-  description,
+  title = 'Zion Tech Group - Leading AI & Technology Solutions',
+  description = 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
   keywords,
   canonicalUrl,
   ogImage = '/api/placeholder/1200/630',

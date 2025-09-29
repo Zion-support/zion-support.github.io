@@ -54,6 +54,11 @@ class AccessibilityEnhancer {
     this.observeAccessibility();
   }
 
+  // Added for compatibility with callers that expect an initialize() method
+  public initialize(): void {
+    this.init();
+  }
+
   private setupKeyboardNavigation(): void {
     if (!this.config.keyboardNavigation) return;
 
