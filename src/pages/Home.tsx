@@ -34,6 +34,8 @@ import NewContentShowcase2025 from "../components/NewContentShowcase2025";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
+import NewContent2025Banner from "../components/NewContent2025Banner";
+import NewServices2025Banner from "../components/NewServices2025Banner";
 import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
@@ -306,6 +308,20 @@ const Home = () => {
 
         {/* New Content Showcase 2025 */}
         <NewContentShowcase2025 />
+
+        {/* New Content 2025 Banner */}
+        <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
+          <div className="container mx-auto px-6">
+            <NewContent2025Banner variant="hero" showCount={6} autoRotate={true} />
+          </div>
+        </section>
+
+        {/* New Services 2025 Banner */}
+        <section className="py-20 bg-gradient-to-r from-emerald-50 to-teal-50">
+          <div className="container mx-auto px-6">
+            <NewServices2025Banner variant="premium" showCount={4} featuredOnly={true} />
+          </div>
+        </section>
 
         {/* New Services Showcase */}
         <section className="py-20 bg-white relative overflow-hidden">
