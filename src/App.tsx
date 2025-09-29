@@ -13,11 +13,6 @@ import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import SEOOptimizer from './components/SEOOptimizer';
-import AdvancedAnalytics from './components/AdvancedAnalytics';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import NotificationSystem from './components/NotificationSystem';
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};
@@ -138,13 +133,13 @@ export default function App(): React.JSX.Element {
   }, []);
 
   return (
-    <EnhancedErrorBoundary>
+    <>
       <SEOOptimizer
         title={seoDataForOptimizer.title}
         description={seoDataForOptimizer.description}
         canonicalUrl={new URL(seoDataForOptimizer.canonical).pathname}
       />
-      <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
+      <Placeholder name="AdvancedAnalytics" />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
 
@@ -155,7 +150,7 @@ export default function App(): React.JSX.Element {
                 <h2 className="text-2xl font-bold">Performance Optimizer</h2>
                 <button onClick={() => setShowPerformanceOptimizer(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
               </div>
-              <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
+              <Placeholder name="PerformanceOptimizer" />
             </div>
           </div>
         )}
@@ -167,13 +162,13 @@ export default function App(): React.JSX.Element {
                 <h2 className="text-2xl font-bold">Performance Monitor</h2>
                 <button onClick={() => setShowPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
               </div>
-              <PerformanceMonitor showDashboard={true} />
+              <Placeholder name="PerformanceMonitor" />
             </div>
           </div>
         )}
 
-        <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
+        <></>
       </div>
-    </EnhancedErrorBoundary>
+    </>
   );
 }
