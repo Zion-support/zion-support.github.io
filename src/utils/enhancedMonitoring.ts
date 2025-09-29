@@ -162,35 +162,6 @@ class EnhancedMonitoring {
     });
 
     // Resource loading error handler
-<<<<<<< HEAD
-    window.addEventListener(
-      "error",
-      (event) => {
-        if (event.target !== window) {
-          const target = event.target as HTMLElement;
-          this.trackError({
-            message: `Failed to load resource: ${target.tagName}`,
-            url:
-              (target as HTMLImageElement).src ||
-              (target as HTMLLinkElement).href ||
-              window.location.href,
-            timestamp: Date.now(),
-            userAgent: navigator.userAgent,
-            sessionId: this.sessionId,
-            userId: this.userId,
-            severity: "medium",
-            category: "resource",
-            context: {
-              tagName: target.tagName,
-              src: (target as HTMLImageElement).src,
-              href: (target as HTMLLinkElement).href,
-            },
-          });
-        }
-      },
-      true,
-    );
-=======
     window.addEventListener('error', (event) => {
       if (event.target !== window) {
         const target = event.target as HTMLElement;
@@ -211,7 +182,6 @@ class EnhancedMonitoring {
         });
       }
     }, true);
->>>>>>> 560fc59d9c785b60bacd032c96f8fbb6b417bd56
   }
 
   private setupPerformanceMonitoring(): void {
@@ -257,23 +227,11 @@ class EnhancedMonitoring {
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-<<<<<<< HEAD
-          if (
-            !(entry as PerformanceEntry & { hadRecentInput?: boolean })
-              .hadRecentInput
-          ) {
-            this.trackPerformance({
-              name: "CLS",
-              value:
-                (entry as PerformanceEntry & { value?: number }).value || 0,
-              type: "measure",
-=======
           if (!(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
             this.trackPerformance({
               name: 'CLS',
               value: (entry as PerformanceEntry & { value?: number }).value || 0,
               type: 'measure',
->>>>>>> 560fc59d9c785b60bacd032c96f8fbb6b417bd56
               url: window.location.href,
               sessionId: this.sessionId,
               userId: this.userId,

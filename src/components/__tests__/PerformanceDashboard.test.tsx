@@ -42,9 +42,6 @@ jest.mock("../../utils/advancedPerformanceMonitor", () => ({
   },
 }));
 
-<<<<<<< HEAD
-describe("PerformanceDashboard", () => {
-=======
 // Mock bundleOptimizer
 jest.mock('../../utils/bundleOptimizer', () => ({
   bundleOptimizer: {
@@ -71,7 +68,6 @@ jest.mock('../../utils/bundleOptimizer', () => ({
 }));
 
 describe('PerformanceDashboard', () => {
->>>>>>> 560fc59d9c785b60bacd032c96f8fbb6b417bd56
   beforeEach(() => {
     // Mock performance API
     Object.defineProperty(window, "performance", {
@@ -92,20 +88,12 @@ describe('PerformanceDashboard', () => {
     });
   });
 
-<<<<<<< HEAD
-  it("renders dashboard when visible", () => {
-    render(<PerformanceDashboard isVisible={true} />);
-
-    expect(screen.getByText("Performance Dashboard")).toBeInTheDocument();
-    expect(screen.getByText("Web Vitals")).toBeInTheDocument();
-=======
   it('renders dashboard when visible', async () => {
     render(<PerformanceDashboard isVisible={true} />);
     
     await waitFor(() => {
       expect(screen.getByText('Performance Dashboard')).toBeInTheDocument();
     });
->>>>>>> 560fc59d9c785b60bacd032c96f8fbb6b417bd56
   });
 
   it("does not render when not visible", () => {
@@ -122,15 +110,6 @@ describe('PerformanceDashboard', () => {
     });
   });
 
-<<<<<<< HEAD
-  it("shows close button when onClose prop is provided", () => {
-    const mockOnClose = jest.fn();
-    render(<PerformanceDashboard isVisible={true} onClose={mockOnClose} />);
-
-    const closeButton = screen.getByRole("button", { name: /close/i });
-    expect(closeButton).toBeInTheDocument();
-
-=======
   it('shows close button when onClose prop is provided', async () => {
     const mockOnClose = jest.fn();
     render(<PerformanceDashboard isVisible={true} onClose={mockOnClose} />);
@@ -141,24 +120,16 @@ describe('PerformanceDashboard', () => {
     });
     
     const closeButton = screen.getByRole('button', { name: '×' });
->>>>>>> 560fc59d9c785b60bacd032c96f8fbb6b417bd56
     fireEvent.click(closeButton);
     expect(mockOnClose).toHaveBeenCalled();
   });
 
-<<<<<<< HEAD
-  it("displays monitoring status", () => {
-    render(<PerformanceDashboard isVisible={true} />);
-
-    expect(screen.getByText("Performance Tips")).toBeInTheDocument();
-=======
   it('displays monitoring status', async () => {
     render(<PerformanceDashboard isVisible={true} />);
     
     await waitFor(() => {
       expect(screen.getByText('Optimization Strategies')).toBeInTheDocument();
     });
->>>>>>> 560fc59d9c785b60bacd032c96f8fbb6b417bd56
   });
 
   it("has proper accessibility attributes", () => {

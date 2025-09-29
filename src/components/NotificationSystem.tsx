@@ -25,11 +25,6 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
     Notification[]
   >([]);
 
-<<<<<<< HEAD
-  useEffect(() => {
-    setVisibleNotifications(notifications);
-  }, [notifications]);
-=======
   const addNotification = useCallback((notification: Omit<Notification, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
     const newNotification = { ...notification, id };
@@ -63,7 +58,6 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
       clear: clearAll
     };
   }, [addNotification, removeNotification, clearAll]);
->>>>>>> 560fc59d9c785b60bacd032c96f8fbb6b417bd56
 
   const handleRemove = useCallback(
     (id: string) => {
