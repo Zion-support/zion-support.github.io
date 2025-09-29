@@ -51,7 +51,9 @@ import {
   Latest2026ContentBanner as NewLatest2026ContentBanner,
   AIAutonomousCloudOpsBanner,
   AIFinTechTransformationBanner,
-  AIRetailAutomationBanner
+  AIRetailAutomationBanner,
+  AIAutonomousDevOpsBanner,
+  AICybersecurityEnterpriseBanner
 } from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
@@ -97,6 +99,8 @@ export default function HomePage() {
       </div>
       {/* Promotional Banners */}
       <LatestContent2026Banner />
+      <AIAutonomousDevOpsBanner />
+      <AICybersecurityEnterpriseBanner />
       <AISecurityEnterprise2026Banner />
       <AIMultimodalEnterprise2026Banner />
       <AISustainabilityTransformationBanner />
