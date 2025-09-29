@@ -44,6 +44,7 @@ interface ErrorReport {
     errorTrends: Array<{ category: string; trend: string }>;
   } | null>(null);
   const [errorReports, setErrorReports] = useState<ErrorReport[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
       };
 

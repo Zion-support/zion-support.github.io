@@ -96,9 +96,6 @@ class EnhancedPerformanceMonitor {
     }
   }
 
-    }
-  }
-
   private monitorUserInteractions(): void {
     // Monitor click events
     document.addEventListener('click', (event) => {
@@ -233,5 +230,5 @@ export const enhancedPerformanceMonitor = new EnhancedPerformanceMonitor();
 
 // Auto-initialize
 if (typeof window !== 'undefined') {
-  enhancedPerformanceMonitor.initialize();
+  // enhancedPerformanceMonitor.initialize(); // Method doesn't exist
 }
