@@ -4,7 +4,8 @@ import globals from "globals";
 import tseslint from "typescript-eslint";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
-import cypressPlugin from "eslint-plugin-cypress/flat"; // Corrected import for flat config
+// Temporarily disable Cypress plugin to avoid missing dependency during CI
+// import cypressPlugin from "eslint-plugin-cypress/flat";
 
 // Cleaned global objects
 const browserGlobals = Object.fromEntries(
@@ -17,39 +18,17 @@ const serviceWorkerGlobals = Object.fromEntries(
   Object.entries(globals.serviceworker).map(([key, value]) => [key.trim(), value])
 );
 
-
 export default [
-  // 1. Global Ignores
   {
     ignores: [
-<<<<<<< HEAD
-      "dist/",
-      "node_modules/",
-      "**/*.config.js", // Ignores this file, tailwind.config.js, etc.
-      // "*.config.ts", // Handled by specific tsconfig below if needed
-      "extension/",
-      "supabase/functions/_shared/",
-      "playwright.config.ts",
-      "jest.config.js",
-      "scripts/",
-      "coverage/",
-      "*.d.ts", // Typically declaration files don't need linting
-    ],
-=======
       'dist/**',
       'node_modules/**',
-      '*.config.js',
-      '*.config.ts',
-      'public/**',
-      'backup/**',
-      'backup-pages/**',
-      'backup-merge-conflicts/**',
-      'src.corrupted/**',
-      'backup-problematic-files/**',
-      'src.disabled/**',
-      'src.pages.disabled/**',
-      'automation/**',
-      'temp_broken_files/**',
+      'dist/**',
+      'build/**',
+      '.next/**',
+      'out/**',
+      'coverage/**',
+      '*.config.*',
       'cypress/**',
       '**/backup-problematic-files/**',
       '**/src.disabled/**',
@@ -66,33 +45,14 @@ export default [
       '**/data.disabled/**',
       '**/automation_backup/**',
       '**/broken_files_backup/**',
-      '**/pages/**',
-      '**/store/**',
-      // Keep utils lintable for CI
-      '**/tests/**',
       '**/vite.config-backup.*',
-      '**/test-simple.*',
       '**/*.disabled.*',
       '**/*.backup.*',
       '**/*.broken.*',
       '**/*.corrupted.*',
       '**/*.temp.*',
-      '**/*.disabled/**',
-      '**/*.backup/**',
-      '**/*.broken/**',
-      '**/*.corrupted/**',
-      '**/*.temp/**',
-      'jest.setup.js',
-      // Exclude problematic components and router from CI linting
-      'src/components/FeaturedContentShowcase.tsx',
-      'src/components/Header.tsx',
-      'src/router.tsx',
-      // Temporarily ignore files with unresolved advanced references
-      'src/App.tsx',
-      'src/components/AdvancedCollaborationDashboard.tsx',
-      'src/components/EnhancedContactForm.tsx'
+      'jest.setup.js'
     ]
->>>>>>> origin/main
   },
 
   // 2. Base Configuration for JavaScript files
@@ -294,34 +254,5 @@ export default [
       // Specific to Cypress tests, might not need strict method binding
       "@typescript-eslint/unbound-method": "off", 
     }
-  }),
-
-  // Cypress Global Configuration (Plugin for JS and TS files)
-  // This spread should bring in necessary plugins, rules, and languageOptions (globals)
-  {
-    files: ["cypress/**/*.{js,ts,tsx}"], // Target all Cypress files
-    ...cypressPlugin.configs.recommended, // Spread the recommended config
-    // Add any custom overrides *after* spreading the recommended config
-    // For example, if you need to override a specific rule:
-    rules: {
-      ...cypressPlugin.configs.recommended.rules, // Start with recommended rules
-      // "some-cypress-rule-to-override": "off", // Example override
-      // Ensure TS overrides from the TS-specific Cypress block are respected if needed,
-      // or merge them here if this is the sole Cypress block for TS files.
-      // Given we have a separate tseslint.config for cypress TS, this block's TS rules
-      // might primarily affect JS files in Cypress or provide a base.
-    }
-  },
-  // Specific for cypress/support/commands.js if it's not a module and needs commonjs
-  // This might need to be adjusted if cypressPlugin.configs.recommended sets a default sourceType
-  {
-    files: ["cypress/support/commands.js"],
-    languageOptions: {
-        sourceType: "commonjs",
-         globals: { // Ensure Cypress globals are also here
-          ...(cypressPlugin.configs.recommended.languageOptions?.globals || {}),
-          ...nodeGlobals, // If it uses any Node features like 'require'
-        }
-    }
-  }
+  })
 ];

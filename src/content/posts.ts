@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-incident-response-2026",
+    title: "AI Incident Response 2026: Playbooks, Canaries, and SLAs",
+    description: "Practical incident response for AI features with on-call playbooks and KPI-linked canaries.",
+    category: "AI Operations",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "platform-observability-scorecards-2026",
+    title: "Platform Observability Scorecards: Tie Telemetry to Business Outcomes",
+    description: "Connect traces, errors, and latency to adoption, retention, and revenue with actionable scorecards.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-preserving-rag-2026",
+    title: "Privacy‑Preserving RAG: Redaction, Scoping, and Audit Trails",
+    description: "Protect sensitive data in RAG with redaction, auth‑scoped corpora, and audit trails.",
+    category: "AI Security",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-platform-roi-2025",
     title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
     description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",
@@ -64,6 +91,33 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   }
   ,
+  {
+    slug: "ai-operational-scorecards-2026",
+    title: "AI Operational Scorecards 2026: Guardrails That Drive Outcomes",
+    description: "From policy to practice: PR checks, canaries, and SLOs that teams adopt.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-llm-caching-blueprint-2025",
+    title: "Edge LLM Caching: Latency Budgets, KV Patterns, and Cost Control",
+    description: "Sub-100ms prompts with signed configs, tiered caches, and freshness windows.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agentic-workflows-blueprint-2026",
+    title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Policy Tests",
+    description: "Composable tools, deterministic routes, and observability that keep agents reliable.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
   {
     slug: "ai-governance-blueprint-2025",
     title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
@@ -149,6 +203,33 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: false,
     readTime: "6 min read",
+  },
+  {
+    slug: "llm-policy-testing-2025",
+    title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
+    description: "Automate governance with lightweight policy tests on every PR and release train.",
+    category: "AI Governance",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "finops-scorecards-2025",
+    title: "FinOps Scorecards: Guardrails Engineers Actually Use",
+    description: "Budgets, PR checks, and alerts that cut cloud waste 25–40% without slowing teams.",
+    category: "Cloud",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "enterprise-rag-blueprint-2025",
+    title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, Auth",
+    description: "A pragmatic blueprint for RAG at scale with freshness windows and layered evals.",
+    category: "GenAI",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "9 min read"
   }
 ];
 
