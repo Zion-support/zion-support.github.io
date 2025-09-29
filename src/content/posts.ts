@@ -10,8 +10,13 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
     slug: "ai-governance-risk-playbook-2025",
     title: "AI Governance Risk Playbook 2025: Practical Controls That Work",
+=======
+    slug: "ai-product-launch-checklist-2025",
+    title: "AI Product Launch Checklist: From Pilot to Production",
+>>>>>>> cursor/create-and-deploy-new-content-a1d5
     description:
       "Actionable controls, approval flows, and monitoring that keep GenAI initiatives safe and compliant.",
     category: "AI Governance",
@@ -88,6 +93,26 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "9 min read",
+  },
+  {
+    slug: "genai-telemetry-metrics-2025",
+    title: "GenAI Telemetry: 8 Metrics That Predict Drift",
+    description:
+      "Capture inputs, policies, and feedback to detect regressions before users do.",
+    category: "MLOps",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "5 min read",
+  },
+  {
+    slug: "feature-flags-edge-realtime",
+    title: "Real‑Time Feature Flags at the Edge",
+    description:
+      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
+    category: "Architecture",
+    publishedAt: "2025-09-28",
+    featured: false,
+    readTime: "6 min read",
   },
   {
     slug: "genai-guardrails-in-the-wild",
