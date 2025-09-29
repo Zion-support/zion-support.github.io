@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "agent-release-checklists-2025",
+    title: "Agent Release Checklists: Ship Fast Without Surprises",
+    description: "Budget risky actions, add PR checks, and bake rollback triggers into every agent release.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "kpi-linked-canaries-2025",
+    title: "KPI‑Linked Canaries: Evals That Protect Velocity",
+    description: "Wire online canaries to KPIs so teams ship weekly without regressions or surprise costs.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
     description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",

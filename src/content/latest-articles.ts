@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "agent-release-checklists-2025",
+    slug: "agent-release-checklists-2025",
+    title: "Agent Release Checklists: Ship Fast Without Surprises",
+    description: "Budget risky actions, add PR checks, and bake rollback triggers into every agent release.",
+    excerpt: "A pragmatic checklist for reliable agent releases with budgets, tests, and rollbacks.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Engineering",
+    tags: ["Agents", "Release", "Guardrails"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/agent-release-checklists-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "kpi-linked-canaries-2025",
+    slug: "kpi-linked-canaries-2025",
+    title: "KPI‑Linked Canaries: Evals That Protect Velocity",
+    description: "Wire online canaries to KPIs so teams ship weekly without regressions or surprise costs.",
+    excerpt: "Set up lightweight, KPI‑aligned canaries that catch issues early and keep teams fast.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Governance",
+    tags: ["Canaries", "Evals", "KPIs"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/kpi-linked-canaries-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "secure-ml-supply-chain-2026",
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
