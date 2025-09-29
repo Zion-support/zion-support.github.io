@@ -14,6 +14,15 @@ const InteractiveNavigation: React.FC = () => {
             <Link href="/services">
               <span className="text-gray-600 hover:text-gray-900 transition-colors">Services</span>
             </Link>
+            <Link href="/blockchain-solutions">
+              <span className="text-gray-600 hover:text-gray-900 transition-colors">Blockchain</span>
+            </Link>
+            <Link href="/iot-platforms">
+              <span className="text-gray-600 hover:text-gray-900 transition-colors">IoT Solutions</span>
+            </Link>
+            <Link href="/blog">
+              <span className="text-gray-600 hover:text-gray-900 transition-colors">Blog</span>
+            </Link>
             <Link href="/about">
               <span className="text-gray-600 hover:text-gray-900 transition-colors">About</span>
             </Link>
