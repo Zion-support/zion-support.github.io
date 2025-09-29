@@ -279,7 +279,7 @@ class EnhancedPerformanceOptimizer {
       observer.observe(img);
     });
 
-    this.intersectionObservers.push(observer);
+    this.observers.push(observer as any);
   }
 
   /**

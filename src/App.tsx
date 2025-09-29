@@ -290,7 +290,7 @@ export default function App(): React.JSX.Element {
     
     // Initialize new enhancement utilities
     console.log('Initializing performance enhancements...');
-    // performanceEnhancer.initialize(); // Initialize is called in constructor
+    // performanceEnhancer.initialize(); // Private method, removing call
     performanceEnhancer.optimizeBundle();
     performanceEnhancer.preloadResource('/static/js/main.js', 'script');
     
