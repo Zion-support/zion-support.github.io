@@ -132,6 +132,9 @@ const Home = () => {
           title="📚 New Series: Ship Faster with Guardrails"
           description="AI roadmaps, ML SBOM automation, and online eval canaries now live."
           ctaText="See what's new"
+          title="🚀 NEW THIS WEEK: LLM Blue/Green Evals, Agent Observability, Real‑Time Feature Stores"
+          description="Ship LLM updates safely, get deep agent telemetry, and keep features fresh without breaking budgets."
+          ctaText="Read the latest"
           ctaLink="/blog"
           dismissible={true}
         />
@@ -844,6 +847,16 @@ const Home = () => {
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-rose-200 mb-1">Security</div>
                   <div className="font-semibold text-white">Secure ML Supply Chain</div>
+                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
+                  <div className="font-semibold text-white">Blue/Green for LLMs: Evals as Release Gates</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-blue-200 mb-1">GenAI</div>
+                  <div className="font-semibold text-white">Agent Observability: Traces, Tokens, Outcomes</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-rose-200 mb-1">Data Engineering</div>
+                  <div className="font-semibold text-white">Real‑Time Feature Stores That Don’t Break the Bank</div>
                 </div>
               </div>
             </div>
