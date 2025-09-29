@@ -144,6 +144,39 @@ export const latestArticles: LatestArticle[] = [
     newBadge: false,
     trending: true
   }
+  ,
+  {
+    id: "ai-governance-blueprint-2025",
+    slug: "ai-governance-blueprint-2025",
+    title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
+    description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.",
+    excerpt: "Move beyond slideware: adopt scorecards, policy tests, and measurable guardrails that accelerate delivery while satisfying risk.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Strategy",
+    tags: ["AI Governance", "Policy", "Risk", "Compliance", "Scorecards"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/ai-governance-blueprint.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-guardrails-realtime-2025",
+    slug: "genai-guardrails-realtime-2025",
+    title: "Real‑Time GenAI Guardrails: Inline Filters, Canaries, and Evals",
+    description: "Run fast with live canaries, inline moderation, and KPI‑linked evals that prevent regressions.",
+    excerpt: "A field guide to guardrails that actually work in production without blocking velocity.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["Guardrails", "Evals", "Safety", "Observability", "GenAI"],
+    featured: false,
+    readTime: "8 min read",
+    image: "/images/genai-guardrails.jpg",
+    newBadge: true,
+    trending: false
+  }
 ];
 
 export const featuredArticles = latestArticles.filter(article => article.featured);

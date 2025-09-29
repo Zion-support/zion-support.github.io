@@ -19,18 +19,18 @@ import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
+import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
+import NewContentAnnouncement from "../components/NewContentAnnouncement";
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
+import NewServicesShowcase from "../components/NewServicesShowcase";
+import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
 import { latestInsights } from "../content/insights";
 import { featuredInsights, newInsights } from "../content/new-insights";
 import { posts } from "../content/posts";
-import NewServicesShowcase from "../components/NewServicesShowcase";
-import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
-import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
-import NewContentAnnouncement from "../components/NewContentAnnouncement";
 
 const Home = () => {
   return (
@@ -117,10 +117,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: AI Platform ROI + Edge AI Latency Budgets"
-          description="New: ROI scorecards, secure ML supply chain, Enterprise RAG v2, and more."
-          ctaText="Read the latest"
-          ctaLink="/blog/ai-platform-roi-2025"
+          title="📚 New: AI Governance Blueprint 2025"
+          description="Practical guardrails that ship: scorecards, policy tests, and change‑control."
+          ctaText="Read now"
+          ctaLink="/blog/ai-governance-blueprint-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
