@@ -127,10 +127,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: GenAI Platform Blueprint + Hybrid Vector Search"
-          description="Ship weekly with guardrails. Cut retrieval cost 40%+ with hybrid and freshness."
-          ctaText="Read the latest"
-          ctaLink="/blog/genai-platform-blueprint-2025"
+          title="📚 New Series: Ship Faster with Guardrails"
+          description="AI roadmaps, ML SBOM automation, and online eval canaries now live."
+          ctaText="See what's new"
+          ctaLink="/blog"
           dismissible={true}
         />
         {/* Animated background elements */}

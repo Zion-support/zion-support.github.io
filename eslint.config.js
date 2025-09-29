@@ -10,13 +10,6 @@ export default [
   // Global ignores
   {
     ignores: [
-<<<<<<< HEAD
-      // Consolidated ignore list (resolved merge conflict)
-      'dist/**',
-      'node_modules/**',
-      '**/*.config.js',
-      '*.config.ts',
-=======
       'dist/**',
       'node_modules/**',
       '**/*.config.js',
@@ -102,7 +95,6 @@ export default [
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
-      // Disable type-aware rules since parserOptions.project is not set
       "@typescript-eslint/no-unsafe-assignment": "off",
       "@typescript-eslint/no-unsafe-member-access": "off",
       "@typescript-eslint/no-unsafe-call": "off",
@@ -177,86 +169,9 @@ export default [
       "stories/**/*.stories.tsx",
       "stories/**/*.stories.ts", // Added .ts stories
     ],
-<<<<<<< HEAD
     extends: [...tseslint.configs.recommended],
     languageOptions: {
       parserOptions: {},
-=======
-  },
-  {
-    files: ["**/*.{js,cjs,mjs}"],
-    rules: js.configs.recommended.rules,
-    languageOptions: {
-      sourceType: "commonjs",
-      globals: { ...nodeGlobals },
-    },
-  },
-  {
-    files: ["**/*.{ts,tsx}"],
-    languageOptions: {
-      parser: tsParser,
-      parserOptions: {
-        ecmaVersion: 2020,
-        sourceType: "module",
-        ecmaFeatures: { jsx: true },
-      },
->>>>>>> origin/main
-      globals: { ...browserGlobals },
-    },
-    plugins: { "react-hooks": reactHooks, "react-refresh": reactRefresh },
-    rules: {
-      ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
-    },
-  },
-  {
-    files: ["api/**/*.js", "pages/api/**/*.js", "src/utils/setupAnalyticsTables.js"],
-    languageOptions: { sourceType: "module", globals: { ...nodeGlobals } },
-  },
-  {
-    files: ["public/service-worker.js"],
-    languageOptions: { globals: { ...serviceWorkerGlobals } },
-  },
-  {
-    files: ["src/**/*.{ts,tsx}", "pages/**/*.{ts,tsx}"],
-    languageOptions: {
-      globals: { ...browserGlobals },
-    },
-    plugins: { "react-hooks": reactHooks, "react-refresh": reactRefresh },
-    rules: {
-      ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
-    },
-  },
-  {
-    files: ["vite.config.ts", "tailwind.config.ts", "cypress.config.ts", "vitest.config.ts"],
-    languageOptions: {
-      globals: { ...nodeGlobals },
-    },
-  },
-  {
-    files: ["__tests__/**/*.{ts,tsx}"],
-    languageOptions: {
-      globals: { ...globals.jest, ...browserGlobals },
-    },
-  },
-  {
-    files: ["tests/**/*.{ts,tsx,js,jsx}"],
-    ignores: ["tests/e2e/**"],
-    languageOptions: {
-      globals: { ...globals.jest, ...browserGlobals },
-    },
-  },
-  {
-    files: [
-      ".storybook/**/*.ts",
-      ".storybook/**/*.tsx",
-      "src/**/*.stories.tsx",
-      "src/**/*.stories.ts",
-      "stories/**/*.stories.tsx",
-      "stories/**/*.stories.ts",
-    ],
-    languageOptions: {
       globals: { ...browserGlobals },
     },
     rules: {
@@ -266,7 +181,6 @@ export default [
   },
   {
     files: ["supabase/functions/**/*.ts"],
-<<<<<<< HEAD
     extends: [...tseslint.configs.recommended],
     languageOptions: {
       parserOptions: {},
@@ -287,7 +201,7 @@ export default [
   // Cypress TypeScript Configuration
   ...tseslint.config({
     files: ["cypress/**/*.ts", "cypress/**/*.tsx"], // Target Cypress TS files
-    extends: [...tseslint.configs.recommended], // Non type-aware
+    extends: [...tseslint.configs.recommended], // Use non-type-aware to avoid parserOptions.project issues
     languageOptions: {
       parserOptions: {},
       globals: { // Cypress globals are typically provided by the plugin below

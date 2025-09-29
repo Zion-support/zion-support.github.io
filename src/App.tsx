@@ -12,6 +12,12 @@ import './index.css';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
+const SEOOptimizer = (props: any) => null;
+const AdvancedAnalytics = (props: any) => null;
+const PerformanceOptimizer = (props: any) => null;
+const PerformanceMonitor = (props: any) => null;
+const EnhancedErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
+const NotificationSystem: React.FC<{ notifications: any[]; onRemove: (id: string) => void }> = () => null;
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};

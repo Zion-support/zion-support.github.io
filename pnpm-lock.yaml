@@ -94,7 +94,7 @@ importers:
         specifier: ^9.15.0
         version: 9.36.0(jiti@2.6.0)
       eslint-plugin-cypress:
-        specifier: ^3.6.0
+        specifier: 3.6.0
         version: 3.6.0(eslint@9.36.0(jiti@2.6.0))
       eslint-plugin-react:
         specifier: ^7.37.2
@@ -106,13 +106,8 @@ importers:
         specifier: ^0.4.14
         version: 0.4.22(eslint@9.36.0(jiti@2.6.0))
       globals:
-<<<<<<< HEAD
-        specifier: ^15.15.0
-        version: 15.15.0
-=======
-        specifier: ^16.4.0
-        version: 16.4.0
->>>>>>> origin/main
+        specifier: 13.24.0
+        version: 13.24.0
       identity-obj-proxy:
         specifier: ^3.0.0
         version: 3.0.0
@@ -150,7 +145,7 @@ importers:
         specifier: ^5.7.2
         version: 5.9.2
       typescript-eslint:
-        specifier: ^8.44.1
+        specifier: 8.44.1
         version: 8.44.1(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2)
       vite:
         specifier: ^6.0.1
