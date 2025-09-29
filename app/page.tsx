@@ -38,6 +38,7 @@ import {
 =======
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import { NewContent2026PromotionalBanners } from '../components/NewContent2026PromotionalBanners';
+import AutonomousEnterprisePromoBanner from '../components/AutonomousEnterprisePromoBanner';
 >>>>>>> cursor/create-and-deploy-new-content-9df8
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
@@ -123,6 +124,9 @@ export default function HomePage() {
       
       {/* New Content Promotional Banners */}
       <NewContent2026PromotionalBanners />
+      
+      {/* Autonomous Enterprise Promo Banner */}
+      <AutonomousEnterprisePromoBanner />
       
 >>>>>>> cursor/create-and-deploy-new-content-9df8
       
@@ -251,25 +255,24 @@ export default function HomePage() {
 
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-100 to-red-100 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">🏆</span>
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">⚛️</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">$25M Success Story</h3>
-                  <p className="text-sm text-gray-500">Fortune 500 case study</p>
+                  <h3 className="text-xl font-bold text-gray-900">AI Quantum Computing 2026</h3>
+                  <p className="text-sm text-gray-500">Next-gen intelligence</p>
                 </div>
               </div>
               <p className="text-gray-600 mb-4">
-                See how a Fortune 500 manufacturing company achieved $25M ROI with AI autonomous enterprise transformation. 
-                99.9% uptime, 90% cost reduction, and complete business revolution.
+                Harness quantum computing for AI breakthroughs with 1000x faster optimization, revolutionary capabilities, and 95% accuracy.
               </p>
               <div className="flex items-center justify-between">
-                <div className="text-sm text-gray-500">30 min read</div>
+                <div className="text-sm text-gray-500">25 min read</div>
                 <Link
-                  href="/case-studies/ai-autonomous-enterprise-success-2026"
-                  className="text-orange-600 font-semibold hover:text-orange-700 transition-colors"
+                  href="/blog/ai-quantum-computing-2026"
+                  className="text-purple-600 font-semibold hover:text-purple-700 transition-colors"
                 >
-                  View Success Story →
+                  Read Quantum Guide →
                 </Link>
               </div>
             </div>
@@ -480,7 +483,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/case-studies/ai-sustainability-transformation-2026" className="group">
+            <Link to="/case-studies/ai-autonomous-enterprise-success-2026" className="group">
               <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -492,28 +495,28 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-sm text-blue-600 font-medium">📊 Case Study</span>
-                  <span className="text-sm text-gray-500">Sustainability</span>
+                  <span className="text-sm text-gray-500">Fortune 500</span>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Sustainability Transformation 2026: $10M ROI Case Study
+                  AI Autonomous Enterprise Success 2026: $25M ROI Case Study
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  See how a Fortune 500 company achieved carbon neutrality and $10M ROI with comprehensive AI sustainability transformation.
+                  See how a Fortune 500 manufacturing company achieved $25M ROI with AI autonomous enterprise transformation. 99.9% uptime, 90% cost reduction.
                 </p>
                 <div className="flex gap-4 mb-4">
                   <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">$10M</div>
+                    <div className="text-lg font-bold text-blue-600">$25M</div>
                     <div className="text-xs text-gray-500">ROI</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">100%</div>
-                    <div className="text-xs text-gray-500">Carbon Neutral</div>
+                    <div className="text-lg font-bold text-blue-600">99.9%</div>
+                    <div className="text-xs text-gray-500">Uptime</div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-gray-500">
                     <Clock className="w-4 h-4 mr-1" />
-                    15 min read
+                    30 min read
                   </div>
                   <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
                     Read More →

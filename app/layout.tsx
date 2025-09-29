@@ -43,8 +43,18 @@ function Header() {
         <div className="hidden md:flex gap-6">
           <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
           <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
-          <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">Blog</Link>
-          <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">Case Studies</Link>
+          <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors relative group">
+            Blog
+            <span className="absolute -top-2 -right-2 bg-gradient-to-r from-green-500 to-blue-500 text-white text-xs px-2 py-1 rounded-full font-semibold">
+              NEW 2026
+            </span>
+          </Link>
+          <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors relative group">
+            Case Studies
+            <span className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs px-2 py-1 rounded-full font-semibold">
+              $25M ROI
+            </span>
+          </Link>
           <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
         </div>
         <button className="md:hidden p-2" aria-label="Toggle menu">
@@ -73,12 +83,12 @@ function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Content</h3>
+            <h3 className="font-semibold text-gray-900 mb-3">Latest Content</h3>
             <div className="space-y-2">
               <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors">Blog</Link>
-              <Link href="/blog/ai-autonomous-cloud-ops-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Autonomous Ops</Link>
-              <Link href="/blog/ai-fintech-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">FinTech Transformation</Link>
-              <Link href="/case-studies/ai-retail-automation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Retail Case Study</Link>
+              <Link href="/blog/ai-autonomous-enterprise-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Autonomous Enterprise 2026</Link>
+              <Link href="/blog/ai-quantum-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Quantum Computing 2026</Link>
+              <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">$25M ROI Case Study</Link>
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors">All Case Studies</Link>
             </div>
           </div>
