@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-governance-maturity-model-2026",
+    title: "AI Governance Maturity Model 2026: From Ad‑Hoc to Audit‑Ready",
+    description: "Move from ad‑hoc controls to audit‑ready AI governance with scorecards and KPIs.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "ai-customer-data-platforms-2026",
+    title: "AI Customer Data Platforms 2026: Real‑Time Personalization at Scale",
+    description: "Blueprint for AI‑native CDPs powering privacy‑safe, sub‑second personalization.",
+    category: "Architecture",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-llm-latency-patterns",
+    title: "Edge LLM Latency Patterns: Sub‑200ms Interactions",
+    description: "Streaming, prefetch, and edge compute patterns for instant‑feel AI UX.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-reliable-rag-ops-2026",
     title: "Reliable RAG Ops 2026: Freshness Windows, Drift Alerts, Budgets",
     description: "Keep RAG quality high with TTL windows, drift detectors, and KPI‑tied quality budgets.",

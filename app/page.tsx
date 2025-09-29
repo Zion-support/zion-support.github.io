@@ -53,17 +53,15 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>🚀 Latest 2026 content:</span>
+            <a href="/blog/ai-governance-maturity-model-2026" className="underline hover:text-yellow-200">Governance Maturity</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-customer-data-platforms-2026" className="underline hover:text-yellow-200">AI CDPs</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/edge-llm-latency-patterns" className="underline hover:text-yellow-200">Edge LLM Latency</a>
+            <span className="hidden md:inline">•</span>
             <a href="/blog/ai-operational-excellence-2026" className="underline hover:text-yellow-200">Operational Excellence</a>
             <span className="hidden md:inline">•</span>
             <a href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/case-studies/ai-manufacturing-transformation-2026" className="underline hover:text-yellow-200">$12M Manufacturing ROI</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-multimodal-enterprise-2026" className="underline hover:text-yellow-200">Multimodal Enterprise</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200">Enterprise Automation</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-trustworthy-agents-2026" className="underline hover:text-yellow-200">Trustworthy Agents</a>
           </div>
           <Link
             href="/blog"
