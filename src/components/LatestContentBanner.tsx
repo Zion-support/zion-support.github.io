@@ -226,6 +226,26 @@ contentHighlights.push(
     badge: "New Service",
     stats: "Production Ready",
     variant: "premium" as const
+  },
+  {
+    id: 17,
+    title: "🔒 Privacy‑First Insights 2026",
+    description: "DP telemetry with scoped IDs and redaction—signal‑rich without PII risk",
+    ctaText: "Read Guide",
+    ctaLink: "/blog/privacy-first-insights-telemetry-2026",
+    badge: "New",
+    stats: "7 min read",
+    variant: "info" as const
+  },
+  {
+    id: 18,
+    title: "🟦🟩 Blue‑Green Agent Releases 2026",
+    description: "Budgets, canaries, and instant rollback for safe velocity",
+    ctaText: "Learn How",
+    ctaLink: "/blog/agent-blue-green-releases-2026",
+    badge: "Featured",
+    stats: "6 min read",
+    variant: "success" as const
   }
 );
 

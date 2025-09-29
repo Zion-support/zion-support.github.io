@@ -679,3 +679,25 @@ posts.push(
     readTime: "8 min read"
   }
 );
+
+// Additional fresh content
+posts.push(
+  {
+    slug: "privacy-first-insights-telemetry-2026",
+    title: "Privacy‑First Insights 2026: DP Telemetry Without PII Risk",
+    description: "Scoped IDs, field‑level redaction, and aggregation windows for signal‑rich product analytics.",
+    category: "Observability",
+    publishedAt: "2025-10-16",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "agent-blue-green-releases-2026",
+    title: "Blue‑Green Agent Releases 2026: Rollouts with Risk Budgets",
+    description: "Ship agent updates with budgets, canaries, and instant rollback for safe velocity.",
+    category: "GenAI",
+    publishedAt: "2025-10-16",
+    featured: true,
+    readTime: "6 min read"
+  }
+);
