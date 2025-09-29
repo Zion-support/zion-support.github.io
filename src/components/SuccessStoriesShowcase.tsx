@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, TrendingUp, Users, Target, Award, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { featuredCaseStudies } from '../content/case-studies';
+import { caseStudies as featuredCaseStudies } from '../content/case-studies';
 
 const SuccessStoriesShowcase: React.FC = () => {
   return (
