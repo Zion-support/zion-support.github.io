@@ -10,6 +10,36 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-governance-risk-playbook-2025",
+    title: "AI Governance Risk Playbook 2025: Practical Controls That Work",
+    description:
+      "Actionable controls, approval flows, and monitoring that keep GenAI initiatives safe and compliant.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "edge-e2e-observability",
+    title: "End‑to‑End Observability for Edge Apps",
+    description:
+      "Trace user actions across edge, APIs, and clients with budgets that prevent regressions.",
+    category: "Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "cost-aware-mlops",
+    title: "Cost‑Aware MLOps: Quality Gates Without Exploding Spend",
+    description:
+      "Right‑size evals, cache embeddings, and enforce rollout policies to control inference costs.",
+    category: "MLOps",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "5 min read",
+  },
+  {
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:

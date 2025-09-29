@@ -9,6 +9,24 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "eval-guardrails-blueprint",
+    title: "Evaluation Guardrails: A Practical Blueprint",
+    summary:
+      "Combine offline evals with policy checks and canary cohorts to ship safely, weekly.",
+    category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-rollouts-checklist",
+    title: "Edge Rollouts: A 10‑Point Readiness Checklist",
+    summary:
+      "From config validation to negative caching—ship global changes with confidence.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 4,
+  },
+  {
     id: "ai-governance-rubric",
     title: "A Lightweight Rubric for AI Governance Decisions",
     summary:

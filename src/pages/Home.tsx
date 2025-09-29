@@ -104,8 +104,8 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: AI Governance, Edge Flags, and GenAI Telemetry posts"
-          description="Fresh articles and quick insights just landed. See what's new this week."
+          title="🚀 New today: AI Governance Risk Playbook, Edge Observability, Cost‑Aware MLOps"
+          description="Plus two fresh Insights: Evaluation Guardrails Blueprint and an Edge Rollouts checklist."
           ctaText="Read the latest"
           ctaLink="/blog"
           dismissible={true}
@@ -662,16 +662,16 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-rose-200 mb-1">AI Governance</div>
+                  <div className="font-semibold text-white">AI Governance Risk Playbook 2025</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-blue-200 mb-1">Observability</div>
+                  <div className="font-semibold text-white">End‑to‑End Observability for Edge Apps</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-purple-200 mb-1">MLOps</div>
-                  <div className="font-semibold text-white">MLOps Reliability: Shipping GenAI Changes Safely</div>
-                </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
-                  <div className="font-semibold text-white">Reliable Real‑Time Data Pipelines in 2025</div>
-                </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Product Analytics</div>
-                  <div className="font-semibold text-white">North‑Star Metrics: A Field‑Tested Framework</div>
+                  <div className="font-semibold text-white">Cost‑Aware MLOps</div>
                 </div>
               </div>
             </div>
