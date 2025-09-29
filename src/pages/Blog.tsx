@@ -268,9 +268,9 @@ export default function Blog(): React.JSX.Element {
                 <div className="text-xs text-white/90">Rehearse safe autonomy, roll out agents with canaries, and ship signal‑rich analytics without PII.</div>
               </div>
               <div className="flex flex-wrap gap-2">
+                <a href="/blog/agent-blue-green-canary-scorecards-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">Agent Releases</a>
+                <a href="/blog/ai-privacy-filters-scoped-ids-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">Privacy Analytics</a>
                 <a href="/blog/ai-breach-drills-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">Breach Drills</a>
-                <a href="/blog/agent-blue-green-releases-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">Agent Releases</a>
-                <a href="/blog/privacy-first-insights-telemetry-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">Privacy‑First Insights</a>
               </div>
             </div>
           </div>
