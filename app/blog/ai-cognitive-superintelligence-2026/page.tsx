@@ -1,20 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { Clock, ArrowRight, Star, Brain, Zap, Target } from 'lucide-react';
-
-export const metadata = {
-  title: 'AI Cognitive Superintelligence 2026: The Next Evolution | Zion Tech Group',
-  description: 'Explore the revolutionary AI cognitive superintelligence breakthroughs of 2026. Discover how advanced AI systems are achieving human-level reasoning and beyond.',
-  keywords: 'AI cognitive superintelligence, AI 2026, artificial general intelligence, AGI, cognitive AI, superintelligence',
-  openGraph: {
-    title: 'AI Cognitive Superintelligence 2026: The Next Evolution',
-    description: 'Explore the revolutionary AI cognitive superintelligence breakthroughs of 2026. Discover how advanced AI systems are achieving human-level reasoning and beyond.',
-    type: 'article',
-    publishedTime: '2026-01-20T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-=======
-import { ArrowRight, Brain, Zap, Target, TrendingUp } from 'lucide-react';
+import { Clock, ArrowRight, Star, Brain, Zap, Target, TrendingUp } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Cognitive Superintelligence 2026: The Next Evolution of Human-Machine Intelligence',
@@ -23,8 +9,10 @@ export const metadata = {
   openGraph: {
     title: 'AI Cognitive Superintelligence 2026: The Next Evolution of Human-Machine Intelligence',
     description: 'Discover how AI cognitive superintelligence is revolutionizing decision-making, problem-solving, and strategic thinking across enterprises in 2026.',
+    type: 'article',
+    publishedTime: '2026-01-20T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
     images: ['/images/ai-cognitive-superintelligence-2026.jpg'],
->>>>>>> 784e415f7d6b185f7565d5123451663501816245
   },
 };
 
@@ -32,7 +20,6 @@ export default function AICognitiveSuperintelligence2026() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       {/* Header */}
-<<<<<<< HEAD
       <div className="mb-8">
         <div className="flex items-center gap-2 mb-4">
           <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -78,7 +65,6 @@ export default function AICognitiveSuperintelligence2026() {
             </div>
           </div>
         </div>
-=======
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
           <Brain className="w-4 h-4" />
@@ -91,12 +77,10 @@ export default function AICognitiveSuperintelligence2026() {
           The Next Evolution of Human-Machine Intelligence: Achieving Human-Level Reasoning 
           with 1000x Processing Speed and Revolutionary Strategic Thinking Capabilities
         </p>
->>>>>>> 784e415f7d6b185f7565d5123451663501816245
       </div>
 
       {/* Key Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-<<<<<<< HEAD
         <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl">
           <div className="text-3xl font-bold text-purple-600 mb-2">150+</div>
           <div className="text-gray-600">IQ Points</div>
@@ -112,7 +96,6 @@ export default function AICognitiveSuperintelligence2026() {
         <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-xl">
           <div className="text-3xl font-bold text-orange-600 mb-2">10x</div>
           <div className="text-gray-600">Faster Decision Making</div>
-=======
         <div className="text-center bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6">
           <div className="text-3xl font-bold text-purple-600 mb-2">1000x</div>
           <div className="text-sm text-gray-600">Processing Speed</div>
@@ -128,13 +111,11 @@ export default function AICognitiveSuperintelligence2026() {
         <div className="text-center bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6">
           <div className="text-3xl font-bold text-orange-600 mb-2">12mo</div>
           <div className="text-sm text-gray-600">Payback Period</div>
->>>>>>> 784e415f7d6b185f7565d5123451663501816245
         </div>
       </div>
 
       {/* Main Content */}
       <div className="prose prose-lg max-w-none">
-<<<<<<< HEAD
         <p className="text-xl text-gray-700 mb-8 leading-relaxed">
           The year 2026 marks humanity's first encounter with true cognitive superintelligence—AI systems 
           that not only match but exceed human-level reasoning across all domains. This isn't just an 
@@ -331,7 +312,6 @@ export default function AICognitiveSuperintelligence2026() {
               </div>
             </div>
           </Link>
-=======
         <div className="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
             <Zap className="w-6 h-6 text-purple-600" />
@@ -482,9 +462,8 @@ export default function AICognitiveSuperintelligence2026() {
               View Success Stories
             </Link>
           </div>
->>>>>>> 784e415f7d6b185f7565d5123451663501816245
         </div>
       </div>
     </div>
   );
-}
+}    </div>

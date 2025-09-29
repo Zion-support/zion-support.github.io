@@ -72,7 +72,7 @@ export default function EnterpriseAIPlatformArchitecture2026() {
               <p className="text-gray-600 text-sm mb-4">
                 Sub-millisecond response times with real-time data processing and analytics
               </p>
-              <div className="text-2xl font-bold text-green-600">< 1ms</div>
+              <div className="text-2xl font-bold text-green-600">&lt; 1ms</div>
               <div className="text-sm text-gray-600">Response Time</div>
             </div>
 

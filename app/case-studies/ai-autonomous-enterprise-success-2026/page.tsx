@@ -4,11 +4,8 @@ import Link from 'next/link';
 export const metadata = {
   title: 'AI Autonomous Enterprise Success 2026: $25M ROI Case Study',
   description: 'See how a Fortune 500 company achieved $25M ROI with AI autonomous enterprise systems. 99.9% uptime, 90% cost reduction, and complete business transformation.',
-<<<<<<< HEAD
   keywords: 'AI autonomous enterprise case study, Fortune 500 AI transformation, enterprise automation success, AI ROI case study, autonomous operations',
-=======
   keywords: 'AI case study, autonomous enterprise, ROI, Fortune 500, business transformation, AI success story',
->>>>>>> cursor/create-and-deploy-new-content-6afb
 };
 
 export default function AIAutonomousEnterpriseSuccess2026() {
@@ -19,7 +16,6 @@ export default function AIAutonomousEnterpriseSuccess2026() {
           <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
             NEW CASE STUDY
           </span>
-<<<<<<< HEAD
           <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
             FORTUNE 500
           </span>
@@ -31,7 +27,6 @@ export default function AIAutonomousEnterpriseSuccess2026() {
           <span>📅 January 20, 2026</span>
           <span>⏱️ 15 min read</span>
           <span>🏢 Fortune 500</span>
-=======
           <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
             FORTUNE 500
           </span>
@@ -46,12 +41,10 @@ export default function AIAutonomousEnterpriseSuccess2026() {
           <span>📊 25 min read</span>
           <span>🏆 Success Story</span>
           <span>📅 January 2026</span>
->>>>>>> cursor/create-and-deploy-new-content-6afb
         </div>
       </div>
 
       <div className="prose prose-lg max-w-none">
-<<<<<<< HEAD
         <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-xl mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">🎯 Executive Summary</h2>
           <p className="text-lg text-gray-700 mb-4">
@@ -427,7 +420,6 @@ export default function AIAutonomousEnterpriseSuccess2026() {
             </Link>
           </div>
         </div>
-=======
         <div className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-xl mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">🎯 Executive Summary</h2>
           <p className="text-gray-700 mb-4">
@@ -615,7 +607,6 @@ export default function AIAutonomousEnterpriseSuccess2026() {
             </Link>
           </div>
         </div>
->>>>>>> cursor/create-and-deploy-new-content-6afb
       </div>
     </div>
   );
