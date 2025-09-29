@@ -212,9 +212,9 @@ class AccessibilityEnhancer {
     });
   }
 
-  private handleMenuNavigation(event: Event, menu: Element): void {
+  private handleMenuNavigation(event: Event, menu: HTMLElement): void {
     const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]'));
-    const currentIndex = menuItems.indexOf(document.activeElement as Element);
+    const currentIndex = menuItems.indexOf(document.activeElement as HTMLElement);
     
     if (currentIndex === -1) return;
 
@@ -229,7 +229,7 @@ class AccessibilityEnhancer {
     event.preventDefault();
   }
 
-  private trapFocus(event: Event, modal: Element): void {
+  private trapFocus(event: Event, modal: HTMLElement): void {
     const focusableElements = modal.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
