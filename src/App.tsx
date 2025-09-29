@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { AppRouter } from './router';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
+import AdvancedSEO from './components/AdvancedSEO';
 import PerformanceTracker from './components/PerformanceTracker';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
@@ -63,6 +65,8 @@ import WebsiteEnhancements from './components/WebsiteEnhancements';
 import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceEnhancer from './components/PerformanceEnhancer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import EnhancedSEO from './components/EnhancedSEO';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { performanceAlerts } from './utils/performanceAlerts';
@@ -490,6 +494,11 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
+      <AdvancedSEO 
+        title="Zion Tech Group - Leading AI & IT Solutions"
+        description="Transform your business with cutting-edge AI and IT solutions from Zion Tech Group. Enterprise security, AI innovation, and expert consulting services."
+        keywords={["AI solutions", "IT consulting", "enterprise security", "digital transformation", "machine learning", "cloud services"]}
+      />
       <SEOOptimizer seoData={seoDataForOptimizer} />
       <AdvancedAnalytics 
         enableHeatmaps={true}
@@ -626,13 +635,20 @@ export default function App(): React.JSX.Element {
           }}
         />
 
+        {/* Enhanced Performance Monitor */}
+        <EnhancedPerformanceMonitor />
+
         {/* Accessibility Enhancer */}
-        <AccessibilityEnhancer 
-          enabled={true}
-          showMetrics={showAccessibilityEnhancer}
-          onMetricsUpdate={(metrics) => {
-            console.log('Accessibility metrics updated:', metrics);
-          }}
+        <AccessibilityEnhancer />
+
+        {/* Advanced Performance Monitor */}
+        <AdvancedPerformanceMonitor />
+
+        {/* Enhanced SEO */}
+        <EnhancedSEO 
+          title="Zion Tech Group - Advanced AI and IT Solutions"
+          description="Leading provider of AI-powered IT solutions, cloud services, cybersecurity, and digital transformation services."
+          keywords={['AI solutions', 'IT consulting', 'cloud services', 'cybersecurity', 'digital transformation']}
         />
 
         {/* Comprehensive Performance Monitor */}
