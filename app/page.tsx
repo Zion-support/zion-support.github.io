@@ -71,11 +71,11 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>🔥 LATEST 2026:</span>
-            <Link href="/blog/ai-2026-mega-trends" className="underline hover:text-yellow-200">AI Mega Trends</Link>
+            <Link href="/blog/ai-future-enterprise-2026" className="underline hover:text-yellow-200">Future Enterprise 2026</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200">Enterprise Automation</Link>
+            <Link href="/blog/ai-next-generation-automation-2026" className="underline hover:text-yellow-200">Next-Gen Automation</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-autonomous-enterprise-2026" className="underline hover:text-yellow-200">Autonomous Enterprise</Link>
+            <Link href="/case-studies/ai-revolutionary-transformation-2026" className="underline hover:text-yellow-200">$100M Success Story</Link>
             <span className="hidden md:inline">•</span>
 <<<<<<< HEAD
             <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</Link>
@@ -155,16 +155,16 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              href="/blog/ai-2026-mega-trends"
+              href="/blog/ai-future-enterprise-2026"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
             >
-              🔮 Read AI Mega Trends 2026
+              🔮 Read Future Enterprise 2026
             </Link>
             <Link
-              href="/case-studies/ai-autonomous-enterprise-success-2026"
+              href="/case-studies/ai-revolutionary-transformation-2026"
               className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
             >
-              🏆 View $25M Success Story
+              🏆 View $100M Success Story
             </Link>
             <a
               href="tel:+13024640950"
@@ -219,21 +219,21 @@ export default function HomePage() {
                   <span className="text-2xl">🔮</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">AI Mega Trends 2026</h3>
-                  <p className="text-sm text-gray-500">$50B+ opportunity</p>
+                  <h3 className="text-xl font-bold text-gray-900">AI Future Enterprise 2026</h3>
+                  <p className="text-sm text-gray-500">Complete transformation blueprint</p>
                 </div>
               </div>
               <p className="text-gray-600 mb-4">
-                Discover the 15 mega trends reshaping enterprise AI. From autonomous operations 
-                to quantum computing, learn how to capitalize on $50B+ market opportunities.
+                Discover the revolutionary AI technologies reshaping enterprise operations in 2026. 
+                From autonomous systems to quantum computing, learn how to build the future-ready enterprise.
               </p>
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-500">45 min read</div>
                 <Link
-                  href="/blog/ai-2026-mega-trends"
+                  href="/blog/ai-future-enterprise-2026"
                   className="text-blue-600 font-semibold hover:text-blue-700 transition-colors"
                 >
-                  Read Mega Trends →
+                  Read Blueprint →
                 </Link>
               </div>
             </div>
@@ -244,18 +244,18 @@ export default function HomePage() {
                   <span className="text-2xl">🚀</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">AI Enterprise Automation</h3>
-                  <p className="text-sm text-gray-500">95% efficiency</p>
+                  <h3 className="text-xl font-bold text-gray-900">Next-Gen AI Automation</h3>
+                  <p className="text-sm text-gray-500">99% automation rate</p>
                 </div>
               </div>
               <p className="text-gray-600 mb-4">
-                Transform your enterprise with AI automation. Achieve 95% process efficiency, 
-                $5M+ savings, and zero-touch operations with comprehensive implementation strategies.
+                Discover next-generation AI automation technologies reshaping enterprise operations. 
+                From cognitive automation to autonomous decision-making, achieve 99% automation.
               </p>
               <div className="flex items-center justify-between">
-                <div className="text-sm text-gray-500">18 min read</div>
+                <div className="text-sm text-gray-500">28 min read</div>
                 <Link
-                  href="/blog/ai-enterprise-automation-2026"
+                  href="/blog/ai-next-generation-automation-2026"
                   className="text-green-600 font-semibold hover:text-green-700 transition-colors"
                 >
                   Read Guide →
@@ -269,18 +269,18 @@ export default function HomePage() {
                   <span className="text-2xl">🏆</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">$25M Success Story</h3>
-                  <p className="text-sm text-gray-500">Fortune 500 case study</p>
+                  <h3 className="text-xl font-bold text-gray-900">$100M Success Story</h3>
+                  <p className="text-sm text-gray-500">Revolutionary transformation</p>
                 </div>
               </div>
               <p className="text-gray-600 mb-4">
-                See how a Fortune 500 manufacturing company achieved $25M ROI with AI autonomous enterprise transformation. 
-                99.9% uptime, 90% cost reduction, and complete business revolution.
+                See how a Fortune 500 company achieved $100M ROI with revolutionary AI transformation. 
+                99.9% uptime, 98% automation, and complete business revolution.
               </p>
               <div className="flex items-center justify-between">
-                <div className="text-sm text-gray-500">30 min read</div>
+                <div className="text-sm text-gray-500">35 min read</div>
                 <Link
-                  href="/case-studies/ai-autonomous-enterprise-success-2026"
+                  href="/case-studies/ai-revolutionary-transformation-2026"
                   className="text-orange-600 font-semibold hover:text-orange-700 transition-colors"
                 >
                   View Success Story →
