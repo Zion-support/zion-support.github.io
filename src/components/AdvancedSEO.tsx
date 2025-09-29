@@ -36,7 +36,7 @@ const AdvancedSEO = ({
   const currentUrl = url || `${window.location.origin}${location.pathname}`;
   const fullImageUrl = image.startsWith('http') ? image : `${window.location.origin}${image}`;
 
-  const structuredData = {
+  let structuredData: any = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -59,28 +59,27 @@ const AdvancedSEO = ({
   };
 
   if (type === "article" && publishedTime) {
-    structuredData["@type"] = "Article";
-    structuredData.headline = title;
-    structuredData.description = description;
-    structuredData.author = {
-      "@type": "Person",
-      "name": author
+    structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": title,
+      "description": description,
+      "author": {
+        "@type": "Person",
+        "name": author
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Zion Tech Group",
+        "logo": {
+          "@type": "ImageObject",
+          "url": `${window.location.origin}/images/logo.png`
+        }
+      },
+      "datePublished": publishedTime,
+      ...(modifiedTime && { "dateModified": modifiedTime }),
+      ...(image && { "image": fullImageUrl })
     };
-    structuredData.publisher = {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "logo": {
-        "@type": "ImageObject",
-        "url": `${window.location.origin}/images/logo.png`
-      }
-    };
-    structuredData.datePublished = publishedTime;
-    if (modifiedTime) {
-      structuredData.dateModified = modifiedTime;
-    }
-    if (image) {
-      structuredData.image = fullImageUrl;
-    }
   }
 
   return (
