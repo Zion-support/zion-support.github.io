@@ -29,6 +29,11 @@ class AccessibilityEnhancer {
   private mutationObserver?: MutationObserver;
   private performanceObserver?: PerformanceObserver;
 
+  // Event handler placeholders to match removeEventListener references
+  private handleKeyDown(_event: KeyboardEvent): void {}
+  private handleFocusIn(_event: FocusEvent): void {}
+  private handleFocusOut(_event: FocusEvent): void {}
+
   constructor() {
     this.config = this.getDefaultConfig();
   }
@@ -96,7 +101,7 @@ class AccessibilityEnhancer {
 
   /**
    * Backward-compatible initialize alias handled by init()
-   * (Removed duplicate initialize definition to satisfy no-dupe-class-members)
+   * (Removed duplicate initialize method to avoid no-dupe-class-members ESLint error)
    */
 
   private setupKeyboardNavigation(): void {
