@@ -1,9 +1,8 @@
 import React from 'react';
 
-export default function Tools(): React.JSX.Element {
-	return (
-		<main style={{ padding: '2rem' }}>
-			<h1>Tools</h1>
-		</main>
-	);
-}
+const Tools: React.FC = () => {
+  return <div className="container mx-auto px-6 py-16 text-white">Tools</div>;
+};
+
+export default Tools;
+

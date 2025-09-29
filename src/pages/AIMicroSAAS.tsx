@@ -1,9 +1,8 @@
 import React from 'react';
 
-export default function AIMicroSAAS(): React.JSX.Element {
-	return (
-		<main style={{ padding: '2rem' }}>
-			<h1>AI Micro SAAS</h1>
-		</main>
-	);
-}
+const AIMicroSAAS: React.FC = () => {
+  return <div className="container mx-auto px-6 py-16 text-white">AI Micro SAAS</div>;
+};
+
+export default AIMicroSAAS;
+
