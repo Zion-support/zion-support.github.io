@@ -1,9 +1,23 @@
+import { ArrowRight, Calendar, Clock, Sparkles, TrendingUp, X } from 'lucide-react';
 import React, { useState } from 'react';
-import { X, Sparkles, ArrowRight, Calendar, Clock, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const NewContentAnnouncement: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
+
+  // Encode SVG for safe use in CSS background-image without conflicting quotes
+  const backgroundPatternSvg = `
+    <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" fill-rule="evenodd">
+        <g fill="#ffffff" fill-opacity="0.1">
+          <circle cx="30" cy="30" r="4"/>
+        </g>
+      </g>
+    </svg>
+  `;
+  const backgroundImageStyle = {
+    backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(backgroundPatternSvg)}")`,
+  } as const;
 
   if (!isVisible) return null;
 
@@ -11,7 +25,7 @@ const NewContentAnnouncement: React.FC = () => {
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.1&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;4&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute inset-0" style={backgroundImageStyle}></div>
       </div>
 
       <div className="container mx-auto px-6 py-8 relative z-10">
