@@ -17,24 +17,6 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
-    id: "policy-tests-as-code",
-    title: "Policy Tests as Code: Turning Risk into Green Checks",
-    summary:
-      "Run lightweight policy tests in CI/CD and online canaries tied to KPIs.",
-    category: "AI Governance",
-    date: "2025-10-07",
-    readMinutes: 5,
-  },
-  {
-    id: "edge-rollout-health-probes",
-    title: "Edge Rollouts: Health Probes That Prevent Bad Global Releases",
-    summary:
-      "Segment by geo/account, add negative caching, and probe health before 100% traffic.",
-    category: "Architecture",
-    date: "2025-10-07",
-    readMinutes: 6,
-  },
-  {
     id: "eval-systems-online-canaries",
     title: "Eval Systems That Scale: Online Canaries and Policy Gates",
     summary:
@@ -243,6 +225,7 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
     category: "Product Analytics",
+    description: "A look at on‑device models, streaming pipelines, and cost/perf trade‑offs from deployments.",
     date: "2025-09-29",
     readMinutes: 7,
   },

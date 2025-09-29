@@ -16,4 +16,9 @@ tsconfig.tsbuildinfo
 =======
 # TypeScript build info
 *.tsbuildinfo
-/.pnpm-home
+
+# Ignore coverage reports
+coverage/
+coverage
+coverage/
+>>>>>>> origin/main

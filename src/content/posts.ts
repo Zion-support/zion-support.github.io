@@ -10,24 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "llm-policy-testing-2025",
-    title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
-    description: "Automate governance with policy tests on every PR, tied to KPIs and SLAs.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "practical-evals-scorecards-2025",
-    title: "Practical AI Evals & Scorecards That Predict Business Outcomes",
-    description: "Design evals that correlate with revenue, CSAT, and retention—baked into delivery.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
     slug: "ai-platform-roi-2025",
     title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
     description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",
@@ -79,25 +61,6 @@ export const posts: BlogPost[] = [
     category: "Architecture",
     publishedAt: "2025-09-30",
     featured: true,
-    readTime: "7 min read"
-  }
-  ,
-  {
-    slug: "llm-policy-testing-2025",
-    title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
-    description: "Automate governance with policy-as-code on every PR and online canaries.",
-    category: "AI Governance",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "edge-zero-downtime-releases-2025",
-    title: "Zero‑Downtime Releases at the Edge: Patterns That Work",
-    description: "Shadow reads, budgets, and instant rollback with edge compute and KV.",
-    category: "Architecture",
-    publishedAt: "2025-09-29",
-    featured: false,
     readTime: "7 min read"
   }
   ,
