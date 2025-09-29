@@ -710,5 +710,36 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "7 min read",
   },
+  // New content items (2025-09-29)
+  {
+    slug: "genai-telemetry-metrics-that-matter",
+    title: "GenAI Telemetry: The Metrics That Predict Drift",
+    description:
+      "Capture inputs, policy outcomes, and feedback loops to prevent silent regressions before users notice.",
+    category: "MLOps",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "edge-flags-realtime-rollouts",
+    title: "Edge Feature Flags: Real‑Time Global Rollouts That Stick",
+    description:
+      "Patterns for cache‑safe flags, consistency checks, and instant rollbacks across regions.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "north-star-metrics-starter-kit",
+    title: "North‑Star Metrics Starter Kit",
+    description:
+      "Practical templates and examples to define leading indicators that align to outcomes.",
+    category: "Product Analytics",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "5 min read",
+  },
 ];
 
