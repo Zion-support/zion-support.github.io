@@ -47,7 +47,12 @@ import {
   FinOpsAdvancedBanner,
   PlatformArchitectureBanner,
   AutonomousOperationsSuccessBanner,
-  NewContentShowcaseBanner2026
+  NewContentShowcaseBanner2026,
+  AIAutonomousInfrastructureBanner,
+  AIQuantumComputingBanner,
+  AIZeroTrustSecurityBanner,
+  Fortune500TransformationBanner,
+  LatestAIInnovationsBanner
 } from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
@@ -87,6 +92,14 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+      {/* New 2026 Content Banners */}
+      <AIAutonomousInfrastructureBanner />
+      <AIQuantumComputingBanner />
+      <AIZeroTrustSecurityBanner />
+      <Fortune500TransformationBanner />
+      <NewContentShowcaseBanner2026 />
+      <LatestAIInnovationsBanner />
+      
       {/* Promotional Banners */}
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
@@ -102,7 +115,6 @@ export default function HomePage() {
       <FinOpsAdvancedBanner />
       <PlatformArchitectureBanner />
       <AutonomousOperationsSuccessBanner />
-      <NewContentShowcaseBanner2026 />
       <NewContent2026Banner />
       {/* Removed unavailable banner components to fix imports */}
       <AIMultimodalEnterpriseBanner />

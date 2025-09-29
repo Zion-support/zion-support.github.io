@@ -19,6 +19,65 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-autonomous-infrastructure-2026',
+    title: 'AI Autonomous Infrastructure 2026: Self-Healing Systems & Zero-Touch Operations',
+    excerpt: 'Transform your infrastructure with AI-driven autonomous systems that self-heal, self-optimize, and operate with zero human intervention.',
+    type: 'article',
+    readTime: '25 min read',
+    category: 'Infrastructure',
+    href: '/blog/ai-autonomous-infrastructure-2026',
+    featured: true,
+    publishedDate: '2026-01-20',
+    metrics: [
+      { value: '99.9%', label: 'Uptime' },
+      { value: '90%', label: 'Cost Reduction' }
+    ]
+  },
+  {
+    id: 'ai-quantum-hybrid-computing-2026',
+    title: 'AI Quantum Hybrid Computing 2026: Next-Generation Intelligence at Scale',
+    excerpt: 'Unlock the power of quantum-classical hybrid computing for AI applications. Achieve 1000x faster optimization and solve previously intractable problems.',
+    type: 'article',
+    readTime: '30 min read',
+    category: 'Quantum Computing',
+    href: '/blog/ai-quantum-hybrid-computing-2026',
+    featured: true,
+    publishedDate: '2026-01-20',
+    metrics: [
+      { value: '1000x', label: 'Faster Optimization' },
+      { value: '95%', label: 'Accuracy Improvement' }
+    ]
+  },
+  {
+    id: 'ai-zero-trust-security-2026',
+    title: 'AI Zero Trust Security 2026: Autonomous Threat Detection & Response',
+    excerpt: 'Revolutionize your security posture with AI-powered zero trust architecture. Achieve 99.9% threat prevention and autonomous incident response.',
+    type: 'article',
+    readTime: '28 min read',
+    category: 'Cybersecurity',
+    href: '/blog/ai-zero-trust-security-2026',
+    featured: true,
+    publishedDate: '2026-01-20',
+    metrics: [
+      { value: '99.9%', label: 'Threat Prevention' },
+      { value: '0.3s', label: 'Response Time' }
+    ]
+  },
+  {
+    id: 'ai-autonomous-enterprise-transformation-2026',
+    title: 'AI Autonomous Enterprise Transformation 2026: $25M ROI Case Study',
+    excerpt: 'See how a Fortune 500 company achieved $25M ROI with comprehensive AI transformation. 99% automation, 90% cost reduction, and complete business revolution.',
+    type: 'case-study',
+    category: 'Fortune 500',
+    href: '/case-studies/ai-autonomous-enterprise-transformation-2026',
+    featured: true,
+    publishedDate: '2026-01-20',
+    metrics: [
+      { value: '$25M', label: 'ROI Achieved' },
+      { value: '99%', label: 'Automation' }
+    ]
+  },
+  {
     id: 'ai-governance-maturity-model-2026',
     title: 'AI Governance Maturity Model 2026: From Ad‑Hoc to Audit‑Ready',
     excerpt: 'Move from ad‑hoc controls to audit‑ready AI governance with scorecards and KPIs.',
