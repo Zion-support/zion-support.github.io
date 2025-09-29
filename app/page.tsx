@@ -19,6 +19,8 @@ import {
   AIGovernanceBanner,
   FinTechSuccessBanner,
   NewContentShowcaseBanner,
+  AIRoadmapsBanner,
+  AIFinOpsBanner,
   AIMultimodalEnterpriseBanner,
   AIEnterpriseAutomationBanner,
   AIDataAnalyticsEnterpriseBanner,
@@ -46,11 +48,17 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ New 2026 content:</span>
+            <a href="/blog/ai-trustworthy-agents-2026" className="underline hover:text-yellow-200">Trustworthy AI Agents</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-value-stream-analytics-2026" className="underline hover:text-yellow-200">Value Stream Analytics</a>
+            <span className="hidden md:inline">•</span>
             <a href="/blog/ai-multimodal-enterprise-2026" className="underline hover:text-yellow-200">AI Multimodal Enterprise</a>
             <span className="hidden md:inline">•</span>
             <a href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200">Enterprise Automation</a>
             <span className="hidden md:inline">•</span>
-            <a href="/case-studies/ai-enterprise-transformation-success-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</a>
+            <a href="/blog/ai-operational-excellence-2026" className="underline hover:text-yellow-200">AI Operational Excellence 2026</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</a>
           </div>
           <Link
             href="/blog"
@@ -67,10 +75,9 @@ export default function HomePage() {
       <AIDataAnalyticsEnterpriseBanner />
       <EnterpriseTransformationSuccessBanner />
       <HealthcareTransformationBanner />
-      {/* Optional banners removed due to missing components in codebase */}
-      {/* Additional banners from src/components/LatestContentBanner removed */}
       <NewContentShowcaseBanner />
-      {/* AIRoadmapsBanner and AIFinOpsBanner not defined in PromotionalBanner, skip */}
+      <AIRoadmapsBanner />
+      <AIFinOpsBanner />
       <AutonomousAgentsBanner />
       <AIGovernanceBanner />
       <FinTechSuccessBanner />
