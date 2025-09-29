@@ -26,6 +26,10 @@ export default function HomePage() {
   return (
     <div className="animate-fade-in">
       {/* Promotional Banners */}
+      <AutonomousAgentsBanner />
+      <SecurityComplianceBanner />
+      <ManufacturingSuccessBanner />
+      <PredictiveMaintenanceBanner />
       <NewBlogBanner />
       <CustomerSupportAIBanner />
       <CloudNativeBanner />
@@ -495,7 +499,7 @@ export default function HomePage() {
               </div>
               <div className="mt-6 pt-4 border-t border-white/20">
                 <Link
-                  href="/blog"
+                  to="/blog"
                   className="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
                 >
                   View All Content →
