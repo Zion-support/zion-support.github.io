@@ -97,6 +97,7 @@ function Footer() {
                 Case Studies
                 <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">💰 $50M+ ROI</span>
               </Link>
+              <Link href="/case-studies/ai-autonomous-manufacturing-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🏭 $25M Manufacturing Success</Link>
               <Link href="/case-studies/ai-neural-interface-healthcare-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🏥 $15M Healthcare Success</Link>
               <Link href="/case-studies/ai-space-tech-mission-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🛰️ $50M Space Mission Success</Link>
             </div>

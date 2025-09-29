@@ -203,7 +203,16 @@ export const latestArticles: LatestArticle[] = [
     title: "Agent Evals 2026: Scorecards That Predict Outcomes",
     description: "Online evals wired to KPIs—scorecards that correlate with revenue, CSAT, and retention.",
     excerpt: "A practical playbook for evals that protect velocity and predict business outcomes.",
-=======
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "GenAI",
+    tags: ["Evals", "Scorecards", "KPIs"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/agent-evals-scorecards-2026.jpg",
+    newBadge: true,
+  },
+  {
     id: "privacy-first-feature-flags-2026",
     slug: "privacy-first-feature-flags-2026",
     title: "Privacy‑First Feature Flags: Geo, Account, and Scope Budgets",
