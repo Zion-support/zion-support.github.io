@@ -62,6 +62,46 @@ Implement these patterns to achieve fast, reliable, and cost‑effective streami
     image: "/images/real-time-data-pipelines.jpg"
   },
   {
+    slug: "ai-roadmaps-2025",
+    title: "Designing High-Impact AI Roadmaps in 2025",
+    description: "A pragmatic framework to align AI bets with measurable business outcomes in under 90 days.",
+    content: `
+# Designing High-Impact AI Roadmaps in 2025
+
+This guide shows how to pick the right use-cases, define success metrics, and ship value in quarters—not years.
+
+## Playbook
+- Align with revenue or cost outcomes
+- Start with decision loops and data readiness
+- Prove value via pilot scorecards
+- Scale with platform thinking
+`,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Strategy",
+    tags: ["AI Strategy", "Roadmaps", "Execution"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/ai-roadmaps-2025.jpg"
+  },
+  {
+    slug: "cloud-finops-quick-wins",
+    title: "Cloud FinOps: 9 Quick Wins in 90 Days",
+    description: "Practical tactics to cut 25–40% of cloud spend without slowing engineering teams.",
+    content: `
+# Cloud FinOps: 9 Quick Wins
+
+From demand shaping to instance right-sizing and cost-aware CI, these moves deliver fast savings.
+`,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Cloud FinOps",
+    tags: ["FinOps", "Cloud", "Cost Optimization"],
+    featured: true,
+    readTime: "5 min read",
+    image: "/images/cloud-finops-quick-wins.jpg"
+  },
+  {
     slug: "ai-workflow-automation-2025-guide",
     title: "The Complete Guide to AI Workflow Automation in 2025",
     description: "Discover how AI workflow automation is revolutionizing business operations. Learn implementation strategies, benefits, and real-world case studies.",

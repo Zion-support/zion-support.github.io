@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { blogPosts, BlogPost } from '../content/blog-posts';
-import { latestInsights, InsightArticle } from '../content/insights';
+import { BlogPost, blogPosts } from '../content/blog-posts';
+import { InsightArticle, latestInsights } from '../content/insights';
 
 interface FeaturedContentShowcaseProps {
   title?: string;
