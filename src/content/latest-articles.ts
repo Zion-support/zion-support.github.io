@@ -674,6 +674,38 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+    id: "genai-spend-scorecards-2026",
+    slug: "genai-spend-scorecards-2026",
+    title: "GenAI Spend Scorecards 2026: Predictable Costs, Stable UX",
+    description: "Tie GenAI spend to KPIs using scorecards, budgets, and model tiering without hurting UX.",
+    excerpt: "A practical framework for tracking GenAI cost vs. experience with guardrails engineers adopt.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-29",
+    category: "AI Strategy",
+    tags: ["FinOps", "Scorecards", "GenAI"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/genai-spend-scorecards-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-data-lineage-dashboards-2026",
+    slug: "ai-data-lineage-dashboards-2026",
+    title: "AI Data Lineage Dashboards 2026: Models, Datasets, Prompts",
+    description: "Build live lineage across ML assets with signed SBOMs, attestations, and drift alerts.",
+    excerpt: "How to stand up lineage views that engineers and risk both trust—without slowing delivery.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-29",
+    category: "Data Engineering",
+    tags: ["Lineage", "SBOM", "Governance"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-data-lineage-dashboards-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "production-rag-quality-budgets-2026",
     slug: "production-rag-quality-budgets-2026",
     title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",

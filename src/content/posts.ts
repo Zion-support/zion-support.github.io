@@ -10,33 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-    slug: "ai-agent-orchestration-2026",
-    title: "AI Agent Orchestration 2026: Multi-Agent System Architecture",
-    description: "Master multi-agent systems with 95% automation efficiency and $5M+ ROI through advanced orchestration patterns.",
-    category: "AI Orchestration",
-    publishedAt: "2025-01-20",
-    featured: true,
-    readTime: "22 min read"
-  },
-  {
-    slug: "ai-sustainability-green-tech-2026",
-    title: "AI Sustainability & Green Tech 2026: Carbon-Neutral Operations",
-    description: "Achieve carbon-neutral AI operations with 80% energy reduction and $2M+ savings through sustainable technology.",
-    category: "Sustainability",
-    publishedAt: "2025-01-20",
-    featured: true,
-    readTime: "18 min read"
-  },
-  {
-    slug: "ai-quantum-computing-2026",
-    title: "AI Quantum Computing 2026: Next-Generation Intelligence",
-    description: "Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.",
-    category: "Quantum Computing",
-    publishedAt: "2025-01-20",
-    featured: true,
-    readTime: "25 min read"
-=======
     slug: "ai-breach-drills-2026",
     title: "AI Breach Drills 2026: Practicing Safe Autonomy Under Budget",
     description: "Run realistic breach simulations with budgeted actions, approval gates, and instant rollback.",
@@ -152,7 +125,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "7 min read"
->>>>>>> cursor/create-and-deploy-new-content-f9a2
   },
   {
     slug: "ai-reliable-rag-ops-2026",

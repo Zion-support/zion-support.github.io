@@ -136,7 +136,6 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-<<<<<<< HEAD
           title="New: Secure ML Supply Chain, GenAI Routing Under Budgets, Golden Paths"
           description="Fresh blueprints: SBOMs & lineage for ML, budgeted GenAI routing, and platform golden paths that move KPIs."
           ctaText="Explore new content"
@@ -145,17 +144,9 @@ const Home = () => {
             { title: "Secure ML Supply Chain 2026", category: "AI Security", link: "/blog/secure-ml-supply-chain-2026" },
             { title: "GenAI Routing Under Budgets 2026", category: "AI Operations", link: "/blog/genai-routing-under-budgets-2026" },
             { title: "Golden Paths That Move KPIs 2026", category: "Platform Engineering", link: "/blog/platform-golden-paths-kpis-2026" },
-            { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" }
-=======
-          title="New: AI Breach Drills, Privacy‑First Insights, Blue‑Green Agent Releases"
-          description="Rehearse safe autonomy, ship signal‑rich analytics without PII, and roll out agents safely."
-          ctaText="Explore new content"
-          ctaLink="/blog"
-          featuredItems={[
-            { title: "AI Breach Drills 2026", category: "Security", link: "/blog/ai-breach-drills-2026" },
-            { title: "Privacy‑First Insights 2026", category: "Observability", link: "/blog/privacy-first-insights-telemetry-2026" },
-            { title: "Blue‑Green Agent Releases 2026", category: "GenAI", link: "/blog/agent-blue-green-releases-2026" }
->>>>>>> cursor/create-and-deploy-new-content-f9a2
+            { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" },
+            { title: "GenAI Spend Scorecards 2026", category: "AI Strategy", link: "/blog/genai-spend-scorecards-2026" },
+            { title: "AI Data Lineage Dashboards 2026", category: "Data Engineering", link: "/blog/ai-data-lineage-dashboards-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
