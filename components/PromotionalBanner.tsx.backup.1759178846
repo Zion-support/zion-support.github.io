@@ -398,6 +398,15 @@ export const NewContent2026Banner = () => (
   />
 );
 
+<<<<<<< HEAD
+// New 2026 Operational Excellence & Observability Banners
+export const AIOperationalExcellenceBanner = () => (
+  <PromotionalBanner
+    message="⚙️ NEW: AI Operational Excellence 2026 - 95% Automation & $5M+ Savings with Zero-Touch Operations"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-operational-excellence-2026"
+    backgroundColor="bg-gradient-to-r from-emerald-600 to-teal-600"
+=======
 // Additional 2026 Content Banners
 export const AIOperationalExcellenceBanner = () => (
   <PromotionalBanner
@@ -405,11 +414,197 @@ export const AIOperationalExcellenceBanner = () => (
     ctaText="Read Guide"
     ctaLink="/blog/ai-operational-excellence-2026"
     backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
+>>>>>>> origin/cursor/create-and-deploy-new-content-543c
     autoHide={true}
     hideAfter={20}
   />
 );
 
+<<<<<<< HEAD
+export const AIAgentObservabilityBanner = () => (
+  <PromotionalBanner
+    message="🔍 NEW: AI Agent Observability 2026 - 99.9% Reliability with Real-time Monitoring & 85% Faster Debugging"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-agent-observability-2026"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-cyan-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const ManufacturingTransformationBanner = () => (
+  <PromotionalBanner
+    message="🏭 NEW: $12M ROI Manufacturing Case Study - 98% Automation, 400% Productivity Gains & Zero-Defect Production"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-manufacturing-transformation-2026"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const Latest2026ContentBanner = () => (
+  <PromotionalBanner
+    message="✨ LATEST 2026: Operational Excellence, Agent Observability & Manufacturing Success - Premium AI Content"
+    ctaText="Browse Latest"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+// New 2026 Content Banners
+export const AISecurityEnterprise2026Banner = () => (
+  <PromotionalBanner
+    message="🛡️ NEW: AI Enterprise Security 2026 - Zero-Trust Architecture with 99.9% Security Compliance"
+    ctaText="Read Article"
+    ctaLink="/blog/ai-enterprise-security-2026"
+    backgroundColor="bg-gradient-to-r from-red-600 to-orange-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AIMultimodalEnterprise2026Banner = () => (
+  <PromotionalBanner
+    message="🎯 NEW: AI Multimodal Enterprise 2026 - Vision, Language & Audio Integration with 40% Accuracy Improvement"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-multimodal-enterprise-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AISustainabilityTransformationBanner = () => (
+  <PromotionalBanner
+    message="🌱 NEW: AI Sustainability Case Study - 60% Carbon Reduction & $15M Savings for Fortune 500 Energy Company"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-sustainability-transformation-2026"
+    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const LatestContent2026Banner = () => (
+  <PromotionalBanner
+    message="✨ LATEST 2026: AI Security, Multimodal AI & Sustainability Transformation - Premium Enterprise Content"
+    ctaText="Explore Latest"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const AIAgentReliabilityBanner = () => (
+  <PromotionalBanner
+    message="🛡️ NEW: AI Agent Reliability 2026 - Achieve 99.9% uptime with production-ready autonomous systems and fault tolerance"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-agent-reliability-2026"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-cyan-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const AIMultimodalIntegrationBanner = () => (
+  <PromotionalBanner
+    message="🎯 NEW: Multimodal Enterprise Integration 2026 - Unify vision, voice & text AI for 95% accuracy in context understanding"
+    ctaText="Learn More"
+    ctaLink="/blog/ai-multimodal-enterprise-integration-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const AIEnterpriseAutomationBlueprintBanner = () => (
+  <PromotionalBanner
+    message="⚡ FEATURED: Enterprise Automation Blueprint 2026 - Achieve 95% process efficiency and $5M+ savings with zero-touch operations"
+    ctaText="Get Blueprint"
+    ctaLink="/blog/ai-enterprise-automation-blueprint-2026"
+    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const AIEthicalFrameworkBanner = () => (
+  <PromotionalBanner
+    message="🛡️ NEW: AI Ethical Framework 2026 - Build trustworthy AI with 90% compliance & $3M savings"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-ethical-framework-2026"
+    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const AIEthicsSuccessBanner = () => (
+  <PromotionalBanner
+    message="📊 SUCCESS STORY: Fortune 500 achieves 90% AI compliance & $3M savings with ethical framework"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-ethical-framework-success-2026"
+    backgroundColor="bg-gradient-to-r from-emerald-600 to-green-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const NewContentShowcase2026Banner = () => (
+  <PromotionalBanner
+    message="🌟 FRESH 2026: Ethical AI Framework, Multimodal Integration & Success Stories - Premium Enterprise Content"
+    ctaText="Explore New Content"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const AIEnterpriseTransformationBanner = () => (
+  <PromotionalBanner
+    message="🎯 BREAKTHROUGH: AI Enterprise Transformation 2026 - Complete implementation guide with proven ROI frameworks and real-world case studies"
+    ctaText="Start Your Transformation"
+    ctaLink="/blog/ai-enterprise-transformation-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const AIEnterpriseSuccessBanner = () => (
+  <PromotionalBanner
+    message="🏆 SUCCESS STORY: Fortune 500 achieves $10M ROI with AI transformation - 95% automation, 300% productivity gains, complete case study"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-enterprise-transformation-success-2026"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const LatestEnterpriseContentBanner = () => (
+  <PromotionalBanner
+    message="📈 LATEST: Enterprise AI Transformation resources - Implementation guides, case studies, and ROI frameworks for Fortune 500 success"
+    ctaText="Explore All Resources"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-teal-600 to-cyan-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+=======
 export const AIOperationalScorecardsBanner = () => (
   <PromotionalBanner
     message="📊 NEW: AI Operational Scorecards 2026 - Measure & Optimize AI Performance with Real-Time Metrics"
@@ -506,5 +701,6 @@ export const AI2026TrendsBanner = () => (
     backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
     autoHide={true}
     hideAfter={18}
+>>>>>>> origin/cursor/create-and-deploy-new-content-543c
   />
 );
