@@ -17,16 +17,8 @@ export interface PerformanceMetric {
   severity: "good" | "needs-improvement" | "poor";
 }
 
-export interface PerformanceReport {
-  timestamp: number;
-  metrics: PerformanceMetric[];
-  recommendations: string[];
-  overallScore: number;
-  userAgent: string;
-  connectionType?: string;
-}
-
-export interface OptimizationRecommendation {
+export interface PerformanceAlert {
+  id: string;
   type: "critical" | "warning" | "info";
   title: string;
   description: string;
@@ -35,19 +27,7 @@ export interface OptimizationRecommendation {
   category: "performance" | "accessibility" | "seo" | "security";
 }
 
-export interface PerformanceAlert {
-  id: string;
-  type: 'critical' | 'warning' | 'info';
-  title: string;
-  description: string;
-  impact: 'high' | 'medium' | 'low';
-  action: string;
-  timestamp: number;
-  resolved: boolean;
-}
-
 class EnhancedPerformanceMonitor {
-  private metrics: PerformanceMetric[] = [];
   private alerts: PerformanceAlert[] = [];
   private isMonitoring: boolean = false;
   private observers: PerformanceObserver[] = [];
@@ -58,658 +38,277 @@ class EnhancedPerformanceMonitor {
   }
 
   private initializeMonitoring(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-      console.warn('Performance monitoring not available in this environment');
+    if (typeof window === 'undefined') {
       return;
     }
 
     this.isMonitoring = true;
     this.setupPerformanceObservers();
-    this.startContinuousMonitoring();
-    this.analyzeInitialPerformance();
+    this.startPeriodicReporting();
+    this.monitorResourceLoading();
+    this.monitorUserInteractions();
+    this.monitorMemoryUsage();
+
+    console.log("Enhanced Performance Monitor started");
   }
 
   private setupPerformanceObservers(): void {
-    // Navigation timing observer
+    if (!('PerformanceObserver' in window)) {
+      return;
+    }
+
     try {
+      // Monitor navigation timing
       const navObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
+        list.getEntries().forEach((entry) => {
           if (entry.entryType === 'navigation') {
-            this.processNavigationEntry(entry as PerformanceNavigationTiming);
+            this.handleNavigationTiming(entry as PerformanceNavigationTiming);
           }
-        }
+        });
       });
       navObserver.observe({ entryTypes: ['navigation'] });
       this.observers.push(navObserver);
+
+      // Monitor paint timing
+      const paintObserver = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'paint') {
+            this.handlePaintTiming(entry as PerformancePaintTiming);
+          }
+        });
+      });
+      paintObserver.observe({ entryTypes: ['paint'] });
+      this.observers.push(paintObserver);
+
+      // Monitor LCP
+      const lcpObserver = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'largest-contentful-paint') {
+            this.handleLCPTiming(entry as PerformanceEntry);
+          }
+        });
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      this.observers.push(lcpObserver);
+
     } catch (error) {
-      console.warn('Navigation observer setup failed:', error);
+      console.error('Failed to setup performance observers:', error);
+    }
+  }
+
+<<<<<<< HEAD
+  private startPeriodicReporting(): void {
+    this.reportInterval = window.setInterval(() => {
+      this.generatePerformanceReport();
+    }, 30000); // Report every 30 seconds
+  }
+
+  private monitorResourceLoading(): void {
+    if (!('PerformanceObserver' in window)) {
+      return;
     }
 
-    // Resource timing observer
     try {
       const resourceObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
+        list.getEntries().forEach((entry) => {
           if (entry.entryType === 'resource') {
-            this.processResourceEntry(entry as PerformanceResourceTiming);
+            this.handleResourceTiming(entry as PerformanceResourceTiming);
           }
-        }
+        });
       });
       resourceObserver.observe({ entryTypes: ['resource'] });
       this.observers.push(resourceObserver);
     } catch (error) {
-      console.warn('Resource observer setup failed:', error);
-    }
-
-    // Paint timing observer
-    try {
-      const paintObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'paint') {
-            this.processPaintEntry(entry as PerformanceEntry);
-          }
+      console.error('Failed to setup resource monitoring:', error);
+=======
+  private processPerformanceEntry(entry: PerformanceEntry): void {
+    switch (entry.entryType) {
+      case 'paint':
+        if (entry.name === 'first-contentful-paint' && entry.startTime > 1800) {
+          this.createAlert({
+            type: 'critical',
+            title: 'Slow First Contentful Paint',
+            description: `FCP is ${entry.startTime.toFixed(0)}ms`,
+            impact: 'high',
+            action: 'Optimize critical rendering path'
+          });
         }
-      });
-      paintObserver.observe({ entryTypes: ['paint'] });
-      this.observers.push(paintObserver);
-    } catch (error) {
-      console.warn('Paint observer setup failed:', error);
-    }
-
-    // Largest Contentful Paint observer
-    try {
-      const lcpObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            this.processLCPEntry(entry as PerformanceEntry);
-          }
+        break;
+      case 'largest-contentful-paint':
+        if (entry.startTime > 2500) {
+          this.createAlert({
+            type: 'critical',
+            title: 'Slow Largest Contentful Paint',
+            description: `LCP is ${entry.startTime.toFixed(0)}ms`,
+            impact: 'high',
+            action: 'Optimize images and largest content'
+          });
         }
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      this.observers.push(lcpObserver);
-    } catch (error) {
-      console.warn('LCP observer setup failed:', error);
-    }
-
-    // First Input Delay observer
-    try {
-      const fidObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'first-input') {
-            this.processFIDEntry(entry as PerformanceEventTiming);
-          }
+        break;
+      case 'first-input': {
+        const fidEntry = entry as PerformanceEventTiming;
+        const fid = fidEntry.processingStart - fidEntry.startTime;
+        if (fid > 100) {
+          this.createAlert({
+            type: 'warning',
+            title: 'Slow First Input Delay',
+            description: `FID is ${fid.toFixed(0)}ms`,
+            impact: 'medium',
+            action: 'Reduce JavaScript execution time'
+          });
         }
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      this.observers.push(fidObserver);
-    } catch (error) {
-      console.warn('FID observer setup failed:', error);
-    }
-
-    // Cumulative Layout Shift observer
-    try {
-      const clsObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'layout-shift') {
-            this.processCLSEntry(entry as PerformanceEntry);
-          }
-        }
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-      this.observers.push(clsObserver);
-    } catch (error) {
-      console.warn('CLS observer setup failed:', error);
-    }
-  }
-
-  private startContinuousMonitoring(): void {
-    // Monitor memory usage
-    this.monitorMemoryUsage();
-
-    // Monitor frame rate
-    this.monitorFrameRate();
-
-    // Monitor long tasks
-    this.monitorLongTasks();
-
-    // Generate periodic reports
-    this.reportInterval = window.setInterval(() => {
-      this.generatePerformanceReport();
-    }, 30000); // Every 30 seconds
-  }
-
-  private analyzeInitialPerformance(): void {
-    // Analyze existing performance entries
-    if (typeof performance !== 'undefined') {
-      const navigationEntries = performance.getEntriesByType('navigation');
-      const resourceEntries = performance.getEntriesByType('resource');
-      const paintEntries = performance.getEntriesByType('paint');
-
-      navigationEntries.forEach(entry => {
-        this.processNavigationEntry(entry as PerformanceNavigationTiming);
-      });
-
-      resourceEntries.forEach(entry => {
-        this.processResourceEntry(entry as PerformanceResourceTiming);
-      });
-
-      paintEntries.forEach(entry => {
-        this.processPaintEntry(entry);
-      });
-    }
-  }
-
-  private processNavigationEntry(entry: PerformanceNavigationTiming): void {
-    const metrics = [
-      {
-        name: 'DNS Lookup',
-        value: entry.domainLookupEnd - entry.domainLookupStart,
-        timestamp: Date.now(),
-        category: 'navigation' as const,
-        severity: this.categorizeTiming(entry.domainLookupEnd - entry.domainLookupStart, [0, 100, 300])
-      },
-      {
-        name: 'TCP Connection',
-        value: entry.connectEnd - entry.connectStart,
-        timestamp: Date.now(),
-        category: 'navigation' as const,
-        severity: this.categorizeTiming(entry.connectEnd - entry.connectStart, [0, 100, 300])
-      },
-      {
-        name: 'Request Response',
-        value: entry.responseEnd - entry.requestStart,
-        timestamp: Date.now(),
-        category: 'navigation' as const,
-        severity: this.categorizeTiming(entry.responseEnd - entry.requestStart, [0, 200, 500])
-      },
-      {
-        name: 'DOM Processing',
-        value: entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart,
-        timestamp: Date.now(),
-        category: 'navigation' as const,
-        severity: this.categorizeTiming(entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart, [0, 100, 300])
-      },
-      {
-        name: 'Load Complete',
-        value: entry.loadEventEnd - entry.loadEventStart,
-        timestamp: Date.now(),
-        category: 'navigation' as const,
-        severity: this.categorizeTiming(entry.loadEventEnd - entry.loadEventStart, [0, 200, 500])
+        break;
       }
-    ];
+      case 'layout-shift': {
+        const clsEntry = entry as PerformanceEntry & { value: number };
+        if (clsEntry.value > 0.1) {
+          this.createAlert({
+            type: 'warning',
+            title: 'High Cumulative Layout Shift',
+            description: `CLS is ${clsEntry.value.toFixed(3)}`,
+            impact: 'medium',
+            action: 'Fix layout shift issues'
+          });
+        }
+        break;
+      }
+>>>>>>> 560fc59d9c785b60bacd032c96f8fbb6b417bd56
+    }
+  }
 
-    metrics.forEach(metric => {
-      this.addMetric(metric);
+  private monitorUserInteractions(): void {
+    // Monitor click events
+    document.addEventListener('click', (event) => {
+      this.trackUserInteraction('click', event.target);
     });
 
-    // Check for performance issues
-    this.checkNavigationPerformance(entry);
-  }
-
-  private processResourceEntry(entry: PerformanceResourceTiming): void {
-    const loadTime = entry.responseEnd - entry.startTime;
-    
-    const metric: PerformanceMetric = {
-      name: `Resource: ${entry.name.split('/').pop()}`,
-      value: loadTime,
-      timestamp: Date.now(),
-      category: 'resource',
-      severity: this.categorizeTiming(loadTime, [0, 1000, 3000])
-    };
-
-    this.addMetric(metric);
-
-    // Check for slow resources
-    if (loadTime > 1000) {
-      this.addAlert({
-        type: 'warning',
-        title: 'Slow Resource Loading',
-        description: `Resource ${entry.name} took ${loadTime.toFixed(2)}ms to load`,
-        impact: 'medium',
-        action: 'Consider optimizing or lazy loading this resource',
-        timestamp: Date.now(),
-        resolved: false
-      });
-    }
-  }
-
-  private processPaintEntry(entry: PerformanceEntry): void {
-    const metric: PerformanceMetric = {
-      name: entry.name === 'first-contentful-paint' ? 'First Contentful Paint' : 'First Paint',
-      value: entry.startTime,
-      timestamp: Date.now(),
-      category: 'paint',
-      severity: this.categorizeTiming(entry.startTime, [0, 1500, 2500])
-    };
-
-    this.addMetric(metric);
-
-    // Check paint performance
-    if (entry.startTime > 1500) {
-      this.addAlert({
-        type: 'warning',
-        title: 'Slow Paint Performance',
-        description: `${entry.name} took ${entry.startTime.toFixed(2)}ms`,
-        impact: 'high',
-        action: 'Optimize CSS and reduce render-blocking resources',
-        timestamp: Date.now(),
-        resolved: false
-      });
-    }
-  }
-
-  private processLCPEntry(entry: PerformanceEntry): void {
-    const metric: PerformanceMetric = {
-      name: 'Largest Contentful Paint',
-      value: entry.startTime,
-      timestamp: Date.now(),
-      category: 'paint',
-      severity: this.categorizeTiming(entry.startTime, [0, 2500, 4000])
-    };
-
-    this.addMetric(metric);
-
-    if (entry.startTime > 2500) {
-      this.addAlert({
-        type: 'critical',
-        title: 'Poor LCP Performance',
-        description: `Largest Contentful Paint took ${entry.startTime.toFixed(2)}ms`,
-        impact: 'high',
-        action: 'Optimize images, fonts, and critical rendering path',
-        timestamp: Date.now(),
-        resolved: false
-      });
-    }
-  }
-
-  private processFIDEntry(entry: PerformanceEventTiming): void {
-    const metric: PerformanceMetric = {
-      name: 'First Input Delay',
-      value: entry.processingStart - entry.startTime,
-      timestamp: Date.now(),
-      category: 'script',
-      severity: this.categorizeTiming(entry.processingStart - entry.startTime, [0, 100, 300])
-    };
-
-    this.addMetric(metric);
-
-    const fid = entry.processingStart - entry.startTime;
-    if (fid > 100) {
-      this.addAlert({
-        type: 'warning',
-        title: 'High First Input Delay',
-        description: `First Input Delay was ${fid.toFixed(2)}ms`,
-        impact: 'high',
-        action: 'Reduce JavaScript execution time and optimize event handlers',
-        timestamp: Date.now(),
-        resolved: false
-      });
-    }
-  }
-
-  private processCLSEntry(entry: PerformanceEntry): void {
-    const cls = (entry as any).value;
-    
-    const metric: PerformanceMetric = {
-      name: 'Cumulative Layout Shift',
-      value: cls,
-      timestamp: Date.now(),
-      category: 'layout',
-      severity: this.categorizeTiming(cls, [0, 0.1, 0.25])
-    };
-
-    this.addMetric(metric);
-
-    if (cls > 0.1) {
-      this.addAlert({
-        type: 'warning',
-        title: 'Layout Shift Detected',
-        description: `Cumulative Layout Shift score: ${cls.toFixed(4)}`,
-        impact: 'medium',
-        action: 'Add size attributes to images and avoid inserting content above existing content',
-        timestamp: Date.now(),
-        resolved: false
-      });
-    }
+    // Monitor scroll events
+    let scrollTimeout: number;
+    window.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = window.setTimeout(() => {
+        this.trackUserInteraction('scroll', null);
+      }, 100);
+    });
   }
 
   private monitorMemoryUsage(): void {
-    if ('memory' in performance) {
-      setInterval(() => {
-        const memory = (performance as any).memory;
-        if (memory) {
-          const memoryMetric: PerformanceMetric = {
-            name: 'Memory Usage',
-            value: memory.usedJSHeapSize / 1024 / 1024, // Convert to MB
-            timestamp: Date.now(),
-            category: 'custom',
-            severity: this.categorizeTiming(memory.usedJSHeapSize / 1024 / 1024, [0, 50, 100])
-          };
-
-          this.addMetric(memoryMetric);
-
-          // Check for memory leaks
-          if (memory.usedJSHeapSize / 1024 / 1024 > 100) {
-            this.addAlert({
-              type: 'warning',
-              title: 'High Memory Usage',
-              description: `Memory usage: ${(memory.usedJSHeapSize / 1024 / 1024).toFixed(2)}MB`,
-              impact: 'medium',
-              action: 'Check for memory leaks and optimize memory usage',
-              timestamp: Date.now(),
-              resolved: false
-            });
-          }
-        }
-      }, 10000); // Every 10 seconds
+    if (!('memory' in performance)) {
+      return;
     }
-  }
 
-  private monitorFrameRate(): void {
-    let frameCount = 0;
-    let lastTime = performance.now();
+    const memory = (performance as any).memory;
+    if (memory) {
+      const memoryUsage = {
+        used: memory.usedJSHeapSize,
+        total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit
+      };
 
-    const countFrames = () => {
-      frameCount++;
-      const currentTime = performance.now();
-      
-      if (currentTime - lastTime >= 1000) {
-        const fps = (frameCount * 1000) / (currentTime - lastTime);
-        
-        const fpsMetric: PerformanceMetric = {
-          name: 'Frame Rate',
-          value: fps,
-          timestamp: Date.now(),
-          category: 'custom',
-          severity: this.categorizeTiming(fps, [60, 30, 15], true) // Higher is better
-        };
-
-        this.addMetric(fpsMetric);
-
-        if (fps < 30) {
-          this.addAlert({
-            type: 'warning',
-            title: 'Low Frame Rate',
-            description: `Frame rate: ${fps.toFixed(2)} FPS`,
-            impact: 'medium',
-            action: 'Optimize animations and reduce computational overhead',
-            timestamp: Date.now(),
-            resolved: false
-          });
-        }
-
-        frameCount = 0;
-        lastTime = currentTime;
+      if (memoryUsage.used / memoryUsage.limit > 0.8) {
+        this.addAlert({
+          id: 'memory-high',
+          type: 'warning',
+          title: 'High Memory Usage',
+          description: `Memory usage is at ${Math.round((memoryUsage.used / memoryUsage.limit) * 100)}%`,
+          impact: 'medium',
+          effort: 'low',
+          category: 'performance'
+        });
       }
+    }
+  }
 
-      requestAnimationFrame(countFrames);
+  private handleNavigationTiming(entry: PerformanceNavigationTiming): void {
+    const metrics = {
+      loadTime: entry.loadEventEnd - entry.loadEventStart,
+      domContentLoaded: entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart,
+      firstByte: entry.responseStart - entry.requestStart
     };
 
-    requestAnimationFrame(countFrames);
+    console.log('Navigation timing:', metrics);
   }
 
-  private monitorLongTasks(): void {
-    try {
-      const longTaskObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'longtask') {
-            const duration = entry.duration;
-            
-            const longTaskMetric: PerformanceMetric = {
-              name: 'Long Task',
-              value: duration,
-              timestamp: Date.now(),
-              category: 'script',
-              severity: this.categorizeTiming(duration, [50, 100, 200])
-            };
-
-            this.addMetric(longTaskMetric);
-
-            this.addAlert({
-              type: 'critical',
-              title: 'Long Task Detected',
-              description: `Long task took ${duration.toFixed(2)}ms`,
-              impact: 'high',
-              action: 'Break up long-running tasks using setTimeout or Web Workers',
-              timestamp: Date.now(),
-              resolved: false
-            });
-          }
-        }
-      });
-
-      longTaskObserver.observe({ entryTypes: ['longtask'] });
-      this.observers.push(longTaskObserver);
-    } catch (error) {
-      console.warn('Long task observer setup failed:', error);
-    }
+  private handlePaintTiming(entry: PerformancePaintTiming): void {
+    console.log('Paint timing:', entry.name, entry.startTime);
   }
 
-  private categorizeTiming(value: number, thresholds: [number, number, number], higherIsBetter: boolean = false): "good" | "needs-improvement" | "poor" {
-    if (higherIsBetter) {
-      if (value >= thresholds[0]) return 'good';
-      if (value >= thresholds[1]) return 'needs-improvement';
-      return 'poor';
-    } else {
-      if (value <= thresholds[0]) return 'good';
-      if (value <= thresholds[1]) return 'needs-improvement';
-      return 'poor';
-    }
-  }
-
-  private addMetric(metric: PerformanceMetric): void {
-    this.metrics.push(metric);
+  private handleLCPTiming(entry: PerformanceEntry): void {
+    console.log('LCP timing:', entry.startTime);
     
-    // Keep only last 1000 metrics
-    if (this.metrics.length > 1000) {
-      this.metrics = this.metrics.slice(-1000);
+    if (entry.startTime > 2500) {
+      this.addAlert({
+        id: 'lcp-slow',
+        type: 'warning',
+        title: 'Slow Largest Contentful Paint',
+        description: `LCP is ${Math.round(entry.startTime)}ms, which is above the recommended 2.5s`,
+        impact: 'high',
+        effort: 'medium',
+        category: 'performance'
+      });
     }
   }
 
-  private addAlert(alert: Omit<PerformanceAlert, 'id'>): void {
-    const newAlert: PerformanceAlert = {
-      ...alert,
-      id: `alert_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
-
-    this.alerts.push(newAlert);
+  private handleResourceTiming(entry: PerformanceResourceTiming): void {
+    const loadTime = entry.responseEnd - entry.requestStart;
     
-    // Keep only last 100 alerts
-    if (this.alerts.length > 100) {
-      this.alerts = this.alerts.slice(-100);
+    if (loadTime > 1000) {
+      console.warn('Slow resource load:', entry.name, loadTime);
     }
   }
 
-  private checkNavigationPerformance(entry: PerformanceNavigationTiming): void {
-    const domContentLoaded = entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart;
-    const loadComplete = entry.loadEventEnd - entry.loadEventStart;
-    const totalLoadTime = entry.loadEventEnd - entry.navigationStart;
-
-    if (domContentLoaded > 1000) {
-      this.addAlert({
-        type: 'warning',
-        title: 'Slow DOM Processing',
-        description: `DOM content loaded in ${domContentLoaded.toFixed(2)}ms`,
-        impact: 'high',
-        action: 'Optimize JavaScript execution and reduce DOM complexity',
-        timestamp: Date.now(),
-        resolved: false
-      });
-    }
-
-    if (loadComplete > 1000) {
-      this.addAlert({
-        type: 'warning',
-        title: 'Slow Page Load',
-        description: `Page load completed in ${loadComplete.toFixed(2)}ms`,
-        impact: 'high',
-        action: 'Optimize resource loading and reduce bundle size',
-        timestamp: Date.now(),
-        resolved: false
-      });
-    }
-
-    if (totalLoadTime > 3000) {
-      this.addAlert({
-        type: 'critical',
-        title: 'Very Slow Page Load',
-        description: `Total load time: ${totalLoadTime.toFixed(2)}ms`,
-        impact: 'high',
-        action: 'Critical performance optimization needed',
-        timestamp: Date.now(),
-        resolved: false
-      });
-    }
+  private trackUserInteraction(type: string, target: EventTarget | null): void {
+    console.log('User interaction:', type, target);
   }
 
-  private generatePerformanceReport(): PerformanceReport {
-    const recentMetrics = this.metrics.filter(m => Date.now() - m.timestamp < 30000); // Last 30 seconds
-    const overallScore = this.calculateOverallScore(recentMetrics);
-    const recommendations = this.generateRecommendations();
-
-    return {
+  private generatePerformanceReport(): void {
+    const report = {
       timestamp: Date.now(),
-      metrics: recentMetrics,
-      recommendations,
-      overallScore,
-      userAgent: navigator.userAgent,
-      connectionType: (navigator as any).connection?.effectiveType
+      alerts: this.alerts.length,
+      memory: (performance as any).memory ? {
+        used: (performance as any).memory.usedJSHeapSize,
+        total: (performance as any).memory.totalJSHeapSize
+      } : null
     };
+
+    console.log('Performance report:', report);
   }
 
-  private calculateOverallScore(metrics: PerformanceMetric[]): number {
-    if (metrics.length === 0) return 100;
-
-    let totalScore = 0;
-    let categoryCount = 0;
-    const categories = new Set(metrics.map(m => m.category));
-
-    categories.forEach(category => {
-      const categoryMetrics = metrics.filter(m => m.category === category);
-      const categoryScore = this.calculateCategoryScore(categoryMetrics);
-      totalScore += categoryScore;
-      categoryCount++;
-    });
-
-    return categoryCount > 0 ? Math.round(totalScore / categoryCount) : 100;
-  }
-
-  private calculateCategoryScore(metrics: PerformanceMetric[]): number {
-    if (metrics.length === 0) return 100;
-
-    let score = 100;
-    metrics.forEach(metric => {
-      switch (metric.severity) {
-        case 'poor':
-          score -= 30;
-          break;
-        case 'needs-improvement':
-          score -= 15;
-          break;
-        case 'good':
-          score -= 0;
-          break;
-      }
-    });
-
-    return Math.max(0, score);
-  }
-
-  private generateRecommendations(): string[] {
-    const recommendations: string[] = [];
-    const recentAlerts = this.alerts.filter(a => !a.resolved && Date.now() - a.timestamp < 300000); // Last 5 minutes
-
-    // Analyze alerts for common issues
-    const slowResources = recentAlerts.filter(a => a.title.includes('Slow Resource'));
-    const slowPaint = recentAlerts.filter(a => a.title.includes('Paint'));
-    const memoryIssues = recentAlerts.filter(a => a.title.includes('Memory'));
-    const longTasks = recentAlerts.filter(a => a.title.includes('Long Task'));
-
-    if (slowResources.length > 3) {
-      recommendations.push('Optimize resource loading with compression and caching');
-    }
-
-    if (slowPaint.length > 2) {
-      recommendations.push('Optimize CSS and reduce render-blocking resources');
-    }
-
-    if (memoryIssues.length > 2) {
-      recommendations.push('Investigate memory leaks and optimize memory usage');
-    }
-
-    if (longTasks.length > 1) {
-      recommendations.push('Break up long-running JavaScript tasks');
-    }
-
-    // Add general recommendations
-    recommendations.push('Enable compression for all text resources');
-    recommendations.push('Implement lazy loading for images and non-critical resources');
-    recommendations.push('Use CDN for static assets');
-    recommendations.push('Minify and compress JavaScript and CSS');
-
-    return [...new Set(recommendations)]; // Remove duplicates
-  }
-
-  public getMetrics(): PerformanceMetric[] {
-    return [...this.metrics];
+  private addAlert(alert: PerformanceAlert): void {
+    this.alerts.push(alert);
+    console.log('Performance alert:', alert);
   }
 
   public getAlerts(): PerformanceAlert[] {
-    return this.alerts.filter(alert => !alert.resolved);
-  }
-
-  public getAllAlerts(): PerformanceAlert[] {
     return [...this.alerts];
   }
 
-  public resolveAlert(alertId: string): void {
-    const alert = this.alerts.find(a => a.id === alertId);
-    if (alert) {
-      alert.resolved = true;
-    }
+  public clearAlerts(): void {
+    this.alerts = [];
   }
 
-  public getLatestReport(): PerformanceReport {
-    return this.generatePerformanceReport();
-  }
-
-  public getPerformanceScore(): number {
-    const recentMetrics = this.metrics.filter(m => Date.now() - m.timestamp < 60000); // Last minute
-    return this.calculateOverallScore(recentMetrics);
-  }
-
-  public markCustomMetric(name: string, value: number, category: PerformanceMetric['category'] = 'custom'): void {
-    const metric: PerformanceMetric = {
-      name,
-      value,
-      timestamp: Date.now(),
-      category,
-      severity: this.categorizeTiming(value, [0, 100, 500])
-    };
-
-    this.addMetric(metric);
-  }
-
-  public cleanup(): void {
+  public stop(): void {
     this.isMonitoring = false;
-    
-    // Disconnect all observers
-    this.observers.forEach(observer => {
-      observer.disconnect();
-    });
+    this.observers.forEach((observer) => observer.disconnect());
     this.observers = [];
 
-    // Clear intervals
     if (this.reportInterval) {
       clearInterval(this.reportInterval);
       this.reportInterval = null;
     }
 
-    // Clear data
-    this.metrics = [];
-    this.alerts = [];
+    console.log("Enhanced Performance Monitor stopped");
+  }
+
+  public cleanup(): void {
+    this.stop();
   }
 }
 
 // Export singleton instance
 export const enhancedPerformanceMonitor = new EnhancedPerformanceMonitor();
-export { EnhancedPerformanceMonitor };
+
+// Auto-initialize
+if (typeof window !== 'undefined') {
+  enhancedPerformanceMonitor.initialize();
+}

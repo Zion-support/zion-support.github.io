@@ -193,6 +193,7 @@ export class AccessibilityEnhancer {
     });
   }
 
+<<<<<<< HEAD
   /**
    * Check keyboard navigation
    */
@@ -424,6 +425,12 @@ export class AccessibilityEnhancer {
   private calculateContrast(color1: string, color2: string): number {
     // This is a simplified calculation
     // In a real implementation, you'd use a proper color contrast library
+=======
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  private calculateContrastRatio(_color1: string, _color2: string): number {
+    // Simplified contrast ratio calculation
+    // In a real implementation, you'd parse the colors and calculate luminance
+>>>>>>> 560fc59d9c785b60bacd032c96f8fbb6b417bd56
     return 4.5; // Placeholder
   }
 

@@ -40,107 +40,262 @@ export interface SEOMetrics {
   recommendations: string[];
 }
 
-export interface SEOIssue {
-  id: string;
-  type: 'error' | 'warning' | 'info';
-  category: 'meta' | 'content' | 'technical' | 'performance' | 'accessibility';
-  title: string;
-  description: string;
-  impact: 'high' | 'medium' | 'low';
-  fix: string;
-  element?: string;
-  timestamp: number;
-  resolved: boolean;
+export interface PagePerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  speedIndex: number;
+  totalBlockingTime: number;
+  timeToInteractive: number;
 }
 
 class EnhancedSEOOptimizer {
-  private issues: SEOIssue[] = [];
-  private currentUrl: string = '';
+  private currentSEOData: SEOData | null = null;
+  private isInitialized = false;
+  private performanceMetrics: PagePerformanceMetrics | null = null;
+  private observer: PerformanceObserver | null = null;
 
-  constructor() {
-    this.initializeOptimizer();
-  }
-
-  private initializeOptimizer(): void {
-    if (typeof window === 'undefined') return;
-    this.currentUrl = window.location.href;
-    this.analyzeCurrentPage();
-  }
-
-  public analyzeCurrentPage(): void {
-    this.issues = [];
-    this.analyzeMetaTags();
-    this.analyzeContent();
-  }
-
-  private analyzeMetaTags(): void {
-    const title = document.querySelector('title')?.textContent || '';
-    if (!title) {
-      this.addIssue({
-        type: 'error',
-        category: 'meta',
-        title: 'Missing Title Tag',
-        description: 'No title tag found in the document',
-        impact: 'high',
-        fix: 'Add a descriptive title tag to the document head',
-        timestamp: Date.now(),
-        resolved: false
-      });
+  /**
+   * Initialize the SEO optimizer
+   */
+  initialize(): void {
+    if (this.isInitialized || typeof window === 'undefined') {
+      return;
     }
 
-    const metaDescription = document.querySelector('meta[name="description"]')?.getAttribute('content') || '';
-    if (!metaDescription) {
-      this.addIssue({
-        type: 'error',
-        category: 'meta',
-        title: 'Missing Meta Description',
-        description: 'No meta description found',
-        impact: 'high',
-        fix: 'Add a compelling meta description (150-160 characters)',
-        timestamp: Date.now(),
-        resolved: false
-      });
+    this.isInitialized = true;
+    this.setupPerformanceObserver();
+    this.setupStructuredData();
+  }
+
+  /**
+   * Update SEO data
+   */
+  updateSEOData(data: SEOData): void {
+    this.currentSEOData = data;
+    this.updateMetaTags(data);
+    this.updateOpenGraphTags(data);
+    this.updateTwitterCardTags(data);
+    this.updateStructuredData(data);
+    this.updateCanonicalUrl(data.canonical);
+  }
+
+  /**
+   * Update meta tags
+   */
+  private updateMetaTags(data: SEOData): void {
+    this.setMetaTag('title', data.title);
+    this.setMetaTag('description', data.description);
+    this.setMetaTag('keywords', data.keywords.join(', '));
+    
+    if (data.robots) {
+      this.setMetaTag('robots', data.robots);
+    }
+    
+    if (data.language) {
+      this.setMetaTag('language', data.language);
     }
   }
 
-  private analyzeContent(): void {
-    const images = document.querySelectorAll('img');
-    images.forEach((img, index) => {
-      if (!img.alt) {
-        this.addIssue({
-          type: 'error',
-          category: 'content',
-          title: 'Image Missing Alt Text',
-          description: `Image ${index + 1} has no alt attribute`,
-          impact: 'high',
-          fix: 'Add descriptive alt text to all images for accessibility and SEO',
-          element: `img[${index}]`,
-          timestamp: Date.now(),
-          resolved: false
-        });
-      }
+  /**
+   * Set meta tag
+   */
+  private setMetaTag(name: string, content: string): void {
+    let meta = document.querySelector(`meta[name="${name}"]`);
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute('name', name);
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', content);
+  }
+
+  /**
+   * Update Open Graph tags
+   */
+  private updateOpenGraphTags(data: SEOData): void {
+    const ogTags = {
+      'og:title': data.ogTitle || data.title,
+      'og:description': data.ogDescription || data.description,
+      'og:image': data.ogImage || '/og-image.png',
+      'og:type': data.ogType || 'website',
+      'og:url': data.ogUrl || window.location.href
+    };
+
+    Object.entries(ogTags).forEach(([property, content]) => {
+      this.setMetaProperty(property, content);
     });
   }
 
-  private addIssue(issue: Omit<SEOIssue, 'id'>): void {
-    const newIssue: SEOIssue = {
-      ...issue,
-      id: `seo_issue_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+  /**
+   * Set meta property
+   */
+  private setMetaProperty(property: string, content: string): void {
+    let meta = document.querySelector(`meta[property="${property}"]`);
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute('property', property);
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', content);
+  }
+
+  /**
+   * Update Twitter Card tags
+   */
+  private updateTwitterCardTags(data: SEOData): void {
+    const twitterTags = {
+      'twitter:card': data.twitterCard || 'summary_large_image',
+      'twitter:title': data.twitterTitle || data.title,
+      'twitter:description': data.twitterDescription || data.description,
+      'twitter:image': data.twitterImage || data.ogImage || '/og-image.png'
     };
-    this.issues.push(newIssue);
+
+    Object.entries(twitterTags).forEach(([name, content]) => {
+      this.setMetaTag(name, content);
+    });
   }
 
-  public getIssues(): SEOIssue[] {
-    return this.issues.filter(issue => !issue.resolved);
+  /**
+   * Update structured data
+   */
+  private updateStructuredData(data: SEOData): void {
+    if (!data.structuredData) return;
+
+    // Remove existing structured data
+    const existingScript = document.querySelector('script[type="application/ld+json"]');
+    if (existingScript) {
+      existingScript.remove();
+    }
+
+    // Add new structured data
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(data.structuredData);
+    document.head.appendChild(script);
   }
 
-  public resolveIssue(issueId: string): void {
-    const issue = this.issues.find(i => i.id === issueId);
-    if (issue) {
-      issue.resolved = true;
+  /**
+   * Update canonical URL
+   */
+  private updateCanonicalUrl(url: string): void {
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', url);
+  }
+
+  /**
+   * Setup performance observer for Core Web Vitals
+   */
+  private setupPerformanceObserver(): void {
+    if (!('PerformanceObserver' in window)) return;
+
+    try {
+      this.observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          switch (entry.entryType) {
+            case 'navigation':
+              this.handleNavigationTiming(entry as PerformanceNavigationTiming);
+              break;
+            case 'paint':
+              this.handlePaintTiming(entry as PerformancePaintTiming);
+              break;
+            case 'largest-contentful-paint':
+              this.handleLCPTiming(entry as PerformanceEntry);
+              break;
+            case 'first-input':
+              this.handleFIDTiming(entry as PerformanceEventTiming);
+              break;
+            case 'cumulative-layout-shift':
+              this.handleCLSTiming(entry as PerformanceEntry);
+              break;
+          }
+        }
+      });
+
+      this.observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'cumulative-layout-shift'] });
+    } catch (error) {
+      console.error('Failed to setup performance observer:', error);
+    }
+  }
+
+  private setupStructuredData(): void {
+    // Add JSON-LD structured data
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      'name': 'Zion Tech Group',
+      'url': window.location.origin,
+      'logo': window.location.origin + '/logo.png',
+      'description': 'Advanced AI and IT Solutions',
+      'contactPoint': {
+        '@type': 'ContactPoint',
+        'telephone': '+1-555-0123',
+        'contactType': 'customer service'
+      }
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+  }
+
+  private handleNavigationTiming(entry: PerformanceNavigationTiming): void {
+    // Handle navigation timing
+  }
+
+  private handlePaintTiming(entry: PerformancePaintTiming): void {
+    // Handle paint timing
+  }
+
+  private handleLCPTiming(entry: PerformanceEntry): void {
+    // Handle LCP timing
+  }
+
+  private handleFIDTiming(entry: PerformanceEventTiming): void {
+    // Handle FID timing
+  }
+
+  private handleCLSTiming(entry: PerformanceEntry): void {
+    // Handle CLS timing
+  }
+
+  /**
+   * Get current performance metrics
+   */
+  getPerformanceMetrics(): PagePerformanceMetrics | null {
+    return this.performanceMetrics;
+  }
+
+  /**
+   * Get current SEO data
+   */
+  getCurrentSEOData(): SEOData | null {
+    return this.currentSEOData;
+  }
+
+  /**
+   * Cleanup
+   */
+  cleanup(): void {
+    if (this.observer) {
+      this.observer.disconnect();
+      this.observer = null;
     }
   }
 }
 
+// Export singleton instance
 export const enhancedSEOOptimizer = new EnhancedSEOOptimizer();
-export { EnhancedSEOOptimizer };
+
+// Auto-initialize
+if (typeof window !== 'undefined') {
+  enhancedSEOOptimizer.initialize();
+}
