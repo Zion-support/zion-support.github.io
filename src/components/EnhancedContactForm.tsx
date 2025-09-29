@@ -1,4 +1,4 @@
-/* global HTMLInputElement, HTMLTextAreaElement, HTMLSelectElement */
+// Types are built-in in DOM lib; no need to redeclare globals.
 import { CheckCircle, Send } from 'lucide-react';
 import React, { useState } from 'react';
 
