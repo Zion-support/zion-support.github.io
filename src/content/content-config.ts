@@ -503,6 +503,19 @@ export const services: Service[] = [
 // Promotional Banners Configuration
 export const promotionalBanners: PromotionalBanner[] = [
   {
+    id: 'fresh-sep-29-2025-new-posts',
+    message: '🚀 New Today: AI Platform Blueprints 2026 + Edge Personalization 2026',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-teal-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
     id: 'fresh-oct-29-2025-ai-sre',
     message: '🛠️ New: AI SRE Blueprints 2026 + Privacy‑First A/B Testing',
     ctaText: 'Read the latest',

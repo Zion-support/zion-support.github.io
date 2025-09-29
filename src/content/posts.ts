@@ -771,8 +771,7 @@ posts.push(
   }
 );
 
-<<<<<<< HEAD
-// Additional fresh content
+// Additional fresh content (conflict resolved)
 posts.push(
   {
     slug: "privacy-first-insights-telemetry-2026",
@@ -783,17 +782,6 @@ posts.push(
     featured: true,
     readTime: "7 min read"
   },
-  {
-    slug: "agent-blue-green-releases-2026",
-    title: "Blue‑Green Agent Releases 2026: Rollouts with Risk Budgets",
-    description: "Ship agent updates with budgets, canaries, and instant rollback for safe velocity.",
-    category: "GenAI",
-    publishedAt: "2025-10-16",
-    featured: true,
-    readTime: "6 min read"
-=======
-// Additional newly added posts to surface on Home and Blog
-posts.push(
   {
     slug: "agent-blue-green-releases-2026",
     title: "Blue‑Green Agent Releases 2026: Safe Rollouts with Live Traces",
@@ -820,6 +808,27 @@ posts.push(
     publishedAt: "2025-10-10",
     featured: true,
     readTime: "9 min read"
->>>>>>> content/blue-green-and-latest
+  }
+);
+
+// New content (today) to surface on homepage
+posts.push(
+  {
+    slug: "ai-platform-blueprints-2026",
+    title: "AI Platform Blueprints 2026: From Trains to Guardrails",
+    description: "Reference patterns for weekly shipping with trains, scorecards, and policy‑tested guardrails.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-personalization-2026",
+    title: "Edge Personalization 2026: Private <100ms Experiences",
+    description: "Scoped IDs, on‑device models, and regional KV for fast, privacy‑first personalization.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
   }
 );
