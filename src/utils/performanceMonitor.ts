@@ -1,6 +1,6 @@
 // Minimal, type-safe Performance Monitor
 
-type MetricName = 'CLS' | 'FID' | 'FCP' | 'LCP' | 'TTFB';
+type MetricName = 'CLS' | 'FID' | 'FCP' | 'LCP' | 'TTFB' | 'SLOW_RESOURCE';
 
 interface PerformanceMetric {
   name: MetricName;
@@ -21,9 +21,9 @@ class PerformanceMonitor {
   }
 
   private init(): void {
-    if (this.isInitialized || typeof window === 'undefined') return;
+    if (this.initialized || typeof window === 'undefined') return;
 
-    this.isInitialized = true;
+    this.initialized = true;
     this.observeFID();
     this.observeCLS();
     this.observeFCP();
@@ -216,7 +216,7 @@ class PerformanceMonitor {
   public disconnect(): void {
     this.observers.forEach((observer) => observer.disconnect());
     this.observers = [];
-    this.isInitialized = false;
+    this.initialized = false;
   }
 
   public reportPerformance(): void {

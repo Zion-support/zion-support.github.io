@@ -9,7 +9,7 @@ import { AppRouter } from './router';
 // import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
 // import { screenReaderSupport } from './accessibility/screenReaderSupport';
 import './index.css';
-import { AppRouter } from './router';
+// duplicate import removed
 import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
@@ -58,72 +58,80 @@ export default function App(): React.JSX.Element {
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (!e.ctrlKey || !e.shiftKey) return;
-      switch (e.key.toLowerCase()) {
-        case 'p':
-          e.preventDefault();
-          setShowPerformanceOptimizer((v) => !v);
-          break;
-        case 'm':
-          e.preventDefault();
-          setShowPerformanceMonitor((v) => !v);
-          break;
-        default:
-          break;
-      }
-      if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
-        enhancedSecurityManager.initialize();
-      }
-      
-      // Initialize new performance and accessibility enhancements
-      initializePerformanceEnhancements();
-      accessibilityEnhancer.initialize();
-      
-      // Initialize advanced optimizers
-      // Guard optional advanced systems if present in global scope
-      const advancedPerformanceOptimizer = (window as any).advancedPerformanceOptimizer;
-      const advancedSEOOptimizer = (window as any).advancedSEOOptimizer;
-      const advancedSecurityManager = (window as any).advancedSecurityManager;
-      const advancedAnalytics = (window as any).advancedAnalytics;
-      const advancedErrorHandler = (window as any).advancedErrorHandler;
-      const advancedCachingSystem = (window as any).advancedCachingSystem;
-      const advancedUXOptimizer = (window as any).advancedUXOptimizer;
-      const advancedTestingFramework = (window as any).advancedTestingFramework;
-      const advancedI18n = (window as any).advancedI18n;
+      try {
+        switch (e.key.toLowerCase()) {
+          case 'p':
+            e.preventDefault();
+            setShowPerformanceOptimizer((v) => !v);
+            break;
+          case 'm':
+            e.preventDefault();
+            setShowPerformanceMonitor((v) => !v);
+            break;
+          default:
+            break;
+        }
 
-      advancedPerformanceOptimizer?.initialize?.();
-      advancedSEOOptimizer?.initialize?.();
-      accessibilityEnhancer.initialize();
-      advancedSecurityManager?.initialize?.();
-      advancedAnalytics?.initialize?.();
-      // advancedErrorHandler is initialized in constructor
-      advancedCachingSystem.initialize();
-      advancedUXOptimizer.initialize();
-      advancedTestingFramework.initialize();
-      advancedI18n.initialize();
-      // Store enhancements globally for debugging
-      (window as unknown as Record<string, unknown>).enhancements = {
-        performanceOptimizer: advancedPerformanceOptimizer,
-        seoOptimizer: advancedSEOOptimizer,
-        accessibilityEnhancer: accessibilityEnhancer,
-        securityManager: advancedSecurityManager,
-        analytics: advancedAnalytics,
-        errorHandler: advancedErrorHandler,
-        cachingSystem: advancedCachingSystem,
-        uxOptimizer: advancedUXOptimizer
-      };
-      (window as unknown as Record<string, unknown>).performanceOptimizer = advancedPerformanceOptimizer;
-      (window as unknown as Record<string, unknown>).seoOptimizer = advancedSEOOptimizer;
-      (window as unknown as Record<string, unknown>).accessibilityEnhancer = accessibilityEnhancer;
-      (window as unknown as Record<string, unknown>).securityManager = advancedSecurityManager;
-      (window as unknown as Record<string, unknown>).analytics = advancedAnalytics;
-      (window as unknown as Record<string, unknown>).errorHandler = advancedErrorHandler;
-      (window as unknown as Record<string, unknown>).cachingSystem = advancedCachingSystem;
-      (window as unknown as Record<string, unknown>).uxOptimizer = advancedUXOptimizer;
-      (window as unknown as Record<string, unknown>).testingFramework = advancedTestingFramework;
-      (window as unknown as Record<string, unknown>).i18n = advancedI18n;
-    } catch (error) {
-      console.error('Error initializing enhancements:', error);
-    }
+        if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
+          enhancedSecurityManager.initialize();
+        }
+        
+        // Initialize new performance and accessibility enhancements
+        initializePerformanceEnhancements();
+        accessibilityEnhancer.initialize();
+        
+        // Initialize advanced optimizers
+        // Guard optional advanced systems if present in global scope
+        const advancedPerformanceOptimizer = (window as any).advancedPerformanceOptimizer;
+        const advancedSEOOptimizer = (window as any).advancedSEOOptimizer;
+        const advancedSecurityManager = (window as any).advancedSecurityManager;
+        const advancedAnalytics = (window as any).advancedAnalytics;
+        const advancedErrorHandler = (window as any).advancedErrorHandler;
+        const advancedCachingSystem = (window as any).advancedCachingSystem;
+        const advancedUXOptimizer = (window as any).advancedUXOptimizer;
+        const advancedTestingFramework = (window as any).advancedTestingFramework;
+        const advancedI18n = (window as any).advancedI18n;
+
+        advancedPerformanceOptimizer?.initialize?.();
+        advancedSEOOptimizer?.initialize?.();
+        accessibilityEnhancer.initialize();
+        advancedSecurityManager?.initialize?.();
+        advancedAnalytics?.initialize?.();
+        // advancedErrorHandler is initialized in constructor
+        advancedCachingSystem?.initialize?.();
+        advancedUXOptimizer?.initialize?.();
+        advancedTestingFramework?.initialize?.();
+        advancedI18n?.initialize?.();
+        // Store enhancements globally for debugging
+        (window as unknown as Record<string, unknown>).enhancements = {
+          performanceOptimizer: advancedPerformanceOptimizer,
+          seoOptimizer: advancedSEOOptimizer,
+          accessibilityEnhancer: accessibilityEnhancer,
+          securityManager: advancedSecurityManager,
+          analytics: advancedAnalytics,
+          errorHandler: advancedErrorHandler,
+          cachingSystem: advancedCachingSystem,
+          uxOptimizer: advancedUXOptimizer
+        };
+        (window as unknown as Record<string, unknown>).performanceOptimizer = advancedPerformanceOptimizer;
+        (window as unknown as Record<string, unknown>).seoOptimizer = advancedSEOOptimizer;
+        (window as unknown as Record<string, unknown>).accessibilityEnhancer = accessibilityEnhancer;
+        (window as unknown as Record<string, unknown>).securityManager = advancedSecurityManager;
+        (window as unknown as Record<string, unknown>).analytics = advancedAnalytics;
+        (window as unknown as Record<string, unknown>).errorHandler = advancedErrorHandler;
+        (window as unknown as Record<string, unknown>).cachingSystem = advancedCachingSystem;
+        (window as unknown as Record<string, unknown>).uxOptimizer = advancedUXOptimizer;
+        (window as unknown as Record<string, unknown>).testingFramework = advancedTestingFramework;
+        (window as unknown as Record<string, unknown>).i18n = advancedI18n;
+      } catch (error) {
+        console.error('Error initializing enhancements:', error);
+      }
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+    };
   }, []);
 
   const handleRemoveNotification = useCallback((id: string) => {
