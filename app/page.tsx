@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { 
-  NewBlogBanner, 
-  AnalyticsPlatformBanner, 
+import {
+  NewBlogBanner,
+  AnalyticsPlatformBanner,
   TechCorpSuccessBanner,
   WorkflowAutomationBanner,
   AIAnalyticsBanner,
@@ -19,12 +19,6 @@ import {
   AIGovernanceBanner,
   FinTechSuccessBanner,
   NewContentShowcaseBanner,
-  EnterpriseAIImplementationBanner,
-  MLOpsBestPracticesBanner,
-  EnterpriseTransformationCaseStudyBanner,
-  LatestContentShowcaseBanner,
-  AIRoadmapsBanner,
-  AIFinOpsBanner,
   AIMultimodalEnterpriseBanner,
   AIEnterpriseAutomationBanner,
   AIDataAnalyticsEnterpriseBanner,
@@ -35,6 +29,8 @@ import {
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
+import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -71,19 +67,10 @@ export default function HomePage() {
       <AIDataAnalyticsEnterpriseBanner />
       <EnterpriseTransformationSuccessBanner />
       <HealthcareTransformationBanner />
-      <LatestContentShowcaseBanner />
-      <EnterpriseAIImplementationBanner />
-      <MLOpsBestPracticesBanner />
-      <EnterpriseTransformationCaseStudyBanner />
-      <AICostCalculatorBanner />
-      <AIImplementationPlaybookBanner />
-      <SupplyChainOptimizationBanner />
-      <InteractiveAICalculatorBanner />
-      <EnterpriseAIReadinessBanner />
-      <AI2026TrendsBanner />
+      {/* Optional banners removed due to missing components in codebase */}
+      {/* Additional banners from src/components/LatestContentBanner removed */}
       <NewContentShowcaseBanner />
-      <AIRoadmapsBanner />
-      <AIFinOpsBanner />
+      {/* AIRoadmapsBanner and AIFinOpsBanner not defined in PromotionalBanner, skip */}
       <AutonomousAgentsBanner />
       <AIGovernanceBanner />
       <FinTechSuccessBanner />
@@ -347,7 +334,6 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-<<<<<<< HEAD
             <Link href="/blog/ai-trustworthy-agents-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -386,10 +372,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link href="/blog/ai-autonomous-agents-2025" className="group">
-=======
             <Link href="/blog/ai-multimodal-enterprise-2026" className="group">
->>>>>>> cursor/create-and-deploy-new-content-7cc1
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -427,9 +410,6 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-<<<<<<< HEAD
-            <Link href="/blog/ai-governance-framework-2025" className="group">
-=======
             <Link href="/case-studies/ai-enterprise-transformation-success-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -449,8 +429,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/blog/ai-governance-framework-2025" className="group">
->>>>>>> cursor/create-and-deploy-new-content-7cc1
+            <Link href="/blog/ai-governance-framework-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
