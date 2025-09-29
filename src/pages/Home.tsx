@@ -32,7 +32,6 @@ import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
 import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
 import { latestInsights } from "../content/insights";
-import { featuredInsights, newInsights } from "../content/new-insights";
 import { posts } from "../content/posts";
 import { newArticles2025 } from "../content/new-articles-2025";
 
@@ -507,7 +506,7 @@ const Home = () => {
             <Link to="/insights" className="text-zion-cyan hover:underline">View all</Link>
           </div>
             <div className="grid md:grid-cols-3 gap-6">
-              {[...latestInsights.slice(0, 2), ...featuredInsights.slice(0, 1)].map((item) => (
+              {latestInsights.slice(0, 3).map((item) => (
               <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
@@ -549,7 +548,7 @@ const Home = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {newInsights.slice(0, 3).map((insight) => (
+              {latestInsights.slice(0, 3).map((insight) => (
                 <div key={insight.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs uppercase tracking-wider text-indigo-300">{insight.category}</span>
