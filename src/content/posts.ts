@@ -10,6 +10,36 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "agentic-workflows-blueprint-2026",
+    title: "Agentic Workflows Blueprint 2026: Reliable Multi‑Step Automation",
+    description:
+      "Design agent workflows with scoped tools, retries, and traces that actually work in production.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-llm-caching-blueprint-2026",
+    title: "Edge LLM Caching Blueprint: Sub‑100ms Prompts with Tiered Stores",
+    description:
+      "KV patterns, signed configs, and freshness windows to cut latency and cost without quality loss.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "ml-supply-chain-sbom-2026",
+    title: "ML Supply Chain SBOMs: Models, Datasets, and Prompt Lineage",
+    description:
+      "End‑to‑end provenance with attestations and policy checks for every ML artifact.",
+    category: "AI Security",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
     slug: "ai-incident-response-2026",
     title: "AI Incident Response 2026: Playbooks, Canaries, and SLAs",
     description: "Practical incident response for AI features with on-call playbooks and KPI-linked canaries.",
