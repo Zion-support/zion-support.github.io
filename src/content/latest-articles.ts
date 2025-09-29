@@ -17,20 +17,6 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
-<<<<<<< HEAD
-    id: "agentic-workflows-blueprint-2026",
-    slug: "agentic-workflows-blueprint-2026",
-    title: "Agentic Workflows Blueprint 2026: Reliable Multi‑Step Automation",
-    description: "Scoped tools, retries, and traces that keep multi‑tool agents reliable.",
-    excerpt: "A practical blueprint for agentic workflows that actually work in production.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "GenAI",
-    tags: ["Agents", "Workflows", "Tracing"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/agentic-workflows-2026.jpg",
-=======
     id: "platform-engineering-scorecards-2026",
     slug: "platform-engineering-scorecards-2026",
     title: "Platform Engineering Scorecards 2026: Golden Paths that Drive Outcomes",
@@ -43,25 +29,10 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "8 min read",
     image: "/images/platform-engineering-scorecards-2026.jpg",
->>>>>>> origin/main
     newBadge: true,
     trending: true
   },
   {
-<<<<<<< HEAD
-    id: "edge-llm-caching-blueprint-2026",
-    slug: "edge-llm-caching-blueprint-2026",
-    title: "Edge LLM Caching Blueprint: Sub‑100ms Prompts with Tiered Stores",
-    description: "Tiered caches, signed configs, and freshness windows for fast, private UX.",
-    excerpt: "Cut latency and cost with deterministic fallbacks and cache policies.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Architecture",
-    tags: ["Edge", "Caching", "LLM"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/edge-llm-caching-2026.jpg",
-=======
     id: "ai-cybersecurity-automation-2025",
     slug: "ai-cybersecurity-automation-2025",
     title: "AI Cybersecurity Automation: Autonomic Response Under 60s",
@@ -74,38 +45,10 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "7 min read",
     image: "/images/ai-cybersecurity-automation.jpg",
->>>>>>> origin/main
     newBadge: true,
     trending: true
   },
   {
-<<<<<<< HEAD
-    id: "ml-supply-chain-sbom-2026",
-    slug: "ml-supply-chain-sbom-2026",
-    title: "ML Supply Chain SBOMs: Models, Datasets, and Prompt Lineage",
-    description: "Build living SBOMs for ML assets with attestations and policy gates.",
-    excerpt: "Provenance and controls for datasets, models, and inference routes.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "AI Security",
-    tags: ["SBOM", "Supply Chain", "ML"],
-    featured: false,
-    readTime: "6 min read",
-    image: "/images/ml-supply-chain-sbom-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "secure-agents-runtime-2026",
-    slug: "secure-agents-runtime-2026",
-    title: "Secure AI Agents Runtime: Sandboxes, Egress Policies, and Traces",
-    description: "Run multi‑tool agents safely with isolation, policy tests in CI, and live traces.",
-    excerpt: "A production checklist for secure, observable AI agents without slowing teams.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-09",
-    category: "AI Security",
-    tags: ["Agents", "Security", "Policy", "Tracing"],
-=======
     id: "edge-ai-blueprint-2026",
     slug: "edge-ai-blueprint-2026",
     title: "Edge AI Blueprint 2026: Privacy‑Preserving Intelligence <100ms",
@@ -115,7 +58,6 @@ export const latestArticles: LatestArticle[] = [
     date: "2025-10-09",
     category: "Edge Computing",
     tags: ["Edge AI", "Latency", "Privacy", "On‑device"],
->>>>>>> origin/main
     featured: true,
     readTime: "9 min read",
     image: "/images/edge-ai-blueprint-2026.jpg",
