@@ -43,12 +43,15 @@ import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -82,6 +85,8 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+      <Revolutionary2026ContentBanner />
+      <Latest2026ContentMegaBanner />
       <NewContent2026Banner />
       <AINeuralArchitectureBanner />
       <AISpaceTechBanner />
@@ -264,6 +269,7 @@ export default function HomePage() {
       
       {/* Interactive Content Hub */}
       <InteractiveContentShowcase />
+      <InteractiveContentShowcase2026 />
       
       {/* Interactive Content Recommendations */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
