@@ -4,6 +4,10 @@ import { Clock, ArrowRight, CheckCircle, Star, Users, TrendingUp, DollarSign, Ta
 
 export const metadata = {
   title: 'AI Autonomous Enterprise Success 2026: $25M ROI Case Study',
+<<<<<<< HEAD
+  description: 'See how a Fortune 500 manufacturing company achieved $25M ROI and 90% automation efficiency through comprehensive AI autonomous enterprise transformation.',
+  keywords: 'autonomous enterprise case study, AI transformation, manufacturing automation, Fortune 500, ROI success story',
+=======
   description: 'See how a Fortune 500 manufacturing company achieved $25M ROI with AI autonomous enterprise transformation. 99.9% uptime, 90% cost reduction, and complete business revolution.',
   keywords: 'AI case study, autonomous enterprise, Fortune 500, ROI, AI transformation, manufacturing',
 =======
@@ -16,11 +20,27 @@ export const metadata = {
     publishedTime: '2026-01-20T00:00:00.000Z',
     authors: ['Zion Tech Group'],
   },
+>>>>>>> origin/cursor/create-and-deploy-new-content-d27d
 };
 
 export default function AIAutonomousEnterpriseSuccess2026() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
+<<<<<<< HEAD
+      <div className="mb-8">
+        <div className="flex items-center gap-2 mb-4">
+          <span className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+            NEW CASE STUDY
+          </span>
+          <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+            FORTUNE 500
+          </span>
+      {/* Hero Section */}
+      <div className="text-center mb-12">
+        <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-blue-600 text-white text-sm font-medium mb-6">
+          <span className="w-4 h-4 mr-2">📊</span>
+          FEATURED CASE STUDY
+=======
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
           AI Autonomous Enterprise Success 2026: $25M ROI Case Study
@@ -812,6 +832,7 @@ export default function AIAutonomousEnterpriseSuccess2026() {
             <Link href="/case-studies/ai-enterprise-transformation-success-2026" className="block p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
               <h4 className="font-semibold text-gray-900 mb-2">AI Enterprise Transformation Success 2026: $10M ROI Case Study</h4>
               <p className="text-gray-600 text-sm">Comprehensive AI transformation with 95% automation and 300% productivity gains</p>
+>>>>>>> origin/cursor/create-and-deploy-new-content-d27d
             </Link>
           </div>
         </div>
