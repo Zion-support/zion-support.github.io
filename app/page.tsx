@@ -1,5 +1,6 @@
-import Link from 'next/link';
-import { NewBlogBanner, AnalyticsPlatformBanner, TechCorpSuccessBanner, NewContentBanner } from '../components/PromotionalBanner';
+import { Link } from 'react-router-dom';
+import React from 'react';
+import { AnalyticsPlatformBanner, NewBlogBanner, NewContentBanner } from '../components/PromotionalBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -29,7 +30,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              href="/services"
+              to="/services"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore Our Services
@@ -140,7 +141,45 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link href="/blog/genai-guardrails-2025" className="group">
+            <Link to="/blog/llm-cost-optimization-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Article
+                  </span>
+                  <span className="text-sm text-gray-500">9 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  LLM Cost Optimization in 2025: Practical Strategies
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Cut LLM spend by 30–70% with routing, caching, and quantization patterns.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link to="/blog/edge-llm-latency-patterns" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Article
+                  </span>
+                  <span className="text-sm text-gray-500">7 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  Edge LLM Latency Patterns: Sub-200ms Interactions
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Streaming, prefetch, and edge compute patterns for instant-feel AI UX.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link to="/blog/genai-guardrails-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -159,7 +198,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link href="/blog/ai-revolution-2025" className="group">
+            <Link to="/blog/ai-revolution-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -179,7 +218,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/blog/ai-agents-in-the-enterprise-2025" className="group">
+            <Link to="/blog/ai-agents-in-the-enterprise-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -199,7 +238,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/case-studies/techcorp-ai-transformation" className="group">
+            <Link to="/case-studies/techcorp-ai-transformation" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -219,7 +258,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/case-studies/finserve-genai-risk-mitigation" className="group">
+            <Link to="/case-studies/finserve-genai-risk-mitigation" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -239,7 +278,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/services/ai-analytics-platform" className="group">
+            <Link to="/services/ai-analytics-platform" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -262,7 +301,7 @@ export default function HomePage() {
 
           <div className="text-center">
             <Link
-              href="/blog"
+              to="/blog"
               className="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg hover:shadow-xl"
             >
               View All Content
@@ -411,7 +450,7 @@ function FeaturedServiceCard({
         ))}
       </ul>
       <Link
-        href={href}
+        to={href}
         className={`block w-full text-center py-2 px-4 rounded-lg font-semibold transition-colors ${
           popular
             ? 'bg-blue-600 text-white hover:bg-blue-700'

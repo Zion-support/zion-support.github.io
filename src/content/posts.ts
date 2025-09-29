@@ -10,6 +10,26 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "llm-cost-optimization-2025",
+    title: "LLM Cost Optimization in 2025: Practical Strategies",
+    description:
+      "Cut LLM spend by 30–70% with routing, caching, batching, and quantization while preserving quality.",
+    category: "AI Platforms",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "edge-llm-latency-patterns",
+    title: "Edge LLM Latency Patterns: Sub-200ms Interactions",
+    description:
+      "Streaming, prefetch, and edge compute patterns to deliver instant-feel AI UX.",
+    category: "Performance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
     slug: "customer-journey-agents-qa",
     title: "Customer Journey Agents: Planning, Safety, and QA Gates",
     description:

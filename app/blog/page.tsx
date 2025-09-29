@@ -1,5 +1,4 @@
-import Link from 'next/link';
-
+import React from 'react';
 export const metadata = {
   title: 'AI & Tech Blog | Zion Tech Group',
   description: 'Latest insights on AI trends, technology innovations, and business automation strategies.',
@@ -45,6 +44,22 @@ export default function BlogPage() {
 
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <BlogPost
+            title="LLM Cost Optimization in 2025: Practical Strategies"
+            excerpt="Cut LLM spend by 30–70% with routing, caching, batching, and quantization while preserving quality."
+            date="September 29, 2025"
+            category="AI Platforms"
+            readTime="9 min"
+            image="💸"
+          />
+          <BlogPost
+            title="Edge LLM Latency Patterns: Sub-200ms Interactions"
+            excerpt="Streaming, prefetch, and edge compute patterns to deliver instant-feel AI UX."
+            date="September 29, 2025"
+            category="Performance"
+            readTime="7 min"
+            image="⚡"
+          />
           <BlogPost
             title="GenAI Guardrails 2025: Practical Playbook for Reliable AI"
             excerpt="Concrete patterns to make generative AI systems safe, reliable, and auditable in production."
