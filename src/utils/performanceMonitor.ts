@@ -168,13 +168,13 @@ class PerformanceMonitor {
       (window as any).gtag('event', 'performance_metric', {
         metric_name: metric.name,
         metric_value: Math.round(metric.value),
-        metric_id: metric.id
+        metric_id: metric.id,
       });
     }
   }
 
   private generateId(): string {
-    return Math.random().toString(36).substr(2, 9);
+    return Math.random().toString(36).slice(2, 11);
   }
 
   public getMetrics(): PerformanceMetric[] {

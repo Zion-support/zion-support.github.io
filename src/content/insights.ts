@@ -661,10 +661,6 @@ export const latestInsights: InsightArticle[] = [
   {
     id: "ai-workflow-automation-2025-trends",
     title: "AI Workflow Automation: 2025 Trends That Will Transform Business",
-=======
-    id: "ai-automation-roi-breakdown",
-    title: "AI Automation ROI: Real Numbers from 50+ Implementations",
->>>>>>> origin/main
     summary:
       "Detailed breakdown of cost savings, efficiency gains, and revenue increases from AI workflow automation across industries.",
     category: "ROI Analysis",
@@ -798,6 +794,8 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0c52
     id: "genai-guardrails-in-production",
     title: "GenAI Guardrails in Production: Policy Tests That Scale",
     summary:
@@ -841,8 +839,6 @@ export const latestInsights: InsightArticle[] = [
     category: "Security",
     date: "2025-01-21",
     readMinutes: 11,
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1815
   },
   {
     id: "ai-autonomous-operations-2025-trends",
@@ -1015,5 +1011,7 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-01-21",
     readMinutes: 11,
   }
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0c52
 ];
 
