@@ -14,6 +14,7 @@ import CaseStudies from './pages/CaseStudies';
 import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
 import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
 import AIDataAnalytics from './pages/services/AIDataAnalytics';
+import AIAutonomousOperations from './pages/services/AIAutonomousOperations';
 
 export const AppRouter: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ export const AppRouter: React.FC = () => {
       <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
       <Route path="/services/ai-virtual-assistant" element={<AIVirtualAssistant />} />
       <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
+      <Route path="/services/ai-autonomous-operations" element={<AIAutonomousOperations />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/ai-micro-saas" element={<AIMicroSAAS />} />
