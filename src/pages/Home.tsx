@@ -133,16 +133,16 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Edge LLM Caching, Governance Scorecards, Serverless Cost Playbook"
-          description="Sub‑100ms prompts, KPI‑tied governance that sticks, and 40–70% AI cost savings."
+          title="New: AI Customer Copilots 2026 + Serverless Inference Cost Playbook"
+          description="Lift conversion 10–25% safely with grounded copilots; cut inference spend 40–70%."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Incident Response Playbooks", category: "Cybersecurity", link: "/blog/ai-incident-response-playbooks-2025" },
-            { title: "Privacy‑Preserving Analytics", category: "Observability", link: "/blog/privacy-preserving-analytics-2025" },
+            { title: "AI Customer Copilots 2026", category: "AI Solutions", link: "/blog/ai-customer-copilots-2026" },
+            { title: "Serverless Inference Cost Playbook", category: "AI Operations", link: "/blog/serverless-inference-cost-playbook-2025" },
             { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" },
             { title: "AI Governance Scorecards Quickstart", category: "AI Strategy", link: "/blog/ai-governance-scorecards-quickstart-2025" },
-            { title: "Serverless AI Inference Cost Playbook 2025", category: "Cost Optimization", link: "/blog/serverless-ai-inference-cost-playbook-2025" }
+            { title: "Privacy‑Preserving Analytics", category: "Observability", link: "/blog/privacy-preserving-analytics-2025" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">

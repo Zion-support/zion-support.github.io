@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-customer-copilots-2026",
+    title: "AI Customer Copilots 2026: Conversion Lifts Without Hallucinations",
+    description: "Grounded prompts, retrieval contracts, and guardrails that lift CVR 10–25% safely.",
+    category: "AI Solutions",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "serverless-inference-cost-playbook-2025",
+    title: "Serverless Inference Cost Playbook: 40–70% Savings at P95",
+    description: "Warm pools, adaptive batching, and tiered quality routes that cut spend without hurting UX.",
+    category: "AI Operations",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "platform-engineering-scorecards-2026",
     title: "Platform Engineering Scorecards 2026: From Golden Paths to Outcomes",
     description: "Measure what matters: adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery.",
