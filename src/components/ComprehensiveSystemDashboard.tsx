@@ -53,7 +53,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
   const handleOptimize = useCallback(async () => {
     try {
       if (metrics) {
-        await performanceOptimizer.optimize(metrics);
+        await performanceOptimizer.optimize();
         // Reload metrics after optimization
         const updatedMetrics = await performanceOptimizer.getMetrics();
         setMetrics(updatedMetrics);
@@ -113,7 +113,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                   <div className="bg-blue-50 p-4 rounded-lg">
                     <h3 className="text-lg font-semibold text-blue-800">Performance</h3>
                     <p className="text-blue-600">
-                      {metrics ? `${metrics.score}/100` : 'Loading...'}
+                      {metrics ? `${metrics.overallScore || 0}/100` : 'Loading...'}
                     </p>
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg">
@@ -192,12 +192,12 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                   <div className="bg-gray-50 p-4 rounded-lg">
                     <h4 className="font-semibold mb-2">Performance Score</h4>
                     <div className="text-3xl font-bold text-blue-600">
-                      {metrics.score}/100
+                      {metrics.overallScore || 0}/100
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
                       <div 
                         className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-                        style={{ width: `${metrics.score}%` }}
+                        style={{ width: `${metrics.overallScore || 0}%` }}
                       ></div>
                     </div>
                   </div>
@@ -241,13 +241,13 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                   <div className="bg-gray-50 p-4 rounded-lg">
                     <h4 className="font-semibold mb-2">Issues Found</h4>
                     <div className="text-2xl font-bold text-red-600">
-                      {accessibilityMetrics.issues.length}
+                      {accessibilityMetrics.issues?.length || 0}
                     </div>
                     <p className="text-sm text-gray-600">Total issues</p>
                   </div>
                 </div>
 
-                {accessibilityMetrics.issues.length > 0 && (
+                {accessibilityMetrics.issues && accessibilityMetrics.issues.length > 0 && (
                   <div className="bg-white border rounded-lg p-4">
                     <h4 className="font-semibold mb-4">Accessibility Issues</h4>
                     <div className="space-y-2">
@@ -255,7 +255,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                         <div key={index} className="p-3 bg-red-50 rounded-lg">
                           <p className="font-medium text-red-800">{issue.type}</p>
                           <p className="text-sm text-red-600">{issue.message}</p>
-                          <p className="text-sm text-gray-600">Severity: {issue.severity}</p>
+                          <p className="text-sm text-gray-600">Type: {issue.type}</p>
                         </div>
                       ))}
                     </div>

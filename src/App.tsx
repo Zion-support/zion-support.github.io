@@ -102,10 +102,9 @@ export default function App(): React.JSX.Element {
 
   // Performance optimization hook
   const { preloadResource } = usePerformanceOptimization({
-    enablePreloading: true,
-    enableResourceHints: true,
-    enableCriticalCSS: true,
-    enableImageOptimization: true,
+    enableMemoryMonitoring: true,
+    enableRenderTracking: true,
+    enableLazyLoading: true,
   });
 
   // Enhanced keyboard handler for all dashboard toggles
@@ -275,7 +274,7 @@ export default function App(): React.JSX.Element {
                 ✕
               </button>
             </div>
-            <AIPerformanceDashboard />
+            <AIPerformanceDashboard isVisible={true} onClose={() => setShowAIDashboard(false)} />
           </div>
         </div>
       )}
@@ -293,7 +292,7 @@ export default function App(): React.JSX.Element {
                 ✕
               </button>
             </div>
-            <SEOOptimizer />
+            <SEOOptimizer seoData={seoData} />
           </div>
         </div>
       )}
@@ -311,7 +310,7 @@ export default function App(): React.JSX.Element {
                 ✕
               </button>
             </div>
-            <ComprehensiveSystemDashboard />
+            <ComprehensiveSystemDashboard isVisible={true} onClose={() => setShowComprehensiveDashboard(false)} />
           </div>
         </div>
       )}
