@@ -80,6 +80,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Latest 2026 Content Showcase */}
+      <NewContent2026ShowcaseBanner />
+
       {/* Featured New Content Showcase */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
         <div className="max-w-6xl mx-auto px-4">
