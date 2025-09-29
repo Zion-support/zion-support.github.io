@@ -135,6 +135,36 @@ contentHighlights.push(
     badge: "Featured",
     stats: "6 min read",
     variant: "success" as const
+  },
+  {
+    id: 11,
+    title: "💸 Cloud FinOps Guardrails Engineers Actually Use",
+    description: "Budgets, alerts, and PR gates that reduce waste 25–40%",
+    ctaText: "Cut Spend",
+    ctaLink: "/blog/cloud-finops-guardrails-2025",
+    badge: "Hot",
+    stats: "6 min read",
+    variant: "info" as const
+  },
+  {
+    id: 12,
+    title: "📈 Practical AI Evals That Predict Business Outcomes",
+    description: "Scorecards that correlate with revenue, CSAT, and retention",
+    ctaText: "See Scorecards",
+    ctaLink: "/blog/practical-evals-scorecards-2025",
+    badge: "Featured",
+    stats: "6 min read",
+    variant: "success" as const
+  },
+  {
+    id: 13,
+    title: "🧰 Serverless Inference Cost Playbook",
+    description: "Adaptive batching, warm pools, and quality tiers without P95 pain",
+    ctaText: "Optimize",
+    ctaLink: "/blog/serverless-inference-cost-playbook-2025",
+    badge: "Guide",
+    stats: "7 min read",
+    variant: "success" as const
   }
 );
 
