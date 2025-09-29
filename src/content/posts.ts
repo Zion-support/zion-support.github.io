@@ -793,3 +793,25 @@ posts.push(
     readTime: "6 min read"
   }
 );
+
+// September 29, 2025 new posts (auto‑advertised on Home via latest sort)
+posts.push(
+  {
+    slug: "ai-sre-runbooks-2026",
+    title: "AI SRE Runbooks 2026: Error Budgets, Rollbacks, and Live Traces",
+    description: "Design SRE guardrails for AI systems: quality budgets, rollback triggers, and trace‑driven remediation.",
+    category: "AI Operations",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-first-data-pipelines-2026",
+    title: "Privacy‑First Data Pipelines 2026: Scoped IDs, Redaction, and DP",
+    description: "Blueprint for signal‑rich analytics without PII risk using scoped identifiers, field‑level filters, and DP noise.",
+    category: "Observability",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  }
+);

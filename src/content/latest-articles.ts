@@ -1312,3 +1312,39 @@ latestArticles.unshift(
     trending: true
   }
 );
+
+// September 29, 2025 — additional featured articles
+latestArticles.unshift(
+  {
+    id: "ai-sre-runbooks-2026",
+    slug: "ai-sre-runbooks-2026",
+    title: "AI SRE Runbooks 2026: Error Budgets, Rollbacks, and Live Traces",
+    description: "Design SRE guardrails for AI systems: quality budgets, rollback triggers, and trace‑driven remediation.",
+    excerpt: "A practical SRE system for AI: budgets, rollback paths, and KPI‑linked traces.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Operations",
+    tags: ["SRE", "Budgets", "Rollbacks", "Tracing"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-sre-runbooks-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-first-data-pipelines-2026",
+    slug: "privacy-first-data-pipelines-2026",
+    title: "Privacy‑First Data Pipelines 2026: Scoped IDs, Redaction, and DP",
+    description: "Blueprint for signal‑rich analytics without PII risk using scoped identifiers, field‑level filters, and DP noise.",
+    excerpt: "Keep insights high and risk low with privacy‑by‑design telemetry.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Observability",
+    tags: ["Privacy", "Telemetry", "DP", "Scoped IDs"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/privacy-first-data-pipelines-2026.jpg",
+    newBadge: true,
+    trending: true
+  }
+);
