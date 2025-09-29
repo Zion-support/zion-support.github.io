@@ -18,6 +18,42 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+    id: "genai-evals-blueprint",
+    title: "A Practical Blueprint for GenAI Evals in Production",
+    summary:
+      "How to stand up evaluation harnesses, golden sets, and regression testing for enterprise GenAI.",
+    category: "MLOps",
+    date: "2025-09-27",
+    readMinutes: 9,
+  },
+  {
+    id: "kubernetes-cost-guardrails",
+    title: "Kubernetes Cost Guardrails That Engineers Don’t Hate",
+    summary:
+      "Limit waste with sensible defaults: requests/limits, QoS, autoscaling, and cost-aware CI policies.",
+    category: "Cloud",
+    date: "2025-09-28",
+    readMinutes: 7,
+  },
+  {
+    id: "zero-trust-sdls",
+    title: "Zero-Trust SDLC: Shipping Secure Software Without Slowing Down",
+    summary:
+      "Embed policy-as-code, automated threat modeling, and continuous verification into delivery workflows.",
+    category: "Security",
+    date: "2025-09-28",
+    readMinutes: 8,
+  },
+  {
+    id: "analytics-ltv-playbook",
+    title: "An Operator’s Playbook for LTV:CPA Ratio",
+    summary:
+      "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
+    category: "Product Analytics",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
     id: "secure-ml-pipelines",
     title: "Securing Machine Learning Pipelines in Production",
     summary:
