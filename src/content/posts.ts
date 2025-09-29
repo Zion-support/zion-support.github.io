@@ -10,6 +10,15 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-governance-routing-blueprint-2026",
+    title: "AI Governance Routing Blueprint 2026: Policy Tests, Canaries, SLAs",
+    description: "A practical system to keep AI features fast and safe with policy tests in CI, KPI-linked canaries, and service-level objectives.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "privacy-first-feature-flags-2026",
     title: "Privacy‑First Feature Flags 2026: Global Rolls Without PII Risk",
     description: "Scoped IDs, edge filters, and health checks for instant, safe rollouts under 100ms.",
