@@ -26,13 +26,18 @@ import {
   AIDataAnalyticsEnterpriseBanner,
   EnterpriseTransformationSuccessBanner,
   HealthcareTransformationBanner,
-  NewContent2026Banner
+  NewContent2026Banner,
+  AIOperationalExcellenceBanner,
+  AIAgentObservabilityBanner,
+  ManufacturingTransformationBanner,
+  Latest2026ContentBanner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -47,18 +52,18 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-            <span>✨ New 2026 content:</span>
-            <a href="/blog/ai-trustworthy-agents-2026" className="underline hover:text-yellow-200">Trustworthy AI Agents</a>
+            <span>🚀 Latest 2026 content:</span>
+            <a href="/blog/ai-operational-excellence-2026" className="underline hover:text-yellow-200">Operational Excellence</a>
             <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-value-stream-analytics-2026" className="underline hover:text-yellow-200">Value Stream Analytics</a>
+            <a href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</a>
             <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-multimodal-enterprise-2026" className="underline hover:text-yellow-200">AI Multimodal Enterprise</a>
+            <a href="/case-studies/ai-manufacturing-transformation-2026" className="underline hover:text-yellow-200">$12M Manufacturing ROI</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-multimodal-enterprise-2026" className="underline hover:text-yellow-200">Multimodal Enterprise</a>
             <span className="hidden md:inline">•</span>
             <a href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200">Enterprise Automation</a>
             <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-operational-excellence-2026" className="underline hover:text-yellow-200">AI Operational Excellence 2026</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</a>
+            <a href="/blog/ai-trustworthy-agents-2026" className="underline hover:text-yellow-200">Trustworthy Agents</a>
           </div>
           <Link
             href="/blog"
@@ -69,6 +74,10 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <Latest2026ContentBanner />
+      <AIOperationalExcellenceBanner />
+      <AIAgentObservabilityBanner />
+      <ManufacturingTransformationBanner />
       <NewContent2026Banner />
       <AIMultimodalEnterpriseBanner />
       <AIEnterpriseAutomationBanner />
@@ -220,6 +229,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Enhanced Interactive Content Showcase */}
+      <EnhancedContentShowcase />
+      
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
       
@@ -342,60 +354,60 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link href="/blog/ai-trustworthy-agents-2026" className="group">
+            <Link href="/blog/ai-operational-excellence-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW 2026
+                  </span>
+                  <span className="text-sm text-gray-500">18 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Operational Excellence 2026: Complete Enterprise Implementation Guide
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Transform your enterprise operations with 95% automation rates, $5M+ savings, and zero-touch operations.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Guide →
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-agent-observability-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Article
+                    NEW 2026
                   </span>
                   <span className="text-sm text-gray-500">11 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  Trustworthy AI Agents 2026: Safety, Compliance, and Observability
+                  AI Agent Observability 2026: Complete Monitoring & Debugging Guide
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Deploy trustworthy AI agents with guardrails, approvals, and end-to-end observability.
+                  Achieve 99.9% AI agent reliability with comprehensive observability and real-time monitoring.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
+                  Read Guide →
                 </div>
               </div>
             </Link>
-            <Link href="/blog/ai-value-stream-analytics-2026" className="group">
+            <Link href="/case-studies/ai-manufacturing-transformation-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Featured Article
+                  <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW Case Study
                   </span>
-                  <span className="text-sm text-gray-500">9 min read</span>
+                  <span className="text-sm text-gray-500">Fortune 500</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Value Stream Analytics 2026: Trace ROI from Token to Revenue
+                  AI Manufacturing Transformation 2026: $12M ROI Case Study
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Tie AI cost, latency, and quality to business value with end-to-end tracing.
+                  See how a global manufacturing leader achieved 98% automation, 400% productivity gains, and $12M annual ROI.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/ai-multimodal-enterprise-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New 2026
-                  </span>
-                  <span className="text-sm text-gray-500">22 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Multimodal Enterprise 2026: Complete Implementation Guide
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Master multimodal AI for enterprise with vision, language, and audio processing. 85% efficiency gains and $2M+ ROI.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
+                  View Case Study →
                 </div>
               </div>
             </Link>

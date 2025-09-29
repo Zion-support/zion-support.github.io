@@ -397,3 +397,48 @@ export const NewContent2026Banner = () => (
     hideAfter={18}
   />
 );
+
+// New 2026 Operational Excellence & Observability Banners
+export const AIOperationalExcellenceBanner = () => (
+  <PromotionalBanner
+    message="⚙️ NEW: AI Operational Excellence 2026 - 95% Automation & $5M+ Savings with Zero-Touch Operations"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-operational-excellence-2026"
+    backgroundColor="bg-gradient-to-r from-emerald-600 to-teal-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AIAgentObservabilityBanner = () => (
+  <PromotionalBanner
+    message="🔍 NEW: AI Agent Observability 2026 - 99.9% Reliability with Real-time Monitoring & 85% Faster Debugging"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-agent-observability-2026"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-cyan-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const ManufacturingTransformationBanner = () => (
+  <PromotionalBanner
+    message="🏭 NEW: $12M ROI Manufacturing Case Study - 98% Automation, 400% Productivity Gains & Zero-Defect Production"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-manufacturing-transformation-2026"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const Latest2026ContentBanner = () => (
+  <PromotionalBanner
+    message="✨ LATEST 2026: Operational Excellence, Agent Observability & Manufacturing Success - Premium AI Content"
+    ctaText="Browse Latest"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
