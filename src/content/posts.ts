@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-agent-orchestration-2026",
+    title: "AI Agent Orchestration 2026: Multi-Agent System Architecture",
+    description: "Master multi-agent systems with 95% automation efficiency and $5M+ ROI through advanced orchestration patterns.",
+    category: "AI Orchestration",
+    publishedAt: "2025-01-20",
+    featured: true,
+    readTime: "22 min read"
+  },
+  {
+    slug: "ai-sustainability-green-tech-2026",
+    title: "AI Sustainability & Green Tech 2026: Carbon-Neutral Operations",
+    description: "Achieve carbon-neutral AI operations with 80% energy reduction and $2M+ savings through sustainable technology.",
+    category: "Sustainability",
+    publishedAt: "2025-01-20",
+    featured: true,
+    readTime: "18 min read"
+  },
+  {
+    slug: "ai-quantum-computing-2026",
+    title: "AI Quantum Computing 2026: Next-Generation Intelligence",
+    description: "Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.",
+    category: "Quantum Computing",
+    publishedAt: "2025-01-20",
+    featured: true,
+    readTime: "25 min read"
+  },
+  {
     slug: "ai-reliable-rag-ops-2026",
     title: "Reliable RAG Ops 2026: Freshness Windows, Drift Alerts, Budgets",
     description: "Keep RAG quality high with TTL windows, drift detectors, and KPI‑tied quality budgets.",

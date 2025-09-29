@@ -1,24 +1,15 @@
 import React, { useState } from 'react';
 
-<<<<<<< HEAD
-export default function EnhancedNewsletterSignup(): React.JSX.Element {
-	return (
-		<form onSubmit={(e) => e.preventDefault()} aria-label="Newsletter signup">
-			<input placeholder="Email" aria-label="Email" />
-			<button type="submit">Subscribe</button>
-		</form>
-	);
-=======
 interface Props {
   title?: string;
   subtitle?: string;
   showContentPreview?: boolean;
+  className?: string;
 }
 
-export default function EnhancedNewsletterSignup(_props: Props): React.JSX.Element {
-  return <section />;
->>>>>>> origin/main
-}
+export default function EnhancedNewsletterSignup({ className = '' }: Props): React.JSX.Element {
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -57,6 +48,4 @@ export default function EnhancedNewsletterSignup(_props: Props): React.JSX.Eleme
       </div>
     </form>
   );
-};
-
-export default EnhancedNewsletterSignup;
+}
