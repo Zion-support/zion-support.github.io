@@ -58,13 +58,11 @@ export default function HomePage() {
             <span>✨ Latest 2026 content:</span>
             <a href="/blog/agentic-workflow-orchestration-2026" className="underline hover:text-yellow-200">Agentic Workflow Orchestration</a>
             <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-operational-resilience-2026" className="underline hover:text-yellow-200">Operational Resilience</a>
+            <span className="hidden md:inline">•</span>
             <a href="/blog/ai-governance-maturity-model-2026" className="underline hover:text-yellow-200">AI Governance Maturity</a>
             <span className="hidden md:inline">•</span>
             <a href="/blog/ai-customer-data-platforms-2026" className="underline hover:text-yellow-200">AI CDPs 2026</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-finops-advanced-2026" className="underline hover:text-yellow-200">AI FinOps Advanced</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-platform-architecture-2026" className="underline hover:text-yellow-200">Platform Architecture</a>
           </div>
           <Link
             href="/blog"
