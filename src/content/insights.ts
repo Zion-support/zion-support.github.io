@@ -18,6 +18,33 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+    id: "governance-policy-testing",
+    title: "Governance for AI: Policy Testing That Scales",
+    summary:
+      "From prompt policies to red‑team playbooks: techniques to continuously validate AI behavior.",
+    category: "Risk & Compliance",
+    date: "2025-09-29",
+    readMinutes: 8,
+  },
+  {
+    id: "ltv-cpa-playbook",
+    title: "An Operator’s Playbook for LTV:CPA Ratio",
+    summary:
+      "Instrumentation, cohorting, and experimentation to consistently improve unit economics.",
+    category: "Product Analytics",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "reliable-real-time-pipelines",
+    title: "Building Reliable Real‑Time Data Pipelines",
+    summary:
+      "Exactly‑once semantics, schema evolution, and backpressure handling in streaming systems.",
+    category: "Data Engineering",
+    date: "2025-09-29",
+    readMinutes: 7,
+  },
+  {
     id: "llm-guardrails-prod",
     title: "Shipping LLM Guardrails Without Killing Velocity",
     summary:

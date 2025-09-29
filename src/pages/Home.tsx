@@ -161,7 +161,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Platform Engineering blueprint and GenAI guardrails just dropped — read now in Insights
+            New: AI Governance playbook, Golden Path scorecards, and Cloud FinOps QA gates — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
@@ -487,7 +487,7 @@ const Home = () => {
             <div className="mb-10 flex items-end justify-between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
-                <p className="text-gray-600">Insights from our team to help you move faster.</p>
+                <p className="text-gray-600">Fresh: AI Governance, Golden Paths, and Cloud FinOps QA gates.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
