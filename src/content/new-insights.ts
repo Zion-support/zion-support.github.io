@@ -284,5 +284,27 @@ export const newInsights = [
   }
 ];
 
+// Added: October 7, 2025
+newInsights.unshift({
+  id: "ai-governance-scorecards-2026",
+  title: "AI Governance 2026: Scorecards Engineers Actually Use",
+  summary: "Outcome‑linked guardrails with PR checks and online canaries that accelerate delivery.",
+  category: "AI Strategy",
+  date: "2025-10-07",
+  readMinutes: 7,
+  featured: true,
+  tags: ["Governance", "Policy", "Scorecards"],
+  content: `
+    <h2>Guardrails That Ship</h2>
+    <p>Adopt scorecards tied to KPIs, small PR checks for risky changes, and budgeted online canaries.</p>
+    <h3>What to Implement</h3>
+    <ul>
+      <li>Scorecards with owners and review cadence</li>
+      <li>Policy tests in CI for high‑risk areas</li>
+      <li>Live canaries with rollback triggers</li>
+    </ul>
+  `
+});
+
 export const featuredInsights = newInsights.filter(insight => insight.featured);
 export const latestInsights = newInsights.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
