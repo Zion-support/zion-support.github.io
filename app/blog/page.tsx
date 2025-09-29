@@ -54,40 +54,13 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
-            title="AI Go-To-Market 2026: Enterprise Plays for Fast Adoption"
-            excerpt="Positioning, enterprise readiness, and pipeline plays to scale AI products in 2026."
-            date="September 29, 2025"
-            category="Growth"
-            readTime="10 min"
-            image="📣"
-            href="/blog/ai-go-to-market-2026"
-          />
-          <BlogPost
-            title="AI Data Contracts 2026: Reliability, Governance, and Velocity"
-            excerpt="Contracts with schemas, SLAs, lineage, and enforcement to stabilize AI systems."
-            date="September 29, 2025"
-            category="Data"
-            readTime="9 min"
-            image="📑"
-            href="/blog/ai-data-contracts-2026"
-          />
-          <BlogPost
-            title="AI Agent Observability 2026: Metrics, Traces, and Guardrails"
-            excerpt="Instrument agents with traces, evals, and policy guardrails to ship reliable autonomy."
-            date="September 29, 2025"
-            category="AI Reliability"
-            readTime="12 min"
-            image="🔎"
-            href="/blog/ai-agent-observability-2026"
-          />
-          <BlogPost
-            title="Customer Journey AI 2026: Real-Time Personalization with CDPs"
-            excerpt="Event-driven CDPs + agents for next-best-action that lifts conversion 20–35%."
-            date="September 29, 2025"
-            category="Personalization"
-            readTime="14 min"
-            image="🛒"
-            href="/blog/ai-customer-journey-ai-2026"
+            title="AI Autonomous Cloud Operations 2026"
+            excerpt="Self-healing infrastructure with 99.9% uptime, predictive scaling, and policy-driven operations."
+            date="October 9, 2025"
+            category="Cloud"
+            readTime="18 min"
+            image="☁️"
+            href="/blog/ai-autonomous-cloud-ops-2026"
           />
           <BlogPost
             title="Agentic Workflow Orchestration 2026: Reliable AI Workflows"
@@ -419,6 +392,7 @@ function BlogPost({
   image: string;
   featured?: boolean;
   href?: string;
+  children?: React.ReactNode;
 }) {
   const getCategoryColor = (category: string) => {
     switch (category) {
