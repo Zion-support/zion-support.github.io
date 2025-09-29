@@ -728,6 +728,25 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "6 min read"
   }
+  ,
+  {
+    slug: "ai-sre-blueprints-2026",
+    title: "AI SRE Blueprints 2026: Error Budgets, Rollbacks, and Live Traces",
+    description: "Design SRE guardrails for AI systems: quality/error budgets, rollback triggers, and trace-driven remediation.",
+    category: "AI Operations",
+    publishedAt: "2025-10-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-first-ab-testing-2026",
+    title: "Privacy‑First A/B Testing 2026: Insights Without PII",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant experiments that still drive decisions.",
+    category: "Analytics",
+    publishedAt: "2025-10-29",
+    featured: false,
+    readTime: "7 min read"
+  }
 ];
 
 // Newly added content (auto-advertised on Home via latest sort)
@@ -749,12 +768,8 @@ posts.push(
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "8 min read"
-  }
-);
-
-<<<<<<< HEAD
-// Additional fresh content
-posts.push(
+  },
+  // Additional fresh content (conflict resolved)
   {
     slug: "privacy-first-insights-telemetry-2026",
     title: "Privacy‑First Insights 2026: DP Telemetry Without PII Risk",
@@ -766,23 +781,12 @@ posts.push(
   },
   {
     slug: "agent-blue-green-releases-2026",
-    title: "Blue‑Green Agent Releases 2026: Rollouts with Risk Budgets",
-    description: "Ship agent updates with budgets, canaries, and instant rollback for safe velocity.",
+    title: "Agent Blue‑Green Releases 2026: Safe, Reversible Automation",
+    description: "Deploy agent updates with canaries, budgeted tool actions, and trace‑driven rollbacks.",
     category: "GenAI",
     publishedAt: "2025-10-16",
     featured: true,
-    readTime: "6 min read"
-=======
-// Additional newly added posts to surface on Home and Blog
-posts.push(
-  {
-    slug: "agent-blue-green-releases-2026",
-    title: "Blue‑Green Agent Releases 2026: Safe Rollouts with Live Traces",
-    description: "Deploy agent updates with canaries, budgeted tool actions, and trace‑driven rollbacks.",
-    category: "GenAI",
-    publishedAt: "2025-10-15",
-    featured: true,
-    readTime: "8 min read"
+    readTime: "7 min read"
   },
   {
     slug: "ai-platform-scorecards-roi-2026",
@@ -801,6 +805,5 @@ posts.push(
     publishedAt: "2025-10-10",
     featured: true,
     readTime: "9 min read"
->>>>>>> content/blue-green-and-latest
   }
 );
