@@ -175,7 +175,7 @@ export default function Home() {
         ))}
         
         <NewContentAnnouncement />
-        <LatestContentBanner 
+          <LatestContentBanner 
           className="border-b border-white/10" 
           variant="info"
           autoRotate
@@ -183,42 +183,31 @@ export default function Home() {
         />
         <NewContentPromoBanner 
           className="border-b border-white/10" 
-<<<<<<< HEAD
           variant="premium" 
-          title="New: AI Incident Command Center 2026 + Edge Privacy Playbooks"
-          description="Contain incidents in <60s with budgeted actions and ship privacy‑first analytics without PII."
+          title="New: AI SRE Blueprints, Privacy‑First A/B Testing, Agent Blue‑Green"
+          description="Reliability budgets and traces, compliant experiments with scoped IDs, and safe agent releases with canaries."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Incident Command Center 2026", category: "Security", link: "/blog/ai-incident-command-center-2026" },
-            { title: "Edge Privacy Playbooks 2026", category: "Edge Computing", link: "/blog/edge-privacy-playbooks-2026" },
-            { title: "AI SRE Blueprints 2026", category: "AI Operations", link: "/blog/ai-sre-blueprints-2026" }
+            { title: "AI SRE Blueprints 2026", category: "AI Operations", link: "/blog/ai-sre-blueprints-2026" },
+            { title: "Privacy‑First A/B Testing 2026", category: "Observability", link: "/blog/privacy-first-ab-testing-2026" },
+            { title: "Agent Blue‑Green Releases 2026", category: "GenAI", link: "/blog/agent-blue-green-releases-2026" },
+            { title: "Edge LLM Safety Caching 2026", category: "Architecture", link: "/blog/edge-llm-safety-caching-2026" },
+            { title: "Platform SLO Guardrails 2026", category: "Platform Engineering", link: "/blog/platform-slo-guardrails-2026" }
           ]}
-=======
-          variant="premium"
->>>>>>> cursor/create-and-deploy-new-content-6afb
         />
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
+          <ContentPromotionBanner
+            variant="premium"
+            title="🆕 Fresh today: Agentic Observability • Edge Privacy CDN • Platform SLOs"
+            description="New blueprints and scorecards just dropped. Explore the highlights."
+            ctaText="Read the latest"
+            ctaLink="/blog"
+            dismissible={true}
+          />
         </div>
         
-<<<<<<< HEAD
-        {/* New Comprehensive Promotional Banner */}
-        <div className="container mx-auto px-6 mt-6">
-          <ComprehensivePromoBanner variant="hero" showCount={4} />
-        </div>
-        
-        {/* New Articles Promotional Banner */}
-        <div className="container mx-auto px-6 mt-6">
-          <NewArticlesPromoBanner variant="premium" showCount={3} />
-        </div>
-        
-        {/* New Services Promotional Banner */}
-        <div className="container mx-auto px-6 mt-6">
-          <NewServicesPromoBanner variant="showcase" showCount={3} featuredOnly={true} />
-        </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-6afb
         
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
@@ -388,68 +377,68 @@ export default function Home() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+              <div className="bg-gradient-to-br from-green-600 to-blue-600 rounded-2xl p-8 text-white hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <div className="flex items-center justify-between mb-6">
-                  <Zap className="w-12 h-12 text-blue-300" />
-                  <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">NEW</span>
+                  <Shield className="w-12 h-12 text-green-300" />
+                  <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">BREAKTHROUGH</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-4">AI Automation Platform</h3>
-                <p className="text-blue-100 mb-6">
-                  Transform your business processes with intelligent automation. 
-                  Reduce costs by 75% and increase efficiency by 10x.
+                <h3 className="text-2xl font-bold mb-4">AI Autonomous Infrastructure Platform</h3>
+                <p className="text-green-100 mb-6">
+                  Revolutionary self-healing, self-optimizing systems that reduce costs by 75%, 
+                  achieve 99.9% uptime, and resolve incidents 90% faster.
                 </p>
                 <div className="space-y-2 mb-6">
-                  <div className="flex items-center text-blue-100">
-                    <CheckCircle className="w-5 h-5 mr-3 text-blue-300" />
-                    <span className="text-sm">Process Mining & Discovery</span>
+                  <div className="flex items-center text-green-100">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-300" />
+                    <span className="text-sm">Self-Healing Systems</span>
                   </div>
-                  <div className="flex items-center text-blue-100">
-                    <CheckCircle className="w-5 h-5 mr-3 text-blue-300" />
-                    <span className="text-sm">Smart Automation Bots</span>
+                  <div className="flex items-center text-green-100">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-300" />
+                    <span className="text-sm">Predictive Analytics</span>
                   </div>
-                  <div className="flex items-center text-blue-100">
-                    <CheckCircle className="w-5 h-5 mr-3 text-blue-300" />
-                    <span className="text-sm">Low-Code Workflow Builder</span>
+                  <div className="flex items-center text-green-100">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-300" />
+                    <span className="text-sm">Automated Orchestration</span>
                   </div>
                 </div>
                 <Link 
-                  to="/services/ai-automation-platform" 
-                  className="bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-colors"
+                  to="/services/ai-autonomous-infrastructure-platform" 
+                  className="bg-white text-green-600 hover:bg-green-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-colors"
                 >
-                  Learn More
+                  Explore Platform
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
 
-              <div className="bg-gradient-to-br from-gray-900 to-blue-900 rounded-2xl p-8 text-white hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+              <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 text-white hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <div className="flex items-center justify-between mb-6">
-                  <Shield className="w-12 h-12 text-blue-400" />
-                  <span className="bg-red-500/20 px-3 py-1 rounded-full text-sm font-medium border border-red-500/30">SECURE</span>
+                  <Zap className="w-12 h-12 text-purple-300" />
+                  <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">FUTURE</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-4">AI Cybersecurity Suite</h3>
-                <p className="text-gray-300 mb-6">
-                  Advanced AI-powered security that detects and prevents threats 
-                  with 99.9% accuracy and sub-minute response times.
+                <h3 className="text-2xl font-bold mb-4">Quantum-AI Hybrid Computing</h3>
+                <p className="text-purple-100 mb-6">
+                  Next-generation computing that combines quantum processing with AI to solve 
+                  complex optimization problems 1000x faster than classical systems.
                 </p>
                 <div className="space-y-2 mb-6">
-                  <div className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                    <span className="text-sm">Real-time Threat Detection</span>
+                  <div className="flex items-center text-purple-100">
+                    <CheckCircle className="w-5 h-5 mr-3 text-purple-300" />
+                    <span className="text-sm">Quantum Optimization</span>
                   </div>
-                  <div className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                    <span className="text-sm">Automated Incident Response</span>
+                  <div className="flex items-center text-purple-100">
+                    <CheckCircle className="w-5 h-5 mr-3 text-purple-300" />
+                    <span className="text-sm">AI Pattern Recognition</span>
                   </div>
-                  <div className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                    <span className="text-sm">Zero-Trust Architecture</span>
+                  <div className="flex items-center text-purple-100">
+                    <CheckCircle className="w-5 h-5 mr-3 text-purple-300" />
+                    <span className="text-sm">Hybrid Orchestration</span>
                   </div>
                 </div>
                 <Link 
-                  to="/services/ai-cybersecurity-suite" 
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-colors"
+                  to="/services/quantum-ai-hybrid-computing-platform" 
+                  className="bg-white text-purple-600 hover:bg-purple-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-colors"
                 >
-                  Explore Security
+                  Learn More
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -618,46 +607,89 @@ export default function Home() {
                 <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Fresh: Edge LLM Caching, KPI Scorecards, Serverless Cost Playbook
+                Fresh: AI Autonomous Infrastructure, Quantum-AI Hybrid Computing, Success Stories
               </div>
               <h2 className="text-4xl font-bold mb-4">
-                Latest Articles & Insights
+                Latest Articles, Services & Success Stories
               </h2>
               <p className="text-xl text-indigo-100 max-w-3xl mx-auto">
-                Stay ahead of the curve with our latest articles on AI automation, 
-                cybersecurity, and emerging technologies.
+                Discover breakthrough AI autonomous infrastructure solutions, quantum-AI hybrid computing platforms, 
+                and real-world success stories from Fortune 500 companies.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {latestInsights.slice(0, 3).map((insight) => (
-                <div key={insight.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+            <div className="grid md:grid-cols-3 gap-8">
+              <Link to="/blog/ai-autonomous-infrastructure-platform" className="group">
+                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs uppercase tracking-wider text-indigo-300">{insight.category}</span>
-                    {insight.featured && (
+                    {("featured" in insight) && (insight as any).featured && (
                       <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>
                     )}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{insight.title}</h3>
-                  <p className="text-indigo-100 mb-4 text-sm">{insight.summary}</p>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-yellow-300">AI Autonomous Infrastructure Platform</h3>
+                  <p className="text-indigo-100 mb-4 text-sm">Revolutionary self-healing, self-optimizing systems that reduce costs by 75% and achieve 99.9% uptime.</p>
                   <div className="flex items-center justify-between text-sm text-indigo-200">
-                    <span>{new Date(insight.date).toLocaleDateString()}</span>
-                    <span>{insight.readMinutes} min read</span>
+                    <span>January 27, 2025</span>
+                    <span>12 min read</span>
                   </div>
                 </div>
-              ))}
+              </Link>
+
+              <Link to="/blog/quantum-ai-hybrid-computing-2026" className="group">
+                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs uppercase tracking-wider text-indigo-300">Quantum Computing</span>
+                    <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-medium">
+                      NEW
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-yellow-300">Quantum-AI Hybrid Computing 2026</h3>
+                  <p className="text-indigo-100 mb-4 text-sm">The next frontier in enterprise computing solving complex optimization problems 1000x faster.</p>
+                  <div className="flex items-center justify-between text-sm text-indigo-200">
+                    <span>January 27, 2025</span>
+                    <span>15 min read</span>
+                  </div>
+                </div>
+              </Link>
+
+              <Link to="/case-studies/fortune-500-retail-ai-infrastructure" className="group">
+                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs uppercase tracking-wider text-indigo-300">Case Study</span>
+                    <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-medium">
+                      NEW
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-yellow-300">Fortune 500 Retail Success Story</h3>
+                  <p className="text-indigo-100 mb-4 text-sm">75% cost reduction and $2.3M annual savings with AI autonomous infrastructure.</p>
+                  <div className="flex items-center justify-between text-sm text-indigo-200">
+                    <span>January 27, 2025</span>
+                    <span>8 min read</span>
+                  </div>
+                </div>
+              </Link>
             </div>
 
             <div className="text-center mt-12">
-              <Link 
-                to="/blog" 
-                className="bg-white text-indigo-600 hover:bg-indigo-50 px-8 py-4 rounded-lg font-semibold text-lg inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
-              >
-                Read All Articles
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/blog" 
+                  className="bg-white text-indigo-600 hover:bg-indigo-50 px-8 py-4 rounded-lg font-semibold text-lg inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
+                >
+                  Read All Articles
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link 
+                  to="/services/ai-autonomous-infrastructure-platform" 
+                  className="border-2 border-white text-white hover:bg-white hover:text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
+                >
+                  Explore AI Platform
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
             </div>
           </div>
         </section>

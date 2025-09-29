@@ -154,7 +154,7 @@ export const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps>
               <div className="flex flex-wrap items-center justify-center gap-6 text-white/80 text-sm">
               <div className="flex items-center gap-2">
                 <Star className="w-4 h-4 text-yellow-300 fill-current" />
-                <span>8 New Articles</span>
+                <span>11 New Articles</span>
               </div>
               <div className="flex items-center gap-2">
                 <TrendingUp className="w-4 h-4 text-green-300" />

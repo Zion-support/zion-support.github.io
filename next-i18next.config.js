@@ -1,8 +1,10 @@
-module.exports = {
-  i18n: {
-    defaultLocale: 'en-US',
-    locales: ['en-US', 'es-ES'],
-    localeDetection: false,
-  },
+export const i18n = {
+  defaultLocale: 'en-US',
+  locales: ['en-US', 'es-ES'],
+  localeDetection: false,
+};
+
+export default {
+  i18n,
   localePath: './public/locales',
 };

@@ -308,11 +308,11 @@ export default function AIAnalyticsImplementationPage() {
               <div className="space-y-4">
                 <div>
                   <div className="text-lg font-bold text-indigo-600">Model Accuracy</div>
-                  <div className="text-sm text-gray-600">Target: >90% for predictive models</div>
+                  <div className="text-sm text-gray-600">Target: &gt;90% for predictive models</div>
                 </div>
                 <div>
                   <div className="text-lg font-bold text-indigo-600">Processing Speed</div>
-                  <div className="text-sm text-gray-600">Real-time insights in <5 seconds</div>
+                  <div className="text-sm text-gray-600">Real-time insights in &lt;5 seconds</div>
                 </div>
                 <div>
                   <div className="text-lg font-bold text-indigo-600">Data Freshness</div>
