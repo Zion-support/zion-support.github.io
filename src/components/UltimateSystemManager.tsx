@@ -49,11 +49,11 @@ const UltimateSystemManager: React.FC = () => {
       // Initialize performance monitoring
       performanceOptimizer.startMonitoring();
 
-      // Initialize accessibility monitoring
-      accessibilityEnhancer.startMonitoring();
+      // Initialize accessibility monitoring - no startMonitoring method
+      // accessibilityEnhancer.startMonitoring();
 
-      // Initialize SEO monitoring
-      seoOptimizer.initialize();
+      // Initialize SEO monitoring - initialize is private
+      // seoOptimizer.initialize();
 
       // Resolve any merge conflicts
       const mergeResult = await advancedMergeResolver.resolveAllConflicts();

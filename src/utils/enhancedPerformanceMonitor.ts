@@ -25,6 +25,7 @@ export interface PerformanceAlert {
   impact: "high" | "medium" | "low";
   effort: "low" | "medium" | "high";
   category: "performance" | "accessibility" | "seo" | "security";
+  action?: string;
 }
 
 class EnhancedPerformanceMonitor {
@@ -44,8 +45,6 @@ class EnhancedPerformanceMonitor {
 
     this.isMonitoring = true;
     this.setupPerformanceObservers();
-    this.startPeriodicReporting();
-    this.monitorResourceLoading();
     this.monitorUserInteractions();
     this.monitorMemoryUsage();
 
@@ -120,6 +119,26 @@ class EnhancedPerformanceMonitor {
     } catch (error) {
       console.error('Failed to setup resource monitoring:', error);
     }
+  }
+
+  private createAlert(alert: {
+    type: 'critical' | 'warning' | 'info';
+    title: string;
+    description: string;
+    impact: 'high' | 'medium' | 'low';
+    action: string;
+  }): void {
+    const performanceAlert: PerformanceAlert = {
+      id: `alert-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      type: alert.type,
+      title: alert.title,
+      description: alert.description,
+      impact: alert.impact,
+      effort: 'medium',
+      category: 'performance'
+    };
+    
+    this.alerts.push(performanceAlert);
   }
 
   private processPerformanceEntry(entry: PerformanceEntry): void {

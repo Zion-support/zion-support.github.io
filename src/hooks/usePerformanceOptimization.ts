@@ -12,6 +12,10 @@ interface PerformanceOptimizationOptions {
   enableRenderTracking?: boolean;
   enableLazyLoading?: boolean;
   debounceDelay?: number;
+  enablePreloading?: boolean;
+  enableResourceHints?: boolean;
+  enableCriticalCSS?: boolean;
+  enableImageOptimization?: boolean;
 }
 
 export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
@@ -23,20 +27,20 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   } = options;
 
   const renderCountRef = useRef(0);
-  const lastRenderTimeRef = useRef(typeof performance !== 'undefined' ? performance.now() : Date.now());
+  const lastRenderTimeRef = useRef(performance.now());
   const debounceTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Track render performance
   useEffect(() => {
     if (enableRenderTracking) {
       renderCountRef.current += 1;
-      lastRenderTimeRef.current = typeof performance !== 'undefined' ? performance.now() : Date.now();
+      lastRenderTimeRef.current = performance.now();
     }
   });
 
   // Memory monitoring
   const memoryUsage = useMemo(() => {
-    if (!enableMemoryMonitoring || typeof performance === 'undefined' || !(performance as any).memory) return null;
+    if (!enableMemoryMonitoring || !(performance as any).memory) return null;
     
     const memory = (performance as any).memory;
     return {
@@ -65,7 +69,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   // Performance metrics
   const metrics: PerformanceMetrics = useMemo(() => ({
-    loadTime: typeof performance !== 'undefined' ? performance.now() : Date.now(),
+    loadTime: performance.now(),
     memoryUsage: memoryUsage?.used || null,
     renderCount: renderCountRef.current,
     lastRenderTime: lastRenderTimeRef.current
@@ -80,39 +84,10 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     };
   }, []);
 
-  // Preload resource function
-  const preloadResource = useCallback((url: string, type: 'script' | 'style' | 'image' = 'script') => {
-    if (type === 'image') {
-      const img = document.createElement('img');
-      img.src = url;
-    } else {
-      const link = document.createElement(type === 'script' ? 'script' : 'link');
-      if (type === 'script') {
-        (link as HTMLScriptElement).src = url;
-        (link as HTMLScriptElement).async = true;
-      } else {
-        (link as HTMLLinkElement).rel = 'stylesheet';
-        (link as HTMLLinkElement).href = url;
-      }
-      document.head.appendChild(link);
-    }
-  }, []);
-
-  // Record metric function
-  const recordMetric = useCallback((name: string, value: number, tags?: Record<string, string>) => {
-    (metrics as any)[name] = {
-      value,
-      timestamp: Date.now(),
-      tags: tags || {}
-    };
-  }, [metrics]);
-
   return {
     metrics,
     debouncedCallback,
     memoryUsage,
-    renderCount: renderCountRef.current,
-    preloadResource,
-    recordMetric
+    renderCount: renderCountRef.current
   };
 };

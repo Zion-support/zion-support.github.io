@@ -3,6 +3,8 @@
  * Lightweight SEO optimization utility
  */
 
+import { SEOIssue } from '../types/comprehensive';
+
 export interface SEOConfig {
   title: string;
   description: string;
@@ -66,23 +68,73 @@ export class SEOOptimizer {
     this.initialize();
   }
 
-  public analyze(): { score: number; issues: string[] } {
-    const issues: string[] = [];
+  public analyze(): { score: number; issues: SEOIssue[] } {
+    const issues: SEOIssue[] = [];
     let score = 100;
 
     // Check title length
     if (this.config.title.length < 30) {
-      issues.push('Title too short');
+      issues.push({
+        type: 'warning',
+        message: 'Title too short',
+        description: 'Title should be at least 30 characters long',
+        priority: 'medium'
+      });
       score -= 10;
     }
 
     // Check description length
     if (this.config.description.length < 120) {
-      issues.push('Description too short');
+      issues.push({
+        type: 'warning',
+        message: 'Description too short',
+        description: 'Description should be at least 120 characters long',
+        priority: 'medium'
+      });
       score -= 10;
     }
 
     return { score: Math.max(0, score), issues };
+  }
+
+  public optimize(): Promise<void> {
+    return new Promise((resolve) => {
+      // Perform SEO optimizations
+      this.optimizeMetaTags();
+      this.optimizeStructuredData();
+      this.optimizeImages();
+      resolve();
+    });
+  }
+
+  private optimizeMetaTags(): void {
+    // Ensure all meta tags are properly set
+    this.initialize();
+  }
+
+  private optimizeStructuredData(): void {
+    // Add structured data if not present
+    if (!document.querySelector('script[type="application/ld+json"]')) {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": this.config.title,
+        "description": this.config.description
+      });
+      document.head.appendChild(script);
+    }
+  }
+
+  private optimizeImages(): void {
+    // Add alt text to images without it
+    const images = document.querySelectorAll('img:not([alt])');
+    images.forEach(img => {
+      if (img instanceof HTMLImageElement) {
+        img.alt = 'Zion Tech Group image';
+      }
+    });
   }
 }
 

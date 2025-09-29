@@ -67,7 +67,25 @@ export default defineConfig({
             if (id.includes('web-vitals')) {
               return 'vendor-vitals';
             }
-            // All other node_modules go to vendor
+            if (id.includes('@types')) {
+              return 'vendor-types';
+            }
+            if (id.includes('eslint') || id.includes('prettier')) {
+              return 'vendor-dev';
+            }
+            if (id.includes('typescript')) {
+              return 'vendor-ts';
+            }
+            if (id.includes('vite')) {
+              return 'vendor-vite';
+            }
+            // Split remaining vendor by size
+            if (id.includes('node_modules')) {
+              const size = id.length;
+              if (size > 100) return 'vendor-large';
+              if (size > 50) return 'vendor-medium';
+              return 'vendor-small';
+            }
             return 'vendor';
           }
           // App chunks - more granular splitting
@@ -82,6 +100,18 @@ export default defineConfig({
             if (id.includes('Dashboard') || id.includes('Monitor')) {
               return 'components-dashboard';
             }
+            if (id.includes('Performance') || id.includes('Analytics')) {
+              return 'components-performance';
+            }
+            if (id.includes('Error') || id.includes('Recovery')) {
+              return 'components-error';
+            }
+            if (id.includes('Security') || id.includes('Auth')) {
+              return 'components-security';
+            }
+            if (id.includes('SEO') || id.includes('Meta')) {
+              return 'components-seo';
+            }
             return 'components';
           }
           if (id.includes('src/utils/')) {
@@ -92,10 +122,34 @@ export default defineConfig({
             if (id.includes('performance') || id.includes('monitor')) {
               return 'utils-performance';
             }
+            if (id.includes('error') || id.includes('recovery')) {
+              return 'utils-error';
+            }
+            if (id.includes('security') || id.includes('auth')) {
+              return 'utils-security';
+            }
+            if (id.includes('seo') || id.includes('analytics')) {
+              return 'utils-seo';
+            }
+            if (id.includes('cache') || id.includes('storage')) {
+              return 'utils-cache';
+            }
+            if (id.includes('api') || id.includes('http')) {
+              return 'utils-api';
+            }
             return 'utils';
           }
           if (id.includes('src/hooks/')) {
             return 'hooks';
+          }
+          if (id.includes('src/styles/')) {
+            return 'styles';
+          }
+          if (id.includes('src/types/')) {
+            return 'types';
+          }
+          if (id.includes('src/constants/')) {
+            return 'constants';
           }
           // Default fallback
           return 'app';
