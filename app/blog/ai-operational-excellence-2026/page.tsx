@@ -1,4 +1,72 @@
 import React from 'react';
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'AI Operational Excellence 2026: From Pilots to Scaled Impact',
+  description: 'Blueprint to scale AI reliably with governance, quality, cost controls, and value tracking. Practical playbook for enterprise operational excellence in 2026.'
+};
+
+export default function AIOperationalExcellence2026Page() {
+  return (
+    <article className="max-w-3xl mx-auto px-4 py-16 prose prose-lg prose-slate">
+      <header className="mb-8 not-prose">
+        <div className="text-sm text-gray-500">September 29, 2025 • 12 min read • Operations</div>
+        <h1 className="text-4xl font-bold mt-2 text-gray-900">
+          AI Operational Excellence 2026: From Pilots to Scaled Impact
+        </h1>
+        <p className="text-xl text-gray-600 mt-4">
+          A pragmatic blueprint to scale AI reliably with governance, quality gates, cost controls, and measurable value tracking.
+        </p>
+      </header>
+
+      <section>
+        <h2>Why Operational Excellence Matters</h2>
+        <p>
+          Most enterprises are stuck with dozens of AI pilots that never reach production or fail to generate material value. Operational excellence is the missing bridge from experimentation to predictable, scalable impact. In 2026, the best teams treat AI like a product: governed, observable, cost-aware, and relentlessly tied to business outcomes.
+        </p>
+      </section>
+
+      <section>
+        <h2>The 6 Pillars</h2>
+        <ul>
+          <li><strong>Governance & Policy</strong>: approval workflows, model registries, audit logs.</li>
+          <li><strong>Quality & Safety</strong>: pre-prod evals, red-teaming, bias checks, incident playbooks.</li>
+          <li><strong>Observability</strong>: traces, spans, model metrics, prompt lineage, dataset versions.</li>
+          <li><strong>FinOps</strong>: per-request cost budgets, routing, caching, quantization, autoscaling.</li>
+          <li><strong>Reliability</strong>: timeouts, retries, circuit breakers, fallbacks, SLIs/SLOs.</li>
+          <li><strong>Value Tracking</strong>: map features to revenue, savings, or risk reduction with causal attribution.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Reference Architecture</h2>
+        <p>
+          Adopt a layered architecture: experience layer → orchestration layer → model providers → data services. Use contracts for inputs/outputs, enforce schema validation, and gate promotions via automated evaluations.
+        </p>
+      </section>
+
+      <section>
+        <h2>Implementation Checklist</h2>
+        <ol>
+          <li>Define tiered risk policies and approval gates.</li>
+          <li>Instrument traces and link to user and business events.</li>
+          <li>Introduce a cost-per-outcome scorecard and budgets.</li>
+          <li>Automate red-teaming and regression evals pre-deploy.</li>
+          <li>Create runbooks for incidents and drift response.</li>
+        </ol>
+      </section>
+
+      <footer className="not-prose mt-12 pt-6 border-t border-gray-200">
+        <div className="flex items-center justify-between">
+          <Link href="/blog" className="text-blue-600 font-semibold hover:text-blue-700">← Back to Blog</Link>
+          <Link href="/contact" className="text-blue-600 font-semibold hover:text-blue-700">Get help implementing this →</Link>
+        </div>
+      </footer>
+    </article>
+  );
+}
+
+import React from 'react';
 
 export const metadata = {
 	title: 'AI Operational Excellence 2026: From Pilots to Scaled Impact',
