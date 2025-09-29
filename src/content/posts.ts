@@ -149,6 +149,33 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: false,
     readTime: "6 min read",
+  },
+  {
+    slug: "llm-policy-testing-2025",
+    title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
+    description: "Automate governance with lightweight policy tests on every PR and release train.",
+    category: "AI Governance",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "finops-scorecards-2025",
+    title: "FinOps Scorecards: Guardrails Engineers Actually Use",
+    description: "Budgets, PR checks, and alerts that cut cloud waste 25–40% without slowing teams.",
+    category: "Cloud",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "enterprise-rag-blueprint-2025",
+    title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, Auth",
+    description: "A pragmatic blueprint for RAG at scale with freshness windows and layered evals.",
+    category: "GenAI",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "9 min read"
   }
 ];
 
