@@ -1,25 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  X, 
-  Users, 
-  Video, 
-  Mic, 
-  MicOff, 
-  VideoOff, 
-  Share, 
-  FileText, 
-  Play,
-  Square,
-  Plus
-} from 'lucide-react';
-import { 
-  advancedCollaborationSystem, 
-  CollaborationSession, 
-  User, 
-  ChatMessage, 
+/* global HTMLDivElement */
+import React, { useEffect, useRef, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { FileText, Mic, MicOff, Play, Plus, Share, Square, Users, Video, VideoOff, X } from 'lucide-react';
+import {
+  advancedCollaborationSystem,
+  ChatMessage,
+  CollaborationSession,
   Poll,
   SharedFile,
+  User,
   WhiteboardElement
 } from '../utils/advancedCollaborationSystem';
 
@@ -61,15 +50,15 @@ const AdvancedCollaborationDashboard: React.FC<AdvancedCollaborationDashboardPro
       setSessions(advancedCollaborationSystem.getAllSessions());
       
       // Set up event listeners
-      advancedCollaborationSystem.on('sessionCreated', handleSessionCreated);
-      advancedCollaborationSystem.on('sessionStarted', handleSessionStarted);
-      advancedCollaborationSystem.on('sessionEnded', handleSessionEnded);
-      advancedCollaborationSystem.on('userJoined', handleUserJoined);
-      advancedCollaborationSystem.on('userLeft', handleUserLeft);
-      advancedCollaborationSystem.on('chatMessage', handleChatMessage);
-      advancedCollaborationSystem.on('pollCreated', handlePollCreated);
-      advancedCollaborationSystem.on('fileShared', handleFileShared);
-      advancedCollaborationSystem.on('whiteboardElementAdded', handleWhiteboardElementAdded);
+      advancedCollaborationSystem.on('sessionCreated', handleSessionCreated as unknown as (...args: unknown[]) => void);
+      advancedCollaborationSystem.on('sessionStarted', handleSessionStarted as unknown as (...args: unknown[]) => void);
+      advancedCollaborationSystem.on('sessionEnded', handleSessionEnded as unknown as (...args: unknown[]) => void);
+      advancedCollaborationSystem.on('userJoined', handleUserJoined as unknown as (...args: unknown[]) => void);
+      advancedCollaborationSystem.on('userLeft', handleUserLeft as unknown as (...args: unknown[]) => void);
+      advancedCollaborationSystem.on('chatMessage', handleChatMessage as unknown as (...args: unknown[]) => void);
+      advancedCollaborationSystem.on('pollCreated', handlePollCreated as unknown as (...args: unknown[]) => void);
+      advancedCollaborationSystem.on('fileShared', handleFileShared as unknown as (...args: unknown[]) => void);
+      advancedCollaborationSystem.on('whiteboardElementAdded', handleWhiteboardElementAdded as unknown as (...args: unknown[]) => void);
     }
   }, [isVisible]);
 

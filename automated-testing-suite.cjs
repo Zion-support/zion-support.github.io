@@ -101,7 +101,4 @@ if (require.main === module) {}
   suite.run();
 };
 module.exports = AutomatedTestingSuite;
-<<<<<<< HEAD
-=======
 
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
