@@ -168,6 +168,7 @@ const Home = () => {
         </div>
         
 <<<<<<< HEAD:src/pages/Home.tsx.backup.1759185684
+<<<<<<< HEAD:src/pages/Home.tsx.backup.1759185684
 <<<<<<< HEAD
 =======
         {/* New Comprehensive Promotional Banner */}
@@ -188,6 +189,8 @@ const Home = () => {
         
 =======
 >>>>>>> cursor/create-and-deploy-new-content-ff76:src/pages/Home.tsx
+=======
+>>>>>>> cursor/create-and-deploy-new-content-90ae:src/pages/Home.tsx
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"

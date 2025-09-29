@@ -103,6 +103,7 @@ import AI2026MegaBreakthroughBanner from '../components/AI2026MegaBreakthroughBa
 =======
 import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
+<<<<<<< HEAD
 import LatestSpaceAI2026Banner from '../components/LatestSpaceAI2026Banner';
 import CognitiveEnterprise2026Banner from '../components/CognitiveEnterprise2026Banner';
 >>>>>>> cursor/create-and-deploy-new-content-1956
@@ -113,6 +114,12 @@ import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBann
 >>>>>>> cursor/create-and-deploy-new-content-9e9b
 =======
 >>>>>>> e1a26edc95375f296773e3bc99bb310d601fe74d
+=======
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import UltimateContent2026Showcase from '../components/UltimateContent2026Showcase';
+import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
+import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
+>>>>>>> cursor/create-and-deploy-new-content-90ae
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -741,6 +748,7 @@ export default function HomePage() {
       {/* <AIInnovationShowcaseBanner2026 /> */}
       
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Advanced AI Innovation Banner 2026 */}
       <AIAdvancedInnovationBanner2026 />
       
@@ -777,6 +785,20 @@ export default function HomePage() {
       
       
 >>>>>>> e1a26edc95375f296773e3bc99bb310d601fe74d
+=======
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
+      
+      {/* Ultimate Content 2026 Showcase */}
+      <UltimateContent2026Showcase />
+      
+      {/* Revolutionary 2027 Content Banner */}
+      <Revolutionary2027ContentBanner />
+      
+      {/* Ultimate Content 2027 Showcase */}
+      <UltimateContent2027Showcase />
+      
+>>>>>>> cursor/create-and-deploy-new-content-90ae
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <div className="max-w-4xl mx-auto px-4">
