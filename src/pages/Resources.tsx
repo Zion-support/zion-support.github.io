@@ -416,7 +416,11 @@ const Resources = () => {
                       <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center text-gray-500 text-sm">
                         <Clock className="w-4 h-4 mr-1" />
-                        {typeof (resource as any).duration === 'string' ? (resource as any).duration : `${(resource as any).pages || 0} pages`}
+                        {resource.duration
+                          ? resource.duration
+                          : typeof (resource as any).pages === 'number'
+                            ? `${(resource as any).pages} pages`
+                            : (resource as any).pages || ''}
                       </div>
                     </div>
 
@@ -513,6 +517,10 @@ const Resources = () => {
                         <div className="flex items-center">
                           <Clock className="w-4 h-4 mr-1" />
                           {(resource as any).readTime || (resource as any).duration || `${(resource as any).pages || 0} pages`}
+                        </div>
+                        <div className="flex items-center">
+                          <Download className="w-4 h-4 mr-1" />
+                          {resource.downloadCount}
                         </div>
                       </div>
 

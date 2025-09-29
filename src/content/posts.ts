@@ -170,6 +170,7 @@ export const posts: BlogPost[] = [
     readTime: "7 min read",
   },
   {
+<<<<<<< HEAD
     slug: "north-star-metrics-anti-patterns",
     title: "North‑Star Metrics: 7 Anti‑Patterns to Avoid",
     description:
@@ -196,16 +197,6 @@ export const posts: BlogPost[] = [
       "Exactly‑once semantics, backpressure control, and pragmatic observability for streaming systems.",
     category: "Data Engineering",
     publishedAt: "2025-09-28",
-    featured: true,
-    readTime: "7 min read",
-  },
-  {
-    slug: "ai-product-launch-checklist-2025",
-    title: "AI Product Launch Checklist: From Pilot to Production",
-    description:
-      "A pragmatic checklist for hardening pilots, proving ROI, and launching AI features safely.",
-    category: "Product",
-    publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read",
   },
