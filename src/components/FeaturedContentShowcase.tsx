@@ -1,21 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BlogPost, posts } from '../content/posts';
+import { BlogPost, blogPosts } from '../content/blog-posts';
 import { InsightArticle, latestInsights } from '../content/insights';
-import { Star, Calendar, Clock, Eye, TrendingUp, ArrowRight } from 'lucide-react';
-
-interface FeaturedContent {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  date: string;
-  readTime: string;
-  views?: string;
-  featured: boolean;
-  href: string;
-  tags: string[];
-}
 
 interface FeaturedContentShowcaseProps {
   title?: string;
@@ -179,12 +165,12 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
             >
               {/* Image */}
               <div className="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
-                {item.type === 'blog' ? (
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="text-white text-4xl font-bold opacity-80">
-                      📝
-                    </div>
-                  </div>
+                {item.type === 'blog' && (item as any).image ? (
+                  <img
+                    src={(item as any).image}
+                    alt={(item as any).title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center">
                     <div className="text-white text-4xl font-bold opacity-80">

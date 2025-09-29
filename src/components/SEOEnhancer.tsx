@@ -65,7 +65,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 
   // Combine structured data
   const finalStructuredData = useMemo(() => {
-    const data: Array<Record<string, unknown>> = [organizationStructuredData as Record<string, unknown>];
+    const data: Record<string, unknown>[] = [organizationStructuredData as Record<string, unknown>];
     if (structuredData) {
       data.push(structuredData as Record<string, unknown>);
     }

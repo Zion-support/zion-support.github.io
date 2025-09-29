@@ -90,6 +90,33 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 5,
   },
   {
+    id: "ai-roadmaps-outcomes",
+    title: "AI Roadmaps That Ship Outcomes, Not Science Projects",
+    summary:
+      "A 3-step method to prioritize use-cases, define measurable KPIs, and deliver value in 90 days.",
+    category: "AI Strategy",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
+  {
+    id: "cloud-finops-wins",
+    title: "Cloud FinOps: 9 Wins Your CFO Will Love",
+    summary:
+      "Right-size fleets, shape demand, and make CI/CD cost-aware without slowing developers.",
+    category: "Cloud FinOps",
+    date: "2025-09-29",
+    readMinutes: 4,
+  },
+  {
+    id: "genai-guardrails-scorecards",
+    title: "GenAI Guardrails: Scorecards That Prevent Silent Regressions",
+    summary:
+      "Policy tests, red-team prompts, and online checks that keep quality high as usage scales.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
     id: "edge-cache-invalidation",
     title: "Edge Cache Invalidation Strategies That Won't Wake You Up",
     summary:
@@ -341,104 +368,141 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-09-29",
     readMinutes: 8,
   },
+  // NEW INSIGHTS - Latest 2025 Content
   {
-    id: "ai-automation-roi-calculator",
-    title: "AI Automation ROI Calculator: Measure Your Business Impact",
+    id: "ai-workflow-automation-roi-insights",
+    title: "AI Workflow Automation ROI: 15 Companies Share Their Results",
     summary:
-      "A practical framework for calculating the return on investment from AI automation initiatives, with real-world case studies and templates.",
-    category: "AI Strategy",
-    date: "2025-01-21",
-    readMinutes: 8,
-  },
-  {
-    id: "cloud-native-microservices-2025",
-    title: "Cloud-Native Microservices: Patterns for 2025",
-    summary:
-      "Essential patterns and practices for building scalable, resilient microservices architectures in modern cloud environments.",
-    category: "Architecture",
-    date: "2025-01-21",
-    readMinutes: 10,
-  },
-  {
-    id: "enterprise-ai-governance-framework",
-    title: "Enterprise AI Governance Framework: From Strategy to Implementation",
-    summary:
-      "Comprehensive governance framework for enterprise AI adoption, covering policy, risk management, and operational excellence.",
-    category: "AI Governance",
-    date: "2025-01-21",
-    readMinutes: 12,
-  },
-  {
-    id: "saas-platform-scaling-strategies",
-    title: "SAAS Platform Scaling Strategies: From Startup to Enterprise",
-    summary:
-      "Proven strategies for scaling SAAS platforms from early-stage to enterprise, covering technical and business considerations.",
-    category: "Platform Engineering",
-    date: "2025-01-21",
-    readMinutes: 9,
-  },
-  {
-    id: "ai-security-best-practices",
-    title: "AI Security Best Practices: Protecting Your AI Systems",
-    summary:
-      "Essential security practices for AI systems, covering model protection, data privacy, and adversarial defense strategies.",
-    category: "Security",
-    date: "2025-01-21",
-    readMinutes: 11,
-  },
-  {
-    id: "ai-autonomous-operations-roi",
-    title: "AI Autonomous Operations: Calculating ROI and Business Impact",
-    summary:
-      "How to measure the return on investment from AI autonomous operations, with real-world metrics and case studies.",
+      "Real ROI data from companies that implemented AI workflow automation. Average savings of $2.3M annually with 6-month payback periods.",
     category: "AI & Automation",
-    date: "2025-01-20",
-    readMinutes: 6,
-  },
-  {
-    id: "ai-cybersecurity-threat-detection",
-    title: "AI-Powered Threat Detection: Beyond Traditional Security",
-    summary:
-      "Advanced AI techniques for detecting sophisticated cyber threats, including behavioral analysis and predictive intelligence.",
-    category: "Security",
-    date: "2025-01-19",
-    readMinutes: 7,
-  },
-  {
-    id: "cloud-native-architecture-patterns",
-    title: "Cloud-Native Architecture Patterns for 2025",
-    summary:
-      "Essential patterns for building scalable, resilient cloud-native applications in modern environments.",
-    category: "Architecture",
-    date: "2025-01-18",
-    readMinutes: 8,
-  },
-  {
-    id: "enterprise-ai-governance-checklist",
-    title: "Enterprise AI Governance: A Practical Checklist",
-    summary:
-      "Step-by-step checklist for implementing AI governance in enterprise environments, covering policy, risk, and compliance.",
-    category: "AI Governance",
-    date: "2025-01-17",
+    date: "2025-01-22",
     readMinutes: 5,
   },
   {
-    id: "microservices-resilience-patterns",
-    title: "Microservices Resilience Patterns: Building Fault-Tolerant Systems",
+    id: "micro-saas-platform-trends-2025",
+    title: "Micro SAAS Platform Trends: What's Hot in 2025",
     summary:
-      "Essential patterns for building resilient microservices architectures that can handle failures gracefully.",
-    category: "Architecture",
+      "Latest trends in micro SAAS platforms including AI integration, no-code solutions, and industry-specific verticals gaining traction.",
+    category: "Technology",
+    date: "2025-01-21",
+    readMinutes: 4,
+  },
+  {
+    id: "ai-virtual-assistant-adoption-rates",
+    title: "AI Virtual Assistant Adoption: 67% of Enterprises Now Using AI Support",
+    summary:
+      "Latest adoption statistics showing rapid growth in AI virtual assistant implementation across enterprise and SMB markets.",
+    category: "AI & Automation",
+    date: "2025-01-20",
+    readMinutes: 3,
+  },
+  {
+    id: "data-analytics-automation-metrics",
+    title: "Data Analytics Automation: Key Metrics That Matter",
+    summary:
+      "Essential KPIs for measuring data analytics automation success including time-to-insight, accuracy improvements, and cost reduction.",
+    category: "Data Analytics",
+    date: "2025-01-19",
+    readMinutes: 6,
+  },
+  {
+    id: "cybersecurity-ai-threat-landscape",
+    title: "AI vs. AI: The New Cybersecurity Battlefield",
+    summary:
+      "How AI is being used both defensively and offensively in cybersecurity, creating an arms race in threat detection and response.",
+    category: "Cybersecurity",
+    date: "2025-01-18",
+    readMinutes: 5,
+  },
+  {
+    id: "cloud-edge-computing-cost-analysis",
+    title: "Cloud-Edge Computing Cost Analysis: Where to Place Your Workloads",
+    summary:
+      "Detailed cost analysis comparing cloud vs. edge computing for different workload types and business scenarios.",
+    category: "Cloud Strategy",
+    date: "2025-01-17",
+    readMinutes: 7,
+  },
+  {
+    id: "ai-governance-compliance-framework",
+    title: "AI Governance Compliance: EU AI Act and Beyond",
+    summary:
+      "Understanding new AI regulations and how to build compliance frameworks that protect your business while enabling innovation.",
+    category: "AI Governance",
     date: "2025-01-16",
     readMinutes: 6,
   },
   {
-    id: "ai-model-deployment-best-practices",
-    title: "AI Model Deployment: Production-Ready Best Practices",
+    id: "quantum-computing-business-readiness",
+    title: "Quantum Computing Business Readiness: Separating Hype from Reality",
     summary:
-      "Critical considerations for deploying AI models in production, including monitoring, versioning, and rollback strategies.",
-    category: "MLOps",
+      "Honest assessment of quantum computing's current business applications and realistic timeline for enterprise adoption.",
+    category: "Quantum Computing",
     date: "2025-01-15",
+    readMinutes: 5,
+  },
+  {
+    id: "iot-security-incident-analysis",
+    title: "IoT Security Incidents: Lessons from Recent Breaches",
+    summary:
+      "Analysis of recent IoT security breaches and key lessons for protecting connected devices in enterprise environments.",
+    category: "IoT Security",
+    date: "2025-01-14",
+    readMinutes: 4,
+  },
+  {
+    id: "digital-transformation-success-factors",
+    title: "Digital Transformation Success Factors: What Actually Works",
+    summary:
+      "Research-backed insights on the key factors that determine digital transformation success, based on analysis of 500+ projects.",
+    category: "Digital Transformation",
+    date: "2025-01-13",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-chatbot-customer-satisfaction-data",
+    title: "AI Chatbot Impact on Customer Satisfaction: The Numbers Don't Lie",
+    summary:
+      "Statistical analysis showing how AI chatbots improve customer satisfaction scores, reduce response times, and increase resolution rates.",
+    category: "Case Studies",
+    date: "2025-01-12",
+    readMinutes: 5,
+  },
+  {
+    id: "ml-model-deployment-challenges",
+    title: "ML Model Deployment: Common Challenges and Solutions",
+    summary:
+      "Top challenges in ML model deployment and proven solutions from industry leaders, including monitoring, scaling, and maintenance.",
+    category: "Machine Learning",
+    date: "2025-01-11",
     readMinutes: 7,
+  },
+  {
+    id: "blockchain-supply-chain-adoption",
+    title: "Blockchain in Supply Chain: Real Adoption Numbers",
+    summary:
+      "Current adoption rates of blockchain in supply chain management across different industries and regions.",
+    category: "Blockchain",
+    date: "2025-01-10",
+    readMinutes: 4,
+  },
+  {
+    id: "5g-business-applications-reality",
+    title: "5G Business Applications: What's Actually Working",
+    summary:
+      "Real-world 5G business applications that are delivering measurable ROI, from smart factories to autonomous vehicles.",
+    category: "5G Technology",
+    date: "2025-01-09",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-ecommerce-personalization-roi",
+    title: "AI E-commerce Personalization: ROI and Implementation Insights",
+    summary:
+      "How AI-powered personalization is driving revenue growth in e-commerce, with specific metrics and implementation strategies.",
+    category: "E-commerce",
+    date: "2025-01-08",
+    readMinutes: 5,
   },
 ];
 
