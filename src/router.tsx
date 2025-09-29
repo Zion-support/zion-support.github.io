@@ -7,6 +7,8 @@ import Resources from './pages/Resources';
 import AIAutonomousOperations from './pages/services/AIAutonomousOperations';
 import AIPlatformArchitecture from './pages/services/AI-Platform-Architecture';
 import AIIncidentResponsePlaybooks2025 from './pages/blog/ai-incident-response-playbooks-2025/page';
+import CaseStudies from './pages/CaseStudies';
+import Services from './pages/Services';
 
 export const AppRouter: React.FC = () => {
   return (
@@ -18,6 +20,8 @@ export const AppRouter: React.FC = () => {
       <Route path="/blog/ai-incident-response-playbooks-2025" element={<AIIncidentResponsePlaybooks2025 />} />
       <Route path="/services/ai-autonomous-operations" element={<AIAutonomousOperations />} />
       <Route path="/services/AI-Platform-Architecture" element={<AIPlatformArchitecture />} />
+      <Route path="/case-studies" element={<CaseStudies />} />
+      <Route path="/services" element={<Services />} />
     </Routes>
   );
 };

@@ -131,6 +131,9 @@ const Home = () => {
           autoRotate
           rotationInterval={7000}
         />
+        
+        {/* New 2025 Content Showcase */}
+        <NewContentShowcase2025 />
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
