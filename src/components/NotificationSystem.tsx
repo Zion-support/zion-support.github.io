@@ -38,7 +38,7 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
         removeNotification(id);
       }, notification.duration || 5000);
     }
-  }, [maxNotifications]);
+  }, [maxNotifications, removeNotification]);
 
   const removeNotification = useCallback((id: string) => {
     setNotifications(prev => prev.filter(n => n.id !== id));
@@ -50,7 +50,7 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
   // Expose methods globally for easy access
   useEffect(() => {
-    (window as any).notifications = {
+    (window as unknown as { notifications: unknown }).notifications = {
       add: addNotification,
       remove: removeNotification,
       clear: clearAll

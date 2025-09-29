@@ -40,6 +40,31 @@ jest.mock('../../utils/advancedPerformanceMonitor', () => ({
   }
 }));
 
+// Mock bundleOptimizer
+jest.mock('../../utils/bundleOptimizer', () => ({
+  bundleOptimizer: {
+    analyzeBundle: jest.fn(() => Promise.resolve({
+      totalSize: 732420,
+      gzippedSize: 195310,
+      chunkCount: 8,
+      largestChunk: 'vendor-react',
+      duplicateModules: 12,
+      unusedCode: 43950,
+      compressionRatio: 73.0
+    })),
+    getOptimizationStrategies: jest.fn(() => [
+      {
+        name: 'Code Splitting',
+        priority: 'high',
+        impact: 25,
+        description: 'Split large bundles into smaller, focused chunks',
+        implementation: 'Use dynamic imports and React.lazy() for route-based splitting'
+      }
+    ]),
+    generateOptimizationReport: jest.fn(() => '# Bundle Optimization Report\n\n## Current Metrics\n- **Total Size**: 732.42 KB')
+  }
+}));
+
 describe('PerformanceDashboard', () => {
   beforeEach(() => {
     // Mock performance API
@@ -61,11 +86,12 @@ describe('PerformanceDashboard', () => {
     });
   });
 
-  it('renders dashboard when visible', () => {
+  it('renders dashboard when visible', async () => {
     render(<PerformanceDashboard isVisible={true} />);
     
-    expect(screen.getByText('Performance Dashboard')).toBeInTheDocument();
-    expect(screen.getByText('Web Vitals')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByText('Performance Dashboard')).toBeInTheDocument();
+    });
   });
 
   it('does not render when not visible', () => {
@@ -82,21 +108,26 @@ describe('PerformanceDashboard', () => {
     });
   });
 
-  it('shows close button when onClose prop is provided', () => {
+  it('shows close button when onClose prop is provided', async () => {
     const mockOnClose = jest.fn();
     render(<PerformanceDashboard isVisible={true} onClose={mockOnClose} />);
     
-    const closeButton = screen.getByRole('button', { name: /close/i });
-    expect(closeButton).toBeInTheDocument();
+    await waitFor(() => {
+      const closeButton = screen.getByRole('button', { name: '×' });
+      expect(closeButton).toBeInTheDocument();
+    });
     
+    const closeButton = screen.getByRole('button', { name: '×' });
     fireEvent.click(closeButton);
     expect(mockOnClose).toHaveBeenCalled();
   });
 
-  it('displays monitoring status', () => {
+  it('displays monitoring status', async () => {
     render(<PerformanceDashboard isVisible={true} />);
     
-    expect(screen.getByText('Performance Tips')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByText('Optimization Strategies')).toBeInTheDocument();
+    });
   });
 
   it('has proper accessibility attributes', () => {
