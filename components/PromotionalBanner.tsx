@@ -442,3 +442,48 @@ export const Latest2026ContentBanner = () => (
     hideAfter={18}
   />
 );
+
+// New 2026 Generative Automation & Business Intelligence Banners
+export const AIGenerativeAutomationBanner = () => (
+  <PromotionalBanner
+    message="🚀 NEW: AI Generative Automation 2026 - 99.9% Autonomous Uptime, 85% Cost Reduction & Zero-Touch Operations"
+    ctaText="Read Article"
+    ctaLink="/blog/ai-generative-automation-2026"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AIBusinessIntelligenceBanner = () => (
+  <PromotionalBanner
+    message="🧠 NEW: AI Business Intelligence 2026 - 300% Better Decisions, 95% Prediction Accuracy & Real-Time Intelligence"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-business-intelligence-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AIDigitalTransformationBanner = () => (
+  <PromotionalBanner
+    message="💼 NEW: $18M ROI Digital Transformation Case Study - 95% Automation, 400% Productivity & Zero-Touch Operations"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-digital-transformation-success-2026"
+    backgroundColor="bg-gradient-to-r from-green-600 to-blue-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const NewContent2026ShowcaseBanner = () => (
+  <PromotionalBanner
+    message="🎯 BREAKING 2026: Generative Automation, AI Business Intelligence & $18M Transformation Success Stories"
+    ctaText="Explore Content"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);

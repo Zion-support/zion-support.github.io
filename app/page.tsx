@@ -30,7 +30,11 @@ import {
   AIOperationalExcellenceBanner,
   AIAgentObservabilityBanner,
   ManufacturingTransformationBanner,
-  Latest2026ContentBanner
+  Latest2026ContentBanner,
+  AIGenerativeAutomationBanner,
+  AIBusinessIntelligenceBanner,
+  AIDigitalTransformationBanner,
+  NewContent2026ShowcaseBanner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
@@ -53,17 +57,17 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>🚀 Latest 2026 content:</span>
+            <a href="/blog/ai-generative-automation-2026" className="underline hover:text-yellow-200">Generative Automation</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-business-intelligence-2026" className="underline hover:text-yellow-200">AI Business Intelligence</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/case-studies/ai-digital-transformation-success-2026" className="underline hover:text-yellow-200">$18M ROI Case Study</a>
+            <span className="hidden md:inline">•</span>
             <a href="/blog/ai-operational-excellence-2026" className="underline hover:text-yellow-200">Operational Excellence</a>
             <span className="hidden md:inline">•</span>
             <a href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</a>
             <span className="hidden md:inline">•</span>
             <a href="/case-studies/ai-manufacturing-transformation-2026" className="underline hover:text-yellow-200">$12M Manufacturing ROI</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-multimodal-enterprise-2026" className="underline hover:text-yellow-200">Multimodal Enterprise</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200">Enterprise Automation</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-trustworthy-agents-2026" className="underline hover:text-yellow-200">Trustworthy Agents</a>
           </div>
           <Link
             href="/blog"
@@ -74,6 +78,10 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <NewContent2026ShowcaseBanner />
+      <AIGenerativeAutomationBanner />
+      <AIBusinessIntelligenceBanner />
+      <AIDigitalTransformationBanner />
       <Latest2026ContentBanner />
       <AIOperationalExcellenceBanner />
       <AIAgentObservabilityBanner />
@@ -353,7 +361,63 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-<<<<<<< HEAD
+            <Link href="/blog/ai-generative-automation-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW 2026
+                  </span>
+                  <span className="text-sm text-gray-500">20 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Generative Automation 2026: The Future of Autonomous Business Operations
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Discover how AI generative automation is revolutionizing business operations with 99.9% autonomous uptime and zero-touch operations.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-business-intelligence-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW 2026
+                  </span>
+                  <span className="text-sm text-gray-500">15 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Business Intelligence 2026: Next-Gen Analytics & Decision Making
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Explore how AI-powered business intelligence is transforming decision making with 300% better outcomes and 95% prediction accuracy.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Guide →
+                </div>
+              </div>
+            </Link>
+            <Link href="/case-studies/ai-digital-transformation-success-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW CASE STUDY
+                  </span>
+                  <span className="text-sm text-gray-500">Fortune 500</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Digital Transformation Success 2026: $18M ROI Case Study
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how a Fortune 500 company achieved $18M ROI with comprehensive AI digital transformation, achieving 95% automation and 400% productivity gains.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
             <Link href="/blog/ai-governance-maturity-model-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
