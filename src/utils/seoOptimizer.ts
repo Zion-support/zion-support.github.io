@@ -3,6 +3,8 @@
  * Lightweight SEO optimization utility
  */
 
+import { SEOIssue } from '../types/comprehensive';
+
 export interface SEOConfig {
   title: string;
   description: string;
@@ -66,19 +68,29 @@ export class SEOOptimizer {
     this.initialize();
   }
 
-  public analyze(): { score: number; issues: string[] } {
-    const issues: string[] = [];
+  public analyze(): { score: number; issues: SEOIssue[] } {
+    const issues: SEOIssue[] = [];
     let score = 100;
 
     // Check title length
     if (this.config.title.length < 30) {
-      issues.push('Title too short');
+      issues.push({
+        type: 'warning',
+        message: 'Title too short',
+        description: 'Title should be at least 30 characters long',
+        priority: 'medium'
+      });
       score -= 10;
     }
 
     // Check description length
     if (this.config.description.length < 120) {
-      issues.push('Description too short');
+      issues.push({
+        type: 'warning',
+        message: 'Description too short',
+        description: 'Description should be at least 120 characters long',
+        priority: 'medium'
+      });
       score -= 10;
     }
 

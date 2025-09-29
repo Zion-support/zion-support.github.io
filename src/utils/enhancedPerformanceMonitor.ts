@@ -25,6 +25,7 @@ export interface PerformanceAlert {
   impact: "high" | "medium" | "low";
   effort: "low" | "medium" | "high";
   category: "performance" | "accessibility" | "seo" | "security";
+  action?: string;
 }
 
 class EnhancedPerformanceMonitor {
@@ -48,6 +49,16 @@ class EnhancedPerformanceMonitor {
     this.monitorMemoryUsage();
 
     console.log("Enhanced Performance Monitor started");
+  }
+
+  private createAlert(alert: Omit<PerformanceAlert, 'id'>): void {
+    const newAlert: PerformanceAlert = {
+      ...alert,
+      id: `alert-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+    };
+    
+    this.alerts.push(newAlert);
+    console.warn(`Performance Alert: ${alert.title} - ${alert.description}`);
   }
 
   private setupPerformanceObservers(): void {
@@ -129,6 +140,8 @@ class EnhancedPerformanceMonitor {
             title: 'Slow First Contentful Paint',
             description: `FCP is ${entry.startTime.toFixed(0)}ms`,
             impact: 'high',
+            category: 'performance',
+            effort: 'medium',
             action: 'Optimize critical rendering path'
           });
         }
@@ -140,6 +153,8 @@ class EnhancedPerformanceMonitor {
             title: 'Slow Largest Contentful Paint',
             description: `LCP is ${entry.startTime.toFixed(0)}ms`,
             impact: 'high',
+            category: 'performance',
+            effort: 'medium',
             action: 'Optimize images and largest content'
           });
         }
@@ -153,6 +168,8 @@ class EnhancedPerformanceMonitor {
             title: 'Slow First Input Delay',
             description: `FID is ${fid.toFixed(0)}ms`,
             impact: 'medium',
+            category: 'performance',
+            effort: 'high',
             action: 'Reduce JavaScript execution time'
           });
         }
@@ -166,6 +183,8 @@ class EnhancedPerformanceMonitor {
             title: 'High Cumulative Layout Shift',
             description: `CLS is ${clsEntry.value.toFixed(3)}`,
             impact: 'medium',
+            category: 'performance',
+            effort: 'medium',
             action: 'Fix layout shift issues'
           });
         }
