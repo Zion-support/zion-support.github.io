@@ -148,6 +148,10 @@ class ErrorRecoverySystem {
     }).length;
   }
 
+  getErrorCount(): number {
+    return this.errorHistory.length;
+  }
+
   public reset(): void {
     this.clearHistory();
   }

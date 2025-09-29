@@ -1,7 +1,7 @@
 // Comprehensive Enhancement Suite
 // Integrates performance, security, and accessibility improvements
 
-import { PerformanceOptimizer } from './performanceOptimizer';
+import { performanceOptimizer } from './performanceOptimizer';
 import { SecurityEnhancer } from './securityEnhancer';
 import { AccessibilityEnhancer } from './accessibilityEnhancer';
 import { ErrorHandler } from './errorHandling';
@@ -78,7 +78,7 @@ interface SystemMetrics {
 export class EnhancementSuite {
   private static instance: EnhancementSuite | null = null;
   private config: EnhancementConfig;
-  private performanceOptimizer!: PerformanceOptimizer;
+  private performanceOptimizer!: any;
   private securityEnhancer!: SecurityEnhancer;
   private accessibilityEnhancer!: AccessibilityEnhancer;
   private errorHandler!: ErrorHandler;
@@ -140,7 +140,7 @@ export class EnhancementSuite {
 
   public initialize(): void {
     // Initialize all enhancement modules
-    this.performanceOptimizer = new PerformanceOptimizer();
+    this.performanceOptimizer = performanceOptimizer;
     this.securityEnhancer = new SecurityEnhancer();
     this.accessibilityEnhancer = new AccessibilityEnhancer();
     this.errorHandler = ErrorHandler.getInstance();

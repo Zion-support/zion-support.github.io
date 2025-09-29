@@ -25,6 +25,7 @@ import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
 import CommandPalette from './components/CommandPalette';
 import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
 import SystemHealthDashboard from './components/SystemHealthDashboard';
+import ComprehensiveSystemMonitor from './components/ComprehensiveSystemMonitor';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -41,6 +42,7 @@ export default function App(): React.JSX.Element {
   const [showAccessibilityPanel, setShowAccessibilityPanel] = useState(false);
   const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
+  const [showComprehensiveMonitor, setShowComprehensiveMonitor] = useState(false);
   // User preferences state (for future use)
   // const [userPreferences, setUserPreferences] = useState({
   //   theme: 'auto',
@@ -314,6 +316,9 @@ export default function App(): React.JSX.Element {
               (window as any).notifications.clear();
             }
             break;
+          case 'V':
+            setShowComprehensiveMonitor(!showComprehensiveMonitor);
+            break;
         }
       }
       
@@ -340,12 +345,13 @@ export default function App(): React.JSX.Element {
         setShowCommandPalette(false);
         setShowRealTimeMonitor(false);
         setShowSystemHealth(false);
+        setShowComprehensiveMonitor(false);
       }
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth]);
+  }, [showSystemDashboard, showPerformanceOptimizer, showPerformanceMonitor, showAIDashboard, showSEOOptimizer, isDarkMode, showKeyboardHelp, showCommandPalette, showRealTimeMonitor, showSystemHealth, showComprehensiveMonitor]);
 
   // Command palette commands
   const commandPaletteCommands = [
@@ -579,6 +585,27 @@ export default function App(): React.JSX.Element {
           onClose={() => setShowSystemHealth(false)}
         />
 
+        {/* Comprehensive System Monitor */}
+        {showComprehensiveMonitor && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+            <div className="bg-white rounded-lg max-w-7xl w-full max-h-[90vh] overflow-y-auto">
+              <div className="p-4 border-b flex justify-between items-center">
+                <h2 className="text-xl font-semibold">Comprehensive System Monitor</h2>
+                <button
+                  onClick={() => setShowComprehensiveMonitor(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                  aria-label="Close comprehensive system monitor"
+                >
+                  ✕
+                </button>
+              </div>
+              <div className="p-4">
+                <ComprehensiveSystemMonitor />
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* New Components */}
         <NotificationSystem
           notifications={notifications}
@@ -641,6 +668,15 @@ export default function App(): React.JSX.Element {
           🏥
         </button>
 
+        {/* Comprehensive System Monitor Button */}
+        <button
+          onClick={() => setShowComprehensiveMonitor(true)}
+          className="fixed bottom-4 right-32 z-40 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+          title="Comprehensive System Monitor (Ctrl+Shift+V)"
+        >
+          📈
+        </button>
+
         {/* Keyboard Shortcuts Help Panel */}
         <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
           <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
@@ -652,6 +688,7 @@ export default function App(): React.JSX.Element {
           <div>Ctrl+Shift+T: Toggle Theme</div>
           <div>Ctrl+Shift+R: Real-Time Monitor</div>
           <div>Ctrl+Shift+H: System Health</div>
+          <div>Ctrl+Shift+V: Comprehensive Monitor</div>
           <div>Ctrl+Shift+K: Keyboard Help</div>
           <div>Ctrl+K: Command Palette</div>
           <div>Escape: Close All</div>
