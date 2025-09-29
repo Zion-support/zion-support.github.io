@@ -3,7 +3,7 @@ export type InsightArticle = {
   title: string;
   summary: string;
   category: string;
-  date: string; // ISO date string
+  date: string;
   readMinutes: number;
 };
 
