@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import { AppRouter } from './router';
 import { initializeErrorReporting } from './utils/errorReporting';
 import { initOptimizations } from './utils/buildOptimizations';
 import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { accessibilityManager } from './utils/accessibility';
 import { PerformanceMonitor as UtilsPerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
+import { useAppInitialization } from './hooks/useAppInitialization';
+import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { analytics } from './utils/analytics';
 import { seoOptimizer } from './utils/seoOptimization';
 import { cacheManager } from './utils/cacheManager';
@@ -25,6 +28,7 @@ import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
+<<<<<<< HEAD
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 
 // Import enhanced utilities
@@ -48,6 +52,10 @@ import NotificationSystem, { Notification } from './components/NotificationSyste
 import { EnhancedNotification } from './types/comprehensive';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+=======
+import ComprehensiveSystemDashboard from './components/ComprehensiveSystemDashboard';
+import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+>>>>>>> 04e9da8131cd1239431438dbc5d83bdb4ac130e9
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -57,6 +65,133 @@ export default function App(): React.JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+<<<<<<< HEAD
+=======
+  const [showAIDashboard, setShowAIDashboard] = useState(false);
+  const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
+  const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
+  const [, setIsDarkMode] = useState(false);
+  const [, setUserPreferences] = useState({
+    theme: 'auto',
+    animations: true,
+    notifications: true,
+    analytics: true
+  });
+  // Engagement tracking data
+  const engagementData = useMemo(() => ({
+    startTime: Date.now(),
+    scrollDepth: 0,
+    clicks: 0
+  }), []);
+
+  // Simple SEO manager
+  const seoManager = useMemo(() => ({
+    updateMetaTags: (data: typeof seoData) => {
+      if (typeof document !== 'undefined') {
+        document.title = data.title;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+          metaDescription.setAttribute('content', data.description);
+        }
+      }
+    }
+  }), []);
+  // Initialize app with custom configuration
+  const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSecurity: true,
+    enableAnalytics: true,
+    enableNotifications: true,
+    enableCaching: true,
+  });
+
+  // Performance optimization hook
+  const { preloadResource } = usePerformanceOptimization({
+    enablePreloading: true,
+    enableResourceHints: true,
+    enableCriticalCSS: true,
+    enableImageOptimization: true,
+  });
+
+  // Enhanced keyboard handler for all dashboard toggles
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey) {
+      event.preventDefault();
+      switch (event.key) {
+        case 'D':
+          setShowSystemDashboard(prev => !prev);
+          break;
+        case 'P':
+          setShowPerformanceOptimizer(prev => !prev);
+          break;
+        case 'M':
+          setShowPerformanceMonitor(prev => !prev);
+          break;
+        case 'A':
+          setShowAIDashboard(prev => !prev);
+          break;
+               case 'S':
+                 setShowSEOOptimizer(prev => !prev);
+                 break;
+               case 'C':
+                 setShowComprehensiveDashboard(prev => !prev);
+                 break;
+               case 'T':
+                 setIsDarkMode(prev => !prev);
+                 break;
+        case 'Escape':
+          // Close all dashboards
+          setShowSystemDashboard(false);
+          setShowPerformanceOptimizer(false);
+          setShowPerformanceMonitor(false);
+          setShowAIDashboard(false);
+          setShowSEOOptimizer(false);
+          setShowComprehensiveDashboard(false);
+          break;
+      }
+    }
+  }, []);
+
+  // Memoize the SEO data to prevent unnecessary re-renders
+  const seoData = useSEOData(currentPathname);
+  // Enhanced engagement tracking function
+  const enhancedTrackEngagement = useCallback(() => {
+    const timeOnPage = Date.now() - engagementData.startTime;
+    seoAnalytics.trackUserEngagement(window.location.pathname, {
+      timeOnPage,
+      scrollDepth: engagementData.scrollDepth,
+      clicks: engagementData.clicks,
+    });
+    trackEngagement();
+  }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
+  // Update meta tags function
+  const updateMetaTags = useCallback((data: {
+    title: string;
+    description: string;
+    keywords: string[];
+    ogType: string;
+    ogUrl: string;
+    ogImage: string;
+    twitterCard: string;
+  }) => {
+    if (typeof window !== 'undefined') {
+      // Update title
+      document.title = data.title;
+      
+      // Update meta description
+      let metaDescription = document.querySelector('meta[name="description"]');
+      if (!metaDescription) {
+        metaDescription = document.createElement('meta');
+        metaDescription.setAttribute('name', 'description');
+        document.head.appendChild(metaDescription);
+      }
+      if (metaDescription) {
+        metaDescription.setAttribute('content', data.description);
+      }
+    }
+  }, []);
+>>>>>>> 04e9da8131cd1239431438dbc5d83bdb4ac130e9
 
   // Initialize app
   useEffect(() => {
@@ -110,6 +245,10 @@ export default function App(): React.JSX.Element {
         setIsLoading(false);
       }
     };
+<<<<<<< HEAD
+=======
+  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags, enhancedTrackEngagement, seoManager]);
+>>>>>>> 04e9da8131cd1239431438dbc5d83bdb4ac130e9
 
     initializeApp();
   }, []);

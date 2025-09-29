@@ -4,7 +4,7 @@
  * Intelligent caching with automatic invalidation and optimization
  */
 
-export interface CacheEntry<T = any> {
+export interface CacheEntry<T = unknown> {
   key: string;
   value: T;
   timestamp: number;
@@ -84,12 +84,214 @@ class AdvancedCachingSystem {
       this.enforceMemoryLimit();
     }
 
+<<<<<<< HEAD
     // Local storage cache
     if (this.config.enableLocalStorageCache) {
       try {
         const serialized = this.config.enableCompression 
           ? this.compress(JSON.stringify(entry))
           : JSON.stringify(entry);
+=======
+    // Check if expired
+    if (Date.now() > entry.expiresAt) {
+      this.cache.delete(key);
+      this.statistics.misses++;
+      this.updateHitRate();
+      return null;
+    }
+
+    // Update access statistics
+    entry.accessCount++;
+    entry.lastAccessed = Date.now();
+    this.statistics.hits++;
+    this.updateHitRate();
+
+    // Decompress if needed
+    if (this.isCompressed(entry.value)) {
+      return this.decompressValue(entry.value) as T;
+    }
+
+    return entry.value as T;
+  }
+
+  public has(key: string): boolean {
+    const entry = this.cache.get(key);
+    return entry ? Date.now() <= entry.expiresAt : false;
+  }
+
+  public delete(key: string): boolean {
+    const deleted = this.cache.delete(key);
+    if (deleted) {
+      this.updateStatistics();
+    }
+    return deleted;
+  }
+
+  public clear(): void {
+    this.cache.clear();
+    this.updateStatistics();
+  }
+
+  public invalidateByTag(tag: string): void {
+    const keysToDelete: string[] = [];
+    
+    this.cache.forEach((entry, key) => {
+      if (entry.tags.includes(tag)) {
+        keysToDelete.push(key);
+      }
+    });
+
+    keysToDelete.forEach(key => this.cache.delete(key));
+    this.updateStatistics();
+  }
+
+  public invalidateByPattern(pattern: RegExp): void {
+    const keysToDelete: string[] = [];
+    
+    this.cache.forEach((entry, key) => {
+      if (pattern.test(key)) {
+        keysToDelete.push(key);
+      }
+    });
+
+    keysToDelete.forEach(key => this.cache.delete(key));
+    this.updateStatistics();
+  }
+
+  private ensureSpaceForEntry(newEntry: CacheEntry): void {
+    // Check if we exceed max entries
+    if (this.cache.size >= this.config.maxEntries) {
+      this.evictLeastRecentlyUsed();
+    }
+
+    // Check if we exceed max size
+    const currentSize = this.getTotalSize();
+    if (currentSize + newEntry.size > this.config.maxSize) {
+      this.evictBySize(newEntry.size);
+    }
+  }
+
+  private evictLeastRecentlyUsed(): void {
+    let oldestEntry: { key: string; entry: CacheEntry } | null = null;
+    
+    this.cache.forEach((entry, key) => {
+      if (!oldestEntry || entry.lastAccessed < oldestEntry.entry.lastAccessed) {
+        oldestEntry = { key, entry };
+      }
+    });
+
+    if (oldestEntry) {
+      this.cache.delete(oldestEntry.key);
+      this.statistics.evictions++;
+    }
+  }
+
+  private evictBySize(requiredSize: number): void {
+    const entries = Array.from(this.cache.entries())
+      .map(([key, entry]) => ({ key, entry }))
+      .sort((a, b) => {
+        // Sort by priority first, then by last accessed
+        const priorityOrder = { critical: 0, high: 1, medium: 2, low: 3 };
+        const aPriority = priorityOrder[a.entry.priority];
+        const bPriority = priorityOrder[b.entry.priority];
+        
+        if (aPriority !== bPriority) {
+          return aPriority - bPriority;
+        }
+        
+        return a.entry.lastAccessed - b.entry.lastAccessed;
+      });
+
+    let freedSize = 0;
+    for (const { key, entry } of entries) {
+      if (freedSize >= requiredSize) break;
+      
+      this.cache.delete(key);
+      freedSize += entry.size;
+      this.statistics.evictions++;
+    }
+  }
+
+  private performCleanup(): void {
+    const now = Date.now();
+    const keysToDelete: string[] = [];
+
+    this.cache.forEach((entry, key) => {
+      if (now > entry.expiresAt) {
+        keysToDelete.push(key);
+      }
+    });
+
+    keysToDelete.forEach(key => this.cache.delete(key));
+    this.updateStatistics();
+  }
+
+  private performAggressiveCleanup(): void {
+    // Remove low priority entries first
+    this.invalidateByTag('low-priority');
+    
+    // Remove entries older than 1 hour
+    const oneHourAgo = Date.now() - (60 * 60 * 1000);
+    const keysToDelete: string[] = [];
+
+    this.cache.forEach((entry, key) => {
+      if (entry.timestamp < oneHourAgo && entry.priority !== 'critical') {
+        keysToDelete.push(key);
+      }
+    });
+
+    keysToDelete.forEach(key => this.cache.delete(key));
+    this.updateStatistics();
+  }
+
+  private compressValue(value: unknown): unknown {
+    // Simple compression using JSON stringify/parse
+    // In a real implementation, you'd use a proper compression library
+    try {
+      const compressed = JSON.stringify(value);
+      return { __compressed: true, data: compressed };
+    } catch {
+      return value;
+    }
+  }
+
+  private decompressValue(value: unknown): unknown {
+    if (this.isCompressed(value)) {
+      try {
+        return JSON.parse((value as { data: string }).data);
+      } catch {
+        return value;
+      }
+    }
+    return value;
+  }
+
+  private isCompressed(value: unknown): boolean {
+    return value && typeof value === 'object' && (value as { __compressed?: boolean }).__compressed === true;
+  }
+
+  private persistCriticalEntries(): void {
+    const criticalEntries: Record<string, CacheEntry> = {};
+    
+    this.cache.forEach((entry, key) => {
+      if (entry.priority === 'critical') {
+        criticalEntries[key] = entry;
+      }
+    });
+
+    try {
+      localStorage.setItem('cache_critical', JSON.stringify(criticalEntries));
+    } catch (error) {
+      console.warn('Failed to persist critical cache entries:', error);
+    }
+  }
+
+  private restoreFromStorage(): void {
+    try {
+      const stored = localStorage.getItem('cache_critical');
+      if (stored) {
+        const criticalEntries: Record<string, CacheEntry> = JSON.parse(stored);
+>>>>>>> 04e9da8131cd1239431438dbc5d83bdb4ac130e9
         
         localStorage.setItem(`cache_${key}`, serialized);
         this.enforceLocalStorageLimit();

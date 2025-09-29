@@ -75,10 +75,208 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
   if (!isVisible) return null;
 
   return (
+<<<<<<< HEAD
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white rounded-lg shadow-xl max-w-6xl w-full mx-4 max-h-[90vh] overflow-hidden">
         <div className="flex items-center justify-between p-6 border-b">
           <h2 className="text-2xl font-bold text-gray-900">Comprehensive System Dashboard</h2>
+=======
+    <div className="space-y-4">
+      <h3 className="text-lg font-semibold text-gray-800">Error Recovery</h3>
+      
+      <div className="grid grid-cols-3 gap-4">
+        <div className="bg-red-50 p-4 rounded-lg">
+          <div className="text-2xl font-bold text-red-600">{statistics.total}</div>
+          <div className="text-sm text-red-800">Total Errors</div>
+        </div>
+        <div className="bg-green-50 p-4 rounded-lg">
+          <div className="text-2xl font-bold text-green-600">{statistics.resolved}</div>
+          <div className="text-sm text-green-800">Resolved</div>
+        </div>
+        <div className="bg-yellow-50 p-4 rounded-lg">
+          <div className="text-2xl font-bold text-yellow-600">{statistics.unresolved}</div>
+          <div className="text-sm text-yellow-800">Unresolved</div>
+        </div>
+      </div>
+
+      <div className="space-y-2">
+        <h4 className="font-medium text-gray-700">Recent Errors</h4>
+        {errors.length === 0 ? (
+          <div className="text-green-600 bg-green-50 p-4 rounded-lg">
+            ✅ No errors detected
+          </div>
+        ) : (
+          errors.slice(0, 5).map(error => (
+            <div
+              key={error.id}
+              className={`p-3 rounded-lg border-l-4 ${
+                error.resolved
+                  ? 'bg-green-50 border-green-500 text-green-800'
+                  : 'bg-red-50 border-red-500 text-red-800'
+              }`}
+            >
+              <div className="font-medium">{error.error.message}</div>
+              <div className="text-sm mt-1">{error.context.url}</div>
+              <div className="text-xs mt-2 text-gray-600">
+                {new Date(error.timestamp).toLocaleString()}
+              </div>
+            </div>
+          ))
+        )}
+      </div>
+    </div>
+  );
+};
+
+const CachingTab: React.FC = () => {
+  const [statistics, setStatistics] = useState(advancedCachingSystem.getStatistics());
+  const [, setCacheInfo] = useState(advancedCachingSystem.getCacheInfo());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setStatistics(advancedCachingSystem.getStatistics());
+      setCacheInfo(advancedCachingSystem.getCacheInfo());
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const formatBytes = (bytes: number) => {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  };
+
+  return (
+    <div className="space-y-4">
+      <h3 className="text-lg font-semibold text-gray-800">Caching System</h3>
+      
+      <div className="grid grid-cols-2 gap-4">
+        <div className="bg-blue-50 p-4 rounded-lg">
+          <div className="text-2xl font-bold text-blue-600">{statistics.hitRate.toFixed(2)}%</div>
+          <div className="text-sm text-blue-800">Hit Rate</div>
+        </div>
+        <div className="bg-green-50 p-4 rounded-lg">
+          <div className="text-2xl font-bold text-green-600">{formatBytes(statistics.totalSize)}</div>
+          <div className="text-sm text-green-800">Cache Size</div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-3 gap-4">
+        <div className="bg-purple-50 p-4 rounded-lg">
+          <div className="text-xl font-bold text-purple-600">{statistics.hits}</div>
+          <div className="text-sm text-purple-800">Cache Hits</div>
+        </div>
+        <div className="bg-orange-50 p-4 rounded-lg">
+          <div className="text-xl font-bold text-orange-600">{statistics.misses}</div>
+          <div className="text-sm text-orange-800">Cache Misses</div>
+        </div>
+        <div className="bg-red-50 p-4 rounded-lg">
+          <div className="text-xl font-bold text-red-600">{statistics.evictions}</div>
+          <div className="text-sm text-red-800">Evictions</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const SecurityTab: React.FC = () => {
+  const [events, setEvents] = useState(advancedSecurityManager.getSecurityEvents());
+  const [metrics, setMetrics] = useState(advancedSecurityManager.getSecurityMetrics());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setEvents(advancedSecurityManager.getSecurityEvents());
+      setMetrics(advancedSecurityManager.getSecurityMetrics());
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="space-y-4">
+      <h3 className="text-lg font-semibold text-gray-800">Security Monitor</h3>
+      
+      <div className={`p-4 rounded-lg ${
+        metrics.threatLevel === 'critical' ? 'bg-red-50 border-red-500' :
+        metrics.threatLevel === 'high' ? 'bg-orange-50 border-orange-500' :
+        metrics.threatLevel === 'medium' ? 'bg-yellow-50 border-yellow-500' :
+        'bg-green-50 border-green-500'
+      } border-l-4`}>
+        <div className="text-xl font-bold capitalize">{metrics.threatLevel} Threat Level</div>
+        <div className="text-sm text-gray-600">Security Status</div>
+      </div>
+
+      <div className="grid grid-cols-2 gap-4">
+        <div className="bg-blue-50 p-4 rounded-lg">
+          <div className="text-2xl font-bold text-blue-600">{metrics.totalEvents}</div>
+          <div className="text-sm text-blue-800">Total Events</div>
+        </div>
+        <div className="bg-red-50 p-4 rounded-lg">
+          <div className="text-2xl font-bold text-red-600">{metrics.blockedEvents}</div>
+          <div className="text-sm text-red-800">Blocked Events</div>
+        </div>
+      </div>
+
+      <div className="space-y-2">
+        <h4 className="font-medium text-gray-700">Recent Security Events</h4>
+        {events.length === 0 ? (
+          <div className="text-green-600 bg-green-50 p-4 rounded-lg">
+            ✅ No security events detected
+          </div>
+        ) : (
+          events.slice(0, 5).map(event => (
+            <div
+              key={event.id}
+              className={`p-3 rounded-lg border-l-4 ${
+                event.severity === 'critical'
+                  ? 'bg-red-50 border-red-500 text-red-800'
+                  : event.severity === 'high'
+                  ? 'bg-orange-50 border-orange-500 text-orange-800'
+                  : event.severity === 'medium'
+                  ? 'bg-yellow-50 border-yellow-500 text-yellow-800'
+                  : 'bg-blue-50 border-blue-500 text-blue-800'
+              }`}
+            >
+              <div className="font-medium">{event.description}</div>
+              <div className="text-sm mt-1">Type: {event.type} | Severity: {event.severity}</div>
+              <div className="text-xs mt-2 text-gray-600">
+                {new Date(event.timestamp).toLocaleString()}
+              </div>
+            </div>
+          ))
+        )}
+      </div>
+    </div>
+  );
+};
+
+const ComprehensiveSystemDashboard: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('performance');
+
+  const tabs: DashboardTab[] = [
+    { id: 'performance', label: 'Performance', icon: '⚡', component: PerformanceTab },
+    { id: 'accessibility', label: 'Accessibility', icon: '♿', component: AccessibilityTab },
+    { id: 'seo', label: 'SEO', icon: '🔍', component: SEOTab },
+    { id: 'errors', label: 'Error Recovery', icon: '🛠️', component: ErrorRecoveryTab },
+    { id: 'caching', label: 'Caching', icon: '💾', component: CachingTab },
+    { id: 'security', label: 'Security', icon: '🔒', component: SecurityTab },
+  ];
+
+  const ActiveComponent = tabs.find(tab => tab.id === activeTab)?.component || PerformanceTab;
+
+  return (
+    <div className="bg-white rounded-lg shadow-lg p-6">
+      <div className="mb-6">
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">Comprehensive System Dashboard</h2>
+        <p className="text-gray-600">Advanced monitoring and management interface</p>
+      </div>
+
+      <div className="flex flex-wrap gap-2 mb-6">
+        {tabs.map(tab => (
+>>>>>>> 04e9da8131cd1239431438dbc5d83bdb4ac130e9
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-gray-600 transition-colors"
