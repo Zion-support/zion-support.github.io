@@ -111,3 +111,4 @@ class AdvancedSEOOptimizer {
 
 export const seoOptimizer = new AdvancedSEOOptimizer();
 export type { SEOMetrics };
+export { AdvancedSEOOptimizer };
