@@ -1,8 +1,9 @@
 /**
  * Enhanced Performance Monitor
- * Advanced performance monitoring with real-time analytics and optimization recommendations
+ * Advanced performance monitoring with real-time analytics
  */
 
+<<<<<<< HEAD
 export interface PerformanceMetric {
   name: string;
   value: number;
@@ -33,27 +34,34 @@ export interface OptimizationRecommendation {
   impact: "high" | "medium" | "low";
   effort: "low" | "medium" | "high";
   category: "performance" | "accessibility" | "seo" | "security";
+=======
+export interface PerformanceAlert {
+  id: string;
+  type: 'critical' | 'warning' | 'info';
+  title: string;
+  description: string;
+  impact: 'high' | 'medium' | 'low';
+  action: string;
+  timestamp: number;
+  resolved: boolean;
+>>>>>>> 4b999e7e8499b1d439e8efecb8a451947461db54
 }
 
-export class EnhancedPerformanceMonitor {
-  private static instance: EnhancedPerformanceMonitor;
-  private metrics: Map<string, PerformanceMetric[]> = new Map();
-  private observers: PerformanceObserver[] = [];
-  private isMonitoring = false;
-  private reportInterval: number | null = null;
-  private readonly REPORT_INTERVAL = 30000; // 30 seconds
+class EnhancedPerformanceMonitor {
+  private alerts: PerformanceAlert[] = [];
+  private isMonitoring: boolean = false;
 
-  public static getInstance(): EnhancedPerformanceMonitor {
-    if (!EnhancedPerformanceMonitor.instance) {
-      EnhancedPerformanceMonitor.instance = new EnhancedPerformanceMonitor();
-    }
-    return EnhancedPerformanceMonitor.instance;
+  constructor() {
+    this.initializeMonitoring();
   }
 
-  public startMonitoring(): void {
-    if (this.isMonitoring) return;
+  private initializeMonitoring(): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
 
     this.isMonitoring = true;
+<<<<<<< HEAD
     this.setupPerformanceObservers();
     this.startPeriodicReporting();
     this.monitorResourceLoading();
@@ -61,11 +69,18 @@ export class EnhancedPerformanceMonitor {
     this.monitorMemoryUsage();
 
     console.log("Enhanced Performance Monitor started");
+=======
+    this.startErrorMonitoring();
+    this.startPerformanceMonitoring();
+>>>>>>> 4b999e7e8499b1d439e8efecb8a451947461db54
   }
 
-  public stopMonitoring(): void {
-    if (!this.isMonitoring) return;
+  private startErrorMonitoring(): void {
+    window.addEventListener('error', (event) => {
+      this.trackError(event.error);
+    });
 
+<<<<<<< HEAD
     this.isMonitoring = false;
     this.observers.forEach((observer) => observer.disconnect());
     this.observers = [];
@@ -555,15 +570,135 @@ export class EnhancedPerformanceMonitor {
             impact: "medium",
             effort: "low",
             category: "performance",
-          });
-          break;
-      }
+=======
+    window.addEventListener('unhandledrejection', (event) => {
+      this.trackError(event.reason);
     });
+  }
 
-    return recommendations;
+  private startPerformanceMonitoring(): void {
+    if (!('PerformanceObserver' in window)) return;
+
+    try {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          this.processPerformanceEntry(entry);
+        }
+      });
+
+      observer.observe({ 
+        entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] 
+      });
+    } catch (error) {
+      console.warn('Failed to start performance monitoring:', error);
+    }
+  }
+
+  private processPerformanceEntry(entry: PerformanceEntry): void {
+    switch (entry.entryType) {
+      case 'paint':
+        if (entry.name === 'first-contentful-paint' && entry.startTime > 1800) {
+          this.createAlert({
+            type: 'critical',
+            title: 'Slow First Contentful Paint',
+            description: `FCP is ${entry.startTime.toFixed(0)}ms`,
+            impact: 'high',
+            action: 'Optimize critical rendering path'
+          });
+        }
+        break;
+      case 'largest-contentful-paint':
+        if (entry.startTime > 2500) {
+          this.createAlert({
+            type: 'critical',
+            title: 'Slow Largest Contentful Paint',
+            description: `LCP is ${entry.startTime.toFixed(0)}ms`,
+            impact: 'high',
+            action: 'Optimize images and largest content'
+          });
+        }
+        break;
+      case 'first-input':
+        const fidEntry = entry as PerformanceEventTiming;
+        const fid = fidEntry.processingStart - fidEntry.startTime;
+        if (fid > 100) {
+          this.createAlert({
+            type: 'warning',
+            title: 'Slow First Input Delay',
+            description: `FID is ${fid.toFixed(0)}ms`,
+            impact: 'medium',
+            action: 'Reduce JavaScript execution time'
+>>>>>>> 4b999e7e8499b1d439e8efecb8a451947461db54
+          });
+        }
+        break;
+      case 'layout-shift':
+        const clsEntry = entry as PerformanceEntry & { value: number };
+        if (clsEntry.value > 0.1) {
+          this.createAlert({
+            type: 'warning',
+            title: 'High Cumulative Layout Shift',
+            description: `CLS is ${clsEntry.value.toFixed(3)}`,
+            impact: 'medium',
+            action: 'Fix layout shift issues'
+          });
+        }
+        break;
+    }
+  }
+
+  private trackError(error: Error | any): void {
+    this.createAlert({
+      type: 'warning',
+      title: 'JavaScript Error Detected',
+      description: error.message || 'Unknown error occurred',
+      impact: 'medium',
+      action: 'Check console for details'
+    });
+  }
+
+  private createAlert(alert: Omit<PerformanceAlert, 'id' | 'timestamp' | 'resolved'>): void {
+    const newAlert: PerformanceAlert = {
+      ...alert,
+      id: `alert_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      timestamp: Date.now(),
+      resolved: false
+    };
+
+    this.alerts.push(newAlert);
+    
+    // Keep only last 50 alerts
+    if (this.alerts.length > 50) {
+      this.alerts = this.alerts.slice(-50);
+    }
+  }
+
+  public getAlerts(): PerformanceAlert[] {
+    return [...this.alerts];
+  }
+
+  public getActiveAlerts(): PerformanceAlert[] {
+    return this.alerts.filter(alert => !alert.resolved);
+  }
+
+  public resolveAlert(alertId: string): boolean {
+    const alert = this.alerts.find(a => a.id === alertId);
+    if (alert) {
+      alert.resolved = true;
+      return true;
+    }
+    return false;
+  }
+
+  public cleanup(): void {
+    this.isMonitoring = false;
   }
 }
 
+<<<<<<< HEAD
 // Export singleton instance
 export const enhancedPerformanceMonitor =
   EnhancedPerformanceMonitor.getInstance();
+=======
+export const enhancedPerformanceMonitor = new EnhancedPerformanceMonitor();
+>>>>>>> 4b999e7e8499b1d439e8efecb8a451947461db54
