@@ -132,24 +132,16 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-<<<<<<< HEAD
-          title="New: Incident Playbooks & Privacy‑Preserving Analytics"
-          description="Contain incidents under 60s with safe automations, ship insights without PII risk."
-=======
           title="New: Edge LLM Caching, Governance Scorecards, Serverless Cost Playbook"
           description="Sub‑100ms prompts, KPI‑tied governance that sticks, and 40–70% AI cost savings."
->>>>>>> cursor/create-and-deploy-new-content-36f1
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
             { title: "AI Incident Response Playbooks", category: "Cybersecurity", link: "/blog/ai-incident-response-playbooks-2025" },
             { title: "Privacy‑Preserving Analytics", category: "Observability", link: "/blog/privacy-preserving-analytics-2025" },
             { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" },
-<<<<<<< HEAD
-=======
             { title: "AI Governance Scorecards Quickstart", category: "AI Strategy", link: "/blog/ai-governance-scorecards-quickstart-2025" },
-            { title: "Serverless AI Inference Cost Playbook 2025", category: "Cost Optimization", link: "/blog/serverless-ai-inference-cost-playbook-2025" },
->>>>>>> cursor/create-and-deploy-new-content-36f1
+            { title: "Serverless AI Inference Cost Playbook 2025", category: "Cost Optimization", link: "/blog/serverless-ai-inference-cost-playbook-2025" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
