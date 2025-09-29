@@ -22,6 +22,8 @@ import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import ROICalculator from "../components/ROICalculator";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
+import NewContentPromotionBanner from "../components/NewContentPromotionBanner";
+import EnhancedServicesShowcase from "../components/EnhancedServicesShowcase";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
 

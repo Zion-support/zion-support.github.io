@@ -491,5 +491,95 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "6 min read",
   },
+  {
+    slug: "quantum-computing-business-impact-2025",
+    title: "Quantum Computing's Business Impact: What Every CEO Needs to Know",
+    description:
+      "Explore how quantum computing is revolutionizing cryptography, optimization, and AI. Learn about business applications and strategic implications.",
+    category: "Quantum Computing",
+    publishedAt: "2025-01-22",
+    featured: true,
+    readTime: "12 min read",
+  },
+  {
+    slug: "edge-ai-implementation-guide",
+    title: "Edge AI Implementation: Bringing Intelligence to the Edge",
+    description:
+      "Complete guide to implementing edge AI solutions for real-time processing, reduced latency, and improved privacy in enterprise applications.",
+    category: "Edge AI",
+    publishedAt: "2025-01-21",
+    featured: true,
+    readTime: "10 min read",
+  },
+  {
+    slug: "zero-trust-security-implementation",
+    title: "Zero Trust Security: A Practical Implementation Guide",
+    description:
+      "Step-by-step guide to implementing zero trust security architecture. Learn about micro-segmentation, identity verification, and continuous monitoring.",
+    category: "Cybersecurity",
+    publishedAt: "2025-01-20",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "ai-powered-customer-experience",
+    title: "Transforming Customer Experience with AI: Real-World Case Studies",
+    description:
+      "Discover how leading companies are using AI to enhance customer experience, reduce response times, and increase satisfaction scores.",
+    category: "Customer Experience",
+    publishedAt: "2025-01-19",
+    featured: false,
+    readTime: "8 min read",
+  },
+  {
+    slug: "blockchain-business-applications",
+    title: "Blockchain Beyond Crypto: Business Applications in 2025",
+    description:
+      "Explore practical blockchain applications in supply chain, healthcare, finance, and digital identity management for enterprise solutions.",
+    category: "Blockchain",
+    publishedAt: "2025-01-18",
+    featured: false,
+    readTime: "11 min read",
+  },
+  {
+    slug: "machine-learning-production-guide",
+    title: "From Model to Production: ML Deployment Best Practices",
+    description:
+      "Comprehensive guide to deploying machine learning models in production environments with monitoring, versioning, and scaling strategies.",
+    category: "Machine Learning",
+    publishedAt: "2025-01-17",
+    featured: true,
+    readTime: "13 min read",
+  },
+  {
+    slug: "iot-security-challenges-solutions",
+    title: "IoT Security Challenges and Solutions for Enterprise",
+    description:
+      "Address the growing security challenges in IoT deployments and learn about best practices for securing connected devices and networks.",
+    category: "IoT Security",
+    publishedAt: "2025-01-16",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
+    slug: "automated-testing-ai-qa",
+    title: "Revolutionizing QA with AI-Powered Automated Testing",
+    description:
+      "How AI is transforming software testing through intelligent test generation, automated bug detection, and predictive quality assurance.",
+    category: "Quality Assurance",
+    publishedAt: "2025-01-15",
+    featured: false,
+    readTime: "9 min read",
+  },
+  {
+    slug: "digital-transformation-ai-strategy",
+    title: "AI-Driven Digital Transformation: A Strategic Framework",
+    description:
+      "Strategic framework for leveraging AI in digital transformation initiatives, including change management and ROI measurement.",
+    category: "Digital Transformation",
+    publishedAt: "2025-01-14",
+    featured: true,
+    readTime: "10 min read",
+  },
 ];
 
