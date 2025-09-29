@@ -10,6 +10,31 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
+    slug: "ai-governance-scorecards-quickstart-2026",
+    title: "AI Governance Scorecards Quickstart 2026: Ship Fast, Stay Safe",
+    description: "A practical starter for scorecards, PR checks, and KPI‑linked canaries teams adopt in weeks.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "ai-operational-excellence-blueprint-2026",
+    title: "AI Operational Excellence Blueprint 2026",
+    description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs engineers adopt.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
+    description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
+    category: "Security",
+    publishedAt: "2025-10-13",
+=======
     slug: "ai-governance-maturity-model-2026",
     title: "AI Governance Maturity Model 2026: From Ad‑Hoc to Audit‑Ready",
     description: "Move from ad‑hoc controls to audit‑ready AI governance with scorecards and KPIs.",
@@ -33,10 +58,41 @@ export const posts: BlogPost[] = [
     description: "Streaming, prefetch, and edge compute patterns for instant‑feel AI UX.",
     category: "Edge Computing",
     publishedAt: "2025-10-15",
+>>>>>>> origin/cursor/create-and-deploy-new-content-3f1b
     featured: true,
     readTime: "7 min read"
   },
   {
+<<<<<<< HEAD
+    slug: "genai-routing-blueprint-2026",
+    title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",
+    description: "Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.",
+    category: "GenAI",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "platform-roi-scorecards-v3-2026",
+    title: "Platform ROI Scorecards v3: Leading Indicators That Move the Business",
+    description: "Adoption, golden-path TTFX, and reliability signals that shift focus from costs to shipped value.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-preserving-agents-2026",
+    title: "Privacy‑Preserving Agents: PII‑Safe Tools, Redaction, and Audits",
+    description: "Blueprint for agents that keep signals rich without leaking PII using scoped IDs and field‑level filters.",
+    category: "AI Security",
+    publishedAt: "2025-10-13",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-3f1b
     slug: "ai-reliable-rag-ops-2026",
     title: "Reliable RAG Ops 2026: Freshness Windows, Drift Alerts, Budgets",
     description: "Keep RAG quality high with TTL windows, drift detectors, and KPI‑tied quality budgets.",

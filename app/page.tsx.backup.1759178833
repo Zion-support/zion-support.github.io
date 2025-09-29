@@ -61,6 +61,18 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
+<<<<<<< HEAD
+            <span>✨ New 2026 content:</span>
+            <a href="/blog/ai-evaluation-scorecards-2026" className="underline hover:text-yellow-200">AI Evaluation Scorecards</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-agent-security-2026" className="underline hover:text-yellow-200">AI Agent Security</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-customer-data-platforms-2026" className="underline hover:text-yellow-200">AI Customer Data Platforms</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-multimodal-enterprise-2026" className="underline hover:text-yellow-200">AI Multimodal Enterprise</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200">Enterprise Automation</a>
+=======
             <span>🚀 Latest 2026 content:</span>
             <a href="/blog/ai-governance-maturity-model-2026" className="underline hover:text-yellow-200">Governance Maturity</a>
             <span className="hidden md:inline">•</span>
@@ -71,6 +83,7 @@ export default function HomePage() {
             <a href="/blog/ai-operational-excellence-2026" className="underline hover:text-yellow-200">Operational Excellence</a>
             <span className="hidden md:inline">•</span>
             <a href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</a>
+>>>>>>> origin/cursor/create-and-deploy-new-content-3f1b
           </div>
           <Link
             href="/blog"
