@@ -206,7 +206,7 @@ Capture spans for tool calls, retries, and model routes. Attach prompt, input si
     tags: ["Telemetry", "Agents", "Tracing"],
     featured: true,
     readTime: "5 min read",
-    image: "/images/agent-telemetry.jpg"
+    image: "/images/agent-telemetry.jpg",
     slug: "shipping-genai-safely-guardrails",
     title: "Shipping GenAI Safely: Guardrails That Don’t Slow You Down",
     description: "Layered evaluation systems with policy gates and online canaries to ship fast with confidence.",

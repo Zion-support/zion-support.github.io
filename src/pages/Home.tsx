@@ -129,16 +129,6 @@ const Home = () => {
         </div>
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
-          variant="info"
-          title="📚 New Series: Ship Faster with Guardrails"
-          description="AI roadmaps, ML SBOM automation, and online eval canaries now live."
-          ctaText="See what's new"
-          title="🚀 NEW THIS WEEK: LLM Blue/Green Evals, Agent Observability, Real‑Time Feature Stores"
-          description="Ship LLM updates safely, get deep agent telemetry, and keep features fresh without breaking budgets."
-          title="🚀 NEW THIS WEEK: GenAI Guardrails, Edge Flags, North‑Star Metrics"
-          description="Brand-new guides on eval systems, validation circuits, and outcome-driven metrics."
-          ctaText="Read the latest"
-          ctaLink="/blog"
           variant="success"
           title="🚀 New: Customer Journey Agents + Edge Personalization Under 100ms"
           description="Plan→Act→Verify agents that move KPIs, plus CDN + on‑device ML for private, real‑time UX."
@@ -735,7 +725,6 @@ const Home = () => {
                 <p className="text-gray-600">Insights from our team to help you move faster.</p>
                 <p className="text-gray-600">Fresh: GenAI Telemetry, Edge Flags, Product Readiness, and more.</p>
                 <p className="text-gray-600">New: Platform ROI, Secure ML Supply Chain, and Enterprise RAG v2.</p>
->>>>>>> 6bf91968c6d7c34ee813c38b277ccbb4f761d63e
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
@@ -845,7 +834,6 @@ const Home = () => {
                     Fresh reads: GenAI guardrails that scale, validation circuits for edge flags, and north‑star metrics that drive outcomes.
                   </p>
                   <p className="text-white/90">New: Platform ROI scorecards, Secure ML Supply Chain, and Enterprise RAG v2.</p>
->>>>>>> 6bf91968c6d7c34ee813c38b277ccbb4f761d63e
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
                   Read the latest

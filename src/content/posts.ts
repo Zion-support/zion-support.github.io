@@ -425,7 +425,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: false,
     readTime: "8 min read"
-  }
+  },
   // New content additions
   {
     slug: "agentic-workflows-in-production",
@@ -555,8 +555,7 @@ export const posts: BlogPost[] = [
     category: "Architecture",
     publishedAt: "2025-10-06",
     featured: false,
-    readTime: "6 min read"
-  }
->>>>>>> 6bf91968c6d7c34ee813c38b277ccbb4f761d63e
+      readTime: "6 min read"
+    }
 ];
 
