@@ -93,6 +93,34 @@ Adopt these patterns to move fast without breaking trust.
     image: "/images/genai-evals.jpg"
   },
   {
+    title: "GenAI Evals in Production: Policy Tests That Scale",
+    description: "From offline suites to online canaries: patterns that keep quality high as usage grows.",
+    content: `
+# GenAI Evals in Production: Policy Tests That Scale
+
+Shipping GenAI features safely requires layered evaluation: offline suites, pre-merge policy checks, and online canaries tied to business KPIs.
+
+## What To Measure
+- Response quality vs. baselines
+- Policy violations (PII, hallucinations, toxicity)
+- Drift signals and feedback rates
+
+## Rollout Controls
+- Feature flags for cohort routing
+- Auto-rollback on regression
+- Shadow traffic with red/black comparison
+
+Adopt these patterns to move fast without breaking trust.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["GenAI", "Evals", "Guardrails", "Quality"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-evals.jpg"
+  },
+  {
     slug: "feature-flags-edge-2025",
     title: "Feature Flags at the Edge: <100ms Global Releases",
     description: "Consistency models, cache strategies, and validation flows for instant global rollouts.",

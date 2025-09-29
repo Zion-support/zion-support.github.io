@@ -1011,14 +1011,6 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-01-21",
     readMinutes: 11,
   }
-=======
-    id: "ai-ethics-implementation-framework",
-    title: "AI Ethics Implementation Framework: From Principles to Practice",
-    summary:
-      "A step-by-step framework for implementing ethical AI practices in your organization, including governance, technical implementation, and monitoring strategies.",
-    category: "AI Ethics",
-    date: "2025-01-20",
-    readMinutes: 4,
   },
   {
     id: "iot-security-threat-landscape-2025",
