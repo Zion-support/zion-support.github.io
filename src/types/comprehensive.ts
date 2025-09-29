@@ -277,4 +277,4 @@ export interface ErrorRecoveryStrategy {
   fallbackAction?: () => void;
 }
 
-// All types are already exported above
+// All types are already exported above as interfaces
