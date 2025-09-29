@@ -14,11 +14,16 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
+import BlogPromotionBanner from "../components/BlogPromotionBanner";
+import Header from "../components/Header";
+=======
 const ContentPromotionBanner = (props: any) => null;
 const ContentValueTestimonials = () => null;
 const EnhancedNewsletterSignup = (_props: any) => null;
 const EnhancedTestimonials = () => null;
 const Header = () => null;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-9756
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 const LatestInsights = () => null;

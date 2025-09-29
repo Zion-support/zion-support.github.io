@@ -1,6 +1,12 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
+<<<<<<< HEAD
+import Contact from './pages/Contact';
+import Resources from './pages/Resources';
+import Blog from './pages/Blog';
+// Only import service pages that exist in the repo
+=======
 // Removed missing routes for this branch
 const About = () => null;
 const Services = () => null;
@@ -15,6 +21,7 @@ const CaseStudies = () => null;
 const AIWorkflowAutomation = () => null;
 const AIVirtualAssistant = () => null;
 const AIDataAnalytics = () => null;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-9756
 import AIAutonomousOperations from './pages/services/AIAutonomousOperations';
 import AIPlatformArchitecture from './pages/services/AI-Platform-Architecture';
 
@@ -33,7 +40,11 @@ export const AppRouter: React.FC = () => {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/services" element={<Services />} />
+<<<<<<< HEAD
+      {/* Removed routes for non-existent service pages to fix build */}
+=======
       {/* Limited routes for current branch */}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-9756
       <Route path="/services/ai-autonomous-operations" element={<AIAutonomousOperations />} />
       <Route path="/services/AI-Platform-Architecture" element={<AIPlatformArchitecture />} />
       <Route path="/contact" element={<Contact />} />

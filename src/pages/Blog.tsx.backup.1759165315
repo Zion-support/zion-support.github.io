@@ -14,8 +14,12 @@ import {
 import React, { useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
+<<<<<<< HEAD
+import { posts as contentPosts } from "../content/posts";
+=======
 const Footer = () => null;
 const Header = () => null;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-9756
 
 interface BlogPost {
   id: number;

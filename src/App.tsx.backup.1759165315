@@ -9,6 +9,21 @@ import { AppRouter } from './router';
 // import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
 // import { screenReaderSupport } from './accessibility/screenReaderSupport';
 import './index.css';
+<<<<<<< HEAD
+import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
+import SEOOptimizer from './components/SEOOptimizer';
+// Lightweight placeholder for missing AdvancedAnalytics component
+const AdvancedAnalytics: React.FC<{
+  enableConversionTracking?: boolean;
+  enablePerformanceTracking?: boolean;
+  enableErrorTracking?: boolean;
+}> = () => null;
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import NotificationSystem from './components/NotificationSystem';
+=======
 // import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
@@ -20,6 +35,7 @@ const PerformanceMonitor = (_props: any) => null;
 const EnhancedErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
 type Notification = { id: string; message?: string };
 const NotificationSystem: React.FC<{ notifications: Notification[]; onRemove: (id: string) => void }> = () => null;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-9756
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};
@@ -50,7 +66,11 @@ const WebsiteEnhancements = (props: any) => <Placeholder name="WebsiteEnhancemen
 export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+<<<<<<< HEAD
+  const [notifications, setNotifications] = useState<Array<{id: string; message?: string}>>([]);
+=======
   const [notifications, setNotifications] = useState<Notification[]>([]);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-9756
 
   const seoDataForOptimizer = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
