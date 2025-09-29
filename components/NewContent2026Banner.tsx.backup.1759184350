@@ -114,4 +114,10 @@ export default function NewContent2026Banner() {
       </div>
     </div>
   );
+<<<<<<< HEAD
+};
+
+export default NewContent2026Banner;
+=======
 }
+>>>>>>> origin/cursor/create-and-deploy-new-content-e392
