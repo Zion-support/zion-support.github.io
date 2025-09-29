@@ -54,6 +54,8 @@ import NewContentPromotionalBanner2026 from '../components/NewContentPromotional
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
 import LatestSpaceAI2026Banner from '../components/LatestSpaceAI2026Banner';
 import CognitiveEnterprise2026Banner from '../components/CognitiveEnterprise2026Banner';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import LatestBreakthroughContent2026 from '../components/LatestBreakthroughContent2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -75,7 +77,7 @@ export default function HomePage() {
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-synthetic-data-2026" className="underline hover:text-yellow-200">Synthetic Data</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-neural-interface-healthcare-2026" className="underline hover:text-yellow-200">$15M Healthcare ROI</Link>
+            <Link href="/case-studies/ai-neural-interface-success-2026" className="underline hover:text-yellow-200">$12M ROI Success</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</Link>
           </div>
@@ -87,6 +89,10 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+      
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
+      
       {/* Promotional Banners */}
       <LatestContent2026Banner />
       <NewContent2026Banner />
@@ -280,6 +286,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Latest Breakthrough Content 2026 */}
+      <LatestBreakthroughContent2026 />
+      
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
       
