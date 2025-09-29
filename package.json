@@ -48,11 +48,7 @@
     "audit:seo": "echo \"Running SEO audit...\"",
     "audit:all": "pnpm run audit:accessibility && pnpm run audit:seo && pnpm run audit:security",
     "analyze:performance": "node scripts/performance-optimizer.js",
-<<<<<<< HEAD
-    "build:analyze": "vite build --mode analyze && npx vite-bundle-analyzer dist",
-=======
     "build:analyze": "vite build --mode analyze",
->>>>>>> 45309360e343009c3c2c43a2b65a0e9c923a8460
     "build:prod": "NODE_ENV=production vite build --minify terser --sourcemap false",
     "build:profile": "vite build --mode production --profile",
     "perf:monitor": "node scripts/performance-monitor.cjs",
