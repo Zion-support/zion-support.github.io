@@ -1,185 +1,106 @@
 import React from 'react';
 import Link from 'next/link';
+import { DollarSign, TrendingDown, Calculator, ArrowRight, CheckCircle } from 'lucide-react';
 
-export function AICostOptimizationBanner() {
+export default function AICostOptimizationBanner() {
   return (
-    <section className="py-16 bg-gradient-to-r from-green-600 via-teal-600 to-blue-600 text-white">
+    <div className="w-full bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white py-12">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm font-semibold">
-                💰 ADVANCED 2026
+                💰 COST OPTIMIZATION 2026
               </span>
-              <span className="text-sm opacity-90">Cost Optimization</span>
+              <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-bold">
+                BREAKTHROUGH
+              </span>
             </div>
-            <h2 className="text-4xl font-bold mb-4">
-              AI Cost Optimization Advanced: 70% Cost Reduction & $10M+ Savings
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Reduce AI Costs by 90% While Improving Performance
             </h2>
-            <p className="text-xl mb-6 opacity-90">
-              Master advanced AI cost optimization strategies that deliver 70% cost reduction and $10M+ savings 
-              through intelligent resource allocation, model optimization, and infrastructure efficiency.
+            <p className="text-xl opacity-90 mb-6">
+              Discover the advanced optimization strategies that leading enterprises are using to 
+              achieve massive cost savings while dramatically improving AI performance and reliability.
             </p>
+            
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="bg-white bg-opacity-10 rounded-lg p-4">
+                <div className="text-2xl font-bold text-yellow-300">90%</div>
+                <div className="text-sm opacity-80">Cost Reduction</div>
+              </div>
+              <div className="bg-white bg-opacity-10 rounded-lg p-4">
+                <div className="text-2xl font-bold text-blue-300">300%</div>
+                <div className="text-sm opacity-80">Performance Gain</div>
+              </div>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/blog/ai-cost-optimization-advanced-2026"
-                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+                href="/blog/ai-cost-optimization-2026-advanced"
+                className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
               >
-                Read Complete Guide
+                <Calculator className="w-5 h-5" />
+                Read Optimization Guide
               </Link>
               <Link
                 href="/case-studies/ai-cost-optimization-success-2026"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center"
+                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors flex items-center justify-center gap-2"
               >
-                View $12M Success Story
+                <TrendingDown className="w-5 h-5" />
+                View $50M Success Story
               </Link>
             </div>
           </div>
-          
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
-            <h3 className="text-2xl font-bold mb-6">Optimization Results</h3>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-300">70%</div>
-                <div className="text-sm opacity-90">Cost Reduction</div>
+
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+            <h3 className="text-2xl font-bold mb-4">Key Optimization Strategies</h3>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <CheckCircle className="w-6 h-6 text-green-300 mt-0.5" />
+                <div>
+                  <h4 className="font-semibold text-lg">Quantum-Enhanced Optimization</h4>
+                  <p className="text-sm opacity-80">60-80% reduction in resource waste through quantum algorithms</p>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-300">$10M+</div>
-                <div className="text-sm opacity-90">Annual Savings</div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="w-6 h-6 text-green-300 mt-0.5" />
+                <div>
+                  <h4 className="font-semibold text-lg">Edge Computing Implementation</h4>
+                  <p className="text-sm opacity-80">40-60% cost reduction by processing at the edge</p>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-300">90%</div>
-                <div className="text-sm opacity-90">Resource Efficiency</div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="w-6 h-6 text-green-300 mt-0.5" />
+                <div>
+                  <h4 className="font-semibold text-lg">Advanced Model Compression</h4>
+                  <p className="text-sm opacity-80">75% reduction in model size with 95% accuracy maintained</p>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-300">8</div>
-                <div className="text-sm opacity-90">Months to ROI</div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="w-6 h-6 text-green-300 mt-0.5" />
+                <div>
+                  <h4 className="font-semibold text-lg">Real-time Cost Monitoring</h4>
+                  <p className="text-sm opacity-80">30% reduction in cost overruns through automated controls</p>
+                </div>
               </div>
             </div>
+
             <div className="mt-6 pt-4 border-t border-white border-opacity-20">
-              <p className="text-sm opacity-90 text-center">
-                "Advanced AI cost optimization transformed our AI operations completely. We reduced costs by 75% 
-                while improving performance and scalability."
-              </p>
-              <p className="text-xs opacity-75 text-center mt-2">
-                — Michael Rodriguez, VP of AI, TechCorp Global
-              </p>
+              <div className="flex items-center justify-between">
+                <div>
+                  <div className="text-2xl font-bold text-yellow-300">$43.5M</div>
+                  <div className="text-sm opacity-80">Average Annual Savings</div>
+                </div>
+                <div className="text-right">
+                  <div className="text-2xl font-bold text-green-300">4 months</div>
+                  <div className="text-sm opacity-80">ROI Timeline</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
-}
-
-export function AICostOptimizationShowcase() {
-  return (
-    <section className="py-16 bg-gradient-to-br from-green-50 to-blue-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            AI Cost Optimization Success Stories
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See how companies are achieving massive cost savings with advanced AI optimization strategies
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-100 to-teal-100 rounded-lg flex items-center justify-center">
-                <span className="text-2xl">💻</span>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-gray-900">Tech Company</h3>
-                <p className="text-sm text-gray-500">Fortune 500</p>
-              </div>
-            </div>
-            <h4 className="text-xl font-bold text-gray-900 mb-3">
-              $12M Savings with 75% Cost Reduction
-            </h4>
-            <p className="text-gray-600 mb-4">
-              TechCorp Global achieved $12M annual savings through advanced AI cost optimization, 
-              reducing operational costs by 75% while improving performance.
-            </p>
-            <div className="flex items-center justify-between">
-              <div className="text-sm text-gray-500">8 months</div>
-              <Link
-                href="/case-studies/ai-cost-optimization-success-2026"
-                className="text-green-600 font-semibold hover:text-green-700 transition-colors"
-              >
-                Read Case Study →
-              </Link>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-lg flex items-center justify-center">
-                <span className="text-2xl">🏦</span>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-gray-900">Financial Services</h3>
-                <p className="text-sm text-gray-500">FinTech</p>
-              </div>
-            </div>
-            <h4 className="text-xl font-bold text-gray-900 mb-3">
-              $8M Savings with 80% Cost Reduction
-            </h4>
-            <p className="text-gray-600 mb-4">
-              Leading FinTech company achieved $8M savings through intelligent model optimization 
-              and dynamic resource scaling, reducing costs by 80%.
-            </p>
-            <div className="flex items-center justify-between">
-              <div className="text-sm text-gray-500">6 months</div>
-              <Link
-                href="/case-studies/ai-fintech-cost-optimization-2026"
-                className="text-blue-600 font-semibold hover:text-blue-700 transition-colors"
-              >
-                Read Case Study →
-              </Link>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg flex items-center justify-center">
-                <span className="text-2xl">🛒</span>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-gray-900">E-commerce</h3>
-                <p className="text-sm text-gray-500">Retail</p>
-              </div>
-            </div>
-            <h4 className="text-xl font-bold text-gray-900 mb-3">
-              $6M Savings with 65% Cost Reduction
-            </h4>
-            <p className="text-gray-600 mb-4">
-              E-commerce leader achieved $6M savings through edge computing optimization 
-              and model quantization, reducing costs by 65%.
-            </p>
-            <div className="flex items-center justify-between">
-              <div className="text-sm text-gray-500">4 months</div>
-              <Link
-                href="/case-studies/ai-retail-cost-optimization-2026"
-                className="text-purple-600 font-semibold hover:text-purple-700 transition-colors"
-              >
-                Read Case Study →
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="text-center mt-12">
-          <Link
-            href="/case-studies"
-            className="inline-block bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-          >
-            View All Cost Optimization Success Stories
-          </Link>
-        </div>
-      </div>
-    </section>
+    </div>
   );
 }

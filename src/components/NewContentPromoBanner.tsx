@@ -1,17 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Cloud, 
+  Sparkles, 
+  ArrowRight, 
+  X, 
+  BookOpen, 
   TrendingUp, 
-  Target,
-  Award,
-  BarChart3
+  Zap,
+  Shield,
+  Cloud,
+  Brain,
+  Star
 } from 'lucide-react';
 
-const NewContentPromoBanner = () => {
-  const newContent = [
+interface NewContentPromoBannerProps {
+  variant?: 'info' | 'premium' | 'success' | 'warning';
+  className?: string;
+}
+
+const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ 
+  variant = 'premium', 
+  className = '' 
+}) => {
+  const [isDismissed, setIsDismissed] = useState(false);
+
+  const variants = {
+    info: 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-blue-400/30',
+    premium: 'bg-gradient-to-r from-purple-500 to-pink-500 text-white border-purple-400/30',
+    success: 'bg-gradient-to-r from-green-500 to-emerald-500 text-white border-green-400/30',
+    warning: 'bg-gradient-to-r from-orange-500 to-red-500 text-white border-orange-400/30'
+  };
+
+  const featuredContent = [
     {
       title: "AI Safety Budgets 2026",
       description: "Guardrails wired to KPIs, approvals, rollbacks",
@@ -55,6 +75,13 @@ const NewContentPromoBanner = () => {
       category: "Platform"
     },
     {
+      title: "Edge Feature Flags 2026",
+      description: "<100ms global releases with budgets",
+      icon: Zap,
+      link: "/blog/edge-feature-flags-2026",
+      category: "Platform"
+    },
+    {
       title: "Quality‑Tiered GenAI Routing 2026",
       description: "Control cost with tiers, caches, and eval signals",
       icon: Zap,
@@ -88,124 +115,81 @@ const NewContentPromoBanner = () => {
       icon: Brain,
       link: "/blog/edge-privacy-telemetry-2026",
       category: "Observability"
-      title: "AI Autonomous Enterprise 2026",
-      description: "Complete self-managing operations guide",
-      icon: Brain,
-      link: "/blog/ai-autonomous-enterprise-transformation-2026",
-      category: "Enterprise AI"
-    },
-    {
-      title: "AI Quantum Hybrid Computing 2026",
-      description: "Next-generation intelligence revolution",
-      icon: Zap,
-      link: "/blog/ai-quantum-hybrid-computing-2026",
-      category: "Quantum AI"
-    },
-    {
-      title: "AI Transformation Mega Success 2026",
-      description: "$25M ROI case study",
-      icon: Award,
-      link: "/case-studies/ai-transformation-mega-success-2026",
-      category: "Case Study"
-    },
-    {
-      title: "AI Agent Observability 2026",
-      description: "End-to-end monitoring & reliability",
-      icon: BarChart3,
-      link: "/blog/ai-agent-observability-2026",
-      category: "AI Observability"
-    },
-    {
-      title: "AI Agent Safety Blueprint 2026",
-      description: "Complete safety & reliability framework",
-      icon: Shield,
-      link: "/blog/ai-agent-safety-blueprint-2026",
-      category: "AI Safety"
-    },
-    {
-      title: "AI Customer Experience 2025",
-      description: "Personalization & automation",
-      icon: TrendingUp,
-      link: "/blog/ai-customer-experience-2025",
-      category: "Customer Experience"
-    },
-    {
-      title: "AI Reliable RAG 2025",
-      description: "Production patterns for grounded answers",
-      icon: Target,
-      link: "/blog/ai-reliable-rag-2025",
-      category: "RAG Systems"
-    },
-    {
-      title: "AI Roadmaps 2026",
-      description: "What to build next and why",
-      icon: Cloud,
-      link: "/blog/ai-roadmaps-2026",
-      category: "AI Strategy"
-=======
     }
   ];
 
-  const getCategoryColor = (category: string) => {
-    const colors: { [key: string]: string } = {
-      "Enterprise AI": "bg-purple-100 text-purple-800",
-      "Quantum AI": "bg-indigo-100 text-indigo-800",
-      "Case Study": "bg-green-100 text-green-800",
-      "AI Observability": "bg-blue-100 text-blue-800",
-      "AI Safety": "bg-red-100 text-red-800",
-      "Customer Experience": "bg-pink-100 text-pink-800",
-      "RAG Systems": "bg-teal-100 text-teal-800",
-      "AI Strategy": "bg-orange-100 text-orange-800"
-    };
-    return colors[category] || "bg-gray-100 text-gray-800";
-  };
+  if (isDismissed) return null;
 
   return (
-    <section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <span className="inline-block bg-white bg-opacity-20 text-white text-sm font-semibold px-4 py-2 rounded-full mb-4">
-            ✨ New 2026 Content
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-            Discover Our Latest AI Insights
-          </h2>
-          <p className="text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
-            Explore cutting-edge AI content covering autonomous enterprises, quantum computing,
-            safety frameworks, and real-world success stories.
-          </p>
-        </div>
+    <div className={`${variants[variant]} ${className} relative overflow-hidden`}>
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full animate-bounce"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full animate-ping"></div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {newContent.map((item, index) => {
-            const IconComponent = item.icon;
-            return (
-              <a
-                key={index}
-                href={item.link}
-                className="group bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-20 transition-all duration-300 hover:scale-105"
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-6">
+        <div className="flex items-center justify-between">
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-3">
+              <Sparkles className="w-6 h-6 animate-pulse" />
+              <span className="text-lg font-bold">🚀 NEW CONTENT ALERT</span>
+              <Star className="w-5 h-5 animate-spin" />
+            </div>
+            
+            <h3 className="text-xl font-bold mb-2">
+              Just Published: New Guides for 2026
+            </h3>
+            
+            <p className="text-white/90 mb-4 text-sm">
+              Discover fresh insights on on‑device agents, GenAI cost controls, secure tool marketplaces,
+              and privacy‑first observability.
+            </p>
+
+            {/* Featured content grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+              {featuredContent.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={index}
+                    to={item.link}
+                    className="bg-white/10 backdrop-blur-sm rounded-lg p-3 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
+                  >
+                    <div className="flex items-center gap-2 mb-2">
+                      <Icon className="w-4 h-4 text-white/80" />
+                      <span className="text-xs font-medium text-white/80">{item.category}</span>
+                    </div>
+                    <h4 className="font-semibold text-white text-sm group-hover:text-yellow-300 transition-colors">
+                      {item.title}
+                    </h4>
+                    <p className="text-xs text-white/70 mt-1 line-clamp-2">
+                      {item.description}
+                    </p>
+                  </Link>
+                );
+              })}
+            </div>
+
+            {/* Action buttons */}
+            <div className="flex flex-wrap gap-3">
+              <Link
+                to="/blog"
+                className="bg-white text-purple-600 hover:bg-white/90 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 bg-white bg-opacity-20 rounded-lg">
-                    <IconComponent className="w-6 h-6 text-white" />
-                  </div>
-                  <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getCategoryColor(item.category)}`}>
-                    {item.category}
-                  </span>
-                </div>
-                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-200 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-white text-opacity-80 mb-4">
-                  {item.description}
-                </p>
-                <div className="flex items-center text-white text-sm font-semibold group-hover:text-purple-200 transition-colors">
-                  Read More →
-                </div>
-              </a>
-            );
-          })}
-        </div>
+                <BookOpen className="w-4 h-4" />
+                Read All Articles
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              
+              <Link
+                to="/case-studies"
+                className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                <TrendingUp className="w-4 h-4" />
+                View Case Studies
+              </Link>
 
               <Link
                 to="/services"
@@ -219,7 +203,7 @@ const NewContentPromoBanner = () => {
             {/* Stats */}
             <div className="flex items-center gap-6 mt-4 text-sm text-white/80">
               <div className="flex items-center gap-1">
-                <span className="font-semibold">16</span>
+                <span className="font-semibold">13</span>
                 <span>New Articles</span>
               </div>
               <div className="flex items-center gap-1">
@@ -239,11 +223,11 @@ const NewContentPromoBanner = () => {
             className="ml-4 p-2 hover:bg-white/10 rounded-full transition-colors"
             aria-label="Dismiss banner"
           >
-            View All Content →
-          </a>
+            <X className="w-5 h-5" />
+          </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
