@@ -10,43 +10,8 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-    slug: "ai-product-launch-checklist-2025",
-    title: "AI Product Launch Checklist: From Pilot to Production",
-    description:
-      "A pragmatic checklist for hardening pilots, proving ROI, and launching AI features safely.",
-    category: "Product",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "7 min read",
-  },
-  {
-    slug: "mlops-in-45-days",
-    title: "MLOps in 45 Days: Shipping Reliable Models Fast",
-    description:
-      "Reference pipelines, eval gates, and rollout patterns to move from notebook to prod quickly.",
-    category: "MLOps",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "practical-rag-architecture",
-    title: "Practical RAG Architecture That Scales",
-    description:
-      "Chunking, indexing, and retrieval strategies that actually improve answer quality at lower cost.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "6 min read",
-  },
-  {
-    slug: "edge-inference-blueprints",
-    title: "Edge Inference Blueprints: Sub‑100ms UX in Production",
-=======
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
->>>>>>> feat/content-promo
     description:
       "Latency budgets, on‑device models, and caching strategies for lightning‑fast AI UX at the edge.",
     category: "Architecture",
@@ -85,13 +50,8 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
-<<<<<<< HEAD
-    slug: "edge-inference-patterns-2025",
-    title: "Edge Inference Patterns for Sub‑100ms Experiences",
-=======
     slug: "platform-scorecards-that-stick",
     title: "Platform Scorecards That Actually Drive Adoption",
->>>>>>> feat/content-promo
     description:
       "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
     category: "Platform Engineering",
@@ -136,16 +96,6 @@ export const posts: BlogPost[] = [
       "A practical method to align teams to measurable outcomes and avoid vanity KPIs.",
     category: "Product Analytics",
     publishedAt: "2025-09-27",
-    featured: false,
-    readTime: "6 min read",
-  },
-  {
-    slug: "north-star-metrics-that-drive-growth",
-    title: "North‑Star Metrics That Actually Drive Growth",
-    description:
-      "Define actionable metrics, avoid vanity traps, and align teams to measurable outcomes.",
-    category: "Product Analytics",
-    publishedAt: "2025-09-29",
     featured: false,
     readTime: "6 min read",
   },
