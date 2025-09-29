@@ -6,11 +6,10 @@ import {
   Rocket,
   Shield,
   Sparkles,
-  Star,
   Target,
   TrendingUp,
   Users,
-  Zap,
+  Zap
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -100,31 +99,16 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/main
         
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-<<<<<<< HEAD
-          title="🚀 Fresh: AI Product Launch Checklist + MLOps in 45 Days"
-          description="New guides on taking AI pilots to production and shipping reliable models fast."
-          ctaText="Read the latest"
-          ctaLink="/blog/ai-product-launch-checklist-2025"
-          dismissible={true}
-        />
->>>>>>> cursor/create-and-deploy-new-content-83a1
-=======
           title="🚀 NEW: AI Governance, Edge Flags, and GenAI Telemetry posts"
           description="Fresh articles and quick insights just landed. See what's new this week."
           ctaText="Read the latest"
           ctaLink="/blog"
           dismissible={true}
         />
->>>>>>> origin/main
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -451,92 +435,6 @@ const Home = () => {
                 </div>
               </article>
             ))}
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="bg-zion-slate-dark py-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/10 to-zion-purple/10 opacity-50"></div>
-          <div className="container mx-auto px-6 relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up">
-                What Our Clients Say
-              </h2>
-              <p className="text-xl text-zion-slate-light max-w-2xl mx-auto animate-fade-in">
-                Don&apos;t just take our word for it. Here&apos;s what our
-                clients have to say about working with us.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="card text-center hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                <div className="flex justify-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 text-yellow-400 fill-current animate-pulse"
-                      style={{ animationDelay: `${i * 0.1}s` }}
-                    />
-                  ))}
-                </div>
-                <p className="text-zion-slate-light mb-6 italic">
-                  &ldquo;Zion Tech Group transformed our entire digital
-                  infrastructure. Their AI solutions increased our efficiency by
-                  300%.&rdquo;
-                </p>
-                <div>
-                  <div className="font-semibold text-white">Sarah Johnson</div>
-                  <div className="text-sm text-zion-slate">CEO, TechCorp</div>
-                </div>
-              </div>
-
-              <div className="card text-center hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                <div className="flex justify-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 text-yellow-400 fill-current animate-pulse"
-                      style={{ animationDelay: `${i * 0.1}s` }}
-                    />
-                  ))}
-                </div>
-                <p className="text-zion-slate-light mb-6 italic">
-                  &ldquo;Outstanding team and exceptional results. They
-                  delivered our mobile app ahead of schedule and under
-                  budget.&rdquo;
-                </p>
-                <div>
-                  <div className="font-semibold text-white">Michael Chen</div>
-                  <div className="text-sm text-zion-slate">
-                    CTO, InnovateLab
-                  </div>
-                </div>
-              </div>
-
-              <div className="card text-center hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                <div className="flex justify-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 text-yellow-400 fill-current animate-pulse"
-                      style={{ animationDelay: `${i * 0.1}s` }}
-                    />
-                  ))}
-                </div>
-                <p className="text-zion-slate-light mb-6 italic">
-                  &ldquo;The security solutions they implemented gave us
-                  complete peace of mind. Highly recommended!&rdquo;
-                </p>
-                <div>
-                  <div className="font-semibold text-white">
-                    Emily Rodriguez
-                  </div>
-                  <div className="text-sm text-zion-slate">
-                    Security Director, FinanceFirst
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 

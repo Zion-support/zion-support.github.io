@@ -58,7 +58,6 @@ export const latestInsights: InsightArticle[] = [
     title: "North‑Star Metrics: A Field Guide",
     summary:
       "A practical approach to defining leading indicators that align teams to outcomes.",
-<<<<<<< HEAD
     category: "Product Analytics",
     date: "2025-09-28",
     readMinutes: 7,
@@ -95,8 +94,6 @@ export const latestInsights: InsightArticle[] = [
     title: "An Operator’s Playbook for LTV:CPA Ratio",
     summary:
       "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
-=======
->>>>>>> origin/main
     category: "Product Analytics",
     date: "2025-09-28",
     readMinutes: 7,
