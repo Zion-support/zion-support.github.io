@@ -89,6 +89,12 @@ function Footer() {
           <div>
             <h3 className="font-semibold text-gray-900 mb-3">Latest 2027 Content</h3>
             <div className="space-y-2">
+<<<<<<< HEAD
+              <Link href="/blog/ai-neural-interfaces-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🧠 Neural Interfaces 2026</Link>
+              <Link href="/blog/ai-space-tech-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Space AI Technology</Link>
+              <Link href="/blog/ai-synthetic-data-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🔒 Synthetic Data AI</Link>
+              <Link href="/blog/ai-quantum-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">⚛️ Quantum Computing AI</Link>
+=======
               <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Blog
                 <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
@@ -97,6 +103,7 @@ function Footer() {
               <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🧠 Cognitive Computing Breakthrough</Link>
               <Link href="/blog/ai-autonomous-enterprise-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Autonomous Enterprise 2026</Link>
               <Link href="/blog/ai-quantum-hybrid-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">⚡ Quantum AI Computing</Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-d513
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Case Studies
                 <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
@@ -108,6 +115,9 @@ function Footer() {
                 $500M Success Story
                 <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">MEGA SUCCESS</span>
               </Link>
+<<<<<<< HEAD
+              <Link href="/case-studies/ai-synthetic-data-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">💰 $15M Synthetic Data ROI</Link>
+=======
               <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors">Blog</Link>
               <Link href="/blog/ai-sustainability-green-tech-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Sustainability</Link>
               <Link href="/blog/ai-autonomous-enterprise-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Autonomous Enterprise</Link>
@@ -117,6 +127,7 @@ function Footer() {
               <Link href="/case-studies/ai-cognitive-computing-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">📊 $25M Cognitive AI Success</Link>
               <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">📈 $20M Autonomous Success</Link>
               <Link href="/case-studies/ai-sustainability-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🌱 $10M Sustainability ROI</Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-d513
             </div>
           </div>
           <div>
