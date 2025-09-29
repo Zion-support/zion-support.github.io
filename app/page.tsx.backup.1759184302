@@ -95,6 +95,9 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
+<<<<<<< HEAD
+            <Link href="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</Link>
+=======
             <Link href="/blog/ai-metaverse-enterprise-2026" className="underline hover:text-yellow-200">Metaverse Enterprise</Link>
 =======
             <span>✨ NEW 2026:</span>
@@ -116,6 +119,7 @@ export default function HomePage() {
             <Link href="/case-studies/ai-quantum-enterprise-transformation-2026" className="underline hover:text-yellow-200">$50M ROI Success</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/services/ai-synthetic-data-generation" className="underline hover:text-yellow-200">Quantum AI Services</Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-bb79
           </div>
           <Link
             href="/blog"
@@ -256,6 +260,12 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
+<<<<<<< HEAD
+              href="/services"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Explore Our Services
+=======
               href="/blog/ai-2026-ultimate-guide"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
             >
@@ -300,6 +310,7 @@ export default function HomePage() {
               className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-teal-700 transition-all shadow-lg hover:shadow-xl"
             >
               📊 $50M ROI Success
+>>>>>>> origin/cursor/create-and-deploy-new-content-bb79
             </Link>
             <a
               href="tel:+13024640950"
