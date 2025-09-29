@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "agentic-workflows-blueprint-2026",
+    title: "Agentic Workflows Blueprint 2026: Tools, Traces, Policy Tests",
+    description: "Design reliable multi‑tool agents with traceability, CI policy tests, and rollback‑ready routes.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-platform-roi-scorecards-2025",
+    title: "AI Platform ROI Scorecards: Connect Capabilities to Outcomes",
+    description: "Make AI investment value visible with scorecards tied to adoption, retention, and revenue.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "signed-edge-configs-personalization-2025",
+    title: "Signed Edge Configs: Private Personalization Under 100ms",
+    description: "Deliver low‑latency personalization using signed configs, KV caches, and on‑device signals.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
     slug: "ai-incident-response-2026",
     title: "AI Incident Response 2026: Playbooks, Canaries, and SLAs",
     description: "Practical incident response for AI features with on-call playbooks and KPI-linked canaries.",

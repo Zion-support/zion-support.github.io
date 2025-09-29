@@ -381,6 +381,19 @@ export const services: Service[] = [
 // Promotional Banners Configuration
 export const promotionalBanners: PromotionalBanner[] = [
   {
+    id: 'agentic-workflows-spotlight',
+    message: '🧩 New: Agentic Workflows Blueprint 2026 — Tools, Traces, Policy Tests',
+    ctaText: 'Read Blueprint',
+    ctaLink: '/blog/agentic-workflows-blueprint-2026',
+    backgroundColor: 'bg-gradient-to-r from-sky-600 to-indigo-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 0
+  },
+  {
     id: 'new-oct-2025-content-banner',
     message: '✨ New: AI Incident Response, Observability Scorecards, Privacy‑Preserving RAG',
     ctaText: 'Read the latest',
