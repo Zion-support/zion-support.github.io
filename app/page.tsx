@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap } from 'lucide-react';
-
-interface CardProps {
-=======
 import { Link } from 'react-router-dom';
 import React from 'react';
 import { 
@@ -16,14 +9,12 @@ import {
   HealthTechSuccessBanner,
   ComprehensiveAIBanner,
   EnterpriseAIBanner,
-  CustomerSupportAIBanner,
-  CloudNativeBanner,
-  RetailTechSuccessBanner,
-  ManufacturingIoTSuccessBanner,
-  AIGovernanceFrameworkBanner,
-  MLOpsVectorDatabasesBanner,
-  FinTechRiskComplianceBanner,
-  LatestContentShowcaseBanner
+  NewContentBanner,
+  CustomerServiceAIBanner,
+  HealthcareAIBanner,
+  RetailSuccessBanner,
+  AIContentShowcaseBanner,
+  AIRevolutionBanner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
 
@@ -37,19 +28,12 @@ export default function HomePage() {
   return (
     <div className="animate-fade-in">
       {/* Promotional Banners */}
-      <LatestContentShowcaseBanner />
-      <AIGovernanceFrameworkBanner />
-      <MLOpsVectorDatabasesBanner />
-      <FinTechRiskComplianceBanner />
-      <AutonomousAgentsBanner />
-      <SecurityComplianceBanner />
-      <ManufacturingSuccessBanner />
-      <PredictiveMaintenanceBanner />
+      <AIContentShowcaseBanner />
+      <CustomerServiceAIBanner />
+      <HealthcareAIBanner />
+      <RetailSuccessBanner />
+      <AIRevolutionBanner />
       <NewBlogBanner />
-      <CustomerSupportAIBanner />
-      <CloudNativeBanner />
-      <RetailTechSuccessBanner />
-      <ManufacturingIoTSuccessBanner />
       <WorkflowAutomationBanner />
       <AIAnalyticsBanner />
       
@@ -68,7 +52,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              href="/services"
+              to="/services"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore Our Services
@@ -166,6 +150,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Dynamic Content Showcase */}
+      <ContentShowcase />
+      
       {/* Latest Content Section */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -179,66 +166,6 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link to="/blog/ai-governance-framework-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Guide
-                  </span>
-                  <span className="text-sm text-gray-500">15 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Governance Framework 2025: Enterprise Implementation
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Master AI governance with comprehensive framework covering risk management, compliance, and ethical deployment.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Guide →
-                </div>
-              </div>
-            </Link>
-            
-            <Link to="/blog/ai-mlops-vector-databases-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Technical Guide
-                  </span>
-                  <span className="text-sm text-gray-500">18 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI MLOps with Vector Databases 2025
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Master MLOps for AI applications with vector databases and production-ready RAG architecture.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Guide →
-                </div>
-              </div>
-            </Link>
-            
-            <Link to="/case-studies/fintech-ai-risk-compliance-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Success Story
-                  </span>
-                  <span className="text-sm text-gray-500">FinTech</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  FinTech: 70% AI Risk Reduction
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  See how a leading fintech achieved 70% AI risk reduction with automated governance frameworks.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  View Case Study →
-                </div>
-              </div>
-            </Link>
-            
             <Link to="/blog/llm-cost-optimization-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -376,19 +303,19 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/blog/ai-powered-customer-support-2025" className="group">
+            <Link to="/blog/ai-customer-service-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full text-xs font-semibold">
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
                     New Article
                   </span>
-                  <span className="text-sm text-gray-500">Customer Support</span>
+                  <span className="text-sm text-gray-500">15 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI-Powered Customer Support in 2025
+                  AI-Powered Customer Service Revolution
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Discover how AI is revolutionizing customer support with 80% faster response times and intelligent automation.
+                  80% faster response times, 90% cost reduction - discover how AI is transforming customer support.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Article →
@@ -396,59 +323,39 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/blog/cloud-native-architecture-2025" className="group">
+            <Link to="/blog/ai-healthcare-transformation-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Guide
+                    Featured Article
                   </span>
-                  <span className="text-sm text-gray-500">Cloud Architecture</span>
+                  <span className="text-sm text-gray-500">18 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  Cloud-Native Architecture in 2025
+                  AI Healthcare Transformation Guide
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Master cloud-native patterns, microservices design, and container orchestration for scalable applications.
+                  40% better diagnostics, 60% improved outcomes - how AI is revolutionizing patient care.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
-                  Read Guide →
+                  Read Article →
                 </div>
               </div>
             </Link>
 
-            <Link to="/case-studies/retailtech-ai-transformation" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Success Story
-                  </span>
-                  <span className="text-sm text-gray-500">Retail Technology</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  RetailTech: 95% Efficiency Gain
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  See how a retail tech company achieved 95% efficiency improvement and $1.2M annual savings.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  View Case Study →
-                </div>
-              </div>
-            </Link>
-
-            <Link to="/case-studies/manufacturing-iot-automation" className="group">
+            <Link to="/case-studies/retail-ai-transformation" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
                     Success Story
                   </span>
-                  <span className="text-sm text-gray-500">Manufacturing</span>
+                  <span className="text-sm text-gray-500">Retail</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  Manufacturing: 75% Efficiency with IoT
+                  RetailAI Corp: 150% Revenue Growth
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Learn how IoT automation and predictive maintenance delivered 75% efficiency improvement.
+                  See how RetailAI Corp achieved 150% revenue growth and 80% cost reduction with AI transformation.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   View Case Study →
@@ -467,9 +374,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Dynamic Content Showcase */}
-      <ContentShowcase />
 
       {/* Success Stories */}
       <section className="py-20 bg-gray-50">
@@ -574,7 +478,7 @@ export default function HomePage() {
               </div>
               <div className="mt-6 pt-4 border-t border-white/20">
                 <Link
-                  to="/blog"
+                  href="/blog"
                   className="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
                 >
                   View All Content →
@@ -585,107 +489,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Latest Content Highlights Section */}
-      <section className="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              🚀 Fresh Content for 2025
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our latest AI insights, governance frameworks, and success stories 
-              that are transforming businesses in 2025
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">🛡️</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-gray-900">AI Governance</h3>
-                  <p className="text-sm text-gray-600">Enterprise Framework</p>
-                </div>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Comprehensive 12-pillar framework for enterprise AI governance with 70% risk reduction strategies.
-              </p>
-              <Link
-                href="/blog/ai-governance-framework-2025"
-                className="text-indigo-600 font-semibold hover:text-indigo-700 transition-colors"
-              >
-                Read Framework Guide →
-              </Link>
-            </div>
-            
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">⚙️</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-gray-900">MLOps & Vector DBs</h3>
-                  <p className="text-sm text-gray-600">Production Architecture</p>
-                </div>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Production-ready MLOps patterns for vector databases with &lt;50ms search latency optimization.
-              </p>
-              <Link
-                href="/blog/ai-mlops-vector-databases-2025"
-                className="text-purple-600 font-semibold hover:text-purple-700 transition-colors"
-              >
-                Explore MLOps Guide →
-              </Link>
-            </div>
-            
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">💰</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-gray-900">FinTech Success</h3>
-                  <p className="text-sm text-gray-600">Risk Compliance</p>
-                </div>
-              </div>
-              <p className="text-gray-600 mb-4">
-                See how a leading fintech achieved 70% AI risk reduction and $2.5M cost savings.
-              </p>
-              <Link
-                href="/case-studies/fintech-ai-risk-compliance-2025"
-                className="text-green-600 font-semibold hover:text-green-700 transition-colors"
-              >
-                View Success Story →
-              </Link>
-            </div>
-          </div>
-          
-          <div className="text-center">
-            <div className="inline-flex items-center gap-4 bg-white rounded-xl px-6 py-4 shadow-lg border border-gray-200">
-              <div className="text-2xl">📚</div>
-              <div className="text-left">
-                <h4 className="font-bold text-gray-900">Explore All New Content</h4>
-                <p className="text-sm text-gray-600">15+ new articles, guides, and case studies for 2025</p>
-              </div>
-              <Link
-                href="/blog"
-                className="bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-              >
-                Browse All
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Additional Promotional Banners */}
       <AnalyticsPlatformBanner />
       <HealthTechSuccessBanner />
       <ComprehensiveAIBanner />
-      <NewContentBanner />
 
       {/* CTA Section */}
       <section className="py-20 bg-white">
@@ -728,191 +535,87 @@ function FeaturedServiceCard({
   href,
   popular = false,
 }: {
->>>>>>> origin/main
   title: string;
   description: string;
-  icon: React.ReactNode;
+  price: string;
+  features: string[];
   href: string;
+  popular?: boolean;
+}) {
+  return (
+    <div className={`border rounded-xl p-6 hover:shadow-lg transition-shadow ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'}`}>
+      {popular && (
+        <div className="text-center mb-4">
+          <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+            Most Popular
+          </span>
+        </div>
+      )}
+      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <div className="mb-4">
+        <span className="text-2xl font-bold text-gray-900">{price}</span>
+      </div>
+      <ul className="space-y-2 mb-6">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center">
+            <span className="text-green-500 mr-2">✓</span>
+            <span className="text-gray-600">{feature}</span>
+          </li>
+        ))}
+      </ul>
+      <Link
+        to={href}
+        className={`block w-full text-center py-2 px-4 rounded-lg font-semibold transition-colors ${
+          popular
+            ? 'bg-blue-600 text-white hover:bg-blue-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+        }`}
+      >
+        Learn More
+      </Link>
+    </div>
+  );
 }
 
-const Card: React.FC<CardProps> = ({ title, description, icon, href }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-    <div className="flex items-center mb-4">
-      <div className="text-blue-600 mr-3">{icon}</div>
-      <h3 className="text-xl font-semibold">{title}</h3>
-    </div>
-    <p className="text-gray-600 mb-4">{description}</p>
-    <Link href={href} className="text-blue-600 hover:text-blue-700 font-semibold">
-      Learn More →
-    </Link>
-  </div>
-);
-
-export default function Home() {
-  const features = [
-    {
-      title: 'AI-Powered Solutions',
-      description: 'Cutting-edge artificial intelligence to automate and optimize your business processes.',
-      icon: '🤖'
-    },
-    {
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions tailored to your business needs.',
-      icon: '☁️'
-    },
-    {
-      title: '24/7 Support',
-      description: 'Round-the-clock technical support to keep your systems running smoothly.',
-      icon: '🛠️'
-    }
-  ]
-
-  const stats = [
-    { label: 'Projects Completed', value: '500+' },
-    { label: 'Happy Clients', value: '200+' },
-    { label: 'Years Experience', value: '10+' },
-    { label: 'Team Members', value: '50+' }
-  ]
-
+function SuccessStory({
+  company,
+  industry,
+  challenge,
+  solution,
+  result,
+  metric,
+}: {
+  company: string;
+  industry: string;
+  challenge: string;
+  solution: string;
+  result: string;
+  metric: string;
+}) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 text-center">
-        <div className="container mx-auto max-w-6xl">
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-            Zion Tech Group
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Leading technology solutions provider specializing in AI development, 
-            cloud architecture, and digital transformation for modern businesses.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/services" 
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-            >
-              Our Services
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link 
-              href="/contact" 
-              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-            >
-              Get Started
-            </Link>
-          </div>
+    <div className="bg-white rounded-xl p-6 shadow-lg">
+      <div className="mb-4">
+        <h3 className="text-xl font-bold text-gray-900">{company}</h3>
+        <p className="text-blue-600 font-semibold">{industry}</p>
+      </div>
+      <div className="space-y-3">
+        <div>
+          <h4 className="font-semibold text-gray-900">Challenge:</h4>
+          <p className="text-gray-600 text-sm">{challenge}</p>
         </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Zion Tech Group?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We deliver cutting-edge technology solutions with measurable results 
-              and exceptional customer service.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Cutting-Edge Technology
-              </h3>
-              <p className="text-gray-600">
-                We leverage the latest technologies including AI, machine learning, 
-                and cloud computing to deliver innovative solutions.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Proven Results
-              </h3>
-              <p className="text-gray-600">
-                Our solutions have helped hundreds of businesses improve efficiency, 
-                reduce costs, and drive growth.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Expert Team
-              </h3>
-              <p className="text-gray-600">
-                Our team of experienced developers and consultants brings deep 
-                expertise across multiple technology domains.
-              </p>
-            </div>
-          </div>
+        <div>
+          <h4 className="font-semibold text-gray-900">Solution:</h4>
+          <p className="text-gray-600 text-sm">{solution}</p>
         </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our Services
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive technology solutions tailored to your business needs.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card
-              title="AI Development"
-              description="Custom AI solutions including machine learning models, natural language processing, and automation systems."
-              icon={<Zap className="w-6 h-6" />}
-              href="/services/ai-services"
-            />
-            <Card
-              title="Cloud Architecture"
-              description="Scalable cloud infrastructure design and migration services for optimal performance and cost efficiency."
-              icon={<Award className="w-6 h-6" />}
-              href="/services/cloud-architecture"
-            />
-            <Card
-              title="Digital Transformation"
-              description="Complete digital transformation strategies to modernize your business processes and technology stack."
-              icon={<Star className="w-6 h-6" />}
-              href="/services/digital-transformation"
-            />
-          </div>
+        <div>
+          <h4 className="font-semibold text-gray-900">Result:</h4>
+          <p className="text-gray-600 text-sm">{result}</p>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-blue-600">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our technology solutions can help you achieve your goals.
-          </p>
-          <Link 
-            href="/contact" 
-            className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
-          >
-            Get Started Today
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
+        <div className="bg-green-50 border border-green-200 rounded-lg p-3 mt-4">
+          <p className="text-green-800 font-semibold text-center">{metric}</p>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

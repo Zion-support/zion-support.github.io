@@ -210,90 +210,57 @@ export const EnterpriseAIBanner = () => (
   />
 );
 
-export const CustomerSupportAIBanner = () => (
+export const CustomerServiceAIBanner = () => (
   <PromotionalBanner
-    message="💬 New Article: AI-Powered Customer Support in 2025 - 80% Faster Response Times"
+    message="💬 New Article: AI-Powered Customer Service Revolution - 80% Faster Response Times, 90% Cost Reduction"
     ctaText="Read Article"
-    ctaLink="/blog/ai-powered-customer-support-2025"
-    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
+    ctaLink="/blog/ai-customer-service-2025"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
     autoHide={true}
     hideAfter={20}
   />
 );
 
-export const CloudNativeBanner = () => (
+export const HealthcareAIBanner = () => (
   <PromotionalBanner
-    message="☁️ New Guide: Cloud-Native Architecture in 2025 - Build for Scale and Resilience"
-    ctaText="Read Guide"
-    ctaLink="/blog/cloud-native-architecture-2025"
+    message="🏥 Featured: AI Healthcare Transformation Guide - 40% Better Diagnostics, 60% Improved Outcomes"
+    ctaText="Explore Healthcare AI"
+    ctaLink="/blog/ai-healthcare-transformation-2025"
     backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
     autoHide={true}
     hideAfter={22}
   />
 );
 
-export const RetailTechSuccessBanner = () => (
+export const RetailSuccessBanner = () => (
   <PromotionalBanner
-    message="📚 Fresh Content: AI Risk Register & Practical RAG now live"
-    ctaText="Explore All"
-    ctaLink="/blog"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
-    autoHide={true}
-    hideAfter={25}
-  />
-);
-
-export const ManufacturingIoTSuccessBanner = () => (
-  <PromotionalBanner
-    message="🏭 Success Story: Manufacturing Company Achieved 75% Efficiency Gain with IoT Automation"
+    message="🛍️ Success Story: RetailAI Corp Achieved 150% Revenue Growth with AI Transformation"
     ctaText="View Case Study"
-    ctaLink="/case-studies/manufacturing-iot-automation"
+    ctaLink="/case-studies/retail-ai-transformation"
     backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
     autoHide={true}
     hideAfter={25}
   />
 );
 
-export const AIGovernanceFrameworkBanner = () => (
+export const AIContentShowcaseBanner = () => (
   <PromotionalBanner
-    message="🛡️ New Guide: AI Governance Framework 2025 - Enterprise-Ready Implementation for 70% Risk Reduction"
-    ctaText="Read Guide"
-    ctaLink="/blog/ai-governance-framework-2025"
+    message="📚 Fresh Content: New AI Articles & Case Studies - Customer Service, Healthcare, Retail Success Stories"
+    ctaText="Browse All Content"
+    ctaLink="/blog"
     backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
     autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const AIRevolutionBanner = () => (
+  <PromotionalBanner
+    message="🚀 AI Revolution 2025: Complete Business Transformation Guide - Latest Trends, Strategies & Implementation"
+    ctaText="Read Complete Guide"
+    ctaLink="/blog/ai-revolution-2025"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-purple-600"
+    autoHide={true}
     hideAfter={20}
-  />
-);
-
-export const MLOpsVectorDatabasesBanner = () => (
-  <PromotionalBanner
-    message="🚀 Technical Guide: AI MLOps with Vector Databases 2025 - Production-Ready RAG Architecture"
-    ctaText="Read Guide"
-    ctaLink="/blog/ai-mlops-vector-databases-2025"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
-    autoHide={true}
-    hideAfter={22}
-  />
-);
-
-export const FinTechRiskComplianceBanner = () => (
-  <PromotionalBanner
-    message="💰 Success Story: FinTech Achieved 70% AI Risk Reduction with Automated Governance"
-    ctaText="View Case Study"
-    ctaLink="/case-studies/fintech-ai-risk-compliance-2025"
-    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
-    autoHide={true}
-    hideAfter={25}
-  />
-);
-
-export const LatestContentShowcaseBanner = () => (
-  <PromotionalBanner
-    message="📚 Fresh Content Alert: AI Governance, MLOps Vector DBs, FinTech Risk Compliance - All New for 2025"
-    ctaText="Explore All Content"
-    ctaLink="/blog"
-    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
-    autoHide={true}
-    hideAfter={25}
   />
 );

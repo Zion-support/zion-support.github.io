@@ -176,6 +176,50 @@ const contentItems: ContentItem[] = [
       { value: 'Real-time', label: 'Insights' },
       { value: '85%', label: 'Forecast Accuracy' }
     ]
+  },
+  {
+    id: 'ai-customer-service-2025',
+    title: 'AI-Powered Customer Service Revolution',
+    excerpt: 'Discover how AI is transforming customer service with 80% faster response times and 90% cost reduction.',
+    type: 'article',
+    readTime: '15 min read',
+    category: 'Customer Service',
+    href: '/blog/ai-customer-service-2025',
+    featured: true,
+    publishedDate: '2025-01-17',
+    metrics: [
+      { value: '80%', label: 'Faster Response' },
+      { value: '90%', label: 'Cost Reduction' }
+    ]
+  },
+  {
+    id: 'ai-healthcare-transformation-2025',
+    title: 'AI Healthcare Transformation Guide',
+    excerpt: 'How AI is revolutionizing patient care with 40% better diagnostics and 60% improved outcomes.',
+    type: 'article',
+    readTime: '18 min read',
+    category: 'Healthcare',
+    href: '/blog/ai-healthcare-transformation-2025',
+    featured: true,
+    publishedDate: '2025-01-17',
+    metrics: [
+      { value: '40%', label: 'Better Diagnostics' },
+      { value: '60%', label: 'Improved Outcomes' }
+    ]
+  },
+  {
+    id: 'retail-ai-transformation',
+    title: 'RetailAI Corp: 150% Revenue Growth',
+    excerpt: 'See how RetailAI Corp achieved 150% revenue growth and 80% cost reduction with AI transformation.',
+    type: 'case-study',
+    category: 'Retail',
+    href: '/case-studies/retail-ai-transformation',
+    featured: true,
+    publishedDate: '2025-01-17',
+    metrics: [
+      { value: '150%', label: 'Revenue Growth' },
+      { value: '80%', label: 'Cost Reduction' }
+    ]
   }
 ];
 
@@ -318,11 +362,11 @@ export default function ContentShowcase({
           {/* Content Statistics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-8 border-t border-gray-200">
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">15+</div>
+              <div className="text-2xl font-bold text-purple-600">18+</div>
               <div className="text-sm text-gray-600">AI Articles</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">8+</div>
+              <div className="text-2xl font-bold text-purple-600">10+</div>
               <div className="text-sm text-gray-600">Case Studies</div>
             </div>
             <div className="text-center">
@@ -330,7 +374,7 @@ export default function ContentShowcase({
               <div className="text-sm text-gray-600">AI Services</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">50K+</div>
+              <div className="text-2xl font-bold text-purple-600">75K+</div>
               <div className="text-sm text-gray-600">Monthly Readers</div>
             </div>
           </div>
