@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Clock, ArrowRight } from 'lucide-react';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import { NewContent2026PromotionalBanners } from '../components/NewContent2026PromotionalBanners';
 import ContentShowcase from '../components/ContentShowcase';
@@ -8,7 +9,6 @@ import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
-import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
 
@@ -358,7 +358,7 @@ export default function HomePage() {
 
           {/* Featured Recommendations */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link to="/blog/ai-agent-orchestration-2026" className="group">
+            <Link href="/blog/ai-agent-orchestration-2026" className="group">
               <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -400,7 +400,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/case-studies/ai-sustainability-transformation-2026" className="group">
+            <Link href="/case-studies/ai-sustainability-transformation-2026" className="group">
               <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -442,7 +442,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/blog/ai-quantum-computing-2026" className="group">
+            <Link href="/blog/ai-quantum-computing-2026" className="group">
               <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -727,7 +727,7 @@ export default function HomePage() {
 
           {/* Additional Content Grid */}
           <div className="grid md:grid-cols-3 gap-8">
-            <Link to="/blog/ai-sustainability-green-tech-2026" className="group">
+            <Link href="/blog/ai-sustainability-green-tech-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-green-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -766,7 +766,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/case-studies/ai-quantum-optimization-2026" className="group">
+            <Link href="/case-studies/ai-quantum-optimization-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-purple-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -805,7 +805,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/blog/ai-quantum-computing-2026" className="group">
+            <Link href="/blog/ai-quantum-computing-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-indigo-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
