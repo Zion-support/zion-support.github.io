@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { AdvancedPerformanceMonitor } from "../utils/advancedPerformanceMonitor";
 import { AdvancedAccessibilityEnhancer } from "../utils/advancedAccessibilityEnhancer";
 import { SecurityEnhancer } from "../utils/securityEnhancer";
+=======
+import React, { useState, useEffect } from 'react';
+import { AdvancedPerformanceMonitor } from '../utils/advancedPerformanceMonitor';
+import { AccessibilityEnhancer } from '../utils/accessibilityEnhancer';
+import { SecurityEnhancer } from '../utils/securityEnhancer';
+>>>>>>> 560fc59d9c785b60bacd032c96f8fbb6b417bd56
 
 interface SystemMetricsDashboardProps {
   isVisible?: boolean;

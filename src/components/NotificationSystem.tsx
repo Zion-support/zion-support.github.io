@@ -25,9 +25,45 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
     Notification[]
   >([]);
 
+<<<<<<< HEAD
   useEffect(() => {
     setVisibleNotifications(notifications);
   }, [notifications]);
+=======
+  const addNotification = useCallback((notification: Omit<Notification, 'id'>) => {
+    const id = Math.random().toString(36).substr(2, 9);
+    const newNotification = { ...notification, id };
+    
+    setNotifications(prev => {
+      const updated = [newNotification, ...prev];
+      return updated.slice(0, maxNotifications);
+    });
+
+    // Auto-remove after duration
+    if (notification.duration !== 0) {
+      setTimeout(() => {
+        removeNotification(id);
+      }, notification.duration || 5000);
+    }
+  }, [maxNotifications, removeNotification]);
+
+  const removeNotification = useCallback((id: string) => {
+    setNotifications(prev => prev.filter(n => n.id !== id));
+  }, []);
+
+  const clearAll = useCallback(() => {
+    setNotifications([]);
+  }, []);
+
+  // Expose methods globally for easy access
+  useEffect(() => {
+    (window as unknown as { notifications: unknown }).notifications = {
+      add: addNotification,
+      remove: removeNotification,
+      clear: clearAll
+    };
+  }, [addNotification, removeNotification, clearAll]);
+>>>>>>> 560fc59d9c785b60bacd032c96f8fbb6b417bd56
 
   const handleRemove = useCallback(
     (id: string) => {
