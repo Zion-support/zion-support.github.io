@@ -61,6 +61,14 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
+<<<<<<< HEAD
+            <span>✨ New on the blog:</span>
+            <Link href="/blog/ai-governance-scorecards-quickstart-2026" className="underline hover:text-yellow-200">Governance Scorecards Quickstart</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-operational-excellence-blueprint-2026" className="underline hover:text-yellow-200">Operational Excellence Blueprint</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-enterprise-automation-blueprint-2026" className="underline hover:text-yellow-200">Enterprise Automation Blueprint</Link>
+=======
             <span>✨ New 2026 content:</span>
             <a href="/blog/ai-evaluation-scorecards-2026" className="underline hover:text-yellow-200">AI Evaluation Scorecards</a>
             <span className="hidden md:inline">•</span>
@@ -71,6 +79,7 @@ export default function HomePage() {
             <a href="/blog/ai-multimodal-enterprise-2026" className="underline hover:text-yellow-200">AI Multimodal Enterprise</a>
             <span className="hidden md:inline">•</span>
             <a href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200">Enterprise Automation</a>
+>>>>>>> origin/cursor/create-and-deploy-new-content-fff3
           </div>
           <Link
             href="/blog"
@@ -947,6 +956,9 @@ export default function HomePage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">Stay ahead with our latest content, case studies, and AI innovations</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+<<<<<<< HEAD
+            <Link href="/blog/ai-governance-scorecards-quickstart-2026" className="group">
+=======
             <Link href="/blog/ai-agent-evals-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -1022,6 +1034,7 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">Layered defenses for autonomous agents with isolation and policies.</p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Article →
+>>>>>>> origin/cursor/create-and-deploy-new-content-fff3
                 </div>
               </div>
             </Link>

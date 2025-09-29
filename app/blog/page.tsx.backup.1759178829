@@ -54,6 +54,10 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+<<<<<<< HEAD
+            title="AI Evaluation Metrics 2026: From Evals to Outcomes"
+            excerpt="Design evals, scorecards, and KPI links that tie AI quality to business value."
+=======
             title="AI Evaluation Scorecards 2026: Measure Quality, Cost, and Risk"
             excerpt="Standardize evals across groundedness, safety, latency, and unit cost with actionable scorecards."
             date="September 29, 2026"
@@ -92,6 +96,7 @@ export default function BlogPage() {
           <BlogPost
             title="AI Agent Observability 2026: End-to-End Tracing and Guardrails"
             excerpt="Blueprint for measuring and improving agent reliability with traces, evals, and safety guardrails."
+>>>>>>> origin/cursor/create-and-deploy-new-content-fff3
             date="September 29, 2025"
             category="AI Reliability"
             readTime="14 min"
