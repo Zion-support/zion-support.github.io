@@ -9,6 +9,33 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "policy-guarded-autoremediation",
+    title: "Policy‑Guarded Auto‑Remediation: Safe by Design",
+    summary:
+      "Guardrails, change windows, and eval gates for automated incident responders.",
+    category: "SRE",
+    date: "2025-10-04",
+    readMinutes: 4,
+  },
+  {
+    id: "gpu-cost-aware-scheduling",
+    title: "GPU Cost‑Aware Scheduling for LLM Workloads",
+    summary:
+      "Right‑size, right‑place: spot pools, KV offload, and tiered SLAs for inference.",
+    category: "Platform Engineering",
+    date: "2025-10-04",
+    readMinutes: 5,
+  },
+  {
+    id: "evals-in-the-loop",
+    title: "Evals In The Loop: From Offline Suites to Live Canaries",
+    summary:
+      "Trace‑linked evals that correlate to KPIs and ship with every change.",
+    category: "GenAI",
+    date: "2025-10-04",
+    readMinutes: 4,
+  },
+  {
     id: "serverless-warm-pools-playbook",
     title: "Serverless Warm Pools: Cut Cold Starts, Not Corners",
     summary:
