@@ -136,19 +136,13 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Reliable RAG Ops, Platform KPIs, AI Incident Budgets"
-          description="Keep RAG fresh, prove platform ROI, and contain incidents under 60s—safely."
+          title="New: GenAI Routing, Secure ML Supply Chain, Golden Paths ROI"
+          description="Route by intent, secure your ML supply chain, and prove platform ROI—now live."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
             { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" },
-            { title: "Golden Paths ROI 2026", category: "Platform Engineering", link: "/blog/golden-paths-roi-2026" },
-            { title: "Reliable RAG Ops 2026", category: "GenAI", link: "/blog/reliable-rag-ops-2026" },
-            { title: "Platform KPIs 2026", category: "Platform Engineering", link: "/blog/platform-kpis-2026" },
-            { title: "AI Incident Budgets 2026", category: "Security", link: "/blog/ai-incident-budgets-2026" },
-            { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
-            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" },
+            { title: "Secure ML Supply Chain 2026", category: "Security", link: "/whitepapers/secure-ml-supply-chain-2026" },
             { title: "Golden Paths ROI 2026", category: "Platform Engineering", link: "/blog/golden-paths-roi-2026" }
           ]}
         />
@@ -163,7 +157,13 @@ const Home = () => {
         
         {/* New Articles Promotional Banner */}
         <div className="container mx-auto px-6 mt-6">
-          <NewArticlesPromoBanner variant="premium" showCount={3} />
+          <NewArticlesPromoBanner 
+            variant="premium" 
+            showCount={3} 
+            featuredOnly={true}
+            title="Brand New: Routing Blueprint, Secure ML Chain, Golden Paths ROI"
+            description="Cut costs 40–70% with smart routing, secure your ML supply chain, and prove platform value."
+          />
         </div>
         
         {/* New Services Promotional Banner */}

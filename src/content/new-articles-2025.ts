@@ -205,6 +205,58 @@ export const newArticles2025: NewArticle[] = [
     trending: true,
     featuredInHomepage: true
   }
+  ,
+  {
+    id: "genai-routing-blueprint-2026",
+    slug: "genai-routing-blueprint-2026",
+    title: "GenAI Routing Blueprint 2026: Fast, Cheap, and Grounded",
+    description: "Design intent-aware routers, fallback tiers, and caches to hit quality SLOs at a fraction of the cost.",
+    excerpt: "Route by intent, cache by value, and tier by SLO to cut spend 40–70% without hurting UX.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["Routing", "Caching", "SLOs", "Cost"],
+    featured: true,
+    readTime: "10 min read",
+    image: "/images/genai-routing-blueprint-2026.jpg",
+    newBadge: true,
+    trending: true,
+    featuredInHomepage: true
+  },
+  {
+    id: "secure-ml-supply-chain-2026",
+    slug: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: Attestations, Policy Tests, SBOMs",
+    description: "Ship verifiably secure models and tools with signed artifacts, provenance, and CI policy tests.",
+    excerpt: "From data to deployment: secure each link with attestations, SBOMs, and automated policy checks.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "Security",
+    tags: ["Supply Chain", "Attestation", "SBOM", "Policy"],
+    featured: true,
+    readTime: "11 min read",
+    image: "/images/secure-ml-supply-chain-2026.jpg",
+    newBadge: true,
+    trending: true,
+    featuredInHomepage: true
+  },
+  {
+    id: "golden-paths-roi-2026",
+    slug: "golden-paths-roi-2026",
+    title: "Golden Paths ROI 2026: Proving Platform Value Quarterly",
+    description: "Build developer golden paths with scorecards that tie adoption to shipped business outcomes.",
+    excerpt: "Instrument your platform with KPIs that teams adopt—show ROI without vanity metrics.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-27",
+    category: "Platform Engineering",
+    tags: ["Golden Paths", "ROI", "KPIs", "Platform"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/golden-paths-roi-2026.jpg",
+    newBadge: true,
+    trending: false,
+    featuredInHomepage: true
+  }
 ];
 
 export const featuredNewArticles = newArticles2025.filter(article => article.featured);
