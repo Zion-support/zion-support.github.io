@@ -264,3 +264,47 @@ export const AIRevolutionBanner = () => (
     hideAfter={20}
   />
 );
+
+export const AIBusinessTransformationBanner = () => (
+  <PromotionalBanner
+    message="🎯 NEW: AI Business Transformation 2025 - Complete Implementation Guide with Real-World Case Studies"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-business-transformation-2025"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const AIWorkflowAutomationBanner = () => (
+  <PromotionalBanner
+    message="⚙️ BREAKING: AI Automation Workflows 2025 - Reduce Manual Work by 80% with Proven Strategies"
+    ctaText="Learn More"
+    ctaLink="/blog/ai-automation-workflows-2025"
+    backgroundColor="bg-gradient-to-r from-emerald-600 to-teal-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const EnterpriseAISecurityBanner = () => (
+  <PromotionalBanner
+    message="🛡️ CRITICAL: Enterprise AI Security 2025 - Comprehensive Security Framework for AI Systems"
+    ctaText="Secure Your AI"
+    ctaLink="/blog/enterprise-ai-security-2025"
+    backgroundColor="bg-gradient-to-r from-red-600 to-orange-600"
+    autoHide={true}
+    hideAfter={25}
+  />
+);
+
+export const NewContentShowcaseBanner = () => (
+  <PromotionalBanner
+    message="📚 FRESH CONTENT: New AI Guides & Security Frameworks - Business Transformation, Workflow Automation, Enterprise Security"
+    ctaText="Browse All Content"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);

@@ -17,7 +17,11 @@ import {
   HealthcareAIBanner,
   RetailSuccessBanner,
   AIContentShowcaseBanner,
-  AIRevolutionBanner
+  AIRevolutionBanner,
+  AIBusinessTransformationBanner,
+  AIWorkflowAutomationBanner,
+  EnterpriseAISecurityBanner,
+  NewContentShowcaseBanner
 } from './PromotionalBanner';
 
 interface EnhancedHomePageProps {
@@ -152,6 +156,10 @@ export default function EnhancedHomePage({
 
       <div className="animate-fade-in">
         {/* Promotional Banners */}
+        <NewContentShowcaseBanner />
+        <AIBusinessTransformationBanner />
+        <AIWorkflowAutomationBanner />
+        <EnterpriseAISecurityBanner />
         <AIContentShowcaseBanner />
         <CustomerServiceAIBanner />
         <HealthcareAIBanner />
