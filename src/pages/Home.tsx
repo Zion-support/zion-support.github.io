@@ -104,22 +104,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-<<<<<<< HEAD
-<<<<<<< HEAD
-          title="🚀 Fresh: Real‑Time Data Pipelines, Edge Caching, and Platform Scorecards"
-          description="New article + insights: reliable streaming blueprints, sub‑100ms edge patterns, and platform metrics that drive adoption."
-          ctaText="See what's new"
-          ctaLink="/blog/real-time-data-pipelines-2025"
-=======
-          title="🚀 NEW: Platform Engineering Blueprint + GenAI Guardrails"
-          description="Fresh guides on golden paths for 100+ teams and policy tests that scale"
-=======
-          title="🚀 NEW: AI Governance, Edge Flags, and GenAI Telemetry posts"
-          description="Fresh articles and quick insights just landed. See what's new this week."
->>>>>>> feat/new-content-and-promo
+          title="🆕 Fresh: MLOps Reliability & Real‑Time Pipelines Guides"
+          description="Canary evals for GenAI and reliable streaming patterns to ship faster with confidence."
           ctaText="Read the latest"
           ctaLink="/blog"
->>>>>>> b2dbe5039de9a77d186175357687b44a294adf1f
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -671,19 +659,19 @@ const Home = () => {
                 </Link>
               </div>
 
-              {/* Inline featured list */}
+              {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">AI Governance</div>
-                  <div className="font-semibold text-white">AI Governance Checklist 2025</div>
+                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
+                  <div className="font-semibold text-white">MLOps Reliability: Shipping GenAI Changes Safely</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-orange-200 mb-1">Architecture</div>
-                  <div className="font-semibold text-white">Real‑Time Feature Flags at the Edge</div>
+                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
+                  <div className="font-semibold text-white">Reliable Real‑Time Data Pipelines in 2025</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">GenAI</div>
-                  <div className="font-semibold text-white">GenAI Telemetry: Metrics That Predict Drift</div>
+                  <div className="text-sm text-rose-200 mb-1">Product Analytics</div>
+                  <div className="font-semibold text-white">North‑Star Metrics: A Field‑Tested Framework</div>
                 </div>
               </div>
             </div>
