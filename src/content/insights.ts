@@ -367,9 +367,6 @@ export const latestInsights: InsightArticle[] = [
     category: "GenAI",
     date: "2025-09-29",
     readMinutes: 8,
-<<<<<<< HEAD
-  }
-=======
   },
   // NEW INSIGHTS - Latest 2025 Content
   {
@@ -507,6 +504,5 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-01-08",
     readMinutes: 5,
   },
->>>>>>> origin/main
 ];
 

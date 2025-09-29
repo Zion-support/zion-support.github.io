@@ -470,6 +470,34 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-01-08",
     featured: false,
     readTime: "9 min read",
+  },
+  // APPENDED NEW POSTS
+  {
+    slug: "edge-ai-latency-budgets",
+    title: "Edge AI Latency Budgets: Designing for P95 < 150ms",
+    description: "Practical latency allocations and validation techniques for edge inference workloads.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "ai-governance-operating-model",
+    title: "AI Governance Operating Model: Roles, Rubrics, and Runbooks",
+    description: "A pragmatic model to ship safe AI fast across dozens of product teams.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "cost-aware-mlops",
+    title: "Cost-Aware MLOps: Shipping Improvements Without Surprises",
+    description: "Guardrails, quotas, and profiling patterns that keep GenAI spend predictable.",
+    category: "MLOps",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "5 min read",
   }
 ];
 

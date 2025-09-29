@@ -15,14 +15,15 @@ import {
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
+import ContentShowcase from "../components/ContentShowcase";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
-import ModernFeatures from "../components/ModernFeatures";
 import LatestContentBanner from "../components/LatestContentBanner";
-import ContentShowcase from "../components/ContentShowcase";
+import ModernFeatures from "../components/ModernFeatures";
+import ROICalculator from "../components/ROICalculator";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
 
@@ -113,10 +114,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 New: AI Governance Blueprint + Cloud FinOps Quick Wins"
-          description="Ship safe AI fast and cut cloud costs by 30% in 60 days."
+          title="🚀 Fresh: AI Platform Engineering 2025 + Edge AI Latency Budgets"
+          description="New long-form guide and 3 brand-new articles across Platform, Governance, and MLOps."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-governance-blueprint-2025"
+          ctaLink="/blog/ai-platform-engineering-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -162,10 +163,10 @@ const Home = () => {
                 <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
               </div>
               <p className="text-white text-lg font-semibold mb-2">
-                🎯 New AI Workflow Automation ROI Calculator + 15 Fresh Articles
+                🎯 New: AI Platform Engineering 2025 + Edge AI Latency Budgets
               </p>
               <p className="text-zion-slate-light text-sm">
-                Interactive tools, case studies, and implementation guides • Updated daily
+                Long-form guide and 3 new posts across Platform, Governance, and MLOps
               </p>
             </div>
 
@@ -746,20 +747,20 @@ const Home = () => {
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
-
+              
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">AI Strategy</div>
-                  <div className="font-semibold text-white">Designing High-Impact AI Roadmaps in 2025</div>
+                  <div className="text-sm text-purple-200 mb-1">Platform Engineering</div>
+                  <div className="font-semibold text-white">AI Platform Engineering 2025: Golden Paths that Ship Outcomes</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Cloud FinOps</div>
-                  <div className="font-semibold text-white">Cloud FinOps: 9 Quick Wins in 90 Days</div>
+                  <div className="text-sm text-blue-200 mb-1">Architecture</div>
+                  <div className="font-semibold text-white">Edge AI Latency Budgets: Designing for P95 &lt; 150ms</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">GenAI</div>
-                  <div className="font-semibold text-white">GenAI Guardrails: Scorecards That Scale</div>
+                  <div className="text-sm text-rose-200 mb-1">MLOps</div>
+                  <div className="font-semibold text-white">Cost-Aware MLOps: Shipping Improvements Without Surprises</div>
                 </div>
               </div>
             </div>
