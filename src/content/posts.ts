@@ -10,12 +10,15 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
     slug: "ai-autonomous-infrastructure-2026",
     title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
     description: "Blueprints and scorecards to operate self‑healing platforms with budgets and safe automation.",
     category: "Platform Engineering",
-=======
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-platform-slos-2026",
     title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
     description: "Design SLOs and risk budgets for AI systems with instant rollbacks and KPI‑linked canaries.",
@@ -47,10 +50,9 @@ export const posts: BlogPost[] = [
     title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
     description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
     category: "Cybersecurity",
->>>>>>> cursor/create-and-deploy-new-content-6196
     publishedAt: "2025-10-12",
     featured: true,
-    readTime: "9 min read"
+    readTime: "7 min read"
   },
   {
     slug: "quantum-ai-hybrid-blueprint-2026",
@@ -563,5 +565,32 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "8 min read"
+  },
+  {
+    slug: "kpi-linked-policy-tests-2026",
+    title: "KPI‑Linked Policy Tests 2026: Governance That Speeds Teams Up",
+    description: "Wire lightweight policy tests to product KPIs for guardrails that accelerate delivery.",
+    category: "AI Governance",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "serverless-inference-cost-playbook-2026",
+    title: "Serverless Inference Cost Playbook 2026: Cut Spend 40–70%",
+    description: "Adaptive batching, warm pools, and intent‑based routing without P95 pain.",
+    category: "AI Engineering",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-first-telemetry-2026",
+    title: "Privacy‑First Telemetry 2026: Decision‑Grade Signals Without PII Risk",
+    description: "On‑device redaction, scoped IDs, and DP noise for actionable analytics.",
+    category: "Observability",
+    publishedAt: "2025-10-13",
+    featured: false,
+    readTime: "6 min read"
   }
 ];

@@ -17,7 +17,6 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
-<<<<<<< HEAD
     id: "ai-autonomous-infrastructure-2026",
     slug: "ai-autonomous-infrastructure-2026",
     title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
@@ -62,7 +61,10 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "7 min read",
     image: "/images/zero-trust-for-genai-2026.jpg",
-=======
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-platform-slos-2026",
     slug: "ai-platform-slos-2026",
     title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
@@ -106,8 +108,7 @@ export const latestArticles: LatestArticle[] = [
     tags: ["Edge", "Flags", "Budgets"],
     featured: true,
     readTime: "6 min read",
-    image: "/images/edge-feature-flags-2026.jpg",
->>>>>>> cursor/create-and-deploy-new-content-6196
+  image: "/images/edge-feature-flags-2026.jpg",
     newBadge: true,
     trending: true
   },
@@ -993,6 +994,54 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/privacy-preserving-agents-2026.jpg",
     newBadge: true,
     trending: true
+  },
+  {
+    id: "kpi-linked-policy-tests-2026",
+    slug: "kpi-linked-policy-tests-2026",
+    title: "KPI‑Linked Policy Tests 2026: Governance That Speeds Teams Up",
+    description: "Wire lightweight policy tests to product KPIs for guardrails that accelerate delivery.",
+    excerpt: "Governance that correlates with outcomes—without slowing engineers down.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Governance",
+    tags: ["Policy", "KPIs", "Governance"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/kpi-linked-policy-tests-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "serverless-inference-cost-playbook-2026",
+    slug: "serverless-inference-cost-playbook-2026",
+    title: "Serverless Inference Cost Playbook 2026: Cut Spend 40–70%",
+    description: "Adaptive batching, warm pools, and intent‑based routing without P95 pain.",
+    excerpt: "Reduce LLM costs 40–70% while preserving latency and quality.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Engineering",
+    tags: ["Inference", "Cost", "Routing"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/serverless-inference-cost-playbook-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-first-telemetry-2026",
+    slug: "privacy-first-telemetry-2026",
+    title: "Privacy‑First Telemetry 2026: Decision‑Grade Signals Without PII Risk",
+    description: "On‑device redaction, scoped IDs, and DP noise for actionable analytics.",
+    excerpt: "Ship rich analytics while protecting users with on‑device redaction and DP.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "Observability",
+    tags: ["Privacy", "Telemetry", "DP"],
+    featured: false,
+    readTime: "6 min read",
+    image: "/images/privacy-first-telemetry-2026.jpg",
+    newBadge: true,
+    trending: false
   }
 ];
 
