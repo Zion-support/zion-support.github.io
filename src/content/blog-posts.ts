@@ -17,9 +17,6 @@ export const blogPosts: BlogPost[] = [
     slug: "ai-risk-register-2025",
     title: "AI Risk Register: From Lists to Actionable Mitigations",
     description: "Practical templates and policy tests to turn AI risks into owned mitigations with timelines.",
-    slug: "genai-telemetry-observability-2025",
-    title: "GenAI Telemetry: What to Measure in 2025",
-    description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
     content: `
 # AI Risk Register: From Lists to Actionable Mitigations
 
@@ -44,6 +41,19 @@ Most AI risk registers fail because they are static and ownerless. This playbook
     featured: true,
     readTime: "7 min read",
     image: "/images/ai-risk-register.jpg"
+  },
+  {
+    slug: "genai-telemetry-observability-2025",
+    title: "GenAI Telemetry: What to Measure in 2025",
+    description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
+    content: `\n# GenAI Telemetry: What to Measure in 2025\n\nTrack inputs, outputs, guardrail outcomes, and cost metrics. Wire alerts to business KPIs.\n    `,
+    author: "Zion Tech Group Team",
+    date: "2025-10-04",
+    category: "GenAI",
+    tags: ["Telemetry", "Observability", "KPIs"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/genai-telemetry-2025.jpg"
   },
   {
     slug: "practical-rag-in-production-2025",
@@ -195,11 +205,7 @@ Avoid 2am incidents with dual‑write, read‑shadowing, backfills with idempote
     slug: "agent-telemetry-traces-2025",
     title: "Agent Telemetry: What to Trace and Why It Matters",
     description: "From tool call spans to prompt metadata—what to capture to debug and improve agent behavior.",
-    content: `
-# Agent Telemetry: What to Trace and Why It Matters
-
-Capture spans for tool calls, retries, and model routes. Attach prompt, input size, and guardrail outcomes. Build dashboards that correlate failures to fixes.
-    `,
+    content: `\n# Agent Telemetry: What to Trace and Why It Matters\n\nCapture spans for tool calls, retries, and model routes. Attach prompt, input size, and guardrail outcomes. Build dashboards that correlate failures to fixes.\n    `,
     author: "Zion Tech Group Team",
     date: "2025-09-30",
     category: "GenAI",
@@ -207,22 +213,12 @@ Capture spans for tool calls, retries, and model routes. Attach prompt, input si
     featured: true,
     readTime: "5 min read",
     image: "/images/agent-telemetry.jpg"
+  },
+  {
     slug: "shipping-genai-safely-guardrails",
     title: "Shipping GenAI Safely: Guardrails That Don’t Slow You Down",
     description: "Layered evaluation systems with policy gates and online canaries to ship fast with confidence.",
-    content: `
-# Shipping GenAI Safely: Guardrails That Don’t Slow You Down
-
-High‑velocity GenAI teams combine offline evals, pre‑merge policy checks, and online canaries tied to business KPIs. This article shows how to wire those layers together so you can ship weekly without regressions.
-
-## The Stack
-- Offline eval suites aligned to KPIs
-- Pre‑merge policy tests (PII, toxicity, hallucinations)
-- Canary cohorts, feature flags, and rollback triggers
-- Online metrics with alerting and auto‑rollback
-
-Adopt these patterns to earn trust while keeping speed.
-    `,
+    content: `\n# Shipping GenAI Safely: Guardrails That Don’t Slow You Down\n\nHigh‑velocity GenAI teams combine offline evals, pre‑merge policy checks, and online canaries tied to business KPIs. This article shows how to wire those layers together so you can ship weekly without regressions.\n\n## The Stack\n- Offline eval suites aligned to KPIs\n- Pre‑merge policy tests (PII, toxicity, hallucinations)\n- Canary cohorts, feature flags, and rollback triggers\n- Online metrics with alerting and auto‑rollback\n\nAdopt these patterns to earn trust while keeping speed.\n    `,
     author: "Zion Tech Group Team",
     date: "2025-09-30",
     category: "GenAI",
