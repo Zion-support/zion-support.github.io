@@ -46,6 +46,15 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
+    slug: "ai-reliable-rag-ops-2026",
+    title: "Reliable RAG Ops 2026: Freshness Windows, Drift Alerts, Budgets",
+    description: "Keep RAG quality high with TTL windows, drift detectors, and KPI‑tied quality budgets.",
+    category: "GenAI",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-autonomous-infrastructure-2026",
     title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
     description: "Blueprints and scorecards to operate self‑healing platforms with budgets and safe automation.",
@@ -64,13 +73,22 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
-    slug: "zero-trust-for-genai-2026",
-    title: "Zero‑Trust for GenAI: Prompt Firewalls, Egress Policies, and Audit Trails",
-    description: "Contain risks with auth‑aware retrieval, policy gates, and signed outputs at scale.",
-    category: "Security",
+    slug: "platform-engineering-kpis-2026",
+    title: "Platform Engineering KPIs 2026: Adoption, Golden Paths, SLOs",
+    description: "Scorecards that shift the convo from costs to shipped value—adoption, TTFX, SLOs.",
+    category: "Platform Engineering",
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "7 min read"
+  },
+  {
+    slug: "ai-incident-budget-playbooks-2026",
+    title: "AI Incident Budgets: Playbooks That Contain in <60s",
+    description: "Budget risky actions, approvals, and rollback triggers for safe, fast incident response.",
+    category: "Security",
+    publishedAt: "2025-10-12",
+    featured: false,
+    readTime: "6 min read"
   },
   {
     slug: "platform-engineering-scorecards-2026",

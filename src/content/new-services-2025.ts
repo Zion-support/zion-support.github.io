@@ -199,7 +199,8 @@ export const newServices2025: Service[] = [
       metaTitle: "AI Autonomous Infrastructure Platform - Self-Managing Systems | Zion Tech",
       metaDescription: "Revolutionary AI-powered infrastructure that automatically heals, optimizes, and scales. Achieve 99.99% uptime with 85% cost reduction. Zero-touch operations.",
       keywords: ["AI autonomous infrastructure", "self-healing systems", "predictive maintenance", "infrastructure automation", "zero-touch operations"]
-    }
+    },
+    slug: "ai-autonomous-infrastructure-platform"
   },
   {
     id: "quantum-ai-hybrid-computing",
@@ -343,7 +344,8 @@ export const newServices2025: Service[] = [
       metaTitle: "Quantum-AI Hybrid Computing Solutions | Breakthrough Problem Solving",
       metaDescription: "Revolutionary quantum computing combined with AI for exponential speedups. Solve NP-hard problems 1000x faster with our quantum-AI hybrid platform.",
       keywords: ["quantum AI", "quantum computing", "quantum machine learning", "quantum optimization", "hybrid quantum systems"]
-    }
+    },
+    slug: "quantum-ai-hybrid-computing"
   },
   {
     id: "zero-trust-security-ai",
@@ -487,7 +489,8 @@ export const newServices2025: Service[] = [
       metaTitle: "Zero Trust Security with AI | Advanced Threat Protection",
       metaDescription: "AI-powered zero trust security architecture with 90% incident reduction. Continuous monitoring, automated threat detection, and compliance automation.",
       keywords: ["zero trust security", "AI security", "threat detection", "network security", "cybersecurity automation"]
-    }
+    },
+    slug: "zero-trust-security-ai"
   },
   {
     id: "ai-governance-scorecards",
@@ -631,7 +634,65 @@ export const newServices2025: Service[] = [
       metaTitle: "AI Governance Scorecards & Policy Framework | Compliance Automation",
       metaDescription: "Comprehensive AI governance framework with automated scorecards, policy management, and compliance monitoring. Ensure ethical, compliant AI systems.",
       keywords: ["AI governance", "AI compliance", "AI ethics", "policy management", "risk assessment"]
-    }
+    },
+    slug: "ai-governance-scorecards"
+  }
+  ,
+  {
+    id: "ai-risk-budgeted-runbooks",
+    title: "AI Risk‑Budgeted Runbooks",
+    description: "Operational runbooks with explicit risk budgets, approvals, and automated guardrails to ship safe AI automation fast.",
+    shortDescription: "Ship automation with explicit risk budgets and approvals",
+    category: "AI Operations",
+    subcategory: "Governed Automation",
+    tags: ["Risk Budgets", "Automation", "Approvals", "Guardrails"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    pricing: {
+      model: "subscription",
+      startingPrice: "$1,500",
+      currency: "USD",
+      description: "Per month for up to 10 automated runbooks"
+    },
+    benefits: [
+      "Faster approvals with budget thresholds",
+      "Reduced incident impact",
+      "Clear accountability and audit trails"
+    ],
+    features: [
+      "Policy‑as‑code approvals",
+      "Budget thresholds and alerts",
+      "Automated rollback actions",
+      "Audit logs and reports"
+    ],
+    useCases: [
+      "Safe deployment automation",
+      "Production data fixes",
+      "Cost‑aware inference routing"
+    ],
+    technologies: ["OPA", "GitOps", "CI/CD", "Observability"],
+    deliverables: [
+      "Runbook templates",
+      "Approval workflows",
+      "Budget policy library"
+    ],
+    timeline: "2-4 weeks",
+    prerequisites: ["Access to CI/CD", "Monitoring", "Approval owners"],
+    metrics: [
+      { label: "Incident Impact", value: "−60%", description: "Reduced impact from changes" },
+      { label: "Approval Lead Time", value: "−70%", description: "Faster approvals" }
+    ],
+    image: "/images/ai-risk-budgeted-runbooks.jpg",
+    icon: "ClipboardCheck",
+    seo: {
+      metaTitle: "AI Risk‑Budgeted Runbooks",
+      metaDescription: "Governed runbooks with risk budgets and approvals to ship automation safely.",
+      keywords: ["risk budgets", "approvals", "ai automation", "governance"]
+    },
+    testimonials: [],
+    faqs: [],
+    slug: "ai-risk-budgeted-runbooks"
   }
 ];
 

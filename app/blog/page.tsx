@@ -54,6 +54,42 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="AI Data Privacy 2026: Practical Compliance and Privacy-Preserving AI"
+            excerpt="Blueprint for privacy-by-design with PETs, consent, minimization, redaction, and audits."
+            date="September 29, 2025"
+            category="Security"
+            readTime="12 min"
+            image="🗝️"
+            href="/blog/ai-data-privacy-2026"
+          />
+          <BlogPost
+            title="AI Governance Maturity Model 2026: From Ad Hoc to Auditable"
+            excerpt="Staged model to implement accountable AI across policy, risk, security, ops, and value."
+            date="September 29, 2025"
+            category="Governance"
+            readTime="14 min"
+            image="📈"
+            href="/blog/ai-governance-maturity-model-2026"
+          />
+          <BlogPost
+            title="AI Agent Observability 2026: End-to-End Tracing and Guardrails"
+            excerpt="Blueprint for measuring and improving agent reliability with traces, evals, and safety guardrails."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="13 min"
+            image="🔭"
+            href="/blog/ai-agent-observability-2026"
+          />
+          <BlogPost
+            title="AI Operational Excellence 2026: From Pilots to Scaled Impact"
+            excerpt="Blueprint to scale AI reliably with governance, quality, cost controls, and value tracking."
+            date="September 29, 2025"
+            category="Operations"
+            readTime="12 min"
+            image="🧭"
+            href="/blog/ai-operational-excellence-2026"
+          />
+          <BlogPost
             title="AI Roadmaps 2026: What to Build Next and Why"
             excerpt="A pragmatic roadmap for 2026 across CX, ops, and platforms. High-ROI bets with sequencing and metrics."
             date="September 29, 2025"

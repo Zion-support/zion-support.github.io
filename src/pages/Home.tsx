@@ -134,14 +134,15 @@ const Home = () => {
           className="border-b border-white/10" 
           variant="premium" 
           title="New: AI SRE Runbooks, Real‑Time Evals, Privacy‑First Flags"
-          description="Design budgeted runbooks, wire KPI‑predictive evals, and deploy privacy‑aware flags."
+          description="Design budgeted runbooks, wire KPI‑predictive evals, deploy privacy‑aware flags, and track platform KPIs."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
             { title: "AI SRE Runbooks 2026", category: "SRE", link: "/blog/ai-sre-runbooks-2026" },
             { title: "Real‑Time Evals in Prod", category: "GenAI", link: "/blog/real-time-evals-prod-2026" },
             { title: "Privacy‑First Feature Flags", category: "Architecture", link: "/blog/privacy-first-feature-flags-2026" },
-            { title: "Cost‑Aware Agent Workflows", category: "AI Operations", link: "/blog/cost-aware-agents-2026" }
+            { title: "Cost‑Aware Agent Workflows", category: "AI Operations", link: "/blog/cost-aware-agents-2026" },
+            { title: "Platform KPIs 2026", category: "Platform Engineering", link: "/blog/platform-kpis-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -279,7 +280,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Incident Playbooks, Privacy‑Preserving Analytics, Edge LLM Caching — read now
+            New: Edge LLM Caching, Governance Scorecards, Serverless Cost Playbook — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
