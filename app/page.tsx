@@ -28,6 +28,14 @@ import {
   HealthcareTransformationBanner,
   NewContent2026Banner
 } from '../components/PromotionalBanner';
+import {
+  NewContent2026Banner as NewContent2026BannerComponent,
+  AutonomousOperationsBanner,
+  FinOpsAdvancedBanner,
+  PlatformArchitectureBanner,
+  AutonomousOperationsSuccessBanner,
+  NewContentShowcaseBanner2026
+} from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -48,15 +56,15 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ New 2026 content:</span>
-            <a href="/blog/ai-data-privacy-2026" className="underline hover:text-yellow-200">AI Data Privacy</a>
+            <a href="/blog/ai-autonomous-operations-2026" className="underline hover:text-yellow-200">AI Autonomous Operations</a>
             <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-governance-maturity-model-2026" className="underline hover:text-yellow-200">AI Governance Maturity</a>
+            <a href="/blog/ai-finops-advanced-2026" className="underline hover:text-yellow-200">AI FinOps Advanced</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-platform-architecture-2026" className="underline hover:text-yellow-200">Platform Architecture</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/case-studies/ai-autonomous-operations-success-2026" className="underline hover:text-yellow-200">$15M ROI Case Study</a>
             <span className="hidden md:inline">•</span>
             <a href="/blog/ai-trustworthy-agents-2026" className="underline hover:text-yellow-200">Trustworthy AI Agents</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-value-stream-analytics-2026" className="underline hover:text-yellow-200">Value Stream Analytics</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-multimodal-enterprise-2026" className="underline hover:text-yellow-200">AI Multimodal Enterprise</a>
           </div>
           <Link
             href="/blog"
@@ -67,6 +75,12 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <NewContent2026BannerComponent />
+      <NewContentShowcaseBanner2026 />
+      <AutonomousOperationsBanner />
+      <AutonomousOperationsSuccessBanner />
+      <FinOpsAdvancedBanner />
+      <PlatformArchitectureBanner />
       <NewContent2026Banner />
       <AIMultimodalEnterpriseBanner />
       <AIEnterpriseAutomationBanner />
@@ -339,6 +353,82 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Link href="/blog/ai-autonomous-operations-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New 2026 Guide
+                  </span>
+                  <span className="text-sm text-gray-500">25 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Autonomous Operations 2026: Complete Self-Managing Infrastructure Guide
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Master autonomous AI operations with zero-touch infrastructure management, predictive maintenance, and self-healing systems.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Complete Guide →
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-finops-advanced-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Advanced 2026
+                  </span>
+                  <span className="text-sm text-gray-500">20 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI FinOps Advanced 2026: Complete Financial Operations Automation Guide
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Master advanced AI FinOps with predictive cost optimization, automated financial reporting, and intelligent resource allocation.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Advanced Guide →
+                </div>
+              </div>
+            </Link>
+            <Link href="/case-studies/ai-autonomous-operations-success-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Case Study
+                  </span>
+                  <span className="text-sm text-gray-500">Fortune 500</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Autonomous Operations Success 2026: $15M ROI Case Study
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how a Fortune 500 manufacturing company achieved $15M ROI with AI autonomous operations. 99.9% uptime, 85% cost reduction.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-platform-architecture-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Architecture Guide
+                  </span>
+                  <span className="text-sm text-gray-500">30 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Platform Architecture 2026: Enterprise-Scale AI Infrastructure Guide
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Design and implement enterprise-scale AI platforms with microservices, edge computing, and autonomous scaling.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Architecture Guide →
+                </div>
+              </div>
+            </Link>
             <Link href="/blog/ai-trustworthy-agents-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
