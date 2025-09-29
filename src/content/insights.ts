@@ -287,5 +287,95 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-07-18",
     readMinutes: 8,
   },
+  {
+    id: "generative-ai-enterprise-readiness",
+    title: "Enterprise Generative AI Readiness Checklist",
+    summary:
+      "A practical framework to assess your organization's readiness for generative AI implementation and adoption.",
+    category: "AI Strategy",
+    date: "2025-01-17",
+    readMinutes: 5,
+  },
+  {
+    id: "cloud-native-migration-playbook",
+    title: "Cloud-Native Migration: A Step-by-Step Playbook",
+    summary:
+      "Practical guidance for migrating monolithic applications to cloud-native architectures with minimal disruption.",
+    category: "Architecture",
+    date: "2025-01-16",
+    readMinutes: 8,
+  },
+  {
+    id: "ai-governance-framework-2025",
+    title: "AI Governance Framework for 2025: Risk, Ethics, and Compliance",
+    summary:
+      "Comprehensive framework for implementing AI governance that balances innovation with risk management and ethical considerations.",
+    category: "AI Governance",
+    date: "2025-01-17",
+    readMinutes: 7,
+  },
+  {
+    id: "microservices-anti-patterns",
+    title: "Microservices Anti-Patterns: What to Avoid",
+    summary:
+      "Common mistakes in microservices architecture and how to avoid them for successful cloud-native implementations.",
+    category: "Architecture",
+    date: "2025-01-16",
+    readMinutes: 6,
+  },
+  {
+    id: "container-security-best-practices",
+    title: "Container Security Best Practices for Production",
+    summary:
+      "Essential security measures for containerized applications in production environments.",
+    category: "Security",
+    date: "2025-01-15",
+    readMinutes: 6,
+  },
+  {
+    id: "kubernetes-cost-optimization",
+    title: "Kubernetes Cost Optimization: Reduce Spend by 40%",
+    summary:
+      "Proven strategies for optimizing Kubernetes costs without sacrificing performance or reliability.",
+    category: "Cloud FinOps",
+    date: "2025-01-15",
+    readMinutes: 5,
+  },
+  {
+    id: "ai-model-deployment-strategies",
+    title: "AI Model Deployment Strategies: From Development to Production",
+    summary:
+      "Best practices for deploying AI models in production environments with proper monitoring and governance.",
+    category: "MLOps",
+    date: "2025-01-14",
+    readMinutes: 7,
+  },
+  {
+    id: "event-driven-architecture-patterns",
+    title: "Event-Driven Architecture Patterns for Scalable Systems",
+    summary:
+      "Design patterns and implementation strategies for building resilient event-driven systems.",
+    category: "Architecture",
+    date: "2025-01-14",
+    readMinutes: 8,
+  },
+  {
+    id: "api-security-modern-enterprise",
+    title: "API Security for Modern Enterprise: Beyond Basic Authentication",
+    summary:
+      "Advanced API security strategies for enterprise environments including OAuth, rate limiting, and threat protection.",
+    category: "Security",
+    date: "2025-01-13",
+    readMinutes: 6,
+  },
+  {
+    id: "data-mesh-architecture-guide",
+    title: "Data Mesh Architecture: Decentralized Data Management",
+    summary:
+      "Understanding data mesh principles and how to implement decentralized data architecture at scale.",
+    category: "Data Architecture",
+    date: "2025-01-13",
+    readMinutes: 9,
+  }
 ];
 

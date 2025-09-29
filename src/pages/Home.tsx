@@ -15,9 +15,11 @@ import {
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
+import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
 import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
+import NewContentPromotionBanner from "../components/NewContentPromotionBanner";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
 
@@ -89,9 +91,9 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              🚀 <strong>NEW IN 2025:</strong> Revolutionary AI-Powered Micro SAAS Platform! 
-              Transform your business with our cutting-edge AI solutions, enterprise-grade security, 
-              and next-generation cloud infrastructure. Join 500+ companies already scaling with us!
+              🚀 <strong>BREAKING:</strong> Revolutionary AI-Powered Micro SAAS Platform + 12+ New Expert Articles! 
+              Transform your business with cutting-edge AI solutions, cloud-native architecture, 
+              and zero-trust security. Join 500+ companies already scaling with our latest insights!
             </p>
 
             {/* Special Promotion Banner */}
@@ -102,10 +104,10 @@ const Home = () => {
                 <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
               </div>
               <p className="text-white text-lg font-semibold mb-2">
-                🎯 Get 50% OFF Your First 3 Months + FREE AI Strategy Consultation
+                🎯 Get 50% OFF Your First 3 Months + FREE AI Strategy Consultation + 12 New Expert Articles
               </p>
               <p className="text-zion-slate-light text-sm">
-                Valid until March 31, 2025 • No setup fees • Cancel anytime
+                Valid until March 31, 2025 • No setup fees • Cancel anytime • Fresh content weekly
               </p>
             </div>
 
@@ -156,15 +158,10 @@ const Home = () => {
           </div>
         </section>
 
+        {/* New Content Promotion Banner */}
+        <NewContentPromotionBanner />
+
         {/* Latest Insights Section */}
-        {/* Promo ribbon for new content */}
-        <div className="container mx-auto px-6">
-          <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
-            <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: AI Governance playbook, Golden Path scorecards, and Cloud FinOps QA gates — read now
-            <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
-          </div>
-        </div>
         <LatestInsights />
 
         {/* New Services Showcase */}
@@ -480,6 +477,9 @@ const Home = () => {
 
         {/* Enhanced Testimonials Section */}
         <EnhancedTestimonials />
+
+        {/* Featured Content Showcase */}
+        <FeaturedContentShowcase />
 
         {/* Latest Articles */}
         <section className="py-20 bg-white">
