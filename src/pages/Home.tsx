@@ -133,16 +133,15 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Incident Playbooks, Privacy‑Preserving Analytics, Edge LLM Caching"
-          description="Contain incidents under 60s, ship insights without PII risk, and get sub‑100ms prompts."
+          title="New: AI SRE Runbooks, Real‑Time Evals, Privacy‑First Flags"
+          description="Design budgeted runbooks, wire KPI‑predictive evals, and deploy privacy‑aware flags."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Incident Response Playbooks", category: "Cybersecurity", link: "/blog/ai-incident-response-playbooks-2025" },
-            { title: "Privacy‑Preserving Analytics", category: "Observability", link: "/blog/privacy-preserving-analytics-2025" },
-            { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" },
-            { title: "AI Governance Scorecards 2026", category: "AI Strategy", link: "/blog/ai-governance-scorecards-2026" },
-            { title: "Platform Scorecards ROI 2026", category: "Platform Engineering", link: "/blog/platform-engineering-scorecards-2026" }
+            { title: "AI SRE Runbooks 2026", category: "SRE", link: "/blog/ai-sre-runbooks-2026" },
+            { title: "Real‑Time Evals in Prod", category: "GenAI", link: "/blog/real-time-evals-prod-2026" },
+            { title: "Privacy‑First Feature Flags", category: "Architecture", link: "/blog/privacy-first-feature-flags-2026" },
+            { title: "Cost‑Aware Agent Workflows", category: "AI Operations", link: "/blog/cost-aware-agents-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -541,7 +540,7 @@ const Home = () => {
                 <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Fresh: Incident Playbooks, Privacy‑Preserving Analytics, Edge LLM Caching
+                Fresh: AI SRE Runbooks, Real‑Time Evals, Privacy‑First Flags
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles & Insights
@@ -811,7 +810,7 @@ const Home = () => {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
-              <p className="text-white/90">New: Platform Engineering Scorecards 2026, AI Cybersecurity Automation, and Edge AI Blueprint 2026.</p>
+              <p className="text-white/90">New: AI SRE Runbooks 2026, Real‑Time Evals, and Cost‑Aware Agents.</p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
                   Read the latest

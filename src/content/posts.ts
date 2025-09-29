@@ -10,6 +10,42 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-sre-runbooks-2026",
+    title: "AI SRE Runbooks 2026: Budgeted Actions with Instant Rollback",
+    description: "Design AI-assisted incident runbooks with approvals, budgets, and safe automation under 60s.",
+    category: "SRE",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "real-time-evals-prod-2026",
+    title: "Real‑Time Evals in Prod: Canary Scores that Predict KPIs",
+    description: "Operationalize online evals and link them to product KPIs for safe, fast delivery.",
+    category: "GenAI",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-first-feature-flags-2026",
+    title: "Privacy‑First Feature Flags: Geo, Account, and Scope Budgets",
+    description: "Blueprint for privacy‑aware flags with scoped IDs, DP noise, and instant rollback.",
+    category: "Architecture",
+    publishedAt: "2025-10-13",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
+    slug: "cost-aware-agents-2026",
+    title: "Cost‑Aware Agent Workflows: Tiered Quality Without UX Regressions",
+    description: "Route tools by budget and SLA with traces and fallback behaviors users trust.",
+    category: "AI Operations",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-autonomous-infrastructure-2026",
     title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
     description: "Blueprints and scorecards to operate self‑healing platforms with budgets and safe automation.",
