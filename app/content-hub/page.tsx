@@ -23,6 +23,7 @@ export default function ContentHub() {
     {
       title: 'AI Security & Compliance',
       articles: [
+        { title: 'AI Autonomous Cloud Operations 2026', slug: '/blog/ai-autonomous-cloud-ops-2026', readTime: '18 min', featured: true },
         { title: 'AI Cybersecurity Automation 2026', slug: '/blog/ai-cybersecurity-automation-2026', readTime: '18 min', featured: true },
         { title: 'AI Security Compliance 2025', slug: '/blog/ai-security-compliance-2025', readTime: '12 min', featured: false },
         { title: 'Enterprise AI Security 2025', slug: '/blog/enterprise-ai-security-2025', readTime: '14 min', featured: false },

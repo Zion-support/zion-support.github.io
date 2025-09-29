@@ -54,6 +54,15 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="AI Autonomous Cloud Operations 2026"
+            excerpt="Self-healing infrastructure with 99.9% uptime, predictive scaling, and policy-driven operations."
+            date="October 9, 2025"
+            category="Cloud"
+            readTime="18 min"
+            image="☁️"
+            href="/blog/ai-autonomous-cloud-ops-2026"
+          />
+          <BlogPost
             title="Agentic Workflow Orchestration 2026: Reliable AI Workflows"
             excerpt="Orchestrate multi-step agents with guardrails, approvals, and observability for measurable ROI."
             date="October 9, 2025"
@@ -383,6 +392,7 @@ function BlogPost({
   image: string;
   featured?: boolean;
   href?: string;
+  children?: React.ReactNode;
 }) {
   const getCategoryColor = (category: string) => {
     switch (category) {
