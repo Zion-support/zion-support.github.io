@@ -1,7 +1,6 @@
 import {
   ArrowRight,
   Award,
-  Brain,
   CheckCircle,
   Globe,
   Rocket,
@@ -11,24 +10,28 @@ import {
   Target,
   TrendingUp,
   Users,
-  Zap,
+  Zap
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import LatestContentBanner from "../components/LatestContentBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
-import ModernFeatures from "../components/ModernFeatures";
-import NewContentPromoBanner from "../components/NewContentPromoBanner";
-import TrendingContentBanner from "../components/TrendingContentBanner";
-import EnhancedServicesShowcase from "../components/EnhancedServicesShowcase";
-import { latestInsights } from "../content/insights";
-import { newInsights, featuredInsights } from "../content/new-insights";
+import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
+import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
+import ModernFeatures from "../components/ModernFeatures";
+import NewContentAnnouncement from "../components/NewContentAnnouncement";
+import NewContentPromoBanner from "../components/NewContentPromoBanner";
+import NewServicesShowcase from "../components/NewServicesShowcase";
+import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
+import TrendingContentBanner from "../components/TrendingContentBanner";
+import { latestInsights } from "../content/insights";
+import { featuredInsights, newInsights } from "../content/new-insights";
+import { posts } from "../content/posts";
 
 const Home = () => {
   return (
@@ -106,18 +109,41 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        <NewContentAnnouncement />
         <LatestContentBanner className="border-b border-white/10" variant="info" />
-        <NewContentPromoBanner className="border-b border-white/10" variant="premium" />
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="Fresh: AI ROI Scorecards, Secure ML Supply Chain, Enterprise RAG v2"
+          description="New guides to prove platform value, secure ML supply chains, and stabilize GenAI quality."
+          ctaText="Explore new content"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "AI Platform ROI Scorecards", category: "AI Strategy", link: "/blog/ai-platform-roi-2025" },
+            { title: "Secure ML Supply Chain", category: "Security", link: "/blog/secure-ml-supply-chain-2025" },
+            { title: "Enterprise RAG v2", category: "GenAI", link: "/blog/genai-evals-in-production-2025" },
+          ]}
+        />
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
         </div>
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: AI Platform ROI + Secure ML Supply Chain"
-          description="New frameworks on platform ROI and end-to-end ML supply chain security."
+          title="📚 New Series: Ship Faster with Guardrails"
+          description="AI roadmaps, ML SBOM automation, and online eval canaries now live."
+          ctaText="See what's new"
+          title="🚀 NEW THIS WEEK: LLM Blue/Green Evals, Agent Observability, Real‑Time Feature Stores"
+          description="Ship LLM updates safely, get deep agent telemetry, and keep features fresh without breaking budgets."
+          title="🚀 NEW THIS WEEK: GenAI Guardrails, Edge Flags, North‑Star Metrics"
+          description="Brand-new guides on eval systems, validation circuits, and outcome-driven metrics."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-platform-roi-2025"
+          ctaLink="/blog"
+          variant="success"
+          title="🚀 New: Customer Journey Agents + Edge Personalization Under 100ms"
+          description="Plan→Act→Verify agents that move KPIs, plus CDN + on‑device ML for private, real‑time UX."
+          ctaText="Read the latest"
+          ctaLink="/blog/customer-journey-agents-qa"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -270,13 +296,18 @@ const Home = () => {
         {/* Latest Insights Section */}
         {/* Promo ribbon for new content */}
         <div className="container mx-auto px-6">
-          <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
+            <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: AI Product Roadmaps, SBOM Automation, and Online GenAI Evals — read now
+            New: AI Platform ROI Scorecards, Secure ML Supply Chain, and Enterprise RAG v2 — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
         <LatestInsights />
+
+        {/* Featured Content Showcase */}
+        <section className="relative z-10">
+          <FeaturedContentShowcase className="mt-8" />
+        </section>
 
         {/* New Services Showcase */}
         <section className="py-20 bg-white relative overflow-hidden">
@@ -496,13 +527,13 @@ const Home = () => {
             <h3 className="text-3xl font-bold text-white">Latest Insights</h3>
             <Link to="/insights" className="text-zion-cyan hover:underline">View all</Link>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[...latestInsights.slice(0, 2), ...featuredInsights.slice(0, 1)].map((item) => (
+            <div className="grid md:grid-cols-3 gap-6">
+              {[...latestInsights.slice(0, 2), ...featuredInsights.slice(0, 1)].map((item) => (
               <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
-                    {item.featured && (
+                    {('featured' in item) && (item as any).featured && (
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>
@@ -527,7 +558,7 @@ const Home = () => {
             <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Fresh Content Available
+                Fresh: ROI Scorecards, ML SBOM, Enterprise RAG v2
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles & Insights
@@ -701,6 +732,9 @@ const Home = () => {
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
                 <p className="text-gray-600">Fresh: AI Platform ROI, Secure ML Supply Chain, and Enterprise RAG Blueprint.</p>
+                <p className="text-gray-600">Insights from our team to help you move faster.</p>
+                <p className="text-gray-600">Fresh: GenAI Telemetry, Edge Flags, Product Readiness, and more.</p>
+                <p className="text-gray-600">New: Platform ROI, Secure ML Supply Chain, and Enterprise RAG v2.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
@@ -807,7 +841,9 @@ const Home = () => {
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
                   <p className="text-white/90">
                     New: AI Platform ROI scorecards, securing the ML supply chain, and Enterprise RAG v2.
+                    Fresh reads: GenAI guardrails that scale, validation circuits for edge flags, and north‑star metrics that drive outcomes.
                   </p>
+                  <p className="text-white/90">New: Platform ROI scorecards, Secure ML Supply Chain, and Enterprise RAG v2.</p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
                   Read the latest
@@ -823,16 +859,55 @@ const Home = () => {
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-blue-200 mb-1">GenAI</div>
-                  <div className="font-semibold text-white">Enterprise RAG Blueprint v2</div>
+                  <div className="font-semibold text-white">Enterprise RAG v2</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-rose-200 mb-1">Security</div>
                   <div className="font-semibold text-white">Secure ML Supply Chain</div>
+                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
+                  <div className="font-semibold text-white">Blue/Green for LLMs: Evals as Release Gates</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-blue-200 mb-1">GenAI</div>
+                  <div className="font-semibold text-white">Agent Observability: Traces, Tokens, Outcomes</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-rose-200 mb-1">Data Engineering</div>
+                  <div className="font-semibold text-white">Real‑Time Feature Stores That Don’t Break the Bank</div>
+                  <div className="text-sm text-purple-200 mb-1">GenAI</div>
+                  <div className="font-semibold text-white">Shipping GenAI Safely: Guardrails That Don’t Slow You Down</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-blue-200 mb-1">Architecture</div>
+                  <div className="font-semibold text-white">Validation Circuits for Edge Feature Flags</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-rose-200 mb-1">Product Analytics</div>
+                  <div className="font-semibold text-white">North‑Star Metrics: How to Measure What Matters</div>
+                  <div className="text-sm text-indigo-200 mb-1">AI Strategy</div>
+                  <div className="font-semibold text-white">Customer Journey Agents: Planning, Safety, QA Gates</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-green-200 mb-1">Edge Computing</div>
+                  <div className="font-semibold text-white">Edge Personalization: CDN + On‑Device ML</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-blue-200 mb-1">Architecture</div>
+                  <div className="font-semibold text-white">Zero‑Downtime Cutover Checklist</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        {/* New Services Showcase */}
+        <NewServicesShowcase />
+
+        {/* Latest Articles Showcase */}
+        <LatestArticlesShowcase />
+
+        {/* Success Stories Showcase */}
+        <SuccessStoriesShowcase />
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple relative overflow-hidden">

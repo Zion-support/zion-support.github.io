@@ -28,40 +28,47 @@ class AccessibilityEnhancer {
   private resizeObserver?: ResizeObserver;
   private mutationObserver?: MutationObserver;
   private performanceObserver?: PerformanceObserver;
-  
-  // Bound event handler references used for add/removeEventListener
-  private onKeyDown: (event: KeyboardEvent) => void = (event: KeyboardEvent) => {
-    // Handle Enter/Space to activate focused elements
-    const activeElement = document.activeElement as HTMLElement | null;
-    if (!activeElement) return;
-    if (event.key === 'Enter' || event.key === ' ') {
-      if (activeElement.tagName === 'BUTTON' || activeElement.getAttribute('role') === 'button') {
-        activeElement.click();
+  // Event handlers defined as arrow functions to preserve context and allow proper removal
+  private handleKeyDown = (event: KeyboardEvent): void => {
+    if (event.key === 'Tab' && (event as KeyboardEvent).shiftKey && document.activeElement === document.body) {
+      const skipLink = document.querySelector('[data-skip-link]');
+      if (skipLink) {
+        (skipLink as HTMLElement).focus();
         event.preventDefault();
       }
     }
-  };
-  
-  private onClick: (event: MouseEvent) => void = (_event: MouseEvent) => {
-    // Placeholder for focus management on click; could track last focused
-  };
-  
-  private onFocusIn: (event: FocusEvent) => void = (_event: FocusEvent) => {
-    // Placeholder for focus-in handling, e.g., add outlines or track last focus
-  };
-  
-  // Stored event handlers (defined to satisfy type checks and potential cleanup)
-  private handleKeyDown(event: KeyboardEvent): void {
-    // Intentionally empty: listeners are attached inline in setup methods
-  }
 
-  private handleFocusIn(event: FocusEvent): void {
-    // Intentionally empty: listeners are attached inline in setup methods
-  }
+    if (event.key === 'Escape') {
+      const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
+      if (modal) {
+        this.closeModal(modal as HTMLElement);
+      }
+    }
 
-  private handleFocusOut(event: FocusEvent): void {
-    // Intentionally empty: listeners are attached inline in setup methods
-  }
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      const menu = document.querySelector('[role="menu"]:focus-within') as HTMLElement | null;
+      if (menu) {
+        this.handleMenuNavigation(event as KeyboardEvent, menu);
+      }
+    }
+  };
+
+  private handleFocusIn = (event: FocusEvent): void => {
+    const target = event.target as HTMLElement | null;
+    if (target) {
+      const previous = document.querySelector('[data-last-focused]') as HTMLElement | null;
+      if (previous) {
+        previous.removeAttribute('data-last-focused');
+      }
+      target.setAttribute('data-last-focused', 'true');
+    }
+  };
+
+  private handleFocusOut = (_event: FocusEvent): void => {
+    // Intentionally left as a no-op for now; reserved for future enhancements
+  };
+
+  // Removed duplicate placeholder declarations that conflicted with arrow handler fields
 
   constructor() {
     this.config = this.getDefaultConfig();
@@ -81,6 +88,7 @@ class AccessibilityEnhancer {
 
   public initialize(): void {
     if (this.isInitialized || typeof window === 'undefined') return;
+    
     this.isInitialized = true;
     this.setupKeyboardNavigation();
     this.setupFocusManagement();
@@ -105,9 +113,9 @@ class AccessibilityEnhancer {
     this.performanceObserver?.disconnect();
     
     // Cleanup event listeners
-    document.removeEventListener('keydown', this.onKeyDown);
-    document.removeEventListener('click', this.onClick);
-    document.removeEventListener('focusin', this.onFocusIn);
+    document.removeEventListener('keydown', this.handleKeyDown);
+    document.removeEventListener('focusin', this.handleFocusIn);
+    document.removeEventListener('focusout', this.handleFocusOut);
     
     this.isInitialized = false;
     this.focusTrapElements = [];
@@ -133,18 +141,38 @@ class AccessibilityEnhancer {
   }
 
   /**
-   * Backward-compatible initialize alias
+   * Backward-compatible initialize alias handled by init()
    */
-  
-
   private setupKeyboardNavigation(): void {
     if (!this.config.keyboardNavigation) return;
-    document.addEventListener('keydown', this.onKeyDown);
+
+    document.addEventListener('keydown', this.handleKeyDown);
   }
 
   private setupFocusManagement(): void {
     if (!this.config.focusManagement) return;
-    document.addEventListener('click', this.onClick);
+
+    // Trap focus in modals
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Tab') {
+        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]') as HTMLElement | null;
+        if (modal) {
+          this.trapFocus(event as KeyboardEvent, modal);
+        }
+      }
+    });
+
+    // Restore focus after modal closes
+    document.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+      if (target.hasAttribute('data-close-modal')) {
+        this.restoreFocus();
+      }
+    });
+
+    // Track focus changes using bound handlers so they can be removed in destroy()
+    document.addEventListener('focusin', this.handleFocusIn);
+    document.addEventListener('focusout', this.handleFocusOut);
   }
 
   private setupAriaLabels(): void {
@@ -230,7 +258,12 @@ class AccessibilityEnhancer {
     if (typeof window === 'undefined') return;
 
     // Monitor focus changes
-    document.addEventListener('focusin', this.onFocusIn);
+    document.addEventListener('focusin', (event) => {
+      const target = event.target as HTMLElement;
+      if (target.tabIndex < 0 && target.hasAttribute('tabindex')) {
+        console.warn('Element with negative tabindex received focus:', target);
+      }
+    });
 
     // Monitor aria-label changes
     const observer = new MutationObserver((mutations: MutationRecord[]) => {

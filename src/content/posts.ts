@@ -6,9 +6,83 @@ export interface BlogPost {
   publishedAt: string;
   featured?: boolean;
   readTime?: string;
+  image?: string;
+  tags?: string[];
 }
 
 export const posts: BlogPost[] = [
+  {
+    slug: "ai-autonomous-operations-2025",
+    title: "AI Autonomous Operations: Self‑Healing, Self‑Optimizing Infra",
+    description: "Design SLO‑driven controllers, safe remediations, and policy‑guarded runbooks.",
+    category: "Infrastructure",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "enterprise-ai-roadmap-2025",
+    title: "Enterprise AI Roadmap 2025: From Pilots to Platform",
+    description: "Operating model, platform capabilities, and productized use‑cases that compound.",
+    category: "Strategy",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "9 min",
+  },
+  {
+    slug: "cloud-native-ai-platforms-2025",
+    title: "Cloud‑Native AI Platforms: Multi‑Region, Cost‑Aware, Governed",
+    description: "Reference architecture for elastic GPUs, feature stores, evals, and guardrails.",
+    category: "Cloud",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "7 min read"
+  },
+  // New posts
+  {
+    slug: "quantum-computing-business-applications-2025",
+    title: "Quantum Computing: Practical Business Applications in 2025",
+    description: "Where quantum adds value today: portfolio, routing, scheduling, and pricing.",
+    category: "Quantum",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "ai-platform-roi-2025",
+    title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
+    description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",
+  },
+  {
+    slug: "genai-evals-in-prod-guardrails",
+    title: "Shipping GenAI Safely: Evals, Guardrails, and Online Canaries",
+    description:
+      "A practical blueprint to combine offline evals with online policy tests so you can ship GenAI changes weekly without regressions.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-feature-flags-in-100ms",
+    title: "Edge Feature Flags Under 100ms: Global Consistency at Scale",
+    description:
+      "Strategies for cache warmup, signed payloads, and validation circuits that enable instant, safe global rollouts.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "north-star-metrics-pitfalls-fixes",
+    title: "North‑Star Metrics Pitfalls: How to Measure What Matters",
+    description:
+      "Seven common anti‑patterns and the instrumentation playbook that replaces vanity with outcomes.",
+    category: "Product Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
   {
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
@@ -18,16 +92,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read",
-  },
-  {
-    slug: "genai-evals-in-production-2025",
-    title: "Online GenAI Evals: Canary Checks That Keep You Fast",
-    description:
-      "Lightweight online evals tied to KPIs to prevent regressions while shipping weekly.",
-    category: "GenAI",
-    publishedAt: "2025-10-05",
-    featured: false,
-    readTime: "6 min read",
   },
   {
     slug: "mlops-in-45-days",
@@ -231,89 +295,42 @@ export const posts: BlogPost[] = [
     description:
       "A practical framework to align AI investments with measurable business outcomes and reduce time-to-value.",
     category: "AI Strategy",
-    publishedAt: "2025-09-15",
-  },
-  {
-    slug: "cloud-finops-tactics",
-    title: "Cutting Cloud Spend Without Slowing Teams",
-    description:
-      "Proven tactics for right-sizing, demand shaping, and engineering-friendly guardrails that keep velocity high.",
-    category: "Cloud FinOps",
-    publishedAt: "2025-09-22",
-  },
-  {
-    slug: "zero-trust-for-saas",
-    title: "Zero-Trust in Practice for SaaS",
-    description:
-      "A pragmatic guide to rolling out least-privilege, continuous verification, and blast radius controls.",
-    category: "Security",
-    publishedAt: "2025-09-25",
-  },
-  {
-    slug: "generative-ai-enterprise",
-    title: "Generative AI in Enterprise: Real-World Success Stories",
-    description:
-      "Case studies from Fortune 500 companies showing how GenAI is transforming customer service, content creation, and business operations.",
-    category: "AI Innovation",
-    publishedAt: "2025-01-20",
-  },
-  {
-    slug: "cloud-migration-best-practices",
-    title: "Cloud Migration Best Practices: Lessons from 100+ Projects",
-    description:
-      "Essential strategies for successful cloud migration, including risk mitigation, cost optimization, and timeline management.",
-    category: "Cloud Strategy",
-    publishedAt: "2025-01-18",
-  },
-  {
-    slug: "cybersecurity-2025-trends",
-    title: "Cybersecurity Trends 2025: What Every CISO Needs to Know",
-    description:
-      "Emerging threats, new defense strategies, and the latest security technologies shaping the cybersecurity landscape.",
-    category: "Cybersecurity",
-    publishedAt: "2025-01-15",
-  },
-  {
-    slug: "data-analytics-automation",
-    title: "Automating Data Analytics: From Insight to Action",
-    description:
-      "How AI-powered analytics platforms are revolutionizing business intelligence and enabling real-time decision making.",
-    category: "Data Science",
-    publishedAt: "2025-01-12",
-  },
-  {
-    slug: "devops-automation-guide",
-    title: "The Complete Guide to DevOps Automation",
-    description:
-      "Comprehensive strategies for automating CI/CD pipelines, infrastructure management, and deployment processes.",
-    category: "DevOps",
-    publishedAt: "2025-01-10",
-  },
-  {
-    slug: "microservices-architecture",
-    title: "Microservices Architecture: Design Patterns and Best Practices",
-    description:
-      "Essential patterns for building scalable, maintainable microservices architectures in modern applications.",
-    category: "Software Architecture",
-    publishedAt: "2025-01-08",
-  },
-  {
-    slug: "ai-ethics-compliance",
-    title: "AI Ethics and Compliance: Building Responsible AI Systems",
-    description:
-      "Framework for developing AI systems that are fair, transparent, and compliant with emerging regulations.",
-    category: "AI Governance",
-    publishedAt: "2025-01-05",
-  },
-  {
-    slug: "ai-powered-business-automation-2025",
-    title: "AI-Powered Business Automation: The Complete 2025 Guide",
-    description:
-      "Transform your business operations with cutting-edge AI automation. Learn implementation strategies, ROI calculations, and real-world success stories.",
-    category: "AI & Automation",
-    publishedAt: "2025-01-21",
+    publishedAt: "2025-10-03",
     featured: true,
-    readTime: "12 min read",
+    readTime: "7 min read"
+  },
+  {
+    slug: "serverless-ai-inference-cost-playbook-2025",
+    title: "Serverless AI Inference: The Cost Optimization Playbook",
+    description: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "9 min",
+  },
+  {
+    slug: "production-rag-architectures-that-work-2025",
+    title: "RAG Architectures That Actually Work in Production",
+    description: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.",
+    category: "GenAI",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "secure-ml-supply-chain-2025",
+    title: "Secure ML Supply Chain: From SBOMs to Model Lineage",
+    description: "End-to-end provenance and controls for datasets, models, and inference routes.",
+    category: "Security",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "edge-cdn-ml-personalization-2025",
+    title: "Edge CDN + On‑Device ML: Personalization Under 100ms",
+    description: "Combine edge KV, signed configs, and tiny models for private, real‑time personalization.",
+    category: "Edge Computing",
   },
   {
     slug: "next-gen-cloud-infrastructure",
@@ -355,6 +372,7 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "9 min read",
   },
+ 
   // Newly added posts (2025-09-30 / 2025-09-29)
   {
     slug: "serverless-inference-cost-playbook-2025",
@@ -364,89 +382,181 @@ export const posts: BlogPost[] = [
     category: "AI Solutions",
     publishedAt: "2025-09-30",
     featured: true,
-    readTime: "7 min read",
+    readTime: "6 min read"
   },
   {
-    slug: "practical-rag-in-production-2025",
-    title: "Practical RAG in Production: Freshness, Hybrid Search, and Evals",
-    description:
-      "Battle-tested patterns for chunking, freshness policies, hybrid retrieval, and eval harnesses.",
+    slug: "ai-sales-copilot-2025",
+    title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
+    description: "Wire CRMs, build prompt libraries, and add evals that correlate with win‑rates.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-evals-in-production-2025",
+    title: "GenAI Evals in Production: Policy Tests That Scale",
+    description: "Layered evaluation: offline suites, pre-merge checks, and online canaries tied to KPIs.",
     category: "GenAI",
     publishedAt: "2025-09-30",
     featured: true,
-    readTime: "8 min read",
+    readTime: "8 min read"
   },
   {
-    slug: "secure-genai-guardrails-2025",
-    title: "Secure GenAI: Policy‑First Guardrails That Scale",
+    slug: "feature-flags-edge-2025",
+    title: "Feature Flags at the Edge: <100ms Global Releases",
+    description: "Consistency models, cache strategies, and validation flows for instant global rollouts.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-governance-blueprint-2025",
+    title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
+    description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min",
+  },
+  {
+    slug: "real-time-genai-guardrails-2025",
+    title: "Real‑Time GenAI Guardrails: Inline Filters, Canaries, and Evals",
+    description: "How to run fast with live canaries, inline moderation, and KPI‑linked evals at scale.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "8 min read"
+  },
+  // New content additions
+  {
+    slug: "agentic-workflows-in-production",
+    title: "Agentic Workflows in Production: Patterns That Don’t Break",
     description:
-      "Prompt isolation, PII controls, and egress policies—ship safely without slowing teams.",
-    category: "Security",
+      "Control loops, guardrails, and human checkpoints to deploy autonomous agents safely.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "cost-aware-mlops",
+    title: "Cost‑Aware MLOps: Shipping Quality Under a Budget",
+    description:
+      "Right‑size evals, caching, and rollout to reduce spend without sacrificing reliability.",
+    category: "MLOps",
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "6 min read",
   },
-  // New content additions (Oct 2025)
   {
-    slug: "ai-platform-roi-2025",
-    title: "AI Platform ROI: Scorecards That Drive Investment Decisions",
+    slug: "edge-observability-toolbox",
+    title: "Edge Observability Toolbox for Sub‑Second UX",
     description:
-      "A practical framework to quantify AI platform value with adoption, DX, and outcome metrics.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-01",
+      "What to log, sample, and alert on for distributed edge apps and functions.",
+    category: "Observability",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "5 min read",
+  },
+  {
+    slug: "secure-ml-platform-blueprint",
+    title: "Secure ML Platform Blueprint",
+    description:
+      "Harden data flows, registries, and deployments with pragmatic controls and audits that scale.",
+    category: "Security",
+    publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read",
   },
   {
-    slug: "secure-ml-supply-chain-2025",
-    title: "Securing the ML Supply Chain: Models, Data, and Dependencies",
+    slug: "llm-blue-green-evals",
+    title: "Blue/Green for LLMs: Evals as Release Gates",
     description:
-      "SBOMs for models, dataset provenance, and runtime guardrails to protect AI systems end-to-end.",
-    category: "Security",
-    publishedAt: "2025-10-01",
-    featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "enterprise-rag-blueprint-v2",
-    title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, and Evals",
-    description:
-      "An updated blueprint with freshness SLAs, hybrid retrieval, reranking, and evaluation harnesses.",
-    category: "GenAI",
-    publishedAt: "2025-10-01",
-    featured: true,
-    readTime: "9 min read",
-  },
-  // Sept 30, 2025 fresh additions
-  {
-    slug: "ai-sales-copilot-playbook-2025",
-    title: "AI Sales Copilot: A 90‑Day Playbook for Revenue Teams",
-    description:
-      "Proven workflows, guardrails, and KPIs to deploy an AI copilot that actually lifts win‑rates.",
-    category: "GenAI",
+      "Ship LLM changes with confidence using blue/green cohorts tied to online evals and guardrails.",
+    category: "MLOps",
     publishedAt: "2025-09-30",
     featured: true,
-    readTime: "8 min read",
+    readTime: "6 min read",
   },
   {
-    slug: "cost-aware-ml-platforms-2025",
-    title: "Cost‑Aware ML Platforms: Ship Faster Without Blowing the Budget",
+    slug: "agent-observability-playbook",
+    title: "Agent Observability: Traces, Tokens, and Task Outcomes",
     description:
-      "Budgets, autoscaling, and policy checks that keep training and inference spend under control.",
-    category: "MLOps",
+      "A practical telemetry model for agentic systems covering spans, retries, function calls, and cost.",
+    category: "GenAI",
     publishedAt: "2025-09-30",
     featured: false,
     readTime: "7 min read",
   },
   {
-    slug: "ai-security-red-teaming-checklist",
-    title: "AI Security Red‑Teaming: The Field Checklist",
+    slug: "multi-tenant-guardrails",
+    title: "Multi‑Tenant Guardrails Without Slowing Teams",
     description:
-      "End‑to‑end test plan for prompt injection, data exfil, jailbreaks, and supply‑chain risks.",
-    category: "Security",
+      "Policy packs, namespace isolation, and per‑tenant budgets that scale across dozens of products.",
+    category: "AI Governance",
     publishedAt: "2025-09-30",
     featured: true,
+    readTime: "5 min read",
+  },
+  {
+    slug: "finetune-to-rag-transition",
+    title: "When to Switch from Fine‑Tuning to RAG (and Back)",
+    description:
+      "Decision framework weighing cost, latency, data churn, and quality for production GenAI.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: false,
     readTime: "6 min read",
+  },
+  {
+    slug: "real-time-feature-stores",
+    title: "Real‑Time Feature Stores That Don’t Break the Bank",
+    description:
+      "Online/offline sync, freshness SLAs, and caching strategies that balance accuracy and spend.",
+    category: "Data Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "cost-aware-routing",
+    title: "Cost‑Aware Routing Across Models and Vendors",
+    description:
+      "SLO‑driven policy routing that blends quality, latency, and dollar budgets automatically.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "6 min read",
+  },
+
+  {
+    slug: "ai-risk-register-checklist-2025",
+    title: "AI Risk Register Checklist: Owners, Policy Tests, Dashboards",
+    description: "Make AI risk real with accountable owners, measurable policies, and visible scorecards.",
+    category: "AI Governance",
+    publishedAt: "2025-10-06",
+    featured: true,
+    readTime: "5 min read"
+  },
+  {
+    slug: "rag-freshness-strategies-2025",
+    title: "RAG Freshness Strategies: Versioned Chunks, TTLs, Async Warmups",
+    description: "Keep retrieval results fresh with versioned corpora, TTL budgets, and background warmups.",
+    category: "GenAI",
+    publishedAt: "2025-10-06",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "edge-feature-flags-zero-regret-2025",
+    title: "Edge Feature Flags: Zero‑Regret Rollouts with Instant Rollback",
+    description: "Segmented canaries by geo and account with budget caps and telemetry at the edge.",
+    category: "Architecture",
+    publishedAt: "2025-10-06",
+    featured: false,
+    readTime: "6 min read"
   }
 ];
 
