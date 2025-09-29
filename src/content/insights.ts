@@ -18,6 +18,33 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+    id: "ai-governance-blueprint",
+    title: "AI Governance Blueprint: Policies, Controls, and KPIs",
+    summary:
+      "A clear framework to govern AI initiatives with measurable controls, risk ownership, and audit‑ready evidence.",
+    category: "AI Strategy",
+    date: "2025-09-27",
+    readMinutes: 8,
+  },
+  {
+    id: "edge-llm-inference",
+    title: "Edge LLM Inference: Latency, Cost, and Privacy Wins",
+    summary:
+      "When and how to run language models at the edge to reduce latency, control spend, and protect data.",
+    category: "Architecture",
+    date: "2025-09-26",
+    readMinutes: 6,
+  },
+  {
+    id: "zero-downtime-migrations",
+    title: "Zero‑Downtime Migrations with Blue‑Green and Feature Flags",
+    summary:
+      "Operational patterns to ship schema and service changes safely without interrupting customers.",
+    category: "Platform Engineering",
+    date: "2025-09-28",
+    readMinutes: 7,
+  },
+  {
     id: "secure-ml-pipelines",
     title: "Securing Machine Learning Pipelines in Production",
     summary:

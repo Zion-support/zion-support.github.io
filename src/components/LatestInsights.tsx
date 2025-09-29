@@ -4,16 +4,13 @@ import { Link } from "react-router-dom";
 import { latestInsights } from "../content/insights";
 
 const LatestInsights: React.FC = () => {
-  const insights = latestInsights
-    .slice(0, 3)
-    .map((item) => ({
-      id: item.id,
-      title: item.title,
-      description: item.summary,
-      date: new Date(item.date).toLocaleDateString(),
-      category: item.category,
-      href: "/insights",
-    }));
+  const insights = latestInsights.slice(0, 3);
+  const isNew = (isoDate: string) => {
+    const published = new Date(isoDate).getTime();
+    const now = Date.now();
+    const sevenDaysMs = 7 * 24 * 60 * 60 * 1000;
+    return now - published <= sevenDaysMs;
+  };
   return (
     <section className="py-20 bg-white/5">
       <div className="container mx-auto px-6">
@@ -32,7 +29,7 @@ const LatestInsights: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {latestInsights.slice(0, 3).map((item) => (
+          {insights.map((item) => (
             <div
               key={item.id}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
@@ -41,7 +38,14 @@ const LatestInsights: React.FC = () => {
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">
                   <span>{item.category}</span>
                 </div>
-                <span className="text-xs text-zion-slate-light">{new Date(item.date).toLocaleDateString()}</span>
+                <div className="flex items-center gap-2">
+                  {isNew(item.date) && (
+                    <span className="inline-flex items-center gap-1 text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full bg-green-400/20 text-green-200 border border-green-300/30">
+                      New
+                    </span>
+                  )}
+                  <span className="text-xs text-zion-slate-light">{new Date(item.date).toLocaleDateString()}</span>
+                </div>
               </div>
 
               <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
