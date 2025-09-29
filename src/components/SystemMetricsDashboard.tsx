@@ -22,7 +22,7 @@ export const SystemMetricsDashboard: React.FC<SystemMetricsDashboardProps> = ({
       const updateMetrics = () => {
         const perfMonitor = AdvancedPerformanceMonitor.getInstance();
         const accEnhancer = new AccessibilityEnhancer();
-        const secEnhancer = SecurityEnhancer.getInstance();
+        const secEnhancer = new SecurityEnhancer();
 
         const perfMetrics = perfMonitor.getLatestMetrics();
         const accMetrics = accEnhancer.getMetrics();

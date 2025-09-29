@@ -25,10 +25,16 @@ import { advancedCacheSystem } from './utils/advancedCacheSystem';
 import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
 import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
 import { SecurityEnhancer } from './utils/securityEnhancer';
+<<<<<<< HEAD
 
 // Lazy load heavy components for better performance
 const PerformanceMetrics = lazy(() => import('./components/PerformanceMetrics'));
 
+=======
+import { performanceOptimizer } from './utils/performanceOptimizer';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
+import { seoOptimizer } from './utils/seoOptimizer';
+>>>>>>> origin/fix-netlify-build-final
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -180,6 +186,11 @@ export default function App(): React.JSX.Element {
     
     // Initialize basic systems
     analytics.initialize();
+<<<<<<< HEAD
+=======
+    seoAnalytics.initialize();
+    performanceSEO.initialize();
+>>>>>>> origin/fix-netlify-build-final
     
     // Initialize SEO analytics
     seoAnalytics.trackPageView(window.location.pathname);
@@ -198,6 +209,7 @@ export default function App(): React.JSX.Element {
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
     
+<<<<<<< HEAD
     // Initialize advanced optimization systems
     performanceOptimizer.optimizeBundle();
     accessibilityEnhancer.initialize();
@@ -228,6 +240,8 @@ export default function App(): React.JSX.Element {
       }
     }
 
+=======
+>>>>>>> origin/fix-netlify-build-final
     // Add performance marks for better monitoring
     if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
       performance.mark('app-init-start');
@@ -322,11 +336,15 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
+<<<<<<< HEAD
       <div 
         className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
         role="main"
         aria-label="Zion Tech Group Application"
       >
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> origin/fix-netlify-build-final
         <AppRouter />
         
         {/* System Dashboard - Toggle with Ctrl+Shift+D */}
