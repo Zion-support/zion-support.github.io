@@ -67,6 +67,7 @@ export const posts: BlogPost[] = [
     category: "AI Strategy",
     publishedAt: "2025-09-29",
     featured: true,
+<<<<<<< HEAD
     readTime: "8 min",
   },
   {
@@ -98,6 +99,27 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-27",
     featured: false,
     readTime: "8 min",
+=======
+    readTime: "7 min read"
+  },
+  {
+    slug: "enterprise-rag-blueprint-2025",
+    title: "Enterprise RAG Blueprint v2: Freshness, Security, and Evals",
+    description: "A practical architecture for production RAG with recency, authorization-aware retrieval, and layered evaluation.",
+    category: "GenAI",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "finops-scorecards-2025",
+    title: "Cloud FinOps Scorecards Engineers Actually Use",
+    description: "Guardrails, PR gates, and budgets that reduce waste 25–40% without blocking product velocity.",
+    category: "Cloud",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "6 min read"
+>>>>>>> cursor/create-and-deploy-new-content-ccd1
   }
 ];
 

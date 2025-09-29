@@ -193,6 +193,46 @@ export const newInsights = [
       <h3>Building Your Micro-SaaS</h3>
       <p>Start with customer discovery, validate your problem-solution fit, and iterate rapidly based on user feedback.</p>
     `
+  },
+  {
+    id: "enterprise-rag-blueprint-2025",
+    title: "Enterprise RAG Blueprint v2: Freshness, Security, and Evals",
+    summary: "Production-ready RAG patterns: hybrid search, auth-aware retrieval, freshness controls, and layered evaluation.",
+    category: "GenAI",
+    date: "2025-10-04",
+    readMinutes: 9,
+    featured: true,
+    tags: ["RAG", "GenAI", "Search", "Security"],
+    content: `
+      <h2>Why RAG v2</h2>
+      <p>Move beyond naive vector search with hybrid retrieval, freshness windows, and authorization-aware filters.</p>
+      <h3>Operate with Confidence</h3>
+      <ul>
+        <li>Offline evals aligned to business KPIs</li>
+        <li>Online canaries with rollback triggers</li>
+        <li>Prompt firewalls and red-teaming</li>
+      </ul>
+    `
+  },
+  {
+    id: "finops-scorecards-2025",
+    title: "Cloud FinOps Scorecards Engineers Actually Use",
+    summary: "Guardrails, PR checks, and budgets that cut waste 25–40% while preserving delivery speed.",
+    category: "Cloud",
+    date: "2025-10-04",
+    readMinutes: 6,
+    featured: true,
+    tags: ["FinOps", "Cloud", "Governance"],
+    content: `
+      <h2>Scorecards That Matter</h2>
+      <p>Connect spend to product goals, set guardrails engineers respect, and automate waste prevention.</p>
+      <h3>Playbook</h3>
+      <ul>
+        <li>PR gates for risky resources</li>
+        <li>Budgets + alerts by environment</li>
+        <li>Continuous right-sizing</li>
+      </ul>
+    `
   }
 ];
 

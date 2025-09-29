@@ -114,6 +114,30 @@ const contentHighlights = [
   }
 ];
 
+// Additions
+contentHighlights.push(
+  {
+    id: 9,
+    title: "🧠 Enterprise RAG Blueprint v2",
+    description: "Hybrid search, freshness, and auth-aware retrieval with layered evals.",
+    ctaText: "Read Guide",
+    ctaLink: "/blog/enterprise-rag-blueprint-2025",
+    badge: "New",
+    stats: "9 min read",
+    variant: "premium" as const
+  },
+  {
+    id: 10,
+    title: "💸 FinOps Scorecards Engineers Use",
+    description: "Guardrails and PR checks that cut cloud waste 25–40%.",
+    ctaText: "See Playbook",
+    ctaLink: "/blog/finops-scorecards-2025",
+    badge: "Featured",
+    stats: "6 min read",
+    variant: "success" as const
+  }
+);
+
 export const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
   className = "",
   variant = 'default',
