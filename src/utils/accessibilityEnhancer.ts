@@ -71,8 +71,6 @@ class AccessibilityEnhancer {
     this.mutationObserver?.disconnect();
     this.performanceObserver?.disconnect();
     
-    // Event listeners were attached using inline functions; nothing to remove here
-    
     this.isInitialized = false;
     this.focusTrapElements = [];
   }
@@ -96,7 +94,10 @@ class AccessibilityEnhancer {
     }
   }
 
-  // Removed duplicate initialize method to avoid ESLint no-dupe-class-members
+  /**
+   * Backward-compatible initialize alias
+   */
+  // Removed duplicate initialize method to avoid no-dupe-class-members ESLint error
 
   private setupKeyboardNavigation(): void {
     if (!this.config.keyboardNavigation) return;
