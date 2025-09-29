@@ -10,6 +10,10 @@ interface ContentPromotionBannerProps {
 	dismissible?: boolean;
 }
 
+<<<<<<< HEAD
+export default function ContentPromotionBanner(_props: ContentPromotionBannerProps): React.JSX.Element {
+	return <div aria-label="Content Promotion Banner" />;
+=======
 const variantStyles: Record<string, string> = {
   info: 'from-indigo-500/15 to-blue-500/15 border-indigo-400/30 text-indigo-100',
   success: 'from-emerald-500/15 to-teal-500/15 border-emerald-400/30 text-emerald-100',
@@ -68,4 +72,5 @@ export default function ContentPromotionBanner(props: ContentPromotionBannerProp
       </div>
     </div>
   );
+>>>>>>> origin/cursor/create-and-deploy-new-content-48b5
 }

@@ -10,6 +10,11 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
+    slug: "ai-agents-in-the-enterprise-2026",
+    title: "AI Agents in the Enterprise 2026: From Pilots to Production",
+    description: "Design agent workflows with deterministic tools, traces, and budgets that scale across teams.",
+=======
     slug: "autonomous-infrastructure-2026",
     title: "Autonomous Infrastructure 2026: From Runbooks to Reality",
     description: "Risk budgets, safe rollbacks, and self‑healing patterns for production infra.",
@@ -49,6 +54,7 @@ export const posts: BlogPost[] = [
     slug: "genai-routing-blueprint-2026",
     title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",
     description: "Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.",
+>>>>>>> origin/cursor/create-and-deploy-new-content-48b5
     category: "GenAI",
     publishedAt: "2025-10-13",
     featured: true,

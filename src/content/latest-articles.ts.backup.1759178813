@@ -17,6 +17,20 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+<<<<<<< HEAD
+    id: "enterprise-ai-agents-2026",
+    slug: "enterprise-ai-agents-2026",
+    title: "Enterprise AI Agents 2026: Tools, Traces, and Budgets",
+    description: "Ship reliable agent workflows with deterministic tools, live traces, and risk budgets.",
+    excerpt: "From pilot to production: a blueprint for trustworthy multi‑tool agents in the enterprise.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "GenAI",
+    tags: ["Agents", "Tracing", "Budgets"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/enterprise-ai-agents-2026.jpg",
+=======
     id: "autonomous-infra-blueprint-2026",
     slug: "autonomous-infra-blueprint-2026",
     title: "Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
@@ -45,10 +59,25 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "8 min read",
     image: "/images/quantum-ai-hybrid-2026.jpg",
+>>>>>>> origin/cursor/create-and-deploy-new-content-48b5
     newBadge: true,
     trending: true
   },
   {
+<<<<<<< HEAD
+    id: "platform-roi-scorecards-v3-2026",
+    slug: "platform-roi-scorecards-v3-2026",
+    title: "Platform ROI Scorecards v3: From Infra Costs to Shipped Value",
+    description: "Adoption, golden‑path TTFX, and outcome‑linked SLOs that prove platform ROI.",
+    excerpt: "A practical scorecard v3 that leaders and engineers actually use.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "Platform Engineering",
+    tags: ["Scorecards", "ROI", "Platform"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/platform-roi-scorecards-v3-2026.jpg",
+=======
     id: "privacy-first-flags-2026",
     slug: "privacy-first-flags-2026",
     title: "Privacy‑First Feature Flags 2026: Scoped IDs, On‑Device Filters, KV",
@@ -61,6 +90,7 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "7 min read",
     image: "/images/privacy-first-flags-2026.jpg",
+>>>>>>> origin/cursor/create-and-deploy-new-content-48b5
     newBadge: true,
     trending: true
   },
