@@ -54,6 +54,15 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="Edge LLM Caching Blueprint 2026: Sub‑100ms Prompts at Scale"
+            excerpt="Deliver sub‑100ms prompts with regional caches, warm pools, and adaptive routing without degrading quality."
+            date="September 29, 2025"
+            category="Performance"
+            readTime="13 min"
+            image="⚡"
+            href="/blog/edge-llm-caching-blueprint-2026"
+          />
+          <BlogPost
             title="Platform Engineering Scorecards 2026: From Golden Paths to Outcomes"
             excerpt="Measure adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery."
             date="October 9, 2025"

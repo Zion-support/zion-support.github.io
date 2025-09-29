@@ -60,23 +60,14 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-<<<<<<< HEAD
-            <span>✨ New 2026 content:</span>
-            <a href="/blog/agentic-workflow-orchestration-2026" className="underline hover:text-yellow-200">Agentic Workflow Orchestration</a>
+            <span>✨ New on the blog:</span>
+            <Link href="/blog/edge-llm-caching-blueprint-2026" className="underline hover:text-yellow-200">Edge LLM Caching Blueprint 2026</Link>
             <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-data-privacy-2026" className="underline hover:text-yellow-200">AI Data Privacy</a>
-=======
-            <span>✨ Latest 2026 content:</span>
             <a href="/blog/ai-autonomous-operations-2026" className="underline hover:text-yellow-200">AI Autonomous Operations</a>
->>>>>>> origin/main
             <span className="hidden md:inline">•</span>
             <a href="/blog/ai-finops-advanced-2026" className="underline hover:text-yellow-200">AI FinOps Advanced</a>
             <span className="hidden md:inline">•</span>
             <a href="/blog/ai-platform-architecture-2026" className="underline hover:text-yellow-200">Platform Architecture</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/case-studies/ai-autonomous-operations-success-2026" className="underline hover:text-yellow-200">$15M ROI Case Study</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
           </div>
           <Link
             href="/blog"
