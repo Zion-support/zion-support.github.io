@@ -72,6 +72,54 @@ export interface PromotionalBanner {
 // Blog Posts Configuration
 export const blogPosts: BlogPost[] = [
   {
+    id: 'ai-platform-engineering-2025',
+    title: 'AI Platform Engineering 2025: Scorecards, Trains, and Golden Paths',
+    excerpt: 'Practical platform patterns that link capabilities to adoption, SLOs, and ROI.',
+    date: 'October 8, 2025',
+    category: 'Platform Engineering',
+    readTime: '9 min',
+    image: '🛤️',
+    featured: true,
+    slug: '/blog/ai-platform-engineering-2025',
+    tags: ['Platform', 'ROI', 'Golden Paths']
+  },
+  {
+    id: 'serverless-inference-cost-playbook-2025',
+    title: 'Serverless Inference Cost Playbook: Latency Budgets Without Bill Shock',
+    excerpt: 'Concurrency shaping, tiered models, and result caching to cut spend 35–60%.',
+    date: 'October 8, 2025',
+    category: 'GenAI',
+    readTime: '8 min',
+    image: '🧰',
+    featured: true,
+    slug: '/blog/serverless-inference-cost-playbook-2025',
+    tags: ['GenAI', 'Cost', 'Serverless']
+  },
+  {
+    id: 'cloud-finops-guardrails-2025',
+    title: 'Cloud FinOps Guardrails Engineers Actually Use',
+    excerpt: 'PR checks, budgets, and alerts that reduce waste while keeping teams fast.',
+    date: 'October 8, 2025',
+    category: 'Cloud',
+    readTime: '7 min',
+    image: '💸',
+    featured: true,
+    slug: '/blog/cloud-finops-guardrails-2025',
+    tags: ['Cloud', 'FinOps', 'Guardrails']
+  },
+  {
+    id: 'enterprise-rag-v2-2025',
+    title: 'Enterprise RAG v2: Freshness Windows, Guardrails, and KPIs',
+    excerpt: 'Design RAG that stays accurate with freshness TTLs, evals, and safe tools.',
+    date: 'October 8, 2025',
+    category: 'GenAI',
+    readTime: '9 min',
+    image: '🏢',
+    featured: true,
+    slug: '/blog/enterprise-rag-v2-2025',
+    tags: ['GenAI', 'RAG', 'Evaluation']
+  },
+  {
     id: 'ai-revolution-2025',
     title: 'AI Revolution 2025: The Complete Business Transformation Guide',
     excerpt: 'Discover how AI is reshaping industries and creating unprecedented opportunities for growth in 2025.',
@@ -154,6 +202,43 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     slug: '/blog/ai-virtual-assistants-customer-service',
     tags: ['AI', 'Virtual Assistant', 'Customer Service', 'NLP']
+  }
+  ,
+  {
+    id: 'serverless-inference-costs-2025',
+    title: 'Serverless Inference Cost Playbook 2025',
+    excerpt: 'Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.',
+    date: 'October 05, 2025',
+    category: 'AI Infrastructure',
+    readTime: '9 min',
+    image: '🧰',
+    featured: true,
+    slug: '/blog/serverless-inference-cost-playbook-2025',
+    tags: ['Serverless', 'Inference', 'Cost', 'AI Infra']
+  },
+  {
+    id: 'production-rag-architectures-2025',
+    title: 'RAG Architectures That Actually Work in Production',
+    excerpt: 'Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.',
+    date: 'October 04, 2025',
+    category: 'GenAI',
+    readTime: '12 min',
+    image: '📚',
+    featured: true,
+    slug: '/blog/production-rag-architectures-2025',
+    tags: ['RAG', 'Vector Search', 'Evals', 'GenAI']
+  },
+  {
+    id: 'secure-genai-guardrails-2025',
+    title: 'Secure GenAI: Policy‑First Guardrails That Scale',
+    excerpt: 'Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.',
+    date: 'October 03, 2025',
+    category: 'Security',
+    readTime: '8 min',
+    image: '🛡️',
+    featured: false,
+    slug: '/blog/secure-genai-guardrails-2025',
+    tags: ['GenAI', 'Security', 'Compliance']
   }
 ];
 
@@ -381,28 +466,15 @@ export const services: Service[] = [
 // Promotional Banners Configuration
 export const promotionalBanners: PromotionalBanner[] = [
   {
-    id: 'agentic-workflows-spotlight',
-    message: '🧩 New: Agentic Workflows Blueprint 2026 — Tools, Traces, Policy Tests',
-    ctaText: 'Read Blueprint',
-    ctaLink: '/blog/agentic-workflows-blueprint-2026',
-    backgroundColor: 'bg-gradient-to-r from-sky-600 to-indigo-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 16,
-    active: true,
-    priority: 0
-  },
-  {
-    id: 'new-oct-2025-content-banner',
-    message: '✨ New: AI Incident Response, Observability Scorecards, Privacy‑Preserving RAG',
-    ctaText: 'Read the latest',
+    id: 'fresh-oct-8-2025',
+    message: '✨ New: AI Platform Engineering, Serverless Cost Playbook, Cloud FinOps Guardrails',
+    ctaText: 'Read now',
     ctaLink: '/blog',
     backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
     textColor: 'text-white',
     showClose: true,
     autoHide: true,
-    hideAfter: 15,
+    hideAfter: 20,
     active: true,
     priority: 0
   },
@@ -613,6 +685,20 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 16,
     active: true,
     priority: 3
+  }
+  ,
+  {
+    id: 'fresh-content-oct-2025',
+    message: '🚀 Fresh: Serverless Inference, Production RAG, Secure GenAI',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-cyan-600 to-blue-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0
   }
 ];
 

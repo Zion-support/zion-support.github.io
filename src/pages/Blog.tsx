@@ -17,6 +17,7 @@ import BlogPromotionBanner from "../components/BlogPromotionBanner";
 import { posts as contentPosts } from "../content/posts";
 const Header = () => <header />;
 const Footer = () => <footer />;
+import { posts as contentPosts } from "../content/posts";
 
 interface BlogPost {
   id: number;

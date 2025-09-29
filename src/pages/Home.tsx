@@ -25,8 +25,6 @@ import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
 import NewContentAnnouncement from "../components/NewContentAnnouncement";
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
-import NewContentShowcase from "../components/NewContentShowcase";
-import NewServicesAnnouncement from "../components/NewServicesAnnouncement";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
@@ -111,7 +109,14 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         <NewContentAnnouncement />
-        <LatestContentBanner className="border-b border-white/10" variant="info" />
+        <LatestContentBanner 
+          className="border-b border-white/10" 
+          variant="info"
+          title="New: AI Risk Mitigation, Privacy‑Preserving Agents, KPI‑Linked Policy Tests"
+          description="Fresh guides on policy gates, private agents, and KPI‑linked CI tests."
+          ctaText="Read now"
+          ctaLink="/blog"
+        />
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
@@ -227,66 +232,19 @@ const Home = () => {
                 <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">Edge Flags</span>
               </div>
             </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">
-              <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="text-3xl font-bold text-zion-cyan group-hover:text-zion-blue-light transition-colors">
-                  500+
-                </div>
-                <div className="text-sm text-zion-slate-light">
-                  Projects Delivered
-                </div>
-              </div>
-              <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="text-3xl font-bold text-zion-cyan group-hover:text-zion-blue-light transition-colors">
-                  99.9%
-                </div>
-                <div className="text-sm text-zion-slate-light">Uptime SLA</div>
-              </div>
-              <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="text-3xl font-bold text-zion-cyan group-hover:text-zion-blue-light transition-colors">
-                  24/7
-                </div>
-                <div className="text-sm text-zion-slate-light">Support</div>
-              </div>
-              <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="text-3xl font-bold text-zion-cyan group-hover:text-zion-blue-light transition-colors">
-                  5★
-                </div>
-                <div className="text-sm text-zion-slate-light">
-                  Client Rating
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/services"
-                className="btn-primary flex items-center justify-center gap-2 group"
-              >
-                Explore Services
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link to="/contact" className="btn-secondary">
-                Get Started
-              </Link>
-            </div>
           </div>
         </section>
-
-        {/* New Content Showcase - Hero Variant */}
-        <NewContentShowcase variant="hero" />
-
-        {/* New Services Announcement - Hero Variant */}
-        <NewServicesAnnouncement variant="hero" />
 
         {/* Latest Insights Section */}
         {/* Promo ribbon for new content */}
         <div className="container mx-auto px-6">
-            <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
+          <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<<<<<<< HEAD
             New: On‑Device Agents, GenAI Budgets, Secure Tools Marketplace — read now
+=======
+            New: Platform Engineering 2025, Serverless Cost Playbook, FinOps Guardrails — read now
+>>>>>>> origin/main
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
@@ -296,9 +254,6 @@ const Home = () => {
         <section className="py-20 bg-white relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50"></div>
           <div className="container mx-auto px-6 relative z-10">
-            {/* New Services Announcement - Compact */}
-            <NewServicesAnnouncement variant="compact" className="mb-16" />
-            
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-8">
                 <Sparkles className="w-4 h-4 mr-2" />
@@ -544,7 +499,7 @@ const Home = () => {
                 <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Fresh: Agentic Workflows, Privacy‑First Observability, Edge LLM Caching
+                Fresh: Agentic Workflows, Edge LLM Caching, Operational Scorecards
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles & Insights
@@ -587,12 +542,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-
-        {/* New Content Showcase - Full Section */}
-        <NewContentShowcase variant="section" />
-
-        {/* New Services Announcement - Full Section */}
-        <NewServicesAnnouncement variant="banner" />
 
         {/* Testimonials Section */}
         <section className="bg-zion-slate-dark py-20 relative overflow-hidden">
@@ -691,8 +640,26 @@ const Home = () => {
         {/* Latest Articles */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
-            {/* New Content Showcase - Compact */}
-            <NewContentShowcase variant="compact" className="mb-10" />
+            {/* New Content Announcement */}
+            <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-400/30 rounded-xl p-6 mb-10">
+              <div className="flex items-center gap-3 mb-3">
+                <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
+                <span className="text-lg font-bold text-purple-700">📚 NEW CONTENT ALERT</span>
+                <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
+              </div>
+              <p className="text-gray-700 font-semibold mb-2">
+                🚀 Just Published: 5 Revolutionary Articles on AI Automation, Cloud Infrastructure, and Enterprise AI Implementation
+              </p>
+              <p className="text-gray-600 text-sm mb-4">
+                Discover the latest insights on AI-powered business automation, next-gen cloud infrastructure, and strategic AI roadmaps for 2025.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">AI Automation</span>
+                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Cloud Strategy</span>
+                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">AI Governance</span>
+                <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">Platform Engineering</span>
+              </div>
+            </div>
             
             <div className="mb-10 flex items-end justify-between">
               <div>
@@ -816,15 +783,15 @@ const Home = () => {
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-purple-200 mb-1">GenAI</div>
-                  <div className="font-semibold text-white">Agentic Workflows Blueprint 2026</div>
+                  <div className="font-semibold text-white">Agentic Workflows Blueprint</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-blue-200 mb-1">Architecture</div>
                   <div className="font-semibold text-white">Edge LLM Caching</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Observability</div>
-                  <div className="font-semibold text-white">Privacy‑First Observability</div>
+                  <div className="text-sm text-rose-200 mb-1">Security</div>
+                  <div className="font-semibold text-white">Secure ML Supply Chain</div>
                 </div>
               </div>
             </div>
