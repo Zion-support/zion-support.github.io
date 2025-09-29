@@ -13,6 +13,8 @@ import { notificationManager } from './utils/notificationManager';
 import { userFeedback } from './utils/userFeedbackManager';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import RealTimeMonitor from './components/RealTimeMonitor';
+import SystemMetricsDashboard from './components/SystemMetricsDashboard';
+import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import { performanceOptimizer } from './utils/performanceOptimizer';
 import { enhancedPerformanceOptimizer } from './utils/enhancedPerformance';
 import { enhancedSecurityManager } from './utils/enhancedSecurity';
@@ -132,7 +134,6 @@ export default function App(): React.JSX.Element {
   return (
     <EnhancedErrorBoundary>
       <div className="App">
-        {appContent}
         
         {/* Performance Dashboard */}
         <PerformanceDashboard />
@@ -184,95 +185,6 @@ export default function App(): React.JSX.Element {
         
         <AppRouter />
       
-      {/* Performance Optimizer Modal */}
-      {showPerformanceOptimizer && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-bold">Performance Optimizer</h2>
-              <button
-                onClick={() => setShowPerformanceOptimizer(false)}
-                className="text-gray-500 hover:text-gray-700 text-2xl"
-              >
-                ✕
-              </button>
-            </div>
-            <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
-          </div>
-        </div>
-      )}
-
-      {/* Performance Monitor Modal */}
-      {showPerformanceMonitor && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-bold">Performance Monitor</h2>
-              <button
-                onClick={() => setShowPerformanceMonitor(false)}
-                className="text-gray-500 hover:text-gray-700 text-2xl"
-              >
-                ✕
-              </button>
-            </div>
-            <EnhancedSystemDashboard />
-          </div>
-        </div>
-      )}
-
-      {/* AI Dashboard Modal */}
-      {showAIDashboard && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-bold">AI Performance Dashboard</h2>
-              <button
-                onClick={() => setShowAIDashboard(false)}
-                className="text-gray-500 hover:text-gray-700 text-2xl"
-              >
-                ✕
-              </button>
-            </div>
-            <AIPerformanceDashboard isVisible={true} onClose={() => setShowAIDashboard(false)} />
-          </div>
-        </div>
-      )}
-
-      {/* SEO Optimizer Modal */}
-      {showSEOOptimizer && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-bold">SEO Optimizer</h2>
-              <button
-                onClick={() => setShowSEOOptimizer(false)}
-                className="text-gray-500 hover:text-gray-700 text-2xl"
-              >
-                ✕
-              </button>
-            </div>
-            <SEOOptimizer seoData={seoData} />
-          </div>
-        </div>
-      )}
-
-      {/* Comprehensive Dashboard Modal */}
-      {showComprehensiveDashboard && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-bold">Comprehensive System Dashboard</h2>
-              <button
-                onClick={() => setShowComprehensiveDashboard(false)}
-                className="text-gray-500 hover:text-gray-700 text-2xl"
-              >
-                ✕
-              </button>
-            </div>
-            <ComprehensiveSystemDashboard isVisible={true} onClose={() => setShowComprehensiveDashboard(false)} />
-          </div>
-        </div>
-      )}
       </div>
     </EnhancedErrorBoundary>
   );

@@ -56,24 +56,18 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
 
   const handleOptimize = useCallback(async (type: string) => {
     try {
-<<<<<<< HEAD
       switch (type) {
         case 'performance':
-          await performanceOptimizer.startMonitoring();
+          await performanceOptimizer.startMonitoring?.();
           break;
         case 'accessibility':
-          // Accessibility enhancer doesn't have enhance method, skip
+          // No accessible optimize API available, skip
           break;
         case 'seo':
-          // SEO optimizer doesn't have optimize method, skip
+          // No SEO optimize API available, skip
           break;
-=======
-      if (metrics) {
-        await performanceOptimizer.optimize();
-        // Reload metrics after optimization
-        const updatedMetrics = await performanceOptimizer.getMetrics();
-        setMetrics(updatedMetrics);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ec79
+        default:
+          break;
       }
       
       // Refresh metrics
@@ -214,20 +208,12 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                   <div className="bg-white border rounded-lg p-6">
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">Optimization Suggestions</h4>
                     <div className="space-y-2">
-<<<<<<< HEAD
-                      {performanceOptimizer.getSuggestions().slice(0, 3).map((suggestion, index) => (
+                      {performanceOptimizer.getSuggestions?.().slice(0, 3).map((suggestion: any, index: number) => (
                         <div key={index} className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
                           <p className="text-sm text-yellow-800">{suggestion.description}</p>
                           <div className="text-xs text-yellow-600 mt-1">
                             Impact: {suggestion.impact}
                           </div>
-=======
-                      {metrics.suggestions.map((suggestion, index) => (
-                        <div key={index} className="p-3 bg-yellow-50 rounded-lg">
-                          <p className="font-medium">{suggestion.title}</p>
-                          <p className="text-sm text-gray-600">{suggestion.description}</p>
-                          <p className="text-sm text-blue-600">Impact: {suggestion.impact}</p>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ec79
                         </div>
                       ))}
                     </div>
@@ -238,7 +224,6 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
 
             {activeTab === 'accessibility' && accessibilityMetrics && (
               <div className="space-y-6">
-<<<<<<< HEAD
                 <div className="flex items-center justify-between">
                   <h3 className="text-xl font-semibold text-gray-900">Accessibility Metrics</h3>
                   <button
@@ -259,21 +244,6 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                           <p className="text-xs text-red-600 mt-1">{issue.message}</p>
                         </div>
                       ))}
-=======
-                <h3 className="text-xl font-semibold">Accessibility Metrics</h3>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2">Accessibility Score</h4>
-                    <div className="text-3xl font-bold text-green-600">
-                      {accessibilityMetrics.score}/100
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
-                      <div 
-                        className="bg-green-600 h-2 rounded-full transition-all duration-300"
-                        style={{ width: `${accessibilityMetrics.score}%` }}
-                      ></div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ec79
                     </div>
                   </div>
 
@@ -302,33 +272,22 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                     Optimize SEO
                   </button>
                 </div>
-
-<<<<<<< HEAD
-                <div className="bg-white border rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Issues Found</h4>
-                  <div className="space-y-3">
-                    {seoIssues.slice(0, 5).map((issue, index) => (
-                      <div key={index} className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
-                        <p className="text-sm font-medium text-yellow-800">{issue.type}</p>
-                        <p className="text-xs text-yellow-600 mt-1">{issue.message}</p>
-                        <div className="text-xs text-yellow-600 mt-1">
-                          Impact: {issue.impact || 'medium'}
-=======
                 {seoIssues.length > 0 && (
-                  <div className="bg-white border rounded-lg p-4">
-                    <h4 className="font-semibold mb-4">SEO Issues</h4>
-                    <div className="space-y-2">
-                      {seoIssues.map((issue, index) => (
-                        <div key={index} className="p-3 bg-yellow-50 rounded-lg">
-                          <p className="font-medium text-yellow-800">{issue.type}</p>
-                          <p className="text-sm text-yellow-600">{issue.message}</p>
-                          <p className="text-sm text-gray-600">Priority: {issue.priority}</p>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ec79
+                  <div className="bg-white border rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Issues Found</h4>
+                    <div className="space-y-3">
+                      {seoIssues.slice(0, 5).map((issue, index) => (
+                        <div key={index} className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                          <p className="text-sm font-medium text-yellow-800">{issue.type}</p>
+                          <p className="text-xs text-yellow-600 mt-1">{issue.message}</p>
+                          <div className="text-xs text-yellow-600 mt-1">
+                            Impact: {issue.impact || 'medium'}
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             )}
 
