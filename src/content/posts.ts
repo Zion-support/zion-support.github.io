@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-risk-mitigation-scorecards-2026",
+    title: "AI Risk Mitigation Scorecards 2026: PR Gates That Speed Teams Up",
+    description: "Measurable guardrails: owned mitigations, CI policy tests, and online canaries wired to KPIs.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "customer-ai-copilots-2026",
+    title: "Customer AI Copilots 2026: Outcomes, Guardrails, and Adoption",
+    description: "Design copilots with grounded prompts, product KPIs, and policy‑tested guardrails that sellers adopt.",
+    category: "Applied AI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
     description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",

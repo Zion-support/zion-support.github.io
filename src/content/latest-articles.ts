@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-risk-mitigation-scorecards-2026",
+    slug: "ai-risk-mitigation-scorecards-2026",
+    title: "AI Risk Mitigation Scorecards 2026: PR Gates That Speed Teams Up",
+    description: "Owned mitigations, CI policy tests, and online canaries wired to KPIs.",
+    excerpt: "Ship faster with measurable guardrails engineers actually adopt—no heavy process.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Governance",
+    tags: ["Risk", "Scorecards", "Policy", "Canaries"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-risk-mitigation-scorecards-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "customer-ai-copilots-2026",
+    slug: "customer-ai-copilots-2026",
+    title: "Customer AI Copilots 2026: Outcomes, Guardrails, and Adoption",
+    description: "Grounded prompts, KPI‑linked evals, and policy‑tested guardrails that teams trust.",
+    excerpt: "Design AI copilots sellers actually use—wired to product outcomes from day one.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Applied AI",
+    tags: ["Copilots", "Adoption", "Guardrails", "Evals"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/customer-ai-copilots-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-enterprise-security-2026",
     slug: "ai-enterprise-security-2026",
     title: "AI Enterprise Security 2026: Zero-Trust Architecture for AI Systems",
