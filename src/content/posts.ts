@@ -10,12 +10,15 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
     slug: "ai-autonomous-infrastructure-2026",
     title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
     description: "Blueprints and scorecards to operate self‑healing platforms with budgets and safe automation.",
     category: "Platform Engineering",
-=======
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-platform-slos-2026",
     title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
     description: "Design SLOs and risk budgets for AI systems with instant rollbacks and KPI‑linked canaries.",
@@ -47,7 +50,6 @@ export const posts: BlogPost[] = [
     title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
     description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
     category: "Cybersecurity",
->>>>>>> cursor/create-and-deploy-new-content-6196
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "9 min read"

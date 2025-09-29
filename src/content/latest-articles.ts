@@ -17,7 +17,6 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
-<<<<<<< HEAD
     id: "ai-autonomous-infrastructure-2026",
     slug: "ai-autonomous-infrastructure-2026",
     title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
@@ -62,7 +61,10 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "7 min read",
     image: "/images/zero-trust-for-genai-2026.jpg",
-=======
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-platform-slos-2026",
     slug: "ai-platform-slos-2026",
     title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
@@ -107,7 +109,6 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "6 min read",
     image: "/images/edge-feature-flags-2026.jpg",
->>>>>>> cursor/create-and-deploy-new-content-6196
     newBadge: true,
     trending: true
   },
