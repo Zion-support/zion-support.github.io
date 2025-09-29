@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-autonomous-infrastructure-2026",
+    title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing Platforms",
+    description: "Blueprint for platforms that auto‑repair, auto‑scale, and tune performance with policy guards.",
+    category: "AI Operations",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "quantum-ai-hybrid-roadmap-2026",
+    title: "Quantum‑AI Hybrid Roadmap 2026: From Pilots to Production",
+    description: "Pragmatic steps to move from PoCs to production with hybrid quantum + AI workloads.",
+    category: "Quantum Computing",
+    publishedAt: "2025-10-14",
+    featured: false,
+    readTime: "10 min read"
+  },
+  {
+    slug: "privacy-first-observability-edges-2026",
+    title: "Privacy‑First Observability at the Edge: Scoped IDs and Local Redaction",
+    description: "Capture decision‑grade telemetry without PII leaks using scoped IDs and on‑device filters.",
+    category: "Observability",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-risk-budgets-2025",
     title: "AI Risk Budgets 2025: Safer Automation Without Slowing Teams",
     description: "Budget risky actions, approvals, and rollbacks to ship automation with confidence.",
