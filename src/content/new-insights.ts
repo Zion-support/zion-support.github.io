@@ -1,5 +1,53 @@
 export const newInsights = [
   {
+    id: "privacy-preserving-agents-2026",
+    title: "Privacy‑Preserving Agents: Isolation, Redaction, Least‑Privilege",
+    summary: "Blueprint for safe autonomous agents with sandboxes, scoped tools, data redaction, and audit trails.",
+    category: "AI Security",
+    date: "2025-10-10",
+    readMinutes: 8,
+    featured: true,
+    tags: ["Agents", "Security", "Privacy"],
+    content: `
+      <h2>Operate Safely</h2>
+      <p>Combine container sandboxes, allow‑lists, and data redaction to bound agent behavior without blocking delivery.</p>
+      <h3>What to Ship</h3>
+      <ul>
+        <li>Scoped tool runners with egress policies</li>
+        <li>Redaction + PII detection at input/output</li>
+        <li>Signed traces and policy evaluations</li>
+      </ul>
+    `
+  },
+  {
+    id: "kpi-linked-policy-tests-2025",
+    title: "KPI‑Linked Policy Tests: Governance that Accelerates Delivery",
+    summary: "Wire policy checks to KPIs so governance removes toil and focuses on outcomes.",
+    category: "Engineering",
+    date: "2025-10-10",
+    readMinutes: 6,
+    featured: true,
+    tags: ["Policy", "Evals", "KPIs"],
+    content: `
+      <h2>Outcome‑Linked Controls</h2>
+      <p>Shift from blanket approvals to targeted checks that correlate with reliability and customer outcomes.</p>
+    `
+  },
+  {
+    id: "ai-risk-mitigation-playbook-2026",
+    title: "AI Risk Mitigation Playbook 2026",
+    summary: "A practical set of mitigations for model misuse, privacy, and reliability—with owners and SLAs.",
+    category: "AI Governance",
+    date: "2025-10-10",
+    readMinutes: 9,
+    featured: true,
+    tags: ["Risk", "Governance", "Playbook"],
+    content: `
+      <h2>Make It Stick</h2>
+      <p>Assign mitigation owners, define SLAs, and review deltas monthly using scorecards tied to KPIs.</p>
+    `
+  },
+  {
     id: "ai-platform-roi-scorecards",
     title: "AI Platform ROI: Simple Scorecards That Drive Adoption",
     summary: "Connect platform capabilities to adoption, golden paths, and SLO outcomes. Make quarterly cut/scale decisions with evidence.",

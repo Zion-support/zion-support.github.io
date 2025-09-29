@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "privacy-preserving-agents-2026",
+    title: "Privacy‑Preserving Agents: Isolation, Redaction, and Least‑Privilege",
+    description: "Design agent systems with sandboxes, scoped tools, and automatic redaction for safe autonomy.",
+    category: "AI Security",
+    publishedAt: "2025-10-10",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "kpi-linked-policy-tests-2025",
+    title: "KPI‑Linked Policy Tests: Governance That Improves Velocity",
+    description: "Attach lightweight policy checks to business outcomes so teams ship faster with confidence.",
+    category: "Engineering",
+    publishedAt: "2025-10-10",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "ai-risk-mitigation-playbook-2026",
+    title: "AI Risk Mitigation Playbook 2026: Practical Controls That Stick",
+    description: "From model misuse to data leakage—apply pragmatic mitigations with owners, SLAs, and budgets.",
+    category: "AI Governance",
+    publishedAt: "2025-10-10",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-incident-response-2026",
     title: "AI Incident Response 2026: Playbooks, Canaries, and SLAs",
     description: "Practical incident response for AI features with on-call playbooks and KPI-linked canaries.",
