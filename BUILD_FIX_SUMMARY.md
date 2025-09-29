@@ -204,3 +204,17 @@ The project is now **fully deployment-ready** with:
 - ✅ Netlify compatibility confirmed
 
 **Status: ✅ PRODUCTION READY** 
+
+---
+
+## Netlify Build Verification - 2025-09-29
+
+- Verified Node and pnpm match `netlify.toml` (`NODE_VERSION=22`, `PNPM_VERSION=10.17.1`).
+- Fresh install with `pnpm install --frozen-lockfile` completed successfully.
+- Ran `pnpm run netlify:build` locally; Vite production build succeeded and emitted to `dist/`.
+- No code or configuration changes required; `netlify.toml` `[build]` command and environment are correct.
+
+If Netlify UI builds fail despite local success:
+
+- Clear Netlify build cache and redeploy.
+- Ensure environment variables in Netlify match `netlify.toml` overrides.
