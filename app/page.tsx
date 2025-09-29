@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import MegaContent2026Banner from '../components/MegaContent2026Banner';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import LatestContent2026MegaBanner from '../components/LatestContent2026MegaBanner';
+import AIROICalculator2026 from '../components/AIROICalculator2026';
 =======
 import { Clock, ArrowRight } from 'lucide-react';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
@@ -426,6 +428,13 @@ export default function HomePage() {
       
       {/* Latest 2026 Mega Content Banner */}
       <LatestContent2026MegaBanner />
+      
+      {/* AI ROI Calculator */}
+      <div className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <AIROICalculator2026 />
+        </div>
+      </div>
       
       {/* AI Cost Optimization Banner */}
       <AICostOptimizationBanner />

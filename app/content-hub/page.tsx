@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import AIROICalculator2026 from '../../components/AIROICalculator2026';
     <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Header */}
       <div className="text-center mb-16">
@@ -567,6 +568,20 @@ export default function ContentHub() {
               </div>
             </div>
           </Link>
+        </div>
+      </section>
+
+      {/* Interactive Tools Section */}
+      <section className="mb-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Interactive AI Tools</h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Calculate your potential AI ROI, optimize costs, and explore implementation strategies with our interactive tools.
+          </p>
+        </div>
+        
+        <div className="bg-white rounded-2xl shadow-xl p-8">
+          <AIROICalculator2026 />
         </div>
       </section>
 
