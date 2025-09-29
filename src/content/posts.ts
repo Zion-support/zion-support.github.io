@@ -434,7 +434,6 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "9 min read"
   }
-<<<<<<< HEAD
   ,
   {
     slug: "agentic-workflows-blueprint-2026",
@@ -481,5 +480,24 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-11",
     featured: false,
     readTime: "8 min read"
+  }
+  ,
+  {
+    slug: "ai-agent-slo-playbooks-2026",
+    title: "AI Agent SLO Playbooks: Budgets, Rollbacks, and Live Traces",
+    description: "Turn agent incidents into fast, measurable recoveries with SLOs and budgeted actions.",
+    category: "AI Operations",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "hybrid-vector-search-patterns-2026",
+    title: "Hybrid Vector Search Patterns: Quality Under Cost and Freshness Budgets",
+    description: "Blend sparse + dense retrieval with TTL windows to improve answer quality at lower cost.",
+    category: "GenAI",
+    publishedAt: "2025-10-12",
+    featured: false,
+    readTime: "6 min read"
   }
 ];
