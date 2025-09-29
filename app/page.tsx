@@ -56,6 +56,7 @@ import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBa
 import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
 import LatestContent2026MegaBanner from '../components/LatestContent2026MegaBanner';
 import AICostOptimizationBanner from '../components/AICostOptimizationBanner';
+import LatestContent2026PromotionalBanner from '../components/LatestContent2026PromotionalBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 2026 AI Solutions',
@@ -396,6 +397,9 @@ export default function HomePage() {
       {/* Revolutionary Content 2026 Banner */}
       <RevolutionaryContent2026Banner />
       
+      {/* Latest Content 2026 Promotional Banner */}
+      <LatestContent2026PromotionalBanner />
+
       {/* Ultimate Content Showcase 2026 */}
       <UltimateContentShowcase2026 />
       
