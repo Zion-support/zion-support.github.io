@@ -75,6 +75,8 @@ export default function HomePage() {
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-zero-trust-security-2026" className="underline hover:text-yellow-200">Zero Trust Security</Link>
             <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-foundation-models-2026" className="underline hover:text-yellow-200">Foundation Models Playbook</Link>
+            <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-autonomous-enterprise-transformation-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
           </div>
           <Link
@@ -1677,6 +1679,16 @@ export default function HomePage() {
                       <p className="text-sm opacity-90">The future of enterprise AI</p>
                     </div>
                   </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-2xl">📘</div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Foundation Models Playbook</h4>
+                    <p className="text-sm opacity-90">Practical guide to model selection & ops</p>
+                    <div className="mt-1">
+                      <Link href="/blog/ai-foundation-models-2026" className="underline">Read now →</Link>
+                    </div>
+                  </div>
+                </div>
                   <div className="flex items-start gap-3">
                     <div className="text-2xl">⚡</div>
                     <div>
