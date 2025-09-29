@@ -129,8 +129,13 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
+<<<<<<< HEAD
+          title="📚 New Series: Ship Faster with Guardrails"
+          description="AI roadmaps, ML SBOM automation, and online eval canaries now live."
+=======
           title="🚀 Fresh: Hybrid Search, Platform ROI Scorecards, Edge Flags 2026"
           description="New guides: hybrid vector search, outcome‑tied scorecards, and <100ms edge rollouts."
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b6d
           ctaText="See what's new"
           ctaLink="/blog"
           dismissible={true}
@@ -517,7 +522,11 @@ const Home = () => {
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
+<<<<<<< HEAD
+                    {("featured" in item) && (item as any).featured && (
+=======
                     {"featured" in item && (item as any).featured && (
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b6d
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>
