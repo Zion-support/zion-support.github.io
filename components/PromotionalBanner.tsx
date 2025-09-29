@@ -264,3 +264,14 @@ export const AIRevolutionBanner = () => (
     hideAfter={20}
   />
 );
+
+export const AIGoToMarketBanner = () => (
+  <PromotionalBanner
+    message="📣 New: AI Go-To-Market 2025 — Proven Plays for Fast Adoption"
+    ctaText="Read the Playbook"
+    ctaLink="/blog/ai-go-to-market-2025"
+    backgroundColor="bg-gradient-to-r from-emerald-600 to-teal-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
