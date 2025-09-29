@@ -335,9 +335,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-01-21",
     featured: false,
     readTime: "9 min read",
-  },
-=======
   }
->>>>>>> feat/new-content-and-promo
 ];
 
