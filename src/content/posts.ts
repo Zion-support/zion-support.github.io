@@ -196,8 +196,6 @@ export const posts: BlogPost[] = [
       "Capabilities, golden paths, and scorecards to accelerate delivery without sacrificing autonomy.",
     category: "Platform Engineering",
     publishedAt: "2025-09-29",
-    readTime: "7 min read",
-    featured: true,
   },
   {
     slug: "genai-evals-realworld",
@@ -206,8 +204,6 @@ export const posts: BlogPost[] = [
       "Patterns for evaluation harnesses, drift detection, and policy testing that scale with usage.",
     category: "GenAI",
     publishedAt: "2025-09-29",
-    readTime: "6 min read",
-    featured: true,
   },
   {
     slug: "ai-roadmaps",
@@ -216,7 +212,6 @@ export const posts: BlogPost[] = [
       "A practical framework to align AI investments with measurable business outcomes and reduce time-to-value.",
     category: "AI Strategy",
     publishedAt: "2025-09-15",
-    readTime: "6 min read",
   },
   {
     slug: "cloud-finops-tactics",
@@ -225,7 +220,6 @@ export const posts: BlogPost[] = [
       "Proven tactics for right-sizing, demand shaping, and engineering-friendly guardrails that keep velocity high.",
     category: "Cloud FinOps",
     publishedAt: "2025-09-22",
-    readTime: "5 min read",
   },
   {
     slug: "zero-trust-for-saas",
@@ -234,7 +228,6 @@ export const posts: BlogPost[] = [
       "A pragmatic guide to rolling out least-privilege, continuous verification, and blast radius controls.",
     category: "Security",
     publishedAt: "2025-09-25",
-    readTime: "7 min read",
   },
   {
     slug: "generative-ai-enterprise",
@@ -243,8 +236,6 @@ export const posts: BlogPost[] = [
       "Case studies from Fortune 500 companies showing how GenAI is transforming customer service, content creation, and business operations.",
     category: "AI Innovation",
     publishedAt: "2025-01-20",
-    readTime: "10 min read",
-    featured: true,
   },
   {
     slug: "cloud-migration-best-practices",
@@ -253,7 +244,6 @@ export const posts: BlogPost[] = [
       "Essential strategies for successful cloud migration, including risk mitigation, cost optimization, and timeline management.",
     category: "Cloud Strategy",
     publishedAt: "2025-01-18",
-    readTime: "8 min read",
   },
   {
     slug: "cybersecurity-2025-trends",
@@ -262,7 +252,6 @@ export const posts: BlogPost[] = [
       "Emerging threats, new defense strategies, and the latest security technologies shaping the cybersecurity landscape.",
     category: "Cybersecurity",
     publishedAt: "2025-01-15",
-    readTime: "12 min read",
   },
   {
     slug: "data-analytics-automation",
@@ -271,7 +260,6 @@ export const posts: BlogPost[] = [
       "How AI-powered analytics platforms are revolutionizing business intelligence and enabling real-time decision making.",
     category: "Data Science",
     publishedAt: "2025-01-12",
-    readTime: "9 min read",
   },
   {
     slug: "devops-automation-guide",
@@ -280,7 +268,6 @@ export const posts: BlogPost[] = [
       "Comprehensive strategies for automating CI/CD pipelines, infrastructure management, and deployment processes.",
     category: "DevOps",
     publishedAt: "2025-01-10",
-    readTime: "11 min read",
   },
   {
     slug: "microservices-architecture",
@@ -289,7 +276,6 @@ export const posts: BlogPost[] = [
       "Essential patterns for building scalable, maintainable microservices architectures in modern applications.",
     category: "Software Architecture",
     publishedAt: "2025-01-08",
-    readTime: "10 min read",
   },
   {
     slug: "ai-ethics-compliance",
@@ -298,7 +284,6 @@ export const posts: BlogPost[] = [
       "Framework for developing AI systems that are fair, transparent, and compliant with emerging regulations.",
     category: "AI Governance",
     publishedAt: "2025-01-05",
-    readTime: "9 min read",
   },
   {
     slug: "ai-powered-business-automation-2025",
@@ -350,145 +335,5 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "9 min read",
   },
-  {
-    slug: "ai-automation-roi-calculator-2025",
-    title: "AI Automation ROI Calculator: Prove Value Fast",
-    description:
-      "A simple framework and worksheet to quantify savings and payback from AI workflow automation.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read",
-  },
-  {
-    slug: "cloud-cost-guardrails-in-practice",
-    title: "Cloud Cost Guardrails in Practice",
-    description:
-      "Requests/limits, autoscaling, and demand shaping patterns that cut spend without slowing teams.",
-    category: "Cloud FinOps",
-    publishedAt: "2025-09-30",
-    featured: false,
-    readTime: "5 min read",
-  },
-  {
-    slug: "secure-ml-platform-blueprint",
-    title: "Secure ML Platform Blueprint",
-    description:
-      "Harden data flows, registries, and deployments with pragmatic controls and audits that scale.",
-    category: "Security",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read",
-  },
-  {
-    slug: "ai-business-transformation-2025",
-    title: "AI Business Transformation: Real ROI Stories from 2025",
-    description:
-      "Exclusive case studies showing how companies achieved 300%+ ROI with AI workflow automation and virtual assistants.",
-    category: "AI Innovation",
-    publishedAt: "2025-01-25",
-    featured: true,
-    readTime: "12 min read",
-  },
-  {
-    slug: "micro-saas-market-trends",
-    title: "Micro SAAS Market Trends: The $50B Opportunity in 2025",
-    description:
-      "Market analysis showing explosive growth in micro SAAS adoption and how businesses are capitalizing on this trend.",
-    category: "Market Analysis",
-    publishedAt: "2025-01-23",
-    featured: true,
-    readTime: "9 min read",
-  },
-  {
-    slug: "ai-automation-roi-calculator-guide",
-    title: "Calculate Your AI Automation ROI: A Step-by-Step Guide",
-    description:
-      "Practical framework to measure and predict ROI from AI workflow automation, virtual assistants, and data analytics.",
-    category: "Business Strategy",
-    publishedAt: "2025-01-22",
-    featured: false,
-    readTime: "8 min read",
-  },
-  {
-    slug: "future-of-work-ai-assistants",
-    title: "The Future of Work: How AI Assistants Are Reshaping Industries",
-    description:
-      "Explore how AI virtual assistants are transforming customer service, sales, and operations across different sectors.",
-    category: "Future of Work",
-    publishedAt: "2025-01-20",
-    featured: true,
-    readTime: "11 min read",
-  },
-  {
-    slug: "data-analytics-predictive-insights",
-    title: "Predictive Analytics: Turning Data into Future Profits",
-    description:
-      "Learn how advanced data analytics and AI are helping businesses predict trends, optimize operations, and increase revenue.",
-    category: "Data Analytics",
-    publishedAt: "2025-01-18",
-    featured: false,
-    readTime: "10 min read",
-  },
-  {
-    slug: "ai-implementation-checklist",
-    title: "AI Implementation Checklist: From Planning to Production",
-    description:
-      "Complete guide to successfully implementing AI solutions in your organization, with practical checklists and timelines.",
-    category: "AI Implementation",
-    publishedAt: "2025-01-16",
-    featured: true,
-    readTime: "14 min read",
-  },
-  {
-    slug: "cost-savings-automation-report",
-    title: "The True Cost of Manual Processes: Why Automation Pays for Itself",
-    description:
-      "Comprehensive analysis showing how businesses waste $2.3M annually on manual processes and how AI automation eliminates these costs.",
-    category: "Cost Optimization",
-    publishedAt: "2025-01-14",
-    featured: true,
-    readTime: "7 min read",
-  },
-  {
-    slug: "ai-security-best-practices",
-    title: "AI Security Best Practices: Protecting Your Intelligent Systems",
-    description:
-      "Essential security measures for AI systems, including data protection, model security, and compliance requirements.",
-    category: "AI Security",
-    publishedAt: "2025-01-12",
-    featured: false,
-    readTime: "9 min read",
-  },
-  {
-    slug: "competitive-advantage-ai",
-    title: "Gaining Competitive Advantage Through AI: A Strategic Guide",
-    description:
-      "How forward-thinking companies are using AI to outpace competitors and capture market share in 2025.",
-    category: "Business Strategy",
-    publishedAt: "2025-01-10",
-    featured: true,
-    readTime: "13 min read",
-  },
-  {
-    slug: "ai-roi-case-studies-2025",
-    title: "AI ROI Success Stories: 10 Companies That Transformed Their Business",
-    description:
-      "Real-world examples of companies that achieved 200-500% ROI through AI implementation, with detailed breakdowns and lessons learned.",
-    category: "Case Studies",
-    publishedAt: "2025-01-08",
-    featured: true,
-    readTime: "15 min read",
-  },
-  {
-    slug: "micro-saas-scaling-strategies",
-    title: "Scaling Micro SAAS Platforms: Growth Strategies That Work",
-    description:
-      "Proven strategies for scaling micro SAAS businesses, from customer acquisition to platform optimization and market expansion.",
-    category: "Growth Strategy",
-    publishedAt: "2025-01-06",
-    featured: false,
-    readTime: "11 min read",
-  }
 ];
 
