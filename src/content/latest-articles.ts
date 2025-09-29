@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-reliable-rag-2025",
+    slug: "ai-reliable-rag-2025",
+    title: "Reliable RAG 2025: Grounded Answers Under Latency Budgets",
+    description: "Contracts, caches, and routing for reliable RAG that ships with SLAs.",
+    excerpt: "Reduce hallucinations with contracts, hybrid search, and KPI‑linked evals.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["RAG", "Freshness", "Caching", "Routing"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/reliable-rag-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "serverless-inference-cost-playbook-2025-updated",
+    slug: "serverless-inference-cost-playbook-2025-updated",
+    title: "Serverless Inference 2025: Cost Playbook Without P95 Pain",
+    description: "Warm pools, adaptive batching, and quality tiers that cut spend 35–60%.",
+    excerpt: "Keep latency predictable while reducing token costs with practical patterns.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Operations",
+    tags: ["Serverless", "Inference", "Cost", "Quality Tiers"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/serverless-inference-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-incident-response-playbooks-2025",
     slug: "ai-incident-response-playbooks-2025",
     title: "AI Incident Response Playbooks: Contain in <60s with Confidence",

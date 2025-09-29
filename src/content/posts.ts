@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-reliable-rag-2025",
+    title: "Reliable RAG 2025: Grounded Answers Under Latency Budgets",
+    description: "Contracts, caches, and routing for reliable RAG that ships with SLAs.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "serverless-inference-cost-playbook-2025-updated",
+    title: "Serverless Inference 2025: Cost Playbook Without P95 Pain",
+    description: "Warm pools, adaptive batching, and quality tiers that cut spend 35–60%.",
+    category: "AI Operations",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "platform-engineering-scorecards-2026",
     title: "Platform Engineering Scorecards 2026: From Golden Paths to Outcomes",
     description: "Measure what matters: adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery.",
