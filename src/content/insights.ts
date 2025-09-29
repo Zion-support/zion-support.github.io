@@ -9,8 +9,8 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
-    id: "journey-agents-qa-gates",
-    title: "Journey Agents: QA Gates That Prevent Bad Actions",
+    id: "serverless-warm-pools-playbook",
+    title: "Serverless Warm Pools: Cut Cold Starts, Not Corners",
     summary:
       "Define pre‑checks, post‑checks, and rollbacks so multi‑step agents remain safe and effective.",
     category: "AI Strategy",
@@ -30,25 +30,43 @@ export const latestInsights: InsightArticle[] = [
     id: "slsa-supply-chain-minimums",
     title: "SLSA‑Aligned Minimums for 90‑Day Supply‑Chain Uplift",
     summary:
-      "SBOMs, signed provenance, and policy gates you can roll out this quarter.",
-    category: "Security",
-    date: "2025-09-28",
+      "Dual‑write, read‑shadowing, backfills, and safe cutovers with rollback checkpoints.",
+    category: "Platform Engineering",
+    date: "2025-09-30",
+    readMinutes: 4,
+  },
+  {
+    id: "ai-sales-copilot-insights",
+    title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
+    summary:
+      "How to wire CRMs, build prompt libraries, and add evals that boost win‑rates without risk.",
+    category: "AI Strategy",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "ai-governance-at-scale-2025",
+    title: "AI Governance at Scale: Policies That Enable Speed",
+    summary:
+      "A pragmatic model for approvals, policy tests, and observability that unlocks faster AI delivery.",
+    category: "AI Governance",
+    date: "2025-09-30",
     readMinutes: 6,
   },
   {
-    id: "genai-online-evals",
-    title: "Online Evals for GenAI: From Shadow to Guardrails",
+    id: "edge-observability-blueprint",
+    title: "Edge Observability Blueprint: Sub‑100ms Reliability",
     summary:
-      "Move from pilots to production with canary cohorts, eval budgets, and rollback triggers.",
-    category: "MLOps",
-    date: "2025-09-28",
-    readMinutes: 7,
+      "Latency budgets, client ↔ edge traces, and error budgets that keep UX snappy.",
+    category: "Observability",
+    date: "2025-09-30",
+    readMinutes: 5,
   },
   {
-    id: "ai-reliability-scorecards",
-    title: "AI Reliability Scorecards: What to Track Weekly",
+    id: "genai-policy-tests-canaries",
+    title: "GenAI Policy Tests: From Offline Suites to Online Canaries",
     summary:
-      "Outcome-linked metrics, eval pass rates, and incident burndown that keep quality high.",
+      "How to combine offline evals with live canaries to catch regressions before customers do.",
     category: "GenAI",
     date: "2025-09-30",
     readMinutes: 5,

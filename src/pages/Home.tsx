@@ -117,12 +117,10 @@ const Home = () => {
 <<<<<<< HEAD
 =======
           variant="info"
->>>>>>> origin/main
-          title="🚀 Fresh: AI Platform ROI + Secure ML Supply Chain"
-          description="New frameworks on platform ROI and end-to-end ML supply chain security."
+          title="🚀 New: AI Governance Blueprint 2025 + Feature Flags at the Edge"
+          description="Ship faster with strong guardrails. Learn sub‑100ms global releases and scalable AI governance."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-platform-roi-2025"
-          variant="info"
+          ctaLink="/blog/ai-governance-blueprint-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
