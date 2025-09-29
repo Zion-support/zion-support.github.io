@@ -1,216 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Main Pages -->
   <url>
     <loc>https://ziontechgroup.com/</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/about</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/contact</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ziontechgroup.com/services</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/blog</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/case-studies</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- New 2026 Blog Posts -->
-  <url>
-    <loc>https://ziontechgroup.com/blog/ai-business-intelligence-2026</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/blog/ai-autonomous-cloud-ops-2026</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/blog/ai-fintech-transformation-2026</loc>
-    <lastmod>2025-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/blog/ai-autonomous-operations-2026</loc>
-    <lastmod>2025-01-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/blog/ai-autonomous-enterprise-2026</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- New 2026 Case Studies -->
-  <url>
-    <loc>https://ziontechgroup.com/case-studies/ai-autonomous-enterprise-success-2026</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/case-studies/ai-retail-automation-2026</loc>
-    <lastmod>2025-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/case-studies/ai-autonomous-operations-success-2026</loc>
-    <lastmod>2025-01-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/case-studies/ai-enterprise-transformation-success-2026</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/case-studies/ai-finance-automation</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Existing Case Studies -->
   <url>
-    <loc>https://ziontechgroup.com/case-studies/ai-autonomous-enterprise-success-2026</loc>
-    <lastmod>2025-01-20</lastmod>
+    <loc>https://ziontechgroup.com/contact</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/content-hub</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog Posts 2026 -->
+  <url>
+    <loc>https://ziontechgroup.com/blog/ai-agent-orchestration-2026</loc>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/case-studies/ai-autonomous-operations-success-2026</loc>
-    <lastmod>2025-01-19</lastmod>
+    <loc>https://ziontechgroup.com/blog/ai-sustainability-green-tech-2026</loc>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/case-studies/ai-enterprise-transformation-success-2026</loc>
-    <lastmod>2025-01-18</lastmod>
+    <loc>https://ziontechgroup.com/blog/ai-quantum-computing-2026</loc>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/case-studies/ai-finance-automation</loc>
-    <lastmod>2025-01-17</lastmod>
+    <loc>https://ziontechgroup.com/blog/ai-neural-architecture-optimization-2026</loc>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/case-studies/ai-healthcare-transformation-2026</loc>
-    <lastmod>2025-01-16</lastmod>
+    <loc>https://ziontechgroup.com/blog/ai-space-tech-2026</loc>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <!-- Case Studies 2026 -->
   <url>
-    <loc>https://ziontechgroup.com/case-studies/ai-manufacturing-transformation-2026</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://ziontechgroup.com/case-studies/ai-sustainability-transformation-2026</loc>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/case-studies/ai-quantum-optimization-2026</loc>
-    <lastmod>2025-01-14</lastmod>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/case-studies/ai-retail-automation-2026</loc>
-    <lastmod>2025-01-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/case-studies/ai-supply-chain-optimization-2026</loc>
-    <lastmod>2025-01-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/case-studies/ai-sustainability-transformation-2026</loc>
-    <lastmod>2025-01-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Existing Blog Posts -->
-  <url>
-    <loc>https://ziontechgroup.com/blog/ai-revolution-2025</loc>
-    <lastmod>2025-01-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/blog/ai-agents-in-the-enterprise-2025</loc>
-    <lastmod>2025-01-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/blog/ai-customer-service-2025</loc>
-    <lastmod>2025-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/blog/ai-healthcare-transformation-2025</loc>
-    <lastmod>2025-01-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/blog/ai-enterprise-implementation-2025</loc>
-    <lastmod>2025-01-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/blog/ai-mlops-best-practices-2025</loc>
-    <lastmod>2025-01-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/blog/llm-cost-optimization-2025</loc>
-    <lastmod>2025-01-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/blog/edge-llm-latency-patterns</loc>
-    <lastmod>2025-01-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/blog/genai-guardrails-2025</loc>
-    <lastmod>2025-01-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>

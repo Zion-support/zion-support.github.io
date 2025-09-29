@@ -75,8 +75,6 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       category: "Platform"
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: "Edge Feature Flags 2026",
       description: "<100ms global releases with budgets",
       icon: Zap,
@@ -84,10 +82,6 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       category: "Platform"
     },
     {
-=======
->>>>>>> cursor/create-and-deploy-new-content-6afb
-=======
->>>>>>> cursor/create-and-deploy-new-content-a5aa
       title: "Quality‑Tiered GenAI Routing 2026",
       description: "Control cost with tiers, caches, and eval signals",
       icon: Zap,

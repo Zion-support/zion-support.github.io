@@ -90,9 +90,6 @@ export const posts: BlogPost[] = [
     category: "Platform Engineering",
     publishedAt: "2025-10-12",
     featured: true,
-    category: "Security",
-    publishedAt: "2025-10-12",
-    featured: false,
     readTime: "6 min read"
   },
   {
