@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-operational-resilience-2026",
+    slug: "ai-operational-resilience-2026",
+    title: "AI Operational Resilience 2026: Budgets, Canaries, and Instant Rollback",
+    description: "Design AI systems that fail safe: budget actions, wire canaries, and auto‑rollback under SLAs.",
+    excerpt: "Ship reliable AI with budgeted actions, live canaries, and rollback triggers.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-14",
+    category: "AI Operations",
+    tags: ["Budgets", "Canaries", "Rollback", "SLOs"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-operational-resilience-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-first-analytics-2026",
+    slug: "privacy-first-analytics-2026",
+    title: "Privacy‑First Analytics 2026: Scoped IDs, Field Filters, DP Noise",
+    description: "Decision‑grade telemetry without PII risk using scoped identifiers, field filters, and DP noise.",
+    excerpt: "Keep insights high and risk low with privacy‑first analytics patterns.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-14",
+    category: "Observability",
+    tags: ["Privacy", "Telemetry", "DP", "Compliance"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/privacy-first-analytics-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "zero-trust-for-genai-2026",
     slug: "zero-trust-for-genai-2026",
     title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",

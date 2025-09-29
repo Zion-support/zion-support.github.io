@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-operational-resilience-2026",
+    title: "AI Operational Resilience 2026: Budgets, Canaries, and Instant Rollback",
+    description: "Design AI systems that fail safe: budget risky actions, wire live canaries, and roll back instantly under SLAs.",
+    category: "AI Operations",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-first-analytics-2026",
+    title: "Privacy‑First Analytics 2026: Scoped IDs, Field Filters, DP Noise",
+    description: "Ship decision‑grade telemetry without PII risk using scoped identifiers, field‑level filters, and differentially private noise.",
+    category: "Observability",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "zero-trust-for-genai-2026",
     title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",
     description: "Production patterns: egress control, prompt firewalls, and signed artifacts for safe GenAI.",
