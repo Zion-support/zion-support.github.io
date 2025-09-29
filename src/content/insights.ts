@@ -452,3 +452,5 @@ export const latestInsights: InsightArticle[] = [
   },
 ];
 
+export default latestInsights;
+
