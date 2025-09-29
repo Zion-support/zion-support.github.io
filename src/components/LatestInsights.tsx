@@ -1,9 +1,19 @@
-import React from "react";
 import { ArrowRight } from "lucide-react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { latestInsights } from "../content/insights";
 
 const LatestInsights: React.FC = () => {
+  const insights = latestInsights
+    .slice(0, 3)
+    .map((item) => ({
+      id: item.id,
+      title: item.title,
+      description: item.summary,
+      date: new Date(item.date).toLocaleDateString(),
+      category: item.category,
+      href: "/insights",
+    }));
   return (
     <section className="py-20 bg-white/5">
       <div className="container mx-auto px-6">
@@ -12,7 +22,7 @@ const LatestInsights: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Latest Insights</h2>
             <p className="text-zion-slate-light">Research, guides, and playbooks from our team.</p>
           </div>
-          <Link
+            <Link
             to="/insights"
             className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
@@ -30,6 +40,12 @@ const LatestInsights: React.FC = () => {
               <div className="flex items-center justify-between mb-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">
                   <span>{item.category}</span>
+                  {(() => {
+                    const daysSince = (Date.now() - new Date(item.date).getTime()) / (1000 * 60 * 60 * 24);
+                    return daysSince <= 7 ? (
+                      <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">New</span>
+                    ) : null;
+                  })()}
                 </div>
                 <span className="text-xs text-zion-slate-light">{new Date(item.date).toLocaleDateString()}</span>
               </div>

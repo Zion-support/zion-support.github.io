@@ -1,8 +1,8 @@
-import React from "react";
+import { motion, useInView } from "framer-motion";
 import Head from "next/head";
 import Link from "next/link";
-import { useState, useEffect, useCallback, useMemo, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { latestInsights } from "../src/content/insights";
 // import { AnimatePresence } from "framer-motion";
 // import dynamic from "next/dynamic";
 
@@ -165,24 +165,18 @@ const Home = React.memo(function Home(): React.JSX.Element {
 							<p className="text-lg text-gray-600">New guides and case studies from our team</p>
 						</div>
 						<div className="grid md:grid-cols-3 gap-8">
-							<div className="bg-gray-50 rounded-lg p-6">
-								<div className="text-sm text-indigo-600 font-medium mb-2">AI Strategy</div>
-								<h3 className="text-xl font-semibold text-gray-900 mb-2">Designing High-Impact AI Roadmaps</h3>
-								<p className="text-gray-600 mb-3">Align AI investments to measurable outcomes and reduce time-to-value.</p>
-								<Link href="/blog" className="text-indigo-600 font-medium hover:text-indigo-700">Read more →</Link>
-							</div>
-							<div className="bg-gray-50 rounded-lg p-6">
-								<div className="text-sm text-pink-600 font-medium mb-2">Cloud FinOps</div>
-								<h3 className="text-xl font-semibold text-gray-900 mb-2">Cutting Cloud Spend Without Slowing Teams</h3>
-								<p className="text-gray-600 mb-3">Right-sizing, demand shaping, and guardrails that keep velocity high.</p>
-								<Link href="/blog" className="text-pink-600 font-medium hover:text-pink-700">Read more →</Link>
-							</div>
-							<div className="bg-gray-50 rounded-lg p-6">
-								<div className="text-sm text-emerald-600 font-medium mb-2">Security</div>
-								<h3 className="text-xl font-semibold text-gray-900 mb-2">Zero-Trust in Practice for SaaS</h3>
-								<p className="text-gray-600 mb-3">Pragmatic least-privilege, continuous verification, and blast radius controls.</p>
-								<Link href="/blog" className="text-emerald-600 font-medium hover:text-emerald-700">Read more →</Link>
-							</div>
+							{latestInsights.slice(0, 3).map((item) => (
+								<div key={item.id} className="bg-gray-50 rounded-lg p-6">
+									<div className="text-sm font-medium mb-2 text-indigo-600">{item.category}</div>
+									<h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
+									<p className="text-gray-600 mb-3">{item.summary}</p>
+									<div className="flex items-center justify-between text-sm text-gray-500 mb-2">
+										<span>{new Date(item.date).toLocaleDateString()}</span>
+										<span>{item.readMinutes} min read</span>
+									</div>
+									<Link href="/blog" className="text-indigo-600 font-medium hover:text-indigo-700">Read more →</Link>
+								</div>
+							))}
 						</div>
 
 						<div className="text-center mt-10">
