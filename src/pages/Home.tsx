@@ -136,11 +136,12 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: AI Breach Drills, Privacy‑First Insights, Blue‑Green Agent Releases"
-          description="Rehearse safe autonomy, ship signal‑rich analytics without PII, and roll out agents safely."
+          title="New: AI Operational Guardrails, Privacy‑First Insights, Blue‑Green Agent Releases"
+          description="Ship fast with PR checks, canaries, and SLOs; ship insight‑rich analytics without PII; and roll out agents safely."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
+            { title: "AI Operational Guardrails 2026", category: "AI Strategy", link: "/blog/ai-operational-guardrails-2026" },
             { title: "AI Breach Drills 2026", category: "Security", link: "/blog/ai-breach-drills-2026" },
             { title: "Privacy‑First Insights 2026", category: "Observability", link: "/blog/privacy-first-insights-telemetry-2026" },
             { title: "Blue‑Green Agent Releases 2026", category: "GenAI", link: "/blog/agent-blue-green-releases-2026" }
@@ -565,7 +566,7 @@ const Home = () => {
                 <div key={insight.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs uppercase tracking-wider text-indigo-300">{insight.category}</span>
-                    {insight.featured && (
+                    {"featured" in insight && (insight as any).featured && (
                       <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>

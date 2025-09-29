@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export { default } from "./ErrorBoundary";
-=======
 import React from "react";
 
 type Props = React.PropsWithChildren;
@@ -30,5 +27,4 @@ export default class EnhancedErrorBoundary extends React.Component<Props, State>
     return this.props.children;
   }
 }
->>>>>>> origin/main
 
