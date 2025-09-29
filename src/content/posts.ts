@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "zero-trust-for-genai-2026",
+    title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",
+    description: "Production patterns: egress control, prompt firewalls, and signed artifacts for safe GenAI.",
+    category: "Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "quantum-ai-hybrid-blueprint-2026",
+    title: "Quantum‑AI Hybrid Blueprint 2026: Practical Near‑Term Wins",
+    description: "Blend quantum libraries with AI orchestration to unlock optimization wins today.",
+    category: "Quantum",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "9 min read"
+  },
+  {
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
     description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",

@@ -17,6 +17,7 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+<<<<<<< HEAD
     id: "ai-enterprise-security-2026",
     slug: "ai-enterprise-security-2026",
     title: "AI Enterprise Security 2026: Zero-Trust Architecture for AI Systems",
@@ -29,10 +30,25 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "15 min read",
     image: "/images/ai-enterprise-security-2026.jpg",
+=======
+    id: "zero-trust-for-genai-2026",
+    slug: "zero-trust-for-genai-2026",
+    title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",
+    description: "Production patterns: egress control, prompt firewalls, and signed outputs at scale.",
+    excerpt: "Ship GenAI safely with layered controls: prompt firewalls, egress policies, signing.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Security",
+    tags: ["GenAI", "Security", "Zero‑Trust"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/zero-trust-for-genai-2026.jpg",
+>>>>>>> feature/add-more-content-and-advertise
     newBadge: true,
     trending: true
   },
   {
+<<<<<<< HEAD
     id: "ai-multimodal-enterprise-2026",
     slug: "ai-multimodal-enterprise-2026",
     title: "AI Multimodal Enterprise 2026: Vision, Language, and Audio Integration",
@@ -61,6 +77,20 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "12 min read",
     image: "/images/ai-sustainability-transformation-2026.jpg",
+=======
+    id: "quantum-ai-hybrid-blueprint-2026",
+    slug: "quantum-ai-hybrid-blueprint-2026",
+    title: "Quantum‑AI Hybrid Blueprint 2026: Practical Near‑Term Wins",
+    description: "Blend quantum libraries with AI orchestration to unlock optimization wins today.",
+    excerpt: "Near‑term value from QC + AI: routing patterns and orchestration tips.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Quantum",
+    tags: ["Quantum", "AI", "Optimization"],
+    featured: false,
+    readTime: "9 min read",
+    image: "/images/quantum-ai-hybrid-blueprint-2026.jpg",
+>>>>>>> feature/add-more-content-and-advertise
     newBadge: true,
     trending: true
   },
