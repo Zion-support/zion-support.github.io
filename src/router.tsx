@@ -9,6 +9,7 @@ import Blog from './pages/Blog';
 import Resources from './pages/Resources';
 import Tools from './pages/Tools';
 import EnterpriseAISolutions from './pages/EnterpriseAISolutions';
+import Post from './pages/Post';
 import CaseStudies from './pages/CaseStudies';
 import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
 import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
@@ -27,6 +28,7 @@ export const AppRouter: React.FC = () => {
       <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/ai-micro-saas" element={<AIMicroSAAS />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<Post />} />
       <Route path="/resources" element={<Resources />} />
       <Route path="/tools" element={<Tools />} />
       <Route path="/enterprise-ai-solutions" element={<EnterpriseAISolutions />} />

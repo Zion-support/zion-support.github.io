@@ -2086,6 +2086,76 @@ Achieve low‑latency inference at the edge with quantization, pruning, warm cac
     readTime: "6 min read",
     image: "/images/edge-ai-design.jpg"
   }
+  ,
+  // New banner-linked articles (lightweight content stubs)
+  {
+    slug: "ai-workflow-automation-roi-calculator",
+    title: "AI Workflow Automation ROI Calculator",
+    description: "Estimate potential savings and payback from AI workflow automation.",
+    content: `
+# AI Workflow Automation ROI Calculator
+
+Use this framework to estimate savings from automating top workflows. Identify time spent, error rates, volume, and unit costs, then calculate savings and payback period.
+`,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Strategy",
+    tags: ["ROI", "Automation", "AI"],
+    featured: true,
+    readTime: "5 min read",
+    image: "/images/ai-roi-calculator.jpg"
+  },
+  {
+    slug: "micro-saas-platform-comparison-2025",
+    title: "Micro SAAS Platform Comparison 2025",
+    description: "Compare leading micro SAAS platforms by features, pricing, and integrations.",
+    content: `
+# Micro SAAS Platform Comparison 2025
+
+A pragmatic buyer's guide covering capabilities, integration depth, pricing models, and support SLAs.
+`,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Technology",
+    tags: ["Micro SAAS", "Platforms", "Comparison"],
+    featured: false,
+    readTime: "12 min read",
+    image: "/images/micro-saas-comparison.jpg"
+  },
+  {
+    slug: "ai-virtual-assistant-implementation-checklist",
+    title: "AI Virtual Assistant Implementation Checklist",
+    description: "25 critical steps for deploying an effective AI assistant.",
+    content: `
+# AI Virtual Assistant Implementation Checklist
+
+From data prep to guardrails and analytics, this checklist helps ensure successful deployment.
+`,
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "AI & Automation",
+    tags: ["AI Assistant", "Implementation", "Checklist"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-assistant-checklist.jpg"
+  },
+  {
+    slug: "data-analytics-automation-success-stories",
+    title: "Data Analytics Automation: Success Stories",
+    description: "10 companies share 300% faster insights with analytics automation.",
+    content: `
+# Data Analytics Automation: Success Stories
+
+Concise case summaries with measurable outcomes and architecture snapshots.
+`,
+    author: "Zion Tech Group Team",
+    date: "2025-09-27",
+    category: "Data Analytics",
+    tags: ["Analytics", "Automation", "Case Studies"],
+    featured: false,
+    readTime: "9 min read",
+    image: "/images/analytics-success-stories.jpg"
+  }
 ];
 
 export default blogPosts;

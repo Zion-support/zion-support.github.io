@@ -581,5 +581,46 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "10 min read",
   },
+  // Advertised content referenced by rotating banners
+  {
+    slug: "ai-workflow-automation-roi-calculator",
+    title: "AI Workflow Automation ROI Calculator",
+    description:
+      "Estimate savings and payback period from automating your top workflows with AI.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "5 min read",
+  },
+  {
+    slug: "micro-saas-platform-comparison-2025",
+    title: "Micro SAAS Platform Comparison 2025",
+    description:
+      "A practical buyer's guide comparing leading micro SAAS platforms across features and cost.",
+    category: "Technology",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "12 min read",
+  },
+  {
+    slug: "ai-virtual-assistant-implementation-checklist",
+    title: "AI Virtual Assistant Implementation Checklist",
+    description:
+      "25 essential steps to deploy an effective, compliant, and measurable AI assistant.",
+    category: "AI & Automation",
+    publishedAt: "2025-09-28",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "data-analytics-automation-success-stories",
+    title: "Data Analytics Automation: Success Stories",
+    description:
+      "10 companies share how they achieved 300% faster insights with analytics automation.",
+    category: "Data Analytics",
+    publishedAt: "2025-09-27",
+    featured: false,
+    readTime: "9 min read",
+  },
 ];
 

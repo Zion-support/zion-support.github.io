@@ -26,6 +26,7 @@ import NewContentPromotionBanner from "../components/NewContentPromotionBanner";
 import EnhancedServicesShowcase from "../components/EnhancedServicesShowcase";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
+import LatestContentBanner from "../components/LatestContentBanner";
 
 const Home = () => {
   return (
@@ -103,6 +104,7 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        <LatestContentBanner className="border-b border-white/10" variant="info" />
         <ContentPromotionBanner
           title="Fresh: GenAI Evals, Edge Flags, and North‑Star Metrics"
           description="New insights just dropped. Explore the latest articles and stay ahead."
