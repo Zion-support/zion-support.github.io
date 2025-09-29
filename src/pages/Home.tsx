@@ -129,10 +129,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="📚 New Series: Ship Faster with Guardrails"
-          description="AI roadmaps, ML SBOM automation, and online eval canaries now live."
-          ctaText="See what's new"
-          ctaLink="/blog"
+          title="🚀 Fresh: AI Platform ROI + Secure ML Supply Chain"
+          description="New frameworks on platform ROI and end-to-end ML supply chain security."
+          ctaText="Read the latest"
+          ctaLink="/blog/ai-platform-roi-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -820,7 +820,9 @@ const Home = () => {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
-                  <p className="text-white/90">New: Platform ROI scorecards, Secure ML Supply Chain, and Enterprise RAG v2.</p>
+                  <p className="text-white/90">
+                    New: AI Platform ROI scorecards, securing the ML supply chain, and Enterprise RAG v2.
+                  </p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
                   Read the latest
@@ -839,8 +841,8 @@ const Home = () => {
                   <div className="font-semibold text-white">RAG Freshness</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Architecture</div>
-                  <div className="font-semibold text-white">Edge Flags Blueprint</div>
+                  <div className="text-sm text-rose-200 mb-1">Security</div>
+                  <div className="font-semibold text-white">Secure ML Supply Chain</div>
                 </div>
               </div>
             </div>
