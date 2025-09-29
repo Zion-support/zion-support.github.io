@@ -78,7 +78,7 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
-      {/* Promotional Banners */}
+      {/* NEW 2026 Content Promotional Banners */}
       <Latest2026ContentBanner />
       <AIAutonomousCloudOpsBanner />
       <AIFinTechTransformationBanner />
