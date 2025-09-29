@@ -1,86 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import {
-  NewBlogBanner,
-  AnalyticsPlatformBanner,
-  TechCorpSuccessBanner,
-  WorkflowAutomationBanner,
-  AIAnalyticsBanner,
-  HealthTechSuccessBanner,
-  ComprehensiveAIBanner,
-  EnterpriseAIBanner,
-  NewContentBanner,
-  CustomerServiceAIBanner,
-  HealthcareAIBanner,
-  RetailSuccessBanner,
-  AIContentShowcaseBanner,
-  AIRevolutionBanner,
-  AutonomousAgentsBanner,
-  AIGovernanceBanner,
-  FinTechSuccessBanner,
-  NewContentShowcaseBanner,
-  AIRoadmapsBanner,
-  AIFinOpsBanner,
-  AIMultimodalEnterpriseBanner,
-  AIEnterpriseAutomationGuideBanner,
-  AIDataAnalyticsEnterpriseBanner,
-  EnterpriseTransformationSuccessBanner,
-  HealthcareTransformationBanner,
-  NewContent2026Banner,
-  AIOperationalExcellenceBanner,
-  AIOperationalScorecardsBanner,
-  EdgeAIBlueprintBanner,
-  PlatformEngineeringScorecardsBanner,
-  AIAgentObservabilityBanner,
-  AIAgentSafetyBlueprintBanner,
-  AISustainabilityGreenTechBanner,
-  ManufacturingIOTAutomationBanner,
-  SupplyChainOptimizationBanner,
-  AI2026TrendsBanner,
-  AIAutonomousInfrastructureBanner,
-  AIQuantumHybridComputingBanner,
-  AIAutonomousEnterpriseTransformationBanner,
-  Revolutionary2026ContentBanner,
-  LatestAIInnovations2026Banner,
-  AIZeroTrustSecurityBanner,
-  AIFoundationModelsBanner,
-  NewContent2026PromotionalBanners
-} from '../components/PromotionalBanner';
-=======
-import { 
-  AIAutonomousCloudOpsBanner,
-  AIFinTechTransformationBanner,
-  AIRetailAutomationBanner,
-  AutonomousOperationsBanner,
-  FinOpsAdvancedBanner,
-  PlatformArchitectureBanner,
-  AutonomousOperationsSuccessBanner,
-  NewContentShowcaseBanner2026
-} from '../components/NewContent2026Banners';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { 
-  NewContent2026PromotionalBanner,
-  AIInnovation2026Banner,
-  SuccessStory2026Banner,
-  AIRevolution2026Banner
-=======
-import {
-  AIAutonomousInfrastructureBanner,
-  AIQuantumComputingBanner,
-  AITransformationSuccessBanner,
-  AIZeroTrustSecurityBanner,
-  AIFoundationModelsBanner,
-  LatestContent2026Banner
->>>>>>> cursor/create-and-deploy-new-content-6fcc
-} from '../components/NewContent2026PromotionalBanners';
-=======
-import { NewContent2026PromotionalBanners } from '../components/NewContent2026PromotionalBanners';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
->>>>>>> cursor/create-and-deploy-new-content-e8cb
-=======
->>>>>>> c52084ad473a5b64cedbe0b58750591f18f661da
+import { NewContent2026PromotionalBanners } from '../components/NewContent2026PromotionalBanners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -101,135 +22,9 @@ export default function HomePage() {
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
       
-      {/* New Content Promo Strip */}
-      <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
-          <div className="flex items-center gap-2 text-sm md:text-base">
-            <span>✨ NEW 2026:</span>
-            <Link href="/blog/ai-autonomous-infrastructure-2026" className="underline hover:text-yellow-200">Autonomous Infrastructure</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-quantum-hybrid-computing-2026" className="underline hover:text-yellow-200">Quantum AI</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-zero-trust-security-2026" className="underline hover:text-yellow-200">Zero Trust Security</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-foundation-models-2026" className="underline hover:text-yellow-200">Foundation Models Playbook</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-transformation-mega-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
-          </div>
-          <Link
-            href="/blog"
-            className="bg-white text-indigo-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
-          >
-            Read the latest
-          </Link>
-        </div>
-      </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* New 2026 Content Promotional Banners */}
-<<<<<<< HEAD
-      <NewContent2026PromotionalBanner />
-      <AIInnovation2026Banner />
-      <SuccessStory2026Banner />
-      <AIRevolution2026Banner />
-=======
-=======
-      {/* New 2026 Content Banner */}
-      <NewContent2026BannerComponent />
-      
-      {/* Promotional Banners */}
-      <Revolutionary2026ContentBanner />
->>>>>>> c52084ad473a5b64cedbe0b58750591f18f661da
-      <AIAutonomousInfrastructureBanner />
-      <AIQuantumHybridComputingBanner />
-      <AIAutonomousEnterpriseTransformationBanner />
-      <LatestAIInnovations2026Banner />
-      <AIZeroTrustSecurityBanner />
-      <AIFoundationModelsBanner />
-<<<<<<< HEAD
-      <LatestContent2026Banner />
->>>>>>> cursor/create-and-deploy-new-content-6fcc
-      
-      {/* Additional Promotional Banners */}
-=======
-      {/* Promotional Banners */}
+      {/* New Content Promotional Banners */}
       <NewContent2026PromotionalBanners />
->>>>>>> cursor/create-and-deploy-new-content-e8cb
-=======
-      <NewContent2026PromotionalBanners />
->>>>>>> c52084ad473a5b64cedbe0b58750591f18f661da
-      <NewContentShowcase2026Banner />
-      <AIEthicalFrameworkBanner />
-      <AIEthicsSuccessBanner />
-      <LatestContent2026Banner />
-      <AISecurityEnterprise2026Banner />
-      <AIMultimodalEnterprise2026Banner />
-      <AISustainabilityTransformationBanner />
-      <AIAutonomousCloudOpsBanner />
-      <AIFinTechTransformationBanner />
-      <AIRetailAutomationBanner />
-      <AutonomousOperationsBanner />
-      <FinOpsAdvancedBanner />
-      <PlatformArchitectureBanner />
-      <AutonomousOperationsSuccessBanner />
-      <NewContentShowcaseBanner2026 />
-      <NewContent2026Banner />
-      {/* Removed unavailable banner components to fix imports */}
-      <AIMultimodalEnterpriseBanner />
-      <AIEnterpriseAutomationGuideBanner />
-      <AIDataAnalyticsEnterpriseBanner />
-      <EnterpriseTransformationSuccessBanner />
-      <HealthcareTransformationBanner />
-      <NewContentShowcaseBanner />
-      <AIRoadmapsBanner />
-      <AIFinOpsBanner />
-      <AutonomousAgentsBanner />
-      <AIGovernanceBanner />
-      <FinTechSuccessBanner />
-      <AIContentShowcaseBanner />
-      <CustomerServiceAIBanner />
-      <HealthcareAIBanner />
-      <RetailSuccessBanner />
-      <AIRevolutionBanner />
-      <NewBlogBanner />
-      <WorkflowAutomationBanner />
-      <AIAnalyticsBanner />
       
-      {/* New 2026 Content Banners */}
-      <section className="py-16 bg-gradient-to-r from-emerald-600 to-teal-600 text-white">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">🚀 New 2026 AI Trends Report</h2>
-          <p className="text-xl mb-6">Discover the top AI trends that will shape enterprise technology in 2026</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/blog/ai-trends-2026" className="bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Read Trends Report
-            </Link>
-            <Link href="/blog/ai-cost-optimization-2026" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors">
-              Cost Optimization Guide
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gradient-to-r from-violet-600 to-purple-600 text-white">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">💰 $2.4M Cost Optimization Success</h2>
-          <p className="text-xl mb-6">See how a Fortune 500 company achieved 65% cost reduction with AI optimization</p>
-          <Link href="/case-studies/ai-cost-optimization-success-2026" className="bg-white text-violet-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-            View Success Story
-          </Link>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gradient-to-r from-rose-600 to-pink-600 text-white">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">🎯 AI Implementation Playbook 2026</h2>
-          <p className="text-xl mb-6">Complete guide to enterprise AI implementation with proven frameworks and strategies</p>
-          <Link href="/resources/ai-implementation-playbook" className="bg-white text-rose-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-            Download Playbook
-          </Link>
-        </div>
-      </section>
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -246,7 +41,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              href="/blog/ai-next-generation-automation-2026"
+              href="/blog/ai-autonomous-infrastructure-2026"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
             >
               🚀 Read Latest AI Guide
@@ -258,7 +53,7 @@ export default function HomePage() {
               📈 View $25M Success Story
             </Link>
             <a
-              to="tel:+13024640950"
+              href="tel:+13024640950"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
               Call +1 302 464 0950
@@ -321,7 +116,7 @@ export default function HomePage() {
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-500">25 min read</div>
                 <Link
-                  href="/blog/ai-next-generation-automation-2026"
+                  href="/blog/ai-autonomous-infrastructure-2026"
                   className="text-blue-600 font-semibold hover:text-blue-700 transition-colors"
                 >
                   Read Guide →
@@ -1807,10 +1602,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Additional Promotional Banners */}
-      <AnalyticsPlatformBanner />
-      <HealthTechSuccessBanner />
-      <ComprehensiveAIBanner />
 
       {/* CTA Section */}
       <section className="py-20 bg-white">
