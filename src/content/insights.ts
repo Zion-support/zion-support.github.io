@@ -36,6 +36,42 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 7,
   },
   {
+    id: "platform-engineering-golden-paths",
+    title: "Golden Paths for Platform Engineering: Reduce Cognitive Load",
+    summary:
+      "Standardized templates, scorecards, and paved roads that keep product teams shipping.",
+    category: "Platform Engineering",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "data-contracts-in-practice",
+    title: "Data Contracts in Practice: Stop Breaking Your Dashboards",
+    summary:
+      "Contract-first schemas, change management, and lineage that make analytics reliable again.",
+    category: "Data Engineering",
+    date: "2025-09-28",
+    readMinutes: 7,
+  },
+  {
+    id: "ml-in-prod-e2e",
+    title: "ML in Production: An End-to-End Delivery Blueprint",
+    summary:
+      "From labeling to rollout: evals, feature stores, and shadow deploys that derisk launches.",
+    category: "MLOps",
+    date: "2025-09-27",
+    readMinutes: 9,
+  },
+  {
+    id: "security-threat-modeling-sprints",
+    title: "Threat Modeling Sprints That Teams Actually Enjoy",
+    summary:
+      "Lightweight rituals, checklists, and tooling to embed security without slowing velocity.",
+    category: "Security",
+    date: "2025-09-27",
+    readMinutes: 6,
+  },
+  {
     id: "governance-ai-policy-testing",
     title: "Governance for AI: Policy Testing That Scales",
     summary:
