@@ -447,6 +447,14 @@ class AdvancedPerformanceOptimizer {
   }
 
   /**
+   * Generate performance report
+   */
+  public generateReport(): string {
+    const metrics = this.getMetrics();
+    return JSON.stringify(metrics, null, 2);
+  }
+
+  /**
    * Cleanup observers
    */
   public cleanup(): void {
@@ -458,4 +466,5 @@ class AdvancedPerformanceOptimizer {
 
 // Export singleton instance
 export const advancedPerformanceOptimizer = new AdvancedPerformanceOptimizer();
+export { AdvancedPerformanceOptimizer };
 export default AdvancedPerformanceOptimizer;
