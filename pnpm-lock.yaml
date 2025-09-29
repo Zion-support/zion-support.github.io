@@ -106,8 +106,8 @@ importers:
         specifier: ^0.4.14
         version: 0.4.22(eslint@9.36.0(jiti@2.6.0))
       globals:
-        specifier: 13.24.0
-        version: 13.24.0
+        specifier: ^16.4.0
+        version: 16.4.0
       identity-obj-proxy:
         specifier: ^3.0.0
         version: 3.0.0
