@@ -125,54 +125,17 @@ class PerformanceMonitor {
     if ('memory' in performance) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       if (memory) {
-        this.metrics.memoryUsage = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
+        this.recordMetric({
+          name: 'MEMORY_USAGE',
+          value: memory.usedJSHeapSize / memory.jsHeapSizeLimit,
+          timestamp: Date.now(),
+          id: this.generateId()
+        });
       }
     }
   }
 
-      // Largest Contentful Paint (LCP)
-      try {
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          if (lastEntry) {
-            this.recordMetric({
-              name: 'LCP',
-              value: lastEntry.startTime,
-              timestamp: Date.now(),
-              id: this.generateId()
-            });
-          }
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-        this.observers.push(lcpObserver);
-      } catch (e) {
-        console.warn('LCP observation failed:', e);
-      }
-
-      // Cumulative Layout Shift (CLS)
-      try {
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value;
-            }
-          }
-          this.recordMetric({
-            name: 'CLS',
-            value: clsValue,
-            timestamp: Date.now(),
-            id: this.generateId()
-          });
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-        this.observers.push(clsObserver);
-      } catch (e) {
-        console.warn('CLS observation failed:', e);
-      }
-    }
-  }
+  
 
   private observeResourceTiming(): void {
     if ('PerformanceObserver' in window) {

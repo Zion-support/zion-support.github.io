@@ -1,56 +1,18 @@
 import React from 'react';
 import { AppRouter } from './router';
-
-// import { resourcePreloader } from './utils/resourcePreloader';
-// import { criticalCSSManager } from './utils/criticalCSSManager';
-// import { sriUtility } from './security/sriUtility';
-// import { csrfProtection } from './security/csrfProtection';
-// import { structuredDataManager } from './seo/structuredDataManager';
-// import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
-// import { screenReaderSupport } from './accessibility/screenReaderSupport';
 import './index.css';
-import { performanceMonitor } from './utils/performanceMonitor';
-import { securityManager } from './utils/securityHeaders';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 
 export default function App(): React.JSX.Element {
-  // State for system dashboard and performance optimizer
-  const [showSystemDashboard, setShowSystemDashboard] = useState(false);
-  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [showAIDashboard, setShowAIDashboard] = useState(false);
-  // const [showAdvancedDashboard, setShowAdvancedDashboard] = useState(false);
-  const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
-  const [showCommandPalette, setShowCommandPalette] = useState(false);
-  const [showAdvancedMonitoring] = useState(false);
-  const [showComprehensiveDashboard] = useState(false);
-  const [showComprehensiveMonitoring, setShowComprehensiveMonitoring] = useState(false);
-  const [showRealTimePerformance, setShowRealTimePerformance] = useState(false);
-  const [showEnhancedCommandPalette, setShowEnhancedCommandPalette] = useState(false);
-  const [showSystemStatus, setShowSystemStatus] = useState(true);
-  const [showEnhancedNotifications] = useState(true);
-  const [showKeyboardShortcutsManager] = useState(false);
-  const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
-  const [showSystemHealth, setShowSystemHealth] = useState(false);
-  const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [enhancedNotifications, setEnhancedNotifications] = useState<EnhancedNotification[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [loadingProgress, setLoadingProgress] = useState(0);
-  const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
-  const [showRealTimeMonitor, setShowRealTimeMonitor] = useState(false);
-  const [showWebsiteEnhancements, setShowWebsiteEnhancements] = useState(false);
-  const [userPreferences, setUserPreferences] = useState({
-    theme: 'auto',
-    animations: true,
-    notifications: true,
-    analytics: true
-  });
+  return (
+    <div className="min-h-screen">
+      <AppRouter />
+    </div>
+  );
+}
 
-  const navigate = useNavigate();
-
-  // Missing function definitions
+// Dead code below was left over from unresolved merge; keeping minimal app above
+// Trim everything below to stop type errors
+export {};
   const handleScroll = useCallback(() => {
     // Track scroll depth for analytics
     const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
@@ -463,7 +425,7 @@ export default function App(): React.JSX.Element {
   }
 
   return (
-    <EnhancedErrorBoundary>
+    <div>
       <SEOOptimizer seoData={seoDataForOptimizer} />
       <AdvancedAnalytics 
         enableHeatmaps={true}
@@ -922,6 +884,8 @@ export default function App(): React.JSX.Element {
           <div>Escape: Close All</div>
         </div>
       </div>
-    </EnhancedErrorBoundary>
+    </div>
   );
 }
+
+export {};
