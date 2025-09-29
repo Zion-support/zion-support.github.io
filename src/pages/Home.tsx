@@ -113,10 +113,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="📣 New: AI Cost Guardrails + Golden Paths Deep Dives"
-          description="Keep quality while slashing AI spend, and ship faster with paved paths."
+          title="📣 New: AI Risk Register, Practical Evals, and Cloud FinOps Guardrails"
+          description="Ship faster and safer: operationalize risks, tie evals to outcomes, and cut cloud waste."
           ctaText="Read the updates"
-          ctaLink="/blog/ai-cost-guardrails-deep-dive-2025"
+          ctaLink="/blog/ai-risk-register-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
