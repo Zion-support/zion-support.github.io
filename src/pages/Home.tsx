@@ -136,16 +136,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: AI Risk Budgets, Privacy‑First Flags, Reliable Agent Actions"
-          description="Ship automation safely, roll out globally with privacy, and make agents reliable."
+          title="New: AI Breach Drills, Privacy‑First Insights, Blue‑Green Agent Releases"
+          description="Rehearse safe autonomy, ship signal‑rich analytics without PII, and roll out agents safely."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Risk Budgets 2026", category: "AI Governance", link: "/blog/ai-risk-budgets-2026" },
-            { title: "Privacy‑First Feature Flags 2026", category: "Architecture", link: "/blog/privacy-first-feature-flags-2026" },
-            { title: "Reliable Agent Actions 2026", category: "GenAI", link: "/blog/reliable-agent-actions-2026" },
-            { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
-            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" }
+            { title: "AI Breach Drills 2026", category: "Security", link: "/blog/ai-breach-drills-2026" },
+            { title: "Privacy‑First Insights 2026", category: "Observability", link: "/blog/privacy-first-insights-telemetry-2026" },
+            { title: "Blue‑Green Agent Releases 2026", category: "GenAI", link: "/blog/agent-blue-green-releases-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
