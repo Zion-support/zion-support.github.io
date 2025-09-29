@@ -12,6 +12,7 @@ import { analytics } from './utils/analytics';
 import { performanceOptimizer } from './utils/performanceOptimizations';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
 import { seoOptimizer } from './utils/seoOptimization';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { useSEOData } from './components/SEOOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
@@ -19,6 +20,7 @@ import { enhancedAccessibilityManager } from './utils/enhancedAccessibilityManag
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 
@@ -156,6 +158,28 @@ export default function App(): React.JSX.Element {
       timestamp: Date.now(),
       session_duration: performance.now()
     });
+  }, []);
+
+  // Memoize the SEO data to prevent unnecessary re-renders
+  const seoData = useMemo(() => ({
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
+    ogType: 'website',
+    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
+    ogImage: '/og-image.png',
+    twitterCard: 'summary_large_image' as const
+  }), []);
+
+  // Preload resource function
+  const preloadResource = useCallback((url: string, type: string) => {
+    if (typeof window !== 'undefined') {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = url;
+      link.as = type;
+      document.head.appendChild(link);
+    }
   }, []);
 
   // SEO data for SEOOptimizer component
@@ -321,7 +345,67 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
-  // Enhanced keyboard shortcuts and system initialization
+  // Main initialization and cleanup effect
+  useEffect(() => {
+    // Add performance marks for better monitoring
+    if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
+      performance.mark('app-init-start');
+    }
+    
+    // Preload critical resources
+    preloadResource('/og-image.png', 'image');
+    preloadResource('/favicon.ico', 'image');
+
+    // Initialize SEO analytics
+    seoAnalytics.trackPageView(window.location.pathname);
+    
+    // Initialize performance SEO optimizations
+    performanceSEO.optimizeImages();
+    performanceSEO.preloadCriticalResources();
+    performanceSEO.optimizeFonts();
+    performanceSEO.optimizeCSS();
+
+    // Initialize analytics system
+    analytics.initialize();
+    analytics.trackPageView();
+
+    // Set default SEO data using the correct method
+    seoManager.updateMetaTags(seoData);
+
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+
+    // Initialize enhanced monitoring systems
+    enhancedPerformanceMonitor.getAlerts();
+    enhancedAccessibilityManager.getIssues();
+    enhancedSEOOptimizer.getIssues();
+
+    // Mark app as fully initialized
+    if (typeof window !== 'undefined' && window.performance && 
+        typeof performance.mark === 'function' && 
+        typeof performance.measure === 'function') {
+      performance.mark('app-init-complete');
+      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
+    }
+
+    // Basic performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('🚀 Zion Tech Group App initialized');
+    }
+
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', trackEngagement);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('beforeunload', trackEngagement);
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
+    };
+  }, [seoData, handleScroll, handleClick, preloadResource, trackEngagement]);
+
+  // Enhanced keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       // Dashboard shortcuts
@@ -407,46 +491,8 @@ export default function App(): React.JSX.Element {
       }
     };
 
-    // Initialize basic systems
-    analytics.initialize();
-    
-    // Initialize SEO analytics
-    seoAnalytics.trackPageView(window.location.pathname);
-    
-    // Initialize performance SEO optimizations
-    performanceSEO.optimizeImages();
-    performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
-
-    // Initialize enhanced monitoring systems
-    enhancedPerformanceMonitor.getAlerts();
-    enhancedAccessibilityManager.getIssues();
-    enhancedSEOOptimizer.getIssues();
-
-    // Basic performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized');
-    }
-
-    // Mark app as fully initialized
-    if (typeof window !== 'undefined' && window.performance && 
-        typeof performance.mark === 'function' && 
-        typeof performance.measure === 'function') {
-      performance.mark('app-init-complete');
-      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
-    }
-
-    // Use passive listeners for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('click', handleClick, { passive: true });
     document.addEventListener('keydown', handleKeyDown);
-
-    // Cleanup function
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClick);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
+    return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   // Track engagement on scroll and click
