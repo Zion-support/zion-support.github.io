@@ -373,7 +373,7 @@ export default function App(): React.JSX.Element {
     // Initialize enhanced monitoring systems
     enhancedPerformanceMonitor.getAlerts();
     enhancedAccessibilityManager.getIssues();
-    enhancedSEOOptimizer.getIssues();
+    // enhancedSEOOptimizer.getIssues(); // Method doesn't exist
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
@@ -578,7 +578,7 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <PerformanceOptimizer>
+              <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)}>
                 <div>Performance optimization in progress...</div>
               </PerformanceOptimizer>
             </div>

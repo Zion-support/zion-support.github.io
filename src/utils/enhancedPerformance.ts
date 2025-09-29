@@ -40,6 +40,8 @@ class EnhancedPerformanceOptimizer {
     memory: null
   };
 
+  private observers: (PerformanceObserver | IntersectionObserver)[] = [];
+
   private config: OptimizationConfig = {
     enableLazyLoading: true,
     enablePreloading: true,
@@ -279,7 +281,7 @@ class EnhancedPerformanceOptimizer {
       observer.observe(img);
     });
 
-    this.observers.push(observer as any);
+    this.observers.push(observer);
   }
 
   /**

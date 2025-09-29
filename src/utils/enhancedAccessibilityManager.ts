@@ -246,17 +246,18 @@ class EnhancedAccessibilityManager {
       const firstElement = focusableElements[0] as HTMLElement;
       const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
       
-      modal.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
-          if (e.shiftKey) {
+      modal.addEventListener('keydown', (e: Event) => {
+        const keyEvent = e as KeyboardEvent;
+        if (keyEvent.key === 'Tab') {
+          if (keyEvent.shiftKey) {
             if (document.activeElement === firstElement) {
               lastElement.focus();
-              e.preventDefault();
+              keyEvent.preventDefault();
             }
           } else {
             if (document.activeElement === lastElement) {
               firstElement.focus();
-              e.preventDefault();
+              keyEvent.preventDefault();
             }
           }
         }
@@ -270,25 +271,26 @@ class EnhancedAccessibilityManager {
       const items = menu.querySelectorAll('[role="menuitem"], .menu-item');
       let currentIndex = 0;
       
-      menu.addEventListener('keydown', (e) => {
-        switch (e.key) {
+      menu.addEventListener('keydown', (e: Event) => {
+        const keyEvent = e as KeyboardEvent;
+        switch (keyEvent.key) {
           case 'ArrowDown':
-            e.preventDefault();
+            keyEvent.preventDefault();
             currentIndex = (currentIndex + 1) % items.length;
             (items[currentIndex] as HTMLElement).focus();
             break;
           case 'ArrowUp':
-            e.preventDefault();
+            keyEvent.preventDefault();
             currentIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
             (items[currentIndex] as HTMLElement).focus();
             break;
           case 'Home':
-            e.preventDefault();
+            keyEvent.preventDefault();
             currentIndex = 0;
             (items[currentIndex] as HTMLElement).focus();
             break;
           case 'End':
-            e.preventDefault();
+            keyEvent.preventDefault();
             currentIndex = items.length - 1;
             (items[currentIndex] as HTMLElement).focus();
             break;
