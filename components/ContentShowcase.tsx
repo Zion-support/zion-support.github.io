@@ -34,6 +34,21 @@ const contentItems: ContentItem[] = [
     ]
   },
   {
+    id: 'ai-synthetic-data-2026',
+    title: 'AI Synthetic Data 2026: Secure, Scalable, and Bias-Aware Generation',
+    excerpt: 'Use synthetic data to accelerate AI while protecting privacy and reducing labeling costs.',
+    type: 'article',
+    readTime: '12 min read',
+    category: 'Data Platforms',
+    href: '/blog/ai-synthetic-data-2026',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '≤1%', label: 'Re-ID Risk' },
+      { value: '50–80%', label: 'Cost Reduction' }
+    ]
+  },
+  {
     id: 'ai-value-stream-analytics-2026',
     title: 'AI Value Stream Analytics 2026: Trace ROI from Token to Revenue',
     excerpt: 'Tie AI cost, latency, and quality to business value with end-to-end tracing.',

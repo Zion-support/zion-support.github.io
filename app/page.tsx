@@ -61,6 +61,8 @@ export default function HomePage() {
             <a href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</a>
             <span className="hidden md:inline">•</span>
             <a href="/blog/ai-trustworthy-agents-2026" className="underline hover:text-yellow-200">Trustworthy AI Agents</a>
+            <span className="hidden md:inline">•</span>
+            <a href="/blog/ai-synthetic-data-2026" className="underline hover:text-yellow-200">AI Synthetic Data</a>
           </div>
           <Link
             href="/blog"
