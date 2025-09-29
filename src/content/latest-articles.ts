@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-reliability-playbooks-2026",
+    slug: "ai-reliability-playbooks-2026",
+    title: "AI Reliability Playbooks 2026: SLOs, Budgets, Rollbacks",
+    description: "SLO-driven playbooks with risk budgets and instant rollbacks for resilient AI.",
+    excerpt: "Build reliability into AI systems with measurable SLOs, budgets, and safe rollbacks.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Operations",
+    tags: ["Reliability", "SLOs", "Budgets"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-reliability-playbooks-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "customer-ai-assistants-2026",
+    slug: "customer-ai-assistants-2026",
+    title: "Customer AI Assistants 2026: Private, On‑Brand, Measurable",
+    description: "Design assistants that protect privacy, stay on-brand, and move KPIs.",
+    excerpt: "A blueprint for assistants customers trust—grounded data, guardrails, and evals.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Applied AI",
+    tags: ["Assistants", "Privacy", "Evals"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/customer-ai-assistants-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "reliable-rag-ops-2026",
     slug: "reliable-rag-ops-2026",
     title: "Reliable RAG Ops 2026: Freshness, Drift, and Quality Budgets",

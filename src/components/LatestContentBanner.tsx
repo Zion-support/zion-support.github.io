@@ -138,6 +138,26 @@ const contentHighlights = [
 // Additions
 contentHighlights.push(
   {
+    id: 17,
+    title: "📘 AI Reliability Playbooks 2026",
+    description: "SLOs, risk budgets, and instant rollbacks for resilient AI",
+    ctaText: "Read Playbook",
+    ctaLink: "/blog/ai-reliability-playbooks-2026",
+    badge: "New",
+    stats: "7 min read",
+    variant: "success" as const
+  },
+  {
+    id: 18,
+    title: "🤝 Customer AI Assistants 2026",
+    description: "Private, on‑brand assistants that measurably move KPIs",
+    ctaText: "Explore Guide",
+    ctaLink: "/blog/customer-ai-assistants-2026",
+    badge: "Featured",
+    stats: "8 min read",
+    variant: "premium" as const
+  },
+  {
     id: 9,
     title: "🧠 Enterprise RAG Blueprint v2",
     description: "Hybrid search, freshness, and auth-aware retrieval with layered evals.",

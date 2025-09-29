@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-reliability-playbooks-2026",
+    title: "AI Reliability Playbooks 2026: SLOs, Budgets, Rollbacks",
+    description: "SLO-driven playbooks with risk budgets and instant rollbacks for resilient AI.",
+    category: "AI Operations",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "customer-ai-assistants-2026",
+    title: "Customer AI Assistants 2026: Private, On‑Brand, Measurable",
+    description: "Design assistants that protect privacy, stay on-brand, and move KPIs.",
+    category: "Applied AI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-reliable-rag-ops-2026",
     title: "Reliable RAG Ops 2026: Freshness Windows, Drift Alerts, Budgets",
     description: "Keep RAG quality high with TTL windows, drift detectors, and KPI‑tied quality budgets.",
