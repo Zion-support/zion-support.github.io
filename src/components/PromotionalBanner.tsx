@@ -67,7 +67,10 @@ const PromotionalBanner: React.FC = () => {
             </div>
             
             <div className="hidden md:flex items-center space-x-2 text-white">
-              <services[currentService].icon className={`w-4 h-4 ${services[currentService].color}`} />
+              {(() => {
+                const Icon = services[currentService].icon;
+                return <Icon className={`w-4 h-4 ${services[currentService].color}`} />;
+              })()}
               <span className="text-sm font-medium">{services[currentService].title}</span>
               <span className="text-xs text-zion-slate-light">- {services[currentService].description}</span>
             </div>
