@@ -68,10 +68,7 @@ class AccessibilityEnhancer {
     // Intentionally left as a no-op for now; reserved for future enhancements
   };
 
-  // Event handler placeholders to match removeEventListener references
-  private handleKeyDown(_event: KeyboardEvent): void {}
-  private handleFocusIn(_event: FocusEvent): void {}
-  private handleFocusOut(_event: FocusEvent): void {}
+  // Removed duplicate placeholder declarations that conflicted with arrow handler fields
 
   constructor() {
     this.config = this.getDefaultConfig();
@@ -145,16 +142,7 @@ class AccessibilityEnhancer {
 
   /**
    * Backward-compatible initialize alias handled by init()
-   * (Removed duplicate initialize method to avoid no-dupe-class-members ESLint error)
    */
-
-=======
-  // Added for compatibility with callers that expect an initialize() method
-  public initialize(): void {
-    this.init();
-  }
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-d33b
   private setupKeyboardNavigation(): void {
     if (!this.config.keyboardNavigation) return;
 

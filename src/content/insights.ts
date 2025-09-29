@@ -12,10 +12,6 @@ export const latestInsights: InsightArticle[] = [
     id: "ai-risk-register-checklist",
     title: "AI Risk Register Checklist",
     summary: "Owners, policy tests, and dashboards that make risk programs real.",
-    id: "eval-systems-online-canaries",
-    title: "Eval Systems That Scale: Online Canaries and Policy Gates",
-    summary:
-      "Move from ad-hoc checks to layered evals with CI gates and production canaries tied to KPIs.",
     category: "GenAI",
     date: "2025-09-30",
     readMinutes: 6,
@@ -57,8 +53,6 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 5,
   },
   {
-    id: "ai-governance-rubric",
-    title: "A Lightweight Rubric for AI Governance Decisions",
     id: "platform-blueprints-golden-paths",
     title: "Golden Paths That Actually Get Used",
     summary:
@@ -95,10 +89,6 @@ export const latestInsights: InsightArticle[] = [
     id: "rag-freshness-strategies",
     title: "RAG Freshness Strategies",
     summary: "Invalidate staleness with versioned chunks, TTLs, and async warmups.",
-    id: "ai-governance-rubric",
-    title: "A Lightweight Rubric for AI Governance Decisions",
-    summary:
-      "Decision criteria for when to add controls, how to validate, and who owns risk.",
     category: "Risk & Compliance",
     date: "2025-09-29",
     readMinutes: 6,
