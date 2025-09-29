@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AppRouter } from './router';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import './index.css';

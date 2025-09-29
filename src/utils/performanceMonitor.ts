@@ -9,21 +9,13 @@ interface PerformanceMetric {
   id: string;
 }
 
-interface WebVitalsMetric {
-  name: 'CLS' | 'FID' | 'FCP' | 'LCP' | 'TTFB';
-  value: number;
-  id: string;
-  delta: number;
-  entries: PerformanceEntry[];
-}
-
 class PerformanceMonitor {
   private metrics: PerformanceMetric[] = [];
   private observers: PerformanceObserver[] = [];
   private isInitialized = false;
 
   constructor() {
-    this.init();
+    this.initialize();
   }
 
   private init(): void {
@@ -150,103 +142,36 @@ class PerformanceMonitor {
 
   private recordMetric(metric: PerformanceMetric): void {
     this.metrics.push(metric);
-    
-    // Keep only last 100 metrics to prevent memory leaks
-    if (this.metrics.length > 100) {
-      this.metrics = this.metrics.slice(-100);
-    }
-
-    // Send to analytics if available
-    this.sendToAnalytics(metric);
-  }
-
-  private sendToAnalytics(metric: PerformanceMetric): void {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'performance_metric', {
-        metric_name: metric.name,
-        metric_value: Math.round(metric.value),
-        metric_id: metric.id
-      });
-    }
+    if (this.metrics.length > 200) this.metrics = this.metrics.slice(-200);
   }
 
   private generateId(): string {
-    return Math.random().toString(36).substr(2, 9);
+    return Math.random().toString(36).slice(2, 11);
   }
 
   public getMetrics(): PerformanceMetric[] {
     return [...this.metrics];
   }
 
-  public getWebVitals(): { [key: string]: number } {
-    const vitals: { [key: string]: number } = {};
-    this.metrics.forEach(metric => {
-      if (['CLS', 'FID', 'FCP', 'LCP', 'TTFB'].includes(metric.name)) {
-        vitals[metric.name] = metric.value;
-      }
-    });
-    return vitals;
-  }
-
-  public getPerformanceScore(): number {
-    const vitals = this.getWebVitals();
-    let score = 100;
-
-    // LCP scoring (good: <2.5s, needs improvement: 2.5-4s, poor: >4s)
-    if (vitals.LCP) {
-      if (vitals.LCP > 4000) score -= 30;
-      else if (vitals.LCP > 2500) score -= 15;
+  public getWebVitals(): Record<string, number> {
+    const out: Record<string, number> = {};
+    for (const m of this.metrics) {
+      if (!out[m.name]) out[m.name] = m.value;
     }
-
-    // FID scoring (good: <100ms, needs improvement: 100-300ms, poor: >300ms)
-    if (vitals.FID) {
-      if (vitals.FID > 300) score -= 25;
-      else if (vitals.FID > 100) score -= 10;
-    }
-
-    // CLS scoring (good: <0.1, needs improvement: 0.1-0.25, poor: >0.25)
-    if (vitals.CLS) {
-      if (vitals.CLS > 0.25) score -= 20;
-      else if (vitals.CLS > 0.1) score -= 10;
-    }
-
-    return Math.max(0, score);
-  }
-
-  public disconnect(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-    this.isInitialized = false;
+    return out;
   }
 
   public reportPerformance(): void {
-    const score = this.getPerformanceScore();
     const vitals = this.getWebVitals();
-    
-    console.log('Performance Report:', {
-      score,
-      vitals,
-      timestamp: new Date().toISOString()
-    });
-
-    // Send performance report to analytics
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'performance_report', {
-        performance_score: score,
-        web_vitals: JSON.stringify(vitals)
-      });
-    }
+    // eslint-disable-next-line no-console
+    console.log('Performance Report', vitals);
   }
 }
 
-// Export singleton instance
 export const performanceMonitor = new PerformanceMonitor();
 
-// Auto-report performance after page load
 if (typeof window !== 'undefined') {
   window.addEventListener('load', () => {
-    setTimeout(() => {
-      performanceMonitor.reportPerformance();
-    }, 5000); // Report after 5 seconds
+    setTimeout(() => performanceMonitor.reportPerformance(), 5000);
   });
 }
