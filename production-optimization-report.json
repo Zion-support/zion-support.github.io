@@ -1,54 +1,54 @@
 {
-  "timestamp": "2025-09-28T23:11:04.023Z",
-  "totalSize": 1302587,
-  "jsFiles": 16,
+  "timestamp": "2025-09-29T09:45:01.282Z",
+  "totalSize": 663959,
+  "jsFiles": 18,
   "cssFiles": 1,
   "largestJsFiles": [
     {
-      "name": "assets/js/chunk-NzAoPyO7.js",
-      "size": 496310
+      "name": "assets/js/chunk-BydN_B68.js",
+      "size": 311849
     },
     {
-      "name": "assets/js/chunk-tymLQbQl.js",
-      "size": 300995
+      "name": "assets/js/chunk-B-DRqlIk.js",
+      "size": 99887
     },
     {
-      "name": "assets/js/chunk-Q2vPdxzd.js",
-      "size": 205819
+      "name": "assets/js/chunk-CtPPjFiw.js",
+      "size": 72276
     },
     {
-      "name": "assets/js/chunk-BIiLZScT.js",
-      "size": 157783
+      "name": "assets/js/chunk-B88Vkp0P.js",
+      "size": 47630
     },
     {
-      "name": "assets/js/main-X3YPzfVY.js",
-      "size": 24611
+      "name": "assets/js/Home-BCzm6gEe.js",
+      "size": 13999
     },
     {
-      "name": "assets/js/Home-Ci_QBsjJ.js",
-      "size": 13937
+      "name": "assets/js/Contact--b26CdWO.js",
+      "size": 8873
     },
     {
-      "name": "assets/js/Contact-Dom1GQcT.js",
-      "size": 8875
+      "name": "assets/js/EnhancedHome-BUWFXPOI.js",
+      "size": 8834
     },
     {
-      "name": "assets/js/About-DYRfhzMm.js",
-      "size": 8361
+      "name": "assets/js/About-CP-h_3P0.js",
+      "size": 8360
     },
     {
       "name": "sw-enhanced.js",
       "size": 7084
     },
     {
-      "name": "assets/js/Services-Co6Pvz3i.js",
-      "size": 6967
+      "name": "assets/js/Services-DaT-k4Zy.js",
+      "size": 6964
     }
   ],
   "largestCssFiles": [
     {
-      "name": "assets/css/main-BS0QWvBY.css",
-      "size": 21477
+      "name": "assets/css/main-CC3Iwm5K.css",
+      "size": 27052
     }
   ]
 }
