@@ -75,7 +75,7 @@ export default function HomePage() {
             <span>✨ NEW 2026:</span>
             <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-fintech-transformation-2026" className="underline hover:text-yellow-200">FinTech Transformation</Link>
+            <Link href="/blog/ai-customer-data-platforms-2026" className="underline hover:text-yellow-200">Customer Data Platforms</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-retail-automation-2026" className="underline hover:text-yellow-200">Retail Automation</Link>
           </div>

@@ -54,6 +54,24 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="AI Operational Excellence 2026: From SLIs to Self‑Healing Ops"
+            excerpt="Reliability scorecards, policy tests, and automated runbooks for 99.9% uptime."
+            date="October 9, 2025"
+            category="Operations"
+            readTime="14 min"
+            image="🛠️"
+            href="/blog/ai-operational-excellence-2026"
+          />
+          <BlogPost
+            title="AI Customer Data Platforms 2026: Real‑Time Personalization"
+            excerpt="Consent‑aware ingestion, identity resolution, feature stores, and edge delivery."
+            date="October 9, 2025"
+            category="Analytics"
+            readTime="18 min"
+            image="🧬"
+            href="/blog/ai-customer-data-platforms-2026"
+          />
+          <BlogPost
             title="Platform Engineering Scorecards 2026: From Golden Paths to Outcomes"
             excerpt="Measure adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery."
             date="October 9, 2025"
