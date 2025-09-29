@@ -62,6 +62,83 @@ Implement these patterns to achieve fast, reliable, and cost‑effective streami
     image: "/images/real-time-data-pipelines.jpg"
   },
   {
+    slug: "platform-engineering-scorecards-2025",
+    title: "Platform Engineering Scorecards That Drive Adoption",
+    description: "Define capabilities, golden paths, and outcome metrics that align platform work to business impact.",
+    content: `
+# Platform Engineering Scorecards That Drive Adoption
+
+Scorecards connect platform investment to product outcomes by aligning capabilities, golden paths, and experience metrics.
+
+## Core Capabilities
+- Self-serve paved roads
+- Secure-by-default scaffolding
+- Golden path discoverability
+
+## Metrics That Matter
+- Time to first deploy
+- Percent of services on golden paths
+- MTTR and change failure rate
+
+Adopt scorecards to guide roadmap and celebrate adoption wins.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "Platform Engineering",
+    tags: ["Platform", "Golden Paths", "DX", "Scorecards"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/platform-engineering-scorecards.jpg"
+  },
+  {
+    slug: "genai-guardrails-production-2025",
+    title: "GenAI Guardrails in Production: From Evals to Enforcement",
+    description: "A practical blueprint for eval harnesses, policy tests, and runtime kill-switches that keep GenAI safe.",
+    content: `
+# GenAI Guardrails in Production
+
+Combine offline eval suites with online policy tests, classifiers, and circuit breakers.
+
+## Key Patterns
+- Task-specific evals with pass/fail budgets
+- Toxicity and PII classifiers in the request path
+- Canary releases, drift monitors, and rollback triggers
+
+Ship faster with safety you can measure.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-27",
+    category: "GenAI",
+    tags: ["GenAI", "Safety", "Evals", "Policy"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/genai-guardrails.jpg"
+  },
+  {
+    slug: "edge-caching-patterns-2025",
+    title: "Edge Caching Patterns: Sub‑100ms Without Breaking Consistency",
+    description: "When to cache at the edge, purge strategies, and safe staleness patterns for real apps.",
+    content: `
+# Edge Caching Patterns
+
+Latency budgets, cache keys, and purge plans that keep UX fast and correct.
+
+## Techniques
+- Stale‑while‑revalidate and background refresh
+- Event-driven cache invalidation
+- Surrogate keys and soft TTLs
+
+Deliver sub‑100ms UX with confidence.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "Architecture",
+    tags: ["Edge", "Caching", "Performance"],
+    featured: false,
+    readTime: "5 min read",
+    image: "/images/edge-caching.jpg"
+  },
+  {
     slug: "ai-workflow-automation-2025-guide",
     title: "The Complete Guide to AI Workflow Automation in 2025",
     description: "Discover how AI workflow automation is revolutionizing business operations. Learn implementation strategies, benefits, and real-world case studies.",
