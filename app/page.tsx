@@ -23,34 +23,34 @@ import {
   AIRoadmapsBanner,
   AIFinOpsBanner,
   AIMultimodalEnterpriseBanner,
-  AIEnterpriseAutomationBanner,
+  AIEnterpriseAutomationGuideBanner,
   AIDataAnalyticsEnterpriseBanner,
   EnterpriseTransformationSuccessBanner,
   HealthcareTransformationBanner,
   NewContent2026Banner,
-  AIAgentOrchestrationBanner,
-  AISustainabilityBanner,
-  QuantumComputingBanner,
-  SustainabilityCaseStudyBanner,
-  QuantumOptimizationBanner,
   AINeuralArchitectureBanner,
   AISpaceTechBanner,
   AISustainabilityCaseStudyBanner,
   AITechnologyBreakthroughBanner,
   EnterpriseAITransformationBanner
 } from '../components/PromotionalBanner';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import UltimateContent2026Showcase from '../components/UltimateContent2026Showcase';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
-import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
+import { EnhancedContentShowcase2026 } from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
-import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
-import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
+import AITrends2025Banner from '../components/AITrends2025Banner';
+import NewServicesShowcaseBanner from '../components/NewServicesShowcaseBanner';
+import AIROICalculator from '../components/AIROICalculator';
+// import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
+// import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -66,24 +66,30 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>🚀 NEW 2026 Content:</span>
-            <a to="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
+            <a href="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</a>
+            <a href="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</a>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</a>
+            <a href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</a>
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</a>
+            <a href="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</a>
           </div>
           <Link
-            to="/blog"
+            href="/blog"
             className="bg-white text-green-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
           >
             Read the latest
           </Link>
         </div>
       </div>
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
+      
+      {/* Ultimate Content 2026 Showcase */}
+      <UltimateContent2026Showcase />
+      
       {/* Promotional Banners */}
       <NewContent2026Banner />
       <AINeuralArchitectureBanner />
@@ -91,13 +97,8 @@ export default function HomePage() {
       <AISustainabilityCaseStudyBanner />
       <AITechnologyBreakthroughBanner />
       <EnterpriseAITransformationBanner />
-      <AIAgentOrchestrationBanner />
-      <AISustainabilityBanner />
-      <QuantumComputingBanner />
-      <SustainabilityCaseStudyBanner />
-      <QuantumOptimizationBanner />
       <AIMultimodalEnterpriseBanner />
-      <AIEnterpriseAutomationBanner />
+      <AIEnterpriseAutomationGuideBanner />
       <AIDataAnalyticsEnterpriseBanner />
       <EnterpriseTransformationSuccessBanner />
       <HealthcareTransformationBanner />
@@ -119,10 +120,10 @@ export default function HomePage() {
       <AIAnalyticsBanner />
       
       {/* New Content Promotional Banner 2026 */}
-      <NewContentPromotionalBanner2026 />
+      {/* <NewContentPromotionalBanner2026 /> */}
       
       {/* AI Innovation Showcase Banner 2026 */}
-      <AIInnovationShowcaseBanner2026 />
+      {/* <AIInnovationShowcaseBanner2026 /> */}
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -139,13 +140,13 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              to="/services"
+              href="/services"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore Our Services
             </Link>
             <a
-              to="tel:+13024640950"
+              href="tel:+13024640950"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
               Call +1 302 464 0950
@@ -190,7 +191,7 @@ export default function HomePage() {
               description="Transform data into actionable insights with predictive modeling and real-time dashboards"
               price="$199/month"
               features={['Predictive Analytics', 'Real-time Dashboards', 'Data Integration']}
-              to="/services/ai-data-analytics"
+              href="/services/ai-data-analytics"
               popular={true}
             />
             <FeaturedServiceCard
@@ -198,7 +199,7 @@ export default function HomePage() {
               description="Automate business processes with intelligent workflow design and smart triggers"
               price="$149/month"
               features={['Process Automation', 'Smart Triggers', 'Performance Monitoring']}
-              to="/services/ai-workflow-automation"
+              href="/services/ai-workflow-automation"
               popular={false}
             />
             <FeaturedServiceCard
@@ -206,7 +207,7 @@ export default function HomePage() {
               description="24/7 intelligent customer support with natural language processing"
               price="$99/month"
               features={['24/7 Support', 'Multi-channel', 'Personalized Responses']}
-              to="/services/ai-virtual-assistant"
+              href="/services/ai-virtual-assistant"
               popular={false}
             />
             <FeaturedServiceCard
@@ -214,7 +215,7 @@ export default function HomePage() {
               description="Seamless migration to cloud infrastructure with zero downtime"
               price="$2,999"
               features={['Zero Downtime', 'Security Compliance', 'Cost Optimization']}
-              to="/services/cloud-migration"
+              href="/services/cloud-migration"
               popular={false}
             />
             <FeaturedServiceCard
@@ -222,7 +223,7 @@ export default function HomePage() {
               description="Automate CI/CD pipelines and infrastructure management"
               price="$399/month"
               features={['CI/CD Pipelines', 'Infrastructure as Code', 'Auto-scaling']}
-              to="/services/devops-automation"
+              href="/services/devops-automation"
               popular={false}
             />
             <FeaturedServiceCard
@@ -230,7 +231,7 @@ export default function HomePage() {
               description="Advanced threat detection and zero-trust security architecture"
               price="$599/month"
               features={['Threat Detection', 'Zero-trust Architecture', 'Compliance']}
-              to="/services/cybersecurity-consulting"
+              href="/services/cybersecurity-consulting"
               popular={false}
             />
             <FeaturedServiceCard
@@ -238,7 +239,7 @@ export default function HomePage() {
               description="Real-time AI processing at the edge with sub-50ms response times"
               price="$799/month"
               features={['Sub-50ms Latency', 'Edge Intelligence', 'Offline Capability']}
-              to="/services/ai-edge-computing"
+              href="/services/ai-edge-computing"
               popular={false}
             />
             <FeaturedServiceCard
@@ -246,7 +247,7 @@ export default function HomePage() {
               description="Automate financial processes with 95% accuracy and $3M+ savings"
               price="$1,299/month"
               features={['95% Automation', 'Fraud Detection', 'Real-time Reporting']}
-              to="/services/ai-finance-automation"
+              href="/services/ai-finance-automation"
               popular={false}
             />
           </div>
@@ -294,7 +295,7 @@ export default function HomePage() {
 
           {/* Featured Recommendations */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link href="/blog/ai-neural-architecture-optimization-2026" className="group">
+            <Link href="/blog/ai-autonomous-enterprise-2026" className="group">
               <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-purple-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -306,28 +307,28 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-sm text-purple-600 font-medium">📝 Article</span>
-                  <span className="text-sm text-gray-500">Neural Architecture</span>
+                  <span className="text-sm text-gray-500">Enterprise AI</span>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                  AI Neural Architecture Optimization 2026: Next-Gen Performance Engineering
+                  AI Autonomous Enterprise 2026: Complete Business Transformation Guide
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  Master neural architecture optimization with 40% performance gains, 60% cost reduction, and enterprise-grade scalability patterns.
+                  Transform your enterprise with 95% automation efficiency, $10M+ ROI, and zero-touch operations through autonomous AI.
                 </p>
                 <div className="flex gap-4 mb-4">
                   <div className="text-center">
-                    <div className="text-lg font-bold text-purple-600">40%</div>
-                    <div className="text-xs text-gray-500">Performance</div>
+                    <div className="text-lg font-bold text-purple-600">95%</div>
+                    <div className="text-xs text-gray-500">Automation</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-lg font-bold text-purple-600">60%</div>
-                    <div className="text-xs text-gray-500">Cost Savings</div>
+                    <div className="text-lg font-bold text-purple-600">$10M+</div>
+                    <div className="text-xs text-gray-500">ROI</div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-gray-500">
                     <Clock className="w-4 h-4 mr-1" />
-                    28 min read
+                    25 min read
                   </div>
                   <div className="flex items-center text-purple-600 font-semibold text-sm group-hover:text-purple-700 transition-colors">
                     Read More →
@@ -336,7 +337,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/blog/ai-space-tech-2026" className="group">
+            <Link href="/blog/ai-quantum-optimization-2026" className="group">
               <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -348,28 +349,28 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-sm text-blue-600 font-medium">📝 Article</span>
-                  <span className="text-sm text-gray-500">Space Technology</span>
+                  <span className="text-sm text-gray-500">Quantum AI</span>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Space Technology 2026: Autonomous Space Operations & Deep Space Intelligence
+                  AI Quantum Optimization 2026: 1000x Faster Computing Revolution
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  Revolutionary AI space technology for autonomous missions, deep space exploration, and orbital operations with 99.9% reliability.
+                  Unlock quantum-enhanced AI optimization with 1000x performance improvements and $12M+ additional returns.
                 </p>
                 <div className="flex gap-4 mb-4">
                   <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">99.9%</div>
-                    <div className="text-xs text-gray-500">Reliability</div>
+                    <div className="text-lg font-bold text-blue-600">1000x</div>
+                    <div className="text-xs text-gray-500">Faster</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">$500M+</div>
-                    <div className="text-xs text-gray-500">Savings</div>
+                    <div className="text-lg font-bold text-blue-600">$12M+</div>
+                    <div className="text-xs text-gray-500">Returns</div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-gray-500">
                     <Clock className="w-4 h-4 mr-1" />
-                    32 min read
+                    30 min read
                   </div>
                   <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
                     Read More →
@@ -378,7 +379,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/case-studies/ai-sustainability-transformation-2026" className="group">
+            <Link href="/case-studies/ai-quantum-optimization-2026" className="group">
               <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-green-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-green-500 to-teal-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -390,28 +391,28 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-sm text-green-600 font-medium">📊 Case Study</span>
-                  <span className="text-sm text-gray-500">Sustainability</span>
+                  <span className="text-sm text-gray-500">Financial Services</span>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
-                  AI Sustainability Transformation 2026: $10M ROI Case Study
+                  AI Quantum Optimization: 1000x Speed Improvement Case Study
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  See how a Fortune 500 company achieved carbon neutrality and $10M ROI with comprehensive AI sustainability transformation.
+                  See how a financial services company achieved 1000x optimization speed and $12M additional returns with quantum AI.
                 </p>
                 <div className="flex gap-4 mb-4">
                   <div className="text-center">
-                    <div className="text-lg font-bold text-green-600">$10M</div>
-                    <div className="text-xs text-gray-500">ROI</div>
+                    <div className="text-lg font-bold text-green-600">1000x</div>
+                    <div className="text-xs text-gray-500">Speed</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-lg font-bold text-green-600">100%</div>
-                    <div className="text-xs text-gray-500">Carbon Neutral</div>
+                    <div className="text-lg font-bold text-green-600">$12M</div>
+                    <div className="text-xs text-gray-500">Returns</div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-gray-500">
                     <Clock className="w-4 h-4 mr-1" />
-                    15 min read
+                    12 min read
                   </div>
                   <div className="flex items-center text-green-600 font-semibold text-sm group-hover:text-green-700 transition-colors">
                     Read More →
@@ -423,7 +424,7 @@ export default function HomePage() {
 
           <div className="text-center">
             <Link
-              to="/blog"
+              href="/blog"
               className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <span className="w-5 h-5 mr-2">✨</span>
@@ -494,7 +495,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <Link
-                    to="/blog/ai-agent-orchestration-2026"
+                    href="/blog/ai-agent-orchestration-2026"
                     className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                   >
                     Read More →
@@ -545,7 +546,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <Link
-                    to="/case-studies/ai-sustainability-transformation-2026"
+                    href="/case-studies/ai-sustainability-transformation-2026"
                     className="bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors"
                   >
                     Read More →
@@ -557,7 +558,7 @@ export default function HomePage() {
 
           {/* Additional Content Grid */}
           <div className="grid md:grid-cols-3 gap-8">
-            <Link to="/blog/ai-sustainability-green-tech-2026" className="group">
+            <Link href="/blog/ai-sustainability-green-tech-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-green-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -596,7 +597,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/case-studies/ai-quantum-optimization-2026" className="group">
+            <Link href="/case-studies/ai-quantum-optimization-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-purple-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -635,7 +636,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/blog/ai-quantum-computing-2026" className="group">
+            <Link href="/blog/ai-quantum-computing-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-indigo-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -677,7 +678,7 @@ export default function HomePage() {
 
           <div className="text-center mt-16">
             <Link
-              to="/blog"
+              href="/blog"
               className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <span className="w-5 h-5 mr-2">🚀</span>
@@ -735,7 +736,7 @@ export default function HomePage() {
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-500">Published Jan 20, 2025</div>
                 <Link
-                  to="/blog/ai-edge-computing-2025"
+                  href="/blog/ai-edge-computing-2025"
                   className="text-cyan-600 font-semibold hover:text-cyan-700 transition-colors"
                 >
                   Read More →
@@ -760,7 +761,7 @@ export default function HomePage() {
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-500">Published Jan 20, 2025</div>
                 <Link
-                  to="/blog/ai-cybersecurity-2025"
+                  href="/blog/ai-cybersecurity-2025"
                   className="text-red-600 font-semibold hover:text-red-700 transition-colors"
                 >
                   Read More →
@@ -785,7 +786,7 @@ export default function HomePage() {
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-500">Published Jan 20, 2025</div>
                 <Link
-                  to="/case-studies/ai-finance-automation"
+                  href="/case-studies/ai-finance-automation"
                   className="text-green-600 font-semibold hover:text-green-700 transition-colors"
                 >
                   Read More →
@@ -796,7 +797,7 @@ export default function HomePage() {
 
           <div className="text-center">
             <Link
-              to="/blog"
+              href="/blog"
               className="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore All Innovations
@@ -818,7 +819,7 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link to="/blog/ai-agent-orchestration-2026" className="group">
+            <Link href="/blog/ai-agent-orchestration-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -837,7 +838,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/blog/ai-sustainability-green-tech-2026" className="group">
+            <Link href="/blog/ai-sustainability-green-tech-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -856,7 +857,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/blog/ai-quantum-computing-2026" className="group">
+            <Link href="/blog/ai-quantum-computing-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -875,7 +876,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/blog/ai-enterprise-automation-2026" className="group">
+            <Link href="/blog/ai-enterprise-automation-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -894,7 +895,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/case-studies/ai-sustainability-transformation-2026" className="group">
+            <Link href="/case-studies/ai-sustainability-transformation-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -913,7 +914,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/case-studies/ai-quantum-optimization-2026" className="group">
+            <Link href="/case-studies/ai-quantum-optimization-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -932,7 +933,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/case-studies/fintech-ai-risk-compliance-2025" className="group">
+            <Link href="/case-studies/fintech-ai-risk-compliance-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -951,7 +952,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/blog/llm-cost-optimization-2025" className="group">
+            <Link href="/blog/llm-cost-optimization-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -970,7 +971,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/blog/edge-llm-latency-patterns" className="group">
+            <Link href="/blog/edge-llm-latency-patterns" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -989,7 +990,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/blog/genai-guardrails-2025" className="group">
+            <Link href="/blog/genai-guardrails-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -1008,7 +1009,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/blog/ai-revolution-2025" className="group">
+            <Link href="/blog/ai-revolution-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -1028,7 +1029,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/blog/ai-agents-in-the-enterprise-2025" className="group">
+            <Link href="/blog/ai-agents-in-the-enterprise-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -1048,7 +1049,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/case-studies/techcorp-ai-transformation" className="group">
+            <Link href="/case-studies/techcorp-ai-transformation" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -1068,7 +1069,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/case-studies/finserve-genai-risk-mitigation" className="group">
+            <Link href="/case-studies/finserve-genai-risk-mitigation" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -1088,7 +1089,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/blog/ai-customer-service-2025" className="group">
+            <Link href="/blog/ai-customer-service-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -1108,7 +1109,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/blog/ai-healthcare-transformation-2025" className="group">
+            <Link href="/blog/ai-healthcare-transformation-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -1128,7 +1129,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/case-studies/retail-ai-transformation" className="group">
+            <Link href="/case-studies/retail-ai-transformation" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -1148,7 +1149,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/blog/ai-enterprise-implementation-2025" className="group">
+            <Link href="/blog/ai-enterprise-implementation-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -1168,7 +1169,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/blog/ai-mlops-best-practices-2025" className="group">
+            <Link href="/blog/ai-mlops-best-practices-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -1188,7 +1189,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/case-studies/enterprise-ai-transformation-2025" className="group">
+            <Link href="/case-studies/enterprise-ai-transformation-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -1211,7 +1212,7 @@ export default function HomePage() {
 
           <div className="text-center">
             <Link
-              to="/blog"
+              href="/blog"
               className="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg hover:shadow-xl"
             >
               View All Content
@@ -1323,7 +1324,7 @@ export default function HomePage() {
               </div>
               <div className="mt-6 pt-4 border-t border-white/20">
                 <Link
-                  to="/blog"
+                  href="/blog"
                   className="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
                 >
                   View All Content →
@@ -1350,13 +1351,13 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              to="tel:+13024640950"
+              href="tel:+13024640950"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg"
             >
               Call +1 302 464 0950
             </a>
             <a
-              to="mailto:kleber@ziontechgroup.com"
+              href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
               Get Free Consultation
