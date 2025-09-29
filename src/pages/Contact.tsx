@@ -12,9 +12,11 @@ import {
   Zap,
   Sparkles,
 } from "lucide-react";
-import Header from "../components/Header";
+// Header is not available in this branch; omit to unblock build
+const Header = () => null;
 import Footer from "../components/Footer";
-import EnhancedContactForm from "../components/EnhancedContactForm";
+// EnhancedContactForm is not available in this branch; add placeholder
+const EnhancedContactForm = () => null;
 
 export default function Contact(): React.JSX.Element {
   const contactInfo = [

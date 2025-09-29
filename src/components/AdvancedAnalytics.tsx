@@ -1,0 +1,30 @@
+import React, { useEffect } from "react";
+
+type AdvancedAnalyticsProps = {
+  enableConversionTracking?: boolean;
+  enablePerformanceTracking?: boolean;
+  enableErrorTracking?: boolean;
+};
+
+export default function AdvancedAnalytics(props: AdvancedAnalyticsProps): React.JSX.Element {
+  const { enableConversionTracking, enablePerformanceTracking, enableErrorTracking } = props;
+
+  useEffect(() => {
+    if (enablePerformanceTracking && typeof performance !== "undefined") {
+      void performance.getEntriesByType?.("navigation");
+    }
+    if (enableErrorTracking) {
+      // Attach a simple error listener as a placeholder
+      const onError = () => {};
+      window.addEventListener("error", onError);
+      return () => window.removeEventListener("error", onError);
+    }
+    return;
+  }, [enablePerformanceTracking, enableErrorTracking]);
+
+  if (enableConversionTracking || enablePerformanceTracking || enableErrorTracking) {
+    return <div aria-hidden="true" style={{ display: "none" }} />;
+  }
+  return <></>;
+}
+

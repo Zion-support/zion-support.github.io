@@ -6,7 +6,6 @@ module.exports = {
     '<rootDir>/src/test/setup.ts' ],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-<<<<<<< HEAD
     // Handle image imports
     '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$':
       '<rootDir>/tests/__mocks__/fileMock.js',
