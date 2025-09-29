@@ -100,11 +100,11 @@ export class AnalyticsManager {
     document.head.appendChild(script);
 
     // Initialize gtag
-    window.dataLayer = window.dataLayer || [];
+    (window as any).dataLayer = (window as any).dataLayer || [];
     function gtag(...args: any[]) {
-      window.dataLayer.push(args);
+      (window as any).dataLayer.push(args);
     }
-    window.gtag = gtag;
+    (window as any).gtag = gtag;
 
     gtag('js', new Date());
     gtag('config', this.config.googleAnalyticsId, {
@@ -153,13 +153,13 @@ export class AnalyticsManager {
   private async initializePerformanceTracking(): Promise<void> {
     if (!this.config.enablePerformanceTracking) return;
 
-    // Track Core Web Vitals
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS((metric) => this.trackPerformanceMetric('CLS', metric));
-      getFID((metric) => this.trackPerformanceMetric('FID', metric));
-      getFCP((metric) => this.trackPerformanceMetric('FCP', metric));
-      getLCP((metric) => this.trackPerformanceMetric('LCP', metric));
-      getTTFB((metric) => this.trackPerformanceMetric('TTFB', metric));
+    // Track Core Web Vitals (web-vitals v5+)
+    import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }: any) => {
+      onCLS((metric: any) => this.trackPerformanceMetric('CLS', metric));
+      onINP((metric: any) => this.trackPerformanceMetric('INP', metric));
+      onFCP((metric: any) => this.trackPerformanceMetric('FCP', metric));
+      onLCP((metric: any) => this.trackPerformanceMetric('LCP', metric));
+      onTTFB((metric: any) => this.trackPerformanceMetric('TTFB', metric));
     });
 
     // Track page load performance
@@ -254,7 +254,7 @@ export class AnalyticsManager {
       });
     };
 
-    window.addEventListener('scroll', this.throttle(trackScroll, 1000));
+    window.addEventListener('scroll', this.throttleEvent(trackScroll, 1000));
   }
 
   /**
@@ -327,7 +327,7 @@ export class AnalyticsManager {
         if (form) {
           this.trackEvent('form_field_focus', {
             event_category: 'Engagement',
-            event_label: target.name || target.id || 'unknown_field',
+            event_label: (target.getAttribute('name') || target.id || 'unknown_field'),
             form_name: form.name || form.id || 'unknown_form'
           });
         }
@@ -393,8 +393,8 @@ export class AnalyticsManager {
    */
   private disableTracking(): void {
     // Clear existing data
-    if (window.gtag) {
-      window.gtag('consent', 'update', {
+    if ((window as any).gtag) {
+      (window as any).gtag('consent', 'update', {
         analytics_storage: 'denied',
         ad_storage: 'denied'
       });
@@ -435,8 +435,8 @@ export class AnalyticsManager {
    */
   private sendEvent(event: AnalyticsEvent): void {
     // Send to Google Analytics
-    if (window.gtag && this.config.googleAnalyticsId) {
-      window.gtag('event', event.event_name, {
+    if ((window as any).gtag && this.config.googleAnalyticsId) {
+      (window as any).gtag('event', event.event_name, {
         event_category: event.event_category,
         event_label: event.event_label,
         value: event.value,
@@ -445,8 +445,8 @@ export class AnalyticsManager {
     }
 
     // Send to Google Tag Manager
-    if (window.dataLayer) {
-      window.dataLayer.push({
+    if ((window as any).dataLayer) {
+      (window as any).dataLayer.push({
         event: event.event_name,
         ...event.custom_parameters
       });
@@ -470,16 +470,16 @@ export class AnalyticsManager {
     const pageTitleToUse = pageTitle || document.title;
 
     // Google Analytics
-    if (window.gtag && this.config.googleAnalyticsId) {
-      window.gtag('config', this.config.googleAnalyticsId, {
+    if ((window as any).gtag && this.config.googleAnalyticsId) {
+      (window as any).gtag('config', this.config.googleAnalyticsId, {
         page_path: pagePath,
         page_title: pageTitleToUse
       });
     }
 
     // Google Tag Manager
-    if (window.dataLayer) {
-      window.dataLayer.push({
+    if ((window as any).dataLayer) {
+      (window as any).dataLayer.push({
         event: 'page_view',
         page_path: pagePath,
         page_title: pageTitleToUse,
@@ -502,8 +502,8 @@ export class AnalyticsManager {
     this.userProperties = { ...this.userProperties, ...properties };
 
     // Google Analytics
-    if (window.gtag && this.config.googleAnalyticsId) {
-      window.gtag('config', this.config.googleAnalyticsId, {
+    if ((window as any).gtag && this.config.googleAnalyticsId) {
+      (window as any).gtag('config', this.config.googleAnalyticsId, {
         user_id: properties.user_id,
         custom_map: {
           user_type: properties.user_type,
@@ -514,8 +514,8 @@ export class AnalyticsManager {
     }
 
     // Google Tag Manager
-    if (window.dataLayer) {
-      window.dataLayer.push({
+    if ((window as any).dataLayer) {
+      (window as any).dataLayer.push({
         user_properties: properties
       });
     }
@@ -533,8 +533,8 @@ export class AnalyticsManager {
     });
 
     // Google Analytics Enhanced Ecommerce
-    if (window.gtag && this.config.googleAnalyticsId) {
-      window.gtag('event', 'purchase', {
+    if ((window as any).gtag && this.config.googleAnalyticsId) {
+      (window as any).gtag('event', 'purchase', {
         transaction_id: `conv_${Date.now()}`,
         value: value,
         currency: currency,
@@ -551,22 +551,22 @@ export class AnalyticsManager {
   /**
    * Throttle function
    */
-  private throttle(func: Function, delay: number): Function {
-    let timeoutId: NodeJS.Timeout;
+  private throttleEvent<T extends (event: Event) => void>(handler: T, delay: number): (event: Event) => void {
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
     let lastExecTime = 0;
-    
-    return function (...args: any[]) {
+
+    return (event: Event) => {
       const currentTime = Date.now();
-      
+
       if (currentTime - lastExecTime > delay) {
-        func.apply(this, args);
+        handler(event);
         lastExecTime = currentTime;
       } else {
-        clearTimeout(timeoutId);
+        if (timeoutId) clearTimeout(timeoutId);
         timeoutId = setTimeout(() => {
-          func.apply(this, args);
+          handler(event);
           lastExecTime = Date.now();
-        }, delay - (currentTime - lastExecTime));
+        }, Math.max(0, delay - (currentTime - lastExecTime)));
       }
     };
   }
@@ -666,13 +666,7 @@ export const analyticsUtils = {
   }
 };
 
-// Extend Window interface
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
-  }
-}
+// Avoid conflicting global type declarations; rely on runtime checks only
 
 export default {
   AnalyticsManager,
