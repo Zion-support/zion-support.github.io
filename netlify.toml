@@ -4,7 +4,7 @@
   status = 200
  
 [build]
-  command = "pnpm build"
+  command = "pnpm run build:optimized"
   publish = "dist"
   command_timeout = "30m"
 
@@ -44,11 +44,11 @@
   NPM_CONFIG_PRODUCTION = "false"
 
 [context.deploy-preview]
-  command = "pnpm build"
+  command = "pnpm run build:optimized"
   [context.deploy-preview.environment]
     NODE_ENV = "production"
 
 [context.branch-deploy]
-  command = "pnpm build"
+  command = "pnpm run build:optimized"
   [context.branch-deploy.environment]
     NODE_ENV = "production"
