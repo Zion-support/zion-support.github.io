@@ -108,19 +108,6 @@ export class AccessibilityEnhancer {
     });
   }
 
-  private checkHeadingStructure(element: Element): void {
-    const headings = element.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    let previousLevel = 0;
-    
-    headings.forEach(heading => {
-      const currentLevel = parseInt(heading.tagName.charAt(1));
-      if (currentLevel > previousLevel + 1) {
-        this.issues.push({
-          type: 'heading-structure',
-          element: heading,
-          message: 'Heading levels should not skip',
-          severity: 'medium'
-        });
       }
       previousLevel = currentLevel;
     });

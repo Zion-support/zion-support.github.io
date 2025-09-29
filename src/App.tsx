@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import { AppRouter } from './router';
 import { initializeErrorReporting } from './utils/errorReporting';
 import { initOptimizations } from './utils/buildOptimizations';
@@ -29,54 +28,6 @@ import './styles/system-metrics.css';
 import './styles/modern-utilities.css';
 
 export default function App(): React.JSX.Element {
-  const [isLoading, setIsLoading] = useState(true);
-  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-
-  // Initialize app
-  useEffect(() => {
-    const initializeApp = async () => {
-      try {
-        // Initialize error reporting
-        initializeErrorReporting();
-        
-        // Initialize optimizations
-        initOptimizations();
-        
-        // Initialize basic systems (only call methods that exist)
-        console.log('🚀 Zion Tech Group App initialized');
-        
-        setIsLoading(false);
-      } catch (error) {
-        console.error('Failed to initialize app:', error);
-        setIsLoading(false);
-      }
-    };
-
-    initializeApp();
-  }, []);
-
-  // Keyboard shortcuts
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey) {
-        switch (event.key) {
-          case 'O':
-            event.preventDefault();
-            setShowPerformanceOptimizer(true);
-            break;
-          case 'M':
-            event.preventDefault();
-            setShowPerformanceMonitor(true);
-            break;
-        }
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -92,12 +43,6 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <div className="min-h-screen bg-gray-50">
-        <AppRouter />
-        
-        {/* Performance Optimizer Modal */}
-        {showPerformanceOptimizer && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-2xl font-bold">Performance Optimizer</h2>
