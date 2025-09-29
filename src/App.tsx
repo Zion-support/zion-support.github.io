@@ -1,23 +1,15 @@
-import React, { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
-import { AppRouter } from './router';
-
-// import { resourcePreloader } from './utils/resourcePreloader';
-// import { criticalCSSManager } from './utils/criticalCSSManager';
-// import { sriUtility } from './security/sriUtility';
-// import { csrfProtection } from './security/csrfProtection';
-// import { structuredDataManager } from './seo/structuredDataManager';
-// import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
-// import { screenReaderSupport } from './accessibility/screenReaderSupport';
-import './index.css';
-import { performanceMonitor } from './utils/performanceMonitor';
-import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
-import SEOOptimizer, { SEOOptimizerProps } from './components/SEOOptimizer';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import SEOOptimizer, { SEOOptimizerProps } from './components/SEOOptimizer';
+import './index.css';
+import { AppRouter } from './router';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};
@@ -73,6 +65,11 @@ export default function App(): React.JSX.Element {
           break;
       }
       try {
+      // Initialize new performance and accessibility enhancements
+      initializePerformanceEnhancements();
+      accessibilityEnhancer.initialize();
+      
+      // Initialize advanced optimizers
       // Guard optional advanced systems if present in global scope
       const advancedPerformanceOptimizer = (window as any).advancedPerformanceOptimizer;
       const advancedSEOOptimizer = (window as any).advancedSEOOptimizer;
