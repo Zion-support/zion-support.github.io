@@ -9,7 +9,7 @@
   status = 200
 
 [build]
-  command = "pnpm run build:production"
+  command = "pnpm run netlify:build"
   publish = "dist"
   command_timeout = "30m"
 
@@ -54,12 +54,12 @@
   NPM_CONFIG_PRODUCTION = "false"
 
 [context.deploy-preview]
-  command = "pnpm run build:production"
+  command = "pnpm run netlify:build"
   [context.deploy-preview.environment]
     NODE_ENV = "production"
 
 [context.branch-deploy]
-  command = "pnpm run build:production"
+  command = "pnpm run netlify:build"
   [context.branch-deploy.environment]
     NODE_ENV = "production"
 
