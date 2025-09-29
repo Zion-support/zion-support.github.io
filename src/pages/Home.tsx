@@ -24,6 +24,8 @@ import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import ROICalculator from "../components/ROICalculator";
 import ServiceShowcase from "../components/ServiceShowcase";
+import NewContentPromotionBanner from "../components/NewContentPromotionBanner";
+import ComprehensiveContentShowcase from "../components/ComprehensiveContentShowcase";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
 
@@ -107,10 +109,20 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: AI Product Launch Checklist + MLOps in 45 Days"
-          description="New guides on taking AI pilots to production and shipping reliable models fast."
+          title="🚀 NEW: Platform Engineering Blueprint + GenAI Guardrails"
+          description="Fresh guides on golden paths for 100+ teams and policy tests that scale"
           ctaText="Read the latest"
-          ctaLink="/blog/genai-evals-in-production-2025"
+          ctaLink="/blog"
+          dismissible={true}
+        />
+
+        {/* New Content Promotion Banner */}
+        <NewContentPromotionBanner
+          variant="success"
+          title="🚀 NEW CONTENT: Fresh Insights & Expert Guides"
+          description="Discover our latest articles on real-time data pipelines, platform engineering scorecards, and GenAI operationalization patterns."
+          ctaText="Explore Latest Content"
+          ctaLink="/blog"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -260,13 +272,14 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Featured Content Showcase */}
-        <FeaturedContentShowcase 
-          title="Latest Technology Insights & Trends"
+        {/* Comprehensive Content Showcase */}
+        <ComprehensiveContentShowcase 
+          title="Latest Technology Insights & Expert Content"
           subtitle="Stay ahead with our cutting-edge research, expert analysis, and actionable insights from the world of AI, cybersecurity, and emerging technologies"
-          maxItems={6}
+          maxItems={9}
           showInsights={true}
           showBlogPosts={true}
+          showFeatured={true}
           className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
         />
 
