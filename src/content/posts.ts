@@ -10,46 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "ai-product-launch-checklist-2025",
-    title: "AI Product Launch Checklist: From Pilot to Production",
-    description:
-      "A pragmatic checklist for hardening pilots, proving ROI, and launching AI features safely.",
-    category: "Product",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "7 min read",
-  },
-  {
-    slug: "mlops-in-45-days",
-    title: "MLOps in 45 Days: Shipping Reliable Models Fast",
-    description:
-      "Reference pipelines, eval gates, and rollout patterns to move from notebook to prod quickly.",
-    category: "MLOps",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "practical-rag-architecture",
-    title: "Practical RAG Architecture That Scales",
-    description:
-      "Chunking, indexing, and retrieval strategies that actually improve answer quality at lower cost.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "6 min read",
-  },
-  {
-    slug: "edge-inference-patterns-2025",
-    title: "Edge Inference Patterns for Sub‑100ms Experiences",
-    description:
-      "Latency budgets, on‑device models, and caching strategies for lightning‑fast AI UX at the edge.",
-    category: "Architecture",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "7 min read",
-  },
-  {
     slug: "ai-governance-checklist-2025",
     title: "AI Governance Checklist 2025: Ship Fast Without Breaking Policy",
     description:
@@ -80,8 +40,8 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
-    slug: "platform-scorecards-that-stick",
-    title: "Platform Scorecards That Actually Drive Adoption",
+    slug: "edge-inference-patterns-2025",
+    title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:
       "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
     category: "Platform Engineering",
@@ -128,6 +88,36 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-27",
     featured: false,
     readTime: "6 min read",
+  },
+  {
+    slug: "platform-scorecards-that-stick",
+    title: "Platform Scorecards That Actually Drive Adoption",
+    description:
+      "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "genai-guardrails-in-the-wild",
+    title: "GenAI Guardrails in the Wild: Evals, Policies, and Drift Control",
+    description:
+      "A field guide to combining offline suites with online policy tests to keep quality high.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
+    slug: "real-time-data-pipelines-2025",
+    title: "Building Reliable Real‑Time Data Pipelines in 2025",
+    description:
+      "Blueprints for exactly-once semantics, backpressure, and observability from dev to prod.",
+    category: "Data Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read",
   },
   {
     slug: "ai-workflow-automation-2025-guide",

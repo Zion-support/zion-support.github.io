@@ -103,10 +103,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: GenAI Evals, Edge Flags, and North‑Star Metrics"
-          description="New posts on safe GenAI rollouts, <100ms edge flags, and product metrics."
-          ctaText="Read the latest"
-          ctaLink="/blog/genai-evals-in-production-2025"
+          title="🚀 Fresh: Real‑Time Pipelines, Edge Inference, and Platform Scorecards"
+          description="New articles + insights: reliable streaming, sub‑100ms edge patterns, and metrics that drive adoption."
+          ctaText="See what's new"
+          ctaLink="/blog"
           dismissible={true}
         />
         {/* Animated background elements */}

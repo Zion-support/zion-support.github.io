@@ -72,15 +72,6 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
-    id: "feature-flags-edge-realtime",
-    title: "Real‑Time Feature Flags at the Edge",
-    summary:
-      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
-    category: "Architecture",
-    date: "2025-09-28",
-    readMinutes: 6,
-  },
-  {
     id: "north-star-metrics-insight",
     title: "North‑Star Metrics: A Field Guide",
     summary:
@@ -124,6 +115,24 @@ export const latestInsights: InsightArticle[] = [
     category: "Product Analytics",
     date: "2025-09-28",
     readMinutes: 7,
+  },
+  {
+    id: "edge-caching-primer",
+    title: "Edge Caching Primer: Shrinking P95 Without Breaking Consistency",
+    summary:
+      "When to cache at the edge, what to purge, and patterns for safe staleness.",
+    category: "Architecture",
+    date: "2025-09-28",
+    readMinutes: 6,
+  },
+  {
+    id: "platform-engineering-blueprint",
+    title: "Platform Engineering Blueprint 2025",
+    summary:
+      "Golden paths, paved roads, and product thinking to scale developer experience across hundreds of teams.",
+    category: "Platform Engineering",
+    date: "2025-09-27",
+    readMinutes: 8,
   },
   {
     id: "secure-ml-pipelines",
