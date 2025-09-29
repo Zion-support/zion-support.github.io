@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -23,15 +22,6 @@ const PerformanceMonitor: React.FC = () => {
     if (typeof window === 'undefined' || process.env.NODE_ENV !== 'production') {
       return;
     }
-=======
-import React from 'react';
-
-const PerformanceMonitor: React.FC<{ showDashboard?: boolean }> = () => {
-  return <div role="note" aria-label="PerformanceMonitor placeholder" />;
-};
-
-export default PerformanceMonitor;
->>>>>>> cursor/create-and-deploy-new-content-9df8
 
     // Measure Core Web Vitals
     const measureWebVitals = async () => {
