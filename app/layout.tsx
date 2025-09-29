@@ -43,6 +43,7 @@ function Header() {
         <div className="hidden md:flex gap-6">
           <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
           <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
+          <Link href="/content-hub" className="text-gray-700 hover:text-blue-600 transition-colors">Content Hub</Link>
           <div className="relative group">
             <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Blog

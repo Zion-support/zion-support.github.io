@@ -8,9 +8,9 @@ import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
-import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
+import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
