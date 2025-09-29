@@ -83,12 +83,12 @@ export default function PromotionalBanner({
 // Pre-configured banner variants
 export const NewContentBanner = () => (
   <PromotionalBanner
-    message="🎉 New: AI Analytics Platform & Case Studies Available"
-    ctaText="Explore Now"
-    ctaLink="/services/ai-analytics-platform"
-    backgroundColor="bg-gradient-to-r from-emerald-600 to-teal-600"
+    message="🎉 New: Practical RAG Blueprint + GenAI Guardrails Playbook"
+    ctaText="Read the latest"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
     autoHide={true}
-    hideAfter={15}
+    hideAfter={18}
   />
 );
 
@@ -115,12 +115,12 @@ export const CaseStudyBanner = () => (
 
 export const NewBlogBanner = () => (
   <PromotionalBanner
-    message="🔥 New: AI Revolution 2025 Guide - Complete Business Transformation Strategy"
-    ctaText="Read Now"
-    ctaLink="/blog/ai-revolution-2025"
-    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    message="🔥 Fresh Insights: RAG Quality Playbook, Edge LLM Latency, AI Reliability Scorecards"
+    ctaText="Browse Latest Posts"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-pink-600"
     autoHide={true}
-    hideAfter={15}
+    hideAfter={18}
   />
 );
 

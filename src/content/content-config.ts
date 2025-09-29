@@ -394,6 +394,19 @@ export const promotionalBanners: PromotionalBanner[] = [
     priority: 1
   },
   {
+    id: 'oct-launch-content-2025',
+    message: '📣 New: AI Cost Guardrails + Golden Paths deep dives just dropped',
+    ctaText: 'Read the updates',
+    ctaLink: '/blog/ai-cost-guardrails-deep-dive-2025',
+    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-fuchsia-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0
+  },
+  {
     id: 'analytics-platform-banner',
     message: '🚀 Launch: AI Analytics Platform - Transform Data into Actionable Insights',
     ctaText: 'Explore Platform',
@@ -461,10 +474,17 @@ export const getRecentContent = (limit: number = 3) => {
   const allContent = [
     ...blogPosts.map(post => ({ ...post, type: 'blog' as const })),
     ...caseStudies.map(study => ({ ...study, type: 'case-study' as const })),
-    ...services.map(service => ({ ...service, type: 'service' as const }))
+    // Services do not have a date; attach a synthetic date far in the past to satisfy sorting
+    ...services.map(service => ({ ...service, type: 'service' as const, date: '1970-01-01' }))
   ];
   
   return allContent
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .sort((a, b) => {
+      const ad = (a as any).date as string | undefined;
+      const bd = (b as any).date as string | undefined;
+      const at = ad ? new Date(ad).getTime() : 0;
+      const bt = bd ? new Date(bd).getTime() : 0;
+      return bt - at;
+    })
     .slice(0, limit);
 };

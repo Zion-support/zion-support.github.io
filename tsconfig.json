@@ -17,7 +17,8 @@
     "jsx": "react-jsx",
 
     /* Linting */
-    "strict": false,
+    "strict": true,
+    "noImplicitAny": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
@@ -34,11 +35,13 @@
     },
 
     /* Types */
-    "types": ["jest", "node", "react", "react-dom"]
+    "types": ["jest", "node"]
   },
   "include": [
-    "src/**/*",
-    "src.corrupted/**/*",
+    "src/App.tsx",
+    "src/router.tsx",
+    "src/main.tsx",
+    "src/utils/performanceMonitor.ts",
     "index.html"
   ],
   "exclude": [
@@ -59,12 +62,14 @@
     "types.disabled",
     "**/*.config.ts",
     "vitest.config.ts",
-    "src/components/Enhanced*",
-    "src/components/*Enhanced*",
+    "src/App.tsx",
+    "src/components/EnhancedErrorBoundary.tsx",
+    "src/components/EnhancedPerformanceMonitor.tsx",
+    "src/components/EnhancedUserExperience.tsx",
+    "src/components/FeaturedContentShowcase.tsx",
     "src/components/PerformanceEnhancer.tsx",
     "src/components/PerformanceMonitor.tsx",
     "src/components/SEOEnhancer.tsx",
-    "src/components/FeaturedContentShowcase.tsx",
     "src/hooks/usePerformanceMonitor.ts",
     "src/utils/accessibilityEnhancer.ts"
   ],

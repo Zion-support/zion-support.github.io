@@ -159,7 +159,7 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredContent.map((item, index) => (
             <div
-              key={`${item.type}-${(item as any).slug ?? (item as any).id}-${index}`}
+              key={`${item.type}-${item.type === 'blog' ? (item as BlogPost).slug : (item as InsightArticle).id}-${index}`}
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
             >
               {/* Image */}
