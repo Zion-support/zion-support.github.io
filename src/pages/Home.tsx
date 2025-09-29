@@ -468,8 +468,8 @@ const Home = () => {
               {[...latestInsights.slice(0, 2), ...featuredInsights.slice(0, 1)].map((item) => (
               <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <div className="p-6">
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
                     {"featured" in item && (item as any).featured && (
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
