@@ -1,6 +1,6 @@
+import { ArrowRight, Sparkles, Star, TrendingUp } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, ArrowRight, Star, TrendingUp } from 'lucide-react';
 
 interface NewContentPromotionBannerProps {
   variant?: 'default' | 'success' | 'warning' | 'info' | 'premium';
@@ -154,7 +154,7 @@ export const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps>
             <div className="flex flex-wrap items-center justify-center gap-6 text-white/80 text-sm">
               <div className="flex items-center gap-2">
                 <Star className="w-4 h-4 text-yellow-300 fill-current" />
-                <span>5 New Articles</span>
+                <span>4 New Articles</span>
               </div>
               <div className="flex items-center gap-2">
                 <TrendingUp className="w-4 h-4 text-green-300" />

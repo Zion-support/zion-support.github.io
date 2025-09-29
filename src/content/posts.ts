@@ -10,6 +10,42 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-autonomous-operations-2025",
+    title: "AI Autonomous Operations: Self‑Healing, Self‑Optimizing Infra",
+    description: "Design SLO‑driven controllers, safe remediations, and policy‑guarded runbooks.",
+    category: "Infrastructure",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "enterprise-ai-roadmap-2025",
+    title: "Enterprise AI Roadmap 2025: From Pilots to Platform",
+    description: "Operating model, platform capabilities, and productized use‑cases that compound.",
+    category: "Strategy",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "cloud-native-ai-platforms-2025",
+    title: "Cloud‑Native AI Platforms: Multi‑Region, Cost‑Aware, Governed",
+    description: "Reference architecture for elastic GPUs, feature stores, evals, and guardrails.",
+    category: "Cloud",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "quantum-computing-business-applications-2025",
+    title: "Quantum Computing: Practical Business Applications in 2025",
+    description: "Where quantum adds value today: portfolio, routing, scheduling, and pricing.",
+    category: "Quantum",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "ai-platform-roi-2025",
     title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
     description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",
