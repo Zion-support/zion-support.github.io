@@ -101,6 +101,15 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        {/* Content Promotion Banner */}
+        <ContentPromotionBanner
+          variant="info"
+          title="📚 Fresh Content: AI Cost Wins, LLM Evals, and Edge Caching"
+          description="New articles and quick insights just dropped — save costs, ship safer model changes, and speed up your edge."
+          ctaText="Read the latest"
+          ctaLink="/blog/ai-cost-savings-playbook-2025"
+          dismissible={true}
+        />
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -596,7 +605,7 @@ const Home = () => {
             
             <div className="mb-10 flex items-end justify-between">
               <div>
-               <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
                 <p className="text-gray-600">Fresh: AI Governance, Golden Paths, Cloud FinOps QA gates, and NEW AI automation guides.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
@@ -712,16 +721,16 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
-                  <div className="font-semibold text-white">MLOps Reliability: Shipping GenAI Changes Safely</div>
+                  <div className="text-sm text-purple-200 mb-1">AI Strategy</div>
+                  <div className="font-semibold text-white">AI Automation ROI Calculator: Prove Value Fast</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
-                  <div className="font-semibold text-white">Reliable Real‑Time Data Pipelines in 2025</div>
+                  <div className="text-sm text-blue-200 mb-1">Cloud FinOps</div>
+                  <div className="font-semibold text-white">Cloud Cost Guardrails in Practice</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Product Analytics</div>
-                  <div className="font-semibold text-white">North‑Star Metrics: A Field‑Tested Framework</div>
+                  <div className="text-sm text-rose-200 mb-1">Security</div>
+                  <div className="font-semibold text-white">Secure ML Platform Blueprint</div>
                 </div>
               </div>
             </div>

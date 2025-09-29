@@ -11,9 +11,6 @@ class IntelligentErrorDetector {
     this.errors = [];
     this.fixes = [];
     this.patterns = {
-<<<<<<< HEAD
-=======
-      mergeConflicts: /[\s\S]*?>>>>>>>/g,
       syntaxErrors: /SyntaxError|ParseError|Unexpected token/g,
       typeErrors: /TypeError|Cannot read property|is not defined/g,
       importErrors: /Cannot resolve module|Module not found/g,
@@ -90,7 +87,6 @@ class IntelligentErrorDetector {
             await this.fixUnescapedEntities(file);
     // Generate report;
     this.log('\n📊 INTELLIGENT ERROR DETECTION REPORT');
-    this.log('=====================================');
     this.log(`Files scanned: ${allFiles.length}`);
     this.log(`Files with issues: ${this.errors.length}`);
     this.log(`Fixes applied: ${this.fixes.length}`);
@@ -324,10 +320,8 @@ class IntelligentErrorDetector {
           conflictType = 'head';
           continue;
         } else if (line.includes('')) {
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
           conflictType = 'branch';
           continue;
-        } else if (line.includes('>>>>>>>')) {
           // End of conflict - choose the newer version (branch content)
           if (branchContent.length > 0) {
             fixedLines.push(...branchContent);
@@ -479,7 +473,6 @@ class IntelligentErrorDetector {
     
     // Generate report
     this.log('\n📊 INTELLIGENT ERROR DETECTION REPORT');
-    this.log('=====================================');
     this.log(`Files scanned: ${allFiles.length}`);
     this.log(`Files with issues: ${this.errors.length}`);
     this.log(`Fixes applied: ${this.fixes.length}`);
