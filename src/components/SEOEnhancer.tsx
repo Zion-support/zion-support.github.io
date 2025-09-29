@@ -41,7 +41,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       url: "https://zion.app",
       logo: "https://zion.app/logo.png",
       sameAs: [
-        "https://linkedin.com/company/zion-tech-group",
+        "https://linkedin.com/compunknown/zion-tech-group",
         "https://twitter.com/ziontechgroup",
       ],
       contactPoint: {
@@ -67,7 +67,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   const finalStructuredData = useMemo(() => {
     const data = [organizationStructuredData];
     if (structuredData) {
-      data.push(structuredData as any);
+      data.push(structuredData as unknown);
     }
     return data;
   }, [organizationStructuredData, structuredData]);

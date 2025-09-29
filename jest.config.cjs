@@ -2,7 +2,7 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts', '<rootDir>/src/__tests__/setup.ts'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
@@ -22,6 +22,18 @@ module.exports = {
   ],
   testPathIgnorePatterns: [
     '<rootDir>/src/__tests__/setup.ts',
+    '<rootDir>/backup/',
+    '<rootDir>/backup-*/',
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/automation_backup/',
+    '<rootDir>/automation/backups/',
+  ],
+  modulePathIgnorePatterns: [
+    '<rootDir>/backup/',
+    '<rootDir>/backup-.*',
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/automation_backup/',
+    '<rootDir>/automation/backups/',
   ],
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',

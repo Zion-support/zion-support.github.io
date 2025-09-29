@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -39,10 +40,13 @@ export default function Header() {
               Services
             </Link>
             <Link
-              to="/portfolio"
-              className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
+              to="/ai-micro-saas"
+              className="text-gray-700 hover:text-purple-600 transition-colors font-medium relative group"
             >
-              Portfolio
+              AI Micro SAAS
+              <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full animate-pulse">
+                NEW
+              </span>
             </Link>
             <Link
               to="/blog"
@@ -110,11 +114,14 @@ export default function Header() {
                 Services
               </Link>
               <Link
-                to="/portfolio"
-                className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
+                to="/ai-micro-saas"
+                className="text-gray-700 hover:text-purple-600 transition-colors font-medium relative group"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Portfolio
+                AI Micro SAAS
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full animate-pulse">
+                  NEW
+                </span>
               </Link>
               <Link
                 to="/blog"

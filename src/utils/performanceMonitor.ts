@@ -1,247 +1,252 @@
 /**
- * Enhanced Performance Monitor for tracking and optimizing app performance
+ * Advanced Performance Monitoring System
+ * Tracks Core Web Vitals, resource loading, and user interactions
  */
 
-interface PerformanceMetrics {
-  lcp: number;
-  fid: number;
-  cls: number;
-  fcp: number;
-  ttfb: number;
-  memoryUsage?: number;
-  bundleSize?: number;
-  loadTime?: number;
+interface PerformanceMetric {
+  name: string;
+  value: number;
+  timestamp: number;
+  id: string;
 }
 
-interface PerformanceConfig {
-  enableWebVitals: boolean;
-  enableMemoryMonitoring: boolean;
-  enableBundleAnalysis: boolean;
-  enableCustomMetrics: boolean;
-  samplingRate: number;
-  reportInterval: number;
+interface WebVitalsMetric {
+  name: 'CLS' | 'FID' | 'FCP' | 'LCP' | 'TTFB';
+  value: number;
+  id: string;
+  delta: number;
+  entries: PerformanceEntry[];
 }
 
 class PerformanceMonitor {
-  private static instance: PerformanceMonitor;
-  private config: PerformanceConfig;
-  private metrics: PerformanceMetrics = {} as PerformanceMetrics;
+  private metrics: PerformanceMetric[] = [];
   private observers: PerformanceObserver[] = [];
-  private reportTimer?: NodeJS.Timeout;
+  private isInitialized = false;
 
-  constructor(config: Partial<PerformanceConfig> = {}) {
-    this.config = {
-      enableWebVitals: true,
-      enableMemoryMonitoring: true,
-      enableBundleAnalysis: true,
-      enableCustomMetrics: true,
-      samplingRate: 1.0,
-      reportInterval: 30000, // 30 seconds
-      ...config
-    };
-
-    this.initialize();
+  constructor() {
+    this.init();
   }
 
-  static getInstance(config?: Partial<PerformanceConfig>): PerformanceMonitor {
-    if (!PerformanceMonitor.instance) {
-      PerformanceMonitor.instance = new PerformanceMonitor(config);
-    }
-    return PerformanceMonitor.instance;
-  }
-
-  private initialize(): void {
-    if (this.config.enableWebVitals) {
-      this.observeWebVitals();
-    }
-
-    if (this.config.enableMemoryMonitoring) {
-      this.observeMemoryUsage();
-    }
-
-    if (this.config.enableCustomMetrics) {
-      this.observeCustomMetrics();
-    }
-
-    this.startReporting();
+  private init(): void {
+    if (this.isInitialized || typeof window === 'undefined') return;
+    
+    this.isInitialized = true;
+    this.observeWebVitals();
+    this.observeResourceTiming();
+    this.observeNavigationTiming();
   }
 
   private observeWebVitals(): void {
-    // LCP - Largest Contentful Paint
-    const lcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1] as PerformanceEventTiming;
-      this.metrics.lcp = lastEntry.startTime;
-    });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-    this.observers.push(lcpObserver);
-
-    // FID - First Input Delay
-    const fidObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if ('processingStart' in entry && entry.startTime) {
-          const processingStart = (entry as PerformanceEntry & { processingStart?: number }).processingStart;
-          if (processingStart) {
-            this.metrics.fid = processingStart - entry.startTime;
+    // First Input Delay (FID)
+    if ('PerformanceObserver' in window) {
+      try {
+        const fidObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.processingStart && entry.startTime) {
+              const fid = entry.processingStart - entry.startTime;
+              this.recordMetric({
+                name: 'FID',
+                value: fid,
+                timestamp: Date.now(),
+                id: this.generateId()
+              });
+            }
           }
-        }
-      });
-    });
-    fidObserver.observe({ entryTypes: ['first-input'] });
-    this.observers.push(fidObserver);
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+        this.observers.push(fidObserver);
+      } catch (e) {
+        console.warn('FID observation failed:', e);
+      }
 
-    // CLS - Cumulative Layout Shift
-    let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
-        if (!entry.hadRecentInput) {
-          clsValue += entry.value || 0;
-        }
-      });
-      this.metrics.cls = clsValue;
-    });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
-    this.observers.push(clsObserver);
+      // Largest Contentful Paint (LCP)
+      try {
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          if (lastEntry) {
+            this.recordMetric({
+              name: 'LCP',
+              value: lastEntry.startTime,
+              timestamp: Date.now(),
+              id: this.generateId()
+            });
+          }
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        this.observers.push(lcpObserver);
+      } catch (e) {
+        console.warn('LCP observation failed:', e);
+      }
 
-    // FCP - First Contentful Paint
-    const fcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.name === 'first-contentful-paint') {
-          this.metrics.fcp = entry.startTime;
-        }
-      });
-    });
-    fcpObserver.observe({ entryTypes: ['paint'] });
-    this.observers.push(fcpObserver);
-
-    // TTFB - Time to First Byte
-    const ttfbObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'navigation') {
-          this.metrics.ttfb = (entry as PerformanceNavigationTiming).responseStart - (entry as PerformanceNavigationTiming).requestStart;
-        }
-      });
-    });
-    ttfbObserver.observe({ entryTypes: ['navigation'] });
-    this.observers.push(ttfbObserver);
-  }
-
-  private observeMemoryUsage(): void {
-    if ('memory' in performance) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      this.metrics.memoryUsage = (memory?.usedJSHeapSize || 0) / (memory?.jsHeapSizeLimit || 1);
+      // Cumulative Layout Shift (CLS)
+      try {
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+            }
+          }
+          this.recordMetric({
+            name: 'CLS',
+            value: clsValue,
+            timestamp: Date.now(),
+            id: this.generateId()
+          });
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        this.observers.push(clsObserver);
+      } catch (e) {
+        console.warn('CLS observation failed:', e);
+      }
     }
   }
 
-  private observeCustomMetrics(): void {
-    // Track bundle size
-    if (this.config.enableBundleAnalysis) {
-      this.trackBundleSize();
+  private observeResourceTiming(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        const resourceObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.duration > 1000) { // Only track slow resources
+              this.recordMetric({
+                name: 'SLOW_RESOURCE',
+                value: entry.duration,
+                timestamp: Date.now(),
+                id: this.generateId()
+              });
+            }
+          }
+        });
+        resourceObserver.observe({ entryTypes: ['resource'] });
+        this.observers.push(resourceObserver);
+      } catch (e) {
+        console.warn('Resource timing observation failed:', e);
+      }
     }
-
-    // Track load time
-    window.addEventListener('load', () => {
-      this.metrics.loadTime = performance.now();
-    });
   }
 
-  private trackBundleSize(): void {
-    const scripts = document.querySelectorAll('script[src]');
-    let totalSize = 0;
+  private observeNavigationTiming(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        const navObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            const navEntry = entry as PerformanceNavigationTiming;
+            this.recordMetric({
+              name: 'TTFB',
+              value: navEntry.responseStart - navEntry.requestStart,
+              timestamp: Date.now(),
+              id: this.generateId()
+            });
+          }
+        });
+        navObserver.observe({ entryTypes: ['navigation'] });
+        this.observers.push(navObserver);
+      } catch (e) {
+        console.warn('Navigation timing observation failed:', e);
+      }
+    }
+  }
 
-    scripts.forEach((script) => {
-      const src = script.getAttribute('src');
-      if (src) {
-        // This is a simplified approach - in production you'd want to fetch actual sizes
-        totalSize += src.length * 2; // Rough estimate
+  private recordMetric(metric: PerformanceMetric): void {
+    this.metrics.push(metric);
+    
+    // Keep only last 100 metrics to prevent memory leaks
+    if (this.metrics.length > 100) {
+      this.metrics = this.metrics.slice(-100);
+    }
+
+    // Send to analytics if available
+    this.sendToAnalytics(metric);
+  }
+
+  private sendToAnalytics(metric: PerformanceMetric): void {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'performance_metric', {
+        metric_name: metric.name,
+        metric_value: Math.round(metric.value),
+        metric_id: metric.id
+      });
+    }
+  }
+
+  private generateId(): string {
+    return Math.random().toString(36).substr(2, 9);
+  }
+
+  public getMetrics(): PerformanceMetric[] {
+    return [...this.metrics];
+  }
+
+  public getWebVitals(): { [key: string]: number } {
+    const vitals: { [key: string]: number } = {};
+    this.metrics.forEach(metric => {
+      if (['CLS', 'FID', 'FCP', 'LCP', 'TTFB'].includes(metric.name)) {
+        vitals[metric.name] = metric.value;
       }
     });
-
-    this.metrics.bundleSize = totalSize;
+    return vitals;
   }
 
-  private startReporting(): void {
-    this.reportTimer = setInterval(() => {
-      this.reportMetrics();
-    }, this.config.reportInterval);
-  }
+  public getPerformanceScore(): number {
+    const vitals = this.getWebVitals();
+    let score = 100;
 
-  private reportMetrics(): void {
-    if (Math.random() > this.config.samplingRate) {
-      return;
+    // LCP scoring (good: <2.5s, needs improvement: 2.5-4s, poor: >4s)
+    if (vitals.LCP) {
+      if (vitals.LCP > 4000) score -= 30;
+      else if (vitals.LCP > 2500) score -= 15;
     }
 
-    const report = {
-      timestamp: Date.now(),
-      url: window.location.href,
-      userAgent: navigator.userAgent,
-      metrics: this.metrics,
-      config: this.config
-    };
-
-    // Send to analytics service
-    this.sendToAnalytics(report);
-  }
-
-  private sendToAnalytics(data: Record<string, unknown>): void {
-    // In production, send to your analytics service
-    console.log('Performance Metrics:', data);
-    
-    // Example: Send to custom analytics endpoint
-    if (typeof fetch !== 'undefined') {
-      fetch('/api/performance-metrics', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data)
-      }).catch(error => {
-        console.warn('Failed to send performance metrics:', error);
-      });
+    // FID scoring (good: <100ms, needs improvement: 100-300ms, poor: >300ms)
+    if (vitals.FID) {
+      if (vitals.FID > 300) score -= 25;
+      else if (vitals.FID > 100) score -= 10;
     }
+
+    // CLS scoring (good: <0.1, needs improvement: 0.1-0.25, poor: >0.25)
+    if (vitals.CLS) {
+      if (vitals.CLS > 0.25) score -= 20;
+      else if (vitals.CLS > 0.1) score -= 10;
+    }
+
+    return Math.max(0, score);
   }
 
-  public getMetrics(): PerformanceMetrics {
-    return { ...this.metrics };
-  }
-
-  public updateConfig(newConfig: Partial<PerformanceConfig>): void {
-    this.config = { ...this.config, ...newConfig };
-  }
-
-  public destroy(): void {
+  public disconnect(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
+    this.isInitialized = false;
+  }
+
+  public reportPerformance(): void {
+    const score = this.getPerformanceScore();
+    const vitals = this.getWebVitals();
     
-    if (this.reportTimer) {
-      clearInterval(this.reportTimer);
+    console.log('Performance Report:', {
+      score,
+      vitals,
+      timestamp: new Date().toISOString()
+    });
+
+    // Send performance report to analytics
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'performance_report', {
+        performance_score: score,
+        web_vitals: JSON.stringify(vitals)
+      });
     }
-  }
-
-  public measureCustomMetric(name: string, fn: () => void): number {
-    const start = performance.now();
-    fn();
-    const end = performance.now();
-    const duration = end - start;
-    
-    console.log(`Custom metric "${name}": ${duration.toFixed(2)}ms`);
-    return duration;
-  }
-
-  public async measureAsyncMetric<T>(name: string, fn: () => Promise<T>): Promise<number> {
-    const start = performance.now();
-    await fn();
-    const end = performance.now();
-    const duration = end - start;
-    
-    console.log(`Async metric "${name}": ${duration.toFixed(2)}ms`);
-    return duration;
   }
 }
 
-export const performanceMonitor = PerformanceMonitor.getInstance();
-export default PerformanceMonitor;
+// Export singleton instance
+export const performanceMonitor = new PerformanceMonitor();
+
+// Auto-report performance after page load
+if (typeof window !== 'undefined') {
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      performanceMonitor.reportPerformance();
+    }, 5000); // Report after 5 seconds
+  });
+}
