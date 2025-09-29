@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
+import NewContent2027Showcase from '../components/NewContent2027Showcase';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import { NewContent2026PromotionalBanners } from '../components/NewContent2026PromotionalBanners';
 import ContentShowcase from '../components/ContentShowcase';
@@ -8,7 +10,6 @@ import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
-import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
 
@@ -22,41 +23,34 @@ export default function HomePage() {
   return (
     <div className="animate-fade-in">
       {/* New Content Promo Strip */}
-      <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
+      <div className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-<<<<<<< HEAD
-            <span>✨ NEW 2026:</span>
-            <Link href="/blog/ai-neural-interfaces-2026" className="underline hover:text-yellow-200">Neural Interfaces</Link>
+            <span>🚀 BREAKTHROUGH 2027:</span>
+            <Link href="/blog/ai-2027-breakthrough-technologies" className="underline hover:text-yellow-200">AI Breakthrough Technologies</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-space-tech-2026" className="underline hover:text-yellow-200">Space AI Tech</Link>
+            <Link href="/blog/ai-autonomous-enterprise-operations-2027" className="underline hover:text-yellow-200">Autonomous Enterprise Ops</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-synthetic-data-2026" className="underline hover:text-yellow-200">Synthetic Data</Link>
+            <Link href="/blog/ai-quantum-neural-networks-2027" className="underline hover:text-yellow-200">Quantum Neural Networks</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-neural-interface-success-2026" className="underline hover:text-yellow-200">$100M ROI Success</Link>
+            <Link href="/case-studies/ai-2027-transformation-mega-success" className="underline hover:text-yellow-200">$500M Success Story</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/services/ai-neural-interfaces" className="underline hover:text-yellow-200">Neural Interface Services</Link>
-=======
-            <span>🚀 BREAKING 2026:</span>
-            <Link href="/blog/ai-next-generation-autonomous-systems-2026" className="underline hover:text-yellow-200">Next-Gen Autonomous Systems</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-neural-architecture-optimization-2026" className="underline hover:text-yellow-200">Neural Architecture Optimization</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-synthetic-data-2026" className="underline hover:text-yellow-200">Privacy-Preserving AI</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/services/ai-synthetic-data-generation" className="underline hover:text-yellow-200">Synthetic Data Service</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-autonomous-infrastructure-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
->>>>>>> cursor/create-and-deploy-new-content-f94c
+            <Link href="/services/ai-2027-solutions" className="underline hover:text-yellow-200">AI 2027 Solutions</Link>
           </div>
           <Link
             href="/blog"
-            className="bg-white text-indigo-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
+            className="bg-white text-purple-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
           >
-            Read the latest
+            Explore 2027 Content
           </Link>
         </div>
       </div>
+      {/* Revolutionary 2027 Content Banner */}
+      <Revolutionary2027ContentBanner />
+      
+      {/* New 2027 Content Showcase */}
+      <NewContent2027Showcase />
+      
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
       
