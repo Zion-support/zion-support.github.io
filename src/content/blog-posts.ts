@@ -14,8 +14,6 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-<<<<<<< HEAD
-=======
     slug: "genai-telemetry-observability-2025",
     title: "GenAI Telemetry: What to Measure in 2025",
     description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
@@ -67,7 +65,6 @@ Use this concise pre‑launch checklist to ensure your AI features meet quality,
     image: "/images/ai-product-readiness.jpg"
   },
   {
->>>>>>> feat/new-content-and-promo
     slug: "genai-evals-in-production-2025",
     title: "GenAI Evals in Production: Policy Tests That Scale",
     description: "From offline suites to online canaries: patterns that keep quality high as usage grows.",
@@ -184,23 +181,6 @@ Implement these patterns to achieve fast, reliable, and cost‑effective streami
     featured: true,
     readTime: "9 min read",
     image: "/images/real-time-data-pipelines.jpg"
-  },
-  {
-    slug: "genai-telemetry-observability-2025",
-    title: "GenAI Telemetry: What to Measure in 2025",
-    description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
-    content: `
-# GenAI Telemetry: What to Measure in 2025
-
-Operationalize GenAI with observability that tracks quality, safety, and cost. Learn the critical signals, dashboards, and alerting strategies that prevent regressions and runaway bills.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "GenAI",
-    tags: ["Observability", "Telemetry", "Guardrails", "Quality"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/genai-telemetry.jpg"
   },
   {
     slug: "feature-flags-at-the-edge-2025",
