@@ -4,13 +4,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import AIMicroSAAS from './pages/AIMicroSAAS';
 import Blog from './pages/Blog';
-import Post from './pages/Post';
-import Insights from './pages/Insights';
-import CaseStudies from './pages/CaseStudies';
-import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
-import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
-import AIDataAnalytics from './pages/services/AIDataAnalytics';
 
 export const AppRouter: React.FC = () => {
   return (
@@ -18,14 +13,9 @@ export const AppRouter: React.FC = () => {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/services" element={<Services />} />
-      <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
-      <Route path="/services/ai-virtual-assistant" element={<AIVirtualAssistant />} />
-      <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
-      <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/ai-micro-saas" element={<AIMicroSAAS />} />
       <Route path="/blog" element={<Blog />} />
-      <Route path="/blog/:slug" element={<Post />} />
-      <Route path="/insights" element={<Insights />} />
     </Routes>
   );
 };
