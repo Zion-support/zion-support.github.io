@@ -42,7 +42,7 @@ Adopt these patterns to move fast without breaking trust.
     readTime: "8 min read",
     image: "/images/genai-evals.jpg"
   },
-    slug: "genai-evals-in-production-2025",
+  {
     title: "GenAI Evals in Production: Policy Tests That Scale",
     description: "From offline suites to online canaries: patterns that keep quality high as usage grows.",
     content: `
