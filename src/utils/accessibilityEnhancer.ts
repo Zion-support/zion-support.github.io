@@ -10,9 +10,19 @@ export interface AccessibilityIssue {
   severity: 'low' | 'medium' | 'high';
 }
 
+export interface AccessibilityMetrics {
+  totalIssues: number;
+  errors: number;
+  warnings: number;
+  info: number;
+  score: number;
+  lastChecked: number;
+}
+
 export class AccessibilityEnhancer {
   private issues: AccessibilityIssue[] = [];
   private observer: MutationObserver | null = null;
+  private isMonitoring = false;
 
   constructor() {
     this.initialize();
@@ -23,6 +33,7 @@ export class AccessibilityEnhancer {
     this.setupMutationObserver();
     this.addKeyboardNavigation();
     this.enhanceFormElements();
+    this.isMonitoring = true;
   }
 
   private setupMutationObserver(): void {
@@ -113,16 +124,16 @@ export class AccessibilityEnhancer {
     let previousLevel = 0;
     
     headings.forEach(heading => {
-      const currentLevel = parseInt(heading.tagName.charAt(1));
-      if (currentLevel > previousLevel + 1) {
+      const level = parseInt(heading.tagName.substring(1));
+      if (level > previousLevel + 1) {
         this.issues.push({
-          type: 'heading-structure',
+          type: 'heading-skip',
           element: heading,
-          message: 'Heading levels should not skip',
+          message: `Heading level skipped from h${previousLevel} to h${level}`,
           severity: 'medium'
         });
       }
-      previousLevel = currentLevel;
+      previousLevel = level;
     });
   }
 
@@ -163,6 +174,17 @@ export class AccessibilityEnhancer {
     }
   }
 
+  /**
+   * Stop accessibility monitoring
+   */
+  stopMonitoring(): void {
+    this.isMonitoring = false;
+    if (this.observer) {
+      this.observer.disconnect();
+      this.observer = null;
+    }
+  }
+
   public getIssues(): AccessibilityIssue[] {
     return this.issues;
   }
@@ -182,12 +204,35 @@ export class AccessibilityEnhancer {
     return Math.max(0, 100 - totalPenalty);
   }
 
+  /**
+   * Get accessibility metrics
+   */
+  getMetrics(): AccessibilityMetrics {
+    const errors = this.issues.filter((issue) => issue.type === "error").length;
+    const warnings = this.issues.filter(
+      (issue) => issue.type === "warning",
+    ).length;
+    const info = this.issues.filter((issue) => issue.type === "info").length;
+
+    const score = this.getAccessibilityScore();
+
+    return {
+      totalIssues: this.issues.length,
+      errors,
+      warnings,
+      info,
+      score,
+      lastChecked: Date.now(),
+    };
+  }
+
   public destroy(): void {
     if (this.observer) {
       this.observer.disconnect();
       this.observer = null;
     }
     this.issues = [];
+    this.isMonitoring = false;
   }
 }
 

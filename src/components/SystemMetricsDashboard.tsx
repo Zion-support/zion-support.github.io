@@ -1,7 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { AdvancedPerformanceMonitor } from '../utils/advancedPerformanceMonitor';
-import { AccessibilityEnhancer } from '../utils/accessibilityEnhancer';
-import { SecurityEnhancer } from '../utils/securityEnhancer';
 
 interface SystemMetricsDashboardProps {
   isVisible?: boolean;
