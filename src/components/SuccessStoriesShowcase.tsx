@@ -83,11 +83,11 @@ const SuccessStoriesShowcase: React.FC = () => {
               {/* Results */}
               <div className="p-6">
                 <h4 className="font-semibold text-gray-900 mb-4">Key Results</h4>
-                <div className="grid grid-cols-2 gap-4 mb-4">
-                  {study.metrics.slice(0, 4).map((metric, index) => (
-                    <div key={index} className="text-center p-3 bg-gray-50 rounded-lg">
-                      <div className="text-xl font-bold text-blue-600">{metric.value}</div>
-                      <div className="text-xs text-gray-600">{metric.label}</div>
+                <div className="space-y-2 mb-4">
+                  {study.results.slice(0, 4).map((result, index) => (
+                    <div key={index} className="flex items-start gap-2">
+                      <TrendingUp className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-gray-600">{result}</span>
                     </div>
                   ))}
                 </div>
@@ -107,8 +107,8 @@ const SuccessStoriesShowcase: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Testimonial */}
-                {study.testimonial && (
+                {/* Testimonial - temporarily disabled */}
+                {/* {study.testimonial && (
                   <div className="bg-gray-50 rounded-lg p-4 mb-4">
                     <p className="text-gray-700 text-sm italic mb-2">
                       "{study.testimonial.quote}"
@@ -118,7 +118,7 @@ const SuccessStoriesShowcase: React.FC = () => {
                       <div className="text-gray-600">{study.testimonial.title}</div>
                     </div>
                   </div>
-                )}
+                )} */}
 
                 {/* CTA */}
                 <Link
