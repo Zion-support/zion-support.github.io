@@ -14,6 +14,70 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-risk-register-2025",
+    title: "AI Risk Register: Turn Risks into Tracked Mitigations",
+    description: "A practical, owner-driven risk register with policy tests and clear SLAs.",
+    content: `
+# AI Risk Register: Turn Risks into Tracked Mitigations
+
+Most AI programs list risks but fail to close them. This guide shows how to operationalize a living AI risk register with named owners, policy tests in CI/CD, evidence links, and time-bound SLAs that actually drive action.
+
+## Core Elements
+- Risk statement with real user/business impact
+- Likelihood × impact scoring with thresholds
+- Named mitigation owner and due date
+- Policy test mapped to the mitigation (automated where possible)
+- Evidence link (dashboards, logs, PRs)
+
+## Operating Rhythm
+- Weekly triage: overdue, blocked, at-risk items
+- Monthly exec review: top risks, deltas, and decisions
+- Auto‑escalation rules for high severity
+
+Adopt this to move from risk awareness to risk reduction.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-10-04",
+    category: "AI Governance",
+    tags: ["Risk", "Policy Tests", "Governance"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-risk-register.jpg"
+  },
+  {
+    slug: "practical-rag-in-production-2025",
+    title: "Practical RAG in Production: Freshness, Hybrid Search, Evals",
+    description: "Reliable patterns for grounded responses at scale with measurable quality.",
+    content: `
+# Practical RAG in Production: Freshness, Hybrid Search, Evals
+
+RAG systems fail without freshness guarantees, robust retrieval, and continuous evaluation. This playbook covers practical, production-proven patterns.
+
+## Retrieval
+- Hybrid lexical + vector with field boosts
+- Authorization-aware filters and redaction
+- Reranking for final K
+
+## Freshness
+- Update pipelines with SLAs and drift monitors
+- Cache busting by collection/version key
+
+## Quality
+- Offline evals mapped to intents
+- Online canaries tied to real KPIs
+- Auto‑rollback on regression
+
+Ship grounded responses users can trust.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-10-04",
+    category: "GenAI",
+    tags: ["RAG", "Search", "Evals"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/practical-rag-2025.jpg"
+  },
+  {
     slug: "ai-platform-roi-2025",
     title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
     description: "A pragmatic framework to tie platform capabilities to product outcomes with clear owner reviews.",

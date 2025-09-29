@@ -112,10 +112,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: AI Platform ROI + Edge AI Latency Budgets"
-          description="New: ROI scorecards, secure ML supply chain, Enterprise RAG v2, and more."
+          title="🚀 Fresh: AI Risk Register + Practical RAG 2025"
+          description="New: Turn risks into mitigations with policy tests, plus production-ready RAG patterns."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-platform-roi-2025"
+          ctaLink="/blog/ai-risk-register-2025"
           dismissible={true}
         />
         {/* Animated background elements */}

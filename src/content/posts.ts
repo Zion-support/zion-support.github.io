@@ -11,77 +11,23 @@ export interface BlogPost {
 export const posts: BlogPost[] = [
   {
     slug: "ai-platform-roi-2025",
-<<<<<<< HEAD
-    title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
-    description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-03",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "secure-ml-supply-chain-2025",
-    title: "Secure ML Supply Chain: From SBOMs to Model Lineage",
-    description: "End-to-end provenance and controls for datasets, models, and inference routes.",
-    category: "Security",
-    publishedAt: "2025-10-03",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "edge-cdn-ml-personalization-2025",
-    title: "Edge CDN + On‑Device ML: Personalization Under 100ms",
-    description: "Combine edge KV, signed configs, and tiny models for private, real‑time personalization.",
-    category: "Edge Computing",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "ai-sales-copilot-2025",
-    title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
-    description: "Wire CRMs, build prompt libraries, and add evals that correlate with win‑rates.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "genai-evals-in-production-2025",
-    title: "GenAI Evals in Production: Policy Tests That Scale",
-    description: "Layered evaluation: offline suites, pre-merge checks, and online canaries tied to KPIs.",
-    category: "GenAI",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "feature-flags-edge-2025",
-    title: "Feature Flags at the Edge: <100ms Global Releases",
-    description: "Consistency models, cache strategies, and validation flows for instant global rollouts.",
-    category: "Architecture",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read"
-  }
-=======
     title: "AI Platform ROI: Scorecards That Drive Adoption",
     description:
       "Connect capabilities to golden paths, platform SLOs, and adoption metrics to make cut/scale decisions.",
     category: "AI Strategy",
     publishedAt: "2025-10-03",
     featured: true,
-    readTime: "7 min",
+    readTime: "7 min read",
   },
   {
-    slug: "secure-ml-supply-chain",
+    slug: "secure-ml-supply-chain-2025",
     title: "Secure ML Supply Chain: Lineage, SBOMs, and Egress Controls",
     description:
       "Lock down datasets, models, and inference routes with provenance and policy tests in CI/CD.",
     category: "Security",
     publishedAt: "2025-10-03",
     featured: true,
-    readTime: "6 min",
+    readTime: "6 min read",
   },
   {
     slug: "enterprise-rag-blueprint-v2",
@@ -91,7 +37,7 @@ export const posts: BlogPost[] = [
     category: "GenAI",
     publishedAt: "2025-10-02",
     featured: true,
-    readTime: "11 min",
+    readTime: "11 min read",
   },
   {
     slug: "serverless-inference-cost-playbook",
@@ -101,7 +47,7 @@ export const posts: BlogPost[] = [
     category: "Architecture",
     publishedAt: "2025-09-29",
     featured: false,
-    readTime: "9 min",
+    readTime: "9 min read",
   },
   {
     slug: "policy-first-genai-guardrails",
@@ -111,7 +57,7 @@ export const posts: BlogPost[] = [
     category: "Security",
     publishedAt: "2025-09-27",
     featured: false,
-    readTime: "8 min",
+    readTime: "8 min read",
   },
   {
     slug: "edge-ai-latency-budgets",
@@ -121,7 +67,7 @@ export const posts: BlogPost[] = [
     category: "Edge AI",
     publishedAt: "2025-09-26",
     featured: false,
-    readTime: "6 min",
+    readTime: "6 min read",
   },
   {
     slug: "cloud-governance-scorecards",
@@ -131,7 +77,7 @@ export const posts: BlogPost[] = [
     category: "Cloud",
     publishedAt: "2025-09-25",
     featured: false,
-    readTime: "7 min",
+    readTime: "7 min read",
   },
   {
     slug: "genai-online-evals",
@@ -141,8 +87,25 @@ export const posts: BlogPost[] = [
     category: "GenAI",
     publishedAt: "2025-09-24",
     featured: false,
-    readTime: "7 min",
+    readTime: "7 min read",
   },
->>>>>>> cursor/create-and-deploy-new-content-b69e
+  {
+    slug: "ai-risk-register-2025",
+    title: "AI Risk Register: Turn Risks into Tracked Mitigations",
+    description: "A practical, owner-driven risk register with policy tests and clear SLAs.",
+    category: "AI Governance",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "practical-rag-in-production-2025",
+    title: "Practical RAG in Production: Freshness, Hybrid Search, Evals",
+    description: "Reliable patterns for grounded responses at scale with measurable quality.",
+    category: "GenAI",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "8 min read"
+  }
 ];
 
