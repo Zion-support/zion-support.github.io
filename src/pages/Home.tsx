@@ -25,6 +25,8 @@ import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
 import NewContentAnnouncement from "../components/NewContentAnnouncement";
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
+import NewContentShowcase from "../components/NewContentShowcase";
+import NewServicesAnnouncement from "../components/NewServicesAnnouncement";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
@@ -282,6 +284,12 @@ const Home = () => {
           </div>
         </section>
 
+        {/* New Content Showcase - Hero Variant */}
+        <NewContentShowcase variant="hero" />
+
+        {/* New Services Announcement - Hero Variant */}
+        <NewServicesAnnouncement variant="hero" />
+
         {/* Latest Insights Section */}
         {/* Promo ribbon for new content */}
         <div className="container mx-auto px-6">
@@ -297,6 +305,9 @@ const Home = () => {
         <section className="py-20 bg-white relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50"></div>
           <div className="container mx-auto px-6 relative z-10">
+            {/* New Services Announcement - Compact */}
+            <NewServicesAnnouncement variant="compact" className="mb-16" />
+            
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-8">
                 <Sparkles className="w-4 h-4 mr-2" />
@@ -586,6 +597,12 @@ const Home = () => {
           </div>
         </section>
 
+        {/* New Content Showcase - Full Section */}
+        <NewContentShowcase variant="section" />
+
+        {/* New Services Announcement - Full Section */}
+        <NewServicesAnnouncement variant="banner" />
+
         {/* Testimonials Section */}
         <section className="bg-zion-slate-dark py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/10 to-zion-purple/10 opacity-50"></div>
@@ -683,26 +700,8 @@ const Home = () => {
         {/* Latest Articles */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
-            {/* New Content Announcement */}
-            <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-400/30 rounded-xl p-6 mb-10">
-              <div className="flex items-center gap-3 mb-3">
-                <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
-                <span className="text-lg font-bold text-purple-700">📚 NEW CONTENT ALERT</span>
-                <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
-              </div>
-              <p className="text-gray-700 font-semibold mb-2">
-                🚀 Just Published: 5 Revolutionary Articles on AI Automation, Cloud Infrastructure, and Enterprise AI Implementation
-              </p>
-              <p className="text-gray-600 text-sm mb-4">
-                Discover the latest insights on AI-powered business automation, next-gen cloud infrastructure, and strategic AI roadmaps for 2025.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">AI Automation</span>
-                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Cloud Strategy</span>
-                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">AI Governance</span>
-                <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">Platform Engineering</span>
-              </div>
-            </div>
+            {/* New Content Showcase - Compact */}
+            <NewContentShowcase variant="compact" className="mb-10" />
             
             <div className="mb-10 flex items-end justify-between">
               <div>
