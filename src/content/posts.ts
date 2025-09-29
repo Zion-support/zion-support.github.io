@@ -50,8 +50,8 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
-    slug: "platform-scorecards-that-stick",
-    title: "Platform Scorecards That Actually Drive Adoption",
+    slug: "edge-inference-patterns-2025",
+    title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:
       "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
     category: "Platform Engineering",
@@ -100,6 +100,36 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
   },
   {
+    slug: "platform-scorecards-that-stick",
+    title: "Platform Scorecards That Actually Drive Adoption",
+    description:
+      "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "genai-guardrails-in-the-wild",
+    title: "GenAI Guardrails in the Wild: Evals, Policies, and Drift Control",
+    description:
+      "A field guide to combining offline suites with online policy tests to keep quality high.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
+    slug: "real-time-data-pipelines-2025",
+    title: "Building Reliable Real‑Time Data Pipelines in 2025",
+    description:
+      "Blueprints for exactly-once semantics, backpressure, and observability from dev to prod.",
+    category: "Data Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
     slug: "ai-workflow-automation-2025-guide",
     title: "The Complete Guide to AI Workflow Automation in 2025",
     description:
@@ -110,16 +140,6 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
-    slug: "platform-engineering-blueprint-2025",
-    title: "Platform Engineering Blueprint 2025: From Chaos to Clarity",
-    description:
-      "Core capabilities, golden paths, and product thinking to accelerate delivery across hundreds of teams.",
-    category: "Platform Engineering",
-    publishedAt: "2025-09-27",
-    featured: true,
-    readTime: "11 min read",
-  },
-  {
     slug: "genai-eval-systems",
     title: "Shipping with Confidence: Evaluation Systems for GenAI Apps",
     description:
@@ -128,6 +148,16 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-26",
     featured: false,
     readTime: "7 min read",
+  },
+  {
+    slug: "platform-engineering-blueprint-2025",
+    title: "Platform Engineering Blueprint 2025: From Chaos to Clarity",
+    description:
+      "Core capabilities, golden paths, and product thinking to accelerate delivery across hundreds of teams.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-27",
+    featured: true,
+    readTime: "11 min read",
   },
   {
     slug: "opentelemetry-tracing-primer",
@@ -169,6 +199,7 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "9 min read",
   },
+  // Additional curated posts (resolved from merge)
   {
     slug: "platform-engineering-blueprint-2025",
     title: "A Practical Blueprint for Platform Engineering in 2025",
@@ -176,6 +207,8 @@ export const posts: BlogPost[] = [
       "Capabilities, golden paths, and scorecards to accelerate delivery without sacrificing autonomy.",
     category: "Platform Engineering",
     publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read",
   },
   {
     slug: "genai-evals-realworld",
@@ -184,6 +217,8 @@ export const posts: BlogPost[] = [
       "Patterns for evaluation harnesses, drift detection, and policy testing that scale with usage.",
     category: "GenAI",
     publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read",
   },
   {
     slug: "ai-roadmaps",
@@ -192,6 +227,8 @@ export const posts: BlogPost[] = [
       "A practical framework to align AI investments with measurable business outcomes and reduce time-to-value.",
     category: "AI Strategy",
     publishedAt: "2025-09-15",
+    featured: false,
+    readTime: "7 min read",
   },
   {
     slug: "cloud-finops-tactics",
@@ -200,6 +237,8 @@ export const posts: BlogPost[] = [
       "Proven tactics for right-sizing, demand shaping, and engineering-friendly guardrails that keep velocity high.",
     category: "Cloud FinOps",
     publishedAt: "2025-09-22",
+    featured: false,
+    readTime: "5 min read",
   },
   {
     slug: "zero-trust-for-saas",
@@ -208,6 +247,8 @@ export const posts: BlogPost[] = [
       "A pragmatic guide to rolling out least-privilege, continuous verification, and blast radius controls.",
     category: "Security",
     publishedAt: "2025-09-25",
+    featured: false,
+    readTime: "6 min read",
   },
   {
     slug: "generative-ai-enterprise",
@@ -216,6 +257,8 @@ export const posts: BlogPost[] = [
       "Case studies from Fortune 500 companies showing how GenAI is transforming customer service, content creation, and business operations.",
     category: "AI Innovation",
     publishedAt: "2025-01-20",
+    featured: false,
+    readTime: "8 min read",
   },
   {
     slug: "cloud-migration-best-practices",
@@ -224,6 +267,8 @@ export const posts: BlogPost[] = [
       "Essential strategies for successful cloud migration, including risk mitigation, cost optimization, and timeline management.",
     category: "Cloud Strategy",
     publishedAt: "2025-01-18",
+    featured: false,
+    readTime: "7 min read",
   },
   {
     slug: "cybersecurity-2025-trends",
@@ -232,6 +277,8 @@ export const posts: BlogPost[] = [
       "Emerging threats, new defense strategies, and the latest security technologies shaping the cybersecurity landscape.",
     category: "Cybersecurity",
     publishedAt: "2025-01-15",
+    featured: false,
+    readTime: "7 min read",
   },
   {
     slug: "data-analytics-automation",
@@ -240,6 +287,8 @@ export const posts: BlogPost[] = [
       "How AI-powered analytics platforms are revolutionizing business intelligence and enabling real-time decision making.",
     category: "Data Science",
     publishedAt: "2025-01-12",
+    featured: false,
+    readTime: "7 min read",
   },
   {
     slug: "devops-automation-guide",
@@ -248,6 +297,8 @@ export const posts: BlogPost[] = [
       "Comprehensive strategies for automating CI/CD pipelines, infrastructure management, and deployment processes.",
     category: "DevOps",
     publishedAt: "2025-01-10",
+    featured: false,
+    readTime: "8 min read",
   },
   {
     slug: "microservices-architecture",
@@ -256,6 +307,8 @@ export const posts: BlogPost[] = [
       "Essential patterns for building scalable, maintainable microservices architectures in modern applications.",
     category: "Software Architecture",
     publishedAt: "2025-01-08",
+    featured: false,
+    readTime: "8 min read",
   },
   {
     slug: "ai-ethics-compliance",
@@ -264,56 +317,159 @@ export const posts: BlogPost[] = [
       "Framework for developing AI systems that are fair, transparent, and compliant with emerging regulations.",
     category: "AI Governance",
     publishedAt: "2025-01-05",
+    featured: false,
+    readTime: "8 min read",
+  },
+  // NEW CONTENT - 2025 Latest Articles
+  {
+    slug: "ai-workflow-automation-roi-calculator",
+    title: "AI Workflow Automation ROI Calculator: Measure Your Savings",
+    description:
+      "Interactive guide to calculating the ROI of AI workflow automation. Includes templates, case studies, and a free ROI calculator tool.",
+    category: "AI & Automation",
+    publishedAt: "2025-01-22",
+    featured: true,
+    readTime: "6 min read",
   },
   {
-    slug: "ai-powered-business-automation-2025",
-    title: "AI-Powered Business Automation: The Complete 2025 Guide",
+    slug: "micro-saas-platform-comparison-2025",
+    title: "Micro SAAS Platform Comparison 2025: The Ultimate Guide",
     description:
-      "Transform your business operations with cutting-edge AI automation. Learn implementation strategies, ROI calculations, and real-world success stories.",
-    category: "AI & Automation",
+      "Comprehensive comparison of top micro SAAS platforms. Features, pricing, and recommendations for different business sizes and needs.",
+    category: "Technology",
     publishedAt: "2025-01-21",
     featured: true,
     readTime: "12 min read",
   },
   {
-    slug: "next-gen-cloud-infrastructure",
-    title: "Next-Generation Cloud Infrastructure: Scaling for 2025 and Beyond",
+    slug: "ai-virtual-assistant-implementation-checklist",
+    title: "AI Virtual Assistant Implementation Checklist: 25 Critical Steps",
     description:
-      "Discover the latest cloud technologies and infrastructure patterns that are reshaping how businesses scale their operations.",
-    category: "Cloud Strategy",
-    publishedAt: "2025-01-21",
-    featured: true,
-    readTime: "10 min read",
+      "Step-by-step checklist for successfully implementing AI virtual assistants. From planning to deployment and optimization.",
+    category: "AI & Automation",
+    publishedAt: "2025-01-20",
+    featured: false,
+    readTime: "8 min read",
   },
   {
-    slug: "enterprise-ai-implementation-roadmap",
-    title: "Enterprise AI Implementation: A Strategic Roadmap for 2025",
+    slug: "data-analytics-automation-success-stories",
+    title: "Data Analytics Automation: 10 Success Stories That Will Inspire You",
     description:
-      "Navigate the complexities of enterprise AI adoption with our comprehensive roadmap covering strategy, implementation, and governance.",
-    category: "AI Strategy",
-    publishedAt: "2025-01-21",
+      "Real-world case studies showing how companies achieved 300% faster insights and 80% cost reduction with AI-powered data analytics.",
+    category: "Data Analytics",
+    publishedAt: "2025-01-19",
     featured: true,
     readTime: "15 min read",
   },
   {
-    slug: "micro-saas-platform-architecture",
-    title: "Building Scalable Micro SAAS Platforms: Architecture Patterns and Best Practices",
+    slug: "cybersecurity-ai-threat-detection-2025",
+    title: "AI-Powered Threat Detection: The Future of Cybersecurity",
     description:
-      "Learn how to design and implement micro SAAS platforms that can scale to millions of users while maintaining performance and reliability.",
-    category: "Platform Engineering",
-    publishedAt: "2025-01-21",
+      "How AI is revolutionizing cybersecurity with advanced threat detection, automated response, and predictive security analytics.",
+    category: "Cybersecurity",
+    publishedAt: "2025-01-18",
     featured: false,
+    readTime: "10 min read",
+  },
+  {
+    slug: "cloud-edge-computing-hybrid-strategy",
+    title: "Hybrid Cloud-Edge Computing Strategy: Maximizing Performance and Cost Efficiency",
+    description:
+      "Strategic approach to implementing hybrid cloud-edge architectures that optimize performance, reduce latency, and minimize costs.",
+    category: "Cloud Strategy",
+    publishedAt: "2025-01-17",
+    featured: true,
     readTime: "11 min read",
   },
   {
-    slug: "ai-ethics-responsible-deployment",
-    title: "AI Ethics and Responsible Deployment: Building Trust in AI Systems",
+    slug: "ai-governance-framework-enterprise",
+    title: "Enterprise AI Governance Framework: A Practical Implementation Guide",
     description:
-      "Essential guidelines for deploying AI systems responsibly, ensuring fairness, transparency, and accountability in your AI initiatives.",
+      "Comprehensive framework for implementing AI governance in large enterprises. Includes policies, procedures, and compliance strategies.",
     category: "AI Governance",
-    publishedAt: "2025-01-21",
+    publishedAt: "2025-01-16",
     featured: false,
     readTime: "9 min read",
   },
+  {
+    slug: "quantum-computing-business-applications-2025",
+    title: "Quantum Computing Business Applications: What's Possible in 2025",
+    description:
+      "Explore real business applications of quantum computing, from optimization problems to cryptography and drug discovery.",
+    category: "Quantum Computing",
+    publishedAt: "2025-01-15",
+    featured: true,
+    readTime: "13 min read",
+  },
+  {
+    slug: "iot-security-best-practices-2025",
+    title: "IoT Security Best Practices 2025: Protecting Your Connected Devices",
+    description:
+      "Essential security strategies for IoT deployments. Learn how to protect connected devices from emerging threats and vulnerabilities.",
+    category: "IoT Security",
+    publishedAt: "2025-01-14",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
+    slug: "digital-transformation-ai-roadmap",
+    title: "Digital Transformation with AI: A 90-Day Roadmap for Success",
+    description:
+      "Practical roadmap for digital transformation using AI technologies. Includes timeline, milestones, and success metrics.",
+    category: "Digital Transformation",
+    publishedAt: "2025-01-13",
+    featured: true,
+    readTime: "14 min read",
+  },
+  {
+    slug: "ai-chatbot-customer-satisfaction-case-study",
+    title: "How AI Chatbots Increased Customer Satisfaction by 45%: A Detailed Case Study",
+    description:
+      "Deep dive into how a Fortune 500 company implemented AI chatbots and achieved remarkable improvements in customer satisfaction and operational efficiency.",
+    category: "Case Studies",
+    publishedAt: "2025-01-12",
+    featured: true,
+    readTime: "12 min read",
+  },
+  {
+    slug: "machine-learning-model-deployment-guide",
+    title: "Machine Learning Model Deployment: From Development to Production",
+    description:
+      "Complete guide to deploying ML models in production environments. Covers MLOps, monitoring, and best practices for scalability.",
+    category: "Machine Learning",
+    publishedAt: "2025-01-11",
+    featured: false,
+    readTime: "16 min read",
+  },
+  {
+    slug: "blockchain-supply-chain-transparency",
+    title: "Blockchain for Supply Chain Transparency: Real-World Implementation",
+    description:
+      "How blockchain technology is being used to create transparent, traceable supply chains across various industries.",
+    category: "Blockchain",
+    publishedAt: "2025-01-10",
+    featured: false,
+    readTime: "10 min read",
+  },
+  {
+    slug: "5g-business-transformation-opportunities",
+    title: "5G Business Transformation: Opportunities and Implementation Strategies",
+    description:
+      "Explore how 5G technology is enabling new business models and transforming industries with ultra-low latency and high-speed connectivity.",
+    category: "5G Technology",
+    publishedAt: "2025-01-09",
+    featured: true,
+    readTime: "11 min read",
+  },
+  {
+    slug: "ai-powered-personalization-ecommerce",
+    title: "AI-Powered Personalization in E-commerce: Boosting Sales by 35%",
+    description:
+      "Case studies and strategies for implementing AI-powered personalization in e-commerce platforms to increase customer engagement and sales.",
+    category: "E-commerce",
+    publishedAt: "2025-01-08",
+    featured: false,
+    readTime: "9 min read",
+  }
 ];
 
