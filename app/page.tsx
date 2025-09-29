@@ -8,6 +8,7 @@ import InteractiveContentRecommendation from '../components/InteractiveContentRe
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
+import NextGenAutonomousBanner from '../components/NextGenAutonomousBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -35,9 +36,13 @@ export default function HomePage() {
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-space-tech-revolution-2026" className="underline hover:text-yellow-200">Space Tech</Link>
             <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-next-generation-autonomous-systems-2026" className="underline hover:text-yellow-200">Next-Gen Autonomous</Link>
+            <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-mega-transformation-2026" className="underline hover:text-yellow-200">$50M ROI Case Study</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-next-generation-autonomous-success-2026" className="underline hover:text-yellow-200">$35M ROI Case Study</Link>
           </div>
           <Link
             href="/blog"
@@ -56,6 +61,9 @@ export default function HomePage() {
       
       {/* Latest 2026 Content Banner */}
       <LatestContent2026Banner />
+      
+      {/* Next-Generation Autonomous Systems Banner */}
+      <NextGenAutonomousBanner />
       
       {/* New Content Promotional Banners */}
       <NewContent2026PromotionalBanners />
