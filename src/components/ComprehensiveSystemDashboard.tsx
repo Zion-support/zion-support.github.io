@@ -244,7 +244,7 @@ const ErrorRecoveryTab: React.FC = () => {
 
 const CachingTab: React.FC = () => {
   const [statistics, setStatistics] = useState(advancedCachingSystem.getStatistics());
-  const [cacheInfo, setCacheInfo] = useState(advancedCachingSystem.getCacheInfo());
+  const [, setCacheInfo] = useState(advancedCachingSystem.getCacheInfo());
 
   useEffect(() => {
     const interval = setInterval(() => {

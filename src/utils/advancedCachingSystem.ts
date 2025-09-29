@@ -3,7 +3,7 @@
  * Intelligent caching with automatic invalidation and optimization
  */
 
-export interface CacheEntry<T = any> {
+export interface CacheEntry<T = unknown> {
   key: string;
   value: T;
   timestamp: number;
@@ -306,7 +306,7 @@ class AdvancedCachingSystem {
     this.updateStatistics();
   }
 
-  private compressValue(value: any): any {
+  private compressValue(value: unknown): unknown {
     // Simple compression using JSON stringify/parse
     // In a real implementation, you'd use a proper compression library
     try {
@@ -317,10 +317,10 @@ class AdvancedCachingSystem {
     }
   }
 
-  private decompressValue(value: any): any {
+  private decompressValue(value: unknown): unknown {
     if (this.isCompressed(value)) {
       try {
-        return JSON.parse(value.data);
+        return JSON.parse((value as { data: string }).data);
       } catch {
         return value;
       }
@@ -328,8 +328,8 @@ class AdvancedCachingSystem {
     return value;
   }
 
-  private isCompressed(value: any): boolean {
-    return value && typeof value === 'object' && value.__compressed === true;
+  private isCompressed(value: unknown): boolean {
+    return value && typeof value === 'object' && (value as { __compressed?: boolean }).__compressed === true;
   }
 
   private persistCriticalEntries(): void {

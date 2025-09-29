@@ -84,7 +84,7 @@ class EnhancedPerformanceMonitor {
           });
         }
         break;
-      case 'first-input':
+      case 'first-input': {
         const fidEntry = entry as PerformanceEventTiming;
         const fid = fidEntry.processingStart - fidEntry.startTime;
         if (fid > 100) {
@@ -97,7 +97,8 @@ class EnhancedPerformanceMonitor {
           });
         }
         break;
-      case 'layout-shift':
+      }
+      case 'layout-shift': {
         const clsEntry = entry as PerformanceEntry & { value: number };
         if (clsEntry.value > 0.1) {
           this.createAlert({
@@ -109,14 +110,15 @@ class EnhancedPerformanceMonitor {
           });
         }
         break;
+      }
     }
   }
 
-  private trackError(error: Error | any): void {
+  private trackError(error: Error | unknown): void {
     this.createAlert({
       type: 'warning',
       title: 'JavaScript Error Detected',
-      description: error.message || 'Unknown error occurred',
+      description: (error instanceof Error ? error.message : String(error)) || 'Unknown error occurred',
       impact: 'medium',
       action: 'Check console for details'
     });
