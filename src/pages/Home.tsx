@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
+import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
@@ -25,12 +26,11 @@ import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
 import NewContentAnnouncement from "../components/NewContentAnnouncement";
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
+import NewContentShowcase from "../components/NewContentShowcase";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
-import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
-import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
-import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
+import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
 import { latestInsights } from "../content/insights";
 import { featuredInsights, newInsights } from "../content/new-insights";
 import { posts } from "../content/posts";
@@ -112,6 +112,16 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        
+        {/* Enhanced Promotional Banners */}
+        {getFeaturedBanners().slice(0, 3).map((banner) => (
+          <EnhancedPromotionalBanner
+            key={banner.id}
+            banner={banner}
+            className="border-b border-white/10"
+          />
+        ))}
+        
         <NewContentAnnouncement />
         <LatestContentBanner 
           className="border-b border-white/10" 
@@ -122,14 +132,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Agentic Workflows, Edge LLM Caching, ML SBOMs"
-          description="Reliable multi‑step agents, sub‑100ms prompts, and secure ML supply chains."
-          ctaText="Explore new content"
-          ctaLink="/blog/ai-risk-mitigation-playbook-2026"
+          title="Fresh: Revolutionary AI Services, Quantum Computing, Zero Trust Security"
+          description="NEW: AI Autonomous Infrastructure, Quantum-AI Hybrid Computing, and Advanced Cybersecurity Solutions."
+          ctaText="Explore new services"
+          ctaLink="/services"
           featuredItems={[
-            { title: "Agentic Workflows Blueprint 2026", category: "GenAI", link: "/blog/agentic-workflows-blueprint-2026" },
-            { title: "Edge LLM Caching Blueprint", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" },
-            { title: "ML Supply Chain SBOMs", category: "AI Security", link: "/blog/ml-supply-chain-sbom-2026" },
+            { title: "AI Autonomous Infrastructure", category: "Infrastructure", link: "/services/ai-autonomous-infrastructure-platform" },
+            { title: "Quantum-AI Hybrid Computing", category: "Quantum Computing", link: "/services/quantum-ai-hybrid-computing" },
+            { title: "AI Zero Trust Security", category: "Cybersecurity", link: "/services/ai-cybersecurity-zero-trust" },
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -190,30 +200,30 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              🚀 <strong>NEW IN 2025:</strong> Revolutionary AI-Powered Micro SAAS Platform! 
-              Transform your business with our cutting-edge AI solutions, enterprise-grade security, 
-              and next-generation cloud infrastructure. Join 500+ companies already scaling with us!
+              🚀 <strong>BREAKTHROUGH 2025:</strong> AI Autonomous Infrastructure, Quantum-AI Hybrid Computing & Zero Trust Security! 
+              Transform your business with revolutionary AI solutions that self-heal, optimize, and scale automatically. 
+              Join 500+ companies achieving unprecedented results!
             </p>
 
             {/* Special Promotion Banner */}
             <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-xl p-6 mb-8 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
-                <span className="text-lg font-bold text-green-400">🔥 NEW: AI AUTONOMOUS OPERATIONS</span>
+                <span className="text-lg font-bold text-green-400">🔥 BREAKTHROUGH: AI AUTONOMOUS INFRASTRUCTURE</span>
                 <Sparkles className="w-6 h-6 text-green-400 animate-pulse" />
               </div>
               <p className="text-white text-lg font-semibold mb-2">
-                🚀 Revolutionary AI that manages your entire infrastructure autonomously - Self-healing, self-optimizing, self-scaling!
+                🤖 Revolutionary AI Infrastructure that self-heals, self-optimizes, and self-scales automatically - Achieve 99.9% uptime with zero human intervention!
               </p>
               <p className="text-zion-slate-light text-sm mb-4">
                 Get 50% OFF Your First 3 Months + FREE AI Strategy Consultation • Valid until March 31, 2025
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
-                  to="/services/ai-autonomous-operations"
+                  to="/services/ai-autonomous-infrastructure-platform"
                   className="bg-green-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-600 transition-colors text-center"
                 >
-                  Explore AI Autonomous Operations
+                  Explore AI Autonomous Infrastructure
                 </Link>
                 <Link
                   to="/contact"
@@ -232,10 +242,10 @@ const Home = () => {
                 <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
               </div>
               <p className="text-white text-lg font-semibold mb-2">
-                🎯 Just Published: New guides on Autonomous Ops, AI Cybersecurity, Cloud Scorecards, GenAI Evals, and Edge Flags
+                🎯 Just Published: 6 Revolutionary Articles on AI Autonomous Infrastructure, Quantum-AI Hybrid Computing, Zero Trust Security & More
               </p>
               <p className="text-zion-slate-light text-sm mb-4">
-                Discover cutting-edge insights on SLO-driven controllers, behavioral detections, scalable cloud governance, live eval canaries, and zero‑regret rollouts.
+                Discover breakthrough insights on self-healing systems, quantum computing applications, AI-powered cybersecurity, content automation, and customer experience transformation.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
@@ -245,18 +255,18 @@ const Home = () => {
                   Read Latest Articles
                 </Link>
                 <Link
-                  to="/insights"
+                  to="/case-studies"
                   className="border border-purple-400 text-purple-400 px-6 py-2 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-colors text-center"
                 >
-                  View Insights
+                  View Success Stories
                 </Link>
               </div>
               <div className="mt-4 flex flex-wrap gap-2 justify-center">
-                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">Autonomous Ops</span>
-                <span className="bg-rose-100/20 text-rose-200 px-3 py-1 rounded-full text-xs font-medium border border-rose-300/20">AI Security</span>
-                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Cloud Scorecards</span>
-                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">GenAI Evals</span>
-                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">Edge Flags</span>
+                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">AI Infrastructure</span>
+                <span className="bg-rose-100/20 text-rose-200 px-3 py-1 rounded-full text-xs font-medium border border-rose-300/20">Quantum Computing</span>
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Zero Trust Security</span>
+                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">Content AI</span>
+                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">Customer Experience</span>
               </div>
             </div>
           </div>
@@ -272,6 +282,9 @@ const Home = () => {
           </div>
         </div>
         {/* <LatestInsights /> */}
+
+        {/* New Content Showcase */}
+        <NewContentShowcase />
 
         {/* New Services Showcase */}
         <section className="py-20 bg-white relative overflow-hidden">
