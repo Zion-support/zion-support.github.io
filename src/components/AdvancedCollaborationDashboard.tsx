@@ -1,19 +1,7 @@
-/* global HTMLDivElement */
-import { AnimatePresence, motion } from 'framer-motion';
-import {
-  FileText,
-  Mic,
-  MicOff,
-  Play,
-  Plus,
-  Share,
-  Square,
-  Users,
-  Video,
-  VideoOff,
-  X
-} from 'lucide-react';
+/* global HTMLDivElement:false */
 import React, { useEffect, useRef, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { FileText, Mic, MicOff, Play, Plus, Share, Square, Users, Video, VideoOff, X } from 'lucide-react';
 import {
   advancedCollaborationSystem,
   ChatMessage,
@@ -51,6 +39,7 @@ const AdvancedCollaborationDashboard: React.FC<AdvancedCollaborationDashboardPro
   const [showCreateSession, setShowCreateSession] = useState(false);
   const [sessionName, setSessionName] = useState('');
   const [sessionType, setSessionType] = useState<CollaborationSession['type']>('meeting');
+  // eslint-disable-next-line no-undef
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

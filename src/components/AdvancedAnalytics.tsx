@@ -336,12 +336,9 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
         new Map(),
       );
 
-      const averageSessionDuration =
-        Array.from(sessionDurations.values()).reduce(
-          (sum: number, duration: unknown) =>
-            sum + (typeof duration === "number" ? duration : 0),
-          0,
-        ) / sessionDurations.size || 0;
+      const durations = Array.from(sessionDurations.values()).filter((d): d is number => typeof d === 'number');
+      const total = durations.reduce((sum: number, d: number) => sum + d, 0);
+      const averageSessionDuration = durations.length > 0 ? total / durations.length : 0;
 
       setMetrics((prev) => ({
         ...prev,

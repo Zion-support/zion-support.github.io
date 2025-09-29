@@ -33,22 +33,38 @@ def resolve_conflicts_in_file(filepath):
     
     try:
         with open(filepath, 'r') as f:
-            content = f.read()
-        
+            lines = f.readlines()
+
+        resolved_lines = []
+        in_conflict = False
+        taking_section = None
+
+        for raw_line in lines:
+            line = raw_line.rstrip('\n')
+            if line.startswith('<<<<<<< '):
+                in_conflict = True
+                taking_section = 'ours'
                 continue
+            if in_conflict and line.startswith('======='):
+                taking_section = 'theirs'
                 continue
-                skip_until = None
+            if in_conflict and line.startswith('>>>>>>> '):
+                in_conflict = False
+                taking_section = None
                 continue
-            elif skip_until is None:
+
+            if not in_conflict:
                 resolved_lines.append(line)
-        
-        # Write resolved content
+            else:
+                if taking_section == 'ours':
+                    resolved_lines.append(line)
+
         with open(filepath, 'w') as f:
-            f.write('\n'.join(resolved_lines))
-        
+            f.write('\n'.join(resolved_lines) + ('\n' if resolved_lines and not resolved_lines[-1].endswith('\n') else ''))
+
         print(f"✅ Resolved conflicts in {filepath}")
         return True, "Conflicts resolved"
-        
+
     except Exception as e:
         return False, f"Error resolving conflicts: {str(e)}"
 
