@@ -18,6 +18,33 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 5,
   },
   {
+    id: "ai-governance-rubric-lite",
+    title: "AI Governance: The 7 Decisions That Matter",
+    summary:
+      "A lightweight rubric to decide where to add human checks, logs, and policy tests.",
+    category: "AI Governance",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
+  {
+    id: "feature-flags-at-edge",
+    title: "Feature Flags at the Edge: Patterns and Pitfalls",
+    summary:
+      "Consistency models, cache strategies, and validation flows for instant global rollouts.",
+    category: "Architecture",
+    date: "2025-09-28",
+    readMinutes: 6,
+  },
+  {
+    id: "genai-telemetry-top-metrics",
+    title: "GenAI Telemetry: 8 Metrics That Predict Drift",
+    summary:
+      "Capture inputs, policies, and human feedback signals to detect regressions early.",
+    category: "GenAI",
+    date: "2025-09-27",
+    readMinutes: 7,
+  },
+  {
     id: "edge-cache-invalidation",
     title: "Edge Cache Invalidation Strategies That Won't Wake You Up",
     summary:
@@ -45,39 +72,17 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
-<<<<<<< HEAD
-    id: "canary-evals-for-genai",
-    title: "Canary Evals for GenAI: What to Measure Before You Ship",
-    summary:
-      "Define offline gates and online guardrails to prevent silent regressions in LLM features.",
-    category: "MLOps",
-    date: "2025-09-29",
-    readMinutes: 5,
-  },
-  {
-    id: "streaming-backpressure-patterns",
-    title: "Taming Backpressure in Streaming Systems",
-    summary:
-      "Practical patterns for smoothing bursts, protecting downstreams, and keeping SLAs green.",
-    category: "Data Engineering",
-=======
     id: "feature-flags-edge-realtime",
     title: "Real‑Time Feature Flags at the Edge",
     summary:
       "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
     category: "Architecture",
->>>>>>> feat/content-promo
     date: "2025-09-28",
     readMinutes: 6,
   },
   {
-<<<<<<< HEAD
-    id: "north-star-metrics-that-drive-growth",
-    title: "North‑Star Metrics That Actually Drive Growth",
-=======
     id: "north-star-metrics-insight",
     title: "North‑Star Metrics: A Field Guide",
->>>>>>> feat/content-promo
     summary:
       "A practical approach to defining leading indicators that align teams to outcomes.",
     category: "Product Analytics",
