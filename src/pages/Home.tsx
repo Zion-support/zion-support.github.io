@@ -26,6 +26,134 @@ import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
 
 const Home = () => {
+  // Sample data for promotional banner
+  const promotionalBannerData = {
+    type: 'announcement' as const,
+    title: 'New AI Services Now Available',
+    description: 'Transform your business with our latest AI-powered solutions',
+    ctaText: 'Explore Now',
+    ctaLink: '/services',
+    badge: 'New Release',
+    autoHide: true,
+    autoHideDelay: 8000
+  };
+
+  // Sample featured content data
+  const featuredContentData = [
+    {
+      id: '1',
+      title: 'AI Implementation Guide: From Strategy to Success',
+      description: 'Comprehensive guide to implementing AI solutions in your organization. Learn best practices, common pitfalls, and success strategies.',
+      type: 'whitepaper' as const,
+      category: 'AI Solutions',
+      author: 'Dr. Sarah Chen',
+      publishDate: '2024-01-15',
+      readTime: 15,
+      viewCount: 2847,
+      rating: 4.9,
+      featured: true,
+      image: '/api/placeholder/400/300',
+      url: '/resources'
+    },
+    {
+      id: '2',
+      title: 'Global Retail Chain AI Transformation',
+      description: 'See how we helped RetailMax Corporation optimize inventory management and customer experience across 500+ stores.',
+      type: 'case-study' as const,
+      category: 'Case Studies',
+      author: 'Zion Tech Team',
+      publishDate: '2024-01-10',
+      readTime: 8,
+      viewCount: 1923,
+      rating: 4.8,
+      featured: true,
+      image: '/api/placeholder/400/300',
+      url: '/case-studies'
+    },
+    {
+      id: '3',
+      title: 'The Future of AI in Business: 2024 Trends',
+      description: 'Join our experts as they discuss the latest AI trends and how they\'re reshaping business operations.',
+      type: 'webinar' as const,
+      category: 'Webinars',
+      author: 'Dr. Alex Kumar',
+      publishDate: '2024-01-20',
+      readTime: 45,
+      viewCount: 12543,
+      rating: 4.7,
+      featured: true,
+      image: '/api/placeholder/400/300',
+      url: '/resources'
+    }
+  ];
+
+  // Sample services data
+  const servicesData = [
+    {
+      id: 'ai-workflow',
+      name: 'AI Workflow Automation',
+      description: 'Transform business operations with intelligent process automation that reduces manual tasks by 80% and improves efficiency by 60%.',
+      shortDescription: 'Intelligent process automation for maximum efficiency',
+      icon: <Zap className="w-8 h-8" />,
+      features: ['Process Recognition', 'Visual Designer', 'Smart Triggers', 'Performance Monitoring'],
+      benefits: ['Reduce manual tasks by 80%', 'Improve efficiency by 60%', 'Cut costs by 40%'],
+      pricing: { starting: '$99/month', popular: true },
+      rating: 4.9,
+      reviewCount: 127,
+      category: 'AI Solutions',
+      tags: ['Automation', 'AI', 'Workflow', 'Efficiency'],
+      image: '/api/placeholder/400/300',
+      url: '/services',
+      stats: [
+        { label: 'Efficiency Gain', value: '+60%', icon: <TrendingUp className="w-5 h-5" /> },
+        { label: 'Cost Reduction', value: '-40%', icon: <Target className="w-5 h-5" /> },
+        { label: 'Manual Tasks', value: '-80%', icon: <Users className="w-5 h-5" /> }
+      ]
+    },
+    {
+      id: 'ai-assistant',
+      name: 'AI Virtual Assistant',
+      description: '24/7 intelligent customer support and business operations with natural language processing and multi-channel support capabilities.',
+      shortDescription: '24/7 intelligent customer support and operations',
+      icon: <Users className="w-8 h-8" />,
+      features: ['Natural Language Processing', 'Multi-channel Support', '24/7 Availability', 'Personalized Interactions'],
+      benefits: ['Reduce response time by 90%', 'Increase conversions by 40%', 'Save 30+ hours/week'],
+      pricing: { starting: '$79/month' },
+      rating: 4.8,
+      reviewCount: 89,
+      category: 'AI Solutions',
+      tags: ['AI Assistant', 'Customer Support', 'Automation'],
+      image: '/api/placeholder/400/300',
+      url: '/services',
+      stats: [
+        { label: 'Response Time', value: '-90%', icon: <Clock className="w-5 h-5" /> },
+        { label: 'Conversions', value: '+40%', icon: <TrendingUp className="w-5 h-5" /> },
+        { label: 'Time Saved', value: '30h/week', icon: <Clock className="w-5 h-5" /> }
+      ]
+    },
+    {
+      id: 'ai-analytics',
+      name: 'AI Data Analytics',
+      description: 'Transform data into actionable insights with machine learning, predictive analytics, and real-time dashboards.',
+      shortDescription: 'Transform data into actionable insights',
+      icon: <Target className="w-8 h-8" />,
+      features: ['Predictive Analytics', 'Real-time Dashboards', 'Data Integration', 'Automated Insights'],
+      benefits: ['Improve decisions by 60%', 'Increase retention by 45%', 'Reduce risks by 70%'],
+      pricing: { starting: '$149/month' },
+      rating: 4.9,
+      reviewCount: 156,
+      category: 'AI Solutions',
+      tags: ['Analytics', 'Data Science', 'Machine Learning'],
+      image: '/api/placeholder/400/300',
+      url: '/services',
+      stats: [
+        { label: 'Better Decisions', value: '+60%', icon: <TrendingUp className="w-5 h-5" /> },
+        { label: 'Retention', value: '+45%', icon: <Users className="w-5 h-5" /> },
+        { label: 'Risk Reduction', value: '-70%', icon: <Shield className="w-5 h-5" /> }
+      ]
+    }
+  ];
+
   return (
     <>
       <Helmet>
