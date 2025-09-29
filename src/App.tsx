@@ -4,7 +4,7 @@ import { initializeErrorReporting } from './utils/errorReporting';
 import { initOptimizations } from './utils/buildOptimizations';
 import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { accessibilityManager } from './utils/accessibility';
-import { PerformanceMonitor as UtilsPerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
+import { ResourceMonitor, MemoryMonitor } from './utils/performance';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
