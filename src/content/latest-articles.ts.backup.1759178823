@@ -17,6 +17,35 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+<<<<<<< HEAD
+    id: "ai-risk-mitigation-scorecards-2026",
+    slug: "ai-risk-mitigation-scorecards-2026",
+    title: "AI Risk Mitigation Scorecards 2026: PR Gates That Speed Teams Up",
+    description: "Owned mitigations, CI policy tests, and online canaries wired to KPIs.",
+    excerpt: "Ship faster with measurable guardrails engineers actually adopt—no heavy process.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Governance",
+    tags: ["Risk", "Scorecards", "Policy", "Canaries"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-risk-mitigation-scorecards-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-governance-scorecards-quickstart-2026",
+    slug: "ai-governance-scorecards-quickstart-2026",
+    title: "AI Governance Scorecards Quickstart 2026: Ship Fast, Stay Safe",
+    description: "A pragmatic starter to wire scorecards, policy tests, and canaries teams adopt.",
+    excerpt: "Set up KPI‑linked scorecards, PR checks, and rollback‑ready canaries in weeks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Strategy",
+    tags: ["Governance", "Scorecards", "Policy", "Canaries"],
+    featured: true,
+    readTime: "7 min read",
+=======
     id: "ai-governance-scorecards-quickstart-2026",
     slug: "ai-governance-scorecards-quickstart-2026",
     title: "AI Governance Scorecards Quickstart 2026: Ship Fast, Stay Safe",
@@ -28,11 +57,58 @@ export const latestArticles: LatestArticle[] = [
     tags: ["Scorecards", "Governance", "Evals"],
     featured: true,
     readTime: "6 min read",
+>>>>>>> origin/cursor/create-and-deploy-new-content-4388
     image: "/images/ai-governance-scorecards-quickstart-2026.jpg",
     newBadge: true,
     trending: true
   },
   {
+<<<<<<< HEAD
+    id: "privacy-first-agents-2026",
+    slug: "privacy-first-agents-2026",
+    title: "Privacy‑First Agents 2026: On‑Device Tools, Scoped IDs, Retention Controls",
+    description: "Blueprint for assistants that respect privacy without losing signal richness.",
+    excerpt: "Design agents with local tools, field‑level filters, and policy‑backed telemetry.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Security",
+    tags: ["Agents", "Privacy", "Telemetry", "Compliance"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/privacy-first-agents-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "serverless-inference-cost-playbook-2026",
+    slug: "serverless-inference-cost-playbook-2026",
+    title: "Serverless Inference Cost Playbook 2026: Budgets Without P95 Pain",
+    description: "Adaptive batching, warm pools, and tiered quality under explicit budgets.",
+    excerpt: "Cut spend 40–70% with budgets, tiers, and deterministic fallbacks you can trust.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "GenAI",
+    tags: ["Inference", "Cost", "Budgets", "Quality Tiers"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/serverless-inference-cost-playbook-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "quantum-ai-hybrid-blueprint-2026",
+    slug: "quantum-ai-hybrid-blueprint-2026",
+    title: "Quantum‑AI Hybrid Blueprint 2026: Practical Wins in 12 Months",
+    description: "Combine quantum libraries with AI orchestration to unlock near‑term ROI.",
+    excerpt: "A pragmatic approach to quantum‑AI workflows that deliver measurable business value.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Applied AI",
+    tags: ["Copilots", "Adoption", "Guardrails", "Evals"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/customer-ai-copilots-2026.jpg",
+=======
     id: "ai-operational-excellence-blueprint-2026",
     slug: "ai-operational-excellence-blueprint-2026",
     title: "AI Operational Excellence Blueprint 2026",
@@ -45,6 +121,7 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "8 min read",
     image: "/images/ai-operational-excellence-blueprint-2026.jpg",
+>>>>>>> origin/cursor/create-and-deploy-new-content-4388
     newBadge: true,
     trending: true
   },
