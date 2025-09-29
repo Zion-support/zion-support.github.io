@@ -11,10 +11,10 @@ import {
   User,
   Zap
 } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
-import Footer from "../components/Footer";
+const Footer: React.FC = () => null;
 import Header from "../components/Header";
 
 interface BlogPost {
