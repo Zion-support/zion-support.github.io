@@ -690,3 +690,76 @@ export const LatestContent2026Banner = () => (
     hideAfter={20}
   />
 );
+
+// New 2026 Content Banners
+export const AINeuralArchitectureBanner = () => (
+  <PromotionalBanner
+    message="🧠 BREAKTHROUGH: AI Neural Architecture Optimization 2026 - 40% performance gains, 60% cost reduction"
+    ctaText="Read Article"
+    ctaLink="/blog/ai-neural-architecture-optimization-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AISpaceTechBanner = () => (
+  <PromotionalBanner
+    message="🚀 REVOLUTIONARY: AI Space Technology 2026 - Autonomous space operations with 99.9% reliability & $500M+ savings"
+    ctaText="Explore Space AI"
+    ctaLink="/blog/ai-space-tech-2026"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-purple-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AISustainabilityCaseStudyBanner = () => (
+  <PromotionalBanner
+    message="🌱 SUCCESS STORY: Fortune 500 achieves 100% carbon neutrality & $10M ROI with AI sustainability transformation"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-sustainability-transformation-2026"
+    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const NewContent2026Banner = () => (
+  <PromotionalBanner
+    message="✨ NEW 2026: Neural Architecture Optimization, Space AI Technology & Sustainability Success Stories"
+    ctaText="Discover Latest"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={25}
+  />
+);
+
+export const AITechnologyBreakthroughBanner = () => (
+  <PromotionalBanner
+    message="🔬 BREAKTHROUGH: Next-gen AI technologies for space exploration, neural optimization & sustainable operations"
+    ctaText="Learn More"
+    ctaLink="/services/ai-research-development"
+    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const EnterpriseAITransformationBanner = () => (
+  <PromotionalBanner
+    message="🏢 ENTERPRISE: Transform your business with cutting-edge AI solutions - Neural optimization, space tech & sustainability"
+    ctaText="Get Consultation"
+    ctaLink="/contact"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
