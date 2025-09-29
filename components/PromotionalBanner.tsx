@@ -559,3 +559,39 @@ export const NewContentShowcase2026Banner = () => (
     hideAfter={18}
   />
 );
+
+export const AIEnterpriseTransformationBanner = () => (
+  <PromotionalBanner
+    message="🎯 BREAKTHROUGH: AI Enterprise Transformation 2026 - Complete implementation guide with proven ROI frameworks and real-world case studies"
+    ctaText="Start Your Transformation"
+    ctaLink="/blog/ai-enterprise-transformation-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const AIEnterpriseSuccessBanner = () => (
+  <PromotionalBanner
+    message="🏆 SUCCESS STORY: Fortune 500 achieves $10M ROI with AI transformation - 95% automation, 300% productivity gains, complete case study"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-enterprise-transformation-success-2026"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const LatestEnterpriseContentBanner = () => (
+  <PromotionalBanner
+    message="📈 LATEST: Enterprise AI Transformation resources - Implementation guides, case studies, and ROI frameworks for Fortune 500 success"
+    ctaText="Explore All Resources"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-teal-600 to-cyan-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);

@@ -36,7 +36,10 @@ import {
   LatestContent2026Banner,
   AIEthicalFrameworkBanner,
   AIEthicsSuccessBanner,
-  NewContentShowcase2026Banner
+  NewContentShowcase2026Banner,
+  AIEnterpriseTransformationBanner,
+  AIEnterpriseSuccessBanner,
+  LatestEnterpriseContentBanner
 } from '../components/PromotionalBanner';
 import { 
   AIAutonomousCloudOpsBanner,
@@ -110,7 +113,9 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
-      <Latest2026ContentBanner />
+      <AIEnterpriseTransformationBanner />
+      <AIEnterpriseSuccessBanner />
+      <LatestEnterpriseContentBanner />
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
       <AIEthicsSuccessBanner />
@@ -658,6 +663,25 @@ export default function HomePage() {
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-enterprise-transformation-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW 2026
+                  </span>
+                  <span className="text-sm text-gray-500">30 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Enterprise Transformation 2026: Complete Implementation Guide
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Master enterprise AI transformation with proven strategies, ROI frameworks, and real-world case studies. Achieve 95% automation and $10M+ savings.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Complete Guide →
                 </div>
               </div>
             </Link>
