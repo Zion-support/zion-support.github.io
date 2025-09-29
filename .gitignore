@@ -8,7 +8,17 @@ node_modules
 tsconfig.tsbuildinfo
 core
 
+<<<<<<< HEAD
 # ignore build artifacts and crash dumps
 tsconfig.tsbuildinfo
 core
 tsconfig.tsbuildinfo
+=======
+# TypeScript build info
+*.tsbuildinfo
+
+# Ignore coverage reports
+coverage/
+coverage
+coverage/
+>>>>>>> origin/main

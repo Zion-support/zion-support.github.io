@@ -1,7 +1,6 @@
 import {
   ArrowRight,
   Award,
-  Brain,
   CheckCircle,
   Globe,
   Rocket,
@@ -11,7 +10,7 @@ import {
   Target,
   TrendingUp,
   Users,
-  Zap,
+  Zap
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -21,8 +20,17 @@ import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
+import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
+import LatestContentBanner from "../components/LatestContentBanner";
+import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
+import NewContentAnnouncement from "../components/NewContentAnnouncement";
+import NewContentPromoBanner from "../components/NewContentPromoBanner";
+import NewServicesShowcase from "../components/NewServicesShowcase";
+import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
+import TrendingContentBanner from "../components/TrendingContentBanner";
 import { latestInsights } from "../content/insights";
+import { featuredInsights, newInsights } from "../content/new-insights";
 import { posts } from "../content/posts";
 
 const Home = () => {
@@ -101,7 +109,24 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
-
+        <NewContentAnnouncement />
+        <LatestContentBanner className="border-b border-white/10" variant="info" />
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="Fresh: AI ROI Scorecards, Secure ML Supply Chain, Enterprise RAG v2"
+          description="New guides to prove platform value, secure ML supply chains, and stabilize GenAI quality."
+          ctaText="Explore new content"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "AI Platform ROI Scorecards", category: "AI Strategy", link: "/blog/ai-platform-roi-2025" },
+            { title: "Secure ML Supply Chain", category: "Security", link: "/blog/secure-ml-supply-chain-2025" },
+            { title: "Enterprise RAG v2", category: "GenAI", link: "/blog/genai-evals-in-production-2025" },
+          ]}
+        />
+        <div className="container mx-auto px-6 mt-6">
+          <TrendingContentBanner />
+        </div>
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="success"
@@ -175,6 +200,42 @@ const Home = () => {
               </div>
             </div>
 
+            {/* New Content Announcement */}
+            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-8 animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
+                <span className="text-lg font-bold text-purple-400">📚 FRESH CONTENT ALERT</span>
+                <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                🎯 Just Published: New guides on Autonomous Ops, AI Cybersecurity, Cloud Scorecards, GenAI Evals, and Edge Flags
+              </p>
+              <p className="text-zion-slate-light text-sm mb-4">
+                Discover cutting-edge insights on SLO-driven controllers, behavioral detections, scalable cloud governance, live eval canaries, and zero‑regret rollouts.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  to="/blog"
+                  className="bg-purple-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-600 transition-colors text-center"
+                >
+                  Read Latest Articles
+                </Link>
+                <Link
+                  to="/insights"
+                  className="border border-purple-400 text-purple-400 px-6 py-2 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-colors text-center"
+                >
+                  View Insights
+                </Link>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2 justify-center">
+                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">Autonomous Ops</span>
+                <span className="bg-rose-100/20 text-rose-200 px-3 py-1 rounded-full text-xs font-medium border border-rose-300/20">AI Security</span>
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Cloud Scorecards</span>
+                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">GenAI Evals</span>
+                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">Edge Flags</span>
+              </div>
+            </div>
+
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">
               <div className="text-center group hover:scale-105 transition-all duration-300">
@@ -222,117 +283,112 @@ const Home = () => {
           </div>
         </section>
 
+        {/* Latest Insights Section */}
+        {/* Promo ribbon for new content */}
+        <div className="container mx-auto px-6">
+            <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
+            <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            New: AI Platform ROI Scorecards, Secure ML Supply Chain, and Enterprise RAG v2 — read now
+            <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
+          </div>
+        </div>
+        <LatestInsights />
+
         {/* Featured Content Showcase */}
-        <FeaturedContentShowcase 
-          title="Latest Technology Insights & Trends"
-          subtitle="Stay ahead with our cutting-edge research, expert analysis, and actionable insights from the world of AI, cybersecurity, and emerging technologies"
-          maxItems={6}
-          showInsights={true}
-          showBlogPosts={true}
-          className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
-        />
+        <section className="relative z-10">
+          <FeaturedContentShowcase className="mt-8" />
+        </section>
 
         {/* New Services Showcase */}
-        <section className="container mx-auto px-6 py-20 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-400 text-sm font-medium mb-6 animate-pulse">
-              🔥 HOT NEW SERVICES - 2025
-            </div>
-            <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up">
-              Revolutionary AI-Powered Solutions
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Transform your business with our cutting-edge AI micro SAAS platform. 
-              From workflow automation to predictive analytics - we've got you covered.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {/* Featured: AI Autonomous Operations */}
-            <div className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl border-2 border-red-500/30 bg-red-500/10 relative">
-              <div className="absolute -top-3 -right-3 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
-                NEW!
+        <section className="py-20 bg-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50"></div>
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-8">
+                <Sparkles className="w-4 h-4 mr-2" />
+                New Services Available
               </div>
-              <div className="bg-red-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-red-500/30 transition-colors border border-red-500/30 shadow-lg">
-                <Brain className="w-8 h-8 text-red-400 group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">
-                AI Autonomous Operations
-              </h3>
-              <p className="text-zion-slate-light mb-4">
-                Revolutionary AI that manages your entire infrastructure autonomously. 
-                Self-healing, self-optimizing, self-scaling.
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Latest AI & Security Solutions
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Discover our newest services designed to accelerate your digital transformation 
+                and protect your business from evolving threats.
               </p>
-              <div className="bg-red-500/20 rounded-lg p-3 mb-4">
-                <div className="text-red-400 font-bold text-lg">🎯 99.9% uptime guaranteed</div>
-                <div className="text-red-300 text-sm">75% cost reduction</div>
-              </div>
-              <Link to="/services/ai-autonomous-operations" className="btn-primary w-full text-center">
-                Explore Now
-              </Link>
             </div>
 
-            <div className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl border-2 border-green-500/30 bg-green-500/10">
-              <div className="bg-green-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green-500/30 transition-colors border border-green-500/30 shadow-lg">
-                <Zap className="w-8 h-8 text-green-400 group-hover:scale-110 transition-transform duration-300" />
+            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="flex items-center justify-between mb-6">
+                  <Zap className="w-12 h-12 text-blue-300" />
+                  <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">NEW</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">AI Automation Platform</h3>
+                <p className="text-blue-100 mb-6">
+                  Transform your business processes with intelligent automation. 
+                  Reduce costs by 75% and increase efficiency by 10x.
+                </p>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-blue-100">
+                    <CheckCircle className="w-5 h-5 mr-3 text-blue-300" />
+                    <span className="text-sm">Process Mining & Discovery</span>
+                  </div>
+                  <div className="flex items-center text-blue-100">
+                    <CheckCircle className="w-5 h-5 mr-3 text-blue-300" />
+                    <span className="text-sm">Smart Automation Bots</span>
+                  </div>
+                  <div className="flex items-center text-blue-100">
+                    <CheckCircle className="w-5 h-5 mr-3 text-blue-300" />
+                    <span className="text-sm">Low-Code Workflow Builder</span>
+                  </div>
+                </div>
+                <Link 
+                  to="/services/ai-automation-platform" 
+                  className="bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-colors"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">
-                AI Workflow Automation
-              </h3>
-              <p className="text-zion-slate-light mb-4">
-                Reduce manual tasks by 80% with intelligent process automation. 
-                Starting at just $99/month.
-              </p>
-              <div className="bg-green-500/20 rounded-lg p-3 mb-4">
-                <div className="text-green-400 font-bold text-lg">💰 Save $50,000+ annually</div>
-                <div className="text-green-300 text-sm">Average ROI in 3 months</div>
-              </div>
-              <Link to="/services/ai-workflow-automation" className="btn-primary w-full text-center">
-                Start Free Trial
-              </Link>
-            </div>
 
-            <div className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl border-2 border-blue-500/30 bg-blue-500/10">
-              <div className="bg-blue-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-500/30 transition-colors border border-blue-500/30 shadow-lg">
-                <Users className="w-8 h-8 text-blue-400 group-hover:scale-110 transition-transform duration-300" />
+              <div className="bg-gradient-to-br from-gray-900 to-blue-900 rounded-2xl p-8 text-white hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="flex items-center justify-between mb-6">
+                  <Shield className="w-12 h-12 text-blue-400" />
+                  <span className="bg-red-500/20 px-3 py-1 rounded-full text-sm font-medium border border-red-500/30">SECURE</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">AI Cybersecurity Suite</h3>
+                <p className="text-gray-300 mb-6">
+                  Advanced AI-powered security that detects and prevents threats 
+                  with 99.9% accuracy and sub-minute response times.
+                </p>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                    <span className="text-sm">Real-time Threat Detection</span>
+                  </div>
+                  <div className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                    <span className="text-sm">Automated Incident Response</span>
+                  </div>
+                  <div className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                    <span className="text-sm">Zero-Trust Architecture</span>
+                  </div>
+                </div>
+                <Link 
+                  to="/services/ai-cybersecurity-suite" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-colors"
+                >
+                  Explore Security
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">
-                AI Virtual Assistant
-              </h3>
-              <p className="text-zion-slate-light mb-4">
-                24/7 intelligent customer support and business operations. 
-                Starting at just $79/month.
-              </p>
-              <div className="bg-blue-500/20 rounded-lg p-3 mb-4">
-                <div className="text-blue-400 font-bold text-lg">📈 40% increase in conversions</div>
-                <div className="text-blue-300 text-sm">90% faster response time</div>
-              </div>
-              <Link to="/services/ai-virtual-assistant" className="btn-primary w-full text-center">
-                Get Started Now
-              </Link>
-            </div>
-
-            <div className="card group hover:scale-105 transition-all duration-300 hover:shadow-2xl border-2 border-purple-500/30 bg-purple-500/10">
-              <div className="bg-purple-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-500/30 transition-colors border border-purple-500/30 shadow-lg">
-                <Target className="w-8 h-8 text-purple-400 group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">
-                AI Data Analytics
-              </h3>
-              <p className="text-zion-slate-light mb-4">
-                Transform data into actionable insights with machine learning. 
-                Starting at just $149/month.
-              </p>
-              <div className="bg-purple-500/20 rounded-lg p-3 mb-4">
-                <div className="text-purple-400 font-bold text-lg">🎯 60% better decisions</div>
-                <div className="text-purple-300 text-sm">70% risk reduction</div>
-              </div>
-              <Link to="/services/ai-data-analytics" className="btn-primary w-full text-center">
-                View Demo
-              </Link>
             </div>
           </div>
         </section>
+
+        {/* Latest Insights Section */}
+        <LatestInsights />
 
         {/* Features Section */}
         <section className="container mx-auto px-6 py-20 relative z-10">
@@ -461,20 +517,78 @@ const Home = () => {
             <h3 className="text-3xl font-bold text-white">Latest Insights</h3>
             <Link to="/insights" className="text-zion-cyan hover:underline">View all</Link>
           </div>
-          <div className="grid md:grid-cols-4 gap-6">
-            {latestInsights.slice(0, 4).map((item) => (
+            <div className="grid md:grid-cols-3 gap-6">
+              {[...latestInsights.slice(0, 2), ...featuredInsights.slice(0, 1)].map((item) => (
               <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <div className="p-6">
-                  <div className="text-xs uppercase tracking-wider text-zion-cyan mb-2">{item.category}</div>
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
+                    {('featured' in item) && (item as any).featured && (
+                      <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
+                        FEATURED
+                      </span>
+                    )}
+                  </div>
                   <h4 className="text-xl font-semibold text-white mb-2">{item.title}</h4>
                   <p className="text-zion-slate-light mb-4">{item.summary}</p>
-                  <div className="text-sm text-zion-slate flex items-center justify-between">
+                  <div className="flex items-center justify-between text-sm text-zion-slate">
                     <span>{new Date(item.date).toLocaleDateString()}</span>
                     <span>{item.readMinutes} min read</span>
                   </div>
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        {/* New Content Announcement */}
+        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
+                <Sparkles className="w-4 h-4 mr-2" />
+                Fresh: ROI Scorecards, ML SBOM, Enterprise RAG v2
+              </div>
+              <h2 className="text-4xl font-bold mb-4">
+                Latest Articles & Insights
+              </h2>
+              <p className="text-xl text-indigo-100 max-w-3xl mx-auto">
+                Stay ahead of the curve with our latest articles on AI automation, 
+                cybersecurity, and emerging technologies.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {newInsights.slice(0, 3).map((insight) => (
+                <div key={insight.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs uppercase tracking-wider text-indigo-300">{insight.category}</span>
+                    {insight.featured && (
+                      <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-medium">
+                        FEATURED
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{insight.title}</h3>
+                  <p className="text-indigo-100 mb-4 text-sm">{insight.summary}</p>
+                  <div className="flex items-center justify-between text-sm text-indigo-200">
+                    <span>{new Date(insight.date).toLocaleDateString()}</span>
+                    <span>{insight.readMinutes} min read</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Link 
+                to="/blog" 
+                className="bg-white text-indigo-600 hover:bg-indigo-50 px-8 py-4 rounded-lg font-semibold text-lg inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
+              >
+                Read All Articles
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -607,12 +721,18 @@ const Home = () => {
             <div className="mb-10 flex items-end justify-between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
-                <p className="text-gray-600">Fresh: AI Governance, Golden Paths, Cloud FinOps QA gates, and NEW AI automation guides.</p>
+                <p className="text-gray-600">Fresh: AI Platform ROI, Secure ML Supply Chain, and Enterprise RAG Blueprint.</p>
+                <p className="text-gray-600">Insights from our team to help you move faster.</p>
+                <p className="text-gray-600">Fresh: GenAI Telemetry, Edge Flags, Product Readiness, and more.</p>
+                <p className="text-gray-600">New: Platform ROI, Secure ML Supply Chain, and Enterprise RAG v2.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
             <div className="grid gap-8 md:grid-cols-3">
-              {posts.slice(0, 3).map((post) => (
+              {[...posts]
+                .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+                .slice(0, 3)
+                .map((post) => (
                 <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                   <div className="p-6">
                     <div className="text-sm text-indigo-600 font-medium mb-2">{post.category}</div>
@@ -710,8 +830,10 @@ const Home = () => {
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
                   <p className="text-white/90">
-                    Fresh articles on real-time data pipelines, north-star metrics, and safe, scalable GenAI ops.
+                    New: AI Platform ROI scorecards, securing the ML supply chain, and Enterprise RAG v2.
+                    Fresh reads: GenAI guardrails that scale, validation circuits for edge flags, and north‑star metrics that drive outcomes.
                   </p>
+                  <p className="text-white/90">New: Platform ROI scorecards, Secure ML Supply Chain, and Enterprise RAG v2.</p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
                   Read the latest
@@ -722,6 +844,36 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-purple-200 mb-1">AI Strategy</div>
+                  <div className="font-semibold text-white">AI Platform ROI Scorecards</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-blue-200 mb-1">GenAI</div>
+                  <div className="font-semibold text-white">Enterprise RAG v2</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-rose-200 mb-1">Security</div>
+                  <div className="font-semibold text-white">Secure ML Supply Chain</div>
+                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
+                  <div className="font-semibold text-white">Blue/Green for LLMs: Evals as Release Gates</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-blue-200 mb-1">GenAI</div>
+                  <div className="font-semibold text-white">Agent Observability: Traces, Tokens, Outcomes</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-rose-200 mb-1">Data Engineering</div>
+                  <div className="font-semibold text-white">Real‑Time Feature Stores That Don’t Break the Bank</div>
+                  <div className="text-sm text-purple-200 mb-1">GenAI</div>
+                  <div className="font-semibold text-white">Shipping GenAI Safely: Guardrails That Don’t Slow You Down</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-blue-200 mb-1">Architecture</div>
+                  <div className="font-semibold text-white">Validation Circuits for Edge Feature Flags</div>
+                </div>
+                <div className="bg-white/10 rounded-xl p-5">
+                  <div className="text-sm text-rose-200 mb-1">Product Analytics</div>
+                  <div className="font-semibold text-white">North‑Star Metrics: How to Measure What Matters</div>
                   <div className="text-sm text-indigo-200 mb-1">AI Strategy</div>
                   <div className="font-semibold text-white">Customer Journey Agents: Planning, Safety, QA Gates</div>
                 </div>
@@ -737,6 +889,15 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        {/* New Services Showcase */}
+        <NewServicesShowcase />
+
+        {/* Latest Articles Showcase */}
+        <LatestArticlesShowcase />
+
+        {/* Success Stories Showcase */}
+        <SuccessStoriesShowcase />
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple relative overflow-hidden">

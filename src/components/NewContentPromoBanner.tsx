@@ -1,0 +1,178 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  Sparkles, 
+  ArrowRight, 
+  X, 
+  BookOpen, 
+  TrendingUp, 
+  Zap,
+  Shield,
+  Cloud,
+  Brain,
+  Star
+} from 'lucide-react';
+
+interface NewContentPromoBannerProps {
+  variant?: 'info' | 'premium' | 'success' | 'warning';
+  className?: string;
+}
+
+const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ 
+  variant = 'premium', 
+  className = '' 
+}) => {
+  const [isDismissed, setIsDismissed] = useState(false);
+
+  const variants = {
+    info: 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-blue-400/30',
+    premium: 'bg-gradient-to-r from-purple-500 to-pink-500 text-white border-purple-400/30',
+    success: 'bg-gradient-to-r from-green-500 to-emerald-500 text-white border-green-400/30',
+    warning: 'bg-gradient-to-r from-orange-500 to-red-500 text-white border-orange-400/30'
+  };
+
+  const featuredContent = [
+    {
+      title: "AI Platform ROI Scorecards",
+      description: "Outcome metrics and adoption signals that drive decisions",
+      icon: TrendingUp,
+      link: "/blog/ai-platform-roi-scorecards-2025",
+      category: "AI Strategy"
+    },
+    {
+      title: "Secure ML Supply Chain",
+      description: "SBOMs, attestations, and policy gates that scale",
+      icon: Shield,
+      link: "/blog/secure-ml-supply-chain-attestations-2025",
+      category: "Security"
+    },
+    {
+      title: "Enterprise RAG Blueprint v2",
+      description: "Freshness, hybrid search, and evaluation at scale",
+      icon: Brain,
+      link: "/blog/enterprise-rag-blueprint-v2-2025",
+      category: "GenAI"
+    },
+    {
+      title: "Serverless Inference Cost Playbook",
+      description: "Cut 40–70% without P95 pain",
+      icon: Zap,
+      link: "/blog/serverless-inference-cost-playbook-2025",
+      category: "GenAI"
+    }
+  ];
+
+  if (isDismissed) return null;
+
+  return (
+    <div className={`${variants[variant]} ${className} relative overflow-hidden`}>
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full animate-bounce"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full animate-ping"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-6">
+        <div className="flex items-center justify-between">
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-3">
+              <Sparkles className="w-6 h-6 animate-pulse" />
+              <span className="text-lg font-bold">🚀 NEW CONTENT ALERT</span>
+              <Star className="w-5 h-5 animate-spin" />
+            </div>
+            
+            <h3 className="text-xl font-bold mb-2">
+              Just Published: Revolutionary AI & Technology Guides for 2025
+            </h3>
+            
+            <p className="text-white/90 mb-4 text-sm">
+              Discover fresh insights on platform ROI, secure ML supply chains, updated RAG blueprints,
+              and cost‑efficient serverless inference.
+            </p>
+
+            {/* Featured content grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+              {featuredContent.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={index}
+                    to={item.link}
+                    className="bg-white/10 backdrop-blur-sm rounded-lg p-3 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
+                  >
+                    <div className="flex items-center gap-2 mb-2">
+                      <Icon className="w-4 h-4 text-white/80" />
+                      <span className="text-xs font-medium text-white/80">{item.category}</span>
+                    </div>
+                    <h4 className="font-semibold text-white text-sm group-hover:text-yellow-300 transition-colors">
+                      {item.title}
+                    </h4>
+                    <p className="text-xs text-white/70 mt-1 line-clamp-2">
+                      {item.description}
+                    </p>
+                  </Link>
+                );
+              })}
+            </div>
+
+            {/* Action buttons */}
+            <div className="flex flex-wrap gap-3">
+              <Link
+                to="/blog"
+                className="bg-white text-purple-600 hover:bg-white/90 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                <BookOpen className="w-4 h-4" />
+                Read All Articles
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              
+              <Link
+                to="/case-studies"
+                className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                <TrendingUp className="w-4 h-4" />
+                View Case Studies
+              </Link>
+
+              <Link
+                to="/services"
+                className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                <Shield className="w-4 h-4" />
+                Explore Services
+              </Link>
+            </div>
+
+            {/* Stats */}
+              <div className="flex items-center gap-6 mt-4 text-sm text-white/80">
+              <div className="flex items-center gap-1">
+                <span className="font-semibold">4</span>
+                <span>New Articles</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="font-semibold">0</span>
+                <span>New Case Studies</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="font-semibold">50+</span>
+                <span>Expert Insights</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Dismiss button */}
+          <button
+            onClick={() => setIsDismissed(true)}
+            className="ml-4 p-2 hover:bg-white/10 rounded-full transition-colors"
+            aria-label="Dismiss banner"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default NewContentPromoBanner;
