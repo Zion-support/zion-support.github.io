@@ -18,6 +18,24 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 5,
   },
   {
+    id: "llm-caching-strategies-2025",
+    title: "LLM Caching Strategies: Cut Latency and Cost by 50%",
+    summary:
+      "Practical keys (semantic + template), TTL tuning, and canary invalidation to keep UX fast and bills low.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
+  {
+    id: "security-sbom-ci-cd",
+    title: "SBOM in CI/CD: Ship Faster With Fewer Supply Chain Risks",
+    summary:
+      "Automate SBOM generation, diffing, and policy gates to block risky components before deploy.",
+    category: "Security",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
     id: "edge-cache-invalidation",
     title: "Edge Cache Invalidation Strategies That Won't Wake You Up",
     summary:

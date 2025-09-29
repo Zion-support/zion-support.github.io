@@ -104,10 +104,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: AI Product Launch Checklist + MLOps in 45 Days"
-          description="New guides on taking AI pilots to production and shipping reliable models fast."
+          title="🚀 New: Cost-Optimized GenAI + Support Playbook"
+          description="Cut GenAI costs 60% and launch safe, lovable support experiences."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-product-launch-checklist-2025"
+          ctaLink="/blog/cost-optimized-genai-architectures-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
