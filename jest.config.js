@@ -1,37 +1,19 @@
-/** @type {import('jest').Config} */
 export default {
+  preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
-  testMatch: ['<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)', '<rootDir>/tests/**/*.(ts|tsx|js|jsx)'],
-  roots: ['<rootDir>/__tests__', '<rootDir>/tests'],
-  moduleNameMapper: {
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    '^@/(.*)$': '<rootDir>/src/$1',
-  },
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '/dist/',
-    '/build/',
-    '/automation/',
-    '/automation_backup/',
-    '/backup/',
-    '/backup-pages/',
-    '/backup-merge-conflicts/',
-    '/backup-problematic-files/',
-    '/corrupted-files-backup/',
-  ],
+  setupFilesAfterEnv: [],
   modulePathIgnorePatterns: [
-    '<rootDir>/automation/',
-    '<rootDir>/automation_backup/',
+    '<rootDir>/automation/backups/',
+    '<rootDir>/backup-problematic-files/',
     '<rootDir>/backup/',
     '<rootDir>/backup-pages/',
-    '<rootDir>/backup-merge-conflicts/',
-    '<rootDir>/backup-problematic-files/',
-    '<rootDir>/corrupted-files-backup/',
+    '<rootDir>/backup-merge-conflicts/'
   ],
-  transform: {
-    '^.+\\.(ts|tsx)$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.json' }],
-    '^.+\\.(js|jsx)$': 'babel-jest',
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
   },
-  collectCoverage: false,
+  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+  coverageDirectory: 'coverage',
+  collectCoverage: false
 };

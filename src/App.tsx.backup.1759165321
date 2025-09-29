@@ -13,6 +13,8 @@ import './index.css';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import SEOOptimizer from './components/SEOOptimizer';
+<<<<<<< HEAD
+=======
 // Fallback for missing AdvancedAnalytics component
 const AdvancedAnalytics: React.FC<{ enableConversionTracking?: boolean; enablePerformanceTracking?: boolean; enableErrorTracking?: boolean }> = () => null;
 // Fallback stubs for missing optional components
@@ -21,6 +23,7 @@ const PerformanceMonitor: React.FC<{ showDashboard?: boolean }> = () => null;
 const EnhancedErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
 type Notification = { id: string; message?: string };
 const NotificationSystem: React.FC<{ notifications: Notification[]; onRemove: (id: string) => void }> = () => null;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-58e1
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};

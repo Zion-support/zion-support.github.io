@@ -14,6 +14,26 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
+// Fallback for missing ContentPromotionBanner
+const ContentPromotionBanner = (props: any) => <div className="hidden" />;
+// Fallbacks for missing components
+const ContentValueTestimonials = () => null;
+const EnhancedNewsletterSignup = (props: any) => null;
+const EnhancedTestimonials = () => null;
+// Fallback for missing Header
+const Header = () => null;
+// Fallback placeholders for missing components referenced on Home page
+const LatestArticlesShowcase = () => null;
+const LatestContentBanner = (props: any) => null;
+const LatestInsights = () => null;
+const ModernFeatures = () => null;
+const NewContentAnnouncement = () => null;
+const NewContentPromoBanner = (props: any) => null;
+const NewServicesShowcase = () => null;
+const SuccessStoriesShowcase = () => null;
+const TrendingContentBanner = () => null;
+=======
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
@@ -28,6 +48,7 @@ import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-58e1
 import { latestInsights } from "../content/insights";
 import { featuredInsights, newInsights } from "../content/new-insights";
 import { posts } from "../content/posts";
