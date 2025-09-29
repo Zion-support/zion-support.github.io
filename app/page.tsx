@@ -48,6 +48,8 @@ import InteractiveContentRecommendation from '../components/InteractiveContentRe
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import LatestAIInnovations2026Banner from '../components/LatestAIInnovations2026Banner';
+import SpaceExplorationBanner2026 from '../components/SpaceExplorationBanner2026';
+import SpaceMissionAICalculator from '../components/SpaceMissionAICalculator';
 =======
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 
@@ -223,6 +225,9 @@ export default function HomePage() {
       <AIZeroTrustSecurityBanner />
       <AIFoundationModelsBanner />
       <LatestContent2026Banner />
+      
+      {/* Space Exploration 2026 Content */}
+      <SpaceExplorationBanner2026 />
       
       {/* Additional Promotional Banners */}
       <NewContentShowcase2026Banner />
@@ -703,6 +708,22 @@ export default function HomePage() {
       
       {/* Interactive Content Recommendations */}
       <InteractiveContentRecommendation />
+
+      {/* Space Mission AI Calculator */}
+      <section id="calculator" className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              🚀 Space Mission AI Calculator
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Calculate the impact of AI on your space mission parameters, costs, and success rates. 
+              See how quantum computing and autonomous systems can transform your space exploration projects.
+            </p>
+          </div>
+          <SpaceMissionAICalculator />
+        </div>
+      </section>
 
       {/* Additional Content Recommendations */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">

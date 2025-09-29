@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Zap, 
@@ -88,6 +89,8 @@ const NewContentPromoBanner = () => {
       icon: Brain,
       link: "/blog/edge-privacy-telemetry-2026",
       category: "Observability"
+    },
+    {
       title: "AI Autonomous Enterprise 2026",
       description: "Complete self-managing operations guide",
       icon: Brain,
@@ -142,7 +145,6 @@ const NewContentPromoBanner = () => {
       icon: Cloud,
       link: "/blog/ai-roadmaps-2026",
       category: "AI Strategy"
-=======
     }
   ];
 
@@ -207,40 +209,41 @@ const NewContentPromoBanner = () => {
           })}
         </div>
 
-              <Link
-                to="/services"
-                className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
-              >
-                <Shield className="w-4 h-4" />
-                Explore Services
-              </Link>
-            </div>
+        <div className="text-center mt-8">
+          <Link
+            to="/services"
+            className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+          >
+            <Shield className="w-4 h-4" />
+            Explore Services
+          </Link>
+        </div>
 
-            {/* Stats */}
-            <div className="flex items-center gap-6 mt-4 text-sm text-white/80">
-              <div className="flex items-center gap-1">
-                <span className="font-semibold">16</span>
-                <span>New Articles</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="font-semibold">3</span>
-                <span>New Case Studies</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="font-semibold">50+</span>
-                <span>Expert Insights</span>
-              </div>
-            </div>
+        {/* Stats */}
+        <div className="flex items-center justify-center gap-6 mt-8 text-sm text-white/80">
+          <div className="flex items-center gap-1">
+            <span className="font-semibold">16</span>
+            <span>New Articles</span>
           </div>
+          <div className="flex items-center gap-1">
+            <span className="font-semibold">3</span>
+            <span>New Case Studies</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <span className="font-semibold">50+</span>
+            <span>Expert Insights</span>
+          </div>
+        </div>
 
-          {/* Dismiss button */}
+        {/* Dismiss button */}
+        <div className="text-center mt-6">
           <button
             onClick={() => setIsDismissed(true)}
-            className="ml-4 p-2 hover:bg-white/10 rounded-full transition-colors"
+            className="p-2 hover:bg-white/10 rounded-full transition-colors"
             aria-label="Dismiss banner"
           >
             View All Content →
-          </a>
+          </button>
         </div>
       </div>
     </section>

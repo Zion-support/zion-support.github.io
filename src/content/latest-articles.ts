@@ -103,7 +103,14 @@ export const latestArticles: LatestArticle[] = [
     title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
     description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
     excerpt: "Stop ML supply‑chain drift with automated SBOMs, attestations, and CI policy gates.",
-=======
+    author: "Zion Tech Group Team",
+    date: "2025-10-15",
+    category: "Security",
+    tags: ["ML Security", "Supply Chain", "SBOM", "Attestations"],
+    readTime: "8 min",
+    featured: false
+  },
+  {
     id: "ai-sre-blueprints-2026",
     slug: "ai-sre-blueprints-2026",
     title: "AI SRE Blueprints 2026: Reliability Budgets, Rollbacks, and Live Traces",
@@ -141,7 +148,14 @@ export const latestArticles: LatestArticle[] = [
     title: "Edge Agent Observability 2026: Live Traces, Budgets, and Fallbacks",
     description: "Observe multi‑tool agents with user‑centric traces, budgeted actions, and deterministic fallbacks at the edge.",
     excerpt: "User‑centric traces and safety budgets for agents running at the edge.",
-=======
+    author: "Zion Tech Group Team",
+    date: "2025-10-16",
+    category: "Edge Computing",
+    tags: ["Edge Computing", "Observability", "Agents", "Traces"],
+    readTime: "7 min",
+    featured: false
+  },
+  {
     id: "edge-llm-caching-v2-2026",
     slug: "edge-llm-caching-v2-2026",
     title: "Edge LLM Caching v2: Tiered KV, TTL Windows, Sub‑100ms Prompts",
@@ -277,7 +291,14 @@ export const latestArticles: LatestArticle[] = [
     title: "Agent Evals 2026: Scorecards That Predict Outcomes",
     description: "Online evals wired to KPIs—scorecards that correlate with revenue, CSAT, and retention.",
     excerpt: "A practical playbook for evals that protect velocity and predict business outcomes.",
-=======
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "GenAI",
+    tags: ["Evals", "Scorecards", "KPIs"],
+    readTime: "6 min",
+    featured: true
+  },
+  {
     id: "privacy-first-feature-flags-2026",
     slug: "privacy-first-feature-flags-2026",
     title: "Privacy‑First Feature Flags: Geo, Account, and Scope Budgets",
