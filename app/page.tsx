@@ -54,7 +54,7 @@ export default function HomePage() {
             <span className="hidden md:inline">•</span>
             <a href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200">Enterprise Automation</a>
             <span className="hidden md:inline">•</span>
-            <a href="/case-studies/ai-enterprise-transformation-success-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</a>
+            <a href="/blog/ai-operational-excellence-2026" className="underline hover:text-yellow-200">AI Operational Excellence 2026</a>
           </div>
           <Link
             href="/blog"
