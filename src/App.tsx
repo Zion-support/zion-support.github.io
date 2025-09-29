@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useMemo, useCallback, useEffect, Suspense } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AppRouter } from './router';
 
 // import { resourcePreloader } from './utils/resourcePreloader';
@@ -10,7 +11,7 @@ import { AppRouter } from './router';
 // import { screenReaderSupport } from './accessibility/screenReaderSupport';
 import './index.css';
 import { performanceMonitor } from './utils/performanceMonitor';
-import { securityManager } from './utils/securityHeaders';
+// import { securityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 
 export default function App(): React.JSX.Element {
@@ -81,19 +82,31 @@ export default function App(): React.JSX.Element {
     twitterCard: 'summary_large_image'
   }), []);
 
-  // Initialize app with custom configuration
-  // Temporarily disable useAppInitialization to fix build
-  // const { isLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
-  //   enablePerformanceMonitoring: true,
-  //   enableAccessibility: true,
-  //   enableSecurity: true,
-  //   enableAnalytics: true,
-  //   enableNotifications: true,
-  //   enableCaching: true,
-  // });
-  
-
-
+  // Basic placeholders for now
+  const ModernLoadingSpinner = ({ progress = 0 }: { progress?: number }) => <div>Loading... {progress}%</div>;
+  const EnhancedErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
+  const SEOOptimizer: React.FC<{ seoData: any }> = () => null;
+  const AdvancedAnalytics: React.FC<any> = () => null;
+  const EnhancedSystemDashboard: React.FC<any> = () => null;
+  const PerformanceOptimizer: React.FC<any> = ({ children }) => <>{children}</>;
+  const PerformanceMonitorComponent: React.FC<any> = () => null;
+  const AIPerformanceDashboard: React.FC<any> = () => null;
+  const RealTimePerformanceMonitor: React.FC<any> = () => null;
+  const WebsiteEnhancements: React.FC<any> = () => null;
+  const PerformanceTracker: React.FC<any> = () => null;
+  const SystemHealthDashboard: React.FC<any> = () => null;
+  const NotificationSystem: React.FC<any> = () => null;
+  const KeyboardShortcutsHelp: React.FC<any> = () => null;
+  const PerformanceWidget: React.FC<any> = () => null;
+  const PerformanceDashboard: React.FC<any> = () => null;
+  const CommandPalette: React.FC<any> = () => null;
+  const AdvancedMonitoringDashboard: React.FC<any> = () => null;
+  const EnhancedCommandPalette: React.FC<any> = () => null;
+  const ComprehensivePerformanceDashboard: React.FC<any> = () => null;
+  const ComprehensiveMonitoringDashboard: React.FC<any> = () => null;
+  const PerformanceOptimizationPanel: React.FC<any> = () => null;
+  const ErrorRecoveryDashboard: React.FC<any> = () => null;
+  const SystemStatusIndicator: React.FC<any> = () => null;
   // Command palette commands
   const commandPaletteCommands = useMemo(() => [
     {
@@ -159,50 +172,10 @@ export default function App(): React.JSX.Element {
   useEffect(() => {
     try {
       
-      // Initialize accessibility and security enhancers
-      if (accessibilityEnhancer && typeof accessibilityEnhancer.initialize === 'function') {
-        accessibilityEnhancer.initialize();
+      // Initialize accessibility enhancer if available
+      if (accessibilityEnhancer && typeof (accessibilityEnhancer as any).initialize === 'function') {
+        (accessibilityEnhancer as any).initialize();
       }
-      if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
-        enhancedSecurityManager.initialize();
-      }
-      
-      // Initialize new performance and accessibility enhancements
-      initializePerformanceEnhancements();
-      accessibilityEnhancer.initialize();
-      
-      // Initialize advanced optimizers
-      advancedPerformanceOptimizer.initialize();
-      advancedSEOOptimizer.initialize();
-      accessibilityEnhancer.initialize();
-      advancedSecurityManager.initialize();
-      advancedAnalytics.initialize();
-      // advancedErrorHandler is initialized in constructor
-      advancedCachingSystem.initialize();
-      advancedUXOptimizer.initialize();
-      advancedTestingFramework.initialize();
-      advancedI18n.initialize();
-      // Store enhancements globally for debugging
-      (window as unknown as Record<string, unknown>).enhancements = {
-        performanceOptimizer: advancedPerformanceOptimizer,
-        seoOptimizer: advancedSEOOptimizer,
-        accessibilityEnhancer: accessibilityEnhancer,
-        securityManager: advancedSecurityManager,
-        analytics: advancedAnalytics,
-        errorHandler: advancedErrorHandler,
-        cachingSystem: advancedCachingSystem,
-        uxOptimizer: advancedUXOptimizer
-      };
-      (window as unknown as Record<string, unknown>).performanceOptimizer = advancedPerformanceOptimizer;
-      (window as unknown as Record<string, unknown>).seoOptimizer = advancedSEOOptimizer;
-      (window as unknown as Record<string, unknown>).accessibilityEnhancer = accessibilityEnhancer;
-      (window as unknown as Record<string, unknown>).securityManager = advancedSecurityManager;
-      (window as unknown as Record<string, unknown>).analytics = advancedAnalytics;
-      (window as unknown as Record<string, unknown>).errorHandler = advancedErrorHandler;
-      (window as unknown as Record<string, unknown>).cachingSystem = advancedCachingSystem;
-      (window as unknown as Record<string, unknown>).uxOptimizer = advancedUXOptimizer;
-      (window as unknown as Record<string, unknown>).testingFramework = advancedTestingFramework;
-      (window as unknown as Record<string, unknown>).i18n = advancedI18n;
     } catch (error) {
       console.error('Error initializing enhancements:', error);
     }
@@ -235,27 +208,8 @@ export default function App(): React.JSX.Element {
     }
     
     // Initialize SEO analytics
-    seoAnalytics.trackPageView(window.location.pathname);
-    
-    // Initialize performance SEO optimizations
-    performanceSEO.optimizeImages();
-    performanceSEO.optimizeFonts();
-    performanceSEO.optimizeCSS();
-    
-    // Initialize advanced optimization systems
-    // These are initialized automatically when imported
-    void performanceOptimizer;
-    void accessibilityEnhancer;
-    void seoOptimizer;
-
-    // Initialize new utility systems
-    performanceAlerts.checkMetric('loadTime', performance.now(), 3000);
-    accessibilityUtils.announce('Application initialized');
-    securityUtils.getSecurityScore();
-
-    // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
-  }, [seoData]);
+    // Placeholder: external systems disabled for now
+  }, []);
 
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
@@ -458,9 +412,10 @@ export default function App(): React.JSX.Element {
     };
   }, [handleScroll, handleClick, trackEngagement]);
 
-  if (isLoading) {
-    return <ModernLoadingSpinner progress={loadingProgress} />;
-  }
+  // Simplify loading for now
+  const isLoading = false;
+  const loadingProgress = 0;
+  if (isLoading) return <ModernLoadingSpinner progress={loadingProgress} />;
 
   return (
     <EnhancedErrorBoundary>
@@ -536,7 +491,7 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <PerformanceMonitor showDashboard={true} />
+              <PerformanceMonitorComponent showDashboard={true} />
             </div>
           </div>
         )}
