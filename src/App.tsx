@@ -82,10 +82,36 @@ export default function App(): React.JSX.Element {
         // Initialize analytics
         analytics.initialize();
         
+        // Initialize performance monitoring
+        // PerformanceMonitor.initialize?.(); // Method doesn't exist
+        
+        // Initialize caching
+        // cacheManager.initialize?.(); // Method doesn't exist
+        
+        // Initialize API client
+        // apiClient.initialize?.(); // Method doesn't exist
+        
+        // Initialize notifications
+        // notificationManager.initialize?.(); // Method doesn't exist
+        
+        // Initialize user feedback
+        // userFeedback.initialize?.(); // Method doesn't exist
+        
+        // Initialize enhanced systems
+        // enhancedSecurityManager.initialize?.(); // Method doesn't exist
+        // enhancedAccessibilityManager.initialize?.(); // Method doesn't exist
+        // enhancedPerformanceMonitor.initialize?.(); // Method doesn't exist
+        // enhancedSEOOptimizer.initialize?.(); // Method doesn't exist
+        
         // Initialize advanced optimizations
         advancedPerformanceOptimizer.optimize();
         accessibilityEnhancer.getMetrics();
+        // seoOptimizer.getMetrics(); // Method not available
         securityEnhancer.getMetrics();
+        
+        // Initialize performance optimizations
+        // performanceOptimizer.initialize?.(); // Method doesn't exist
+        // enhancedPerformanceOptimizer.initialize?.(); // Method doesn't exist
         console.log('App initialized successfully');
       } catch (error) {
         console.error('Failed to initialize app:', error);
@@ -138,6 +164,60 @@ export default function App(): React.JSX.Element {
               </button>
             </div>
             <EnhancedSystemDashboard />
+          </div>
+        </div>
+      )}
+
+      {/* AI Dashboard Modal */}
+      {showAIDashboard && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-bold">AI Performance Dashboard</h2>
+              <button
+                onClick={() => setShowAIDashboard(false)}
+                className="text-gray-500 hover:text-gray-700 text-2xl"
+              >
+                ✕
+              </button>
+            </div>
+            <AIPerformanceDashboard isVisible={true} onClose={() => setShowAIDashboard(false)} />
+          </div>
+        </div>
+      )}
+
+      {/* SEO Optimizer Modal */}
+      {showSEOOptimizer && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-bold">SEO Optimizer</h2>
+              <button
+                onClick={() => setShowSEOOptimizer(false)}
+                className="text-gray-500 hover:text-gray-700 text-2xl"
+              >
+                ✕
+              </button>
+            </div>
+            <SEOOptimizer seoData={seoData} />
+          </div>
+        </div>
+      )}
+
+      {/* Comprehensive Dashboard Modal */}
+      {showComprehensiveDashboard && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-bold">Comprehensive System Dashboard</h2>
+              <button
+                onClick={() => setShowComprehensiveDashboard(false)}
+                className="text-gray-500 hover:text-gray-700 text-2xl"
+              >
+                ✕
+              </button>
+            </div>
+            <ComprehensiveSystemDashboard isVisible={true} onClose={() => setShowComprehensiveDashboard(false)} />
           </div>
         </div>
       )}
