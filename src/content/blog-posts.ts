@@ -246,7 +246,7 @@ Use this concise pre‑launch checklist to ensure your AI features meet quality,
     readTime: "5 min read",
     image: "/images/ai-product-readiness.jpg"
 =======
->>>>>>> origin/cursor/create-and-deploy-new-content-b023
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-829b
   },
   {
     slug: "real-time-data-pipelines-2025",

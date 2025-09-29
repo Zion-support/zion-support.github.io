@@ -877,8 +877,6 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-b023
     id: "ai-automation-roi-calculator",
     title: "AI Automation ROI Calculator: Measure Your Business Impact",
     summary:
@@ -923,6 +921,15 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-01-21",
     readMinutes: 11,
   }
+=======
+    id: "genai-guardrails-in-production",
+    title: "GenAI Guardrails in Production: Policy Tests That Scale",
+    summary:
+      "From offline eval suites to online canaries: patterns that keep quality and safety high as usage grows.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 8,
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-829b
   },
   {
     id: "iot-security-threat-landscape-2025",
