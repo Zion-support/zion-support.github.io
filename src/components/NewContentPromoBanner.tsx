@@ -1,234 +1,113 @@
-import React from 'react';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  TrendingUp, 
-  Target,
-  Award,
-  BarChart3
-} from 'lucide-react';
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { Brain, Zap, Shield, Cloud, ArrowRight } from 'lucide-react';
 
-const NewContentPromoBanner = () => {
-  const newContent = [
+export default function NewContentPromoBanner() {
+  const [isDismissed, setIsDismissed] = useState(false);
+
+  if (isDismissed) return null;
+
+  const contentItems = [
     {
-      title: "AI Safety Budgets 2026",
-      description: "Guardrails wired to KPIs, approvals, rollbacks",
-      icon: Shield,
-      link: "/blog/ai-safety-budgets-2026",
-      category: "AI Strategy"
-    },
-    {
-      title: "Edge Privacy for ML 2026",
-      description: "On‑device filters and scoped identifiers",
-      icon: Cloud,
-      link: "/blog/edge-privacy-ml-2026",
-      category: "Edge"
-    },
-    {
-      title: "Agent Evals in Prod 2026",
-      description: "Online checks that predict outcomes",
-      icon: TrendingUp,
-      link: "/blog/agent-evals-in-prod-2026",
-      category: "GenAI"
-    },
-    {
-      title: "Cost‑Aware Inference 2026",
-      description: "Warm pools and quality tiers under SLAs",
-      icon: Zap,
-      link: "/blog/ai-cost-aware-inference-2026",
-      category: "GenAI"
-    },
-    {
-      title: "Platform Golden Paths 2026",
-      description: "Paved roads that move KPIs",
-      icon: TrendingUp,
-      link: "/blog/platform-golden-paths-kpis-2026",
-      category: "Platform"
-    },
-    {
-      title: "Golden Paths that Move KPIs",
-      description: "Platform engineering that pays",
-      icon: TrendingUp,
-      link: "/blog/platform-golden-paths-kpis-2026",
-      category: "Platform"
-    },
-    {
-      title: "Quality‑Tiered GenAI Routing 2026",
-      description: "Control cost with tiers, caches, and eval signals",
-      icon: Zap,
-      link: "/blog/genai-routing-under-budgets-2026",
-      category: "GenAI"
-    },
-    {
-      title: "On‑Device Agents 2026",
-      description: "Offline‑capable tools, private caches, safe fallbacks",
-      icon: Cloud,
-      link: "/blog/on-device-agents-offline-tools-2026",
-      category: "Edge"
-    },
-    {
-      title: "Zero‑Trust Observability 2026",
-      description: "Signed traces and least‑privilege telemetry",
-      icon: Shield,
-      link: "/blog/zero-trust-observability-2026",
-      category: "Security"
-    },
-    {
-      title: "AI Incident Response Playbooks",
-      description: "Contain incidents in under 60 seconds",
-      icon: TrendingUp,
-      link: "/blog/ai-incident-response-playbooks-2025",
-      category: "Security"
-    },
-    {
-      title: "Edge Privacy Telemetry 2026",
-      description: "Scoped IDs and on‑device redaction",
+      title: "AI Neural Interfaces 2026",
+      description: "Brain-computer integration with 95% accuracy",
       icon: Brain,
-      link: "/blog/edge-privacy-telemetry-2026",
-      category: "Observability"
-      title: "AI Autonomous Enterprise 2026",
-      description: "Complete self-managing operations guide",
-      icon: Brain,
-      link: "/blog/ai-autonomous-enterprise-transformation-2026",
-      category: "Enterprise AI"
+      link: "/blog/ai-neural-interfaces-2026",
+      category: "Neural AI"
     },
     {
-      title: "AI Quantum Hybrid Computing 2026",
-      description: "Next-generation intelligence revolution",
+      title: "AI Space Technology 2026",
+      description: "Autonomous space operations and exploration",
       icon: Zap,
-      link: "/blog/ai-quantum-hybrid-computing-2026",
-      category: "Quantum AI"
+      link: "/blog/ai-space-tech-2026",
+      category: "Space AI"
     },
     {
-      title: "AI Transformation Mega Success 2026",
-      description: "$25M ROI case study",
-      icon: Award,
-      link: "/case-studies/ai-transformation-mega-success-2026",
+      title: "$15M ROI Success Story",
+      description: "Neural interface transformation case study",
+      icon: Shield,
+      link: "/case-studies/ai-neural-interface-success-2026",
       category: "Case Study"
     },
     {
-      title: "AI Agent Observability 2026",
-      description: "End-to-end monitoring & reliability",
-      icon: BarChart3,
-      link: "/blog/ai-agent-observability-2026",
-      category: "AI Observability"
-    },
-    {
-      title: "AI Agent Safety Blueprint 2026",
-      description: "Complete safety & reliability framework",
-      icon: Shield,
-      link: "/blog/ai-agent-safety-blueprint-2026",
-      category: "AI Safety"
-    },
-    {
-      title: "AI Customer Experience 2025",
-      description: "Personalization & automation",
-      icon: TrendingUp,
-      link: "/blog/ai-customer-experience-2025",
-      category: "Customer Experience"
-    },
-    {
-      title: "AI Reliable RAG 2025",
-      description: "Production patterns for grounded answers",
-      icon: Target,
-      link: "/blog/ai-reliable-rag-2025",
-      category: "RAG Systems"
-    },
-    {
-      title: "AI Roadmaps 2026",
-      description: "What to build next and why",
+      title: "AI Quantum Computing 2026",
+      description: "Next-generation intelligence revolution",
       icon: Cloud,
-      link: "/blog/ai-roadmaps-2026",
-      category: "AI Strategy"
-=======
+      link: "/blog/ai-quantum-computing-2026",
+      category: "Quantum AI"
     }
   ];
 
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
-      "Enterprise AI": "bg-purple-100 text-purple-800",
-      "Quantum AI": "bg-indigo-100 text-indigo-800",
+      "Neural AI": "bg-purple-100 text-purple-800",
+      "Space AI": "bg-blue-100 text-blue-800",
       "Case Study": "bg-green-100 text-green-800",
-      "AI Observability": "bg-blue-100 text-blue-800",
-      "AI Safety": "bg-red-100 text-red-800",
-      "Customer Experience": "bg-pink-100 text-pink-800",
-      "RAG Systems": "bg-teal-100 text-teal-800",
-      "AI Strategy": "bg-orange-100 text-orange-800"
+      "Quantum AI": "bg-indigo-100 text-indigo-800"
     };
     return colors[category] || "bg-gray-100 text-gray-800";
   };
 
   return (
-    <section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <span className="inline-block bg-white bg-opacity-20 text-white text-sm font-semibold px-4 py-2 rounded-full mb-4">
-            ✨ New 2026 Content
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-            Discover Our Latest AI Insights
-          </h2>
-          <p className="text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
-            Explore cutting-edge AI content covering autonomous enterprises, quantum computing,
-            safety frameworks, and real-world success stories.
-          </p>
+    <section className="py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="absolute top-0 left-0 w-full h-full opacity-20">
+          <div className="w-full h-full bg-gradient-to-br from-white/5 to-transparent"></div>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {newContent.map((item, index) => {
-            const IconComponent = item.icon;
-            return (
-              <a
-                key={index}
-                href={item.link}
-                className="group bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-20 transition-all duration-300 hover:scale-105"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 bg-white bg-opacity-20 rounded-lg">
-                    <IconComponent className="w-6 h-6 text-white" />
-                  </div>
-                  <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getCategoryColor(item.category)}`}>
-                    {item.category}
-                  </span>
-                </div>
-                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-200 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-white text-opacity-80 mb-4">
-                  {item.description}
-                </p>
-                <div className="flex items-center text-white text-sm font-semibold group-hover:text-purple-200 transition-colors">
-                  Read More →
-                </div>
-              </a>
-            );
-          })}
-        </div>
-
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <div className="flex items-start justify-between mb-8">
+          <div className="flex-1">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">
+                🔥 JUST PUBLISHED 2026
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+              Revolutionary AI Content
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-400">
+                & Breakthrough Technologies
+              </span>
+            </h2>
+            <p className="text-xl text-white/90 max-w-3xl leading-relaxed mb-6">
+              Discover the latest AI innovations, neural interfaces, space technology, and real-world success stories 
+              that are reshaping the future of business and technology in 2026.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <Link
-                to="/services"
-                className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+                href="/blog"
+                className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 inline-flex items-center gap-2"
               >
-                <Shield className="w-4 h-4" />
-                Explore Services
+                <Brain className="w-5 h-5" />
+                Explore All Content
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/case-studies"
+                className="border-2 border-white text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-white hover:text-indigo-600 transition-all inline-flex items-center gap-2"
+              >
+                <Shield className="w-5 h-5" />
+                View Success Stories
               </Link>
             </div>
 
             {/* Stats */}
-            <div className="flex items-center gap-6 mt-4 text-sm text-white/80">
+            <div className="flex items-center gap-6 text-sm text-white/80">
               <div className="flex items-center gap-1">
-                <span className="font-semibold">16</span>
+                <span className="font-semibold">4</span>
                 <span>New Articles</span>
               </div>
               <div className="flex items-center gap-1">
-                <span className="font-semibold">3</span>
-                <span>New Case Studies</span>
+                <span className="font-semibold">1</span>
+                <span>New Case Study</span>
               </div>
               <div className="flex items-center gap-1">
-                <span className="font-semibold">50+</span>
-                <span>Expert Insights</span>
+                <span className="font-semibold">$15M+</span>
+                <span>Proven ROI</span>
               </div>
             </div>
           </div>
@@ -239,12 +118,44 @@ const NewContentPromoBanner = () => {
             className="ml-4 p-2 hover:bg-white/10 rounded-full transition-colors"
             aria-label="Dismiss banner"
           >
-            View All Content →
-          </a>
+            ×
+          </button>
+        </div>
+
+        {/* Featured Content Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {contentItems.map((item, index) => {
+            const IconComponent = item.icon;
+            return (
+              <Link
+                key={index}
+                href={item.link}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white">
+                    <IconComponent className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getCategoryColor(item.category)}`}>
+                      {item.category}
+                    </span>
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-white/80 text-sm mb-4 leading-relaxed">
+                  {item.description}
+                </p>
+                <div className="flex items-center text-yellow-300 text-sm font-semibold group-hover:translate-x-1 transition-transform">
+                  Read More →
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>
   );
-};
-
-export default NewContentPromoBanner;
+}
