@@ -10,58 +10,31 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "ai-platform-slos-2026",
-    title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
-    description: "Design SLOs and risk budgets for AI systems with instant rollbacks and KPI‑linked canaries.",
-    category: "AI Operations",
-    publishedAt: "2025-10-12",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "rag-evals-in-the-loop-2026",
-    title: "RAG Evals in the Loop: Prevent Regressions While Shipping Weekly",
-    description: "Layer offline suites, PR checks, and online canaries tied to product KPIs.",
+    slug: "ai-reliable-rag-ops-2026",
+    title: "Reliable RAG Ops 2026: Freshness Windows, Drift Alerts, Budgets",
+    description: "Keep RAG quality high with TTL windows, drift detectors, and KPI‑tied quality budgets.",
     category: "GenAI",
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "8 min read"
   },
   {
-    slug: "edge-feature-flags-2026",
-    title: "Edge Feature Flags 2026: <100ms Global Releases with Budgets",
-    description: "Geo/account targeting, budgets, and instant rollback using edge compute and KV.",
-    category: "Architecture",
-    publishedAt: "2025-10-12",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "ai-incident-response-playbooks-2025",
-    title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
-    description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
-    category: "Cybersecurity",
+    slug: "platform-engineering-kpis-2026",
+    title: "Platform Engineering KPIs 2026: Adoption, Golden Paths, SLOs",
+    description: "Scorecards that shift the convo from costs to shipped value—adoption, TTFX, SLOs.",
+    category: "Platform Engineering",
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "7 min read"
   },
   {
-    slug: "quantum-ai-hybrid-blueprint-2026",
-    title: "Quantum‑AI Hybrid Blueprint 2026: Practical Wins in 12 Months",
-    description: "Near‑term plays that combine QC libraries with AI orchestration for measurable ROI.",
-    category: "Quantum Computing",
-    publishedAt: "2025-10-12",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "zero-trust-for-genai-2026",
-    title: "Zero‑Trust for GenAI: Prompt Firewalls, Egress Policies, and Audit Trails",
-    description: "Contain risks with auth‑aware retrieval, policy gates, and signed outputs at scale.",
+    slug: "ai-incident-budget-playbooks-2026",
+    title: "AI Incident Budgets: Playbooks That Contain in <60s",
+    description: "Budget risky actions, approvals, and rollback triggers for safe, fast incident response.",
     category: "Security",
     publishedAt: "2025-10-12",
-    featured: true,
-    readTime: "7 min read"
+    featured: false,
+    readTime: "6 min read"
   },
   {
     slug: "platform-engineering-scorecards-2026",
@@ -410,25 +383,6 @@ export const posts: BlogPost[] = [
   }
   ,
   {
-    slug: "ai-runbooks-with-risk-budgets-2026",
-    title: "AI Runbooks with Risk Budgets: Safe Automation That Ships",
-    description: "Playbooks with budgeted actions, approvals, and rollback that teams trust.",
-    category: "AI Operations",
-    publishedAt: "2025-10-12",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "zero-trust-for-ai-agents-2026",
-    title: "Zero‑Trust for AI Agents: Sandboxes, Egress Policies, Attestations",
-    description: "Run agentic systems safely with isolation, scoped permissions, and signed tools.",
-    category: "AI Security",
-    publishedAt: "2025-10-12",
-    featured: true,
-    readTime: "8 min read"
-  }
-  ,
-  {
     slug: "agentic-workflows-blueprint-2026",
     title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",
     description: "Design reliable multi‑tool agents with deterministic tools, live traces, and risk budgets.",
@@ -537,24 +491,5 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-12",
     featured: false,
     readTime: "6 min read"
-  }
-  ,
-  {
-    slug: "ai-risk-budgets-2026",
-    title: "AI Risk Budgets 2026: Ship Faster With Guardrails",
-    description: "Budget actions, tokens, and tools so teams move quickly with safe, measurable automation.",
-    category: "AI Governance",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "privacy-preserving-agents-2026",
-    title: "Privacy‑Preserving Agents 2026: On‑Device Tools and Scoped Telemetry",
-    description: "Design assistants that protect users with local tools, encrypted caches, and DP‑backed analytics.",
-    category: "AI Security",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "8 min read"
   }
 ];
