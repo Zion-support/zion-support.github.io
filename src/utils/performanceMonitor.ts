@@ -53,12 +53,59 @@ class PerformanceMonitor {
               });
             }
           }
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-        this.observers.push(fidObserver);
-      } catch (e) {
-        console.warn('FID observation failed:', e);
+        }
+      });
+    });
+    fidObserver.observe({ entryTypes: ['first-input'] });
+    this.observers.push(fidObserver);
+
+    // CLS - Cumulative Layout Shift
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
+        if (!entry.hadRecentInput && entry.value !== undefined) {
+          clsValue += entry.value;
+        }
+      });
+      this.metrics.cls = clsValue;
+    });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
+    this.observers.push(clsObserver);
+
+    // FCP - First Contentful Paint
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.name === 'first-contentful-paint') {
+          this.metrics.fcp = entry.startTime;
+        }
+      });
+    });
+    fcpObserver.observe({ entryTypes: ['paint'] });
+    this.observers.push(fcpObserver);
+
+    // TTFB - Time to First Byte
+    const ttfbObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'navigation') {
+          this.metrics.ttfb = (entry as PerformanceNavigationTiming).responseStart - (entry as PerformanceNavigationTiming).requestStart;
+        }
+      });
+    });
+    ttfbObserver.observe({ entryTypes: ['navigation'] });
+    this.observers.push(ttfbObserver);
+  }
+
+  private observeMemoryUsage(): void {
+    if ('memory' in performance) {
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      if (memory) {
+        this.metrics.memoryUsage = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
       }
+    }
+  }
 
       // Largest Contentful Paint (LCP)
       try {

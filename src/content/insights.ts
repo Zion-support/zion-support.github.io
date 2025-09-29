@@ -9,6 +9,33 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "genai-policy-tests-canaries",
+    title: "GenAI Policy Tests: From Offline Suites to Online Canaries",
+    summary:
+      "How to combine offline evals with live canaries to catch regressions before customers do.",
+    category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-flags-validation",
+    title: "Edge Flags: Validation Circuits That Prevent Bad Rolls",
+    summary:
+      "Design health checks, signed payloads, and roll-forward playbooks to keep flags safe.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "north-star-metrics-pitfalls",
+    title: "North‑Star Metrics Pitfalls: Fixing Vanity and Ambiguity",
+    summary:
+      "Replace vanity KPIs with leading indicators and consistent instrumentation.",
+    category: "Product Analytics",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
     id: "ai-governance-rubric",
     title: "A Lightweight Rubric for AI Governance Decisions",
     summary:
@@ -90,6 +117,7 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 8,
   },
   {
+<<<<<<< HEAD
     id: "ai-workflow-automation-2025-trends",
     title: "AI Workflow Automation: 2025 Trends That Will Transform Business",
     summary:
@@ -223,6 +251,51 @@ export const latestInsights: InsightArticle[] = [
     category: "GenAI",
     date: "2025-09-29",
     readMinutes: 8,
+=======
+    id: "ai-automation-roi-calculator",
+    title: "AI Automation ROI Calculator: Measure Your Business Impact",
+    summary:
+      "A practical framework for calculating the return on investment from AI automation initiatives, with real-world case studies and templates.",
+    category: "AI Strategy",
+    date: "2025-01-21",
+    readMinutes: 8,
+  },
+  {
+    id: "cloud-native-microservices-2025",
+    title: "Cloud-Native Microservices: Patterns for 2025",
+    summary:
+      "Essential patterns and practices for building scalable, resilient microservices architectures in modern cloud environments.",
+    category: "Architecture",
+    date: "2025-01-21",
+    readMinutes: 10,
+  },
+  {
+    id: "enterprise-ai-governance-framework",
+    title: "Enterprise AI Governance Framework: From Strategy to Implementation",
+    summary:
+      "Comprehensive governance framework for enterprise AI adoption, covering policy, risk management, and operational excellence.",
+    category: "AI Governance",
+    date: "2025-01-21",
+    readMinutes: 12,
+  },
+  {
+    id: "saas-platform-scaling-strategies",
+    title: "SAAS Platform Scaling Strategies: From Startup to Enterprise",
+    summary:
+      "Proven strategies for scaling SAAS platforms from early-stage to enterprise, covering technical and business considerations.",
+    category: "Platform Engineering",
+    date: "2025-01-21",
+    readMinutes: 9,
+  },
+  {
+    id: "ai-security-best-practices",
+    title: "AI Security Best Practices: Protecting Your AI Systems",
+    summary:
+      "Essential security practices for AI systems, covering model protection, data privacy, and adversarial defense strategies.",
+    category: "Security",
+    date: "2025-01-21",
+    readMinutes: 11,
+>>>>>>> cursor/create-and-deploy-new-content-0173
   },
 ];
 
