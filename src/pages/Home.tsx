@@ -130,18 +130,17 @@ const Home = () => {
           autoRotate
           rotationInterval={7000}
         />
-        <NewContentPromoBanner 
+          <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Reliable RAG Ops, Platform KPIs, AI Incident Budgets"
-          description="Keep RAG fresh, prove platform ROI, and contain incidents under 60s—safely."
+          title="New: Serverless Inference, Governance Scorecards, Privacy‑Preserving Analytics"
+          description="Cut inference costs 40–70%, speed delivery with PR checks, and ship PII‑safe telemetry."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Reliable RAG Ops 2026", category: "GenAI", link: "/blog/reliable-rag-ops-2026" },
-            { title: "Platform KPIs 2026", category: "Platform Engineering", link: "/blog/platform-kpis-2026" },
-            { title: "AI Incident Budgets 2026", category: "Security", link: "/blog/ai-incident-budgets-2026" },
-            { title: "Privacy‑Preserving Analytics", category: "Observability", link: "/blog/privacy-preserving-analytics-2025" },
+            { title: "Serverless Inference Cost Playbook 2026", category: "AI Operations", link: "/blog/serverless-inference-cost-playbook-2026" },
+            { title: "Governance Scorecards Quickstart 2026", category: "AI Strategy", link: "/blog/governance-scorecards-quickstart-2026" },
+            { title: "Privacy‑Preserving Analytics 2026", category: "Observability", link: "/blog/privacy-preserving-analytics-2026" },
             { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" }
           ]}
         />

@@ -383,6 +383,34 @@ export const posts: BlogPost[] = [
   }
   ,
   {
+    slug: "serverless-inference-cost-playbook-2026",
+    title: "Serverless Inference Cost Playbook 2026: 40–70% Savings",
+    description: "Adaptive batching, warm pools, and quality tiers that cut spend without hurting P95.",
+    category: "AI Operations",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "governance-scorecards-quickstart-2026",
+    title: "Governance Scorecards Quickstart 2026: PR Checks That Speed Teams Up",
+    description: "Wire policy tests to KPIs, add canaries, and keep delivery fast and compliant.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-preserving-analytics-2026",
+    title: "Privacy‑Preserving Analytics 2026: Signal‑Rich, PII‑Safe Telemetry",
+    description: "Scoped IDs, field‑level filters, and retention tiers that unlock insights safely.",
+    category: "Observability",
+    publishedAt: "2025-10-13",
+    featured: false,
+    readTime: "6 min read"
+  }
+  ,
+  {
     slug: "agentic-workflows-blueprint-2026",
     title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",
     description: "Design reliable multi‑tool agents with deterministic tools, live traces, and risk budgets.",
