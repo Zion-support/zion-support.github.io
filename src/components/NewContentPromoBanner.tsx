@@ -33,32 +33,32 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
-      title: "Policy Tests in CI",
-      description: "Lightweight checks that prevent regressions and speed delivery",
-      icon: TrendingUp,
-      link: "/blog/policy-tests-in-ci-2025",
-      category: "Engineering"
+      title: "On‑Device Agents 2026",
+      description: "Private assistants with offline tools and local caches",
+      icon: Brain,
+      link: "/blog/on-device-agents-2026",
+      category: "Edge"
     },
     {
-      title: "Secure ML Supply Chain",
-      description: "SBOMs, attestations, and policy gates that scale",
+      title: "GenAI Budgets & Quality Tiers",
+      description: "Cut spend 30–60% without hurting UX",
+      icon: Zap,
+      link: "/blog/genai-budgets-and-quality-tiers-2026",
+      category: "AI Ops"
+    },
+    {
+      title: "Secure Tools Marketplace",
+      description: "Vetting, sandboxes, and signed attestations",
       icon: Shield,
-      link: "/blog/secure-ml-supply-chain-attestations-2025",
+      link: "/blog/secure-tools-marketplace-2026",
       category: "Security"
     },
     {
-      title: "Enterprise RAG Blueprint v2",
-      description: "Freshness, hybrid search, and evaluation at scale",
-      icon: Brain,
-      link: "/blog/enterprise-rag-blueprint-v2-2025",
-      category: "GenAI"
-    },
-    {
-      title: "Risk Budgets for Edge Rollouts",
-      description: "Zero‑regret deploys with budgets and instant rollback",
-      icon: Zap,
-      link: "/blog/risk-budgets-edge-rollouts-2025",
-      category: "Architecture"
+      title: "Privacy‑First Observability",
+      description: "User‑centric traces without PII leaks",
+      icon: TrendingUp,
+      link: "/blog/privacy-first-observability-2026",
+      category: "Observability"
     }
   ];
 
@@ -83,12 +83,12 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
             </div>
             
             <h3 className="text-xl font-bold mb-2">
-              Just Published: Revolutionary AI & Technology Guides for 2025
+              Just Published: New Guides for 2026
             </h3>
             
             <p className="text-white/90 mb-4 text-sm">
-              Discover fresh insights on platform ROI, secure ML supply chains, updated RAG blueprints,
-              and cost‑efficient serverless inference.
+              Discover fresh insights on on‑device agents, GenAI cost controls, secure tool marketplaces,
+              and privacy‑first observability.
             </p>
 
             {/* Featured content grid */}

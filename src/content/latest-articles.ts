@@ -737,6 +737,54 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/privacy-first-observability.jpg",
     newBadge: true,
     trending: true
+  },
+  {
+    id: "on-device-agents-2026",
+    slug: "on-device-agents-2026",
+    title: "On‑Device Agents 2026: Private Tools That Work Offline",
+    description: "Ship fast, privacy‑first assistants with on‑device tools, local caches, and fallback routes.",
+    excerpt: "Design assistants that keep working with limited connectivity and strict privacy.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-11",
+    category: "Edge Computing",
+    tags: ["Agents", "Edge", "Privacy"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/on-device-agents-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-budgets-and-quality-tiers-2026",
+    slug: "genai-budgets-and-quality-tiers-2026",
+    title: "GenAI Budgets and Quality Tiers: Control Cost Without Hurting UX",
+    description: "Tier models, cache prompts, and budget traffic by SLA to cut spend 30–60%.",
+    excerpt: "Practical controls to keep GenAI bills predictable while preserving experience.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-11",
+    category: "AI Operations",
+    tags: ["FinOps", "Quality Tiers", "Budgets"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/genai-budgets-quality-tiers.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "secure-tools-marketplace-2026",
+    slug: "secure-tools-marketplace-2026",
+    title: "Secure Tools Marketplace: Vetting, Sandboxes, and Attestations",
+    description: "Bring third‑party tools safely with policy checks, sandboxes, and signed attestations.",
+    excerpt: "A safe path to ecosystem extensibility without compromising security or velocity.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-11",
+    category: "Security",
+    tags: ["Security", "Supply Chain", "Sandboxing"],
+    featured: false,
+    readTime: "8 min read",
+    image: "/images/secure-tools-marketplace.jpg",
+    newBadge: true,
+    trending: false
   }
 ];
 

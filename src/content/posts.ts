@@ -300,5 +300,33 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "7 min read"
   }
+  ,
+  {
+    slug: "on-device-agents-2026",
+    title: "On‑Device Agents 2026: Private Tools That Work Offline",
+    description: "Ship fast, privacy‑first assistants with on‑device tools, local caches, and fallback routes.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-11",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-budgets-and-quality-tiers-2026",
+    title: "GenAI Budgets and Quality Tiers: Control Cost Without Hurting UX",
+    description: "Tier models, cache prompts, and budget traffic by SLA to cut spend 30–60%.",
+    category: "AI Operations",
+    publishedAt: "2025-10-11",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "secure-tools-marketplace-2026",
+    title: "Secure Tools Marketplace: Vetting, Sandboxes, and Attestations",
+    description: "Bring third‑party tools safely with policy checks, sandboxes, and signed attestations.",
+    category: "Security",
+    publishedAt: "2025-10-11",
+    featured: false,
+    readTime: "8 min read"
+  }
 ];
 

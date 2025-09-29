@@ -115,15 +115,6 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="Fresh: Agentic Workflows, Privacy‑First Observability, Edge LLM Caching"
-          description="New: agentic tools + traces, privacy‑first user‑centric observability, and sub‑100ms edge LLM caching."
-          ctaText="Explore new content"
-          ctaLink="/blog"
-          featuredItems={[
-            { title: "Agentic Workflows Blueprint 2026", category: "GenAI", link: "/blog/agentic-workflows-blueprint-2026" },
-            { title: "Edge LLM Caching", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2025" },
-            { title: "Privacy‑First Observability", category: "Observability", link: "/blog/privacy-first-observability-2026" },
-          ]}
         />
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
@@ -295,7 +286,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
             <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Agentic Workflows, Privacy‑First Observability, and Edge LLM Caching — read now
+            New: On‑Device Agents, GenAI Budgets, Secure Tools Marketplace — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>

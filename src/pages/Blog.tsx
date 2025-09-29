@@ -14,6 +14,7 @@ import {
 import React, { useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
+import { posts as contentPosts } from "../content/posts";
 const Header = () => <header />;
 const Footer = () => <footer />;
 
