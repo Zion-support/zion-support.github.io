@@ -84,11 +84,6 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
   }, [isVisible]);
 
   const handlePreferenceChange = useCallback((key: string, value: unknown) => {
-<<<<<<< HEAD
-    setUserPreferences((prev) => ({
-=======
-    setUserPreferences(prev => ({
->>>>>>> 560fc59d9c785b60bacd032c96f8fbb6b417bd56
       ...prev,
       [key]: value,
     }));

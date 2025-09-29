@@ -37,15 +37,6 @@ interface ErrorReport {
   resolutionSuggestions?: string[];
   [key: string]: unknown;
 }
-<<<<<<< HEAD
-const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({
-  isVisible,
-  onClose,
-}) => {
-=======
-
-const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
->>>>>>> 560fc59d9c785b60bacd032c96f8fbb6b417bd56
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [insights, setInsights] = useState<{
     predictedHighRiskActions: string[];
@@ -54,44 +45,6 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
   } | null>(null);
   const [errorReports, setErrorReports] = useState<ErrorReport[]>([]);
 
-<<<<<<< HEAD
-  const loadPerformanceData = useCallback(async () => {
-    setIsLoading(true);
-    try {
-      // Simulate AI-powered performance analysis
-      const mockMetrics: PerformanceMetrics = {
-        errorRate: Math.random() * 5,
-        criticalErrorsToday: Math.floor(Math.random() * 10),
-        userImpactScore: Math.random() * 100,
-        avgResolutionTime: Math.random() * 120,
-=======
-  useEffect(() => {
-    if (isVisible) {
-      const updateData = () => {
-        try {
-          // TODO: Implement dashboard data fetching
-          console.log('Dashboard data update triggered');
-          // For now, set some mock data
-          setMetrics({
-            errorRate: 0.5,
-            criticalErrorsToday: 0,
-            userImpactScore: 95,
-            avgResolutionTime: 15
-          });
-          setInsights({
-            predictedHighRiskActions: [],
-            recommendedImprovements: ['Monitor performance metrics regularly', 'Implement error tracking'],
-            errorTrends: [
-              { category: 'API', trend: 'stable' },
-              { category: 'UI', trend: 'decreasing' },
-              { category: 'Database', trend: 'stable' }
-            ]
-          });
-          setErrorReports([]);
-        } catch (error) {
-          console.error('Failed to fetch dashboard data:', error);
-        }
->>>>>>> 560fc59d9c785b60bacd032c96f8fbb6b417bd56
       };
 
       const mockInsights: AIInsights = {
@@ -222,16 +175,6 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
         </div>
 
         <div className="p-6">
-<<<<<<< HEAD
-          {isLoading ? (
-            <div className="flex items-center justify-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
-            </div>
-          ) : (
-            <div className="space-y-6">
-=======
-          <div className="space-y-6">
->>>>>>> 560fc59d9c785b60bacd032c96f8fbb6b417bd56
               {/* Performance Metrics */}
               {metrics && (
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -406,23 +349,6 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                     </div>
                   )}
                 </div>
-<<<<<<< HEAD
-              </div>
-            </div>
-          )}
-=======
-              )}
-
-              {/* No data state */}
-              {!metrics && !insights && errorReports.length === 0 && (
-                <div className="text-center py-12">
-                  <div className="text-gray-400 text-6xl mb-4">📊</div>
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">No Data Available</h3>
-                  <p className="text-gray-500">Performance data will appear here once available.</p>
-                </div>
-              )}
-          </div>
->>>>>>> 560fc59d9c785b60bacd032c96f8fbb6b417bd56
         </div>
       </div>
     </div>
