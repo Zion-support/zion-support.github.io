@@ -117,10 +117,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: AI Platform ROI + Edge AI Latency Budgets"
-          description="New: ROI scorecards, secure ML supply chain, Enterprise RAG v2, and more."
+          title="🚀 Fresh: Serverless Inference Cost Playbook + Production RAG"
+          description="New: Cut inference spend 40–70% and ship RAG architectures that really work."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-platform-roi-2025"
+          ctaLink="/blog/serverless-ai-inference-cost-playbook-2025"
           dismissible={true}
         />
         {/* Animated background elements */}

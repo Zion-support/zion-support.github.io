@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "serverless-ai-inference-cost-playbook-2025",
+    slug: "serverless-ai-inference-cost-playbook-2025",
+    title: "Serverless AI Inference: The Cost Optimization Playbook",
+    description: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",
+    excerpt: "Practical strategies to tame inference costs while maintaining latency and accuracy.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-04",
+    category: "AI Strategy",
+    tags: ["Serverless", "Inference", "Cost", "Latency"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/articles/serverless-inference.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "production-rag-architectures-that-work-2025",
+    slug: "production-rag-architectures-that-work-2025",
+    title: "RAG Architectures That Actually Work in Production",
+    description: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.",
+    excerpt: "A field guide to RAG systems that hit quality and freshness SLAs.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-04",
+    category: "GenAI",
+    tags: ["RAG", "Vector Search", "Evals", "Freshness"],
+    featured: true,
+    readTime: "12 min read",
+    image: "/images/articles/rag-production.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-platform-engineering-2025",
     slug: "ai-platform-engineering-2025",
     title: "AI Platform Engineering 2025: The Complete Guide to Building Scalable AI Infrastructure",
