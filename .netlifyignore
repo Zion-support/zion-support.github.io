@@ -1,0 +1,35 @@
+# Ignore Next.js directories to prevent auto-detection
+app/
+pages/
+middleware.ts
+next-env.d.ts
+
+# Ignore development files
+node_modules/
+.git/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore test files
+cypress/
+__tests__/
+*.test.*
+*.spec.*
+
+# Ignore build artifacts
+.next/
+.vercel/
+# dist/ - Don't ignore dist/ as it contains our build output
+build/
+
+# Ignore logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
