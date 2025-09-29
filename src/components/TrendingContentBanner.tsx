@@ -29,6 +29,16 @@ const TrendingContentBanner: React.FC = () => {
     },
     {
       title: "Zero‑Trust for GenAI 2026",
+      description: "Prompt firewalls, egress, signed outputs for safe GenAI.",
+      views: "11.8K",
+      readTime: "8 min",
+      category: "Security",
+      icon: Shield,
+      link: "/blog/zero-trust-for-genai-2026",
+      badge: "NEW"
+    },
+    {
+      title: "Zero‑Trust for GenAI 2026",
       description: "Prompt firewalls, egress controls, and signed outputs at scale.",
       views: "10.9K",
       readTime: "7 min",

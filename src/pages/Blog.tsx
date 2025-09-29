@@ -259,17 +259,19 @@ export default function Blog(): React.JSX.Element {
 
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         {/* New Content Promo Banner */
-        /* Updated to promote new Incident Response Playbooks article */}
+        /* Updated to promote latest 2026 content */}
         <div className="border-b border-white/10">
           <div className="max-w-7xl mx-auto px-6">
-              <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center justify-between">
+              <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-fuchsia-600 to-purple-600 p-4 text-white flex items-center justify-between">
               <div className="mr-4">
-                <div className="text-sm font-semibold">🚀 Fresh: AI Incident Response Playbooks 2025</div>
-                <div className="text-xs text-white/90">Contain incidents under 60s with budgeted, rollback‑ready automations.</div>
+                <div className="text-sm font-semibold">🚀 Fresh: AI Breach Drills • Blue‑Green Agent Releases • Privacy‑First Insights</div>
+                <div className="text-xs text-white/90">Rehearse safe autonomy, roll out agents with canaries, and ship signal‑rich analytics without PII.</div>
               </div>
-              <a href="/blog/ai-incident-response-playbooks-2025" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">
-                Read the latest
-              </a>
+              <div className="flex flex-wrap gap-2">
+                <a href="/blog/ai-breach-drills-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">Breach Drills</a>
+                <a href="/blog/agent-blue-green-releases-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">Agent Releases</a>
+                <a href="/blog/privacy-first-insights-telemetry-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">Privacy‑First Insights</a>
+              </div>
             </div>
           </div>
         </div>

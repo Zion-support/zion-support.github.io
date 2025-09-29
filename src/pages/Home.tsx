@@ -15,6 +15,9 @@ import {
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
+import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
+import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
+import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
@@ -133,6 +136,7 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
+<<<<<<< HEAD
           title="New: Secure ML Supply Chain, GenAI Routing Under Budgets, Golden Paths"
           description="Fresh blueprints: SBOMs & lineage for ML, budgeted GenAI routing, and platform golden paths that move KPIs."
           ctaText="Explore new content"
@@ -142,6 +146,16 @@ const Home = () => {
             { title: "GenAI Routing Under Budgets 2026", category: "AI Operations", link: "/blog/genai-routing-under-budgets-2026" },
             { title: "Golden Paths That Move KPIs 2026", category: "Platform Engineering", link: "/blog/platform-golden-paths-kpis-2026" },
             { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" }
+=======
+          title="New: Agent Blue‑Green Releases, Edge LLM Caching, Platform SLO Guardrails"
+          description="Ship agents safely with instant rollback, keep prompts fast at the edge, and prevent regressions with SLO scorecards."
+          ctaText="Explore new content"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "Agent Blue‑Green Releases 2026", category: "GenAI", link: "/blog/agent-blue-green-releases-2026" },
+            { title: "Edge LLM Safety Caching 2026", category: "Architecture", link: "/blog/edge-llm-safety-caching-2026" },
+            { title: "Platform SLO Guardrails 2026", category: "Platform Engineering", link: "/blog/platform-slo-guardrails-2026" }
+>>>>>>> cursor/create-and-deploy-new-content-d0aa
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -152,10 +166,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: Incident Playbooks + Privacy‑Preserving Analytics"
-          description="Budgeted actions, approvals, and DP‑backed telemetry you can ship today."
+          title="🚀 Fresh: Autonomous Runbooks + Privacy‑First Flags"
+          description="Budgeted actions, approvals, and zero‑regret rollouts you can ship today."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-incident-response-playbooks-2025"
+          ctaLink="/blog/ai-autonomous-incident-runbooks-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -226,14 +240,14 @@ const Home = () => {
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-8 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
-                <span className="text-lg font-bold text-purple-400">📚 FRESH CONTENT ALERT</span>
+                <span className="text-lg font-bold text-purple-400">🚀 BREAKTHROUGH 2026 CONTENT</span>
                 <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
               </div>
               <p className="text-white text-lg font-semibold mb-2">
-                🎯 Just Published: 6 Revolutionary Articles on AI Autonomous Infrastructure, Quantum-AI Hybrid Computing, Zero Trust Security & More
+                🎯 Just Released: 12 Revolutionary Articles + 6 New AI Services + 6 Success Stories on AI Platform Architecture, Multi-Modal AI, Edge Computing & More
               </p>
               <p className="text-zion-slate-light text-sm mb-4">
-                Discover breakthrough insights on self-healing systems, quantum computing applications, AI-powered cybersecurity, content automation, and customer experience transformation.
+                Discover breakthrough insights on AI platform architecture, multi-modal AI applications, edge AI deployment, AI ethics frameworks, performance monitoring, and real-world success stories from Fortune 500 companies.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
@@ -243,6 +257,12 @@ const Home = () => {
                   Read Latest Articles
                 </Link>
                 <Link
+                  to="/services"
+                  className="bg-indigo-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-600 transition-colors text-center"
+                >
+                  Explore New Services
+                </Link>
+                <Link
                   to="/case-studies"
                   className="border border-purple-400 text-purple-400 px-6 py-2 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-colors text-center"
                 >
@@ -250,11 +270,12 @@ const Home = () => {
                 </Link>
               </div>
               <div className="mt-4 flex flex-wrap gap-2 justify-center">
-                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">AI Infrastructure</span>
-                <span className="bg-rose-100/20 text-rose-200 px-3 py-1 rounded-full text-xs font-medium border border-rose-300/20">Quantum Computing</span>
-                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Zero Trust Security</span>
-                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">Content AI</span>
-                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">Customer Experience</span>
+                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">AI Architecture</span>
+                <span className="bg-rose-100/20 text-rose-200 px-3 py-1 rounded-full text-xs font-medium border border-rose-300/20">Multi-Modal AI</span>
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Edge Computing</span>
+                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">AI Ethics</span>
+                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">Performance Monitoring</span>
+                <span className="bg-orange-100/20 text-orange-200 px-3 py-1 rounded-full text-xs font-medium border border-orange-300/20">Success Stories</span>
               </div>
             </div>
           </div>
@@ -671,27 +692,29 @@ const Home = () => {
             <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-400/30 rounded-xl p-6 mb-10">
               <div className="flex items-center gap-3 mb-3">
                 <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
-                <span className="text-lg font-bold text-purple-700">📚 NEW CONTENT ALERT</span>
+                <span className="text-lg font-bold text-purple-700">🚀 BREAKTHROUGH 2026 CONTENT</span>
                 <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
               </div>
             <p className="text-gray-700 font-semibold mb-2">
-                🚀 Just Published: Risk Playbook, Privacy‑Preserving Agents, KPI Policy Tests, and Serverless Inference Cost Playbook
+                🎯 Just Released: 12 Revolutionary Articles on AI Platform Architecture, Multi-Modal AI, Edge Computing, AI Ethics & Performance Monitoring
               </p>
               <p className="text-gray-600 text-sm mb-4">
-                Discover how to ship fast with guardrails, design privacy‑first agents, wire governance to KPIs, and cut inference costs 40–70%.
+                Master next-generation AI with comprehensive guides on scalable architecture, multi-modal applications, edge deployment, ethical frameworks, and real-time monitoring systems.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">AI Governance</span>
-                <span className="bg-rose-100 text-rose-700 px-3 py-1 rounded-full text-xs font-medium">AI Security</span>
-                <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-medium">Engineering</span>
-                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">AI Solutions</span>
+                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">AI Architecture</span>
+                <span className="bg-rose-100 text-rose-700 px-3 py-1 rounded-full text-xs font-medium">Multi-Modal AI</span>
+                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Edge Computing</span>
+                <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-medium">AI Ethics</span>
+                <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">Performance</span>
+                <span className="bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-xs font-medium">Monitoring</span>
               </div>
             </div>
             
             <div className="mb-10 flex items-end justify-between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
-                <p className="text-gray-600">New: Platform ROI, Secure ML Supply Chain, and Enterprise RAG v2.</p>
+                <p className="text-gray-600">New: AI Platform Architecture, Multi-Modal AI, Edge Computing, AI Ethics Framework, and Performance Monitoring.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
@@ -728,9 +751,13 @@ const Home = () => {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="text-center mb-12">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-4">
+                <Sparkles className="w-4 h-4 mr-2" />
+                New Success Stories Available
+              </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                See how companies like yours are transforming their operations with our AI solutions.
+                See how Fortune 500 companies are transforming their operations with our breakthrough AI solutions. New: Enterprise AI Platform Modernization, Multi-Modal AI, Edge AI Deployment & More.
               </p>
             </div>
             
@@ -796,7 +823,7 @@ const Home = () => {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
-              <p className="text-white/90">New: Platform Engineering Scorecards 2026, AI Cybersecurity Automation, and Edge AI Blueprint 2026.</p>
+                  <p className="text-white/90">New: Autonomous Incident Runbooks, Privacy‑First Feature Flags, Platform ROI Scorecards Quickstart.</p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
                   Read the latest
@@ -807,16 +834,16 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">Platform Engineering</div>
-                  <div className="font-semibold text-white">Platform Scorecards 2026</div>
+                  <div className="text-sm text-purple-200 mb-1">AI Operations</div>
+                  <div className="font-semibold text-white">Autonomous Incident Runbooks</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Security</div>
-                  <div className="font-semibold text-white">AI Cybersecurity Automation</div>
+                  <div className="text-sm text-rose-200 mb-1">Architecture</div>
+                  <div className="font-semibold text-white">Privacy‑First Feature Flags</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Edge Computing</div>
-                  <div className="font-semibold text-white">Edge AI Blueprint 2026</div>
+                  <div className="text-sm text-blue-200 mb-1">AI Strategy</div>
+                  <div className="font-semibold text-white">Platform ROI Scorecards</div>
                 </div>
               </div>
             </div>
