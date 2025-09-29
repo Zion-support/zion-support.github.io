@@ -14,26 +14,15 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import ContentPromotionBanner from "../components/ContentPromotionBanner";
-import ContentValueTestimonials from "../components/ContentValueTestimonials";
-import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
-import EnhancedTestimonials from "../components/EnhancedTestimonials";
-import Header from "../components/Header";
-<<<<<<< HEAD
+// Header component missing; using inline placeholder
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
-import LatestInsights from "../components/LatestInsights";
-import ModernFeatures from "../components/ModernFeatures";
+// LatestInsights component missing; omitting section
+// ModernFeatures component missing; omitting section
 import NewContentAnnouncement from "../components/NewContentAnnouncement";
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
-=======
-import LatestContentBanner from "../components/LatestContentBanner";
-import LatestInsights from "../components/LatestInsights";
-import ModernFeatures from "../components/ModernFeatures";
-import NewContentPromoBanner from "../components/NewContentPromoBanner";
->>>>>>> content/oct-2025-updates
 import TrendingContentBanner from "../components/TrendingContentBanner";
 import { latestInsights } from "../content/insights";
 import { featuredInsights, newInsights } from "../content/new-insights";
@@ -114,41 +103,38 @@ const Home = () => {
         </script>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
-        <Header />
+        {/* Header placeholder */}
         <NewContentAnnouncement />
         <LatestContentBanner className="border-b border-white/10" variant="info" />
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="Fresh: Guardrails That Ship, Edge Flags Blueprint, RAG Freshness"
-          description="New: outcome‑linked guardrails, zero‑regret edge rollouts, and freshness‑aware RAG."
+          title="Fresh: Autonomous Ops, Zero‑Trust AI, Edge AI"
+          description="New: self‑healing infra, verifiable AI security, sub‑100ms private edge ML."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Guardrails Engineers Adopt", category: "AI Strategy", link: "/blog/guardrails-scorecards-evals-2025" },
-            { title: "Edge Flags Blueprint", category: "Architecture", link: "/blog/edge-flags-blueprint-2025" },
-            { title: "RAG Freshness", category: "GenAI", link: "/blog/rag-freshness-ttl-2025" },
+            { title: "Autonomous Ops Blueprint", category: "AI Operations", link: "/blog/autonomous-ops-blueprint-2025" },
+            { title: "Zero‑Trust for AI Systems", category: "Security", link: "/blog/zero-trust-ai-security-2025" },
+            { title: "Edge AI Blueprint", category: "Edge Computing", link: "/blog/edge-ai-blueprint-2025" },
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
         </div>
-        {/* Content Promotion Banner */}
-        <ContentPromotionBanner
-          variant="info"
-<<<<<<< HEAD
-          title="📚 New Series: Ship Faster with Guardrails"
-          description="AI roadmaps, ML SBOM automation, and online eval canaries now live."
-          ctaText="See what's new"
-          ctaLink="/blog"
-=======
-          title="🚀 Fresh: GenAI Platform Blueprint + Hybrid Vector Search"
-          description="Ship weekly with guardrails. Cut retrieval cost 40%+ with hybrid and freshness."
-          ctaText="Read the latest"
-          ctaLink="/blog/genai-platform-blueprint-2025"
->>>>>>> content/oct-2025-updates
-          dismissible={true}
-        />
+        {/* Content Promotion Banner (fallback) */}
+        <div className="container mx-auto px-6">
+          <div className="mt-4 rounded-xl border border-white/10 bg-white/5 text-white p-4">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+              <div>
+                <div className="text-sm opacity-80">📚 New Series</div>
+                <div className="font-semibold">Autonomous Ops, Zero‑Trust AI, Edge AI</div>
+                <div className="text-sm opacity-80">Fresh blueprints: self‑healing infra, verifiable AI security, and private edge ML.</div>
+              </div>
+              <Link to="/blog" className="text-zion-cyan underline underline-offset-4">See what's new</Link>
+            </div>
+          </div>
+        </div>
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -301,11 +287,11 @@ const Home = () => {
         <div className="container mx-auto px-6">
             <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Guardrails That Ship, Edge Flags Blueprint, and RAG Freshness — read now
-            <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
+            New: Autonomous Ops, Zero‑Trust AI, and Edge AI — read now
+            <Link to="/blog" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
-        <LatestInsights />
+        {/* LatestInsights placeholder removed */}
 
         {/* New Services Showcase */}
         <section className="py-20 bg-white relative overflow-hidden">
@@ -396,7 +382,7 @@ const Home = () => {
         </section>
 
         {/* Latest Insights Section */}
-        <LatestInsights />
+        {/* LatestInsights placeholder removed */}
 
         {/* Features Section */}
         <section className="container mx-auto px-6 py-20 relative z-10">
@@ -531,11 +517,7 @@ const Home = () => {
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
-<<<<<<< HEAD
                     {('featured' in item) && (item as any).featured && (
-=======
-                    {"featured" in item && (item as any).featured && (
->>>>>>> content/oct-2025-updates
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>
@@ -691,20 +673,16 @@ const Home = () => {
         </section>
 
         {/* Modern Features Section */}
-        <ModernFeatures />
+        {/* ModernFeatures placeholder removed */}
 
         {/* Content Value Testimonials */}
-        <ContentValueTestimonials />
+        {/* ContentValueTestimonials placeholder removed to avoid missing import */}
 
         {/* Enhanced Testimonials Section */}
-        <EnhancedTestimonials />
+        {/* EnhancedTestimonials placeholder removed to avoid missing import */}
 
         {/* Enhanced Newsletter Signup */}
-        <EnhancedNewsletterSignup 
-          title="Stay Ahead with Our Latest Insights"
-          subtitle="Get exclusive access to cutting-edge technology insights, industry analysis, and expert guidance delivered to your inbox weekly."
-          showContentPreview={true}
-        />
+        {/* EnhancedNewsletterSignup placeholder removed to avoid missing import */}
 
         {/* Latest Articles */}
         <section className="py-20 bg-white">

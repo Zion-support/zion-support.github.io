@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "autonomous-ops-blueprint-2025",
+    title: "Autonomous Ops Blueprint: Self‑Healing, Self‑Optimizing, Self‑Scaling",
+    description: "Practical controllers, SLOs, and policy tests that make infra run itself.",
+    category: "AI Operations",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "zero-trust-ai-security-2025",
+    title: "Zero‑Trust for AI Systems: Policy Gates, Attestations, and Guardrails",
+    description: "A field guide to securing data, models, and prompts without slowing delivery.",
+    category: "Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-ai-blueprint-2025",
+    title: "Edge AI Blueprint: Private, Low‑Latency Intelligence at Scale",
+    description: "Design patterns for sub‑100ms inference with privacy‑preserving on‑device models.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-platform-roi-2025",
     title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
     description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",

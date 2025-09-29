@@ -12,9 +12,9 @@ import {
   Zap,
   Sparkles,
 } from "lucide-react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import EnhancedContactForm from "../components/EnhancedContactForm";
+// Header component missing; using page without header
+// Footer component missing; using page without footer
+// EnhancedContactForm component missing; using simple placeholder form
 
 export default function Contact(): React.JSX.Element {
   const contactInfo = [
@@ -95,7 +95,7 @@ export default function Contact(): React.JSX.Element {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-        <Header />
+        {/* Header placeholder */}
 
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden">
@@ -177,7 +177,15 @@ export default function Contact(): React.JSX.Element {
               </p>
             </div>
 
-            <EnhancedContactForm />
+            <form id="contact-form" className="max-w-2xl mx-auto bg-white rounded-xl p-6 shadow">
+              <div className="grid md:grid-cols-2 gap-4">
+                <input className="border p-3 rounded" placeholder="Name" />
+                <input className="border p-3 rounded" placeholder="Email" />
+              </div>
+              <input className="border p-3 rounded w-full mt-4" placeholder="Subject" />
+              <textarea className="border p-3 rounded w-full mt-4" rows={5} placeholder="Message" />
+              <button type="submit" className="mt-4 px-6 py-3 bg-blue-600 text-white rounded">Send</button>
+            </form>
           </div>
         </section>
 
@@ -302,7 +310,7 @@ export default function Contact(): React.JSX.Element {
           </div>
         </section>
 
-        <Footer />
+        {/* Footer placeholder */}
       </div>
     </>
   );

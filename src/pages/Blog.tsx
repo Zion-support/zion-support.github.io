@@ -14,8 +14,8 @@ import {
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+// Footer component missing; using page without footer
+// Header component missing; using page without header
 
 interface BlogPost {
   id: number;
