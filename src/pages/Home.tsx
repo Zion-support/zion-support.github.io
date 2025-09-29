@@ -109,22 +109,12 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-<<<<<<< HEAD
-          title="🚀 Fresh: AI Product Launch Checklist + MLOps in 45 Days"
-          description="New guides on taking AI pilots to production and shipping reliable models fast."
-          ctaText="Read the latest"
-          ctaLink="/blog/ai-product-launch-checklist-2025"
+          title="🎯 NEW: Interactive AI ROI Calculator + 10+ Fresh Resources"
+          description="Calculate your AI investment returns instantly. Plus access our latest whitepapers, tools, and expert insights."
+          ctaText="Try AI ROI Calculator"
+          ctaLink="/tools"
           dismissible={true}
         />
->>>>>>> cursor/create-and-deploy-new-content-83a1
-=======
-          title="🚀 NEW: AI Governance, Edge Flags, and GenAI Telemetry posts"
-          description="Fresh articles and quick insights just landed. See what's new this week."
-          ctaText="Read the latest"
-          ctaLink="/blog"
-          dismissible={true}
-        />
->>>>>>> origin/main
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -218,6 +208,79 @@ const Home = () => {
               <Link to="/contact" className="btn-secondary">
                 Get Started
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* New Content & Tools Promotion */}
+        <section className="container mx-auto px-6 py-16 relative z-10">
+          <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-400/30 rounded-2xl p-8 mb-16">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 text-green-400 text-sm font-medium mb-4 animate-pulse">
+                🚀 JUST LAUNCHED - 2025
+              </div>
+              <h2 className="text-3xl font-bold text-white mb-4">
+                New Interactive Tools & Resources
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+                Calculate ROI, optimize costs, and make data-driven decisions with our free interactive tools and comprehensive resource library.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="bg-green-500/20 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                    <Target className="w-6 h-6 text-green-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-lg">AI ROI Calculator</h3>
+                    <p className="text-green-300 text-sm">Interactive Tool</p>
+                  </div>
+                </div>
+                <p className="text-zion-slate-light mb-4 text-sm">
+                  Calculate potential returns on AI investments with instant insights into cost savings and payback periods.
+                </p>
+                <Link to="/tools" className="text-green-400 hover:text-green-300 font-semibold text-sm inline-flex items-center gap-1">
+                  Try Now <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="bg-blue-500/20 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                    <FileText className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-lg">Resource Library</h3>
+                    <p className="text-blue-300 text-sm">18+ Downloads</p>
+                  </div>
+                </div>
+                <p className="text-zion-slate-light mb-4 text-sm">
+                  Access whitepapers, guides, templates, and tools to accelerate your technology journey.
+                </p>
+                <Link to="/resources" className="text-blue-400 hover:text-blue-300 font-semibold text-sm inline-flex items-center gap-1">
+                  Browse Resources <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="bg-purple-500/20 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                    <TrendingUp className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-lg">Latest Insights</h3>
+                    <p className="text-purple-300 text-sm">8+ New Articles</p>
+                  </div>
+                </div>
+                <p className="text-zion-slate-light mb-4 text-sm">
+                  Stay ahead with our latest insights on AI trends, enterprise integration, and business strategy.
+                </p>
+                <Link to="/blog" className="text-purple-400 hover:text-purple-300 font-semibold text-sm inline-flex items-center gap-1">
+                  Read Latest <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
           </div>
         </section>

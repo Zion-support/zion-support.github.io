@@ -298,5 +298,75 @@ export const posts: BlogPost[] = [
     category: "AI Governance",
     publishedAt: "2025-01-05",
   },
+  {
+    slug: "ai-enterprise-integration-2025",
+    title: "Enterprise AI Integration: A Complete Guide for 2025",
+    description:
+      "Learn how to successfully integrate AI solutions into your enterprise infrastructure with practical strategies and real-world case studies.",
+    category: "Enterprise AI",
+    publishedAt: "2025-01-22",
+    featured: true,
+    readTime: "12 min read",
+  },
+  {
+    slug: "quantum-ai-hybrid-systems",
+    title: "Quantum-AI Hybrid Systems: The Next Frontier in Computing",
+    description:
+      "Explore how quantum computing is enhancing AI capabilities and what this means for businesses in the next decade.",
+    category: "Quantum AI",
+    publishedAt: "2025-01-21",
+    featured: true,
+    readTime: "10 min read",
+  },
+  {
+    slug: "ai-powered-customer-experience",
+    title: "Revolutionizing Customer Experience with AI: 2025 Strategies",
+    description:
+      "Discover how AI is transforming customer experience across industries and learn actionable strategies for implementation.",
+    category: "Customer Experience",
+    publishedAt: "2025-01-20",
+    featured: false,
+    readTime: "8 min read",
+  },
+  {
+    slug: "sustainable-ai-practices",
+    title: "Sustainable AI: Building Environmentally Responsible AI Systems",
+    description:
+      "Learn how to implement AI solutions that are both powerful and environmentally sustainable for long-term business success.",
+    category: "Green AI",
+    publishedAt: "2025-01-19",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "ai-startup-funding-guide",
+    title: "AI Startup Funding: A Complete Guide for 2025",
+    description:
+      "Navigate the AI startup funding landscape with insights on investor expectations, valuation metrics, and growth strategies.",
+    category: "Startup Strategy",
+    publishedAt: "2025-01-18",
+    featured: false,
+    readTime: "11 min read",
+  },
+  {
+    slug: "ai-talent-acquisition-2025",
+    title: "Hiring AI Talent in 2025: What Companies Need to Know",
+    description:
+      "Strategies for attracting, evaluating, and retaining top AI talent in today's competitive market.",
+    category: "Talent Acquisition",
+    publishedAt: "2025-01-17",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
+    slug: "ai-risk-management-framework",
+    title: "AI Risk Management: A Comprehensive Framework for Businesses",
+    description:
+      "Protect your business from AI-related risks with this comprehensive framework covering technical, legal, and operational considerations.",
+    category: "Risk Management",
+    publishedAt: "2025-01-16",
+    featured: true,
+    readTime: "13 min read",
+  },
 ];
 

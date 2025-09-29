@@ -263,5 +263,68 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-09-29",
     readMinutes: 8,
   },
+  {
+    id: "ai-roi-measurement-framework",
+    title: "Measuring AI ROI: A Practical Framework for Business Leaders",
+    summary:
+      "Quantify AI investments with metrics that matter: efficiency gains, cost reduction, and revenue impact.",
+    category: "Business Strategy",
+    date: "2025-01-22",
+    readMinutes: 6,
+  },
+  {
+    id: "enterprise-ai-adoption-patterns",
+    title: "Enterprise AI Adoption: Common Patterns and Pitfalls",
+    summary:
+      "Learn from 100+ enterprise AI implementations: what works, what doesn't, and how to avoid common mistakes.",
+    category: "Enterprise AI",
+    date: "2025-01-21",
+    readMinutes: 7,
+  },
+  {
+    id: "ai-data-quality-standards",
+    title: "AI Data Quality: Standards That Drive Success",
+    summary:
+      "Establish data quality standards that ensure your AI models perform consistently in production environments.",
+    category: "Data Quality",
+    date: "2025-01-20",
+    readMinutes: 5,
+  },
+  {
+    id: "ai-vendor-selection-criteria",
+    title: "AI Vendor Selection: Key Criteria for Enterprise Buyers",
+    summary:
+      "Evaluate AI vendors with confidence using this comprehensive framework covering technical, business, and support factors.",
+    category: "Vendor Management",
+    date: "2025-01-19",
+    readMinutes: 8,
+  },
+  {
+    id: "ai-change-management-guide",
+    title: "AI Change Management: Getting Teams to Adopt New Technologies",
+    summary:
+      "Overcome resistance and drive adoption with proven change management strategies for AI implementations.",
+    category: "Change Management",
+    date: "2025-01-18",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-performance-monitoring",
+    title: "AI Performance Monitoring: Keeping Models Running Smoothly",
+    summary:
+      "Monitor AI model performance in real-time with automated alerts, drift detection, and performance dashboards.",
+    category: "AI Operations",
+    date: "2025-01-17",
+    readMinutes: 7,
+  },
+  {
+    id: "ai-cost-optimization-strategies",
+    title: "AI Cost Optimization: Strategies for Maximum Efficiency",
+    summary:
+      "Reduce AI infrastructure costs by 40% with these proven optimization strategies and best practices.",
+    category: "Cost Optimization",
+    date: "2025-01-16",
+    readMinutes: 5,
+  },
 ];
 
