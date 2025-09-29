@@ -1,74 +1,30 @@
 #!/bin/bash
 
-# Script to merge all open PRs into main branch
-# This script will resolve merge conflicts and merge PRs
-
+# Script to merge open PRs into main branch
 set -e
 
 echo "Starting PR merge process..."
 
+# Check if we're on main branch
+git checkout main
+
 # Fetch latest changes
 git fetch origin
 
-# Get list of open PRs (we know from API response)
-PRS=("23646" "23639" "23635")
-BRANCHES=("cursor/fix-netlify-build-and-merge-to-main-1fc1" "cursor/fix-netlify-build-and-merge-to-main-e358" "cursor/fix-netlify-build-and-merge-to-main-fbf7")
+# Merge PR #23674 (Parse netlify configuration file)
+echo "Merging PR #23674..."
+git merge origin/cursor/parse-netlify-configuration-file-ce72 --no-ff -m "Merge PR #23674: Parse netlify configuration file"
 
-# Switch to main branch
-git checkout main
-git pull origin main
+# Merge PR #23673 (Fix Netlify build and merge to main)
+echo "Merging PR #23673..."
+git merge origin/cursor/fix-netlify-build-and-merge-to-main-eff1 --no-ff -m "Merge PR #23673: Fix Netlify build and merge to main"
 
-for i in "${!PRS[@]}"; do
-    PR_NUMBER="${PRS[$i]}"
-    BRANCH_NAME="${BRANCHES[$i]}"
-    
-    echo "Processing PR #$PR_NUMBER (branch: $BRANCH_NAME)"
-    
-    # Checkout the PR branch
-    git checkout -b "$BRANCH_NAME" "origin/$BRANCH_NAME"
-    
-    # Try to merge main into the branch to resolve conflicts
-    echo "Attempting to merge main into $BRANCH_NAME..."
-    if git merge origin/main --no-edit; then
-        echo "Merge successful for $BRANCH_NAME"
-        git push origin "$BRANCH_NAME"
-        
-        # Switch back to main and merge the PR
-        git checkout main
-        git merge "$BRANCH_NAME" --no-edit
-        git push origin main
-        
-        echo "Successfully merged PR #$PR_NUMBER"
-    else
-        echo "Merge conflicts detected for $BRANCH_NAME"
-        echo "Resolving conflicts..."
-        
-        # Check for conflict files
-        CONFLICT_FILES=$(git diff --name-only --diff-filter=U)
-        
-        if [ -n "$CONFLICT_FILES" ]; then
-            echo "Conflict files: $CONFLICT_FILES"
-            
-            # For now, let's abort the merge and try to resolve conflicts manually
-            git merge --abort
-            echo "Aborted merge for $BRANCH_NAME - manual resolution needed"
-        else
-            echo "No conflict files found, proceeding with merge"
-            git add .
-            git commit -m "Resolve merge conflicts for PR #$PR_NUMBER"
-            git push origin "$BRANCH_NAME"
-            
-            # Switch back to main and merge
-            git checkout main
-            git merge "$BRANCH_NAME" --no-edit
-            git push origin main
-            
-            echo "Successfully merged PR #$PR_NUMBER"
-        fi
-    fi
-    
-    # Clean up the local branch
-    git branch -D "$BRANCH_NAME"
-done
+# Test the build
+echo "Testing build..."
+pnpm run build:no-check
 
-echo "PR merge process completed!"
+# Push changes
+echo "Pushing changes to main..."
+git push origin main
+
+echo "All PRs merged successfully!"

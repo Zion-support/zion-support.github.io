@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import { AppRouter } from './router';
+import { useAppInitialization } from './hooks/useAppInitialization';
+import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { initializeErrorReporting } from './utils/errorReporting';
 import { initOptimizations } from './utils/buildOptimizations';
 import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { accessibilityManager } from './utils/accessibility';
-import { ResourceMonitor, MemoryMonitor } from './utils/performance';
-import { useAppInitialization } from './hooks/useAppInitialization';
-import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import { PerformanceMonitor as UtilsPerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
 import { analytics } from './utils/analytics';
 import { seoOptimizer } from './utils/seoOptimization';
 import { cacheManager } from './utils/cacheManager';
@@ -44,9 +44,6 @@ import { performanceAnalytics } from './utils/advancedPerformanceAnalytics';
 import { errorTracker } from './utils/advancedErrorTracker';
 import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
 
-// Import comprehensive systems
-// import enhancedErrorRecovery from './utils/comprehensiveErrorRecovery';
-
 // Import types
 import NotificationSystem, { Notification } from './components/NotificationSystem';
 import { EnhancedNotification } from './types/comprehensive';
@@ -63,7 +60,7 @@ export default function App(): React.JSX.Element {
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
   const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
   const [, setIsDarkMode] = useState(false);
-  const [, ] = useState({
+  const [, setUserPreferences] = useState({
     theme: 'auto',
     animations: true,
     notifications: true,
@@ -77,21 +74,8 @@ export default function App(): React.JSX.Element {
     clicks: 0
   }), []);
 
-  // Simple SEO manager
-  const seoManager = useMemo(() => ({
-    updateMetaTags: (data: any) => {
-      if (typeof document !== 'undefined') {
-        document.title = data.title;
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-          metaDescription.setAttribute('content', data.description);
-        }
-      }
-    }
-  }), []);
-
   // Initialize app with custom configuration
-  const { isLoading: appLoading, loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
+  const { loadingProgress, handleScroll, handleClick, trackEngagement } = useAppInitialization({
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSecurity: true,
@@ -113,9 +97,6 @@ export default function App(): React.JSX.Element {
     if ((event.ctrlKey || event.metaKey) && event.shiftKey) {
       event.preventDefault();
       switch (event.key) {
-        case 'D':
-          setShowComprehensiveDashboard(prev => !prev);
-          break;
         case 'P':
           setShowPerformanceOptimizer(prev => !prev);
           break;
@@ -136,19 +117,16 @@ export default function App(): React.JSX.Element {
           break;
         case 'Escape':
           // Close all dashboards
-          setShowComprehensiveDashboard(false);
           setShowPerformanceOptimizer(false);
           setShowPerformanceMonitor(false);
           setShowAIDashboard(false);
           setShowSEOOptimizer(false);
+          setShowComprehensiveDashboard(false);
           break;
       }
     }
   }, []);
 
-  // Memoize the SEO data to prevent unnecessary re-renders
-  const seoData = useSEOData(window.location.pathname);
-  
   // Enhanced engagement tracking function
   const enhancedTrackEngagement = useCallback(() => {
     const timeOnPage = Date.now() - engagementData.startTime;
@@ -159,7 +137,7 @@ export default function App(): React.JSX.Element {
     });
     trackEngagement();
   }, [engagementData.clicks, engagementData.scrollDepth, engagementData.startTime, trackEngagement]);
-  
+
   // Update meta tags function
   const updateMetaTags = useCallback((data: {
     title: string;
@@ -215,7 +193,7 @@ export default function App(): React.JSX.Element {
     };
 
     initializeApp();
-  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags, enhancedTrackEngagement, seoManager]);
+  }, [handleScroll, handleClick, handleKeyDown, preloadResource, updateMetaTags, enhancedTrackEngagement]);
 
   // Show loading screen while initializing
   if (isLoading) {
@@ -275,7 +253,10 @@ export default function App(): React.JSX.Element {
                 ✕
               </button>
             </div>
-            <AIPerformanceDashboard />
+            <AIPerformanceDashboard 
+              isVisible={showAIDashboard}
+              onClose={() => setShowAIDashboard(false)}
+            />
           </div>
         </div>
       )}
@@ -293,7 +274,15 @@ export default function App(): React.JSX.Element {
                 ✕
               </button>
             </div>
-            <SEOOptimizer />
+            <SEOOptimizer 
+              seoData={{
+                title: "Zion Tech Group - Advanced AI and IT Solutions",
+                description: "Leading provider of AI and IT solutions",
+                keywords: "AI, IT, solutions, technology",
+                canonical: window.location.href,
+                ogImage: "/og-image.jpg"
+              }}
+            />
           </div>
         </div>
       )}
@@ -311,7 +300,10 @@ export default function App(): React.JSX.Element {
                 ✕
               </button>
             </div>
-            <ComprehensiveSystemDashboard />
+            <ComprehensiveSystemDashboard 
+              isVisible={showComprehensiveDashboard}
+              onClose={() => setShowComprehensiveDashboard(false)}
+            />
           </div>
         </div>
       )}

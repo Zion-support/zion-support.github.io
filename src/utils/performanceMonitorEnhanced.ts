@@ -191,7 +191,7 @@ class EnhancedPerformanceMonitor {
           const entries = list.getEntries();
           entries.forEach((entry) => {
             if (entry.duration > 50) { // Tasks longer than 50ms
-              this.createAlert('warning', 'fcp', entry.duration, 50, 
+              this.createAlert('warning', 'lcp', entry.duration, 50, 
                 `Long task detected: ${entry.duration.toFixed(2)}ms`, [
                   'Consider breaking up long-running tasks',
                   'Use Web Workers for heavy computations',

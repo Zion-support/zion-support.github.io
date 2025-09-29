@@ -1,16 +1,15 @@
 /**
  * Advanced Caching System
- * Comprehensive caching solution with multiple storage backends
+ * Provides multi-tier caching with memory, localStorage, and sessionStorage
  */
 
-export interface CacheEntry {
-  value: any;
+export interface CacheEntry<T = any> {
+  value: T;
   expiresAt: number;
+  createdAt: number;
   accessCount: number;
   lastAccessed: number;
-  size: number;
-  priority: 'low' | 'medium' | 'high' | 'critical';
-  tags: string[];
+  tags?: string[];
 }
 
 export interface CacheConfig {
@@ -18,39 +17,38 @@ export interface CacheConfig {
   enableLocalStorageCache: boolean;
   enableSessionStorageCache: boolean;
   enableCompression: boolean;
-  maxMemorySize: number;
-  maxLocalStorageSize: number;
-  maxSessionStorageSize: number;
-  defaultTTL: number;
-  cleanupInterval: number;
+  defaultTTL: number; // in milliseconds
+  maxMemoryItems: number;
+  maxLocalStorageItems: number;
+  maxSessionStorageItems: number;
+  cleanupInterval: number; // in milliseconds
 }
 
 export interface CacheMetrics {
   hits: number;
   misses: number;
   hitRate: number;
-  totalSize: number;
-  entryCount: number;
-  evictions: number;
+  size: number;
+  memoryUsage: number;
 }
 
 export class AdvancedCachingSystem {
-  private memoryCache: Map<string, CacheEntry> = new Map();
+  private memoryCache = new Map<string, CacheEntry>();
   private config: CacheConfig;
   private metrics: CacheMetrics;
-  private cleanupTimer: NodeJS.Timeout | null = null;
+  private cleanupTimer?: NodeJS.Timeout;
 
   constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
       enableMemoryCache: true,
       enableLocalStorageCache: true,
       enableSessionStorageCache: false,
-      enableCompression: true,
-      maxMemorySize: 50 * 1024 * 1024, // 50MB
-      maxLocalStorageSize: 10 * 1024 * 1024, // 10MB
-      maxSessionStorageSize: 5 * 1024 * 1024, // 5MB
-      defaultTTL: 60 * 60 * 1000, // 1 hour
-      cleanupInterval: 5 * 60 * 1000, // 5 minutes
+      enableCompression: false,
+      defaultTTL: 5 * 60 * 1000, // 5 minutes
+      maxMemoryItems: 100,
+      maxLocalStorageItems: 50,
+      maxSessionStorageItems: 25,
+      cleanupInterval: 60 * 1000, // 1 minute
       ...config
     };
 
@@ -58,9 +56,8 @@ export class AdvancedCachingSystem {
       hits: 0,
       misses: 0,
       hitRate: 0,
-      totalSize: 0,
-      entryCount: 0,
-      evictions: 0
+      size: 0,
+      memoryUsage: 0
     };
 
     this.startCleanupTimer();
@@ -70,23 +67,16 @@ export class AdvancedCachingSystem {
   /**
    * Set a cache entry
    */
-  async set<T>(
-    key: string, 
-    value: T, 
-    ttl?: number, 
-    priority: 'low' | 'medium' | 'high' | 'critical' = 'medium',
-    tags: string[] = []
-  ): Promise<void> {
-    const expiresAt = Date.now() + (ttl || this.config.defaultTTL);
-    const size = this.calculateSize(value);
+  async set<T>(key: string, value: T, ttl?: number, tags?: string[]): Promise<void> {
+    const now = Date.now();
+    const expiresAt = now + (ttl || this.config.defaultTTL);
     
-    const entry: CacheEntry = {
+    const entry: CacheEntry<T> = {
       value,
       expiresAt,
+      createdAt: now,
       accessCount: 0,
-      lastAccessed: Date.now(),
-      size,
-      priority,
+      lastAccessed: now,
       tags
     };
 
@@ -102,7 +92,6 @@ export class AdvancedCachingSystem {
         const serialized = this.config.enableCompression 
           ? this.compress(JSON.stringify(entry))
           : JSON.stringify(entry);
-        
         localStorage.setItem(`cache_${key}`, serialized);
         this.enforceLocalStorageLimit();
       } catch (error) {
@@ -116,7 +105,6 @@ export class AdvancedCachingSystem {
         const serialized = this.config.enableCompression 
           ? this.compress(JSON.stringify(entry))
           : JSON.stringify(entry);
-        
         sessionStorage.setItem(`cache_${key}`, serialized);
         this.enforceSessionStorageLimit();
       } catch (error) {
@@ -146,11 +134,11 @@ export class AdvancedCachingSystem {
     // Try localStorage
     if (this.config.enableLocalStorageCache) {
       try {
-        const stored = localStorage.getItem(`cache_${key}`);
-        if (stored) {
-          const entry: CacheEntry = this.config.enableCompression 
-            ? JSON.parse(this.decompress(stored))
-            : JSON.parse(stored);
+        const serialized = localStorage.getItem(`cache_${key}`);
+        if (serialized) {
+          const entry: CacheEntry<T> = this.config.enableCompression 
+            ? JSON.parse(this.decompress(serialized))
+            : JSON.parse(serialized);
           
           if (!this.isExpired(entry)) {
             entry.accessCount++;
@@ -158,29 +146,29 @@ export class AdvancedCachingSystem {
             this.metrics.hits++;
             this.updateMetrics();
             
-            // Restore to memory cache
+            // Update memory cache if enabled
             if (this.config.enableMemoryCache) {
               this.memoryCache.set(key, entry);
             }
             
-            return entry.value as T;
+            return entry.value;
           } else {
             localStorage.removeItem(`cache_${key}`);
           }
         }
       } catch (error) {
-        console.warn('Failed to get from localStorage:', error);
+        console.warn('Failed to retrieve from localStorage:', error);
       }
     }
 
     // Try sessionStorage
     if (this.config.enableSessionStorageCache) {
       try {
-        const stored = sessionStorage.getItem(`cache_${key}`);
-        if (stored) {
-          const entry: CacheEntry = this.config.enableCompression 
-            ? JSON.parse(this.decompress(stored))
-            : JSON.parse(stored);
+        const serialized = sessionStorage.getItem(`cache_${key}`);
+        if (serialized) {
+          const entry: CacheEntry<T> = this.config.enableCompression 
+            ? JSON.parse(this.decompress(serialized))
+            : JSON.parse(serialized);
           
           if (!this.isExpired(entry)) {
             entry.accessCount++;
@@ -188,18 +176,18 @@ export class AdvancedCachingSystem {
             this.metrics.hits++;
             this.updateMetrics();
             
-            // Restore to memory cache
+            // Update memory cache if enabled
             if (this.config.enableMemoryCache) {
               this.memoryCache.set(key, entry);
             }
             
-            return entry.value as T;
+            return entry.value;
           } else {
             sessionStorage.removeItem(`cache_${key}`);
           }
         }
       } catch (error) {
-        console.warn('Failed to get from sessionStorage:', error);
+        console.warn('Failed to retrieve from sessionStorage:', error);
       }
     }
 
@@ -209,22 +197,75 @@ export class AdvancedCachingSystem {
   }
 
   /**
+   * Check if a key exists in cache
+   */
+  has(key: string): boolean {
+    // Check memory cache
+    if (this.config.enableMemoryCache) {
+      const entry = this.memoryCache.get(key);
+      if (entry && !this.isExpired(entry)) {
+        return true;
+      }
+    }
+
+    // Check localStorage
+    if (this.config.enableLocalStorageCache) {
+      try {
+        const serialized = localStorage.getItem(`cache_${key}`);
+        if (serialized) {
+          const entry = this.config.enableCompression 
+            ? JSON.parse(this.decompress(serialized))
+            : JSON.parse(serialized);
+          return !this.isExpired(entry);
+        }
+      } catch (error) {
+        console.warn('Failed to check localStorage:', error);
+      }
+    }
+
+    // Check sessionStorage
+    if (this.config.enableSessionStorageCache) {
+      try {
+        const serialized = sessionStorage.getItem(`cache_${key}`);
+        if (serialized) {
+          const entry = this.config.enableCompression 
+            ? JSON.parse(this.decompress(serialized))
+            : JSON.parse(serialized);
+          return !this.isExpired(entry);
+        }
+      } catch (error) {
+        console.warn('Failed to check sessionStorage:', error);
+      }
+    }
+
+    return false;
+  }
+
+  /**
    * Delete a cache entry
    */
   async delete(key: string): Promise<void> {
-    // Remove from memory
+    // Remove from memory cache
     if (this.config.enableMemoryCache) {
       this.memoryCache.delete(key);
     }
 
     // Remove from localStorage
     if (this.config.enableLocalStorageCache) {
-      localStorage.removeItem(`cache_${key}`);
+      try {
+        localStorage.removeItem(`cache_${key}`);
+      } catch (error) {
+        console.warn('Failed to delete from localStorage:', error);
+      }
     }
 
     // Remove from sessionStorage
     if (this.config.enableSessionStorageCache) {
-      sessionStorage.removeItem(`cache_${key}`);
+      try {
+        sessionStorage.removeItem(`cache_${key}`);
+      } catch (error) {
+        console.warn('Failed to delete from sessionStorage:', error);
+      }
     }
 
     this.updateMetrics();
@@ -241,25 +282,94 @@ export class AdvancedCachingSystem {
 
     // Clear localStorage cache
     if (this.config.enableLocalStorageCache) {
-      const keys = Object.keys(localStorage);
-      keys.forEach(key => {
-        if (key.startsWith('cache_')) {
-          localStorage.removeItem(key);
-        }
-      });
+      try {
+        const keys = Object.keys(localStorage).filter(key => key.startsWith('cache_'));
+        keys.forEach(key => localStorage.removeItem(key));
+      } catch (error) {
+        console.warn('Failed to clear localStorage:', error);
+      }
     }
 
     // Clear sessionStorage cache
     if (this.config.enableSessionStorageCache) {
-      const keys = Object.keys(sessionStorage);
-      keys.forEach(key => {
-        if (key.startsWith('cache_')) {
-          sessionStorage.removeItem(key);
+      try {
+        const keys = Object.keys(sessionStorage).filter(key => key.startsWith('cache_'));
+        keys.forEach(key => sessionStorage.removeItem(key));
+      } catch (error) {
+        console.warn('Failed to clear sessionStorage:', error);
+      }
+    }
+
+    this.updateMetrics();
+  }
+
+  /**
+   * Clear cache entries by tags
+   */
+  async clearByTags(tags: string[]): Promise<void> {
+    const keysToDelete: string[] = [];
+
+    // Check memory cache
+    if (this.config.enableMemoryCache) {
+      this.memoryCache.forEach((entry, key) => {
+        if (entry.tags && entry.tags.some(tag => tags.includes(tag))) {
+          keysToDelete.push(key);
         }
       });
     }
 
-    this.updateMetrics();
+    // Check localStorage
+    if (this.config.enableLocalStorageCache) {
+      try {
+        const keys = Object.keys(localStorage).filter(key => key.startsWith('cache_'));
+        keys.forEach(key => {
+          try {
+            const serialized = localStorage.getItem(key);
+            if (serialized) {
+              const entry = this.config.enableCompression 
+                ? JSON.parse(this.decompress(serialized))
+                : JSON.parse(serialized);
+              if (entry.tags && entry.tags.some((tag: string) => tags.includes(tag))) {
+                keysToDelete.push(key.replace('cache_', ''));
+              }
+            }
+          } catch (error) {
+            console.warn('Failed to check localStorage entry:', error);
+          }
+        });
+      } catch (error) {
+        console.warn('Failed to check localStorage:', error);
+      }
+    }
+
+    // Check sessionStorage
+    if (this.config.enableSessionStorageCache) {
+      try {
+        const keys = Object.keys(sessionStorage).filter(key => key.startsWith('cache_'));
+        keys.forEach(key => {
+          try {
+            const serialized = sessionStorage.getItem(key);
+            if (serialized) {
+              const entry = this.config.enableCompression 
+                ? JSON.parse(this.decompress(serialized))
+                : JSON.parse(serialized);
+              if (entry.tags && entry.tags.some((tag: string) => tags.includes(tag))) {
+                keysToDelete.push(key.replace('cache_', ''));
+              }
+            }
+          } catch (error) {
+            console.warn('Failed to check sessionStorage entry:', error);
+          }
+        });
+      } catch (error) {
+        console.warn('Failed to check sessionStorage:', error);
+      }
+    }
+
+    // Delete all matching keys
+    for (const key of keysToDelete) {
+      await this.delete(key);
+    }
   }
 
   /**
@@ -270,141 +380,104 @@ export class AdvancedCachingSystem {
   }
 
   /**
-   * Get cache configuration
-   */
-  getConfig(): CacheConfig {
-    return { ...this.config };
-  }
-
-  /**
-   * Update cache configuration
-   */
-  updateConfig(newConfig: Partial<CacheConfig>): void {
-    this.config = { ...this.config, ...newConfig };
-  }
-
-  /**
-   * Check if entry is expired
+   * Check if an entry is expired
    */
   private isExpired(entry: CacheEntry): boolean {
     return Date.now() > entry.expiresAt;
   }
 
   /**
-   * Calculate size of value
+   * Enforce memory cache limit
    */
-  private calculateSize(value: any): number {
-    return JSON.stringify(value).length * 2; // Rough estimate
+  private enforceMemoryLimit(): void {
+    if (this.memoryCache.size > this.config.maxMemoryItems) {
+      // Remove oldest entries (least recently accessed)
+      const entries = Array.from(this.memoryCache.entries())
+        .sort((a, b) => a[1].lastAccessed - b[1].lastAccessed);
+      
+      const toRemove = entries.slice(0, this.memoryCache.size - this.config.maxMemoryItems);
+      toRemove.forEach(([key]) => this.memoryCache.delete(key));
+    }
   }
 
   /**
-   * Compress data
+   * Enforce localStorage cache limit
+   */
+  private enforceLocalStorageLimit(): void {
+    const cacheKeys = Object.keys(localStorage).filter(key => key.startsWith('cache_'));
+    if (cacheKeys.length > this.config.maxLocalStorageItems) {
+      // Remove oldest entries
+      const entries = cacheKeys.map(key => {
+        try {
+          const serialized = localStorage.getItem(key);
+          const entry = serialized ? JSON.parse(serialized) : null;
+          return { key, entry };
+        } catch {
+          return { key, entry: null };
+        }
+      }).filter(item => item.entry)
+        .sort((a, b) => a.entry.createdAt - b.entry.createdAt);
+      
+      const toRemove = entries.slice(0, entries.length - this.config.maxLocalStorageItems);
+      toRemove.forEach(({ key }) => localStorage.removeItem(key));
+    }
+  }
+
+  /**
+   * Enforce sessionStorage cache limit
+   */
+  private enforceSessionStorageLimit(): void {
+    const cacheKeys = Object.keys(sessionStorage).filter(key => key.startsWith('cache_'));
+    if (cacheKeys.length > this.config.maxSessionStorageItems) {
+      // Remove oldest entries
+      const entries = cacheKeys.map(key => {
+        try {
+          const serialized = sessionStorage.getItem(key);
+          const entry = serialized ? JSON.parse(serialized) : null;
+          return { key, entry };
+        } catch {
+          return { key, entry: null };
+        }
+      }).filter(item => item.entry)
+        .sort((a, b) => a.entry.createdAt - b.entry.createdAt);
+      
+      const toRemove = entries.slice(0, entries.length - this.config.maxSessionStorageItems);
+      toRemove.forEach(({ key }) => sessionStorage.removeItem(key));
+    }
+  }
+
+  /**
+   * Update cache metrics
+   */
+  private updateMetrics(): void {
+    this.metrics.size = this.memoryCache.size;
+    this.metrics.hitRate = this.metrics.hits / (this.metrics.hits + this.metrics.misses) || 0;
+    this.metrics.memoryUsage = this.estimateMemoryUsage();
+  }
+
+  /**
+   * Estimate memory usage
+   */
+  private estimateMemoryUsage(): number {
+    let totalSize = 0;
+    this.memoryCache.forEach((entry) => {
+      totalSize += JSON.stringify(entry).length * 2; // Rough estimate
+    });
+    return totalSize;
+  }
+
+  /**
+   * Simple compression (base64 encoding)
    */
   private compress(data: string): string {
-    // Simple compression using base64 encoding
-    // In production, use a proper compression library
     return btoa(data);
   }
 
   /**
-   * Decompress data
+   * Simple decompression (base64 decoding)
    */
   private decompress(data: string): string {
-    try {
-      return atob(data);
-    } catch {
-      return data; // Return as-is if decompression fails
-    }
-  }
-
-  /**
-   * Enforce memory limit
-   */
-  private enforceMemoryLimit(): void {
-    let totalSize = 0;
-    const entries = Array.from(this.memoryCache.entries());
-    
-    // Calculate total size
-    entries.forEach(([, entry]) => {
-      totalSize += entry.size;
-    });
-
-    // Evict entries if over limit
-    if (totalSize > this.config.maxMemorySize) {
-      // Sort by priority and last accessed
-      entries.sort((a, b) => {
-        const priorityOrder = { critical: 4, high: 3, medium: 2, low: 1 };
-        const priorityDiff = priorityOrder[b[1].priority] - priorityOrder[a[1].priority];
-        if (priorityDiff !== 0) return priorityDiff;
-        return a[1].lastAccessed - b[1].lastAccessed;
-      });
-
-      // Remove lowest priority entries
-      while (totalSize > this.config.maxMemorySize && entries.length > 0) {
-        const [key, entry] = entries.shift()!;
-        this.memoryCache.delete(key);
-        totalSize -= entry.size;
-        this.metrics.evictions++;
-      }
-    }
-  }
-
-  /**
-   * Enforce localStorage limit
-   */
-  private enforceLocalStorageLimit(): void {
-    const keys = Object.keys(localStorage).filter(key => key.startsWith('cache_'));
-    let totalSize = 0;
-    
-    keys.forEach(key => {
-      const value = localStorage.getItem(key);
-      if (value) {
-        totalSize += value.length;
-      }
-    });
-
-    if (totalSize > this.config.maxLocalStorageSize) {
-      // Remove oldest entries
-      const entries = keys.map(key => ({
-        key,
-        timestamp: parseInt(localStorage.getItem(key)?.split('"lastAccessed":')[1]?.split(',')[0] || '0')
-      })).sort((a, b) => a.timestamp - b.timestamp);
-
-      while (totalSize > this.config.maxLocalStorageSize && entries.length > 0) {
-        const entry = entries.shift()!;
-        localStorage.removeItem(entry.key);
-        totalSize -= localStorage.getItem(entry.key)?.length || 0;
-      }
-    }
-  }
-
-  /**
-   * Enforce sessionStorage limit
-   */
-  private enforceSessionStorageLimit(): void {
-    const keys = Object.keys(sessionStorage).filter(key => key.startsWith('cache_'));
-    let totalSize = 0;
-    
-    keys.forEach(key => {
-      const value = sessionStorage.getItem(key);
-      if (value) {
-        totalSize += value.length;
-      }
-    });
-
-    if (totalSize > this.config.maxSessionStorageSize) {
-      // Remove oldest entries
-      const entries = keys.map(key => ({
-        key,
-        timestamp: parseInt(sessionStorage.getItem(key)?.split('"lastAccessed":')[1]?.split(',')[0] || '0')
-      })).sort((a, b) => a.timestamp - b.timestamp);
-
-      while (totalSize > this.config.maxSessionStorageSize && entries.length > 0) {
-        const entry = entries.shift()!;
-        sessionStorage.removeItem(entry.key);
-        totalSize -= sessionStorage.getItem(entry.key)?.length || 0;
-      }
-    }
+    return atob(data);
   }
 
   /**
@@ -414,7 +487,7 @@ export class AdvancedCachingSystem {
     if (this.cleanupTimer) {
       clearInterval(this.cleanupTimer);
     }
-
+    
     this.cleanupTimer = setInterval(() => {
       this.cleanup();
     }, this.config.cleanupInterval);
@@ -428,55 +501,61 @@ export class AdvancedCachingSystem {
     
     // Cleanup memory cache
     if (this.config.enableMemoryCache) {
-      for (const [key, entry] of this.memoryCache.entries()) {
+      this.memoryCache.forEach((entry, key) => {
         if (now > entry.expiresAt) {
           this.memoryCache.delete(key);
         }
-      }
+      });
     }
 
     // Cleanup localStorage
     if (this.config.enableLocalStorageCache) {
-      const keys = Object.keys(localStorage).filter(key => key.startsWith('cache_'));
-      keys.forEach(key => {
-        try {
-          const stored = localStorage.getItem(key);
-          if (stored) {
-            const entry: CacheEntry = this.config.enableCompression 
-              ? JSON.parse(this.decompress(stored))
-              : JSON.parse(stored);
-            
-            if (now > entry.expiresAt) {
-              localStorage.removeItem(key);
+      try {
+        const keys = Object.keys(localStorage).filter(key => key.startsWith('cache_'));
+        keys.forEach(key => {
+          try {
+            const serialized = localStorage.getItem(key);
+            if (serialized) {
+              const entry = this.config.enableCompression 
+                ? JSON.parse(this.decompress(serialized))
+                : JSON.parse(serialized);
+              if (now > entry.expiresAt) {
+                localStorage.removeItem(key);
+              }
             }
+          } catch (error) {
+            // Remove corrupted entries
+            localStorage.removeItem(key);
           }
-        } catch (error) {
-          // Remove corrupted entries
-          localStorage.removeItem(key);
-        }
-      });
+        });
+      } catch (error) {
+        console.warn('Failed to cleanup localStorage:', error);
+      }
     }
 
     // Cleanup sessionStorage
     if (this.config.enableSessionStorageCache) {
-      const keys = Object.keys(sessionStorage).filter(key => key.startsWith('cache_'));
-      keys.forEach(key => {
-        try {
-          const stored = sessionStorage.getItem(key);
-          if (stored) {
-            const entry: CacheEntry = this.config.enableCompression 
-              ? JSON.parse(this.decompress(stored))
-              : JSON.parse(stored);
-            
-            if (now > entry.expiresAt) {
-              sessionStorage.removeItem(key);
+      try {
+        const keys = Object.keys(sessionStorage).filter(key => key.startsWith('cache_'));
+        keys.forEach(key => {
+          try {
+            const serialized = sessionStorage.getItem(key);
+            if (serialized) {
+              const entry = this.config.enableCompression 
+                ? JSON.parse(this.decompress(serialized))
+                : JSON.parse(serialized);
+              if (now > entry.expiresAt) {
+                sessionStorage.removeItem(key);
+              }
             }
+          } catch (error) {
+            // Remove corrupted entries
+            sessionStorage.removeItem(key);
           }
-        } catch (error) {
-          // Remove corrupted entries
-          sessionStorage.removeItem(key);
-        }
-      });
+        });
+      } catch (error) {
+        console.warn('Failed to cleanup sessionStorage:', error);
+      }
     }
 
     this.updateMetrics();
@@ -497,18 +576,8 @@ export class AdvancedCachingSystem {
         });
       }
     } catch (error) {
-      console.warn('Failed to restore critical cache entries:', error);
+      console.warn('Failed to restore from storage:', error);
     }
-  }
-
-  /**
-   * Update metrics
-   */
-  private updateMetrics(): void {
-    this.metrics.totalSize = Array.from(this.memoryCache.values())
-      .reduce((total, entry) => total + entry.size, 0);
-    this.metrics.entryCount = this.memoryCache.size;
-    this.metrics.hitRate = this.metrics.hits / (this.metrics.hits + this.metrics.misses) || 0;
   }
 
   /**
@@ -517,33 +586,11 @@ export class AdvancedCachingSystem {
   destroy(): void {
     if (this.cleanupTimer) {
       clearInterval(this.cleanupTimer);
-      this.cleanupTimer = null;
+      this.cleanupTimer = undefined;
     }
-    this.memoryCache.clear();
+    this.clear();
   }
 }
 
-// Export singleton instances
-export const apiCache = new AdvancedCachingSystem({
-  enableMemoryCache: true,
-  enableLocalStorageCache: true,
-  enableSessionStorageCache: false,
-  defaultTTL: 5 * 60 * 1000, // 5 minutes
-  maxMemorySize: 20 * 1024 * 1024, // 20MB
-});
-
-export const imageCache = new AdvancedCachingSystem({
-  enableMemoryCache: true,
-  enableLocalStorageCache: true,
-  enableSessionStorageCache: false,
-  defaultTTL: 24 * 60 * 60 * 1000, // 24 hours
-  maxMemorySize: 100 * 1024 * 1024, // 100MB
-});
-
-export const dataCache = new AdvancedCachingSystem({
-  enableMemoryCache: true,
-  enableLocalStorageCache: true,
-  enableSessionStorageCache: true,
-  defaultTTL: 60 * 60 * 1000, // 1 hour
-  maxMemorySize: 50 * 1024 * 1024, // 50MB
-});
+// Export singleton instance
+export const advancedCachingSystem = new AdvancedCachingSystem();

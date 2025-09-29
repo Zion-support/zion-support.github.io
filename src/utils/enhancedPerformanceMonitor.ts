@@ -121,6 +121,26 @@ class EnhancedPerformanceMonitor {
     }
   }
 
+  private createAlert(alert: {
+    type: 'critical' | 'warning' | 'info';
+    title: string;
+    description: string;
+    impact: 'high' | 'medium' | 'low';
+    action: string;
+  }): void {
+    const performanceAlert: PerformanceAlert = {
+      id: `alert-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      type: alert.type,
+      title: alert.title,
+      description: alert.description,
+      impact: alert.impact,
+      effort: 'medium',
+      category: 'performance'
+    };
+    
+    this.alerts.push(performanceAlert);
+  }
+
   private processPerformanceEntry(entry: PerformanceEntry): void {
     switch (entry.entryType) {
       case 'paint':
@@ -188,16 +208,6 @@ class EnhancedPerformanceMonitor {
       scrollTimeout = window.setTimeout(() => {
         this.trackUserInteraction('scroll', null);
       }, 100);
-    });
-  }
-
-  private trackError(error: Error | unknown): void {
-    this.createAlert({
-      type: 'warning',
-      title: 'JavaScript Error Detected',
-      description: (error instanceof Error ? error.message : String(error)) || 'Unknown error occurred',
-      impact: 'medium',
-      action: 'Check console for details'
     });
   }
 
@@ -307,17 +317,6 @@ class EnhancedPerformanceMonitor {
     }
 
     console.log("Enhanced Performance Monitor stopped");
-  }
-
-  private createAlert(alert: {
-    type: 'critical' | 'warning' | 'info';
-    title: string;
-    description: string;
-    impact: 'high' | 'medium' | 'low';
-    action: string;
-  }): void {
-    console.warn(`Performance Alert: ${alert.title} - ${alert.description}`);
-    // In a real implementation, this would send to a monitoring service
   }
 
   public cleanup(): void {
