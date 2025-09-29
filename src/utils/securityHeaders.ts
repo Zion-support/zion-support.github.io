@@ -35,6 +35,13 @@ export class SecurityManager {
     this.config = this.getDefaultConfig();
   }
 
+  // Added for compatibility with callers expecting an initialize() lifecycle
+  public initialize(): void {
+    // No-op initialization hook; retained for API compatibility
+    // Could precompute CSP header string or perform runtime checks here
+    void this.config;
+  }
+
   private getDefaultConfig(): SecurityConfig {
     return {
       csp: {
