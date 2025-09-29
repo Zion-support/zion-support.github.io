@@ -50,11 +50,19 @@ import {
   NewContentShowcaseBanner2026,
   AINeuralArchitectureOptimizationBanner,
   AIFederatedLearningBanner,
-  FederatedLearningSuccessBanner
+  FederatedLearningSuccessBanner,
+  AIEnterpriseAutomationBanner,
+  AIQuantumComputingBanner,
+  AISustainabilityBanner,
+  CaseStudiesSuccessBanner,
+  AIROICalculatorBanner,
+  InteractiveContentBanner,
+  NewsletterSignupBanner
 } from '../components/NewContent2026Banners';
 import AITrends2025Banner from '../src/components/AITrends2025Banner';
 import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBanner';
 import AIROICalculator from '../src/components/AIROICalculator';
+import EnhancedAIROICalculator from '../components/EnhancedAIROICalculator';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -64,14 +72,86 @@ import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 
 export const metadata = {
-  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
-  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation',
+  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 2026 AI Solutions',
+  description: 'Transform your business with cutting-edge AI solutions. 95% process automation, $5M+ savings, quantum computing, and sustainable AI. Enterprise-grade AI services and micro SaaS solutions.',
+  keywords: 'AI services, micro SaaS, IT services, AI automation 2026, quantum computing AI, sustainable AI, enterprise AI transformation, AI ROI calculator, Fortune 500 AI case studies, AI implementation guide',
+  openGraph: {
+    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 2026 AI Solutions',
+    description: 'Transform your business with cutting-edge AI solutions. 95% process automation, $5M+ savings, quantum computing, and sustainable AI.',
+    url: 'https://ziontechgroup.com',
+    siteName: 'Zion Tech Group',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: 'https://ziontechgroup.com/og-image-2026.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group AI Solutions 2026',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 2026 AI Solutions',
+    description: 'Transform your business with cutting-edge AI solutions. 95% process automation, $5M+ savings, quantum computing, and sustainable AI.',
+    images: ['https://ziontechgroup.com/og-image-2026.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://ziontechgroup.com',
+  },
 };
 
 export default function HomePage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "description": "AI services, micro SaaS, and IT solutions",
+      "category": "Technology Services"
+    }
+  };
+
   return (
     <div className="animate-fade-in">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* New Content Promo Strip */}
       <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
@@ -103,6 +183,12 @@ export default function HomePage() {
       </div>
       {/* Promotional Banners */}
       <Latest2026ContentBanner />
+      <AIEnterpriseAutomationBanner />
+      <AIQuantumComputingBanner />
+      <AISustainabilityBanner />
+      <CaseStudiesSuccessBanner />
+      <AIROICalculatorBanner />
+      <InteractiveContentBanner />
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
       <AIEthicsSuccessBanner />
@@ -285,7 +371,7 @@ export default function HomePage() {
             </p>
           </div>
           
-          <AIROICalculator />
+          <EnhancedAIROICalculator />
         </div>
       </section>
 
@@ -1056,6 +1142,9 @@ export default function HomePage() {
 
       {/* Enhanced Newsletter Signup */}
       <EnhancedNewsletterSignup variant="default" />
+      
+      {/* Newsletter Signup Banner */}
+      <NewsletterSignupBanner />
 
       {/* Additional Promotional Banners */}
       <AnalyticsPlatformBanner />
