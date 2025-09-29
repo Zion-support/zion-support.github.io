@@ -33,11 +33,11 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
-      title: "AI Platform ROI Scorecards",
-      description: "Outcome metrics and adoption signals that drive decisions",
+      title: "Policy Tests in CI",
+      description: "Lightweight checks that prevent regressions and speed delivery",
       icon: TrendingUp,
-      link: "/blog/ai-platform-roi-scorecards-2025",
-      category: "AI Strategy"
+      link: "/blog/policy-tests-in-ci-2025",
+      category: "Engineering"
     },
     {
       title: "Secure ML Supply Chain",
@@ -54,11 +54,11 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       category: "GenAI"
     },
     {
-      title: "Serverless Inference Cost Playbook",
-      description: "Cut 40–70% without P95 pain",
+      title: "Risk Budgets for Edge Rollouts",
+      description: "Zero‑regret deploys with budgets and instant rollback",
       icon: Zap,
-      link: "/blog/serverless-inference-cost-playbook-2025",
-      category: "GenAI"
+      link: "/blog/risk-budgets-edge-rollouts-2025",
+      category: "Architecture"
     }
   ];
 
