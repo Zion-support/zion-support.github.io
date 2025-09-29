@@ -15,7 +15,7 @@
 
 [build.environment]
   # Use Active LTS for stability on Netlify
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
   PNPM_VERSION = "10.17.1"
   NETLIFY_USE_PNPM = "true"
   # Disable Next.js auto-detection
