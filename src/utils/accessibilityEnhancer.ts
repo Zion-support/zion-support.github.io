@@ -68,6 +68,20 @@ class AccessibilityEnhancer {
     // Intentionally left as a no-op for now; reserved for future enhancements
   };
 
+  // Bound event handlers referenced by addEventListener/removeEventListener
+  // These are intentionally minimal; concrete behavior can be layered on later
+  private onKeyDown = (_event: KeyboardEvent): void => {
+    // no-op default implementation
+  };
+
+  private onClick = (_event: MouseEvent): void => {
+    // no-op default implementation
+  };
+
+  private onFocusIn = (_event: FocusEvent): void => {
+    // no-op default implementation
+  };
+
   constructor() {
     this.config = this.getDefaultConfig();
   }
