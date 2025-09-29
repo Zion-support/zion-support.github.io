@@ -10,9 +10,9 @@ interface PerformanceMetric {
 }
 
 class PerformanceMonitor {
-  private metrics: PerformanceMetric[] = [];
-  private observers: PerformanceObserver[] = [];
-  private isInitialized = false;
+	private metrics: PerformanceMetric[] = [];
+	private observers: PerformanceObserver[] = [];
+	private initialized = false;
 
   constructor() {
     this.initialize();
@@ -148,50 +148,24 @@ class PerformanceMonitor {
     }
   }
 
-  private observeResourceTiming(): void {
-    if ('PerformanceObserver' in window) {
-      try {
-        const resourceObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.duration > 1000) { // Only track slow resources
-              this.recordMetric({
-                name: 'SLOW_RESOURCE',
-                value: entry.duration,
-                timestamp: Date.now(),
-                id: this.generateId()
-              });
-            }
-          }
-        });
-        resourceObserver.observe({ entryTypes: ['resource'] });
-        this.observers.push(resourceObserver);
-      } catch (e) {
-        console.warn('Resource timing observation failed:', e);
-      }
-    }
-  }
+	public getWebVitals(): Record<string, number> {
+		const vitals: Record<string, number> = {};
+		for (const m of this.metrics) {
+			if (m.name === 'CLS' || m.name === 'FID' || m.name === 'FCP' || m.name === 'LCP' || m.name === 'TTFB') {
+				vitals[m.name] = m.value;
+			}
+		}
+		return vitals;
+	}
 
-  private observeNavigationTiming(): void {
-    if ('PerformanceObserver' in window) {
-      try {
-        const navObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            const navEntry = entry as PerformanceNavigationTiming;
-            this.recordMetric({
-              name: 'TTFB',
-              value: navEntry.responseStart - navEntry.requestStart,
-              timestamp: Date.now(),
-              id: this.generateId()
-            });
-          }
-        });
-        navObserver.observe({ entryTypes: ['navigation'] });
-        this.observers.push(navObserver);
-      } catch (e) {
-        console.warn('Navigation timing observation failed:', e);
-      }
-    }
-  }
+	public getPerformanceScore(): number {
+		const v = this.getWebVitals();
+		let score = 100;
+		if (v.LCP) score -= v.LCP > 4000 ? 30 : v.LCP > 2500 ? 15 : 0;
+		if (v.FID) score -= v.FID > 300 ? 25 : v.FID > 100 ? 10 : 0;
+		if (v.CLS) score -= v.CLS > 0.25 ? 20 : v.CLS > 0.1 ? 10 : 0;
+		return Math.max(0, score);
+	}
 
   private recordMetric(metric: PerformanceMetric): void {
     this.metrics.push(metric);
