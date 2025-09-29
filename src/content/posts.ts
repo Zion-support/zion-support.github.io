@@ -245,5 +245,115 @@ export const posts: BlogPost[] = [
     category: "AI Governance",
     publishedAt: "2025-01-05",
   },
+  {
+    slug: "real-time-data-pipelines-2025",
+    title: "Real-Time Data Pipelines: Building Reliable Streaming at Scale",
+    description:
+      "Architecting bulletproof real-time data pipelines with Apache Kafka, Apache Flink, and modern streaming patterns.",
+    category: "Data Engineering",
+    publishedAt: "2025-01-21",
+    featured: true,
+    readTime: "12 min read",
+  },
+  {
+    slug: "platform-engineering-scorecards",
+    title: "Platform Engineering Scorecards: Metrics That Drive Adoption",
+    description:
+      "Designing platform scorecards that align engineering teams with business outcomes and accelerate delivery.",
+    category: "Platform Engineering",
+    publishedAt: "2025-01-21",
+    featured: true,
+    readTime: "10 min read",
+  },
+  {
+    slug: "genai-operationalization-guide",
+    title: "Operationalizing GenAI: From Prototype to Production",
+    description:
+      "Complete guide to deploying, monitoring, and scaling generative AI applications in enterprise environments.",
+    category: "GenAI",
+    publishedAt: "2025-01-21",
+    featured: true,
+    readTime: "14 min read",
+  },
+  {
+    slug: "microservices-observability-patterns",
+    title: "Microservices Observability: Patterns for Complex Systems",
+    description:
+      "Implementing distributed tracing, metrics, and logging in microservices architectures for better system visibility.",
+    category: "Observability",
+    publishedAt: "2025-01-20",
+    featured: false,
+    readTime: "9 min read",
+  },
+  {
+    slug: "cloud-native-security-2025",
+    title: "Cloud-Native Security: Protecting Modern Applications",
+    description:
+      "Security strategies for containerized applications, serverless functions, and cloud-native infrastructure.",
+    category: "Security",
+    publishedAt: "2025-01-20",
+    featured: true,
+    readTime: "11 min read",
+  },
+  {
+    slug: "ai-workflow-automation-case-studies",
+    title: "AI Workflow Automation: Real-World Success Stories",
+    description:
+      "Case studies from Fortune 500 companies showing how AI workflow automation transformed their operations.",
+    category: "AI & Automation",
+    publishedAt: "2025-01-19",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-computing-business-value",
+    title: "Edge Computing: Unlocking Business Value at the Edge",
+    description:
+      "How edge computing is enabling new business models and improving customer experiences across industries.",
+    category: "Edge Computing",
+    publishedAt: "2025-01-19",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
+    slug: "data-governance-framework-2025",
+    title: "Data Governance Framework 2025: A Practical Approach",
+    description:
+      "Building effective data governance programs that balance compliance, security, and business agility.",
+    category: "Data Governance",
+    publishedAt: "2025-01-18",
+    featured: true,
+    readTime: "13 min read",
+  },
+  {
+    slug: "fintech-ai-transformation",
+    title: "FinTech AI Transformation: From Risk Assessment to Customer Experience",
+    description:
+      "How AI is revolutionizing financial services through intelligent automation, fraud detection, and personalized banking.",
+    category: "FinTech",
+    publishedAt: "2025-01-18",
+    featured: false,
+    readTime: "10 min read",
+  },
+  {
+    slug: "sustainable-tech-practices",
+    title: "Sustainable Technology Practices: Green IT for the Future",
+    description:
+      "Implementing environmentally conscious technology practices that reduce carbon footprint while maintaining performance.",
+    category: "Sustainability",
+    publishedAt: "2025-01-17",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "ai-chatbot-implementation-guide",
+    title: "AI Chatbot Implementation: From Design to Deployment",
+    description:
+      "Complete guide to building, training, and deploying AI chatbots that deliver exceptional customer experiences.",
+    category: "AI & Automation",
+    publishedAt: "2025-01-17",
+    featured: true,
+    readTime: "9 min read",
+  },
 ];
 
