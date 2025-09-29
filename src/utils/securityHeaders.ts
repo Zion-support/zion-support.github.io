@@ -35,6 +35,11 @@ export class SecurityManager {
     this.config = this.getDefaultConfig();
   }
 
+  // No-op initializer to provide a stable optional init hook for callers
+  public initialize(): void {
+    // Intentionally empty. Reserved for future side effects.
+  }
+
   private getDefaultConfig(): SecurityConfig {
     return {
       csp: {

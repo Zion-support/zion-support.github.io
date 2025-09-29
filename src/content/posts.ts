@@ -10,6 +10,26 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "genai-incident-postmortems-2025",
+    title: "GenAI Incident Postmortems: Prevent Repeats with Policy Tests",
+    description:
+      "A practical guide to capturing signals, writing policy tests, and closing the loop so incidents don't recur.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "ai-adoption-scorecard-2025",
+    title: "AI Adoption Scorecard: Executive Metrics That Drive Outcomes",
+    description:
+      "Define leading indicators, outcome metrics, and review rituals that align AI work to business value.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
     slug: "ai-sales-copilot-2025",
     title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
     description:
@@ -17,6 +37,36 @@ export const posts: BlogPost[] = [
     category: "AI Strategy",
     publishedAt: "2025-09-30",
     featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "practical-rag-blueprint-2025",
+    title: "Practical RAG Blueprint 2025: Retrieval That Actually Improves Answers",
+    description:
+      "Architect chunking, embeddings, and routing that raise answer quality while lowering cost.",
+    category: "GenAI",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "shipping-genai-safely-guardrails",
+    title: "Shipping GenAI Safely: Policy Tests, Canaries, and Rollbacks",
+    description:
+      "A practical playbook for offline evals, online canaries, and rollback plans that prevent regressions.",
+    category: "AI Governance",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "edge-caching-playbook-2025",
+    title: "Edge Caching Playbook: Sub‑100ms at Global Scale",
+    description:
+      "Versioned keys, background warming, and cache‑aside patterns for resilient, fast UX.",
+    category: "Architecture",
+    publishedAt: "2025-10-01",
+    featured: false,
     readTime: "6 min read",
   },
   {
@@ -73,8 +123,8 @@ export const posts: BlogPost[] = [
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
     description:
-      "From offline suites to online canaries: patterns that keep quality high as usage grows.",
-    category: "GenAI",
+      "A pragmatic checklist for hardening pilots, proving ROI, and launching AI features safely.",
+    category: "Product",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read",
@@ -110,12 +160,32 @@ export const posts: BlogPost[] = [
     readTime: "7 min read",
   },
   {
-    slug: "ai-product-launch-checklist-2025",
-    title: "AI Product Launch Checklist: From Pilot to Production",
+    slug: "north-star-metrics-anti-patterns",
+    title: "North‑Star Metrics: 7 Anti‑Patterns to Avoid",
     description:
-      "A pragmatic checklist for hardening pilots, proving ROI, and launching AI features safely.",
-    category: "Product",
+      "Common traps that derail metric-driven product development and how to fix them.",
+    category: "Product Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "mlops-reliability-2025",
+    title: "MLOps Reliability: Shipping GenAI Changes Safely",
+    description:
+      "Canary evals, shadow deploys, and rollback patterns to keep quality high while iterating fast.",
+    category: "MLOps",
     publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "realtime-data-pipelines-2025",
+    title: "Reliable Real‑Time Data Pipelines in 2025",
+    description:
+      "Exactly‑once semantics, backpressure control, and pragmatic observability for streaming systems.",
+    category: "Data Engineering",
+    publishedAt: "2025-09-28",
     featured: true,
     readTime: "7 min read",
   },
@@ -444,6 +514,37 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-01-21",
     featured: false,
     readTime: "9 min read",
+  },
+  // Newly added posts (2025-09-30 / 2025-09-29)
+  {
+    slug: "serverless-inference-cost-playbook-2025",
+    title: "Serverless AI Inference Cost Playbook: 40–70% Savings Without P95 Pain",
+    description:
+      "Adaptive batching, warm pools, and tiered quality to cut spend while keeping latency sane.",
+    category: "AI Solutions",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "practical-rag-in-production-2025",
+    title: "Practical RAG in Production: Freshness, Hybrid Search, and Evals",
+    description:
+      "Battle-tested patterns for chunking, freshness policies, hybrid retrieval, and eval harnesses.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "secure-genai-guardrails-2025",
+    title: "Secure GenAI: Policy‑First Guardrails That Scale",
+    description:
+      "Prompt isolation, PII controls, and egress policies—ship safely without slowing teams.",
+    category: "Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read",
   },
 ];
 

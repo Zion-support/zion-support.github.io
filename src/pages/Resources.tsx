@@ -420,7 +420,9 @@ const Resources = () => {
                       </div>
                       <div className="flex items-center text-gray-500 text-sm">
                         <Clock className="w-4 h-4 mr-1" />
-                        {typeof (resource as any).duration === 'string' ? (resource as any).duration : `${(resource as any).pages || 0} pages`}
+                        {typeof (resource as any).duration === 'string'
+                          ? (resource as any).duration
+                          : `${(resource as any).pages || 0} pages`}
                       </div>
                     </div>
 
@@ -514,14 +516,16 @@ const Resources = () => {
                       <p className="text-gray-600 mb-4 line-clamp-3">{resource.description}</p>
 
                       <div className="flex items-center justify-between mb-4 text-sm text-gray-500">
-                      <div className="flex items-center">
-                        <Download className="w-4 h-4 mr-1" />
-                        {resource.downloadCount}
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {typeof (resource as any).duration === 'string' ? (resource as any).duration : `${(resource as any).pages || 0} pages`}
-                      </div>
+                        <div className="flex items-center">
+                          <Download className="w-4 h-4 mr-1" />
+                          {resource.downloadCount}
+                        </div>
+                        <div className="flex items-center">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {typeof (resource as any).duration === 'string'
+                            ? (resource as any).duration
+                            : `${(resource as any).pages || 0} pages`}
+                        </div>
                       </div>
 
                       <div className="flex flex-wrap gap-1 mb-4">
