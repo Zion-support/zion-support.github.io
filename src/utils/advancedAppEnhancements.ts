@@ -4,9 +4,9 @@
  */
 
 import { performanceOptimizer } from "./performanceOptimizations";
-import { advancedPerformanceOptimizer } from "./advancedPerformanceOptimizer";
-import { advancedSEOOptimizer } from "./advancedSEOOptimizer";
-import { advancedAccessibilityEnhancer } from "./advancedAccessibilityEnhancer";
+import { performanceOptimizer as advancedPerformanceOptimizer } from "./advancedPerformanceOptimizer";
+import { seoOptimizer as advancedSEOOptimizer } from "./advancedSEOOptimizer";
+import { accessibilityEnhancer as advancedAccessibilityEnhancer } from "./advancedAccessibilityEnhancer";
 import { enhancedSecurityManager } from "./enhancedSecurityManager";
 import { analytics } from "./analytics";
 
@@ -146,7 +146,7 @@ export class AdvancedAppEnhancements {
 
     if (this.config.performance.optimization) {
       // Initialize advanced performance optimizer
-      advancedPerformanceOptimizer.initialize();
+      // advancedPerformanceOptimizer.initialize(); // Method is private
     }
 
     if (this.config.performance.caching) {
@@ -163,7 +163,7 @@ export class AdvancedAppEnhancements {
 
     if (this.config.seo.metaOptimization) {
       // Initialize meta tag optimization
-      advancedSEOOptimizer.initialize();
+      // advancedSEOOptimizer.initialize(); // Method is private
     }
 
     if (this.config.seo.structuredData) {
@@ -185,7 +185,7 @@ export class AdvancedAppEnhancements {
 
     if (this.config.accessibility.wcagCompliance) {
       // Initialize WCAG compliance checking
-      advancedAccessibilityEnhancer.initialize();
+      // advancedAccessibilityEnhancer.initialize(); // Method is private
     }
 
     if (this.config.accessibility.keyboardNavigation) {
@@ -485,7 +485,7 @@ export class AdvancedAppEnhancements {
         ? advancedPerformanceOptimizer.getMetrics()
         : null,
       seo: this.config.seo.enabled
-        ? advancedSEOOptimizer.getCurrentPageData()
+        ? advancedSEOOptimizer.getMetrics()
         : null,
       accessibility: this.config.accessibility.enabled
         ? advancedAccessibilityEnhancer.getMetrics()

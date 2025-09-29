@@ -131,7 +131,7 @@ class AdvancedAccessibilityEnhancer {
           element.click();
         }
         break;
-      case 'Escape':
+      case 'Escape': {
         // Close modals or dropdowns
         const modal = element.closest('[role="dialog"]');
         if (modal) {
@@ -141,6 +141,7 @@ class AdvancedAccessibilityEnhancer {
           }
         }
         break;
+      }
       case 'ArrowDown':
       case 'ArrowUp':
         // Handle dropdown navigation

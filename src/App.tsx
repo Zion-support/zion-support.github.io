@@ -6,7 +6,7 @@ import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { accessibilityManager } from './utils/accessibility';
 import { PerformanceMonitor as UtilsPerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
 import { analytics } from './utils/analytics';
-import { seoOptimizer } from './utils/seoOptimization';
+import { seoOptimizer as basicSeoOptimizer } from './utils/seoOptimization';
 import { cacheManager } from './utils/cacheManager';
 import { apiClient } from './utils/apiClient';
 import { notificationManager } from './utils/notificationManager';
@@ -24,7 +24,7 @@ import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import { performanceOptimizer as advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
-import { seoOptimizer } from './utils/advancedSEOOptimizer';
+import { seoOptimizer as advancedSeoOptimizer } from './utils/advancedSEOOptimizer';
 import { securityEnhancer } from './utils/advancedSecurityEnhancer';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceMonitor from './components/PerformanceMonitor';
@@ -120,7 +120,7 @@ export default function App(): React.JSX.Element {
         // Initialize advanced optimizations
         advancedPerformanceOptimizer.optimize();
         accessibilityEnhancer.getMetrics();
-        seoOptimizer.getMetrics();
+        advancedSeoOptimizer.getMetrics();
         securityEnhancer.getMetrics();
         
         // Initialize performance optimizations
@@ -177,7 +177,7 @@ export default function App(): React.JSX.Element {
   }, [isLoading, appLoading, error, loadingProgress]);
 
   return (
-    <EnhancedErrorBoundary onError={handleError}>
+    <EnhancedErrorBoundary>
       <div className="App">
         {appContent}
         

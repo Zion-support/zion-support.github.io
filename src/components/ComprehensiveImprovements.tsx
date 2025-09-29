@@ -4,9 +4,9 @@
  */
 
 import React, { useState, useEffect } from "react";
-import { advancedPerformanceOptimizer } from "../utils/advancedPerformanceOptimizer";
-import { AdvancedSEOOptimizer } from "../utils/advancedSEOOptimizer";
-import { advancedAccessibilityEnhancer } from "../utils/advancedAccessibilityEnhancer";
+import { performanceOptimizer as advancedPerformanceOptimizer } from "../utils/advancedPerformanceOptimizer";
+import { seoOptimizer as AdvancedSEOOptimizer } from "../utils/advancedSEOOptimizer";
+import { accessibilityEnhancer as advancedAccessibilityEnhancer } from "../utils/advancedAccessibilityEnhancer";
 
 interface ImprovementsProps {
   isVisible: boolean;
@@ -91,13 +91,25 @@ export default function ComprehensiveImprovements({
           </h4>
           <div className="text-center">
             <div className="text-4xl font-bold text-green-600 mb-2">
-              {advancedPerformanceOptimizer.getPerformanceScore()}/100
+              {(() => {
+                const metrics = advancedPerformanceOptimizer.getMetrics();
+                if (!metrics) return 0;
+                // Calculate a simple score based on key metrics
+                const score = Math.max(0, 100 - (metrics.loadTime / 100) - (metrics.firstContentfulPaint / 50));
+                return Math.round(score);
+              })()}/100
             </div>
             <div className="w-full bg-gray-200 rounded-full h-4">
               <div
                 className="bg-green-500 h-4 rounded-full transition-all duration-500"
                 style={{
-                  width: `${advancedPerformanceOptimizer.getPerformanceScore()}%`,
+                  width: `${(() => {
+                    const metrics = advancedPerformanceOptimizer.getMetrics();
+                    if (!metrics) return 0;
+                    // Calculate a simple score based on key metrics
+                    const score = Math.max(0, 100 - (metrics.loadTime / 100) - (metrics.firstContentfulPaint / 50));
+                    return Math.round(score);
+                  })()}%`,
                 }}
               ></div>
             </div>

@@ -42,7 +42,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
           const seoData = await seoOptimizer.analyze();
           setSeoIssues(seoData.issues.map(issue => ({
             type: 'warning' as const,
-            message: issue,
+            message: issue.message,
             impact: 'medium' as const
           })));
         } catch (error) {
