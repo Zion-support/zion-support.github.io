@@ -234,10 +234,10 @@ export const CloudNativeBanner = () => (
 
 export const RetailTechSuccessBanner = () => (
   <PromotionalBanner
-    message="🛍️ Success Story: RetailTech Achieved 95% Efficiency Gain and $1.2M Annual Savings"
-    ctaText="View Case Study"
-    ctaLink="/case-studies/retailtech-ai-transformation"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    message="📚 Fresh Content: AI Risk Register & Practical RAG now live"
+    ctaText="Explore All"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
     autoHide={true}
     hideAfter={25}
   />
