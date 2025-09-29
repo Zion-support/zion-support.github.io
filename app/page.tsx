@@ -39,26 +39,6 @@ import {
   NewContentShowcase2026Banner
 } from '../components/PromotionalBanner';
 import { 
-  AIAutonomousCloudOpsBanner,
-  AIFinTechTransformationBanner,
-  AIRetailAutomationBanner,
-  AutonomousOperationsBanner,
-  FinOpsAdvancedBanner,
-  PlatformArchitectureBanner,
-  AutonomousOperationsSuccessBanner,
-  NewContentShowcaseBanner2026,
-  AINeuralArchitectureOptimizationBanner,
-  AIFederatedLearningBanner,
-  FederatedLearningSuccessBanner
-} from '../components/NewContent2026Banners';
-import ContentShowcase from '../components/ContentShowcase';
-import FeaturedServiceCard from '../components/FeaturedServiceCard';
-import SuccessStory from '../components/SuccessStory';
-import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
-import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
-import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
-import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
-import { 
   Latest2026ContentBanner,
   AIAutonomousCloudOpsBanner,
   AIFinTechTransformationBanner,
@@ -72,6 +52,16 @@ import {
   AIFederatedLearningBanner,
   FederatedLearningSuccessBanner
 } from '../components/NewContent2026Banners';
+import AITrends2025Banner from '../src/components/AITrends2025Banner';
+import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBanner';
+import AIROICalculator from '../src/components/AIROICalculator';
+import ContentShowcase from '../components/ContentShowcase';
+import FeaturedServiceCard from '../components/FeaturedServiceCard';
+import SuccessStory from '../components/SuccessStory';
+import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
+import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -119,7 +109,6 @@ export default function HomePage() {
       <AISecurityEnterprise2026Banner />
       <AIMultimodalEnterprise2026Banner />
       <AISustainabilityTransformationBanner />
-      <NewLatest2026ContentBanner />
       <AINeuralArchitectureOptimizationBanner />
       <AIFederatedLearningBanner />
       <FederatedLearningSuccessBanner />
@@ -132,13 +121,14 @@ export default function HomePage() {
       <AutonomousOperationsSuccessBanner />
       <NewContentShowcaseBanner2026 />
       <NewContent2026Banner />
-      {/* Removed unavailable banner components to fix imports */}
       <AIMultimodalEnterpriseBanner />
       <AIEnterpriseAutomationGuideBanner />
       <AIDataAnalyticsEnterpriseBanner />
       <EnterpriseTransformationSuccessBanner />
       <HealthcareTransformationBanner />
       <NewContentShowcaseBanner />
+      <AITrends2025Banner />
+      <NewServicesShowcaseBanner />
       <AIRoadmapsBanner />
       <AIFinOpsBanner />
       <AutonomousAgentsBanner />
@@ -279,6 +269,23 @@ export default function HomePage() {
               popular={false}
             />
           </div>
+        </div>
+      </section>
+
+      {/* AI ROI Calculator Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Calculate Your AI Transformation ROI
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover the potential return on investment for AI transformation in your organization. 
+              Get personalized insights and recommendations based on your specific industry and requirements.
+            </p>
+          </div>
+          
+          <AIROICalculator />
         </div>
       </section>
 
