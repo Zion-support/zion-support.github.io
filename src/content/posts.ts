@@ -437,6 +437,33 @@ export const posts: BlogPost[] = [
   }
   ,
   {
+    slug: "ai-trustworthy-agents-2026",
+    title: "Trustworthy Agents 2026: Proven Safety Patterns That Scale",
+    description: "Planning constraints, policy tests, and live traces that keep agents safe and useful.",
+    category: "AI Reliability",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "zero-trust-data-mesh-2026",
+    title: "Zero‑Trust Data Mesh 2026: Contracts, Lineage, and Access Budgets",
+    description: "Decouple teams safely with data contracts, lineage SBOMs, and risk‑budgeted access.",
+    category: "Data Architecture",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-observability-2026",
+    title: "Edge Observability 2026: User‑Centric Traces Under 50ms",
+    description: "Capture user‑first telemetry across edge, CDN, and app without latency tax.",
+    category: "Observability",
+    publishedAt: "2025-10-15",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
     slug: "agent-evals-scorecards-2026",
     title: "Agent Evals 2026: Scorecards That Predict Outcomes",
     description: "Design online evals and KPI‑linked scorecards that correlate with revenue and CSAT.",
