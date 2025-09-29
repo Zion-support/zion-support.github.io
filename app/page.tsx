@@ -37,18 +37,18 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ New on the blog:</span>
-            <a to="/blog/platform-engineering-scorecards-2026" className="underline hover:text-yellow-200">Platform Scorecards 2026</a>
+            <a href="/blog/platform-engineering-scorecards-2026" className="underline hover:text-yellow-200">Platform Scorecards 2026</a>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-cybersecurity-automation-2025" className="underline hover:text-yellow-200">AI Cybersecurity Automation</a>
+            <a href="/blog/ai-cybersecurity-automation-2025" className="underline hover:text-yellow-200">AI Cybersecurity Automation</a>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/edge-ai-blueprint-2026" className="underline hover:text-yellow-200">Edge AI Blueprint 2026</a>
+            <a href="/blog/edge-ai-blueprint-2026" className="underline hover:text-yellow-200">Edge AI Blueprint 2026</a>
           </div>
-          <Link
-            to="/blog"
+          <a
+            href="/blog"
             className="bg-white text-indigo-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
           >
             Read the latest
-          </Link>
+          </a>
         </div>
       </div>
       {/* Promotional Banners */}
@@ -312,63 +312,57 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link to="/blog/ai-trustworthy-agents-2026" className="group">
+            <a href="/blog/platform-engineering-scorecards-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Article
-                  </span>
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">New Article</span>
+                  <span className="text-sm text-gray-500">10 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  Platform Engineering Scorecards 2026
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  A pragmatic framework to track reliability, velocity, cost, and DevEx.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </a>
+            <a href="/blog/ai-cybersecurity-automation-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">New Article</span>
                   <span className="text-sm text-gray-500">11 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  Trustworthy AI Agents 2026: Safety, Compliance, and Observability
+                  AI Cybersecurity Automation 2025
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Deploy trustworthy AI agents with guardrails, approvals, and end-to-end observability.
+                  Autonomous detection and response with guarded playbooks and zero trust.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Article →
                 </div>
               </div>
-            </Link>
-            <Link to="/blog/ai-value-stream-analytics-2026" className="group">
+            </a>
+            <a href="/blog/edge-ai-blueprint-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Featured Article
-                  </span>
-                  <span className="text-sm text-gray-500">9 min read</span>
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">New Article</span>
+                  <span className="text-sm text-gray-500">12 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Value Stream Analytics 2026: Trace ROI from Token to Revenue
+                  Edge AI Blueprint 2026
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Tie AI cost, latency, and quality to business value with end-to-end tracing.
+                  Sub-100ms interactions with hybrid inference, caching, and routing patterns.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Article →
                 </div>
               </div>
-            </Link>
-            <Link to="/blog/ai-autonomous-agents-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Article
-                  </span>
-                  <span className="text-sm text-gray-500">18 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Autonomous Agents 2025: Enterprise Implementation Guide
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Master autonomous AI agents with 300% ROI strategies and enterprise-ready deployment patterns.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
-              </div>
-            </Link>
+            </a>
             <Link to="/blog/ai-governance-framework-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
