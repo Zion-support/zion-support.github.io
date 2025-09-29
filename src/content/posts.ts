@@ -63,5 +63,33 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "7 min read"
   }
+  ,
+  {
+    slug: "enterprise-rag-blueprint-2025",
+    title: "Enterprise RAG Blueprint v2: From Toy Demos to Production",
+    description: "Document stores, retrieval policies, and online evals that correlate to CSAT and deflection.",
+    category: "GenAI",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-governance-scorecards-2025",
+    title: "AI Governance Scorecards: Enabling Speed with Guardrails",
+    description: "Policy tests in CI, approval trails, and runtime observability that unlock faster delivery.",
+    category: "AI Governance",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "observability-for-agents-2025",
+    title: "Observability for AI Agents: Spans, Policies, and Red Teams",
+    description: "Trace tool calls, capture prompts, and run policy checks with automated red teaming.",
+    category: "GenAI",
+    publishedAt: "2025-10-04",
+    featured: false,
+    readTime: "7 min read"
+  }
 ];
 

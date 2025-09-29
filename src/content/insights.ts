@@ -53,5 +53,32 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-09-30",
     readMinutes: 6,
   },
+  {
+    id: "enterprise-rag-blueprint-v2",
+    title: "Enterprise RAG Blueprint v2: Retrieval That Actually Works",
+    summary:
+      "Governance for sources, retrieval policies, and evals that track to CSAT and deflection.",
+    category: "GenAI",
+    date: "2025-10-04",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-governance-scorecards",
+    title: "AI Governance Scorecards: Policy Tests That Enable Speed",
+    summary:
+      "Approval trails, automated policy checks in CI, and runtime observability for safe velocity.",
+    category: "AI Governance",
+    date: "2025-10-04",
+    readMinutes: 5,
+  },
+  {
+    id: "agent-observability-2025",
+    title: "Agent Observability: What to Trace and How to Measure",
+    summary:
+      "Spans for tool calls, guardrail outcomes, and quality metrics that drive iteration.",
+    category: "GenAI",
+    date: "2025-10-04",
+    readMinutes: 5,
+  }
 ];
 

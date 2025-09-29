@@ -132,4 +132,22 @@ export const caseStudies: CaseStudy[] = [
     duration: "18 weeks",
     imageUrl: "/images/case-studies/telco-edge.jpg"
   }
+  ,
+  {
+    id: "enterprise-rag-rollout",
+    title: "Enterprise RAG Rollout at Fortune 500",
+    company: "Global Consumer Goods Co.",
+    industry: "Consumer Goods",
+    challenge: "Fragmented knowledge base and inconsistent answers from traditional search led to low CSAT and high ticket volume.",
+    solution: "Implemented governed Retrieval-Augmented Generation with curated sources, retrieval policies, online eval canaries, and human-in-the-loop feedback loops.",
+    results: [
+      "Increased self-service deflection by 32%",
+      "Raised CSAT from 3.7 to 4.5",
+      "Cut average handle time by 28%",
+      "$3.1M/year support cost savings"
+    ],
+    technologies: ["RAG", "Vector DB", "TypeScript", "OpenAI", "ClickHouse"],
+    duration: "10 weeks",
+    imageUrl: "/images/case-studies/enterprise-rag.jpg"
+  }
 ];
