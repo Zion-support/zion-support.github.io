@@ -29,6 +29,62 @@ export interface NewCaseStudy {
 
 export const newCaseStudies: NewCaseStudy[] = [
   {
+    id: "fintech-ondevice-agents",
+    slug: "fintech-ondevice-agents",
+    title: "Fintech Unicorn: On‑Device Agents Slash Latency to 90ms",
+    description: "A consumer fintech moved sensitive workflows on‑device, achieving sub‑100ms prompts and 35% cost savings with edge LLM caching.",
+    excerpt: "Edge inference and local tools delivered 90ms median prompts and reduced cloud spend by 35%.",
+    company: "NovaWallet",
+    industry: "Fintech",
+    challenge: "High latency and privacy concerns for PII‑heavy assistant flows",
+    solution: "On‑device agents with encrypted caches and intent‑aware tool routing",
+    result: "90ms median latency, 35% cost reduction, 99.99% offline reliability",
+    metrics: {
+      primary: "90ms Median Latency",
+      secondary: "35% Cost Reduction",
+      tertiary: "99.99% Offline"
+    },
+    featured: true,
+    date: "2025-09-29",
+    tags: ["Edge AI", "Agents", "Privacy", "Latency", "Caching"],
+    testimonial: {
+      quote: "On‑device agents changed the game for us—fast, private, and reliable.",
+      author: "Amira Patel",
+      position: "VP Product, NovaWallet"
+    },
+    image: "/images/case-fintech-ondevice.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "retail-serverless-inference-playbook",
+    slug: "retail-serverless-inference-playbook",
+    title: "Global Retailer: Serverless Inference Cost Cut by 62%",
+    description: "A top retailer implemented cost‑aware routing and warm pools, reducing inference spend by 62% while improving CSAT.",
+    excerpt: "Cost‑aware routing + adaptive batching reduced LLM costs 62% with higher QoS.",
+    company: "RetailMax",
+    industry: "Retail & E‑commerce",
+    challenge: "Exploding inference bills and erratic tail latencies",
+    solution: "Adaptive batching, warm pools, intent‑based model routing, prompt compression",
+    result: "62% cost reduction, P95 −48%, CSAT +12pts",
+    metrics: {
+      primary: "62% Cost Reduction",
+      secondary: "−48% P95 Latency",
+      tertiary: "+12 CSAT"
+    },
+    featured: true,
+    date: "2025-09-29",
+    tags: ["Serverless", "Inference", "Routing", "Cost", "SLA"],
+    testimonial: {
+      quote: "We saved millions while customers got faster answers—win‑win.",
+      author: "Lena Ortiz",
+      position: "Director, Platform Engineering"
+    },
+    image: "/images/case-retail-inference.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "global-retail-ai-transformation",
     slug: "global-retail-ai-transformation",
     title: "Global Retail Giant: AI-Powered Customer Experience Revolution",
