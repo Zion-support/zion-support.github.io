@@ -44,6 +44,13 @@ import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
+import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
+import LatestContent2026Banner from '../components/LatestContent2026Banner';
+import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
+import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
+import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
+import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -110,6 +117,12 @@ export default function HomePage() {
       <NewBlogBanner />
       <WorkflowAutomationBanner />
       <AIAnalyticsBanner />
+      
+      {/* New Content Promotional Banner 2026 */}
+      <NewContentPromotionalBanner2026 />
+      
+      {/* AI Innovation Showcase Banner 2026 */}
+      <AIInnovationShowcaseBanner2026 />
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
