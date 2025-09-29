@@ -161,11 +161,21 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Platform Engineering blueprint and GenAI guardrails just dropped — read now in Insights
+            New: Edge inference patterns and North‑Star metrics just dropped — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
         <LatestInsights />
+        <div className="container mx-auto px-6">
+          <div className="rounded-xl bg-indigo-600/15 border border-indigo-400/30 px-6 py-4 text-indigo-200 text-sm flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <span className="inline-flex h-2 w-2 rounded-full bg-indigo-400 animate-ping"></span>
+              <span className="font-medium">Fresh on the blog:</span>
+              <span className="hidden sm:inline">Edge Inference Patterns • North‑Star Metrics</span>
+            </div>
+            <Link to="/blog" className="text-indigo-200 underline underline-offset-4 hover:text-white">Read now</Link>
+          </div>
+        </div>
 
         {/* New Services Showcase */}
         <section className="container mx-auto px-6 py-20 relative z-10">
