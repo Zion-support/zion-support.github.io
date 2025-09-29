@@ -1,20 +1,24 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
+export const metadata = {
+  title: 'AI Predictive Maintenance: Reduce Downtime by 85% | Zion Tech Group',
+  description: 'Transform your maintenance operations with AI-powered predictive maintenance. Reduce downtime by 85%, cut costs by 60%, and prevent equipment failures before they happen.',
+  keywords: 'AI predictive maintenance, predictive analytics, equipment maintenance, IoT sensors, maintenance optimization, downtime reduction',
+  openGraph: {
+    title: 'AI Predictive Maintenance: Reduce Downtime by 85%',
+    description: 'Transform your maintenance operations with AI-powered predictive maintenance. Reduce downtime by 85%, cut costs by 60%, and prevent equipment failures before they happen.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Predictive Maintenance: Reduce Downtime by 85%',
+    description: 'Transform your maintenance operations with AI-powered predictive maintenance. Reduce downtime by 85%, cut costs by 60%, and prevent equipment failures before they happen.',
+  },
+};
 
 export default function AIPredictiveMaintenance() {
   return (
     <>
-      <Helmet>
-        <title>AI Predictive Maintenance: Reduce Downtime by 85% | Zion Tech Group</title>
-        <meta name="description" content="Transform your maintenance operations with AI-powered predictive maintenance. Reduce downtime by 85%, cut costs by 60%, and prevent equipment failures before they happen." />
-        <meta name="keywords" content="AI predictive maintenance, predictive analytics, equipment maintenance, IoT sensors, maintenance optimization, downtime reduction" />
-        <meta property="og:title" content="AI Predictive Maintenance: Reduce Downtime by 85%" />
-        <meta property="og:description" content="Transform your maintenance operations with AI-powered predictive maintenance. Reduce downtime by 85%, cut costs by 60%, and prevent equipment failures before they happen." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Predictive Maintenance: Reduce Downtime by 85%" />
-        <meta name="twitter:description" content="Transform your maintenance operations with AI-powered predictive maintenance. Reduce downtime by 85%, cut costs by 60%, and prevent equipment failures before they happen." />
-      </Helmet>
 
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Header */}
