@@ -1,376 +1,297 @@
-import React, { useState, useEffect } from "react";
-import { EnhancementSuite } from "../utils/enhancementSuite";
+import React, { useState, useEffect, useCallback } from 'react';
+import { performanceOptimizer, PerformanceMetrics, OptimizationSuggestion } from '../utils/performanceOptimizer';
+import { accessibilityEnhancer, AccessibilityMetrics, AccessibilityIssue } from '../utils/accessibilityEnhancer';
+import { seoOptimizer } from '../utils/seoOptimizer';
+import { SEOIssue } from '../types/comprehensive';
 
-interface HealthReport {
-  overall: "excellent" | "good" | "fair" | "poor";
-  performance: number;
-  security: number;
-  accessibility: number;
-  reliability: number;
-  recommendations: string[];
+interface ComprehensiveSystemDashboardProps {
+  isVisible: boolean;
+  onClose: () => void;
 }
 
-interface SystemMetrics {
-  performance: {
-    fcp: number;
-    lcp: number;
-    fid: number;
-    cls: number;
-    ttfb: number;
-  };
-  security: {
-    violationCount: number;
-    lastViolation: Date | null;
-    rateLimitHits: number;
-  };
-  accessibility: {
-    violationCount: number;
-    lastAudit: Date | null;
-    complianceScore: number;
-  };
-  errors: {
-    totalErrors: number;
-    criticalErrors: number;
-    lastError: Date | null;
-  };
-}
-
-const ComprehensiveSystemDashboard: React.FC = () => {
-  const [healthReport, setHealthReport] = useState<HealthReport | null>(null);
-  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+/**
+ * Comprehensive System Dashboard
+ * Advanced monitoring and management interface
+ */
+const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> = ({
+  isVisible,
+  onClose,
+}) => {
+  const [activeTab, setActiveTab] = useState<'overview' | 'performance' | 'accessibility' | 'seo' | 'security'>('overview');
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [accessibilityMetrics, setAccessibilityMetrics] = useState<AccessibilityMetrics | null>(null);
+  const [seoIssues, setSeoIssues] = useState<SEOIssue[]>([]);
+  const [alerts, setAlerts] = useState<Array<{
+    id: string;
+    type: 'error' | 'warning' | 'info';
+    message: string;
+    timestamp: number;
+  }>>([]);
 
   useEffect(() => {
-    const loadData = () => {
-      try {
-        const health = {
-          overall: "good" as const,
-          performance: 85,
-          security: 90,
-          accessibility: 88,
-          reliability: 92,
-          recommendations: [
-            "Monitor performance metrics",
-            "Check security logs",
-          ],
-        };
-        const systemMetrics = EnhancementSuite.getInstance().getMetrics();
+    if (isVisible) {
+      // Initialize metrics
+      const loadMetrics = async () => {
+        try {
+          const perfMetrics = await performanceOptimizer.getMetrics();
+          setMetrics(perfMetrics);
 
-        setHealthReport(health);
-        setMetrics(systemMetrics);
-        setIsLoading(false);
-      } catch (error) {
-        console.error("Failed to load system data:", error);
-        setIsLoading(false);
+          const accMetrics = await accessibilityEnhancer.getMetrics();
+          setAccessibilityMetrics(accMetrics);
+
+          const seoData = await seoOptimizer.analyzeSEO();
+          setSeoIssues(seoData.issues || []);
+        } catch (error) {
+          console.error('Error loading metrics:', error);
+        }
+      };
+
+      loadMetrics();
+    }
+  }, [isVisible]);
+
+  const handleOptimize = useCallback(async (type: string) => {
+    try {
+      switch (type) {
+        case 'performance':
+          await performanceOptimizer.optimize();
+          break;
+        case 'accessibility':
+          await accessibilityEnhancer.enhance();
+          break;
+        case 'seo':
+          await seoOptimizer.optimize();
+          break;
       }
-    };
-
-    loadData();
-
-    // Update every 30 seconds
-    const interval = setInterval(loadData, 30000);
-
-    return () => clearInterval(interval);
+      
+      // Refresh metrics
+      const perfMetrics = await performanceOptimizer.getMetrics();
+      setMetrics(perfMetrics);
+    } catch (error) {
+      console.error('Error optimizing:', error);
+    }
   }, []);
 
-  const getScoreColor = (score: number): string => {
-    if (score >= 90) return "text-green-600";
-    if (score >= 75) return "text-yellow-600";
-    if (score >= 60) return "text-orange-600";
-    return "text-red-600";
-  };
-
-  const getOverallColor = (overall: string): string => {
-    switch (overall) {
-      case "excellent":
-        return "text-green-600 bg-green-50";
-      case "good":
-        return "text-blue-600 bg-blue-50";
-      case "fair":
-        return "text-yellow-600 bg-yellow-50";
-      case "poor":
-        return "text-red-600 bg-red-50";
-      default:
-        return "text-gray-600 bg-gray-50";
-    }
-  };
-
-  const formatTimestamp = (date: Date | null): string => {
-    if (!date) return "Never";
-    return new Intl.RelativeTimeFormat("en", { numeric: "auto" }).format(
-      Math.floor((date.getTime() - Date.now()) / (1000 * 60)),
-      "minute",
-    );
-  };
-
-  const handleOptimize = () => {
-    EnhancementSuite.getInstance().initialize();
-    // Reload data after optimization
-    setTimeout(() => {
-      const health = {
-        overall: "good" as const,
-        performance: 85,
-        security: 90,
-        accessibility: 88,
-        reliability: 92,
-        recommendations: ["Monitor performance metrics", "Check security logs"],
-      };
-      const systemMetrics = EnhancementSuite.getInstance().getMetrics();
-      setHealthReport(health);
-      setMetrics(systemMetrics);
-    }, 1000);
-  };
-
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center p-8">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-        <span className="ml-3 text-gray-600">Loading system metrics...</span>
-      </div>
-    );
-  }
-
-  if (!healthReport || !metrics) {
-    return (
-      <div className="p-8 text-center">
-        <p className="text-red-600">Failed to load system data</p>
-      </div>
-    );
-  }
+  if (!isVisible) return null;
 
   return (
-    <div className="max-w-6xl mx-auto p-6 space-y-6">
-      <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold text-gray-900">Comprehensive System Dashboard</h1>
-        <button
-          onClick={handleOptimize}
-          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Optimize System
-        </button>
-      </div>
-
-      {/* Overall Health */}
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-gray-800">
-            Overall Health
-          </h2>
-          <span
-            className={`px-3 py-1 rounded-full text-sm font-medium ${getOverallColor(healthReport.overall)}`}
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white rounded-lg shadow-xl max-w-6xl w-full mx-4 max-h-[90vh] overflow-hidden">
+        <div className="flex items-center justify-between p-6 border-b">
+          <h2 className="text-2xl font-bold text-gray-900">Comprehensive System Dashboard</h2>
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-gray-600 transition-colors"
           >
-            {healthReport.overall.toUpperCase()}
-          </span>
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="text-center">
-            <div
-              className={`text-2xl font-bold ${getScoreColor(healthReport.performance)}`}
-            >
-              {healthReport.performance}
-            </div>
-            <div className="text-sm text-gray-600">Performance</div>
+        <div className="flex">
+          <div className="w-64 bg-gray-50 border-r">
+            <nav className="p-4">
+              {[
+                { id: 'overview', label: 'Overview', icon: '📊' },
+                { id: 'performance', label: 'Performance', icon: '⚡' },
+                { id: 'accessibility', label: 'Accessibility', icon: '♿' },
+                { id: 'seo', label: 'SEO', icon: '🔍' },
+                { id: 'security', label: 'Security', icon: '🔒' },
+              ].map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id as any)}
+                  className={`w-full flex items-center space-x-3 px-3 py-2 rounded-lg text-left transition-colors ${
+                    activeTab === tab.id
+                      ? 'bg-blue-100 text-blue-700'
+                      : 'text-gray-700 hover:bg-gray-100'
+                  }`}
+                >
+                  <span className="text-lg">{tab.icon}</span>
+                  <span>{tab.label}</span>
+                </button>
+              ))}
+            </nav>
           </div>
-          <div className="text-center">
-            <div
-              className={`text-2xl font-bold ${getScoreColor(healthReport.security)}`}
-            >
-              {healthReport.security}
-            </div>
-            <div className="text-sm text-gray-600">Security</div>
-          </div>
-          <div className="text-center">
-            <div
-              className={`text-2xl font-bold ${getScoreColor(healthReport.accessibility)}`}
-            >
-              {healthReport.accessibility}
-            </div>
-            <div className="text-sm text-gray-600">Accessibility</div>
-          </div>
-          <div className="text-center">
-            <div
-              className={`text-2xl font-bold ${getScoreColor(healthReport.reliability)}`}
-            >
-              {healthReport.reliability}
-            </div>
-            <div className="text-sm text-gray-600">Reliability</div>
-          </div>
-        </div>
-      </div>
 
-      {/* Performance Metrics */}
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">
-          Performance Metrics
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-          <div className="text-center">
-            <div className="text-lg font-semibold text-blue-600">
-              {metrics.performance.fcp.toFixed(0)}ms
-            </div>
-            <div className="text-sm text-gray-600">First Contentful Paint</div>
-          </div>
-          <div className="text-center">
-            <div className="text-lg font-semibold text-blue-600">
-              {metrics.performance.lcp.toFixed(0)}ms
-            </div>
-            <div className="text-sm text-gray-600">
-              Largest Contentful Paint
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="text-lg font-semibold text-blue-600">
-              {metrics.performance.fid.toFixed(0)}ms
-            </div>
-            <div className="text-sm text-gray-600">First Input Delay</div>
-          </div>
-          <div className="text-center">
-            <div className="text-lg font-semibold text-blue-600">
-              {metrics.performance.cls.toFixed(3)}
-            </div>
-            <div className="text-sm text-gray-600">Cumulative Layout Shift</div>
-          </div>
-          <div className="text-center">
-            <div className="text-lg font-semibold text-blue-600">
-              {metrics.performance.ttfb.toFixed(0)}ms
-            </div>
-            <div className="text-sm text-gray-600">Time to First Byte</div>
-          </div>
-        </div>
-      </div>
+          <div className="flex-1 p-6 overflow-y-auto">
+            {activeTab === 'overview' && (
+              <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="bg-blue-50 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-blue-900 mb-2">Performance Score</h3>
+                    <div className="text-3xl font-bold text-blue-600">
+                      {metrics ? Math.round(metrics.overallScore) : '--'}
+                    </div>
+                    <div className="text-sm text-blue-700 mt-1">out of 100</div>
+                  </div>
+                  
+                  <div className="bg-green-50 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-green-900 mb-2">Accessibility Score</h3>
+                    <div className="text-3xl font-bold text-green-600">
+                      {accessibilityMetrics ? Math.round(accessibilityMetrics.overallScore) : '--'}
+                    </div>
+                    <div className="text-sm text-green-700 mt-1">out of 100</div>
+                  </div>
+                  
+                  <div className="bg-purple-50 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-purple-900 mb-2">SEO Issues</h3>
+                    <div className="text-3xl font-bold text-purple-600">
+                      {seoIssues.length}
+                    </div>
+                    <div className="text-sm text-purple-700 mt-1">issues found</div>
+                  </div>
+                </div>
 
-      {/* Security & Accessibility */}
-      <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4">
-            Security Status
-          </h2>
-          <div className="space-y-3">
-            <div className="flex justify-between">
-              <span className="text-gray-600">Violations:</span>
-              <span
-                className={`font-semibold ${metrics.security.violationCount > 0 ? "text-red-600" : "text-green-600"}`}
-              >
-                {metrics.security.violationCount}
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Rate Limit Hits:</span>
-              <span
-                className={`font-semibold ${metrics.security.rateLimitHits > 0 ? "text-yellow-600" : "text-green-600"}`}
-              >
-                {metrics.security.rateLimitHits}
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Last Violation:</span>
-              <span className="font-semibold text-gray-800">
-                {formatTimestamp(metrics.security.lastViolation)}
-              </span>
-            </div>
-          </div>
-        </div>
+                <div className="bg-white border rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Alerts</h3>
+                  {alerts.length === 0 ? (
+                    <p className="text-gray-500">No recent alerts</p>
+                  ) : (
+                    alerts.map((alert) => (
+                      <div key={alert.id} className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg mb-2">
+                        <div className={`w-2 h-2 rounded-full ${
+                          alert.type === 'error' ? 'bg-red-500' :
+                          alert.type === 'warning' ? 'bg-yellow-500' : 'bg-blue-500'
+                        }`} />
+                        <div className="flex-1">
+                          <p className="text-sm font-medium text-gray-900">{alert.message}</p>
+                          <div className="text-xs mt-2 text-gray-600">
+                            {new Date(alert.timestamp).toLocaleString()}
+                          </div>
+                        </div>
+                      </div>
+                    ))
+                  )}
+                </div>
+              </div>
+            )}
 
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4">
-            Accessibility Status
-          </h2>
-          <div className="space-y-3">
-            <div className="flex justify-between">
-              <span className="text-gray-600">Violations:</span>
-              <span
-                className={`font-semibold ${metrics.accessibility.violationCount > 0 ? "text-red-600" : "text-green-600"}`}
-              >
-                {metrics.accessibility.violationCount}
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Compliance Score:</span>
-              <span
-                className={`font-semibold ${getScoreColor(metrics.accessibility.complianceScore * 100)}`}
-              >
-                {Math.round(metrics.accessibility.complianceScore * 100)}%
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Last Audit:</span>
-              <span className="font-semibold text-gray-800">
-                {formatTimestamp(metrics.accessibility.lastAudit)}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+            {activeTab === 'performance' && metrics && (
+              <div className="space-y-6">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-semibold text-gray-900">Performance Metrics</h3>
+                  <button
+                    onClick={() => handleOptimize('performance')}
+                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Optimize Performance
+                  </button>
+                </div>
 
-      {/* Error Tracking */}
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">
-          Error Tracking
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="text-center">
-            <div
-              className={`text-2xl font-bold ${metrics.errors.totalErrors > 0 ? "text-yellow-600" : "text-green-600"}`}
-            >
-              {metrics.errors.totalErrors}
-            </div>
-            <div className="text-sm text-gray-600">Total Errors</div>
-          </div>
-          <div className="text-center">
-            <div
-              className={`text-2xl font-bold ${metrics.errors.criticalErrors > 0 ? "text-red-600" : "text-green-600"}`}
-            >
-              {metrics.errors.criticalErrors}
-            </div>
-            <div className="text-sm text-gray-600">Critical Errors</div>
-          </div>
-          <div className="text-center">
-            <div className="text-sm text-gray-800 font-medium">
-              Last Error: {formatTimestamp(metrics.errors.lastError)}
-            </div>
-          </div>
-        </div>
-      </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-white border rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Core Web Vitals</h4>
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-600">LCP</span>
+                        <span className="font-semibold">{metrics.lcp}ms</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-600">FID</span>
+                        <span className="font-semibold">{metrics.fid}ms</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-600">CLS</span>
+                        <span className="font-semibold">{metrics.cls}</span>
+                      </div>
+                    </div>
+                  </div>
 
-      {/* Recommendations */}
-      {healthReport.recommendations.length > 0 && (
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4">
-            Recommendations
-          </h2>
-          <ul className="space-y-2">
-            {healthReport.recommendations.map((recommendation, index) => (
-              <li key={index} className="flex items-start">
-                <span className="text-yellow-500 mr-2">⚠️</span>
-                <span className="text-gray-700">{recommendation}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+                  <div className="bg-white border rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Optimization Suggestions</h4>
+                    <div className="space-y-2">
+                      {metrics.suggestions?.slice(0, 3).map((suggestion, index) => (
+                        <div key={index} className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                          <p className="text-sm text-yellow-800">{suggestion.description}</p>
+                          <div className="text-xs text-yellow-600 mt-1">
+                            Impact: {suggestion.impact}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
 
-      {/* Status Indicators */}
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">
-          System Status
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="flex items-center">
-            <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-            <span className="text-sm text-gray-600">Performance Monitor</span>
-          </div>
-          <div className="flex items-center">
-            <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-            <span className="text-sm text-gray-600">Security Scanner</span>
-          </div>
-          <div className="flex items-center">
-            <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-            <span className="text-sm text-gray-600">Accessibility Checker</span>
-          </div>
-          <div className="flex items-center">
-            <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-            <span className="text-sm text-gray-600">Error Handler</span>
+            {activeTab === 'accessibility' && accessibilityMetrics && (
+              <div className="space-y-6">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-semibold text-gray-900">Accessibility Metrics</h3>
+                  <button
+                    onClick={() => handleOptimize('accessibility')}
+                    className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                  >
+                    Enhance Accessibility
+                  </button>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-white border rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Issues Found</h4>
+                    <div className="space-y-3">
+                      {accessibilityMetrics.issues?.slice(0, 5).map((issue, index) => (
+                        <div key={index} className="p-3 bg-red-50 border border-red-200 rounded-lg">
+                          <p className="text-sm font-medium text-red-800">{issue.type}</p>
+                          <p className="text-xs text-red-600 mt-1">{issue.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="bg-white border rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Improvements</h4>
+                    <div className="space-y-2">
+                      {accessibilityMetrics.improvements?.slice(0, 3).map((improvement, index) => (
+                        <div key={index} className="p-3 bg-green-50 border border-green-200 rounded-lg">
+                          <p className="text-sm text-green-800">{improvement}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeTab === 'seo' && (
+              <div className="space-y-6">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-semibold text-gray-900">SEO Analysis</h3>
+                  <button
+                    onClick={() => handleOptimize('seo')}
+                    className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+                  >
+                    Optimize SEO
+                  </button>
+                </div>
+
+                <div className="bg-white border rounded-lg p-6">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Issues Found</h4>
+                  <div className="space-y-3">
+                    {seoIssues.slice(0, 5).map((issue, index) => (
+                      <div key={index} className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                        <p className="text-sm font-medium text-yellow-800">{issue.type}</p>
+                        <p className="text-xs text-yellow-600 mt-1">{issue.description}</p>
+                        <div className="text-xs text-yellow-600 mt-1">
+                          Priority: {issue.priority}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeTab === 'security' && (
+              <div className="space-y-6">
+                <h3 className="text-xl font-semibold text-gray-900">Security Dashboard</h3>
+                <div className="bg-white border rounded-lg p-6">
+                  <p className="text-gray-600">Security monitoring features coming soon...</p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
