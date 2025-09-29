@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect, useMemo, useCallback, Suspense } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AppRouter } from './router';
 
 // import { resourcePreloader } from './utils/resourcePreloader';
@@ -12,6 +13,34 @@ import './index.css';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
+import LoadingSpinner from './components/LoadingSpinner';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import SEOOptimizer from './components/SEOOptimizer';
+import AdvancedAnalytics from './components/AdvancedAnalytics';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import NotificationSystem from './components/NotificationSystem';
+import PerformanceTracker from './components/PerformanceTracker';
+
+// Optional/advanced components are referenced; if they do not exist, comment these imports
+// import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+// import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+// import RealTimePerformanceMonitor from './components/RealTimePerformanceMonitor';
+// import WebsiteEnhancements from './components/WebsiteEnhancements';
+// import SystemHealthDashboard from './components/SystemHealthDashboard';
+// import PerformanceWidget from './components/PerformanceWidget';
+// import PerformanceDashboard from './components/PerformanceDashboard';
+// import CommandPalette from './components/CommandPalette';
+// import AdvancedMonitoringDashboard from './components/AdvancedMonitoringDashboard';
+// import EnhancedCommandPalette from './components/EnhancedCommandPalette';
+// import ComprehensivePerformanceDashboard from './components/ComprehensivePerformanceDashboard';
+// import ComprehensiveMonitoringDashboard from './components/ComprehensiveMonitoringDashboard';
+// import PerformanceOptimizationPanel from './components/PerformanceOptimizationPanel';
+// import ErrorRecoveryDashboard from './components/ErrorRecoveryDashboard';
+// import SystemStatusIndicator from './components/SystemStatusIndicator';
+// import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
+// import KeyboardShortcutsHelp from './components/KeyboardShortcutsHelp';
+// import KeyboardShortcutsManager from './components/KeyboardShortcutsManager';
 
 export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
@@ -459,7 +488,7 @@ export default function App(): React.JSX.Element {
   }, [handleScroll, handleClick, trackEngagement]);
 
   if (isLoading) {
-    return <ModernLoadingSpinner progress={loadingProgress} />;
+    return <LoadingSpinner text={`Loading ${loadingProgress}%`} />;
   }
 
   return (
