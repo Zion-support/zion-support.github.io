@@ -15,7 +15,7 @@ export class StructuredDataManager {
     url: string;
     logo?: string;
     description?: string;
-    contactPoint?: any;
+    contactPoint?: unknown;
     sameAs?: string[];
   }): void {
     const schema = {
@@ -30,7 +30,7 @@ export class StructuredDataManager {
     name: string;
     url: string;
     description?: string;
-    potentialAction?: any;
+    potentialAction?: unknown;
   }): void {
     const schema = {
       "@context": "https://schema.org",
@@ -43,9 +43,9 @@ export class StructuredDataManager {
   addServiceSchema(data: {
     name: string;
     description: string;
-    provider: any;
+    provider: unknown;
     areaServed?: string;
-    hasOfferCatalog?: any;
+    hasOfferCatalog?: unknown;
   }): void {
     const schema = {
       "@context": "https://schema.org",

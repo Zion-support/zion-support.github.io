@@ -34,8 +34,8 @@
     "build:netlify": "pnpm run build:optimized",
     "build:ci": "pnpm run lint && pnpm run build:no-check && pnpm run test:ci",
     "health-check": "pnpm run type-check && pnpm run lint && pnpm run build:no-check",
-    "preview:optimized": "vite preview --port 3000 --host",
-    "audit:performance": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
+    "preview:optimized": "pnpm run build:ultimate && pnpm run preview",
+    "audit:performance": "lighthouse http://localhost:4173 --output=json --output-path=./lighthouse-report.json",
     "optimize:images": "node scripts/optimize-images.js",
     "optimize:css": "node scripts/optimize-css.js",
     "optimize:all": "npm run lint:comprehensive && npm run type-check:comprehensive && npm run build:comprehensive && npm run test:comprehensive",
@@ -81,7 +81,9 @@
     "lint:comprehensive": "eslint . --ext .ts,.tsx,.js,.jsx --fix --max-warnings 0",
     "type-check:comprehensive": "tsc --noEmit --strict",
     "pwa:audit": "lighthouse http://localhost:4173 --only-categories=pwa --output=html --output-path=./pwa-audit-report.html",
-    "integration:test": "npm run build:comprehensive && npm run test:comprehensive && npm run security:audit"
+    "integration:test": "npm run build:comprehensive && npm run test:comprehensive && npm run security:audit",
+    "build:ultimate": "NODE_ENV=production pnpm run build:minimal && pnpm run optimize:assets",
+    "optimize:assets": "node scripts/asset-optimizer.js"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.13",

@@ -51,7 +51,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
   });
 
   // Performance tracking
-  const performanceMetrics = usePerformanceTracker((newMetrics: any) => {
+  const _performanceMetrics = usePerformanceTracker((newMetrics: unknown) => {
       setRealTimeMetrics({
         fps: newMetrics.fps,
         memoryUsage: newMetrics.memoryUsage || 0,

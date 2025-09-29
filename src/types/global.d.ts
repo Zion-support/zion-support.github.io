@@ -2,7 +2,7 @@
 // Global type definitions for browser APIs
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (...args: unknown[]) => void;
     requestIdleCallback?: (callback: () => void, options?: { timeout?: number }) => number;
   }
   
