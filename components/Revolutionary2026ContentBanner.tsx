@@ -47,113 +47,64 @@ export default function Revolutionary2026ContentBanner() {
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">100%</div>
-              <div className="text-blue-200 text-sm">Privacy Safe</div>
+              <div className="text-blue-200 text-sm">Privacy Protected</div>
             </div>
           </div>
 
           {/* Featured content grid */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <Link href="/blog/ai-neural-interfaces-2026" className="group">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">🧠</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white group-hover:text-yellow-400 transition-colors">
-                      AI Neural Interfaces
-                    </h3>
-                    <p className="text-blue-200 text-sm">Brain-Computer Integration</p>
-                  </div>
-                </div>
-                <p className="text-blue-100 text-sm mb-4">
-                  Revolutionary brain-computer interfaces with 95% accuracy and real-time processing capabilities.
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-blue-300">28 min read</span>
-                  <span className="text-yellow-400 font-semibold text-sm group-hover:text-white transition-colors">
-                    Read More →
-                  </span>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/blog/ai-space-tech-2026" className="group">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">🚀</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white group-hover:text-yellow-400 transition-colors">
-                      AI Space Technology
-                    </h3>
-                    <p className="text-blue-200 text-sm">Autonomous Space Operations</p>
-                  </div>
-                </div>
-                <p className="text-blue-100 text-sm mb-4">
-                  Autonomous space operations and interplanetary AI with 99.9% reliability and $2B cost savings.
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-blue-300">32 min read</span>
-                  <span className="text-yellow-400 font-semibold text-sm group-hover:text-white transition-colors">
-                    Read More →
-                  </span>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/blog/ai-synthetic-data-2026" className="group">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">🔒</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white group-hover:text-yellow-400 transition-colors">
-                      AI Synthetic Data
-                    </h3>
-                    <p className="text-blue-200 text-sm">Privacy-Preserving AI</p>
-                  </div>
-                </div>
-                <p className="text-blue-100 text-sm mb-4">
-                  Privacy-preserving AI training with 99% accuracy and complete data protection.
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-blue-300">25 min read</span>
-                  <span className="text-yellow-400 font-semibold text-sm group-hover:text-white transition-colors">
-                    Read More →
-                  </span>
-                </div>
-              </div>
-            </Link>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-4xl mb-4">🧠</div>
+              <h3 className="text-xl font-bold mb-3">Neural Interfaces</h3>
+              <p className="text-blue-100 text-sm mb-4">
+                Direct brain-computer communication with 99% accuracy and real-time processing.
+              </p>
+              <div className="text-yellow-400 font-semibold text-sm">99% Accuracy</div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-bold mb-3">Space Technology</h3>
+              <p className="text-blue-100 text-sm mb-4">
+                Autonomous space operations with 99.9% mission success rates and interplanetary AI.
+              </p>
+              <div className="text-yellow-400 font-semibold text-sm">99.9% Success</div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-4xl mb-4">🔐</div>
+              <h3 className="text-xl font-bold mb-3">Synthetic Data</h3>
+              <p className="text-blue-100 text-sm mb-4">
+                Privacy-preserving AI training with unlimited data generation and 100% protection.
+              </p>
+              <div className="text-yellow-400 font-semibold text-sm">100% Privacy</div>
+            </div>
           </div>
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/blog"
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+              href="/content-hub"
+              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all transform hover:scale-105"
             >
-              🚀 Explore All 2026 Content
+              Explore All Content
             </Link>
             <Link
-              href="/case-studies"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+              href="/contact"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all"
             >
-              📊 View Success Stories
+              Get Free Consultation
             </Link>
           </div>
 
           {/* Trust indicators */}
           <div className="mt-12 pt-8 border-t border-white/20">
-            <p className="text-blue-200 text-sm mb-4">Trusted by industry leaders worldwide</p>
+            <p className="text-blue-200 text-sm mb-4">Trusted by leading companies worldwide</p>
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-              <div className="text-2xl font-bold text-white">Fortune 500</div>
-              <div className="text-2xl font-bold text-white">NASA</div>
-              <div className="text-2xl font-bold text-white">SpaceX</div>
-              <div className="text-2xl font-bold text-white">Tesla</div>
-              <div className="text-2xl font-bold text-white">Microsoft</div>
+              <div className="text-2xl font-bold">Fortune 500</div>
+              <div className="text-2xl font-bold">Space Corp</div>
+              <div className="text-2xl font-bold">Health AI</div>
+              <div className="text-2xl font-bold">Tech Giants</div>
             </div>
           </div>
         </div>
