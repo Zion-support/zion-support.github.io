@@ -944,6 +944,84 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 22,
     active: true,
     priority: 3
+  },
+  {
+    id: 'breakthrough-2026-content-banner',
+    message: '🚀 BREAKTHROUGH 2026: Revolutionary AI Content & Services - 12 New Articles, 6 New Services, 6 Success Stories',
+    ctaText: 'Explore Now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 25,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'ai-platform-architecture-2026-banner',
+    message: '🏗️ NEW: AI Platform Architecture 2026 - Scalable Enterprise AI Infrastructure with 99.9% Uptime',
+    ctaText: 'Read Guide',
+    ctaLink: '/blog/ai-platform-architecture-2026',
+    backgroundColor: 'bg-gradient-to-r from-blue-600 to-purple-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'multimodal-ai-2026-banner',
+    message: '🎯 NEW: Multimodal AI Applications 2026 - Text, Image, Audio & Video Intelligence with 90% Accuracy',
+    ctaText: 'Explore AI',
+    ctaLink: '/blog/ai-multimodal-applications-2026',
+    backgroundColor: 'bg-gradient-to-r from-purple-600 to-pink-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'ai-autonomous-infrastructure-2026-service',
+    message: '🤖 NEW SERVICE: AI Autonomous Infrastructure Platform - Self-Healing Systems with 99.9% Uptime',
+    ctaText: 'Explore Service',
+    ctaLink: '/services/ai-autonomous-infrastructure-platform',
+    backgroundColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 22,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'quantum-ai-hybrid-computing-2026-service',
+    message: '⚛️ NEW SERVICE: Quantum-AI Hybrid Computing - 1000x Faster Problem Solving with Revolutionary Capabilities',
+    ctaText: 'Learn More',
+    ctaLink: '/services/quantum-ai-hybrid-computing',
+    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 22,
+    active: true,
+    priority: 2
+  },
+  {
+    id: 'enterprise-ai-platform-modernization-case-study',
+    message: '🏆 SUCCESS STORY: Enterprise AI Platform Modernization - Fortune 500 Achieves 95% Automation & $15M Savings',
+    ctaText: 'View Case Study',
+    ctaLink: '/case-studies/enterprise-ai-platform-modernization',
+    backgroundColor: 'bg-gradient-to-r from-green-600 to-emerald-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 25,
+    active: true,
+    priority: 2
   }
 ];
 
@@ -973,14 +1051,18 @@ export const getContentByTag = (tag: string) => {
 // Import new content
 import { newBlogPosts2025, featuredBlogPosts, trendingBlogPosts } from './new-blog-posts-2025';
 import { newServices2025, featuredServices, trendingServices } from './new-services-2025';
+import { newContent2026January, featuredNewContent2026January, trendingNewContent2026January } from './new-content-2026-january';
+import { newServices2026, featuredServices2026, trendingServices2026 } from './new-services-2026';
 
 export const getRecentContent = (limit: number = 3) => {
   const allContent = [
     ...blogPosts.map(post => ({ ...post, type: 'blog' as const })),
     ...newBlogPosts2025.map(post => ({ ...post, type: 'blog' as const, date: post.publishedAt })),
+    ...newContent2026January.map(item => ({ ...item, type: item.type as const, date: item.publishedDate })),
     ...caseStudies.map(study => ({ ...study, type: 'case-study' as const })),
     ...services.map(service => ({ ...service, type: 'service' as const })),
-    ...newServices2025.map(service => ({ ...service, type: 'service' as const, date: '2025-01-30' }))
+    ...newServices2025.map(service => ({ ...service, type: 'service' as const, date: '2025-01-30' })),
+    ...newServices2026.map(service => ({ ...service, type: 'service' as const, date: service.publishedDate }))
   ];
   
   return allContent
@@ -993,4 +1075,53 @@ export const getRecentContent = (limit: number = 3) => {
 };
 
 // Export new content for use in components
-export { newBlogPosts2025, featuredBlogPosts, trendingBlogPosts, newServices2025, featuredServices, trendingServices };
+export { 
+  newBlogPosts2025, featuredBlogPosts, trendingBlogPosts, 
+  newServices2025, featuredServices, trendingServices,
+  newContentJanuary2025, featuredNewContent, trendingNewContent,
+  newCaseStudies2025, featuredCaseStudies, trendingCaseStudies,
+  newInsights2025, featuredInsights, trendingInsights
+};
+
+// New banners for fresh content (Sept 29, 2025)
+promotionalBanners.unshift(
+  {
+    id: 'fresh-sep-29-2025-agentic-observability',
+    message: '🧠 New: Agentic Observability Scorecards 2026 — Traces that Predict Outcomes',
+    ctaText: 'Read Article',
+    ctaLink: '/blog/agentic-observability-scorecards-2026',
+    backgroundColor: 'bg-gradient-to-r from-cyan-700 to-blue-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-sep-29-2025-edge-privacy-cdn',
+    message: '🔐 New: Edge Privacy CDN 2026 — Scoped IDs, Local Filters, Zero PII',
+    ctaText: 'Explore',
+    ctaLink: '/blog/edge-privacy-cdn-2026',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-sep-29-2025-platform-golden-paths',
+    message: '📈 New: Platform Golden Paths + SLOs 2026 — Adoption that Drives ROI',
+    ctaText: 'See Scorecards',
+    ctaLink: '/blog/platform-golden-paths-slos-2026',
+    backgroundColor: 'bg-gradient-to-r from-emerald-700 to-teal-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  }
+);

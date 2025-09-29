@@ -6,116 +6,119 @@ interface ContentItem {
   id: string;
   title: string;
   description: string;
-  category: string;
+  type: 'blog' | 'case-study' | 'guide';
   readTime: string;
   metrics: {
-    value: string;
     label: string;
-    color: string;
+    value: string;
   }[];
   href: string;
-  featured: boolean;
+  featured?: boolean;
 }
 
 const contentItems: ContentItem[] = [
   {
-    id: 'mega-trends',
-    title: 'AI Mega Trends 2026: Complete Enterprise Guide',
-    description: 'Discover the 15 mega trends reshaping enterprise AI. From autonomous operations to quantum computing, learn how to capitalize on $50B+ market opportunities.',
-    category: 'Trends & Insights',
-    readTime: '45 min',
+    id: 'ai-advanced-automation',
+    title: 'AI Advanced Automation 2026',
+    description: 'Next-generation business process automation with 99% efficiency and $10M+ savings',
+    type: 'blog',
+    readTime: '25 min read',
     metrics: [
-      { value: '$50B+', label: 'Market Size', color: 'text-blue-600' },
-      { value: '300%', label: 'Growth Rate', color: 'text-green-600' },
-      { value: '15', label: 'Mega Trends', color: 'text-purple-600' }
+      { label: 'Process Efficiency', value: '99%' },
+      { label: 'Annual Savings', value: '$10M+' },
+      { label: 'Operations', value: '24/7' }
     ],
-    href: '/blog/ai-2026-mega-trends',
+    href: '/blog/ai-advanced-automation-2026',
     featured: true
   },
   {
-    id: 'success-story',
-    title: 'AI Transformation Mega Success: $25M ROI Case Study',
-    description: 'See how a Fortune 500 company achieved $25M ROI with comprehensive AI transformation. 99% automation, 90% cost reduction, and complete business revolution.',
-    category: 'Case Study',
-    readTime: '30 min',
+    id: 'ai-customer-experience',
+    title: 'AI Customer Experience Revolution',
+    description: 'Transform CX with AI-powered personalization and 95% customer satisfaction',
+    type: 'blog',
+    readTime: '22 min read',
     metrics: [
-      { value: '$25M', label: 'Total ROI', color: 'text-green-600' },
-      { value: '99%', label: 'Automation', color: 'text-blue-600' },
-      { value: '18mo', label: 'Timeline', color: 'text-purple-600' }
+      { label: 'Customer Satisfaction', value: '95%' },
+      { label: 'Engagement Growth', value: '300%' },
+      { label: 'Revenue Impact', value: '$5M+' }
     ],
-    href: '/case-studies/ai-transformation-mega-success-2026',
+    href: '/blog/ai-customer-experience-revolution-2026',
     featured: true
   },
   {
-    id: 'autonomous-ops',
-    title: 'AI Autonomous Operations 2026: Complete Self-Managing Systems',
-    description: 'Master autonomous AI enterprise operations with zero-touch business management, predictive analytics, and self-optimizing systems for 99.9% uptime.',
-    category: 'Technical Guide',
-    readTime: '25 min',
+    id: 'ai-quantum-computing',
+    title: 'AI Quantum Computing Breakthrough',
+    description: 'Revolutionary quantum-AI convergence with 1000x faster optimization',
+    type: 'blog',
+    readTime: '28 min read',
     metrics: [
-      { value: '99.9%', label: 'Uptime', color: 'text-green-600' },
-      { value: '90%', label: 'Cost Reduction', color: 'text-blue-600' },
-      { value: '95%', label: 'Automation', color: 'text-purple-600' }
+      { label: 'Faster Optimization', value: '1000x' },
+      { label: 'Accuracy Improvement', value: '99.9%' },
+      { label: 'Cost Savings', value: '$50M+' }
     ],
-    href: '/blog/ai-autonomous-operations-2026',
-    featured: false
+    href: '/blog/ai-quantum-computing-breakthrough-2026',
+    featured: true
   },
   {
-    id: 'quantum-ai',
-    title: 'AI Quantum Computing 2026: Next-Generation Intelligence',
-    description: 'Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities for enterprise applications.',
-    category: 'Innovation',
-    readTime: '30 min',
+    id: 'ai-manufacturing-excellence',
+    title: 'AI Manufacturing Excellence 2026',
+    description: 'Fortune 500 manufacturer achieved $25M ROI with smart manufacturing',
+    type: 'case-study',
+    readTime: 'Fortune 500',
     metrics: [
-      { value: '1000x', label: 'Faster', color: 'text-purple-600' },
-      { value: '95%', label: 'Accuracy', color: 'text-green-600' },
-      { value: '$12M', label: 'Returns', color: 'text-blue-600' }
+      { label: 'Total ROI', value: '$25M' },
+      { label: 'Manufacturing Efficiency', value: '98%' },
+      { label: 'Productivity Gains', value: '400%' }
     ],
-    href: '/blog/ai-quantum-computing-2026',
-    featured: false
+    href: '/case-studies/ai-manufacturing-excellence-2026',
+    featured: true
   },
   {
-    id: 'zero-trust',
-    title: 'AI Zero Trust Security 2026: Enterprise-Grade Protection',
-    description: 'Implement zero-trust AI security architecture with 99.7% threat detection, autonomous incident response, and comprehensive enterprise protection.',
-    category: 'Security',
-    readTime: '20 min',
+    id: 'ai-enterprise-automation',
+    title: 'AI Enterprise Automation Success',
+    description: 'Fortune 500 company achieved $15M ROI with comprehensive automation',
+    type: 'case-study',
+    readTime: 'Fortune 500',
     metrics: [
-      { value: '99.7%', label: 'Detection', color: 'text-red-600' },
-      { value: '30s', label: 'Response', color: 'text-green-600' },
-      { value: '95%', label: 'Accuracy', color: 'text-blue-600' }
+      { label: 'Total ROI', value: '$15M' },
+      { label: 'Process Efficiency', value: '98%' },
+      { label: 'Productivity Gains', value: '300%' }
     ],
-    href: '/blog/ai-zero-trust-security-2026',
-    featured: false
-  },
-  {
-    id: 'foundation-models',
-    title: 'AI Foundation Models 2026: Enterprise Implementation Playbook',
-    description: 'Master foundation model ecosystems with 95% faster development cycles, 80% cost reduction, and enterprise-grade AI applications.',
-    category: 'Implementation',
-    readTime: '35 min',
-    metrics: [
-      { value: '95%', label: 'Faster Dev', color: 'text-green-600' },
-      { value: '80%', label: 'Cost Reduction', color: 'text-blue-600' },
-      { value: '90%', label: 'Accuracy', color: 'text-purple-600' }
-    ],
-    href: '/blog/ai-foundation-models-2026',
-    featured: false
+    href: '/case-studies/ai-enterprise-automation-success-2026',
+    featured: true
   }
 ];
 
 const categories = ['All', 'Trends & Insights', 'Case Study', 'Technical Guide', 'Innovation', 'Security', 'Implementation'];
 
 export default function InteractiveContentShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedType, setSelectedType] = useState<'all' | 'blog' | 'case-study' | 'guide'>('all');
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
-  const filteredItems = selectedCategory === 'All' 
+  const filteredItems = selectedType === 'all' 
     ? contentItems 
-    : contentItems.filter(item => item.category === selectedCategory);
+    : contentItems.filter(item => item.type === selectedType);
+
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'blog': return 'bg-blue-100 text-blue-800';
+      case 'case-study': return 'bg-green-100 text-green-800';
+      case 'guide': return 'bg-purple-100 text-purple-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'blog': return '📝';
+      case 'case-study': return '📊';
+      case 'guide': return '📖';
+      default: return '📄';
+    }
+  };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-6">
@@ -124,76 +127,76 @@ export default function InteractiveContentShowcase() {
             </span>
           </div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Discover Revolutionary AI Content
+            Interactive Content Showcase
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our comprehensive library of AI insights, case studies, and implementation guides. 
-            Filter by category to find exactly what you need to transform your business.
+            Explore our latest AI insights, success stories, and breakthrough technologies. 
+            Filter by content type to find exactly what you're looking for.
           </p>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((category) => (
+        {/* Filter Tabs */}
+        <div className="flex flex-wrap justify-center gap-4 mb-8">
+          {[
+            { key: 'all', label: 'All Content', count: contentItems.length },
+            { key: 'blog', label: 'Blog Articles', count: contentItems.filter(item => item.type === 'blog').length },
+            { key: 'case-study', label: 'Case Studies', count: contentItems.filter(item => item.type === 'case-study').length },
+            { key: 'guide', label: 'Guides', count: contentItems.filter(item => item.type === 'guide').length }
+          ].map(({ key, label, count }) => (
             <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                selectedCategory === category
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+              key={key}
+              onClick={() => setSelectedType(key as any)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                selectedType === key
+                  ? 'bg-blue-600 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-blue-50 border border-gray-200'
               }`}
             >
-              {category}
+              {label} ({count})
             </button>
           ))}
         </div>
 
         {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredItems.map((item) => (
             <div
               key={item.id}
-              className={`bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group cursor-pointer ${
-                hoveredItem === item.id ? 'scale-105' : ''
-              } ${item.featured ? 'ring-2 ring-blue-500' : ''}`}
+              className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
+                item.featured ? 'ring-2 ring-blue-500' : ''
+              }`}
               onMouseEnter={() => setHoveredItem(item.id)}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              {item.featured && (
-                <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 text-center text-sm font-semibold">
-                  ⭐ FEATURED CONTENT
-                </div>
-              )}
-              
               <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                    item.category === 'Case Study' ? 'bg-green-100 text-green-800' :
-                    item.category === 'Technical Guide' ? 'bg-blue-100 text-blue-800' :
-                    item.category === 'Innovation' ? 'bg-purple-100 text-purple-800' :
-                    item.category === 'Security' ? 'bg-red-100 text-red-800' :
-                    item.category === 'Implementation' ? 'bg-orange-100 text-orange-800' :
-                    'bg-gray-100 text-gray-800'
-                  }`}>
-                    {item.category}
-                  </span>
-                  <span className="text-gray-500 text-sm">{item.readTime}</span>
+                {/* Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center gap-2">
+                    <span className="text-2xl">{getTypeIcon(item.type)}</span>
+                    <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getTypeColor(item.type)}`}>
+                      {item.type === 'case-study' ? 'Case Study' : item.type === 'blog' ? 'Blog' : 'Guide'}
+                    </span>
+                  </div>
+                  {item.featured && (
+                    <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-semibold">
+                      Featured
+                    </span>
+                  )}
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                {/* Title and Description */}
+                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                   {item.title}
                 </h3>
-
-                <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+                <p className="text-gray-600 mb-4 line-clamp-3">
                   {item.description}
                 </p>
 
                 {/* Metrics */}
-                <div className="flex gap-4 mb-6">
+                <div className="grid grid-cols-3 gap-2 mb-4">
                   {item.metrics.map((metric, index) => (
                     <div key={index} className="text-center">
-                      <div className={`text-lg font-bold ${metric.color}`}>
+                      <div className="text-lg font-bold text-blue-600">
                         {metric.value}
                       </div>
                       <div className="text-xs text-gray-500">
@@ -203,44 +206,35 @@ export default function InteractiveContentShowcase() {
                   ))}
                 </div>
 
+                {/* Read Time */}
+                <div className="text-sm text-gray-500 mb-4">
+                  {item.readTime}
+                </div>
+
+                {/* CTA Button */}
                 <Link
                   href={item.href}
-                  className="inline-block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg"
+                  className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
+                    hoveredItem === item.id
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-blue-50'
+                  }`}
                 >
-                  {item.category === 'Case Study' ? 'View Case Study →' :
-                   item.category === 'Technical Guide' ? 'Read Guide →' :
-                   item.category === 'Implementation' ? 'Get Playbook →' :
-                   'Read Article →'}
+                  {item.type === 'case-study' ? 'View Case Study' : 'Read Article'} →
                 </Link>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-xl">
-            <h3 className="text-2xl font-bold mb-4">
-              Can't Find What You're Looking For?
-            </h3>
-            <p className="text-xl mb-6 opacity-90">
-              Our AI experts can create custom content tailored to your specific needs and challenges.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-              >
-                Request Custom Content
-              </Link>
-              <Link
-                href="/blog"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                Browse All Content
-              </Link>
-            </div>
-          </div>
+        {/* View All Button */}
+        <div className="text-center mt-12">
+          <Link
+            href="/blog"
+            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+          >
+            View All Content
+          </Link>
         </div>
       </div>
     </section>
