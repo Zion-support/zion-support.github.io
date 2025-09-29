@@ -37,6 +37,24 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     featured: true
   },
   {
+    id: 'fresh-oct-2025-content-drop',
+    message: '📚 NEW: 4 Articles — Agent Safety Budgets, Privacy‑First Telemetry, On‑Device Agents',
+    ctaText: 'Read Now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0,
+    variant: 'info',
+    icon: '📚',
+    animation: 'fade-in',
+    badge: 'FRESH OCT',
+    featured: true
+  },
+  {
     id: 'quantum-ai-hybrid-computing',
     message: '⚛️ BREAKTHROUGH: Quantum-AI Hybrid Computing - 1000x Faster Processing Power',
     ctaText: 'Schedule Demo',

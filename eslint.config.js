@@ -1,3 +1,28 @@
+export default [
+  {
+    ignores: [
+      "backup/**",
+      "backup-*/**",
+      "**/*.backup.*",
+      "**/*.bak",
+      "**/*.disabled/**",
+      "**/*.disabled_*/*",
+      "**/*.corrupted.*/**",
+      "**/corrupted_*/**",
+      "**/components_backup/**",
+      "**/components-disabled/**",
+      "**/components.disabled/**",
+      "**/pages.disabled/**",
+      "**/pages.broken/**",
+      "**/pages_backup_conflict/**",
+      "**/src.disabled/**",
+      "**/apps.backup/**",
+      "**/automation_backup/**",
+      "**/cypress_backup/**",
+    ],
+  },
+];
+
 // eslint.config.js
 import js from "@eslint/js";
 import globals from "globals";

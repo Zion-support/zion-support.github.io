@@ -19,6 +19,24 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
+    slug: "agent-safety-budgets-2026",
+    title: "Agent Safety Budgets 2026: Guardrails for Autonomous Actions",
+    description: "Budget risky actions, add PR checks, and wire rollbacks for reliable agent releases.",
+    category: "AI Engineering",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-telemetry-2026",
+    title: "Privacy‑First Telemetry 2026: Signal‑Rich, PII‑Safe Observability",
+    description: "Scoped IDs, field‑level filters, and retention policies that keep insights high and risk low.",
+    category: "Observability",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-cybersecurity-automation-2025",
     title: "AI Cybersecurity Automation: From Detections to Autonomic Response",
     description: "Behavioral detections, policy tests, and runbooks that auto-contain incidents under 60 seconds.",
