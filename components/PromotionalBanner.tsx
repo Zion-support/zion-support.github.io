@@ -112,3 +112,46 @@ export const CaseStudyBanner = () => (
     hideAfter={12}
   />
 );
+
+export const NewBlogBanner = () => (
+  <PromotionalBanner
+    message="🔥 New: AI Revolution 2025 Guide - Complete Business Transformation Strategy"
+    ctaText="Read Now"
+    ctaLink="/blog/ai-revolution-2025"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const AnalyticsPlatformBanner = () => (
+  <PromotionalBanner
+    message="🚀 Launch: AI Analytics Platform - Transform Data into Actionable Insights"
+    ctaText="Explore Platform"
+    ctaLink="/services/ai-analytics-platform"
+    backgroundColor="bg-gradient-to-r from-teal-600 to-cyan-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const TechCorpSuccessBanner = () => (
+  <PromotionalBanner
+    message="🏆 Success Story: TechCorp Achieved 90% Efficiency Gain with AI Transformation"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/techcorp-ai-transformation"
+    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const FreeTrialBanner = () => (
+  <PromotionalBanner
+    message="🎯 Limited Time: 30-Day Free Trial for AI Analytics Platform - No Credit Card Required"
+    ctaText="Start Free Trial"
+    ctaLink="/services/ai-analytics-platform#pricing"
+    backgroundColor="bg-gradient-to-r from-yellow-600 to-orange-600"
+    autoHide={false}
+  />
+);
