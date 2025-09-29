@@ -211,6 +211,16 @@ class EnhancedPerformanceMonitor {
     });
   }
 
+  private trackError(error: Error | unknown): void {
+    this.createAlert({
+      type: 'warning',
+      title: 'JavaScript Error Detected',
+      description: (error instanceof Error ? error.message : String(error)) || 'Unknown error occurred',
+      impact: 'medium',
+      action: 'Check console for details'
+    });
+  }
+
   private monitorMemoryUsage(): void {
     if (!('memory' in performance)) {
       return;
