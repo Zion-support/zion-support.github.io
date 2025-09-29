@@ -10,38 +10,16 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-    slug: "edge-inference-blueprints",
-    title: "Edge Inference Blueprints: Sub‑100ms UX in Production",
+    slug: "edge-inference-patterns-2025",
+    title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:
-      "Practical patterns for on‑device models, caching, and streaming that keep latency under 100ms.",
+      "Latency budgets, on‑device models, and caching strategies for lightning‑fast AI UX at the edge.",
     category: "Architecture",
     publishedAt: "2025-09-29",
     featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "platform-scorecards-that-stick",
-    title: "Platform Scorecards That Actually Drive Adoption",
-    description:
-      "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
-    category: "Platform Engineering",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "9 min read",
-  },
-  {
-    slug: "genai-guardrails-in-the-wild",
-    title: "GenAI Guardrails in the Wild: Evals, Policies, and Drift Control",
-    description:
-      "A field guide to combining offline suites with online policy tests to keep quality high.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: false,
     readTime: "7 min read",
   },
   {
-=======
     slug: "ai-governance-checklist-2025",
     title: "AI Governance Checklist 2025: Ship Fast Without Breaking Policy",
     description:
@@ -72,14 +50,23 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
->>>>>>> feat/new-content-and-promo
-    slug: "edge-inference-patterns-2025",
-    title: "Edge Inference Patterns for Sub‑100ms Experiences",
+    slug: "platform-scorecards-that-stick",
+    title: "Platform Scorecards That Actually Drive Adoption",
     description:
-      "Latency budgets, on‑device models, and caching strategies for lightning‑fast AI UX at the edge.",
-    category: "Architecture",
+      "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
+    category: "Platform Engineering",
     publishedAt: "2025-09-29",
     featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "genai-guardrails-in-the-wild",
+    title: "GenAI Guardrails in the Wild: Evals, Policies, and Drift Control",
+    description:
+      "A field guide to combining offline suites with online policy tests to keep quality high.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: false,
     readTime: "7 min read",
   },
   {

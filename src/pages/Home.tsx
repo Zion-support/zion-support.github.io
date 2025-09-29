@@ -104,22 +104,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-<<<<<<< HEAD
-<<<<<<< HEAD
-          title="🚀 Fresh: Real‑Time Data Pipelines, Edge Caching, and Platform Scorecards"
-          description="New article + insights: reliable streaming blueprints, sub‑100ms edge patterns, and platform metrics that drive adoption."
-          ctaText="See what's new"
-          ctaLink="/blog/real-time-data-pipelines-2025"
-=======
-          title="🚀 NEW: Platform Engineering Blueprint + GenAI Guardrails"
-          description="Fresh guides on golden paths for 100+ teams and policy tests that scale"
-=======
           title="🚀 NEW: AI Governance, Edge Flags, and GenAI Telemetry posts"
           description="Fresh articles and quick insights just landed. See what's new this week."
->>>>>>> feat/new-content-and-promo
           ctaText="Read the latest"
           ctaLink="/blog"
->>>>>>> b2dbe5039de9a77d186175357687b44a294adf1f
           dismissible={true}
         />
         {/* Animated background elements */}
