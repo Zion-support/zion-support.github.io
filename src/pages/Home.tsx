@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { memo, useMemo } from "react";
 import LatestContentBanner from "../components/LatestContentBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
@@ -31,7 +32,11 @@ import { latestInsights } from "../content/insights";
 import { newInsights, featuredInsights } from "../content/new-insights";
 import LatestInsights from "../components/LatestInsights";
 
-const Home = () => {
+const Home = memo(() => {
+  // Memoize expensive computations
+  const memoizedInsights = useMemo(() => latestInsights.slice(0, 6), []);
+  const memoizedFeaturedInsights = useMemo(() => featuredInsights.slice(0, 4), []);
+  
   return (
     <>
       <Helmet>
@@ -867,6 +872,8 @@ const Home = () => {
       </div>
     </>
   );
-};
+});
+
+Home.displayName = 'Home';
 
 export default Home;

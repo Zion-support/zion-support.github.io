@@ -25,6 +25,9 @@ class AccessibilityEnhancer {
   private metrics: AccessibilityMetric[] = [];
   private isInitialized = false;
   private focusTrapElements: HTMLElement[] = [];
+  private resizeObserver?: ResizeObserver;
+  private mutationObserver?: MutationObserver;
+  private performanceObserver?: PerformanceObserver;
 
   constructor() {
     this.config = this.getDefaultConfig();
@@ -52,11 +55,48 @@ class AccessibilityEnhancer {
     this.setupColorContrast();
     this.setupReducedMotion();
     this.observeAccessibility();
+    this.setupPerformanceMonitoring();
   }
 
   // Alias for compatibility with callers using `init()`
   public init(): void {
     this.initialize();
+  }
+
+  public destroy(): void {
+    if (!this.isInitialized) return;
+    
+    // Cleanup observers
+    this.resizeObserver?.disconnect();
+    this.mutationObserver?.disconnect();
+    this.performanceObserver?.disconnect();
+    
+    // Cleanup event listeners
+    document.removeEventListener('keydown', this.handleKeyDown.bind(this));
+    document.removeEventListener('focusin', this.handleFocusIn.bind(this));
+    document.removeEventListener('focusout', this.handleFocusOut.bind(this));
+    
+    this.isInitialized = false;
+    this.focusTrapElements = [];
+  }
+
+  private setupPerformanceMonitoring(): void {
+    if (!this.config.screenReaderSupport) return;
+    
+    try {
+      this.performanceObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'measure' && entry.name.includes('accessibility')) {
+            console.log(`Accessibility performance: ${entry.name} took ${entry.duration}ms`);
+          }
+        });
+      });
+      
+      this.performanceObserver.observe({ entryTypes: ['measure'] });
+    } catch (error) {
+      console.warn('PerformanceObserver not supported:', error);
+    }
   }
 
   private setupKeyboardNavigation(): void {
