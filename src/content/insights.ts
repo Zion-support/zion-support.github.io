@@ -639,7 +639,7 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "Practical steps to harden data flows, model registries, and deployment targets for ML systems.",
     category: "Security",
-    date: "2025-08-20",
+    date: "2025-01-18",
     readMinutes: 7,
   },
   {
@@ -648,7 +648,7 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "How we helped three clients reduce cloud spend by 32% on average without sacrificing performance.",
     category: "Cloud",
-    date: "2025-08-05",
+    date: "2025-01-15",
     readMinutes: 5,
   },
   {
@@ -657,7 +657,7 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "A no‑nonsense playbook for data quality, lineage, and access controls you can adopt this quarter.",
     category: "Data",
-    date: "2025-07-18",
+    date: "2025-01-12",
     readMinutes: 8,
   },
   {
@@ -944,94 +944,6 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "Exploring practical blockchain applications in supply chain, finance, and digital identity management that deliver measurable business value.",
     category: "Blockchain",
-=======
-    id: "real-time-data-pipelines-blueprint",
-    title: "Real-Time Data Pipelines: Blueprint for Production Success",
-    summary:
-      "Architecture patterns, monitoring strategies, and reliability patterns for streaming data at enterprise scale.",
-    category: "Data Engineering",
-    date: "2025-01-21",
-    readMinutes: 7,
-  },
-  {
-    id: "platform-scorecards-adoption",
-    title: "Platform Scorecards: Metrics That Actually Drive Team Adoption",
-    summary:
-      "Designing scorecards that align platform work with business outcomes and accelerate developer productivity.",
-    category: "Platform Engineering",
-    date: "2025-01-21",
-    readMinutes: 6,
-  },
-  {
-    id: "genai-production-deployment",
-    title: "GenAI in Production: Deployment Patterns That Scale",
-    summary:
-      "From model serving to monitoring: practical patterns for deploying generative AI applications in production.",
-    category: "GenAI",
-    date: "2025-01-21",
-    readMinutes: 8,
-  },
-  {
-    id: "microservices-observability-real-world",
-    title: "Microservices Observability: Real-World Implementation Patterns",
-    summary:
-      "Distributed tracing, metrics, and logging strategies that actually work in complex microservices environments.",
-    category: "Observability",
-    date: "2025-01-20",
-    readMinutes: 7,
-  },
-  {
-    id: "cloud-native-security-patterns",
-    title: "Cloud-Native Security: Protecting Modern Applications",
-    summary:
-      "Security strategies for containerized applications, serverless functions, and cloud-native infrastructure.",
-    category: "Security",
-    date: "2025-01-20",
-    readMinutes: 6,
-  },
-  {
-    id: "ai-automation-roi-metrics",
-    title: "AI Automation ROI: Measuring What Actually Matters",
-    summary:
-      "Key metrics and frameworks for quantifying the business impact of AI workflow automation investments.",
-    category: "AI & Automation",
-    date: "2025-01-19",
-    readMinutes: 5,
-  },
-  {
-    id: "edge-computing-use-cases",
-    title: "Edge Computing: Real-World Use Cases That Drive Value",
-    summary:
-      "Practical applications of edge computing across industries, from IoT to real-time analytics.",
-    category: "Edge Computing",
-    date: "2025-01-19",
-    readMinutes: 6,
-  },
-  {
-    id: "data-governance-implementation",
-    title: "Data Governance: Practical Implementation Strategies",
-    summary:
-      "Step-by-step approach to implementing data governance that balances compliance with business agility.",
-    category: "Data Governance",
-    date: "2025-01-18",
-    readMinutes: 8,
-  },
-  {
-    id: "fintech-ai-innovations",
-    title: "FinTech AI Innovations: Transforming Financial Services",
-    summary:
-      "How AI is revolutionizing financial services through intelligent automation and personalized experiences.",
-    category: "FinTech",
-    date: "2025-01-18",
-    readMinutes: 7,
-  },
-  {
-    id: "sustainable-tech-trends",
-    title: "Sustainable Technology: Green IT Trends for 2025",
-    summary:
-      "Emerging trends in sustainable technology practices that reduce environmental impact while maintaining performance.",
-    category: "Sustainability",
->>>>>>> origin/cursor/create-and-deploy-new-content-6ec2
     date: "2025-01-17",
     readMinutes: 5,
   },
@@ -1216,6 +1128,34 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
 >>>>>>> origin/cursor/create-and-deploy-new-content-6ec2
+=======
+    id: "realtime-data-pipelines",
+    title: "Building Reliable Real-Time Data Pipelines",
+    summary:
+      "Architecture patterns and implementation strategies for robust streaming data infrastructure.",
+    category: "Data Engineering",
+    date: "2025-01-05",
+    readMinutes: 10,
+  },
+  {
+    id: "zero-trust-security",
+    title: "Implementing Zero Trust Security Architecture",
+    summary:
+      "A comprehensive guide to modern security frameworks that protect against evolving cyber threats.",
+    category: "Security",
+    date: "2025-01-03",
+    readMinutes: 8,
+  },
+  {
+    id: "microservices-best-practices",
+    title: "Microservices Architecture: Lessons from 100+ Deployments",
+    summary:
+      "Real-world insights on designing, implementing, and maintaining microservices at scale.",
+    category: "Architecture",
+    date: "2025-01-01",
+    readMinutes: 7,
+  },
+>>>>>>> origin/cursor/create-and-deploy-new-content-8cb8
 ];
 
 export default latestInsights;
