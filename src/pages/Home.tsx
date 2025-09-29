@@ -27,6 +27,7 @@ import ModernFeatures from "../components/ModernFeatures";
 import NewContentAnnouncement from "../components/NewContentAnnouncement";
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import NewContentShowcase from "../components/NewContentShowcase";
+import NewContentShowcase2025 from "../components/NewContentShowcase2025";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
@@ -35,6 +36,7 @@ import { latestInsights } from "../content/insights";
 import { featuredInsights, newInsights } from "../content/new-insights";
 import { posts } from "../content/posts";
 import { newArticles2025 } from "../content/new-articles-2025";
+import { featuredBlogPosts, featuredServices } from "../content/content-config";
 
 const Home = () => {
   return (
@@ -287,6 +289,9 @@ const Home = () => {
 
         {/* New Content Showcase */}
         <NewContentShowcase />
+
+        {/* New Content Showcase 2025 */}
+        <NewContentShowcase2025 />
 
         {/* New Services Showcase */}
         <section className="py-20 bg-white relative overflow-hidden">
