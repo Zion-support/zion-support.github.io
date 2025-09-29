@@ -1,0 +1,14 @@
+import React from "react";
+
+<<<<<<< HEAD
+const ContentValueTestimonials: React.FC = () => {
+  return null;
+};
+
+export default ContentValueTestimonials;
+
+=======
+export default function ContentValueTestimonials() {
+  return null;
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b86b

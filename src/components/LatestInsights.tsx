@@ -1,5 +1,6 @@
 import React from "react";
 
-const LatestInsights: React.FC = () => null;
+export default function LatestInsights(): React.JSX.Element {
+  return <section />;
+}
 
-export default LatestInsights;

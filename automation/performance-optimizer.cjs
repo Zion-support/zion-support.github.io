@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-<<<<<<< HEAD
+ HEAD
 /**
  * Performance Optimization Script for Zion Tech Group
  * Analyzes and optimizes application performance
@@ -139,17 +139,7 @@ const reportPath = 'performance-optimization-report.json';
 fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2));
 
 console.log('\n📊 Performance Optimization Summary');
-console.log('====================================');
-console.log(`Recommendations: ${performanceReport.recommendations.length}`);
-console.log(`High Priority: ${performanceReport.recommendations.filter(r => r.priority === 'high').length}`);
-console.log(`Medium Priority: ${performanceReport.recommendations.filter(r => r.priority === 'medium').length}`);
-
-console.log(`\n📄 Report saved to: ${reportPath}`);
-
-process.exit(0);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+console.log(' origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 =======

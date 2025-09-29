@@ -1,0 +1,14 @@
+import React from "react";
+
+export default function Header(): React.JSX.Element {
+<<<<<<< HEAD
+  return (
+    <header className="py-4 px-6">
+      <div className="text-sm text-slate-500">Zion Tech Group</div>
+    </header>
+  );
+=======
+  return <header />;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-94f6
+}
+

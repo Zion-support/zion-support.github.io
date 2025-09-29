@@ -1,20 +1,17 @@
 import React from "react";
 
-export type Notification = { id: string; message: string };
+export type Notification = { id: string; message?: string };
 
-const NotificationSystem: React.FC<{
+type NotificationSystemProps = {
   notifications: Notification[];
   onRemove: (id: string) => void;
-}> = ({ notifications }) => {
-  if (!notifications?.length) return null;
-  return (
-    <div aria-live="polite" className="fixed bottom-4 right-4 space-y-2">
-      {notifications.map((n) => (
-        <div key={n.id} className="bg-black/70 text-white px-3 py-2 rounded">{n.message}</div>
-      ))}
-    </div>
-  );
 };
 
-export default NotificationSystem;
+export default function NotificationSystem(props: NotificationSystemProps): React.JSX.Element {
+  void props;
+  return <div aria-hidden="true" style={{ display: "none" }} />;
+}
 
+export default function NotificationSystem({ notifications, onRemove }: { notifications: Notification[]; onRemove: (id: string) => void; }): JSX.Element {
+  return <div id="notification-root" />;
+}

@@ -14,6 +14,8 @@ import {
 import React, { useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
+const Header = () => <header />;
+const Footer = () => <footer />;
 
 interface BlogPost {
   id: number;
@@ -179,7 +181,20 @@ export default function Blog(): React.JSX.Element {
 
   // Map content/posts entries into this page's structure
   const mappedFromContent: BlogPost[] = useMemo(() => {
-    return [];
+    return contentPosts.map((p, index) => ({
+      id: 10000 + index,
+      title: p.title,
+      excerpt: p.description,
+      content: "Read more on dedicated article page",
+      author: "Zion Tech Group Team",
+      date: p.publishedAt,
+      readTime: p.readTime ?? "6 min read",
+      category: p.category,
+      tags: [p.category.replace(/\s+/g, " ")],
+      image: "/api/placeholder/400/250",
+      featured: !!p.featured,
+      views: 0
+    }));
   }, []);
 
   const blogPosts: BlogPost[] = [...mappedFromContent, ...staticPosts];

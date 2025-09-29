@@ -1,0 +1,17 @@
+import React from "react";
+
+<<<<<<< HEAD
+export default function PerformanceMonitor({ showDashboard }: { showDashboard?: boolean }) {
+  return null;
+}
+=======
+type PerformanceMonitorProps = {
+  showDashboard?: boolean;
+};
+
+export default function PerformanceMonitor(props: PerformanceMonitorProps): React.JSX.Element {
+  void props;
+  return <div aria-hidden="true" style={{ display: "none" }} />;
+}
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8261

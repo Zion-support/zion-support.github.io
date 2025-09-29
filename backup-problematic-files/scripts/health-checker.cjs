@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+ HEAD
 <<<<<<< HEAD
 #!/usr/bin/env node;
 /**
@@ -238,9 +238,7 @@ if (require.main === module) {}
   const checker = new HealthChecker();
   checker.run().catch(console.error)};
 module.exports = HealthChecker;
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+ cursor/expand-services-advertise-and-build-project-4b36
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -319,7 +317,6 @@ checker.checkFileExists('next.config.js', 'Next.js configuration');
 checker.checkPackageJson();
 checker.checkNodeModules();
 checker.generateReport();
-<<<<<<< HEAD
+ HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+ cursor/expand-services-advertise-and-build-project-4b36

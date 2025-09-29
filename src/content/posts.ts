@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-incident-response-2026",
+    title: "AI Incident Response 2026: Playbooks, Canaries, and SLAs",
+    description: "Practical incident response for AI features with on-call playbooks and KPI-linked canaries.",
+    category: "AI Operations",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "platform-observability-scorecards-2026",
+    title: "Platform Observability Scorecards: Tie Telemetry to Business Outcomes",
+    description: "Connect traces, errors, and latency to adoption, retention, and revenue with actionable scorecards.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-preserving-rag-2026",
+    title: "Privacy‑Preserving RAG: Redaction, Scoping, and Audit Trails",
+    description: "Protect sensitive data in RAG with redaction, auth‑scoped corpora, and audit trails.",
+    category: "AI Security",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-platform-roi-2025",
     title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
     description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",
@@ -62,8 +89,34 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  }
-  ,
+  },
+  {
+    slug: "secure-agents-runtime-2026",
+    title: "Secure AI Agents Runtime: Sandboxes, Egress Policies, and Traces",
+    description: "A production checklist for running AI agents safely with isolation, policy gates, and observability.",
+    category: "AI Security",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-e2e-observability-2026",
+    title: "Edge E2E Observability: User-Centric Tracing and <100ms Telemetry",
+    description: "Blueprint for capturing user-centric telemetry across edge, CDN, and app layers without latency tax.",
+    category: "Architecture",
+    publishedAt: "2025-10-09",
+    featured: false,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-cost-controllers-2026",
+    title: "AI Cost Controllers: Budgets, Tiered Quality, and Guardrails",
+    description: "Keep GenAI spend predictable with dynamic budgets, tiered models, and policy‑backed routes.",
+    category: "Cloud",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "6 min read"
+  },
   {
     slug: "ai-governance-blueprint-2025",
     title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
@@ -81,8 +134,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: false,
     readTime: "8 min read"
-  }
-  ,
+  },
   {
     slug: "ai-governance-scorecards-2026",
     title: "AI Governance 2026: Scorecards Engineers Actually Use",
@@ -100,8 +152,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-07",
     featured: true,
     readTime: "8 min read"
-  }
-  ,
+  },
   {
     slug: "ai-platform-roadmaps-2026",
     title: "AI Product Roadmaps 2026: From Bet to Business Impact",
@@ -128,8 +179,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-06",
     featured: false,
     readTime: "6 min read"
-  }
-  ,
+  },
   {
     slug: "genai-platform-blueprint-2025",
     title: "GenAI Platform Blueprint: Shipping Weekly With Guardrails",
@@ -149,6 +199,33 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: false,
     readTime: "6 min read",
+  },
+  {
+    slug: "ai-risk-register-outcomes-2025",
+    title: "AI Risk Register That Drives Outcomes: Owners, SLAs, and Policy Tests",
+    description: "Make risk programs actionable with owned mitigations, CI policy checks, and measurable SLAs.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "zero-regret-rollouts-edge-flags-2025",
+    title: "Zero‑Regret Rollouts: Edge Flags with Budgets and Instant Rollback",
+    description: "Segmented rollouts with risk budgets, telemetry, and rollback triggers under 100ms.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "online-genai-evals-canaries-2025",
+    title: "Online GenAI Evals: Canary Checks That Keep Velocity High",
+    description: "Run lightweight, KPI‑linked canaries in prod to prevent regressions while shipping weekly.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
   },
   {
     slug: "llm-policy-testing-2025",
