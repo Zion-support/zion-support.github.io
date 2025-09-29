@@ -36,6 +36,7 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "7 min read"
   },
+  // New posts
   {
     slug: "quantum-computing-business-applications-2025",
     title: "Quantum Computing: Practical Business Applications in 2025",
@@ -61,7 +62,7 @@ export const posts: BlogPost[] = [
     category: "AI Strategy",
     publishedAt: "2025-10-04",
     featured: true,
-    readTime: "9 min read"
+    readTime: "9 min",
   },
   {
     slug: "production-rag-architectures-that-work-2025",
