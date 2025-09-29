@@ -679,3 +679,34 @@ posts.push(
     readTime: "8 min read"
   }
 );
+
+// Additional new content aligned with homepage promo links
+posts.push(
+  {
+    slug: "ai-breach-drills-2026",
+    title: "AI Breach Drills 2026: Rehearsals for Safe Autonomy",
+    description: "Table‑top to live‑fire: practice budgeted actions, approvals, and instant rollback with real traces.",
+    category: "Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-insights-telemetry-2026",
+    title: "Privacy‑First Insights 2026: Signal‑Rich Telemetry Without PII",
+    description: "Scoped IDs, field‑level filters, and retention windows that keep insights high and risk low.",
+    category: "Observability",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-blue-green-releases-2026",
+    title: "Blue‑Green Agent Releases 2026: Safe, Measurable Rollouts",
+    description: "Ship agent updates with budgets, health probes, and live traces for fast rollback under 60s.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  }
+);

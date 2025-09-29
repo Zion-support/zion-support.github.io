@@ -516,6 +516,19 @@ export const promotionalBanners: PromotionalBanner[] = [
     priority: 0
   },
   {
+    id: 'fresh-sep-29-2025-new-trio',
+    message: '🚀 New: AI Breach Drills • Privacy‑First Insights • Agent Blue‑Green',
+    ctaText: 'Explore',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
     id: 'fresh-oct-13-2025-new-content',
     message: '🚀 New: AI Safety Budgets 2026 + Edge Personalization 2026',
     ctaText: 'Read the latest',
