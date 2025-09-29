@@ -28,6 +28,55 @@ class AccessibilityEnhancer {
   private resizeObserver?: ResizeObserver;
   private mutationObserver?: MutationObserver;
   private performanceObserver?: PerformanceObserver;
+  // Bound event handlers to allow proper add/remove
+  private onKeyDown = (event: KeyboardEvent): void => {
+    // Skip to main content
+    if (event.key === 'Tab' && (event as KeyboardEvent).shiftKey && document.activeElement === document.body) {
+      const skipLink = document.querySelector('[data-skip-link]');
+      if (skipLink) {
+        (skipLink as HTMLElement).focus();
+        event.preventDefault();
+      }
+    }
+
+    // Escape key handling
+    if (event.key === 'Escape') {
+      const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
+      if (modal) {
+        this.closeModal(modal as HTMLElement);
+      }
+    }
+
+    // Arrow key navigation for menus
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      const menu = document.querySelector('[role="menu"]:focus-within') as HTMLElement | null;
+      if (menu) {
+        this.handleMenuNavigation(event as KeyboardEvent, menu);
+      }
+    }
+
+    // Trap focus in open modal when tabbing
+    if (event.key === 'Tab') {
+      const modal = document.querySelector('[role="dialog"][aria-hidden="false"]') as HTMLElement | null;
+      if (modal) {
+        this.trapFocus(event as KeyboardEvent, modal);
+      }
+    }
+  };
+
+  private onClick = (event: MouseEvent): void => {
+    const target = event.target as HTMLElement;
+    if (target && target.hasAttribute('data-close-modal')) {
+      this.restoreFocus();
+    }
+  };
+
+  private onFocusIn = (event: FocusEvent): void => {
+    const target = event.target as HTMLElement;
+    if (target && target.tabIndex < 0 && target.hasAttribute('tabindex')) {
+      console.warn('Element with negative tabindex received focus:', target);
+    }
+  };
 
   constructor() {
     this.config = this.getDefaultConfig();
@@ -47,7 +96,6 @@ class AccessibilityEnhancer {
 
   public initialize(): void {
     if (this.isInitialized || typeof window === 'undefined') return;
-    
     this.isInitialized = true;
     this.setupKeyboardNavigation();
     this.setupFocusManagement();
@@ -72,9 +120,9 @@ class AccessibilityEnhancer {
     this.performanceObserver?.disconnect();
     
     // Cleanup event listeners
-    document.removeEventListener('keydown', this.handleKeyDown.bind(this));
-    document.removeEventListener('focusin', this.handleFocusIn.bind(this));
-    document.removeEventListener('focusout', this.handleFocusOut.bind(this));
+    document.removeEventListener('keydown', this.onKeyDown);
+    document.removeEventListener('click', this.onClick);
+    document.removeEventListener('focusin', this.onFocusIn);
     
     this.isInitialized = false;
     this.focusTrapElements = [];
@@ -99,64 +147,16 @@ class AccessibilityEnhancer {
     }
   }
 
-  /**
-   * Backward-compatible initialize alias
-   */
-  public initialize(): void {
-    this.init();
-  }
+  // Removed duplicate initialize method to avoid TS2393
 
   private setupKeyboardNavigation(): void {
     if (!this.config.keyboardNavigation) return;
-
-    document.addEventListener('keydown', (event) => {
-      // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && document.activeElement === document.body) {
-        const skipLink = document.querySelector('[data-skip-link]');
-        if (skipLink) {
-          (skipLink as HTMLElement).focus();
-          event.preventDefault();
-        }
-      }
-
-      // Escape key handling
-      if (event.key === 'Escape') {
-        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
-        if (modal) {
-          this.closeModal(modal as HTMLElement);
-        }
-      }
-
-      // Arrow key navigation for menus
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-        const menu = document.querySelector('[role="menu"]:focus-within') as HTMLElement | null;
-        if (menu) {
-          this.handleMenuNavigation(event as KeyboardEvent, menu);
-        }
-      }
-    });
+    document.addEventListener('keydown', this.onKeyDown);
   }
 
   private setupFocusManagement(): void {
     if (!this.config.focusManagement) return;
-
-    // Trap focus in modals
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Tab') {
-        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]') as HTMLElement | null;
-        if (modal) {
-          this.trapFocus(event as KeyboardEvent, modal);
-        }
-      }
-    });
-
-    // Restore focus after modal closes
-    document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement;
-      if (target.hasAttribute('data-close-modal')) {
-        this.restoreFocus();
-      }
-    });
+    document.addEventListener('click', this.onClick);
   }
 
   private setupAriaLabels(): void {
@@ -242,12 +242,7 @@ class AccessibilityEnhancer {
     if (typeof window === 'undefined') return;
 
     // Monitor focus changes
-    document.addEventListener('focusin', (event) => {
-      const target = event.target as HTMLElement;
-      if (target.tabIndex < 0 && target.hasAttribute('tabindex')) {
-        console.warn('Element with negative tabindex received focus:', target);
-      }
-    });
+    document.addEventListener('focusin', this.onFocusIn);
 
     // Monitor aria-label changes
     const observer = new MutationObserver((mutations: MutationRecord[]) => {
