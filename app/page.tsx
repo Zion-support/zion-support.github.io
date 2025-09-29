@@ -64,6 +64,7 @@ import {
   AIFoundationModelsBanner,
   LatestContent2026Banner
 } from '../components/NewContent2026PromotionalBanners';
+import { NewContent2026ShowcaseBanner } from '../components/NewContent2026ShowcaseBanner';
 import { 
   RevolutionaryAutomationBanner,
   AIRevolutionaryAutomationBanner,
@@ -114,6 +115,7 @@ export default function HomePage() {
         </div>
       </div>
       {/* New 2026 Content Promotional Banners */}
+      <NewContent2026ShowcaseBanner />
       <RevolutionaryAutomationBanner />
       <AIRevolutionaryAutomationBanner />
       <AICostOptimizationBanner />
