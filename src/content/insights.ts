@@ -309,56 +309,27 @@ export const latestInsights: InsightArticle[] = [
     id: "ai-automation-roi-calculator",
     title: "AI Automation ROI Calculator: Measure Your Business Impact",
     summary:
-<<<<<<< HEAD
       "A practical framework for calculating the return on investment from AI automation initiatives, with real-world case studies and templates.",
     category: "AI Strategy",
-    date: "2025-01-21",
-=======
-      "A practical framework for calculating returns from AI automation, with templates and examples.",
-    category: "AI Strategy",
     date: "2025-09-30",
->>>>>>> 81638d69d231a03f40bb5bb5a82cd115e085aaf6
     readMinutes: 8,
   },
   {
     id: "cloud-native-microservices-2025",
     title: "Cloud-Native Microservices: Patterns for 2025",
     summary:
-<<<<<<< HEAD
       "Essential patterns and practices for building scalable, resilient microservices architectures in modern cloud environments.",
     category: "Architecture",
-    date: "2025-01-21",
-=======
-      "Resilience, contracts, and observability patterns for modern microservices in the cloud.",
-    category: "Architecture",
     date: "2025-09-30",
->>>>>>> 81638d69d231a03f40bb5bb5a82cd115e085aaf6
     readMinutes: 10,
   },
   {
     id: "enterprise-ai-governance-framework",
-<<<<<<< HEAD
-    title: "Enterprise AI Governance Framework: From Strategy to Implementation",
-    summary:
-      "Comprehensive governance framework for enterprise AI adoption, covering policy, risk management, and operational excellence.",
-    category: "AI Governance",
-    date: "2025-01-21",
-    readMinutes: 12,
-  },
-  {
-    id: "saas-platform-scaling-strategies",
-    title: "SAAS Platform Scaling Strategies: From Startup to Enterprise",
-    summary:
-      "Proven strategies for scaling SAAS platforms from early-stage to enterprise, covering technical and business considerations.",
-    category: "Platform Engineering",
-    date: "2025-01-21",
-=======
     title: "Enterprise AI Governance: From Policy to Practice",
     summary:
       "A pragmatic governance framework that balances speed, safety, and accountability for AI at scale.",
     category: "AI Governance",
     date: "2025-09-30",
->>>>>>> 81638d69d231a03f40bb5bb5a82cd115e085aaf6
     readMinutes: 9,
   },
   {
