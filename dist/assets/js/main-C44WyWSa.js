@@ -1,7 +1,7 @@
-import { j as jsxRuntimeExports, H as Helmet, S as Sparkles, R as Rocket, L as Link, A as ArrowRight, Z as Zap, e as CircleCheckBig, c as Shield, U as Users, G as Globe, b as Star, T as TrendingUp, g as Target, f as Award, M as MessageSquare, P as Phone, i as Mail, k as MapPin, C as Clock, r as reactExports, l as Search, m as User, a as Calendar, n as Bot, o as Code, p as ChartColumn, F as FileText, d as BookOpen, q as Cloud, s as Smartphone, D as Database, t as Play, u as Download, v as Lightbulb, w as Monitor, x as ExternalLink, B as Brain, y as Settings, z as Routes, I as Route, J as ReactDOM, K as React, N as HelmetProvider, O as BrowserRouter } from './chunk-CgqDn1Gy.js';
-import { H as Header_default, N as NewContentAnnouncement_default, L as LatestContentBanner_default, a as NewContentPromoBanner_default, T as TrendingContentBanner_default, C as ContentPromotionBanner_default, b as LatestInsights_default, M as ModernFeatures_default, c as ContentValueTestimonials_default, E as EnhancedTestimonials_default, d as EnhancedNewsletterSignup_default, e as NewServicesShowcase_default, f as LatestArticlesShowcase_default, S as SuccessStoriesShowcase_default, g as EnhancedContactForm_default, F as Footer_default, B as BlogPromotionBanner_default, h as SEOOptimizer_default } from './chunk-RE6nDjnz.js';
+import { j as jsxRuntimeExports, H as Helmet, S as Sparkles, R as Rocket, L as Link, Z as Zap, e as CircleCheckBig, A as ArrowRight, c as Shield, U as Users, G as Globe, b as Star, T as TrendingUp, g as Target, f as Award, r as reactExports, i as Search, k as User, a as Calendar, C as Clock, l as Bot, m as Code, n as ChartColumn, F as FileText, d as BookOpen, o as Cloud, p as Smartphone, D as Database, P as Play, q as Download, s as Lightbulb, M as Monitor, t as ExternalLink, B as Brain, u as Settings, v as Routes, w as Route, x as ReactDOM, y as React, z as HelmetProvider, I as BrowserRouter } from './chunk-CxfzcOjV.js';
+import { H as Header_default, N as NewContentAnnouncement_default, L as LatestContentBanner_default, a as NewContentPromoBanner_default, T as TrendingContentBanner_default, C as ContentPromotionBanner_default, M as ModernFeatures_default, b as NewServicesShowcase_default, c as LatestArticlesShowcase_default, S as SuccessStoriesShowcase_default, F as Footer_default, B as BlogPromotionBanner_default, d as SEOOptimizer_default } from './chunk-FW3YqZzn.js';
 import { s as securityManager, a as accessibilityEnhancer } from './chunk-DX-FpWyO.js';
-import './chunk-r63Fct2h.js';
+import './chunk-DAl6g_1b.js';
 
 true              &&(function polyfill() {
   const relList = document.createElement("link").relList;
@@ -770,139 +770,157 @@ newInsights.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime
 
 const posts = [
   {
-    slug: "ai-platform-roi-2025",
-    title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
-    description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-03",
+    slug: "ai-incident-response-2026",
+    title: "AI Incident Response 2026: Playbooks, Canaries, and SLAs",
+    description: "Practical incident response for AI features with on-call playbooks and KPI-linked canaries.",
+    category: "AI Operations",
+    publishedAt: "2025-10-09",
     featured: true,
     readTime: "7 min read"
   },
   {
-    slug: "secure-ml-supply-chain-2025",
-    title: "Secure ML Supply Chain: From SBOMs to Model Lineage",
-    description: "End-to-end provenance and controls for datasets, models, and inference routes.",
-    category: "Security",
-    publishedAt: "2025-10-03",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "edge-cdn-ml-personalization-2025",
-    title: "Edge CDN + On‑Device ML: Personalization Under 100ms",
-    description: "Combine edge KV, signed configs, and tiny models for private, real‑time personalization.",
-    category: "Edge Computing",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "ai-sales-copilot-2025",
-    title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
-    description: "Wire CRMs, build prompt libraries, and add evals that correlate with win‑rates.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "genai-evals-in-production-2025",
-    title: "GenAI Evals in Production: Policy Tests That Scale",
-    description: "Layered evaluation: offline suites, pre-merge checks, and online canaries tied to KPIs.",
+    slug: "agentops-slo-handbook-2025",
+    title: "AgentOps SLO Handbook: Keeping Autonomous Systems Reliable",
+    description: "Define SLOs, budgets, and rollback-ready canaries for agent workflows in production.",
     category: "GenAI",
-    publishedAt: "2025-09-30",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "platform-observability-scorecards-2026",
+    title: "Platform Observability Scorecards: Tie Telemetry to Business Outcomes",
+    description: "Connect traces, errors, and latency to adoption, retention, and revenue with actionable scorecards.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-09",
     featured: true,
     readTime: "8 min read"
   },
   {
-    slug: "feature-flags-edge-2025",
-    title: "Feature Flags at the Edge: <100ms Global Releases",
-    description: "Consistency models, cache strategies, and validation flows for instant global rollouts.",
-    category: "Architecture",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "ai-governance-blueprint-2025",
-    title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
-    description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-29",
+    slug: "ai-platform-engineering-2025",
+    title: "AI Platform Engineering 2025: Scorecards, Trains, and Golden Paths",
+    description: "Practical platform patterns that link capabilities to adoption, SLOs, and ROI.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-08",
     featured: true,
     readTime: "9 min read"
   },
   {
-    slug: "real-time-genai-guardrails-2025",
-    title: "Real‑Time GenAI Guardrails: Inline Filters, Canaries, and Evals",
-    description: "How to run fast with live canaries, inline moderation, and KPI‑linked evals at scale.",
+    slug: "serverless-inference-cost-playbook-2025",
+    title: "Serverless Inference Cost Playbook: Latency Budgets Without Bill Shock",
+    description: "Concurrency shaping, tiered models, and result caching to cut spend 35–60%.",
     category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "8 min read"
-  },
-  {
-    slug: "ai-governance-scorecards-2026",
-    title: "AI Governance 2026: Scorecards Engineers Actually Use",
-    description: "Guardrails wired to product KPIs with PR checks and online canaries that speed teams up.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-07",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "freshness-aware-rag-v2",
-    title: "Freshness‑Aware RAG v2: TTL Budgets and Versioned Corpora",
-    description: "Keep answers accurate with freshness windows, async warmups, and KPI‑aligned evaluation.",
-    category: "GenAI",
-    publishedAt: "2025-10-07",
+    publishedAt: "2025-10-08",
     featured: true,
     readTime: "8 min read"
   },
   {
-    slug: "ai-platform-roadmaps-2026",
-    title: "AI Product Roadmaps 2026: From Bet to Business Impact",
-    description: "Outcome-led roadmaps that connect bets to scorecards, trains, and shipped value.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-06",
+    slug: "privacy-preserving-rag-2026",
+    title: "Privacy‑Preserving RAG: Redaction, Scoping, and Audit Trails",
+    description: "Protect sensitive data in RAG with redaction, auth‑scoped corpora, and audit trails.",
+    category: "AI Architecture",
+    publishedAt: "2025-10-09",
     featured: true,
-    readTime: "9 min read"
+    readTime: "6 min read"
   },
   {
-    slug: "genai-guardrails-blueprints-2026",
-    title: "GenAI Guardrails Blueprints: Policy Tests, Canaries, and SLAs",
-    description: "Composable guardrail patterns that scale across products without slowing teams.",
-    category: "GenAI",
-    publishedAt: "2025-10-06",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "cloud-finops-scorecards-2026",
-    title: "Cloud FinOps Scorecards: Guardrails Engineers Actually Use",
-    description: "PR gates, alerts, and budgets that cut waste 25–40% while keeping velocity high.",
+    slug: "ai-cost-controllers-2026",
+    title: "AI Cost Controllers: Budgets, Tiered Quality, and Guardrails",
+    description: "Keep GenAI spend predictable with dynamic budgets, tiered models, and policy‑backed routes.",
     category: "Cloud",
-    publishedAt: "2025-10-06",
-    featured: false,
+    publishedAt: "2025-10-09",
+    featured: true,
     readTime: "6 min read"
   },
   {
-    slug: "genai-platform-blueprint-2025",
-    title: "GenAI Platform Blueprint: Shipping Weekly With Guardrails",
-    description: "Reference architecture for prompts, tools, evals, and policy tests that let teams move fast safely.",
-    category: "GenAI",
+    slug: "zero-trust-ai-pipelines-2025",
+    title: "Zero‑Trust for AI Pipelines: Auth, Policy Tests, and Attestations",
+    description: "Harden datasets, prompts, and tools with signed artifacts and CI policy gates.",
+    category: "Security",
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "8 min read"
   },
   {
-    slug: "cost-optimized-vector-search",
-    title: "Cost‑Optimized Vector Search: Hybrid, Caching, and Freshness",
-    description: "Design decisions to cut retrieval cost 40%+ while improving answer quality with hybrid search and freshness windows.",
+    slug: "edge-rag-cdn-2025",
+    title: "Edge RAG + CDN: Fresh Answers with Sub‑100ms Latency",
+    description: "Hybrid retrieval at the edge with freshness windows, signed configs, and tiered caches.",
     category: "Architecture",
     publishedAt: "2025-09-29",
-    featured: false,
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-evals-bluebook-2025",
+    title: "GenAI Evals Bluebook: KPIs, Canaries, and Policy Tests",
+    description: "Build eval suites that predict outcomes and prevent regressions across teams.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "llm-policy-testing-2025",
+    title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
+    description: "Automate governance with lightweight policy tests on every PR and release train.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
     readTime: "6 min read"
+  },
+  {
+    slug: "ai-ml-observability-2025",
+    title: "AI/ML Observability: Traces, Metrics, and Business Impact",
+    description: "Monitor model performance, data drift, and business KPIs with unified telemetry.",
+    category: "AI Operations",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "rag-architecture-patterns-2025",
+    title: "RAG Architecture Patterns: Hybrid Retrieval and Multi‑Agent Orchestration",
+    description: "Build production RAG with hybrid retrieval, reranking, and multi‑agent workflows.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "ai-security-compliance-2025",
+    title: "AI Security & Compliance: SOC2, ISO27001, and Custom Frameworks",
+    description: "Audit AI systems for compliance with enterprise security frameworks and regulations.",
+    category: "Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "vector-database-optimization-2025",
+    title: "Vector Database Optimization: Indexing, Caching, and Query Performance",
+    description: "Optimize vector search performance with proper indexing, caching, and query strategies.",
+    category: "Infrastructure",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-workflow-automation-2025",
+    title: "AI Workflow Automation: Orchestration, Monitoring, and Error Handling",
+    description: "Build robust AI workflows with proper orchestration, monitoring, and error recovery.",
+    category: "AI Operations",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "multi-modal-ai-systems-2025",
+    title: "Multi‑Modal AI Systems: Vision, Language, and Audio Integration",
+    description: "Design and implement multi‑modal AI systems that handle text, images, and audio seamlessly.",
+    category: "AI Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "11 min read"
   }
 ];
 
@@ -994,20 +1012,32 @@ const Home = () => {
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Header_default, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsx(NewContentAnnouncement_default, {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(LatestContentBanner_default, { className: "border-b border-white/10", variant: "info" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        LatestContentBanner_default,
+        {
+          className: "border-b border-white/10",
+          variant: "info",
+          title: "New: AI Platform Engineering, Serverless Cost Playbook, FinOps Guardrails",
+          description: "Fresh articles on platform ROI, cutting serverless costs, and practical FinOps guardrails.",
+          ctaText: "Read now",
+          ctaLink: "/blog"
+        }
+      ),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         NewContentPromoBanner_default,
         {
           className: "border-b border-white/10",
           variant: "premium",
-          title: "Fresh: Guardrails That Ship, Edge Flags Blueprint, RAG Freshness",
-          description: "New: outcome‑linked guardrails, zero‑regret edge rollouts, and freshness‑aware RAG.",
+          title: "Fresh: AI Platform Engineering, Serverless Inference, AgentOps SLOs, Zero‑Trust AI",
+          description: "Latest: Platform engineering patterns, cost‑efficient inference, SLOs with budgets, and zero‑trust AI supply chains.",
           ctaText: "Explore new content",
           ctaLink: "/blog",
           featuredItems: [
-            { title: "Guardrails Engineers Adopt", category: "AI Strategy", link: "/blog/guardrails-scorecards-evals-2025" },
-            { title: "Edge Flags Blueprint", category: "Architecture", link: "/blog/edge-flags-blueprint-2025" },
-            { title: "RAG Freshness", category: "GenAI", link: "/blog/rag-freshness-ttl-2025" }
+            { title: "AI Platform Engineering 2025", category: "Platform", link: "/blog/ai-platform-engineering-2025" },
+            { title: "Serverless Cost Playbook", category: "GenAI", link: "/blog/serverless-inference-cost-playbook-2025" },
+            { title: "AgentOps SLO Handbook", category: "GenAI", link: "/blog/agentops-slo-handbook-2025" },
+            { title: "Zero‑Trust for AI Pipelines", category: "Security", link: "/blog/zero-trust-ai-pipelines-2025" },
+            { title: "Cloud FinOps Guardrails", category: "Cloud", link: "/blog/cloud-finops-guardrails-2025" }
           ]
         }
       ),
@@ -1016,10 +1046,10 @@ const Home = () => {
         ContentPromotionBanner_default,
         {
           variant: "info",
-          title: "📚 New: Governance Scorecards, Freshness‑Aware RAG v2, Edge Flags 2026",
-          description: "Outcome‑linked guardrails, freshness budgets with hybrid search, and <100ms global rollouts.",
-          ctaText: "See what's new",
-          ctaLink: "/blog",
+          title: "🚀 Fresh: GenAI Platform Blueprint + Hybrid Vector Search",
+          description: "Ship weekly with guardrails. Cut retrieval cost 40%+ with hybrid and freshness.",
+          ctaText: "Read the latest",
+          ctaLink: "/blog/genai-platform-blueprint-2025",
           dismissible: true
         }
       ),
@@ -1112,46 +1142,13 @@ const Home = () => {
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20", children: "GenAI Evals" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20", children: "Edge Flags" })
           ] })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center group hover:scale-105 transition-all duration-300", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-3xl font-bold text-zion-cyan group-hover:text-zion-blue-light transition-colors", children: "500+" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-zion-slate-light", children: "Projects Delivered" })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center group hover:scale-105 transition-all duration-300", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-3xl font-bold text-zion-cyan group-hover:text-zion-blue-light transition-colors", children: "99.9%" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-zion-slate-light", children: "Uptime SLA" })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center group hover:scale-105 transition-all duration-300", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-3xl font-bold text-zion-cyan group-hover:text-zion-blue-light transition-colors", children: "24/7" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-zion-slate-light", children: "Support" })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center group hover:scale-105 transition-all duration-300", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-3xl font-bold text-zion-cyan group-hover:text-zion-blue-light transition-colors", children: "5★" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-zion-slate-light", children: "Client Rating" })
-          ] })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col sm:flex-row gap-4 justify-center", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            Link,
-            {
-              to: "/services",
-              className: "btn-primary flex items-center justify-center gap-2 group",
-              children: [
-                "Explore Services",
-                /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-5 h-5 group-hover:translate-x-1 transition-transform" })
-              ]
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/contact", className: "btn-secondary", children: "Get Started" })
         ] })
       ] }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" }),
-        "New: Guardrails That Ship, Edge Flags Blueprint, and RAG Freshness — read now",
+        "New: Platform Engineering 2025, Serverless Cost Playbook, FinOps Guardrails — read now",
         /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/insights", className: "text-emerald-300 underline underline-offset-4 hover:text-white", children: "View" })
       ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(LatestInsights_default, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "py-20 bg-white relative overflow-hidden", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6 relative z-10", children: [
@@ -1233,7 +1230,6 @@ const Home = () => {
           ] })
         ] })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(LatestInsights_default, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "container mx-auto px-6 py-20 relative z-10", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-16", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-4xl font-bold text-white mb-4 animate-slide-up", children: "Why Choose Zion Tech Group?" }),
@@ -1345,7 +1341,7 @@ const Home = () => {
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-12", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "w-4 h-4 mr-2" }),
-              "Fresh: Guardrails, Edge Flags, RAG Freshness"
+              "Fresh: Agentic Workflows, Edge LLM Caching, Operational Scorecards"
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-4xl font-bold mb-4", children: "Latest Articles & Insights" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-indigo-100 max-w-3xl mx-auto", children: "Stay ahead of the curve with our latest articles on AI automation, cybersecurity, and emerging technologies." })
@@ -1435,16 +1431,6 @@ const Home = () => {
         ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(ModernFeatures_default, {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(ContentValueTestimonials_default, {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(EnhancedTestimonials_default, {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        EnhancedNewsletterSignup_default,
-        {
-          title: "Stay Ahead with Our Latest Insights",
-          subtitle: "Get exclusive access to cutting-edge technology insights, industry analysis, and expert guidance delivered to your inbox weekly.",
-          showContentPreview: true
-        }
-      ),
       /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-20 bg-white", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-400/30 rounded-xl p-6 mb-10", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3 mb-3", children: [
@@ -1542,7 +1528,7 @@ const Home = () => {
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col md:flex-row md:items-center md:justify-between gap-8", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-2xl", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl font-bold mb-2", children: "Latest from Zion Insights" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-white/90", children: "New: Platform ROI scorecards, Secure ML Supply Chain, and Enterprise RAG v2." })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-white/90", children: "New: AI Platform ROI scorecards, securing the ML supply chain, and Enterprise RAG v2." })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/blog", className: "bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto", children: [
             "Read the latest",
@@ -1551,16 +1537,16 @@ const Home = () => {
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 grid gap-6 md:grid-cols-3", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white/10 rounded-xl p-5", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-purple-200 mb-1", children: "AI Strategy" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-semibold text-white", children: "Guardrails Engineers Adopt" })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-purple-200 mb-1", children: "GenAI" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-semibold text-white", children: "Agentic Workflows Blueprint" })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white/10 rounded-xl p-5", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-blue-200 mb-1", children: "GenAI" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-semibold text-white", children: "RAG Freshness" })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-blue-200 mb-1", children: "Architecture" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-semibold text-white", children: "Edge LLM Caching" })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white/10 rounded-xl p-5", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-rose-200 mb-1", children: "Architecture" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-semibold text-white", children: "Edge Flags Blueprint" })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-rose-200 mb-1", children: "Security" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-semibold text-white", children: "Secure ML Supply Chain" })
           ] })
         ] })
       ] }) }) }),
@@ -1601,228 +1587,83 @@ const Home = () => {
 var Home_default = Home;
 
 function Contact() {
-  const contactInfo = [
-    {
-      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Mail, { className: "w-6 h-6" }),
-      title: "Email Us",
-      details: "hello@ziontechgroup.com",
-      description: "Send us an email anytime"
-    },
-    {
-      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "w-6 h-6" }),
-      title: "Call Us",
-      details: "+1 (555) 123-4567",
-      description: "Mon-Fri from 9am to 6pm"
-    },
-    {
-      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(MapPin, { className: "w-6 h-6" }),
-      title: "Visit Us",
-      details: "123 Tech Street, San Francisco, CA 94105",
-      description: "Come say hello at our office"
-    },
-    {
-      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Clock, { className: "w-6 h-6" }),
-      title: "Response Time",
-      details: "Within 24 hours",
-      description: "We respond to all inquiries quickly"
-    }
-  ];
-  const stats = [
-    {
-      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Users, { className: "w-8 h-8" }),
-      value: "500+",
-      label: "Happy Clients"
-    },
-    {
-      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Award, { className: "w-8 h-8" }),
-      value: "99.9%",
-      label: "Satisfaction Rate"
-    },
-    {
-      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Globe, { className: "w-8 h-8" }),
-      value: "50+",
-      label: "Countries Served"
-    },
-    {
-      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Zap, { className: "w-8 h-8" }),
-      value: "24/7",
-      label: "Support Available"
-    }
-  ];
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs(Helmet, { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("title", { children: "Contact Zion Tech Group - Get in Touch | AI & Technology Solutions" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("title", { children: "Contact - Zion Tech Group" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         "meta",
         {
           name: "description",
-          content: "Contact Zion Tech Group for AI solutions, cloud services, and technology consulting. Get expert advice and start your digital transformation journey."
+          content: "Get in touch with Zion Tech Group for AI and IT solutions. Contact our expert team for consultation and support."
         }
-      ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "meta",
-        {
-          name: "keywords",
-          content: "contact, AI consulting, technology solutions, cloud services, digital transformation"
-        }
-      ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "meta",
-        {
-          property: "og:title",
-          content: "Contact Zion Tech Group - Get in Touch"
-        }
-      ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "meta",
-        {
-          property: "og:description",
-          content: "Contact us for AI solutions, cloud services, and technology consulting"
-        }
-      ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("meta", { property: "og:type", content: "website" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("meta", { property: "og:url", content: "https://ziontechgroup.com/contact" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("link", { rel: "canonical", href: "https://ziontechgroup.com/contact" })
+      )
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Header_default, {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute inset-0", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "div",
-            {
-              className: "absolute bottom-20 right-20 w-40 h-40 bg-white/10 rounded-full blur-xl animate-pulse",
-              style: { animationDelay: "1s" }
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "div",
-            {
-              className: "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-white/5 rounded-full blur-2xl animate-pulse",
-              style: { animationDelay: "2s" }
-            }
-          )
+      /* @__PURE__ */ jsxRuntimeExports.jsx("main", { className: "container mx-auto px-6 py-20", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-4xl mx-auto text-center", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "text-4xl md:text-6xl font-bold text-white mb-6", children: [
+          "Contact ",
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent", children: "Us" })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6 text-center relative z-10", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(MessageSquare, { className: "w-4 h-4 mr-2" }),
-            "Let's Start a Conversation"
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-300 mb-12", children: "Ready to transform your business with cutting-edge AI and IT solutions? Get in touch with our expert team." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid md:grid-cols-2 gap-8 mb-8", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-left", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-white mb-4", children: "Get Started" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300 mb-6", children: "Ready to revolutionize your business with AI? Contact us for a free consultation." }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-4", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center text-gray-300", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mr-3", children: "📧" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "contact@ziontechgroup.com" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center text-gray-300", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mr-3", children: "📞" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "+1 (555) 123-4567" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center text-gray-300", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mr-3", children: "🌍" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Global Services Available" })
+              ] })
+            ] })
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-5xl md:text-6xl font-bold text-white mb-6", children: "Get in Touch" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto", children: "Ready to transform your business with cutting-edge technology? Let's discuss your project and explore the possibilities." })
-        ] })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-16 bg-white dark:bg-gray-800", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-12", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl font-bold text-gray-900 dark:text-white mb-4", children: "Multiple Ways to Reach Us" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg text-gray-600 dark:text-gray-300", children: "Choose the communication method that works best for you" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid md:grid-cols-2 lg:grid-cols-4 gap-8", children: contactInfo.map((info, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          "div",
-          {
-            className: "text-center p-6 bg-gray-50 dark:bg-gray-700 rounded-2xl hover:shadow-lg transition-all duration-300 hover:scale-105",
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "inline-flex p-4 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-white mb-4", children: info.icon }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold text-gray-900 dark:text-white mb-2", children: info.title }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg font-medium text-blue-600 dark:text-blue-400 mb-2", children: info.details }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-gray-600 dark:text-gray-300", children: info.description })
-            ]
-          },
-          index
-        )) })
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-left", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-bold text-white mb-4", children: "Quick Contact" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { className: "space-y-4", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "input",
+                {
+                  type: "text",
+                  placeholder: "Your Name",
+                  className: "w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                }
+              ),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "input",
+                {
+                  type: "email",
+                  placeholder: "Your Email",
+                  className: "w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                }
+              ),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "textarea",
+                {
+                  placeholder: "Your Message",
+                  rows: 4,
+                  className: "w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                }
+              ),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "button",
+                {
+                  type: "submit",
+                  className: "w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300",
+                  children: "Send Message"
+                }
+              )
+            ] })
+          ] })
+        ] }) })
       ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-20 bg-gray-50 dark:bg-gray-900", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-12", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-4xl font-bold text-gray-900 dark:text-white mb-4", children: "Start Your Project Today" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto", children: "Fill out the form below and our team will get back to you within 24 hours with a personalized proposal for your project." })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(EnhancedContactForm_default, {})
-      ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-16 bg-gradient-to-r from-blue-600 to-purple-600", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-12", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl font-bold text-white mb-4", children: "Why Choose Zion Tech Group?" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-white/90", children: "Our track record speaks for itself" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 md:grid-cols-4 gap-8", children: stats.map((stat, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          "div",
-          {
-            className: "text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300",
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "inline-flex p-4 rounded-xl bg-white/20 text-white mb-4", children: stat.icon }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-3xl font-bold text-white mb-2", children: stat.value }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-white/80 font-medium", children: stat.label })
-            ]
-          },
-          index
-        )) })
-      ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-20 bg-white dark:bg-gray-800", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-12", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl font-bold text-gray-900 dark:text-white mb-4", children: "Frequently Asked Questions" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg text-gray-600 dark:text-gray-300", children: "Quick answers to common questions" })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "max-w-4xl mx-auto space-y-6", children: [
-          {
-            question: "How quickly can you start my project?",
-            answer: "We typically begin new projects within 1-2 weeks of contract signing. Rush projects can be accommodated with additional planning."
-          },
-          {
-            question: "What&apos;s your typical project timeline?",
-            answer: "Project timelines vary based on complexity. Simple websites take 2-4 weeks, while complex AI implementations can take 3-6 months."
-          },
-          {
-            question: "Do you provide ongoing support?",
-            answer: "Yes! We offer comprehensive support packages including maintenance, updates, and 24/7 monitoring for all our solutions."
-          },
-          {
-            question: "What technologies do you specialize in?",
-            answer: "We specialize in AI/ML, cloud computing, cybersecurity, quantum computing, and modern web technologies like React, Node.js, and Python."
-          }
-        ].map((faq, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          "div",
-          {
-            className: "bg-gray-50 dark:bg-gray-700 rounded-2xl p-6 hover:shadow-lg transition-all duration-300",
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold text-gray-900 dark:text-white mb-3", children: faq.question }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600 dark:text-gray-300", children: faq.answer })
-            ]
-          },
-          index
-        )) })
-      ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-20 bg-gradient-to-br from-gray-900 to-blue-900", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-6 text-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-4xl mx-auto", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-6", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "w-4 h-4 mr-2" }),
-          "Ready to Get Started?"
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-4xl md:text-5xl font-bold text-white mb-6", children: "Let's Build Something Amazing Together" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-300 mb-8", children: "Join hundreds of companies that trust Zion Tech Group for their technology needs. Your digital transformation starts with a single conversation." }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col sm:flex-row gap-4 justify-center", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "a",
-            {
-              href: "#contact-form",
-              className: "inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300",
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(MessageSquare, { className: "w-5 h-5 mr-2" }),
-                "Start Your Project"
-              ]
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "a",
-            {
-              href: "tel:+15551234567",
-              className: "inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300",
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "w-5 h-5 mr-2" }),
-                "Call Us Now"
-              ]
-            }
-          )
-        ] })
-      ] }) }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Footer_default, {})
     ] })
   ] });
@@ -1972,19 +1813,19 @@ function Blog() {
       views: 445
     }
   ];
-  const mappedFromContent = useMemo(() => {
-    return latestPosts.map((p, idx) => ({
-      id: 1e3 + idx,
+  const mappedFromContent = reactExports.useMemo(() => {
+    return contentPosts.map((p, index) => ({
+      id: 1e4 + index,
       title: p.title,
       excerpt: p.description,
-      content: "See full article",
+      content: "Read more on dedicated article page",
       author: "Zion Tech Group Team",
       date: p.publishedAt,
-      readTime: p.readTime || "6 min read",
+      readTime: p.readTime ?? "6 min read",
       category: p.category,
-      tags: [p.category],
+      tags: [p.category.replace(/\s+/g, " ")],
       image: "/api/placeholder/400/250",
-      featured: Boolean(p.featured),
+      featured: !!p.featured,
       views: 0
     }));
   }, []);
@@ -2060,7 +1901,6 @@ function Blog() {
       /* @__PURE__ */ jsxRuntimeExports.jsx("link", { rel: "canonical", href: "https://ziontechgroup.com/blog" })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Header_default, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "border-b border-white/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "max-w-7xl mx-auto px-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center justify-between", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mr-4", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm font-semibold", children: "🚀 Fresh: Serverless Inference Cost Playbook + Production RAG" }),
@@ -2229,8 +2069,7 @@ function Blog() {
           ] })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-20", children: /* @__PURE__ */ jsxRuntimeExports.jsx(BlogPromotionBanner_default, {}) })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Footer_default, {})
+      ] })
     ] })
   ] });
 }

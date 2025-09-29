@@ -1,45 +1,9 @@
-import { j as jsxRuntimeExports, r as reactExports, S as Sparkles, T as TrendingUp, C as Clock, a as Calendar, L as Link, A as ArrowRight, b as Star, X, c as Shield, B as Brain, Z as Zap, d as BookOpen, e as CircleCheckBig, f as Award, U as Users, g as Target, E as Eye, H as Helmet } from './chunk-CgqDn1Gy.js';
+import { j as jsxRuntimeExports, S as Sparkles, T as TrendingUp, C as Clock, a as Calendar, L as Link, A as ArrowRight, r as reactExports, b as Star, X, c as Shield, B as Brain, Z as Zap, d as BookOpen, e as CircleCheckBig, f as Award, U as Users, g as Target, E as Eye, H as Helmet } from './chunk-CxfzcOjV.js';
 
 const ContentPromotionBanner = ({ className }) => {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: className || "py-6", "aria-label": "Content promotion banner" });
 };
 var ContentPromotionBanner_default = ContentPromotionBanner;
-
-const ContentValueTestimonials = () => {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { "aria-label": "Testimonials" });
-};
-var ContentValueTestimonials_default = ContentValueTestimonials;
-
-const EnhancedNewsletterSignup = () => {
-  const [email, setEmail] = reactExports.useState("");
-  const [ok, setOk] = reactExports.useState(false);
-  const onSubmit = (e) => {
-    e.preventDefault();
-    setOk(true);
-  };
-  if (ok) return /* @__PURE__ */ jsxRuntimeExports.jsx("p", { role: "status", children: "Subscribed!" });
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { onSubmit, className: "flex gap-2", "aria-label": "Newsletter", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(
-      "input",
-      {
-        type: "email",
-        required: true,
-        value: email,
-        onChange: (e) => setEmail(e.target.value),
-        className: "border px-3 py-2 rounded",
-        placeholder: "you@example.com",
-        "aria-label": "Email"
-      }
-    ),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "submit", className: "px-4 py-2 bg-purple-600 text-white rounded", children: "Subscribe" })
-  ] });
-};
-var EnhancedNewsletterSignup_default = EnhancedNewsletterSignup;
-
-const EnhancedTestimonials = () => {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { "aria-label": "Enhanced testimonials" });
-};
-var EnhancedTestimonials_default = EnhancedTestimonials;
 
 const Header = () => {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("header", { className: "w-full py-4 px-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto flex items-center justify-between", children: [
@@ -55,6 +19,230 @@ const Header = () => {
 var Header_default = Header;
 
 const latestArticles = [
+  {
+    id: "secure-agents-runtime-2026",
+    slug: "secure-agents-runtime-2026",
+    title: "Secure AI Agents Runtime: Sandboxes, Egress Policies, and Traces",
+    description: "Run multi‑tool agents safely with isolation, policy tests in CI, and live traces.",
+    excerpt: "A production checklist for secure, observable AI agents without slowing teams.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-09",
+    category: "AI Security",
+    tags: ["Agents", "Security", "Policy", "Tracing"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/secure-agents-runtime.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "agentops-slo-handbook-2025",
+    slug: "agentops-slo-handbook-2025",
+    title: "AgentOps SLO Handbook: Keeping Autonomous Systems Reliable",
+    description: "Define SLOs, budgets, and rollback-ready canaries for agent workflows in production.",
+    excerpt: "SLOs and risk budgets that keep autonomous systems fast, reliable, and safe.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["Agents", "SLOs", "Canaries", "Reliability"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/agentops-slo.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "zero-trust-ai-pipelines-2025",
+    slug: "zero-trust-ai-pipelines-2025",
+    title: "Zero‑Trust for AI Pipelines: Auth, Policy Tests, and Attestations",
+    description: "Harden datasets, prompts, and tools with signed artifacts and CI policy gates.",
+    excerpt: "End-to-end provenance and zero-trust controls for AI supply chains.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Security",
+    tags: ["Zero Trust", "Supply Chain", "Policy"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/zero-trust-ai-pipelines.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "policy-tests-in-ci-2025",
+    slug: "policy-tests-in-ci-2025",
+    title: "Policy Tests in CI: Fast Guardrails Engineers Adopt",
+    description: "Lightweight checks for risky changes that prevent regressions without blocking teams.",
+    excerpt: "Adopt small, meaningful CI policy tests tied to product KPIs for real impact.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Engineering Excellence",
+    tags: ["Policy", "CI", "Guardrails"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/policy-tests-in-ci.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-e2e-observability-2026",
+    slug: "edge-e2e-observability-2026",
+    title: "Edge E2E Observability: User‑Centric Tracing and <100ms Telemetry",
+    description: "Capture user‑centric traces across edge, CDN, and app layers without latency tax.",
+    excerpt: "Blueprint for end‑to‑end observability with privacy and performance in mind.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-09",
+    category: "Architecture",
+    tags: ["Observability", "Edge", "Tracing", "Telemetry"],
+    featured: false,
+    readTime: "7 min read",
+    image: "/images/edge-observability.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "risk-budgets-edge-rollouts-2025",
+    slug: "risk-budgets-edge-rollouts-2025",
+    title: "Risk Budgets for Edge Rollouts: Ship Fast With Confidence",
+    description: "Define budgets, wire telemetry, and enable instant rollback for zero‑regret deploys.",
+    excerpt: "A pragmatic pattern for progressive delivery under strict risk envelopes.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Architecture",
+    tags: ["Edge", "Feature Flags", "Budgets"],
+    featured: false,
+    readTime: "7 min read",
+    image: "/images/risk-budgets-edge.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-cost-controllers-2026",
+    slug: "ai-cost-controllers-2026",
+    title: "AI Cost Controllers: Budgets, Tiered Quality, and Guardrails",
+    description: "Keep GenAI spend predictable with dynamic budgets, tiered models, and policy‑backed routes.",
+    excerpt: "A practical guide to cost control that protects velocity and quality.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-09",
+    category: "Cloud",
+    tags: ["FinOps", "GenAI", "Budgets", "Governance"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/ai-cost-controllers.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-rag-cdn-2025",
+    slug: "edge-rag-cdn-2025",
+    title: "Edge RAG + CDN: Fresh Answers with Sub‑100ms Latency",
+    description: "Hybrid retrieval at the edge with freshness windows, signed configs, and tiered caches.",
+    excerpt: "Keep answers fresh and fast with edge retrieval and cache budgets.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Architecture",
+    tags: ["Edge", "RAG", "Caching"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-rag-cdn.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-evals-bluebook-2025",
+    slug: "genai-evals-bluebook-2025",
+    title: "GenAI Evals Bluebook: KPIs, Canaries, and Policy Tests",
+    description: "Build eval suites that predict outcomes and prevent regressions across teams.",
+    excerpt: "A practical playbook to wire evals to business KPIs and delivery.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["Evals", "KPIs", "Guardrails"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/genai-evals-bluebook.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "llm-policy-testing-2025",
+    slug: "llm-policy-testing-2025",
+    title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
+    description: "Automate governance with lightweight policy tests on every PR and release train.",
+    excerpt: "Policy tests wired to CI keep AI features safe without slowing delivery.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-08",
+    category: "AI Governance",
+    tags: ["Policy", "CI", "Governance", "Evals"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/ai-governance-blueprint.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-operational-scorecards-2026",
+    slug: "ai-operational-scorecards-2026",
+    title: "AI Operational Scorecards 2026: Guardrails That Drive Outcomes",
+    description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs engineers adopt",
+    excerpt: "From policy to practice: scorecards that correlate with outcomes and speed teams up.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-09",
+    category: "AI Strategy",
+    tags: ["Governance", "Scorecards", "Evals"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-operational-scorecards.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-llm-caching-blueprint-2025",
+    slug: "edge-llm-caching-blueprint-2025",
+    title: "Edge LLM Caching: Latency Budgets, KV Patterns, and Cost Control",
+    description: "Sub-100ms prompts with tiered caches, signed configs, and freshness windows.",
+    excerpt: "Cut latency and cost with edge caches and deterministic fallbacks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-09",
+    category: "Architecture",
+    tags: ["Edge", "Caching", "LLM"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-llm-caching.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "finops-scorecards-2025",
+    slug: "finops-scorecards-2025",
+    title: "FinOps Scorecards: Guardrails Engineers Actually Use",
+    description: "Budgets, PR checks, and alerts that cut cloud waste 25–40% without slowing teams.",
+    excerpt: "A practical FinOps playbook with scorecards tied to product goals.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-08",
+    category: "Cloud",
+    tags: ["FinOps", "Cloud", "Budgets", "Governance"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/cloud-finops-guardrails.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "enterprise-rag-blueprint-2025",
+    slug: "enterprise-rag-blueprint-2025",
+    title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, Auth",
+    description: "A pragmatic blueprint for RAG at scale with freshness windows and layered evals.",
+    excerpt: "Keep answers accurate with freshness windows and hybrid retrieval patterns.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-08",
+    category: "GenAI",
+    tags: ["RAG", "Freshness", "Hybrid Search", "Auth"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/enterprise-rag-v2.jpg",
+    newBadge: true,
+    trending: true
+  },
   {
     id: "ai-governance-scorecards-2026",
     slug: "ai-governance-scorecards-2026",
@@ -842,6 +1030,16 @@ contentHighlights.push(
     variant: "success"
   },
   {
+    id: 15,
+    title: "✅ LLM Policy Tests in CI",
+    description: "Policy tests on every PR keep you fast and safe.",
+    ctaText: "Read How",
+    ctaLink: "/blog/llm-policy-testing-2025",
+    badge: "New",
+    stats: "6 min read",
+    variant: "warning"
+  },
+  {
     id: 11,
     title: "💸 Cloud FinOps Guardrails Engineers Actually Use",
     description: "Budgets, alerts, and PR gates that reduce waste 25–40%",
@@ -1011,11 +1209,6 @@ const LatestContentBanner = ({
 };
 var LatestContentBanner_default = LatestContentBanner;
 
-const LatestInsights = () => {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { "aria-label": "Latest insights" });
-};
-var LatestInsights_default = LatestInsights;
-
 const ModernFeatures = () => {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { "aria-label": "Modern features" });
 };
@@ -1113,11 +1306,11 @@ const NewContentPromoBanner = ({
   };
   const featuredContent = [
     {
-      title: "AI Platform ROI Scorecards",
-      description: "Outcome metrics and adoption signals that drive decisions",
+      title: "Policy Tests in CI",
+      description: "Lightweight checks that prevent regressions and speed delivery",
       icon: TrendingUp,
-      link: "/blog/ai-platform-roi-scorecards-2025",
-      category: "AI Strategy"
+      link: "/blog/policy-tests-in-ci-2025",
+      category: "Engineering"
     },
     {
       title: "Secure ML Supply Chain",
@@ -1134,11 +1327,11 @@ const NewContentPromoBanner = ({
       category: "GenAI"
     },
     {
-      title: "Serverless Inference Cost Playbook",
-      description: "Cut 40–70% without P95 pain",
+      title: "Risk Budgets for Edge Rollouts",
+      description: "Zero‑regret deploys with budgets and instant rollback",
       icon: Zap,
-      link: "/blog/serverless-inference-cost-playbook-2025",
-      category: "GenAI"
+      link: "/blog/risk-budgets-edge-rollouts-2025",
+      category: "Architecture"
     }
   ];
   if (isDismissed) return null;
@@ -1689,7 +1882,7 @@ const NewServicesShowcase = () => {
                   service.newBadge && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium", children: "NEW" })
                 ] })
               ] }),
-              service.popular && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-1 bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded-full text-xs", children: [
+              service.pricing.popular && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-1 bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded-full text-xs", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { className: "w-3 h-3 fill-current" }),
                 "POPULAR"
               ] })
@@ -2058,9 +2251,9 @@ const SuccessStoriesShowcase = () => {
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-6", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "font-semibold text-gray-900 mb-4", children: "Key Results" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 gap-4 mb-4", children: study.metrics.slice(0, 4).map((metric, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center p-3 bg-gray-50 rounded-lg", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xl font-bold text-blue-600", children: metric.value }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs text-gray-600", children: metric.label })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-2 mb-4", children: study.results.slice(0, 4).map((result, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-2", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(TrendingUp, { className: "w-4 h-4 text-green-500 mt-1 flex-shrink-0" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-gray-600", children: result })
             ] }, index)) }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-4", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("h5", { className: "text-sm font-medium text-gray-700 mb-2", children: "Technologies Used" }),
@@ -2072,17 +2265,6 @@ const SuccessStoriesShowcase = () => {
                 },
                 index
               )) })
-            ] }),
-            study.testimonial && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-gray-50 rounded-lg p-4 mb-4", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-gray-700 text-sm italic mb-2", children: [
-                '"',
-                study.testimonial.quote,
-                '"'
-              ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-sm", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-semibold text-gray-900", children: study.testimonial.author }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-gray-600", children: study.testimonial.title })
-              ] })
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs(
               Link,
@@ -2162,13 +2344,13 @@ const TrendingContentBanner = () => {
   const [currentIndex, setCurrentIndex] = reactExports.useState(0);
   const trendingItems = [
     {
-      title: "AI Platform ROI Scorecards",
-      description: "Outcome metrics that drive investment decisions",
-      views: "9.1K",
-      readTime: "7 min",
-      category: "AI Strategy",
+      title: "Policy Tests in CI",
+      description: "Lightweight guardrails in PRs that engineers adopt",
+      views: "11.2K",
+      readTime: "6 min",
+      category: "Engineering",
       icon: TrendingUp,
-      link: "/blog/ai-platform-roi-scorecards-2025",
+      link: "/blog/policy-tests-in-ci-2025",
       badge: "NEW"
     },
     {
@@ -2192,14 +2374,14 @@ const TrendingContentBanner = () => {
       badge: "HOT"
     },
     {
-      title: "Serverless Inference Cost Playbook",
-      description: "40–70% savings without P95 pain",
-      views: "12.1K",
+      title: "Risk Budgets for Edge Rollouts",
+      description: "Zero‑regret deploys with budgets and instant rollback",
+      views: "8.7K",
       readTime: "7 min",
-      category: "GenAI",
+      category: "Architecture",
       icon: Zap,
-      link: "/blog/serverless-inference-cost-playbook-2025",
-      badge: "POPULAR"
+      link: "/blog/risk-budgets-edge-rollouts-2025",
+      badge: "TRENDING"
     }
   ];
   reactExports.useEffect(() => {
@@ -2305,38 +2487,6 @@ const Footer = () => {
   ] }) });
 };
 var Footer_default = Footer;
-
-const EnhancedContactForm = () => {
-  const [form, setForm] = reactExports.useState({ name: "", email: "", message: "" });
-  const [submitted, setSubmitted] = reactExports.useState(false);
-  const onChange = (e) => {
-    const { name, value } = e.target;
-    setForm((p) => ({ ...p, [name]: value }));
-  };
-  const onSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-  if (submitted) {
-    return /* @__PURE__ */ jsxRuntimeExports.jsx("p", { role: "status", children: "Thanks, we'll be in touch." });
-  }
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { onSubmit, className: "space-y-4", "aria-label": "Contact form", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { htmlFor: "name", className: "block text-sm", children: "Name" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("input", { id: "name", name: "name", value: form.name, onChange, className: "w-full border px-3 py-2 rounded" })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { htmlFor: "email", className: "block text-sm", children: "Email" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("input", { id: "email", name: "email", type: "email", value: form.email, onChange, className: "w-full border px-3 py-2 rounded" })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("label", { htmlFor: "message", className: "block text-sm", children: "Message" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("textarea", { id: "message", name: "message", value: form.message, onChange, className: "w-full border px-3 py-2 rounded", rows: 4 })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "submit", className: "px-4 py-2 rounded bg-blue-600 text-white", children: "Send" })
-  ] });
-};
-var EnhancedContactForm_default = EnhancedContactForm;
 
 const featuredBlogPosts = [
   {
@@ -2530,4 +2680,4 @@ const SEOOptimizer = ({
 };
 var SEOOptimizer_default = SEOOptimizer;
 
-export { BlogPromotionBanner_default as B, ContentPromotionBanner_default as C, EnhancedTestimonials_default as E, Footer_default as F, Header_default as H, LatestContentBanner_default as L, ModernFeatures_default as M, NewContentAnnouncement_default as N, SuccessStoriesShowcase_default as S, TrendingContentBanner_default as T, NewContentPromoBanner_default as a, LatestInsights_default as b, ContentValueTestimonials_default as c, EnhancedNewsletterSignup_default as d, NewServicesShowcase_default as e, LatestArticlesShowcase_default as f, EnhancedContactForm_default as g, SEOOptimizer_default as h };
+export { BlogPromotionBanner_default as B, ContentPromotionBanner_default as C, Footer_default as F, Header_default as H, LatestContentBanner_default as L, ModernFeatures_default as M, NewContentAnnouncement_default as N, SuccessStoriesShowcase_default as S, TrendingContentBanner_default as T, NewContentPromoBanner_default as a, NewServicesShowcase_default as b, LatestArticlesShowcase_default as c, SEOOptimizer_default as d };
