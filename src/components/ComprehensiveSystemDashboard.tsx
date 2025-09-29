@@ -39,8 +39,14 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
           const accMetrics = await accessibilityEnhancer.getMetrics();
           setAccessibilityMetrics(accMetrics);
 
-          const seoData = await seoOptimizer.analyzeSEO();
-          setSeoIssues(seoData.issues || []);
+          const seoData = await seoOptimizer.analyze();
+          // Convert string issues to SEOIssue objects
+          const issues: SEOIssue[] = seoData.issues.map((issue: string, index: number) => ({
+            type: 'warning' as const,
+            message: issue,
+            category: 'seo'
+          }));
+          setSeoIssues(issues);
         } catch (error) {
           console.error('Error loading metrics:', error);
         }
@@ -122,7 +128,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                   <div className="bg-blue-50 p-6 rounded-lg">
                     <h3 className="text-lg font-semibold text-blue-900 mb-2">Performance Score</h3>
                     <div className="text-3xl font-bold text-blue-600">
-                      {metrics ? Math.round(metrics.overallScore) : '--'}
+                      {metrics?.overallScore ? Math.round(metrics.overallScore) : '--'}
                     </div>
                     <div className="text-sm text-blue-700 mt-1">out of 100</div>
                   </div>
@@ -130,7 +136,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                   <div className="bg-green-50 p-6 rounded-lg">
                     <h3 className="text-lg font-semibold text-green-900 mb-2">Accessibility Score</h3>
                     <div className="text-3xl font-bold text-green-600">
-                      {accessibilityMetrics ? Math.round(accessibilityMetrics.overallScore) : '--'}
+                      {accessibilityMetrics?.overallScore ? Math.round(accessibilityMetrics.overallScore) : '--'}
                     </div>
                     <div className="text-sm text-green-700 mt-1">out of 100</div>
                   </div>
@@ -232,7 +238,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                   <div className="bg-white border rounded-lg p-6">
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">Issues Found</h4>
                     <div className="space-y-3">
-                      {accessibilityMetrics.issues?.slice(0, 5).map((issue, index) => (
+                      {accessibilityMetrics.issues?.slice(0, 5).map((issue: any, index: number) => (
                         <div key={index} className="p-3 bg-red-50 border border-red-200 rounded-lg">
                           <p className="text-sm font-medium text-red-800">{issue.type}</p>
                           <p className="text-xs text-red-600 mt-1">{issue.description}</p>
@@ -244,7 +250,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                   <div className="bg-white border rounded-lg p-6">
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">Improvements</h4>
                     <div className="space-y-2">
-                      {accessibilityMetrics.improvements?.slice(0, 3).map((improvement, index) => (
+                      {accessibilityMetrics.improvements?.slice(0, 3).map((improvement: string, index: number) => (
                         <div key={index} className="p-3 bg-green-50 border border-green-200 rounded-lg">
                           <p className="text-sm text-green-800">{improvement}</p>
                         </div>
