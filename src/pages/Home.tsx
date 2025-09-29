@@ -114,17 +114,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-<<<<<<< HEAD
-          title="📣 New: AI Risk Register, Practical Evals, and Cloud FinOps Guardrails"
-          description="Ship faster and safer: operationalize risks, tie evals to outcomes, and cut cloud waste."
-          ctaText="Read the updates"
-          ctaLink="/blog/ai-risk-register-2025"
-=======
           title="🚀 Fresh: AI Platform ROI + Secure ML Supply Chain"
           description="New frameworks on platform ROI and end-to-end ML supply chain security."
           ctaText="Read the latest"
           ctaLink="/blog/ai-platform-roi-2025"
->>>>>>> cursor/create-and-deploy-new-content-a3e4
           dismissible={true}
         />
         {/* Animated background elements */}
