@@ -40,22 +40,22 @@ function Header() {
         <Link href="/" className="font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors">
           Zion Tech Group
         </Link>
-        <div className="hidden md:flex gap-6">
+          <div className="hidden md:flex gap-6">
           <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
           <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
           <div className="relative group">
             <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Blog
-              <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                NEW 2026
+              <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                🚀 NEW 2026
               </span>
             </Link>
           </div>
           <div className="relative group">
             <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Case Studies
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                FEATURED
+              <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                $85M+ ROI
               </span>
             </Link>
           </div>
@@ -91,15 +91,16 @@ function Footer() {
             <div className="space-y-2">
               <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Blog
-                <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
+                <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">🚀 NEW</span>
               </Link>
-              <Link href="/blog/ai-autonomous-enterprise-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Autonomous Enterprise 2026</Link>
-              <Link href="/blog/ai-quantum-hybrid-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">⚡ Quantum AI Computing</Link>
-              <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">📊 $25M Success Story</Link>
-              <Link href="/case-studies/ai-sustainability-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🌱 $10M Sustainability ROI</Link>
+              <Link href="/blog/ai-neural-interfaces-enterprise-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🧠 Neural Interfaces</Link>
+              <Link href="/blog/ai-quantum-optimization-enterprise-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">⚡ Quantum Optimization</Link>
+              <Link href="/blog/ai-autonomous-business-systems-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🤖 Autonomous Systems</Link>
+              <Link href="/case-studies/ai-neural-interface-banking-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🏦 $50M Banking ROI</Link>
+              <Link href="/case-studies/ai-quantum-optimization-manufacturing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🏭 $35M Manufacturing Savings</Link>
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Case Studies
-                <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
+                <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">$85M+ ROI</span>
               </Link>
             </div>
           </div>
