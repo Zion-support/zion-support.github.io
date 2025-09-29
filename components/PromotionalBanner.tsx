@@ -643,62 +643,13 @@ export const NewContent2026ShowcaseBanner = () => (
   />
 );
 
-export const AutonomousManufacturingBanner = () => (
+// New 2026 Neural Interfaces & Space Tech Banners
+export const AINeuralInterfacesBanner = () => (
   <PromotionalBanner
-    message="🏭 BREAKTHROUGH: AI Autonomous Manufacturing 2026 - Achieve 99.9% uptime, 40% cost reduction, and zero-defect production with next-generation smart factories"
+    message="🧠 NEW: AI Neural Interfaces 2026 - 99.7% Accuracy, 2ms Response Time & Brain-Computer Integration Revolution"
     ctaText="Read Article"
-    ctaLink="/blog/ai-autonomous-manufacturing-2026"
-    backgroundColor="bg-gradient-to-r from-green-600 to-blue-600"
-    textColor="text-white"
-    autoHide={true}
-    hideAfter={15}
-  />
-);
-
-export const ManufacturingSuccessBanner = () => (
-  <PromotionalBanner
-    message="📊 SUCCESS STORY: $15M ROI with AI Autonomous Manufacturing - See how a Fortune 500 automotive manufacturer achieved zero-defect production and unprecedented efficiency"
-    ctaText="View Case Study"
-    ctaLink="/case-studies/ai-autonomous-manufacturing-success-2026"
-    backgroundColor="bg-gradient-to-r from-blue-600 to-green-600"
-    textColor="text-white"
-    autoHide={true}
-    hideAfter={15}
-  />
-);
-
-export const EdgeComputingOptimizationBanner = () => (
-  <PromotionalBanner
-    message="⚡ NEW: AI Edge Computing Optimization 2026 - Master sub-50ms response times, 99.9% uptime, and 70% cost reduction with intelligent edge AI systems"
-    ctaText="Read Guide"
-    ctaLink="/blog/ai-edge-computing-optimization-2026"
-    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
-    textColor="text-white"
-    autoHide={true}
-    hideAfter={15}
-  />
-);
-
-export const LatestContent2026Banner = () => (
-  <PromotionalBanner
-    message="🚀 LATEST 2026: Autonomous Manufacturing, Edge Computing & $15M ROI Success Stories - Cutting-Edge AI Content"
-    ctaText="Explore Latest"
-    ctaLink="/blog"
+    ctaLink="/blog/ai-neural-interfaces-2026"
     backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
-    textColor="text-white"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-// New 2026 Content Banners
-export const AINeuralArchitectureBanner = () => (
-  <PromotionalBanner
-    message="🧠 BREAKTHROUGH: AI Neural Architecture Optimization 2026 - 40% performance gains, 60% cost reduction"
-    ctaText="Read Article"
-    ctaLink="/blog/ai-neural-architecture-optimization-2026"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
-    textColor="text-white"
     autoHide={true}
     hideAfter={20}
   />
@@ -706,59 +657,43 @@ export const AINeuralArchitectureBanner = () => (
 
 export const AISpaceTechBanner = () => (
   <PromotionalBanner
-    message="🚀 REVOLUTIONARY: AI Space Technology 2026 - Autonomous space operations with 99.9% reliability & $500M+ savings"
-    ctaText="Explore Space AI"
+    message="🚀 NEW: AI Space Technology 2026 - 99.8% Mission Success, 50% Cost Reduction & Autonomous Spacecraft Revolution"
+    ctaText="Read Article"
     ctaLink="/blog/ai-space-tech-2026"
     backgroundColor="bg-gradient-to-r from-blue-600 to-purple-600"
-    textColor="text-white"
     autoHide={true}
     hideAfter={20}
   />
 );
 
-export const AISustainabilityCaseStudyBanner = () => (
+export const AISustainabilityTransformationBanner = () => (
   <PromotionalBanner
-    message="🌱 SUCCESS STORY: Fortune 500 achieves 100% carbon neutrality & $10M ROI with AI sustainability transformation"
+    message="🌱 NEW: $10M ROI Case Study - AI Sustainability Transformation with 100% Carbon Neutral & 80% Energy Reduction"
     ctaText="View Case Study"
     ctaLink="/case-studies/ai-sustainability-transformation-2026"
-    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
-    textColor="text-white"
+    backgroundColor="bg-gradient-to-r from-green-600 to-blue-600"
     autoHide={true}
-    hideAfter={20}
+    hideAfter={22}
   />
 );
 
-export const NewContent2026Banner = () => (
+export const AIQuantumOptimizationBanner = () => (
   <PromotionalBanner
-    message="✨ NEW 2026: Neural Architecture Optimization, Space AI Technology & Sustainability Success Stories"
-    ctaText="Discover Latest"
+    message="⚛️ NEW: AI Quantum Optimization 2026 - 1000x Speed Improvement & $12M Additional Returns Case Study"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-quantum-optimization-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const Revolutionary2026TechBanner = () => (
+  <PromotionalBanner
+    message="🚀 REVOLUTIONARY 2026: Neural Interfaces, Space AI, Quantum Optimization & $22M Success Stories - The Future is Now"
+    ctaText="Explore 2026 Tech"
     ctaLink="/blog"
     backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
-    textColor="text-white"
-    autoHide={true}
-    hideAfter={25}
-  />
-);
-
-export const AITechnologyBreakthroughBanner = () => (
-  <PromotionalBanner
-    message="🔬 BREAKTHROUGH: Next-gen AI technologies for space exploration, neural optimization & sustainable operations"
-    ctaText="Learn More"
-    ctaLink="/services/ai-research-development"
-    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
-    textColor="text-white"
-    autoHide={true}
-    hideAfter={18}
-  />
-);
-
-export const EnterpriseAITransformationBanner = () => (
-  <PromotionalBanner
-    message="🏢 ENTERPRISE: Transform your business with cutting-edge AI solutions - Neural optimization, space tech & sustainability"
-    ctaText="Get Consultation"
-    ctaLink="/contact"
-    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
-    textColor="text-white"
     autoHide={true}
     hideAfter={18}
   />
