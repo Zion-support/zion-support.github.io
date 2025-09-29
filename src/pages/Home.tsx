@@ -15,15 +15,13 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
-import ROICalculator from "../components/ROICalculator";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
-import NewContentPromotionBanner from "../components/NewContentPromotionBanner";
-import EnhancedServicesShowcase from "../components/EnhancedServicesShowcase";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
 
@@ -104,9 +102,9 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         <ContentPromotionBanner
-          title="Fresh: GenAI Evals, Edge Flags, and North‑Star Metrics"
-          description="New insights just dropped. Explore the latest articles and stay ahead."
-          ctaText="Read the latest"
+          title="New: AI Autonomous Ops, ROI Scorecards, and Edge Caching"
+          description="Fresh 2025 content added. Explore autonomous operations, exec‑ready ROI, and resilient edge patterns."
+          ctaText="Explore new content"
           ctaLink="/blog"
           variant="info"
           className="border-b border-white/10"
@@ -183,13 +181,13 @@ const Home = () => {
                 <span className="inline-flex h-2 w-2 rounded-full bg-purple-400 animate-pulse"></span>
               </div>
               <p className="text-white text-lg font-semibold mb-2">
-                📚 25+ New AI Articles & ROI Case Studies Published This Month
+                📚 New: AI Autonomous Operations, ROI Scorecards, and Edge CDN Guides
               </p>
               <p className="text-zion-slate-light text-sm mb-3">
                 Exclusive insights on AI automation, micro SAAS trends, and $50B market opportunities
               </p>
               <div className="flex flex-wrap justify-center gap-2 text-xs">
-                <span className="bg-purple-500/30 px-2 py-1 rounded">AI ROI Stories</span>
+                <span className="bg-purple-500/30 px-2 py-1 rounded">AI ROI Scorecards</span>
                 <span className="bg-purple-500/30 px-2 py-1 rounded">Market Analysis</span>
                 <span className="bg-purple-500/30 px-2 py-1 rounded">Implementation Guides</span>
                 <span className="bg-purple-500/30 px-2 py-1 rounded">Success Stories</span>
