@@ -697,3 +697,34 @@ posts.push(
     readTime: "8 min read"
   }
 );
+
+// Additional newly added posts to surface on Home and Blog
+posts.push(
+  {
+    slug: "agent-blue-green-releases-2026",
+    title: "Blue‑Green Agent Releases 2026: Safe Rollouts with Live Traces",
+    description: "Deploy agent updates with canaries, budgeted tool actions, and trace‑driven rollbacks.",
+    category: "GenAI",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-platform-scorecards-roi-2026",
+    title: "AI Platform Scorecards 2026: Proving ROI with Leading Indicators",
+    description: "Link platform telemetry to adoption, retention, and revenue with actionable scorecards.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-10",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "production-rag-quality-budgets-2026",
+    title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
+    description: "Keep answers accurate and on‑budget with freshness windows, async warmups, and layered evals.",
+    category: "GenAI",
+    publishedAt: "2025-10-10",
+    featured: true,
+    readTime: "9 min read"
+  }
+);
