@@ -137,26 +137,6 @@ export default function App(): React.JSX.Element {
 
   const navigate = useNavigate();
 
-  // Missing function definitions
-  const handleScroll = useCallback(() => {
-    // Track scroll depth for analytics
-    const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
-    if (scrollDepth > 0 && scrollDepth % 25 === 0) {
-      console.debug('Scroll depth tracked:', { depth: scrollDepth });
-    }
-  }, []);
-
-  const handleClick = useCallback((event?: Event) => {
-    console.debug('Click event captured for engagement tracking', event);
-  }, []);
-
-  const trackEngagement = useCallback(() => {
-    console.debug('User engagement tracked', { 
-      timestamp: Date.now(),
-      session_duration: performance.now()
-    });
-  }, []);
-
   // SEO data for SEOOptimizer component
   const seoDataForOptimizer = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -400,16 +380,6 @@ export default function App(): React.JSX.Element {
     ogImage: '/og-image.png',
     twitterCard: 'summary_large_image' as const
   }), []);
-
-  // Track engagement function
-  const trackEngagement = useCallback(() => {
-    const timeOnPage = Date.now() - engagementData.startTime;
-    seoAnalytics.trackUserEngagement(window.location.pathname, {
-      timeOnPage,
-      scrollDepth: engagementData.scrollDepth,
-      clicks: engagementData.clicks,
-    });
-  }, [engagementData]);
 
   useEffect(() => {
     // Add performance marks for better monitoring
