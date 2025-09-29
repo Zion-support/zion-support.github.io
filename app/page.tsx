@@ -1,11 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { Clock, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import { NewContent2026PromotionalBanners } from '../components/NewContent2026PromotionalBanners';
 import AIInnovation2026PromotionalBanner from '../components/AIInnovation2026PromotionalBanner';
-=======
 import {
   NewBlogBanner,
   AnalyticsPlatformBanner,
@@ -43,7 +41,6 @@ import {
   EdgeComputingOptimizationBanner,
   LatestContent2026Banner
 } from '../components/PromotionalBanner';
->>>>>>> cursor/create-and-deploy-new-content-d106
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -54,6 +51,7 @@ import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase20
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
+import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -87,7 +85,6 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
-<<<<<<< HEAD
       {/* AI Innovation 2026 Promotional Banner */}
       <AIInnovation2026PromotionalBanner />
       
@@ -102,9 +99,11 @@ export default function HomePage() {
       
       {/* Latest Content Promotional Banner */}
       <LatestContentPromotionalBanner />
-=======
-      {/* Promotional Banners */}
-      <LatestContent2026Banner />
+      
+      {/* Latest 2026 Content Mega Banner */}
+      <Latest2026ContentMegaBanner />
+      
+      {/* Additional Promotional Banners */}
       <AutonomousManufacturingBanner />
       <ManufacturingSuccessBanner />
       <EdgeComputingOptimizationBanner />
@@ -120,8 +119,6 @@ export default function HomePage() {
       <EnterpriseTransformationSuccessBanner />
       <HealthcareTransformationBanner />
       <NewContentShowcaseBanner />
-      <AITrends2025Banner />
-      <NewServicesShowcaseBanner />
       <AIRoadmapsBanner />
       <AIFinOpsBanner />
       <AutonomousAgentsBanner />
@@ -135,7 +132,6 @@ export default function HomePage() {
       <NewBlogBanner />
       <WorkflowAutomationBanner />
       <AIAnalyticsBanner />
->>>>>>> cursor/create-and-deploy-new-content-d106
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -191,10 +187,9 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Latest 2026 Content Showcase */}
       <NewContent2026ShowcaseBanner />
-=======
+      
       {/* Latest Breakthrough Content 2026 */}
       <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-indigo-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -300,7 +295,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
->>>>>>> cursor/create-and-deploy-new-content-a9cd
 
       {/* Featured New Content Showcase */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
@@ -1198,7 +1192,12 @@ export default function HomePage() {
                 </p>
                 <div className="flex items-center text-purple-600 font-semibold">
                   Read Complete Guide →
-=======
+                </div>
+              </div>
+            </Link>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Link href="/blog/ai-evaluation-scorecards-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -1261,7 +1260,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-=======
+            
             <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
