@@ -20,31 +20,34 @@ export default function CaseStudiesPage() {
       <div className="max-w-6xl mx-auto px-4">
         {/* Featured Case Study */}
         <div className="mb-16">
-          <Link href="/case-studies/healthtech-ai-transformation">
+          <Link href="/case-studies/retail-giant-ai-transformation">
             <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl p-8 text-white hover:from-green-700 hover:to-emerald-700 transition-all duration-300 cursor-pointer">
               <div className="max-w-4xl">
                 <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
-                  Featured Success Story
+                  Latest Success Story
                 </span>
                 <h2 className="text-3xl font-bold mb-4">
-                  HealthTech Solutions: 80% Efficiency Gain with AI Virtual Assistant
+                  Retail Giant AI Transformation: 400% ROI in 8 Months
                 </h2>
                 <p className="text-lg opacity-90 mb-6">
-                  How HealthTech Solutions revolutionized customer support with AI virtual assistants, 
-                  achieving 80% faster response times and 95% customer satisfaction while reducing costs by 70%.
+                  How a Fortune 500 retail chain transformed their operations with AI, achieving unprecedented efficiency gains and customer satisfaction improvements while reducing costs by $15M annually.
                 </p>
-                <div className="grid grid-cols-3 gap-4 text-center">
+                <div className="grid grid-cols-4 gap-4 text-center">
                   <div>
-                    <div className="text-2xl font-bold">80%</div>
-                    <div className="text-sm opacity-90">Faster Response</div>
+                    <div className="text-2xl font-bold">400%</div>
+                    <div className="text-sm opacity-90">ROI in 8 months</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold">$15M</div>
+                    <div className="text-sm opacity-90">Annual Savings</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold">85%</div>
+                    <div className="text-sm opacity-90">Stockout Reduction</div>
                   </div>
                   <div>
                     <div className="text-2xl font-bold">95%</div>
                     <div className="text-sm opacity-90">Customer Satisfaction</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold">70%</div>
-                    <div className="text-sm opacity-90">Cost Reduction</div>
                   </div>
                 </div>
                 <div className="mt-6 text-center">

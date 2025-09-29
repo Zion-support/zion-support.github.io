@@ -53,7 +53,7 @@ export default function App(): React.JSX.Element {
   const seoDataForOptimizer = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
-    canonical: typeof window !== 'undefined' ? window.location.href : 'https://zion.app/',
+    canonicalUrl: typeof window !== 'undefined' ? window.location.pathname : '/',
   }), []);
 
   // Simple hotkeys for demo toggles
@@ -73,9 +73,9 @@ export default function App(): React.JSX.Element {
           break;
       }
       try {
-        if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
-        enhancedSecurityManager.initialize();
-      }
+        if (enhancedSecurityManager && typeof (enhancedSecurityManager as any).initialize === 'function') {
+          (enhancedSecurityManager as any).initialize();
+        }
       
       // Initialize new performance and accessibility enhancements
       initializePerformanceEnhancements();

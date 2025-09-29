@@ -285,7 +285,7 @@ const Home = () => {
         {/* Latest Insights Section */}
         {/* Promo ribbon for new content */}
         <div className="container mx-auto px-6">
-          <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
+            <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
             New: Guardrails That Ship, Edge Flags Blueprint, and RAG Freshness — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
@@ -715,7 +715,7 @@ const Home = () => {
             <div className="mb-10 flex items-end justify-between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
-                <p className="text-gray-600">Fresh: AI Platform ROI, Secure ML Supply Chain, and Enterprise RAG Blueprint.</p>
+                <p className="text-gray-600">New: Platform ROI, Secure ML Supply Chain, and Enterprise RAG v2.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
@@ -820,9 +820,7 @@ const Home = () => {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
-                  <p className="text-white/90">
-                    New: AI Platform ROI scorecards, securing the ML supply chain, and Enterprise RAG v2.
-                  </p>
+                  <p className="text-white/90">New: Platform ROI scorecards, Secure ML Supply Chain, and Enterprise RAG v2.</p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
                   Read the latest
