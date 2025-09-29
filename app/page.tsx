@@ -36,7 +36,15 @@ import {
   AISustainabilityGreenTechBanner,
   ManufacturingIOTAutomationBanner,
   SupplyChainOptimizationBanner,
-  AI2026TrendsBanner
+  AI2026TrendsBanner,
+  AIAutonomousInfrastructureBanner,
+  AIQuantumHybridComputingBanner,
+  AIAutonomousEnterpriseTransformationBanner,
+  Revolutionary2026ContentBanner,
+  LatestAIInnovations2026Banner,
+  AIZeroTrustSecurityBanner,
+  AIFoundationModelsBanner,
+  NewContent2026PromotionalBanners
 } from '../components/PromotionalBanner';
 =======
 import { 
@@ -88,6 +96,14 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <Revolutionary2026ContentBanner />
+      <AIAutonomousInfrastructureBanner />
+      <AIQuantumHybridComputingBanner />
+      <AIAutonomousEnterpriseTransformationBanner />
+      <LatestAIInnovations2026Banner />
+      <AIZeroTrustSecurityBanner />
+      <AIFoundationModelsBanner />
+      <NewContent2026PromotionalBanners />
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
       <AIEthicsSuccessBanner />
