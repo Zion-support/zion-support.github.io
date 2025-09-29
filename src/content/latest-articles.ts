@@ -93,7 +93,6 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "8 min read",
     image: "/images/platform-engineering-scorecards-v2-2026.jpg",
->>>>>>> origin/main
     newBadge: true,
     trending: true
   },
