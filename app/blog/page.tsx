@@ -54,6 +54,24 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="LLM Evaluation 2026: From Offline Scores to Live Quality Gates"
+            excerpt="Evolve evals into continuous, production quality gates with contracts, canaries, and live scorecards."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="14 min"
+            image="📏"
+            href="/blog/ai-llm-evaluation-2026"
+          />
+          <BlogPost
+            title="Agent Benchmarking 2026: Tasks, Trails, and Real-World Scores"
+            excerpt="Benchmark agents with goal‑conditioned tasks, replayable trails, and outcome scores that predict field success."
+            date="September 29, 2025"
+            category="Autonomous AI"
+            readTime="16 min"
+            image="🧪"
+            href="/blog/agent-benchmarking-2026"
+          />
+          <BlogPost
             title="Platform Engineering Scorecards 2026: From Golden Paths to Outcomes"
             excerpt="Measure adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery."
             date="October 9, 2025"
