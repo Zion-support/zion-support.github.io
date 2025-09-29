@@ -1,5 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+import { Clock, ArrowRight } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-a941
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import { NewContent2026PromotionalBanners } from '../components/NewContent2026PromotionalBanners';
 import ContentShowcase from '../components/ContentShowcase';
@@ -17,9 +21,14 @@ import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBann
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
+<<<<<<< HEAD
+import InteractiveAICalculator from '../components/InteractiveAICalculator';
+import PersonalizedContentRecommendation from '../components/PersonalizedContentRecommendation';
+=======
 import NewContent2026Showcase from '../components/NewContent2026Showcase';
 import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
 import NewsletterSignup2026 from '../components/NewsletterSignup2026';
+>>>>>>> origin/cursor/create-and-deploy-new-content-a941
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 2026 Innovation Hub',
@@ -59,6 +68,17 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ NEW 2026:</span>
+<<<<<<< HEAD
+            <Link href="/blog/ai-next-generation-automation-2026" className="underline hover:text-yellow-200">Next-Gen Automation</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-transformation-mega-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-customer-experience-revolution-2026" className="underline hover:text-yellow-200">Customer Experience</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">Sustainability Guide</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-autonomous-infrastructure-2026" className="underline hover:text-yellow-200">Autonomous Infrastructure</Link>
+=======
             <span>🚀 BREAKING 2026:</span>
             <Link href="/blog/ai-quantum-computing-breakthrough-2026" className="underline hover:text-yellow-200">Quantum AI Breakthrough</Link>
             <span className="hidden md:inline">•</span>
@@ -88,6 +108,7 @@ export default function HomePage() {
             <Link href="/case-studies/ai-quantum-finance-transformation-2026" className="underline hover:text-yellow-200">$500M Finance Success</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-space-mission-automation-2026" className="underline hover:text-yellow-200">$2B Space Success</Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-a941
           </div>
           <Link
             href="/blog"
@@ -97,11 +118,14 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
+=======
       
 =======
 
       {/* New Content 2026 Mega Banner */}
       <NewContent2026MegaBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-a941
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
       
@@ -114,8 +138,46 @@ export default function HomePage() {
       {/* New Content Promotional Banners */}
       <NewContent2026PromotionalBanners />
       
+<<<<<<< HEAD
+      {/* New 2026 Content Banners */}
+      <section className="py-16 bg-gradient-to-r from-emerald-600 to-teal-600 text-white">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4">🚀 New 2026 AI Trends Report</h2>
+          <p className="text-xl mb-6">Discover the top AI trends that will shape enterprise technology in 2026</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/blog/ai-trends-2026" className="bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Read Trends Report
+            </Link>
+            <Link href="/blog/ai-cost-optimization-2026" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors">
+              Cost Optimization Guide
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gradient-to-r from-violet-600 to-purple-600 text-white">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4">💰 $2.4M Cost Optimization Success</h2>
+          <p className="text-xl mb-6">See how a Fortune 500 company achieved 65% cost reduction with AI optimization</p>
+          <Link href="/case-studies/ai-cost-optimization-success-2026" className="bg-white text-violet-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            View Success Story
+          </Link>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gradient-to-r from-rose-600 to-pink-600 text-white">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4">🎯 AI Implementation Playbook 2026</h2>
+          <p className="text-xl mb-6">Complete guide to enterprise AI implementation with proven frameworks and strategies</p>
+          <Link href="/resources/ai-implementation-playbook" className="bg-white text-rose-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            Download Playbook
+          </Link>
+        </div>
+      </section>
+=======
       {/* New Content 2026 Showcase */}
       <NewContent2026Showcase />
+>>>>>>> origin/cursor/create-and-deploy-new-content-a941
       
 =======
 =======
@@ -134,6 +196,24 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
+<<<<<<< HEAD
+              href="/blog/ai-2026-ultimate-guide"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
+            >
+              🚀 Read AI Ultimate Guide 2026
+            </Link>
+            <Link
+              href="/case-studies/ai-2026-mega-transformation-success"
+              className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
+            >
+              🏆 View $50M Success Story
+            </Link>
+            <Link
+              href="/case-studies/ai-sustainability-transformation-2026"
+              className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-red-700 transition-all shadow-lg hover:shadow-xl"
+            >
+              🌱 $10M Sustainability ROI
+=======
               href="/blog/ai-next-generation-automation-2026"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
             >
@@ -184,6 +264,7 @@ export default function HomePage() {
               className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-red-700 transition-all shadow-lg hover:shadow-xl"
             >
               🚀 $2B Space Success
+>>>>>>> origin/cursor/create-and-deploy-new-content-a941
             </Link>
             <a
               href="tel:+13024640950"
@@ -420,6 +501,8 @@ export default function HomePage() {
               href="/services/ai-autonomous-cloud-ops"
               popular={true}
             />
+<<<<<<< HEAD
+=======
             <FeaturedServiceCard
               title="AI FinTech Transformation"
               description="Complete digital banking revolution with 95% automation and $5M+ savings"
@@ -541,6 +624,7 @@ export default function HomePage() {
             >
               Explore All Breakthroughs
             </Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-a941
           </div>
         </div>
       </section>
@@ -825,6 +909,8 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
       {/* Dynamic Content Showcase */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -1837,6 +1923,7 @@ export default function HomePage() {
         </div>
       </section>
 
+>>>>>>> origin/cursor/create-and-deploy-new-content-a941
       {/* Success Stories */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -1966,6 +2053,8 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
 
       {/* Newsletter Signup Section */}
       <section className="py-20 bg-gray-50">
@@ -1974,6 +2063,7 @@ export default function HomePage() {
         </div>
       </section>
 
+>>>>>>> origin/cursor/create-and-deploy-new-content-a941
       {/* CTA Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">

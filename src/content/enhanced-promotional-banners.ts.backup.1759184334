@@ -73,6 +73,23 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     featured: true
   },
   {
+<<<<<<< HEAD
+    id: 'agent-release-checklists-banner',
+    message: '✅ New: Agent Release Checklists + KPI‑Linked Canaries',
+    ctaText: 'Read now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-emerald-700 to-teal-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0,
+    variant: 'info',
+    icon: '✅',
+    animation: 'fade-in',
+    badge: 'NEW CONTENT',
+=======
     id: 'fresh-sept-2025-content',
     message: '📚 NEW: Serverless Inference Cost Playbook + Agent Safety Budgets (2025)',
     ctaText: 'Read Now',
@@ -88,6 +105,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '✨',
     animation: 'pulse',
     badge: 'NEW',
+>>>>>>> origin/cursor/create-and-deploy-new-content-a941
     featured: true
   },
   {

@@ -37,15 +37,20 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
+<<<<<<< HEAD
+=======
     slug: "edge-llm-safety-caching-2026",
     title: "Edge LLM Safety Caching 2026: Sub‑100ms Prompts with Guardrails",
     description: "Tiered KV, signed configs, and inline filters that keep prompts fast and safe at the edge.",
     category: "Architecture",
+>>>>>>> origin/cursor/create-and-deploy-new-content-a941
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "6 min read"
   },
   {
+<<<<<<< HEAD
+=======
     slug: "platform-slo-guardrails-2026",
     title: "Platform SLO Guardrails 2026: Scorecards that Prevent Regressions",
     description: "Wire golden paths to SLOs with pre‑merge policy tests and live canaries that keep teams fast.",
@@ -58,6 +63,8 @@ export const posts: BlogPost[] = [
     slug: "ai-breach-drills-2026",
     title: "AI Breach Drills 2026: Practicing Safe Autonomy Under Budget",
     description: "Run realistic breach simulations with budgeted actions, approval gates, and instant rollback.",
+>>>>>>> chore/add-sept-29-content
+>>>>>>> origin/cursor/create-and-deploy-new-content-a941
     category: "Security",
     publishedAt: "2025-10-13",
     featured: true,
@@ -89,6 +96,8 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "7 min read"
+<<<<<<< HEAD
+=======
   },
   {
     slug: "ai-platform-slos-2026",
@@ -107,6 +116,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-15",
     featured: true,
     readTime: "7 min read"
+>>>>>>> origin/cursor/create-and-deploy-new-content-a941
   },
   {
     slug: "ai-reliable-rag-ops-2026",
@@ -118,6 +128,8 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
+<<<<<<< HEAD
+=======
     slug: "ai-autonomous-infrastructure-2026",
     title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
     description: "Blueprints and scorecards to operate self‑healing platforms with budgets and safe automation.",
@@ -136,12 +148,15 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
+>>>>>>> origin/cursor/create-and-deploy-new-content-a941
     slug: "platform-engineering-kpis-2026",
     title: "Platform Engineering KPIs 2026: Adoption, Golden Paths, SLOs",
     description: "Scorecards that shift the convo from costs to shipped value—adoption, TTFX, SLOs.",
     category: "Platform Engineering",
     publishedAt: "2025-10-12",
     featured: true,
+<<<<<<< HEAD
+=======
     readTime: "6 min read"
   },
   {
@@ -166,6 +181,7 @@ export const posts: BlogPost[] = [
     slug: "zero-trust-for-genai-2026",
     title: "Zero‑Trust for GenAI: Prompt Firewalls, Egress Policies, and Audit Trails",
     description: "Contain risks with auth‑aware retrieval, policy gates, and signed outputs at scale.",
+>>>>>>> origin/cursor/create-and-deploy-new-content-a941
     category: "Security",
     publishedAt: "2025-10-12",
     featured: false,
@@ -518,6 +534,8 @@ export const posts: BlogPost[] = [
   }
   ,
   {
+<<<<<<< HEAD
+=======
     slug: "ai-governance-scorecards-quickstart-2026",
     title: "AI Governance Scorecards Quickstart 2026: Ship Fast, Stay Safe",
     description: "Set up KPI‑linked scorecards, PR checks, and rollback‑ready canaries in weeks.",
@@ -539,6 +557,7 @@ export const posts: BlogPost[] = [
     slug: "serverless-inference-cost-playbook-2026",
     title: "Serverless Inference Cost Playbook 2026: Budgets Without P95 Pain",
     description: "Adaptive batching, warm pools, and tiered quality under explicit budgets.",
+>>>>>>> origin/cursor/create-and-deploy-new-content-a941
     category: "GenAI",
     publishedAt: "2025-10-13",
     featured: false,
@@ -721,6 +740,8 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   }
 ];
+<<<<<<< HEAD
+=======
 
 // Newly added content (auto-advertised on Home via latest sort)
 posts.push(
@@ -805,3 +826,4 @@ posts.push(
     readTime: "7 min read"
   }
 );
+>>>>>>> origin/cursor/create-and-deploy-new-content-a941
