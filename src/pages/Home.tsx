@@ -133,16 +133,16 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Edge LLM Caching, Governance Scorecards, Serverless Cost Playbook"
-          description="Sub‑100ms prompts, KPI‑tied governance that sticks, and 40–70% AI cost savings."
+          title="New: Risk‑Budgeted Runbooks, Zero‑Trust Agents, Privacy‑Safe Flags"
+          description="Ship safe automation with risk budgets, sandboxed agents, and privacy‑preserving rollouts."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Incident Response Playbooks", category: "Cybersecurity", link: "/blog/ai-incident-response-playbooks-2025" },
-            { title: "Privacy‑Preserving Analytics", category: "Observability", link: "/blog/privacy-preserving-analytics-2025" },
-            { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" },
-            { title: "AI Governance Scorecards Quickstart", category: "AI Strategy", link: "/blog/ai-governance-scorecards-quickstart-2025" },
-            { title: "Serverless AI Inference Cost Playbook 2025", category: "Cost Optimization", link: "/blog/serverless-ai-inference-cost-playbook-2025" }
+            { title: "AI Runbooks with Risk Budgets 2026", category: "AI Operations", link: "/blog/ai-runbooks-with-risk-budgets-2026" },
+            { title: "Zero‑Trust for AI Agents 2026", category: "AI Security", link: "/blog/zero-trust-for-ai-agents-2026" },
+            { title: "Privacy‑Preserving Feature Flags 2026", category: "Architecture", link: "/blog/privacy-preserving-feature-flags-2026" },
+            { title: "Platform Scorecards 2026", category: "Platform Engineering", link: "/blog/platform-engineering-scorecards-2026" },
+            { title: "Edge AI Blueprint 2026", category: "Edge Computing", link: "/blog/edge-ai-blueprint-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">

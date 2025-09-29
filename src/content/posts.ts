@@ -356,6 +356,25 @@ export const posts: BlogPost[] = [
   }
   ,
   {
+    slug: "ai-runbooks-with-risk-budgets-2026",
+    title: "AI Runbooks with Risk Budgets: Safe Automation That Ships",
+    description: "Playbooks with budgeted actions, approvals, and rollback that teams trust.",
+    category: "AI Operations",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "zero-trust-for-ai-agents-2026",
+    title: "Zero‑Trust for AI Agents: Sandboxes, Egress Policies, Attestations",
+    description: "Run agentic systems safely with isolation, scoped permissions, and signed tools.",
+    category: "AI Security",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "8 min read"
+  }
+  ,
+  {
     slug: "agentic-workflows-blueprint-2026",
     title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",
     description: "Design reliable multi‑tool agents with deterministic tools, live traces, and risk budgets.",
