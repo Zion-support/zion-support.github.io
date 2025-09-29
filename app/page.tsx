@@ -18,33 +18,46 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-      {/* New Content Promo Strip */}
-      <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
-          <div className="flex items-center gap-2 text-sm md:text-base">
-            <span>🚀 REVOLUTIONARY 2026:</span>
-            <Link href="/blog/ai-innovation-2026-revolution" className="underline hover:text-yellow-200">AI Innovation Guide</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-innovation-enterprise-success-2026" className="underline hover:text-yellow-200">$50M Success Story</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200">Enterprise Automation</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-autonomous-enterprise-2026" className="underline hover:text-yellow-200">Autonomous Enterprise</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="underline hover:text-yellow-200">Cognitive Computing</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-space-tech-revolution-2026" className="underline hover:text-yellow-200">Space Tech</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-mega-transformation-2026" className="underline hover:text-yellow-200">$50M ROI Case Study</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
+      {/* Enhanced New Content Promo Strip */}
+      <div className="w-full bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden">
+        {/* Animated background */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="20" cy="20" r="1.5"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center gap-3 md:gap-6 justify-between relative z-10">
+          <div className="flex flex-wrap items-center gap-2 md:gap-4 text-sm md:text-base">
+            <span className="font-bold text-yellow-300">🚀 REVOLUTIONARY 2026:</span>
+            <Link href="/blog/ai-innovation-2026-revolution" className="underline hover:text-yellow-200 transition-colors font-medium">AI Innovation Guide</Link>
+            <span className="hidden md:inline text-gray-300">•</span>
+            <Link href="/case-studies/ai-innovation-enterprise-success-2026" className="underline hover:text-yellow-200 transition-colors font-medium">$50M Success Story</Link>
+            <span className="hidden md:inline text-gray-300">•</span>
+            <Link href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200 transition-colors font-medium">Enterprise Automation</Link>
+            <span className="hidden md:inline text-gray-300">•</span>
+            <Link href="/blog/ai-autonomous-enterprise-2026" className="underline hover:text-yellow-200 transition-colors font-medium">Autonomous Enterprise</Link>
+            <span className="hidden md:inline text-gray-300">•</span>
+            <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="underline hover:text-yellow-200 transition-colors font-medium">Cognitive Computing</Link>
+            <span className="hidden md:inline text-gray-300">•</span>
+            <Link href="/blog/ai-space-tech-revolution-2026" className="underline hover:text-yellow-200 transition-colors font-medium">Space Tech</Link>
+            <span className="hidden md:inline text-gray-300">•</span>
+            <Link href="/case-studies/ai-mega-transformation-2026" className="underline hover:text-yellow-200 transition-colors font-medium">$50M ROI Case Study</Link>
+            <span className="hidden md:inline text-gray-300">•</span>
+            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200 transition-colors font-medium">$25M ROI Case Study</Link>
           </div>
-          <Link
-            href="/blog"
-            className="bg-white text-indigo-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
-          >
-            Read the latest
-          </Link>
+          <div className="flex gap-3">
+            <Link
+              href="/blog"
+              className="bg-white text-indigo-700 hover:bg-gray-100 px-4 py-2 rounded-md text-sm font-semibold transition-colors shadow-lg hover:shadow-xl"
+            >
+              📚 Read Latest
+            </Link>
+            <Link
+              href="/case-studies"
+              className="bg-yellow-400 text-black hover:bg-yellow-500 px-4 py-2 rounded-md text-sm font-semibold transition-colors shadow-lg hover:shadow-xl"
+            >
+              🏆 Success Stories
+            </Link>
+          </div>
         </div>
       </div>
       
