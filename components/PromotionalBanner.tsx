@@ -115,7 +115,7 @@ export const CaseStudyBanner = () => (
 
 export const NewBlogBanner = () => (
   <PromotionalBanner
-    message="🔥 Fresh Insights: AI Roadmaps 2026, Guardrails Blueprints, FinOps Scorecards"
+    message="🔥 Fresh Insights: AI Roadmaps 2026 and FinOps Scorecards 2025 now live"
     ctaText="Browse Latest Posts"
     ctaLink="/blog"
     backgroundColor="bg-gradient-to-r from-orange-600 to-pink-600"
@@ -175,6 +175,28 @@ export const AIAnalyticsBanner = () => (
     backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
     autoHide={true}
     hideAfter={18}
+  />
+);
+
+export const AIRoadmapsBanner = () => (
+  <PromotionalBanner
+    message="🗺️ New: AI Roadmaps 2026 — What to Build Next and Why"
+    ctaText="Read Roadmap"
+    ctaLink="/blog/ai-roadmaps-2026"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-teal-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AIFinOpsBanner = () => (
+  <PromotionalBanner
+    message="📉 New: AI FinOps Scorecards 2025 — Control LLM Spend"
+    ctaText="Read Scorecards"
+    ctaLink="/blog/ai-finops-scorecards-2025"
+    backgroundColor="bg-gradient-to-r from-amber-600 to-pink-600"
+    autoHide={true}
+    hideAfter={20}
   />
 );
 

@@ -46,6 +46,24 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="AI Roadmaps 2026: What to Build Next and Why"
+            excerpt="A pragmatic roadmap for 2026 across CX, ops, and platforms. High-ROI bets with sequencing and metrics."
+            date="September 29, 2025"
+            category="Strategy"
+            readTime="10 min"
+            image="🗺️"
+            href="/blog/ai-roadmaps-2026"
+          />
+          <BlogPost
+            title="AI FinOps Scorecards 2025: Control LLM Spend Without Slowing Teams"
+            excerpt="Practical scorecards and controls to cut LLM costs 30–70% with team-friendly governance."
+            date="September 29, 2025"
+            category="FinOps"
+            readTime="8 min"
+            image="📉"
+            href="/blog/ai-finops-scorecards-2025"
+          />
+          <BlogPost
             title="AI Go-To-Market 2025: Proven Plays for Fast Adoption"
             excerpt="Practical GTM playbook for AI products: positioning, enterprise readiness, and repeatable pipeline plays."
             date="September 29, 2025"

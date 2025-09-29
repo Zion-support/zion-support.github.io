@@ -19,6 +19,28 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-roadmaps-2026',
+    title: 'AI Roadmaps 2026: What to Build Next and Why',
+    excerpt: 'A pragmatic roadmap for 2026 across CX, ops, and platforms with high-ROI bets.',
+    type: 'article',
+    readTime: '10 min read',
+    category: 'Strategy',
+    href: '/blog/ai-roadmaps-2026',
+    featured: true,
+    publishedDate: '2025-09-29'
+  },
+  {
+    id: 'ai-finops-scorecards-2025',
+    title: 'AI FinOps Scorecards 2025: Control LLM Spend',
+    excerpt: 'Cut LLM costs 30–70% with scorecards, routing, caching, and prompt budgets.',
+    type: 'article',
+    readTime: '8 min read',
+    category: 'FinOps',
+    href: '/blog/ai-finops-scorecards-2025',
+    featured: true,
+    publishedDate: '2025-09-29'
+  },
+  {
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Enterprise-Ready Implementation Guide',
     excerpt: 'Master AI governance with our comprehensive framework covering risk management, compliance, and ethical deployment strategies.',

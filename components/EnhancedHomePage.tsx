@@ -18,7 +18,9 @@ import {
   RetailSuccessBanner,
   AIContentShowcaseBanner,
   AIRevolutionBanner,
-  AIGoToMarketBanner
+  AIGoToMarketBanner,
+  AIRoadmapsBanner,
+  AIFinOpsBanner
 } from './PromotionalBanner';
 import AITrends2025Banner from './AITrends2025Banner';
 import ServicesShowcase from './ServicesShowcase';
@@ -163,6 +165,8 @@ export default function EnhancedHomePage({
         <RetailSuccessBanner />
         <AIRevolutionBanner />
         <AIGoToMarketBanner />
+        <AIRoadmapsBanner />
+        <AIFinOpsBanner />
         <NewBlogBanner />
         <WorkflowAutomationBanner />
         <AIAnalyticsBanner />
