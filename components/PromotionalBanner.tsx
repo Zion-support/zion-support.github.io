@@ -264,3 +264,36 @@ export const AIRevolutionBanner = () => (
     hideAfter={20}
   />
 );
+
+export const AIAgentsEnterpriseBanner = () => (
+  <PromotionalBanner
+    message="🤖 New Guide: AI Agents in the Enterprise - 2025 Adoption Playbook with Proven ROI Strategies"
+    ctaText="Read Playbook"
+    ctaLink="/blog/ai-agents-in-the-enterprise-2025"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const TechCorpSuccessBanner = () => (
+  <PromotionalBanner
+    message="🏆 New Case Study: TechCorp Achieved 90% Efficiency Gain & $500K Annual Savings with AI Transformation"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/techcorp-ai-transformation"
+    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const NewContentShowcaseBanner = () => (
+  <PromotionalBanner
+    message="📚 Fresh Content Alert: AI Revolution Guide, Enterprise AI Agents Playbook & TechCorp Success Story"
+    ctaText="Explore New Content"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    autoHide={true}
+    hideAfter={25}
+  />
+);
