@@ -46,8 +46,6 @@ interface ErrorReport {
   const [errorReports, setErrorReports] = useState<ErrorReport[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-      };
-
       const mockInsights: AIInsights = {
         predictedHighRiskActions: [
           "High memory usage detected in component rendering",
@@ -103,17 +101,7 @@ interface ErrorReport {
       setInsights(mockInsights);
       setErrorReports(mockErrorReports);
     } catch (error) {
-      enhancedErrorHandler.handleComponentError(
-        error as Error,
-        "AIPerformanceDashboard",
-        {
-          retryable: true,
-          maxRetries: 3,
-          retryDelay: 1000,
-          component: "AIPerformanceDashboard",
-          action: "loadPerformanceData",
-        },
-      );
+      console.error("Failed to load AI performance data:", error);
     } finally {
       setIsLoading(false);
     }

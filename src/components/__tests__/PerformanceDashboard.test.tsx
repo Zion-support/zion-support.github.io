@@ -62,8 +62,6 @@ jest.mock("../../utils/advancedPerformanceMonitor", () => ({
     });
   });
 
-  });
-
   it("does not render when not visible", () => {
     render(<PerformanceDashboard isVisible={false} />);
 
@@ -76,12 +74,6 @@ jest.mock("../../utils/advancedPerformanceMonitor", () => ({
     await waitFor(() => {
       expect(screen.getByText("System Resources")).toBeInTheDocument();
     });
-  });
-
-    fireEvent.click(closeButton);
-    expect(mockOnClose).toHaveBeenCalled();
-  });
-
   });
 
   it("has proper accessibility attributes", () => {
