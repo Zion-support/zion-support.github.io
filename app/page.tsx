@@ -49,6 +49,14 @@ import {
   AutonomousOperationsSuccessBanner,
   NewContentShowcaseBanner2026
 } from '../components/NewContent2026Banners';
+import { 
+  NewContent2026Banner,
+  AIQuantumComputingBanner,
+  AIZeroTrustSecurityBanner,
+  AIFoundationModelsBanner,
+  EnterpriseTransformationBanner,
+  LatestContent2026Banner
+} from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -88,10 +96,15 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <NewContent2026Banner />
+      <AIQuantumComputingBanner />
+      <AIZeroTrustSecurityBanner />
+      <AIFoundationModelsBanner />
+      <EnterpriseTransformationBanner />
+      <LatestContent2026Banner />
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
       <AIEthicsSuccessBanner />
-      <LatestContent2026Banner />
       <AISecurityEnterprise2026Banner />
       <AIMultimodalEnterprise2026Banner />
       <AISustainabilityTransformationBanner />
