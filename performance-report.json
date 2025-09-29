@@ -1,11 +1,24 @@
 {
-  "timestamp": "2025-09-17T01:10:23.249Z",
-  "buildTime": 0,
-  "bundleSize": 827670,
-  "chunkCount": 41,
+  "timestamp": "2025-09-29T01:20:09.439Z",
+  "duration": 23553,
+  "optimizations": [
+    "Optimized 3 images",
+    "Analyzed 11 CSS files",
+    "Analyzed 253 JavaScript files"
+  ],
   "recommendations": [
-    "Enable gzip/brotli compression on server",
+    "Enable code splitting for large components",
+    "Implement lazy loading for images",
+    "Use React.memo for expensive components",
+    "Optimize bundle size with tree shaking",
     "Implement service worker for caching",
-    "Use CDN for static assets"
-  ]
+    "Use CDN for static assets",
+    "Enable gzip compression",
+    "Implement critical CSS inlining"
+  ],
+  "metrics": {
+    "buildTime": 9668,
+    "bundleSize": 1272183,
+    "fileCount": 264
+  }
 }

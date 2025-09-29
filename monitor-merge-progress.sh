@@ -1,72 +1,74 @@
 #!/bin/bash
 
-# Script to monitor merge progress
-echo "🔍 Monitoring merge progress..."
-echo "⏰ Current time: $(date)"
+# Monitor merge operation progress
+echo "📊 Merge Operation Progress Monitor"
+echo "⏰ Started monitoring at: $(date)"
 echo ""
 
-# Check if merge process is running
-echo "📊 Process Status:"
-if ps aux | grep -q "ultimate-merge-all-prs.sh"; then
-    echo "✅ Ultimate merge process is running"
-    echo "🔄 Process details:"
-    ps aux | grep "ultimate-merge-all-prs.sh" | grep -v grep
-elif ps aux | grep -q "batch-merge-prs.sh"; then
-    echo "✅ Batch merge process is running"
-    echo "🔄 Process details:"
-    ps aux | grep "batch-merge-prs.sh" | grep -v grep
-else
-    echo "❌ No merge process running"
-fi
+# Function to show current status
+show_status() {
+    echo "🔄 Current Status Check - $(date)"
+    echo "----------------------------------------"
+    
+    # Git status
+    echo "📋 Git Status:"
+    git status --porcelain || echo "   Clean working tree"
+    echo ""
+    
+    # Branch count
+    TOTAL_CURSOR_BRANCHES=$(git branch -r | grep "cursor/check-fix-push-and-merge-to-main" | wc -l)
+    echo "📊 Branch Statistics:"
+    echo "   Cursor branches remaining: $TOTAL_CURSOR_BRANCHES"
+    echo ""
+    
+    # Recent commits
+    echo "📝 Recent Commits (last 5):"
+    git log --oneline -5
+    echo ""
+    
+    # Process check
+    echo "🔍 Running Processes:"
+    MERGE_PROCESSES=$(ps aux | grep -E "(merge|cleanup)" | grep -v grep | wc -l)
+    echo "   Merge/cleanup processes: $MERGE_PROCESSES"
+    if [ $MERGE_PROCESSES -gt 0 ]; then
+        ps aux | grep -E "(merge|cleanup)" | grep -v grep | head -3
+    fi
+    echo ""
+    
+    # Repository statistics
+    echo "📈 Repository Statistics:"
+    echo "   Total commits: $(git rev-list --count HEAD)"
+    echo "   Total branches: $(git branch -r | wc -l)"
+    echo "   Main branch commits: $(git rev-list --count main)"
+    echo ""
+    
+    echo "----------------------------------------"
+    echo ""
+}
 
+# Initial status
+show_status
+
+# Monitor loop (run every 30 seconds for 10 minutes)
+echo "🔄 Starting continuous monitoring (every 30 seconds for 10 minutes)..."
 echo ""
 
-# Check git status
-echo "📊 Git Status:"
-git status --porcelain
+for i in {1..20}; do
+    sleep 30
+    show_status
+    
+    # Check if merge operation is still running
+    if ! ps aux | grep -E "(final-merge|merge)" | grep -v grep | grep -q "bash"; then
+        echo "🏁 Merge operation appears to have completed!"
+        break
+    fi
+done
 
+echo "📊 Final Status Summary:"
+echo "⏰ Monitoring completed at: $(date)"
 echo ""
 
-# Check recent commits
-echo "📊 Recent Commits (last 20):"
-git log --oneline -20
+# Final status check
+show_status
 
-echo ""
-
-# Check for any conflicts
-echo "📊 Conflict Status:"
-CONFLICTS=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
-if [ -n "$CONFLICTS" ]; then
-    echo "⚠️  Found conflicts in:"
-    echo "$CONFLICTS"
-else
-    echo "✅ No conflicts found"
-fi
-
-echo ""
-
-# Check branch status
-echo "📊 Branch Status:"
-echo "Current branch: $(git branch --show-current)"
-echo "Remote status: $(git status -sb | head -1)"
-
-echo ""
-
-# Check total branches
-echo "📊 Total Branches:"
-TOTAL_BRANCHES=$(git branch -r | grep -E "(cursor|pr)" | wc -l)
-echo "Total PRs/Branches: $TOTAL_BRANCHES"
-
-# Check merged branches
-echo "📊 Merged Branches:"
-MERGED_BRANCHES=$(git branch --merged main | grep -E "(cursor|pr)" | wc -l)
-echo "Merged PRs/Branches: $MERGED_BRANCHES"
-
-# Calculate progress
-if [ $TOTAL_BRANCHES -gt 0 ]; then
-    PROGRESS=$((MERGED_BRANCHES * 100 / TOTAL_BRANCHES))
-    echo "📈 Progress: $PROGRESS% ($MERGED_BRANCHES/$TOTAL_BRANCHES)"
-fi
-
-echo ""
-echo "🎯 Merge progress check completed!"
+echo "🎯 Progress monitoring completed!"

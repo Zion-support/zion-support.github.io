@@ -1,100 +1,79 @@
-import { useEffect, useCallback }  from 'react';
+import { useEffect, useState } from "react";
+
 interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  timeToInteractive: number;
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+}
+
 export const usePerformanceMonitor = () => {
-  const measurePerformance = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) {
-      return null;
-    };
-const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paintEntries = performance.getEntriesByType('paint');
-    const metrics: Partial<PerformanceMetrics> = {};
-    // Load time
-    if (navigation) {
-      metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-    };
-    // First Contentful Paint
-    const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-    if (fcpEntry) {
-      metrics.firstContentfulPaint = fcpEntry.startTime;
-    };
-    // Largest Contentful Paint
-    const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
-    if (lcpEntries.length > 0) {
-      metrics.largestContentfulPaint = lcpEntries[lcpEntries.length - 1].startTime;
-    };
-    // First Input Delay
-    const fidEntries = performance.getEntriesByType('first-input');
-    if (fidEntries.length > 0) {
-      const fidEntry = fidEntries[0] as any;
-      metrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
-    };
-    // Cumulative Layout Shift
-    const clsEntries = performance.getEntriesByType('layout-shift');
-    let clsValue = 0;
-    clsEntries.forEach((entry: any) => {
-      if (!entry.hadRecentInput) {
-        clsValue += entry.value;
-      };
-    });
-    metrics.cumulativeLayoutShift = clsValue;
-    // Time to Interactive (approximation)
-    if (navigation) {
-      metrics.timeToInteractive = navigation.domContentLoadedEventEnd - navigation.navigationStart;
-    };
-return metrics as PerformanceMetrics;
-  }, []);
-  const logPerformanceMetrics = useCallback((metrics: PerformanceMetrics) => {
-    console.group('🚀 Performance Metrics');
-    console.log('Load Time:', `${metrics.loadTime?.toFixed(2)}ms`);
-    console.log('First Contentful Paint:', `${metrics.firstContentfulPaint?.toFixed(2)}ms`);
-    console.log('Largest Contentful Paint:', `${metrics.largestContentfulPaint?.toFixed(2)}ms`);
-    console.log('First Input Delay:', `${metrics.firstInputDelay?.toFixed(2)}ms`);
-    console.log('Cumulative Layout Shift:', metrics.cumulativeLayoutShift?.toFixed(4));
-    console.log('Time to Interactive:', `${metrics.timeToInteractive?.toFixed(2)}ms`);
-    console.groupEnd();
-    // Send to analytics service in production
-    if (process.env.NODE_ENV === 'production') {
-      // Example: Send to Google Analytics
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'performance_metrics', {
-          load_time: metrics.loadTime,
-          first_contentful_paint: metrics.firstContentfulPaint,
-          largest_contentful_paint: metrics.largestContentfulPaint,
-          first_input_delay: metrics.firstInputDelay,
-          cumulative_layout_shift: metrics.cumulativeLayoutShift,
-          time_to_interactive: metrics.timeToInteractive
-        });
-      };
-    };
-  }, []);
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isMonitoring, setIsMonitoring] = useState(false);
+
   useEffect(() => {
-    const handleLoad = () => {
-      // Wait a bit for all metrics to be available
-      setTimeout(() => {
-        const metrics = measurePerformance();
-        if (metrics) {
-          logPerformanceMetrics(metrics);
-        };
-      }, 1000);
-  };
-    if (document.readyState === 'complete') {
-      handleLoad();
-    } else {
-      window.addEventListener('load', handleLoad);
+    if (typeof window === "undefined") return;
+
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === "largest-contentful-paint") {
+          setMetrics((prev) =>
+            prev
+              ? { ...prev, lcp: entry.startTime }
+              : ({ lcp: entry.startTime } as PerformanceMetrics),
+          );
+        }
+        if (entry.entryType === "first-input") {
+          setMetrics((prev) =>
+            prev
+              ? {
+                  ...prev,
+                  fid: (entry as any).processingStart - entry.startTime,
+                }
+              : ({
+                  fid: (entry as any).processingStart - entry.startTime,
+                } as PerformanceMetrics),
+          );
+        }
+        if (entry.entryType === "layout-shift") {
+          setMetrics((prev) =>
+            prev
+              ? { ...prev, cls: (prev?.cls || 0) + ((entry as any).value || 0) }
+              : ({ cls: (entry as any).value || 0 } as PerformanceMetrics),
+          );
+        }
+      });
+    });
+
+    observer.observe({
+      entryTypes: ["largest-contentful-paint", "first-input", "layout-shift"],
+    });
+
+    // Measure FCP
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const fcpEntry = entries.find(
+        (entry) => entry.name === "first-contentful-paint",
+      );
+      if (fcpEntry) {
+        setMetrics((prev) =>
+          prev
+            ? { ...prev, fcp: fcpEntry.startTime }
+            : ({ fcp: fcpEntry.startTime } as PerformanceMetrics),
+        );
+      }
+    });
+    fcpObserver.observe({ entryTypes: ["paint"] });
+
+    setIsMonitoring(true);
+
+    return () => {
+      observer.disconnect();
+      fcpObserver.disconnect();
     };
-return () => {
-      window.removeEventListener('load', handleLoad);
-  };
-  }, [measurePerformance, logPerformanceMetrics]);
-  return {
-    measurePerformance,
-    logPerformanceMetrics
-  };
-  };
-export default usePerformanceMonitor;
+  }, []);
+
+  return { metrics, isMonitoring };
+};

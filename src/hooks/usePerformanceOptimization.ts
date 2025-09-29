@@ -1,172 +1,93 @@
-import { useEffect, useCallback, useRef } from 'react';
+import { useCallback, useEffect, useMemo, useRef } from 'react';
 
-interface PerformanceConfig {
-  enableLazyLoading?: boolean;
-  enableImageOptimization?: boolean;
-  enableCodeSplitting?: boolean;
-  enablePrefetching?: boolean;
-  enableCaching?: boolean;
+interface PerformanceMetrics {
+  loadTime: number;
+  memoryUsage: number | null;
+  renderCount: number;
+  lastRenderTime: number;
 }
-export const usePerformanceOptimization = (config: PerformanceConfig = {}) => {
+
+interface PerformanceOptimizationOptions {
+  enableMemoryMonitoring?: boolean;
+  enableRenderTracking?: boolean;
+  enableLazyLoading?: boolean;
+  debounceDelay?: number;
+  enablePreloading?: boolean;
+  enableResourceHints?: boolean;
+  enableCriticalCSS?: boolean;
+  enableImageOptimization?: boolean;
+}
+
+export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
   const {
+    enableMemoryMonitoring = true,
+    enableRenderTracking = true,
     enableLazyLoading = true,
-    enableImageOptimization = true,
-    enableCodeSplitting = true,
-    enablePrefetching = true,
-    enableCaching = true
-  } = config;
+    debounceDelay = 100
+  } = options;
 
-  const observerRef = useRef<IntersectionObserver | null>(null);
+  const renderCountRef = useRef(0);
+  const lastRenderTimeRef = useRef(performance.now());
+  const debounceTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Lazy loading for images
+  // Track render performance
   useEffect(() => {
-    if (!enableLazyLoading) return;
+    if (enableRenderTracking) {
+      renderCountRef.current += 1;
+      lastRenderTimeRef.current = performance.now();
+    }
+  });
 
-    const images = document.querySelectorAll('img[data-src]');
+  // Memory monitoring
+  const memoryUsage = useMemo(() => {
+    if (!enableMemoryMonitoring || !(performance as any).memory) return null;
     
-    if (images.length === 0) return;
+    const memory = (performance as any).memory;
+    return {
+      used: memory.usedJSHeapSize,
+      total: memory.totalJSHeapSize,
+      limit: memory.jsHeapSizeLimit,
+      percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+    };
+  }, [enableMemoryMonitoring]);
 
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            const src = img.getAttribute('data-src');
-            if (src) {
-              img.src = src;
-              img.removeAttribute('data-src');
-              img.classList.add('loaded');
-            }
-            observerRef.current?.unobserve(img);
-          }
-        });
-      },
-        { rootMargin: '50px' }
-    );
+  // Debounced function for performance-heavy operations
+  const debouncedCallback = useCallback(
+    <T extends (...args: any[]) => any>(callback: T): T => {
+      return ((...args: Parameters<T>) => {
+        if (debounceTimeoutRef.current) {
+          clearTimeout(debounceTimeoutRef.current);
+        }
+        
+        debounceTimeoutRef.current = setTimeout(() => {
+          callback(...args);
+        }, debounceDelay);
+      }) as T;
+    },
+    [debounceDelay]
+  );
 
-    images.forEach((img) => observerRef.current?.observe(img));
+  // Performance metrics
+  const metrics: PerformanceMetrics = useMemo(() => ({
+    loadTime: performance.now(),
+    memoryUsage: memoryUsage?.used || null,
+    renderCount: renderCountRef.current,
+    lastRenderTime: lastRenderTimeRef.current
+  }), [memoryUsage]);
 
+  // Cleanup
+  useEffect(() => {
     return () => {
-      observerRef.current?.disconnect();
-    };
-  }, [enableLazyLoading]);
-
-  // Prefetch critical resources
-  const prefetchResource = useCallback((url: string, type: 'script' | 'style' | 'image' = 'script') => {
-    if (!enablePrefetching) return;
-
-    const link = document.createElement('link');
-    link.rel = 'prefetch';
-    link.href = url;
-    link.as = type;
-    document.head.appendChild(link);
-  }, [enablePrefetching]);
-
-  // Optimize images
-  const optimizeImage = useCallback((src: string, options: {
-    width?: number;
-    height?: number;
-    quality?: number;
-    format?: 'webp' | 'avif' | 'jpeg' | 'png';
-  } = {}) => {
-    if (!enableImageOptimization) return src;
-
-    const { width, height, quality = 80, format = 'webp' } = options;
-    const params = new URLSearchParams();
-    
-    if (width) params.set('w', width.toString());
-    if (height) params.set('h', height.toString());
-    params.set('q', quality.toString());
-    params.set('f', format);
-
-    return `${src}?${params.toString()}`;
-  }, [enableImageOptimization]);
-
-  // Cache management
-  const cacheResource = useCallback((key: string, data: any, ttl: number = 300000) => {
-    if (!enableCaching) return;
-
-    const cacheData = {
-      data,
-      timestamp: Date.now(),
-      ttl
-    };
-
-    try {
-      localStorage.setItem(`cache_${key}`, JSON.stringify(cacheData));
-    } catch (error) {
-      console.warn('Failed to cache resource:', error);
-    }
-  }, [enableCaching]);
-
-  const getCachedResource = useCallback((key: string) => {
-    if (!enableCaching) return null;
-
-    try {
-      const cached = localStorage.getItem(`cache_${key}`);
-      if (!cached) return null;
-
-      const { data, timestamp, ttl } = JSON.parse(cached);
-      
-      if (Date.now() - timestamp > ttl) {
-        localStorage.removeItem(`cache_${key}`);
-        return null;
-      }
-      return data;
-    } catch (error) {
-      console.warn('Failed to retrieve cached resource:', error);
-      return null;
-    }
-  }, [enableCaching]);
-
-  // Performance monitoring
-  const measurePerformance = useCallback((name: string, fn: () => void) => {
-    const start = performance.now();
-    fn();
-    const end = performance.now();
-    
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`${name} took ${end - start} milliseconds`);
-    }
-    return end - start;
-  }, []);
-
-  // Debounce function for performance
-  const debounce = useCallback(<T extends (...args: any[]) => any>(
-    func: T,
-    wait: number
-  ): ((...args: Parameters<T>) => void) => {
-    let timeout: NodeJS.Timeout;
-    
-    return (...args: Parameters<T>) => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func(...args), wait);
-    };
-  }, []);
-
-  // Throttle function for performance
-  const throttle = useCallback(<T extends (...args: any[]) => any>(
-    func: T,
-    limit: number
-  ): ((...args: Parameters<T>) => void) => {
-    let inThrottle: boolean;
-    
-    return (...args: Parameters<T>) => {
-      if (!inThrottle) {
-        func(...args);
-        inThrottle = true;
-        setTimeout(() => inThrottle = false, limit);
+      if (debounceTimeoutRef.current) {
+        clearTimeout(debounceTimeoutRef.current);
       }
     };
   }, []);
 
   return {
-    prefetchResource,
-    optimizeImage,
-    cacheResource,
-    getCachedResource,
-    measurePerformance,
-    debounce,
-    throttle
+    metrics,
+    debouncedCallback,
+    memoryUsage,
+    renderCount: renderCountRef.current
   };
 };

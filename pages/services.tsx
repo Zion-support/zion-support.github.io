@@ -1,205 +1,205 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { ContactInfo } from '../types';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import SEO from '../src/components/SEO';
+// import { useAnalytics } from '../src/hooks/useAnalytics';
 
-export default function Services() {
-  const [isLoaded, setIsLoaded] = useState(false);
+export default function Services(): JSX.Element {
+  // Removed unused visibility state
 
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
+  // const { trackClick } = useAnalytics();
 
-  const contact: ContactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com',
-  };
-
-  const services = [
-    {
-      title: 'Micro SaaS Solutions',
-      description: 'Scalable, focused software solutions that solve specific business problems efficiently.',
-      features: ['Custom Development', 'API Integration', 'Cloud Deployment', 'Maintenance & Support'],
-      href: '/services/micro-saas',
-      color: 'blue'
-    },
-    {
+  const serviceDetails = {
+    'ai-ml': {
       title: 'AI & Machine Learning',
-      description: 'Advanced artificial intelligence services to automate and optimize your business processes.',
-      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      href: '/services/ai-ml',
-      color: 'purple'
+      description: 'Transform your business with cutting-edge artificial intelligence and machine learning solutions.',
+      features: [
+        'Natural Language Processing (NLP)',
+        'Computer Vision & Image Recognition',
+        'Predictive Analytics',
+        'Automated Decision Making',
+        'Custom AI Model Development',
+        'AI Integration & Deployment'
+      ],
+      icon: '🤖',
+      color: 'from-blue-500 to-purple-600'
     },
-    {
-      title: 'Cloud Computing',
-      description: 'Comprehensive cloud solutions for scalability, security, and performance optimization.',
-      features: ['Cloud Migration', 'Infrastructure Setup', 'Cost Optimization', 'Security Hardening'],
-      href: '/services/cloud',
-      color: 'green'
+    'cloud': {
+      title: 'Cloud Infrastructure',
+      description: 'Scalable, secure, and reliable cloud solutions tailored to your business needs.',
+      features: [
+        'Cloud Migration',
+        'Infrastructure as Code',
+        'Auto-scaling Solutions',
+        'Disaster Recovery',
+        'Multi-cloud Architecture',
+        'Cloud Cost Optimization'
+      ],
+      icon: '☁️',
+      color: 'from-green-500 to-blue-600'
     },
-    {
+    'cybersecurity': {
       title: 'Cybersecurity',
-      description: 'Protect your business with cutting-edge security solutions and threat monitoring.',
-      features: ['Security Audits', 'Penetration Testing', 'Compliance Management', 'Incident Response'],
-      href: '/services/cybersecurity',
-      color: 'red'
+      description: 'Protect your business with comprehensive security solutions and best practices.',
+      features: [
+        'Security Audits',
+        'Threat Detection',
+        'Data Protection',
+        'Compliance Management',
+        'Zero Trust Architecture',
+        'Security Training & Awareness'
+      ],
+      icon: '🔒',
+      color: 'from-red-500 to-orange-600'
     },
-    {
+    'devops': {
       title: 'DevOps & Automation',
-      description: 'Streamline your development and deployment processes with modern DevOps practices.',
-      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Logging', 'Performance Optimization'],
-      href: '/services/devops',
-      color: 'yellow'
+      description: 'Streamline your development and operations with modern DevOps practices.',
+      features: [
+        'CI/CD Pipeline Setup',
+        'Container Orchestration',
+        'Infrastructure Automation',
+        'Monitoring & Observability',
+        'GitOps Implementation',
+        'Performance Optimization'
+      ],
+      icon: '⚙️',
+      color: 'from-purple-500 to-pink-600'
     },
-    {
-      title: 'Enterprise Solutions',
-      description: 'Comprehensive technology solutions designed for large-scale business operations.',
-      features: ['System Integration', 'Data Management', 'Workflow Automation', 'Legacy Modernization'],
-      href: '/services/enterprise',
-      color: 'indigo'
+    'data': {
+      title: 'Data Analytics & BI',
+      description: 'Unlock insights from your data with advanced analytics and business intelligence.',
+      features: [
+        'Data Pipeline Development',
+        'Business Intelligence Dashboards',
+        'Real-time Analytics',
+        'Data Warehousing',
+        'Machine Learning Integration',
+        'Data Governance'
+      ],
+      icon: '📊',
+      color: 'from-indigo-500 to-cyan-600'
+    },
+    'mobile': {
+      title: 'Mobile Development',
+      description: 'Create engaging mobile experiences with cutting-edge app development.',
+      features: [
+        'Native iOS & Android Apps',
+        'Cross-platform Solutions',
+        'Progressive Web Apps',
+        'Mobile UI/UX Design',
+        'App Store Optimization',
+        'Mobile Security'
+      ],
+      icon: '📱',
+      color: 'from-yellow-500 to-orange-600'
     }
-  ];
+  };
 
   return (
     <>
+      <SEO 
+        title="Services - Zion App"
+        description="Comprehensive technology services including AI, cloud infrastructure, and cybersecurity."
+        keywords={["services", "AI", "cloud", "cybersecurity", "technology"]}
+      />
       <Head>
-        <title>Our Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive technology solutions including micro SaaS, AI services, and IT solutions." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-        <section className="py-20 px-4 text-center">
-          <div className="max-w-6xl mx-auto">
-            <motion.h1 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl font-bold mb-6"
-            >
+      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
               Our Services
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto"
-            >
-              Comprehensive technology solutions designed to transform your business and drive growth.
-            </motion.p>
-          </div>
-        </section>
-
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Service Categories</h2>
-              <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed to drive your business forward
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="group p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105"
-                >
-                  <div className={`w-12 h-12 mb-6 ${
-                    service.color === 'blue' ? 'text-blue-400' :
-                    service.color === 'purple' ? 'text-purple-400' :
-                    service.color === 'green' ? 'text-green-400' :
-                    service.color === 'red' ? 'text-red-400' :
-                    service.color === 'yellow' ? 'text-yellow-400' :
-                    service.color === 'indigo' ? 'text-indigo-400' :
-                    'text-blue-400'
-                  }`}>
-                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
-                  <p className="text-slate-300 mb-6">{service.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-slate-400">
-                        <svg className="w-4 h-4 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    href={service.href}
-                    className={`inline-flex items-center font-semibold group-hover:translate-x-1 transition-transform ${
-                      service.color === 'blue' ? 'text-blue-400 hover:text-blue-300' :
-                      service.color === 'purple' ? 'text-purple-400 hover:text-purple-300' :
-                      service.color === 'green' ? 'text-green-400 hover:text-green-300' :
-                      service.color === 'red' ? 'text-red-400 hover:text-red-300' :
-                      service.color === 'yellow' ? 'text-yellow-400 hover:text-yellow-300' :
-                      service.color === 'indigo' ? 'text-indigo-400 hover:text-indigo-300' :
-                      'text-blue-400 hover:text-blue-300'
-                    }`}
-                  >
-                    Learn More
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </motion.div>
-              ))}
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Comprehensive technology solutions designed to accelerate your business growth and digital transformation. 
+              We deliver cutting-edge services that drive innovation and success.
+            </p>
+            <div className="flex justify-center space-x-4 text-sm text-gray-500">
+              <span className="flex items-center">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                24/7 Support
+              </span>
+              <span className="flex items-center">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                Expert Team
+              </span>
+              <span className="flex items-center">
+                <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                Proven Results
+              </span>
             </div>
           </div>
-        </section>
-
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-8">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {Object.entries(serviceDetails).map(([key, service]) => (
+              <div key={key} className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  {service.icon}
+                </div>
+                
+                <h3 className="text-2xl font-bold mb-4 text-gray-800 group-hover:text-blue-600 transition-colors">
+                  {service.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+                
+                <ul className="space-y-3 mb-8">
+                  {service.features.map((feature, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-green-500 mr-3 mt-1 flex-shrink-0">✓</span>
+                      <span className="text-gray-700 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <div className="flex space-x-3">
+                  <Link 
+                    href="/contact"
+                    className={`flex-1 bg-gradient-to-r ${service.color} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 text-center font-medium transform hover:scale-105`}
+                    // onClick={() => trackClick(`service-${key}`, 'engagement')}
+                  >
+                    Get Started
+                  </Link>
+                  <Link 
+                    href={`/services/${key}`}
+                    className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors text-center font-medium"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-20 text-center">
+            <div className="bg-white rounded-2xl shadow-xl p-12 max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-6 text-gray-800">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-slate-400 mb-12">
-                Get in touch with our experts to discuss your project requirements and discover 
-                how our innovative solutions can drive your business forward.
+              <p className="text-lg text-gray-600 mb-8">
+                Let's discuss how our comprehensive services can help you achieve your goals and drive innovation.
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
-                  href="/contact" 
-                  className="group px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
+                  href="/contact"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-medium text-lg"
                 >
-                  Get Started Today
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                  Schedule Consultation
                 </Link>
-                <a 
-                  href="tel:+13024640950" 
-                  className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
+                <Link 
+                  href="/portfolio"
+                  className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 font-medium text-lg"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  Call Us Now
-                </a>
+                  View Our Work
+                </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
-        </section>
+        </div>
       </main>
     </>
   );

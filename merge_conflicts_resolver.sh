@@ -1,67 +1,93 @@
 #!/bin/bash
 
 # Merge Conflicts Resolver Script
-# This script will help resolve merge conflicts and merge PRs into main
-
 set -e
 
-echo "Starting merge conflicts resolution process..."
+echo "Starting merge conflicts resolution..."
 
-# Check if we're in a git repository
-if [ ! -d ".git" ]; then
-    echo "Error: Not in a git repository"
-    exit 1
-fi
+# Check current status
+echo "Current branch: $(git branch --show-current)"
+echo "Git status:"
+git status
 
-# Get current branch
-CURRENT_BRANCH=$(git branch --show-current)
-echo "Current branch: $CURRENT_BRANCH"
+# Go back to main
+git checkout main
 
-# Check if we're on main branch
-if [ "$CURRENT_BRANCH" != "main" ]; then
-    echo "Switching to main branch..."
-    git checkout main
-fi
+# Create a backup
+echo "Creating backup..."
+git branch backup-main-$(date +%Y%m%d-%H%M%S)
 
-# Pull latest changes from origin
-echo "Pulling latest changes from origin..."
-git pull origin main
-
-# List all branches
-echo "Available branches:"
-git branch -a
-
-# Check for merge conflicts in current branch
-echo "Checking for merge conflicts..."
-if git merge --no-commit --no-ff cursor/fix-netlify-build-and-merge-to-main-96e2 2>&1 | grep -q "conflict"; then
-    echo "Merge conflicts detected. Resolving..."
+# Try to merge the first branch
+echo "Attempting to merge origin/cursor/fix-netlify-build-and-merge-to-main-e570..."
+if git merge origin/cursor/fix-netlify-build-and-merge-to-main-e570 --no-ff; then
+    echo "✅ Successfully merged origin/cursor/fix-netlify-build-and-merge-to-main-e570"
+else
+    echo "❌ Merge conflicts detected. Resolving..."
     
     # List conflicted files
     echo "Conflicted files:"
     git diff --name-only --diff-filter=U
     
-    # Auto-resolve simple conflicts (choose incoming changes)
-    echo "Auto-resolving conflicts by choosing incoming changes..."
-    git checkout --theirs .
+    # Auto-resolve conflicts by accepting incoming changes for most files
+    git status --porcelain | grep "^UU" | cut -c4- | while read file; do
+        echo "Resolving conflicts in $file..."
+        if [[ "$file" == *.tsx ]] || [[ "$file" == *.ts ]]; then
+            # For TypeScript files, try to resolve automatically
+            git checkout --theirs "$file" || git checkout --ours "$file"
+        else
+            # For other files, accept incoming changes
+            git checkout --theirs "$file"
+        fi
+    done
+    
+    # Add resolved files
     git add .
     
-    # Commit the merge
-    git commit -m "Resolved merge conflicts: Auto-merged cursor/fix-netlify-build-and-merge-to-main-96e2 into main"
-    
-    echo "Merge conflicts resolved and committed."
-else
-    echo "No merge conflicts detected. Proceeding with merge..."
-    git merge --no-ff cursor/fix-netlify-build-and-merge-to-main-96e2 -m "Merge cursor/fix-netlify-build-and-merge-to-main-96e2 into main"
+    # Complete the merge
+    git commit -m "resolve: Auto-resolve merge conflicts in cursor/fix-netlify-build-and-merge-to-main-e570"
+    echo "✅ Merge conflicts resolved and committed"
 fi
 
-# Push changes to origin
-echo "Pushing changes to origin..."
+# Try to merge the second branch
+echo "Attempting to merge origin/cursor/fix-netlify-build-and-merge-to-main-71f0..."
+if git merge origin/cursor/fix-netlify-build-and-merge-to-main-71f0 --no-ff; then
+    echo "✅ Successfully merged origin/cursor/fix-netlify-build-and-merge-to-main-71f0"
+else
+    echo "❌ Merge conflicts detected. Resolving..."
+    
+    # List conflicted files
+    echo "Conflicted files:"
+    git diff --name-only --diff-filter=U
+    
+    # Auto-resolve conflicts
+    git status --porcelain | grep "^UU" | cut -c4- | while read file; do
+        echo "Resolving conflicts in $file..."
+        if [[ "$file" == *.tsx ]] || [[ "$file" == *.ts ]]; then
+            git checkout --theirs "$file" || git checkout --ours "$file"
+        else
+            git checkout --theirs "$file"
+        fi
+    done
+    
+    # Add resolved files
+    git add .
+    
+    # Complete the merge
+    git commit -m "resolve: Auto-resolve merge conflicts in cursor/fix-netlify-build-and-merge-to-main-71f0"
+    echo "✅ Merge conflicts resolved and committed"
+fi
+
+# Test the build
+echo "Testing build after merges..."
+if pnpm run build:no-check; then
+    echo "✅ Build successful after merges"
+else
+    echo "❌ Build failed after merges"
+    exit 1
+fi
+
+# Push changes
+echo "Pushing changes to origin/main..."
 git push origin main
 
-echo "Merge process completed successfully!"
-
-# List remaining branches that might need merging
-echo "Checking for other branches that might need merging..."
-git branch -r | grep -v main | head -10
-
-echo "Script completed. Please check GitHub for any remaining open PRs."
+echo "✅ All merges completed successfully!"

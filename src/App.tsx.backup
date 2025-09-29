@@ -1,424 +1,377 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Footer from './Footer';
-import Header from './Header';
-import ScrollToTop from './ScrollToTop';
-import AI2026NextGenContentShowcase from './components/AI2026NextGenContentShowcase';
-import AbsoluteTechShowcase2031 from './components/AbsoluteTechShowcase2031';
-import AdvancedTechAdvertising2027 from './components/AdvancedTechAdvertising2027';
-import AdvancedTechBreakthroughBanner from './components/AdvancedTechBreakthroughBanner';
-import AutonomousBusinessOperations2026Showcase from './components/AutonomousBusinessOperations2026Showcase';
-import ContentSpotlight from './components/ContentSpotlight';
-import NewContentAdBanner from './components/NewContentAdBanner';
-import DynamicContentCarousel from './components/DynamicContentCarousel';
-import EnhancedHeroSection from './components/EnhancedHeroSection';
-import FeaturedContentSection from './components/FeaturedContentSection';
-import EmbodiedAI2026Banner from './components/EmbodiedAI2026Banner';
-import DynamicContentCarousel from './components/DynamicContentCarousel';
-import InteractiveTechShowcase from './components/InteractiveTechShowcase';
-import './index.css';
-import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
-import InnovationShowcase2026 from './pages/InnovationShowcase2026';
-import AdvancedAITransformation2025 from './pages/AdvancedAITransformation2025';
-import QuantumComputingRevolution2025 from './pages/QuantumComputingRevolution2025';
-import NeuralInterfaceRevolution2025 from './pages/NeuralInterfaceRevolution2025';
-import NextGenTechShowcase2025 from './pages/NextGenTechShowcase2025';
-import AdvancedQuantumComputing2026 from './pages/AdvancedQuantumComputing2026';
-import NeuralInterfaceRevolution2026 from './pages/NeuralInterfaceRevolution2026';
-import AdvancedAISystems2026 from './pages/AdvancedAISystems2026';
-import SyntheticIntelligence2026 from './pages/SyntheticIntelligence2026';
-import QuantumNeuralFusion2026 from './pages/QuantumNeuralFusion2026';
-import NextGenAIRevolution2026 from './pages/NextGenAIRevolution2026';
-import QuantumComputingRevolution2026 from './pages/QuantumComputingRevolution2026';
-import RevolutionaryTechBlog2026 from './pages/RevolutionaryTechBlog2026';
-import ComprehensiveTechInsights2026 from './pages/ComprehensiveTechInsights2026';
-import AdvancedAnalyticsDashboard2026 from './pages/AdvancedAnalyticsDashboard2026';
-import BiotechRevolution2026 from './pages/BiotechRevolution2026';
-import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026';
-import NewContentShowcase2026 from './components/NewContentShowcase2026';
-import RevolutionaryContentShowcase2026 from './components/RevolutionaryContentShowcase2026';
-import UltimateTechRevolution2026 from './pages/UltimateTechRevolution2026';
-import RevolutionaryInnovationHub2026 from './pages/RevolutionaryInnovationHub2026';
-import ComprehensiveCaseStudies2026 from './pages/ComprehensiveCaseStudies2026';
-import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
-import NewContentPromoBannerClean from './components/NewContentPromoBannerClean';
-import NewServicesShowcase2026 from './components/NewServicesShowcase2026';
-import AIInnovationHub2026 from './pages/AIInnovationHub2026';
-import AdvancedTechBreakthrough2025 from './pages/AdvancedTechBreakthrough2025';
-import InnovationShowcase2025 from './pages/InnovationShowcase2025';
-import AdvancedTechBreakthroughBanner from './components/AdvancedTechBreakthroughBanner';
-import InnovationShowcaseBanner from './components/InnovationShowcaseBanner';
-import RevolutionaryAdvertisingBanner2026 from './components/RevolutionaryAdvertisingBanner2026';
-import AI2026NextGenContentShowcase from './components/AI2026NextGenContentShowcase';
-import AutonomousBusinessOperations2026Showcase from './components/AutonomousBusinessOperations2026Showcase';
-import InteractiveContentDiscovery2026 from './components/InteractiveContentDiscovery2026';
-import QuantumNeuralRevolutionBanner from './components/QuantumNeuralRevolutionBanner';
-import InteractiveTechShowcase2027 from './components/InteractiveTechShowcase2027';
-import QuantumAIBreakthroughBanner from './components/QuantumAIBreakthroughBanner';
-import RevolutionaryTechShowcase2026 from './components/RevolutionaryTechShowcase2026';
-import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
-import FeaturedContentShowcase from './components/FeaturedContentShowcase';
-import ContentPromotionBanner from './components/ContentPromotionBanner';
-import NewContentPromoBannerClean from './components/NewContentPromoBannerClean';
-import AdvancedTechAdvertising2027 from './components/AdvancedTechAdvertising2027';
-import UltimateRevolutionaryTechShowcase2027 from './components/UltimateRevolutionaryTechShowcase2027';
-import InterdimensionalTechShowcase2027 from './components/InterdimensionalTechShowcase2027';
-import TranscendentTechnologyShowcase2028 from './components/TranscendentTechnologyShowcase2028';
-import OmniversalTechShowcase2029 from './components/OmniversalTechShowcase2029';
-import InfiniteTechShowcase2030 from './components/InfiniteTechShowcase2030';
-import AbsoluteTechShowcase2031 from './components/AbsoluteTechShowcase2031';
-import NewsletterSignup from './components/NewsletterSignup';
-import PromotionalBanner from './components/PromotionalBanner';
-import RevolutionaryContentShowcase from './components/RevolutionaryContentShowcase';
-import NewRevolutionaryServicesShowcase from './components/NewRevolutionaryServicesShowcase';
-import AdvancedAIConsciousness2026 from './pages/AdvancedAIConsciousness2026';
-import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
-import AdvancedBiotechRevolution2026 from './pages/AdvancedBiotechRevolution2026';
-import SpaceTechRevolution2026 from './pages/SpaceTechRevolution2026';
-import AdvancedRoboticsRevolution2026 from './pages/AdvancedRoboticsRevolution2026';
-import TrendingContentSection from './components/TrendingContentSection';
-import QuantumConsciousnessRevolution2026 from './pages/QuantumConsciousnessRevolution2026';
-import InterdimensionalTech2027 from './pages/InterdimensionalTech2027';
-import UltimateTechShowcase2027 from './pages/UltimateTechShowcase2027';
-import RevolutionaryInnovationHub2027 from './pages/RevolutionaryInnovationHub2027';
-import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution2027';
-import RevolutionaryContentBanner2027 from './components/RevolutionaryContentBanner2027';
-import RevolutionaryTechBreakthrough2027 from './pages/RevolutionaryTechBreakthrough2027';
-import UltimateAIRevolution2027 from './pages/UltimateAIRevolution2027';
-import QuantumRealityEngine2027 from './pages/QuantumRealityEngine2027';
-import QuantumComputingBreakthrough2035 from './components/QuantumComputingBreakthrough2035';
-import NeuralInterfaceRevolution2036 from './components/NeuralInterfaceRevolution2036';
-import InterdimensionalTechShowcase2037 from './components/InterdimensionalTechShowcase2037';
-import FuturisticTechPromotionBanner2035 from './components/FuturisticTechPromotionBanner2035';
-import InfiniteTechShowcase2030 from './components/InfiniteTechShowcase2030';
-import InnovationShowcaseBanner from './components/InnovationShowcaseBanner';
-import InteractiveContentDiscovery2026 from './components/InteractiveContentDiscovery2026';
-import InteractiveTechShowcase from './components/InteractiveTechShowcase';
-import InteractiveTechShowcase2027 from './components/InteractiveTechShowcase2027';
-import InterdimensionalTechShowcase2027 from './components/InterdimensionalTechShowcase2027';
-import InterdimensionalTechShowcase2037 from './components/InterdimensionalTechShowcase2037';
-import NeuralInterfaceRevolution2036 from './components/NeuralInterfaceRevolution2036';
-import NewContentShowcase2026 from './components/NewContentShowcase2026';
-import NewlyAddedContentPromo from './components/NewlyAddedContentPromo';
-import NewsletterSignup from './components/NewsletterSignup';
-import OmniversalTechShowcase2029 from './components/OmniversalTechShowcase2029';
-import PromotionalBanner from './components/PromotionalBanner';
-import QuantumAIBreakthroughBanner from './components/QuantumAIBreakthroughBanner';
-import QuantumComputingBreakthrough2035 from './components/QuantumComputingBreakthrough2035';
-import QuantumNeuralRevolutionBanner from './components/QuantumNeuralRevolutionBanner';
-import RevolutionaryAdvertisingBanner2026 from './components/RevolutionaryAdvertisingBanner2026';
-import RevolutionaryContentBanner2027 from './components/RevolutionaryContentBanner2027';
-import RevolutionaryContentShowcase2026 from './components/RevolutionaryContentShowcase2026';
-import RevolutionaryTechShowcase2026 from './components/RevolutionaryTechShowcase2026';
-import TranscendentTechnologyShowcase2028 from './components/TranscendentTechnologyShowcase2028';
-import TrendingContentSection from './components/TrendingContentSection';
-import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
-import UltimateRevolutionaryTechShowcase2027 from './components/UltimateRevolutionaryTechShowcase2027';
-import './index.css';
-import AIIncidentResponse2026 from './pages/AIIncidentResponse2026';
-import AdvancedAIConsciousness2026 from './pages/AdvancedAIConsciousness2026';
-import AdvancedAISystems2026 from './pages/AdvancedAISystems2026';
-import AdvancedAITransformation2025 from './pages/AdvancedAITransformation2025';
-import AdvancedAnalyticsDashboard2026 from './pages/AdvancedAnalyticsDashboard2026';
-import AdvancedBiotechRevolution2026 from './pages/AdvancedBiotechRevolution2026';
-import AdvancedQuantumComputing2026 from './pages/AdvancedQuantumComputing2026';
-import AdvancedRoboticsRevolution2026 from './pages/AdvancedRoboticsRevolution2026';
-import AdvancedTechBreakthrough2025 from './pages/AdvancedTechBreakthrough2025';
-import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
-import AgenticOpsControls2026 from './pages/AgenticOpsControls2026';
-import AutonomousOpsPlaybook2026 from './pages/AutonomousOpsPlaybook2026';
-import BiotechRevolution2026 from './pages/BiotechRevolution2026';
-import ComprehensiveTechInsights2026 from './pages/ComprehensiveTechInsights2026';
-import EdgeAICompliance2026 from './pages/EdgeAICompliance2026';
-import InnovationShowcase2025 from './pages/InnovationShowcase2025';
-import InnovationShowcase2026 from './pages/InnovationShowcase2026';
-import InterdimensionalTech2027 from './pages/InterdimensionalTech2027';
-import InterdimensionalTech2037Page from './pages/InterdimensionalTech2037';
-import NewContentShowcaseBanner2026 from './components/NewContentShowcaseBanner2026';
-import NewServicesShowcase2026 from './components/NewServicesShowcase2026';
-import NewContentPromotionBanner2026 from './components/NewContentPromotionBanner2026';
-import FeaturedContentShowcase2026 from './components/FeaturedContentShowcase2026';
-import RevolutionaryCaseStudies2026 from './pages/RevolutionaryCaseStudies2026';
->>>>>>> origin/backup-main-20250916-071805
+import React, { useCallback, useEffect, useMemo, useState, Suspense, lazy } from 'react';
+import { AppRouter } from './router';
+import { initializeErrorReporting } from './utils/errorReporting';
+import { initOptimizations } from './utils/buildOptimizations';
+import { seoManager, seoAnalytics, performanceSEO } from './utils/seoEnhanced';
+import { accessibilityManager } from './utils/accessibility';
+import { PerformanceMonitor, ResourceMonitor, MemoryMonitor } from './utils/performance';
+import { analytics } from './utils/analytics';
+import { seoOptimizer } from './utils/seoOptimization';
+import { cacheManager } from './utils/cacheManager';
+import { apiClient } from './utils/apiClient';
+import { notificationManager } from './utils/notificationManager';
+import { userFeedback } from './utils/userFeedbackManager';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import RealTimeMonitor from './components/RealTimeMonitor';
+import { performanceOptimizer as advancedPerformanceOptimizer } from './utils/performanceOptimizer';
+import { enhancedPerformanceOptimizer } from './utils/enhancedPerformance';
+import { enhancedSecurityManager } from './utils/enhancedSecurity';
+import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
+import { AdvancedPerformanceMonitor } from './utils/advancedPerformanceMonitor';
+import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
+import { SecurityEnhancer } from './utils/securityEnhancer';
+import SystemMetricsDashboard from './components/SystemMetricsDashboard';
+import AdvancedAccessibilityManager from './utils/advancedAccessibilityManager';
+import { AdvancedSecurityManager } from './utils/advancedSecurityManager';
+import EnhancedUXManager from './utils/enhancedUXManager';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAnalytics } from './utils/enhancedAnalytics';
+import { enhancedSEO } from './utils/enhancedSEO';
+import { advancedCacheSystem } from './utils/advancedCacheSystem';
+import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
+import { advancedAutomationSystem } from './utils/advancedAutomationSystem';
+import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+import performanceEnhancer from './utils/performanceEnhancements';
+import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
+import AdvancedSEO from './components/AdvancedSEO';
+import PerformanceTracker from './components/PerformanceTracker';
+import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { analytics } from './utils/analytics';
+import { performanceOptimizer } from './utils/performanceOptimizations';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
+import { seoOptimizer } from './utils/seoOptimization';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import { useSEOData } from './components/SEOOptimizer';
+import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
+import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
-const App: React.FC = () => {
+// Import enhanced utilities
+import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
+import { enhancedSecuritySystem } from './utils/enhancedSecuritySystem';
+import { enhancedAccessibilitySystem } from './utils/enhancedAccessibilitySystem';
+import { apiCache as apiCacheSystem, imageCache as imageCacheSystem, dataCache as dataCacheSystem } from './utils/enhancedCachingSystem';
+import { analyticsSystem as enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
+
+// Import new advanced systems
+import { performanceAnalytics } from './utils/advancedPerformanceAnalytics';
+import { errorTracker } from './utils/advancedErrorTracker';
+import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
+
+// Import types
+import NotificationSystem, { Notification } from './components/NotificationSystem';
+import { EnhancedNotification } from './types/comprehensive';
+import './index.css';
+
+const LazyEnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
+const KeyboardShortcutsHelp = lazy(() => import('./components/KeyboardShortcutsHelp'));
+const SystemHealthDashboard = lazy(() => import('./components/SystemHealthDashboard'));
+const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
+const CommandPalette = lazy(() => import('./components/CommandPalette'));
+const AdvancedMonitoringDashboard = lazy(() => import('./components/AdvancedMonitoringDashboard'));
+const ComprehensivePerformanceDashboard = lazy(() => import('./components/ComprehensivePerformanceDashboard'));
+const ComprehensiveMonitoringDashboard = lazy(() => import('./components/ComprehensiveMonitoringDashboard'));
+const PerformanceOptimizationPanel = lazy(() => import('./components/PerformanceOptimizationPanel'));
+const RealTimePerformanceMonitor = lazy(() => import('./components/RealTimePerformanceMonitor'));
+const AdvancedAnalytics = lazy(() => import('./components/AdvancedAnalytics'));
+const LazyPerformanceDashboard = lazy(() => import('./components/PerformanceDashboard'));
+const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPalette'));
+const SystemStatusIndicator = lazy(() => import('./components/SystemStatusIndicator'));
+const LazyEnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotificationSystem'));
+const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcutsManager'));
+const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDashboard'));
+// import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
+import WebsiteEnhancements from './components/WebsiteEnhancements';
+import PerformanceEnhancer from './components/PerformanceEnhancer';
+import EnhancedSEO from './components/EnhancedSEO';
+import PerformanceTracker from './components/PerformanceTracker';
+// import EnhancedAnalytics from './components/EnhancedAnalytics';
+import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
+import { performanceAlerts } from './utils/performanceAlerts';
+import { accessibilityUtils } from './utils/accessibilityUtils';
+import { securityUtils } from './utils/securityUtils';
+// import { getNotificationManager } from './utils/advancedNotifications';
+// import { getThemeManager } from './utils/themeManager';
+// import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
+// import { getDataVisualization } from './utils/advancedDataVisualization';
+// import { useAppInitialization } from './hooks/useAppInitialization';
+import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
+import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
+import { advancedSecurityManager } from './utils/advancedSecurityManager';
+import { advancedAnalytics } from './utils/advancedAnalytics';
+import { advancedErrorHandler } from './utils/advancedErrorHandling';
+import { advancedCachingSystem } from './utils/advancedCachingSystem';
+import { advancedUXOptimizer } from './utils/advancedUXOptimizer';
+import { advancedTestingFramework } from './utils/advancedTestingFramework';
+import { advancedI18n } from './utils/advancedI18n';
+import { advancedErrorRecoverySystem } from './utils/advancedErrorRecoverySystem';
+import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
+import './index.css';
+
+// Type definitions are imported from components
+
+export default function App(): React.JSX.Element {
+  // State for system dashboard and performance optimizer
+  const [showSystemDashboard, setShowSystemDashboard] = useState(false);
+  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+  const [userPreferences, setUserPreferences] = useState({
+    theme: 'auto',
+    animations: true,
+    notifications: true,
+    analytics: true
+  });
+
+
+  // Missing function definitions
+  const handleScroll = useCallback(() => {
+    // Track scroll depth for analytics
+    const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+    if (scrollDepth > 0 && scrollDepth % 25 === 0) {
+      console.debug('Scroll depth tracked:', { depth: scrollDepth });
+    }
+  }, []);
+
+  const handleClick = useCallback((event?: Event) => {
+    console.debug('Click event captured for engagement tracking', event);
+  }, []);
+
+  const preloadResource = useCallback((url: string, type: string) => {
+    if (typeof window !== 'undefined') {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = url;
+      link.as = type;
+      document.head.appendChild(link);
+    }
+  }, []);
+
+  // Initialize SEO and performance optimizations
+  useEffect(() => {
+    // Initialize SEO analytics
+    seoAnalytics.trackPageView(window.location.pathname);
+    
+    // Initialize performance SEO optimizations
+    performanceSEO.optimizeImages();
+    performanceSEO.preloadCriticalResources();
+    performanceSEO.optimizeFonts();
+    performanceSEO.optimizeCSS();
+
+
+    // Initialize enhanced monitoring systems
+    enhancedPerformanceMonitor.getAlerts();
+    enhancedAccessibilityManager.getIssues();
+    enhancedSEOOptimizer.getIssues();
+
+
+    // Mark app as fully initialized
+    if (typeof window !== 'undefined' && window.performance && 
+        typeof performance.mark === 'function' && 
+        typeof performance.measure === 'function') {
+      performance.mark('app-init-complete');
+      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
+    }
+
+    // Basic performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('🚀 Zion Tech Group App initialized');
+    }
+
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', trackEngagement);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('beforeunload', trackEngagement);
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
+    };
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Dashboard shortcuts
+      if (event.ctrlKey && event.shiftKey) {
+        event.preventDefault();
+        switch (event.key) {
+          case 'D':
+            setShowSystemDashboard(!showSystemDashboard);
+            break;
+          case 'P':
+            setShowPerformanceOptimizer(!showPerformanceOptimizer);
+            break;
+          case 'M':
+            setShowPerformanceMonitor(!showPerformanceMonitor);
+            break;
+          case 'A':
+            setShowAIDashboard(!showAIDashboard);
+            break;
+          case 'S':
+            setShowSEOOptimizer(!showSEOOptimizer);
+            break;
+          case 'T':
+            setIsDarkMode(!isDarkMode);
+            break;
+          case 'R':
+            setShowRealTimeMonitor(!showRealTimeMonitor);
+            break;
+          case 'H':
+            setShowSystemHealth(!showSystemHealth);
+            break;
+          case 'K':
+            setShowKeyboardHelp(!showKeyboardHelp);
+            break;
+          case 'E':
+            setShowPerformanceEnhancer(!showPerformanceEnhancer);
+            break;
+          case 'X':
+            setShowAccessibilityEnhancer(!showAccessibilityEnhancer);
+            break;
+          case 'N':
+            // Show notification
+            if ((window as any).notifications) {
+              (window as any).notifications.add({
+                type: 'info',
+                title: 'Notification Test',
+                message: 'This is a test notification!',
+                duration: 3000
+              });
+            }
+            break;
+          case 'C':
+            // Clear notifications
+            if ((window as any).notifications) {
+              (window as any).notifications.clear();
+            }
+            break;
+        }
+      }
+      
+      // Command palette shortcut
+      if (event.ctrlKey && event.key === 'k') {
+        event.preventDefault();
+        setShowCommandPalette(!showCommandPalette);
+      }
+      
+      // Help shortcut
+      if (event.ctrlKey && event.key === '/') {
+        event.preventDefault();
+        setShowKeyboardHelp(!showKeyboardHelp);
+      }
+      
+      // Escape to close all modals
+      if (event.key === 'Escape') {
+        setShowSystemDashboard(false);
+        setShowPerformanceOptimizer(false);
+        setShowPerformanceMonitor(false);
+        setShowAIDashboard(false);
+        setShowSEOOptimizer(false);
+        setShowKeyboardHelp(false);
+        setShowCommandPalette(false);
+        setShowRealTimeMonitor(false);
+        setShowSystemHealth(false);
+      }
+    };
+
+
+  // Track engagement on scroll and click
+  useEffect(() => {
+    const handleScrollWithEngagement = () => {
+      handleScroll();
+      trackEngagement();
+    };
+
+    const handleClickWithEngagement = (event: Event) => {
+      handleClick(event);
+      trackEngagement();
+    };
+
+    window.addEventListener('scroll', handleScrollWithEngagement, { passive: true });
+    document.addEventListener('click', handleClickWithEngagement, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScrollWithEngagement);
+      document.removeEventListener('click', handleClickWithEngagement);
+    };
+  }, [handleScroll, handleClick, trackEngagement]);
+
+  if (isLoading) {
+    return <ModernLoadingSpinner progress={loadingProgress} />;
+  }
+
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <Header />
+    <EnhancedErrorBoundary>
+        <AppRouter />
         
-        <Routes>
-          <Route path="/" element={
-            <div className="space-y-0">
-              {/* Hero Section */}
-              <EnhancedHeroSection />
-
-              {/* Embodied AI 2026 Promo */}
-              <div className="mb-12">
-                <EmbodiedAI2026Banner />
+        {/* System Dashboard - Toggle with Ctrl+Shift+D */}
+        {showSystemDashboard && (
+          <div 
+            className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="system-dashboard-title"
+          >
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold">System Dashboard</h2>
+                <button
+                  onClick={() => setShowSystemDashboard(false)}
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
+                >
+                  ✕
+                </button>
               </div>
-              
-              {/* Revolutionary Content Banner 2026 */}
-              <div className="mb-12">
-                <RevolutionaryContentBanner2026 />
-              </div>
-
-              {/* New Content Promotion Banner 2026 */}
-              <div className="mb-12">
-                <NewContentPromotionBanner2026 />
-              </div>
-
-              {/* Featured Content Carousel 2026 */}
-              <div className="mb-12">
-                <FeaturedContentCarousel2026 />
-              </div>
-
-              {/* New Content Advertising Banner */}
-              <div className="mb-12">
-                <NewContentAdBanner />
-              </div>
-
-              {/* Revolutionary Content Showcase */}
-              <div className="mb-12">
-                <RevolutionaryContentShowcase />
-              </div>
-
-              {/* New Revolutionary Services Showcase */}
-              <div className="mb-12">
-                <NewRevolutionaryServicesShowcase />
-              </div>
-
-              {/* New Services Showcase 2026 */}
-              <div className="mb-12">
-                <NewServicesShowcase2026 />
-              </div>
-              
-              {/* New Content Promo Banner */}
-              <div className="mb-12">
-                <NewlyAddedContentPromo />
-              </div>
-
-              {/* Blog Content Promotion Banner */}
-              <div className="mb-12">
-                <ContentPromotionBanner />
-              </div>
-
-              {/* NEW: Advanced Tech Breakthrough Banner */}
-              <div className="mb-12">
-                <AdvancedTechBreakthroughBanner />
-              </div>
-
-              {/* NEW: Innovation Showcase Banner */}
-              <div className="mb-12">
-                <InnovationShowcaseBanner />
-              </div>
-
-              {/* Featured Content Section */}
-              <FeaturedContentSection />
-
-              {/* Blog Showcase from data/blog-posts */}
-              <div className="mb-12">
-                <ContentPromotionBanner />
-              </div>
-              <div className="mb-12">
-                <NewContentPromoBannerClean />
-              </div>
-              <div className="mb-12">
-                <FeaturedContentShowcase />
-              </div>
-
-              {/* Latest Content Spotlight */}
-              <ContentSpotlight />
-              
-              {/* Dynamic Content Carousel */}
-              <DynamicContentCarousel />
-              
-              {/* Interactive Tech Showcase */}
-              <InteractiveTechShowcase />
-              
-              {/* NEW: Enhanced Content Showcase 2026 */}
-              <div className="mb-12">
-                <NewContentShowcase2026 />
-              </div>
-
-              {/* NEW: Trending Content Section */}
-              <div className="mb-12">
-                <TrendingContentSection />
-              </div>
-
-              {/* Revolutionary Content Showcase 2026 */}
-              <div className="mb-12">
-                <RevolutionaryContentShowcase2026 />
-              </div>
-
-              {/* Revolutionary Advertising Banner 2026 */}
-              <div className="mb-12">
-                <RevolutionaryAdvertisingBanner2026 />
-              </div>
-              {/* AI 2026 Next Gen Content Showcase */}
-              <div className="mb-12">
-                <AI2026NextGenContentShowcase />
-              </div>
-              
-              {/* Autonomous Business Operations 2026 Showcase */}
-              <div className="mb-12">
-                <AutonomousBusinessOperations2026Showcase />
-              </div>
-
-              {/* Interactive Content Discovery 2026 */}
-              <div className="mb-12">
-                <InteractiveContentDiscovery2026 />
-              </div>
-
-              {/* Quantum Neural Revolution Banner */}
-              <div className="mb-12">
-                <QuantumNeuralRevolutionBanner />
-              </div>
-
-              {/* Interactive Tech Showcase 2027 */}
-              <div className="mb-12">
-                <InteractiveTechShowcase2027 />
-              </div>
-
-              {/* Quantum AI Breakthrough Banner */}
-              <div className="mb-12">
-                <QuantumAIBreakthroughBanner />
-              </div>
-
-              {/* Revolutionary Tech Showcase 2026 */}
-              <div className="mb-12">
-                <RevolutionaryTechShowcase2026 />
-              </div>
-
-              {/* Ultimate Content Showcase 2026 */}
-              <div className="mb-12">
-                <UltimateContentShowcase2026 />
-              </div>
-
-              {/* Advanced Tech Advertising 2027 */}
-              <div className="mb-12">
-                <AdvancedTechAdvertising2027 />
-              </div>
-
-              {/* Ultimate Revolutionary Tech Showcase 2027 */}
-              <div className="mb-12">
-                <UltimateRevolutionaryTechShowcase2027 />
-              </div>
-
-              {/* Interdimensional Tech Showcase 2027 */}
-              <div className="mb-12">
-                <InterdimensionalTechShowcase2027 />
-              </div>
-
-              {/* Transcendent Technology Showcase 2028 */}
-              <div className="mb-12">
-                <TranscendentTechnologyShowcase2028 />
-              </div>
-
-              {/* Omniversal Tech Showcase 2029 */}
-              <div className="mb-12">
-                <OmniversalTechShowcase2029 />
-              </div>
-
-              {/* Infinite Tech Showcase 2030 */}
-              <div className="mb-12">
-                <InfiniteTechShowcase2030 />
-              </div>
-
-              {/* Absolute Tech Showcase 2031 */}
-              <div className="mb-12">
-                <AbsoluteTechShowcase2031 />
-              </div>
-
-              {/* Newsletter Signup */}
-              <div className="mb-12">
-                <NewsletterSignup />
-              </div>
-
-              {/* Revolutionary Content Banner 2027 - NEW */}
-              <div className="mb-12">
-                <RevolutionaryContentBanner2027 />
-              </div>
-
-              {/* NEW: Futuristic Tech Promotion Banner 2035 */}
-              <div className="mb-12">
-                <FuturisticTechPromotionBanner2035 />
-              </div>
-
-              {/* NEW: Quantum Computing Breakthrough 2035 */}
-              <div className="mb-12">
-                <QuantumComputingBreakthrough2035 />
-              </div>
-
-              {/* NEW: Neural Interface Revolution 2036 */}
-              <div className="mb-12">
-                <NeuralInterfaceRevolution2036 />
-              </div>
-
-              {/* NEW: Interdimensional Tech Showcase 2037 */}
-              <div className="mb-12">
-                <InterdimensionalTechShowcase2037 />
-              </div>
-
-              {/* Promotional Banner */}
-              <div className="mb-12">
-                <PromotionalBanner />
-              </div>
+              <LazyEnhancedSystemDashboard />
             </div>
-          } />
-          
-          {/* Routes for all pages */}
-          <Route path="/pages/AdvancedTechSolutions2026" element={<AdvancedTechSolutions2026 />} />
-          <Route path="/pages/NewAIResearchBreakthrough2026" element={<NewAIResearchBreakthrough2026 />} />
-          <Route path="/pages/AutonomousOpsPlaybook2026" element={<AutonomousOpsPlaybook2026 />} />
-          <Route path="/pages/InnovationShowcase2026" element={<InnovationShowcase2026 />} />
-          <Route path="/pages/AdvancedAITransformation2025" element={<AdvancedAITransformation2025 />} />
-          <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
-          <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
-          <Route path="/pages/NextGenTechShowcase2025" element={<NextGenTechShowcase2025 />} />
-          <Route path="/pages/AdvancedQuantumComputing2026" element={<AdvancedQuantumComputing2026 />} />
-          <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
-          <Route path="/pages/AdvancedAISystems2026" element={<AdvancedAISystems2026 />} />
-          <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
-          <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
-          <Route path="/pages/NextGenAIRevolution2026" element={<NextGenAIRevolution2026 />} />
-          <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
-          <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
-          <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
-          <Route path="/pages/AdvancedAnalyticsDashboard2026" element={<AdvancedAnalyticsDashboard2026 />} />
-          <Route path="/pages/BiotechRevolution2026" element={<BiotechRevolution2026 />} />
-          <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
-          <Route path="/pages/AdvancedAIConsciousness2026" element={<AdvancedAIConsciousness2026 />} />
-          <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
-          <Route path="/pages/AdvancedBiotechRevolution2026" element={<AdvancedBiotechRevolution2026 />} />
-          <Route path="/pages/SpaceTechRevolution2026" element={<SpaceTechRevolution2026 />} />
-          <Route path="/pages/AdvancedRoboticsRevolution2026" element={<AdvancedRoboticsRevolution2026 />} />
-          <Route path="/pages/QuantumConsciousnessRevolution2026" element={<QuantumConsciousnessRevolution2026 />} />
-          <Route path="/pages/InterdimensionalTech2027" element={<InterdimensionalTech2027 />} />
-          <Route path="/pages/UltimateTechShowcase2027" element={<UltimateTechShowcase2027 />} />
-          <Route path="/pages/RevolutionaryInnovationHub2027" element={<RevolutionaryInnovationHub2027 />} />
-          <Route path="/pages/SyntheticBiologyRevolution2027" element={<SyntheticBiologyRevolution2027 />} />
-          <Route path="/pages/AdvancedTechBreakthrough2025" element={<AdvancedTechBreakthrough2025 />} />
-          <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
-          <Route path="/pages/RevolutionaryTechBreakthrough2027" element={<RevolutionaryTechBreakthrough2027 />} />
-          <Route path="/pages/UltimateAIRevolution2027" element={<UltimateAIRevolution2027 />} />
-          <Route path="/pages/QuantumRealityEngine2027" element={<QuantumRealityEngine2027 />} />
-          <Route path="/pages/QuantumComputingBreakthrough2035" element={<QuantumComputingBreakthrough2035Page />} />
-          <Route path="/pages/NeuralInterfaceRevolution2036" element={<NeuralInterfaceRevolution2036Page />} />
-          <Route path="/pages/InterdimensionalTech2037" element={<InterdimensionalTech2037Page />} />
-          <Route path="/pages/EdgeAICompliance2026" element={<EdgeAICompliance2026 />} />
-          <Route path="/pages/AIIncidentResponse2026" element={<AIIncidentResponse2026 />} />
-          <Route path="/pages/AgenticOpsControls2026" element={<AgenticOpsControls2026 />} />
-          
-          {/* New Content Routes 2026 */}
-          <Route path="/ai-innovation-showcase-2026" element={<AIInnovationShowcase2026 />} />
-          <Route path="/next-gen-tech-trends-2026" element={<NextGenTechTrends2026 />} />
-        </Routes>
-        
-        <Footer />
-      </div>
-    </Router>
-  );
-};
+          </div>
+        )}
 
-export default App;
+        {/* Performance Optimizer - Toggle with Ctrl+Shift+P */}
+        {showPerformanceOptimizer && (
+          <div 
+            className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="performance-optimizer-title"
+          >
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold">Performance Optimizer</h2>
+                <button
+                  onClick={() => setShowPerformanceOptimizer(false)}
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
+                >
+                  ✕
+                </button>
+              </div>
+              <PerformanceOptimizer>
+                <div>Performance optimization in progress...</div>
+              </PerformanceOptimizer>
+            </div>
+          </div>
+        )}
+
+        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
+        {showPerformanceMonitor && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold">Performance Monitor</h2>
+                <button
+                  onClick={() => setShowPerformanceMonitor(false)}
+                  className="text-gray-500 hover:text-gray-700 text-2xl"
+                >
+                  ✕
+                </button>
+              </div>
+              <PerformanceMonitor enabled={true} showDetails={true} />
+            </div>
+          </div>
+        )}
+
+    </EnhancedErrorBoundary>
+);
+}

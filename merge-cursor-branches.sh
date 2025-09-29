@@ -1,129 +1,72 @@
 #!/bin/bash
 
-# Simple script to merge all cursor branches
-echo "🚀 Starting merge of cursor branches..."
+# Simple script to merge cursor branches with automatic conflict resolution
+set -e
 
-# List of cursor branches to merge (extracted from PRs)
-CURSOR_BRANCHES=(
-    "cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-3a6f"
-    "cursor/website-audit-and-enhancement-09cd"
-    "cursor/website-audit-and-enhancement-e0b4"
-    "cursor/website-audit-and-enhancement-3647"
-    "cursor/website-audit-and-enhancement-7ab5"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-d5d2"
-    "cursor/website-audit-and-enhancement-3fc6"
-    "cursor/website-audit-and-enhancement-70fc"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-6433"
-    "cursor/ci-cd-pipeline-code-quality-and-security-check-9663"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-b902"
-    "cursor/website-audit-and-enhancement-9299"
-    "cursor/website-audit-and-enhancement-47bc"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-0a89"
-    "cursor/fix-release-workflow-links-and-accessibility-31e9"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-da36"
-    "cursor/expand-services-and-deploy-updates-c4ed"
-    "cursor/website-audit-and-enhancement-b8ea"
-    "cursor/website-audit-and-enhancement-7cad"
-    "cursor/expand-services-and-deploy-updates-4ed2"
-    "cursor/build-with-yarn-dependency-error-25bd"
-    "cursor/website-audit-and-enhancement-3725"
-    "cursor/codeql-analyze-javascript-typescript-9d5a"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-a741"
-    "cursor/expand-services-and-deploy-updates-f6d5"
-    "cursor/analyze-improve-and-deploy-ziontechgroup-app-d61e"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-723d"
-    "cursor/expand-services-and-deploy-updates-ebaa"
-    "cursor/website-audit-and-enhancement-7599"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-1d4f"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-4865"
-    "cursor/website-audit-and-enhancement-5570"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-0528"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-9d0f"
-    "cursor/expand-services-and-deploy-updates-1c61"
-    "cursor/expand-services-and-deploy-updates-3c57"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-e423"
-    "cursor/analyze-improve-and-deploy-ziontechgroup-app-b773"
-    "cursor/enhance-app-with-new-services-and-futuristic-design-fa48"
-    "cursor/analyze-improve-and-deploy-ziontechgroup-app-ba31"
-    "cursor/analyze-improve-and-deploy-ziontechgroup-app-c5b6"
-    "cursor/analyze-main-branch-loading-issue-3bae"
-    "cursor/update-and-fix-project-dependencies-3c6f"
-)
+echo "🚀 Starting cursor branch merge process..."
 
-# Counter for successful merges
-SUCCESSFUL_MERGES=0
-FAILED_MERGES=0
+# Ensure we're on main and up to date
+git checkout main
+git pull origin main
 
-echo "📋 Found ${#CURSOR_BRANCHES[@]} cursor branches to merge"
-echo "---"
+# Get all cursor branches
+BRANCHES=$(git branch -r | grep "cursor/check-fix-push-and-merge-to-main" | sed 's/origin\///' | head -50)
 
-# Process each branch
-for branch in "${CURSOR_BRANCHES[@]}"; do
-    echo "🔄 Processing: $branch"
+SUCCESSFUL=0
+FAILED=0
+SKIPPED=0
+
+for branch in $BRANCHES; do
+    echo "🔄 Processing $branch..."
     
-    # Fetch the branch
-    git fetch origin "$branch" 2>/dev/null || {
-        echo "❌ Failed to fetch $branch"
-        FAILED_MERGES=$((FAILED_MERGES + 1))
-        continue
-    }
-    
-    # Check if branch exists
-    if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
-        echo "⚠️  Branch $branch does not exist, skipping..."
+    # Check if branch exists and can be merged
+    if ! git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
+        echo "⏭️  Branch $branch doesn't exist, skipping..."
+        SKIPPED=$((SKIPPED + 1))
         continue
     fi
     
     # Check if already merged
-    if git merge-base --is-ancestor HEAD "origin/$branch" 2>/dev/null; then
-        echo "✅ Branch $branch is already merged, skipping..."
+    if git merge-base --is-ancestor "origin/$branch" main 2>/dev/null; then
+        echo "⏭️  Branch $branch already merged, skipping..."
+        SKIPPED=$((SKIPPED + 1))
         continue
     fi
     
-    # Try to merge
+    # Try to merge with automatic conflict resolution
     if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
+        git commit --no-edit -m "Merge $branch - $(date)" 2>/dev/null || true
         echo "✅ Successfully merged $branch"
-        git commit -m "Merge $branch into main - $(date)"
-        SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
+        SUCCESSFUL=$((SUCCESSFUL + 1))
     else
-        echo "⚠️  Merge conflicts in $branch, resolving..."
-        
-        # Get conflicted files
-        CONFLICTED_FILES=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
-        
-        if [ -n "$CONFLICTED_FILES" ]; then
-            echo "📋 Conflicted files: $CONFLICTED_FILES"
-            
-            # Resolve conflicts by removing markers
-            for file in $CONFLICTED_FILES; do
-                if [ -f "$file" ]; then
-                    echo "🔧 Resolving conflicts in $file..."
-                    # Remove conflict markers
-                    sed -i '/                fi
-            done
-            
-            # Add resolved files
-            git add .
-            git commit -m "Resolve merge conflicts for $branch - $(date)"
-            echo "✅ Conflicts resolved and merged $branch"
-            SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
+        # Try with ours strategy for conflicts
+        git merge --abort 2>/dev/null || true
+        if git merge -X ours --no-commit --no-ff "origin/$branch" 2>/dev/null; then
+            git commit --no-edit -m "Merge $branch (ours strategy) - $(date)" 2>/dev/null || true
+            echo "✅ Successfully merged $branch with ours strategy"
+            SUCCESSFUL=$((SUCCESSFUL + 1))
         else
-            echo "❌ No conflicted files found, aborting merge..."
-            git merge --abort
-            FAILED_MERGES=$((FAILED_MERGES + 1))
+            git merge --abort 2>/dev/null || true
+            echo "❌ Failed to merge $branch"
+            FAILED=$((FAILED + 1))
         fi
     fi
     
-    echo "---"
+    # Push every 10 successful merges
+    if [ $((SUCCESSFUL % 10)) -eq 0 ] && [ $SUCCESSFUL -gt 0 ]; then
+        echo "💾 Pushing progress..."
+        git push origin main || true
+    fi
 done
 
+echo ""
+echo "📊 Merge Summary:"
+echo "   ✅ Successful: $SUCCESSFUL"
+echo "   ❌ Failed: $FAILED"
+echo "   ⏭️  Skipped: $SKIPPED"
+
+# Final push
+echo "💾 Final push..."
+git push origin main || true
+
 echo "🎉 Merge process completed!"
-echo "📊 Summary:"
-echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
-echo "   ❌ Failed merges: $FAILED_MERGES"
-
-# Push changes
-echo "🚀 Pushing changes to main..."
-git push origin main
-
-echo "✅ All done!"

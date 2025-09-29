@@ -1,54 +1,64 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "allowJs": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
+
+    /* Bundler mode */
     "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "incremental": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path mapping */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@components/*": ["src/components/*"],
-      "@pages/*": ["src/pages/*"],
-      "@layout/*": ["src/layout/*"],
-      "@utils/*": ["src/utils/*"],
-      "@hooks/*": ["src/hooks/*"],
-      "@types/*": ["src/types/*"],
-      "@assets/*": ["src/assets/*"],
-      "@styles/*": ["src/styles/*"],
-      "@data/*": ["src/data/*"],
-      "@services/*": ["src/services/*"],
-      "@context/*": ["src/context/*"],
-      "@constants/*": ["src/constants/*"]
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/types/*": ["./src/types/*"]
     },
-    "types": ["vite/client", "node"]
+
+    /* Types */
+    "types": ["jest", "node"]
   },
   "include": [
     "src/**/*",
-    "src/types/offline-shims.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "tailwind.config.js",
-    "postcss.config.js"
+    "src.corrupted/**/*",
+    "index.html"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "build",
     "coverage",
+    "app/**/*",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx"
-  ]
+    "**/*.spec.tsx",
+    "ts_files_backup",
+    "zion-os.disabled",
+    "zion-os",
+    "zion-website",
+    "zion-ai-assistant",
+    "types.disabled",
+    "**/*.config.ts",
+    "vitest.config.ts"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -1,29 +1,19 @@
 {
-  "timestamp": "2025-09-04T01:39:40.369Z",
-  "timestamp": "2025-09-03T20:36:49.970Z",
-  "bundleSize": {
-    ".next": {
-      "size": 26960383,
-      "sizeMB": "25.71"
-    },
-    "node_modules": {
-      "size": 822948864,
-      "sizeMB": "784.83"
-    }
+  "timestamp": "2025-09-29T07:19:45.725Z",
+  "buildTime": 7307,
+  "bundleSize": 644384,
+  "linting": {
+    "warnings": 1,
+    "errors": 0
   },
-  "fileCounts": {
-    ".tsx": 26,
-      "size": 0,
-      "sizeMB": "0.00"
-    }
-  },
-  "fileCounts": {
-    ".tsx": 25,
-    ".ts": 0,
-    ".jsx": 0,
-    ".js": 0,
-    ".css": 2,
-    ".json": 0
-  },
-  "recommendations": []
+  "improvements": [
+    "Dependencies check completed - 42 total dependencies",
+    "No high-severity security vulnerabilities found",
+    "Found 3 images that could be optimized",
+    "Identified 3 images for optimization",
+    "Build test passed in 7307ms",
+    "Bundle analysis completed - Total size: 629.28 KB",
+    "Linting passed with 1 warnings"
+  ],
+  "errors": []
 }

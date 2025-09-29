@@ -1,6 +1,6 @@
-tree fa56fcbd6e04ea75b9fbb6878a4a03b38b00c9fa
-parent 39b7712fdde26f059c6b09cc2e41acdcf05a1313
-author Automation Bot <automation@bolt.new.zion.app> 1754659500 -0300
-committer Automation Bot <automation@bolt.new.zion.app> 1754659500 -0300
+tree eaaeac645d3fbe89f547b6311d8052fa6f0fe044
+parent 40be88f289d9ba0927b9834397710d2a57c2f044
+author github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com> 1755258885 +0000
+committer github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com> 1755258885 +0000
 
-chore(automation): sync changes from automation at 2025-08-08T13:25:00.403Z
+chore(sync): fast autonomous sync

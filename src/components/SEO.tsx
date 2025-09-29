@@ -1,92 +1,203 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect } from "react";
 
 interface SEOProps {
   title?: string;
   description?: string;
-  keywords?: string;
+  keywords?: string[];
   image?: string;
   url?: string;
-  type?: 'website' | 'article' | 'profile' | 'product';
-  siteName?: string;
+  type?: "website" | "article" | "profile";
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
-  canonical?: string;
-  robots?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
   section?: string;
   tags?: string[];
+  noindex?: boolean;
+  nofollow?: boolean;
+  canonical?: string;
+  alternate?: { hreflang: string; href: string }[];
+  structuredData?: object;
 }
 
-export function SEO({
-  title = 'Zion Tech Group - The Future of Tech Marketplace',
-  description = 'Connect with AI experts, discover innovative services, and accelerate your digital transformation with Zion Tech Group\'s comprehensive platform.',
-  keywords = 'AI services, tech marketplace, digital transformation, IT consulting, cloud solutions, cybersecurity, talent placement',
-  image = '/og-image.jpg',
-  url = typeof window !== 'undefined' ? window.location.href : '',
-  type = 'website',
-  siteName = 'Zion Tech Group',
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
-  canonical,
-  robots = 'index, follow',
+const SEO: React.FC<SEOProps> = ({
+  title = "Zion Tech Group - Advanced AI and IT Solutions",
+  description = "Leading provider of cutting-edge AI solutions, enterprise security, and digital transformation services. Trusted by 500+ companies worldwide.",
+  keywords = [
+    "AI solutions",
+    "artificial intelligence",
+    "enterprise security",
+    "digital transformation",
+    "machine learning",
+    "cybersecurity",
+    "cloud computing",
+    "software development",
+    "IT consulting",
+    "Zion Tech Group",
+  ],
+  image = "/images/og-image.jpg",
+  url = "https://ziontechgroup.com",
+  type = "website",
+  author = "Zion Tech Group",
   noindex = false,
   nofollow = false,
-  section,
-  tags = []
-}: SEOProps) {
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
-  const robotsContent = [
-    noindex ? 'noindex' : 'index',
-    nofollow ? 'nofollow' : 'follow',
-    robots
-  ].filter(Boolean).join(', ');
+  canonical,
+  structuredData,
+}) => {
+  const fullTitle = title.includes("Zion Tech Group")
+    ? title
+    : `${title} | Zion Tech Group`;
+  const fullUrl =
+    canonical ||
+    (url.startsWith("http") ? url : `https://ziontechgroup.com${url}`);
+  const fullImage = image.startsWith("http")
+    ? image
+    : `https://ziontechgroup.com${image}`;
 
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="robots" content={robotsContent} />
-      <meta name="author" content={author} />
-      
-      {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={canonical} />}
-      
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:site_name" content={siteName} />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={url} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      
-      {/* Additional Meta Tags */}
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {section && <meta property="article:section" content={section} />}
-      {tags.length > 0 && tags.map((tag, index) => (
-        <meta key={index} property="article:tag" content={tag} />
-      ))}
-      
-      {/* Viewport */}
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      
-      {/* Manifest */}
-      <link rel="manifest" href="/site.webmanifest" />
-    </Helmet>
-  );
-}
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Zion Tech Group",
+    url: "https://ziontechgroup.com",
+    logo: "https://ziontechgroup.com/images/logo.png",
+    description: description,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "123 Innovation Drive",
+      addressLocality: "Tech Valley",
+      addressRegion: "CA",
+      postalCode: "94043",
+      addressCountry: "US",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+1-555-012-3456",
+      contactType: "customer service",
+      email: "hello@ziontechgroup.com",
+    },
+    sameAs: [
+      "https://linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup",
+      "https://github.com/zion-tech-group",
+    ],
+  };
+
+  const finalStructuredData = structuredData || defaultStructuredData;
+
+  useEffect(() => {
+    // Update document title
+    document.title = fullTitle;
+
+    // Update meta description
+    const updateMetaTag = (name: string, content: string) => {
+      let meta = document.querySelector(
+        `meta[name="${name}"]`,
+      ) as HTMLMetaElement;
+      if (meta) {
+        meta.content = content;
+      } else {
+        meta = document.createElement("meta");
+        meta.name = name;
+        meta.content = content;
+        document.head.appendChild(meta);
+      }
+    };
+
+    // Update meta property tags
+    const updateMetaProperty = (property: string, content: string) => {
+      let meta = document.querySelector(
+        `meta[property="${property}"]`,
+      ) as HTMLMetaElement;
+      if (meta) {
+        meta.content = content;
+      } else {
+        meta = document.createElement("meta");
+        meta.setAttribute("property", property);
+        meta.content = content;
+        document.head.appendChild(meta);
+      }
+    };
+
+    // Update link tags
+    const updateLinkTag = (rel: string, href: string) => {
+      let link = document.querySelector(
+        `link[rel="${rel}"]`,
+      ) as HTMLLinkElement;
+      if (link) {
+        link.href = href;
+      } else {
+        link = document.createElement("link");
+        link.rel = rel;
+        link.href = href;
+        document.head.appendChild(link);
+      }
+    };
+
+    // Update basic meta tags
+    updateMetaTag("description", description);
+    updateMetaTag("keywords", keywords.join(", "));
+    updateMetaTag("author", author);
+    updateMetaTag(
+      "robots",
+      `${noindex ? "noindex" : "index"}, ${nofollow ? "nofollow" : "follow"}`,
+    );
+    updateMetaTag("googlebot", "index, follow");
+    updateMetaTag("language", "English");
+    updateMetaTag("revisit-after", "7 days");
+    updateMetaTag("distribution", "global");
+    updateMetaTag("rating", "general");
+    updateMetaTag("theme-color", "#2563eb");
+
+    // Update Open Graph tags
+    updateMetaProperty("og:type", type);
+    updateMetaProperty("og:url", fullUrl);
+    updateMetaProperty("og:title", fullTitle);
+    updateMetaProperty("og:description", description);
+    updateMetaProperty("og:image", fullImage);
+    updateMetaProperty("og:site_name", "Zion Tech Group");
+    updateMetaProperty("og:locale", "en_US");
+
+    // Update Twitter tags
+    updateMetaTag("twitter:card", "summary_large_image");
+    updateMetaTag("twitter:url", fullUrl);
+    updateMetaTag("twitter:title", fullTitle);
+    updateMetaTag("twitter:description", description);
+    updateMetaTag("twitter:image", fullImage);
+    updateMetaTag("twitter:site", "@ziontechgroup");
+    updateMetaTag("twitter:creator", "@ziontechgroup");
+
+    // Update canonical link
+    updateLinkTag("canonical", fullUrl);
+
+    // Update favicon links
+    updateLinkTag("icon", "/favicon.ico");
+    updateLinkTag("manifest", "/site.webmanifest");
+
+    // Add structured data
+    const existingScript = document.querySelector(
+      'script[type="application/ld+json"]',
+    );
+    if (existingScript) {
+      existingScript.textContent = JSON.stringify(finalStructuredData);
+    } else {
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.textContent = JSON.stringify(finalStructuredData);
+      document.head.appendChild(script);
+    }
+  }, [
+    fullTitle,
+    description,
+    keywords,
+    author,
+    type,
+    fullUrl,
+    fullImage,
+    finalStructuredData,
+    noindex,
+    nofollow,
+  ]);
+
+  return null;
+};
 
 export default SEO;

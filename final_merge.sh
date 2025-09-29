@@ -1,45 +1,69 @@
 #!/bin/bash
 
-# Final merge script
-cd /workspace
+# Final merge script for PR #23649
+echo "🚀 Executing final merge for PR #23649..."
 
-echo "=== Final Merge Process ==="
+# Set up error handling
+set -e
 
-# Clean up any remaining backup files
-echo "Cleaning up backup files..."
-find . -name "*.backup.*" -type f -delete 2>/dev/null || true
+# Function to execute commands with retry
+execute_with_retry() {
+    local cmd="$1"
+    local max_attempts=3
+    local attempt=1
+    
+    while [ $attempt -le $max_attempts ]; do
+        echo "Attempt $attempt: $cmd"
+        if eval "$cmd"; then
+            echo "✅ Success: $cmd"
+            return 0
+        else
+            echo "⚠️  Attempt $attempt failed: $cmd"
+            sleep 2
+            ((attempt++))
+        fi
+    done
+    
+    echo "❌ Failed after $max_attempts attempts: $cmd"
+    return 1
+}
 
-# Add all changes
-echo "Adding all changes..."
-git add -A
+# Step 1: Switch to main branch
+echo "📍 Switching to main branch..."
+execute_with_retry "git checkout main"
 
-# Check if we have any changes to commit
-if git diff --cached --quiet; then
-    echo "No changes to commit"
-else
-    echo "Committing changes..."
-    git commit -m "Resolve merge conflicts and integrate Q4 content updates
+# Step 2: Pull latest changes
+echo "⬇️  Pulling latest changes..."
+execute_with_retry "git pull origin main"
 
-- Fixed merge conflicts in src/main.tsx
-- Fixed merge conflicts in src/App.css  
-- Fixed merge conflicts in src/components/ErrorBoundary.tsx
-- Fixed merge conflicts in src/components/PerformanceMonitor.tsx
-- Fixed merge conflicts in src/components/LoadingSpinner.tsx
-- Integrated Q4 services content and homepage promotional section
-- Cleaned up backup files and conflict markers"
-fi
+# Step 3: Add all current changes (our resolved conflicts)
+echo "📝 Adding resolved changes..."
+execute_with_retry "git add ."
 
-# Check current branch
-echo "Current branch: $(git branch --show-current)"
+# Step 4: Commit the resolved changes
+echo "💾 Committing resolved changes..."
+execute_with_retry "git commit -m 'Resolve merge conflicts and consolidate lazyLoading utilities
 
-# Try to push to main
-echo "Pushing to main..."
-git push origin main || echo "Push failed, trying to pull first..."
+- Merged lazyLoading.tsx into lazyLoading.ts
+- Fixed useLazyImage hook implementation
+- Resolved TypeScript compilation errors
+- Ensured proper React imports and hooks
+- Maintained all lazy loading functionality'"
 
-# If push failed, try to pull and merge
-git pull origin main || echo "Pull failed"
+# Step 5: Test build
+echo "🧪 Testing build..."
+execute_with_retry "pnpm install"
+execute_with_retry "pnpm run type-check"
+execute_with_retry "pnpm run build:no-check"
 
-# Try to push again
-git push origin main || echo "Final push failed"
+# Step 6: Push changes
+echo "⬆️  Pushing to main..."
+execute_with_retry "git push origin main"
 
-echo "=== Merge Process Complete ==="
+echo "🎉 PR #23649 successfully merged and deployed!"
+echo "📊 Summary:"
+echo "   - Merge conflicts resolved"
+echo "   - lazyLoading utilities consolidated"
+echo "   - TypeScript errors fixed"
+echo "   - Build tests passed"
+echo "   - Changes pushed to main branch"

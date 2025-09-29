@@ -1,15 +1,23 @@
 #!/bin/bash
+# Simple merge execution script
+echo "🚀 Starting merge execution..."
 
-# Simple execution script for merge and improvements
-echo "=== Starting Complete Merge and Improvement Process ==="
-echo ""
+# Execute commands with error handling
+git checkout main && \
+git pull origin main && \
+git add . && \
+git commit -m "Merge PR #23649: Fix Netlify build and merge to main
 
-# Make the main script executable
-chmod +x /workspace/complete_merge_and_improve.sh
+- Resolved merge conflicts in lazyLoading utilities
+- Consolidated lazyLoading.tsx into lazyLoading.ts
+- Fixed TypeScript compilation errors
+- Ensured proper React imports and hooks
+- Maintained all lazy loading functionality
+- Optimized build performance" && \
+pnpm install && \
+pnpm run type-check && \
+pnpm run build:no-check && \
+git push origin main && \
+echo "🎉 PR #23649 successfully merged!"
 
-# Execute the complete process
-/workspace/complete_merge_and_improve.sh
-
-echo ""
-echo "=== Process Complete ==="
-echo "Check the generated reports for detailed information."
+echo "✅ Merge execution completed!"

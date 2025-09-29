@@ -1,65 +1,151 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'node:path'
+import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react()],
-	resolve: {
-		alias: {
-			'@': path.resolve(__dirname, './src'),
-			'@components': path.resolve(__dirname, './src/components'),
-			'@pages': path.resolve(__dirname, './src/pages'),
-			'@utils': path.resolve(__dirname, './src/utils'),
-			'@hooks': path.resolve(__dirname, './src/hooks'),
-			'@types': path.resolve(__dirname, './src/types'),
-			'@styles': path.resolve(__dirname, './src/styles'),
-			'@assets': path.resolve(__dirname, './src/assets')
-		}
-	},
-	css: {
-		postcss: false
-	},
-esbuild: {
-    loader: 'tsx',
-    include: /(src\/.*\.[jt]sx?|App\.tsx)$/,
-    exclude: [],
-},
-
-	build: {
-		target: 'esnext',
-		minify: 'terser',
-		sourcemap: false,
-		rollupOptions: {
-			output: {
-				manualChunks: {
-					'react-vendor': ['react', 'react-dom'],
-				},
-				chunkFileNames: 'js/[name]-[hash].js',
-				entryFileNames: 'js/[name]-[hash].js',
-				assetFileNames: (assetInfo) => {
-					const name = assetInfo.name || ''
-					if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]'
-					if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]'
-					if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]'
-					return 'assets/[name]-[hash].[ext]'
-				}
-			}
-		},
-		chunkSizeWarningLimit: 1000
-	},
-	optimizeDeps: {
-		include: [
-			'react',
-			'react-dom',
-			'react-router-dom',
-			'framer-motion',
-			'lucide-react',
-			'clsx',
-			'tailwind-merge'
-		],
-		exclude: ['@radix-ui/react-icons']
-	},
-	server: { port: 3000, host: true, open: true },
-	preview: { port: 4173, host: true, open: true }
+  plugins: [
+    react({
+      // Enable JSX runtime
+      jsxRuntime: 'automatic',
+    }),
+  ],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+      '@components': resolve(__dirname, 'src/components'),
+      '@pages': resolve(__dirname, 'src/pages'),
+      '@utils': resolve(__dirname, 'src/utils'),
+      '@hooks': resolve(__dirname, 'src/hooks'),
+      '@styles': resolve(__dirname, 'src/styles'),
+    },
+  },
+  build: {
+    target: 'esnext',
+    minify: 'terser',
+    sourcemap: false,
+    cssCodeSplit: true,
+    reportCompressedSize: true,
+    assetsInlineLimit: 4096,
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      },
+      treeshake: {
+        moduleSideEffects: false,
+        propertyReadSideEffects: false,
+        tryCatchDeoptimization: false
+      },
+      output: {
+        // Manual chunk splitting for better caching
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            // Consolidate all vendor chunks into fewer, larger chunks
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+              return 'react-vendor';
+            }
+            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@headlessui')) {
+              return 'ui-vendor';
+            }
+            if (id.includes('lodash') || id.includes('date-fns') || id.includes('axios')) {
+              return 'utils-vendor';
+            }
+            // Group all other node_modules into a single vendor chunk
+            return 'vendor';
+          }
+          // Consolidate component chunks
+          if (id.includes('src/components/')) {
+            return 'components';
+          }
+          // Consolidate utility chunks
+          if (id.includes('src/utils/')) {
+            return 'utils';
+          }
+          // Consolidate hooks
+          if (id.includes('src/hooks/')) {
+            return 'hooks';
+          }
+        },
+        chunkFileNames: (chunkInfo) => {
+          const facadeModuleId = chunkInfo.facadeModuleId
+            ? chunkInfo.facadeModuleId.split('/').pop().replace('.tsx', '').replace('.ts', '')
+            : 'chunk';
+          return `assets/js/${facadeModuleId}-[hash].js`;
+        },
+        entryFileNames: 'assets/js/main-[hash].js',
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/\.(css)$/.test(assetInfo.name)) {
+            return `assets/css/[name]-[hash].${ext}`;
+          }
+          return `assets/[name]-[hash].${ext}`;
+        },
+      },
+    },
+    // Optimize chunk size
+    chunkSizeWarningLimit: 1000,
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 3,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        dead_code: true,
+        unused: true,
+      },
+      mangle: {
+        safari10: true,
+        toplevel: true,
+        properties: {
+          regex: /^_/
+        }
+      },
+      format: {
+        comments: false,
+        ascii_only: true,
+      },
+    },
+  },
+  server: {
+    port: 3000,
+    open: true,
+    cors: true,
+    host: true,
+  },
+  preview: {
+    port: 3000,
+    open: true,
+    cors: true,
+    host: true,
+  },
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'framer-motion',
+      'lucide-react',
+      'clsx',
+      'tailwind-merge',
+      'axios',
+      'web-vitals',
+    ],
+    exclude: ['@vite/client', '@vite/env'],
+  },
+  define: {
+    global: 'globalThis',
+  },
+  esbuild: {
+    target: 'esnext',
+    format: 'esm',
+    treeShaking: true,
+    minifyIdentifiers: true,
+    minifySyntax: true,
+    minifyWhitespace: true,
+  },
 })

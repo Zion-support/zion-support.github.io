@@ -1,307 +1,141 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  AlertTriangle,
-  CheckCircle,
-  Clock,
-  Database,
-  Cpu,
-  HardDrive,
-  Wifi,
-  Globe
-} from 'lucide-react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  memoryUsage: number;
-  cpuUsage: number;
-  networkLatency: number;
-  uptime: number;
-  errorRate: number;
-  requestsPerSecond: number;
-  cacheHitRate: number;
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
 }
 
-interface SystemHealth {
-  status: 'healthy' | 'warning' | 'critical';
-  message: string;
-  timestamp: number;
+interface AdvancedPerformanceMonitorProps {
+  className?: string;
 }
 
-export const AdvancedPerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    memoryUsage: 0,
-    cpuUsage: 0,
-    networkLatency: 0,
-    uptime: 0,
-    errorRate: 0,
-    requestsPerSecond: 0,
-    cacheHitRate: 0
-  });
-
-  const [systemHealth, setSystemHealth] = useState<SystemHealth>({
-    status: 'healthy',
-    message: 'All systems operational',
-    timestamp: Date.now()
-  });
-
-  const [isMonitoring, setIsMonitoring] = useState(true);
+const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ className = '' }) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (!isMonitoring) return;
+    // Load web vitals
+    const loadWebVitals = async () => {
+      try {
+        const webVitals = await import('web-vitals');
+        
+        const vitals: Partial<PerformanceMetrics> = {};
 
-    const interval = setInterval(() => {
-      // Simulate real-time performance data
-      setMetrics(prev => ({
-        loadTime: Math.random() * 200 + 100,
-        memoryUsage: Math.random() * 80 + 10,
-        cpuUsage: Math.random() * 60 + 20,
-        networkLatency: Math.random() * 50 + 10,
-        uptime: prev.uptime + 1,
-        errorRate: Math.random() * 2,
-        requestsPerSecond: Math.random() * 1000 + 500,
-        cacheHitRate: Math.random() * 30 + 70
-      }));
+        webVitals.onCLS((metric: any) => {
+          vitals.cls = metric.value;
+          updateMetrics(vitals);
+        });
 
-      // Update system health
-      const healthStatus = Math.random();
-      if (healthStatus > 0.9) {
-        setSystemHealth({
-          status: 'critical',
-          message: 'High CPU usage detected',
-          timestamp: Date.now()
+        webVitals.onINP((metric: any) => {
+          vitals.fid = metric.value; // Using INP instead of FID
+          updateMetrics(vitals);
         });
-      } else if (healthStatus > 0.7) {
-        setSystemHealth({
-          status: 'warning',
-          message: 'Memory usage approaching limit',
-          timestamp: Date.now()
+
+        webVitals.onFCP((metric: any) => {
+          vitals.fcp = metric.value;
+          updateMetrics(vitals);
         });
-      } else {
-        setSystemHealth({
-          status: 'healthy',
-          message: 'All systems operational',
-          timestamp: Date.now()
+
+        webVitals.onLCP((metric: any) => {
+          vitals.lcp = metric.value;
+          updateMetrics(vitals);
         });
+
+        webVitals.onTTFB((metric: any) => {
+          vitals.ttfb = metric.value;
+          updateMetrics(vitals);
+        });
+      } catch (error) {
+        console.warn('Web Vitals not available:', error);
       }
-    }, 2000);
+    };
 
-    return () => clearInterval(interval);
-  }, [isMonitoring]);
+    loadWebVitals();
+  }, []);
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'healthy': return 'text-green-400';
-      case 'warning': return 'text-yellow-400';
-      case 'critical': return 'text-red-400';
-      default: return 'text-gray-400';
-    }
+  const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
+    setMetrics(prev => ({ ...prev, ...newMetrics } as PerformanceMetrics));
   };
 
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'healthy': return <CheckCircle className="w-5 h-5" />;
-      case 'warning': return <AlertTriangle className="w-5 h-5" />;
-      case 'critical': return <AlertTriangle className="w-5 h-5" />;
-      default: return <Activity className="w-5 h-5" />;
-    }
+  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
+    if (value <= thresholds.good) return 'text-green-500';
+    if (value <= thresholds.poor) return 'text-yellow-500';
+    return 'text-red-500';
   };
 
-  const MetricCard: React.FC<{
-    title: string;
-    value: string | number;
-    icon: React.ReactNode;
-    color: string;
-    trend?: 'up' | 'down' | 'stable';
-  }> = ({ title, value, icon, color, trend }) => (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-4 hover:border-gray-600/50 transition-all duration-300"
-    >
-      <div className="flex items-center justify-between mb-2">
-        <div className="flex items-center space-x-2">
-          <div className={`${color} p-2 rounded-lg bg-gray-800/50`}>
-            {icon}
-          </div>
-          <span className="text-sm font-medium text-gray-300">{title}</span>
-        </div>
-        {trend && (
-          <div className={`text-xs ${
-            trend === 'up' ? 'text-green-400' : 
-            trend === 'down' ? 'text-red-400' : 'text-gray-400'
-          }`}>
-            {trend === 'up' ? '↗' : trend === 'down' ? '↘' : '→'}
-          </div>
-        )}
-      </div>
-      <div className={`text-2xl font-bold ${color}`}>
-        {typeof value === 'number' ? value.toFixed(1) : value}
-        {title.includes('Time') && 'ms'}
-        {title.includes('Usage') && '%'}
-        {title.includes('Rate') && '%'}
-        {title.includes('Per Second') && '/s'}
-        {title.includes('Uptime') && 's'}
-      </div>
-    </motion.div>
-  );
+  const formatMetric = (value: number, unit: string = 'ms') => {
+    return `${value.toFixed(1)}${unit}`;
+  };
+
+  if (!metrics) return null;
 
   return (
-    <div className="w-full max-w-7xl mx-auto p-6">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="mb-8"
+    <div className={`fixed bottom-4 right-4 z-50 ${className}`}>
+      <button
+        onClick={() => setIsVisible(!isVisible)}
+        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow-lg transition-colors"
       >
-        <div className="flex items-center justify-between mb-6">
-          <div>
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Advanced Performance Monitor
-            </h2>
-            <p className="text-gray-400 mt-2">
-              Real-time system performance and health monitoring
-            </p>
-          </div>
-          <div className="flex items-center space-x-4">
-            <div className={`flex items-center space-x-2 ${getStatusColor(systemHealth.status)}`}>
-              {getStatusIcon(systemHealth.status)}
-              <span className="font-medium capitalize">{systemHealth.status}</span>
+        📊 Performance
+      </button>
+
+      {isVisible && (
+        <div className="absolute bottom-16 right-0 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl p-4 w-80">
+          <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
+            Performance Metrics
+          </h3>
+          
+          <div className="space-y-2">
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-600 dark:text-gray-400">First Contentful Paint</span>
+              <span className={`font-mono text-sm ${getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}`}>
+                {formatMetric(metrics.fcp)}
+              </span>
             </div>
+
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-600 dark:text-gray-400">Largest Contentful Paint</span>
+              <span className={`font-mono text-sm ${getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}`}>
+                {formatMetric(metrics.lcp)}
+              </span>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-600 dark:text-gray-400">First Input Delay</span>
+              <span className={`font-mono text-sm ${getScoreColor(metrics.fid, { good: 100, poor: 300 })}`}>
+                {formatMetric(metrics.fid)}
+              </span>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-600 dark:text-gray-400">Cumulative Layout Shift</span>
+              <span className={`font-mono text-sm ${getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}`}>
+                {formatMetric(metrics.cls)}
+              </span>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-600 dark:text-gray-400">Time to First Byte</span>
+              <span className={`font-mono text-sm ${getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}`}>
+                {formatMetric(metrics.ttfb)}
+              </span>
+            </div>
+          </div>
+
+          <div className="mt-4 pt-3 border-t border-gray-200 dark:border-gray-700">
             <button
-              onClick={() => setIsMonitoring(!isMonitoring)}
-              className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                isMonitoring 
-                  ? 'bg-red-600 hover:bg-red-700 text-white' 
-                  : 'bg-green-600 hover:bg-green-700 text-white'
-              }`}
+              onClick={() => setIsVisible(false)}
+              className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
             >
-              {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
+              Close
             </button>
           </div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="bg-gray-900/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-4 mb-6"
-        >
-          <div className="flex items-center justify-between">
-            <span className="text-gray-300">System Status:</span>
-            <span className={`font-medium ${getStatusColor(systemHealth.status)}`}>
-              {systemHealth.message}
-            </span>
-          </div>
-        </motion.div>
-      </motion.div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <MetricCard
-          title="Load Time"
-          value={metrics.loadTime}
-          icon={<Clock className="w-5 h-5" />}
-          color="text-blue-400"
-          trend="down"
-        />
-        <MetricCard
-          title="Memory Usage"
-          value={metrics.memoryUsage}
-          icon={<HardDrive className="w-5 h-5" />}
-          color="text-green-400"
-          trend="stable"
-        />
-        <MetricCard
-          title="CPU Usage"
-          value={metrics.cpuUsage}
-          icon={<Cpu className="w-5 h-5" />}
-          color="text-yellow-400"
-          trend="up"
-        />
-        <MetricCard
-          title="Network Latency"
-          value={metrics.networkLatency}
-          icon={<Wifi className="w-5 h-5" />}
-          color="text-purple-400"
-          trend="stable"
-        />
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <MetricCard
-          title="Uptime"
-          value={metrics.uptime}
-          icon={<Shield className="w-5 h-5" />}
-          color="text-cyan-400"
-        />
-        <MetricCard
-          title="Error Rate"
-          value={metrics.errorRate}
-          icon={<AlertTriangle className="w-5 h-5" />}
-          color="text-red-400"
-          trend="down"
-        />
-        <MetricCard
-          title="Requests Per Second"
-          value={metrics.requestsPerSecond}
-          icon={<TrendingUp className="w-5 h-5" />}
-          color="text-orange-400"
-          trend="up"
-        />
-        <MetricCard
-          title="Cache Hit Rate"
-          value={metrics.cacheHitRate}
-          icon={<Database className="w-5 h-5" />}
-          color="text-pink-400"
-          trend="up"
-        />
-      </div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="mt-8"
-      >
-        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6">
-          <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-            <Globe className="w-6 h-6 mr-2 text-blue-400" />
-            Performance Insights
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-            <div className="space-y-2">
-              <div className="flex justify-between">
-                <span className="text-gray-300">Average Response Time:</span>
-                <span className="text-green-400 font-medium">142ms</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-300">Peak Load Capacity:</span>
-                <span className="text-blue-400 font-medium">10,000 req/s</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-300">Availability:</span>
-                <span className="text-green-400 font-medium">99.99%</span>
-              </div>
-            </div>
-            <div className="space-y-2">
-              <div className="flex justify-between">
-                <span className="text-gray-300">Data Transfer:</span>
-                <span className="text-purple-400 font-medium">2.4 TB/day</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-300">Active Users:</span>
-                <span className="text-orange-400 font-medium">15,847</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-300">Global CDN:</span>
-                <span className="text-cyan-400 font-medium">45 locations</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
+      )}
     </div>
   );
 };
+
+export default AdvancedPerformanceMonitor;

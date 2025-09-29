@@ -1,229 +1,169 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { usePerformance } from '@/hooks/use-performance';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { BarChart3, Zap, Clock, Target, RefreshCw, Eye, EyeOff } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Activity, Zap, Clock, Database, Wifi, Shield } from "lucide-react";
 
-export function PerformanceDashboard() {
-  const { metrics, score, grade, resetMetrics, isSupported } = usePerformance();
-  const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  memoryUsage: number;
+  networkSpeed: string;
+  securityScore: number;
+}
 
-  if (!isSupported) {
-    return null;
-  }
+export const PerformanceDashboard: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    firstInputDelay: 0,
+    cumulativeLayoutShift: 0,
+    memoryUsage: 0,
+    networkSpeed: "Unknown",
+    securityScore: 0,
+  });
 
-  const getScoreColor = (score: number) => {
-    if (score >= 90) return 'text-green-400';
-    if (score >= 80) return 'text-yellow-400';
-    if (score >= 70) return 'text-orange-400';
-    return 'text-red-400';
-  };
+  useEffect(() => {
+    const collectMetrics = () => {
+      // Collect Web Vitals
+      if ("web-vitals" in window) {
+        import("web-vitals").then((webVitals) => {
+          webVitals.onCLS((metric: any) =>
+            setMetrics((prev) => ({
+              ...prev,
+              cumulativeLayoutShift: metric.value,
+            })),
+          );
+          webVitals.onFCP((metric: any) =>
+            setMetrics((prev) => ({
+              ...prev,
+              firstContentfulPaint: metric.value,
+            })),
+          );
+          webVitals.onLCP((metric: any) =>
+            setMetrics((prev) => ({
+              ...prev,
+              largestContentfulPaint: metric.value,
+            })),
+          );
+          webVitals.onTTFB((metric: any) =>
+            setMetrics((prev) => ({ ...prev, loadTime: metric.value })),
+          );
+          // Note: FID is deprecated, using INP instead
+          webVitals.onINP((metric: any) =>
+            setMetrics((prev) => ({ ...prev, firstInputDelay: metric.value })),
+          );
+        });
+      }
 
-  const getGradeColor = (grade: string) => {
-    switch (grade) {
-      case 'A': return 'bg-green-500';
-      case 'B': return 'bg-yellow-500';
-      case 'C': return 'bg-orange-500';
-      case 'D': return 'bg-red-500';
-      default: return 'bg-gray-500';
-    }
-  };
+      // Memory usage
+      if ("memory" in performance) {
+        const memory = (performance as any).memory;
+        setMetrics((prev) => ({
+          ...prev,
+          memoryUsage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
+        }));
+      }
 
-  const formatMetric = (value: number | null, unit: string) => {
-    if (value === null) return 'N/A';
-    return `${value.toFixed(2)} ${unit}`;
-  };
+      // Network speed
+      if ("connection" in navigator) {
+        const connection = (navigator as any).connection;
+        setMetrics((prev) => ({
+          ...prev,
+          networkSpeed: connection.effectiveType || "Unknown",
+        }));
+      }
 
-  const getMetricStatus = (metric: string, value: number | null) => {
-    const thresholds: Record<string, { good: number; needsImprovement: number }> = {
-      fcp: { good: 1800, needsImprovement: 3000 },
-      lcp: { good: 2500, needsImprovement: 4000 },
-      fid: { good: 100, needsImprovement: 300 },
-      cls: { good: 0.1, needsImprovement: 0.25 }
+      // Security score
+      let securityScore = 100;
+      if (!location.protocol.includes("https")) securityScore -= 20;
+      if (!("serviceWorker" in navigator)) securityScore -= 10;
+      setMetrics((prev) => ({ ...prev, securityScore }));
     };
 
-    if (value === null) return 'unknown';
-    const threshold = thresholds[metric];
-    if (!threshold) return 'unknown';
+    collectMetrics();
+    const interval = setInterval(collectMetrics, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
-    if (value <= threshold.good) return 'good';
-    if (value <= threshold.needsImprovement) return 'needs-improvement';
-    return 'poor';
-  };
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'good': return 'text-green-400';
-      case 'needs-improvement': return 'text-yellow-400';
-      case 'poor': return 'text-red-400';
-      default: return 'text-gray-400';
-    }
-  };
-
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'good': return '✓';
-      case 'needs-improvement': return '⚠';
-      case 'poor': return '✗';
-      default: return '?';
-    }
+  const getPerformanceColor = (
+    value: number,
+    thresholds: { good: number; poor: number },
+  ) => {
+    if (value <= thresholds.good) return "text-green-600";
+    if (value <= thresholds.poor) return "text-yellow-600";
+    return "text-red-600";
   };
 
   return (
-    <>
-      {/* Toggle Button */}
-      <motion.button
-        onClick={() => setIsVisible(!isVisible)}
-        className="fixed top-20 right-4 z-50 bg-zion-blue-dark/90 backdrop-blur-sm border border-zion-blue-light/20 rounded-lg p-3 text-zion-cyan hover:bg-zion-blue-light/10 transition-all duration-200"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        {isVisible ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-      </motion.button>
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+      <h2 className="text-2xl font-bold mb-6 flex items-center">
+        <Activity className="mr-2" />
+        Performance Dashboard
+      </h2>
 
-      {/* Dashboard */}
-      <AnimatePresence>
-        {isVisible && (
-          <motion.div
-            initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 300 }}
-            className="fixed top-20 right-4 z-40 w-80 max-h-[80vh] overflow-y-auto"
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="font-semibold">Load Time</h3>
+            <Clock className="w-5 h-5 text-blue-600" />
+          </div>
+          <p
+            className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, poor: 3000 })}`}
           >
-            <Card className="bg-zion-blue-dark/95 backdrop-blur-md border-zion-blue-light/20 text-white">
-              <CardHeader className="pb-3">
-                <div className="flex items-center justify-between">
-                  <CardTitle className="text-lg flex items-center">
-                    <BarChart3 className="w-5 h-5 mr-2 text-zion-cyan" />
-                    Performance
-                  </CardTitle>
-                  <div className="flex items-center space-x-2">
-                    <Badge className={`${getGradeColor(grade)} text-white`}>
-                      Grade {grade}
-                    </Badge>
-                    <Button
-                      size="sm"
-                      variant="ghost"
-                      onClick={() => setIsExpanded(!isExpanded)}
-                      className="text-zion-slate-light hover:text-zion-cyan"
-                    >
-                      {isExpanded ? '−' : '+'}
-                    </Button>
-                  </div>
-                </div>
-                
-                {/* Overall Score */}
-                <div className="text-center py-4">
-                  <div className={`text-3xl font-bold ${getScoreColor(score)}`}>
-                    {score}
-                  </div>
-                  <div className="text-sm text-zion-slate-light">Performance Score</div>
-                </div>
-              </CardHeader>
+            {metrics.loadTime.toFixed(0)}ms
+          </p>
+        </div>
 
-              <CardContent className="space-y-4">
-                {/* Core Web Vitals */}
-                <div className="space-y-3">
-                  <h4 className="text-sm font-semibold text-zion-cyan flex items-center">
-                    <Zap className="w-4 h-4 mr-2" />
-                    Core Web Vitals
-                  </h4>
-                  
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-zion-slate-light">FCP</span>
-                      <div className="flex items-center space-x-2">
-                        <span className={getStatusColor(getMetricStatus('fcp', metrics.fcp))}>
-                          {getStatusIcon(getMetricStatus('fcp', metrics.fcp))}
-                        </span>
-                        <span>{formatMetric(metrics.fcp, 'ms')}</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-zion-slate-light">LCP</span>
-                      <div className="flex items-center space-x-2">
-                        <span className={getStatusColor(getMetricStatus('lcp', metrics.lcp))}>
-                          {getStatusIcon(getMetricStatus('lcp', metrics.lcp))}
-                        </span>
-                        <span>{formatMetric(metrics.lcp, 'ms')}</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-zion-slate-light">FID</span>
-                      <div className="flex items-center space-x-2">
-                        <span className={getStatusColor(getMetricStatus('fid', metrics.fid))}>
-                          {getStatusIcon(getMetricStatus('fid', metrics.fid))}
-                        </span>
-                        <span>{formatMetric(metrics.fid, 'ms')}</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-zion-slate-light">CLS</span>
-                      <div className="flex items-center space-x-2">
-                        <span className={getStatusColor(getMetricStatus('cls', metrics.cls))}>
-                          {getStatusIcon(getMetricStatus('cls', metrics.cls))}
-                        </span>
-                        <span>{formatMetric(metrics.cls, '')}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="font-semibold">First Contentful Paint</h3>
+            <Zap className="w-5 h-5 text-yellow-600" />
+          </div>
+          <p
+            className={`text-2xl font-bold ${getPerformanceColor(metrics.firstContentfulPaint, { good: 1800, poor: 3000 })}`}
+          >
+            {metrics.firstContentfulPaint.toFixed(0)}ms
+          </p>
+        </div>
 
-                {/* Additional Metrics */}
-                {isExpanded && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="space-y-3 pt-3 border-t border-zion-blue-light/20"
-                  >
-                    <h4 className="text-sm font-semibold text-zion-cyan flex items-center">
-                      <Clock className="w-4 h-4 mr-2" />
-                      Additional Metrics
-                    </h4>
-                    
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between text-sm">
-                        <span className="text-zion-slate-light">TTFB</span>
-                        <span>{formatMetric(metrics.ttfb, 'ms')}</span>
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="font-semibold">Memory Usage</h3>
+            <Database className="w-5 h-5 text-green-600" />
+          </div>
+          <p
+            className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 50, poor: 80 })}`}
+          >
+            {metrics.memoryUsage.toFixed(1)}%
+          </p>
+        </div>
 
-                {/* Actions */}
-                <div className="pt-3 border-t border-zion-blue-light/20">
-                  <div className="flex space-x-2">
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      onClick={resetMetrics}
-                      className="flex-1 border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/10"
-                    >
-                      <RefreshCw className="w-4 h-4 mr-2" />
-                      Reset
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      onClick={() => setIsVisible(false)}
-                      className="flex-1 border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/10"
-                    >
-                      Close
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="font-semibold">Network Speed</h3>
+            <Wifi className="w-5 h-5 text-blue-600" />
+          </div>
+          <p className="text-2xl font-bold text-gray-800 dark:text-gray-200">
+            {metrics.networkSpeed}
+          </p>
+        </div>
+
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="font-semibold">Security Score</h3>
+            <Shield className="w-5 h-5 text-green-600" />
+          </div>
+          <p
+            className={`text-2xl font-bold ${getPerformanceColor(100 - metrics.securityScore, { good: 20, poor: 50 })}`}
+          >
+            {metrics.securityScore}/100
+          </p>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default PerformanceDashboard;
