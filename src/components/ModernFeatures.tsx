@@ -11,49 +11,13 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-const ModernFeatures: React.FC = () => {
-  const features = [
-    {
-      icon: <Brain className="w-8 h-8" />,
-      title: "AI-Powered Solutions",
-      description: "Cutting-edge artificial intelligence to automate and optimize your business processes"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Enterprise Security",
-      description: "Bank-level security with zero-trust architecture and advanced threat protection"
-    },
-    {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions that grow with your business needs"
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Global Reach",
-      description: "Worldwide deployment capabilities with local compliance and support"
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Real-time Analytics",
-      description: "Instant insights and data-driven decisions with our advanced analytics platform"
-    },
-    {
-      icon: <Lock className="w-8 h-8" />,
-      title: "Data Privacy",
-      description: "GDPR compliant with end-to-end encryption and privacy-first design"
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Performance Optimization",
-      description: "Continuous monitoring and optimization for peak system performance"
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "24/7 Support",
-      description: "Round-the-clock expert support from our dedicated technical team"
-    }
-  ];
+export default function ModernFeatures(): React.JSX.Element {
+<<<<<<< HEAD
+	return <section aria-label="Modern Features" />;
+=======
+  return <section />;
+>>>>>>> origin/main
+}
 
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">

@@ -1,28 +1,23 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 
-type FormData = {
-  name: string;
-  email: string;
-  message: string;
-};
+export default function EnhancedContactForm(): React.JSX.Element {
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [message, setMessage] = useState("");
 
-const EnhancedContactForm: React.FC = () => {
-  const [form, setForm] = useState<FormData>({ name: "", email: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
+	return (
+		<form aria-label="Contact form" onSubmit={(e) => e.preventDefault()} className="grid gap-4 max-w-xl mx-auto">
+			<input aria-label="Name" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} className="border p-2 rounded" />
+			<input aria-label="Email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className="border p-2 rounded" />
+			<textarea aria-label="Message" placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)} className="border p-2 rounded" />
+			<button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">Send</button>
+		</form>
+	);
+}
 
-  const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setForm((p) => ({ ...p, [name]: value }));
-  };
-
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
-  if (submitted) {
-    return <p role="status">Thanks, we'll be in touch.</p>;
-  }
+=======
+import React from "react";
 
   return (
     <form onSubmit={onSubmit} className="space-y-4" aria-label="Contact form">
@@ -41,7 +36,5 @@ const EnhancedContactForm: React.FC = () => {
       <button type="submit" className="px-4 py-2 rounded bg-blue-600 text-white">Send</button>
     </form>
   );
-};
-
-export default EnhancedContactForm;
-
+}
+>>>>>>> origin/main

@@ -106,8 +106,13 @@ importers:
         specifier: ^0.4.14
         version: 0.4.22(eslint@9.36.0(jiti@2.6.0))
       globals:
-        specifier: 13.24.0
-        version: 13.24.0
+<<<<<<< HEAD
+        specifier: ^15.15.0
+        version: 15.15.0
+=======
+        specifier: ^16.4.0
+        version: 16.4.0
+>>>>>>> origin/main
       identity-obj-proxy:
         specifier: ^3.0.0
         version: 3.0.0
@@ -2014,6 +2019,13 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
+<<<<<<< HEAD
+  globals@15.15.0:
+    resolution: {integrity: sha512-7ACyT3wmyp3I61S4fG682L0VA2RGD9otkqGJIwNUMF1SWUombIIk+af1unuDYgMm082aHYwD+mzJvv9Iu8dsgg==}
+    engines: {node: '>=18'}
+
+=======
+>>>>>>> origin/main
   globals@16.4.0:
     resolution: {integrity: sha512-ob/2LcVVaVGCYN+r14cnwnoDPUufjiYgSqRhiFD0Q1iI4Odora5RE8Iv1D24hAz5oMophRGkGz+yuvQmmUMnMw==}
     engines: {node: '>=18'}
@@ -5663,6 +5675,11 @@ snapshots:
 
   globals@14.0.0: {}
 
+<<<<<<< HEAD
+  globals@15.15.0: {}
+
+=======
+>>>>>>> origin/main
   globals@16.4.0: {}
 
   globalthis@1.0.4:

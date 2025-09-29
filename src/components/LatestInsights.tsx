@@ -2,36 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, User } from 'lucide-react';
 
-const LatestInsights: React.FC = () => {
-  const insights = [
-    {
-      id: 1,
-      title: "AI Platform Architecture 2025",
-      excerpt: "Building scalable AI platforms for enterprise success",
-      author: "Zion Tech Team",
-      date: "2025-09-29",
-      category: "AI Architecture",
-      readTime: "8 min read"
-    },
-    {
-      id: 2,
-      title: "Quantum Computing in Business",
-      excerpt: "How quantum computing is revolutionizing enterprise solutions",
-      author: "Dr. Sarah Chen",
-      date: "2025-09-28",
-      category: "Quantum Tech",
-      readTime: "12 min read"
-    },
-    {
-      id: 3,
-      title: "Edge AI Implementation Guide",
-      excerpt: "Complete guide to deploying AI at the edge",
-      author: "Mike Johnson",
-      date: "2025-09-27",
-      category: "Edge Computing",
-      readTime: "15 min read"
-    }
-  ];
+export default function LatestInsights(): React.JSX.Element {
+<<<<<<< HEAD
+	return <section aria-label="Latest Insights" />;
+=======
+  return <section />;
+>>>>>>> origin/main
+}
 
   return (
     <div className="py-16 bg-white">
