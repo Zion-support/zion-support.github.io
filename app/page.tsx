@@ -62,6 +62,7 @@ import InteractiveContentShowcase from '../components/InteractiveContentShowcase
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
+import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -77,21 +78,21 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ NEW 2026:</span>
-            <Link href="/blog/ai-agent-evals-2026" className="underline hover:text-yellow-200">Agent Evals</Link>
+            <Link href="/blog/ai-2026-predictions" className="underline hover:text-yellow-200">AI Predictions</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-ethical-framework-2026" className="underline hover:text-yellow-200">AI Ethical Framework</Link>
+            <Link href="/blog/ai-enterprise-security-2026" className="underline hover:text-yellow-200">AI Security</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-multimodal-enterprise-integration-2026" className="underline hover:text-yellow-200">Multimodal AI Integration</Link>
+            <Link href="/blog/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">Sustainability AI</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-agentic-crm-automation-2026" className="underline hover:text-yellow-200">Agentic CRM Automation</Link>
+            <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$3M ROI Case Study</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-ethical-framework-success-2026" className="underline hover:text-yellow-200">Ethics Success Story</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</Link>
+            <Link href="/case-studies/ai-manufacturing-excellence-2026" className="underline hover:text-yellow-200">$5M Manufacturing Success</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/agentic-workflow-orchestration-2026" className="underline hover:text-yellow-200">Workflow Orchestration</Link>
+            <Link href="/blog/ai-fintech-transformation-2026" className="underline hover:text-yellow-200">FinTech Transformation</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-federated-learning-2026" className="underline hover:text-yellow-200">Federated Learning</Link>
           </div>
           <Link
             href="/blog"
@@ -103,7 +104,17 @@ export default function HomePage() {
       </div>
       {/* Promotional Banners */}
       <Latest2026ContentBanner />
-      <NewContentShowcase2026Banner />
+      <NewContentShowcaseBanner2026 />
+      <AIAutonomousCloudOpsBanner />
+      <AIFinTechTransformationBanner />
+      <AIRetailAutomationBanner />
+      <AutonomousOperationsBanner />
+      <FinOpsAdvancedBanner />
+      <PlatformArchitectureBanner />
+      <AutonomousOperationsSuccessBanner />
+      <AINeuralArchitectureOptimizationBanner />
+      <AIFederatedLearningBanner />
+      <FederatedLearningSuccessBanner />
       <AIEthicalFrameworkBanner />
       <AIEthicsSuccessBanner />
       <AISecurityEnterprise2026Banner />
@@ -294,6 +305,9 @@ export default function HomePage() {
       
       {/* Enhanced Content Showcase */}
       <EnhancedContentShowcase />
+      
+      {/* 2026 AI Innovation Showcase */}
+      <EnhancedContentShowcase2026 />
       
       {/* Interactive Content Hub */}
       <InteractiveContentShowcase />
