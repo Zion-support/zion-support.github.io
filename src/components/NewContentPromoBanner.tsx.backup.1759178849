@@ -33,6 +33,19 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
+<<<<<<< HEAD
+      title: "AI Risk Mitigation Scorecards 2026",
+      description: "Owners, SLAs, and CI policy checks",
+      icon: Shield,
+      link: "/blog/ai-risk-mitigation-scorecards-2026",
+      category: "AI Governance"
+    },
+    {
+      title: "Production Agent Actions 2026",
+      description: "Deterministic tools with live traces",
+      icon: Brain,
+      link: "/blog/production-agent-actions-2026",
+=======
       title: "AI Safety Budgets 2026",
       description: "Guardrails wired to KPIs, approvals, rollbacks",
       icon: Shield,
@@ -58,6 +71,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       description: "Warm pools and quality tiers under SLAs",
       icon: Zap,
       link: "/blog/ai-cost-aware-inference-2026",
+>>>>>>> origin/cursor/create-and-deploy-new-content-76a3
       category: "GenAI"
     },
     {

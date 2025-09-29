@@ -17,6 +17,13 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+<<<<<<< HEAD
+    id: "secure-ml-supply-chain-2026",
+    slug: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
+    description: "Continuous SBOMs for models, datasets, and prompts with attestations and CI policy checks.",
+    excerpt: "A practical guide to securing the ML supply chain with provenance and guardrails.",
+=======
     id: "ai-safety-budgets-2026",
     slug: "ai-safety-budgets-2026",
     title: "AI Safety Budgets 2026: Guardrails That Don’t Slow Teams",
@@ -70,6 +77,7 @@ export const latestArticles: LatestArticle[] = [
     title: "AI Breach Drills 2026: Practice Safe Autonomy Under Pressure",
     description: "Runbook drills for AI systems: budgeted actions, approvals, and instant rollback paths.",
     excerpt: "Turn incidents into rehearsals—budgeted actions, approvals, and rollback checkpoints.",
+>>>>>>> origin/cursor/create-and-deploy-new-content-76a3
     author: "Zion Tech Group Team",
     date: "2025-10-13",
     category: "AI Security",
