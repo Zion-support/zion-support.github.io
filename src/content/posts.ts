@@ -65,6 +65,25 @@ export const posts: BlogPost[] = [
   }
   ,
   {
+    slug: "llm-policy-testing-2025",
+    title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
+    description: "Automate governance with policy-as-code on every PR and online canaries.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "edge-zero-downtime-releases-2025",
+    title: "Zero‑Downtime Releases at the Edge: Patterns That Work",
+    description: "Shadow reads, budgets, and instant rollback with edge compute and KV.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "7 min read"
+  }
+  ,
+  {
     slug: "ai-governance-blueprint-2025",
     title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
     description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.",

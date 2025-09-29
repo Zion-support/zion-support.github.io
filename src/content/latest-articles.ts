@@ -370,6 +370,39 @@ export const latestArticles: LatestArticle[] = [
   }
   ,
   {
+    id: "llm-policy-testing-2025",
+    slug: "llm-policy-testing-2025",
+    title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
+    description: "Automate governance with policy-as-code checks on every PR and online canaries.",
+    excerpt: "Turn governance into green checks: lightweight PR gates, KPI-linked canaries, and fast rollbacks.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Governance",
+    tags: ["Policy", "CI", "Evals", "Guardrails"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/llm-policy-testing-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-zero-downtime-releases-2025",
+    slug: "edge-zero-downtime-releases-2025",
+    title: "Zero‑Downtime Releases at the Edge: Patterns That Work",
+    description: "Safe global rollouts with shadow reads, budgets, and instant rollback using edge compute.",
+    excerpt: "Blueprint for zero‑downtime: segmented flags, health probes, and rollback playbooks under 100ms.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Architecture",
+    tags: ["Edge", "Release", "Feature Flags", "Resilience"],
+    featured: false,
+    readTime: "7 min read",
+    image: "/images/edge-zero-downtime-releases-2025.jpg",
+    newBadge: true,
+    trending: true
+  }
+  ,
+  {
     id: "ai-governance-blueprint-2025",
     slug: "ai-governance-blueprint-2025",
     title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
