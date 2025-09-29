@@ -70,10 +70,9 @@ const contentHighlights = [
     badge: "New",
     stats: "8 min read",
     variant: "info" as const
-  }
-  ,
+  },
   {
-    id: 5,
+    id: 6,
     title: "🧭 NEW: AI Platform Engineering 2025",
     description: "Golden paths, eval systems, and governance for safe, fast AI delivery",
     ctaText: "Read Guide",
@@ -83,7 +82,7 @@ const contentHighlights = [
     variant: "info" as const
   },
   {
-    id: 6,
+    id: 7,
     title: "🔍 AI Agent Observability",
     description: "Traces, policy tests, and human feedback that keep quality high",
     ctaText: "Learn How",
@@ -93,7 +92,7 @@ const contentHighlights = [
     variant: "success" as const
   },
   {
-    id: 7,
+    id: 8,
     title: "🛡️ Secure RAG 2025",
     description: "Authorization-aware retrieval and prompt firewalls for enterprise RAG",
     ctaText: "See Patterns",
@@ -114,6 +113,30 @@ const contentHighlights = [
     variant: "info" as const
   }
 ];
+
+// Additions
+contentHighlights.push(
+  {
+    id: 9,
+    title: "🧠 Enterprise RAG Blueprint v2",
+    description: "Hybrid search, freshness, and auth-aware retrieval with layered evals.",
+    ctaText: "Read Guide",
+    ctaLink: "/blog/enterprise-rag-blueprint-2025",
+    badge: "New",
+    stats: "9 min read",
+    variant: "premium" as const
+  },
+  {
+    id: 10,
+    title: "💸 FinOps Scorecards Engineers Use",
+    description: "Guardrails and PR checks that cut cloud waste 25–40%.",
+    ctaText: "See Playbook",
+    ctaLink: "/blog/finops-scorecards-2025",
+    badge: "Featured",
+    stats: "6 min read",
+    variant: "success" as const
+  }
+);
 
 export const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
   className = "",

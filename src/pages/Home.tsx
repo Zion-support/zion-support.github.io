@@ -1,8 +1,6 @@
 import {
   ArrowRight,
   Award,
-  BookOpen,
-  Brain,
   CheckCircle,
   Globe,
   Rocket,
@@ -12,24 +10,27 @@ import {
   Target,
   TrendingUp,
   Users,
-  Zap,
+  Zap
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import LatestContentBanner from "../components/LatestContentBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
-import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
+import LatestContentBanner from "../components/LatestContentBanner";
+import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import TrendingContentBanner from "../components/TrendingContentBanner";
-import EnhancedServicesShowcase from "../components/EnhancedServicesShowcase";
 import { latestInsights } from "../content/insights";
-import { newInsights, featuredInsights } from "../content/new-insights";
-import LatestInsights from "../components/LatestInsights";
+import { featuredInsights, newInsights } from "../content/new-insights";
+import { posts } from "../content/posts";
+import NewServicesShowcase from "../components/NewServicesShowcase";
+import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
+import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
+import NewContentAnnouncement from "../components/NewContentAnnouncement";
 
 const Home = () => {
   return (
@@ -107,6 +108,7 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        <NewContentAnnouncement />
         <LatestContentBanner className="border-b border-white/10" variant="info" />
         <NewContentPromoBanner className="border-b border-white/10" variant="premium" />
         <div className="container mx-auto px-6 mt-6">
@@ -115,10 +117,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: AI Platform Engineering 2025 + Edge AI Latency Budgets"
-          description="New long‑form guide plus new articles across Platform, Governance, Security, and MLOps."
+          title="🚀 Fresh: AI Platform ROI + Edge AI Latency Budgets"
+          description="New: ROI scorecards, secure ML supply chain, Enterprise RAG v2, and more."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-platform-engineering-2025"
+          ctaLink="/blog/ai-platform-roi-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -497,13 +499,13 @@ const Home = () => {
             <h3 className="text-3xl font-bold text-white">Latest Insights</h3>
             <Link to="/insights" className="text-zion-cyan hover:underline">View all</Link>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[...latestInsights.slice(0, 2), ...featuredInsights.slice(0, 1)].map((item) => (
+            <div className="grid md:grid-cols-3 gap-6">
+              {[...latestInsights.slice(0, 2), ...featuredInsights.slice(0, 1)].map((item) => (
               <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
-                    {item.featured && (
+                    {('featured' in item) && (item as any).featured && (
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>
@@ -834,6 +836,15 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        {/* New Services Showcase */}
+        <NewServicesShowcase />
+
+        {/* Latest Articles Showcase */}
+        <LatestArticlesShowcase />
+
+        {/* Success Stories Showcase */}
+        <SuccessStoriesShowcase />
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple relative overflow-hidden">
