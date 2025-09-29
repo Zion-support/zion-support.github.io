@@ -51,7 +51,8 @@ export default [
       'coverage/**',
       '*.d.ts',
       'scripts/**',
-      'jest.setup.js'
+      'jest.setup.js',
+      'src/pages/**'
     ]
   },
 

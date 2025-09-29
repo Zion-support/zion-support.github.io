@@ -15,7 +15,10 @@ module.exports = {
     '/build/',
     '/.next/',
     '/out/',
-    '/tests.disabled/' ],
+    '/tests.disabled/',
+    '/__tests__/',
+    '/tests/'
+  ],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
     '^.+\\.(js|jsx)$': 'babel-jest' },

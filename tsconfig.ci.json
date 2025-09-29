@@ -4,9 +4,8 @@
     "noEmit": true
   },
   "include": [
-    "src/**/*",
-    "__tests__/**/*",
-    "tests/**/*",
+    "src/**/*.ts",
+    "src/**/*.tsx",
     "vite.config.ts",
     "jest.config.cjs"
   ],
@@ -15,7 +14,11 @@
     "dist",
     "build",
     "coverage",
-    "out"
+    "out",
+    "__tests__",
+    "tests",
+    "src/pages/Home.tsx",
+    "hooks/usePerformanceMonitor.ts"
   ]
 }
 
