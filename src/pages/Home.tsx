@@ -133,16 +133,16 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Edge LLM Caching, Governance Scorecards, Serverless Cost Playbook"
-          description="Sub‑100ms prompts, KPI‑tied governance that sticks, and 40–70% AI cost savings."
+          title="New: Reliable RAG Ops, Platform KPIs, AI Incident Budgets"
+          description="Keep RAG fresh, prove platform ROI, and contain incidents under 60s—safely."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Incident Response Playbooks", category: "Cybersecurity", link: "/blog/ai-incident-response-playbooks-2025" },
+            { title: "Reliable RAG Ops 2026", category: "GenAI", link: "/blog/reliable-rag-ops-2026" },
+            { title: "Platform KPIs 2026", category: "Platform Engineering", link: "/blog/platform-kpis-2026" },
+            { title: "AI Incident Budgets 2026", category: "Security", link: "/blog/ai-incident-budgets-2026" },
             { title: "Privacy‑Preserving Analytics", category: "Observability", link: "/blog/privacy-preserving-analytics-2025" },
-            { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" },
-            { title: "AI Governance Scorecards Quickstart", category: "AI Strategy", link: "/blog/ai-governance-scorecards-quickstart-2025" },
-            { title: "Serverless AI Inference Cost Playbook 2025", category: "Cost Optimization", link: "/blog/serverless-ai-inference-cost-playbook-2025" }
+            { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
