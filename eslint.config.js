@@ -34,7 +34,7 @@ export default [
       '**/broken_files_backup/**',
       '**/pages/**',
       '**/store/**',
-      '**/utils/**',
+      // Keep utils lintable for CI
       '**/tests/**',
       '**/vite.config-backup.*',
       '**/test-simple.*',
@@ -122,6 +122,7 @@ export default [
   "Response": "readonly",
   "RequestInit": "readonly",
   "Image": "readonly",
+  "File": "readonly",
   "alert": "readonly",
   "JSX": "readonly"
 }).map(([key, value]) => [key, value])
@@ -150,6 +151,7 @@ export default [
       
       'no-console': 'warn',
       'no-undef': 'warn',
+      'react/jsx-no-undef': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
       'react/no-unescaped-entities': 'warn',

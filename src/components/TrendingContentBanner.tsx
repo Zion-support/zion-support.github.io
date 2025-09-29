@@ -28,32 +28,33 @@ export const TrendingContentBanner: React.FC<TrendingContentBannerProps> = ({
 
   const trendingContent: TrendingItem[] = [
     {
-      id: 'ai-ethics-implementation',
-      title: 'AI Ethics Implementation Framework: From Principles to Practice',
-      category: 'AI Ethics',
-      readTime: '4 min read',
-      views: '2.3K views',
-      link: '/blog/ai-ethics-business-implementation-guide',
+      id: 'serverless-inference-cost-playbook-2025',
+      title: 'Serverless AI Inference Cost Playbook: 40–70% Savings',
+      category: 'AI Solutions',
+      readTime: '7 min read',
+      views: '1.2K views',
+      link: '/blog/serverless-inference-cost-playbook-2025',
       isNew: true,
       isHot: true
     },
     {
-      id: 'iot-security-best-practices',
-      title: 'IoT Security: Comprehensive Best Practices for 2025',
-      category: 'IoT Security',
-      readTime: '16 min read',
-      views: '1.8K views',
-      link: '/blog/iot-security-best-practices-2025',
+      id: 'practical-rag-in-production-2025',
+      title: 'Practical RAG in Production: Freshness, Hybrid Search, Evals',
+      category: 'GenAI',
+      readTime: '8 min read',
+      views: '980 views',
+      link: '/blog/practical-rag-in-production-2025',
       isNew: true,
       isHot: true
     },
     {
-      id: 'quantum-computing-business',
-      title: 'Quantum Computing in Business: Real Applications Beyond the Hype',
-      category: 'Quantum Computing',
-      readTime: '11 min read',
-      views: '3.1K views',
-      link: '/blog/quantum-computing-business-applications-2025',
+      id: 'secure-genai-guardrails-2025',
+      title: 'Secure GenAI: Policy‑First Guardrails That Scale',
+      category: 'Security',
+      readTime: '6 min read',
+      views: '1.6K views',
+      link: '/blog/secure-genai-guardrails-2025',
+      isNew: true,
       isHot: true
     },
     {
@@ -63,16 +64,16 @@ export const TrendingContentBanner: React.FC<TrendingContentBannerProps> = ({
       readTime: '13 min read',
       views: '2.7K views',
       link: '/blog/edge-computing-ai-revolution-2025',
-      isNew: true
+      isHot: false
     },
     {
-      id: 'zero-trust-security',
-      title: 'Zero Trust Security: The New Standard for Enterprise Protection',
-      category: 'Cybersecurity',
-      readTime: '14 min read',
-      views: '4.2K views',
-      link: '/blog/cybersecurity-zero-trust-2025',
-      isHot: true
+      id: 'quantum-computing-business',
+      title: 'Quantum Computing in Business: Real Applications Beyond the Hype',
+      category: 'Quantum Computing',
+      readTime: '11 min read',
+      views: '3.1K views',
+      link: '/blog/quantum-computing-business-applications-2025',
+      isHot: false
     }
   ];
 

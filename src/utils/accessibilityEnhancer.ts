@@ -42,7 +42,7 @@ class AccessibilityEnhancer {
     };
   }
 
-  public init(): void {
+  public initialize(): void {
     if (this.isInitialized || typeof window === 'undefined') return;
     
     this.isInitialized = true;
@@ -52,6 +52,11 @@ class AccessibilityEnhancer {
     this.setupColorContrast();
     this.setupReducedMotion();
     this.observeAccessibility();
+  }
+
+  // Optional alias for compatibility with callers using initialize()
+  public initialize(): void {
+    this.init();
   }
 
   private setupKeyboardNavigation(): void {
@@ -76,10 +81,10 @@ class AccessibilityEnhancer {
       }
 
       // Arrow key navigation for menus
-      if ((event as KeyboardEvent).key === 'ArrowDown' || (event as KeyboardEvent).key === 'ArrowUp') {
-        const menu = document.querySelector('[role="menu"]:focus-within');
+      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+        const menu = document.querySelector('[role="menu"]:focus-within') as HTMLElement | null;
         if (menu) {
-          this.handleMenuNavigation(event as KeyboardEvent, menu as HTMLElement);
+          this.handleMenuNavigation(event as KeyboardEvent, menu);
         }
       }
     });
@@ -90,10 +95,10 @@ class AccessibilityEnhancer {
 
     // Trap focus in modals
     document.addEventListener('keydown', (event) => {
-      if ((event as KeyboardEvent).key === 'Tab') {
-        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
+      if (event.key === 'Tab') {
+        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]') as HTMLElement | null;
         if (modal) {
-          this.trapFocus(event as KeyboardEvent, modal as HTMLElement);
+          this.trapFocus(event as KeyboardEvent, modal);
         }
       }
     });
@@ -367,9 +372,9 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
 if (typeof window !== 'undefined') {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-      accessibilityEnhancer.init();
+      accessibilityEnhancer.initialize();
     });
   } else {
-    accessibilityEnhancer.init();
+    accessibilityEnhancer.initialize();
   }
 }

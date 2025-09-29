@@ -114,4 +114,22 @@ export const caseStudies: CaseStudy[] = [
     duration: "20 weeks",
     imageUrl: "/images/case-studies/cybersecurity.jpg"
   }
+  ,
+  {
+    id: "telco-edge-observability",
+    title: "Telco Edge Observability Overhaul",
+    company: "GlobalTel Communications",
+    industry: "Telecommunications",
+    challenge: "Edge outages and opaque client performance caused churn and SLA penalties.",
+    solution: "Implemented end-to-end tracing from device to POP, latency budgets, and automated error budget alerts across 40 regions.",
+    results: [
+      "Cut P95 latency from 180ms to 85ms",
+      "Reduced incident MTTR by 62%",
+      "Decreased churn by 18% in 2 quarters",
+      "$4.7M annual SLA penalty savings"
+    ],
+    technologies: ["OpenTelemetry", "ClickHouse", "Edge Workers", "TypeScript", "Kubernetes"],
+    duration: "18 weeks",
+    imageUrl: "/images/case-studies/telco-edge.jpg"
+  }
 ];

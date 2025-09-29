@@ -1,24 +1,24 @@
-import React, { useMemo, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import {
-  Download,
-  FileText,
   BookOpen,
-  Shield,
-  TrendingUp,
-  Globe,
-  Search,
-  ExternalLink,
-  Clock,
-  Star,
-  Cloud,
-  Smartphone,
-  Database,
-  Play,
   CheckCircle,
+  Clock,
+  Cloud,
+  Database,
+  Download,
+  ExternalLink,
+  FileText,
+  Globe,
   Lightbulb,
-  Monitor
+  Monitor,
+  Play,
+  Search,
+  Shield,
+  Smartphone,
+  Star,
+  TrendingUp
 } from 'lucide-react';
+import { useMemo, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const Resources = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -418,12 +418,12 @@ const Resources = () => {
                         <Download className="w-4 h-4 mr-1" />
                         {resource.downloadCount} downloads
                       </div>
-                      {resource.duration && (
-                        <div className="flex items-center text-gray-500 text-sm">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {resource.duration}
-                        </div>
-                      )}
+                      <div className="flex items-center text-gray-500 text-sm">
+                        <Clock className="w-4 h-4 mr-1" />
+                        {typeof (resource as any).duration === 'string'
+                          ? (resource as any).duration
+                          : `${(resource as any).pages || 0} pages`}
+                      </div>
                     </div>
 
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -520,12 +520,12 @@ const Resources = () => {
                           <Download className="w-4 h-4 mr-1" />
                           {resource.downloadCount}
                         </div>
-                        {resource.duration && (
-                          <div className="flex items-center">
-                            <Clock className="w-4 h-4 mr-1" />
-                            {resource.duration}
-                          </div>
-                        )}
+                        <div className="flex items-center">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {typeof (resource as any).duration === 'string'
+                            ? (resource as any).duration
+                            : `${(resource as any).pages || 0} pages`}
+                        </div>
                       </div>
 
                       <div className="flex flex-wrap gap-1 mb-4">
