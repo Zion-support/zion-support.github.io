@@ -4,7 +4,7 @@
   status = 200
  
 [build]
-  command = "pnpm build"
+  command = "pnpm run netlify:build"
   publish = "dist"
   command_timeout = "30m"
 
