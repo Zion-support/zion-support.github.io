@@ -33,17 +33,20 @@ import {
   QuantumComputingBanner,
   SustainabilityCaseStudyBanner,
   QuantumOptimizationBanner,
-  AINeuralArchitectureBanner,
+  AINeuralInterfacesBanner,
   AISpaceTechBanner,
-  AISustainabilityCaseStudyBanner,
-  AITechnologyBreakthroughBanner,
-  EnterpriseAITransformationBanner
+  AISustainabilityTransformationBanner,
+  AIQuantumOptimizationBanner,
+  Revolutionary2026TechBanner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+import AIROICalculator from '../src/components/AIROICalculator';
+import AITrends2025Banner from '../src/components/AITrends2025Banner';
+import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -60,14 +63,15 @@ export default function HomePage() {
           <div className="flex items-center gap-2 text-sm md:text-base">
 <<<<<<< HEAD
             <span>🚀 NEW 2026 Content:</span>
-            <a to="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
+            <Link href="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</a>
+            <Link href="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</a>
+            <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</Link>
             <span className="hidden md:inline">•</span>
+<<<<<<< HEAD
             <a to="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</a>
 =======
             <span>🚀 REVOLUTIONARY 2026:</span>
@@ -87,9 +91,12 @@ export default function HomePage() {
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-2026-breakthrough-innovations-success" className="underline hover:text-yellow-200">$15M Breakthrough Success</Link>
 >>>>>>> cursor/create-and-deploy-new-content-14a8
+=======
+            <Link href="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</Link>
+>>>>>>> 15e9ba31a75e8ee2534312146edf8b48fe5354ab
           </div>
           <Link
-            to="/blog"
+            href="/blog"
             className="bg-white text-green-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
           >
             Read the latest
@@ -97,12 +104,12 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
-      <NewContent2026Banner />
-      <AINeuralArchitectureBanner />
+      <Revolutionary2026TechBanner />
+      <AINeuralInterfacesBanner />
       <AISpaceTechBanner />
-      <AISustainabilityCaseStudyBanner />
-      <AITechnologyBreakthroughBanner />
-      <EnterpriseAITransformationBanner />
+      <AISustainabilityTransformationBanner />
+      <AIQuantumOptimizationBanner />
+      <NewContent2026Banner />
       <AIAgentOrchestrationBanner />
       <AISustainabilityBanner />
       <QuantumComputingBanner />
@@ -146,7 +153,11 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
               to="/services"
+=======
+              href="/services"
+>>>>>>> 15e9ba31a75e8ee2534312146edf8b48fe5354ab
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore Our Services
@@ -163,8 +174,14 @@ export default function HomePage() {
               🏆 View $50M Success Story
 >>>>>>> cursor/create-and-deploy-new-content-14a8
             </Link>
+            <Link
+              href="/case-studies/ai-sustainability-transformation-2026"
+              className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-red-700 transition-all shadow-lg hover:shadow-xl"
+            >
+              🌱 $10M Sustainability ROI
+            </Link>
             <a
-              to="tel:+13024640950"
+              href="tel:+13024640950"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
               Call +1 302 464 0950
@@ -422,82 +439,40 @@ export default function HomePage() {
 
           {/* Featured Recommendations */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link href="/blog/ai-neural-architecture-optimization-2026" className="group">
-              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-purple-200 hover:scale-105">
+            <Link to="/blog/ai-agent-orchestration-2026" className="group">
+              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                  <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                     NEW 2026
                   </span>
                   <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    BREAKTHROUGH
-                  </span>
-                </div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm text-purple-600 font-medium">📝 Article</span>
-                  <span className="text-sm text-gray-500">Neural Architecture</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                  AI Neural Architecture Optimization 2026: Next-Gen Performance Engineering
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Master neural architecture optimization with 40% performance gains, 60% cost reduction, and enterprise-grade scalability patterns.
-                </p>
-                <div className="flex gap-4 mb-4">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-purple-600">40%</div>
-                    <div className="text-xs text-gray-500">Performance</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-purple-600">60%</div>
-                    <div className="text-xs text-gray-500">Cost Savings</div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center text-sm text-gray-500">
-                    <Clock className="w-4 h-4 mr-1" />
-                    28 min read
-                  </div>
-                  <div className="flex items-center text-purple-600 font-semibold text-sm group-hover:text-purple-700 transition-colors">
-                    Read More →
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/blog/ai-space-tech-2026" className="group">
-              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    NEW 2026
-                  </span>
-                  <span className="bg-gradient-to-r from-orange-400 to-red-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    REVOLUTIONARY
+                    FEATURED
                   </span>
                 </div>
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-sm text-blue-600 font-medium">📝 Article</span>
-                  <span className="text-sm text-gray-500">Space Technology</span>
+                  <span className="text-sm text-gray-500">AI Orchestration</span>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Space Technology 2026: Autonomous Space Operations & Deep Space Intelligence
+                  AI Agent Orchestration 2026: Multi-Agent System Architecture
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  Revolutionary AI space technology for autonomous missions, deep space exploration, and orbital operations with 99.9% reliability.
+                  Master multi-agent systems with 95% automation efficiency and $5M+ ROI through advanced orchestration patterns.
                 </p>
                 <div className="flex gap-4 mb-4">
                   <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">99.9%</div>
-                    <div className="text-xs text-gray-500">Reliability</div>
+                    <div className="text-lg font-bold text-blue-600">95%</div>
+                    <div className="text-xs text-gray-500">Automation</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">$500M+</div>
-                    <div className="text-xs text-gray-500">Savings</div>
+                    <div className="text-lg font-bold text-blue-600">$5M+</div>
+                    <div className="text-xs text-gray-500">ROI</div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-gray-500">
                     <Clock className="w-4 h-4 mr-1" />
-                    32 min read
+                    22 min read
                   </div>
                   <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
                     Read More →
@@ -506,10 +481,10 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/case-studies/ai-sustainability-transformation-2026" className="group">
-              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-green-200 hover:scale-105">
+            <Link to="/case-studies/ai-sustainability-transformation-2026" className="group">
+              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-gradient-to-r from-green-500 to-teal-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                  <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                     NEW 2026
                   </span>
                   <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -517,10 +492,10 @@ export default function HomePage() {
                   </span>
                 </div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm text-green-600 font-medium">📊 Case Study</span>
+                  <span className="text-sm text-blue-600 font-medium">📊 Case Study</span>
                   <span className="text-sm text-gray-500">Sustainability</span>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   AI Sustainability Transformation 2026: $10M ROI Case Study
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
@@ -528,11 +503,11 @@ export default function HomePage() {
                 </p>
                 <div className="flex gap-4 mb-4">
                   <div className="text-center">
-                    <div className="text-lg font-bold text-green-600">$10M</div>
+                    <div className="text-lg font-bold text-blue-600">$10M</div>
                     <div className="text-xs text-gray-500">ROI</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-lg font-bold text-green-600">100%</div>
+                    <div className="text-lg font-bold text-blue-600">100%</div>
                     <div className="text-xs text-gray-500">Carbon Neutral</div>
                   </div>
                 </div>
@@ -541,7 +516,49 @@ export default function HomePage() {
                     <Clock className="w-4 h-4 mr-1" />
                     15 min read
                   </div>
-                  <div className="flex items-center text-green-600 font-semibold text-sm group-hover:text-green-700 transition-colors">
+                  <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
+                    Read More →
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            <Link to="/blog/ai-quantum-computing-2026" className="group">
+              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW 2026
+                  </span>
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    FEATURED
+                  </span>
+                </div>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm text-blue-600 font-medium">📝 Article</span>
+                  <span className="text-sm text-gray-500">Quantum Computing</span>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Quantum Computing 2026: Next-Generation Intelligence
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.
+                </p>
+                <div className="flex gap-4 mb-4">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-blue-600">1000x</div>
+                    <div className="text-xs text-gray-500">Faster</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-blue-600">95%</div>
+                    <div className="text-xs text-gray-500">Accuracy</div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Clock className="w-4 h-4 mr-1" />
+                    25 min read
+                  </div>
+                  <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
                     Read More →
                   </div>
                 </div>
@@ -1478,13 +1495,13 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              to="tel:+13024640950"
+              href="tel:+13024640950"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg"
             >
               Call +1 302 464 0950
             </a>
             <a
-              to="mailto:kleber@ziontechgroup.com"
+              href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
               Get Free Consultation
