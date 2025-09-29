@@ -10,6 +10,26 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-security-posture-2025",
+    title: "AI Security Posture 2025: Hardening LLM Apps End-to-End",
+    description:
+      "Threat models, policy tests, and isolation patterns to keep GenAI features safe in production.",
+    category: "Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "llm-evals-blueprint-2025",
+    title: "LLM Evals Blueprint: Offline Suites to Online Guardrails",
+    description:
+      "A practical blueprint to design evals that predict real-world quality and prevent regressions.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
     description:

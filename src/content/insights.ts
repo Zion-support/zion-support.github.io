@@ -9,6 +9,24 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "ai-secure-prompting-patterns",
+    title: "Secure Prompting Patterns for Enterprise GenAI",
+    summary:
+      "Input validation, policy checks, and output filters that reduce prompt injection and data exfil risks.",
+    category: "Security",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "reliable-feature-flags-ml",
+    title: "Reliable Feature Flags for ML: Cohorts, Canaries, and Rollbacks",
+    summary:
+      "Techniques to expose model changes safely with measurable impact and quick recovery paths.",
+    category: "MLOps",
+    date: "2025-09-29",
+    readMinutes: 7,
+  },
+  {
     id: "ai-governance-rubric",
     title: "A Lightweight Rubric for AI Governance Decisions",
     summary:
