@@ -386,4 +386,53 @@ export const newServices: NewService[] = [
     newBadge: true,
     featured: false
   }
+  ,
+  {
+    id: "genai-evals-ci-service",
+    title: "GenAI Evals CI Service",
+    description: "Run policy and quality tests for LLM features on every PR with dashboards and budget guardrails.",
+    icon: "✅",
+    category: "AI Quality",
+    pricing: {
+      starting: "$199/mo",
+      popular: true,
+      discount: "20% Launch Promo"
+    },
+    features: [
+      "CI Policy Tests",
+      "Online Canaries",
+      "Guardrail Libraries",
+      "Eval Dashboards",
+      "Budgeted Routing",
+      "Slack/Webhook Alerts"
+    ],
+    benefits: [
+      "Ship GenAI changes weekly",
+      "Prevent regressions automatically",
+      "Make risk reviews measurable",
+      "Increase developer confidence"
+    ],
+    technologies: ["TypeScript", "Python", "OpenAI", "Weights & Biases", "Grafana"],
+    useCases: [
+      "PR quality gates",
+      "Release canaries",
+      "Policy compliance checks"
+    ],
+    cta: {
+      primary: "Enable in CI",
+      secondary: "View Demo"
+    },
+    metrics: [
+      { label: "Regression Reduction", value: "70%", description: "Fewer incidents post‑release" },
+      { label: "Time Saved", value: "12h/week", description: "Per team on manual reviews" },
+      { label: "Coverage", value: "90%", description: "Of critical LLM paths" }
+    ],
+    testimonial: {
+      quote: "We ship LLM features every week now. The CI evals caught three issues before users did.",
+      author: "Leah Patel",
+      company: "Acme SaaS"
+    },
+    newBadge: true,
+    featured: true
+  }
 ];
