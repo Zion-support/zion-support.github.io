@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BlogPost, blogPosts } from '../content/blog-posts';
 import { InsightArticle, latestInsights } from '../content/insights';
+import { Star, Calendar, Clock, Eye, ArrowRight, TrendingUp } from 'lucide-react';
 
 interface FeaturedContentShowcaseProps {
   title?: string;
@@ -23,9 +24,9 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
   const [activeTab, setActiveTab] = useState<'all' | 'blog' | 'insights'>('all');
 
   // Get featured blog posts
-  const featuredBlogPosts = posts
+  const featuredBlogPosts = blogPosts
     .filter(post => post.featured)
-    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 3);
 
   // Get latest insights
@@ -33,19 +34,30 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 3);
 
-  type ContentItem = (BlogPost & { type: 'blog' }) | (InsightArticle & { type: 'insights' });
-
   // Combine content for display
-  const allContent: ContentItem[] = [
-    ...featuredBlogPosts.map(post => ({ ...(post as BlogPost), type: 'blog' as const })),
-    ...latestInsightsList.map(insight => ({ ...(insight as InsightArticle), type: 'insights' as const }))
-  ]
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, maxItems);
+  const allContent = [
+    ...featuredBlogPosts.map(post => ({ ...post, type: 'blog' as const, date: post.date })),
+    ...latestInsightsList.map(insight => ({
+      ...insight,
+      type: 'insights' as const,
+      description: insight.summary,
+      readTime: `${insight.readMinutes} min read`,
+      href: `/insights/${insight.id}`,
+      tags: [] as string[]
+    }))
+  ].sort((a, b) => new Date((b as any).date).getTime() - new Date((a as any).date).getTime())
+   .slice(0, maxItems);
 
-  const filteredContent: ContentItem[] = activeTab === 'all' ? allContent : 
-    activeTab === 'blog' ? featuredBlogPosts.map(post => ({ ...(post as BlogPost), type: 'blog' as const })) as ContentItem[] :
-    latestInsightsList.map(insight => ({ ...(insight as InsightArticle), type: 'insights' as const })) as ContentItem[];
+  const filteredContent = activeTab === 'all' ? allContent : 
+    activeTab === 'blog' ? featuredBlogPosts.map(post => ({ ...post, type: 'blog' as const, date: post.date })) :
+    latestInsightsList.map(insight => ({
+      ...insight,
+      type: 'insights' as const,
+      description: insight.summary,
+      readTime: `${insight.readMinutes} min read`,
+      href: `/insights/${insight.id}`,
+      tags: [] as string[]
+    }));
 
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
@@ -168,8 +180,8 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
                   </div>
                 )}
                 <div className="absolute top-4 left-4">
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor((item as any).category)}`}>
-                    {(item as any).category}
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
+                    {item.category}
                   </span>
                 </div>
                 <div className="absolute top-4 right-4">
@@ -178,40 +190,30 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
                   </span>
                 </div>
               </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <div className="flex items-center text-sm text-gray-500 mb-3">
-                  <span>{formatDate((item as any).date)}</span>
-                  <span className="mx-2">•</span>
-                  <span className="font-medium text-blue-600">
-                    {item.type === 'blog' ? 'Featured Article' : 'Quick Insight'}
-                  </span>
+              
+              <h3 className="text-lg font-semibold text-gray-900 mb-3 line-clamp-2">
+                {(item as any).title}
+              </h3>
+              
+              <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                {(item as any).description}
+              </p>
+              
+              <div className="flex items-center gap-3 mb-4 text-xs text-gray-500">
+                <div className="flex items-center gap-1">
+                  <Calendar className="w-3 h-3" />
+                  {new Date((item as any).date).toLocaleDateString()}
                 </div>
-
-                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors">
-                  {(item as any).title}
-                </h3>
-
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {item.type === 'blog' 
-                    ? (item as BlogPost).description 
-                    : (item as InsightArticle).summary
-                  }
-                </p>
-
-                <Link
-                  to={item.type === 'blog' 
-                    ? `/blog/${(item as BlogPost).slug}` 
-                    : `/insights/${(item as InsightArticle).id}`
-                  }
-                  className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors"
-                >
-                  Read More
-                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
+                <div className="flex items-center gap-1">
+                  <Clock className="w-3 h-3" />
+                  {(item as any).readTime}
+                </div>
+                {(item as any).views && (
+                  <div className="flex items-center gap-1">
+                    <Eye className="w-3 h-3" />
+                    {(item as any).views}
+                  </div>
+                )}
               </div>
               
               <div className="flex flex-wrap gap-1 mb-4">
