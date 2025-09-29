@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "serverless-inference-cost-playbook-2026",
+    slug: "serverless-inference-cost-playbook-2026",
+    title: "Serverless Inference 2026: Cut Spend 40–70% Without P95 Pain",
+    description: "Adaptive batching, warm pools, tiered quality, and cache-first prompts that reduce GenAI inference costs while preserving latency and quality.",
+    excerpt: "A proven cost playbook: adaptive batching, warm pools, tiered models, and cache-first patterns.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["Inference", "Cost Optimization", "Serverless", "Performance"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/serverless-inference-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "rag-architectures-production-2026",
+    slug: "rag-architectures-production-2026",
+    title: "RAG Architectures 2026: Freshness, Hybrid Search, and Evals",
+    description: "Production patterns for chunking, freshness windows, hybrid retrieval, and KPI‑linked evaluation to keep RAG quality high.",
+    excerpt: "Make RAG reliable in production with freshness budgets, hybrid search, and online evals.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "GenAI",
+    tags: ["RAG", "Vector Search", "Evals", "Freshness"],
+    featured: true,
+    readTime: "12 min read",
+    image: "/images/rag-architectures-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-enterprise-security-2026",
     slug: "ai-enterprise-security-2026",
     title: "AI Enterprise Security 2026: Zero-Trust Architecture for AI Systems",
