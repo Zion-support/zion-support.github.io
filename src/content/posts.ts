@@ -10,6 +10,26 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "genai-guardrails-scorecards-2025",
+    title: "GenAI Guardrails Scorecards: Proving Safety Meets Outcomes",
+    description:
+      "A practical framework to tie evals, policy tests, and user outcomes into one leadership-friendly scorecard.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "edge-cold-start-budgets",
+    title: "Killing Cold Starts at the Edge: Budgets, Batching, and Warmers",
+    description:
+      "Patterns to keep P95 under 100ms with smart warmers, request coalescing, and cache-aware budgeting.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
     description:
@@ -188,7 +208,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-01-10",
     featured: false,
     readTime: "9 min read",
-<<<<<<< HEAD
   },
   {
     slug: "platform-engineering-blueprint-2025",
@@ -335,9 +354,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-01-21",
     featured: false,
     readTime: "9 min read",
-  },
-=======
   }
->>>>>>> feat/new-content-and-promo
 ];
 

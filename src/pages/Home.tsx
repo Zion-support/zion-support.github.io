@@ -15,13 +15,13 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
+import NewContentPromotionBanner from "../components/NewContentPromotionBanner";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
 
@@ -102,13 +102,18 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
 
-        {/* Content Promotion Banner */}
-        <ContentPromotionBanner
-          variant="info"
-          title="🚀 Fresh: AI Product Launch Checklist + MLOps in 45 Days"
-          description="New guides on taking AI pilots to production and shipping reliable models fast."
+        {/* New Content Promotion Banner */}
+        <NewContentPromotionBanner
+          variant="premium"
+          title="🔥 New this week: GenAI Guardrails Scorecards + Edge Cold Start Playbook"
+          description="Two fresh guides on proving AI safety with outcomes and keeping edge P95 under 100ms."
           ctaText="Read the latest"
-          ctaLink="/blog/genai-evals-in-production-2025"
+          ctaLink="/blog/genai-guardrails-scorecards-2025"
+          featuredItems={[
+            { title: "GenAI Guardrails Scorecards", category: "GenAI", link: "/blog/genai-guardrails-scorecards-2025" },
+            { title: "Killing Cold Starts at the Edge", category: "Architecture", link: "/blog/edge-cold-start-budgets" },
+            { title: "MLOps Reliability Guide", category: "MLOps", link: "/blog/mlops-reliability-2025" }
+          ]}
           dismissible={true}
         />
         {/* Animated background elements */}
