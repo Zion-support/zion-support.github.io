@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { TrendingUp, Eye, Clock, Star, ArrowRight, Fire, BookOpen, Zap } from 'lucide-react';
+import { TrendingUp, Eye, Clock, Star, ArrowRight, Flame as Fire, BookOpen, Zap } from 'lucide-react';
 
 interface TrendingContentBannerProps {
   className?: string;

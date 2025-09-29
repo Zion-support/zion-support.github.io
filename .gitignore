@@ -25,3 +25,7 @@ core
 
 # TypeScript build info
 *.tsbuildinfo
+
+# Ignore coverage reports
+coverage/
+coverage
