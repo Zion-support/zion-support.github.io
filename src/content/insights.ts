@@ -171,7 +171,6 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 8,
   },
   {
-<<<<<<< HEAD
     id: "ai-workflow-automation-2025-trends",
     title: "AI Workflow Automation: 2025 Trends That Will Transform Business",
     summary:
@@ -305,7 +304,8 @@ export const latestInsights: InsightArticle[] = [
     category: "GenAI",
     date: "2025-09-29",
     readMinutes: 8,
-=======
+  },
+  {
     id: "ai-automation-roi-calculator",
     title: "AI Automation ROI Calculator: Measure Your Business Impact",
     summary:
@@ -349,7 +349,6 @@ export const latestInsights: InsightArticle[] = [
     category: "Security",
     date: "2025-01-21",
     readMinutes: 11,
->>>>>>> cursor/create-and-deploy-new-content-0173
   },
 ];
 
