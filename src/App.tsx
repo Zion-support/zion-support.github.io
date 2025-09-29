@@ -10,11 +10,14 @@ import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibilityManager';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
+import { advancedErrorRecoverySystem } from './utils/advancedErrorRecoverySystem';
+import { advancedCachingSystem } from './utils/advancedCachingSystem';
+import { advancedSecurityManager } from './utils/advancedSecurityManager';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
-import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+import ComprehensiveSystemDashboard from './components/ComprehensiveSystemDashboard';
 import './index.css';
 
 export default function App(): React.JSX.Element {
@@ -24,6 +27,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
+  const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [userPreferences, setUserPreferences] = useState({
     theme: 'auto',
@@ -85,12 +89,15 @@ export default function App(): React.JSX.Element {
         case 'A':
           setShowAIDashboard(prev => !prev);
           break;
-        case 'S':
-          setShowSEOOptimizer(prev => !prev);
-          break;
-        case 'T':
-          setIsDarkMode(prev => !prev);
-          break;
+               case 'S':
+                 setShowSEOOptimizer(prev => !prev);
+                 break;
+               case 'C':
+                 setShowComprehensiveDashboard(prev => !prev);
+                 break;
+               case 'T':
+                 setIsDarkMode(prev => !prev);
+                 break;
         case 'Escape':
           // Close all dashboards
           setShowSystemDashboard(false);
@@ -98,6 +105,7 @@ export default function App(): React.JSX.Element {
           setShowPerformanceMonitor(false);
           setShowAIDashboard(false);
           setShowSEOOptimizer(false);
+          setShowComprehensiveDashboard(false);
           break;
       }
     }
@@ -173,6 +181,11 @@ export default function App(): React.JSX.Element {
     enhancedPerformanceMonitor.getAlerts();
     enhancedAccessibilityManager.getIssues();
     enhancedSEOOptimizer.getIssues();
+
+    // Initialize advanced systems
+    advancedErrorRecoverySystem.getErrorReports();
+    advancedCachingSystem.getStatistics();
+    advancedSecurityManager.getSecurityMetrics();
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
@@ -286,6 +299,42 @@ export default function App(): React.JSX.Element {
           isVisible={showAIDashboard}
           onClose={() => setShowAIDashboard(false)}
         />
+
+        {/* SEO Optimizer Dashboard - Toggle with Ctrl+Shift+S */}
+        {showSEOOptimizer && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">SEO Optimizer</h2>
+                <button
+                  onClick={() => setShowSEOOptimizer(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <SEOOptimizer seoData={seoData} />
+            </div>
+          </div>
+        )}
+
+        {/* Comprehensive System Dashboard - Toggle with Ctrl+Shift+C */}
+        {showComprehensiveDashboard && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-7xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">Comprehensive System Dashboard</h2>
+                <button
+                  onClick={() => setShowComprehensiveDashboard(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <ComprehensiveSystemDashboard />
+            </div>
+          </div>
+        )}
       </div>
     </EnhancedErrorBoundary>
   );

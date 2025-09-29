@@ -1,266 +1,507 @@
 /**
  * Advanced Security Manager
- * Provides comprehensive security features and monitoring
+ * Comprehensive security monitoring and protection
  */
 
-interface SecurityEvent {
-  type: string;
+export interface SecurityEvent {
+  id: string;
+  type: 'xss' | 'csrf' | 'injection' | 'suspicious' | 'unauthorized' | 'malicious';
   severity: 'low' | 'medium' | 'high' | 'critical';
-  message: string;
+  description: string;
+  source: string;
   timestamp: number;
-  userAgent: string;
-  url: string;
-  metadata?: Record<string, string | number | boolean>;
+  blocked: boolean;
+  userAgent?: string;
+  ip?: string;
 }
 
-interface SecurityConfig {
-  enableCSP: boolean;
+export interface SecurityConfig {
   enableXSSProtection: boolean;
   enableCSRFProtection: boolean;
+  enableContentSecurityPolicy: boolean;
   enableClickjackingProtection: boolean;
-  enableContentSniffingProtection: boolean;
-  enableReferrerPolicy: boolean;
-  allowedOrigins: string[];
-  trustedDomains: string[];
+  enableHSTS: boolean;
+  maxFailedAttempts: number;
+  lockoutDuration: number;
+}
+
+export interface SecurityMetrics {
+  totalEvents: number;
+  blockedEvents: number;
+  eventsByType: Record<string, number>;
+  eventsBySeverity: Record<string, number>;
+  threatLevel: 'low' | 'medium' | 'high' | 'critical';
 }
 
 class AdvancedSecurityManager {
-  private static instance: AdvancedSecurityManager;
   private events: SecurityEvent[] = [];
   private config: SecurityConfig;
-  private isMonitoring = false;
+  private metrics: SecurityMetrics;
+  private failedAttempts: Map<string, number> = new Map();
+  private blockedIPs: Set<string> = new Map();
+  private isMonitoring: boolean = false;
 
-  private constructor() {
-    this.config = this.getDefaultConfig();
-  }
-
-  public static getInstance(): AdvancedSecurityManager {
-    if (!AdvancedSecurityManager.instance) {
-      AdvancedSecurityManager.instance = new AdvancedSecurityManager();
-    }
-    return AdvancedSecurityManager.instance;
-  }
-
-  public initialize(): void {
-    console.log('🔒 Advanced Security Manager initialized');
-    this.setupSecurityHeaders();
-    this.startMonitoring();
-    this.setupEventListeners();
-    this.validateEnvironment();
-  }
-
-  public updateConfig(newConfig: Partial<SecurityConfig>): void {
-    this.config = { ...this.config, ...newConfig };
-    this.setupSecurityHeaders();
-  }
-
-  public getSecurityReport(): unknown {
-    const criticalEvents = this.events.filter(e => e.severity === 'critical');
-    const highEvents = this.events.filter(e => e.severity === 'high');
-    
-    return {
-      totalEvents: this.events.length,
-      criticalEvents: criticalEvents.length,
-      highEvents: highEvents.length,
-      recentEvents: this.events.slice(-10),
-      securityScore: this.calculateSecurityScore()
-    };
-  }
-
-  private getDefaultConfig(): SecurityConfig {
-    return {
-      enableCSP: true,
+  constructor(config?: Partial<SecurityConfig>) {
+    this.config = {
       enableXSSProtection: true,
       enableCSRFProtection: true,
+      enableContentSecurityPolicy: true,
       enableClickjackingProtection: true,
-      enableContentSniffingProtection: true,
-      enableReferrerPolicy: true,
-      allowedOrigins: [window.location.origin],
-      trustedDomains: ['ziontechgroup.com']
+      enableHSTS: true,
+      maxFailedAttempts: 5,
+      lockoutDuration: 15 * 60 * 1000, // 15 minutes
+      ...config
     };
+
+    this.metrics = {
+      totalEvents: 0,
+      blockedEvents: 0,
+      eventsByType: {},
+      eventsBySeverity: {},
+      threatLevel: 'low'
+    };
+
+    this.initializeSecurity();
   }
 
-  private setupSecurityHeaders(): void {
-    if (this.config.enableCSP) {
-      this.addCSPHeader();
+  private initializeSecurity(): void {
+    if (typeof window === 'undefined') {
+      return;
     }
-    
-    if (this.config.enableClickjackingProtection) {
-      this.addFrameOptionsHeader();
-    }
-  }
 
-  private addCSPHeader(): void {
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'Content-Security-Policy';
-    meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:;";
-    document.head.appendChild(meta);
-  }
-
-  private addFrameOptionsHeader(): void {
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'X-Frame-Options';
-    meta.content = 'DENY';
-    document.head.appendChild(meta);
-  }
-
-  private startMonitoring(): void {
-    if (this.isMonitoring) return;
     this.isMonitoring = true;
-    this.logEvent('security_monitoring_started', 'low', 'Security monitoring started');
+    this.setupXSSProtection();
+    this.setupCSRFProtection();
+    this.setupContentSecurityPolicy();
+    this.setupClickjackingProtection();
+    this.setupInputValidation();
+    this.setupSuspiciousActivityDetection();
+    this.setupSecurityHeaders();
   }
 
-  private setupEventListeners(): void {
-    // Monitor for suspicious activities
-    document.addEventListener('click', this.handleClick.bind(this));
-    document.addEventListener('keydown', this.handleKeydown.bind(this));
-    window.addEventListener('beforeunload', this.handleBeforeUnload.bind(this));
-    
-    // Monitor for potential XSS
-    this.monitorForXSS();
-    
-    // Monitor for CSRF
-    this.monitorForCSRF();
+  private setupXSSProtection(): void {
+    if (!this.config.enableXSSProtection) return;
+
+    // Sanitize user input
+    const originalCreateElement = document.createElement;
+    document.createElement = function(tagName: string) {
+      const element = originalCreateElement.call(this, tagName);
+      
+      // Override innerHTML setter to sanitize content
+      const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
+      if (originalInnerHTML) {
+        Object.defineProperty(element, 'innerHTML', {
+          set: function(value: string) {
+            const sanitized = this.sanitizeHTML(value);
+            originalInnerHTML.call(this, sanitized);
+          },
+          get: function() {
+            return originalInnerHTML.call(this);
+          }
+        });
+      }
+      
+      return element;
+    }.bind(document);
+
+    // Monitor for script injection attempts
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            const element = node as Element;
+            if (element.tagName === 'SCRIPT' && element.innerHTML.includes('<script')) {
+              this.logSecurityEvent({
+                type: 'xss',
+                severity: 'high',
+                description: 'Potential XSS attack detected',
+                source: 'script-injection',
+                blocked: true
+              });
+              element.remove();
+            }
+          }
+        });
+      });
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
   }
 
-  private handleClick(event: MouseEvent): void {
-    const target = event.target as HTMLElement;
-    const href = target.getAttribute('href');
+  private setupCSRFProtection(): void {
+    if (!this.config.enableCSRFProtection) return;
+
+    // Generate CSRF token
+    const csrfToken = this.generateCSRFToken();
+    document.cookie = `csrf-token=${csrfToken}; SameSite=Strict; Secure`;
+
+    // Intercept form submissions
+    document.addEventListener('submit', (event) => {
+      const form = event.target as HTMLFormElement;
+      if (form.method.toLowerCase() === 'post') {
+        const tokenInput = form.querySelector('input[name="csrf-token"]') as HTMLInputElement;
+        if (!tokenInput || tokenInput.value !== csrfToken) {
+          event.preventDefault();
+          this.logSecurityEvent({
+            type: 'csrf',
+            severity: 'high',
+            description: 'CSRF attack detected',
+            source: 'form-submission',
+            blocked: true
+          });
+        }
+      }
+    });
+  }
+
+  private setupContentSecurityPolicy(): void {
+    if (!this.config.enableContentSecurityPolicy) return;
+
+    // Add CSP meta tag
+    const cspMeta = document.createElement('meta');
+    cspMeta.httpEquiv = 'Content-Security-Policy';
+    cspMeta.content = `
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'unsafe-eval';
+      style-src 'self' 'unsafe-inline';
+      img-src 'self' data: https:;
+      font-src 'self' https:;
+      connect-src 'self' https:;
+      frame-ancestors 'none';
+      base-uri 'self';
+      form-action 'self';
+    `.replace(/\s+/g, ' ').trim();
     
-    if (href && !this.isTrustedUrl(href)) {
-      this.logEvent('suspicious_link_click', 'medium', `Click on untrusted link: ${href}`, {
-        href,
-        target: target.tagName
+    document.head.appendChild(cspMeta);
+  }
+
+  private setupClickjackingProtection(): void {
+    if (!this.config.enableClickjackingProtection) return;
+
+    // Add X-Frame-Options header via meta tag
+    const frameOptionsMeta = document.createElement('meta');
+    frameOptionsMeta.httpEquiv = 'X-Frame-Options';
+    frameOptionsMeta.content = 'DENY';
+    document.head.appendChild(frameOptionsMeta);
+
+    // Detect if page is in iframe
+    if (window !== window.top) {
+      this.logSecurityEvent({
+        type: 'clickjacking',
+        severity: 'medium',
+        description: 'Page loaded in iframe - potential clickjacking',
+        source: 'iframe-detection',
+        blocked: false
       });
     }
   }
 
-  private handleKeydown(event: KeyboardEvent): void {
-    // Monitor for suspicious key combinations
-    if (event.ctrlKey && event.shiftKey && event.key === 'I') {
-      this.logEvent('devtools_access_attempt', 'low', 'Developer tools access attempted');
-    }
+  private setupInputValidation(): void {
+    // Monitor input fields for suspicious patterns
+    document.addEventListener('input', (event) => {
+      const target = event.target as HTMLInputElement;
+      if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') {
+        this.validateInput(target.value, target.name || 'unknown');
+      }
+    });
   }
 
-  private handleBeforeUnload(): void {
-    this.logEvent('page_unload', 'low', 'Page unload detected');
-  }
+  private setupSuspiciousActivityDetection(): void {
+    // Monitor for rapid clicks (potential bot activity)
+    let clickCount = 0;
+    let lastClickTime = 0;
+    
+    document.addEventListener('click', (event) => {
+      const now = Date.now();
+      
+      if (now - lastClickTime < 100) { // Less than 100ms between clicks
+        clickCount++;
+        
+        if (clickCount > 10) {
+          this.logSecurityEvent({
+            type: 'suspicious',
+            severity: 'medium',
+            description: 'Rapid clicking detected - potential bot activity',
+            source: 'click-monitoring',
+            blocked: false
+          });
+          clickCount = 0;
+        }
+      } else {
+        clickCount = 0;
+      }
+      
+      lastClickTime = now;
+    });
 
-  private monitorForXSS(): void {
-    // Check for potential XSS in URL parameters
-    const urlParams = new URLSearchParams(window.location.search);
-    urlParams.forEach((value, key) => {
-      if (this.containsSuspiciousContent(value)) {
-        this.logEvent('potential_xss', 'high', `Suspicious content in URL parameter: ${key}`, {
-          parameter: key,
-          value: value.substring(0, 100)
+    // Monitor for suspicious keyboard patterns
+    let keySequence: string[] = [];
+    document.addEventListener('keydown', (event) => {
+      keySequence.push(event.key);
+      
+      if (keySequence.length > 20) {
+        keySequence = keySequence.slice(-20);
+      }
+      
+      // Detect common attack patterns
+      const sequence = keySequence.join('');
+      if (this.detectAttackPatterns(sequence)) {
+        this.logSecurityEvent({
+          type: 'malicious',
+          severity: 'high',
+          description: 'Suspicious keyboard pattern detected',
+          source: 'keyboard-monitoring',
+          blocked: true
         });
       }
     });
   }
 
-  private monitorForCSRF(): void {
-    // Monitor for potential CSRF attacks
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-      if (!form.querySelector('input[name="_token"]') && !form.querySelector('input[name="csrf_token"]')) {
-        this.logEvent('missing_csrf_token', 'medium', 'Form missing CSRF token', {
-          formAction: form.action
-        });
-      }
+  private setupSecurityHeaders(): void {
+    // Add security headers via meta tags
+    const headers = [
+      { name: 'X-Content-Type-Options', value: 'nosniff' },
+      { name: 'X-XSS-Protection', value: '1; mode=block' },
+      { name: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+      { name: 'Permissions-Policy', value: 'geolocation=(), microphone=(), camera=()' }
+    ];
+
+    headers.forEach(header => {
+      const meta = document.createElement('meta');
+      meta.httpEquiv = header.name;
+      meta.content = header.value;
+      document.head.appendChild(meta);
     });
   }
 
-  private containsSuspiciousContent(content: string): boolean {
+  private sanitizeHTML(input: string): string {
+    // Basic HTML sanitization
+    return input
+      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+      .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
+      .replace(/javascript:/gi, '')
+      .replace(/on\w+\s*=/gi, '');
+  }
+
+  private generateCSRFToken(): string {
+    const array = new Uint8Array(32);
+    crypto.getRandomValues(array);
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+  }
+
+  private validateInput(input: string, fieldName: string): void {
     const suspiciousPatterns = [
       /<script/i,
       /javascript:/i,
       /on\w+\s*=/i,
-      /eval\(/i,
-      /expression\(/i
+      /eval\s*\(/i,
+      /expression\s*\(/i,
+      /url\s*\(/i,
+      /@import/i,
+      /union\s+select/i,
+      /drop\s+table/i,
+      /insert\s+into/i,
+      /delete\s+from/i
     ];
-    
-    return suspiciousPatterns.some(pattern => pattern.test(content));
+
+    suspiciousPatterns.forEach(pattern => {
+      if (pattern.test(input)) {
+        this.logSecurityEvent({
+          type: 'injection',
+          severity: 'high',
+          description: `Suspicious input detected in field: ${fieldName}`,
+          source: 'input-validation',
+          blocked: true
+        });
+      }
+    });
   }
 
-  private isTrustedUrl(url: string): boolean {
-    try {
-      const urlObj = new URL(url);
-      return this.config.trustedDomains.some(domain => urlObj.hostname.endsWith(domain));
-    } catch {
-      return false;
-    }
+  private detectAttackPatterns(sequence: string): boolean {
+    const attackPatterns = [
+      'admin',
+      'password',
+      'login',
+      'sql',
+      'union',
+      'select',
+      'drop',
+      'insert',
+      'delete',
+      'update',
+      'script',
+      'javascript',
+      'eval',
+      'alert',
+      'document',
+      'window'
+    ];
+
+    return attackPatterns.some(pattern => 
+      sequence.toLowerCase().includes(pattern)
+    );
   }
 
-  private validateEnvironment(): void {
-    // Check for HTTPS
-    if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
-      this.logEvent('insecure_connection', 'high', 'Site not served over HTTPS');
-    }
-    
-    // Check for secure context
-    if (!window.isSecureContext) {
-      this.logEvent('insecure_context', 'high', 'Not running in secure context');
-    }
-  }
-
-  private logEvent(type: string, severity: SecurityEvent['severity'], message: string, metadata?: Record<string, unknown>): void {
-    const event: SecurityEvent = {
-      type,
-      severity,
-      message,
+  private logSecurityEvent(event: Omit<SecurityEvent, 'id' | 'timestamp' | 'userAgent' | 'ip'>): void {
+    const securityEvent: SecurityEvent = {
+      ...event,
+      id: `security_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
-      url: window.location.href,
-      metadata: metadata ? Object.fromEntries(
-        Object.entries(metadata).map(([k, v]) => [
-          k, 
-          typeof v === 'string' || typeof v === 'number' || typeof v === 'boolean' ? v : String(v)
-        ])
-      ) : undefined
+      ip: 'unknown' // Would need server-side implementation
     };
+
+    this.events.push(securityEvent);
     
-    this.events.push(event);
-    
-    // Keep only last 100 events
-    if (this.events.length > 100) {
-      this.events = this.events.slice(-100);
+    // Keep only last 1000 events
+    if (this.events.length > 1000) {
+      this.events = this.events.slice(-1000);
     }
+
+    this.updateMetrics();
     
-    // Log critical events
-    if (severity === 'critical') {
-      console.error('🚨 Critical Security Event:', event);
-      this.sendSecurityAlert(event);
+    // Block if necessary
+    if (event.blocked) {
+      this.handleBlockedEvent(securityEvent);
     }
   }
 
-  private async sendSecurityAlert(event: SecurityEvent): Promise<void> {
-    try {
-      await fetch('/api/security-alert', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(event)
-      });
-    } catch (error) {
-      console.error('Failed to send security alert:', error);
+  private handleBlockedEvent(event: SecurityEvent): void {
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('Security event blocked:', event);
+    }
+
+    // Show user notification for critical events
+    if (event.severity === 'critical') {
+      this.showSecurityAlert(event);
+    }
+
+    // Track failed attempts
+    const key = event.userAgent || 'unknown';
+    const attempts = this.failedAttempts.get(key) || 0;
+    this.failedAttempts.set(key, attempts + 1);
+
+    // Block if max attempts exceeded
+    if (attempts >= this.config.maxFailedAttempts) {
+      this.blockedIPs.add(key);
+      setTimeout(() => {
+        this.blockedIPs.delete(key);
+        this.failedAttempts.delete(key);
+      }, this.config.lockoutDuration);
     }
   }
 
-  private calculateSecurityScore(): number {
-    const criticalCount = this.events.filter(e => e.severity === 'critical').length;
-    const highCount = this.events.filter(e => e.severity === 'high').length;
-    const mediumCount = this.events.filter(e => e.severity === 'medium').length;
+  private showSecurityAlert(event: SecurityEvent): void {
+    const alert = document.createElement('div');
+    alert.className = 'security-alert';
+    alert.innerHTML = `
+      <div style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #ff4444;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        z-index: 10000;
+        font-family: Arial, sans-serif;
+      ">
+        <strong>Security Alert:</strong> ${event.description}
+        <button onclick="this.parentElement.parentElement.remove()" style="
+          margin-left: 10px;
+          background: white;
+          color: #ff4444;
+          border: none;
+          padding: 5px 10px;
+          border-radius: 3px;
+          cursor: pointer;
+        ">Dismiss</button>
+      </div>
+    `;
     
-    let score = 100;
-    score -= criticalCount * 25;
-    score -= highCount * 10;
-    score -= mediumCount * 5;
+    document.body.appendChild(alert);
     
-    return Math.max(0, score);
+    setTimeout(() => {
+      alert.remove();
+    }, 10000);
+  }
+
+  private updateMetrics(): void {
+    this.metrics.totalEvents = this.events.length;
+    this.metrics.blockedEvents = this.events.filter(e => e.blocked).length;
+    
+    // Count by type
+    this.metrics.eventsByType = {};
+    this.events.forEach(event => {
+      this.metrics.eventsByType[event.type] = (this.metrics.eventsByType[event.type] || 0) + 1;
+    });
+
+    // Count by severity
+    this.metrics.eventsBySeverity = {};
+    this.events.forEach(event => {
+      this.metrics.eventsBySeverity[event.severity] = (this.metrics.eventsBySeverity[event.severity] || 0) + 1;
+    });
+
+    // Calculate threat level
+    const criticalCount = this.metrics.eventsBySeverity.critical || 0;
+    const highCount = this.metrics.eventsBySeverity.high || 0;
+    
+    if (criticalCount > 5) {
+      this.metrics.threatLevel = 'critical';
+    } else if (criticalCount > 0 || highCount > 10) {
+      this.metrics.threatLevel = 'high';
+    } else if (highCount > 0 || this.metrics.totalEvents > 50) {
+      this.metrics.threatLevel = 'medium';
+    } else {
+      this.metrics.threatLevel = 'low';
+    }
+  }
+
+  // Public API
+  public getSecurityEvents(): SecurityEvent[] {
+    return [...this.events];
+  }
+
+  public getSecurityMetrics(): SecurityMetrics {
+    return { ...this.metrics };
+  }
+
+  public getRecentEvents(count: number = 10): SecurityEvent[] {
+    return this.events.slice(-count).reverse();
+  }
+
+  public getEventsByType(type: SecurityEvent['type']): SecurityEvent[] {
+    return this.events.filter(event => event.type === type);
+  }
+
+  public getEventsBySeverity(severity: SecurityEvent['severity']): SecurityEvent[] {
+    return this.events.filter(event => event.severity === severity);
+  }
+
+  public isBlocked(identifier: string): boolean {
+    return this.blockedIPs.has(identifier);
+  }
+
+  public updateConfig(newConfig: Partial<SecurityConfig>): void {
+    this.config = { ...this.config, ...newConfig };
+  }
+
+  public clearEvents(): void {
+    this.events = [];
+    this.updateMetrics();
+  }
+
+  public cleanup(): void {
+    this.isMonitoring = false;
+    this.events = [];
+    this.failedAttempts.clear();
+    this.blockedIPs.clear();
   }
 }
 
-export default AdvancedSecurityManager;
-export type { SecurityEvent, SecurityConfig };
+export const advancedSecurityManager = new AdvancedSecurityManager();
