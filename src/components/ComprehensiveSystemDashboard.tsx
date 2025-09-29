@@ -40,7 +40,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
           setAccessibilityMetrics(accMetrics);
 
           const seoData = await seoOptimizer.analyze();
-          setSeoIssues([]);
+          setSeoIssues(seoData.issues);
         } catch (error) {
           console.error('Error loading metrics:', error);
         }
@@ -54,13 +54,13 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
     try {
       switch (type) {
         case 'performance':
-          // Performance optimization handled automatically
+          await performanceOptimizer.optimize();
           break;
         case 'accessibility':
-          // Accessibility enhancement handled automatically
+          await accessibilityEnhancer.enhance();
           break;
         case 'seo':
-          // SEO optimization handled automatically
+          await seoOptimizer.optimize();
           break;
       }
       
@@ -122,7 +122,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                   <div className="bg-blue-50 p-6 rounded-lg">
                     <h3 className="text-lg font-semibold text-blue-900 mb-2">Performance Score</h3>
                     <div className="text-3xl font-bold text-blue-600">
-                      {metrics ? Math.round((100 - (metrics.lcp / 2500) * 100)) : '--'}
+                      {metrics?.overallScore ? Math.round(metrics.overallScore) : '--'}
                     </div>
                     <div className="text-sm text-blue-700 mt-1">out of 100</div>
                   </div>
@@ -130,7 +130,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                   <div className="bg-green-50 p-6 rounded-lg">
                     <h3 className="text-lg font-semibold text-green-900 mb-2">Accessibility Score</h3>
                     <div className="text-3xl font-bold text-green-600">
-                      {accessibilityMetrics ? Math.round(accessibilityMetrics.score) : '--'}
+                      {accessibilityMetrics?.overallScore ? Math.round(accessibilityMetrics.overallScore) : '--'}
                     </div>
                     <div className="text-sm text-green-700 mt-1">out of 100</div>
                   </div>
@@ -202,18 +202,14 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                   <div className="bg-white border rounded-lg p-6">
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">Optimization Suggestions</h4>
                     <div className="space-y-2">
-                      <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
-                        <p className="text-sm text-yellow-800">Optimize images for better loading performance</p>
-                        <div className="text-xs text-yellow-600 mt-1">
-                          Impact: High
+                      {metrics.suggestions?.slice(0, 3).map((suggestion, index) => (
+                        <div key={index} className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                          <p className="text-sm text-yellow-800">{suggestion.description}</p>
+                          <div className="text-xs text-yellow-600 mt-1">
+                            Impact: {suggestion.impact}
+                          </div>
                         </div>
-                      </div>
-                      <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
-                        <p className="text-sm text-yellow-800">Enable caching for static assets</p>
-                        <div className="text-xs text-yellow-600 mt-1">
-                          Impact: Medium
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -236,26 +232,23 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                   <div className="bg-white border rounded-lg p-6">
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">Issues Found</h4>
                     <div className="space-y-3">
-                      <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
-                        <p className="text-sm font-medium text-red-800">Missing alt text on images</p>
-                        <p className="text-xs text-red-600 mt-1">Some images lack descriptive alt attributes</p>
-                      </div>
-                      <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
-                        <p className="text-sm font-medium text-red-800">Low color contrast</p>
-                        <p className="text-xs text-red-600 mt-1">Some text elements have insufficient contrast ratios</p>
-                      </div>
+                      {accessibilityMetrics.issues?.slice(0, 5).map((issue: any, index: number) => (
+                        <div key={index} className="p-3 bg-red-50 border border-red-200 rounded-lg">
+                          <p className="text-sm font-medium text-red-800">{issue.type}</p>
+                          <p className="text-xs text-red-600 mt-1">{issue.description}</p>
+                        </div>
+                      ))}
                     </div>
                   </div>
 
                   <div className="bg-white border rounded-lg p-6">
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">Improvements</h4>
                     <div className="space-y-2">
-                      <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
-                        <p className="text-sm text-green-800">Added ARIA labels to form elements</p>
-                      </div>
-                      <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
-                        <p className="text-sm text-green-800">Improved keyboard navigation</p>
-                      </div>
+                      {accessibilityMetrics.improvements?.slice(0, 3).map((improvement: string, index: number) => (
+                        <div key={index} className="p-3 bg-green-50 border border-green-200 rounded-lg">
+                          <p className="text-sm text-green-800">{improvement}</p>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -277,13 +270,15 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                 <div className="bg-white border rounded-lg p-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">Issues Found</h4>
                   <div className="space-y-3">
-                    <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
-                      <p className="text-sm font-medium text-yellow-800">warning</p>
-                      <p className="text-xs text-yellow-600 mt-1">{seoIssues.length > 0 ? seoIssues[0].message : 'No SEO issues detected'}</p>
-                      <div className="text-xs text-yellow-600 mt-1">
-                        Priority: Medium
+                    {seoIssues.slice(0, 5).map((issue, index) => (
+                      <div key={index} className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                        <p className="text-sm font-medium text-yellow-800">{issue.type}</p>
+                        <p className="text-xs text-yellow-600 mt-1">{issue.description}</p>
+                        <div className="text-xs text-yellow-600 mt-1">
+                          Priority: {issue.priority}
+                        </div>
                       </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
