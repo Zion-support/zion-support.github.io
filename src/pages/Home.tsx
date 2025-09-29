@@ -104,9 +104,9 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 New today: AI Governance Risk Playbook, Edge Observability, Cost‑Aware MLOps"
-          description="Plus two fresh Insights: Evaluation Guardrails Blueprint and an Edge Rollouts checklist."
-          ctaText="Read the latest"
+          title="🚀 BREAKTHROUGH CONTENT: AI Autonomous Operations, Quantum Computing & Zero Trust Security"
+          description="NEW: Revolutionary AI infrastructure management, quantum business applications, edge AI manufacturing success, and comprehensive Zero Trust implementation guide. Plus 8 fresh insights with real ROI metrics!"
+          ctaText="Explore New Content"
           ctaLink="/blog"
           dismissible={true}
         />
@@ -204,6 +204,90 @@ const Home = () => {
                 Get Started
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* New Content Showcase */}
+        <section className="container mx-auto px-6 py-16 relative z-10">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 text-purple-400 text-sm font-medium mb-6 animate-pulse">
+              🔥 HOT NEW CONTENT - JANUARY 2025
+            </div>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Revolutionary AI & Technology Insights
+            </h2>
+            <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
+              Discover our latest breakthrough articles on AI autonomous operations, quantum computing, 
+              edge AI manufacturing, and Zero Trust security implementation.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {/* AI Autonomous Operations */}
+            <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-xl p-6 hover:scale-105 transition-all duration-300 group">
+              <div className="bg-red-500/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-500/30 transition-colors">
+                <Zap className="w-6 h-6 text-red-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">AI Autonomous Operations</h3>
+              <p className="text-zion-slate-light text-sm mb-3">
+                99.9% uptime, 75% cost reduction, self-healing infrastructure
+              </p>
+              <Link to="/blog/revolutionary-ai-autonomous-operations-2025" className="text-red-400 text-sm font-medium hover:text-red-300 transition-colors">
+                Read Article →
+              </Link>
+            </div>
+
+            {/* Quantum Computing */}
+            <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-400/30 rounded-xl p-6 hover:scale-105 transition-all duration-300 group">
+              <div className="bg-blue-500/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">
+                <Target className="w-6 h-6 text-blue-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Quantum Computing</h3>
+              <p className="text-zion-slate-light text-sm mb-3">
+                Real-world business applications beyond the hype
+              </p>
+              <Link to="/blog/quantum-computing-business-applications-2025" className="text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors">
+                Read Article →
+              </Link>
+            </div>
+
+            {/* Edge AI Manufacturing */}
+            <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-xl p-6 hover:scale-105 transition-all duration-300 group">
+              <div className="bg-green-500/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-500/30 transition-colors">
+                <Shield className="w-6 h-6 text-green-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Edge AI Manufacturing</h3>
+              <p className="text-zion-slate-light text-sm mb-3">
+                40% quality improvement, 30% defect reduction
+              </p>
+              <Link to="/blog/edge-ai-manufacturing-revolution" className="text-green-400 text-sm font-medium hover:text-green-300 transition-colors">
+                Read Article →
+              </Link>
+            </div>
+
+            {/* Zero Trust Security */}
+            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 hover:scale-105 transition-all duration-300 group">
+              <div className="bg-purple-500/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
+                <Shield className="w-6 h-6 text-purple-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Zero Trust Security</h3>
+              <p className="text-zion-slate-light text-sm mb-3">
+                95% reduction in security incidents
+              </p>
+              <Link to="/blog/zero-trust-security-implementation-guide" className="text-purple-400 text-sm font-medium hover:text-purple-300 transition-colors">
+                Read Article →
+              </Link>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link
+              to="/blog"
+              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 border border-white/20"
+            >
+              View All Articles
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </section>
 

@@ -295,5 +295,45 @@ export const posts: BlogPost[] = [
     category: "AI Governance",
     publishedAt: "2025-01-05",
   },
+  {
+    slug: "revolutionary-ai-autonomous-operations-2025",
+    title: "Revolutionary AI Autonomous Operations: The Future of Infrastructure Management",
+    description:
+      "Discover how AI autonomous operations are revolutionizing infrastructure management with self-healing, self-optimizing, and self-scaling capabilities that deliver 99.9% uptime.",
+    category: "AI & Automation",
+    publishedAt: "2025-01-22",
+    featured: true,
+    readTime: "12 min read",
+  },
+  {
+    slug: "quantum-computing-business-applications-2025",
+    title: "Quantum Computing Business Applications: Beyond the Hype",
+    description:
+      "Real-world quantum computing applications that are transforming industries today. Learn about quantum advantage, practical use cases, and implementation strategies.",
+    category: "Quantum Computing",
+    publishedAt: "2025-01-22",
+    featured: true,
+    readTime: "10 min read",
+  },
+  {
+    slug: "edge-ai-manufacturing-revolution",
+    title: "Edge AI in Manufacturing: Revolutionizing Production Lines",
+    description:
+      "How edge AI is transforming manufacturing with real-time quality control, predictive maintenance, and autonomous production optimization.",
+    category: "Edge Computing",
+    publishedAt: "2025-01-22",
+    featured: false,
+    readTime: "8 min read",
+  },
+  {
+    slug: "zero-trust-security-implementation-guide",
+    title: "Zero Trust Security Implementation: A Complete Guide",
+    description:
+      "Comprehensive guide to implementing Zero Trust security architecture. Learn the principles, frameworks, and step-by-step implementation strategies.",
+    category: "Security",
+    publishedAt: "2025-01-22",
+    featured: true,
+    readTime: "11 min read",
+  },
 ];
 
