@@ -75,55 +75,55 @@ export const newContent2025: NewContentItem[] = [
     }
   },
   {
-    id: "reliable-rag-2025",
-    title: "Reliable RAG 2025: Production Patterns for Grounded Answers",
-    description: "Battle-tested RAG patterns for groundedness, latency, and cost in production.",
-    excerpt: "Reduce hallucinations and latency with hardened RAG patterns: contracts, caching, routing, and evals.",
+    id: "serverless-ai-inference-cost-playbook-2025",
+    title: "Serverless AI Inference Cost Playbook (2025)",
+    description: "Cut model serving costs by 40–70% with adaptive batching, warm pools, and precision routing.",
+    excerpt: "A hands-on guide to reduce inference costs while keeping p95 low and reliability high.",
     type: "blog",
-    category: "AI Platforms",
-    tags: ["RAG", "Groundedness", "Latency", "Caching"],
+    category: "Engineering",
+    tags: ["FinOps", "Inference", "Serverless", "Latency"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-09-29",
+    readTime: "11 min read",
+    author: "Zion Tech Group",
+    image: "/images/serverless-inference-cost-playbook.jpg",
+    url: "/blog/serverless-ai-inference-cost-playbook-2025",
+    cta: {
+      primary: "Read Playbook",
+      secondary: "Get Cost Review"
+    },
+    metrics: [
+      { label: "Cost Reduction", value: "40–70%", description: "Observed savings range" },
+      { label: "Latency Target", value: "< 250ms p95", description: "Interactive UX" },
+      { label: "Reliability", value: "> 99.9%", description: "SLO adherence" }
+    ]
+  },
+  {
+    id: "agent-safety-budgets-2025",
+    title: "Agent Safety Budgets (2025): Practical Guardrails That Ship",
+    description: "Constrain autonomous agents with KPI-linked safety, privacy, and cost budgets.",
+    excerpt: "Policy-as-code, runtime enforcement, and auditable telemetry to ship safe AI.",
+    type: "blog",
+    category: "AI Governance",
+    tags: ["Safety", "Compliance", "Privacy", "Agents"],
     featured: true,
     newBadge: true,
     trending: true,
     publishedDate: "2025-09-29",
     readTime: "9 min read",
     author: "Zion Tech Group",
-    image: "/images/reliable-rag-2025.jpg",
-    url: "/blog/ai-reliable-rag-2025",
+    image: "/images/agent-safety-budgets.jpg",
+    url: "/blog/agent-safety-budgets-2025",
     cta: {
       primary: "Read Article",
-      secondary: "Get RAG Starter"
+      secondary: "Request Workshop"
     },
     metrics: [
-      { label: "Groundedness", value: "+35%", description: "Citation coverage increase" },
-      { label: "P95 Latency", value: "< 300ms", description: "With caches + routing" },
-      { label: "Cost", value: "-40%", description: "Token spend reduction" }
-    ]
-  },
-  {
-    id: "ai-agent-safety-blueprint-2026",
-    title: "AI Agent Safety Blueprint 2026: Guardrails for Reliable Autonomy",
-    description: "Practical blueprint to ship safe autonomous agents with policy gates and audits.",
-    excerpt: "Blueprint for safe autonomy: policy-constrained planning, eval-gated execution, and HITL.",
-    type: "blog",
-    category: "AI Reliability",
-    tags: ["Agents", "Safety", "Governance", "HITL"],
-    featured: true,
-    newBadge: true,
-    trending: false,
-    publishedDate: "2025-09-29",
-    readTime: "9 min read",
-    author: "Zion Tech Group",
-    image: "/images/ai-agent-safety-blueprint-2026.jpg",
-    url: "/blog/ai-agent-safety-blueprint-2026",
-    cta: {
-      primary: "Read Article",
-      secondary: "Download Safety Kit"
-    },
-    metrics: [
-      { label: "Incidents", value: "-80%", description: "Reduction post-guardrails" },
-      { label: "Approvals", value: "HITL", description: "Progressive autonomy gates" },
-      { label: "Auditability", value: "100%", description: "Signed traces coverage" }
+      { label: "Risk Reduction", value: "70%", description: "Fewer incidents" },
+      { label: "Auditability", value: "100%", description: "Traceable decisions" },
+      { label: "Time to Ship", value: "< 2 weeks", description: "Guardrails live" }
     ]
   },
   {
@@ -395,6 +395,85 @@ export const newContent2025: NewContentItem[] = [
         value: "50%",
         description: "Faster transaction processing"
       }
+    ]
+  }
+  ,
+  {
+    id: "genai-routing-blueprint-2026",
+    title: "GenAI Routing Blueprint 2026: Fast, Cheap, and Grounded",
+    description: "Design intent-aware routers, fallback tiers, and caches to hit quality SLOs at a fraction of the cost.",
+    excerpt: "Route by intent, cache by value, and tier by SLO to cut spend 40–70% without hurting UX.",
+    type: "blog",
+    category: "GenAI Architecture",
+    tags: ["Routing", "Caching", "SLOs", "Cost"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-09-29",
+    readTime: "10 min read",
+    author: "Zion Tech Group",
+    image: "/images/genai-routing-blueprint-2026.jpg",
+    url: "/blog/genai-routing-blueprint-2026",
+    cta: {
+      primary: "Read Article",
+      secondary: "Get Routing Starter"
+    },
+    metrics: [
+      { label: "P95 Latency", value: "< 300ms", description: "With warm pools + caches" },
+      { label: "Cost", value: "-60%", description: "Savings from tiering + cache" },
+      { label: "Groundedness", value: "+30%", description: "With citation policy tests" }
+    ]
+  },
+  {
+    id: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: Attestations, Policy Tests, SBOMs",
+    description: "Ship verifiably secure models and tools with signed artifacts, provenance, and CI policy tests.",
+    excerpt: "From data to deployment: secure each link with attestations, SBOMs, and automated policy checks.",
+    type: "whitepaper",
+    category: "Security",
+    tags: ["Supply Chain", "Attestation", "SBOM", "Policy"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-09-28",
+    readTime: "18 min read",
+    author: "Security Team",
+    image: "/images/secure-ml-supply-chain-2026.jpg",
+    url: "/whitepapers/secure-ml-supply-chain-2026",
+    cta: {
+      primary: "Download Whitepaper",
+      secondary: "View Checklists"
+    },
+    metrics: [
+      { label: "Incident Risk", value: "-80%", description: "Post‑rollout reduction" },
+      { label: "Auditability", value: "100%", description: "Signed builds + trace" },
+      { label: "Lead Time", value: "-35%", description: "Fewer reworks via policy tests" }
+    ]
+  },
+  {
+    id: "golden-paths-roi-2026",
+    title: "Golden Paths ROI 2026: Proving Platform Value Quarterly",
+    description: "Build developer golden paths with scorecards that tie adoption to shipped business outcomes.",
+    excerpt: "Instrument your platform with KPIs that teams adopt—show ROI without vanity metrics.",
+    type: "blog",
+    category: "Platform Engineering",
+    tags: ["Golden Paths", "ROI", "KPIs", "Platform"],
+    featured: true,
+    newBadge: true,
+    trending: false,
+    publishedDate: "2025-09-27",
+    readTime: "9 min read",
+    author: "Zion Tech Group",
+    image: "/images/golden-paths-roi-2026.jpg",
+    url: "/blog/golden-paths-roi-2026",
+    cta: {
+      primary: "Read Article",
+      secondary: "Get Scorecard Kit"
+    },
+    metrics: [
+      { label: "Dev Adoption", value: "+45%", description: "Within two quarters" },
+      { label: "Lead Time", value: "-30%", description: "Golden path pipelines" },
+      { label: "Change Fail %", value: "-25%", description: "With guardrails + tests" }
     ]
   }
 ];

@@ -54,22 +54,58 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
-            title="AI Go-To-Market 2026: Enterprise Plays for Fast Adoption"
-            excerpt="Positioning, enterprise readiness, and pipeline plays to scale AI products in 2026."
-            date="September 29, 2025"
-            category="Growth"
-            readTime="10 min"
-            image="📣"
-            href="/blog/ai-go-to-market-2026"
+            title="AI Evaluation Scorecards 2026: Measure Quality, Cost, and Risk"
+            excerpt="Standardize evals across groundedness, safety, latency, and unit cost with actionable scorecards."
+            date="September 29, 2026"
+            category="Governance"
+            readTime="12 min"
+            image="🧮"
+            href="/blog/ai-evaluation-scorecards-2026"
           />
           <BlogPost
-            title="AI Data Contracts 2026: Reliability, Governance, and Velocity"
-            excerpt="Contracts with schemas, SLAs, lineage, and enforcement to stabilize AI systems."
+            title="AI Agent Security 2026: Hardening Autonomous Systems"
+            excerpt="Layered defenses for agents: policies, isolation, sandboxing, SBOM validation, and continuous guardrails."
+            date="September 29, 2026"
+            category="Security"
+            readTime="14 min"
+            image="🛡️"
+            href="/blog/ai-agent-security-2026"
+          />
+          <BlogPost
+            title="AI Data Privacy 2026: Practical Compliance and Privacy-Preserving AI"
+            excerpt="Blueprint for privacy-by-design with PETs, consent, minimization, redaction, and audits."
             date="September 29, 2025"
-            category="Data"
-            readTime="9 min"
-            image="📑"
-            href="/blog/ai-data-contracts-2026"
+            category="Security"
+            readTime="12 min"
+            image="🗝️"
+            href="/blog/ai-data-privacy-2026"
+          />
+          <BlogPost
+            title="AI Governance Maturity Model 2026: From Ad Hoc to Auditable"
+            excerpt="Staged model to implement accountable AI across policy, risk, security, ops, and value."
+            date="September 29, 2025"
+            category="Governance"
+            readTime="14 min"
+            image="📈"
+            href="/blog/ai-governance-maturity-model-2026"
+          />
+          <BlogPost
+            title="AI Agent Observability 2026: End-to-End Tracing and Guardrails"
+            excerpt="Blueprint for measuring and improving agent reliability with traces, evals, and safety guardrails."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="14 min"
+            image="📏"
+            href="/blog/ai-evaluation-metrics-2026"
+          />
+          <BlogPost
+            title="Agent Safety Testing 2026: Progressive Autonomy with Guardrails"
+            excerpt="Layered defenses: policy tests, sandboxes, approvals, and runtime monitors."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="12 min"
+            image="🧪"
+            href="/blog/agent-safety-testing-2026"
           />
           <BlogPost
             title="AI Agent Observability 2026: Metrics, Traces, and Guardrails"
@@ -410,16 +446,7 @@ function BlogPost({
   image,
   featured = false,
   href,
-}: {
-  title: string;
-  excerpt: string;
-  date: string;
-  category: string;
-  readTime: string;
-  image: string;
-  featured?: boolean;
-  href?: string;
-}) {
+}: any) {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'Featured':
@@ -443,7 +470,7 @@ function BlogPost({
     }
   };
 
-  const ContentWrapper = ({ children }: { children: React.ReactNode }) => {
+  const ContentWrapper = ({ children }: any) => {
     if (href) {
       return (
         <Link href={href} className="block">

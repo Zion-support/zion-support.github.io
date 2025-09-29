@@ -249,6 +249,40 @@ contentHighlights.push(
   }
 );
 
+// Fresh highlights for new content (Sept 29, 2025)
+contentHighlights.unshift(
+  {
+    id: 19,
+    title: "🧠 Agentic Observability Scorecards 2026",
+    description: "Traces linked to KPIs—scorecards that prevent regressions without slowing teams",
+    ctaText: "Read Article",
+    ctaLink: "/blog/agentic-observability-scorecards-2026",
+    badge: "New",
+    stats: "7 min read",
+    variant: "info" as const
+  },
+  {
+    id: 20,
+    title: "🔐 Edge Privacy CDN 2026",
+    description: "Scoped IDs, on‑device filters, and DP telemetry—private by design",
+    ctaText: "Explore",
+    ctaLink: "/blog/edge-privacy-cdn-2026",
+    badge: "New",
+    stats: "6 min read",
+    variant: "warning" as const
+  },
+  {
+    id: 21,
+    title: "📈 Platform Golden Paths + SLOs 2026",
+    description: "Adoption metrics and SLOs that link platform work to ROI",
+    ctaText: "See Scorecards",
+    ctaLink: "/blog/platform-golden-paths-slos-2026",
+    badge: "Featured",
+    stats: "8 min read",
+    variant: "success" as const
+  }
+);
+
 export const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
   className = "",
   variant = 'default',

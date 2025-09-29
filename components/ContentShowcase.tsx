@@ -19,6 +19,101 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-autonomous-infrastructure-2026',
+    title: 'AI Autonomous Infrastructure 2026: Self-Healing Systems & Zero-Touch Operations',
+    excerpt: 'Master autonomous infrastructure with self-healing systems, predictive maintenance, and zero-touch operations. Achieve 99.9% uptime and 90% cost reduction.',
+    type: 'article',
+    readTime: '28 min read',
+    category: 'Infrastructure',
+    href: '/blog/ai-autonomous-infrastructure-2026',
+    featured: true,
+    publishedDate: '2026-01-25',
+    metrics: [
+      { value: '99.9%', label: 'Uptime' },
+      { value: '90%', label: 'Cost Reduction' },
+      { value: '95%', label: 'Automation' },
+      { value: '$15M+', label: 'Annual Savings' }
+    ]
+  },
+  {
+    id: 'ai-quantum-hybrid-computing-2026',
+    title: 'AI Quantum Hybrid Computing 2026: Next-Generation Intelligence Revolution',
+    excerpt: 'Explore the revolutionary potential of quantum-AI hybrid computing. Achieve 1000x faster optimization, 95% accuracy improvements, and breakthrough capabilities.',
+    type: 'article',
+    readTime: '32 min read',
+    category: 'Quantum Computing',
+    href: '/blog/ai-quantum-hybrid-computing-2026',
+    featured: true,
+    publishedDate: '2026-01-25',
+    metrics: [
+      { value: '1000x', label: 'Faster Optimization' },
+      { value: '95%', label: 'Accuracy Improvement' },
+      { value: '$50M+', label: 'ROI Potential' },
+      { value: '99.9%', label: 'Quantum Advantage' }
+    ]
+  },
+  {
+    id: 'ai-autonomous-enterprise-transformation-2026',
+    title: 'AI Autonomous Enterprise Transformation 2026: $25M ROI Case Study',
+    excerpt: 'See how a Fortune 500 company achieved $25M ROI with comprehensive AI transformation. 99% automation, 90% cost reduction, and complete business revolution.',
+    type: 'case-study',
+    category: 'Enterprise Transformation',
+    href: '/case-studies/ai-autonomous-enterprise-transformation-2026',
+    featured: true,
+    publishedDate: '2026-01-25',
+    metrics: [
+      { value: '$25M', label: 'Total ROI' },
+      { value: '99%', label: 'Automation' },
+      { value: '90%', label: 'Cost Reduction' },
+      { value: '18 months', label: 'Implementation' }
+    ]
+  },
+  {
+    id: 'ai-governance-maturity-model-2026',
+    title: 'AI Governance Maturity Model 2026: From Ad‑Hoc to Audit‑Ready',
+    excerpt: 'Move from ad‑hoc controls to audit‑ready AI governance with scorecards and KPIs.',
+    type: 'article',
+    readTime: '10 min read',
+    category: 'AI Strategy',
+    href: '/blog/ai-governance-maturity-model-2026',
+    featured: true,
+    publishedDate: '2025-10-15',
+    metrics: [
+      { value: '12', label: 'Scorecard Areas' },
+      { value: '90 days', label: 'To Audit‑Ready' }
+    ]
+  },
+  {
+    id: 'ai-customer-data-platforms-2026',
+    title: 'AI Customer Data Platforms 2026: Real‑Time Personalization at Scale',
+    excerpt: 'Blueprint for AI‑native CDPs powering privacy‑safe, sub‑second personalization.',
+    type: 'article',
+    readTime: '9 min read',
+    category: 'Architecture',
+    href: '/blog/ai-customer-data-platforms-2026',
+    featured: true,
+    publishedDate: '2025-10-15',
+    metrics: [
+      { value: '<1s', label: 'Personalization' },
+      { value: 'PII‑safe', label: 'Privacy' }
+    ]
+  },
+  {
+    id: 'edge-llm-latency-patterns',
+    title: 'Edge LLM Latency Patterns: Sub‑200ms Interactions',
+    excerpt: 'Streaming, prefetch, and edge compute patterns for instant‑feel AI UX.',
+    type: 'article',
+    readTime: '7 min read',
+    category: 'Edge Computing',
+    href: '/blog/edge-llm-latency-patterns',
+    featured: true,
+    publishedDate: '2025-10-15',
+    metrics: [
+      { value: '<200ms', label: 'P95 Latency' },
+      { value: '✔️', label: 'Streaming' }
+    ]
+  },
+  {
     id: 'ai-trustworthy-agents-2026',
     title: 'Trustworthy AI Agents 2026: Safety, Compliance, and Observability',
     excerpt: 'Deploy trustworthy AI agents with guardrails, approvals, and end-to-end observability.',
@@ -34,45 +129,19 @@ const contentItems: ContentItem[] = [
     ]
   },
   {
-    id: 'genai-guardrails-2025',
-    title: 'GenAI Guardrails 2025: Practical Playbook for Reliable AI',
-    excerpt: 'Concrete patterns to ship safe, reliable, auditable GenAI systems in production.',
+    id: 'ai-synthetic-data-2026',
+    title: 'AI Synthetic Data 2026: Secure, Scalable, and Bias-Aware Generation',
+    excerpt: 'Use synthetic data to accelerate AI while protecting privacy and reducing labeling costs.',
     type: 'article',
-    readTime: '11 min read',
-    category: 'AI Reliability',
-    href: '/blog/genai-guardrails-2025',
+    readTime: '12 min read',
+    category: 'Data Platforms',
+    href: '/blog/ai-synthetic-data-2026',
     featured: true,
     publishedDate: '2025-09-29',
     metrics: [
-      { value: '24x7', label: 'Monitoring' },
-      { value: '70%', label: 'Risk Reduction' }
+      { value: '≤1%', label: 'Re-ID Risk' },
+      { value: '50–80%', label: 'Cost Reduction' }
     ]
-  },
-  {
-    id: 'edge-llm-latency-patterns',
-    title: 'Edge LLM Latency Patterns: Sub-200ms Interactions',
-    excerpt: 'Streaming, prefetch, and edge compute patterns to deliver instant-feel AI UX.',
-    type: 'article',
-    readTime: '7 min read',
-    category: 'Performance',
-    href: '/blog/edge-llm-latency-patterns',
-    featured: true,
-    publishedDate: '2025-09-29',
-    metrics: [
-      { value: '<200ms', label: 'P95 Latency' },
-      { value: '99.9%', label: 'Uptime' }
-    ]
-  },
-  {
-    id: 'ai-autonomous-infrastructure-2025',
-    title: 'AI Autonomous Infrastructure 2025: Self-Healing Systems',
-    excerpt: 'Revolutionize enterprise IT with self-healing systems and predictive maintenance.',
-    type: 'article',
-    readTime: '15 min read',
-    category: 'Autonomous AI',
-    href: '/blog/ai-autonomous-infrastructure-2025',
-    featured: false,
-    publishedDate: '2025-01-20'
   },
   {
     id: 'ai-value-stream-analytics-2026',
@@ -503,19 +572,19 @@ export default function ContentShowcase({
           {/* Content Statistics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-8 border-t border-gray-200">
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">18+</div>
+              <div className="text-2xl font-bold text-purple-600">25+</div>
               <div className="text-sm text-gray-600">AI Articles</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">10+</div>
+              <div className="text-2xl font-bold text-purple-600">15+</div>
               <div className="text-sm text-gray-600">Case Studies</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">25+</div>
+              <div className="text-2xl font-bold text-purple-600">30+</div>
               <div className="text-sm text-gray-600">AI Services</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">75K+</div>
+              <div className="text-2xl font-bold text-purple-600">100K+</div>
               <div className="text-sm text-gray-600">Monthly Readers</div>
             </div>
           </div>
