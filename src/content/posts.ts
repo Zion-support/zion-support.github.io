@@ -496,5 +496,46 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "6 min read",
   },
+  // Additional newly added posts (2025-09-30)
+  {
+    slug: "genai-cost-optimization-blueprint-2025",
+    title: "GenAI Cost Optimization Blueprint: Save 30–60% Without Quality Loss",
+    description:
+      "Right-size models, route by intent, and cache with confidence using eval-backed policies.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "ai-governance-policy-kits-2025",
+    title: "AI Governance Policy Kits: Templates That Unblock Delivery",
+    description:
+      "Pragmatic policies, review rituals, and automated checks that keep teams shipping fast.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "observability-for-llm-apps-2025",
+    title: "Observability for LLM Apps: Signals That Matter",
+    description:
+      "Prompt metadata, tool-call spans, and eval scores wired into traces and dashboards.",
+    category: "Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-caching-strategies-2025",
+    title: "Edge Caching Strategies: Sub‑100ms UX at Global Scale",
+    description:
+      "Stale‑while‑revalidate, background warmup, and signed payloads for resilient speed.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "5 min read",
+  },
 ];
 

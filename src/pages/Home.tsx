@@ -105,10 +105,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: Serverless Inference Cost Playbook + Practical RAG"
-          description="Cut inference spend 40–70% and ship RAG that actually works in prod."
+          title="🚀 Fresh: GenAI Cost Blueprint + LLM Observability + Edge Caching"
+          description="Save 30–60% with smart routing, wire eval-backed telemetry, and hit sub‑100ms globally."
           ctaText="Read the latest"
-          ctaLink="/blog/serverless-inference-cost-playbook-2025"
+          ctaLink="/blog/genai-cost-optimization-blueprint-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -722,16 +722,16 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">AI Solutions</div>
-                  <div className="font-semibold text-white">Serverless AI Inference Cost Playbook</div>
+                  <div className="text-sm text-purple-200 mb-1">AI Strategy</div>
+                  <div className="font-semibold text-white">GenAI Cost Optimization Blueprint</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">GenAI</div>
-                  <div className="font-semibold text-white">Practical RAG in Production</div>
+                  <div className="text-sm text-blue-200 mb-1">Observability</div>
+                  <div className="font-semibold text-white">Observability for LLM Apps</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Security</div>
-                  <div className="font-semibold text-white">Secure GenAI Guardrails That Scale</div>
+                  <div className="text-sm text-rose-200 mb-1">Architecture</div>
+                  <div className="font-semibold text-white">Edge Caching Strategies</div>
                 </div>
               </div>
             </div>
