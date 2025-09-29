@@ -134,16 +134,15 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Risk‑Budgeted Runbooks, Zero‑Trust Agents, Privacy‑Safe Flags"
-          description="Ship safe automation with risk budgets, sandboxed agents, and privacy‑preserving rollouts."
+          title="New: Secure ML Supply Chain, GenAI Routing Under Budgets, Golden Paths"
+          description="Fresh blueprints: SBOMs & lineage for ML, budgeted GenAI routing, and platform golden paths that move KPIs."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Runbooks with Risk Budgets 2026", category: "AI Operations", link: "/blog/ai-runbooks-with-risk-budgets-2026" },
-            { title: "Zero‑Trust for AI Agents 2026", category: "AI Security", link: "/blog/zero-trust-for-ai-agents-2026" },
-            { title: "Privacy‑Preserving Feature Flags 2026", category: "Architecture", link: "/blog/privacy-preserving-feature-flags-2026" },
-            { title: "Platform Scorecards 2026", category: "Platform Engineering", link: "/blog/platform-engineering-scorecards-2026" },
-            { title: "Edge AI Blueprint 2026", category: "Edge Computing", link: "/blog/edge-ai-blueprint-2026" }
+            { title: "Secure ML Supply Chain 2026", category: "AI Security", link: "/blog/secure-ml-supply-chain-2026" },
+            { title: "GenAI Routing Under Budgets 2026", category: "AI Operations", link: "/blog/genai-routing-under-budgets-2026" },
+            { title: "Golden Paths That Move KPIs 2026", category: "Platform Engineering", link: "/blog/platform-golden-paths-kpis-2026" },
+            { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">

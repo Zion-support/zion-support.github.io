@@ -1041,6 +1041,92 @@ Remember: The best caching strategy is the one that delivers the right balance o
     relatedPosts: ["ai-autonomous-infrastructure-2025", "finops-ai-cost-optimization", "ai-incident-response-playbooks-2025"],
     slug: "edge-llm-caching-blueprint-2026"
   }
+  ,
+  {
+    id: "genai-routing-under-budgets-2026",
+    title: "Quality‑Tiered GenAI Routing: SLAs Without Bill Shock",
+    description: "Route prompts across model tiers with budgets, caches, and eval signals to control cost.",
+    excerpt: "Keep experience high under tight budgets with deterministic routing and caches.",
+    content: `# Quality‑Tiered GenAI Routing\n\nDesign routing that meets SLAs under strict budgets using quality tiers, caches, and eval signals.`,
+    category: "AI Operations",
+    tags: ["Budgets", "Quality Tiers", "Routing"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedAt: "2025-10-13T09:00:00Z",
+    updatedAt: "2025-10-13T09:00:00Z",
+    readTime: "6 min read",
+    author: "Zion Tech Group Team",
+    authorBio: "AI platform engineers focused on reliability and cost control.",
+    image: "/images/genai-routing-2026.jpg",
+    seo: {
+      metaTitle: "Quality‑Tiered GenAI Routing: SLAs Without Bill Shock",
+      metaDescription: "Route prompts across model tiers with budgets, caches, and eval signals to control cost.",
+      keywords: ["genai routing", "quality tiers", "ai budgets"]
+    },
+    metrics: [
+      { label: "Cost Reduction", value: "35%", description: "Spend reduction with routing" }
+    ],
+    relatedPosts: ["edge-llm-caching-blueprint-2026", "serverless-ai-inference-cost-playbook-2025"],
+    slug: "genai-routing-under-budgets-2026"
+  },
+  {
+    id: "platform-golden-paths-kpis-2026",
+    title: "Golden Paths That Move KPIs: Platform Engineering That Pays",
+    description: "Adoption metrics, TTFX, and SLOs as leading indicators of platform ROI in 2026.",
+    excerpt: "A scorecard system that links platform investments to shipped business outcomes.",
+    content: `# Platform Golden Paths That Move KPIs\n\nMeasure adoption, TTFX, and SLOs as leading indicators of ROI.`,
+    category: "Platform Engineering",
+    tags: ["Golden Paths", "ROI", "Scorecards"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedAt: "2025-10-13T09:05:00Z",
+    updatedAt: "2025-10-13T09:05:00Z",
+    readTime: "7 min read",
+    author: "Zion Tech Group Team",
+    authorBio: "Platform engineering team focused on developer experience and ROI.",
+    image: "/images/platform-golden-paths-kpis-2026.jpg",
+    seo: {
+      metaTitle: "Golden Paths That Move KPIs: Platform Engineering That Pays",
+      metaDescription: "Adoption, TTFX, and SLOs as leading indicators of platform ROI.",
+      keywords: ["platform engineering", "golden paths", "roi"]
+    },
+    metrics: [
+      { label: "Developer Adoption", value: "+40%", description: "Increase via golden paths" }
+    ],
+    relatedPosts: ["platform-engineering-scorecards-2026", "ai-platform-scorecards-roi-2026"],
+    slug: "platform-golden-paths-kpis-2026"
+  },
+  {
+    id: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
+    description: "Continuous SBOMs for models, datasets, and prompts with attestations and CI policy checks.",
+    excerpt: "A practical guide to securing the ML supply chain with provenance and guardrails.",
+    content: `# Secure ML Supply Chain 2026\n\nTrack lineage for datasets, models, and prompts; enforce policy gates in CI/CD.`,
+    category: "AI Security",
+    tags: ["SBOM", "Supply Chain", "Security"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedAt: "2025-10-13T09:10:00Z",
+    updatedAt: "2025-10-13T09:10:00Z",
+    readTime: "7 min read",
+    author: "Zion Tech Group Team",
+    authorBio: "Security architects focused on ML supply chain integrity.",
+    image: "/images/secure-ml-supply-chain-2026.jpg",
+    seo: {
+      metaTitle: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
+      metaDescription: "Continuous SBOMs, attestations, and CI policy checks for ML assets.",
+      keywords: ["ml sbom", "model lineage", "ai supply chain security"]
+    },
+    metrics: [
+      { label: "Incident Reduction", value: "60%", description: "Supply‑chain incident drop" }
+    ],
+    relatedPosts: ["privacy-preserving-agents-2026", "ai-risk-budgets-2026"],
+    slug: "secure-ml-supply-chain-2026"
+  }
+  
 ];
 
 export const featuredBlogPosts = newBlogPosts2025.filter(post => post.featured);
