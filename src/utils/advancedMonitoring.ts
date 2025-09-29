@@ -392,6 +392,5 @@ ${activeAlerts.slice(-5).map(alert => `- ${alert.severity.toUpperCase()}: ${aler
 // Export singleton instance
 export const advancedMonitoringSystem = new AdvancedMonitoringSystem();
 
-// Export class and types
+// Export class
 export { AdvancedMonitoringSystem };
-export type { MonitoringMetrics, MonitoringAlert };

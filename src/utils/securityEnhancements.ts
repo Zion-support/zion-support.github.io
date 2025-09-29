@@ -192,10 +192,11 @@ class SecurityEnhancements {
           console.warn('Potential XSS attempt detected in innerHTML');
           return;
         }
-        originalInnerHTML.call(this, value);
+        // Store the value directly since innerHTML is a property
+        this._innerHTML = value;
       },
       get: function() {
-        return originalInnerHTML.call(this);
+        return this._innerHTML || '';
       },
     });
 
@@ -368,20 +369,12 @@ class SecurityEnhancements {
     let queryCount = 0;
     const queryThreshold = 100;
 
-    Document.prototype.querySelector = function(...args) {
+    Document.prototype.querySelector = function(selector: string) {
       queryCount++;
       if (queryCount > queryThreshold) {
-        this.handleSecurityEvent({
-          type: 'suspicious',
-          severity: 'medium',
-          message: 'Excessive DOM queries detected',
-          details: { queryCount, selector: args[0] },
-          blocked: false,
-          userAgent: navigator.userAgent,
-          url: window.location.href,
-        });
+        console.warn('Excessive DOM queries detected:', { queryCount, selector });
       }
-      return originalQuerySelector.apply(this, args);
+      return originalQuerySelector.call(this, selector);
     };
   }
 
@@ -540,6 +533,5 @@ ${recentEvents.map(event =>
 // Export singleton instance
 export const securityEnhancements = new SecurityEnhancements();
 
-// Export class and types
+// Export class
 export { SecurityEnhancements };
-export type { SecurityConfig, SecurityEvent, SecurityMetrics };

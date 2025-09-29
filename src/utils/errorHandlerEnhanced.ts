@@ -299,6 +299,5 @@ class EnhancedErrorHandler {
 // Export singleton instance
 export const enhancedErrorHandler = new EnhancedErrorHandler();
 
-// Export class and types
+// Export class
 export { EnhancedErrorHandler };
-export type { ErrorInfo, ErrorReport, RecoveryAction };
