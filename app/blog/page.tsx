@@ -54,13 +54,22 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
-            title="AI Agent Evals 2026: Shipping Reliable Autonomy"
-            excerpt="Practical eval frameworks, traces, and policy gates to ship trustworthy agents at scale."
-            date="October 9, 2025"
-            category="AI Reliability"
-            readTime="14 min"
-            image="🧪"
-            href="/blog/ai-agent-evals-2026"
+            title="AI Go-To-Market 2026: Enterprise Plays for Fast Adoption"
+            excerpt="Positioning, enterprise readiness, and pipeline plays to scale AI products in 2026."
+            date="September 29, 2025"
+            category="Growth"
+            readTime="10 min"
+            image="📣"
+            href="/blog/ai-go-to-market-2026"
+          />
+          <BlogPost
+            title="AI Data Contracts 2026: Reliability, Governance, and Velocity"
+            excerpt="Contracts with schemas, SLAs, lineage, and enforcement to stabilize AI systems."
+            date="September 29, 2025"
+            category="Data"
+            readTime="9 min"
+            image="📑"
+            href="/blog/ai-data-contracts-2026"
           />
           <BlogPost
             title="AI Agent Observability 2026: Metrics, Traces, and Guardrails"

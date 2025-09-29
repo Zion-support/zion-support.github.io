@@ -22,7 +22,6 @@ import {
   AIRoadmapsBanner,
   AIFinOpsBanner,
   AIMultimodalEnterpriseBanner,
-  AIEnterpriseAutomationGuideBanner,
   AIDataAnalyticsEnterpriseBanner,
   EnterpriseTransformationSuccessBanner,
   HealthcareTransformationBanner,
@@ -36,42 +35,18 @@ import {
   LatestContent2026Banner,
   AIEthicalFrameworkBanner,
   AIEthicsSuccessBanner,
-  NewContentShowcase2026Banner
+  NewContentShowcase2026Banner,
+  AIAgentReliabilityBanner,
+  AIMultimodalIntegrationBanner,
+  AIEnterpriseAutomationBlueprintBanner
 } from '../components/PromotionalBanner';
-import { 
-  AIAutonomousCloudOpsBanner,
-  AIFinTechTransformationBanner,
-  AIRetailAutomationBanner,
-  AutonomousOperationsBanner,
-  FinOpsAdvancedBanner,
-  PlatformArchitectureBanner,
-  AutonomousOperationsSuccessBanner,
-  NewContentShowcaseBanner2026,
-  AINeuralArchitectureOptimizationBanner,
-  AIFederatedLearningBanner,
-  FederatedLearningSuccessBanner
-} from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
-import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
-import { 
-  Latest2026ContentBanner,
-  AIAutonomousCloudOpsBanner,
-  AIFinTechTransformationBanner,
-  AIRetailAutomationBanner,
-  AutonomousOperationsBanner,
-  FinOpsAdvancedBanner,
-  PlatformArchitectureBanner,
-  AutonomousOperationsSuccessBanner,
-  NewContentShowcaseBanner2026,
-  AINeuralArchitectureOptimizationBanner,
-  AIFederatedLearningBanner,
-  FederatedLearningSuccessBanner
-} from '../components/NewContent2026Banners';
+import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -92,6 +67,10 @@ export default function HomePage() {
             <Link href="/blog/ai-ethical-framework-2026" className="underline hover:text-yellow-200">AI Ethical Framework</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-multimodal-enterprise-integration-2026" className="underline hover:text-yellow-200">Multimodal AI Integration</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-data-contracts-2026" className="underline hover:text-yellow-200">Data Contracts</Link>
+            <span className="hidden md:inline">•</span>
+           <Link href="/blog/ai-go-to-market-2026" className="underline hover:text-yellow-200">AI GTM 2026</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-ethical-framework-success-2026" className="underline hover:text-yellow-200">Ethics Success Story</Link>
             <span className="hidden md:inline">•</span>
@@ -121,22 +100,13 @@ export default function HomePage() {
       <AISecurityEnterprise2026Banner />
       <AIMultimodalEnterprise2026Banner />
       <AISustainabilityTransformationBanner />
-      <NewLatest2026ContentBanner />
-      <AINeuralArchitectureOptimizationBanner />
-      <AIFederatedLearningBanner />
-      <FederatedLearningSuccessBanner />
-      <AIAutonomousCloudOpsBanner />
-      <AIFinTechTransformationBanner />
-      <AIRetailAutomationBanner />
-      <AutonomousOperationsBanner />
-      <FinOpsAdvancedBanner />
-      <PlatformArchitectureBanner />
-      <AutonomousOperationsSuccessBanner />
+      <AIAgentReliabilityBanner />
+      <AIMultimodalIntegrationBanner />
+      <AIEnterpriseAutomationBlueprintBanner />
       <NewContentShowcaseBanner2026 />
       <NewContent2026Banner />
-      {/* Removed unavailable banner components to fix imports */}
+      <AISustainabilityBanner />
       <AIMultimodalEnterpriseBanner />
-      <AIEnterpriseAutomationGuideBanner />
       <AIDataAnalyticsEnterpriseBanner />
       <EnterpriseTransformationSuccessBanner />
       <HealthcareTransformationBanner />
@@ -1056,7 +1026,75 @@ export default function HomePage() {
       </section>
 
       {/* Enhanced Newsletter Signup */}
-      <EnhancedNewsletterSignup variant="default" />
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-teal-600 text-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-center md:text-left">
+              <h2 className="text-4xl font-bold mb-6">
+                Stay Ahead with AI & Tech Insights
+              </h2>
+              <p className="text-xl mb-8 opacity-90">
+                Get weekly updates on AI trends, tech innovations, and exclusive service offers
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start max-w-md mx-auto md:mx-0">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
+                />
+                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Subscribe
+                </button>
+              </div>
+              <p className="text-sm mt-4 opacity-75">
+                Join 10,000+ professionals. Unsubscribe anytime.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-2xl font-bold mb-6">Latest Content Highlights</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="text-2xl">📣</div>
+                  <div>
+                    <h4 className="font-semibold mb-1">AI GTM 2026</h4>
+                    <p className="text-sm opacity-90">Enterprise plays for fast adoption</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-2xl">📑</div>
+                  <div>
+                    <h4 className="font-semibold mb-1">AI Data Contracts 2026</h4>
+                    <p className="text-sm opacity-90">Stabilize inputs with SLAs & schemas</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-2xl">📊</div>
+                  <div>
+                    <h4 className="font-semibold mb-1">AI Analytics Implementation</h4>
+                    <p className="text-sm opacity-90">Transform data into insights</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-2xl">🏥</div>
+                  <div>
+                    <h4 className="font-semibold mb-1">HealthTech Success Story</h4>
+                    <p className="text-sm opacity-90">80% efficiency gain with AI</p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-6 pt-4 border-t border-white/20">
+                <Link
+                  href="/blog"
+                  className="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+                >
+                  View All Content →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Additional Promotional Banners */}
       <AnalyticsPlatformBanner />
