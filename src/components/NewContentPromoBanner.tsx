@@ -33,25 +33,25 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
-      title: "AI Platform SLOs 2026",
-      description: "Budgets, rollbacks, and KPI‑linked canaries",
-      icon: Brain,
-      link: "/blog/ai-platform-slos-2026",
-      category: "AI Ops"
-    },
-    {
-      title: "RAG Evals in the Loop 2026",
-      description: "Prevent regressions while shipping weekly",
+      title: "Quality‑Tiered GenAI Routing 2026",
+      description: "Control cost with tiers, caches, and eval signals",
       icon: Zap,
-      link: "/blog/rag-evals-in-the-loop-2026",
+      link: "/blog/genai-routing-under-budgets-2026",
       category: "GenAI"
     },
     {
-      title: "Edge Feature Flags 2026",
-      description: "<100ms global releases with budgets",
+      title: "On‑Device Agents 2026",
+      description: "Offline‑capable tools, private caches, safe fallbacks",
+      icon: Cloud,
+      link: "/blog/on-device-agents-offline-tools-2026",
+      category: "Edge"
+    },
+    {
+      title: "Zero‑Trust Observability 2026",
+      description: "Signed traces and least‑privilege telemetry",
       icon: Shield,
-      link: "/blog/edge-feature-flags-2026",
-      category: "Architecture"
+      link: "/blog/zero-trust-observability-2026",
+      category: "Security"
     },
     {
       title: "AI Incident Response Playbooks",
