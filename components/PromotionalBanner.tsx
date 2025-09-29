@@ -442,3 +442,48 @@ export const Latest2026ContentBanner = () => (
     hideAfter={18}
   />
 );
+
+// New 2026 Content Banners
+export const AISecurityEnterprise2026Banner = () => (
+  <PromotionalBanner
+    message="🛡️ NEW: AI Enterprise Security 2026 - Zero-Trust Architecture with 99.9% Security Compliance"
+    ctaText="Read Article"
+    ctaLink="/blog/ai-enterprise-security-2026"
+    backgroundColor="bg-gradient-to-r from-red-600 to-orange-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AIMultimodalEnterprise2026Banner = () => (
+  <PromotionalBanner
+    message="🎯 NEW: AI Multimodal Enterprise 2026 - Vision, Language & Audio Integration with 40% Accuracy Improvement"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-multimodal-enterprise-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AISustainabilityTransformationBanner = () => (
+  <PromotionalBanner
+    message="🌱 NEW: AI Sustainability Case Study - 60% Carbon Reduction & $15M Savings for Fortune 500 Energy Company"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-sustainability-transformation-2026"
+    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const LatestContent2026Banner = () => (
+  <PromotionalBanner
+    message="✨ LATEST 2026: AI Security, Multimodal AI & Sustainability Transformation - Premium Enterprise Content"
+    ctaText="Explore Latest"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);

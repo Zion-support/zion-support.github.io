@@ -31,23 +31,27 @@ import {
   AISustainabilityBanner,
   QuantumComputingBanner,
   SustainabilityCaseStudyBanner,
-  QuantumOptimizationBanner
+  QuantumOptimizationBanner,
+  AIOperationalExcellenceBanner,
+  AIAgentObservabilityBanner,
+  ManufacturingTransformationBanner,
+  Latest2026ContentBanner,
+  AISecurityEnterprise2026Banner,
+  AIMultimodalEnterprise2026Banner,
+  AISustainabilityTransformationBanner,
+  LatestContent2026Banner
 } from '../components/PromotionalBanner';
-<<<<<<< HEAD
 import {
   NewContent2026Banner as NewContent2026BannerComponent,
   AutonomousOperationsBanner,
   FinOpsAdvancedBanner,
   PlatformArchitectureBanner,
   AutonomousOperationsSuccessBanner,
-  NewContentShowcaseBanner2026
-=======
-import { 
+  NewContentShowcaseBanner2026,
   Latest2026ContentBanner as NewLatest2026ContentBanner,
   AIAutonomousCloudOpsBanner,
   AIFinTechTransformationBanner,
   AIRetailAutomationBanner
->>>>>>> cursor/create-and-deploy-new-content-4c48
 } from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
@@ -84,10 +88,18 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <LatestContent2026Banner />
+      <AISecurityEnterprise2026Banner />
+      <AIMultimodalEnterprise2026Banner />
+      <AISustainabilityTransformationBanner />
       <NewLatest2026ContentBanner />
       <AIAutonomousCloudOpsBanner />
       <AIFinTechTransformationBanner />
       <AIRetailAutomationBanner />
+      <Latest2026ContentBanner />
+      <AIOperationalExcellenceBanner />
+      <AIAgentObservabilityBanner />
+      <ManufacturingTransformationBanner />
       <NewContent2026Banner />
       <AIAgentOrchestrationBanner />
       <AISustainabilityBanner />
