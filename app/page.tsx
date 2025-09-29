@@ -4,6 +4,8 @@ import { Clock, ArrowRight } from 'lucide-react';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import { NewContent2026PromotionalBanners } from '../components/NewContent2026PromotionalBanners';
 import AIInnovation2026PromotionalBanner from '../components/AIInnovation2026PromotionalBanner';
+import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
+import Latest2026ContentBanner from '../components/Latest2026ContentBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -29,15 +31,13 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>🚀 BREAKTHROUGH 2026:</span>
-            <Link href="/blog/ai-autonomous-enterprise-2026" className="underline hover:text-yellow-200 font-semibold">Autonomous Enterprise</Link>
+            <Link href="/blog/ai-autonomous-infrastructure-2026" className="underline hover:text-yellow-200 font-semibold">Autonomous Infrastructure</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-quantum-optimization-2026" className="underline hover:text-yellow-200 font-semibold">Quantum AI (1000x Faster)</Link>
+            <Link href="/blog/ai-quantum-hybrid-computing-2026" className="underline hover:text-yellow-200 font-semibold">Quantum AI (1000x Faster)</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200 font-semibold">$25M ROI Success Story</Link>
+            <Link href="/case-studies/ai-autonomous-enterprise-transformation-2026" className="underline hover:text-yellow-200 font-semibold">$25M ROI Success Story</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">Agent Orchestration</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-platform-architecture-2026" className="underline hover:text-yellow-200">Platform Architecture</Link>
+            <Link href="/blog" className="underline hover:text-yellow-200">View All Content</Link>
           </div>
           <Link
             href="/blog"
@@ -47,6 +47,12 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+      
+      {/* New Content 2026 Mega Banner */}
+      <NewContent2026MegaBanner />
+      
+      {/* Latest 2026 Content Banner */}
+      <Latest2026ContentBanner />
       {/* AI Innovation 2026 Promotional Banner */}
       <AIInnovation2026PromotionalBanner />
       
@@ -77,16 +83,22 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              href="/blog/ai-innovation-2026-revolution"
+              href="/blog/ai-autonomous-infrastructure-2026"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
             >
-              🚀 Read AI Innovation Guide 2026
+              🏗️ Read Infrastructure Guide 2026
             </Link>
             <Link
-              href="/case-studies/ai-innovation-enterprise-success-2026"
+              href="/case-studies/ai-autonomous-enterprise-transformation-2026"
               className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
             >
-              🏆 View $50M Success Story
+              🏆 View $25M Success Story
+            </Link>
+            <Link
+              href="/blog/ai-quantum-hybrid-computing-2026"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
+            >
+              ⚛️ Explore Quantum-AI
             </Link>
             <a
               href="tel:+13024640950"
