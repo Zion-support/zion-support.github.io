@@ -17,6 +17,7 @@ import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import { latestInsights } from "../content/insights";
+import { newInsights, featuredInsights } from "../content/new-insights";
 import LatestInsights from "../components/LatestInsights";
 
 const Home = () => {
@@ -135,6 +136,94 @@ const Home = () => {
               <Link to="/contact" className="btn-secondary">
                 Get Started
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* New Services Showcase */}
+        <section className="py-20 bg-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50"></div>
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-8">
+                <Sparkles className="w-4 h-4 mr-2" />
+                New Services Available
+              </div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Latest AI & Security Solutions
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Discover our newest services designed to accelerate your digital transformation 
+                and protect your business from evolving threats.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="flex items-center justify-between mb-6">
+                  <Zap className="w-12 h-12 text-blue-300" />
+                  <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">NEW</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">AI Automation Platform</h3>
+                <p className="text-blue-100 mb-6">
+                  Transform your business processes with intelligent automation. 
+                  Reduce costs by 75% and increase efficiency by 10x.
+                </p>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-blue-100">
+                    <CheckCircle className="w-5 h-5 mr-3 text-blue-300" />
+                    <span className="text-sm">Process Mining & Discovery</span>
+                  </div>
+                  <div className="flex items-center text-blue-100">
+                    <CheckCircle className="w-5 h-5 mr-3 text-blue-300" />
+                    <span className="text-sm">Smart Automation Bots</span>
+                  </div>
+                  <div className="flex items-center text-blue-100">
+                    <CheckCircle className="w-5 h-5 mr-3 text-blue-300" />
+                    <span className="text-sm">Low-Code Workflow Builder</span>
+                  </div>
+                </div>
+                <Link 
+                  to="/services/ai-automation-platform" 
+                  className="bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-colors"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-gray-900 to-blue-900 rounded-2xl p-8 text-white hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="flex items-center justify-between mb-6">
+                  <Shield className="w-12 h-12 text-blue-400" />
+                  <span className="bg-red-500/20 px-3 py-1 rounded-full text-sm font-medium border border-red-500/30">SECURE</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">AI Cybersecurity Suite</h3>
+                <p className="text-gray-300 mb-6">
+                  Advanced AI-powered security that detects and prevents threats 
+                  with 99.9% accuracy and sub-minute response times.
+                </p>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                    <span className="text-sm">Real-time Threat Detection</span>
+                  </div>
+                  <div className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                    <span className="text-sm">Automated Incident Response</span>
+                  </div>
+                  <div className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
+                    <span className="text-sm">Zero-Trust Architecture</span>
+                  </div>
+                </div>
+                <Link 
+                  to="/services/ai-cybersecurity-suite" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-colors"
+                >
+                  Explore Security
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -270,19 +359,77 @@ const Home = () => {
             <Link to="/insights" className="text-zion-cyan hover:underline">View all</Link>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            {latestInsights.slice(0, 3).map((item) => (
+            {[...latestInsights.slice(0, 2), ...featuredInsights.slice(0, 1)].map((item) => (
               <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <div className="p-6">
-                  <div className="text-xs uppercase tracking-wider text-zion-cyan mb-2">{item.category}</div>
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
+                    {item.featured && (
+                      <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
+                        FEATURED
+                      </span>
+                    )}
+                  </div>
                   <h4 className="text-xl font-semibold text-white mb-2">{item.title}</h4>
                   <p className="text-zion-slate-light mb-4">{item.summary}</p>
-                  <div className="text-sm text-zion-slate flex items-center justify-between">
+                  <div className="flex items-center justify-between text-sm text-zion-slate">
                     <span>{new Date(item.date).toLocaleDateString()}</span>
                     <span>{item.readMinutes} min read</span>
                   </div>
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        {/* New Content Announcement */}
+        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
+                <Sparkles className="w-4 h-4 mr-2" />
+                Fresh Content Available
+              </div>
+              <h2 className="text-4xl font-bold mb-4">
+                Latest Articles & Insights
+              </h2>
+              <p className="text-xl text-indigo-100 max-w-3xl mx-auto">
+                Stay ahead of the curve with our latest articles on AI automation, 
+                cybersecurity, and emerging technologies.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {newInsights.slice(0, 3).map((insight) => (
+                <div key={insight.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs uppercase tracking-wider text-indigo-300">{insight.category}</span>
+                    {insight.featured && (
+                      <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-medium">
+                        FEATURED
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{insight.title}</h3>
+                  <p className="text-indigo-100 mb-4 text-sm">{insight.summary}</p>
+                  <div className="flex items-center justify-between text-sm text-indigo-200">
+                    <span>{new Date(insight.date).toLocaleDateString()}</span>
+                    <span>{insight.readMinutes} min read</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Link 
+                to="/blog" 
+                className="bg-white text-indigo-600 hover:bg-indigo-50 px-8 py-4 rounded-lg font-semibold text-lg inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
+              >
+                Read All Articles
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
           </div>
         </section>
 
