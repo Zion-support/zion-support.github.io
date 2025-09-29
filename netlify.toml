@@ -1,10 +1,10 @@
-# API routes - remove or replace with real backend if needed
-# [[redirects]]
-#   from = "/api/*"
-#   to = "https://backend.example.com/:splat"
-#   status = 200
+[[redirects]]
+  from = "/api/*"
+  to = "https://backend.example.com/:splat"
+  status = 200
+ 
 [build]
-  command = "pnpm run build:optimized"
+  command = "pnpm build"
   publish = "dist"
   command_timeout = "30m"
 
@@ -12,15 +12,15 @@
   NODE_VERSION = "22.16.0"
   PNPM_VERSION = "10.17.1"
   NETLIFY_USE_PNPM = "true"
+  # Disable Next.js auto-detection
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  # Ensure clean installs
   NPM_CONFIG_PRODUCTION = "false"
   NODE_ENV = "production"
+  # Optimize build performance
   CI = "true"
-  # Performance optimizations
-  VITE_BUILD_OPTIMIZE = "true"
-  VITE_TREESHAKE = "true"
-  VITE_MINIFY = "terser"
 
+# Explicitly disable Next.js plugin to prevent auto-detection
 [build.processing]
   skip_processing = false
 
@@ -35,60 +35,20 @@
 [build.processing.html]
   pretty_urls = true
 
-# Security Headers for all pages
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-
-# Cache Headers for static assets
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    X-Content-Type-Options = "nosniff"
-
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    X-Content-Type-Options = "nosniff"
-    Cross-Origin-Embedder-Policy = "require-corp"
-
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    X-Content-Type-Options = "nosniff"
-
-# Netlify Plugins
 [[plugins]]
   package = "netlify-plugin-cloudinary"
   [plugins.inputs]
 
-# Environment-specific configurations
 [context.production.environment]
   NODE_ENV = "production"
   NPM_CONFIG_PRODUCTION = "false"
-  VITE_BUILD_OPTIMIZE = "true"
 
 [context.deploy-preview]
-  command = "pnpm run build:optimized"
+  command = "pnpm build"
   [context.deploy-preview.environment]
     NODE_ENV = "production"
 
 [context.branch-deploy]
-  command = "pnpm run build:optimized"
+  command = "pnpm build"
   [context.branch-deploy.environment]
     NODE_ENV = "production"
-
-# SPA fallback
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
