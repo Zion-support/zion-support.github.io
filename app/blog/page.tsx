@@ -54,6 +54,15 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="AI Operational Excellence 2026: From Pilots to Scaled Impact"
+            excerpt="Blueprint to scale AI reliably with governance, quality, cost controls, and value tracking."
+            date="September 29, 2025"
+            category="Operations"
+            readTime="12 min"
+            image="🧭"
+            href="/blog/ai-operational-excellence-2026"
+          />
+          <BlogPost
             title="AI Roadmaps 2026: What to Build Next and Why"
             excerpt="A pragmatic roadmap for 2026 across CX, ops, and platforms. High-ROI bets with sequencing and metrics."
             date="September 29, 2025"
