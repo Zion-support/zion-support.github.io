@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Clock, ArrowRight } from 'lucide-react';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import LatestContent2026Banner from '../components/LatestContent2026Banner';
 import { NewContent2026PromotionalBanners } from '../components/NewContent2026PromotionalBanners';
 import {
   NewBlogBanner,
@@ -83,9 +84,6 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
-<<<<<<< HEAD
-      {/* Ultimate 2026 Content Banner */}
-      <UltimateContent2026Banner />
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
       
@@ -97,11 +95,9 @@ export default function HomePage() {
       
       {/* Advanced AI Innovation 2026 Banner */}
       <AdvancedAIInnovation2026Banner />
-=======
       
       {/* New 2025 Content Banner */}
       <NewContent2025Banner />
->>>>>>> cursor/create-and-deploy-new-content-f377
       
       {/* Promotional Banners */}
       <AIAutonomousEnterpriseBanner />
