@@ -23,6 +23,10 @@
   # Ensure clean installs
   NPM_CONFIG_PRODUCTION = "false"
   NODE_ENV = "production"
+  # Ensure optional platform binaries for Rollup are installed on Netlify
+  NPM_CONFIG_INCLUDE = "optional"
+  # Force Rollup to use JS implementation if native is unavailable
+  ROLLUP_SKIP_NODEJS_NATIVE = "true"
   # Optimize build performance
   CI = "true"
 
