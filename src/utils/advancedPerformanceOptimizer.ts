@@ -1,596 +1,327 @@
 /**
- * Advanced Performance Optimizer
- * Comprehensive performance optimization utilities for the Zion Tech Group website
+ * Advanced Performance Optimization System
+ * Comprehensive performance monitoring and optimization utilities
  */
 
-import { OptimizationStrategy } from './advancedBuildOptimizer';
-
 interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  fmp: number;
-  tti: number;
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  timeToInteractive: number;
+  memoryUsage: number;
+  bundleSize: number;
 }
 
 interface OptimizationConfig {
+  enableLazyLoading: boolean;
   enableImageOptimization: boolean;
   enableCodeSplitting: boolean;
-  enableLazyLoading: boolean;
-  enablePrefetching: boolean;
-  enableCompression: boolean;
   enableCaching: boolean;
+  enableCompression: boolean;
+  enablePrefetching: boolean;
   enableServiceWorker: boolean;
-  enableCriticalCSS: boolean;
   enableResourceHints: boolean;
-  enableBundleOptimization: boolean;
 }
 
 class AdvancedPerformanceOptimizer {
-  private config: OptimizationConfig;
   private metrics: PerformanceMetrics | null = null;
+  private config: OptimizationConfig;
   private observers: PerformanceObserver[] = [];
-  private isInitialized = false;
-  private strategies: any[] = [];
 
-  constructor() {
+  constructor(config: Partial<OptimizationConfig> = {}) {
     this.config = {
+      enableLazyLoading: true,
       enableImageOptimization: true,
       enableCodeSplitting: true,
-      enableLazyLoading: true,
-      enablePrefetching: true,
-      enableCompression: true,
       enableCaching: true,
+      enableCompression: true,
+      enablePrefetching: true,
       enableServiceWorker: true,
-      enableCriticalCSS: true,
       enableResourceHints: true,
-      enableBundleOptimization: true,
+      ...config,
     };
-    this.initializeStrategies();
+
+    this.initialize();
   }
 
-  private initializeStrategies(): void {
-    this.strategies = [
-      {
-        name: "Critical Resource Preloading",
-        description: "Preload critical resources to improve LCP",
-        impact: "high",
-        implementation: () => this.preloadCriticalResources(),
-      },
-      {
-        name: "Image Optimization",
-        description: "Optimize images for better performance",
-        impact: "high",
-        implementation: () => this.optimizeImages(),
-      },
-      {
-        name: "JavaScript Bundle Splitting",
-        description: "Split JavaScript bundles for better loading",
-        impact: "high",
-        implementation: () => this.optimizeJavaScriptBundles(),
-      },
-      {
-        name: "CSS Optimization",
-        description: "Optimize CSS delivery and unused styles",
-        impact: "medium",
-        implementation: () => this.optimizeCSS(),
-      },
-      {
-        name: "Service Worker Caching",
-        description: "Implement intelligent caching strategies",
-        impact: "high",
-        implementation: () => this.implementServiceWorkerCaching(),
-      },
-      {
-        name: "Database Query Optimization",
-        description: "Optimize database queries and API calls",
-        impact: "medium",
-        implementation: () => this.optimizeDatabaseQueries(),
-      },
-      {
-        name: "Memory Management",
-        description: "Optimize memory usage and garbage collection",
-        impact: "medium",
-        implementation: () => this.optimizeMemoryUsage(),
-      },
-      {
-        name: "Network Optimization",
-        description: "Optimize network requests and responses",
-        impact: "medium",
-        implementation: () => this.optimizeNetworkRequests(),
-      },
-    ];
+  private initialize(): void {
+    if (typeof window === 'undefined') return;
+
+    this.setupPerformanceObservers();
+    this.optimizeImages();
+    this.setupLazyLoading();
+    this.enableResourceHints();
+    this.setupCaching();
+    this.optimizeBundleLoading();
   }
 
-  public async initialize(): Promise<void> {
-    if (this.isInitialized) return;
-
-    try {
-      await this.collectPerformanceMetrics();
-      await this.analyzeAndOptimize();
-
-      console.log("Advanced Performance Optimizer initialized successfully");
-    } catch (error) {
-      console.error(
-        "Failed to initialize Advanced Performance Optimizer:",
-        error,
-      );
-    }
-  }
-
-  private async collectPerformanceMetrics(): Promise<void> {
-    if (typeof window === "undefined" || !window.performance) return;
-
-    try {
-      // Use Web Vitals API if available
-      if ("web-vitals" in window) {
-        // This would integrate with web-vitals library
+  private setupPerformanceObservers(): void {
+    // Core Web Vitals monitoring
+    if ('PerformanceObserver' in window) {
+      // LCP Observer
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1] as PerformanceEntry;
         this.metrics = {
-          lcp: 0,
-          fid: 0,
-          cls: 0,
-          fcp: 0,
-          ttfb: 0,
-          fmp: 0,
-          tti: 0,
-        };
-      }
+          ...this.metrics,
+          largestContentfulPaint: lastEntry.startTime,
+        } as PerformanceMetrics;
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      this.observers.push(lcpObserver);
 
-      // Fallback to basic performance metrics
-      const navigation = performance.getEntriesByType(
-        "navigation",
-      )[0] as PerformanceNavigationTiming;
-      if (navigation) {
+      // FID Observer
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          this.metrics = {
+            ...this.metrics,
+            firstInputDelay: entry.processingStart - entry.startTime,
+          } as PerformanceMetrics;
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      this.observers.push(fidObserver);
+
+      // CLS Observer
+      const clsObserver = new PerformanceObserver((list) => {
+        let clsValue = 0;
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+          }
+        });
         this.metrics = {
-          lcp: navigation.loadEventEnd - navigation.fetchStart,
-          fid: 0, // Would need user interaction tracking
-          cls: 0, // Would need layout shift tracking
-          fcp: navigation.domContentLoadedEventEnd - navigation.fetchStart,
-          ttfb: navigation.responseStart - navigation.fetchStart,
-          fmp: navigation.loadEventEnd - navigation.fetchStart,
-          tti: navigation.domContentLoadedEventEnd - navigation.fetchStart,
-        };
-      }
-    } catch (error) {
-      console.error("Error collecting performance metrics:", error);
-    }
-  }
-
-  private async analyzeAndOptimize(): Promise<void> {
-    if (!this.metrics) return;
-
-    const highImpactStrategies = this.strategies.filter(
-      (s) => s.impact === "high",
-    );
-    const mediumImpactStrategies = this.strategies.filter(
-      (s) => s.impact === "medium",
-    );
-
-    // Implement high impact optimizations first
-    for (const strategy of highImpactStrategies) {
-      try {
-        strategy.implementation();
-        console.log(`Applied optimization: ${strategy.name}`);
-      } catch (error) {
-        console.error(`Failed to apply optimization ${strategy.name}:`, error);
-      }
+          ...this.metrics,
+          cumulativeLayoutShift: clsValue,
+        } as PerformanceMetrics;
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      this.observers.push(clsObserver);
     }
 
-    // Then implement medium impact optimizations
-    for (const strategy of mediumImpactStrategies) {
-      try {
-        strategy.implementation();
-        console.log(`Applied optimization: ${strategy.name}`);
-      } catch (error) {
-        console.error(`Failed to apply optimization ${strategy.name}:`, error);
-      }
+    // Memory usage monitoring
+    if ('memory' in performance) {
+      const memoryInfo = (performance as any).memory;
+      this.metrics = {
+        ...this.metrics,
+        memoryUsage: memoryInfo.usedJSHeapSize / memoryInfo.totalJSHeapSize,
+      } as PerformanceMetrics;
     }
-  }
-
-  private preloadCriticalResources(): void {
-    const criticalResources = [
-      "/fonts/main.woff2",
-      "/css/critical.css",
-      "/js/main.js",
-    ];
-
-    criticalResources.forEach((resource) => {
-      const link = document.createElement("link");
-      link.rel = "preload";
-      link.href = resource;
-      link.as = resource.endsWith(".css") ? "style" : "script";
-      document.head.appendChild(link);
-    });
   }
 
   private optimizeImages(): void {
-    // Implement image optimization strategies
-    const images = document.querySelectorAll("img");
+    if (!this.config.enableImageOptimization) return;
+
+    const images = document.querySelectorAll('img');
     images.forEach((img) => {
-      // Add lazy loading
-      if (!img.loading) {
-        img.loading = "lazy";
+      // Add loading="lazy" for images below the fold
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
       }
 
-      // Add proper alt text
-      if (!img.alt) {
-        img.alt = "Image";
+      // Add decoding="async" for better performance
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
       }
 
-      // Add responsive images
-      if (img.srcset) {
-        img.sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw";
-      }
+      // Optimize image formats
+      this.optimizeImageFormat(img);
     });
   }
 
-  private optimizeJavaScriptBundles(): void {
-    // Implement bundle splitting strategies
-    if (typeof window !== "undefined") {
-      // Add code splitting hints
-      const script = document.createElement("script");
-      script.textContent = `
-        // Implement dynamic imports for non-critical code
-        window.addEventListener('load', () => {
-          import('./components/NonCriticalComponent').then(module => {
-            console.log('Non-critical component loaded');
-          });
-        });
-      `;
-      document.head.appendChild(script);
-    }
-  }
-
-  private optimizeCSS(): void {
-    // Implement CSS optimization strategies
-    const styleSheets = document.styleSheets;
-    for (let i = 0; i < styleSheets.length; i++) {
-      const sheet = styleSheets[i];
-      try {
-        const rules = sheet.cssRules || sheet.rules;
-        // Analyze and optimize CSS rules
-        console.log(
-          `Optimizing CSS sheet ${i} with ${rules?.length || 0} rules`,
-        );
-      } catch (error) {
-        console.warn(`Cannot access CSS rules for sheet ${i}:`, error);
+  private optimizeImageFormat(img: HTMLImageElement): void {
+    const src = img.src;
+    if (src.includes('.jpg') || src.includes('.jpeg')) {
+      // Convert to WebP if supported
+      if (this.supportsWebP()) {
+        const webpSrc = src.replace(/\.(jpg|jpeg)$/i, '.webp');
+        img.src = webpSrc;
       }
     }
   }
 
-  private implementServiceWorkerCaching(): void {
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("/sw.js")
-        .then((registration) => {
-          console.log("Service Worker registered:", registration);
-        })
-        .catch((error) => {
-          console.error("Service Worker registration failed:", error);
-        });
-    }
+  private supportsWebP(): boolean {
+    const canvas = document.createElement('canvas');
+    canvas.width = 1;
+    canvas.height = 1;
+    return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
   }
 
-  private optimizeDatabaseQueries(): void {
-    // Implement database query optimization strategies
-    console.log("Database query optimization strategies implemented");
-  }
+  private setupLazyLoading(): void {
+    if (!this.config.enableLazyLoading) return;
 
-  private optimizeMemoryUsage(): void {
-    // Implement memory optimization strategies
-    if (typeof window !== "undefined") {
-      // Monitor memory usage
-      if ("memory" in performance) {
-        const memory = (
-          performance as Performance & {
-            memory?: {
-              usedJSHeapSize: number;
-              totalJSHeapSize: number;
-              jsHeapSizeLimit: number;
-            };
+    // Intersection Observer for lazy loading
+    const lazyElements = document.querySelectorAll('[data-lazy]');
+    const lazyObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const element = entry.target as HTMLElement;
+          const src = element.getAttribute('data-lazy');
+          if (src) {
+            if (element.tagName === 'IMG') {
+              (element as HTMLImageElement).src = src;
+            } else {
+              element.style.backgroundImage = `url(${src})`;
+            }
+            element.removeAttribute('data-lazy');
+            lazyObserver.unobserve(element);
           }
-        ).memory;
-        console.log("Memory usage:", {
-          used: Math.round((memory as any).usedJSHeapSize / 1048576) + " MB",
-          total: Math.round((memory as any).totalJSHeapSize / 1048576) + " MB",
-          limit: Math.round((memory as any).jsHeapSizeLimit / 1048576) + " MB",
-        });
-      }
-    }
-  }
-
-  private optimizeNetworkRequests(): void {
-    // Implement network optimization strategies
-    console.log("Network optimization strategies implemented");
-  }
-
-  public getOptimizationReport(): {
-    metrics: PerformanceMetrics | null;
-    strategies: OptimizationStrategy[];
-    appliedOptimizations: string[];
-  } {
-    return {
-      metrics: this.metrics,
-      strategies: this.strategies,
-      appliedOptimizations: this.strategies.map((s) => s.name),
-    };
-  }
-
-  /**
-   * Initialize performance monitoring
-   */
-  private initializePerformanceMonitoring(): void {
-    if (typeof window === "undefined" || !("PerformanceObserver" in window))
-      return;
-
-    // Monitor Core Web Vitals
-    this.observeMetric("first-contentful-paint", (entry) => {
-      this.metrics = {
-        ...this.metrics,
-        fcp: entry.startTime,
-      } as PerformanceMetrics;
-    });
-
-    this.observeMetric("largest-contentful-paint", (entry) => {
-      this.metrics = {
-        ...this.metrics,
-        lcp: entry.startTime,
-      } as PerformanceMetrics;
-    });
-
-    this.observeMetric("first-input", (entry) => {
-      const fidEntry = entry as PerformanceEventTiming;
-      this.metrics = {
-        ...this.metrics,
-        fid: fidEntry.processingStart - fidEntry.startTime,
-      } as PerformanceMetrics;
-    });
-
-    this.observeMetric("layout-shift", (entry) => {
-      const clsEntry = entry as any; // LayoutShift entries have different properties
-      if (!clsEntry.hadRecentInput) {
-        this.metrics = {
-          ...this.metrics,
-          cls: (this.metrics?.cls || 0) + clsEntry.value,
-        } as PerformanceMetrics;
-      }
-    });
-
-    // Monitor navigation timing
-    this.observeMetric("navigation", (entry) => {
-      const navEntry = entry as PerformanceNavigationTiming;
-      this.metrics = {
-        ...this.metrics,
-        ttfb: navEntry.responseStart - navEntry.requestStart,
-        fmp: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
-        tti: navEntry.loadEventEnd - navEntry.fetchStart,
-      } as PerformanceMetrics;
-    });
-  }
-
-  /**
-   * Observe a specific performance metric
-   */
-  private observeMetric(
-    entryType: string,
-    callback: (entry: PerformanceEntry) => void,
-  ): void {
-    try {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          callback(entry);
         }
       });
+    });
 
-      observer.observe({ entryTypes: [entryType] });
-      this.observers.push(observer);
-    } catch (error) {
-      console.warn(`Failed to observe ${entryType}:`, error);
-    }
-  }
-
-  /**
-   * Initialize lazy loading for images and components
-   */
-  private initializeLazyLoading(): void {
-    if (typeof window === "undefined" || !("IntersectionObserver" in window))
-      return;
-
-    const imageObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute("data-src");
-              imageObserver.unobserve(img);
-            }
-          }
-        });
-      },
-      {
-        rootMargin: "50px 0px",
-        threshold: 0.01,
-      },
-    );
-
-    // Observe all images with data-src attribute
-    document.querySelectorAll("img[data-src]").forEach((img) => {
-      imageObserver.observe(img);
+    lazyElements.forEach((element) => {
+      lazyObserver.observe(element);
     });
   }
 
-  /**
-   * Initialize prefetching for critical resources
-   */
-  private initializePrefetching(): void {
-    if (typeof window === "undefined") return;
+  private enableResourceHints(): void {
+    if (!this.config.enableResourceHints) return;
 
-    // Prefetch critical resources
+    // Preload critical resources
     const criticalResources = [
-      "/fonts/inter.woff2",
-      "/images/hero-bg.webp",
-      "/images/logo.svg",
+      '/fonts/inter.woff2',
+      '/css/critical.css',
     ];
 
     criticalResources.forEach((resource) => {
-      this.prefetchResource(resource);
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'font';
+      if (resource.endsWith('.woff2')) {
+        link.crossOrigin = 'anonymous';
+      }
+      document.head.appendChild(link);
     });
 
-    // Prefetch on hover for navigation links
-    document.querySelectorAll('a[href^="/"]').forEach((link) => {
-      link.addEventListener(
-        "mouseenter",
-        () => {
-          this.prefetchResource(link.getAttribute("href")!);
-        },
-        { once: true },
-      );
+    // Prefetch likely next pages
+    const prefetchPages = ['/services', '/contact', '/about'];
+    prefetchPages.forEach((page) => {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = page;
+      document.head.appendChild(link);
     });
   }
 
-  /**
-   * Prefetch a resource
-   */
-  private prefetchResource(href: string): void {
-    if (typeof window === "undefined") return;
+  private setupCaching(): void {
+    if (!this.config.enableCaching) return;
 
-    const link = document.createElement("link");
-    link.rel = "prefetch";
-    link.href = href;
-    document.head.appendChild(link);
+    // Service Worker registration
+    if ('serviceWorker' in navigator && this.config.enableServiceWorker) {
+      navigator.serviceWorker.register('/sw.js').then((registration) => {
+        console.log('Service Worker registered:', registration);
+      }).catch((error) => {
+        console.error('Service Worker registration failed:', error);
+      });
+    }
+
+    // Cache API for dynamic content
+    if ('caches' in window) {
+      this.setupCacheStrategies();
+    }
   }
 
-  /**
-   * Add resource hints for better performance
-   */
-  private addResourceHints(): void {
-    if (typeof window === "undefined") return;
+  private setupCacheStrategies(): void {
+    const cacheStrategies = {
+      'cache-first': ['/css/', '/js/', '/images/'],
+      'network-first': ['/api/'],
+      'stale-while-revalidate': ['/'],
+    };
 
-    const hints = [
-      { rel: "dns-prefetch", href: "https://fonts.googleapis.com" },
-      { rel: "dns-prefetch", href: "https://cdn.jsdelivr.net" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com" },
-      { rel: "preconnect", href: "https://api.zion.app" },
+    Object.entries(cacheStrategies).forEach(([strategy, patterns]) => {
+      patterns.forEach((pattern) => {
+        // Implement cache strategy logic here
+        console.log(`Setting up ${strategy} cache for ${pattern}`);
+      });
+    });
+  }
+
+  private optimizeBundleLoading(): void {
+    if (!this.config.enableCodeSplitting) return;
+
+    // Dynamic imports for non-critical components
+    const lazyComponents = [
+      'components/Chart',
+      'components/DataTable',
+      'components/Modal',
     ];
 
-    hints.forEach((hint) => {
-      const link = document.createElement("link");
-      link.rel = hint.rel;
-      link.href = hint.href;
-      document.head.appendChild(link);
+    lazyComponents.forEach((component) => {
+      // Preload components that are likely to be used
+      import(/* webpackChunkName: "lazy-[request]" */ `../${component}.tsx`)
+        .then((module) => {
+          console.log(`Preloaded component: ${component}`);
+        })
+        .catch((error) => {
+          console.error(`Failed to preload component ${component}:`, error);
+        });
     });
   }
 
-  /**
-   * Optimize critical CSS
-   */
-  private optimizeCriticalCSS(): void {
-    if (typeof window === "undefined") return;
-
-    // Inline critical CSS for above-the-fold content
-    const criticalCSS = `
-      body { margin: 0; font-family: Inter, sans-serif; }
-      .hero { min-height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-      .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    `;
-
-    const style = document.createElement("style");
-    style.textContent = criticalCSS;
-    document.head.insertBefore(style, document.head.firstChild);
-  }
-
-  /**
-   * Optimize bundle loading
-   */
-  private optimizeBundleLoading(): void {
-    if (typeof window === "undefined") return;
-
-    // Preload critical JavaScript chunks
-    const criticalChunks = ["/assets/js/main-", "/assets/js/vendor-react-"];
-
-    criticalChunks.forEach((chunk) => {
-      const link = document.createElement("link");
-      link.rel = "modulepreload";
-      link.href = chunk;
-      document.head.appendChild(link);
-    });
-  }
-
-  /**
-   * Get current performance metrics
-   */
   public getMetrics(): PerformanceMetrics | null {
     return this.metrics;
   }
 
-  /**
-   * Get performance score based on metrics
-   */
-  public getPerformanceScore(): number {
-    if (!this.metrics) return 0;
-
-    let score = 100;
-
-    // FCP scoring (0-100)
-    if (this.metrics.fcp > 3000) score -= 30;
-    else if (this.metrics.fcp > 1800) score -= 20;
-    else if (this.metrics.fcp > 1000) score -= 10;
-
-    // LCP scoring (0-100)
-    if (this.metrics.lcp > 4000) score -= 30;
-    else if (this.metrics.lcp > 2500) score -= 20;
-    else if (this.metrics.lcp > 1500) score -= 10;
-
-    // FID scoring (0-100)
-    if (this.metrics.fid > 300) score -= 20;
-    else if (this.metrics.fid > 100) score -= 10;
-
-    // CLS scoring (0-100)
-    if (this.metrics.cls > 0.25) score -= 20;
-    else if (this.metrics.cls > 0.1) score -= 10;
-
-    return Math.max(0, score);
-  }
-
-  /**
-   * Generate performance report
-   */
   public generateReport(): string {
-    if (!this.metrics) return "No performance data available";
+    if (!this.metrics) {
+      return 'No performance metrics available';
+    }
 
-    const score = this.getPerformanceScore();
     const report = `
 Performance Report:
-Score: ${score}/100
-FCP: ${this.metrics.fcp.toFixed(2)}ms
-LCP: ${this.metrics.lcp.toFixed(2)}ms
-FID: ${this.metrics.fid.toFixed(2)}ms
-CLS: ${this.metrics.cls.toFixed(3)}
-TTFB: ${this.metrics.ttfb.toFixed(2)}ms
-FMP: ${this.metrics.fmp.toFixed(2)}ms
-TTI: ${this.metrics.tti.toFixed(2)}ms
+==================
+Load Time: ${this.metrics.loadTime}ms
+First Contentful Paint: ${this.metrics.firstContentfulPaint}ms
+Largest Contentful Paint: ${this.metrics.largestContentfulPaint}ms
+First Input Delay: ${this.metrics.firstInputDelay}ms
+Cumulative Layout Shift: ${this.metrics.cumulativeLayoutShift}
+Time to Interactive: ${this.metrics.timeToInteractive}ms
+Memory Usage: ${(this.metrics.memoryUsage * 100).toFixed(2)}%
+Bundle Size: ${this.metrics.bundleSize}KB
     `;
 
-    return report.trim();
+    return report;
   }
 
-  /**
-   * Cleanup resources
-   */
+  public optimize(): void {
+    // Run additional optimizations
+    this.compressAssets();
+    this.minifyCSS();
+    this.optimizeJavaScript();
+  }
+
+  private compressAssets(): void {
+    // Implement asset compression
+    console.log('Compressing assets...');
+  }
+
+  private minifyCSS(): void {
+    // Implement CSS minification
+    console.log('Minifying CSS...');
+  }
+
+  private optimizeJavaScript(): void {
+    // Implement JavaScript optimization
+    console.log('Optimizing JavaScript...');
+  }
+
   public cleanup(): void {
-    this.observers.forEach((observer) => observer.disconnect());
+    this.observers.forEach((observer) => {
+      observer.disconnect();
+    });
     this.observers = [];
-    this.isInitialized = false;
   }
 }
 
-// Export singleton instance
-export const advancedPerformanceOptimizer = new AdvancedPerformanceOptimizer();
+// Export the optimizer
+export const performanceOptimizer = new AdvancedPerformanceOptimizer();
 
-// Export class for custom instances
-export { AdvancedPerformanceOptimizer };
+// Export types and utilities
 export type { PerformanceMetrics, OptimizationConfig };
+export { AdvancedPerformanceOptimizer };

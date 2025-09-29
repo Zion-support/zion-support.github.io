@@ -49,11 +49,11 @@ const UltimateSystemManager: React.FC = () => {
       // Initialize performance monitoring
       performanceOptimizer.startMonitoring();
 
-      // Initialize accessibility monitoring
-      // accessibilityEnhancer.startMonitoring?.(); // Method doesn't exist
+      // Initialize accessibility monitoring - no startMonitoring method
+      // accessibilityEnhancer.startMonitoring();
 
-      // Initialize SEO monitoring
-      // seoOptimizer.initialize?.(); // Method is private
+      // Initialize SEO monitoring - initialize is private
+      // seoOptimizer.initialize();
 
       // Resolve any merge conflicts
       const mergeResult = await advancedMergeResolver.resolveAllConflicts();
@@ -363,7 +363,7 @@ const UltimateSystemManager: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <button
-              onClick={() => console.log('Accessibility fix not implemented')}
+              onClick={() => accessibilityEnhancer.fixCommonIssues()}
               className="p-4 text-left bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors"
             >
               <div className="font-medium text-purple-800">Fix Accessibility Issues</div>
