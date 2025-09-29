@@ -97,20 +97,6 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
-<<<<<<< HEAD
-    id: "ai-quantum-computing-2026",
-    slug: "ai-quantum-computing-2026",
-    title: "AI Quantum Computing 2026: Next-Generation Intelligence",
-    description: "Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.",
-    excerpt: "Learn how quantum-AI integration is transforming enterprise computing with unprecedented performance gains.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-20",
-    category: "Quantum Computing",
-    tags: ["Quantum AI", "Quantum Computing", "Optimization", "Performance"],
-    featured: true,
-    readTime: "25 min read",
-    image: "/images/ai-quantum-computing-2026.jpg",
-=======
     id: "edge-agent-observability-2026",
     slug: "edge-agent-observability-2026",
     title: "Edge Agent Observability 2026: Live Traces, Budgets, and Fallbacks",
@@ -170,8 +156,7 @@ export const latestArticles: LatestArticle[] = [
     tags: ["Agents", "Releases", "Tracing"],
     featured: true,
     readTime: "8 min read",
-    image: "/images/agent-blue-green-releases-2026.jpg",
->>>>>>> origin/main
+     image: "/images/agent-blue-green-releases-2026.jpg",
     newBadge: true,
     trending: true
   },
@@ -380,7 +365,6 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "7 min read",
     image: "/images/golden-paths-roi-2026.jpg",
->>>>>>> cursor/create-and-deploy-new-content-d0aa
     newBadge: true,
     trending: true
   },
@@ -401,8 +385,6 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
-<<<<<<< HEAD
-=======
     id: "agent-evals-scorecards-2026",
     slug: "agent-evals-scorecards-2026",
     title: "Agent Evals 2026: Scorecards That Predict Outcomes",
@@ -451,7 +433,6 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
->>>>>>> cursor/create-and-deploy-new-content-d0aa
     id: "ai-incident-budgets-2026",
     slug: "ai-incident-budgets-2026",
     title: "AI Incident Budgets: Playbooks That Contain in <60s",
@@ -981,7 +962,6 @@ export const latestArticles: LatestArticle[] = [
   }
   ,
   {
-<<<<<<< HEAD
     id: "secure-ml-supply-chain-2026",
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
@@ -1029,40 +1009,6 @@ export const latestArticles: LatestArticle[] = [
     newBadge: true,
     trending: true
   },
-=======
-    id: "ai-supply-chain-optimization-2025",
-    slug: "ai-supply-chain-optimization-2025",
-    title: "AI Supply Chain Optimization: 65% Faster Deliveries, 40% Lower Cost",
-    description: "Demand sensing, dynamic routing, and smart inventory that lift OTIF while cutting cost.",
-    excerpt: "Achieve 65% faster deliveries with AI‑powered planning, routing, and SLA‑aware orchestration.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Applied AI",
-    tags: ["Supply Chain", "Optimization", "Routing", "Forecasting"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-supply-chain-optimization.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "privacy-first-observability-quickstart-2025",
-    slug: "privacy-first-observability-quickstart-2025",
-    title: "Privacy‑First Observability Quickstart: Scoped IDs, Redaction, Retention",
-    description: "Stand up privacy‑safe telemetry with scoped identifiers, field‑level filters, and TTL policies.",
-    excerpt: "Ship insights without PII risk in under a week using proven building blocks.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Observability",
-    tags: ["Privacy", "Telemetry", "Compliance"],
-    featured: false,
-    readTime: "7 min read",
-    image: "/images/privacy-first-observability-quickstart.jpg",
-    newBadge: true,
-    trending: false
-  }
-  ,
->>>>>>> cursor/create-and-deploy-new-content-d0aa
   {
     id: "ai-platform-scorecards-roi-2026",
     slug: "ai-platform-scorecards-roi-2026",
@@ -1357,6 +1303,54 @@ export const latestArticles: LatestArticle[] = [
 
 // Newly added featured articles (auto used by showcases and banners)
 latestArticles.unshift(
+  {
+    id: "agent-blue-green-canary-2026",
+    slug: "agent-blue-green-canary-2026",
+    title: "Agent Blue‑Green + Canary Evals: Safe Releases at Speed",
+    description: "Combine blue‑green, budgeted tools, and canary evals to ship agent changes safely.",
+    excerpt: "A practical release system for agents: canaries, rollbacks, and KPI‑linked guardrails.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-16",
+    category: "GenAI",
+    tags: ["Agents", "Releases", "Evals"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/agent-blue-green-canary-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-llm-safety-caching-2026",
+    slug: "edge-llm-safety-caching-2026",
+    title: "Edge LLM Safety Caching: Sub‑100ms Prompts Without Regressions",
+    description: "Signed configs, tiered caches, and fallback routes that keep latency low and quality high.",
+    excerpt: "Keep prompts fast and safe with deterministic caching and rollbacks at the edge.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-16",
+    category: "Architecture",
+    tags: ["Edge", "Caching", "Safety"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-llm-safety-caching-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "platform-slo-guardrails-2026",
+    slug: "platform-slo-guardrails-2026",
+    title: "Platform SLO Guardrails 2026: Scorecards that Prevent Regressions",
+    description: "Adoption, golden‑path TTFX, and SLOs wired to PR checks and rollbacks.",
+    excerpt: "Guardrails engineers adopt—measure, alert, and auto‑rollback when SLOs drift.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-16",
+    category: "Platform Engineering",
+    tags: ["SLOs", "Scorecards", "Guardrails"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/platform-slo-guardrails-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
   {
     id: "ai-threat-hunting-with-llms-2026",
     slug: "ai-threat-hunting-with-llms-2026",

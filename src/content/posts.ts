@@ -10,33 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "edge-llm-caching-v2-2026",
-    title: "Edge LLM Caching v2: Tiered KV, TTL Windows, Sub‑100ms",
-    description: "Tiered KV caches, signed configs, and freshness windows for fast, affordable prompts.",
-    category: "Architecture",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "agent-release-trains-2026",
-    title: "Agent Release Trains 2026: Weekly Ships with Canary Budgets",
-    description: "KPI‑wired canaries, live traces, and rollback templates for safe agent releases.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "privacy-first-scorecards-2026",
-    title: "Privacy‑First Scorecards: Scoped IDs That Teams Use",
-    description: "Design scorecards with scoped identifiers and retention windows to keep insights rich without PII risk.",
-    category: "Observability",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
     slug: "agent-blue-green-releases-2026",
     title: "Agent Blue‑Green Releases 2026: Safe, Reversible Automation",
     description: "Ship agent changes with policy tests, budgeted actions, and instant rollback toggles.",
@@ -206,7 +179,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "7 min read"
->>>>>>> cursor/create-and-deploy-new-content-d0aa
   },
   {
     slug: "ai-reliable-rag-ops-2026",
@@ -573,7 +545,6 @@ export const posts: BlogPost[] = [
   }
   ,
   {
-<<<<<<< HEAD
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
     description: "Continuous SBOMs for models, datasets, and prompts with attestations and CI policy checks.",
@@ -620,25 +591,6 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   }
   ,
-=======
-    slug: "agent-evals-scorecards-2026",
-    title: "Agent Evals 2026: Scorecards That Predict Outcomes",
-    description: "Design online evals and KPI‑linked scorecards that correlate with revenue and CSAT.",
-    category: "GenAI",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "privacy-preserving-agents-2026",
-    title: "Privacy‑Preserving Agents: Scoped IDs, Redaction, and On‑Device Caches",
-    description: "Ship assistant workflows that are insight‑rich without PII risk using scoped IDs and local caches.",
-    category: "AI Security",
-    publishedAt: "2025-10-13",
-    featured: false,
-    readTime: "7 min read"
-  },
->>>>>>> cursor/create-and-deploy-new-content-d0aa
   {
     slug: "agentic-workflows-blueprint-2026",
     title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",

@@ -32,7 +32,6 @@ import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import NewContentShowcase from "../components/NewContentShowcase";
 import NewContentShowcase2025 from "../components/NewContentShowcase2025";
 import NewServicesShowcase from "../components/NewServicesShowcase";
-import RevolutionaryContentBanner from "../components/RevolutionaryContentBanner";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
 import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
@@ -118,9 +117,6 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
-        {/* Revolutionary Content Banner - Compact */}
-        <RevolutionaryContentBanner variant="compact" />
-        
         {/* Enhanced Promotional Banners */}
         {getFeaturedBanners().slice(0, 3).map((banner) => (
           <EnhancedPromotionalBanner
@@ -140,14 +136,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Edge Caching v2, Agent Release Trains, Privacy‑First Scorecards"
-          description="Tiered KV caches, KPI‑wired canaries, and scoped‑ID scorecards—ship fast, stay safe."
+          title="New: Agent Blue‑Green Releases, Edge LLM Caching, Platform SLO Guardrails"
+          description="Ship agents safely with instant rollback, keep prompts fast at the edge, and prevent regressions with SLO scorecards."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Edge LLM Caching v2", category: "Architecture", link: "/blog/edge-llm-caching-v2-2026" },
-            { title: "Agent Release Trains", category: "GenAI", link: "/blog/agent-release-trains-2026" },
-            { title: "Privacy‑First Scorecards", category: "Observability", link: "/blog/privacy-first-scorecards-2026" }
+            { title: "Agent Blue‑Green Releases 2026", category: "GenAI", link: "/blog/agent-blue-green-releases-2026" },
+            { title: "Edge LLM Safety Caching 2026", category: "Architecture", link: "/blog/edge-llm-safety-caching-2026" },
+            { title: "Platform SLO Guardrails 2026", category: "Platform Engineering", link: "/blog/platform-slo-guardrails-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -321,9 +317,6 @@ const Home = () => {
 
         {/* New Content Showcase */}
         <NewContentShowcase />
-
-        {/* Revolutionary Content Banner */}
-        <RevolutionaryContentBanner variant="hero" className="border-b border-white/10" />
 
         {/* New Content Showcase 2025 */}
         <NewContentShowcase2025 />
