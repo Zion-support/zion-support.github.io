@@ -245,7 +245,7 @@ export const RetailTransformationBanner = () => (
 
 export const NewContentShowcaseBanner = () => (
   <PromotionalBanner
-    message="📚 Fresh Content: AI Automation Guide, Enterprise Security, Retail Transformation Case Study"
+    message="📚 Fresh Content: AI Risk Register & Practical RAG now live"
     ctaText="Explore All"
     ctaLink="/blog"
     backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"

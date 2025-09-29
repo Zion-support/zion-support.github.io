@@ -45,6 +45,24 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="AI Risk Register: Practical Framework for Managing AI Risks"
+            excerpt="Production-ready risk register across model, data, privacy, security, and ops with monitoring."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="10 min"
+            image="🧭"
+            href="/blog/ai-risk-register"
+          />
+          <BlogPost
+            title="Practical RAG in Production: Patterns that Actually Work"
+            excerpt="Battle-tested RAG patterns for groundedness, latency, and cost at enterprise scale."
+            date="September 29, 2025"
+            category="AI Platforms"
+            readTime="9 min"
+            image="🧩"
+            href="/blog/practical-rag-in-production"
+          />
+          <BlogPost
             title="AI Revolution 2025: Complete Business Transformation Guide"
             excerpt="Discover how AI is reshaping industries and creating unprecedented opportunities for growth in 2025. Complete strategy guide with implementation roadmap."
             date="January 17, 2025"
