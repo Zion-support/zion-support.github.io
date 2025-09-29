@@ -63,6 +63,33 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+    id: "zero-downtime-migrations",
+    title: "Zero‑Downtime Migrations: Patterns that Keep Pages Green",
+    summary:
+      "Dual‑write, read‑shadowing, and progressive delivery to ship schema changes safely.",
+    category: "Platform Engineering",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
+  {
+    id: "ai-autonomous-ops-intro",
+    title: "AI Autonomous Operations: From Runbooks to Self‑Managing Systems",
+    summary:
+      "Policy tests, health circuits, and closed‑loop optimization that shrink toil to near zero.",
+    category: "AI & Automation",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-roi-scorecards",
+    title: "AI ROI Scorecards That Executives Trust",
+    summary:
+      "Pick leading indicators, instrument baselines, and report outcomes without vanity metrics.",
+    category: "AI Strategy",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
     id: "edge-observability-blueprint",
     title: "Edge Observability Blueprint: Sub‑100ms Reliability",
     summary:
