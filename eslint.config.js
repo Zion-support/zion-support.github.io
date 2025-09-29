@@ -141,7 +141,10 @@ export default [
       ...reactHooks.configs.recommended.rules,
       
       'no-console': 'warn',
-      'no-undef': 'error',
+      // Disable rules that incorrectly flag TypeScript-only globals/types
+      'no-undef': 'off',
+      'no-redeclare': 'off',
+      '@typescript-eslint/no-redeclare': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
       'react/no-unescaped-entities': 'warn',
