@@ -710,7 +710,6 @@ class AdvancedAccessibilityEnhancer {
 
     const report = `
 Accessibility Report:
-====================
 Overall Score: ${this.metrics.overallScore.toFixed(1)}/100
 Color Contrast: ${this.metrics.colorContrastScore}/100
 Keyboard Navigation: ${this.metrics.keyboardNavigationScore}/100

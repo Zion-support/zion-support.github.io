@@ -709,7 +709,6 @@ class AdvancedTestingFramework {
     
     const report = `
 Test Report:
-===========
 Total Tests: ${metrics.totalTests}
 Passed: ${metrics.passedTests} (${metrics.passRate.toFixed(1)}%)
 Failed: ${metrics.failedTests} (${metrics.failureRate.toFixed(1)}%)

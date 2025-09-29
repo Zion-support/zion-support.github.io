@@ -9,30 +9,22 @@ import PerformanceTracker from './components/PerformanceTracker';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-<<<<<<< HEAD
 import { performanceOptimizer } from './utils/performanceOptimizations';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
 import { seoOptimizer } from './utils/seoOptimization';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-=======
 import { useSEOData } from './components/SEOOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibilityManager';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceMonitor from './components/PerformanceMonitor';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
->>>>>>> 4b999e7e8499b1d439e8efecb8a451947461db54
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 
 // Import enhanced utilities
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitoring';
-import { enhancedAccessibilityManager } from './utils/enhancedAccessibility';
 import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
-import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import { enhancedSecuritySystem } from './utils/enhancedSecuritySystem';
 import { enhancedAccessibilitySystem } from './utils/enhancedAccessibilitySystem';
 import { apiCache as apiCacheSystem, imageCache as imageCacheSystem, dataCache as dataCacheSystem } from './utils/enhancedCachingSystem';
@@ -52,7 +44,6 @@ import { EnhancedNotification } from './types/comprehensive';
 import './index.css';
 
 // Lazy load heavy components for better performance
-const EnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
 const KeyboardShortcutsHelp = lazy(() => import('./components/KeyboardShortcutsHelp'));
 const SystemHealthDashboard = lazy(() => import('./components/SystemHealthDashboard'));
 const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
@@ -74,7 +65,6 @@ const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcu
 const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDashboard'));
 // import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
 import WebsiteEnhancements from './components/WebsiteEnhancements';
-import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceEnhancer from './components/PerformanceEnhancer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
@@ -375,11 +365,10 @@ export default function App(): React.JSX.Element {
     // Set default SEO data using the correct method
     seoManager.updateMetaTags(seoData);
 
-<<<<<<< HEAD
     // Use passive listeners for better performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('click', handleClick, { passive: true });
-=======
+
     // Update meta tags
     updateMetaTags(seoData);
 
@@ -392,7 +381,6 @@ export default function App(): React.JSX.Element {
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
     }
->>>>>>> 4b999e7e8499b1d439e8efecb8a451947461db54
 
     // Mark app as fully initialized
     if (typeof window !== 'undefined' && window.performance && 
