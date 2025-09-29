@@ -21,9 +21,9 @@ class PerformanceMonitor {
   }
 
   private init(): void {
-    if (this.isInitialized || typeof window === 'undefined') return;
+    if (this.initialized || typeof window === 'undefined') return;
 
-    this.isInitialized = true;
+    this.initialized = true;
     this.observeWebVitals();
     this.observeResourceTiming();
     this.observeNavigationTiming();
@@ -119,12 +119,7 @@ class PerformanceMonitor {
     if (perfWithMemory.memory) {
       const { usedJSHeapSize, jsHeapSizeLimit } = perfWithMemory.memory;
       const ratio = jsHeapSizeLimit > 0 ? usedJSHeapSize / jsHeapSizeLimit : 0;
-      this.recordMetric({
-        name: 'MEMORY_USAGE',
-        value: ratio,
-        timestamp: Date.now(),
-        id: this.generateId()
-      });
+      // intentionally not recording as a typed metric to keep MetricName union minimal
     }
   }
 

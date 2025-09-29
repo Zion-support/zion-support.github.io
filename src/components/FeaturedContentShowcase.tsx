@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BlogPost, blogPosts } from '../content/blog-posts';
 import { InsightArticle, latestInsights } from '../content/insights';
+import { ArrowRight, Calendar, Clock, Eye, Star, TrendingUp } from 'lucide-react';
 
 interface FeaturedContentShowcaseProps {
   title?: string;
@@ -23,9 +24,9 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
   const [activeTab, setActiveTab] = useState<'all' | 'blog' | 'insights'>('all');
 
   // Get featured blog posts
-  const featuredBlogPosts = posts
+  const featuredBlogPosts = blogPosts
     .filter(post => post.featured)
-    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 3);
 
   // Get latest insights
@@ -35,7 +36,7 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
 
   // Combine content for display
   const allContent = [
-    ...featuredBlogPosts.map(post => ({ ...post, type: 'blog' as const, date: post.publishedAt })),
+    ...featuredBlogPosts.map(post => ({ ...post, type: 'blog' as const, date: post.date })),
     ...latestInsightsList.map(insight => ({
       ...insight,
       type: 'insights' as const,
@@ -48,7 +49,7 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
    .slice(0, maxItems);
 
   const filteredContent = activeTab === 'all' ? allContent : 
-    activeTab === 'blog' ? featuredBlogPosts.map(post => ({ ...post, type: 'blog' as const, date: post.publishedAt })) :
+    activeTab === 'blog' ? featuredBlogPosts.map(post => ({ ...post, type: 'blog' as const, date: post.date })) :
     latestInsightsList.map(insight => ({
       ...insight,
       type: 'insights' as const,
