@@ -10,6 +10,36 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-sales-copilot-2025",
+    title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
+    description:
+      "Wire CRMs, build prompt libraries, and add evals that boost win‑rates without risk.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "zero-downtime-migrations-2025",
+    title: "Zero‑Downtime Migrations: Patterns that Keep Pages Green",
+    description:
+      "Dual‑write, read‑shadowing, and progressive delivery to ship schema changes safely.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "5 min read",
+  },
+  {
+    slug: "agent-telemetry-traces-2025",
+    title: "Agent Telemetry: What to Trace and Why It Matters",
+    description:
+      "From tool call spans to prompt metadata—capture signals to debug and improve agents.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "5 min read",
+  },
+  {
     slug: "ai-security-posture-2025",
     title: "AI Security Posture 2025: Hardening LLM Apps End-to-End",
     description:
