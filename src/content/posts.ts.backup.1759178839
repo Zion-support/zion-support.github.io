@@ -10,6 +10,22 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
+    slug: "ai-governance-maturity-model-2026",
+    title: "AI Governance Maturity Model 2026: From Ad‑Hoc to Audit‑Ready",
+    description: "Move from ad‑hoc controls to audit‑ready AI governance with scorecards and KPIs.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "ai-customer-data-platforms-2026",
+    title: "AI Customer Data Platforms 2026: Real‑Time Personalization at Scale",
+    description: "Blueprint for AI‑native CDPs powering privacy‑safe, sub‑second personalization.",
+    category: "Architecture",
+    publishedAt: "2025-10-15",
+=======
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
     description: "Continuous SBOMs for models, datasets, and prompts with attestations and CI policy checks.",
@@ -42,6 +58,7 @@ export const posts: BlogPost[] = [
     description: "Design SLOs and risk budgets for AI systems with instant rollbacks and KPI‑linked canaries.",
     category: "AI Operations",
     publishedAt: "2025-10-12",
+>>>>>>> origin/cursor/create-and-deploy-new-content-68d6
     featured: true,
     readTime: "9 min read"
   },

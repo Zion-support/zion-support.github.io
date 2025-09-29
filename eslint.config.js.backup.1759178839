@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 export default [
   // Global ignores
   {
@@ -27,6 +29,7 @@ export default [
       '**/backup-pages/**',
       '**/backup-merge-conflicts/**',
       '**/cypress_backup/**',
+>>>>>>> origin/cursor/create-and-deploy-new-content-68d6
       '**/components.disabled/**',
       '**/components.disabled_full/**',
       '**/contracts.disabled/**',
@@ -35,6 +38,8 @@ export default [
       '**/broken_files_backup/**',
       '**/vite.config-backup.*',
       '**/test-simple.*',
+<<<<<<< HEAD
+=======
       
       '**/*.disabled.*',
       '**/*.backup.*',
@@ -240,3 +245,4 @@ export default [
     }
   }
 ];
+>>>>>>> origin/cursor/create-and-deploy-new-content-68d6

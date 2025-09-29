@@ -17,6 +17,13 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+<<<<<<< HEAD
+    id: "ai-governance-scorecards-quickstart-2026",
+    slug: "ai-governance-scorecards-quickstart-2026",
+    title: "AI Governance Scorecards Quickstart 2026: Ship Fast, Stay Safe",
+    description: "A practical starter for scorecards, PR checks, and KPI‑linked canaries teams adopt in weeks.",
+    excerpt: "Start with outcome‑linked scorecards and CI policy tests that teams actually adopt.",
+=======
     id: "secure-ml-supply-chain-2026",
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
@@ -70,6 +77,7 @@ export const latestArticles: LatestArticle[] = [
     title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
     description: "Design SLOs and risk budgets for AI with instant rollbacks and KPI‑linked canaries.",
     excerpt: "Ship faster with SLOs that budget risk and wire safe rollbacks.",
+>>>>>>> origin/cursor/create-and-deploy-new-content-68d6
     author: "Zion Tech Group Team",
     date: "2025-10-13",
     category: "AI Strategy",
