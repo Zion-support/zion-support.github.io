@@ -17,6 +17,15 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+    id: "eval-systems-online-canaries",
+    title: "Eval Systems That Scale: Online Canaries and Policy Gates",
+    summary:
+      "Move from ad-hoc checks to layered evals with CI gates and production canaries tied to KPIs.",
+    category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
     id: "edge-flags-validation-blueprints",
     title: "Blueprints: Validating Edge Flags Before They Break Prod",
     summary:
@@ -51,6 +60,15 @@ export const latestInsights: InsightArticle[] = [
     category: "Product Analytics",
     date: "2025-09-29",
     readMinutes: 5,
+  },
+  {
+    id: "ai-governance-rubric",
+    title: "A Lightweight Rubric for AI Governance Decisions",
+    summary:
+      "When to require human‑in‑the‑loop, what to log, and how to audit outputs across teams.",
+    category: "AI Governance",
+    date: "2025-10-04",
+    readMinutes: 4,
   },
   {
     id: "platform-blueprints-golden-paths",
@@ -89,6 +107,15 @@ export const latestInsights: InsightArticle[] = [
     id: "rag-freshness-strategies",
     title: "RAG Freshness Strategies",
     summary: "Invalidate staleness with versioned chunks, TTLs, and async warmups.",
+    category: "Risk & Compliance",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-governance-rubric",
+    title: "A Lightweight Rubric for AI Governance Decisions",
+    summary:
+      "Decision criteria for when to add controls, how to validate, and who owns risk.",
     category: "Risk & Compliance",
     date: "2025-09-29",
     readMinutes: 6,
@@ -198,6 +225,7 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
     category: "Product Analytics",
+    description: "A look at on‑device models, streaming pipelines, and cost/perf trade‑offs from deployments.",
     date: "2025-09-29",
     readMinutes: 7,
   },
@@ -431,6 +459,14 @@ export const latestInsights: InsightArticle[] = [
     category: "Platform Engineering",
     date: "2025-10-05",
     readMinutes: 4,
+  },
+  {
+    id: "ai-security-essentials",
+    title: "AI Security Essentials",
+    summary: "Essential security practices for AI systems, covering model protection, data privacy, and adversarial defense strategies.",
+    category: "Security",
+    date: "2025-01-21",
+    readMinutes: 11,
   },
 ];
 

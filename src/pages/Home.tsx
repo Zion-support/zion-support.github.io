@@ -129,11 +129,11 @@ const Home = () => {
         </div>
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
-          variant="info"
-          title="🚀 Fresh: AI Platform ROI, Secure ML Supply Chain, RAG v2, Inference Costs"
-          description="New guides on platform ROI scorecards, end‑to‑end ML supply chain security, upgraded RAG patterns, and serverless inference savings."
+          variant="success"
+          title="🚀 New: Customer Journey Agents + Edge Personalization Under 100ms"
+          description="Plan→Act→Verify agents that move KPIs, plus CDN + on‑device ML for private, real‑time UX."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-platform-roi-scorecards-2025"
+          ctaLink="/blog/customer-journey-agents-qa"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -721,7 +721,10 @@ const Home = () => {
             <div className="mb-10 flex items-end justify-between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
-                <p className="text-gray-600">Fresh: Platform ROI, Secure ML Supply Chain, Enterprise RAG v2, Serverless Costs.</p>
+                <p className="text-gray-600">Fresh: AI Platform ROI, Secure ML Supply Chain, and Enterprise RAG Blueprint.</p>
+                <p className="text-gray-600">Insights from our team to help you move faster.</p>
+                <p className="text-gray-600">Fresh: GenAI Telemetry, Edge Flags, Product Readiness, and more.</p>
+                <p className="text-gray-600">New: Platform ROI, Secure ML Supply Chain, and Enterprise RAG v2.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>

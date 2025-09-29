@@ -68,8 +68,6 @@ class AccessibilityEnhancer {
     // Intentionally left as a no-op for now; reserved for future enhancements
   };
 
-  // Removed duplicate placeholder declarations that conflicted with arrow handler fields
-
   constructor() {
     this.config = this.getDefaultConfig();
   }
@@ -123,9 +121,7 @@ class AccessibilityEnhancer {
 
   private setupPerformanceMonitoring(): void {
     if (!this.config.screenReaderSupport) return;
-    if (typeof window === 'undefined' || typeof (globalThis as any).PerformanceObserver === 'undefined') {
-      return;
-    }
+    
     try {
       this.performanceObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -144,6 +140,7 @@ class AccessibilityEnhancer {
 
   /**
    * Backward-compatible initialize alias handled by init()
+   * (Removed duplicate initialize method to avoid no-dupe-class-members ESLint error)
    */
   private setupKeyboardNavigation(): void {
     if (!this.config.keyboardNavigation) return;
@@ -268,8 +265,7 @@ class AccessibilityEnhancer {
     });
 
     // Monitor aria-label changes
-    const observer = typeof (globalThis as any).MutationObserver !== 'undefined'
-      ? new MutationObserver((mutations: MutationRecord[]) => {
+    const observer = new MutationObserver((mutations: MutationRecord[]) => {
       mutations.forEach((mutation) => {
         if (mutation.type === 'attributes' && mutation.attributeName === 'aria-label') {
           const element = mutation.target as Element;
@@ -279,14 +275,12 @@ class AccessibilityEnhancer {
           }
         }
       });
-      })
-      : null;
-    if (observer) {
-      observer.observe(document.body, {
-        attributes: true,
-        attributeFilter: ['aria-label', 'aria-labelledby', 'role']
-      });
-    }
+    });
+
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ['aria-label', 'aria-labelledby', 'role']
+    });
   }
 
   private handleMenuNavigation(event: KeyboardEvent, menu: HTMLElement): void {

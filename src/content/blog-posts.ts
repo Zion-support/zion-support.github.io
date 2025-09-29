@@ -43,6 +43,42 @@ Most AI risk registers fail because they are static and ownerless. This playbook
     image: "/images/ai-risk-register.jpg"
   },
   {
+    slug: "genai-telemetry-observability-2025",
+    title: "GenAI Telemetry: What to Measure in 2025",
+    description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
+    content: `
+# GenAI Telemetry: What to Measure in 2025
+
+Understanding what to measure in GenAI systems is crucial for maintaining quality, safety, and cost control. This guide covers the essential telemetry signals and monitoring strategies.
+
+## Key Metrics to Track
+- Response quality and consistency
+- Token usage and costs
+- Latency and performance
+- Error rates and failures
+- User satisfaction scores
+
+## Dashboard Design
+- Real-time monitoring
+- Historical trends
+- Alerting thresholds
+- Cost tracking
+- Quality metrics
+
+## Implementation
+- Instrumentation points
+- Data collection
+- Storage and analysis
+- Visualization
+- Alerting setup
+    `,
+    category: "GenAI",
+    date: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/genai-telemetry.jpg"
+  },
+  {
     slug: "practical-rag-in-production-2025",
     title: "Practical RAG in Production: Freshness, Hybrid Search, and Evals",
     description: "A proven blueprint for production RAG: chunking, freshness, scoring, and layered evals.",
@@ -207,7 +243,7 @@ Capture spans for tool calls, retries, and model routes. Attach prompt, input si
   },
   {
     slug: "shipping-genai-safely-guardrails",
-    title: "Shipping GenAI Safely: Guardrails That Don’t Slow You Down",
+    title: "Shipping GenAI Safely: Guardrails That Don't Slow You Down",
     description: "Layered evaluation systems with policy gates and online canaries to ship fast with confidence.",
     content: `
 # Shipping GenAI Safely: Guardrails That Don’t Slow You Down
