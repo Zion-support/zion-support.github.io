@@ -60,6 +60,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
+  const seoData = useSEOData(typeof window !== 'undefined' ? window.location.pathname : '/');
 
   // Initialize app
   useEffect(() => {
@@ -198,7 +199,7 @@ export default function App(): React.JSX.Element {
                 ✕
               </button>
             </div>
-            <SEOOptimizer isVisible={true} onClose={() => setShowSEOOptimizer(false)} />
+            <SEOOptimizer seoData={seoData} />
           </div>
         </div>
       )}

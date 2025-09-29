@@ -352,7 +352,7 @@ class AdvancedPerformanceOptimizer {
   private async loadComponent(componentName: string): Promise<void> {
     try {
       // Use Vite's import.meta.glob for safe dynamic imports with explicit extensions
-      const modules = import.meta.glob('../components/**/*.{tsx,ts,jsx,js}');
+      const modules: Record<string, () => Promise<unknown>> = (import.meta as any).glob('../components/**/*.{tsx,ts,jsx,js}') as any;
       const possiblePaths = [
         `../components/${componentName}.tsx`,
         `../components/${componentName}.ts`,

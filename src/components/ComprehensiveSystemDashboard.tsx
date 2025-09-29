@@ -40,11 +40,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
           setAccessibilityMetrics(accMetrics);
 
           const seoData = await seoOptimizer.analyze();
-          setSeoIssues(seoData.issues.map(issue => ({
-            type: 'warning' as const,
-            message: issue,
-            impact: 'medium' as const
-          })));
+          setSeoIssues(seoData.issues as SEOIssue[]);
         } catch (error) {
           console.error('Error loading metrics:', error);
         }
@@ -135,7 +131,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                         </div>
                         <div className="flex justify-between">
                           <span className="text-sm text-gray-600">Score:</span>
-                          <span className="text-sm font-medium">{metrics.score}/100</span>
+                          <span className="text-sm font-medium">{(metrics.overallScore || 0)}/100</span>
                         </div>
                       </>
                     ) : (
@@ -162,7 +158,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                         </div>
                         <div className="flex justify-between">
                           <span className="text-sm text-gray-600">Issues:</span>
-                          <span className="text-sm font-medium">{accessibilityMetrics.issues.length}</span>
+                          <span className="text-sm font-medium">{(accessibilityMetrics.issues || []).length}</span>
                         </div>
                       </>
                     ) : (
@@ -247,7 +243,7 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                     </div>
                     <div className="flex justify-between">
                       <span className="text-sm text-gray-600">Performance Score:</span>
-                      <span className="text-sm font-medium">{metrics.score}/100</span>
+                      <span className="text-sm font-medium">{(metrics.overallScore || 0)}/100</span>
                     </div>
                   </div>
                 </div>
@@ -294,11 +290,15 @@ const ComprehensiveSystemDashboard: React.FC<ComprehensiveSystemDashboardProps> 
                 <div className="bg-white border rounded-lg p-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">Issues Found</h4>
                   <div className="space-y-3">
-                    {accessibilityMetrics.issues.slice(0, 5).map((issue, index) => (
+                    {(accessibilityMetrics.issues || []).slice(0, 5).map((issue, index) => (
                       <div key={index} className="p-3 bg-red-50 border border-red-200 rounded-lg">
                         <p className="text-sm text-red-800 font-medium">{issue.type}</p>
-                        <p className="text-xs text-red-600 mt-1">{issue.description}</p>
-                        <p className="text-xs text-red-500 mt-1">Impact: {issue.impact}</p>
+                        {'description' in issue && (
+                          <p className="text-xs text-red-600 mt-1">{(issue as any).description}</p>
+                        )}
+                        {'impact' in issue && (
+                          <p className="text-xs text-red-500 mt-1">Impact: {(issue as any).impact}</p>
+                        )}
                       </div>
                     ))}
                   </div>

@@ -598,7 +598,7 @@ export const apiCache = new AdvancedCachingSystem({
   enableLocalStorageCache: true,
   enableSessionStorageCache: false,
   defaultTTL: 5 * 60 * 1000, // 5 minutes
-  maxMemorySize: 20 * 1024 * 1024, // 20MB
+  maxMemoryItems: 100,
 });
 
 export const imageCache = new AdvancedCachingSystem({
@@ -606,7 +606,7 @@ export const imageCache = new AdvancedCachingSystem({
   enableLocalStorageCache: true,
   enableSessionStorageCache: false,
   defaultTTL: 24 * 60 * 60 * 1000, // 24 hours
-  maxMemorySize: 100 * 1024 * 1024, // 100MB
+  maxMemoryItems: 200,
 });
 
 export const dataCache = new AdvancedCachingSystem({
@@ -614,7 +614,7 @@ export const dataCache = new AdvancedCachingSystem({
   enableLocalStorageCache: true,
   enableSessionStorageCache: true,
   defaultTTL: 60 * 60 * 1000, // 1 hour
-  maxMemorySize: 50 * 1024 * 1024, // 50MB
+  maxMemoryItems: 150,
 });
 
 // Legacy export for backward compatibility
