@@ -3,7 +3,7 @@
 type MetricName = 'CLS' | 'FID' | 'FCP' | 'LCP' | 'TTFB' | 'SLOW_RESOURCE' | 'MEMORY_USAGE';
 
 interface PerformanceMetric {
-  name: WebVitalName | 'SLOW_RESOURCE';
+  name: MetricName;
   value: number;
   timestamp: number;
   id: string;
@@ -15,13 +15,10 @@ class PerformanceMonitor {
 	private initialized = false;
 
   public initialize(): void {
-    if (this.alreadyInitialized || typeof window === 'undefined' || typeof PerformanceObserver === 'undefined') {
+    if (this.initialized || typeof window === 'undefined' || typeof (window as any).PerformanceObserver === 'undefined') {
       return;
     }
-    this.alreadyInitialized = true;
-    this.observePaint();
-    this.observeNavigation();
-    this.observeFirstInput();
+    this.init();
   }
 
   private init(): void {
@@ -29,11 +26,9 @@ class PerformanceMonitor {
 
     this.initialized = true;
     this.observeWebVitals();
-    if (typeof (window as any).PerformanceObserver !== 'undefined') {
-      // Stubbed guards to satisfy references; detailed implementations can be added as needed
-      this.observeResourceTiming();
-      this.observeNavigationTiming();
-    }
+    // Optional: add more observers if needed
+    this.observeResourceTiming();
+    this.observeNavigationTiming();
   }
 
   // Minimal stubs to satisfy references; can be expanded with real logic later

@@ -105,7 +105,7 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         <LatestContentBanner className="border-b border-white/10" variant="info" />
-        <ContentPromotionBanner
+        <NewContentPromotionBanner
           title="Fresh: GenAI Evals, Edge Flags, and North‑Star Metrics"
           description="New insights just dropped. Explore the latest articles and stay ahead."
           ctaText="Read the latest"
