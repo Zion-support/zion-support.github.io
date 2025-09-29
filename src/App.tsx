@@ -100,8 +100,8 @@ export default function App(): React.JSX.Element {
         // Initialize enhanced systems
         // enhancedSecurityManager.initialize?.(); // Method doesn't exist
         // enhancedAccessibilityManager.initialize?.(); // Method doesn't exist
-        // enhancedPerformanceMonitor.initialize?.(); // Method doesn't exist
-        // enhancedSEOOptimizer.initialize?.(); // Method doesn't exist
+        enhancedPerformanceMonitor.startMonitoring();
+        enhancedSEOOptimizer.initialize();
         
         // Initialize performance optimizations
         // performanceOptimizer.initialize?.(); // Method doesn't exist
