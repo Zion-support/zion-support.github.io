@@ -318,6 +318,11 @@ class EnhancedPerformanceMonitor {
     console.log("Enhanced Performance Monitor stopped");
   }
 
+  private createAlert(alert: any): void {
+    // Simple alert creation - could be enhanced with proper alert system
+    console.warn(`Performance Alert: ${alert.title} - ${alert.description}`);
+  }
+
   public cleanup(): void {
     this.stop();
   }

@@ -181,8 +181,8 @@ class SecurityEnhancements {
 
   private setupXSSProtection(): void {
     // Monitor for potential XSS attempts
-    const originalInnerHTMLDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
-    const originalOuterHTMLDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'outerHTML');
+    const originalDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
+    const originalOuterHTML = Element.prototype.outerHTML;
     const originalInsertAdjacentHTML = Element.prototype.insertAdjacentHTML;
 
     // Override innerHTML setter
@@ -192,13 +192,13 @@ class SecurityEnhancements {
           console.warn('Potential XSS attempt detected in innerHTML');
           return;
         }
-        if (originalInnerHTMLDescriptor && originalInnerHTMLDescriptor.set) {
-          originalInnerHTMLDescriptor.set.call(this, value);
+        if (originalDescriptor && originalDescriptor.set) {
+          originalDescriptor.set.call(this, value);
         }
       },
       get: function() {
-        if (originalInnerHTMLDescriptor && originalInnerHTMLDescriptor.get) {
-          return originalInnerHTMLDescriptor.get.call(this);
+        if (originalDescriptor && originalDescriptor.get) {
+          return originalDescriptor.get.call(this);
         }
         return '';
       },
@@ -376,7 +376,7 @@ class SecurityEnhancements {
     Document.prototype.querySelector = function(selector: string) {
       queryCount++;
       if (queryCount > queryThreshold) {
-        console.warn('Excessive DOM queries detected:', { queryCount, selector });
+        console.warn('Excessive DOM queries detected', { queryCount, selector });
       }
       return originalQuerySelector.call(this, selector);
     };
@@ -539,3 +539,4 @@ export const securityEnhancements = new SecurityEnhancements();
 
 // Export class and types
 export { SecurityEnhancements };
+// Types are already exported above as interfaces
