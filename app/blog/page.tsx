@@ -54,6 +54,33 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="Agentic Workflow Orchestration 2026: Reliable AI Workflows"
+            excerpt="Orchestrate multi-step agents with guardrails, approvals, and observability for measurable ROI."
+            date="October 9, 2025"
+            category="Architecture"
+            readTime="16 min"
+            image="🧩"
+            href="/blog/agentic-workflow-orchestration-2026"
+          />
+          <BlogPost
+            title="AI Governance Maturity Model 2026"
+            excerpt="Move from ad-hoc to audit-ready governance with measurable business value."
+            date="October 9, 2025"
+            category="Governance"
+            readTime="10 min"
+            image="🛡️"
+            href="/blog/ai-governance-maturity-model-2026"
+          />
+          <BlogPost
+            title="AI Customer Data Platforms 2026"
+            excerpt="Blueprint for AI-native CDPs delivering real-time personalization at scale."
+            date="October 9, 2025"
+            category="Personalization"
+            readTime="9 min"
+            image="📇"
+            href="/blog/ai-customer-data-platforms-2026"
+          />
+          <BlogPost
             title="Platform Engineering Scorecards 2026: From Golden Paths to Outcomes"
             excerpt="Measure adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery."
             date="October 9, 2025"
