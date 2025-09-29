@@ -10,6 +10,26 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "policy-tests-for-genai",
+    title: "Policy Tests for GenAI: Guardrails That Scale",
+    description:
+      "Codify safety, privacy, and style expectations as executable tests to prevent regressions.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "streaming-backpressure-toolkit",
+    title: "The Streaming Backpressure Toolkit",
+    description:
+      "Buffers, tokens, and admission control patterns to keep pipelines healthy under bursty load.",
+    category: "Data Engineering",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:

@@ -9,6 +9,24 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "llm-eval-playbooks-2025",
+    title: "LLM Eval Playbooks: Ship Faster Without Surprises",
+    summary:
+      "Battle‑tested offline suites and online canaries that keep GenAI quality stable during rapid iteration.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "real-time-feature-stores",
+    title: "Real‑Time Feature Stores: Patterns for Low‑Latency ML",
+    summary:
+      "Stream processing, freshness SLAs, and backfill strategies that make online models truly useful.",
+    category: "Data Engineering",
+    date: "2025-09-29",
+    readMinutes: 7,
+  },
+  {
     id: "ai-governance-rubric",
     title: "A Lightweight Rubric for AI Governance Decisions",
     summary:

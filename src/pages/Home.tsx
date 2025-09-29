@@ -104,8 +104,8 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🆕 Fresh: MLOps Reliability & Real‑Time Pipelines Guides"
-          description="Canary evals for GenAI and reliable streaming patterns to ship faster with confidence."
+          title="🆕 New: LLM Eval Playbooks + Policy Tests for GenAI"
+          description="Ship GenAI changes safely with offline suites, online canaries, and executable guardrails."
           ctaText="Read the latest"
           ctaLink="/blog"
           dismissible={true}
@@ -662,16 +662,16 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
-                  <div className="font-semibold text-white">MLOps Reliability: Shipping GenAI Changes Safely</div>
+                  <div className="text-sm text-purple-200 mb-1">GenAI</div>
+                  <div className="font-semibold text-white">LLM Eval Playbooks: Ship Faster Without Surprises</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
-                  <div className="font-semibold text-white">Reliable Real‑Time Data Pipelines in 2025</div>
+                  <div className="text-sm text-blue-200 mb-1">GenAI</div>
+                  <div className="font-semibold text-white">Policy Tests for GenAI: Guardrails That Scale</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Product Analytics</div>
-                  <div className="font-semibold text-white">North‑Star Metrics: A Field‑Tested Framework</div>
+                  <div className="text-sm text-cyan-200 mb-1">Data Engineering</div>
+                  <div className="font-semibold text-white">Real‑Time Feature Stores: Patterns for Low‑Latency ML</div>
                 </div>
               </div>
             </div>
