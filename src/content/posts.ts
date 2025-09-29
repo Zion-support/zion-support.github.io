@@ -10,7 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
     slug: "ai-incident-command-center-2026",
     title: "AI Incident Command Center 2026: Faster Containment, Fewer Surprises",
     description: "Budgeted actions, live traces, and rollback‑ready playbooks for <60s containment.",
@@ -33,34 +32,20 @@ export const posts: BlogPost[] = [
     title: "Agent Blue‑Green Releases 2026: Safe, Reversible Automation",
     description: "Ship agent changes with policy tests, budgeted actions, and instant rollback toggles.",
     category: "GenAI",
-=======
-    slug: "agent-release-checklists-2025",
-    title: "Agent Release Checklists: Ship Fast Without Surprises",
-    description: "Budget risky actions, add PR checks, and bake rollback triggers into every agent release.",
-    category: "AI Engineering",
->>>>>>> cursor/create-and-deploy-new-content-6afb
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read"
   },
   {
-<<<<<<< HEAD
     slug: "edge-llm-safety-caching-2026",
     title: "Edge LLM Safety Caching 2026: Sub‑100ms Prompts with Guardrails",
     description: "Tiered KV, signed configs, and inline filters that keep prompts fast and safe at the edge.",
     category: "Architecture",
-=======
-    slug: "kpi-linked-canaries-2025",
-    title: "KPI‑Linked Canaries: Evals That Protect Velocity",
-    description: "Wire online canaries to KPIs so teams ship weekly without regressions or surprise costs.",
-    category: "AI Governance",
->>>>>>> cursor/create-and-deploy-new-content-6afb
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "6 min read"
   },
   {
-<<<<<<< HEAD
     slug: "platform-slo-guardrails-2026",
     title: "Platform SLO Guardrails 2026: Scorecards that Prevent Regressions",
     description: "Wire golden paths to SLOs with pre‑merge policy tests and live canaries that keep teams fast.",
@@ -187,8 +172,6 @@ export const posts: BlogPost[] = [
     readTime: "9 min read"
   },
   {
-=======
->>>>>>> cursor/create-and-deploy-new-content-6afb
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
     description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
@@ -783,65 +766,3 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   }
 ];
-<<<<<<< HEAD
-
-// Newly added content (auto-advertised on Home via latest sort)
-posts.push(
-  {
-    slug: "ai-threat-hunting-with-llms-2026",
-    title: "AI Threat Hunting with LLMs 2026: Signals, Sandboxes, and Speed",
-    description: "Operational playbooks to augment analysts with safe LLM tooling, live traces, and budgeted actions.",
-    category: "Security",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "llm-production-runbooks-2026",
-    title: "LLM Production Runbooks 2026: Rollbacks, Budgets, and Canary Evals",
-    description: "Battle-tested runbooks for safe LLM releases—risk budgets, rollback triggers, and KPI-linked canaries.",
-    category: "AI Operations",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "8 min read"
-  },
-  // Additional fresh content (conflict resolved)
-  {
-    slug: "privacy-first-insights-telemetry-2026",
-    title: "Privacy‑First Insights 2026: DP Telemetry Without PII Risk",
-    description: "Scoped IDs, field‑level redaction, and aggregation windows for signal‑rich product analytics.",
-    category: "Observability",
-    publishedAt: "2025-10-16",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "agent-blue-green-releases-2026",
-    title: "Agent Blue‑Green Releases 2026: Safe, Reversible Automation",
-    description: "Deploy agent updates with canaries, budgeted tool actions, and trace‑driven rollbacks.",
-    category: "GenAI",
-    publishedAt: "2025-10-16",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "ai-platform-scorecards-roi-2026",
-    title: "AI Platform Scorecards 2026: Proving ROI with Leading Indicators",
-    description: "Link platform telemetry to adoption, retention, and revenue with actionable scorecards.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-10",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "production-rag-quality-budgets-2026",
-    title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
-    description: "Keep answers accurate and on‑budget with freshness windows, async warmups, and layered evals.",
-    category: "GenAI",
-    publishedAt: "2025-10-10",
-    featured: true,
-    readTime: "9 min read"
-  }
-);
-=======
->>>>>>> cursor/create-and-deploy-new-content-6afb
