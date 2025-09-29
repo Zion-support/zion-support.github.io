@@ -29,6 +29,11 @@ class AccessibilityEnhancer {
   private mutationObserver?: MutationObserver;
   private performanceObserver?: PerformanceObserver;
 
+  // Event handler placeholders to match removeEventListener references
+  private handleKeyDown(_event: KeyboardEvent): void {}
+  private handleFocusIn(_event: FocusEvent): void {}
+  private handleFocusOut(_event: FocusEvent): void {}
+
   constructor() {
     this.config = this.getDefaultConfig();
   }
