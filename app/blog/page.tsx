@@ -54,6 +54,24 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="AI Evaluation Scorecards 2026: Measure Quality, Cost, and Risk"
+            excerpt="Standardize evals across groundedness, safety, latency, and unit cost with actionable scorecards."
+            date="September 29, 2026"
+            category="Governance"
+            readTime="12 min"
+            image="🧮"
+            href="/blog/ai-evaluation-scorecards-2026"
+          />
+          <BlogPost
+            title="AI Agent Security 2026: Hardening Autonomous Systems"
+            excerpt="Layered defenses for agents: policies, isolation, sandboxing, SBOM validation, and continuous guardrails."
+            date="September 29, 2026"
+            category="Security"
+            readTime="14 min"
+            image="🛡️"
+            href="/blog/ai-agent-security-2026"
+          />
+          <BlogPost
             title="AI Data Privacy 2026: Practical Compliance and Privacy-Preserving AI"
             excerpt="Blueprint for privacy-by-design with PETs, consent, minimization, redaction, and audits."
             date="September 29, 2025"

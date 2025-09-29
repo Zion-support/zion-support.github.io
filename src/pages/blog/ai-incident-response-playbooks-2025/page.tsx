@@ -13,7 +13,7 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
             <span>7 min read</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            AI Incident Response Playbooks: Contain in <60s with Confidence
+            AI Incident Response Playbooks: Contain in &lt;60s with Confidence
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
             From detections to safe actions: policy‑tested playbooks and rollback‑ready automations. 
