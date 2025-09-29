@@ -90,6 +90,32 @@ const contentItems: ContentItem[] = [
     ]
   },
   {
+    id: 'ai-reliable-rag-2025',
+    title: 'Reliable RAG 2025: Production Patterns for Grounded Answers',
+    excerpt: 'Reduce hallucinations and latency with hardened RAG patterns: contracts, caching, routing, and evals.',
+    type: 'article',
+    readTime: '9 min read',
+    category: 'AI Platforms',
+    href: '/blog/ai-reliable-rag-2025',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '30–70%', label: 'Cost Reduction' },
+      { value: '<200ms', label: 'P95 Latency' }
+    ]
+  },
+  {
+    id: 'platform-engineering-scorecards-2026',
+    title: 'Platform Engineering Scorecards 2026: Measurable DevEx & Reliability',
+    excerpt: 'Define and track platform scorecards: golden paths, SLO coverage, lead time, and cost per unit.',
+    type: 'article',
+    readTime: '10 min read',
+    category: 'Strategy',
+    href: '/blog/platform-engineering-scorecards-2026',
+    featured: true,
+    publishedDate: '2025-09-29'
+  },
+  {
     id: 'ai-roadmaps-2026',
     title: 'AI Roadmaps 2026: What to Build Next and Why',
     excerpt: 'A pragmatic roadmap for 2026 across CX, ops, and platforms with high-ROI bets.',
@@ -423,14 +449,15 @@ export default function ContentShowcase({
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {displayedItems.map((item, index) => (
-            <ContentCard
-              key={item.id}
-              item={item}
-              isActive={index === currentIndex}
-              showMetrics={showMetrics}
-              getTypeColor={getTypeColor}
-              getTypeIcon={getTypeIcon}
-            />
+            <div key={item.id}>
+              <ContentCard
+                item={item}
+                isActive={index === currentIndex}
+                showMetrics={showMetrics}
+                getTypeColor={getTypeColor}
+                getTypeIcon={getTypeIcon}
+              />
+            </div>
           ))}
         </div>
 

@@ -33,6 +33,8 @@ import {
   Latest2026ContentBanner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
+import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
@@ -55,9 +57,9 @@ export default function HomePage() {
             <span>✨ New on the blog:</span>
             <Link href="/blog/platform-engineering-scorecards-2026" className="underline hover:text-yellow-200">Platform Scorecards 2026</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-cybersecurity-automation-2025" className="underline hover:text-yellow-200">AI Cybersecurity Automation</Link>
+            <Link href="/blog/ai-reliable-rag-2025" className="underline hover:text-yellow-200">Reliable RAG 2025</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/edge-ai-blueprint-2026" className="underline hover:text-yellow-200">Edge AI Blueprint 2026</Link>
+            <Link href="/blog/ai-roadmaps-2026" className="underline hover:text-yellow-200">AI Roadmaps 2026</Link>
           </div>
           <Link
             href="/blog"

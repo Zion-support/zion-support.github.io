@@ -2,6 +2,62 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
+  title: 'Platform Engineering Scorecards 2026: Measurable DevEx & Reliability',
+  description:
+    'Define and track scorecards for platform maturity: golden paths, SLO coverage, lead time, change fail %, and infra cost/unit.',
+};
+
+export default function PlatformEngineeringScorecards2026Page() {
+  return (
+    <div className="animate-fade-in">
+      <div className="text-center mb-12 py-12 bg-gradient-to-br from-blue-50 to-teal-50">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          Platform Engineering Scorecards 2026: Measurable DevEx & Reliability
+        </h1>
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          Define and track scorecards for platform maturity: golden paths, SLO coverage, lead time, change fail %, and infra cost/unit.
+        </p>
+        <div className="mt-4 text-sm text-gray-500">September 29, 2025 • 10 min read • Strategy</div>
+      </div>
+
+      <div className="max-w-3xl mx-auto px-4 prose prose-blue">
+        <p>
+          Platform teams thrive when they measure what matters. In 2026, high-performing organizations align product, platform,
+          and SRE with a shared scorecard that makes developer experience and reliability visible and improvable.
+        </p>
+
+        <h2>Suggested Scorecard Metrics</h2>
+        <ul>
+          <li><strong>Golden Path Coverage:</strong> % of common workflows with paved paths.</li>
+          <li><strong>SLO Coverage:</strong> % of critical services with SLOs and error budgets.</li>
+          <li><strong>Lead Time for Change:</strong> PR open to prod deploy (P50/P95).</li>
+          <li><strong>Change Failure Rate:</strong> % of deploys causing incidents or rollbacks.</li>
+          <li><strong>Infra Cost per Unit:</strong> dollars per request, per seat, or per transaction.</li>
+        </ul>
+
+        <h2>Operating Rhythm</h2>
+        <p>
+          Review the scorecard weekly with engineering leadership. Fund golden path gaps, remove toil, and publish a quarterly
+          DevEx roadmap tied to business outcomes.
+        </p>
+
+        <div className="mt-10 flex gap-3">
+          <Link href="/blog" className="inline-block bg-teal-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-teal-700">
+            Back to Blog
+          </Link>
+          <Link href="/blog/ai-roadmaps-2026" className="inline-block border-2 border-teal-600 text-teal-600 px-5 py-3 rounded-lg font-semibold hover:bg-teal-600 hover:text-white">
+            Next: AI Roadmaps 2026
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+import React from 'react';
+import Link from 'next/link';
+
+export const metadata = {
   title: 'Platform Engineering Scorecards 2026: From Golden Paths to Outcomes',
   description:
     'Measure adoption, golden-path TTFX, SLOs, and shipped value. A pragmatic scorecard system engineers actually use.',
