@@ -49,6 +49,8 @@ import {
   AutonomousOperationsSuccessBanner,
   NewContentShowcaseBanner2026
 } from '../components/NewContent2026Banners';
+import { NewContent2026PromotionalBanners } from '../components/NewContent2026PromotionalBanners';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -64,6 +66,9 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
+      
       {/* New Content Promo Strip */}
       <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
@@ -77,7 +82,7 @@ export default function HomePage() {
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-foundation-models-2026" className="underline hover:text-yellow-200">Foundation Models Playbook</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-autonomous-enterprise-transformation-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
+            <Link href="/case-studies/ai-transformation-mega-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
           </div>
           <Link
             href="/blog"
@@ -88,6 +93,7 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <NewContent2026PromotionalBanners />
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
       <AIEthicsSuccessBanner />
