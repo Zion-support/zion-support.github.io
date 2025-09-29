@@ -34,11 +34,14 @@ import {
   SustainabilityCaseStudyBanner,
   QuantumOptimizationBanner
 } from '../components/PromotionalBanner';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import LatestAIInnovations2026Banner from '../components/LatestAIInnovations2026Banner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+import AIROICalculator from '../components/AIROICalculator';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -73,6 +76,8 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <Revolutionary2026ContentBanner />
+      <LatestAIInnovations2026Banner />
       <NewContent2026Banner />
       <AIAgentOrchestrationBanner />
       <AISustainabilityBanner />
@@ -85,8 +90,6 @@ export default function HomePage() {
       <EnterpriseTransformationSuccessBanner />
       <HealthcareTransformationBanner />
       <NewContentShowcaseBanner />
-      <AITrends2025Banner />
-      <NewServicesShowcaseBanner />
       <AIRoadmapsBanner />
       <AIFinOpsBanner />
       <AutonomousAgentsBanner />
