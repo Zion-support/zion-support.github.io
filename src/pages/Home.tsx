@@ -240,7 +240,11 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<<<<<<< HEAD
             New: Agent Safety Budgets, Privacy‑First Telemetry, Cost‑Aware Routing — read now
+=======
+            New: On‑Device Agents, GenAI Budgets, Secure Tools Marketplace — read now
+>>>>>>> cursor/create-and-deploy-new-content-de07
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
