@@ -136,16 +136,6 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-<<<<<<< HEAD
-          title="New: Autonomous Runbooks, Privacy‑First Flags, Platform ROI Quickstart"
-          description="Ship safe automation with budgeted runbooks, privacy‑preserving rollouts, and ROI scorecards."
-          ctaText="Explore new content"
-          ctaLink="/blog"
-          featuredItems={[
-            { title: "Autonomous Incident Runbooks 2025", category: "AI Operations", link: "/blog/ai-autonomous-incident-runbooks-2025" },
-            { title: "Privacy‑First Feature Flags 2025", category: "Architecture", link: "/blog/privacy-first-feature-flags-2025" },
-            { title: "Platform ROI Scorecards Quickstart", category: "AI Strategy", link: "/blog/platform-roi-scorecards-quickstart-2025" }
-=======
           title="New: Reliable RAG Ops, Platform KPIs, AI Incident Budgets"
           description="Keep RAG fresh, prove platform ROI, and contain incidents under 60s—safely."
           ctaText="Explore new content"
@@ -160,7 +150,6 @@ const Home = () => {
             { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
             { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" },
             { title: "Golden Paths ROI 2026", category: "Platform Engineering", link: "/blog/golden-paths-roi-2026" }
->>>>>>> origin/main
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
