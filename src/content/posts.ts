@@ -199,6 +199,7 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "9 min read",
   },
+  // Additional curated posts (resolved from merge)
   {
     slug: "platform-engineering-blueprint-2025",
     title: "A Practical Blueprint for Platform Engineering in 2025",
