@@ -253,7 +253,10 @@ export default function App(): React.JSX.Element {
                 ✕
               </button>
             </div>
-            <AIPerformanceDashboard />
+            <AIPerformanceDashboard 
+              isVisible={showAIDashboard}
+              onClose={() => setShowAIDashboard(false)}
+            />
           </div>
         </div>
       )}
@@ -271,7 +274,15 @@ export default function App(): React.JSX.Element {
                 ✕
               </button>
             </div>
-            <SEOOptimizer />
+            <SEOOptimizer 
+              seoData={{
+                title: "Zion Tech Group - Advanced AI and IT Solutions",
+                description: "Leading provider of AI and IT solutions",
+                keywords: "AI, IT, solutions, technology",
+                canonical: window.location.href,
+                ogImage: "/og-image.jpg"
+              }}
+            />
           </div>
         </div>
       )}
@@ -289,7 +300,10 @@ export default function App(): React.JSX.Element {
                 ✕
               </button>
             </div>
-            <ComprehensiveSystemDashboard />
+            <ComprehensiveSystemDashboard 
+              isVisible={showComprehensiveDashboard}
+              onClose={() => setShowComprehensiveDashboard(false)}
+            />
           </div>
         </div>
       )}

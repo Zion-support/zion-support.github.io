@@ -162,7 +162,7 @@ const PerformanceTab: React.FC<{ metrics: PerformanceMetrics | null; onOptimize:
         </div>
         <div className="bg-gray-50 p-4 rounded-lg">
           <h4 className="font-medium">Resource Usage</h4>
-          <p className="text-sm text-gray-600">Memory: {metrics.memoryUsage?.toFixed(1)}MB | CPU: {metrics.cpuUsage?.toFixed(1)}%</p>
+          <p className="text-sm text-gray-600">Memory: {metrics.memoryUsage?.toFixed(1)}MB | Memory Used: {metrics.memory?.used?.toFixed(1)}MB</p>
         </div>
       </div>
     ) : (
@@ -178,7 +178,7 @@ const AccessibilityTab: React.FC<{ metrics: AccessibilityMetrics | null }> = ({ 
       <div className="bg-green-50 p-4 rounded-lg">
         <h4 className="font-medium text-green-800">✓ Accessibility Check Passed</h4>
         <p className="text-green-600">Score: {metrics.score}/100</p>
-        <p className="text-sm text-green-600 mt-2">Issues found: {metrics.issues.length}</p>
+        <p className="text-sm text-green-600 mt-2">Issues found: {metrics.totalIssues || 0}</p>
       </div>
     ) : (
       <div className="text-center py-8 text-gray-500">Loading accessibility metrics...</div>

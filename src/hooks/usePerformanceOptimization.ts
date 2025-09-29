@@ -12,6 +12,10 @@ interface PerformanceOptimizationOptions {
   enableRenderTracking?: boolean;
   enableLazyLoading?: boolean;
   debounceDelay?: number;
+  enablePreloading?: boolean;
+  enableResourceHints?: boolean;
+  enableCriticalCSS?: boolean;
+  enableImageOptimization?: boolean;
 }
 
 export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {

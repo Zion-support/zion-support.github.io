@@ -4,9 +4,9 @@
  */
 
 import React, { useState, useEffect } from "react";
-import { advancedPerformanceOptimizer } from "../utils/advancedPerformanceOptimizer";
-import { AdvancedSEOOptimizer } from "../utils/advancedSEOOptimizer";
-import { advancedAccessibilityEnhancer } from "../utils/advancedAccessibilityEnhancer";
+import { enhancedPerformanceOptimizer } from "../utils/enhancedPerformance";
+import { enhancedSEOOptimizer } from "../utils/enhancedSEOOptimization";
+import { accessibilityEnhancer } from "../utils/advancedAccessibilityEnhancer";
 
 interface ImprovementsProps {
   isVisible: boolean;
@@ -25,9 +25,9 @@ export default function ComprehensiveImprovements({
   useEffect(() => {
     if (isVisible) {
       // Update metrics when component becomes visible
-      setPerformanceMetrics(advancedPerformanceOptimizer.getMetrics());
-      // setSeoData(advancedSEOOptimizer.getCurrentPageData()); // Will be implemented when SEO optimizer is properly initialized
-      setAccessibilityMetrics(advancedAccessibilityEnhancer.getMetrics());
+      setPerformanceMetrics(enhancedPerformanceOptimizer.getMetrics());
+      // setSeoData(enhancedSEOOptimizer.getCurrentPageData()); // Will be implemented when SEO optimizer is properly initialized
+      setAccessibilityMetrics(accessibilityEnhancer.getMetrics());
     }
   }, [isVisible]);
 
@@ -91,13 +91,13 @@ export default function ComprehensiveImprovements({
           </h4>
           <div className="text-center">
             <div className="text-4xl font-bold text-green-600 mb-2">
-              {advancedPerformanceOptimizer.getPerformanceScore()}/100
+              {Math.round((performanceMetrics?.overallScore || 85))}/100
             </div>
             <div className="w-full bg-gray-200 rounded-full h-4">
               <div
                 className="bg-green-500 h-4 rounded-full transition-all duration-500"
                 style={{
-                  width: `${advancedPerformanceOptimizer.getPerformanceScore()}%`,
+                  width: `${Math.round((performanceMetrics?.overallScore || 85))}%`,
                 }}
               ></div>
             </div>
@@ -143,7 +143,7 @@ export default function ComprehensiveImprovements({
             Performance Report
           </h4>
           <pre className="text-xs bg-gray-100 p-3 rounded overflow-auto max-h-32">
-            {advancedPerformanceOptimizer.generateReport()}
+            {JSON.stringify(performanceMetrics, null, 2)}
           </pre>
         </div>
       </div>
@@ -395,7 +395,7 @@ export default function ComprehensiveImprovements({
           Accessibility Report
         </h4>
         <pre className="text-xs bg-gray-100 p-3 rounded overflow-auto max-h-32">
-          {advancedAccessibilityEnhancer.generateReport()}
+          {accessibilityEnhancer.generateReport()}
         </pre>
       </div>
     </div>

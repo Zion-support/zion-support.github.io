@@ -319,20 +319,6 @@ class EnhancedPerformanceMonitor {
     console.log("Enhanced Performance Monitor stopped");
   }
 
-  private createAlert(alert: {
-    type: 'critical' | 'warning' | 'info';
-    title: string;
-    description: string;
-    impact: 'high' | 'medium' | 'low';
-    action: string;
-  }): void {
-    console.warn(`Performance Alert [${alert.type.toUpperCase()}]: ${alert.title}`, {
-      description: alert.description,
-      impact: alert.impact,
-      action: alert.action
-    });
-  }
-
   public cleanup(): void {
     this.stop();
   }
