@@ -49,6 +49,7 @@ import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -245,6 +246,9 @@ export default function HomePage() {
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
+      
+      {/* Enhanced Content Showcase */}
+      <EnhancedContentShowcase />
       
       {/* Interactive Content Hub */}
       <InteractiveContentShowcase />
