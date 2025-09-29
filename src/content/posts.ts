@@ -383,6 +383,24 @@ export const posts: BlogPost[] = [
   }
   ,
   {
+    slug: "agent-evals-scorecards-2026",
+    title: "Agent Evals 2026: Scorecards That Predict Outcomes",
+    description: "Design online evals and KPI‑linked scorecards that correlate with revenue and CSAT.",
+    category: "GenAI",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-preserving-agents-2026",
+    title: "Privacy‑Preserving Agents: Scoped IDs, Redaction, and On‑Device Caches",
+    description: "Ship assistant workflows that are insight‑rich without PII risk using scoped IDs and local caches.",
+    category: "AI Security",
+    publishedAt: "2025-10-13",
+    featured: false,
+    readTime: "7 min read"
+  },
+  {
     slug: "agentic-workflows-blueprint-2026",
     title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",
     description: "Design reliable multi‑tool agents with deterministic tools, live traces, and risk budgets.",

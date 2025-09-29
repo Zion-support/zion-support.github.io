@@ -33,6 +33,38 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+    id: "agent-evals-scorecards-2026",
+    slug: "agent-evals-scorecards-2026",
+    title: "Agent Evals 2026: Scorecards That Predict Outcomes",
+    description: "Online evals wired to KPIs—scorecards that correlate with revenue, CSAT, and retention.",
+    excerpt: "A practical playbook for evals that protect velocity and predict business outcomes.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "GenAI",
+    tags: ["Evals", "Scorecards", "KPIs"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/agent-evals-scorecards-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-preserving-agents-2026",
+    slug: "privacy-preserving-agents-2026",
+    title: "Privacy‑Preserving Agents: Scoped IDs, Redaction, and On‑Device Caches",
+    description: "Build assistants that keep insights high and PII risk low with scoped identifiers and local caches.",
+    excerpt: "Implement privacy by design for agent workflows without losing observability.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Security",
+    tags: ["Privacy", "Agents", "Security"],
+    featured: false,
+    readTime: "7 min read",
+    image: "/images/privacy-preserving-agents-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "platform-kpis-2026",
     slug: "platform-kpis-2026",
     title: "Platform KPIs 2026: Adoption, Golden Paths, and SLOs",
