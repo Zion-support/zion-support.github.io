@@ -1,8 +1,6 @@
 import {
   ArrowRight,
   Award,
-  BookOpen,
-  Brain,
   CheckCircle,
   Globe,
   Rocket,
@@ -12,24 +10,23 @@ import {
   Target,
   TrendingUp,
   Users,
-  Zap,
+  Zap
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import LatestContentBanner from "../components/LatestContentBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
-import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
+import LatestContentBanner from "../components/LatestContentBanner";
+import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import TrendingContentBanner from "../components/TrendingContentBanner";
-import EnhancedServicesShowcase from "../components/EnhancedServicesShowcase";
 import { latestInsights } from "../content/insights";
-import { newInsights, featuredInsights } from "../content/new-insights";
-import LatestInsights from "../components/LatestInsights";
+import { featuredInsights, newInsights } from "../content/new-insights";
+import posts from "../content/posts";
 
 const Home = () => {
   return (

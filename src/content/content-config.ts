@@ -382,9 +382,9 @@ export const services: Service[] = [
 export const promotionalBanners: PromotionalBanner[] = [
   {
     id: 'new-blog-banner',
-    message: '🔥 New: AI Revolution 2025 Guide - Complete Business Transformation Strategy',
+    message: '🔥 New: AI Platform Engineering 2025 + Secure ML Supply Chain',
     ctaText: 'Read Now',
-    ctaLink: '/blog/ai-revolution-2025',
+    ctaLink: '/blog/ai-platform-engineering-2025',
     backgroundColor: 'bg-gradient-to-r from-orange-600 to-red-600',
     textColor: 'text-white',
     showClose: true,
