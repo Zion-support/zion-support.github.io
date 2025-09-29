@@ -188,7 +188,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-01-10",
     featured: false,
     readTime: "9 min read",
-<<<<<<< HEAD
   },
   {
     slug: "platform-engineering-blueprint-2025",
@@ -330,14 +329,11 @@ export const posts: BlogPost[] = [
     slug: "ai-ethics-responsible-deployment",
     title: "AI Ethics and Responsible Deployment: Building Trust in AI Systems",
     description:
-      "Essential guidelines for deploying AI systems responsibly, ensuring fairness, transparency, and accountability in your AI initiatives.",
+    	  "Essential guidelines for deploying AI systems responsibly, ensuring fairness, transparency, and accountability in your AI initiatives.",
     category: "AI Governance",
     publishedAt: "2025-01-21",
     featured: false,
     readTime: "9 min read",
   },
-=======
-  }
->>>>>>> feat/new-content-and-promo
 ];
 
