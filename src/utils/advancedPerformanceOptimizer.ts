@@ -447,6 +447,7 @@ class AdvancedPerformanceOptimizer {
   }
 
   /**
+  /**
    * Generate a human-readable performance report
    */
   public generateReport(): string {
@@ -482,5 +483,5 @@ class AdvancedPerformanceOptimizer {
 
 // Export singleton instance
 export const advancedPerformanceOptimizer = new AdvancedPerformanceOptimizer();
-export default AdvancedPerformanceOptimizer;
 export { AdvancedPerformanceOptimizer };
+export default AdvancedPerformanceOptimizer;
