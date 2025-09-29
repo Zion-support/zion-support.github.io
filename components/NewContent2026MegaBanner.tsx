@@ -1,220 +1,186 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, Star, Zap } from 'lucide-react';
+import { ArrowRight, Star, Zap, TrendingUp, Users } from 'lucide-react';
 
 export default function NewContent2026MegaBanner() {
   return (
-    <section className="py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden relative">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full -translate-y-48 translate-x-48"></div>
-        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-white/5 rounded-full -translate-y-32"></div>
+    <section className="relative py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-black opacity-20"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
       </div>
       
-      <div className="max-w-6xl mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-sm font-semibold mb-6">
+      <div className="relative max-w-6xl mx-auto px-4">
+        <div className="text-center mb-16">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-full text-sm font-bold mb-6">
             <Star className="w-4 h-4" />
-            <span>NEW 2026 CONTENT</span>
+            NEW 2026 BREAKTHROUGH CONTENT
             <Star className="w-4 h-4" />
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h2 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Revolutionary AI Content
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
-              for 2026
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
+              Just Released
             </span>
           </h2>
           
-          <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto leading-relaxed">
-            Discover the future of AI with our comprehensive collection of cutting-edge 
-            articles, case studies, and implementation guides that will transform your business.
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Discover cutting-edge AI innovations, $25M+ ROI case studies, and breakthrough technologies 
+            that are transforming industries in 2026
           </p>
         </div>
 
         {/* Featured Content Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {/* Mega Trends Article */}
-          <Link href="/blog/ai-2026-mega-trends" className="group">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
-                  <TrendingUp className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <div className="text-sm font-semibold text-yellow-300">FEATURED ARTICLE</div>
-                  <div className="text-xs opacity-75">28 min read</div>
-                </div>
+        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+          {/* Autonomous Enterprise */}
+          <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 hover:scale-105">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center">
+                <Zap className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-300 transition-colors">
-                AI Mega Trends 2026: The Future of Enterprise Intelligence
-              </h3>
-              <p className="text-sm opacity-90 mb-4">
-                Discover the 10 mega trends shaping AI in 2026. From autonomous systems to quantum computing.
-              </p>
-              <div className="flex items-center justify-between">
-                <div className="flex gap-4 text-sm">
-                  <div className="text-center">
-                    <div className="font-bold">$12T</div>
-                    <div className="text-xs opacity-75">Market Value</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="font-bold">45%</div>
-                    <div className="text-xs opacity-75">Productivity</div>
-                  </div>
-                </div>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <div>
+                <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">BREAKTHROUGH</span>
               </div>
             </div>
-          </Link>
-
-          {/* Mega Success Case Study */}
-          <Link href="/case-studies/ai-transformation-mega-success-2026" className="group">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <div className="text-sm font-semibold text-yellow-300">FEATURED CASE STUDY</div>
-                  <div className="text-xs opacity-75">Fortune 500</div>
-                </div>
+            <h3 className="text-2xl font-bold mb-3 group-hover:text-yellow-400 transition-colors">
+              AI Autonomous Enterprise 2026
+            </h3>
+            <p className="text-blue-100 mb-6">
+              Complete guide to transforming your enterprise with autonomous AI systems achieving $25M+ ROI and 95% automation.
+            </p>
+            <div className="flex gap-4 mb-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-green-400">$25M</div>
+                <div className="text-xs text-blue-200">ROI</div>
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-300 transition-colors">
-                AI Transformation Mega Success 2026: $15M ROI in 12 Months
-              </h3>
-              <p className="text-sm opacity-90 mb-4">
-                See how a Fortune 500 company achieved unprecedented success through comprehensive AI transformation.
-              </p>
-              <div className="flex items-center justify-between">
-                <div className="flex gap-4 text-sm">
-                  <div className="text-center">
-                    <div className="font-bold">$15M</div>
-                    <div className="text-xs opacity-75">ROI</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="font-bold">95%</div>
-                    <div className="text-xs opacity-75">Automation</div>
-                  </div>
-                </div>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <div className="text-center">
+                <div className="text-2xl font-bold text-blue-400">95%</div>
+                <div className="text-xs text-blue-200">Automation</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-400">300%</div>
+                <div className="text-xs text-blue-200">Productivity</div>
               </div>
             </div>
-          </Link>
+            <Link
+              href="/blog/ai-autonomous-enterprise-transformation-2026"
+              className="inline-flex items-center bg-gradient-to-r from-green-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              Read Guide
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </div>
 
-          {/* AI Agent Orchestration */}
-          <Link href="/blog/ai-agent-orchestration-2026" className="group">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">🤖</span>
-                </div>
-                <div>
-                  <div className="text-sm font-semibold text-yellow-300">TECHNICAL GUIDE</div>
-                  <div className="text-xs opacity-75">22 min read</div>
-                </div>
+          {/* Quantum Computing */}
+          <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 hover:scale-105">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center">
+                <TrendingUp className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-300 transition-colors">
-                AI Agent Orchestration 2026: Multi-Agent System Architecture
-              </h3>
-              <p className="text-sm opacity-90 mb-4">
-                Master multi-agent systems with 95% automation efficiency and $5M+ ROI through advanced orchestration.
-              </p>
-              <div className="flex items-center justify-between">
-                <div className="flex gap-4 text-sm">
-                  <div className="text-center">
-                    <div className="font-bold">95%</div>
-                    <div className="text-xs opacity-75">Automation</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="font-bold">$5M+</div>
-                    <div className="text-xs opacity-75">ROI</div>
-                  </div>
-                </div>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <div>
+                <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold">REVOLUTIONARY</span>
               </div>
             </div>
-          </Link>
-        </div>
-
-        {/* Additional Content Showcase */}
-        <div className="grid md:grid-cols-4 gap-6 mb-12">
-          <Link href="/blog/ai-sustainability-green-tech-2026" className="group">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 border border-white/10">
-              <div className="text-2xl mb-3">🌱</div>
-              <h4 className="font-semibold text-sm mb-2 group-hover:text-yellow-300 transition-colors">
-                AI Sustainability & Green Tech 2026
-              </h4>
-              <p className="text-xs opacity-75 mb-3">80% energy reduction, $2M+ savings</p>
-              <div className="text-xs text-yellow-300 font-semibold">Read More →</div>
+            <h3 className="text-2xl font-bold mb-3 group-hover:text-yellow-400 transition-colors">
+              AI Quantum Hybrid Computing 2026
+            </h3>
+            <p className="text-blue-100 mb-6">
+              Revolutionary quantum-classical hybrid systems delivering 1000x performance improvements in AI optimization and machine learning.
+            </p>
+            <div className="flex gap-4 mb-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-400">1000x</div>
+                <div className="text-xs text-blue-200">Faster</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-indigo-400">95%</div>
+                <div className="text-xs text-blue-200">Accuracy</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-blue-400">$50M+</div>
+                <div className="text-xs text-blue-200">Savings</div>
+              </div>
             </div>
-          </Link>
+            <Link
+              href="/blog/ai-quantum-hybrid-computing-2026"
+              className="inline-flex items-center bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              Explore Quantum AI
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </div>
 
-          <Link href="/blog/ai-quantum-computing-2026" className="group">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 border border-white/10">
-              <div className="text-2xl mb-3">⚛️</div>
-              <h4 className="font-semibold text-sm mb-2 group-hover:text-yellow-300 transition-colors">
-                AI Quantum Computing 2026
-              </h4>
-              <p className="text-xs opacity-75 mb-3">1000x faster optimization</p>
-              <div className="text-xs text-yellow-300 font-semibold">Read More →</div>
+          {/* Success Story */}
+          <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 hover:scale-105">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center">
+                <Users className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold">FEATURED</span>
+              </div>
             </div>
-          </Link>
-
-          <Link href="/case-studies/ai-sustainability-transformation-2026" className="group">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 border border-white/10">
-              <div className="text-2xl mb-3">📊</div>
-              <h4 className="font-semibold text-sm mb-2 group-hover:text-yellow-300 transition-colors">
-                AI Sustainability Transformation
-              </h4>
-              <p className="text-xs opacity-75 mb-3">$10M ROI, 100% carbon neutral</p>
-              <div className="text-xs text-yellow-300 font-semibold">Read More →</div>
+            <h3 className="text-2xl font-bold mb-3 group-hover:text-yellow-400 transition-colors">
+              $25M ROI Success Story
+            </h3>
+            <p className="text-blue-100 mb-6">
+              See how a Fortune 500 company achieved complete autonomous operations with $25M ROI, 95% automation, and 300% productivity gains.
+            </p>
+            <div className="flex gap-4 mb-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-orange-400">$25M</div>
+                <div className="text-xs text-blue-200">ROI</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-red-400">95%</div>
+                <div className="text-xs text-blue-200">Automation</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-400">18</div>
+                <div className="text-xs text-blue-200">Months</div>
+              </div>
             </div>
-          </Link>
-
-          <Link href="/case-studies/ai-quantum-optimization-2026" className="group">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 border border-white/10">
-              <div className="text-2xl mb-3">🚀</div>
-              <h4 className="font-semibold text-sm mb-2 group-hover:text-yellow-300 transition-colors">
-                AI Quantum Optimization 2026
-              </h4>
-              <p className="text-xs opacity-75 mb-3">1000x speed improvement</p>
-              <div className="text-xs text-yellow-300 font-semibold">Read More →</div>
-            </div>
-          </Link>
+            <Link
+              href="/case-studies/ai-autonomous-enterprise-success-2026"
+              className="inline-flex items-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              View Case Study
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="inline-flex items-center gap-4 mb-6">
-            <div className="w-16 h-1 bg-gradient-to-r from-yellow-300 to-orange-300 rounded-full"></div>
-            <span className="text-lg font-semibold">Explore All Content</span>
-            <div className="w-16 h-1 bg-gradient-to-r from-orange-300 to-yellow-300 rounded-full"></div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
+            <p className="text-xl text-blue-100 mb-6">
+              Join thousands of companies already using our AI solutions to achieve breakthrough results
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                📞 Call +1 302 464 0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-colors"
+              >
+                ✉️ Get Free Consultation
+              </a>
+            </div>
+            <div className="mt-4 text-sm text-blue-200">
+              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>⏰ Available 24/7 for urgent consultations</p>
+            </div>
           </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/blog"
-              className="inline-flex items-center bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg"
-            >
-              <span className="w-5 h-5 mr-2">📚</span>
-              View All Articles
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              href="/case-studies"
-              className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 hover:scale-105"
-            >
-              <span className="w-5 h-5 mr-2">📊</span>
-              View All Case Studies
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-          </div>
-          
-          <p className="text-sm mt-4 opacity-75">
-            Join 10,000+ professionals who trust our AI insights and implementation guides
-          </p>
         </div>
       </div>
     </section>

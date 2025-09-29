@@ -44,6 +44,8 @@ import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
+import InteractiveContentRecommendation2026 from '../components/InteractiveContentRecommendation2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -263,7 +265,13 @@ export default function HomePage() {
       {/* Interactive Content Hub */}
       <InteractiveContentShowcase />
       
+      {/* New 2026 Mega Banner */}
+      <NewContent2026MegaBanner />
+
       {/* Interactive Content Recommendations */}
+      <InteractiveContentRecommendation2026 />
+
+      {/* Legacy Content Recommendations */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
