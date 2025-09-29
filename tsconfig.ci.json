@@ -17,7 +17,7 @@
     "out",
     "__tests__",
     "tests",
-    "src/pages/Home.tsx",
+    "src/pages/**",
     "hooks/usePerformanceMonitor.ts"
   ]
 }
