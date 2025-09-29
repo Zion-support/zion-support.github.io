@@ -1110,43 +1110,6 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   }
 =======
-    id: "ai-chatbot-best-practices",
-    title: "AI Chatbots: Best Practices for Enterprise Implementation",
-    summary:
-      "Design patterns, training strategies, and deployment approaches for enterprise-grade AI chatbots.",
-    category: "AI & Automation",
-    date: "2025-01-17",
-    readMinutes: 6,
-  },
-  {
-    id: "quantum-computing-business-applications",
-    title: "Quantum Computing: Business Applications Beyond Hype",
-    summary:
-      "Realistic assessment of quantum computing applications that are ready for business implementation today.",
-    category: "Quantum Computing",
-    date: "2025-01-16",
-    readMinutes: 7,
-  },
-  {
-    id: "cybersecurity-ai-defense",
-    title: "AI-Powered Cybersecurity: Next-Generation Defense Strategies",
-    summary:
-      "How AI is enhancing cybersecurity through intelligent threat detection, automated response, and predictive analytics.",
-    category: "Cybersecurity",
-    date: "2025-01-16",
-    readMinutes: 8,
-  },
-  {
-    id: "devops-automation-trends",
-    title: "DevOps Automation: Trends Shaping the Future of Software Delivery",
-    summary:
-      "Latest trends in DevOps automation, from AI-powered CI/CD to intelligent infrastructure management.",
-    category: "DevOps",
-    date: "2025-01-15",
-    readMinutes: 6,
-  },
->>>>>>> origin/cursor/create-and-deploy-new-content-6ec2
-=======
     id: "realtime-data-pipelines",
     title: "Building Reliable Real-Time Data Pipelines",
     summary:
@@ -1174,6 +1137,34 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 7,
   },
 >>>>>>> origin/cursor/create-and-deploy-new-content-8cb8
+=======
+    id: "ai-architecture-foundations",
+    title: "AI Architecture Foundations for Reliable Systems",
+    summary:
+      "Core patterns for building robust AI apps: contracts, canaries, fallbacks, and circuit breakers.",
+    category: "AI Engineering",
+    date: "2025-09-29",
+    readMinutes: 7,
+  },
+  {
+    id: "data-contracts-in-practice",
+    title: "Data Contracts in Practice: Stop Silent Breakages",
+    summary:
+      "How to define, validate, and enforce data contracts to keep pipelines healthy and predictable.",
+    category: "Data",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "incident-response-for-ml",
+    title: "Incident Response for ML Systems",
+    summary:
+      "Runbooks, SLOs, and on-call playbooks tailored for data drift, model degradation, and outages.",
+    category: "MLOps",
+    date: "2025-09-29",
+    readMinutes: 8,
+  },
+>>>>>>> origin/cursor/create-and-deploy-new-content-7df4
 ];
 
 export default latestInsights;
