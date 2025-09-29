@@ -187,7 +187,7 @@ export const posts: BlogPost[] = [
     category: "Technology",
     publishedAt: "2025-01-10",
     featured: false,
-  readTime: "9 min read",
+    readTime: "9 min read",
   },
   // Additional curated posts (resolved from merge)
   {
@@ -197,8 +197,8 @@ export const posts: BlogPost[] = [
       "Capabilities, golden paths, and scorecards to accelerate delivery without sacrificing autonomy.",
     category: "Platform Engineering",
     publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "7 min read",
+    featured: true,
+    readTime: "8 min read",
   },
   {
     slug: "genai-evals-realworld",
@@ -207,7 +207,7 @@ export const posts: BlogPost[] = [
       "Patterns for evaluation harnesses, drift detection, and policy testing that scale with usage.",
     category: "GenAI",
     publishedAt: "2025-09-29",
-    featured: false,
+    featured: true,
     readTime: "6 min read",
   },
   {
@@ -218,7 +218,7 @@ export const posts: BlogPost[] = [
     category: "AI Strategy",
     publishedAt: "2025-09-15",
     featured: false,
-    readTime: "5 min read",
+    readTime: "7 min read",
   },
   {
     slug: "cloud-finops-tactics",
@@ -228,7 +228,7 @@ export const posts: BlogPost[] = [
     category: "Cloud FinOps",
     publishedAt: "2025-09-22",
     featured: false,
-    readTime: "6 min read",
+    readTime: "5 min read",
   },
   {
     slug: "zero-trust-for-saas",
@@ -278,7 +278,7 @@ export const posts: BlogPost[] = [
     category: "Data Science",
     publishedAt: "2025-01-12",
     featured: false,
-    readTime: "8 min read",
+    readTime: "7 min read",
   },
   {
     slug: "devops-automation-guide",
@@ -288,7 +288,7 @@ export const posts: BlogPost[] = [
     category: "DevOps",
     publishedAt: "2025-01-10",
     featured: false,
-    readTime: "9 min read",
+    readTime: "8 min read",
   },
   {
     slug: "microservices-architecture",
@@ -298,7 +298,7 @@ export const posts: BlogPost[] = [
     category: "Software Architecture",
     publishedAt: "2025-01-08",
     featured: false,
-    readTime: "9 min read",
+    readTime: "8 min read",
   },
   {
     slug: "ai-ethics-compliance",
@@ -358,77 +358,7 @@ export const posts: BlogPost[] = [
     category: "AI Governance",
     publishedAt: "2025-01-21",
     featured: false,
-  readTime: "9 min read",
-  },
-  {
-    slug: "ai-autonomous-operations-revolution",
-    title: "The AI Autonomous Operations Revolution: Self-Managing Infrastructure",
-    description:
-      "Discover how AI autonomous operations are revolutionizing infrastructure management. Learn about self-healing systems, predictive maintenance, and autonomous scaling.",
-    category: "AI & Automation",
-    publishedAt: "2025-01-20",
-    featured: true,
-    readTime: "11 min read",
-  },
-  {
-    slug: "next-gen-cybersecurity-ai-powered-defense",
-    title: "Next-Generation Cybersecurity: AI-Powered Defense Systems",
-    description:
-      "Explore how AI is revolutionizing cybersecurity with intelligent threat detection, automated response, and predictive security analytics.",
-    category: "Cybersecurity",
-    publishedAt: "2025-01-19",
-    featured: true,
-    readTime: "13 min read",
-  },
-  {
-    slug: "cloud-native-microservices-2025",
-    title: "Cloud-Native Microservices: Patterns for 2025",
-    description:
-      "Essential patterns and practices for building scalable, resilient microservices architectures in modern cloud environments.",
-    category: "Architecture",
-    publishedAt: "2025-01-18",
-    featured: true,
-    readTime: "10 min read",
-  },
-  {
-    slug: "enterprise-ai-governance-framework",
-    title: "Enterprise AI Governance Framework: From Strategy to Implementation",
-    description:
-      "Comprehensive governance framework for enterprise AI adoption, covering policy, risk management, and operational excellence.",
-    category: "AI Governance",
-    publishedAt: "2025-01-17",
-    featured: true,
-    readTime: "12 min read",
-  },
-  {
-    slug: "genai-evals-in-production-2025",
-    title: "GenAI Evals in Production: Policy Tests That Scale",
-    description:
-      "Layered evals and rollout controls that keep GenAI quality high as usage grows.",
-    category: "GenAI",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "feature-flags-edge-2025",
-    title: "Feature Flags at the Edge: <100ms Global Releases",
-    description:
-      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
-    category: "Architecture",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read",
-  },
-  {
-    slug: "north-star-metrics-anti-patterns",
-    title: "North‑Star Metrics: 7 Anti‑Patterns to Avoid",
-    description:
-      "Avoid vanity KPIs and misaligned metrics with practices that drive outcomes.",
-    category: "Product Analytics",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read",
-  },
+    readTime: "9 min read",
+  }
 ];
 

@@ -341,59 +341,5 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-01-21",
     readMinutes: 11,
   },
-  {
-    id: "ai-autonomous-operations-roi",
-    title: "AI Autonomous Operations: Calculating ROI and Business Impact",
-    summary:
-      "How to measure the return on investment from AI autonomous operations, with real-world metrics and case studies.",
-    category: "AI & Automation",
-    date: "2025-01-20",
-    readMinutes: 6,
-  },
-  {
-    id: "ai-cybersecurity-threat-detection",
-    title: "AI-Powered Threat Detection: Beyond Traditional Security",
-    summary:
-      "Advanced AI techniques for detecting sophisticated cyber threats, including behavioral analysis and predictive intelligence.",
-    category: "Security",
-    date: "2025-01-19",
-    readMinutes: 7,
-  },
-  {
-    id: "cloud-native-architecture-patterns",
-    title: "Cloud-Native Architecture Patterns for 2025",
-    summary:
-      "Essential patterns for building scalable, resilient cloud-native applications in modern environments.",
-    category: "Architecture",
-    date: "2025-01-18",
-    readMinutes: 8,
-  },
-  {
-    id: "enterprise-ai-governance-checklist",
-    title: "Enterprise AI Governance: A Practical Checklist",
-    summary:
-      "Step-by-step checklist for implementing AI governance in enterprise environments, covering policy, risk, and compliance.",
-    category: "AI Governance",
-    date: "2025-01-17",
-    readMinutes: 5,
-  },
-  {
-    id: "microservices-resilience-patterns",
-    title: "Microservices Resilience Patterns: Building Fault-Tolerant Systems",
-    summary:
-      "Essential patterns for building resilient microservices architectures that can handle failures gracefully.",
-    category: "Architecture",
-    date: "2025-01-16",
-    readMinutes: 6,
-  },
-  {
-    id: "ai-model-deployment-best-practices",
-    title: "AI Model Deployment: Production-Ready Best Practices",
-    summary:
-      "Critical considerations for deploying AI models in production, including monitoring, versioning, and rollback strategies.",
-    category: "MLOps",
-    date: "2025-01-15",
-    readMinutes: 7,
-  },
 ];
 
