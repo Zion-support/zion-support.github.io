@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { ArrowRight, Sparkles, Star, TrendingUp, X, Zap } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { X, ArrowRight, Sparkles, Zap, Star, TrendingUp } from 'lucide-react';
 
 interface AdvertisingBannerProps {
   variant?: 'primary' | 'secondary' | 'success';
@@ -160,7 +160,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
         </div>
       </div>
       
-      <style jsx>{`
+      <style>{`
         @keyframes progress {
           from { width: 100%; }
           to { width: 0%; }

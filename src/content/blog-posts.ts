@@ -62,6 +62,36 @@ Implement these patterns to achieve fast, reliable, and cost‑effective streami
     image: "/images/real-time-data-pipelines.jpg"
   },
   {
+    slug: "platform-scorecards-that-stick",
+    title: "Platform Scorecards That Actually Drive Adoption",
+    description: "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
+    content: `
+# Platform Scorecards That Actually Drive Adoption
+
+Align platform engineering with product outcomes by defining capability scorecards that measure adoption, developer experience, and reliability.
+
+## Ingredients of a Useful Scorecard
+- Capabilities mapped to paved roads
+- Golden path time-to-first-success
+- Reliability SLOs per product surface
+- Enablement metrics (docs, templates, DX)
+
+## Anti‑Patterns
+- Vanity operational metrics without user impact
+- Inconsistent scoring across teams
+- Missing feedback loops
+
+Adopt scorecards that drive decisions and investment—not dashboards that collect dust.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Platform Engineering",
+    tags: ["Platform", "DX", "Scorecards", "Golden Paths"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/platform-scorecards.jpg"
+  },
+  {
     slug: "ai-workflow-automation-2025-guide",
     title: "The Complete Guide to AI Workflow Automation in 2025",
     description: "Discover how AI workflow automation is revolutionizing business operations. Learn implementation strategies, benefits, and real-world case studies.",
