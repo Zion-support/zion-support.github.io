@@ -33,51 +33,38 @@ def resolve_conflicts_in_file(filepath):
     
     try:
         with open(filepath, 'r') as f:
-            content = f.read()
-        
-        if '<<<<<<< HEAD' not in content:
-            return True, "No conflicts found"
-        
-        # Create backup
-        backup_path = f"{filepath}.backup.{int(datetime.now().timestamp())}"
-        with open(backup_path, 'w') as f:
-            f.write(content)
-        
-        # Strategy: Keep HEAD version (remove conflict markers)
-        if 'src/App.tsx' in filepath:
-            print("📱 App.tsx detected, keeping comprehensive version...")
-        elif 'package.json' in filepath or 'package-lock.json' in filepath:
-            print("📦 Package file detected, keeping main version...")
-        elif any(config in filepath for config in ['netlify.toml', 'tsconfig.json', 'tailwind.config.js']):
-            print("⚙️ Config file detected, keeping main version...")
-        else:
-            print("📝 Regular file, keeping HEAD version...")
-        
-        # Remove conflict markers
-        lines = content.split('\n')
+            lines = f.readlines()
+
         resolved_lines = []
-        skip_until = None
-        
-        for line in lines:
-            if line.strip() == '<<<<<<< HEAD':
-                skip_until = '======='
+        in_conflict = False
+        taking_section = None
+
+        for raw_line in lines:
+            line = raw_line.rstrip('\n')
+            if line.startswith('<<<<<<< '):
+                in_conflict = True
+                taking_section = 'ours'
                 continue
-            elif line.strip() == '=======':
-                skip_until = '>>>>>>>'
+            if in_conflict and line.startswith('======='):
+                taking_section = 'theirs'
                 continue
-            elif line.strip().startswith('>>>>>>>'):
-                skip_until = None
+            if in_conflict and line.startswith('>>>>>>> '):
+                in_conflict = False
+                taking_section = None
                 continue
-            elif skip_until is None:
+
+            if not in_conflict:
                 resolved_lines.append(line)
-        
-        # Write resolved content
+            else:
+                if taking_section == 'ours':
+                    resolved_lines.append(line)
+
         with open(filepath, 'w') as f:
-            f.write('\n'.join(resolved_lines))
-        
+            f.write('\n'.join(resolved_lines) + ('\n' if resolved_lines and not resolved_lines[-1].endswith('\n') else ''))
+
         print(f"✅ Resolved conflicts in {filepath}")
         return True, "Conflicts resolved"
-        
+
     except Exception as e:
         return False, f"Error resolving conflicts: {str(e)}"
 

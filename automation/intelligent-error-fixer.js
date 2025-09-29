@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-
-
->
-
-
-
-
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
@@ -50,9 +40,6 @@ class IntelligentErrorFixer {
       },
       mergeConflicts: {
         pattern: /||        fix: (content) => {
->>>>>>> main
->>>>>>> main
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
         fix: (content) => {
           // Remove merge conflict markers
           return content
@@ -65,7 +52,6 @@ class IntelligentErrorFixer {
           // Remove merge conflict markers
           return content
         }
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
 
 
@@ -114,7 +100,6 @@ class IntelligentErrorFixer {
 
 
 
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
 
   async runBuildCheck() {
@@ -139,7 +124,6 @@ class IntelligentErrorFixer {
 
 
 
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
 
   async runLintCheck() {
@@ -164,7 +148,6 @@ class IntelligentErrorFixer {
 
 
 
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
 
   async runTypeCheck() {
@@ -193,7 +176,6 @@ class IntelligentErrorFixer {
 >
 
 
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
 
 
@@ -208,7 +190,6 @@ class IntelligentErrorFixer {
 
 
       
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
       
 
@@ -230,7 +211,6 @@ class IntelligentErrorFixer {
 >
 
 
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
 
 
@@ -246,7 +226,6 @@ class IntelligentErrorFixer {
 
 
 
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
 
     try {
@@ -260,7 +239,6 @@ class IntelligentErrorFixer {
 
 
 
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
 
       // Apply error pattern fixes
@@ -283,7 +261,6 @@ class IntelligentErrorFixer {
 
 
 
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
 
       // Specific fixes for common issues
@@ -298,7 +275,6 @@ class IntelligentErrorFixer {
 
 
 
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
 
       if (content.includes('};')) {
@@ -307,7 +283,6 @@ class IntelligentErrorFixer {
       }
 
 
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
 
 
@@ -318,7 +293,6 @@ class IntelligentErrorFixer {
       }
 
 
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
 
 
@@ -333,7 +307,6 @@ class IntelligentErrorFixer {
 
 
         
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
         
 
@@ -349,7 +322,6 @@ class IntelligentErrorFixer {
 
 
 
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
 
       return false;
@@ -360,7 +332,6 @@ class IntelligentErrorFixer {
   }
 
 
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
   async cleanupDuplicateFiles() {
     this.log('Checking for duplicate page files...');
     const pagesDir = path.join(process.cwd(), 'pages');
@@ -373,7 +344,6 @@ class IntelligentErrorFixer {
       const files = fs.readdirSync(dir, { withFileTypes: true });
 
       
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
 
       files.forEach(file => {
@@ -389,7 +359,6 @@ class IntelligentErrorFixer {
 
 
           
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
           
 
@@ -409,7 +378,6 @@ scanDirectory(pagesDir);
 
 
 
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
 
 
@@ -424,7 +392,6 @@ scanDirectory(pagesDir);
         }
       }
 
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
 
 
@@ -449,13 +416,6 @@ scanDirectory(pagesDir);
 
 
 
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
 const fs = require('fs');
 const path = require('path');
 const {
@@ -520,16 +480,8 @@ const {
           "fix": content => {
             // Remove merge conflict markers
             return content
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
           pattern: /||
-=======
       }          pattern: /||
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
           "fix": content => {
             // Remove merge conflict markers
             return content
@@ -553,14 +505,12 @@ const {
     async runBuildCheck() {
       try {
 
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
         execSync(`yarn add ${toInstall.join(' ')}`, { stdio: 'pipe' });
         this.log('Successfully installed missing dependencies');
       } catch (error) {
         this.log(`Failed to install dependencies: ${error.message}`, 'ERROR');
 
 
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
 
 
@@ -575,12 +525,6 @@ const {
 
 
 
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
         this.log('Running build check...');
         const result = execSync('yarn build', {
           "encoding": 'utf8',
@@ -607,7 +551,6 @@ const {
         return { "success": false, "output": error.stdout || error.message };
       }
 
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
     };
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`);
@@ -664,7 +607,6 @@ const {
   }
 
 
->>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 
 }
 
@@ -683,19 +625,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
->>>>>>> main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
     }
-=======
         execSync(`yarn add ${toInstall.join(' ')}`, { stdio: 'pipe' });
         this.log('Successfully installed missing dependencies');
       } catch (error) {
         this.log(`Failed to install dependencies: ${error.message}`, 'ERROR');    }
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     async runTypeCheck() {
       try {
         this.log('Running TypeScript check...');
@@ -910,5 +844,3 @@ if (require.main === module) {
 
 
 
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js

@@ -3,6 +3,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { latestInsights } from "../content/insights";
 
+const isNew = (isoDate: string) => {
+  const published = new Date(isoDate).getTime();
+  const now = Date.now();
+  const sevenDaysMs = 7 * 24 * 60 * 60 * 1000;
+  return now - published <= sevenDaysMs;
+};
+
 const LatestInsights: React.FC = () => {
   const isNew = (isoDate: string): boolean => {
     const daysSince = (Date.now() - new Date(isoDate).getTime()) / (1000 * 60 * 60 * 24);
@@ -16,7 +23,7 @@ const LatestInsights: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Latest Insights</h2>
             <p className="text-zion-slate-light">Research, guides, and playbooks from our team.</p>
           </div>
-            <Link
+          <Link
             to="/insights"
             className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
@@ -38,11 +45,6 @@ const LatestInsights: React.FC = () => {
                   )}
                 </div>
                 <div className="flex items-center gap-2">
-                  {isNew(item.date) && (
-                    <span className="inline-flex items-center gap-1 text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full bg-green-400/20 text-green-200 border border-green-300/30">
-                      New
-                    </span>
-                  )}
                   <span className="text-xs text-zion-slate-light">{new Date(item.date).toLocaleDateString()}</span>
                 </div>
               </div>

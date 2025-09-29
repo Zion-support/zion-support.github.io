@@ -26,22 +26,24 @@ export const usePerformanceMonitor = () => {
           );
         }
         if (entry.entryType === "first-input") {
+          const anyEntry = entry as any;
           setMetrics((prev) =>
             prev
               ? {
                   ...prev,
-                  fid: (entry as unknown).processingStart - entry.startTime,
+                  fid: typeof anyEntry.processingStart === 'number' ? anyEntry.processingStart - entry.startTime : (prev.fid || 0),
                 }
               : ({
-                  fid: (entry as unknown).processingStart - entry.startTime,
+                  fid: typeof anyEntry.processingStart === 'number' ? anyEntry.processingStart - entry.startTime : 0,
                 } as PerformanceMetrics),
           );
         }
         if (entry.entryType === "layout-shift") {
+          const anyEntry = entry as any;
           setMetrics((prev) =>
             prev
-              ? { ...prev, cls: (prev?.cls || 0) + ((entry as unknown).value || 0) }
-              : ({ cls: (entry as unknown).value || 0 } as PerformanceMetrics),
+              ? { ...prev, cls: (prev?.cls || 0) + (typeof anyEntry.value === 'number' ? anyEntry.value : 0) }
+              : ({ cls: typeof anyEntry.value === 'number' ? anyEntry.value : 0 } as PerformanceMetrics),
           );
         }
       });
