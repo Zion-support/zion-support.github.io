@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 // Latest Content 2026 Banner
 export const LatestContent2026Banner: React.FC = () => (
@@ -331,7 +332,32 @@ export const NewLatest2026ContentBanner: React.FC = () => (
                 <div className="text-sm opacity-90">300% productivity, $8M ROI</div>
               </div>
             </div>
-          </div>
+          </Link>
+
+          <Link 
+            href="/case-studies/retail-ai-transformation" 
+            className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20"
+          >
+            <div className="text-3xl mb-3">🛒</div>
+            <h3 className="text-lg font-semibold mb-2 group-hover:text-yellow-300 transition-colors">
+              Retail Giant
+            </h3>
+            <p className="text-sm opacity-90 mb-3">
+              150% revenue growth with AI-powered customer experience
+            </p>
+            <div className="text-xs opacity-75 group-hover:text-yellow-300 transition-colors">
+              Read Case Study →
+            </div>
+          </Link>
+        </div>
+
+        <div className="text-center">
+          <Link 
+            href="/case-studies" 
+            className="inline-block bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
+          >
+            View All Success Stories →
+          </Link>
         </div>
       </div>
     </div>
