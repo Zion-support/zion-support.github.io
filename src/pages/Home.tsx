@@ -105,10 +105,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: GenAI Evals, Edge Flags, Telemetry + more"
-          description="Fresh featured articles just landed. Quality gates, <100ms flags, AI cost guardrails."
+          title="🚀 Fresh: AI Governance at Scale + Edge Observability Blueprint"
+          description="Policies that enable speed, and sub‑100ms reliability with real‑world telemetry."
           ctaText="Read the latest"
-          ctaLink="/blog/genai-evals-in-production-2025"
+          ctaLink="/blog/ai-governance-at-scale-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -607,7 +607,7 @@ const Home = () => {
             <div className="mb-10 flex items-end justify-between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
-                <p className="text-gray-600">Insights from our team to help you move faster.</p>
+                <p className="text-gray-600">Fresh: AI Governance, Golden Paths, Cloud FinOps QA gates, and NEW AI automation guides.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
