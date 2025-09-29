@@ -258,19 +258,32 @@ export default function Blog(): React.JSX.Element {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-        {/* New Content Promo Banner */
-        /* Updated to promote new Secure ML Supply Chain 2026 article */}
+        {/* New Content Promo Banner - Rotates latest highlights */}
         <div className="border-b border-white/10">
           <div className="max-w-7xl mx-auto px-6">
-              <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center justify-between">
-              <div className="mr-4">
-                <div className="text-sm font-semibold">🚀 Fresh: Secure ML Supply Chain 2026</div>
-                <div className="text-xs text-white/90">Stop supply‑chain drift with SBOMs, attestations, and CI policy gates.</div>
+              <div className="mt-4 mb-2 grid gap-3 md:grid-cols-3">
+                <a href="/blog/secure-ml-supply-chain-2026" className="rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center justify-between">
+                  <div className="mr-4">
+                    <div className="text-sm font-semibold">🔐 Secure ML Supply Chain 2026</div>
+                    <div className="text-xs text-white/90">SBOMs, attestations, CI policy gates—stop drift.</div>
+                  </div>
+                  <span className="bg-white text-gray-900 px-3 py-1 rounded-lg font-semibold">Read</span>
+                </a>
+                <a href="/blog/genai-routing-blueprint-2026" className="rounded-xl bg-gradient-to-r from-rose-600 to-pink-600 p-4 text-white flex items-center justify-between">
+                  <div className="mr-4">
+                    <div className="text-sm font-semibold">🧭 GenAI Routing Blueprint 2026</div>
+                    <div className="text-xs text-white/90">Quality tiers, caches, KPI‑linked budgets.</div>
+                  </div>
+                  <span className="bg-white text-gray-900 px-3 py-1 rounded-lg font-semibold">Read</span>
+                </a>
+                <a href="/blog/golden-paths-roi-2026" className="rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 p-4 text-white flex items-center justify-between">
+                  <div className="mr-4">
+                    <div className="text-sm font-semibold">📈 Golden Paths ROI 2026</div>
+                    <div className="text-xs text-white/90">Scorecards that prove platform value.</div>
+                  </div>
+                  <span className="bg-white text-gray-900 px-3 py-1 rounded-lg font-semibold">Read</span>
+                </a>
               </div>
-              <a href="/blog/secure-ml-supply-chain-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">
-                Read the latest
-              </a>
-            </div>
           </div>
         </div>
 
