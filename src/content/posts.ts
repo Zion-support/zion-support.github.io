@@ -69,7 +69,16 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "8 min read",
   },
-  
+  {
+    slug: "ai-product-launch-checklist-2025",
+    title: "AI Product Launch Checklist: From Pilot to Production",
+    description:
+      "From offline suites to online canaries: patterns that keep quality high as usage grows.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
   {
     slug: "feature-flags-edge-2025",
     title: "Feature Flags at the Edge: <100ms Global Releases",
