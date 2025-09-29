@@ -751,75 +751,41 @@ export const posts: BlogPost[] = [
 
 // Newly added content (auto-advertised on Home via latest sort)
 posts.push(
-  {
-    slug: "ai-threat-hunting-with-llms-2026",
-    title: "AI Threat Hunting with LLMs 2026: Signals, Sandboxes, and Speed",
-    description: "Operational playbooks to augment analysts with safe LLM tooling, live traces, and budgeted actions.",
-    category: "Security",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "llm-production-runbooks-2026",
-    title: "LLM Production Runbooks 2026: Rollbacks, Budgets, and Canary Evals",
-    description: "Battle-tested runbooks for safe LLM releases—risk budgets, rollback triggers, and KPI-linked canaries.",
-    category: "AI Operations",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "8 min read"
-  }
-);
-
-<<<<<<< HEAD
-// Additional fresh content
-posts.push(
-  {
-    slug: "privacy-first-insights-telemetry-2026",
-    title: "Privacy‑First Insights 2026: DP Telemetry Without PII Risk",
-    description: "Scoped IDs, field‑level redaction, and aggregation windows for signal‑rich product analytics.",
-    category: "Observability",
-    publishedAt: "2025-10-16",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "agent-blue-green-releases-2026",
-    title: "Blue‑Green Agent Releases 2026: Rollouts with Risk Budgets",
-    description: "Ship agent updates with budgets, canaries, and instant rollback for safe velocity.",
-    category: "GenAI",
-    publishedAt: "2025-10-16",
-    featured: true,
-    readTime: "6 min read"
-=======
-// Additional newly added posts to surface on Home and Blog
-posts.push(
-  {
-    slug: "agent-blue-green-releases-2026",
-    title: "Blue‑Green Agent Releases 2026: Safe Rollouts with Live Traces",
-    description: "Deploy agent updates with canaries, budgeted tool actions, and trace‑driven rollbacks.",
-    category: "GenAI",
-    publishedAt: "2025-10-15",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "ai-platform-scorecards-roi-2026",
-    title: "AI Platform Scorecards 2026: Proving ROI with Leading Indicators",
-    description: "Link platform telemetry to adoption, retention, and revenue with actionable scorecards.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-10",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "production-rag-quality-budgets-2026",
-    title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
-    description: "Keep answers accurate and on‑budget with freshness windows, async warmups, and layered evals.",
-    category: "GenAI",
-    publishedAt: "2025-10-10",
-    featured: true,
-    readTime: "9 min read"
->>>>>>> content/blue-green-and-latest
-  }
+	{
+		slug: "ai-threat-hunting-with-llms-2026",
+		title: "AI Threat Hunting with LLMs 2026: Signals, Sandboxes, and Speed",
+		description: "Operational playbooks to augment analysts with safe LLM tooling, live traces, and budgeted actions.",
+		category: "Security",
+		publishedAt: "2025-10-13",
+		featured: true,
+		readTime: "7 min read"
+	},
+	{
+		slug: "llm-production-runbooks-2026",
+		title: "LLM Production Runbooks 2026: Rollbacks, Budgets, and Canary Evals",
+		description: "Battle-tested runbooks for safe LLM releases—risk budgets, rollback triggers, and KPI-linked canaries.",
+		category: "AI Operations",
+		publishedAt: "2025-10-13",
+		featured: true,
+		readTime: "8 min read"
+	},
+	// Resolved entries (avoid duplicates of existing slugs):
+	{
+		slug: "ai-platform-scorecards-roi-2026",
+		title: "AI Platform Scorecards 2026: Proving ROI with Leading Indicators",
+		description: "Link platform telemetry to adoption, retention, and revenue with actionable scorecards.",
+		category: "AI Strategy",
+		publishedAt: "2025-10-10",
+		featured: true,
+		readTime: "8 min read"
+	},
+	{
+		slug: "production-rag-quality-budgets-2026",
+		title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
+		description: "Keep answers accurate and on‑budget with freshness windows, async warmups, and layered evals.",
+		category: "GenAI",
+		publishedAt: "2025-10-10",
+		featured: true,
+		readTime: "9 min read"
+	}
 );
