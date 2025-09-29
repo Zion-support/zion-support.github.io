@@ -145,13 +145,13 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
             </div>
 
             {/* Stats */}
-              <div className="flex items-center gap-6 mt-4 text-sm text-white/80">
+            <div className="flex items-center gap-6 mt-4 text-sm text-white/80">
               <div className="flex items-center gap-1">
-                <span className="font-semibold">6</span>
+                <span className="font-semibold">9</span>
                 <span>New Articles</span>
               </div>
               <div className="flex items-center gap-1">
-                <span className="font-semibold">0</span>
+                <span className="font-semibold">2</span>
                 <span>New Case Studies</span>
               </div>
               <div className="flex items-center gap-1">
