@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-incident-response-playbooks-2025",
+    title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
+    description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
+    category: "Cybersecurity",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-preserving-analytics-2025",
+    title: "Privacy‑Preserving Analytics: Ship Insights Without PII Risk",
+    description: "On-device redaction, scoped IDs, and DP noise for compliant, decision-grade telemetry.",
+    category: "Observability",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-llm-caching-blueprint-2026",
+    title: "Edge LLM Caching Blueprint 2026: Sub‑100ms at Scale",
+    description: "Tiered caches, signed configs, and freshness windows for fast, affordable prompts.",
+    category: "Architecture",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "platform-engineering-scorecards-2026",
     title: "Platform Engineering Scorecards 2026: From Golden Paths to Outcomes",
     description: "Measure what matters: adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery.",
