@@ -104,8 +104,8 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: AI Governance, Edge Flags, and GenAI Telemetry posts"
-          description="Fresh articles and quick insights just landed. See what's new this week."
+          title="🚀 NEW: AI Agents in Production + Serverless GenAI APIs"
+          description="Fresh deep-dives on reliable agent patterns and sub‑100ms GenAI APIs. Check them out."
           ctaText="Read the latest"
           ctaLink="/blog"
           dismissible={true}

@@ -10,6 +10,26 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-agents-in-production-2025",
+    title: "AI Agents in Production: Patterns That Actually Work",
+    description:
+      "Action models, tool governance, and safety rails for reliable autonomous agents in real apps.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "serverless-genai-apis",
+    title: "Designing Serverless GenAI APIs with Sub‑100ms P95",
+    description:
+      "Cold-start avoidance, connection pooling, and streaming strategies that keep latency tight.",
+    category: "Architecture",
+    publishedAt: "2025-09-28",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:

@@ -9,6 +9,24 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "ai-agents-telemetry-checklist",
+    title: "AI Agents: A Telemetry Checklist for Reliable Ops",
+    summary:
+      "What to log per decision, how to sample sessions, and which KPIs predict failures before users do.",
+    category: "AI Engineering",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
+  {
+    id: "edge-streaming-ui-patterns",
+    title: "Edge Streaming UI Patterns: Feel Instant Without Lying",
+    summary:
+      "Optimistic UIs, partial hydration, and stream-first routes that keep apps snappy under load.",
+    category: "Architecture",
+    date: "2025-09-28",
+    readMinutes: 4,
+  },
+  {
     id: "ai-governance-rubric",
     title: "A Lightweight Rubric for AI Governance Decisions",
     summary:

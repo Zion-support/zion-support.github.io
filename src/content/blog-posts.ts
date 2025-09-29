@@ -14,6 +14,56 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-agents-in-production-2025",
+    title: "AI Agents in Production: Patterns That Actually Work",
+    description: "Action models, tool governance, and safety rails for reliable autonomous agents in real apps.",
+    content: `
+# AI Agents in Production: Patterns That Actually Work
+
+Shipping autonomous agents is less about prompts and more about reliable orchestration, guardrails, and measurable outcomes.
+
+## Core Building Blocks
+- Action model with explicit tools and schemas
+- Deterministic planners with bounded search
+- Idempotent tools and retry-safe side effects
+- Telemetry for decisions, inputs, and outcomes
+
+## Safety Guardrails
+- Policy tests pre-merge + canary cohorts
+- Rate limits and circuit breakers per tool
+- Human-in-the-loop for high-risk actions
+
+## Measurement
+- Task success rate, abandonment, assist cost, and time-to-completion
+
+Adopt these patterns to run agents with confidence.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Engineering",
+    tags: ["Agents", "Tool Use", "Safety", "Production"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-agents-production.jpg"
+  },
+  {
+    slug: "serverless-genai-apis",
+    title: "Designing Serverless GenAI APIs with Sub‑100ms P95",
+    description: "Cold-start avoidance, connection pooling, and streaming strategies that keep latency tight.",
+    content: `
+# Designing Serverless GenAI APIs with Sub‑100ms P95
+
+Practical designs for fast, cost‑efficient GenAI APIs using serverless platforms.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "Architecture",
+    tags: ["Serverless", "Latency", "GenAI", "APIs"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/serverless-genai-apis.jpg"
+  },
+  {
     slug: "real-time-data-pipelines-2025",
     title: "Building Reliable Real‑Time Data Pipelines in 2025",
     description: "Blueprints for exactly-once semantics, backpressure, and observability from dev to prod.",
