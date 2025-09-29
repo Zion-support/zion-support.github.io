@@ -279,7 +279,6 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
->>>>>>> origin/main
     id: "genai-guardrails-in-production",
     title: "GenAI Guardrails in Production: Policy Tests That Scale",
     summary:
@@ -287,13 +286,6 @@ export const latestInsights: InsightArticle[] = [
     category: "GenAI",
     date: "2025-09-29",
     readMinutes: 8,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }
-=======
   },
   // NEW INSIGHTS - Latest 2025 Content
   {
@@ -304,7 +296,6 @@ export const latestInsights: InsightArticle[] = [
     category: "AI & Automation",
     date: "2025-01-22",
     readMinutes: 5,
->>>>>>> cursor/check-fix-push-and-merge-to-main-40d4
   },
   {
     id: "ai-automation-roi-calculator",
@@ -370,8 +361,6 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-09-30",
     readMinutes: 5,
   },
-<<<<<<< HEAD
-=======
   {
     id: "iot-security-incident-analysis",
     title: "IoT Security Incidents: Lessons from Recent Breaches",
@@ -380,7 +369,6 @@ export const latestInsights: InsightArticle[] = [
     category: "IoT Security",
     date: "2025-01-14",
     readMinutes: 4,
->>>>>>> origin/main
   },
   {
     id: "digital-transformation-success-factors",
@@ -436,7 +424,5 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-01-08",
     readMinutes: 5,
   },
->>>>>>> origin/main
->>>>>>> cursor/check-fix-push-and-merge-to-main-40d4
 ];
 

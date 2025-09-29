@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BlogPost, blogPosts } from '../content/blog-posts';
 import { InsightArticle, latestInsights } from '../content/insights';
+import { Star, Calendar, Clock, Eye, ArrowRight, TrendingUp } from 'lucide-react';
 
 interface FeaturedContentShowcaseProps {
   title?: string;
@@ -23,9 +24,9 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
   const [activeTab, setActiveTab] = useState<'all' | 'blog' | 'insights'>('all');
 
   // Get featured blog posts
-  const featuredBlogPosts = posts
+  const featuredBlogPosts = blogPosts
     .filter(post => post.featured)
-    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 3);
 
   // Get latest insights
@@ -56,6 +57,11 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
       "Cybersecurity": "bg-red-100 text-red-800 border-red-200"
     };
     return colors[category] || "bg-gray-100 text-gray-800 border-gray-200";
+  };
+
+  const formatDate = (dateInput: string | Date) => {
+    const d = typeof dateInput === 'string' ? new Date(dateInput) : dateInput;
+    return d.toLocaleDateString();
   };
 
   return (
@@ -98,7 +104,9 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
                   </h3>
                   
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    {allContent[0].description}
+                    {allContent[0].type === 'blog' 
+                      ? (allContent[0] as BlogPost).description 
+                      : (allContent[0] as InsightArticle).summary}
                   </p>
                   
                   <div className="flex items-center gap-4 mb-6 text-sm text-gray-500">
@@ -108,7 +116,9 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
                     </div>
                     <div className="flex items-center gap-1">
                       <Clock className="w-4 h-4" />
-                      {allContent[0].readTime}
+                      {allContent[0].type === 'blog' 
+                        ? ((allContent[0] as BlogPost).readTime || '5 min read')
+                        : `${(allContent[0] as InsightArticle).readMinutes} min read`}
                     </div>
                     <div className="flex items-center gap-1">
                       <Eye className="w-4 h-4" />
