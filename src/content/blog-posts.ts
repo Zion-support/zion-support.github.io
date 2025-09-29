@@ -14,6 +14,68 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-sales-copilot-2025",
+    title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
+    description: "How to wire CRMs, build prompt libraries, and add evals that boost win‑rates without risk.",
+    content: `
+# AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals
+
+Sales copilots fail without context and measurement. This guide shows how to ground prompts in CRM data, build reusable prompt libraries, and add offline + online evals that correlate with win‑rates.
+
+## What To Ground
+- Opportunities, last touches, stakeholders
+- Product limits, pricing, legal constraints
+
+## Evals That Predict Outcomes
+- Prospect relevance scoring
+- Objection handling quality
+- Call‑to‑action clarity
+
+Wire telemetry to track outcomes and iterate with confidence.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Strategy",
+    tags: ["Sales", "Copilot", "CRM", "Evals"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/ai-sales-copilot.jpg"
+  },
+  {
+    slug: "zero-downtime-migrations-2025",
+    title: "Zero‑Downtime Migrations: Patterns that Keep Pages Green",
+    description: "Dual‑write, read‑shadowing, and progressive delivery to ship schema changes safely.",
+    content: `
+# Zero‑Downtime Migrations: Patterns that Keep Pages Green
+
+Avoid 2am incidents with dual‑write, read‑shadowing, backfills with idempotency, and progressive cutovers behind flags. Includes checklists and rollback playbooks.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Platform Engineering",
+    tags: ["Migrations", "Zero Downtime", "Databases"],
+    featured: false,
+    readTime: "5 min read",
+    image: "/images/zero-downtime.jpg"
+  },
+  {
+    slug: "agent-telemetry-traces-2025",
+    title: "Agent Telemetry: What to Trace and Why It Matters",
+    description: "From tool call spans to prompt metadata—what to capture to debug and improve agent behavior.",
+    content: `
+# Agent Telemetry: What to Trace and Why It Matters
+
+Capture spans for tool calls, retries, and model routes. Attach prompt, input size, and guardrail outcomes. Build dashboards that correlate failures to fixes.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["Telemetry", "Agents", "Tracing"],
+    featured: true,
+    readTime: "5 min read",
+    image: "/images/agent-telemetry.jpg"
+  },
+  {
     slug: "genai-evals-in-production-2025",
     title: "GenAI Evals in Production: Policy Tests That Scale",
     description: "From offline suites to online canaries: patterns that keep quality high as usage grows.",
