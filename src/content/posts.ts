@@ -52,6 +52,12 @@ export const posts: BlogPost[] = [
     slug: "ai-platform-roi-2025",
     title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
     description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
     slug: "genai-evals-in-prod-guardrails",
     title: "Shipping GenAI Safely: Evals, Guardrails, and Online Canaries",
     description:
@@ -329,6 +335,11 @@ export const posts: BlogPost[] = [
     title: "Edge CDN + On‑Device ML: Personalization Under 100ms",
     description: "Combine edge KV, signed configs, and tiny models for private, real‑time personalization.",
     category: "Edge Computing",
+    publishedAt: "2025-01-21",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
     slug: "next-gen-cloud-infrastructure",
     title: "Next-Generation Cloud Infrastructure: Scaling for 2025 and Beyond",
     description:

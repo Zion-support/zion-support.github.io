@@ -12,6 +12,11 @@ export const latestInsights: InsightArticle[] = [
     id: "ai-risk-register-checklist",
     title: "AI Risk Register Checklist",
     summary: "Owners, policy tests, and dashboards that make risk programs real.",
+    category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
     id: "eval-systems-online-canaries",
     title: "Eval Systems That Scale: Online Canaries and Policy Gates",
     summary:
@@ -59,6 +64,13 @@ export const latestInsights: InsightArticle[] = [
   {
     id: "ai-governance-rubric",
     title: "A Lightweight Rubric for AI Governance Decisions",
+    summary:
+      "When to require human‑in‑the‑loop, what to log, and how to audit outputs across teams.",
+    category: "AI Governance",
+    date: "2025-10-04",
+    readMinutes: 4,
+  },
+  {
     id: "platform-blueprints-golden-paths",
     title: "Golden Paths That Actually Get Used",
     summary:
@@ -95,6 +107,11 @@ export const latestInsights: InsightArticle[] = [
     id: "rag-freshness-strategies",
     title: "RAG Freshness Strategies",
     summary: "Invalidate staleness with versioned chunks, TTLs, and async warmups.",
+    category: "Risk & Compliance",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
     id: "ai-governance-rubric",
     title: "A Lightweight Rubric for AI Governance Decisions",
     summary:
@@ -209,7 +226,6 @@ export const latestInsights: InsightArticle[] = [
       "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
     category: "Product Analytics",
     description: "A look at on‑device models, streaming pipelines, and cost/perf trade‑offs from deployments.",
-    category: "AI Engineering",
     date: "2025-09-29",
     readMinutes: 7,
   },
