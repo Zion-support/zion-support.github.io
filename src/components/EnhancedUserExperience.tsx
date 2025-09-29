@@ -51,12 +51,12 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
   });
 
   // Performance tracking
-  const _performanceMetrics = usePerformanceTracker((newMetrics: unknown) => {
+  const _performanceMetrics = usePerformanceTracker((newMetrics: any) => {
       setRealTimeMetrics({
-        fps: newMetrics.fps,
-        memoryUsage: newMetrics.memoryUsage || 0,
-        loadTime: newMetrics.loadTime,
-        errors: newMetrics.errors,
+        fps: newMetrics.fps as number,
+        memoryUsage: (newMetrics.memoryUsage as number) || 0,
+        loadTime: newMetrics.loadTime as number,
+        errors: newMetrics.errors as number,
       });
     }, {
       interval: 2000,
@@ -82,7 +82,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
     }
   }, [isVisible]);
 
-  const handlePreferenceChange = useCallback((key: string, value: unknown) => {
+  const handlePreferenceChange = useCallback((key: keyof UserPreferences, value: any) => {
     setUserPreferences(prev => ({
       ...prev,
       [key]: value,

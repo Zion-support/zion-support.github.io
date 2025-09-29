@@ -11,6 +11,8 @@ interface FormData {
   message: string;
 }
 
+type FormElement = HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
+
 export default function EnhancedContactForm(): React.JSX.Element {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -135,7 +137,7 @@ export default function EnhancedContactForm(): React.JSX.Element {
               name="service"
               value={formData.service}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg_gray-700 dark:text-white"
             >
               <option value="">Select a service</option>
               <option value="ai-development">AI Development</option>

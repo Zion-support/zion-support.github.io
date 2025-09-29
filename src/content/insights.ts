@@ -3,7 +3,7 @@ export type InsightArticle = {
   title: string;
   summary: string;
   category: string;
-  date: string; // ISO date string
+  date: string;
   readMinutes: number;
 };
 
@@ -14,6 +14,51 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "How to combine offline evals with live canaries to catch regressions before customers do.",
     category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "secure-ml-platform-checklist",
+    title: "Secure ML Platform: A 12‑Point Checklist",
+    summary:
+      "Pragmatic controls for data flows, registries, deployment targets, and drift monitoring.",
+    category: "Security",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-cdn-cache-budgeting",
+    title: "Edge CDN Cache Budgeting: Hit‑Rate Wins Without Stale Bugs",
+    summary:
+      "Decide TTLs, validation circuits, and negative caching for reliable, fast UX.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "ai-cost-quick-wins",
+    title: "AI Cost Quick Wins: Cut 25% Without Slowing Teams",
+    summary:
+      "Target redundant workflows, compress context, and cache prompts to reduce spend fast.",
+    category: "AI Strategy",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "model-policy-tests-playbook",
+    title: "A Playbook for Model Policy Tests",
+    summary:
+      "Define disallowed patterns, add detectors, and wire policy checks into CI and runtime.",
+    category: "AI Governance",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-cache-stale-while-revalidate",
+    title: "Stale‑While‑Revalidate in Practice",
+    summary:
+      "Deliver instant responses while safely refreshing data in the background at the edge.",
+    category: "Architecture",
     date: "2025-09-30",
     readMinutes: 6,
   },
@@ -45,6 +90,33 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 5,
   },
   {
+    id: "ai-roadmaps-outcomes",
+    title: "AI Roadmaps That Ship Outcomes, Not Science Projects",
+    summary:
+      "A 3-step method to prioritize use-cases, define measurable KPIs, and deliver value in 90 days.",
+    category: "AI Strategy",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
+  {
+    id: "cloud-finops-wins",
+    title: "Cloud FinOps: 9 Wins Your CFO Will Love",
+    summary:
+      "Right-size fleets, shape demand, and make CI/CD cost-aware without slowing developers.",
+    category: "Cloud FinOps",
+    date: "2025-09-29",
+    readMinutes: 4,
+  },
+  {
+    id: "genai-guardrails-scorecards",
+    title: "GenAI Guardrails: Scorecards That Prevent Silent Regressions",
+    summary:
+      "Policy tests, red-team prompts, and online checks that keep quality high as usage scales.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
     id: "edge-cache-invalidation",
     title: "Edge Cache Invalidation Strategies That Won't Wake You Up",
     summary:
@@ -72,15 +144,6 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
-    id: "feature-flags-edge-realtime",
-    title: "Real‑Time Feature Flags at the Edge",
-    summary:
-      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
-    category: "Architecture",
-    date: "2025-09-28",
-    readMinutes: 6,
-  },
-  {
     id: "north-star-metrics-insight",
     title: "North‑Star Metrics: A Field Guide",
     summary:
@@ -90,6 +153,60 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 7,
   },
   {
+    id: "kubernetes-cost-guardrails",
+    title: "Kubernetes Cost Guardrails That Engineers Don't Hate",
+    summary:
+      "Limit waste with sensible defaults: requests/limits, QoS, autoscaling, and cost-aware CI policies.",
+    category: "Cloud",
+    date: "2025-09-28",
+    readMinutes: 7,
+  },
+  {
+    id: "ciso-zero-trust-scorecard",
+    title: "A CISO's Zero‑Trust Scorecard",
+    summary:
+      "Measure progress with identity controls, least privilege, continuous verification, and blast‑radius limits.",
+    category: "Security",
+    date: "2025-09-28",
+    readMinutes: 8,
+  },
+  {
+    id: "zero-trust-sdls",
+    title: "Zero-Trust SDLC: Shipping Secure Software Without Slowing Down",
+    summary:
+      "Embed policy-as-code, automated threat modeling, and continuous verification into delivery workflows.",
+    category: "Security",
+    date: "2025-09-28",
+    readMinutes: 8,
+  },
+  {
+    id: "analytics-ltv-playbook",
+    title: "An Operator's Playbook for LTV:CPA Ratio",
+    summary:
+      "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
+    category: "Product Analytics",
+    date: "2025-09-28",
+    readMinutes: 7,
+  },
+  {
+    id: "edge-caching-primer",
+    title: "Edge Caching Primer: Shrinking P95 Without Breaking Consistency",
+    summary:
+      "When to cache at the edge, what to purge, and patterns for safe staleness.",
+    category: "Architecture",
+    date: "2025-09-28",
+    readMinutes: 6,
+  },
+  {
+    id: "platform-engineering-blueprint",
+    title: "Platform Engineering Blueprint 2025",
+    summary:
+      "Golden paths, paved roads, and product thinking to scale developer experience across hundreds of teams.",
+    category: "Platform Engineering",
+    date: "2025-09-27",
+    readMinutes: 8,
+  },
+  {
     id: "secure-ml-pipelines",
     title: "Securing Machine Learning Pipelines in Production",
     summary:
@@ -97,6 +214,24 @@ export const latestInsights: InsightArticle[] = [
     category: "Security",
     date: "2025-08-20",
     readMinutes: 7,
+  },
+  {
+    id: "genai-ops-safety",
+    title: "Operationalizing GenAI Safely and at Scale",
+    summary:
+      "Guardrails, evals, and rollout strategies that keep quality high while shipping fast.",
+    category: "MLOps",
+    date: "2025-09-27",
+    readMinutes: 6,
+  },
+  {
+    id: "north-star-metrics-cheatsheet",
+    title: "North‑Star Metrics: A 5‑Step Cheatsheet",
+    summary:
+      "A quick framework to choose metrics that truly reflect customer value and drive growth.",
+    category: "Product Analytics",
+    date: "2025-09-26",
+    readMinutes: 5,
   },
   {
     id: "cloud-cost-optimization",
@@ -225,76 +360,22 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 8,
   },
   {
-    id: "5g-business-transformation",
-    title: "5G and Business Transformation: Opportunities and Challenges",
+    id: "5g-business-applications-reality",
+    title: "5G Business Applications: What's Actually Working",
     summary:
-      "How 5G technology is enabling new business models and transforming industries across the globe.",
+      "Real-world 5G business applications that are delivering measurable ROI, from smart factories to autonomous vehicles.",
     category: "5G Technology",
-    date: "2025-01-06",
-    readMinutes: 7,
-  },
-  {
-    id: "digital-transformation-2025",
-    title: "Digital Transformation in 2025: Trends and Strategies",
-    summary:
-      "The latest trends in digital transformation and how businesses can adapt to stay competitive.",
-    category: "Digital Transformation",
-    date: "2025-01-05",
+    date: "2025-01-09",
     readMinutes: 6,
   },
   {
-    id: "genai-guardrails-in-production",
-    title: "GenAI Guardrails in Production: Policy Tests That Scale",
+    id: "ai-ecommerce-personalization-roi",
+    title: "AI E-commerce Personalization: ROI and Implementation Insights",
     summary:
-      "From offline eval suites to online canaries: patterns that keep quality and safety high as usage grows.",
-    category: "GenAI",
-    date: "2025-09-29",
-    readMinutes: 8,
-  },
-  {
-    id: "ai-automation-roi-calculator",
-    title: "AI Automation ROI Calculator: Measure Your Business Impact",
-    summary:
-      "A practical framework for calculating the return on investment from AI automation initiatives, with real-world case studies and templates.",
-    category: "AI Strategy",
-    date: "2025-01-21",
-    readMinutes: 8,
-  },
-  {
-    id: "cloud-native-microservices-2025",
-    title: "Cloud-Native Microservices: Patterns for 2025",
-    summary:
-      "Essential patterns and practices for building scalable, resilient microservices architectures in modern cloud environments.",
-    category: "Architecture",
-    date: "2025-01-21",
-    readMinutes: 10,
-  },
-  {
-    id: "enterprise-ai-governance-framework",
-    title: "Enterprise AI Governance Framework: From Strategy to Implementation",
-    summary:
-      "Comprehensive governance framework for enterprise AI adoption, covering policy, risk management, and operational excellence.",
-    category: "AI Governance",
-    date: "2025-01-21",
-    readMinutes: 12,
-  },
-  {
-    id: "saas-platform-scaling-strategies",
-    title: "SAAS Platform Scaling Strategies: From Startup to Enterprise",
-    summary:
-      "Proven strategies for scaling SAAS platforms from early-stage to enterprise, covering technical and business considerations.",
-    category: "Platform Engineering",
-    date: "2025-01-21",
-    readMinutes: 9,
-  },
-  {
-    id: "ai-security-best-practices",
-    title: "AI Security Best Practices: Protecting Your AI Systems",
-    summary:
-      "Essential security practices for AI systems, covering model protection, data privacy, and adversarial defense strategies.",
-    category: "Security",
-    date: "2025-01-21",
-    readMinutes: 11,
+      "How AI-powered personalization is driving revenue growth in e-commerce, with specific metrics and implementation strategies.",
+    category: "E-commerce",
+    date: "2025-01-08",
+    readMinutes: 5,
   },
 ];
 

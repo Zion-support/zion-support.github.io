@@ -26,8 +26,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.setState({ error, errorInfo });
     
     // Log error to analytics
-    if (typeof window !== 'undefined' && (window as unknown).gtag) {
-      (window as unknown).gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: false
       });
@@ -44,7 +44,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             <button
-              onClick={() => window.location.reload()}
+              onClick={() => (window as Window).location.reload()}
               className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors"
             >
               Refresh Page

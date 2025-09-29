@@ -183,6 +183,70 @@ Implement these patterns to achieve fast, reliable, and cost‑effective streami
     image: "/images/real-time-data-pipelines.jpg"
   },
   {
+    slug: "secure-supply-chain-sbom-2025",
+    title: "Shipping a Secure SBOM and Hardening Your Supply Chain",
+    description: "Step-by-step guidance to produce SBOMs, lock dependencies, and detect tampering early.",
+    content: `
+# Shipping a Secure SBOM and Hardening Your Supply Chain
+
+Modern software depends on thousands of transitive packages. This guide shows pragmatic steps to generate SBOMs, cryptographically verify artifacts, and add CI policy gates so compromises are caught before production.
+
+## Core Practices
+- Reproducible builds with locked hashes
+- Provenance attestations (SLSA)
+- Automated SBOM generation and diffing
+- Policy checks in CI for risky licenses and CVEs
+
+## Quick Wins
+- Enable signature verification for package managers
+- Fail CI on unsatisfied integrity constraints
+- Monitor new CVEs with actionable ownership
+
+Adopt these to dramatically reduce supply chain risk while keeping developer velocity high.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Security",
+    tags: ["SBOM", "Supply Chain", "Security", "SLSA"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/secure-sbom.jpg"
+  },
+  {
+    slug: "kubernetes-cost-guardrails-2025",
+    title: "Kubernetes Cost Guardrails That Engineers Don’t Hate",
+    description: "Requests/limits, QoS, autoscaling, and cost-aware CI policies that prevent waste.",
+    content: `
+# Kubernetes Cost Guardrails That Engineers Don’t Hate
+
+Keep costs predictable with sensible defaults, budget alerts, and engineering-friendly policies that don’t block delivery.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "Cloud FinOps",
+    tags: ["Kubernetes", "FinOps", "Autoscaling", "Costs"],
+    featured: false,
+    readTime: "6 min read",
+    image: "/images/k8s-cost-guardrails.jpg"
+  },
+  {
+    slug: "genai-eval-playbook-2025",
+    title: "A Practical Evaluation Playbook for GenAI Apps",
+    description: "Stand up robust offline and online evals, define quality bars, and ship with confidence.",
+    content: `
+# A Practical Evaluation Playbook for GenAI Apps
+
+How to design eval harnesses, policy tests, and guardrails that scale with usage.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["Evaluation", "GenAI", "Quality", "Policy"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-eval-playbook.jpg"
+  },
+  {
     slug: "platform-scorecards-that-stick",
     title: "Platform Scorecards That Actually Drive Adoption",
     description: "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
@@ -2026,6 +2090,52 @@ Ready to implement Zero Trust security? Contact our team for a free security ass
     featured: true,
     readTime: "14 min read",
     image: "/images/zero-trust-security.jpg"
+  }
+  ,
+  {
+    slug: "ai-governance-playbook-2025",
+    title: "The 2025 AI Governance Playbook for Product Teams",
+    description: "Practical guardrails: policy tests, red-teaming, data retention, and auditability baked into delivery.",
+    content: `
+# The 2025 AI Governance Playbook for Product Teams
+
+Shipping AI responsibly requires concrete guardrails that scale with usage and velocity. This playbook distills what works across policy tests, safety red‑teaming, evaluation suites, and auditability.
+
+## What to Instrument
+- Input/output logging with PII minimization
+- Policy tests in CI and pre‑merge checks
+- Online canaries with rollback triggers
+
+## Team Operating Model
+- Clear ownership for datasets, prompts, and policies
+- Weekly eval reviews tied to business KPIs
+
+Adopt these patterns to move fast without breaking trust.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Governance",
+    tags: ["AI", "Governance", "Safety", "Policy Tests"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-governance-playbook.jpg"
+  },
+  {
+    slug: "edge-ai-design-guide",
+    title: "Designing Edge AI Systems: A Field Guide",
+    description: "Model optimization, caching, and failover patterns for resilient sub‑100ms edge inference.",
+    content: `
+# Designing Edge AI Systems: A Field Guide
+
+Achieve low‑latency inference at the edge with quantization, pruning, warm caches, and graceful degradation.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "Edge Computing",
+    tags: ["Edge AI", "Inference", "Latency"],
+    featured: false,
+    readTime: "6 min read",
+    image: "/images/edge-ai-design.jpg"
   }
 ];
 
