@@ -50,15 +50,17 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "Pair signals, context windows, and human feedback to harden detections and accelerate triage.",
     category: "Security",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
     id: "edge-observability-blueprint",
     title: "Edge Observability Blueprint: Sub‑100ms Reliability",
     summary:
       "Latency budgets, client ↔ edge traces, and error budgets that keep UX snappy.",
     category: "Observability",
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9d64
     date: "2025-09-30",
-    readMinutes: 5,
+    readMinutes: 6,
   },
   {
     id: "cloud-scorecards-review-rituals",
