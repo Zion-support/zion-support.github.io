@@ -10,6 +10,46 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-risk-mitigation-playbook-2026",
+    title: "AI Risk Mitigation Playbook 2026: Guardrails That Ship",
+    description:
+      "Policy gates, budgeted risks, and KPI‑linked checks that keep teams fast and compliant.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-preserving-agents-2026",
+    title: "Privacy‑Preserving Agents: Isolation, Redaction, and Least Privilege",
+    description:
+      "Design agents with data minimization, scoped tools, and audit trails for regulated environments.",
+    category: "AI Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "kpi-linked-policy-tests-2025",
+    title: "KPI‑Linked Policy Tests: Governance That Engineers Adopt",
+    description:
+      "Turn governance into lightweight CI checks tied to product KPIs and release trains.",
+    category: "Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "serverless-ai-inference-cost-playbook-2025",
+    title: "Serverless AI Inference: The Cost Optimization Playbook",
+    description:
+      "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",
+    category: "AI Solutions",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-incident-response-2026",
     title: "AI Incident Response 2026: Playbooks, Canaries, and SLAs",
     description: "Practical incident response for AI features with on-call playbooks and KPI-linked canaries.",

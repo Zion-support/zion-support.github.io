@@ -116,10 +116,10 @@ const Home = () => {
         <LatestContentBanner 
           className="border-b border-white/10" 
           variant="info"
-          title="New: AI Risk Mitigation, Privacy‑Preserving Agents, KPI‑Linked Policy Tests"
-          description="Fresh guides on policy gates, private agents, and KPI‑linked CI tests."
+          title="New: Serverless Inference Cost Playbook + Production RAG"
+          description="Cut inference spend 40–70% and ship RAG with freshness windows and hybrid search."
           ctaText="Read now"
-          ctaLink="/blog"
+          ctaLink="/blog/serverless-ai-inference-cost-playbook-2025"
         />
         <NewContentPromoBanner 
           className="border-b border-white/10" 
@@ -127,7 +127,7 @@ const Home = () => {
           title="Fresh: Risk Mitigation 2026, Privacy‑Preserving Agents, KPI Policy Tests"
           description="Guardrails wired to KPIs, privacy‑first agent design, and CI tests teams adopt."
           ctaText="Explore new content"
-          ctaLink="/blog"
+          ctaLink="/blog/ai-risk-mitigation-playbook-2026"
           featuredItems={[
             { title: "AI Risk Mitigation Playbook 2026", category: "AI Governance", link: "/blog/ai-risk-mitigation-playbook-2026" },
             { title: "Privacy‑Preserving Agents", category: "AI Security", link: "/blog/privacy-preserving-agents-2026" },
@@ -156,10 +156,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: GenAI Platform Blueprint + Hybrid Vector Search"
-          description="Ship weekly with guardrails. Cut retrieval cost 40%+ with hybrid and freshness."
+          title="🚀 Fresh: Serverless Inference Cost Playbook + Production RAG"
+          description="Adaptive batching, warm pools, and freshness‑aware RAG that meets SLAs."
           ctaText="Read the latest"
-          ctaLink="/blog/genai-platform-blueprint-2025"
+          ctaLink="/blog/serverless-ai-inference-cost-playbook-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -672,17 +672,17 @@ const Home = () => {
                 <span className="text-lg font-bold text-purple-700">📚 NEW CONTENT ALERT</span>
                 <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
               </div>
-              <p className="text-gray-700 font-semibold mb-2">
-                🚀 Just Published: 5 Revolutionary Articles on AI Automation, Cloud Infrastructure, and Enterprise AI Implementation
+            <p className="text-gray-700 font-semibold mb-2">
+                🚀 Just Published: Risk Playbook, Privacy‑Preserving Agents, KPI Policy Tests, and Serverless Inference Cost Playbook
               </p>
               <p className="text-gray-600 text-sm mb-4">
-                Discover the latest insights on AI-powered business automation, next-gen cloud infrastructure, and strategic AI roadmaps for 2025.
+                Discover how to ship fast with guardrails, design privacy‑first agents, wire governance to KPIs, and cut inference costs 40–70%.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">AI Automation</span>
-                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Cloud Strategy</span>
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">AI Governance</span>
-                <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">Platform Engineering</span>
+                <span className="bg-rose-100 text-rose-700 px-3 py-1 rounded-full text-xs font-medium">AI Security</span>
+                <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-medium">Engineering</span>
+                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">AI Solutions</span>
               </div>
             </div>
             
