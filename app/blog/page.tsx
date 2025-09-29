@@ -265,6 +265,26 @@ export default function BlogPage() {
             image="💬"
             href="/blog/ai-virtual-assistants-customer-service"
           />
+          <BlogPost
+            title="Enterprise AI Implementation 2025: Complete Guide"
+            excerpt="Master enterprise AI implementation with proven strategies, best practices, and real-world case studies. Transform your organization with AI that delivers measurable ROI."
+            date="January 20, 2025"
+            category="Featured"
+            readTime="18 min"
+            image="🏢"
+            featured={true}
+            href="/blog/ai-enterprise-implementation-2025"
+          />
+          <BlogPost
+            title="MLOps Best Practices 2025: Production-Ready ML Systems"
+            excerpt="Master MLOps with proven strategies for building, deploying, and maintaining production-ready ML systems. Learn from real-world implementations and industry best practices."
+            date="January 20, 2025"
+            category="MLOps"
+            readTime="16 min"
+            image="🔧"
+            featured={true}
+            href="/blog/ai-mlops-best-practices-2025"
+          />
         </div>
 
         {/* Newsletter Signup */}

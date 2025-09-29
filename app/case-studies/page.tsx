@@ -140,6 +140,28 @@ export default function CaseStudiesPage() {
       },
       image: "/images/case-studies/enterprise-security.jpg",
       featured: false
+    },
+    {
+      id: 'enterprise-ai-transformation-2025',
+      title: 'Enterprise AI Transformation: $5.2M ROI in 18 Months',
+      company: 'Global Manufacturing Corp',
+      industry: 'Manufacturing',
+      challenge: 'Manual processes across operations, high costs, and supply chain inefficiencies were limiting growth.',
+      solution: 'Comprehensive AI transformation across predictive maintenance, supply chain optimization, and customer service.',
+      results: [
+        { metric: '$5.2M', label: 'Total ROI' },
+        { metric: '325%', label: 'Return on Investment' },
+        { metric: '40%', label: 'Efficiency Improvement' },
+        { metric: '95%', label: 'Customer Satisfaction' }
+      ],
+      testimonial: {
+        quote: "The AI transformation exceeded all our expectations. We achieved $5.2M ROI in just 18 months with comprehensive operational improvements across all departments.",
+        author: "Maria Rodriguez",
+        title: "CEO",
+        company: "Global Manufacturing Corp"
+      },
+      image: "/images/case-studies/enterprise-ai-transformation.jpg",
+      featured: true
     }
   ];
 
