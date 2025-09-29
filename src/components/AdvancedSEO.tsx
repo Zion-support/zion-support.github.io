@@ -60,6 +60,7 @@ const AdvancedSEO = ({
 
   if (type === "article" && publishedTime) {
     structuredData = {
+      ...structuredData,
       "@context": "https://schema.org",
       "@type": "Article",
       "headline": title,

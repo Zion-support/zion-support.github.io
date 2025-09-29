@@ -766,7 +766,6 @@ class AdvancedCachingSystem {
     
     const report = `
 Cache Report:
-============
 Total Items: ${metrics.totalItems}
 Total Size: ${(metrics.totalSize / 1024 / 1024).toFixed(2)} MB
 Hit Rate: ${(metrics.hitRate * 100).toFixed(2)}%

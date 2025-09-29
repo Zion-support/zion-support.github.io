@@ -1,16 +1,16 @@
 /**
  * Enhanced Accessibility Manager
-<<<<<<< HEAD
  * Provides comprehensive accessibility analysis and enhancement features
  */
 
-interface AccessibilityIssue {
+export interface AccessibilityIssue {
+  id: string;
   type: 'error' | 'warning' | 'info';
-  message: string;
   element: string;
-=======
- * Advanced accessibility features and monitoring
- */
+  message: string;
+  suggestion: string;
+  severity: 'high' | 'medium' | 'low';
+}
 
 export interface AccessibilityMetrics {
   contrastRatio: number;
@@ -21,26 +21,10 @@ export interface AccessibilityMetrics {
   screenReaderCompatible: boolean;
   colorBlindFriendly: boolean;
   motionReduced: boolean;
-}
-
-export interface AccessibilityIssue {
-  id: string;
-  type: 'error' | 'warning' | 'info';
-  element: string;
-  message: string;
->>>>>>> 4b999e7e8499b1d439e8efecb8a451947461db54
-  suggestion: string;
-  severity: 'high' | 'medium' | 'low';
-}
-
-<<<<<<< HEAD
-interface AccessibilityMetrics {
   totalIssues: number;
   errorCount: number;
   warningCount: number;
   infoCount: number;
-  contrastRatio: number;
-  focusableElements: number;
   headingStructure: number;
   altTextCoverage: number;
 }
@@ -60,54 +44,21 @@ interface AccessibilityReport {
 class EnhancedAccessibilityManager {
   private issues: AccessibilityIssue[] = [];
   private metrics: AccessibilityMetrics = {
+    contrastRatio: 4.5,
+    fontSize: 16,
+    focusableElements: 0,
+    ariaLabels: 0,
+    keyboardNavigation: true,
+    screenReaderCompatible: true,
+    colorBlindFriendly: true,
+    motionReduced: false,
     totalIssues: 0,
     errorCount: 0,
     warningCount: 0,
     infoCount: 0,
-    contrastRatio: 0,
-    focusableElements: 0,
     headingStructure: 0,
     altTextCoverage: 0
   };
-
-  constructor() {
-    this.initializeAccessibility();
-  }
-
-  private initializeAccessibility(): void {
-    if (typeof window === 'undefined') return;
-
-    // Set up accessibility monitoring
-    this.setupAccessibilityObserver();
-    
-    // Initialize keyboard navigation
-    this.setupKeyboardNavigation();
-    
-    // Initialize focus management
-    this.setupFocusManagement();
-    
-    // Initialize screen reader support
-    this.setupScreenReaderSupport();
-  }
-
-  private setupAccessibilityObserver(): void {
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.type === 'childList') {
-          this.analyzeAccessibility();
-        }
-      });
-    });
-
-    observer.observe(document.body, { 
-      childList: true, 
-      subtree: true, 
-      attributes: true,
-      attributeFilter: ['aria-label', 'aria-describedby', 'role', 'tabindex']
-=======
-class EnhancedAccessibilityManager {
-  private metrics: AccessibilityMetrics | null = null;
-  private issues: AccessibilityIssue[] = [];
   private isMonitoring: boolean = false;
 
   constructor() {
@@ -125,6 +76,25 @@ class EnhancedAccessibilityManager {
     this.setupScreenReaderSupport();
     this.setupMotionPreferences();
     this.setupColorContrastMonitoring();
+    this.setupAccessibilityObserver();
+    this.setupFocusManagement();
+  }
+
+  private setupAccessibilityObserver(): void {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList') {
+          this.analyzeAccessibility();
+        }
+      });
+    });
+
+    observer.observe(document.body, { 
+      childList: true, 
+      subtree: true, 
+      attributes: true,
+      attributeFilter: ['aria-label', 'aria-describedby', 'role', 'tabindex']
+    });
   }
 
   private scanForAccessibilityIssues(): void {
@@ -194,12 +164,19 @@ class EnhancedAccessibilityManager {
           severity: 'medium'
         });
       }
->>>>>>> 4b999e7e8499b1d439e8efecb8a451947461db54
     });
   }
 
   private setupKeyboardNavigation(): void {
-<<<<<<< HEAD
+    // Skip links
+    this.createSkipLinks();
+    
+    // Trap focus in modals
+    this.setupFocusTrap();
+    
+    // Arrow key navigation for menus
+    this.setupArrowKeyNavigation();
+
     document.addEventListener('keydown', (event) => {
       // Handle tab navigation
       if (event.key === 'Tab') {
@@ -226,15 +203,7 @@ class EnhancedAccessibilityManager {
 
     document.addEventListener('focusout', (event) => {
       this.handleFocusOut(event);
-=======
-    // Skip links
-    this.createSkipLinks();
-    
-    // Trap focus in modals
-    this.setupFocusTrap();
-    
-    // Arrow key navigation for menus
-    this.setupArrowKeyNavigation();
+    });
   }
 
   private createSkipLinks(): void {
@@ -325,12 +294,31 @@ class EnhancedAccessibilityManager {
             break;
         }
       });
->>>>>>> 4b999e7e8499b1d439e8efecb8a451947461db54
     });
   }
 
   private setupScreenReaderSupport(): void {
-<<<<<<< HEAD
+    // Add live region for dynamic content
+    const liveRegion = document.createElement('div');
+    liveRegion.setAttribute('aria-live', 'polite');
+    liveRegion.setAttribute('aria-atomic', 'true');
+    liveRegion.className = 'sr-only';
+    liveRegion.style.cssText = `
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    `;
+    document.body.appendChild(liveRegion);
+
+    // Announce page changes
+    this.announcePageChanges();
+
     // Add screen reader announcements
     this.createAnnouncementRegion();
     
@@ -357,56 +345,6 @@ class EnhancedAccessibilityManager {
       element.className = 'sr-only';
       document.body.appendChild(element);
     });
-  }
-
-  private handleTabNavigation(event: KeyboardEvent): void {
-    const focusableElements = this.getFocusableElements();
-    const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
-    
-    if (event.shiftKey) {
-      // Shift + Tab (backward)
-      if (currentIndex > 0) {
-        focusableElements[currentIndex - 1].focus();
-      } else {
-        focusableElements[focusableElements.length - 1].focus();
-      }
-    } else {
-      // Tab (forward)
-      if (currentIndex < focusableElements.length - 1) {
-        focusableElements[currentIndex + 1].focus();
-      } else {
-        focusableElements[0].focus();
-      }
-    }
-  }
-
-  private handleEscapeKey(): void {
-    // Close any open modals or dropdowns
-    const modals = document.querySelectorAll('[role="dialog"], [role="alertdialog"]');
-    modals.forEach(modal => {
-      if (modal.getAttribute('aria-hidden') !== 'true') {
-        this.closeModal(modal as HTMLElement);
-=======
-    // Add live region for dynamic content
-    const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
-    liveRegion.style.cssText = `
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    `;
-    document.body.appendChild(liveRegion);
-
-    // Announce page changes
-    this.announcePageChanges();
   }
 
   private announcePageChanges(): void {
@@ -442,12 +380,90 @@ class EnhancedAccessibilityManager {
         this.disableAnimations();
       } else {
         this.enableAnimations();
->>>>>>> 4b999e7e8499b1d439e8efecb8a451947461db54
       }
     });
   }
 
-<<<<<<< HEAD
+  private disableAnimations(): void {
+    const style = document.createElement('style');
+    style.id = 'reduced-motion';
+    style.textContent = `
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  private enableAnimations(): void {
+    const style = document.getElementById('reduced-motion');
+    if (style) {
+      style.remove();
+    }
+  }
+
+  private setupColorContrastMonitoring(): void {
+    const elements = document.querySelectorAll('*');
+    elements.forEach((element) => {
+      const computedStyle = window.getComputedStyle(element);
+      const color = computedStyle.color;
+      const backgroundColor = computedStyle.backgroundColor;
+      
+      if (color && backgroundColor && color !== backgroundColor) {
+        const contrastRatio = this.calculateContrastRatio(color, backgroundColor);
+        if (contrastRatio < 4.5) {
+          this.addIssue({
+            type: 'error',
+            element: element.tagName.toLowerCase(),
+            message: `Low color contrast ratio: ${contrastRatio.toFixed(2)}`,
+            suggestion: 'Increase color contrast to meet WCAG guidelines',
+            severity: 'high'
+          });
+        }
+      }
+    });
+  }
+
+  private calculateContrastRatio(color1: string, color2: string): number {
+    // Simplified contrast ratio calculation
+    // In a real implementation, you'd convert colors to RGB and calculate luminance
+    return 4.5; // Placeholder
+  }
+
+  private handleTabNavigation(event: KeyboardEvent): void {
+    const focusableElements = this.getFocusableElements();
+    const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
+    
+    if (event.shiftKey) {
+      // Shift + Tab (backward)
+      if (currentIndex > 0) {
+        focusableElements[currentIndex - 1].focus();
+      } else {
+        focusableElements[focusableElements.length - 1].focus();
+      }
+    } else {
+      // Tab (forward)
+      if (currentIndex < focusableElements.length - 1) {
+        focusableElements[currentIndex + 1].focus();
+      } else {
+        focusableElements[0].focus();
+      }
+    }
+  }
+
+  private handleEscapeKey(): void {
+    // Close any open modals or dropdowns
+    const modals = document.querySelectorAll('[role="dialog"], [role="alertdialog"]');
+    modals.forEach(modal => {
+      if (modal.getAttribute('aria-hidden') !== 'true') {
+        this.closeModal(modal as HTMLElement);
+      }
+    });
+  }
+
   private handleArrowKeys(event: KeyboardEvent): void {
     const target = event.target as HTMLElement;
     
@@ -539,15 +555,35 @@ class EnhancedAccessibilityManager {
     return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[];
   }
 
+  private addIssue(issue: Omit<AccessibilityIssue, 'id'>): void {
+    const newIssue: AccessibilityIssue = {
+      ...issue,
+      id: `issue_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    };
+
+    this.issues.push(newIssue);
+    
+    // Keep only last 100 issues
+    if (this.issues.length > 100) {
+      this.issues = this.issues.slice(-100);
+    }
+  }
+
   public analyzeAccessibility(): AccessibilityReport {
     this.issues = [];
     this.metrics = {
+      contrastRatio: 4.5,
+      fontSize: 16,
+      focusableElements: 0,
+      ariaLabels: 0,
+      keyboardNavigation: true,
+      screenReaderCompatible: true,
+      colorBlindFriendly: true,
+      motionReduced: false,
       totalIssues: 0,
       errorCount: 0,
       warningCount: 0,
       infoCount: 0,
-      contrastRatio: 0,
-      focusableElements: 0,
       headingStructure: 0,
       altTextCoverage: 0
     };
@@ -590,10 +626,10 @@ class EnhancedAccessibilityManager {
 
     images.forEach((img, index) => {
       if (!img.alt) {
-        this.issues.push({
+        this.addIssue({
           type: 'error',
-          message: `Image ${index + 1} is missing alt text`,
           element: `img[${index}]`,
+          message: `Image ${index + 1} is missing alt text`,
           suggestion: 'Add descriptive alt text for screen readers',
           severity: 'high'
         });
@@ -613,10 +649,10 @@ class EnhancedAccessibilityManager {
 
     // Check for missing H1
     if (document.querySelectorAll('h1').length === 0) {
-      this.issues.push({
+      this.addIssue({
         type: 'error',
-        message: 'No H1 heading found',
         element: 'h1',
+        message: 'No H1 heading found',
         suggestion: 'Add a main H1 heading to structure your content',
         severity: 'high'
       });
@@ -625,10 +661,10 @@ class EnhancedAccessibilityManager {
     // Check for heading hierarchy
     for (let i = 1; i < headingLevels.length; i++) {
       if (headingLevels[i] > headingLevels[i - 1] + 1) {
-        this.issues.push({
+        this.addIssue({
           type: 'warning',
-          message: 'Heading hierarchy is incorrect',
           element: `h${headingLevels[i]}`,
+          message: 'Heading hierarchy is incorrect',
           suggestion: 'Maintain proper heading hierarchy (H1 > H2 > H3, etc.)',
           severity: 'medium'
         });
@@ -641,20 +677,20 @@ class EnhancedAccessibilityManager {
     
     links.forEach((link, index) => {
       if (!link.textContent?.trim() && !link.getAttribute('aria-label')) {
-        this.issues.push({
+        this.addIssue({
           type: 'error',
-          message: `Link ${index + 1} has no accessible text`,
           element: `a[${index}]`,
+          message: `Link ${index + 1} has no accessible text`,
           suggestion: 'Add text content or aria-label to the link',
           severity: 'high'
         });
       }
 
       if (link.getAttribute('href') === '#') {
-        this.issues.push({
+        this.addIssue({
           type: 'warning',
-          message: `Link ${index + 1} has empty href`,
           element: `a[${index}]`,
+          message: `Link ${index + 1} has empty href`,
           suggestion: 'Provide a meaningful href or use a button instead',
           severity: 'medium'
         });
@@ -667,10 +703,10 @@ class EnhancedAccessibilityManager {
     
     buttons.forEach((button, index) => {
       if (!button.textContent?.trim() && !button.getAttribute('aria-label')) {
-        this.issues.push({
+        this.addIssue({
           type: 'error',
-          message: `Button ${index + 1} has no accessible text`,
           element: `button[${index}]`,
+          message: `Button ${index + 1} has no accessible text`,
           suggestion: 'Add text content or aria-label to the button',
           severity: 'high'
         });
@@ -686,10 +722,10 @@ class EnhancedAccessibilityManager {
       const label = document.querySelector(`label[for="${id}"]`);
       
       if (!label && !input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
-        this.issues.push({
+        this.addIssue({
           type: 'error',
-          message: `Form input ${index + 1} has no label`,
           element: `input[${index}]`,
+          message: `Form input ${index + 1} has no label`,
           suggestion: 'Add a label or aria-label to the form input',
           severity: 'high'
         });
@@ -712,10 +748,10 @@ class EnhancedAccessibilityManager {
     modals.forEach(modal => {
       const focusableInModal = modal.querySelectorAll('button, input, select, textarea, a[href]');
       if (focusableInModal.length === 0) {
-        this.issues.push({
+        this.addIssue({
           type: 'warning',
-          message: 'Modal has no focusable elements',
           element: modal.tagName,
+          message: 'Modal has no focusable elements',
           suggestion: 'Add focusable elements or ensure keyboard navigation works',
           severity: 'medium'
         });
@@ -731,10 +767,10 @@ class EnhancedAccessibilityManager {
       const hasLabel = element.getAttribute('aria-label') || element.getAttribute('aria-labelledby');
       
       if (['button', 'link', 'menuitem', 'option'].includes(role || '') && !hasLabel) {
-        this.issues.push({
+        this.addIssue({
           type: 'warning',
-          message: `Element with role "${role}" has no accessible name`,
           element: `[role="${role}"][${index}]`,
+          message: `Element with role "${role}" has no accessible name`,
           suggestion: 'Add aria-label or aria-labelledby to provide an accessible name',
           severity: 'medium'
         });
@@ -746,10 +782,10 @@ class EnhancedAccessibilityManager {
     // Check for focus management issues
     const skipLinks = document.querySelectorAll('a[href="#main"], a[href="#content"]');
     if (skipLinks.length === 0) {
-      this.issues.push({
+      this.addIssue({
         type: 'info',
-        message: 'No skip links found',
         element: 'body',
+        message: 'No skip links found',
         suggestion: 'Add skip links to help keyboard users navigate',
         severity: 'low'
       });
@@ -778,6 +814,9 @@ class EnhancedAccessibilityManager {
     this.metrics.errorCount = this.issues.filter(i => i.type === 'error').length;
     this.metrics.warningCount = this.issues.filter(i => i.type === 'warning').length;
     this.metrics.infoCount = this.issues.filter(i => i.type === 'info').length;
+    this.metrics.focusableElements = document.querySelectorAll('a, button, input, textarea, select, [tabindex]').length;
+    this.metrics.ariaLabels = document.querySelectorAll('[aria-label]').length;
+    this.metrics.motionReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   }
 
   private generateRecommendations(): string[] {
@@ -844,6 +883,28 @@ class EnhancedAccessibilityManager {
     return Math.max(0, score);
   }
 
+  public getIssues(): AccessibilityIssue[] {
+    return [...this.issues];
+  }
+
+  public getHighSeverityIssues(): AccessibilityIssue[] {
+    return this.issues.filter(issue => issue.severity === 'high');
+  }
+
+  public getMetrics(): AccessibilityMetrics {
+    return { ...this.metrics };
+  }
+
+  public announceToScreenReader(message: string): void {
+    const liveRegion = document.querySelector('[aria-live="polite"]');
+    if (liveRegion) {
+      liveRegion.textContent = message;
+      setTimeout(() => {
+        liveRegion.textContent = '';
+      }, 1000);
+    }
+  }
+
   public announce(message: string, priority: 'polite' | 'assertive' = 'polite'): void {
     const announcement = document.getElementById('accessibility-announcements');
     if (announcement) {
@@ -880,111 +941,13 @@ Recommendations:
 ${report.recommendations.map(rec => `- ${rec}`).join('\n')}
     `.trim();
   }
-}
-
-// Export singleton instance
-export const enhancedAccessibilityManager = new EnhancedAccessibilityManager();
-export { EnhancedAccessibilityManager };
-export type { AccessibilityIssue, AccessibilityMetrics, AccessibilityReport };
-=======
-  private disableAnimations(): void {
-    const style = document.createElement('style');
-    style.id = 'reduced-motion';
-    style.textContent = `
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
-    `;
-    document.head.appendChild(style);
-  }
-
-  private enableAnimations(): void {
-    const style = document.getElementById('reduced-motion');
-    if (style) {
-      style.remove();
-    }
-  }
-
-  private setupColorContrastMonitoring(): void {
-    const elements = document.querySelectorAll('*');
-    elements.forEach((element) => {
-      const computedStyle = window.getComputedStyle(element);
-      const color = computedStyle.color;
-      const backgroundColor = computedStyle.backgroundColor;
-      
-      if (color && backgroundColor && color !== backgroundColor) {
-        const contrastRatio = this.calculateContrastRatio(color, backgroundColor);
-        if (contrastRatio < 4.5) {
-          this.addIssue({
-            type: 'error',
-            element: element.tagName.toLowerCase(),
-            message: `Low color contrast ratio: ${contrastRatio.toFixed(2)}`,
-            suggestion: 'Increase color contrast to meet WCAG guidelines',
-            severity: 'high'
-          });
-        }
-      }
-    });
-  }
-
-  private calculateContrastRatio(color1: string, color2: string): number {
-    // Simplified contrast ratio calculation
-    // In a real implementation, you'd convert colors to RGB and calculate luminance
-    return 4.5; // Placeholder
-  }
-
-  private addIssue(issue: Omit<AccessibilityIssue, 'id'>): void {
-    const newIssue: AccessibilityIssue = {
-      ...issue,
-      id: `issue_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
-
-    this.issues.push(newIssue);
-    
-    // Keep only last 100 issues
-    if (this.issues.length > 100) {
-      this.issues = this.issues.slice(-100);
-    }
-  }
-
-  public getIssues(): AccessibilityIssue[] {
-    return [...this.issues];
-  }
-
-  public getHighSeverityIssues(): AccessibilityIssue[] {
-    return this.issues.filter(issue => issue.severity === 'high');
-  }
-
-  public getMetrics(): AccessibilityMetrics {
-    return {
-      contrastRatio: 4.5, // Placeholder
-      fontSize: 16,
-      focusableElements: document.querySelectorAll('a, button, input, textarea, select, [tabindex]').length,
-      ariaLabels: document.querySelectorAll('[aria-label]').length,
-      keyboardNavigation: true,
-      screenReaderCompatible: true,
-      colorBlindFriendly: true,
-      motionReduced: window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    };
-  }
-
-  public announceToScreenReader(message: string): void {
-    const liveRegion = document.querySelector('[aria-live="polite"]');
-    if (liveRegion) {
-      liveRegion.textContent = message;
-      setTimeout(() => {
-        liveRegion.textContent = '';
-      }, 1000);
-    }
-  }
 
   public cleanup(): void {
     this.isMonitoring = false;
   }
 }
 
+// Export singleton instance
 export const enhancedAccessibilityManager = new EnhancedAccessibilityManager();
->>>>>>> 4b999e7e8499b1d439e8efecb8a451947461db54
+export { EnhancedAccessibilityManager };
+export type { AccessibilityReport };

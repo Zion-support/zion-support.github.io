@@ -555,7 +555,6 @@ class AdvancedSecurityManager {
     const metrics = this.getMetrics();
     const report = `
 Security Report:
-===============
 Security Score: ${metrics.securityScore}/100
 CSP Violations: ${metrics.cspViolations}
 XSS Attempts: ${metrics.xssAttempts}

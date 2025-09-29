@@ -628,7 +628,6 @@ class AdvancedErrorHandler {
     
     const report = `
 Error Report (Last 24 Hours):
-============================
 Total Errors: ${metrics.totalErrors}
 Critical Errors: ${metrics.criticalErrors}
 Resolved Errors: ${metrics.resolvedErrors}

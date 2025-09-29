@@ -693,7 +693,6 @@ class AdvancedAIAssistant {
     
     const report = `
 AI Assistant Report:
-===================
 Total Interactions: ${analytics.totalInteractions}
 Successful: ${analytics.successfulInteractions} (${((analytics.successfulInteractions / analytics.totalInteractions) * 100).toFixed(1)}%)
 Failed: ${analytics.failedInteractions} (${analytics.errorRate.toFixed(1)}%)
