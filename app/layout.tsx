@@ -49,6 +49,9 @@ function Header() {
               <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                 BREAKTHROUGH 2027
               </span>
+              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold ml-1">
+                50+ ARTICLES
+              </span>
             </Link>
           </div>
           <div className="relative group">
@@ -56,6 +59,9 @@ function Header() {
               Case Studies
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                 $43M+ ROI
+              </span>
+              <span className="bg-gradient-to-r from-green-500 to-teal-500 text-white px-2 py-1 rounded-full text-xs font-semibold ml-1">
+                25+ STUDIES
               </span>
             </Link>
           </div>
@@ -87,30 +93,19 @@ function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Latest 2027 Content</h3>
+            <h3 className="font-semibold text-gray-900 mb-3">Latest 2026 Content</h3>
             <div className="space-y-2">
-              <Link href="/blog/ai-neural-interfaces-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🧠 Neural Interfaces 2026</Link>
-              <Link href="/blog/ai-space-tech-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Space AI Technology</Link>
-              <Link href="/blog/ai-synthetic-data-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🔒 Synthetic Data AI</Link>
-              <Link href="/blog/ai-quantum-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">⚛️ Quantum Computing AI</Link>
+              <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                Blog
+                <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
+              </Link>
+              <Link href="/blog/ai-future-workforce-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">👥 AI Future Workforce 2026</Link>
+              <Link href="/blog/ai-cybersecurity-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🛡️ AI Cybersecurity 2026</Link>
+              <Link href="/case-studies/ai-finance-automation-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">💰 $15M Finance ROI</Link>
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Case Studies
                 <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
-=======
-              <Link href="/blog/ai-2027-breakthrough-technologies" className="block text-gray-600 hover:text-blue-600 transition-colors">🧠 AI 2027 Breakthrough Technologies</Link>
-              <Link href="/blog/ai-autonomous-enterprise-operations-2027" className="block text-gray-600 hover:text-blue-600 transition-colors">🏢 Autonomous Enterprise Operations</Link>
-              <Link href="/blog/ai-quantum-neural-networks-2027" className="block text-gray-600 hover:text-blue-600 transition-colors">⚛️ Quantum Neural Networks</Link>
-              <Link href="/case-studies/ai-2027-transformation-mega-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                $500M Success Story
-                <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">MEGA SUCCESS</span>
               </Link>
-              <Link href="/case-studies/ai-synthetic-data-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">💰 $15M Synthetic Data ROI</Link>
-=======
-              <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors">Blog</Link>
-              <Link href="/blog/ai-sustainability-green-tech-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Sustainability</Link>
-              <Link href="/blog/ai-autonomous-enterprise-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Autonomous Enterprise</Link>
-              <Link href="/case-studies/ai-sustainability-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">Sustainability Case Study</Link>
-              <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors">All Case Studies</Link>
             </div>
           </div>
           <div>
