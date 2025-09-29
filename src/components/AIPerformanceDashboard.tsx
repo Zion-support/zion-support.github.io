@@ -61,7 +61,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({
         ]
       };
 
-      const mockInsights: AIInsights = {
+      const mockInsights = {
         predictedHighRiskActions: [
           'Database connection timeout',
           'Memory leak in image processing',
