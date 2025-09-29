@@ -160,7 +160,6 @@ Avoid vanity KPIs, ambiguous definitions, and missing instrumentation. Replace w
     featured: true,
     readTime: "6 min read",
     image: "/images/north-star-anti-patterns.jpg"
-=======
   },
   {
     slug: "genai-telemetry-observability-2025",
@@ -212,7 +211,8 @@ Use this concise pre‑launch checklist to ensure your AI features meet quality,
     featured: true,
     readTime: "5 min read",
     image: "/images/ai-product-readiness.jpg"
->>>>>>> origin/cursor/create-and-deploy-new-content-e37c
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-f3de
   },
   {
     slug: "real-time-data-pipelines-2025",
