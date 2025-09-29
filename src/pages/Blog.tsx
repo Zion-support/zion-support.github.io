@@ -11,7 +11,8 @@ import {
   User,
   Zap
 } from "lucide-react";
-import React, { useState, useMemo } from "react";
+import React, { useMemo, useState } from "react";
+import { latestArticles, featuredArticles } from "../content/latest-articles";
 import { Helmet } from "react-helmet-async";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
 const Footer: React.FC = () => null;
@@ -179,21 +180,21 @@ export default function Blog(): React.JSX.Element {
     },
   ];
 
-  // Map content/posts entries into this page's structure
+  // Map content entries into this page's structure
   const mappedFromContent: BlogPost[] = useMemo(() => {
-    return contentPosts.map((p, index) => ({
-      id: 10000 + index,
-      title: p.title,
-      excerpt: p.description,
-      content: "Read more on dedicated article page",
-      author: "Zion Tech Group Team",
-      date: p.publishedAt,
-      readTime: p.readTime ?? "6 min read",
-      category: p.category,
-      tags: [p.category.replace(/\s+/g, " ")],
-      image: "/api/placeholder/400/250",
-      featured: !!p.featured,
-      views: 0
+    return latestArticles.map((a, index) => ({
+      id: index + 1000,
+      title: a.title,
+      excerpt: a.excerpt || a.description,
+      content: a.description,
+      author: a.author,
+      date: a.date,
+      readTime: a.readTime,
+      category: a.category,
+      tags: a.tags,
+      image: a.image || "/api/placeholder/400/250",
+      featured: a.featured,
+      views: a.trending ? 1000 : 250
     }));
   }, []);
 
@@ -260,12 +261,12 @@ export default function Blog(): React.JSX.Element {
         {/* New Content Promo Banner */}
         <div className="border-b border-white/10">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center justify-between">
+              <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center justify-between">
               <div className="mr-4">
-                <div className="text-sm font-semibold">🚀 Fresh: Risk Playbook, Privacy‑Preserving Agents, KPI Policy Tests</div>
-                <div className="text-xs text-white/90">Guardrails wired to KPIs, privacy‑first agent design, and CI checks teams adopt.</div>
+                <div className="text-sm font-semibold">🚀 Fresh: AI Platform Scorecards + Production RAG Quality Budgets</div>
+                <div className="text-xs text-white/90">Link platform telemetry to ROI and ship RAG with freshness SLAs.</div>
               </div>
-              <a href="/blog/ai-risk-mitigation-playbook-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">
+              <a href="/blog/ai-platform-scorecards-roi-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">
                 Read the latest
               </a>
             </div>

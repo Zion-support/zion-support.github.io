@@ -26,7 +26,8 @@ export default function Contact(): React.JSX.Element {
           content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our expert team for consultation and support."
         />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
         <Header />
         <main className="container mx-auto px-6 py-20">
           <div className="max-w-4xl mx-auto text-center">

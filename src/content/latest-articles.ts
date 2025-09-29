@@ -498,6 +498,38 @@ export const latestArticles: LatestArticle[] = [
   }
   ,
   {
+    id: "ai-platform-scorecards-roi-2026",
+    slug: "ai-platform-scorecards-roi-2026",
+    title: "AI Platform Scorecards 2026: Proving ROI with Leading Indicators",
+    description: "A practical system to link platform telemetry to adoption, retention, and revenue using scorecards engineers actually adopt.",
+    excerpt: "Design scorecards that shift conversations from infra spend to shipped business outcomes.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-10",
+    category: "AI Strategy",
+    tags: ["Scorecards", "ROI", "Platform Engineering"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-platform-scorecards-roi-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "production-rag-quality-budgets-2026",
+    slug: "production-rag-quality-budgets-2026",
+    title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
+    description: "Run RAG at scale with explicit quality budgets, freshness controls, and KPI-aligned SLAs that avoid regressions.",
+    excerpt: "Keep answers accurate and on‑budget with freshness windows, async warmups, and layered evals.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-10",
+    category: "GenAI",
+    tags: ["RAG", "Freshness", "Evals", "SLAs"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/production-rag-quality-budgets-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-governance-blueprint-2025",
     slug: "ai-governance-blueprint-2025",
     title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
