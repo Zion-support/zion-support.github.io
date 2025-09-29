@@ -12,9 +12,9 @@ export const latestInsights: InsightArticle[] = [
     id: "ai-risk-register-checklist",
     title: "AI Risk Register Checklist",
     summary: "Owners, policy tests, and dashboards that make risk programs real.",
-    category: "AI Governance",
-    date: "2025-10-06",
-    readMinutes: 5,
+    category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 6,
   },
   {
     id: "eval-systems-online-canaries",
@@ -64,10 +64,11 @@ export const latestInsights: InsightArticle[] = [
   {
     id: "ai-governance-rubric",
     title: "A Lightweight Rubric for AI Governance Decisions",
-    summary: "Practical decision framework for AI governance with clear criteria and ownership.",
+    summary:
+      "When to require human‑in‑the‑loop, what to log, and how to audit outputs across teams.",
     category: "AI Governance",
-    date: "2025-09-29",
-    readMinutes: 6,
+    date: "2025-10-04",
+    readMinutes: 4,
   },
   {
     id: "platform-blueprints-golden-paths",
@@ -106,12 +107,12 @@ export const latestInsights: InsightArticle[] = [
     id: "rag-freshness-strategies",
     title: "RAG Freshness Strategies",
     summary: "Invalidate staleness with versioned chunks, TTLs, and async warmups.",
-    category: "GenAI",
-    date: "2025-10-06",
+    category: "Risk & Compliance",
+    date: "2025-09-29",
     readMinutes: 6,
   },
   {
-    id: "ai-governance-rubric-v2",
+    id: "ai-governance-rubric",
     title: "A Lightweight Rubric for AI Governance Decisions",
     summary:
       "Decision criteria for when to add controls, how to validate, and who owns risk.",
@@ -220,10 +221,11 @@ export const latestInsights: InsightArticle[] = [
   },
   {
     id: "analytics-ltv-playbook",
-    title: "An Operator's Playbook for LTV:CPA Ratio",
+    title: "An Operator’s Playbook for LTV:CPA Ratio",
     summary:
       "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
     category: "Product Analytics",
+    description: "A look at on‑device models, streaming pipelines, and cost/perf trade‑offs from deployments.",
     date: "2025-09-29",
     readMinutes: 7,
   },
@@ -459,8 +461,8 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 4,
   },
   {
-    id: "ai-security-best-practices",
-    title: "AI Security Best Practices for Enterprise Deployment",
+    id: "ai-security-essentials",
+    title: "AI Security Essentials",
     summary: "Essential security practices for AI systems, covering model protection, data privacy, and adversarial defense strategies.",
     category: "Security",
     date: "2025-01-21",

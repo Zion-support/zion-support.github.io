@@ -18,43 +18,43 @@ const TrendingContentBanner: React.FC = () => {
 
   const trendingItems = [
     {
-      title: "AI Autonomous Operations",
-      description: "Self-managing infrastructure revolution",
-      views: "12.5K",
-      readTime: "11 min",
-      category: "Infrastructure",
-      icon: Brain,
-      link: "/blog/ai-autonomous-operations-2025",
-      badge: "HOT"
-    },
-    {
-      title: "Enterprise AI Roadmap 2025",
-      description: "Strategic transformation guide",
-      views: "8.9K",
-      readTime: "13 min",
-      category: "Strategy",
+      title: "AI Platform ROI Scorecards",
+      description: "Outcome metrics that drive investment decisions",
+      views: "9.1K",
+      readTime: "7 min",
+      category: "AI Strategy",
       icon: TrendingUp,
-      link: "/blog/enterprise-ai-roadmap-2025",
+      link: "/blog/ai-platform-roi-scorecards-2025",
       badge: "NEW"
     },
     {
-      title: "Cloud-Native AI Platforms",
-      description: "Scalable infrastructure design",
-      views: "7.2K",
-      readTime: "12 min",
-      category: "Cloud",
-      icon: Cloud,
-      link: "/blog/cloud-native-ai-platforms-2025",
+      title: "Secure ML Supply Chain",
+      description: "SBOMs, attestations, and policy gates",
+      views: "10.4K",
+      readTime: "8 min",
+      category: "Security",
+      icon: Shield,
+      link: "/blog/secure-ml-supply-chain-attestations-2025",
       badge: "TRENDING"
     },
     {
-      title: "Zero Trust Security",
-      description: "Enterprise protection standard",
-      views: "15.1K",
-      readTime: "14 min",
-      category: "Security",
-      icon: Shield,
-      link: "/blog/cybersecurity-zero-trust-2025",
+      title: "Enterprise RAG Blueprint v2",
+      description: "Freshness, hybrid search, and evals",
+      views: "7.9K",
+      readTime: "9 min",
+      category: "GenAI",
+      icon: Brain,
+      link: "/blog/enterprise-rag-blueprint-v2-2025",
+      badge: "HOT"
+    },
+    {
+      title: "Serverless Inference Cost Playbook",
+      description: "40–70% savings without P95 pain",
+      views: "12.1K",
+      readTime: "7 min",
+      category: "GenAI",
+      icon: Zap,
+      link: "/blog/serverless-inference-cost-playbook-2025",
       badge: "POPULAR"
     }
   ];

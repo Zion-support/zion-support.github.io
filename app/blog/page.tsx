@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 export const metadata = {
   title: 'AI & Tech Blog | Zion Tech Group',
   description: 'Latest insights on AI trends, technology innovations, and business automation strategies.',
@@ -70,7 +71,7 @@ export default function BlogPage() {
             readTime="12 min"
             image="🚀"
             featured={true}
-            href="/blog/ai-revolution-2025"
+            href="/blog/practical-rag-blueprint-2025"
           />
           <BlogPost
             title="AI Workflow Automation: Complete Implementation Guide"

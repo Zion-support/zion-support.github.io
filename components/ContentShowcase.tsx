@@ -19,6 +19,50 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-governance-framework-2025',
+    title: 'AI Governance Framework 2025: Enterprise-Ready Implementation Guide',
+    excerpt: 'Master AI governance with our comprehensive framework covering risk management, compliance, and ethical deployment strategies.',
+    type: 'article',
+    readTime: '15 min read',
+    category: 'AI Governance',
+    href: '/blog/ai-governance-framework-2025',
+    featured: true,
+    publishedDate: '2025-01-20',
+    metrics: [
+      { value: '70%', label: 'Risk Reduction' },
+      { value: '12', label: 'Framework Areas' }
+    ]
+  },
+  {
+    id: 'ai-mlops-vector-databases-2025',
+    title: 'AI MLOps with Vector Databases 2025: Production-Ready RAG Architecture',
+    excerpt: 'Master MLOps for AI applications with vector databases. Learn production-ready RAG architecture and scalable deployment patterns.',
+    type: 'article',
+    readTime: '18 min read',
+    category: 'MLOps',
+    href: '/blog/ai-mlops-vector-databases-2025',
+    featured: true,
+    publishedDate: '2025-01-20',
+    metrics: [
+      { value: '<50ms', label: 'Search Latency' },
+      { value: '10M+', label: 'Vector Capacity' }
+    ]
+  },
+  {
+    id: 'fintech-ai-risk-compliance-2025',
+    title: 'FinTech AI Risk Compliance 2025: 70% Risk Reduction with Automated Governance',
+    excerpt: 'See how a leading fintech company achieved 70% AI risk reduction and regulatory compliance with automated governance frameworks.',
+    type: 'case-study',
+    category: 'FinTech',
+    href: '/case-studies/fintech-ai-risk-compliance-2025',
+    featured: true,
+    publishedDate: '2025-01-20',
+    metrics: [
+      { value: '70%', label: 'Risk Reduction' },
+      { value: '$2.5M', label: 'Cost Savings' }
+    ]
+  },
+  {
     id: 'ai-risk-register',
     title: 'AI Risk Register: Practical Framework for Managing AI Risks',
     excerpt: 'Production-ready risk register covering model, data, privacy, security, ethics, and ops.',
