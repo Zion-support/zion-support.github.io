@@ -49,6 +49,14 @@ import {
   AutonomousOperationsSuccessBanner,
   NewContentShowcaseBanner2026
 } from '../components/NewContent2026Banners';
+import { 
+  AIAutonomousDevOpsBanner,
+  AutonomousDevOpsSuccessBanner,
+  SelfHealingInfrastructureBanner,
+  DevOpsAutomationPlatformBanner,
+  ZeroDowntimeDeploymentBanner,
+  InfrastructureIntelligenceBanner
+} from '../components/AutonomousDevOpsBanners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -70,6 +78,10 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ NEW 2026:</span>
+            <Link href="/blog/ai-autonomous-devops-2026" className="underline hover:text-yellow-200">AI Autonomous DevOps</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-autonomous-devops-success-2026" className="underline hover:text-yellow-200">$15M ROI Case Study</Link>
+            <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-ethical-framework-2026" className="underline hover:text-yellow-200">AI Ethical Framework</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-multimodal-enterprise-integration-2026" className="underline hover:text-yellow-200">Multimodal AI Integration</Link>
@@ -77,10 +89,6 @@ export default function HomePage() {
             <Link href="/case-studies/ai-ethical-framework-success-2026" className="underline hover:text-yellow-200">Ethics Success Story</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/agentic-workflow-orchestration-2026" className="underline hover:text-yellow-200">Workflow Orchestration</Link>
           </div>
           <Link
             href="/blog"
@@ -98,6 +106,12 @@ export default function HomePage() {
       <AISecurityEnterprise2026Banner />
       <AIMultimodalEnterprise2026Banner />
       <AISustainabilityTransformationBanner />
+      <AIAutonomousDevOpsBanner />
+      <AutonomousDevOpsSuccessBanner />
+      <SelfHealingInfrastructureBanner />
+      <DevOpsAutomationPlatformBanner />
+      <ZeroDowntimeDeploymentBanner />
+      <InfrastructureIntelligenceBanner />
       <AIAutonomousCloudOpsBanner />
       <AIFinTechTransformationBanner />
       <AIRetailAutomationBanner />
@@ -490,6 +504,40 @@ export default function HomePage() {
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Architecture Guide →
                 </div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-autonomous-devops-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW 2026
+                  </span>
+                  <span className="text-sm text-gray-500">20 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Autonomous DevOps 2026: Self-Managing Infrastructure
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Achieve 99.9% uptime with self-healing systems, 90% cost reduction, and zero-touch operations.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">Read Complete Guide →</div>
+              </div>
+            </Link>
+            <Link href="/case-studies/ai-autonomous-devops-success-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW Case Study
+                  </span>
+                  <span className="text-sm text-gray-500">Fortune 500</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
+                  $15M ROI: Autonomous DevOps Success Story
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how TechCorp achieved 99.9% uptime, 90% cost reduction, and $15M ROI with AI autonomous DevOps.
+                </p>
+                <div className="flex items-center text-green-600 font-semibold">View Case Study →</div>
               </div>
             </Link>
             <Link href="/blog/ai-autonomous-cloud-ops-2026" className="group">
