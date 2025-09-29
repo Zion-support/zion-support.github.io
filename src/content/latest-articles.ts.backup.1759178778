@@ -33,6 +33,13 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+<<<<<<< HEAD
+    id: "privacy-first-insights-telemetry-2026",
+    slug: "privacy-first-insights-telemetry-2026",
+    title: "Privacy‑First Insights 2026: Signal‑Rich Analytics Without PII",
+    description: "Scoped IDs, redaction, and retention windows that keep insights high and risk low.",
+    excerpt: "Ship analytics teams love without PII risk using scoped identifiers and filters.",
+=======
     id: "ai-risk-mitigation-scorecards-2026",
     slug: "ai-risk-mitigation-scorecards-2026",
     title: "AI Risk Mitigation Scorecards 2026: From Policy to Practice",
@@ -70,6 +77,7 @@ export const latestArticles: LatestArticle[] = [
     title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",
     description: "Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.",
     excerpt: "A practical guide to keep costs predictable without hurting UX or outcomes.",
+>>>>>>> origin/cursor/create-and-deploy-new-content-8fb1
     author: "Zion Tech Group Team",
     date: "2025-10-15",
     category: "Observability",

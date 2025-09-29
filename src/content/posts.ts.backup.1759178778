@@ -19,6 +19,11 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
+<<<<<<< HEAD
+    slug: "real-time-evals-prod-2026",
+    title: "Real‑Time Evals in Prod: Canary Scores that Predict KPIs",
+    description: "Operationalize online evals and link them to product KPIs for safe, fast delivery.",
+=======
     slug: "ai-risk-mitigation-scorecards-2026",
     title: "AI Risk Mitigation Scorecards 2026: From Policy to Practice",
     description: "Scorecards with owners, SLAs, and CI policy checks that drive action and outcomes.",
@@ -40,6 +45,7 @@ export const posts: BlogPost[] = [
     slug: "genai-routing-blueprint-2026",
     title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",
     description: "Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.",
+>>>>>>> origin/cursor/create-and-deploy-new-content-8fb1
     category: "GenAI",
     publishedAt: "2025-10-13",
     featured: true,
