@@ -22,6 +22,13 @@ import {
 import AITrends2025Banner from './AITrends2025Banner';
 import ServicesShowcase from './ServicesShowcase';
 import CustomerTestimonials from './CustomerTestimonials';
+import { 
+  AIBusinessTransformationBanner,
+  AICustomerExperienceBanner,
+  EnterpriseAITransformationBanner,
+  LatestAIInsightsBanner,
+  AIServicesShowcaseBanner
+} from './NewContentPromotionalBanners';
 
 interface EnhancedHomePageProps {
   showDebug?: boolean;
@@ -154,7 +161,13 @@ export default function EnhancedHomePage({
       )}
 
       <div className="animate-fade-in">
-        {/* Promotional Banners */}
+        {/* New Content Promotional Banners */}
+        <AIBusinessTransformationBanner />
+        <AICustomerExperienceBanner />
+        <EnterpriseAITransformationBanner />
+        <LatestAIInsightsBanner />
+        
+        {/* Existing Promotional Banners */}
         <AITrends2025Banner />
         <AIContentShowcaseBanner />
         <CustomerServiceAIBanner />
@@ -295,6 +308,9 @@ export default function EnhancedHomePage({
 
         {/* Services Showcase */}
         <ServicesShowcase />
+        
+        {/* AI Services Showcase Banner */}
+        <AIServicesShowcaseBanner />
         
         {/* Customer Testimonials */}
         <CustomerTestimonials />

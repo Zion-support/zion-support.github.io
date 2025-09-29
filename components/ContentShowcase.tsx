@@ -19,6 +19,50 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-business-transformation-2025',
+    title: 'AI Business Transformation 2025: Complete Strategic Guide',
+    excerpt: 'Master AI transformation with our comprehensive 2025 guide. Learn proven strategies, implementation frameworks, and ROI optimization techniques that deliver 300% ROI improvement.',
+    type: 'article',
+    readTime: '15 min read',
+    category: 'AI Strategy',
+    href: '/blog/ai-business-transformation-2025',
+    featured: true,
+    publishedDate: '2025-01-20',
+    metrics: [
+      { value: '300%', label: 'ROI Improvement' },
+      { value: '80%', label: 'Efficiency Gain' }
+    ]
+  },
+  {
+    id: 'ai-customer-experience-2025',
+    title: 'AI-Powered Customer Experience 2025: Revolutionizing Customer Interactions',
+    excerpt: 'Discover how AI is transforming customer experience in 2025. Learn about advanced personalization, intelligent automation, and omnichannel strategies that deliver 90% customer satisfaction.',
+    type: 'article',
+    readTime: '12 min read',
+    category: 'Customer Experience',
+    href: '/blog/ai-customer-experience-2025',
+    featured: true,
+    publishedDate: '2025-01-20',
+    metrics: [
+      { value: '90%', label: 'Customer Satisfaction' },
+      { value: '70%', label: 'Cost Reduction' }
+    ]
+  },
+  {
+    id: 'enterprise-ai-transformation-2025',
+    title: 'Enterprise AI Transformation: 300% ROI in 12 Months',
+    excerpt: 'Learn how a Fortune 500 manufacturing company achieved unprecedented results through comprehensive AI transformation, including $15M in annual cost savings and 80% operational efficiency gains.',
+    type: 'case-study',
+    category: 'Enterprise AI',
+    href: '/case-studies/enterprise-ai-transformation-2025',
+    featured: true,
+    publishedDate: '2025-01-20',
+    metrics: [
+      { value: '300%', label: 'ROI Achievement' },
+      { value: '$15M', label: 'Annual Savings' }
+    ]
+  },
+  {
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Enterprise-Ready Implementation Guide',
     excerpt: 'Master AI governance with our comprehensive framework covering risk management, compliance, and ethical deployment strategies.',
