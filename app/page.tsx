@@ -78,6 +78,14 @@ import {
   AIFederatedLearningBanner,
   FederatedLearningSuccessBanner
 } from '../components/NewContent2026Banners';
+import {
+  AIAutonomousInfrastructureBanner,
+  AICognitiveComputingBanner,
+  AICognitiveComputingSuccessBanner,
+  AIInfrastructureAutomationBanner,
+  NextGenAISystemsBanner,
+  AIInnovationShowcaseBanner
+} from '../components/NewContent2026Banners';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import LatestAIInnovations2026Banner from '../components/LatestAIInnovations2026Banner';
 
@@ -95,13 +103,17 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>🚀 REVOLUTIONARY 2026:</span>
+            <Link href="/blog/ai-cognitive-computing-2026" className="underline hover:text-yellow-200">AI Cognitive Computing</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-cognitive-computing-success-2026" className="underline hover:text-yellow-200">$12M ROI Case Study</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-autonomous-infrastructure-2026" className="underline hover:text-yellow-200">Autonomous Infrastructure</Link>
+            <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-autonomous-devops-2026" className="underline hover:text-yellow-200">AI Autonomous DevOps</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-autonomous-devops-success-2026" className="underline hover:text-yellow-200">$15M ROI Case Study</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-next-generation-autonomous-systems-2026" className="underline hover:text-yellow-200">Next-Gen Autonomous Systems</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-cognitive-computing-2026" className="underline hover:text-yellow-200">Cognitive Computing</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-quantum-machine-learning-2026" className="underline hover:text-yellow-200">Quantum ML</Link>
             <span className="hidden md:inline">•</span>
@@ -134,6 +146,12 @@ export default function HomePage() {
       {/* Promotional Banners */}
       <Revolutionary2026ContentBanner />
       <LatestAIInnovations2026Banner />
+      <AIInnovationShowcaseBanner />
+      <AICognitiveComputingBanner />
+      <AICognitiveComputingSuccessBanner />
+      <AIAutonomousInfrastructureBanner />
+      <AIInfrastructureAutomationBanner />
+      <NextGenAISystemsBanner />
       <Latest2026ContentBanner />
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
@@ -456,6 +474,57 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Link href="/blog/ai-cognitive-computing-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW 2026
+                  </span>
+                  <span className="text-sm text-gray-500">22 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                  AI Cognitive Computing 2026: Beyond Traditional ML
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  AI that thinks, reasons, and understands context like humans. 400% faster decision-making with unprecedented accuracy.
+                </p>
+                <div className="flex items-center text-purple-600 font-semibold">Read Complete Guide →</div>
+              </div>
+            </Link>
+            <Link href="/case-studies/ai-cognitive-computing-success-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW Case Study
+                  </span>
+                  <span className="text-sm text-gray-500">Fortune 500</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
+                  $12M ROI: AI Cognitive Computing Success Story
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how GlobalTech Solutions achieved $12M ROI with AI cognitive computing. 400% faster decisions, 95% accuracy.
+                </p>
+                <div className="flex items-center text-green-600 font-semibold">View Case Study →</div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-autonomous-infrastructure-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW 2026
+                  </span>
+                  <span className="text-sm text-gray-500">25 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Autonomous Infrastructure 2026: Self-Healing Systems
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Transform infrastructure with AI-powered autonomous systems. 99.9% uptime, self-healing, zero-touch operations.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">Read Complete Guide →</div>
+              </div>
+            </Link>
             <Link href="/blog/ai-next-generation-autonomous-systems-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
