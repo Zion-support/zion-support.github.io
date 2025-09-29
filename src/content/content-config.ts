@@ -529,6 +529,19 @@ export const promotionalBanners: PromotionalBanner[] = [
     priority: 0
   },
   {
+    id: 'fresh-oct-14-2025',
+    message: '✨ New: AI Safety Budgets 2026 + Edge Personalization 2026',
+    ctaText: 'Explore updates',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0
+  },
+  {
     id: 'fresh-oct-8-2025',
     message: '✨ New: AI Platform Engineering, Serverless Cost Playbook, Cloud FinOps Guardrails',
     ctaText: 'Read now',
