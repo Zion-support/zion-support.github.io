@@ -1,3 +1,4 @@
+/* global HTMLInputElement, HTMLTextAreaElement, HTMLSelectElement */
 import React, { useState } from 'react';
 import { Send, CheckCircle } from 'lucide-react';
 

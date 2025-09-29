@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { latestInsights } from '../content/insights';
+import { Link } from 'react-router-dom';
+import { posts } from '../content/posts';
 
 const Blog: React.FC = () => {
   return (
@@ -17,29 +18,15 @@ const Blog: React.FC = () => {
           </p>
         </div>
 
-        {/* Featured newest article */}
-        <div className="mb-12">
-          {latestInsights.slice(0, 1).map((item) => (
-            <article key={item.id} className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl text-white p-8 md:p-12">
-              <div className="text-sm uppercase tracking-wider text-white/80 mb-2">{item.category}</div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-3">{item.title}</h2>
-              <p className="text-white/90 mb-4 max-w-3xl">{item.summary}</p>
-              <div className="text-sm text-white/80 mb-6">{new Date(item.date).toLocaleDateString()} • {item.readMinutes} min read</div>
-              <a href="/insights" className="inline-block bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold">Read more</a>
-            </article>
-          ))}
-        </div>
-
-        {/* Remaining articles */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {latestInsights.slice(1, 7).map((item) => (
-            <article key={item.id} className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          {posts.map((post) => (
+            <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
               <div className="p-6">
-                <div className="text-sm font-medium mb-2 text-gray-500">{item.category}</div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-3">{item.title}</h3>
-                <p className="text-gray-600 mb-4">{item.summary}</p>
-                <div className="text-sm text-gray-500 mb-4">{new Date(item.date).toLocaleDateString()} • {item.readMinutes} min read</div>
-                <a href="/insights" className="text-indigo-600 font-medium hover:text-indigo-700">Read more →</a>
+                <div className="text-sm text-indigo-600 font-medium mb-2">{post.category}</div>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-3">{post.title}</h2>
+                <p className="text-gray-600 mb-4">{post.description}</p>
+                <div className="text-sm text-gray-500 mb-4">{new Date(post.publishedAt).toLocaleDateString()}</div>
+                <Link to={`/blog/${post.slug}`} className="text-indigo-600 font-medium hover:text-indigo-700">Read more →</Link>
               </div>
             </article>
           ))}

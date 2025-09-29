@@ -16,8 +16,7 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
-import { latestInsights } from "../content/insights";
-import LatestInsights from "../components/LatestInsights";
+import { posts } from "../content/posts";
 
 const Home = () => {
   return (
@@ -138,9 +137,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-
-        {/* Latest Insights Section */}
-        <LatestInsights />
 
         {/* Features Section */}
         <section className="container mx-auto px-6 py-20 relative z-10">
@@ -263,29 +259,6 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Latest Insights */}
-        <section className="container mx-auto px-6 py-16 relative z-10">
-          <div className="flex items-center justify-between mb-8">
-            <h3 className="text-3xl font-bold text-white">Latest Insights</h3>
-            <Link to="/insights" className="text-zion-cyan hover:underline">View all</Link>
-          </div>
-          <div className="grid md:grid-cols-4 gap-6">
-            {latestInsights.slice(0, 4).map((item) => (
-              <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                <div className="p-6">
-                  <div className="text-xs uppercase tracking-wider text-zion-cyan mb-2">{item.category}</div>
-                  <h4 className="text-xl font-semibold text-white mb-2">{item.title}</h4>
-                  <p className="text-zion-slate-light mb-4">{item.summary}</p>
-                  <div className="text-sm text-zion-slate flex items-center justify-between">
-                    <span>{new Date(item.date).toLocaleDateString()}</span>
-                    <span>{item.readMinutes} min read</span>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
         {/* Testimonials Section */}
         <section className="bg-zion-slate-dark py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/10 to-zion-purple/10 opacity-50"></div>
@@ -378,32 +351,45 @@ const Home = () => {
         {/* Enhanced Testimonials Section */}
         <EnhancedTestimonials />
 
+        {/* Latest Articles */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="mb-10 flex items-end justify-between">
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
+                <p className="text-gray-600">Insights from our team to help you move faster.</p>
+              </div>
+              <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
+            </div>
+            <div className="grid gap-8 md:grid-cols-3">
+              {posts.slice(0, 3).map((post) => (
+                <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                  <div className="p-6">
+                    <div className="text-sm text-indigo-600 font-medium mb-2">{post.category}</div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{post.title}</h3>
+                    <p className="text-gray-600 mb-4">{post.description}</p>
+                    <Link to={`/blog/${post.slug}`} className="text-indigo-700 font-medium hover:text-indigo-800">Read more →</Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* New Content Promo */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-                <div className="max-w-2xl">
-                  <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
-                  <p className="text-white/90">
-                    New today: vector search at scale, real LLM evals, FinOps guardrails, and zero-trust rollout.
-                  </p>
-                </div>
-                <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
-                  Read the latest
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
+            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div>
+                <h2 className="text-3xl font-bold mb-2">Introducing Zion Insights</h2>
+                <p className="text-white/90 max-w-2xl">
+                  Explore our latest articles and case studies on AI strategy, cloud FinOps, and security best practices.
+                </p>
               </div>
-
-              {/* Inline featured list from latestInsights */}
-              <div className="mt-8 grid gap-6 md:grid-cols-4">
-                {latestInsights.slice(0, 4).map((item) => (
-                  <div key={item.id} className="bg-white/10 rounded-xl p-5">
-                    <div className="text-sm text-blue-200 mb-1">{item.category}</div>
-                    <div className="font-semibold text-white">{item.title}</div>
-                  </div>
-                ))}
-              </div>
+              <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
+                Read the latest
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
           </div>
         </section>

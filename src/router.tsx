@@ -5,7 +5,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
-import Insights from './pages/Insights';
+import Post from './pages/Post';
 
 export const AppRouter: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ export const AppRouter: React.FC = () => {
       <Route path="/services" element={<Services />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog" element={<Blog />} />
-      <Route path="/insights" element={<Insights />} />
+      <Route path="/blog/:slug" element={<Post />} />
     </Routes>
   );
 };
