@@ -144,31 +144,22 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
-    id: "modernization-catalog-strangler",
-    title: "Modernization That Sticks: Catalogs, Contracts, and the Strangler Fig",
+    id: "feature-flags-edge-realtime",
+    title: "Real‑Time Feature Flags at the Edge",
     summary:
-      "Practical steps to decouple legacy systems with service catalogs and contract‑first delivery.",
-    category: "Architecture",
-    date: "2025-09-29",
-    readMinutes: 9,
-  },
-  {
-    id: "edge-inference-patterns",
-    title: "Edge Inference Patterns for Sub‑100ms Experiences",
-    summary:
-      "Latency budgets, caching strategies, and model quantization techniques for lightning‑fast UX.",
+      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
     category: "Architecture",
     date: "2025-09-28",
     readMinutes: 6,
   },
   {
-    id: "platform-blueprints-ref-arch",
-    title: "Reference Architectures for Modern Data & AI Platforms",
+    id: "north-star-metrics-insight",
+    title: "North‑Star Metrics: A Field Guide",
     summary:
-      "Battle-tested blueprints for ingestion, governance, semantic layers, and real-time activation.",
-    category: "Architecture",
+      "A practical approach to defining leading indicators that align teams to outcomes.",
+    category: "Product Analytics",
     date: "2025-09-28",
-    readMinutes: 10,
+    readMinutes: 7,
   },
   {
     id: "kubernetes-cost-guardrails",

@@ -59,6 +59,19 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+<<<<<<< HEAD
+=======
+        
+        {/* Content Promotion Banner */}
+        <ContentPromotionBanner
+          variant="info"
+          title="🚀 Fresh: AI Product Launch Checklist + MLOps in 45 Days"
+          description="New guides on taking AI pilots to production and shipping reliable models fast."
+          ctaText="Read the latest"
+          ctaLink="/blog/ai-product-launch-checklist-2025"
+          dismissible={true}
+        />
+>>>>>>> cursor/create-and-deploy-new-content-83a1
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
