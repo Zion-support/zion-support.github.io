@@ -105,10 +105,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: AI Governance at Scale + Edge Observability Blueprint"
-          description="Policies that enable speed, and sub‑100ms reliability with real‑world telemetry."
-          ctaText="Read the latest"
-          ctaLink="/blog/ai-governance-at-scale-2025"
+          title="🚀 New: AI Roadmaps 2025 — A Practical Playbook"
+          description="Prioritize, pilot, and scale AI with ROI gates, evals, and guardrails."
+          ctaText="Read the playbook"
+          ctaLink="/blog/ai-roadmaps-2025-playbook"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -722,8 +722,8 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
-                  <div className="font-semibold text-white">MLOps Reliability: Shipping GenAI Changes Safely</div>
+                  <div className="text-sm text-purple-200 mb-1">AI Strategy</div>
+                  <div className="font-semibold text-white">AI Roadmaps 2025: A Practical Playbook</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-blue-200 mb-1">Data Engineering</div>

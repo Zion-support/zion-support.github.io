@@ -14,6 +14,38 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-roadmaps-2025-playbook",
+    title: "AI Roadmaps 2025: A Practical Playbook for Measurable Wins",
+    description: "How to prioritize, pilot, and scale AI with ROI gates, evals, and policy checks.",
+    content: `
+# AI Roadmaps 2025: A Practical Playbook for Measurable Wins
+
+Most AI initiatives stall due to unclear goals, poor evaluation, and missing rollout controls. This playbook shows how to prioritize high‑impact use cases, design proof‑of‑value pilots, and scale safely with offline+online evals tied to business KPIs.
+
+## Roadmap Essentials
+- Outcome‑driven problem selection
+- Offline eval suites mapped to KPIs
+- Guardrails: policy tests, PII, toxicity
+- Rollout controls: flags, canaries, auto‑rollback
+
+## Execution Checklist
+1. Define measurable success criteria
+2. Build baseline and goldens
+3. Add eval gates in CI
+4. Launch to canary cohorts
+5. Monitor drift and regression
+
+Ship AI that moves the needle—and prove it.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Strategy",
+    tags: ["Roadmaps", "GenAI", "Evals", "Guardrails"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-roadmaps-2025.jpg"
+  },
+  {
     slug: "ai-sales-copilot-2025",
     title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
     description: "How to wire CRMs, build prompt libraries, and add evals that boost win‑rates without risk.",

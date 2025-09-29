@@ -10,6 +10,16 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-roadmaps-2025-playbook",
+    title: "AI Roadmaps 2025: A Practical Playbook for Measurable Wins",
+    description:
+      "Prioritize, pilot, and scale AI with ROI gates, evals, and policy checks.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
     slug: "ai-sales-copilot-2025",
     title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
     description:
