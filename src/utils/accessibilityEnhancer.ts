@@ -76,7 +76,7 @@ class AccessibilityEnhancer {
       }
 
       // Arrow key navigation for menus
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      if ((event as KeyboardEvent).key === 'ArrowDown' || (event as KeyboardEvent).key === 'ArrowUp') {
         const menu = document.querySelector('[role="menu"]:focus-within');
         if (menu) {
           this.handleMenuNavigation(event as KeyboardEvent, menu as HTMLElement);
@@ -90,7 +90,7 @@ class AccessibilityEnhancer {
 
     // Trap focus in modals
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Tab') {
+      if ((event as KeyboardEvent).key === 'Tab') {
         const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
         if (modal) {
           this.trapFocus(event as KeyboardEvent, modal as HTMLElement);
@@ -201,9 +201,10 @@ class AccessibilityEnhancer {
     const observer = new MutationObserver((mutations: MutationRecord[]) => {
       mutations.forEach((mutation) => {
         if (mutation.type === 'attributes' && mutation.attributeName === 'aria-label') {
-          const element = mutation.target as HTMLElement;
-          if (!element.getAttribute('aria-label')) {
-            console.warn('Element lost aria-label:', element);
+          const element = mutation.target as Element;
+          const el = element as HTMLElement;
+          if (!el.getAttribute('aria-label')) {
+            console.warn('Element lost aria-label:', el);
           }
         }
       });
@@ -306,8 +307,9 @@ class AccessibilityEnhancer {
     // Check for missing alt attributes
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-      if (!img.getAttribute('alt')) {
-        issues.push(`Image missing alt attribute: ${img.src}`);
+      const imageEl = img as HTMLImageElement;
+      if (!imageEl.getAttribute('alt')) {
+        issues.push(`Image missing alt attribute: ${imageEl.src}`);
         recommendations.push('Add descriptive alt text to images');
       }
     });

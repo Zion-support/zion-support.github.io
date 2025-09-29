@@ -125,7 +125,7 @@ export const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         const memory = (performance as any).memory as { usedJSHeapSize: number };
         setMetrics(prev => ({ 
           ...prev, 
-          memory: memory.usedJSHeapSize / 1024 / 1024 
+          memory: (memory?.usedJSHeapSize || 0) / 1024 / 1024 
         }));
       }
     };
