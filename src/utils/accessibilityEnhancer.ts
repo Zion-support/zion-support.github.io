@@ -29,6 +29,27 @@ class AccessibilityEnhancer {
   private mutationObserver?: MutationObserver;
   private performanceObserver?: PerformanceObserver;
   
+  // Bound event handler references used for add/removeEventListener
+  private onKeyDown: (event: KeyboardEvent) => void = (event: KeyboardEvent) => {
+    // Handle Enter/Space to activate focused elements
+    const activeElement = document.activeElement as HTMLElement | null;
+    if (!activeElement) return;
+    if (event.key === 'Enter' || event.key === ' ') {
+      if (activeElement.tagName === 'BUTTON' || activeElement.getAttribute('role') === 'button') {
+        activeElement.click();
+        event.preventDefault();
+      }
+    }
+  };
+  
+  private onClick: (event: MouseEvent) => void = (_event: MouseEvent) => {
+    // Placeholder for focus management on click; could track last focused
+  };
+  
+  private onFocusIn: (event: FocusEvent) => void = (_event: FocusEvent) => {
+    // Placeholder for focus-in handling, e.g., add outlines or track last focus
+  };
+  
   // Stored event handlers (defined to satisfy type checks and potential cleanup)
   private handleKeyDown(event: KeyboardEvent): void {
     // Intentionally empty: listeners are attached inline in setup methods
