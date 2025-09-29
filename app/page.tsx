@@ -8,7 +8,6 @@ import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
-import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
 
@@ -53,6 +52,9 @@ export default function HomePage() {
       {/* New Content Promotional Banners */}
       <NewContent2026PromotionalBanners />
       
+      {/* Enhanced Content Showcase 2026 */}
+      <EnhancedContentShowcase2026 />
+      
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -69,28 +71,28 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              href="/blog/ai-autonomous-enterprise-transformation-2026"
+              href="/blog/ai-neural-architecture-optimization-2026"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
             >
-              🚀 Autonomous Enterprise 2026
+              🧠 Neural Architecture 2026
             </Link>
             <Link
-              href="/blog/ai-quantum-hybrid-computing-2026"
+              href="/blog/ai-synthetic-data-2026"
+              className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-teal-700 transition-all shadow-lg hover:shadow-xl"
+            >
+              🔒 Privacy-Preserving AI
+            </Link>
+            <Link
+              href="/case-studies/ai-neural-architecture-success-2026"
+              className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-red-700 transition-all shadow-lg hover:shadow-xl"
+            >
+              💰 $8M ROI Success
+            </Link>
+            <Link
+              href="/blog/ai-quantum-computing-2026"
               className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
             >
               ⚡ Quantum AI Computing
-            </Link>
-            <Link
-              href="/case-studies/ai-autonomous-enterprise-success-2026"
-              className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-teal-700 transition-all shadow-lg hover:shadow-xl"
-            >
-              📊 $25M Success Story
-            </Link>
-            <Link
-              href="/case-studies/ai-sustainability-transformation-2026"
-              className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-red-700 transition-all shadow-lg hover:shadow-xl"
-            >
-              🌱 $10M Sustainability ROI
             </Link>
             <a
               href="tel:+13024640950"
