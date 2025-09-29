@@ -39,7 +39,10 @@ import {
   AISecurityEnterprise2026Banner,
   AIMultimodalEnterprise2026Banner,
   AISustainabilityTransformationBanner,
-  LatestContent2026Banner
+  LatestContent2026Banner,
+  AIEthicalFrameworkBanner,
+  AIEthicsSuccessBanner,
+  NewContentShowcase2026Banner
 } from '../components/PromotionalBanner';
 import {
   NewContent2026Banner as NewContent2026BannerComponent,
@@ -73,19 +76,17 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ NEW 2026:</span>
-            <Link href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</Link>
+            <Link href="/blog/ai-ethical-framework-2026" className="underline hover:text-yellow-200">AI Ethical Framework</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/agentic-workflow-orchestration-2026" className="underline hover:text-yellow-200">Agentic Workflow Orchestration</Link>
+            <Link href="/blog/ai-multimodal-enterprise-integration-2026" className="underline hover:text-yellow-200">Multimodal AI Integration</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-ethical-framework-success-2026" className="underline hover:text-yellow-200">Ethics Success Story</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-customer-data-platforms-2026" className="underline hover:text-yellow-200">Customer Data Platforms</Link>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-customer-data-platforms-2026" className="underline hover:text-yellow-200">AI CDPs 2026</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-customer-journey-ai-2026" className="underline hover:text-yellow-200">Customer Journey AI</a>
+            <Link href="/blog/agentic-workflow-orchestration-2026" className="underline hover:text-yellow-200">Workflow Orchestration</Link>
           </div>
           <Link
             href="/blog"
@@ -96,6 +97,9 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <NewContentShowcase2026Banner />
+      <AIEthicalFrameworkBanner />
+      <AIEthicsSuccessBanner />
       <LatestContent2026Banner />
       <AISecurityEnterprise2026Banner />
       <AIMultimodalEnterprise2026Banner />
