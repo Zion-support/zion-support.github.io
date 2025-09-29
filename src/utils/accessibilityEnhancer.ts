@@ -42,9 +42,9 @@ class AccessibilityEnhancer {
     };
   }
 
-  public initialize(): void {
+  public init(): void {
     if (this.isInitialized || typeof window === 'undefined') return;
-    
+
     this.isInitialized = true;
     this.setupKeyboardNavigation();
     this.setupFocusManagement();
@@ -54,8 +54,8 @@ class AccessibilityEnhancer {
     this.observeAccessibility();
   }
 
-  // Optional alias for compatibility with callers using initialize()
   public initialize(): void {
+    // Alias for init() to match callers
     this.init();
   }
 

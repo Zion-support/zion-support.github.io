@@ -480,11 +480,9 @@ export const getRecentContent = (limit: number = 3) => {
   
   return allContent
     .sort((a, b) => {
-      const ad = (a as any).date as string | undefined;
-      const bd = (b as any).date as string | undefined;
-      const at = ad ? new Date(ad).getTime() : 0;
-      const bt = bd ? new Date(bd).getTime() : 0;
-      return bt - at;
+      const dateA = 'date' in a ? a.date : '1970-01-01';
+      const dateB = 'date' in b ? b.date : '1970-01-01';
+      return new Date(dateB).getTime() - new Date(dateA).getTime();
     })
     .slice(0, limit);
 };
