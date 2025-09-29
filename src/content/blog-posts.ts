@@ -44,6 +44,69 @@ Adopt this scorecard to align investments with measurable outcomes.
     image: "/images/ai-adoption-scorecard.jpg"
   },
   {
+    slug: "ai-cost-guardrails-deep-dive-2025",
+    title: "AI Cost Guardrails Deep Dive: Keep Quality, Slash Spend",
+    description: "Practical architectures for token budgets, multi-route policies, and intelligent caching.",
+    content: `
+# AI Cost Guardrails Deep Dive: Keep Quality, Slash Spend
+
+Engineering teams can reduce AI spend by 30–60% with guardrails that preserve UX. This deep dive covers reference architectures, rollout plans, and telemetry you need to make it stick.
+
+## Architecture
+- Token budgets per surface with budget-aware routing
+- Multi-provider policy with quality tiers and fallbacks
+- Result caching with semantic keys and TTL strategies
+
+## Telemetry
+- Per-route cost and latency histograms
+- Token usage by surface and intent
+- Cache hit rate and reuse effectiveness
+
+## Rollout
+- Start with read-only dashboards
+- Introduce soft budgets with alerts
+- Enforce budgets behind feature flags
+
+Ship faster with spend you can defend.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "AI Operations",
+    tags: ["Cost", "Guardrails", "AI", "Platform"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/ai-cost-guardrails.jpg"
+  },
+  {
+    slug: "golden-paths-that-stick-2025",
+    title: "Golden Paths That Stick: Templates, Scorecards, and Reviews",
+    description: "How to create opinionated paths teams actually adopt—without stifling flexibility.",
+    content: `
+# Golden Paths That Stick: Templates, Scorecards, and Reviews
+
+Golden paths fail when they are optional docs without incentives. This guide shows how to pair templates with scorecards and lightweight reviews that improve delivery and reliability.
+
+## Ingredients
+- Production-ready templates with paved integrations
+- Scorecards aligned to outcomes, not vanity metrics
+- Weekly office hours and async PR rituals
+
+## Adoption Levers
+- Default repo scaffolds and CLI generators
+- Clear deprecation and migration guides
+- Leadership-visible dashboards
+
+Build paths engineers love because they speed them up.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "Platform Engineering",
+    tags: ["Golden Paths", "Templates", "DX"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/golden-paths.jpg"
+  },
+  {
     slug: "genai-incident-postmortems-2025",
     title: "GenAI Incident Postmortems: Prevent Repeats with Policy Tests",
     description: "A practical guide to capturing signals, writing policy tests, and closing the loop so incidents don't recur.",

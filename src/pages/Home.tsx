@@ -112,10 +112,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: AI Governance at Scale + Cloud FinOps QA Gates"
-          description="Policies that enable speed, plus QA gates that cut spend without slowing teams."
-          ctaText="Read the latest"
-          ctaLink="/blog/ai-governance-at-scale-2025"
+          title="📣 New: AI Cost Guardrails + Golden Paths Deep Dives"
+          description="Keep quality while slashing AI spend, and ship faster with paved paths."
+          ctaText="Read the updates"
+          ctaLink="/blog/ai-cost-guardrails-deep-dive-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
