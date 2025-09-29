@@ -35,6 +35,11 @@ export default function App(): React.ReactElement {
         setIsLoading(true);
         setError(null);
         
+        // Add performance marks for better monitoring
+        if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
+          performance.mark('app-init-start');
+        }
+        
         // Simulate initialization time
         await new Promise(resolve => setTimeout(resolve, 1000));
         
