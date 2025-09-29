@@ -102,17 +102,17 @@ function Footer() {
                 <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
               </Link>
 <<<<<<< HEAD
-              <Link href="/blog/ai-neural-interfaces-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                🧠 Neural Interfaces 2026
-                <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
+              <Link href="/blog/ai-cognitive-superintelligence-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🧠 Cognitive Superintelligence 2026
+                <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
               </Link>
-              <Link href="/blog/ai-space-tech-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                🚀 Space AI Technology
-                <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
+              <Link href="/blog/ai-metaverse-enterprise-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🌐 Metaverse Enterprise 2026
+                <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
               </Link>
-              <Link href="/blog/ai-synthetic-data-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                🔒 Synthetic Data AI
-                <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
+              <Link href="/blog/ai-autonomous-robotics-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🤖 Autonomous Robotics 2026
+                <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
               </Link>
               <Link href="/blog/ai-autonomous-enterprise-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Autonomous Enterprise 2026</Link>
               <Link href="/blog/ai-quantum-hybrid-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">⚡ Quantum AI Computing</Link>
@@ -129,7 +129,14 @@ function Footer() {
                 <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
               </Link>
 <<<<<<< HEAD
-              <Link href="/case-studies/ai-neural-interface-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">$5M ROI Neural Interface Case Study</Link>
+              <Link href="/case-studies/ai-cognitive-superintelligence-mega-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🧠 $750M Cognitive AI Success
+                <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">MEGA ROI</span>
+              </Link>
+              <Link href="/case-studies/ai-metaverse-enterprise-mega-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🌐 $400M Metaverse Success
+                <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">MEGA ROI</span>
+              </Link>
 =======
               <Link href="/case-studies/ai-neural-interface-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">💰 $12M ROI Neural Interface</Link>
 >>>>>>> fdb8d5094f0a3ee529590ccba2498eb6dbc1171b
