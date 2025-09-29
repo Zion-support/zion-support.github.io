@@ -62,6 +62,65 @@ Implement these patterns to achieve fast, reliable, and cost‑effective streami
     image: "/images/real-time-data-pipelines.jpg"
   },
   {
+    slug: "ai-product-roadmaps-2025",
+    title: "Designing High‑Impact AI Product Roadmaps in 2025",
+    description: "A pragmatic blueprint to align AI bets with outcomes, reduce risk, and ship value quarterly.",
+    content: `
+# Designing High‑Impact AI Product Roadmaps in 2025
+
+Learn a pragmatic approach for sequencing AI investments that balances feasibility, differentiation, and measurable ROI.
+
+## Core Principles
+- Outcome over output
+- Feasibility and data readiness gates
+- Thin slices with observable value
+- Batched learning milestones
+
+## Portfolio Tactics
+- Stage‑gated experiments with offline+online evals
+- Policy testing and trustworthiness baked into delivery
+- Clear handoffs across data, model, and app teams
+
+## Execution
+- 90‑day horizons with monthly evidence reviews
+- Kill/scale decisions based on eval deltas and usage
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Strategy",
+    tags: ["Roadmap", "AI", "Product", "Strategy"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-product-roadmaps.jpg"
+  },
+  {
+    slug: "security-sbom-automation-2025",
+    title: "Automating SBOMs and Supply‑Chain Security in CI",
+    description: "Practical steps to generate, sign, and verify SBOMs with policy gates that scale.",
+    content: `
+# Automating SBOMs and Supply‑Chain Security in CI
+
+Ship with confidence using signed artifacts, dependency locks, and tamper detection wired into CI.
+
+## What to Automate
+- SBOM generation (CycloneDX/SPDX)
+- Signing and provenance (SLSA)
+- Policy gates on diff and severity budgets
+
+## Rollout Playbook
+- Start read‑only, then enforce gradually
+- Educate teams with clear failure messages
+- Dashboards for drift and exposure
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "Security",
+    tags: ["SBOM", "Supply Chain", "SLSA", "CI"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/sbom-automation.jpg"
+  },
+  {
     slug: "platform-scorecards-that-stick",
     title: "Platform Scorecards That Actually Drive Adoption",
     description: "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",

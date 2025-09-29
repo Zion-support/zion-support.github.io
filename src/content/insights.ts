@@ -18,6 +18,33 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+    id: "ai-roadmap-evidence-reviews",
+    title: "Monthly Evidence Reviews for AI Roadmaps",
+    summary:
+      "Turn AI bets into measurable learning with eval deltas, usage telemetry, and decision gates.",
+    category: "Strategy",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
+  {
+    id: "slsa-supply-chain-minimums",
+    title: "SLSA‑Aligned Minimums for 90‑Day Supply‑Chain Uplift",
+    summary:
+      "SBOMs, signed provenance, and policy gates you can roll out this quarter.",
+    category: "Security",
+    date: "2025-09-28",
+    readMinutes: 6,
+  },
+  {
+    id: "genai-online-evals",
+    title: "Online Evals for GenAI: From Shadow to Guardrails",
+    summary:
+      "Move from pilots to production with canary cohorts, eval budgets, and rollback triggers.",
+    category: "MLOps",
+    date: "2025-09-28",
+    readMinutes: 7,
+  },
+  {
     id: "governance-policy-testing",
     title: "Governance for AI: Policy Testing That Scales",
     summary:
