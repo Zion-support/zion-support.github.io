@@ -30,20 +30,19 @@ class PerformanceMonitor {
   }
 
   private observeWebVitals(): void {
-    if (!('PerformanceObserver' in window)) {
-      return;
-    }
+    if (!('PerformanceObserver' in window)) return;
 
+    // FID - First Input Delay
     try {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries() as PerformanceEventTiming[]) {
-          if (typeof entry.processingStart === 'number' && typeof entry.startTime === 'number') {
+          if (entry.processingStart && entry.startTime) {
             const fid = entry.processingStart - entry.startTime;
             this.recordMetric({
               name: 'FID',
               value: fid,
               timestamp: Date.now(),
-              id: this.generateId()
+              id: this.generateId(),
             });
           }
         }
@@ -54,19 +53,40 @@ class PerformanceMonitor {
       console.warn('FID observation failed:', e);
     }
 
+    // LCP - Largest Contentful Paint
+    try {
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        if (lastEntry) {
+          this.recordMetric({
+            name: 'LCP',
+            value: lastEntry.startTime,
+            timestamp: Date.now(),
+            id: this.generateId(),
+          });
+        }
+      });
+      lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true } as any);
+      this.observers.push(lcpObserver);
+    } catch (e) {
+      console.warn('LCP observation failed:', e);
+    }
+
+    // CLS - Cumulative Layout Shift
     try {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries() as (PerformanceEntry & { hadRecentInput?: boolean; value?: number })[]) {
-          if (!entry.hadRecentInput && typeof (entry as any).value === 'number') {
-            clsValue += (entry as any).value as number;
+        for (const entry of list.getEntries() as any[]) {
+          if (!entry.hadRecentInput && typeof entry.value === 'number') {
+            clsValue += entry.value;
           }
         }
         this.recordMetric({
           name: 'CLS',
           value: clsValue,
           timestamp: Date.now(),
-          id: this.generateId()
+          id: this.generateId(),
         });
       });
       clsObserver.observe({ type: 'layout-shift', buffered: true } as any);
@@ -75,15 +95,16 @@ class PerformanceMonitor {
       console.warn('CLS observation failed:', e);
     }
 
+    // FCP - First Contentful Paint
     try {
       const fcpObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if ((entry as any).name === 'first-contentful-paint') {
+          if (entry.name === 'first-contentful-paint') {
             this.recordMetric({
               name: 'FCP',
               value: entry.startTime,
               timestamp: Date.now(),
-              id: this.generateId()
+              id: this.generateId(),
             });
           }
         }
@@ -94,39 +115,34 @@ class PerformanceMonitor {
       console.warn('FCP observation failed:', e);
     }
 
+    // TTFB - Time to First Byte
     try {
-      const ttfbObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries() as PerformanceNavigationTiming[]) {
-          if (entry.entryType === 'navigation') {
-            this.recordMetric({
-              name: 'TTFB',
-              value: entry.responseStart - entry.requestStart,
-              timestamp: Date.now(),
-              id: this.generateId()
-            });
-          }
+      const navObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          const navEntry = entry as PerformanceNavigationTiming;
+          this.recordMetric({
+            name: 'TTFB',
+            value: navEntry.responseStart - navEntry.requestStart,
+            timestamp: Date.now(),
+            id: this.generateId(),
+          });
         }
       });
-      ttfbObserver.observe({ type: 'navigation', buffered: true } as any);
-      this.observers.push(ttfbObserver);
+      navObserver.observe({ type: 'navigation', buffered: true } as any);
+      this.observers.push(navObserver);
     } catch (e) {
-      console.warn('TTFB observation failed:', e);
+      console.warn('Navigation timing observation failed:', e);
     }
   }
 
   private observeMemoryUsage(): void {
     const perfWithMemory = performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } };
     if (perfWithMemory.memory) {
-      const { usedJSHeapSize, jsHeapSizeLimit } = perfWithMemory.memory;
-      const ratio = jsHeapSizeLimit > 0 ? usedJSHeapSize / jsHeapSizeLimit : 0;
-      this.recordMetric({
-        name: 'MEMORY_USAGE',
-        value: ratio,
-        timestamp: Date.now(),
-        id: this.generateId()
-      });
+      const ratio = perfWithMemory.memory.usedJSHeapSize / perfWithMemory.memory.jsHeapSizeLimit;
+      this.recordMetric({ name: 'MEMORY_USAGE', value: ratio, timestamp: Date.now(), id: this.generateId() });
     }
-  }
+
+  // Removed duplicate stray block that caused syntax errors
 
   private observeResourceTiming(): void {
     if (!('PerformanceObserver' in window)) return;
