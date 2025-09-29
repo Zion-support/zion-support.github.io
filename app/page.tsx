@@ -50,11 +50,17 @@ import {
   NewContentShowcaseBanner2026,
   AINeuralArchitectureOptimizationBanner,
   AIFederatedLearningBanner,
-  FederatedLearningSuccessBanner
+  FederatedLearningSuccessBanner,
+  AIAdvancedAutomationBanner,
+  AICustomerExperienceRevolutionBanner,
+  AIQuantumComputingBreakthroughBanner,
+  AIManufacturingExcellenceBanner,
+  AIEnterpriseAutomationSuccessBanner
 } from '../components/NewContent2026Banners';
 import AITrends2025Banner from '../src/components/AITrends2025Banner';
 import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBanner';
 import AIROICalculator from '../src/components/AIROICalculator';
+import EnhancedAIROICalculator from '../components/EnhancedAIROICalculator';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -103,6 +109,11 @@ export default function HomePage() {
       </div>
       {/* Promotional Banners */}
       <Latest2026ContentBanner />
+      <AIAdvancedAutomationBanner />
+      <AICustomerExperienceRevolutionBanner />
+      <AIQuantumComputingBreakthroughBanner />
+      <AIManufacturingExcellenceBanner />
+      <AIEnterpriseAutomationSuccessBanner />
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
       <AIEthicsSuccessBanner />
@@ -285,7 +296,7 @@ export default function HomePage() {
             </p>
           </div>
           
-          <AIROICalculator />
+          <EnhancedAIROICalculator />
         </div>
       </section>
 
