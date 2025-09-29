@@ -382,9 +382,9 @@ export const services: Service[] = [
 export const promotionalBanners: PromotionalBanner[] = [
   {
     id: 'fresh-content-oct-2025',
-    message: '✨ New: Platform ROI, Secure ML Supply Chain, and Enterprise RAG v2',
+    message: '✨ New: Governance Scorecards 2026, Freshness‑Aware RAG v2, Edge Flags 2026',
     ctaText: 'Read the latest',
-    ctaLink: '/blog/ai-platform-roi-2025',
+    ctaLink: '/blog',
     backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
     textColor: 'text-white',
     showClose: true,
@@ -392,6 +392,45 @@ export const promotionalBanners: PromotionalBanner[] = [
     hideAfter: 15,
     active: true,
     priority: 0
+  },
+  {
+    id: 'governance-scorecards-2026',
+    message: '📚 AI Governance 2026: Scorecards Engineers Actually Use',
+    ctaText: 'Read Article',
+    ctaLink: '/blog/ai-governance-scorecards-2026',
+    backgroundColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'freshness-aware-rag-v2',
+    message: '🧭 Freshness‑Aware RAG v2: TTL Budgets and SLAs',
+    ctaText: 'Explore',
+    ctaLink: '/blog/freshness-aware-rag-v2',
+    backgroundColor: 'bg-gradient-to-r from-cyan-600 to-blue-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 2
+  },
+  {
+    id: 'edge-flags-blueprint-2026',
+    message: '⚡ Edge Flags Blueprint 2026: <100ms Global Releases',
+    ctaText: 'Read Blueprint',
+    ctaLink: '/blog/edge-flags-blueprint-2026',
+    backgroundColor: 'bg-gradient-to-r from-purple-600 to-pink-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 2
   },
   {
     id: 'new-blog-banner',

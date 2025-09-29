@@ -136,17 +136,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-<<<<<<< HEAD
-          title="📚 New Series: Ship Faster with Guardrails"
-          description="AI roadmaps, ML SBOM automation, and online eval canaries now live."
+          title="📚 New: Governance Scorecards, Freshness‑Aware RAG v2, Edge Flags 2026"
+          description="Outcome‑linked guardrails, freshness budgets with hybrid search, and <100ms global rollouts."
           ctaText="See what's new"
           ctaLink="/blog"
-=======
-          title="🚀 Fresh: GenAI Platform Blueprint + Hybrid Vector Search"
-          description="Ship weekly with guardrails. Cut retrieval cost 40%+ with hybrid and freshness."
-          ctaText="Read the latest"
-          ctaLink="/blog/genai-platform-blueprint-2025"
->>>>>>> content/oct-2025-updates
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -531,11 +524,7 @@ const Home = () => {
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
-<<<<<<< HEAD
                     {('featured' in item) && (item as any).featured && (
-=======
-                    {"featured" in item && (item as any).featured && (
->>>>>>> content/oct-2025-updates
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>
