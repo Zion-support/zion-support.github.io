@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
+    <title>Zion Tech Group - Innovative IT Solutions & AI Services</title>
+    <link rel="icon" href="/favicon.ico" />
+    <script type="module" crossorigin src="/assets/js/main-D72pT5Ba.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/js/chunk-Chh87x0X.js">
+    <link rel="modulepreload" crossorigin href="/assets/js/chunk-nl5lMis-.js">
+    <link rel="modulepreload" crossorigin href="/assets/js/chunk-BYlMkRyq.js">
+    <link rel="modulepreload" crossorigin href="/assets/js/chunk-CMfmiQQF.js">
+    <link rel="stylesheet" crossorigin href="/assets/css/main-BHV_D-AK.css">
+=======
+    <title>Zion Tech Group</title>
+    <link rel="icon" href="/favicon.ico" />
+    <script type="module" crossorigin src="/assets/js/main-Crt_2rNC.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/js/chunk-DxlDMyuq.js">
+    <link rel="modulepreload" crossorigin href="/assets/js/chunk-HDkMbyQy.js">
+    <link rel="modulepreload" crossorigin href="/assets/js/chunk-BzKY_6bH.js">
+    <link rel="modulepreload" crossorigin href="/assets/js/chunk-CMfmiQQF.js">
+    <link rel="stylesheet" crossorigin href="/assets/css/main-ZVZRsdJ8.css">
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-9756
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="notification-root"></div>
+  </body>
+</html>

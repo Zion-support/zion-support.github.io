@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
+ HEAD
 <<<<<<< HEAD
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -141,15 +141,12 @@ class SecurityAuditor {
 // Run the security auditor
 const auditor = new SecurityAuditor();
 auditor.run().catch(console.error);
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+ cursor/expand-services-advertise-and-build-project-4b36
 const fs = require('fs');
 const path = require('path');
 
 console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
-<<<<<<< HEAD
+ HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+ cursor/expand-services-advertise-and-build-project-4b36

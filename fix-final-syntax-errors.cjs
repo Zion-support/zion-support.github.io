@@ -1,9 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+ HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+ cursor/expand-services-advertise-and-build-project-4b36
 
 console.log('🔧 Fixing final syntax errors...');
 

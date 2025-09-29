@@ -1,0 +1,12 @@
+import React from "react";
+
+<<<<<<< HEAD
+const ModernFeatures: React.FC = () => null;
+
+export default ModernFeatures;
+=======
+export default function ModernFeatures() {
+  return null;
+}
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b86b

@@ -1,5 +1,6 @@
 import React from "react";
 
-const ModernFeatures: React.FC = () => null;
+export default function ModernFeatures(): React.JSX.Element {
+  return <section />;
+}
 
-export default ModernFeatures;

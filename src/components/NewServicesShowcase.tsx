@@ -72,7 +72,7 @@ const NewServicesShowcase: React.FC = () => {
                     )}
                   </div>
                 </div>
-                {service.popular && (
+                {service.pricing.popular && (
                   <div className="flex items-center gap-1 bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded-full text-xs">
                     <Star className="w-3 h-3 fill-current" />
                     POPULAR

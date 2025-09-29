@@ -33,6 +33,22 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+    id: "policy-tests-in-ci-2025",
+    slug: "policy-tests-in-ci-2025",
+    title: "Policy Tests in CI: Fast Guardrails Engineers Adopt",
+    description: "Lightweight checks for risky changes that prevent regressions without blocking teams.",
+    excerpt: "Adopt small, meaningful CI policy tests tied to product KPIs for real impact.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Engineering Excellence",
+    tags: ["Policy", "CI", "Guardrails"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/policy-tests-in-ci.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "edge-e2e-observability-2026",
     slug: "edge-e2e-observability-2026",
     title: "Edge E2E Observability: User‑Centric Tracing and <100ms Telemetry",
@@ -45,6 +61,22 @@ export const latestArticles: LatestArticle[] = [
     featured: false,
     readTime: "7 min read",
     image: "/images/edge-observability.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "risk-budgets-edge-rollouts-2025",
+    slug: "risk-budgets-edge-rollouts-2025",
+    title: "Risk Budgets for Edge Rollouts: Ship Fast With Confidence",
+    description: "Define budgets, wire telemetry, and enable instant rollback for zero‑regret deploys.",
+    excerpt: "A pragmatic pattern for progressive delivery under strict risk envelopes.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Architecture",
+    tags: ["Edge", "Feature Flags", "Budgets"],
+    featured: false,
+    readTime: "7 min read",
+    image: "/images/risk-budgets-edge.jpg",
     newBadge: true,
     trending: true
   },
@@ -109,22 +141,6 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "6 min read",
     image: "/images/edge-llm-caching.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "agentic-workflows-blueprint-2026",
-    slug: "agentic-workflows-blueprint-2026",
-    title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Policy Tests",
-    description: "Composable tools, typed traces, and policy tests that keep agents reliable.",
-    excerpt: "Build reliable agents with deterministic routes and KPI-aligned evals.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-09",
-    category: "GenAI",
-    tags: ["Agents", "Tools", "Observability"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/agentic-workflows-blueprint.jpg",
     newBadge: true,
     trending: true
   },

@@ -1,5 +1,6 @@
 import React from "react";
 
-const EnhancedTestimonials: React.FC = () => null;
+export default function EnhancedTestimonials(): React.JSX.Element {
+  return <section />;
+}
 
-export default EnhancedTestimonials;

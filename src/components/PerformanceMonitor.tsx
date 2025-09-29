@@ -1,8 +1,10 @@
 import React from "react";
 
-const PerformanceMonitor: React.FC<{ showDashboard?: boolean }> = () => {
-  return <div aria-label="PerformanceMonitor placeholder" />;
-};
+interface PerformanceMonitorProps {
+  showDashboard?: boolean;
+}
 
-export default PerformanceMonitor;
+export default function PerformanceMonitor(_props: PerformanceMonitorProps): React.JSX.Element {
+  return <div>Performance Monitor</div>;
+}
 

@@ -248,8 +248,6 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
+ HEAD
   console.error(" Failed to start enhanced error "fixer": ")
-=======
-  console.error(" Failed to start enhanced error "fixer": ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+ 2218db61eeb0e5fed4774e6d867f5112c39ece45

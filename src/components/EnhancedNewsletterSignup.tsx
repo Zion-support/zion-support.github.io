@@ -1,10 +1,12 @@
 import React from "react";
 
-const EnhancedNewsletterSignup: React.FC<{
+interface Props {
   title?: string;
   subtitle?: string;
   showContentPreview?: boolean;
-}> = () => null;
+}
 
-export default EnhancedNewsletterSignup;
+export default function EnhancedNewsletterSignup(_props: Props): React.JSX.Element {
+  return <section />;
+}
 
