@@ -140,16 +140,6 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
-    slug: "platform-engineering-blueprint-2025",
-    title: "Platform Engineering Blueprint 2025: From Chaos to Clarity",
-    description:
-      "Core capabilities, golden paths, and product thinking to accelerate delivery across hundreds of teams.",
-    category: "Platform Engineering",
-    publishedAt: "2025-09-27",
-    featured: true,
-    readTime: "11 min read",
-  },
-  {
     slug: "genai-eval-systems",
     title: "Shipping with Confidence: Evaluation Systems for GenAI Apps",
     description:
@@ -198,6 +188,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-01-10",
     featured: false,
     readTime: "9 min read",
+<<<<<<< HEAD
   },
   {
     slug: "platform-engineering-blueprint-2025",
@@ -345,5 +336,8 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "9 min read",
   },
+=======
+  }
+>>>>>>> feat/new-content-and-promo
 ];
 
