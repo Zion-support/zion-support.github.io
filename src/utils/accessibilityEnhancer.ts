@@ -54,8 +54,8 @@ class AccessibilityEnhancer {
     this.observeAccessibility();
   }
 
+  // Backwards-compatible alias for callers expecting initialize()
   public initialize(): void {
-    // Alias to satisfy external callers expecting initialize()
     this.init();
   }
 

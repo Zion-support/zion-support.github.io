@@ -14,6 +14,65 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-adoption-scorecard-2025",
+    title: "AI Adoption Scorecard: Executive Metrics That Drive Outcomes",
+    description: "Define leading indicators, outcome metrics, and review rituals that align AI work to business value.",
+    content: `
+# AI Adoption Scorecard: Executive Metrics That Drive Outcomes
+
+Leaders struggle to see real business impact from AI initiatives when metrics are vague or lagging. This playbook shows how to define leading indicators, outcome metrics, and review rituals that prevent vanity reporting and drive tangible results.
+
+## Metrics That Matter
+- Pipeline conversion influenced by AI
+- Handle rate and resolution quality for assistants
+- Time-to-first-success on golden paths
+- Risk and policy adherence from online checks
+
+## Operating Rhythm
+- Monthly review with owners and actions
+- Guardrail thresholds and automated alerts
+- Shared dashboards with plain-language summaries
+
+Adopt this scorecard to align investments with measurable outcomes.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Strategy",
+    tags: ["Metrics", "Outcomes", "Governance"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-adoption-scorecard.jpg"
+  },
+  {
+    slug: "genai-incident-postmortems-2025",
+    title: "GenAI Incident Postmortems: Prevent Repeats with Policy Tests",
+    description: "A practical guide to capturing signals, writing policy tests, and closing the loop so incidents don't recur.",
+    content: `
+# GenAI Incident Postmortems: Prevent Repeats with Policy Tests
+
+GenAI incidents often recur because learnings are not codified into guardrails. This guide introduces a lightweight template to capture signals, extract commitments, and translate them into automated policy tests.
+
+## Capture The Right Signals
+- Prompt inputs, tools called, outputs and flags
+- Context sources, fallback routes, retries
+- User impact, severity, and blast radius
+
+## Close The Loop
+- Add offline policy tests to CI
+- Wire canaries to online guardrails
+- Track regressions with drift metrics
+
+With this approach, teams move fast while reducing repeat incidents.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["Policy Tests", "Incidents", "Reliability"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-postmortems.jpg"
+  },
+  {
     slug: "ai-sales-copilot-2025",
     title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
     description: "How to wire CRMs, build prompt libraries, and add evals that boost win‑rates without risk.",

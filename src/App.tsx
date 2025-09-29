@@ -140,11 +140,8 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer
-        title={seoDataForOptimizer.title}
-        description={seoDataForOptimizer.description}
-        canonicalUrl={seoDataForOptimizer.canonicalUrl}
-      />
+<<<<<<< HEAD
+      <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonicalUrl} />
       <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
