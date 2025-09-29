@@ -93,10 +93,12 @@ function Footer() {
                 Blog
                 <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
               </Link>
-              <Link href="/blog/ai-autonomous-enterprise-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Autonomous Enterprise 2026</Link>
+              <Link href="/blog/ai-2026-mega-breakthroughs" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 AI 2026 Mega Breakthroughs</Link>
+              <Link href="/blog/ai-cost-optimization-2026-advanced" className="block text-gray-600 hover:text-blue-600 transition-colors">💰 90% Cost Reduction Guide</Link>
+              <Link href="/blog/ai-autonomous-enterprise-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🤖 Autonomous Enterprise 2026</Link>
               <Link href="/blog/ai-quantum-hybrid-computing-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">⚡ Quantum AI Computing</Link>
-              <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">📊 $25M Success Story</Link>
-              <Link href="/case-studies/ai-sustainability-transformation-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🌱 $10M Sustainability ROI</Link>
+              <Link href="/case-studies/ai-cost-optimization-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">📊 $50M Cost Savings Success</Link>
+              <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">📈 $25M Success Story</Link>
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Case Studies
                 <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>

@@ -37,13 +37,6 @@ const contentItems: ContentItem[] = [
   },
   {
     id: 'ai-quantum-hybrid-computing-2026',
-<<<<<<< HEAD
-    title: 'AI Quantum Hybrid Computing 2026: Next-Generation Intelligence',
-<<<<<<< HEAD
-    excerpt: 'Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities. Complete guide to quantum-AI hybrid systems.',
-=======
-    excerpt: 'Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities. Complete guide to quantum-AI integration.',
->>>>>>> cursor/create-and-deploy-new-content-e8cb
 =======
     title: 'AI Quantum Hybrid Computing 2026: Next-Generation Intelligence Revolution',
     excerpt: 'Explore the revolutionary potential of quantum-AI hybrid computing. Achieve 1000x faster optimization, 95% accuracy improvements, and breakthrough capabilities.',
@@ -55,14 +48,6 @@ const contentItems: ContentItem[] = [
     featured: true,
     publishedDate: '2026-01-25',
     metrics: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-      { value: '1000x', label: 'Faster' },
-      { value: '95%', label: 'Accuracy' }
-=======
-      { value: '1000x', label: 'Faster Optimization' },
-      { value: '95%', label: 'Accuracy Improvement' }
->>>>>>> cursor/create-and-deploy-new-content-e8cb
 =======
       { value: '1000x', label: 'Faster Optimization' },
       { value: '95%', label: 'Accuracy Improvement' },
@@ -76,14 +61,6 @@ const contentItems: ContentItem[] = [
     title: 'AI Autonomous Enterprise Transformation 2026: $25M ROI Case Study',
     excerpt: 'See how a Fortune 500 company achieved $25M ROI with comprehensive AI transformation. 99% automation, 90% cost reduction, and complete business revolution.',
     type: 'case-study',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    category: 'Fortune 500',
-=======
-    readTime: '30 min read',
-    category: 'Case Study',
->>>>>>> cursor/create-and-deploy-new-content-6fcc
 =======
     category: 'Success Story',
 >>>>>>> cursor/create-and-deploy-new-content-e8cb
@@ -102,41 +79,6 @@ const contentItems: ContentItem[] = [
     ]
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    id: 'ai-zero-trust-security-2026',
-    title: 'AI Zero Trust Security 2026: Complete Implementation Guide',
-    excerpt: 'Master zero trust security with AI-powered threat detection, automated response, and comprehensive protection. Achieve 99.7% threat detection accuracy.',
-    type: 'article',
-    readTime: '28 min read',
-    category: 'Cybersecurity',
-    href: '/blog/ai-zero-trust-security-2026',
-    featured: true,
-    publishedDate: '2026-01-20',
-    metrics: [
-      { value: '99.7%', label: 'Threat Detection' },
-      { value: '0', label: 'Breaches' }
-    ]
-  },
-  {
-    id: 'ai-foundation-models-2026',
-    title: 'AI Foundation Models 2026: Complete Playbook for Enterprise',
-    excerpt: 'Master foundation models for enterprise AI. Complete guide to model selection, deployment, optimization, and governance. Achieve 95% accuracy and 80% cost reduction.',
-    type: 'article',
-    readTime: '32 min read',
-    category: 'Foundation Models',
-    href: '/blog/ai-foundation-models-2026',
-    featured: true,
-    publishedDate: '2026-01-20',
-    metrics: [
-      { value: '95%', label: 'Accuracy' },
-      { value: '80%', label: 'Cost Reduction' }
-    ]
-  },
-  {
-=======
->>>>>>> cursor/create-and-deploy-new-content-6fcc
 =======
 >>>>>>> cursor/create-and-deploy-new-content-e8cb
 =======
