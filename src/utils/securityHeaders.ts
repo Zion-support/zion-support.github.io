@@ -77,6 +77,8 @@ export class SecurityManager {
     };
   }
 
+  // Note: initialize() is intentionally defined once; keep this single alias
+
   public getCSPDirective(): string {
     const { csp } = this.config;
     const directives: string[] = [];

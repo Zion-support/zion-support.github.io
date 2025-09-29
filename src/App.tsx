@@ -13,7 +13,7 @@ import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import SEOOptimizer from './components/SEOOptimizer';
-import type { Notification as AppNotification } from './components/NotificationSystem';
+import type { Notification as UILibraryNotification } from './components/NotificationSystem';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
@@ -49,7 +49,7 @@ const WebsiteEnhancements = (props: any) => <Placeholder name="WebsiteEnhancemen
 export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [notifications, setNotifications] = useState<AppNotification[]>([]);
+  const [notifications, setNotifications] = useState<UILibraryNotification[]>([]);
 
   const seoDataForOptimizer = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -137,7 +137,7 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={new URL(seoDataForOptimizer.canonicalUrl, window.location.origin).pathname} />
+      <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonicalUrl} />
       <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
