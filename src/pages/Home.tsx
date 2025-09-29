@@ -32,6 +32,7 @@ import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import NewContentShowcase from "../components/NewContentShowcase";
 import NewContentShowcase2025 from "../components/NewContentShowcase2025";
 import NewServicesShowcase from "../components/NewServicesShowcase";
+import RevolutionaryContentBanner from "../components/RevolutionaryContentBanner";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
 import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
@@ -116,6 +117,9 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        
+        {/* Revolutionary Content Banner - Compact */}
+        <RevolutionaryContentBanner variant="compact" />
         
         {/* Enhanced Promotional Banners */}
         {getFeaturedBanners().slice(0, 3).map((banner) => (
@@ -329,6 +333,9 @@ const Home = () => {
 
         {/* New Content Showcase */}
         <NewContentShowcase />
+
+        {/* Revolutionary Content Banner */}
+        <RevolutionaryContentBanner variant="hero" className="border-b border-white/10" />
 
         {/* New Content Showcase 2025 */}
         <NewContentShowcase2025 />
