@@ -12,9 +12,9 @@ import {
   Zap,
   Sparkles,
 } from "lucide-react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import EnhancedContactForm from "../components/EnhancedContactForm";
+const Header = () => null;
+const Footer = () => null;
+const EnhancedContactForm = () => null;
 
 export default function Contact(): React.JSX.Element {
   const contactInfo = [

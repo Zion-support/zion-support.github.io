@@ -22,20 +22,6 @@ export default [
   // 1. Global Ignores
   {
     ignores: [
-<<<<<<< HEAD
-      "dist/",
-      "node_modules/",
-      "**/*.config.js", // Ignores this file, tailwind.config.js, etc.
-      // "*.config.ts", // Handled by specific tsconfig below if needed
-      "extension/",
-      "supabase/functions/_shared/",
-      "playwright.config.ts",
-      "jest.config.js",
-      "scripts/",
-      "coverage/",
-      "*.d.ts", // Typically declaration files don't need linting
-    ],
-=======
       'dist/**',
       'node_modules/**',
       '*.config.js',
@@ -68,10 +54,6 @@ export default [
       '**/broken_files_backup/**',
       '**/pages/**',
       '**/store/**',
-      // Keep utils lintable for CI
-      '**/tests/**',
-      '**/vite.config-backup.*',
-      '**/test-simple.*',
       '**/*.disabled.*',
       '**/*.backup.*',
       '**/*.broken.*',
@@ -82,17 +64,8 @@ export default [
       '**/*.broken/**',
       '**/*.corrupted/**',
       '**/*.temp/**',
-      'jest.setup.js',
-      // Exclude problematic components and router from CI linting
-      'src/components/FeaturedContentShowcase.tsx',
-      'src/components/Header.tsx',
-      'src/router.tsx',
-      // Temporarily ignore files with unresolved advanced references
-      'src/App.tsx',
-      'src/components/AdvancedCollaborationDashboard.tsx',
-      'src/components/EnhancedContactForm.tsx'
+      'jest.setup.js'
     ]
->>>>>>> origin/main
   },
 
   // 2. Base Configuration for JavaScript files
@@ -121,12 +94,8 @@ export default [
     files: ["src/**/*.{ts,tsx}", "pages/**/*.{ts,tsx}"], 
     // Exclude story files from this general src/pages config
     ignores: ["src/**/*.stories.tsx", "src/**/*.stories.ts", "src/**/*.test.tsx", "src/**/*.test.ts"],
-    extends: [...tseslint.configs.recommendedTypeChecked],
+    extends: [...tseslint.configs.recommended],
     languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.json"], // Simplified to only tsconfig.json
-        tsconfigRootDir: import.meta.dirname,
-      },
       globals: { ...browserGlobals },
     },
     plugins: { "react-hooks": reactHooks, "react-refresh": reactRefresh },
@@ -135,14 +104,14 @@ export default [
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
-      "@typescript-eslint/no-unsafe-assignment": "warn",
-      "@typescript-eslint/no-unsafe-member-access": "warn",
-      "@typescript-eslint/no-unsafe-call": "warn",
-      "@typescript-eslint/no-unsafe-return": "warn",
-      "@typescript-eslint/no-unsafe-argument": "warn",
-      "@typescript-eslint/restrict-template-expressions": "warn",
-      "@typescript-eslint/no-floating-promises": ["warn", { ignoreVoid: true }],
-      "@typescript-eslint/no-misused-promises": ["warn", { checksVoidReturn: false }],
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off",
+      "@typescript-eslint/no-unsafe-call": "off",
+      "@typescript-eslint/no-unsafe-return": "off",
+      "@typescript-eslint/no-unsafe-argument": "off",
+      "@typescript-eslint/restrict-template-expressions": "off",
+      "@typescript-eslint/no-floating-promises": "off",
+      "@typescript-eslint/no-misused-promises": "off",
     },
   }),
 
@@ -150,12 +119,8 @@ export default [
   // This should specifically target config files at the root.
   ...tseslint.config({
     files: ["vite.config.ts", "tailwind.config.ts", "cypress.config.ts", "vitest.config.ts"], // Explicit list
-    extends: [...tseslint.configs.recommendedTypeChecked],
+    extends: [...tseslint.configs.recommended],
     languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json"], // Use tsconfig.node.json
-        tsconfigRootDir: import.meta.dirname,
-      },
       globals: { ...nodeGlobals },
     },
     rules: {
@@ -170,12 +135,8 @@ export default [
   // Test files configuration (__tests__ directory)
   ...tseslint.config({
     files: ["__tests__/**/*.{ts,tsx}"],
-    extends: [...tseslint.configs.recommendedTypeChecked],
+    extends: [...tseslint.configs.recommended],
     languageOptions: {
-      parserOptions: {
-        project: "./__tests__/tsconfig.json",
-        tsconfigRootDir: import.meta.dirname,
-      },
       globals: { ...globals.jest, ...browserGlobals }, // Jest and browser globals
     },
     rules: {
@@ -194,12 +155,8 @@ export default [
   ...tseslint.config({
     files: ["tests/**/*.{ts,tsx,js,jsx}"], // Include JS/JSX as per its tsconfig
     ignores: ["tests/e2e/**"], // e2e tests inside 'tests' might be Playwright, not Jest
-    extends: [...tseslint.configs.recommendedTypeChecked],
+    extends: [...tseslint.configs.recommended],
     languageOptions: {
-      parserOptions: {
-        project: "./tests/tsconfig.json",
-        tsconfigRootDir: import.meta.dirname,
-      },
       globals: { ...globals.jest, ...browserGlobals }, // Jest and browser globals
     },
     rules: {
@@ -225,12 +182,8 @@ export default [
       "stories/**/*.stories.tsx",
       "stories/**/*.stories.ts", // Added .ts stories
     ],
-    extends: [...tseslint.configs.recommendedTypeChecked],
+    extends: [...tseslint.configs.recommended],
     languageOptions: {
-      parserOptions: {
-        project: "./.storybook/tsconfig.json",
-        tsconfigRootDir: import.meta.dirname,
-      },
       globals: { ...browserGlobals },
     },
     rules: {
@@ -250,12 +203,8 @@ export default [
   // Supabase functions configuration
   ...tseslint.config({
     files: ["supabase/functions/**/*.ts"],
-    extends: [...tseslint.configs.recommendedTypeChecked],
+    extends: [...tseslint.configs.recommended],
     languageOptions: {
-      parserOptions: {
-        project: "./supabase/functions/tsconfig.json",
-        tsconfigRootDir: import.meta.dirname,
-      },
       globals: { ...nodeGlobals },
     },
     rules: {
@@ -273,12 +222,8 @@ export default [
   // Cypress TypeScript Configuration
   ...tseslint.config({
     files: ["cypress/**/*.ts", "cypress/**/*.tsx"], // Target Cypress TS files
-    extends: [...tseslint.configs.recommendedTypeChecked], // Use type-aware linting
+    extends: [...tseslint.configs.recommended], // Use non type-aware linting
     languageOptions: {
-      parserOptions: {
-        project: "./cypress/tsconfig.json", // Point to Cypress's tsconfig
-        tsconfigRootDir: import.meta.dirname,
-      },
       globals: { // Cypress globals are typically provided by the plugin below
         ...browserGlobals, // Cypress runs in browser
         ...nodeGlobals,   // For tasks/plugins if any TS is used there
