@@ -12,7 +12,11 @@ import {
   CustomerSupportAIBanner,
   CloudNativeBanner,
   RetailTechSuccessBanner,
-  ManufacturingIoTSuccessBanner
+  ManufacturingIoTSuccessBanner,
+  AIGovernanceFrameworkBanner,
+  MLOpsVectorDatabasesBanner,
+  FinTechRiskComplianceBanner,
+  LatestContentShowcaseBanner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
 
@@ -26,6 +30,10 @@ export default function HomePage() {
   return (
     <div className="animate-fade-in">
       {/* Promotional Banners */}
+      <LatestContentShowcaseBanner />
+      <AIGovernanceFrameworkBanner />
+      <MLOpsVectorDatabasesBanner />
+      <FinTechRiskComplianceBanner />
       <NewBlogBanner />
       <CustomerSupportAIBanner />
       <CloudNativeBanner />
@@ -160,6 +168,66 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Link to="/blog/ai-governance-framework-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Guide
+                  </span>
+                  <span className="text-sm text-gray-500">15 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Governance Framework 2025: Enterprise Implementation
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Master AI governance with comprehensive framework covering risk management, compliance, and ethical deployment.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Guide →
+                </div>
+              </div>
+            </Link>
+            
+            <Link to="/blog/ai-mlops-vector-databases-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Technical Guide
+                  </span>
+                  <span className="text-sm text-gray-500">18 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI MLOps with Vector Databases 2025
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Master MLOps for AI applications with vector databases and production-ready RAG architecture.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Guide →
+                </div>
+              </div>
+            </Link>
+            
+            <Link to="/case-studies/fintech-ai-risk-compliance-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Success Story
+                  </span>
+                  <span className="text-sm text-gray-500">FinTech</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  FinTech: 70% AI Risk Reduction
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how a leading fintech achieved 70% AI risk reduction with automated governance frameworks.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
+            
             <Link to="/blog/llm-cost-optimization-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -501,6 +569,102 @@ export default function HomePage() {
                   View All Content →
                 </Link>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Content Highlights Section */}
+      <section className="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              🚀 Fresh Content for 2025
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our latest AI insights, governance frameworks, and success stories 
+              that are transforming businesses in 2025
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">🛡️</span>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900">AI Governance</h3>
+                  <p className="text-sm text-gray-600">Enterprise Framework</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Comprehensive 12-pillar framework for enterprise AI governance with 70% risk reduction strategies.
+              </p>
+              <Link
+                href="/blog/ai-governance-framework-2025"
+                className="text-indigo-600 font-semibold hover:text-indigo-700 transition-colors"
+              >
+                Read Framework Guide →
+              </Link>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">⚙️</span>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900">MLOps & Vector DBs</h3>
+                  <p className="text-sm text-gray-600">Production Architecture</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Production-ready MLOps patterns for vector databases with &lt;50ms search latency optimization.
+              </p>
+              <Link
+                href="/blog/ai-mlops-vector-databases-2025"
+                className="text-purple-600 font-semibold hover:text-purple-700 transition-colors"
+              >
+                Explore MLOps Guide →
+              </Link>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">💰</span>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900">FinTech Success</h3>
+                  <p className="text-sm text-gray-600">Risk Compliance</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                See how a leading fintech achieved 70% AI risk reduction and $2.5M cost savings.
+              </p>
+              <Link
+                href="/case-studies/fintech-ai-risk-compliance-2025"
+                className="text-green-600 font-semibold hover:text-green-700 transition-colors"
+              >
+                View Success Story →
+              </Link>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <div className="inline-flex items-center gap-4 bg-white rounded-xl px-6 py-4 shadow-lg border border-gray-200">
+              <div className="text-2xl">📚</div>
+              <div className="text-left">
+                <h4 className="font-bold text-gray-900">Explore All New Content</h4>
+                <p className="text-sm text-gray-600">15+ new articles, guides, and case studies for 2025</p>
+              </div>
+              <Link
+                href="/blog"
+                className="bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              >
+                Browse All
+              </Link>
             </div>
           </div>
         </div>
