@@ -11,6 +11,7 @@ export interface AccessibilityIssue {
   suggestion: string;
   severity: 'low' | 'medium' | 'high';
   category: string;
+  description?: string;
 }
 
 export interface AccessibilityMetrics {
@@ -20,6 +21,9 @@ export interface AccessibilityMetrics {
   info: number;
   score: number;
   lastChecked: number;
+  overallScore?: number;
+  issues?: AccessibilityIssue[];
+  improvements?: string[];
 }
 
 export class AccessibilityEnhancer {

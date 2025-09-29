@@ -81,6 +81,8 @@ export interface PerformanceMetrics {
     limit: number;
   };
   connection?: string;
+  overallScore?: number;
+  suggestions?: OptimizationSuggestion[];
 }
 
 // Optimization Suggestion Types
@@ -129,6 +131,8 @@ export interface SEOIssue {
   impact?: "high" | "medium" | "low";
   fix?: string;
   suggestion?: string;
+  description?: string;
+  priority?: "high" | "medium" | "low";
 }
 
 // Cache Stats Types
