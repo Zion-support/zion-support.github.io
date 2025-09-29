@@ -10,7 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
     description:
@@ -41,12 +40,8 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
   },
   {
-    slug: "edge-inference-blueprints",
-    title: "Edge Inference Blueprints: Sub‑100ms UX in Production",
-=======
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
->>>>>>> feat/content-promo
     description:
       "Latency budgets, on‑device models, and caching strategies for lightning‑fast AI UX at the edge.",
     category: "Architecture",
@@ -85,13 +80,8 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
-<<<<<<< HEAD
-    slug: "edge-inference-patterns-2025",
-    title: "Edge Inference Patterns for Sub‑100ms Experiences",
-=======
     slug: "platform-scorecards-that-stick",
     title: "Platform Scorecards That Actually Drive Adoption",
->>>>>>> feat/content-promo
     description:
       "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
     category: "Platform Engineering",
