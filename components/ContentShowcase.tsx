@@ -53,7 +53,12 @@ const contentItems: ContentItem[] = [
     title: 'AI Transformation Mega Success 2026: $25M ROI Case Study',
     excerpt: 'See how a Fortune 500 company achieved $25M ROI with comprehensive AI transformation. 99% automation, 90% cost reduction, and complete business revolution.',
     type: 'case-study',
+<<<<<<< HEAD
     category: 'Fortune 500',
+=======
+    readTime: '30 min read',
+    category: 'Case Study',
+>>>>>>> cursor/create-and-deploy-new-content-6fcc
     href: '/case-studies/ai-transformation-mega-success-2026',
     featured: true,
     publishedDate: '2026-01-20',
@@ -63,6 +68,7 @@ const contentItems: ContentItem[] = [
     ]
   },
   {
+<<<<<<< HEAD
     id: 'ai-zero-trust-security-2026',
     title: 'AI Zero Trust Security 2026: Complete Implementation Guide',
     excerpt: 'Master zero trust security with AI-powered threat detection, automated response, and comprehensive protection. Achieve 99.7% threat detection accuracy.',
@@ -93,6 +99,8 @@ const contentItems: ContentItem[] = [
     ]
   },
   {
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6fcc
     id: 'ai-governance-maturity-model-2026',
     title: 'AI Governance Maturity Model 2026: From Ad‑Hoc to Audit‑Ready',
     excerpt: 'Move from ad‑hoc controls to audit‑ready AI governance with scorecards and KPIs.',
