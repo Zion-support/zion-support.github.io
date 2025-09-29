@@ -33,32 +33,32 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
-      title: "On‑Device Agents 2026",
-      description: "Private assistants with offline tools and local caches",
-      icon: Brain,
-      link: "/blog/on-device-agents-2026",
-      category: "Edge"
-    },
-    {
-      title: "GenAI Budgets & Quality Tiers",
-      description: "Cut spend 30–60% without hurting UX",
-      icon: Zap,
-      link: "/blog/genai-budgets-and-quality-tiers-2026",
-      category: "AI Ops"
-    },
-    {
-      title: "Secure Tools Marketplace",
-      description: "Vetting, sandboxes, and signed attestations",
+      title: "Secure ML Supply Chain 2026",
+      description: "SBOMs, lineage, and CI policy gates",
       icon: Shield,
-      link: "/blog/secure-tools-marketplace-2026",
+      link: "/blog/ai-secure-ml-supply-chain-2026",
       category: "Security"
     },
     {
-      title: "Privacy‑First Observability",
-      description: "User‑centric traces without PII leaks",
+      title: "GenAI Routing Under Budgets",
+      description: "Quality tiers without bill shock",
+      icon: Zap,
+      link: "/blog/genai-routing-under-budgets-2026",
+      category: "AI Ops"
+    },
+    {
+      title: "Golden Paths that Move KPIs",
+      description: "Platform engineering that pays",
       icon: TrendingUp,
-      link: "/blog/privacy-first-observability-2026",
-      category: "Observability"
+      link: "/blog/platform-golden-paths-kpis-2026",
+      category: "Platform"
+    },
+    {
+      title: "On‑Device Agents 2026",
+      description: "Private assistants with offline tools",
+      icon: Brain,
+      link: "/blog/on-device-agents-2026",
+      category: "Edge"
     }
   ];
 

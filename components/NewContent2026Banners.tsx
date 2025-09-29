@@ -1,56 +1,38 @@
 import React from 'react';
 import Link from 'next/link';
 
-export function AICostCalculatorBanner() {
+export function NewContent2026Banner() {
   return (
-    <div className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-8">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
-                New Article
-              </span>
-              <span className="text-sm opacity-90">January 20, 2026</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              AI Cost Calculator 2026: Optimize Your AI Spending
-            </h2>
-            <p className="text-lg mb-6 opacity-90">
-              Calculate and optimize your AI costs with our comprehensive guide. Save up to 70% 
-              on LLM expenses with proven strategies and real-world case studies.
+    <div className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+      <div className="max-w-6xl mx-auto px-4 py-6">
+        <div className="flex flex-col md:flex-row items-center gap-4 justify-between">
+          <div className="text-center md:text-left">
+            <h3 className="text-2xl md:text-3xl font-bold mb-2">
+              🚀 New 2026 Content Available!
+            </h3>
+            <p className="text-lg opacity-90 mb-4 md:mb-0">
+              Discover cutting-edge AI guides, case studies, and implementation strategies for 2026
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/blog/ai-cost-calculator-2026"
-                className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Read Article
-              </Link>
-              <Link
-                href="/contact"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-              >
-                Get Free Consultation
-              </Link>
-            </div>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-            <h3 className="text-xl font-bold mb-4">Quick Savings Preview</h3>
-            <div className="space-y-4">
-              <div className="flex justify-between items-center">
-                <span>Current Monthly Cost:</span>
-                <span className="font-bold text-red-300">$2,450</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span>With Optimization:</span>
-                <span className="font-bold text-green-300">$735</span>
-              </div>
-              <div className="flex justify-between items-center text-xl font-bold">
-                <span>Potential Savings:</span>
-                <span className="text-green-300">70%</span>
-              </div>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link
+              href="/blog/ai-autonomous-operations-2026"
+              className="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors text-center"
+            >
+              AI Autonomous Operations
+            </Link>
+            <Link
+              href="/blog/ai-finops-advanced-2026"
+              className="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors text-center"
+            >
+              AI FinOps Advanced
+            </Link>
+            <Link
+              href="/blog/ai-platform-architecture-2026"
+              className="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors text-center"
+            >
+              Platform Architecture
+            </Link>
           </div>
         </div>
       </div>
@@ -58,66 +40,70 @@ export function AICostCalculatorBanner() {
   );
 }
 
-export function AIImplementationPlaybookBanner() {
+export function AutonomousOperationsBanner() {
   return (
-    <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-8">
-      <div className="max-w-6xl mx-auto px-4">
+    <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+      <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
-                Featured Guide
+                New 2026 Guide
               </span>
-              <span className="text-sm opacity-90">January 20, 2026</span>
+              <span className="text-sm opacity-90">25 min read</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              AI Implementation Playbook 2026
-            </h2>
-            <p className="text-lg mb-6 opacity-90">
-              Master AI implementation with our comprehensive enterprise guide. From strategy 
-              to deployment, achieve 300% ROI with proven methodologies and real-world examples.
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+              AI Autonomous Operations 2026
+            </h3>
+            <p className="text-lg opacity-90 mb-6">
+              Master autonomous AI operations with zero-touch infrastructure management, 
+              predictive maintenance, and self-healing systems. Achieve 99.9% uptime and 80% cost reduction.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/blog/ai-implementation-playbook-2026"
-                className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                href="/blog/ai-autonomous-operations-2026"
+                className="bg-white text-indigo-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors text-center"
               >
-                Read Guide
+                Read Complete Guide
               </Link>
               <Link
-                href="/contact"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                href="/case-studies/ai-autonomous-operations-success-2026"
+                className="border-2 border-white text-white hover:bg-white hover:text-indigo-600 px-6 py-3 rounded-lg font-semibold transition-colors text-center"
               >
-                Get Implementation Help
+                View Success Story
               </Link>
             </div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-            <h3 className="text-xl font-bold mb-4">Implementation Phases</h3>
+            <h4 className="text-xl font-bold mb-4">Key Benefits</h4>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-bold">1</span>
+                <span className="text-2xl">🎯</span>
+                <div>
+                  <div className="font-semibold">Zero-Touch Operations</div>
+                  <div className="text-sm opacity-90">Complete automation of routine tasks</div>
                 </div>
-                <span>Strategy & Planning</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-bold">2</span>
+                <span className="text-2xl">📊</span>
+                <div>
+                  <div className="font-semibold">Predictive Maintenance</div>
+                  <div className="text-sm opacity-90">AI-driven failure prediction</div>
                 </div>
-                <span>Pilot Implementation</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-bold">3</span>
+                <span className="text-2xl">💰</span>
+                <div>
+                  <div className="font-semibold">80% Cost Reduction</div>
+                  <div className="text-sm opacity-90">Dynamic resource optimization</div>
                 </div>
-                <span>Scaling & Deployment</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-bold">4</span>
+                <span className="text-2xl">⚡</span>
+                <div>
+                  <div className="font-semibold">Self-Healing Systems</div>
+                  <div className="text-sm opacity-90">Automatic issue resolution</div>
                 </div>
-                <span>Optimization & Growth</span>
               </div>
             </div>
           </div>
@@ -127,58 +113,207 @@ export function AIImplementationPlaybookBanner() {
   );
 }
 
-export function SupplyChainOptimizationBanner() {
+export function FinOpsAdvancedBanner() {
   return (
-    <div className="w-full bg-gradient-to-r from-green-600 to-teal-600 text-white py-8">
-      <div className="max-w-6xl mx-auto px-4">
+    <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
+                Advanced 2026
+              </span>
+              <span className="text-sm opacity-90">20 min read</span>
+            </div>
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+              AI FinOps Advanced 2026
+            </h3>
+            <p className="text-lg opacity-90 mb-6">
+              Master advanced AI FinOps with predictive cost optimization, automated financial reporting, 
+              and intelligent resource allocation. Achieve 60% cost reduction and 95% accuracy.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/blog/ai-finops-advanced-2026"
+                className="bg-white text-green-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors text-center"
+              >
+                Read Advanced Guide
+              </Link>
+              <Link
+                href="/services/ai-finops-automation"
+                className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-6 py-3 rounded-lg font-semibold transition-colors text-center"
+              >
+                Explore FinOps Services
+              </Link>
+            </div>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+            <h4 className="text-xl font-bold mb-4">Advanced Capabilities</h4>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">📊</span>
+                <div>
+                  <div className="font-semibold">Predictive Cost Optimization</div>
+                  <div className="text-sm opacity-90">AI-driven cost forecasting</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">🤖</span>
+                <div>
+                  <div className="font-semibold">Automated Reporting</div>
+                  <div className="text-sm opacity-90">Complete financial automation</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">💡</span>
+                <div>
+                  <div className="font-semibold">Intelligent Allocation</div>
+                  <div className="text-sm opacity-90">AI-powered resource optimization</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">🔍</span>
+                <div>
+                  <div className="font-semibold">Real-time Analytics</div>
+                  <div className="text-sm opacity-90">Continuous financial insights</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function PlatformArchitectureBanner() {
+  return (
+    <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
+                Architecture Guide
+              </span>
+              <span className="text-sm opacity-90">30 min read</span>
+            </div>
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+              AI Platform Architecture 2026
+            </h3>
+            <p className="text-lg opacity-90 mb-6">
+              Design and implement enterprise-scale AI platforms with microservices, edge computing, 
+              and autonomous scaling. Achieve 99.9% uptime and 10x performance improvement.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/blog/ai-platform-architecture-2026"
+                className="bg-white text-indigo-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors text-center"
+              >
+                Read Architecture Guide
+              </Link>
+              <Link
+                href="/services/ai-platform-architecture"
+                className="border-2 border-white text-white hover:bg-white hover:text-indigo-600 px-6 py-3 rounded-lg font-semibold transition-colors text-center"
+              >
+                Get Architecture Consultation
+              </Link>
+            </div>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+            <h4 className="text-xl font-bold mb-4">Platform Components</h4>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">🔄</span>
+                <div>
+                  <div className="font-semibold">Microservices Architecture</div>
+                  <div className="text-sm opacity-90">Scalable, decoupled services</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">⚡</span>
+                <div>
+                  <div className="font-semibold">Edge Computing</div>
+                  <div className="text-sm opacity-90">Low-latency AI inference</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">🤖</span>
+                <div>
+                  <div className="font-semibold">Autonomous Scaling</div>
+                  <div className="text-sm opacity-90">AI-driven resource allocation</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">🔒</span>
+                <div>
+                  <div className="font-semibold">Security-First Design</div>
+                  <div className="text-sm opacity-90">End-to-end security</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function AutonomousOperationsSuccessBanner() {
+  return (
+    <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
+      <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
                 Success Story
               </span>
-              <span className="text-sm opacity-90">Manufacturing</span>
+              <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
+                Fortune 500
+              </span>
+              <span className="text-sm opacity-90">15 min read</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              AI Supply Chain: 85% Efficiency & $5M Savings
-            </h2>
-            <p className="text-lg mb-6 opacity-90">
-              See how we transformed a global manufacturer's supply chain with AI, achieving 
-              unprecedented efficiency gains and massive cost savings.
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+              $15M ROI with AI Autonomous Operations
+            </h3>
+            <p className="text-lg opacity-90 mb-6">
+              See how a Fortune 500 manufacturing company achieved $15M ROI with AI autonomous operations. 
+              99.9% uptime, 85% cost reduction, and zero-touch infrastructure management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/case-studies/ai-supply-chain-optimization-2026"
-                className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                href="/case-studies/ai-autonomous-operations-success-2026"
+                className="bg-white text-green-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors text-center"
               >
                 View Case Study
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-6 py-3 rounded-lg font-semibold transition-colors text-center"
               >
-                Optimize Your Supply Chain
+                Get Your ROI Assessment
               </Link>
             </div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-            <h3 className="text-xl font-bold mb-4">Results Achieved</h3>
+            <h4 className="text-xl font-bold mb-4">Proven Results</h4>
             <div className="grid grid-cols-2 gap-4">
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-300 mb-1">85%</div>
-                <div className="text-sm opacity-90">Efficiency Gain</div>
+                <div className="text-2xl font-bold">$15M</div>
+                <div className="text-sm opacity-90">Total ROI</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-300 mb-1">$5M</div>
-                <div className="text-sm opacity-90">Annual Savings</div>
+                <div className="text-2xl font-bold">99.9%</div>
+                <div className="text-sm opacity-90">Uptime</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-300 mb-1">60%</div>
-                <div className="text-sm opacity-90">Inventory Reduction</div>
+                <div className="text-2xl font-bold">85%</div>
+                <div className="text-sm opacity-90">Cost Reduction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-300 mb-1">95%</div>
-                <div className="text-sm opacity-90">Forecast Accuracy</div>
+                <div className="text-2xl font-bold">95%</div>
+                <div className="text-sm opacity-90">Process Automation</div>
               </div>
             </div>
           </div>
@@ -188,170 +323,64 @@ export function SupplyChainOptimizationBanner() {
   );
 }
 
-export function AI2026TrendsBanner() {
+export function NewContentShowcaseBanner2026() {
   return (
-    <div className="w-full bg-gradient-to-r from-orange-600 to-red-600 text-white py-8">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
-              Trending Now
-            </span>
-            <span className="text-sm opacity-90">2026 AI Trends</span>
-          </div>
+    <div className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            AI Trends 2026: What's Next in Enterprise AI
+            🎉 New 2026 Content Library
           </h2>
-          <p className="text-lg mb-6 opacity-90 max-w-3xl mx-auto">
-            Discover the latest AI trends shaping enterprise transformation in 2026. 
-            From autonomous agents to edge computing, stay ahead of the curve.
+          <p className="text-lg opacity-90 max-w-3xl mx-auto">
+            Explore our comprehensive collection of cutting-edge AI guides, case studies, and implementation strategies for 2026
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/blog"
-              className="bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Explore AI Trends
-            </Link>
-            <Link
-              href="/services"
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
-            >
-              Get AI Services
-            </Link>
-          </div>
         </div>
-      </div>
-    </div>
-  );
-}
-
-export function InteractiveAICalculatorBanner() {
-  return (
-    <div className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-8">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
-                Interactive Tool
-              </span>
-              <span className="text-sm opacity-90">Free Calculator</span>
+        
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <Link href="/blog/ai-autonomous-operations-2026" className="group">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
+              <div className="text-3xl mb-3">🤖</div>
+              <h3 className="text-lg font-bold mb-2 group-hover:text-yellow-200">
+                AI Autonomous Operations
+              </h3>
+              <p className="text-sm opacity-90">
+                Complete guide to zero-touch infrastructure management with 99.9% uptime
+              </p>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              AI ROI Calculator: Calculate Your Potential Savings
-            </h2>
-            <p className="text-lg mb-6 opacity-90">
-              Use our interactive calculator to estimate your potential AI cost savings and ROI. 
-              Get personalized recommendations based on your specific use case.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/blog/ai-cost-calculator-2026"
-                className="bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Try Calculator
-              </Link>
-              <Link
-                href="/contact"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
-              >
-                Get Custom Analysis
-              </Link>
+          </Link>
+          
+          <Link href="/blog/ai-finops-advanced-2026" className="group">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
+              <div className="text-3xl mb-3">💰</div>
+              <h3 className="text-lg font-bold mb-2 group-hover:text-yellow-200">
+                AI FinOps Advanced
+              </h3>
+              <p className="text-sm opacity-90">
+                Master financial operations automation with 60% cost reduction
+              </p>
             </div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-            <h3 className="text-xl font-bold mb-4">Quick Estimate</h3>
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm mb-2">Monthly API Calls</label>
-                <input
-                  type="number"
-                  placeholder="1,000,000"
-                  className="w-full px-3 py-2 rounded-lg text-gray-900"
-                />
-              </div>
-              <div>
-                <label className="block text-sm mb-2">Average Tokens/Call</label>
-                <input
-                  type="number"
-                  placeholder="500"
-                  className="w-full px-3 py-2 rounded-lg text-gray-900"
-                />
-              </div>
-              <div className="pt-4 border-t border-white/20">
-                <div className="flex justify-between items-center">
-                  <span>Potential Savings:</span>
-                  <span className="text-2xl font-bold text-green-300">70%</span>
-                </div>
-              </div>
+          </Link>
+          
+          <Link href="/blog/ai-platform-architecture-2026" className="group">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
+              <div className="text-3xl mb-3">🏗️</div>
+              <h3 className="text-lg font-bold mb-2 group-hover:text-yellow-200">
+                Platform Architecture
+              </h3>
+              <p className="text-sm opacity-90">
+                Enterprise-scale AI infrastructure with 10x performance improvement
+              </p>
             </div>
-          </div>
+          </Link>
         </div>
-      </div>
-    </div>
-  );
-}
-
-export function EnterpriseAIReadinessBanner() {
-  return (
-    <div className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-8">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
-                Assessment Tool
-              </span>
-              <span className="text-sm opacity-90">Free Analysis</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Enterprise AI Readiness Assessment
-            </h2>
-            <p className="text-lg mb-6 opacity-90">
-              Evaluate your organization's AI readiness with our comprehensive assessment. 
-              Get personalized recommendations and a roadmap for AI implementation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
-                className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Start Assessment
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-              >
-                View AI Services
-              </Link>
-            </div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-            <h3 className="text-xl font-bold mb-4">Assessment Areas</h3>
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">📊</span>
-                <span>Data Quality & Availability</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">🏗️</span>
-                <span>Technical Infrastructure</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">👥</span>
-                <span>Organizational Readiness</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">🎯</span>
-                <span>Use Case Identification</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">🛡️</span>
-                <span>Governance & Risk Management</span>
-              </div>
-            </div>
-          </div>
+        
+        <div className="text-center">
+          <Link
+            href="/blog"
+            className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-block"
+          >
+            Explore All 2026 Content →
+          </Link>
         </div>
       </div>
     </div>

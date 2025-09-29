@@ -54,6 +54,33 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+            title="Platform Engineering Scorecards 2026: From Golden Paths to Outcomes"
+            excerpt="Measure adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery."
+            date="October 9, 2025"
+            category="Platform Engineering"
+            readTime="8 min"
+            image="🧭"
+            href="/blog/platform-engineering-scorecards-2026"
+          />
+          <BlogPost
+            title="AI Cybersecurity Automation: From Detections to Autonomic Response"
+            excerpt="Behavioral detections and policy tests wired to runbooks that auto-contain incidents <60s."
+            date="October 9, 2025"
+            category="Security"
+            readTime="7 min"
+            image="🛡️"
+            href="/blog/ai-cybersecurity-automation-2025"
+          />
+          <BlogPost
+            title="Edge AI Blueprint 2026: Privacy‑Preserving Intelligence <100ms"
+            excerpt="Signed configs, tiny models, and geo budgets for private, real‑time decisions."
+            date="October 9, 2025"
+            category="Edge Computing"
+            readTime="9 min"
+            image="⚡"
+            href="/blog/edge-ai-blueprint-2026"
+          />
+          <BlogPost
             title="AI Roadmaps 2026: What to Build Next and Why"
             excerpt="A pragmatic roadmap for 2026 across CX, ops, and platforms. High-ROI bets with sequencing and metrics."
             date="September 29, 2025"

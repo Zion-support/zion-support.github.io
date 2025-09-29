@@ -240,6 +240,43 @@ export const blogPosts: BlogPost[] = [
     slug: '/blog/secure-genai-guardrails-2025',
     tags: ['GenAI', 'Security', 'Compliance']
   }
+  ,
+  {
+    id: 'secure-ml-supply-chain-2026',
+    title: 'Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards',
+    excerpt: 'Continuously track models, datasets, and prompts with signed SBOMs and policy checks.',
+    date: 'October 13, 2025',
+    category: 'Security',
+    readTime: '7 min',
+    image: '🔐',
+    featured: true,
+    slug: '/blog/secure-ml-supply-chain-2026',
+    tags: ['ML', 'Supply Chain', 'SBOM', 'Security']
+  },
+  {
+    id: 'genai-routing-blueprint-2026',
+    title: 'GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets',
+    excerpt: 'Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.',
+    date: 'October 13, 2025',
+    category: 'GenAI',
+    readTime: '8 min',
+    image: '🧭',
+    featured: true,
+    slug: '/blog/genai-routing-blueprint-2026',
+    tags: ['Routing', 'Quality Tiers', 'Budgets', 'Caching']
+  },
+  {
+    id: 'golden-paths-roi-2026',
+    title: 'Golden Paths ROI 2026: Scorecards that Prove Platform Value',
+    excerpt: 'Link developer journeys to SLOs, adoption, and revenue with actionable scorecards.',
+    date: 'October 13, 2025',
+    category: 'Platform Engineering',
+    readTime: '7 min',
+    image: '🛤️',
+    featured: true,
+    slug: '/blog/golden-paths-roi-2026',
+    tags: ['Golden Paths', 'Scorecards', 'ROI']
+  }
 ];
 
 // Case Studies Configuration
@@ -479,6 +516,19 @@ export const promotionalBanners: PromotionalBanner[] = [
     priority: 0
   },
   {
+    id: 'fresh-oct-12-2025',
+    message: '🚀 New: AI Platform SLOs, RAG Evals in the Loop, Edge Flags 2026',
+    ctaText: 'Explore new content',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
     id: 'fresh-content-oct-2025',
     message: '✨ New: Governance Scorecards 2026, Freshness‑Aware RAG v2, Edge Flags 2026',
     ctaText: 'Read the latest',
@@ -687,6 +737,32 @@ export const promotionalBanners: PromotionalBanner[] = [
     priority: 3
   }
   ,
+  {
+    id: 'fresh-oct-13-2025-new',
+    message: '🚀 New: Secure ML Supply Chain, GenAI Routing, Golden Paths ROI',
+    ctaText: 'Explore the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-oct-13-2025',
+    message: '🚀 New: Secure ML Supply Chain, GenAI Routing, Golden Paths ROI',
+    ctaText: 'Explore the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
   {
     id: 'fresh-content-oct-2025',
     message: '🚀 Fresh: Serverless Inference, Production RAG, Secure GenAI',

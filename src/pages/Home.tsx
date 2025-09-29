@@ -133,6 +133,7 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
+<<<<<<< HEAD
           title="New: Autonomous Runbooks, Privacy‑First Flags, Platform ROI Quickstart"
           description="Ship safe automation with budgeted runbooks, privacy‑preserving rollouts, and ROI scorecards."
           ctaText="Explore new content"
@@ -141,6 +142,19 @@ const Home = () => {
             { title: "Autonomous Incident Runbooks 2025", category: "AI Operations", link: "/blog/ai-autonomous-incident-runbooks-2025" },
             { title: "Privacy‑First Feature Flags 2025", category: "Architecture", link: "/blog/privacy-first-feature-flags-2025" },
             { title: "Platform ROI Scorecards Quickstart", category: "AI Strategy", link: "/blog/platform-roi-scorecards-quickstart-2025" }
+=======
+          title="New: Reliable RAG Ops, Platform KPIs, AI Incident Budgets"
+          description="Keep RAG fresh, prove platform ROI, and contain incidents under 60s—safely."
+          ctaText="Explore new content"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "Reliable RAG Ops 2026", category: "GenAI", link: "/blog/reliable-rag-ops-2026" },
+            { title: "Platform KPIs 2026", category: "Platform Engineering", link: "/blog/platform-kpis-2026" },
+            { title: "AI Incident Budgets 2026", category: "Security", link: "/blog/ai-incident-budgets-2026" },
+            { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
+            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" },
+            { title: "Golden Paths ROI 2026", category: "Platform Engineering", link: "/blog/golden-paths-roi-2026" }
+>>>>>>> origin/main
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -278,7 +292,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Risk‑Budgeted Runbooks, Zero‑Trust Agents, Privacy‑Safe Flags — read now
+            New: Edge LLM Caching, Governance Scorecards, Serverless Cost Playbook — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
@@ -539,7 +553,7 @@ const Home = () => {
                 <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Fresh: Risk‑Budgeted Runbooks, Zero‑Trust Agents, Privacy‑Safe Flags
+                Fresh: Edge LLM Caching, KPI Scorecards, Serverless Cost Playbook
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles & Insights

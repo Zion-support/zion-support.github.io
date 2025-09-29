@@ -198,6 +198,25 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     badge: 'FREE',
     featured: false
   }
+  ,
+  {
+    id: 'fresh-content-oct-2025',
+    message: '📚 New: AI Risk Budgets + Privacy‑Preserving Agents — read now',
+    ctaText: 'Explore latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-blue-700 to-cyan-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0,
+    variant: 'info',
+    icon: '✨',
+    animation: 'fade-in',
+    badge: 'NEW CONTENT',
+    featured: true
+  }
 ];
 
 export const getActiveEnhancedBanners = () => {
