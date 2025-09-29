@@ -866,6 +866,39 @@ export const latestArticles: LatestArticle[] = [
     newBadge: true,
     trending: false
   }
+  ,
+  {
+    id: "ai-risk-budgets-2026",
+    slug: "ai-risk-budgets-2026",
+    title: "AI Risk Budgets 2026: Ship Faster With Guardrails",
+    description: "Budget risky actions, tokens, and tools so teams move quickly with measurable safety.",
+    excerpt: "A practical system for risk budgets that speed teams up while preventing incidents.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Governance",
+    tags: ["Risk", "Budgets", "Guardrails"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-risk-budgets-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-preserving-agents-2026",
+    slug: "privacy-preserving-agents-2026",
+    title: "Privacy‑Preserving Agents 2026: On‑Device Tools and Scoped Telemetry",
+    description: "Ship assistants that protect users with local tools, encrypted caches, and DP‑backed analytics.",
+    excerpt: "Design assistants that are fast, private, and reliable—without PII leaks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Security",
+    tags: ["Privacy", "Agents", "Telemetry"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/privacy-preserving-agents-2026.jpg",
+    newBadge: true,
+    trending: true
+  }
 ];
 
 export const featuredArticles = latestArticles.filter(article => article.featured);

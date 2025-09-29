@@ -492,4 +492,23 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "6 min read"
   }
+  ,
+  {
+    slug: "ai-risk-budgets-2026",
+    title: "AI Risk Budgets 2026: Ship Faster With Guardrails",
+    description: "Budget actions, tokens, and tools so teams move quickly with safe, measurable automation.",
+    category: "AI Governance",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-preserving-agents-2026",
+    title: "Privacy‑Preserving Agents 2026: On‑Device Tools and Scoped Telemetry",
+    description: "Design assistants that protect users with local tools, encrypted caches, and DP‑backed analytics.",
+    category: "AI Security",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  }
 ];

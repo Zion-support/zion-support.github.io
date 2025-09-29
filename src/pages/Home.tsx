@@ -133,13 +133,13 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Incident Playbooks, Privacy‑Preserving Analytics, Edge LLM Caching"
-          description="Contain incidents under 60s, ship insights without PII risk, and get sub‑100ms prompts."
+          title="New: AI Risk Budgets + Privacy‑Preserving Agents"
+          description="Ship fast with guardrails and protect users with on‑device tools + scoped telemetry."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Incident Response Playbooks", category: "Cybersecurity", link: "/blog/ai-incident-response-playbooks-2025" },
-            { title: "Privacy‑Preserving Analytics", category: "Observability", link: "/blog/privacy-preserving-analytics-2025" },
+            { title: "AI Risk Budgets 2026", category: "AI Governance", link: "/blog/ai-risk-budgets-2026" },
+            { title: "Privacy‑Preserving Agents 2026", category: "AI Security", link: "/blog/privacy-preserving-agents-2026" },
             { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" },
             { title: "AI Governance Scorecards 2026", category: "AI Strategy", link: "/blog/ai-governance-scorecards-2026" },
             { title: "Platform Scorecards ROI 2026", category: "Platform Engineering", link: "/blog/platform-engineering-scorecards-2026" }
