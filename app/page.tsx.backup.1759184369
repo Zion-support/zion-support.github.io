@@ -185,6 +185,20 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ NEW 2026:</span>
+<<<<<<< HEAD
+            <Link href="/blog/ai-agent-evals-2026" className="underline hover:text-yellow-200">Agent Evals</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-ethical-framework-2026" className="underline hover:text-yellow-200">AI Ethical Framework</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-multimodal-enterprise-integration-2026" className="underline hover:text-yellow-200">Multimodal AI Integration</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-agentic-crm-automation-2026" className="underline hover:text-yellow-200">Agentic CRM Automation</Link>
+            <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
+          </div>
+          <Link
+            href="/blog"
+            className="bg-white text-green-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
+=======
             <Link href="/case-studies/ai-ethical-framework-success-2026" className="underline hover:text-yellow-200">Ethics Success Story</Link>
             <span className="hidden md:inline">•</span>
 =======
@@ -204,6 +218,7 @@ export default function HomePage() {
             <Link href="/blog/ai-synthetic-data-2026" className="underline hover:text-yellow-200">Synthetic Data</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200">$25M ROI Success</Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-f0af
           </div>
           <Link
             href="/blog"
@@ -279,6 +294,10 @@ export default function HomePage() {
       {/* New Content Promotional Banners */}
       <NewContent2026PromotionalBanners />
       
+<<<<<<< HEAD
+      {/* New Content 2026 Banner */}
+      <NewContent2026Banner />
+=======
 =======
       {/* Featured New Content 2026 */}
       <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-pink-50">
@@ -386,6 +405,7 @@ export default function HomePage() {
         </div>
       </section>
       
+>>>>>>> origin/cursor/create-and-deploy-new-content-f0af
       
       
 =======
@@ -1526,6 +1546,9 @@ export default function HomePage() {
       </section>
 
       {/* Enhanced Newsletter Signup */}
+<<<<<<< HEAD
+      <EnhancedNewsletterSignup variant="default" />
+=======
       <section className="py-20 bg-gradient-to-r from-blue-600 to-teal-600 text-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -1621,6 +1644,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+>>>>>>> origin/cursor/create-and-deploy-new-content-f0af
 
       {/* Additional Promotional Banners */}
       <AnalyticsPlatformBanner />
