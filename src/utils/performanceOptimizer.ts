@@ -57,6 +57,9 @@ class PerformanceOptimizer {
   }
 
   private setupPerformanceObserver(): void {
+    if (typeof window === 'undefined' || typeof (globalThis as any).PerformanceObserver === 'undefined') {
+      return;
+    }
     try {
       this.observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -151,7 +154,9 @@ class PerformanceOptimizer {
 
   private enableLazyLoading(): void {
     if (!this.config.enableLazyLoading) return;
-    
+    if (typeof window === 'undefined' || typeof (globalThis as any).IntersectionObserver === 'undefined') {
+      return;
+    }
     const images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -181,7 +186,7 @@ class PerformanceOptimizer {
   }
 
   private triggerGarbageCollection(): void {
-    if ('gc' in window) {
+    if (typeof window !== 'undefined' && 'gc' in window) {
       (window as any).gc();
     }
   }

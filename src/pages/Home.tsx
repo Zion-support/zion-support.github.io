@@ -129,16 +129,6 @@ const Home = () => {
         </div>
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
-          variant="info"
-          title="📚 New Series: Ship Faster with Guardrails"
-          description="AI roadmaps, ML SBOM automation, and online eval canaries now live."
-          ctaText="See what's new"
-          title="🚀 NEW THIS WEEK: LLM Blue/Green Evals, Agent Observability, Real‑Time Feature Stores"
-          description="Ship LLM updates safely, get deep agent telemetry, and keep features fresh without breaking budgets."
-          title="🚀 NEW THIS WEEK: GenAI Guardrails, Edge Flags, North‑Star Metrics"
-          description="Brand-new guides on eval systems, validation circuits, and outcome-driven metrics."
-          ctaText="Read the latest"
-          ctaLink="/blog"
           variant="success"
           title="🚀 New: Customer Journey Agents + Edge Personalization Under 100ms"
           description="Plan→Act→Verify agents that move KPIs, plus CDN + on‑device ML for private, real‑time UX."

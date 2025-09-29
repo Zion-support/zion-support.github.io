@@ -68,8 +68,6 @@ class AccessibilityEnhancer {
     // Intentionally left as a no-op for now; reserved for future enhancements
   };
 
-  // Removed duplicate placeholder declarations that conflicted with arrow handler fields
-
   constructor() {
     this.config = this.getDefaultConfig();
   }
@@ -142,6 +140,7 @@ class AccessibilityEnhancer {
 
   /**
    * Backward-compatible initialize alias handled by init()
+   * (Removed duplicate initialize method to avoid no-dupe-class-members ESLint error)
    */
   private setupKeyboardNavigation(): void {
     if (!this.config.keyboardNavigation) return;

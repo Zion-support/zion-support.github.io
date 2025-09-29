@@ -253,3 +253,47 @@ export const ManufacturingIoTSuccessBanner = () => (
     hideAfter={25}
   />
 );
+
+export const AIGovernanceFrameworkBanner = () => (
+  <PromotionalBanner
+    message="🛡️ New Guide: AI Governance Framework 2025 - Enterprise-Ready Implementation for 70% Risk Reduction"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-governance-framework-2025"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const MLOpsVectorDatabasesBanner = () => (
+  <PromotionalBanner
+    message="🚀 Technical Guide: AI MLOps with Vector Databases 2025 - Production-Ready RAG Architecture"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-mlops-vector-databases-2025"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const FinTechRiskComplianceBanner = () => (
+  <PromotionalBanner
+    message="💰 Success Story: FinTech Achieved 70% AI Risk Reduction with Automated Governance"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/fintech-ai-risk-compliance-2025"
+    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
+    autoHide={true}
+    hideAfter={25}
+  />
+);
+
+export const LatestContentShowcaseBanner = () => (
+  <PromotionalBanner
+    message="📚 Fresh Content Alert: AI Governance, MLOps Vector DBs, FinTech Risk Compliance - All New for 2025"
+    ctaText="Explore All Content"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
+    autoHide={true}
+    hideAfter={25}
+  />
+);
