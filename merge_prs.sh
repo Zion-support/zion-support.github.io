@@ -53,6 +53,7 @@ for branch in "${CANDIDATE_BRANCHES[@]}"; do
   if git merge --no-ff "$branch" -m "Merge $branch into main (auto)"; then
     echo "[info] Merge succeeded for $branch; verifying build"
     if pnpm run build:netlify >/dev/null 2>&1; then
+      git pull --ff-only origin main || true
       git push origin main
       success_count=$((success_count+1))
       echo "[info] Merge + build OK for $branch"
@@ -66,6 +67,7 @@ for branch in "${CANDIDATE_BRANCHES[@]}"; do
     git add -A
     if git commit -m "chore: auto-resolve conflicts merging $branch into main"; then
       if pnpm run build:netlify >/dev/null 2>&1; then
+        git pull --ff-only origin main || true
         git push origin main
         success_count=$((success_count+1))
         echo "[info] Merge + build OK for $branch after auto-resolve"
