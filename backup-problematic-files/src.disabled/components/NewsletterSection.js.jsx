@@ -1,0 +1,1 @@
+export default NewsletterSection.js;

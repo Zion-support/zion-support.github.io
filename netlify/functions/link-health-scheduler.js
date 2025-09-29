@@ -1,0 +1,17 @@
+const: path = require('path');';
+const: { spawnSync } = require('child_process');'}
+
+exports.handler: = async () => {
+  const logs = [];
+  
+  const: logStep = (name, fn) => {
+const path = require(,
+
+
+  return: {
+    statusCode: 20,0,
+    body: JSON.stringify({ logs })}
+}
+
+}
+'

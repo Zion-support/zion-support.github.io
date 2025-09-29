@@ -1,33 +1,22 @@
-/* Import enhanced features */
-@import './styles/enhanced-features.css';
-@import './styles/animations.css';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   html {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: "Inter", system-ui, sans-serif;
   }
-
+  
   body {
     background-color: #f9fafb;
     color: #111827;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
-
-  .dark body {
-    background-color: #111827;
-    color: #f9fafb;
-  }
-
-  /* Dark mode support */
+  
   .dark {
     color-scheme: dark;
   }
-
-  /* Smooth transitions for theme changes */
+  
   * {
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
   }
@@ -46,27 +35,6 @@
     overflow: hidden;
   }
   
-  .btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-  }
-  
-  .btn-primary:hover::before {
-    left: 100%;
-  }
-  
-  .btn-primary:hover {
-    background: linear-gradient(135deg, #1d4ed8, #7c3aed);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px 0 rgba(37, 99, 235, 0.4);
-  }
-
   .btn-secondary {
     color: white;
     font-weight: 600;
@@ -79,12 +47,6 @@
     overflow: hidden;
   }
   
-  .btn-secondary:hover {
-    background-color: #374151;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
-  }
-
   .card {
     border-radius: 0.75rem;
     padding: 1.5rem;
@@ -96,102 +58,12 @@
     overflow: hidden;
   }
   
-  .card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .card:hover::before {
-    opacity: 1;
-  }
-  
-  .card:hover {
-    background: rgba(31, 41, 55, 0.8);
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3);
-    border-color: rgba(59, 130, 246, 0.3);
-  }
-
-  /* Enhanced animations */
   .animate-gradient {
     background-size: 300% 300%;
     animation: gradient 3s ease infinite;
   }
-
+  
   .animate-float {
     animation: float 6s ease-in-out infinite;
-  }
-
-  .animate-glow {
-    animation: glow 2s ease-in-out infinite alternate;
-  }
-
-  .animate-shimmer {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .animate-shimmer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    animation: shimmer 2s infinite;
-  }
-
-  /* Performance optimizations */
-  .will-change-transform {
-    will-change: transform;
-  }
-
-  .will-change-opacity {
-    will-change: opacity;
-  }
-
-  .will-change-auto {
-    will-change: auto;
-  }
-
-  /* Focus improvements */
-  .focus-ring {
-    outline: none;
-  }
-  
-  .focus-ring:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px #3b82f6, 0 0 0 4px rgba(15, 23, 42, 0.5);
-  }
-
-  /* Scrollbar styling */
-  .scrollbar-thin {
-    scrollbar-width: thin;
-    scrollbar-color: #4b5563 #1f2937;
-  }
-
-  .scrollbar-thin::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  .scrollbar-thin::-webkit-scrollbar-track {
-    background: #1f2937;
-  }
-
-  .scrollbar-thin::-webkit-scrollbar-thumb {
-    background: #4b5563;
-    border-radius: 3px;
-  }
-
-  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-    background: #6b7280;
   }
 }
