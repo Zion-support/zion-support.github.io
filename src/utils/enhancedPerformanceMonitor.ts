@@ -122,6 +122,26 @@ class EnhancedPerformanceMonitor {
     }
   }
 
+  private createAlert(alert: {
+    type: 'critical' | 'warning' | 'info';
+    title: string;
+    description: string;
+    impact: 'high' | 'medium' | 'low';
+    action: string;
+  }): void {
+    const performanceAlert: PerformanceAlert = {
+      id: `alert-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      type: alert.type,
+      title: alert.title,
+      description: alert.description,
+      impact: alert.impact,
+      effort: 'medium',
+      category: 'performance'
+    };
+    
+    this.alerts.push(performanceAlert);
+  }
+
   private processPerformanceEntry(entry: PerformanceEntry): void {
     switch (entry.entryType) {
       case 'paint':

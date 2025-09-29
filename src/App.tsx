@@ -20,13 +20,13 @@ export default function App(): React.ReactElement {
   const [error, setError] = useState<string | null>(null);
 
   const {
-    performanceMetrics,
-    systemMetrics,
-    accessibilityMetrics,
-    seoMetrics,
-    securityMetrics,
     isLoading: appLoading,
-    error: appError
+    loadingProgress,
+    engagementData,
+    seoData,
+    handleScroll,
+    handleClick,
+    trackEngagement
   } = useAppInitialization();
 
   useEffect(() => {
@@ -71,13 +71,13 @@ export default function App(): React.ReactElement {
       );
     }
 
-    if (error || appError) {
+    if (error) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="text-center">
             <div className="text-red-500 text-6xl mb-4">⚠️</div>
             <h1 className="text-2xl font-bold text-gray-900 mb-2">Application Error</h1>
-            <p className="text-gray-600 mb-4">{error || appError}</p>
+            <p className="text-gray-600 mb-4">{error}</p>
             <button
               onClick={() => window.location.reload()}
               className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
@@ -90,7 +90,7 @@ export default function App(): React.ReactElement {
     }
 
     return <AppRouter />;
-  }, [isLoading, appLoading, error, appError]);
+  }, [isLoading, appLoading, error]);
 
   return (
     <EnhancedErrorBoundary onError={handleError}>
@@ -98,16 +98,10 @@ export default function App(): React.ReactElement {
         {appContent}
         
         {/* Performance Dashboard */}
-        <PerformanceDashboard
-          isVisible={false}
-          onClose={() => {}}
-        />
+        <PerformanceDashboard />
         
         {/* Real-time Monitor */}
-        <RealTimeMonitor
-          isVisible={false}
-          onClose={() => {}}
-        />
+        <RealTimeMonitor />
         
         {/* System Metrics Dashboard */}
         <SystemMetricsDashboard
