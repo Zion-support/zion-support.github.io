@@ -10,11 +10,19 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
+    slug: "ai-governance-scorecards-quickstart-2026-v2",
+    title: "AI Governance Scorecards v2 (2026): Ship Fast, Stay Safe",
+    description: "Updated, lightweight scorecards + PR checks + canaries that predict outcomes without slowing teams.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+=======
     slug: "ai-incident-command-center-2026",
     title: "AI Incident Command Center 2026: Faster Containment, Fewer Surprises",
     description: "Budgeted actions, live traces, and rollback‑ready playbooks for <60s containment.",
     category: "Security",
     publishedAt: "2025-10-29",
+>>>>>>> origin/cursor/create-and-deploy-new-content-e0ce
     featured: true,
     readTime: "7 min read"
   },
@@ -64,6 +72,8 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
+<<<<<<< HEAD
+=======
     slug: "privacy-preserving-feature-flags-2026",
     title: "Privacy‑Preserving Feature Flags 2026: Geo Budgets and On‑Device Filters",
     description: "Sub‑100ms, zero‑regret rollouts using scoped IDs, local filters, and telemetry‑driven rollback.",
@@ -154,6 +164,7 @@ export const posts: BlogPost[] = [
     readTime: "9 min read"
   },
   {
+>>>>>>> origin/cursor/create-and-deploy-new-content-e0ce
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
     description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
@@ -809,7 +820,15 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-29",
     featured: false,
     readTime: "7 min read"
+<<<<<<< HEAD
+  }
+];
+
+// Newly added content (auto-advertised on Home via latest sort)
+posts.push(
+=======
   },
+>>>>>>> origin/cursor/create-and-deploy-new-content-e0ce
   {
     slug: "ai-threat-hunting-with-llms-2026",
     title: "AI Threat Hunting with LLMs 2026: Signals, Sandboxes, and Speed",
@@ -873,4 +892,8 @@ posts.push(
     featured: true,
     readTime: "7 min read"
   }
+<<<<<<< HEAD
+);
+=======
 ];
+>>>>>>> origin/cursor/create-and-deploy-new-content-e0ce
