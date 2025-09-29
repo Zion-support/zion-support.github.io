@@ -9,6 +9,33 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "ai-governance-rubric",
+    title: "A Lightweight Rubric for AI Governance Decisions",
+    summary:
+      "When to require human‑in‑the‑loop, what to log, and how to audit outputs across teams.",
+    category: "AI Governance",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
+  {
+    id: "edge-cache-invalidation",
+    title: "Edge Cache Invalidation Strategies That Won't Wake You Up",
+    summary:
+      "Versioned keys, background warming, and circuit breakers for resilient edge experiences.",
+    category: "Architecture",
+    date: "2025-09-28",
+    readMinutes: 6,
+  },
+  {
+    id: "genai-telemetry-metrics",
+    title: "GenAI Telemetry: The 8 Metrics That Predict Drift",
+    summary:
+      "Capture inputs, policies, and human feedback signals to detect regressions before users do.",
+    category: "GenAI",
+    date: "2025-09-27",
+    readMinutes: 7,
+  },
+  {
     id: "observability-otel-traces-that-matter",
     title: "OpenTelemetry in Production: Traces That Engineers Actually Use",
     summary:
@@ -18,6 +45,11 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+    id: "north-star-metrics-insight",
+    title: "North‑Star Metrics: A Field Guide",
+    summary:
+      "Pick metrics that drive behavior, align teams, and forecast outcomes without vanity noise.",
+    category: "Product Analytics",
     date: "2025-09-28",
     readMinutes: 7,
   },

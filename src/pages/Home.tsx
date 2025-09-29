@@ -16,11 +16,10 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
-import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
+import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
-import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
@@ -105,9 +104,9 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: Quantum Computing & Edge AI Insights Just Published!"
-          description="Discover practical applications and implementation strategies for the latest technologies"
-          ctaText="Read Now"
+          title="🚀 NEW: AI Governance, Edge Flags, and GenAI Telemetry posts"
+          description="Fresh articles and quick insights just landed. See what's new this week."
+          ctaText="Read the latest"
           ctaLink="/blog"
           dismissible={true}
         />
@@ -663,16 +662,16 @@ const Home = () => {
               {/* Inline featured list */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
-                  <div className="font-semibold text-white">Building Reliable Real-Time Data Pipelines</div>
+                  <div className="text-sm text-blue-200 mb-1">AI Governance</div>
+                  <div className="font-semibold text-white">AI Governance Checklist 2025</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-orange-200 mb-1">Product Analytics</div>
-                  <div className="font-semibold text-white">North-Star Metrics That Actually Drive Growth</div>
+                  <div className="text-sm text-orange-200 mb-1">Architecture</div>
+                  <div className="font-semibold text-white">Real‑Time Feature Flags at the Edge</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
-                  <div className="font-semibold text-white">Operationalizing GenAI Safely and at Scale</div>
+                  <div className="text-sm text-purple-200 mb-1">GenAI</div>
+                  <div className="font-semibold text-white">GenAI Telemetry: Metrics That Predict Drift</div>
                 </div>
               </div>
             </div>

@@ -10,6 +10,36 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-governance-checklist-2025",
+    title: "AI Governance Checklist 2025: Ship Fast Without Breaking Policy",
+    description:
+      "Practical guardrails, review rituals, and approval flows to keep GenAI initiatives compliant and on‑track.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "5 min read",
+  },
+  {
+    slug: "realtime-feature-flags-edge",
+    title: "Real‑Time Feature Flags at the Edge",
+    description:
+      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
+    category: "Architecture",
+    publishedAt: "2025-09-28",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "prompt-engineering-playbook-v2",
+    title: "Prompt Engineering Playbook v2: Patterns That Survive Production",
+    description:
+      "Composable prompts, eval‑driven iteration, and telemetry for robust GenAI applications.",
+    category: "GenAI",
+    publishedAt: "2025-09-27",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:
