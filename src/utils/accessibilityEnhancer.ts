@@ -79,7 +79,7 @@ class AccessibilityEnhancer {
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
         const menu = document.querySelector('[role="menu"]:focus-within');
         if (menu) {
-          this.handleMenuNavigation(event, menu);
+          this.handleMenuNavigation(event, menu as HTMLElement);
         }
       }
     });
@@ -93,7 +93,7 @@ class AccessibilityEnhancer {
       if (event.key === 'Tab') {
         const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
         if (modal) {
-          this.trapFocus(event, modal);
+          this.trapFocus(event, modal as HTMLElement);
         }
       }
     });
@@ -195,8 +195,8 @@ class AccessibilityEnhancer {
     });
 
     // Monitor aria-label changes
-    const observer = new (window as any).MutationObserver((mutations: any) => {
-      mutations.forEach((mutation) => {
+    const observer = new (window as any).MutationObserver((mutations: MutationRecord[]) => {
+      mutations.forEach((mutation: MutationRecord) => {
         if (mutation.type === 'attributes' && mutation.attributeName === 'aria-label') {
           const element = mutation.target as HTMLElement;
           if (!element.getAttribute('aria-label')) {
@@ -212,7 +212,7 @@ class AccessibilityEnhancer {
     });
   }
 
-  private handleMenuNavigation(event: Event, menu: HTMLElement): void {
+  private handleMenuNavigation(event: KeyboardEvent, menu: HTMLElement): void {
     const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]'));
     const currentIndex = menuItems.indexOf(document.activeElement as HTMLElement);
     
@@ -229,7 +229,7 @@ class AccessibilityEnhancer {
     event.preventDefault();
   }
 
-  private trapFocus(event: Event, modal: HTMLElement): void {
+  private trapFocus(event: KeyboardEvent, modal: HTMLElement): void {
     const focusableElements = modal.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );

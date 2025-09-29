@@ -75,15 +75,15 @@ const AdvancedCollaborationDashboard: React.FC<AdvancedCollaborationDashboardPro
       setSessions(advancedCollaborationSystem.getAllSessions());
       
       // Set up event listeners
-      advancedCollaborationSystem.on('sessionCreated', handleSessionCreated);
-      advancedCollaborationSystem.on('sessionStarted', handleSessionStarted);
-      advancedCollaborationSystem.on('sessionEnded', handleSessionEnded);
-      advancedCollaborationSystem.on('userJoined', handleUserJoined);
-      advancedCollaborationSystem.on('userLeft', handleUserLeft);
-      advancedCollaborationSystem.on('chatMessage', handleChatMessage);
-      advancedCollaborationSystem.on('pollCreated', handlePollCreated);
-      advancedCollaborationSystem.on('fileShared', handleFileShared);
-      advancedCollaborationSystem.on('whiteboardElementAdded', handleWhiteboardElementAdded);
+      advancedCollaborationSystem.on('sessionCreated', (s: unknown) => handleSessionCreated(s as CollaborationSession));
+      advancedCollaborationSystem.on('sessionStarted', (s: unknown) => handleSessionStarted(s as CollaborationSession));
+      advancedCollaborationSystem.on('sessionEnded', (s: unknown) => handleSessionEnded(s as CollaborationSession));
+      advancedCollaborationSystem.on('userJoined', (p: unknown) => handleUserJoined(p as { session: CollaborationSession; user: User }));
+      advancedCollaborationSystem.on('userLeft', (p: unknown) => handleUserLeft(p as { session: CollaborationSession; userId: string }));
+      advancedCollaborationSystem.on('chatMessage', (m: unknown) => handleChatMessage(m as ChatMessage));
+      advancedCollaborationSystem.on('pollCreated', (p: unknown) => handlePollCreated(p as Poll));
+      advancedCollaborationSystem.on('fileShared', (f: unknown) => handleFileShared(f as SharedFile));
+      advancedCollaborationSystem.on('whiteboardElementAdded', (e: unknown) => handleWhiteboardElementAdded(e as WhiteboardElement));
     }
   }, [isVisible]);
 
