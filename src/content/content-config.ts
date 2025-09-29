@@ -1063,15 +1063,6 @@ export const getRecentContent = (limit: number = 3) => {
 };
 
 // Export new content for use in components
-<<<<<<< HEAD
-export { 
-  newBlogPosts2025, featuredBlogPosts, trendingBlogPosts, 
-  newServices2025, featuredServices, trendingServices,
-  newContentJanuary2025, featuredNewContent, trendingNewContent,
-  newCaseStudies2025, featuredCaseStudies, trendingCaseStudies,
-  newInsights2025, featuredInsights, trendingInsights
-};
-=======
 export { 
   newBlogPosts2025, featuredBlogPosts, trendingBlogPosts, 
   newServices2025, featuredServices, trendingServices,

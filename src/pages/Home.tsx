@@ -127,7 +127,7 @@ const Home = () => {
         ))}
         
         <NewContentAnnouncement />
-        <LatestContentBanner 
+          <LatestContentBanner 
           className="border-b border-white/10" 
           variant="info"
           autoRotate
@@ -148,6 +148,14 @@ const Home = () => {
         />
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
+          <ContentPromotionBanner
+            variant="premium"
+            title="🆕 Fresh today: Agentic Observability • Edge Privacy CDN • Platform SLOs"
+            description="New blueprints and scorecards just dropped. Explore the highlights."
+            ctaText="Read the latest"
+            ctaLink="/blog"
+            dismissible={true}
+          />
         </div>
         
         {/* New Comprehensive Promotional Banner */}
