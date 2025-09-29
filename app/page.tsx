@@ -59,6 +59,9 @@ import {
   RevolutionaryContent2026Banner,
   NextGenAIServicesBanner
 } from '../components/LatestContent2026Banners';
+import RevolutionarySpaceTech2026Banner from '../components/RevolutionarySpaceTech2026Banner';
+import AICognitiveComputing2026Banner from '../components/AICognitiveComputing2026Banner';
+import AIAutonomousDevOps2026Banner from '../components/AIAutonomousDevOps2026Banner';
 import AITrends2025Banner from '../src/components/AITrends2025Banner';
 import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBanner';
 import AIROICalculator from '../src/components/AIROICalculator';
@@ -84,6 +87,14 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ NEW 2026:</span>
+            <Link href="/blog/ai-space-tech-2026" className="underline hover:text-yellow-200">AI Space Technology</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-cognitive-computing-2026" className="underline hover:text-yellow-200">Cognitive Computing</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-autonomous-devops-2026" className="underline hover:text-yellow-200">Autonomous DevOps</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-space-tech-success-2026" className="underline hover:text-yellow-200">$50M Space ROI</Link>
+            <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200">Enterprise Automation</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum AI Computing</Link>
@@ -91,14 +102,6 @@ export default function HomePage() {
             <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-agent-evals-2026" className="underline hover:text-yellow-200">Agent Evals</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-ethical-framework-2026" className="underline hover:text-yellow-200">AI Ethical Framework</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-multimodal-enterprise-integration-2026" className="underline hover:text-yellow-200">Multimodal AI Integration</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-agentic-crm-automation-2026" className="underline hover:text-yellow-200">Agentic CRM Automation</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
           </div>
           <Link
             href="/blog"
@@ -109,6 +112,9 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <RevolutionarySpaceTech2026Banner />
+      <AICognitiveComputing2026Banner />
+      <AIAutonomousDevOps2026Banner />
       <RevolutionaryContent2026Banner />
       <AIEnterpriseAutomation2026Banner />
       <AIQuantumComputing2026Banner />
@@ -217,12 +223,36 @@ export default function HomePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeaturedServiceCard
+              title="AI Space Technology"
+              description="Autonomous space operations with 99.9% mission success and intelligent satellite management"
+              price="$50K/month"
+              features={['Autonomous Satellites', 'Mission Planning', 'Space Debris Avoidance']}
+              href="/services/ai-space-technology"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="AI Cognitive Computing"
+              description="Next-generation intelligence with human-like reasoning and 300% productivity gains"
+              price="$75K/month"
+              features={['Advanced Reasoning', 'Continuous Learning', 'Natural Language Understanding']}
+              href="/services/ai-cognitive-computing"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="AI Autonomous DevOps"
+              description="Self-healing infrastructure with 99.9% uptime and zero-touch operations"
+              price="$45K/month"
+              features={['Self-Healing Systems', 'Predictive Analytics', 'Autonomous Scaling']}
+              href="/services/ai-autonomous-devops"
+              popular={true}
+            />
+            <FeaturedServiceCard
               title="AI Data Analytics"
               description="Transform data into actionable insights with predictive modeling and real-time dashboards"
               price="$199/month"
               features={['Predictive Analytics', 'Real-time Dashboards', 'Data Integration']}
               href="/services/ai-data-analytics"
-              popular={true}
+              popular={false}
             />
             <FeaturedServiceCard
               title="AI Workflow Automation"
@@ -326,6 +356,57 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Link href="/blog/ai-space-tech-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Revolutionary 2026
+                  </span>
+                  <span className="text-sm text-gray-500">22 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Space Technology 2026: Autonomous Space Operations
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Discover how AI is revolutionizing space technology with autonomous satellites, intelligent mission planning, and 99.9% mission success rates.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-cognitive-computing-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Revolutionary 2026
+                  </span>
+                  <span className="text-sm text-gray-500">25 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Cognitive Computing 2026: Next-Generation Intelligence
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Experience the future of AI with cognitive computing that mimics human reasoning, learns continuously, and achieves 300% productivity gains.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-autonomous-devops-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New 2026
+                  </span>
+                  <span className="text-sm text-gray-500">20 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Autonomous DevOps 2026: Self-Healing Infrastructure
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Transform your infrastructure with AI-powered autonomous DevOps that delivers 99.9% uptime, self-healing systems, and $10M+ savings.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
+              </div>
+            </Link>
             <Link href="/blog/ai-enterprise-automation-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -358,6 +439,23 @@ export default function HomePage() {
                   Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
+              </div>
+            </Link>
+            <Link href="/case-studies/ai-space-tech-success-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW Case Study
+                  </span>
+                  <span className="text-sm text-gray-500">Space Industry</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Space Technology Success 2026: $50M ROI Case Study
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how SpaceTech Global achieved $50M ROI with AI-powered autonomous space operations. 99.9% mission success, 80% cost reduction.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">View Case Study →</div>
               </div>
             </Link>
             <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="group">
