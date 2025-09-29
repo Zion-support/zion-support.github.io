@@ -11,7 +11,6 @@ export interface BlogPost {
 export const posts: BlogPost[] = [
   {
     slug: "ai-platform-roi-2025",
-<<<<<<< HEAD
     title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
     description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",
     category: "AI Strategy",
@@ -63,25 +62,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  }
-=======
-    title: "AI Platform ROI: Scorecards That Drive Adoption",
-    description:
-      "Connect capabilities to golden paths, platform SLOs, and adoption metrics to make cut/scale decisions.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-03",
-    featured: true,
-    readTime: "7 min",
-  },
-  {
-    slug: "secure-ml-supply-chain",
-    title: "Secure ML Supply Chain: Lineage, SBOMs, and Egress Controls",
-    description:
-      "Lock down datasets, models, and inference routes with provenance and policy tests in CI/CD.",
-    category: "Security",
-    publishedAt: "2025-10-03",
-    featured: true,
-    readTime: "6 min",
   },
   {
     slug: "enterprise-rag-blueprint-v2",
@@ -91,7 +71,7 @@ export const posts: BlogPost[] = [
     category: "GenAI",
     publishedAt: "2025-10-02",
     featured: true,
-    readTime: "11 min",
+    readTime: "11 min"
   },
   {
     slug: "serverless-inference-cost-playbook",
@@ -101,7 +81,7 @@ export const posts: BlogPost[] = [
     category: "Architecture",
     publishedAt: "2025-09-29",
     featured: false,
-    readTime: "9 min",
+    readTime: "9 min"
   },
   {
     slug: "policy-first-genai-guardrails",
@@ -111,7 +91,7 @@ export const posts: BlogPost[] = [
     category: "Security",
     publishedAt: "2025-09-27",
     featured: false,
-    readTime: "8 min",
+    readTime: "8 min"
   },
   {
     slug: "edge-ai-latency-budgets",
@@ -121,7 +101,7 @@ export const posts: BlogPost[] = [
     category: "Edge AI",
     publishedAt: "2025-09-26",
     featured: false,
-    readTime: "6 min",
+    readTime: "6 min"
   },
   {
     slug: "cloud-governance-scorecards",
@@ -131,7 +111,7 @@ export const posts: BlogPost[] = [
     category: "Cloud",
     publishedAt: "2025-09-25",
     featured: false,
-    readTime: "7 min",
+    readTime: "7 min"
   },
   {
     slug: "genai-online-evals",
@@ -141,8 +121,7 @@ export const posts: BlogPost[] = [
     category: "GenAI",
     publishedAt: "2025-09-24",
     featured: false,
-    readTime: "7 min",
+    readTime: "7 min"
   },
->>>>>>> cursor/create-and-deploy-new-content-b69e
 ];
 
