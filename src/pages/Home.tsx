@@ -133,15 +133,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Reliable RAG Ops, Platform KPIs, AI Incident Budgets"
-          description="Keep RAG fresh, prove platform ROI, and contain incidents under 60s—safely."
+          title="New: Secure ML Supply Chain, GenAI Routing Under Budgets, Golden Paths"
+          description="Fresh blueprints: SBOMs & lineage for ML, budgeted GenAI routing, and platform golden paths that move KPIs."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Reliable RAG Ops 2026", category: "GenAI", link: "/blog/reliable-rag-ops-2026" },
-            { title: "Platform KPIs 2026", category: "Platform Engineering", link: "/blog/platform-kpis-2026" },
-            { title: "AI Incident Budgets 2026", category: "Security", link: "/blog/ai-incident-budgets-2026" },
-            { title: "Privacy‑Preserving Analytics", category: "Observability", link: "/blog/privacy-preserving-analytics-2025" },
+            { title: "Secure ML Supply Chain 2026", category: "AI Security", link: "/blog/secure-ml-supply-chain-2026" },
+            { title: "GenAI Routing Under Budgets 2026", category: "AI Operations", link: "/blog/genai-routing-under-budgets-2026" },
+            { title: "Golden Paths That Move KPIs 2026", category: "Platform Engineering", link: "/blog/platform-golden-paths-kpis-2026" },
             { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" }
           ]}
         />
@@ -149,20 +148,6 @@ const Home = () => {
           <TrendingContentBanner />
         </div>
         
-        {/* New Comprehensive Promotional Banner */}
-        <div className="container mx-auto px-6 mt-6">
-          <ComprehensivePromoBanner variant="hero" showCount={4} />
-        </div>
-        
-        {/* New Articles Promotional Banner */}
-        <div className="container mx-auto px-6 mt-6">
-          <NewArticlesPromoBanner variant="premium" showCount={3} />
-        </div>
-        
-        {/* New Services Promotional Banner */}
-        <div className="container mx-auto px-6 mt-6">
-          <NewServicesPromoBanner variant="showcase" showCount={3} featuredOnly={true} />
-        </div>
         
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
@@ -842,7 +827,12 @@ const Home = () => {
         <section className="py-20 bg-gradient-to-r from-emerald-50 to-teal-50 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-100/20 to-teal-100/20"></div>
           <div className="container mx-auto px-6 relative z-10">
-            <NewServicesPromoBanner variant="premium" showCount={3} featuredOnly={true} />
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest AI Services</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Discover our newest AI-powered solutions designed to accelerate your digital transformation.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -853,7 +843,12 @@ const Home = () => {
         <section className="py-20 bg-gradient-to-r from-purple-50 to-indigo-50 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-100/20 to-indigo-100/20"></div>
           <div className="container mx-auto px-6 relative z-10">
-            <NewArticlesPromoBanner variant="featured" showCount={4} autoRotate={true} />
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Articles & Insights</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Stay ahead with our latest AI insights, technical guides, and industry best practices.
+              </p>
+            </div>
           </div>
         </section>
 

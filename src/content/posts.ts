@@ -19,15 +19,6 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
-    slug: "platform-engineering-kpis-2026",
-    title: "Platform Engineering KPIs 2026: Adoption, Golden Paths, SLOs",
-    description: "Scorecards that shift the convo from costs to shipped value—adoption, TTFX, SLOs.",
-    category: "Platform Engineering",
-    publishedAt: "2025-10-12",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
     slug: "ai-incident-budget-playbooks-2026",
     title: "AI Incident Budgets: Playbooks That Contain in <60s",
     description: "Budget risky actions, approvals, and rollback triggers for safe, fast incident response.",
@@ -380,6 +371,53 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-08",
     featured: true,
     readTime: "9 min read"
+  }
+  ,
+  {
+    slug: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
+    description: "Continuous SBOMs for models, datasets, and prompts with attestations and CI policy checks.",
+    category: "AI Security",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-routing-under-budgets-2026",
+    title: "Quality‑Tiered GenAI Routing: SLAs Without Bill Shock",
+    description: "Route prompts across model tiers with budgets, caches, and eval signals to control cost.",
+    category: "AI Operations",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "platform-golden-paths-kpis-2026",
+    title: "Golden Paths That Move KPIs: Platform Engineering That Pays",
+    description: "Adoption metrics, TTFX, and SLOs as leading indicators of platform ROI in 2026.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  }
+  ,
+  {
+    slug: "ai-runbooks-with-risk-budgets-2026",
+    title: "AI Runbooks with Risk Budgets: Safe Automation That Ships",
+    description: "Playbooks with budgeted actions, approvals, and rollback that teams trust.",
+    category: "AI Operations",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "zero-trust-for-ai-agents-2026",
+    title: "Zero‑Trust for AI Agents: Sandboxes, Egress Policies, Attestations",
+    description: "Run agentic systems safely with isolation, scoped permissions, and signed tools.",
+    category: "AI Security",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "8 min read"
   }
   ,
   {
