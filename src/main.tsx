@@ -2,10 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-// Fallback ThemeProvider to avoid missing context during build
-const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <>{children}</>
-);
 import App from "./App";
 import "./index.css";
 
@@ -43,9 +39,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <HelmetProvider>
       <BrowserRouter>
-        <ThemeProvider>
-          <App />
-        </ThemeProvider>
+        <App />
       </BrowserRouter>
     </HelmetProvider>
   </React.StrictMode>,

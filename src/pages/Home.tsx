@@ -129,10 +129,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: AI Platform ROI + Secure ML Supply Chain"
-          description="New frameworks on platform ROI and end-to-end ML supply chain security."
-          ctaText="Read the latest"
-          ctaLink="/blog/ai-platform-roi-2025"
+          title="🚀 Fresh: Hybrid Search, Platform ROI Scorecards, Edge Flags 2026"
+          description="New guides: hybrid vector search, outcome‑tied scorecards, and <100ms edge rollouts."
+          ctaText="See what's new"
+          ctaLink="/blog"
           dismissible={true}
         />
         {/* Animated background elements */}

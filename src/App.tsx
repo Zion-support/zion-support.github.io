@@ -13,12 +13,11 @@ import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import SEOOptimizer from './components/SEOOptimizer';
-// Fallback lightweight placeholders for missing components in this branch
-const AdvancedAnalytics: React.FC<{ enableConversionTracking?: boolean; enablePerformanceTracking?: boolean; enableErrorTracking?: boolean; }> = () => null;
-const PerformanceOptimizer: React.FC<{ isVisible?: boolean; onClose?: () => void; }> = () => null;
-const PerformanceMonitor: React.FC<{ showDashboard?: boolean; }> = () => null;
-const EnhancedErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
-const NotificationSystem: React.FC<{ notifications: any[]; onRemove: (id: string) => void; }> = () => null;
+// Define safe local placeholders for optional components that may not exist
+const PerformanceOptimizer: React.FC<{ isVisible?: boolean; onClose?: () => void }> = () => null;
+const PerformanceMonitor: React.FC<{ showDashboard?: boolean }> = () => null;
+const EnhancedErrorBoundary: React.FC<{ children?: React.ReactNode }> = ({ children }) => <>{children}</>;
+const NotificationSystem: React.FC<{ notifications?: Array<{ id: string }>; onRemove?: (id: string) => void }> = () => null;
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};
@@ -49,7 +48,7 @@ const WebsiteEnhancements = (props: any) => <Placeholder name="WebsiteEnhancemen
 export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [notifications, setNotifications] = useState<import('./components/NotificationSystem').Notification[]>([]);
+  const [notifications, setNotifications] = useState<Array<{ id: string }>>([]);
 
   const seoDataForOptimizer = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -145,7 +144,7 @@ export default function App(): React.JSX.Element {
         description={seoDataForOptimizer.description}
         canonicalUrl={new URL(seoDataForOptimizer.canonical).pathname}
       />
-      <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
+      {/* AdvancedAnalytics placeholder removed as component is optional */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
 

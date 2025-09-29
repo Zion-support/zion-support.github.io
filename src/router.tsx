@@ -1,22 +1,22 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-// Temporary route stubs for missing pages
-const About = () => null;
-const Services = () => null;
-const Contact = () => null;
-const AIMicroSAAS = () => null;
-const Blog = () => null;
-const Resources = () => null;
-const Tools = () => null;
-const EnterpriseAISolutions = () => null;
-const Post = () => null;
-const CaseStudies = () => null;
-const AIWorkflowAutomation = () => null;
-const AIVirtualAssistant = () => null;
-const AIDataAnalytics = () => null;
-const AIAutonomousOperations = () => null;
-const AIPlatformArchitecture = () => null;
+// Optional pages may be absent; route to Home as placeholder
+const About = () => <Home />;
+const Services = () => <Home />;
+import Contact from './pages/Contact';
+const AIMicroSAAS = () => <Home />;
+import Blog from './pages/Blog';
+import Resources from './pages/Resources';
+const Tools = () => <Home />;
+const EnterpriseAISolutions = () => <Home />;
+const Post = () => <Blog />;
+const CaseStudies = () => <Home />;
+const AIWorkflowAutomation = () => <Home />;
+const AIVirtualAssistant = () => <Home />;
+const AIDataAnalytics = () => <Home />;
+import AIAutonomousOperations from './pages/services/AIAutonomousOperations';
+import AIPlatformArchitecture from './pages/services/AI-Platform-Architecture';
 
 export const AppRouter: React.FC = () => {
   return (
