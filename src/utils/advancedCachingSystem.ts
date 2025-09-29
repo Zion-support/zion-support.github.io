@@ -592,5 +592,30 @@ export class AdvancedCachingSystem {
   }
 }
 
-// Export singleton instance
-export const advancedCachingSystem = new AdvancedCachingSystem();
+// Export singleton instances
+export const apiCache = new AdvancedCachingSystem({
+  enableMemoryCache: true,
+  enableLocalStorageCache: true,
+  enableSessionStorageCache: false,
+  defaultTTL: 5 * 60 * 1000, // 5 minutes
+  maxMemorySize: 20 * 1024 * 1024, // 20MB
+});
+
+export const imageCache = new AdvancedCachingSystem({
+  enableMemoryCache: true,
+  enableLocalStorageCache: true,
+  enableSessionStorageCache: false,
+  defaultTTL: 24 * 60 * 60 * 1000, // 24 hours
+  maxMemorySize: 100 * 1024 * 1024, // 100MB
+});
+
+export const dataCache = new AdvancedCachingSystem({
+  enableMemoryCache: true,
+  enableLocalStorageCache: true,
+  enableSessionStorageCache: true,
+  defaultTTL: 60 * 60 * 1000, // 1 hour
+  maxMemorySize: 50 * 1024 * 1024, // 50MB
+});
+
+// Legacy export for backward compatibility
+export const advancedCachingSystem = apiCache;
