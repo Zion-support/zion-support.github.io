@@ -54,6 +54,42 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
+<<<<<<< HEAD
+            title="Trustworthy AI Audits 2026: From Policies to Proof"
+            excerpt="Turn AI policies into audit-ready evidence with measurable controls and continuous assurance."
+            date="October 9, 2025"
+            category="AI Reliability"
+            readTime="12 min"
+            image="✅"
+            href="/blog/trustworthy-ai-audits-2026"
+          />
+          <BlogPost
+            title="GenAI Product Security 2026: Secure-by-Design Patterns"
+            excerpt="Practical controls for model safety, data privacy, runtime hardening, and supply chain."
+            date="October 9, 2025"
+            category="Security"
+            readTime="14 min"
+            image="🛡️"
+            href="/blog/genai-product-security-2026"
+          />
+          <BlogPost
+            title="AI Agent Observability 2026: Metrics, Traces, and Guardrails"
+            excerpt="Instrument agents with traces, evals, and policy guardrails to ship reliable autonomy."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="14 min"
+            image="📏"
+            href="/blog/ai-llm-evaluation-2026"
+          />
+          <BlogPost
+            title="Agent Benchmarking 2026: Tasks, Trails, and Real-World Scores"
+            excerpt="Benchmark agents with goal‑conditioned tasks, replayable trails, and outcome scores that predict field success."
+            date="September 29, 2025"
+            category="Autonomous AI"
+            readTime="16 min"
+            image="🧪"
+            href="/blog/agent-benchmarking-2026"
+=======
             title="AI Supply Chain Automation 2026: Real-Time, Resilient, Efficient"
             excerpt="Autonomous forecasting, planning, and fulfillment with policy guardrails and ROI scorecards."
             date="October 10, 2025"
@@ -70,6 +106,7 @@ export default function BlogPage() {
             readTime="12 min"
             image="📣"
             href="/blog/ai-go-to-market-plays-2026"
+>>>>>>> origin/cursor/create-and-deploy-new-content-6836
           />
           <BlogPost
             title="Platform Engineering Scorecards 2026: From Golden Paths to Outcomes"
