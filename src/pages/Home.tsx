@@ -109,18 +109,27 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         <NewContentAnnouncement />
-        <LatestContentBanner className="border-b border-white/10" variant="info" />
+        <LatestContentBanner 
+          className="border-b border-white/10" 
+          variant="info"
+          title="New: AI Platform Engineering, Serverless Cost Playbook, FinOps Guardrails"
+          description="Fresh articles on platform ROI, cutting serverless costs, and practical FinOps guardrails."
+          ctaText="Read now"
+          ctaLink="/blog"
+        />
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="Fresh: AgentOps SLOs, Zero‑Trust AI Pipelines, Edge RAG + CDN"
-          description="New: SLOs with budgets and canaries, zero‑trust AI supply chains, and sub‑100ms RAG at the edge."
+          title="Fresh: AI Platform Engineering, Serverless Inference, AgentOps SLOs, Zero‑Trust AI"
+          description="Latest: Platform engineering patterns, cost‑efficient inference, SLOs with budgets, and zero‑trust AI supply chains."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
+            { title: "AI Platform Engineering 2025", category: "Platform", link: "/blog/ai-platform-engineering-2025" },
+            { title: "Serverless Cost Playbook", category: "GenAI", link: "/blog/serverless-inference-cost-playbook-2025" },
             { title: "AgentOps SLO Handbook", category: "GenAI", link: "/blog/agentops-slo-handbook-2025" },
             { title: "Zero‑Trust for AI Pipelines", category: "Security", link: "/blog/zero-trust-ai-pipelines-2025" },
-            { title: "Edge RAG + CDN", category: "Architecture", link: "/blog/edge-rag-cdn-2025" },
+            { title: "Cloud FinOps Guardrails", category: "Cloud", link: "/blog/cloud-finops-guardrails-2025" },
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -234,60 +243,15 @@ const Home = () => {
                 <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">Edge Flags</span>
               </div>
             </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">
-              <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="text-3xl font-bold text-zion-cyan group-hover:text-zion-blue-light transition-colors">
-                  500+
-                </div>
-                <div className="text-sm text-zion-slate-light">
-                  Projects Delivered
-                </div>
-              </div>
-              <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="text-3xl font-bold text-zion-cyan group-hover:text-zion-blue-light transition-colors">
-                  99.9%
-                </div>
-                <div className="text-sm text-zion-slate-light">Uptime SLA</div>
-              </div>
-              <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="text-3xl font-bold text-zion-cyan group-hover:text-zion-blue-light transition-colors">
-                  24/7
-                </div>
-                <div className="text-sm text-zion-slate-light">Support</div>
-              </div>
-              <div className="text-center group hover:scale-105 transition-all duration-300">
-                <div className="text-3xl font-bold text-zion-cyan group-hover:text-zion-blue-light transition-colors">
-                  5★
-                </div>
-                <div className="text-sm text-zion-slate-light">
-                  Client Rating
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/services"
-                className="btn-primary flex items-center justify-center gap-2 group"
-              >
-                Explore Services
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link to="/contact" className="btn-secondary">
-                Get Started
-              </Link>
-            </div>
           </div>
         </section>
 
         {/* Latest Insights Section */}
         {/* Promo ribbon for new content */}
         <div className="container mx-auto px-6">
-            <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
+          <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Agentic Workflows, Edge LLM Caching, and Operational Scorecards — read now
+            New: Platform Engineering 2025, Serverless Cost Playbook, FinOps Guardrails — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>

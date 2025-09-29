@@ -37,38 +37,20 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
-    slug: "zero-trust-ai-pipelines-2025",
-    title: "Zero‑Trust for AI Pipelines: Auth, Policy Tests, and Attestations",
-    description: "Harden datasets, prompts, and tools with signed artifacts and CI policy gates.",
-    category: "Security",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "privacy-preserving-rag-2026",
-    title: "Privacy‑Preserving RAG: Redaction, Scoping, and Audit Trails",
-    description: "Protect sensitive data in RAG with redaction, auth‑scoped corpora, and audit trails.",
-    category: "AI Architecture",
-    publishedAt: "2025-10-09",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "ai-incident-response-2026",
-    title: "AI Incident Response 2026: Playbooks, Canaries, and SLAs",
-    description: "Practical incident response for AI features with on-call playbooks and KPI-linked canaries.",
-    category: "AI Operations",
-    publishedAt: "2025-10-09",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "platform-observability-scorecards-2026",
-    title: "Platform Observability Scorecards: Tie Telemetry to Business Outcomes",
-    description: "Connect traces, errors, and latency to adoption, retention, and revenue with actionable scorecards.",
+    slug: "ai-platform-engineering-2025",
+    title: "AI Platform Engineering 2025: Scorecards, Trains, and Golden Paths",
+    description: "Practical platform patterns that link capabilities to adoption, SLOs, and ROI.",
     category: "Platform Engineering",
-    publishedAt: "2025-10-09",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "serverless-inference-cost-playbook-2025",
+    title: "Serverless Inference Cost Playbook: Latency Budgets Without Bill Shock",
+    description: "Concurrency shaping, tiered models, and result caching to cut spend 35–60%.",
+    category: "GenAI",
+    publishedAt: "2025-10-08",
     featured: true,
     readTime: "8 min read"
   },
@@ -89,15 +71,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-09",
     featured: true,
     readTime: "6 min read"
-  },
-  {
-    slug: "agentops-slo-handbook-2025",
-    title: "AgentOps SLO Handbook: Keeping Autonomous Systems Reliable",
-    description: "Define SLOs, budgets, and rollback-ready canaries for agent workflows in production.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "7 min read"
   },
   {
     slug: "zero-trust-ai-pipelines-2025",
