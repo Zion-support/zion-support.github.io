@@ -163,15 +163,16 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Governance Quickstart, Privacy‑First Agents, Inference Cost Playbook"
-          description="Ship fast with KPI‑linked scorecards, private assistants, and budgeted inference."
+          title="New: AI SRE Blueprints, Privacy‑First A/B Testing, Agent Blue‑Green"
+          description="Reliability budgets and traces, compliant experiments with scoped IDs, and safe agent releases with canaries."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Governance Scorecards Quickstart 2026", category: "AI Strategy", link: "/blog/ai-governance-scorecards-quickstart-2026" },
-            { title: "Privacy‑First Agents 2026", category: "AI Security", link: "/blog/privacy-first-agents-2026" },
-            { title: "Serverless Inference Cost Playbook 2026", category: "GenAI", link: "/blog/serverless-inference-cost-playbook-2026" },
-            { title: "AI Platform Scorecards ROI 2026", category: "AI Strategy", link: "/blog/ai-platform-scorecards-roi-2026" }
+            { title: "AI SRE Blueprints 2026", category: "AI Operations", link: "/blog/ai-sre-blueprints-2026" },
+            { title: "Privacy‑First A/B Testing 2026", category: "Observability", link: "/blog/privacy-first-ab-testing-2026" },
+            { title: "Agent Blue‑Green Releases 2026", category: "GenAI", link: "/blog/agent-blue-green-releases-2026" },
+            { title: "Edge LLM Safety Caching 2026", category: "Architecture", link: "/blog/edge-llm-safety-caching-2026" },
+            { title: "Platform SLO Guardrails 2026", category: "Platform Engineering", link: "/blog/platform-slo-guardrails-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -593,7 +594,7 @@ const Home = () => {
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
-                    {("featured" in item) && (item as any).featured && (
+                    {"featured" in item && (item as any).featured && (
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>
@@ -634,11 +635,7 @@ const Home = () => {
                 <div key={insight.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs uppercase tracking-wider text-indigo-300">{insight.category}</span>
-<<<<<<< HEAD
-                    {'featured' in insight && (insight as any).featured && (
-=======
-                    {("featured" in insight) && (insight as any).featured && (
->>>>>>> cursor/create-and-deploy-new-content-a3c6
+                    {('featured' in (insight as any)) && (insight as any).featured && (
                       <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>
