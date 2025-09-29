@@ -39,16 +39,22 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              href="/blog/ai-autonomous-infrastructure-2026"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
+              href="/blog/ai-neural-interfaces-2026"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
             >
-              🚀 Read Latest AI Guide
+              🧠 Neural Interfaces 2026
             </Link>
             <Link
-              href="/case-studies/ai-transformation-mega-success-2026"
-              className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
+              href="/blog/ai-space-tech-2026"
+              className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
             >
-              📈 View $25M Success Story
+              🚀 Space AI Technology
+            </Link>
+            <Link
+              href="/case-studies/ai-neural-interface-success-2026"
+              className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-teal-700 transition-all shadow-lg hover:shadow-xl"
+            >
+              📊 $25M Success Story
             </Link>
             <a
               href="tel:+13024640950"
