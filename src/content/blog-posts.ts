@@ -2042,6 +2042,67 @@ Ready to implement Zero Trust security? Contact our team for a free security ass
   }
   ,
   {
+    slug: "serverless-ai-inference-cost-playbook",
+    title: "Serverless AI Inference: The Cost Optimization Playbook",
+    description: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",
+    content: `
+# Serverless AI Inference: The Cost Optimization Playbook
+
+Practical techniques to reduce inference costs while maintaining latency and quality: adaptive batching, warm pools, dynamic model selection, and cache‑aware routing.
+
+## Key Tactics
+- Adaptive batch sizing under per‑request latency SLOs
+- Pre‑warmed pools with health gates
+- Quality tiers with dynamic model switching
+- Output caching and dedupe for repeated prompts
+
+## Guardrails
+- Per‑tenant budgets and rate shaping
+- Canary rollout and automatic rollback
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Solutions",
+    tags: ["Serverless", "Inference", "Cost"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/serverless-inference.jpg"
+  },
+  {
+    slug: "rag-architectures-that-work",
+    title: "RAG Architectures That Actually Work in Production",
+    description: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.",
+    content: `
+# RAG Architectures That Actually Work in Production
+
+What we’ve learned deploying RAG at scale: chunking strategies, freshness, hybrid retrieval, and evaluation loops that prevent regressions.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "GenAI",
+    tags: ["RAG", "Vector Search", "Evals"],
+    featured: true,
+    readTime: "12 min read",
+    image: "/images/rag-architectures.jpg"
+  },
+  {
+    slug: "secure-genai-policy-first-guardrails",
+    title: "Secure GenAI: Policy‑First Guardrails That Scale",
+    description: "Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.",
+    content: `
+# Secure GenAI: Policy‑First Guardrails That Scale
+
+Patterns that combine offline policy tests, runtime guardrails, and observability to keep GenAI safe in production.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-27",
+    category: "Security",
+    tags: ["GenAI", "Security", "Compliance"],
+    featured: false,
+    readTime: "8 min read",
+    image: "/images/secure-genai.jpg"
+  },
+  {
     slug: "ai-governance-playbook-2025",
     title: "The 2025 AI Governance Playbook for Product Teams",
     description: "Practical guardrails: policy tests, red-teaming, data retention, and auditability baked into delivery.",

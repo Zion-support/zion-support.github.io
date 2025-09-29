@@ -22,7 +22,8 @@ import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import ROICalculator from "../components/ROICalculator";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
-import NewContentPromotionBanner from "../components/NewContentPromotionBanner";
+import NewContentPromoBanner from "../components/NewContentPromoBanner";
+import TrendingContentBanner from "../components/TrendingContentBanner";
 import EnhancedServicesShowcase from "../components/EnhancedServicesShowcase";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
@@ -105,14 +106,10 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         <LatestContentBanner className="border-b border-white/10" variant="info" />
-        <ContentPromotionBanner
-          title="Fresh: GenAI Evals, Edge Flags, and North‑Star Metrics"
-          description="New insights just dropped. Explore the latest articles and stay ahead."
-          ctaText="Read the latest"
-          ctaLink="/blog"
-          variant="info"
-          className="border-b border-white/10"
-        />
+        <NewContentPromoBanner className="border-b border-white/10" variant="premium" />
+        <div className="container mx-auto px-6 mt-6">
+          <TrendingContentBanner />
+        </div>
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>

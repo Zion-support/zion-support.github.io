@@ -18,6 +18,30 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 5,
   },
   {
+    id: "serverless-inference-warm-pools",
+    title: "Serverless Inference: Warm Pools Without Wasting Budget",
+    summary: "Balance cold starts and spend with adaptive warm pools, SLO-aware scaling, and guardrails.",
+    category: "MLOps",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "rag-evaluation-loops",
+    title: "RAG Evaluation Loops That Prevent Silent Regressions",
+    summary: "Offline suites, freshness checks, and online canaries tied to task win‑rates.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "policy-tests-runtime-guardrails",
+    title: "Policy Tests at Runtime: Lightweight Guardrails for GenAI",
+    summary: "Wire PII redaction, egress controls, and prompt isolation without hurting UX.",
+    category: "AI Governance",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
+  {
     id: "eda-contracts-replays",
     title: "Event‑Driven Architecture: Contracts, Idempotency, and Safe Replays",
     summary:
