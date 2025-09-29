@@ -163,7 +163,7 @@ export default function AIAgentReliability2026() {
         const result = await model.generate(prompt);
         return result;
       } catch (error) {
-        console.warn(`Model ${this.currentModel} failed:`, error);
+        console.warn(\`Model \${this.currentModel} failed:\`, error);
         this.rotateModel();
       }
     }

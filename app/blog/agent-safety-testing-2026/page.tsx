@@ -30,7 +30,7 @@ export default function Page() {
         <div className="font-semibold mb-2">Safety Gates</div>
         <ul className="list-disc pl-6 space-y-1">
           <li>Zero PII leakage in sandbox tests</li>
-          <li><1% policy violation rate in evals</li>
+          <li>&lt;1% policy violation rate in evals</li>
           <li>On-call escalation hooks verified</li>
           <li>Budget and scope limits enforced</li>
         </ul>

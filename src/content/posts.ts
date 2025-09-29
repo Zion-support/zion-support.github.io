@@ -10,10 +10,10 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "agent-release-checklists-2025",
-    title: "Agent Release Checklists: Ship Fast Without Surprises",
-    description: "Budget risky actions, add PR checks, and bake rollback triggers into every agent release.",
-    category: "AI Engineering",
+    slug: "ai-governance-scorecards-quickstart-2026-v2",
+    title: "AI Governance Scorecards v2 (2026): Ship Fast, Stay Safe",
+    description: "Updated, lightweight scorecards + PR checks + canaries that predict outcomes without slowing teams.",
+    category: "AI Strategy",
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read"
@@ -37,27 +37,11 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
-    slug: "edge-llm-safety-caching-2026",
-    title: "Edge LLM Safety Caching 2026: Sub‑100ms Prompts with Guardrails",
-    description: "Tiered KV, signed configs, and inline filters that keep prompts fast and safe at the edge.",
-    category: "Architecture",
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "6 min read"
   },
   {
-    slug: "platform-slo-guardrails-2026",
-    title: "Platform SLO Guardrails 2026: Scorecards that Prevent Regressions",
-    description: "Wire golden paths to SLOs with pre‑merge policy tests and live canaries that keep teams fast.",
-    category: "Platform Engineering",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "ai-breach-drills-2026",
-    title: "AI Breach Drills 2026: Practicing Safe Autonomy Under Budget",
-    description: "Run realistic breach simulations with budgeted actions, approval gates, and instant rollback.",
     category: "Security",
     publishedAt: "2025-10-13",
     featured: true,
@@ -106,12 +90,6 @@ export const posts: BlogPost[] = [
     category: "Platform Engineering",
     publishedAt: "2025-10-12",
     featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "ai-incident-budget-playbooks-2026",
-    title: "AI Incident Budgets: Playbooks That Contain in <60s",
-    description: "Budget risky actions, approvals, and rollback triggers for safe, fast incident response.",
     category: "Security",
     publishedAt: "2025-10-12",
     featured: false,
@@ -464,19 +442,7 @@ export const posts: BlogPost[] = [
   }
   ,
   {
-    slug: "agent-evals-scorecards-2026",
-    title: "Agent Evals 2026: Scorecards That Predict Outcomes",
-    description: "Design online evals and KPI‑linked scorecards that correlate with revenue and CSAT.",
     category: "GenAI",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "privacy-preserving-agents-2026",
-    title: "Privacy‑Preserving Agents: Scoped IDs, Redaction, and On‑Device Caches",
-    description: "Ship assistant workflows that are insight‑rich without PII risk using scoped IDs and local caches.",
-    category: "AI Security",
     publishedAt: "2025-10-13",
     featured: false,
     readTime: "7 min read"

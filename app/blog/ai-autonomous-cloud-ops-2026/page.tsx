@@ -75,7 +75,7 @@ export default function AIAutonomousCloudOps2026Page() {
             </div>
           </div>
         </div>
-      </header>
+      </section>
 
       {/* Main Content */}
       <section className="py-16">
