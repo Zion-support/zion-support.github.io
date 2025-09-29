@@ -1,0 +1,4 @@
+    features: [
+      '2026: Q2 features',,';
+      'Advanced: capabilities'',;
+      'Enhanced: performance']}];';
