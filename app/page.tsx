@@ -52,6 +52,7 @@ import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBa
 import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
 import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
+import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -66,16 +67,16 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-            <span>🚀 NEW 2026 Content:</span>
+            <span>🚀 REVOLUTIONARY 2026 Content:</span>
+            <Link href="/blog/ai-revolutionary-breakthrough-2026" className="underline hover:text-yellow-200">$500B+ AI Revolution</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-revolutionary-success-2026" className="underline hover:text-yellow-200">$500M ROI Success</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-cognitive-superintelligence-2026" className="underline hover:text-yellow-200">Cognitive Superintelligence</Link>
+            <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-neural-interfaces-2026" className="underline hover:text-yellow-200">Neural Interfaces</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-space-tech-2026" className="underline hover:text-yellow-200">Space AI</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-synthetic-data-2026" className="underline hover:text-yellow-200">Synthetic Data</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-neural-interface-healthcare-2026" className="underline hover:text-yellow-200">$15M Healthcare ROI</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</Link>
+            <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum AI</Link>
           </div>
           <Link
             href="/blog"
@@ -86,6 +87,7 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <RevolutionaryContent2026Banner />
       <LatestContent2026Banner />
       <NewContent2026Banner />
       <AINeuralArchitectureBanner />
