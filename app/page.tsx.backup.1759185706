@@ -2,10 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
+<<<<<<< HEAD
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+=======
 import { Clock, ArrowRight, Brain, Zap, TrendingUp } from 'lucide-react';
 =======
 import MegaContent2026Banner from '../components/MegaContent2026Banner';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+>>>>>>> origin/cursor/create-and-deploy-new-content-d372
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 2026 AI Solutions',
@@ -570,6 +574,9 @@ export default function HomePage() {
 
           {/* Featured Recommendations */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+<<<<<<< HEAD
+            <Link href="/blog/ai-autonomous-ai-systems-2026" className="group">
+=======
             <Link href="/blog/ai-2026-mega-breakthroughs" className="group">
               <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-purple-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
@@ -655,6 +662,7 @@ export default function HomePage() {
             </Link>
 
             <Link href="/blog/ai-neural-architecture-optimization-2026" className="group">
+>>>>>>> origin/cursor/create-and-deploy-new-content-d372
               <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-purple-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
