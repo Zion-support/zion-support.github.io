@@ -39,6 +39,85 @@ import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 // import { modernAccessibilityEnhancer } from './utils/modernAccessibilityEnhancer';
 // import { modernPerformanceMonitor } from './utils/modernPerformanceMonitor';
+import { useSEOData } from './components/SEOOptimizer';
+import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAccessibilityManager } from './utils/enhancedAccessibilityManager';
+import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
+import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+import SEOOptimizer from './components/SEOOptimizer';
+import AIPerformanceDashboard from './components/AIPerformanceDashboard';
+
+// Import enhanced utilities
+import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
+import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
+import { enhancedSecuritySystem } from './utils/enhancedSecuritySystem';
+import { enhancedAccessibilitySystem } from './utils/enhancedAccessibilitySystem';
+import { apiCache as apiCacheSystem, imageCache as imageCacheSystem, dataCache as dataCacheSystem } from './utils/enhancedCachingSystem';
+import { analyticsSystem as enhancedAnalyticsSystem } from './utils/enhancedAnalyticsSystem';
+
+// Import new advanced systems
+import { performanceAnalytics } from './utils/advancedPerformanceAnalytics';
+import { errorTracker } from './utils/advancedErrorTracker';
+import { apiCache, imageCache, dataCache } from './utils/advancedCacheManager';
+
+// Import comprehensive systems
+// import enhancedErrorRecovery from './utils/comprehensiveErrorRecovery';
+
+// Import types
+import NotificationSystem, { Notification } from './components/NotificationSystem';
+import { EnhancedNotification } from './types/comprehensive';
+import './index.css';
+
+// Lazy load heavy components for better performance
+const LazyEnhancedSystemDashboard = lazy(() => import('./components/EnhancedSystemDashboard'));
+const KeyboardShortcutsHelp = lazy(() => import('./components/KeyboardShortcutsHelp'));
+const SystemHealthDashboard = lazy(() => import('./components/SystemHealthDashboard'));
+const PerformanceWidget = lazy(() => import('./components/PerformanceWidget'));
+const CommandPalette = lazy(() => import('./components/CommandPalette'));
+const AdvancedMonitoringDashboard = lazy(() => import('./components/AdvancedMonitoringDashboard'));
+const ComprehensivePerformanceDashboard = lazy(() => import('./components/ComprehensivePerformanceDashboard'));
+const ComprehensiveMonitoringDashboard = lazy(() => import('./components/ComprehensiveMonitoringDashboard'));
+const PerformanceOptimizationPanel = lazy(() => import('./components/PerformanceOptimizationPanel'));
+const RealTimePerformanceMonitor = lazy(() => import('./components/RealTimePerformanceMonitor'));
+const AdvancedAnalytics = lazy(() => import('./components/AdvancedAnalytics'));
+const PerformanceDashboard = lazy(() => import('./components/PerformanceDashboard'));
+const EnhancedCommandPalette = lazy(() => import('./components/EnhancedCommandPalette'));
+// const PerformanceIndicator = lazy(() => import('./components/PerformanceIndicator'));
+// const AccessibilityEnhancer = lazy(() => import('./components/AccessibilityEnhancer'));
+// const DynamicMetaTags = lazy(() => import('./components/DynamicMetaTags'));
+const SystemStatusIndicator = lazy(() => import('./components/SystemStatusIndicator'));
+const EnhancedNotificationSystem = lazy(() => import('./components/EnhancedNotificationSystem'));
+const KeyboardShortcutsManager = lazy(() => import('./components/KeyboardShortcutsManager'));
+const ErrorRecoveryDashboard = lazy(() => import('./components/ErrorRecoveryDashboard'));
+// import AdvancedPerformanceDashboard from './components/AdvancedPerformanceDashboard';
+import WebsiteEnhancements from './components/WebsiteEnhancements';
+import PerformanceEnhancer from './components/PerformanceEnhancer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import EnhancedSEO from './components/EnhancedSEO';
+// import EnhancedAnalytics from './components/EnhancedAnalytics';
+import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
+import { performanceAlerts } from './utils/performanceAlerts';
+import { accessibilityUtils } from './utils/accessibilityUtils';
+import { securityUtils } from './utils/securityUtils';
+// import { getNotificationManager } from './utils/advancedNotifications';
+// import { getThemeManager } from './utils/themeManager';
+// import { getKeyboardShortcuts } from './utils/advancedKeyboardShortcuts';
+// import { getDataVisualization } from './utils/advancedDataVisualization';
+// import { useAppInitialization } from './hooks/useAppInitialization';
+import { enhancedSecurityManager } from './utils/enhancedSecurityManager';
+import { initializePerformanceEnhancements } from './utils/performanceEnhancements';
+import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
+import { advancedSEOOptimizer } from './utils/advancedSEOOptimizer';
+import { advancedSecurityManager } from './utils/advancedSecurityManager';
+import { advancedAnalytics } from './utils/advancedAnalytics';
+import { advancedErrorHandler } from './utils/advancedErrorHandling';
+import { advancedCachingSystem } from './utils/advancedCachingSystem';
+import { advancedUXOptimizer } from './utils/advancedUXOptimizer';
+import { advancedTestingFramework } from './utils/advancedTestingFramework';
+import { advancedI18n } from './utils/advancedI18n';
+>>>>>>> 097b44c55e2d31eda03bffc20c8a0c9e4523d4eb
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
