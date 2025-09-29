@@ -112,21 +112,21 @@ const Home = () => {
         <LatestContentBanner 
           className="border-b border-white/10" 
           variant="info"
-          title="New: AI Platform Engineering, Serverless Cost Playbook, FinOps Guardrails"
-          description="Fresh articles on platform ROI, cutting serverless costs, and practical FinOps guardrails."
+          title="New: Edge LLM Caching Blueprint + Governance Scorecards Quickstart"
+          description="Fresh guides: sub‑100ms prompts with edge caches, and guardrails teams adopt fast."
           ctaText="Read now"
           ctaLink="/blog"
         />
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="Fresh: AI Platform Engineering, Serverless Inference, AgentOps SLOs, Zero‑Trust AI"
-          description="Latest: Platform engineering patterns, cost‑efficient inference, SLOs with budgets, and zero‑trust AI supply chains."
+          title="Fresh: Edge LLM Caching 2026 + AI Governance Scorecards 2025"
+          description="Latest: Tiered caches and signed configs at the edge; scorecards, PR checks, and KPI‑linked canaries."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Platform Engineering 2025", category: "Platform", link: "/blog/ai-platform-engineering-2025" },
-            { title: "Serverless Cost Playbook", category: "GenAI", link: "/blog/serverless-inference-cost-playbook-2025" },
+            { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" },
+            { title: "AI Governance Scorecards Quickstart", category: "AI Strategy", link: "/blog/ai-governance-scorecards-quickstart-2025" },
             { title: "AgentOps SLO Handbook", category: "GenAI", link: "/blog/agentops-slo-handbook-2025" },
             { title: "Zero‑Trust for AI Pipelines", category: "Security", link: "/blog/zero-trust-ai-pipelines-2025" },
             { title: "Cloud FinOps Guardrails", category: "Cloud", link: "/blog/cloud-finops-guardrails-2025" },
@@ -251,7 +251,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: Platform Engineering 2025, Serverless Cost Playbook, FinOps Guardrails — read now
+            New: Edge LLM Caching 2026, Governance Scorecards Quickstart — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>

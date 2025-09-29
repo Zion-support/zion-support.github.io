@@ -162,4 +162,23 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "11 min read"
   }
+  ,
+  {
+    slug: "ai-governance-scorecards-quickstart-2025",
+    title: "AI Governance Scorecards Quickstart: Ship Fast, Stay Safe",
+    description: "A practical starter for scorecards, PR checks, and KPI‑linked canaries teams adopt in weeks.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "edge-llm-caching-blueprint-2026",
+    title: "Edge LLM Caching Blueprint 2026: Sub‑100ms at Scale",
+    description: "Tiered caches, signed configs, and freshness windows for fast, affordable prompts.",
+    category: "Architecture",
+    publishedAt: "2025-10-10",
+    featured: true,
+    readTime: "7 min read"
+  }
 ];
