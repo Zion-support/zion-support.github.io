@@ -177,6 +177,38 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+    id: "production-agent-actions-2026",
+    slug: "production-agent-actions-2026",
+    title: "Production Agent Actions 2026: Deterministic Tools with Live Traces",
+    description: "Design agents with deterministic tools, budgets, and traces so actions are reliable and auditable.",
+    excerpt: "Make agent actions trustworthy with typed tools, timeouts, retries, and live traces.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-14",
+    category: "GenAI",
+    tags: ["Agents", "Tracing", "Reliability"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/production-agent-actions-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "platform-golden-paths-kpis-2026",
+    slug: "platform-golden-paths-kpis-2026",
+    title: "Platform Golden Paths 2026: KPIs that Prove Value",
+    description: "Build golden paths that reduce time‑to‑first‑success and link directly to product KPIs and ROI.",
+    excerpt: "From paved roads to outcomes: golden paths that measurably move KPIs.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-14",
+    category: "Platform Engineering",
+    tags: ["Golden Paths", "KPIs", "ROI"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/platform-golden-paths-kpis-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "production-rag-ops-2026",
     slug: "production-rag-ops-2026",
     title: "Production RAG Ops 2026: Freshness Windows and Drift Guards",

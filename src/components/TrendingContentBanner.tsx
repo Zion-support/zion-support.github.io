@@ -87,6 +87,27 @@ const TrendingContentBanner: React.FC = () => {
       link: "/blog/edge-llm-caching-blueprint-2026",
       badge: "POPULAR"
     }
+    ,
+    {
+      title: "Production Agent Actions 2026",
+      description: "Deterministic tools, budgets, and live traces for reliability.",
+      views: "8.2K",
+      readTime: "8 min",
+      category: "GenAI",
+      icon: Brain,
+      link: "/blog/production-agent-actions-2026",
+      badge: "NEW"
+    },
+    {
+      title: "Platform Golden Paths 2026",
+      description: "Paved roads that measurably move product KPIs and ROI.",
+      views: "7.7K",
+      readTime: "8 min",
+      category: "Platform",
+      icon: TrendingUp,
+      link: "/blog/platform-golden-paths-kpis-2026",
+      badge: "TRENDING"
+    }
   ];
 
   // Newly promoted items

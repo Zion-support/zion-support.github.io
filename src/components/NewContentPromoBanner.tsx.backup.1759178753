@@ -40,6 +40,13 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       category: "AI Ops"
     },
     {
+<<<<<<< HEAD
+      title: "RAG Evals in the Loop 2026",
+      description: "Prevent regressions while shipping weekly",
+      icon: Zap,
+      link: "/blog/rag-evals-in-the-loop-2026",
+      category: "GenAI"
+=======
       title: "Production Agent Actions 2026",
       description: "Deterministic tools with live traces",
       icon: Brain,
@@ -59,6 +66,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       icon: TrendingUp,
       link: "/blog/platform-golden-paths-kpis-2026",
       category: "Platform"
+>>>>>>> origin/cursor/create-and-deploy-new-content-eda6
     },
     {
       title: "Edge Feature Flags 2026",
