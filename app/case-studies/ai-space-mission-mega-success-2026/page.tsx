@@ -101,7 +101,7 @@ export default function AISpaceMissionMegaSuccess2026() {
                     <h4 className="font-semibold text-gray-900 mb-2">Performance Metrics:</h4>
                     <ul className="space-y-1 text-gray-700 text-sm">
                       <li>• 99.7% decision accuracy</li>
-                      <li>• <1ms response time</li>
+                      <li>• &lt;1ms response time</li>
                       <li>• 99.9% uptime</li>
                       <li>• Zero critical failures</li>
                     </ul>

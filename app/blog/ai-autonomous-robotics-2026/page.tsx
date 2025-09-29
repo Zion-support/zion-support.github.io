@@ -88,7 +88,7 @@ export default function AutonomousRobotics2026() {
                   <div className="text-sm text-gray-600">Decision Accuracy</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-xl font-bold text-orange-600">< 10ms</div>
+                  <div className="text-xl font-bold text-orange-600">&lt; 10ms</div>
                   <div className="text-sm text-gray-600">Response Time</div>
                 </div>
               </div>

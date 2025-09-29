@@ -1,53 +1,101 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 interface ContentItem {
   id: string;
   title: string;
   excerpt: string;
-  type: 'article' | 'case-study' | 'guide' | 'service';
+  type: 'article' | 'case-study';
   readTime?: string;
   category: string;
   href: string;
   featured?: boolean;
   publishedDate: string;
-  metrics?: {
-    value: string;
-    label: string;
-  }[];
+  metrics?: Array<{ value: string; label: string }>;
 }
 
 const contentItems: ContentItem[] = [
   {
-    id: 'ai-autonomous-infrastructure-2026',
-    title: 'AI Autonomous Infrastructure 2026: Self-Healing Systems & Zero-Touch Operations',
-    excerpt: 'Master autonomous infrastructure with self-healing systems, predictive maintenance, and zero-touch operations. Achieve 99.9% uptime and 90% cost reduction.',
+    id: 'ai-2026-ultimate-breakthrough',
+    title: 'AI 2026 Ultimate Breakthrough: $100B Revolution Guide',
+    excerpt: 'Master the complete AI 2026 breakthrough transformation. From cognitive superintelligence to quantum neural networks, discover strategies delivering $100M+ ROI for Fortune 100 companies.',
     type: 'article',
-    readTime: '28 min read',
-    category: 'Infrastructure',
-    href: '/blog/ai-autonomous-infrastructure-2026',
+    readTime: '45 min read',
+    category: 'Ultimate Breakthrough',
+    href: '/blog/ai-2026-ultimate-breakthrough',
     featured: true,
     publishedDate: '2026-01-25',
     metrics: [
-      { value: '99.9%', label: 'Uptime' },
-      { value: '90%', label: 'Cost Reduction' },
-      { value: '95%', label: 'Automation' },
-      { value: '$15M+', label: 'Annual Savings' }
+      { value: '$100B', label: 'Revolution Value' },
+      { value: '$100M+', label: 'ROI Potential' },
+      { value: '99.9%', label: 'Automation' },
+      { value: '500%', label: 'Efficiency Gain' }
     ]
   },
   {
-    id: 'ai-quantum-hybrid-computing-2026',
-=======
-    title: 'AI Quantum Hybrid Computing 2026: Next-Generation Intelligence Revolution',
-    excerpt: 'Explore the revolutionary potential of quantum-AI hybrid computing. Achieve 1000x faster optimization, 95% accuracy improvements, and breakthrough capabilities.',
-    type: 'article',
-    readTime: '32 min read',
-    category: 'Quantum Computing',
-    href: '/blog/ai-quantum-hybrid-computing-2026',
+    id: 'ai-2026-ultimate-breakthrough-success',
+    title: 'AI 2026 Ultimate Breakthrough Success: $100M ROI Case Study',
+    excerpt: 'See how a Fortune 100 company achieved $100M ROI with ultimate AI breakthrough implementation. 99.9% automation, 500% efficiency gain, and complete autonomous operation.',
+    type: 'case-study',
+    readTime: '25 min read',
+    category: 'Mega Success',
+    href: '/case-studies/ai-2026-ultimate-breakthrough-success',
     featured: true,
     publishedDate: '2026-01-25',
     metrics: [
-=======
+      { value: '$100M', label: 'Total ROI' },
+      { value: '99.9%', label: 'Automation' },
+      { value: '500%', label: 'Efficiency' },
+      { value: '12 months', label: 'Implementation' }
+    ]
+  },
+  {
+    id: 'ai-cognitive-superintelligence-2026',
+    title: 'AI Cognitive Superintelligence 2026: The Next Evolution',
+    excerpt: 'Explore how cognitive superintelligence is revolutionizing decision-making with 99.9% accuracy and $750M+ ROI potential.',
+    type: 'article',
+    readTime: '30 min read',
+    category: 'Cognitive AI',
+    href: '/blog/ai-cognitive-superintelligence-2026',
+    featured: true,
+    publishedDate: '2026-01-24',
+    metrics: [
+      { value: '99.9%', label: 'Accuracy' },
+      { value: '$750M+', label: 'ROI Potential' },
+      { value: '1000x', label: 'Processing Speed' },
+      { value: '95%', label: 'Decision Quality' }
+    ]
+  },
+  {
+    id: 'ai-agent-orchestration-2026',
+    title: 'AI Agent Orchestration 2026: Multi-Agent Systems Mastery',
+    excerpt: 'Master multi-agent AI systems with 95% automation efficiency and $5M+ ROI through advanced orchestration patterns and enterprise-grade coordination.',
+    type: 'article',
+    readTime: '22 min read',
+    category: 'Agent Systems',
+    href: '/blog/ai-agent-orchestration-2026',
+    featured: false,
+    publishedDate: '2026-01-23',
+    metrics: [
+      { value: '95%', label: 'Automation' },
+      { value: '$5M+', label: 'ROI' },
+      { value: '300%', label: 'Efficiency' },
+      { value: '99.8%', label: 'Reliability' }
+    ]
+  },
+  {
+    id: 'ai-quantum-computing-2026',
+    title: 'AI Quantum Computing 2026: Revolutionary Breakthrough',
+    excerpt: 'Discover quantum-AI hybrid computing achieving 1000x faster optimization, 95% accuracy improvements, and breakthrough capabilities.',
+    type: 'article',
+    readTime: '32 min read',
+    category: 'Quantum AI',
+    href: '/blog/ai-quantum-computing-2026',
+    featured: true,
+    publishedDate: '2026-01-22',
+    metrics: [
       { value: '1000x', label: 'Faster Optimization' },
       { value: '95%', label: 'Accuracy Improvement' },
       { value: '$50M+', label: 'ROI Potential' },
@@ -55,477 +103,128 @@ const contentItems: ContentItem[] = [
     ]
   },
   {
-    id: 'ai-autonomous-enterprise-transformation-2026',
-    title: 'AI Autonomous Enterprise Transformation 2026: $25M ROI Case Study',
+    id: 'ai-transformation-mega-success-2026',
+    title: 'AI Transformation Mega Success 2026: $25M ROI Case Study',
     excerpt: 'See how a Fortune 500 company achieved $25M ROI with comprehensive AI transformation. 99% automation, 90% cost reduction, and complete business revolution.',
     type: 'case-study',
-=======
-    category: 'Success Story',
-    href: '/case-studies/ai-transformation-mega-success-2026',
+    readTime: '35 min read',
     category: 'Enterprise Transformation',
-    href: '/case-studies/ai-autonomous-enterprise-transformation-2026',
+    href: '/case-studies/ai-transformation-mega-success-2026',
     featured: true,
-    publishedDate: '2026-01-25',
+    publishedDate: '2026-01-21',
     metrics: [
       { value: '$25M', label: 'Total ROI' },
       { value: '99%', label: 'Automation' },
       { value: '90%', label: 'Cost Reduction' },
       { value: '18 months', label: 'Implementation' }
     ]
-  },
-  {
-=======
-=======
-    id: 'ai-governance-maturity-model-2026',
-    title: 'AI Governance Maturity Model 2026: From Ad‑Hoc to Audit‑Ready',
-    excerpt: 'Move from ad‑hoc controls to audit‑ready AI governance with scorecards and KPIs.',
-    type: 'article',
-    readTime: '10 min read',
-    category: 'AI Strategy',
-    href: '/blog/ai-governance-maturity-model-2026',
-    featured: true,
-    publishedDate: '2025-10-15',
-    metrics: [
-      { value: '12', label: 'Scorecard Areas' },
-      { value: '90 days', label: 'To Audit‑Ready' }
-    ]
-  },
-  {
-    id: 'ai-customer-data-platforms-2026',
-    title: 'AI Customer Data Platforms 2026: Real‑Time Personalization at Scale',
-    excerpt: 'Blueprint for AI‑native CDPs powering privacy‑safe, sub‑second personalization.',
-    type: 'article',
-    readTime: '9 min read',
-    category: 'Architecture',
-    href: '/blog/ai-customer-data-platforms-2026',
-    featured: true,
-    publishedDate: '2025-10-15',
-    metrics: [
-      { value: '<1s', label: 'Personalization' },
-      { value: 'PII‑safe', label: 'Privacy' }
-    ]
-  },
-  {
-    id: 'edge-llm-latency-patterns',
-    title: 'Edge LLM Latency Patterns: Sub‑200ms Interactions',
-    excerpt: 'Streaming, prefetch, and edge compute patterns for instant‑feel AI UX.',
-    type: 'article',
-    readTime: '7 min read',
-    category: 'Edge Computing',
-    href: '/blog/edge-llm-latency-patterns',
-    featured: true,
-    publishedDate: '2025-10-15',
-    metrics: [
-      { value: '<200ms', label: 'P95 Latency' },
-      { value: '✔️', label: 'Streaming' }
-    ]
-  },
-  {
-    id: 'ai-trustworthy-agents-2026',
-    title: 'Trustworthy AI Agents 2026: Safety, Compliance, and Observability',
-    excerpt: 'Deploy trustworthy AI agents with guardrails, approvals, and end-to-end observability.',
-    type: 'article',
-    readTime: '11 min read',
-    category: 'Autonomous AI',
-    href: '/blog/ai-trustworthy-agents-2026',
-    featured: true,
-    publishedDate: '2025-09-29',
-    metrics: [
-      { value: '0.3%', label: 'Policy Violations' },
-      { value: '99.7%', label: 'On-policy Actions' }
-    ]
-  },
-  {
-    id: 'ai-synthetic-data-2026',
-    title: 'AI Synthetic Data 2026: Secure, Scalable, and Bias-Aware Generation',
-    excerpt: 'Use synthetic data to accelerate AI while protecting privacy and reducing labeling costs.',
-    type: 'article',
-    readTime: '12 min read',
-    category: 'Data Platforms',
-    href: '/blog/ai-synthetic-data-2026',
-    featured: true,
-    publishedDate: '2025-09-29',
-    metrics: [
-      { value: '≤1%', label: 'Re-ID Risk' },
-      { value: '50–80%', label: 'Cost Reduction' }
-    ]
-  },
-  {
-    id: 'ai-value-stream-analytics-2026',
-    title: 'AI Value Stream Analytics 2026: Trace ROI from Token to Revenue',
-    excerpt: 'Tie AI cost, latency, and quality to business value with end-to-end tracing.',
-    type: 'article',
-    readTime: '9 min read',
-    category: 'Analytics',
-    href: '/blog/ai-value-stream-analytics-2026',
-    featured: true,
-    publishedDate: '2025-09-29',
-    metrics: [
-      { value: '$/win', label: 'Cost per Outcome' },
-      { value: '<200ms', label: 'P95 Latency' }
-    ]
-  },
-  {
-    id: 'ai-reliable-rag-2025',
-    title: 'Reliable RAG 2025: Production Patterns for Grounded Answers',
-    excerpt: 'Reduce hallucinations and latency with hardened RAG patterns: contracts, caching, routing, and evals.',
-    type: 'article',
-    readTime: '9 min read',
-    category: 'AI Platforms',
-    href: '/blog/ai-reliable-rag-2025',
-    featured: true,
-    publishedDate: '2025-09-29',
-    metrics: [
-      { value: '30–70%', label: 'Cost Reduction' },
-      { value: '<200ms', label: 'P95 Latency' }
-    ]
-  },
-  {
-    id: 'platform-engineering-scorecards-2026',
-    title: 'Platform Engineering Scorecards 2026: Measurable DevEx & Reliability',
-    excerpt: 'Define and track platform scorecards: golden paths, SLO coverage, lead time, and cost per unit.',
-    type: 'article',
-    readTime: '10 min read',
-    category: 'Strategy',
-    href: '/blog/platform-engineering-scorecards-2026',
-    featured: true,
-    publishedDate: '2025-09-29'
-  },
-  {
-    id: 'ai-roadmaps-2026',
-    title: 'AI Roadmaps 2026: What to Build Next and Why',
-    excerpt: 'A pragmatic roadmap for 2026 across CX, ops, and platforms with high-ROI bets.',
-    type: 'article',
-    readTime: '10 min read',
-    category: 'Strategy',
-    href: '/blog/ai-roadmaps-2026',
-    featured: true,
-    publishedDate: '2025-09-29'
-  },
-  {
-    id: 'ai-finops-scorecards-2025',
-    title: 'AI FinOps Scorecards 2025: Control LLM Spend',
-    excerpt: 'Cut LLM costs 30–70% with scorecards, routing, caching, and prompt budgets.',
-    type: 'article',
-    readTime: '8 min read',
-    category: 'FinOps',
-    href: '/blog/ai-finops-scorecards-2025',
-    featured: true,
-    publishedDate: '2025-09-29'
-  },
-  {
-    id: 'ai-governance-framework-2025',
-    title: 'AI Governance Framework 2025: Enterprise-Ready Implementation Guide',
-    excerpt: 'Master AI governance with our comprehensive framework covering risk management, compliance, and ethical deployment strategies.',
-    type: 'article',
-    readTime: '15 min read',
-    category: 'AI Governance',
-    href: '/blog/ai-governance-framework-2025',
-    featured: true,
-    publishedDate: '2025-01-25',
-    metrics: [
-      { value: '70%', label: 'Risk Reduction' },
-      { value: '12', label: 'Framework Areas' }
-    ]
-  },
-  {
-    id: 'ai-mlops-vector-databases-2025',
-    title: 'AI MLOps with Vector Databases 2025: Production-Ready RAG Architecture',
-    excerpt: 'Master MLOps for AI applications with vector databases. Learn production-ready RAG architecture and scalable deployment patterns.',
-    type: 'article',
-    readTime: '18 min read',
-    category: 'MLOps',
-    href: '/blog/ai-mlops-vector-databases-2025',
-    featured: true,
-    publishedDate: '2025-01-20',
-    metrics: [
-      { value: '<50ms', label: 'Search Latency' },
-      { value: '10M+', label: 'Vector Capacity' }
-    ]
-  },
-  {
-    id: 'fintech-ai-risk-compliance-2025',
-    title: 'FinTech AI Risk Compliance 2025: 70% Risk Reduction with Automated Governance',
-    excerpt: 'See how a leading fintech company achieved 70% AI risk reduction and regulatory compliance with automated governance frameworks.',
-    type: 'case-study',
-    category: 'FinTech',
-    href: '/case-studies/fintech-ai-risk-compliance-2025',
-    featured: true,
-    publishedDate: '2025-01-25',
-    metrics: [
-      { value: '70%', label: 'Risk Reduction' },
-      { value: '$2.5M', label: 'Cost Savings' }
-    ]
-  },
-  {
-    id: 'ai-risk-register',
-    title: 'AI Risk Register: Practical Framework for Managing AI Risks',
-    excerpt: 'Production-ready risk register covering model, data, privacy, security, ethics, and ops.',
-    type: 'article',
-    readTime: '10 min read',
-    category: 'AI Reliability',
-    href: '/blog/ai-risk-register',
-    featured: true,
-    publishedDate: '2025-09-29',
-    metrics: [
-      { value: '12', label: 'Risk Areas' },
-      { value: '24x7', label: 'Monitoring' }
-    ]
-  },
-  {
-    id: 'practical-rag-in-production',
-    title: 'Practical RAG in Production: Patterns that Actually Work',
-    excerpt: 'Battle-tested RAG patterns for groundedness, latency, and cost at scale.',
-    type: 'article',
-    readTime: '9 min read',
-    category: 'AI Platforms',
-    href: '/blog/practical-rag-in-production',
-    featured: true,
-    publishedDate: '2025-09-29',
-    metrics: [
-      { value: '30–70%', label: 'Cost Reduction' },
-      { value: '<200ms', label: 'P95 Latency' }
-    ]
-  },
-  {
-    id: 'ai-revolution-2025',
-    title: 'AI Revolution 2025: Complete Business Transformation Guide',
-    excerpt: 'Discover how AI is reshaping industries and creating unprecedented opportunities for growth in 2025.',
-    type: 'article',
-    readTime: '12 min read',
-    category: 'AI Trends',
-    href: '/blog/ai-revolution-2025',
-    featured: true,
-    publishedDate: '2025-01-17',
-    metrics: [
-      { value: '300%', label: 'ROI Improvement' },
-      { value: '85%', label: 'Enterprise Adoption' }
-    ]
-  },
-  {
-    id: 'ai-workflow-automation-guide',
-    title: 'AI Workflow Automation: Complete Implementation Guide',
-    excerpt: 'Master AI workflow automation with our comprehensive guide. Reduce manual work by 80% and improve efficiency.',
-    type: 'guide',
-    readTime: '15 min read',
-    category: 'Automation',
-    href: '/blog/ai-workflow-automation-guide',
-    featured: true,
-    publishedDate: '2025-01-17',
-    metrics: [
-      { value: '80%', label: 'Work Reduction' },
-      { value: '99.9%', label: 'Accuracy' }
-    ]
-  },
-  {
-    id: 'ai-analytics-implementation',
-    title: 'AI Analytics Implementation: Transform Data into Insights',
-    excerpt: 'Learn how to implement AI-powered analytics that transform raw data into actionable business insights.',
-    type: 'article',
-    readTime: '18 min read',
-    category: 'Analytics',
-    href: '/blog/ai-analytics-implementation',
-    featured: true,
-    publishedDate: '2025-01-17',
-    metrics: [
-      { value: '25%', label: 'Faster Decisions' },
-      { value: '40%', label: 'Revenue Growth' }
-    ]
-  },
-  {
-    id: 'healthtech-ai-transformation',
-    title: 'HealthTech Solutions: 80% Efficiency Gain with AI',
-    excerpt: 'See how HealthTech Solutions achieved 80% faster response times and 95% customer satisfaction.',
-    type: 'case-study',
-    category: 'Healthcare',
-    href: '/case-studies/healthtech-ai-transformation',
-    featured: true,
-    publishedDate: '2025-01-17',
-    metrics: [
-      { value: '80%', label: 'Faster Response' },
-      { value: '95%', label: 'Customer Satisfaction' }
-    ]
-  },
-  {
-    id: 'ai-virtual-assistant',
-    title: 'AI Virtual Assistant: 24/7 Intelligent Support',
-    excerpt: 'Transform your customer support with AI-powered virtual assistants that provide instant, accurate responses.',
-    type: 'service',
-    category: 'AI Services',
-    href: '/services/ai-virtual-assistant',
-    publishedDate: '2025-01-17',
-    metrics: [
-      { value: '24/7', label: 'Availability' },
-      { value: '90%', label: 'Query Resolution' }
-    ]
-  },
-  {
-    id: 'ai-analytics-platform',
-    title: 'AI Analytics Platform: Real-time Business Intelligence',
-    excerpt: 'Transform your data into actionable insights with our comprehensive AI-powered analytics platform.',
-    type: 'service',
-    category: 'Analytics',
-    href: '/services/ai-analytics-platform',
-    publishedDate: '2025-01-17',
-    metrics: [
-      { value: 'Real-time', label: 'Insights' },
-      { value: '85%', label: 'Forecast Accuracy' }
-    ]
-  },
-  {
-    id: 'ai-customer-service-2025',
-    title: 'AI-Powered Customer Service Revolution',
-    excerpt: 'Discover how AI is transforming customer service with 80% faster response times and 90% cost reduction.',
-    type: 'article',
-    readTime: '15 min read',
-    category: 'Customer Service',
-    href: '/blog/ai-customer-service-2025',
-    featured: true,
-    publishedDate: '2025-01-17',
-    metrics: [
-      { value: '80%', label: 'Faster Response' },
-      { value: '90%', label: 'Cost Reduction' }
-    ]
-  },
-  {
-    id: 'ai-agents-in-the-enterprise-2025',
-    title: 'AI Agents in the Enterprise: 2025 Adoption Playbook',
-    excerpt: 'A practical playbook for deploying autonomous AI agents across revenue ops and IT with measurable ROI.',
-    type: 'article',
-    readTime: '10 min read',
-    category: 'Autonomous AI',
-    href: '/blog/ai-agents-in-the-enterprise-2025',
-    featured: true,
-    publishedDate: '2025-09-29',
-    metrics: [
-      { value: '3x', label: 'Pipeline Lift' },
-      { value: '60%', label: 'Ticket Deflection' }
-    ]
-  },
-  {
-    id: 'ai-healthcare-transformation-2025',
-    title: 'AI Healthcare Transformation Guide',
-    excerpt: 'How AI is revolutionizing patient care with 40% better diagnostics and 60% improved outcomes.',
-    type: 'article',
-    readTime: '18 min read',
-    category: 'Healthcare',
-    href: '/blog/ai-healthcare-transformation-2025',
-    featured: true,
-    publishedDate: '2025-01-17',
-    metrics: [
-      { value: '40%', label: 'Better Diagnostics' },
-      { value: '60%', label: 'Improved Outcomes' }
-    ]
-  },
-  {
-    id: 'retail-ai-transformation',
-    title: 'RetailAI Corp: 150% Revenue Growth',
-    excerpt: 'See how RetailAI Corp achieved 150% revenue growth and 80% cost reduction with AI transformation.',
-    type: 'case-study',
-    category: 'Retail',
-    href: '/case-studies/retail-ai-transformation',
-    featured: true,
-    publishedDate: '2025-01-17',
-    metrics: [
-      { value: '150%', label: 'Revenue Growth' },
-      { value: '80%', label: 'Cost Reduction' }
-    ]
   }
 ];
 
-interface ContentShowcaseProps {
-  title?: string;
-  subtitle?: string;
-  maxItems?: number;
-  showMetrics?: boolean;
-  autoRotate?: boolean;
-  rotationInterval?: number;
-}
+const getCategoryColor = (category: string) => {
+  const colors: { [key: string]: string } = {
+    'Ultimate Breakthrough': 'from-blue-500 to-purple-500',
+    'Mega Success': 'from-green-500 to-teal-500',
+    'Cognitive AI': 'from-purple-500 to-pink-500',
+    'Agent Systems': 'from-orange-500 to-red-500',
+    'Quantum AI': 'from-indigo-500 to-blue-500',
+    'Enterprise Transformation': 'from-green-500 to-blue-500'
+  };
+  return colors[category] || 'from-gray-500 to-gray-600';
+};
 
-export default function ContentShowcase({
-  title = "Latest AI Insights & Success Stories",
-  subtitle = "Stay ahead with our latest content, case studies, and AI innovations",
-  maxItems = 6,
-  showMetrics = true,
-  autoRotate = true,
-  rotationInterval = 10000
-}: ContentShowcaseProps) {
+const getCategoryBgColor = (category: string) => {
+  const colors: { [key: string]: string } = {
+    'Ultimate Breakthrough': 'from-blue-50 to-purple-50',
+    'Mega Success': 'from-green-50 to-teal-50',
+    'Cognitive AI': 'from-purple-50 to-pink-50',
+    'Agent Systems': 'from-orange-50 to-red-50',
+    'Quantum AI': 'from-indigo-50 to-blue-50',
+    'Enterprise Transformation': 'from-green-50 to-blue-50'
+  };
+  return colors[category] || 'from-gray-50 to-gray-100';
+};
+
+export default function ContentShowcase() {
+  const [featuredItems, setFeaturedItems] = useState<ContentItem[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isRotating, setIsRotating] = useState(autoRotate);
-
-  const displayedItems = contentItems.slice(0, maxItems);
 
   useEffect(() => {
-    if (isRotating && displayedItems.length > 1) {
+    const featured = contentItems.filter(item => item.featured);
+    setFeaturedItems(featured);
+  }, []);
+
+  useEffect(() => {
+    if (featuredItems.length > 1) {
       const interval = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % displayedItems.length);
-      }, rotationInterval);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % featuredItems.length);
+      }, 5000);
       return () => clearInterval(interval);
     }
-  ];
+  }, [featuredItems.length]);
 
-  const getCategoryColor = (category: string) => {
-    const colors: { [key: string]: string } = {
-      "Enterprise AI": "bg-purple-100 text-purple-800",
-      "Quantum AI": "bg-indigo-100 text-indigo-800",
-      "Case Study": "bg-green-100 text-green-800"
-    };
-    return colors[category] || "bg-gray-100 text-gray-800";
-  };
+  if (featuredItems.length === 0) return null;
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Featured AI Content 2026
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our latest insights on autonomous enterprises, quantum computing, and real-world AI success stories.
-          </p>
-        </div>
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Content</h2>
+        <p className="text-lg text-gray-600">Discover our most impactful AI breakthroughs and success stories</p>
+      </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {featuredContent.map((item) => (
-            <Link
-              key={item.id}
-              href={`/${item.type === 'case-study' ? 'case-studies' : 'blog'}/${item.id}`}
-              className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:scale-105"
-            >
-              <div className="flex items-center gap-2 mb-4">
-                <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getCategoryColor(item.category)}`}>
-                  {item.category}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {featuredItems.map((item, index) => (
+          <Link key={item.id} href={item.href} className="group">
+            <div className={`bg-gradient-to-br ${getCategoryBgColor(item.category)} rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gray-200 h-full`}>
+              <div className="flex items-center gap-3 mb-4">
+                <span className={`bg-gradient-to-r ${getCategoryColor(item.category)} text-white px-3 py-1 rounded-full text-sm font-semibold`}>
+                  {item.category.toUpperCase()}
                 </span>
-                <span className="text-sm text-gray-500">{item.readTime}</span>
+                {item.type === 'case-study' && (
+                  <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">
+                    CASE STUDY
+                  </span>
+                )}
               </div>
               
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors line-clamp-2">
                 {item.title}
               </h3>
               
-              <p className="text-gray-600 mb-4 line-clamp-3">
+              <p className="text-gray-600 mb-6 line-clamp-3">
                 {item.excerpt}
               </p>
               
-              <div className="flex justify-between items-center mb-4">
-                <div className="flex gap-4">
-                  {item.metrics.map((metric, index) => (
-                    <div key={index} className="text-center">
-                      <div className="text-lg font-bold text-blue-600">{metric.value}</div>
-                      <div className="text-xs text-gray-500">{metric.label}</div>
+              {item.metrics && (
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  {item.metrics.slice(0, 4).map((metric, idx) => (
+                    <div key={idx} className="text-center">
+                      <div className="text-lg font-bold text-gray-900">{metric.value}</div>
+                      <div className="text-xs text-gray-600">{metric.label}</div>
                     </div>
                   ))}
                 </div>
-                <span className="text-blue-600 font-semibold group-hover:text-blue-700 transition-colors">
-                  {item.type === 'case-study' ? 'View Case Study' : 'Read Article'} →
-                </span>
+              )}
+              
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-gray-500">{item.readTime}</div>
+                <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
+                  {item.type === 'case-study' ? 'View Case Study →' : 'Read Article →'}
+                </div>
               </div>
-            </Link>
-          ))}
-        </div>
+            </div>
+          </Link>
+        ))}
       </div>
-    </section>
-  );
-};
 
-export default ContentShowcase;
+      <div className="text-center mt-12">
+        <Link
+          href="/content-hub"
+          className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
+        >
+          Explore All Content
+        </Link>
+      </div>
+    </div>
+  );
+}
