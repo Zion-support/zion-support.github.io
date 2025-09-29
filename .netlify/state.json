@@ -1,0 +1,14 @@
+{
+  "site": {
+    "id": "ziontechgroup",
+    "name": "ziontechgroup"
+  },
+  "build": {
+    "command": "npm ci && npm run build",
+    "publish": "dist",
+    "functions": "netlify/functions"
+  },
+  "plugins": {
+    "disabled": ["@netlify/plugin-nextjs"]
+  }
+}
