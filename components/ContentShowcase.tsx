@@ -19,6 +19,36 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-risk-register',
+    title: 'AI Risk Register: Practical Framework for Managing AI Risks',
+    excerpt: 'Production-ready risk register covering model, data, privacy, security, ethics, and ops.',
+    type: 'article',
+    readTime: '10 min read',
+    category: 'AI Reliability',
+    href: '/blog/ai-risk-register',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '12', label: 'Risk Areas' },
+      { value: '24x7', label: 'Monitoring' }
+    ]
+  },
+  {
+    id: 'practical-rag-in-production',
+    title: 'Practical RAG in Production: Patterns that Actually Work',
+    excerpt: 'Battle-tested RAG patterns for groundedness, latency, and cost at scale.',
+    type: 'article',
+    readTime: '9 min read',
+    category: 'AI Platforms',
+    href: '/blog/practical-rag-in-production',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '30–70%', label: 'Cost Reduction' },
+      { value: '<200ms', label: 'P95 Latency' }
+    ]
+  },
+  {
     id: 'ai-revolution-2025',
     title: 'AI Revolution 2025: Complete Business Transformation Guide',
     excerpt: 'Discover how AI is reshaping industries and creating unprecedented opportunities for growth in 2025.',
