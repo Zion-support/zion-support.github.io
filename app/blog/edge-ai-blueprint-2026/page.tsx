@@ -21,7 +21,7 @@ export default function EdgeAIBlueprint2026Page() {
             Edge AI Blueprint 2026: Private, Real‑Time Intelligence at Scale
           </h1>
           <p className="text-xl mb-8 opacity-90">
-            A field guide to building private, low‑latency edge AI systems with <100ms decisions.
+            A field guide to building private, low‑latency edge AI systems with &lt;100ms decisions.
           </p>
           <div className="flex items-center gap-6 text-sm opacity-75">
             <span>📅 Oct 9, 2025</span>
