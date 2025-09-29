@@ -417,8 +417,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  }
-  ,
+  },
   {
     slug: "ai-governance-blueprint-2025",
     title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
@@ -540,7 +539,7 @@ export const posts: BlogPost[] = [
   },
  
  
-  ,
+  
   {
     slug: "ai-risk-register-checklist-2025",
     title: "AI Risk Register Checklist: Owners, Policy Tests, Dashboards",
@@ -566,7 +565,7 @@ export const posts: BlogPost[] = [
     category: "Architecture",
     publishedAt: "2025-10-06",
     featured: false,
-      readTime: "6 min read"
-    }
+    readTime: "6 min read"
+  }
 ];
 
