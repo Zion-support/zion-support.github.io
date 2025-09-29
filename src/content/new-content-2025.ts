@@ -75,55 +75,55 @@ export const newContent2025: NewContentItem[] = [
     }
   },
   {
-    id: "reliable-rag-2025",
-    title: "Reliable RAG 2025: Production Patterns for Grounded Answers",
-    description: "Battle-tested RAG patterns for groundedness, latency, and cost in production.",
-    excerpt: "Reduce hallucinations and latency with hardened RAG patterns: contracts, caching, routing, and evals.",
+    id: "serverless-ai-inference-cost-playbook-2025",
+    title: "Serverless AI Inference Cost Playbook (2025)",
+    description: "Cut model serving costs by 40–70% with adaptive batching, warm pools, and precision routing.",
+    excerpt: "A hands-on guide to reduce inference costs while keeping p95 low and reliability high.",
     type: "blog",
-    category: "AI Platforms",
-    tags: ["RAG", "Groundedness", "Latency", "Caching"],
+    category: "Engineering",
+    tags: ["FinOps", "Inference", "Serverless", "Latency"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-09-29",
+    readTime: "11 min read",
+    author: "Zion Tech Group",
+    image: "/images/serverless-inference-cost-playbook.jpg",
+    url: "/blog/serverless-ai-inference-cost-playbook-2025",
+    cta: {
+      primary: "Read Playbook",
+      secondary: "Get Cost Review"
+    },
+    metrics: [
+      { label: "Cost Reduction", value: "40–70%", description: "Observed savings range" },
+      { label: "Latency Target", value: "< 250ms p95", description: "Interactive UX" },
+      { label: "Reliability", value: "> 99.9%", description: "SLO adherence" }
+    ]
+  },
+  {
+    id: "agent-safety-budgets-2025",
+    title: "Agent Safety Budgets (2025): Practical Guardrails That Ship",
+    description: "Constrain autonomous agents with KPI-linked safety, privacy, and cost budgets.",
+    excerpt: "Policy-as-code, runtime enforcement, and auditable telemetry to ship safe AI.",
+    type: "blog",
+    category: "AI Governance",
+    tags: ["Safety", "Compliance", "Privacy", "Agents"],
     featured: true,
     newBadge: true,
     trending: true,
     publishedDate: "2025-09-29",
     readTime: "9 min read",
     author: "Zion Tech Group",
-    image: "/images/reliable-rag-2025.jpg",
-    url: "/blog/ai-reliable-rag-2025",
+    image: "/images/agent-safety-budgets.jpg",
+    url: "/blog/agent-safety-budgets-2025",
     cta: {
       primary: "Read Article",
-      secondary: "Get RAG Starter"
+      secondary: "Request Workshop"
     },
     metrics: [
-      { label: "Groundedness", value: "+35%", description: "Citation coverage increase" },
-      { label: "P95 Latency", value: "< 300ms", description: "With caches + routing" },
-      { label: "Cost", value: "-40%", description: "Token spend reduction" }
-    ]
-  },
-  {
-    id: "ai-agent-safety-blueprint-2026",
-    title: "AI Agent Safety Blueprint 2026: Guardrails for Reliable Autonomy",
-    description: "Practical blueprint to ship safe autonomous agents with policy gates and audits.",
-    excerpt: "Blueprint for safe autonomy: policy-constrained planning, eval-gated execution, and HITL.",
-    type: "blog",
-    category: "AI Reliability",
-    tags: ["Agents", "Safety", "Governance", "HITL"],
-    featured: true,
-    newBadge: true,
-    trending: false,
-    publishedDate: "2025-09-29",
-    readTime: "9 min read",
-    author: "Zion Tech Group",
-    image: "/images/ai-agent-safety-blueprint-2026.jpg",
-    url: "/blog/ai-agent-safety-blueprint-2026",
-    cta: {
-      primary: "Read Article",
-      secondary: "Download Safety Kit"
-    },
-    metrics: [
-      { label: "Incidents", value: "-80%", description: "Reduction post-guardrails" },
-      { label: "Approvals", value: "HITL", description: "Progressive autonomy gates" },
-      { label: "Auditability", value: "100%", description: "Signed traces coverage" }
+      { label: "Risk Reduction", value: "70%", description: "Fewer incidents" },
+      { label: "Auditability", value: "100%", description: "Traceable decisions" },
+      { label: "Time to Ship", value: "< 2 weeks", description: "Guardrails live" }
     ]
   },
   {
