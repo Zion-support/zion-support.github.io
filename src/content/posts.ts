@@ -383,6 +383,33 @@ export const posts: BlogPost[] = [
   }
   ,
   {
+    slug: "ai-governance-scorecards-quickstart-2026",
+    title: "AI Governance Scorecards Quickstart 2026: Ship Fast, Stay Safe",
+    description: "Set up KPI‑linked scorecards, PR checks, and rollback‑ready canaries in weeks.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-agents-2026",
+    title: "Privacy‑First Agents 2026: On‑Device Tools, Scoped IDs, Retention Controls",
+    description: "Design assistants with local tools, field‑level filters, and policy‑backed telemetry.",
+    category: "AI Security",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "serverless-inference-cost-playbook-2026",
+    title: "Serverless Inference Cost Playbook 2026: Budgets Without P95 Pain",
+    description: "Adaptive batching, warm pools, and tiered quality under explicit budgets.",
+    category: "GenAI",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "agentic-workflows-blueprint-2026",
     title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",
     description: "Design reliable multi‑tool agents with deterministic tools, live traces, and risk budgets.",
