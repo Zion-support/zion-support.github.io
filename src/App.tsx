@@ -7,6 +7,9 @@ import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
 import { useSEOData } from './components/SEOOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAccessibilityManager } from './utils/enhancedAccessibilityManager';
+import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
@@ -165,6 +168,11 @@ export default function App(): React.JSX.Element {
 
     // Update meta tags
     updateMetaTags(seoData);
+
+    // Initialize enhanced monitoring systems
+    enhancedPerformanceMonitor.getAlerts();
+    enhancedAccessibilityManager.getIssues();
+    enhancedSEOOptimizer.getIssues();
 
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
