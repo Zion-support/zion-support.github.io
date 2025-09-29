@@ -741,5 +741,36 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "5 min read",
   },
+  // Summaries for newly added long-form content
+  {
+    slug: "ai-platform-engineering-2025",
+    title: "AI Platform Engineering 2025: Golden Paths that Ship Outcomes",
+    description:
+      "A field guide to platform capabilities, eval systems, and governance that unlock safe, fast AI delivery.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read",
+  },
+  {
+    slug: "ai-agent-observability-2025",
+    title: "AI Agent Observability: Traces, Policies, and Human Feedback",
+    description:
+      "Instrument agents with traces and policy tests, and close the loop with human feedback for trustworthy systems.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "secure-rag-2025",
+    title: "Secure RAG 2025: Data Controls That Survive Production",
+    description:
+      "Authorization-aware retrieval, PII minimization, and prompt firewalls for enterprise-grade RAG.",
+    category: "Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
 ];
 

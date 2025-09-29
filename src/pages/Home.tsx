@@ -1,6 +1,7 @@
 import {
   ArrowRight,
   Award,
+  BookOpen,
   Brain,
   CheckCircle,
   Download,
@@ -21,7 +22,6 @@ import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
-import ROICalculator from "../components/ROICalculator";
 import Header from "../components/Header";
 import LatestContentBanner from "../components/LatestContentBanner";
 import ModernFeatures from "../components/ModernFeatures";
@@ -106,15 +106,11 @@ const Home = () => {
         <Header />
         <LatestContentBanner variant="info" autoRotate={true} rotationInterval={6000} />
         <ContentPromotionBanner
-          title="New: AI Sales Copilot, Event‑Driven at Scale, Zero‑Downtime Migrations"
-          description="Fresh 2025 content: grounded AI copilots for sales, resilient EDA contracts, and safe schema rollouts."
-          ctaText="Explore new content"
-          ctaLink="/blog"
-          variant="info"
           title="🚀 Fresh: AI Platform Engineering 2025 + Edge AI Latency Budgets"
-          description="New long-form guide and 3 brand-new articles across Platform, Governance, and MLOps."
+          description="New long‑form guide plus new articles across Platform, Governance, Security, and MLOps."
           ctaText="Read the latest"
           ctaLink="/blog/ai-platform-engineering-2025"
+          variant="info"
           dismissible={true}
         />
 
