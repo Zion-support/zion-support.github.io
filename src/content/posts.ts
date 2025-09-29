@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "agent-safety-budgets-2026",
+    title: "Agent Safety Budgets 2026: Ship Fast Without Surprises",
+    description: "Budget risky actions, add PR checks, and wire rollbacks for reliable agent releases.",
+    category: "GenAI",
+    publishedAt: "2025-10-11",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-telemetry-blueprint-2026",
+    title: "Privacy‑First Telemetry Blueprint: Signal‑Rich, PII‑Safe",
+    description: "Scoped IDs, field‑level filters, and retention policies that keep insights high and risk low.",
+    category: "Observability",
+    publishedAt: "2025-10-11",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "cost-aware-inference-routing-2026",
+    title: "Cost‑Aware Inference Routing: Quality Tiers Under Budget",
+    description: "Dynamically route prompts across model tiers based on budgets, SLAs, and eval signals.",
+    category: "Architecture",
+    publishedAt: "2025-10-11",
+    featured: false,
+    readTime: "8 min read"
+  },
+  {
     slug: "agentic-workflows-blueprint-2026",
     title: "Agentic Workflows Blueprint 2026: Tools, Traces, Policy Tests",
     description: "Design reliable multi‑tool agents with traceability, CI policy tests, and rollback‑ready routes.",
