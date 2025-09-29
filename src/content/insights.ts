@@ -9,6 +9,33 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "genai-policy-tests-canaries",
+    title: "GenAI Policy Tests: From Offline Suites to Online Canaries",
+    summary:
+      "How to combine offline evals with live canaries to catch regressions before customers do.",
+    category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-flags-validation",
+    title: "Edge Flags: Validation Circuits That Prevent Bad Rolls",
+    summary:
+      "Design health checks, signed payloads, and roll-forward playbooks to keep flags safe.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "north-star-metrics-pitfalls",
+    title: "North‑Star Metrics Pitfalls: Fixing Vanity and Ambiguity",
+    summary:
+      "Replace vanity KPIs with leading indicators and consistent instrumentation.",
+    category: "Product Analytics",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
     id: "ai-governance-rubric",
     title: "A Lightweight Rubric for AI Governance Decisions",
     summary:
