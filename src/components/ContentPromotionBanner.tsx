@@ -1,6 +1,6 @@
 import React from "react";
 
-type Props = {
+interface Props {
   variant?: string;
   title?: string;
   description?: string;
@@ -8,10 +8,9 @@ type Props = {
   ctaLink?: string;
   dismissible?: boolean;
   className?: string;
-};
+}
 
-export default function ContentPromotionBanner(props: Props): React.JSX.Element {
-  void props;
-  return <div aria-hidden="true" style={{ display: "none" }} />;
+export default function ContentPromotionBanner(_props: Props): React.JSX.Element {
+  return <div />;
 }
 

@@ -129,10 +129,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="📚 New Series: Ship Faster with Guardrails"
-          description="AI roadmaps, ML SBOM automation, and online eval canaries now live."
-          ctaText="See what's new"
-          ctaLink="/blog"
+          title="🚀 Fresh: GenAI Platform Blueprint + Hybrid Vector Search"
+          description="Ship weekly with guardrails. Cut retrieval cost 40%+ with hybrid and freshness."
+          ctaText="Read the latest"
+          ctaLink="/blog/genai-platform-blueprint-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -517,7 +517,7 @@ const Home = () => {
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
-                    {('featured' in item) && (item as any).featured && (
+                    {"featured" in item && (item as any).featured && (
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
                       </span>
@@ -812,7 +812,9 @@ const Home = () => {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
-                  <p className="text-white/90">New: Agentic workflows, Edge LLM caching, and Operational scorecards 2026.</p>
+                  <p className="text-white/90">
+                    New: AI Platform ROI scorecards, securing the ML supply chain, and Enterprise RAG v2.
+                  </p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
                   Read the latest
@@ -831,8 +833,8 @@ const Home = () => {
                   <div className="font-semibold text-white">Edge LLM Caching</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">AI Strategy</div>
-                  <div className="font-semibold text-white">Operational Scorecards 2026</div>
+                  <div className="text-sm text-rose-200 mb-1">Security</div>
+                  <div className="font-semibold text-white">Secure ML Supply Chain</div>
                 </div>
               </div>
             </div>

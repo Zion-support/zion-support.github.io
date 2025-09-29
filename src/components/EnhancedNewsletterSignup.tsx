@@ -1,9 +1,12 @@
 import React from "react";
 
-type Props = { title?: string; subtitle?: string; showContentPreview?: boolean };
+interface Props {
+  title?: string;
+  subtitle?: string;
+  showContentPreview?: boolean;
+}
 
-export default function EnhancedNewsletterSignup(props: Props): React.JSX.Element {
-  void props;
-  return <section aria-hidden="true" style={{ display: "none" }} />;
+export default function EnhancedNewsletterSignup(_props: Props): React.JSX.Element {
+  return <section />;
 }
 

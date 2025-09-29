@@ -12,3 +12,6 @@ export default function NotificationSystem(props: NotificationSystemProps): Reac
   return <div aria-hidden="true" style={{ display: "none" }} />;
 }
 
+export default function NotificationSystem({ notifications, onRemove }: { notifications: Notification[]; onRemove: (id: string) => void; }): JSX.Element {
+  return <div id="notification-root" />;
+}

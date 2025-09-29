@@ -10,22 +10,13 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "ai-incident-response-2026",
-    title: "AI Incident Response 2026: Playbooks, Canaries, and SLAs",
-    description: "Practical incident response for AI features with on-call playbooks and KPI-linked canaries.",
-    category: "AI Operations",
-    publishedAt: "2025-10-09",
+    slug: "llm-policy-testing-2025",
+    title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
+    description: "Automate governance with policy tests on every PR, tied to KPIs and SLAs.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
     featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "platform-observability-scorecards-2026",
-    title: "Platform Observability Scorecards: Tie Telemetry to Business Outcomes",
-    description: "Connect traces, errors, and latency to adoption, retention, and revenue with actionable scorecards.",
-    category: "Platform Engineering",
-    publishedAt: "2025-10-09",
-    featured: true,
-    readTime: "8 min read"
+    readTime: "6 min read"
   },
   {
     slug: "privacy-preserving-rag-2026",
@@ -104,17 +95,7 @@ export const posts: BlogPost[] = [
     title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, and Evals",
     description: "Production patterns that keep responses grounded and useful with hybrid search and live evals.",
     category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "8 min read"
-  }
-  ,
-  {
-    slug: "ai-governance-scorecards-2026",
-    title: "AI Governance 2026: Scorecards Engineers Actually Use",
-    description: "Guardrails wired to product KPIs with PR checks and online canaries that speed teams up.",
-    category: "AI Strategy",
-    publishedAt: "2025-10-07",
+    publishedAt: "2025-10-02",
     featured: true,
     readTime: "11 min read"
   },
@@ -159,7 +140,7 @@ export const posts: BlogPost[] = [
     title: "GenAI Online Evals: Canary What Matters",
     description: "Live evals in production with guardrails and rollback triggers tied to real outcomes.",
     category: "GenAI",
-    publishedAt: "2025-09-24",
+    publishedAt: "2025-09-29",
     featured: false,
     readTime: "7 min read"
   },

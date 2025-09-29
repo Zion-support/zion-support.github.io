@@ -14,9 +14,8 @@ import {
 import React, { useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
-// Fallbacks for missing components
-const Header = () => null;
-const Footer = () => null;
+const Header = () => <header />;
+const Footer = () => <footer />;
 
 interface BlogPost {
   id: number;
