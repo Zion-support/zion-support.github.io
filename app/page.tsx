@@ -39,6 +39,7 @@ import {
   AITechnologyBreakthroughBanner,
   EnterpriseAITransformationBanner
 } from '../components/PromotionalBanner';
+import LatestContent2026Banner from '../components/LatestContent2026Banner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -66,18 +67,18 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>🚀 NEW 2026 Content:</span>
-            <a to="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
+            <Link href="/blog/ai-neural-interfaces-2026" className="underline hover:text-yellow-200">Neural Interfaces</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</a>
+            <Link href="/blog/ai-space-tech-2026" className="underline hover:text-yellow-200">Space AI</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</a>
+            <Link href="/blog/ai-synthetic-data-2026" className="underline hover:text-yellow-200">Synthetic Data</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</Link>
+            <Link href="/case-studies/ai-neural-interface-healthcare-2026" className="underline hover:text-yellow-200">$15M Healthcare ROI</Link>
             <span className="hidden md:inline">•</span>
-            <a to="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</a>
+            <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</Link>
           </div>
           <Link
-            to="/blog"
+            href="/blog"
             className="bg-white text-green-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
           >
             Read the latest
@@ -85,6 +86,7 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <LatestContent2026Banner />
       <NewContent2026Banner />
       <AINeuralArchitectureBanner />
       <AISpaceTechBanner />
