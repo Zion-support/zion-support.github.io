@@ -214,7 +214,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
                 <select
                   value={userPreferences.theme}
                   onChange={(e) =>
-                    handlePreferenceChange("theme", e.target.value)
+                    handlePreferenceChange("theme", e.target.value as UserPreferences['theme'])
                   }
                   className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
@@ -230,7 +230,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
                 <select
                   value={userPreferences.performance}
                   onChange={(e) =>
-                    handlePreferenceChange("performance", e.target.value)
+                    handlePreferenceChange("performance", e.target.value as UserPreferences['performance'])
                   }
                   className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
@@ -249,7 +249,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
                 <select
                   value={userPreferences.fontSize}
                   onChange={(e) =>
-                    handlePreferenceChange("fontSize", e.target.value)
+                    handlePreferenceChange("fontSize", e.target.value as UserPreferences['fontSize'])
                   }
                   className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
@@ -265,7 +265,7 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
                 <select
                   value={userPreferences.contrast}
                   onChange={(e) =>
-                    handlePreferenceChange("contrast", e.target.value)
+                    handlePreferenceChange("contrast", e.target.value as UserPreferences['contrast'])
                   }
                   className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >

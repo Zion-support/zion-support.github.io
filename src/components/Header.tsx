@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { Sparkles, X, Menu } from 'lucide-react';
 import HeaderPromoBanner from './HeaderPromoBanner';
 
 export default function Header() {
