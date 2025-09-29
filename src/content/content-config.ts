@@ -503,6 +503,19 @@ export const services: Service[] = [
 // Promotional Banners Configuration
 export const promotionalBanners: PromotionalBanner[] = [
   {
+    id: 'fresh-oct-29-2025-command-center-privacy',
+    message: '🚀 New: AI Incident Command Center 2026 + Edge Privacy Playbooks',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-fuchsia-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
     id: 'fresh-oct-29-2025-ai-sre',
     message: '🛠️ New: AI SRE Blueprints 2026 + Privacy‑First A/B Testing',
     ctaText: 'Read the latest',

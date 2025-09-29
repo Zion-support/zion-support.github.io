@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-incident-command-center-2026",
+    slug: "ai-incident-command-center-2026",
+    title: "AI Incident Command Center 2026: Faster Containment, Fewer Surprises",
+    description: "Stand up a command center with budgeted actions, live traces, and rollback-ready playbooks that contain incidents in under 60 seconds.",
+    excerpt: "Close the loop from detections to safe actions with KPI‑wired incident budgets and rollbacks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-29",
+    category: "Security",
+    tags: ["Incident Response", "Automation", "Guardrails"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-incident-command-center-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-privacy-playbooks-2026",
+    slug: "edge-privacy-playbooks-2026",
+    title: "Edge Privacy Playbooks 2026: Scoped IDs, Local Filters, DP Noise",
+    description: "Practical patterns to keep insights rich and risk low with on‑device filtering, scoped identifiers, and differential privacy.",
+    excerpt: "Ship privacy‑first analytics and personalization without PII using scoped IDs and local filters.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-29",
+    category: "Edge Computing",
+    tags: ["Privacy", "Edge", "Telemetry"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/edge-privacy-playbooks-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-safety-budgets-2026",
     slug: "ai-safety-budgets-2026",
     title: "AI Safety Budgets 2026: Guardrails That Don’t Slow Teams",

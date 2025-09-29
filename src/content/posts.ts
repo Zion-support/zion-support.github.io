@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-incident-command-center-2026",
+    title: "AI Incident Command Center 2026: Faster Containment, Fewer Surprises",
+    description: "Budgeted actions, live traces, and rollback‑ready playbooks for <60s containment.",
+    category: "Security",
+    publishedAt: "2025-10-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-privacy-playbooks-2026",
+    title: "Edge Privacy Playbooks 2026: Scoped IDs, Local Filters, DP Noise",
+    description: "Practical patterns for signal‑rich analytics without PII using scoped IDs and on‑device filters.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "agent-blue-green-releases-2026",
     title: "Agent Blue‑Green Releases 2026: Safe, Reversible Automation",
     description: "Ship agent changes with policy tests, budgeted actions, and instant rollback toggles.",
