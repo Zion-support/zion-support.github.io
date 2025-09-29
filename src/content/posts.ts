@@ -387,7 +387,6 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "7 min read",
   },
-<<<<<<< HEAD
   {
     slug: "secure-ml-supply-chain-2025",
     title: "Securing the ML Supply Chain: Models, Data, and Dependencies",
@@ -438,8 +437,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read",
-  }
-=======
+  },
   // Summaries for newly added long-form content
   {
     slug: "ai-platform-engineering-2025",
@@ -471,6 +469,5 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "8 min read",
   },
->>>>>>> cursor/create-and-deploy-new-content-d0c7
 ];
 

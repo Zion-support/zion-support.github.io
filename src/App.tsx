@@ -1,18 +1,13 @@
-import React, { useState, useEffect, useMemo, useCallback, Suspense } from 'react';
-import { AppRouter } from './router';
-import './index.css';
-import { performanceMonitor } from './utils/performanceMonitor';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
-<<<<<<< HEAD
-import SEOOptimizer, { SEOOptimizerProps } from './components/SEOOptimizer';
-=======
-import SEOOptimizer, { SEOOptimizerProps } from './components/SEOOptimizer';
->>>>>>> cursor/check-fix-push-and-merge-to-main-2f87
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import SEOOptimizer, { SEOOptimizerProps } from './components/SEOOptimizer';
+import './index.css';
+import { AppRouter } from './router';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};
@@ -68,10 +63,6 @@ export default function App(): React.JSX.Element {
           break;
       }
       try {
-      if (enhancedSecurityManager && typeof (enhancedSecurityManager as any).initialize === 'function') {
-        (enhancedSecurityManager as any).initialize();
-      }
-
       // Initialize new performance and accessibility enhancements
       initializePerformanceEnhancements();
       accessibilityEnhancer.initialize();
