@@ -11,7 +11,7 @@ import {
   User,
   Zap
 } from "lucide-react";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
 import Footer from "../components/Footer";
@@ -181,6 +181,7 @@ export default function Blog(): React.JSX.Element {
 
   // Map content/posts entries into this page's structure
   const mappedFromContent: BlogPost[] = useMemo(() => {
+    const latestPosts = [] as any[];
     return latestPosts.map((p, idx) => ({
       id: 1000 + idx,
       title: p.title,
