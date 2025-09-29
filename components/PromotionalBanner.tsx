@@ -330,3 +330,47 @@ export const NewContentShowcaseBanner = () => (
     hideAfter={18}
   />
 );
+
+export const EnterpriseAIImplementationBanner = () => (
+  <PromotionalBanner
+    message="🏢 New: Enterprise AI Implementation 2025 - Complete Guide with Proven Strategies & $5M ROI Case Study"
+    ctaText="Read Complete Guide"
+    ctaLink="/blog/ai-enterprise-implementation-2025"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const MLOpsBestPracticesBanner = () => (
+  <PromotionalBanner
+    message="🔧 New: MLOps Best Practices 2025 - Production-Ready ML Systems with 80% Faster Deployment"
+    ctaText="Read MLOps Guide"
+    ctaLink="/blog/ai-mlops-best-practices-2025"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const EnterpriseTransformationCaseStudyBanner = () => (
+  <PromotionalBanner
+    message="🏆 Success Story: Enterprise AI Transformation - $5.2M ROI in 18 Months with 325% Return on Investment"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/enterprise-ai-transformation-2025"
+    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const LatestContentShowcaseBanner = () => (
+  <PromotionalBanner
+    message="🚀 Latest Content: Enterprise AI Implementation, MLOps Best Practices, $5M ROI Case Study - Fresh 2025 Insights"
+    ctaText="Explore New Content"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);

@@ -27,8 +27,22 @@ import {
   AIFinOpsBanner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
+<<<<<<< HEAD
+import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
+import { 
+  AICostCalculatorBanner,
+  AIImplementationPlaybookBanner,
+  SupplyChainOptimizationBanner,
+  AI2026TrendsBanner,
+  InteractiveAICalculatorBanner,
+  EnterpriseAIReadinessBanner
+} from '../components/NewContent2026Banners';
+=======
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
+>>>>>>> origin/cursor/bc-d8b8b197-abba-4070-a81e-32775fc53025-85ad
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -59,10 +73,19 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+<<<<<<< HEAD
+      <AICostCalculatorBanner />
+      <AIImplementationPlaybookBanner />
+      <SupplyChainOptimizationBanner />
+      <InteractiveAICalculatorBanner />
+      <EnterpriseAIReadinessBanner />
+      <AI2026TrendsBanner />
+=======
       <LatestContentShowcaseBanner />
       <EnterpriseAIImplementationBanner />
       <MLOpsBestPracticesBanner />
       <EnterpriseTransformationCaseStudyBanner />
+>>>>>>> origin/cursor/bc-d8b8b197-abba-4070-a81e-32775fc53025-85ad
       <NewContentShowcaseBanner />
       <AIRoadmapsBanner />
       <AIFinOpsBanner />
@@ -735,6 +758,9 @@ export default function HomePage() {
       </section>
 
       {/* Enhanced Newsletter Signup */}
+<<<<<<< HEAD
+      <EnhancedNewsletterSignup />
+=======
       <section className="py-20 bg-gradient-to-r from-blue-600 to-teal-600 text-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -806,6 +832,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+>>>>>>> origin/cursor/bc-d8b8b197-abba-4070-a81e-32775fc53025-85ad
 
       {/* Additional Promotional Banners */}
       <AnalyticsPlatformBanner />
