@@ -34,7 +34,19 @@ import {
   FinOpsAdvancedBanner,
   PlatformArchitectureBanner,
   AutonomousOperationsSuccessBanner,
-  NewContentShowcaseBanner2026
+  NewContentShowcaseBanner2026,
+  LatestContent2026Banner,
+  AISecurityEnterprise2026Banner,
+  AIMultimodalEnterprise2026Banner,
+  AISustainabilityTransformationBanner,
+  NewLatest2026ContentBanner,
+  AIAutonomousCloudOpsBanner,
+  AIFinTechTransformationBanner,
+  AIRetailAutomationBanner,
+  Latest2026ContentBanner,
+  AIOperationalExcellenceBanner,
+  AIAgentObservabilityBanner,
+  ManufacturingTransformationBanner
 } from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
@@ -227,6 +239,30 @@ export default function HomePage() {
               price="$1,299/month"
               features={['95% Automation', 'Fraud Detection', 'Real-time Reporting']}
               href="/services/ai-finance-automation"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="AI Autonomous Cloud Operations"
+              description="Self-managing infrastructure with 99.9% uptime and 90% cost reduction"
+              price="$2,499/month"
+              features={['Self-Healing Systems', 'Predictive Maintenance', 'Zero-Touch Ops']}
+              href="/services/ai-autonomous-cloud-ops"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="AI FinTech Transformation"
+              description="Complete digital banking revolution with 95% automation and $5M+ savings"
+              price="$3,999/month"
+              features={['Digital Banking', 'AI Automation', 'Risk Management']}
+              href="/services/ai-fintech-transformation"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="AI Retail Automation"
+              description="Transform retail operations with 98% automation and $8M ROI"
+              price="$2,999/month"
+              features={['Inventory Management', 'Customer Service', 'Predictive Analytics']}
+              href="/services/ai-retail-automation"
               popular={false}
             />
           </div>
