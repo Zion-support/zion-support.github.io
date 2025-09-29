@@ -54,76 +54,22 @@ export default function BlogPage() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <BlogPost
-            title="Secure ML Supply Chain 2026: End‑to‑End Hardening Blueprint"
-            excerpt="Signed artifacts, policy tests, SBOMs, and continuous verification across data, models, and runtime."
-            date="October 9, 2025"
-            category="Security"
-            readTime="10 min"
-            image="🔐"
-            href="/blog/secure-ml-supply-chain-2026"
-          />
-          <BlogPost
-            title="AI Platform ROI 2025: Measuring Value from Token to Revenue"
-            excerpt="Trace tokens to business value with platform scorecards that link cost, latency, and quality to revenue."
-            date="September 29, 2025"
-            category="Analytics"
-            readTime="10 min"
-            image="💹"
-            href="/blog/ai-platform-roi-2025"
-          />
-          <BlogPost
-            title="AI Governance Maturity Model 2026: From Ad Hoc to Auditable"
-            excerpt="Staged model to implement accountable AI across policy, risk, security, ops, and value."
-            date="September 29, 2025"
-            category="Governance"
-            readTime="14 min"
-            image="📈"
-            href="/blog/ai-governance-maturity-model-2026"
-          />
-          <BlogPost
-            title="AI Agent Observability 2026: Metrics, Traces, and Guardrails"
-            excerpt="Instrument agents with traces, evals, and policy guardrails to ship reliable autonomy."
+            title="LLM Evaluation 2026: From Offline Scores to Live Quality Gates"
+            excerpt="Evolve evals into continuous, production quality gates with contracts, canaries, and live scorecards."
             date="September 29, 2025"
             category="AI Reliability"
-            readTime="12 min"
-            image="🔎"
-            href="/blog/ai-agent-observability-2026"
+            readTime="14 min"
+            image="📏"
+            href="/blog/ai-llm-evaluation-2026"
           />
           <BlogPost
-            title="Customer Journey AI 2026: Real-Time Personalization with CDPs"
-            excerpt="Event-driven CDPs + agents for next-best-action that lifts conversion 20–35%."
+            title="Agent Benchmarking 2026: Tasks, Trails, and Real-World Scores"
+            excerpt="Benchmark agents with goal‑conditioned tasks, replayable trails, and outcome scores that predict field success."
             date="September 29, 2025"
-            category="Personalization"
-            readTime="14 min"
-            image="🛒"
-            href="/blog/ai-customer-journey-ai-2026"
-          />
-          <BlogPost
-            title="Agentic Workflow Orchestration 2026: Reliable AI Workflows"
-            excerpt="Orchestrate multi-step agents with guardrails, approvals, and observability for measurable ROI."
-            date="October 9, 2025"
-            category="Architecture"
+            category="Autonomous AI"
             readTime="16 min"
-            image="🧩"
-            href="/blog/agentic-workflow-orchestration-2026"
-          />
-          <BlogPost
-            title="AI Operational Excellence 2026: From SLIs to Self‑Healing Ops"
-            excerpt="Reliability scorecards, policy tests, and automated runbooks for 99.9% uptime."
-            date="October 9, 2025"
-            category="Operations"
-            readTime="14 min"
-            image="🛠️"
-            href="/blog/ai-operational-excellence-2026"
-          />
-          <BlogPost
-            title="AI Customer Data Platforms 2026: Real‑Time Personalization"
-            excerpt="Consent‑aware ingestion, identity resolution, feature stores, and edge delivery."
-            date="October 9, 2025"
-            category="Analytics"
-            readTime="18 min"
-            image="🧬"
-            href="/blog/ai-customer-data-platforms-2026"
+            image="🧪"
+            href="/blog/agent-benchmarking-2026"
           />
           <BlogPost
             title="Platform Engineering Scorecards 2026: From Golden Paths to Outcomes"
