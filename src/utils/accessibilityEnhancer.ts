@@ -108,10 +108,6 @@ export class AccessibilityEnhancer {
     });
   }
 
-      }
-      previousLevel = currentLevel;
-    });
-  }
 
   private checkColorContrast(element: Element): void {
     // Basic color contrast check (simplified)
