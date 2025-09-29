@@ -1,6 +1,6 @@
 [build]
-  # Publish prebuilt dist without running a build (cache refresh)
-  command = "echo \"Skipping build; deploying prebuilt dist\""
+  # Publish prebuilt dist without running a build
+  command = "echo Skipping build - deploying prebuilt dist"
   publish = "dist"
   command_timeout = "30m"
 
