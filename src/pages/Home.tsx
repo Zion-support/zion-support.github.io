@@ -104,8 +104,13 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
+<<<<<<< HEAD
           title="🚀 New today: AI Governance Risk Playbook, Edge Observability, Cost‑Aware MLOps"
           description="Plus two fresh Insights: Evaluation Guardrails Blueprint and an Edge Rollouts checklist."
+=======
+          title="🚀 NEW: AI Governance, Edge Flags, and GenAI Telemetry posts"
+          description="Fresh articles and quick insights just landed. See what's new this week."
+>>>>>>> cursor/create-and-deploy-new-content-a1d5
           ctaText="Read the latest"
           ctaLink="/blog"
           dismissible={true}
