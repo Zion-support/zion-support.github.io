@@ -55,6 +55,24 @@ export default function BlogPage() {
             href="/blog/ai-roadmaps-2026"
           />
           <BlogPost
+            title="Reliable RAG 2025: Production Patterns for Grounded Answers"
+            excerpt="Reduce hallucinations and latency with hardened RAG patterns: contracts, caching, routing, and evals."
+            date="September 29, 2025"
+            category="AI Platforms"
+            readTime="9 min"
+            image="📚"
+            href="/blog/ai-reliable-rag-2025"
+          />
+          <BlogPost
+            title="AI Agent Safety Blueprint 2026: Guardrails for Reliable Autonomy"
+            excerpt="Blueprint for safe autonomous agents with policy gates, audits, and progressive autonomy."
+            date="September 29, 2025"
+            category="AI Reliability"
+            readTime="9 min"
+            image="🛡️"
+            href="/blog/ai-agent-safety-blueprint-2026"
+          />
+          <BlogPost
             title="AI FinOps Scorecards 2025: Control LLM Spend Without Slowing Teams"
             excerpt="Practical scorecards and controls to cut LLM costs 30–70% with team-friendly governance."
             date="September 29, 2025"

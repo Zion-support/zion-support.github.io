@@ -75,6 +75,58 @@ export const newContent2025: NewContentItem[] = [
     }
   },
   {
+    id: "reliable-rag-2025",
+    title: "Reliable RAG 2025: Production Patterns for Grounded Answers",
+    description: "Battle-tested RAG patterns for groundedness, latency, and cost in production.",
+    excerpt: "Reduce hallucinations and latency with hardened RAG patterns: contracts, caching, routing, and evals.",
+    type: "blog",
+    category: "AI Platforms",
+    tags: ["RAG", "Groundedness", "Latency", "Caching"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-09-29",
+    readTime: "9 min read",
+    author: "Zion Tech Group",
+    image: "/images/reliable-rag-2025.jpg",
+    url: "/blog/ai-reliable-rag-2025",
+    cta: {
+      primary: "Read Article",
+      secondary: "Get RAG Starter"
+    },
+    metrics: [
+      { label: "Groundedness", value: "+35%", description: "Citation coverage increase" },
+      { label: "P95 Latency", value: "< 300ms", description: "With caches + routing" },
+      { label: "Cost", value: "-40%", description: "Token spend reduction" }
+    ]
+  },
+  {
+    id: "ai-agent-safety-blueprint-2026",
+    title: "AI Agent Safety Blueprint 2026: Guardrails for Reliable Autonomy",
+    description: "Practical blueprint to ship safe autonomous agents with policy gates and audits.",
+    excerpt: "Blueprint for safe autonomy: policy-constrained planning, eval-gated execution, and HITL.",
+    type: "blog",
+    category: "AI Reliability",
+    tags: ["Agents", "Safety", "Governance", "HITL"],
+    featured: true,
+    newBadge: true,
+    trending: false,
+    publishedDate: "2025-09-29",
+    readTime: "9 min read",
+    author: "Zion Tech Group",
+    image: "/images/ai-agent-safety-blueprint-2026.jpg",
+    url: "/blog/ai-agent-safety-blueprint-2026",
+    cta: {
+      primary: "Read Article",
+      secondary: "Download Safety Kit"
+    },
+    metrics: [
+      { label: "Incidents", value: "-80%", description: "Reduction post-guardrails" },
+      { label: "Approvals", value: "HITL", description: "Progressive autonomy gates" },
+      { label: "Auditability", value: "100%", description: "Signed traces coverage" }
+    ]
+  },
+  {
     id: "quantum-machine-learning-guide",
     title: "Quantum Machine Learning: Breaking the Barriers of Classical Computing",
     description: "Explore how quantum machine learning is solving previously impossible problems and revolutionizing AI capabilities across industries.",

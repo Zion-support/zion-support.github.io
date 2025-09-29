@@ -4,6 +4,7 @@ import PerformanceOptimizer from './PerformanceOptimizer';
 import AccessibilityEnhancer from './AccessibilityEnhancer';
 import SEOEnhancer from './SEOEnhancer';
 import ContentShowcase from './ContentShowcase';
+import NewContentShowcase from '../src/components/NewContentShowcase';
 import { 
   NewBlogBanner, 
   AnalyticsPlatformBanner, 
@@ -307,6 +308,9 @@ export default function EnhancedHomePage({
         
         {/* Dynamic Content Showcase */}
         <ContentShowcase />
+
+        {/* New Content Highlights */}
+        <NewContentShowcase variant="compact" className="max-w-6xl mx-auto px-4" />
         
         {/* Enhanced Newsletter Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-teal-600 text-white relative overflow-hidden">
