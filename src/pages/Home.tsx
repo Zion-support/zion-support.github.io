@@ -116,22 +116,20 @@ const Home = () => {
         <LatestContentBanner 
           className="border-b border-white/10" 
           variant="info"
-          title="New: Serverless Inference Cost Playbook + Production RAG"
-          description="Cut inference spend 40–70% and ship RAG with freshness windows and hybrid search."
-          ctaText="Read now"
-          ctaLink="/blog/serverless-ai-inference-cost-playbook-2025"
+          autoRotate
+          rotationInterval={7000}
         />
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="Fresh: Cost Scorecards, GenAI Evals, Edge Vector Indexing"
-          description="New: platform cost scorecards, outcome‑predictive eval playbooks, and edge vector indexing patterns."
+          title="New: Agentic Workflows, Edge LLM Caching, ML SBOMs"
+          description="Reliable multi‑step agents, sub‑100ms prompts, and secure ML supply chains."
           ctaText="Explore new content"
           ctaLink="/blog/ai-risk-mitigation-playbook-2026"
           featuredItems={[
-            { title: "AI Platform Cost Scorecards 2026", category: "Cloud", link: "/blog/ai-platform-cost-scorecards-2026" },
-            { title: "GenAI Evaluation Playbooks 2026", category: "GenAI", link: "/blog/genai-evaluation-playbooks-2026" },
-            { title: "Edge Vector Indexing Patterns", category: "Architecture", link: "/blog/edge-vector-indexing-patterns-2025" },
+            { title: "Agentic Workflows Blueprint 2026", category: "GenAI", link: "/blog/agentic-workflows-blueprint-2026" },
+            { title: "Edge LLM Caching Blueprint", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" },
+            { title: "ML Supply Chain SBOMs", category: "AI Security", link: "/blog/ml-supply-chain-sbom-2026" },
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
