@@ -336,8 +336,25 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "9 min read",
   },
-=======
-  }
->>>>>>> feat/new-content-and-promo
+  {
+    slug: "ai-governance-at-scale-2025",
+    title: "AI Governance at Scale: Policies that Enable Speed",
+    description:
+      "A pragmatic operating model for evals, approvals, and audit that keeps teams shipping fast.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "edge-observability-blueprint-2025",
+    title: "Edge Observability Blueprint: Sub‑100ms with Confidence",
+    description:
+      "Tracing, synthetic probes, and cache telemetry that make edge platforms reliable at scale.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: false,
+    readTime: "6 min read",
+  },
 ];
 

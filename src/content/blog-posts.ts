@@ -31,6 +31,56 @@ Operationalize GenAI with observability that tracks quality, safety, and cost. L
     image: "/images/genai-telemetry.jpg"
   },
   {
+    slug: "ai-governance-at-scale-2025",
+    title: "AI Governance at Scale: Policies that Enable Speed",
+    description: "A pragmatic operating model for evals, approvals, and audit that keeps teams shipping fast.",
+    content: `
+# AI Governance at Scale: Policies that Enable Speed
+
+Move beyond blocker committees to policies-as-code, evaluation gates, and audit trails that allow fast iteration without sacrificing safety or compliance.
+
+## Operating Model
+- Policy tests in CI pre-merge
+- Risk-tiered approval paths
+- Online canaries with rollback triggers
+- Immutable audit trails
+
+## Outcomes
+- Faster cycle time with fewer incidents
+- Clear ownership and accountability
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Governance",
+    tags: ["Policy", "Evals", "Compliance", "Speed"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-governance-scale.jpg"
+  },
+  {
+    slug: "edge-observability-blueprint-2025",
+    title: "Edge Observability Blueprint: Sub‑100ms with Confidence",
+    description: "Tracing, synthetic probes, and cache telemetry that make edge platforms reliable at scale.",
+    content: `
+# Edge Observability Blueprint: Sub‑100ms with Confidence
+
+Instrument your edge to see what users see. Measure latency budgets, cache hit ratios, and tail behavior across POPs to ensure delightful performance globally.
+
+## Key Signals
+- Origin vs edge latency split
+- Cache hit/miss by route and POP
+- Synthetic user journeys per region
+- Error budgets per surface
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Architecture",
+    tags: ["Edge", "Observability", "Performance"],
+    featured: false,
+    readTime: "6 min read",
+    image: "/images/edge-observability.jpg"
+  },
+  {
     slug: "feature-flags-at-the-edge-2025",
     title: "Feature Flags at the Edge: Instant, Safe Rollouts",
     description: "Design flags for global low-latency delivery, safe rollbacks, and cohort experimentation.",

@@ -105,10 +105,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: AI Product Launch Checklist + MLOps in 45 Days"
-          description="New guides on taking AI pilots to production and shipping reliable models fast."
+          title="🚀 Fresh: AI Governance at Scale + Edge Observability Blueprint"
+          description="Policies that enable speed, and sub‑100ms reliability with real‑world telemetry."
           ctaText="Read the latest"
-          ctaLink="/blog/genai-evals-in-production-2025"
+          ctaLink="/blog/ai-governance-at-scale-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
