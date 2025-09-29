@@ -669,5 +669,14 @@ posts.push(
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "8 min read"
+  },
+  {
+    slug: "agentic-observability-scorecards-2026",
+    title: "Agentic Observability Scorecards 2026: Traces that Predict Outcomes",
+    description: "Design KPI‑linked traces and scorecards that prevent regressions without slowing teams.",
+    category: "Observability",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
   }
 );
