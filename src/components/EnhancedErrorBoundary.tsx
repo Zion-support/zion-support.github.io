@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 class EnhancedErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean }> {
   constructor(props: { children: React.ReactNode }) {
@@ -19,6 +19,4 @@ class EnhancedErrorBoundary extends React.Component<{ children: React.ReactNode 
     return this.props.children;
   }
 }
-
-export default EnhancedErrorBoundary;
 

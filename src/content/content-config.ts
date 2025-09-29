@@ -503,11 +503,11 @@ export const services: Service[] = [
 // Promotional Banners Configuration
 export const promotionalBanners: PromotionalBanner[] = [
   {
-    id: 'fresh-oct-29-2025-security-runbooks',
-    message: '🧰 New: AI Threat Hunting with LLMs + LLM Production Runbooks',
+    id: 'fresh-oct-29-2025-command-center-privacy',
+    message: '🚀 New: AI Incident Command Center 2026 + Edge Privacy Playbooks',
     ctaText: 'Read the latest',
     ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    backgroundColor: 'bg-gradient-to-r from-fuchsia-700 to-purple-700',
     textColor: 'text-white',
     showClose: true,
     autoHide: true,
@@ -946,11 +946,11 @@ export const promotionalBanners: PromotionalBanner[] = [
     priority: 3
   },
   {
-    id: 'january-2025-breakthrough-content',
-    message: '🚀 BREAKTHROUGH 2025: AI Autonomous Infrastructure, Quantum-AI Hybrid Computing, Zero Trust Security',
-    ctaText: 'Explore New Content',
+    id: 'breakthrough-2026-content-banner',
+    message: '🚀 BREAKTHROUGH 2026: Revolutionary AI Content & Services - 12 New Articles, 6 New Services, 6 Success Stories',
+    ctaText: 'Explore Now',
     ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-purple-600 to-pink-600',
+    backgroundColor: 'bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600',
     textColor: 'text-white',
     showClose: true,
     autoHide: true,
@@ -959,11 +959,11 @@ export const promotionalBanners: PromotionalBanner[] = [
     priority: 0
   },
   {
-    id: 'ai-autonomous-infrastructure-article',
-    message: '🤖 NEW: AI Autonomous Infrastructure 2025 - Self-Healing Systems That Scale',
-    ctaText: 'Read Article',
-    ctaLink: '/blog/ai-autonomous-infrastructure-2025',
-    backgroundColor: 'bg-gradient-to-r from-blue-600 to-cyan-600',
+    id: 'ai-platform-architecture-2026-banner',
+    message: '🏗️ NEW: AI Platform Architecture 2026 - Scalable Enterprise AI Infrastructure with 99.9% Uptime',
+    ctaText: 'Read Guide',
+    ctaLink: '/blog/ai-platform-architecture-2026',
+    backgroundColor: 'bg-gradient-to-r from-blue-600 to-purple-600',
     textColor: 'text-white',
     showClose: true,
     autoHide: true,
@@ -972,56 +972,56 @@ export const promotionalBanners: PromotionalBanner[] = [
     priority: 1
   },
   {
-    id: 'quantum-ai-hybrid-computing-article',
-    message: '⚛️ NEW: Quantum-AI Hybrid Computing 2025 - The Next Computing Frontier',
-    ctaText: 'Explore Guide',
-    ctaLink: '/blog/quantum-ai-hybrid-computing-2025',
+    id: 'multimodal-ai-2026-banner',
+    message: '🎯 NEW: Multimodal AI Applications 2026 - Text, Image, Audio & Video Intelligence with 90% Accuracy',
+    ctaText: 'Explore AI',
+    ctaLink: '/blog/ai-multimodal-applications-2026',
+    backgroundColor: 'bg-gradient-to-r from-purple-600 to-pink-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'ai-autonomous-infrastructure-2026-service',
+    message: '🤖 NEW SERVICE: AI Autonomous Infrastructure Platform - Self-Healing Systems with 99.9% Uptime',
+    ctaText: 'Explore Service',
+    ctaLink: '/services/ai-autonomous-infrastructure-platform',
+    backgroundColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 22,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'quantum-ai-hybrid-computing-2026-service',
+    message: '⚛️ NEW SERVICE: Quantum-AI Hybrid Computing - 1000x Faster Problem Solving with Revolutionary Capabilities',
+    ctaText: 'Learn More',
+    ctaLink: '/services/quantum-ai-hybrid-computing',
     backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
     textColor: 'text-white',
     showClose: true,
     autoHide: true,
-    hideAfter: 20,
+    hideAfter: 22,
     active: true,
-    priority: 1
+    priority: 2
   },
   {
-    id: 'ai-content-automation-article',
-    message: '📝 NEW: AI Content Automation 2025 - Scale Production 10x',
-    ctaText: 'Read Guide',
-    ctaLink: '/blog/ai-content-automation-2025',
+    id: 'enterprise-ai-platform-modernization-case-study',
+    message: '🏆 SUCCESS STORY: Enterprise AI Platform Modernization - Fortune 500 Achieves 95% Automation & $15M Savings',
+    ctaText: 'View Case Study',
+    ctaLink: '/case-studies/enterprise-ai-platform-modernization',
     backgroundColor: 'bg-gradient-to-r from-green-600 to-emerald-600',
     textColor: 'text-white',
     showClose: true,
     autoHide: true,
-    hideAfter: 20,
+    hideAfter: 25,
     active: true,
     priority: 2
-  },
-  {
-    id: 'retailmax-case-study',
-    message: '🏆 NEW CASE STUDY: RetailMax Achieves 99.9% Uptime with AI Autonomous Infrastructure',
-    ctaText: 'View Case Study',
-    ctaLink: '/case-studies/retailmax-ai-autonomous-infrastructure',
-    backgroundColor: 'bg-gradient-to-r from-orange-600 to-red-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 22,
-    active: true,
-    priority: 2
-  },
-  {
-    id: 'quantum-finance-case-study',
-    message: '💰 NEW CASE STUDY: Quantum Finance Delivers 35% Better Returns with AI',
-    ctaText: 'Read Case Study',
-    ctaLink: '/case-studies/quantum-finance-optimization',
-    backgroundColor: 'bg-gradient-to-r from-yellow-600 to-orange-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 22,
-    active: true,
-    priority: 3
   }
 ];
 
@@ -1051,19 +1051,18 @@ export const getContentByTag = (tag: string) => {
 // Import new content
 import { newBlogPosts2025, featuredBlogPosts, trendingBlogPosts } from './new-blog-posts-2025';
 import { newServices2025, featuredServices, trendingServices } from './new-services-2025';
-import { newContentJanuary2025, featuredNewContent, trendingNewContent } from './new-content-2025-january';
-import { newCaseStudies2025, featuredCaseStudies, trendingCaseStudies } from './new-case-studies-2025';
-import { newInsights2025, featuredInsights, trendingInsights } from './new-insights-2025';
+import { newContent2026January, featuredNewContent2026January, trendingNewContent2026January } from './new-content-2026-january';
+import { newServices2026, featuredServices2026, trendingServices2026 } from './new-services-2026';
 
 export const getRecentContent = (limit: number = 3) => {
   const allContent = [
     ...blogPosts.map(post => ({ ...post, type: 'blog' as const })),
     ...newBlogPosts2025.map(post => ({ ...post, type: 'blog' as const, date: post.publishedAt })),
-    ...newContentJanuary2025.map(post => ({ ...post, type: 'blog' as const, date: post.publishedAt })),
+    ...newContent2026January.map(item => ({ ...item, type: item.type as const, date: item.publishedDate })),
     ...caseStudies.map(study => ({ ...study, type: 'case-study' as const })),
-    ...newCaseStudies2025.map(study => ({ ...study, type: 'case-study' as const, date: study.publishedAt })),
     ...services.map(service => ({ ...service, type: 'service' as const })),
-    ...newServices2025.map(service => ({ ...service, type: 'service' as const, date: '2025-01-30' }))
+    ...newServices2025.map(service => ({ ...service, type: 'service' as const, date: '2025-01-30' })),
+    ...newServices2026.map(service => ({ ...service, type: 'service' as const, date: service.publishedDate }))
   ];
   
   return allContent

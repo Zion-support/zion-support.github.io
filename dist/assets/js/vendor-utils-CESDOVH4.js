@@ -1,1 +1,0 @@
-function r(e){var f,o,t="";if("string"==typeof e||"number"==typeof e)t+=e;else if("object"==typeof e)if(Array.isArray(e)){var n=e.length;for(f=0;n>f;f++)e[f]&&(o=r(e[f]))&&(t&&(t+=" "),t+=o)}else for(o in e)e[o]&&(t&&(t+=" "),t+=o);return t}function e(){for(var e,f,o=0,t="",n=arguments.length;n>o;o++)(e=arguments[o])&&(f=r(e))&&(t&&(t+=" "),t+=f);return t}export{e as c};

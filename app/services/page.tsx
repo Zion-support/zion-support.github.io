@@ -140,6 +140,50 @@ export default function ServicesPage() {
         'Reduce security incidents by 95%',
         '24/7 security monitoring'
       ]
+    },
+    {
+      id: 'ai-synthetic-data-generation',
+      title: 'AI Synthetic Data Generation',
+      description: 'Generate privacy-preserving synthetic data with 90% privacy protection and $3M+ savings.',
+      price: '$4,999',
+      features: [
+        'Privacy-Preserving Generation',
+        'Unlimited Scale Data',
+        'Regulatory Compliance',
+        'Custom Scenarios',
+        'Quality Validation',
+        'Real-time Generation'
+      ],
+      popular: false,
+      icon: '🔒',
+      benefits: [
+        '90% privacy protection guaranteed',
+        '50% faster AI development',
+        '$3M+ annual cost savings',
+        'Full GDPR/HIPAA compliance'
+      ]
+    },
+    {
+      id: 'ai-quantum-computing',
+      title: 'AI Quantum Computing Services',
+      description: 'Revolutionary quantum AI solutions delivering 1000x faster processing and unprecedented optimization capabilities.',
+      price: '$49,999',
+      features: [
+        '1000x Faster Processing',
+        'Quantum Optimization Algorithms',
+        'Real-time Decision Making',
+        'Advanced Quantum Models',
+        '24/7 Quantum Monitoring',
+        'Custom Quantum Development'
+      ],
+      popular: true,
+      icon: '⚛️',
+      benefits: [
+        '1000x processing speed increase',
+        '85% operational cost reduction',
+        '99.9% system uptime guarantee',
+        'Industry-leading competitive advantage'
+      ]
     }
   ];
 

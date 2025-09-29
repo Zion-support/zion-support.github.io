@@ -1,14 +1,19 @@
 import React from 'react';
 
-export interface Notification {
-  id: string;
-  message: string;
-  type?: 'info' | 'success' | 'warning' | 'error';
-}
+export type Notification = { id: string; message: string };
 
-const NotificationSystem: React.FC<{ notifications: Notification[]; onRemove: (id: string) => void }> = () => {
-  return null;
+type NotificationSystemProps = {
+  notifications: Notification[];
+  onRemove: (id: string) => void;
 };
 
-export default NotificationSystem;
-
+export default function NotificationSystem({ notifications, onRemove }: NotificationSystemProps): React.JSX.Element | null {
+  if (!notifications?.length) return null;
+  return (
+    <div aria-live="polite" aria-atomic="true">
+      {notifications.map((n) => (
+        <button key={n.id} onClick={() => onRemove(n.id)}>{n.message}</button>
+      ))}
+    </div>
+  );
+}

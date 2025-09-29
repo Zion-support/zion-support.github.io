@@ -396,6 +396,120 @@ export const newContent2025: NewContentItem[] = [
         description: "Faster transaction processing"
       }
     ]
+  },
+  {
+    id: "ai-enterprise-transformation-2025",
+    title: "AI Enterprise Transformation 2025: Complete Implementation Guide",
+    description: "Master AI enterprise transformation with proven strategies, frameworks, and real-world success stories. Transform your business with AI in 2025.",
+    excerpt: "Enterprise AI transformation in 2025 requires a strategic approach that goes beyond technology adoption. This comprehensive guide provides proven frameworks, implementation strategies, and real-world case studies.",
+    type: "blog",
+    category: "AI Strategy",
+    tags: ["AI Transformation", "Enterprise AI", "Digital Transformation", "Business Strategy"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-01-20",
+    readTime: "18 min read",
+    author: "Zion Tech Group Team",
+    image: "/images/ai-enterprise-transformation-2025.jpg",
+    url: "/blog/ai-enterprise-transformation-2025",
+    cta: {
+      primary: "Read Full Article",
+      secondary: "Download Whitepaper"
+    },
+    metrics: [
+      {
+        label: "Average ROI",
+        value: "300%",
+        description: "Typical return on AI investments"
+      },
+      {
+        label: "Process Efficiency",
+        value: "85%",
+        description: "Average efficiency improvement"
+      },
+      {
+        label: "Annual Savings",
+        value: "$2.5M",
+        description: "Average cost savings achieved"
+      }
+    ]
+  },
+  {
+    id: "ai-autonomous-operations-2025",
+    title: "AI Autonomous Operations 2025: Building Self-Healing Infrastructure",
+    description: "Learn how to implement AI-powered autonomous operations for self-healing, self-optimizing infrastructure. Reduce downtime by 90% with autonomous systems.",
+    excerpt: "Autonomous operations represent the next evolution in infrastructure management. By leveraging AI to create self-healing, self-optimizing, and self-scaling systems, organizations can achieve unprecedented levels of reliability.",
+    type: "blog",
+    category: "AI Operations",
+    tags: ["Autonomous Operations", "Self-Healing", "Infrastructure", "AI Operations"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-01-20",
+    readTime: "15 min read",
+    author: "Zion Tech Group Team",
+    image: "/images/ai-autonomous-operations-2025.jpg",
+    url: "/blog/ai-autonomous-operations-2025",
+    cta: {
+      primary: "Read Article",
+      secondary: "Get Assessment"
+    },
+    metrics: [
+      {
+        label: "Downtime Reduction",
+        value: "90%",
+        description: "Average downtime improvement"
+      },
+      {
+        label: "Uptime Achieved",
+        value: "99.99%",
+        description: "System availability"
+      },
+      {
+        label: "Resolution Time",
+        value: "< 15 seconds",
+        description: "Mean time to resolution"
+      }
+    ]
+  },
+  {
+    id: "ai-supply-chain-optimization-2025",
+    title: "AI Supply Chain Optimization: 60% Cost Reduction Case Study",
+    description: "See how a Fortune 500 manufacturer achieved 60% cost reduction and 95% efficiency improvement using AI-powered supply chain optimization.",
+    excerpt: "A Fortune 500 manufacturer transformed their global supply chain operations using AI-powered optimization, achieving unprecedented cost savings and efficiency improvements.",
+    type: "case-study",
+    category: "Manufacturing",
+    tags: ["Supply Chain", "AI Optimization", "Manufacturing", "Cost Reduction"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-01-20",
+    readTime: "8 min read",
+    author: "Zion Tech Group Team",
+    image: "/images/ai-supply-chain-optimization-2025.jpg",
+    url: "/case-studies/ai-supply-chain-optimization-2025",
+    cta: {
+      primary: "View Case Study",
+      secondary: "Get Assessment"
+    },
+    metrics: [
+      {
+        label: "Cost Reduction",
+        value: "60%",
+        description: "Total operational cost savings"
+      },
+      {
+        label: "Efficiency Gain",
+        value: "95%",
+        description: "Process efficiency improvement"
+      },
+      {
+        label: "Annual Savings",
+        value: "$12M",
+        description: "Total cost savings achieved"
+      }
+    ]
   }
   ,
   {
@@ -477,6 +591,64 @@ export const newContent2025: NewContentItem[] = [
     ]
   }
 ];
+
+// Append newly published 2026 content surfaced on the homepage banners
+newContent2025.unshift(
+  {
+    id: "edge-llm-safety-caching-2026",
+    title: "Edge LLM Safety Caching 2026: Sub‑100ms with Guardrails",
+    description: "Tiered caches, signed configs, and privacy filters for fast, safe prompts at the edge.",
+    excerpt: "Cut latency and cost while keeping privacy and reliability high using edge safety caches.",
+    type: "blog",
+    category: "Architecture",
+    tags: ["Edge", "Caching", "Privacy"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-10-18",
+    readTime: "7 min read",
+    author: "Zion Tech Group",
+    image: "/images/edge-llm-safety-caching-2026.jpg",
+    url: "/blog/edge-llm-safety-caching-2026",
+    cta: { primary: "Read Article" }
+  },
+  {
+    id: "platform-slo-guardrails-2026",
+    title: "Platform SLO Guardrails 2026: Scorecards that Prevent Regressions",
+    description: "Wire SLOs to adoption and delivery with PR checks, canaries, and rollback triggers.",
+    excerpt: "A practical system of SLO guardrails that teams adopt and leaders trust.",
+    type: "blog",
+    category: "Platform Engineering",
+    tags: ["SLOs", "Scorecards", "Guardrails"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-10-18",
+    readTime: "8 min read",
+    author: "Zion Tech Group",
+    image: "/images/platform-slo-guardrails-2026.jpg",
+    url: "/blog/platform-slo-guardrails-2026",
+    cta: { primary: "Read Article" }
+  },
+  {
+    id: "secure-tool-marketplace-2026",
+    title: "Secure Tool Marketplace 2026: Sandboxes, Vetting, and Attestations",
+    description: "Bring third‑party tools safely with sandboxes, policy checks, and signed attestations.",
+    excerpt: "Grow your ecosystem without sacrificing security or delivery speed.",
+    type: "blog",
+    category: "Security",
+    tags: ["Marketplace", "Security", "Sandbox"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    publishedDate: "2025-10-18",
+    readTime: "7 min read",
+    author: "Zion Tech Group",
+    image: "/images/secure-tool-marketplace-2026.jpg",
+    url: "/blog/secure-tool-marketplace-2026",
+    cta: { primary: "Read Article" }
+  }
+);
 
 export const featuredNewContent = newContent2025.filter(item => item.featured);
 export const trendingNewContent = newContent2025.filter(item => item.trending);
