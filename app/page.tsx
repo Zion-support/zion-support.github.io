@@ -1,16 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-import MegaContent2026Banner from '../components/MegaContent2026Banner';
-import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
-=======
 import { Clock, ArrowRight } from 'lucide-react';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import { NewContent2026PromotionalBanners } from '../components/NewContent2026PromotionalBanners';
-<<<<<<< HEAD
 import AIInnovation2026PromotionalBanner from '../components/AIInnovation2026PromotionalBanner';
-=======
->>>>>>> cursor/create-and-deploy-new-content-ff76
 import {
   NewBlogBanner,
   AnalyticsPlatformBanner,
