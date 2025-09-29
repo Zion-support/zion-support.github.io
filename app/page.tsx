@@ -11,6 +11,7 @@ import InteractiveContentRecommendation from '../components/InteractiveContentRe
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
+import Latest2026ContentBanner from '../components/Latest2026ContentBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -26,15 +27,15 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ NEW 2026:</span>
-            <Link href="/blog/ai-autonomous-infrastructure-2026" className="underline hover:text-yellow-200">Autonomous Infrastructure</Link>
+            <Link href="/blog/ai-autonomous-ai-systems-2026" className="underline hover:text-yellow-200">Autonomous AI Systems</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-quantum-hybrid-computing-2026" className="underline hover:text-yellow-200">Quantum AI</Link>
+            <Link href="/blog/ai-cognitive-computing-2026" className="underline hover:text-yellow-200">Cognitive Computing</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-zero-trust-security-2026" className="underline hover:text-yellow-200">Zero Trust Security</Link>
+            <Link href="/blog/ai-neural-interfaces-2026" className="underline hover:text-yellow-200">Neural Interfaces</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-foundation-models-2026" className="underline hover:text-yellow-200">Foundation Models Playbook</Link>
+            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200">$25M ROI Success</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-autonomous-enterprise-transformation-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
+            <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M Green ROI</Link>
           </div>
           <Link
             href="/blog"
@@ -49,6 +50,9 @@ export default function HomePage() {
       
       {/* Latest 2026 Content Banner */}
       <LatestContent2026Banner />
+      
+      {/* Latest 2026 Content Showcase */}
+      <Latest2026ContentBanner />
       
       {/* New Content Promotional Banners */}
       <NewContent2026PromotionalBanners />
