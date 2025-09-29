@@ -2,64 +2,68 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Governance Maturity Model 2026: From Ad Hoc to Auditable',
-  description:
-    'A pragmatic maturity model for AI governance in 2026 with clear capabilities, metrics, and controls across policy, risk, security, and value.',
+  title: 'AI Governance Maturity Model 2026 — Enterprise Guide',
+  description: 'A practical maturity model to evolve AI governance from ad-hoc controls to audit-ready, value-aligned operations in 2026.',
 };
 
 export default function AIGovernanceMaturityModel2026Page() {
   return (
-    <div className="animate-fade-in">
-      <div className="text-center mb-16 py-12 bg-gradient-to-br from-indigo-50 to-blue-50">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          AI Governance Maturity Model 2026: From Ad Hoc to Auditable
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Establish accountable AI with staged capabilities across policy, risk, security, privacy,
-          operations, and value measurement.
-        </p>
-        <div className="mt-4 text-sm text-gray-500">September 29, 2025 • 14 min read</div>
+    <div className="max-w-3xl mx-auto px-6 py-16">
+      <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        AI Governance Maturity Model 2026
+      </h1>
+      <p className="text-lg text-gray-700 mb-8">
+        Advance your AI program across five maturity levels: from ad-hoc experimentation to
+        enterprise-grade, audit-ready operations with measurable business value. Use this guide to
+        benchmark current capabilities and prioritize next actions.
+      </p>
+
+      <div className="space-y-8">
+        <section>
+          <h2 className="text-2xl font-semibold mb-3">Maturity Levels</h2>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li><strong>Level 1 — Ad-hoc</strong>: isolated experiments, no controls, unknown risk.</li>
+            <li><strong>Level 2 — Emerging</strong>: basic policies, manual review, inconsistent metrics.</li>
+            <li><strong>Level 3 — Defined</strong>: standardized processes, model cards, risk registers.</li>
+            <li><strong>Level 4 — Managed</strong>: automated guardrails, lineage, and cost-quality tracking.</li>
+            <li><strong>Level 5 — Optimized</strong>: closed-loop improvement and ROI-linked governance.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold mb-3">Key Capabilities</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="p-5 rounded-lg border bg-white">
+              <h3 className="font-semibold mb-2">Guardrails & Approvals</h3>
+              <p className="text-gray-700">Role-based approvals, prompt policies, PII scrubbing, jailbreak detection.</p>
+            </div>
+            <div className="p-5 rounded-lg border bg-white">
+              <h3 className="font-semibold mb-2">Observability</h3>
+              <p className="text-gray-700">Trace tokens to revenue: latency, cost, quality, and user outcome metrics.</p>
+            </div>
+            <div className="p-5 rounded-lg border bg-white">
+              <h3 className="font-semibold mb-2">Risk & Compliance</h3>
+              <p className="text-gray-700">Model risk taxonomy, incident response, audit trails, data lineage.</p>
+            </div>
+            <div className="p-5 rounded-lg border bg-white">
+              <h3 className="font-semibold mb-2">Portfolio Management</h3>
+              <p className="text-gray-700">Value stream analytics, prioritization, and program-level ROI.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold mb-3">Next Steps</h2>
+          <ol className="list-decimal list-inside text-gray-700 space-y-2">
+            <li>Assess current level using a simple questionnaire per capability.</li>
+            <li>Define quarterly targets and fund high-ROI gaps first.</li>
+            <li>Automate measurements and alerts for drift, bias, and cost anomalies.</li>
+          </ol>
+        </section>
       </div>
 
-      <div className="max-w-3xl mx-auto px-4 prose prose-lg">
-        <h2>Maturity Levels</h2>
-        <ol>
-          <li>Level 1 – Ad Hoc: isolated pilots, no controls, unclear ownership.</li>
-          <li>Level 2 – Managed: basic policies, inventory, and change review.</li>
-          <li>Level 3 – Standardized: model registry, risk reviews, guardrails, monitoring.</li>
-          <li>Level 4 – Measured: KPIs for quality, cost, and value with SLOs.</li>
-          <li>Level 5 – Optimized: continuous improvement with evals, routing, and audits.</li>
-        </ol>
-
-        <h2>Capability Domains</h2>
-        <ul>
-          <li>Policy & Compliance: standards, approvals, exceptions, and training.</li>
-          <li>Risk Management: taxonomy, assessments, mitigations, and register.</li>
-          <li>Security & Privacy: threat modeling, data controls, PETs, and audits.</li>
-          <li>Operations: incident response, telemetry, SLOs, and oncall playbooks.</li>
-          <li>Value & Cost: ROI tracking, FinOps scorecards, and value stream analytics.</li>
-        </ul>
-
-        <h2>Scorecards & Metrics</h2>
-        <p>
-          Use quarterly scorecards to baseline teams. Track defect rates, incident MTTR, policy
-          exceptions, spend per 1K requests, and business outcomes tied to features.
-        </p>
-
-        <h2>Roadmap</h2>
-        <p>
-          Start with an AI inventory and ownership model, implement a lightweight review board, and
-          add guardrails with observable traces. Expand to standardized evaluations and cost controls.
-        </p>
-
-        <div className="not-prose mt-10">
-          <Link
-            href="/blog"
-            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Back to Blog
-          </Link>
-        </div>
+      <div className="mt-10">
+        <Link href="/blog" className="text-indigo-600 font-semibold hover:text-indigo-700">← Back to Blog</Link>
       </div>
     </div>
   );
