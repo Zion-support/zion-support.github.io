@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react";
-import { AdvancedPerformanceMonitor } from "../utils/advancedPerformanceMonitor";
-import { AdvancedAccessibilityEnhancer } from "../utils/advancedAccessibilityEnhancer";
-import { SecurityEnhancer } from "../utils/securityEnhancer";
-=======
 import React, { useState, useEffect } from 'react';
 import { AdvancedPerformanceMonitor } from '../utils/advancedPerformanceMonitor';
 import { AccessibilityEnhancer } from '../utils/accessibilityEnhancer';
 import { SecurityEnhancer } from '../utils/securityEnhancer';
->>>>>>> 560fc59d9c785b60bacd032c96f8fbb6b417bd56
 
 interface SystemMetricsDashboardProps {
   isVisible?: boolean;
@@ -39,7 +32,7 @@ export const SystemMetricsDashboard: React.FC<SystemMetricsDashboardProps> = ({
     if (isVisible) {
       const updateMetrics = () => {
         const perfMonitor = new AdvancedPerformanceMonitor();
-        const accEnhancer = new AdvancedAccessibilityEnhancer();
+        const accEnhancer = new AccessibilityEnhancer();
         const secEnhancer = new SecurityEnhancer();
 
         const perfMetrics = perfMonitor.getMetrics();
