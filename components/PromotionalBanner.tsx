@@ -523,3 +523,39 @@ export const AIEnterpriseAutomationBlueprintBanner = () => (
     hideAfter={15}
   />
 );
+
+export const AIEthicalFrameworkBanner = () => (
+  <PromotionalBanner
+    message="🛡️ NEW: AI Ethical Framework 2026 - Build trustworthy AI with 90% compliance & $3M savings"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-ethical-framework-2026"
+    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const AIEthicsSuccessBanner = () => (
+  <PromotionalBanner
+    message="📊 SUCCESS STORY: Fortune 500 achieves 90% AI compliance & $3M savings with ethical framework"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-ethical-framework-success-2026"
+    backgroundColor="bg-gradient-to-r from-emerald-600 to-green-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const NewContentShowcase2026Banner = () => (
+  <PromotionalBanner
+    message="🌟 FRESH 2026: Ethical AI Framework, Multimodal Integration & Success Stories - Premium Enterprise Content"
+    ctaText="Explore New Content"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={18}
+  />
+);

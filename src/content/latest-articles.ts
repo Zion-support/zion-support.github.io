@@ -49,6 +49,85 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+<<<<<<< HEAD
+    id: "ai-quantum-computing-2026",
+    slug: "ai-quantum-computing-2026",
+    title: "AI Quantum Computing 2026: Next-Generation Intelligence",
+    description: "Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.",
+    excerpt: "Learn how quantum-AI integration is transforming enterprise computing with unprecedented performance gains.",
+    author: "Zion Tech Group Team",
+    date: "2025-01-20",
+    category: "Quantum Computing",
+    tags: ["Quantum AI", "Quantum Computing", "Optimization", "Performance"],
+    featured: true,
+    readTime: "25 min read",
+    image: "/images/ai-quantum-computing-2026.jpg",
+=======
+    id: "edge-agent-observability-2026",
+    slug: "edge-agent-observability-2026",
+    title: "Edge Agent Observability 2026: Live Traces, Budgets, and Fallbacks",
+    description: "Observe multi‑tool agents with user‑centric traces, budgeted actions, and deterministic fallbacks at the edge.",
+    excerpt: "User‑centric traces and safety budgets for agents running at the edge.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-16",
+    category: "Edge Computing",
+    tags: ["Agents", "Observability", "Edge"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-agent-observability-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-preserving-feature-flags-2026",
+    slug: "privacy-preserving-feature-flags-2026",
+    title: "Privacy‑Preserving Feature Flags 2026: Geo Budgets and On‑Device Filters",
+    description: "Sub‑100ms, zero‑regret rollouts using scoped IDs, local filters, and telemetry‑driven rollback.",
+    excerpt: "Zero‑regret rollouts with privacy by design: scoped IDs and local filters.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-16",
+    category: "Architecture",
+    tags: ["Feature Flags", "Privacy", "Edge"],
+    featured: false,
+    readTime: "7 min read",
+    image: "/images/privacy-preserving-feature-flags-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-first-insights-telemetry-2026",
+    slug: "privacy-first-insights-telemetry-2026",
+    title: "Privacy‑First Insights 2026: Signal‑Rich Analytics Without PII",
+    description: "Scoped IDs, redaction, and retention windows that keep insights high and risk low.",
+    excerpt: "Ship analytics teams love without PII risk using scoped identifiers and filters.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-15",
+    category: "Observability",
+    tags: ["Privacy", "Telemetry", "Compliance"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/privacy-first-insights-telemetry-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "agent-blue-green-releases-2026",
+    slug: "agent-blue-green-releases-2026",
+    title: "Blue‑Green Releases for Agents: Safe Rollouts with Live Traces",
+    description: "Deploy agent updates with canaries, budgeted tool actions, and trace‑driven rollbacks.",
+    excerpt: "Reduce blast radius for agent updates with canaries, budgets, and rollbacks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-15",
+    category: "GenAI",
+    tags: ["Agents", "Releases", "Tracing"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/agent-blue-green-releases-2026.jpg",
+>>>>>>> origin/main
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-security-data-leak-prevention-2026",
     slug: "ai-security-data-leak-prevention-2026",
     title: "AI Security 2026: Data‑Leak Prevention with Scoped IDs and Egress Guards",
@@ -93,6 +172,38 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "9 min read",
     image: "/images/multimodal-agents-enterprise-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-cost-aware-inference-2026",
+    slug: "ai-cost-aware-inference-2026",
+    title: "Cost‑Aware Inference 2026: Warm Pools, Tiers, and SLAs",
+    description: "Cut inference cost 30–60% with adaptive batching, warm pools, and quality tiers under SLAs.",
+    excerpt: "Reduce GenAI spend without hurting P95 using warm pools and tiered quality.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["Inference", "Cost", "Optimization"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/serverless-inference-costs.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "production-rag-ops-2026",
+    slug: "production-rag-ops-2026",
+    title: "Production RAG Ops 2026: Freshness Windows and Drift Guards",
+    description: "Operate RAG reliably with TTL freshness windows, drift detection, and KPI‑linked budgets.",
+    excerpt: "Keep answers accurate with freshness windows, drift guards, and quality budgets.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["RAG", "Freshness", "Quality"],
+    featured: false,
+    readTime: "9 min read",
+    image: "/images/reliable-rag-ops-2026.jpg",
     newBadge: true,
     trending: true
   },
@@ -221,6 +332,7 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "7 min read",
     image: "/images/golden-paths-roi-2026.jpg",
+>>>>>>> cursor/create-and-deploy-new-content-d0aa
     newBadge: true,
     trending: true
   },
@@ -241,6 +353,8 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+<<<<<<< HEAD
+=======
     id: "agent-evals-scorecards-2026",
     slug: "agent-evals-scorecards-2026",
     title: "Agent Evals 2026: Scorecards That Predict Outcomes",
@@ -289,6 +403,7 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
+>>>>>>> cursor/create-and-deploy-new-content-d0aa
     id: "ai-incident-budgets-2026",
     slug: "ai-incident-budgets-2026",
     title: "AI Incident Budgets: Playbooks That Contain in <60s",
@@ -818,6 +933,55 @@ export const latestArticles: LatestArticle[] = [
   }
   ,
   {
+<<<<<<< HEAD
+    id: "secure-ml-supply-chain-2026",
+    slug: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
+    description: "Continuous SBOMs for models, datasets, and prompts with attestations and CI policy checks.",
+    excerpt: "A practical guide to securing the ML supply chain with provenance and guardrails.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Security",
+    tags: ["SBOM", "Supply Chain", "Security"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/secure-ml-supply-chain-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-routing-under-budgets-2026",
+    slug: "genai-routing-under-budgets-2026",
+    title: "Quality‑Tiered GenAI Routing: SLAs Without Bill Shock",
+    description: "Route prompts across model tiers with budgets, caches, and eval signals to control cost.",
+    excerpt: "Keep experience high under tight budgets with deterministic routing and caches.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Operations",
+    tags: ["Budgets", "Quality Tiers", "Routing"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/genai-routing-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "platform-golden-paths-kpis-2026",
+    slug: "platform-golden-paths-kpis-2026",
+    title: "Golden Paths That Move KPIs: Platform Engineering That Pays",
+    description: "Adoption metrics, TTFX, and SLOs as leading indicators of platform ROI in 2026.",
+    excerpt: "A scorecard system that links platform investments to shipped business outcomes.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "Platform Engineering",
+    tags: ["Golden Paths", "ROI", "Scorecards"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/platform-golden-paths-kpis-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+=======
     id: "ai-supply-chain-optimization-2025",
     slug: "ai-supply-chain-optimization-2025",
     title: "AI Supply Chain Optimization: 65% Faster Deliveries, 40% Lower Cost",
@@ -850,6 +1014,7 @@ export const latestArticles: LatestArticle[] = [
     trending: false
   }
   ,
+>>>>>>> cursor/create-and-deploy-new-content-d0aa
   {
     id: "ai-platform-scorecards-roi-2026",
     slug: "ai-platform-scorecards-roi-2026",
@@ -1141,6 +1306,42 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   }
 ];
+
+// Newly added featured articles (auto used by showcases and banners)
+latestArticles.unshift(
+  {
+    id: "ai-threat-hunting-with-llms-2026",
+    slug: "ai-threat-hunting-with-llms-2026",
+    title: "AI Threat Hunting with LLMs 2026: Signals, Sandboxes, and Speed",
+    description: "Augment analysts with safe LLM tooling, live traces, and budgeted actions for faster hunts.",
+    excerpt: "Operational playbooks to make LLMs an accelerator for your SOC—without extra risk.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "Security",
+    tags: ["Threat Hunting", "LLMs", "Security"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-threat-hunting-llms-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "llm-production-runbooks-2026",
+    slug: "llm-production-runbooks-2026",
+    title: "LLM Production Runbooks 2026: Rollbacks, Budgets, and Canary Evals",
+    description: "Battle‑tested runbooks for safe LLM releases—risk budgets, rollback triggers, and KPI‑linked canaries.",
+    excerpt: "Release LLM changes confidently with measurable guardrails and fast rollbacks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-13",
+    category: "AI Operations",
+    tags: ["Runbooks", "Evals", "Budgets"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/llm-production-runbooks-2026.jpg",
+    newBadge: true,
+    trending: true
+  }
+);
 
 export const featuredArticles = latestArticles.filter(article => article.featured);
 export const trendingArticles = latestArticles.filter(article => article.trending);
