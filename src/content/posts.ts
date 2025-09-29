@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "policy-driven-ai-deployments-2025",
+    title: "Policy‑Driven AI Deployments: Canary Checks That Track KPIs",
+    description: "Wire offline evals, PR checks, and prod canaries to real product KPIs for safe velocity.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "secure-prompt-supply-chains-2025",
+    title: "Secure Prompt Supply Chains: Attestations, SBOMs, Reproducible Builds",
+    description: "End‑to‑end provenance for prompts, tools, and datasets with signed attestations and SBOMs.",
+    category: "AI Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-agents-under-100ms-2025",
+    title: "Edge Agents Under 100ms: Deterministic Tools and Local Caches",
+    description: "Design privacy‑first edge agents with deterministic tools, signed configs, and warm caches.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-platform-slos-2026",
     title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
     description: "Design SLOs and risk budgets for AI systems with instant rollbacks and KPI‑linked canaries.",
