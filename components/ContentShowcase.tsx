@@ -20,8 +20,8 @@ interface ContentItem {
 const contentItems: ContentItem[] = [
   {
     id: 'ai-business-transformation-2025',
-    title: 'AI Business Transformation 2025: Complete Strategic Guide',
-    excerpt: 'Master AI transformation with our comprehensive 2025 guide. Learn proven strategies, implementation frameworks, and ROI optimization techniques that deliver 300% ROI improvement.',
+    title: 'AI Business Transformation 2025: Complete Implementation Guide',
+    excerpt: 'Transform your business with AI in 2025. Learn proven strategies, implementation frameworks, and real-world case studies for successful AI adoption.',
     type: 'article',
     readTime: '15 min read',
     category: 'AI Strategy',
@@ -29,37 +29,38 @@ const contentItems: ContentItem[] = [
     featured: true,
     publishedDate: '2025-01-20',
     metrics: [
-      { value: '300%', label: 'ROI Improvement' },
-      { value: '80%', label: 'Efficiency Gain' }
+      { value: '80%', label: 'Productivity Gain' },
+      { value: '40%', label: 'Cost Reduction' }
     ]
   },
   {
-    id: 'ai-customer-experience-2025',
-    title: 'AI-Powered Customer Experience 2025: Revolutionizing Customer Interactions',
-    excerpt: 'Discover how AI is transforming customer experience in 2025. Learn about advanced personalization, intelligent automation, and omnichannel strategies that deliver 90% customer satisfaction.',
-    type: 'article',
+    id: 'ai-automation-workflows-2025',
+    title: 'AI Automation Workflows 2025: Reduce Manual Work by 80%',
+    excerpt: 'Learn how to implement AI-powered workflow automation that reduces manual work by 80%. Complete guide with strategies, tools, and real-world examples.',
+    type: 'guide',
     readTime: '12 min read',
-    category: 'Customer Experience',
-    href: '/blog/ai-customer-experience-2025',
+    category: 'AI Automation',
+    href: '/blog/ai-automation-workflows-2025',
     featured: true,
     publishedDate: '2025-01-20',
     metrics: [
-      { value: '90%', label: 'Customer Satisfaction' },
-      { value: '70%', label: 'Cost Reduction' }
+      { value: '80%', label: 'Manual Work Reduction' },
+      { value: '60%', label: 'Faster Processing' }
     ]
   },
   {
-    id: 'enterprise-ai-transformation-2025',
-    title: 'Enterprise AI Transformation: 300% ROI in 12 Months',
-    excerpt: 'Learn how a Fortune 500 manufacturing company achieved unprecedented results through comprehensive AI transformation, including $15M in annual cost savings and 80% operational efficiency gains.',
-    type: 'case-study',
-    category: 'Enterprise AI',
-    href: '/case-studies/enterprise-ai-transformation-2025',
+    id: 'enterprise-ai-security-2025',
+    title: 'Enterprise AI Security 2025: Comprehensive Security Framework',
+    excerpt: 'Secure your AI systems with enterprise-grade security frameworks. Learn about AI security best practices, compliance, and threat protection strategies.',
+    type: 'article',
+    readTime: '18 min read',
+    category: 'AI Security',
+    href: '/blog/enterprise-ai-security-2025',
     featured: true,
     publishedDate: '2025-01-20',
     metrics: [
-      { value: '300%', label: 'ROI Achievement' },
-      { value: '$15M', label: 'Annual Savings' }
+      { value: '99%', label: 'Threat Protection' },
+      { value: '5', label: 'Security Layers' }
     ]
   },
   {

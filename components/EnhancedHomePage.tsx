@@ -18,9 +18,10 @@ import {
   RetailSuccessBanner,
   AIContentShowcaseBanner,
   AIRevolutionBanner,
-  AIGoToMarketBanner,
-  AIRoadmapsBanner,
-  AIFinOpsBanner
+  AIBusinessTransformationBanner,
+  AIWorkflowAutomationBanner,
+  EnterpriseAISecurityBanner,
+  NewContentShowcaseBanner
 } from './PromotionalBanner';
 import AITrends2025Banner from './AITrends2025Banner';
 import NewContentBanner from './NewContentBanner';
@@ -165,15 +166,11 @@ export default function EnhancedHomePage({
       )}
 
       <div className="animate-fade-in">
-        {/* New Content Promotional Banners */}
+        {/* Promotional Banners */}
+        <NewContentShowcaseBanner />
         <AIBusinessTransformationBanner />
-        <AICustomerExperienceBanner />
-        <EnterpriseAITransformationBanner />
-        <LatestAIInsightsBanner />
-        
-        {/* Existing Promotional Banners */}
-        <AITrends2025Banner />
-        <NewContentBanner />
+        <AIWorkflowAutomationBanner />
+        <EnterpriseAISecurityBanner />
         <AIContentShowcaseBanner />
         <CustomerServiceAIBanner />
         <HealthcareAIBanner />
