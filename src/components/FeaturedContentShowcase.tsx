@@ -48,6 +48,8 @@ export const FeaturedContentShowcase: React.FC<FeaturedContentShowcaseProps> = (
   ].sort((a, b) => new Date((b as any).date).getTime() - new Date((a as any).date).getTime())
    .slice(0, maxItems);
 
+  const featuredContent = allContent;
+
   const filteredContent = activeTab === 'all' ? allContent : 
     activeTab === 'blog' ? featuredBlogPosts.map(post => ({ ...post, type: 'blog' as const, date: post.date })) :
     latestInsightsList.map(insight => ({
