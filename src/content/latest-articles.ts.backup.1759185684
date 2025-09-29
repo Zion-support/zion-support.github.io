@@ -1,20 +1,15 @@
-export interface LatestArticle {
+export interface Article {
   id: string;
-  slug: string;
   title: string;
-  description: string;
-  excerpt: string;
-  author: string;
-  date: string;
+  summary: string;
   category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
-  image?: string;
-  newBadge?: boolean;
-  trending?: boolean;
+  date: string;
+  readMinutes: number;
+  featured?: boolean;
+  link: string;
 }
 
+<<<<<<< HEAD:src/content/latest-articles.ts.backup.1759185684
 export const latestArticles: LatestArticle[] = [
   // Sept 29, 2025 — New high-signal additions to advertise on Home & Blog
   {
@@ -591,18 +586,38 @@ export const latestArticles: LatestArticle[] = [
     image: "/images/enterprise-rag-v2.jpg",
     newBadge: true,
     trending: true
+=======
+export const latestArticles: Article[] = [
+  {
+    id: "ai-foundation-models-2026",
+    title: "AI Foundation Models 2026: Enterprise Implementation Guide",
+    summary: "Master AI foundation models with 90% cost reduction and 300% performance improvement.",
+    category: "AI Architecture",
+    date: "2026-01-15",
+    readMinutes: 25,
+    featured: true,
+    link: "/blog/ai-foundation-models-2026"
+  },
+  {
+    id: "ai-operational-excellence-2026",
+    title: "AI Operational Excellence 2026: 90% Automation & $8M+ Savings",
+    summary: "Achieve operational excellence with AI-driven automation and $8M+ annual savings.",
+    category: "AI Operations",
+    date: "2026-01-15",
+    readMinutes: 20,
+    featured: true,
+    link: "/blog/ai-operational-excellence-2026"
+>>>>>>> cursor/create-and-deploy-new-content-13ae:src/content/latest-articles.ts
   },
   {
     id: "ai-governance-scorecards-2026",
-    slug: "ai-governance-scorecards-2026",
-    title: "AI Governance 2026: Scorecards Engineers Actually Use",
-    description: "Practical guardrails wired to KPIs, PR checks, and online canaries that teams adopt.",
-    excerpt: "Move beyond heavy process. Ship fast with measurable guardrails, policy tests, and rollback‑ready canaries.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-07",
+    title: "AI Governance Scorecards Quickstart 2026",
+    summary: "Transform your business with AI-powered BI that delivers real-time insights.",
     category: "AI Strategy",
-    tags: ["Governance", "Policy", "Scorecards", "Evals"],
+    date: "2026-01-14",
+    readMinutes: 6,
     featured: true,
+<<<<<<< HEAD:src/content/latest-articles.ts.backup.1759185684
     readTime: "7 min read",
     image: "/images/ai-governance-scorecards-2026.jpg",
     newBadge: true,
@@ -1363,3 +1378,10 @@ export const newArticles = latestArticles.filter(article => article.newBadge);
   }
 ];
 >>>>>>> cursor/create-and-deploy-new-content-ff76:src/content/latest-articles.ts
+=======
+    link: "/blog/ai-governance-scorecards-quickstart-2026"
+  }
+];
+
+export default latestArticles;
+>>>>>>> cursor/create-and-deploy-new-content-13ae:src/content/latest-articles.ts

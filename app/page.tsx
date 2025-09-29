@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import MegaContent2026Banner from '../components/MegaContent2026Banner';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 =======
@@ -47,6 +48,13 @@ import {
   EdgeComputingOptimizationBanner,
   LatestContent2026Banner
 } from '../components/PromotionalBanner';
+=======
+import { Clock, ArrowRight } from 'lucide-react';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import { NewContent2026PromotionalBanners } from '../components/NewContent2026PromotionalBanners';
+import NewFoundationModelsBanner from '../components/NewFoundationModelsBanner';
+import AIOperationalExcellenceBanner from '../components/AIOperationalExcellenceBanner';
+>>>>>>> cursor/create-and-deploy-new-content-13ae
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -54,6 +62,9 @@ import InteractiveContentShowcase from '../components/InteractiveContentShowcase
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-13ae
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 =======
 import { EnhancedContentShowcase2026 } from '../components/EnhancedContentShowcase2026';
@@ -212,6 +223,15 @@ export default function HomePage() {
             <Link href="/blog/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">Quantum AI (1000x Faster)</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-autonomous-enterprise-2026" className="underline hover:text-yellow-200">Autonomous Enterprise</Link>
+<<<<<<< HEAD
+=======
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum AI</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-foundation-models-2026" className="underline hover:text-yellow-200">Foundation Models</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-foundation-models-success-2026" className="underline hover:text-yellow-200">$8M ROI Case Study</Link>
+>>>>>>> cursor/create-and-deploy-new-content-13ae
           </div>
           <Link
             href="/blog"
@@ -221,6 +241,7 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* Featured 2026 Content Banner */}
       <section className="py-16 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
@@ -620,6 +641,11 @@ export default function HomePage() {
 =======
       {/* New Content Promotional Banner 2026 */}
       {/* <NewContentPromotionalBanner2026 /> */}
+=======
+      
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
+>>>>>>> cursor/create-and-deploy-new-content-13ae
       
       {/* AI Innovation Showcase Banner 2026 */}
       {/* <AIInnovationShowcaseBanner2026 /> */}
@@ -627,8 +653,16 @@ export default function HomePage() {
       {/* Advanced AI Innovation Banner 2026 */}
       <AIAdvancedInnovationBanner2026 />
       
+<<<<<<< HEAD
       {/* Revolutionary Tech Showcase 2026 */}
       <RevolutionaryTechShowcase2026 />
+=======
+      {/* New Foundation Models Banner */}
+      <NewFoundationModelsBanner />
+      
+      {/* AI Operational Excellence Banner */}
+      <AIOperationalExcellenceBanner />
+>>>>>>> cursor/create-and-deploy-new-content-13ae
       
       {/* Ultimate Content Showcase 2026 */}
       <UltimateContentShowcase2026 />
@@ -916,6 +950,15 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Enhanced Content Showcase 2026 */}
+      <EnhancedContentShowcase2026 />
+      
+      {/* Dynamic Content Showcase */}
+      <ContentShowcase />
+      
+      {/* Interactive Content Hub */}
+      <InteractiveContentShowcase />
+
       {/* Featured Services */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -990,6 +1033,7 @@ export default function HomePage() {
               description="Automate financial processes with 95% accuracy and $3M+ savings"
               price="$1,299/month"
               features={['95% Automation', 'Fraud Detection', 'Real-time Reporting']}
+<<<<<<< HEAD
               href="/services/ai-finance-automation"
               popular={false}
             />
@@ -2617,6 +2661,19 @@ export default function HomePage() {
             >
               View All Content
             </Link>
+=======
+              to="/services/ai-finance-automation"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="AI Autonomous Cloud Operations"
+              description="Self-managing infrastructure with 99.9% uptime and 90% cost reduction"
+              price="$2,499/month"
+              features={['Self-Healing Systems', 'Predictive Maintenance', 'Zero-Touch Ops']}
+              href="/services/ai-autonomous-cloud-ops"
+              popular={true}
+            />
+>>>>>>> cursor/create-and-deploy-new-content-13ae
           </div>
         </div>
       </section>
@@ -2659,9 +2716,85 @@ export default function HomePage() {
               </Link>
             </div>
 
+<<<<<<< HEAD
             <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-100 to-indigo-100 rounded-xl flex items-center justify-center mx-auto mb-6">
                 <Zap className="w-8 h-8 text-purple-600" />
+=======
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-2xl font-bold mb-6">Latest Content Highlights</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="text-2xl">🔮</div>
+                    <div>
+                      <h4 className="font-semibold mb-1">AI Trends 2026</h4>
+                      <p className="text-sm opacity-90">The future of enterprise AI</p>
+                    </div>
+                  </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-2xl">📘</div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Foundation Models Playbook</h4>
+                    <p className="text-sm opacity-90">Practical guide to model selection & ops</p>
+                    <div className="mt-1">
+                      <Link href="/blog/ai-foundation-models-2026" className="underline">Read now →</Link>
+                    </div>
+                  </div>
+                </div>
+                  <div className="flex items-start gap-3">
+                    <div className="text-2xl">⚡</div>
+                    <div>
+                      <h4 className="font-semibold mb-1">AI Operational Excellence</h4>
+                      <p className="text-sm opacity-90">90% automation & $8M+ savings</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="text-2xl">🌐</div>
+                    <div>
+                      <h4 className="font-semibold mb-1">Edge AI Blueprint</h4>
+                      <p className="text-sm opacity-90">Sub-50ms latency intelligence</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="text-2xl">🏭</div>
+                    <div>
+                      <h4 className="font-semibold mb-1">Manufacturing IoT Success</h4>
+                      <p className="text-sm opacity-90">85% efficiency & $10M+ savings</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="text-2xl">🌱</div>
+                    <div>
+                      <h4 className="font-semibold mb-1">AI Sustainability Guide</h4>
+                      <p className="text-sm opacity-90">60% carbon footprint reduction</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="text-2xl">🤖</div>
+                    <div>
+                      <h4 className="font-semibold mb-1">AI Foundation Models</h4>
+                      <p className="text-sm opacity-90">90% cost reduction & $8M ROI</p>
+                      <div className="mt-1">
+                        <Link href="/blog/ai-foundation-models-2026" className="underline">Read now →</Link>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="text-2xl">⚙️</div>
+                    <div>
+                      <h4 className="font-semibold mb-1">AI Operational Excellence</h4>
+                      <p className="text-sm opacity-90">90% automation & $8M+ savings</p>
+                    </div>
+                  </div>
+                </div>
+              <div className="mt-6 pt-4 border-t border-white/20">
+                <Link
+                  href="/blog"
+                  className="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+                >
+                  View All Content →
+                </Link>
+>>>>>>> cursor/create-and-deploy-new-content-13ae
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Quantum Optimization</h3>
               <p className="text-gray-600 mb-6">
@@ -2697,6 +2830,7 @@ export default function HomePage() {
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       {/* Additional Promotional Banners */}
       <AnalyticsPlatformBanner />
@@ -2704,6 +2838,8 @@ export default function HomePage() {
       <ComprehensiveAIBanner />
 
 >>>>>>> cursor/create-and-deploy-new-content-ff76
+=======
+>>>>>>> cursor/create-and-deploy-new-content-13ae
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">

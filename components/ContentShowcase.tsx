@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
+=======
+import React from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-13ae
 import Link from 'next/link';
+import { ArrowRight, Clock, TrendingUp } from 'lucide-react';
 
+<<<<<<< HEAD
 interface ContentItem {
   id: string;
   title: string;
@@ -911,218 +917,131 @@ export default function ContentShowcase({
         setCurrentIndex((prev) => (prev + 1) % displayedItems.length);
       }, rotationInterval);
       return () => clearInterval(interval);
+=======
+export default function ContentShowcase() {
+  const featuredContent = [
+    {
+      id: 1,
+      title: "AI Foundation Models 2026: Enterprise Implementation Guide",
+      description: "Master AI foundation models with 90% cost reduction and 300% performance improvement.",
+      category: "AI Architecture",
+      readTime: "25 min",
+      link: "/blog/ai-foundation-models-2026",
+      featured: true,
+      metrics: {
+        costReduction: "90%",
+        performance: "300%"
+      }
+    },
+    {
+      id: 2,
+      title: "AI Operational Excellence 2026: 90% Automation & $8M+ Savings",
+      description: "Achieve operational excellence with AI-driven automation and $8M+ annual savings.",
+      category: "AI Operations",
+      readTime: "20 min",
+      link: "/blog/ai-operational-excellence-2026",
+      featured: true,
+      metrics: {
+        automation: "90%",
+        savings: "$8M+"
+      }
+    },
+    {
+      id: 3,
+      title: "AI Agent Orchestration 2026: Multi-Agent System Architecture",
+      description: "Master multi-agent systems with 95% automation efficiency and $5M+ ROI.",
+      category: "AI Engineering",
+      readTime: "22 min",
+      link: "/blog/ai-agent-orchestration-2026",
+      featured: true,
+      metrics: {
+        efficiency: "95%",
+        roi: "$5M+"
+      }
+>>>>>>> cursor/create-and-deploy-new-content-13ae
     }
-  }, [isRotating, displayedItems.length, rotationInterval]);
-
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'article':
-        return 'bg-blue-100 text-blue-800';
-      case 'guide':
-        return 'bg-emerald-100 text-emerald-800';
-      case 'case-study':
-        return 'bg-green-100 text-green-800';
-      case 'service':
-        return 'bg-purple-100 text-purple-800';
-      default:
-        return 'bg-gray-100 text-gray-800';
-    }
-  };
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'article':
-        return '📄';
-      case 'guide':
-        return '📚';
-      case 'case-study':
-        return '📈';
-      case 'service':
-        return '🚀';
-      default:
-        return '📄';
-    }
-  };
+  ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
+    <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 mb-6">
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+              ✨ FEATURED CONTENT
+            </span>
+          </div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            {title}
+            Latest AI Innovations & Success Stories
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {subtitle}
+            Discover cutting-edge AI strategies, real-world case studies, and breakthrough technologies 
+            that are transforming industries in 2026
           </p>
         </div>
 
-        {/* Auto-rotation Controls */}
-        {displayedItems.length > 1 && (
-          <div className="flex justify-center mb-8">
-            <button
-              onClick={() => setIsRotating(!isRotating)}
-              className={`px-4 py-2 rounded-lg font-semibold transition-colors ${
-                isRotating
-                  ? 'bg-blue-600 text-white hover:bg-blue-700'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
-            >
-              {isRotating ? '⏸️ Pause Auto-rotation' : '▶️ Start Auto-rotation'}
-            </button>
-          </div>
-        )}
-
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {displayedItems.map((item, index) => (
-            <div key={item.id}>
-              <ContentCard
-                item={item}
-                isActive={index === currentIndex}
-                showMetrics={showMetrics}
-                getTypeColor={getTypeColor}
-                getTypeIcon={getTypeIcon}
-              />
-            </div>
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          {featuredContent.map((content) => (
+            <Link key={content.id} href={content.link} className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW 2026
+                  </span>
+                  {content.featured && (
+                    <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                      FEATURED
+                    </span>
+                  )}
+                </div>
+                
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm text-blue-600 font-medium">📝 Article</span>
+                  <span className="text-sm text-gray-500">{content.category}</span>
+                </div>
+                
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  {content.title}
+                </h3>
+                
+                <p className="text-gray-600 text-sm mb-4">
+                  {content.description}
+                </p>
+                
+                <div className="flex gap-4 mb-4">
+                  {Object.entries(content.metrics).map(([key, value]) => (
+                    <div key={key} className="text-center">
+                      <div className="text-lg font-bold text-blue-600">{value}</div>
+                      <div className="text-xs text-gray-500 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Clock className="w-4 h-4 mr-1" />
+                    {content.readTime}
+                  </div>
+                  <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
+                    Read More →
+                  </div>
+                </div>
+              </div>
+            </Link>
           ))}
         </div>
 
-        {/* Rotation Indicators */}
-        {displayedItems.length > 1 && (
-          <div className="flex justify-center space-x-2 mb-12">
-            {displayedItems.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentIndex ? 'bg-blue-600' : 'bg-gray-300'
-                }`}
-                aria-label={`Go to content ${index + 1}`}
-              />
-            ))}
-          </div>
-        )}
-
-        {/* Action Buttons */}
-        <div className="text-center space-y-4">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/blog"
-              className="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg hover:shadow-xl"
-            >
-              View All Content
-            </Link>
-            <Link
-              href="/blog/ai-agents-in-the-enterprise-2025"
-              className="inline-block border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-600 hover:text-white transition-colors"
-            >
-              Read: AI Agents Playbook
-            </Link>
-            <Link
-              href="/case-studies"
-              className="inline-block border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-600 hover:text-white transition-colors"
-            >
-              View Case Studies
-            </Link>
-          </div>
-          
-          {/* Content Statistics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-8 border-t border-gray-200">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">25+</div>
-              <div className="text-sm text-gray-600">AI Articles</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">15+</div>
-              <div className="text-sm text-gray-600">Case Studies</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">30+</div>
-              <div className="text-sm text-gray-600">AI Services</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">100K+</div>
-              <div className="text-sm text-gray-600">Monthly Readers</div>
-            </div>
-          </div>
+        <div className="text-center">
+          <Link
+            href="/blog"
+            className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            <TrendingUp className="w-5 h-5 mr-2" />
+            Explore All Content
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </div>
     </section>
-  );
-}
-
-function ContentCard({
-  item,
-  isActive,
-  showMetrics,
-  getTypeColor,
-  getTypeIcon
-}: {
-  item: ContentItem;
-  isActive: boolean;
-  showMetrics: boolean;
-  getTypeColor: (type: string) => string;
-  getTypeIcon: (type: string) => string;
-}) {
-  return (
-    <Link href={item.href} className="group">
-      <div className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 ${
-        isActive ? 'ring-2 ring-blue-500 transform scale-105' : ''
-      }`}>
-        {/* Header */}
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-2">
-            <span className="text-2xl">{getTypeIcon(item.type)}</span>
-            <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getTypeColor(item.type)}`}>
-              {item.category}
-            </span>
-          </div>
-          {item.featured && (
-            <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
-              Featured
-            </span>
-          )}
-        </div>
-
-        {/* Title */}
-        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
-          {item.title}
-        </h3>
-
-        {/* Excerpt */}
-        <p className="text-gray-600 mb-4 line-clamp-3">
-          {item.excerpt}
-        </p>
-
-        {/* Metrics */}
-        {showMetrics && item.metrics && (
-          <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-            <div className="grid grid-cols-2 gap-2">
-              {item.metrics.map((metric, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-sm font-bold text-blue-600">{metric.value}</div>
-                  <div className="text-xs text-gray-600">{metric.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Footer */}
-        <div className="flex items-center justify-between text-sm text-gray-500">
-          <span>{new Date(item.publishedDate).toLocaleDateString()}</span>
-          {item.readTime && <span>{item.readTime}</span>}
-        </div>
-
-        {/* CTA */}
-        <div className="mt-4 pt-4 border-t border-gray-100">
-          <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-700 transition-colors">
-            {item.type === 'service' ? 'Explore Service →' : 
-             item.type === 'case-study' ? 'View Case Study →' :
-             item.type === 'guide' ? 'Read Guide →' : 'Read Article →'}
-          </div>
-        </div>
-      </div>
-    </Link>
   );
 }
