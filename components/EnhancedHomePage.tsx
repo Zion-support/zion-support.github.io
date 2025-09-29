@@ -17,7 +17,8 @@ import {
   HealthcareAIBanner,
   RetailSuccessBanner,
   AIContentShowcaseBanner,
-  AIRevolutionBanner
+  AIRevolutionBanner,
+  AIGoToMarketBanner
 } from './PromotionalBanner';
 
 interface EnhancedHomePageProps {
@@ -157,6 +158,7 @@ export default function EnhancedHomePage({
         <HealthcareAIBanner />
         <RetailSuccessBanner />
         <AIRevolutionBanner />
+        <AIGoToMarketBanner />
         <NewBlogBanner />
         <WorkflowAutomationBanner />
         <AIAnalyticsBanner />
