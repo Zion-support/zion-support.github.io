@@ -345,5 +345,70 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "9 min read",
   },
+<<<<<<< HEAD
+=======
+  // Newly added posts (2025-09-30 / 2025-09-29)
+  {
+    slug: "serverless-inference-cost-playbook-2025",
+    title: "Serverless AI Inference Cost Playbook: 40–70% Savings Without P95 Pain",
+    description:
+      "Adaptive batching, warm pools, and tiered quality to cut spend while keeping latency sane.",
+    category: "AI Solutions",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "practical-rag-in-production-2025",
+    title: "Practical RAG in Production: Freshness, Hybrid Search, and Evals",
+    description:
+      "Battle-tested patterns for chunking, freshness policies, hybrid retrieval, and eval harnesses.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "secure-genai-guardrails-2025",
+    title: "Secure GenAI: Policy‑First Guardrails That Scale",
+    description:
+      "Prompt isolation, PII controls, and egress policies—ship safely without slowing teams.",
+    category: "Security",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read",
+  },
+  // New content additions (Oct 2025)
+  {
+    slug: "ai-platform-roi-2025",
+    title: "AI Platform ROI: Scorecards That Drive Investment Decisions",
+    description:
+      "A practical framework to quantify AI platform value with adoption, DX, and outcome metrics.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "secure-ml-supply-chain-2025",
+    title: "Securing the ML Supply Chain: Models, Data, and Dependencies",
+    description:
+      "SBOMs for models, dataset provenance, and runtime guardrails to protect AI systems end-to-end.",
+    category: "Security",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "enterprise-rag-blueprint-v2",
+    title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, and Evals",
+    description:
+      "An updated blueprint with freshness SLAs, hybrid retrieval, reranking, and evaluation harnesses.",
+    category: "GenAI",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "9 min read",
+  },
+>>>>>>> cursor/create-and-deploy-new-content-a3e4
 ];
 
