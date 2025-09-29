@@ -73,19 +73,6 @@ export default function App(): React.JSX.Element {
           break;
       }
       try {
-        if (enhancedSecurityManager && typeof (enhancedSecurityManager as any).initialize === 'function') {
-          (enhancedSecurityManager as any).initialize();
-        }
-      
-      // Initialize new performance and accessibility enhancements
-      initializePerformanceEnhancements();
-      if (typeof (accessibilityEnhancer as any).initialize === 'function') {
-        (accessibilityEnhancer as any).initialize();
-      } else {
-        accessibilityEnhancer.init();
-      }
-      
-      // Initialize advanced optimizers
       // Guard optional advanced systems if present in global scope
       const advancedPerformanceOptimizer = (window as any).advancedPerformanceOptimizer;
       const advancedSEOOptimizer = (window as any).advancedSEOOptimizer;
@@ -97,14 +84,16 @@ export default function App(): React.JSX.Element {
       const advancedTestingFramework = (window as any).advancedTestingFramework;
       const advancedI18n = (window as any).advancedI18n;
 
+      if (advancedSecurityManager && typeof (advancedSecurityManager as any).initialize === 'function') {
+        (advancedSecurityManager as any).initialize();
+      }
+
+      // Initialize new performance and accessibility enhancements
+      initializePerformanceEnhancements();
+      accessibilityEnhancer.initialize();
+
       advancedPerformanceOptimizer?.initialize?.();
       advancedSEOOptimizer?.initialize?.();
-      if (typeof (accessibilityEnhancer as any).initialize === 'function') {
-        (accessibilityEnhancer as any).initialize();
-      } else {
-        accessibilityEnhancer.init();
-      }
-      advancedSecurityManager?.initialize?.();
       advancedAnalytics?.initialize?.();
       // advancedErrorHandler is initialized in constructor
       advancedCachingSystem?.initialize?.();
