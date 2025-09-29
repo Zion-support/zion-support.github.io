@@ -24,7 +24,11 @@ import {
   EnterpriseTransformationCaseStudyBanner,
   LatestContentShowcaseBanner,
   AIRoadmapsBanner,
-  AIFinOpsBanner
+  AIFinOpsBanner,
+  VectorDatabasesBanner,
+  EnterpriseSecurityBanner,
+  SupplyChainOptimizationBanner,
+  NewContent2025Banner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
@@ -59,6 +63,10 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <NewContent2025Banner />
+      <VectorDatabasesBanner />
+      <EnterpriseSecurityBanner />
+      <SupplyChainOptimizationBanner />
       <LatestContentShowcaseBanner />
       <EnterpriseAIImplementationBanner />
       <MLOpsBestPracticesBanner />
@@ -657,6 +665,66 @@ export default function HomePage() {
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read MLOps Guide →
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/blog/ai-vector-databases-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Guide
+                  </span>
+                  <span className="text-sm text-gray-500">15 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Vector Databases 2025: Complete Implementation Guide
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Master vector databases for AI applications. Learn Pinecone, Weaviate, Qdrant, and ChromaDB implementation.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Complete Guide →
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/blog/ai-enterprise-security-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Security Guide
+                  </span>
+                  <span className="text-sm text-gray-500">18 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Enterprise Security 2025: Complete Security Framework
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Comprehensive AI security framework for enterprises with 7-pillar protection strategy.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Security Guide →
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/case-studies/ai-supply-chain-optimization-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Success Story
+                  </span>
+                  <span className="text-sm text-gray-500">Manufacturing</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Supply Chain Optimization: $8.5M Savings & 40% Efficiency
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how a Fortune 500 manufacturer achieved $8.5M annual savings with AI-powered supply chain optimization.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
                 </div>
               </div>
             </Link>

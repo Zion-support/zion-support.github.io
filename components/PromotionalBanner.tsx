@@ -374,3 +374,47 @@ export const LatestContentShowcaseBanner = () => (
     hideAfter={18}
   />
 );
+
+export const VectorDatabasesBanner = () => (
+  <PromotionalBanner
+    message="🗄️ New Guide: AI Vector Databases 2025 - Complete Implementation Guide for Pinecone, Weaviate, Qdrant & ChromaDB"
+    ctaText="Read Complete Guide"
+    ctaLink="/blog/ai-vector-databases-2025"
+    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const EnterpriseSecurityBanner = () => (
+  <PromotionalBanner
+    message="🛡️ Critical: AI Enterprise Security 2025 - Complete Security Framework with 7-Pillar Protection Strategy"
+    ctaText="Read Security Guide"
+    ctaLink="/blog/ai-enterprise-security-2025"
+    backgroundColor="bg-gradient-to-r from-red-600 to-pink-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const SupplyChainOptimizationBanner = () => (
+  <PromotionalBanner
+    message="📦 Success Story: AI Supply Chain Optimization - $8.5M Savings & 40% Efficiency Gain in Manufacturing"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-supply-chain-optimization-2026"
+    backgroundColor="bg-gradient-to-r from-emerald-600 to-teal-600"
+    autoHide={true}
+    hideAfter={25}
+  />
+);
+
+export const NewContent2025Banner = () => (
+  <PromotionalBanner
+    message="🎉 Fresh 2025 Content: Vector Databases, Enterprise Security, Supply Chain AI - Latest AI Insights & Case Studies"
+    ctaText="Browse All New Content"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
