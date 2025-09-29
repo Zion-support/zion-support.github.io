@@ -31,7 +31,6 @@ import {
   AISustainabilityBanner,
   QuantumComputingBanner,
   SustainabilityCaseStudyBanner,
-<<<<<<< HEAD
   QuantumOptimizationBanner,
   AIOperationalExcellenceBanner,
   AIAgentObservabilityBanner,
@@ -42,27 +41,18 @@ import {
   AISustainabilityTransformationBanner,
   LatestContent2026Banner
 } from '../components/PromotionalBanner';
-=======
-  QuantumOptimizationBanner
-} from '../../components/PromotionalBanner';
->>>>>>> feature/add-more-content-and-advertise
 import {
   NewContent2026Banner as NewContent2026BannerComponent,
   AutonomousOperationsBanner,
   FinOpsAdvancedBanner,
   PlatformArchitectureBanner,
   AutonomousOperationsSuccessBanner,
-<<<<<<< HEAD
   NewContentShowcaseBanner2026,
   Latest2026ContentBanner as NewLatest2026ContentBanner,
   AIAutonomousCloudOpsBanner,
   AIFinTechTransformationBanner,
   AIRetailAutomationBanner
 } from '../components/NewContent2026Banners';
-=======
-  NewContentShowcaseBanner2026
-} from '../../components/NewContent2026Banners';
->>>>>>> feature/add-more-content-and-advertise
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -82,15 +72,10 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-<<<<<<< HEAD
             <span>✨ NEW 2026:</span>
-            <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
+            <Link href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-fintech-transformation-2026" className="underline hover:text-yellow-200">FinTech Transformation</Link>
-=======
-            <span>✨ Latest 2026 content:</span>
-            <a href="/blog/ai-autonomous-operations-2026" className="underline hover:text-yellow-200">AI Autonomous Operations</a>
->>>>>>> feature/add-more-content-and-advertise
+            <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-retail-automation-2026" className="underline hover:text-yellow-200">Retail Automation</Link>
           </div>
