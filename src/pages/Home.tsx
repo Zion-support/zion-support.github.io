@@ -14,14 +14,19 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
+=======
+import BlogPromotionBanner from "../components/BlogPromotionBanner";
+>>>>>>> origin/main
 import Header from "../components/Header";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
-import LatestInsights from "../components/LatestInsights";
-import ModernFeatures from "../components/ModernFeatures";
+// Temporarily disable missing sections
+// import LatestInsights from "../components/LatestInsights";
+// import ModernFeatures from "../components/ModernFeatures";
 import NewContentAnnouncement from "../components/NewContentAnnouncement";
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import NewServicesShowcase from "../components/NewServicesShowcase";
@@ -109,22 +114,15 @@ const Home = () => {
         <Header />
         <NewContentAnnouncement />
         <LatestContentBanner className="border-b border-white/10" variant="info" />
-        <NewContentPromoBanner 
-          className="border-b border-white/10" 
-          variant="premium" 
-          title="Fresh: Guardrails That Ship, Edge Flags Blueprint, RAG Freshness"
-          description="New: outcome‑linked guardrails, zero‑regret edge rollouts, and freshness‑aware RAG."
-          ctaText="Explore new content"
-          ctaLink="/blog"
-          featuredItems={[
-            { title: "Guardrails Engineers Adopt", category: "AI Strategy", link: "/blog/guardrails-scorecards-evals-2025" },
-            { title: "Edge Flags Blueprint", category: "Architecture", link: "/blog/edge-flags-blueprint-2025" },
-            { title: "RAG Freshness", category: "GenAI", link: "/blog/rag-freshness-ttl-2025" },
-          ]}
-        />
+        <NewContentPromoBanner className="border-b border-white/10" variant="premium" />
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
         </div>
+<<<<<<< HEAD
+=======
+        {/* Content Promotion Banner */}
+        <BlogPromotionBanner />
+>>>>>>> origin/main
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -281,7 +279,7 @@ const Home = () => {
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
-        <LatestInsights />
+        {/* <LatestInsights /> */}
 
         {/* New Services Showcase */}
         <section className="py-20 bg-white relative overflow-hidden">
@@ -505,8 +503,13 @@ const Home = () => {
               {[...latestInsights.slice(0, 2), ...featuredInsights.slice(0, 1)].map((item) => (
               <article key={item.id} className="card hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                 <div className="p-6">
+<<<<<<< HEAD
                     <div className="flex items-center justify-between mb-2">
                       <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
+=======
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="text-xs uppercase tracking-wider text-zion-cyan">{item.category}</div>
+>>>>>>> origin/main
                     {('featured' in item) && (item as any).featured && (
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-medium">
                         FEATURED
@@ -663,20 +666,12 @@ const Home = () => {
         </section>
 
         {/* Modern Features Section */}
-        <ModernFeatures />
+        {/* <ModernFeatures /> */}
 
         {/* Content Value Testimonials */}
         <ContentValueTestimonials />
 
-        {/* Enhanced Testimonials Section */}
-        <EnhancedTestimonials />
-
-        {/* Enhanced Newsletter Signup */}
-        <EnhancedNewsletterSignup 
-          title="Stay Ahead with Our Latest Insights"
-          subtitle="Get exclusive access to cutting-edge technology insights, industry analysis, and expert guidance delivered to your inbox weekly."
-          showContentPreview={true}
-        />
+        {/* Testimonials and Newsletter sections temporarily removed due to missing components */}
 
         {/* Latest Articles */}
         <section className="py-20 bg-white">

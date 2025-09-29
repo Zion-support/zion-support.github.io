@@ -4,7 +4,12 @@ import globals from "globals";
 import tseslint from "typescript-eslint";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
+<<<<<<< HEAD
 import cypressPlugin from "eslint-plugin-cypress/flat";
+=======
+// Temporarily disable Cypress plugin to avoid missing dependency during CI
+// import cypressPlugin from "eslint-plugin-cypress/flat";
+>>>>>>> origin/main
 
 const browserGlobals = Object.fromEntries(
   Object.entries(globals.browser).map(([key, value]) => [key.trim(), value])
@@ -19,6 +24,7 @@ const serviceWorkerGlobals = Object.fromEntries(
 export default [
   {
     ignores: [
+<<<<<<< HEAD
       "dist/**",
       "node_modules/**",
       "public/**",
@@ -46,6 +52,46 @@ export default [
       "scripts/**",
       "*.d.ts"
     ],
+=======
+      'dist/**',
+      'node_modules/**',
+      '*.config.js',
+      '*.config.ts',
+      'public/**',
+      'backup/**',
+      'backup-pages/**',
+      'backup-merge-conflicts/**',
+      'src.corrupted/**',
+      'backup-problematic-files/**',
+      'src.disabled/**',
+      'src.pages.disabled/**',
+      'automation/**',
+      'temp_broken_files/**',
+      'cypress/**',
+      '**/backup-problematic-files/**',
+      '**/src.disabled/**',
+      '**/src.corrupted/**',
+      '**/src.pages.disabled/**',
+      '**/temp_broken_files/**',
+      '**/automation/**',
+      '**/backup-pages/**',
+      '**/backup-merge-conflicts/**',
+      '**/cypress_backup/**',
+      '**/components.disabled/**',
+      '**/components.disabled_full/**',
+      '**/contracts.disabled/**',
+      '**/data.disabled/**',
+      '**/automation_backup/**',
+      '**/broken_files_backup/**',
+      '**/vite.config-backup.*',
+      '**/*.disabled.*',
+      '**/*.backup.*',
+      '**/*.broken.*',
+      '**/*.corrupted.*',
+      '**/*.temp.*',
+      'jest.setup.js'
+    ]
+>>>>>>> origin/main
   },
   {
     files: ["**/*.{js,cjs,mjs}"],
@@ -167,6 +213,7 @@ export default [
       "@typescript-eslint/no-unused-vars": "warn",
     }
   }),
+<<<<<<< HEAD
   {
     files: ["cypress/**/*.{js,ts,tsx}"],
     ...cypressPlugin.configs.recommended,
@@ -184,4 +231,8 @@ export default [
         }
     }
   }
+=======
+
+  // Cypress configuration temporarily removed
+>>>>>>> origin/main
 ];

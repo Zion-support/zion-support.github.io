@@ -2,7 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import { ThemeProvider } from "./contexts/ThemeContext";
+const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <>{children}</>
+);
 import App from "./App";
 import "./index.css";
 

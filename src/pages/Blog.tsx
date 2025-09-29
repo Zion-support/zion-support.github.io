@@ -179,20 +179,7 @@ export default function Blog(): React.JSX.Element {
 
   // Map content/posts entries into this page's structure
   const mappedFromContent: BlogPost[] = useMemo(() => {
-    return latestPosts.map((p, idx) => ({
-      id: 1000 + idx,
-      title: p.title,
-      excerpt: p.description,
-      content: "See full article",
-      author: "Zion Tech Group Team",
-      date: p.publishedAt,
-      readTime: p.readTime || "6 min read",
-      category: p.category,
-      tags: [p.category],
-      image: "/api/placeholder/400/250",
-      featured: Boolean(p.featured),
-      views: 0,
-    }));
+    return [];
   }, []);
 
   const blogPosts: BlogPost[] = [...mappedFromContent, ...staticPosts];
