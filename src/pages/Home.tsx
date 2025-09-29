@@ -136,14 +136,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Agent Blue‑Green Releases, Edge LLM Caching, Platform SLO Guardrails"
-          description="Ship agents safely with instant rollback, keep prompts fast at the edge, and prevent regressions with SLO scorecards."
+          title="New: Data Lineage for GenAI, Edge Feature Stores, LLM Evals"
+          description="Audit‑ready lineage, sub‑100ms private features, and online canaries that predict outcomes."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Agent Blue‑Green Releases 2026", category: "GenAI", link: "/blog/agent-blue-green-releases-2026" },
-            { title: "Edge LLM Safety Caching 2026", category: "Architecture", link: "/blog/edge-llm-safety-caching-2026" },
-            { title: "Platform SLO Guardrails 2026", category: "Platform Engineering", link: "/blog/platform-slo-guardrails-2026" }
+            { title: "AI Data Lineage for GenAI 2026", category: "AI Governance", link: "/blog/ai-data-lineage-for-genai-2026" },
+            { title: "Edge Secure Feature Stores 2026", category: "Architecture", link: "/blog/edge-secure-feature-stores-2026" },
+            { title: "LLM Evaluation Playbooks 2026", category: "AI Strategy", link: "/blog/llm-evaluation-playbooks-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">

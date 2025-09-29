@@ -89,6 +89,40 @@ const TrendingContentBanner: React.FC = () => {
     }
   ];
 
+  // Newly promoted items
+  trendingItems.push(
+    {
+      title: "AI Data Lineage for GenAI 2026",
+      description: "Trace prompts, datasets, and outputs with signed SBOMs and lineage.",
+      views: "7.4K",
+      readTime: "7 min",
+      category: "AI Governance",
+      icon: Shield,
+      link: "/blog/ai-data-lineage-for-genai-2026",
+      badge: "NEW"
+    },
+    {
+      title: "Edge Secure Feature Stores 2026",
+      description: "Sub‑100ms private features with signed configs and on‑device caches.",
+      views: "6.8K",
+      readTime: "6 min",
+      category: "Architecture",
+      icon: Zap,
+      link: "/blog/edge-secure-feature-stores-2026",
+      badge: "HOT"
+    },
+    {
+      title: "LLM Evaluation Playbooks 2026",
+      description: "Online canaries and KPI‑linked scorecards that predict outcomes.",
+      views: "8.1K",
+      readTime: "8 min",
+      category: "AI Strategy",
+      icon: TrendingUp,
+      link: "/blog/llm-evaluation-playbooks-2026",
+      badge: "TRENDING"
+    }
+  );
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % trendingItems.length);

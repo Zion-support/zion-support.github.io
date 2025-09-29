@@ -807,3 +807,34 @@ posts.push(
     readTime: "9 min read"
   }
 );
+
+// Additional October 2025 content for promotion
+posts.push(
+  {
+    slug: "ai-data-lineage-for-genai-2026",
+    title: "AI Data Lineage for GenAI 2026: Traceability That Scales",
+    description: "Track prompts, datasets, and model outputs with signed SBOMs and audit‑ready lineage.",
+    category: "AI Governance",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-secure-feature-stores-2026",
+    title: "Edge Secure Feature Stores 2026: Sub‑100ms Signals Without PII",
+    description: "Signed configs, on‑device caches, and scoped IDs for private, real‑time features.",
+    category: "Architecture",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "llm-evaluation-playbooks-2026",
+    title: "LLM Evaluation Playbooks 2026: Online Canaries That Predict Outcomes",
+    description: "Design evals that correlate with KPIs using scorecards, PR checks, and live canaries.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
