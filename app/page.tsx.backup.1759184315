@@ -128,6 +128,16 @@ export default function HomePage() {
       <SpaceTechBanner />
       <SyntheticDataBanner />
       
+<<<<<<< HEAD
+      {/* Additional Promotional Banners */}
+      <NewContentShowcase2026Banner />
+      <AIEthicalFrameworkBanner />
+      <AIEthicsSuccessBanner />
+      <AISecurityEnterprise2026Banner />
+      <AIMultimodalEnterprise2026Banner />
+      <AISustainabilityTransformationBanner />
+      <AIQuantumOptimizationBanner />
+=======
       {/* New Content Promotional Banners */}
       <NewContent2026PromotionalBanners />
       
@@ -140,6 +150,7 @@ export default function HomePage() {
       {/* Promotional Banners */}
       <AIAutonomousEnterpriseBanner />
       <AINeuralInterfacesBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-1374
       <NewContent2026Banner />
       <AIAgentOrchestrationBanner />
       <AISustainabilityBanner />
