@@ -1,106 +1,117 @@
 import React from 'react';
 import Link from 'next/link';
 
-export const NewContent2026Banner = () => {
+export default function NewContent2026Banner() {
   return (
-    <section className="py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            <span>🚀</span>
-            <span>New 2026 Content</span>
+    <div className="w-full bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}></div>
+      </div>
+      
+      <div className="relative max-w-6xl mx-auto px-4 py-8">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center gap-2 mb-4">
+            <span className="bg-white bg-opacity-20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold">
+              ✨ NEW 2026 CONTENT
+            </span>
+            <span className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold">
+              FEATURED
+            </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Revolutionary AI Content for 2026
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Revolutionary AI Content & Success Stories
           </h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Discover cutting-edge AI insights, sustainability solutions, and workplace transformation strategies 
-            that are reshaping industries in 2026.
+          <p className="text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
+            Discover the latest AI innovations, transformation guides, and real-world success stories 
+            that are reshaping businesses in 2026
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          <Link href="/blog/ai-future-workplace-2026" className="group">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
+
+        {/* Featured Content Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <Link href="/blog/ai-autonomous-enterprise-systems-2026" className="group">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-20 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">🏢</span>
+                <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">🤖</span>
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-white/80">New Article</div>
-                  <div className="text-xs text-white/60">25 min read</div>
+                  <h3 className="text-lg font-bold">AI Autonomous Enterprise</h3>
+                  <p className="text-sm opacity-80">Complete Guide</p>
                 </div>
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-200 transition-colors">
-                AI Future Workplace 2026
-              </h3>
-              <p className="text-white/80 mb-4 text-sm">
-                Complete transformation guide to AI-powered productivity, automation, and workforce innovation.
+              <p className="text-sm opacity-90 mb-4">
+                Master autonomous AI enterprise systems with 99% automation and $25M+ ROI.
               </p>
-              <div className="flex items-center text-yellow-200 font-semibold text-sm">
-                Read Article →
+              <div className="flex items-center justify-between">
+                <div className="text-sm opacity-75">30 min read</div>
+                <div className="text-sm font-semibold group-hover:underline">Read Guide →</div>
               </div>
             </div>
           </Link>
 
-          <Link href="/blog/ai-sustainability-green-tech-2026" className="group">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
+          <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="group">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-20 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">🌱</span>
+                <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">🏆</span>
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-white/80">New Article</div>
-                  <div className="text-xs text-white/60">22 min read</div>
+                  <h3 className="text-lg font-bold">$25M Success Story</h3>
+                  <p className="text-sm opacity-80">Fortune 500</p>
                 </div>
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-200 transition-colors">
-                AI Sustainability & Green Tech 2026
-              </h3>
-              <p className="text-white/80 mb-4 text-sm">
-                Complete guide to eco-friendly AI solutions, carbon reduction, and sustainable business practices.
+              <p className="text-sm opacity-90 mb-4">
+                See how a Fortune 500 company achieved $25M ROI with AI transformation.
               </p>
-              <div className="flex items-center text-yellow-200 font-semibold text-sm">
-                Read Article →
+              <div className="flex items-center justify-between">
+                <div className="text-sm opacity-75">25 min read</div>
+                <div className="text-sm font-semibold group-hover:underline">View Case Study →</div>
               </div>
             </div>
           </Link>
 
-          <Link href="/case-studies/ai-sustainability-transformation-2026" className="group">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
+          <Link href="/blog/ai-platform-architecture-2026" className="group">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-20 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">💚</span>
+                <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">🏗️</span>
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-white/80">New Case Study</div>
-                  <div className="text-xs text-white/60">18 min read</div>
+                  <h3 className="text-lg font-bold">AI Platform Architecture</h3>
+                  <p className="text-sm opacity-80">Enterprise Guide</p>
                 </div>
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-200 transition-colors">
-                $8M ROI Sustainability Case Study
-              </h3>
-              <p className="text-white/80 mb-4 text-sm">
-                See how GreenCorp achieved 75% carbon reduction and $8M ROI with AI sustainability transformation.
+              <p className="text-sm opacity-90 mb-4">
+                Design enterprise-scale AI platforms with microservices and edge computing.
               </p>
-              <div className="flex items-center text-yellow-200 font-semibold text-sm">
-                View Case Study →
+              <div className="flex items-center justify-between">
+                <div className="text-sm opacity-75">30 min read</div>
+                <div className="text-sm font-semibold group-hover:underline">Read Guide →</div>
               </div>
             </div>
           </Link>
         </div>
 
-        <div className="text-center">
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/blog"
-            className="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
           >
-            Explore All New Content
+            Explore All Content
+          </Link>
+          <Link
+            href="/case-studies"
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
+          >
+            View Case Studies
           </Link>
         </div>
       </div>
-    </section>
+    </div>
   );
-};
-
-export default NewContent2026Banner;
+}

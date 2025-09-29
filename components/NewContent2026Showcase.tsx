@@ -1,38 +1,30 @@
 import React from 'react';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI Content Hub 2026: Latest Articles, Case Studies & Guides | Zion Tech Group',
-  description: 'Explore our comprehensive AI content hub featuring the latest articles, case studies, implementation guides, and success stories for 2026.',
-  keywords: 'AI content, articles, case studies, guides, AI transformation, enterprise AI, 2026',
-};
-
-export default function ContentHub() {
+export default function NewContent2026Showcase() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <div className="inline-flex items-center gap-2 mb-6">
-          <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-            ✨ NEW 2026 CONTENT
-          </span>
-          <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-            FEATURED
-          </span>
+    <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 mb-6">
+            <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+              ✨ NEW 2026 CONTENT
+            </span>
+            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+              FEATURED
+            </span>
+          </div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Revolutionary AI Content & Success Stories
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover the latest AI innovations, transformation guides, and real-world success stories 
+            that are reshaping businesses in 2026
+          </p>
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-          AI Content Hub 2026
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Discover the latest AI innovations, transformation guides, case studies, and success stories 
-          that are reshaping businesses in 2026
-        </p>
-      </div>
-
-      {/* Featured Content */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Content</h2>
-        <div className="grid lg:grid-cols-2 gap-8">
+        
+        {/* Featured Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {/* Featured Article */}
           <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group">
             <div className="relative h-64 bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600">
@@ -137,97 +129,9 @@ export default function ContentHub() {
             </div>
           </div>
         </div>
-      </section>
 
-      {/* Content Categories */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Content Categories</h2>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* AI Implementation Guides */}
-          <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                <span className="text-2xl">📚</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">Implementation Guides</h3>
-            </div>
-            <p className="text-gray-600 mb-4">
-              Step-by-step guides for implementing AI solutions in your enterprise.
-            </p>
-            <div className="space-y-2">
-              <Link href="/blog/ai-autonomous-enterprise-systems-2026" className="block text-blue-600 hover:text-blue-700 transition-colors">
-                AI Autonomous Enterprise Systems →
-              </Link>
-              <Link href="/blog/ai-platform-architecture-2026" className="block text-blue-600 hover:text-blue-700 transition-colors">
-                AI Platform Architecture →
-              </Link>
-              <Link href="/blog/ai-operational-excellence-2026" className="block text-blue-600 hover:text-blue-700 transition-colors">
-                AI Operational Excellence →
-              </Link>
-            </div>
-          </div>
-
-          {/* Case Studies */}
-          <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                <span className="text-2xl">📊</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">Case Studies</h3>
-            </div>
-            <p className="text-gray-600 mb-4">
-              Real-world success stories and ROI results from our implementations.
-            </p>
-            <div className="space-y-2">
-              <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="block text-green-600 hover:text-green-700 transition-colors">
-                $25M Success Story →
-              </Link>
-              <Link href="/case-studies/ai-finance-automation-2026" className="block text-green-600 hover:text-green-700 transition-colors">
-                AI Finance Automation →
-              </Link>
-              <Link href="/case-studies/ai-retail-automation-2026" className="block text-green-600 hover:text-green-700 transition-colors">
-                AI Retail Automation →
-              </Link>
-            </div>
-          </div>
-
-          {/* Technical Deep Dives */}
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                <span className="text-2xl">🔬</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">Technical Deep Dives</h3>
-            </div>
-            <p className="text-gray-600 mb-4">
-              In-depth technical articles on AI technologies and architectures.
-            </p>
-            <div className="space-y-2">
-              <Link href="/blog/ai-quantum-computing-2026" className="block text-purple-600 hover:text-purple-700 transition-colors">
-                AI Quantum Computing →
-              </Link>
-              <Link href="/blog/ai-edge-computing-2026" className="block text-purple-600 hover:text-purple-700 transition-colors">
-                Edge AI Blueprint →
-              </Link>
-              <Link href="/blog/ai-sustainability-green-tech-2026" className="block text-purple-600 hover:text-purple-700 transition-colors">
-                AI Sustainability →
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Latest Articles */}
-      <section className="mb-16">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-3xl font-bold text-gray-900">Latest Articles</h2>
-          <Link href="/blog" className="text-blue-600 hover:text-blue-700 transition-colors font-semibold">
-            View All Articles →
-          </Link>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Additional Content Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           <Link href="/blog/ai-platform-architecture-2026" className="group">
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
               <div className="flex items-center gap-2 mb-4">
@@ -327,30 +231,21 @@ export default function ContentHub() {
             </div>
           </Link>
         </div>
-      </section>
 
-      {/* Newsletter Signup */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl p-8">
+        {/* CTA Section */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Stay Updated with AI Insights</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Get weekly updates on the latest AI trends, case studies, and implementation guides.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
-            />
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Subscribe
-            </button>
-          </div>
-          <p className="text-sm mt-4 opacity-75">
-            Join 10,000+ professionals. Unsubscribe anytime.
-          </p>
+          <Link
+            href="/blog"
+            className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            <span className="w-5 h-5 mr-2">🚀</span>
+            Explore All 2026 Content
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
