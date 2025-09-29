@@ -272,6 +272,53 @@ export const posts: BlogPost[] = [
     title: "Edge CDN + On‑Device ML: Personalization Under 100ms",
     description: "Combine edge KV, signed configs, and tiny models for private, real‑time personalization.",
     category: "Edge Computing",
+    slug: "next-gen-cloud-infrastructure",
+    title: "Next-Generation Cloud Infrastructure: Scaling for 2025 and Beyond",
+    description:
+      "Discover the latest cloud technologies and infrastructure patterns that are reshaping how businesses scale their operations.",
+    category: "Cloud Strategy",
+    publishedAt: "2025-01-21",
+    featured: true,
+    readTime: "10 min read",
+  },
+  {
+    slug: "enterprise-ai-implementation-roadmap",
+    title: "Enterprise AI Implementation: A Strategic Roadmap for 2025",
+    description:
+      "Navigate the complexities of enterprise AI adoption with our comprehensive roadmap covering strategy, implementation, and governance.",
+    category: "AI Strategy",
+    publishedAt: "2025-01-21",
+    featured: true,
+    readTime: "15 min read",
+  },
+  {
+    slug: "micro-saas-platform-architecture",
+    title: "Building Scalable Micro SAAS Platforms: Architecture Patterns and Best Practices",
+    description:
+      "Learn how to design and implement micro SAAS platforms that can scale to millions of users while maintaining performance and reliability.",
+    category: "Platform Engineering",
+    publishedAt: "2025-01-21",
+    featured: false,
+    readTime: "11 min read",
+  },
+  {
+    slug: "ai-ethics-responsible-deployment",
+    title: "AI Ethics and Responsible Deployment: Building Trust in AI Systems",
+    description:
+      "Essential guidelines for deploying AI systems responsibly, ensuring fairness, transparency, and accountability in your AI initiatives.",
+    category: "AI Governance",
+    publishedAt: "2025-01-21",
+    featured: false,
+    readTime: "9 min read",
+  },
+ 
+  // Newly added posts (2025-09-30 / 2025-09-29)
+  {
+    slug: "serverless-inference-cost-playbook-2025",
+    title: "Serverless AI Inference Cost Playbook: 40–70% Savings Without P95 Pain",
+    description:
+      "Adaptive batching, warm pools, and tiered quality to cut spend while keeping latency sane.",
+    category: "AI Solutions",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
@@ -423,5 +470,7 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "6 min read",
   },
+ 
+ 
 ];
 
