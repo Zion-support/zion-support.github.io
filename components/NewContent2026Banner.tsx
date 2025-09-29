@@ -3,103 +3,113 @@ import Link from 'next/link';
 
 export default function NewContent2026Banner() {
   return (
-    <div className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white">
-      <div className="max-w-6xl mx-auto px-4 py-6">
-        <div className="text-center mb-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            🚀 New 2026 Content: Latest AI Innovations
+    <div className="w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-16">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            <span className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
+            NEW 2026 CONTENT
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Revolutionary AI Content for 2026
           </h2>
-          <p className="text-lg md:text-xl opacity-90 max-w-4xl mx-auto">
-            Discover cutting-edge AI strategies, real-world case studies, and breakthrough technologies 
-            that are transforming industries in 2026
+          <p className="text-xl text-indigo-100 max-w-3xl mx-auto">
+            Discover cutting-edge AI insights, implementation guides, and success stories 
+            that will transform your business in 2026 and beyond.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-          {/* AI Agent Orchestration */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
-                <span className="text-xl">🤖</span>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold">AI Agent Orchestration</h3>
-                <p className="text-sm opacity-80">Multi-agent systems</p>
-              </div>
-            </div>
-            <p className="text-sm mb-4 opacity-90">
-              Master multi-agent coordination patterns for complex workflows. Achieve 85% efficiency gains and $3M+ ROI.
-            </p>
-            <Link
-              href="/blog/ai-agent-orchestration-2026"
-              className="inline-block bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold text-sm transition-colors"
-            >
-              Read Article →
-            </Link>
-          </div>
 
-          {/* Responsible AI Development */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center">
-                <span className="text-xl">⚖️</span>
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <Link href="/blog/ai-2026-predictions" className="group">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">🔮</span>
+                </div>
+                <div>
+                  <span className="bg-yellow-400 text-gray-900 px-2 py-1 rounded-full text-xs font-bold">NEW</span>
+                </div>
               </div>
-              <div>
-                <h3 className="text-lg font-bold">Responsible AI</h3>
-                <p className="text-sm opacity-80">Ethics & safety</p>
+              <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-200 transition-colors">
+                AI Predictions 2026
+              </h3>
+              <p className="text-indigo-100 text-sm mb-4">
+                Discover the top AI predictions for 2026 including autonomous agents, quantum AI, 
+                and enterprise transformation trends.
+              </p>
+              <div className="flex items-center text-yellow-200 font-semibold text-sm">
+                Read Predictions →
               </div>
             </div>
-            <p className="text-sm mb-4 opacity-90">
-              Build ethical, safe, and sustainable AI systems. Reduce bias by 90% with comprehensive frameworks.
-            </p>
-            <Link
-              href="/blog/ai-responsible-development-2026"
-              className="inline-block bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-semibold text-sm transition-colors"
-            >
-              Read Guide →
-            </Link>
-          </div>
+          </Link>
 
-          {/* Manufacturing Case Study */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
-                <span className="text-xl">🏭</span>
+          <Link href="/blog/ai-implementation-mastery-2026" className="group">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-teal-500 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">🚀</span>
+                </div>
+                <div>
+                  <span className="bg-yellow-400 text-gray-900 px-2 py-1 rounded-full text-xs font-bold">GUIDE</span>
+                </div>
               </div>
-              <div>
-                <h3 className="text-lg font-bold">Manufacturing Excellence</h3>
-                <p className="text-sm opacity-80">$8M ROI case study</p>
+              <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-200 transition-colors">
+                AI Implementation Mastery
+              </h3>
+              <p className="text-indigo-100 text-sm mb-4">
+                Master AI implementation with our comprehensive 2026 guide. Learn proven strategies, 
+                frameworks, and best practices for successful enterprise AI deployment.
+              </p>
+              <div className="flex items-center text-yellow-200 font-semibold text-sm">
+                Read Guide →
               </div>
             </div>
-            <p className="text-sm mb-4 opacity-90">
-              See how a Fortune 500 manufacturer achieved $8M ROI with AI-driven process optimization and predictive maintenance.
-            </p>
-            <Link
-              href="/case-studies/ai-manufacturing-excellence-2026"
-              className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold text-sm transition-colors"
-            >
-              View Case Study →
-            </Link>
-          </div>
+          </Link>
+
+          <Link href="/case-studies/ai-autonomous-manufacturing-2026" className="group">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">🏭</span>
+                </div>
+                <div>
+                  <span className="bg-yellow-400 text-gray-900 px-2 py-1 rounded-full text-xs font-bold">CASE STUDY</span>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-200 transition-colors">
+                AI Autonomous Manufacturing
+              </h3>
+              <p className="text-indigo-100 text-sm mb-4">
+                See how a Fortune 500 manufacturer achieved $15M ROI with AI autonomous operations. 
+                99.9% uptime, 90% cost reduction, and zero-touch manufacturing.
+              </p>
+              <div className="flex items-center text-yellow-200 font-semibold text-sm">
+                View Case Study →
+              </div>
+            </div>
+          </Link>
         </div>
 
         <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="inline-flex items-center gap-4">
             <Link
               href="/blog"
-              className="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
             >
-              Explore All 2026 Content
+              Explore All Content
             </Link>
             <Link
               href="/case-studies"
-              className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-6 py-3 rounded-lg font-semibold transition-colors"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-indigo-600 transition-colors"
             >
-              View All Case Studies
+              View Case Studies
             </Link>
           </div>
-          <p className="text-sm mt-4 opacity-75">
-            📈 Join 10,000+ professionals staying ahead with the latest AI insights
+        </div>
+
+        <div className="mt-8 text-center">
+          <p className="text-indigo-200 text-sm">
+            Join 10,000+ executives who trust Zion Tech Group for AI insights and implementation
           </p>
         </div>
       </div>
