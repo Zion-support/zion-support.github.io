@@ -1,10 +1,9 @@
-/**
- * Advanced Performance Monitoring System
- * Tracks Core Web Vitals, resource loading, and user interactions
- */
+// Minimal, type-safe Performance Monitor
+
+type MetricName = 'CLS' | 'FID' | 'FCP' | 'LCP' | 'TTFB';
 
 interface PerformanceMetric {
-  name: string;
+  name: MetricName;
   value: number;
   timestamp: number;
   id: string;
@@ -13,10 +12,12 @@ interface PerformanceMetric {
 class PerformanceMonitor {
   private metrics: PerformanceMetric[] = [];
   private observers: PerformanceObserver[] = [];
-  private isInitialized = false;
+  private initialized = false;
 
   constructor() {
-    this.init();
+    if (typeof window !== 'undefined') {
+      this.init();
+    }
   }
 
   private init(): void {
