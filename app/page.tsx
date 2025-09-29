@@ -98,6 +98,8 @@ export default function HomePage() {
             <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/agentic-workflow-orchestration-2026" className="underline hover:text-yellow-200">Workflow Orchestration</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-knowledge-management-2026" className="underline hover:text-yellow-200">Knowledge Management</Link>
           </div>
           <Link
             href="/blog"
@@ -403,6 +405,23 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Link href="/blog/ai-knowledge-management-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New 2026
+                  </span>
+                  <span className="text-sm text-gray-500">18 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Knowledge Management 2026: Knowledge Graphs & Agents
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Build governed knowledge platforms with hybrid search, evaluators, and enterprise agents.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
+              </div>
+            </Link>
             <Link href="/blog/agentic-workflow-orchestration-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
