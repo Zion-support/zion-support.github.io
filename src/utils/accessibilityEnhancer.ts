@@ -42,7 +42,7 @@ class AccessibilityEnhancer {
     };
   }
 
-  public initialize(): void {
+  public init(): void {
     if (this.isInitialized || typeof window === 'undefined') return;
     
     this.isInitialized = true;
@@ -372,9 +372,9 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
 if (typeof window !== 'undefined') {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-      accessibilityEnhancer.initialize();
+      accessibilityEnhancer.init();
     });
   } else {
-    accessibilityEnhancer.initialize();
+    accessibilityEnhancer.init();
   }
 }
