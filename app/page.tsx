@@ -53,7 +53,11 @@ import {
   FinOpsAdvancedBanner,
   PlatformArchitectureBanner,
   AutonomousOperationsSuccessBanner,
-  NewContentShowcaseBanner2026
+  NewContentShowcaseBanner2026,
+  AIAutonomousDevOpsBanner,
+  AIEdgeComputingBanner,
+  AIAutonomousManufacturingBanner,
+  NewContentShowcase2026Banner
 } from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
@@ -96,18 +100,16 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
-<<<<<<< HEAD
-      <Latest2026ContentBanner />
-=======
       <NewContentShowcase2026Banner />
+      <AIAutonomousDevOpsBanner />
+      <AIEdgeComputingBanner />
+      <AIAutonomousManufacturingBanner />
+      <Latest2026ContentBanner />
       <AIEthicalFrameworkBanner />
       <AIEthicsSuccessBanner />
-      <LatestContent2026Banner />
       <AISecurityEnterprise2026Banner />
       <AIMultimodalEnterprise2026Banner />
       <AISustainabilityTransformationBanner />
-      <NewLatest2026ContentBanner />
->>>>>>> cursor/create-and-deploy-new-content-b529
       <AIAutonomousCloudOpsBanner />
       <AIFinTechTransformationBanner />
       <AIRetailAutomationBanner />
@@ -393,43 +395,39 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-<<<<<<< HEAD
-            <Link href="/blog/ai-autonomous-enterprise-2026" className="group">
-=======
-            <Link href="/blog/agentic-workflow-orchestration-2026" className="group">
+            <Link href="/blog/ai-autonomous-devops-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New 2026
+                    NEW 2026
                   </span>
-                  <span className="text-sm text-gray-500">16 min read</span>
+                  <span className="text-sm text-gray-500">25 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  Agentic Workflow Orchestration 2026: Reliable AI Workflows
+                  AI Autonomous DevOps 2026: Complete Self-Healing Infrastructure Guide
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Orchestrate multi-step agents with guardrails, approvals, and observability for measurable ROI.
+                  Transform your DevOps operations with AI-powered autonomous infrastructure management. 99.9% uptime, 90% cost reduction.
                 </p>
-                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
+                <div className="flex items-center text-blue-600 font-semibold">Read Complete Guide →</div>
               </div>
             </Link>
-            <Link href="/blog/ai-autonomous-operations-2026" className="group">
->>>>>>> cursor/create-and-deploy-new-content-b529
+            <Link href="/blog/ai-edge-computing-optimization-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
                     NEW 2026
                   </span>
-                  <span className="text-sm text-gray-500">30 min read</span>
+                  <span className="text-sm text-gray-500">22 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                  AI Autonomous Enterprise 2026: Complete Self-Managing Operations
+                  AI Edge Computing Optimization 2026: Sub-50ms Latency Solutions
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Master autonomous AI enterprise operations with zero-touch business management, predictive analytics, and self-optimizing systems.
+                  Unlock the power of AI at the edge with sub-50ms latency, 99.9% reliability, and intelligent edge orchestration.
                 </p>
                 <div className="flex items-center text-purple-600 font-semibold">
-                  Read Complete Guide →
+                  Read Optimization Guide →
                 </div>
               </div>
             </Link>
@@ -445,32 +443,28 @@ export default function HomePage() {
                   AI Business Intelligence 2026: Next-Generation Decision Making
                 </h3>
                 <p className="text-gray-600 mb-4">
-<<<<<<< HEAD
                   Transform your business with AI-powered BI that delivers real-time insights, predictive analytics, and 400% faster growth.
-=======
-                  Master autonomous AI operations with zero-touch infrastructure management, predictive maintenance, and self-healing systems.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">Read Complete Guide →</div>
-              </div>
-            </Link>
-            <Link href="/blog/ai-finops-advanced-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Advanced 2026
-                  </span>
-                  <span className="text-sm text-gray-500">20 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI FinOps Advanced 2026: Complete Financial Operations Automation Guide
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Master advanced AI FinOps with predictive cost optimization, automated financial reporting, and intelligent resource allocation.
->>>>>>> cursor/create-and-deploy-new-content-b529
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Complete Guide →
                 </div>
+              </div>
+            </Link>
+            <Link href="/case-studies/ai-autonomous-manufacturing-success-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW Case Study
+                  </span>
+                  <span className="text-sm text-gray-500">18 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                  AI Autonomous Manufacturing Success 2026: $15M ROI Case Study
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how a Fortune 500 manufacturer achieved 98% automation, 400% productivity gains, and $15M annual ROI.
+                </p>
+                <div className="flex items-center text-orange-600 font-semibold">View Case Study →</div>
               </div>
             </Link>
             <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="group">
