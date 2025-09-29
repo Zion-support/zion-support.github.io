@@ -45,12 +45,16 @@ import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
-import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
+import { EnhancedContentShowcase2026 } from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
-import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
-import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
+// import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
+// import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
+import AIAdvancedInnovationBanner2026 from '../components/AIAdvancedInnovationBanner2026';
+import RevolutionaryTechShowcase2026 from '../components/RevolutionaryTechShowcase2026';
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import ExclusiveContentBanner2026 from '../components/ExclusiveContentBanner2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -61,27 +65,39 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-      {/* New Content Promo Strip */}
-      <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
-          <div className="flex items-center gap-2 text-sm md:text-base">
-            <span>🚀 NEW 2026 Content:</span>
-            <a to="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
-            <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</a>
-            <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</a>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</Link>
-            <span className="hidden md:inline">•</span>
-            <a to="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</a>
+      {/* Enhanced New Content Promo Strip */}
+      <div className="w-full bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
+        <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center gap-3 md:gap-6 justify-between relative z-10">
+          <div className="flex items-center gap-3 text-sm md:text-base flex-wrap">
+            <span className="flex items-center gap-2 font-bold">
+              <span className="animate-bounce">🚀</span>
+              <span>EXCLUSIVE 2026 CONTENT:</span>
+            </span>
+            <Link href="/blog/ai-advanced-innovation-2026" className="underline hover:text-yellow-200 hover:scale-105 transition-transform">Advanced AI Innovations</Link>
+            <span className="hidden md:inline text-yellow-200">•</span>
+            <Link href="/blog/revolutionary-tech-2026" className="underline hover:text-yellow-200 hover:scale-105 transition-transform">Revolutionary Tech</Link>
+            <span className="hidden md:inline text-yellow-200">•</span>
+            <Link href="/masterclass/ai-transformation-2026" className="underline hover:text-yellow-200 hover:scale-105 transition-transform">AI Masterclass</Link>
+            <span className="hidden md:inline text-yellow-200">•</span>
+            <Link href="/case-studies/ultimate-ai-transformation-2026" className="underline hover:text-yellow-200 hover:scale-105 transition-transform">$50M ROI Success</Link>
+            <span className="hidden md:inline text-yellow-200">•</span>
+            <Link href="/whitepaper/ai-future-enterprise-2026" className="underline hover:text-yellow-200 hover:scale-105 transition-transform">Strategic Whitepaper</Link>
           </div>
-          <Link
-            to="/blog"
-            className="bg-white text-green-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
-          >
-            Read the latest
-          </Link>
+          <div className="flex gap-2">
+            <Link
+              href="/premium-content"
+              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white hover:from-yellow-500 hover:to-orange-600 px-4 py-2 rounded-md text-sm font-bold shadow-lg hover:shadow-xl transition-all"
+            >
+              🔥 Premium Content
+            </Link>
+            <Link
+              href="/blog"
+              className="bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 px-4 py-2 rounded-md text-sm font-semibold border border-white/30 hover:border-white/50 transition-all"
+            >
+              Explore All →
+            </Link>
+          </div>
         </div>
       </div>
       {/* Promotional Banners */}
@@ -102,8 +118,8 @@ export default function HomePage() {
       <EnterpriseTransformationSuccessBanner />
       <HealthcareTransformationBanner />
       <NewContentShowcaseBanner />
-      <AITrends2025Banner />
-      <NewServicesShowcaseBanner />
+      {/* <AITrends2025Banner /> */}
+      {/* <NewServicesShowcaseBanner /> */}
       <AIRoadmapsBanner />
       <AIFinOpsBanner />
       <AutonomousAgentsBanner />
@@ -119,10 +135,22 @@ export default function HomePage() {
       <AIAnalyticsBanner />
       
       {/* New Content Promotional Banner 2026 */}
-      <NewContentPromotionalBanner2026 />
+      {/* <NewContentPromotionalBanner2026 /> */}
       
       {/* AI Innovation Showcase Banner 2026 */}
-      <AIInnovationShowcaseBanner2026 />
+      {/* <AIInnovationShowcaseBanner2026 /> */}
+      
+      {/* Advanced AI Innovation Banner 2026 */}
+      <AIAdvancedInnovationBanner2026 />
+      
+      {/* Revolutionary Tech Showcase 2026 */}
+      <RevolutionaryTechShowcase2026 />
+      
+      {/* Ultimate Content Showcase 2026 */}
+      <UltimateContentShowcase2026 />
+      
+      {/* Exclusive Content Banner 2026 */}
+      <ExclusiveContentBanner2026 />
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -139,13 +167,13 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              to="/services"
+              href="/services"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore Our Services
             </Link>
             <a
-              to="tel:+13024640950"
+              href="tel:+13024640950"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
               Call +1 302 464 0950
@@ -190,7 +218,7 @@ export default function HomePage() {
               description="Transform data into actionable insights with predictive modeling and real-time dashboards"
               price="$199/month"
               features={['Predictive Analytics', 'Real-time Dashboards', 'Data Integration']}
-              to="/services/ai-data-analytics"
+              href="/services/ai-data-analytics"
               popular={true}
             />
             <FeaturedServiceCard
@@ -198,7 +226,7 @@ export default function HomePage() {
               description="Automate business processes with intelligent workflow design and smart triggers"
               price="$149/month"
               features={['Process Automation', 'Smart Triggers', 'Performance Monitoring']}
-              to="/services/ai-workflow-automation"
+              href="/services/ai-workflow-automation"
               popular={false}
             />
             <FeaturedServiceCard
@@ -206,7 +234,7 @@ export default function HomePage() {
               description="24/7 intelligent customer support with natural language processing"
               price="$99/month"
               features={['24/7 Support', 'Multi-channel', 'Personalized Responses']}
-              to="/services/ai-virtual-assistant"
+              href="/services/ai-virtual-assistant"
               popular={false}
             />
             <FeaturedServiceCard
@@ -214,7 +242,7 @@ export default function HomePage() {
               description="Seamless migration to cloud infrastructure with zero downtime"
               price="$2,999"
               features={['Zero Downtime', 'Security Compliance', 'Cost Optimization']}
-              to="/services/cloud-migration"
+              href="/services/cloud-migration"
               popular={false}
             />
             <FeaturedServiceCard
@@ -222,7 +250,7 @@ export default function HomePage() {
               description="Automate CI/CD pipelines and infrastructure management"
               price="$399/month"
               features={['CI/CD Pipelines', 'Infrastructure as Code', 'Auto-scaling']}
-              to="/services/devops-automation"
+              href="/services/devops-automation"
               popular={false}
             />
             <FeaturedServiceCard
@@ -230,7 +258,7 @@ export default function HomePage() {
               description="Advanced threat detection and zero-trust security architecture"
               price="$599/month"
               features={['Threat Detection', 'Zero-trust Architecture', 'Compliance']}
-              to="/services/cybersecurity-consulting"
+              href="/services/cybersecurity-consulting"
               popular={false}
             />
             <FeaturedServiceCard
@@ -238,7 +266,7 @@ export default function HomePage() {
               description="Real-time AI processing at the edge with sub-50ms response times"
               price="$799/month"
               features={['Sub-50ms Latency', 'Edge Intelligence', 'Offline Capability']}
-              to="/services/ai-edge-computing"
+              href="/services/ai-edge-computing"
               popular={false}
             />
             <FeaturedServiceCard
@@ -246,7 +274,7 @@ export default function HomePage() {
               description="Automate financial processes with 95% accuracy and $3M+ savings"
               price="$1,299/month"
               features={['95% Automation', 'Fraud Detection', 'Real-time Reporting']}
-              to="/services/ai-finance-automation"
+              href="/services/ai-finance-automation"
               popular={false}
             />
           </div>
@@ -266,7 +294,7 @@ export default function HomePage() {
             </p>
           </div>
           
-          <AIROICalculator />
+          {/* <AIROICalculator /> */}
         </div>
       </section>
 
@@ -423,7 +451,7 @@ export default function HomePage() {
 
           <div className="text-center">
             <Link
-              to="/blog"
+              href="/blog"
               className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <span className="w-5 h-5 mr-2">✨</span>
@@ -494,7 +522,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <Link
-                    to="/blog/ai-agent-orchestration-2026"
+                    href="/blog/ai-agent-orchestration-2026"
                     className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                   >
                     Read More →
@@ -545,7 +573,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <Link
-                    to="/case-studies/ai-sustainability-transformation-2026"
+                    href="/case-studies/ai-sustainability-transformation-2026"
                     className="bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors"
                   >
                     Read More →
@@ -677,7 +705,7 @@ export default function HomePage() {
 
           <div className="text-center mt-16">
             <Link
-              to="/blog"
+              href="/blog"
               className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <span className="w-5 h-5 mr-2">🚀</span>
@@ -735,7 +763,7 @@ export default function HomePage() {
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-500">Published Jan 20, 2025</div>
                 <Link
-                  to="/blog/ai-edge-computing-2025"
+                  href="/blog/ai-edge-computing-2025"
                   className="text-cyan-600 font-semibold hover:text-cyan-700 transition-colors"
                 >
                   Read More →
@@ -760,7 +788,7 @@ export default function HomePage() {
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-500">Published Jan 20, 2025</div>
                 <Link
-                  to="/blog/ai-cybersecurity-2025"
+                  href="/blog/ai-cybersecurity-2025"
                   className="text-red-600 font-semibold hover:text-red-700 transition-colors"
                 >
                   Read More →
@@ -785,7 +813,7 @@ export default function HomePage() {
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-500">Published Jan 20, 2025</div>
                 <Link
-                  to="/case-studies/ai-finance-automation"
+                  href="/case-studies/ai-finance-automation"
                   className="text-green-600 font-semibold hover:text-green-700 transition-colors"
                 >
                   Read More →
@@ -796,7 +824,7 @@ export default function HomePage() {
 
           <div className="text-center">
             <Link
-              to="/blog"
+              href="/blog"
               className="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore All Innovations
@@ -1211,7 +1239,7 @@ export default function HomePage() {
 
           <div className="text-center">
             <Link
-              to="/blog"
+              href="/blog"
               className="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg hover:shadow-xl"
             >
               View All Content
@@ -1323,7 +1351,7 @@ export default function HomePage() {
               </div>
               <div className="mt-6 pt-4 border-t border-white/20">
                 <Link
-                  to="/blog"
+                  href="/blog"
                   className="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
                 >
                   View All Content →
@@ -1350,13 +1378,13 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              to="tel:+13024640950"
+              href="tel:+13024640950"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg"
             >
               Call +1 302 464 0950
             </a>
             <a
-              to="mailto:kleber@ziontechgroup.com"
+              href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
               Get Free Consultation
