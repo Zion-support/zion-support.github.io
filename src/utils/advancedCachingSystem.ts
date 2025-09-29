@@ -1,432 +1,554 @@
 /**
  * Advanced Caching System
- * Comprehensive caching utilities for the Zion Tech Group website
- * Intelligent caching with automatic invalidation and optimization
+ * Comprehensive caching solution with intelligent invalidation and optimization
  */
 
-export interface CacheEntry<T = any> {
-  key: string;
-  value: T;
+interface CacheEntry<T = any> {
+  data: T;
   timestamp: number;
-  ttl?: number;
-  tags?: string[];
+  expiresAt: number;
+  accessCount: number;
+  lastAccessed: number;
+  size: number;
+  tags: string[];
+  priority: 'low' | 'medium' | 'high' | 'critical';
 }
 
-export interface CacheConfig {
-  enableMemoryCache: boolean;
-  enableLocalStorageCache: boolean;
-  enableSessionStorageCache: boolean;
-  maxMemoryItems: number;
-  maxLocalStorageItems: number;
-  maxSessionStorageItems: number;
-  defaultTTL: number;
-  enableCompression: boolean;
-  enableEncryption: boolean;
-}
-
-export interface CacheMetrics {
+interface CacheStats {
   hits: number;
   misses: number;
-  size: number;
+  evictions: number;
+  totalSize: number;
+  entryCount: number;
   hitRate: number;
-  memoryUsage: number;
 }
 
-export interface CacheItem {
-  key: string;
-  value: any;
-  timestamp: number;
-  ttl?: number;
-  tags?: string[];
+interface CacheConfig {
+  maxSize: number; // Maximum cache size in bytes
+  maxEntries: number; // Maximum number of entries
+  defaultTTL: number; // Default time to live in milliseconds
+  cleanupInterval: number; // Cleanup interval in milliseconds
+  enableCompression: boolean;
+  enableEncryption: boolean;
+  enablePersistence: boolean;
 }
 
 class AdvancedCachingSystem {
-  private memoryCache = new Map<string, CacheEntry>();
+  private cache: Map<string, CacheEntry> = new Map();
   private config: CacheConfig;
-  private metrics: CacheMetrics = {
-    hits: 0,
-    misses: 0,
-    size: 0,
-    hitRate: 0,
-    memoryUsage: 0
-  };
+  private stats: CacheStats;
+  private cleanupTimer: NodeJS.Timeout | null = null;
+  private isInitialized: boolean = false;
 
   constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
-      enableMemoryCache: true,
-      enableLocalStorageCache: true,
-      enableSessionStorageCache: true,
-      maxMemoryItems: 1000,
-      maxLocalStorageItems: 500,
-      maxSessionStorageItems: 200,
-      defaultTTL: 3600000, // 1 hour
-      enableCompression: false,
+      maxSize: 50 * 1024 * 1024, // 50MB default
+      maxEntries: 1000,
+      defaultTTL: 5 * 60 * 1000, // 5 minutes default
+      cleanupInterval: 60 * 1000, // 1 minute cleanup
+      enableCompression: true,
       enableEncryption: false,
+      enablePersistence: true,
       ...config
     };
+
+    this.stats = {
+      hits: 0,
+      misses: 0,
+      evictions: 0,
+      totalSize: 0,
+      entryCount: 0,
+      hitRate: 0
+    };
   }
 
   /**
-   * Set a cache entry
+   * Initialize the caching system
    */
-  async set<T>(key: string, value: T, options?: { ttl?: number; tags?: string[] }): Promise<void> {
+  public initialize(): void {
+    if (this.isInitialized) {
+      console.warn('Advanced Caching System is already initialized');
+      return;
+    }
+
+    this.isInitialized = true;
+    console.log('🗄️ Advanced Caching System initialized');
+
+    // Load persisted cache
+    if (this.config.enablePersistence) {
+      this.loadPersistedCache();
+    }
+
+    // Start cleanup timer
+    this.startCleanupTimer();
+
+    // Setup memory pressure monitoring
+    this.setupMemoryPressureMonitoring();
+
+    // Setup visibility change handler
+    this.setupVisibilityChangeHandler();
+  }
+
+  /**
+   * Set a value in the cache
+   */
+  public set<T>(
+    key: string,
+    data: T,
+    options: {
+      ttl?: number;
+      tags?: string[];
+      priority?: 'low' | 'medium' | 'high' | 'critical';
+      compress?: boolean;
+    } = {}
+  ): void {
+    const now = Date.now();
+    const ttl = options.ttl || this.config.defaultTTL;
+    const expiresAt = now + ttl;
+    
+    // Calculate size
+    const serializedData = JSON.stringify(data);
+    const size = new Blob([serializedData]).size;
+
+    // Check if we need to evict entries
+    this.ensureSpace(size);
+
     const entry: CacheEntry<T> = {
-      key,
-      value,
-      timestamp: Date.now(),
-      ttl: options?.ttl || this.config.defaultTTL,
-      tags: options?.tags
+      data,
+      timestamp: now,
+      expiresAt,
+      accessCount: 0,
+      lastAccessed: now,
+      size,
+      tags: options.tags || [],
+      priority: options.priority || 'medium'
     };
 
-    // Memory cache
-    if (this.config.enableMemoryCache) {
-      this.memoryCache.set(key, entry);
-      this.enforceMemoryLimit();
-    }
+    this.cache.set(key, entry);
+    this.stats.entryCount = this.cache.size;
+    this.stats.totalSize += size;
 
-    // Local storage cache
-    if (this.config.enableLocalStorageCache) {
-      try {
-        const serialized = this.config.enableCompression 
-          ? this.compress(JSON.stringify(entry))
-          : JSON.stringify(entry);
-        
-        localStorage.setItem(`cache_${key}`, serialized);
-        this.enforceLocalStorageLimit();
-      } catch (error) {
-        console.warn('Failed to cache in localStorage:', error);
-      }
+    // Persist if enabled
+    if (this.config.enablePersistence) {
+      this.persistEntry(key, entry);
     }
-
-    // Session storage cache
-    if (this.config.enableSessionStorageCache) {
-      try {
-        const serialized = this.config.enableCompression 
-          ? this.compress(JSON.stringify(entry))
-          : JSON.stringify(entry);
-        
-        sessionStorage.setItem(`cache_${key}`, serialized);
-        this.enforceSessionStorageLimit();
-      } catch (error) {
-        console.warn('Failed to cache in sessionStorage:', error);
-      }
-    }
-
-    this.updateMetrics();
   }
 
   /**
-   * Get a cache entry
+   * Get a value from the cache
    */
-  async get<T>(key: string): Promise<T | null> {
-    // Try memory cache first
-    if (this.config.enableMemoryCache) {
-      const entry = this.memoryCache.get(key);
-      if (entry && !this.isExpired(entry)) {
-        this.metrics.hits++;
-        this.updateMetrics();
-        return entry.value as T;
-      }
+  public get<T>(key: string): T | null {
+    const entry = this.cache.get(key);
+    
+    if (!entry) {
+      this.stats.misses++;
+      this.updateHitRate();
+      return null;
     }
 
-    // Try localStorage
-    if (this.config.enableLocalStorageCache) {
-      try {
-        const serialized = localStorage.getItem(`cache_${key}`);
-        if (serialized) {
-          const entry: CacheEntry<T> = this.config.enableCompression 
-            ? JSON.parse(this.decompress(serialized))
-            : JSON.parse(serialized);
-          
-          if (!this.isExpired(entry)) {
-            // Update memory cache
-            if (this.config.enableMemoryCache) {
-              this.memoryCache.set(key, entry);
-            }
-            
-            this.metrics.hits++;
-            this.updateMetrics();
-            return entry.value;
-          } else {
-            // Remove expired entry
-            localStorage.removeItem(`cache_${key}`);
-          }
-        }
-      } catch (error) {
-        console.warn('Failed to get from localStorage:', error);
-      }
+    const now = Date.now();
+
+    // Check if expired
+    if (now > entry.expiresAt) {
+      this.cache.delete(key);
+      this.stats.misses++;
+      this.updateHitRate();
+      return null;
     }
 
-    // Try sessionStorage
-    if (this.config.enableSessionStorageCache) {
-      try {
-        const serialized = sessionStorage.getItem(`cache_${key}`);
-        if (serialized) {
-          const entry: CacheEntry<T> = this.config.enableCompression 
-            ? JSON.parse(this.decompress(serialized))
-            : JSON.parse(serialized);
-          
-          if (!this.isExpired(entry)) {
-            // Update memory cache
-            if (this.config.enableMemoryCache) {
-              this.memoryCache.set(key, entry);
-            }
-            
-            this.metrics.hits++;
-            this.updateMetrics();
-            return entry.value;
-          } else {
-            // Remove expired entry
-            sessionStorage.removeItem(`cache_${key}`);
-          }
-        }
-      } catch (error) {
-        console.warn('Failed to get from sessionStorage:', error);
-      }
-    }
+    // Update access statistics
+    entry.accessCount++;
+    entry.lastAccessed = now;
+    this.stats.hits++;
+    this.updateHitRate();
 
-    this.metrics.misses++;
-    this.updateMetrics();
-    return null;
+    return entry.data as T;
   }
 
   /**
-   * Remove a cache entry
+   * Get or set a value (cache-aside pattern)
    */
-  async delete(key: string): Promise<void> {
-    // Remove from memory cache
-    if (this.config.enableMemoryCache) {
-      this.memoryCache.delete(key);
+  public async getOrSet<T>(
+    key: string,
+    factory: () => Promise<T>,
+    options: {
+      ttl?: number;
+      tags?: string[];
+      priority?: 'low' | 'medium' | 'high' | 'critical';
+    } = {}
+  ): Promise<T> {
+    let value = this.get<T>(key);
+    
+    if (value === null) {
+      value = await factory();
+      this.set(key, value, options);
     }
+    
+    return value;
+  }
 
-    // Remove from localStorage
-    if (this.config.enableLocalStorageCache) {
-      localStorage.removeItem(`cache_${key}`);
+  /**
+   * Delete a specific key
+   */
+  public delete(key: string): boolean {
+    const entry = this.cache.get(key);
+    if (entry) {
+      this.cache.delete(key);
+      this.stats.totalSize -= entry.size;
+      this.stats.entryCount = this.cache.size;
+      return true;
     }
+    return false;
+  }
 
-    // Remove from sessionStorage
-    if (this.config.enableSessionStorageCache) {
-      sessionStorage.removeItem(`cache_${key}`);
+  /**
+   * Invalidate cache entries by tags
+   */
+  public invalidateByTags(tags: string[]): number {
+    let invalidatedCount = 0;
+    
+    for (const [key, entry] of this.cache.entries()) {
+      if (entry.tags.some(tag => tags.includes(tag))) {
+        this.cache.delete(key);
+        this.stats.totalSize -= entry.size;
+        invalidatedCount++;
+      }
     }
-
-    this.updateMetrics();
+    
+    this.stats.entryCount = this.cache.size;
+    return invalidatedCount;
   }
 
   /**
    * Clear all cache entries
    */
-  async clear(): Promise<void> {
-    // Clear memory cache
-    if (this.config.enableMemoryCache) {
-      this.memoryCache.clear();
+  public clear(): void {
+    this.cache.clear();
+    this.stats.totalSize = 0;
+    this.stats.entryCount = 0;
+    this.stats.evictions = 0;
+    
+    if (this.config.enablePersistence) {
+      this.clearPersistedCache();
+    }
+  }
+
+  /**
+   * Get cache statistics
+   */
+  public getStats(): CacheStats {
+    return { ...this.stats };
+  }
+
+  /**
+   * Get cache entries info
+   */
+  public getEntriesInfo(): Array<{
+    key: string;
+    size: number;
+    age: number;
+    accessCount: number;
+    priority: string;
+    tags: string[];
+  }> {
+    const now = Date.now();
+    return Array.from(this.cache.entries()).map(([key, entry]) => ({
+      key,
+      size: entry.size,
+      age: now - entry.timestamp,
+      accessCount: entry.accessCount,
+      priority: entry.priority,
+      tags: entry.tags
+    }));
+  }
+
+  /**
+   * Ensure there's enough space for new entry
+   */
+  private ensureSpace(requiredSize: number): void {
+    // Check if we exceed max entries
+    if (this.cache.size >= this.config.maxEntries) {
+      this.evictLRU();
     }
 
-    // Clear localStorage cache entries
-    if (this.config.enableLocalStorageCache) {
-      const keys = Object.keys(localStorage);
-      keys.forEach(key => {
-        if (key.startsWith('cache_')) {
-          localStorage.removeItem(key);
+    // Check if we exceed max size
+    while (this.stats.totalSize + requiredSize > this.config.maxSize && this.cache.size > 0) {
+      this.evictLRU();
+    }
+  }
+
+  /**
+   * Evict least recently used entry
+   */
+  private evictLRU(): void {
+    let oldestKey = '';
+    let oldestTime = Date.now();
+
+    for (const [key, entry] of this.cache.entries()) {
+      if (entry.lastAccessed < oldestTime) {
+        oldestTime = entry.lastAccessed;
+        oldestKey = key;
+      }
+    }
+
+    if (oldestKey) {
+      const entry = this.cache.get(oldestKey);
+      if (entry) {
+        this.cache.delete(oldestKey);
+        this.stats.totalSize -= entry.size;
+        this.stats.evictions++;
+        this.stats.entryCount = this.cache.size;
+      }
+    }
+  }
+
+  /**
+   * Update hit rate
+   */
+  private updateHitRate(): void {
+    const total = this.stats.hits + this.stats.misses;
+    this.stats.hitRate = total > 0 ? (this.stats.hits / total) * 100 : 0;
+  }
+
+  /**
+   * Start cleanup timer
+   */
+  private startCleanupTimer(): void {
+    if (this.cleanupTimer) {
+      clearInterval(this.cleanupTimer);
+    }
+
+    this.cleanupTimer = setInterval(() => {
+      this.cleanupExpiredEntries();
+    }, this.config.cleanupInterval);
+  }
+
+  /**
+   * Cleanup expired entries
+   */
+  private cleanupExpiredEntries(): void {
+    const now = Date.now();
+    let cleanedCount = 0;
+
+    for (const [key, entry] of this.cache.entries()) {
+      if (now > entry.expiresAt) {
+        this.cache.delete(key);
+        this.stats.totalSize -= entry.size;
+        cleanedCount++;
+      }
+    }
+
+    this.stats.entryCount = this.cache.size;
+
+    if (cleanedCount > 0) {
+      console.log(`🧹 Cache cleanup: removed ${cleanedCount} expired entries`);
+    }
+  }
+
+  /**
+   * Setup memory pressure monitoring
+   */
+  private setupMemoryPressureMonitoring(): void {
+    if ('memory' in performance) {
+      const checkMemory = () => {
+        const memory = (performance as any).memory;
+        const usagePercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+        
+        if (usagePercent > 80) {
+          // High memory usage, evict low priority entries
+          this.evictLowPriorityEntries();
         }
-      });
-    }
+      };
 
-    // Clear sessionStorage cache entries
-    if (this.config.enableSessionStorageCache) {
-      const keys = Object.keys(sessionStorage);
-      keys.forEach(key => {
-        if (key.startsWith('cache_')) {
-          sessionStorage.removeItem(key);
-        }
-      });
-    }
-
-    this.updateMetrics();
-  }
-
-  /**
-   * Clear cache entries by tags
-   */
-  async clearByTags(tags: string[]): Promise<void> {
-    const keysToDelete: string[] = [];
-
-    // Check memory cache
-    if (this.config.enableMemoryCache) {
-      this.memoryCache.forEach((entry, key) => {
-        if (entry.tags && entry.tags.some(tag => tags.includes(tag))) {
-          keysToDelete.push(key);
-        }
-      });
-    }
-
-    // Check localStorage
-    if (this.config.enableLocalStorageCache) {
-      const keys = Object.keys(localStorage);
-      keys.forEach(key => {
-        if (key.startsWith('cache_')) {
-          try {
-            const serialized = localStorage.getItem(key);
-            if (serialized) {
-              const entry: CacheEntry = this.config.enableCompression 
-                ? JSON.parse(this.decompress(serialized))
-                : JSON.parse(serialized);
-              
-              if (entry.tags && entry.tags.some(tag => tags.includes(tag))) {
-                keysToDelete.push(key.replace('cache_', ''));
-              }
-            }
-          } catch (error) {
-            console.warn('Failed to check localStorage entry:', error);
-          }
-        }
-      });
-    }
-
-    // Check sessionStorage
-    if (this.config.enableSessionStorageCache) {
-      const keys = Object.keys(sessionStorage);
-      keys.forEach(key => {
-        if (key.startsWith('cache_')) {
-          try {
-            const serialized = sessionStorage.getItem(key);
-            if (serialized) {
-              const entry: CacheEntry = this.config.enableCompression 
-                ? JSON.parse(this.decompress(serialized))
-                : JSON.parse(serialized);
-              
-              if (entry.tags && entry.tags.some(tag => tags.includes(tag))) {
-                keysToDelete.push(key.replace('cache_', ''));
-              }
-            }
-          } catch (error) {
-            console.warn('Failed to check sessionStorage entry:', error);
-          }
-        }
-      });
-    }
-
-    // Delete all matching entries
-    for (const key of keysToDelete) {
-      await this.delete(key);
+      // Check memory every 30 seconds
+      setInterval(checkMemory, 30000);
     }
   }
 
   /**
-   * Get cache metrics
+   * Evict low priority entries when memory is high
    */
-  getMetrics(): CacheMetrics {
-    return { ...this.metrics };
-  }
-
-  /**
-   * Check if an entry is expired
-   */
-  private isExpired(entry: CacheEntry): boolean {
-    if (!entry.ttl) return false;
-    return Date.now() - entry.timestamp > entry.ttl;
-  }
-
-  /**
-   * Enforce memory cache limit
-   */
-  private enforceMemoryLimit(): void {
-    if (this.memoryCache.size > this.config.maxMemoryItems) {
-      const entries = Array.from(this.memoryCache.entries());
-      entries.sort((a, b) => a[1].timestamp - b[1].timestamp);
-      
-      const toDelete = entries.slice(0, this.memoryCache.size - this.config.maxMemoryItems);
-      toDelete.forEach(([key]) => this.memoryCache.delete(key));
+  private evictLowPriorityEntries(): void {
+    const lowPriorityKeys: string[] = [];
+    
+    for (const [key, entry] of this.cache.entries()) {
+      if (entry.priority === 'low') {
+        lowPriorityKeys.push(key);
+      }
     }
-  }
 
-  /**
-   * Enforce localStorage cache limit
-   */
-  private enforceLocalStorageLimit(): void {
-    const cacheKeys = Object.keys(localStorage).filter(key => key.startsWith('cache_'));
-    if (cacheKeys.length > this.config.maxLocalStorageItems) {
-      const entries = cacheKeys.map(key => {
-        try {
-          const serialized = localStorage.getItem(key);
-          const entry: CacheEntry = serialized ? 
-            (this.config.enableCompression ? JSON.parse(this.decompress(serialized)) : JSON.parse(serialized)) :
-            { key: '', value: null, timestamp: 0 };
-          return { key, entry };
-        } catch {
-          return { key, entry: { key: '', value: null, timestamp: 0 } };
-        }
-      });
-      
-      entries.sort((a, b) => a.entry.timestamp - b.entry.timestamp);
-      
-      const toDelete = entries.slice(0, cacheKeys.length - this.config.maxLocalStorageItems);
-      toDelete.forEach(({ key }) => localStorage.removeItem(key));
-    }
-  }
-
-  /**
-   * Enforce sessionStorage cache limit
-   */
-  private enforceSessionStorageLimit(): void {
-    const cacheKeys = Object.keys(sessionStorage).filter(key => key.startsWith('cache_'));
-    if (cacheKeys.length > this.config.maxSessionStorageItems) {
-      const entries = cacheKeys.map(key => {
-        try {
-          const serialized = sessionStorage.getItem(key);
-          const entry: CacheEntry = serialized ? 
-            (this.config.enableCompression ? JSON.parse(this.decompress(serialized)) : JSON.parse(serialized)) :
-            { key: '', value: null, timestamp: 0 };
-          return { key, entry };
-        } catch {
-          return { key, entry: { key: '', value: null, timestamp: 0 } };
-        }
-      });
-      
-      entries.sort((a, b) => a.entry.timestamp - b.entry.timestamp);
-      
-      const toDelete = entries.slice(0, cacheKeys.length - this.config.maxSessionStorageItems);
-      toDelete.forEach(({ key }) => sessionStorage.removeItem(key));
-    }
-  }
-
-  /**
-   * Update cache metrics
-   */
-  private updateMetrics(): void {
-    this.metrics.size = this.memoryCache.size;
-    this.metrics.hitRate = this.metrics.hits / (this.metrics.hits + this.metrics.misses) || 0;
-    this.metrics.memoryUsage = this.estimateMemoryUsage();
-  }
-
-  /**
-   * Estimate memory usage
-   */
-  private estimateMemoryUsage(): number {
-    let totalSize = 0;
-    this.memoryCache.forEach((entry) => {
-      totalSize += JSON.stringify(entry).length * 2; // Rough estimate
+    // Evict oldest low priority entries
+    lowPriorityKeys.sort((a, b) => {
+      const entryA = this.cache.get(a);
+      const entryB = this.cache.get(b);
+      return (entryA?.lastAccessed || 0) - (entryB?.lastAccessed || 0);
     });
-    return totalSize;
+
+    // Evict up to 20% of low priority entries
+    const toEvict = Math.ceil(lowPriorityKeys.length * 0.2);
+    for (let i = 0; i < toEvict; i++) {
+      const key = lowPriorityKeys[i];
+      const entry = this.cache.get(key);
+      if (entry) {
+        this.cache.delete(key);
+        this.stats.totalSize -= entry.size;
+        this.stats.evictions++;
+      }
+    }
+
+    this.stats.entryCount = this.cache.size;
+    console.log(`💾 Memory pressure: evicted ${toEvict} low priority cache entries`);
   }
 
   /**
-   * Simple compression (base64 encoding)
+   * Setup visibility change handler
    */
-  private compress(data: string): string {
-    return btoa(data);
+  private setupVisibilityChangeHandler(): void {
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        // Page is hidden, persist cache
+        if (this.config.enablePersistence) {
+          this.persistCache();
+        }
+      } else {
+        // Page is visible, load persisted cache
+        if (this.config.enablePersistence) {
+          this.loadPersistedCache();
+        }
+      }
+    });
   }
 
   /**
-   * Simple decompression (base64 decoding)
+   * Persist cache entry to localStorage
    */
-  private decompress(data: string): string {
-    return atob(data);
+  private persistEntry(key: string, entry: CacheEntry): void {
+    try {
+      const serialized = JSON.stringify({
+        ...entry,
+        data: JSON.stringify(entry.data)
+      });
+      localStorage.setItem(`cache_${key}`, serialized);
+    } catch (error) {
+      console.warn('Failed to persist cache entry:', error);
+    }
+  }
+
+  /**
+   * Load persisted cache from localStorage
+   */
+  private loadPersistedCache(): void {
+    try {
+      const keys = Object.keys(localStorage).filter(key => key.startsWith('cache_'));
+      
+      for (const key of keys) {
+        const stored = localStorage.getItem(key);
+        if (stored) {
+          const entry = JSON.parse(stored);
+          entry.data = JSON.parse(entry.data);
+          
+          // Check if not expired
+          if (Date.now() < entry.expiresAt) {
+            const cacheKey = key.replace('cache_', '');
+            this.cache.set(cacheKey, entry);
+            this.stats.totalSize += entry.size;
+          } else {
+            localStorage.removeItem(key);
+          }
+        }
+      }
+      
+      this.stats.entryCount = this.cache.size;
+    } catch (error) {
+      console.warn('Failed to load persisted cache:', error);
+    }
+  }
+
+  /**
+   * Persist entire cache to localStorage
+   */
+  private persistCache(): void {
+    try {
+      for (const [key, entry] of this.cache.entries()) {
+        this.persistEntry(key, entry);
+      }
+    } catch (error) {
+      console.warn('Failed to persist cache:', error);
+    }
+  }
+
+  /**
+   * Clear persisted cache
+   */
+  private clearPersistedCache(): void {
+    try {
+      const keys = Object.keys(localStorage).filter(key => key.startsWith('cache_'));
+      keys.forEach(key => localStorage.removeItem(key));
+    } catch (error) {
+      console.warn('Failed to clear persisted cache:', error);
+    }
+  }
+
+  /**
+   * Generate cache report
+   */
+  public generateReport(): string {
+    const stats = this.getStats();
+    const entries = this.getEntriesInfo();
+    
+    let report = `
+🗄️ Advanced Caching System Report
+================================
+Hit Rate: ${stats.hitRate.toFixed(2)}%
+Total Entries: ${stats.entryCount}
+Total Size: ${(stats.totalSize / 1024 / 1024).toFixed(2)} MB
+Cache Hits: ${stats.hits}
+Cache Misses: ${stats.misses}
+Evictions: ${stats.evictions}
+
+📊 Top Accessed Entries:
+`;
+
+    entries
+      .sort((a, b) => b.accessCount - a.accessCount)
+      .slice(0, 10)
+      .forEach((entry, index) => {
+        report += `${index + 1}. ${entry.key}: ${entry.accessCount} accesses, ${(entry.size / 1024).toFixed(2)} KB\n`;
+      });
+
+    report += `\n📊 Entries by Priority:\n`;
+    const priorityCounts = entries.reduce((acc, entry) => {
+      acc[entry.priority] = (acc[entry.priority] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
+
+    Object.entries(priorityCounts).forEach(([priority, count]) => {
+      report += `- ${priority}: ${count}\n`;
+    });
+
+    return report;
+  }
+
+  /**
+   * Cleanup resources
+   */
+  public cleanup(): void {
+    if (this.cleanupTimer) {
+      clearInterval(this.cleanupTimer);
+      this.cleanupTimer = null;
+    }
+
+    if (this.config.enablePersistence) {
+      this.persistCache();
+    }
+
+    this.cache.clear();
+    this.isInitialized = false;
   }
 }
 
-// Create and export singleton instance
+// Export singleton instance
 export const advancedCachingSystem = new AdvancedCachingSystem();
-
-// Export class for custom instances
+export type { CacheEntry, CacheStats, CacheConfig };
 export { AdvancedCachingSystem };
-// Types are already exported above as interfaces
+export default AdvancedCachingSystem;
