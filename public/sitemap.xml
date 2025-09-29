@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://ziontechgroup.com/</loc></url>
+  <url><loc>https://ziontechgroup.com/classic</loc></url>
+  <url><loc>https://ziontechgroup.com/blog</loc></url>
+  <url><loc>https://ziontechgroup.com/contact</loc></url>
+  <url><loc>https://ziontechgroup.com/about</loc></url>
+  <url><loc>https://ziontechgroup.com/services</loc></url>
+  <url><loc>https://ziontechgroup.com/portfolio</loc></url>
+  <url><loc>https://ziontechgroup.com/monitoring</loc></url>
+  <url><loc>https://ziontechgroup.com/features</loc></url>
+  <url><loc>https://ziontechgroup.com/performance</loc></url>
+  <url><loc>https://ziontechgroup.com/analytics</loc></url>
+</urlset>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ziontechgroup.com/</loc>
     <lastmod>2025-09-29</lastmod>
