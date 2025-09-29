@@ -47,6 +47,8 @@ import InteractiveContentRecommendation from '../components/InteractiveContentRe
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
 import { UltimateContent2026Banner, AdvancedAIInnovation2026Banner } from '../components/UltimateContent2026Banner';
+import RevolutionarySpaceAIBanner from '../components/RevolutionarySpaceAIBanner';
+import CognitiveComputingBreakthroughBanner from '../components/CognitiveComputingBreakthroughBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -64,13 +66,13 @@ export default function HomePage() {
             <span>🔥 LATEST 2026:</span>
             <Link href="/blog/ai-2026-mega-trends" className="underline hover:text-yellow-200">AI Mega Trends</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200">Enterprise Automation</Link>
+            <Link href="/blog/ai-space-tech-revolution-2026" className="underline hover:text-yellow-200">Space AI Revolution</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="underline hover:text-yellow-200">Cognitive Computing</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-autonomous-enterprise-2026" className="underline hover:text-yellow-200">Autonomous Enterprise</Link>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-neural-interfaces-2026" className="underline hover:text-yellow-200">Neural Interfaces</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="underline hover:text-yellow-200">$25M Success Story</Link>
+            <Link href="/case-studies/ai-space-mission-success-2026" className="underline hover:text-yellow-200">$100M Space Success</Link>
             <Link href="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-autonomous-enterprise-transformation-2026" className="underline hover:text-yellow-200">$15M ROI Case Study</Link>
@@ -87,6 +89,13 @@ export default function HomePage() {
       </div>
       {/* Ultimate 2026 Content Banner */}
       <UltimateContent2026Banner />
+      
+      {/* Revolutionary Space AI Banner */}
+      <RevolutionarySpaceAIBanner />
+      
+      {/* Cognitive Computing Breakthrough Banner */}
+      <CognitiveComputingBreakthroughBanner />
+      
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
       

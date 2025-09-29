@@ -94,7 +94,8 @@ function Footer() {
                 <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
               </Link>
               <Link href="/blog/ai-neural-interfaces-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🧠 Neural Interfaces 2026</Link>
-              <Link href="/blog/ai-space-tech-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Space AI Technology</Link>
+              <Link href="/blog/ai-space-tech-revolution-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🚀 Space AI Revolution</Link>
+              <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🧠 Cognitive Computing</Link>
               <Link href="/blog/ai-synthetic-data-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">🔒 Synthetic Data AI</Link>
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Case Studies
