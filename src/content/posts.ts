@@ -6,6 +6,7 @@ export interface BlogPost {
   publishedAt: string;
   featured?: boolean;
   readTime?: string;
+  body?: string;
 }
 
 export const posts: BlogPost[] = [
@@ -161,5 +162,56 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "11 min read"
+  }
+  ,
+  {
+    slug: "genai-platform-blueprint-2025",
+    title: "GenAI Platform Blueprint: Shipping Weekly With Guardrails",
+    description: "Reference architecture for safe, scalable GenAI with policy tests, eval canaries, and golden paths.",
+    category: "GenAI",
+    publishedAt: "2025-10-10",
+    featured: true,
+    readTime: "10 min read",
+    body: "This blueprint outlines a pragmatic GenAI platform: policy-first guardrails, eval canaries, golden paths, and platform trains that keep teams shipping safely week over week."
+  },
+  {
+    slug: "cloud-finops-guardrails-2025",
+    title: "Cloud FinOps Guardrails: Budgets, Unit Economics, and Scorecards",
+    description: "Practical cost guardrails that preserve velocity: budgets, SLO-aware policies, and transparent scorecards.",
+    category: "Cloud",
+    publishedAt: "2025-10-10",
+    featured: false,
+    readTime: "7 min read",
+    body: "Implement FinOps guardrails that align teams on budgets and unit economics without slowing delivery. Includes actionable scorecards and automation hooks."
+  },
+  {
+    slug: "hybrid-vector-search-2025",
+    title: "Hybrid Vector Search: Freshness, Filters, and Reranking",
+    description: "Cut retrieval costs 40%+ while improving relevance using hybrid search with freshness windows and rerankers.",
+    category: "AI Architecture",
+    publishedAt: "2025-10-10",
+    featured: false,
+    readTime: "9 min read",
+    body: "A practical guide to combining BM25, dense vectors, metadata filters, and rerankers to deliver relevant, fresh results at lower cost."
+  },
+  {
+    slug: "agentic-workflows-blueprint-2025",
+    title: "Agentic Workflows Blueprint: Tools, Memory, and SLOs",
+    description: "Design agent workflows with explicit tools, scoped memory, and SLOs tied to business KPIs.",
+    category: "GenAI",
+    publishedAt: "2025-10-10",
+    featured: true,
+    readTime: "8 min read",
+    body: "From tool definitions to rollback-ready canaries, this blueprint shows how to make agent workflows observable, reliable, and cost-aware."
+  },
+  {
+    slug: "edge-llm-caching-2025",
+    title: "Edge LLM Caching: Latency Budgets Without Quality Regressions",
+    description: "Use tiered caches and response normalization to hit P95 targets while controlling costs.",
+    category: "Architecture",
+    publishedAt: "2025-10-10",
+    featured: false,
+    readTime: "6 min read",
+    body: "Learn when and how to cache LLM responses at the edge, including invalidation strategies and safety considerations."
   }
 ];

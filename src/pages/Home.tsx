@@ -788,18 +788,17 @@ const Home = () => {
 
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">GenAI</div>
-                  <div className="font-semibold text-white">Agentic Workflows Blueprint</div>
-                </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Architecture</div>
-                  <div className="font-semibold text-white">Edge LLM Caching</div>
-                </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Security</div>
-                  <div className="font-semibold text-white">Secure ML Supply Chain</div>
-                </div>
+                {["agentic-workflows-blueprint-2025","edge-llm-caching-2025","llm-policy-testing-2025"].map((slug) => {
+                  const item = posts.find(p => p.slug === slug);
+                  if (!item) return null;
+                  const color = slug === "agentic-workflows-blueprint-2025" ? "text-purple-200" : slug === "edge-llm-caching-2025" ? "text-blue-200" : "text-rose-200";
+                  return (
+                    <div key={slug} className="bg-white/10 rounded-xl p-5">
+                      <div className={`text-sm ${color} mb-1`}>{item.category}</div>
+                      <div className="font-semibold text-white">{item.title}</div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

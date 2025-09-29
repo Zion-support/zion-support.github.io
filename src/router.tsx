@@ -10,7 +10,7 @@ import Blog from './pages/Blog';
 // import Resources from './pages/Resources';
 // import Tools from './pages/Tools';
 // import EnterpriseAISolutions from './pages/EnterpriseAISolutions';
-// import Post from './pages/Post';
+import Post from './pages/Post';
 // import CaseStudies from './pages/CaseStudies';
 // import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
 // import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
@@ -25,6 +25,7 @@ export const AppRouter: React.FC = () => {
       { /* Removed missing routes for now */ }
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<Post />} />
       { /* Removed dynamic and extra routes */ }
     </Routes>
   );
