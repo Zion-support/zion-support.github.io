@@ -82,5 +82,33 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "8 min read"
   }
+  ,
+  {
+    slug: "ai-risk-register-checklist-2025",
+    title: "AI Risk Register Checklist: Owners, Policy Tests, Dashboards",
+    description: "Make AI risk real with accountable owners, measurable policies, and visible scorecards.",
+    category: "AI Governance",
+    publishedAt: "2025-10-06",
+    featured: true,
+    readTime: "5 min read"
+  },
+  {
+    slug: "rag-freshness-strategies-2025",
+    title: "RAG Freshness Strategies: Versioned Chunks, TTLs, Async Warmups",
+    description: "Keep retrieval results fresh with versioned corpora, TTL budgets, and background warmups.",
+    category: "GenAI",
+    publishedAt: "2025-10-06",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "edge-feature-flags-zero-regret-2025",
+    title: "Edge Feature Flags: Zero‑Regret Rollouts with Instant Rollback",
+    description: "Segmented canaries by geo and account with budget caps and telemetry at the edge.",
+    category: "Architecture",
+    publishedAt: "2025-10-06",
+    featured: false,
+    readTime: "6 min read"
+  }
 ];
 
