@@ -19,6 +19,36 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-cost-calculator-2026',
+    title: 'AI Cost Calculator 2026: Optimize Your AI Spending',
+    excerpt: 'Cut LLM costs by up to 70% with routing, caching, compression, and quantization.',
+    type: 'article',
+    readTime: '14 min read',
+    category: 'FinOps',
+    href: '/blog/ai-cost-calculator-2026',
+    featured: true,
+    publishedDate: '2026-01-20',
+    metrics: [
+      { value: '70%', label: 'Savings Potential' },
+      { value: '⇣ 3x', label: 'Cost per Outcome' }
+    ]
+  },
+  {
+    id: 'ai-implementation-playbook-2026',
+    title: 'AI Implementation Playbook 2026: Enterprise Guide',
+    excerpt: 'Phased approach from strategy to scale with governance, security, and ROI.',
+    type: 'guide',
+    readTime: '16 min read',
+    category: 'Strategy',
+    href: '/blog/ai-implementation-playbook-2026',
+    featured: true,
+    publishedDate: '2026-01-20',
+    metrics: [
+      { value: '4', label: 'Phases' },
+      { value: '300%', label: 'ROI Target' }
+    ]
+  },
+  {
     id: 'ai-trustworthy-agents-2026',
     title: 'Trustworthy AI Agents 2026: Safety, Compliance, and Observability',
     excerpt: 'Deploy trustworthy AI agents with guardrails, approvals, and end-to-end observability.',
