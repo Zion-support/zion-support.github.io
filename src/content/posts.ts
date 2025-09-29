@@ -20,6 +20,36 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
   },
   {
+    slug: "practical-rag-blueprint-2025",
+    title: "Practical RAG Blueprint 2025: Retrieval That Actually Improves Answers",
+    description:
+      "Architect chunking, embeddings, and routing that raise answer quality while lowering cost.",
+    category: "GenAI",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "shipping-genai-safely-guardrails",
+    title: "Shipping GenAI Safely: Policy Tests, Canaries, and Rollbacks",
+    description:
+      "A practical playbook for offline evals, online canaries, and rollback plans that prevent regressions.",
+    category: "AI Governance",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "edge-caching-playbook-2025",
+    title: "Edge Caching Playbook: Sub‑100ms at Global Scale",
+    description:
+      "Versioned keys, background warming, and cache‑aside patterns for resilient, fast UX.",
+    category: "Architecture",
+    publishedAt: "2025-10-01",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
     slug: "zero-downtime-migrations-2025",
     title: "Zero‑Downtime Migrations: Patterns that Keep Pages Green",
     description:
