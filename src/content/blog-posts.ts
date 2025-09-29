@@ -2096,6 +2096,107 @@ Ready to implement Zero Trust security? Contact our team for a free security ass
     featured: true,
     readTime: "14 min read",
     image: "/images/zero-trust-security.jpg"
+  },
+  {
+    slug: "serverless-inference-cost-playbook-2025",
+    title: "Serverless AI Inference Cost Playbook: 40–70% Savings Without P95 Pain",
+    description: "Adaptive batching, warm pools, and tiered quality to cut spend while keeping latency sane.",
+    content: `
+# Serverless AI Inference Cost Playbook: 40–70% Savings Without P95 Pain
+
+Serverless inference enables elastic scaling, but naive setups burn budget and hurt tail latency. This playbook shows pragmatic techniques to cut costs 40–70% while preserving user experience.
+
+## Core Tactics
+
+- Adaptive batching with latency budgets
+- Warm pools for cold start amortization
+- Tiered quality: route heavy prompts to cheaper routes when possible
+- Token-aware caching and result reuse
+- Request coalescing and anti-stampede guards
+
+## Implementation Checklist
+
+1. Define P50/P95 budgets per surface
+2. Add per-route cost and quality telemetry
+3. Implement batch windows with max-wait thresholds
+4. Maintain warm capacity by time-of-day
+5. Run weekly cost-quality reviews
+
+Adopt these steps to keep experiences fast and bills predictable.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Solutions",
+    tags: ["Serverless", "Inference", "Cost", "Latency"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/serverless-inference-cost-playbook.jpg"
+  },
+  {
+    slug: "practical-rag-in-production-2025",
+    title: "Practical RAG in Production: Freshness, Hybrid Search, and Evals",
+    description: "Battle-tested patterns for chunking, freshness policies, hybrid retrieval, and eval harnesses.",
+    content: `
+# Practical RAG in Production: Freshness, Hybrid Search, and Evals
+
+RAG systems fail without freshness guarantees and evaluation. We cover chunking, hybrid dense+lexical search, and continuous evals tied to user outcomes.
+
+## What Matters
+
+- Freshness SLAs and recrawl policies
+- Hybrid retrieval with rerankers
+- Domain-specific chunking and overlap
+- Grounding metadata and citation quality
+- Offline and online eval harnesses
+
+## Rollout Patterns
+
+- Shadow deploys on long-tail queries
+- Policy tests for PII and hallucinations
+- Canary cohorts with guardrail monitors
+
+Ship RAG that stands up to real usage—not just benchmarks.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["RAG", "Retrieval", "Hybrid Search", "Evals"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/practical-rag-in-production.jpg"
+  },
+  {
+    slug: "secure-genai-guardrails-2025",
+    title: "Secure GenAI: Policy‑First Guardrails That Scale",
+    description: "Prompt isolation, PII controls, and egress policies—ship safely without slowing teams.",
+    content: `
+# Secure GenAI: Policy‑First Guardrails That Scale
+
+Security and compliance cannot be bolt‑ons. Learn how to design policy‑first GenAI platforms with isolation, data controls, and continuous testing.
+
+## Guardrail Layers
+
+- Prompt isolation and context partitioning
+- PII detection, redaction, and minimization
+- Outbound egress allowlists and DPI
+- Model route whitelisting and approvals
+- Policy tests in CI and online canaries
+
+## Operating Model
+
+- Central policies with product‑team autonomy
+- Clear escalation paths and audit trails
+- Telemetry for violations and drift
+
+Scale safely while maintaining delivery speed.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Security",
+    tags: ["GenAI", "Security", "Compliance", "Policy"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/secure-genai-guardrails.jpg"
   }
 ];
 
