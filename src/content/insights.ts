@@ -18,6 +18,29 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+    id: "canary-evals-for-genai",
+    title: "Canary Evals for GenAI: What to Measure Before You Ship",
+    summary:
+      "Define offline gates and online guardrails to prevent silent regressions in LLM features.",
+    category: "MLOps",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
+  {
+    id: "streaming-backpressure-patterns",
+    title: "Taming Backpressure in Streaming Systems",
+    summary:
+      "Practical patterns for smoothing bursts, protecting downstreams, and keeping SLAs green.",
+    category: "Data Engineering",
+    date: "2025-09-28",
+    readMinutes: 6,
+  },
+  {
+    id: "north-star-metrics-that-drive-growth",
+    title: "North‑Star Metrics That Actually Drive Growth",
+    summary:
+      "A practical approach to defining leading indicators that align teams to outcomes.",
+    category: "Product Analytics",
     date: "2025-09-28",
     readMinutes: 7,
   },

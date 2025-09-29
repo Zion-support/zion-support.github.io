@@ -20,6 +20,36 @@ export const posts: BlogPost[] = [
     readTime: "7 min read",
   },
   {
+    slug: "mlops-reliability-2025",
+    title: "MLOps Reliability: Shipping GenAI Changes Safely",
+    description:
+      "Canary evals, shadow deploys, and rollback patterns to keep quality high while iterating fast.",
+    category: "MLOps",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "realtime-data-pipelines-2025",
+    title: "Reliable Real‑Time Data Pipelines in 2025",
+    description:
+      "Exactly‑once semantics, backpressure control, and pragmatic observability for streaming systems.",
+    category: "Data Engineering",
+    publishedAt: "2025-09-28",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "north-star-metrics-framework",
+    title: "North‑Star Metrics: A Field‑Tested Framework",
+    description:
+      "A practical method to align teams to measurable outcomes and avoid vanity KPIs.",
+    category: "Product Analytics",
+    publishedAt: "2025-09-27",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
     slug: "north-star-metrics-that-drive-growth",
     title: "North‑Star Metrics That Actually Drive Growth",
     description:
