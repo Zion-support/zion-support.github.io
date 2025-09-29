@@ -1063,6 +1063,7 @@ export const getRecentContent = (limit: number = 3) => {
 };
 
 // Export new content for use in components
+<<<<<<< HEAD
 export { 
   newBlogPosts2025, featuredBlogPosts, trendingBlogPosts, 
   newServices2025, featuredServices, trendingServices,
@@ -1070,3 +1071,54 @@ export {
   newCaseStudies2025, featuredCaseStudies, trendingCaseStudies,
   newInsights2025, featuredInsights, trendingInsights
 };
+=======
+export { 
+  newBlogPosts2025, featuredBlogPosts, trendingBlogPosts, 
+  newServices2025, featuredServices, trendingServices,
+  newContentJanuary2025, featuredNewContent, trendingNewContent,
+  newCaseStudies2025, featuredCaseStudies, trendingCaseStudies,
+  newInsights2025, featuredInsights, trendingInsights
+};
+
+// New banners for fresh content (Sept 29, 2025)
+promotionalBanners.unshift(
+  {
+    id: 'fresh-sep-29-2025-agentic-observability',
+    message: '🧠 New: Agentic Observability Scorecards 2026 — Traces that Predict Outcomes',
+    ctaText: 'Read Article',
+    ctaLink: '/blog/agentic-observability-scorecards-2026',
+    backgroundColor: 'bg-gradient-to-r from-cyan-700 to-blue-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-sep-29-2025-edge-privacy-cdn',
+    message: '🔐 New: Edge Privacy CDN 2026 — Scoped IDs, Local Filters, Zero PII',
+    ctaText: 'Explore',
+    ctaLink: '/blog/edge-privacy-cdn-2026',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  },
+  {
+    id: 'fresh-sep-29-2025-platform-golden-paths',
+    message: '📈 New: Platform Golden Paths + SLOs 2026 — Adoption that Drives ROI',
+    ctaText: 'See Scorecards',
+    ctaLink: '/blog/platform-golden-paths-slos-2026',
+    backgroundColor: 'bg-gradient-to-r from-emerald-700 to-teal-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0
+  }
+);

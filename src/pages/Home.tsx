@@ -150,16 +150,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: AI SRE Runbooks, Real‑Time Evals, Privacy‑First Flags"
-          description="Design budgeted runbooks, wire KPI‑predictive evals, deploy privacy‑aware flags, and track platform KPIs."
+          title="New: Data Lineage for GenAI, Edge Feature Stores, LLM Evals"
+          description="Audit‑ready lineage, sub‑100ms private features, and online canaries that predict outcomes."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI SRE Runbooks 2026", category: "SRE", link: "/blog/ai-sre-runbooks-2026" },
-            { title: "Real‑Time Evals in Prod", category: "GenAI", link: "/blog/real-time-evals-prod-2026" },
-            { title: "Privacy‑First Feature Flags", category: "Architecture", link: "/blog/privacy-first-feature-flags-2026" },
-            { title: "Cost‑Aware Agent Workflows", category: "AI Operations", link: "/blog/cost-aware-agents-2026" },
-            { title: "Platform KPIs 2026", category: "Platform Engineering", link: "/blog/platform-kpis-2026" }
+            { title: "AI Data Lineage for GenAI 2026", category: "AI Governance", link: "/blog/ai-data-lineage-for-genai-2026" },
+            { title: "Edge Secure Feature Stores 2026", category: "Architecture", link: "/blog/edge-secure-feature-stores-2026" },
+            { title: "LLM Evaluation Playbooks 2026", category: "AI Strategy", link: "/blog/llm-evaluation-playbooks-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
