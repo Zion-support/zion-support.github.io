@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "agent-safety-budgets-2026",
+    title: "Agent Safety Budgets: Ship Fast Without Surprises",
+    description: "Budget risky actions, wire rollback triggers, and add KPI‑linked canaries to agent releases.",
+    category: "AI Engineering",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-telemetry-2026-guide",
+    title: "Privacy‑First Telemetry: Signal‑Rich Traces Without PII Leaks",
+    description: "Scoped IDs, field‑level filters, and retention policies that keep insights high and risk low.",
+    category: "Observability",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "kpi-linked-policy-tests-2026",
+    title: "KPI‑Linked Policy Tests: Governance That Speeds Teams Up",
+    description: "Lightweight PR checks and online canaries tied to outcomes—fast feedback without red tape.",
+    category: "AI Governance",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "ai-incident-response-2026",
     title: "AI Incident Response 2026: Playbooks, Canaries, and SLAs",
     description: "Practical incident response for AI features with on-call playbooks and KPI-linked canaries.",
