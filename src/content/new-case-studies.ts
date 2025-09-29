@@ -29,6 +29,34 @@ export interface NewCaseStudy {
 
 export const newCaseStudies: NewCaseStudy[] = [
   {
+    id: "privacy-first-observability-rollout",
+    slug: "privacy-first-observability-rollout",
+    title: "SaaS Leader: Privacy‑First Observability Without PII Leaks",
+    description: "Rolled out user‑centric traces with scoped IDs, on‑device redaction, and strict retention—keeping signals rich and compliant.",
+    excerpt: "From blind spots to insight: privacy‑safe observability lifted issue resolution by 58%.",
+    company: "InsightCloud",
+    industry: "SaaS",
+    challenge: "PII risks blocked telemetry adoption and slowed incident response.",
+    solution: "Scoped identifiers, inline redaction, policy‑as‑code retention, and least‑privilege access.",
+    result: "58% faster RCA, 22% lower incident volume, 0 PII leaks",
+    metrics: {
+      primary: "58% Faster RCA",
+      secondary: "22% Fewer Incidents",
+      tertiary: "0 PII Leaks"
+    },
+    featured: true,
+    date: "2025-10-10",
+    tags: ["Observability", "Privacy", "Compliance", "Security"],
+    testimonial: {
+      quote: "We unlocked actionable signals without risk—the team ships faster and sleeps better.",
+      author: "Nadine Brooks",
+      position: "VP Engineering, InsightCloud"
+    },
+    image: "/images/case-privacy-first-observability.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "fintech-ondevice-agents",
     slug: "fintech-ondevice-agents",
     title: "Fintech Unicorn: On‑Device Agents Slash Latency to 90ms",
