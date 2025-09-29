@@ -48,8 +48,7 @@ export const latestArticles: LatestArticle[] = [
     newBadge: true,
     trending: true
   },
-  {
-<<<<<<< HEAD
+{
     id: "ai-quantum-computing-2026",
     slug: "ai-quantum-computing-2026",
     title: "AI Quantum Computing 2026: Next-Generation Intelligence",
@@ -62,7 +61,10 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "25 min read",
     image: "/images/ai-quantum-computing-2026.jpg",
-=======
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "edge-agent-observability-2026",
     slug: "edge-agent-observability-2026",
     title: "Edge Agent Observability 2026: Live Traces, Budgets, and Fallbacks",
@@ -123,7 +125,6 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "8 min read",
     image: "/images/agent-blue-green-releases-2026.jpg",
->>>>>>> origin/main
     newBadge: true,
     trending: true
   },
@@ -288,55 +289,6 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
-    id: "secure-ml-supply-chain-2026",
-    slug: "secure-ml-supply-chain-2026",
-    title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
-    description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
-    excerpt: "Stop ML supply‑chain drift with automated SBOMs, attestations, and CI policy gates.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "Security",
-    tags: ["ML", "Supply Chain", "SBOM", "Security"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/secure-ml-supply-chain-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "genai-routing-blueprint-2026",
-    slug: "genai-routing-blueprint-2026",
-    title: "GenAI Routing Blueprint 2026: Quality Tiers, Caches, and Budgets",
-    description: "Route traffic by SLA with tiered models, edge caches, and KPI‑linked budgets.",
-    excerpt: "A practical guide to keep costs predictable without hurting UX or outcomes.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "GenAI",
-    tags: ["Routing", "Quality Tiers", "Budgets", "Caching"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/genai-routing-blueprint-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "golden-paths-roi-2026",
-    slug: "golden-paths-roi-2026",
-    title: "Golden Paths ROI 2026: Scorecards that Prove Platform Value",
-    description: "Link developer journeys to SLOs, adoption, and revenue with actionable scorecards.",
-    excerpt: "Shift platform conversations from infra spend to shipped outcomes and ROI.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "Platform Engineering",
-    tags: ["Golden Paths", "Scorecards", "ROI"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/golden-paths-roi-2026.jpg",
->>>>>>> cursor/create-and-deploy-new-content-d0aa
-    newBadge: true,
-    trending: true
-  },
-  {
     id: "reliable-rag-ops-2026",
     slug: "reliable-rag-ops-2026",
     title: "Reliable RAG Ops 2026: Freshness, Drift, and Quality Budgets",
@@ -353,8 +305,8 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
-<<<<<<< HEAD
-=======
+ 
+ 
     id: "agent-evals-scorecards-2026",
     slug: "agent-evals-scorecards-2026",
     title: "Agent Evals 2026: Scorecards That Predict Outcomes",
@@ -403,7 +355,6 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
->>>>>>> cursor/create-and-deploy-new-content-d0aa
     id: "ai-incident-budgets-2026",
     slug: "ai-incident-budgets-2026",
     title: "AI Incident Budgets: Playbooks That Contain in <60s",
@@ -933,55 +884,6 @@ export const latestArticles: LatestArticle[] = [
   }
   ,
   {
-<<<<<<< HEAD
-    id: "secure-ml-supply-chain-2026",
-    slug: "secure-ml-supply-chain-2026",
-    title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
-    description: "Continuous SBOMs for models, datasets, and prompts with attestations and CI policy checks.",
-    excerpt: "A practical guide to securing the ML supply chain with provenance and guardrails.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "AI Security",
-    tags: ["SBOM", "Supply Chain", "Security"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/secure-ml-supply-chain-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "genai-routing-under-budgets-2026",
-    slug: "genai-routing-under-budgets-2026",
-    title: "Quality‑Tiered GenAI Routing: SLAs Without Bill Shock",
-    description: "Route prompts across model tiers with budgets, caches, and eval signals to control cost.",
-    excerpt: "Keep experience high under tight budgets with deterministic routing and caches.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "AI Operations",
-    tags: ["Budgets", "Quality Tiers", "Routing"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/genai-routing-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "platform-golden-paths-kpis-2026",
-    slug: "platform-golden-paths-kpis-2026",
-    title: "Golden Paths That Move KPIs: Platform Engineering That Pays",
-    description: "Adoption metrics, TTFX, and SLOs as leading indicators of platform ROI in 2026.",
-    excerpt: "A scorecard system that links platform investments to shipped business outcomes.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "Platform Engineering",
-    tags: ["Golden Paths", "ROI", "Scorecards"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/platform-golden-paths-kpis-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-=======
     id: "ai-supply-chain-optimization-2025",
     slug: "ai-supply-chain-optimization-2025",
     title: "AI Supply Chain Optimization: 65% Faster Deliveries, 40% Lower Cost",
@@ -1014,7 +916,6 @@ export const latestArticles: LatestArticle[] = [
     trending: false
   }
   ,
->>>>>>> cursor/create-and-deploy-new-content-d0aa
   {
     id: "ai-platform-scorecards-roi-2026",
     slug: "ai-platform-scorecards-roi-2026",
