@@ -35,7 +35,6 @@ import {
   AIOperationalExcellenceBanner,
   AIAgentObservabilityBanner,
   ManufacturingTransformationBanner,
-  Latest2026ContentBanner,
   AISecurityEnterprise2026Banner,
   AIMultimodalEnterprise2026Banner,
   AISustainabilityTransformationBanner,
@@ -53,13 +52,31 @@ import {
   FinOpsAdvancedBanner,
   PlatformArchitectureBanner,
   AutonomousOperationsSuccessBanner,
-  NewContentShowcaseBanner2026
+  NewContentShowcaseBanner2026,
+  AINeuralArchitectureOptimizationBanner,
+  AIFederatedLearningBanner,
+  FederatedLearningSuccessBanner
 } from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
+import { 
+  Latest2026ContentBanner,
+  AIAutonomousCloudOpsBanner,
+  AIFinTechTransformationBanner,
+  AIRetailAutomationBanner,
+  AutonomousOperationsBanner,
+  FinOpsAdvancedBanner,
+  PlatformArchitectureBanner,
+  AutonomousOperationsSuccessBanner,
+  NewContentShowcaseBanner2026,
+  AINeuralArchitectureOptimizationBanner,
+  AIFederatedLearningBanner,
+  FederatedLearningSuccessBanner
+} from '../components/NewContent2026Banners';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -96,18 +113,17 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
-<<<<<<< HEAD
       <Latest2026ContentBanner />
-=======
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
       <AIEthicsSuccessBanner />
-      <LatestContent2026Banner />
       <AISecurityEnterprise2026Banner />
       <AIMultimodalEnterprise2026Banner />
       <AISustainabilityTransformationBanner />
       <NewLatest2026ContentBanner />
->>>>>>> cursor/create-and-deploy-new-content-b529
+      <AINeuralArchitectureOptimizationBanner />
+      <AIFederatedLearningBanner />
+      <FederatedLearningSuccessBanner />
       <AIAutonomousCloudOpsBanner />
       <AIFinTechTransformationBanner />
       <AIRetailAutomationBanner />
@@ -393,9 +409,6 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-<<<<<<< HEAD
-            <Link href="/blog/ai-autonomous-enterprise-2026" className="group">
-=======
             <Link href="/blog/agentic-workflow-orchestration-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -414,7 +427,6 @@ export default function HomePage() {
               </div>
             </Link>
             <Link href="/blog/ai-autonomous-operations-2026" className="group">
->>>>>>> cursor/create-and-deploy-new-content-b529
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -445,9 +457,6 @@ export default function HomePage() {
                   AI Business Intelligence 2026: Next-Generation Decision Making
                 </h3>
                 <p className="text-gray-600 mb-4">
-<<<<<<< HEAD
-                  Transform your business with AI-powered BI that delivers real-time insights, predictive analytics, and 400% faster growth.
-=======
                   Master autonomous AI operations with zero-touch infrastructure management, predictive maintenance, and self-healing systems.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">Read Complete Guide →</div>
@@ -466,7 +475,6 @@ export default function HomePage() {
                 </h3>
                 <p className="text-gray-600 mb-4">
                   Master advanced AI FinOps with predictive cost optimization, automated financial reporting, and intelligent resource allocation.
->>>>>>> cursor/create-and-deploy-new-content-b529
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Complete Guide →
@@ -492,8 +500,6 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-<<<<<<< HEAD
-=======
             <Link href="/blog/ai-platform-architecture-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -548,7 +554,6 @@ export default function HomePage() {
               </div>
             </Link>
             <Link href="/blog/ai-agent-orchestration-2026" className="group">
->>>>>>> cursor/create-and-deploy-new-content-b529
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -601,9 +606,6 @@ export default function HomePage() {
                   Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
-<<<<<<< HEAD
-                  Read Article →
-=======
                   Read Guide →
                 </div>
               </div>
@@ -624,7 +626,6 @@ export default function HomePage() {
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   View Case Study →
->>>>>>> cursor/create-and-deploy-new-content-b529
                 </div>
               </div>
             </Link>
@@ -1015,77 +1016,7 @@ export default function HomePage() {
       </section>
 
       {/* Enhanced Newsletter Signup */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-teal-600 text-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Newsletter Signup */}
-            <div className="text-center md:text-left">
-              <h2 className="text-4xl font-bold mb-6">
-                Stay Ahead with AI & Tech Insights
-              </h2>
-              <p className="text-xl mb-8 opacity-90">
-                Get weekly updates on AI trends, tech innovations, and exclusive service offers
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start max-w-md mx-auto md:mx-0">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
-                />
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Subscribe
-                </button>
-              </div>
-              <p className="text-sm mt-4 opacity-75">
-                Join 10,000+ professionals. Unsubscribe anytime.
-              </p>
-            </div>
-
-            {/* Content Highlights */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <h3 className="text-2xl font-bold mb-6">Latest Content Highlights</h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="text-2xl">🚀</div>
-                  <div>
-                    <h4 className="font-semibold mb-1">AI Revolution 2025 Guide</h4>
-                    <p className="text-sm opacity-90">Complete business transformation strategy</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="text-2xl">⚙️</div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Workflow Automation Guide</h4>
-                    <p className="text-sm opacity-90">Reduce manual work by 80%</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="text-2xl">📊</div>
-                  <div>
-                    <h4 className="font-semibold mb-1">AI Analytics Implementation</h4>
-                    <p className="text-sm opacity-90">Transform data into insights</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="text-2xl">🏥</div>
-                  <div>
-                    <h4 className="font-semibold mb-1">HealthTech Success Story</h4>
-                    <p className="text-sm opacity-90">80% efficiency gain with AI</p>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-6 pt-4 border-t border-white/20">
-                <Link
-                  href="/blog"
-                  className="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
-                >
-                  View All Content →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <EnhancedNewsletterSignup variant="default" />
 
       {/* Additional Promotional Banners */}
       <AnalyticsPlatformBanner />
