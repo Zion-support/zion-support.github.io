@@ -2,7 +2,20 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts', '<rootDir>/src/__tests__/setup.ts'],
+  roots: ['<rootDir>/src'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  modulePathIgnorePatterns: [
+    '<rootDir>/backup',
+    '<rootDir>/backup-.*',
+    '<rootDir>/backup-problematic-files',
+    '<rootDir>/apps.backup',
+  ],
+  watchPathIgnorePatterns: [
+    '<rootDir>/backup',
+    '<rootDir>/backup-.*',
+    '<rootDir>/backup-problematic-files',
+    '<rootDir>/apps.backup',
+  ],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':

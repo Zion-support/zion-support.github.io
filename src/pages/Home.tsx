@@ -15,6 +15,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
+import LatestInsights from "../components/LatestInsights";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import { posts } from "../content/posts";
 
@@ -350,6 +351,9 @@ const Home = () => {
 
         {/* Enhanced Testimonials Section */}
         <EnhancedTestimonials />
+
+        {/* Latest Insights */}
+        <LatestInsights />
 
         {/* Latest Articles */}
         <section className="py-20 bg-white">

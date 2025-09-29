@@ -8,6 +8,30 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "genai-observability-essentials",
+    title: "GenAI Observability: Metrics, Traces, and Evals That Matter",
+    description:
+      "A concise starter for monitoring LLM systems across quality, safety, latency, and cost with actionable dashboards.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-29",
+  },
+  {
+    slug: "platform-engineering-starter-kit",
+    title: "Platform Engineering Starter Kit: Golden Paths in 30 Days",
+    description:
+      "How to ship paved roads, templates, and guardrails that boost developer velocity without sacrificing security.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-28",
+  },
+  {
+    slug: "kubernetes-cost-guardrails",
+    title: "Kubernetes Cost Guardrails: Save 30% Without Rewrites",
+    description:
+      "Practical policies, autoscaling defaults, and right-sizing tactics to control spend while keeping SLOs green.",
+    category: "Cloud FinOps",
+    publishedAt: "2025-09-27",
+  },
+  {
     slug: "ai-roadmaps",
     title: "Designing High-Impact AI Roadmaps",
     description:

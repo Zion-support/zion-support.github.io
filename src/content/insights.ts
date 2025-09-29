@@ -9,6 +9,33 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "ai-governance-checklist-q4-2025",
+    title: "AI Governance Checklist for Q4 2025",
+    summary:
+      "A pragmatic checklist to align policy, risk controls, and evaluation with fast-moving GenAI work.",
+    category: "Governance",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-llm-inference",
+    title: "Edge LLM Inference: Latency Under 100ms",
+    summary:
+      "Patterns for quantization, caching, and routing to deliver snappy on-device and edge inference.",
+    category: "AI Engineering",
+    date: "2025-09-28",
+    readMinutes: 7,
+  },
+  {
+    id: "security-chaos-engineering",
+    title: "Security Chaos Engineering: Test Controls Before Attackers Do",
+    summary:
+      "Inject realistic failures to validate detection, response, and zero-trust posture across services.",
+    category: "Security",
+    date: "2025-09-27",
+    readMinutes: 8,
+  },
+  {
     id: "genai-evals-guardrails",
     title: "Production-Grade GenAI: Evals, Guardrails, and Monitoring",
     summary:
