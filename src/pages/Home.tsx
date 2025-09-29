@@ -113,14 +113,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="Fresh: AI ROI Scorecards, Secure ML Supply Chain, Enterprise RAG v2"
-          description="New guides to prove platform value, secure ML supply chains, and stabilize GenAI quality."
+          title="Fresh: Guardrails That Ship, Edge Flags Blueprint, RAG Freshness"
+          description="New: outcome‑linked guardrails, zero‑regret edge rollouts, and freshness‑aware RAG."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Platform ROI Scorecards", category: "AI Strategy", link: "/blog/ai-platform-roi-2025" },
-            { title: "Secure ML Supply Chain", category: "Security", link: "/blog/secure-ml-supply-chain-2025" },
-            { title: "Enterprise RAG v2", category: "GenAI", link: "/blog/genai-evals-in-production-2025" },
+            { title: "Guardrails Engineers Adopt", category: "AI Strategy", link: "/blog/guardrails-scorecards-evals-2025" },
+            { title: "Edge Flags Blueprint", category: "Architecture", link: "/blog/edge-flags-blueprint-2025" },
+            { title: "RAG Freshness", category: "GenAI", link: "/blog/rag-freshness-ttl-2025" },
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -287,7 +287,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="mb-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-6 py-3 text-emerald-200 text-sm inline-flex items-center gap-2">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            New: AI Platform ROI Scorecards, Secure ML Supply Chain, and Enterprise RAG v2 — read now
+            New: Guardrails That Ship, Edge Flags Blueprint, and RAG Freshness — read now
             <Link to="/insights" className="text-emerald-300 underline underline-offset-4 hover:text-white">View</Link>
           </div>
         </div>
@@ -539,10 +539,10 @@ const Home = () => {
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="container mx-auto px-6 relative z-10">
-            <div className="text-center mb-12">
+                <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6 border border-white/30">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Fresh: ROI Scorecards, ML SBOM, Enterprise RAG v2
+                Fresh: Guardrails, Edge Flags, RAG Freshness
               </div>
               <h2 className="text-4xl font-bold mb-4">
                 Latest Articles & Insights
@@ -834,15 +834,15 @@ const Home = () => {
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-purple-200 mb-1">AI Strategy</div>
-                  <div className="font-semibold text-white">AI Platform ROI Scorecards</div>
+                  <div className="font-semibold text-white">Guardrails Engineers Adopt</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-blue-200 mb-1">GenAI</div>
-                  <div className="font-semibold text-white">Enterprise RAG v2</div>
+                  <div className="font-semibold text-white">RAG Freshness</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Security</div>
-                  <div className="font-semibold text-white">Secure ML Supply Chain</div>
+                  <div className="text-sm text-rose-200 mb-1">Architecture</div>
+                  <div className="font-semibold text-white">Edge Flags Blueprint</div>
                 </div>
               </div>
             </div>
