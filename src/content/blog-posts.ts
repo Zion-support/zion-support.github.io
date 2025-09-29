@@ -17,6 +17,9 @@ export const blogPosts: BlogPost[] = [
     slug: "ai-risk-register-2025",
     title: "AI Risk Register: From Lists to Actionable Mitigations",
     description: "Practical templates and policy tests to turn AI risks into owned mitigations with timelines.",
+    slug: "genai-telemetry-observability-2025",
+    title: "GenAI Telemetry: What to Measure in 2025",
+    description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
     content: `
 # AI Risk Register: From Lists to Actionable Mitigations
 

@@ -116,6 +116,51 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+    id: "genai-telemetry-metrics",
+    title: "GenAI Telemetry: The 8 Metrics That Predict Drift",
+    summary:
+      "Capture inputs, policies, and human feedback signals to detect regressions before users do.",
+    category: "GenAI",
+    date: "2025-09-27",
+    readMinutes: 7,
+  },
+  {
+    id: "observability-otel-traces-that-matter",
+    title: "OpenTelemetry in Production: Traces That Engineers Actually Use",
+    summary:
+      "Sampling strategies, semantic conventions, and dashboards that shrink MTTR for complex stacks.",
+    category: "Observability",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "feature-flags-edge-realtime",
+    title: "Real‑Time Feature Flags at the Edge",
+    summary:
+      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
+    category: "Architecture",
+    date: "2025-09-28",
+    readMinutes: 6,
+  },
+  {
+    id: "north-star-metrics-insight",
+    title: "North‑Star Metrics: A Field Guide",
+    summary:
+      "A practical approach to defining leading indicators that align teams to outcomes.",
+    category: "Product Analytics",
+    date: "2025-09-28",
+    readMinutes: 7,
+  },
+  {
+    id: "kubernetes-cost-guardrails",
+    title: "Kubernetes Cost Guardrails That Engineers Don’t Hate",
+    summary:
+      "Limit waste with sensible defaults: requests/limits, QoS, autoscaling, and cost-aware CI policies.",
+    category: "Cloud",
+    date: "2025-09-28",
+    readMinutes: 7,
+  },
+  {
     id: "ciso-zero-trust-scorecard",
     title: "A CISO’s Zero‑Trust Scorecard",
     summary:
