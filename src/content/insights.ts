@@ -85,7 +85,6 @@ export const latestInsights: InsightArticle[] = [
     title: "North‑Star Metrics: A Field Guide",
     summary:
       "A practical approach to defining leading indicators that align teams to outcomes.",
-<<<<<<< HEAD
     category: "Product Analytics",
     date: "2025-09-28",
     readMinutes: 7,
@@ -122,11 +121,27 @@ export const latestInsights: InsightArticle[] = [
     title: "An Operator’s Playbook for LTV:CPA Ratio",
     summary:
       "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
-=======
->>>>>>> origin/main
     category: "Product Analytics",
     date: "2025-09-28",
     readMinutes: 7,
+  },
+  {
+    id: "genai-cost-guardrails",
+    title: "GenAI Cost Guardrails: Cut Spend Without Slowing Teams",
+    summary:
+      "Token budgets, rate limits, caching, and rollback triggers that reduce cost 40%+.",
+    category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "edge-warmup-strategies",
+    title: "Edge Warmup Strategies: Keep Pages Hot Globally",
+    summary:
+      "Surrogate keys, background warming, and coalescing patterns for sub‑100ms UX.",
+    category: "Architecture",
+    date: "2025-09-29",
+    readMinutes: 5,
   },
   {
     id: "secure-ml-pipelines",
