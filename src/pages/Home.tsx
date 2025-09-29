@@ -137,9 +137,9 @@ const Home = () => {
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
+            { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" },
+            { title: "AI Governance Scorecards Quickstart", category: "AI Strategy", link: "/blog/ai-governance-scorecards-quickstart-2025" },
             { title: "AI Autonomous Infrastructure", category: "Infrastructure", link: "/services/ai-autonomous-infrastructure-platform" },
-            { title: "Quantum-AI Hybrid Computing", category: "Quantum Computing", link: "/services/quantum-ai-hybrid-computing" },
-            { title: "AI Zero Trust Security", category: "Cybersecurity", link: "/services/ai-cybersecurity-zero-trust" },
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
