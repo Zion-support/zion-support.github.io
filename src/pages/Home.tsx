@@ -140,26 +140,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-<<<<<<< HEAD
-          title="New: Secure ML Supply Chain, GenAI Routing Under Budgets, Golden Paths"
-          description="Fresh blueprints: SBOMs & lineage for ML, budgeted GenAI routing, and platform golden paths that move KPIs."
+          title="New: Edge Caching v2, Agent Release Trains, Privacy‑First Scorecards"
+          description="Tiered KV caches, KPI‑wired canaries, and scoped‑ID scorecards—ship fast, stay safe."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Secure ML Supply Chain 2026", category: "AI Security", link: "/blog/secure-ml-supply-chain-2026" },
-            { title: "GenAI Routing Under Budgets 2026", category: "AI Operations", link: "/blog/genai-routing-under-budgets-2026" },
-            { title: "Golden Paths That Move KPIs 2026", category: "Platform Engineering", link: "/blog/platform-golden-paths-kpis-2026" },
-            { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" }
-=======
-          title="New: Agent Blue‑Green Releases, Edge LLM Caching, Platform SLO Guardrails"
-          description="Ship agents safely with instant rollback, keep prompts fast at the edge, and prevent regressions with SLO scorecards."
-          ctaText="Explore new content"
-          ctaLink="/blog"
-          featuredItems={[
-            { title: "Agent Blue‑Green Releases 2026", category: "GenAI", link: "/blog/agent-blue-green-releases-2026" },
-            { title: "Edge LLM Safety Caching 2026", category: "Architecture", link: "/blog/edge-llm-safety-caching-2026" },
-            { title: "Platform SLO Guardrails 2026", category: "Platform Engineering", link: "/blog/platform-slo-guardrails-2026" }
->>>>>>> cursor/create-and-deploy-new-content-d0aa
+            { title: "Edge LLM Caching v2", category: "Architecture", link: "/blog/edge-llm-caching-v2-2026" },
+            { title: "Agent Release Trains", category: "GenAI", link: "/blog/agent-release-trains-2026" },
+            { title: "Privacy‑First Scorecards", category: "Observability", link: "/blog/privacy-first-scorecards-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
