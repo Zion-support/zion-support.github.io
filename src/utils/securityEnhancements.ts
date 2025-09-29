@@ -181,8 +181,8 @@ class SecurityEnhancements {
 
   private setupXSSProtection(): void {
     // Monitor for potential XSS attempts
-    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
-    const originalOuterHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'outerHTML');
+    const originalInnerHTMLDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
+    const originalOuterHTMLDescriptor = Object.getOwnPropertyDescriptor(Element.prototype, 'outerHTML');
     const originalInsertAdjacentHTML = Element.prototype.insertAdjacentHTML;
 
     // Override innerHTML setter
@@ -192,13 +192,13 @@ class SecurityEnhancements {
           console.warn('Potential XSS attempt detected in innerHTML');
           return;
         }
-        if (originalInnerHTML && originalInnerHTML.set) {
-          originalInnerHTML.set.call(this, value);
+        if (originalInnerHTMLDescriptor && originalInnerHTMLDescriptor.set) {
+          originalInnerHTMLDescriptor.set.call(this, value);
         }
       },
       get: function() {
-        if (originalInnerHTML && originalInnerHTML.get) {
-          return originalInnerHTML.get.call(this);
+        if (originalInnerHTMLDescriptor && originalInnerHTMLDescriptor.get) {
+          return originalInnerHTMLDescriptor.get.call(this);
         }
         return '';
       },
@@ -376,7 +376,7 @@ class SecurityEnhancements {
     Document.prototype.querySelector = function(selector: string) {
       queryCount++;
       if (queryCount > queryThreshold) {
-        console.warn('Excessive DOM queries detected');
+        console.warn('Excessive DOM queries detected:', { queryCount, selector });
       }
       return originalQuerySelector.call(this, selector);
     };

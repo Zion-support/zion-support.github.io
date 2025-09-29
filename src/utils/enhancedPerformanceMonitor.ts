@@ -131,6 +131,11 @@ class EnhancedPerformanceMonitor {
     }
   }
 
+  private createAlert(alert: any): void {
+    // Create alert logic
+    console.warn('Performance Alert:', alert);
+  }
+
   private processPerformanceEntry(entry: PerformanceEntry): void {
     switch (entry.entryType) {
       case 'paint':

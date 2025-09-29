@@ -132,7 +132,23 @@ export interface SEOIssue {
   fix?: string;
   suggestion?: string;
   description?: string;
-  priority?: "high" | "medium" | "low";
+  priority?: string;
+}
+
+export interface AccessibilityMetrics {
+  totalIssues: number;
+  errors: number;
+  warnings: number;
+  info: number;
+  score: number;
+  lastChecked: number;
+  overallScore?: number;
+  issues?: Array<{
+    type: "error" | "warning" | "info";
+    message: string;
+    category?: string;
+  }>;
+  improvements?: string[];
 }
 
 // Cache Stats Types

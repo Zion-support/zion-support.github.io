@@ -11,7 +11,6 @@ export interface AccessibilityIssue {
   suggestion: string;
   severity: 'low' | 'medium' | 'high';
   category: string;
-  description?: string;
 }
 
 export interface AccessibilityMetrics {
@@ -22,7 +21,11 @@ export interface AccessibilityMetrics {
   score: number;
   lastChecked: number;
   overallScore?: number;
-  issues?: AccessibilityIssue[];
+  issues?: Array<{
+    type: "error" | "warning" | "info";
+    message: string;
+    category?: string;
+  }>;
   improvements?: string[];
 }
 
@@ -202,34 +205,6 @@ export class AccessibilityEnhancer {
     }
   }
 
-  /**
-   * Get current accessibility issues
-   */
-  getIssues(): AccessibilityIssue[] {
-    return this.issues;
-  }
-
-  /**
-   * Get accessibility metrics
-   */
-  getMetrics(): AccessibilityMetrics {
-    const errors = this.issues.filter((issue) => issue.type === "error").length;
-    const warnings = this.issues.filter(
-      (issue) => issue.type === "warning",
-    ).length;
-    const info = this.issues.filter((issue) => issue.type === "info").length;
-
-    const score = this.calculateAccessibilityScore();
-
-    return {
-      totalIssues: this.issues.length,
-      errors,
-      warnings,
-      info,
-      score,
-      lastChecked: Date.now(),
-    };
-  }
 
   /**
    * Calculate accessibility score (0-100)
@@ -325,6 +300,37 @@ export class AccessibilityEnhancer {
       }
     `;
     document.head.appendChild(style);
+  }
+
+  public getMetrics(): AccessibilityMetrics {
+    return {
+      totalIssues: this.issues.length,
+      errors: this.issues.filter(issue => issue.severity === 'high').length,
+      warnings: this.issues.filter(issue => issue.severity === 'medium').length,
+      info: this.issues.filter(issue => issue.severity === 'low').length,
+      score: this.calculateAccessibilityScore(),
+      lastChecked: Date.now(),
+      overallScore: this.calculateAccessibilityScore(),
+      issues: this.issues.map(issue => ({
+        type: issue.severity === 'high' ? 'error' as const : issue.severity === 'medium' ? 'warning' as const : 'info' as const,
+        message: issue.message,
+        category: issue.category
+      })),
+      improvements: this.issues.map(issue => issue.suggestion)
+    };
+  }
+
+  public enhance(): Promise<void> {
+    return new Promise((resolve) => {
+      this.addSkipLinks();
+      this.addAriaLandmarks();
+      this.improveFocusManagement();
+      resolve();
+    });
+  }
+
+  public getIssues(): AccessibilityIssue[] {
+    return [...this.issues];
   }
 
   public destroy(): void {
