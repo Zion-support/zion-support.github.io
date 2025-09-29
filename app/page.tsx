@@ -32,6 +32,13 @@ import {
   HealthcareTransformationBanner,
   NewContent2026Banner
 } from '../components/PromotionalBanner';
+import { 
+  NextGenerationEnterpriseBanner,
+  AutonomousBusinessSystemsBanner,
+  GlobalManufacturingCaseStudyBanner,
+  AITransformationSuccessStoriesBanner,
+  AI2026InnovationShowcaseBanner
+} from '../components/NewContent2026PromotionalBanners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -65,6 +72,11 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <NextGenerationEnterpriseBanner />
+      <AutonomousBusinessSystemsBanner />
+      <GlobalManufacturingCaseStudyBanner />
+      <AITransformationSuccessStoriesBanner />
+      <AI2026InnovationShowcaseBanner />
       <NewContent2026Banner />
       <AIMultimodalEnterpriseBanner />
       <AIEnterpriseAutomationBanner />
