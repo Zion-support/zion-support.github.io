@@ -1,46 +1,19 @@
 import React from "react";
-import { ArrowRight, Newspaper, Lightbulb, Shield } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
-type Insight = {
-  title: string;
-  description: string;
-  date: string;
-  category: string;
-  icon: React.ReactNode;
-  ctaHref: string;
-};
+import { latestInsights } from "../content/insights";
 
 const LatestInsights: React.FC = () => {
-  const insights: Insight[] = [
-    {
-      title: "2025 State of AI for Enterprises",
-      description:
-        "Key trends, ROI benchmarks, and a practical roadmap to deploy production AI safely.",
-      date: "Sept 2025",
-      category: "Report",
-      icon: <Newspaper className="w-6 h-6" />,
-      ctaHref: "/services",
-    },
-    {
-      title: "Designing Trustworthy Cybersecurity Pipelines",
-      description:
-        "A reference architecture for continuous security with zero-trust, SIEM, and SOAR.",
-      date: "Sept 2025",
-      category: "Guide",
-      icon: <Shield className="w-6 h-6" />,
-      ctaHref: "/services",
-    },
-    {
-      title: "From POC to Production: Shipping GenAI Apps",
-      description:
-        "Patterns for reliability, evaluation, and cost control when scaling GenAI workloads.",
-      date: "Sept 2025",
-      category: "Playbook",
-      icon: <Lightbulb className="w-6 h-6" />,
-      ctaHref: "/services",
-    },
-  ];
+  const insights = latestInsights
+    .slice(0, 3)
+    .map((item) => ({
+      id: item.id,
+      title: item.title,
+      description: item.summary,
+      date: new Date(item.date).toLocaleDateString(),
+      category: item.category,
+      href: "/insights",
+    }));
 
   return (
     <section className="py-20 bg-white/5">
@@ -50,8 +23,8 @@ const LatestInsights: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Latest Insights</h2>
             <p className="text-zion-slate-light">Research, guides, and playbooks from our team.</p>
           </div>
-          <Link
-            to="/services"
+            <Link
+            to="/insights"
             className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
@@ -67,7 +40,6 @@ const LatestInsights: React.FC = () => {
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">
-                  {item.icon}
                   <span>{item.category}</span>
                 </div>
                 <span className="text-xs text-zion-slate-light">{item.date}</span>
@@ -77,7 +49,7 @@ const LatestInsights: React.FC = () => {
               <p className="text-zion-slate-light mb-6 leading-relaxed">{item.description}</p>
 
               <Link
-                to={item.ctaHref}
+                to={item.href}
                 className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
               >
                 Read more
@@ -89,7 +61,7 @@ const LatestInsights: React.FC = () => {
 
         <div className="mt-8 sm:hidden">
           <Link
-            to="/services"
+            to="/insights"
             className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
