@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Zion Tech Group - Advanced AI and IT Solutions Website",
   "type": "module",
+  "preinstall": "pnpm approve-builds --unsafe-perm || true",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

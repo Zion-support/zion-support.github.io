@@ -2,6 +2,11 @@
   from = "/api/*"
   to = "https://backend.example.com/:splat"
   status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
  
 [build]
   command = "pnpm run build:netlify"
