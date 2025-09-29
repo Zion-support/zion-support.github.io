@@ -162,33 +162,6 @@ class EnhancedMonitoring {
     });
 
     // Resource loading error handler
-    window.addEventListener(
-      "error",
-      (event) => {
-        if (event.target !== window) {
-          const target = event.target as HTMLElement;
-          this.trackError({
-            message: `Failed to load resource: ${target.tagName}`,
-            url:
-              (target as HTMLImageElement).src ||
-              (target as HTMLLinkElement).href ||
-              window.location.href,
-            timestamp: Date.now(),
-            userAgent: navigator.userAgent,
-            sessionId: this.sessionId,
-            userId: this.userId,
-            severity: "medium",
-            category: "resource",
-            context: {
-              tagName: target.tagName,
-              src: (target as HTMLImageElement).src,
-              href: (target as HTMLLinkElement).href,
-            },
-          });
-        }
-      },
-      true,
-    );
   }
 
   private setupPerformanceMonitoring(): void {
@@ -234,18 +207,14 @@ class EnhancedMonitoring {
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (!(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
-            this.trackPerformance({
-              name: "CLS",
-              value: (entry as PerformanceEntry & { value?: number }).value || 0,
-              type: "measure",
-              url: window.location.href,
-              sessionId: this.sessionId,
-              userId: this.userId,
-              timestamp: Date.now(),
-              metadata: { entry },
-            });
-          }
+          this.logEvent({
+            type: 'layout-shift',
+            url: window.location.href,
+            sessionId: this.sessionId,
+            userId: this.userId,
+            timestamp: Date.now(),
+            metadata: { entry },
+          });
         });
       }).observe({ entryTypes: ["layout-shift"] });
 

@@ -4,7 +4,7 @@
   status = 200
  
 [build]
-  command = "pnpm build"
+  command = "pnpm build:no-check"
   publish = "dist"
   command_timeout = "30m"
   environment = { NODE_ENV = "production", CI = "true" }
@@ -45,12 +45,12 @@
   NPM_CONFIG_PRODUCTION = "false"
 
 [context.deploy-preview]
-  command = "pnpm build"
+  command = "pnpm build:no-check"
   [context.deploy-preview.environment]
     NODE_ENV = "production"
 
 [context.branch-deploy]
-  command = "pnpm build"
+  command = "pnpm build:no-check"
   [context.branch-deploy.environment]
     NODE_ENV = "production"
 

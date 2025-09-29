@@ -69,11 +69,12 @@ class AdvancedErrorRecoverySystem {
 
   private setupNetworkErrorHandling(): void {
     const originalFetch = window.fetch;
+    const handleNetworkError = this.handleNetworkError.bind(this);
 
-    window.fetch = (...args) => {
-      return originalFetch.apply(window, args)
+    window.fetch = function(...args) {
+      return originalFetch.apply(this, args)
         .catch(error => {
-          this.handleNetworkError(error, args[0] as string);
+          handleNetworkError(error, args[0] as string);
           throw error;
         });
     };
