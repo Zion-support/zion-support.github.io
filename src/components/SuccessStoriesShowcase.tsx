@@ -90,7 +90,7 @@ const SuccessStoriesShowcase: React.FC = () => {
                       <div className="text-sm font-semibold text-blue-700">{result}</div>
                     </div>
                   ))}
-                </ul>
+                </div>
 
                 {/* Technologies */}
                 <div className="mb-4">
