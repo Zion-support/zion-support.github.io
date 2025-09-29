@@ -63,21 +63,21 @@ export default function BlogPage() {
             href="/blog/agentic-workflow-orchestration-2026"
           />
           <BlogPost
-            title="AI Governance Maturity Model 2026"
-            excerpt="Move from ad-hoc to audit-ready governance with measurable business value."
+            title="AI Operational Excellence 2026: From SLIs to Self‑Healing Ops"
+            excerpt="Reliability scorecards, policy tests, and automated runbooks for 99.9% uptime."
             date="October 9, 2025"
-            category="Governance"
-            readTime="10 min"
-            image="🛡️"
-            href="/blog/ai-governance-maturity-model-2026"
+            category="Operations"
+            readTime="14 min"
+            image="🛠️"
+            href="/blog/ai-operational-excellence-2026"
           />
           <BlogPost
-            title="AI Customer Data Platforms 2026"
-            excerpt="Blueprint for AI-native CDPs delivering real-time personalization at scale."
+            title="AI Customer Data Platforms 2026: Real‑Time Personalization"
+            excerpt="Consent‑aware ingestion, identity resolution, feature stores, and edge delivery."
             date="October 9, 2025"
-            category="Personalization"
-            readTime="9 min"
-            image="📇"
+            category="Analytics"
+            readTime="18 min"
+            image="🧬"
             href="/blog/ai-customer-data-platforms-2026"
           />
           <BlogPost

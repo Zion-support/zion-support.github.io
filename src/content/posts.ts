@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "privacy-first-feature-flags-2026",
+    title: "Privacy‑First Feature Flags 2026: Global Rolls Without PII Risk",
+    description: "Scoped IDs, edge filters, and health checks for instant, safe rollouts under 100ms.",
+    category: "Architecture",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "reliable-agent-actions-2026",
+    title: "Reliable Agent Actions 2026: Deterministic Tools and Live Traces",
+    description: "Design agent tools that are testable, auditable, and budget‑controlled for production reliability.",
+    category: "GenAI",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-cost-aware-inference-2026",
     title: "Cost‑Aware Inference 2026: Warm Pools, Tiers, and SLAs",
     description: "Cut inference cost 30–60% with adaptive batching, warm pools, and quality tiers under SLAs.",
@@ -17,6 +35,15 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: true,
     readTime: "8 min read"
+  },
+  {
+    slug: "ai-risk-budgets-2026",
+    title: "AI Risk Budgets 2026: Ship Automation Safely at Scale",
+    description: "Budget risky actions, approvals, and rollbacks to move fast without surprises.",
+    category: "AI Governance",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "6 min read"
   },
   {
     slug: "production-rag-ops-2026",

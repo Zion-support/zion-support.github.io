@@ -83,7 +83,7 @@ export default function PromotionalBanner({
 // Pre-configured banner variants
 export const NewContentBanner = () => (
   <PromotionalBanner
-    message="🎉 New: AI Roadmaps 2026, GenAI Guardrails Blueprints, FinOps Scorecards"
+    message="🎉 New: AI Security DLP, Multimodal Agents, Scorecards v2 (2026)"
     ctaText="Read the latest"
     ctaLink="/blog"
     backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
@@ -343,7 +343,7 @@ export const AIMultimodalEnterpriseBanner = () => (
   />
 );
 
-export const AIEnterpriseAutomationBanner = () => (
+export const AIEnterpriseAutomationGuideBanner = () => (
   <PromotionalBanner
     message="⚙️ NEW: AI Enterprise Automation 2026 - 95% Process Automation & $5M+ Savings with Zero-Touch Operations"
     ctaText="Read Guide"
@@ -512,7 +512,7 @@ export const AIMultimodalIntegrationBanner = () => (
   />
 );
 
-export const AIEnterpriseAutomationBanner = () => (
+export const AIEnterpriseAutomationBlueprintBanner = () => (
   <PromotionalBanner
     message="⚡ FEATURED: Enterprise Automation Blueprint 2026 - Achieve 95% process efficiency and $5M+ savings with zero-touch operations"
     ctaText="Get Blueprint"
