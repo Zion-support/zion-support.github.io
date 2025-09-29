@@ -155,3 +155,57 @@ export const FreeTrialBanner = () => (
     autoHide={false}
   />
 );
+
+export const WorkflowAutomationBanner = () => (
+  <PromotionalBanner
+    message="⚙️ New Guide: AI Workflow Automation Implementation - Reduce Manual Work by 80%"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-workflow-automation-guide"
+    backgroundColor="bg-gradient-to-r from-emerald-600 to-teal-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const AIAnalyticsBanner = () => (
+  <PromotionalBanner
+    message="📊 New Article: AI Analytics Implementation - Transform Data into Actionable Insights"
+    ctaText="Read Article"
+    ctaLink="/blog/ai-analytics-implementation"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const HealthTechSuccessBanner = () => (
+  <PromotionalBanner
+    message="🏥 Success Story: HealthTech Solutions Achieved 80% Efficiency Gain with AI Virtual Assistant"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/healthtech-ai-transformation"
+    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const ComprehensiveAIBanner = () => (
+  <PromotionalBanner
+    message="🚀 Complete AI Transformation Guide: From Strategy to Implementation - Everything You Need to Know"
+    ctaText="Explore Resources"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    autoHide={true}
+    hideAfter={25}
+  />
+);
+
+export const EnterpriseAIBanner = () => (
+  <PromotionalBanner
+    message="🏢 Enterprise AI Solutions: Scale Your Business with Custom AI Implementation and Support"
+    ctaText="Get Consultation"
+    ctaLink="/contact"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-indigo-600"
+    autoHide={false}
+  />
+);
