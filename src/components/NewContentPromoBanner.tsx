@@ -75,11 +75,44 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       category: "Platform"
     },
     {
+<<<<<<< HEAD
+      title: "Edge Feature Flags 2026",
+      description: "<100ms global releases with budgets",
+=======
+      title: "Quality‑Tiered GenAI Routing 2026",
+      description: "Control cost with tiers, caches, and eval signals",
+      icon: Zap,
+      link: "/blog/genai-routing-under-budgets-2026",
+      category: "GenAI"
+    },
+    {
+      title: "On‑Device Agents 2026",
+      description: "Offline‑capable tools, private caches, safe fallbacks",
+      icon: Cloud,
+      link: "/blog/on-device-agents-offline-tools-2026",
+      category: "Edge"
+    },
+    {
+      title: "Zero‑Trust Observability 2026",
+      description: "Signed traces and least‑privilege telemetry",
+>>>>>>> cursor/create-and-deploy-new-content-6a55
+      icon: Shield,
+      link: "/blog/zero-trust-observability-2026",
+      category: "Security"
+    },
+    {
+      title: "AI Incident Response Playbooks",
+      description: "Contain incidents in under 60 seconds",
+      icon: TrendingUp,
+      link: "/blog/ai-incident-response-playbooks-2025",
+      category: "Security"
+=======
       title: "Edge Privacy Telemetry 2026",
       description: "Scoped IDs and on‑device redaction",
       icon: Brain,
       link: "/blog/edge-privacy-telemetry-2026",
       category: "Observability"
+>>>>>>> origin/main
     }
   ];
 
