@@ -72,6 +72,11 @@ export class SecurityManager {
     };
   }
 
+  public initialize(): void {
+    // No-op initializer to align with callers that expect an initialize() hook.
+    // Security headers and CSP are computed lazily via getters.
+  }
+
   public getCSPDirective(): string {
     const { csp } = this.config;
     const directives: string[] = [];

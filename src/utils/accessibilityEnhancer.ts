@@ -54,6 +54,11 @@ class AccessibilityEnhancer {
     this.observeAccessibility();
   }
 
+  public initialize(): void {
+    // Alias for init() to match callers
+    this.init();
+  }
+
   private setupKeyboardNavigation(): void {
     if (!this.config.keyboardNavigation) return;
 

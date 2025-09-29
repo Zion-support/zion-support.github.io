@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOOptimizerProps {
+export interface SEOOptimizerProps {
   title: string;
   description: string;
   keywords?: string;
