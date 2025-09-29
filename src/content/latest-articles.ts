@@ -754,6 +754,39 @@ export const latestArticles: LatestArticle[] = [
   }
   ,
   {
+    id: "ai-supply-chain-optimization-2025",
+    slug: "ai-supply-chain-optimization-2025",
+    title: "AI Supply Chain Optimization: 65% Faster Deliveries, 40% Lower Cost",
+    description: "Demand sensing, dynamic routing, and smart inventory that lift OTIF while cutting cost.",
+    excerpt: "Achieve 65% faster deliveries with AI‑powered planning, routing, and SLA‑aware orchestration.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Applied AI",
+    tags: ["Supply Chain", "Optimization", "Routing", "Forecasting"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/ai-supply-chain-optimization.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-first-observability-quickstart-2025",
+    slug: "privacy-first-observability-quickstart-2025",
+    title: "Privacy‑First Observability Quickstart: Scoped IDs, Redaction, Retention",
+    description: "Stand up privacy‑safe telemetry with scoped identifiers, field‑level filters, and TTL policies.",
+    excerpt: "Ship insights without PII risk in under a week using proven building blocks.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Observability",
+    tags: ["Privacy", "Telemetry", "Compliance"],
+    featured: false,
+    readTime: "7 min read",
+    image: "/images/privacy-first-observability-quickstart.jpg",
+    newBadge: true,
+    trending: false
+  }
+  ,
+  {
     id: "ai-platform-scorecards-roi-2026",
     slug: "ai-platform-scorecards-roi-2026",
     title: "AI Platform Scorecards 2026: Proving ROI with Leading Indicators",

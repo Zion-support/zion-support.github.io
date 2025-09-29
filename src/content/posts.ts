@@ -565,4 +565,23 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "7 min read"
   }
+  ,
+  {
+    slug: "ai-supply-chain-optimization-2025",
+    title: "AI Supply Chain Optimization: 65% Faster Deliveries Under Budget",
+    description: "From demand sensing to route optimization—AI patterns that cut costs and boost OTIF.",
+    category: "Applied AI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-observability-quickstart-2025",
+    title: "Privacy‑First Observability Quickstart: Scoped IDs and Redaction",
+    description: "Ship signal‑rich telemetry without PII risk using scoped identifiers and field‑level filters.",
+    category: "Observability",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "6 min read"
+  }
 ];
