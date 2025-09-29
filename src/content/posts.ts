@@ -10,8 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-=======
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
     description:
@@ -42,7 +40,6 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
   },
   {
->>>>>>> cursor/create-and-deploy-new-content-83a1
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:
@@ -347,6 +344,46 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-01-21",
     featured: false,
     readTime: "9 min read",
+  },
+  {
+    slug: "ai-autonomous-operations-revolution",
+    title: "The AI Autonomous Operations Revolution: Self-Managing Infrastructure",
+    description:
+      "Discover how AI autonomous operations are revolutionizing infrastructure management. Learn about self-healing systems, predictive maintenance, and autonomous scaling.",
+    category: "AI & Automation",
+    publishedAt: "2025-01-20",
+    featured: true,
+    readTime: "11 min read",
+  },
+  {
+    slug: "next-gen-cybersecurity-ai-powered-defense",
+    title: "Next-Generation Cybersecurity: AI-Powered Defense Systems",
+    description:
+      "Explore how AI is revolutionizing cybersecurity with intelligent threat detection, automated response, and predictive security analytics.",
+    category: "Cybersecurity",
+    publishedAt: "2025-01-19",
+    featured: true,
+    readTime: "13 min read",
+  },
+  {
+    slug: "cloud-native-microservices-2025",
+    title: "Cloud-Native Microservices: Patterns for 2025",
+    description:
+      "Essential patterns and practices for building scalable, resilient microservices architectures in modern cloud environments.",
+    category: "Architecture",
+    publishedAt: "2025-01-18",
+    featured: true,
+    readTime: "10 min read",
+  },
+  {
+    slug: "enterprise-ai-governance-framework",
+    title: "Enterprise AI Governance Framework: From Strategy to Implementation",
+    description:
+      "Comprehensive governance framework for enterprise AI adoption, covering policy, risk management, and operational excellence.",
+    category: "AI Governance",
+    publishedAt: "2025-01-17",
+    featured: true,
+    readTime: "12 min read",
   },
 ];
 

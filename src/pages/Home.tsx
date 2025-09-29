@@ -165,6 +165,35 @@ const Home = () => {
               </div>
             </div>
 
+            {/* New Content Announcement */}
+            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-8 animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
+                <span className="text-lg font-bold text-purple-400">📚 FRESH CONTENT ALERT</span>
+                <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                🎯 Just Published: 5 Revolutionary Articles on AI Autonomous Operations, Next-Gen Cybersecurity, and Cloud-Native Architecture
+              </p>
+              <p className="text-zion-slate-light text-sm mb-4">
+                Discover cutting-edge insights on AI-powered infrastructure management, advanced threat detection, and scalable cloud architectures.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  to="/blog"
+                  className="bg-purple-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-600 transition-colors text-center"
+                >
+                  Read Latest Articles
+                </Link>
+                <Link
+                  to="/insights"
+                  className="border border-purple-400 text-purple-400 px-6 py-2 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-colors text-center"
+                >
+                  View Insights
+                </Link>
+              </div>
+            </div>
+
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">
               <div className="text-center group hover:scale-105 transition-all duration-300">
@@ -577,31 +606,27 @@ const Home = () => {
             <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-400/30 rounded-xl p-6 mb-10">
               <div className="flex items-center gap-3 mb-3">
                 <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
-                <span className="text-lg font-bold text-purple-700">📚 NEW CONTENT ALERT</span>
+                <span className="text-lg font-bold text-purple-700">📚 FRESH CONTENT ALERT</span>
                 <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
               </div>
               <p className="text-gray-700 font-semibold mb-2">
-                🚀 Just Published: 5 Revolutionary Articles on AI Automation, Cloud Infrastructure, and Enterprise AI Implementation
+                🎯 Just Published: 5 Revolutionary Articles on AI Autonomous Operations, Next-Gen Cybersecurity, and Cloud-Native Architecture
               </p>
               <p className="text-gray-600 text-sm mb-4">
-                Discover the latest insights on AI-powered business automation, next-gen cloud infrastructure, and strategic AI roadmaps for 2025.
+                Discover cutting-edge insights on AI-powered infrastructure management, advanced threat detection, and scalable cloud architectures for 2025.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">AI Automation</span>
-                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Cloud Strategy</span>
+                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">AI Autonomous Ops</span>
+                <span className="bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-medium">AI Cybersecurity</span>
+                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Cloud Architecture</span>
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">AI Governance</span>
-                <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">Platform Engineering</span>
               </div>
             </div>
             
             <div className="mb-10 flex items-end justify-between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
-<<<<<<< HEAD
-                <p className="text-gray-600">Insights from our team to help you move faster.</p>
-=======
-                <p className="text-gray-600">Fresh: AI Governance, Golden Paths, Cloud FinOps QA gates, and NEW AI automation guides.</p>
->>>>>>> cursor/create-and-deploy-new-content-0173
+                <p className="text-gray-600">Fresh insights on AI autonomous operations, cybersecurity, and cloud architecture from our expert team.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
