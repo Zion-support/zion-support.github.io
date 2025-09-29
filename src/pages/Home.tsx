@@ -17,7 +17,6 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import LatestContentBanner from "../components/LatestContentBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
-import LatestContentBanner from "../components/LatestContentBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
@@ -115,9 +114,9 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="📣 New: AI Risk Register, LTV with AI, and Data Contracts"
-          description="Fresh 2025 posts: practical AI guardrails, respectful personalization, and resilient data pipelines."
-          ctaText="Read the latest"
+          title="📣 New: AI Risk Register, Practical Evals, and Cloud FinOps Guardrails"
+          description="Ship faster and safer: operationalize risks, tie evals to outcomes, and cut cloud waste."
+          ctaText="Read the updates"
           ctaLink="/blog/ai-risk-register-2025"
           dismissible={true}
         />

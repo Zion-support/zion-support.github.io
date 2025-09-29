@@ -2336,6 +2336,89 @@ Scale safely while maintaining delivery speed.
     featured: true,
     readTime: "6 min read",
     image: "/images/secure-genai-guardrails.jpg"
+  },
+  {
+    slug: "ai-risk-register-2025",
+    title: "AI Risk Register: From Theory to Weekly Operating Rhythm",
+    description: "Turn vague AI risks into tracked mitigations with owners, SLAs, and policy tests.",
+    content: `
+# AI Risk Register: From Theory to Weekly Operating Rhythm
+
+Most teams talk about AI risk, few operationalize it. This guide shows how to stand up a living AI risk register connected to policy tests, owners, and SLAs so risks are discovered early and closed fast.
+
+## What To Track
+- Model misuse and jailbreaking vectors
+- PII exposure paths and retention risks
+- Tooling egress and data exfiltration
+- Prompt injection and context poisoning
+
+## Operating Cadence
+- Weekly review with clear owners and due dates
+- Link each risk to a policy test in CI
+- Online canaries for high‑impact risks
+
+Adopt this rhythm to keep shipping velocity high without compromising trust.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-10-02",
+    category: "AI Governance",
+    tags: ["Risk", "Governance", "Policy Tests"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-risk-register.jpg"
+  },
+  {
+    slug: "practical-evals-scorecards-2025",
+    title: "Practical AI Evals: Scorecards That Predict Business Outcomes",
+    description: "Design evals that correlate with revenue, CSAT, and retention—not just BLEU or win rates.",
+    content: `
+# Practical AI Evals: Scorecards That Predict Business Outcomes
+
+Offline metrics often fail to predict real‑world outcomes. Learn how to design eval scorecards that track actionability, accuracy, and safety—then correlate them with revenue and CSAT.
+
+## Scorecard Dimensions
+- Task success and actionability
+- Constraint adherence and safety
+- Latency budgets and UX
+- Cost per successful outcome
+
+## Rollout
+- Start offline, then add online canaries
+- Set guardrails with auto‑rollback
+- Review weekly with product + eng
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-10-02",
+    category: "GenAI",
+    tags: ["Evals", "Metrics", "Product"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/practical-evals-scorecards.jpg"
+  },
+  {
+    slug: "cloud-finops-guardrails-2025",
+    title: "Cloud FinOps Guardrails: Budgets, Alerts, and PR Gates That Stick",
+    description: "Reduce cloud waste 25–40% with SLO‑aware budgets, review bots, and cost PR checks.",
+    content: `
+# Cloud FinOps Guardrails: Budgets, Alerts, and PR Gates That Stick
+
+FinOps only works when it is embedded in delivery. This playbook shows how to wire budgets, alerts, and PR gates so engineers see costs before they merge.
+
+## Guardrails
+- Per‑service budgets with alerting
+- Preview cost diffs in PRs
+- Idle resource sweepers
+- Dependency bloat detectors
+
+Ship faster with fewer surprises on the bill.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-10-02",
+    category: "Cloud FinOps",
+    tags: ["Cloud", "FinOps", "Cost"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/cloud-finops-guardrails.jpg"
   }
 ];
 
