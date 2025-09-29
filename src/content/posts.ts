@@ -10,8 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-=======
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
     description:
@@ -42,7 +40,6 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
   },
   {
->>>>>>> cursor/create-and-deploy-new-content-83a1
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:
@@ -297,6 +294,36 @@ export const posts: BlogPost[] = [
       "Framework for developing AI systems that are fair, transparent, and compliant with emerging regulations.",
     category: "AI Governance",
     publishedAt: "2025-01-05",
+  },
+  {
+    slug: "genai-evals-in-production-2025",
+    title: "GenAI Evals in Production: Policy Tests That Scale",
+    description:
+      "Layered evals and rollout controls that keep GenAI quality high as usage grows.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "feature-flags-edge-2025",
+    title: "Feature Flags at the Edge: <100ms Global Releases",
+    description:
+      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "north-star-metrics-anti-patterns",
+    title: "North‑Star Metrics: 7 Anti‑Patterns to Avoid",
+    description:
+      "Avoid vanity KPIs and misaligned metrics with practices that drive outcomes.",
+    category: "Product Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
   },
 ];
 
