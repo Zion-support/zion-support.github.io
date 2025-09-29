@@ -1,7 +1,6 @@
 import React, { useCallback, useState, useEffect, useMemo, lazy, Suspense } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AppRouter } from './router';
-import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
 import AdvancedSEO from './components/AdvancedSEO';
@@ -986,4 +985,4 @@ export default function App(): React.JSX.Element {
       </div>
     </EnhancedErrorBoundary>
   );
-  }
+}
