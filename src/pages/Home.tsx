@@ -217,6 +217,11 @@ const Home = () => {
           className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
         />
 
+        {/* Featured content showcase to highlight new articles and insights */}
+        <div className="bg-white">
+          <FeaturedContentShowcase className="py-12" />
+        </div>
+
         {/* New Services Showcase */}
         <section className="container mx-auto px-6 py-20 relative z-10">
           <div className="text-center mb-16">

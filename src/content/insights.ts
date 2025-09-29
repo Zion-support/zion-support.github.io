@@ -9,8 +9,31 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+<<<<<<< HEAD
     id: "ai-governance-rubric",
     title: "A Lightweight Rubric for AI Governance Decisions",
+=======
+    id: "ai-evals-guardrails-quickstart",
+    title: "Quickstart: Offline Evals and Guardrails for GenAI",
+    summary:
+      "Stand up golden datasets, policy tests, and alerting in under a week.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
+  {
+    id: "exec-ai-roadmap-one-pager",
+    title: "One‑Pager: Executive AI Roadmap on a Page",
+    summary:
+      "Prioritize bets, define KPIs, and align delivery rituals for fast value.",
+    category: "Strategy",
+    date: "2025-09-29",
+    readMinutes: 4,
+  },
+  {
+    id: "platform-blueprints-golden-paths",
+    title: "Golden Paths That Actually Get Used",
+>>>>>>> cursor/create-and-deploy-new-content-deeb
     summary:
       "When to require human‑in‑the‑loop, what to log, and how to audit outputs across teams.",
     category: "AI Governance",
