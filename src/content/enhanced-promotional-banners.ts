@@ -19,6 +19,24 @@ export interface EnhancedPromotionalBanner {
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   {
+    id: 'fresh-oct-15-2025',
+    message: '✨ New: Incident Budgets v2 + Edge Personalization 2026',
+    ctaText: 'Read now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0,
+    variant: 'info',
+    icon: '🆕',
+    animation: 'fade-in',
+    badge: 'NEW',
+    featured: true
+  },
+  {
     id: 'fresh-oct-14-2025',
     message: '✨ New: Risk Budgets 2026 • Privacy‑First Flags 2026 • Reliable Agent Actions',
     ctaText: 'Read now',
@@ -32,6 +50,24 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     priority: 0,
     variant: 'info',
     icon: '🆕',
+    animation: 'fade-in',
+    badge: 'NEW',
+    featured: true
+  },
+  {
+    id: 'fresh-content-sep-2025',
+    message: '✨ New: Blue‑Green Agent Releases + Edge Feature Flags + Cost Controllers',
+    ctaText: 'Explore new posts',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0,
+    variant: 'info',
+    icon: '✨',
     animation: 'fade-in',
     badge: 'NEW',
     featured: true
@@ -52,6 +88,42 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     icon: '🤖',
     animation: 'pulse',
     badge: 'LAUNCH SPECIAL',
+    featured: true
+  },
+  {
+<<<<<<< HEAD
+    id: 'agent-release-checklists-banner',
+    message: '✅ New: Agent Release Checklists + KPI‑Linked Canaries',
+    ctaText: 'Read now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-emerald-700 to-teal-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0,
+    variant: 'info',
+    icon: '✅',
+    animation: 'fade-in',
+    badge: 'NEW CONTENT',
+=======
+    id: 'fresh-sept-2025-content',
+    message: '📚 NEW: Serverless Inference Cost Playbook + Agent Safety Budgets (2025)',
+    ctaText: 'Read Now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: false,
+    hideAfter: 0,
+    active: true,
+    priority: 0,
+    variant: 'special',
+    icon: '✨',
+    animation: 'pulse',
+    badge: 'NEW',
+>>>>>>> cursor/create-and-deploy-new-content-9df8
     featured: true
   },
   {

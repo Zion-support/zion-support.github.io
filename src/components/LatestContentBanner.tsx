@@ -138,6 +138,16 @@ const contentHighlights = [
 // Additions
 contentHighlights.push(
   {
+    id: 19,
+    title: "📊 Scorecards v2: Ship Fast, Stay Safe",
+    description: "Lightweight platform scorecards + PR checks that predict outcomes.",
+    ctaText: "Read Update",
+    ctaLink: "/blog/ai-governance-scorecards-quickstart-2026-v2",
+    badge: "Update",
+    stats: "7 min read",
+    variant: "info" as const
+  },
+  {
     id: 9,
     title: "🧠 Enterprise RAG Blueprint v2",
     description: "Hybrid search, freshness, and auth-aware retrieval with layered evals.",
@@ -246,6 +256,20 @@ contentHighlights.push(
     badge: "New",
     stats: "7 min read",
     variant: "success" as const
+  }
+);
+
+// Fresh highlights for new content (Sept 29, 2025)
+contentHighlights.unshift(
+  {
+    id: 22,
+    title: "🧠 Agentic Observability Scorecards 2026",
+    description: "Traces linked to KPIs—scorecards that prevent regressions without slowing teams",
+    ctaText: "Read Article",
+    ctaLink: "/blog/agentic-observability-scorecards-2026",
+    badge: "New",
+    stats: "7 min read",
+    variant: "info" as const
   }
 );
 

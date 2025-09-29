@@ -185,7 +185,6 @@ function generatePerformanceReport() {
 // Main optimization function
 function optimizePerformance() {
   console.log('🎯 Zion Tech Group - Performance Optimization\n');
-  console.log('==========================================\n');
   
   // Run optimizations
   analyzeBundle();

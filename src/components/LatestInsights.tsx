@@ -1,5 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Calendar, User } from 'lucide-react';
+import { latestInsights } from '../content/insights';
 
 export default function LatestInsights(): React.JSX.Element {
   return (
