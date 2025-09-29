@@ -9,6 +9,24 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "observability-otel-traces-that-matter",
+    title: "OpenTelemetry in Production: Traces That Engineers Actually Use",
+    summary:
+      "Sampling strategies, semantic conventions, and dashboards that shrink MTTR for complex stacks.",
+    category: "Observability",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "policy-testing-for-genai",
+    title: "Governance for AI: Policy Testing That Scales",
+    summary:
+      "From prompt policies to red‑team playbooks: techniques to continuously validate AI behavior.",
+    category: "Risk & Compliance",
+    date: "2025-09-29",
+    readMinutes: 8,
+  },
+  {
     id: "platform-blueprints-golden-paths",
     title: "Golden Paths That Actually Get Used",
     summary:
