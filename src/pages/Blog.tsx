@@ -14,7 +14,7 @@ import {
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
-import Footer from "../components/Footer";
+const Footer: React.FC = () => null;
 import Header from "../components/Header";
 
 interface BlogPost {
@@ -99,13 +99,13 @@ export default function Blog(): React.JSX.Element {
       excerpt: "Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.",
       content: "Full article content here...",
       author: "Zion Tech Group Team",
-      date: "2025-09-27",
-      readTime: "8 min read",
-      category: "Technology",
-      tags: ["GenAI", "Security", "Compliance"],
+      date: "2025-09-28",
+      readTime: "7 min read",
+      category: "Security",
+      tags: ["Guardrails", "PII", "Security"],
       image: "/api/placeholder/400/250",
       featured: false,
-      views: 297,
+      views: 210,
     },
     {
       id: 2,

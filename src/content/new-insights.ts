@@ -20,6 +20,46 @@ export const newInsights = [
     `
   },
   {
+    id: "ai-ops-slo-controllers",
+    title: "AI Ops SLO Controllers: Self‑Healing at Scale",
+    summary: "Controllers that watch SLOs and trigger safe rollbacks, warm pools, and canaries.",
+    category: "AI Operations",
+    date: "2025-10-06",
+    readMinutes: 7,
+    featured: true,
+    tags: ["SLOs", "Autonomous Ops", "Controllers"],
+    content: `
+      <h2>Operate by SLOs</h2>
+      <p>Encode SLOs as controllers that take action automatically: rollback, scale, shed load, or switch tiers.</p>
+      <h3>Playbook</h3>
+      <ul>
+        <li>Golden signals with budget tracking</li>
+        <li>Pre‑approved remediation flows</li>
+        <li>Guardrail checks and audit trails</li>
+      </ul>
+    `
+  },
+  {
+    id: "cost-aware-rag",
+    title: "Cost‑Aware RAG: Freshness Budgets and Hybrid Retrieval",
+    summary: "Balance freshness, quality, and cost with TTL windows and tiered retrieval.",
+    category: "GenAI",
+    date: "2025-10-06",
+    readMinutes: 8,
+    featured: true,
+    tags: ["RAG", "Freshness", "Hybrid"],
+    content: `
+      <h2>Freshness Windows</h2>
+      <p>Apply TTL budgets by corpus and route requests by intent to control cost while keeping answers fresh.</p>
+      <h3>Hybrid Stack</h3>
+      <ul>
+        <li>BM25 + vectors with recency boost</li>
+        <li>Async warm caches and versioned corpora</li>
+        <li>Online canaries tied to KPI deltas</li>
+      </ul>
+    `
+  },
+  {
     id: "guardrails-scorecards-evals-2025",
     title: "Guardrails Engineers Adopt: Scorecards, PR Gates, Online Canaries",
     summary: "Lightweight, outcome‑linked guardrails that speed delivery while managing risk.",

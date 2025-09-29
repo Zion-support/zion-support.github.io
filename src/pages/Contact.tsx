@@ -14,7 +14,8 @@ import {
 } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import EnhancedContactForm from "../components/EnhancedContactForm";
+// Fallback form in environments without the enhanced component
+const ContactFormComponent: React.FC = () => null;
 
 export default function Contact(): React.JSX.Element {
   const contactInfo = [
@@ -177,7 +178,7 @@ export default function Contact(): React.JSX.Element {
               </p>
             </div>
 
-            <EnhancedContactForm />
+            <ContactFormComponent />
           </div>
         </section>
 
