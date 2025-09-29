@@ -17,6 +17,7 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+<<<<<<< HEAD
     id: "ai-autonomous-infrastructure-2026",
     slug: "ai-autonomous-infrastructure-2026",
     title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
@@ -61,6 +62,52 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "7 min read",
     image: "/images/zero-trust-for-genai-2026.jpg",
+=======
+    id: "ai-platform-slos-2026",
+    slug: "ai-platform-slos-2026",
+    title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
+    description: "Design SLOs and risk budgets for AI with instant rollbacks and KPI‑linked canaries.",
+    excerpt: "Ship faster with SLOs that budget risk and wire safe rollbacks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-12",
+    category: "AI Operations",
+    tags: ["SLOs", "Budgets", "Canaries"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-platform-slos-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "rag-evals-in-the-loop-2026",
+    slug: "rag-evals-in-the-loop-2026",
+    title: "RAG Evals in the Loop: Prevent Regressions While Shipping Weekly",
+    description: "Layer offline suites, PR checks, and online canaries tied to product KPIs.",
+    excerpt: "A practical evals system for RAG that correlates with business outcomes.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-12",
+    category: "GenAI",
+    tags: ["RAG", "Evals", "Canaries"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/rag-evals-in-the-loop-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-feature-flags-2026",
+    slug: "edge-feature-flags-2026",
+    title: "Edge Feature Flags 2026: <100ms Global Releases with Budgets",
+    description: "Geo/account targeting, budgets, and instant rollback using edge compute and KV.",
+    excerpt: "Zero‑regret rollouts with budgets and telemetry at the edge.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-12",
+    category: "Architecture",
+    tags: ["Edge", "Flags", "Budgets"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-feature-flags-2026.jpg",
+>>>>>>> cursor/create-and-deploy-new-content-6196
     newBadge: true,
     trending: true
   },

@@ -10,10 +10,44 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
     slug: "ai-autonomous-infrastructure-2026",
     title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
     description: "Blueprints and scorecards to operate self‑healing platforms with budgets and safe automation.",
     category: "Platform Engineering",
+=======
+    slug: "ai-platform-slos-2026",
+    title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
+    description: "Design SLOs and risk budgets for AI systems with instant rollbacks and KPI‑linked canaries.",
+    category: "AI Operations",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "rag-evals-in-the-loop-2026",
+    title: "RAG Evals in the Loop: Prevent Regressions While Shipping Weekly",
+    description: "Layer offline suites, PR checks, and online canaries tied to product KPIs.",
+    category: "GenAI",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-feature-flags-2026",
+    title: "Edge Feature Flags 2026: <100ms Global Releases with Budgets",
+    description: "Geo/account targeting, budgets, and instant rollback using edge compute and KV.",
+    category: "Architecture",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "ai-incident-response-playbooks-2025",
+    title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
+    description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
+    category: "Cybersecurity",
+>>>>>>> cursor/create-and-deploy-new-content-6196
     publishedAt: "2025-10-12",
     featured: true,
     readTime: "9 min read"
