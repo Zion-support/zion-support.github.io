@@ -11,11 +11,9 @@ import {
   User,
   Zap
 } from "lucide-react";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 
 interface BlogPost {
   id: number;
@@ -257,8 +255,6 @@ export default function Blog(): React.JSX.Element {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-        <Header />
-
         {/* New Content Promo Banner */}
         <div className="border-b border-white/10">
           <div className="max-w-7xl mx-auto px-6">
@@ -482,8 +478,6 @@ export default function Blog(): React.JSX.Element {
             <BlogPromotionBanner />
           </div>
         </section>
-
-        <Footer />
       </div>
     </>
   );
