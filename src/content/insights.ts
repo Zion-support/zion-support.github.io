@@ -90,6 +90,24 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 7,
   },
   {
+    id: "genai-cost-guardrails",
+    title: "GenAI Cost Guardrails: Cut Spend Without Slowing Teams",
+    summary:
+      "Token budgets, rate limits, caching, and rollback triggers that reduce cost 40%+.",
+    category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "edge-warmup-strategies",
+    title: "Edge Warmup Strategies: Keep Pages Hot Globally",
+    summary:
+      "Surrogate keys, background warming, and coalescing patterns for sub‑100ms UX.",
+    category: "Architecture",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
+  {
     id: "secure-ml-pipelines",
     title: "Securing Machine Learning Pipelines in Production",
     summary:
