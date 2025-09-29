@@ -33,6 +33,27 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
+      title: "AI Safety Budgets 2026",
+      description: "Guardrails wired to KPIs, approvals, rollbacks",
+      icon: Shield,
+      link: "/blog/ai-safety-budgets-2026",
+      category: "AI Strategy"
+    },
+    {
+      title: "Edge Privacy for ML 2026",
+      description: "On‑device filters and scoped identifiers",
+      icon: Cloud,
+      link: "/blog/edge-privacy-ml-2026",
+      category: "Edge"
+    },
+    {
+      title: "Agent Evals in Prod 2026",
+      description: "Online checks that predict outcomes",
+      icon: TrendingUp,
+      link: "/blog/agent-evals-in-prod-2026",
+      category: "GenAI"
+    },
+    {
       title: "Cost‑Aware Inference 2026",
       description: "Warm pools and quality tiers under SLAs",
       icon: Zap,

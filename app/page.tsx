@@ -22,16 +22,11 @@ import {
   AIRoadmapsBanner,
   AIFinOpsBanner,
   AIMultimodalEnterpriseBanner,
-  AIEnterpriseAutomationBanner,
+  AIEnterpriseAutomationGuideBanner,
   AIDataAnalyticsEnterpriseBanner,
   EnterpriseTransformationSuccessBanner,
   HealthcareTransformationBanner,
   NewContent2026Banner,
-  AIAgentOrchestrationBanner,
-  AISustainabilityBanner,
-  QuantumComputingBanner,
-  SustainabilityCaseStudyBanner,
-  QuantumOptimizationBanner,
   AIOperationalExcellenceBanner,
   AIAgentObservabilityBanner,
   ManufacturingTransformationBanner,
@@ -44,7 +39,6 @@ import {
   NewContentShowcase2026Banner
 } from '../components/PromotionalBanner';
 import { 
-  Latest2026ContentBanner,
   AIAutonomousCloudOpsBanner,
   AIFinTechTransformationBanner,
   AIRetailAutomationBanner,
@@ -134,13 +128,9 @@ export default function HomePage() {
       <AutonomousOperationsSuccessBanner />
       <NewContentShowcaseBanner2026 />
       <NewContent2026Banner />
-      <AIAgentOrchestrationBanner />
-      <AISustainabilityBanner />
-      <QuantumComputingBanner />
-      <SustainabilityCaseStudyBanner />
-      <QuantumOptimizationBanner />
+      {/* Removed unavailable banner components to fix imports */}
       <AIMultimodalEnterpriseBanner />
-      <AIEnterpriseAutomationBanner />
+      <AIEnterpriseAutomationGuideBanner />
       <AIDataAnalyticsEnterpriseBanner />
       <EnterpriseTransformationSuccessBanner />
       <HealthcareTransformationBanner />
@@ -461,7 +451,7 @@ export default function HomePage() {
                   AI Business Intelligence 2026: Next-Generation Decision Making
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Master autonomous AI operations with zero-touch infrastructure management, predictive maintenance, and self-healing systems.
+                  Transform your business with AI-powered BI that delivers real-time insights, predictive analytics, and 400% faster growth.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">Read Complete Guide →</div>
               </div>
@@ -610,7 +600,7 @@ export default function HomePage() {
                   Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
-                  Read Guide →
+                  Read Article →
                 </div>
               </div>
             </Link>

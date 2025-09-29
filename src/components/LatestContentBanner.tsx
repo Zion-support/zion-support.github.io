@@ -229,22 +229,22 @@ contentHighlights.push(
   },
   {
     id: 17,
-    title: "🔒 Privacy‑First Insights 2026",
-    description: "DP telemetry with scoped IDs and redaction—signal‑rich without PII risk",
-    ctaText: "Read Guide",
-    ctaLink: "/blog/privacy-first-insights-telemetry-2026",
+    title: "🛠️ AI SRE Blueprints 2026",
+    description: "Error budgets, rollback triggers, and live traces for reliable AI",
+    ctaText: "Read Blueprint",
+    ctaLink: "/blog/ai-sre-blueprints-2026",
     badge: "New",
-    stats: "7 min read",
+    stats: "8 min read",
     variant: "info" as const
   },
   {
     id: 18,
-    title: "🟦🟩 Blue‑Green Agent Releases 2026",
-    description: "Budgets, canaries, and instant rollback for safe velocity",
+    title: "🔒 Privacy‑First A/B Testing",
+    description: "Insights without PII using scoped IDs and DP noise",
     ctaText: "Learn How",
-    ctaLink: "/blog/agent-blue-green-releases-2026",
-    badge: "Featured",
-    stats: "6 min read",
+    ctaLink: "/blog/privacy-first-ab-testing-2026",
+    badge: "New",
+    stats: "7 min read",
     variant: "success" as const
   }
 );
