@@ -1,215 +1,191 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
-
-interface BannerContent {
-  id: string;
-  title: string;
-  subtitle: string;
-  cta: string;
-  href: string;
-  color: string;
-  icon: string;
-  metrics: {
-    value: string;
-    label: string;
-  }[];
-}
-
-const bannerContent: BannerContent[] = [
-  {
-    id: 'ai-infrastructure',
-    title: 'AI Autonomous Infrastructure 2026',
-    subtitle: 'Achieve 99.9% uptime with self-healing systems and zero-touch operations',
-    cta: 'Read the Complete Guide',
-    href: '/blog/ai-autonomous-infrastructure-2026',
-    color: 'from-blue-600 to-purple-600',
-    icon: '🏗️',
-    metrics: [
-      { value: '99.9%', label: 'Uptime' },
-      { value: '90%', label: 'Cost Reduction' },
-      { value: '$15M+', label: 'Annual Savings' }
-    ]
-  },
-  {
-    id: 'quantum-ai',
-    title: 'AI Quantum Hybrid Computing 2026',
-    subtitle: 'Revolutionary 1000x faster optimization with quantum-AI breakthrough',
-    cta: 'Explore Quantum-AI',
-    href: '/blog/ai-quantum-hybrid-computing-2026',
-    color: 'from-purple-600 to-pink-600',
-    icon: '⚛️',
-    metrics: [
-      { value: '1000x', label: 'Faster' },
-      { value: '95%', label: 'Accuracy' },
-      { value: '$50M+', label: 'ROI Potential' }
-    ]
-  },
-  {
-    id: 'enterprise-transformation',
-    title: '$25M ROI Enterprise Transformation',
-    subtitle: 'See how Fortune 500 achieved 99% automation and complete business revolution',
-    cta: 'View Case Study',
-    href: '/case-studies/ai-autonomous-enterprise-transformation-2026',
-    color: 'from-green-600 to-blue-600',
-    icon: '🚀',
-    metrics: [
-      { value: '$25M', label: 'Total ROI' },
-      { value: '99%', label: 'Automation' },
-      { value: '18 months', label: 'Implementation' }
-    ]
-  }
-];
+import { ArrowRight, Star, Zap, TrendingUp, Users } from 'lucide-react';
 
 export default function NewContent2026MegaBanner() {
-  const [currentBanner, setCurrentBanner] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-    
-    const interval = setInterval(() => {
-      setCurrentBanner((prev) => (prev + 1) % bannerContent.length);
-    }, 8000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const currentContent = bannerContent[currentBanner];
-
   return (
-    <div className={`relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      {/* Animated Background */}
-      <div className={`absolute inset-0 bg-gradient-to-r ${currentContent.color} transition-all duration-1000`}>
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent opacity-10 transform -skew-x-12 animate-pulse"></div>
-        </div>
+    <section className="relative py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-black opacity-20"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
       </div>
+      
+      <div className="relative max-w-6xl mx-auto px-4">
+        <div className="text-center mb-16">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-full text-sm font-bold mb-6">
+            <Star className="w-4 h-4" />
+            NEW 2026 BREAKTHROUGH CONTENT
+            <Star className="w-4 h-4" />
+          </div>
+          
+          <h2 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            Revolutionary AI Content
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
+              Just Released
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Revolutionary AI Content & Success Stories
+          </h2>
+          
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Discover cutting-edge AI innovations, $25M+ ROI case studies, and breakthrough technologies 
+            that are transforming industries in 2026
+          </p>
+        </div>
 
-      {/* Content */}
-      <div className="relative z-10 py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div className="text-white">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="text-4xl">{currentContent.icon}</span>
-                <div>
-                  <div className="bg-white bg-opacity-20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold">
-                    🆕 New 2026 Content
-                  </div>
-                </div>
+        {/* Featured Content Grid */}
+        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+          {/* Autonomous Enterprise */}
+          <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 hover:scale-105">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center">
+                <Zap className="w-6 h-6 text-white" />
               </div>
-              
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                {currentContent.title}
-              </h2>
-              
-              <p className="text-xl mb-8 opacity-90 leading-relaxed">
-                {currentContent.subtitle}
-              </p>
-
-              {/* Metrics */}
-              <div className="grid grid-cols-3 gap-4 mb-8">
-                {currentContent.metrics.map((metric, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-2xl md:text-3xl font-bold">{metric.value}</div>
-                    <div className="text-sm opacity-80">{metric.label}</div>
-                  </div>
-                ))}
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href={currentContent.href}
-                  className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                >
-                  {currentContent.cta} →
-                </Link>
-                <Link
-                  href="/blog"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
-                >
-                  View All Content
-                </Link>
+              <div>
+                <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">BREAKTHROUGH</span>
               </div>
             </div>
-
-            {/* Right Visual */}
-            <div className="relative">
-              <div className="relative z-10">
-                {/* Animated Elements */}
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="space-y-4">
-                    <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 animate-pulse">
-                      <div className="w-8 h-8 bg-white bg-opacity-30 rounded-lg mb-3"></div>
-                      <div className="h-4 bg-white bg-opacity-30 rounded w-3/4 mb-2"></div>
-                      <div className="h-3 bg-white bg-opacity-20 rounded w-1/2"></div>
-                    </div>
-                    
-                    <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 animate-pulse delay-300">
-                      <div className="w-8 h-8 bg-white bg-opacity-30 rounded-lg mb-3"></div>
-                      <div className="h-4 bg-white bg-opacity-30 rounded w-2/3 mb-2"></div>
-                      <div className="h-3 bg-white bg-opacity-20 rounded w-3/4"></div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-4 mt-8">
-                    <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 animate-pulse delay-150">
-                      <div className="w-8 h-8 bg-white bg-opacity-30 rounded-lg mb-3"></div>
-                      <div className="h-4 bg-white bg-opacity-30 rounded w-4/5 mb-2"></div>
-                      <div className="h-3 bg-white bg-opacity-20 rounded w-2/3"></div>
-                    </div>
-                    
-                    <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 animate-pulse delay-450">
-                      <div className="w-8 h-8 bg-white bg-opacity-30 rounded-lg mb-3"></div>
-                      <div className="h-4 bg-white bg-opacity-30 rounded w-3/5 mb-2"></div>
-                      <div className="h-3 bg-white bg-opacity-20 rounded w-4/5"></div>
-                    </div>
-                  </div>
-                </div>
+            <h3 className="text-2xl font-bold mb-3 group-hover:text-yellow-400 transition-colors">
+              AI Autonomous Enterprise 2026
+            </h3>
+            <p className="text-blue-100 mb-6">
+              Complete guide to transforming your enterprise with autonomous AI systems achieving $25M+ ROI and 95% automation.
+            </p>
+            <div className="flex gap-4 mb-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-green-400">$25M</div>
+                <div className="text-xs text-blue-200">ROI</div>
               </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-blue-400">95%</div>
+                <div className="text-xs text-blue-200">Automation</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-400">300%</div>
+                <div className="text-xs text-blue-200">Productivity</div>
+              </div>
+            </div>
+            <Link
+              href="/blog/ai-autonomous-enterprise-transformation-2026"
+              className="inline-flex items-center bg-gradient-to-r from-green-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              Read Guide
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </div>
 
-              {/* Floating Elements */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white bg-opacity-10 rounded-full animate-bounce"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white bg-opacity-10 rounded-full animate-bounce delay-1000"></div>
+          {/* Quantum Computing */}
+          <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 hover:scale-105">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center">
+                <TrendingUp className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold">REVOLUTIONARY</span>
+              </div>
+            </div>
+            <h3 className="text-2xl font-bold mb-3 group-hover:text-yellow-400 transition-colors">
+              AI Quantum Hybrid Computing 2026
+            </h3>
+            <p className="text-blue-100 mb-6">
+              Revolutionary quantum-classical hybrid systems delivering 1000x performance improvements in AI optimization and machine learning.
+            </p>
+            <div className="flex gap-4 mb-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-400">1000x</div>
+                <div className="text-xs text-blue-200">Faster</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-indigo-400">95%</div>
+                <div className="text-xs text-blue-200">Accuracy</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-blue-400">$50M+</div>
+                <div className="text-xs text-blue-200">Savings</div>
+              </div>
+            </div>
+            <Link
+              href="/blog/ai-quantum-hybrid-computing-2026"
+              className="inline-flex items-center bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              Explore Quantum AI
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </div>
+
+          {/* Success Story */}
+          <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 hover:scale-105">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center">
+                <Users className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold">FEATURED</span>
+              </div>
+            </div>
+            <h3 className="text-2xl font-bold mb-3 group-hover:text-yellow-400 transition-colors">
+              $25M ROI Success Story
+            </h3>
+            <p className="text-blue-100 mb-6">
+              See how a Fortune 500 company achieved complete autonomous operations with $25M ROI, 95% automation, and 300% productivity gains.
+            </p>
+            <div className="flex gap-4 mb-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-orange-400">$25M</div>
+                <div className="text-xs text-blue-200">ROI</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-red-400">95%</div>
+                <div className="text-xs text-blue-200">Automation</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-400">18</div>
+                <div className="text-xs text-blue-200">Months</div>
+              </div>
+            </div>
+            <Link
+              href="/case-studies/ai-autonomous-enterprise-success-2026"
+              className="inline-flex items-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              View Case Study
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
+            <p className="text-xl text-blue-100 mb-6">
+              Join thousands of companies already using our AI solutions to achieve breakthrough results
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                📞 Call +1 302 464 0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-colors"
+              >
+                ✉️ Get Free Consultation
+              </a>
+            </div>
+            <div className="mt-4 text-sm text-blue-200">
+              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>⏰ Available 24/7 for urgent consultations</p>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Banner Indicators */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {bannerContent.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentBanner(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentBanner ? 'bg-white scale-125' : 'bg-white bg-opacity-50'
-            }`}
-            aria-label={`Go to banner ${index + 1}`}
-          />
-        ))}
-      </div>
-
-      {/* Progress Bar */}
-      <div className="absolute bottom-0 left-0 h-1 bg-white bg-opacity-30 w-full">
-        <div 
-          className="h-full bg-white transition-all duration-100 ease-linear"
-          style={{ 
-            width: '100%',
-            animation: `progress ${8000}ms linear infinite`
-          }}
-        />
-      </div>
-
-      <style jsx>{`
-        @keyframes progress {
-          0% { width: 0%; }
-          100% { width: 100%; }
-        }
-      `}</style>
     </div>
   );
 }
