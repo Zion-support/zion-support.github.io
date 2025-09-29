@@ -52,6 +52,7 @@ import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBa
 import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
 import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -125,6 +126,9 @@ export default function HomePage() {
       
       {/* AI Innovation Showcase Banner 2026 */}
       <AIInnovationShowcaseBanner2026 />
+      
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
