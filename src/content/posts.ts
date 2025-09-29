@@ -764,6 +764,42 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-29",
     featured: false,
     readTime: "7 min read"
+  },
+  {
+    slug: "ai-autonomous-infrastructure-2026",
+    title: "AI Autonomous Infrastructure 2026: Self-Healing Systems That Scale",
+    description: "Transform your infrastructure with AI-powered autonomous systems that self-heal, optimize, and scale automatically. Reduce downtime by 95% and operational costs by 60%.",
+    category: "AI Infrastructure",
+    publishedAt: "2026-01-15",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "quantum-ai-hybrid-computing-2026",
+    title: "Quantum-AI Hybrid Computing 2026: Practical Near-Term Wins",
+    description: "Discover practical applications of quantum-AI hybrid computing that deliver measurable business value today. Learn about optimization algorithms and real-world success stories.",
+    category: "Quantum Computing",
+    publishedAt: "2026-01-12",
+    featured: true,
+    readTime: "14 min read"
+  },
+  {
+    slug: "edge-ai-deployment-2026",
+    title: "Edge AI Deployment 2026: Private, Real-Time Intelligence at Scale",
+    description: "Transform your operations with Edge AI deployment strategies that deliver private, real-time intelligence with sub-100ms response times and 99% privacy compliance.",
+    category: "Edge Computing",
+    publishedAt: "2026-01-10",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "zero-trust-security-2026",
+    title: "Zero Trust Security 2026: Comprehensive Implementation Guide",
+    description: "Master Zero Trust Security implementation with our comprehensive guide. Learn about identity verification, micro-segmentation, and continuous monitoring strategies.",
+    category: "Cybersecurity",
+    publishedAt: "2026-01-08",
+    featured: true,
+    readTime: "13 min read"
   }
 ];
 

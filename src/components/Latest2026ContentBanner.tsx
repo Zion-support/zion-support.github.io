@@ -1,239 +1,221 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, Sparkles, Clock, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap, Shield, Cpu } from 'lucide-react';
+
+interface ContentItem {
+  title: string;
+  category: string;
+  link: string;
+  readTime: string;
+  featured?: boolean;
+}
 
 interface Latest2026ContentBannerProps {
   className?: string;
-  variant?: 'hero' | 'compact' | 'featured';
+  variant?: 'hero' | 'premium' | 'showcase';
+  showCount?: number;
   autoRotate?: boolean;
   rotationInterval?: number;
 }
 
+const latest2026Content: ContentItem[] = [
+  {
+    title: "AI Autonomous Infrastructure 2026: Self-Healing Systems That Scale",
+    category: "AI Infrastructure",
+    link: "/blog/ai-autonomous-infrastructure-2026",
+    readTime: "12 min read",
+    featured: true
+  },
+  {
+    title: "Quantum-AI Hybrid Computing 2026: Practical Near-Term Wins",
+    category: "Quantum Computing",
+    link: "/blog/quantum-ai-hybrid-computing-2026",
+    readTime: "14 min read",
+    featured: true
+  },
+  {
+    title: "Edge AI Deployment 2026: Private, Real-Time Intelligence at Scale",
+    category: "Edge Computing",
+    link: "/blog/edge-ai-deployment-2026",
+    readTime: "11 min read",
+    featured: true
+  },
+  {
+    title: "Zero Trust Security 2026: Comprehensive Implementation Guide",
+    category: "Cybersecurity",
+    link: "/blog/zero-trust-security-2026",
+    readTime: "13 min read",
+    featured: true
+  },
+  {
+    title: "AI Platform Architecture 2026: Scalable Foundations",
+    category: "AI Architecture",
+    link: "/blog/ai-platform-architecture-2026",
+    readTime: "15 min read",
+    featured: true
+  },
+  {
+    title: "Multi-Modal AI Applications: Beyond Text and Images",
+    category: "AI Innovation",
+    link: "/blog/multi-modal-ai-applications-2026",
+    readTime: "10 min read",
+    featured: true
+  }
+];
+
 const Latest2026ContentBanner: React.FC<Latest2026ContentBannerProps> = ({
-  className = '',
-  variant = 'hero',
-  autoRotate = true,
+  className = "",
+  variant = "hero",
+  showCount = 3,
+  autoRotate = false,
   rotationInterval = 8000
 }) => {
-  const [currentIndex, setCurrentIndex] = React.useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
-  const featuredContent = [
-    {
-      id: 'ai-autonomous-infrastructure',
-      title: 'AI Autonomous Infrastructure 2026',
-      description: 'Self-healing systems with 99.9% uptime and zero-touch operations',
-      icon: Cpu,
-      color: 'from-purple-600 to-blue-600',
-      bgColor: 'from-purple-50 to-blue-50',
-      borderColor: 'border-purple-200',
-      link: '/blog/ai-autonomous-infrastructure-2026',
-      category: 'Infrastructure',
-      readTime: '25 min',
-      featured: true
-    },
-    {
-      id: 'quantum-hybrid-computing',
-      title: 'AI Quantum Hybrid Computing 2026',
-      description: '1000x faster optimization with quantum-AI breakthrough capabilities',
-      icon: Zap,
-      color: 'from-purple-600 to-cyan-600',
-      bgColor: 'from-purple-50 to-cyan-50',
-      borderColor: 'border-purple-200',
-      link: '/blog/ai-quantum-hybrid-computing-2026',
-      category: 'Quantum AI',
-      readTime: '30 min',
-      featured: true
-    },
-    {
-      id: 'zero-trust-security',
-      title: 'AI Zero Trust Security 2026',
-      description: 'Unbreakable defense with 99.9% threat detection and autonomous response',
-      icon: Shield,
-      color: 'from-red-600 to-orange-600',
-      bgColor: 'from-red-50 to-orange-50',
-      borderColor: 'border-red-200',
-      link: '/blog/ai-zero-trust-security-2026',
-      category: 'Cybersecurity',
-      readTime: '28 min',
-      featured: true
-    },
-    {
-      id: 'enterprise-transformation',
-      title: 'AI Enterprise Transformation Success',
-      description: '$25M ROI case study with 99.9% uptime and 90% cost reduction',
-      icon: Sparkles,
-      color: 'from-green-600 to-blue-600',
-      bgColor: 'from-green-50 to-blue-50',
-      borderColor: 'border-green-200',
-      link: '/case-studies/ai-autonomous-enterprise-transformation-2026',
-      category: 'Case Study',
-      readTime: '15 min',
-      featured: true
+  useEffect(() => {
+    if (autoRotate && latest2026Content.length > showCount) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % (latest2026Content.length - showCount + 1));
+      }, rotationInterval);
+      return () => clearInterval(interval);
     }
-  ];
+  }, [autoRotate, showCount, rotationInterval]);
 
-  React.useEffect(() => {
-    if (!autoRotate) return;
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'premium':
+        return {
+          container: "bg-gradient-to-r from-purple-600 to-indigo-600 text-white",
+          badge: "bg-white/20 text-purple-100 border-purple-300/30",
+          title: "text-white",
+          description: "text-purple-100",
+          item: "bg-white/10 hover:bg-white/20 border-white/20",
+          itemTitle: "text-white",
+          itemCategory: "text-purple-200",
+          cta: "bg-white text-purple-600 hover:bg-purple-50"
+        };
+      case 'showcase':
+        return {
+          container: "bg-gradient-to-r from-emerald-500 to-teal-600 text-white",
+          badge: "bg-white/20 text-emerald-100 border-emerald-300/30",
+          title: "text-white",
+          description: "text-emerald-100",
+          item: "bg-white/10 hover:bg-white/20 border-white/20",
+          itemTitle: "text-white",
+          itemCategory: "text-emerald-200",
+          cta: "bg-white text-emerald-600 hover:bg-emerald-50"
+        };
+      default: // hero
+        return {
+          container: "bg-gradient-to-r from-indigo-600 to-purple-600 text-white",
+          badge: "bg-white/20 text-indigo-100 border-indigo-300/30",
+          title: "text-white",
+          description: "text-indigo-100",
+          item: "bg-white/10 hover:bg-white/20 border-white/20",
+          itemTitle: "text-white",
+          itemCategory: "text-indigo-200",
+          cta: "bg-white text-indigo-600 hover:bg-indigo-50"
+        };
+    }
+  };
 
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % featuredContent.length);
-    }, rotationInterval);
+  const styles = getVariantStyles();
+  const displayContent = latest2026Content.slice(currentIndex, currentIndex + showCount);
 
-    return () => clearInterval(interval);
-  }, [autoRotate, rotationInterval, featuredContent.length]);
+  if (!isVisible) return null;
 
-  const currentContent = featuredContent[currentIndex];
-
-  if (variant === 'compact') {
-    return (
-      <div className={`bg-gradient-to-r ${currentContent.bgColor} border ${currentContent.borderColor} rounded-xl p-4 ${className}`}>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className={`w-10 h-10 bg-gradient-to-r ${currentContent.color} rounded-lg flex items-center justify-center`}>
-              <currentContent.icon className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <div className="flex items-center gap-2 mb-1">
-                <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-2 py-0.5 rounded-full text-xs font-semibold">
-                  NEW 2026
-                </span>
-                <span className="text-xs text-gray-500">{currentContent.readTime}</span>
-              </div>
-              <h3 className="font-semibold text-gray-900 text-sm">{currentContent.title}</h3>
-              <p className="text-xs text-gray-600">{currentContent.description}</p>
-            </div>
-          </div>
-          <Link
-            to={currentContent.link}
-            className="bg-white text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Read →
-          </Link>
-        </div>
-      </div>
-    );
-  }
-
-  if (variant === 'featured') {
-    return (
-      <div className={`bg-gradient-to-r ${currentContent.bgColor} border ${currentContent.borderColor} rounded-xl p-6 ${className}`}>
-        <div className="flex items-start justify-between mb-4">
-          <div className="flex items-center gap-3">
-            <div className={`w-12 h-12 bg-gradient-to-r ${currentContent.color} rounded-lg flex items-center justify-center`}>
-              <currentContent.icon className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                  FEATURED 2026
-                </span>
-                <span className="text-xs text-gray-500">{currentContent.readTime}</span>
-              </div>
-              <h3 className="text-lg font-bold text-gray-900">{currentContent.title}</h3>
-              <p className="text-sm text-gray-600 mt-1">{currentContent.description}</p>
-            </div>
-          </div>
-          <Link
-            to={currentContent.link}
-            className="bg-white text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Read Article →
-          </Link>
-        </div>
-        
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4 text-xs text-gray-500">
-            <span>Category: {currentContent.category}</span>
-            <span>•</span>
-            <span>Published: Jan 20, 2026</span>
-          </div>
-          <div className="flex items-center gap-2">
-            {featuredContent.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-colors ${
-                  index === currentIndex ? 'bg-purple-600' : 'bg-gray-300'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // Hero variant
   return (
-    <div className={`bg-gradient-to-r from-indigo-600 to-purple-600 text-white ${className}`}>
-      <div className="max-w-6xl mx-auto px-4 py-8">
+    <div className={`relative overflow-hidden ${styles.container} ${className}`}>
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-black opacity-5"></div>
+      <div className="absolute inset-0">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-float"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-white rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-float" style={{ animationDelay: "2s" }}></div>
+      </div>
+
+      <div className="container mx-auto px-6 py-12 relative z-10">
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
-            <span className="text-lg font-bold">🚀 BREAKTHROUGH 2026 CONTENT</span>
-            <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
+          <div className={`inline-flex items-center px-4 py-2 rounded-full ${styles.badge} text-sm font-medium mb-4 border`}>
+            <Sparkles className="w-4 h-4 mr-2" />
+            🚀 BREAKTHROUGH 2026 CONTENT
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Latest AI Innovations & Success Stories
+          <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${styles.title}`}>
+            Latest AI & Technology Insights
           </h2>
-          <p className="text-xl text-indigo-100 max-w-3xl mx-auto">
-            Discover revolutionary AI technologies and real-world success stories that are transforming industries and delivering unprecedented results.
+          <p className={`text-lg md:text-xl max-w-3xl mx-auto ${styles.description}`}>
+            Discover cutting-edge articles on AI Autonomous Infrastructure, Quantum-AI Hybrid Computing, 
+            Edge AI Deployment, and Zero Trust Security that are transforming industries today.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {featuredContent.map((content, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          {displayContent.map((item, index) => (
             <Link
-              key={content.id}
-              to={content.link}
-              className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 ${
-                index === currentIndex ? 'bg-white/20 scale-105' : ''
-              }`}
+              key={`${item.link}-${currentIndex}-${index}`}
+              to={item.link}
+              className={`${styles.item} rounded-xl p-6 border transition-all duration-300 hover:scale-105 hover:shadow-xl group`}
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div className={`w-10 h-10 bg-gradient-to-r ${content.color} rounded-lg flex items-center justify-center`}>
-                  <content.icon className="w-5 h-5 text-white" />
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-semibold">
-                    NEW 2026
+              <div className="flex items-center justify-between mb-3">
+                <span className={`text-xs uppercase tracking-wider font-medium ${styles.itemCategory}`}>
+                  {item.category}
+                </span>
+                {item.featured && (
+                  <span className="bg-yellow-400 text-black text-xs px-2 py-1 rounded-full font-medium">
+                    FEATURED
                   </span>
-                  <span className="text-xs text-indigo-200">{content.readTime}</span>
-                </div>
+                )}
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-yellow-200 transition-colors">
-                {content.title}
+              <h3 className={`text-lg font-semibold mb-3 ${styles.itemTitle} group-hover:underline`}>
+                {item.title}
               </h3>
-              <p className="text-sm text-indigo-100 mb-4">
-                {content.description}
-              </p>
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-indigo-300">{content.category}</span>
-                <ArrowRight className="w-4 h-4 text-indigo-300 group-hover:text-yellow-200 transition-colors" />
+              <div className="flex items-center gap-2 text-sm">
+                <Clock className="w-4 h-4" />
+                <span className={styles.itemCategory}>{item.readTime}</span>
               </div>
             </Link>
           ))}
         </div>
 
         <div className="text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            {featuredContent.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentIndex ? 'bg-yellow-400' : 'bg-white/30'
-                }`}
-              />
-            ))}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              to="/blog"
+              className={`${styles.cta} px-8 py-3 rounded-lg font-semibold text-lg inline-flex items-center gap-2 transition-all duration-300 hover:scale-105`}
+            >
+              <Users className="w-5 h-5" />
+              Read All Articles
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link
+              to="/services"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white hover:text-indigo-600 transition-all duration-300"
+            >
+              Explore Services
+            </Link>
           </div>
-          <Link
-            to="/blog"
-            className="bg-white text-indigo-600 hover:bg-indigo-50 px-8 py-3 rounded-lg font-semibold text-lg inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
-          >
-            Explore All 2026 Content
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          
+          {/* Content Tags */}
+          <div className="mt-6 flex flex-wrap gap-2 justify-center">
+            <span className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-medium border border-white/30">
+              AI Infrastructure
+            </span>
+            <span className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-medium border border-white/30">
+              Quantum Computing
+            </span>
+            <span className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-medium border border-white/30">
+              Edge AI
+            </span>
+            <span className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-medium border border-white/30">
+              Zero Trust Security
+            </span>
+            <span className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-medium border border-white/30">
+              AI Architecture
+            </span>
+            <span className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-medium border border-white/30">
+              Multi-Modal AI
+            </span>
+          </div>
         </div>
       </div>
     </div>

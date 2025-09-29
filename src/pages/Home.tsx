@@ -34,6 +34,8 @@ import NewContentShowcase2025 from "../components/NewContentShowcase2025";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
+import Latest2026ContentBanner from "../components/Latest2026ContentBanner";
+import RevolutionaryServices2026Banner from "../components/RevolutionaryServices2026Banner";
 import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
@@ -164,6 +166,22 @@ const Home = () => {
         <div className="container mx-auto px-6 mt-6">
           <NewServicesPromoBanner variant="showcase" showCount={3} featuredOnly={true} />
         </div>
+
+        {/* Revolutionary Services 2026 Banner */}
+        <RevolutionaryServices2026Banner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          showCount={3} 
+          featuredOnly={true} 
+        />
+
+        {/* Latest 2026 Content Banner */}
+        <Latest2026ContentBanner 
+          className="border-b border-white/10" 
+          variant="hero" 
+          showCount={3} 
+          autoRotate={true} 
+        />
         
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
