@@ -374,3 +374,69 @@ export const LatestContentShowcaseBanner = () => (
     hideAfter={18}
   />
 );
+
+export const VectorDatabasesBanner = () => (
+  <PromotionalBanner
+    message="🗄️ New Guide: AI Vector Databases 2025 - Complete Implementation with Pinecone, Weaviate, Qdrant & ChromaDB"
+    ctaText="Read Vector DB Guide"
+    ctaLink="/blog/ai-vector-databases-2025"
+    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const MultimodalAIBanner = () => (
+  <PromotionalBanner
+    message="🎭 New Article: AI Multimodal Applications 2025 - Vision, Audio & Text Integration with GPT-4V & Claude 3"
+    ctaText="Read Multimodal Guide"
+    ctaLink="/blog/ai-multimodal-applications-2025"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const EdgeComputingBanner = () => (
+  <PromotionalBanner
+    message="⚡ New Guide: AI Edge Computing 2026 - Sub-50ms Latency, Offline AI & Real-time Processing Implementation"
+    ctaText="Read Edge AI Guide"
+    ctaLink="/blog/ai-edge-computing-2026"
+    backgroundColor="bg-gradient-to-r from-cyan-600 to-teal-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const ManufacturingSuccessBanner = () => (
+  <PromotionalBanner
+    message="🏭 Success Story: AI Manufacturing Optimization - 40% Efficiency Gain & $2.8M Savings with Predictive Maintenance"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-manufacturing-optimization-2025"
+    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const RetailTransformationBanner = () => (
+  <PromotionalBanner
+    message="🛍️ Success Story: AI Retail Transformation - 180% Revenue Growth & 85% Cost Reduction with Smart Inventory"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-retail-transformation-2025"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const FreshContent2025Banner = () => (
+  <PromotionalBanner
+    message="📚 Fresh 2025 Content: Vector Databases, Multimodal AI, Edge Computing, Manufacturing & Retail Success Stories"
+    ctaText="Explore All New Content"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
