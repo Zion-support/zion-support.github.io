@@ -18,6 +18,7 @@ import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedAccessibilityManager } from './utils/enhancedAccessibilityManager';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOOptimizer from './components/SEOOptimizer';
 import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 

@@ -557,7 +557,7 @@ class EnhancedAccessibilityManager {
   /**
    * Calculate color contrast ratio
    */
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   private calculateContrast(_color1: string, _color2: string): number {
     // Simplified contrast calculation - use a proper library in production
     return 4.5; // Placeholder value
