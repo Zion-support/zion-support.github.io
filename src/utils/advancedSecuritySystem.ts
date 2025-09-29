@@ -1,800 +1,724 @@
 /**
- * Advanced Security System for Comprehensive Application Protection
+ * Advanced Security System
+ * Comprehensive security monitoring, threat detection, and protection
  */
 
-export interface SecurityThreat {
+interface SecurityEvent {
   id: string;
-  type: 'xss' | 'csrf' | 'injection' | 'data_leak' | 'unauthorized_access' | 'malware' | 'phishing' | 'brute_force';
+  type: 'threat' | 'suspicious' | 'warning' | 'info';
   severity: 'low' | 'medium' | 'high' | 'critical';
-  description: string;
   timestamp: number;
   source: string;
-  target: string;
-  metadata: Record<string, string | number | boolean>;
-  blocked: boolean;
-  action: 'block' | 'monitor' | 'alert' | 'quarantine';
-}
-
-export interface SecurityPolicy {
-  id: string;
-  name: string;
   description: string;
-  rules: SecurityRule[];
-  enabled: boolean;
-  priority: number;
+  metadata: Record<string, any>;
+  resolved: boolean;
 }
 
-export interface SecurityRule {
-  id: string;
-  type: 'content_security' | 'xss_protection' | 'csrf_protection' | 'data_validation' | 'access_control';
-  condition: string;
-  action: 'block' | 'allow' | 'monitor' | 'sanitize';
-  severity: 'low' | 'medium' | 'high' | 'critical';
+interface SecurityMetrics {
+  totalEvents: number;
+  eventsByType: Record<string, number>;
+  eventsBySeverity: Record<string, number>;
+  threatsBlocked: number;
+  suspiciousActivities: number;
+  securityScore: number; // 0-100
 }
 
-export interface SecurityMetrics {
-  totalThreats: number;
-  blockedThreats: number;
-  threatsByType: Record<string, number>;
-  threatsBySeverity: Record<string, number>;
-  lastThreatTime: number;
-  securityScore: number;
+interface SecurityConfig {
+  enableCSP: boolean;
+  enableXSSProtection: boolean;
+  enableClickjackingProtection: boolean;
+  enableHSTS: boolean;
+  enableCORS: boolean;
+  enableRateLimiting: boolean;
+  maxRequestsPerMinute: number;
+  enableThreatDetection: boolean;
+  enableAnomalyDetection: boolean;
 }
 
 class AdvancedSecuritySystem {
-  private threats: Map<string, SecurityThreat> = new Map();
-  private policies: Map<string, SecurityPolicy> = new Map();
-  private metrics: SecurityMetrics = {
-    totalThreats: 0,
-    blockedThreats: 0,
-    threatsByType: {},
-    threatsBySeverity: {},
-    lastThreatTime: 0,
-    securityScore: 100
-  };
-  private maxThreats = 10000;
-  private reportEndpoint = '/api/security-reporting';
+  private events: SecurityEvent[] = [];
+  private config: SecurityConfig;
+  private metrics: SecurityMetrics;
+  private isInitialized: boolean = false;
+  private requestCounts: Map<string, number[]> = new Map();
+  private suspiciousPatterns: string[] = [];
+  private maxEvents: number = 1000;
 
-  constructor() {
-    this.initializeSecuritySystem();
-    this.setupDefaultPolicies();
+  constructor(config: Partial<SecurityConfig> = {}) {
+    this.config = {
+      enableCSP: true,
+      enableXSSProtection: true,
+      enableClickjackingProtection: true,
+      enableHSTS: true,
+      enableCORS: true,
+      enableRateLimiting: true,
+      maxRequestsPerMinute: 60,
+      enableThreatDetection: true,
+      enableAnomalyDetection: true,
+      ...config
+    };
+
+    this.metrics = {
+      totalEvents: 0,
+      eventsByType: {},
+      eventsBySeverity: {},
+      threatsBlocked: 0,
+      suspiciousActivities: 0,
+      securityScore: 100
+    };
+
+    this.suspiciousPatterns = [
+      '<script',
+      'javascript:',
+      'data:text/html',
+      'vbscript:',
+      'onload=',
+      'onerror=',
+      'onclick=',
+      'onmouseover=',
+      'eval(',
+      'document.cookie',
+      'window.location',
+      '../',
+      '..\\',
+      '/etc/passwd',
+      '/etc/shadow',
+      'cmd.exe',
+      'powershell',
+      'sql injection',
+      'union select',
+      'drop table',
+      'delete from'
+    ];
   }
 
-  private initializeSecuritySystem(): void {
+  /**
+   * Initialize the security system
+   */
+  public initialize(): void {
+    if (this.isInitialized) {
+      console.warn('Advanced Security System is already initialized');
+      return;
+    }
+
+    this.isInitialized = true;
+    console.log('🔒 Advanced Security System initialized');
+
+    // Setup security headers
+    this.setupSecurityHeaders();
+    
+    // Setup threat detection
+    this.setupThreatDetection();
+    
+    // Setup rate limiting
+    this.setupRateLimiting();
+    
+    // Setup input validation
+    this.setupInputValidation();
+    
+    // Setup anomaly detection
+    this.setupAnomalyDetection();
+    
+    // Setup session security
+    this.setupSessionSecurity();
+    
+    // Start monitoring
+    this.startMonitoring();
+  }
+
+  /**
+   * Setup security headers
+   */
+  private setupSecurityHeaders(): void {
+    if (typeof document === 'undefined') return;
+
     // Content Security Policy
-    this.setupContentSecurityPolicy();
-    
-    // XSS Protection
-    this.setupXSSProtection();
-    
-    // CSRF Protection
-    this.setupCSRFProtection();
-    
-    // Data Validation
-    this.setupDataValidation();
-    
-    // Access Control
-    this.setupAccessControl();
-    
-    // Threat Monitoring
-    this.setupThreatMonitoring();
-  }
+    if (this.config.enableCSP) {
+      const csp = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none';";
+      const meta = document.createElement('meta');
+      meta.httpEquiv = 'Content-Security-Policy';
+      meta.content = csp;
+      document.head.appendChild(meta);
+    }
 
-  private setupContentSecurityPolicy(): void {
-    const csp = [
-      "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
-      "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data: https:",
-      "font-src 'self'",
-      "connect-src 'self'",
-      "media-src 'self'",
-      "object-src 'none'",
-      "child-src 'self'",
-      "frame-ancestors 'none'",
-      "form-action 'self'",
-      "base-uri 'self'"
-    ].join('; ');
+    // X-Frame-Options
+    if (this.config.enableClickjackingProtection) {
+      const meta = document.createElement('meta');
+      meta.httpEquiv = 'X-Frame-Options';
+      meta.content = 'DENY';
+      document.head.appendChild(meta);
+    }
 
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'Content-Security-Policy';
-    meta.content = csp;
-    document.head.appendChild(meta);
-  }
+    // X-XSS-Protection
+    if (this.config.enableXSSProtection) {
+      const meta = document.createElement('meta');
+      meta.httpEquiv = 'X-XSS-Protection';
+      meta.content = '1; mode=block';
+      document.head.appendChild(meta);
+    }
 
-  private setupXSSProtection(): void {
-    // XSS Protection Header
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'X-XSS-Protection';
-    meta.content = '1; mode=block';
-    document.head.appendChild(meta);
-
-    // Input sanitization
-    this.setupInputSanitization();
-    
-    // Output encoding
-    this.setupOutputEncoding();
-  }
-
-  private setupInputSanitization(): void {
-    // Monitor form inputs for malicious content
-    document.addEventListener('input', (event) => {
-      const target = event.target as HTMLInputElement | HTMLTextAreaElement;
-      if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA')) {
-        this.validateInput(target.value, target.name || 'unknown');
-      }
-    });
-  }
-
-  private setupOutputEncoding(): void {
-    // Override innerHTML to prevent XSS
-    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML') || 
-                             Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'innerHTML');
-    
-    if (originalInnerHTML) {
-      Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(value: string) {
-          const sanitizedValue = this.sanitizeHTML(value);
-          originalInnerHTML.set?.call(this, sanitizedValue);
-        },
-        get: originalInnerHTML.get,
-        configurable: true
-      });
+    // Strict-Transport-Security
+    if (this.config.enableHSTS) {
+      const meta = document.createElement('meta');
+      meta.httpEquiv = 'Strict-Transport-Security';
+      meta.content = 'max-age=31536000; includeSubDomains';
+      document.head.appendChild(meta);
     }
   }
 
-  private setupCSRFProtection(): void {
-    // Generate CSRF token
-    const csrfToken = this.generateCSRFToken();
-    sessionStorage.setItem('csrf-token', csrfToken);
+  /**
+   * Setup threat detection
+   */
+  private setupThreatDetection(): void {
+    if (!this.config.enableThreatDetection) return;
 
-    // Add CSRF token to forms
-    this.addCSRFTokenToForms(csrfToken);
-    
-    // Validate CSRF token on form submissions
-    this.validateCSRFToken();
+    // Monitor DOM changes for suspicious content
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList') {
+          mutation.addedNodes.forEach((node) => {
+            if (node.nodeType === Node.ELEMENT_NODE) {
+              this.scanElement(node as Element);
+            }
+          });
+        }
+      });
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    // Monitor URL changes
+    let currentUrl = window.location.href;
+    setInterval(() => {
+      if (window.location.href !== currentUrl) {
+        this.checkUrlSecurity(window.location.href);
+        currentUrl = window.location.href;
+      }
+    }, 1000);
+
+    // Monitor console access
+    this.monitorConsoleAccess();
   }
 
-  private generateCSRFToken(): string {
-    const array = new Uint8Array(32);
-    crypto.getRandomValues(array);
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-  }
+  /**
+   * Setup rate limiting
+   */
+  private setupRateLimiting(): void {
+    if (!this.config.enableRateLimiting) return;
 
-  private addCSRFTokenToForms(token: string): void {
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-      const existingToken = form.querySelector('input[name="csrf-token"]');
-      if (!existingToken) {
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = 'csrf-token';
-        input.value = token;
-        form.appendChild(input);
+    // Monitor API requests
+    const originalFetch = window.fetch;
+    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
+      const clientId = this.getClientId();
+      
+      if (!this.checkRateLimit(clientId)) {
+        this.logSecurityEvent('threat', 'high', 'Rate limit exceeded', {
+          clientId,
+          url: typeof input === 'string' ? input : input.toString(),
+          method: init?.method || 'GET'
+        });
+        throw new Error('Rate limit exceeded');
+      }
+
+      return originalFetch(input, init);
+    };
+
+    // Monitor form submissions
+    document.addEventListener('submit', (event) => {
+      const clientId = this.getClientId();
+      if (!this.checkRateLimit(clientId, 'form')) {
+        event.preventDefault();
+        this.logSecurityEvent('threat', 'medium', 'Form submission rate limit exceeded', {
+          clientId,
+          formId: (event.target as HTMLFormElement).id
+        });
+        return false;
       }
     });
   }
 
-  private validateCSRFToken(): void {
-    document.addEventListener('submit', (event) => {
-      const form = event.target as HTMLFormElement;
-      const formToken = form.querySelector('input[name="csrf-token"]') as HTMLInputElement;
-      const sessionToken = sessionStorage.getItem('csrf-token');
-      
-      if (formToken && sessionToken && formToken.value !== sessionToken) {
-        event.preventDefault();
-        this.reportThreat({
-          type: 'csrf',
-          severity: 'high',
-          description: 'CSRF token validation failed',
-          source: 'form_submission',
-          target: form.action || 'unknown',
-          blocked: true,
-          action: 'block'
+  /**
+   * Setup input validation
+   */
+  private setupInputValidation(): void {
+    // Monitor all input fields
+    document.addEventListener('input', (event) => {
+      const target = event.target as HTMLInputElement;
+      if (target && this.isSuspiciousInput(target.value)) {
+        this.logSecurityEvent('suspicious', 'medium', 'Suspicious input detected', {
+          inputType: target.type,
+          inputName: target.name,
+          inputValue: target.value.substring(0, 100) // Limit logged value
         });
       }
     });
-  }
 
-  private setupDataValidation(): void {
-    // Validate data before processing
-    this.setupFormValidation();
-    this.setupURLValidation();
-    this.setupFileValidation();
-  }
-
-  private setupFormValidation(): void {
+    // Monitor form submissions
     document.addEventListener('submit', (event) => {
       const form = event.target as HTMLFormElement;
       const formData = new FormData(form);
       
       for (const [key, value] of formData.entries()) {
-        if (typeof value === 'string') {
-          this.validateData(value, key);
+        if (typeof value === 'string' && this.isSuspiciousInput(value)) {
+          this.logSecurityEvent('threat', 'high', 'Malicious form submission detected', {
+            formId: form.id,
+            fieldName: key,
+            fieldValue: value.substring(0, 100)
+          });
+          event.preventDefault();
+          return false;
         }
       }
     });
   }
 
-  private setupURLValidation(): void {
-    // Monitor URL changes for malicious patterns
-    let currentUrl = window.location.href;
-    
-    setInterval(() => {
-      if (window.location.href !== currentUrl) {
-        this.validateURL(window.location.href);
-        currentUrl = window.location.href;
-      }
-    }, 1000);
-  }
+  /**
+   * Setup anomaly detection
+   */
+  private setupAnomalyDetection(): void {
+    if (!this.config.enableAnomalyDetection) return;
 
-  private setupFileValidation(): void {
-    // Validate file uploads
-    document.addEventListener('change', (event) => {
-      const target = event.target as HTMLInputElement;
-      if (target.type === 'file' && target.files) {
-        Array.from(target.files).forEach(file => {
-          this.validateFile(file);
+    // Monitor unusual user behavior
+    let clickCount = 0;
+    let scrollCount = 0;
+    let keyPressCount = 0;
+
+    document.addEventListener('click', () => {
+      clickCount++;
+    });
+
+    document.addEventListener('scroll', () => {
+      scrollCount++;
+    });
+
+    document.addEventListener('keydown', () => {
+      keyPressCount++;
+    });
+
+    // Check for anomalies every 30 seconds
+    setInterval(() => {
+      const now = Date.now();
+      
+      // Detect rapid clicking (potential bot behavior)
+      if (clickCount > 100) {
+        this.logSecurityEvent('suspicious', 'medium', 'Unusual clicking pattern detected', {
+          clickCount,
+          timeWindow: '30s'
         });
       }
-    });
+
+      // Detect rapid scrolling (potential automated behavior)
+      if (scrollCount > 50) {
+        this.logSecurityEvent('suspicious', 'low', 'Unusual scrolling pattern detected', {
+          scrollCount,
+          timeWindow: '30s'
+        });
+      }
+
+      // Detect rapid key presses (potential automated input)
+      if (keyPressCount > 200) {
+        this.logSecurityEvent('suspicious', 'medium', 'Unusual typing pattern detected', {
+          keyPressCount,
+          timeWindow: '30s'
+        });
+      }
+
+      // Reset counters
+      clickCount = 0;
+      scrollCount = 0;
+      keyPressCount = 0;
+    }, 30000);
   }
 
-  private setupAccessControl(): void {
-    // Monitor for unauthorized access attempts
-    this.monitorUnauthorizedAccess();
-    this.setupSessionManagement();
-    this.setupPermissionChecks();
-  }
-
-  private monitorUnauthorizedAccess(): void {
-    // Monitor for suspicious patterns
-    window.addEventListener('beforeunload', () => {
-      this.validateSession();
-    });
-  }
-
-  private setupSessionManagement(): void {
-    // Session timeout
+  /**
+   * Setup session security
+   */
+  private setupSessionSecurity(): void {
+    // Monitor session timeout
     let lastActivity = Date.now();
     const sessionTimeout = 30 * 60 * 1000; // 30 minutes
-    
-    const resetTimer = () => {
+
+    document.addEventListener('click', () => {
       lastActivity = Date.now();
-    };
-    
-    ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'].forEach(event => {
-      document.addEventListener(event, resetTimer, true);
     });
-    
+
+    document.addEventListener('keydown', () => {
+      lastActivity = Date.now();
+    });
+
     setInterval(() => {
       if (Date.now() - lastActivity > sessionTimeout) {
-        this.handleSessionTimeout();
+        this.logSecurityEvent('warning', 'medium', 'Session timeout detected', {
+          lastActivity,
+          timeoutDuration: sessionTimeout
+        });
+        // Could implement session invalidation here
       }
     }, 60000); // Check every minute
   }
 
-  private setupPermissionChecks(): void {
-    // Check permissions before sensitive operations
-    this.checkGeolocationPermission();
-    this.checkCameraPermission();
-    this.checkMicrophonePermission();
-  }
-
-  private checkGeolocationPermission(): void {
-    if ('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition(
-        () => {}, // Success - permission granted
-        (error) => {
-          if (error.code === error.PERMISSION_DENIED) {
-            this.reportThreat({
-              type: 'unauthorized_access',
-              severity: 'low',
-              description: 'Geolocation permission denied',
-              source: 'geolocation_api',
-              target: 'user_location',
-              blocked: false,
-              action: 'monitor'
-            });
-          }
-        }
-      );
-    }
-  }
-
-  private checkCameraPermission(): void {
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices.getUserMedia({ video: true })
-        .then(() => {}) // Permission granted
-        .catch((error) => {
-          if (error.name === 'NotAllowedError') {
-            this.reportThreat({
-              type: 'unauthorized_access',
-              severity: 'low',
-              description: 'Camera permission denied',
-              source: 'camera_api',
-              target: 'user_camera',
-              blocked: false,
-              action: 'monitor'
-            });
-          }
+  /**
+   * Start monitoring
+   */
+  private startMonitoring(): void {
+    // Monitor page visibility for security events
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        this.logSecurityEvent('info', 'low', 'Page hidden', {
+          timestamp: Date.now()
         });
-    }
-  }
-
-  private checkMicrophonePermission(): void {
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices.getUserMedia({ audio: true })
-        .then(() => {}) // Permission granted
-        .catch((error) => {
-          if (error.name === 'NotAllowedError') {
-            this.reportThreat({
-              type: 'unauthorized_access',
-              severity: 'low',
-              description: 'Microphone permission denied',
-              source: 'microphone_api',
-              target: 'user_microphone',
-              blocked: false,
-              action: 'monitor'
-            });
-          }
+      } else {
+        this.logSecurityEvent('info', 'low', 'Page visible', {
+          timestamp: Date.now()
         });
-    }
-  }
-
-  private setupThreatMonitoring(): void {
-    // Monitor for various security threats
-    this.monitorMaliciousScripts();
-    this.monitorDataExfiltration();
-    this.monitorBruteForceAttacks();
-  }
-
-  private monitorMaliciousScripts(): void {
-    // Monitor script execution
-    const originalEval = window.eval;
-    window.eval = (code: string) => {
-      if (this.isMaliciousScript(code)) {
-        this.reportThreat({
-          type: 'xss',
-          severity: 'critical',
-          description: 'Malicious script execution attempt',
-          source: 'eval_function',
-          target: 'window_object',
-          blocked: true,
-          action: 'block'
-        });
-        return;
       }
-      return originalEval.call(window, code);
-    };
+    });
+
+    // Monitor focus events
+    window.addEventListener('focus', () => {
+      this.logSecurityEvent('info', 'low', 'Window focused', {
+        timestamp: Date.now()
+      });
+    });
+
+    window.addEventListener('blur', () => {
+      this.logSecurityEvent('info', 'low', 'Window blurred', {
+        timestamp: Date.now()
+      });
+    });
   }
 
-  private monitorDataExfiltration(): void {
-    // Monitor for data exfiltration attempts
-    const originalFetch = window.fetch;
-    window.fetch = async (...args) => {
-      const url = args[0] as string;
-      if (this.isSuspiciousURL(url)) {
-        this.reportThreat({
-          type: 'data_leak',
-          severity: 'high',
-          description: 'Suspicious data exfiltration attempt',
-          source: 'fetch_api',
-          target: url,
-          blocked: true,
-          action: 'block'
-        });
-        throw new Error('Blocked suspicious request');
-      }
-      return originalFetch(...args);
-    };
-  }
-
-  private monitorBruteForceAttacks(): void {
-    // Monitor for brute force attacks
-    let failedAttempts = 0;
-    const maxAttempts = 5;
-    const timeWindow = 5 * 60 * 1000; // 5 minutes
+  /**
+   * Scan element for suspicious content
+   */
+  private scanElement(element: Element): void {
+    const html = element.outerHTML;
     
-    document.addEventListener('submit', (event) => {
-      const form = event.target as HTMLFormElement;
-      if (form.querySelector('input[type="password"]')) {
-        // This is a login form - monitor for brute force
-        failedAttempts++;
-        
-        if (failedAttempts > maxAttempts) {
-          this.reportThreat({
-            type: 'brute_force',
-            severity: 'high',
-            description: 'Potential brute force attack detected',
-            source: 'login_form',
-            target: 'user_authentication',
-            blocked: true,
-            action: 'block'
+    this.suspiciousPatterns.forEach(pattern => {
+      if (html.toLowerCase().includes(pattern.toLowerCase())) {
+        this.logSecurityEvent('threat', 'high', 'Suspicious content detected', {
+          pattern,
+          element: element.tagName,
+          content: html.substring(0, 200)
+        });
+      }
+    });
+  }
+
+  /**
+   * Check URL security
+   */
+  private checkUrlSecurity(url: string): void {
+    // Check for suspicious URL patterns
+    const suspiciousUrlPatterns = [
+      'javascript:',
+      'data:',
+      'vbscript:',
+      'file:',
+      '../',
+      '..\\',
+      'eval(',
+      'document.cookie',
+      'window.location'
+    ];
+
+    suspiciousUrlPatterns.forEach(pattern => {
+      if (url.toLowerCase().includes(pattern)) {
+        this.logSecurityEvent('threat', 'critical', 'Suspicious URL detected', {
+          pattern,
+          url
+        });
+      }
+    });
+  }
+
+  /**
+   * Monitor console access
+   */
+  private monitorConsoleAccess(): void {
+    const originalConsole = {
+      log: console.log,
+      warn: console.warn,
+      error: console.error,
+      info: console.info
+    };
+
+    ['log', 'warn', 'error', 'info'].forEach(method => {
+      (console as any)[method] = (...args: any[]) => {
+        // Check if console access is from suspicious context
+        const stack = new Error().stack;
+        if (stack && this.isSuspiciousStack(stack)) {
+          this.logSecurityEvent('suspicious', 'medium', 'Suspicious console access detected', {
+            method,
+            stack: stack.substring(0, 500)
           });
-          
-          setTimeout(() => {
-            failedAttempts = 0; // Reset after time window
-          }, timeWindow);
         }
-      }
+        
+        originalConsole[method as keyof typeof originalConsole](...args);
+      };
     });
   }
 
-  private setupDefaultPolicies(): void {
-    // Add default security policies
-    this.addPolicy({
-      id: 'xss-protection',
-      name: 'XSS Protection',
-      description: 'Protect against Cross-Site Scripting attacks',
-      rules: [
-        {
-          id: 'sanitize-input',
-          type: 'xss_protection',
-          condition: 'input_contains_script',
-          action: 'sanitize',
-          severity: 'high'
-        }
-      ],
-      enabled: true,
-      priority: 1
-    });
-
-    this.addPolicy({
-      id: 'csrf-protection',
-      name: 'CSRF Protection',
-      description: 'Protect against Cross-Site Request Forgery',
-      rules: [
-        {
-          id: 'validate-token',
-          type: 'csrf_protection',
-          condition: 'missing_csrf_token',
-          action: 'block',
-          severity: 'high'
-        }
-      ],
-      enabled: true,
-      priority: 1
-    });
+  /**
+   * Check rate limit
+   */
+  private checkRateLimit(clientId: string, type: string = 'request'): boolean {
+    const now = Date.now();
+    const key = `${clientId}_${type}`;
+    
+    if (!this.requestCounts.has(key)) {
+      this.requestCounts.set(key, []);
+    }
+    
+    const requests = this.requestCounts.get(key)!;
+    
+    // Remove requests older than 1 minute
+    const oneMinuteAgo = now - 60000;
+    const recentRequests = requests.filter(time => time > oneMinuteAgo);
+    
+    if (recentRequests.length >= this.config.maxRequestsPerMinute) {
+      return false;
+    }
+    
+    recentRequests.push(now);
+    this.requestCounts.set(key, recentRequests);
+    
+    return true;
   }
 
-  // Public methods
-  public addPolicy(policy: SecurityPolicy): void {
-    this.policies.set(policy.id, policy);
+  /**
+   * Check if input is suspicious
+   */
+  private isSuspiciousInput(input: string): boolean {
+    return this.suspiciousPatterns.some(pattern => 
+      input.toLowerCase().includes(pattern.toLowerCase())
+    );
   }
 
-  public removePolicy(policyId: string): void {
-    this.policies.delete(policyId);
+  /**
+   * Check if stack trace is suspicious
+   */
+  private isSuspiciousStack(stack: string): boolean {
+    const suspiciousKeywords = ['eval', 'Function', 'setTimeout', 'setInterval'];
+    return suspiciousKeywords.some(keyword => 
+      stack.toLowerCase().includes(keyword.toLowerCase())
+    );
   }
 
-  public getPolicy(policyId: string): SecurityPolicy | undefined {
-    return this.policies.get(policyId);
+  /**
+   * Get client ID
+   */
+  private getClientId(): string {
+    let clientId = sessionStorage.getItem('security_client_id');
+    if (!clientId) {
+      clientId = 'client_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+      sessionStorage.setItem('security_client_id', clientId);
+    }
+    return clientId;
   }
 
-  public getAllPolicies(): SecurityPolicy[] {
-    return Array.from(this.policies.values()).sort((a, b) => b.priority - a.priority);
-  }
-
-  public reportThreat(threatInfo: Omit<SecurityThreat, 'id' | 'timestamp' | 'metadata'>): void {
-    const threat: SecurityThreat = {
-      id: this.generateThreatId(),
+  /**
+   * Log security event
+   */
+  private logSecurityEvent(
+    type: SecurityEvent['type'],
+    severity: SecurityEvent['severity'],
+    description: string,
+    metadata: Record<string, any> = {}
+  ): void {
+    const event: SecurityEvent = {
+      id: this.generateEventId(),
+      type,
+      severity,
       timestamp: Date.now(),
-      metadata: {},
-      ...threatInfo
+      source: this.getSource(),
+      description,
+      metadata,
+      resolved: false
     };
 
-    this.threats.set(threat.id, threat);
-    this.updateMetrics(threat);
-
-    // Apply security policies
-    this.applySecurityPolicies(threat);
-
-    // Log threat
-    console.warn('Security Threat Detected:', threat);
-
-    // Send to server
-    this.sendThreatReport(threat);
-
-    // Clean up old threats
-    if (this.threats.size > this.maxThreats) {
-      const oldestThreat = Array.from(this.threats.entries())
-        .sort(([, a], [, b]) => a.timestamp - b.timestamp)[0];
-      this.threats.delete(oldestThreat[0]);
-    }
-  }
-
-  private generateThreatId(): string {
-    return `threat_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-
-  private updateMetrics(threat: SecurityThreat): void {
-    this.metrics.totalThreats++;
+    this.events.push(event);
     
-    if (threat.blocked) {
-      this.metrics.blockedThreats++;
+    // Keep only recent events
+    if (this.events.length > this.maxEvents) {
+      this.events = this.events.slice(-this.maxEvents);
     }
 
-    this.metrics.threatsByType[threat.type] = (this.metrics.threatsByType[threat.type] || 0) + 1;
-    this.metrics.threatsBySeverity[threat.severity] = (this.metrics.threatsBySeverity[threat.severity] || 0) + 1;
-    this.metrics.lastThreatTime = threat.timestamp;
+    // Update metrics
+    this.updateMetrics(event);
+
+    // Log to console with appropriate level
+    this.logEvent(event);
+
+    // Send to external monitoring service
+    this.sendToMonitoringService(event);
+  }
+
+  /**
+   * Update metrics
+   */
+  private updateMetrics(event: SecurityEvent): void {
+    this.metrics.totalEvents++;
+    this.metrics.eventsByType[event.type] = (this.metrics.eventsByType[event.type] || 0) + 1;
+    this.metrics.eventsBySeverity[event.severity] = (this.metrics.eventsBySeverity[event.severity] || 0) + 1;
+    
+    if (event.type === 'threat') {
+      this.metrics.threatsBlocked++;
+    }
+    
+    if (event.type === 'suspicious') {
+      this.metrics.suspiciousActivities++;
+    }
 
     // Calculate security score
-    const blockedRatio = this.metrics.blockedThreats / this.metrics.totalThreats;
-    this.metrics.securityScore = Math.round(blockedRatio * 100);
+    this.calculateSecurityScore();
   }
 
-  private applySecurityPolicies(threat: SecurityThreat): void {
-    const policies = this.getAllPolicies();
+  /**
+   * Calculate security score
+   */
+  private calculateSecurityScore(): void {
+    let score = 100;
     
-    for (const policy of policies) {
-      if (!policy.enabled) continue;
-      
-      for (const rule of policy.rules) {
-        if (this.evaluateRule(rule, threat)) {
-          this.executeAction(rule.action, threat);
-        }
-      }
-    }
-  }
-
-  private evaluateRule(rule: SecurityRule, threat: SecurityThreat): boolean {
-    // Simple rule evaluation - in a real system, this would be more sophisticated
-    switch (rule.type) {
-      case 'xss_protection':
-        return threat.type === 'xss';
-      case 'csrf_protection':
-        return threat.type === 'csrf';
-      case 'data_validation':
-        return threat.type === 'injection';
-      default:
-        return false;
-    }
-  }
-
-  private executeAction(action: SecurityRule['action'], threat: SecurityThreat): void {
-    switch (action) {
-      case 'block':
-        threat.blocked = true;
-        threat.action = 'block';
-        break;
-      case 'monitor':
-        threat.action = 'monitor';
-        break;
-      case 'sanitize':
-        this.sanitizeThreat(threat);
-        break;
-    }
-  }
-
-  private sendAlert(threat: SecurityThreat): void {
-    // Send security alert
-    console.error('SECURITY ALERT:', threat);
-  }
-
-  private sanitizeThreat(threat: SecurityThreat): void {
-    // Sanitize the threat
-    threat.description = this.sanitizeHTML(threat.description);
-  }
-
-  private sanitizeHTML(input: string): string {
-    const div = document.createElement('div');
-    div.textContent = input;
-    return div.innerHTML;
-  }
-
-  private async sendThreatReport(threat: SecurityThreat): Promise<void> {
-    try {
-      await fetch(this.reportEndpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(threat),
-      });
-    } catch (error) {
-      console.error('Failed to send threat report:', error);
-    }
-  }
-
-  // Validation methods
-  private validateInput(input: string, fieldName: string): boolean {
-    const maliciousPatterns = [
-      /<script/i,
-      /javascript:/i,
-      /on\w+\s*=/i,
-      /eval\s*\(/i,
-      /expression\s*\(/i
-    ];
-
-    for (const pattern of maliciousPatterns) {
-      if (pattern.test(input)) {
-        this.reportThreat({
-          type: 'xss',
-          severity: 'high',
-          description: `Malicious input detected in ${fieldName}`,
-          source: fieldName,
-          target: 'form_input',
-          blocked: true,
-          action: 'block'
-        });
-        return false;
-      }
-    }
-    return true;
-  }
-
-  private validateData(data: string, fieldName: string): boolean {
-    return this.validateInput(data, fieldName);
-  }
-
-  private validateURL(url: string): boolean {
-    const suspiciousPatterns = [
-      /javascript:/i,
-      /data:/i,
-      /vbscript:/i,
-      /file:/i
-    ];
-
-    for (const pattern of suspiciousPatterns) {
-      if (pattern.test(url)) {
-        this.reportThreat({
-          type: 'xss',
-          severity: 'medium',
-          description: 'Suspicious URL detected',
-          source: 'url_validation',
-          target: url,
-          blocked: true,
-          action: 'block'
-        });
-        return false;
-      }
-    }
-    return true;
-  }
-
-  private validateFile(file: File): boolean {
-    const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'text/plain', 'application/pdf'];
-    const maxSize = 10 * 1024 * 1024; // 10MB
-
-    if (!allowedTypes.includes(file.type)) {
-      this.reportThreat({
-        type: 'malware',
-        severity: 'medium',
-        description: `Suspicious file type: ${file.type}`,
-        source: 'file_upload',
-        target: file.name,
-        blocked: true,
-        action: 'block'
-      });
-      return false;
-    }
-
-    if (file.size > maxSize) {
-      this.reportThreat({
-        type: 'data_leak',
-        severity: 'low',
-        description: `File too large: ${file.size} bytes`,
-        source: 'file_upload',
-        target: file.name,
-        blocked: true,
-        action: 'block'
-      });
-      return false;
-    }
-
-    return true;
-  }
-
-  private isMaliciousScript(code: string): boolean {
-    const maliciousPatterns = [
-      /document\.cookie/i,
-      /localStorage/i,
-      /sessionStorage/i,
-      /window\.location/i,
-      /document\.write/i,
-      /innerHTML/i,
-      /outerHTML/i
-    ];
-
-    return maliciousPatterns.some(pattern => pattern.test(code));
-  }
-
-  private isSuspiciousURL(url: string): boolean {
-    const suspiciousDomains = [
-      'malicious-site.com',
-      'phishing-site.com',
-      'data-exfiltrator.com'
-    ];
-
-    return suspiciousDomains.some(domain => url.includes(domain));
-  }
-
-  private validateSession(): boolean {
-    const sessionToken = sessionStorage.getItem('session-token');
-    if (!sessionToken) {
-      this.reportThreat({
-        type: 'unauthorized_access',
-        severity: 'medium',
-        description: 'Invalid session token',
-        source: 'session_validation',
-        target: 'user_session',
-        blocked: true,
-        action: 'block'
-      });
-      return false;
-    }
-    return true;
-  }
-
-  private handleSessionTimeout(): void {
-    this.reportThreat({
-      type: 'unauthorized_access',
-      severity: 'low',
-      description: 'Session timeout',
-      source: 'session_management',
-      target: 'user_session',
-      blocked: false,
-      action: 'monitor'
-    });
+    // Deduct points for threats
+    score -= this.metrics.threatsBlocked * 10;
     
-    // Clear session data
-    sessionStorage.clear();
-    localStorage.clear();
+    // Deduct points for suspicious activities
+    score -= this.metrics.suspiciousActivities * 2;
+    
+    // Deduct points for high severity events
+    score -= (this.metrics.eventsBySeverity['high'] || 0) * 5;
+    score -= (this.metrics.eventsBySeverity['critical'] || 0) * 15;
+    
+    this.metrics.securityScore = Math.max(0, Math.min(100, score));
   }
 
-  // Public getters
+  /**
+   * Log event to console
+   */
+  private logEvent(event: SecurityEvent): void {
+    const message = `🔒 [${event.severity.toUpperCase()}] ${event.description}`;
+    
+    switch (event.severity) {
+      case 'critical':
+      case 'high':
+        console.error(message, event);
+        break;
+      case 'medium':
+        console.warn(message, event);
+        break;
+      case 'low':
+        console.info(message, event);
+        break;
+    }
+  }
+
+  /**
+   * Send to monitoring service
+   */
+  private sendToMonitoringService(event: SecurityEvent): void {
+    // This would typically send to an external security monitoring service
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'security_event', {
+        event_type: event.type,
+        severity: event.severity,
+        description: event.description
+      });
+    }
+  }
+
+  /**
+   * Get source information
+   */
+  private getSource(): string {
+    return `${window.location.hostname}:${window.location.port || '80'}`;
+  }
+
+  /**
+   * Generate event ID
+   */
+  private generateEventId(): string {
+    return 'security_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+  }
+
+  /**
+   * Get security metrics
+   */
   public getMetrics(): SecurityMetrics {
     return { ...this.metrics };
   }
 
-  public getThreats(): SecurityThreat[] {
-    return Array.from(this.threats.values()).sort((a, b) => b.timestamp - a.timestamp);
+  /**
+   * Get recent security events
+   */
+  public getRecentEvents(limit: number = 10): SecurityEvent[] {
+    return this.events.slice(-limit).reverse();
   }
 
-  public getThreatsByType(type: SecurityThreat['type']): SecurityThreat[] {
-    return this.getThreats().filter(threat => threat.type === type);
+  /**
+   * Resolve security event
+   */
+  public resolveEvent(eventId: string): boolean {
+    const event = this.events.find(e => e.id === eventId);
+    if (event) {
+      event.resolved = true;
+      return true;
+    }
+    return false;
   }
 
-  public getThreatsBySeverity(severity: SecurityThreat['severity']): SecurityThreat[] {
-    return this.getThreats().filter(threat => threat.severity === severity);
+  /**
+   * Generate security report
+   */
+  public generateReport(): string {
+    const metrics = this.getMetrics();
+    const recentEvents = this.getRecentEvents(5);
+    
+    let report = `
+🔒 Advanced Security System Report
+==================================
+Security Score: ${metrics.securityScore}/100
+Total Events: ${metrics.totalEvents}
+Threats Blocked: ${metrics.threatsBlocked}
+Suspicious Activities: ${metrics.suspiciousActivities}
+
+📊 Events by Type:
+`;
+
+    Object.entries(metrics.eventsByType).forEach(([type, count]) => {
+      report += `- ${type}: ${count}\n`;
+    });
+
+    report += `\n📊 Events by Severity:\n`;
+    Object.entries(metrics.eventsBySeverity).forEach(([severity, count]) => {
+      report += `- ${severity}: ${count}\n`;
+    });
+
+    if (recentEvents.length > 0) {
+      report += `\n🚨 Recent Security Events:\n`;
+      recentEvents.forEach((event, index) => {
+        report += `${index + 1}. [${event.severity.toUpperCase()}] ${event.description}\n`;
+      });
+    }
+
+    return report;
   }
 
-  public getBlockedThreats(): SecurityThreat[] {
-    return this.getThreats().filter(threat => threat.blocked);
-  }
-
-  public clearThreats(): void {
-    this.threats.clear();
-    this.metrics = {
-      totalThreats: 0,
-      blockedThreats: 0,
-      threatsByType: {},
-      threatsBySeverity: {},
-      lastThreatTime: 0,
-      securityScore: 100
-    };
-  }
-
-  public exportSecurityReport(): string {
-    return JSON.stringify({
-      timestamp: Date.now(),
-      metrics: this.metrics,
-      policies: this.getAllPolicies(),
-      threats: this.getThreats()
-    }, null, 2);
+  /**
+   * Cleanup
+   */
+  public cleanup(): void {
+    this.events = [];
+    this.requestCounts.clear();
+    this.isInitialized = false;
   }
 }
 
-// Singleton instance
-export const securitySystem = new AdvancedSecuritySystem();
-
-// Convenience functions
-export const reportThreat = (threatInfo: Omit<SecurityThreat, 'id' | 'timestamp' | 'metadata'>) => {
-  securitySystem.reportThreat(threatInfo);
-};
-
-export const getSecurityMetrics = () => securitySystem.getMetrics();
-export const getThreats = () => securitySystem.getThreats();
-export const getBlockedThreats = () => securitySystem.getBlockedThreats();
-export const clearThreats = () => securitySystem.clearThreats();
-export const exportSecurityReport = () => securitySystem.exportSecurityReport();
+// Export singleton instance
+export const advancedSecuritySystem = new AdvancedSecuritySystem();
+export type { SecurityEvent, SecurityMetrics, SecurityConfig };
+export { AdvancedSecuritySystem };
+export default AdvancedSecuritySystem;

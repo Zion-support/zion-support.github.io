@@ -24,7 +24,6 @@ import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
 // Duplicate import removed to satisfy linter
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
-import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import { seoOptimizer as advancedSeoOptimizer } from './utils/advancedSEOOptimizer';
 import { securityEnhancer } from './utils/advancedSecurityEnhancer';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
@@ -36,6 +35,8 @@ import AIPerformanceDashboard from './components/AIPerformanceDashboard';
 import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
 import { advancedCachingSystem } from './utils/advancedCachingSystem';
 import { advancedAnalyticsInsights } from './utils/advancedAnalyticsInsights';
+import { advancedSecuritySystem } from './utils/advancedSecuritySystem';
+import { advancedAccessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import { advancedErrorRecovery } from './utils/advancedErrorRecovery';
 import { enhancedSecuritySystem } from './utils/enhancedSecuritySystem';
 import { enhancedAccessibilitySystem } from './utils/enhancedAccessibilitySystem';
@@ -106,6 +107,8 @@ export default function App(): React.JSX.Element {
         enhancedErrorHandler.initialize();
         advancedCachingSystem.initialize();
         advancedAnalyticsInsights.initialize();
+        advancedSecuritySystem.initialize();
+        advancedAccessibilityEnhancer.initialize();
         enhancedPerformanceMonitor.startMonitoring();
         enhancedSEOOptimizer.initialize();
         
