@@ -112,10 +112,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="📣 New: AI Cost Guardrails + Golden Paths Deep Dives"
-          description="Keep quality while slashing AI spend, and ship faster with paved paths."
-          ctaText="Read the updates"
-          ctaLink="/blog/ai-cost-guardrails-deep-dive-2025"
+          title="📣 New: AI Risk Register, LTV with AI, and Data Contracts"
+          description="Fresh 2025 posts: practical AI guardrails, respectful personalization, and resilient data pipelines."
+          ctaText="Read the latest"
+          ctaLink="/blog/ai-risk-register-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -716,9 +716,9 @@ const Home = () => {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
-                  <p className="text-white/90">
-                    New: Serverless inference cost playbook, practical RAG patterns, and secure GenAI guardrails.
-                  </p>
+              <p className="text-white/90">
+                New: AI Risk Register, Boosting LTV with AI, and Data Contracts in Practice.
+              </p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
                   Read the latest
@@ -729,16 +729,16 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">AI Solutions</div>
-                  <div className="font-semibold text-white">Serverless AI Inference Cost Playbook</div>
+                  <div className="text-sm text-rose-200 mb-1">AI Governance</div>
+                  <div className="font-semibold text-white">AI Risk Register: Guardrails That Teams Use</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">GenAI</div>
-                  <div className="font-semibold text-white">Practical RAG in Production</div>
+                  <div className="text-sm text-blue-200 mb-1">AI Strategy</div>
+                  <div className="font-semibold text-white">Boost LTV with AI (Without Creeping Users Out)</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Security</div>
-                  <div className="font-semibold text-white">Secure GenAI Guardrails That Scale</div>
+                  <div className="text-sm text-emerald-200 mb-1">Data Engineering</div>
+                  <div className="font-semibold text-white">Data Contracts in Practice</div>
                 </div>
               </div>
             </div>
