@@ -33,6 +33,20 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
+      title: "Cost‑Aware Inference 2026",
+      description: "Warm pools and quality tiers under SLAs",
+      icon: Zap,
+      link: "/blog/ai-cost-aware-inference-2026",
+      category: "GenAI"
+    },
+    {
+      title: "Production RAG Ops 2026",
+      description: "Freshness windows and drift guards",
+      icon: Cloud,
+      link: "/blog/production-rag-ops-2026",
+      category: "GenAI"
+    },
+    {
       title: "Secure ML Supply Chain 2026",
       description: "SBOMs, lineage, and CI policy gates",
       icon: Shield,

@@ -28,6 +28,15 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
+    slug: "ai-cost-aware-inference-2026",
+    title: "Cost‑Aware Inference 2026: Warm Pools, Tiers, and SLAs",
+    description: "Cut inference cost 30–60% with adaptive batching, warm pools, and quality tiers under SLAs.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-risk-budgets-2026",
     title: "AI Risk Budgets 2026: Ship Automation Safely at Scale",
     description: "Budget risky actions, approvals, and rollbacks to move fast without surprises.",
@@ -35,6 +44,15 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-14",
     featured: true,
     readTime: "6 min read"
+  },
+  {
+    slug: "production-rag-ops-2026",
+    title: "Production RAG Ops 2026: Freshness Windows and Drift Guards",
+    description: "Operate RAG reliably with TTL freshness windows, drift detection, and KPI‑linked budgets.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "9 min read"
   },
   {
     slug: "zero-trust-for-genai-2026",
