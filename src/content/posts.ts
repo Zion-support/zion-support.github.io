@@ -460,6 +460,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-01-08",
     featured: false,
     readTime: "9 min read",
-  },
+  }
 ];
 
