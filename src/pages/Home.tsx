@@ -12,6 +12,12 @@ import {
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
+import Header from "../components/Header";
+import AdvertisingBanner from "../components/AdvertisingBanner";
+import ModernFeatures from "../components/ModernFeatures";
+import LatestInsights from "../components/LatestInsights";
+import { latestInsights } from "../content/insights";
+import { Users, Zap } from "lucide-react";
 
 const Home = () => {
   return (
@@ -483,11 +489,6 @@ const Home = () => {
 
         {/* Enhanced Testimonials Section */}
         <EnhancedTestimonials />
-
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple relative overflow-hidden">

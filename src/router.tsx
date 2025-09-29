@@ -5,6 +5,10 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
+import CaseStudies from './pages/CaseStudies';
+import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
+import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
+import AIDataAnalytics from './pages/services/AIDataAnalytics';
 
 export const AppRouter: React.FC = () => {
   return (

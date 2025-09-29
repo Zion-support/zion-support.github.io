@@ -18,6 +18,11 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+    id: "edge-inference-patterns",
+    title: "Edge Inference Patterns That Actually Reduce Latency",
+    summary:
+      "Concrete deployment topologies, batching tricks, and cache strategies that cut P95 by 40%.",
+    category: "AI Infrastructure",
     date: "2025-09-28",
     readMinutes: 7,
   },
@@ -29,6 +34,15 @@ export const latestInsights: InsightArticle[] = [
     category: "Security",
     date: "2025-08-20",
     readMinutes: 7,
+  },
+  {
+    id: "north-star-engineering-metrics",
+    title: "North‑Star Engineering Metrics: Fewer KPIs, Better Outcomes",
+    summary:
+      "How to pick three metrics that align delivery, reliability, and cost without dashboard bloat.",
+    category: "Leadership",
+    date: "2025-08-30",
+    readMinutes: 5,
   },
   {
     id: "cloud-cost-optimization",
