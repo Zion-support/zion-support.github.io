@@ -101,6 +101,14 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
+        <ContentPromotionBanner
+          title="Fresh: GenAI Evals, Edge Flags, and North‑Star Metrics"
+          description="New insights just dropped. Explore the latest articles and stay ahead."
+          ctaText="Read the latest"
+          ctaLink="/blog"
+          variant="info"
+          className="border-b border-white/10"
+        />
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
