@@ -63,6 +63,8 @@ import WebsiteEnhancements from './components/WebsiteEnhancements';
 import SEOOptimizer from './components/SEOOptimizer';
 import PerformanceEnhancer from './components/PerformanceEnhancer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import EnhancedSEO from './components/EnhancedSEO';
 // import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
 import { performanceAlerts } from './utils/performanceAlerts';
@@ -574,6 +576,16 @@ export default function App(): React.JSX.Element {
           onMetricsUpdate={(metrics) => {
             console.log('Accessibility metrics updated:', metrics);
           }}
+        />
+
+        {/* Advanced Performance Monitor */}
+        <AdvancedPerformanceMonitor />
+
+        {/* Enhanced SEO */}
+        <EnhancedSEO 
+          title="Zion Tech Group - Advanced AI and IT Solutions"
+          description="Leading provider of AI-powered IT solutions, cloud services, cybersecurity, and digital transformation services."
+          keywords={['AI solutions', 'IT consulting', 'cloud services', 'cybersecurity', 'digital transformation']}
         />
 
         {/* Comprehensive Performance Monitor */}
