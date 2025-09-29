@@ -22,7 +22,7 @@ import { useSEOData } from './components/SEOOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
-import { performanceOptimizer as advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
+import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import { seoOptimizer as advancedSeoOptimizer } from './utils/advancedSEOOptimizer';
 import { securityEnhancer } from './utils/advancedSecurityEnhancer';

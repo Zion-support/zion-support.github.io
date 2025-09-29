@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from "react";
-import { AdvancedPerformanceOptimizer } from "../utils/advancedPerformanceOptimizer";
+import AdvancedPerformanceOptimizer from "../utils/advancedPerformanceOptimizer";
 import { AdvancedSEOOptimizer } from "../utils/advancedSEOOptimizer";
 import { AdvancedAccessibilityEnhancer } from "../utils/advancedAccessibilityEnhancer";
 
