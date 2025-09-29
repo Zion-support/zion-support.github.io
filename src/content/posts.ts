@@ -10,6 +10,60 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-autonomous-infrastructure-2026",
+    title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing Platforms",
+    description: "Blueprint for platforms that auto‑repair, auto‑scale, and tune performance with policy guards.",
+    category: "AI Operations",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "quantum-ai-hybrid-roadmap-2026",
+    title: "Quantum‑AI Hybrid Roadmap 2026: From Pilots to Production",
+    description: "Pragmatic steps to move from PoCs to production with hybrid quantum + AI workloads.",
+    category: "Quantum Computing",
+    publishedAt: "2025-10-14",
+    featured: false,
+    readTime: "10 min read"
+  },
+  {
+    slug: "privacy-first-observability-edges-2026",
+    title: "Privacy‑First Observability at the Edge: Scoped IDs and Local Redaction",
+    description: "Capture decision‑grade telemetry without PII leaks using scoped IDs and on‑device filters.",
+    category: "Observability",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-risk-budgets-2025",
+    title: "AI Risk Budgets 2025: Safer Automation Without Slowing Teams",
+    description: "Budget risky actions, approvals, and rollbacks to ship automation with confidence.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-feature-flags-2026",
+    title: "Privacy‑First Feature Flags 2026: Scoped IDs and Geo Budgets",
+    description: "Global rollouts under 100ms with scoped identifiers, on‑device redaction, and geo budgets.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
+    slug: "reliable-agent-actions-2026",
+    title: "Reliable Agent Actions 2026: Tools, Traces, and Safeguards",
+    description: "Deterministic tools, live traces, and safeguards that keep multi‑step agents reliable.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
     description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",

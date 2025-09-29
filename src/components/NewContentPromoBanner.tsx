@@ -33,32 +33,32 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
-      title: "Secure ML Supply Chain 2026",
-      description: "SBOMs, lineage, and CI policy gates",
-      icon: Shield,
-      link: "/blog/ai-secure-ml-supply-chain-2026",
-      category: "Security"
-    },
-    {
-      title: "GenAI Routing Under Budgets",
-      description: "Quality tiers without bill shock",
-      icon: Zap,
-      link: "/blog/genai-routing-under-budgets-2026",
+      title: "AI Autonomous Infrastructure 2026",
+      description: "Self‑healing, self‑optimizing platforms with policy guards",
+      icon: Brain,
+      link: "/blog/ai-autonomous-infrastructure-2026",
       category: "AI Ops"
     },
     {
-      title: "Golden Paths that Move KPIs",
-      description: "Platform engineering that pays",
-      icon: TrendingUp,
-      link: "/blog/platform-golden-paths-kpis-2026",
-      category: "Platform"
+      title: "Privacy‑First Edge Observability",
+      description: "Scoped IDs and local redaction without losing signals",
+      icon: Shield,
+      link: "/blog/privacy-first-observability-edges-2026",
+      category: "Observability"
     },
     {
-      title: "On‑Device Agents 2026",
-      description: "Private assistants with offline tools",
-      icon: Brain,
-      link: "/blog/on-device-agents-2026",
-      category: "Edge"
+      title: "Quantum‑AI Hybrid Roadmap",
+      description: "From PoCs to production workloads",
+      icon: Zap,
+      link: "/blog/quantum-ai-hybrid-roadmap-2026",
+      category: "Quantum"
+    },
+    {
+      title: "Agent Evals 2026",
+      description: "Scorecards that predict outcomes",
+      icon: TrendingUp,
+      link: "/blog/agent-evals-scorecards-2026",
+      category: "GenAI"
     }
   ];
 
