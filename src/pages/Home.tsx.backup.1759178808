@@ -150,6 +150,17 @@ const Home = () => {
           <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
+<<<<<<< HEAD
+          title="New: Enterprise AI Agents, Platform ROI v3, Privacy‑Preserving Agents"
+          description="Ship trustworthy agents, prove platform ROI, and keep telemetry PII‑safe."
+          ctaText="Explore new content"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "Enterprise AI Agents 2026", category: "GenAI", link: "/blog/enterprise-ai-agents-2026" },
+            { title: "Platform ROI Scorecards v3", category: "Platform Engineering", link: "/blog/platform-roi-scorecards-v3-2026" },
+            { title: "Privacy‑Preserving Agents", category: "AI Security", link: "/blog/privacy-preserving-agents-2026" },
+            { title: "Reliable RAG Ops 2026", category: "GenAI", link: "/blog/reliable-rag-ops-2026" },
+=======
           title="New: Serverless Inference, Governance Scorecards, Privacy‑Preserving Analytics"
           description="Cut inference costs 40–70%, speed delivery with PR checks, and ship PII‑safe telemetry."
           ctaText="Explore new content"
@@ -158,6 +169,7 @@ const Home = () => {
             { title: "Serverless Inference Cost Playbook 2026", category: "AI Operations", link: "/blog/serverless-inference-cost-playbook-2026" },
             { title: "Governance Scorecards Quickstart 2026", category: "AI Strategy", link: "/blog/governance-scorecards-quickstart-2026" },
             { title: "Privacy‑Preserving Analytics 2026", category: "Observability", link: "/blog/privacy-preserving-analytics-2026" },
+>>>>>>> origin/cursor/create-and-deploy-new-content-77ad
             { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" }
           ]}
         />

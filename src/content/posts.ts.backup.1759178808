@@ -510,15 +510,33 @@ export const posts: BlogPost[] = [
   }
   ,
   {
+<<<<<<< HEAD
+    slug: "agent-evals-scorecards-2026",
+    title: "Agent Evals 2026: Scorecards That Predict Outcomes",
+    description: "Design online evals and KPI‑linked scorecards that correlate with revenue and CSAT.",
+    category: "GenAI",
+=======
     slug: "serverless-inference-cost-playbook-2026",
     title: "Serverless Inference Cost Playbook 2026: 40–70% Savings",
     description: "Adaptive batching, warm pools, and quality tiers that cut spend without hurting P95.",
     category: "AI Operations",
+>>>>>>> origin/cursor/create-and-deploy-new-content-77ad
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "8 min read"
   },
   {
+<<<<<<< HEAD
+    slug: "privacy-preserving-agents-2026",
+    title: "Privacy‑Preserving Agents: Scoped IDs, Redaction, and On‑Device Caches",
+    description: "Ship assistant workflows that are insight‑rich without PII risk using scoped IDs and local caches.",
+    category: "AI Security",
+    publishedAt: "2025-10-13",
+    featured: false,
+    readTime: "7 min read"
+  },
+  {
+=======
     slug: "governance-scorecards-quickstart-2026",
     title: "Governance Scorecards Quickstart 2026: PR Checks That Speed Teams Up",
     description: "Wire policy tests to KPIs, add canaries, and keep delivery fast and compliant.",
@@ -538,6 +556,7 @@ export const posts: BlogPost[] = [
   }
   ,
   {
+>>>>>>> origin/cursor/create-and-deploy-new-content-77ad
     slug: "agentic-workflows-blueprint-2026",
     title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",
     description: "Design reliable multi‑tool agents with deterministic tools, live traces, and risk budgets.",
