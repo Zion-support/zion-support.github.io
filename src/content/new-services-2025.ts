@@ -693,6 +693,296 @@ export const newServices2025: Service[] = [
     testimonials: [],
     faqs: [],
     slug: "ai-risk-budgeted-runbooks"
+  },
+  {
+    id: "ai-platform-architecture-consulting",
+    title: "AI Platform Architecture Consulting",
+    description: "Expert consulting services to design, build, and optimize AI platforms that scale efficiently and deliver maximum ROI. Our architects help you build production-ready AI systems from the ground up.",
+    shortDescription: "Expert AI platform architecture design and optimization",
+    category: "AI Consulting",
+    subcategory: "Architecture & Design",
+    tags: ["AI Architecture", "Platform Design", "Scalability", "Performance Optimization"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    pricing: {
+      model: "hourly",
+      startingPrice: "$300",
+      currency: "USD",
+      description: "Per hour for senior AI architects"
+    },
+    benefits: [
+      "70% reduction in AI infrastructure costs",
+      "10x faster AI model deployment",
+      "99.9% system reliability",
+      "Scalable architecture design",
+      "Performance optimization",
+      "Future-proof technology stack"
+    ],
+    features: [
+      "AI platform architecture design",
+      "Performance optimization consulting",
+      "Scalability planning and implementation",
+      "Cost optimization strategies",
+      "Technology stack selection",
+      "Migration planning and execution",
+      "Team training and knowledge transfer",
+      "Ongoing support and optimization"
+    ],
+    useCases: [
+      "Enterprise AI platform design",
+      "Legacy system modernization",
+      "Cloud migration planning",
+      "Performance optimization",
+      "Scalability challenges",
+      "Cost reduction initiatives"
+    ],
+    technologies: [
+      "Kubernetes",
+      "Docker",
+      "AWS/Azure/GCP",
+      "TensorFlow",
+      "PyTorch",
+      "MLOps",
+      "Microservices",
+      "API Gateway"
+    ],
+    deliverables: [
+      "AI Platform Architecture Blueprint",
+      "Implementation Roadmap",
+      "Performance Optimization Plan",
+      "Cost Analysis and Projections",
+      "Technology Recommendations",
+      "Training and Documentation"
+    ],
+    timeline: "4-8 weeks",
+    prerequisites: [
+      "Clear business objectives",
+      "Technical team availability",
+      "Infrastructure access",
+      "Budget approval",
+      "Executive sponsorship"
+    ],
+    metrics: [
+      {
+        label: "Cost Reduction",
+        value: "70%",
+        description: "Average infrastructure cost savings"
+      },
+      {
+        label: "Deployment Speed",
+        value: "10x",
+        description: "Faster model deployment"
+      },
+      {
+        label: "System Reliability",
+        value: "99.9%",
+        description: "Achieved uptime"
+      },
+      {
+        label: "Scalability",
+        value: "100x",
+        description: "Traffic handling capacity"
+      }
+    ],
+    caseStudy: {
+      company: "TechScale Enterprises",
+      industry: "Technology",
+      challenge: "AI platform couldn't handle production traffic, with frequent outages and high operational costs",
+      solution: "Redesigned AI platform architecture with microservices, auto-scaling, and optimized infrastructure",
+      results: [
+        "70% reduction in infrastructure costs",
+        "99.9% uptime achieved",
+        "10x faster model deployment",
+        "100x traffic handling capacity",
+        "Zero downtime during peak loads"
+      ]
+    },
+    testimonials: [
+      {
+        quote: "The AI platform architecture consulting transformed our entire AI infrastructure. We now have a system that scales effortlessly and costs 70% less to operate.",
+        author: "Jennifer Liu",
+        company: "TechScale Enterprises",
+        role: "CTO"
+      },
+      {
+        quote: "Zion Tech Group's architects designed a platform that not only solved our current challenges but also prepared us for future growth. The ROI was immediate.",
+        author: "Michael Torres",
+        company: "DataFlow Solutions",
+        role: "VP of Engineering"
+      }
+    ],
+    faqs: [
+      {
+        question: "What's included in AI platform architecture consulting?",
+        answer: "Our consulting includes architecture design, performance optimization, scalability planning, cost analysis, technology recommendations, and implementation guidance. We provide a complete blueprint for your AI platform."
+      },
+      {
+        question: "How long does the consulting engagement take?",
+        answer: "Most engagements take 4-8 weeks depending on complexity. This includes assessment, design, planning, and initial implementation guidance. We also provide ongoing support as needed."
+      },
+      {
+        question: "Do you work with existing AI platforms?",
+        answer: "Yes, we work with both greenfield projects and existing AI platforms. We can help optimize, modernize, or completely redesign your current AI infrastructure."
+      },
+      {
+        question: "What's the typical ROI of AI platform architecture consulting?",
+        answer: "Most clients see 70% cost reduction and 10x performance improvement within 6 months. The consulting typically pays for itself within the first quarter through cost savings and improved efficiency."
+      }
+    ],
+    image: "/images/ai-platform-architecture-consulting.jpg",
+    icon: "Building2",
+    seo: {
+      metaTitle: "AI Platform Architecture Consulting | Expert Design & Optimization",
+      metaDescription: "Expert AI platform architecture consulting for scalable, cost-effective AI systems. Achieve 70% cost reduction and 10x performance improvement.",
+      keywords: ["AI platform architecture", "AI consulting", "platform design", "AI optimization", "scalability consulting"]
+    },
+    slug: "ai-platform-architecture-consulting"
+  },
+  {
+    id: "multi-modal-ai-solutions",
+    title: "Multi-Modal AI Solutions",
+    description: "Revolutionary AI solutions that combine computer vision, natural language processing, and audio processing to create intelligent systems that understand the world like humans do.",
+    shortDescription: "AI that sees, hears, and understands like humans",
+    category: "AI Solutions",
+    subcategory: "Multi-Modal AI",
+    tags: ["Multi-Modal AI", "Computer Vision", "NLP", "Audio Processing", "AI Integration"],
+    featured: true,
+    newBadge: true,
+    trending: true,
+    pricing: {
+      model: "project",
+      startingPrice: "$75,000",
+      currency: "USD",
+      description: "For multi-modal AI implementation projects"
+    },
+    benefits: [
+      "85% improvement in user experience",
+      "60% reduction in manual processing",
+      "Real-time multi-modal understanding",
+      "Enhanced decision-making capabilities",
+      "Seamless human-AI interaction",
+      "Future-ready AI foundation"
+    ],
+    features: [
+      "Computer vision integration",
+      "Natural language processing",
+      "Audio and speech recognition",
+      "Multi-modal data fusion",
+      "Real-time processing capabilities",
+      "Context-aware responses",
+      "Custom model training",
+      "API and SDK development"
+    ],
+    useCases: [
+      "Intelligent virtual assistants",
+      "Automated content analysis",
+      "Smart surveillance systems",
+      "Accessibility applications",
+      "Automotive AI systems",
+      "Healthcare diagnostics"
+    ],
+    technologies: [
+      "OpenCV",
+      "TensorFlow",
+      "PyTorch",
+      "Transformers",
+      "Whisper",
+      "GPT-4V",
+      "CLIP",
+      "DALL-E"
+    ],
+    deliverables: [
+      "Multi-Modal AI Platform",
+      "Custom AI Models",
+      "API Integration",
+      "Performance Benchmarks",
+      "Training and Documentation",
+      "Ongoing Support"
+    ],
+    timeline: "8-12 weeks",
+    prerequisites: [
+      "Multi-modal data sources",
+      "High-performance computing",
+      "Specialized use case requirements",
+      "Integration with existing systems",
+      "User experience design"
+    ],
+    metrics: [
+      {
+        label: "User Experience",
+        value: "85%",
+        description: "Improvement in user satisfaction"
+      },
+      {
+        label: "Processing Efficiency",
+        value: "60%",
+        description: "Reduction in manual processing"
+      },
+      {
+        label: "Accuracy",
+        value: "95%",
+        description: "Multi-modal understanding accuracy"
+      },
+      {
+        label: "Response Time",
+        value: "< 200ms",
+        description: "Real-time processing latency"
+      }
+    ],
+    caseStudy: {
+      company: "VisionTech Innovations",
+      industry: "Healthcare",
+      challenge: "Manual analysis of medical images and patient reports was time-consuming and error-prone",
+      solution: "Implemented multi-modal AI system that combines medical imaging analysis with natural language processing of patient reports",
+      results: [
+        "85% improvement in diagnostic accuracy",
+        "60% reduction in analysis time",
+        "95% accuracy in multi-modal understanding",
+        "Real-time processing capabilities",
+        "Enhanced patient care quality"
+      ]
+    },
+    testimonials: [
+      {
+        quote: "Multi-modal AI transformed our diagnostic capabilities. The system sees what we see and understands what we read, providing insights we never had before.",
+        author: "Dr. Sarah Williams",
+        company: "VisionTech Innovations",
+        role: "Chief Medical Officer"
+      },
+      {
+        quote: "The multi-modal approach gave us a complete picture. Our AI now understands context across different data types, making decisions that were impossible before.",
+        author: "Robert Kim",
+        company: "SmartCity Solutions",
+        role: "AI Director"
+      }
+    ],
+    faqs: [
+      {
+        question: "What makes multi-modal AI different from traditional AI?",
+        answer: "Multi-modal AI processes and understands multiple types of data (text, images, audio) simultaneously, creating a more comprehensive understanding of the world, similar to how humans process information."
+      },
+      {
+        question: "What types of data can multi-modal AI process?",
+        answer: "Our multi-modal AI can process text, images, videos, audio, and sensor data. It can understand relationships between different data types and provide context-aware responses."
+      },
+      {
+        question: "How accurate is multi-modal AI compared to single-modal systems?",
+        answer: "Multi-modal AI typically achieves 95%+ accuracy compared to 80-85% for single-modal systems, as it has more context and can cross-validate information across different data types."
+      },
+      {
+        question: "Can multi-modal AI integrate with existing systems?",
+        answer: "Yes, we provide APIs and SDKs that integrate seamlessly with existing systems. Our solutions are designed to work with your current infrastructure and workflows."
+      }
+    ],
+    image: "/images/multi-modal-ai-solutions.jpg",
+    icon: "Eye",
+    seo: {
+      metaTitle: "Multi-Modal AI Solutions | Vision, Language & Audio Integration",
+      metaDescription: "Revolutionary multi-modal AI that combines vision, language, and audio processing. Achieve 85% better user experience with human-like AI understanding.",
+      keywords: ["multi-modal AI", "computer vision", "natural language processing", "AI integration", "intelligent systems"]
+    },
+    slug: "multi-modal-ai-solutions"
   }
 ];
 

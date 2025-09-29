@@ -1,28 +1,38 @@
 import React from 'react';
 import { 
-  Zap, 
-  Shield, 
-  Globe, 
-  Brain, 
-  Cloud, 
-  Lock, 
-  TrendingUp, 
-  Users,
   CheckCircle
 } from 'lucide-react';
 
-export default function ModernFeatures(): React.JSX.Element {
-  const features = [
-    { icon: <Zap className="w-8 h-8" />, title: "Lightning‑Fast Performance", description: "Optimized architectures with edge delivery and smart caching." },
-    { icon: <Shield className="w-8 h-8" />, title: "Enterprise‑Grade Security", description: "Zero‑trust patterns, policy tests, and signed releases." },
-    { icon: <Globe className="w-8 h-8" />, title: "Global Scale", description: "Multi‑region, multi‑cloud with instant rollbacks and budgets." },
-    { icon: <Brain className="w-8 h-8" />, title: "AI‑Native", description: "Agents, evals, and telemetry wired to business outcomes." },
-    { icon: <Cloud className="w-8 h-8" />, title: "Cloud‑Smart", description: "Cost‑aware routing, autoscaling, and workload placement." },
-    { icon: <Lock className="w-8 h-8" />, title: "Privacy by Design", description: "On‑device redaction and least‑privilege data access." },
-    { icon: <TrendingUp className="w-8 h-8" />, title: "Measurable Impact", description: "Scorecards tied to KPIs and guardrails teams adopt." },
-    { icon: <Users className="w-8 h-8" />, title: "Delightful UX", description: "Thoughtful interactions, accessibility, and fast paths." }
-  ];
+interface FeatureItem {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+}
 
+const features: FeatureItem[] = [
+  {
+    title: 'Reliability First',
+    description: 'SLOs, budgets, and guardrails baked into every workflow.',
+    icon: <CheckCircle className="w-6 h-6 text-green-500" />
+  },
+  {
+    title: 'Security by Design',
+    description: 'Least-privilege, attestations, and policy tests across the SDLC.',
+    icon: <CheckCircle className="w-6 h-6 text-green-500" />
+  },
+  {
+    title: 'Performance Obsessed',
+    description: 'Latency budgets, edge patterns, and efficient retrieval at scale.',
+    icon: <CheckCircle className="w-6 h-6 text-green-500" />
+  },
+  {
+    title: 'Measurable Outcomes',
+    description: 'Scorecards tied to adoption, golden paths, and shipped value.',
+    icon: <CheckCircle className="w-6 h-6 text-green-500" />
+  }
+];
+
+export default function ModernFeatures(): React.JSX.Element {
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-6">

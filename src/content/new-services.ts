@@ -38,6 +38,53 @@ export interface NewService {
 
 export const newServices: NewService[] = [
   {
+    id: "ai-governance-scorecards-2026",
+    slug: "ai-governance-scorecards-2026",
+    title: "AI Governance Scorecards 2026",
+    description: "Scorecards, PR checks, and KPI‑linked canaries that prove AI program ROI while keeping teams fast.",
+    category: "AI Strategy",
+    pricing: {
+      starting: "$2,499/month",
+      popular: true,
+      features: ["Scorecard design", "CI policy tests", "Online canaries", "SLO playbooks"]
+    },
+    features: [
+      "Outcome‑linked scorecards",
+      "Lightweight PR checks",
+      "KPI‑linked online canaries",
+      "Guardrails that speed teams up",
+      "Executive dashboards",
+      "Adoption & Golden‑Path KPIs",
+      "Incident & Rollback Budgets",
+      "Compliance evidence automation"
+    ],
+    metrics: [
+      { value: "30–60%", label: "Time‑to‑Value Improvement" },
+      { value: "25–40%", label: "Cloud Waste Reduction" },
+      { value: "+15pts", label: "Developer Happiness" }
+    ],
+    testimonial: {
+      quote: "We finally have guardrails engineers adopt—and execs trust the scorecards.",
+      author: "Amira Patel",
+      company: "Northstar Platform"
+    },
+    cta: {
+      primary: "See Scorecards",
+      secondary: "Book Workshop"
+    },
+    icon: "📊",
+    featured: true,
+    tags: ["Governance", "Scorecards", "Policy", "Canaries"],
+    newBadge: true,
+    trending: true,
+    specialOffer: {
+      title: "Quarterly Pilot",
+      description: "Launch in 30 days with 3 scorecards and PR checks",
+      discount: "20%",
+      validUntil: "December 31, 2025"
+    }
+  },
+  {
     id: "edge-llm-caching",
     slug: "edge-llm-caching",
     title: "Edge LLM Caching & On‑Device Inference",
