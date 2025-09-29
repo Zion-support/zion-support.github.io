@@ -63,6 +63,7 @@ for branch in "${CANDIDATE_BRANCHES[@]}"; do
         build_ok=false
       fi
     fi
+    if [ "$build_ok" = true ]; then
       pushed=false
       for attempt in 1 2 3; do
         git pull --rebase origin main || true
@@ -100,6 +101,7 @@ for branch in "${CANDIDATE_BRANCHES[@]}"; do
           build_ok=false
         fi
       fi
+      if [ "$build_ok" = true ]; then
         pushed=false
         for attempt in 1 2 3; do
           git pull --rebase origin main || true
