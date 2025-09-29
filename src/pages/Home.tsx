@@ -105,10 +105,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: GenAI Evals, Edge Flags, Telemetry + more"
-          description="Fresh featured articles just landed. Quality gates, <100ms flags, AI cost guardrails."
+          title="🚀 NEW: AI ROI Calculator, Cloud Cost Guardrails, Secure ML Platform"
+          description="Prove value fast, cut spend without friction, and ship safer ML—fresh articles now live."
           ctaText="Read the latest"
-          ctaLink="/blog/genai-evals-in-production-2025"
+          ctaLink="/blog/ai-automation-roi-calculator-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -722,16 +722,16 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
-                  <div className="font-semibold text-white">MLOps Reliability: Shipping GenAI Changes Safely</div>
+                  <div className="text-sm text-purple-200 mb-1">AI Strategy</div>
+                  <div className="font-semibold text-white">AI Automation ROI Calculator: Prove Value Fast</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
-                  <div className="font-semibold text-white">Reliable Real‑Time Data Pipelines in 2025</div>
+                  <div className="text-sm text-blue-200 mb-1">Cloud FinOps</div>
+                  <div className="font-semibold text-white">Cloud Cost Guardrails in Practice</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Product Analytics</div>
-                  <div className="font-semibold text-white">North‑Star Metrics: A Field‑Tested Framework</div>
+                  <div className="text-sm text-rose-200 mb-1">Security</div>
+                  <div className="font-semibold text-white">Secure ML Platform Blueprint</div>
                 </div>
               </div>
             </div>
