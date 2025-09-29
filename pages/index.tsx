@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { latestInsights } from "../src/content/insights";
-import { NewContentBanner, LimitedTimeBanner, CaseStudyBanner } from "../components/PromotionalBanner";
+import { NewContentBanner, LimitedTimeBanner, CaseStudyBanner, NewBlogBanner } from "../components/PromotionalBanner";
 import FeaturedServicesSection from "../components/FeaturedServicesSection";
 import { CompactCaseStudiesSection } from "../components/CaseStudiesSection";
 import { CompactTestimonialsSection } from "../components/TestimonialsCarousel";
@@ -84,6 +84,7 @@ const Home = React.memo(function Home(): React.JSX.Element {
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
 				{/* Promotional Banners */}
 				<NewContentBanner />
+				<NewBlogBanner />
 				<CaseStudyBanner />
 				{/* Hero Section */}
 				<section ref={heroRef} className="pt-20 pb-16">

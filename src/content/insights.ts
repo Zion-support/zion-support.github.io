@@ -36,6 +36,7 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+<<<<<<< HEAD
     id: "genai-online-evals",
     title: "Online Evals for GenAI: From Shadow to Guardrails",
     summary:
@@ -43,6 +44,42 @@ export const latestInsights: InsightArticle[] = [
     category: "MLOps",
     date: "2025-09-28",
     readMinutes: 7,
+=======
+      id: "ai-reliability-scorecards",
+      title: "AI Reliability Scorecards: What to Track Weekly",
+      summary:
+      "Outcome-linked metrics, eval pass rates, and incident burndown that keep quality high.",
+      category: "GenAI",
+      date: "2025-09-30",
+      readMinutes: 5,
+  },
+  {
+      id: "rag-quality-playbook-2025",
+      title: "RAG Quality Playbook 2025: Freshness, Grounding, and Evals",
+      summary:
+      "Combat staleness, leakage, and hallucinations with practical retrieval and eval patterns.",
+      category: "Architecture",
+      date: "2025-09-30",
+      readMinutes: 6,
+  },
+  {
+      id: "edge-llm-latency-budgeting",
+      title: "Edge LLMs: A Practical Guide to Sub‑100ms Latency Budgets",
+      summary:
+      "Where the milliseconds go and how to claw them back across client, edge, and model.",
+      category: "Edge Computing",
+      date: "2025-09-30",
+      readMinutes: 4,
+  },
+  {
+      id: "serverless-warm-pools-playbook",
+      title: "Serverless Warm Pools: Cut Cold Starts, Not Corners",
+      summary:
+      "Adaptive warmers, concurrency hints, and budgets to keep P95 low without overspend.",
+      category: "Architecture",
+      date: "2025-09-30",
+      readMinutes: 4,
+>>>>>>> chore/add-latest-content-and-promos
   },
   {
     id: "governance-policy-testing",
