@@ -112,22 +112,20 @@ const Home = () => {
         <LatestContentBanner 
           className="border-b border-white/10" 
           variant="info"
-          title="New: AI Risk Mitigation, Privacy‑Preserving Agents, KPI‑Linked Policy Tests"
-          description="Fresh guides on policy gates, private agents, and KPI‑linked CI tests."
-          ctaText="Read now"
-          ctaLink="/blog"
+          autoRotate
+          rotationInterval={7000}
         />
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="Fresh: Risk Mitigation 2026, Privacy‑Preserving Agents, KPI Policy Tests"
-          description="Guardrails wired to KPIs, privacy‑first agent design, and CI tests teams adopt."
+          title="New: Agentic Workflows, Edge LLM Caching, ML SBOMs"
+          description="Reliable multi‑step agents, sub‑100ms prompts, and secure ML supply chains."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Risk Mitigation Playbook 2026", category: "AI Governance", link: "/blog/ai-risk-mitigation-playbook-2026" },
-            { title: "Privacy‑Preserving Agents", category: "AI Security", link: "/blog/privacy-preserving-agents-2026" },
-            { title: "KPI‑Linked Policy Tests", category: "Engineering", link: "/blog/kpi-linked-policy-tests-2025" },
+            { title: "Agentic Workflows Blueprint 2026", category: "GenAI", link: "/blog/agentic-workflows-blueprint-2026" },
+            { title: "Edge LLM Caching Blueprint", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" },
+            { title: "ML Supply Chain SBOMs", category: "AI Security", link: "/blog/ml-supply-chain-sbom-2026" },
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
