@@ -55,6 +55,24 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     featured: true
   },
   {
+    id: 'fresh-content-sep-2025',
+    message: '✨ New: Blue‑Green Agent Releases + Edge Feature Flags + Cost Controllers',
+    ctaText: 'Explore new posts',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0,
+    variant: 'info',
+    icon: '✨',
+    animation: 'fade-in',
+    badge: 'NEW',
+    featured: true
+  },
+  {
     id: 'ai-autonomous-infrastructure-launch',
     message: '🚀 NEW: AI Autonomous Infrastructure Platform - Self-Healing Systems That Scale',
     ctaText: 'Start Free Trial',
