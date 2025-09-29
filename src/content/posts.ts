@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-agents-in-the-enterprise-2026",
+    title: "AI Agents in the Enterprise 2026: From Pilots to Production",
+    description: "Design agent workflows with deterministic tools, traces, and budgets that scale across teams.",
+    category: "GenAI",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "platform-roi-scorecards-v3-2026",
+    title: "Platform ROI Scorecards v3: Leading Indicators That Move the Business",
+    description: "Adoption, golden-path TTFX, and reliability signals that shift focus from costs to shipped value.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-preserving-agents-2026",
+    title: "Privacy‑Preserving Agents: PII‑Safe Tools, Redaction, and Audits",
+    description: "Blueprint for agents that keep signals rich without leaking PII using scoped IDs and field‑level filters.",
+    category: "AI Security",
+    publishedAt: "2025-10-13",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
     slug: "ai-reliable-rag-ops-2026",
     title: "Reliable RAG Ops 2026: Freshness Windows, Drift Alerts, Budgets",
     description: "Keep RAG quality high with TTL windows, drift detectors, and KPI‑tied quality budgets.",

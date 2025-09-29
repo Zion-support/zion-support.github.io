@@ -133,15 +133,15 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Reliable RAG Ops, Platform KPIs, AI Incident Budgets"
-          description="Keep RAG fresh, prove platform ROI, and contain incidents under 60s—safely."
+          title="New: Enterprise AI Agents, Platform ROI v3, Privacy‑Preserving Agents"
+          description="Ship trustworthy agents, prove platform ROI, and keep telemetry PII‑safe."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
+            { title: "Enterprise AI Agents 2026", category: "GenAI", link: "/blog/enterprise-ai-agents-2026" },
+            { title: "Platform ROI Scorecards v3", category: "Platform Engineering", link: "/blog/platform-roi-scorecards-v3-2026" },
+            { title: "Privacy‑Preserving Agents", category: "AI Security", link: "/blog/privacy-preserving-agents-2026" },
             { title: "Reliable RAG Ops 2026", category: "GenAI", link: "/blog/reliable-rag-ops-2026" },
-            { title: "Platform KPIs 2026", category: "Platform Engineering", link: "/blog/platform-kpis-2026" },
-            { title: "AI Incident Budgets 2026", category: "Security", link: "/blog/ai-incident-budgets-2026" },
-            { title: "Privacy‑Preserving Analytics", category: "Observability", link: "/blog/privacy-preserving-analytics-2025" },
             { title: "Edge LLM Caching Blueprint 2026", category: "Architecture", link: "/blog/edge-llm-caching-blueprint-2026" }
           ]}
         />
