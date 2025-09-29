@@ -410,5 +410,35 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "12 min read",
   },
+  {
+    slug: "genai-evals-in-production-2025",
+    title: "GenAI Evals in Production: Policy Tests That Scale",
+    description:
+      "Layered evals and rollout controls that keep GenAI quality high as usage grows.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "feature-flags-edge-2025",
+    title: "Feature Flags at the Edge: <100ms Global Releases",
+    description:
+      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "north-star-metrics-anti-patterns",
+    title: "North‑Star Metrics: 7 Anti‑Patterns to Avoid",
+    description:
+      "Avoid vanity KPIs and misaligned metrics with practices that drive outcomes.",
+    category: "Product Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
 ];
 
