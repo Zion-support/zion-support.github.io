@@ -3,8 +3,11 @@ import { AppRouter } from './router';
 import './index.css';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
-import SEOOptimizer from './components/SEOOptimizer';
-import type { Notification as UILibraryNotification } from './components/NotificationSystem';
+<<<<<<< HEAD
+import SEOOptimizer, { SEOOptimizerProps } from './components/SEOOptimizer';
+=======
+import SEOOptimizer, { SEOOptimizerProps } from './components/SEOOptimizer';
+>>>>>>> cursor/check-fix-push-and-merge-to-main-2f87
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
@@ -38,14 +41,11 @@ const AIPerformanceDashboard = (props: any) => <Placeholder name="AIPerformanceD
 const WebsiteEnhancements = (props: any) => <Placeholder name="WebsiteEnhancements" />;
 
 export default function App(): React.JSX.Element {
-	useEffect(() => {
-		void performanceMonitor;
-		if (accessibilityEnhancer && typeof (accessibilityEnhancer as any).initialize === 'function') {
-			(accessibilityEnhancer as any).initialize();
-		}
-	}, []);
+  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+  const [notifications, setNotifications] = useState<import('./components/NotificationSystem').Notification[]>([]);
 
-  const seoDataForOptimizer = useMemo(() => ({
+  const seoDataForOptimizer = useMemo<Pick<SEOOptimizerProps, 'title' | 'description' | 'canonicalUrl'>>(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
     canonicalUrl: typeof window !== 'undefined' ? window.location.pathname : '/',
@@ -68,13 +68,13 @@ export default function App(): React.JSX.Element {
           break;
       }
       try {
-        if (enhancedSecurityManager && typeof (enhancedSecurityManager as any).initialize === 'function') {
+      if (enhancedSecurityManager && typeof (enhancedSecurityManager as any).initialize === 'function') {
         (enhancedSecurityManager as any).initialize();
       }
-      
+
       // Initialize new performance and accessibility enhancements
       initializePerformanceEnhancements();
-      accessibilityEnhancer.init();
+      accessibilityEnhancer.initialize();
       
       // Initialize advanced optimizers
       // Guard optional advanced systems if present in global scope
@@ -90,7 +90,7 @@ export default function App(): React.JSX.Element {
 
       advancedPerformanceOptimizer?.initialize?.();
       advancedSEOOptimizer?.initialize?.();
-      accessibilityEnhancer.init();
+      accessibilityEnhancer.initialize();
       advancedSecurityManager?.initialize?.();
       advancedAnalytics?.initialize?.();
       // advancedErrorHandler is initialized in constructor
@@ -134,7 +134,11 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={new URL(seoDataForOptimizer.canonicalUrl).pathname} />
+      <SEOOptimizer
+        title={seoDataForOptimizer.title}
+        description={seoDataForOptimizer.description}
+        canonicalUrl={seoDataForOptimizer.canonicalUrl}
+      />
       <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />

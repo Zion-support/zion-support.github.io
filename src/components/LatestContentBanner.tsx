@@ -60,6 +60,48 @@ const contentHighlights = [
     stats: "7 min read",
     variant: "success" as const
   }
+  ,
+  {
+    id: 5,
+    title: "🧭 PLAYBOOK: AI Sales Copilot (90‑Day Plan)",
+    description: "Workflows, guardrails, and KPIs to lift win‑rates with an AI copilot",
+    ctaText: "Read Playbook",
+    ctaLink: "/blog/ai-sales-copilot-playbook-2025",
+    badge: "New",
+    stats: "8 min read",
+    variant: "info" as const
+  }
+  ,
+  {
+    id: 5,
+    title: "🧭 NEW: AI Platform Engineering 2025",
+    description: "Golden paths, eval systems, and governance for safe, fast AI delivery",
+    ctaText: "Read Guide",
+    ctaLink: "/blog/ai-platform-engineering-2025",
+    badge: "Long‑Form",
+    stats: "10 min read",
+    variant: "info" as const
+  },
+  {
+    id: 6,
+    title: "🔍 AI Agent Observability",
+    description: "Traces, policy tests, and human feedback that keep quality high",
+    ctaText: "Learn How",
+    ctaLink: "/blog/ai-agent-observability-2025",
+    badge: "Featured",
+    stats: "7 min read",
+    variant: "success" as const
+  },
+  {
+    id: 7,
+    title: "🛡️ Secure RAG 2025",
+    description: "Authorization-aware retrieval and prompt firewalls for enterprise RAG",
+    ctaText: "See Patterns",
+    ctaLink: "/blog/secure-rag-2025",
+    badge: "Security",
+    stats: "8 min read",
+    variant: "warning" as const
+  }
 ];
 
 export const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
