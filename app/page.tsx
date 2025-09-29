@@ -34,6 +34,13 @@ import {
   SustainabilityCaseStudyBanner,
   QuantumOptimizationBanner
 } from '../components/PromotionalBanner';
+import {
+  NeuralInterfacesBanner,
+  SpaceTechBanner,
+  SyntheticDataBanner,
+  NewContent2026Showcase,
+  InteractiveContentBanner
+} from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -72,6 +79,11 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+      {/* New 2026 Content Banners */}
+      <NeuralInterfacesBanner />
+      <SpaceTechBanner />
+      <SyntheticDataBanner />
+      
       {/* Promotional Banners */}
       <NewContent2026Banner />
       <AIAgentOrchestrationBanner />
@@ -247,6 +259,12 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New 2026 Content Showcase */}
+      <NewContent2026Showcase />
+      
+      {/* Interactive Content Recommendations */}
+      <InteractiveContentBanner />
+      
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
       
