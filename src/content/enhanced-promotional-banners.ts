@@ -73,6 +73,24 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     featured: true
   },
   {
+    id: 'agent-release-checklists-banner',
+    message: '✅ New: Agent Release Checklists + KPI‑Linked Canaries',
+    ctaText: 'Read now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-emerald-700 to-teal-700',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 0,
+    variant: 'info',
+    icon: '✅',
+    animation: 'fade-in',
+    badge: 'NEW CONTENT',
+    featured: true
+  },
+  {
     id: 'quantum-ai-hybrid-computing',
     message: '⚛️ BREAKTHROUGH: Quantum-AI Hybrid Computing - 1000x Faster Processing Power',
     ctaText: 'Schedule Demo',
