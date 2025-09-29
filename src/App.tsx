@@ -1,14 +1,23 @@
-import React, { useState, useEffect, useMemo, useCallback, Suspense } from 'react';
+import React, { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
 import { AppRouter } from './router';
+
+// import { resourcePreloader } from './utils/resourcePreloader';
+// import { criticalCSSManager } from './utils/criticalCSSManager';
+// import { sriUtility } from './security/sriUtility';
+// import { csrfProtection } from './security/csrfProtection';
+// import { structuredDataManager } from './seo/structuredDataManager';
+// import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
+// import { screenReaderSupport } from './accessibility/screenReaderSupport';
 import './index.css';
 import { performanceMonitor } from './utils/performanceMonitor';
+import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import SEOOptimizer, { SEOOptimizerProps } from './components/SEOOptimizer';
 import AdvancedAnalytics from './components/AdvancedAnalytics';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};
@@ -41,10 +50,10 @@ export default function App(): React.JSX.Element {
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [notifications, setNotifications] = useState<import('./components/NotificationSystem').Notification[]>([]);
 
-  const seoDataForOptimizer = useMemo<Pick<SEOOptimizerProps, 'title' | 'description' | 'canonicalUrl'>>(() => ({
+  const seoDataForOptimizer = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
-    canonicalUrl: typeof window !== 'undefined' ? window.location.pathname : '/',
+    canonical: typeof window !== 'undefined' ? window.location.href : 'https://zion.app/',
   }), []);
 
   // Simple hotkeys for demo toggles
@@ -64,15 +73,6 @@ export default function App(): React.JSX.Element {
           break;
       }
       try {
-      if (enhancedSecurityManager && typeof (enhancedSecurityManager as any).initialize === 'function') {
-        (enhancedSecurityManager as any).initialize();
-      }
-
-      // Initialize new performance and accessibility enhancements
-      initializePerformanceEnhancements();
-      accessibilityEnhancer.initialize();
-      
-      // Initialize advanced optimizers
       // Guard optional advanced systems if present in global scope
       const advancedPerformanceOptimizer = (window as any).advancedPerformanceOptimizer;
       const advancedSEOOptimizer = (window as any).advancedSEOOptimizer;
@@ -84,10 +84,16 @@ export default function App(): React.JSX.Element {
       const advancedTestingFramework = (window as any).advancedTestingFramework;
       const advancedI18n = (window as any).advancedI18n;
 
+      if (advancedSecurityManager && typeof (advancedSecurityManager as any).initialize === 'function') {
+        (advancedSecurityManager as any).initialize();
+      }
+
+      // Initialize new performance and accessibility enhancements
+      initializePerformanceEnhancements();
+      accessibilityEnhancer.initialize();
+
       advancedPerformanceOptimizer?.initialize?.();
       advancedSEOOptimizer?.initialize?.();
-      accessibilityEnhancer.initialize();
-      advancedSecurityManager?.initialize?.();
       advancedAnalytics?.initialize?.();
       // advancedErrorHandler is initialized in constructor
       advancedCachingSystem?.initialize?.();
@@ -130,15 +136,11 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer
-        title={seoDataForOptimizer.title}
-        description={seoDataForOptimizer.description}
-        canonicalUrl={seoDataForOptimizer.canonicalUrl}
-      />
+      <SEOOptimizer seoData={seoDataForOptimizer} />
       <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
-        
+
         {showPerformanceOptimizer && (
           <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
             <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">

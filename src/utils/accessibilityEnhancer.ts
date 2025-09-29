@@ -44,7 +44,7 @@ class AccessibilityEnhancer {
 
   public init(): void {
     if (this.isInitialized || typeof window === 'undefined') return;
-
+    
     this.isInitialized = true;
     this.setupKeyboardNavigation();
     this.setupFocusManagement();
@@ -54,8 +54,8 @@ class AccessibilityEnhancer {
     this.observeAccessibility();
   }
 
+  // Added for compatibility with callers expecting an initialize() method
   public initialize(): void {
-    // Alias for init() to match callers
     this.init();
   }
 
@@ -372,9 +372,9 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
 if (typeof window !== 'undefined') {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-      accessibilityEnhancer.initialize();
+      accessibilityEnhancer.init();
     });
   } else {
-    accessibilityEnhancer.initialize();
+    accessibilityEnhancer.init();
   }
 }
