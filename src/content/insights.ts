@@ -18,11 +18,19 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+<<<<<<< HEAD
     id: "edge-caching-primer",
     title: "Edge Caching Primer: Shrinking P95 Without Breaking Consistency",
     summary:
       "When to cache at the edge, what to purge, and patterns for safe staleness.",
     category: "Architecture",
+=======
+    id: "platform-engineering-blueprint",
+    title: "Platform Engineering Blueprint 2025",
+    summary:
+      "Golden paths, paved roads, and product thinking to scale developer experience across hundreds of teams.",
+    category: "Platform Engineering",
+>>>>>>> b2dbe5039de9a77d186175357687b44a294adf1f
     date: "2025-09-28",
     readMinutes: 7,
   },
@@ -178,6 +186,15 @@ export const latestInsights: InsightArticle[] = [
     category: "Digital Transformation",
     date: "2025-01-05",
     readMinutes: 6,
+  },
+  {
+    id: "genai-guardrails-in-production",
+    title: "GenAI Guardrails in Production: Policy Tests That Scale",
+    summary:
+      "From offline eval suites to online canaries: patterns that keep quality and safety high as usage grows.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 8,
   },
 ];
 
