@@ -1,220 +1,321 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Clock, TrendingUp, Star, Heart, Zap, Users, Target } from 'lucide-react';
+import { Clock, ArrowRight, Star, TrendingUp, Users, Zap } from 'lucide-react';
 
 interface ContentItem {
   id: string;
   title: string;
-  description: string;
-  type: 'blog' | 'case-study';
+  type: 'article' | 'case-study' | 'guide';
   category: string;
-  readTime: string;
-  icon: React.ReactNode;
-  color: string;
+  readTime: number;
+  metrics: {
+    primary: { value: string; label: string; color: string };
+    secondary: { value: string; label: string; color: string };
+  };
+  description: string;
   href: string;
+  tags: string[];
   featured?: boolean;
 }
 
 const contentItems: ContentItem[] = [
   {
-    id: 'ai-business-transformation',
-    title: 'AI Business Transformation 2026',
-    description: 'Master AI business transformation with comprehensive strategies for 400% ROI and complete enterprise automation.',
-    type: 'blog',
-    category: 'Business Strategy',
-    readTime: '25 min',
-    icon: <TrendingUp className="w-6 h-6" />,
-    color: 'from-blue-500 to-purple-500',
-    href: '/blog/ai-business-transformation-2026',
+    id: 'ai-agent-orchestration',
+    title: 'AI Agent Orchestration 2026: Multi-Agent System Architecture',
+    type: 'article',
+    category: 'AI Architecture',
+    readTime: 22,
+    metrics: {
+      primary: { value: '95%', label: 'Automation', color: 'blue' },
+      secondary: { value: '$5M+', label: 'ROI', color: 'green' }
+    },
+    description: 'Master multi-agent systems with 95% automation efficiency and $5M+ ROI through advanced orchestration patterns.',
+    href: '/blog/ai-agent-orchestration-2026',
+    tags: ['AI', 'Automation', 'Enterprise', '2026'],
     featured: true
   },
   {
-    id: 'ai-customer-experience',
-    title: 'AI Customer Experience Revolution',
-    description: 'Revolutionize customer experience with AI-powered solutions achieving 300% satisfaction improvement.',
-    type: 'blog',
-    category: 'Customer Experience',
-    readTime: '22 min',
-    icon: <Heart className="w-6 h-6" />,
-    color: 'from-pink-500 to-purple-500',
-    href: '/blog/ai-customer-experience-revolution-2026',
+    id: 'ai-sustainability',
+    title: 'AI Sustainability & Green Tech 2026: Carbon-Neutral Operations',
+    type: 'article',
+    category: 'Sustainability',
+    readTime: 18,
+    metrics: {
+      primary: { value: '80%', label: 'Energy Saved', color: 'green' },
+      secondary: { value: '$2M+', label: 'Savings', color: 'blue' }
+    },
+    description: 'Achieve carbon-neutral AI operations with 80% energy reduction and $2M+ savings through sustainable technology.',
+    href: '/blog/ai-sustainability-green-tech-2026',
+    tags: ['Sustainability', 'Green Tech', 'AI', '2026'],
     featured: true
   },
   {
-    id: 'ai-autonomous-enterprise',
-    title: 'Autonomous Enterprise 2026',
-    description: 'Complete guide to building self-managing business operations with 99% automation and $25M ROI.',
-    type: 'blog',
-    category: 'Enterprise AI',
-    readTime: '30 min',
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-green-500 to-blue-500',
-    href: '/blog/ai-autonomous-enterprise-2026',
-    featured: true
-  },
-  {
-    id: 'ai-quantum-optimization',
-    title: 'Quantum AI Optimization',
-    description: 'Harness quantum computing for AI breakthroughs with 1000x faster optimization and $12M+ returns.',
-    type: 'blog',
-    category: 'Quantum AI',
-    readTime: '25 min',
-    icon: <Target className="w-6 h-6" />,
-    color: 'from-purple-500 to-indigo-500',
-    href: '/blog/ai-quantum-optimization-2026',
-    featured: true
-  },
-  {
-    id: 'business-transformation-success',
-    title: '$50M Transformation Success',
-    description: 'Fortune 500 case study showing how AI business transformation achieved $50M ROI and 95% automation.',
+    id: 'sustainability-case-study',
+    title: 'AI Sustainability Transformation: $10M ROI Case Study',
     type: 'case-study',
-    category: 'Success Stories',
-    readTime: '20 min',
-    icon: <Star className="w-6 h-6" />,
-    color: 'from-green-500 to-teal-500',
-    href: '/case-studies/ai-business-transformation-success-2026',
+    category: 'Case Study',
+    readTime: 15,
+    metrics: {
+      primary: { value: '$10M', label: 'ROI', color: 'green' },
+      secondary: { value: '100%', label: 'Carbon Neutral', color: 'purple' }
+    },
+    description: 'See how a Fortune 500 company achieved carbon neutrality and $10M ROI with comprehensive AI sustainability transformation.',
+    href: '/case-studies/ai-sustainability-transformation-2026',
+    tags: ['Case Study', 'Fortune 500', 'Sustainability', 'ROI'],
     featured: true
   },
   {
-    id: 'autonomous-enterprise-success',
-    title: 'Autonomous Enterprise Success',
-    description: '$25M ROI achieved through autonomous business operations and 99% automation in Fortune 500 company.',
-    type: 'case-study',
-    category: 'Success Stories',
-    readTime: '15 min',
-    icon: <Users className="w-6 h-6" />,
-    color: 'from-blue-500 to-green-500',
-    href: '/case-studies/ai-autonomous-enterprise-success-2026',
-    featured: true
+    id: 'ai-quantum-computing',
+    title: 'AI Quantum Computing 2026: Next-Generation Intelligence',
+    type: 'article',
+    category: 'Quantum Computing',
+    readTime: 25,
+    metrics: {
+      primary: { value: '1000x', label: 'Faster', color: 'purple' },
+      secondary: { value: '95%', label: 'Accuracy', color: 'blue' }
+    },
+    description: 'Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.',
+    href: '/blog/ai-quantum-computing-2026',
+    tags: ['Quantum Computing', 'AI', 'Performance', '2026']
+  },
+  {
+    id: 'neural-architecture',
+    title: 'AI Neural Architecture Optimization 2026: Next-Gen Performance Engineering',
+    type: 'article',
+    category: 'AI Architecture',
+    readTime: 28,
+    metrics: {
+      primary: { value: '40%', label: 'Performance', color: 'purple' },
+      secondary: { value: '60%', label: 'Cost Savings', color: 'green' }
+    },
+    description: 'Master neural architecture optimization with 40% performance gains, 60% cost reduction, and enterprise-grade scalability patterns.',
+    href: '/blog/ai-neural-architecture-optimization-2026',
+    tags: ['Neural Networks', 'Performance', 'Optimization', '2026']
+  },
+  {
+    id: 'space-tech',
+    title: 'AI Space Technology 2026: Autonomous Space Operations & Deep Space Intelligence',
+    type: 'article',
+    category: 'Space Technology',
+    readTime: 32,
+    metrics: {
+      primary: { value: '99.9%', label: 'Reliability', color: 'blue' },
+      secondary: { value: '$500M+', label: 'Savings', color: 'green' }
+    },
+    description: 'Revolutionary AI space technology for autonomous missions, deep space exploration, and orbital operations with 99.9% reliability.',
+    href: '/blog/ai-space-tech-2026',
+    tags: ['Space Technology', 'Autonomous Systems', 'AI', '2026']
   }
 ];
 
+const categories = ['All', 'AI Architecture', 'Sustainability', 'Quantum Computing', 'Space Technology', 'Case Study'];
+
 export default function InteractiveContentRecommendation() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedType, setSelectedType] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [recommendations, setRecommendations] = useState<ContentItem[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const categories = ['all', 'Business Strategy', 'Customer Experience', 'Enterprise AI', 'Quantum AI', 'Success Stories'];
-  const types = ['all', 'blog', 'case-study'];
+  useEffect(() => {
+    generateRecommendations();
+  }, [selectedCategory]);
 
-  const filteredContent = contentItems.filter(item => {
-    const categoryMatch = selectedCategory === 'all' || item.category === selectedCategory;
-    const typeMatch = selectedType === 'all' || item.type === selectedType;
-    return categoryMatch && typeMatch;
-  });
+  const generateRecommendations = async () => {
+    setIsLoading(true);
+    
+    // Simulate AI-powered recommendation delay
+    setTimeout(() => {
+      let filtered = contentItems;
+      
+      if (selectedCategory !== 'All') {
+        filtered = contentItems.filter(item => item.category === selectedCategory);
+      }
+      
+      // Simulate personalized recommendations based on "user behavior"
+      const personalized = filtered
+        .sort(() => Math.random() - 0.5) // Shuffle for variety
+        .slice(0, 6);
+      
+      setRecommendations(personalized);
+      setIsLoading(false);
+    }, 800);
+  };
+
+  const getMetricColor = (color: string) => {
+    const colors = {
+      blue: 'text-blue-600',
+      green: 'text-green-600',
+      purple: 'text-purple-600',
+      orange: 'text-orange-600',
+      red: 'text-red-600'
+    };
+    return colors[color as keyof typeof colors] || 'text-gray-600';
+  };
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'article':
+        return '📝';
+      case 'case-study':
+        return '📊';
+      case 'guide':
+        return '📖';
+      default:
+        return '📄';
+    }
+  };
 
   return (
-    <div className="w-full bg-gradient-to-br from-gray-50 via-white to-blue-50 py-16">
+    <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-20">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <span className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-              🎯 INTELLIGENT CONTENT RECOMMENDATIONS
-            </span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-6">
+            <span className="w-4 h-4 mr-2">✨</span>
+            AI-Powered Recommendations
           </div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Discover Your Perfect AI Content
+            Personalized Content Recommendations
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get personalized content recommendations based on your interests and goals. 
-            Explore our comprehensive library of AI guides, case studies, and success stories.
+            Discover content tailored to your interests and industry. Our AI analyzes your preferences to suggest the most relevant articles and case studies.
           </p>
         </div>
 
-        {/* Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
-          <div className="flex flex-wrap gap-2">
-            {categories.map(category => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
-                  selectedCategory === category
-                    ? 'bg-indigo-600 text-white'
-                    : 'bg-white text-gray-600 hover:bg-indigo-50 hover:text-indigo-600 border border-gray-200'
-                }`}
-              >
-                {category === 'all' ? 'All Categories' : category}
-              </button>
-            ))}
-          </div>
-          <div className="flex gap-2">
-            {types.map(type => (
-              <button
-                key={type}
-                onClick={() => setSelectedType(type)}
-                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
-                  selectedType === type
-                    ? 'bg-purple-600 text-white'
-                    : 'bg-white text-gray-600 hover:bg-purple-50 hover:text-purple-600 border border-gray-200'
-                }`}
-              >
-                {type === 'all' ? 'All Types' : type === 'blog' ? 'Blog Posts' : 'Case Studies'}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {filteredContent.map(item => (
-            <Link key={item.id} href={item.href} className="group">
-              <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-all hover:-translate-y-1">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center text-white`}>
-                    {item.icon}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className={`text-xs px-2 py-1 rounded-full font-semibold ${
-                        item.type === 'blog' 
-                          ? 'bg-blue-100 text-blue-700' 
-                          : 'bg-green-100 text-green-700'
-                      }`}>
-                        {item.type === 'blog' ? 'Blog' : 'Case Study'}
-                      </span>
-                      {item.featured && (
-                        <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                          FEATURED
-                        </span>
-                      )}
-                    </div>
-                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">
-                      {item.title}
-                    </h3>
-                  </div>
-                </div>
-                
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                  {item.description}
-                </p>
-                
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4 text-xs text-gray-500">
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
-                      <span>{item.readTime}</span>
-                    </div>
-                    <div className="text-gray-400">•</div>
-                    <div>{item.category}</div>
-                  </div>
-                  <div className="flex items-center text-indigo-600 font-semibold text-sm group-hover:text-indigo-700 transition-colors">
-                    Read More <ArrowRight className="w-4 h-4 ml-1" />
-                  </div>
-                </div>
-              </div>
-            </Link>
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                selectedCategory === category
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+              }`}
+            >
+              {category}
+            </button>
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <Link
-            href="/blog"
-            className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
-          >
-            Explore All AI Content
-          </Link>
+        {/* Loading State */}
+        {isLoading && (
+          <div className="text-center py-12">
+            <div className="inline-flex items-center gap-3">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+              <span className="text-lg text-gray-600">Generating personalized recommendations...</span>
+            </div>
+          </div>
+        )}
+
+        {/* Recommendations Grid */}
+        {!isLoading && (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {recommendations.map((item) => (
+              <Link key={item.id} href={item.href} className="group">
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
+                  {/* Header */}
+                  <div className="flex items-center gap-2 mb-4">
+                    {item.featured && (
+                      <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                        FEATURED
+                      </span>
+                    )}
+                    <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                      {item.category.toUpperCase()}
+                    </span>
+                  </div>
+
+                  {/* Type and Read Time */}
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg">{getTypeIcon(item.type)}</span>
+                      <span className="text-sm text-gray-600 font-medium capitalize">
+                        {item.type.replace('-', ' ')}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-1 text-sm text-gray-500">
+                      <Clock className="w-4 h-4" />
+                      <span>{item.readTime} min read</span>
+                    </div>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                    {item.description}
+                  </p>
+
+                  {/* Metrics */}
+                  <div className="flex gap-4 mb-4">
+                    <div className="text-center">
+                      <div className={`text-lg font-bold ${getMetricColor(item.metrics.primary.color)}`}>
+                        {item.metrics.primary.value}
+                      </div>
+                      <div className="text-xs text-gray-500">{item.metrics.primary.label}</div>
+                    </div>
+                    <div className="text-center">
+                      <div className={`text-lg font-bold ${getMetricColor(item.metrics.secondary.color)}`}>
+                        {item.metrics.secondary.value}
+                      </div>
+                      <div className="text-xs text-gray-500">{item.metrics.secondary.label}</div>
+                    </div>
+                  </div>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-1 mb-4">
+                    {item.tags.slice(0, 3).map((tag) => (
+                      <span
+                        key={tag}
+                        className="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* CTA */}
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
+                      {item.type === 'case-study' ? 'View Case Study' : 'Read More'} →
+                    </div>
+                    <div className="flex items-center gap-1 text-sm text-gray-500">
+                      <Star className="w-4 h-4" />
+                      <span>4.8</span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
+
+        {/* CTA Section */}
+        <div className="text-center mt-12">
+          <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Want More Personalized Recommendations?
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Sign up for our newsletter to get AI-powered content recommendations delivered to your inbox weekly.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/blog"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                <span className="w-5 h-5 mr-2">✨</span>
+                Explore All Content
+                <ArrowRight className="w-5 h-5 ml-2 inline" />
+              </Link>
+              <button className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors">
+                Subscribe to Newsletter
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
