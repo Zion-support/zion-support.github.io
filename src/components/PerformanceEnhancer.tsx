@@ -101,7 +101,7 @@ export const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+        setMetrics(prev => ({ ...prev, lcp: (lastEntry as any).startTime as number }));
       });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
     };
@@ -110,8 +110,9 @@ export const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (!(entry as unknown).hadRecentInput) {
-            clsValue += (entry as unknown).value;
+          const e = entry as any;
+          if (!e.hadRecentInput) {
+            clsValue += (e.value as number);
             setMetrics(prev => ({ ...prev, cls: clsValue }));
           }
         }
@@ -120,8 +121,8 @@ export const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     };
 
     const measureMemory = () => {
-      if ('memory' in performance) {
-        const memory = (performance as unknown).memory;
+      if ('memory' in (performance as any)) {
+        const memory = (performance as any).memory as { usedJSHeapSize: number };
         setMetrics(prev => ({ 
           ...prev, 
           memory: memory.usedJSHeapSize / 1024 / 1024 

@@ -20,16 +20,16 @@ const EnhancedPerformanceMonitor = () => {
       timestamp: Date.now(),
     };
 
-    const handleMetric = (metric: unknown) => {
-      performanceMetrics[metric.name as keyof PerformanceMetrics] = metric.value;
+    const handleMetric = (metric: any) => {
+      performanceMetrics[metric.name as keyof PerformanceMetrics] = metric.value as number;
       
       // Check if we have all metrics
       if (Object.keys(performanceMetrics).length === 6) {
         setMetrics(performanceMetrics as PerformanceMetrics);
         
         // Send to analytics (you can implement your analytics service here)
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'web_vitals', {
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'web_vitals', {
             event_category: 'Performance',
             event_label: 'Core Web Vitals',
             value: Math.round(metric.value),

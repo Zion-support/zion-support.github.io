@@ -1,3 +1,4 @@
+/* global HTMLDivElement */
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -75,15 +76,15 @@ const AdvancedCollaborationDashboard: React.FC<AdvancedCollaborationDashboardPro
       setSessions(advancedCollaborationSystem.getAllSessions());
       
       // Set up event listeners
-      advancedCollaborationSystem.on('sessionCreated', handleSessionCreated);
-      advancedCollaborationSystem.on('sessionStarted', handleSessionStarted);
-      advancedCollaborationSystem.on('sessionEnded', handleSessionEnded);
-      advancedCollaborationSystem.on('userJoined', handleUserJoined);
-      advancedCollaborationSystem.on('userLeft', handleUserLeft);
-      advancedCollaborationSystem.on('chatMessage', handleChatMessage);
-      advancedCollaborationSystem.on('pollCreated', handlePollCreated);
-      advancedCollaborationSystem.on('fileShared', handleFileShared);
-      advancedCollaborationSystem.on('whiteboardElementAdded', handleWhiteboardElementAdded);
+      advancedCollaborationSystem.on('sessionCreated', (session: unknown) => handleSessionCreated(session as CollaborationSession));
+      advancedCollaborationSystem.on('sessionStarted', (session: unknown) => handleSessionStarted(session as CollaborationSession));
+      advancedCollaborationSystem.on('sessionEnded', (session: unknown) => handleSessionEnded(session as CollaborationSession));
+      advancedCollaborationSystem.on('userJoined', (payload: unknown) => handleUserJoined(payload as { session: CollaborationSession; user: User }));
+      advancedCollaborationSystem.on('userLeft', (payload: unknown) => handleUserLeft(payload as { session: CollaborationSession; userId: string }));
+      advancedCollaborationSystem.on('chatMessage', (message: unknown) => handleChatMessage(message as ChatMessage));
+      advancedCollaborationSystem.on('pollCreated', (poll: unknown) => handlePollCreated(poll as Poll));
+      advancedCollaborationSystem.on('fileShared', (file: unknown) => handleFileShared(file as SharedFile));
+      advancedCollaborationSystem.on('whiteboardElementAdded', (element: unknown) => handleWhiteboardElementAdded(element as WhiteboardElement));
     }
   }, [isVisible]);
 

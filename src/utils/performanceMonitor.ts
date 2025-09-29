@@ -42,8 +42,9 @@ class PerformanceMonitor {
       try {
         const fidObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            if (entry.processingStart && entry.startTime) {
-              const fid = entry.processingStart - entry.startTime;
+            const anyEntry = entry as any;
+            if (typeof anyEntry.processingStart === 'number' && typeof entry.startTime === 'number') {
+              const fid = (anyEntry.processingStart as number) - entry.startTime;
               this.recordMetric({
                 name: 'FID',
                 value: fid,
