@@ -20,34 +20,41 @@ export default function CaseStudiesPage() {
       <div className="max-w-6xl mx-auto px-4">
         {/* Featured Case Study */}
         <div className="mb-16">
-          <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-8 text-white">
-            <div className="max-w-4xl">
-              <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
-                Featured Success Story
-              </span>
-              <h2 className="text-3xl font-bold mb-4">
-                TechCorp Inc.: 90% Reduction in Data Processing Time
-              </h2>
-              <p className="text-lg opacity-90 mb-6">
-                How AI Data Analytics automation transformed manual data processing from 40 hours/week 
-                to just 4 hours, saving $500K annually while improving accuracy by 95%.
-              </p>
-              <div className="grid grid-cols-3 gap-4 text-center">
-                <div>
-                  <div className="text-2xl font-bold">90%</div>
-                  <div className="text-sm opacity-90">Time Reduction</div>
+          <Link href="/case-studies/healthtech-ai-transformation">
+            <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl p-8 text-white hover:from-green-700 hover:to-emerald-700 transition-all duration-300 cursor-pointer">
+              <div className="max-w-4xl">
+                <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
+                  Featured Success Story
+                </span>
+                <h2 className="text-3xl font-bold mb-4">
+                  HealthTech Solutions: 80% Efficiency Gain with AI Virtual Assistant
+                </h2>
+                <p className="text-lg opacity-90 mb-6">
+                  How HealthTech Solutions revolutionized customer support with AI virtual assistants, 
+                  achieving 80% faster response times and 95% customer satisfaction while reducing costs by 70%.
+                </p>
+                <div className="grid grid-cols-3 gap-4 text-center">
+                  <div>
+                    <div className="text-2xl font-bold">80%</div>
+                    <div className="text-sm opacity-90">Faster Response</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold">95%</div>
+                    <div className="text-sm opacity-90">Customer Satisfaction</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold">70%</div>
+                    <div className="text-sm opacity-90">Cost Reduction</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-2xl font-bold">$500K</div>
-                  <div className="text-sm opacity-90">Annual Savings</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold">95%</div>
-                  <div className="text-sm opacity-90">Accuracy Improvement</div>
+                <div className="mt-6 text-center">
+                  <span className="bg-white/20 px-4 py-2 rounded-lg font-semibold">
+                    Read Full Case Study →
+                  </span>
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* Case Studies Grid */}

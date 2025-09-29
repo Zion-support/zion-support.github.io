@@ -1,5 +1,21 @@
+<<<<<<< HEAD
 import Link from 'next/link';
-import { NewBlogBanner, AnalyticsPlatformBanner, TechCorpSuccessBanner } from '../components/PromotionalBanner';
+import { 
+  NewBlogBanner, 
+  AnalyticsPlatformBanner, 
+  TechCorpSuccessBanner,
+  WorkflowAutomationBanner,
+  AIAnalyticsBanner,
+  HealthTechSuccessBanner,
+  ComprehensiveAIBanner,
+  EnterpriseAIBanner
+} from '../components/PromotionalBanner';
+import ContentShowcase from '../components/ContentShowcase';
+=======
+import { Link } from 'react-router-dom';
+import React from 'react';
+import { AnalyticsPlatformBanner, NewBlogBanner, NewContentBanner } from '../components/PromotionalBanner';
+>>>>>>> cursor/create-and-deploy-new-content-04db
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -12,6 +28,8 @@ export default function HomePage() {
     <div className="animate-fade-in">
       {/* Promotional Banners */}
       <NewBlogBanner />
+      <WorkflowAutomationBanner />
+      <AIAnalyticsBanner />
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -28,7 +46,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              href="/services"
+              to="/services"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore Our Services
@@ -126,6 +144,10 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* Dynamic Content Showcase */}
+      <ContentShowcase />
+=======
       {/* Latest Content Section */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -139,7 +161,64 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link href="/blog/ai-revolution-2025" className="group">
+            <Link to="/blog/llm-cost-optimization-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Article
+                  </span>
+                  <span className="text-sm text-gray-500">9 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  LLM Cost Optimization in 2025: Practical Strategies
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Cut LLM spend by 30–70% with routing, caching, and quantization patterns.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link to="/blog/edge-llm-latency-patterns" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Article
+                  </span>
+                  <span className="text-sm text-gray-500">7 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  Edge LLM Latency Patterns: Sub-200ms Interactions
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Streaming, prefetch, and edge compute patterns for instant-feel AI UX.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link to="/blog/genai-guardrails-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Article
+                  </span>
+                  <span className="text-sm text-gray-500">11 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  GenAI Guardrails 2025: Practical Playbook for Reliable AI
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Practical patterns to ship safe, reliable, and auditable GenAI systems in production.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link to="/blog/ai-revolution-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -159,7 +238,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/blog/ai-agents-in-the-enterprise-2025" className="group">
+            <Link to="/blog/ai-agents-in-the-enterprise-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -179,7 +258,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/case-studies/techcorp-ai-transformation" className="group">
+            <Link to="/case-studies/techcorp-ai-transformation" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -199,7 +278,27 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/services/ai-analytics-platform" className="group">
+            <Link to="/case-studies/finserve-genai-risk-mitigation" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Success Story
+                  </span>
+                  <span className="text-sm text-gray-500">Fintech</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  FinServe: GenAI Risk Mitigation & Compliance
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  How a fintech leader cut AI risk by 70% and achieved audit-ready compliance.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
+
+            <Link to="/services/ai-analytics-platform" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -222,7 +321,7 @@ export default function HomePage() {
 
           <div className="text-center">
             <Link
-              href="/blog"
+              to="/blog"
               className="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg hover:shadow-xl"
             >
               View All Content
@@ -230,6 +329,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+>>>>>>> cursor/create-and-deploy-new-content-04db
 
       {/* Success Stories */}
       <section className="py-20 bg-gray-50">
@@ -272,33 +372,83 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Newsletter Signup */}
+      {/* Enhanced Newsletter Signup */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-teal-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Stay Ahead with AI & Tech Insights
-          </h2>
-          <p className="text-xl mb-8 opacity-90">
-            Get weekly updates on AI trends, tech innovations, and exclusive service offers
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
-            />
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Subscribe
-            </button>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Newsletter Signup */}
+            <div className="text-center md:text-left">
+              <h2 className="text-4xl font-bold mb-6">
+                Stay Ahead with AI & Tech Insights
+              </h2>
+              <p className="text-xl mb-8 opacity-90">
+                Get weekly updates on AI trends, tech innovations, and exclusive service offers
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start max-w-md mx-auto md:mx-0">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
+                />
+                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Subscribe
+                </button>
+              </div>
+              <p className="text-sm mt-4 opacity-75">
+                Join 10,000+ professionals. Unsubscribe anytime.
+              </p>
+            </div>
+
+            {/* Content Highlights */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-2xl font-bold mb-6">Latest Content Highlights</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="text-2xl">🚀</div>
+                  <div>
+                    <h4 className="font-semibold mb-1">AI Revolution 2025 Guide</h4>
+                    <p className="text-sm opacity-90">Complete business transformation strategy</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-2xl">⚙️</div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Workflow Automation Guide</h4>
+                    <p className="text-sm opacity-90">Reduce manual work by 80%</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-2xl">📊</div>
+                  <div>
+                    <h4 className="font-semibold mb-1">AI Analytics Implementation</h4>
+                    <p className="text-sm opacity-90">Transform data into insights</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-2xl">🏥</div>
+                  <div>
+                    <h4 className="font-semibold mb-1">HealthTech Success Story</h4>
+                    <p className="text-sm opacity-90">80% efficiency gain with AI</p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-6 pt-4 border-t border-white/20">
+                <Link
+                  href="/blog"
+                  className="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+                >
+                  View All Content →
+                </Link>
+              </div>
+            </div>
           </div>
-          <p className="text-sm mt-4 opacity-75">
-            Join 10,000+ professionals. Unsubscribe anytime.
-          </p>
         </div>
       </section>
 
-      {/* Additional Promotional Banner */}
+      {/* Additional Promotional Banners */}
       <AnalyticsPlatformBanner />
+      <HealthTechSuccessBanner />
+      <ComprehensiveAIBanner />
 
       {/* CTA Section */}
       <section className="py-20 bg-white">
@@ -371,7 +521,7 @@ function FeaturedServiceCard({
         ))}
       </ul>
       <Link
-        href={href}
+        to={href}
         className={`block w-full text-center py-2 px-4 rounded-lg font-semibold transition-colors ${
           popular
             ? 'bg-blue-600 text-white hover:bg-blue-700'

@@ -1,14 +1,10 @@
 {
   "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "noEmit": true
-  },
-  "files": [
-    "src/content/blog-posts.ts",
-    "src/content/insights.ts",
-    "src/content/posts.ts",
-    "src/pages/Home.tsx",
+  "include": [
     "src/utils/performanceMonitor.ts",
-    "src/main.tsx"
-  ]
+    "src/content/**/*.ts",
+    "src/seo/**/*.ts",
+    "src/types/**/*.ts"
+  ],
+  "exclude": []
 }

@@ -14,63 +14,88 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "ai-adoption-scorecard-2025",
-    title: "AI Adoption Scorecard: Executive Metrics That Drive Outcomes",
-    description: "Define leading indicators, outcome metrics, and review rituals that align AI work to business value.",
+    slug: "ai-platform-roi-2025",
+    title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
+    description: "A pragmatic framework to tie platform capabilities to product outcomes with clear owner reviews.",
     content: `
-# AI Adoption Scorecard: Executive Metrics That Drive Outcomes
+# AI Platform ROI Scorecards: Proving Value Quarter by Quarter
 
-Leaders struggle to see real business impact from AI initiatives when metrics are vague or lagging. This playbook shows how to define leading indicators, outcome metrics, and review rituals that prevent vanity reporting and drive tangible results.
+Platform investments stall without measurable value signals. This guide introduces a lightweight ROI scorecard that connects platform capabilities to adoption, golden paths, reliability SLOs, and business outcomes.
 
-## Metrics That Matter
-- Pipeline conversion influenced by AI
-- Handle rate and resolution quality for assistants
+## Scorecard Dimensions
+- Adoption and paved-road usage
 - Time-to-first-success on golden paths
-- Risk and policy adherence from online checks
+- Reliability SLO adherence per product surface
+- Enablement signals: docs, templates, SDK ergonomics
 
 ## Operating Rhythm
-- Monthly review with owners and actions
-- Guardrail thresholds and automated alerts
-- Shared dashboards with plain-language summaries
+- Monthly review with product + platform owners
+- Red/amber flags with remediation owners and dates
+- Clear cut/scale decisions based on evidence deltas
 
-Adopt this scorecard to align investments with measurable outcomes.
+Implement this to keep platform work focused and value-centric.
     `,
     author: "Zion Tech Group Team",
-    date: "2025-09-30",
+    date: "2025-10-03",
     category: "AI Strategy",
-    tags: ["Metrics", "Outcomes", "Governance"],
+    tags: ["Platform", "ROI", "Scorecards", "Product"],
     featured: true,
     readTime: "7 min read",
-    image: "/images/ai-adoption-scorecard.jpg"
+    image: "/images/ai-platform-roi.jpg"
   },
   {
-    slug: "genai-incident-postmortems-2025",
-    title: "GenAI Incident Postmortems: Prevent Repeats with Policy Tests",
-    description: "A practical guide to capturing signals, writing policy tests, and closing the loop so incidents don't recur.",
+    slug: "secure-ml-supply-chain-2025",
+    title: "Secure ML Supply Chain: From SBOMs to Model Lineage",
+    description: "Practical controls for datasets, models, and inference routes to prevent tampering and drift.",
     content: `
-# GenAI Incident Postmortems: Prevent Repeats with Policy Tests
+# Secure ML Supply Chain: From SBOMs to Model Lineage
 
-GenAI incidents often recur because learnings are not codified into guardrails. This guide introduces a lightweight template to capture signals, extract commitments, and translate them into automated policy tests.
+Modern ML requires end-to-end provenance and controls: dataset SBOMs, data-use policies, model lineage, signed artifacts, and runtime egress controls.
 
-## Capture The Right Signals
-- Prompt inputs, tools called, outputs and flags
-- Context sources, fallback routes, retries
-- User impact, severity, and blast radius
+## Controls That Matter
+- Dataset SBOMs and data contracts
+- Signed training artifacts and configs
+- Model lineage with approval trails
+- Inference-time egress allowlists and DPI
 
-## Close The Loop
-- Add offline policy tests to CI
-- Wire canaries to online guardrails
-- Track regressions with drift metrics
+## Rollout
+- Start read-only with visibility dashboards
+- Add PR gates on risky changes
+- Enforce gradually with exceptions flow
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-10-03",
+    category: "Security",
+    tags: ["ML", "Supply Chain", "Security", "SBOM"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/secure-ml-supply-chain.jpg"
+  },
+  {
+    slug: "edge-cdn-ml-personalization-2025",
+    title: "Edge CDN + On‑Device ML: Personalization Under 100ms",
+    description: "Combine edge KV, signed configs, and tiny models for private, real‑time personalization.",
+    content: `
+# Edge CDN + On‑Device ML: Personalization Under 100ms
 
-With this approach, teams move fast while reducing repeat incidents.
+Deliver relevant experiences without server hops by pushing lightweight models and features to the edge and device.
+
+## Building Blocks
+- Edge KV for features and eligibility
+- Signed payloads and validation circuits
+- Distilled models (ONNX/TF Lite) running on device
+
+## Reliability
+- Versioning, background warmups, and circuit breakers
+- Observability with client↔edge traces
     `,
     author: "Zion Tech Group Team",
     date: "2025-09-30",
-    category: "GenAI",
-    tags: ["Policy Tests", "Incidents", "Reliability"],
+    category: "Edge Computing",
+    tags: ["Edge", "Personalization", "CDN", "On‑Device ML"],
     featured: true,
-    readTime: "8 min read",
-    image: "/images/genai-postmortems.jpg"
+    readTime: "6 min read",
+    image: "/images/edge-personalization.jpg"
   },
   {
     slug: "ai-sales-copilot-2025",
@@ -2096,107 +2121,6 @@ Ready to implement Zero Trust security? Contact our team for a free security ass
     featured: true,
     readTime: "14 min read",
     image: "/images/zero-trust-security.jpg"
-  },
-  {
-    slug: "serverless-inference-cost-playbook-2025",
-    title: "Serverless AI Inference Cost Playbook: 40–70% Savings Without P95 Pain",
-    description: "Adaptive batching, warm pools, and tiered quality to cut spend while keeping latency sane.",
-    content: `
-# Serverless AI Inference Cost Playbook: 40–70% Savings Without P95 Pain
-
-Serverless inference enables elastic scaling, but naive setups burn budget and hurt tail latency. This playbook shows pragmatic techniques to cut costs 40–70% while preserving user experience.
-
-## Core Tactics
-
-- Adaptive batching with latency budgets
-- Warm pools for cold start amortization
-- Tiered quality: route heavy prompts to cheaper routes when possible
-- Token-aware caching and result reuse
-- Request coalescing and anti-stampede guards
-
-## Implementation Checklist
-
-1. Define P50/P95 budgets per surface
-2. Add per-route cost and quality telemetry
-3. Implement batch windows with max-wait thresholds
-4. Maintain warm capacity by time-of-day
-5. Run weekly cost-quality reviews
-
-Adopt these steps to keep experiences fast and bills predictable.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Solutions",
-    tags: ["Serverless", "Inference", "Cost", "Latency"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/serverless-inference-cost-playbook.jpg"
-  },
-  {
-    slug: "practical-rag-in-production-2025",
-    title: "Practical RAG in Production: Freshness, Hybrid Search, and Evals",
-    description: "Battle-tested patterns for chunking, freshness policies, hybrid retrieval, and eval harnesses.",
-    content: `
-# Practical RAG in Production: Freshness, Hybrid Search, and Evals
-
-RAG systems fail without freshness guarantees and evaluation. We cover chunking, hybrid dense+lexical search, and continuous evals tied to user outcomes.
-
-## What Matters
-
-- Freshness SLAs and recrawl policies
-- Hybrid retrieval with rerankers
-- Domain-specific chunking and overlap
-- Grounding metadata and citation quality
-- Offline and online eval harnesses
-
-## Rollout Patterns
-
-- Shadow deploys on long-tail queries
-- Policy tests for PII and hallucinations
-- Canary cohorts with guardrail monitors
-
-Ship RAG that stands up to real usage—not just benchmarks.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "GenAI",
-    tags: ["RAG", "Retrieval", "Hybrid Search", "Evals"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/practical-rag-in-production.jpg"
-  },
-  {
-    slug: "secure-genai-guardrails-2025",
-    title: "Secure GenAI: Policy‑First Guardrails That Scale",
-    description: "Prompt isolation, PII controls, and egress policies—ship safely without slowing teams.",
-    content: `
-# Secure GenAI: Policy‑First Guardrails That Scale
-
-Security and compliance cannot be bolt‑ons. Learn how to design policy‑first GenAI platforms with isolation, data controls, and continuous testing.
-
-## Guardrail Layers
-
-- Prompt isolation and context partitioning
-- PII detection, redaction, and minimization
-- Outbound egress allowlists and DPI
-- Model route whitelisting and approvals
-- Policy tests in CI and online canaries
-
-## Operating Model
-
-- Central policies with product‑team autonomy
-- Clear escalation paths and audit trails
-- Telemetry for violations and drift
-
-Scale safely while maintaining delivery speed.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Security",
-    tags: ["GenAI", "Security", "Compliance", "Policy"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/secure-genai-guardrails.jpg"
   }
 ];
 

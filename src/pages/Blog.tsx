@@ -1,22 +1,21 @@
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
 import {
-  Calendar,
-  User,
   ArrowRight,
-  Clock,
-  Tag,
-  TrendingUp,
-  Zap,
-  Bot,
   BarChart3,
-  Shield,
+  Bot,
+  Calendar,
+  Clock,
   Code,
   Search,
+  Shield,
+  TrendingUp,
+  User,
+  Zap
 } from "lucide-react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 interface BlogPost {
   id: number;
@@ -227,6 +226,21 @@ export default function Blog(): React.JSX.Element {
 
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         <Header />
+
+        {/* New Content Promo Banner */}
+        <div className="border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center justify-between">
+              <div className="mr-4">
+                <div className="text-sm font-semibold">🚀 Fresh: AI Platform ROI + Secure ML Supply Chain</div>
+                <div className="text-xs text-white/90">New frameworks on platform ROI and end-to-end ML supply chain security.</div>
+              </div>
+              <a href="/blog/ai-platform-roi-2025" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap">
+                Read the latest
+              </a>
+            </div>
+          </div>
+        </div>
 
         {/* Hero Section */}
         <section className="container mx-auto px-6 py-20">

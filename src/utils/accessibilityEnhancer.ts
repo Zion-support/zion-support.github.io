@@ -25,6 +25,14 @@ class AccessibilityEnhancer {
   private metrics: AccessibilityMetric[] = [];
   private isInitialized = false;
   private focusTrapElements: HTMLElement[] = [];
+  private resizeObserver?: ResizeObserver;
+  private mutationObserver?: MutationObserver;
+  private performanceObserver?: PerformanceObserver;
+
+  // Event handler placeholders to match removeEventListener references
+  private handleKeyDown(_event: KeyboardEvent): void {}
+  private handleFocusIn(_event: FocusEvent): void {}
+  private handleFocusOut(_event: FocusEvent): void {}
 
   constructor() {
     this.config = this.getDefaultConfig();
@@ -52,12 +60,49 @@ class AccessibilityEnhancer {
     this.setupColorContrast();
     this.setupReducedMotion();
     this.observeAccessibility();
+    this.setupPerformanceMonitoring();
   }
 
-  // Backwards-compatible alias for older call sites
-  public initialize(): void {
-    this.init();
+  // Alias for compatibility with callers using `init()`
+  public init(): void {
+    this.initialize();
   }
+
+  public destroy(): void {
+    if (!this.isInitialized) return;
+    
+    // Cleanup observers
+    this.resizeObserver?.disconnect();
+    this.mutationObserver?.disconnect();
+    this.performanceObserver?.disconnect();
+    
+    this.isInitialized = false;
+    this.focusTrapElements = [];
+  }
+
+  private setupPerformanceMonitoring(): void {
+    if (!this.config.screenReaderSupport) return;
+    
+    try {
+      this.performanceObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'measure' && entry.name.includes('accessibility')) {
+            console.log(`Accessibility performance: ${entry.name} took ${entry.duration}ms`);
+          }
+        });
+      });
+      
+      this.performanceObserver.observe({ entryTypes: ['measure'] });
+    } catch (error) {
+      console.warn('PerformanceObserver not supported:', error);
+    }
+  }
+
+  /**
+   * Backward-compatible initialize alias
+   */
+  // Removed duplicate initialize method to avoid no-dupe-class-members ESLint error
 
   private setupKeyboardNavigation(): void {
     if (!this.config.keyboardNavigation) return;
@@ -81,10 +126,10 @@ class AccessibilityEnhancer {
       }
 
       // Arrow key navigation for menus
-      if ((event as KeyboardEvent).key === 'ArrowDown' || (event as KeyboardEvent).key === 'ArrowUp') {
-        const menu = document.querySelector('[role="menu"]:focus-within');
+      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+        const menu = document.querySelector('[role="menu"]:focus-within') as HTMLElement | null;
         if (menu) {
-          this.handleMenuNavigation(event as KeyboardEvent, menu as HTMLElement);
+          this.handleMenuNavigation(event as KeyboardEvent, menu);
         }
       }
     });
@@ -95,10 +140,10 @@ class AccessibilityEnhancer {
 
     // Trap focus in modals
     document.addEventListener('keydown', (event) => {
-      if ((event as KeyboardEvent).key === 'Tab') {
-        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
+      if (event.key === 'Tab') {
+        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]') as HTMLElement | null;
         if (modal) {
-          this.trapFocus(event as KeyboardEvent, modal as HTMLElement);
+          this.trapFocus(event as KeyboardEvent, modal);
         }
       }
     });

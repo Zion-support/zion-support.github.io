@@ -35,9 +35,12 @@ export class SecurityManager {
     this.config = this.getDefaultConfig();
   }
 
-  // No-op initializer to provide a stable optional init hook for callers
+  /**
+   * Initialize security manager (no-op for client context)
+   */
   public initialize(): void {
-    // Intentionally empty. Reserved for future side effects.
+    // In a real app, this could attach meta headers or listeners
+    // Kept as a no-op to satisfy initialization calls safely
   }
 
   private getDefaultConfig(): SecurityConfig {

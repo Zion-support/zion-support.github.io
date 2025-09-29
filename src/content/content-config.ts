@@ -394,6 +394,32 @@ export const promotionalBanners: PromotionalBanner[] = [
     priority: 1
   },
   {
+    id: 'ai-risk-register-banner',
+    message: '🛡️ New: AI Risk Register That Drives Action',
+    ctaText: 'Read Playbook',
+    ctaLink: '/blog/ai-risk-register-2025',
+    backgroundColor: 'bg-gradient-to-r from-red-600 to-rose-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 16,
+    active: true,
+    priority: 1
+  },
+  {
+    id: 'practical-evals-banner',
+    message: '📈 Practical AI Evals That Predict Outcomes',
+    ctaText: 'See Scorecards',
+    ctaLink: '/blog/practical-evals-scorecards-2025',
+    backgroundColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 18,
+    active: true,
+    priority: 2
+  },
+  {
     id: 'analytics-platform-banner',
     message: '🚀 Launch: AI Analytics Platform - Transform Data into Actionable Insights',
     ctaText: 'Explore Platform',
@@ -465,11 +491,10 @@ export const getRecentContent = (limit: number = 3) => {
   ];
   
   return allContent
-    // Sort by date when present; otherwise fall back to a stable order
     .sort((a, b) => {
-      const dateA = (a as any).date ? new Date((a as any).date).getTime() : 0;
-      const dateB = (b as any).date ? new Date((b as any).date).getTime() : 0;
-      return dateB - dateA;
+      const aTime = 'date' in a ? new Date((a as any).date).getTime() : 0;
+      const bTime = 'date' in b ? new Date((b as any).date).getTime() : 0;
+      return bTime - aTime;
     })
     .slice(0, limit);
 };
