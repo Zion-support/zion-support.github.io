@@ -1,11 +1,14 @@
 import React from 'react';
 import { ArrowRight, Calendar, Clock, Star, TrendingUp, Users, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { featuredBlogPosts, featuredServices } from '../content/content-config';
+import { featuredNewContent, trendingNewContent } from '../content/new-content-2025-january';
+import { featuredCaseStudies, trendingCaseStudies } from '../content/new-case-studies-2025';
+import { featuredInsights, trendingInsights } from '../content/new-insights-2025';
 
 const NewContentShowcase2025: React.FC = () => {
-  const featuredBlogs = featuredBlogPosts.slice(0, 3);
-  const featuredServicesList = featuredServices.slice(0, 3);
+  const featuredBlogs = featuredNewContent.slice(0, 3);
+  const featuredStudies = featuredCaseStudies.slice(0, 3);
+  const featuredInsightsList = featuredInsights.slice(0, 3);
 
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -21,7 +24,7 @@ const NewContentShowcase2025: React.FC = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-8">
             <Star className="w-4 h-4 mr-2 animate-pulse" />
-            NEW 2025 CONTENT & SERVICES
+            BREAKTHROUGH 2025 CONTENT
             <Star className="w-4 h-4 ml-2 animate-pulse" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -98,7 +101,7 @@ const NewContentShowcase2025: React.FC = () => {
                 )}
 
                 <Link 
-                  to={post.url}
+                  to={`/blog/${post.slug}`}
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center gap-2"
                 >
                   Read Article
@@ -109,62 +112,136 @@ const NewContentShowcase2025: React.FC = () => {
           </div>
         </div>
 
-        {/* New Services */}
-        <div>
+        {/* New Case Studies */}
+        <div className="mb-20">
           <div className="flex items-center justify-between mb-12">
             <h3 className="text-3xl font-bold text-white flex items-center gap-3">
               <Zap className="w-8 h-8 text-purple-400" />
-              New AI Services
+              Success Stories
             </h3>
             <Link 
-              to="/services" 
+              to="/case-studies" 
               className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 transition-colors"
             >
-              Explore All Services
+              View All Case Studies
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {featuredServicesList.map((service, index) => (
+            {featuredStudies.map((study, index) => (
               <div 
-                key={service.id}
+                key={study.id}
                 className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl p-6 hover:from-white/20 hover:to-white/10 transition-all duration-300 hover:scale-105 border border-white/20"
               >
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs uppercase tracking-wider text-purple-300 bg-purple-500/20 px-3 py-1 rounded-full">
-                    {service.category}
+                    {study.industry}
                   </span>
-                  {service.newBadge && (
+                  {study.featured && (
                     <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black text-xs px-2 py-1 rounded-full font-medium">
-                      NEW
+                      FEATURED
                     </span>
                   )}
                 </div>
 
                 <h4 className="text-xl font-bold text-white mb-3 line-clamp-2">
-                  {service.title}
+                  {study.title}
                 </h4>
 
                 <p className="text-slate-300 mb-4 text-sm line-clamp-3">
-                  {service.shortDescription}
+                  {study.excerpt}
                 </p>
 
                 <div className="mb-4">
-                  <div className="text-sm text-slate-400 mb-2">Starting at</div>
-                  <div className="text-2xl font-bold text-green-400">
-                    {service.pricing.startingPrice}
-                  </div>
-                  <div className="text-xs text-slate-400">
-                    {service.pricing.description}
+                  <div className="text-sm text-slate-400 mb-2">Company</div>
+                  <div className="text-lg font-bold text-cyan-400">
+                    {study.company}
                   </div>
                 </div>
 
-                {service.metrics && (
+                {study.results && (
                   <div className="grid grid-cols-2 gap-2 mb-4">
-                    {service.metrics.slice(0, 2).map((metric, idx) => (
+                    {study.results.slice(0, 2).map((result, idx) => (
                       <div key={idx} className="text-center">
-                        <div className="text-lg font-bold text-cyan-400">{metric.value}</div>
+                        <div className="text-lg font-bold text-green-400">{result.value}</div>
+                        <div className="text-xs text-slate-400">{result.metric}</div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                <div className="flex flex-col gap-2">
+                  <Link 
+                    to={`/case-studies/${study.slug}`}
+                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 inline-flex items-center justify-center gap-2"
+                  >
+                    Read Case Study
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* New Insights */}
+        <div>
+          <div className="flex items-center justify-between mb-12">
+            <h3 className="text-3xl font-bold text-white flex items-center gap-3">
+              <Users className="w-8 h-8 text-cyan-400" />
+              Latest Insights
+            </h3>
+            <Link 
+              to="/insights" 
+              className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-2 transition-colors"
+            >
+              View All Insights
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {featuredInsightsList.map((insight, index) => (
+              <div 
+                key={insight.id}
+                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl p-6 hover:from-white/20 hover:to-white/10 transition-all duration-300 hover:scale-105 border border-white/20"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs uppercase tracking-wider text-cyan-300 bg-cyan-500/20 px-3 py-1 rounded-full">
+                    {insight.category}
+                  </span>
+                  {insight.featured && (
+                    <span className="bg-gradient-to-r from-blue-400 to-cyan-500 text-black text-xs px-2 py-1 rounded-full font-medium">
+                      FEATURED
+                    </span>
+                  )}
+                </div>
+
+                <h4 className="text-xl font-bold text-white mb-3 line-clamp-2">
+                  {insight.title}
+                </h4>
+
+                <p className="text-slate-300 mb-4 text-sm line-clamp-3">
+                  {insight.summary}
+                </p>
+
+                <div className="flex items-center justify-between text-sm text-slate-400 mb-4">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4" />
+                    <span>{new Date(insight.date).toLocaleDateString()}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-4 h-4" />
+                    <span>{insight.readMinutes} min read</span>
+                  </div>
+                </div>
+
+                {insight.metrics && (
+                  <div className="grid grid-cols-2 gap-2 mb-4">
+                    {insight.metrics.slice(0, 2).map((metric, idx) => (
+                      <div key={idx} className="text-center">
+                        <div className="text-lg font-bold text-yellow-400">{metric.value}</div>
                         <div className="text-xs text-slate-400">{metric.label}</div>
                       </div>
                     ))}
@@ -173,17 +250,11 @@ const NewContentShowcase2025: React.FC = () => {
 
                 <div className="flex flex-col gap-2">
                   <Link 
-                    to={service.slug || `/services/${service.id}`}
-                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 inline-flex items-center justify-center gap-2"
+                    to={`/insights/${insight.slug}`}
+                    className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 inline-flex items-center justify-center gap-2"
                   >
-                    Learn More
+                    Read Insight
                     <ArrowRight className="w-4 h-4" />
-                  </Link>
-                  <Link 
-                    to="/contact"
-                    className="w-full border border-white/30 text-white py-2 px-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 text-center"
-                  >
-                    Get Quote
                   </Link>
                 </div>
               </div>
