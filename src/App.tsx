@@ -30,6 +30,10 @@ import { SecurityEnhancer } from './utils/securityEnhancer';
 // Lazy load heavy components for better performance
 const PerformanceMetrics = lazy(() => import('./components/PerformanceMetrics'));
 
+import './index.css';
+import './styles/notifications.css';
+import './styles/system-metrics.css';
+
 export default function App(): React.JSX.Element {
   // State for system dashboard and performance optimizer
   const [showSystemDashboard, setShowSystemDashboard] = useState(false);
