@@ -10,6 +10,36 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "genai-evals-in-prod-guardrails",
+    title: "Shipping GenAI Safely: Evals, Guardrails, and Online Canaries",
+    description:
+      "A practical blueprint to combine offline evals with online policy tests so you can ship GenAI changes weekly without regressions.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-feature-flags-in-100ms",
+    title: "Edge Feature Flags Under 100ms: Global Consistency at Scale",
+    description:
+      "Strategies for cache warmup, signed payloads, and validation circuits that enable instant, safe global rollouts.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "north-star-metrics-pitfalls-fixes",
+    title: "North‑Star Metrics Pitfalls: How to Measure What Matters",
+    description:
+      "Seven common anti‑patterns and the instrumentation playbook that replaces vanity with outcomes.",
+    category: "Product Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
     description:

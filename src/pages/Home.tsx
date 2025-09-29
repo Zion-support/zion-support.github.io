@@ -104,8 +104,8 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: GenAI Evals, Edge Flags, and North‑Star Metrics"
-          description="Fresh articles just landed. Explore our latest insights and frameworks."
+          title="🚀 NEW THIS WEEK: GenAI Guardrails, Edge Flags, North‑Star Metrics"
+          description="Brand-new guides on eval systems, validation circuits, and outcome-driven metrics."
           ctaText="Read the latest"
           ctaLink="/blog"
           dismissible={true}
@@ -650,7 +650,7 @@ const Home = () => {
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
                   <p className="text-white/90">
-                    Fresh articles on real-time data pipelines, north-star metrics, and safe, scalable GenAI ops.
+                    Fresh reads: GenAI guardrails that scale, validation circuits for edge flags, and north‑star metrics that drive outcomes.
                   </p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
@@ -662,16 +662,16 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
-                  <div className="font-semibold text-white">MLOps Reliability: Shipping GenAI Changes Safely</div>
+                  <div className="text-sm text-purple-200 mb-1">GenAI</div>
+                  <div className="font-semibold text-white">Shipping GenAI Safely: Guardrails That Don’t Slow You Down</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
-                  <div className="font-semibold text-white">Reliable Real‑Time Data Pipelines in 2025</div>
+                  <div className="text-sm text-blue-200 mb-1">Architecture</div>
+                  <div className="font-semibold text-white">Validation Circuits for Edge Feature Flags</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="text-sm text-rose-200 mb-1">Product Analytics</div>
-                  <div className="font-semibold text-white">North‑Star Metrics: A Field‑Tested Framework</div>
+                  <div className="font-semibold text-white">North‑Star Metrics: How to Measure What Matters</div>
                 </div>
               </div>
             </div>

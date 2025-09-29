@@ -14,6 +14,48 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "shipping-genai-safely-guardrails",
+    title: "Shipping GenAI Safely: Guardrails That Don’t Slow You Down",
+    description: "Layered evaluation systems with policy gates and online canaries to ship fast with confidence.",
+    content: `
+# Shipping GenAI Safely: Guardrails That Don’t Slow You Down
+
+High‑velocity GenAI teams combine offline evals, pre‑merge policy checks, and online canaries tied to business KPIs. This article shows how to wire those layers together so you can ship weekly without regressions.
+
+## The Stack
+- Offline eval suites aligned to KPIs
+- Pre‑merge policy tests (PII, toxicity, hallucinations)
+- Canary cohorts, feature flags, and rollback triggers
+- Online metrics with alerting and auto‑rollback
+
+Adopt these patterns to earn trust while keeping speed.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["GenAI", "Evals", "Guardrails", "Policy"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-guardrails.jpg"
+  },
+  {
+    slug: "edge-flags-validation-circuits",
+    title: "Validation Circuits for Edge Feature Flags",
+    description: "Cache warmups, signed payloads, and request coalescing patterns that keep flags safe globally.",
+    content: `
+# Validation Circuits for Edge Feature Flags
+
+Instant rollouts require consistency and safety. Learn how to design validation circuits that prevent stale or invalid config from reaching users.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Architecture",
+    tags: ["Edge", "Feature Flags", "Caching"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-flags-validation.jpg"
+  },
+  {
     slug: "genai-evals-in-production-2025",
     title: "GenAI Evals in Production: Policy Tests That Scale",
     description: "From offline suites to online canaries: patterns that keep quality high as usage grows.",

@@ -9,6 +9,24 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "eval-systems-online-canaries",
+    title: "Eval Systems That Scale: Online Canaries and Policy Gates",
+    summary:
+      "Move from ad-hoc checks to layered evals with CI gates and production canaries tied to KPIs.",
+    category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-flags-validation-blueprints",
+    title: "Blueprints: Validating Edge Flags Before They Break Prod",
+    summary:
+      "Versioned keys, negative caching, and health probes that prevent bad flag rolls globally.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
     id: "genai-policy-tests-canaries",
     title: "GenAI Policy Tests: From Offline Suites to Online Canaries",
     summary:
