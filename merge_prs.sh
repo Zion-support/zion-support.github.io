@@ -53,10 +53,24 @@ for branch in "${CANDIDATE_BRANCHES[@]}"; do
   if git merge --no-ff "$branch" -m "Merge $branch into main (auto)"; then
     echo "[info] Merge succeeded for $branch; verifying build"
     if pnpm run build:netlify >/dev/null 2>&1; then
-      git pull --ff-only origin main || true
-      git push origin main
-      success_count=$((success_count+1))
-      echo "[info] Merge + build OK for $branch"
+      pushed=false
+      for attempt in 1 2 3; do
+        git pull --rebase origin main || true
+        if git push origin main; then
+          pushed=true
+          break
+        fi
+        echo "[warn] Push race on attempt $attempt; retrying..."
+        sleep 2
+      done
+      if [ "$pushed" = true ]; then
+        success_count=$((success_count+1))
+        echo "[info] Merge + build OK for $branch"
+      else
+        echo "[error] Push failed after merging $branch; reverting merge"
+        git reset --hard HEAD~1
+        fail_count=$((fail_count+1))
+      fi
     else
       echo "[error] Build failed after merging $branch; reverting merge"
       git reset --hard HEAD~1
@@ -67,10 +81,24 @@ for branch in "${CANDIDATE_BRANCHES[@]}"; do
     git add -A
     if git commit -m "chore: auto-resolve conflicts merging $branch into main"; then
       if pnpm run build:netlify >/dev/null 2>&1; then
-        git pull --ff-only origin main || true
-        git push origin main
-        success_count=$((success_count+1))
-        echo "[info] Merge + build OK for $branch after auto-resolve"
+        pushed=false
+        for attempt in 1 2 3; do
+          git pull --rebase origin main || true
+          if git push origin main; then
+            pushed=true
+            break
+          fi
+          echo "[warn] Push race on attempt $attempt (post-auto-resolve); retrying..."
+          sleep 2
+        done
+        if [ "$pushed" = true ]; then
+          success_count=$((success_count+1))
+          echo "[info] Merge + build OK for $branch after auto-resolve"
+        else
+          echo "[error] Push failed after auto-resolve for $branch; reverting"
+          git reset --hard HEAD~1
+          fail_count=$((fail_count+1))
+        fi
       else
         echo "[error] Build failed after auto-resolve for $branch; reverting"
         git reset --hard HEAD~1
@@ -82,59 +110,7 @@ for branch in "${CANDIDATE_BRANCHES[@]}"; do
       fail_count=$((fail_count+1))
     fi
   fi
-done
+ done
 
 echo "[result] Successful merges: $success_count; Failed merges: $fail_count"
 exit 0
-
-#!/bin/bash
-
-# Script to merge all open PRs into main branch
-set -e
-
-echo "Starting PR merge process..."
-
-# Ensure we're on main branch
-git checkout main
-git pull origin main
-
-# List of PR branches to merge
-PR_BRANCHES=(
-    "cursor/parse-netlify-configuration-file-ce72"
-    "cursor/fix-netlify-build-and-merge-to-main-eff1"
-)
-
-# Merge each PR branch
-for branch in "${PR_BRANCHES[@]}"; do
-    echo "Processing branch: $branch"
-    
-    # Fetch the branch
-    git fetch origin "$branch:$branch"
-    
-    # Check if branch exists
-    if git show-ref --verify --quiet refs/heads/"$branch"; then
-        echo "Merging $branch into main..."
-        
-        # Try to merge
-        if git merge "$branch" --no-ff -m "Merge $branch: Fix Netlify build issues"; then
-            echo "Successfully merged $branch"
-        else
-            echo "Merge conflict in $branch, resolving..."
-            # Auto-resolve conflicts by accepting main branch changes
-            git checkout --ours .
-            git add .
-            git commit -m "Resolve merge conflicts in $branch"
-        fi
-        
-        # Clean up the branch
-        git branch -d "$branch"
-    else
-        echo "Branch $branch not found, skipping..."
-    fi
-done
-
-# Push changes to main
-echo "Pushing changes to main..."
-git push origin main
-
-echo "PR merge process completed successfully!"
