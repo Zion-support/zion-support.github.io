@@ -348,5 +348,75 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "9 min read",
   },
+  {
+    slug: "revolutionary-ai-autonomous-operations",
+    title: "Revolutionary AI Autonomous Operations: The Future of Infrastructure Management",
+    description:
+      "Discover how AI autonomous operations are revolutionizing infrastructure management with self-healing, self-optimizing, and self-scaling capabilities.",
+    category: "AI Innovation",
+    publishedAt: "2025-01-22",
+    featured: true,
+    readTime: "10 min read",
+  },
+  {
+    slug: "quantum-computing-business-applications",
+    title: "Quantum Computing Business Applications: Beyond the Hype",
+    description:
+      "Real-world applications of quantum computing in business, including optimization problems, cryptography, and drug discovery.",
+    category: "Quantum Computing",
+    publishedAt: "2025-01-22",
+    featured: true,
+    readTime: "12 min read",
+  },
+  {
+    slug: "edge-ai-manufacturing-revolution",
+    title: "Edge AI in Manufacturing: Revolutionizing Production Lines",
+    description:
+      "How edge AI is transforming manufacturing with real-time quality control, predictive maintenance, and autonomous production optimization.",
+    category: "Edge Computing",
+    publishedAt: "2025-01-22",
+    featured: false,
+    readTime: "8 min read",
+  },
+  {
+    slug: "zero-trust-security-implementation",
+    title: "Zero Trust Security Implementation: A Complete Guide",
+    description:
+      "Comprehensive guide to implementing Zero Trust security architecture, covering identity verification, device management, and network segmentation.",
+    category: "Cybersecurity",
+    publishedAt: "2025-01-22",
+    featured: true,
+    readTime: "14 min read",
+  },
+  {
+    slug: "ai-powered-business-automation-success-stories",
+    title: "AI-Powered Business Automation: Real Success Stories from 2025",
+    description:
+      "Case studies showcasing successful AI automation implementations across various industries, with measurable ROI and business impact.",
+    category: "AI & Automation",
+    publishedAt: "2025-01-22",
+    featured: false,
+    readTime: "11 min read",
+  },
+  {
+    slug: "micro-saas-platform-development-guide",
+    title: "Micro SAAS Platform Development: A Complete Guide",
+    description:
+      "Step-by-step guide to developing micro SAAS platforms, covering architecture, development, deployment, and scaling strategies.",
+    category: "Platform Engineering",
+    publishedAt: "2025-01-22",
+    featured: false,
+    readTime: "13 min read",
+  },
+  {
+    slug: "next-generation-cloud-architecture",
+    title: "Next-Generation Cloud Architecture: Design Patterns for 2025",
+    description:
+      "Advanced cloud architecture patterns including serverless computing, multi-cloud strategies, and edge-to-cloud integration.",
+    category: "Cloud Strategy",
+    publishedAt: "2025-01-22",
+    featured: true,
+    readTime: "15 min read",
+  },
 ];
 

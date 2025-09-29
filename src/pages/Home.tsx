@@ -16,6 +16,7 @@ import {
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
+import NewContentPromotionBanner from "../components/NewContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
@@ -102,14 +103,23 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
 
-        {/* Content Promotion Banner */}
-        <ContentPromotionBanner
-          variant="info"
-          title="🚀 NEW: GenAI Evals, Edge Flags, Telemetry + more"
-          description="Fresh featured articles just landed. Quality gates, <100ms flags, AI cost guardrails."
-          ctaText="Read the latest"
-          ctaLink="/blog/genai-evals-in-production-2025"
+        {/* New Content Promotion Banner */}
+        <NewContentPromotionBanner
+          variant="premium"
+          title="🚀 REVOLUTIONARY NEW CONTENT: AI Autonomous Operations, Quantum Computing, & More!"
+          description="Discover our latest breakthrough articles on AI autonomous operations, quantum computing business applications, and next-generation cloud architecture. Plus, explore our new AI service offerings!"
+          ctaText="Explore New Content"
+          ctaLink="/blog"
           dismissible={true}
+          featuredItems={[
+            { title: "AI Autonomous Operations Guide", category: "AI Innovation", link: "/blog/revolutionary-ai-autonomous-operations" },
+            { title: "Quantum Computing Applications", category: "Quantum Computing", link: "/blog/quantum-computing-business-applications" },
+            { title: "Next-Gen Cloud Architecture", category: "Cloud Strategy", link: "/blog/next-generation-cloud-architecture" },
+            { title: "Zero Trust Implementation", category: "Cybersecurity", link: "/blog/zero-trust-security-implementation" },
+            { title: "AI Virtual Assistant Best Practices", category: "AI & Automation", link: "/services/ai-virtual-assistant" }
+          ]}
+          showBadge={true}
+          badgeText="BREAKTHROUGH CONTENT"
         />
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -583,24 +593,40 @@ const Home = () => {
         {/* Latest Articles */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
-            {/* New Content Announcement */}
-            <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-400/30 rounded-xl p-6 mb-10">
-              <div className="flex items-center gap-3 mb-3">
-                <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
-                <span className="text-lg font-bold text-purple-700">📚 NEW CONTENT ALERT</span>
-                <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
+            {/* Enhanced New Content Announcement */}
+            <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-400/30 rounded-xl p-8 mb-10">
+              <div className="flex items-center gap-3 mb-4">
+                <Sparkles className="w-6 h-6 text-purple-500 animate-pulse" />
+                <span className="text-xl font-bold text-purple-700">🔥 BREAKTHROUGH CONTENT RELEASE</span>
+                <Sparkles className="w-6 h-6 text-purple-500 animate-pulse" />
               </div>
-              <p className="text-gray-700 font-semibold mb-2">
-                🚀 Just Published: 5 Revolutionary Articles on AI Automation, Cloud Infrastructure, and Enterprise AI Implementation
+              <h3 className="text-2xl font-bold text-gray-800 mb-3">
+                🚀 Just Published: Revolutionary AI & Technology Content for 2025
+              </h3>
+              <p className="text-gray-700 text-lg mb-4">
+                Discover our latest breakthrough articles on AI Autonomous Operations, Quantum Computing business applications, 
+                and next-generation cloud architecture. Plus, explore our brand new AI service offerings!
               </p>
-              <p className="text-gray-600 text-sm mb-4">
-                Discover the latest insights on AI-powered business automation, next-gen cloud infrastructure, and strategic AI roadmaps for 2025.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">AI Automation</span>
-                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Cloud Strategy</span>
-                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">AI Governance</span>
-                <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">Platform Engineering</span>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+                <span className="bg-purple-100 text-purple-700 px-3 py-2 rounded-lg text-sm font-medium text-center">AI Autonomous Ops</span>
+                <span className="bg-blue-100 text-blue-700 px-3 py-2 rounded-lg text-sm font-medium text-center">Quantum Computing</span>
+                <span className="bg-green-100 text-green-700 px-3 py-2 rounded-lg text-sm font-medium text-center">Zero Trust Security</span>
+                <span className="bg-orange-100 text-orange-700 px-3 py-2 rounded-lg text-sm font-medium text-center">Edge AI</span>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link 
+                  to="/blog" 
+                  className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center flex items-center justify-center gap-2"
+                >
+                  <ArrowRight className="w-5 h-5" />
+                  Read All New Articles
+                </Link>
+                <Link 
+                  to="/services" 
+                  className="border border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors text-center"
+                >
+                  Explore New Services
+                </Link>
               </div>
             </div>
             
