@@ -16,8 +16,8 @@ import {
   Database,
   Play,
   CheckCircle,
-  Monitor,
-  Lightbulb
+  Lightbulb,
+  Monitor
 } from 'lucide-react';
 
 const Resources = () => {
@@ -418,14 +418,12 @@ const Resources = () => {
                         <Download className="w-4 h-4 mr-1" />
                         {resource.downloadCount} downloads
                       </div>
-                      <div className="flex items-center text-gray-500 text-sm">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {resource.duration
-                          ? resource.duration
-                          : typeof (resource as any).pages === 'number'
-                            ? `${(resource as any).pages} pages`
-                            : (resource as any).pages || ''}
-                      </div>
+                      {resource.duration && (
+                        <div className="flex items-center text-gray-500 text-sm">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {resource.duration}
+                        </div>
+                      )}
                     </div>
 
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -522,14 +520,12 @@ const Resources = () => {
                           <Download className="w-4 h-4 mr-1" />
                           {resource.downloadCount}
                         </div>
-                        <div className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {resource.duration
-                            ? resource.duration
-                            : typeof (resource as any).pages === 'number'
-                              ? `${(resource as any).pages} pages`
-                              : (resource as any).pages || ''}
-                        </div>
+                        {resource.duration && (
+                          <div className="flex items-center">
+                            <Clock className="w-4 h-4 mr-1" />
+                            {resource.duration}
+                          </div>
+                        )}
                       </div>
 
                       <div className="flex flex-wrap gap-1 mb-4">
