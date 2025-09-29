@@ -168,6 +168,7 @@ export default function EnhancedHomePage({
       <div className="animate-fade-in">
         {/* Promotional Banners */}
         <NewContentShowcaseBanner />
+        <LatestAIInsightsBanner />
         <AIBusinessTransformationBanner />
         <AIWorkflowAutomationBanner />
         <EnterpriseAISecurityBanner />

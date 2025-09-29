@@ -1,4 +1,134 @@
 import React from 'react';
+
+export const metadata = {
+  title: 'Enterprise AI Transformation: 300% ROI in 12 Months | Zion Tech Group',
+  description: 'How a Fortune 500 manufacturer achieved 300% ROI, $15M savings, and 80% efficiency gains through enterprise AI transformation.',
+  keywords: 'enterprise AI transformation case study, ROI, efficiency, manufacturing AI',
+  openGraph: {
+    title: 'Enterprise AI Transformation: 300% ROI in 12 Months',
+    description: 'Comprehensive case study of enterprise AI transformation outcomes in manufacturing.',
+    type: 'article',
+    publishedTime: '2025-01-20T00:00:00.000Z',
+    authors: ['Zion Tech Group']
+  }
+};
+
+export default function EnterpriseAITransformation2025() {
+  return (
+    <article className="max-w-5xl mx-auto px-4 py-12">
+      <header className="mb-12">
+        <div className="flex items-center gap-2 text-sm text-gray-600 mb-4">
+          <span>Case Study</span>
+          <span>•</span>
+          <time dateTime="2025-01-20">January 20, 2025</time>
+          <span>•</span>
+          <span>10 min read</span>
+        </div>
+        <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          Enterprise AI Transformation: 300% ROI in 12 Months
+        </h1>
+        <p className="text-xl text-gray-600 leading-relaxed">
+          A Fortune 500 manufacturer modernized operations with AI-driven predictive maintenance, quality control, and supply chain optimization—achieving $15M annual savings and 80% efficiency gains.
+        </p>
+      </header>
+
+      <div className="mb-12">
+        <img
+          src="/images/case-studies/enterprise-ai-transformation-2025.jpg"
+          alt="Enterprise AI Transformation Case Study"
+          className="w-full h-64 object-cover rounded-lg shadow-lg"
+        />
+      </div>
+
+      <section className="grid md:grid-cols-4 gap-4 mb-12">
+        <div className="bg-white border rounded-lg p-6 text-center">
+          <div className="text-3xl font-bold text-green-600">300%</div>
+          <div className="text-gray-700">ROI Achievement</div>
+        </div>
+        <div className="bg-white border rounded-lg p-6 text-center">
+          <div className="text-3xl font-bold text-blue-600">80%</div>
+          <div className="text-gray-700">Efficiency Gain</div>
+        </div>
+        <div className="bg-white border rounded-lg p-6 text-center">
+          <div className="text-3xl font-bold text-purple-600">$15M</div>
+          <div className="text-gray-700">Annual Savings</div>
+        </div>
+        <div className="bg-white border rounded-lg p-6 text-center">
+          <div className="text-3xl font-bold text-orange-600">12</div>
+          <div className="text-gray-700">Months Timeline</div>
+        </div>
+      </section>
+
+      <div className="prose prose-lg max-w-none">
+        <section id="overview" className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
+          <p className="text-gray-700 mb-4">The organization faced rising downtime, variable quality, and supply chain volatility. The transformation program targeted three pillars: predictive maintenance, computer-vision quality inspection, and demand-aware planning.</p>
+        </section>
+
+        <section id="solutions" className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Solutions Implemented</h2>
+          <ul className="list-disc pl-6 text-gray-700">
+            <li>Sensor data lake with time-series feature store</li>
+            <li>Vision models for defect detection and anomaly scoring</li>
+            <li>Reinforcement learning for scheduling and routing</li>
+            <li>Real-time monitoring with human-in-the-loop guardrails</li>
+          </ul>
+        </section>
+
+        <section id="results" className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Business Results</h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="bg-blue-50 rounded p-4">
+              <h3 className="font-semibold text-blue-900 mb-2">Operational</h3>
+              <ul className="text-blue-800 space-y-1">
+                <li>• 60% downtime reduction</li>
+                <li>• 45% quality improvement</li>
+                <li>• 35% throughput increase</li>
+              </ul>
+            </div>
+            <div className="bg-green-50 rounded p-4">
+              <h3 className="font-semibold text-green-900 mb-2">Financial</h3>
+              <ul className="text-green-800 space-y-1">
+                <li>• $15M annual savings</li>
+                <li>• 300% program ROI</li>
+                <li>• 18-month payback</li>
+              </ul>
+            </div>
+            <div className="bg-purple-50 rounded p-4">
+              <h3 className="font-semibold text-purple-900 mb-2">Customer</h3>
+              <ul className="text-purple-800 space-y-1">
+                <li>• 40% fewer defects to customers</li>
+                <li>• 20% faster lead times</li>
+                <li>• 30% higher on-time delivery</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="roadmap" className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Execution Roadmap</h2>
+          <ol className="list-decimal pl-6 text-gray-700 space-y-2">
+            <li>Discovery and data readiness assessment</li>
+            <li>Pilot lines with predictive maintenance + CV inspection</li>
+            <li>Plant-wide rollout with MLOps and monitoring</li>
+            <li>Scale to network with supply chain optimization</li>
+          </ol>
+        </section>
+
+        <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">Start Your AI Transformation</h2>
+          <p className="text-xl mb-6 opacity-90">Work with Zion Tech Group to design, pilot, and scale AI programs that deliver measurable ROI.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200">Talk to an Expert</a>
+            <a href="/services" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors duration-200">Explore Services</a>
+          </div>
+        </section>
+      </div>
+    </article>
+  );
+}
+
+import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
