@@ -1,13 +1,12 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  roots: ['<rootDir>/src', '<rootDir>/__tests__'],
-  setupFilesAfterEnv: [
-    '@testing-library/jest-dom',
-    '<rootDir>/jest.setup.js' ],
+  roots: ['<rootDir>/__tests__', '<rootDir>/src'],
+  setupFilesAfterEnv: [ '@testing-library/jest-dom' ],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    '^@/(.*)$': '<rootDir>/src/$1'
+    // Minimal mappers to avoid conflicts; project has no tests
+    '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/tests/__mocks__/fileMock.js',
   },
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
   testPathIgnorePatterns: [
@@ -17,11 +16,34 @@ module.exports = {
     '/.next/',
     '/out/',
     '/tests.disabled/',
-    '/__tests__/',
-    '/tests/'
+    '/automation/',
+    '/automation_backup/',
+    '/backup/',
+    '/backup-pages/',
+    '/backup-merge-conflicts/',
+    '/backup-problematic-files/',
+    '/_conflicted_disabled/',
+    '/apps.backup/',
+  ],
+  modulePathIgnorePatterns: [
+    '/automation/',
+    '/automation_backup/',
+    '/backup/',
+    '/backup-pages/',
+    '/backup-merge-conflicts/',
+    '/backup-problematic-files/',
+    '/_conflicted_disabled/',
+    '/apps.backup/',
   ],
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest'
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(js|jsx)$': 'babel-jest'
   },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json']
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
+  coverageDirectory: 'coverage',
+  collectCoverage: false,
+  verbose: false,
+  testEnvironmentOptions: {
+    customExportConditions: ['node', 'node-addons']
+  }
 };

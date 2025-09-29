@@ -10,141 +10,31 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "agentic-workflows-blueprint-2026",
-    title: "Agentic Workflows Blueprint 2026: Reliable Multi‑Step Automation",
-    description:
-      "Design agent workflows with scoped tools, retries, and traces that actually work in production.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "edge-llm-caching-blueprint-2026",
-    title: "Edge LLM Caching Blueprint: Sub‑100ms Prompts with Tiered Stores",
-    description:
-      "KV patterns, signed configs, and freshness windows to cut latency and cost without quality loss.",
-    category: "Architecture",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "7 min read",
-  },
-  {
-    slug: "ml-supply-chain-sbom-2026",
-    title: "ML Supply Chain SBOMs: Models, Datasets, and Prompt Lineage",
-    description:
-      "End‑to‑end provenance with attestations and policy checks for every ML artifact.",
-    category: "AI Security",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "6 min read",
-  },
-  {
-    slug: "ai-incident-response-2026",
-    title: "AI Incident Response 2026: Playbooks, Canaries, and SLAs",
-    description: "Practical incident response for AI features with on-call playbooks and KPI-linked canaries.",
-    category: "AI Operations",
-    publishedAt: "2025-10-09",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "platform-observability-scorecards-2026",
-    title: "Platform Observability Scorecards: Tie Telemetry to Business Outcomes",
-    description: "Connect traces, errors, and latency to adoption, retention, and revenue with actionable scorecards.",
+    slug: "platform-engineering-scorecards-2026",
+    title: "Platform Engineering Scorecards 2026: From Golden Paths to Outcomes",
+    description: "Measure what matters: adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery.",
     category: "Platform Engineering",
     publishedAt: "2025-10-09",
     featured: true,
     readTime: "8 min read"
   },
   {
-    slug: "ai-product-launch-checklist-2025",
-    title: "AI Product Launch Checklist: From Pilot to Production",
-    description:
-      "A pragmatic checklist for hardening pilots, proving ROI, and launching AI features safely.",
-    category: "Product",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "mlops-in-45-days",
-    title: "MLOps in 45 Days: Shipping Reliable Models Fast",
-    description:
-      "Reference pipelines, eval gates, and rollout patterns to move from notebook to prod quickly.",
-    category: "MLOps",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "practical-rag-architecture",
-    title: "Practical RAG Architecture That Scales",
-    description:
-      "Chunking, indexing, and retrieval strategies that actually improve answer quality at lower cost.",
-    category: "GenAI",
-    publishedAt: "2025-09-29",
-    featured: false,
-    readTime: "6 min read",
-  },
-  {
-    slug: "edge-inference-patterns-2025",
-    title: "Edge Inference Patterns for Sub‑100ms Experiences",
-    description:
-      "Latency budgets, on‑device models, and caching strategies for lightning‑fast AI UX at the edge.",
-    category: "Architecture",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "7 min read",
-  },
-  {
-    slug: "ai-governance-checklist-2025",
-    title: "AI Governance Checklist 2025: Ship Fast Without Breaking Policy",
-    description:
-      "Practical guardrails, review rituals, and approval flows to keep GenAI initiatives compliant and on‑track.",
-    category: "AI Governance",
-    publishedAt: "2025-09-29",
-    featured: true,
-    readTime: "5 min read",
-  },
-  {
-    slug: "realtime-feature-flags-edge",
-    title: "Real‑Time Feature Flags at the Edge",
-    description:
-      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
-    category: "Architecture",
-    publishedAt: "2025-09-28",
-    featured: false,
-    readTime: "6 min read",
-  },
-  {
-    slug: "prompt-engineering-playbook-v2",
-    title: "Prompt Engineering Playbook v2: Patterns That Survive Production",
-    description:
-      "Composable prompts, eval‑driven iteration, and telemetry for robust GenAI applications.",
-    category: "GenAI",
-    publishedAt: "2025-09-27",
-    featured: true,
-    readTime: "8 min read",
-  },
-  {
-    slug: "platform-scorecards-that-stick",
-    title: "Platform Scorecards That Actually Drive Adoption",
-    description:
-      "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
-    category: "Platform Engineering",
-    publishedAt: "2025-10-09",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "privacy-preserving-rag-2026",
-    title: "Privacy‑Preserving RAG: Redaction, Scoping, and Audit Trails",
-    description: "Protect sensitive data in RAG with redaction, auth‑scoped corpora, and audit trails.",
-    category: "AI Security",
+    slug: "ai-cybersecurity-automation-2025",
+    title: "AI Cybersecurity Automation: From Detections to Autonomic Response",
+    description: "Behavioral detections, policy tests, and runbooks that auto-contain incidents under 60 seconds.",
+    category: "Security",
     publishedAt: "2025-10-09",
     featured: true,
     readTime: "7 min read"
+  },
+  {
+    slug: "edge-ai-blueprint-2026",
+    title: "Edge AI Blueprint 2026: Private, Real‑Time Intelligence at Scale",
+    description: "Signed configs, tiny models, and geo budgets for <100ms on‑device decisions with privacy by design.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "9 min read"
   },
   {
     slug: "ai-platform-roi-2025",

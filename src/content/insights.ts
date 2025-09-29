@@ -5,6 +5,7 @@ export type InsightArticle = {
   category: string;
   date: string; // ISO date string
   readMinutes: number;
+  description?: string;
 };
 
 export const latestInsights: InsightArticle[] = [

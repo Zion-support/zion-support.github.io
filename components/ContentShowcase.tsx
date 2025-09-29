@@ -49,7 +49,7 @@ const contentItems: ContentItem[] = [
     category: 'AI Governance',
     href: '/blog/ai-governance-framework-2025',
     featured: true,
-    publishedDate: '2025-01-20',
+    publishedDate: '2025-01-25',
     metrics: [
       { value: '70%', label: 'Risk Reduction' },
       { value: '12', label: 'Framework Areas' }
@@ -78,7 +78,7 @@ const contentItems: ContentItem[] = [
     category: 'FinTech',
     href: '/case-studies/fintech-ai-risk-compliance-2025',
     featured: true,
-    publishedDate: '2025-01-20',
+    publishedDate: '2025-01-25',
     metrics: [
       { value: '70%', label: 'Risk Reduction' },
       { value: '$2.5M', label: 'Cost Savings' }
