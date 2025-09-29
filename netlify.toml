@@ -14,7 +14,7 @@
   command_timeout = "30m"
 
 [build.environment]
-  NODE_VERSION = "22.16.0"
+  NODE_VERSION = "20.17.0"
   PNPM_VERSION = "10.17.1"
   NETLIFY_USE_PNPM = "true"
   # Disable Next.js auto-detection
@@ -22,6 +22,7 @@
   # Ensure clean installs
   NPM_CONFIG_PRODUCTION = "false"
   NODE_ENV = "production"
+  NODE_OPTIONS = "--max-old-space-size=4096"
   # Optimize build performance
   CI = "true"
 
