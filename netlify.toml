@@ -10,7 +10,7 @@
   force = true
 
 [build]
-  command = "pnpm build"
+  command = "pnpm run build:netlify"
   publish = "dist"
   command_timeout = "30m"
 
