@@ -28,6 +28,12 @@ import {
   HealthcareTransformationBanner,
   NewContent2026Banner
 } from '../components/PromotionalBanner';
+import { 
+  NewContent2026Banner as NewContent2026,
+  InteractiveToolsBanner,
+  SuccessStoriesBanner 
+} from '../components/NewContent2026Banners';
+import AIROICalculator from '../components/AIROICalculator';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -62,14 +68,18 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
-      {/* Promotional Banners */}
+      {/* New 2026 Content Promotional Banners */}
+      <NewContent2026 />
+      <InteractiveToolsBanner />
+      <SuccessStoriesBanner />
+      
+      {/* Existing Promotional Banners */}
       <NewContent2026Banner />
       <AIMultimodalEnterpriseBanner />
       <AIEnterpriseAutomationBanner />
       <AIDataAnalyticsEnterpriseBanner />
       <EnterpriseTransformationSuccessBanner />
       <HealthcareTransformationBanner />
-      {/* Using only existing banners */}
       <NewContentShowcaseBanner />
       <AIRoadmapsBanner />
       <AIFinOpsBanner />
@@ -219,6 +229,23 @@ export default function HomePage() {
       
       {/* Interactive Content Hub */}
       <InteractiveContentShowcase />
+      
+      {/* AI ROI Calculator Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Calculate Your AI ROI
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover the potential return on investment for your AI transformation. 
+              Our interactive calculator provides personalized insights based on your organization's specific needs.
+            </p>
+          </div>
+          
+          <AIROICalculator />
+        </div>
+      </section>
       
       {/* Personalized Content Recommendations */}
       <ContentRecommendationSystem />
