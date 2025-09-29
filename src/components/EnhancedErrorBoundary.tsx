@@ -1,5 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -9,197 +8,168 @@ interface Props {
 
 interface State {
   hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  retryCount: number;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  private maxRetries = 3;
-
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      retryCount: 0,
-    };
+    this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): Partial<State> {
+    // Generate unique error ID for tracking
+    const errorId = `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+    
     return {
       hasError: true,
       error,
-      errorInfo: null,
-      retryCount: 0,
+      errorId
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    // Log error details
+    console.error('Error Boundary caught an error:', error, errorInfo);
+    
+    // Update state with error info
     this.setState({
       error,
-      errorInfo,
+      errorInfo
     });
-
-    // Log error to external service
-    this.logErrorToService(error, errorInfo);
 
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
+
+    // Send error to monitoring service
+    this.reportError(error, errorInfo);
   }
 
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    const errorData = {
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    // Send to error tracking service
+    const errorReport = {
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
+      errorId: this.state.errorId,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href,
-      userId: this.getUserId(),
+      url: window.location.href
     };
 
-    // Send to analytics or error tracking service
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
+    // Send to analytics if available
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'exception', {
         description: error.message,
         fatal: true,
+        errorId: this.state.errorId
       });
     }
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error Boundary caught an error:', errorData);
+      console.error('Error Report:', errorReport);
     }
-  };
-
-  private getUserId = (): string | null => {
-    // Implement your user ID retrieval logic here
-    return localStorage.getItem('userId') || null;
   };
 
   private handleRetry = () => {
-    if (this.state.retryCount < this.maxRetries) {
-      this.setState(prevState => ({
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        retryCount: prevState.retryCount + 1,
-      }));
-    } else {
-      // Reset retry count and reload page as last resort
-      this.setState({
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        retryCount: 0,
-      });
-      window.location.reload();
-    }
+    this.setState({
+      hasError: false,
+      error: undefined,
+      errorInfo: undefined,
+      errorId: undefined
+    });
   };
 
-  private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
-  private handleReportBug = () => {
-    const errorData = {
-      message: this.state.error?.message || 'Unknown error',
-      stack: this.state.error?.stack || 'No stack trace available',
-      componentStack: this.state.errorInfo?.componentStack || 'No component stack available',
-      timestamp: new Date().toISOString(),
-      url: window.location.href,
-    };
-
-    // Create mailto link with error details
-    const subject = encodeURIComponent('Bug Report - Zion Tech Group Website');
-    const body = encodeURIComponent(`
-Error Details:
-${JSON.stringify(errorData, null, 2)}
-
-Please describe what you were doing when this error occurred:
-[Your description here]
-    `);
-
-    window.open(`mailto:support@ziontechgroup.com?subject=${subject}&body=${body}`);
+  private handleReload = () => {
+    window.location.reload();
   };
 
   render() {
     if (this.state.hasError) {
-      // Use custom fallback if provided
+      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
+      // Default error UI
       return (
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
-                <AlertTriangle className="w-8 h-8 text-red-600" />
-              </div>
-            </div>
-
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Oops! Something went wrong
-            </h1>
-
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-            </p>
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="mb-6 p-4 bg-red-50 rounded-lg text-left">
-                <h3 className="text-sm font-semibold text-red-800 mb-2">Error Details:</h3>
-                <pre className="text-xs text-red-700 overflow-auto max-h-32">
-                  {this.state.error.message}
-                </pre>
-                {this.state.error.stack && (
-                  <details className="mt-2">
-                    <summary className="text-xs text-red-600 cursor-pointer">Stack Trace</summary>
-                    <pre className="text-xs text-red-700 mt-2 overflow-auto max-h-32">
-                      {this.state.error.stack}
-                    </pre>
-                  </details>
-                )}
-              </div>
-            )}
-
-            <div className="space-y-3">
-              {this.state.retryCount < this.maxRetries && (
-                <button
-                  onClick={this.handleRetry}
-                  className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors flex items-center justify-center space-x-2"
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center mb-4">
+              <div className="flex-shrink-0">
+                <svg 
+                  className="h-8 w-8 text-red-500" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
                 >
-                  <RefreshCw className="w-4 h-4" />
-                  <span>Try Again ({this.maxRetries - this.state.retryCount} attempts left)</span>
-                </button>
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" 
+                  />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-lg font-medium text-gray-900">
+                  Something went wrong
+                </h3>
+              </div>
+            </div>
+
+            <div className="mb-4">
+              <p className="text-sm text-gray-600">
+                We&apos;re sorry, but something unexpected happened. Our team has been notified.
+              </p>
+              
+              {this.state.error && (
+                <details className="mt-3">
+                  <summary className="text-sm font-medium text-gray-700 cursor-pointer">
+                    Error Details
+                  </summary>
+                  <div className="mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800">
+                    <div className="mb-2">
+                      <strong>Error ID:</strong> {this.state.errorId}
+                    </div>
+                    <div className="mb-2">
+                      <strong>Message:</strong> {this.state.error.message}
+                    </div>
+                    {this.state.error.stack && (
+                      <div>
+                        <strong>Stack:</strong>
+                        <pre className="mt-1 whitespace-pre-wrap">
+                          {this.state.error.stack}
+                        </pre>
+                      </div>
+                    )}
+                  </div>
+                </details>
               )}
+            </div>
 
+            <div className="flex space-x-3">
               <button
-                onClick={this.handleGoHome}
-                className="w-full bg-gray-600 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors flex items-center justify-center space-x-2"
+                onClick={this.handleRetry}
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
               >
-                <Home className="w-4 h-4" />
-                <span>Go to Homepage</span>
+                Try Again
               </button>
-
               <button
-                onClick={this.handleReportBug}
-                className="w-full border border-gray-300 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors flex items-center justify-center space-x-2"
+                onClick={this.handleReload}
+                className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors"
               >
-                <Bug className="w-4 h-4" />
-                <span>Report This Issue</span>
+                Reload Page
               </button>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-gray-200">
-              <p className="text-xs text-gray-500">
-                Error ID: {this.state.error?.name || 'Unknown'} - {new Date().toISOString()}
-              </p>
+            <div className="mt-4 text-xs text-gray-500">
+              If this problem persists, please contact support with Error ID: {this.state.errorId}
             </div>
           </div>
         </div>
@@ -209,5 +179,23 @@ Please describe what you were doing when this error occurred:
     return this.props.children;
   }
 }
+
+// Hook for functional components
+export const useErrorHandler = () => {
+  const handleError = React.useCallback((error: Error, context?: string) => {
+    console.error('Error caught by useErrorHandler:', error, context);
+    
+    // Send to error tracking
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'exception', {
+        description: error.message,
+        fatal: false,
+        context: context || 'unknown'
+      });
+    }
+  }, []);
+
+  return { handleError };
+};
 
 export default EnhancedErrorBoundary;
