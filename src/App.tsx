@@ -151,6 +151,28 @@ export default function App(): React.JSX.Element {
     });
   }, []);
 
+  // Memoize the SEO data to prevent unnecessary re-renders
+  const seoData = useMemo(() => ({
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Cutting-edge AI, quantum computing, and digital transformation solutions for modern enterprises. Expert consulting, cloud services, and innovative technology implementations.',
+    keywords: ['AI solutions', 'quantum computing', 'digital transformation', 'cloud services', 'enterprise technology', 'machine learning', 'automation', 'blockchain'],
+    ogType: 'website',
+    ogUrl: typeof window !== 'undefined' ? window.location.href : '',
+    ogImage: '/og-image.png',
+    twitterCard: 'summary_large_image' as const
+  }), []);
+
+  // Preload resource function
+  const preloadResource = useCallback((url: string, type: string) => {
+    if (typeof window !== 'undefined') {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = url;
+      link.as = type;
+      document.head.appendChild(link);
+    }
+  }, []);
+
   // SEO data for SEOOptimizer component
   const seoDataForOptimizer = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -314,6 +336,61 @@ export default function App(): React.JSX.Element {
     }
   }, []);
 
+  // Main initialization and cleanup effect
+  useEffect(() => {
+    // Add performance marks for better monitoring
+    if (typeof window !== 'undefined' && window.performance && typeof performance.mark === 'function') {
+      performance.mark('app-init-start');
+    }
+    
+    // Preload critical resources
+    preloadResource('/og-image.png', 'image');
+    preloadResource('/favicon.ico', 'image');
+
+    // Initialize SEO analytics
+    seoAnalytics.trackPageView(window.location.pathname);
+    
+    // Initialize performance SEO optimizations
+    performanceSEO.optimizeImages();
+    performanceSEO.preloadCriticalResources();
+    performanceSEO.optimizeFonts();
+    performanceSEO.optimizeCSS();
+
+    // Initialize analytics system
+    analytics.initialize();
+    analytics.trackPageView();
+
+    // Set default SEO data using the correct method
+    seoManager.updateMetaTags(seoData);
+
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true });
+
+    // Mark app as fully initialized
+    if (typeof window !== 'undefined' && window.performance && 
+        typeof performance.mark === 'function' && 
+        typeof performance.measure === 'function') {
+      performance.mark('app-init-complete');
+      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
+    }
+
+    // Basic performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('🚀 Zion Tech Group App initialized');
+    }
+
+    // Track engagement on page unload
+    window.addEventListener('beforeunload', trackEngagement);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('beforeunload', trackEngagement);
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClick);
+    };
+  }, [seoData, handleScroll, handleClick, preloadResource, trackEngagement]);
+
   // Enhanced keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -356,9 +433,7 @@ export default function App(): React.JSX.Element {
             break;
           case 'N':
             // Show notification
-             
             if ((window as any).notifications) {
-               
               (window as any).notifications.add({
                 type: 'info',
                 title: 'Notification Test',
@@ -369,9 +444,7 @@ export default function App(): React.JSX.Element {
             break;
           case 'C':
             // Clear notifications
-             
             if ((window as any).notifications) {
-               
               (window as any).notifications.clear();
             }
             break;
