@@ -186,6 +186,16 @@ contentHighlights.push(
     badge: "Guide",
     stats: "7 min read",
     variant: "success" as const
+  },
+  {
+    id: 14,
+    title: "🏗️ AI Platform Architecture",
+    description: "Build enterprise-grade AI systems that scale from data pipelines to model serving",
+    ctaText: "Explore",
+    ctaLink: "/services/AI-Platform-Architecture",
+    badge: "New Service",
+    stats: "Production Ready",
+    variant: "premium" as const
   }
 );
 
