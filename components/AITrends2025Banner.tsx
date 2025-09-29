@@ -1,129 +1,90 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import { TrendingUp, ArrowRight, Zap, Brain, Target } from 'lucide-react';
 
 export default function AITrends2025Banner() {
   return (
-    <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 relative overflow-hidden">
-      {/* Background Animation */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-64 h-64 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-        <div className="absolute top-10 right-10 w-64 h-64 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-20 w-64 h-64 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-4000"></div>
-      </div>
-      
-      <div className="max-w-6xl mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+    <section className="py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-sm font-medium mb-6">
+            <TrendingUp className="w-4 h-4 mr-2" />
+            AI Trends 2025
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            The Future of AI is Here
+          </h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Discover the cutting-edge AI trends and technologies that are reshaping industries in 2025. 
+            Stay ahead with our comprehensive AI insights and implementation strategies.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="flex items-center gap-3 mb-4">
-              <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                🚀 New Article
-              </span>
-              <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                Featured
-              </span>
+              <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                <Brain className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold">Autonomous AI Systems</h3>
             </div>
-            
-            <h2 className="text-4xl font-bold mb-6 leading-tight">
-              AI Trends 2025: The Future of Artificial Intelligence
-            </h2>
-            
-            <p className="text-xl mb-8 opacity-90">
-              Discover the revolutionary AI trends that will reshape industries and transform 
-              how businesses operate in 2025 and beyond. From autonomous operations to quantum 
-              machine learning.
+            <p className="text-white/80 mb-4">
+              Self-managing AI systems that can learn, adapt, and optimize without human intervention.
             </p>
-            
-            <div className="grid grid-cols-2 gap-6 mb-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-2">85%</div>
-                <div className="text-sm opacity-75">Cost Reduction</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-2">99.99%</div>
-                <div className="text-sm opacity-75">Uptime Achievement</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-2">1000x</div>
-                <div className="text-sm opacity-75">Faster Processing</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-2">40%</div>
-                <div className="text-sm opacity-75">Better Accuracy</div>
-              </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                to="/blog/ai-trends-2025"
-                className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
-                Read Full Article
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-medium">95% Automation</span>
+              <Link href="/blog/ai-autonomous-systems-2025" className="text-white hover:text-yellow-300 transition-colors">
+                Learn More →
               </Link>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
-              >
-                Get AI Consultation
-              </a>
             </div>
           </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-6">Featured AI Trends</h3>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <div className="text-2xl">🤖</div>
-                <div>
-                  <h4 className="font-semibold mb-1">Autonomous AI Operations</h4>
-                  <p className="text-sm opacity-90">Self-healing, self-optimizing infrastructure</p>
-                </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                <Zap className="w-6 h-6" />
               </div>
-              <div className="flex items-start gap-3">
-                <div className="text-2xl">⚡</div>
-                <div>
-                  <h4 className="font-semibold mb-1">Edge AI Revolution</h4>
-                  <p className="text-sm opacity-90">Real-time processing at the edge</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="text-2xl">🔮</div>
-                <div>
-                  <h4 className="font-semibold mb-1">Quantum ML</h4>
-                  <p className="text-sm opacity-90">Breakthrough computational power</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="text-2xl">✍️</div>
-                <div>
-                  <h4 className="font-semibold mb-1">AI Content Generation</h4>
-                  <p className="text-sm opacity-90">Sophisticated, brand-aware content</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="text-2xl">🛡️</div>
-                <div>
-                  <h4 className="font-semibold mb-1">Ethical AI Governance</h4>
-                  <p className="text-sm opacity-90">Comprehensive compliance frameworks</p>
-                </div>
-              </div>
+              <h3 className="text-xl font-bold">Edge AI Computing</h3>
             </div>
-            
-            <div className="mt-6 pt-4 border-t border-white/20">
-              <div className="flex items-center justify-between">
-                <div className="text-sm opacity-75">
-                  <span>📅 January 20, 2025</span>
-                  <span className="mx-2">•</span>
-                  <span>⏱️ 12 min read</span>
-                </div>
-                <Link
-                  to="/blog"
-                  className="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300"
-                >
-                  View All Articles →
-                </Link>
-              </div>
+            <p className="text-white/80 mb-4">
+              Real-time AI processing at the edge with sub-50ms response times and offline capabilities.
+            </p>
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-medium">1000x Faster</span>
+              <Link href="/blog/ai-edge-computing-2025" className="text-white hover:text-yellow-300 transition-colors">
+                Learn More →
+              </Link>
             </div>
           </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                <Target className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold">AI-Powered Automation</h3>
+            </div>
+            <p className="text-white/80 mb-4">
+              Complete business process automation with intelligent decision-making and self-optimization.
+            </p>
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-medium">80% Efficiency</span>
+              <Link href="/blog/ai-automation-2025" className="text-white hover:text-yellow-300 transition-colors">
+                Learn More →
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <Link
+            href="/blog/ai-trends-2025"
+            className="inline-flex items-center bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+          >
+            <TrendingUp className="w-5 h-5 mr-2" />
+            Explore All AI Trends 2025
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </div>
     </section>
