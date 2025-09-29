@@ -921,7 +921,6 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-01-21",
     readMinutes: 11,
   }
-=======
     id: "genai-guardrails-in-production",
     title: "GenAI Guardrails in Production: Policy Tests That Scale",
     summary:
@@ -929,7 +928,8 @@ export const latestInsights: InsightArticle[] = [
     category: "GenAI",
     date: "2025-09-29",
     readMinutes: 8,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-829b
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-40fa
   },
   {
     id: "iot-security-threat-landscape-2025",
