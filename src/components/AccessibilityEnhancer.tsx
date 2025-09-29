@@ -218,7 +218,7 @@ const AccessibilityEnhancer: React.FC = () => {
       )}
 
       {/* CSS for accessibility features */}
-      <style jsx>{`
+      <style>{`
         .high-contrast {
           --bg-primary: #ffffff;
           --bg-secondary: #f8f9fa;
