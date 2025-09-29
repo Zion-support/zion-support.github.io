@@ -1,5 +1,39 @@
 export const newInsights = [
   {
+    id: "ai-platform-roi-scorecards",
+    title: "AI Platform ROI: Simple Scorecards That Drive Adoption",
+    summary: "Connect platform capabilities to adoption, golden paths, and SLO outcomes. Make quarterly cut/scale decisions with evidence.",
+    category: "AI Strategy",
+    date: "2025-10-03",
+    readMinutes: 7,
+    featured: true,
+    tags: ["Platform", "ROI", "Scorecards"],
+    content: `
+      <h2>Why Scorecards Win</h2>
+      <p>Adoption, TTFX on golden paths, and reliability SLOs are the leading signals that predict platform ROI.</p>
+      <h3>Operating Rhythm</h3>
+      <ul>
+        <li>Monthly reviews with owners</li>
+        <li>Red/amber flags with remediation</li>
+        <li>Cut/scale based on evidence deltas</li>
+      </ul>
+    `
+  },
+  {
+    id: "secure-ml-supply-chain",
+    title: "Secure ML Supply Chain: Lineage, SBOMs, and Egress Controls",
+    summary: "Lock down datasets, models, and inference routes with provenance, signed artifacts, and policy checks in CI/CD.",
+    category: "Security",
+    date: "2025-10-03",
+    readMinutes: 6,
+    featured: true,
+    tags: ["Security", "ML", "Supply Chain"],
+    content: `
+      <h2>End-to-End Controls</h2>
+      <p>Track lineage from datasets to deployed models. Enforce policy tests and signed artifacts across the pipeline.</p>
+    `
+  },
+  {
     id: "ai-automation-2025",
     title: "The Future of AI Automation in Enterprise",
     summary: "Discover how AI automation is transforming enterprise operations in 2025, with real-world case studies and implementation strategies.",

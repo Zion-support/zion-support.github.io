@@ -42,9 +42,9 @@ class AccessibilityEnhancer {
     };
   }
 
-  public init(): void {
+  public initialize(): void {
     if (this.isInitialized || typeof window === 'undefined') return;
-
+    
     this.isInitialized = true;
     this.setupKeyboardNavigation();
     this.setupFocusManagement();
@@ -52,11 +52,6 @@ class AccessibilityEnhancer {
     this.setupColorContrast();
     this.setupReducedMotion();
     this.observeAccessibility();
-  }
-
-  public initialize(): void {
-    // Alias for init() to match callers
-    this.init();
   }
 
   private setupKeyboardNavigation(): void {
