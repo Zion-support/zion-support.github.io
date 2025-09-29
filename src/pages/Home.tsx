@@ -29,6 +29,7 @@ import EnhancedServicesShowcase from "../components/EnhancedServicesShowcase";
 import { latestInsights } from "../content/insights";
 import { newInsights, featuredInsights } from "../content/new-insights";
 import LatestInsights from "../components/LatestInsights";
+import { posts } from "../content/posts";
 
 const Home = () => {
   return (
@@ -114,10 +115,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: AI Platform ROI + Secure ML Supply Chain"
-          description="New frameworks on platform ROI and end-to-end ML supply chain security."
+          title="🚀 Fresh: AI Platform ROI, Secure ML Supply Chain, RAG v2, Inference Costs"
+          description="New guides on platform ROI scorecards, end‑to‑end ML supply chain security, upgraded RAG patterns, and serverless inference savings."
           ctaText="Read the latest"
-          ctaLink="/blog/ai-platform-roi-2025"
+          ctaLink="/blog/ai-platform-roi-scorecards-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -700,7 +701,7 @@ const Home = () => {
             <div className="mb-10 flex items-end justify-between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
-                <p className="text-gray-600">Fresh: AI Platform ROI, Secure ML Supply Chain, and Enterprise RAG Blueprint.</p>
+                <p className="text-gray-600">Fresh: Platform ROI, Secure ML Supply Chain, Enterprise RAG v2, Serverless Costs.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
