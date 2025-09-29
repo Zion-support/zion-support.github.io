@@ -22,16 +22,10 @@ import {
   AIRoadmapsBanner,
   AIFinOpsBanner,
   AIMultimodalEnterpriseBanner,
-  AIEnterpriseAutomationBanner,
   AIDataAnalyticsEnterpriseBanner,
   EnterpriseTransformationSuccessBanner,
   HealthcareTransformationBanner,
   NewContent2026Banner,
-  AIAgentOrchestrationBanner,
-  AISustainabilityBanner,
-  QuantumComputingBanner,
-  SustainabilityCaseStudyBanner,
-  QuantumOptimizationBanner,
   AIOperationalExcellenceBanner,
   AIAgentObservabilityBanner,
   ManufacturingTransformationBanner,
@@ -42,19 +36,11 @@ import {
   LatestContent2026Banner,
   AIEthicalFrameworkBanner,
   AIEthicsSuccessBanner,
-  NewContentShowcase2026Banner
+  NewContentShowcase2026Banner,
+  AIAgentReliabilityBanner,
+  AIMultimodalIntegrationBanner,
+  AIEnterpriseAutomationBlueprintBanner
 } from '../components/PromotionalBanner';
-import { 
-  Latest2026ContentBanner,
-  AIAutonomousCloudOpsBanner,
-  AIFinTechTransformationBanner,
-  AIRetailAutomationBanner,
-  AutonomousOperationsBanner,
-  FinOpsAdvancedBanner,
-  PlatformArchitectureBanner,
-  AutonomousOperationsSuccessBanner,
-  NewContentShowcaseBanner2026
-} from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -80,6 +66,10 @@ export default function HomePage() {
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-multimodal-enterprise-integration-2026" className="underline hover:text-yellow-200">Multimodal AI Integration</Link>
             <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-data-contracts-2026" className="underline hover:text-yellow-200">Data Contracts</Link>
+            <span className="hidden md:inline">•</span>
+           <Link href="/blog/ai-go-to-market-2026" className="underline hover:text-yellow-200">AI GTM 2026</Link>
+            <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-ethical-framework-success-2026" className="underline hover:text-yellow-200">Ethics Success Story</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</Link>
@@ -97,9 +87,7 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
-<<<<<<< HEAD
       <Latest2026ContentBanner />
-=======
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
       <AIEthicsSuccessBanner />
@@ -107,24 +95,13 @@ export default function HomePage() {
       <AISecurityEnterprise2026Banner />
       <AIMultimodalEnterprise2026Banner />
       <AISustainabilityTransformationBanner />
-      <NewLatest2026ContentBanner />
->>>>>>> cursor/create-and-deploy-new-content-b529
-      <AIAutonomousCloudOpsBanner />
-      <AIFinTechTransformationBanner />
-      <AIRetailAutomationBanner />
-      <AutonomousOperationsBanner />
-      <FinOpsAdvancedBanner />
-      <PlatformArchitectureBanner />
-      <AutonomousOperationsSuccessBanner />
+      <AIAgentReliabilityBanner />
+      <AIMultimodalIntegrationBanner />
+      <AIEnterpriseAutomationBlueprintBanner />
       <NewContentShowcaseBanner2026 />
       <NewContent2026Banner />
-      <AIAgentOrchestrationBanner />
       <AISustainabilityBanner />
-      <QuantumComputingBanner />
-      <SustainabilityCaseStudyBanner />
-      <QuantumOptimizationBanner />
       <AIMultimodalEnterpriseBanner />
-      <AIEnterpriseAutomationBanner />
       <AIDataAnalyticsEnterpriseBanner />
       <EnterpriseTransformationSuccessBanner />
       <HealthcareTransformationBanner />

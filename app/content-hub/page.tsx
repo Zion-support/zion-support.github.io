@@ -13,6 +13,7 @@ export default function ContentHub() {
       title: 'AI Implementation',
       articles: [
         { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: true },
+        { title: 'AI Data Contracts 2026', slug: '/blog/ai-data-contracts-2026', readTime: '9 min', featured: true },
         { title: 'AI Enterprise Agents Blueprint 2026', slug: '/blog/ai-enterprise-agents-blueprint-2026', readTime: '18 min', featured: true },
         { title: 'AI Agent Observability 2026', slug: '/blog/ai-agent-observability-2026', readTime: '18 min', featured: true },
         { title: 'AI Multimodal Enterprise Solutions 2026', slug: '/blog/ai-multimodal-enterprise-2026', readTime: '15 min', featured: true },
@@ -45,6 +46,7 @@ export default function ContentHub() {
       articles: [
         { title: 'AI Value Stream Analytics 2026', slug: '/blog/ai-value-stream-analytics-2026', readTime: '9 min', featured: true },
         { title: 'AI Customer Data Platforms 2026', slug: '/blog/ai-customer-data-platforms-2026', readTime: '18 min', featured: true },
+        { title: 'AI Go-To-Market 2026', slug: '/blog/ai-go-to-market-2026', readTime: '10 min', featured: true },
         { title: 'AI Trustworthy Agents 2026', slug: '/blog/ai-trustworthy-agents-2026', readTime: '11 min', featured: true },
         { title: 'AI Roadmaps 2026', slug: '/blog/ai-roadmaps-2026', readTime: '8 min', featured: false },
         { title: 'AI Customer Data Platforms 2026', slug: '/blog/ai-customer-data-platforms-2026', readTime: '9 min', featured: true },
