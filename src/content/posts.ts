@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-cost-aware-inference-2026",
+    title: "Cost‑Aware Inference 2026: Warm Pools, Tiers, and SLAs",
+    description: "Cut inference cost 30–60% with adaptive batching, warm pools, and quality tiers under SLAs.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "production-rag-ops-2026",
+    title: "Production RAG Ops 2026: Freshness Windows and Drift Guards",
+    description: "Operate RAG reliably with TTL freshness windows, drift detection, and KPI‑linked budgets.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "9 min read"
+  },
+  {
     slug: "zero-trust-for-genai-2026",
     title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",
     description: "Production patterns: egress control, prompt firewalls, and signed artifacts for safe GenAI.",

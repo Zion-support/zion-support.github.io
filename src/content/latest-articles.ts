@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-cost-aware-inference-2026",
+    slug: "ai-cost-aware-inference-2026",
+    title: "Cost‑Aware Inference 2026: Warm Pools, Tiers, and SLAs",
+    description: "Cut inference cost 30–60% with adaptive batching, warm pools, and quality tiers under SLAs.",
+    excerpt: "Reduce GenAI spend without hurting P95 using warm pools and tiered quality.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["Inference", "Cost", "Optimization"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/serverless-inference-costs.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "production-rag-ops-2026",
+    slug: "production-rag-ops-2026",
+    title: "Production RAG Ops 2026: Freshness Windows and Drift Guards",
+    description: "Operate RAG reliably with TTL freshness windows, drift detection, and KPI‑linked budgets.",
+    excerpt: "Keep answers accurate with freshness windows, drift guards, and quality budgets.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["RAG", "Freshness", "Quality"],
+    featured: false,
+    readTime: "9 min read",
+    image: "/images/reliable-rag-ops-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "zero-trust-for-genai-2026",
     slug: "zero-trust-for-genai-2026",
     title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",
