@@ -1,7 +1,6 @@
 import {
   ArrowRight,
   Award,
-  BookOpen,
   Brain,
   CheckCircle,
   Globe,
@@ -115,10 +114,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🆕 New: LLM Cost Optimization + Edge LLM Latency"
-          description="Cut spend 30–70% and deliver sub-200ms AI UX with proven patterns."
+          title="🚀 Fresh: AI Platform ROI + Secure ML Supply Chain"
+          description="New frameworks on platform ROI and end-to-end ML supply chain security."
           ctaText="Read the latest"
-          ctaLink="/blog/llm-cost-optimization-2025"
+          ctaLink="/blog/ai-platform-roi-2025"
           dismissible={true}
         />
         {/* Animated background elements */}
