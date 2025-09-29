@@ -76,11 +76,16 @@ import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBann
 =======
 =======
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
+<<<<<<< HEAD
+import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
+import LatestContent2026Banner from '../components/LatestContent2026Banner';
+=======
 import { 
   NewContent2026MegaSuccessBanner,
   AICustomerExperienceRevolutionBanner,
   AISustainabilityTransformationBanner
 } from '../components/NewContent2026MegaSuccessBanner';
+>>>>>>> origin/cursor/create-and-deploy-new-content-09f4
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -95,6 +100,33 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
+<<<<<<< HEAD
+            <span>🚀 NEW 2026 Content:</span>
+            <a to="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-synthetic-data-2026" className="underline hover:text-yellow-200">Synthetic Data AI</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-cognitive-computing-2026" className="underline hover:text-yellow-200">Cognitive Computing</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-space-mission-success-2026" className="underline hover:text-yellow-200">Space Mission Success</Link>
+            <span className="hidden md:inline">•</span>
+            <span>🚀 REVOLUTIONARY 2026:</span>
+            <Link href="/blog/ai-2026-ultimate-guide" className="underline hover:text-yellow-200">AI Ultimate Guide</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-next-generation-autonomous-systems-2026" className="underline hover:text-yellow-200">Autonomous Systems</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-2026-mega-breakthroughs" className="underline hover:text-yellow-200">Mega Breakthroughs</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-enterprise-transformation-2026" className="underline hover:text-yellow-200">Enterprise Transformation</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-2026-revolutionary-automation" className="underline hover:text-yellow-200">Revolutionary Automation</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-2026-mega-transformation-success" className="underline hover:text-yellow-200">$50M Success Story</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-revolutionary-automation-success-2026" className="underline hover:text-yellow-200">$8M Success Story</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/case-studies/ai-2026-breakthrough-innovations-success" className="underline hover:text-yellow-200">$15M Breakthrough Success</Link>
+=======
             <Link href="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</Link>
 =======
             <Link href="/blog/ai-metaverse-enterprise-2026" className="underline hover:text-yellow-200">Metaverse Enterprise</Link>
@@ -109,6 +141,7 @@ export default function HomePage() {
             <Link href="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">Sustainability Guide</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-autonomous-infrastructure-2026" className="underline hover:text-yellow-200">Autonomous Infrastructure</Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-09f4
           </div>
           <Link
             href="/blog"
@@ -118,6 +151,15 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
+      {/* Promotional Banners */}
+      <Latest2026ContentBanner />
+      <AIAdvancedAutomationBanner />
+      <AICustomerExperienceRevolutionBanner />
+      <AIQuantumComputingBreakthroughBanner />
+      <AIManufacturingExcellenceBanner />
+      <AIEnterpriseAutomationSuccessBanner />
+=======
       {/* New 2026 Content Promotional Banners */}
       <NewContent2026MegaSuccessBanner />
       <AICustomerExperienceRevolutionBanner />
@@ -137,6 +179,7 @@ export default function HomePage() {
       <LatestContent2026Banner />
       
       {/* Additional Promotional Banners */}
+>>>>>>> origin/cursor/create-and-deploy-new-content-09f4
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
       <AIEthicsSuccessBanner />
