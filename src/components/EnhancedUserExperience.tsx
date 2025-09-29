@@ -52,11 +52,12 @@ const EnhancedUserExperience: React.FC<EnhancedUserExperienceProps> = ({
 
   // Performance tracking
   const _performanceMetrics = usePerformanceTracker((newMetrics: unknown) => {
+      const m = newMetrics as { fps: number; memoryUsage?: number; loadTime: number; errors: number };
       setRealTimeMetrics({
-        fps: newMetrics.fps,
-        memoryUsage: newMetrics.memoryUsage || 0,
-        loadTime: newMetrics.loadTime,
-        errors: newMetrics.errors,
+        fps: m.fps,
+        memoryUsage: m.memoryUsage || 0,
+        loadTime: m.loadTime,
+        errors: m.errors,
       });
     }, {
       interval: 2000,

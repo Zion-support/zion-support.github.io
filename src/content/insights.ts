@@ -85,45 +85,6 @@ export const latestInsights: InsightArticle[] = [
     title: "North‑Star Metrics: A Field Guide",
     summary:
       "A practical approach to defining leading indicators that align teams to outcomes.",
-<<<<<<< HEAD
-    category: "Product Analytics",
-    date: "2025-09-28",
-    readMinutes: 7,
-  },
-  {
-    id: "kubernetes-cost-guardrails",
-    title: "Kubernetes Cost Guardrails That Engineers Don’t Hate",
-    summary:
-      "Limit waste with sensible defaults: requests/limits, QoS, autoscaling, and cost-aware CI policies.",
-    category: "Cloud",
-    date: "2025-09-28",
-    readMinutes: 7,
-  },
-  {
-    id: "ciso-zero-trust-scorecard",
-    title: "A CISO’s Zero‑Trust Scorecard",
-    summary:
-      "Measure progress with identity controls, least privilege, continuous verification, and blast‑radius limits.",
-    category: "Security",
-    date: "2025-09-28",
-    readMinutes: 8,
-  },
-  {
-    id: "zero-trust-sdls",
-    title: "Zero-Trust SDLC: Shipping Secure Software Without Slowing Down",
-    summary:
-      "Embed policy-as-code, automated threat modeling, and continuous verification into delivery workflows.",
-    category: "Security",
-    date: "2025-09-28",
-    readMinutes: 8,
-  },
-  {
-    id: "analytics-ltv-playbook",
-    title: "An Operator’s Playbook for LTV:CPA Ratio",
-    summary:
-      "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
-=======
->>>>>>> origin/main
     category: "Product Analytics",
     date: "2025-09-28",
     readMinutes: 7,
@@ -156,7 +117,6 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 8,
   },
   {
-<<<<<<< HEAD
     id: "ai-workflow-automation-2025-trends",
     title: "AI Workflow Automation: 2025 Trends That Will Transform Business",
     summary:
@@ -290,7 +250,8 @@ export const latestInsights: InsightArticle[] = [
     category: "GenAI",
     date: "2025-09-29",
     readMinutes: 8,
-=======
+  },
+  {
     id: "ai-automation-roi-calculator",
     title: "AI Automation ROI Calculator: Measure Your Business Impact",
     summary:
@@ -334,7 +295,60 @@ export const latestInsights: InsightArticle[] = [
     category: "Security",
     date: "2025-01-21",
     readMinutes: 11,
->>>>>>> cursor/create-and-deploy-new-content-0173
+  },
+  {
+    id: "ai-autonomous-operations-roi",
+    title: "AI Autonomous Operations: Calculating ROI and Business Impact",
+    summary:
+      "How to measure the return on investment from AI autonomous operations, with real-world metrics and case studies.",
+    category: "AI & Automation",
+    date: "2025-01-20",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-cybersecurity-threat-detection",
+    title: "AI-Powered Threat Detection: Beyond Traditional Security",
+    summary:
+      "Advanced AI techniques for detecting sophisticated cyber threats, including behavioral analysis and predictive intelligence.",
+    category: "Security",
+    date: "2025-01-19",
+    readMinutes: 7,
+  },
+  {
+    id: "cloud-native-architecture-patterns",
+    title: "Cloud-Native Architecture Patterns for 2025",
+    summary:
+      "Essential patterns for building scalable, resilient cloud-native applications in modern environments.",
+    category: "Architecture",
+    date: "2025-01-18",
+    readMinutes: 8,
+  },
+  {
+    id: "enterprise-ai-governance-checklist",
+    title: "Enterprise AI Governance: A Practical Checklist",
+    summary:
+      "Step-by-step checklist for implementing AI governance in enterprise environments, covering policy, risk, and compliance.",
+    category: "AI Governance",
+    date: "2025-01-17",
+    readMinutes: 5,
+  },
+  {
+    id: "microservices-resilience-patterns",
+    title: "Microservices Resilience Patterns: Building Fault-Tolerant Systems",
+    summary:
+      "Essential patterns for building resilient microservices architectures that can handle failures gracefully.",
+    category: "Architecture",
+    date: "2025-01-16",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-model-deployment-best-practices",
+    title: "AI Model Deployment: Production-Ready Best Practices",
+    summary:
+      "Critical considerations for deploying AI models in production, including monitoring, versioning, and rollback strategies.",
+    category: "MLOps",
+    date: "2025-01-15",
+    readMinutes: 7,
   },
 ];
 

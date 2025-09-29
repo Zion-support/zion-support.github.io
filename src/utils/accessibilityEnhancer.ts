@@ -59,7 +59,7 @@ class AccessibilityEnhancer {
 
     document.addEventListener('keydown', (event) => {
       // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && document.activeElement === document.body) {
+      if ((event as KeyboardEvent).key === 'Tab' && (event as KeyboardEvent).shiftKey && document.activeElement === document.body) {
         const skipLink = document.querySelector('[data-skip-link]') as HTMLElement;
         if (skipLink) {
           skipLink.focus();
@@ -68,7 +68,7 @@ class AccessibilityEnhancer {
       }
 
       // Escape key handling
-      if (event.key === 'Escape') {
+      if ((event as KeyboardEvent).key === 'Escape') {
         const modal = document.querySelector('[role="dialog"][aria-hidden="false"]') as HTMLElement;
         if (modal) {
           this.closeModal(modal);
@@ -76,10 +76,10 @@ class AccessibilityEnhancer {
       }
 
       // Arrow key navigation for menus
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      if ((event as KeyboardEvent).key === 'ArrowDown' || (event as KeyboardEvent).key === 'ArrowUp') {
         const menu = document.querySelector('[role="menu"]:focus-within');
         if (menu) {
-          this.handleMenuNavigation(event, menu);
+          this.handleMenuNavigation(event as KeyboardEvent, menu as HTMLElement);
         }
       }
     });
@@ -90,10 +90,10 @@ class AccessibilityEnhancer {
 
     // Trap focus in modals
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Tab') {
+      if ((event as KeyboardEvent).key === 'Tab') {
         const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
         if (modal) {
-          this.trapFocus(event, modal);
+          this.trapFocus(event as KeyboardEvent, modal as HTMLElement);
         }
       }
     });
@@ -125,8 +125,9 @@ class AccessibilityEnhancer {
     // Add role attributes where needed
     const clickableElements = document.querySelectorAll('[onclick], [data-action]');
     clickableElements.forEach(element => {
-      if (!element.getAttribute('role')) {
-        element.setAttribute('role', 'button');
+      const el = element as HTMLElement;
+      if (!el.getAttribute('role')) {
+        el.setAttribute('role', 'button');
       }
     });
   }
@@ -139,7 +140,8 @@ class AccessibilityEnhancer {
     const contrastIssues: string[] = [];
 
     elements.forEach(element => {
-      const computedStyle = window.getComputedStyle(element);
+      const el = element as HTMLElement;
+      const computedStyle = window.getComputedStyle(el);
       const color = computedStyle.color;
       const backgroundColor = computedStyle.backgroundColor;
       
@@ -148,7 +150,7 @@ class AccessibilityEnhancer {
         const requiredRatio = this.config.colorContrast === 'AAA' ? 7 : 4.5;
         
         if (ratio < requiredRatio) {
-          contrastIssues.push(`Low contrast on ${element.tagName}: ${ratio.toFixed(2)}:1`);
+          contrastIssues.push(`Low contrast on ${el.tagName}: ${ratio.toFixed(2)}:1`);
         }
       }
     });
@@ -195,12 +197,13 @@ class AccessibilityEnhancer {
     });
 
     // Monitor aria-label changes
-    const observer = new (window as any).MutationObserver((mutations: any) => {
-      mutations.forEach((mutation) => {
+    const observer = new (window as any).MutationObserver((mutations: MutationRecord[]) => {
+      mutations.forEach((mutation: MutationRecord) => {
         if (mutation.type === 'attributes' && mutation.attributeName === 'aria-label') {
-          const element = mutation.target as HTMLElement;
-          if (!element.getAttribute('aria-label')) {
-            console.warn('Element lost aria-label:', element);
+          const element = mutation.target as Element;
+          const el = element as HTMLElement;
+          if (!el.getAttribute('aria-label')) {
+            console.warn('Element lost aria-label:', el);
           }
         }
       });
@@ -212,7 +215,7 @@ class AccessibilityEnhancer {
     });
   }
 
-  private handleMenuNavigation(event: Event, menu: HTMLElement): void {
+  private handleMenuNavigation(event: KeyboardEvent, menu: HTMLElement): void {
     const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]'));
     const currentIndex = menuItems.indexOf(document.activeElement as HTMLElement);
     
@@ -229,7 +232,7 @@ class AccessibilityEnhancer {
     event.preventDefault();
   }
 
-  private trapFocus(event: Event, modal: HTMLElement): void {
+  private trapFocus(event: KeyboardEvent, modal: HTMLElement): void {
     const focusableElements = modal.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
@@ -303,8 +306,9 @@ class AccessibilityEnhancer {
     // Check for missing alt attributes
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-      if (!img.getAttribute('alt')) {
-        issues.push(`Image missing alt attribute: ${img.src}`);
+      const imageEl = img as HTMLImageElement;
+      if (!imageEl.getAttribute('alt')) {
+        issues.push(`Image missing alt attribute: ${imageEl.src}`);
         recommendations.push('Add descriptive alt text to images');
       }
     });
