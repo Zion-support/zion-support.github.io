@@ -49,6 +49,16 @@ const contentHighlights = [
     badge: "Case Study",
     stats: "15 min read",
     variant: "premium" as const
+  },
+  {
+    id: 5,
+    title: "🧪 NEW: Agent Telemetry – What to Trace",
+    description: "From tool call spans to prompt metadata—debug and improve agents faster",
+    ctaText: "See Guide",
+    ctaLink: "/blog/agent-telemetry-traces-2025",
+    badge: "New",
+    stats: "5 min read",
+    variant: "info" as const
   }
 ];
 
