@@ -21,6 +21,7 @@ import {
   Award,
   DollarSign,
   Calendar,
+  Calculator,
   Play,
   Download,
   FileText,
