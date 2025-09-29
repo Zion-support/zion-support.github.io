@@ -3,32 +3,22 @@ import { AppRouter } from './router';
 import { useAppInitialization } from './hooks/useAppInitialization';
 import { ModernLoadingSpinner } from './components/ModernLoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { seoAnalytics, performanceSEO, seoManager } from './utils/seoEnhanced';
+import { seoAnalytics, performanceSEO } from './utils/seoEnhanced';
 import { analytics } from './utils/analytics';
-import { performanceOptimizer } from './utils/performanceOptimizations';
-import { accessibilityEnhancer } from './utils/accessibilityEnhancements';
-import { seoOptimizer } from './utils/seoOptimizations';
-import PerformanceDashboard from './components/PerformanceDashboard';
-import RealTimeMonitor from './components/RealTimeMonitor';
-import SystemMetricsDashboard from './components/SystemMetricsDashboard';
+import { useSEOData } from './components/SEOOptimizer';
+import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
+import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
+import { enhancedAccessibilityManager } from './utils/enhancedAccessibilityManager';
+import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
+import { advancedErrorRecoverySystem } from './utils/advancedErrorRecoverySystem';
+import { advancedCachingSystem } from './utils/advancedCachingSystem';
+import { advancedSecurityManager } from './utils/advancedSecurityManager';
 import EnhancedSystemDashboard from './components/EnhancedSystemDashboard';
 import EnhancedNotificationSystem from './components/EnhancedNotificationSystem';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import AIPerformanceDashboard from './components/AIPerformanceDashboard';
-import { SEOOptimizer } from './components/SEOOptimizer';
-import EnhancedAnalytics from './components/EnhancedAnalytics';
-import { getComprehensiveEnhancements } from './utils/comprehensiveEnhancements';
-import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
-import { enhancedAnalytics } from './utils/enhancedAnalytics';
-import { advancedCacheSystem } from './utils/advancedCacheSystem';
-import { AdvancedAutomationSystem } from './utils/advancedAutomationSystem';
-import { AccessibilityEnhancer } from './utils/accessibilityEnhancer';
-import { SecurityEnhancer } from './utils/securityEnhancer';
-
-// Lazy load heavy components for better performance
-const PerformanceMetrics = lazy(() => import('./components/PerformanceMetrics'));
-
+import SEOOptimizer from './components/SEOOptimizer';
+import ComprehensiveSystemDashboard from './components/ComprehensiveSystemDashboard';
 import './index.css';
 import './styles/notifications.css';
 import './styles/system-metrics.css';
@@ -40,16 +30,13 @@ export default function App(): React.JSX.Element {
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [showAIDashboard, setShowAIDashboard] = useState(false);
   const [showSEOOptimizer, setShowSEOOptimizer] = useState(false);
-  const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
-  const [showPerformanceMetrics, setShowPerformanceMetrics] = useState(false);
-  const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
-  
-  // Performance metrics state
-  const [performanceMetrics, setPerformanceMetrics] = useState({
-    memoryUsage: 0,
-    renderTime: 0,
-    networkLatency: 0,
-    errorCount: 0
+  const [showComprehensiveDashboard, setShowComprehensiveDashboard] = useState(false);
+  const [isDarkMode] = useState(false);
+  const [userPreferences] = useState({
+    theme: 'auto',
+    animations: true,
+    notifications: true,
+    analytics: true
   });
 
   // Engagement tracking data
@@ -100,11 +87,8 @@ export default function App(): React.JSX.Element {
         case 'S':
           setShowSEOOptimizer(prev => !prev);
           break;
-        case 'B':
-          setShowPerformanceDashboard(prev => !prev);
-          break;
-        case 'R':
-          setShowPerformanceMetrics(prev => !prev);
+        case 'C':
+          setShowComprehensiveDashboard(prev => !prev);
           break;
         case 'T':
           // Theme toggle functionality can be added here
@@ -116,8 +100,7 @@ export default function App(): React.JSX.Element {
           setShowPerformanceMonitor(false);
           setShowAIDashboard(false);
           setShowSEOOptimizer(false);
-          setShowPerformanceMetrics(false);
-          setShowRealTimeMetrics(false);
+          setShowComprehensiveDashboard(false);
           break;
       }
     }
@@ -201,6 +184,16 @@ export default function App(): React.JSX.Element {
     // Update meta tags
     updateMetaTags(seoData);
 
+    // Initialize enhanced monitoring systems
+    enhancedPerformanceMonitor.getAlerts();
+    enhancedAccessibilityManager.getIssues();
+    enhancedSEOOptimizer.getIssues();
+
+    // Initialize advanced systems
+    advancedErrorRecoverySystem.getErrorReports();
+    advancedCachingSystem.getStatistics();
+    advancedSecurityManager.getSecurityMetrics();
+
     // Basic performance monitoring
     if (typeof window !== 'undefined') {
       console.log('🚀 Zion Tech Group App initialized');
@@ -262,7 +255,7 @@ export default function App(): React.JSX.Element {
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [handleScroll, handleClick, handleKeyDown, seoData, updateMetaTags, enhancedTrackEngagement]);
+  }, [handleScroll, handleClick, handleKeyDown, seoData, preloadResource, updateMetaTags, enhancedTrackEngagement, seoManager]);
 
   // Real-time performance metrics monitoring
   useEffect(() => {
@@ -369,13 +362,25 @@ export default function App(): React.JSX.Element {
           </div>
         )}
 
-        {/* AI Performance Dashboard */}
-        <Suspense fallback={<ModernLoadingSpinner />}>
-          <AIPerformanceDashboard
-            isVisible={showAIDashboard}
-            onClose={() => setShowAIDashboard(false)}
-          />
-        </Suspense>
+        {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
+        {showAIDashboard && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">AI Performance Dashboard</h2>
+                <button
+                  onClick={() => setShowAIDashboard(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <div className="text-gray-600">
+                AI Performance Dashboard content will be implemented here.
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Performance Dashboard */}
         <PerformanceDashboard
@@ -400,67 +405,70 @@ export default function App(): React.JSX.Element {
           </Suspense>
         )}
 
-        {/* Real-time Metrics Display */}
-        {showRealTimeMetrics && (
-          <div className="fixed top-4 right-4 z-50 bg-black bg-opacity-90 text-white p-4 rounded-lg shadow-lg min-w-[300px]">
-            <div className="flex justify-between items-center mb-3">
-              <h3 className="text-lg font-bold">Real-time Metrics</h3>
-              <button
-                onClick={() => setShowRealTimeMetrics(false)}
-                className="text-gray-300 hover:text-white text-xl"
-              >
-                ✕
-              </button>
-            </div>
-            <div className="space-y-2 text-sm">
-              <div className="flex justify-between">
-                <span>Memory Usage:</span>
-                <span className="text-green-400">{performanceMetrics.memoryUsage} MB</span>
+        {/* Performance Monitor - Toggle with Ctrl+Shift+M */}
+        <PerformanceMonitor 
+          showDashboard={showPerformanceMonitor}
+          onMetricsUpdate={(metrics) => {
+            console.log('Performance metrics:', metrics);
+          }}
+        />
+        
+        {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
+        {showAIDashboard && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">AI Performance Dashboard</h2>
+                <button
+                  onClick={() => setShowAIDashboard(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
               </div>
-              <div className="flex justify-between">
-                <span>Render Time:</span>
-                <span className="text-blue-400">{performanceMetrics.renderTime} ms</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Network Latency:</span>
-                <span className="text-yellow-400">{performanceMetrics.networkLatency} ms</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Errors:</span>
-                <span className="text-red-400">{performanceMetrics.errorCount}</span>
+              <div className="text-gray-600">
+                AI Performance Dashboard content will be implemented here.
               </div>
             </div>
           </div>
         )}
 
-        {/* Keyboard shortcuts help */}
-        <div className="fixed bottom-4 right-4 bg-black/80 text-white text-xs p-3 rounded-lg opacity-50 hover:opacity-100 transition-opacity">
-          <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
-          <div>Ctrl+Shift+D: System Dashboard</div>
-          <div>Ctrl+Shift+P: Performance Optimizer</div>
-          <div>Ctrl+Shift+M: Performance Monitor</div>
-          <div>Ctrl+Shift+R: Performance Metrics</div>
-          <div>Ctrl+Shift+A: AI Dashboard</div>
-          <div>Ctrl+Shift+S: SEO Optimizer</div>
-          <div>Ctrl+Shift+T: Toggle Theme</div>
-          <div>Escape: Close All</div>
-        </div>
+        {/* SEO Optimizer Dashboard - Toggle with Ctrl+Shift+S */}
+        {showSEOOptimizer && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">SEO Optimizer</h2>
+                <button
+                  onClick={() => setShowSEOOptimizer(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <SEOOptimizer seoData={seoData} />
+            </div>
+          </div>
+        )}
+
+        {/* Comprehensive System Dashboard - Toggle with Ctrl+Shift+C */}
+        {showComprehensiveDashboard && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-7xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold text-gray-900">Comprehensive System Dashboard</h2>
+                <button
+                  onClick={() => setShowComprehensiveDashboard(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+              <ComprehensiveSystemDashboard />
+            </div>
+          </div>
+        )}
       </div>
-      
-      <PerformanceDashboard />
-      <RealTimeMonitor />
-      <SystemMetricsDashboard 
-        isVisible={showSystemDashboard}
-        onClose={() => setShowSystemDashboard(false)}
-      />
-      <EnhancedNotificationSystem 
-        position="top-right"
-        enableAnimations
-        enableAccessibility
-        maxNotifications={5}
-      />
-      <SEOOptimizer seoData={seoData} />
-      <EnhancedAnalytics />
     </EnhancedErrorBoundary>
   );
 }
