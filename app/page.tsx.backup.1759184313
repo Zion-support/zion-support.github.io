@@ -59,7 +59,14 @@ import {
   AIManufacturingExcellenceBanner,
   AIEnterpriseAutomationSuccessBanner
 } from '../components/NewContent2026Banners';
+<<<<<<< HEAD
+import AITrends2025Banner from '../src/components/AITrends2025Banner';
+import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBanner';
+import AIROICalculator from '../src/components/AIROICalculator';
+import EnhancedAIROICalculator from '../components/EnhancedAIROICalculator';
+=======
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+>>>>>>> origin/cursor/create-and-deploy-new-content-63d1
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -119,6 +126,25 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
+      {/* New 2026 Content Promotional Banners */}
+      <NewContent2026MegaSuccessBanner />
+      <AICustomerExperienceRevolutionBanner />
+      <AISustainabilityTransformationBanner />
+      <RevolutionaryAutomationBanner />
+      <AIRevolutionaryAutomationBanner />
+      <AICostOptimizationBanner />
+      <NewContent2026PromotionalBanner />
+      <AIInnovation2026Banner />
+      <SuccessStory2026Banner />
+      <AIRevolution2026Banner />
+      <AIAutonomousInfrastructureBanner />
+      <AIQuantumComputingBanner />
+      <AITransformationSuccessBanner />
+      <AIZeroTrustSecurityBanner />
+      <AIFoundationModelsBanner />
+      <LatestContent2026Banner />
+=======
       {/* Revolutionary 2026 Content Banner */}
       <Revolutionary2026ContentBanner />
       
@@ -126,6 +152,7 @@ export default function HomePage() {
       <NeuralInterfacesBanner />
       <SpaceTechBanner />
       <SyntheticDataBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-63d1
       
       {/* Additional Promotional Banners */}
       <NewContentShowcase2026Banner />
