@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-incident-response-playbooks-2025",
+    slug: "ai-incident-response-playbooks-2025",
+    title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
+    description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
+    excerpt: "Design incident playbooks with budgeted actions, approvals, and telemetry that close the loop fast.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Cybersecurity",
+    tags: ["IR", "Automation", "Guardrails"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-incident-response-playbooks-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-preserving-analytics-2025",
+    slug: "privacy-preserving-analytics-2025",
+    title: "Privacy‑Preserving Analytics: Ship Insights Without PII Risk",
+    description: "On-device redaction, scoped IDs, and DP noise for compliant, decision-grade telemetry.",
+    excerpt: "A practical blueprint for analytics that respect privacy while keeping signals rich.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Observability",
+    tags: ["Privacy", "Telemetry", "Compliance"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/privacy-preserving-analytics-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "platform-engineering-scorecards-2026",
     slug: "platform-engineering-scorecards-2026",
     title: "Platform Engineering Scorecards 2026: Golden Paths that Drive Outcomes",
