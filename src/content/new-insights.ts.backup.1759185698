@@ -342,8 +342,12 @@ export const newInsights = [
       <li>Adoption by team and product</li>
     </ul>
   `
+<<<<<<< HEAD
+  },
+=======
   }),
 
+>>>>>>> origin/cursor/create-and-deploy-new-content-9d1b
   {
     id: "ai-cybersecurity-automation-2025",
     title: "AI Cybersecurity Automation: From Detections to Autonomic Response",

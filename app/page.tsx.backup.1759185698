@@ -38,6 +38,9 @@ import {
   AIEthicsSuccessBanner,
   NewContentShowcase2026Banner
 } from '../components/PromotionalBanner';
+<<<<<<< HEAD
+import LatestContent2026Banner from '../components/LatestContent2026Banner';
+=======
 import { 
   AIAutonomousCloudOpsBanner,
   AIFinTechTransformationBanner,
@@ -56,6 +59,7 @@ import {
   AIFoundationModelsBanner,
   LatestContent2026Banner
 } from '../components/NewContent2026PromotionalBanners';
+>>>>>>> origin/cursor/create-and-deploy-new-content-9d1b
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
