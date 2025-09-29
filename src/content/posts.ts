@@ -25,7 +25,7 @@ export const posts: BlogPost[] = [
     category: "Strategy",
     publishedAt: "2025-10-04",
     featured: true,
-    readTime: "9 min read"
+    readTime: "9 min",
   },
   {
     slug: "cloud-native-ai-platforms-2025",
