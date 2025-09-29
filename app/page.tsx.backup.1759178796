@@ -36,8 +36,13 @@ import {
   AIAgentObservabilityBanner,
   ManufacturingTransformationBanner
 } from '../components/PromotionalBanner';
+<<<<<<< HEAD
+import { 
+  Latest2026ContentBanner as NewLatest2026ContentBanner,
+=======
 import {
   Latest2026ContentBanner,
+>>>>>>> origin/cursor/create-and-deploy-new-content-d328
   AIAutonomousCloudOpsBanner,
   AIFinTechTransformationBanner,
   AIRetailAutomationBanner
@@ -88,9 +93,15 @@ export default function HomePage() {
       <AIMultimodalEnterpriseBanner />
       <AISustainabilityTransformationBanner />
       <Latest2026ContentBanner />
+<<<<<<< HEAD
+      <AIAutonomousCloudOpsBanner />
+      <AIFinTechTransformationBanner />
+      <AIRetailAutomationBanner />
+=======
       <AIOperationalExcellenceBanner />
       <AIAgentObservabilityBanner />
       <ManufacturingTransformationBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-d328
       <NewContent2026Banner />
       {/* Additional banners are available; showing a curated subset here */}
       <AIMultimodalEnterpriseBanner />
@@ -940,6 +951,9 @@ export default function HomePage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">Stay ahead with our latest content, case studies, and AI innovations</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+<<<<<<< HEAD
+ 
+=======
             <Link href="/blog/ai-innovation-2026-roadmap" className="group">
 =======
             <Link href="/blog/agentic-workflow-orchestration-2026" className="group">
@@ -960,6 +974,7 @@ export default function HomePage() {
               </div>
             </Link>
             <Link href="/blog/ai-autonomous-operations-2026" className="group">
+>>>>>>> origin/cursor/create-and-deploy-new-content-d328
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -976,6 +991,12 @@ export default function HomePage() {
                 <div className="flex items-center text-blue-600 font-semibold">Read Roadmap →</div>
               </div>
             </Link>
+<<<<<<< HEAD
+            <Link href="/case-studies/ai-innovation-enterprise-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+=======
             <Link href="/blog/ai-finops-advanced-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -1124,6 +1145,7 @@ export default function HomePage() {
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
+>>>>>>> origin/cursor/create-and-deploy-new-content-d328
                     NEW Case Study
                   </span>
                   <span className="text-sm text-gray-500">Fortune 500</span>
@@ -1134,9 +1156,13 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   See how a Fortune 500 company achieved $12M ROI with comprehensive AI innovation. 95% automation, 99.9% uptime.
                 </p>
+<<<<<<< HEAD
+                <div className="flex items-center text-blue-600 font-semibold">View Case Study →</div>
+=======
                 <div className="flex items-center text-blue-600 font-semibold">
                   View Case Study →
                 </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-d328
               </div>
             </Link>
             <Link href="/blog/agentic-workflow-orchestration-2026" className="group">
@@ -1153,6 +1179,9 @@ export default function HomePage() {
             <Link href="/blog/ai-go-to-market-plays-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
+<<<<<<< HEAD
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">New 2026 Guide</span>
+=======
                   <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
                     New Case Study
                   </span>
@@ -1268,6 +1297,7 @@ export default function HomePage() {
                   <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
                     New Article
                   </span>
+>>>>>>> origin/cursor/create-and-deploy-new-content-d328
                   <span className="text-sm text-gray-500">12 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">AI Go-To-Market Plays 2026: Enterprise Adoption that Sticks</h3>

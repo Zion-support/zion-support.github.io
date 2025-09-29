@@ -19,6 +19,36 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-platform-cost-optimization-2026',
+    title: 'AI Platform Cost Optimization 2026: Cut Spend 30–70% Safely',
+    excerpt: 'Scorecards, routing, caching, quantization, and guardrails to control AI platform costs without slowing product teams.',
+    type: 'article',
+    readTime: '12 min read',
+    category: 'FinOps',
+    href: '/blog/ai-platform-cost-optimization-2026',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '30–70%', label: 'Cost Reduction' },
+      { value: '<200ms', label: 'P95 Latency' }
+    ]
+  },
+  {
+    id: 'ai-agent-evaluations-2026',
+    title: 'AI Agent Evaluations 2026: Evals, Sandboxes, and Scorecards',
+    excerpt: 'Ship reliable agents with scenario evals, safety sandboxes, and business outcome scorecards wired to CI.',
+    type: 'article',
+    readTime: '10 min read',
+    category: 'AI Reliability',
+    href: '/blog/ai-agent-evaluations-2026',
+    featured: true,
+    publishedDate: '2025-09-29',
+    metrics: [
+      { value: '99.7%', label: 'On-policy Actions' },
+      { value: '24x7', label: 'Monitoring' }
+    ]
+  },
+  {
     id: 'ai-trustworthy-agents-2026',
     title: 'Trustworthy AI Agents 2026: Safety, Compliance, and Observability',
     excerpt: 'Deploy trustworthy AI agents with guardrails, approvals, and end-to-end observability.',
