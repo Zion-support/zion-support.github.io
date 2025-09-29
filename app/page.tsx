@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { 
-  NewBlogBanner, 
-  AnalyticsPlatformBanner, 
+import {
+  NewBlogBanner,
+  AnalyticsPlatformBanner,
   TechCorpSuccessBanner,
   WorkflowAutomationBanner,
   AIAnalyticsBanner,
@@ -75,7 +75,6 @@ export default function HomePage() {
       <AIDataAnalyticsEnterpriseBanner />
       <EnterpriseTransformationSuccessBanner />
       <HealthcareTransformationBanner />
-      {/* Using only existing banners */}
       <NewContentShowcaseBanner />
       <AIRoadmapsBanner />
       <AIFinOpsBanner />
