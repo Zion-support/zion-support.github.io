@@ -8,15 +8,12 @@ import { AppRouter } from './router';
 // import { structuredDataManager } from './seo/structuredDataManager';
 // import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
 // import { screenReaderSupport } from './accessibility/screenReaderSupport';
-<<<<<<< HEAD
 import './index.css';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import SEOOptimizer from './components/SEOOptimizer';
 import type { Notification as UILibraryNotification } from './components/NotificationSystem';
-=======
->>>>>>> origin/main
 import AdvancedAnalytics from './components/AdvancedAnalytics';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import NotificationSystem from './components/NotificationSystem';
