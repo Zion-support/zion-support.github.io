@@ -69,8 +69,13 @@ import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBann
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
+<<<<<<< HEAD
+import NewContent2026Banner from '../components/NewContent2026Banner';
+import NewContent2026Showcase from '../components/NewContent2026Showcase';
+=======
 import NewContent2026FeaturedBanner from '../components/NewContent2026FeaturedBanner';
 import LatestBreakthroughContent2026 from '../components/LatestBreakthroughContent2026';
+>>>>>>> origin/cursor/create-and-deploy-new-content-f4b1
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 2026 AI Solutions',

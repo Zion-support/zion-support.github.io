@@ -91,8 +91,13 @@ export default function ContentHub2026() {
         {/* Featured Content */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Content</h2>
+<<<<<<< HEAD
+          <div className="grid lg:grid-cols-2 gap-8">
+            <Link href="/blog/ai-innovation-2026-comprehensive-guide" className="group">
+=======
           <div className="grid lg:grid-cols-3 gap-8">
             <Link href="/blog/ai-enterprise-transformation-2026" className="group">
+>>>>>>> origin/cursor/create-and-deploy-new-content-f4b1
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200 hover:border-indigo-200">
                 <div className="relative h-64 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600">
                   <div className="absolute inset-0 bg-black opacity-20"></div>
