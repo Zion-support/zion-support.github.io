@@ -14,57 +14,6 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-<<<<<<< HEAD
-    slug: "genai-telemetry-observability-2025",
-    title: "GenAI Telemetry: What to Measure in 2025",
-    description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
-    content: `
-# GenAI Telemetry: What to Measure in 2025
-
-Operationalize GenAI with observability that tracks quality, safety, and cost. Learn the critical signals, dashboards, and alerting strategies that prevent regressions and runaway bills.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "GenAI",
-    tags: ["Observability", "Telemetry", "Guardrails", "Quality"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/genai-telemetry.jpg"
-  },
-  {
-    slug: "feature-flags-at-the-edge-2025",
-    title: "Feature Flags at the Edge: Instant, Safe Rollouts",
-    description: "Design flags for global low-latency delivery, safe rollbacks, and cohort experimentation.",
-    content: `
-# Feature Flags at the Edge: Instant, Safe Rollouts
-
-Architect global feature delivery with edge caching, signed payloads, and cohort targeting to ship faster with confidence.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-28",
-    category: "Architecture",
-    tags: ["Edge", "Flags", "Rollouts", "CD"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/edge-feature-flags.jpg"
-  },
-  {
-    slug: "ai-product-readiness-checks",
-    title: "AI Product Readiness: Pre‑Launch Checks That Matter",
-    description: "From eval gates to safety reviews—everything to validate before shipping AI to users.",
-    content: `
-# AI Product Readiness: Pre‑Launch Checks That Matter
-
-Use this concise pre‑launch checklist to ensure your AI features meet quality, safety, and reliability bars before release.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-27",
-    category: "Product",
-    tags: ["Product", "Launch", "Governance"],
-    featured: true,
-    readTime: "5 min read",
-    image: "/images/ai-product-readiness.jpg"
-=======
     slug: "genai-evals-in-production-2025",
     title: "GenAI Evals in Production: Policy Tests That Scale",
     description: "From offline suites to online canaries: patterns that keep quality high as usage grows.",
@@ -133,7 +82,6 @@ Avoid vanity KPIs, ambiguous definitions, and missing instrumentation. Replace w
     featured: true,
     readTime: "6 min read",
     image: "/images/north-star-anti-patterns.jpg"
->>>>>>> origin/main
   },
   {
     slug: "real-time-data-pipelines-2025",
