@@ -72,6 +72,54 @@ export interface PromotionalBanner {
 // Blog Posts Configuration
 export const blogPosts: BlogPost[] = [
   {
+    id: 'ai-platform-engineering-2025',
+    title: 'AI Platform Engineering 2025: Scorecards, Trains, and Golden Paths',
+    excerpt: 'Practical platform patterns that link capabilities to adoption, SLOs, and ROI.',
+    date: 'October 8, 2025',
+    category: 'Platform Engineering',
+    readTime: '9 min',
+    image: '🛤️',
+    featured: true,
+    slug: '/blog/ai-platform-engineering-2025',
+    tags: ['Platform', 'ROI', 'Golden Paths']
+  },
+  {
+    id: 'serverless-inference-cost-playbook-2025',
+    title: 'Serverless Inference Cost Playbook: Latency Budgets Without Bill Shock',
+    excerpt: 'Concurrency shaping, tiered models, and result caching to cut spend 35–60%.',
+    date: 'October 8, 2025',
+    category: 'GenAI',
+    readTime: '8 min',
+    image: '🧰',
+    featured: true,
+    slug: '/blog/serverless-inference-cost-playbook-2025',
+    tags: ['GenAI', 'Cost', 'Serverless']
+  },
+  {
+    id: 'cloud-finops-guardrails-2025',
+    title: 'Cloud FinOps Guardrails Engineers Actually Use',
+    excerpt: 'PR checks, budgets, and alerts that reduce waste while keeping teams fast.',
+    date: 'October 8, 2025',
+    category: 'Cloud',
+    readTime: '7 min',
+    image: '💸',
+    featured: true,
+    slug: '/blog/cloud-finops-guardrails-2025',
+    tags: ['Cloud', 'FinOps', 'Guardrails']
+  },
+  {
+    id: 'enterprise-rag-v2-2025',
+    title: 'Enterprise RAG v2: Freshness Windows, Guardrails, and KPIs',
+    excerpt: 'Design RAG that stays accurate with freshness TTLs, evals, and safe tools.',
+    date: 'October 8, 2025',
+    category: 'GenAI',
+    readTime: '9 min',
+    image: '🏢',
+    featured: true,
+    slug: '/blog/enterprise-rag-v2-2025',
+    tags: ['GenAI', 'RAG', 'Evaluation']
+  },
+  {
     id: 'ai-revolution-2025',
     title: 'AI Revolution 2025: The Complete Business Transformation Guide',
     excerpt: 'Discover how AI is reshaping industries and creating unprecedented opportunities for growth in 2025.',
@@ -381,15 +429,15 @@ export const services: Service[] = [
 // Promotional Banners Configuration
 export const promotionalBanners: PromotionalBanner[] = [
   {
-    id: 'new-oct-2025-content-banner',
-    message: '✨ New: AI Incident Response, Observability Scorecards, Privacy‑Preserving RAG',
-    ctaText: 'Read the latest',
+    id: 'fresh-oct-8-2025',
+    message: '✨ New: AI Platform Engineering, Serverless Cost Playbook, Cloud FinOps Guardrails',
+    ctaText: 'Read now',
     ctaLink: '/blog',
     backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
     textColor: 'text-white',
     showClose: true,
     autoHide: true,
-    hideAfter: 15,
+    hideAfter: 20,
     active: true,
     priority: 0
   },

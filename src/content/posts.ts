@@ -19,6 +19,51 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
+    slug: "ai-platform-engineering-2025",
+    title: "AI Platform Engineering 2025: Scorecards, Trains, and Golden Paths",
+    description: "Practical platform patterns that link capabilities to adoption, SLOs, and ROI.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "serverless-inference-cost-playbook-2025",
+    title: "Serverless Inference Cost Playbook: Latency Budgets Without Bill Shock",
+    description: "Concurrency shaping, tiered models, and result caching to cut spend 35–60%.",
+    category: "GenAI",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "cloud-finops-guardrails-2025",
+    title: "Cloud FinOps Guardrails Engineers Actually Use",
+    description: "PR checks, budgets, and alerts that reduce waste while keeping teams fast.",
+    category: "Cloud",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "enterprise-rag-v2-2025",
+    title: "Enterprise RAG v2: Freshness Windows, Guardrails, and KPIs",
+    description: "Design RAG that stays accurate with freshness TTLs, evals, and safe tools.",
+    category: "GenAI",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-flags-blueprint-2026",
+    title: "Edge Flags Blueprint 2026: <100ms Global Releases",
+    description: "Consistency, rollout strategies, and instant rollback with edge compute and KV.",
+    category: "Architecture",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "platform-observability-scorecards-2026",
     title: "Platform Observability Scorecards: Tie Telemetry to Business Outcomes",
     description: "Connect traces, errors, and latency to adoption, retention, and revenue with actionable scorecards.",
@@ -89,8 +134,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
-  }
-  ,
+  },
   {
     slug: "secure-agents-runtime-2026",
     title: "Secure AI Agents Runtime: Sandboxes, Egress Policies, and Traces",
@@ -118,6 +162,7 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "6 min read"
   },
+  {
     slug: "ai-governance-blueprint-2025",
     title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
     description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.",
@@ -134,8 +179,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-29",
     featured: false,
     readTime: "8 min read"
-  }
-  ,
+  },
   {
     slug: "ai-governance-scorecards-2026",
     title: "AI Governance 2026: Scorecards Engineers Actually Use",
@@ -153,8 +197,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-07",
     featured: true,
     readTime: "8 min read"
-  }
-  ,
+  },
   {
     slug: "ai-platform-roadmaps-2026",
     title: "AI Product Roadmaps 2026: From Bet to Business Impact",
@@ -181,54 +224,33 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-06",
     featured: false,
     readTime: "6 min read"
-  }
-  ,
+  },
   {
     slug: "genai-platform-blueprint-2025",
     title: "GenAI Platform Blueprint: Shipping Weekly With Guardrails",
-    description:
-      "Reference architecture for prompts, tools, evals, and policy tests that let teams move fast safely.",
+    description: "Reference architecture for prompts, tools, evals, and policy tests that let teams move fast safely.",
     category: "GenAI",
     publishedAt: "2025-09-29",
     featured: true,
-    readTime: "8 min read",
+    readTime: "8 min read"
   },
   {
     slug: "cost-optimized-vector-search",
     title: "Cost‑Optimized Vector Search: Hybrid, Caching, and Freshness",
-    description:
-      "Design decisions to cut retrieval cost 40%+ while improving answer quality with hybrid search and freshness windows.",
+    description: "Design decisions to cut retrieval cost 40%+ while improving answer quality with hybrid search and freshness windows.",
     category: "Architecture",
     publishedAt: "2025-09-29",
     featured: false,
-    readTime: "6 min read",
+    readTime: "6 min read"
   },
   {
     slug: "llm-policy-testing-2025",
     title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
-    description: "Automate governance with lightweight policy tests on every PR and release train.",
-    category: "AI Governance",
-    publishedAt: "2025-10-08",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "finops-scorecards-2025",
-    title: "FinOps Scorecards: Guardrails Engineers Actually Use",
-    description: "Budgets, PR checks, and alerts that cut cloud waste 25–40% without slowing teams.",
-    category: "Cloud",
-    publishedAt: "2025-10-08",
+    description: "Automate governance with policy tests on every PR, tied to KPIs and SLAs.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
     featured: true,
     readTime: "7 min read"
-  },
-  {
-    slug: "enterprise-rag-blueprint-2025",
-    title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, Auth",
-    description: "A pragmatic blueprint for RAG at scale with freshness windows and layered evals.",
-    category: "GenAI",
-    publishedAt: "2025-10-08",
-    featured: true,
-    readTime: "9 min read"
   }
 ];
 
