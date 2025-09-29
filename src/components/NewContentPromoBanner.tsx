@@ -33,32 +33,32 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
-      title: "AI Autonomous Operations",
-      description: "Self-healing infrastructure management",
-      icon: Brain,
-      link: "/blog/ai-autonomous-operations-2025",
-      category: "Infrastructure"
-    },
-    {
-      title: "Enterprise AI Roadmap",
-      description: "Strategic guide to AI transformation",
+      title: "AI Platform ROI Scorecards",
+      description: "Outcome metrics and adoption signals that drive decisions",
       icon: TrendingUp,
-      link: "/blog/enterprise-ai-roadmap-2025",
-      category: "Strategy"
+      link: "/blog/ai-platform-roi-scorecards-2025",
+      category: "AI Strategy"
     },
     {
-      title: "Cloud-Native AI Platforms",
-      description: "Scalable AI infrastructure design",
-      icon: Cloud,
-      link: "/blog/cloud-native-ai-platforms-2025",
-      category: "Cloud"
+      title: "Secure ML Supply Chain",
+      description: "SBOMs, attestations, and policy gates that scale",
+      icon: Shield,
+      link: "/blog/secure-ml-supply-chain-attestations-2025",
+      category: "Security"
     },
     {
-      title: "Quantum Computing Business Apps",
-      description: "Real-world quantum solutions",
+      title: "Enterprise RAG Blueprint v2",
+      description: "Freshness, hybrid search, and evaluation at scale",
+      icon: Brain,
+      link: "/blog/enterprise-rag-blueprint-v2-2025",
+      category: "GenAI"
+    },
+    {
+      title: "Serverless Inference Cost Playbook",
+      description: "Cut 40–70% without P95 pain",
       icon: Zap,
-      link: "/blog/quantum-computing-business-applications-2025",
-      category: "Quantum"
+      link: "/blog/serverless-inference-cost-playbook-2025",
+      category: "GenAI"
     }
   ];
 
@@ -87,8 +87,8 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
             </h3>
             
             <p className="text-white/90 mb-4 text-sm">
-              Discover cutting-edge insights on AI autonomous operations, enterprise AI roadmaps, 
-              cloud-native platforms, and quantum computing applications.
+              Discover fresh insights on platform ROI, secure ML supply chains, updated RAG blueprints,
+              and cost‑efficient serverless inference.
             </p>
 
             {/* Featured content grid */}
@@ -145,13 +145,13 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
             </div>
 
             {/* Stats */}
-            <div className="flex items-center gap-6 mt-4 text-sm text-white/80">
+              <div className="flex items-center gap-6 mt-4 text-sm text-white/80">
               <div className="flex items-center gap-1">
                 <span className="font-semibold">4</span>
                 <span>New Articles</span>
               </div>
               <div className="flex items-center gap-1">
-                <span className="font-semibold">6</span>
+                <span className="font-semibold">0</span>
                 <span>New Case Studies</span>
               </div>
               <div className="flex items-center gap-1">

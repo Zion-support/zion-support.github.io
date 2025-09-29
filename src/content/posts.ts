@@ -558,5 +558,37 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "6 min read"
   }
+  ,
+  // Oct 05, 2025 brand-new content
+  {
+    slug: "ai-platform-roi-scorecards-2025",
+    title: "AI Platform ROI Scorecards Engineers Respect",
+    description:
+      "Outcome‑oriented metrics and adoption signals that guide platform investments with clarity.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-05",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "secure-ml-supply-chain-attestations-2025",
+    title: "Secure ML Supply Chain: SBOMs, Attestations, and Policy Gates",
+    description:
+      "Operational patterns to protect data, models, and prompts with verifiable provenance.",
+    category: "Security",
+    publishedAt: "2025-10-05",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "enterprise-rag-blueprint-v2-2025",
+    title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, and Evals",
+    description:
+      "A pragmatic upgrade of RAG systems with freshness SLAs and layered evaluation.",
+    category: "GenAI",
+    publishedAt: "2025-10-05",
+    featured: true,
+    readTime: "9 min read",
+  }
 ];
 
