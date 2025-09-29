@@ -23,6 +23,7 @@ import {
   AIFinOpsBanner
 } from './PromotionalBanner';
 import AITrends2025Banner from './AITrends2025Banner';
+import NewContentBanner from './NewContentBanner';
 import ServicesShowcase from './ServicesShowcase';
 import CustomerTestimonials from './CustomerTestimonials';
 
@@ -159,6 +160,7 @@ export default function EnhancedHomePage({
       <div className="animate-fade-in">
         {/* Promotional Banners */}
         <AITrends2025Banner />
+        <NewContentBanner />
         <AIContentShowcaseBanner />
         <CustomerServiceAIBanner />
         <HealthcareAIBanner />

@@ -26,18 +26,26 @@ export default function BlogPage() {
                 Featured Article
               </span>
               <h2 className="text-3xl font-bold mb-4">
-                The Future of AI in Business: 2025 Trends and Predictions
+                AI Autonomous Infrastructure 2025: Self-Healing Systems for Enterprise IT
               </h2>
               <p className="text-lg opacity-90 mb-6">
-                Explore the latest AI trends shaping business operations, from autonomous workflows 
-                to predictive analytics, and discover how companies are gaining competitive advantages.
+                Discover how autonomous AI infrastructure is revolutionizing enterprise IT with self-healing systems, 
+                predictive maintenance, and intelligent automation that reduces downtime by 90%.
               </p>
               <div className="flex items-center gap-4 text-sm">
-                <span>January 17, 2025</span>
+                <span>January 20, 2025</span>
                 <span>•</span>
-                <span>8 min read</span>
+                <span>15 min read</span>
                 <span>•</span>
-                <span>AI Trends</span>
+                <span>Autonomous AI</span>
+              </div>
+              <div className="mt-6">
+                <a 
+                  href="/blog/ai-autonomous-infrastructure-2025" 
+                  className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+                >
+                  Read Full Article →
+                </a>
               </div>
             </div>
           </div>
@@ -45,6 +53,46 @@ export default function BlogPage() {
 
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <BlogPost
+            title="AI Autonomous Infrastructure 2025: Self-Healing Systems"
+            excerpt="Discover how autonomous AI infrastructure is revolutionizing enterprise IT with self-healing systems, predictive maintenance, and intelligent automation."
+            date="January 20, 2025"
+            category="Featured"
+            readTime="15 min"
+            image="🏗️"
+            featured={true}
+            href="/blog/ai-autonomous-infrastructure-2025"
+          />
+          <BlogPost
+            title="AI Customer Service 2025: The Future of Customer Support"
+            excerpt="Discover how AI is revolutionizing customer service with intelligent chatbots, sentiment analysis, and 24/7 availability."
+            date="January 20, 2025"
+            category="Featured"
+            readTime="12 min"
+            image="💬"
+            featured={true}
+            href="/blog/ai-customer-service-2025"
+          />
+          <BlogPost
+            title="AI Healthcare Transformation 2025: Revolutionizing Patient Care"
+            excerpt="Discover how AI is transforming healthcare with predictive diagnostics, personalized treatment plans, and automated patient care systems."
+            date="January 20, 2025"
+            category="Featured"
+            readTime="14 min"
+            image="🏥"
+            featured={true}
+            href="/blog/ai-healthcare-transformation-2025"
+          />
+          <BlogPost
+            title="AI Governance Framework 2025: Building Responsible AI Systems"
+            excerpt="Comprehensive guide to AI governance, ethical frameworks, and regulatory compliance for enterprise AI implementations in 2025."
+            date="January 20, 2025"
+            category="Featured"
+            readTime="16 min"
+            image="⚖️"
+            featured={true}
+            href="/blog/ai-governance-framework-2025"
+          />
           <BlogPost
             title="AI Roadmaps 2026: What to Build Next and Why"
             excerpt="A pragmatic roadmap for 2026 across CX, ops, and platforms. High-ROI bets with sequencing and metrics."
