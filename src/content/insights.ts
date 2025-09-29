@@ -18,6 +18,11 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+    id: "edge-caching-primer",
+    title: "Edge Caching Primer: Shrinking P95 Without Breaking Consistency",
+    summary:
+      "When to cache at the edge, what to purge, and patterns for safe staleness.",
+    category: "Architecture",
     date: "2025-09-28",
     readMinutes: 7,
   },

@@ -16,11 +16,10 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
-import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
+import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
-import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
@@ -105,10 +104,10 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: Quantum Computing & Edge AI Insights Just Published!"
-          description="Discover practical applications and implementation strategies for the latest technologies"
-          ctaText="Read Now"
-          ctaLink="/blog"
+          title="🚀 Fresh: Real‑Time Data Pipelines, Edge Caching, and Platform Scorecards"
+          description="New article + insights: reliable streaming blueprints, sub‑100ms edge patterns, and platform metrics that drive adoption."
+          ctaText="See what's new"
+          ctaLink="/blog/real-time-data-pipelines-2025"
           dismissible={true}
         />
         {/* Animated background elements */}

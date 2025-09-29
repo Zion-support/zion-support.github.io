@@ -14,6 +14,54 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "real-time-data-pipelines-2025",
+    title: "Building Reliable Real‑Time Data Pipelines in 2025",
+    description: "Blueprints for exactly-once semantics, backpressure, and observability from dev to prod.",
+    content: `
+# Building Reliable Real‑Time Data Pipelines in 2025
+
+Designing real‑time data systems that are reliable, observable, and affordable requires deliberate choices across ingestion, processing, storage, and delivery.
+
+## Reliability Principles
+
+- Idempotency at boundaries
+- At‑least‑once transport with de‑duplication
+- Exactly‑once within stateful processors via transactions
+
+## Latency Budgeting
+
+Define clear P50/P95 targets and allocate budgets across hops: ingestion, processing, storage, API, and client render.
+
+## Backpressure & Flow Control
+
+Use bounded mailboxes, dynamic batching, and adaptive windowing. Prefer pull‑based fan‑out where feasible.
+
+## Observability
+
+Emit structured events for lag, watermark, drop/retry counts, and window completeness. Correlate with trace IDs end‑to‑end.
+
+## Cost Controls
+
+Right‑size retention tiers, compress cold streams, and autoscale consumers by lag not CPU.
+
+## Reference Stack
+
+- Kafka / Redpanda for transport
+- Flink / Spark Structured Streaming for stateful ops
+- Iceberg / Delta for durable lakes
+- ClickHouse / Druid for serving analytics
+
+Implement these patterns to achieve fast, reliable, and cost‑effective streaming systems.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Data Engineering",
+    tags: ["Streaming", "Kafka", "Flink", "Observability", "Reliability"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/real-time-data-pipelines.jpg"
+  },
+  {
     slug: "ai-workflow-automation-2025-guide",
     title: "The Complete Guide to AI Workflow Automation in 2025",
     description: "Discover how AI workflow automation is revolutionizing business operations. Learn implementation strategies, benefits, and real-world case studies.",

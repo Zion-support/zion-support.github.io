@@ -10,6 +10,36 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "edge-inference-blueprints",
+    title: "Edge Inference Blueprints: Sub‑100ms UX in Production",
+    description:
+      "Practical patterns for on‑device models, caching, and streaming that keep latency under 100ms.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "platform-scorecards-that-stick",
+    title: "Platform Scorecards That Actually Drive Adoption",
+    description:
+      "Define capabilities, golden paths, and product metrics that align platform work with outcomes.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "genai-guardrails-in-the-wild",
+    title: "GenAI Guardrails in the Wild: Evals, Policies, and Drift Control",
+    description:
+      "A field guide to combining offline suites with online policy tests to keep quality high.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:
