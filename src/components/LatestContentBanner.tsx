@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { ArrowRight, Clock, Sparkles, Star, TrendingUp } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, TrendingUp, Clock, Star } from 'lucide-react';
 
 interface LatestContentBannerProps {
   className?: string;

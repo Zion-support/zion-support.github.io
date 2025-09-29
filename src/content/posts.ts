@@ -546,5 +546,36 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "6 min read",
   },
+  // New content additions (Oct 2025)
+  {
+    slug: "ai-platform-roi-2025",
+    title: "AI Platform ROI: Scorecards That Drive Investment Decisions",
+    description:
+      "A practical framework to quantify AI platform value with adoption, DX, and outcome metrics.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "secure-ml-supply-chain-2025",
+    title: "Securing the ML Supply Chain: Models, Data, and Dependencies",
+    description:
+      "SBOMs for models, dataset provenance, and runtime guardrails to protect AI systems end-to-end.",
+    category: "Security",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "enterprise-rag-blueprint-v2",
+    title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, and Evals",
+    description:
+      "An updated blueprint with freshness SLAs, hybrid retrieval, reranking, and evaluation harnesses.",
+    category: "GenAI",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "9 min read",
+  },
 ];
 

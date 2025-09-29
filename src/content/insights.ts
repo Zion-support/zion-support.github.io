@@ -72,5 +72,24 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-09-30",
     readMinutes: 6,
   },
+  // Fresh insights
+  {
+    id: "secure-ml-supply-chain",
+    title: "Secure ML Supply Chain: SBOMs, Data Provenance, and Guardrails",
+    summary:
+      "How to secure models, datasets, and dependencies with practical controls that scale.",
+    category: "Security",
+    date: "2025-10-01",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-platform-roi-scorecards",
+    title: "AI Platform ROI Scorecards That Finance Will Love",
+    summary:
+      "Align investment to measurable outcomes with adoption, DX, and reliability metrics.",
+    category: "AI Strategy",
+    date: "2025-10-01",
+    readMinutes: 5,
+  },
 ];
 
