@@ -287,45 +287,45 @@ export const AIRevolutionBanner = () => (
   />
 );
 
-export const EnterpriseAITransformationBanner = () => (
+export const AutonomousAgentsBanner = () => (
   <PromotionalBanner
-    message="🏢 NEW: Enterprise AI Transformation 2025 Guide - Achieve 300% ROI with Complete Implementation Framework"
+    message="🤖 New: AI Autonomous Agents 2025 - Complete Enterprise Implementation Guide with 300% ROI Strategies"
     ctaText="Read Guide"
-    ctaLink="/blog/ai-enterprise-transformation-2025"
-    backgroundColor="bg-gradient-to-r from-emerald-600 to-teal-600"
+    ctaLink="/blog/ai-autonomous-agents-2025"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
     autoHide={true}
     hideAfter={22}
   />
 );
 
-export const AutonomousOperationsBanner = () => (
+export const AIGovernanceBanner = () => (
   <PromotionalBanner
-    message="🤖 FEATURED: AI Autonomous Operations 2025 - Self-Healing Systems Reduce Downtime by 90%"
-    ctaText="Explore Autonomous AI"
-    ctaLink="/blog/ai-autonomous-operations-2025"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-export const Fortune500SuccessBanner = () => (
-  <PromotionalBanner
-    message="🏆 SUCCESS STORY: Fortune 500 Company Achieved $15M ROI in 12 Months with AI Transformation"
-    ctaText="View Case Study"
-    ctaLink="/case-studies/enterprise-ai-transformation-success"
-    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
+    message="🛡️ Featured: AI Governance Framework 2025 - 70% Risk Reduction with Enterprise-Ready Implementation"
+    ctaText="Read Framework"
+    ctaLink="/blog/ai-governance-framework-2025"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
     autoHide={true}
     hideAfter={25}
   />
 );
 
-export const NewContent2025Banner = () => (
+export const FinTechSuccessBanner = () => (
   <PromotionalBanner
-    message="📈 NEW CONTENT: Enterprise AI Transformation, Autonomous Operations & Fortune 500 Success Stories"
-    ctaText="Browse Latest"
+    message="🏦 Success Story: FinTech Achieved 70% Risk Reduction & $2.5M Savings with AI Governance"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/fintech-ai-risk-compliance-2025"
+    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const NewContentShowcaseBanner = () => (
+  <PromotionalBanner
+    message="📚 Fresh Content: AI Autonomous Agents, Governance Framework, FinTech Success Stories - Latest 2025 Insights"
+    ctaText="Browse All Content"
     ctaLink="/blog"
-    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    backgroundColor="bg-gradient-to-r from-teal-600 to-cyan-600"
     autoHide={true}
     hideAfter={18}
   />

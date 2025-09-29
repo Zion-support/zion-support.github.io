@@ -19,48 +19,18 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
-    id: 'ai-business-transformation-2025',
-    title: 'AI Business Transformation 2025: Complete Implementation Guide',
-    excerpt: 'Transform your business with AI in 2025. Learn proven strategies, implementation frameworks, and real-world case studies for successful AI adoption.',
-    type: 'article',
-    readTime: '15 min read',
-    category: 'AI Strategy',
-    href: '/blog/ai-business-transformation-2025',
-    featured: true,
-    publishedDate: '2025-01-20',
-    metrics: [
-      { value: '80%', label: 'Productivity Gain' },
-      { value: '40%', label: 'Cost Reduction' }
-    ]
-  },
-  {
-    id: 'ai-automation-workflows-2025',
-    title: 'AI Automation Workflows 2025: Reduce Manual Work by 80%',
-    excerpt: 'Learn how to implement AI-powered workflow automation that reduces manual work by 80%. Complete guide with strategies, tools, and real-world examples.',
-    type: 'guide',
-    readTime: '12 min read',
-    category: 'AI Automation',
-    href: '/blog/ai-automation-workflows-2025',
-    featured: true,
-    publishedDate: '2025-01-20',
-    metrics: [
-      { value: '80%', label: 'Manual Work Reduction' },
-      { value: '60%', label: 'Faster Processing' }
-    ]
-  },
-  {
-    id: 'enterprise-ai-security-2025',
-    title: 'Enterprise AI Security 2025: Comprehensive Security Framework',
-    excerpt: 'Secure your AI systems with enterprise-grade security frameworks. Learn about AI security best practices, compliance, and threat protection strategies.',
+    id: 'ai-autonomous-agents-2025',
+    title: 'AI Autonomous Agents 2025: Complete Enterprise Implementation Guide',
+    excerpt: 'Master autonomous AI agents with our comprehensive 2025 guide. Learn deployment strategies, ROI optimization, and enterprise-ready patterns.',
     type: 'article',
     readTime: '18 min read',
-    category: 'AI Security',
-    href: '/blog/enterprise-ai-security-2025',
+    category: 'AI Strategy',
+    href: '/blog/ai-autonomous-agents-2025',
     featured: true,
-    publishedDate: '2025-01-20',
+    publishedDate: '2025-01-25',
     metrics: [
-      { value: '99%', label: 'Threat Protection' },
-      { value: '5', label: 'Security Layers' }
+      { value: '85%', label: 'Enterprise Adoption' },
+      { value: '300%', label: 'Average ROI' }
     ]
   },
   {
@@ -72,7 +42,7 @@ const contentItems: ContentItem[] = [
     category: 'AI Governance',
     href: '/blog/ai-governance-framework-2025',
     featured: true,
-    publishedDate: '2025-01-20',
+    publishedDate: '2025-01-25',
     metrics: [
       { value: '70%', label: 'Risk Reduction' },
       { value: '12', label: 'Framework Areas' }
@@ -101,7 +71,7 @@ const contentItems: ContentItem[] = [
     category: 'FinTech',
     href: '/case-studies/fintech-ai-risk-compliance-2025',
     featured: true,
-    publishedDate: '2025-01-20',
+    publishedDate: '2025-01-25',
     metrics: [
       { value: '70%', label: 'Risk Reduction' },
       { value: '$2.5M', label: 'Cost Savings' }
