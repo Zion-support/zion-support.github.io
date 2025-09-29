@@ -58,6 +58,8 @@ import AIAdvancedInnovationBanner2026 from '../components/AIAdvancedInnovationBa
 import RevolutionaryTechShowcase2026 from '../components/RevolutionaryTechShowcase2026';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import ExclusiveContentBanner2026 from '../components/ExclusiveContentBanner2026';
+import AI2026MegaBreakthroughBanner from '../components/AI2026MegaBreakthroughBanner';
+import QuantumAIOptimizationBanner from '../components/QuantumAIOptimizationBanner';
 
 export const metadata = {
   title: 'Revolutionary AI Content 2026: Neural Interfaces, Space Technology & Quantum Computing',
@@ -115,6 +117,12 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        
+        {/* AI 2026 Mega Breakthrough Banner */}
+        <AI2026MegaBreakthroughBanner />
+        
+        {/* Quantum AI Optimization Banner */}
+        <QuantumAIOptimizationBanner />
         
         {/* Ultimate 2026 Content Banner */}
         <UltimateContent2026Banner />
