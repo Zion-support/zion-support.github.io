@@ -12,12 +12,48 @@ import {
 } from 'lucide-react';
 
 export default function ModernFeatures(): React.JSX.Element {
-<<<<<<< HEAD
-	return <section aria-label="Modern Features" />;
-=======
-  return <section />;
->>>>>>> origin/main
-}
+  const features = [
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Lightning Fast",
+      description: "Optimized performance with sub-second response times and seamless user experiences."
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Enterprise Security",
+      description: "Bank-level security with end-to-end encryption and compliance with industry standards."
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: "Global Scale",
+      description: "Built to handle millions of users worldwide with automatic scaling and load balancing."
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI-Powered",
+      description: "Intelligent automation and machine learning capabilities that adapt to your business needs."
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "Cloud Native",
+      description: "Modern cloud architecture with microservices and containerized deployment."
+    },
+    {
+      icon: <Lock className="w-8 h-8" />,
+      title: "Data Privacy",
+      description: "GDPR compliant with advanced privacy controls and data protection measures."
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Analytics & Insights",
+      description: "Real-time analytics and business intelligence to drive data-driven decisions."
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Team Collaboration",
+      description: "Seamless collaboration tools that enhance productivity and streamline workflows."
+    }
+  ];
 
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -75,6 +111,4 @@ export default function ModernFeatures(): React.JSX.Element {
       </div>
     </div>
   );
-};
-
-export default ModernFeatures;
+}

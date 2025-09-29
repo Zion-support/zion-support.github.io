@@ -21,6 +21,16 @@ import {
   AIRoadmapsBanner,
   AIFinOpsBanner
 } from '../components/PromotionalBanner';
+import {
+  AIMultimodalEnterpriseBanner,
+  AISustainabilityBanner,
+  AIQuantumComputingBanner,
+  AIEnterpriseTransformationBanner,
+  LatestAIInsightsBanner,
+  AIBusinessTransformationBanner,
+  AIWorkflowAutomationBanner,
+  EnterpriseAISecurityBanner
+} from '../components/NewContentPromotionalBanners';
 import ContentShowcase from '../components/ContentShowcase';
 
 export const metadata = {
@@ -52,6 +62,14 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <AIMultimodalEnterpriseBanner />
+      <AISustainabilityBanner />
+      <AIQuantumComputingBanner />
+      <AIEnterpriseTransformationBanner />
+      <LatestAIInsightsBanner />
+      <AIBusinessTransformationBanner />
+      <AIWorkflowAutomationBanner />
+      <EnterpriseAISecurityBanner />
       <NewContentShowcaseBanner />
       <AIRoadmapsBanner />
       <AIFinOpsBanner />
@@ -192,6 +210,46 @@ export default function HomePage() {
               to="/services/ai-finance-automation"
               popular={false}
             />
+            <FeaturedServiceCard
+              title="AI Multimodal Solutions"
+              description="Vision, audio, and text processing with 300% efficiency gains"
+              price="$2,499/month"
+              features={['Multimodal AI', 'Real-time Processing', '300% ROI']}
+              to="/services/ai-multimodal-solutions"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="AI Sustainability Platform"
+              description="Reduce carbon footprint by 40% with smart energy management"
+              price="$1,799/month"
+              features={['40% Carbon Reduction', 'Energy Optimization', 'Green AI']}
+              to="/services/ai-sustainability-solutions"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="AI Quantum Computing"
+              description="Exponential speedup in optimization and cryptography"
+              price="$4,999/month"
+              features={['1000x Speedup', 'Quantum Security', 'Advanced ML']}
+              to="/services/ai-quantum-solutions"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="AI Enterprise Transformation"
+              description="Complete business transformation with 400% ROI guarantee"
+              price="$9,999/month"
+              features={['400% ROI', 'Complete Transformation', 'Expert Support']}
+              to="/services/ai-enterprise-transformation"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="AI Security & Governance"
+              description="99.7% threat detection with zero-trust architecture"
+              price="$1,599/month"
+              features={['99.7% Detection', 'Zero-trust', 'Compliance']}
+              to="/services/ai-security-governance"
+              popular={false}
+            />
           </div>
         </div>
       </section>
@@ -312,6 +370,82 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Link to="/blog/ai-multimodal-enterprise-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Article
+                  </span>
+                  <span className="text-sm text-gray-500">15 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Multimodal Enterprise Solutions 2025
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Master multimodal AI with vision, audio, and text processing. Achieve 300% ROI with comprehensive implementation.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link to="/blog/ai-sustainability-green-tech-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Featured Article
+                  </span>
+                  <span className="text-sm text-gray-500">12 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI for Sustainability: Green Tech Solutions 2025
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Reduce carbon footprint by 40% with smart energy management and green technology solutions.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link to="/blog/ai-quantum-computing-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Breakthrough Article
+                  </span>
+                  <span className="text-sm text-gray-500">18 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Quantum Computing Breakthroughs 2025
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Achieve exponential speedup in optimization, cryptography, and machine learning with quantum AI.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+            <Link to="/case-studies/ai-enterprise-transformation-2025" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Success Story
+                  </span>
+                  <span className="text-sm text-gray-500">Enterprise</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Enterprise Transformation: $5M Savings & 400% ROI
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how a Fortune 500 company achieved $5M annual savings and 400% ROI with comprehensive AI transformation.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  Read Case Study →
+                </div>
+              </div>
+            </Link>
             <Link to="/blog/ai-trustworthy-agents-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
