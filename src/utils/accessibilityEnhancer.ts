@@ -76,10 +76,10 @@ class AccessibilityEnhancer {
       }
 
       // Arrow key navigation for menus
-      if ((event as KeyboardEvent).key === 'ArrowDown' || (event as KeyboardEvent).key === 'ArrowUp') {
-        const menu = document.querySelector('[role="menu"]:focus-within');
+      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+        const menu = document.querySelector('[role="menu"]:focus-within') as HTMLElement | null;
         if (menu) {
-          this.handleMenuNavigation(event as KeyboardEvent, menu as HTMLElement);
+          this.handleMenuNavigation(event as KeyboardEvent, menu);
         }
       }
     });
@@ -90,10 +90,10 @@ class AccessibilityEnhancer {
 
     // Trap focus in modals
     document.addEventListener('keydown', (event) => {
-      if ((event as KeyboardEvent).key === 'Tab') {
-        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
+      if (event.key === 'Tab') {
+        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]') as HTMLElement | null;
         if (modal) {
-          this.trapFocus(event as KeyboardEvent, modal as HTMLElement);
+          this.trapFocus(event as KeyboardEvent, modal);
         }
       }
     });

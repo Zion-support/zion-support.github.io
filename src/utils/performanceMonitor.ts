@@ -35,51 +35,67 @@ class PerformanceMonitor {
     this.observeNavigationTiming();
   }
 
-  private observeLCP(): void {
-    if (!('PerformanceObserver' in window)) return;
+  private observeWebVitals(): void {
+    if (!('PerformanceObserver' in window)) {
+      return;
+    }
 
-    // FID
+    // First Input Delay (FID)
     try {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries() as any) {
           if (entry.processingStart && entry.startTime) {
             const fid = entry.processingStart - entry.startTime;
-            this.recordMetric({ name: 'FID', value: fid, timestamp: Date.now(), id: this.generateId() });
+            this.recordMetric({
+              name: 'FID',
+              value: fid,
+              timestamp: Date.now(),
+              id: this.generateId()
+            });
           }
         }
       });
-      fidObserver.observe({ type: 'first-input', buffered: true } as any);
+      fidObserver.observe({ entryTypes: ['first-input'] });
       this.observers.push(fidObserver);
     } catch (e) {
       console.warn('FID observation failed:', e);
     }
 
-    // LCP
+    // Largest Contentful Paint (LCP)
     try {
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
+        const lastEntry = entries[entries.length - 1] as PerformanceEntry | undefined;
         if (lastEntry) {
-          this.recordMetric({ name: 'LCP', value: lastEntry.startTime, timestamp: Date.now(), id: this.generateId() });
+          this.recordMetric({
+            name: 'LCP',
+            value: (lastEntry as any).startTime ?? 0,
+            timestamp: Date.now(),
+            id: this.generateId()
+          });
         }
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(lcpObserver);
-    } catch (error) {
-      console.warn('LCP observation failed:', error);
+    } catch (e) {
+      console.warn('LCP observation failed:', e);
     }
-  }
 
-    // CLS
+    // Cumulative Layout Shift (CLS)
     try {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries() as any) {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value || 0;
+          if (!entry.hadRecentInput && typeof entry.value === 'number') {
+            clsValue += entry.value;
           }
         }
-        this.recordMetric({ name: 'CLS', value: clsValue, timestamp: Date.now(), id: this.generateId() });
+        this.recordMetric({
+          name: 'CLS',
+          value: clsValue,
+          timestamp: Date.now(),
+          id: this.generateId()
+        });
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(clsObserver);
@@ -87,21 +103,62 @@ class PerformanceMonitor {
       console.warn('CLS observation failed:', e);
     }
 
-    // FCP
+    // First Contentful Paint (FCP)
     try {
       const fcpObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.name === 'first-contentful-paint') {
-            this.recordMetric({ name: 'FCP', value: entry.startTime, timestamp: Date.now(), id: this.generateId() });
+          if ((entry as any).name === 'first-contentful-paint') {
+            this.recordMetric({
+              name: 'FCP',
+              value: (entry as any).startTime ?? 0,
+              timestamp: Date.now(),
+              id: this.generateId()
+            });
           }
         }
       });
-      fcpObserver.observe({ type: 'paint', buffered: true } as any);
+      fcpObserver.observe({ entryTypes: ['paint'] });
       this.observers.push(fcpObserver);
     } catch (e) {
       console.warn('FCP observation failed:', e);
     }
+
+    // Time to First Byte (TTFB)
+    try {
+      const ttfbObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            const nav = entry as PerformanceNavigationTiming;
+            this.recordMetric({
+              name: 'TTFB',
+              value: nav.responseStart - nav.requestStart,
+              timestamp: Date.now(),
+              id: this.generateId()
+            });
+          }
+        }
+      });
+      ttfbObserver.observe({ entryTypes: ['navigation'] });
+      this.observers.push(ttfbObserver);
+    } catch (e) {
+      console.warn('TTFB observation failed:', e);
+    }
   }
+
+  private observeMemoryUsage(): void {
+    const perfWithMemory = performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } };
+    if (perfWithMemory.memory) {
+      const ratio = perfWithMemory.memory.usedJSHeapSize / perfWithMemory.memory.jsHeapSizeLimit;
+      this.recordMetric({
+        name: 'MEMORY_USAGE',
+        value: ratio,
+        timestamp: Date.now(),
+        id: this.generateId()
+      });
+    }
+  }
+
+  // (Removed duplicate web vitals block; logic is handled in observeWebVitals)
 
   private observeResourceTiming(): void {
     if (!('PerformanceObserver' in window)) return;
