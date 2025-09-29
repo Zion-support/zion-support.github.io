@@ -54,6 +54,7 @@ import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -85,6 +86,9 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
+      
       {/* Promotional Banners */}
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
