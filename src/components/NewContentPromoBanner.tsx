@@ -40,6 +40,13 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       category: "Security"
     },
     {
+      title: "Zero‑Trust for GenAI 2026",
+      description: "Prompt firewalls, egress, signed outputs",
+      icon: Shield,
+      link: "/blog/zero-trust-for-genai-2026",
+      category: "Security"
+    },
+    {
       title: "GenAI Routing Under Budgets",
       description: "Quality tiers without bill shock",
       icon: Zap,
