@@ -42,12 +42,12 @@ const contentHighlights = [
   },
   {
     id: 4,
-    title: "⚡ Edge LLM Caching Blueprint",
-    description: "Tiered caches and freshness windows for sub‑100ms prompts",
-    ctaText: "See Patterns",
-    ctaLink: "/blog/edge-llm-caching-blueprint-2026",
-    badge: "Trending",
-    stats: "7 min read",
+    title: "💸 Serverless Inference Cost Playbook 2026",
+    description: "Adaptive batching, warm pools, and tiers without P95 pain",
+    ctaText: "Cut Spend",
+    ctaLink: "/blog/serverless-inference-cost-playbook-2026",
+    badge: "New",
+    stats: "9 min read",
     variant: "premium" as const
   },
   {

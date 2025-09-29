@@ -10,6 +10,42 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-incident-postmortems-2026",
+    title: "AI Incident Postmortems 2026: Templates that Drive Action",
+    description: "From root cause to policy tests: lightweight PM templates that actually prevent repeats.",
+    category: "Cybersecurity",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-preserving-agents-2026",
+    title: "Privacy‑Preserving Agents 2026: On‑Device Tools and Scoped IDs",
+    description: "Design assistants that keep signals rich without leaking PII using local tools and scoped identifiers.",
+    category: "Observability",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "governance-scorecards-examples-2026",
+    title: "AI Governance Scorecards: 12 Real Examples Teams Adopt",
+    description: "Concrete scorecards for platform, security, and product teams—wired to KPIs and PR checks.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "serverless-inference-cost-playbook-2026",
+    title: "Serverless Inference Cost Playbook 2026: Quality Tiers without P95 Pain",
+    description: "Cut spend 40–70% with adaptive batching, warm pools, and budgeted routing tied to SLAs.",
+    category: "Cost Optimization",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "platform-engineering-scorecards-2026",
     title: "Platform Engineering Scorecards 2026: From Golden Paths to Outcomes",
     description: "Measure what matters: adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery.",
