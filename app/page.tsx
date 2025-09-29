@@ -63,6 +63,7 @@ import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
+import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import { 
   Latest2026ContentBanner,
   AIAutonomousCloudOpsBanner,
@@ -289,6 +290,9 @@ export default function HomePage() {
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
+      
+      {/* Enhanced Content Showcase */}
+      <EnhancedContentShowcase />
       
       {/* Interactive Content Hub */}
       <InteractiveContentShowcase />
