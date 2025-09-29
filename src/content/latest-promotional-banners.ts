@@ -19,6 +19,24 @@ export interface PromotionalBanner {
 
 export const latestPromotionalBanners: PromotionalBanner[] = [
   {
+    id: 'fresh-oct-29-2025-ai-sre-privacy-ab',
+    title: '🛠️ New: AI SRE Blueprints + Privacy‑First A/B Testing',
+    description: 'Reliability budgets, instant rollbacks, live traces — plus compliant experiments with scoped IDs and on‑device filters.',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    variant: 'info',
+    featured: true,
+    newBadge: true,
+    icon: '✨',
+    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
+    textColor: 'text-white',
+    animation: 'fade-in',
+    priority: 0,
+    active: true,
+    autoHide: true,
+    hideAfter: 20
+  },
+  {
     id: 'ai-autonomous-infrastructure-launch-2025',
     title: '🚀 NEW: AI Autonomous Infrastructure Platform',
     description: 'Self-healing, self-optimizing infrastructure that achieves 99.99% uptime with 85% cost reduction. Transform your operations with AI that never sleeps.',

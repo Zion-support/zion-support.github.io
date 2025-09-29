@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-sre-blueprints-2026",
+    slug: "ai-sre-blueprints-2026",
+    title: "AI SRE Blueprints 2026: Reliability Budgets, Rollbacks, and Live Traces",
+    description: "Operational patterns to keep AI systems reliable: explicit budgets, instant rollbacks, and user‑centric traces.",
+    excerpt: "Ship AI safely with SRE playbooks: budgets, traces, and deterministic fallbacks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-29",
+    category: "AI Operations",
+    tags: ["SRE", "Reliability", "Traces", "Budgets"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-sre-blueprints-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-first-ab-testing-2026",
+    slug: "privacy-first-ab-testing-2026",
+    title: "Privacy‑First A/B Testing 2026: Scoped IDs and On‑Device Filters",
+    description: "Design experiments that preserve user privacy with scoped identifiers, retention windows, and on‑device filters.",
+    excerpt: "Run compliant experiments without losing signal—scoped IDs, local filters, and TTLs.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-29",
+    category: "Observability",
+    tags: ["Privacy", "A/B Testing", "Telemetry"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/privacy-first-ab-testing-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "edge-llm-caching-v2-2026",
     slug: "edge-llm-caching-v2-2026",
     title: "Edge LLM Caching v2: Tiered KV, TTL Windows, Sub‑100ms Prompts",
