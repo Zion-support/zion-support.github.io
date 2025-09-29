@@ -1,3 +1,4 @@
 // Define: response types interface GuestSuccessResponse {
-  string;
-}
+  userId: string;
+
+

@@ -1,0 +1,30 @@
+[build]
+  # Install Python dependencies first, then Node.js dependencies and build
+  command = "pip install -r requirements.txt && npm ci && npm run build"
+  publish = "dist"
+  command_timeout = "30m"
+
+[build.environment]
+  NODE_VERSION = "20"
+<<<<<<< HEAD
+  PYTHON_VERSION = "3.12"
+  # Ensure mise uses precompiled Python and is verbose for debugging
+  MISE_VERBOSE = "1"
+  MISE_PYTHON_COMPILE = "false"
+=======
+  PYTHON_VERSION = "3.11.9"
+  # Prevent Netlify/mise from attempting to compile Python from source
+  MISE_SETTINGS__PYTHON__COMPILE = "false"
+>>>>>>> origin/cursor/install-python-dependencies-with-mise-95cb
+
+[[plugins]]
+  package = "netlify-plugin-compress"
+  [plugins.inputs]
+    gzip = true
+    brotli = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+# Netlify configuration - clean version without merge conflicts

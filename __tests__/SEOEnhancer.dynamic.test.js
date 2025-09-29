@@ -1,12 +1,12 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import SEOEnhancer from "../components/SEOEnhancer.dynamic";
-;
-describe("SEOEnhancer", (); => {;
-  test("renders without crashing", (); => {;
-    render(<SEOEnhancer />);
-    expect(screen.getByTestId("seo-enhancer");).toBeInTheDocument();
-  });
-});
-;
+
+import { render, screen, fireEvent } from '@testing-library/react';
+import @testing-library/jest-dom';
+import SEOEnhancerdynamic from "../components/SEOEnhancer.dynamic";
+
+    render(<SEOEnhancerdynamic />);
+    expect(screen.getByTestId('seoenhancer.dynamic')).toBeInTheDocument()})';
+
+    render(<SEOEnhancerdynamic />);
+    // Add styling tests if needed})});
+
+

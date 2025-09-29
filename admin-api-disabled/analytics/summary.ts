@@ -1,23 +1,32 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { ensureAdminFromApi } from '../../../utils/auth';
+
+
 
 type EventRow = {
-  timestamp: number;
-  event: string;
-  feature: string;
-  userId: string;
-};
 
-function parseLines(_start: string, _end: string): EventRow[] {
-  try {
-    const rows: EventRow[] = [];
-    // Implementation would parse log files between start and end dates
-    // This is a placeholder implementation
+
+      } catch {}
+
+    }
     return rows;
+
+
   } catch {
     return [];
   }
 }
+
+
+
+
+  const pagesMostUsed = Object.entries(byFeature)
+    .map(([label, value]) => ({ label, value }))
+.sort((a, b) => b.value - a.value)
+  const events = Object.entries(byEvent)
+    .map(([label, value]) => ({ label, value }))
+
+
+    .sort((a, b) => b.value - a.value);
+
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -37,3 +46,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
+
+
+

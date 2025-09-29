@@ -73,5 +73,6 @@ export default function ProductsIndex() { return ( <div className = "relative mi
 }
 
 export default Products;
-  );
-};
+
+
+

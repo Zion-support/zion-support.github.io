@@ -1,9 +1,3 @@
-import React from 'react';
+<<<<<<< HEAD
+import React, { JSX } from "react";
 
-export default function App(): JSX.Element {
-  return (
-    <main>
-      <h1>Zion Tech Group</h1>
-    </main>
-  );
-}
