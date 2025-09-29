@@ -22,7 +22,7 @@ import { useSEOData } from './components/SEOOptimizer';
 import { usePerformanceOptimization } from './hooks/usePerformanceOptimization';
 import { enhancedPerformanceMonitor } from './utils/enhancedPerformanceMonitor';
 import { enhancedSEOOptimizer } from './utils/enhancedSEOOptimizer';
-import { enhancedErrorHandler } from './utils/enhancedErrorHandling';
+// Duplicate import removed to satisfy linter
 import { advancedPerformanceOptimizer } from './utils/advancedPerformanceOptimizer';
 import { accessibilityEnhancer } from './utils/advancedAccessibilityEnhancer';
 import { seoOptimizer as advancedSeoOptimizer } from './utils/advancedSEOOptimizer';
