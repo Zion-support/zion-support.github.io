@@ -32,6 +32,7 @@ import {
   HealthcareTransformationBanner,
   NewContent2026Banner
 } from '../components/PromotionalBanner';
+import { NewContent2026Banner as NewContent2026BannerComponent } from '../components/NewContent2026Banner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -50,11 +51,11 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>✨ New 2026 content:</span>
-            <a href="/blog/ai-multimodal-enterprise-2026" className="underline hover:text-yellow-200">AI Multimodal Enterprise</a>
+            <a href="/blog/ai-future-workplace-2026" className="underline hover:text-yellow-200">AI Future Workplace</a>
             <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200">Enterprise Automation</a>
+            <a href="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</a>
             <span className="hidden md:inline">•</span>
-            <a href="/case-studies/ai-enterprise-transformation-success-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</a>
+            <a href="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$8M ROI Case Study</a>
           </div>
           <Link
             href="/blog"
@@ -64,6 +65,9 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+      {/* New 2026 Content Banner */}
+      <NewContent2026BannerComponent />
+      
       {/* Promotional Banners */}
       <NewContent2026Banner />
       <AIMultimodalEnterpriseBanner />
@@ -75,12 +79,7 @@ export default function HomePage() {
       <EnterpriseAIImplementationBanner />
       <MLOpsBestPracticesBanner />
       <EnterpriseTransformationCaseStudyBanner />
-      <AICostCalculatorBanner />
-      <AIImplementationPlaybookBanner />
-      <SupplyChainOptimizationBanner />
-      <InteractiveAICalculatorBanner />
-      <EnterpriseAIReadinessBanner />
-      <AI2026TrendsBanner />
+      <LatestContentShowcaseBanner />
       <NewContentShowcaseBanner />
       <AIRoadmapsBanner />
       <AIFinOpsBanner />
@@ -347,49 +346,64 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-<<<<<<< HEAD
-            <Link href="/blog/ai-trustworthy-agents-2026" className="group">
+            <Link href="/blog/ai-future-workplace-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Article
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New 2026
                   </span>
-                  <span className="text-sm text-gray-500">11 min read</span>
+                  <span className="text-sm text-gray-500">25 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  Trustworthy AI Agents 2026: Safety, Compliance, and Observability
+                  AI Future Workplace 2026: Complete Transformation Guide
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Deploy trustworthy AI agents with guardrails, approvals, and end-to-end observability.
+                  Discover how AI is revolutionizing the workplace with autonomous workflows, intelligent collaboration, and 85% productivity gains.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Article →
                 </div>
               </div>
             </Link>
-            <Link href="/blog/ai-value-stream-analytics-2026" className="group">
+            <Link href="/blog/ai-sustainability-green-tech-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Featured Article
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New 2026
                   </span>
-                  <span className="text-sm text-gray-500">9 min read</span>
+                  <span className="text-sm text-gray-500">22 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Value Stream Analytics 2026: Trace ROI from Token to Revenue
+                  AI Sustainability & Green Tech 2026: Complete Implementation Guide
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Tie AI cost, latency, and quality to business value with end-to-end tracing.
+                  Master eco-friendly AI solutions with 75% carbon reduction and $3M+ savings through sustainable business practices.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Article →
                 </div>
               </div>
             </Link>
-            <Link href="/blog/ai-autonomous-agents-2025" className="group">
-=======
+            <Link href="/case-studies/ai-sustainability-transformation-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Case Study
+                  </span>
+                  <span className="text-sm text-gray-500">18 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Sustainability Transformation 2026: $8M ROI Case Study
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  See how GreenCorp achieved 75% carbon reduction and $8M ROI with comprehensive AI sustainability transformation.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
             <Link href="/blog/ai-multimodal-enterprise-2026" className="group">
->>>>>>> cursor/create-and-deploy-new-content-7cc1
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -427,9 +441,6 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-<<<<<<< HEAD
-            <Link href="/blog/ai-governance-framework-2025" className="group">
-=======
             <Link href="/case-studies/ai-enterprise-transformation-success-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -449,8 +460,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/blog/ai-governance-framework-2025" className="group">
->>>>>>> cursor/create-and-deploy-new-content-7cc1
+            <Link href="/blog/ai-governance-framework-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
