@@ -32,13 +32,17 @@ import {
   AISustainabilityBanner,
   QuantumComputingBanner,
   SustainabilityCaseStudyBanner,
-  QuantumOptimizationBanner
+  QuantumOptimizationBanner,
+  CognitiveComputingBanner,
+  AutonomousSystemsBanner,
+  CognitiveTransformationBanner
 } from '../components/PromotionalBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+import NewContentShowcase2026 from '../components/NewContentShowcase2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -54,15 +58,15 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
             <span>🚀 NEW 2026 Content:</span>
+            <a to="/blog/ai-cognitive-computing-2026" className="underline hover:text-yellow-200">Cognitive Computing</a>
+            <span className="hidden md:inline">•</span>
+            <a to="/blog/ai-next-generation-autonomous-systems-2026" className="underline hover:text-yellow-200">Autonomous Systems</a>
+            <span className="hidden md:inline">•</span>
+            <a to="/case-studies/ai-cognitive-enterprise-transformation-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</a>
+            <span className="hidden md:inline">•</span>
             <a to="/blog/ai-agent-orchestration-2026" className="underline hover:text-yellow-200">AI Agent Orchestration</a>
             <span className="hidden md:inline">•</span>
-            <a to="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">AI Sustainability</a>
-            <span className="hidden md:inline">•</span>
             <a to="/blog/ai-quantum-computing-2026" className="underline hover:text-yellow-200">Quantum Computing</a>
-            <span className="hidden md:inline">•</span>
-            <a to="/case-studies/ai-sustainability-transformation-2026" className="underline hover:text-yellow-200">$10M ROI Case Study</a>
-            <span className="hidden md:inline">•</span>
-            <a to="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</a>
           </div>
           <Link
             to="/blog"
@@ -73,6 +77,9 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
+      <CognitiveTransformationBanner />
+      <CognitiveComputingBanner />
+      <AutonomousSystemsBanner />
       <NewContent2026Banner />
       <AIAgentOrchestrationBanner />
       <AISustainabilityBanner />
@@ -228,6 +235,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New Content Showcase 2026 */}
+      <NewContentShowcase2026 />
+      
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
       
@@ -252,8 +262,8 @@ export default function HomePage() {
 
           {/* Featured Recommendations */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link to="/blog/ai-agent-orchestration-2026" className="group">
-              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
+            <Link to="/blog/ai-cognitive-computing-2026" className="group">
+              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-indigo-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                     NEW 2026
@@ -263,39 +273,39 @@ export default function HomePage() {
                   </span>
                 </div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm text-blue-600 font-medium">📝 Article</span>
-                  <span className="text-sm text-gray-500">AI Orchestration</span>
+                  <span className="text-sm text-indigo-600 font-medium">📝 Article</span>
+                  <span className="text-sm text-gray-500">Cognitive AI</span>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Agent Orchestration 2026: Multi-Agent System Architecture
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                  AI Cognitive Computing 2026: Brain-Inspired Intelligence
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  Master multi-agent systems with 95% automation efficiency and $5M+ ROI through advanced orchestration patterns.
+                  Discover next-generation cognitive computing with human-level reasoning and $20M+ enterprise value creation.
                 </p>
                 <div className="flex gap-4 mb-4">
                   <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">95%</div>
-                    <div className="text-xs text-gray-500">Automation</div>
+                    <div className="text-lg font-bold text-indigo-600">98%</div>
+                    <div className="text-xs text-gray-500">Accuracy</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">$5M+</div>
-                    <div className="text-xs text-gray-500">ROI</div>
+                    <div className="text-lg font-bold text-indigo-600">$20M+</div>
+                    <div className="text-xs text-gray-500">Value</div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-gray-500">
                     <Clock className="w-4 h-4 mr-1" />
-                    22 min read
+                    32 min read
                   </div>
-                  <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
+                  <div className="flex items-center text-indigo-600 font-semibold text-sm group-hover:text-indigo-700 transition-colors">
                     Read More →
                   </div>
                 </div>
               </div>
             </Link>
 
-            <Link to="/case-studies/ai-sustainability-transformation-2026" className="group">
-              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200 hover:scale-105">
+            <Link to="/case-studies/ai-cognitive-enterprise-transformation-2026" className="group">
+              <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-green-200 hover:scale-105">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                     NEW 2026
@@ -305,31 +315,31 @@ export default function HomePage() {
                   </span>
                 </div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm text-blue-600 font-medium">📊 Case Study</span>
-                  <span className="text-sm text-gray-500">Sustainability</span>
+                  <span className="text-sm text-green-600 font-medium">📊 Case Study</span>
+                  <span className="text-sm text-gray-500">Cognitive AI</span>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Sustainability Transformation 2026: $10M ROI Case Study
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
+                  AI Cognitive Enterprise Transformation 2026: $25M ROI Case Study
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  See how a Fortune 500 company achieved carbon neutrality and $10M ROI with comprehensive AI sustainability transformation.
+                  See how GlobalTech achieved $25M ROI with human-level AI decision making and 99.5% automation.
                 </p>
                 <div className="flex gap-4 mb-4">
                   <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">$10M</div>
+                    <div className="text-lg font-bold text-green-600">$25M</div>
                     <div className="text-xs text-gray-500">ROI</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">100%</div>
-                    <div className="text-xs text-gray-500">Carbon Neutral</div>
+                    <div className="text-lg font-bold text-green-600">99.5%</div>
+                    <div className="text-xs text-gray-500">Automation</div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-gray-500">
                     <Clock className="w-4 h-4 mr-1" />
-                    15 min read
+                    18 min read
                   </div>
-                  <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
+                  <div className="flex items-center text-green-600 font-semibold text-sm group-hover:text-green-700 transition-colors">
                     Read More →
                   </div>
                 </div>

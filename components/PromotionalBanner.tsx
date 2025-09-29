@@ -559,3 +559,39 @@ export const NewContentShowcase2026Banner = () => (
     hideAfter={18}
   />
 );
+
+export const CognitiveComputingBanner = () => (
+  <PromotionalBanner
+    message="🧠 NEW 2026: AI Cognitive Computing - Next-generation brain-inspired intelligence with human-level reasoning and $20M+ enterprise value"
+    ctaText="Read Article"
+    ctaLink="/blog/ai-cognitive-computing-2026"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const AutonomousSystemsBanner = () => (
+  <PromotionalBanner
+    message="🤖 NEW 2026: AI Next-Generation Autonomous Systems - Self-managing enterprise infrastructure with 99.9% autonomy and $15M+ operational savings"
+    ctaText="Learn More"
+    ctaLink="/blog/ai-next-generation-autonomous-systems-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const CognitiveTransformationBanner = () => (
+  <PromotionalBanner
+    message="💡 NEW 2026: AI Cognitive Enterprise Transformation Case Study - See how GlobalTech achieved $25M ROI with human-level AI decision making"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-cognitive-enterprise-transformation-2026"
+    backgroundColor="bg-gradient-to-r from-green-600 to-blue-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
