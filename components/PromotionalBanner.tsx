@@ -1,78 +1,83 @@
-import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+// ... existing code ...
 
-interface PromotionalBannerProps {
-  message: string;
-  ctaText: string;
-  ctaLink: string;
-  backgroundColor?: string;
-  textColor?: string;
-  showClose?: boolean;
-  autoHide?: boolean;
-  hideAfter?: number; // in seconds
-}
-
-export default function PromotionalBanner({
-  message,
-  ctaText,
-  ctaLink,
-  backgroundColor = "bg-gradient-to-r from-blue-600 to-purple-600",
-  textColor = "text-white",
-  showClose = true,
-  autoHide = false,
-  hideAfter = 10
-}: PromotionalBannerProps) {
-  const [isVisible, setIsVisible] = useState(true);
-  const [isClosing, setIsClosing] = useState(false);
-
-  useEffect(() => {
-    if (autoHide) {
-      const timer = setTimeout(() => {
-        handleClose();
-      }, hideAfter * 1000);
-      return () => clearTimeout(timer);
-    }
-  }, [autoHide, hideAfter]);
-
-  const handleClose = () => {
-    setIsClosing(true);
-    setTimeout(() => {
-      setIsVisible(false);
-    }, 300);
-  };
-
-  if (!isVisible) return null;
-
+export function AIAutonomousEnterpriseBanner() {
   return (
-    <div className={`relative ${backgroundColor} ${textColor} py-3 px-4 transition-all duration-300 ${
-      isClosing ? 'opacity-0 transform -translate-y-full' : 'opacity-100 transform translate-y-0'
-    }`}>
-      <div className="container mx-auto max-w-6xl">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <span className="inline-flex h-2 w-2 rounded-full bg-white animate-pulse"></span>
-            <span className="font-medium text-sm md:text-base">{message}</span>
-          </div>
-          
-          <div className="flex items-center space-x-3">
-            <Link
-              href={ctaLink}
-              className="bg-white/20 hover:bg-white/30 px-4 py-1.5 rounded-full text-sm font-semibold transition-colors duration-200 border border-white/30"
-            >
-              {ctaText}
-            </Link>
-            
-            {showClose && (
-              <button
-                onClick={handleClose}
-                className="hover:bg-white/20 p-1 rounded-full transition-colors duration-200"
-                aria-label="Close banner"
+    <div className="w-full bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white py-16">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                NEW 2026
+              </span>
+              <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
+                BREAKTHROUGH
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              AI Autonomous Enterprise 2026
+            </h2>
+            <p className="text-xl mb-6 opacity-90">
+              Transform your enterprise into a fully autonomous, self-managing system with 95% operational 
+              automation and $15M+ ROI. Complete business autonomy is now reality.
+            </p>
+            <div className="flex flex-wrap gap-4 mb-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold">95%</div>
+                <div className="text-sm opacity-75">Automated</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold">$15M+</div>
+                <div className="text-sm opacity-75">ROI</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold">24/7</div>
+                <div className="text-sm opacity-75">Autonomous</div>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/blog/ai-autonomous-enterprise-2026"
+                className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            )}
+                Read Full Guide →
+              </Link>
+              <Link
+                href="/case-studies/ai-autonomous-enterprise-transformation-2026"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors"
+              >
+                View Case Study
+              </Link>
+            </div>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-6">Key Features</h3>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold">✓</span>
+                </div>
+                <span>Self-healing systems with automatic issue resolution</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold">✓</span>
+                </div>
+                <span>Autonomous decision-making across all business functions</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold">✓</span>
+                </div>
+                <span>Continuous learning and optimization without human input</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold">✓</span>
+                </div>
+                <span>Predictive maintenance and proactive issue resolution</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -80,482 +85,89 @@ export default function PromotionalBanner({
   );
 }
 
-// Pre-configured banner variants
-export const NewContentBanner = () => (
-  <PromotionalBanner
-    message="🎉 New: AI Security DLP, Multimodal Agents, Scorecards v2 (2026)"
-    ctaText="Read the latest"
-    ctaLink="/blog"
-    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
-    autoHide={true}
-    hideAfter={18}
-  />
-);
+export function AINeuralInterfacesBanner() {
+  return (
+    <div className="w-full bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white py-16">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                NEW 2026
+              </span>
+              <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
+                BREAKTHROUGH
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              AI Neural Interfaces 2026
+            </h2>
+            <p className="text-xl mb-6 opacity-90">
+              Revolutionary neural interface technology enabling direct brain-computer communication 
+              with 10x productivity gains and seamless human-AI collaboration.
+            </p>
+            <div className="flex flex-wrap gap-4 mb-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold">10x</div>
+                <div className="text-sm opacity-75">Productivity</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold">95%</div>
+                <div className="text-sm opacity-75">Accuracy</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold">50ms</div>
+                <div className="text-sm opacity-75">Response</div>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/blog/ai-neural-interfaces-2026"
+                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+              >
+                Explore Technology →
+              </Link>
+              <Link
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                Schedule Demo
+              </Link>
+            </div>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-6">Applications</h3>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold">💼</span>
+                </div>
+                <span>Executive decision making with instant AI insights</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold">🔬</span>
+                </div>
+                <span>Research & development with 3D visualization</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold">🎨</span>
+                </div>
+                <span>Creative work with thought-to-creation workflows</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold">🏥</span>
+                </div>
+                <span>Healthcare with enhanced diagnostic capabilities</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
-export const LimitedTimeBanner = () => (
-  <PromotionalBanner
-    message="⚡ Limited Time: 20% Off AI Chatbot Development"
-    ctaText="Get Quote"
-    ctaLink="/contact"
-    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
-    autoHide={false}
-  />
-);
-
-export const CaseStudyBanner = () => (
-  <PromotionalBanner
-    message="📈 See How We Helped Clients Save $2M+ with AI Solutions"
-    ctaText="View Case Studies"
-    ctaLink="/case-studies"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
-    autoHide={true}
-    hideAfter={12}
-  />
-);
-
-export const NewBlogBanner = () => (
-  <PromotionalBanner
-    message="🔥 Fresh Insights: AI Roadmaps 2026 and FinOps Scorecards 2025 now live"
-    ctaText="Browse Latest Posts"
-    ctaLink="/blog"
-    backgroundColor="bg-gradient-to-r from-orange-600 to-pink-600"
-    autoHide={true}
-    hideAfter={18}
-  />
-);
-
-export const AnalyticsPlatformBanner = () => (
-  <PromotionalBanner
-    message="🚀 Launch: AI Analytics Platform - Transform Data into Actionable Insights"
-    ctaText="Explore Platform"
-    ctaLink="/services/ai-analytics-platform"
-    backgroundColor="bg-gradient-to-r from-teal-600 to-cyan-600"
-    autoHide={true}
-    hideAfter={18}
-  />
-);
-
-export const TechCorpSuccessBanner = () => (
-  <PromotionalBanner
-    message="🏆 Success Story: TechCorp Achieved 90% Efficiency Gain with AI Transformation"
-    ctaText="View Case Study"
-    ctaLink="/case-studies/techcorp-ai-transformation"
-    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-export const FreeTrialBanner = () => (
-  <PromotionalBanner
-    message="🎯 Limited Time: 30-Day Free Trial for AI Analytics Platform - No Credit Card Required"
-    ctaText="Start Free Trial"
-    ctaLink="/services/ai-analytics-platform#pricing"
-    backgroundColor="bg-gradient-to-r from-yellow-600 to-orange-600"
-    autoHide={false}
-  />
-);
-
-export const WorkflowAutomationBanner = () => (
-  <PromotionalBanner
-    message="⚙️ New Guide: AI Workflow Automation Implementation - Reduce Manual Work by 80%"
-    ctaText="Read Guide"
-    ctaLink="/blog/ai-workflow-automation-guide"
-    backgroundColor="bg-gradient-to-r from-emerald-600 to-teal-600"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-export const AIAnalyticsBanner = () => (
-  <PromotionalBanner
-    message="📊 New Article: AI Analytics Implementation - Transform Data into Actionable Insights"
-    ctaText="Read Article"
-    ctaLink="/blog/ai-analytics-implementation"
-    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
-    autoHide={true}
-    hideAfter={18}
-  />
-);
-
-export const AIRoadmapsBanner = () => (
-  <PromotionalBanner
-    message="🗺️ New: AI Roadmaps 2026 — What to Build Next and Why"
-    ctaText="Read Roadmap"
-    ctaLink="/blog/ai-roadmaps-2026"
-    backgroundColor="bg-gradient-to-r from-blue-600 to-teal-600"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-export const AIFinOpsBanner = () => (
-  <PromotionalBanner
-    message="📉 New: AI FinOps Scorecards 2025 — Control LLM Spend"
-    ctaText="Read Scorecards"
-    ctaLink="/blog/ai-finops-scorecards-2025"
-    backgroundColor="bg-gradient-to-r from-amber-600 to-pink-600"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-export const HealthTechSuccessBanner = () => (
-  <PromotionalBanner
-    message="🏥 Success Story: HealthTech Solutions Achieved 80% Efficiency Gain with AI Virtual Assistant"
-    ctaText="View Case Study"
-    ctaLink="/case-studies/healthtech-ai-transformation"
-    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
-    autoHide={true}
-    hideAfter={22}
-  />
-);
-
-export const ComprehensiveAIBanner = () => (
-  <PromotionalBanner
-    message="🚀 Complete AI Transformation Guide: From Strategy to Implementation - Everything You Need to Know"
-    ctaText="Explore Resources"
-    ctaLink="/blog"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
-    autoHide={true}
-    hideAfter={25}
-  />
-);
-
-export const EnterpriseAIBanner = () => (
-  <PromotionalBanner
-    message="🏢 Enterprise AI Solutions: Scale Your Business with Custom AI Implementation and Support"
-    ctaText="Get Consultation"
-    ctaLink="/contact"
-    backgroundColor="bg-gradient-to-r from-blue-600 to-indigo-600"
-    autoHide={false}
-  />
-);
-
-export const CustomerServiceAIBanner = () => (
-  <PromotionalBanner
-    message="💬 New Article: AI-Powered Customer Service Revolution - 80% Faster Response Times, 90% Cost Reduction"
-    ctaText="Read Article"
-    ctaLink="/blog/ai-customer-service-2025"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-export const HealthcareAIBanner = () => (
-  <PromotionalBanner
-    message="🏥 Featured: AI Healthcare Transformation Guide - 40% Better Diagnostics, 60% Improved Outcomes"
-    ctaText="Explore Healthcare AI"
-    ctaLink="/blog/ai-healthcare-transformation-2025"
-    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
-    autoHide={true}
-    hideAfter={22}
-  />
-);
-
-export const RetailSuccessBanner = () => (
-  <PromotionalBanner
-    message="🛍️ Success Story: RetailAI Corp Achieved 150% Revenue Growth with AI Transformation"
-    ctaText="View Case Study"
-    ctaLink="/case-studies/retail-ai-transformation"
-    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
-    autoHide={true}
-    hideAfter={25}
-  />
-);
-
-export const AIContentShowcaseBanner = () => (
-  <PromotionalBanner
-    message="📚 Fresh Content: New AI Articles & Case Studies - Customer Service, Healthcare, Retail Success Stories"
-    ctaText="Browse All Content"
-    ctaLink="/blog"
-    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
-    autoHide={true}
-    hideAfter={18}
-  />
-);
-
-export const AIRevolutionBanner = () => (
-  <PromotionalBanner
-    message="🚀 AI Revolution 2025: Complete Business Transformation Guide - Latest Trends, Strategies & Implementation"
-    ctaText="Read Complete Guide"
-    ctaLink="/blog/ai-revolution-2025"
-    backgroundColor="bg-gradient-to-r from-blue-600 to-purple-600"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-export const AutonomousAgentsBanner = () => (
-  <PromotionalBanner
-    message="🤖 New: AI Autonomous Agents 2025 - Complete Enterprise Implementation Guide with 300% ROI Strategies"
-    ctaText="Read Guide"
-    ctaLink="/blog/ai-autonomous-agents-2025"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
-    autoHide={true}
-    hideAfter={22}
-  />
-);
-
-export const AIGovernanceBanner = () => (
-  <PromotionalBanner
-    message="🛡️ Featured: AI Governance Framework 2025 - 70% Risk Reduction with Enterprise-Ready Implementation"
-    ctaText="Read Framework"
-    ctaLink="/blog/ai-governance-framework-2025"
-    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
-    autoHide={true}
-    hideAfter={25}
-  />
-);
-
-export const FinTechSuccessBanner = () => (
-  <PromotionalBanner
-    message="🏦 Success Story: FinTech Achieved 70% Risk Reduction & $2.5M Savings with AI Governance"
-    ctaText="View Case Study"
-    ctaLink="/case-studies/fintech-ai-risk-compliance-2025"
-    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-export const NewContentShowcaseBanner = () => (
-  <PromotionalBanner
-    message="📚 Fresh Content: AI Autonomous Agents, Governance Framework, FinTech Success Stories - Latest 2025 Insights"
-    ctaText="Browse All Content"
-    ctaLink="/blog"
-    backgroundColor="bg-gradient-to-r from-teal-600 to-cyan-600"
-    autoHide={true}
-    hideAfter={18}
-  />
-);
-
-// New 2026 Content Banners
-export const AIMultimodalEnterpriseBanner = () => (
-  <PromotionalBanner
-    message="🎯 NEW: AI Multimodal Enterprise 2026 - 85% Efficiency Gains & $2M+ ROI with Vision, Language & Audio AI"
-    ctaText="Read Article"
-    ctaLink="/blog/ai-multimodal-enterprise-2026"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-export const AIEnterpriseAutomationGuideBanner = () => (
-  <PromotionalBanner
-    message="⚙️ NEW: AI Enterprise Automation 2026 - 95% Process Automation & $5M+ Savings with Zero-Touch Operations"
-    ctaText="Read Guide"
-    ctaLink="/blog/ai-enterprise-automation-2026"
-    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
-    autoHide={true}
-    hideAfter={22}
-  />
-);
-
-export const AIDataAnalyticsEnterpriseBanner = () => (
-  <PromotionalBanner
-    message="📊 NEW: AI Data Analytics Enterprise 2026 - 90% Faster Insights & $3M+ ROI with Predictive Intelligence"
-    ctaText="Read Article"
-    ctaLink="/blog/ai-data-analytics-enterprise-2026"
-    backgroundColor="bg-gradient-to-r from-blue-600 to-indigo-600"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-export const EnterpriseTransformationSuccessBanner = () => (
-  <PromotionalBanner
-    message="🏆 NEW: $10M ROI Case Study - Fortune 500 AI Transformation with 95% Automation & 300% Productivity Gains"
-    ctaText="View Case Study"
-    ctaLink="/case-studies/ai-enterprise-transformation-success-2026"
-    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
-    autoHide={true}
-    hideAfter={25}
-  />
-);
-
-export const HealthcareTransformationBanner = () => (
-  <PromotionalBanner
-    message="🏥 NEW: AI Healthcare Transformation 2026 - 40% Better Diagnostics & 60% Improved Outcomes Case Study"
-    ctaText="View Success Story"
-    ctaLink="/case-studies/ai-healthcare-transformation-2026"
-    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
-    autoHide={true}
-    hideAfter={22}
-  />
-);
-
-export const NewContent2026Banner = () => (
-  <PromotionalBanner
-    message="🚀 NEW 2026 Content: Multimodal AI, Enterprise Automation, Data Analytics & Success Stories - Latest AI Insights"
-    ctaText="Explore 2026 Content"
-    ctaLink="/blog"
-    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
-    autoHide={true}
-    hideAfter={18}
-  />
-);
-
-// New 2026 Operational Excellence & Observability Banners
-export const AIOperationalExcellenceBanner = () => (
-  <PromotionalBanner
-    message="⚙️ NEW: AI Operational Excellence 2026 - 95% Automation & $5M+ Savings with Zero-Touch Operations"
-    ctaText="Read Guide"
-    ctaLink="/blog/ai-operational-excellence-2026"
-    backgroundColor="bg-gradient-to-r from-emerald-600 to-teal-600"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-export const AIAgentObservabilityBanner = () => (
-  <PromotionalBanner
-    message="🔍 NEW: AI Agent Observability 2026 - 99.9% Reliability with Real-time Monitoring & 85% Faster Debugging"
-    ctaText="Read Guide"
-    ctaLink="/blog/ai-agent-observability-2026"
-    backgroundColor="bg-gradient-to-r from-blue-600 to-cyan-600"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-export const ManufacturingTransformationBanner = () => (
-  <PromotionalBanner
-    message="🏭 NEW: $12M ROI Manufacturing Case Study - 98% Automation, 400% Productivity Gains & Zero-Defect Production"
-    ctaText="View Case Study"
-    ctaLink="/case-studies/ai-manufacturing-transformation-2026"
-    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
-    autoHide={true}
-    hideAfter={22}
-  />
-);
-
-export const Latest2026ContentBanner = () => (
-  <PromotionalBanner
-    message="✨ LATEST 2026: Operational Excellence, Agent Observability & Manufacturing Success - Premium AI Content"
-    ctaText="Browse Latest"
-    ctaLink="/blog"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
-    autoHide={true}
-    hideAfter={18}
-  />
-);
-
-// New 2026 Content Banners
-export const AISecurityEnterprise2026Banner = () => (
-  <PromotionalBanner
-    message="🛡️ NEW: AI Enterprise Security 2026 - Zero-Trust Architecture with 99.9% Security Compliance"
-    ctaText="Read Article"
-    ctaLink="/blog/ai-enterprise-security-2026"
-    backgroundColor="bg-gradient-to-r from-red-600 to-orange-600"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-export const AIMultimodalEnterprise2026Banner = () => (
-  <PromotionalBanner
-    message="🎯 NEW: AI Multimodal Enterprise 2026 - Vision, Language & Audio Integration with 40% Accuracy Improvement"
-    ctaText="Read Guide"
-    ctaLink="/blog/ai-multimodal-enterprise-2026"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-export const AISustainabilityTransformationBanner = () => (
-  <PromotionalBanner
-    message="🌱 NEW: AI Sustainability Case Study - 60% Carbon Reduction & $15M Savings for Fortune 500 Energy Company"
-    ctaText="View Case Study"
-    ctaLink="/case-studies/ai-sustainability-transformation-2026"
-    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
-    autoHide={true}
-    hideAfter={20}
-  />
-);
-
-export const LatestContent2026Banner = () => (
-  <PromotionalBanner
-    message="✨ LATEST 2026: AI Security, Multimodal AI & Sustainability Transformation - Premium Enterprise Content"
-    ctaText="Explore Latest"
-    ctaLink="/blog"
-    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
-    autoHide={true}
-    hideAfter={18}
-  />
-);
-
-export const AIAgentReliabilityBanner = () => (
-  <PromotionalBanner
-    message="🛡️ NEW: AI Agent Reliability 2026 - Achieve 99.9% uptime with production-ready autonomous systems and fault tolerance"
-    ctaText="Read Guide"
-    ctaLink="/blog/ai-agent-reliability-2026"
-    backgroundColor="bg-gradient-to-r from-blue-600 to-cyan-600"
-    textColor="text-white"
-    autoHide={true}
-    hideAfter={15}
-  />
-);
-
-export const AIMultimodalIntegrationBanner = () => (
-  <PromotionalBanner
-    message="🎯 NEW: Multimodal Enterprise Integration 2026 - Unify vision, voice & text AI for 95% accuracy in context understanding"
-    ctaText="Learn More"
-    ctaLink="/blog/ai-multimodal-enterprise-integration-2026"
-    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
-    textColor="text-white"
-    autoHide={true}
-    hideAfter={15}
-  />
-);
-
-export const AIEnterpriseAutomationBlueprintBanner = () => (
-  <PromotionalBanner
-    message="⚡ FEATURED: Enterprise Automation Blueprint 2026 - Achieve 95% process efficiency and $5M+ savings with zero-touch operations"
-    ctaText="Get Blueprint"
-    ctaLink="/blog/ai-enterprise-automation-blueprint-2026"
-    backgroundColor="bg-gradient-to-r from-green-600 to-teal-600"
-    textColor="text-white"
-    autoHide={true}
-    hideAfter={15}
-  />
-);
-
-export const AIEthicalFrameworkBanner = () => (
-  <PromotionalBanner
-    message="🛡️ NEW: AI Ethical Framework 2026 - Build trustworthy AI with 90% compliance & $3M savings"
-    ctaText="Read Guide"
-    ctaLink="/blog/ai-ethical-framework-2026"
-    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
-    textColor="text-white"
-    autoHide={true}
-    hideAfter={15}
-  />
-);
-
-export const AIEthicsSuccessBanner = () => (
-  <PromotionalBanner
-    message="📊 SUCCESS STORY: Fortune 500 achieves 90% AI compliance & $3M savings with ethical framework"
-    ctaText="View Case Study"
-    ctaLink="/case-studies/ai-ethical-framework-success-2026"
-    backgroundColor="bg-gradient-to-r from-emerald-600 to-green-600"
-    textColor="text-white"
-    autoHide={true}
-    hideAfter={15}
-  />
-);
-
-export const NewContentShowcase2026Banner = () => (
-  <PromotionalBanner
-    message="🌟 FRESH 2026: Ethical AI Framework, Multimodal Integration & Success Stories - Premium Enterprise Content"
-    ctaText="Explore New Content"
-    ctaLink="/blog"
-    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
-    textColor="text-white"
-    autoHide={true}
-    hideAfter={18}
-  />
-);
+// ... existing code ...
