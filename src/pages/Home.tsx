@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-import { latestArticles } from '../content/latest-articles';
-=======
 import {
   ArrowRight,
   Award,
@@ -18,6 +15,7 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { latestArticles } from '../content/latest-articles';
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
 import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
@@ -45,51 +43,9 @@ import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
 import { newArticles2025 } from "../content/new-articles-2025";
 import { featuredBlogPosts, featuredServices } from "../content/content-config";
->>>>>>> fdb8d5094f0a3ee529590ccba2498eb6dbc1171b
 
 export default function Home() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50">
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Revolutionary AI Content
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
-              for 2026
-            </span>
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Discover the most advanced AI technologies reshaping our world. From brain-computer interfaces 
-            to space exploration AI, explore content that's defining the future of human-machine collaboration.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {latestArticles.map((article) => (
-            <div key={article.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-2xl">{article.category === 'AI Innovation' ? '🧠' : '🚀'}</span>
-                  <span className="text-sm font-semibold text-blue-600">{article.category}</span>
-                  {article.newBadge && (
-                    <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
-                  )}
-                  {article.trending && (
-                    <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">TRENDING</span>
-                  )}
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{article.title}</h3>
-                <p className="text-gray-600 mb-4">{article.excerpt}</p>
-                <div className="flex items-center justify-between text-sm text-gray-500">
-                  <span>{article.readTime}</span>
-                  <span>{article.date}</span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-=======
     <>
       <Helmet>
         <title>
@@ -183,7 +139,6 @@ export default function Home() {
         />
         <NewContentPromoBanner 
           className="border-b border-white/10" 
-<<<<<<< HEAD
           variant="premium" 
           title="New: AI Incident Command Center 2026 + Edge Privacy Playbooks"
           description="Contain incidents in <60s with budgeted actions and ship privacy‑first analytics without PII."
@@ -194,31 +149,10 @@ export default function Home() {
             { title: "Edge Privacy Playbooks 2026", category: "Edge Computing", link: "/blog/edge-privacy-playbooks-2026" },
             { title: "AI SRE Blueprints 2026", category: "AI Operations", link: "/blog/ai-sre-blueprints-2026" }
           ]}
-=======
-          variant="premium"
->>>>>>> cursor/create-and-deploy-new-content-6afb
         />
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
         </div>
-        
-<<<<<<< HEAD
-        {/* New Comprehensive Promotional Banner */}
-        <div className="container mx-auto px-6 mt-6">
-          <ComprehensivePromoBanner variant="hero" showCount={4} />
-        </div>
-        
-        {/* New Articles Promotional Banner */}
-        <div className="container mx-auto px-6 mt-6">
-          <NewArticlesPromoBanner variant="premium" showCount={3} />
-        </div>
-        
-        {/* New Services Promotional Banner */}
-        <div className="container mx-auto px-6 mt-6">
-          <NewServicesPromoBanner variant="showcase" showCount={3} featuredOnly={true} />
-        </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-6afb
         
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
@@ -975,8 +909,7 @@ export default function Home() {
           </div>
         </section>
         {/* <Footer /> */}
->>>>>>> fdb8d5094f0a3ee529590ccba2498eb6dbc1171b
       </div>
-    </div>
+    </>
   );
 }
