@@ -104,8 +104,8 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: GenAI Evals, Edge Flags, Telemetry + more"
-          description="Fresh featured articles just landed. Quality gates, <100ms flags, AI cost guardrails."
+          title="🆕 New: AI Roadmaps, Cloud FinOps Wins, and GenAI Guardrails"
+          description="Ship outcomes with AI roadmaps, cut cloud costs fast, and prevent regressions with production guardrails."
           ctaText="Read the latest"
           ctaLink="/blog/genai-evals-in-production-2025"
           dismissible={true}
@@ -662,16 +662,16 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">MLOps</div>
-                  <div className="font-semibold text-white">MLOps Reliability: Shipping GenAI Changes Safely</div>
+                  <div className="text-sm text-purple-200 mb-1">AI Strategy</div>
+                  <div className="font-semibold text-white">Designing High-Impact AI Roadmaps in 2025</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
-                  <div className="font-semibold text-white">Reliable Real‑Time Data Pipelines in 2025</div>
+                  <div className="text-sm text-blue-200 mb-1">Cloud FinOps</div>
+                  <div className="font-semibold text-white">Cloud FinOps: 9 Quick Wins in 90 Days</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Product Analytics</div>
-                  <div className="font-semibold text-white">North‑Star Metrics: A Field‑Tested Framework</div>
+                  <div className="text-sm text-rose-200 mb-1">GenAI</div>
+                  <div className="font-semibold text-white">GenAI Guardrails: Scorecards That Scale</div>
                 </div>
               </div>
             </div>

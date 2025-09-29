@@ -45,6 +45,33 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 5,
   },
   {
+    id: "ai-roadmaps-outcomes",
+    title: "AI Roadmaps That Ship Outcomes, Not Science Projects",
+    summary:
+      "A 3-step method to prioritize use-cases, define measurable KPIs, and deliver value in 90 days.",
+    category: "AI Strategy",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
+  {
+    id: "cloud-finops-wins",
+    title: "Cloud FinOps: 9 Wins Your CFO Will Love",
+    summary:
+      "Right-size fleets, shape demand, and make CI/CD cost-aware without slowing developers.",
+    category: "Cloud FinOps",
+    date: "2025-09-29",
+    readMinutes: 4,
+  },
+  {
+    id: "genai-guardrails-scorecards",
+    title: "GenAI Guardrails: Scorecards That Prevent Silent Regressions",
+    summary:
+      "Policy tests, red-team prompts, and online checks that keep quality high as usage scales.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
     id: "edge-cache-invalidation",
     title: "Edge Cache Invalidation Strategies That Won't Wake You Up",
     summary:

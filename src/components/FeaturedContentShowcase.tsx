@@ -1,21 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BlogPost, posts } from '../content/posts';
+import { BlogPost, blogPosts } from '../content/blog-posts';
 import { InsightArticle, latestInsights } from '../content/insights';
-import { Star, Calendar, Clock, Eye, TrendingUp, ArrowRight } from 'lucide-react';
-
-interface FeaturedContent {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  date: string;
-  readTime: string;
-  views?: string;
-  featured: boolean;
-  href: string;
-  tags: string[];
-}
 
 interface FeaturedContentShowcaseProps {
   title?: string;
