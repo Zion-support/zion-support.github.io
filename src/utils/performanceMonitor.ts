@@ -3,7 +3,7 @@
 type MetricName = 'CLS' | 'FID' | 'FCP' | 'LCP' | 'TTFB' | 'SLOW_RESOURCE' | 'MEMORY_USAGE';
 
 interface PerformanceMetric {
-  name: string;
+  name: WebVitalName | 'SLOW_RESOURCE';
   value: number;
   timestamp: number;
   id: string;
@@ -14,8 +14,14 @@ class PerformanceMonitor {
 	private observers: PerformanceObserver[] = [];
 	private initialized = false;
 
-  constructor() {
-    this.initialize();
+  public initialize(): void {
+    if (this.alreadyInitialized || typeof window === 'undefined' || typeof PerformanceObserver === 'undefined') {
+      return;
+    }
+    this.alreadyInitialized = true;
+    this.observePaint();
+    this.observeNavigation();
+    this.observeFirstInput();
   }
 
   private init(): void {
@@ -23,8 +29,20 @@ class PerformanceMonitor {
 
     this.initialized = true;
     this.observeWebVitals();
-    this.observeResourceTiming();
-    this.observeNavigationTiming();
+    if (typeof (window as any).PerformanceObserver !== 'undefined') {
+      // Stubbed guards to satisfy references; detailed implementations can be added as needed
+      this.observeResourceTiming();
+      this.observeNavigationTiming();
+    }
+  }
+
+  // Minimal stubs to satisfy references; can be expanded with real logic later
+  private observeResourceTiming(): void {
+    // no-op for now
+  }
+
+  private observeNavigationTiming(): void {
+    // no-op for now
   }
 
   private observeWebVitals(): void {
@@ -180,13 +198,7 @@ class PerformanceMonitor {
     return [...this.metrics];
   }
 
-  public getWebVitals(): Record<string, number> {
-    const out: Record<string, number> = {};
-    for (const m of this.metrics) {
-      if (!out[m.name]) out[m.name] = m.value;
-    }
-    return out;
-  }
+  // Removed duplicate getWebVitals method to avoid TypeScript duplicate implementation error
 
   public reportPerformance(): void {
     const vitals = this.getWebVitals();
