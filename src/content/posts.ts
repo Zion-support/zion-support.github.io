@@ -753,35 +753,18 @@ posts.push(
   }
 );
 
-// Additional November 2025 posts
+// Frontpage promo slugs — ensure article cards resolve (merged)
+posts.unshift(
+  { slug: "ai-evaluation-scorecards-2026", title: "AI Evaluation Scorecards 2026: Quality, Cost, Risk at a Glance", description: "Standardize evals with scorecards that track quality, latency, cost, and risk—wired to CI and trains.", category: "AI Strategy", publishedAt: "2025-09-29", featured: true, readTime: "12 min read" },
+  { slug: "ai-agent-security-2026", title: "AI Agent Security 2026: Isolation, Egress, and Signed Actions", description: "Harden multi‑tool agents with isolation, policy‑enforced egress, and signed action trails.", category: "Security", publishedAt: "2025-09-29", featured: true, readTime: "14 min read" },
+  { slug: "ai-customer-data-platforms-2026", title: "AI Customer Data Platforms 2026: Real‑Time Personalization Under Budgets", description: "Feature stores + privacy filters + evals—measurable lifts without overruns.", category: "AI Strategy", publishedAt: "2025-09-29", featured: true, readTime: "11 min read" }
+);
+
+// Additional November 2025 posts (from origin/main)
 posts.push(
-  {
-    slug: "genai-routing-under-budgets-2026",
-    title: "Quality‑Tiered GenAI Routing 2026: SLAs Without Surprise Bills",
-    description: "Route prompts across model tiers with caches and eval signals to control cost without hurting UX.",
-    category: "GenAI",
-    publishedAt: "2025-11-01",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "on-device-agents-offline-tools-2026",
-    title: "On‑Device Agents 2026: Offline‑Capable Tools and Private Caches",
-    description: "Design assistants that work offline with local tools, secure storage, and seamless fallbacks.",
-    category: "Edge Computing",
-    publishedAt: "2025-11-01",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "zero-trust-observability-2026",
-    title: "Zero‑Trust Observability 2026: Signed Traces and Least‑Privilege Telemetry",
-    description: "Ship audit‑ready traces with scoped IDs, signed spans, and role‑aware data access.",
-    category: "Security",
-    publishedAt: "2025-11-01",
-    featured: false,
-    readTime: "6 min read"
-  }
+  { slug: "genai-routing-under-budgets-2026", title: "Quality‑Tiered GenAI Routing 2026: SLAs Without Surprise Bills", description: "Route prompts across model tiers with caches and eval signals to control cost without hurting UX.", category: "GenAI", publishedAt: "2025-11-01", featured: true, readTime: "7 min read" },
+  { slug: "on-device-agents-offline-tools-2026", title: "On‑Device Agents 2026: Offline‑Capable Tools and Private Caches", description: "Design assistants that work offline with local tools, secure storage, and seamless fallbacks.", category: "Edge Computing", publishedAt: "2025-11-01", featured: true, readTime: "8 min read" },
+  { slug: "zero-trust-observability-2026", title: "Zero‑Trust Observability 2026: Signed Traces and Least‑Privilege Telemetry", description: "Ship audit‑ready traces with scoped IDs, signed spans, and role‑aware data access.", category: "Security", publishedAt: "2025-11-01", featured: false, readTime: "6 min read" }
 );
 
 // September 29, 2025 new posts (auto‑advertised on Home via latest sort)

@@ -760,7 +760,6 @@ The codebase has been significantly improved with:
     // Run all improvements
     run() {
         console.log('🎯 Starting codebase improvements...');
-        console.log('==================================================');
         
         try {
             this.improveAppTsx();
@@ -773,7 +772,6 @@ The codebase has been significantly improved with:
             this.createSummaryReport();
             
             console.log('\n🎉 CODEBASE IMPROVEMENTS COMPLETED!');
-            console.log('==================================================');
             console.log(`✅ ${this.improvements.length} improvements implemented`);
             console.log('✅ Code quality enhanced');
             console.log('✅ Performance monitoring added');

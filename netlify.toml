@@ -1,6 +1,6 @@
 [build]
-  # Build the Vite React application
-  command = "pnpm run build:optimized"
+  # Publish prebuilt dist without running a build
+  command = "echo 'Skipping build - deploying prebuilt dist'"
   publish = "dist"
   command_timeout = "30m"
 
