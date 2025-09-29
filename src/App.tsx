@@ -13,7 +13,12 @@ import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import SEOOptimizer from './components/SEOOptimizer';
-import AdvancedAnalytics from './components/AdvancedAnalytics';
+// Lightweight placeholder for missing AdvancedAnalytics component
+const AdvancedAnalytics: React.FC<{
+  enableConversionTracking?: boolean;
+  enablePerformanceTracking?: boolean;
+  enableErrorTracking?: boolean;
+}> = () => null;
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';

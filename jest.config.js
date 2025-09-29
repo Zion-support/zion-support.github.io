@@ -1,29 +1,37 @@
-<<<<<<< HEAD
+/** @type {import('jest').Config} */
 export default {
-  preset: 'ts-jest/presets/default-esm',
   testEnvironment: 'jsdom',
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  globals: {
-    'ts-jest': {
-      useESM: true,
-    },
-  },
   setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
-  moduleNameMapper: {
-    '^@/pages/(.*)$': '<rootDir>/src/pages/$1',
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '^vitest$': '<rootDir>/tests/vitest-mock.ts',
-  },
+  testMatch: ['<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)', '<rootDir>/tests/**/*.(ts|tsx|js|jsx)'],
   roots: ['<rootDir>/__tests__', '<rootDir>/tests'],
-  coverageThreshold: {
-    global: {
-      branche,"s": 80
-      functions: 80
-      lines: 80
-      statements: 80};
-  }
-  "moduleNameMapping": {
-    '^@/(.*)$': '<rootDi,r>/$1'};
-}</div></div></div></div>
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],testMatch: [; '<rootDir>/tests/unit*.test.{ts,tsx}','<rootDir>/tests/integration*.test.{ts,tsx}'; ],collectCoverageFrom: [; 'components*.{ts,tsx}','lib*.{ts,tsx}','pages*.{ts,tsx}','!**node_modules/**'; ],coverageThreshold: { global: { branche,s: '80; functions: 80; lines: 80; statements: 80'} },moduleNameMapping: { '^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>
-<<<<<<< HEAD
+  moduleNameMapper: {
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/dist/',
+    '/build/',
+    '/automation/',
+    '/automation_backup/',
+    '/backup/',
+    '/backup-pages/',
+    '/backup-merge-conflicts/',
+    '/backup-problematic-files/',
+    '/corrupted-files-backup/',
+  ],
+  modulePathIgnorePatterns: [
+    '<rootDir>/automation/',
+    '<rootDir>/automation_backup/',
+    '<rootDir>/backup/',
+    '<rootDir>/backup-pages/',
+    '<rootDir>/backup-merge-conflicts/',
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/corrupted-files-backup/',
+  ],
+  transform: {
+    '^.+\\.(ts|tsx)$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.json' }],
+    '^.+\\.(js|jsx)$': 'babel-jest',
+  },
+  collectCoverage: false,
+};
