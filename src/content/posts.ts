@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-agent-risk-playbooks-2025",
+    title: "AI Agent Risk Playbooks: Budgeted Actions, Rollbacks, SLAs",
+    description: "Design agent playbooks with risk budgets, approvals, and rollback triggers that keep you fast and safe.",
+    category: "AI Operations",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-preserving-agents-2025",
+    title: "Privacy‑Preserving Agents: On‑Device Filters, Scoped IDs, DP Noise",
+    description: "Ship assistants that respect privacy with on‑device redaction, scoped identifiers, and differential privacy.",
+    category: "Security & Privacy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-reliable-rag-ops-2026",
     title: "Reliable RAG Ops 2026: Freshness Windows, Drift Alerts, Budgets",
     description: "Keep RAG quality high with TTL windows, drift detectors, and KPI‑tied quality budgets.",

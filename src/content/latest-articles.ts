@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-agent-risk-playbooks-2025",
+    slug: "ai-agent-risk-playbooks-2025",
+    title: "AI Agent Risk Playbooks: Budgeted Actions, Rollbacks, SLAs",
+    description: "Design agent playbooks with risk budgets, approvals, and rollback triggers that keep you fast and safe.",
+    excerpt: "Turn incidents into fast recoveries with budgeted actions and rollback‑ready playbooks.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "AI Operations",
+    tags: ["Agents", "Risk", "Playbooks"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-agent-risk-playbooks.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "privacy-preserving-agents-2025",
+    slug: "privacy-preserving-agents-2025",
+    title: "Privacy‑Preserving Agents: On‑Device Filters, Scoped IDs, DP Noise",
+    description: "Ship assistants that respect privacy with on‑device redaction, scoped identifiers, and differential privacy.",
+    excerpt: "Blueprint for privacy‑first assistants that keep signals rich without PII risk.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "Security & Privacy",
+    tags: ["Privacy", "Agents", "Telemetry"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/privacy-preserving-agents.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "secure-ml-supply-chain-2026",
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
