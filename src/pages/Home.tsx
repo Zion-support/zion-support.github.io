@@ -1,7 +1,6 @@
 import {
   ArrowRight,
   Award,
-  Brain,
   CheckCircle,
   Globe,
   Rocket,
@@ -302,18 +301,18 @@ const Home = () => {
           className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
         />
 
-        {/* Service Showcase */}
-        <ServiceShowcase />
-
-        {/* ROI Calculator Section */}
+        {/* New Services Showcase */}
         <section className="container mx-auto px-6 py-20 relative z-10">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-400 text-sm font-medium mb-6 animate-pulse">
+              🔥 HOT NEW SERVICES - 2025
+            </div>
             <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up">
-              Calculate Your AI Automation ROI
+              Revolutionary AI-Powered Solutions
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              See exactly how much you could save with AI workflow automation. 
-              Most companies see ROI within 3 months.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Transform your business with our cutting-edge AI micro SAAS platform. 
+              From workflow automation to predictive analytics - we've got you covered.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mb-16">
