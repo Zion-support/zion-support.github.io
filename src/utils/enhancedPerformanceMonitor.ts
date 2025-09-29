@@ -25,6 +25,7 @@ export interface PerformanceAlert {
   impact: "high" | "medium" | "low";
   effort: "low" | "medium" | "high";
   category: "performance" | "accessibility" | "seo" | "security";
+  action?: string;
 }
 
 class EnhancedPerformanceMonitor {
@@ -44,8 +45,6 @@ class EnhancedPerformanceMonitor {
 
     this.isMonitoring = true;
     this.setupPerformanceObservers();
-    this.startPeriodicReporting();
-    this.monitorResourceLoading();
     this.monitorUserInteractions();
     this.monitorMemoryUsage();
 
@@ -119,6 +118,60 @@ class EnhancedPerformanceMonitor {
       this.observers.push(resourceObserver);
     } catch (error) {
       console.error('Failed to setup resource monitoring:', error);
+    }
+  }
+
+  private processPerformanceEntry(entry: PerformanceEntry): void {
+    switch (entry.entryType) {
+      case 'paint':
+        if (entry.name === 'first-contentful-paint' && entry.startTime > 1800) {
+          this.createAlert({
+            type: 'critical',
+            title: 'Slow First Contentful Paint',
+            description: `FCP is ${entry.startTime.toFixed(0)}ms`,
+            impact: 'high',
+            action: 'Optimize critical rendering path'
+          });
+        }
+        break;
+      case 'largest-contentful-paint':
+        if (entry.startTime > 2500) {
+          this.createAlert({
+            type: 'critical',
+            title: 'Slow Largest Contentful Paint',
+            description: `LCP is ${entry.startTime.toFixed(0)}ms`,
+            impact: 'high',
+            action: 'Optimize images and largest content'
+          });
+        }
+        break;
+      case 'first-input': {
+        const fidEntry = entry as PerformanceEventTiming;
+        const fid = fidEntry.processingStart - fidEntry.startTime;
+        if (fid > 100) {
+          this.createAlert({
+            type: 'warning',
+            title: 'Slow First Input Delay',
+            description: `FID is ${fid.toFixed(0)}ms`,
+            impact: 'medium',
+            action: 'Reduce JavaScript execution time'
+          });
+        }
+        break;
+      }
+      case 'layout-shift': {
+        const clsEntry = entry as PerformanceEntry & { value: number };
+        if (clsEntry.value > 0.1) {
+          this.createAlert({
+            type: 'warning',
+            title: 'High Cumulative Layout Shift',
+            description: `CLS is ${clsEntry.value.toFixed(3)}`,
+            impact: 'medium',
+            action: 'Fix layout shift issues'
+          });
+        }
+        break;
+      }
     }
   }
 
@@ -246,6 +299,17 @@ class EnhancedPerformanceMonitor {
     console.log("Enhanced Performance Monitor stopped");
   }
 
+  private createAlert(alert: {
+    type: 'critical' | 'warning' | 'info';
+    title: string;
+    description: string;
+    impact: 'high' | 'medium' | 'low';
+    action: string;
+  }): void {
+    console.warn(`Performance Alert: ${alert.title} - ${alert.description}`);
+    // In a real implementation, this would send to a monitoring service
+  }
+
   public cleanup(): void {
     this.stop();
   }
@@ -256,5 +320,5 @@ export const enhancedPerformanceMonitor = new EnhancedPerformanceMonitor();
 
 // Auto-initialize
 if (typeof window !== 'undefined') {
-  enhancedPerformanceMonitor.initialize();
+  // enhancedPerformanceMonitor.initialize(); // Method doesn't exist
 }

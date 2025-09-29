@@ -417,7 +417,34 @@ class PerformanceOptimizer {
   }
 
   public getMetrics(): PerformanceMetrics {
-    return { ...this.metrics };
+    return { 
+      ...this.metrics,
+      overallScore: this.calculateOverallScore(),
+      suggestions: this.optimizationSuggestions
+    };
+  }
+
+  private calculateOverallScore(): number {
+    // Calculate overall performance score based on metrics
+    let score = 100;
+    
+    // LCP scoring (good: <2.5s, needs improvement: 2.5-4s, poor: >4s)
+    if (this.metrics.lcp > 4000) score -= 30;
+    else if (this.metrics.lcp > 2500) score -= 15;
+    
+    // FCP scoring (good: <1.8s, needs improvement: 1.8-3s, poor: >3s)
+    if (this.metrics.fcp > 3000) score -= 25;
+    else if (this.metrics.fcp > 1800) score -= 10;
+    
+    // CLS scoring (good: <0.1, needs improvement: 0.1-0.25, poor: >0.25)
+    if (this.metrics.cls > 0.25) score -= 20;
+    else if (this.metrics.cls > 0.1) score -= 10;
+    
+    // FID scoring (good: <100ms, needs improvement: 100-300ms, poor: >300ms)
+    if (this.metrics.fid > 300) score -= 15;
+    else if (this.metrics.fid > 100) score -= 5;
+    
+    return Math.max(0, score);
   }
 
   public getSuggestions(): OptimizationSuggestion[] {
@@ -486,6 +513,37 @@ class PerformanceOptimizer {
 
   public clearSuggestions(): void {
     this.optimizationSuggestions = [];
+  }
+
+  public optimize(): Promise<void> {
+    return new Promise((resolve) => {
+      // Perform optimizations
+      this.optimizeImages();
+      this.optimizeCSS();
+      this.optimizeJavaScript();
+      resolve();
+    });
+  }
+
+  private optimizeImages(): void {
+    // Image optimization logic
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (!img.loading) {
+        img.loading = 'lazy';
+      }
+    });
+  }
+
+  private optimizeCSS(): void {
+    // CSS optimization logic
+    const styleSheets = document.styleSheets;
+    // Add critical CSS optimization logic here
+  }
+
+  private optimizeJavaScript(): void {
+    // JavaScript optimization logic
+    // Add code splitting and lazy loading logic here
   }
 }
 

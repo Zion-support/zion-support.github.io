@@ -78,7 +78,7 @@ interface SystemMetrics {
 export class EnhancementSuite {
   private static instance: EnhancementSuite | null = null;
   private config: EnhancementConfig;
-  private performanceOptimizer!: typeof performanceOptimizer;
+  private performanceOptimizer = performanceOptimizer;
   private securityEnhancer!: SecurityEnhancer;
   private accessibilityEnhancer!: AccessibilityEnhancer;
   private errorHandler!: ErrorHandler;
@@ -140,9 +140,9 @@ export class EnhancementSuite {
 
   public initialize(): void {
     // Initialize all enhancement modules
-    this.performanceOptimizer = performanceOptimizer;
+    // Performance optimizer is already initialized as singleton
     this.securityEnhancer = SecurityEnhancer.getInstance();
-    this.accessibilityEnhancer = AccessibilityEnhancer.getInstance();
+    this.accessibilityEnhancer = new AccessibilityEnhancer();
     this.errorHandler = ErrorHandler.getInstance();
 
     // Initialize error handler
