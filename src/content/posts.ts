@@ -796,7 +796,6 @@ posts.push(
     featured: true,
     readTime: "8 min read"
   },
-  // Additional fresh content (conflict resolved)
   {
     slug: "privacy-first-insights-telemetry-2026",
     title: "Privacy‑First Insights 2026: DP Telemetry Without PII Risk",
@@ -808,12 +807,12 @@ posts.push(
   },
   {
     slug: "agent-blue-green-releases-2026",
-    title: "Agent Blue‑Green Releases 2026: Safe, Reversible Automation",
+    title: "Blue‑Green Agent Releases 2026: Safe Rollouts with Live Traces",
     description: "Deploy agent updates with canaries, budgeted tool actions, and trace‑driven rollbacks.",
     category: "GenAI",
-    publishedAt: "2025-10-16",
+    publishedAt: "2025-10-15",
     featured: true,
-    readTime: "7 min read"
+    readTime: "8 min read"
   },
   {
     slug: "ai-platform-scorecards-roi-2026",

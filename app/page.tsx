@@ -26,192 +26,21 @@ import {
   AIDataAnalyticsEnterpriseBanner,
   EnterpriseTransformationSuccessBanner,
   HealthcareTransformationBanner,
-  NewContent2026Banner,
-  Latest2026ContentBanner,
-  AIOperationalExcellenceBanner,
-  AIAgentObservabilityBanner,
-  ManufacturingTransformationBanner,
+  NewContent2026Banner
 } from '../components/PromotionalBanner';
 import {
-  AIAutonomousCloudOpsBanner,
-  AIFinTechTransformationBanner,
-  AIRetailAutomationBanner,
+  NewContent2026Banner as NewContent2026BannerComponent,
+  AutonomousOperationsBanner,
+  FinOpsAdvancedBanner,
+  PlatformArchitectureBanner,
+  AutonomousOperationsSuccessBanner,
+  NewContentShowcaseBanner2026
 } from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
-import AISustainabilityBanner from '../components/AISustainabilityBanner';
-import AIMultimodalBanner from '../components/AIMultimodalBanner';
-
-// Placeholder components for missing banners
-const AICostCalculatorBanner = () => (
-  <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600 text-white">
-    <div className="max-w-6xl mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">AI Cost Calculator Tool</h2>
-      <p className="text-xl mb-6">Calculate your AI implementation ROI and cost savings</p>
-      <Link href="/tools/ai-cost-calculator" className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-        Try Free Calculator
-      </Link>
-    </div>
-  </section>
-);
-
-const AIImplementationPlaybookBanner = () => (
-  <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-    <div className="max-w-6xl mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">AI Implementation Playbook 2026</h2>
-      <p className="text-xl mb-6">Complete guide to enterprise AI implementation with proven frameworks</p>
-      <Link href="/resources/ai-implementation-playbook" className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-        Download Playbook
-      </Link>
-    </div>
-  </section>
-);
-
-const SupplyChainOptimizationBanner = () => (
-  <section className="py-16 bg-gradient-to-r from-orange-600 to-red-600 text-white">
-    <div className="max-w-6xl mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">AI Supply Chain Optimization</h2>
-      <p className="text-xl mb-6">Reduce costs by 40% and improve efficiency with AI-powered supply chain management</p>
-      <Link href="/services/supply-chain-optimization" className="bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-        Learn More
-      </Link>
-    </div>
-  </section>
-);
-
-const InteractiveAICalculatorBanner = () => (
-  <section className="py-16 bg-gradient-to-r from-teal-600 to-cyan-600 text-white">
-    <div className="max-w-6xl mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Interactive AI ROI Calculator</h2>
-      <p className="text-xl mb-6">See how much you can save with AI automation in your industry</p>
-      <Link href="/tools/ai-roi-calculator" className="bg-white text-teal-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-        Calculate ROI
-      </Link>
-    </div>
-  </section>
-);
-
-const EnterpriseAIReadinessBanner = () => (
-  <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-    <div className="max-w-6xl mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Enterprise AI Readiness Assessment</h2>
-      <p className="text-xl mb-6">Evaluate your organization's readiness for AI transformation</p>
-      <Link href="/tools/ai-readiness-assessment" className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-        Take Assessment
-      </Link>
-    </div>
-  </section>
-);
-
-const AI2026TrendsBanner = () => (
-  <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-    <div className="max-w-6xl mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">AI Trends 2026: Future of Enterprise</h2>
-      <p className="text-xl mb-6">Discover the top AI trends that will shape enterprise technology in 2026</p>
-      <Link href="/blog/ai-trends-2026" className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-        Read Trends Report
-      </Link>
-    </div>
-  </section>
-);
-
-const InteractiveContentShowcase = () => (
-  <section className="py-20 bg-gray-50">
-    <div className="max-w-6xl mx-auto px-4">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-gray-900 mb-6">Interactive Content Hub</h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Explore our interactive tools, calculators, and personalized content recommendations
-        </p>
-      </div>
-      
-      <div className="grid md:grid-cols-3 gap-8">
-        <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-            <span className="text-2xl">🧮</span>
-          </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">AI ROI Calculator</h3>
-          <p className="text-gray-600 mb-4">Calculate potential savings from AI implementation</p>
-          <Link href="/tools/ai-roi-calculator" className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
-            Try Calculator →
-          </Link>
-        </div>
-        
-        <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-          <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-            <span className="text-2xl">📊</span>
-          </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">Readiness Assessment</h3>
-          <p className="text-gray-600 mb-4">Evaluate your AI transformation readiness</p>
-          <Link href="/tools/ai-readiness-assessment" className="text-green-600 font-semibold hover:text-green-700 transition-colors">
-            Take Assessment →
-          </Link>
-        </div>
-        
-        <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-            <span className="text-2xl">🎯</span>
-          </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">Personalized Recommendations</h3>
-          <p className="text-gray-600 mb-4">Get tailored AI solutions for your industry</p>
-          <Link href="/recommendations" className="text-purple-600 font-semibold hover:text-purple-700 transition-colors">
-            Get Recommendations →
-          </Link>
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
-const ContentRecommendationSystem = () => (
-  <section className="py-20 bg-white">
-    <div className="max-w-6xl mx-auto px-4">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-gray-900 mb-6">Personalized Content Recommendations</h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Get AI-powered content recommendations based on your industry and interests
-        </p>
-      </div>
-      
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
-          <div className="text-2xl mb-3">🏥</div>
-          <h3 className="font-bold text-gray-900 mb-2">Healthcare</h3>
-          <p className="text-sm text-gray-600 mb-4">AI solutions for healthcare transformation</p>
-          <Link href="/industry/healthcare" className="text-blue-600 text-sm font-semibold hover:text-blue-700">
-            Explore →
-          </Link>
-        </div>
-        
-        <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
-          <div className="text-2xl mb-3">💰</div>
-          <h3 className="font-bold text-gray-900 mb-2">Finance</h3>
-          <p className="text-sm text-gray-600 mb-4">Fintech AI automation and compliance</p>
-          <Link href="/industry/finance" className="text-green-600 text-sm font-semibold hover:text-green-700">
-            Explore →
-          </Link>
-        </div>
-        
-        <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border border-orange-200">
-          <div className="text-2xl mb-3">🏭</div>
-          <h3 className="font-bold text-gray-900 mb-2">Manufacturing</h3>
-          <p className="text-sm text-gray-600 mb-4">Industrial AI and IoT automation</p>
-          <Link href="/industry/manufacturing" className="text-orange-600 text-sm font-semibold hover:text-orange-700">
-            Explore →
-          </Link>
-        </div>
-        
-        <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200">
-          <div className="text-2xl mb-3">🛒</div>
-          <h3 className="font-bold text-gray-900 mb-2">Retail</h3>
-          <p className="text-sm text-gray-600 mb-4">E-commerce AI and customer analytics</p>
-          <Link href="/industry/retail" className="text-purple-600 text-sm font-semibold hover:text-purple-700">
-            Explore →
-          </Link>
-        </div>
-      </div>
-    </div>
-  </section>
-);
+import FeaturedServiceCard from '../components/FeaturedServiceCard';
+import SuccessStory from '../components/SuccessStory';
+import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -226,26 +55,20 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-            <span>✨ New on the blog:</span>
-            <Link href="/blog/ai-multimodal-enterprise-2025" className="underline hover:text-yellow-200">AI Multimodal Enterprise 2025</Link>
+            <span>✨ Latest 2026 content:</span>
+            <a href="/blog/agentic-workflow-orchestration-2026" className="underline hover:text-yellow-200">Agentic Workflow Orchestration</a>
             <span className="hidden md:inline">•</span>
-            <Link href="/blog/secure-ml-supply-chain-2026" className="underline hover:text-yellow-200">Secure ML Supply Chain 2026</Link>
+            <a href="/blog/ai-governance-maturity-model-2026" className="underline hover:text-yellow-200">AI Governance Maturity</a>
             <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-customer-data-platforms-2026" className="underline hover:text-yellow-200">AI Customer Data Platforms</a>
+            <a href="/blog/ai-customer-data-platforms-2026" className="underline hover:text-yellow-200">AI CDPs 2026</a>
             <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-multimodal-enterprise-2026" className="underline hover:text-yellow-200">AI Multimodal Enterprise</a>
+            <a href="/blog/ai-finops-advanced-2026" className="underline hover:text-yellow-200">AI FinOps Advanced</a>
             <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-enterprise-automation-2026" className="underline hover:text-yellow-200">Enterprise Automation</a>
+            <a href="/blog/ai-platform-architecture-2026" className="underline hover:text-yellow-200">Platform Architecture</a>
             <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</a>
+            <a href="/blog/agent-benchmarking-in-production-2026" className="underline hover:text-yellow-200">Agent Benchmarking</a>
             <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-trustworthy-agents-2026" className="underline hover:text-yellow-200">Trustworthy AI Agents</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-value-stream-analytics-2026" className="underline hover:text-yellow-200">Value Stream Analytics</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-multimodal-enterprise-2026" className="underline hover:text-yellow-200">AI Multimodal Enterprise</a>
-            <span className="hidden md:inline">•</span>
-            <a href="/blog/ai-platform-roi-2025" className="underline hover:text-yellow-200">AI Platform ROI</a>
+            <a href="/blog/ai-incident-response-automation-2026" className="underline hover:text-yellow-200">Incident Response Automation</a>
           </div>
           <Link
             href="/blog"
@@ -255,12 +78,12 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
-      {/* NEW 2026 Content Promotional Banners */}
-      <Latest2026ContentBanner />
-      {/* 2026 Banners from PromotionalBanner */}
-      {/* AISecurityEnterprise2026Banner is not exported here; skipping */}
-      {/* AIMultimodalEnterprise2026Banner is not exported here; using AIMultimodalEnterpriseBanner already */}
-      {/* AISustainabilityTransformationBanner is exported and used below if needed */}
+      {/* Promotional Banners */}
+      <LatestContent2026Banner />
+      <AISecurityEnterprise2026Banner />
+      <AIMultimodalEnterprise2026Banner />
+      <AISustainabilityTransformationBanner />
+      <NewLatest2026ContentBanner />
       <AIAutonomousCloudOpsBanner />
       <AIFinTechTransformationBanner />
       <AIRetailAutomationBanner />
@@ -976,593 +799,79 @@ export default function HomePage() {
       <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Latest AI Insights & Success Stories
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Stay ahead with our latest content, case studies, and AI innovations
-            </p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Latest AI Insights & Success Stories</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Stay ahead with our latest content, case studies, and AI innovations</p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link href="/blog/ai-trends-2026" className="group">
+            <Link href="/blog/agent-benchmarking-in-production-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-emerald-100 text-emerald-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New 2026
-                  </span>
-                  <span className="text-sm text-gray-500">15 min read</span>
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">New 2026</span>
+                  <span className="text-sm text-gray-500">16 min read</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Trends 2026: Future of Enterprise Technology
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Discover the top AI trends that will shape enterprise technology in 2026. 300% faster innovation cycles.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Trends Report →
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">Agent Benchmarking in Production 2026</h3>
+                <p className="text-gray-600 mb-4">Benchmark agents with SLAs, evals, and KPIs for reliable autonomy.</p>
+                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-incident-response-automation-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">Security</span>
+                  <span className="text-sm text-gray-500">18 min read</span>
                 </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">AI Incident Response Automation 2026</h3>
+                <p className="text-gray-600 mb-4">Policy-as-code playbooks and autonomous runbooks for closed-loop remediation.</p>
+                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
               </div>
             </Link>
             <Link href="/blog/ai-cost-optimization-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Featured Guide
-                  </span>
-                  <span className="text-sm text-gray-500">12 min read</span>
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">New 2026</span>
+                  <span className="text-sm text-gray-500">16 min read</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Cost Optimization 2026: Maximize ROI with Smart Spending
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Reduce AI costs by 40-70% while improving performance. Proven strategies from Fortune 500 companies.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Optimization Guide →
-                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">Agentic Workflow Orchestration 2026: Reliable AI Workflows</h3>
+                <p className="text-gray-600 mb-4">Orchestrate multi-step agents with guardrails, approvals, and observability for measurable ROI.</p>
+                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
               </div>
             </Link>
             <Link href="/case-studies/ai-cost-optimization-success-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Case Study
-                  </span>
-                  <span className="text-sm text-gray-500">Fortune 500</span>
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">New 2026 Guide</span>
+                  <span className="text-sm text-gray-500">25 min read</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Cost Optimization Success: $2.4M Annual Savings
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  See how a Fortune 500 company achieved 65% cost reduction with AI optimization while improving performance.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  View Success Story →
-                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">AI Autonomous Operations 2026: Self-Managing Infrastructure</h3>
+                <p className="text-gray-600 mb-4">Zero-touch infra, predictive maintenance, and self-healing systems.</p>
+                <div className="flex items-center text-blue-600 font-semibold">Read Complete Guide →</div>
               </div>
             </Link>
-            <Link href="/blog/ai-multimodal-enterprise-2026" className="group">
+            <Link href="/blog/ai-customer-data-platforms-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Article
-                  </span>
-                  <span className="text-sm text-gray-500">15 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Multimodal Enterprise 2025: Vision, Voice & Data Integration
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Discover how multimodal AI is transforming enterprise operations with 300% faster decision-making.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/ai-finops-advanced-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Featured Article
-                  </span>
-                  <span className="text-sm text-gray-500">12 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI for Sustainability: Green Tech Solutions 2025
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Achieve 50% carbon reduction and $3M annual savings with AI-powered environmental solutions.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
-              </div>
-            </Link>
-            <Link href="/case-studies/ai-sustainability-manufacturing-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Success Story
-                  </span>
-                  <span className="text-sm text-gray-500">Manufacturing</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Sustainability Manufacturing: 50% Carbon Reduction
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  See how a leading manufacturer achieved 50% carbon reduction and $3M annual savings.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  View Case Study →
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/ai-platform-architecture-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Architecture Guide
-                  </span>
-                  <span className="text-sm text-gray-500">30 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Platform Architecture 2026: Enterprise-Scale AI Infrastructure Guide
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Design and implement enterprise-scale AI platforms with microservices, edge computing, and autonomous scaling.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">Read Architecture Guide →</div>
-              </div>
-            </Link>
-            <Link href="/blog/ai-autonomous-cloud-ops-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    NEW 2026
-                  </span>
-                  <span className="text-sm text-gray-500">18 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Autonomous Cloud Operations 2026
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Self-healing infrastructure with 99.9% uptime and 90% cost reduction.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
-              </div>
-            </Link>
-            <Link href="/blog/ai-fintech-transformation-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    NEW 2026
-                  </span>
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">NEW 2026</span>
                   <span className="text-sm text-gray-500">22 min read</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI FinTech Transformation 2026
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  95% automation, $5M+ savings, and digital banking revolution.
-                </p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">AI Customer Data Platforms 2026</h3>
+                <p className="text-gray-600 mb-4">Blueprint for AI-native CDPs delivering real-time personalization at scale.</p>
                 <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
               </div>
             </Link>
             <Link href="/blog/ai-agent-orchestration-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New 2026
-                  </span>
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">New Article</span>
                   <span className="text-sm text-gray-500">22 min read</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Agent Orchestration 2026: Multi-Agent System Architecture
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Master multi-agent systems with 95% automation efficiency and $5M+ ROI through advanced orchestration patterns.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
-              </div>
-            </Link>
-            <Link to="/blog/ai-sustainability-green-tech-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New 2026
-                  </span>
-                  <span className="text-sm text-gray-500">18 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Sustainability & Green Tech 2026: Carbon-Neutral Operations
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Achieve carbon-neutral AI operations with 80% energy reduction and $2M+ savings through sustainable technology.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
-              </div>
-            </Link>
-            <Link to="/blog/ai-quantum-computing-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New 2026
-                  </span>
-                  <span className="text-sm text-gray-500">25 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Quantum Computing 2026: Next-Generation Intelligence
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">Read Guide →</div>
-              </div>
-            </Link>
-            <Link href="/case-studies/ai-retail-automation-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    NEW Case Study
-                  </span>
-                  <span className="text-sm text-gray-500">Fortune 500</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Retail Automation 2026: $8M ROI Case Study
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  See how a Fortune 500 retailer achieved 98% automation, 300% productivity gains, and $8M annual ROI.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">View Case Study →</div>
-              </div>
-            </Link>
-            <Link href="/blog/ai-enterprise-automation-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New 2026
-                  </span>
-                  <span className="text-sm text-gray-500">18 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Enterprise Automation 2026: Complete Business Process Transformation
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Transform your enterprise with AI automation. 95% process efficiency, $5M+ savings, and zero-touch operations.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
-              </div>
-            </Link>
-            <Link href="/case-studies/ai-enterprise-transformation-success-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Case Study
-                  </span>
-                  <span className="text-sm text-gray-500">Fortune 500</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Sustainability Transformation 2026: $10M ROI Case Study
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  See how a Fortune 500 company achieved carbon neutrality and $10M ROI with comprehensive AI sustainability transformation.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  View Case Study →
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/ai-governance-framework-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Case Study
-                  </span>
-                  <span className="text-sm text-gray-500">Financial Services</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Quantum Optimization 2026: 1000x Speed Improvement Case Study
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  See how a financial services company achieved 1000x optimization speed and $12M additional returns with quantum-enhanced AI.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  View Case Study →
-                </div>
-              </div>
-            </Link>
-            <Link to="/case-studies/fintech-ai-risk-compliance-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Success Story
-                  </span>
-                  <span className="text-sm text-gray-500">FinTech</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  FinTech AI Risk Compliance: 70% Risk Reduction & $2.5M Savings
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  See how a leading fintech achieved 70% risk reduction with automated governance frameworks.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  View Case Study →
-                </div>
-              </div>
-            </Link>
-            <Link to="/blog/llm-cost-optimization-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Popular Article
-                  </span>
-                  <span className="text-sm text-gray-500">9 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  LLM Cost Optimization in 2025: Practical Strategies
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Cut LLM spend by 30–70% with routing, caching, and quantization patterns.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
-              </div>
-            </Link>
-            <Link to="/blog/edge-llm-latency-patterns" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Article
-                  </span>
-                  <span className="text-sm text-gray-500">7 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  Edge LLM Latency Patterns: Sub-200ms Interactions
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Streaming, prefetch, and edge compute patterns for instant-feel AI UX.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
-              </div>
-            </Link>
-            <Link to="/blog/genai-guardrails-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Article
-                  </span>
-                  <span className="text-sm text-gray-500">11 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  GenAI Guardrails 2025: Practical Playbook for Reliable AI
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Practical patterns to ship safe, reliable, and auditable GenAI systems in production.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
-              </div>
-            </Link>
-            <Link to="/blog/ai-revolution-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Article
-                  </span>
-                  <span className="text-sm text-gray-500">12 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Revolution 2025: Complete Business Transformation Guide
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Discover how AI is reshaping industries and creating unprecedented opportunities for growth in 2025.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
-              </div>
-            </Link>
-
-            <Link to="/blog/ai-agents-in-the-enterprise-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Article
-                  </span>
-                  <span className="text-sm text-gray-500">10 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Agents in the Enterprise: 2025 Adoption Playbook
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Practical guide to rolling out autonomous AI agents across enterprise workflows with ROI.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
-              </div>
-            </Link>
-
-            <Link to="/case-studies/techcorp-ai-transformation" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Success Story
-                  </span>
-                  <span className="text-sm text-gray-500">E-commerce</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  TechCorp: 90% Efficiency Gain with AI
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  See how TechCorp achieved $500K annual savings and 90% efficiency improvement with AI transformation.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  View Case Study →
-                </div>
-              </div>
-            </Link>
-
-            <Link to="/case-studies/finserve-genai-risk-mitigation" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Success Story
-                  </span>
-                  <span className="text-sm text-gray-500">Fintech</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  FinServe: GenAI Risk Mitigation & Compliance
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  How a fintech leader cut AI risk by 70% and achieved audit-ready compliance.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  View Case Study →
-                </div>
-              </div>
-            </Link>
-
-            <Link to="/blog/ai-customer-service-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Article
-                  </span>
-                  <span className="text-sm text-gray-500">15 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI-Powered Customer Service Revolution
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  80% faster response times, 90% cost reduction - discover how AI is transforming customer support.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
-              </div>
-            </Link>
-
-            <Link to="/blog/ai-healthcare-transformation-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Featured Article
-                  </span>
-                  <span className="text-sm text-gray-500">18 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Healthcare Transformation Guide
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  40% better diagnostics, 60% improved outcomes - how AI is revolutionizing patient care.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
-              </div>
-            </Link>
-
-            <Link to="/case-studies/retail-ai-transformation" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Success Story
-                  </span>
-                  <span className="text-sm text-gray-500">Retail</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  RetailAI Corp: 150% Revenue Growth
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  See how RetailAI Corp achieved 150% revenue growth and 80% cost reduction with AI transformation.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  View Case Study →
-                </div>
-              </div>
-            </Link>
-
-            <Link to="/blog/ai-enterprise-implementation-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Guide
-                  </span>
-                  <span className="text-sm text-gray-500">18 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  Enterprise AI Implementation 2025: Complete Guide
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Master enterprise AI implementation with proven strategies, best practices, and real-world case studies.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Complete Guide →
-                </div>
-              </div>
-            </Link>
-
-            <Link to="/blog/ai-mlops-best-practices-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Technical Guide
-                  </span>
-                  <span className="text-sm text-gray-500">16 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  MLOps Best Practices 2025: Production-Ready ML Systems
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Master MLOps with proven strategies for building, deploying, and maintaining production-ready ML systems.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read MLOps Guide →
-                </div>
-              </div>
-            </Link>
-
-            <Link to="/case-studies/enterprise-ai-transformation-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Featured Case Study
-                  </span>
-                  <span className="text-sm text-gray-500">12 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  Enterprise AI Transformation: $5.2M ROI in 18 Months
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Discover how a Fortune 500 company achieved $5.2M ROI with comprehensive AI transformation.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  View Case Study →
-                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">AI Agent Orchestration 2026: Multi-Agent Architecture</h3>
+                <p className="text-gray-600 mb-4">Orchestration patterns that deliver 95% automation and $5M+ ROI.</p>
+                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
               </div>
             </Link>
           </div>
-
           <div className="text-center">
-            <Link
-              to="/blog"
-              className="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg hover:shadow-xl"
-            >
-              View All Content
-            </Link>
+            <Link href="/blog" className="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg hover:shadow-xl">View All Content</Link>
           </div>
         </div>
       </section>
@@ -1670,7 +979,7 @@ export default function HomePage() {
               </div>
               <div className="mt-6 pt-4 border-t border-white/20">
                 <Link
-                  to="/blog"
+                  href="/blog"
                   className="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
                 >
                   View All Content →
