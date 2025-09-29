@@ -10,6 +10,22 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "privacy-first-flags-quickstart-2026",
+    title: "Privacy‑First Flags Quickstart 2026",
+    summary: "Roll out features globally with scoped IDs, edge filters, and health probes.",
+    category: "Architecture",
+    date: "2025-10-14",
+    readMinutes: 5,
+  },
+  {
+    id: "reliable-agent-actions-checklist-2026",
+    title: "Reliable Agent Actions: A Production Checklist",
+    summary: "Deterministic tools, sandboxing, and live traces for trustworthy automation.",
+    category: "GenAI",
+    date: "2025-10-14",
+    readMinutes: 6,
+  },
+  {
     id: "agent-safety-budgets-2026",
     title: "Agent Safety Budgets 2026: Ship Fast Without Surprises",
     summary: "Budget risky actions, add PR checks, and wire rollbacks for reliable agent releases.",
