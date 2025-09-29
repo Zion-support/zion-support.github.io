@@ -75,6 +75,10 @@ export default function HomePage() {
             <span>✨ NEW 2026:</span>
             <Link href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</Link>
             <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-market-intelligence-2026" className="underline hover:text-yellow-200">Market Intelligence</Link>
+            <span className="hidden md:inline">•</span>
+            <Link href="/blog/ai-sales-automation-2026" className="underline hover:text-yellow-200">Sales Automation</Link>
+            <span className="hidden md:inline">•</span>
             <Link href="/blog/agentic-workflow-orchestration-2026" className="underline hover:text-yellow-200">Agentic Workflow Orchestration</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
@@ -280,6 +284,40 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Link href="/blog/ai-market-intelligence-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New 2026
+                  </span>
+                  <span className="text-sm text-gray-500">14 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Market Intelligence 2026: Real-Time Competitive Insights
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Track competitors, pricing, and demand with always-on AI market intelligence.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-sales-automation-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New 2026 Guide
+                  </span>
+                  <span className="text-sm text-gray-500">17 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Sales Automation 2026: From Lead to Closed-Won
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Automate enrichment, outreach, and routing with measurable guardrails.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
+              </div>
+            </Link>
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center">
