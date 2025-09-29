@@ -451,5 +451,25 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "7 min read",
   },
+  {
+    slug: "ai-governance-playbook-2025",
+    title: "The 2025 AI Governance Playbook for Product Teams",
+    description:
+      "Policy tests, eval systems, and auditability patterns that scale with velocity.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "edge-ai-design-guide",
+    title: "Designing Edge AI Systems: A Field Guide",
+    description:
+      "Low-latency inference with quantization, caching, and graceful degradation.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-28",
+    featured: false,
+    readTime: "6 min read",
+  },
 ];
 
