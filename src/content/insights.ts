@@ -180,8 +180,13 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 8,
   },
   {
+<<<<<<< HEAD
+    id: "ai-workflow-automation-2025-trends",
+    title: "AI Workflow Automation: 2025 Trends That Will Transform Business",
+=======
     id: "ai-automation-roi-breakdown",
     title: "AI Automation ROI: Real Numbers from 50+ Implementations",
+>>>>>>> origin/main
     summary:
       "Detailed breakdown of cost savings, efficiency gains, and revenue increases from AI workflow automation across industries.",
     category: "ROI Analysis",
@@ -306,6 +311,24 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 9,
   },
   {
+<<<<<<< HEAD
+    id: "digital-transformation-2025",
+    title: "Digital Transformation in 2025: Trends and Strategies",
+    summary:
+      "The latest trends in digital transformation and how businesses can adapt to stay competitive.",
+    category: "Digital Transformation",
+    date: "2025-01-05",
+    readMinutes: 6,
+  },
+  {
+    id: "genai-guardrails-in-production",
+    title: "GenAI Guardrails in Production: Policy Tests That Scale",
+    summary:
+      "From offline eval suites to online canaries: patterns that keep quality and safety high as usage grows.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 8,
+=======
     id: "ai-automation-roi-calculator",
     title: "AI Automation ROI Calculator: Measure Your Business Impact",
     summary:
@@ -340,6 +363,7 @@ export const latestInsights: InsightArticle[] = [
     category: "Security",
     date: "2025-01-21",
     readMinutes: 11,
+>>>>>>> origin/main
   },
 ];
 
