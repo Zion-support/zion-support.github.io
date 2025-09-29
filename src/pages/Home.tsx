@@ -15,14 +15,13 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
-import LatestContentBanner from "../components/LatestContentBanner";
 import ModernFeatures from "../components/ModernFeatures";
-import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
 
@@ -102,9 +101,16 @@ const Home = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
-        <LatestContentBanner className="border-b border-white/10" variant="info" />
-        <NewContentPromoBanner className="border-b border-white/10" variant="premium" />
-        <NewContentPromoBanner className="border-b border-white/10" variant="premium" />
+
+        {/* Content Promotion Banner */}
+        <ContentPromotionBanner
+          variant="info"
+          title="🚀 NEW: GenAI Evals, Edge Flags, Telemetry + more"
+          description="Fresh featured articles just landed. Quality gates, <100ms flags, AI cost guardrails."
+          ctaText="Read the latest"
+          ctaLink="/blog/genai-evals-in-production-2025"
+          dismissible={true}
+        />
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -169,42 +175,6 @@ const Home = () => {
               </div>
             </div>
 
-            {/* New Content Promo Banner */}
-            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-8 animate-fade-in">
-              <div className="flex items-center justify-center gap-3 mb-3">
-                <span className="inline-flex h-2 w-2 rounded-full bg-purple-400 animate-pulse"></span>
-                <span className="text-lg font-bold text-purple-400">FRESH CONTENT ALERT</span>
-                <span className="inline-flex h-2 w-2 rounded-full bg-purple-400 animate-pulse"></span>
-              </div>
-              <p className="text-white text-lg font-semibold mb-2">
-                📚 25+ New AI Articles & ROI Case Studies Published This Month
-              </p>
-              <p className="text-zion-slate-light text-sm mb-3">
-                Exclusive insights on AI automation, micro SAAS trends, and $50B market opportunities
-              </p>
-              <div className="flex flex-wrap justify-center gap-2 text-xs">
-                <span className="bg-purple-500/30 px-2 py-1 rounded">AI ROI Stories</span>
-                <span className="bg-purple-500/30 px-2 py-1 rounded">Market Analysis</span>
-                <span className="bg-purple-500/30 px-2 py-1 rounded">Implementation Guides</span>
-                <span className="bg-purple-500/30 px-2 py-1 rounded">Success Stories</span>
-              </div>
-            </div>
-
-            {/* ROI Success Banner */}
-            <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-400/30 rounded-xl p-6 mb-8 animate-fade-in">
-              <div className="flex items-center justify-center gap-3 mb-3">
-                <TrendingUp className="w-6 h-6 text-emerald-400 animate-bounce" />
-                <span className="text-lg font-bold text-emerald-400">PROVEN RESULTS</span>
-                <TrendingUp className="w-6 h-6 text-emerald-400 animate-bounce" />
-              </div>
-              <p className="text-white text-lg font-semibold mb-2">
-                💰 Our Clients Save $2.3M+ Annually with AI Automation
-              </p>
-              <p className="text-zion-slate-light text-sm">
-                500+ companies achieving 200-500% ROI • Average payback in 90 days • 99.9% uptime guarantee
-              </p>
-            </div>
-
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">
               <div className="text-center group hover:scale-105 transition-all duration-300">
@@ -265,12 +235,15 @@ const Home = () => {
         {/* New Services Showcase */}
         <section className="container mx-auto px-6 py-20 relative z-10">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-400 text-sm font-medium mb-6 animate-pulse">
+              🔥 HOT NEW SERVICES - 2025
+            </div>
             <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up">
-              Calculate Your AI Automation ROI
+              Revolutionary AI-Powered Solutions
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              See exactly how much you could save with AI workflow automation. 
-              Most companies see ROI within 3 months.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Transform your business with our cutting-edge AI micro SAAS platform. 
+              From workflow automation to predictive analytics - we've got you covered.
             </p>
           </div>
 
@@ -634,7 +607,7 @@ const Home = () => {
             <div className="mb-10 flex items-end justify-between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
-                <p className="text-gray-600">Fresh: AI Governance, Golden Paths, Cloud FinOps QA gates, and NEW AI automation guides.</p>
+                <p className="text-gray-600">Insights from our team to help you move faster.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
@@ -660,128 +633,6 @@ const Home = () => {
                 <ArrowRight className="w-5 h-5" />
                 Explore All Articles
               </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* New Content Showcase Section */}
-        <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-800 text-sm font-medium mb-6">
-                <Sparkles className="w-4 h-4 mr-2" />
-                Fresh Content • Updated Daily
-              </div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                🆕 Latest from Zion Tech Group
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Stay ahead with our newest insights, case studies, and resources. 
-                Fresh content added daily to help you succeed.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              {/* Latest Blog Posts */}
-              <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                    <Sparkles className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900">Latest Blog Posts</h3>
-                    <p className="text-sm text-gray-600">Fresh insights daily</p>
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  {posts.slice(0, 3).map((post) => (
-                    <div key={post.slug} className="border-l-4 border-blue-500 pl-4">
-                      <h4 className="font-semibold text-gray-900 text-sm mb-1">{post.title}</h4>
-                    <p className="text-xs text-gray-600">{post.category}</p>
-                    </div>
-                  ))}
-                </div>
-                <Link to="/blog" className="mt-4 block text-blue-600 font-semibold hover:text-blue-800">
-                  Read all posts →
-                </Link>
-              </div>
-
-              {/* Latest Case Studies */}
-              <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                    <Award className="w-6 h-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900">Success Stories</h3>
-                    <p className="text-sm text-gray-600">Real results, real clients</p>
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  <div className="border-l-4 border-green-500 pl-4">
-                    <h4 className="font-semibold text-gray-900 text-sm mb-1">RetailMax: 99% Time Reduction</h4>
-                    <p className="text-xs text-gray-600">E-commerce • $2.3M savings</p>
-                  </div>
-                  <div className="border-l-4 border-green-500 pl-4">
-                    <h4 className="font-semibold text-gray-900 text-sm mb-1">First National Bank: 95% Faster</h4>
-                    <p className="text-xs text-gray-600">Banking • 97% satisfaction</p>
-                  </div>
-                  <div className="border-l-4 border-green-500 pl-4">
-                    <h4 className="font-semibold text-gray-900 text-sm mb-1">Precision Manufacturing: 70% Waste Reduction</h4>
-                    <p className="text-xs text-gray-600">Manufacturing • $3.2M savings</p>
-                  </div>
-                </div>
-                <Link to="/case-studies" className="mt-4 block text-green-600 font-semibold hover:text-green-800">
-                  View all case studies →
-                </Link>
-              </div>
-
-              {/* Latest Resources */}
-              <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                    <Download className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900">Free Resources</h3>
-                    <p className="text-sm text-gray-600">50+ downloads available</p>
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  <div className="border-l-4 border-purple-500 pl-4">
-                    <h4 className="font-semibold text-gray-900 text-sm mb-1">AI Implementation Guide</h4>
-                    <p className="text-xs text-gray-600">PDF Guide • 12,847 downloads</p>
-                  </div>
-                  <div className="border-l-4 border-purple-500 pl-4">
-                    <h4 className="font-semibold text-gray-900 text-sm mb-1">Cybersecurity Assessment Tool</h4>
-                    <p className="text-xs text-gray-600">Interactive Tool • 8,923 downloads</p>
-                  </div>
-                  <div className="border-l-4 border-purple-500 pl-4">
-                    <h4 className="font-semibold text-gray-900 text-sm mb-1">Cloud Migration Whitepaper</h4>
-                    <p className="text-xs text-gray-600">Whitepaper • 15,234 downloads</p>
-                  </div>
-                </div>
-                <Link to="/resources" className="mt-4 block text-purple-600 font-semibold hover:text-purple-800">
-                  Browse all resources →
-                </Link>
-              </div>
-            </div>
-
-            {/* Newsletter Signup */}
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white text-center">
-              <h3 className="text-2xl font-bold mb-2">Never Miss New Content</h3>
-              <p className="text-indigo-100 mb-6">Get our latest articles, case studies, and resources delivered to your inbox weekly.</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500"
-                />
-                <button className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Subscribe
-                </button>
-              </div>
-              <p className="text-xs text-indigo-200 mt-3">No spam, unsubscribe anytime. Join 10,000+ subscribers.</p>
             </div>
           </div>
         </section>
@@ -859,7 +710,7 @@ const Home = () => {
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
                   <p className="text-white/90">
-                    Fresh: Secure SBOMs, GenAI evaluation playbook, and Kubernetes cost guardrails.
+                    Fresh articles on real-time data pipelines, north-star metrics, and safe, scalable GenAI ops.
                   </p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">

@@ -14,6 +14,57 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "genai-telemetry-observability-2025",
+    title: "GenAI Telemetry: What to Measure in 2025",
+    description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
+    content: `
+# GenAI Telemetry: What to Measure in 2025
+
+Operationalize GenAI with observability that tracks quality, safety, and cost. Learn the critical signals, dashboards, and alerting strategies that prevent regressions and runaway bills.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["Observability", "Telemetry", "Guardrails", "Quality"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/genai-telemetry.jpg"
+  },
+  {
+    slug: "feature-flags-at-the-edge-2025",
+    title: "Feature Flags at the Edge: Instant, Safe Rollouts",
+    description: "Design flags for global low-latency delivery, safe rollbacks, and cohort experimentation.",
+    content: `
+# Feature Flags at the Edge: Instant, Safe Rollouts
+
+Architect global feature delivery with edge caching, signed payloads, and cohort targeting to ship faster with confidence.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "Architecture",
+    tags: ["Edge", "Flags", "Rollouts", "CD"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-feature-flags.jpg"
+  },
+  {
+    slug: "ai-product-readiness-checks",
+    title: "AI Product Readiness: Pre‑Launch Checks That Matter",
+    description: "From eval gates to safety reviews—everything to validate before shipping AI to users.",
+    content: `
+# AI Product Readiness: Pre‑Launch Checks That Matter
+
+Use this concise pre‑launch checklist to ensure your AI features meet quality, safety, and reliability bars before release.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-27",
+    category: "Product",
+    tags: ["Product", "Launch", "Governance"],
+    featured: true,
+    readTime: "5 min read",
+    image: "/images/ai-product-readiness.jpg"
+  },
+  {
     slug: "genai-evals-in-production-2025",
     title: "GenAI Evals in Production: Policy Tests That Scale",
     description: "From offline suites to online canaries: patterns that keep quality high as usage grows.",
@@ -132,68 +183,89 @@ Implement these patterns to achieve fast, reliable, and cost‑effective streami
     image: "/images/real-time-data-pipelines.jpg"
   },
   {
-    slug: "secure-supply-chain-sbom-2025",
-    title: "Shipping a Secure SBOM and Hardening Your Supply Chain",
-    description: "Step-by-step guidance to produce SBOMs, lock dependencies, and detect tampering early.",
+    slug: "genai-telemetry-observability-2025",
+    title: "GenAI Telemetry: What to Measure in 2025",
+    description: "Signals, dashboards, and alerting that keep GenAI quality, safety, and cost in check.",
     content: `
-# Shipping a Secure SBOM and Hardening Your Supply Chain
+# GenAI Telemetry: What to Measure in 2025
 
-Modern software depends on thousands of transitive packages. This guide shows pragmatic steps to generate SBOMs, cryptographically verify artifacts, and add CI policy gates so compromises are caught before production.
-
-## Core Practices
-- Reproducible builds with locked hashes
-- Provenance attestations (SLSA)
-- Automated SBOM generation and diffing
-- Policy checks in CI for risky licenses and CVEs
-
-## Quick Wins
-- Enable signature verification for package managers
-- Fail CI on unsatisfied integrity constraints
-- Monitor new CVEs with actionable ownership
-
-Adopt these to dramatically reduce supply chain risk while keeping developer velocity high.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Security",
-    tags: ["SBOM", "Supply Chain", "Security", "SLSA"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/secure-sbom.jpg"
-  },
-  {
-    slug: "kubernetes-cost-guardrails-2025",
-    title: "Kubernetes Cost Guardrails That Engineers Don’t Hate",
-    description: "Requests/limits, QoS, autoscaling, and cost-aware CI policies that prevent waste.",
-    content: `
-# Kubernetes Cost Guardrails That Engineers Don’t Hate
-
-Keep costs predictable with sensible defaults, budget alerts, and engineering-friendly policies that don’t block delivery.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-28",
-    category: "Cloud FinOps",
-    tags: ["Kubernetes", "FinOps", "Autoscaling", "Costs"],
-    featured: false,
-    readTime: "6 min read",
-    image: "/images/k8s-cost-guardrails.jpg"
-  },
-  {
-    slug: "genai-eval-playbook-2025",
-    title: "A Practical Evaluation Playbook for GenAI Apps",
-    description: "Stand up robust offline and online evals, define quality bars, and ship with confidence.",
-    content: `
-# A Practical Evaluation Playbook for GenAI Apps
-
-How to design eval harnesses, policy tests, and guardrails that scale with usage.
+Operationalize GenAI with observability that tracks quality, safety, and cost. Learn the critical signals, dashboards, and alerting strategies that prevent regressions and runaway bills.
     `,
     author: "Zion Tech Group Team",
     date: "2025-09-29",
     category: "GenAI",
-    tags: ["Evaluation", "GenAI", "Quality", "Policy"],
+    tags: ["Observability", "Telemetry", "Guardrails", "Quality"],
     featured: true,
-    readTime: "8 min read",
-    image: "/images/genai-eval-playbook.jpg"
+    readTime: "7 min read",
+    image: "/images/genai-telemetry.jpg"
+  },
+  {
+    slug: "feature-flags-at-the-edge-2025",
+    title: "Feature Flags at the Edge: Instant, Safe Rollouts",
+    description: "Design flags for global low-latency delivery, safe rollbacks, and cohort experimentation.",
+    content: `
+# Feature Flags at the Edge: Instant, Safe Rollouts
+
+Architect global feature delivery with edge caching, signed payloads, and cohort targeting to ship faster with confidence.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-28",
+    category: "Architecture",
+    tags: ["Edge", "Flags", "Rollouts", "CD"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-feature-flags.jpg"
+  },
+  {
+    slug: "ai-product-readiness-checks",
+    title: "AI Product Readiness: Pre‑Launch Checks That Matter",
+    description: "From eval gates to safety reviews—everything to validate before shipping AI to users.",
+    content: `
+# AI Product Readiness: Pre‑Launch Checks That Matter
+
+Use this concise pre‑launch checklist to ensure your AI features meet quality, safety, and reliability bars before release.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-27",
+    category: "Product",
+    tags: ["Product", "Launch", "Governance"],
+    featured: true,
+    readTime: "5 min read",
+    image: "/images/ai-product-readiness.jpg"
+  },
+  {
+    slug: "ai-cost-optimization-guardrails-2025",
+    title: "AI Cost Guardrails: Keep Quality High While Cutting Spend",
+    description: "Practical controls for token budgets, eval-triggered rollbacks, and model right-sizing.",
+    content: `
+# AI Cost Guardrails: Keep Quality High While Cutting Spend
+
+Implement budget-aware routing, auto-downgrade on saturation, and per-feature token caps with clear SLOs so teams move fast without runaway bills.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "GenAI",
+    tags: ["FinOps", "Quality", "Governance"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/ai-cost-guardrails.jpg"
+  },
+  {
+    slug: "shipping-evals-in-ci-2025",
+    title: "Ship Faster with Evals in CI: A Practical Guide",
+    description: "Turn regressions into red builds. Wire offline evals into your pipeline today.",
+    content: `
+# Ship Faster with Evals in CI: A Practical Guide
+
+Wire offline evals into CI so quality gates block risky changes before they reach users. Learn data selection, goldens, and score thresholds that correlate with outcomes.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-09-29",
+    category: "MLOps",
+    tags: ["CI", "Evals", "Guardrails"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/evals-in-ci.jpg"
   },
   {
     slug: "platform-scorecards-that-stick",
@@ -2039,196 +2111,6 @@ Ready to implement Zero Trust security? Contact our team for a free security ass
     featured: true,
     readTime: "14 min read",
     image: "/images/zero-trust-security.jpg"
-  }
-  ,
-  {
-    slug: "ai-governance-playbook-2025",
-    title: "The 2025 AI Governance Playbook for Product Teams",
-    description: "Practical guardrails: policy tests, red-teaming, data retention, and auditability baked into delivery.",
-    content: `
-# The 2025 AI Governance Playbook for Product Teams
-
-Shipping AI responsibly requires concrete guardrails that scale with usage and velocity. This playbook distills what works across policy tests, safety red‑teaming, evaluation suites, and auditability.
-
-## What to Instrument
-- Input/output logging with PII minimization
-- Policy tests in CI and pre‑merge checks
-- Online canaries with rollback triggers
-
-## Team Operating Model
-- Clear ownership for datasets, prompts, and policies
-- Weekly eval reviews tied to business KPIs
-
-Adopt these patterns to move fast without breaking trust.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "AI Governance",
-    tags: ["AI", "Governance", "Safety", "Policy Tests"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-governance-playbook.jpg"
-  },
-  {
-    slug: "edge-ai-design-guide",
-    title: "Designing Edge AI Systems: A Field Guide",
-    description: "Model optimization, caching, and failover patterns for resilient sub‑100ms edge inference.",
-    content: `
-# Designing Edge AI Systems: A Field Guide
-
-Achieve low‑latency inference at the edge with quantization, pruning, warm caches, and graceful degradation.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-28",
-    category: "Edge Computing",
-    tags: ["Edge AI", "Inference", "Latency"],
-    featured: false,
-    readTime: "6 min read",
-    image: "/images/edge-ai-design.jpg"
-  }
-  ,
-  {
-    slug: "serverless-ai-inference-cost-playbook",
-    title: "Serverless AI Inference: The Cost Optimization Playbook",
-    description: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",
-    content: `
-# Serverless AI Inference: The Cost Optimization Playbook
-
-Serverless platforms are ideal for bursty AI inference, but naive deployments waste money and hurt latency. This playbook shows how to design for both cost and performance.
-
-## Core Tactics
-
-- Adaptive batching with concurrency hints
-- Warm pool management per model/size
-- Request coalescing for popular prompts
-- Tiered quality (fast/cheap vs. high‑fidelity) with guardrails
-
-## Architecture
-
-- Event queue with token‑aware shaper
-- Per‑model workers with warm sets
-- Budget controllers and SLO‑based routing
-
-## Rollout
-
-- Shadow mode > canary > global
-- Track P50/P95/P99, error rate, and $/1k tokens
-
-Adopt these patterns to cut cost 40–70% without sacrificing experience.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "GenAI",
-    tags: ["Serverless", "Inference", "Cost", "Latency"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/serverless-inference.jpg"
-  },
-  {
-    slug: "rag-architectures-that-work",
-    title: "RAG Architectures That Actually Work in Production",
-    description: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.",
-    content: `
-# RAG Architectures That Actually Work in Production
-
-Production RAG needs more than a vector DB. This guide covers battle‑tested patterns that preserve accuracy as content evolves.
-
-## Content Pipeline
-
-- Incremental ingests with changefeeds
-- Domain‑aware chunking and rich metadata
-- Deduplication and canonicalization
-
-## Retrieval
-
-- Hybrid search (BM25 + dense + filters)
-- Freshness boosters and recency decay
-- Diversification and re‑ranking
-
-## Quality System
-
-- Offline evals with labeled sets
-- Online metrics tied to task success
-- Safety checks and policy tests
-
-Ship RAG that survives real traffic, drift, and cost pressure.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "GenAI",
-    tags: ["RAG", "Vector Search", "Evals", "Quality"],
-    featured: true,
-    readTime: "12 min read",
-    image: "/images/rag-architectures.jpg"
-  },
-  // New banner-linked articles (lightweight content stubs)
-  {
-    slug: "ai-workflow-automation-roi-calculator",
-    title: "AI Workflow Automation ROI Calculator",
-    description: "Estimate potential savings and payback from AI workflow automation.",
-    content: `
-# AI Workflow Automation ROI Calculator
-
-Use this framework to estimate savings from automating top workflows. Identify time spent, error rates, volume, and unit costs, then calculate savings and payback period.
-`,
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Strategy",
-    tags: ["ROI", "Automation", "AI"],
-    featured: true,
-    readTime: "5 min read",
-    image: "/images/ai-roi-calculator.jpg"
-  },
-  {
-    slug: "micro-saas-platform-comparison-2025",
-    title: "Micro SAAS Platform Comparison 2025",
-    description: "Compare leading micro SAAS platforms by features, pricing, and integrations.",
-    content: `
-# Micro SAAS Platform Comparison 2025
-
-A pragmatic buyer's guide covering capabilities, integration depth, pricing models, and support SLAs.
-`,
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Technology",
-    tags: ["Micro SAAS", "Platforms", "Comparison"],
-    featured: false,
-    readTime: "12 min read",
-    image: "/images/micro-saas-comparison.jpg"
-  },
-  {
-    slug: "ai-virtual-assistant-implementation-checklist",
-    title: "AI Virtual Assistant Implementation Checklist",
-    description: "25 critical steps for deploying an effective AI assistant.",
-    content: `
-# AI Virtual Assistant Implementation Checklist
-
-From data prep to guardrails and analytics, this checklist helps ensure successful deployment.
-`,
-    author: "Zion Tech Group Team",
-    date: "2025-09-28",
-    category: "AI & Automation",
-    tags: ["AI Assistant", "Implementation", "Checklist"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-assistant-checklist.jpg"
-  },
-  {
-    slug: "data-analytics-automation-success-stories",
-    title: "Data Analytics Automation: Success Stories",
-    description: "10 companies share 300% faster insights with analytics automation.",
-    content: `
-# Data Analytics Automation: Success Stories
-
-Concise case summaries with measurable outcomes and architecture snapshots.
-`,
-    author: "Zion Tech Group Team",
-    date: "2025-09-27",
-    category: "Data Analytics",
-    tags: ["Analytics", "Automation", "Case Studies"],
-    featured: false,
-    readTime: "9 min read",
-    image: "/images/analytics-success-stories.jpg"
   }
 ];
 

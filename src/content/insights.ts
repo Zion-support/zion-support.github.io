@@ -3,107 +3,17 @@ export type InsightArticle = {
   title: string;
   summary: string;
   category: string;
-  date: string;
+  date: string; // ISO date string
   readMinutes: number;
 };
 
 export const latestInsights: InsightArticle[] = [
-  {
-    id: "ai-sales-copilot-insights",
-    title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
-    summary:
-      "How to wire CRMs, build prompt libraries, and add evals that boost win‑rates without risk.",
-    category: "AI Strategy",
-    date: "2025-09-30",
-    readMinutes: 5,
-  },
-  {
-    id: "eda-contracts-replays",
-    title: "Event‑Driven Architecture: Contracts, Idempotency, and Safe Replays",
-    summary:
-      "Version events, enforce schemas, and run backfills without double‑processing.",
-    category: "Architecture",
-    date: "2025-09-30",
-    readMinutes: 6,
-  },
-  {
-    id: "zero-downtime-migrations",
-    title: "Zero‑Downtime Migrations: Patterns that Keep Pages Green",
-    summary:
-      "Dual‑write, read‑shadowing, and progressive delivery to ship schema changes safely.",
-    category: "Platform Engineering",
-    date: "2025-09-29",
-    readMinutes: 5,
-  },
-  {
-    id: "ai-autonomous-ops-intro",
-    title: "AI Autonomous Operations: From Runbooks to Self‑Managing Systems",
-    summary:
-      "Policy tests, health circuits, and closed‑loop optimization that shrink toil to near zero.",
-    category: "AI & Automation",
-    date: "2025-09-30",
-    readMinutes: 6,
-  },
-  {
-    id: "ai-roi-scorecards",
-    title: "AI ROI Scorecards That Executives Trust",
-    summary:
-      "Pick leading indicators, instrument baselines, and report outcomes without vanity metrics.",
-    category: "AI Strategy",
-    date: "2025-09-30",
-    readMinutes: 5,
-  },
   {
     id: "genai-policy-tests-canaries",
     title: "GenAI Policy Tests: From Offline Suites to Online Canaries",
     summary:
       "How to combine offline evals with live canaries to catch regressions before customers do.",
     category: "GenAI",
-    date: "2025-09-30",
-    readMinutes: 6,
-  },
-  {
-    id: "secure-ml-platform-checklist",
-    title: "Secure ML Platform: A 12‑Point Checklist",
-    summary:
-      "Pragmatic controls for data flows, registries, deployment targets, and drift monitoring.",
-    category: "Security",
-    date: "2025-09-30",
-    readMinutes: 6,
-  },
-  {
-    id: "edge-cdn-cache-budgeting",
-    title: "Edge CDN Cache Budgeting: Hit‑Rate Wins Without Stale Bugs",
-    summary:
-      "Decide TTLs, validation circuits, and negative caching for reliable, fast UX.",
-    category: "Architecture",
-    date: "2025-09-30",
-    readMinutes: 5,
-  },
-  {
-    id: "ai-cost-quick-wins",
-    title: "AI Cost Quick Wins: Cut 25% Without Slowing Teams",
-    summary:
-      "Target redundant workflows, compress context, and cache prompts to reduce spend fast.",
-    category: "AI Strategy",
-    date: "2025-09-30",
-    readMinutes: 5,
-  },
-  {
-    id: "model-policy-tests-playbook",
-    title: "A Playbook for Model Policy Tests",
-    summary:
-      "Define disallowed patterns, add detectors, and wire policy checks into CI and runtime.",
-    category: "AI Governance",
-    date: "2025-09-30",
-    readMinutes: 6,
-  },
-  {
-    id: "edge-cache-stale-while-revalidate",
-    title: "Stale‑While‑Revalidate in Practice",
-    summary:
-      "Deliver instant responses while safely refreshing data in the background at the edge.",
-    category: "Architecture",
     date: "2025-09-30",
     readMinutes: 6,
   },
@@ -135,33 +45,6 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 5,
   },
   {
-    id: "ai-roadmaps-outcomes",
-    title: "AI Roadmaps That Ship Outcomes, Not Science Projects",
-    summary:
-      "A 3-step method to prioritize use-cases, define measurable KPIs, and deliver value in 90 days.",
-    category: "AI Strategy",
-    date: "2025-09-29",
-    readMinutes: 5,
-  },
-  {
-    id: "cloud-finops-wins",
-    title: "Cloud FinOps: 9 Wins Your CFO Will Love",
-    summary:
-      "Right-size fleets, shape demand, and make CI/CD cost-aware without slowing developers.",
-    category: "Cloud FinOps",
-    date: "2025-09-29",
-    readMinutes: 4,
-  },
-  {
-    id: "genai-guardrails-scorecards",
-    title: "GenAI Guardrails: Scorecards That Prevent Silent Regressions",
-    summary:
-      "Policy tests, red-team prompts, and online checks that keep quality high as usage scales.",
-    category: "GenAI",
-    date: "2025-09-29",
-    readMinutes: 6,
-  },
-  {
     id: "edge-cache-invalidation",
     title: "Edge Cache Invalidation Strategies That Won't Wake You Up",
     summary:
@@ -189,6 +72,15 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+    id: "feature-flags-edge-realtime",
+    title: "Real‑Time Feature Flags at the Edge",
+    summary:
+      "Architect, cache, and validate flags globally for instant rollouts and safe rollbacks.",
+    category: "Architecture",
+    date: "2025-09-28",
+    readMinutes: 6,
+  },
+  {
     id: "north-star-metrics-insight",
     title: "North‑Star Metrics: A Field Guide",
     summary:
@@ -198,60 +90,6 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 7,
   },
   {
-    id: "kubernetes-cost-guardrails",
-    title: "Kubernetes Cost Guardrails That Engineers Don't Hate",
-    summary:
-      "Limit waste with sensible defaults: requests/limits, QoS, autoscaling, and cost-aware CI policies.",
-    category: "Cloud",
-    date: "2025-09-28",
-    readMinutes: 7,
-  },
-  {
-    id: "ciso-zero-trust-scorecard",
-    title: "A CISO's Zero‑Trust Scorecard",
-    summary:
-      "Measure progress with identity controls, least privilege, continuous verification, and blast‑radius limits.",
-    category: "Security",
-    date: "2025-09-28",
-    readMinutes: 8,
-  },
-  {
-    id: "zero-trust-sdls",
-    title: "Zero-Trust SDLC: Shipping Secure Software Without Slowing Down",
-    summary:
-      "Embed policy-as-code, automated threat modeling, and continuous verification into delivery workflows.",
-    category: "Security",
-    date: "2025-09-28",
-    readMinutes: 8,
-  },
-  {
-    id: "analytics-ltv-playbook",
-    title: "An Operator's Playbook for LTV:CPA Ratio",
-    summary:
-      "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
-    category: "Product Analytics",
-    date: "2025-09-28",
-    readMinutes: 7,
-  },
-  {
-    id: "edge-caching-primer",
-    title: "Edge Caching Primer: Shrinking P95 Without Breaking Consistency",
-    summary:
-      "When to cache at the edge, what to purge, and patterns for safe staleness.",
-    category: "Architecture",
-    date: "2025-09-28",
-    readMinutes: 6,
-  },
-  {
-    id: "platform-engineering-blueprint",
-    title: "Platform Engineering Blueprint 2025",
-    summary:
-      "Golden paths, paved roads, and product thinking to scale developer experience across hundreds of teams.",
-    category: "Platform Engineering",
-    date: "2025-09-27",
-    readMinutes: 8,
-  },
-  {
     id: "secure-ml-pipelines",
     title: "Securing Machine Learning Pipelines in Production",
     summary:
@@ -259,24 +97,6 @@ export const latestInsights: InsightArticle[] = [
     category: "Security",
     date: "2025-08-20",
     readMinutes: 7,
-  },
-  {
-    id: "genai-ops-safety",
-    title: "Operationalizing GenAI Safely and at Scale",
-    summary:
-      "Guardrails, evals, and rollout strategies that keep quality high while shipping fast.",
-    category: "MLOps",
-    date: "2025-09-27",
-    readMinutes: 6,
-  },
-  {
-    id: "north-star-metrics-cheatsheet",
-    title: "North‑Star Metrics: A 5‑Step Cheatsheet",
-    summary:
-      "A quick framework to choose metrics that truly reflect customer value and drive growth.",
-    category: "Product Analytics",
-    date: "2025-09-26",
-    readMinutes: 5,
   },
   {
     id: "cloud-cost-optimization",
@@ -405,52 +225,31 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 8,
   },
   {
-    id: "5g-business-applications-reality",
-    title: "5G Business Applications: What's Actually Working",
+    id: "5g-business-transformation",
+    title: "5G and Business Transformation: Opportunities and Challenges",
     summary:
-      "Real-world 5G business applications that are delivering measurable ROI, from smart factories to autonomous vehicles.",
+      "How 5G technology is enabling new business models and transforming industries across the globe.",
     category: "5G Technology",
-    date: "2025-01-09",
+    date: "2025-01-06",
+    readMinutes: 7,
+  },
+  {
+    id: "digital-transformation-2025",
+    title: "Digital Transformation in 2025: Trends and Strategies",
+    summary:
+      "The latest trends in digital transformation and how businesses can adapt to stay competitive.",
+    category: "Digital Transformation",
+    date: "2025-01-05",
     readMinutes: 6,
   },
   {
-    id: "ai-ecommerce-personalization-roi",
-    title: "AI E-commerce Personalization: ROI and Implementation Insights",
+    id: "genai-guardrails-in-production",
+    title: "GenAI Guardrails in Production: Policy Tests That Scale",
     summary:
-      "How AI-powered personalization is driving revenue growth in e-commerce, with specific metrics and implementation strategies.",
-    category: "E-commerce",
-    date: "2025-01-08",
-    readMinutes: 5,
-  },
-  // 2025-09-30 Fresh insights
-  {
-    id: "agent-telemetry-traces",
-    title: "Agent Telemetry: What to Trace and Why It Matters",
-    summary:
-      "From tool call spans to prompt metadata—what to capture to debug and improve agent behavior.",
+      "From offline eval suites to online canaries: patterns that keep quality and safety high as usage grows.",
     category: "GenAI",
-    date: "2025-09-30",
-    readMinutes: 5,
-  },
-  {
-    id: "rag-eval-checklist",
-    title: "RAG Eval Checklist: Precision Without Over-Spending",
-    summary:
-      "A pragmatic checklist for measuring retrieval quality with minimal token use.",
-    category: "MLOps",
-    date: "2025-09-30",
-    readMinutes: 4,
-  },
-  {
-    id: "policy-tests-at-runtime",
-    title: "Policy Tests at Runtime: Guardrails That Scale",
-    summary:
-      "How to run lightweight policy checks in production without hurting UX.",
-    category: "AI Governance",
-    date: "2025-09-30",
-    readMinutes: 5,
+    date: "2025-09-29",
+    readMinutes: 8,
   },
 ];
-
-export default latestInsights;
 
