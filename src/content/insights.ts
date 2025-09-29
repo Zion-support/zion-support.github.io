@@ -5,7 +5,6 @@ export type InsightArticle = {
   category: string;
   date: string; // ISO date string
   readMinutes: number;
-  description?: string;
 };
 
 export const latestInsights: InsightArticle[] = [
@@ -113,6 +112,15 @@ export const latestInsights: InsightArticle[] = [
     readMinutes: 6,
   },
   {
+    id: "ai-governance-rubric",
+    title: "A Lightweight Rubric for AI Governance Decisions",
+    summary:
+      "Decision criteria for when to add controls, how to validate, and who owns risk.",
+    category: "Risk & Compliance",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
     id: "reliable-real-time-pipelines",
     title: "Building Reliable Real‑Time Data Pipelines",
     summary:
@@ -186,7 +194,7 @@ export const latestInsights: InsightArticle[] = [
   },
   {
     id: "kubernetes-cost-guardrails",
-    title: "Kubernetes Cost Guardrails That Engineers Don't Hate",
+    title: "Kubernetes Cost Guardrails That Engineers Don’t Hate",
     summary:
       "Limit waste with sensible defaults: requests/limits, QoS, autoscaling, and cost-aware CI policies.",
     category: "Cloud",
@@ -195,7 +203,7 @@ export const latestInsights: InsightArticle[] = [
   },
   {
     id: "ciso-zero-trust-scorecard",
-    title: "A CISO's Zero‑Trust Scorecard",
+    title: "A CISO’s Zero‑Trust Scorecard",
     summary:
       "Measure progress with identity controls, least privilege, continuous verification, and blast‑radius limits.",
     category: "Security",
@@ -213,10 +221,11 @@ export const latestInsights: InsightArticle[] = [
   },
   {
     id: "analytics-ltv-playbook",
-    title: "An Operator's Playbook for LTV:CPA Ratio",
+    title: "An Operator’s Playbook for LTV:CPA Ratio",
     summary:
       "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
     category: "Product Analytics",
+    
     date: "2025-09-29",
     readMinutes: 7,
   },
@@ -459,46 +468,7 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-01-21",
     readMinutes: 11,
   },
-  {
-    id: "cloud-native-microservices-2025",
-    title: "Cloud-Native Microservices: Patterns for 2025",
-    summary: "Essential patterns and practices for building scalable, resilient microservices architectures in modern cloud environments.",
-    category: "Architecture",
-    date: "2025-01-21",
-    readMinutes: 10,
-  },
-  {
-    id: "enterprise-ai-governance-framework",
-    title: "Enterprise AI Governance Framework: From Strategy to Implementation",
-    summary: "Comprehensive governance framework for enterprise AI adoption, covering policy, risk management, and operational excellence.",
-    category: "AI Governance",
-    date: "2025-01-21",
-    readMinutes: 12,
-  },
-  {
-    id: "saas-platform-scaling-strategies",
-    title: "SAAS Platform Scaling Strategies: From Startup to Enterprise",
-    summary: "Proven strategies for scaling SAAS platforms from early-stage to enterprise, covering technical and business considerations.",
-    category: "Platform Engineering",
-    date: "2025-01-21",
-    readMinutes: 9,
-  },
-  {
-    id: "ai-security-best-practices",
-    title: "AI Security Best Practices: Protecting Your AI Systems",
-    summary: "Essential security practices for AI systems, covering model protection, data privacy, and adversarial defense strategies.",
-    category: "Security",
-    date: "2025-01-21",
-    readMinutes: 11,
-  },
-  {
-    id: "edge-cache-invalidation",
-    title: "Edge Cache Invalidation Strategies That Won't Wake You Up",
-    summary: "Versioned keys, background warming, and circuit breakers for resilient edge experiences.",
-    category: "Architecture",
-    date: "2025-09-28",
-    readMinutes: 6,
-  }
 ];
 
 export default latestInsights;
+

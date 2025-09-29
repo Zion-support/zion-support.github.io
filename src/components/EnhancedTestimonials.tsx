@@ -1,6 +1,8 @@
 import React from "react";
 
-export default function EnhancedTestimonials(): React.JSX.Element {
-  return <section />;
-}
+const EnhancedTestimonials: React.FC = () => {
+  return <section aria-label="Enhanced testimonials" />;
+};
+
+export default EnhancedTestimonials;
 
