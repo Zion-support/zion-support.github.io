@@ -10,8 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-=======
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
     description:
@@ -42,7 +40,6 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
   },
   {
->>>>>>> cursor/create-and-deploy-new-content-83a1
     slug: "edge-inference-patterns-2025",
     title: "Edge Inference Patterns for Sub‑100ms Experiences",
     description:
@@ -143,16 +140,6 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
-    slug: "platform-engineering-blueprint-2025",
-    title: "Platform Engineering Blueprint 2025: From Chaos to Clarity",
-    description:
-      "Core capabilities, golden paths, and product thinking to accelerate delivery across hundreds of teams.",
-    category: "Platform Engineering",
-    publishedAt: "2025-09-27",
-    featured: true,
-    readTime: "11 min read",
-  },
-  {
     slug: "genai-eval-systems",
     title: "Shipping with Confidence: Evaluation Systems for GenAI Apps",
     description:
@@ -161,6 +148,16 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-26",
     featured: false,
     readTime: "7 min read",
+  },
+  {
+    slug: "platform-engineering-blueprint-2025",
+    title: "Platform Engineering Blueprint 2025: From Chaos to Clarity",
+    description:
+      "Core capabilities, golden paths, and product thinking to accelerate delivery across hundreds of teams.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-27",
+    featured: true,
+    readTime: "11 min read",
   },
   {
     slug: "opentelemetry-tracing-primer",
