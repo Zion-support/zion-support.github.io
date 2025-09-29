@@ -1,68 +1,61 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+
+// Import pages
+import Home from './src/pages/Home';
+import About from './src/pages/About';
+import Services from './src/pages/Services';
+import AIMicroSAAS from './src/pages/AIMicroSAAS';
+import Blog from './src/pages/Blog';
+import Contact from './src/pages/Contact';
+import Portfolio from './src/pages/Portfolio';
+import CaseStudies from './src/pages/CaseStudies';
+import Resources from './src/pages/Resources';
+import Insights from './src/pages/Insights';
+import Post from './src/pages/Post';
+
+// Import service pages
+import AIWorkflowAutomation from './src/pages/services/AIWorkflowAutomation';
+import AIVirtualAssistant from './src/pages/services/AIVirtualAssistant';
+import AIDataAnalytics from './src/pages/services/AIDataAnalytics';
+
+// Import components
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
-import ServiceCard from './src/components/ServiceCard';
-import TestimonialCarousel from './src/components/TestimonialCarousel';
-import ContactSection from './src/components/ContactSection';
-import BenefitsSection from './src/components/BenefitsSection';
-import HowItWorksSection from './src/components/HowItWorksSection';
-import FaqSection from './src/components/FaqSection';
-import ChatAssistant from './src/components/ChatAssistant';
-import ScrollToTop from './src/components/ScrollToTop';
-import ParticleBackground from './src/components/ParticleBackground';
-
-export default function App() {
-  const services = [
-    {
-      title: 'AI Solutions',
-      description: 'Cutting-edge artificial intelligence solutions for your business needs. From machine learning to natural language processing.',
-      icon: '🤖',
-      features: ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics'],
-    },
-    {
-      title: 'IT Services',
-      description: 'Comprehensive IT services and infrastructure management. Keep your systems running smoothly and securely.',
-      icon: '💻',
-      features: ['System Administration', 'Network Security', 'Cloud Migration', '24/7 Support'],
-    },
-    {
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and migration services. Modernize your infrastructure with our cloud expertise.',
-      icon: '☁️',
-      features: ['AWS/Azure/GCP', 'DevOps', 'Containerization', 'Auto-scaling'],
-    },
-    {
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions to protect your business from evolving threats and ensure compliance.',
-      icon: '🔒',
-      features: ['Threat Detection', 'Compliance', 'Penetration Testing', 'Security Audits'],
-    },
-    {
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our advanced analytics and business intelligence solutions.',
-      icon: '📊',
-      features: ['Data Visualization', 'Business Intelligence', 'Real-time Analytics', 'Custom Dashboards'],
-    },
-    {
-      title: 'Digital Transformation',
-      description: 'Complete digital transformation services to modernize your business processes and improve efficiency.',
-      icon: '🚀',
-      features: ['Process Automation', 'Workflow Optimization', 'Digital Strategy', 'Change Management'],
-    },
-  ];
-
-  const handleMenuClick = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+import SEO from './src/components/SEO';
+import ErrorBoundary from './src/components/ErrorBoundary';
 
 export default function App(): JSX.Element {
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
   return (
-    <main>
-
-    </main>
+    <HelmetProvider>
+      <ErrorBoundary>
+        <SEO />
+        <Router>
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
+            <Header />
+            <main>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/ai-micro-saas" element={<AIMicroSAAS />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<Post />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
+                <Route path="/resources" element={<Resources />} />
+                <Route path="/insights" element={<Insights />} />
+                <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+                <Route path="/services/ai-virtual-assistant" element={<AIVirtualAssistant />} />
+                <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
+              </Routes>
+            </main>
+            <Footer />
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

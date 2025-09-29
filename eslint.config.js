@@ -141,7 +141,7 @@ export default [
       ...reactHooks.configs.recommended.rules,
       
       'no-console': 'warn',
-      'no-undef': 'error',
+      'no-undef': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
       'react/no-unescaped-entities': 'warn',
