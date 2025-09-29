@@ -264,3 +264,47 @@ export const AIRevolutionBanner = () => (
     hideAfter={20}
   />
 );
+
+export const AutonomousAgentsBanner = () => (
+  <PromotionalBanner
+    message="🤖 New: AI Autonomous Agents 2025 - Complete Enterprise Implementation Guide with 300% ROI Strategies"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-autonomous-agents-2025"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-indigo-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);
+
+export const AIGovernanceBanner = () => (
+  <PromotionalBanner
+    message="🛡️ Featured: AI Governance Framework 2025 - 70% Risk Reduction with Enterprise-Ready Implementation"
+    ctaText="Read Framework"
+    ctaLink="/blog/ai-governance-framework-2025"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-purple-600"
+    autoHide={true}
+    hideAfter={25}
+  />
+);
+
+export const FinTechSuccessBanner = () => (
+  <PromotionalBanner
+    message="🏦 Success Story: FinTech Achieved 70% Risk Reduction & $2.5M Savings with AI Governance"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/fintech-ai-risk-compliance-2025"
+    backgroundColor="bg-gradient-to-r from-green-600 to-emerald-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const NewContentShowcaseBanner = () => (
+  <PromotionalBanner
+    message="📚 Fresh Content: AI Autonomous Agents, Governance Framework, FinTech Success Stories - Latest 2025 Insights"
+    ctaText="Browse All Content"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-teal-600 to-cyan-600"
+    autoHide={true}
+    hideAfter={18}
+  />
+);

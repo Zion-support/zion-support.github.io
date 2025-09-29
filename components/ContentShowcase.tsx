@@ -19,6 +19,21 @@ interface ContentItem {
 
 const contentItems: ContentItem[] = [
   {
+    id: 'ai-autonomous-agents-2025',
+    title: 'AI Autonomous Agents 2025: Complete Enterprise Implementation Guide',
+    excerpt: 'Master autonomous AI agents with our comprehensive 2025 guide. Learn deployment strategies, ROI optimization, and enterprise-ready patterns.',
+    type: 'article',
+    readTime: '18 min read',
+    category: 'AI Strategy',
+    href: '/blog/ai-autonomous-agents-2025',
+    featured: true,
+    publishedDate: '2025-01-25',
+    metrics: [
+      { value: '85%', label: 'Enterprise Adoption' },
+      { value: '300%', label: 'Average ROI' }
+    ]
+  },
+  {
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Enterprise-Ready Implementation Guide',
     excerpt: 'Master AI governance with our comprehensive framework covering risk management, compliance, and ethical deployment strategies.',
@@ -27,7 +42,7 @@ const contentItems: ContentItem[] = [
     category: 'AI Governance',
     href: '/blog/ai-governance-framework-2025',
     featured: true,
-    publishedDate: '2025-01-20',
+    publishedDate: '2025-01-25',
     metrics: [
       { value: '70%', label: 'Risk Reduction' },
       { value: '12', label: 'Framework Areas' }
@@ -56,7 +71,7 @@ const contentItems: ContentItem[] = [
     category: 'FinTech',
     href: '/case-studies/fintech-ai-risk-compliance-2025',
     featured: true,
-    publishedDate: '2025-01-20',
+    publishedDate: '2025-01-25',
     metrics: [
       { value: '70%', label: 'Risk Reduction' },
       { value: '$2.5M', label: 'Cost Savings' }
