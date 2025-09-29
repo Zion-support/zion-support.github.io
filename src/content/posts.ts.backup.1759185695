@@ -4,8 +4,16 @@ export interface BlogPost {
   description: string;
   category: string;
   publishedAt: string;
+<<<<<<< HEAD:src/content/posts.ts.backup.1759185695
   featured?: boolean;
   readTime?: string;
+=======
+  featured: boolean;
+  readTime: string;
+  image?: string;
+  newBadge?: boolean;
+  trending?: boolean;
+>>>>>>> cursor/create-and-deploy-new-content-ff76:src/content/posts.ts
 }
 
 export const posts: BlogPost[] = [
@@ -28,15 +36,24 @@ export const posts: BlogPost[] = [
     readTime: "6 min read"
   },
   {
+<<<<<<< HEAD:src/content/posts.ts.backup.1759185695
     slug: "agent-blue-green-releases-2026",
     title: "Agent Blue‑Green Releases 2026: Safe, Reversible Automation",
     description: "Ship agent changes with policy tests, budgeted actions, and instant rollback toggles.",
     category: "GenAI",
     publishedAt: "2025-09-29",
+=======
+    slug: "ai-sre-blueprints-2026",
+    title: "AI SRE Blueprints 2026: Observability, Reliability, and Incident Response",
+    description: "Comprehensive SRE practices for AI systems with advanced monitoring and automated incident response.",
+    category: "AI Operations",
+    publishedAt: "2025-10-28",
+>>>>>>> cursor/create-and-deploy-new-content-ff76:src/content/posts.ts
     featured: true,
-    readTime: "7 min read"
+    readTime: "12 min read"
   },
   {
+<<<<<<< HEAD:src/content/posts.ts.backup.1759185695
     slug: "edge-llm-safety-caching-2026",
     title: "Edge LLM Safety Caching 2026: Sub‑100ms Prompts with Guardrails",
     description: "Tiered KV, signed configs, and inline filters that keep prompts fast and safe at the edge.",
@@ -877,3 +894,49 @@ posts.push(
 >>>>>>> origin/cursor/create-and-deploy-new-content-01d1
   }
 ];
+=======
+    slug: "ai-neural-interfaces-2026",
+    title: "AI Neural Interfaces 2026: Brain-Computer Integration Revolution",
+    description: "Revolutionary AI neural interfaces achieving 95% accuracy with real-time brain-computer communication.",
+    category: "AI Innovation",
+    publishedAt: "2026-01-15",
+    featured: true,
+    readTime: "12 min read",
+    newBadge: true,
+    trending: true
+  },
+  {
+    slug: "ai-space-tech-2026",
+    title: "AI Space Technology 2026: Autonomous Space Operations",
+    description: "Revolutionary AI space technology for autonomous missions and deep space exploration.",
+    category: "Space Technology",
+    publishedAt: "2026-01-10",
+    featured: true,
+    readTime: "15 min read",
+    newBadge: true,
+    trending: true
+  },
+  {
+    slug: "ai-quantum-computing-2026",
+    title: "AI Quantum Computing 2026: Next-Generation Intelligence",
+    description: "Harness quantum computing for AI breakthroughs with 1000x faster optimization.",
+    category: "Quantum Computing",
+    publishedAt: "2026-01-05",
+    featured: true,
+    readTime: "18 min read",
+    newBadge: true,
+    trending: true
+  },
+  {
+    slug: "ai-2026-mega-breakthrough",
+    title: "AI 2026 Mega Breakthrough: Revolutionary Technologies Reshaping the Future",
+    description: "Discover the most groundbreaking AI technologies of 2026 that are transforming industries worldwide.",
+    category: "AI Innovation",
+    publishedAt: "2026-01-20",
+    featured: true,
+    readTime: "25 min read",
+    newBadge: true,
+    trending: true
+  }
+];
+>>>>>>> cursor/create-and-deploy-new-content-ff76:src/content/posts.ts

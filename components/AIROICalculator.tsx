@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+'use client';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+=======
 import React, { useState } from 'react';
 import { Calculator, TrendingUp, DollarSign, Zap, Users } from 'lucide-react';
+>>>>>>> cursor/create-and-deploy-new-content-9e9b
 
 interface ROIResult {
   annualSavings: number;
