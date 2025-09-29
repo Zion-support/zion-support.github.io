@@ -180,6 +180,36 @@ export const posts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
+    slug: "ai-governance-policy-testing-playbook",
+    title: "AI Governance Playbook: Policy Testing That Scales",
+    description:
+      "Guardrails that don't slow teams: policy-as-code, prompt hygiene, and continuous evaluation.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "platform-scorecards-golden-paths",
+    title: "Golden Path Scorecards That Reduce Cognitive Load",
+    description:
+      "Design templates, scorecards, and paved roads that keep product teams shipping fast.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "cloud-finops-qa-gates",
+    title: "QA Gates That Keep Cloud Costs From Creeping",
+    description:
+      "Practical CI policies, cost-aware tests, and dashboards to prevent regressions before they ship.",
+    category: "Cloud FinOps",
+    publishedAt: "2025-09-27",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
     slug: "platform-engineering-blueprint-2025",
     title: "Platform Engineering Blueprint 2025: From Chaos to Clarity",
     description:
