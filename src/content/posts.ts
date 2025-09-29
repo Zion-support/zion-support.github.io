@@ -52,6 +52,12 @@ export const posts: BlogPost[] = [
     slug: "ai-platform-roi-2025",
     title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
     description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "genai-evals-in-prod-guardrails",
     title: "Shipping GenAI Safely: Evals, Guardrails, and Online Canaries",
     description:
@@ -307,6 +313,15 @@ export const posts: BlogPost[] = [
     readTime: "9 min",
   },
   {
+    slug: "cloud-finops-guardrails-2025",
+    title: "Cloud FinOps Guardrails Engineers Actually Use",
+    description: "Budgets, alerts, and PR gates that reduce waste 25–40% without harming P95.",
+    category: "Cloud",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "production-rag-architectures-that-work-2025",
     title: "RAG Architectures That Actually Work in Production",
     description: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.",
@@ -329,6 +344,11 @@ export const posts: BlogPost[] = [
     title: "Edge CDN + On‑Device ML: Personalization Under 100ms",
     description: "Combine edge KV, signed configs, and tiny models for private, real‑time personalization.",
     category: "Edge Computing",
+    publishedAt: "2025-10-04",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "next-gen-cloud-infrastructure",
     title: "Next-Generation Cloud Infrastructure: Scaling for 2025 and Beyond",
     description:
@@ -557,6 +577,5 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "6 min read"
   }
->>>>>>> 6bf91968c6d7c34ee813c38b277ccbb4f761d63e
 ];
 

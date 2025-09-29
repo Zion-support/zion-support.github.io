@@ -93,6 +93,70 @@ Implement this to keep platform work focused and value-centric.
     image: "/images/ai-platform-roi.jpg"
   },
   {
+    slug: "cloud-finops-guardrails-2025",
+    title: "Cloud FinOps Guardrails Engineers Actually Use",
+    description: "Budgets, alerts, and PR gates that reduce waste 25–40% without hurting P95.",
+    content: `
+# Cloud FinOps Guardrails Engineers Actually Use
+
+Engineering-led cost controls beat dashboards. This guide shows practical guardrails that reduce waste 25–40% without harming reliability or latency.
+
+## Guardrails That Matter
+- Budget thresholds with routed alerts by ownership
+- PR gates for high‑risk resource changes
+- Workload labels for chargeback and anomaly tracing
+- Rightsizing and idle detection policies with auto‑fix
+
+## Operating Rhythm
+- Weekly spend review with clear owners
+- Top offenders board with time‑boxed fixes
+- Publish win reports to reinforce behaviors
+
+Adopt these patterns to cut spend while keeping your P95 green.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-10-04",
+    category: "Cloud",
+    tags: ["FinOps", "Cloud", "Budgets", "Cost"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/cloud-finops-guardrails.jpg"
+  },
+  {
+    slug: "practical-rag-in-production-2025",
+    title: "RAG Architectures That Actually Work in Production",
+    description: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.",
+    content: `
+# RAG Architectures That Actually Work in Production
+
+RAG fails without disciplined retrieval and continuous evaluation. This guide distills production‑proven patterns.
+
+## Retrieval Foundations
+- Document chunking by semantic boundaries
+- Metadata‑rich indexing (source, version, pii, acl)
+- Hybrid retrieval (sparse + dense) with re‑ranking
+
+## Freshness & Governance
+- Incremental upserts with changefeeds
+- Staleness budgets and invalidation hooks
+- Authorization‑aware retrieval and prompt firewalls
+
+## Evaluation & Quality
+- Offline eval sets tied to tasks and policies
+- Online canaries and outcome‑based scorecards
+- Drift detection from feedback and success metrics
+
+Ship RAG you can trust—with measurable quality and fast iteration.
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-10-04",
+    category: "GenAI",
+    tags: ["RAG", "Vector Search", "Evals", "Freshness"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/practical-rag-2025.jpg"
+  },
+  {
     slug: "secure-ml-supply-chain-2025",
     title: "Secure ML Supply Chain: From SBOMs to Model Lineage",
     description: "Practical controls for datasets, models, and inference routes to prevent tampering and drift.",

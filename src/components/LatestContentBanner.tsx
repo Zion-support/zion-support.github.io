@@ -112,6 +112,27 @@ const contentHighlights = [
     stats: "Featured",
     variant: "info" as const
   }
+  ,
+  {
+    id: 9,
+    title: "💸 Cloud FinOps Guardrails Engineers Use",
+    description: "Budgets, alerts, and PR gates that cut waste 25–40%.",
+    ctaText: "Cut Spend",
+    ctaLink: "/blog/cloud-finops-guardrails-2025",
+    badge: "New",
+    stats: "7 min read",
+    variant: "success" as const
+  },
+  {
+    id: 10,
+    title: "🧪 RAG That Works in Production",
+    description: "Freshness, hybrid search, and evals that correlate with outcomes.",
+    ctaText: "Read Guide",
+    ctaLink: "/blog/practical-rag-in-production-2025",
+    badge: "Trending",
+    stats: "9 min read",
+    variant: "premium" as const
+  }
 ];
 
 // Additions
