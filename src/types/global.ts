@@ -2,7 +2,7 @@
  * Global type definitions for enhanced type safety
  */
 
-import { ErrorInfo, ReactNode } from 'react';
+import { ErrorInfo, ReactNode } from "react";
 
 // Error Boundary Types
 export interface ErrorBoundaryProps {
@@ -64,6 +64,16 @@ export interface PerformanceMetrics extends Record<string, unknown> {
     saveData: boolean;
   };
   customMetrics: Record<string, number>;
+}
+
+// Network Information Type Export
+export interface NetworkInformation {
+  effectiveType: string;
+  downlink: number;
+  rtt: number;
+  saveData: boolean;
+  addEventListener: (event: string, listener: EventListener) => void;
+  removeEventListener: (event: string, listener: EventListener) => void;
 }
 
 // Browser API Extensions

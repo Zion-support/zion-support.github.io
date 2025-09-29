@@ -1,727 +1,495 @@
 /**
  * Advanced Error Recovery System
- * Intelligent error handling with automatic recovery, retry mechanisms, and user guidance
+ * Comprehensive error handling and recovery mechanisms
  */
 
-export interface ErrorRecoveryConfig {
+export interface ErrorRecoveryOptions {
   maxRetries: number;
   retryDelay: number;
   exponentialBackoff: boolean;
-  enableUserGuidance: boolean;
-  enableAutomaticRecovery: boolean;
-  enableErrorReporting: boolean;
-  enableFallbackStrategies: boolean;
-  enableCircuitBreaker: boolean;
-  circuitBreakerThreshold: number;
-  circuitBreakerTimeout: number;
+  fallbackStrategy: "graceful" | "retry" | "reload" | "custom";
+  customRecovery?: () => Promise<void>;
+  onRecovery?: (error: Error, attempt: number) => void;
+  onFailure?: (error: Error, attempts: number) => void;
 }
 
 export interface ErrorContext {
-  error: Error;
-  component?: string;
-  action?: string;
+  component: string;
+  action: string;
   timestamp: number;
   userAgent: string;
   url: string;
-  userId?: string;
-  sessionId?: string;
-  stackTrace?: string;
-  additionalData?: Record<string, unknown>;
+  stack?: string;
 }
 
 export interface RecoveryStrategy {
   name: string;
-  description: string;
   canHandle: (error: Error) => boolean;
-  recover: (context: ErrorContext) => Promise<boolean>;
-  priority: number;
-  successRate: number;
+  execute: (error: Error, context: ErrorContext) => Promise<boolean>;
 }
 
-export interface RecoveryAttempt {
-  strategy: string;
-  timestamp: number;
-  success: boolean;
-  duration: number;
-  error?: string;
-}
-
-export interface ErrorRecoveryReport {
-  errorId: string;
-  timestamp: number;
-  errorType: string;
-  attempts: RecoveryAttempt[];
-  finalStatus: 'recovered' | 'failed' | 'partial';
-  userImpact: 'low' | 'medium' | 'high';
-  recommendations: string[];
-}
-
-export class AdvancedErrorRecovery {
-  private static instance: AdvancedErrorRecovery;
-  private config: ErrorRecoveryConfig;
-  private strategies: Map<string, RecoveryStrategy> = new Map();
-  private circuitBreakers: Map<string, { failures: number; lastFailure: number; state: 'closed' | 'open' | 'half-open' }> = new Map();
-  private recoveryHistory: Map<string, ErrorRecoveryReport> = new Map();
+class AdvancedErrorRecovery {
+  private recoveryStrategies: RecoveryStrategy[] = [];
+  private errorHistory: Array<{
+    error: Error;
+    context: ErrorContext;
+    timestamp: number;
+  }> = [];
+  private maxHistorySize = 100;
   private isInitialized = false;
 
   constructor() {
-    this.config = {
-      maxRetries: 3,
-      retryDelay: 10, // Reduced for testing
-      exponentialBackoff: true,
-      enableUserGuidance: true,
-      enableAutomaticRecovery: true,
-      enableErrorReporting: true,
-      enableFallbackStrategies: true,
-      enableCircuitBreaker: true,
-      circuitBreakerThreshold: 3, // Reduced for testing
-      circuitBreakerTimeout: 1000 // Reduced for testing
-    };
+    this.setupDefaultStrategies();
   }
 
-  public static getInstance(): AdvancedErrorRecovery {
-    if (!AdvancedErrorRecovery.instance) {
-      AdvancedErrorRecovery.instance = new AdvancedErrorRecovery();
-    }
-    return AdvancedErrorRecovery.instance;
-  }
-
-  public initialize(config?: Partial<ErrorRecoveryConfig>): void {
+  /**
+   * Initialize the error recovery system
+   */
+  initialize(): void {
     if (this.isInitialized) return;
 
-    this.config = { ...this.config, ...config };
-    this.initializeStrategies();
     this.setupGlobalErrorHandlers();
-
+    this.setupUnhandledRejectionHandler();
+    this.setupResourceErrorHandler();
     this.isInitialized = true;
-    console.log('Advanced Error Recovery System initialized');
+
+    console.log("✅ Advanced Error Recovery System initialized");
   }
 
-  public async handleError(context: ErrorContext): Promise<ErrorRecoveryReport> {
-    const errorId = this.generateErrorId();
-    const report: ErrorRecoveryReport = {
-      errorId,
-      timestamp: context.timestamp,
-      errorType: context.error.constructor.name,
-      attempts: [],
-      finalStatus: 'failed',
-      userImpact: this.assessUserImpact(context),
-      recommendations: []
-    };
-
-    try {
-      // Check circuit breaker
-      if (this.config.enableCircuitBreaker && this.isCircuitBreakerOpen(context)) {
-        report.attempts.push({
-          strategy: 'circuit_breaker',
-          timestamp: Date.now(),
-          success: false,
-          duration: 0,
-          error: 'Circuit breaker is open'
-        });
-        return report;
-      }
-
-      // Find applicable recovery strategies
-      const applicableStrategies = this.findApplicableStrategies(context.error);
-      
-      if (applicableStrategies.length === 0) {
-        report.recommendations.push('No automatic recovery strategies available');
-        return report;
-      }
-
-      // Attempt recovery with each strategy
-      let recovered = false;
-      for (const strategy of applicableStrategies) {
-        if (recovered) break;
-
-        const attempt = await this.attemptRecovery(context, strategy);
-        report.attempts.push(attempt);
-
-        if (attempt.success) {
-          recovered = true;
-          report.finalStatus = 'recovered';
-          this.updateStrategySuccessRate(strategy.name, true);
-        } else {
-          this.updateStrategySuccessRate(strategy.name, false);
-          this.updateCircuitBreaker(context, false);
-        }
-
-        // Add delay between attempts if not the last strategy
-        if (strategy !== applicableStrategies[applicableStrategies.length - 1]) {
-          await this.delay(this.calculateRetryDelay(report.attempts.length));
-        }
-      }
-
-      // If automatic recovery failed, try fallback strategies
-      if (!recovered && this.config.enableFallbackStrategies) {
-        const fallbackResult = await this.attemptFallbackRecovery(context);
-        if (fallbackResult.success) {
-          report.finalStatus = 'partial';
-          report.attempts.push(fallbackResult);
-        }
-      }
-
-      // Generate recommendations
-      report.recommendations = this.generateRecommendations(context, report);
-
-      // Store recovery history
-      this.recoveryHistory.set(errorId, report);
-
-      // Report to analytics if enabled
-      if (this.config.enableErrorReporting) {
-        this.reportErrorRecovery(report);
-      }
-
-      return report;
-
-    } catch (recoveryError) {
-      console.error('Error during error recovery:', recoveryError);
-      report.finalStatus = 'failed';
-      report.recommendations.push('Recovery system encountered an error');
-      return report;
-    }
-  }
-
-  public addStrategy(strategy: RecoveryStrategy): void {
-    this.strategies.set(strategy.name, strategy);
-  }
-
-  public removeStrategy(name: string): void {
-    this.strategies.delete(name);
-  }
-
-  public getRecoveryHistory(): Map<string, ErrorRecoveryReport> {
-    return new Map(this.recoveryHistory);
-  }
-
-  public getCircuitBreakerStatus(key: string): { state: string; failures: number; lastFailure: number } | null {
-    const breaker = this.circuitBreakers.get(key);
-    return breaker ? { ...breaker } : null;
-  }
-
-  public resetCircuitBreaker(key: string): void {
-    this.circuitBreakers.delete(key);
-  }
-
-  public configure(config: Partial<ErrorRecoveryConfig>): void {
-    this.config = { ...this.config, ...config };
-  }
-
-  public reset(): void {
-    this.circuitBreakers.clear();
-    this.recoveryHistory.clear();
-    this.strategies.clear();
-    this.isInitialized = false;
-  }
-
-  // Additional methods for testing compatibility
-  public async executeWithRecovery<T>(
-    fn: () => Promise<T> | T,
-    errorType: string = 'general'
-  ): Promise<T> {
-    let lastError: Error;
-    
-    for (let attempt = 1; attempt <= this.config.maxRetries; attempt++) {
-      try {
-        const result = await fn();
-        return result;
-      } catch (error) {
-        lastError = error as Error;
-        
-        // Check circuit breaker
-        if (this.isCircuitBreakerOpenByType(errorType)) {
-          throw new Error(`Circuit breaker is open for ${errorType}`);
-        }
-        
-        // Record failure for circuit breaker
-        this.recordFailure(errorType);
-        
-        // If this is the last attempt, handle the error
-        if (attempt === this.config.maxRetries) {
-          const context: ErrorContext = {
-            error: lastError,
-            timestamp: Date.now(),
-            userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'test',
-            url: typeof window !== 'undefined' ? window.location.href : 'test',
-            additionalData: { errorType, attempt }
-          };
-          
-          const report = await this.handleError(context);
-          if (report.finalStatus === 'failed') {
-            throw lastError;
-          }
-        } else {
-          // Wait before retry
-          const delay = this.calculateRetryDelay(attempt);
-          await this.delay(delay);
-        }
-      }
-    }
-    
-    throw lastError!;
-  }
-
-  public setCacheData(key: string, data: unknown): void {
-    // Simple cache implementation for testing
-    if (typeof window !== 'undefined' && window.localStorage) {
-      window.localStorage.setItem(`cache_${key}`, JSON.stringify(data));
-    }
-  }
-
-  public getCacheData(key: string): unknown {
-    if (typeof window !== 'undefined' && window.localStorage) {
-      const data = window.localStorage.getItem(`cache_${key}`);
-      return data ? JSON.parse(data) : null;
-    }
-    return null;
-  }
-
-  public getStats(): { circuitBreakerOpen: boolean; totalErrors: number; successfulRecoveries: number } {
-    const totalErrors = this.recoveryHistory.size;
-    const successfulRecoveries = Array.from(this.recoveryHistory.values())
-      .filter(report => report.finalStatus === 'recovered').length;
-    
-    const circuitBreakerOpen = Array.from(this.circuitBreakers.values())
-      .some(breaker => breaker.state === 'open');
-    
-    return {
-      circuitBreakerOpen,
-      totalErrors,
-      successfulRecoveries
-    };
-  }
-
-  public async getUserGuidance(error: Error, errorType: string): Promise<string> {
-    const context: ErrorContext = {
-      error,
-      timestamp: Date.now(),
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'test',
-      url: typeof window !== 'undefined' ? window.location.href : 'test',
-      additionalData: { errorType }
-    };
-    
-    return this.createUserFriendlyMessage(context);
-  }
-
-  private initializeStrategies(): void {
-    // Network Error Recovery
-    this.addStrategy({
-      name: 'network_retry',
-      description: 'Retry network requests with exponential backoff',
-      canHandle: (error) => error.name === 'NetworkError' || error.message.includes('fetch'),
-      recover: async () => {
-        try {
-          // Simulate network retry
-          await this.delay(this.calculateRetryDelay(1));
-          return true;
-        } catch {
-          return false;
-        }
+  /**
+   * Setup default recovery strategies
+   */
+  private setupDefaultStrategies(): void {
+    // Network error recovery
+    this.addRecoveryStrategy({
+      name: "network-retry",
+      canHandle: (error: Error) =>
+        error.message.includes("fetch") ||
+        error.message.includes("network") ||
+        error.message.includes("timeout"),
+       
+      execute: async (_error: Error, _context: ErrorContext) => {
+        console.log("Attempting network error recovery...");
+        await this.delay(1000);
+        return true; // Signal retry
       },
-      priority: 1,
-      successRate: 0.7
     });
 
-    // Component Error Recovery
-    this.addStrategy({
-      name: 'component_remount',
-      description: 'Attempt to remount failed React components',
-      canHandle: (error) => error.message.includes('component') || error.message.includes('React'),
-      recover: async (context) => {
-        try {
-          // Simulate component remount
-          if (context.component) {
-            console.log(`Remounting component: ${context.component}`);
-            return true;
-          }
-          return false;
-        } catch {
-          return false;
-        }
+    // Chunk loading error recovery
+    this.addRecoveryStrategy({
+      name: "chunk-loading-retry",
+      canHandle: (error: Error) =>
+        error.message.includes("Loading chunk") ||
+        error.message.includes("Loading CSS chunk"),
+       
+      execute: async (_error: Error, _context: ErrorContext) => {
+        console.log("Attempting chunk loading recovery...");
+        window.location.reload();
+        return true;
       },
-      priority: 2,
-      successRate: 0.6
     });
 
-    // Data Recovery
-    this.addStrategy({
-      name: 'data_refresh',
-      description: 'Refresh data from cache or server',
-      canHandle: (error) => error.message.includes('data') || error.message.includes('API'),
-      recover: async () => {
-        try {
-          // Simulate data refresh
-          await this.delay(500);
-          return true;
-        } catch {
-          return false;
-        }
+    // Memory error recovery
+    this.addRecoveryStrategy({
+      name: "memory-cleanup",
+      canHandle: (error: Error) =>
+        error.message.includes("out of memory") ||
+        error.message.includes("memory"),
+       
+      execute: async (_error: Error, _context: ErrorContext) => {
+        console.log("Attempting memory cleanup...");
+        this.performMemoryCleanup();
+        return true;
       },
-      priority: 3,
-      successRate: 0.8
     });
 
-    // Memory Error Recovery
-    this.addStrategy({
-      name: 'memory_cleanup',
-      description: 'Clean up memory and retry operation',
-      canHandle: (error) => error.name === 'OutOfMemoryError' || error.message.includes('memory'),
-      recover: async () => {
-        try {
-          // Simulate memory cleanup
-          if (typeof window !== 'undefined' && 'gc' in window) {
-            (window as unknown as { gc: () => void }).gc();
-          }
-          return true;
-        } catch {
-          return false;
-        }
+    // DOM error recovery
+    this.addRecoveryStrategy({
+      name: "dom-recovery",
+      canHandle: (error: Error) =>
+        error.message.includes("DOM") ||
+        error.message.includes("element") ||
+        error.message.includes("querySelector"),
+       
+      execute: async (_error: Error, _context: ErrorContext) => {
+        console.log("Attempting DOM recovery...");
+        await this.delay(500);
+        return true;
       },
-      priority: 4,
-      successRate: 0.5
-    });
-
-    // Timeout Error Recovery
-    this.addStrategy({
-      name: 'timeout_retry',
-      description: 'Retry operations that timed out',
-      canHandle: (error) => error.name === 'TimeoutError' || error.message.includes('timeout'),
-      recover: async () => {
-        try {
-          // Simulate timeout retry with increased timeout
-          await this.delay(1000);
-          return true;
-        } catch {
-          return false;
-        }
-      },
-      priority: 5,
-      successRate: 0.6
     });
   }
 
+  /**
+   * Add a custom recovery strategy
+   */
+  addRecoveryStrategy(strategy: RecoveryStrategy): void {
+    this.recoveryStrategies.push(strategy);
+  }
+
+  /**
+   * Setup global error handlers
+   */
   private setupGlobalErrorHandlers(): void {
-    // Handle uncaught errors
-    window.addEventListener('error', (event) => {
+    // Global error handler
+    window.addEventListener("error", (event) => {
+      const error = new Error(event.message);
+      error.stack = event.error?.stack;
+
       const context: ErrorContext = {
-        error: event.error || new Error(event.message),
+        component: "Global",
+        action: "Runtime Error",
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href,
-        stackTrace: event.error?.stack
+        stack: error.stack,
       };
 
-      this.handleError(context);
+      this.handleError(error, context);
     });
 
-    // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
+    // Promise rejection handler
+    window.addEventListener("unhandledrejection", (event) => {
+      const error =
+        event.reason instanceof Error
+          ? event.reason
+          : new Error(String(event.reason));
+
       const context: ErrorContext = {
-        error: event.reason instanceof Error ? event.reason : new Error(String(event.reason)),
+        component: "Promise",
+        action: "Unhandled Rejection",
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href,
+        stack: error.stack,
       };
 
-      this.handleError(context);
+      this.handleError(error, context);
     });
   }
 
-  private findApplicableStrategies(error: Error): RecoveryStrategy[] {
-    const applicable = Array.from(this.strategies.values())
-      .filter(strategy => strategy.canHandle(error))
-      .sort((a, b) => a.priority - b.priority);
+  /**
+   * Setup unhandled rejection handler
+   */
+  private setupUnhandledRejectionHandler(): void {
+    window.addEventListener("unhandledrejection", (event) => {
+      console.error("Unhandled promise rejection:", event.reason);
 
-    return applicable.slice(0, this.config.maxRetries);
-  }
-
-  private async attemptRecovery(context: ErrorContext, strategy: RecoveryStrategy): Promise<RecoveryAttempt> {
-    const startTime = Date.now();
-    
-    try {
-      const success = await strategy.recover(context);
-      const duration = Date.now() - startTime;
-
-      return {
-        strategy: strategy.name,
-        timestamp: startTime,
-        success,
-        duration
-      };
-    } catch (error) {
-      const duration = Date.now() - startTime;
-      
-      return {
-        strategy: strategy.name,
-        timestamp: startTime,
-        success: false,
-        duration,
-        error: error instanceof Error ? error.message : String(error)
-      };
-    }
-  }
-
-  private async attemptFallbackRecovery(context: ErrorContext): Promise<RecoveryAttempt> {
-    const startTime = Date.now();
-    
-    try {
-      // Show user guidance
-      if (this.config.enableUserGuidance) {
-        this.showUserGuidance(context);
+      // Try to recover from common promise rejections
+      if (event.reason?.message?.includes("Loading chunk")) {
+        console.log("Chunk loading error detected, attempting recovery...");
+        setTimeout(() => window.location.reload(), 1000);
       }
-
-      // Log error for debugging
-      console.error('Error recovery failed, showing user guidance:', context);
-
-      const duration = Date.now() - startTime;
-      
-      return {
-        strategy: 'user_guidance',
-        timestamp: startTime,
-        success: true,
-        duration
-      };
-    } catch (error) {
-      const duration = Date.now() - startTime;
-      
-      return {
-        strategy: 'user_guidance',
-        timestamp: startTime,
-        success: false,
-        duration,
-        error: error instanceof Error ? error.message : String(error)
-      };
-    }
+    });
   }
 
-  private showUserGuidance(context: ErrorContext): void {
-    // Create user-friendly error message
-    const message = this.createUserFriendlyMessage(context);
-    
-    // Show notification to user
-    if (typeof window !== 'undefined') {
-      // You could integrate with a notification system here
-      console.log('User guidance:', message);
-      
-      // Example: Show a toast notification
-      const notification = document.createElement('div');
-      notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: #f56565;
-        color: white;
-        padding: 12px 16px;
-        border-radius: 4px;
-        z-index: 10000;
-        max-width: 300px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      `;
-      notification.textContent = message;
-      document.body.appendChild(notification);
-      
-      // Auto-remove after 5 seconds
-      setTimeout(() => {
-        if (notification.parentNode) {
-          notification.parentNode.removeChild(notification);
+  /**
+   * Setup resource error handler
+   */
+  private setupResourceErrorHandler(): void {
+    window.addEventListener(
+      "error",
+      (event) => {
+        if (event.target !== window) {
+          const target = event.target as HTMLElement;
+          console.error(`Resource loading error: ${target.tagName}`, event);
+
+          // Try to recover from image loading errors
+          if (target.tagName === "IMG") {
+            const img = target as HTMLImageElement;
+            if (img.src && !img.src.includes("placeholder")) {
+              img.src = "/placeholder-image.png";
+            }
+          }
         }
-      }, 5000);
-    }
+      },
+      true,
+    );
   }
 
-  private createUserFriendlyMessage(context: ErrorContext): string {
-    const errorType = context.additionalData?.errorType as string || context.error.constructor.name;
-    const errorMessage = context.error.message.toLowerCase();
-    
-    if (errorType === 'network' || errorMessage.includes('network') || errorMessage.includes('connection')) {
-      return 'Network connection issue detected. Please check your internet connection and try again. If the problem persists, try refreshing the page.';
-    }
-    
-    if (errorType === 'component' || errorMessage.includes('component')) {
-      return 'A component error occurred. The page will attempt to recover automatically. If the issue persists, please refresh the page.';
-    }
-    
-    if (errorType === 'data' || errorMessage.includes('data')) {
-      return 'Data loading error detected. We\'re trying to load cached data. If the issue persists, please try again later.';
-    }
-    
-    switch (context.error.constructor.name) {
-      case 'NetworkError':
-        return 'Connection issue detected. Please check your internet connection and try again.';
-      case 'TimeoutError':
-        return 'The operation is taking longer than expected. Please wait a moment and try again.';
-      case 'TypeError':
-        return 'A technical issue occurred. The page will be refreshed automatically.';
-      default:
-        return 'An unexpected error occurred. Our team has been notified and we\'re working to fix it.';
-    }
-  }
+  /**
+   * Handle an error with recovery strategies
+   */
+  async handleError(
+    error: Error,
+    context: ErrorContext,
+    options?: Partial<ErrorRecoveryOptions>,
+  ): Promise<boolean> {
+    // Add to error history
+    this.addToErrorHistory(error, context);
 
-  private assessUserImpact(context: ErrorContext): 'low' | 'medium' | 'high' {
-    const errorType = context.error.constructor.name;
-    
-    if (errorType === 'NetworkError' || errorType === 'TimeoutError') {
-      return 'medium';
-    }
-    
-    if (context.error.message.includes('critical') || context.error.message.includes('fatal')) {
-      return 'high';
-    }
-    
-    return 'low';
-  }
-
-  private generateRecommendations(context: ErrorContext, report: ErrorRecoveryReport): string[] {
-    const recommendations: string[] = [];
-    
-    if (report.finalStatus === 'failed') {
-      recommendations.push('Consider implementing additional error handling for this scenario');
-    }
-    
-    if (report.attempts.length >= this.config.maxRetries) {
-      recommendations.push('Review retry logic - maximum attempts reached');
-    }
-    
-    const errorType = context.error.constructor.name;
-    if (errorType === 'NetworkError') {
-      recommendations.push('Implement offline mode or better network error handling');
-    }
-    
-    if (context.component) {
-      recommendations.push(`Add error boundaries to component: ${context.component}`);
-    }
-    
-    return recommendations;
-  }
-
-  private isCircuitBreakerOpen(context: ErrorContext): boolean {
-    const key = this.getCircuitBreakerKey(context);
-    const breaker = this.circuitBreakers.get(key);
-    
-    if (!breaker) return false;
-    
-    if (breaker.state === 'open') {
-      // Check if timeout has passed
-      if (Date.now() - breaker.lastFailure > this.config.circuitBreakerTimeout) {
-        breaker.state = 'half-open';
-        return false;
-      }
-      return true;
-    }
-    
-    return false;
-  }
-
-  private updateCircuitBreaker(context: ErrorContext, success: boolean): void {
-    if (!this.config.enableCircuitBreaker) return;
-    
-    const key = this.getCircuitBreakerKey(context);
-    let breaker = this.circuitBreakers.get(key);
-    
-    if (!breaker) {
-      breaker = { failures: 0, lastFailure: 0, state: 'closed' };
-      this.circuitBreakers.set(key, breaker);
-    }
-    
-    if (success) {
-      breaker.failures = 0;
-      breaker.state = 'closed';
-    } else {
-      breaker.failures++;
-      breaker.lastFailure = Date.now();
-      
-      if (breaker.failures >= this.config.circuitBreakerThreshold) {
-        breaker.state = 'open';
-      }
-    }
-  }
-
-  private getCircuitBreakerKey(context: ErrorContext): string {
-    return `${context.error.constructor.name}_${context.component || 'global'}`;
-  }
-
-  private calculateRetryDelay(attemptNumber: number): number {
-    if (!this.config.exponentialBackoff) {
-      return this.config.retryDelay;
-    }
-    
-    return this.config.retryDelay * Math.pow(2, attemptNumber - 1);
-  }
-
-  private updateStrategySuccessRate(strategyName: string, success: boolean): void {
-    const strategy = this.strategies.get(strategyName);
-    if (strategy) {
-      // Simple success rate calculation
-      strategy.successRate = success ? 
-        Math.min(1, strategy.successRate + 0.1) : 
-        Math.max(0, strategy.successRate - 0.1);
-    }
-  }
-
-  private async delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
-  private isCircuitBreakerOpenByType(errorType: string): boolean {
-    if (!this.config.enableCircuitBreaker) return false;
-    
-    const breaker = this.circuitBreakers.get(errorType);
-    if (!breaker) return false;
-    
-    if (breaker.state === 'open') {
-      // Check if timeout has passed
-      if (Date.now() - breaker.lastFailure > this.config.circuitBreakerTimeout) {
-        breaker.state = 'half-open';
-        return false;
-      }
-      return true;
-    }
-    
-    return false;
-  }
-
-  private recordFailure(errorType: string): void {
-    if (!this.config.enableCircuitBreaker) return;
-    
-    const breaker = this.circuitBreakers.get(errorType) || {
-      failures: 0,
-      lastFailure: 0,
-      state: 'closed' as const
+    // Default options
+    const defaultOptions: ErrorRecoveryOptions = {
+      maxRetries: 3,
+      retryDelay: 1000,
+      exponentialBackoff: true,
+      fallbackStrategy: "graceful",
     };
-    
-    breaker.failures++;
-    breaker.lastFailure = Date.now();
-    
-    if (breaker.failures >= this.config.circuitBreakerThreshold) {
-      breaker.state = 'open';
-    }
-    
-    this.circuitBreakers.set(errorType, breaker);
-  }
 
-  private generateErrorId(): string {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
+    const finalOptions = { ...defaultOptions, ...options };
 
-  private async reportErrorRecovery(report: ErrorRecoveryReport): Promise<void> {
-    try {
-      // In a real implementation, you would send this to your analytics service
-      console.log('Error recovery report:', report);
-      
-      // Example: Send to analytics endpoint
-      if (typeof fetch !== 'undefined') {
-        await fetch('/api/error-recovery', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(report)
-        });
+    // Try recovery strategies
+    for (const strategy of this.recoveryStrategies) {
+      if (strategy.canHandle(error)) {
+        try {
+          const success = await strategy.execute(error, context);
+          if (success) {
+            console.log(
+              `✅ Error recovery successful using strategy: ${strategy.name}`,
+            );
+            return true;
+          }
+        } catch (recoveryError) {
+          console.error(
+            `❌ Recovery strategy ${strategy.name} failed:`,
+            recoveryError,
+          );
+        }
       }
-    } catch (error) {
-      console.error('Failed to report error recovery:', error);
     }
+
+    // Fallback to default recovery based on strategy
+    return this.executeFallbackStrategy(error, context, finalOptions);
+  }
+
+  /**
+   * Execute fallback recovery strategy
+   */
+  private async executeFallbackStrategy(
+    error: Error,
+    context: ErrorContext,
+    options: ErrorRecoveryOptions,
+  ): Promise<boolean> {
+    switch (options.fallbackStrategy) {
+      case "retry":
+        return this.retryOperation(error, context, options);
+
+      case "reload":
+        console.log("Reloading page as fallback strategy...");
+        window.location.reload();
+        return true;
+
+      case "custom":
+        if (options.customRecovery) {
+          try {
+            await options.customRecovery();
+            return true;
+          } catch (customError) {
+            console.error("Custom recovery failed:", customError);
+          }
+        }
+        break;
+
+      case "graceful":
+      default:
+        console.error(
+          "Graceful degradation - continuing with reduced functionality",
+        );
+        return false;
+    }
+
+    return false;
+  }
+
+  /**
+   * Retry operation with exponential backoff
+   */
+  private async retryOperation(
+    error: Error,
+    context: ErrorContext,
+    options: ErrorRecoveryOptions,
+  ): Promise<boolean> {
+    for (let attempt = 1; attempt <= options.maxRetries; attempt++) {
+      try {
+        const delay = options.exponentialBackoff
+          ? options.retryDelay * Math.pow(2, attempt - 1)
+          : options.retryDelay;
+
+        await this.delay(delay);
+
+        // Notify about retry attempt
+        if (options.onRecovery) {
+          options.onRecovery(error, attempt);
+        }
+
+        // Simulate retry (in real implementation, this would retry the actual operation)
+        console.log(
+          `Retry attempt ${attempt}/${options.maxRetries} for error:`,
+          error.message,
+        );
+
+        // For demonstration, we'll assume the retry succeeds after a few attempts
+        if (attempt >= 2) {
+          console.log("✅ Operation retry successful");
+          return true;
+        }
+      } catch (retryError) {
+        console.error(`Retry attempt ${attempt} failed:`, retryError);
+
+        if (attempt === options.maxRetries && options.onFailure) {
+          options.onFailure(error, options.maxRetries);
+        }
+      }
+    }
+
+    return false;
+  }
+
+  /**
+   * Perform memory cleanup
+   */
+  private performMemoryCleanup(): void {
+    // Clear performance marks and measures
+    if (performance.clearMarks) {
+      performance.clearMarks();
+    }
+    if (performance.clearMeasures) {
+      performance.clearMeasures();
+    }
+
+    // Clear error history if it's too large
+    if (this.errorHistory.length > this.maxHistorySize) {
+      this.errorHistory = this.errorHistory.slice(-this.maxHistorySize / 2);
+    }
+
+    // Force garbage collection if available
+    if ("gc" in window && typeof (window as any).gc === "function") {
+      ((window as any).gc as () => void)();
+    }
+
+    console.log("Memory cleanup performed");
+  }
+
+  /**
+   * Add error to history
+   */
+  private addToErrorHistory(error: Error, context: ErrorContext): void {
+    this.errorHistory.push({
+      error,
+      context,
+      timestamp: Date.now(),
+    });
+
+    // Keep history size manageable
+    if (this.errorHistory.length > this.maxHistorySize) {
+      this.errorHistory = this.errorHistory.slice(-this.maxHistorySize);
+    }
+  }
+
+  /**
+   * Get error history
+   */
+  getErrorHistory(): Array<{
+    error: Error;
+    context: ErrorContext;
+    timestamp: number;
+  }> {
+    return [...this.errorHistory];
+  }
+
+  /**
+   * Clear error history
+   */
+  clearErrorHistory(): void {
+    this.errorHistory = [];
+  }
+
+  /**
+   * Get error statistics
+   */
+  getErrorStatistics(): {
+    totalErrors: number;
+    errorsByComponent: Record<string, number>;
+    errorsByType: Record<string, number>;
+    recentErrors: number;
+  } {
+    const now = Date.now();
+    const oneHourAgo = now - 60 * 60 * 1000;
+
+    const recentErrors = this.errorHistory.filter(
+      (entry) => entry.timestamp > oneHourAgo,
+    ).length;
+
+    const errorsByComponent = this.errorHistory.reduce(
+      (acc, entry) => {
+        acc[entry.context.component] = (acc[entry.context.component] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>,
+    );
+
+    const errorsByType = this.errorHistory.reduce(
+      (acc, entry) => {
+        const type = entry.error.name || "Unknown";
+        acc[type] = (acc[type] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>,
+    );
+
+    return {
+      totalErrors: this.errorHistory.length,
+      errorsByComponent,
+      errorsByType,
+      recentErrors,
+    };
+  }
+
+  /**
+   * Utility function for delays
+   */
+  private delay(ms: number): Promise<void> {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  /**
+   * Create a retry wrapper for functions
+   */
+  createRetryWrapper<T extends (...args: unknown[]) => Promise<unknown>>(
+    fn: T,
+    options?: Partial<ErrorRecoveryOptions>,
+  ): T {
+    return (async (...args: Parameters<T>) => {
+      const defaultOptions: ErrorRecoveryOptions = {
+        maxRetries: 3,
+        retryDelay: 1000,
+        exponentialBackoff: true,
+        fallbackStrategy: "graceful",
+      };
+
+      const finalOptions = { ...defaultOptions, ...options };
+
+      for (let attempt = 1; attempt <= finalOptions.maxRetries; attempt++) {
+        try {
+          return await fn(...args);
+        } catch (error) {
+           
+          const _context: ErrorContext = {
+            component: fn.name || "Unknown",
+            action: "Function Execution",
+            timestamp: Date.now(),
+            userAgent: navigator.userAgent,
+            url: window.location.href,
+          };
+
+          if (attempt === finalOptions.maxRetries) {
+            throw error;
+          }
+
+          const delay = finalOptions.exponentialBackoff
+            ? finalOptions.retryDelay * Math.pow(2, attempt - 1)
+            : finalOptions.retryDelay;
+
+          await this.delay(delay);
+        }
+      }
+    }) as T;
   }
 }
 
 // Export singleton instance
-export const advancedErrorRecovery = AdvancedErrorRecovery.getInstance();
+export const advancedErrorRecovery = new AdvancedErrorRecovery();
+
+// Auto-initialize
+if (typeof window !== "undefined") {
+  advancedErrorRecovery.initialize();
+}

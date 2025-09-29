@@ -1,34 +1,34 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, 
-  AlertTriangle, 
-  CheckCircle, 
-  Clock, 
-  Database, 
-  Globe, 
-  Server, 
-  Shield, 
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Activity,
+  AlertTriangle,
+  CheckCircle,
+  Clock,
+  Database,
+  Globe,
+  Server,
+  Shield,
   Zap,
   TrendingUp,
   TrendingDown,
-  Minus
-} from 'lucide-react';
+  Minus,
+} from "lucide-react";
 
 interface RealTimeMetric {
   id: string;
   name: string;
   value: number;
   unit: string;
-  status: 'good' | 'warning' | 'critical';
-  trend: 'up' | 'down' | 'stable';
+  status: "good" | "warning" | "critical";
+  trend: "up" | "down" | "stable";
   timestamp: number;
 }
 
 interface SystemAlert {
   id: string;
-  type: 'performance' | 'security' | 'error' | 'network';
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  type: "performance" | "security" | "error" | "network";
+  severity: "low" | "medium" | "high" | "critical";
   message: string;
   timestamp: number;
   resolved: boolean;
@@ -43,55 +43,61 @@ const RealTimeMonitor: React.FC = () => {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const generateAlert = useCallback(() => {
-    const alertTypes = ['performance', 'security', 'error', 'network'];
-    const severities = ['low', 'medium', 'high', 'critical'];
+    const alertTypes = ["performance", "security", "error", "network"];
+    const severities = ["low", "medium", "high", "critical"];
     const messages = [
-      'High CPU usage detected',
-      'Memory usage approaching limit',
-      'Response time degradation',
-      'Security vulnerability detected',
-      'Database connection timeout',
-      'Network latency spike',
-      'Cache miss rate increased',
-      'Error rate threshold exceeded'
+      "High CPU usage detected",
+      "Memory usage approaching limit",
+      "Response time degradation",
+      "Security vulnerability detected",
+      "Database connection timeout",
+      "Network latency spike",
+      "Cache miss rate increased",
+      "Error rate threshold exceeded",
     ];
 
     const newAlert: SystemAlert = {
       id: `alert-${Date.now()}`,
-      type: alertTypes[Math.floor(Math.random() * alertTypes.length)] as SystemAlert['type'],
-      severity: severities[Math.floor(Math.random() * severities.length)] as SystemAlert['severity'],
+      type: alertTypes[
+        Math.floor(Math.random() * alertTypes.length)
+      ] as SystemAlert["type"],
+      severity: severities[
+        Math.floor(Math.random() * severities.length)
+      ] as SystemAlert["severity"],
       message: messages[Math.floor(Math.random() * messages.length)],
       timestamp: Date.now(),
-      resolved: false
+      resolved: false,
     };
 
-    setAlerts(prev => [newAlert, ...prev.slice(0, 9)]); // Keep only last 10 alerts
+    setAlerts((prev) => [newAlert, ...prev.slice(0, 9)]); // Keep only last 10 alerts
   }, []);
 
   const updateMetrics = useCallback(() => {
-    setMetrics(prev => prev.map(metric => {
-      const change = (Math.random() - 0.5) * 10;
-      let newValue = metric.value + change;
-      
-      // Keep values within reasonable bounds
-      if (metric.id === 'cpu-usage' || metric.id === 'memory-usage') {
-        newValue = Math.max(0, Math.min(100, newValue));
-      } else if (metric.id === 'response-time') {
-        newValue = Math.max(50, Math.min(500, newValue));
-      } else if (metric.id === 'active-users') {
-        newValue = Math.max(0, Math.min(1000, newValue));
-      }
-      
-      // Calculate trend
-      const trend = change > 0 ? 'up' : change < 0 ? 'down' : 'stable';
-      
-      return {
-        ...metric,
-        value: Math.round(newValue * 10) / 10,
-        trend,
-        timestamp: Date.now()
-      };
-    }));
+    setMetrics((prev) =>
+      prev.map((metric) => {
+        const change = (Math.random() - 0.5) * 10;
+        let newValue = metric.value + change;
+
+        // Keep values within reasonable bounds
+        if (metric.id === "cpu-usage" || metric.id === "memory-usage") {
+          newValue = Math.max(0, Math.min(100, newValue));
+        } else if (metric.id === "response-time") {
+          newValue = Math.max(50, Math.min(500, newValue));
+        } else if (metric.id === "active-users") {
+          newValue = Math.max(0, Math.min(1000, newValue));
+        }
+
+        // Calculate trend
+        const trend = change > 0 ? "up" : change < 0 ? "down" : "stable";
+
+        return {
+          ...metric,
+          value: Math.round(newValue * 10) / 10,
+          trend,
+          timestamp: Date.now(),
+        };
+      }),
+    );
 
     // Occasionally generate alerts
     if (Math.random() < 0.1) {
@@ -100,15 +106,15 @@ const RealTimeMonitor: React.FC = () => {
   }, [generateAlert]);
 
   const initializeMonitoring = useCallback(() => {
-      // Simulate WebSocket connection for real-time updates
-      simulateWebSocketConnection();
-      
-      // Generate initial metrics
-      generateInitialMetrics();
-      
-      // Start periodic updates
-      intervalRef.current = setInterval(updateMetrics, 2000);
-    }, [updateMetrics]);
+    // Simulate WebSocket connection for real-time updates
+    simulateWebSocketConnection();
+
+    // Generate initial metrics
+    generateInitialMetrics();
+
+    // Start periodic updates
+    intervalRef.current = setInterval(updateMetrics, 2000);
+  }, [updateMetrics]);
 
   useEffect(() => {
     if (isVisible) {
@@ -134,111 +140,131 @@ const RealTimeMonitor: React.FC = () => {
   const simulateWebSocketConnection = () => {
     setIsConnected(true);
     // In a real implementation, this would be an actual WebSocket connection
-    console.log('Real-time monitoring connection established');
+    console.log("Real-time monitoring connection established");
   };
 
   const generateInitialMetrics = () => {
     const initialMetrics: RealTimeMetric[] = [
       {
-        id: 'cpu-usage',
-        name: 'CPU Usage',
+        id: "cpu-usage",
+        name: "CPU Usage",
         value: Math.random() * 40 + 20,
-        unit: '%',
-        status: 'good',
-        trend: 'stable',
-        timestamp: Date.now()
+        unit: "%",
+        status: "good",
+        trend: "stable",
+        timestamp: Date.now(),
       },
       {
-        id: 'memory-usage',
-        name: 'Memory Usage',
+        id: "memory-usage",
+        name: "Memory Usage",
         value: Math.random() * 30 + 40,
-        unit: '%',
-        status: 'good',
-        trend: 'stable',
-        timestamp: Date.now()
+        unit: "%",
+        status: "good",
+        trend: "stable",
+        timestamp: Date.now(),
       },
       {
-        id: 'response-time',
-        name: 'Response Time',
+        id: "response-time",
+        name: "Response Time",
         value: Math.random() * 50 + 100,
-        unit: 'ms',
-        status: 'good',
-        trend: 'stable',
-        timestamp: Date.now()
+        unit: "ms",
+        status: "good",
+        trend: "stable",
+        timestamp: Date.now(),
       },
       {
-        id: 'active-users',
-        name: 'Active Users',
+        id: "active-users",
+        name: "Active Users",
         value: Math.floor(Math.random() * 500 + 100),
-        unit: '',
-        status: 'good',
-        trend: 'up',
-        timestamp: Date.now()
+        unit: "",
+        status: "good",
+        trend: "up",
+        timestamp: Date.now(),
       },
       {
-        id: 'error-rate',
-        name: 'Error Rate',
+        id: "error-rate",
+        name: "Error Rate",
         value: Math.random() * 0.5,
-        unit: '%',
-        status: 'good',
-        trend: 'down',
-        timestamp: Date.now()
+        unit: "%",
+        status: "good",
+        trend: "down",
+        timestamp: Date.now(),
       },
       {
-        id: 'cache-hit-rate',
-        name: 'Cache Hit Rate',
+        id: "cache-hit-rate",
+        name: "Cache Hit Rate",
         value: Math.random() * 20 + 80,
-        unit: '%',
-        status: 'good',
-        trend: 'up',
-        timestamp: Date.now()
-      }
+        unit: "%",
+        status: "good",
+        trend: "up",
+        timestamp: Date.now(),
+      },
     ];
 
     setMetrics(initialMetrics);
   };
 
   const resolveAlert = (alertId: string) => {
-    setAlerts(prev => prev.map(alert => 
-      alert.id === alertId ? { ...alert, resolved: true } : alert
-    ));
+    setAlerts((prev) =>
+      prev.map((alert) =>
+        alert.id === alertId ? { ...alert, resolved: true } : alert,
+      ),
+    );
   };
 
   const getStatusIcon = (status: string) => {
     switch (status) {
-      case 'good': return <CheckCircle className="w-4 h-4 text-green-500" />;
-      case 'warning': return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
-      case 'critical': return <AlertTriangle className="w-4 h-4 text-red-500" />;
-      default: return <Minus className="w-4 h-4 text-gray-500" />;
+      case "good":
+        return <CheckCircle className="w-4 h-4 text-green-500" />;
+      case "warning":
+        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
+      case "critical":
+        return <AlertTriangle className="w-4 h-4 text-red-500" />;
+      default:
+        return <Minus className="w-4 h-4 text-gray-500" />;
     }
   };
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
-      case 'up': return <TrendingUp className="w-4 h-4 text-green-500" />;
-      case 'down': return <TrendingDown className="w-4 h-4 text-red-500" />;
-      case 'stable': return <Minus className="w-4 h-4 text-gray-500" />;
-      default: return <Minus className="w-4 h-4 text-gray-500" />;
+      case "up":
+        return <TrendingUp className="w-4 h-4 text-green-500" />;
+      case "down":
+        return <TrendingDown className="w-4 h-4 text-red-500" />;
+      case "stable":
+        return <Minus className="w-4 h-4 text-gray-500" />;
+      default:
+        return <Minus className="w-4 h-4 text-gray-500" />;
     }
   };
 
   const getAlertColor = (severity: string) => {
     switch (severity) {
-      case 'low': return 'border-blue-500 bg-blue-50';
-      case 'medium': return 'border-yellow-500 bg-yellow-50';
-      case 'high': return 'border-orange-500 bg-orange-50';
-      case 'critical': return 'border-red-500 bg-red-50';
-      default: return 'border-gray-500 bg-gray-50';
+      case "low":
+        return "border-blue-500 bg-blue-50";
+      case "medium":
+        return "border-yellow-500 bg-yellow-50";
+      case "high":
+        return "border-orange-500 bg-orange-50";
+      case "critical":
+        return "border-red-500 bg-red-50";
+      default:
+        return "border-gray-500 bg-gray-50";
     }
   };
 
   const getTypeIcon = (type: string) => {
     switch (type) {
-      case 'performance': return <Zap className="w-4 h-4" />;
-      case 'security': return <Shield className="w-4 h-4" />;
-      case 'error': return <AlertTriangle className="w-4 h-4" />;
-      case 'network': return <Globe className="w-4 h-4" />;
-      default: return <Server className="w-4 h-4" />;
+      case "performance":
+        return <Zap className="w-4 h-4" />;
+      case "security":
+        return <Shield className="w-4 h-4" />;
+      case "error":
+        return <AlertTriangle className="w-4 h-4" />;
+      case "network":
+        return <Globe className="w-4 h-4" />;
+      default:
+        return <Server className="w-4 h-4" />;
     }
   };
 
@@ -275,8 +301,12 @@ const RealTimeMonitor: React.FC = () => {
                   <h3 className="font-semibold">Real-Time Monitor</h3>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className={`w-2 h-2 rounded-full ${isConnected ? 'bg-green-400' : 'bg-red-400'}`}></div>
-                  <span className="text-sm">{isConnected ? 'Connected' : 'Disconnected'}</span>
+                  <div
+                    className={`w-2 h-2 rounded-full ${isConnected ? "bg-green-400" : "bg-red-400"}`}
+                  ></div>
+                  <span className="text-sm">
+                    {isConnected ? "Connected" : "Disconnected"}
+                  </span>
                 </div>
               </div>
             </div>
@@ -289,7 +319,7 @@ const RealTimeMonitor: React.FC = () => {
                   <Database className="w-4 h-4" /> System Metrics
                 </h4>
                 <div className="grid grid-cols-1 gap-3">
-                  {metrics.map(metric => (
+                  {metrics.map((metric) => (
                     <motion.div
                       key={metric.id}
                       initial={{ opacity: 0, x: -20 }}
@@ -306,7 +336,8 @@ const RealTimeMonitor: React.FC = () => {
                         </div>
                       </div>
                       <div className="text-lg font-bold text-gray-900">
-                        {metric.value}{metric.unit}
+                        {metric.value}
+                        {metric.unit}
                       </div>
                       <div className="text-xs text-gray-500">
                         {new Date(metric.timestamp).toLocaleTimeString()}
@@ -328,13 +359,13 @@ const RealTimeMonitor: React.FC = () => {
                       <p>No alerts</p>
                     </div>
                   ) : (
-                    alerts.map(alert => (
+                    alerts.map((alert) => (
                       <motion.div
                         key={alert.id}
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         className={`p-3 rounded-lg border-l-4 ${getAlertColor(alert.severity)} ${
-                          alert.resolved ? 'opacity-60' : ''
+                          alert.resolved ? "opacity-60" : ""
                         }`}
                       >
                         <div className="flex items-start justify-between">
@@ -350,7 +381,9 @@ const RealTimeMonitor: React.FC = () => {
                                 </span>
                                 <Clock className="w-3 h-3 text-gray-400" />
                                 <span className="text-xs text-gray-500">
-                                  {new Date(alert.timestamp).toLocaleTimeString()}
+                                  {new Date(
+                                    alert.timestamp,
+                                  ).toLocaleTimeString()}
                                 </span>
                               </div>
                             </div>

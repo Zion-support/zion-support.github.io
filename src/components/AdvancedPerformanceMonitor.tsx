@@ -1,203 +1,140 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  fps: number;
-  memoryUsage: number;
-  renderTime: number;
-  bundleSize: number;
-  loadTime: number;
-  networkLatency: number;
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
 }
 
-interface PerformanceMonitorProps {
-  isVisible?: boolean;
-  onToggle?: () => void;
+interface AdvancedPerformanceMonitorProps {
+  className?: string;
 }
 
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  isVisible = false,
-  onToggle
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fps: 60,
-    memoryUsage: 0,
-    renderTime: 0,
-    bundleSize: 0,
-    loadTime: 0,
-    networkLatency: 0
-  });
+const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ className = '' }) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const [isMonitoring, setIsMonitoring] = useState(false);
+  useEffect(() => {
+    // Load web vitals
+    const loadWebVitals = async () => {
+      try {
+        const webVitals = await import('web-vitals');
+        
+        const vitals: Partial<PerformanceMetrics> = {};
 
-  const measurePerformance = useCallback(() => {
-    if (typeof window === 'undefined') return;
+        webVitals.onCLS((metric: any) => {
+          vitals.cls = metric.value;
+          updateMetrics(vitals);
+        });
 
-    // Measure FPS
-    let lastTime = performance.now();
-    let frameCount = 0;
-    
-    const measureFPS = () => {
-      frameCount++;
-      const currentTime = performance.now();
-      
-      if (currentTime - lastTime >= 1000) {
-        setMetrics(prev => ({
-          ...prev,
-          fps: Math.round((frameCount * 1000) / (currentTime - lastTime))
-        }));
-        frameCount = 0;
-        lastTime = currentTime;
-      }
-      
-      if (isMonitoring) {
-        requestAnimationFrame(measureFPS);
+        webVitals.onINP((metric: any) => {
+          vitals.fid = metric.value; // Using INP instead of FID
+          updateMetrics(vitals);
+        });
+
+        webVitals.onFCP((metric: any) => {
+          vitals.fcp = metric.value;
+          updateMetrics(vitals);
+        });
+
+        webVitals.onLCP((metric: any) => {
+          vitals.lcp = metric.value;
+          updateMetrics(vitals);
+        });
+
+        webVitals.onTTFB((metric: any) => {
+          vitals.ttfb = metric.value;
+          updateMetrics(vitals);
+        });
+      } catch (error) {
+        console.warn('Web Vitals not available:', error);
       }
     };
 
-    // Measure memory usage
-    if ('memory' in performance) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      if (memory) {
-        setMetrics(prev => ({
-          ...prev,
-          memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024)
-        }));
-      }
-    }
+    loadWebVitals();
+  }, []);
 
-    // Measure render time
-    const renderStart = performance.now();
-    requestAnimationFrame(() => {
-      const renderEnd = performance.now();
-      setMetrics(prev => ({
-        ...prev,
-        renderTime: Math.round(renderEnd - renderStart)
-      }));
-    });
-
-    // Measure network latency
-    const startTime = performance.now();
-    fetch('/api/health', { method: 'HEAD' })
-      .then(() => {
-        const endTime = performance.now();
-        setMetrics(prev => ({
-          ...prev,
-          networkLatency: Math.round(endTime - startTime)
-        }));
-      })
-      .catch(() => {
-        setMetrics(prev => ({
-          ...prev,
-          networkLatency: 0
-        }));
-      });
-
-    if (isMonitoring) {
-      measureFPS();
-    }
-  }, [isMonitoring]);
-
-  useEffect(() => {
-    if (isMonitoring) {
-      measurePerformance();
-      const interval = setInterval(measurePerformance, 1000);
-      return () => clearInterval(interval);
-    }
-  }, [isMonitoring, measurePerformance]);
-
-  const toggleMonitoring = () => {
-    setIsMonitoring(!isMonitoring);
-    onToggle?.();
+  const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
+    setMetrics(prev => ({ ...prev, ...newMetrics } as PerformanceMetrics));
   };
 
-  const getPerformanceColor = (value: number, thresholds: { good: number; warning: number }) => {
+  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
     if (value <= thresholds.good) return 'text-green-500';
-    if (value <= thresholds.warning) return 'text-yellow-500';
+    if (value <= thresholds.poor) return 'text-yellow-500';
     return 'text-red-500';
   };
 
-  const getFPSColor = (fps: number) => {
-    if (fps >= 55) return 'text-green-500';
-    if (fps >= 30) return 'text-yellow-500';
-    return 'text-red-500';
+  const formatMetric = (value: number, unit: string = 'ms') => {
+    return `${value.toFixed(1)}${unit}`;
   };
 
-  if (!isVisible) return null;
+  if (!metrics) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        className="fixed top-4 right-4 bg-gray-900/95 backdrop-blur-sm border border-gray-700 rounded-lg p-4 shadow-2xl z-50 min-w-[300px]"
+    <div className={`fixed bottom-4 right-4 z-50 ${className}`}>
+      <button
+        onClick={() => setIsVisible(!isVisible)}
+        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow-lg transition-colors"
       >
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-white font-semibold text-sm">Performance Monitor</h3>
-          <div className="flex items-center space-x-2">
-            <button
-              onClick={toggleMonitoring}
-              className={`px-3 py-1 rounded text-xs font-medium transition-colors ${
-                isMonitoring
-                  ? 'bg-red-600 hover:bg-red-700 text-white'
-                  : 'bg-green-600 hover:bg-green-700 text-white'
-              }`}
-            >
-              {isMonitoring ? 'Stop' : 'Start'}
-            </button>
-            <button
-              onClick={onToggle}
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              ×
-            </button>
-          </div>
-        </div>
+        📊 Performance
+      </button>
 
-        <div className="space-y-3">
-          <div className="flex justify-between items-center">
-            <span className="text-gray-300 text-xs">FPS</span>
-            <span className={`font-mono text-sm ${getFPSColor(metrics.fps)}`}>
-              {metrics.fps}
-            </span>
-          </div>
-
-          <div className="flex justify-between items-center">
-            <span className="text-gray-300 text-xs">Memory</span>
-            <span className={`font-mono text-sm ${getPerformanceColor(metrics.memoryUsage, { good: 50, warning: 100 })}`}>
-              {metrics.memoryUsage} MB
-            </span>
-          </div>
-
-          <div className="flex justify-between items-center">
-            <span className="text-gray-300 text-xs">Render Time</span>
-            <span className={`font-mono text-sm ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 })}`}>
-              {metrics.renderTime}ms
-            </span>
-          </div>
-
-          <div className="flex justify-between items-center">
-            <span className="text-gray-300 text-xs">Network</span>
-            <span className={`font-mono text-sm ${getPerformanceColor(metrics.networkLatency, { good: 100, warning: 300 })}`}>
-              {metrics.networkLatency}ms
-            </span>
-          </div>
-
-          <div className="pt-2 border-t border-gray-700">
+      {isVisible && (
+        <div className="absolute bottom-16 right-0 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl p-4 w-80">
+          <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
+            Performance Metrics
+          </h3>
+          
+          <div className="space-y-2">
             <div className="flex justify-between items-center">
-              <span className="text-gray-300 text-xs">Status</span>
-              <div className="flex items-center space-x-1">
-                <div className={`w-2 h-2 rounded-full ${isMonitoring ? 'bg-green-500 animate-pulse' : 'bg-gray-500'}`} />
-                <span className="text-gray-300 text-xs">
-                  {isMonitoring ? 'Monitoring' : 'Idle'}
-                </span>
-              </div>
+              <span className="text-sm text-gray-600 dark:text-gray-400">First Contentful Paint</span>
+              <span className={`font-mono text-sm ${getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}`}>
+                {formatMetric(metrics.fcp)}
+              </span>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-600 dark:text-gray-400">Largest Contentful Paint</span>
+              <span className={`font-mono text-sm ${getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}`}>
+                {formatMetric(metrics.lcp)}
+              </span>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-600 dark:text-gray-400">First Input Delay</span>
+              <span className={`font-mono text-sm ${getScoreColor(metrics.fid, { good: 100, poor: 300 })}`}>
+                {formatMetric(metrics.fid)}
+              </span>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-600 dark:text-gray-400">Cumulative Layout Shift</span>
+              <span className={`font-mono text-sm ${getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}`}>
+                {formatMetric(metrics.cls)}
+              </span>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-600 dark:text-gray-400">Time to First Byte</span>
+              <span className={`font-mono text-sm ${getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}`}>
+                {formatMetric(metrics.ttfb)}
+              </span>
             </div>
           </div>
+
+          <div className="mt-4 pt-3 border-t border-gray-200 dark:border-gray-700">
+            <button
+              onClick={() => setIsVisible(false)}
+              className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+            >
+              Close
+            </button>
+          </div>
         </div>
-      </motion.div>
-    </AnimatePresence>
+      )}
+    </div>
   );
 };
 

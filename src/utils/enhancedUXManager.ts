@@ -14,9 +14,9 @@ interface UXMetrics {
 }
 
 interface UXPreferences {
-  theme: 'light' | 'dark' | 'auto';
+  theme: "light" | "dark" | "auto";
   language: string;
-  fontSize: 'small' | 'medium' | 'large';
+  fontSize: "small" | "medium" | "large";
   animations: boolean;
   sounds: boolean;
   notifications: boolean;
@@ -24,7 +24,7 @@ interface UXPreferences {
 }
 
 interface UserFeedback {
-  type: 'success' | 'error' | 'warning' | 'info';
+  type: "success" | "error" | "warning" | "info";
   message: string;
   duration?: number;
   action?: {
@@ -58,9 +58,9 @@ class EnhancedUXManager {
 
   public initialize(): void {
     if (this.isInitialized) return;
-    
-    console.log('✨ Enhanced UX Manager initialized');
-    
+
+    console.log("✨ Enhanced UX Manager initialized");
+
     this.setupThemeManagement();
     this.setupInteractionTracking();
     this.setupScrollTracking();
@@ -69,7 +69,7 @@ class EnhancedUXManager {
     this.setupOfflineHandling();
     this.setupPerformanceOptimizations();
     this.createFeedbackSystem();
-    
+
     this.isInitialized = true;
   }
 
@@ -83,8 +83,8 @@ class EnhancedUXManager {
     this.savePreferences();
     this.applyPreferences();
     this.showFeedback({
-      type: 'success',
-      message: 'Preferences updated successfully'
+      type: "success",
+      message: "Preferences updated successfully",
     });
   }
 
@@ -104,90 +104,95 @@ class EnhancedUXManager {
       scrollDepth: 0,
       timeOnPage: 0,
       bounceRate: 0,
-      conversionEvents: 0
+      conversionEvents: 0,
     };
   }
 
   private loadPreferences(): UXPreferences {
-    const stored = localStorage.getItem('uxPreferences');
+    const stored = localStorage.getItem("uxPreferences");
     if (stored) {
       try {
         return JSON.parse(stored);
       } catch (error) {
-        console.warn('Failed to parse UX preferences:', error);
+        console.warn("Failed to parse UX preferences:", error);
       }
     }
-    
+
     return {
-      theme: 'auto',
-      language: navigator.language.split('-')[0],
-      fontSize: 'medium',
+      theme: "auto",
+      language: navigator.language.split("-")[0],
+      fontSize: "medium",
       animations: true,
       sounds: true,
       notifications: true,
-      autoSave: true
+      autoSave: true,
     };
   }
 
   private savePreferences(): void {
-    localStorage.setItem('uxPreferences', JSON.stringify(this.preferences));
+    localStorage.setItem("uxPreferences", JSON.stringify(this.preferences));
   }
 
   private applyPreferences(): void {
     const root = document.documentElement;
-    
+
     // Apply theme
-    if (this.preferences.theme === 'dark' || 
-        (this.preferences.theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      root.classList.add('dark-theme');
+    if (
+      this.preferences.theme === "dark" ||
+      (this.preferences.theme === "auto" &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      root.classList.add("dark-theme");
     } else {
-      root.classList.remove('dark-theme');
+      root.classList.remove("dark-theme");
     }
-    
+
     // Apply font size
-    root.classList.remove('font-small', 'font-medium', 'font-large');
+    root.classList.remove("font-small", "font-medium", "font-large");
     root.classList.add(`font-${this.preferences.fontSize}`);
-    
+
     // Apply animations
     if (!this.preferences.animations) {
-      root.classList.add('no-animations');
+      root.classList.add("no-animations");
     } else {
-      root.classList.remove('no-animations');
+      root.classList.remove("no-animations");
     }
   }
 
   private setupThemeManagement(): void {
     // Listen for system theme changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-      if (this.preferences.theme === 'auto') {
-        this.applyPreferences();
-      }
-    });
-    
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", () => {
+        if (this.preferences.theme === "auto") {
+          this.applyPreferences();
+        }
+      });
+
     // Add theme toggle functionality
     this.addThemeToggle();
   }
 
   private addThemeToggle(): void {
-    const toggle = document.createElement('button');
-    toggle.className = 'theme-toggle';
-    toggle.innerHTML = '🌓';
-    toggle.title = 'Toggle theme';
-    toggle.addEventListener('click', () => {
+    const toggle = document.createElement("button");
+    toggle.className = "theme-toggle";
+    toggle.innerHTML = "🌓";
+    toggle.title = "Toggle theme";
+    toggle.addEventListener("click", () => {
       const currentTheme = this.preferences.theme;
-      let newTheme: UXPreferences['theme'];
-      
-      if (currentTheme === 'light') {
-        newTheme = 'dark';
-      } else if (currentTheme === 'dark') {
-        newTheme = 'auto';
+      let newTheme: UXPreferences["theme"];
+
+      if (currentTheme === "light") {
+        newTheme = "dark";
+      } else if (currentTheme === "dark") {
+        newTheme = "auto";
       } else {
-        newTheme = 'light';
+        newTheme = "light";
       }
-      
+
       this.updatePreferences({ theme: newTheme });
     });
-    
+
     document.body.appendChild(toggle);
   }
 
@@ -196,43 +201,45 @@ class EnhancedUXManager {
       this.metrics.interactions++;
       this.lastInteractionTime = Date.now();
     };
-    
-    ['click', 'keydown', 'scroll', 'touchstart'].forEach(eventType => {
+
+    ["click", "keydown", "scroll", "touchstart"].forEach((eventType) => {
       document.addEventListener(eventType, trackInteraction, { passive: true });
     });
   }
 
   private setupScrollTracking(): void {
     let maxScrollDepth = 0;
-    
+
     const trackScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const documentHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
       const scrollDepth = documentHeight > 0 ? scrollTop / documentHeight : 0;
-      
+
       maxScrollDepth = Math.max(maxScrollDepth, scrollDepth);
       this.metrics.scrollDepth = maxScrollDepth;
     };
-    
-    window.addEventListener('scroll', trackScroll, { passive: true });
+
+    window.addEventListener("scroll", trackScroll, { passive: true });
   }
 
   private setupKeyboardShortcuts(): void {
-    document.addEventListener('keydown', (event) => {
+    document.addEventListener("keydown", (event) => {
       // Ctrl/Cmd + K for search
-      if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
+      if ((event.ctrlKey || event.metaKey) && event.key === "k") {
         event.preventDefault();
         this.focusSearch();
       }
-      
+
       // Ctrl/Cmd + / for help
-      if ((event.ctrlKey || event.metaKey) && event.key === '/') {
+      if ((event.ctrlKey || event.metaKey) && event.key === "/") {
         event.preventDefault();
         this.showHelp();
       }
-      
+
       // Escape to close modals
-      if (event.key === 'Escape') {
+      if (event.key === "Escape") {
         this.closeModals();
       }
     });
@@ -240,31 +247,33 @@ class EnhancedUXManager {
 
   private setupAutoSave(): void {
     if (!this.preferences.autoSave) return;
-    
+
     // Auto-save form data
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
+    const forms = document.querySelectorAll("form");
+    forms.forEach((form) => {
       const formId = form.id || `form-${Date.now()}`;
-      
-      form.addEventListener('input', () => {
+
+      form.addEventListener("input", () => {
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
         localStorage.setItem(`autosave-${formId}`, JSON.stringify(data));
       });
-      
+
       // Restore saved data
       const savedData = localStorage.getItem(`autosave-${formId}`);
       if (savedData) {
         try {
           const data = JSON.parse(savedData);
           Object.entries(data).forEach(([name, value]) => {
-            const input = form.querySelector(`[name="${name}"]`) as HTMLInputElement;
+            const input = form.querySelector(
+              `[name="${name}"]`,
+            ) as HTMLInputElement;
             if (input) {
               input.value = value as string;
             }
           });
         } catch (error) {
-          console.warn('Failed to restore form data:', error);
+          console.warn("Failed to restore form data:", error);
         }
       }
     });
@@ -274,18 +283,18 @@ class EnhancedUXManager {
     // Handle offline/online status
     const updateOnlineStatus = () => {
       const isOnline = navigator.onLine;
-      document.body.classList.toggle('offline', !isOnline);
-      
+      document.body.classList.toggle("offline", !isOnline);
+
       this.showFeedback({
-        type: isOnline ? 'success' : 'warning',
-        message: isOnline ? 'Back online' : 'You are offline',
-        duration: 3000
+        type: isOnline ? "success" : "warning",
+        message: isOnline ? "Back online" : "You are offline",
+        duration: 3000,
       });
     };
-    
-    window.addEventListener('online', updateOnlineStatus);
-    window.addEventListener('offline', updateOnlineStatus);
-    
+
+    window.addEventListener("online", updateOnlineStatus);
+    window.addEventListener("offline", updateOnlineStatus);
+
     // Initial check
     updateOnlineStatus();
   }
@@ -293,50 +302,50 @@ class EnhancedUXManager {
   private setupPerformanceOptimizations(): void {
     // Lazy load images
     this.setupLazyLoading();
-    
+
     // Preload critical resources
     this.preloadCriticalResources();
-    
+
     // Optimize scroll performance
     this.optimizeScrollPerformance();
   }
 
   private setupLazyLoading(): void {
-    const images = document.querySelectorAll('img[data-src]');
-    
+    const images = document.querySelectorAll("img[data-src]");
+
     const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
+          img.src = img.dataset.src || "";
+          img.classList.remove("lazy");
           imageObserver.unobserve(img);
         }
       });
     });
-    
-    images.forEach(img => imageObserver.observe(img));
+
+    images.forEach((img) => imageObserver.observe(img));
   }
 
   private preloadCriticalResources(): void {
     const criticalResources = [
-      '/fonts/main.woff2',
-      '/css/critical.css',
-      '/js/critical.js'
+      "/fonts/main.woff2",
+      "/css/critical.css",
+      "/js/critical.js",
     ];
-    
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
+
+    criticalResources.forEach((resource) => {
+      const link = document.createElement("link");
+      link.rel = "preload";
       link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      link.as = resource.endsWith(".css") ? "style" : "script";
       document.head.appendChild(link);
     });
   }
 
   private optimizeScrollPerformance(): void {
     let ticking = false;
-    
+
     const optimizedScrollHandler = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
@@ -346,27 +355,29 @@ class EnhancedUXManager {
         ticking = true;
       }
     };
-    
-    window.addEventListener('scroll', optimizedScrollHandler, { passive: true });
+
+    window.addEventListener("scroll", optimizedScrollHandler, {
+      passive: true,
+    });
   }
 
   private createFeedbackSystem(): void {
-    const feedbackContainer = document.createElement('div');
-    feedbackContainer.className = 'feedback-container';
-    feedbackContainer.setAttribute('aria-live', 'polite');
+    const feedbackContainer = document.createElement("div");
+    feedbackContainer.className = "feedback-container";
+    feedbackContainer.setAttribute("aria-live", "polite");
     document.body.appendChild(feedbackContainer);
   }
 
   private processFeedbackQueue(): void {
-    const container = document.querySelector('.feedback-container');
+    const container = document.querySelector(".feedback-container");
     if (!container || this.feedbackQueue.length === 0) return;
-    
+
     const feedback = this.feedbackQueue.shift();
     if (!feedback) return;
-    
+
     const feedbackElement = this.createFeedbackElement(feedback);
     container.appendChild(feedbackElement);
-    
+
     // Auto-remove after duration
     const duration = feedback.duration || 5000;
     setTimeout(() => {
@@ -375,44 +386,46 @@ class EnhancedUXManager {
   }
 
   private createFeedbackElement(feedback: UserFeedback): HTMLElement {
-    const element = document.createElement('div');
+    const element = document.createElement("div");
     element.className = `feedback feedback-${feedback.type}`;
     element.innerHTML = `
       <div class="feedback-content">
         <span class="feedback-message">${feedback.message}</span>
-        ${feedback.action ? `<button class="feedback-action">${feedback.action.label}</button>` : ''}
+        ${feedback.action ? `<button class="feedback-action">${feedback.action.label}</button>` : ""}
         <button class="feedback-close">×</button>
       </div>
     `;
-    
+
     // Add action handler
-    const actionButton = element.querySelector('.feedback-action');
+    const actionButton = element.querySelector(".feedback-action");
     if (actionButton && feedback.action) {
-      actionButton.addEventListener('click', feedback.action.callback);
+      actionButton.addEventListener("click", feedback.action.callback);
     }
-    
+
     // Add close handler
-    const closeButton = element.querySelector('.feedback-close');
-    closeButton?.addEventListener('click', () => element.remove());
-    
+    const closeButton = element.querySelector(".feedback-close");
+    closeButton?.addEventListener("click", () => element.remove());
+
     return element;
   }
 
   private focusSearch(): void {
-    const searchInput = document.querySelector('input[type="search"], input[placeholder*="search" i]') as HTMLInputElement;
+    const searchInput = document.querySelector(
+      'input[type="search"], input[placeholder*="search" i]',
+    ) as HTMLInputElement;
     if (searchInput) {
       searchInput.focus();
       this.showFeedback({
-        type: 'info',
-        message: 'Search focused',
-        duration: 2000
+        type: "info",
+        message: "Search focused",
+        duration: 2000,
       });
     }
   }
 
   private showHelp(): void {
-    const helpModal = document.createElement('div');
-    helpModal.className = 'help-modal';
+    const helpModal = document.createElement("div");
+    helpModal.className = "help-modal";
     helpModal.innerHTML = `
       <div class="help-content">
         <h2>Keyboard Shortcuts</h2>
@@ -425,13 +438,13 @@ class EnhancedUXManager {
         <button class="help-close">Close</button>
       </div>
     `;
-    
+
     document.body.appendChild(helpModal);
-    
-    const closeButton = helpModal.querySelector('.help-close');
-    closeButton?.addEventListener('click', () => helpModal.remove());
-    
-    helpModal.addEventListener('click', (e) => {
+
+    const closeButton = helpModal.querySelector(".help-close");
+    closeButton?.addEventListener("click", () => helpModal.remove());
+
+    helpModal.addEventListener("click", (e) => {
       if (e.target === helpModal) {
         helpModal.remove();
       }
@@ -439,8 +452,8 @@ class EnhancedUXManager {
   }
 
   private closeModals(): void {
-    const modals = document.querySelectorAll('.modal, .help-modal, .feedback');
-    modals.forEach(modal => modal.remove());
+    const modals = document.querySelectorAll(".modal, .help-modal, .feedback");
+    modals.forEach((modal) => modal.remove());
   }
 }
 

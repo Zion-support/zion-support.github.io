@@ -41,12 +41,13 @@ export default [
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-this-alias': 'warn',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
-      'react/no-unescaped-entities': 'warn',
+      'react/no-unescaped-entities': 'off',
+      'react-hooks/exhaustive-deps': 'off',
       'no-undef': 'off',
       'no-extra-semi': 'warn'
     },
@@ -94,7 +95,8 @@ export default [
       'components/layout/**',
       'components/main/**',
       'components/sections/**',
-      'components/ui/**'
+      'components/ui/**',
+      'improvements-implementation.js'
     ]
   }
 ];

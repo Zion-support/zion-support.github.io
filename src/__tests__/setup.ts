@@ -1,5 +1,5 @@
 // Enhanced test setup to handle navigation and fetch issues
-import '@testing-library/jest-dom';
+import "@testing-library/jest-dom";
 
 // Mock fetch globally
 global.fetch = jest.fn();
@@ -22,26 +22,28 @@ global.fetch = jest.fn();
 //   ancestorOrigins: [] as string[],
 // } as Location;
 
-// Mock window.location using a simple assignment
+// Mock window.location using Object.defineProperty to avoid navigation errors
 const mockLocationInstance = {
-  pathname: '/',
-  href: 'http://localhost:3000/',
+  pathname: "/",
+  href: "http://localhost:3000/",
   assign: jest.fn(),
   replace: jest.fn(),
   reload: jest.fn(),
-  search: '',
-  hash: '',
-  host: 'localhost:3000',
-  hostname: 'localhost',
-  port: '3000',
-  protocol: 'http:',
-  origin: 'http://localhost:3000',
+  search: "",
+  hash: "",
+  host: "localhost:3000",
+  hostname: "localhost",
+  port: "3000",
+  protocol: "http:",
+  origin: "http://localhost:3000",
   ancestorOrigins: [] as unknown as DOMStringList,
 } as Location;
-delete (window as unknown as { location?: Partial<Location> }).location;
-(window as unknown as { location: Partial<Location> }).location = mockLocationInstance;
+
+// Mock location more safely
+delete (window as unknown as Record<string, unknown>).location;
+(window as unknown as Record<string, unknown>).location = mockLocationInstance;
 // Mock window.history
-Object.defineProperty(window, 'history', {
+Object.defineProperty(window, "history", {
   value: {
     pushState: jest.fn(),
     replaceState: jest.fn(),
@@ -67,7 +69,7 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
 }));
 
 // Mock Performance API
-Object.defineProperty(window, 'performance', {
+Object.defineProperty(window, "performance", {
   value: {
     now: jest.fn(() => Date.now()),
     mark: jest.fn(),
@@ -89,13 +91,13 @@ const localStorageMock = {
   length: 0,
   key: jest.fn(),
 };
-Object.defineProperty(window, 'localStorage', {
+Object.defineProperty(window, "localStorage", {
   value: localStorageMock,
   writable: true,
 });
 
 // Mock sessionStorage
-Object.defineProperty(window, 'sessionStorage', {
+Object.defineProperty(window, "sessionStorage", {
   value: localStorageMock,
   writable: true,
 });
@@ -110,7 +112,7 @@ global.console = {
 };
 
 // Mock requestAnimationFrame
-global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
+global.requestAnimationFrame = jest.fn((cb) => setTimeout(cb, 0));
 global.cancelAnimationFrame = jest.fn();
 
 // Mock setTimeout and clearTimeout for better test control

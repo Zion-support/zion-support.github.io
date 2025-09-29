@@ -13,6 +13,7 @@ declare global {
   interface Performance {
     memory?: {
       usedJSHeapSize?: number;
+      totalJSHeapSize?: number;
       jsHeapSizeLimit?: number;
     };
   }
@@ -21,6 +22,11 @@ declare global {
     processingStart?: number;
     hadRecentInput?: boolean;
     value?: number;
+  }
+
+  interface LayoutShift extends PerformanceEntry {
+    hadRecentInput: boolean;
+    value: number;
   }
 
   interface SpeechRecognitionEvent extends Event {
@@ -61,15 +67,15 @@ declare global {
   };
 }
 
-// Service Worker event interface
-interface ServiceWorkerEvent extends Event {
-  request: Request;
-  respondWith(response: Promise<Response>): void;
-}
+// Service Worker event interface (unused - can be removed if not needed)
+// interface ServiceWorkerEvent extends Event {
+//   request: Request;
+//   respondWith(response: Promise<Response>): void;
+// }
 
-// XMLHttpRequest interface extensions
-interface XMLHttpRequest {
-  _url?: string;
-}
+// XMLHttpRequest interface extensions (unused - can be removed if not needed)
+// interface XMLHttpRequest {
+//   _url?: string;
+// }
 
 export {};

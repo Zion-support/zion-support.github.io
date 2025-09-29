@@ -1,160 +1,168 @@
-import React, { useEffect, useState } from 'react';
-import { Activity, Zap, Clock, Database } from 'lucide-react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { usePerformanceOptimization } from '../hooks/usePerformanceOptimization';
 
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  loadTime: number | null;
-  domContentLoaded: number | null;
+interface PerformanceData {
+  loadTime: number;
+  memoryUsage: number | null;
+  renderCount: number;
+  lastRenderTime: number;
+  fps: number;
+  isVisible: boolean;
 }
 
-const PerformanceMonitor: React.FC<{ show?: boolean }> = ({ show = false }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    loadTime: null,
-    domContentLoaded: null
+interface PerformanceMonitorProps {
+  enabled?: boolean;
+  showDetails?: boolean;
+  className?: string;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  enabled = true,
+  showDetails = false,
+  className = ''
+}) => {
+  const [performanceData, setPerformanceData] = useState<PerformanceData>({
+    loadTime: 0,
+    memoryUsage: null,
+    renderCount: 0,
+    lastRenderTime: 0,
+    fps: 0,
+    isVisible: false
   });
 
-  const [isVisible, setIsVisible] = useState(show);
+  const [fps, setFps] = useState(0);
+  const [frameCount, setFrameCount] = useState(0);
+  const [lastTime, setLastTime] = useState(
+    typeof performance !== 'undefined' ? performance.now() : Date.now()
+  );
 
+  const { metrics, memoryUsage } = usePerformanceOptimization({
+    enableMemoryMonitoring: true,
+    enableRenderTracking: true
+  });
+
+  // FPS calculation
+  const calculateFPS = useCallback(() => {
+    const now = typeof performance !== 'undefined' ? performance.now() : Date.now();
+    const delta = now - lastTime;
+    
+    if (delta >= 1000) {
+      setFps(Math.round((frameCount * 1000) / delta));
+      setFrameCount(0);
+      setLastTime(now);
+    } else {
+      setFrameCount(prev => prev + 1);
+    }
+  }, [frameCount, lastTime]);
+
+  // Update performance data
   useEffect(() => {
-    if (!isVisible) return;
+    if (!enabled) return;
 
-    const updateMetrics = () => {
-      // Check if performance API is available
-      if (typeof performance === 'undefined' || !performance.getEntriesByType) {
-        return;
-      }
-
-      try {
-        // Get performance metrics
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        
-        // Get paint timing
-        const paintEntries = performance.getEntriesByType('paint');
-        const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-        
-        // Get LCP
-        const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
-        const lcp = lcpEntries.length > 0 ? lcpEntries[lcpEntries.length - 1].startTime : null;
-      
-      // Get FID (simulated)
-      let fid = null;
-      const fidEntries = performance.getEntriesByType('first-input');
-      if (fidEntries.length > 0) {
-        const fidEntry = fidEntries[0] as PerformanceEntry & { processingStart?: number };
-        fid = (fidEntry.processingStart || 0) - fidEntry.startTime;
-      }
-      
-      // Get CLS (simulated)
-      let cls = 0;
-      const clsEntries = performance.getEntriesByType('layout-shift');
-      clsEntries.forEach(entry => {
-        const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
-        if (!layoutShiftEntry.hadRecentInput && layoutShiftEntry.value) {
-          cls += layoutShiftEntry.value;
-        }
-      });
-
-        setMetrics({
-          fcp: fcpEntry ? fcpEntry.startTime : null,
-          lcp,
-          fid,
-          cls,
-          ttfb: navigation ? navigation.responseStart - navigation.requestStart : null,
-          loadTime: navigation ? navigation.loadEventEnd - navigation.fetchStart : null,
-          domContentLoaded: navigation ? navigation.domContentLoadedEventEnd - navigation.fetchStart : null
-        });
-      } catch (error) {
-        console.error('Error updating performance metrics:', error);
-      }
+    const updateData = () => {
+      setPerformanceData(prev => ({
+        ...prev,
+        loadTime: metrics.loadTime,
+        memoryUsage: memoryUsage?.used || null,
+        renderCount: metrics.renderCount,
+        lastRenderTime: metrics.lastRenderTime,
+        fps: fps
+      }));
     };
 
-    updateMetrics();
-    const interval = setInterval(updateMetrics, 1000);
+    updateData();
+  }, [enabled, metrics, memoryUsage, fps]);
 
-    return () => clearInterval(interval);
-  }, [isVisible]);
+  // FPS monitoring
+  useEffect(() => {
+    if (!enabled) return;
 
-  if (!isVisible) {
-    return (
-      <button
-        onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 left-4 bg-zion-slate-800 hover:bg-zion-slate-700 text-white p-2 rounded-lg shadow-lg transition-colors z-50"
-        aria-label="Show performance monitor"
-      >
-        <Activity className="w-5 h-5" />
-      </button>
-    );
-  }
+    const rafId = requestAnimationFrame(() => {
+      calculateFPS();
+    });
+
+    return () => cancelAnimationFrame(rafId);
+  }, [enabled, calculateFPS]);
+
+  // Memory usage formatting
+  const formatMemory = useCallback((bytes: number | null) => {
+    if (!bytes) return 'N/A';
+    
+    const mb = bytes / (1024 * 1024);
+    return `${mb.toFixed(2)} MB`;
+  }, []);
+
+  // Performance status
+  const performanceStatus = useMemo(() => {
+    if (fps < 30) return { status: 'poor', color: 'text-red-500' };
+    if (fps < 50) return { status: 'fair', color: 'text-yellow-500' };
+    return { status: 'good', color: 'text-green-500' };
+  }, [fps]);
+
+  if (!enabled) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 bg-zion-slate-800 text-white p-4 rounded-lg shadow-lg z-50 min-w-[200px] border border-zion-slate-700">
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="text-sm font-semibold text-zion-cyan">Performance</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-zion-slate-light hover:text-white text-xs"
-        >
-          ×
-        </button>
-      </div>
-      
-      <div className="space-y-2 text-xs">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-1">
-            <Clock className="w-3 h-3 text-zion-blue-light" />
-            <span className="text-zion-slate-light">FCP:</span>
-          </div>
-          <span className="text-white">{metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}</span>
+    <div className={`fixed bottom-4 right-4 z-50 ${className}`}>
+      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-3 border border-gray-200 dark:border-gray-700">
+        <div className="flex items-center justify-between mb-2">
+          <h3 className="text-sm font-medium text-gray-900 dark:text-white">
+            Performance Monitor
+          </h3>
+          <button
+            onClick={() => setPerformanceData(prev => ({ ...prev, isVisible: !prev.isVisible }))}
+            className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+          >
+            {performanceData.isVisible ? '−' : '+'}
+          </button>
         </div>
-        
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-1">
-            <Database className="w-3 h-3 text-zion-purple-light" />
-            <span className="text-zion-slate-light">LCP:</span>
+
+        <div className="space-y-1 text-xs">
+          <div className="flex justify-between">
+            <span className="text-gray-600 dark:text-gray-400">FPS:</span>
+            <span className={`font-mono ${performanceStatus.color}`}>
+              {fps}
+            </span>
           </div>
-          <span className="text-white">{metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}</span>
-        </div>
-        
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-1">
-            <Zap className="w-3 h-3 text-zion-cyan" />
-            <span className="text-zion-slate-light">FID:</span>
+          
+          <div className="flex justify-between">
+            <span className="text-gray-600 dark:text-gray-400">Memory:</span>
+            <span className="font-mono text-gray-900 dark:text-white">
+              {formatMemory(performanceData.memoryUsage)}
+            </span>
           </div>
-          <span className="text-white">{metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}</span>
+
+          {showDetails && (
+            <>
+              <div className="flex justify-between">
+                <span className="text-gray-600 dark:text-gray-400">Renders:</span>
+                <span className="font-mono text-gray-900 dark:text-white">
+                  {performanceData.renderCount}
+                </span>
+              </div>
+              
+              <div className="flex justify-between">
+                <span className="text-gray-600 dark:text-gray-400">Load Time:</span>
+                <span className="font-mono text-gray-900 dark:text-white">
+                  {performanceData.loadTime.toFixed(2)}ms
+                </span>
+              </div>
+            </>
+          )}
         </div>
-        
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-1">
-            <Activity className="w-3 h-3 text-zion-blue" />
-            <span className="text-zion-slate-light">CLS:</span>
+
+        {performanceData.isVisible && (
+          <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
+            <div className="text-xs text-gray-500 dark:text-gray-400">
+              <div>Status: <span className={performanceStatus.color}>{performanceStatus.status}</span></div>
+              {memoryUsage && (
+                <div>
+                  Memory: {formatMemory(memoryUsage.used)} / {formatMemory(memoryUsage.limit)} 
+                  ({memoryUsage.percentage?.toFixed(1)}%)
+                </div>
+              )}
+            </div>
           </div>
-          <span className="text-white">{metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</span>
-        </div>
-        
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-1">
-            <Clock className="w-3 h-3 text-zion-blue-light" />
-            <span className="text-zion-slate-light">TTFB:</span>
-          </div>
-          <span className="text-white">{metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}</span>
-        </div>
-        
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-1">
-            <Database className="w-3 h-3 text-zion-purple-light" />
-            <span className="text-zion-slate-light">Load Time:</span>
-          </div>
-          <span className="text-white">{metrics.loadTime ? `${Math.round(metrics.loadTime)}ms` : 'N/A'}</span>
-        </div>
+        )}
       </div>
     </div>
   );

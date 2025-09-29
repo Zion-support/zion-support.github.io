@@ -1,7 +1,7 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { screen } from '@testing-library/dom';
-import PerformanceMonitor from '../PerformanceMonitor';
+import React from "react";
+import { render } from "@testing-library/react";
+import { screen } from "@testing-library/dom";
+import PerformanceMonitor from "../PerformanceMonitor";
 
 // Mock performance API
 const mockPerformance = {
@@ -23,46 +23,52 @@ const mockNavigation = {
   domContentLoadedEventEnd: 800,
 };
 
-Object.defineProperty(window, 'performance', {
+Object.defineProperty(window, "performance", {
   value: mockPerformance,
   writable: true,
 });
 
-describe('PerformanceMonitor', () => {
+describe("PerformanceMonitor", () => {
   beforeEach(() => {
     jest.clearAllMocks();
     mockPerformance.getEntriesByType.mockReturnValue([mockNavigation]);
     mockPerformance.getEntriesByName.mockReturnValue([]);
   });
 
-  it('renders performance metrics when show is true', () => {
-    render(<PerformanceMonitor show={true} />);
-    
-    expect(screen.getByText(/Performance/i)).toBeInTheDocument();
+  it("renders performance metrics when enabled is true", () => {
+    render(<PerformanceMonitor enabled={true} />);
+
+    expect(screen.getByText(/Performance Monitor/i)).toBeInTheDocument();
   });
 
-  it('does not render when show is false', () => {
-    render(<PerformanceMonitor show={false} />);
-    
-    expect(screen.queryByText(/Performance Metrics/i)).not.toBeInTheDocument();
+  it("does not render when enabled is false", () => {
+    render(<PerformanceMonitor enabled={false} />);
+
+    expect(screen.queryByText(/Performance Monitor/i)).not.toBeInTheDocument();
   });
 
-  it('displays performance metrics correctly', () => {
-    render(<PerformanceMonitor show={true} />);
-    
+  it("displays performance metrics correctly", () => {
+    render(<PerformanceMonitor enabled={true} />);
+
     // Wait for metrics to be calculated
     setTimeout(() => {
-      expect(screen.getByText(/Load Time:/i)).toBeInTheDocument();
-      expect(screen.getByText(/DOM Content Loaded:/i)).toBeInTheDocument();
+      expect(screen.getByText(/FPS:/i)).toBeInTheDocument();
+      expect(screen.getByText(/Memory:/i)).toBeInTheDocument();
     }, 100);
   });
 
-  it('handles missing performance API gracefully', () => {
-      // @ts-expect-error - Testing behavior when performance API is not available
+  it("handles missing performance API gracefully", () => {
+    // Store original performance
+    const originalPerformance = window.performance;
+    
+    // @ts-expect-error - Testing behavior when performance API is not available
     delete window.performance;
+
+    render(<PerformanceMonitor enabled={true} />);
+
+    expect(screen.getByText(/Performance Monitor/i)).toBeInTheDocument();
     
-    render(<PerformanceMonitor show={true} />);
-    
-    expect(screen.getByText(/Performance/i)).toBeInTheDocument();
+    // Restore original performance
+    window.performance = originalPerformance;
   });
 });

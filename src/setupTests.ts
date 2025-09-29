@@ -1,4 +1,4 @@
-import '@testing-library/jest-dom';
+import "@testing-library/jest-dom";
 
 // Global declarations for test environment
 declare const global: typeof globalThis & {
@@ -15,50 +15,57 @@ global.IntersectionObserver = jest.fn().mockImplementation(() => ({
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class {
-  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'measure', 'mark'];
-  
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  static readonly supportedEntryTypes: readonly string[] = [
+    "navigation",
+    "paint",
+    "measure",
+    "mark",
+  ];
+
+   
   constructor(_callback: PerformanceObserverCallback) {}
   disconnect() {}
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   observe(_options?: PerformanceObserverInit) {}
-  takeRecords() { return []; }
+  takeRecords() {
+    return [];
+  }
 } as typeof PerformanceObserver;
 
 // Mock window.scrollTo
-Object.defineProperty(window, 'scrollTo', {
+Object.defineProperty(window, "scrollTo", {
   value: () => {},
-  writable: true
+  writable: true,
 });
 
 // Mock window.history
-Object.defineProperty(window, 'history', {
+Object.defineProperty(window, "history", {
   value: {
     pushState: () => {},
     replaceState: () => {},
     go: () => {},
     back: () => {},
-    forward: () => {}
+    forward: () => {},
   },
-  writable: true
+  writable: true,
 });
 
 // Mock performance API if not available
 if (!window.performance) {
-  Object.defineProperty(window, 'performance', {
+  Object.defineProperty(window, "performance", {
     value: {
       now: () => Date.now(),
       mark: () => {},
       measure: () => {},
       getEntriesByType: () => [],
-      getEntriesByName: () => []
+      getEntriesByName: () => [],
     },
-    writable: true
+    writable: true,
   });
 }
 
 // Mock matchMedia
-Object.defineProperty(window, 'matchMedia', {
+Object.defineProperty(window, "matchMedia", {
   value: (query: string) => ({
     matches: false,
     media: query,
@@ -67,9 +74,9 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: () => {},
     addEventListener: () => {},
     removeEventListener: () => {},
-    dispatchEvent: () => {}
+    dispatchEvent: () => {},
   }),
-  writable: true
+  writable: true,
 });
 
 // Mock localStorage
@@ -79,11 +86,11 @@ const localStorageMock = {
   removeItem: jest.fn(),
   clear: jest.fn(),
   key: jest.fn(),
-  length: 0
+  length: 0,
 };
-Object.defineProperty(window, 'localStorage', {
+Object.defineProperty(window, "localStorage", {
   value: localStorageMock,
-  writable: true
+  writable: true,
 });
 
 // Mock sessionStorage
@@ -93,11 +100,11 @@ const sessionStorageMock = {
   removeItem: jest.fn(),
   clear: jest.fn(),
   key: jest.fn(),
-  length: 0
+  length: 0,
 };
-Object.defineProperty(window, 'sessionStorage', {
+Object.defineProperty(window, "sessionStorage", {
   value: sessionStorageMock,
-  writable: true
+  writable: true,
 });
 
 // Mock fetch
@@ -106,29 +113,32 @@ global.fetch = jest.fn(() =>
     ok: true,
     status: 200,
     json: () => Promise.resolve({}),
-    text: () => Promise.resolve(''),
+    text: () => Promise.resolve(""),
     blob: () => Promise.resolve(new Blob()),
-    arrayBuffer: () => Promise.resolve(new ArrayBuffer(0))
-  })
+    arrayBuffer: () => Promise.resolve(new ArrayBuffer(0)),
+  }),
 ) as jest.Mock;
 
 // Mock Notification API
-Object.defineProperty(window, 'Notification', {
+Object.defineProperty(window, "Notification", {
   value: class Notification {
-    static permission = 'granted';
-    static requestPermission = jest.fn(() => Promise.resolve('granted'));
-    constructor(public title: string, public options?: NotificationOptions) {}
+    static permission = "granted";
+    static requestPermission = jest.fn(() => Promise.resolve("granted"));
+    constructor(
+      public title: string,
+      public options?: NotificationOptions,
+    ) {}
     close = jest.fn();
     addEventListener = jest.fn();
     removeEventListener = jest.fn();
   },
-  writable: true
+  writable: true,
 });
 
 // Mock navigator.vibrate
-Object.defineProperty(navigator, 'vibrate', {
+Object.defineProperty(navigator, "vibrate", {
   value: jest.fn(() => true),
-  writable: true
+  writable: true,
 });
 
 // Mock ResizeObserver
@@ -139,30 +149,32 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
 }));
 
 // Mock URL.createObjectURL
-Object.defineProperty(URL, 'createObjectURL', {
-  value: jest.fn(() => 'mock-object-url'),
-  writable: true
+Object.defineProperty(URL, "createObjectURL", {
+  value: jest.fn(() => "mock-object-url"),
+  writable: true,
 });
 
 // Mock URL.revokeObjectURL
-Object.defineProperty(URL, 'revokeObjectURL', {
+Object.defineProperty(URL, "revokeObjectURL", {
   value: jest.fn(),
-  writable: true
+  writable: true,
 });
 
 // Mock crypto for encryption features
-Object.defineProperty(window, 'crypto', {
+Object.defineProperty(window, "crypto", {
   value: {
     subtle: {
       encrypt: jest.fn(),
       decrypt: jest.fn(),
       generateKey: jest.fn(),
       importKey: jest.fn(),
-      exportKey: jest.fn()
+      exportKey: jest.fn(),
     },
-    getRandomValues: jest.fn((arr) => arr.map(() => Math.floor(Math.random() * 256)))
+    getRandomValues: jest.fn((arr) =>
+      arr.map(() => Math.floor(Math.random() * 256)),
+    ),
   },
-  writable: true
+  writable: true,
 });
 
 // Suppress console warnings in tests
@@ -171,9 +183,9 @@ console.warn = (...args: unknown[]) => {
   // Suppress specific warnings that are expected in test environment
   const firstArg = args[0] as string | undefined;
   if (
-    firstArg?.includes?.('React Router') ||
-    firstArg?.includes?.('Warning:') ||
-    firstArg?.includes?.('Deprecated')
+    firstArg?.includes?.("React Router") ||
+    firstArg?.includes?.("Warning:") ||
+    firstArg?.includes?.("Deprecated")
   ) {
     return;
   }

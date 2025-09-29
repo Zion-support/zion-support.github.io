@@ -1,330 +1,357 @@
-/**
- * Enhanced Notification System
- * Provides advanced notification management with animations and accessibility
- */
+import React, { useState, useEffect, useCallback } from "react";
+import {
+  X,
+  Bell,
+  BellRing,
+  CheckCircle,
+  AlertTriangle,
+  Info,
+  XCircle,
+  Settings,
+} from "lucide-react";
 
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-
-interface Notification {
+export interface EnhancedNotification {
   id: string;
-  type: 'success' | 'error' | 'warning' | 'info';
+  type: "success" | "warning" | "error" | "info" | "system";
   title: string;
   message: string;
+  timestamp: number;
   duration?: number;
   persistent?: boolean;
-  actions?: Array<{
-    label: string;
-    action: () => void;
-    variant?: 'primary' | 'secondary';
-  }>;
-  onClose?: () => void;
-  timestamp: Date;
+  actions?: NotificationAction[];
+  priority?: "low" | "normal" | "high" | "urgent";
+  category?: string;
+  metadata?: Record<string, unknown>;
 }
 
-// Removed unused interface - using inline interface in WindowWithNotificationSystem instead
+interface NotificationAction {
+  label: string;
+  action: () => void;
+  variant?: "primary" | "secondary" | "danger";
+}
 
-interface NotificationSystemProps {
+interface EnhancedNotificationSystemProps {
+  notifications: EnhancedNotification[];
+  onRemove: (id: string) => void;
+  onAction?: (notificationId: string, action: string) => void;
   maxNotifications?: number;
-  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'top-center' | 'bottom-center';
-  enableAnimations?: boolean;
-  enableSounds?: boolean;
-  enableVibrations?: boolean;
-  enableAccessibility?: boolean;
-  className?: string;
+  position?:
+    | "top-right"
+    | "top-left"
+    | "bottom-right"
+    | "bottom-left"
+    | "top-center";
+  showSoundToggle?: boolean;
+  showHistoryToggle?: boolean;
 }
 
-const EnhancedNotificationSystem: React.FC<NotificationSystemProps> = ({
+const EnhancedNotificationSystem: React.FC<EnhancedNotificationSystemProps> = ({
+  notifications,
+  onRemove,
+  onAction,
   maxNotifications = 5,
-  position = 'top-right',
-  enableAnimations = true,
-  enableSounds = false,
-  enableVibrations = false,
-  enableAccessibility = true,
-  className = ''
+  position = "top-right",
+  showSoundToggle = true,
+  showHistoryToggle = true,
 }) => {
-  const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [isVisible, setIsVisible] = useState(false);
-  const timeoutRefs = useRef<Map<string, NodeJS.Timeout>>(new Map());
+  const [isSoundEnabled, setIsSoundEnabled] = useState(true);
+  const [showHistory, setShowHistory] = useState(false);
+  const [notificationHistory, setNotificationHistory] = useState<
+    EnhancedNotification[]
+  >([]);
+  // const [isMinimized, setIsMinimized] = useState(false);
 
-  // Position classes
-  const positionClasses = {
-    'top-right': 'top-4 right-4',
-    'top-left': 'top-4 left-4',
-    'bottom-right': 'bottom-4 right-4',
-    'bottom-left': 'bottom-4 left-4',
-    'top-center': 'top-4 left-1/2 transform -translate-x-1/2',
-    'bottom-center': 'bottom-4 left-1/2 transform -translate-x-1/2'
-  };
+  // Auto-remove notifications based on duration
+  useEffect(() => {
+    notifications.forEach((notification) => {
+      if (
+        !notification.persistent &&
+        notification.duration &&
+        notification.duration > 0
+      ) {
+        const timer = setTimeout(() => {
+          onRemove(notification.id);
+        }, notification.duration);
 
-  // Type styles
-  const typeStyles = {
-    success: {
-      bg: 'bg-green-50',
-      border: 'border-green-200',
-      icon: 'text-green-400',
-      iconBg: 'bg-green-100',
-      title: 'text-green-800',
-      message: 'text-green-700'
-    },
-    error: {
-      bg: 'bg-red-50',
-      border: 'border-red-200',
-      icon: 'text-red-400',
-      iconBg: 'bg-red-100',
-      title: 'text-red-800',
-      message: 'text-red-700'
-    },
-    warning: {
-      bg: 'bg-yellow-50',
-      border: 'border-yellow-200',
-      icon: 'text-yellow-400',
-      iconBg: 'bg-yellow-100',
-      title: 'text-yellow-800',
-      message: 'text-yellow-700'
-    },
-    info: {
-      bg: 'bg-blue-50',
-      border: 'border-blue-200',
-      icon: 'text-blue-400',
-      iconBg: 'bg-blue-100',
-      title: 'text-blue-800',
-      message: 'text-blue-700'
-    }
-  };
-
-  // Icons for each type
-  const typeIcons = {
-    success: (
-      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-      </svg>
-    ),
-    error: (
-      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-      </svg>
-    ),
-    warning: (
-      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-        <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-      </svg>
-    ),
-    info: (
-      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-      </svg>
-    )
-  };
-
-  // Remove notification
-  const removeNotification = useCallback((id: string) => {
-    setNotifications(prev => prev.filter(n => n.id !== id));
-    
-    // Clear timeout if exists
-    const timeout = timeoutRefs.current.get(id);
-    if (timeout) {
-      clearTimeout(timeout);
-      timeoutRefs.current.delete(id);
-    }
-
-    // Hide container if no notifications
-    setNotifications(current => {
-      if (current.length === 1) {
-        setIsVisible(false);
+        return () => clearTimeout(timer);
       }
-      return current;
     });
-  }, []);
+  }, [notifications, onRemove]);
 
-  // Add notification
-  const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp'>) => {
-    const id = `notification_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    const newNotification: Notification = {
-      ...notification,
-      id,
-      timestamp: new Date()
-    };
+  // Add to history when notification is removed
+  const handleRemove = useCallback(
+    (id: string) => {
+      const notification = notifications.find((n) => n.id === id);
+      if (notification) {
+        setNotificationHistory((prev) => [notification, ...prev.slice(0, 99)]); // Keep last 100
+      }
+      onRemove(id);
+    },
+    [notifications, onRemove],
+  );
 
-    setNotifications(prev => {
-      const updated = [newNotification, ...prev].slice(0, maxNotifications);
-      return updated;
-    });
+  // Play notification sound
+  const playNotificationSound = useCallback(
+    (type: string) => {
+      if (!isSoundEnabled) return;
 
-    setIsVisible(true);
+      try {
+        const audioContext = new (window.AudioContext ||
+          (window as Window & { webkitAudioContext?: typeof AudioContext })
+            .webkitAudioContext)();
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
 
-    // Play sound if enabled
-    if (enableSounds) {
-      // Play notification sound based on type
-      const audioContext = new (window.AudioContext || (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext!)();
-      const oscillator = audioContext.createOscillator();
-      const gainNode = audioContext.createGain();
-      
-      oscillator.connect(gainNode);
-      gainNode.connect(audioContext.destination);
-      
-      const frequencies = {
-        success: 800,
-        error: 400,
-        warning: 600,
-        info: 500
-      };
-      
-      oscillator.frequency.setValueAtTime(frequencies[notification.type] || 500, audioContext.currentTime);
-      gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
-      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.2);
-      
-      oscillator.start(audioContext.currentTime);
-      oscillator.stop(audioContext.currentTime + 0.2);
-    }
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
 
-    // Vibrate if enabled
-    if (enableVibrations && 'vibrate' in navigator) {
-      const vibrationPattern = {
-        success: [100],
-        error: [200, 100, 200],
-        warning: [150, 100, 150],
-        info: [100]
-      };
-      navigator.vibrate(vibrationPattern[notification.type]);
-    }
+        // Different frequencies for different notification types
+        const frequencies = {
+          success: 800,
+          warning: 600,
+          error: 400,
+          info: 1000,
+          system: 1200,
+        };
 
-    // Auto-remove notification after duration
-    if (!notification.persistent && notification.duration !== 0) {
-      const duration = notification.duration || 5000;
-      const timeout = setTimeout(() => {
-        removeNotification(id);
-      }, duration);
-      timeoutRefs.current.set(id, timeout);
-    }
+        oscillator.frequency.setValueAtTime(
+          frequencies[type as keyof typeof frequencies] || 800,
+          audioContext.currentTime,
+        );
+        oscillator.type = "sine";
 
-    return id;
-  }, [maxNotifications, enableSounds, enableVibrations, removeNotification]);
+        gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(
+          0.01,
+          audioContext.currentTime + 0.2,
+        );
 
-  // Clear all notifications
-  const clearAll = useCallback(() => {
-    notifications.forEach(notification => {
-      removeNotification(notification.id);
-    });
-  }, [notifications, removeNotification]);
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + 0.2);
+      } catch (error) {
+        console.warn("Could not play notification sound:", error);
+      }
+    },
+    [isSoundEnabled],
+  );
 
-  // Cleanup timeouts on unmount
+  // Play sound for new notifications
   useEffect(() => {
-    const timeouts = timeoutRefs.current;
-    return () => {
-      timeouts.forEach(timeout => clearTimeout(timeout));
-    };
-  }, []);
-
-  // Expose methods globally for easy access
-  useEffect(() => {
-    interface WindowWithNotificationSystem extends Window {
-      notificationSystem?: {
-        success: (title: string, message: string, options?: Partial<Notification>) => string;
-        error: (title: string, message: string, options?: Partial<Notification>) => string;
-        warning: (title: string, message: string, options?: Partial<Notification>) => string;
-        info: (title: string, message: string, options?: Partial<Notification>) => string;
-        remove: (id: string) => void;
-        clear: () => void;
-      };
+    if (notifications.length > 0) {
+      const latestNotification = notifications[notifications.length - 1];
+      playNotificationSound(latestNotification.type);
     }
-    
-    (window as WindowWithNotificationSystem).notificationSystem = {
-      success: (title: string, message: string, options?: Partial<Notification>) =>
-        addNotification({ type: 'success', title, message, ...options }),
-      error: (title: string, message: string, options?: Partial<Notification>) =>
-        addNotification({ type: 'error', title, message, ...options }),
-      warning: (title: string, message: string, options?: Partial<Notification>) =>
-        addNotification({ type: 'warning', title, message, ...options }),
-      info: (title: string, message: string, options?: Partial<Notification>) =>
-        addNotification({ type: 'info', title, message, ...options }),
-      remove: removeNotification,
-      clear: clearAll
-    };
-  }, [addNotification, removeNotification, clearAll]);
+  }, [notifications, playNotificationSound]);
 
-  if (!isVisible || notifications.length === 0) {
-    return null;
-  }
+  // Get notification icon
+  const getNotificationIcon = (type: string) => {
+    switch (type) {
+      case "success":
+        return <CheckCircle className="w-5 h-5 text-green-400" />;
+      case "warning":
+        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
+      case "error":
+        return <XCircle className="w-5 h-5 text-red-400" />;
+      case "system":
+        return <BellRing className="w-5 h-5 text-blue-400" />;
+      default:
+        return <Info className="w-5 h-5 text-blue-400" />;
+    }
+  };
+
+  // Get notification background color
+  const getNotificationBgColor = (type: string, priority?: string) => {
+    const baseColors = {
+      success: "bg-green-900/20 border-green-500/30",
+      warning: "bg-yellow-900/20 border-yellow-500/30",
+      error: "bg-red-900/20 border-red-500/30",
+      info: "bg-blue-900/20 border-blue-500/30",
+      system: "bg-purple-900/20 border-purple-500/30",
+    };
+
+    const priorityModifiers = {
+      urgent: "ring-2 ring-red-500/50",
+      high: "ring-1 ring-orange-500/30",
+      normal: "",
+      low: "opacity-75",
+    };
+
+    return `${baseColors[type as keyof typeof baseColors] || baseColors.info} ${priorityModifiers[priority as keyof typeof priorityModifiers] || priorityModifiers.normal}`;
+  };
+
+  // Get position classes
+  const getPositionClasses = () => {
+    const positions = {
+      "top-right": "top-4 right-4",
+      "top-left": "top-4 left-4",
+      "bottom-right": "bottom-4 right-4",
+      "bottom-left": "bottom-4 left-4",
+      "top-center": "top-4 left-1/2 transform -translate-x-1/2",
+    };
+    return positions[position];
+  };
+
+  const visibleNotifications = notifications.slice(0, maxNotifications);
 
   return (
-    <div
-      className={`fixed z-50 ${positionClasses[position]} ${className}`}
-      role={enableAccessibility ? 'alert' : undefined}
-      aria-live={enableAccessibility ? 'polite' : undefined}
-    >
-      <div className="space-y-2">
-        {notifications.map((notification, index) => (
+    <div className={`fixed z-50 ${getPositionClasses()}`}>
+      {/* Notification Container */}
+      <div className="space-y-2 max-w-sm">
+        {visibleNotifications.map((notification) => (
           <div
             key={notification.id}
-            className={`
-              max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto border-l-4
-              ${typeStyles[notification.type].border}
-              ${enableAnimations ? 'animate-in slide-in-from-right-full duration-300' : ''}
-            `}
-            style={{
-              animationDelay: enableAnimations ? `${index * 100}ms` : undefined
-            }}
-            role={enableAccessibility ? 'alert' : undefined}
-            aria-labelledby={`notification-title-${notification.id}`}
-            aria-describedby={`notification-message-${notification.id}`}
+            className={`p-4 rounded-lg border shadow-lg backdrop-blur-sm transition-all duration-300 ${getNotificationBgColor(notification.type, notification.priority)}`}
           >
-            <div className="p-4">
-              <div className="flex items-start">
-                <div className={`flex-shrink-0 ${typeStyles[notification.type].iconBg} rounded-full p-1`}>
-                  <div className={typeStyles[notification.type].icon}>
-                    {typeIcons[notification.type]}
+            <div className="flex items-start gap-3">
+              <div className="flex-shrink-0 mt-0.5">
+                {getNotificationIcon(notification.type)}
+              </div>
+
+              <div className="flex-1 min-w-0">
+                <div className="flex items-start justify-between gap-2">
+                  <div>
+                    <h4 className="text-sm font-semibold text-white mb-1">
+                      {notification.title}
+                    </h4>
+                    <p className="text-sm text-gray-300 mb-2">
+                      {notification.message}
+                    </p>
+
+                    {/* Metadata */}
+                    {notification.metadata &&
+                      Object.keys(notification.metadata).length > 0 && (
+                        <div className="text-xs text-gray-400 mb-2">
+                          {Object.entries(notification.metadata).map(
+                            ([key, value]) => (
+                              <div key={key} className="flex gap-1">
+                                <span className="font-medium">{key}:</span>
+                                <span>{String(value)}</span>
+                              </div>
+                            ),
+                          )}
+                        </div>
+                      )}
+
+                    {/* Actions */}
+                    {notification.actions &&
+                      notification.actions.length > 0 && (
+                        <div className="flex gap-2 mt-2">
+                          {notification.actions.map((action, index) => (
+                            <button
+                              key={index}
+                              onClick={() => {
+                                action.action();
+                                onAction?.(notification.id, action.label);
+                              }}
+                              className={`px-3 py-1 text-xs rounded transition-colors ${
+                                action.variant === "primary"
+                                  ? "bg-blue-600 hover:bg-blue-700 text-white"
+                                  : action.variant === "danger"
+                                    ? "bg-red-600 hover:bg-red-700 text-white"
+                                    : "bg-gray-600 hover:bg-gray-700 text-white"
+                              }`}
+                            >
+                              {action.label}
+                            </button>
+                          ))}
+                        </div>
+                      )}
                   </div>
-                </div>
-                <div className="ml-3 w-0 flex-1">
-                  <p
-                    id={`notification-title-${notification.id}`}
-                    className={`text-sm font-medium ${typeStyles[notification.type].title}`}
-                  >
-                    {notification.title}
-                  </p>
-                  <p
-                    id={`notification-message-${notification.id}`}
-                    className={`mt-1 text-sm ${typeStyles[notification.type].message}`}
-                  >
-                    {notification.message}
-                  </p>
-                  
-                  {notification.actions && notification.actions.length > 0 && (
-                    <div className="mt-3 flex space-x-2">
-                      {notification.actions.map((action, actionIndex) => (
-                        <button
-                          key={actionIndex}
-                          onClick={action.action}
-                          className={`
-                            text-sm font-medium rounded px-3 py-1 transition-colors
-                            ${action.variant === 'primary' 
-                              ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                            }
-                          `}
-                        >
-                          {action.label}
-                        </button>
-                      ))}
-                    </div>
-                  )}
-                </div>
-                <div className="ml-4 flex-shrink-0 flex">
+
                   <button
-                    onClick={() => removeNotification(notification.id)}
-                    className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                    aria-label={enableAccessibility ? 'Close notification' : undefined}
+                    onClick={() => handleRemove(notification.id)}
+                    className="flex-shrink-0 text-gray-400 hover:text-white transition-colors"
+                    aria-label="Close notification"
                   >
-                    <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
+                    <X className="w-4 h-4" />
                   </button>
+                </div>
+
+                {/* Timestamp and Category */}
+                <div className="flex items-center justify-between mt-2 text-xs text-gray-500">
+                  <span>
+                    {new Date(notification.timestamp).toLocaleTimeString()}
+                  </span>
+                  {notification.category && (
+                    <span className="px-2 py-0.5 bg-gray-700 rounded-full">
+                      {notification.category}
+                    </span>
+                  )}
                 </div>
               </div>
             </div>
           </div>
         ))}
       </div>
+
+      {/* Control Panel */}
+      {(showSoundToggle || showHistoryToggle) && (
+        <div className="mt-4 flex gap-2">
+          {showSoundToggle && (
+            <button
+              onClick={() => setIsSoundEnabled(!isSoundEnabled)}
+              className={`p-2 rounded-lg transition-colors ${
+                isSoundEnabled
+                  ? "bg-blue-600 hover:bg-blue-700 text-white"
+                  : "bg-gray-700 hover:bg-gray-600 text-gray-300"
+              }`}
+              title={isSoundEnabled ? "Sound enabled" : "Sound disabled"}
+            >
+              <Bell className="w-4 h-4" />
+            </button>
+          )}
+
+          {showHistoryToggle && (
+            <button
+              onClick={() => setShowHistory(!showHistory)}
+              className="p-2 bg-gray-700 hover:bg-gray-600 text-gray-300 rounded-lg transition-colors"
+              title="Notification history"
+            >
+              <Settings className="w-4 h-4" />
+            </button>
+          )}
+        </div>
+      )}
+
+      {/* History Panel */}
+      {showHistory && (
+        <div className="mt-4 bg-gray-900 border border-gray-700 rounded-lg shadow-xl p-4 max-h-64 overflow-y-auto">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-sm font-semibold text-white">
+              Notification History
+            </h3>
+            <button
+              onClick={() => setShowHistory(false)}
+              className="text-gray-400 hover:text-white text-sm"
+            >
+              ✕
+            </button>
+          </div>
+
+          {notificationHistory.length === 0 ? (
+            <p className="text-sm text-gray-400 text-center py-4">
+              No notification history
+            </p>
+          ) : (
+            <div className="space-y-2">
+              {notificationHistory.slice(0, 10).map((notification) => (
+                <div
+                  key={notification.id}
+                  className="flex items-center gap-2 p-2 rounded bg-gray-800 text-xs"
+                >
+                  {getNotificationIcon(notification.type)}
+                  <div className="flex-1 min-w-0">
+                    <p className="text-white truncate">{notification.title}</p>
+                    <p className="text-gray-400">
+                      {new Date(notification.timestamp).toLocaleString()}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 };

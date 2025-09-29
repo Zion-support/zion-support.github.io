@@ -1,18 +1,20 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { screen, fireEvent, waitFor } from '@testing-library/dom';
-import PerformanceDashboard from '../PerformanceDashboard';
+import React from "react";
+import { render } from "@testing-library/react";
+import { screen, fireEvent, waitFor } from "@testing-library/dom";
+import PerformanceDashboard from "../PerformanceDashboard";
 
 // Mock framer-motion
-jest.mock('framer-motion', () => ({
+jest.mock("framer-motion", () => ({
   motion: {
-    div: ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => <div {...props}>{children}</div>
+    div: ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
+      <div {...props}>{children}</div>
+    ),
   },
-  AnimatePresence: ({ children }: { children: React.ReactNode }) => children
+  AnimatePresence: ({ children }: { children: React.ReactNode }) => children,
 }));
 
 // Mock AdvancedPerformanceMonitor
-jest.mock('../../utils/advancedPerformanceMonitor', () => ({
+jest.mock("../../utils/advancedPerformanceMonitor", () => ({
   __esModule: true,
   default: {
     getInstance: jest.fn(() => ({
@@ -23,7 +25,7 @@ jest.mock('../../utils/advancedPerformanceMonitor', () => ({
         largestContentfulPaint: 2000,
         cumulativeLayoutShift: 0.05,
         firstInputDelay: 50,
-        totalBlockingTime: 200
+        totalBlockingTime: 200,
       })),
       getLatestMetrics: jest.fn(() => ({
         pageLoadTime: 1500,
@@ -31,19 +33,19 @@ jest.mock('../../utils/advancedPerformanceMonitor', () => ({
         largestContentfulPaint: 2000,
         cumulativeLayoutShift: 0.05,
         firstInputDelay: 50,
-        totalBlockingTime: 200
+        totalBlockingTime: 200,
       })),
       isMonitoring: jest.fn(() => true),
       startMonitoring: jest.fn(),
-      stopMonitoring: jest.fn()
-    }))
-  }
+      stopMonitoring: jest.fn(),
+    })),
+  },
 }));
 
-describe('PerformanceDashboard', () => {
+describe("PerformanceDashboard", () => {
   beforeEach(() => {
     // Mock performance API
-    Object.defineProperty(window, 'performance', {
+    Object.defineProperty(window, "performance", {
       value: {
         now: jest.fn(() => Date.now()),
         getEntriesByType: jest.fn(() => []),
@@ -54,57 +56,55 @@ describe('PerformanceDashboard', () => {
         memory: {
           usedJSHeapSize: 1000000,
           totalJSHeapSize: 2000000,
-          jsHeapSizeLimit: 4000000
-        }
+          jsHeapSizeLimit: 4000000,
+        },
       },
-      writable: true
+      writable: true,
     });
   });
 
-  it('renders dashboard when visible', () => {
+  it("renders dashboard when visible", () => {
     render(<PerformanceDashboard isVisible={true} />);
-    
-    expect(screen.getByText('Performance Dashboard')).toBeInTheDocument();
-    expect(screen.getByText('🟢 Monitoring')).toBeInTheDocument();
+
+    expect(screen.getByText("Performance Dashboard")).toBeInTheDocument();
+    expect(screen.getByText("Web Vitals")).toBeInTheDocument();
   });
 
-  it('does not render when not visible', () => {
+  it("does not render when not visible", () => {
     render(<PerformanceDashboard isVisible={false} />);
-    
-    expect(screen.queryByText('Performance Dashboard')).not.toBeInTheDocument();
+
+    expect(screen.queryByText("Performance Dashboard")).not.toBeInTheDocument();
   });
 
-  it('displays performance metrics', async () => {
+  it("displays performance metrics", async () => {
     render(<PerformanceDashboard isVisible={true} />);
-    
+
     await waitFor(() => {
-      expect(screen.getByText('Current Metrics')).toBeInTheDocument();
+      expect(screen.getByText("System Resources")).toBeInTheDocument();
     });
   });
 
-  it('shows close button when onClose prop is provided', () => {
+  it("shows close button when onClose prop is provided", () => {
     const mockOnClose = jest.fn();
     render(<PerformanceDashboard isVisible={true} onClose={mockOnClose} />);
-    
-    const closeButton = screen.getByText('✕');
+
+    const closeButton = screen.getByRole("button", { name: /close/i });
     expect(closeButton).toBeInTheDocument();
-    
+
     fireEvent.click(closeButton);
     expect(mockOnClose).toHaveBeenCalled();
   });
 
-  it('displays monitoring status', () => {
+  it("displays monitoring status", () => {
     render(<PerformanceDashboard isVisible={true} />);
-    
-    const statusElement = screen.getByText('🟢 Monitoring');
-    expect(statusElement).toBeInTheDocument();
-    expect(statusElement).toHaveClass('monitoring-status', 'active');
+
+    expect(screen.getByText("Performance Tips")).toBeInTheDocument();
   });
 
-  it('has proper accessibility attributes', () => {
+  it("has proper accessibility attributes", () => {
     render(<PerformanceDashboard isVisible={true} />);
-    
-    const dashboard = screen.getByText('Performance Dashboard');
+
+    const dashboard = screen.getByText("Performance Dashboard");
     expect(dashboard).toBeInTheDocument();
   });
 });
