@@ -15,7 +15,6 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
@@ -597,11 +596,7 @@ const Home = () => {
             <div className="mb-10 flex items-end justify-between">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Latest Articles</h2>
-<<<<<<< HEAD
-                <p className="text-gray-600">Insights from our team to help you move faster.</p>
-=======
-                <p className="text-gray-600">Fresh: AI Governance, Golden Paths, Cloud FinOps QA gates, and NEW AI automation guides.</p>
->>>>>>> cursor/create-and-deploy-new-content-0173
+                <p className="text-gray-600">Fresh insights on AI governance, platform golden paths, Cloud FinOps, and new AI automation guides.</p>
               </div>
               <Link to="/blog" className="text-indigo-700 font-semibold hover:text-indigo-800">View all →</Link>
             </div>
