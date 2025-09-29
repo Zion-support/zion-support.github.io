@@ -14,32 +14,62 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "ai-customer-journey-agents-2025",
-    title: "Customer Journey Agents: Orchestrating Multi‑Step Outcomes with Confidence",
-    description: "Design agentic workflows that plan, verify, and complete tasks across channels with auditability.",
+    slug: "ai-platform-roi-2025",
+    title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
+    description: "A pragmatic framework to tie platform capabilities to product outcomes with clear owner reviews.",
     content: `
-# Customer Journey Agents: Orchestrating Multi‑Step Outcomes with Confidence
+# AI Platform ROI Scorecards: Proving Value Quarter by Quarter
 
-Multi‑step agents can boost conversions and reduce churn—but only when they're grounded in data and instrumented for quality.
+Platform investments stall without measurable value signals. This guide introduces a lightweight ROI scorecard that connects platform capabilities to adoption, golden paths, reliability SLOs, and business outcomes.
 
-## Patterns That Work
-- Plan → Act → Verify loops with explicit success criteria
-- Tool contracts with idempotent operations and compensations
-- Human‑in‑the‑loop for high‑risk branches
+## Scorecard Dimensions
+- Adoption and paved-road usage
+- Time-to-first-success on golden paths
+- Reliability SLO adherence per product surface
+- Enablement signals: docs, templates, SDK ergonomics
 
-## Governance & Evals
-- Policy tests for PII, tone, compliance
-- Offline scenarios + online canaries tied to business KPIs
+## Operating Rhythm
+- Monthly review with product + platform owners
+- Red/amber flags with remediation owners and dates
+- Clear cut/scale decisions based on evidence deltas
 
-Ship agents that actually move metrics—not just demos.
+Implement this to keep platform work focused and value-centric.
     `,
     author: "Zion Tech Group Team",
-    date: "2025-09-30",
+    date: "2025-10-03",
     category: "AI Strategy",
-    tags: ["Agents", "Orchestration", "CX", "Evals"],
+    tags: ["Platform", "ROI", "Scorecards", "Product"],
     featured: true,
     readTime: "7 min read",
-    image: "/images/customer-journey-agents.jpg"
+    image: "/images/ai-platform-roi.jpg"
+  },
+  {
+    slug: "secure-ml-supply-chain-2025",
+    title: "Secure ML Supply Chain: From SBOMs to Model Lineage",
+    description: "Practical controls for datasets, models, and inference routes to prevent tampering and drift.",
+    content: `
+# Secure ML Supply Chain: From SBOMs to Model Lineage
+
+Modern ML requires end-to-end provenance and controls: dataset SBOMs, data-use policies, model lineage, signed artifacts, and runtime egress controls.
+
+## Controls That Matter
+- Dataset SBOMs and data contracts
+- Signed training artifacts and configs
+- Model lineage with approval trails
+- Inference-time egress allowlists and DPI
+
+## Rollout
+- Start read-only with visibility dashboards
+- Add PR gates on risky changes
+- Enforce gradually with exceptions flow
+    `,
+    author: "Zion Tech Group Team",
+    date: "2025-10-03",
+    category: "Security",
+    tags: ["ML", "Supply Chain", "Security", "SBOM"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/secure-ml-supply-chain.jpg"
   },
   {
     slug: "edge-cdn-ml-personalization-2025",
