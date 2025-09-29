@@ -12,6 +12,7 @@ export default function ContentHub() {
     {
       title: 'AI Implementation',
       articles: [
+        { title: 'Agent Benchmarking in Production 2026', slug: '/blog/agent-benchmarking-in-production-2026', readTime: '16 min', featured: true },
         { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: true },
         { title: 'AI Multimodal Enterprise Solutions 2026', slug: '/blog/ai-multimodal-enterprise-2026', readTime: '15 min', featured: true },
         { title: 'AI Implementation Playbook 2026', slug: '/blog/ai-implementation-playbook-2026', readTime: '12 min', featured: true },
@@ -23,6 +24,7 @@ export default function ContentHub() {
     {
       title: 'AI Security & Compliance',
       articles: [
+        { title: 'AI Incident Response Automation 2026', slug: '/blog/ai-incident-response-automation-2026', readTime: '18 min', featured: true },
         { title: 'AI Cybersecurity Automation 2026', slug: '/blog/ai-cybersecurity-automation-2026', readTime: '18 min', featured: true },
         { title: 'AI Security Compliance 2025', slug: '/blog/ai-security-compliance-2025', readTime: '12 min', featured: false },
         { title: 'Enterprise AI Security 2025', slug: '/blog/enterprise-ai-security-2025', readTime: '14 min', featured: false },
