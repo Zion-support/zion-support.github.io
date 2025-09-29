@@ -42,7 +42,10 @@ import {
   LatestContent2026Banner,
   AIEthicalFrameworkBanner,
   AIEthicsSuccessBanner,
-  NewContentShowcase2026Banner
+  NewContentShowcase2026Banner,
+  AIEnterpriseTransformationBanner,
+  AIEnterpriseSuccessBanner,
+  LatestEnterpriseContentBanner
 } from '../components/PromotionalBanner';
 import { 
   Latest2026ContentBanner,
@@ -96,9 +99,9 @@ export default function HomePage() {
         </div>
       </div>
       {/* Promotional Banners */}
-<<<<<<< HEAD
-      <Latest2026ContentBanner />
-=======
+      <AIEnterpriseTransformationBanner />
+      <AIEnterpriseSuccessBanner />
+      <LatestEnterpriseContentBanner />
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
       <AIEthicsSuccessBanner />
@@ -106,8 +109,7 @@ export default function HomePage() {
       <AISecurityEnterprise2026Banner />
       <AIMultimodalEnterprise2026Banner />
       <AISustainabilityTransformationBanner />
-      <NewLatest2026ContentBanner />
->>>>>>> cursor/create-and-deploy-new-content-b529
+      <Latest2026ContentBanner />
       <AIAutonomousCloudOpsBanner />
       <AIFinTechTransformationBanner />
       <AIRetailAutomationBanner />
@@ -393,9 +395,6 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-<<<<<<< HEAD
-            <Link href="/blog/ai-autonomous-enterprise-2026" className="group">
-=======
             <Link href="/blog/agentic-workflow-orchestration-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -413,8 +412,7 @@ export default function HomePage() {
                 <div className="flex items-center text-blue-600 font-semibold">Read Article →</div>
               </div>
             </Link>
-            <Link href="/blog/ai-autonomous-operations-2026" className="group">
->>>>>>> cursor/create-and-deploy-new-content-b529
+            <Link href="/blog/ai-autonomous-enterprise-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -445,28 +443,7 @@ export default function HomePage() {
                   AI Business Intelligence 2026: Next-Generation Decision Making
                 </h3>
                 <p className="text-gray-600 mb-4">
-<<<<<<< HEAD
                   Transform your business with AI-powered BI that delivers real-time insights, predictive analytics, and 400% faster growth.
-=======
-                  Master autonomous AI operations with zero-touch infrastructure management, predictive maintenance, and self-healing systems.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">Read Complete Guide →</div>
-              </div>
-            </Link>
-            <Link href="/blog/ai-finops-advanced-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Advanced 2026
-                  </span>
-                  <span className="text-sm text-gray-500">20 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI FinOps Advanced 2026: Complete Financial Operations Automation Guide
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Master advanced AI FinOps with predictive cost optimization, automated financial reporting, and intelligent resource allocation.
->>>>>>> cursor/create-and-deploy-new-content-b529
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Complete Guide →
@@ -601,49 +578,26 @@ export default function HomePage() {
                   Harness quantum computing for AI breakthroughs with 1000x faster optimization and revolutionary capabilities.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
-<<<<<<< HEAD
                   Read Article →
-=======
-                  Read Guide →
                 </div>
               </div>
             </Link>
-            <Link href="/case-studies/ai-retail-automation-2026" className="group">
+            <Link href="/blog/ai-enterprise-transformation-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    NEW Case Study
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    NEW 2026
                   </span>
-                  <span className="text-sm text-gray-500">Fortune 500</span>
+                  <span className="text-sm text-gray-500">30 min read</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Retail Automation 2026: $8M ROI Case Study
+                  AI Enterprise Transformation 2026: Complete Implementation Guide
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  See how a Fortune 500 retailer achieved 98% automation, 300% productivity gains, and $8M annual ROI.
+                  Master enterprise AI transformation with proven strategies, ROI frameworks, and real-world case studies. Achieve 95% automation and $10M+ savings.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
-                  View Case Study →
->>>>>>> cursor/create-and-deploy-new-content-b529
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/ai-enterprise-automation-2026" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New 2026
-                  </span>
-                  <span className="text-sm text-gray-500">18 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Enterprise Automation 2026: Complete Business Process Transformation
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Transform your enterprise with AI automation. 95% process efficiency, $5M+ savings, and zero-touch operations.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
+                  Read Complete Guide →
                 </div>
               </div>
             </Link>
@@ -651,7 +605,7 @@ export default function HomePage() {
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    New Case Study
+                    NEW Case Study
                   </span>
                   <span className="text-sm text-gray-500">Fortune 500</span>
                 </div>
