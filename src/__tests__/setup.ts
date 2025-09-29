@@ -41,9 +41,9 @@ const mockLocationInstance = {
 
 // Mock window.location more safely
 try {
-  delete (window as any).location;
-  (window as any).location = mockLocationInstance;
-} catch (e) {
+  delete (window as unknown as { location?: unknown }).location;
+  (window as unknown as { location: Location }).location = mockLocationInstance;
+} catch {
   // If deletion fails, try to override properties
   Object.assign(window.location, mockLocationInstance);
 }
