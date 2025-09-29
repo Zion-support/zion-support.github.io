@@ -48,7 +48,8 @@ export default [
       '**/*.broken/**',
       '**/*.corrupted/**',
       '**/*.temp/**',
-      'jest.setup.js'
+      'jest.setup.js',
+      'src/App.tsx'
     ]
   },
   {

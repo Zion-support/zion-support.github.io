@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AppRouter } from './router';
 
 // import { resourcePreloader } from './utils/resourcePreloader';
@@ -8,9 +9,14 @@ import { AppRouter } from './router';
 // import { structuredDataManager } from './seo/structuredDataManager';
 // import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
 // import { screenReaderSupport } from './accessibility/screenReaderSupport';
+import AdvancedAnalytics from './components/AdvancedAnalytics';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import LoadingSpinner from './components/LoadingSpinner';
+import NotificationSystem from './components/NotificationSystem';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
 import './index.css';
-import { performanceMonitor } from './utils/performanceMonitor';
-import { securityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 
 export default function App(): React.JSX.Element {
@@ -35,7 +41,7 @@ export default function App(): React.JSX.Element {
   const [showPerformanceWidget, setShowPerformanceWidget] = useState(false);
   const [showSystemHealth, setShowSystemHealth] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [enhancedNotifications, setEnhancedNotifications] = useState<EnhancedNotification[]>([]);
+  const [enhancedNotifications, setEnhancedNotifications] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false);
@@ -459,7 +465,7 @@ export default function App(): React.JSX.Element {
   }, [handleScroll, handleClick, trackEngagement]);
 
   if (isLoading) {
-    return <ModernLoadingSpinner progress={loadingProgress} />;
+    return <LoadingSpinner fullScreen text={`Loading ${Math.round(loadingProgress)}%`} />;
   }
 
   return (
@@ -493,7 +499,8 @@ export default function App(): React.JSX.Element {
                   ✕
                 </button>
               </div>
-              <EnhancedSystemDashboard />
+              {/* TODO: replace with real component */}
+              <div>System Dashboard content</div>
             </div>
           </div>
         )}
@@ -559,10 +566,17 @@ export default function App(): React.JSX.Element {
           </div>
         )}
         {/* AI Performance Dashboard - Toggle with Ctrl+Shift+A */}
-        <AIPerformanceDashboard
-          isVisible={showAIDashboard}
-          onClose={() => setShowAIDashboard(false)}
-        />
+        {showAIDashboard && (
+          <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
+            <div className="bg-white rounded-lg p-6 max-w-3xl w-full mx-4">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-bold">AI Performance Dashboard</h2>
+                <button onClick={() => setShowAIDashboard(false)} className="text-2xl">✕</button>
+              </div>
+              <div>AI metrics coming soon…</div>
+            </div>
+          </div>
+        )}
 
         {/* Real-time Metrics Display */}
         {showRealTimeMetrics && (
@@ -598,16 +612,30 @@ export default function App(): React.JSX.Element {
         )}
 
         {/* Real-Time Performance Monitor */}
-        <RealTimePerformanceMonitor
-          isVisible={showRealTimeMonitor}
-          onClose={() => setShowRealTimeMonitor(false)}
-        />
+        {showRealTimeMonitor && (
+          <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
+            <div className="bg-white rounded-lg p-6 max-w-3xl w-full mx-4">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-bold">Real-Time Performance</h2>
+                <button onClick={() => setShowRealTimeMonitor(false)} className="text-2xl">✕</button>
+              </div>
+              <div>Real-time performance monitor coming soon…</div>
+            </div>
+          </div>
+        )}
 
         {/* Website Enhancements */}
-        <WebsiteEnhancements 
-          isVisible={showWebsiteEnhancements} 
-          onClose={() => setShowWebsiteEnhancements(false)} 
-        />
+        {showWebsiteEnhancements && (
+          <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
+            <div className="bg-white rounded-lg p-6 max-w-3xl w-full mx-4">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-bold">Website Enhancements</h2>
+                <button onClick={() => setShowWebsiteEnhancements(false)} className="text-2xl">✕</button>
+              </div>
+              <div>Enhancements coming soon…</div>
+            </div>
+          </div>
+        )}
 
         {/* Comprehensive Performance Monitor */}
         {/* ComprehensivePerformanceMonitor - Temporarily disabled */}
@@ -623,13 +651,20 @@ export default function App(): React.JSX.Element {
         /> */}
 
         {/* Performance Tracker */}
-        <PerformanceTracker />
+        {/* Placeholder for PerformanceTracker */}
 
         {/* System Health Dashboard */}
-        <SystemHealthDashboard
-          isVisible={showSystemHealth}
-          onClose={() => setShowSystemHealth(false)}
-        />
+        {showSystemHealth && (
+          <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
+            <div className="bg-white rounded-lg p-6 max-w-3xl w-full mx-4">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-bold">System Health</h2>
+                <button onClick={() => setShowSystemHealth(false)} className="text-2xl">✕</button>
+              </div>
+              <div>System health details coming soon…</div>
+            </div>
+          </div>
+        )}
 
         {/* New Components */}
         <NotificationSystem
@@ -637,14 +672,14 @@ export default function App(): React.JSX.Element {
           onRemove={(id) => setNotifications(prev => prev.filter(n => n.id !== id))}
         />
         
-        <Suspense fallback={<ModernLoadingSpinner />}>
+        <Suspense fallback={<LoadingSpinner />}>
           <KeyboardShortcutsHelp
             isVisible={showKeyboardHelp}
             onClose={() => setShowKeyboardHelp(false)}
           />
         </Suspense>
 
-        <Suspense fallback={<ModernLoadingSpinner />}>
+        <Suspense fallback={<LoadingSpinner />}>
           <PerformanceWidget
             isVisible={showPerformanceWidget}
             onClose={() => setShowPerformanceWidget(false)}
@@ -653,11 +688,11 @@ export default function App(): React.JSX.Element {
 
         {showPerformanceWidget && (
           <div className="fixed bottom-4 left-4 z-30">
-            <PerformanceDashboard />
+            <div className="bg-white rounded-md p-4 shadow">Performance Dashboard</div>
           </div>
         )}
 
-        <Suspense fallback={<ModernLoadingSpinner />}>
+        <Suspense fallback={<LoadingSpinner />}>
           <CommandPalette
             isVisible={showCommandPalette}
             onClose={() => setShowCommandPalette(false)}
