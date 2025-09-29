@@ -33,32 +33,32 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
   const featuredContent = [
     {
-      title: "Policy Tests in CI",
-      description: "Lightweight checks that prevent regressions and speed delivery",
+      title: "Agentic Workflows Blueprint 2026",
+      description: "Compose multi‑tool agents with safe tools and policy tests in CI",
       icon: TrendingUp,
-      link: "/blog/policy-tests-in-ci-2025",
-      category: "Engineering"
-    },
-    {
-      title: "Secure ML Supply Chain",
-      description: "SBOMs, attestations, and policy gates that scale",
-      icon: Shield,
-      link: "/blog/secure-ml-supply-chain-attestations-2025",
-      category: "Security"
-    },
-    {
-      title: "Enterprise RAG Blueprint v2",
-      description: "Freshness, hybrid search, and evaluation at scale",
-      icon: Brain,
-      link: "/blog/enterprise-rag-blueprint-v2-2025",
+      link: "/blog/agentic-workflows-blueprint-2026",
       category: "GenAI"
     },
     {
-      title: "Risk Budgets for Edge Rollouts",
-      description: "Zero‑regret deploys with budgets and instant rollback",
+      title: "Edge LLM Caching",
+      description: "Sub‑100ms prompts via tiered KV, signed configs, freshness windows",
       icon: Zap,
-      link: "/blog/risk-budgets-edge-rollouts-2025",
+      link: "/blog/edge-llm-caching-blueprint-2025",
       category: "Architecture"
+    },
+    {
+      title: "AI Operational Scorecards 2026",
+      description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs",
+      icon: Brain,
+      link: "/blog/ai-operational-scorecards-2026",
+      category: "AI Strategy"
+    },
+    {
+      title: "Cloud FinOps Guardrails",
+      description: "Budgets, PR checks, and alerts that cut waste 25–40%",
+      icon: Cloud,
+      link: "/blog/cloud-finops-guardrails-2025",
+      category: "Cloud"
     }
   ];
 

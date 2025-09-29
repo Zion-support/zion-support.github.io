@@ -162,4 +162,32 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "11 min read"
   }
+  ,
+  {
+    slug: "agentic-workflows-blueprint-2026",
+    title: "Agentic Workflows Blueprint 2026: Tools, Traces, Policy Tests",
+    description: "Compose multi‑tool agents with safe tools, observable traces, and policy tests in CI.",
+    category: "GenAI",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-llm-caching-blueprint-2025",
+    title: "Edge LLM Caching: Latency Budgets, KV Patterns, and Cost Control",
+    description: "Sub‑100ms prompts with tiered caches, signed configs, and freshness windows.",
+    category: "Architecture",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "ai-operational-scorecards-2026",
+    title: "AI Operational Scorecards 2026: Guardrails That Drive Outcomes",
+    description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs engineers adopt.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "7 min read"
+  }
 ];
