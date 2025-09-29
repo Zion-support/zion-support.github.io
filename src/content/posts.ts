@@ -731,5 +731,75 @@ export const posts: BlogPost[] = [
     featured: true,
     readTime: "9 min read",
   },
+  {
+    slug: "generative-ai-transformation-2025",
+    title: "The Generative AI Transformation: How Businesses Are Reinventing Themselves",
+    description:
+      "Discover how leading companies are leveraging generative AI to transform their operations, create new revenue streams, and gain competitive advantages.",
+    category: "AI Innovation",
+    publishedAt: "2025-01-22",
+    featured: true,
+    readTime: "12 min read",
+  },
+  {
+    slug: "zero-trust-security-implementation",
+    title: "Zero Trust Security: A Practical Implementation Guide for Modern Enterprises",
+    description:
+      "Learn how to implement zero trust security architecture to protect your organization from evolving cyber threats and ensure comprehensive security coverage.",
+    category: "Cybersecurity",
+    publishedAt: "2025-01-22",
+    featured: true,
+    readTime: "10 min read",
+  },
+  {
+    slug: "cloud-native-architecture-patterns",
+    title: "Cloud-Native Architecture Patterns: Building for Scale and Resilience",
+    description:
+      "Explore essential cloud-native patterns and practices that enable organizations to build scalable, resilient, and maintainable applications in the cloud.",
+    category: "Cloud Architecture",
+    publishedAt: "2025-01-22",
+    featured: false,
+    readTime: "11 min read",
+  },
+  {
+    slug: "ai-powered-customer-experience",
+    title: "AI-Powered Customer Experience: Transforming Engagement in 2025",
+    description:
+      "Learn how AI is revolutionizing customer experience through personalized interactions, predictive analytics, and automated customer service solutions.",
+    category: "Customer Experience",
+    publishedAt: "2025-01-22",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "data-driven-decision-making-framework",
+    title: "The Data-Driven Decision Making Framework: From Insights to Action",
+    description:
+      "A comprehensive framework for implementing data-driven decision making across your organization, including tools, processes, and best practices.",
+    category: "Data Strategy",
+    publishedAt: "2025-01-22",
+    featured: false,
+    readTime: "9 min read",
+  },
+  {
+    slug: "automation-roadmap-enterprise",
+    title: "Building Your Enterprise Automation Roadmap: A Strategic Approach",
+    description:
+      "Strategic guidance for creating and executing an enterprise automation roadmap that delivers measurable ROI and transforms business operations.",
+    category: "Business Automation",
+    publishedAt: "2025-01-22",
+    featured: true,
+    readTime: "13 min read",
+  },
+  {
+    slug: "next-gen-cybersecurity-trends",
+    title: "Next-Generation Cybersecurity: Trends and Technologies Shaping 2025",
+    description:
+      "Explore the latest cybersecurity trends, emerging technologies, and threat landscapes that security professionals need to understand in 2025.",
+    category: "Cybersecurity",
+    publishedAt: "2025-01-22",
+    featured: false,
+    readTime: "7 min read",
+  },
 ];
 
