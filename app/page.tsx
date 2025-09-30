@@ -18,7 +18,6 @@ import {
   AutonomousAgentsBanner,
   AIGovernanceBanner,
   FinTechSuccessBanner,
-  NewContentShowcaseBanner
   NewContentShowcaseBanner,
   AIRoadmapsBanner,
   AIFinOpsBanner,
@@ -107,7 +106,10 @@ import Revolutionary2026ContentBanner from '../components/Revolutionary2026Conte
 import UltimateContent2026Showcase from '../components/UltimateContent2026Showcase';
 import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
 import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
-import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
+// import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
+import QuantumAI2027BreakthroughBanner from '../components/QuantumAI2027BreakthroughBanner';
+import AutonomousBusinessIntelligence2026Banner from '../components/AutonomousBusinessIntelligence2026Banner';
+import NewContent2027ShowcaseBanner from '../components/NewContent2027ShowcaseBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -150,8 +152,17 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
+      <NewContent2027ShowcaseBanner />
+      
+      {/* 🚀 QUANTUM AI 2027 BREAKTHROUGH - 1000x PERFORMANCE GAINS! */}
+      <QuantumAI2027BreakthroughBanner />
+      
+      {/* 🧠 AUTONOMOUS BUSINESS INTELLIGENCE 2026 - 300% ROI IMPROVEMENTS! */}
+      <AutonomousBusinessIntelligence2026Banner />
+      
       {/* 🚀 MEGA CONTENT UPDATE - September 30, 2025 - 116+ NEW RESOURCES! */}
-      <NewContentShowcase2026 />
+      {/* <NewContentShowcase2026 /> */}
       
       {/* 🚀 NEWEST CONTENT - September 30, 2025 - 3 Breakthrough AI Technologies! */}
       <September30FreshContentBanner />
@@ -556,13 +567,13 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              to="/services"
+              href="/services"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore Our Services
             </Link>
             <a
-              to="tel:+13024640950"
+              href="tel:+13024640950"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
               Call +1 302 464 0950
@@ -573,23 +584,17 @@ export default function HomePage() {
               <div className="text-3xl font-bold text-blue-600">500+</div>
               <div className="text-gray-600">Projects Delivered</div>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-3xl font-bold text-blue-600">500+</div>
-                <div className="text-gray-600">Projects Delivered</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-blue-600">99.9%</div>
-                <div className="text-gray-600">Uptime Guarantee</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-blue-600">24/7</div>
-                <div className="text-gray-600">Expert Support</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-blue-600">$2M+</div>
-                <div className="text-gray-600">Cost Savings</div>
-              </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">99.9%</div>
+              <div className="text-gray-600">Uptime Guarantee</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">24/7</div>
+              <div className="text-gray-600">Expert Support</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">$2M+</div>
+              <div className="text-gray-600">Cost Savings</div>
             </div>
           </div>
         </section>
