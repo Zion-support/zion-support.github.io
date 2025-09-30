@@ -56,6 +56,12 @@ import InteractiveAICalculator2025 from '../components/InteractiveAICalculator20
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
 import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculator';
+import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
+import AI2026ContentShowcaseBanner from '../components/AI2026ContentShowcaseBanner';
+import AIEnterpriseAutomationRevolutionBanner from '../components/AIEnterpriseAutomationRevolutionBanner';
+import AIQuantumComputingBreakthroughBanner from '../components/AIQuantumComputingBreakthroughBanner';
+import AIMegaTransformationSuccessBanner from '../components/AIMegaTransformationSuccessBanner';
+import AI2026InnovationShowcaseBanner from '../components/AI2026InnovationShowcaseBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -137,7 +143,6 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
-<<<<<<< HEAD
       {/* Revolutionary AI 2025 Banner */}
       <RevolutionaryAI2025Banner />
       
@@ -146,7 +151,7 @@ export default function HomePage() {
       
       {/* Revolutionary Content 2026 Banner */}
       <RevolutionaryContent2026Banner />
-=======
+      
       {/* Latest 2026 Mega Content Banners */}
       <Revolutionary2026ContentBanner />
       <AI2026ContentShowcaseBanner />
@@ -154,7 +159,6 @@ export default function HomePage() {
       <AIQuantumComputingBreakthroughBanner />
       <AIMegaTransformationSuccessBanner />
       <AI2026InnovationShowcaseBanner />
->>>>>>> feature/new-content-and-advertising-2026
       
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
@@ -325,11 +329,9 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Interactive AI Calculator 2025 */}
       <InteractiveAICalculator2025 />
 
-=======
       {/* Interactive AI ROI Calculator */}
       <section id="roi-calculator" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -361,7 +363,6 @@ export default function HomePage() {
           <InteractiveAI2026Calculator />
         </div>
       </section>
->>>>>>> feature/new-content-and-advertising-2026
       {/* Interactive Promotional Section */}
       <InteractivePromotionalSection />
 
