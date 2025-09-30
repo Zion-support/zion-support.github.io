@@ -1,117 +1,110 @@
 import React, { useEffect, useState } from 'react';
-import { useCallback } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  bundleSize: number;
-  networkRequests: number;
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
 }
 
-interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  showDashboard?: boolean;
-}
-
-export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
-  onMetricsUpdate, 
-  showDashboard = false 
-}) => {
+const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    bundleSize: 0,
-    networkRequests: 0
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
   });
 
-  const measurePerformance = useCallback(() => {
-    const startTime = performance.now();
-    
-    // Measure load time
-    const loadTime = performance.timing?.loadEventEnd 
-      ? performance.timing.loadEventEnd - performance.timing.navigationStart 
-      : performance.now();
-
-    // Measure memory usage
-    const memoryUsage = (performance as { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize || 0;
-
-    // Count network requests
-    const networkRequests = performance.getEntriesByType('resource').length;
-
-    // Estimate bundle size (this would be more accurate with actual bundle analysis)
-    const resourceEntries = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
-    const bundleSize = resourceEntries
-      .filter((entry) => entry.name.includes('.js'))
-      .reduce((total, entry) => total + (entry.transferSize || 0), 0);
-
-    const newMetrics: PerformanceMetrics = {
-      loadTime: Math.round(loadTime),
-      renderTime: Math.round(performance.now() - startTime),
-      memoryUsage: Math.round(memoryUsage / 1024 / 1024), // Convert to MB
-      bundleSize: Math.round(bundleSize / 1024), // Convert to KB
-      networkRequests
-    };
-
-    setMetrics(newMetrics);
-    onMetricsUpdate?.(newMetrics);
-  }, [onMetricsUpdate]);
-
   useEffect(() => {
-    // Initial measurement
-    const timer = setTimeout(measurePerformance, 1000);
+    // Only run in production and browser environment
+    if (typeof window === 'undefined' || process.env.NODE_ENV !== 'production') {
+      return;
+    }
 
-    // Monitor performance periodically
-    const interval = setInterval(measurePerformance, 5000);
+    // Measure Core Web Vitals
+    const measureWebVitals = async () => {
+      try {
+        // First Contentful Paint (FCP)
+        const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
+        if (fcpEntry) {
+          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+        }
 
-    return () => {
-      clearTimeout(timer);
-      clearInterval(interval);
+        // Largest Contentful Paint (LCP)
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+        // First Input Delay (FID)
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+          });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+
+        // Cumulative Layout Shift (CLS)
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+              setMetrics(prev => ({ ...prev, cls: clsValue }));
+            }
+          });
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+        // Time to First Byte (TTFB)
+        const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigationEntry) {
+          setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+        }
+
+        // Cleanup observers
+        return () => {
+          lcpObserver.disconnect();
+          fidObserver.disconnect();
+          clsObserver.disconnect();
+        };
+      } catch (error) {
+        console.warn('Performance monitoring failed:', error);
+      }
     };
-  }, [measurePerformance]);
 
-  if (!showDashboard) {
-    return null;
-  }
+    // Start measuring after a short delay to ensure page is loaded
+    const timer = setTimeout(measureWebVitals, 1000);
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm text-white p-4 rounded-lg shadow-lg z-50 font-mono text-xs">
-      <h3 className="text-sm font-bold mb-2 text-green-400">Performance Monitor</h3>
-      <div className="space-y-1">
-        <div className="flex justify-between">
-          <span>Load Time:</span>
-          <span className={metrics.loadTime > 3000 ? 'text-red-400' : 'text-green-400'}>
-            {metrics.loadTime}ms
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>Render Time:</span>
-          <span className={metrics.renderTime > 100 ? 'text-red-400' : 'text-green-400'}>
-            {metrics.renderTime}ms
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>Memory:</span>
-          <span className={metrics.memoryUsage > 50 ? 'text-red-400' : 'text-green-400'}>
-            {metrics.memoryUsage}MB
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>Bundle Size:</span>
-          <span className={metrics.bundleSize > 1000 ? 'text-red-400' : 'text-green-400'}>
-            {metrics.bundleSize}KB
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>Network:</span>
-          <span className={metrics.networkRequests > 50 ? 'text-red-400' : 'text-green-400'}>
-            {metrics.networkRequests}
-          </span>
-        </div>
-      </div>
-    </div>
-  );
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Send metrics to analytics service (optional)
+  useEffect(() => {
+    if (metrics.fcp && metrics.lcp && metrics.fid && metrics.cls && metrics.ttfb) {
+      // Send to your analytics service
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'Core Web Vitals',
+          fcp: Math.round(metrics.fcp),
+          lcp: Math.round(metrics.lcp),
+          fid: Math.round(metrics.fid * 1000), // Convert to milliseconds
+          cls: Math.round(metrics.cls * 1000), // Convert to milliseconds
+          ttfb: Math.round(metrics.ttfb),
+        });
+      }
+    }
+  }, [metrics]);
+
+  // This component doesn't render anything visible
+  return null;
 };
 
 export default PerformanceMonitor;

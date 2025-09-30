@@ -1,100 +1,242 @@
-import js from '@eslint/js';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
 
 export default [
-  js.configs.recommended,
+  // Global ignores
   {
-    files: ["**/*.{js,jsx,ts,tsx}"],
+    ignores: [
+      'dist/**',
+      'node_modules/**',
+      '**/*.config.js',
+      '**/*.config.ts',
+      'public/**',
+      'backup/**',
+      'backup-pages/**',
+      'backup-merge-conflicts/**',
+      'src.corrupted/**',
+      'backup-problematic-files/**',
+      'src.disabled/**',
+      'src.pages.disabled/**',
+      'automation/**',
+      'temp_broken_files/**',
+      'cypress/**',
+      '**/backup-problematic-files/**',
+      '**/src.disabled/**',
+      '**/src.corrupted/**',
+      '**/src.pages.disabled/**',
+      '**/temp_broken_files/**',
+      '**/automation/**',
+      '**/backup-pages/**',
+      '**/backup-merge-conflicts/**',
+      '**/cypress_backup/**',
+      '**/components.disabled/**',
+      '**/components.disabled_full/**',
+      '**/contracts.disabled/**',
+      '**/data.disabled/**',
+      '**/automation_backup/**',
+      '**/broken_files_backup/**',
+      '**/vite.config-backup.*',
+      '**/test-simple.*',
+      
+      '**/*.disabled.*',
+      '**/*.backup.*',
+      '**/*.broken.*',
+      '**/*.corrupted.*',
+      '**/*.temp.*',
+      '**/*.disabled/**',
+      '**/*.backup/**',
+      '**/*.broken/**',
+      '**/*.corrupted/**',
+      '**/*.temp/**',
+      'cypress/**',
+      'tests/**',
+      'coverage/**',
+      'scripts/**',
+      'pages/**',
+      'store/**',
+      'jest.setup.js',
+      '**/vite.config-backup.*',
+      '**/test-simple.*',
+      '*.config.js',
+      '*.config.ts'
+    ]
+  },
+
+  // Base JavaScript configuration
+  {
+    files: ["**/*.{js,cjs,mjs}"],
     languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
-        }
-      },
-      globals: {
-        window: "readonly",
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        fetch: 'readonly',
-        setTimeout: 'readonly',
-        navigator: 'readonly',
-        PerformanceObserver: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        JSX: 'readonly'
-      }
+      globals: { ...globals.node },
     },
-    plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks
+    ...js.configs.recommended,
+  },
+
+  // 3. TypeScript Configurations (non type-aware to avoid project resolution issues in CI)
+  // Main application TS/TSX files (src, pages, but not tests, stories, cypress, supabase yet)
+  ...tseslint.config({
+    files: ["src/**/*.{ts,tsx}", "pages/**/*.{ts,tsx}"],
+    // Exclude story and test files from this general src/pages config
+    ignores: ["src/**/*.stories.tsx", "src/**/*.stories.ts", "src/**/*.test.tsx", "src/**/*.test.ts"],
+    extends: [...tseslint.configs.recommended],
+    languageOptions: {
+      parserOptions: {},
+      globals: { ...browserGlobals },
     },
     rules: {
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/no-this-alias': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react/no-unescaped-entities': 'warn',
-      'no-undef': 'off',
-      'no-extra-semi': 'warn'
+      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off",
+      "@typescript-eslint/no-unsafe-call": "off",
+      "@typescript-eslint/no-unsafe-return": "off",
+      "@typescript-eslint/no-unsafe-argument": "off",
+      "@typescript-eslint/restrict-template-expressions": "off",
+      "@typescript-eslint/no-floating-promises": "off",
+      "@typescript-eslint/no-misused-promises": "off",
     },
-    settings: {
-      react: {
-        version: 'detect'
-      }
+  }),
+
+  // TypeScript configuration for config files
+  ...tseslint.config({
+    files: ["vite.config.ts", "tailwind.config.ts", "cypress.config.ts", "vitest.config.ts"], // Explicit list
+    extends: [...tseslint.configs.recommended],
+    languageOptions: {
+      parserOptions: {},
+      globals: { ...nodeGlobals },
+    },
+    rules: {
+      "@typescript-eslint/no-var-requires": "off",
+      "@typescript-eslint/no-require-imports": "off",
+    },
+  }),
+
+  // Test files configuration
+  ...tseslint.config({
+    files: ["__tests__/**/*.{ts,tsx}"],
+    extends: [...tseslint.configs.recommended],
+    languageOptions: {
+      parserOptions: {},
+      globals: { ...globals.jest, ...browserGlobals }, // Jest and browser globals
+    },
+    rules: {
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off",
+      "@typescript-eslint/no-unsafe-call": "off",
+      "@typescript-eslint/unbound-method": "off",
+    },
+  }),
+
+  // Test files configuration (tests/ directory)
+  ...tseslint.config({
+    files: ["tests/**/*.{ts,tsx,js,jsx}"], // Include JS/JSX as per its tsconfig
+    ignores: ["tests/e2e/**"], // e2e tests inside 'tests' might be Playwright, not Jest
+    extends: [...tseslint.configs.recommended],
+    languageOptions: {
+      parserOptions: {},
+      globals: { ...globals.jest, ...browserGlobals }, // Jest and browser globals
+    },
+    rules: {
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off",
+      "@typescript-eslint/no-unsafe-call": "off",
+      "@typescript-eslint/no-unsafe-return": "off",
+      "@typescript-eslint/no-unsafe-argument": "off",
+      "@typescript-eslint/unbound-method": "off", // for Jest matchers
+      "@typescript-eslint/no-var-requires": "off", // Allow require in JS test files
+      "@typescript-eslint/no-require-imports": "off", // Allow require in JS test files
+    },
+  }),
+
+  // Storybook files configuration
+  ...tseslint.config({
+    files: [
+      ".storybook/**/*.ts",
+      ".storybook/**/*.tsx",
+      "src/**/*.stories.tsx",
+      "src/**/*.stories.ts", // Added .ts stories
+      "stories/**/*.stories.tsx",
+      "stories/**/*.stories.ts", // Added .ts stories
+    ],
+    extends: [...tseslint.configs.recommended],
+    languageOptions: {
+      parserOptions: {},
+      globals: { ...browserGlobals },
+    },
+    rules: {
+      "import/no-anonymous-default-export": "off",
+      "react-refresh/only-export-components": "off",
+    },
+  },
+  {
+    files: ["supabase/functions/**/*.ts"],
+    extends: [...tseslint.configs.recommended],
+    languageOptions: {
+      parserOptions: {},
+      globals: { ...nodeGlobals },
+    },
+    rules: {
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off",
+      "@typescript-eslint/no-unsafe-call": "off",
+      "@typescript-eslint/no-unsafe-return": "off",
+      "@typescript-eslint/no-unsafe-argument": "off",
+      "@typescript-eslint/no-floating-promises": "warn", 
+      "@typescript-eslint/restrict-template-expressions": "warn", 
+    },
+  }),
+  
+  // Cypress TypeScript Configuration
+  ...tseslint.config({
+    files: ["cypress/**/*.ts", "cypress/**/*.tsx"], // Target Cypress TS files
+    extends: [...tseslint.configs.recommended], // Use non-type-aware to avoid parserOptions.project issues
+    languageOptions: {
+      parserOptions: {},
+      globals: { // Cypress globals are typically provided by the plugin below
+        ...browserGlobals, // Cypress runs in browser
+        ...nodeGlobals,   // For tasks/plugins if any TS is used there
+      },
+    },
+    rules: {
+      "@typescript-eslint/no-namespace": "off", // Cypress often uses namespaces in d.ts
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off",
+      "@typescript-eslint/no-unsafe-call": "off",
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/no-unused-vars": "warn",
+      // Specific to Cypress tests, might not need strict method binding
+      "@typescript-eslint/unbound-method": "off", 
+    }
+  }),
+
+  // Cypress Global Configuration (Plugin for JS and TS files)
+  // This spread should bring in necessary plugins, rules, and languageOptions (globals)
+  {
+    files: ["cypress/**/*.ts", "cypress/**/*.tsx"],
+    languageOptions: {
+      globals: { ...browserGlobals, ...nodeGlobals },
+    },
+    rules: {
+      "@typescript-eslint/no-namespace": "off",
     }
   },
   {
-    ignores: [
-      "node_modules/**",
-      'dist/**',
-      'build/**',
-      '.next/**',
-      'temp-broken-components/**',
-      '**/*.min.js',
-      '**/*.bundle.js',
-      'app_disabled/**',
-      'app-disabled/**',
-      'app.disabled/**',
-      'components.disabled/**',
-      'components_disabled/**',
-      'pages.disabled/**',
-      'recovered-branches/**',
-      'coverage/**',
-      'scripts/**',
-      'services/**',
-      'data/**',
-      'broken_components/**',
-      'zion-website/**',
-      'zion-os/**',
-      'zion-os.disabled/**',
-      'zion_academy/**',
-      'zion.app/**',
-      'public/**',
-      'next-env.d.ts',
-      'tailwind.config.js',
-      'app.conflicted.*/**',
-      'pages/**',
-      'cypress/**',
-      'server/**',
-      'src/pages.disabled/**',
-      'src.corrupted/**',
-      'components/layout/**',
-      'components/main/**',
-      'components/sections/**',
-      'components/ui/**'
-    ]
+    files: ["cypress/**/*.{js,ts,tsx}"],
+    ...cypressPlugin.configs.recommended,
+    rules: {
+      ...cypressPlugin.configs.recommended.rules,
+    }
+  },
+  {
+    files: ["cypress/support/commands.js"],
+    languageOptions: {
+      sourceType: "commonjs",
+      globals: {
+        ...(cypressPlugin.configs.recommended.languageOptions?.globals || {}),
+        ...nodeGlobals,
+      }
+    }
   }
 ];
