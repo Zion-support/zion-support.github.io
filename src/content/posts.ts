@@ -28,6 +28,15 @@ export const posts: BlogPost[] = [
     readTime: "12 min read"
   },
   {
+    slug: "ai-2029-autonomous-infra-blueprint",
+    title: "AI 2029: Autonomous Infrastructure Blueprint — Self‑Healing in Seconds",
+    description: "Policy‑tested playbooks, budgeted actions, and live canaries that auto‑contain incidents in <60s.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-2028-autonomous-enterprise-revolution",
     title: "AI 2028: Autonomous Enterprise Revolution",
     description: "Outcome‑led autonomy at scale with budgets, KPIs, canaries, and rollback.",
