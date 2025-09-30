@@ -90,6 +90,49 @@ const contentItems: ContentItem[] = [
       { value: '↘ MTTR', label: 'Faster Recovery' }
     ]
   },
+  // Newly created pages to promote (Sept 30, 2025)
+  {
+    id: 'ai-safety-scorecards-2026',
+    title: 'AI Safety Scorecards 2026: SLIs, Budgets, Rollback',
+    excerpt: 'Operational guardrails wired to KPIs with budgeted actions and instant rollback.',
+    readTime: '9 min read',
+    category: 'AI Governance',
+    href: '/blog/ai-safety-scorecards-2026',
+    featured: true,
+    publishedDate: '2025-09-30',
+    metrics: [
+      { value: '↗ KPI', label: 'Outcome Lift' },
+      { value: '↘ MTTR', label: 'Faster Recovery' }
+    ]
+  },
+  {
+    id: 'edge-governed-flags-2026',
+    title: 'Edge‑Governed Flags 2026: Safe Global Experiments',
+    excerpt: 'Scoped IDs, regional policy, and DP noise for sub‑100ms flags and experiments.',
+    readTime: '8 min read',
+    category: 'Analytics',
+    href: '/blog/edge-governed-flags-2026',
+    featured: true,
+    publishedDate: '2025-09-30',
+    metrics: [
+      { value: '<100ms', label: 'Latency' },
+      { value: '0 PII', label: 'Collected' }
+    ]
+  },
+  {
+    id: 'genai-cache-playbook-2026',
+    title: 'GenAI Cache Playbook 2026: Cut Cost, Keep Quality',
+    excerpt: 'Response + embedding caches with tiered TTL and cost‑aware routing for 30–70% savings.',
+    readTime: '11 min read',
+    category: 'FinOps',
+    href: '/blog/genai-cache-playbook-2026',
+    featured: true,
+    publishedDate: '2025-09-30',
+    metrics: [
+      { value: '30–70%', label: 'Savings' },
+      { value: '<200ms', label: 'P95 Latency' }
+    ]
+  },
   {
     id: 'edge-private-insights-v2-2026',
     title: 'Edge Private Insights v2 (2026): Scoped IDs, DP Noise, <100ms',
