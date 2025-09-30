@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "genai-2025-oct-01-e2e-eval-pipelines",
+    title: "E2E Eval Pipelines — KPI‑Linked Gates That Prevent Regressions",
+    description: "Design eval pipelines wired to KPIs with cost/quality budgets, canaries, and instant rollback hooks.",
+    category: "GenAI",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "edge-2025-oct-01-consentless-feature-flags-v4",
+    title: "Consentless Feature Flags v4 — Private Global Rollouts <100ms",
+    description: "Scoped IDs, signed configs, and on‑device metrics enabling zero‑PII progressive delivery worldwide.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-2025-sept-30-customer-agent-blueprints",
+    title: "Customer Agent Blueprints — Safe Autonomy with Budgets & Rollback",
+    description: "Production playbooks for CX agents: KPI scorecards, budgeted actions, live canaries, and deterministic rollback.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
     slug: "genai-2025-oct-01-cost-optimization-v4",
     title: "GenAI Cost Optimization v4 — 60–80% Savings, Stable Quality",
     description: "Tiered routing, semantic caches, selective distillation, and eval-gated fallbacks to slash cost while preserving UX KPIs.",

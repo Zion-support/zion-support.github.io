@@ -215,6 +215,30 @@ export const featuredBlogPosts: FeaturedItem[] = [
 // Surface brand-new content (Oct 30, 2025)
 featuredBlogPosts.unshift(
   {
+    id: "genai-2025-oct-01-e2e-eval-pipelines",
+    title: "E2E Eval Pipelines — KPI‑Linked Gates",
+    description: "Eval pipelines wired to KPIs with budgets, canaries, and rollback.",
+    link: "/blog/genai-2025-oct-01-e2e-eval-pipelines",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2025-oct-01-consentless-feature-flags-v4",
+    title: "Consentless Feature Flags v4",
+    description: "Private rollouts at <100ms with scoped IDs and signed configs.",
+    link: "/blog/edge-2025-oct-01-consentless-feature-flags-v4",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2025-sept-30-customer-agent-blueprints",
+    title: "Customer Agent Blueprints",
+    description: "Budgets, canaries, and rollback for safe CX autonomy.",
+    link: "/blog/ai-2025-sept-30-customer-agent-blueprints",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-2026-governed-agent-runbooks",
     title: "AI 2026: Governed Agent Runbooks",
     description: "Budgets, KPI canaries, and instant rollback for safe autonomy.",
