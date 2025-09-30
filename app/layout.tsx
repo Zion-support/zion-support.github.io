@@ -62,7 +62,7 @@ function Header() {
             </Link>
           </div>
           <div className="relative group">
-            <Link href="/blog/ai-2027-autonomous-enterprise-transformation" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+            <Link href="/blog/ai-2027-quantum-consciousness-fusion" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               2027 Breakthroughs
               <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                 REVOLUTIONARY
@@ -127,8 +127,8 @@ function Footer() {
                 🏆 $300M ROI Success Story
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">MEGA</span>
               </Link>
-              <Link href="/blog/ai-quantum-computing-breakthrough-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                ⚛️ Quantum AI 1000x Performance
+              <Link href="/blog/ai-2027-quantum-consciousness-fusion" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                ⚛️ Quantum Consciousness 100,000x
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">QUANTUM</span>
               </Link>
               <Link href="/blog/ai-autonomous-enterprise-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
@@ -147,8 +147,8 @@ function Footer() {
                 🧠 Neuromorphic AI
                 <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">REVOLUTIONARY</span>
               </Link>
-              <Link href="/case-studies/ai-2027-neuromorphic-breakthrough-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                💰 $750M Success Story
+              <Link href="/case-studies/ai-2027-quantum-neuromorphic-success-story" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $2.5B Quantum Success
                 <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
               </Link>
               <Link href="/blog/ai-2027-quantum-neural-networks" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
