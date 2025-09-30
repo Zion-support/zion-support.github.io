@@ -184,15 +184,15 @@ const Home = () => {
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">
             <div className="text-white text-sm mb-4">Just added</div>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link to="/blog/ai-operational-scorecards-q4-2026" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
-                <div className="text-emerald-300 text-xs mb-2">AI Operations</div>
-                <div className="text-white font-semibold">AI Operational Scorecards Q4 2026</div>
-                <div className="text-zion-slate-light text-sm mt-1">SLIs mapped to KPIs, budgeted actions, instant rollback.</div>
+              <Link to="/blog/ai-executive-scorecards-2027" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">Strategy</div>
+                <div className="text-white font-semibold">AI Executive Scorecards 2027</div>
+                <div className="text-zion-slate-light text-sm mt-1">Tie model spend to KPIs with live guardrails and SLIs.</div>
               </Link>
-              <Link to="/blog/edge-consentless-metrics-2026" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">Analytics</div>
-                <div className="text-white font-semibold">Edge Consentless Metrics 2026</div>
-                <div className="text-zion-slate-light text-sm mt-1">Scoped IDs, on‑device aggregation, DP noise—zero PII.</div>
+              <Link to="/blog/ai-infra-cost-optimization-2027" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">Implementation Guide</div>
+                <div className="text-white font-semibold">AI Infra Cost Optimization 2027</div>
+                <div className="text-zion-slate-light text-sm mt-1">Quality tiers, caches, routing, and quantization for savings.</div>
               </Link>
               <Link to="/blog/genai-budget-aware-routing-2026" className="block rounded-lg border border-white/10 p-4 hover:border-fuchsia-400/40 transition-colors">
                 <div className="text-fuchsia-300 text-xs mb-2">GenAI</div>

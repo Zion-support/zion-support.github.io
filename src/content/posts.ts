@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-executive-scorecards-2027",
+    title: "AI Executive Scorecards 2027: Proving ROI with Live KPIs",
+    description: "Design exec-ready AI scorecards tying model spend to KPIs with guardrails and SLIs.",
+    category: "Strategy",
+    publishedAt: "2027-01-05",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "ai-infra-cost-optimization-2027",
+    title: "AI Infra Cost Optimization 2027: Fast, Reliable, Affordable",
+    description: "Cut AI infra spend 30–70% via quality tiers, caching, routing, and quantization.",
+    category: "Implementation Guide",
+    publishedAt: "2027-01-08",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
     slug: "ai-2026-reliable-genai-platform",
     title: "Reliable GenAI Platform 2026: SLAs, Budgets, and Rollback",
     description: "Blueprint for a dependable GenAI platform with quality tiers, budgets, evals, and instant rollback tied to KPIs.",
