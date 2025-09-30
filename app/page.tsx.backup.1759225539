@@ -110,10 +110,26 @@ import Revolutionary2027ContentBanner from '../components/Revolutionary2027Conte
 import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
 // import { ContentAnnouncementBanner, September2025ContentShowcase } from '../components/September2025ContentBanners';
 import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
+<<<<<<< HEAD
+import New2027ContentShowcaseBanner from '../components/New2027ContentShowcaseBanner';
+import Interactive2027ContentDiscovery from '../components/Interactive2027ContentDiscovery';
+import September30NewAIBreakthroughsBanner from '../components/September30NewAIBreakthroughsBanner';
+import September30BreakthroughContentBanner from '../components/September30BreakthroughContentBanner';
+import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
+import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
+import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
+import RevolutionaryQuantumAIBreakthroughBanner from '../components/RevolutionaryQuantumAIBreakthroughBanner';
+import AutonomousBusinessSystemsMegaBanner from '../components/AutonomousBusinessSystemsMegaBanner';
+import QuantumAI2027BreakthroughBanner from '../components/QuantumAI2027BreakthroughBanner';
+import AutonomousBusinessIntelligence2026Banner from '../components/AutonomousBusinessIntelligence2026Banner';
+import NewContent2027ShowcaseBanner from '../components/NewContent2027ShowcaseBanner';
+import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
+=======
 import AIMetaCognitiveRevolutionBanner from '../components/AIMetaCognitiveRevolutionBanner';
 import October2025NewContentBanner from '../components/October2025NewContentBanner';
 import AINeuromorphicRevolutionBanner from '../components/AINeuromorphicRevolutionBanner';
 import Ultimate2026ContentRevolutionBanner from '../components/Ultimate2026ContentRevolutionBanner';
+>>>>>>> origin/cursor/create-and-deploy-new-content-d2da
 
 export const metadata = {
   title: 'Zion Tech Group — Next-Gen Autonomous AI Systems 2026 | 95% Efficiency Gains',
@@ -156,10 +172,21 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+<<<<<<< HEAD
+      {/* 🚀🚀🚀 BREAKTHROUGH 2027 CONTENT - Revolutionary AI Technologies! 🚀🚀🚀 */}
+      <New2027ContentShowcaseBanner />
+      
+      {/* 🎯 INTERACTIVE 2027 CONTENT DISCOVERY */}
+      <Interactive2027ContentDiscovery />
+      
+      {/* 🚀🚀🚀 BREAKTHROUGH CONTENT - September 30, 2025 - 3 REVOLUTIONARY INNOVATIONS! 🚀🚀🚀 */}
+      <September30BreakthroughContentBanner />
+=======
       {/* 🔔 Promote newest blog content */}
       <October2025NewContentBanner />
       {/* 🚀 NEWEST BREAKTHROUGH CONTENT - January 2026 - Revolutionary AI Technologies! */}
       <Ultimate2026ContentRevolutionBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-d2da
       
       {/* 🧠 AI Meta-Cognitive Reasoning Revolution */}
       <AIMetaCognitiveRevolutionBanner />
