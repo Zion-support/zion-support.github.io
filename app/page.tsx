@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react';
+import Link from 'next/link';
 import NewContentAdvertisingBanner from '../components/NewContentAdvertisingBanner';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
 import January2026NeuralArchitectureSearchBanner from '../components/January2026NeuralArchitectureSearchBanner';
@@ -9,6 +10,9 @@ import January2026NewServicesBanner from '../components/January2026NewServicesBa
 import Revolutionary2026ContentAdvertisingBanner from '../components/Revolutionary2026ContentAdvertisingBanner';
 import January2026BreakthroughShowcaseBanner from '../components/January2026BreakthroughShowcaseBanner';
 import Ultimate2026ContentPromotionalBanner from '../components/Ultimate2026ContentPromotionalBanner';
+import AI2030QuantumConsciousnessRevolutionBanner from '../components/AI2030QuantumConsciousnessRevolutionBanner';
+import AI2029MetaCognitiveSuperintelligenceBanner from '../components/AI2029MetaCognitiveSuperintelligenceBanner';
+import UltimateContentShowcase2030 from '../components/UltimateContentShowcase2030';
 
 export default function HomePage() {
   return (
@@ -19,6 +23,12 @@ export default function HomePage() {
           <p className="text-lg md:text-xl text-gray-300">Leading AI insights, case studies, and implementation guides.</p>
         </div>
       </section>
+      
+      {/* AI 2030 Quantum Consciousness Revolution Banner */}
+      <AI2030QuantumConsciousnessRevolutionBanner />
+      
+      {/* AI 2029 Meta-Cognitive Superintelligence Banner */}
+      <AI2029MetaCognitiveSuperintelligenceBanner />
       
       {/* Revolutionary 2026 Content Advertising Banner */}
       <Revolutionary2026ContentAdvertisingBanner />
@@ -57,7 +67,7 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
-            <Link to="/blog/ai-2027-consciousness-fusion-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+            <Link href="/blog/ai-2027-consciousness-fusion-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">2027 BREAKTHROUGH</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">100,000x</span>
@@ -67,7 +77,7 @@ export default function HomePage() {
               <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Discover the Technology →</div>
             </Link>
             
-            <Link to="/case-studies/ai-2027-consciousness-fusion-mega-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
+            <Link href="/case-studies/ai-2027-consciousness-fusion-mega-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$2.5B ROI</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">MEGA SUCCESS</span>
@@ -77,7 +87,7 @@ export default function HomePage() {
               <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">Read Success Story →</div>
             </Link>
             
-            <Link to="/blog/ai-2028-autonomous-enterprise-revolution" className="group block rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-indigo-900/20 p-6 hover:border-blue-400/40 transition-all duration-300 hover:scale-105">
+            <Link href="/blog/ai-2028-autonomous-enterprise-revolution" className="group block rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-indigo-900/20 p-6 hover:border-blue-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">2028 REVOLUTION</span>
                 <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-3 py-1 rounded-full text-xs font-bold">99.9% AUTONOMOUS</span>
@@ -117,17 +127,17 @@ export default function HomePage() {
           <div className="rounded-xl border border-indigo-400/30 bg-indigo-500/10 p-6">
             <div className="text-white text-sm mb-3">New this month</div>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link to="/blog/ai-2025-oct-01-privacy-first-observability-v2" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
+              <Link href="/blog/ai-2025-oct-01-privacy-first-observability-v2" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
                 <div className="text-indigo-300 text-xs mb-2">Observability</div>
                 <div className="text-white font-semibold">Privacy‑First Observability v2</div>
                 <div className="text-gray-400 text-sm mt-1">User‑centric traces without PII leaks.</div>
               </Link>
-              <Link to="/blog/genai-2025-oct-01-quality-tiers-v3" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
+              <Link href="/blog/genai-2025-oct-01-quality-tiers-v3" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
                 <div className="text-purple-300 text-xs mb-2">GenAI</div>
                 <div className="text-white font-semibold">GenAI Quality Tiers v3</div>
                 <div className="text-gray-400 text-sm mt-1">50% savings with stable UX.</div>
               </Link>
-              <Link to="/blog/edge-2025-oct-01-consentless-journeys-blueprint" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+              <Link href="/blog/edge-2025-oct-01-consentless-journeys-blueprint" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
                 <div className="text-cyan-300 text-xs mb-2">Edge Computing</div>
                 <div className="text-white font-semibold">Consentless Journeys Blueprint</div>
                 <div className="text-gray-400 text-sm mt-1">Personalization &lt;100ms, zero‑PII.</div>
@@ -137,7 +147,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <ContentShowcase />
+      <UltimateContentShowcase2030 />
     </main>
   );
 }
