@@ -3344,3 +3344,25 @@ posts.push(
     readTime: "7 min read"
   }
 );
+
+// Sept 30, 2025 – New 2028 breakthrough articles
+posts.push(
+  {
+    slug: "ai-2028-autonomous-enterprise-revolution",
+    title: "AI 2028: Autonomous Enterprise Revolution",
+    description: "KPI‑linked budgets, instant rollback, and enterprise‑scale autonomy with measurable ROI.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "ai-2028-autonomous-finops-scorecards",
+    title: "AI 2028: Autonomous FinOps Scorecards",
+    description: "Budget‑aware orchestration that cuts spend 40–70% while safeguarding UX and KPIs.",
+    category: "FinOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  }
+);
