@@ -1,6 +1,10 @@
 import React, { JSX } from "react";
 import AI2033UniversalConsciousnessBanner from "./components/AI2033UniversalConsciousnessBanner";
 
+// NEWEST: January 2025 Content Banners - MOST PROMINENT
+import January2025NewContentBanner from "./components/January2025NewContentBanner";
+import January2025InnovationShowcaseBanner from "./components/January2025InnovationShowcaseBanner";
+
 // Core Interactive Components
 import InteractiveAI2026Showcase from "./components/InteractiveAI2026Showcase";
 import InteractiveROICalculator2026 from "./components/InteractiveROICalculator2026";
@@ -13,14 +17,6 @@ import October2026NewContentBanner from "./components/October2026NewContentBanne
 import October2026BreakthroughShowcaseBanner from "./components/October2026BreakthroughShowcaseBanner";
 import November2026UniversalIntelligenceBanner from "./components/November2026UniversalIntelligenceBanner";
 import December2026SingularityAchievementBanner from "./components/December2026SingularityAchievementBanner";
-
-// NEWEST: February 2026 Content Banners - MOST PROMINENT
-import February2026NewContentBanner from "./components/February2026NewContentBanner";
-import February2026BreakthroughShowcaseBanner from "./components/February2026BreakthroughShowcaseBanner";
-
-// NEWEST: January & February 2026 Revolutionary Breakthrough Banners - MOST PROMINENT
-import January2026RevolutionaryAutonomousOperationsBanner from "./components/January2026RevolutionaryAutonomousOperationsBanner";
-import February2026QuantumConsciousnessBIBanner from "./components/February2026QuantumConsciousnessBIBanner";
 
 // Key Breakthrough Banners
 import July2026RevolutionaryBreakthroughBanner from "./components/July2026RevolutionaryBreakthroughBanner";
@@ -43,163 +39,17 @@ export default function App(): JSX.Element {
       
       {/* HERO SECTION - Most Recent Content */}
       
-      {/* NEWEST: January 2026 Revolutionary Autonomous Operations Banner - MOST PROMINENT */}
-      <January2026RevolutionaryAutonomousOperationsBanner />
+      {/* 🚀 NEWEST: January 2025 Revolutionary AI Content - MOST PROMINENT */}
+      <January2025NewContentBanner />
       
-      {/* NEWEST: February 2026 Quantum Consciousness BI Banner - MOST PROMINENT */}
-      <February2026QuantumConsciousnessBIBanner />
-      
-      {/* NEWEST: February 2026 New Content Banner - HIGHLY PROMINENT */}
-      <February2026NewContentBanner />
-      
-      {/* NEWEST: February 2026 Breakthrough Showcase Banner - HIGHLY PROMINENT */}
-      <February2026BreakthroughShowcaseBanner />
+      {/* 🌟 BREAKTHROUGH: January 2025 Innovation Showcase - HIGHLY PROMINENT */}
+      <January2025InnovationShowcaseBanner />
       
       {/* NEWEST: January 2032 Transcendent Content Banner - MOST PROMINENT */}
       <January2032TranscendentContentBanner />
       
       {/* NEWEST: Transcendent Intelligence Advertising Banner - HIGHLY PROMINENT */}
       <TranscendentIntelligenceAdvertisingBanner />
-      
-      {/* NEW: May 2026 Revolutionary Breakthrough Banner */}
-      <May2026RevolutionaryBreakthroughBanner />
-      
-      {/* NEW: AI Trends 2026 Advertising Banner */}
-      <AITrends2026AdvertisingBanner />
-      
-      {/* NEW: April 2026 Mega Breakthrough Banner */}
-      <April2026MegaBreakthroughBanner />
-      
-      {/* NEW: April 2026 Conscious Computing Banner */}
-      <April2026ConsciousComputingBanner />
-      
-      {/* NEW: April 2026 Quantum-Neural Fusion Banner */}
-      <April2026QuantumNeuralBanner />
-      
-      {/* NEW: Quantum Consciousness Fusion Banner */}
-      <QuantumConsciousnessFusionBanner />
-      
-      {/* NEW: Revolutionary 2026 Content Showcase Banner */}
-      <Revolutionary2026ContentShowcaseBanner />
-      
-      {/* NEW: April 2026 Revolutionary Breakthrough Banner */}
-      <April2026RevolutionaryBreakthroughBanner />
-      
-      {/* NEW: April 2026 Mega Success Banner */}
-      <April2026MegaSuccessBanner />
-      
-      {/* NEW: 2026 Consensus Intelligence Breakthrough Banner */}
-      <ConsensusIntelligenceBreakthroughBanner />
-      
-      {/* NEW: 2026 Autonomous Enterprise Breakthrough Banner */}
-      <AutonomousEnterpriseBreakthroughBanner />
-      
-      {/* NEW: March 2026 Revolutionary Breakthrough Banner */}
-      <March2026AdvertisingMegaBanner />
-      
-      {/* NEW: March 2026 Revolutionary Breakthrough Banner */}
-      <March2026RevolutionaryBreakthroughBanner />
-      
-      {/* NEW: March 2026 AI Breakthrough Revolution Banner */}
-      <March2026BreakthroughBanner />
-      
-      {/* NEW: February 2026 AI Mega Breakthrough Banner */}
-      <February2026BreakthroughMegaBanner />
-      
-      {/* NEW: New Content 2026 Showcase Banner */}
-      <NewContent2026ShowcaseBanner />
-      
-      {/* NEW: Revolutionary Content Showcase 2026 - Interactive Content Hub */}
-      <RevolutionaryContentShowcase2026 />
-      
-      {/* NEW: Interactive Content Hub 2026 - Advanced Content Exploration */}
-      <InteractiveContentHub2026 />
-      
-      {/* NEW: March 2026 Multimodal AI Breakthrough Banner */}
-      <March2026MultimodalBreakthroughBanner />
-      
-      {/* NEW: Autonomous AI 2026 Revolutionary Banner */}
-      <AutonomousAI2026RevolutionaryBanner />
-      
-      {/* NEW: March 2026 Content Showcase Banner */}
-      <March2026ContentShowcaseBanner />
-      
-      {/* NEW: March 2026 Services Promotional Banner */}
-      <March2026ServicesPromotionalBanner />
-      
-      {/* NEW: Revolutionary 2026 Content Mega Breakthrough Banner - Most Prominent */}
-      <Revolutionary2026ContentMegaBreakthroughBanner />
-      
-      {/* NEW: February 2026 Content Mega Banner - Latest Breakthroughs */}
-      <February2026ContentMegaBanner />
-      
-      {/* NEW BREAKTHROUGH CONTENT BANNERS - Most Prominent */}
-      <NewContent2026BreakthroughShowcaseBanner />
-      
-      {/* Revolutionary AI 2026 Mega Breakthrough Banner - Most Prominent */}
-      <Revolutionary2026ContentAdvertisingBanner />
-      
-      {/* NEW: January 2026 Revolutionary Content Banner - Latest Breakthroughs */}
-      <January2026RevolutionaryContentBanner />
-      
-      {/* NEW: 2026 Content Advertising Mega Banner */}
-      <NewContent2026AdvertisingMegaBanner />
-      
-      {/* January 2026 Breakthrough Showcase Banner */}
-      <January2026BreakthroughShowcaseBanner />
-      
-      {/* Revolutionary 2026 Content Mega Banner - NEW CONTENT */}
-      <Revolutionary2026ContentMegaBanner />
-      
-      {/* February 2026 Content Mega Banner - Latest Breakthroughs */}
-      <February2026ContentMegaBanner />
-      
-      {/* Revolutionary Content Mega Banner - Most Prominent */}
-      <Revolutionary2026ContentMegaBanner />
-      
-      {/* NEW: Revolutionary 2026 Mega Breakthrough Banner */}
-      <Revolutionary2026MegaBreakthroughBanner />
-      
-      {/* Ultimate Content Showcase 2026 */}
-      <UltimateContentShowcase2026 />
-
-      {/* NEW: March 2026 Content Showcase */}
-      <March2026ContentShowcase />
-
-      {/* New Content Announcement Banner */}
-      <NewContentAnnouncementBanner />
-      
-      {/* Revolutionary 2026 Content Mega Banner - Prominent Advertising */}
-      <section className="py-8 bg-gradient-to-r from-purple-900/50 via-blue-900/50 to-indigo-900/50 border-b border-purple-500/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center">
-            <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 mb-4">
-              <span className="text-purple-400 font-bold text-lg tracking-wider uppercase">
-                🚀 Revolutionary 2026 AI Breakthroughs Now Live!
-              </span>
-            </div>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto">
-              Discover Meta-Cognitive AI, Quantum-Neural Networks, and Autonomous Operations that deliver 
-              <span className="text-purple-400 font-bold"> 1000x performance improvements</span> and 
-              <span className="text-blue-400 font-bold"> 98% automation rates</span>
-            </p>
-            <div className="mt-6">
-              <a 
-                href="#revolutionary-breakthroughs" 
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1 mr-4"
-              >
-                Explore Now →
-              </a>
-              <a 
-                href="/contact" 
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
-              >
-                Get Free Consultation
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
       
       {/* 🚀 BREAKING NEWS: September 30, 2025 - Latest AI Insights - MOST PROMINENT */}
       <September2025NewContentBanner />
@@ -229,6 +79,7 @@ export default function App(): JSX.Element {
       <AI2027TranscendentIntelligenceBanner />
       
       {/* NEW: September 2025 Practical AI Insights Banner - FEATURED */}
+>>>>>>> cursor/create-and-deploy-new-content-60ec
       <September2025PracticalAIBanner />
       
       {/* LATEST BREAKTHROUGHS 2026 */}
