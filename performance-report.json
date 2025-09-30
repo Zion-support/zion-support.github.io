@@ -1,17 +1,12 @@
 {
-  "timestamp": "2025-09-28T17:49:52.590Z",
-  "optimizations": {
-    "importsOptimized": 0,
-    "assetsOptimized": 0,
-    "bundleSize": 783387,
-    "warningsReduced": 0
-  },
+  "timestamp": "2025-09-30T01:30:08.943Z",
+  "bundleSize": "Analyzed",
+  "coreWebVitals": "Monitored",
   "recommendations": [
-    "Enable gzip compression on server",
-    "Implement service worker for caching",
-    "Use CDN for static assets",
-    "Optimize images with WebP format",
     "Implement lazy loading for images",
-    "Use code splitting for large components"
+    "Use code splitting for large components",
+    "Optimize third-party libraries",
+    "Enable gzip compression",
+    "Use CDN for static assets"
   ]
 }

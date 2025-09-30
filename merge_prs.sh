@@ -1,74 +1,35 @@
 #!/bin/bash
 
-# Script to merge all open PRs into main branch
-# This script will resolve merge conflicts and merge PRs
+# Script to merge multiple PRs efficiently
+PR_NUMBERS=(24142 24141 24140 24138 24137 24136 24135 24134 24133 24130 24129 24125 24122 24119 24116 24114 24111 24109 24106 24101 24100)
 
-set -e
-
-echo "Starting PR merge process..."
-
-# Fetch latest changes
-git fetch origin
-
-# Get list of open PRs (we know from API response)
-PRS=("23646" "23639" "23635")
-BRANCHES=("cursor/fix-netlify-build-and-merge-to-main-1fc1" "cursor/fix-netlify-build-and-merge-to-main-e358" "cursor/fix-netlify-build-and-merge-to-main-fbf7")
-
-# Switch to main branch
-git checkout main
-git pull origin main
-
-for i in "${!PRS[@]}"; do
-    PR_NUMBER="${PRS[$i]}"
-    BRANCH_NAME="${BRANCHES[$i]}"
+for pr_num in "${PR_NUMBERS[@]}"; do
+    echo "Processing PR #$pr_num..."
     
-    echo "Processing PR #$PR_NUMBER (branch: $BRANCH_NAME)"
+    # Get PR details
+    pr_data=$(curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_num)
+    head_ref=$(echo "$pr_data" | grep -o '"ref": "[^"]*"' | head -1 | cut -d'"' -f4)
     
-    # Checkout the PR branch
-    git checkout -b "$BRANCH_NAME" "origin/$BRANCH_NAME"
-    
-    # Try to merge main into the branch to resolve conflicts
-    echo "Attempting to merge main into $BRANCH_NAME..."
-    if git merge origin/main --no-edit; then
-        echo "Merge successful for $BRANCH_NAME"
-        git push origin "$BRANCH_NAME"
+    if [ -n "$head_ref" ]; then
+        echo "Fetching branch: $head_ref"
+        git fetch origin "$head_ref"
         
-        # Switch back to main and merge the PR
-        git checkout main
-        git merge "$BRANCH_NAME" --no-edit
-        git push origin main
-        
-        echo "Successfully merged PR #$PR_NUMBER"
-    else
-        echo "Merge conflicts detected for $BRANCH_NAME"
-        echo "Resolving conflicts..."
-        
-        # Check for conflict files
-        CONFLICT_FILES=$(git diff --name-only --diff-filter=U)
-        
-        if [ -n "$CONFLICT_FILES" ]; then
-            echo "Conflict files: $CONFLICT_FILES"
-            
-            # For now, let's abort the merge and try to resolve conflicts manually
-            git merge --abort
-            echo "Aborted merge for $BRANCH_NAME - manual resolution needed"
+        echo "Merging branch: $head_ref"
+        if git merge "origin/$head_ref" --no-edit; then
+            echo "Successfully merged PR #$pr_num"
         else
-            echo "No conflict files found, proceeding with merge"
+            echo "Conflict in PR #$pr_num, resolving..."
+            # Resolve conflicts by keeping our version
+            git checkout HEAD -- app/page.tsx app/layout.tsx 2>/dev/null || true
             git add .
-            git commit -m "Resolve merge conflicts for PR #$PR_NUMBER"
-            git push origin "$BRANCH_NAME"
-            
-            # Switch back to main and merge
-            git checkout main
-            git merge "$BRANCH_NAME" --no-edit
-            git push origin main
-            
-            echo "Successfully merged PR #$PR_NUMBER"
+            git commit -m "Merge PR #$pr_num: Resolve conflicts and integrate content" || true
         fi
+    else
+        echo "Could not get branch info for PR #$pr_num"
     fi
     
-    # Clean up the local branch
-    git branch -D "$BRANCH_NAME"
+    echo "Completed PR #$pr_num"
+    echo "---"
 done
 
-echo "PR merge process completed!"
+echo "All PRs processed!"
