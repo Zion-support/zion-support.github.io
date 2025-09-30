@@ -1,5 +1,49 @@
 import React from 'react';
-import Link from 'next/link';
+import { 
+  NewBlogBanner, 
+  AnalyticsPlatformBanner, 
+  TechCorpSuccessBanner,
+  WorkflowAutomationBanner,
+  AIAnalyticsBanner,
+  HealthTechSuccessBanner,
+  ComprehensiveAIBanner,
+  EnterpriseAIBanner,
+  NewContentBanner,
+  CustomerServiceAIBanner,
+  HealthcareAIBanner,
+  RetailSuccessBanner,
+  AIContentShowcaseBanner,
+  AIRevolutionBanner,
+  AutonomousAgentsBanner,
+  AIGovernanceBanner,
+  FinTechSuccessBanner,
+  NewContentShowcaseBanner
+} from '../components/PromotionalBanner';
+import {
+  AIEnterpriseAdoptionBanner,
+  AITrends2025Banner,
+  SupplyChainOptimizationBanner,
+  AIBusinessTransformationBanner,
+  AICustomerExperienceBanner,
+  EnterpriseAITransformationBanner,
+  LatestAIInsightsBanner,
+  AIServicesShowcaseBanner,
+  AIWorkflowAutomationBanner,
+  EnterpriseAISecurityBanner
+} from '../components/NewContentPromotionalBanners';
+import {
+  AIEnterpriseTransformationBanner,
+  AIAutonomousSystemsBanner,
+  ManufacturingTransformationBanner,
+  AIEnterpriseServicesBanner,
+  LatestContentShowcaseBanner,
+  InteractiveAICalculatorBanner,
+  AIInnovationShowcaseBanner
+} from '../components/NewContent2026Banners';
+import ContentShowcase from '../components/ContentShowcase';
+import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
+import NewContent2026PromotionalBanner from '../components/NewContent2026PromotionalBanner';
+import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculator';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -41,33 +85,116 @@ export const metadata = {
 export default function HomePage() {
   return (
     <>
-      <div className="animate-fade-in">
-        {/* Hero Section */}
-        <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
-          <div className="max-w-4xl mx-auto px-4">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Transform Your Business with
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
-                {' '}AI-Powered Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
-              and enterprise IT solutions that drive growth, efficiency, and innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
-                href="/services"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
-              >
-                Explore Our Services
-              </Link>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
-              >
-                Call +1 302 464 0950
-              </a>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="animate-fade-in">
+          {/* New 2026 Content Promotional Banner */}
+          <NewContent2026PromotionalBanner />
+          
+          {/* New 2026 Content Banners */}
+          <NewContent2026MegaBanner />
+          <AIRevolutionary2026Banner />
+          
+          {/* Revolutionary 2026 Content Banner */}
+          <Revolutionary2026ContentBanner />
+          
+          {/* Latest AI Innovations Banner */}
+          <LatestAIInnovations2026Banner />
+          
+          {/* New Content Promotional Banners */}
+          <AIEnterpriseAdoptionBanner />
+          <AITrends2025Banner />
+          <SupplyChainOptimizationBanner />
+          <AIBusinessTransformationBanner />
+          <AICustomerExperienceBanner />
+          <EnterpriseAITransformationBanner />
+          <LatestAIInsightsBanner />
+          <AIServicesShowcaseBanner />
+          <AIWorkflowAutomationBanner />
+          <EnterpriseAISecurityBanner />
+          
+          {/* Existing Promotional Banners */}
+          <NewContentShowcaseBanner />
+          <AutonomousAgentsBanner />
+          <AIGovernanceBanner />
+          <FinTechSuccessBanner />
+          <AIContentShowcaseBanner />
+          <CustomerServiceAIBanner />
+          <HealthcareAIBanner />
+          <RetailSuccessBanner />
+          <AIRevolutionBanner />
+          <NewBlogBanner />
+          <WorkflowAutomationBanner />
+          <AIAnalyticsBanner />
+      <AIEnterpriseTransformationBanner />
+      <AIAutonomousSystemsBanner />
+      <ManufacturingTransformationBanner />
+      <AIEnterpriseServicesBanner />
+      <LatestContentShowcaseBanner />
+      <InteractiveAICalculatorBanner />
+      <AIInnovationShowcaseBanner />
+      
+      {/* New Content Promotional Banners */}
+      <AIEnterpriseAdoptionBanner />
+      <AITrends2025Banner />
+      <SupplyChainOptimizationBanner />
+      <AIBusinessTransformationBanner />
+      <AICustomerExperienceBanner />
+      <EnterpriseAITransformationBanner />
+      <LatestAIInsightsBanner />
+      <AIServicesShowcaseBanner />
+      <AIWorkflowAutomationBanner />
+      <EnterpriseAISecurityBanner />
+      
+      {/* Existing Promotional Banners */}
+      <NewContentShowcaseBanner />
+      <AutonomousAgentsBanner />
+      <AIGovernanceBanner />
+      <FinTechSuccessBanner />
+      <AIContentShowcaseBanner />
+      <CustomerServiceAIBanner />
+      <HealthcareAIBanner />
+      <RetailSuccessBanner />
+      <AIRevolutionBanner />
+      <NewBlogBanner />
+      <WorkflowAutomationBanner />
+      <AIAnalyticsBanner />
+      
+>>>>>>> 83687f660ab4d793fbd393e78d6f981ce54e0604
+      {/* Hero Section */}
+      <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Transform Your Business with
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
+              {' '}AI-Powered Solutions
+            </span>
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
+            and enterprise IT solutions that drive growth, efficiency, and innovation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Link
+              to="/services"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Explore Our Services
+            </Link>
+            <a
+              to="tel:+13024640950"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
+            >
+              Call +1 302 464 0950
+            </a>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-3xl font-bold text-blue-600">500+</div>
+              <div className="text-gray-600">Projects Delivered</div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
@@ -110,11 +237,27 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* FEATURED NEW ARTICLES - SEPTEMBER 30, 2025 - EXPANDED WITH 3 NEW BREAKTHROUGH GUIDES */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-5xl font-bold text-center mb-6 text-gray-900">
-              🔥 6 Latest Breakthrough Articles — September 30, 2025
+      {/* Interactive AI 2027 Calculator */}
+      <InteractiveAI2027Calculator />
+
+      {/* Interactive AI 2026 Calculator */}
+      <InteractiveAICalculator2026 />
+
+      {/* Interactive AI 2026 Calculator */}
+      <InteractiveAI2026Calculator />
+
+      {/* Interactive AI ROI Calculator */}
+      <InteractiveAIROICalculator />
+
+      {/* Dynamic Content Showcase */}
+      <ContentShowcase />
+
+      {/* Latest Innovations Section */}
+      <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Latest AI Innovations & Breakthroughs
             </h2>
             <p className="text-center text-gray-600 mb-16 text-2xl">
               The most comprehensive AI guides of 2025 • Essential reading for enterprise leaders
