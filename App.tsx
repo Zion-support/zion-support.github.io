@@ -27,6 +27,16 @@ import AI2031SingularityAchievementBanner from "./components/AI2031SingularityAc
 import UltimateContentShowcase2026 from "./src/components/UltimateContentShowcase2026";
 import LatestTrendsShowcase2026 from "./src/components/LatestTrendsShowcase2026";
 
+// Additional Missing Banners
+import January2032TranscendentContentBanner from "./components/January2032TranscendentContentBanner";
+import TranscendentIntelligenceAdvertisingBanner from "./components/TranscendentIntelligenceAdvertisingBanner";
+import December2026UniversalConsciousnessBanner from "./components/December2026UniversalConsciousnessBanner";
+import November2026QuantumSuperintelligenceBanner from "./components/November2026QuantumSuperintelligenceBanner";
+import July2026AutonomousIntelligenceBanner from "./components/July2026AutonomousIntelligenceBanner";
+import July2026ContentShowcaseBanner from "./components/July2026ContentShowcaseBanner";
+import ComprehensiveContentIntegrationBanner from "./components/ComprehensiveContentIntegrationBanner";
+import AI2027TranscendentIntelligenceBanner from "./components/AI2027TranscendentIntelligenceBanner";
+
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
@@ -65,11 +75,7 @@ export default function App(): JSX.Element {
       {/* NEWEST: October 2026 Breakthrough Showcase Banner - HIGHLY PROMINENT */}
       <October2026BreakthroughShowcaseBanner />
       
-      {/* NEW: AI 2027 Transcendent Intelligence Banner - Most Prominent */}
-      <AI2027TranscendentIntelligenceBanner />
-      
       {/* NEW: September 2025 Practical AI Insights Banner - FEATURED */}
->>>>>>> cursor/create-and-deploy-new-content-60ec
       <September2025PracticalAIBanner />
       
       {/* LATEST BREAKTHROUGHS 2026 */}
