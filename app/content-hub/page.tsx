@@ -224,6 +224,40 @@ export default function ContentHubPage() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {/* New Featured: Hyper‑Automation Blueprint 2027 */}
+            <Link href="/blog/ai-2027-hyper-automation-blueprint" className="group">
+              <div className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20 p-8">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="text-6xl group-hover:scale-110 transition-transform duration-300">🧩</div>
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-green-500 text-white text-xs font-bold shadow-lg">
+                      <span>FEATURED</span>
+                    </div>
+                    <span className="px-3 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-semibold border border-emerald-500/30">
+                      NEW
+                    </span>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-emerald-500/20 to-green-500/20 text-emerald-300 text-xs font-semibold border border-emerald-500/30">
+                    Implementation Guide
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors duration-300 leading-tight">
+                  AI 2027 Hyper‑Automation Blueprint
+                </h3>
+                <p className="text-gray-400 mb-6 leading-relaxed text-sm">
+                  Scale reliable automation with guardrails, evals, and value stream analytics.
+                </p>
+                <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
+                  <span>14 min</span>
+                  <span>Oct 1, 2025</span>
+                </div>
+                <div className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300">
+                  <span>Read Blueprint</span>
+                </div>
+              </div>
+            </Link>
             {/* Newly Featured: Operational Resilience 2025 */}
             <Link href="/blog/ai-operational-resilience-2025" className="group">
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20 p-8">
