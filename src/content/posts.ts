@@ -10,7 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
     slug: "ai-2026-reliability-runbooks-v4",
     title: "AI 2026: Reliability Runbooks v4",
     description: "Budgeted actions, KPI canaries, and instant rollback—v4 playbooks for dependable AI operations.",
@@ -29,8 +28,6 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
-=======
->>>>>>> origin/content-updates-2025-09-30
     slug: "ai-executive-playbook-2027",
     title: "AI Executive Playbook 2027: Fund, Govern, and Scale with KPIs",
     description: "Executive‑ready roadmap: KPI‑linked scorecards, budgeted actions, and governance that accelerates delivery.",
@@ -103,7 +100,6 @@ export const posts: BlogPost[] = [
     readTime: "9 min read"
   },
   {
-<<<<<<< HEAD
     slug: "edge-2026-private-feature-flags",
     title: "Edge 2026: Private Feature Flags at <100ms",
     description: "Signed configs, scoped IDs, and on‑device telemetry for zero‑PII rollouts worldwide under 100ms.",
@@ -140,8 +136,6 @@ export const posts: BlogPost[] = [
     readTime: "9 min read"
   },
   {
-=======
->>>>>>> origin/content-updates-2025-09-30
     slug: "ai-2027-customer-experience-agents",
     title: "AI 2027: Customer Experience Agents — 24/7 Autonomous CX",
     description: "Deploy trusted CX agents with budgets, live KPIs, and instant rollback that resolve 80% of tickets autonomously.",
@@ -158,6 +152,15 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-02",
     featured: true,
     readTime: "7 min read"
+  },
+  {
+    slug: "agent-red-teaming-2026",
+    title: "Agent Red‑Teaming 2026: Simulation Labs That Prevent Real Incidents",
+    description: "Build realistic attack labs for agents: jailbreak corpora, tool fuzzers, and KPI‑linked failure budgets you can ship.",
+    category: "AI Security",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "8 min read"
   },
   {
     slug: "genai-2027-quality-tiers-v4",

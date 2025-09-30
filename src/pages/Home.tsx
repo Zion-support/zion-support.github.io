@@ -154,6 +154,8 @@ const Home = () => {
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
+            { title: "Agent Red‑Teaming 2026", category: "AI Security", link: "/blog/agent-red-teaming-2026" },
+            { title: "Verifiable Edge Analytics 2026", category: "Analytics", link: "/blog/verifiable-edge-analytics-2026" },
             { title: "AI Executive Playbook 2027", category: "AI Strategy", link: "/blog/ai-executive-playbook-2027" },
             { title: "AI 2027 Cost Optimization Playbook", category: "AI Operations", link: "/blog/ai-2027-cost-optimization-playbook" },
             { title: "Edge 2026: Private Feature Flags", category: "Architecture", link: "/blog/edge-2026-private-feature-flags" },
