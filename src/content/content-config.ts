@@ -435,6 +435,22 @@ featuredBlogPosts.unshift(
 // Promote brand-new content on homepage showcases (added Sept 30, 2025)
 featuredBlogPosts.unshift(
   {
+    id: "ai-enterprise-transformation-2027",
+    title: "AI Enterprise Transformation 2027",
+    description: "Plan, fund, and scale enterprise AI with measurable ROI and safety.",
+    link: "/blog/ai-enterprise-transformation-2027",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agentic-workflow-orchestration-2026",
+    title: "Agentic Workflow Orchestration 2026",
+    description: "Budgets, KPI canaries, and rollback for safe agent workflows.",
+    link: "/blog/agentic-workflow-orchestration-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-sla-scorecards-2026-q1",
     title: "AI SLA Scorecards 2026 Q1",
     description: "SLIs, budgets, and instant rollback wired to product KPIs",

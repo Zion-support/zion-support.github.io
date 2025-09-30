@@ -10,11 +10,29 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "ai-2027-cost-optimization-playbook",
-    title: "AI 2027 Cost Optimization Playbook",
-    description: "Tiered routing, caching, and compression to cut spend 30–70% with no regressions.",
-    category: "GenAI",
-    publishedAt: "2025-09-30",
+    slug: "ai-enterprise-transformation-2027",
+    title: "AI Enterprise Transformation 2027: Executive Playbook",
+    description: "Practical blueprint to plan, fund, and scale enterprise AI with measurable ROI and safety.",
+    category: "Enterprise AI",
+    publishedAt: "2027-01-25",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "agentic-workflow-orchestration-2026",
+    title: "Agentic Workflow Orchestration 2026: Budgeted, Observable, Safe",
+    description: "Design agentic workflows with budgets, KPI‑linked canaries, and one‑click rollback for safe velocity.",
+    category: "AI Operations",
+    publishedAt: "2026-10-15",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "genai-reliability-scorecards-2027",
+    title: "GenAI Reliability Scorecards 2027: KPIs, Budgets, Rollback",
+    description: "Live KPIs with budgeted actions and instant rollback to keep GenAI reliable and affordable.",
+    category: "AI Governance",
+    publishedAt: "2027-01-20",
     featured: true,
     readTime: "8 min read"
   },
