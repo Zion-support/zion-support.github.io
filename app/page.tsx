@@ -30,7 +30,6 @@ import ContentShowcase from '../components/ContentShowcase';
 import QuantumTransformationBanner from '../components/QuantumTransformationBanner';
 import NeuralArchitectureSearchBanner from '../components/NeuralArchitectureSearchBanner';
 import LatestBreakthroughsBanner from '../components/LatestBreakthroughsBanner';
-import April2026MegaBreakthroughBanner from '../components/April2026MegaBreakthroughBanner';
 import July2026MegaBreakthroughBanner from '../components/July2026MegaBreakthroughBanner';
 import August2026QuantumConsciousnessBanner from '../components/August2026QuantumConsciousnessBanner';
 import July2026ContentShowcaseBanner from '../components/July2026ContentShowcaseBanner';
@@ -54,10 +53,10 @@ import April2026UltimateBreakthroughBanner from '../components/April2026Ultimate
 import May2026RevolutionaryBreakthroughBanner from '../components/May2026RevolutionaryBreakthroughBanner';
 import June2026UltimateBreakthroughBanner from '../components/June2026UltimateBreakthroughBanner';
 import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
-import April2026MegaBreakthroughBanner from '../components/April2026MegaBreakthroughBanner';
 import JulyAugust2026RevolutionaryBreakthroughBanner from '../components/JulyAugust2026RevolutionaryBreakthroughBanner';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import ContentNavigationHub from '../components/ContentNavigationHub';
+import April2026MegaBreakthroughBanner from '../components/April2026MegaBreakthroughBanner';
 import UltimateAutonomousRevolutionBanner from '../components/UltimateAutonomousRevolutionBanner';
 import InteractiveROICalculator2026 from '../components/InteractiveROICalculator2026';
 import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
@@ -301,7 +300,6 @@ export default function HomePage() {
               <div className="text-white font-bold text-lg mb-2">AI 2026 Future Trends</div>
               <div className="text-gray-400 text-sm mb-3">Discover the revolutionary AI trends and breakthroughs that will reshape everything in 2026, from consciousness to quantum AI.</div>
               <div className="text-blue-300 text-sm font-semibold group-hover:text-blue-200">Explore Future Trends →</div>
->>>>>>> cursor/create-and-deploy-new-content-4eb2
             </Link>
           </div>
         </div>
