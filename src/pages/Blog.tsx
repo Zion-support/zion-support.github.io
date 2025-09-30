@@ -14,7 +14,7 @@ import {
 import React, { useMemo, useState } from "react";
 import { latestArticles, featuredArticles } from "../content/latest-articles";
 import { Helmet } from "react-helmet-async";
-import BlogPromotionBanner from "../components/BlogPromotionBanner";
+// import BlogPromotionBanner from "../components/BlogPromotionBanner";
 const Footer: React.FC = () => null;
 import Header from "../components/Header";
 
@@ -475,7 +475,7 @@ export default function Blog(): React.JSX.Element {
 
           {/* Blog Promotion Banner */}
           <div className="mt-20">
-            <BlogPromotionBanner />
+            {/* <BlogPromotionBanner /> */}
           </div>
         </section>
       </div>
