@@ -2,6 +2,8 @@ import React from 'react';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
 import January2026NeuralArchitectureSearchBanner from '../components/January2026NeuralArchitectureSearchBanner';
 import January2026FederatedLearningBanner from '../components/January2026FederatedLearningBanner';
+import January2026RevolutionaryBreakthroughBanner from '../components/January2026RevolutionaryBreakthroughBanner';
+import January2026NewServicesBanner from '../components/January2026NewServicesBanner';
 
 export default function HomePage() {
   return (
@@ -13,7 +15,13 @@ export default function HomePage() {
         </div>
       </section>
       
-      {/* New Content Banners */}
+      {/* Revolutionary Breakthroughs Banner */}
+      <January2026RevolutionaryBreakthroughBanner />
+      
+      {/* New Services Banner */}
+      <January2026NewServicesBanner />
+      
+      {/* Legacy Content Banners */}
       <January2026NeuralArchitectureSearchBanner />
       <January2026FederatedLearningBanner />
       

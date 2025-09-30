@@ -244,3 +244,132 @@ newServices2026.push(
     launchDate: "2025-09-30"
   }
 );
+
+// January 2026 – Fresh new services to advertise prominently
+newServices2026.push(
+  {
+    id: "ai-autonomous-infrastructure-platform",
+    name: "AI Autonomous Infrastructure Platform",
+    title: "🏗️ AI Autonomous Infrastructure: Self-Healing, Self-Optimizing Systems",
+    description: "Revolutionary infrastructure that manages itself—self-healing failures, self-optimizing performance, and self-scaling resources. Achieve 99.99% uptime with zero manual intervention.",
+    benefits: [
+      "99.99% uptime with zero downtime",
+      "60% reduction in operational costs",
+      "Self-healing infrastructure failures",
+      "Automated scaling and optimization"
+    ],
+    features: [
+      "Predictive failure detection",
+      "Automated incident response",
+      "Self-optimizing resource allocation",
+      "Intelligent capacity planning",
+      "Zero-touch deployment pipelines"
+    ],
+    category: "Infrastructure AI",
+    pricing: "Starting at $12,000/month",
+    link: "/services/ai-autonomous-infrastructure-platform",
+    icon: "🏗️",
+    featured: true,
+    launchDate: "2026-01-15"
+  },
+  {
+    id: "quantum-ai-acceleration-service",
+    name: "Quantum AI Acceleration Service",
+    title: "⚛️ Quantum AI Acceleration: 1000x Performance Boost",
+    description: "Harness quantum computing power to accelerate AI training and inference by 1000x. Solve complex optimization problems in seconds instead of hours.",
+    benefits: [
+      "1000x faster AI training",
+      "Quantum-enhanced optimization",
+      "Exponential performance gains",
+      "Breakthrough computational capabilities"
+    ],
+    features: [
+      "Quantum neural network training",
+      "Quantum optimization algorithms",
+      "Hybrid quantum-classical computing",
+      "Real-time quantum simulation",
+      "Quantum machine learning models"
+    ],
+    category: "Quantum Computing",
+    pricing: "Starting at $25,000/month",
+    link: "/services/quantum-ai-acceleration-service",
+    icon: "⚛️",
+    featured: true,
+    launchDate: "2026-01-15"
+  },
+  {
+    id: "ai-multimodal-content-studio",
+    name: "AI Multimodal Content Studio",
+    title: "🎭 AI Multimodal Content Studio: Vision + Language + Audio",
+    description: "Revolutionary content creation platform that combines vision, language, and audio AI to generate immersive multimedia experiences with 98% accuracy across all modalities.",
+    benefits: [
+      "98% accuracy across all modalities",
+      "10x faster content production",
+      "Unified vision-language-audio processing",
+      "Immersive multimedia experiences"
+    ],
+    features: [
+      "Cross-modal content generation",
+      "Real-time audio-visual synthesis",
+      "Intelligent content adaptation",
+      "Multi-language support",
+      "Advanced content personalization"
+    ],
+    category: "Creative AI",
+    pricing: "Starting at $7,500/month",
+    link: "/services/ai-multimodal-content-studio",
+    icon: "🎭",
+    featured: true,
+    launchDate: "2026-01-15"
+  },
+  {
+    id: "ai-autonomous-business-intelligence",
+    name: "AI Autonomous Business Intelligence",
+    title: "📊 AI Autonomous BI: Self-Driving Analytics & Insights",
+    description: "Revolutionary business intelligence that automatically discovers insights, generates reports, and makes data-driven recommendations without human intervention. Achieve 95% accuracy in predictive analytics.",
+    benefits: [
+      "95% accuracy in predictive analytics",
+      "Automatic insight discovery",
+      "Real-time business recommendations",
+      "Zero-touch report generation"
+    ],
+    features: [
+      "Autonomous data analysis",
+      "Predictive business modeling",
+      "Intelligent report generation",
+      "Natural language queries",
+      "Automated anomaly detection"
+    ],
+    category: "Business Intelligence",
+    pricing: "Starting at $6,500/month",
+    link: "/services/ai-autonomous-business-intelligence",
+    icon: "📊",
+    featured: true,
+    launchDate: "2026-01-15"
+  },
+  {
+    id: "ai-neural-architecture-optimization",
+    name: "AI Neural Architecture Optimization",
+    title: "🧠 AI Neural Architecture Optimization: Auto-Designing Networks",
+    description: "Revolutionary service that automatically designs optimal neural architectures 1000x faster than humans, achieving state-of-the-art performance with minimal computational resources.",
+    benefits: [
+      "1000x faster architecture design",
+      "State-of-the-art performance",
+      "Minimal computational resources",
+      "Automated optimization pipelines"
+    ],
+    features: [
+      "Automated neural architecture search",
+      "Multi-objective optimization",
+      "Hardware-aware design",
+      "Continuous learning algorithms",
+      "Performance benchmarking"
+    ],
+    category: "AI Engineering",
+    pricing: "Starting at $9,000/month",
+    link: "/services/ai-neural-architecture-optimization",
+    icon: "🧠",
+    featured: true,
+    launchDate: "2026-01-15"
+  }
+);
