@@ -10,28 +10,67 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
+    slug: "ai-executive-scorecards-2027",
+    title: "AI Executive Scorecards 2027: Proving ROI with Live KPIs",
+    description: "Design exec-ready AI scorecards tying model spend to KPIs with guardrails and SLIs.",
+    category: "Strategy",
+    publishedAt: "2027-01-05",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "ai-infra-cost-optimization-2027",
+    title: "AI Infra Cost Optimization 2027: Fast, Reliable, Affordable",
+    description: "Cut AI infra spend 30–70% via quality tiers, caching, routing, and quantization.",
+    category: "Implementation Guide",
+    publishedAt: "2027-01-08",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "genai-reliability-scorecards-2027",
+    title: "GenAI Reliability Scorecards 2027: KPIs, Budgets, Rollback",
+    description: "Live KPI scorecards and budgeted routes that keep GenAI reliable and affordable.",
+    category: "AI Governance",
+=======
     slug: "ai-2027-edge-native-agents",
     title: "Edge‑Native Agents 2027: Private Tools at <100ms",
     description: "Design agents that run close to users with scoped permissions, on‑device tools, and instant rollback.",
     category: "Edge Computing",
+>>>>>>> origin/cursor/create-and-deploy-new-content-869d
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
   },
   {
+<<<<<<< HEAD
+    slug: "edge-private-analytics-2027",
+    title: "Edge Private Analytics 2027: Zero‑PII Insights at <100ms",
+    description: "Scoped IDs, on‑device aggregation, and DP noise to unlock insights without PII.",
+    category: "Analytics",
+=======
     slug: "ai-2027-operational-scorecards",
     title: "Operational AI Scorecards 2027: KPIs, Budgets, Rollback",
     description: "Live scorecards that link SLIs to product KPIs with budgeted actions and one‑click recovery.",
     category: "AI Operations",
+>>>>>>> origin/cursor/create-and-deploy-new-content-869d
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
   },
   {
+<<<<<<< HEAD
+    slug: "enterprise-ai-sustainability-2027",
+    title: "Enterprise AI Sustainability 2027: 70% Cost & Carbon Reduction",
+    description: "Quality tiers, workload shifting, and green routing to cut spend and emissions.",
+    category: "Strategy",
+=======
     slug: "genai-2027-quality-tiers-at-scale",
     title: "GenAI 2027: Quality Tiers at Scale with Semantic Caches",
     description: "Predictable cost and stable UX using tiered models, semantic caches, and KPI‑aware routing.",
     category: "GenAI",
+>>>>>>> origin/cursor/create-and-deploy-new-content-869d
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "9 min read"
