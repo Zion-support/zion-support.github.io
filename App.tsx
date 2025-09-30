@@ -49,6 +49,10 @@ import Revolutionary2026ContentShowcaseBanner from "./components/Revolutionary20
 import May2026RevolutionaryBreakthroughBanner from "./components/May2026RevolutionaryBreakthroughBanner";
 import May2026ContentShowcase from "./components/May2026ContentShowcase";
 import May2026ContentAdvertisingBanner from "./components/May2026ContentAdvertisingBanner";
+import NeuromorphicComputingRevolutionBanner from "./components/NeuromorphicComputingRevolutionBanner";
+import MetaCognitiveAutonomousSystemsBanner from "./components/MetaCognitiveAutonomousSystemsBanner";
+import Ultimate2026ContentShowcaseBanner from "./components/Ultimate2026ContentShowcaseBanner";
+import April2026RevolutionaryContentBanner from "./components/April2026RevolutionaryContentBanner";
 import June2026MegaAutomationBanner from "./components/June2026MegaAutomationBanner";
 import InteractiveContentShowcase2026Advanced from "./components/InteractiveContentShowcase2026Advanced";
 import June2026SuperintelligenceBreakthroughBanner from "./components/June2026SuperintelligenceBreakthroughBanner";
@@ -63,17 +67,17 @@ export default function App(): JSX.Element {
       {/* NEW: June 2026 Content Showcase Banner - Featured Content */}
       <June2026ContentShowcaseBanner />
       
-      {/* NEW: May 2026 Revolutionary Breakthrough Banner - Most Prominent */}
-      <May2026RevolutionaryBreakthroughBanner />
-      
-      {/* NEW: May 2026 Content Showcase - Featured Content */}
-      <May2026ContentShowcase />
-      
       {/* NEW: June 2026 Mega Enterprise Automation Banner - Most Prominent */}
       <June2026MegaAutomationBanner />
       
       {/* NEW: Interactive Content Showcase 2026 Advanced */}
       <InteractiveContentShowcase2026Advanced />
+      
+      {/* NEW: May 2026 Revolutionary Breakthrough Banner - Most Prominent */}
+      <May2026RevolutionaryBreakthroughBanner />
+      
+      {/* NEW: May 2026 Content Showcase - Featured Content */}
+      <May2026ContentShowcase />
       
       {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
       <April2026MegaBreakthroughBanner />
