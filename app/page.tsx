@@ -239,11 +239,11 @@ export default function HomePage() {
                 <p className="text-gray-300 mt-1 text-sm">SLIs tied to KPIs with budgets and rollback.</p>
               </div>
             </Link>
-            <Link href="/blog/edge-consentless-analytics-2026" className="group">
+            <Link href="/blog/ai-infrastructure-automation-2026" className="group">
               <div className="bg-white/5 border border-white/10 rounded-xl p-5 hover:border-cyan-400/40 transition-colors">
-                <div className="mb-2"><span className="text-xs px-2 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">Analytics</span></div>
-                <h3 className="text-lg font-bold group-hover:text-cyan-300">Edge Analytics 2026: Consent-Safe Insights</h3>
-                <p className="text-gray-300 mt-1 text-sm">Scoped IDs, on-device aggregation, and DP noise.</p>
+                <div className="mb-2"><span className="text-xs px-2 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">Infrastructure</span></div>
+                <h3 className="text-lg font-bold group-hover:text-cyan-300">AI Infrastructure Automation 2026</h3>
+                <p className="text-gray-300 mt-1 text-sm">99.99% uptime, 70% cost reduction, 8‑minute MTTR.</p>
               </div>
             </Link>
           </div>
