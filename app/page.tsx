@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import ContentShowcase from '../components/ContentShowcase';
+import NewContentBanner from '../components/NewContentBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -103,6 +105,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* New Content Banner */}
+      <NewContentBanner />
+
+      {/* Content Showcase */}
+      <ContentShowcase />
 
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
