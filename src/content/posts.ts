@@ -19,6 +19,33 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
+    slug: "ai-2027-operational-trust-blueprint",
+    title: "AI 2027: Operational Trust Blueprint",
+    description: "SLIs wired to KPIs with budgets, canaries, and instant rollback for safe autonomy.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-2027-zero-pii-analytics-v3",
+    title: "Zero‑PII Edge Analytics v3 (2027): Insights Under 100ms",
+    description: "Scoped IDs, on‑device aggregation, and DP noise deliver global insights with zero PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "agentops-2026-instant-rollback-playbook",
+    title: "AgentOps 2026: Instant Rollback Playbook",
+    description: "Budgets, KPI‑linked canaries, and one‑click rollback that teams actually adopt.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "edge-consentless-analytics-2027",
     title: "Edge Consentless Analytics 2027: Zero‑PII Insights at <100ms",
     description: "Scoped IDs, on‑device aggregation, and DP noise for global analytics without PII.",
