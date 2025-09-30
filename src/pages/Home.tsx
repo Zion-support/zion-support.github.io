@@ -529,6 +529,7 @@ const Home = () => {
           <TrendingContentBanner />
         </div>
         
+<<<<<<< HEAD
         {/* New Comprehensive Promotional Banner */}
         <div className="container mx-auto px-6 mt-6">
           <ComprehensivePromoBanner variant="hero" showCount={4} />
@@ -544,6 +545,8 @@ const Home = () => {
           <NewServicesPromoBanner variant="showcase" showCount={3} featuredOnly={true} />
         </div>
         
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
         {/* Content Promotion Banner */}
         {/* <ContentPromotionBanner
           variant="info"

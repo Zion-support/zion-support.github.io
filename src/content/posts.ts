@@ -10,6 +10,7 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
     slug: "ai-unified-observability-platform-2025",
     title: "Unified AI Observability Platform: Complete Stack Visibility in 2025",
     description: "Master end-to-end AI observability with distributed tracing, real-time metrics, and intelligent alerting. Achieve 99.9% system reliability with unified monitoring across your entire AI stack.",
@@ -24,10 +25,19 @@ export const posts: BlogPost[] = [
     description: "Implement comprehensive AI governance achieving 100% regulatory compliance with EU AI Act, GDPR, and SOC 2. Learn model versioning, bias detection, and automated compliance reporting.",
     category: "AI Governance",
     publishedAt: "2025-09-30",
+=======
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    publishedAt: "2025-09-29",
+>>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
     featured: true,
     readTime: "22 min read"
   },
   {
+<<<<<<< HEAD
     slug: "ai-edge-inference-optimization-2025",
     title: "Edge AI Inference Optimization: 1000x Performance Gains",
     description: "Achieve sub-10ms inference at the edge with model quantization, pruning, and neuromorphic computing. Deploy AI on resource-constrained devices with 1000x better energy efficiency.",
@@ -82,6 +92,8 @@ export const posts: BlogPost[] = [
     readTime: "6 min read"
   },
   {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
     slug: "secure-ml-supply-chain-2026",
     title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
     description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
@@ -756,15 +768,24 @@ export const posts: BlogPost[] = [
   }
   ,
   {
+<<<<<<< HEAD
     slug: "ai-risk-budgets-2026",
     title: "AI Risk Budgets 2026: Ship Faster With Guardrails",
     description: "Budget actions, tokens, and tools so teams move quickly with safe, measurable automation.",
     category: "AI Governance",
     publishedAt: "2025-10-13",
+=======
+    slug: "ai-autonomous-incident-runbooks-2025",
+    title: "AI Autonomous Incident Runbooks: Budgeted Actions and Instant Rollback",
+    description: "Design incident playbooks with explicit budgets, approvals, and safe automated rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-29",
+>>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
     featured: true,
     readTime: "7 min read"
   },
   {
+<<<<<<< HEAD
     slug: "privacy-preserving-agents-2026",
     title: "Privacy‑Preserving Agents 2026: On‑Device Tools and Scoped Telemetry",
     description: "Design assistants that protect users with local tools, encrypted caches, and DP‑backed analytics.",
@@ -842,10 +863,37 @@ export const posts: BlogPost[] = [
     description: "Monitor model performance in real‑time with automated drift detection and instant rollbacks.",
     category: "MLOps",
     publishedAt: "2025-09-30",
+=======
+    slug: "privacy-first-feature-flags-2025",
+    title: "Privacy‑First Feature Flags: Zero‑Regret Rollouts at the Edge",
+    description: "Scoped IDs, on‑device filters, and geo budgets for safe global releases under 100ms.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "platform-roi-scorecards-quickstart-2025",
+    title: "Platform ROI Scorecards: A Practical Quickstart",
+    description: "Link platform telemetry to adoption and revenue with scorecards engineers actually use.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  }
+  ,
+  {
+    slug: "ai-supply-chain-optimization-2025",
+    title: "AI Supply Chain Optimization: 65% Faster Deliveries Under Budget",
+    description: "From demand sensing to route optimization—AI patterns that cut costs and boost OTIF.",
+    category: "Applied AI",
+    publishedAt: "2025-09-29",
+>>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
     featured: true,
     readTime: "7 min read"
   },
   {
+<<<<<<< HEAD
     slug: "sovereign-ai-infrastructure-2026",
     title: "Sovereign AI Infrastructure 2026: Data Residency Meets Performance",
     description: "Build AI systems that comply with data sovereignty requirements without sacrificing speed or scale.",
@@ -1033,5 +1081,33 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "16 min read"
+=======
+    slug: "privacy-first-observability-quickstart-2025",
+    title: "Privacy‑First Observability Quickstart: Scoped IDs and Redaction",
+    description: "Ship signal‑rich telemetry without PII risk using scoped identifiers and field‑level filters.",
+    category: "Observability",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "6 min read"
+  }
+  ,
+  {
+    slug: "ai-sre-blueprints-2026",
+    title: "AI SRE Blueprints 2026: Error Budgets, Rollbacks, and Live Traces",
+    description: "Design SRE guardrails for AI systems: quality/error budgets, rollback triggers, and trace-driven remediation.",
+    category: "AI Operations",
+    publishedAt: "2025-10-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-first-ab-testing-2026",
+    title: "Privacy‑First A/B Testing 2026: Insights Without PII",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant experiments that still drive decisions.",
+    category: "Analytics",
+    publishedAt: "2025-10-29",
+    featured: false,
+    readTime: "7 min read"
+>>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
   }
 ];

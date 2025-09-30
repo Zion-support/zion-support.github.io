@@ -60,6 +60,7 @@ import Revolutionary2026ContentMegaBanner from '../components/Revolutionary2026C
 import UltimateContent2026MegaBanner from '../components/UltimateContent2026MegaBanner';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
+<<<<<<< HEAD
 import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
 import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
@@ -83,6 +84,19 @@ import AI2027RevolutionaryBreakthroughBanner from '../components/AI2027Revolutio
 import NewestContent2025Banner from '../components/NewestContent2025Banner';
 import September30FreshContent2025Banner from '../components/September30FreshContent2025Banner';
 import September30FreshContentBanner from '../components/September30FreshContentBanner';
+=======
+import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
+import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
+import LatestContent2026Banner from '../components/LatestContent2026Banner';
+import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
+import LatestContentPromotionalBanner from '../components/LatestContentPromotionalBanner';
+import NewContentPromotionalBanner2026 from '../components/NewContentPromotionalBanner2026';
+import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import UltimateContent2026Showcase from '../components/UltimateContent2026Showcase';
+>>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -495,6 +509,21 @@ export default function HomePage() {
       <WorkflowAutomationBanner />
       <AIAnalyticsBanner />
       
+<<<<<<< HEAD
+=======
+      {/* New Content Promotional Banner 2026 */}
+      <NewContentPromotionalBanner2026 />
+      
+      {/* AI Innovation Showcase Banner 2026 */}
+      <AIInnovationShowcaseBanner2026 />
+      
+      {/* Revolutionary 2026 Content Banner */}
+      <Revolutionary2026ContentBanner />
+      
+      {/* Ultimate Content 2026 Showcase */}
+      <UltimateContent2026Showcase />
+      
+>>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <div className="max-w-4xl mx-auto px-4">

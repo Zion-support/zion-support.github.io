@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 export const metadata = {
   title: 'AI Space Technology 2026: Autonomous Space Operations & Satellite Intelligence | Zion Tech Group',
   description: 'Revolutionary AI space technology achieving 99.9% autonomous operations, $2.3B cost savings, and 500% efficiency gains in satellite management and space exploration.',
@@ -19,10 +20,13 @@ export const metadata = {
       },
     ],
   },
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
 };
 
 export default function AISpaceTech2026() {
   return (
+<<<<<<< HEAD
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
         <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
@@ -64,6 +68,8 @@ export default function AISpaceTech2026() {
               <div className="text-3xl font-bold text-orange-600">24/7</div>
               <div className="text-sm text-gray-600">Continuous Operations</div>
             </div>
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
           </div>
         </div>
 
@@ -170,6 +176,7 @@ export default function AISpaceTech2026() {
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4">🔬 Technical Architecture</h3>
         
+<<<<<<< HEAD
         <p className="text-lg text-gray-700 mb-6">
           Our AI space technology platform consists of four integrated systems:
         </p>
@@ -331,6 +338,84 @@ export default function AISpaceTech2026() {
           </div>
         </div>
       </div>
+=======
+        <div className="space-y-8">
+          <div className="bg-white border border-gray-200 rounded-xl p-8">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Autonomous Mission Control Systems</h3>
+            <p className="text-gray-700 mb-6">
+              Advanced AI systems now enable spacecraft to make critical decisions independently, 
+              responding to unexpected situations without ground control intervention.
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-blue-50 rounded-lg p-6">
+                <h4 className="font-semibold text-gray-900 mb-3">Core Capabilities</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• Real-time trajectory optimization</li>
+                  <li>• Autonomous collision avoidance</li>
+                  <li>• Self-healing system diagnostics</li>
+                  <li>• Intelligent resource management</li>
+                  <li>• Emergency response protocols</li>
+                </ul>
+              </div>
+              <div className="bg-green-50 rounded-lg p-6">
+                <h4 className="font-semibold text-gray-900 mb-3">Performance Metrics</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• 99.9% autonomous decision accuracy</li>
+                  <li>• <1ms response time for critical decisions</li>
+                  <li>• 95% reduction in ground control dependency</li>
+                  <li>• 60% improvement in mission efficiency</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-xl p-8">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Intelligent Spacecraft Swarms</h3>
+            <p className="text-gray-700 mb-6">
+              Coordinated fleets of AI-powered spacecraft working together to achieve complex 
+              mission objectives with unprecedented efficiency and reliability.
+            </p>
+            
+            <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg p-6">
+              <h4 className="font-semibold text-gray-900 mb-4">Swarms in Action</h4>
+              <div className="grid md:grid-cols-3 gap-4 text-sm">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-600">50+</div>
+                  <div className="text-gray-600">Satellites Coordinated</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-8 text-white text-center">
+        <h2 className="text-3xl font-bold mb-4">Ready to Launch Your Space AI Mission?</h2>
+        <p className="text-xl mb-6 opacity-90">
+          Partner with us to develop cutting-edge AI solutions for space exploration and operations.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            href="/services/ai-space-technology"
+            className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            Explore Space AI Services
+          </Link>
+          <Link
+            href="/contact"
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+          >
+            Schedule Mission Consultation
+          </Link>
+        </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
     </div>
   );
 }
