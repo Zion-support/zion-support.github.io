@@ -206,6 +206,24 @@ const Home = () => {
                 <div className="text-zion-slate-light text-sm mt-1">Zero‑PII signals at &lt;100ms with scoped IDs, edge aggregation, DP.</div>
               </Link>
             </div>
+            {/* Newly created articles – highlight */}
+            <div className="grid md:grid-cols-3 gap-4 mt-4">
+              <Link to="/blog/ai-operational-trust-scorecards-2026" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
+                <div className="text-purple-300 text-xs mb-2">AI Operations</div>
+                <div className="text-white font-semibold">AI Operational Trust Scorecards 2026</div>
+                <div className="text-zion-slate-light text-sm mt-1">SLIs → KPIs with budgets, canaries, and instant rollback.</div>
+              </Link>
+              <Link to="/blog/edge-zero-pii-analytics-2026" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">Analytics</div>
+                <div className="text-white font-semibold">Zero‑PII Edge Analytics 2026</div>
+                <div className="text-zion-slate-light text-sm mt-1">Scoped IDs, edge aggregation, DP noise at &lt;100ms.</div>
+              </Link>
+              <Link to="/blog/agent-release-zero-regret-2026" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">AI Operations</div>
+                <div className="text-white font-semibold">Zero‑Regret Agent Releases 2026</div>
+                <div className="text-zion-slate-light text-sm mt-1">Budgeted actions, KPI canaries, and instant rollback.</div>
+              </Link>
+            </div>
           </div>
         </div>
 
