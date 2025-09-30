@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-2027-operational-risk-budgets",
+    slug: "ai-2027-operational-risk-budgets",
+    title: "AI 2027: Operational Risk Budgets",
+    description: "KPI‑linked canaries, budgeted actions, and instant rollback for safe autonomy.",
+    excerpt: "Design operational risk budgets that keep teams fast and incidents contained.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Strategy",
+    tags: ["Risk Budgets", "Canaries", "Rollback"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/ai-operational-risk-budgets-2027.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2027-consentless-analytics-v4",
+    slug: "edge-2027-consentless-analytics-v4",
+    title: "Edge 2027: Consentless Analytics v4",
+    description: "Zero‑PII analytics with scoped IDs, on‑device aggregation, and DP under 100ms.",
+    excerpt: "Actionable, compliant analytics at the edge without PII risk.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Analytics",
+    tags: ["Edge", "Privacy", "DP"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-consentless-analytics-v4-2027.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-trust-scorecards-v5-2027",
     slug: "ai-trust-scorecards-v5-2027",
     title: "AI Trust Scorecards v5 (2027): KPIs, Budgets, Rollback",

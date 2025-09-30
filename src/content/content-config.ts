@@ -665,6 +665,26 @@ export const getLatestContent = (count: number = 5): FeaturedItem[] => {
     .slice(0, count);
 };
 
+// Sept 30, 2025 – Advertise brand-new guides site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2027-operational-risk-budgets",
+    title: "AI 2027: Operational Risk Budgets",
+    description: "Budgets, KPI canaries, and instant rollback for safe autonomy",
+    link: "/blog/ai-2027-operational-risk-budgets",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2027-consentless-analytics-v4",
+    title: "Edge 2027: Consentless Analytics v4",
+    description: "Zero‑PII analytics with scoped IDs, edge aggregation, and DP noise",
+    link: "/blog/edge-2027-consentless-analytics-v4",
+    type: "article",
+    featured: true
+  }
+);
+
 // Add brand-new featured items to advertise site-wide (Feb 2027 / Oct 2026)
 featuredBlogPosts.unshift(
   {
