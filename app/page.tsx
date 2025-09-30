@@ -190,6 +190,29 @@ export default function HomePage() {
 
       {/* 📰 Latest Content Showcase (auto-updating) */}
       <ContentShowcase title="Latest Research & Playbooks" subtitle="Fresh, high-signal guides and case studies" maxItems={6} />
+      {/* New Content Promo - Sept 30, 2025 */}
+      <div className="max-w-4xl mx-auto px-6 mt-6">
+        <div className="rounded-xl border border-white/10 bg-white/5 p-6">
+          <div className="text-white/80 text-sm mb-2">Just added</div>
+          <div className="grid md:grid-cols-3 gap-4">
+            <a href="/blog/ai-operational-trust-q4-2025" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+              <div className="text-emerald-300 text-xs mb-2">AI Operations</div>
+              <div className="text-white font-semibold">AI Operational Trust Q4 2025</div>
+              <div className="text-slate-300 text-sm mt-1">KPI‑linked guardrails with budgets and instant rollback.</div>
+            </a>
+            <a href="/blog/edge-consentless-analytics-q4-2025" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+              <div className="text-cyan-300 text-xs mb-2">Analytics</div>
+              <div className="text-white font-semibold">Consentless Edge Analytics Q4 2025</div>
+              <div className="text-slate-300 text-sm mt-1">Private metrics under 100ms with zero PII.</div>
+            </a>
+            <a href="/blog/genai-routing-quality-tiers-q4-2025" className="block rounded-lg border border-white/10 p-4 hover:border-fuchsia-400/40 transition-colors">
+              <div className="text-fuchsia-300 text-xs mb-2">GenAI</div>
+              <div className="text-white font-semibold">GenAI Routing Quality Tiers Q4 2025</div>
+              <div className="text-slate-300 text-sm mt-1">Tiered models, caching, and budget‑aware routes.</div>
+            </a>
+          </div>
+        </div>
+      </div>
       
       {/* 🌟 LATEST TRENDS SHOWCASE 2026 */}
       <LatestTrendsShowcase2026 />
@@ -204,6 +227,27 @@ export default function HomePage() {
         maxItems={6}
         showMetrics
       />
+
+      {/* 📣 New: Highlight the three latest posts */}
+      <div className="max-w-6xl mx-auto px-4 mb-10">
+        <div className="grid md:grid-cols-3 gap-4">
+          <Link href="/blog/ai-governance-real-time-2026" className="block bg-slate-800 rounded-xl border border-white/10 p-5 hover:bg-slate-700 transition-colors">
+            <div className="text-xs uppercase tracking-wide text-fuchsia-300 mb-1">New</div>
+            <h3 className="text-lg font-semibold mb-1">AI Governance in Real Time 2026</h3>
+            <p className="text-slate-300 text-sm">Live canaries + PR policy tests so teams ship weekly.</p>
+          </Link>
+          <Link href="/blog/edge-inference-warm-pools-2026" className="block bg-slate-800 rounded-xl border border-white/10 p-5 hover:bg-slate-700 transition-colors">
+            <div className="text-xs uppercase tracking-wide text-blue-300 mb-1">New</div>
+            <h3 className="text-lg font-semibold mb-1">Edge Inference Warm Pools 2026</h3>
+            <p className="text-slate-300 text-sm">Sub‑100ms global with warm pools and tiered caches.</p>
+          </Link>
+          <Link href="/blog/agent-release-guardrails-2026" className="block bg-slate-800 rounded-xl border border-white/10 p-5 hover:bg-slate-700 transition-colors">
+            <div className="text-xs uppercase tracking-wide text-emerald-300 mb-1">New</div>
+            <h3 className="text-lg font-semibold mb-1">Agent Release Guardrails 2026</h3>
+            <p className="text-slate-300 text-sm">Budgets, approvals, KPI canaries, instant rollback.</p>
+          </Link>
+        </div>
+      </div>
       
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />

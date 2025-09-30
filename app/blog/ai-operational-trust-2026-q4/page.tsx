@@ -62,6 +62,30 @@ export default function AIOperationalTrust2026Q4() {
 import React from 'react';
 
 export const metadata = {
+  title: 'AI Operational Trust 2026 Q4: SLIs, Budgets, Rollback',
+  description: 'Outcome‑linked SLIs, budgeted actions, and one‑click rollback for safe autonomy.',
+};
+
+export default function Page() {
+  return (
+    <main className="max-w-3xl mx-auto px-6 py-16">
+      <h1 className="text-3xl font-bold mb-4">AI Operational Trust 2026 Q4</h1>
+      <p className="text-gray-600 mb-8">SLIs tied to KPIs with budgeted actions and instant rollback.</p>
+      <div className="prose prose-invert">
+        <p>
+          This article outlines practical patterns for wiring service‑level indicators to measurable
+          outcomes with guardrails, approvals, and rollback playbooks that keep velocity high without
+          compromising reliability.
+        </p>
+      </div>
+    </main>
+  );
+}
+
+// @ts-nocheck
+import React from 'react';
+
+export const metadata = {
   title: 'AI Operational Trust 2026 Q4: SLIs, Budgets, Instant Rollback',
   description: 'Blueprint to tie SLIs to product KPIs with budgeted actions, live canaries, and one‑click rollback.'
 };
