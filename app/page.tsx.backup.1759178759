@@ -34,31 +34,6 @@ import {
   PlatformArchitectureBanner,
   AutonomousOperationsSuccessBanner,
   NewContentShowcaseBanner2026,
-<<<<<<< HEAD
-  Latest2026ContentBanner as NewLatest2026ContentBanner,
-  AIAutonomousCloudOpsBanner,
-  AIFinTechTransformationBanner,
-  AIRetailAutomationBanner,
-  AINextGenAutomationBanner,
-  AICustomerExperienceRevolutionBanner,
-  AITransformationMegaSuccessBanner,
-  AIInnovationShowcase2026Banner,
-  AIBusinessTransformation2026Banner,
-  AISuccessStories2026Banner
-=======
-  LatestContent2026Banner,
-  AISecurityEnterprise2026Banner,
-  AIMultimodalEnterprise2026Banner,
-  AISustainabilityTransformationBanner,
-  NewLatest2026ContentBanner,
-  AIAutonomousCloudOpsBanner,
-  AIFinTechTransformationBanner,
-  AIRetailAutomationBanner,
-  Latest2026ContentBanner,
-  AIOperationalExcellenceBanner,
-  AIAgentObservabilityBanner,
-  ManufacturingTransformationBanner
->>>>>>> origin/cursor/create-and-deploy-new-content-cbbd
 } from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
@@ -1067,12 +1042,6 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
- 
->>>>>>> feature/add-more-content-and-advertise
             <Link href="/blog/agentic-workflow-orchestration-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">

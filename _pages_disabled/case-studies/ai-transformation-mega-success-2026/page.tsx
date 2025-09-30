@@ -5,7 +5,6 @@ import { Metadata } from 'next';
 export const metadata = {
   title: 'AI Transformation Mega Success 2026: $25M ROI Case Study',
   description: 'See how a Fortune 500 company achieved $25M ROI with comprehensive AI transformation. 99% automation, 90% cost reduction, and complete business revolution.',
-=======
   keywords: 'AI transformation, ROI, case study, Fortune 500, automation, cost reduction',
 };
 
@@ -13,13 +12,11 @@ export default function AITransformationMegaSuccess2026() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <article className="prose prose-lg max-w-none">
-=======
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-4">
             <span className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
               NEW 2026
             </span>
-=======
             <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">
               Fortune 500
             </span>
@@ -38,7 +35,6 @@ export default function AITransformationMegaSuccess2026() {
           </section>
         </div>
 
-=======
           </p>
           <div className="flex items-center gap-6 text-sm text-gray-500">
             <span>📅 Published: January 20, 2026</span>

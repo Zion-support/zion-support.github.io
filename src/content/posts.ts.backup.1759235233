@@ -1428,125 +1428,23 @@ posts.push(
   }
 );
 
-<<<<<<< HEAD
-// Sept 30, 2025 – Fresh drop to expand catalog and advertise on Home (v4)
-posts.push(
-  {
-    slug: "ai-operational-scorecards-v4-2026",
-    title: "AI Operational Scorecards v4 (2026): SLIs, Budgets, Rollback",
-    description: "Fourth‑gen scorecards wiring SLIs to KPIs with budgeted actions and instant rollback teams adopt fast.",
-    category: "AI Operations",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
   },
   {
-    slug: "edge-zero-pii-insights-2026",
-    title: "Edge Zero‑PII Insights 2026: Actionable Metrics at <100ms",
-    description: "On‑device aggregation, scoped IDs, and DP noise enabling trustworthy analytics without collecting PII.",
     category: "Analytics",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
   },
   {
-    slug: "genai-quality-tiers-v2-2026",
-    title: "GenAI Quality Tiers v2 (2026): Predictable Cost, Stable UX",
-    description: "Tier models, add semantic caches, and route by SLA using eval signals to cut spend 30–60%.",
-    category: "GenAI",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
   }
 );
 
-// Sept 30, 2025 – Brand-new content to advertise on homepage (fresh trio v3)
-posts.push(
-  {
-    slug: "ai-operational-trust-scorecards-v2-2026",
-    title: "AI Operational Trust Scorecards v2 (2026): SLIs, Budgets, Rollback",
-    description: "Second‑gen scorecards wiring SLIs to KPIs with budgeted actions and instant rollback.",
-    category: "AI Operations",
-=======
-// Sept 30, 2025 – Brand-new content to advertise on homepage (fresh trio v3)
-posts.push(
-  {
-    slug: "ai-sla-scorecards-2026-q1",
-    title: "AI SLA Scorecards 2026 Q1: SLIs, Budgets, Rollback",
-    description: "Operational scorecards tying model SLIs to KPIs with budgeted actions and instant rollback.",
-    category: "AI Governance",
->>>>>>> origin/cursor/create-and-deploy-new-content-acd2
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-<<<<<<< HEAD
-    slug: "edge-private-insights-blueprint-2026",
-    title: "Edge Private Insights Blueprint 2026: Zero‑PII Analytics at <100ms",
-    description: "On‑device aggregation, scoped IDs, and DP noise that unlock compliant insights without latency tax.",
-=======
-    slug: "edge-private-insights-v2-2026",
-    title: "Edge Private Insights v2 (2026): Scoped IDs, DP Noise, <100ms",
-    description: "Second‑gen private analytics with on‑device aggregation, scoped IDs, and differential privacy under 100ms.",
->>>>>>> origin/cursor/create-and-deploy-new-content-acd2
-    category: "Analytics",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-<<<<<<< HEAD
-    slug: "genai-routing-quality-tiers-2026",
-    title: "GenAI Routing Quality Tiers 2026: Stable UX Under Budget",
-    description: "Tier models, add caches, and route by SLA using eval signals to cut spend 30–60%.",
-    category: "GenAI",
-=======
-    slug: "agent-release-runbooks-v2-2026",
-    title: "Agent Release Runbooks v2 (2026): Budgets, Canaries, Recovery",
-    description: "Upgraded runbooks with KPI‑linked canaries, budgeted actions, sandboxed tools, and one‑click recovery.",
-    category: "AI Operations",
->>>>>>> origin/cursor/create-and-deploy-new-content-acd2
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  }
-);
-
-<<<<<<< HEAD
-// New: Additional fresh content to surface on homepage (promoted trio)
-posts.push(
-  {
-    slug: "ai-operational-risk-budgets-2026",
-    title: "AI Operational Risk Budgets 2026: Ship Faster, Stay Safe",
-    description: "Budget actions and tokens, wire canaries to KPIs, and enable instant rollback for safe autonomy at scale.",
-    category: "AI Operations",
-    publishedAt: "2026-04-01",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "edge-zero-pii-personalization-2026",
-    title: "Edge Zero‑PII Personalization 2026: Private <100ms Experiences",
-    description: "Scoped IDs, on‑device models, and DP noise for compliant, sub‑100ms personalization worldwide.",
-    category: "Edge Computing",
-    publishedAt: "2026-04-01",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "genai-quality-tiers-at-scale-2026",
-    title: "GenAI Quality Tiers at Scale 2026: Predictable Cost, Stable UX",
-    description: "Tier models, add semantic caches, and route by SLA using eval signals to cut spend 30–60% without hurting UX.",
-    category: "GenAI",
-    publishedAt: "2026-04-01",
-    featured: true,
-    readTime: "8 min read"
-  }
-);
-
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-acd2
 // Jan 2026 – New articles to create more content and advertise on Home
 posts.push(
   {

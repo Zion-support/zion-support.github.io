@@ -853,12 +853,6 @@ export default function HomePage() {
         </div>
       </section>
         {/* Featured Services */}
-<<<<<<< HEAD
-=======
-        {
-          /* eslint-disable-next-line */
-        }
->>>>>>> origin/cursor/create-and-deploy-new-content-4791
         <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">

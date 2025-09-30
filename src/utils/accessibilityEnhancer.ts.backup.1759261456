@@ -42,11 +42,6 @@ class AccessibilityEnhancer {
     };
   }
 
-<<<<<<< HEAD
-  public init(): void {
-=======
-  public initialize(): void {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4ea2
     if (this.isInitialized || typeof window === 'undefined') return;
     
     this.isInitialized = true;
@@ -58,14 +53,6 @@ class AccessibilityEnhancer {
     this.observeAccessibility();
   }
 
-<<<<<<< HEAD
-  // Added for compatibility with callers that expect an initialize() method
-  public initialize(): void {
-    this.init();
-  }
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4ea2
   private setupKeyboardNavigation(): void {
     if (!this.config.keyboardNavigation) return;
 
@@ -88,17 +75,6 @@ class AccessibilityEnhancer {
       }
 
       // Arrow key navigation for menus
-<<<<<<< HEAD
-      if ((event as KeyboardEvent).key === 'ArrowDown' || (event as KeyboardEvent).key === 'ArrowUp') {
-        const menu = document.querySelector('[role="menu"]:focus-within');
-        if (menu) {
-          this.handleMenuNavigation(event as KeyboardEvent, menu as HTMLElement);
-=======
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-        const menu = document.querySelector('[role="menu"]:focus-within') as HTMLElement | null;
-        if (menu) {
-          this.handleMenuNavigation(event as KeyboardEvent, menu);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4ea2
         }
       }
     });
@@ -109,17 +85,6 @@ class AccessibilityEnhancer {
 
     // Trap focus in modals
     document.addEventListener('keydown', (event) => {
-<<<<<<< HEAD
-      if ((event as KeyboardEvent).key === 'Tab') {
-        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
-        if (modal) {
-          this.trapFocus(event as KeyboardEvent, modal as HTMLElement);
-=======
-      if (event.key === 'Tab') {
-        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]') as HTMLElement | null;
-        if (modal) {
-          this.trapFocus(event as KeyboardEvent, modal);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4ea2
         }
       }
     });
@@ -393,16 +358,5 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
 if (typeof window !== 'undefined') {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-<<<<<<< HEAD
-      accessibilityEnhancer.init();
-    });
-  } else {
-    accessibilityEnhancer.init();
-=======
-      accessibilityEnhancer.initialize();
-    });
-  } else {
-    accessibilityEnhancer.initialize();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4ea2
   }
 }

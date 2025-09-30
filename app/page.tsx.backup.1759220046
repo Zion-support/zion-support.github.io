@@ -107,17 +107,6 @@ import Revolutionary2026ContentBanner from '../components/Revolutionary2026Conte
 import UltimateContent2026Showcase from '../components/UltimateContent2026Showcase';
 import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
 import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
-<<<<<<< HEAD
-import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
-import AIMetaCognitiveRevolutionBanner from '../components/AIMetaCognitiveRevolutionBanner';
-import AINeuromorphicRevolutionBanner from '../components/AINeuromorphicRevolutionBanner';
-import Ultimate2026ContentRevolutionBanner from '../components/Ultimate2026ContentRevolutionBanner';
-=======
-// import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
-import QuantumAI2027BreakthroughBanner from '../components/QuantumAI2027BreakthroughBanner';
-import AutonomousBusinessIntelligence2026Banner from '../components/AutonomousBusinessIntelligence2026Banner';
-import NewContent2027ShowcaseBanner from '../components/NewContent2027ShowcaseBanner';
->>>>>>> origin/cursor/create-and-deploy-new-content-a50a
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -160,25 +149,6 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
-<<<<<<< HEAD
-      {/* 🚀 NEWEST BREAKTHROUGH CONTENT - January 2026 - Revolutionary AI Technologies! */}
-      <Ultimate2026ContentRevolutionBanner />
-      
-      {/* 🧠 AI Meta-Cognitive Reasoning Revolution */}
-      <AIMetaCognitiveRevolutionBanner />
-      
-      {/* ⚡ Neuromorphic Enterprise Computing Revolution */}
-      <AINeuromorphicRevolutionBanner />
-=======
-      {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
-      <NewContent2027ShowcaseBanner />
-      
-      {/* 🚀 QUANTUM AI 2027 BREAKTHROUGH - 1000x PERFORMANCE GAINS! */}
-      <QuantumAI2027BreakthroughBanner />
-      
-      {/* 🧠 AUTONOMOUS BUSINESS INTELLIGENCE 2026 - 300% ROI IMPROVEMENTS! */}
-      <AutonomousBusinessIntelligence2026Banner />
->>>>>>> origin/cursor/create-and-deploy-new-content-a50a
       
       {/* 🚀 MEGA CONTENT UPDATE - September 30, 2025 - 116+ NEW RESOURCES! */}
       {/* <NewContentShowcase2026 /> */}

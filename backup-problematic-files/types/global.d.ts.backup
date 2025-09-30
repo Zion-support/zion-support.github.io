@@ -73,8 +73,3 @@ declare namespace NodeJS {
   }
 }
 
-<<<<<<< HEAD
-export {};
-=======
-
->>>>>>> main

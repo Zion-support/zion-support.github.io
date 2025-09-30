@@ -1201,59 +1201,14 @@ posts.push(
   }
 );
 
-<<<<<<< HEAD
-// Feb 10, 2026 – Brand‑new featured posts to surface on homepage
-posts.push(
-  {
-    slug: "genai-routing-playbook-2026-v2",
-    title: "GenAI Routing Playbook v2 (2026): Quality Tiers Under Budget",
-    description: "Tier models, cache prompts, and KPI‑linked routes for stable UX at 30–60% lower cost.",
-    category: "GenAI",
-    publishedAt: "2025-10-31",
-=======
-// Sept 30, 2025 – Additional new posts to advertise on homepage
-posts.push(
-  {
-    slug: "ai-agent-reliability-playbook-2026",
-    title: "AI Agent Reliability Playbook 2026: SLOs, Budgets, Rollbacks",
-    description: "Design reliable agent systems with explicit SLOs, budgeted actions, and instant rollback triggers.",
-    category: "AI Engineering",
-    publishedAt: "2025-09-30",
->>>>>>> origin/cursor/create-and-deploy-new-content-1e10
     featured: true,
     readTime: "8 min read"
   },
   {
-<<<<<<< HEAD
-    slug: "agent-release-checklists-2026-v2",
-    title: "Agent Release Checklists 2026: Budgets, Canaries, Instant Rollback",
-    description: "Battle‑tested checklists for safe agent releases with budgeted actions and KPI‑linked canaries.",
-    category: "AI Operations",
-    publishedAt: "2025-10-31",
-=======
-    slug: "privacy-safe-feature-flags-2026",
-    title: "Privacy‑Safe Feature Flags 2026: Sub‑100ms Global Releases",
-    description: "Edge flags with scoped IDs, geo budgets, and DP noise for compliant, fast rollouts.",
-    category: "Architecture",
-    publishedAt: "2025-09-30",
->>>>>>> origin/cursor/create-and-deploy-new-content-1e10
     featured: true,
     readTime: "7 min read"
   },
   {
-<<<<<<< HEAD
-    slug: "privacy-first-telemetry-2026-v2",
-    title: "Privacy‑First Telemetry 2026: Signal‑Rich Analytics Without PII",
-    description: "Scoped IDs, edge aggregation, and DP noise for insights teams love—compliance included.",
-    category: "Analytics",
-    publishedAt: "2025-10-31",
-=======
-    slug: "platform-roi-scorecards-quickstart-2026",
-    title: "Platform ROI Scorecards Quickstart 2026: Prove Value Fast",
-    description: "Lightweight scorecards that link golden paths to adoption, SLOs, and revenue.",
-    category: "Platform Engineering",
-    publishedAt: "2025-09-30",
->>>>>>> origin/cursor/create-and-deploy-new-content-1e10
     featured: true,
     readTime: "6 min read"
   }

@@ -1,21 +1,5 @@
 // @ts-nocheck
 import React from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-import Revolutionary2027ContentMegaBanner from '../components/Revolutionary2027ContentMegaBanner';
-import Ultimate2027BreakthroughBanner from '../components/Ultimate2027BreakthroughBanner';
-import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
-import Revolutionary2026ContentAdvertisingBanner from '../components/Revolutionary2026ContentAdvertisingBanner';
-import January2026BreakthroughShowcaseBanner from '../components/January2026BreakthroughShowcaseBanner';
-import Ultimate2026ContentPromotionalBanner from '../components/Ultimate2026ContentPromotionalBanner';
-import January2026QuantumNeuralSuperintelligenceBanner from '../components/January2026QuantumNeuralSuperintelligenceBanner';
-import January2026HyperAutomationRevolutionBanner from '../components/January2026HyperAutomationRevolutionBanner';
-import January2027MetaCognitiveSuperintelligenceBanner from '../components/January2027MetaCognitiveSuperintelligenceBanner';
-=======
-import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
-import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
-import Ultimate2026ContentShowcase from '../components/Ultimate2026ContentShowcase';
->>>>>>> origin/cursor/create-and-deploy-new-content-65ae
 
 export default function HomePage() {
   return (
@@ -39,47 +23,11 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
             <div className="text-white font-semibold">Latest Revolutionary Breakthroughs</div>
             <div className="flex flex-wrap gap-2">
-<<<<<<< HEAD
-              <Link href="/blog/ai-2027-quantum-consciousness-fusion-breakthrough" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Quantum Consciousness 100,000x<span>→</span></Link>
-              <Link href="/blog/ai-2028-autonomous-enterprise-revolution" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">99.9% Autonomous Enterprise<span>→</span></Link>
-              <Link href="/case-studies/ai-2027-consciousness-fusion-mega-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$2.5B ROI Success<span>→</span></Link>
-              <Link href="/case-studies/ai-2028-autonomous-enterprise-mega-success" className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-200 border border-orange-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-orange-500/30 transition-colors">$5B ROI Success<span>→</span></Link>
-              <Link href="/blog/ai-2026-quantum-neural-fusion-breakthrough" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Quantum-Neural Fusion<span>→</span></Link>
-              <Link href="/blog/ai-enterprise-automation-2026-mega-guide" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">Enterprise Automation Guide<span>→</span></Link>
-              <Link href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$2.3B Success Story<span>→</span></Link>
-              <Link href="/blog/ai-2026-neural-optimization-revolution" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">Neural Optimization 1000x<span>→</span></Link>
-=======
-              <a href="/blog/ai-2026-multimodal-enterprise-automation" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">Multimodal Automation<span>→</span></a>
-              <a href="/blog/ai-2026-quantum-enhanced-machine-learning" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Quantum ML<span>→</span></a>
-              <a href="/blog/ai-2026-autonomous-business-operations" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">Autonomous Ops<span>→</span></a>
->>>>>>> origin/cursor/create-and-deploy-new-content-65ae
             </div>
           </div>
         </div>
       </section>
       
-<<<<<<< HEAD
-      {/* New Content Showcase Banner - Featured prominently */}
-      <NewContentShowcaseBanner />
-      
-      {/* Neural Optimization Revolution Banner */}
-      <NeuralOptimizationRevolutionBanner />
-      
-      {/* Autonomous Business Process Banner */}
-      <AutonomousBusinessProcessBanner />
-      
-      {/* January 2027 Meta-Cognitive Superintelligence Banner */}
-      <January2027MetaCognitiveSuperintelligenceBanner />
-      
-      {/* January 2026 Quantum Neural Superintelligence Banner */}
-      <January2026QuantumNeuralSuperintelligenceBanner />
-      
-      {/* January 2026 Hyper-Automation Revolution Banner */}
-      <January2026HyperAutomationRevolutionBanner />
-=======
-      {/* New Content 2026 Showcase Banner - Latest Content */}
-      <NewContent2026ShowcaseBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-65ae
       
       {/* Revolutionary 2026 Content Advertising Banner */}
       
@@ -88,44 +36,6 @@ export default function HomePage() {
       {/* Revolutionary Breakthroughs Banner */}
       
       {/* New Services Banner */}
-<<<<<<< HEAD
-      <January2026NewServicesBanner />
-      
-      {/* Hero Section */}
-      <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Transform Your Business with
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
-              {' '}AI-Powered Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
-            and enterprise IT solutions that drive growth, efficiency, and innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link
-              href="/blog/ai-2026-quantum-neural-fusion-breakthrough"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
-            >
-              🔮 Read Quantum-Neural Fusion
-            </Link>
-            <Link
-              href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success"
-              className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
-            >
-              🏆 View $2.3B Success Story
-            </Link>
-          </div>
-        </div>
-      </section>
-=======
-
-      {/* New Content Advertising Banner - promotes Trustless Evaluation Blueprint (2026) */}
-      
-      {/* Legacy Content Banners */}
->>>>>>> origin/cursor/create-and-deploy-new-content-65ae
       
       <UnifiedContentPromotion />
 
