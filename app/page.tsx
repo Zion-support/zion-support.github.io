@@ -1,61 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
-import { 
-  NewBlogBanner, 
-  AnalyticsPlatformBanner, 
-  TechCorpSuccessBanner,
-  WorkflowAutomationBanner,
-  AIAnalyticsBanner,
-  HealthTechSuccessBanner,
-  ComprehensiveAIBanner,
-  EnterpriseAIBanner,
-  NewContentBanner,
-  CustomerServiceAIBanner,
-  HealthcareAIBanner,
-  RetailSuccessBanner,
-  AIContentShowcaseBanner,
-  AIRevolutionBanner,
-  AutonomousAgentsBanner,
-  AIGovernanceBanner,
-  FinTechSuccessBanner,
-  NewContentShowcaseBanner
-} from '../components/PromotionalBanner';
 import {
-  AIEnterpriseAdoptionBanner,
-  AITrends2025Banner,
-  SupplyChainOptimizationBanner,
-  AIBusinessTransformationBanner,
-  AICustomerExperienceBanner,
-  EnterpriseAITransformationBanner,
-  LatestAIInsightsBanner,
-  AIServicesShowcaseBanner,
-  AIWorkflowAutomationBanner,
-  EnterpriseAISecurityBanner,
-  MultimodalAIIntegrationBanner,
-  MultimodalAICustomerServiceBanner
-} from '../components/NewContentPromotionalBanners';
-import {
-  AIEnterpriseTransformationBanner,
-  AIAutonomousSystemsBanner,
-  ManufacturingTransformationBanner,
-  AIEnterpriseServicesBanner,
-  LatestContentShowcaseBanner,
-  InteractiveAICalculatorBanner,
-  AIInnovationShowcaseBanner
-} from '../components/NewContent2026Banners';
+  AIEnterpriseAutomationRevolutionBanner,
+  AIQuantumComputingBreakthroughBanner,
+  AIMegaTransformationSuccessBanner,
+  AI2026ContentShowcaseBanner,
+  AI2026InnovationShowcaseBanner
+} from './components/NewContent2026MegaBanners';
+import InteractiveAIROICalculator from './components/InteractiveAIROICalculator';
+import InteractiveContentShowcase2026 from './components/InteractiveContentShowcase2026';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
-import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
-import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
-import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
-import LatestContent2025Banner from '../components/LatestContent2025Banner';
-import RevolutionaryAI2025Banner from '../components/RevolutionaryAI2025Banner';
-import InteractiveAICalculator2025 from '../components/InteractiveAICalculator2025';
-import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
-import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
-import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculator';
+import InteractivePromotionalSection from './components/InteractivePromotionalSection';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -137,24 +94,13 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
-<<<<<<< HEAD
-      {/* Revolutionary AI 2025 Banner */}
-      <RevolutionaryAI2025Banner />
       
-      {/* Latest Content 2025 Banner */}
-      <LatestContent2025Banner />
-      
-      {/* Revolutionary Content 2026 Banner */}
-      <RevolutionaryContent2026Banner />
-=======
       {/* Latest 2026 Mega Content Banners */}
-      <Revolutionary2026ContentBanner />
       <AI2026ContentShowcaseBanner />
       <AIEnterpriseAutomationRevolutionBanner />
       <AIQuantumComputingBreakthroughBanner />
       <AIMegaTransformationSuccessBanner />
       <AI2026InnovationShowcaseBanner />
->>>>>>> feature/new-content-and-advertising-2026
       
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
@@ -182,19 +128,7 @@ export default function HomePage() {
       <AIWorkflowAutomationBanner />
       <EnterpriseAISecurityBanner />
       
-      {/* Existing Promotional Banners */}
-      <NewContentShowcaseBanner />
-      <AutonomousAgentsBanner />
-      <AIGovernanceBanner />
-      <FinTechSuccessBanner />
-      <AIContentShowcaseBanner />
-      <CustomerServiceAIBanner />
-      <HealthcareAIBanner />
-      <RetailSuccessBanner />
-      <AIRevolutionBanner />
-      <NewBlogBanner />
-      <WorkflowAutomationBanner />
-      <AIAnalyticsBanner />
+      {/* Existing Promotional Banners - Removed missing components */}
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -325,11 +259,6 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Interactive AI Calculator 2025 */}
-      <InteractiveAICalculator2025 />
-
-=======
       {/* Interactive AI ROI Calculator */}
       <section id="roi-calculator" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -499,7 +428,26 @@ export default function HomePage() {
                   AI Enterprise Adoption 2025: Complete Implementation Guide
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Master AI enterprise adoption with proven strategies, ROI frameworks, and implementation roadmaps. Achieve 300% ROI.
+                  See how a leading e-commerce company achieved 80% faster response times, 95% accuracy, and 60% cost reduction with multimodal AI.
+                </p>
+                <div className="flex items-center text-blue-600 font-semibold">
+                  View Case Study →
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/ai-trends-2025-enterprise-transformation" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Featured Article
+                  </span>
+                  <span className="text-sm text-gray-500">25 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AI Trends 2025: Enterprise Transformation Guide
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Discover revolutionary AI trends reshaping enterprise operations in 2025. From autonomous systems to quantum computing, achieve 300% ROI.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   Read Article →
@@ -671,10 +619,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Additional Promotional Banners */}
-      <AnalyticsPlatformBanner />
-      <HealthTechSuccessBanner />
-      <ComprehensiveAIBanner />
+      {/* Additional Promotional Banners - Removed missing components */}
 
       {/* CTA Section */}
       <section className="py-20 bg-white">
