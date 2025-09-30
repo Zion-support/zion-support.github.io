@@ -240,7 +240,7 @@ export default function HomePage() {
       <section className="py-8 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 border-y border-white/10">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-xl md:text-2xl font-bold mb-4 text-emerald-300">Brand New Guides</h2>
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-3 gap-4">
             <Link href="/blog/ai-operational-trust-scorecards-2026" className="group">
               <div className="bg-white/5 border border-white/10 rounded-xl p-5 hover:border-emerald-400/40 transition-colors">
                 <div className="mb-2"><span className="text-xs px-2 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">AI Operations</span></div>
@@ -253,6 +253,13 @@ export default function HomePage() {
                 <div className="mb-2"><span className="text-xs px-2 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">Analytics</span></div>
                 <h3 className="text-lg font-bold group-hover:text-cyan-300">Edge Analytics 2026: Consent-Safe Insights</h3>
                 <p className="text-gray-300 mt-1 text-sm">Scoped IDs, on-device aggregation, and DP noise.</p>
+              </div>
+            </Link>
+            <Link href="/blog/agent-release-guardrails-v3-2026" className="group">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-5 hover:border-fuchsia-400/40 transition-colors">
+                <div className="mb-2"><span className="text-xs px-2 py-1 rounded-full bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30">AI Operations</span></div>
+                <h3 className="text-lg font-bold group-hover:text-fuchsia-300">Agent Release Guardrails v3 (2026)</h3>
+                <p className="text-gray-300 mt-1 text-sm">Budgets, canaries, and rapid recovery playbooks.</p>
               </div>
             </Link>
           </div>
