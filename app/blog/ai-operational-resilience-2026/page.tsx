@@ -1,21 +1,4 @@
 import React from 'react';
-
-export const metadata = {
-  title: 'AI Operational Resilience 2026: Design for Failure, Recover Fast',
-  description: 'Error budgets, blast-radius controls, and rollback playbooks for 99.99% uptime.',
-};
-
-export default function Page() {
-  return (
-    <main className="max-w-3xl mx-auto px-6 py-16">
-      <h1 className="text-4xl font-bold mb-4">AI Operational Resilience 2026</h1>
-      <p className="text-gray-600 mb-8">Design for Failure, Recover Fast</p>
-      <p className="mb-4">Error budgets, blast-radius controls, and rollback playbooks for 99.99% uptime.</p>
-      <p className="text-sm text-gray-500">Published Sep 30, 2025 • 9 min read</p>
-    </main>
-  );
-}
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {

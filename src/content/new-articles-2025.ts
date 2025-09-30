@@ -378,10 +378,7 @@ newArticles2025.push(
   }
 );
 
-  }
-);
-
-
+// End of March 2026 featured additions
 // Sept 30, 2025 – Combined brand-new items to advertise on homepage
 newArticles2025.push(
   {
