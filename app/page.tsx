@@ -95,14 +95,14 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="flex items-center justify-center gap-3 mb-4">
               <span className="text-4xl animate-bounce">🚀</span>
-              <h2 className="text-4xl font-bold">FRESH CONTENT SEPTEMBER 2025!</h2>
+              <h2 className="text-4xl font-bold">FRESH CONTENT SEPTEMBER 30, 2025!</h2>
               <span className="text-4xl animate-bounce">✨</span>
             </div>
             <p className="text-center text-2xl opacity-90 mb-4">
-              4 NEW Enterprise AI Guides Just Published!
+              4 BRAND NEW AI Innovation Guides Just Published!
             </p>
             <p className="text-center text-lg opacity-80">
-              Multiagent Systems • DevOps Automation • Cybersecurity Mesh • MLOps Platforms
+              AI Agent Swarms • Security Orchestration • Edge Computing • Neural Architecture Search
             </p>
           </div>
         </section>
@@ -113,95 +113,56 @@ export default function HomePage() {
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-pink-100 px-6 py-2 rounded-full mb-4">
                 <span className="text-2xl">🆕</span>
-                <span className="font-bold text-purple-800">SEPTEMBER 2025 • BRAND NEW</span>
+                <span className="font-bold text-purple-800">SEPTEMBER 30, 2025 • BRAND NEW</span>
               </div>
-              <h2 className="text-4xl font-bold text-center mb-4">Latest Enterprise AI Insights</h2>
+              <h2 className="text-4xl font-bold text-center mb-4">Latest AI Innovation Breakthroughs</h2>
               <p className="text-center text-gray-600 mb-8 text-xl">
-                Transform your business with cutting-edge AI strategies and implementation guides
+                Explore cutting-edge AI technologies transforming enterprises in 2026
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               
-              {/* AI Multiagent Collaboration */}
+              {/* AI Agent Swarms */}
               <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-105 border-2 border-purple-200">
-                <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-6 text-white">
+                <div className="bg-gradient-to-r from-purple-600 to-fuchsia-600 p-6 text-white">
                   <div className="flex items-center gap-2 mb-3">
                     <span className="bg-white text-purple-800 px-3 py-1 rounded-full text-sm font-semibold animate-pulse">
                       🆕 NEW
                     </span>
                   </div>
                   <h3 className="text-lg font-bold mb-2">
-                    AI Multiagent Collaboration 2026
+                    AI Agent Swarms 2026
                   </h3>
                   <p className="text-sm opacity-90">
-                    Orchestrating intelligent agents at scale
+                    Distributed intelligence revolution
                   </p>
                 </div>
                 <div className="p-6">
                   <div className="grid grid-cols-3 gap-2 mb-4 text-center">
                     <div>
-                      <div className="text-xl font-bold text-purple-600">200%</div>
+                      <div className="text-xl font-bold text-purple-600">500%</div>
                       <div className="text-xs text-gray-600">Productivity</div>
                     </div>
                     <div>
-                      <div className="text-xl font-bold text-pink-600">85%</div>
-                      <div className="text-xs text-gray-600">Efficiency</div>
+                      <div className="text-xl font-bold text-fuchsia-600">99.9%</div>
+                      <div className="text-xs text-gray-600">Reliability</div>
                     </div>
                     <div>
-                      <div className="text-xl font-bold text-blue-600">60%</div>
+                      <div className="text-xl font-bold text-blue-600">70%</div>
                       <div className="text-xs text-gray-600">Cost Cut</div>
                     </div>
                   </div>
                   <Link 
-                    href="/blog/ai-multiagent-collaboration-2026"
-                    className="block w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-colors text-sm"
+                    href="/blog/ai-agent-swarms-2026"
+                    className="block w-full bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white text-center py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-fuchsia-700 transition-colors text-sm"
                   >
                     Read Now →
                   </Link>
                 </div>
               </div>
 
-              {/* AI DevOps Automation */}
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-105 border-2 border-blue-200">
-                <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-6 text-white">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="bg-white text-blue-800 px-3 py-1 rounded-full text-sm font-semibold animate-pulse">
-                      🆕 NEW
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold mb-2">
-                    AI DevOps Automation 2026
-                  </h3>
-                  <p className="text-sm opacity-90">
-                    Autonomous CI/CD & infrastructure
-                  </p>
-                </div>
-                <div className="p-6">
-                  <div className="grid grid-cols-3 gap-2 mb-4 text-center">
-                    <div>
-                      <div className="text-xl font-bold text-blue-600">95%</div>
-                      <div className="text-xs text-gray-600">Success</div>
-                    </div>
-                    <div>
-                      <div className="text-xl font-bold text-cyan-600">80%</div>
-                      <div className="text-xs text-gray-600">Faster</div>
-                    </div>
-                    <div>
-                      <div className="text-xl font-bold text-green-600">90%</div>
-                      <div className="text-xs text-gray-600">Fewer Issues</div>
-                    </div>
-                  </div>
-                  <Link 
-                    href="/blog/ai-devops-automation-2026"
-                    className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-center py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-colors text-sm"
-                  >
-                    Read Now →
-                  </Link>
-                </div>
-              </div>
-
-              {/* AI Cybersecurity Mesh */}
+              {/* AI Security Orchestration */}
               <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-105 border-2 border-red-200">
                 <div className="bg-gradient-to-r from-red-600 to-orange-600 p-6 text-white">
                   <div className="flex items-center gap-2 mb-3">
@@ -210,29 +171,29 @@ export default function HomePage() {
                     </span>
                   </div>
                   <h3 className="text-lg font-bold mb-2">
-                    AI Cybersecurity Mesh 2026
+                    AI Security Orchestration 2026
                   </h3>
                   <p className="text-sm opacity-90">
-                    Zero-trust security at scale
+                    Autonomous threat defense
                   </p>
                 </div>
                 <div className="p-6">
                   <div className="grid grid-cols-3 gap-2 mb-4 text-center">
                     <div>
-                      <div className="text-xl font-bold text-red-600">99.9%</div>
+                      <div className="text-xl font-bold text-red-600">99.99%</div>
                       <div className="text-xs text-gray-600">Detection</div>
                     </div>
                     <div>
-                      <div className="text-xl font-bold text-orange-600">&lt;1min</div>
+                      <div className="text-xl font-bold text-orange-600">&lt;30s</div>
                       <div className="text-xs text-gray-600">Response</div>
                     </div>
                     <div>
                       <div className="text-xl font-bold text-green-600">85%</div>
-                      <div className="text-xs text-gray-600">Fewer Incidents</div>
+                      <div className="text-xs text-gray-600">Incident Cut</div>
                     </div>
                   </div>
                   <Link 
-                    href="/blog/ai-cybersecurity-mesh-2026"
+                    href="/blog/ai-security-orchestration-2026"
                     className="block w-full bg-gradient-to-r from-red-600 to-orange-600 text-white text-center py-2 rounded-lg font-semibold hover:from-red-700 hover:to-orange-700 transition-colors text-sm"
                   >
                     Read Now →
@@ -240,39 +201,78 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Enterprise MLOps */}
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-105 border-2 border-green-200">
-                <div className="bg-gradient-to-r from-green-600 to-emerald-600 p-6 text-white">
+              {/* Edge AI Computing */}
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-105 border-2 border-cyan-200">
+                <div className="bg-gradient-to-r from-cyan-600 to-blue-600 p-6 text-white">
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="bg-white text-green-800 px-3 py-1 rounded-full text-sm font-semibold animate-pulse">
+                    <span className="bg-white text-cyan-800 px-3 py-1 rounded-full text-sm font-semibold animate-pulse">
                       🆕 NEW
                     </span>
                   </div>
                   <h3 className="text-lg font-bold mb-2">
-                    Enterprise MLOps Platforms 2026
+                    Edge AI Computing 2026
                   </h3>
                   <p className="text-sm opacity-90">
-                    Production AI at scale
+                    Ultra-low latency intelligence
                   </p>
                 </div>
                 <div className="p-6">
                   <div className="grid grid-cols-3 gap-2 mb-4 text-center">
                     <div>
-                      <div className="text-xl font-bold text-green-600">10x</div>
-                      <div className="text-xs text-gray-600">Deploy</div>
+                      <div className="text-xl font-bold text-cyan-600">&lt;5ms</div>
+                      <div className="text-xs text-gray-600">Latency</div>
                     </div>
                     <div>
-                      <div className="text-xl font-bold text-emerald-600">95%</div>
-                      <div className="text-xs text-gray-600">Accuracy</div>
+                      <div className="text-xl font-bold text-blue-600">90%</div>
+                      <div className="text-xs text-gray-600">BW Savings</div>
                     </div>
                     <div>
-                      <div className="text-xl font-bold text-blue-600">80%</div>
+                      <div className="text-xl font-bold text-green-600">75%</div>
                       <div className="text-xs text-gray-600">Cost Cut</div>
                     </div>
                   </div>
                   <Link 
-                    href="/blog/enterprise-mlops-platforms-2026"
-                    className="block w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white text-center py-2 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-colors text-sm"
+                    href="/blog/edge-ai-computing-2026"
+                    className="block w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white text-center py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-colors text-sm"
+                  >
+                    Read Now →
+                  </Link>
+                </div>
+              </div>
+
+              {/* Neural Architecture Search */}
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-105 border-2 border-indigo-200">
+                <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-6 text-white">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="bg-white text-indigo-800 px-3 py-1 rounded-full text-sm font-semibold animate-pulse">
+                      🆕 NEW
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold mb-2">
+                    Neural Architecture Search 2026
+                  </h3>
+                  <p className="text-sm opacity-90">
+                    AutoML revolution
+                  </p>
+                </div>
+                <div className="p-6">
+                  <div className="grid grid-cols-3 gap-2 mb-4 text-center">
+                    <div>
+                      <div className="text-xl font-bold text-indigo-600">10x</div>
+                      <div className="text-xs text-gray-600">Faster Dev</div>
+                    </div>
+                    <div>
+                      <div className="text-xl font-bold text-purple-600">95%</div>
+                      <div className="text-xs text-gray-600">Accuracy</div>
+                    </div>
+                    <div>
+                      <div className="text-xl font-bold text-green-600">80%</div>
+                      <div className="text-xs text-gray-600">Resource Cut</div>
+                    </div>
+                  </div>
+                  <Link 
+                    href="/blog/neural-architecture-search-2026"
+                    className="block w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center py-2 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-colors text-sm"
                   >
                     Read Now →
                   </Link>
