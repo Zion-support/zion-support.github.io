@@ -56,6 +56,7 @@ import September30NewContentBanner from '../components/September30NewContentBann
 import Revolutionary2026ContentShowcase from '../components/Revolutionary2026ContentShowcase';
 import October2025ContentBanner from '../components/October2025ContentBanner';
 import September30ContentBanner2025 from '../components/September30ContentBanner2025';
+import September30NewContent2025Banner from '../components/September30NewContent2025Banner';
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -98,7 +99,9 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
-<<<<<<< HEAD
+      {/* 🚀 LATEST CONTENT - SEPTEMBER 30, 2025 */}
+      <September30NewContent2025Banner />
+      
       {/* 🔥 BREAKING: NEW CONTENT - JANUARY 30, 2026 */}
       <section className="py-20 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white relative overflow-hidden">
         {/* Animated Background Elements */}
