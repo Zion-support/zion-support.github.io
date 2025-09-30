@@ -60,6 +60,22 @@ function Header() {
             </Link>
           </div>
           <div className="relative group">
+            <Link href="/blog/ai-2027-meta-intelligence-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Meta-Intelligence AI
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                REVOLUTION
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/blog/ai-2027-consciousness-simulation-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Consciousness AI
+              <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                BREAKTHROUGH
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
             <Link href="/blog/ai-2027-quantum-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Quantum AI 2027
               <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -129,6 +145,14 @@ function Footer() {
           <div>
             <h3 className="font-semibold text-gray-900 mb-3">Latest 2027 Content</h3>
             <div className="space-y-2">
+              <Link href="/blog/ai-2027-meta-intelligence-revolution" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🧠 Meta-Intelligence AI Revolution
+                <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">REVOLUTION</span>
+              </Link>
+              <Link href="/blog/ai-2027-consciousness-simulation-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🧠 Consciousness AI Breakthrough
+                <span className="bg-pink-500 text-white px-2 py-1 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
+              </Link>
               <Link href="/blog/ai-2027-quantum-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🚀 Quantum AI 2027 Breakthrough
                 <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
@@ -136,6 +160,10 @@ function Footer() {
               <Link href="/blog/ai-2027-autonomous-enterprise-revolution" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🏢 Autonomous Enterprise 2027
                 <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
+              </Link>
+              <Link href="/case-studies/meta-intelligence-ai-enterprise-success-2027" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $2.3B Meta-Intelligence Success
+                <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
               </Link>
               <Link href="/case-studies/ai-2027-quantum-breakthrough-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 💰 $100M Quantum AI Success
