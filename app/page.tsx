@@ -96,6 +96,187 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      
+      {/* 🔥🔥🔥 OCTOBER 2025 - MEGA BREAKTHROUGH ANNOUNCEMENT! 🔥🔥🔥 */}
+      <section className="py-20 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-400 to-red-400 animate-pulse"></div>
+          <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-purple-400 rounded-full animate-bounce"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-pink-400 rounded-full animate-bounce delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-red-400 rounded-full animate-bounce delay-500"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <span className="text-7xl animate-pulse">⚡</span>
+              <h2 className="text-6xl font-black">OCTOBER 2025: 3 REVOLUTIONARY BREAKTHROUGHS!</h2>
+              <span className="text-7xl animate-pulse">🚀</span>
+            </div>
+            <p className="text-4xl font-bold mb-4">
+              Hyperautomation • Quantum Security • Neuromorphic AI
+            </p>
+            <p className="text-2xl opacity-95">
+              98% Automation • $1T+ Protected • 1000x Efficiency
+            </p>
+          </div>
+
+          {/* Featured October 2025 Articles */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            
+            {/* AI Hyperautomation */}
+            <Link href="/blog/ai-hyperautomation-enterprise-2025" className="group">
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-purple-300">
+                <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-6 text-white">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="bg-yellow-400 text-purple-900 px-3 py-1 rounded-full text-xs font-bold animate-bounce">
+                      🤖 BREAKTHROUGH #1
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">
+                    AI Hyperautomation 2025
+                  </h3>
+                  <p className="text-base opacity-95">
+                    98% process automation, $200M+ savings, 500% ROI
+                  </p>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-700 mb-4 text-sm">
+                    Revolutionary hyperautomation combining RPA, cognitive AI, and autonomous orchestration 
+                    delivering enterprise-wide transformation in 24 months.
+                  </p>
+                  <div className="grid grid-cols-3 gap-2 mb-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-purple-600">98%</div>
+                      <div className="text-xs text-gray-600">Automation</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-pink-600">$200M+</div>
+                      <div className="text-xs text-gray-600">Savings</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-green-600">500%</div>
+                      <div className="text-xs text-gray-600">ROI</div>
+                    </div>
+                  </div>
+                  <div className="block w-full bg-purple-600 text-white text-center py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
+                    Read Full Article →
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Quantum Security Blockchain */}
+            <Link href="/blog/ai-quantum-security-blockchain-2025" className="group">
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-red-300">
+                <div className="bg-gradient-to-r from-red-600 to-orange-600 p-6 text-white">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="bg-yellow-400 text-red-900 px-3 py-1 rounded-full text-xs font-bold animate-bounce">
+                      🔒 BREAKTHROUGH #2
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">
+                    Quantum Security Blockchain
+                  </h3>
+                  <p className="text-base opacity-95">
+                    Protecting $1T+ with quantum-resistant encryption
+                  </p>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-700 mb-4 text-sm">
+                    Next-generation security combining post-quantum cryptography, AI threat intelligence, 
+                    and blockchain immutability for unbreakable enterprise protection.
+                  </p>
+                  <div className="grid grid-cols-3 gap-2 mb-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-red-600">$1T+</div>
+                      <div className="text-xs text-gray-600">Protected</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-orange-600">99.999%</div>
+                      <div className="text-xs text-gray-600">Security</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-green-600">Zero</div>
+                      <div className="text-xs text-gray-600">Breaches</div>
+                    </div>
+                  </div>
+                  <div className="block w-full bg-red-600 text-white text-center py-3 rounded-lg font-bold hover:bg-red-700 transition-colors">
+                    Read Full Article →
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Neuromorphic AI Computing */}
+            <Link href="/blog/neuromorphic-ai-computing-2025" className="group">
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-green-300">
+                <div className="bg-gradient-to-r from-green-600 to-teal-600 p-6 text-white">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="bg-yellow-400 text-green-900 px-3 py-1 rounded-full text-xs font-bold animate-bounce">
+                      🧠 BREAKTHROUGH #3
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">
+                    Neuromorphic AI Computing
+                  </h3>
+                  <p className="text-base opacity-95">
+                    1000x energy efficiency, brain-inspired intelligence
+                  </p>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-700 mb-4 text-sm">
+                    Revolutionary brain-inspired chips enabling real-time learning, edge intelligence, 
+                    and autonomous systems with unprecedented efficiency.
+                  </p>
+                  <div className="grid grid-cols-3 gap-2 mb-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-green-600">1000x</div>
+                      <div className="text-xs text-gray-600">Efficiency</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-teal-600">&lt;1ms</div>
+                      <div className="text-xs text-gray-600">Inference</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-blue-600">99%</div>
+                      <div className="text-xs text-gray-600">Cost ↓</div>
+                    </div>
+                  </div>
+                  <div className="block w-full bg-green-600 text-white text-center py-3 rounded-lg font-bold hover:bg-green-700 transition-colors">
+                    Read Full Article →
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-2 border-white/20">
+            <h3 className="text-3xl font-bold mb-4">Transform Your Enterprise with These Breakthroughs</h3>
+            <p className="text-xl mb-6 opacity-95">
+              Schedule a consultation to discover how these technologies can revolutionize your operations
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
+              >
+                📞 Call +1 302 464 0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-all hover:scale-105"
+              >
+                📧 Schedule Consultation
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* 🔥🔥🔥 NEWEST CONTENT - SEPTEMBER 30, 2025 - 3 BREAKTHROUGH ARTICLES! 🔥🔥🔥 */}
       <NewestContent2025Banner />
       
