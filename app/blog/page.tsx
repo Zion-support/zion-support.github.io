@@ -7,6 +7,16 @@ export const metadata = {
 
 const blogPosts = [
   {
+    title: 'AI Enterprise Automation 2026: Autonomous Systems with Proven ROI',
+    slug: 'ai-2026-enterprise-automation',
+    excerpt: 'Scale autonomous AI safely with policy gates, evals, and cost-aware routing. Ship measurable automation with clear ROI.',
+    category: 'Implementation Guide',
+    publishedAt: 'January 30, 2026',
+    image: '🏢',
+    color: 'blue',
+    readTime: '20 min read'
+  },
+  {
     title: 'Real-Time Agent Routing 2026: Faster, Cheaper, More Reliable AI Ops',
     slug: 'ai-2026-real-time-agent-routing',
     excerpt: 'Policy-aware model/tool routing with budgets and semantic caching. Cut cost ~40% with better reliability.',
