@@ -35,6 +35,11 @@ import UltimateContentShowcase2026 from '../src/components/UltimateContentShowca
 import AIInnovationAdvertisingBanner from '../src/components/AIInnovationAdvertisingBanner';
 import LatestTrendsShowcase2026 from '../src/components/LatestTrendsShowcase2026';
 import NewServicesPromotionalBanner from '../src/components/NewServicesPromotionalBanner';
+import FutureTechShowcase2026 from '../src/components/FutureTechShowcase2026';
+import NewContentAdvertisingBanner from '../src/components/NewContentAdvertisingBanner';
+import EnterpriseSolutionsShowcase2026 from '../src/components/EnterpriseSolutionsShowcase2026';
+import AITrendsInsightsBanner2026 from '../src/components/AITrendsInsightsBanner2026';
+import NewBlogContentShowcase2026 from '../src/components/NewBlogContentShowcase2026';
 import {
   AIEnterpriseAdoptionBanner,
   AITrends2025Banner,
@@ -184,6 +189,21 @@ export default function HomePage() {
       
       {/* 🔥 AI INNOVATION ADVERTISING BANNER */}
       <AIInnovationAdvertisingBanner />
+
+      {/* 🚀 FUTURE TECH SHOWCASE 2026 */}
+      <FutureTechShowcase2026 />
+
+      {/* 📢 NEW CONTENT ADVERTISING BANNER */}
+      <NewContentAdvertisingBanner />
+
+      {/* 🏢 ENTERPRISE SOLUTIONS SHOWCASE 2026 */}
+      <EnterpriseSolutionsShowcase2026 />
+
+      {/* 📊 AI TRENDS & INSIGHTS BANNER 2026 */}
+      <AITrendsInsightsBanner2026 />
+
+      {/* 📚 NEW BLOG CONTENT SHOWCASE 2026 */}
+      <NewBlogContentShowcase2026 />
       
       {/* 🌟 LATEST TRENDS SHOWCASE 2026 */}
       <LatestTrendsShowcase2026 />

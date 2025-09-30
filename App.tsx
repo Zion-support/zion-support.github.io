@@ -10,6 +10,11 @@ import UltimateContentShowcase2026 from "./src/components/UltimateContentShowcas
 import AIInnovationAdvertisingBanner from "./src/components/AIInnovationAdvertisingBanner";
 import LatestTrendsShowcase2026 from "./src/components/LatestTrendsShowcase2026";
 import NewServicesPromotionalBanner from "./src/components/NewServicesPromotionalBanner";
+import FutureTechShowcase2026 from "./src/components/FutureTechShowcase2026";
+import NewContentAdvertisingBanner from "./src/components/NewContentAdvertisingBanner";
+import EnterpriseSolutionsShowcase2026 from "./src/components/EnterpriseSolutionsShowcase2026";
+import AITrendsInsightsBanner2026 from "./src/components/AITrendsInsightsBanner2026";
+import NewBlogContentShowcase2026 from "./src/components/NewBlogContentShowcase2026";
 
 export default function App(): JSX.Element {
   return (
@@ -92,6 +97,11 @@ export default function App(): JSX.Element {
         <Revolutionary2026ContentMegaBanner />
       </section>
 
+      {/* Future Tech Showcase 2026 */}
+      <section>
+        <FutureTechShowcase2026 />
+      </section>
+
       {/* Ultimate Content Showcase 2026 */}
       <section>
         <UltimateContentShowcase2026 />
@@ -110,6 +120,26 @@ export default function App(): JSX.Element {
       {/* New Services Promotional Banner */}
       <section>
         <NewServicesPromotionalBanner />
+      </section>
+
+      {/* New Content Advertising Banner */}
+      <section>
+        <NewContentAdvertisingBanner />
+      </section>
+
+      {/* Enterprise Solutions Showcase 2026 */}
+      <section>
+        <EnterpriseSolutionsShowcase2026 />
+      </section>
+
+      {/* AI Trends & Insights Banner 2026 */}
+      <section>
+        <AITrendsInsightsBanner2026 />
+      </section>
+
+      {/* New Blog Content Showcase 2026 */}
+      <section>
+        <NewBlogContentShowcase2026 />
       </section>
 
       {/* Latest Content Section */}
