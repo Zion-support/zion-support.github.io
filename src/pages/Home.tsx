@@ -15,7 +15,19 @@ import {
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
-import { September30BrandNewTodayBanner } from "../components/PromotionalBanner";
+import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
+import NewContentAnnouncement from "../components/NewContentAnnouncement";
+import LatestContentBanner from "../components/LatestContentBanner";
+import NewContentPromoBanner from "../components/NewContentPromoBanner";
+import NewContentAdvertisingBanner from "../components/NewContentAdvertisingBanner";
+import TrendingContentBanner from "../components/TrendingContentBanner";
+import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
+import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
+import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
+import September30MegaBanner2025 from "../components/September30MegaBanner2025";
+import October2025MegaLaunchBanner from "../components/October2025MegaLaunchBanner";
+import September30NewContentMegaBanner from "../components/September30NewContentMegaBanner";
+import Revolutionary2026ContentMegaBanner from "../components/Revolutionary2026ContentMegaBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedTestimonials from "../components/EnhancedTestimonials";
@@ -23,6 +35,7 @@ import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
+import { getFeaturedBanners } from "../content/enhanced-promotional-banners";
 
 const Home = () => {
   return (
@@ -182,6 +195,27 @@ const Home = () => {
                 <div className="text-emerald-300 text-xs mb-2">Platform Engineering</div>
                 <div className="text-white font-semibold">Platform ROI Scorecards v2</div>
                 <div className="text-zion-slate-light text-sm mt-1">Prove platform value in 4–8 weeks.</div>
+              </Link>
+            </div>
+          </div>
+          {/* Newly added — Sept 30 spotlight */}
+          <div className="mt-4 rounded-xl border border-cyan-400/30 bg-cyan-500/10 p-6">
+            <div className="text-white text-sm mb-4">Brand new today — Sept 30</div>
+            <div className="grid md:grid-cols-3 gap-4">
+              <Link to="/blog/ai-2025-sept-30-autonomic-decision-engines" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">AI Operations</div>
+                <div className="text-white font-semibold">Autonomic Decision Engines</div>
+                <div className="text-zion-slate-light text-sm mt-1">Sub‑100ms, KPI‑linked actions with budgets, canaries, rollback.</div>
+              </Link>
+              <Link to="/blog/edge-2025-sept-30-private-personalization-v2" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">Edge Computing</div>
+                <div className="text-white font-semibold">Edge Private Personalization v2</div>
+                <div className="text-zion-slate-light text-sm mt-1">Zero‑PII, global &lt;100ms journeys with scoped IDs and DP.</div>
+              </Link>
+              <Link to="/blog/genai-2025-sept-30-eval-scorecards-quickstart" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">GenAI</div>
+                <div className="text-white font-semibold">GenAI Eval Scorecards Quickstart</div>
+                <div className="text-zion-slate-light text-sm mt-1">KPI‑linked evals, budgets, and instant rollback.</div>
               </Link>
             </div>
           </div>
