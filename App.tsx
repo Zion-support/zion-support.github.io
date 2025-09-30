@@ -23,10 +23,20 @@ import UltimateContentAdvertisingBanner from "./components/UltimateContentAdvert
 import RevolutionaryAI2026MegaBreakthroughBanner from "./components/RevolutionaryAI2026MegaBreakthroughBanner";
 import NewContent2026AdvertisingMegaBanner from "./components/NewContent2026AdvertisingMegaBanner";
 import InteractiveContentShowcase2026 from "./components/InteractiveContentShowcase2026";
+import SuperintelligentAutomationBanner from "./components/SuperintelligentAutomationBanner";
+import NeuralSuperintelligencePlatformBanner from "./components/NeuralSuperintelligencePlatformBanner";
+import UltimateContentShowcase2026MegaBanner from "./components/UltimateContentShowcase2026MegaBanner";
+import Fortune500SuccessStoryBanner from "./components/Fortune500SuccessStoryBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEW BREAKTHROUGH CONTENT BANNERS - Most Prominent */}
+      <SuperintelligentAutomationBanner />
+      <NeuralSuperintelligencePlatformBanner />
+      <UltimateContentShowcase2026MegaBanner />
+      <Fortune500SuccessStoryBanner />
+      
       {/* Revolutionary AI 2026 Mega Breakthrough Banner - Most Prominent */}
       <RevolutionaryAI2026MegaBreakthroughBanner />
       
