@@ -145,6 +145,43 @@ export const newArticles2025: NewArticle[] = [
   }
 ];
 
+// Oct 01, 2025 – New articles to advertise prominently on Home
+newArticles2025.push(
+  {
+    id: "ai-2025-oct-01-operational-trust-v3",
+    title: "📊 AI Operational Trust Scorecards v3 (2025)",
+    description: "SLIs → KPIs with budgets, canaries, and instant rollback — updated v3 playbook.",
+    category: "AI Operations",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/ai-2025-oct-01-operational-trust-v3",
+    readTime: "9 min read",
+    tags: ["Scorecards", "Budgets", "Rollback"]
+  },
+  {
+    id: "edge-2025-oct-01-private-consentless-experiments",
+    title: "🔬 Edge Consentless Experiments v3 (<100ms)",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant A/B at <100ms.",
+    category: "Analytics",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/edge-2025-oct-01-private-consentless-experiments",
+    readTime: "7 min read",
+    tags: ["Edge", "Privacy", "Experiments"]
+  },
+  {
+    id: "genai-2025-oct-01-quality-tiers-v3",
+    title: "💸 GenAI Quality Tiers v3 (2025)",
+    description: "Predictable cost and stable UX with tiered routing, semantic caches, and eval gates.",
+    category: "GenAI",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/genai-2025-oct-01-quality-tiers-v3",
+    readTime: "8 min read",
+    tags: ["Quality Tiers", "Caching", "Budgets"]
+  }
+);
+
 // Newly added articles to advertise on the front end
 newArticles2025.push(
   {

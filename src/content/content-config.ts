@@ -1001,6 +1001,34 @@ export const getLatestContent = (count: number = 5): FeaturedItem[] => {
     .slice(0, count);
 };
 
+// Oct 01, 2025 – Advertise three brand-new articles site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-oct-01-operational-trust-v3",
+    title: "AI 2025: Operational Trust Scorecards v3",
+    description: "SLIs → KPIs with budgets, canaries, and instant rollback.",
+    link: "/blog/ai-2025-oct-01-operational-trust-v3",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2025-oct-01-private-consentless-experiments",
+    title: "Edge 2025: Consentless Experiments v3 (<100ms)",
+    description: "Scoped IDs, on‑device metrics, DP noise for compliant A/B.",
+    link: "/blog/edge-2025-oct-01-private-consentless-experiments",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-2025-oct-01-quality-tiers-v3",
+    title: "GenAI 2025: Quality Tiers v3",
+    description: "Tiering + semantic caches + eval gates for stable UX.",
+    link: "/blog/genai-2025-oct-01-quality-tiers-v3",
+    type: "article",
+    featured: true
+  }
+);
+
 // Oct 2025 – Promote three brand-new guides site-wide
 featuredBlogPosts.unshift(
   {
