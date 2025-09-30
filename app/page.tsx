@@ -534,6 +534,30 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New in October 2025 — Promo */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex items-center justify-between flex-wrap gap-4 mb-6">
+            <h2 className="text-3xl font-bold text-gray-900">New in October 2025</h2>
+            <a href="/blog/new-in-october-2025" className="text-emerald-700 font-semibold hover:text-emerald-800">
+              See roundup →
+            </a>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            <a href="/blog/ai-2027-cost-optimization-playbook" className="block rounded-xl border border-gray-200 p-6 hover:shadow-xl transition-shadow">
+              <div className="text-xs font-bold uppercase tracking-wide text-emerald-600 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">AI 2027 Cost Optimization Playbook</h3>
+              <p className="text-gray-600">Cut AI spend 30–70% with routing, caching, quantization, and guardrails.</p>
+            </a>
+            <a href="/blog/agentic-workflow-orchestration-2026" className="block rounded-xl border border-gray-200 p-6 hover:shadow-xl transition-shadow">
+              <div className="text-xs font-bold uppercase tracking-wide text-fuchsia-600 mb-2">Featured</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Agentic Workflow Orchestration 2026</h3>
+              <p className="text-gray-600">Guardrails, reviews, and observability for reliable multi-agent workflows.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* NEW REVOLUTIONARY 2026 CONTENT BANNERS */}
       <Ultimate2026ContentShowcaseBanner />
       <MegaContentShowcase2026Banner />
