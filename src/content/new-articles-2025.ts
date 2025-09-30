@@ -193,6 +193,43 @@ newArticles2025.push(
   }
 );
 
+// Feb 10, 2026 – Fresh featured articles to advertise on Home
+newArticles2025.push(
+  {
+    id: "genai-routing-playbook-2026-v2",
+    title: "GenAI Routing Playbook v2 (2026): Quality Tiers Under Budget",
+    description: "Tier models, cache prompts, and KPI‑linked routes for stable UX at 30–60% lower cost.",
+    category: "GenAI",
+    publishedDate: "2025-10-31",
+    featured: true,
+    link: "/blog/genai-routing-playbook-2026",
+    readTime: "8 min read",
+    tags: ["GenAI", "Routing", "Budgets", "Caching"]
+  },
+  {
+    id: "agent-release-checklists-2026-v2",
+    title: "Agent Release Checklists 2026: Budgets, Canaries, Rollback",
+    description: "Battle‑tested checklists for safe agent releases with budgeted actions and KPI‑linked canaries.",
+    category: "AI Operations",
+    publishedDate: "2025-10-31",
+    featured: true,
+    link: "/blog/agent-release-checklists-2026",
+    readTime: "7 min read",
+    tags: ["Agents", "Runbooks", "Budgets", "Rollback"]
+  },
+  {
+    id: "privacy-first-telemetry-2026-v2",
+    title: "Privacy‑First Telemetry 2026: Signal‑Rich Analytics Without PII",
+    description: "Scoped IDs, edge aggregation, and DP noise for insights teams love—compliance included.",
+    category: "Analytics",
+    publishedDate: "2025-10-31",
+    featured: true,
+    link: "/blog/privacy-first-telemetry-2026",
+    readTime: "6 min read",
+    tags: ["Analytics", "Privacy", "Edge", "DP"]
+  }
+);
+
 // Jan 15, 2026 – Fresh featured items to surface on Home
 newArticles2025.push(
   {
