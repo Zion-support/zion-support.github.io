@@ -1091,6 +1091,33 @@ export const posts: BlogPost[] = [
 // Newly added content (auto-advertised on Home via latest sort)
 posts.push(
   {
+    slug: "ai-safety-budgets-2026",
+    title: "AI Safety Budgets 2026: Guardrails That Keep Velocity High",
+    description: "Budget risky actions, set rollback triggers, and wire evals to KPIs for safe automation.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-privacy-telemetry-2026",
+    title: "Edge Privacy Telemetry 2026: Signal‑Rich, PII‑Safe Analytics",
+    description: "On‑device aggregation, scoped IDs, and DP noise to get insights without collecting PII.",
+    category: "Observability",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-checklists-2026",
+    title: "Agent Release Checklists 2026: Budgets, Canaries, and Rollback",
+    description: "A practical checklist for shipping agent updates with budgets, live canaries, and instant rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "ai-threat-hunting-with-llms-2026",
     title: "AI Threat Hunting with LLMs 2026: Signals, Sandboxes, and Speed",
     description: "Operational playbooks to augment analysts with safe LLM tooling, live traces, and budgeted actions.",
