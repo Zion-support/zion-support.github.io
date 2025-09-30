@@ -70,7 +70,7 @@ export default function GenerativeAICostBreakthrough2025() {
             <h3 className="text-2xl font-semibold mb-3">Layer 1: Semantic Caching (40-60% Savings)</h3>
             <p className="mb-3">Cache responses for semantically similar queries:</p>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Vector Embeddings:</strong> Convert queries to embeddings, cache if cosine similarity >0.95</li>
+              <li><strong>Vector Embeddings:</strong> Convert queries to embeddings, cache if cosine similarity &gt;0.95</li>
               <li><strong>TTL Strategy:</strong> 7 days for factual queries, 1 day for time-sensitive</li>
               <li><strong>Cache Warming:</strong> Pre-populate with top 1000 FAQ variations</li>
               <li><strong>Hit Rate Target:</strong> 60-70% for customer support, 40-50% for generative tasks</li>
@@ -140,7 +140,7 @@ def get_cached_response(query, threshold=0.95):
                   <li>Complex analysis → GPT-4 ($0.03/1K)</li>
                 </ul>
               </li>
-              <li><strong>Fallback Logic:</strong> Retry with next tier if quality score <0.8</li>
+              <li><strong>Fallback Logic:</strong> Retry with next tier if quality score &lt;0.8</li>
               <li><strong>A/B Testing:</strong> Continuously validate routing accuracy</li>
             </ul>
             <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded mt-3">
@@ -158,7 +158,7 @@ def get_cached_response(query, threshold=0.95):
             <h3 className="text-2xl font-semibold mb-3">Layer 4: Batch Processing (20-35% Savings)</h3>
             <p className="mb-3">Group non-urgent requests:</p>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Queue Design:</strong> Separate real-time (<100ms) from batch (1-5min acceptable)</li>
+              <li><strong>Queue Design:</strong> Separate real-time (&lt;100ms) from batch (1-5min acceptable)</li>
               <li><strong>Batch API:</strong> OpenAI batch endpoint is 50% cheaper</li>
               <li><strong>Prompt Batching:</strong> Combine 10 similar tasks in one prompt</li>
               <li><strong>Off-Peak Scheduling:</strong> Process low-priority jobs during nights/weekends</li>
@@ -169,7 +169,7 @@ def get_cached_response(query, threshold=0.95):
             <h3 className="text-2xl font-semibold mb-3">Layer 5: Fine-Tuned Models (40-70% Savings)</h3>
             <p className="mb-3">Train smaller, specialized models for high-volume tasks:</p>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>When to Fine-Tune:</strong> >100K similar queries/month, stable domain</li>
+              <li><strong>When to Fine-Tune:</strong> &gt;100K similar queries/month, stable domain</li>
               <li><strong>Model Choice:</strong> GPT-3.5 fine-tune ($0.0003/1K) vs GPT-4 ($0.03/1K) = 99% cheaper</li>
               <li><strong>Training Data:</strong> 2K-10K curated examples (use GPT-4 to label)</li>
               <li><strong>Quality Bar:</strong> Fine-tuned GPT-3.5 often beats base GPT-4 on narrow tasks</li>
@@ -204,7 +204,7 @@ def get_cached_response(query, threshold=0.95):
             <p className="mb-3">Track and cap runaway costs:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Per-User Budgets:</strong> $50/user/month limits with soft/hard cutoffs</li>
-              <li><strong>Anomaly Detection:</strong> Alert if daily spend >2x 7-day average</li>
+              <li><strong>Anomaly Detection:</strong> Alert if daily spend &gt;2x 7-day average</li>
               <li><strong>Cost Attribution:</strong> Tag requests by team, product, environment</li>
               <li><strong>Quality Monitoring:</strong> Track output quality to catch regressions from optimizations</li>
             </ul>
@@ -249,7 +249,7 @@ def get_cached_response(query, threshold=0.95):
               <h4 className="font-semibold text-lg mb-2">Weeks 10-12: Governance & Scale</h4>
               <ul className="list-disc pl-6 space-y-1 text-sm">
                 <li>Set per-user and per-team budget limits</li>
-                <li>Deploy anomaly detection: alert on cost spikes >2x baseline</li>
+                <li>Deploy anomaly detection: alert on cost spikes &gt;2x baseline</li>
                 <li>Run regression tests: ensure quality metrics stayed flat or improved</li>
                 <li>Document playbook: when to use which model, caching strategy, etc</li>
               </ul>
@@ -307,7 +307,7 @@ def get_cached_response(query, threshold=0.95):
             <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border-l-4 border-red-500">
               <h4 className="font-semibold mb-2">❌ Mistake: Premature Fine-Tuning</h4>
               <p className="text-sm mb-2">Fine-tuning before you've stable prompts locks you into mediocre performance.</p>
-              <p className="text-sm"><strong>✅ Fix:</strong> Optimize prompts first, then fine-tune when you hit >100K/month queries.</p>
+              <p className="text-sm"><strong>✅ Fix:</strong> Optimize prompts first, then fine-tune when you hit &gt;100K/month queries.</p>
             </div>
 
             <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border-l-4 border-red-500">

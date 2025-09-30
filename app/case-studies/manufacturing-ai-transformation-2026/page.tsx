@@ -360,7 +360,7 @@ export default function ManufacturingAITransformation2026() {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-gradient-to-br from-blue-100 to-blue-50 p-6 rounded-lg">
               <div className="text-3xl mb-3">🎯</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Predictive > Reactive</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Predictive &gt; Reactive</h3>
               <p className="text-gray-700 text-sm">
                 AI-powered predictive maintenance eliminated 85% of unplanned downtime by identifying issues before failures occurred.
               </p>

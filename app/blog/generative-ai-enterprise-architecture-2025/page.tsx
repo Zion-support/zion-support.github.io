@@ -43,7 +43,7 @@ export default function GenerativeAIArchitecture2025() {
             
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
               Comprehensive blueprint for enterprise GenAI architecture: from LLM orchestration and RAG systems to 
-              production deployment patterns. Real implementations processing 100M+ daily requests with <100ms latency 
+              production deployment patterns. Real implementations processing 100M+ daily requests with &lt;100ms latency 
               and 99.9% accuracy.
             </p>
 
