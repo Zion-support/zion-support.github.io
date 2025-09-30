@@ -232,6 +232,26 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Sept 30, 2025 – Advertise two newly added articles site-wide (added now)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2029-autonomous-infra-blueprint",
+    title: "AI 2029: Autonomous Infra Blueprint",
+    description: "Self‑healing, self‑optimizing, self‑scaling with rollback in seconds",
+    link: "/blog/ai-2029-autonomous-infra-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2026-e2e-ai-tracing",
+    title: "E2E AI Tracing 2026",
+    description: "Trace prompts → tools → KPIs with rollback‑ready playbooks",
+    link: "/blog/ai-2026-e2e-ai-tracing",
+    type: "article",
+    featured: true
+  }
+);
+
 // Jan 2027 – Feature three brand-new articles
 featuredBlogPosts.unshift(
   {

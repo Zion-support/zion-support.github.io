@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-2029-autonomous-infra-blueprint",
+    slug: "ai-2029-autonomous-infra-blueprint",
+    title: "AI 2029: Autonomous Infrastructure Blueprint",
+    description: "Self‑healing, self‑optimizing, and self‑scaling platforms with budgeted actions and instant rollback.",
+    excerpt: "Operate autonomic infrastructure with KPIs, budgets, and deterministic rollback for 99.99% uptime.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Operations",
+    tags: ["Autonomous Infra", "Rollback", "Scorecards"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/ai-2029-autonomous-infra-blueprint.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-2026-e2e-ai-tracing",
+    slug: "ai-2026-e2e-ai-tracing",
+    title: "E2E AI Tracing 2026: From Prompts to Outcomes",
+    description: "Instrument prompts, tools, calls, budgets, and KPIs with end‑to‑end traces.",
+    excerpt: "Trace‑driven reliability and cost control with rollback playbooks wired to spans.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Observability",
+    tags: ["Tracing", "Observability", "Guardrails"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/e2e-ai-tracing-2026.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-2025-sept-30-enterprise-ai-safety-blueprint",
     slug: "ai-2025-sept-30-enterprise-ai-safety-blueprint",
     title: "AI 2025: Enterprise AI Safety Blueprint",
