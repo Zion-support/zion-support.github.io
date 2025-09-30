@@ -10,6 +10,15 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "verifiable-edge-analytics-2026",
+    title: "Verifiable Edge Analytics 2026: Zero‑PII Insights with Attestations",
+    description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for audit‑ready insights under 100ms.",
+    category: "Analytics",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "enterprise-rag-security-2027",
     title: "Enterprise RAG Security 2027: Auth‑Aware Retrieval and Signed Outputs",
     description: "Blueprint for secure RAG: auth‑aware retrieval, freshness windows, prompt firewalls, and signed outputs.",
