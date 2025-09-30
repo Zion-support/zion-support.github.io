@@ -10,31 +10,31 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "ai-trust-scorecards-v5-2027",
-    title: "AI Trust Scorecards v5 (2027): KPIs, Budgets, Rollback",
-    description: "Latest playbook for KPI‑linked scorecards with budgeted actions, canaries, and instant rollback to keep AI reliable and affordable.",
-    category: "AI Governance",
-    publishedAt: "2027-02-10",
+    slug: "ai-2027-operational-trust-blueprint",
+    title: "AI 2027: Operational Trust Blueprint",
+    description: "SLIs wired to KPIs with budgets, canaries, and instant rollback.",
+    category: "AI Strategy",
+    publishedAt: "2027-02-07",
     featured: true,
     readTime: "8 min read"
   },
   {
-    slug: "edge-private-evals-2026",
-    title: "Private Evals at the Edge (2026): Zero‑PII, <100ms",
-    description: "Consent‑safe evaluation signals with scoped IDs, on‑device aggregation, and DP noise—actionable quality without PII.",
-    category: "Analytics",
-    publishedAt: "2026-10-20",
+    slug: "edge-2026-private-feature-flags",
+    title: "Edge 2026: Private Feature Flags",
+    description: "Signed configs, scoped IDs, and on‑device metrics for zero‑PII rollouts.",
+    category: "Architecture",
+    publishedAt: "2027-02-06",
     featured: true,
     readTime: "7 min read"
   },
   {
-    slug: "agentops-runbooks-v3-2026",
-    title: "AgentOps Runbooks v3 (2026): Budgeted Actions and One‑Click Rollback",
-    description: "Battle‑tested runbooks for safe autonomous operations: approvals, KPI‑linked canaries, rollback playbooks.",
-    category: "AI Operations",
-    publishedAt: "2026-10-18",
+    slug: "genai-quality-tiers-v2-2026",
+    title: "GenAI Quality Tiers v2 (2026)",
+    description: "Predictable cost and stable UX using quality tiers + caches.",
+    category: "GenAI",
+    publishedAt: "2027-02-05",
     featured: true,
-    readTime: "9 min read"
+    readTime: "8 min read"
   },
   {
     slug: "ai-2028-autonomous-enterprise-revolution",
