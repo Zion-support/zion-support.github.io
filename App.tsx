@@ -1,6 +1,10 @@
 import React, { JSX } from "react";
 import AI2033UniversalConsciousnessBanner from "./components/AI2033UniversalConsciousnessBanner";
 
+// NEWEST: January 2025 Content Banners - MOST PROMINENT
+import January2025NewContentBanner from "./components/January2025NewContentBanner";
+import January2025InnovationShowcaseBanner from "./components/January2025InnovationShowcaseBanner";
+
 // Core Interactive Components
 import InteractiveAI2026Showcase from "./components/InteractiveAI2026Showcase";
 import InteractiveROICalculator2026 from "./components/InteractiveROICalculator2026";
@@ -34,6 +38,12 @@ export default function App(): JSX.Element {
       <AI2033UniversalConsciousnessBanner />
       
       {/* HERO SECTION - Most Recent Content */}
+      
+      {/* 🚀 NEWEST: January 2025 Revolutionary AI Content - MOST PROMINENT */}
+      <January2025NewContentBanner />
+      
+      {/* 🌟 BREAKTHROUGH: January 2025 Innovation Showcase - HIGHLY PROMINENT */}
+      <January2025InnovationShowcaseBanner />
       
       {/* NEWEST: January 2032 Transcendent Content Banner - MOST PROMINENT */}
       <January2032TranscendentContentBanner />
