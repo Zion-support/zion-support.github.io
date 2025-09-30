@@ -1,96 +1,23 @@
-import React, { Suspense, lazy } from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import SkipLink from './components/SkipLink';
-import ScrollToTop from './components/ScrollToTop';
-import ErrorBoundary from './components/ErrorBoundary';
-import ErrorFallback from './components/ErrorFallback';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { PageLoader } from './components/EnhancedLoadingSpinner';
-import SystemDashboard from './components/SystemDashboard';
-import AccessibilityTester from './components/AccessibilityTester';
-import PerformanceProfiler from './components/PerformanceProfiler';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-// Lazy load components for better performance
-const Home = lazy(() => import('./pages/Home'));
-const Blog = lazy(() => import('./pages/Blog'));
-const Contact = lazy(() => import('./pages/Contact'));
-const About = lazy(() => import('./pages/About'));
-const Services = lazy(() => import('./pages/Services'));
-const Portfolio = lazy(() => import('./pages/Portfolio'));
-const NotFound = lazy(() => import('./pages/NotFound'));
+// Import pages
+import Home from './pages/Home';
 
-// Layout component
-export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div className="min-h-screen bg-white">
-    <SkipLink />
-    <ScrollToTop />
-    <Header />
-    
-    <main id="main-content">
-      <Suspense fallback={<PageLoader text="Loading page..." />}>
-        {children}
-      </Suspense>
-    </main>
-    
-    <Footer />
-    
-    {/* Development Tools */}
-    <SystemDashboard />
-    <AccessibilityTester />
-    <PerformanceProfiler />
-  </div>
-);
-
-// Create router with future flags
-export const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Layout><Home /></Layout>,
-    errorElement: <ErrorFallback />,
-  },
-  {
-    path: '/blog',
-    element: <Layout><Blog /></Layout>,
-    errorElement: <ErrorFallback />,
-  },
-  {
-    path: '/contact',
-    element: <Layout><Contact /></Layout>,
-    errorElement: <ErrorFallback />,
-  },
-  {
-    path: '/about',
-    element: <Layout><About /></Layout>,
-    errorElement: <ErrorFallback />,
-  },
-  {
-    path: '/services',
-    element: <Layout><Services /></Layout>,
-    errorElement: <ErrorFallback />,
-  },
-  {
-    path: '/portfolio',
-    element: <Layout><Portfolio /></Layout>,
-    errorElement: <ErrorFallback />,
-  },
-  {
-    path: '*',
-    element: <Layout><NotFound /></Layout>,
-    errorElement: <ErrorFallback />,
-  },
-], {
-  future: {
-    v7_relativeSplatPath: true,
-  },
-});
-
-// Router component for backward compatibility
-export const AppRouter: React.FC = () => (
-  <EnhancedErrorBoundary>
-    <ErrorBoundary fallback={<ErrorFallback />}>
-      <RouterProvider router={router} />
-    </ErrorBoundary>
-  </EnhancedErrorBoundary>
-);
+export const AppRouter: React.FC = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<Home />} />
+      <Route path="/services" element={<Home />} />
+      <Route path="/blog" element={<Home />} />
+      <Route path="/case-studies" element={<Home />} />
+      <Route path="/tools" element={<Home />} />
+      <Route path="/ai-micro-saas" element={<Home />} />
+      <Route path="/enterprise-ai-solutions" element={<Home />} />
+      
+      {/* Catch all route */}
+      <Route path="*" element={<Home />} />
+    </Routes>
+  );
+};

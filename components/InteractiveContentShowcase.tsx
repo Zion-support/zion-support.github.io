@@ -1,0 +1,242 @@
+'use client';
+import React, { useState } from 'react';
+import Link from 'next/link';
+
+interface ContentItem {
+  id: string;
+  title: string;
+  description: string;
+  type: 'blog' | 'case-study' | 'guide';
+  readTime: string;
+  metrics: {
+    label: string;
+    value: string;
+  }[];
+  href: string;
+  featured?: boolean;
+}
+
+const contentItems: ContentItem[] = [
+  {
+    id: 'ai-advanced-automation',
+    title: 'AI Advanced Automation 2026',
+    description: 'Next-generation business process automation with 99% efficiency and $10M+ savings',
+    type: 'blog',
+    readTime: '25 min read',
+    metrics: [
+      { label: 'Process Efficiency', value: '99%' },
+      { label: 'Annual Savings', value: '$10M+' },
+      { label: 'Operations', value: '24/7' }
+    ],
+    href: '/blog/ai-advanced-automation-2026',
+    featured: true
+  },
+  {
+    id: 'ai-customer-experience',
+    title: 'AI Customer Experience Revolution',
+    description: 'Transform CX with AI-powered personalization and 95% customer satisfaction',
+    type: 'blog',
+    readTime: '22 min read',
+    metrics: [
+      { label: 'Customer Satisfaction', value: '95%' },
+      { label: 'Engagement Growth', value: '300%' },
+      { label: 'Revenue Impact', value: '$5M+' }
+    ],
+    href: '/blog/ai-customer-experience-revolution-2026',
+    featured: true
+  },
+  {
+    id: 'ai-quantum-computing',
+    title: 'AI Quantum Computing Breakthrough',
+    description: 'Revolutionary quantum-AI convergence with 1000x faster optimization',
+    type: 'blog',
+    readTime: '28 min read',
+    metrics: [
+      { label: 'Faster Optimization', value: '1000x' },
+      { label: 'Accuracy Improvement', value: '99.9%' },
+      { label: 'Cost Savings', value: '$50M+' }
+    ],
+    href: '/blog/ai-quantum-computing-breakthrough-2026',
+    featured: true
+  },
+  {
+    id: 'ai-manufacturing-excellence',
+    title: 'AI Manufacturing Excellence 2026',
+    description: 'Fortune 500 manufacturer achieved $25M ROI with smart manufacturing',
+    type: 'case-study',
+    readTime: 'Fortune 500',
+    metrics: [
+      { label: 'Total ROI', value: '$25M' },
+      { label: 'Manufacturing Efficiency', value: '98%' },
+      { label: 'Productivity Gains', value: '400%' }
+    ],
+    href: '/case-studies/ai-manufacturing-excellence-2026',
+    featured: true
+  },
+  {
+    id: 'ai-enterprise-automation',
+    title: 'AI Enterprise Automation Success',
+    description: 'Fortune 500 company achieved $15M ROI with comprehensive automation',
+    type: 'case-study',
+    readTime: 'Fortune 500',
+    metrics: [
+      { label: 'Total ROI', value: '$15M' },
+      { label: 'Process Efficiency', value: '98%' },
+      { label: 'Productivity Gains', value: '300%' }
+    ],
+    href: '/case-studies/ai-enterprise-automation-success-2026',
+    featured: true
+  }
+];
+
+const categories = ['All', 'Trends & Insights', 'Case Study', 'Technical Guide', 'Innovation', 'Security', 'Implementation'];
+
+export default function InteractiveContentShowcase() {
+  const [selectedType, setSelectedType] = useState<'all' | 'blog' | 'case-study' | 'guide'>('all');
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+
+  const filteredItems = selectedType === 'all' 
+    ? contentItems 
+    : contentItems.filter(item => item.type === selectedType);
+
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'blog': return 'bg-blue-100 text-blue-800';
+      case 'case-study': return 'bg-green-100 text-green-800';
+      case 'guide': return 'bg-purple-100 text-purple-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'blog': return '📝';
+      case 'case-study': return '📊';
+      case 'guide': return '📖';
+      default: return '📄';
+    }
+  };
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 mb-6">
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+              🚀 INTERACTIVE CONTENT SHOWCASE
+            </span>
+          </div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Interactive Content Showcase
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore our latest AI insights, success stories, and breakthrough technologies. 
+            Filter by content type to find exactly what you're looking for.
+          </p>
+        </div>
+
+        {/* Filter Tabs */}
+        <div className="flex flex-wrap justify-center gap-4 mb-8">
+          {[
+            { key: 'all', label: 'All Content', count: contentItems.length },
+            { key: 'blog', label: 'Blog Articles', count: contentItems.filter(item => item.type === 'blog').length },
+            { key: 'case-study', label: 'Case Studies', count: contentItems.filter(item => item.type === 'case-study').length },
+            { key: 'guide', label: 'Guides', count: contentItems.filter(item => item.type === 'guide').length }
+          ].map(({ key, label, count }) => (
+            <button
+              key={key}
+              onClick={() => setSelectedType(key as any)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                selectedType === key
+                  ? 'bg-blue-600 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-blue-50 border border-gray-200'
+              }`}
+            >
+              {label} ({count})
+            </button>
+          ))}
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredItems.map((item) => (
+            <div
+              key={item.id}
+              className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
+                item.featured ? 'ring-2 ring-blue-500' : ''
+              }`}
+              onMouseEnter={() => setHoveredItem(item.id)}
+              onMouseLeave={() => setHoveredItem(null)}
+            >
+              <div className="p-6">
+                {/* Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center gap-2">
+                    <span className="text-2xl">{getTypeIcon(item.type)}</span>
+                    <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getTypeColor(item.type)}`}>
+                      {item.type === 'case-study' ? 'Case Study' : item.type === 'blog' ? 'Blog' : 'Guide'}
+                    </span>
+                  </div>
+                  {item.featured && (
+                    <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-semibold">
+                      Featured
+                    </span>
+                  )}
+                </div>
+
+                {/* Title and Description */}
+                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 mb-4 line-clamp-3">
+                  {item.description}
+                </p>
+
+                {/* Metrics */}
+                <div className="grid grid-cols-3 gap-2 mb-4">
+                  {item.metrics.map((metric, index) => (
+                    <div key={index} className="text-center">
+                      <div className="text-lg font-bold text-blue-600">
+                        {metric.value}
+                      </div>
+                      <div className="text-xs text-gray-500">
+                        {metric.label}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Read Time */}
+                <div className="text-sm text-gray-500 mb-4">
+                  {item.readTime}
+                </div>
+
+                {/* CTA Button */}
+                <Link
+                  href={item.href}
+                  className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
+                    hoveredItem === item.id
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-blue-50'
+                  }`}
+                >
+                  {item.type === 'case-study' ? 'View Case Study' : 'Read Article'} →
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* View All Button */}
+        <div className="text-center mt-12">
+          <Link
+            href="/blog"
+            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+          >
+            View All Content
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
