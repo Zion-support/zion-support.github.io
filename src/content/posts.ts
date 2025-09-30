@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2026-pr-policy-tests",
+    title: "AI 2026: PR Policy Tests — Ship Fast Without Regrets",
+    description: "Lightweight CI policy checks wired to KPIs that prevent regressions while keeping delivery velocity high.",
+    category: "AI Governance",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-2026-real-time-consentless-insights",
+    title: "Edge 2026: Real‑Time Consentless Insights <100ms",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for zero‑PII analytics with signed attestations.",
+    category: "Analytics",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-2026-quality-tiers-at-scale",
+    title: "GenAI 2026: Quality Tiers at Scale — Predictable Cost, Stable UX",
+    description: "Tier models, use semantic caches, and budget traffic by SLA to cut spend 40–70% without hurting experience.",
+    category: "GenAI",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "production-rag-quality-budgets-2026",
     title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
     description: "Run RAG at scale with explicit quality budgets, freshness controls, and KPI-aligned SLAs that avoid regressions.",
