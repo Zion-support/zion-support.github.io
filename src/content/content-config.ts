@@ -200,6 +200,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Highlight newly created articles
+featuredBlogPosts.unshift(
+  {
+    id: "ai-autonomous-ops-blueprint-2026",
+    title: "AI Autonomous Ops Blueprint 2026",
+    description: "Budgets, live traces, and one‑click rollback for safe autonomy",
+    link: "/blog/ai-autonomous-ops-blueprint-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-private-analytics-2026",
+    title: "Edge Private Analytics 2026",
+    description: "Scoped IDs, on‑device metrics, and DP noise without PII",
+    link: "/blog/edge-private-analytics-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-safety-runbooks-2026",
+    title: "Agent Safety Runbooks 2026",
+    description: "Approvals, budgets, and KPI‑linked canary evals",
+    link: "/blog/agent-safety-runbooks-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 export const featuredServices: FeaturedItem[] = [
   {
     id: "ai-predictive-maintenance",
