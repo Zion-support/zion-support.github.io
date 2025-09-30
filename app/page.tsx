@@ -93,6 +93,188 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      
+      {/* 🚨🚨🚨 BREAKING: JUST PUBLISHED - SEPTEMBER 30, 2025 🚨🚨🚨 */}
+      <section className="py-24 bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 text-white relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-400 to-indigo-400 animate-pulse"></div>
+          <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-cyan-400 rounded-full animate-bounce"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-36 h-36 bg-blue-400 rounded-full animate-bounce delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 w-28 h-28 bg-indigo-400 rounded-full animate-bounce delay-500"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <span className="text-7xl animate-pulse">⚡</span>
+              <h2 className="text-6xl font-black">JUST PUBLISHED: 3 BREAKTHROUGH INNOVATIONS!</h2>
+              <span className="text-7xl animate-pulse">🎯</span>
+            </div>
+            <p className="text-4xl font-bold mb-4">
+              September 30, 2025 — Game-Changing AI Solutions Now Live
+            </p>
+            <p className="text-2xl opacity-95">
+              Edge Computing • $250M Financial Success • AI-Powered Analytics
+            </p>
+          </div>
+
+          {/* Featured New Content Grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            
+            {/* AI Edge Computing Blog */}
+            <Link href="/blog/ai-edge-computing-enterprise-breakthrough-2026" className="group">
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-cyan-300">
+                <div className="bg-gradient-to-r from-cyan-600 to-blue-600 p-6 text-white">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="bg-yellow-400 text-cyan-900 px-3 py-1 rounded-full text-xs font-bold animate-bounce">
+                      🔥 BREAKTHROUGH
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">
+                    AI Edge Computing 2026
+                  </h3>
+                  <p className="text-base opacity-95">
+                    1000x faster processing at the source
+                  </p>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-700 mb-4 text-sm">
+                    Revolutionary edge AI delivering 1000x performance gains, &lt;10ms latency, and $120M+ annual savings. 
+                    Transform IoT, manufacturing, and healthcare with real-time intelligence.
+                  </p>
+                  <div className="grid grid-cols-3 gap-2 mb-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-cyan-600">1000x</div>
+                      <div className="text-xs text-gray-600">Faster</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-blue-600">&lt;10ms</div>
+                      <div className="text-xs text-gray-600">Latency</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-green-600">$120M</div>
+                      <div className="text-xs text-gray-600">Savings</div>
+                    </div>
+                  </div>
+                  <div className="block w-full bg-cyan-600 text-white text-center py-3 rounded-lg font-bold hover:bg-cyan-700 transition-colors">
+                    Read Full Article →
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Financial Services Case Study */}
+            <Link href="/case-studies/financial-services-ai-transformation-2026" className="group">
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-green-300">
+                <div className="bg-gradient-to-r from-green-600 to-emerald-600 p-6 text-white">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="bg-yellow-400 text-green-900 px-3 py-1 rounded-full text-xs font-bold animate-bounce">
+                      🏆 SUCCESS STORY
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">
+                    $250M Financial Services ROI
+                  </h3>
+                  <p className="text-base opacity-95">
+                    Fortune 50 bank transforms in 14 months
+                  </p>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-700 mb-4 text-sm">
+                    How a global financial institution achieved $250M ROI, 99.8% fraud detection, and 85% cost reduction 
+                    with comprehensive AI deployment across all operations.
+                  </p>
+                  <div className="grid grid-cols-3 gap-2 mb-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-green-600">$250M</div>
+                      <div className="text-xs text-gray-600">ROI</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-emerald-600">99.8%</div>
+                      <div className="text-xs text-gray-600">Fraud Detect</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-blue-600">14 mo</div>
+                      <div className="text-xs text-gray-600">Timeline</div>
+                    </div>
+                  </div>
+                  <div className="block w-full bg-green-600 text-white text-center py-3 rounded-lg font-bold hover:bg-green-700 transition-colors">
+                    Read Success Story →
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* AI-Powered Data Analytics Service */}
+            <Link href="/services/ai-powered-data-analytics-2026" className="group">
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-indigo-300">
+                <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-6 text-white">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="bg-white text-indigo-900 px-3 py-1 rounded-full text-xs font-bold animate-bounce">
+                      🚀 NEW SERVICE
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">
+                    AI-Powered Data Analytics
+                  </h3>
+                  <p className="text-base opacity-95">
+                    Real-time intelligence & predictive insights
+                  </p>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-700 mb-4 text-sm">
+                    Transform raw data into strategic intelligence with real-time AI analytics, predictive modeling, 
+                    and automated insights driving $95M+ in business value.
+                  </p>
+                  <div className="grid grid-cols-3 gap-2 mb-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-indigo-600">99.9%</div>
+                      <div className="text-xs text-gray-600">Accuracy</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-purple-600">&lt;100ms</div>
+                      <div className="text-xs text-gray-600">Query</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-green-600">$95M+</div>
+                      <div className="text-xs text-gray-600">ROI</div>
+                    </div>
+                  </div>
+                  <div className="block w-full bg-indigo-600 text-white text-center py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">
+                    Explore Service →
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-2 border-white/30">
+            <h3 className="text-3xl font-bold mb-4">Want These Results for Your Organization?</h3>
+            <p className="text-xl mb-6 opacity-95">
+              Discover how AI edge computing, enterprise transformation, and intelligent analytics 
+              can deliver exponential growth and massive ROI
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
+              >
+                📞 Call +1 302 464 0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all hover:scale-105"
+              >
+                📧 Schedule Free Consultation
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* 🚀 LATEST CONTENT - SEPTEMBER 30, 2025 */}
       <September30NewContent2025Banner />
       
