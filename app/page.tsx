@@ -127,6 +127,7 @@ import AutonomousBusinessIntelligence2026Banner from '../components/AutonomousBu
 import NewContent2027ShowcaseBanner from '../components/NewContent2027ShowcaseBanner';
 import RevolutionaryBreakthrough2026Banner from '../src/components/RevolutionaryBreakthrough2026Banner';
 import AICostOptimizationBanner from '../src/components/AICostOptimizationBanner';
+import AutonomyBlueprint2026Banner from '../components/AutonomyBlueprint2026Banner';
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 10x Performance, 90% Cost Reduction',
@@ -174,6 +175,9 @@ export default function HomePage() {
 
       {/* ✨ Latest Sept 30 additions — advertised site-wide */}
       <September30LatestBreakthroughsBanner />
+
+      {/* 🔔 New: Enterprise Autonomy Blueprint 2026 */}
+      <AutonomyBlueprint2026Banner />
 
       {/* NEW: Fresh today – promote brand-new guides */}
       <section className="py-8 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 border-y border-white/10">
