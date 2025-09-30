@@ -285,14 +285,24 @@ export default function BlogPage() {
         <p className="text-white/70 mb-10">
           Curated research, playbooks, and case studies for enterprise AI leaders.
         </p>
-        <div className="space-y-4">
-          <Link href="/blog/ai-2027-autonomous-governance-blueprint" className="text-blue-300 hover:text-blue-200 underline">
-            AI 2027 Autonomous Governance Blueprint
-          </Link>
-          <br />
-          <Link href="/blog/ai-2026-agent-ops-observability" className="text-fuchsia-300 hover:text-fuchsia-200 underline">
-            Agent Ops Observability 2026
-          </Link>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {blogPosts.slice(0, 8).map((post) => (
+            <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-white/30 transition-colors">
+                <div className="mb-2 flex items-center gap-2">
+                  <span className={`px-3 py-1 rounded-full text-xs bg-${post.color}-500/20 text-${post.color}-300 border border-${post.color}-500/30`}>
+                    {post.category}
+                  </span>
+                  <span className="text-sm text-white/60">{post.publishedAt}</span>
+                </div>
+                <h3 className="text-xl font-bold group-hover:text-white transition-colors">
+                  {post.title}
+                </h3>
+                <p className="text-gray-300 mt-2 text-sm">{post.excerpt}</p>
+                <div className="mt-3 text-white/60 text-sm">{post.readTime}</div>
+              </div>
+            </Link>
+          ))}
         </div>
       </main>
     </div>

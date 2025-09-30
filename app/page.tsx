@@ -195,6 +195,33 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      {/* 🔔 New Promotions: Governance + Agent Ops */}
+      <section className="py-6 bg-gradient-to-r from-blue-700 via-indigo-700 to-fuchsia-700 text-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-4">
+            <Link href="/blog/ai-2027-autonomous-governance-blueprint" className="block bg-white/10 hover:bg-white/15 border border-white/20 rounded-xl p-6 transition-colors">
+              <div className="mb-2">
+                <span className="px-3 py-1 rounded-full text-xs bg-blue-500/20 text-blue-200 border border-blue-500/30">Governance</span>
+                <span className="ml-2 text-white/70 text-xs">New</span>
+              </div>
+              <h3 className="text-xl font-bold">AI 2027 Autonomous Governance Blueprint</h3>
+              <p className="text-white/80 mt-2 text-sm">Policy → controls → telemetry → review. Ship autonomy safely with measurable guardrails.</p>
+            </Link>
+
+            <Link href="/blog/ai-2026-agent-ops-observability" className="block bg-white/10 hover:bg-white/15 border border-white/20 rounded-xl p-6 transition-colors">
+              <div className="mb-2">
+                <span className="px-3 py-1 rounded-full text-xs bg-fuchsia-500/20 text-fuchsia-200 border border-fuchsia-500/30">Agent Ops</span>
+                <span className="ml-2 text-white/70 text-xs">New</span>
+              </div>
+              <h3 className="text-xl font-bold">Agent Ops Observability 2026</h3>
+              <p className="text-white/80 mt-2 text-sm">Traces, budgets, and reviews to operate multi‑agent systems with confidence.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 📣 Featured: October — New Risk Mitigation Article */}
+      <OctoberFeaturedContentBanner />
 
       {/* 📣 Featured: September 30, 2025 — Three New Articles */}
       <NewestContent2025Banner />
