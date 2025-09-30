@@ -269,15 +269,15 @@ const Home = () => {
           <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-6">
             <div className="text-white text-sm mb-4">New this week</div>
             <div className="grid md:grid-cols-2 gap-4">
-              <Link to="/blog/ai-enterprise-transformation-2027" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
-                <div className="text-indigo-300 text-xs mb-2">Enterprise AI</div>
-                <div className="text-white font-semibold">AI Enterprise Transformation 2027</div>
-                <div className="text-zion-slate-light text-sm mt-1">Executive playbook to plan, fund, and scale AI with measurable ROI.</div>
+              <Link to="/blog/ai-2025-sept-30-cognitive-assistants-blueprint" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
+                <div className="text-indigo-300 text-xs mb-2">AI Engineering</div>
+                <div className="text-white font-semibold">Cognitive Assistants Blueprint</div>
+                <div className="text-zion-slate-light text-sm mt-1">Policy tests, eval scorecards, KPI‑linked rollback for safe velocity.</div>
               </Link>
-              <Link to="/blog/agentic-workflow-orchestration-2026" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
-                <div className="text-emerald-300 text-xs mb-2">AI Operations</div>
-                <div className="text-white font-semibold">Agentic Workflow Orchestration 2026</div>
-                <div className="text-zion-slate-light text-sm mt-1">Budgets, KPI‑linked canaries, and rollback for safe velocity.</div>
+              <Link to="/blog/edge-2025-sept-30-federated-learning-zero-pii" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">Analytics</div>
+                <div className="text-white font-semibold">Federated Learning — Zero‑PII</div>
+                <div className="text-zion-slate-light text-sm mt-1">Scoped IDs, on‑device training, DP noise, and attestations.</div>
               </Link>
             </div>
             {/* Freshly added posts */}
@@ -320,6 +320,11 @@ const Home = () => {
                 <div className="text-emerald-300 text-xs mb-2">AI Operations</div>
                 <div className="text-white font-semibold">Zero‑Regret Agent Releases 2026</div>
                 <div className="text-zion-slate-light text-sm mt-1">Budgeted actions, KPI canaries, and instant rollback.</div>
+              </Link>
+              <Link to="/blog/fintech-2025-sept-30-ai-financial-modeling-guide" className="block rounded-lg border border-white/10 p-4 hover:border-blue-400/40 transition-colors">
+                <div className="text-blue-300 text-xs mb-2">FinTech AI</div>
+                <div className="text-white font-semibold">AI Financial Modeling Guide</div>
+                <div className="text-zion-slate-light text-sm mt-1">Backtests, budgets, and governance for reliable financial AI.</div>
               </Link>
             </div>
           </div>
