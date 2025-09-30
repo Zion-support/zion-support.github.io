@@ -37,6 +37,32 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
+    slug: "ai-2025-oct-01-privacy-first-observability-v2",
+    title: "Privacy‑First Observability v2 — User‑Centric Traces, Zero‑PII",
+    description: "Scoped IDs, redaction filters, and retention budgets for rich, compliant traces without PII leaks.",
+    category: "Observability",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-2025-oct-01-quality-tiers-v3",
+    title: "GenAI Quality Tiers v3 — 50% Savings, Stable UX",
+    description: "Tiered routing, semantic caches, and eval‑gated fallbacks to cut cost without hurting experience.",
+    category: "GenAI",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-2025-oct-01-consentless-journeys-blueprint",
+    title: "Consentless Journeys Blueprint — Personalization <100ms, Zero‑PII",
+    description: "Scoped IDs, on‑device models, and DP noise to deliver private, real‑time personalization worldwide.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "9 min read"
+  },
     slug: "ai-2025-sept-30-real-time-decision-engines-v3",
     title: "Real-Time Decision Engines v3 — 10M/sec, <1ms, intent prefetching",
     description: "Warm pools, semantic caches, and intent prefetching deliver ultra‑low latency at massive scale with predictable cost tiers.",
