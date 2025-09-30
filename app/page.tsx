@@ -44,20 +44,17 @@ import {
   AIInnovationShowcaseBanner
 } from '../components/NewContent2026Banners';
 import {
-  AIEnterpriseAutomationRevolutionBanner,
-  AIQuantumComputingBreakthroughBanner,
-  AIMegaTransformationSuccessBanner,
-  AI2026ContentShowcaseBanner,
-  AI2026InnovationShowcaseBanner
-} from '../components/NewContent2026MegaBanners';
->>>>>>> cursor/create-and-deploy-new-content-a5bf
+  NewContent2026MegaBanner,
+  AIRevolutionary2026Banner,
+  Revolutionary2026ContentBanner,
+  LatestAIInnovations2026Banner
+} from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
+import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
+import InteractiveAI2027Calculator from '../components/InteractiveAI2027Calculator';
+import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
-import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
-import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
-import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -472,7 +469,6 @@ export default function HomePage() {
               </div>
             </Link>
             <Link href="/blog/ai-trends-2025-enterprise-transformation" className="group">
->>>>>>> cursor/create-and-deploy-new-content-6423
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
