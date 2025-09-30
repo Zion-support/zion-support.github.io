@@ -10,6 +10,36 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2025-oct-02-agent-runbooks-v6",
+    title: "Agent Reliability Runbooks v6 — Contain Incidents in Under 60s",
+    description:
+      "Deterministic tools, budgeted actions, and live traces that keep agent systems safe in production.",
+    category: "AI Operations",
+    publishedAt: "2025-10-02",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "ai-2025-oct-01-edge-privacy-observability",
+    title: "Edge Privacy Observability — Traces Without PII Leaks",
+    description:
+      "User‑centric telemetry using scoped IDs, local redaction, and budgeted sampling for sub‑100ms analytics.",
+    category: "Observability",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "ai-2025-sept-30-cio-modernization-playbook",
+    title: "CIO Modernization Playbook 2025 — Ship Faster With Fewer Surprises",
+    description:
+      "A pragmatic blueprint for CIOs to modernize platforms with golden paths, guardrails, and KPI‑linked scorecards.",
+    category: "Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
     slug: "privacy-first-feature-flags-2026",
     title: "Privacy‑First Feature Flags 2026: Global Rolls Without PII Risk",
     description: "Scoped IDs, edge filters, and health checks for instant, safe rollouts under 100ms.",
@@ -773,7 +803,6 @@ export const posts: BlogPost[] = [
     featured: false,
     readTime: "11 min read",
   },
-<<<<<<< HEAD
   {
     slug: "privacy-first-feature-flags-2025",
     title: "Privacy‑First Feature Flags: Zero‑Regret Rollouts at the Edge",

@@ -104,8 +104,8 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: 2025‑10‑03 Content Drop — Control Planes, Eval Budgets, Edge Telemetry"
-          description="Fresh releases: Autonomous Control Planes v2, Eval Budgeting Blueprint, and Privacy‑First Edge Telemetry. Cut costs 30‑60% while improving safety and UX."
+          title="🚀 NEW: Oct 02 — Agent Runbooks v6, Edge Privacy Observability, CIO Playbook"
+          description="Latest drops: Agent Reliability Runbooks v6, Edge Privacy Observability, and CIO Modernization Playbook. Ship faster with safety, privacy, and ROI."
           ctaText="Read the Latest"
           ctaLink="/blog"
           dismissible={true}
