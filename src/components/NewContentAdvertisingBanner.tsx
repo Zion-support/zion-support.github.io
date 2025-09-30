@@ -4,6 +4,30 @@ import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Users, Award, Target } fro
 const NewContentAdvertisingBanner: React.FC = () => {
   const featuredContent = [
     {
+      id: 0,
+      title: 'Autonomous Customer Service 2025',
+      category: 'AI Operations',
+      readTime: '7 min',
+      rating: 5.0,
+      readers: '25K+',
+      badge: 'NEW',
+      gradient: 'from-pink-500 to-red-500',
+      icon: <Sparkles className="w-6 h-6" />,
+      link: '/blog/ai-2025-oct-02-autonomous-customer-service-playbook'
+    },
+    {
+      id: 7,
+      title: 'Consentless Personalization (Edge)',
+      category: 'Edge Computing',
+      readTime: '6 min',
+      rating: 4.9,
+      readers: '19K+',
+      badge: 'FEATURED',
+      gradient: 'from-teal-500 to-cyan-500',
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: '/blog/edge-2025-oct-02-consentless-personalization-blueprint'
+    },
+    {
       id: 1,
       title: 'Neural Code Synthesis 2025',
       category: 'AI Engineering',

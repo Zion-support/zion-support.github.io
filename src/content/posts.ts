@@ -10,6 +10,26 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2025-oct-02-autonomous-customer-service-playbook",
+    title: "Autonomous Customer Service 2025: 60s Resolutions, 30% Cost Down",
+    description:
+      "Design agent workflows with safe tools, KPI-tied evals, and rollback runbooks to resolve support in under a minute.",
+    category: "AI Operations",
+    publishedAt: "2025-10-02",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "edge-2025-oct-02-consentless-personalization-blueprint",
+    title: "Consentless Personalization: Private, Real-Time UX at the Edge",
+    description:
+      "Scoped IDs, signed configs, and on-device models deliver sub-100ms experiences without collecting PII.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-02",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
     slug: "ai-2025-oct-02-agent-runbooks-v6",
     title: "Agent Reliability Runbooks v6 — Contain Incidents in Under 60s",
     description:
