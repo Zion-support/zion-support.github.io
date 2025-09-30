@@ -1095,6 +1095,33 @@ export const posts: BlogPost[] = [
 // Newly added content (auto-advertised on Home via latest sort)
 posts.push(
   {
+    slug: "ai-platform-value-realization-2026",
+    title: "AI Platform Value Realization 2026: From Pilots to Profit",
+    description: "Operational scorecards and rollout trains that convert AI pilots into durable ROI across business units.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "secure-ml-supply-chain-v2-2026",
+    title: "Secure ML Supply Chain v2: Attest Everything, Drift Nothing",
+    description: "Model, data, and prompt provenance with signed attestations and automated drift gates in CI/CD.",
+    category: "Security",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-experiments-under-100ms-2026",
+    title: "Edge Experiments Under 100ms: Privacy‑First A/B Without PII",
+    description: "Geo‑aware flags, scoped IDs, and on‑device metrics enabling compliant experimentation at the edge.",
+    category: "Analytics",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "ai-safety-budgets-2026",
     title: "AI Safety Budgets 2026: Guardrails That Keep Velocity High",
     description: "Budget risky actions, set rollback triggers, and wire evals to KPIs for safe automation.",

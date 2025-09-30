@@ -73,6 +73,19 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     priority: 5,
     startDate: '2025-10-15',
   }
+  ,
+  {
+    id: 'oct-30-new-content-drop',
+    title: '🚀 New Content Drop: Platform ROI, Supply Chain v2, Edge Experiments',
+    description: 'Three fresh deep-dives: value realization, signed attestations, and sub‑100ms privacy‑first experiments.',
+    ctaText: 'Read the latest',
+    ctaLink: '/blog',
+    variant: 'success',
+    icon: '🚀',
+    featured: true,
+    priority: 0,
+    startDate: '2025-10-30'
+  }
 ];
 
 export const getActiveEnhancedBanners = (): EnhancedPromotionalBanner[] => {
