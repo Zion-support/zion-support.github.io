@@ -99,6 +99,67 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
+        {/* 🚀 BRAND NEW CONTENT - September 30, 2025 - MEGA BANNER */}
+        <section className="bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 border-b-4 border-white/30 relative overflow-hidden">
+          <div className="absolute inset-0 bg-black/10"></div>
+          <div className="container mx-auto px-6 py-12 relative z-10">
+            <div className="text-center">
+              <div className="inline-flex items-center gap-3 px-8 py-3 rounded-full bg-white/20 border border-white/40 mb-6 animate-pulse">
+                <span className="text-white font-black text-2xl tracking-wider uppercase">
+                  🔥 5 GROUNDBREAKING NEW ARTICLES JUST PUBLISHED! 🔥
+                </span>
+              </div>
+              <h2 className="text-5xl md:text-6xl font-black text-white mb-6 drop-shadow-2xl">
+                Master the Future of AI Today
+              </h2>
+              <p className="text-2xl md:text-3xl text-white font-bold mb-8 max-w-5xl mx-auto leading-relaxed">
+                🛡️ Autonomous Threat Response • 🧠 Advanced Prompt Engineering • 🔬 Synthetic Data Generation •
+                ⚖️ AI Explainability • 🤖 Production Reinforcement Learning
+              </p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 max-w-7xl mx-auto">
+                <Link href="/blog/ai-autonomous-threat-response-2025" className="bg-white/10 backdrop-blur-lg border-2 border-white/30 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-left">
+                  <div className="text-4xl mb-3">🛡️</div>
+                  <h3 className="text-xl font-bold text-white mb-2">AI Autonomous Threat Response</h3>
+                  <p className="text-white/90 text-sm mb-3">Sub-30s incident containment • 99.8% accuracy • 95% MTTR reduction</p>
+                  <div className="text-yellow-300 font-semibold text-sm">14 min read →</div>
+                </Link>
+                <Link href="/blog/ai-prompt-engineering-mastery-2025" className="bg-white/10 backdrop-blur-lg border-2 border-white/30 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-left">
+                  <div className="text-4xl mb-3">🧠</div>
+                  <h3 className="text-xl font-bold text-white mb-2">Advanced Prompt Engineering</h3>
+                  <p className="text-white/90 text-sm mb-3">95%+ accuracy • 70% cost reduction • Production optimization</p>
+                  <div className="text-yellow-300 font-semibold text-sm">16 min read →</div>
+                </Link>
+                <Link href="/blog/ai-synthetic-data-generation-2025" className="bg-white/10 backdrop-blur-lg border-2 border-white/30 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-left">
+                  <div className="text-4xl mb-3">🔬</div>
+                  <h3 className="text-xl font-bold text-white mb-2">Synthetic Data Generation</h3>
+                  <p className="text-white/90 text-sm mb-3">98% statistical parity • Perfect privacy • Unlimited training data</p>
+                  <div className="text-yellow-300 font-semibold text-sm">15 min read →</div>
+                </Link>
+                <Link href="/blog/ai-explainability-frameworks-2025" className="bg-white/10 backdrop-blur-lg border-2 border-white/30 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-left">
+                  <div className="text-4xl mb-3">⚖️</div>
+                  <h3 className="text-xl font-bold text-white mb-2">AI Explainability Frameworks</h3>
+                  <p className="text-white/90 text-sm mb-3">90%+ stakeholder confidence • Regulatory compliance • Trust through transparency</p>
+                  <div className="text-yellow-300 font-semibold text-sm">13 min read →</div>
+                </Link>
+                <Link href="/blog/ai-reinforcement-learning-production-2025" className="bg-white/10 backdrop-blur-lg border-2 border-white/30 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-left">
+                  <div className="text-4xl mb-3">🤖</div>
+                  <h3 className="text-xl font-bold text-white mb-2">Production Reinforcement Learning</h3>
+                  <p className="text-white/90 text-sm mb-3">10x better than supervised learning • PPO & RLHF • Continuous learning</p>
+                  <div className="text-yellow-300 font-semibold text-sm">17 min read →</div>
+                </Link>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/blog"
+                  className="bg-white text-orange-600 px-12 py-5 rounded-xl font-black text-2xl hover:bg-yellow-50 transition-all duration-300 hover:scale-110 shadow-2xl inline-flex items-center gap-3"
+                >
+                  <span>🚀 Read All New Articles Now</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        
         {/* AI 2027 Breakthrough Banner */}
         <AI2027BreakthroughBanner />
         
