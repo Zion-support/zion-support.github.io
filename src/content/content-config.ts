@@ -151,44 +151,26 @@ export const featuredBlogPosts: FeaturedItem[] = [
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
   {
-<<<<<<< HEAD
-    id: "ai-operational-trust-blueprint-2026",
-    title: "AI Operational Trust Blueprint 2026",
-    description: "SLIs + budgets + rollback for trustworthy automation",
-    link: "/blog/ai-operational-trust-blueprint-2026",
-=======
     id: "ai-slo-scorecards-2026",
     title: "AI SLO Scorecards 2026",
     description: "SLIs, error budgets, rollback triggers wired to KPIs",
     link: "/blog/ai-slo-scorecards-2026",
->>>>>>> cursor/create-and-deploy-new-content-647f
     type: "article",
     featured: true
   },
   {
     id: "edge-private-insights-2026",
     title: "Edge Private Insights 2026",
-<<<<<<< HEAD
-    description: "Actionable metrics without PII using scoped IDs + DP noise",
-=======
     description: "Actionable metrics without PII using scoped IDs & DP",
->>>>>>> cursor/create-and-deploy-new-content-647f
     link: "/blog/edge-private-insights-2026",
     type: "article",
     featured: true
   },
   {
-<<<<<<< HEAD
-    id: "genai-cost-controllers-2026",
-    title: "GenAI Cost Controllers 2026",
-    description: "Tiered quality and caches to cut spend 40–70%",
-    link: "/blog/genai-cost-controllers-2026",
-=======
     id: "genai-budgets-routing-2026",
     title: "GenAI Budgets & Routing 2026",
     description: "Predictable cost, stable UX with tiers, caches, and evals",
     link: "/blog/genai-budgets-routing-2026",
->>>>>>> cursor/create-and-deploy-new-content-647f
     type: "article",
     featured: true
   },
