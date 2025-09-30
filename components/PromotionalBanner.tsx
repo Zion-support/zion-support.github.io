@@ -1149,3 +1149,15 @@ export const NewSeptemberPromotionsBanner = () => (
     hideAfter={22}
   />
 );
+
+// Sept 30 Latest Breakthroughs banner (site-wide)
+export const September30LatestBreakthroughsBanner = () => (
+  <PromotionalBanner
+    message="✨ Latest: AI‑Governed Agents, Edge Telemetry Without PII, GenAI Cache Strategies"
+    ctaText="Explore New Posts"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-indigo-600"
+    autoHide={true}
+    hideAfter={20}
+  />
+);

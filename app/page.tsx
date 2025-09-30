@@ -28,7 +28,8 @@ import {
   HealthcareTransformationBanner,
   NewContent2026Banner,
   AICostCalculatorBanner,
-  AIImplementationPlaybookBanner
+  AIImplementationPlaybookBanner,
+  September30LatestBreakthroughsBanner
 } from '../components/PromotionalBanner';
 import {
   AIEnterpriseAdoptionBanner,
@@ -170,6 +171,9 @@ export default function HomePage() {
       <div className="animate-fade-in">
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
+
+      {/* ✨ Latest Sept 30 additions — advertised site-wide */}
+      <September30LatestBreakthroughsBanner />
       
       {/* 🚀 REVOLUTIONARY BREAKTHROUGH CONTENT - JANUARY 30, 2026 */}
       <RevolutionaryBreakthrough2026Banner />

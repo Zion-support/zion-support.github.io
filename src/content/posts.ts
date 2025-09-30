@@ -1846,3 +1846,34 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Brand new content to surface on homepage
+posts.push(
+  {
+    slug: "ai-governed-agents-in-production-2025",
+    title: "AI‑Governed Agents in Production 2025: Policies, Budgets, Rollback",
+    description: "Ship reliable agents with KPI‑linked policy tests, budgeted actions, and instant rollback playbooks.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-telemetry-privacy-2025",
+    title: "Edge Telemetry 2025: Signal‑Rich Insights Without PII",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for analytics teams—no PII collection required.",
+    category: "Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-cache-strategies-2025",
+    title: "GenAI Cache Strategies 2025: Cut Spend 40–70% With Stable UX",
+    description: "Prompt caches, semantic dedupe, and TTL windows that keep quality high under strict budgets.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  }
+);
+
