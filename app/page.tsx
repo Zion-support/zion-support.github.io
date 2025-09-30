@@ -53,6 +53,9 @@ import InteractiveContentShowcase2026 from '../components/InteractiveContentShow
 import LatestContent2025Banner from '../components/LatestContent2025Banner';
 import RevolutionaryAI2025Banner from '../components/RevolutionaryAI2025Banner';
 import InteractiveAICalculator2025 from '../components/InteractiveAICalculator2025';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
+import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculator';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -134,6 +137,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
+<<<<<<< HEAD
       {/* Revolutionary AI 2025 Banner */}
       <RevolutionaryAI2025Banner />
       
@@ -142,6 +146,15 @@ export default function HomePage() {
       
       {/* Revolutionary Content 2026 Banner */}
       <RevolutionaryContent2026Banner />
+=======
+      {/* Latest 2026 Mega Content Banners */}
+      <Revolutionary2026ContentBanner />
+      <AI2026ContentShowcaseBanner />
+      <AIEnterpriseAutomationRevolutionBanner />
+      <AIQuantumComputingBreakthroughBanner />
+      <AIMegaTransformationSuccessBanner />
+      <AI2026InnovationShowcaseBanner />
+>>>>>>> feature/new-content-and-advertising-2026
       
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
@@ -312,14 +325,51 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Interactive AI Calculator 2025 */}
       <InteractiveAICalculator2025 />
 
+=======
+      {/* Interactive AI ROI Calculator */}
+      <section id="roi-calculator" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Calculate Your AI Transformation ROI
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Use our interactive calculator to project your potential returns from AI transformation. 
+              See how much you could save and achieve with enterprise AI solutions.
+            </p>
+          </div>
+          <InteractiveAIROICalculator />
+        </div>
+      </section>
+
+      {/* Interactive AI 2026 Calculator */}
+      <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Advanced AI ROI Calculator 2026
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Get precise projections for your AI transformation with our advanced calculator 
+              that considers industry-specific factors and breakthrough technologies.
+            </p>
+          </div>
+          <InteractiveAI2026Calculator />
+        </div>
+      </section>
+>>>>>>> feature/new-content-and-advertising-2026
       {/* Interactive Promotional Section */}
       <InteractivePromotionalSection />
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
+      
+      {/* Latest Content Showcase 2026 */}
+      <LatestContent2026ShowcaseBanner />
       
       {/* Interactive Content Showcase 2026 */}
       <InteractiveContentShowcase2026 />
