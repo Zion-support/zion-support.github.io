@@ -17,14 +17,6 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
-<<<<<<< HEAD
-    id: "ai-native-security-operations-2026",
-    slug: "ai-native-security-operations-2026",
-    title: "AI-Native Security Operations 2026: Autonomous Threat Prevention at Scale",
-    description: "Transform security operations with AI-native systems achieving 99.9% threat prevention, real-time zero-day detection, and autonomous incident response reducing MTTR from hours to seconds.",
-    excerpt: "Achieve 99.9% threat prevention with AI-native security operations. Detect zero-day exploits in real-time and respond autonomously in seconds.",
-    author: "Zion Tech Group Security AI Team",
-=======
     id: "quantum-ai-convergence-enterprise-2026",
     slug: "quantum-ai-convergence-enterprise-2026",
     title: "Quantum-AI Convergence 2026: 1000x Performance Breakthrough for Enterprise",
@@ -111,7 +103,14 @@ export const latestArticles: LatestArticle[] = [
     description: "Transform legal operations with AI achieving 10x faster case research, automatic brief generation, and 99% accuracy in precedent analysis. Master autonomous legal workflows that review thousands of cases in minutes.",
     excerpt: "Revolutionize legal research with AI analyzing thousands of cases in minutes while generating court-ready briefs with 99% accuracy.",
     author: "Zion Tech Group Legal AI Team",
->>>>>>> origin/cursor/create-and-deploy-new-content-ae79
+  },
+  {
+    id: "ai-native-security-operations-2026",
+    slug: "ai-native-security-operations-2026",
+    title: "AI-Native Security Operations 2026: Autonomous Threat Prevention at Scale",
+    description: "Transform security operations with AI-native systems achieving 99.9% threat prevention, real-time zero-day detection, and autonomous incident response reducing MTTR from hours to seconds.",
+    excerpt: "Achieve 99.9% threat prevention with AI-native security operations. Detect zero-day exploits in real-time and respond autonomously in seconds.",
+    author: "Zion Tech Group Security AI Team",
     date: "2025-09-30",
     category: "Cybersecurity",
     tags: ["AI Security", "Autonomous Operations", "Zero-Day Detection", "Threat Prevention"],
@@ -2271,20 +2270,6 @@ export const latestArticles: LatestArticle[] = [
   }
   ,
   {
-<<<<<<< HEAD
-    id: "agentic-ai-workflows-production-2026",
-    slug: "agentic-ai-workflows-production-2026",
-    title: "Agentic AI Workflows 2026: Building Production-Ready Multi-Agent Systems",
-    description: "Master the art of building production-grade agentic workflows with multi-agent coordination, tool use, and reliable execution patterns. Achieve 10x productivity gains with autonomous AI agents.",
-    excerpt: "Build production agentic systems that coordinate multiple AI agents, use tools reliably, and deliver consistent business outcomes at scale.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "AI Engineering",
-    tags: ["Agentic AI", "Multi-Agent Systems", "AI Workflows", "Production AI"],
-    featured: true,
-    readTime: "16 min read",
-    image: "/images/agentic-ai-workflows-2026.jpg",
-=======
     id: "ai-infrastructure-cost-optimization-2026",
     slug: "ai-infrastructure-cost-optimization-2026",
     title: "AI Infrastructure Cost Optimization 2026: Cut Spend 60-80% Without Sacrificing Performance",
@@ -2297,25 +2282,24 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "18 min read",
     image: "/images/ai-infrastructure-cost-optimization.jpg",
->>>>>>> origin/cursor/create-and-deploy-new-content-6c4b
+  },
+  {
+    id: "agentic-ai-workflows-production-2026",
+    slug: "agentic-ai-workflows-production-2026",
+    title: "Agentic AI Workflows 2026: Building Production-Ready Multi-Agent Systems",
+    description: "Master the art of building production-grade agentic workflows with multi-agent coordination, tool use, and reliable execution patterns. Achieve 10x productivity gains with autonomous AI agents.",
+    excerpt: "Build production agentic systems that coordinate multiple AI agents, use tools reliably, and deliver consistent business outcomes at scale.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Engineering",
+    tags: ["Agentic AI", "Multi-Agent Systems", "AI Workflows", "Production AI"],
+    featured: true,
+    readTime: "16 min read",
+    image: "/images/agentic-ai-workflows-2026.jpg",
     newBadge: true,
     trending: true
   },
   {
-<<<<<<< HEAD
-    id: "continuous-training-ml-systems-2026",
-    slug: "continuous-training-ml-systems-2026",
-    title: "Continuous Training ML Systems 2026: Always-Fresh Models That Adapt",
-    description: "Implement continuous training pipelines that keep models fresh, adapt to drift, and maintain performance without manual retraining. Achieve 40% accuracy improvement over static models.",
-    excerpt: "Build ML systems that learn continuously from production data, adapt to changing patterns, and stay accurate without manual intervention.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-30",
-    category: "MLOps",
-    tags: ["Continuous Training", "Model Drift", "AutoML", "Production ML"],
-    featured: true,
-    readTime: "14 min read",
-    image: "/images/continuous-training-ml-2026.jpg",
-=======
     id: "ai-agent-mesh-networks-enterprise-2026",
     slug: "ai-agent-mesh-networks-enterprise-2026",
     title: "AI Agent Mesh Networks 2026: Distributed Intelligence at Enterprise Scale",
@@ -2328,12 +2312,38 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "19 min read",
     image: "/images/ai-agent-mesh-networks.jpg",
->>>>>>> origin/cursor/create-and-deploy-new-content-6c4b
+  },
+  {
+    id: "continuous-training-ml-systems-2026",
+    slug: "continuous-training-ml-systems-2026",
+    title: "Continuous Training ML Systems 2026: Always-Fresh Models That Adapt",
+    description: "Implement continuous training pipelines that keep models fresh, adapt to drift, and maintain performance without manual retraining. Achieve 40% accuracy improvement over static models.",
+    excerpt: "Build ML systems that learn continuously from production data, adapt to changing patterns, and stay accurate without manual intervention.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "MLOps",
+    tags: ["Continuous Training", "Model Drift", "AutoML", "Production ML"],
+    featured: true,
+    readTime: "14 min read",
+    image: "/images/continuous-training-ml-2026.jpg",
     newBadge: true,
     trending: true
   },
   {
-<<<<<<< HEAD
+    id: "ai-vision-language-action-models-2026",
+    slug: "ai-vision-language-action-models-2026",
+    title: "AI Vision-Language-Action Models 2026: Multimodal Intelligence That Sees, Understands & Acts",
+    description: "Build production VLA models that perceive visual environments, understand natural language instructions, and execute precise actions in physical or digital worlds.",
+    excerpt: "Build VLA models achieving 97% vision accuracy, 95% language understanding, and 92% action precision for robotics and automation.",
+    author: "Zion Tech Group Multimodal AI Team",
+    date: "2025-09-30",
+    category: "Multimodal AI",
+    tags: ["VLA Models", "Vision-Language-Action", "Robotics AI", "Computer Vision", "Embodied AI"],
+    featured: true,
+    readTime: "20 min read",
+    image: "/images/vision-language-action-models.jpg",
+  },
+  {
     id: "llm-function-calling-mastery-2026",
     slug: "llm-function-calling-mastery-2026",
     title: "LLM Function Calling Mastery 2026: Building Reliable AI Tools at Scale",
@@ -2442,25 +2452,24 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "15 min read",
     image: "/images/multimodal-rag-vision.jpg",
-=======
-    id: "ai-vision-language-action-models-2026",
-    slug: "ai-vision-language-action-models-2026",
-    title: "AI Vision-Language-Action Models 2026: Multimodal Intelligence That Sees, Understands & Acts",
-    description: "Build production VLA models that perceive visual environments, understand natural language instructions, and execute precise actions in physical or digital worlds.",
-    excerpt: "Build VLA models achieving 97% vision accuracy, 95% language understanding, and 92% action precision for robotics and automation.",
-    author: "Zion Tech Group Multimodal AI Team",
-    date: "2025-09-30",
-    category: "Multimodal AI",
-    tags: ["VLA Models", "Vision-Language-Action", "Robotics AI", "Computer Vision", "Embodied AI"],
-    featured: true,
-    readTime: "20 min read",
-    image: "/images/vision-language-action-models.jpg",
->>>>>>> origin/cursor/create-and-deploy-new-content-6c4b
     newBadge: true,
     trending: true
   },
   {
-<<<<<<< HEAD
+    id: "responsible-ai-governance-framework-2026",
+    slug: "responsible-ai-governance-framework-2026",
+    title: "Responsible AI Governance Framework 2026: Build Trust & Compliance at Scale",
+    description: "Implement comprehensive AI governance framework ensuring fairness, transparency, accountability, and compliance. Master responsible AI development achieving trust while maintaining velocity.",
+    excerpt: "Achieve 100% regulatory compliance, 95%+ fairness metrics, and zero velocity impact with responsible AI governance.",
+    author: "Zion Tech Group AI Governance Team",
+    date: "2025-09-30",
+    category: "AI Governance",
+    tags: ["AI Governance", "Responsible AI", "AI Ethics", "Compliance", "Fairness", "Transparency"],
+    featured: true,
+    readTime: "16 min read",
+    image: "/images/responsible-ai-governance.jpg",
+  },
+  {
     id: "streaming-llm-architecture-2026",
     slug: "streaming-llm-architecture-2026",
     title: "Streaming LLM Architecture 2026: Real-Time Token Generation with <200ms TTFB",
@@ -2521,25 +2530,24 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "16 min read",
     image: "/images/fine-tuning-llms-production.jpg",
-=======
-    id: "responsible-ai-governance-framework-2026",
-    slug: "responsible-ai-governance-framework-2026",
-    title: "Responsible AI Governance Framework 2026: Build Trust & Compliance at Scale",
-    description: "Implement comprehensive AI governance framework ensuring fairness, transparency, accountability, and compliance. Master responsible AI development achieving trust while maintaining velocity.",
-    excerpt: "Achieve 100% regulatory compliance, 95%+ fairness metrics, and zero velocity impact with responsible AI governance.",
-    author: "Zion Tech Group AI Governance Team",
-    date: "2025-09-30",
-    category: "AI Governance",
-    tags: ["AI Governance", "Responsible AI", "AI Ethics", "Compliance", "Fairness", "Transparency"],
-    featured: true,
-    readTime: "16 min read",
-    image: "/images/responsible-ai-governance.jpg",
->>>>>>> origin/cursor/create-and-deploy-new-content-6c4b
     newBadge: true,
     trending: true
   },
   {
-<<<<<<< HEAD
+    id: "ai-data-quality-engineering-2026",
+    slug: "ai-data-quality-engineering-2026",
+    title: "AI Data Quality Engineering 2026: From Garbage In to Gold Out",
+    description: "Master data quality engineering for AI achieving 99%+ data accuracy. Learn automated validation, drift detection, and continuous data monitoring for production ML systems.",
+    excerpt: "Achieve 99%+ data quality with automated validation and drift detection improving model accuracy by 85%.",
+    author: "Zion Tech Group Data Engineering Team",
+    date: "2025-09-30",
+    category: "Data Engineering",
+    tags: ["Data Quality", "ML Data", "Data Validation", "Drift Detection", "Data Observability"],
+    featured: true,
+    readTime: "15 min read",
+    image: "/images/ai-data-quality-engineering.jpg",
+  },
+  {
     id: "ai-data-pipelines-lakehouse-2026",
     slug: "ai-data-pipelines-lakehouse-2026",
     title: "AI Data Pipelines & Lakehouse 2026: Unified Analytics for ML at Scale",
@@ -2568,20 +2576,6 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "11 min read",
     image: "/images/ai-powered-documentation.jpg",
-=======
-    id: "ai-data-quality-engineering-2026",
-    slug: "ai-data-quality-engineering-2026",
-    title: "AI Data Quality Engineering 2026: From Garbage In to Gold Out",
-    description: "Master data quality engineering for AI achieving 99%+ data accuracy. Learn automated validation, drift detection, and continuous data monitoring for production ML systems.",
-    excerpt: "Achieve 99%+ data quality with automated validation and drift detection improving model accuracy by 85%.",
-    author: "Zion Tech Group Data Engineering Team",
-    date: "2025-09-30",
-    category: "Data Engineering",
-    tags: ["Data Quality", "ML Data", "Data Validation", "Drift Detection", "Data Observability"],
-    featured: true,
-    readTime: "15 min read",
-    image: "/images/ai-data-quality-engineering.jpg",
->>>>>>> origin/cursor/create-and-deploy-new-content-6c4b
     newBadge: true,
     trending: true
   }
