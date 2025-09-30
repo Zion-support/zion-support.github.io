@@ -350,3 +350,73 @@ export function EnterpriseAISecurityBanner() {
     </div>
   );
 }
+
+// Multimodal AI Integration Banner
+export function MultimodalAIIntegrationBanner() {
+  return (
+    <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-4 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="bg-white/20 rounded-full p-2">
+              <span className="text-2xl">🎯</span>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg">Multimodal AI Integration 2025</h3>
+              <p className="text-sm opacity-90">250% efficiency gains with text, voice, and video AI</p>
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <Link
+              to="/blog/ai-multimodal-integration-2025"
+              className="bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Read Article
+            </Link>
+            <Link
+              to="/services"
+              className="border-2 border-white text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+            >
+              Get AI Solutions
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Multimodal AI Customer Service Success Banner
+export function MultimodalAICustomerServiceBanner() {
+  return (
+    <div className="bg-gradient-to-r from-green-600 to-teal-600 text-white py-4 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="bg-white/20 rounded-full p-2">
+              <span className="text-2xl">⚡</span>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg">Multimodal AI Customer Service: 80% Faster Response</h3>
+              <p className="text-sm opacity-90">See how e-commerce leader achieved 95% accuracy and 60% cost reduction</p>
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <Link
+              to="/case-studies/multimodal-ai-customer-service-transformation"
+              className="bg-white text-green-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              View Case Study
+            </Link>
+            <Link
+              to="/services/ai-customer-support-automation"
+              className="border-2 border-white text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+            >
+              Get AI Support
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
