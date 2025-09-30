@@ -1,3 +1,92 @@
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'AI-Powered DevSecOps 2026: Autonomous Security at Scale | Zion Tech Group',
+  description:
+    'Achieve 99.9% threat detection and sub-minute response with AI-driven DevSecOps across the SDLC. Practical blueprint, reference architecture, and rollout plan.',
+};
+
+export default function AIPoweredDevSecOps2026Page() {
+  return (
+    <main className="container mx-auto px-6 py-12 max-w-5xl">
+      <nav className="mb-8">
+        <Link href="/blog" className="text-purple-500 hover:text-purple-600 transition-colors">
+          ← Back to Blog
+        </Link>
+      </nav>
+
+      <header className="mb-8">
+        <div className="flex items-center gap-3 mb-3">
+          <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center">🛡️</div>
+          <div className="text-sm">
+            <span className="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-semibold mr-2">
+              Security
+            </span>
+            <span className="text-gray-500">20 min read</span>
+          </div>
+        </div>
+        <h1 className="text-4xl font-bold text-gray-900 mb-2">
+          AI-Powered DevSecOps 2026: Autonomous Security at Scale
+        </h1>
+        <p className="text-gray-600">
+          Achieve 99.9% threat detection and sub-minute response with AI-driven DevSecOps automation across the SDLC.
+          This playbook covers the reference architecture, rollout phases, guardrails, and KPIs to track.
+        </p>
+        <div className="text-sm text-gray-500 mt-3">Published September 30, 2025</div>
+      </header>
+
+      <article className="prose prose-zinc max-w-none">
+        <h2>Why Now</h2>
+        <p>
+          GenAI development velocity and supply-chain complexity make traditional security gates insufficient. Autonomic
+          detection and response—wired into CI/CD and runtime—are required to maintain both velocity and assurance.
+        </p>
+
+        <h2>Reference Architecture</h2>
+        <ul>
+          <li>Policy-as-code guardrails for code, dependencies, prompts, and data flows</li>
+          <li>LLM-backed analyzers for secrets, PII, jailbreaks, and prompt-injection patterns</li>
+          <li>Tracing and evals with signed artifacts linking changes to detections and outcomes</li>
+          <li>Runbook automation with approvals and budgeted actions for safe containment</li>
+        </ul>
+
+        <h2>Rollout Plan (90 Days)</h2>
+        <ol>
+          <li>Weeks 1–3: Baseline risks, implement policy tests in PR and CI</li>
+          <li>Weeks 4–6: Add tracing, evals, and SBOM/attestations; wire to dashboards</li>
+          <li>Weeks 7–10: Automate responses for low-risk classes; enable approvals for medium risk</li>
+          <li>Weeks 11–13: Tune thresholds, measure MTTR, finalize executive scorecards</li>
+        </ol>
+
+        <h2>KPIs</h2>
+        <ul>
+          <li>Detection coverage ≥ 99.9% across high-severity classes</li>
+          <li>Mean-time-to-contain ≤ 60s for automated runbooks</li>
+          <li>False-positive rate ≤ 2% with weekly model/eval tuning</li>
+          <li>Time-to-approval ≤ 5m for medium-risk responses</li>
+        </ul>
+
+        <h2>Outcomes</h2>
+        <p>
+          Teams ship faster with continuous security assurance. Incidents are auto-contained, audit trails are complete,
+          and leadership gains clear visibility via scorecards.
+        </p>
+      </article>
+
+      <footer className="mt-12">
+        <div className="flex items-center justify-between">
+          <Link href="/blog" className="text-purple-500 hover:text-purple-600">
+            ← Back to Blog
+          </Link>
+          <Link href="/contact" className="text-indigo-600 hover:text-indigo-700 font-semibold">
+            Schedule a consultation →
+          </Link>
+        </div>
+      </footer>
+    </main>
+  );
+}
+
 import React from 'react';
 import Link from 'next/link';
 
