@@ -178,7 +178,7 @@ export default function ContentHubPage() {
             <div className="flex flex-wrap gap-3">
               <Link href="/blog/ai-2027-operational-risk-budgets" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Operational Risk Budgets 2027<span>→</span></Link>
               <Link href="/blog/ai-september-30-2025-fresh-enterprise-ai-strategies" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Fresh Enterprise AI Strategies<span>→</span></Link>
-              <Link href="/blog/ai-2027-operational-risk-budgets" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Operational Risk Budgets 2027<span>→</span></Link>
+              <Link href="/blog/edge-2026-private-feature-flags" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Private Feature Flags 2026<span>→</span></Link>
               <Link href="/blog/edge-2027-consentless-analytics-v4" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Consentless Analytics v4<span>→</span></Link>
               <Link href="/blog/genai-reliability-scorecards-2027" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">GenAI Reliability 2027<span>→</span></Link>
               <Link href="/blog/edge-private-analytics-2027" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Edge Private Analytics 2027<span>→</span></Link>
@@ -281,7 +281,7 @@ export default function ContentHubPage() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {/* New Featured: AI 2026 Neuromorphic Breakthrough */}
-            <Link href="/blog/ai-2026-neuromorphic-breakthrough" className="group">
+              <Link href="/blog/ai-2026-neuromorphic-breakthrough" className="group">
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 p-8">
                 <div className="flex items-start justify-between mb-6">
                   <div className="text-6xl group-hover:scale-110 transition-transform duration-300">🧠</div>
