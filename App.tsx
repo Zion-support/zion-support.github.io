@@ -1,4 +1,6 @@
 import React, { JSX } from "react";
+import October2026TranscendentIntelligenceBanner from "./components/October2026TranscendentIntelligenceBanner";
+import November2026QuantumConsciousnessBanner from "./components/November2026QuantumConsciousnessBanner";
 import July2026RevolutionaryBreakthroughBanner from "./components/July2026RevolutionaryBreakthroughBanner";
 import InteractiveAI2026Showcase from "./components/InteractiveAI2026Showcase";
 import InteractiveROICalculator2026 from "./components/InteractiveROICalculator2026";
@@ -67,17 +69,15 @@ import AITrends2026AdvertisingBanner from "./components/AITrends2026AdvertisingB
 import September2026BreakthroughAdvertisingBanner from "./components/September2026BreakthroughAdvertisingBanner";
 import AutonomousEnterpriseAutomationAdvertisingBanner from "./components/AutonomousEnterpriseAutomationAdvertisingBanner";
 import February2026NewContentBreakthroughBanner from "./components/February2026NewContentBreakthroughBanner";
-import September2025PracticalAIBanner from "./components/September2025PracticalAIBanner";
-import March2026MultimodalBreakthroughBanner from "./components/March2026MultimodalBreakthroughBanner";
-import AutonomousAI2026RevolutionaryBanner from "./components/AutonomousAI2026RevolutionaryBanner";
-import March2026ContentShowcaseBanner from "./components/March2026ContentShowcaseBanner";
-import March2026ServicesPromotionalBanner from "./components/March2026ServicesPromotionalBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
-      {/* NEW: September 2025 Practical AI Insights Banner - FEATURED */}
-      <September2025PracticalAIBanner />
+      {/* NEW: November 2026 Quantum Consciousness Fusion Banner - MOST PROMINENT */}
+      <November2026QuantumConsciousnessBanner />
+      
+      {/* NEW: October 2026 Transcendent Intelligence Banner - MOST PROMINENT */}
+      <October2026TranscendentIntelligenceBanner />
       
       {/* NEW: September 2026 Breakthrough Advertising Banner - MOST PROMINENT */}
       <September2026BreakthroughAdvertisingBanner />
