@@ -1164,7 +1164,7 @@ export const NewSeptemberPromotionsBanner = () => (
 // Sept 30 Latest Breakthroughs banner (site-wide)
 export const September30LatestBreakthroughsBanner = () => (
   <PromotionalBanner
-    message="✨ Latest: AI‑Governed Agents, Edge Telemetry Without PII, GenAI Cache Strategies"
+    message="✨ Latest: Runtime Guardrails, Global Private A/B @ <100ms, Signed Prompts & SBOMs"
     ctaText="Explore New Posts"
     ctaLink="/blog"
     backgroundColor="bg-gradient-to-r from-blue-600 to-indigo-600"
@@ -1176,8 +1176,8 @@ export const September30LatestBreakthroughsBanner = () => (
 // New banner to advertise the freshly added content
 export const FreshSeptemberContentBanner = () => (
   <PromotionalBanner
-    message="🆕 New Today: Live Guardrails, Private Insights, Budget‑Aware Routing"
-    ctaText="Read the 3 new guides"
+    message="🆕 New Today: Runtime Guardrails, Global Private A/B, Signed Prompts & SBOMs"
+    ctaText="Read the new guides"
     ctaLink="/blog"
     backgroundColor="bg-gradient-to-r from-emerald-600 to-cyan-600"
     autoHide={true}

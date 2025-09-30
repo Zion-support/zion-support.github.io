@@ -215,54 +215,6 @@ export const featuredBlogPosts: FeaturedItem[] = [
 // Surface brand-new content (Oct 30, 2025)
 featuredBlogPosts.unshift(
   {
-    id: "ai-2025-sept-30-go-to-market-ai-scorecards",
-    title: "Go-To-Market AI Scorecards",
-    description: "Align AI bets to pipeline, win‑rates, and adoption — with rollback",
-    link: "/blog/ai-2025-sept-30-go-to-market-ai-scorecards",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "edge-2025-sept-30-private-telemetry-blueprint-v2",
-    title: "Private Telemetry Blueprint v2",
-    description: "Zero‑PII, sub‑100ms analytics with scoped IDs and DP noise",
-    link: "/blog/edge-2025-sept-30-private-telemetry-blueprint-v2",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "genai-2025-sept-30-eval-budgeting-blueprint-v3",
-    title: "Eval Budgeting Blueprint v3",
-    description: "Right‑size suites, cache goldens, enforce online policies under KPIs",
-    link: "/blog/genai-2025-sept-30-eval-budgeting-blueprint-v3",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "genai-2025-oct-01-e2e-eval-pipelines",
-    title: "E2E Eval Pipelines — KPI‑Linked Gates",
-    description: "Eval pipelines wired to KPIs with budgets, canaries, and rollback.",
-    link: "/blog/genai-2025-oct-01-e2e-eval-pipelines",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "edge-2025-oct-01-consentless-feature-flags-v4",
-    title: "Consentless Feature Flags v4",
-    description: "Private rollouts at <100ms with scoped IDs and signed configs.",
-    link: "/blog/edge-2025-oct-01-consentless-feature-flags-v4",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "ai-2025-sept-30-customer-agent-blueprints",
-    title: "Customer Agent Blueprints",
-    description: "Budgets, canaries, and rollback for safe CX autonomy.",
-    link: "/blog/ai-2025-sept-30-customer-agent-blueprints",
-    type: "article",
-    featured: true
-  },
-  {
     id: "ai-2026-governed-agent-runbooks",
     title: "AI 2026: Governed Agent Runbooks",
     description: "Budgets, KPI canaries, and instant rollback for safe autonomy.",
@@ -280,77 +232,29 @@ featuredBlogPosts.unshift(
   }
 );
 
-// Oct 02, 2025 – Advertise three brand-new articles site-wide
-featuredBlogPosts.unshift(
-  {
-    id: "ai-2025-oct-02-agent-safety-scorecards",
-    title: "AI 2025: Agent Safety Scorecards",
-    description: "KPIs, budgets, and rollback triggers that keep autonomous agents safe at speed",
-    link: "/blog/ai-2025-oct-02-agent-safety-scorecards",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "edge-2025-oct-02-private-experiments-v4",
-    title: "Edge 2025: Private Experiments v4 (<100ms)",
-    description: "Scoped IDs, on-device metrics, and DP noise for compliant A/B worldwide",
-    link: "/blog/edge-2025-oct-02-private-experiments-v4",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "genai-2025-oct-02-cache-playbook-v2",
-    title: "GenAI 2025: Cache Playbook v2",
-    description: "Tiered + semantic caches with eval gates for 50–70% savings",
-    link: "/blog/genai-2025-oct-02-cache-playbook-v2",
-    type: "article",
-    featured: true
-  }
-);
-
-// Sept 30, 2025 – Surface three newly added articles at the top
-featuredBlogPosts.unshift(
-  {
-    id: "ai-2026-autonomous-ops-guardrails",
-    title: "AI 2026: Autonomous Ops Guardrails",
-    description: "Budgets, live traces, and instant rollback that keep autonomy safe.",
-    link: "/blog/ai-2026-autonomous-ops-guardrails",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "edge-2026-private-rate-limiter-blueprint",
-    title: "Edge 2026: Private Rate Limiter Blueprint",
-    description: "Scoped IDs, signed configs, on‑device metrics for zero‑PII limits <100ms.",
-    link: "/blog/edge-2026-private-rate-limiter-blueprint",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "genai-2026-budget-aware-evals",
-    title: "GenAI 2026: Budget‑Aware Evals",
-    description: "KPI‑linked scorecards and evals that prevent regressions without slowing teams.",
-    link: "/blog/genai-2026-budget-aware-evals",
-    type: "article",
-    featured: true
-  }
-);
-
 // Sept 30, 2025 – Promote brand-new posts site-wide (added now)
 featuredBlogPosts.unshift(
   {
-    id: "ai-2025-sept-30-security-mesh-v3",
-    title: "AI Security Mesh v3",
-    description: "Signed outputs, verifiers, and rollback for production AI platforms",
-    link: "/blog/ai-2025-sept-30-security-mesh-v3",
+    id: "ai-2025-sept-30-platform-roi-scorecards",
+    title: "AI 2025: Platform ROI Scorecards",
+    description: "Scorecards that link platform adoption to SLOs, velocity, and revenue.",
+    link: "/blog/ai-2025-sept-30-platform-roi-scorecards",
     type: "article",
     featured: true
   },
   {
-    id: "ai-2025-sept-30-policy-tests-quickstart-v2",
-    title: "Policy Tests Quickstart v2",
-    description: "KPI‑linked PR checks, budgets, and rollback hooks to ship faster",
-    link: "/blog/ai-2025-sept-30-policy-tests-quickstart-v2",
+    id: "edge-2025-sept-30-consentless-experiments-v3",
+    title: "Edge 2025: Consentless Experiments v3 (<100ms)",
+    description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B.",
+    link: "/blog/edge-2025-sept-30-consentless-experiments-v3",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-2025-sept-30-eval-policy-blueprints",
+    title: "GenAI 2025: Eval & Policy Blueprints",
+    description: "Golden tasks, attestations, and CI policy tests wired to KPIs.",
+    link: "/blog/genai-2025-sept-30-eval-policy-blueprints",
     type: "article",
     featured: true
   },
@@ -411,34 +315,6 @@ featuredBlogPosts.unshift(
     title: "E2E AI Tracing 2026",
     description: "Trace prompts → tools → KPIs with rollback‑ready playbooks",
     link: "/blog/ai-2026-e2e-ai-tracing",
-    type: "article",
-    featured: true
-  }
-);
-
-// Sept 30, 2025 – Promote three fresh articles site-wide (new content just added)
-featuredBlogPosts.unshift(
-  {
-    id: "ai-2025-sept-30-breaking-enterprise-ai-breakthroughs",
-    title: "Sept 30, 2025: Breaking Enterprise AI Breakthroughs",
-    description: "8 production‑ready patterns: rollback, scorecards, consentless analytics, and more.",
-    link: "/blog/ai-2025-sept-30-breaking-enterprise-ai-breakthroughs",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "edge-2025-sept-30-zero-pii-experiments-v2",
-    title: "Edge 2025: Zero‑PII Experiments v2 (<100ms)",
-    description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B worldwide.",
-    link: "/blog/edge-2025-sept-30-zero-pii-experiments-v2",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "genai-2025-sept-30-policy-tests-quickstart",
-    title: "GenAI 2025: Policy Tests Quickstart",
-    description: "Lightweight CI policy tests wired to KPIs to ship faster without regressions.",
-    link: "/blog/genai-2025-sept-30-policy-tests-quickstart",
     type: "article",
     featured: true
   }
@@ -974,46 +850,6 @@ featuredBlogPosts.unshift(
 
 export const featuredServices: FeaturedItem[] = [
   {
-    id: "ai-autonomous-infrastructure-platform",
-    title: "AI Autonomous Infrastructure Platform",
-    description: "99.99% uptime with self-healing, self-optimizing infrastructure",
-    link: "/services/ai-autonomous-infrastructure-platform",
-    type: "service",
-    featured: true
-  },
-  {
-    id: "quantum-ai-acceleration-service",
-    title: "Quantum AI Acceleration Service",
-    description: "1000x faster AI training with quantum-enhanced optimization",
-    link: "/services/quantum-ai-acceleration-service",
-    type: "service",
-    featured: true
-  },
-  {
-    id: "ai-multimodal-content-studio",
-    title: "AI Multimodal Content Studio",
-    description: "98% accuracy across vision, language, and audio AI",
-    link: "/services/ai-multimodal-content-studio",
-    type: "service",
-    featured: true
-  },
-  {
-    id: "ai-autonomous-business-intelligence",
-    title: "AI Autonomous Business Intelligence",
-    description: "95% accuracy in predictive analytics with zero-touch insights",
-    link: "/services/ai-autonomous-business-intelligence",
-    type: "service",
-    featured: true
-  },
-  {
-    id: "ai-neural-architecture-optimization",
-    title: "AI Neural Architecture Optimization",
-    description: "1000x faster architecture design with state-of-the-art performance",
-    link: "/services/ai-neural-architecture-optimization",
-    type: "service",
-    featured: true
-  },
-  {
     id: "ai-predictive-maintenance",
     title: "AI Predictive Maintenance",
     description: "85% reduction in downtime with 98% prediction accuracy",
@@ -1053,34 +889,6 @@ export const getLatestContent = (count: number = 5): FeaturedItem[] => {
     .slice(0, count);
 };
 
-// Oct 01, 2025 – Advertise three brand-new articles site-wide
-featuredBlogPosts.unshift(
-  {
-    id: "ai-2025-oct-01-operational-trust-v3",
-    title: "AI 2025: Operational Trust Scorecards v3",
-    description: "SLIs → KPIs with budgets, canaries, and instant rollback.",
-    link: "/blog/ai-2025-oct-01-operational-trust-v3",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "edge-2025-oct-01-private-consentless-experiments",
-    title: "Edge 2025: Consentless Experiments v3 (<100ms)",
-    description: "Scoped IDs, on‑device metrics, DP noise for compliant A/B.",
-    link: "/blog/edge-2025-oct-01-private-consentless-experiments",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "genai-2025-oct-01-quality-tiers-v3",
-    title: "GenAI 2025: Quality Tiers v3",
-    description: "Tiering + semantic caches + eval gates for stable UX.",
-    link: "/blog/genai-2025-oct-01-quality-tiers-v3",
-    type: "article",
-    featured: true
-  }
-);
-
 // Oct 2025 – Promote three brand-new guides site-wide
 featuredBlogPosts.unshift(
   {
@@ -1104,6 +912,26 @@ featuredBlogPosts.unshift(
     title: "GenAI 2028: Cost Tiers v4",
     description: "Tiering + semantic caches + policy tests for predictable spend.",
     link: "/blog/genai-2028-cost-tiers-v4",
+    type: "article",
+    featured: true
+  }
+);
+
+// Oct 2025 – Promote two fresh articles site-wide (newly added)
+featuredBlogPosts.unshift(
+  {
+    id: "serverless-inference-cost-playbook-2025",
+    title: "Serverless Inference Cost Playbook",
+    description: "Cut GenAI cost with adaptive batching, warm pools, and quality tiers.",
+    link: "/blog/serverless-inference-cost-playbook-2025",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "golden-paths-roi-2026",
+    title: "Golden Paths ROI 2026",
+    description: "Scorecards linking developer journeys to adoption, SLOs, and revenue.",
+    link: "/blog/golden-paths-roi-2026",
     type: "article",
     featured: true
   }
@@ -1284,46 +1112,6 @@ featuredBlogPosts.unshift(
 // Surface brand-new articles at the very top of featured content
 featuredBlogPosts.unshift(
   {
-    id: "ai-2026-neural-architecture-search-breakthrough",
-    title: "Neural Architecture Search 2026: Auto-Designing AI Networks",
-    description: "Revolutionary NAS algorithms that design optimal neural architectures 1000x faster than humans",
-    link: "/blog/ai-2026-neural-architecture-search-breakthrough",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "ai-2026-federated-learning-enterprise-breakthrough",
-    title: "Federated Learning 2026: Privacy-First Enterprise AI",
-    description: "Train powerful AI models across distributed data without centralizing sensitive information",
-    link: "/blog/ai-2026-federated-learning-enterprise-breakthrough",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "ai-2026-quantum-enhanced-analytics",
-    title: "Quantum-Enhanced Analytics 2026: 1000x Performance Boost",
-    description: "Leverage quantum computing for analytics achieving 1000x speedup in complex data processing",
-    link: "/blog/ai-2026-quantum-enhanced-analytics",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "ai-2026-autonomous-business-intelligence",
-    title: "Autonomous Business Intelligence 2026: Self-Driving Analytics",
-    description: "AI-powered BI that automatically discovers insights and makes data-driven recommendations",
-    link: "/blog/ai-2026-autonomous-business-intelligence",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "ai-2026-edge-computing-revolution",
-    title: "Edge Computing Revolution 2026: Sub-10ms AI Inference",
-    description: "Revolutionary edge AI achieving sub-10ms inference with on-device models and real-time decisions",
-    link: "/blog/ai-2026-edge-computing-revolution",
-    type: "article",
-    featured: true
-  },
-  {
     id: "ai-governance-live-scorecards-2026",
     title: "AI Governance Live Scorecards 2026",
     description: "CI policy tests + live scorecards preventing regressions before they ship",
@@ -1344,6 +1132,62 @@ featuredBlogPosts.unshift(
     title: "Agent Release Runbooks 2026",
     description: "Approvals, budgets, and instant rollback for safe autonomous releases",
     link: "/blog/agent-release-runbooks-2026",
+    type: "article",
+    featured: true
+  }
+);
+
+// Sept 30, 2025 – Advertise three newly created articles site‑wide (new)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2027-quantum-enhanced-machine-learning",
+    title: "AI 2027: Quantum‑Enhanced ML",
+    description: "Quantum‑accelerated training/inference for 1000x optimization speedups.",
+    link: "/blog/ai-2027-quantum-enhanced-machine-learning",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2027-neuromorphic-computing-enterprise",
+    title: "AI 2027: Neuromorphic Computing for the Enterprise",
+    description: "Brain‑inspired architectures delivering 1000x energy efficiency and realtime learning.",
+    link: "/blog/ai-2027-neuromorphic-computing-enterprise",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2028-autonomous-governance-blueprint",
+    title: "AI 2028: Autonomous Governance Blueprint",
+    description: "KPI scorecards, PR policy tests, rollback for safe autonomy at scale.",
+    link: "/blog/ai-2028-autonomous-governance-blueprint",
+    type: "article",
+    featured: true
+  }
+);
+
+// Sept 30, 2025 – Surface three brand-new articles site-wide (new content)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-sept-30-runtime-guardrails-blueprint",
+    title: "AI 2025: Runtime Guardrails Blueprint",
+    description: "Inline policy tests, KPI‑linked canaries, and instant rollback without slowing delivery.",
+    link: "/blog/ai-2025-sept-30-runtime-guardrails-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2026-global-private-ab-testing",
+    title: "Edge 2026: Global Private A/B Testing <100ms",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for consentless experiments.",
+    link: "/blog/edge-2026-global-private-ab-testing",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-2026-signed-prompts-and-sboms",
+    title: "GenAI 2026: Signed Prompts and SBOMs",
+    description: "Signed SBOMs for prompts, datasets, models with CI policy gates.",
+    link: "/blog/genai-2026-signed-prompts-and-sboms",
     type: "article",
     featured: true
   }
