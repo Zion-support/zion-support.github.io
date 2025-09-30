@@ -13,6 +13,13 @@ import NewServicesPromotionalBanner from "./src/components/NewServicesPromotiona
 import January2026BreakthroughContentBanner from "./components/January2026BreakthroughContentBanner";
 import Revolutionary2026ContentMegaBanner from "./components/Revolutionary2026ContentMegaBanner";
 import New2026ContentBreakthroughBanner from "./components/New2026ContentBreakthroughBanner";
+import FutureTechShowcase2026 from "./components/FutureTechShowcase2026";
+import InteractiveROICalculator2026 from "./components/InteractiveROICalculator2026";
+import NewContentAdvertisingBanner from "./components/NewContentAdvertisingBanner";
+import EnterpriseSolutionsShowcase2026 from "./components/EnterpriseSolutionsShowcase2026";
+import AITrendsInsightsBanner2026 from "./components/AITrendsInsightsBanner2026";
+import NewBlogContentShowcase2026 from "./components/NewBlogContentShowcase2026";
+import UltimateContentAdvertisingBanner from "./components/UltimateContentAdvertisingBanner";
 
 export default function App(): JSX.Element {
   return (
@@ -196,6 +203,11 @@ export default function App(): JSX.Element {
       {/* New Services Promotional Banner */}
       <section>
         <NewServicesPromotionalBanner />
+      </section>
+
+      {/* Interactive ROI Calculator 2026 */}
+      <section>
+        <InteractiveROICalculator2026 />
       </section>
 
       {/* New Content Advertising Banner */}
