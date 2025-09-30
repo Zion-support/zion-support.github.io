@@ -2496,3 +2496,34 @@ posts.push(
   }
 );
 
+
+// Sept 30, 2025 – Additional fresh posts to expand content and promote on Home
+posts.push(
+  {
+    slug: "ai-operational-scorecards-q4-2026",
+    title: "AI Operational Scorecards Q4 2026: SLIs Tied to KPIs",
+    description: "Define SLIs that map to product KPIs with budgeted actions and instant rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-consentless-metrics-2026",
+    title: "Edge Consentless Metrics 2026: Actionable Insights Without PII",
+    description: "On-device aggregation, scoped IDs, and DP noise to unlock analytics without collecting PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-budget-aware-routing-2026",
+    title: "GenAI Budget‑Aware Routing 2026: Stable UX Under Cost SLAs",
+    description: "Tiered models, semantic caches, and KPI‑linked routes keeping spend predictable without regressions.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
