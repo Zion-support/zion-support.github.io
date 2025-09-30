@@ -10,49 +10,31 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "edge-rate-limiter-blueprint-2026",
-    title: "Edge Rate Limiter 2026: Globally Consistent, Sub‑10ms Budgets",
-    description: "Design a multi‑region, token‑bucket limiter with consistent hashing and KV to protect APIs and GenAI tools without hurting UX.",
-    category: "Architecture",
-    publishedAt: "2025-10-15",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "agent-red-teaming-2026",
-    title: "Agent Red‑Teaming 2026: Simulation Labs That Prevent Real Incidents",
-    description: "Build realistic attack labs for agents: jailbreak corpora, tool fuzzers, and KPI‑linked failure budgets you can ship.",
-    category: "AI Security",
-    publishedAt: "2025-10-15",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "privacy-first-feature-flags-2026",
-    title: "Privacy‑First Feature Flags 2026: Global Rolls Without PII Risk",
-    description: "Scoped IDs, edge filters, and health checks for instant, safe rollouts under 100ms.",
-    category: "Architecture",
-    publishedAt: "2025-10-14",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "reliable-agent-actions-2026",
-    title: "Reliable Agent Actions 2026: Deterministic Tools and Live Traces",
-    description: "Design agent tools that are testable, auditable, and budget‑controlled for production reliability.",
+    slug: "multi-modal-agents-2026",
+    title: "Multi‑Modal Agents 2026: Tools, Vision, and Structured Actions",
+    description: "Blueprint for shipping multi‑modal agents with safe tools, online evals, and KPIs.",
     category: "GenAI",
     publishedAt: "2025-10-14",
     featured: true,
-    readTime: "8 min read"
+    readTime: "9 min read"
   },
   {
-    slug: "ai-risk-budgets-2026",
-    title: "AI Risk Budgets 2026: Ship Automation Safely at Scale",
-    description: "Budget risky actions, approvals, and rollbacks to move fast without surprises.",
-    category: "AI Governance",
+    slug: "edge-observability-2026",
+    title: "Edge Observability 2026: Sub‑100ms Traces Without PII",
+    description: "User‑centric telemetry at the edge with scoped IDs, filters, and retention budgets.",
+    category: "Observability",
     publishedAt: "2025-10-14",
     featured: true,
-    readTime: "6 min read"
+    readTime: "7 min read"
+  },
+  {
+    slug: "secure-data-lakes-2026",
+    title: "Secure Data Lakes 2026: Row‑Level Auth, SBOMs, Attestations",
+    description: "Make data lakes AI‑ready with provenance, policy gates, and fine‑grained access.",
+    category: "Security",
+    publishedAt: "2025-10-14",
+    featured: false,
+    readTime: "8 min read"
   },
   {
     slug: "zero-trust-for-genai-2026",

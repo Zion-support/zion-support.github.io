@@ -136,14 +136,16 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Agent Reliability 2026 + Privacy‑Safe Feature Flags 2026"
-          description="Deterministic agent tools with budgeted actions, plus zero‑regret rollouts without PII."
+          title="New: Multi‑Modal Agents, Edge Observability, Secure Data Lakes"
+          description="Ship multi‑modal agents safely, trace at the edge without PII, secure data lakes."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Agent Reliability Playbook 2026", category: "GenAI", link: "/blog/ai-agent-reliability-playbook-2026" },
-            { title: "Privacy‑Safe Feature Flags 2026", category: "Architecture", link: "/blog/privacy-safe-feature-flags-2026" },
-            { title: "Privacy‑First Insights 2026", category: "Observability", link: "/blog/privacy-first-insights-telemetry-2026" }
+            { title: "Multi‑Modal Agents 2026", category: "GenAI", link: "/blog/multi-modal-agents-2026" },
+            { title: "Edge Observability 2026", category: "Observability", link: "/blog/edge-observability-2026" },
+            { title: "Secure Data Lakes 2026", category: "Security", link: "/blog/secure-data-lakes-2026" },
+            { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
+            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
