@@ -17,6 +17,38 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+    id: "ai-2027-executive-playbook-v2",
+    slug: "ai-2027-executive-playbook-v2",
+    title: "AI 2027: Executive Playbook v2 — Fund, Govern, Scale",
+    description: "Scorecards tied to KPIs, budget controls, and rollout guardrails to scale AI with confidence.",
+    excerpt: "An executive‑ready playbook to plan, fund, and govern AI with measurable ROI.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-03",
+    category: "Strategy",
+    tags: ["Executive", "Scorecards", "Budgets"],
+    featured: true,
+    readTime: "10 min read",
+    image: "/images/ai-2027-executive-playbook-v2.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2027-private-inference-under-100ms",
+    slug: "edge-2027-private-inference-under-100ms",
+    title: "Edge 2027: Private Inference — <100ms with Zero‑PII",
+    description: "Scoped IDs, device aggregation, and warm pools for global sub‑100ms inference without PII.",
+    excerpt: "Blueprint for private, fast inference at global scale without PII risks.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-03",
+    category: "Edge Computing",
+    tags: ["Edge", "Inference", "Privacy"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/edge-2027-private-inference.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
     id: "ai-2026-reliability-runbooks-v4",
     slug: "ai-2026-reliability-runbooks-v4",
     title: "AI 2026: Reliability Runbooks v4",

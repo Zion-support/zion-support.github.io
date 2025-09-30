@@ -1064,3 +1064,23 @@ featuredBlogPosts.unshift(
     featured: true
   }
 );
+
+// Sept 30, 2025 – Add two brand-new items to advertise site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2027-customer-experience-agents",
+    title: "AI 2027: Customer Experience Agents",
+    description: "24/7 autonomous CX with budgets, KPIs, and instant rollback.",
+    link: "/blog/ai-2027-customer-experience-agents",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2027-real-time-feature-flags",
+    title: "Edge 2027: Real‑Time Feature Flags",
+    description: "Signed configs, scoped IDs, and DP for <100ms private rollouts.",
+    link: "/blog/edge-2027-real-time-feature-flags",
+    type: "article",
+    featured: true
+  }
+);
