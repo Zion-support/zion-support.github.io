@@ -27,6 +27,7 @@ import ContentShowcase from '../components/ContentShowcase';
 import QuantumTransformationBanner from '../components/QuantumTransformationBanner';
 import NeuralArchitectureSearchBanner from '../components/NeuralArchitectureSearchBanner';
 import LatestBreakthroughsBanner from '../components/LatestBreakthroughsBanner';
+<<<<<<< HEAD
 import April2026MegaBreakthroughBanner from '../components/April2026MegaBreakthroughBanner';
 import QuantumConsciousnessFusionBanner from '../components/QuantumConsciousnessFusionBanner';
 import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
@@ -43,6 +44,13 @@ import December2026MegaBreakthroughBanner from '../components/December2026MegaBr
 import January2027RevolutionaryBreakthroughBanner from '../components/January2027RevolutionaryBreakthroughBanner';
 import February2027QuantumConsciousnessBanner from '../components/February2027QuantumConsciousnessBanner';
 >>>>>>> origin/cursor/create-and-deploy-new-content-dc53
+=======
+import AI2030QuantumConsciousnessRevolutionBanner from '../components/AI2030QuantumConsciousnessRevolutionBanner';
+import AI2029MetaCognitiveSuperintelligenceBanner from '../components/AI2029MetaCognitiveSuperintelligenceBanner';
+import UltimateContentShowcase2030 from '../components/UltimateContentShowcase2030';
+import AI2026AutonomousCloudOrchestrationBanner from '../components/AI2026AutonomousCloudOrchestrationBanner';
+import AI2026QuantumNeuralOptimizationBanner from '../components/AI2026QuantumNeuralOptimizationBanner';
+>>>>>>> origin/cursor/create-and-deploy-new-content-114b
 
 export default function HomePage() {
   return (
@@ -67,6 +75,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* NEW 2026 REVOLUTIONARY CONTENT - Featured prominently */}
       <AI2026RevolutionaryAutonomousSystemsBanner />
       
@@ -79,6 +88,43 @@ export default function HomePage() {
       {/* Ultimate 2030 Consciousness Banner */}
       <Ultimate2030ConsciousnessBanner />
 >>>>>>> 66358214331c733069ef9f5f2e74d3703f2ce4d7
+=======
+      {/* NEW JANUARY 2026 REVOLUTIONARY CONTENT MEGA BANNER - FEATURED PROMINENTLY */}
+      <January2026RevolutionaryContentMegaBanner />
+      
+      {/* NEW: AI 2026 Autonomous Cloud Orchestration Banner - Featured prominently */}
+      <AI2026AutonomousCloudOrchestrationBanner />
+      
+      {/* NEW: AI 2026 Quantum-Neural Optimization Banner - Featured prominently */}
+      <AI2026QuantumNeuralOptimizationBanner />
+
+  {/* Fresh content promo — newly published */}
+  <section className="py-4 border-t border-b border-white/10 bg-white/5">
+    <div className="max-w-6xl mx-auto px-4">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        <div className="text-white/90 font-semibold">New: January 2026 Revolutionary Breakthroughs</div>
+        <div className="flex flex-wrap gap-2">
+          <a href="/blog/ai-2026-edge-native-intelligence-breakthrough" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">Edge-Native Intelligence 50x<span>→</span></a>
+          <a href="/blog/ai-2026-synthetic-data-revolution" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Synthetic Data 1000x<span>→</span></a>
+          <a href="/case-studies/ai-2026-edge-native-intelligence-mega-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$3.5B ROI Success<span>→</span></a>
+          <a href="/case-studies/ai-2026-synthetic-data-transformation-success" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">$2.8B Privacy Success<span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* January 2026 Revolutionary Content Banner - Featured prominently */}
+  <January2026RevolutionaryContentBanner />
+  
+  {/* January 2026 Edge-Native Intelligence Banner */}
+  <January2026EdgeNativeIntelligenceBanner />
+  
+  {/* January 2026 Federated Learning Banner */}
+  <January2026FederatedLearningBanner />
+  
+  {/* Synthetic Data Revolution Banner */}
+  <January2026SyntheticDataRevolutionBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-114b
       {/* Revolutionary 2027 Content Mega Banner - Featured prominently */}
       <Revolutionary2027ContentMegaBanner />
       
