@@ -73,6 +73,31 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     priority: 5,
     startDate: '2025-10-15',
   }
+  ,
+  {
+    id: 'ai-autonomous-infrastructure',
+    title: '🤖 AI Autonomous Infrastructure — Zero‑Touch Ops',
+    description: 'Self‑healing, self‑optimizing, self‑scaling platform with policy‑tested rollouts.',
+    ctaText: 'Read the blueprint',
+    ctaLink: '/blog/ai-autonomous-infrastructure-2025',
+    variant: 'success',
+    icon: '🤖',
+    featured: true,
+    priority: 1,
+    startDate: '2025-09-30',
+  },
+  {
+    id: 'privacy-first-analytics',
+    title: '🔒 Privacy‑First Analytics — Insights Without PII',
+    description: 'Scoped IDs, DP noise, and edge telemetry. Ship analytics that respect privacy.',
+    ctaText: 'Get the quickstart',
+    ctaLink: '/blog/privacy-first-analytics-quickstart-2025',
+    variant: 'info',
+    icon: '🔒',
+    featured: true,
+    priority: 2,
+    startDate: '2025-09-30',
+  }
 ];
 
 export const getActiveEnhancedBanners = (): EnhancedPromotionalBanner[] => {

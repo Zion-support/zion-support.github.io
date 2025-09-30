@@ -1199,3 +1199,34 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – New content drop to surface on Home
+posts.push(
+  {
+    slug: "ai-autonomous-infrastructure-2025",
+    title: "AI Autonomous Infrastructure 2025: Self‑Healing, Self‑Optimizing, Self‑Scaling",
+    description: "Blueprint for zero‑touch operations with predictive autoscaling, automated rollback, and live policy checks.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "multimodal-ai-foundations-2025",
+    title: "Multimodal AI Foundations 2025: Vision × Language × Audio",
+    description: "Unified embeddings, routing, and evals for production‑grade multimodal apps under strict SLAs.",
+    category: "AI Innovation",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "privacy-first-analytics-quickstart-2025",
+    title: "Privacy‑First Analytics Quickstart: Scoped IDs and On‑Device Telemetry",
+    description: "Get actionable analytics without collecting PII using scoped identifiers, DP noise, and edge processing.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  }
+);
+
