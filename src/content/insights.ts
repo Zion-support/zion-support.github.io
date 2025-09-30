@@ -5,25 +5,220 @@ export type InsightArticle = {
   category: string;
   date: string; // ISO date string
   readMinutes: number;
+  description?: string;
 };
 
 export const latestInsights: InsightArticle[] = [
+  {
+    id: "slo-driven-autonomous-ops",
+    title: "SLO‑Driven Autonomous Ops: When to Let Automation Act",
+    summary: "A simple rubric for approvals, budgets, and rollback safeguards in autonomous ops.",
+    category: "AI Operations",
+    date: "2025-10-15",
+    readMinutes: 5,
+  },
+  {
+    id: "agent-trace-design",
+    title: "Designing Agent Traces That Drive Fixes",
+    summary: "Trace shape, spans, and signals that make agent failures diagnosable in minutes.",
+    category: "GenAI",
+    date: "2025-10-15",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-ux-prewarm-techniques",
+    title: "Edge UX Pre‑Warm Techniques: Instant‑Feel AI",
+    summary: "Prefetch, speculative decode, and KV warms to hit sub‑150ms interactions.",
+    category: "Architecture",
+    date: "2025-10-15",
+    readMinutes: 4,
+  },
+  {
+    id: "privacy-first-flags-quickstart-2026",
+    title: "Privacy‑First Flags Quickstart 2026",
+    summary: "Roll out features globally with scoped IDs, edge filters, and health probes.",
+    category: "Architecture",
+    date: "2025-10-14",
+    readMinutes: 5,
+  },
+  {
+    id: "reliable-agent-actions-checklist-2026",
+    title: "Reliable Agent Actions: A Production Checklist",
+    summary: "Deterministic tools, sandboxing, and live traces for trustworthy automation.",
+    category: "GenAI",
+    date: "2025-10-14",
+    readMinutes: 6,
+  },
+  {
+    id: "agent-safety-budgets-2026",
+    title: "Agent Safety Budgets 2026: Ship Fast Without Surprises",
+    summary: "Budget risky actions, add PR checks, and wire rollbacks for reliable agent releases.",
+    category: "GenAI",
+    date: "2025-10-11",
+    readMinutes: 7,
+  },
+  {
+    id: "privacy-first-telemetry-2026",
+    title: "Privacy‑First Telemetry: Signal‑Rich, PII‑Safe",
+    summary: "Scoped IDs, field‑level filters, and retention policies that keep insights high and risk low.",
+    category: "Observability",
+    date: "2025-10-11",
+    readMinutes: 6,
+  },
+  {
+    id: "cost-aware-inference-routing-2026",
+    title: "Cost‑Aware Inference Routing: Quality Tiers Under Budget",
+    summary: "Dynamically route prompts across model tiers based on budgets, SLAs, and eval signals.",
+    category: "Architecture",
+    date: "2025-10-11",
+    readMinutes: 8,
+  },
+  {
+    id: "ai-risk-register-checklist",
+    title: "AI Risk Register Checklist",
+    summary: "Owners, policy tests, and dashboards that make risk programs real.",
+    category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "eval-systems-online-canaries",
+    title: "Eval Systems That Scale: Online Canaries and Policy Gates",
+    summary:
+      "Move from ad-hoc checks to layered evals with CI gates and production canaries tied to KPIs.",
+    category: "GenAI",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-flags-validation-blueprints",
+    title: "Blueprints: Validating Edge Flags Before They Break Prod",
+    summary:
+      "Versioned keys, negative caching, and health probes that prevent bad flag rolls globally.",
+    category: "Architecture",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "genai-policy-tests-canaries",
+    title: "GenAI Policy Tests: From Offline Suites to Online Canaries",
+    summary:
+      "How to combine offline evals with live canaries to catch regressions before customers do.",
+    category: "GenAI",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-flags-validation",
+    title: "Edge Flags: Validation Circuits That Prevent Bad Rolls",
+    summary:
+      "Design health checks, signed payloads, and roll-forward playbooks to keep flags safe.",
+    category: "Architecture",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
+  {
+    id: "north-star-metrics-pitfalls",
+    title: "North‑Star Metrics Pitfalls: Fixing Vanity and Ambiguity",
+    summary:
+      "Replace vanity KPIs with leading indicators and consistent instrumentation.",
+    category: "Product Analytics",
+    date: "2025-09-29",
+    readMinutes: 5,
+  },
   {
     id: "ai-governance-rubric",
     title: "A Lightweight Rubric for AI Governance Decisions",
     summary:
       "When to require human‑in‑the‑loop, what to log, and how to audit outputs across teams.",
     category: "AI Governance",
-    date: "2025-09-29",
+    date: "2025-10-04",
+    readMinutes: 4,
+  },
+  {
+    id: "platform-blueprints-golden-paths",
+    title: "Golden Paths That Actually Get Used",
+    summary:
+      "When to require human‑in‑the‑loop, what to log, and how to audit outputs across teams.",
+    category: "AI Governance",
+    date: "2025-10-04",
+    readMinutes: 4,
+  },
+  {
+    id: "ai-platform-roi-scorecards",
+    title: "AI Platform ROI Scorecards: Ship Value Every Quarter",
+    summary: "Tie platform work to adoption, golden paths, and business KPIs with simple scorecards.",
+    category: "AI Strategy",
+    date: "2025-10-06",
     readMinutes: 5,
   },
   {
-    id: "edge-cache-invalidation",
-    title: "Edge Cache Invalidation Strategies That Won't Wake You Up",
+    id: "secure-ml-supply-chain",
+    title: "Secure ML Supply Chain: SBOMs, Lineage, Egress Controls",
+    summary: "Proven controls for datasets, models, and inference—track provenance and lock egress.",
+    category: "Security",
+    date: "2025-10-06",
+    readMinutes: 6,
+  },
+  {
+    id: "enterprise-rag-blueprint-v2",
+    title: "Enterprise RAG v2: Freshness, Hybrid Search, Reliable Evals",
+    summary: "Blueprint for stable quality: versioned chunks, hybrid retrievers, KPI‑linked evals.",
+    category: "GenAI",
+    date: "2025-10-06",
+    readMinutes: 7,
+  },
+  {
+    id: "rag-freshness-strategies",
+    title: "RAG Freshness Strategies",
+    summary: "Invalidate staleness with versioned chunks, TTLs, and async warmups.",
+    category: "Risk & Compliance",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-governance-rubric",
+    title: "A Lightweight Rubric for AI Governance Decisions",
     summary:
-      "Versioned keys, background warming, and circuit breakers for resilient edge experiences.",
+      "Decision criteria for when to add controls, how to validate, and who owns risk.",
+    category: "Risk & Compliance",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "reliable-real-time-pipelines",
+    title: "Building Reliable Real‑Time Data Pipelines",
+    summary:
+      "Exactly‑once semantics, schema evolution, and backpressure handling in streaming systems.",
+    category: "Data Engineering",
+    date: "2025-09-29",
+    readMinutes: 7,
+  },
+  {
+    id: "llm-guardrails-prod",
+    title: "Shipping LLM Guardrails Without Killing Velocity",
+    summary:
+      "Policy-as-code, prompt hygiene, and eval gates that scale from POC to prod.",
+    category: "GenAI",
+    date: "2025-10-04",
+    readMinutes: 5,
+  },
+  {
+    id: "serverless-warm-pools-playbook",
+    title: "Serverless Warm Pools: Cut Cold Starts, Not Corners",
+    summary:
+      "Adaptive warmers, concurrency hints, and budgets to keep P95 low without overspend.",
     category: "Architecture",
-    date: "2025-09-28",
+    date: "2025-09-30",
+    readMinutes: 4,
+  },
+  {
+    id: "crm-grounded-prompts",
+    title: "Grounded Prompts with CRM Context: Sales Copilots That Convert",
+    summary:
+      "Reference opportunities, stakeholders, and last touches to improve reply quality and close rates.",
+    category: "Sales AI",
+    date: "2025-09-30",
     readMinutes: 6,
   },
   {
@@ -95,6 +290,16 @@ export const latestInsights: InsightArticle[] = [
     summary:
       "Instrumentation, cohorting, and experimentation tactics to consistently improve unit economics.",
     category: "Product Analytics",
+    
+    date: "2025-09-29",
+    readMinutes: 7,
+  },
+  {
+    id: "data-contracts-in-practice",
+    title: "Data Contracts in Practice: Stop Breaking Your Dashboards",
+    summary:
+      "Contract-first schemas, change management, and lineage that make analytics reliable again.",
+    category: "Data Engineering",
     date: "2025-09-28",
     readMinutes: 7,
   },
@@ -111,7 +316,7 @@ export const latestInsights: InsightArticle[] = [
     id: "cloud-cost-optimization",
     title: "Cloud Cost Optimization: 9 Wins in 90 Days",
     summary:
-      "How we helped three clients reduce cloud spend by 32% on average without sacrificing performance.",
+      "How we helped teams reduce cloud spend by 32% on average without hurting performance.",
     category: "Cloud",
     date: "2025-08-05",
     readMinutes: 5,
@@ -120,7 +325,7 @@ export const latestInsights: InsightArticle[] = [
     id: "data-governance-starter",
     title: "Data Governance Starter Guide for Mid‑Market Teams",
     summary:
-      "A no‑nonsense playbook for data quality, lineage, and access controls you can adopt this quarter.",
+      "A no‑nonsense playbook for data quality, lineage, and access controls.",
     category: "Data",
     date: "2025-07-18",
     readMinutes: 8,
@@ -260,5 +465,75 @@ export const latestInsights: InsightArticle[] = [
     date: "2025-09-29",
     readMinutes: 8,
   },
+  {
+    id: "ai-automation-roi-calculator",
+    title: "AI Automation ROI Calculator: Measure Your Business Impact",
+    summary:
+      "A practical framework for calculating the return on investment from AI automation initiatives, with real-world case studies and templates.",
+    category: "AI Strategy",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "zero-downtime-cutover-checklist",
+    title: "Zero‑Downtime Cutover Checklist",
+    summary:
+      "Dual‑write, read‑shadowing, backfills, and safe cutovers with rollback checkpoints.",
+    category: "Platform Engineering",
+    date: "2025-09-30",
+    readMinutes: 4,
+  },
+  {
+    id: "ai-sales-copilot-insights",
+    title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
+    summary:
+      "How to wire CRMs, build prompt libraries, and add evals that boost win‑rates without risk.",
+    category: "AI Strategy",
+    date: "2025-09-30",
+    readMinutes: 5,
+  },
+  {
+    id: "ai-governance-at-scale-2025",
+    title: "AI Governance at Scale: Policies That Enable Speed",
+    summary:
+      "A pragmatic model for approvals, policy tests, and observability that unlocks faster AI delivery.",
+    category: "AI Governance",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+  {
+    id: "ai-scorecards-that-ship",
+    title: "AI Scorecards That Ship",
+    summary: "Tie initiatives to KPIs with lightweight scorecards and weekly operating rhythms.",
+    category: "AI Strategy",
+    date: "2025-10-05",
+    readMinutes: 4,
+  },
+  {
+    id: "edge-feature-flags",
+    title: "Edge Feature Flags: Zero‑Regret Rollouts",
+    summary: "Canary by segment and geography with instant rollback and budget caps at the edge.",
+    category: "Architecture",
+    date: "2025-10-05",
+    readMinutes: 5,
+  },
+  {
+    id: "cloud-governance-scorecards",
+    title: "Cloud Governance with Scorecards",
+    summary: "Turn policies into dashboards and PR checks—spend less time arguing, more shipping.",
+    category: "Platform Engineering",
+    date: "2025-10-05",
+    readMinutes: 4,
+  },
+  {
+    id: "ai-security-essentials",
+    title: "AI Security Essentials",
+    summary: "Essential security practices for AI systems, covering model protection, data privacy, and adversarial defense strategies.",
+    category: "Security",
+    date: "2025-01-21",
+    readMinutes: 11,
+  },
 ];
+
+export default latestInsights;
 
