@@ -1,5 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+import Revolutionary2026ContentBreakthroughBanner from '../components/Revolutionary2026ContentBreakthroughBanner';
+import AI2026RevolutionaryBreakthroughShowcaseBanner from '../components/AI2026RevolutionaryBreakthroughShowcaseBanner';
+=======
 import { 
   NewBlogBanner, 
   AnalyticsPlatformBanner, 
@@ -134,6 +138,7 @@ import RevolutionaryBreakthrough2026Banner from '../src/components/Revolutionary
 import AICostOptimizationBanner from '../src/components/AICostOptimizationBanner';
 import AutonomyBlueprint2026Banner from '../components/AutonomyBlueprint2026Banner';
 import September30ContentPromo2025 from '../components/September30ContentPromo2025';
+>>>>>>> origin/cursor/create-and-deploy-new-content-4c76
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -170,6 +175,31 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+<<<<<<< HEAD
+        {/* 🚀 REVOLUTIONARY 2026 CONTENT BREAKTHROUGH BANNER */}
+        <Revolutionary2026ContentBreakthroughBanner />
+        
+        {/* 🌟 AI 2026 REVOLUTIONARY BREAKTHROUGH SHOWCASE */}
+        <AI2026RevolutionaryBreakthroughShowcaseBanner />
+        
+        {/* Hero Section */}
+        <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Transform Your Business with
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
+                {' '}AI-Powered Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
+              and enterprise IT solutions that drive growth, efficiency, and innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                href="/services"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+=======
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
 
@@ -1589,6 +1619,7 @@ export default function HomePage() {
               <Link 
                 href="/blog" 
                 className="inline-block bg-white text-indigo-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
+>>>>>>> origin/cursor/create-and-deploy-new-content-4c76
               >
                 Explore Our Services
               </Link>
