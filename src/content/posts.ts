@@ -41,6 +41,8 @@ export const posts: BlogPost[] = [
     title: "Edge‑Native Agents 2027: Private Tools at <100ms",
     description: "Design agents that run close to users with scoped permissions, on‑device tools, and instant rollback.",
     category: "Edge Computing",
+    publishedAt: "2025-09-30",
+  },
   {
     slug: "ai-2027-operational-scorecards",
     title: "Operational AI Scorecards 2027: KPIs, Budgets, Rollback",

@@ -134,6 +134,8 @@ import RevolutionaryBreakthrough2026Banner from '../src/components/Revolutionary
 import AICostOptimizationBanner from '../src/components/AICostOptimizationBanner';
 import AutonomyBlueprint2026Banner from '../components/AutonomyBlueprint2026Banner';
 import September30ContentPromo2025 from '../components/September30ContentPromo2025';
+import AI2026QuantumConsciousnessRevolutionBanner from '../components/AI2026QuantumConsciousnessRevolutionBanner';
+import Revolutionary2026BreakthroughBanner from '../components/Revolutionary2026BreakthroughBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -170,6 +172,12 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🚀🚀🚀 REVOLUTIONARY BREAKTHROUGH - JANUARY 30, 2026 - QUANTUM CONSCIOUSNESS REVOLUTION! 🚀🚀🚀 */}
+      <Revolutionary2026BreakthroughBanner />
+      
+      {/* ⚛️ QUANTUM CONSCIOUSNESS REVOLUTION - 100,000x PERFORMANCE GAINS! */}
+      <AI2026QuantumConsciousnessRevolutionBanner />
+
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
 
@@ -1078,6 +1086,7 @@ export default function HomePage() {
                       </div>
                     </div>
                   </div>
+                </Link>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
