@@ -10,6 +10,66 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    // NEW — Runtime rollback blueprint (featured)
+    slug: "ai-2026-runtime-rollback-blueprint",
+    title: "AI 2026: Runtime Rollback Blueprint",
+    description: "Instant rollback with KPI‑linked canaries, budget gates, and safe fallbacks.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    // NEW — Attested edge analytics (featured)
+    slug: "edge-2026-attested-analytics",
+    title: "Edge 2026: Attested Analytics (<100ms, Zero‑PII)",
+    description: "Signed attestations + scoped IDs + DP for audit‑ready insights at the edge.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    // NEW — GenAI economy modes (featured)
+    slug: "genai-2027-economy-modes",
+    title: "GenAI 2027: Economy Modes for 50% Cost Savings",
+    description: "Quality tiers, semantic caches, and token budgets that cut spend 50%+ with stable UX.",
+    category: "FinOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    // NEW — Enterprise roadmap update (featured)
+    slug: "ai-2027-enterprise-roadmap-v2",
+    title: "AI 2027 Enterprise Roadmap v2",
+    description: "Outcome‑led bets, KPI scorecards, and guardrails that scale reliably across portfolios.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    // NEW — Consentless testing v3 at the edge (featured)
+    slug: "edge-2026-consentless-testing-v3",
+    title: "Edge 2026: Consentless Testing v3",
+    description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B at <100ms.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    // NEW — GenAI cost controllers v3 (featured)
+    slug: "genai-cost-controllers-v3-2027",
+    title: "GenAI Cost Controllers v3 (2027)",
+    description: "Quality tiers + semantic caches + policy tests that cut spend 40–70% without UX loss.",
+    category: "FinOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-2026-reliability-runbooks-v4",
     title: "AI 2026: Reliability Runbooks v4",
     description: "Budgeted actions, KPI canaries, and instant rollback—v4 playbooks for dependable AI operations.",

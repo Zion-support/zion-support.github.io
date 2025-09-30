@@ -149,18 +149,18 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Scorecards v4 + Zero‑PII Insights + Quality Tiers v2"
-          description="Ship faster with KPI‑linked scorecards, private <100ms analytics, and predictable GenAI costs."
+          title="New: Runtime Rollback + Attested Edge Analytics + GenAI Economy Modes"
+          description="Ship faster with instant rollback, audit‑ready zero‑PII analytics, and 50% lower GenAI costs."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
+            { title: "AI 2026: Runtime Rollback Blueprint", category: "AI Operations", link: "/blog/ai-2026-runtime-rollback-blueprint" },
+            { title: "Edge 2026: Attested Analytics", category: "Analytics", link: "/blog/edge-2026-attested-analytics" },
+            { title: "GenAI 2027: Economy Modes", category: "FinOps", link: "/blog/genai-2027-economy-modes" },
             { title: "Agent Red‑Teaming 2026", category: "AI Security", link: "/blog/agent-red-teaming-2026" },
             { title: "Verifiable Edge Analytics 2026", category: "Analytics", link: "/blog/verifiable-edge-analytics-2026" },
             { title: "AI Executive Playbook 2027", category: "AI Strategy", link: "/blog/ai-executive-playbook-2027" },
-            { title: "AI 2027 Cost Optimization Playbook", category: "AI Operations", link: "/blog/ai-2027-cost-optimization-playbook" },
-            { title: "Edge 2026: Private Feature Flags", category: "Architecture", link: "/blog/edge-2026-private-feature-flags" },
-            { title: "AI Operational Resilience 2026", category: "AI Strategy", link: "/blog/ai-operational-resilience-2026" },
-            { title: "Edge Consentless Analytics 2026", category: "Analytics", link: "/blog/edge-consentless-analytics-2026" }
+            { title: "AI 2027 Cost Optimization Playbook", category: "AI Operations", link: "/blog/ai-2027-cost-optimization-playbook" }
           ]}
         />
         {/* Fresh content banner promoting brand-new articles */}
