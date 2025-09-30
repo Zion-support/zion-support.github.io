@@ -1284,37 +1284,61 @@ posts.push(
   }
 );
 
-// Oct 30, 2025 – Fresh content drop to surface on Home latest list
+// Sept 30 + Oct 30, 2025 – Combined fresh content to surface on Home
 posts.push(
+  {
+    slug: "ai-governance-live-canaries-2026",
+    title: "AI Governance 2026: Live Canaries That Prevent Regressions",
+    description: "Wire KPI-linked canaries and policy tests to stop bad releases while keeping velocity high.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-cold-start-busting-2026",
+    title: "Edge Cold-Start Busting 2026: Warm Pools, Prefetch, Tiered Caches",
+    description: "Deliver sub-100ms UX globally with warm pools, intent prefetching, and tiered caches.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-runbooks-zero-regret-2026",
+    title: "Agent Runbooks 2026: Zero‑Regret Releases with Budgets & Rollback",
+    description: "Budgeted actions, approvals, and instant rollback so agent updates are safe at scale.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
   {
     slug: "ai-governance-eu-ai-act-2026",
     title: "EU AI Act 2026 Playbook: Ship Fast, Stay Compliant",
-    description:
-      "Practical guardrails for EU AI Act compliance: model registries, audit trails, and KPI‑linked policy tests.",
+    description: "Practical guardrails for EU AI Act compliance: model registries, audit trails, and KPI‑linked policy tests.",
     category: "AI Governance",
     publishedAt: "2025-10-30",
     featured: true,
-    readTime: "7 min read",
+    readTime: "7 min read"
   },
   {
     slug: "edge-rag-privacy-preserving-2026",
     title: "Edge RAG 2026: Private Retrieval with Sub‑100ms Answers",
-    description:
-      "Hybrid edge retrieval with signed configs, TTL windows, and on‑device caches. Fast answers without PII risk.",
+    description: "Hybrid edge retrieval with signed configs, TTL windows, and on‑device caches. Fast answers without PII risk.",
     category: "GenAI",
     publishedAt: "2025-10-30",
     featured: true,
-    readTime: "8 min read",
+    readTime: "8 min read"
   },
   {
     slug: "agent-safety-checklists-2026",
     title: "Agent Safety Checklists 2026: Budgets, Sandboxes, Rollbacks",
-    description:
-      "Battle‑tested safety checklists for agent releases: scoped tools, eval gates, and instant rollbacks.",
+    description: "Battle‑tested safety checklists for agent releases: scoped tools, eval gates, and instant rollbacks.",
     category: "AI Operations",
     publishedAt: "2025-10-30",
     featured: true,
-    readTime: "6 min read",
+    readTime: "6 min read"
   }
 );
 

@@ -146,15 +146,16 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: EU AI Act Playbook + Edge RAG — Private <100ms"
-          description="Model registries, audit trails, KPI‑linked policy tests, and hybrid edge retrieval without PII."
+          title="New: Live Canaries + EU AI Act + Edge RAG"
+          description="Prevent regressions, ship compliant AI fast, and get private <100ms answers at the edge."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
+            { title: "Live Canaries Prevent Regressions", category: "AI Governance", link: "/blog/ai-governance-live-canaries-2026" },
             { title: "EU AI Act Playbook", category: "AI Governance", link: "/blog/ai-governance-eu-ai-act-2026" },
             { title: "Edge RAG 2026", category: "GenAI", link: "/blog/edge-rag-privacy-preserving-2026" },
-            { title: "Agent Safety Checklists", category: "AI Operations", link: "/blog/agent-safety-checklists-2026" },
-            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-playbook-2026" }
+            { title: "Zero‑Regret Agent Releases", category: "AI Operations", link: "/blog/agent-runbooks-zero-regret-2026" },
+            { title: "GenAI Routing Playbook 2026", category: "GenAI", link: "/blog/genai-routing-playbook-2026" }
           ]}
         />
         {/* Fresh content banner promoting brand-new articles */}
