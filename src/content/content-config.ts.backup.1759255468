@@ -212,6 +212,8 @@ export const featuredBlogPosts: FeaturedItem[] = [
   }
 ];
 
+<<<<<<< HEAD
+=======
 // Surface brand-new content (Oct 30, 2025)
 featuredBlogPosts.unshift(
   {
@@ -260,6 +262,7 @@ featuredBlogPosts.unshift(
   }
 );
 
+>>>>>>> origin/cursor/create-and-deploy-new-content-9cfb
 // Sept 30, 2025 – Promote brand-new posts site-wide (added now)
 featuredBlogPosts.unshift(
   {

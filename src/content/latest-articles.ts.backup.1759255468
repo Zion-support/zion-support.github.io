@@ -17,6 +17,68 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+<<<<<<< HEAD
+    id: "ai-2025-oct-01-privacy-first-observability-v2",
+    slug: "ai-2025-oct-01-privacy-first-observability-v2",
+    title: "Privacy‑First Observability v2 — User‑Centric Traces, Zero‑PII",
+    description: "Scoped IDs, redaction filters, and retention budgets for compliant, decision‑grade traces.",
+    excerpt: "Rich observability without PII: practical v2 patterns you can ship today.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "Observability",
+    tags: ["Privacy", "Tracing", "Compliance"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/privacy-first-observability-v2.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-2025-oct-01-quality-tiers-v3",
+    slug: "genai-2025-oct-01-quality-tiers-v3",
+    title: "GenAI Quality Tiers v3 — 50% Savings, Stable UX",
+    description: "Tier routing, semantic caches, and eval gates to reduce spend while preserving experience.",
+    excerpt: "Proven cost controls for GenAI that keep UX and quality stable.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "GenAI",
+    tags: ["FinOps", "Quality Tiers", "Caching"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-quality-tiers-v3.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2025-oct-01-consentless-journeys-blueprint",
+    slug: "edge-2025-oct-01-consentless-journeys-blueprint",
+    title: "Consentless Journeys Blueprint — Personalization <100ms, Zero‑PII",
+    description: "Scoped IDs, on‑device models, and DP noise for private, real‑time personalization worldwide.",
+    excerpt: "A practical blueprint for zero‑PII personalization at the edge.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "Edge Computing",
+    tags: ["Edge", "Privacy", "Personalization"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/consentless-journeys-blueprint.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "ai-2026-autonomous-change-control",
+    slug: "ai-2026-autonomous-change-control",
+    title: "Autonomous Change Control — Gates, Budgets, Rollback",
+    description: "Ship weekly without regressions using CI policy tests, KPI-linked canaries, and instant rollback.",
+    excerpt: "A practical blueprint to ship fast with policy tests, live canaries, budgeted actions, and deterministic rollback.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Operations",
+    tags: ["Policy Tests", "Canaries", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-2026-autonomous-change-control.jpg",
+=======
     id: "ai-2026-autonomous-ops-guardrails",
     slug: "ai-2026-autonomous-ops-guardrails",
     title: "AI 2026: Autonomous Ops Guardrails",
@@ -29,10 +91,25 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "8 min read",
     image: "/images/ai-2026-autonomous-ops-guardrails.jpg",
+>>>>>>> origin/cursor/create-and-deploy-new-content-9cfb
     newBadge: true,
     trending: true
   },
   {
+<<<<<<< HEAD
+    id: "edge-2026-privacy-preserving-evals",
+    slug: "edge-2026-privacy-preserving-evals",
+    title: "Edge 2026: Privacy‑Preserving Evals (<100ms)",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for trustworthy eval signals without PII.",
+    excerpt: "Design evaluators that run on device with scoped IDs, DP noise, and attestations for verifiable signals.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Analytics",
+    tags: ["Edge", "Privacy", "Evals"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/edge-2026-privacy-preserving-evals.jpg",
+=======
     id: "edge-2026-private-rate-limiter-blueprint",
     slug: "edge-2026-private-rate-limiter-blueprint",
     title: "Edge 2026: Private Rate Limiter Blueprint",
@@ -61,6 +138,7 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "8 min read",
     image: "/images/genai-2026-budget-aware-evals.jpg",
+>>>>>>> origin/cursor/create-and-deploy-new-content-9cfb
     newBadge: true,
     trending: true
   },
@@ -1543,6 +1621,8 @@ export const latestArticles: LatestArticle[] = [
   }
 ];
 
+<<<<<<< HEAD
+=======
 // Sept 30, 2025 – Add three brand-new articles (advertised site-wide)
 latestArticles.unshift(
   {
@@ -1647,6 +1727,7 @@ latestArticles.unshift(
   }
 );
 
+>>>>>>> origin/cursor/create-and-deploy-new-content-9cfb
 export const featuredArticles = latestArticles.filter(article => article.featured);
 export const trendingArticles = latestArticles.filter(article => article.trending);
 export const newArticles = latestArticles.filter(article => article.newBadge);

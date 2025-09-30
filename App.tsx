@@ -23,12 +23,19 @@ import UltimateContentAdvertisingBanner from "./components/UltimateContentAdvert
 import RevolutionaryAI2026MegaBreakthroughBanner from "./components/RevolutionaryAI2026MegaBreakthroughBanner";
 import NewContent2026AdvertisingMegaBanner from "./components/NewContent2026AdvertisingMegaBanner";
 import InteractiveContentShowcase2026 from "./components/InteractiveContentShowcase2026";
+import NeuromorphicComputingRevolutionBanner from "./components/NeuromorphicComputingRevolutionBanner";
+import FederatedLearningBreakthroughBanner from "./components/FederatedLearningBreakthroughBanner";
+import AutonomousEnterpriseOperationsBanner from "./components/AutonomousEnterpriseOperationsBanner";
+import NewContent2026MegaShowcaseBanner from "./components/NewContent2026MegaShowcaseBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
       {/* Revolutionary AI 2026 Mega Breakthrough Banner - Most Prominent */}
       <RevolutionaryAI2026MegaBreakthroughBanner />
+      
+      {/* New Content 2026 Mega Showcase Banner - Latest Revolutionary Content */}
+      <NewContent2026MegaShowcaseBanner />
       
       {/* New Content 2026 Advertising Mega Banner */}
       <NewContent2026AdvertisingMegaBanner />
@@ -220,6 +227,11 @@ export default function App(): JSX.Element {
         <FutureTechShowcase2026 />
       </section>
 
+      {/* Neuromorphic Computing Revolution Banner */}
+      <section>
+        <NeuromorphicComputingRevolutionBanner />
+      </section>
+
       {/* January 2026 Breakthrough Content Banner */}
       <section>
         <January2026BreakthroughContentBanner />
@@ -255,6 +267,11 @@ export default function App(): JSX.Element {
         <InteractiveROICalculator2026 />
       </section>
 
+      {/* Federated Learning Breakthrough Banner */}
+      <section>
+        <FederatedLearningBreakthroughBanner />
+      </section>
+
       {/* New Content Advertising Banner */}
       <section>
         <NewContentAdvertisingBanner />
@@ -283,6 +300,11 @@ export default function App(): JSX.Element {
       {/* Interactive Content Showcase 2026 */}
       <section>
         <InteractiveContentShowcase2026 />
+      </section>
+
+      {/* Autonomous Enterprise Operations Banner */}
+      <section>
+        <AutonomousEnterpriseOperationsBanner />
       </section>
 
       {/* Latest Content Section */}
