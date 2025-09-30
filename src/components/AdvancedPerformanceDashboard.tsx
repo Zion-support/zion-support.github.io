@@ -13,8 +13,8 @@ import {
   LineChart, 
   Line 
 } from 'recharts';
-import { advancedBuildOptimizer } from '../utils/advancedBuildOptimizer';
-import { accessibilityUtils } from '../utils/accessibilityUtils';
+// import { advancedBuildOptimizer } from '../utils/advancedBuildOptimizer';
+// import { accessibilityUtils } from '../utils/accessibilityUtils';
 
 interface AdvancedPerformanceDashboardProps {
   isVisible: boolean;
@@ -148,12 +148,14 @@ const AdvancedPerformanceDashboard: React.FC<AdvancedPerformanceDashboardProps> 
 
   const initializeDashboard = async () => {
     try {
-      const score = advancedBuildOptimizer.getOptimizationScore();
-      const report = advancedBuildOptimizer.generateOptimizationReport();
+      // const score = advancedBuildOptimizer.getOptimizationScore();
+      // const report = advancedBuildOptimizer.generateOptimizationReport();
+      const score = 85; // Mock score
+      const report = { summary: 'Build optimization not available' }; // Mock report
       
       setMetrics({
         buildScore: score,
-        accessibilityScore: accessibilityUtils.getAccessibilityScore(),
+        accessibilityScore: 90, // Mock accessibility score
         performanceScore: Math.floor(Math.random() * 20) + 80,
         seoScore: Math.floor(Math.random() * 15) + 85,
         securityScore: Math.floor(Math.random() * 10) + 90,
