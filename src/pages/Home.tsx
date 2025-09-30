@@ -123,6 +123,32 @@ const Home = () => {
           />
         ))}
         
+        {/* 🚀 NEW CONTENT BANNER - September 30, 2025 */}
+        <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border-b border-emerald-500/30">
+          <div className="container mx-auto px-6 py-6">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-3">
+                <Sparkles className="w-6 h-6 text-emerald-400 animate-pulse" />
+                <div>
+                  <h3 className="text-lg font-bold text-white">
+                    🎯 5 NEW BREAKTHROUGH ARTICLES PUBLISHED TODAY!
+                  </h3>
+                  <p className="text-emerald-200 text-sm">
+                    AI Agents Deployment • Real-Time GenAI Streaming • MLOps ROI • LLM Fine-Tuning • AI Threat Detection
+                  </p>
+                </div>
+              </div>
+              <Link
+                to="/blog"
+                className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2 whitespace-nowrap"
+              >
+                <span>Read Now</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+        
         <NewContentAnnouncement />
         <LatestContentBanner 
           className="border-b border-white/10" 
@@ -237,39 +263,39 @@ const Home = () => {
               </div>
             </div>
 
-            {/* New Content Announcement */}
-            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-8 animate-fade-in">
+            {/* New Content Announcement - UPDATED September 30, 2025 */}
+            <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
               <div className="flex items-center justify-center gap-3 mb-3">
-                <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
-                <span className="text-lg font-bold text-purple-400">📚 FRESH CONTENT ALERT</span>
-                <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
+                <Sparkles className="w-6 h-6 text-emerald-400 animate-pulse" />
+                <span className="text-lg font-bold text-emerald-400">🚀 JUST PUBLISHED: 5 GAME-CHANGING ARTICLES</span>
+                <Sparkles className="w-6 h-6 text-emerald-400 animate-pulse" />
               </div>
-              <p className="text-white text-lg font-semibold mb-2">
-                🎯 Just Published: 6 Revolutionary Articles on AI Autonomous Infrastructure, Quantum-AI Hybrid Computing, Zero Trust Security & More
+              <p className="text-white text-xl font-bold mb-3 text-center">
+                Production-Ready AI Patterns for 2025
               </p>
-              <p className="text-zion-slate-light text-sm mb-4">
-                Discover breakthrough insights on self-healing systems, quantum computing applications, AI-powered cybersecurity, content automation, and customer experience transformation.
+              <p className="text-gray-200 text-base mb-4 text-center max-w-4xl mx-auto">
+                From deploying AI agents at scale to achieving sub-100ms GenAI latency, measuring MLOps ROI, fine-tuning enterprise LLMs, and building modern SOC operations—we've got you covered with battle-tested patterns.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
                 <Link
                   to="/blog"
-                  className="bg-purple-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-600 transition-colors text-center"
+                  className="bg-emerald-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-emerald-600 transition-all duration-300 hover:scale-105 text-center shadow-lg"
                 >
-                  Read Latest Articles
+                  🔥 Read All 5 Articles Now
                 </Link>
                 <Link
-                  to="/case-studies"
-                  className="border border-purple-400 text-purple-400 px-6 py-2 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-colors text-center"
+                  to="/contact"
+                  className="border-2 border-emerald-400 text-emerald-400 px-8 py-3 rounded-lg font-bold hover:bg-emerald-400 hover:text-white transition-colors text-center"
                 >
-                  View Success Stories
+                  Get Expert Help
                 </Link>
               </div>
               <div className="mt-4 flex flex-wrap gap-2 justify-center">
-                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">AI Infrastructure</span>
-                <span className="bg-rose-100/20 text-rose-200 px-3 py-1 rounded-full text-xs font-medium border border-rose-300/20">Quantum Computing</span>
-                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Zero Trust Security</span>
-                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">Content AI</span>
-                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">Customer Experience</span>
+                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">AI Agents Deployment</span>
+                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">Real-Time GenAI</span>
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">MLOps ROI</span>
+                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">LLM Fine-Tuning</span>
+                <span className="bg-red-100/20 text-red-200 px-3 py-1 rounded-full text-xs font-medium border border-red-300/20">AI Cybersecurity</span>
               </div>
             </div>
           </div>
