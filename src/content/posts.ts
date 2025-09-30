@@ -1319,21 +1319,12 @@ posts.push(
   }
 );
 
-<<<<<<< HEAD
-// Sept 30, 2025 – Brand new content to advertise on homepage (added now)
-posts.push(
-  {
-    slug: "ai-operational-trust-blueprint-2026",
-    title: "AI Operational Trust Blueprint 2026: SLIs, Budgets, Rollback",
-    description: "Design SLIs tied to KPIs, set budgets, and wire instant rollback to ship safe automation.",
-=======
 // Sept 30, 2025 – Newly added trio to expand content and surface on Home
 posts.push(
   {
     slug: "ai-slo-scorecards-2026",
     title: "AI SLO Scorecards 2026: Prove Reliability Week by Week",
     description: "Define SLIs, error budgets, and rollback triggers tied to product KPIs.",
->>>>>>> cursor/create-and-deploy-new-content-647f
     category: "AI Operations",
     publishedAt: "2025-09-30",
     featured: true,
@@ -1342,26 +1333,16 @@ posts.push(
   {
     slug: "edge-private-insights-2026",
     title: "Edge Private Insights 2026: Actionable Metrics Without PII",
-<<<<<<< HEAD
-    description: "Scoped IDs, on-device aggregation, and DP noise that deliver insights teams trust—no PII collected.",
-=======
     description: "Scoped IDs, on‑device aggregation, and DP noise—insights teams love without risk.",
->>>>>>> cursor/create-and-deploy-new-content-647f
     category: "Analytics",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
   },
   {
-<<<<<<< HEAD
-    slug: "genai-cost-controllers-2026",
-    title: "GenAI Cost Controllers 2026: Quality Tiers Under Budget",
-    description: "Tiered models, semantic caches, and SLA-aware routing that cut spend 40–70% without hurting UX.",
-=======
     slug: "genai-budgets-routing-2026",
     title: "GenAI Budgets & Routing 2026: Predictable Cost, Stable UX",
     description: "Tier models, cache prompts, and route by SLA using eval signals to cut spend 40–70%.",
->>>>>>> cursor/create-and-deploy-new-content-647f
     category: "GenAI",
     publishedAt: "2025-09-30",
     featured: true,
@@ -2197,6 +2178,37 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "12 min read"
+  }
+);
+
+// Sept 30, 2025 – Fresh trio just published (advertise on homepage)
+posts.push(
+  {
+    slug: "ai-operational-trust-scorecards-v2-2026",
+    title: "AI Operational Trust Scorecards v2 (2026): SLIs, Budgets, Rollback",
+    description: "Second‑gen scorecards tying SLIs to KPIs with budgeted actions and instant rollback.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-consentless-insights-2026",
+    title: "Edge Consentless Insights 2026: Actionable Metrics Without PII",
+    description: "On‑device aggregation and scoped IDs delivering insights under 100ms—no PII collection.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-routing-quality-tiers-2026",
+    title: "GenAI Routing Quality Tiers 2026: Predictable Cost, Stable UX",
+    description: "Tier models, semantic caches, and KPI‑aware routing to cut spend 40–70% without harming UX.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
   }
 );
 
