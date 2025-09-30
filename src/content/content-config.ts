@@ -407,6 +407,30 @@ featuredBlogPosts.unshift(
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
   {
+    id: "ai-enterprise-transformation-2027",
+    title: "AI Enterprise Transformation 2027",
+    description: "Plan, fund, and scale AI with measurable ROI and safety.",
+    link: "/blog/ai-enterprise-transformation-2027",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agentic-workflow-orchestration-2026",
+    title: "Agentic Workflow Orchestration 2026",
+    description: "Budgets, KPI canaries, and rollback for safe agent workflows.",
+    link: "/blog/agentic-workflow-orchestration-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "real-time-decision-engines-2026",
+    title: "Real‑Time Decision Engines 2026",
+    description: "10M/sec under 1ms using warm pools, intent prefetching, and caches.",
+    link: "/blog/real-time-decision-engines-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "genai-reliability-scorecards-2027",
     title: "GenAI Reliability Scorecards 2027",
     description: "Live KPIs + budgets + rollback for affordable, reliable GenAI.",

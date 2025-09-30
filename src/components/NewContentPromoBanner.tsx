@@ -4,6 +4,39 @@ import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Atom, Bot }
 const NewContentPromoBanner: React.FC = () => {
   const newContent = [
     {
+      title: "AI Enterprise Transformation 2027",
+      description: "Executive playbook to plan, fund, and scale AI with measurable ROI.",
+      slug: "ai-enterprise-transformation-2027",
+      category: "Enterprise AI",
+      icon: "🏢",
+      impact: "Exec Alignment",
+      savings: "Faster Delivery",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "Agentic Workflow Orchestration 2026",
+      description: "Budgets, KPI‑linked canaries, and rollback for safe velocity.",
+      slug: "agentic-workflow-orchestration-2026",
+      category: "AI Operations",
+      icon: "🛠️",
+      impact: "Safe Velocity",
+      savings: "Fewer Incidents",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "Real‑Time Decision Engines 2026",
+      description: "10M/sec under 1ms using warm pools, intent prefetching, and caches.",
+      slug: "real-time-decision-engines-2026",
+      category: "Platform Engineering",
+      icon: "⚡",
+      impact: "10M/sec",
+      savings: "<1ms",
+      featured: true,
+      trending: true
+    },
+    {
       title: "AI Executive Playbook 2027",
       description: "KPI‑linked scorecards, budgets, and governance to scale safely",
       slug: "ai-executive-playbook-2027",
