@@ -271,6 +271,30 @@ featuredBlogPosts.unshift(
     featured: true
   },
   {
+    id: "edge-2026-private-feature-flags",
+    title: "Edge 2026: Private Feature Flags",
+    description: "Signed configs, scoped IDs, and on‑device metrics for zero‑PII rollouts.",
+    link: "/blog/edge-2026-private-feature-flags",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-release-guardrails-2026",
+    title: "Agent Release Guardrails 2026",
+    description: "Budgets, approvals, KPI‑linked canaries, instant rollback.",
+    link: "/blog/agent-release-guardrails-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2027-cost-optimization-playbook",
+    title: "AI 2027 Cost Optimization Playbook",
+    description: "Tiered routing, caches, compression to cut spend 30–70% without regressions.",
+    link: "/blog/ai-2027-cost-optimization-playbook",
+    type: "article",
+    featured: true
+  },
+  {
     id: "edge-consentless-metrics-2026",
     title: "Edge Consentless Metrics 2026",
     description: "Actionable insights without PII using scoped IDs & DP",
