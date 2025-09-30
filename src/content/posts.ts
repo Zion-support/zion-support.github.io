@@ -19,6 +19,33 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
+    slug: "ai-2026-reliable-agent-release-runbooks",
+    title: "Reliable Agent Release Runbooks 2026: Approvals, Budgets, Rollbacks",
+    description: "Template runbooks with budgeted actions, human-in-the-loop approvals, and instant rollbacks mapped to KPIs.",
+    category: "AI Operations",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-consentless-metrics-2026",
+    title: "Edge Consentless Metrics 2026: Scoped IDs, On‑Device Aggregation",
+    description: "Zero‑PII telemetry with scoped identifiers, local aggregation, and DP noise under 100ms.",
+    category: "Analytics",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-budget-aware-routing-2026",
+    title: "GenAI Budget‑Aware Routing 2026: Quality Tiers with Cost Guards",
+    description: "Deterministic routing using tiered models, caches, and budget controllers to stabilize cost and UX.",
+    category: "GenAI",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "edge-consentless-analytics-q4-2025",
     title: "Consentless Edge Analytics Q4 2025: Private Metrics Under 100ms",
     description: "Scoped IDs, on‑device aggregation, and differential privacy for compliant, low‑latency analytics with zero PII.",
