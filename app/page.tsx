@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import September2025NewContentBanner from '../components/September2025NewContentBanner';
 import { 
   NewBlogBanner, 
   AnalyticsPlatformBanner, 
@@ -92,6 +93,9 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🔥 BRAND NEW September 2025 Content - Featured at Top */}
+      <September2025NewContentBanner />
+      
       {/* Latest 2026 Content Banners */}
       <NeuralArchitectureSearchBanner />
       <AIContentGenerationBanner />
