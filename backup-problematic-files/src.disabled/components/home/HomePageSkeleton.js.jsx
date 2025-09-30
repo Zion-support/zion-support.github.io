@@ -1,0 +1,1 @@
+export default HomePageSkeleton.js;

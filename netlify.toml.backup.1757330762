@@ -1,0 +1,25 @@
+[build]
+  # Install Python dependencies first, then Node.js dependencies and build
+<<<<<<< HEAD
+  command = "(mise settings set python.compile false || true) && pip install -r requirements.txt && npm ci && npm run build"
+=======
+  command = "mise settings set python.compile false && pip install -r requirements.txt && npm ci && npm run build"
+>>>>>>> origin/cursor/build-project-with-dependency-installation-2d49
+  publish = "dist"
+  command_timeout = "30m"
+
+[build.environment]
+  NODE_VERSION = "18"
+  PYTHON_VERSION = "3.11"
+
+[[plugins]]
+  package = "netlify-plugin-compress"
+  [plugins.inputs]
+    gzip = true
+    brotli = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+# Netlify configuration - clean version without merge conflicts
