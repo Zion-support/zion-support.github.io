@@ -1257,7 +1257,7 @@ posts.push(
   }
 );
 
-// Sept 30, 2025 – Additional fresh posts to advertise on homepage
+// Sept 30, 2025 – Brand-new content to advertise on homepage (fresh trio v3)
 posts.push(
   {
     slug: "ai-operational-trust-scorecards-v2-2026",
@@ -1319,7 +1319,7 @@ posts.push(
   }
 );
 
-// Sept 30, 2025 – Unified trio to expand content and surface on Home
+// Sept 30, 2025 – Newly added trio to expand content and surface on Home
 posts.push(
   {
     slug: "ai-slo-scorecards-2026",
@@ -1333,7 +1333,7 @@ posts.push(
   {
     slug: "edge-private-insights-2026",
     title: "Edge Private Insights 2026: Actionable Metrics Without PII",
-    description: "Scoped IDs, on‑device aggregation, and DP noise that deliver insights teams trust—no PII collected.",
+    description: "Scoped IDs, on‑device aggregation, and DP noise that deliver insights without collecting PII.",
     category: "Analytics",
     publishedAt: "2025-09-30",
     featured: true,
