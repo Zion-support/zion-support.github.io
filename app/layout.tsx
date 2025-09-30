@@ -60,14 +60,6 @@ function Header() {
             </Link>
           </div>
           <div className="relative group">
-            <Link href="/blog/ai-2027-next-generation-breakthroughs" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
-              AI 2027
-              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                NEW
-              </span>
-            </Link>
-          </div>
-          <div className="relative group">
             <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Case Studies
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -103,16 +95,8 @@ function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Latest 2027 Content</h3>
+            <h3 className="font-semibold text-gray-900 mb-3">Latest 2026 Content</h3>
             <div className="space-y-2">
-              <Link href="/blog/ai-2027-next-generation-breakthroughs" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                🚀 AI 2027 Breakthroughs
-                <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
-              </Link>
-              <Link href="/case-studies/enterprise-ai-transformation-2027-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
-                💰 $2.3B ROI Success Story
-                <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
-              </Link>
               <Link href="/content-hub" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Content Hub
                 <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>

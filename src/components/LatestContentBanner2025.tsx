@@ -1,178 +1,247 @@
-import { ArrowRight, Sparkles, TrendingUp, Zap } from "lucide-react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import React from 'react';
+import { ArrowRight, Sparkles, TrendingUp, Zap } from 'lucide-react';
 
-const LatestContentBanner2025 = () => {
-  const newArticles = [
+const LatestContentBanner2025: React.FC = () => {
+  const latestArticles = [
     {
-      title: "AI Observability Revolution 2026",
-      description: "Full-Stack Intelligence Monitoring",
-      slug: "ai-observability-revolution-2026",
-      category: "Observability"
+      id: 1,
+      title: 'AI Agent Swarms: Collective Intelligence Revolutionizing Enterprise Operations',
+      slug: 'ai-agent-swarms-collective-intelligence-2025',
+      excerpt: 'Harness AI agent swarms with collective intelligence achieving 10x efficiency gains. Deploy autonomous agent colonies that coordinate, learn, and adapt together through emergent behaviors and distributed problem-solving.',
+      category: 'Swarm Intelligence & Multi-Agent Systems',
+      date: '2025-10-01',
+      readTime: '55 min',
+      trending: true,
+      icon: '🐝'
     },
     {
-      title: "Blockchain-AI Convergence 2026",
-      description: "Decentralized Intelligence Networks",
-      slug: "blockchain-ai-convergence-2026",
-      category: "Blockchain"
+      id: 2,
+      title: 'LLM Fine-Tuning Breakthrough: Domain-Specific AI Excellence in 2025',
+      slug: 'llm-fine-tuning-breakthrough-2025',
+      excerpt: 'Master revolutionary LLM fine-tuning techniques achieving 98% accuracy for domain-specific tasks. Transform foundation models into enterprise AI powerhouses using LoRA, QLoRA, and RLHF at 90% lower cost.',
+      category: 'LLM Training & Optimization',
+      date: '2025-10-01',
+      readTime: '58 min',
+      trending: true,
+      icon: '🧠'
     },
     {
-      title: "Hyper-Personalization Engine 2026",
-      description: "Real-Time Adaptive User Experiences",
-      slug: "hyper-personalization-engine-2026",
-      category: "User Experience"
+      id: 3,
+      title: 'AI Governance & Compliance Automation: The 2025 Enterprise Framework',
+      slug: 'ai-governance-compliance-automation-2025',
+      excerpt: 'Implement comprehensive AI governance and automated compliance frameworks ensuring regulatory adherence, ethical AI deployment, and proactive risk management. Achieve 99.9% audit success rates.',
+      category: 'AI Governance & Compliance',
+      date: '2025-10-01',
+      readTime: '52 min',
+      trending: true,
+      icon: '⚖️'
     },
     {
-      title: "Sustainable AI Computing 2026",
-      description: "Green AI for Carbon-Neutral Operations",
-      slug: "sustainable-ai-computing-2026",
-      category: "Sustainability"
+      id: 4,
+      title: 'RAG Breakthrough: Enterprise Knowledge Systems Achieving 97% Accuracy',
+      slug: 'retrieval-augmented-generation-enterprise-breakthrough-2025',
+      excerpt: 'Master advanced Retrieval-Augmented Generation techniques achieving 97% accuracy on enterprise knowledge tasks. Transform organizational intelligence into an AI-powered competitive advantage.',
+      category: 'RAG & Knowledge Systems',
+      date: '2025-10-01',
+      readTime: '60 min',
+      trending: true,
+      icon: '📚'
     },
     {
-      title: "AI-Powered Data Mesh Architecture 2026",
-      description: "Distributed Data Intelligence",
-      slug: "ai-data-mesh-architecture-2026",
-      category: "Data Architecture"
+      id: 5,
+      title: 'Multimodal AI Agents: Enterprise Orchestration at Scale in 2025',
+      slug: 'multimodal-ai-agents-enterprise-orchestration-2025',
+      excerpt: 'Deploy multimodal AI agents that process text, images, video, and audio simultaneously. Achieve 96% accuracy with unified intelligence across customer service, quality control, and content moderation at enterprise scale.',
+      category: 'Multimodal AI & Orchestration',
+      date: '2025-09-30',
+      readTime: '52 min',
+      trending: true,
+      icon: '🎭'
     },
     {
-      title: "Intelligent Automation Platforms 2026",
-      description: "Self-Optimizing Business Processes",
-      slug: "intelligent-automation-platforms-2026",
-      category: "Automation"
+      id: 6,
+      title: 'AI Infrastructure Resilience: Chaos Engineering for Production Systems 2025',
+      slug: 'ai-infrastructure-resilience-chaos-engineering-2025',
+      excerpt: 'Build unbreakable AI infrastructure with chaos engineering practices. Achieve 99.99% uptime, automatic failover, and graceful degradation for mission-critical AI systems serving billions of requests daily.',
+      category: 'Infrastructure & Resilience',
+      date: '2025-09-30',
+      readTime: '48 min',
+      trending: true,
+      icon: '🔥'
     },
     {
-      title: "Edge-Native Applications 2026",
-      description: "Ultra-Low Latency Distributed Computing",
-      slug: "edge-native-applications-2026",
-      category: "Edge Computing"
+      id: 7,
+      title: 'AI-Powered Developer Experience: 10x Productivity in 2025',
+      slug: 'ai-powered-devex-developer-productivity-2025',
+      excerpt: 'Revolutionary AI-powered development tools achieving 10x developer productivity. Intelligent code completion, automated testing, instant documentation, and AI pair programming transforming software engineering.',
+      category: 'Developer Experience & AI',
+      date: '2025-09-30',
+      readTime: '50 min',
+      trending: true,
+      icon: '💻'
     },
     {
-      title: "Conversational AI for Enterprises 2026",
-      description: "Human-Level Business Dialogue",
-      slug: "conversational-ai-enterprises-2026",
-      category: "Conversational AI"
-    },
-    {
-      title: "AI Ethics Framework 2026",
-      description: "Responsible AI Development at Scale",
-      slug: "ai-ethics-framework-2026",
-      category: "AI Ethics"
-    },
-    {
-      title: "Spatial Computing AI 2026",
-      description: "Intelligent 3D Environments",
-      slug: "spatial-computing-ai-2026",
-      category: "Spatial Computing"
+      id: 8,
+      title: 'Synthetic Data Generation: Privacy-Preserving AI Training at Scale 2025',
+      slug: 'synthetic-data-generation-privacy-preserving-ai-2025',
+      excerpt: 'Generate photorealistic synthetic data for AI training while preserving privacy. Achieve 99% statistical fidelity, reduce data collection costs by 90%, and ensure GDPR/HIPAA compliance with breakthrough platforms.',
+      category: 'Synthetic Data & Privacy',
+      date: '2025-09-30',
+      readTime: '54 min',
+      trending: true,
+      icon: '🔐'
     }
   ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 p-8 md:p-12 my-12 shadow-2xl"
-    >
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 -right-1/2 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-1/2 -left-1/2 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+    <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      {/* Animated background effects */}
+      <div className="absolute inset-0 overflow-hidden opacity-30">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-fuchsia-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="relative z-10">
-        {/* Header */}
-        <div className="flex items-center gap-3 mb-6">
-          <motion.div
-            animate={{ rotate: [0, 360] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-          >
-            <Sparkles className="w-8 h-8 text-yellow-400" />
-          </motion.div>
-          <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-            <TrendingUp className="w-4 h-4 text-green-400" />
-            <span className="text-sm font-semibold text-white">NEW CONTENT DROPPED</span>
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 border border-cyan-500/30 mb-8 animate-fade-in">
+            <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
+            <span className="text-cyan-400 font-bold text-sm tracking-wider uppercase">
+              🚀 FRESH CONTENT! 4 NEW BREAKTHROUGH ARTICLES • October 1, 2025
+            </span>
+            <Sparkles className="w-5 h-5 text-fuchsia-400 animate-pulse" />
           </div>
+
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-fuchsia-400 bg-clip-text text-transparent animate-fade-in">
+            Latest AI Insights & Innovations
+          </h2>
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Dive into cutting-edge research, enterprise case studies, and breakthrough technologies 
+            that are reshaping the future of AI and cybersecurity.
+          </p>
         </div>
 
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          🚀 September 30, 2025 Content Release
-        </h2>
-        <p className="text-xl text-blue-100 mb-8 max-w-3xl">
-          Explore our latest cutting-edge insights on AI, emerging technologies, and the future of enterprise innovation. 
-          <span className="font-bold text-yellow-300"> 10 brand new articles</span> covering the most important trends shaping 2026.
-        </p>
-
-        {/* Featured highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          {newArticles.slice(0, 6).map((article, index) => (
-            <motion.div
-              key={article.slug}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
-              className="group"
+        {/* Featured Articles Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">
+          {latestArticles.map((article, index) => (
+            <div 
+              key={article.id}
+              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-cyan-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <Link
-                to={`/blog/${article.slug}`}
-                className="block p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300"
-              >
-                <div className="flex items-start gap-3">
-                  <Zap className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-1 group-hover:animate-pulse" />
-                  <div>
-                    <h3 className="font-bold text-white text-sm mb-1 group-hover:text-yellow-300 transition-colors">
-                      {article.title}
-                    </h3>
-                    <p className="text-xs text-blue-200 mb-2">{article.description}</p>
-                    <span className="inline-block px-2 py-1 text-xs font-semibold bg-blue-500/30 text-blue-200 rounded-full">
-                      {article.category}
+              {/* Card glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-fuchsia-500/0 to-cyan-500/0 group-hover:from-cyan-500/10 group-hover:via-fuchsia-500/10 group-hover:to-cyan-500/10 transition-all duration-500"></div>
+              
+              <div className="relative p-8">
+                {/* Icon & Badges */}
+                <div className="flex items-start justify-between mb-6">
+                  <div className="text-6xl group-hover:scale-110 transition-transform duration-300">
+                    {article.icon}
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    {article.trending && (
+                      <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
+                        <TrendingUp className="w-3 h-3" />
+                        <span>TRENDING</span>
+                      </div>
+                    )}
+                    <span className="px-3 py-1.5 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-semibold border border-cyan-500/30">
+                      NEW
                     </span>
                   </div>
                 </div>
-              </Link>
-            </motion.div>
+
+                {/* Category Tag */}
+                <div className="mb-4">
+                  <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/20 to-fuchsia-500/20 text-fuchsia-400 text-xs font-semibold border border-fuchsia-500/30">
+                    {article.category}
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 leading-tight">
+                  {article.title}
+                </h3>
+
+                {/* Excerpt */}
+                <p className="text-gray-400 mb-6 leading-relaxed text-sm">
+                  {article.excerpt}
+                </p>
+
+                {/* Meta Info */}
+                <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
+                  <span className="flex items-center gap-2">
+                    <Zap className="w-4 h-4 text-cyan-400" />
+                    {article.readTime}
+                  </span>
+                  <span>{new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                </div>
+
+                {/* CTA Button */}
+                <a
+                  href={`/blog/${article.slug}`}
+                  className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+                >
+                  <span>Read Full Article</span>
+                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                </a>
+              </div>
+            </div>
           ))}
         </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Link
-            to="/blog"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-blue-900 rounded-full font-bold hover:bg-yellow-300 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            <span>Explore All New Content</span>
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-          <Link
-            to="/contact"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-bold hover:bg-white hover:text-blue-900 transition-all duration-300"
-          >
-            <span>Get Expert Consultation</span>
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+        {/* Call-to-Action Section */}
+        <div className="text-center mt-20">
+          <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-500 to-fuchsia-500">
+            <div className="bg-slate-900 rounded-xl px-12 py-10">
+              <h3 className="text-3xl font-bold text-white mb-4">
+                Stay Ahead of the AI Revolution
+              </h3>
+              <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+                Get weekly insights, case studies, and breakthrough research delivered directly to your inbox. 
+                Join 50,000+ AI leaders and innovators.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/blog"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-2"
+                >
+                  <Sparkles className="w-5 h-5" />
+                  <span>Explore All Articles</span>
+                </a>
+                <a
+                  href="/contact"
+                  className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
+                >
+                  <span>Get Started with Zion AI</span>
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Stats */}
-        <div className="mt-8 pt-6 border-t border-white/20 flex flex-wrap gap-8">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-300">10</div>
-            <div className="text-sm text-blue-200">New Articles</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-green-300">100+</div>
-            <div className="text-sm text-blue-200">Pages of Insights</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-purple-300">10</div>
-            <div className="text-sm text-blue-200">Key Tech Categories</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-pink-300">2026</div>
-            <div className="text-sm text-blue-200">Future-Ready Topics</div>
-          </div>
+        {/* Stats Section */}
+        <div className="grid md:grid-cols-4 gap-8 mt-20">
+          {[
+            { value: '500+', label: 'Enterprise Clients' },
+            { value: '10B+', label: 'Data Points Processed Daily' },
+            { value: '99.9%', label: 'System Uptime' },
+            { value: '5M+', label: 'Autonomous Operations Hours' }
+          ].map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-4xl font-extrabold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent mb-2">
+                {stat.value}
+              </div>
+              <div className="text-gray-400 text-sm font-medium">
+                {stat.label}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
