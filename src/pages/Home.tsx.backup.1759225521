@@ -14,8 +14,12 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
+import Revolutionary2026ContentMegaBanner from "../components/Revolutionary2026ContentMegaBanner";
+=======
 // Fallback stub of BreakthroughContent2026Banner if missing
 const BreakthroughContent2026Banner = () => null;
+>>>>>>> origin/cursor/create-and-deploy-new-content-1e10
 import October2025MegaLaunchBanner from "../components/October2025MegaLaunchBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
