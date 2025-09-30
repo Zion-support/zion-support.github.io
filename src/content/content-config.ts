@@ -215,6 +215,22 @@ export const featuredBlogPosts: FeaturedItem[] = [
 // Sept 30, 2025 – Promote brand-new posts site-wide (added now)
 featuredBlogPosts.unshift(
   {
+    id: "ai-2025-sept-30-security-mesh-v3",
+    title: "AI Security Mesh v3",
+    description: "Signed outputs, verifiers, and rollback for production AI platforms",
+    link: "/blog/ai-2025-sept-30-security-mesh-v3",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2025-sept-30-policy-tests-quickstart-v2",
+    title: "Policy Tests Quickstart v2",
+    description: "KPI‑linked PR checks, budgets, and rollback hooks to ship faster",
+    link: "/blog/ai-2025-sept-30-policy-tests-quickstart-v2",
+    type: "article",
+    featured: true
+  },
+  {
     id: "production-rag-quality-budgets-2026",
     title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
     description: "Freshness windows, async warmups, and KPI‑aligned SLAs for reliable RAG.",
