@@ -24,7 +24,13 @@ import {
   QuantumAI2027Banner,
   RetailerAITransformation2027Banner,
   TechUnicornAgenticAI2027Banner,
-  NewContent2027MegaShowcase
+  NewContent2027MegaShowcase,
+  September2025BreakthroughsBanner,
+  AIReasoningAgentsBanner,
+  VectorDBOptimizationBanner,
+  LLMFineTuningBanner,
+  AISecurityZeroTrustBanner,
+  AICostOptimizationBanner
 } from '../components/PromotionalBanner';
 import {
   AIEnterpriseAdoptionBanner,
@@ -58,7 +64,15 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="animate-fade-in">
-        {/* 🔥 LATEST 2027 CONTENT - Featured First! */}
+        {/* 🔥 LATEST SEPTEMBER 2025 BREAKTHROUGHS - Featured First! */}
+        <September2025BreakthroughsBanner />
+        <AIReasoningAgentsBanner />
+        <VectorDBOptimizationBanner />
+        <LLMFineTuningBanner />
+        <AISecurityZeroTrustBanner />
+        <AICostOptimizationBanner />
+        
+        {/* 🔥 LATEST 2027 CONTENT */}
         <NewContent2027MegaShowcase />
         <AgenticAIRevolution2027Banner />
         <EdgeAI2027Banner />
