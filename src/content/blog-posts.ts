@@ -14,83 +14,36 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "ai-ethics-business-implementation-guide",
-    title: "AI Ethics Implementation Guide: From Principles to Practice",
-    description: "Practical controls, policy tests, and approval flows that enable fast, safe AI shipping.",
+    slug: "ai-roadmaps-2025-playbook",
+    title: "AI Roadmaps 2025: A Practical Playbook for Measurable Wins",
+    description: "How to prioritize, pilot, and scale AI with ROI gates, evals, and policy checks.",
     content: `
-# AI Ethics Implementation Guide: From Principles to Practice
+# AI Roadmaps 2025: A Practical Playbook for Measurable Wins
 
-Principles are not enough. This guide shows how to turn AI ethics into shippable policy tests, approvals, and telemetry that unblock delivery while protecting your brand.
+Most AI initiatives stall due to unclear goals, poor evaluation, and missing rollout controls. This playbook shows how to prioritize high‑impact use cases, design proof‑of‑value pilots, and scale safely with offline+online evals tied to business KPIs.
 
-## Core Controls
-- Data usage policies with automated checks
-- Prompt isolation and PII redaction
-- Red/black safety canaries with auto‑rollback
+## Roadmap Essentials
+- Outcome‑driven problem selection
+- Offline eval suites mapped to KPIs
+- Guardrails: policy tests, PII, toxicity
+- Rollout controls: flags, canaries, auto‑rollback
 
-## Operating Model
-- Risk tiers and review SLAs
-- Clear ownership and escalation paths
-- Continuous policy validation in CI/CD
+## Execution Checklist
+1. Define measurable success criteria
+2. Build baseline and goldens
+3. Add eval gates in CI
+4. Launch to canary cohorts
+5. Monitor drift and regression
 
-Adopt these patterns to move fast without breaking trust.
+Ship AI that moves the needle—and prove it.
     `,
     author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "AI Governance",
-    tags: ["AI Ethics", "Governance", "Policy", "Compliance"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-ethics-implementation.jpg"
-  },
-  {
-    slug: "iot-security-best-practices-2025",
-    title: "IoT Security: Comprehensive Best Practices for 2025",
-    description: "Device identity, fleet patching, secure update channels, and incident response for IoT at scale.",
-    content: `
-# IoT Security: Comprehensive Best Practices for 2025
-
-Harden IoT fleets with device identity, signed updates, immutable roots of trust, and zero‑trust networking.
-
-## Checklist
-- Secure boot and attestation
-- Mutual TLS with short‑lived certs
-- Fleet patching and staged rollouts
-- SBOM tracking and vuln monitoring
-
-Cut incidents and improve uptime with pragmatic controls that scale.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Security",
-    tags: ["IoT", "Security", "Device Identity", "Patching"],
-    featured: true,
-    readTime: "11 min read",
-    image: "/images/iot-security-best-practices.jpg"
-  },
-  {
-    slug: "enterprise-genai-adoption-roadmap-2025",
-    title: "Enterprise GenAI Adoption Roadmap: From POCs to Reliable ROI",
-    description: "Evaluation programs, guardrails, and org patterns to move from pilot to production in 90 days.",
-    content: `
-# Enterprise GenAI Adoption Roadmap: From POCs to Reliable ROI
-
-Most GenAI pilots stall. Use this roadmap to align strategy, ship safely, and prove value.
-
-## Roadmap
-1. Business‑aligned use cases and metrics
-2. Offline eval suites and CI policy tests
-3. Guardrails and incident playbooks
-4. Staged rollouts with canaries and rollback
-
-Ship confidently and accelerate ROI.
-    `,
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
+    date: "2025-09-30",
     category: "AI Strategy",
-    tags: ["GenAI", "Roadmap", "Strategy", "Guardrails"],
+    tags: ["Roadmaps", "GenAI", "Evals", "Guardrails"],
     featured: true,
-    readTime: "8 min read",
-    image: "/images/enterprise-genai-roadmap.jpg"
+    readTime: "7 min read",
+    image: "/images/ai-roadmaps-2025.jpg"
   },
   {
     slug: "ai-sales-copilot-2025",

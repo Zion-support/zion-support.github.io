@@ -22,7 +22,6 @@ import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import FeaturedContentShowcase from "../components/FeaturedContentShowcase";
 import Header from "../components/Header";
 import ModernFeatures from "../components/ModernFeatures";
-import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
 
@@ -106,16 +105,12 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 Fresh: Serverless Inference Cost Playbook + Practical RAG"
-          description="Cut inference spend 40–70% and ship RAG that actually works in prod."
-          ctaText="Read the latest"
-          ctaLink="/blog/serverless-inference-cost-playbook-2025"
+          title="🚀 New: AI Roadmaps 2025 — A Practical Playbook"
+          description="Prioritize, pilot, and scale AI with ROI gates, evals, and guardrails."
+          ctaText="Read the playbook"
+          ctaLink="/blog/ai-roadmaps-2025-playbook"
           dismissible={true}
         />
-        {/* New Content Promo Banner */}
-        <div className="container mx-auto px-6 mt-6 relative z-10">
-          <NewContentPromoBanner variant="premium" />
-        </div>
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
@@ -715,7 +710,7 @@ const Home = () => {
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>
                   <p className="text-white/90">
-                    New: Serverless inference cost playbook, practical RAG patterns, and secure GenAI guardrails.
+                    Fresh articles on real-time data pipelines, north-star metrics, and safe, scalable GenAI ops.
                   </p>
                 </div>
                 <Link to="/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">
@@ -727,16 +722,16 @@ const Home = () => {
               {/* Inline featured list (auto-curated highlights) */}
               <div className="mt-8 grid gap-6 md:grid-cols-3">
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">AI Solutions</div>
-                  <div className="font-semibold text-white">Serverless AI Inference Cost Playbook</div>
+                  <div className="text-sm text-purple-200 mb-1">AI Strategy</div>
+                  <div className="font-semibold text-white">AI Roadmaps 2025: A Practical Playbook</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">GenAI</div>
-                  <div className="font-semibold text-white">Practical RAG in Production</div>
+                  <div className="text-sm text-blue-200 mb-1">Data Engineering</div>
+                  <div className="font-semibold text-white">Reliable Real‑Time Data Pipelines in 2025</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Security</div>
-                  <div className="font-semibold text-white">Secure GenAI Guardrails That Scale</div>
+                  <div className="text-sm text-rose-200 mb-1">Product Analytics</div>
+                  <div className="font-semibold text-white">North‑Star Metrics: A Field‑Tested Framework</div>
                 </div>
               </div>
             </div>
