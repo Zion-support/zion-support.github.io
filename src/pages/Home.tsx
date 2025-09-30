@@ -116,30 +116,30 @@ const Home = () => {
         <Header />
         
         {/* 🚀 REVOLUTIONARY NEW CONTENT - September 30, 2025 */}
-        <div className="bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 border-b-4 border-white/30">
+        <div className="bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 border-b-4 border-white/30">
           <div className="container mx-auto px-6 py-8">
             <div className="text-center">
               <div className="inline-flex items-center gap-3 px-8 py-3 rounded-full bg-white/20 border border-white/40 mb-6 animate-pulse">
                 <Sparkles className="w-6 h-6 text-white" />
                 <span className="text-white font-black text-xl tracking-wider uppercase">
-                  🔥 8 REVOLUTIONARY NEW ARTICLES JUST PUBLISHED! 🔥
+                  🔥 5 REVOLUTIONARY NEW ARTICLES JUST PUBLISHED! 🔥
                 </span>
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-5xl md:text-6xl font-black text-white mb-4 drop-shadow-2xl">
-                The Future of AI is Here
+                Transform Your Business Today
               </h2>
               <p className="text-2xl md:text-3xl text-white font-bold mb-6 max-w-4xl mx-auto">
-                🚀 Autonomous Code Refactoring • Quantum-ML Computing • Neuromorphic Edge AI • 
-                Swarm Robotics • AI Drug Discovery • Cognitive Assistants & MORE!
+                🚀 AI Autonomous DevOps • Legal Document Automation • Customer Experience Hyper-Personalization • 
+                Renewable Energy Optimization • Research Acceleration & MORE!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/blog"
-                  className="bg-white text-orange-600 px-10 py-5 rounded-xl font-black text-2xl hover:bg-yellow-50 transition-all duration-300 hover:scale-110 shadow-2xl inline-flex items-center gap-3"
+                  className="bg-white text-emerald-600 px-10 py-5 rounded-xl font-black text-2xl hover:bg-cyan-50 transition-all duration-300 hover:scale-110 shadow-2xl inline-flex items-center gap-3"
                 >
                   <Rocket className="w-8 h-8" />
-                  <span>Explore All 8 New Articles Now</span>
+                  <span>Explore All 5 New Articles Now</span>
                   <ArrowRight className="w-8 h-8" />
                 </Link>
               </div>
