@@ -1226,6 +1226,37 @@ posts.push(
   }
 );
 
+// Oct 31, 2025 – Fresh featured posts to surface on homepage
+posts.push(
+  {
+    slug: "agent-observability-blueprint-2026",
+    title: "Agent Observability Blueprint 2026: Traces, SLIs, and Rollbacks",
+    description: "End-to-end traces for agent tools, KPI-linked SLIs, and instant rollback triggers that keep reliability high.",
+    category: "AI Operations",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "secure-genai-data-guardrails-2026",
+    title: "Secure GenAI Data Guardrails 2026: Scoped Access, Redaction, Attestations",
+    description: "Protect data with auth-aware retrieval, field-level redaction, and signed outputs enforced by policy tests.",
+    category: "Security",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "sla-aware-inference-routing-2026",
+    title: "SLA‑Aware Inference Routing 2026: Quality Tiers Under Budget",
+    description: "Dynamically route prompts by SLA using model tiers, caches, and KPI‑linked budgets—stable UX at lower cost.",
+    category: "GenAI",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Additional freshly published articles
 posts.push(
   {
