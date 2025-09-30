@@ -18,6 +18,43 @@ interface ContentItem {
 
 const featuredContent: ContentItem[] = [
   // Sept 30, 2025 — highlight newest content
+  // Oct 03, 2025 — newest highlights
+  {
+    id: 'o3-1',
+    title: 'Governed Autonomy Scorecards: From SLIs to KPIs',
+    description: 'Operational scorecards with budgets, canaries, and rollback that accelerate delivery without regressions.',
+    link: '/blog/ai-2025-oct-03-governed-autonomy-scorecards',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    icon: '🧭',
+    publishedDate: 'October 03, 2025',
+    readTime: '8 min read',
+    category: 'AI Operations'
+  },
+  {
+    id: 'o3-2',
+    title: 'Private Telemetry at the Edge: Useful Signals, Zero PII',
+    description: 'Scoped IDs, on-device redaction, and DP noise for actionable analytics under 100ms with attestations.',
+    link: '/blog/edge-2025-oct-03-private-telemetry-blueprint',
+    badge: 'Fresh',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '📈',
+    publishedDate: 'October 03, 2025',
+    readTime: '7 min read',
+    category: 'Observability'
+  },
+  {
+    id: 'o3-3',
+    title: 'GenAI Quality Tiers v4: Save Up To 70% With Stable UX',
+    description: 'Tiered routing, semantic caches, and eval gates that reduce spend while preserving UX.',
+    link: '/blog/genai-2025-oct-03-quality-tiers-blueprint-v4',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-purple-600 to-pink-600',
+    icon: '🧪',
+    publishedDate: 'October 03, 2025',
+    readTime: '9 min read',
+    category: 'GenAI'
+  },
   {
     id: 'n1',
     title: 'AI Operational Trust Q4 2025: Scorecards That Prevent Regressions',
