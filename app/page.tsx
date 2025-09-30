@@ -98,6 +98,11 @@ import September30NewBlogsBanner from '../components/September30NewBlogsBanner';
 import OctoberFeaturedContentBanner from '../components/OctoberFeaturedContentBanner';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
+import { 
+  NewContent2026PromotionalBanner,
+  RevolutionaryAI2026BreakthroughBanner,
+  Ultimate2026ContentShowcaseBanner
+} from '../components/NewContent2026PromotionalBanner';
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
@@ -171,6 +176,12 @@ export default function HomePage() {
       <div className="animate-fade-in">
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
+
+      {/* 🌟 NEW 2026 CONTENT SHOWCASE - REVOLUTIONARY AI & TECH INSIGHTS! */}
+      <Ultimate2026ContentShowcaseBanner />
+
+      {/* 🚀 REVOLUTIONARY AI 2026 BREAKTHROUGHS */}
+      <RevolutionaryAI2026BreakthroughBanner />
 
       {/* ✨ Latest Sept 30 additions — advertised site-wide */}
       <September30LatestBreakthroughsBanner />
