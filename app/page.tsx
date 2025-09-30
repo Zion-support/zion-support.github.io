@@ -41,6 +41,7 @@ import {
   AIInnovationShowcaseBanner
 } from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
+import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -327,6 +328,9 @@ export default function HomePage() {
 
       {/* Interactive AI 2026 Calculator */}
       <InteractiveAICalculator2026 />
+
+      {/* Interactive AI ROI Calculator */}
+      <InteractiveAIROICalculator />
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
