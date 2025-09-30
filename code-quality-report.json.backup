@@ -1,0 +1,1146 @@
+{
+  "timestamp": "2025-09-06T04:25:47.740Z",
+  "stats": {
+    "totalFiles": 8,
+    "totalLines": 137,
+    "functions": 7,
+    "classes": 0,
+    "comments": 5
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+  ]
+}
+  ]
+}
+ursor/automate-test-improve-and-merge-code-646c
+  ]
+}
+  "timestamp": "2025-09-07T09:43:35.163Z",
+  "summary": {
+    "passed": 1,
+    "failed": 2,
+    "warnings": 0
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+  },
+  "issues": [
+    {
+      file": "/workspace/src/config/seo.js,
+      line": 4,
+      "type: long_line",
+      "message: Line exceeds 120 characters"
+    },
+    {
+      "file: /workspace/src/config/seo.js",
+      "line: 5,
+      type": "long_line,
+      message": "Line exceeds 120 characters
+    }
+  ],
+  qualityScore": 96,
+  "recommendations: [
+    Consider breaking down long functions",
+    "Add more comments to complex code,
+    Remove console.log statements from production code",
+    "Consider using TypeScript for better type safety
+  ]
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+}
+=======
+<<<<<<< HEAD
+=======
+=======
+}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
+  "timestamp": "2025-09-07T10:14:30.109Z",
+  "issues": [
+    {
+      "type: code_style",
+      "priority: low",
+      "message: Consider adding JSDoc comments to functions",
+      "recommendation: Add comprehensive documentation"
+    },
+    {
+      "type: code_style",
+      "priority: medium",
+      "message: Review console.log statements",
+      "recommendation: Replace with proper logging"
+    }
+  ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  "summary": {
+    "totalIssues": 2
+=======
+>>>>>>> origin/resolved-merge-conflicts
+  "summary: {
+    totalIssues": 2
+
+<<<<<<< HEAD
+=======
+  "issues": [
+    {
+      "file": "/workspace/src/components/AIListingGenerator.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/AIMatchingResults.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/AIMatchmaker.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/BackToTopButton.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/BenefitsSection.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/ChatAssistant/ChatInput.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/ComprehensiveServicesShowcase.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/DynamicListingPage.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/EnhancedNewsletterForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/FaqSection.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/FavoriteButton.tsx",
+      "type": "console.log",
+      "message": "Console.log found - consider removing in production"
+    },
+    {
+      "file": "/workspace/src/components/FloatingCTA.tsx",
+      "type": "todo",
+      "message": "TODO or FIXME comment found"
+    },
+    {
+      "file": "/workspace/src/components/FooterNewsletter.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/GlobalErrorHandler.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/GlobalServiceSection.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/HowItWorksSection.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/InstallPrompt.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/ListingScoreCard.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/MarketplaceErrorBoundary.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/NotificationCenter.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/PageErrorBoundary.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/PerformanceOptimized.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/ProductCard.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/ProductSubmissionForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/QuoteRequestForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/SEO.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/SEOHead.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/SitemapPage.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/TestimonialCarousel.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/Testimonials.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/VerifiedBadge.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/admin/fraud-detection/EmptyFraudState.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/admin/performance-dashboard.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/admin/quotes/QuotesFilter.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/admin/whitelabel/TenantsList.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/advanced/DynamicComponentLoader.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/ai-enhancement/AIEnhancementPanel.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/auth/login/LoginForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/auth/login/SocialLogin.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/auth/login/Web3Login.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/blog/AuthorBio.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/blog/SocialShareButtons.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/cart/GuestCheckoutModal.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/community/PostCard.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/community/ReplyCard.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/contracts/SmartContractBuilder.tsx",
+      "type": "todo",
+      "message": "TODO or FIXME comment found"
+    },
+    {
+      "file": "/workspace/src/components/contracts/SmartContractBuilder.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/contracts/components/ProjectDetailsFields.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/contracts/templates/TemplateSaveForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/developers/ApiDocsLayout.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/developers/ApiDocumentation.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/developers/ApiPlayground.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/developers/WebhooksManager.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/disputes/DisputeDetail.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/disputes/DisputeForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/disputes/DisputesList.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/enterprise/EnterpriseFeatures.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/enterprise/EnterpriseTestimonials.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/enterprise/admin/AdminHeader.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/enterprise/admin/TeamActivity.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/enterprise/admin/TeamManagement.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/enterprise/billing/InvoiceHistory.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/enterprise/workspace/WorkspaceHeader.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/errors/GlobalErrorBoundary.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/forms/ValidatedFormField.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/gallery/ProductGallery.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/header/MobileMenu.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/home/FeatureHighlights.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/home/ITServiceRequestHero.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/integrations/IntegrationCards.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/interviews/InterviewRequestForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/jobs/ApplicationScoreCard.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/jobs/ApplyToJobForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/jobs/JobsList.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/jobs/MyApplications.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/jobs/SuggestedJobs.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/jobs/applications/ApplicationCard.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/jobs/applications/ApplicationRow.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/jobs/applications/ApplicationsTable.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/listing/AIListingGenerator.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/loyalty/PointsBadge.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/messaging/MessageBubble.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/messaging/job-application/ApplyForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/mobile-app/AppScreenshots.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/mobile-app/CommunityTrust.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/mobile-app/SmartAppBanner.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/mobile-app/admin/ExportPanel.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/mobile-app/admin/MetadataForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/onboarding/OnboardingWizard.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/onboarding/ProfileSetup.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/partners/PartnerLeaderboard.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/profile/ContactPublisherModal.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/profile/ProfileAvailability.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/profile/ProfileErrorState.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/profile/ProfileExperience.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/profile/SaveTalentButton.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/profile/ServiceProviderRegistrationForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/profile/TalentOnboardingForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/profile/TalentRegistrationForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/profile/talent-card/TalentCardHeader.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/projects/milestones/AIMilestoneGenerator.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/projects/milestones/AddMilestoneForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/quotes/EmptyStateCard.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/quotes/ExportToCSV.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/referrals/ReferralLink.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/resume-builder/forms/RateOptimizationSection.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/resume-builder/forms/WorkExperienceForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/resume-builder/forms/WorkExperienceItemForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/resume-builder/forms/certifications/CertificationsForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/resume-builder/forms/certifications/CertificationsList.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/resume-builder/forms/education/EducationFormFields.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/resume-builder/forms/skills/BulkAddSkills.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/resume-builder/portfolio/ProjectCard.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/resume-builder/portfolio/ProjectForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/resume-builder/wizard/EmptyResumeState.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/reviews/ReviewCard.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/reviews/ReviewStats.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/search/AdvancedSearchResults.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/search/EnhancedSearchInput.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/search/FilterSidebar.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/search/SearchResultsPage.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/services/CountrySelector.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/services/CountryServiceCard.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/services/GeneratedDescriptionDisplay.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/services/PageSections/CountryTabs.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/services/ServiceDescriptionForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/services/ServiceDetails.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/support/ChatMessage.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/support/HelpArticleView.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/support/HelpCenter.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/support/help-content.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/talent/FilterSidebar.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/transactions/PaymentButton.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/transactions/TransactionHistory.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/ui/EmptyState.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/ui/bundle-analyzer.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/ui/carousel.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/ui/input-otp.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/ui/quick-actions.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/ui/resizable.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/ui/sidebar/SidebarTrigger.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/ui/steps.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/ui/toast.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/wallet/OnChainExport.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/components/wallet/RedeemTokensCard.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/hooks/index.ts",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/layout/AppHeader.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/layout/PrimaryNav.tsx",
+      "type": "console.log",
+      "message": "Console.log found - consider removing in production"
+    },
+    {
+      "file": "/workspace/src/mobile/components/browse/BrowseCards.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/mobile/components/messaging/MobileConversationList.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/mobile/components/onboarding/SignUpForm.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/mobile/components/resume/MobileResumeBuilder.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/mobile/pages/MobileJobPost.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/AccountSettings.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/Blog.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/Cart.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/CaseStudy.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/Dashboard.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/EquipmentDetail.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/ForumCategoryPage.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/ForumPostPage.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/Interviews.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/JobDetails.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/Marketplace.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/MarketplacePage.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/MessagingInbox.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/Notifications.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/Points.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/ProfileDetail.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/ProjectDetails.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/Projects.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/SavedTalentsPage.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/SearchPage.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/Signup.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/TalentDashboard.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/TalentProfilePage.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/TalentsPage.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/UpdatePassword.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/WhitepaperGeneratorPage.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/WhitepaperViewPage.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/Wishlist.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/ZionHireAI.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/admin/ReviewsModeration.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/admin/SupportRequests.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/admin/TenantOnboarding.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/features/InstantMessaging.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/pages/services/AIDocumentProcessor.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/stubs/react-router-dom.ts",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/test/setup.ts",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/utils/analytics.ts",
+      "type": "console.log",
+      "message": "Console.log found - consider removing in production"
+    },
+    {
+      "file": "/workspace/src/utils/analytics.ts",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/utils/chunkErrorHandler.ts",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/utils/dynamicComponents.ts",
+      "type": "todo",
+      "message": "TODO or FIXME comment found"
+    },
+    {
+      "file": "/workspace/src/utils/env-polyfill.ts",
+      "type": "console.log",
+      "message": "Console.log found - consider removing in production"
+    },
+    {
+      "file": "/workspace/src/utils/env-polyfill.ts",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/utils/imageOptimization.tsx",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/utils/monitoring.ts",
+      "type": "console.log",
+      "message": "Console.log found - consider removing in production"
+    },
+    {
+      "file": "/workspace/src/utils/performance-optimizer.ts",
+      "type": "console.log",
+      "message": "Console.log found - consider removing in production"
+    },
+    {
+      "file": "/workspace/src/utils/performance-optimizer.ts",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/utils/sentry-mock.ts",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/utils/seo-optimizer.ts",
+      "type": "console.log",
+      "message": "Console.log found - consider removing in production"
+    },
+    {
+      "file": "/workspace/src/utils/seo-optimizer.ts",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    },
+    {
+      "file": "/workspace/src/utils/serverless-polyfill.ts",
+      "type": "console.log",
+      "message": "Console.log found - consider removing in production"
+    },
+    {
+      "file": "/workspace/src/utils/serverless-polyfill.ts",
+      "type": "any",
+      "message": "TypeScript any type used - consider more specific typing"
+    }
+
+  ]
+}
+  ],
+  "summary": {
+    "consoleLogs": 8,
+    "todos": 3,
+    "anyTypes": 193
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
+  }
+}
+  ]
+}
+origin/cursor/fix-syntax-push-and-merge-to-main-8452
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> origin/cursor/delete-old-data-records-6bba

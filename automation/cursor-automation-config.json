@@ -1,0 +1,72 @@
+{
+  "automation": {
+    "enabled": true,
+    "interval": 30000,
+    "maxSessions": 5,
+    "enableLogging": true,
+    "autoRestart": true,
+    "healthCheckInterval": 60000,
+    "maxRetries": 3,
+    "retryDelay": 5000
+  },
+  "sessions": [
+    {
+      "id": "main-dev",
+      "name": "Main Development Chat",
+      "interval": 25000,
+      "autoProceed": true,
+      "priority": "high",
+      "commands": ["proceed", "continue", "next"]
+    },
+    {
+      "id": "code-review",
+      "name": "Code Review Assistant",
+      "interval": 35000,
+      "autoProceed": true,
+      "priority": "medium",
+      "commands": ["proceed", "review", "analyze"]
+    },
+    {
+      "id": "bug-fixes",
+      "name": "Bug Fixes Helper",
+      "interval": 40000,
+      "autoProceed": true,
+      "priority": "medium",
+      "commands": ["proceed", "fix", "debug"]
+    },
+    {
+      "id": "documentation",
+      "name": "Documentation Generator",
+      "interval": 45000,
+      "autoProceed": true,
+      "priority": "low",
+      "commands": ["proceed", "document", "explain"]
+    },
+    {
+      "id": "testing",
+      "name": "Testing Assistant",
+      "interval": 50000,
+      "autoProceed": true,
+      "priority": "low",
+      "commands": ["proceed", "test", "verify"]
+    }
+  ],
+  "logging": {
+    "level": "INFO",
+    "file": "cursor-automation.log",
+    "maxSize": "10MB",
+    "maxFiles": 5,
+    "format": "json"
+  },
+  "monitoring": {
+    "enableMetrics": true,
+    "metricsInterval": 30000,
+    "alertOnErrors": true,
+    "maxErrorRate": 0.1
+  },
+  "platform": {
+    "detectOS": true,
+    "crossPlatform": true,
+    "fallbackCommands": ["proceed", "continue"]
+  }
+}

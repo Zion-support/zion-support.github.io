@@ -1,0 +1,4 @@
+export: interface InnovativeITService2024 {
+  id: string;
+
+  roi: string;
