@@ -1,10 +1,55 @@
 import React from 'react';
 import Link from 'next/link';
-import NewContent2026MegaBanner from './components/NewContent2026MegaBanner';
-import InteractiveAI2026Calculator from './components/InteractiveAI2026Calculator';
-import ContentShowcase from './components/ContentShowcase';
-import FeaturedServiceCard from './components/FeaturedServiceCard';
-import SuccessStory from './components/SuccessStory';
+import { 
+  NewBlogBanner, 
+  AnalyticsPlatformBanner, 
+  TechCorpSuccessBanner,
+  WorkflowAutomationBanner,
+  AIAnalyticsBanner,
+  HealthTechSuccessBanner,
+  ComprehensiveAIBanner,
+  EnterpriseAIBanner,
+  NewContentBanner,
+  CustomerServiceAIBanner,
+  HealthcareAIBanner,
+  RetailSuccessBanner,
+  AIContentShowcaseBanner,
+  AIRevolutionBanner,
+  AutonomousAgentsBanner,
+  AIGovernanceBanner,
+  FinTechSuccessBanner,
+  NewContentShowcaseBanner
+} from '../components/PromotionalBanner';
+import {
+  AIEnterpriseAdoptionBanner,
+  AITrends2025Banner,
+  SupplyChainOptimizationBanner,
+  AIBusinessTransformationBanner,
+  AICustomerExperienceBanner,
+  EnterpriseAITransformationBanner,
+  LatestAIInsightsBanner,
+  AIServicesShowcaseBanner,
+  AIWorkflowAutomationBanner,
+  EnterpriseAISecurityBanner,
+  MultimodalAIIntegrationBanner,
+  MultimodalAICustomerServiceBanner
+} from '../components/NewContentPromotionalBanners';
+import {
+  AIEnterpriseTransformationBanner,
+  AIAutonomousSystemsBanner,
+  ManufacturingTransformationBanner,
+  AIEnterpriseServicesBanner,
+  LatestContentShowcaseBanner,
+  InteractiveAICalculatorBanner,
+  AIInnovationShowcaseBanner
+} from '../components/NewContent2026Banners';
+import NeuralArchitectureSearchBanner from '../components/NeuralArchitectureSearchBanner';
+import AIContentGenerationBanner from '../components/AIContentGenerationBanner';
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
+import ContentShowcase from '../components/ContentShowcase';
+import FeaturedServiceCard from '../components/FeaturedServiceCard';
+import SuccessStory from '../components/SuccessStory';
+import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -47,35 +92,227 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
-        {/* New 2026 Mega Content Banner - Featured Promotional Banner */}
-        <NewContent2026MegaBanner />
-        
-        {/* Hero Section */}
-        <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
-          <div className="max-w-4xl mx-auto px-4">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Transform Your Business with
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
-                {' '}AI-Powered Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
-              and enterprise IT solutions that drive growth, efficiency, and innovation.
+      {/* Latest 2026 Content Banners */}
+      <NeuralArchitectureSearchBanner />
+      <AIContentGenerationBanner />
+      <AIEnterpriseTransformationBanner />
+      <AIAutonomousSystemsBanner />
+      <ManufacturingTransformationBanner />
+      <AIEnterpriseServicesBanner />
+      <LatestContentShowcaseBanner />
+      <InteractiveAICalculatorBanner />
+      <AIInnovationShowcaseBanner />
+      
+      {/* New Content Promotional Banners */}
+      <MultimodalAIIntegrationBanner />
+      <MultimodalAICustomerServiceBanner />
+      <AIEnterpriseAdoptionBanner />
+      <AITrends2025Banner />
+      <SupplyChainOptimizationBanner />
+      <AIBusinessTransformationBanner />
+      <AICustomerExperienceBanner />
+      <EnterpriseAITransformationBanner />
+      <LatestAIInsightsBanner />
+      <AIServicesShowcaseBanner />
+      <AIWorkflowAutomationBanner />
+      <EnterpriseAISecurityBanner />
+      
+      {/* Existing Promotional Banners */}
+      <NewContentShowcaseBanner />
+      <AutonomousAgentsBanner />
+      <AIGovernanceBanner />
+      <FinTechSuccessBanner />
+      <AIContentShowcaseBanner />
+      <CustomerServiceAIBanner />
+      <HealthcareAIBanner />
+      <RetailSuccessBanner />
+      <AIRevolutionBanner />
+      <NewBlogBanner />
+      <WorkflowAutomationBanner />
+      <AIAnalyticsBanner />
+      
+      {/* Hero Section */}
+      <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Transform Your Business with
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
+              {' '}AI-Powered Solutions
+            </span>
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
+            and enterprise IT solutions that drive growth, efficiency, and innovation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Link
+              href="/services"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Explore Our Services
+            </Link>
+            <a
+              href="tel:+13024640950"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
+            >
+              Call +1 302 464 0950
+            </a>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-3xl font-bold text-blue-600">500+</div>
+              <div className="text-gray-600">Projects Delivered</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">99.9%</div>
+              <div className="text-gray-600">Uptime Guarantee</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">24/7</div>
+              <div className="text-gray-600">Expert Support</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">$2M+</div>
+              <div className="text-gray-600">Cost Savings</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Services */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Featured AI & IT Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our most popular services that are transforming businesses worldwide
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
-                href="/services"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
-              >
-                Explore Our Services
-              </Link>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
-              >
-                Call +1 302 464 0950
-              </a>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <FeaturedServiceCard
+              title="AI Data Analytics"
+              description="Transform data into actionable insights with predictive modeling and real-time dashboards"
+              price="$199/month"
+              features={['Predictive Analytics', 'Real-time Dashboards', 'Data Integration']}
+              href="/services/ai-data-analytics"
+              popular={true}
+            />
+            <FeaturedServiceCard
+              title="AI Workflow Automation"
+              description="Automate business processes with intelligent workflow design and smart triggers"
+              price="$149/month"
+              features={['Process Automation', 'Smart Triggers', 'Performance Monitoring']}
+              href="/services/ai-workflow-automation"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="AI Virtual Assistant"
+              description="24/7 intelligent customer support with natural language processing"
+              price="$99/month"
+              features={['24/7 Support', 'Multi-channel', 'Personalized Responses']}
+              href="/services/ai-virtual-assistant"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="Cloud Migration"
+              description="Seamless migration to cloud infrastructure with zero downtime"
+              price="$2,999"
+              features={['Zero Downtime', 'Security Compliance', 'Cost Optimization']}
+              href="/services/cloud-migration"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="DevOps Automation"
+              description="Automate CI/CD pipelines and infrastructure management"
+              price="$399/month"
+              features={['CI/CD Pipelines', 'Infrastructure as Code', 'Auto-scaling']}
+              href="/services/devops-automation"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="Cybersecurity Consulting"
+              description="Advanced threat detection and zero-trust security architecture"
+              price="$599/month"
+              features={['Threat Detection', 'Zero-trust Architecture', 'Compliance']}
+              href="/services/cybersecurity-consulting"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="AI Edge Computing"
+              description="Real-time AI processing at the edge with sub-50ms response times"
+              price="$799/month"
+              features={['Sub-50ms Latency', 'Edge Intelligence', 'Offline Capability']}
+              href="/services/ai-edge-computing"
+              popular={false}
+            />
+            <FeaturedServiceCard
+              title="AI Finance Automation"
+              description="Automate financial processes with 95% accuracy and $3M+ savings"
+              price="$1,299/month"
+              features={['95% Automation', 'Fraud Detection', 'Real-time Reporting']}
+              href="/services/ai-finance-automation"
+              popular={false}
+            />
+          </div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
+      {/* Interactive AI 2027 Calculator */}
+      <InteractiveAI2027Calculator />
+
+      {/* Interactive AI 2026 Calculator */}
+      <InteractiveAICalculator2026 />
+=======
+      {/* Interactive Promotional Section */}
+      <InteractivePromotionalSection />
+>>>>>>> cursor/create-and-deploy-new-content-1102
+
+      {/* Interactive Content Discovery */}
+      <InteractiveContentDiscovery />
+
+      {/* Dynamic Content Showcase */}
+      <ContentShowcase />
+
+      {/* Latest Innovations Section */}
+      <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Latest AI Innovations & Breakthroughs
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Stay ahead with cutting-edge AI technologies and revolutionary solutions that are transforming industries
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Edge Computing AI</h3>
+                  <p className="text-sm text-gray-500">Real-time intelligence</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Achieve sub-50ms response times with AI processing at the edge of networks. 
+                Perfect for autonomous vehicles, IoT devices, and real-time applications.
+              </p>
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-gray-500">Published Jan 20, 2025</div>
+                <Link
+                  href="/blog/ai-edge-computing-2025"
+                  className="text-cyan-600 font-semibold hover:text-cyan-700 transition-colors"
+                >
+                  Read More →
+                </Link>
+              </div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
