@@ -44,6 +44,8 @@ import MetaCognitiveRevolutionBanner from '../components/MetaCognitiveRevolution
 import NeuromorphicComputingRevolutionBanner from '../components/NeuromorphicComputingRevolutionBanner';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import March2026MegaBreakthroughBanner from '../components/March2026MegaBreakthroughBanner';
+import April2026MegaBreakthroughBanner from '../components/April2026MegaBreakthroughBanner';
+import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -121,7 +123,10 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* NEW MARCH 2026 MEGA BREAKTHROUGH - MOST PROMINENT */}
+      {/* NEW APRIL 2026 MEGA BREAKTHROUGH - MOST PROMINENT */}
+      <April2026MegaBreakthroughBanner />
+
+      {/* NEW MARCH 2026 MEGA BREAKTHROUGH */}
       <March2026MegaBreakthroughBanner />
 
       {/* NEW 2026 REVOLUTIONARY CONTENT - Featured prominently */}
@@ -231,20 +236,23 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Revolutionary 2026 Content Showcase */}
+      <Revolutionary2026ContentShowcaseBanner />
+
       {/* Featured New Content Showcase */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-2 mb-4">
               <span className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                ✨ NEW 2026 CONTENT
+                ✨ ADDITIONAL 2026 CONTENT
               </span>
             </div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Revolutionary AI Content & Success Stories
+              More Revolutionary AI Content & Success Stories
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover the latest AI innovations, transformation guides, and real-world success stories 
+              Explore additional AI innovations, transformation guides, and real-world success stories 
               that are reshaping businesses in 2026
             </p>
           </div>
