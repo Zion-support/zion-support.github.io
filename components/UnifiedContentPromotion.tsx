@@ -17,6 +17,43 @@ interface ContentItem {
 }
 
 const featuredContent: ContentItem[] = [
+  // Sept 30, 2025 — highlight newest content
+  {
+    id: 'n1',
+    title: 'AI Operational Trust Q4 2025: Scorecards That Prevent Regressions',
+    description: 'Wire SLIs to KPIs with budgets, canaries, and attested rollbacks to ship faster and safer.',
+    link: '/blog/ai-operational-trust-q4-2025',
+    badge: 'Fresh',
+    badgeColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    icon: '🧭',
+    publishedDate: 'September 30, 2025',
+    readTime: '8 min read',
+    category: 'AI Operations'
+  },
+  {
+    id: 'n2',
+    title: 'AI Cost Optimization Breakthrough 2026: 40–70% Savings With Stability',
+    description: 'Quality tiers, semantic caches, and policy tests that cut spend without hurting UX.',
+    link: '/blog/ai-cost-optimization-breakthrough-2026',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '💸',
+    publishedDate: 'September 30, 2025',
+    readTime: '9 min read',
+    category: 'FinOps'
+  },
+  {
+    id: 'n3',
+    title: 'Autonomous Enterprise Operations 2025: From Pilots to Production',
+    description: 'Guardrails, live traces, and budgeted actions that convert pilots into durable ROI.',
+    link: '/blog/ai-autonomous-enterprise-operations-2025',
+    badge: 'Featured',
+    badgeColor: 'bg-gradient-to-r from-yellow-600 to-orange-600',
+    icon: '🚀',
+    publishedDate: 'September 30, 2025',
+    readTime: '10 min read',
+    category: 'Enterprise AI'
+  },
   {
     id: '1',
     title: 'AI 2027: Quantum Consciousness Fusion',
