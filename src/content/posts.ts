@@ -2043,3 +2043,34 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Fresh Q4 articles to advertise on homepage
+posts.push(
+  {
+    slug: "ai-governance-scorecards-2026-q4",
+    title: "AI Governance Scorecards 2026 Q4: Wire Guardrails to KPIs",
+    description: "Operational scorecards that connect model quality to product KPIs with PR checks and live canaries.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-inference-cold-starts-2026",
+    title: "Edge Inference 2026: Bust Cold Starts with Warm Pools",
+    description: "Deliver <100ms globally using warm pools, intent prefetch, and tiered caches—without cost spikes.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-playbooks-2026-q4",
+    title: "Agent Release Playbooks 2026 Q4: Budgets, Approvals, Rollback",
+    description: "Battle‑tested playbooks for safe agent updates—budgeted actions, sandboxed tools, and one‑click rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
