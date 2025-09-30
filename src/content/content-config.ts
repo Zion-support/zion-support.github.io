@@ -148,6 +148,26 @@ export const featuredBlogPosts: FeaturedItem[] = [
   }
 ];
 
+// Sept 30, 2025 – Promote two brand-new guides site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "ai-operational-trust-scorecards-2026",
+    title: "AI Operational Trust Scorecards 2026",
+    description: "SLIs wired to KPIs with budgets, canaries, and instant rollback",
+    link: "/blog/ai-operational-trust-scorecards-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-consentless-analytics-2026",
+    title: "Edge Analytics 2026: Consent‑Safe Insights",
+    description: "Scoped IDs, on‑device aggregation, and DP noise at <100ms — zero PII",
+    link: "/blog/edge-consentless-analytics-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 // Oct 2025 – Add two brand-new featured posts
 featuredBlogPosts.unshift(
   {
