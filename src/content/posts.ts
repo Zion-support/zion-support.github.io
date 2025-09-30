@@ -82,6 +82,24 @@ export const posts: BlogPost[] = [
     readTime: "18 min read"
   },
   {
+    slug: "edge-rate-limiter-blueprint-2026",
+    title: "Edge Rate Limiter Blueprint 2026",
+    description: "Global, sub‑ms rate limiting with KV, token buckets, and signed policies.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-operational-trust-scorecards-2026",
+    title: "AI Operational Trust Scorecards 2026",
+    description: "SLIs → KPIs with budgets, canaries, and instant rollback for safe autonomy.",
+    category: "AI Operations",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "production-rag-quality-budgets-2026",
     title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
     description: "Run RAG at scale with explicit quality budgets, freshness controls, and KPI-aligned SLAs that avoid regressions.",
