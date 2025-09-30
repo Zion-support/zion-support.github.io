@@ -2,7 +2,6 @@ import React from 'react';
 
 export default function QuantumConsciousnessFusionBanner() {
   return (
-<<<<<<< HEAD
     <section className="py-16 bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -121,7 +120,6 @@ export default function QuantumConsciousnessFusionBanner() {
               </div>
             </div>
           </div>
-=======
     <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 border-b border-indigo-500/30">
       <div className="container mx-auto px-6">
         <div className="text-center">
@@ -181,7 +179,6 @@ export default function QuantumConsciousnessFusionBanner() {
               Get Free Consultation
             </a>
           </div>
->>>>>>> main
         </div>
       </div>
     </section>
