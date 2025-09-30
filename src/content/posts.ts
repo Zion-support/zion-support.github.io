@@ -1404,3 +1404,43 @@ posts.push(
   }
 );
 
+// Dec 30, 2025 – Fresh posts to surface across homepage showcases
+posts.push(
+  {
+    slug: "ai-governance-scorecards-2027",
+    title: "AI Governance Scorecards 2027: Guardrails Linked to KPIs",
+    description: "Operational guardrails wired to outcomes with PR checks, live canaries, and instant rollback.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-retrieval-rag-2027",
+    title: "Edge Retrieval RAG 2027: Sub‑100ms Answers Without PII",
+    description: "Hybrid edge retrieval with signed configs, TTL windows, and on‑device caches for private, fast answers.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "agentic-release-budgets-2027",
+    title: "Agentic Release Budgets 2027: Safe Automation at Scale",
+    description: "Budgeted actions, approvals, and rollback playbooks that keep velocity high and incidents low.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "privacy-first-experimentation-2027",
+    title: "Privacy‑First Experimentation 2027: Insights Without PII",
+    description: "Scoped IDs, on‑device metrics, and DP noise to run trustworthy experiments under strict SLAs.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  }
+);
+
