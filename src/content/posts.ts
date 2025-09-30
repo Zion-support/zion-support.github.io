@@ -10,6 +10,51 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "agent-release-zero-regret-2026",
+    title: "Zero‑Regret Agent Releases 2026",
+    description: "Budgeted actions, KPI‑linked canaries, sandboxed tools, and one‑click rollback for safe agent updates.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-2026-e2e-ai-tracing",
+    title: "E2E AI Tracing 2026: From Token to KPI",
+    description: "Trace prompts, models, and costs to business outcomes with budget‑aware actions and rollback.",
+    category: "Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-rate-limiter-blueprint-2026",
+    title: "Edge 2026: Rate Limiter Blueprint — <100ms, Zero‑PII",
+    description: "Signed quotas, scoped IDs, and edge enforcement delivering privacy‑first rate limiting worldwide.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-2027-operational-scorecards",
+    title: "AI 2027: Operational Scorecards",
+    description: "Wire SLIs to KPIs with budgets, live canaries, and instant rollback to keep reliability high.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-2027-autonomous-roadmaps",
+    title: "AI 2027: Autonomous Roadmaps that Prove ROI",
+    description: "Outcome‑led bets, KPI scorecards, budgets, and rollback — a pragmatic 2027 roadmap.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "production-rag-quality-budgets-2026",
     title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
     description: "Run RAG at scale with explicit quality budgets, freshness controls, and KPI-aligned SLAs that avoid regressions.",

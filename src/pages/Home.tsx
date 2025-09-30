@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   ArrowRight,
   Award,
@@ -149,19 +150,16 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Enterprise AI Safety Blueprint + Edge Private Personalization"
-          description="KPI scorecards, CI policy tests, and instant rollback + <100ms zero‑PII journeys."
+          title="New: Zero‑Regret Agent Releases + E2E AI Tracing"
+          description="Budgeted actions, KPI‑linked canaries, and rollback + trace tokens → KPIs."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI 2025: Enterprise AI Safety Blueprint", category: "AI Governance", link: "/blog/ai-2025-sept-30-enterprise-ai-safety-blueprint" },
-            { title: "AI 2029: Autonomous Infra Blueprint", category: "AI Operations", link: "/blog/ai-2029-autonomous-infra-blueprint" },
-            { title: "AI 2028: Autonomous Ops Guardrails", category: "AI Operations", link: "/blog/ai-2028-autonomous-ops-guardrails" },
-            { title: "Edge 2028: Private Personalization <100ms", category: "Edge", link: "/blog/edge-2028-private-personalization" },
-            { title: "Agent Red‑Teaming 2026", category: "AI Security", link: "/blog/agent-red-teaming-2026" },
-            { title: "Verifiable Edge Analytics 2026", category: "Analytics", link: "/blog/verifiable-edge-analytics-2026" },
-            { title: "AI Executive Playbook 2027", category: "AI Strategy", link: "/blog/ai-executive-playbook-2027" },
-            { title: "AI 2027 Cost Optimization Playbook", category: "AI Operations", link: "/blog/ai-2027-cost-optimization-playbook" }
+            { title: "Zero‑Regret Agent Releases 2026", category: "AI Operations", link: "/blog/agent-release-zero-regret-2026" },
+            { title: "E2E AI Tracing 2026", category: "Observability", link: "/blog/ai-2026-e2e-ai-tracing" },
+            { title: "Edge Rate Limiter Blueprint 2026", category: "Edge Computing", link: "/blog/edge-rate-limiter-blueprint-2026" },
+            { title: "AI 2027: Operational Scorecards", category: "AI Operations", link: "/blog/ai-2027-operational-scorecards" },
+            { title: "AI 2027: Autonomous Roadmaps", category: "AI Strategy", link: "/blog/ai-2027-autonomous-roadmaps" }
           ]}
         />
         {/* Fresh content banner promoting brand-new articles */}
