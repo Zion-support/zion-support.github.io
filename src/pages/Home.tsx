@@ -178,6 +178,22 @@ const Home = () => {
         </div>
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
+          {/* Inline promotion for brand-new content */}
+          <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-6">
+            <div className="text-white text-sm mb-4">New this week</div>
+            <div className="grid md:grid-cols-2 gap-4">
+              <Link to="/blog/ai-enterprise-transformation-2027" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
+                <div className="text-indigo-300 text-xs mb-2">Enterprise AI</div>
+                <div className="text-white font-semibold">AI Enterprise Transformation 2027</div>
+                <div className="text-zion-slate-light text-sm mt-1">Executive playbook to plan, fund, and scale AI with measurable ROI.</div>
+              </Link>
+              <Link to="/blog/agentic-workflow-orchestration-2026" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">AI Operations</div>
+                <div className="text-white font-semibold">Agentic Workflow Orchestration 2026</div>
+                <div className="text-zion-slate-light text-sm mt-1">Budgets, KPI‑linked canaries, and rollback for safe velocity.</div>
+              </Link>
+            </div>
+          </div>
         </div>
 
         {/* Newly added content promo */}
