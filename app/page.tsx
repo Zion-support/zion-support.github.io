@@ -803,7 +803,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* 🔥 BRAND NEW CONTENT - SEPTEMBER 30, 2025 - 5 EXCLUSIVE PUBLICATIONS! */}
+        {/* Brand New Content - September 30, 2025 - 5 Exclusive Publications! */}
+        <section className="py-20 bg-gradient-to-br from-orange-50 to-red-50">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-4 mb-6">
