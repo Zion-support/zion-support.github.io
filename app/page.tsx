@@ -2,6 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import NewContent2026ShowcaseBanner from './components/NewContent2026ShowcaseBanner';
 import InteractiveContentShowcase from './components/InteractiveContentShowcase';
+import AI2026RevolutionaryBanner from './components/AI2026RevolutionaryBanner';
+import SuccessStoriesShowcaseBanner from './components/SuccessStoriesShowcaseBanner';
+import AIROICalculator from './components/AIROICalculator';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -86,8 +89,14 @@ export default function HomePage() {
       {/* New Content Showcase Banner */}
       <NewContent2026ShowcaseBanner />
 
+      {/* AI 2026 Revolutionary Banner */}
+      <AI2026RevolutionaryBanner />
+
       {/* Interactive Content Showcase */}
       <InteractiveContentShowcase />
+
+      {/* Success Stories Showcase Banner */}
+      <SuccessStoriesShowcaseBanner />
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -461,6 +470,25 @@ export default function HomePage() {
             >
               View All Content
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* AI ROI Calculator Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Calculate Your AI Transformation ROI
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover the potential value and return on investment from implementing AI solutions 
+              in your organization. Get instant calculations based on your specific business metrics.
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <AIROICalculator />
           </div>
         </div>
       </section>

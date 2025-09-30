@@ -9,6 +9,26 @@ export const metadata = {
 
 const blogPosts = [
   {
+    title: 'AI 2026 Enterprise Automation Revolution: Complete Transformation Guide',
+    slug: 'ai-2026-enterprise-automation-revolution',
+    excerpt: 'Discover how AI enterprise automation is revolutionizing business operations in 2026. Achieve 95% automation, $50M+ savings, and complete digital transformation with our proven framework.',
+    category: 'Featured Article',
+    readTime: '25 min read',
+    publishedAt: 'January 20, 2025',
+    image: '🤖',
+    color: 'blue'
+  },
+  {
+    title: 'AI 2026 Mega Trends: Revolutionary Predictions & Industry Insights',
+    slug: 'ai-2026-mega-trends-predictions',
+    excerpt: 'Discover the groundbreaking AI mega trends shaping 2026. From quantum-enhanced AI to autonomous business ecosystems, explore the technologies that will revolutionize enterprise operations.',
+    category: 'Featured Article',
+    readTime: '30 min read',
+    publishedAt: 'January 20, 2025',
+    image: '🔮',
+    color: 'purple'
+  },
+  {
     title: 'AI 2026 Mega Breakthrough Innovations: Revolutionary Technologies Transforming Enterprise',
     slug: 'ai-2026-mega-breakthrough-innovations',
     excerpt: 'Discover the groundbreaking AI innovations of 2026 that are revolutionizing enterprise operations, from quantum-enhanced neural networks to autonomous business systems.',
