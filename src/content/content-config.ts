@@ -151,6 +151,30 @@ export const featuredBlogPosts: FeaturedItem[] = [
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
   {
+    id: "genai-reliability-scorecards-2027",
+    title: "GenAI Reliability Scorecards 2027",
+    description: "Live KPIs + budgets + rollback for affordable, reliable GenAI.",
+    link: "/blog/genai-reliability-scorecards-2027",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-private-analytics-2027",
+    title: "Edge Private Analytics 2027",
+    description: "Zero‑PII insights with scoped IDs and DP at <100ms.",
+    link: "/blog/edge-private-analytics-2027",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "enterprise-ai-sustainability-2027",
+    title: "Enterprise AI Sustainability 2027",
+    description: "Cut spend and carbon: tiers, green routing, workload shifting.",
+    link: "/blog/enterprise-ai-sustainability-2027",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-operational-scorecards-q4-2026",
     title: "AI Operational Scorecards Q4 2026",
     description: "SLIs tied to KPIs with budgeted actions and rollback",
