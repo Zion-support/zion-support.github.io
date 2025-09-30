@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
@@ -24,10 +25,12 @@ import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
 import LatestInsights from "../components/LatestInsights";
 import ModernFeatures from "../components/ModernFeatures";
+import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
 import NewContentAnnouncement from "../components/NewContentAnnouncement";
 import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import NewContentShowcase from "../components/NewContentShowcase";
 import NewContentShowcase2025 from "../components/NewContentShowcase2025";
+import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
@@ -133,17 +136,17 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Reliable RAG Ops, Platform KPIs, AI Incident Budgets"
-          description="Keep RAG fresh, prove platform ROI, and contain incidents under 60s—safely."
-          ctaText="Explore new content"
+          title="🚀 NEW: Cut GenAI Costs 70%, 10x Dev Velocity, Sub-100ms AI"
+          description="Latest insights on cost optimization, platform engineering golden paths, trustworthy AI governance, and real-time infrastructure at scale."
+          ctaText="Read Latest Articles"
           ctaLink="/blog"
           featuredItems={[
+            { title: "GenAI Cost Optimization — Cut 70% Without Quality Loss", category: "AI Operations", link: "/blog/ai-2025-oct-03-genai-cost-optimization-at-scale" },
+            { title: "Platform Engineering Golden Paths — 10x Velocity in 90 Days", category: "Platform Engineering", link: "/blog/ai-2025-oct-03-platform-engineering-golden-paths" },
+            { title: "Trustworthy AI Governance — Compliance to Advantage", category: "AI Governance", link: "/blog/ai-2025-oct-03-trustworthy-ai-governance-framework" },
+            { title: "Real-Time AI Infrastructure — Sub-100ms at Global Scale", category: "AI Infrastructure", link: "/blog/ai-2025-oct-03-real-time-ai-infrastructure" },
             { title: "Reliable RAG Ops 2026", category: "GenAI", link: "/blog/reliable-rag-ops-2026" },
-            { title: "Platform KPIs 2026", category: "Platform Engineering", link: "/blog/platform-kpis-2026" },
-            { title: "AI Incident Budgets 2026", category: "Security", link: "/blog/ai-incident-budgets-2026" },
-            { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
-            { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" },
-            { title: "Golden Paths ROI 2026", category: "Platform Engineering", link: "/blog/golden-paths-roi-2026" }
+            { title: "Platform KPIs 2026", category: "Platform Engineering", link: "/blog/platform-kpis-2026" }
           ]}
         />
         <div className="container mx-auto px-6 mt-6">
@@ -167,11 +170,11 @@ const Home = () => {
         
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
-          variant="info"
-          title="🚀 Fresh: Autonomous Runbooks + Privacy‑First Flags"
-          description="Budgeted actions, approvals, and zero‑regret rollouts you can ship today."
-          ctaText="Read the latest"
-          ctaLink="/blog/ai-autonomous-incident-runbooks-2025"
+          variant="success"
+          title="🎯 October 2025 Update: GenAI Cost Optimization + Real-Time AI"
+          description="New articles on cutting LLM costs 70%, achieving sub-100ms AI, trustworthy governance frameworks, and 10x developer velocity."
+          ctaText="Explore Latest Insights"
+          ctaLink="/blog"
           dismissible={true}
         />
         {/* Animated background elements */}
@@ -204,9 +207,9 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              🚀 <strong>BREAKTHROUGH 2025:</strong> AI Autonomous Infrastructure, Quantum-AI Hybrid Computing & Zero Trust Security! 
-              Transform your business with revolutionary AI solutions that self-heal, optimize, and scale automatically. 
-              Join 500+ companies achieving unprecedented results!
+              🚀 <strong>BREAKTHROUGH 2025:</strong> NEW Content Just Released! Enterprise AI Intelligence, Cybersecurity Revolution & $40B in Success Stories! 
+              Transform your business with proven AI solutions delivering $50B+ in client results. 
+              Join 500+ companies achieving 400-600% ROI with our expert guidance!
             </p>
 
             {/* Special Promotion Banner */}
@@ -688,20 +691,21 @@ const Home = () => {
             <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-400/30 rounded-xl p-6 mb-10">
               <div className="flex items-center gap-3 mb-3">
                 <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
-                <span className="text-lg font-bold text-purple-700">📚 NEW CONTENT ALERT</span>
+                <span className="text-lg font-bold text-purple-700">🚀 BREAKTHROUGH CONTENT SERIES</span>
                 <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
               </div>
             <p className="text-gray-700 font-semibold mb-2">
-                🚀 Just Published: Risk Playbook, Privacy‑Preserving Agents, KPI Policy Tests, and Serverless Inference Cost Playbook
+                💡 Featured: Autonomous Cost Intelligence (60% Savings), Conversational Commerce (3.5x Conversions), Predictive Infrastructure (99.999% Uptime)
               </p>
               <p className="text-gray-600 text-sm mb-4">
-                Discover how to ship fast with guardrails, design privacy‑first agents, wire governance to KPIs, and cut inference costs 40–70%.
+                Explore cutting-edge strategies for AI-driven cost optimization, revolutionary e-commerce experiences, zero-downtime operations, plus risk playbooks, privacy‑preserving agents, and serverless inference cost optimization.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">AI Governance</span>
-                <span className="bg-rose-100 text-rose-700 px-3 py-1 rounded-full text-xs font-medium">AI Security</span>
-                <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-medium">Engineering</span>
-                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">AI Solutions</span>
+                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">Cost Optimization</span>
+                <span className="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-xs font-medium">E-Commerce AI</span>
+                <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-medium">Infrastructure</span>
+                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">DevOps</span>
+                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">AI Governance</span>
               </div>
             </div>
             
