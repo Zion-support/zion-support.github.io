@@ -37,6 +37,9 @@ import Revolutionary2026ContentMegaBreakthroughBanner from "./components/Revolut
 import March2026RevolutionaryBreakthroughBanner from "./components/March2026RevolutionaryBreakthroughBanner";
 import March2026ContentShowcase from "./components/March2026ContentShowcase";
 import March2026AdvertisingMegaBanner from "./components/March2026AdvertisingMegaBanner";
+import March2026BreakthroughBanner from "./components/March2026BreakthroughBanner";
+import RevolutionaryContentShowcase2026 from "./components/RevolutionaryContentShowcase2026";
+import InteractiveContentHub2026 from "./components/InteractiveContentHub2026";
 
 export default function App(): JSX.Element {
   return (
@@ -47,11 +50,20 @@ export default function App(): JSX.Element {
       {/* NEW: March 2026 Revolutionary Breakthrough Banner */}
       <March2026RevolutionaryBreakthroughBanner />
       
+      {/* NEW: March 2026 AI Breakthrough Revolution Banner - Most Prominent */}
+      <March2026BreakthroughBanner />
+      
       {/* NEW: February 2026 AI Mega Breakthrough Banner - Most Prominent */}
       <February2026BreakthroughMegaBanner />
       
       {/* NEW: New Content 2026 Showcase Banner */}
       <NewContent2026ShowcaseBanner />
+      
+      {/* NEW: Revolutionary Content Showcase 2026 - Interactive Content Hub */}
+      <RevolutionaryContentShowcase2026 />
+      
+      {/* NEW: Interactive Content Hub 2026 - Advanced Content Exploration */}
+      <InteractiveContentHub2026 />
       
       {/* NEW: Revolutionary 2026 Content Mega Breakthrough Banner - Most Prominent */}
       <Revolutionary2026ContentMegaBreakthroughBanner />
