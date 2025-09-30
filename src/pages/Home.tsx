@@ -149,11 +149,12 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Autonomous Infra Blueprint + Edge Private Personalization"
-          description="Self‑healing platforms with budgets + <100ms zero‑PII journeys with on‑device models."
+          title="New: Enterprise AI Safety Blueprint + Edge Private Personalization"
+          description="KPI scorecards, CI policy tests, and instant rollback + <100ms zero‑PII journeys."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
+            { title: "AI 2025: Enterprise AI Safety Blueprint", category: "AI Governance", link: "/blog/ai-2025-sept-30-enterprise-ai-safety-blueprint" },
             { title: "AI 2029: Autonomous Infra Blueprint", category: "AI Operations", link: "/blog/ai-2029-autonomous-infra-blueprint" },
             { title: "AI 2028: Autonomous Ops Guardrails", category: "AI Operations", link: "/blog/ai-2028-autonomous-ops-guardrails" },
             { title: "Edge 2028: Private Personalization <100ms", category: "Edge", link: "/blog/edge-2028-private-personalization" },

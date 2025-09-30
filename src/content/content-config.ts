@@ -1220,6 +1220,14 @@ featuredBlogPosts.unshift(
 // Sept 30, 2025 – Surface three brand-new articles (newly added now)
 featuredBlogPosts.unshift(
   {
+    id: "ai-2025-sept-30-enterprise-ai-safety-blueprint",
+    title: "AI 2025: Enterprise AI Safety",
+    description: "KPI scorecards + CI policy tests + live canaries + instant rollback",
+    link: "/blog/ai-2025-sept-30-enterprise-ai-safety-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-2026-runtime-rollback-blueprint",
     title: "AI 2026: Runtime Rollback Blueprint",
     description: "Instant rollback with KPI‑linked canaries and budget gates.",
