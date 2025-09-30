@@ -5,34 +5,34 @@ import { motion } from "framer-motion";
 const LatestContentBanner2025 = () => {
   const newArticles = [
     {
-      title: "AI Autonomous DevOps 2026",
-      description: "Self-Managing CI/CD Pipelines with Zero Downtime",
-      slug: "ai-autonomous-devops-2026",
-      category: "DevOps AI"
-    },
-    {
-      title: "AI Legal Document Automation 2026",
-      description: "From Contracts to Compliance in Seconds",
-      slug: "ai-legal-document-automation-2026",
+      title: "AI Autonomous Legal Analysis 2026",
+      description: "10x Faster Case Research with 99% Accuracy",
+      slug: "ai-autonomous-legal-analysis-2026",
       category: "Legal Tech"
     },
     {
-      title: "AI Customer Experience 2026",
-      description: "Hyper-Personalization Achieving 400% Engagement",
-      slug: "ai-customer-experience-hyper-personalization-2026",
-      category: "Customer Experience"
+      title: "Federated AI Governance Networks 2026",
+      description: "Distributed Intelligence with Zero Trust",
+      slug: "federated-ai-governance-networks-2026",
+      category: "AI Governance"
     },
     {
-      title: "AI Renewable Energy Optimization 2026",
-      description: "Smart Grids Achieving 95% Efficiency",
-      slug: "ai-renewable-energy-optimization-2026",
-      category: "Energy Tech"
+      title: "Self-Evolving AI Models 2026",
+      description: "Continuous Learning Without Human Intervention",
+      slug: "self-evolving-ai-models-2026",
+      category: "Machine Learning"
     },
     {
-      title: "AI Research Acceleration Platform 2026",
-      description: "10x Faster Scientific Discovery",
-      slug: "ai-research-acceleration-platform-2026",
-      category: "Research AI"
+      title: "AI-Powered DevSecOps Automation 2026",
+      description: "Zero-Touch Security in CI/CD",
+      slug: "ai-powered-devsecops-automation-2026",
+      category: "DevSecOps"
+    },
+    {
+      title: "Holographic AI Interfaces 2026",
+      description: "Spatial Computing Meets Generative AI",
+      slug: "holographic-ai-interfaces-2026",
+      category: "Spatial Computing"
     },
     {
       title: "Autonomous Code Refactoring 2026",
@@ -53,16 +53,16 @@ const LatestContentBanner2025 = () => {
       category: "Edge Computing"
     },
     {
-      title: "AI Composite Agents 2026",
-      description: "Multi-Model Intelligence Orchestration",
-      slug: "ai-composite-agents-2026",
-      category: "AI Engineering"
+      title: "Swarm Intelligence Robotics 2026",
+      description: "Coordinated Autonomous Systems",
+      slug: "swarm-intelligence-robotics-2026",
+      category: "Robotics"
     },
     {
-      title: "Real-Time Personalization at the Edge 2026",
-      description: "Sub-50ms Adaptive Experiences",
-      slug: "real-time-personalization-edge-2026",
-      category: "Edge Computing"
+      title: "AI Drug Discovery 2026",
+      description: "From Years to Months with 100x Acceleration",
+      slug: "ai-drug-discovery-acceleration-2026",
+      category: "Healthcare AI"
     }
   ];
 
@@ -98,8 +98,8 @@ const LatestContentBanner2025 = () => {
           🚀 September 30, 2025 — REVOLUTIONARY CONTENT DROP!
         </h2>
         <p className="text-xl text-blue-100 mb-8 max-w-3xl">
-          Discover <span className="font-bold text-yellow-300">5 BRAND NEW groundbreaking articles</span> on AI Autonomous DevOps, Legal Document Automation, Customer Experience Hyper-Personalization, Renewable Energy Optimization, and Research Acceleration! 
-          Plus explore our expanded library of <span className="font-bold text-yellow-300">25+ cutting-edge articles</span> shaping 2026!
+          Discover <span className="font-bold text-yellow-300">5 BRAND NEW groundbreaking articles</span> on AI Autonomous Legal Analysis, Federated AI Governance Networks, Self-Evolving AI Models, AI-Powered DevSecOps Automation, and Holographic AI Interfaces! 
+          Plus explore our expanded library of <span className="font-bold text-yellow-300">30+ cutting-edge articles</span> shaping 2026!
         </p>
 
         {/* Featured highlights */}
@@ -159,7 +159,7 @@ const LatestContentBanner2025 = () => {
             <div className="text-sm text-blue-200">NEW Articles TODAY</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-green-300">25+</div>
+            <div className="text-3xl font-bold text-green-300">30+</div>
             <div className="text-sm text-blue-200">Total Latest Articles</div>
           </div>
           <div className="text-center">
