@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React from 'react';
+import NewContentAdvertisingBanner from '../components/NewContentAdvertisingBanner';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
 import January2026NeuralArchitectureSearchBanner from '../components/January2026NeuralArchitectureSearchBanner';
 import January2026FederatedLearningBanner from '../components/January2026FederatedLearningBanner';
@@ -30,6 +31,9 @@ export default function HomePage() {
       
       {/* New Services Banner */}
       <January2026NewServicesBanner />
+
+      {/* New Content Advertising Banner - promotes Trustless Evaluation Blueprint (2026) */}
+      <NewContentAdvertisingBanner />
       
       {/* Legacy Content Banners */}
       <January2026NeuralArchitectureSearchBanner />
