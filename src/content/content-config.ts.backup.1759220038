@@ -11,6 +11,15 @@ export interface FeaturedItem {
 
 export const featuredBlogPosts: FeaturedItem[] = [
   {
+<<<<<<< HEAD
+    id: "ai-agent-evaluations-2026",
+    title: "AI Agent Evaluations 2026",
+    description: "Reliable metrics and release gates for safe agent deployments",
+    link: "/blog/ai-agent-evaluations-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "realtime-ai-decision-engines-2025",
     title: "Real-Time AI Decision Engines",
     description: "10M/sec under 1ms with tiered models and caches",
@@ -19,6 +28,25 @@ export const featuredBlogPosts: FeaturedItem[] = [
     featured: true
   },
   {
+    id: "ai-platform-cost-optimization-2026",
+    title: "AI Platform Cost Optimization 2026",
+    description: "50–80% savings without latency or accuracy loss",
+    link: "/blog/ai-platform-cost-optimization-2026",
+    type: "article",
+    featured: true
+  },
+  {
+<<<<<<< HEAD
+=======
+    id: "realtime-ai-decision-engines-2025",
+    title: "Real-Time AI Decision Engines",
+    description: "10M/sec under 1ms with tiered models and caches",
+    link: "/blog/real-time-ai-decision-engines-2025",
+    type: "article",
+    featured: true
+  },
+  {
+>>>>>>> bd6c0a8d4749d70d3172d2f109a68952e79551fc
     id: "privacy-first-telemetry-quickstart-2025",
     title: "Privacy‑First Telemetry Quickstart",
     description: "Signal‑rich analytics with scoped IDs and DP noise",
@@ -36,6 +64,7 @@ export const featuredBlogPosts: FeaturedItem[] = [
   },
   {
 =======
+>>>>>>> origin/cursor/create-and-deploy-new-content-db2b
     id: "multimodal-ai-2025",
     title: "Multimodal AI Revolution 2025",
     description: "Master unified vision-language-audio AI achieving 98% accuracy",

@@ -108,19 +108,17 @@ import UltimateContent2026Showcase from '../components/UltimateContent2026Showca
 import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
 import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
 import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
-import AIMetaCognitiveRevolutionBanner from '../components/AIMetaCognitiveRevolutionBanner';
-import AINeuromorphicRevolutionBanner from '../components/AINeuromorphicRevolutionBanner';
-import Ultimate2026ContentRevolutionBanner from '../components/Ultimate2026ContentRevolutionBanner';
+<<<<<<< HEAD
 import September30NewAIBreakthroughsBanner from '../components/September30NewAIBreakthroughsBanner';
 import September30BreakthroughContentBanner from '../components/September30BreakthroughContentBanner';
 import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
 import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
 import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
-import RevolutionaryQuantumAIBreakthroughBanner from '../components/RevolutionaryQuantumAIBreakthroughBanner';
-import AutonomousBusinessSystemsMegaBanner from '../components/AutonomousBusinessSystemsMegaBanner';
-import QuantumAI2027BreakthroughBanner from '../components/QuantumAI2027BreakthroughBanner';
-import AutonomousBusinessIntelligence2026Banner from '../components/AutonomousBusinessIntelligence2026Banner';
-import NewContent2027ShowcaseBanner from '../components/NewContent2027ShowcaseBanner';
+=======
+import AIMetaCognitiveRevolutionBanner from '../components/AIMetaCognitiveRevolutionBanner';
+import AINeuromorphicRevolutionBanner from '../components/AINeuromorphicRevolutionBanner';
+import Ultimate2026ContentRevolutionBanner from '../components/Ultimate2026ContentRevolutionBanner';
+>>>>>>> origin/cursor/create-and-deploy-new-content-8e01
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -163,32 +161,31 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
-      {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
-      <NewContent2027ShowcaseBanner />
-      
-      {/* 🚀 QUANTUM AI 2027 BREAKTHROUGH - 1000x PERFORMANCE GAINS! */}
-      <QuantumAI2027BreakthroughBanner />
-      
-      {/* 🚀🚀🚀 BREAKTHROUGH CONTENT - January 2026 - Revolutionary Quantum AI & Autonomous Systems! 🚀🚀🚀 */}
-      <RevolutionaryQuantumAIBreakthroughBanner />
-      
-      {/* 🤖 AUTONOMOUS BUSINESS SYSTEMS - 95% Automation Achievement! 🤖 */}
-      <AutonomousBusinessSystemsMegaBanner />
-      
-      {/* 🚀 NEWEST BREAKTHROUGH CONTENT - January 2026 - Revolutionary AI Technologies! */}
-      <Ultimate2026ContentRevolutionBanner />
-      
+<<<<<<< HEAD
       {/* 🚀🚀🚀 BREAKTHROUGH CONTENT - September 30, 2025 - 3 REVOLUTIONARY INNOVATIONS! 🚀🚀🚀 */}
       <September30BreakthroughContentBanner />
+      
+      {/* 🚀 NEW 2026 CONTENT SHOWCASE - Revolutionary AI Technologies! */}
+      <Ultimate2026ContentShowcaseBanner />
+      
+      {/* 🌟 Latest 2026 Content Mega Showcase */}
+      <Latest2026ContentMegaBanner />
+      
+      {/* 🚀 Revolutionary 2026 Content Showcase */}
+      <Revolutionary2026ContentShowcaseBanner />
+=======
+      {/* 🚀 NEWEST BREAKTHROUGH CONTENT - January 2026 - Revolutionary AI Technologies! */}
+      <Ultimate2026ContentRevolutionBanner />
       
       {/* 🧠 AI Meta-Cognitive Reasoning Revolution */}
       <AIMetaCognitiveRevolutionBanner />
       
-      {/* 🧠 AUTONOMOUS BUSINESS INTELLIGENCE 2026 - 300% ROI IMPROVEMENTS! */}
-      <AutonomousBusinessIntelligence2026Banner />
+      {/* ⚡ Neuromorphic Enterprise Computing Revolution */}
+      <AINeuromorphicRevolutionBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-8e01
       
       {/* 🚀 MEGA CONTENT UPDATE - September 30, 2025 - 116+ NEW RESOURCES! */}
-      {/* <NewContentShowcase2026 /> */}
+      <NewContentShowcase2026 />
       
       {/* 🚀 NEWEST CONTENT - September 30, 2025 - 3 Breakthrough AI Technologies! */}
       <September30NewAIBreakthroughsBanner />
@@ -288,7 +285,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/blog/ai-voice-interfaces-enterprise-2026" className="group">
+            <Link href="/blog/ai-enterprise-rag-guardrails-2026" className="group">
               <div className="bg-white text-gray-900 rounded-xl p-6 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-1">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center">
@@ -598,13 +595,13 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              href="/services"
+              to="/services"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore Our Services
             </Link>
             <a
-              href="tel:+13024640950"
+              to="tel:+13024640950"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
               Call +1 302 464 0950
@@ -615,17 +612,23 @@ export default function HomePage() {
               <div className="text-3xl font-bold text-blue-600">500+</div>
               <div className="text-gray-600">Projects Delivered</div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600">99.9%</div>
-              <div className="text-gray-600">Uptime Guarantee</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600">24/7</div>
-              <div className="text-gray-600">Expert Support</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600">$2M+</div>
-              <div className="text-gray-600">Cost Savings</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div>
+                <div className="text-3xl font-bold text-blue-600">500+</div>
+                <div className="text-gray-600">Projects Delivered</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-blue-600">99.9%</div>
+                <div className="text-gray-600">Uptime Guarantee</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-blue-600">24/7</div>
+                <div className="text-gray-600">Expert Support</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-blue-600">$2M+</div>
+                <div className="text-gray-600">Cost Savings</div>
+              </div>
             </div>
           </div>
         </section>
