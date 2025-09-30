@@ -54,6 +54,9 @@ import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
+import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
+import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
+import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -135,11 +138,16 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
+<<<<<<< HEAD
       {/* New 2025 Content Banners */}
       <AITrends2025PromotionalBanner />
       <Fortune500SuccessBanner />
       <InteractiveROICalculatorBanner />
       <AITransformationShowcaseBanner />
+=======
+      {/* Revolutionary Content 2026 Banner */}
+      <RevolutionaryContent2026Banner />
+>>>>>>> 3ee1431f4b3ff64239e74586b537363f0fc67c86
       
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
@@ -149,6 +157,9 @@ export default function HomePage() {
       <LatestContentShowcaseBanner />
       <InteractiveAICalculatorBanner />
       <AIInnovationShowcaseBanner />
+      
+      {/* Latest Content Showcase */}
+      <LatestContent2026ShowcaseBanner />
       
       {/* New Content Promotional Banners */}
       <MultimodalAIIntegrationBanner />
@@ -327,6 +338,9 @@ export default function HomePage() {
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
+      
+      {/* Interactive Content Showcase 2026 */}
+      <InteractiveContentShowcase2026 />
 
       {/* Latest Innovations Section */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
