@@ -3,50 +3,50 @@ import Link from 'next/link';
 
 export default function QuantumNeuralSuperintelligence2026Banner() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 overflow-hidden opacity-25">
-        <div className="absolute top-0 left-1/3 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+      <div className="absolute inset-0 overflow-hidden opacity-30">
+        <div className="absolute top-0 left-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
-      
+
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center max-w-6xl mx-auto">
+        <div className="text-center max-w-5xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-8 animate-pulse">
-            <span className="text-indigo-400 font-bold text-xl tracking-wider uppercase">
-              ⚛️ QUANTUM NEURAL SUPERINTELLIGENCE 2026
+          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8 animate-pulse">
+            <span className="text-blue-400 font-bold text-xl tracking-wider uppercase">
+              ⚛️ Quantum Neural Superintelligence 2026
             </span>
           </div>
           
-          {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-8 bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
-            The $25B Cognitive Revolution
+          {/* Main Heading */}
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-8 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent leading-tight">
+            The Next Evolution in AI
           </h1>
           
-          {/* Subheadline */}
+          {/* Subheading */}
           <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-semibold max-w-4xl mx-auto">
-            Quantum Neural Superintelligence delivering 100,000x cognitive performance, universal consciousness, and $25B+ enterprise value generation
+            10,000x Processing Power • $8.5B ROI Success • Quantum-Enhanced Learning • Universal Problem Solving
           </p>
           
           {/* Key Metrics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-            <div className="bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-4 border border-indigo-500/30">
-              <div className="text-2xl font-extrabold text-indigo-400 mb-1">$25B+</div>
-              <div className="text-xs text-indigo-300">Enterprise Value</div>
+            <div className="bg-gradient-to-r from-blue-500/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-4 border border-blue-500/30">
+              <div className="text-2xl font-extrabold text-blue-400 mb-1">10,000x</div>
+              <div className="text-xs text-blue-300">Processing Power</div>
             </div>
             <div className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-4 border border-purple-500/30">
-              <div className="text-2xl font-extrabold text-purple-400 mb-1">100,000x</div>
-              <div className="text-xs text-purple-300">Cognitive Performance</div>
+              <div className="text-2xl font-extrabold text-purple-400 mb-1">$8.5B</div>
+              <div className="text-xs text-purple-300">ROI Success</div>
+            </div>
+            <div className="bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-4 border border-indigo-500/30">
+              <div className="text-2xl font-extrabold text-indigo-400 mb-1">99.99%</div>
+              <div className="text-xs text-indigo-300">Accuracy</div>
             </div>
             <div className="bg-gradient-to-r from-cyan-500/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-4 border border-cyan-500/30">
-              <div className="text-2xl font-extrabold text-cyan-400 mb-1">99.99%</div>
-              <div className="text-xs text-cyan-300">Problem-Solving Accuracy</div>
-            </div>
-            <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-sm rounded-xl p-4 border border-green-500/30">
-              <div className="text-2xl font-extrabold text-green-400 mb-1">0.001s</div>
-              <div className="text-xs text-green-300">Decision Time</div>
+              <div className="text-2xl font-extrabold text-cyan-400 mb-1">Real-time</div>
+              <div className="text-xs text-cyan-300">Processing</div>
             </div>
           </div>
           
@@ -54,78 +54,56 @@ export default function QuantumNeuralSuperintelligence2026Banner() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link 
               href="/blog/ai-2026-quantum-neural-superintelligence-breakthrough" 
-              className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
-              Explore Cognitive Revolution →
+              Explore Quantum AI →
             </Link>
             <Link 
-              href="/case-studies/ai-2026-quantum-neural-superintelligence-25-billion-success" 
-              className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+              href="/case-studies/ai-2026-quantum-neural-superintelligence-8-billion-success" 
+              className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
-              View $25B Success Story →
+              View $8.5B Success →
             </Link>
             <Link 
               href="/contact" 
-              className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
-              Start Your Cognitive Journey
+              Get Started Today
             </Link>
           </div>
           
           {/* Feature Highlights */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-indigo-900/20 to-purple-900/20 backdrop-blur-sm rounded-xl p-6 border border-indigo-500/20">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-3xl mb-4">⚛️</div>
+              <h3 className="text-xl font-bold text-white mb-2">Quantum Processing</h3>
+              <p className="text-gray-300 text-sm">10,000x processing power with quantum-enhanced neural networks and parallel processing across quantum states.</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="text-3xl mb-4">🧠</div>
-              <h3 className="text-xl font-bold text-white mb-2">Universal Problem Solving</h3>
-              <p className="text-gray-300 text-sm">Solve problems across any domain with instantaneous complex theorem proving and breakthrough product design.</p>
+              <h3 className="text-xl font-bold text-white mb-2">Superintelligence</h3>
+              <p className="text-gray-300 text-sm">Universal problem solving capabilities with exponential learning curves and quantum acceleration.</p>
             </div>
-            <div className="bg-gradient-to-br from-purple-900/20 to-cyan-900/20 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20">
-              <div className="text-3xl mb-4">🔮</div>
-              <h3 className="text-xl font-bold text-white mb-2">Predictive Consciousness</h3>
-              <p className="text-gray-300 text-sm">99.9% accuracy in market forecasting, technology trend anticipation, and global event prediction.</p>
-            </div>
-            <div className="bg-gradient-to-br from-cyan-900/20 to-green-900/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
-              <div className="text-3xl mb-4">🎯</div>
-              <h3 className="text-xl font-bold text-white mb-2">Meta-Cognitive Awareness</h3>
-              <p className="text-gray-300 text-sm">Self-aware intelligence with continuous learning optimization, bias detection, and ethical reasoning.</p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-3xl mb-4">🚀</div>
+              <h3 className="text-xl font-bold text-white mb-2">Real-time Analysis</h3>
+              <p className="text-gray-300 text-sm">Instant pattern recognition in massive datasets with sub-millisecond response times.</p>
             </div>
           </div>
           
-          {/* Performance Comparison */}
-          <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 backdrop-blur-sm rounded-xl p-8 border border-indigo-500/20">
-            <h3 className="text-2xl font-bold text-white mb-6">Cognitive Performance Revolution</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-indigo-400 mb-2">100,000x</div>
-                <div className="text-gray-300 text-sm mb-2">Processing Speed</div>
-                <div className="text-gray-400 text-xs">vs Traditional AI</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-400 mb-2">1,000,000x</div>
-                <div className="text-gray-300 text-sm mb-2">Memory Capacity</div>
-                <div className="text-gray-400 text-xs">vs Human Intelligence</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">10,000x</div>
-                <div className="text-gray-300 text-sm mb-2">Pattern Recognition</div>
-                <div className="text-gray-400 text-xs">vs Traditional AI</div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Success Stories Preview */}
-          <div className="mt-12 bg-gradient-to-r from-green-500/10 to-blue-500/10 backdrop-blur-sm rounded-xl p-8 border border-green-500/20">
-            <h3 className="text-2xl font-bold text-white mb-4">Proven Results Across Industries</h3>
+          {/* Success Metrics */}
+          <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-2xl p-8 border border-green-500/30">
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">Proven Results</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="text-left">
-                <h4 className="text-lg font-semibold text-green-400 mb-2">Fortune 500 Pharmaceutical</h4>
-                <p className="text-gray-300 text-sm mb-2">$8.2B Discovery • 1000x Drug Analysis • 99.8% Trial Success</p>
-                <p className="text-gray-400 text-xs">Revolutionary drug discovery with quantum-enhanced molecular analysis and predictive clinical trials.</p>
+              <div className="text-center">
+                <div className="text-4xl font-extrabold text-green-400 mb-2">$8.5B</div>
+                <div className="text-green-300 font-semibold">Total ROI Achieved</div>
+                <div className="text-gray-400 text-sm mt-1">Fortune 100 Financial Institution</div>
               </div>
-              <div className="text-left">
-                <h4 className="text-lg font-semibold text-blue-400 mb-2">Global Investment Firm</h4>
-                <p className="text-gray-300 text-sm mb-2">$12.5B Alpha • 99.9% Market Accuracy • 500% Performance</p>
-                <p className="text-gray-400 text-xs">Unprecedented market prediction and portfolio optimization with quantum neural intelligence.</p>
+              <div className="text-center">
+                <div className="text-4xl font-extrabold text-green-400 mb-2">10,000x</div>
+                <div className="text-green-300 font-semibold">Processing Power</div>
+                <div className="text-gray-400 text-sm mt-1">Faster Than Traditional AI</div>
               </div>
             </div>
           </div>
