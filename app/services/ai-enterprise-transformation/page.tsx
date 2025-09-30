@@ -36,40 +36,13 @@ export default function AIEnterpriseTransformationService() {
           </Link>
           <Link
             href="/case-studies"
-=======
-  description: 'Transform your enterprise with AI-powered solutions. Get 300% ROI, 90% efficiency improvement, and $50M+ savings with our proven AI transformation framework.',
-  keywords: 'AI enterprise transformation, enterprise AI services, AI implementation, digital transformation, AI consulting',
-};
-
-export default function AIEnterpriseTransformation() {
-  return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <header className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-          AI Enterprise Transformation Services
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Transform your enterprise with AI-powered solutions. Get 300% ROI, 90% efficiency improvement, 
-          and $50M+ savings with our proven AI transformation framework.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="#contact"
-            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg"
-          >
-            Get Free Consultation
-          </Link>
-          <Link
-            href="/case-studies/ai-enterprise-transformation-mega-success-2026"
->>>>>>> origin/cursor/create-and-deploy-new-content-a21e
             className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
           >
-            View Success Stories
+            View Case Studies
           </Link>
         </div>
       </header>
 
-<<<<<<< HEAD
       <section className="mb-20">
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose Our AI Transformation Services?</h2>
@@ -115,12 +88,10 @@ export default function AIEnterpriseTransformation() {
           <div className="text-center">
             <div className="text-4xl font-bold text-blue-600 mb-2">$50M+</div>
             <div className="text-gray-600">Average Savings</div>
->>>>>>> origin/cursor/create-and-deploy-new-content-a21e
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       <section className="mb-20">
         <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Our AI Transformation Framework</h2>
         <div className="space-y-8">
@@ -185,12 +156,10 @@ export default function AIEnterpriseTransformation() {
                   <li>• ROI projections and cost-benefit analysis</li>
                   <li>• Technology recommendations</li>
                 </ul>
->>>>>>> origin/cursor/create-and-deploy-new-content-a21e
               </div>
             </div>
           </div>
 
-<<<<<<< HEAD
           <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
             <div className="flex items-start gap-6">
               <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
@@ -250,12 +219,10 @@ export default function AIEnterpriseTransformation() {
                   <li>• MLOps platform for model management</li>
                   <li>• Data quality monitoring systems</li>
                 </ul>
->>>>>>> origin/cursor/create-and-deploy-new-content-a21e
               </div>
             </div>
           </div>
 
-<<<<<<< HEAD
           <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
             <div className="flex items-start gap-6">
               <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
@@ -315,12 +282,10 @@ export default function AIEnterpriseTransformation() {
                   <li>• User training and documentation</li>
                   <li>• Scaling recommendations</li>
                 </ul>
->>>>>>> origin/cursor/create-and-deploy-new-content-a21e
               </div>
             </div>
           </div>
 
-<<<<<<< HEAD
           <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
             <div className="flex items-start gap-6">
               <div className="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
@@ -380,12 +345,10 @@ export default function AIEnterpriseTransformation() {
                   <li>• Training programs and materials</li>
                   <li>• Governance framework and monitoring</li>
                 </ul>
->>>>>>> origin/cursor/create-and-deploy-new-content-a21e
               </div>
             </div>
           </div>
 
-<<<<<<< HEAD
           <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
             <div className="flex items-start gap-6">
               <div className="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-lg">5</div>
@@ -445,14 +408,12 @@ export default function AIEnterpriseTransformation() {
                   <li>• Innovation roadmap and recommendations</li>
                   <li>• Ongoing support and maintenance</li>
                 </ul>
->>>>>>> origin/cursor/create-and-deploy-new-content-a21e
               </div>
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       <section className="mb-20">
         <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Service Packages</h2>
         <div className="grid md:grid-cols-3 gap-8">
@@ -646,12 +607,10 @@ export default function AIEnterpriseTransformation() {
               Ensure product quality with AI-powered inspection and quality assurance.
             </p>
             <div className="text-2xl font-bold text-indigo-600">190% ROI</div>
->>>>>>> origin/cursor/create-and-deploy-new-content-a21e
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       <section className="mb-20">
         <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Expected Results & ROI</h2>
         <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-12">
@@ -827,14 +786,12 @@ export default function AIEnterpriseTransformation() {
               <div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">ROI Guarantee</h3>
                 <p className="text-gray-700">We guarantee measurable ROI or we work for free until you achieve it</p>
->>>>>>> origin/cursor/create-and-deploy-new-content-a21e
               </div>
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       <section className="mb-20">
         <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Ready to Transform Your Enterprise?</h2>
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12 text-white text-center">
@@ -918,7 +875,6 @@ export default function AIEnterpriseTransformation() {
               Our support includes both technical maintenance and strategic guidance for continued AI innovation.
             </p>
           </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-a21e
         </div>
       </section>
     </div>

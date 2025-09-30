@@ -827,7 +827,6 @@ export const AISpaceTechnologyBanner = () => (
   />
 );
 
-
 export const AIEnterpriseAdoptionBanner = () => (
   <PromotionalBanner
     message="🏢 ENTERPRISE: AI Adoption 2025 - Complete Implementation Guide with 300% ROI & 70% Cost Reduction"
@@ -887,7 +886,6 @@ export const AICustomerExperienceBanner = () => (
     hideAfter={18}
   />
 );
-
 
 export const LatestAIInsightsBanner = () => (
   <PromotionalBanner
