@@ -96,20 +96,3 @@ after_all (() => {
 
 
 
-<<<<<<< HEAD
-=======
-    if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render is no longer supported')
-    ) {
-      return;
-    }
-    originalConsoleWarn.call(console, ...args);
-  }
-});
-afterAll(() => {
-  console.error = originalConsoleError;
-  console.warn = originalConsoleWarn;
-});
-=======
->>>>>>> main

@@ -55,11 +55,6 @@ Created: September 30, 2025 at 7:11 AM
 **Resolved Conflicts**:
 ```diff
 Before:
-<<<<<<< HEAD
-import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
-[... 12 more imports ...]
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-11e2
 import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
 
 After:

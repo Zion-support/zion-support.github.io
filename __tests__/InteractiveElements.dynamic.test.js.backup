@@ -18,8 +18,3 @@ import InteractiveElementsdynamic from "../components/InteractiveElements.dynami
     // Add styling tests if needed})});
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> main

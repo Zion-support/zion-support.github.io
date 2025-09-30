@@ -212,57 +212,6 @@ export const featuredBlogPosts: FeaturedItem[] = [
   }
 ];
 
-<<<<<<< HEAD
-=======
-// Surface brand-new content (Oct 30, 2025)
-featuredBlogPosts.unshift(
-  {
-    id: "ai-2026-governed-agent-runbooks",
-    title: "AI 2026: Governed Agent Runbooks",
-    description: "Budgets, KPI canaries, and instant rollback for safe autonomy.",
-    link: "/blog/ai-2026-governed-agent-runbooks",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "edge-rate-limiter-blueprint-2026",
-    title: "Edge 2026: Private Rate Limiter Blueprint",
-    description: "Scoped IDs, signed configs, and on‑device metrics for zero‑PII limits.",
-    link: "/blog/edge-rate-limiter-blueprint-2026",
-    type: "article",
-    featured: true
-  }
-);
-
-// Sept 30, 2025 – Surface three newly added articles at the top
-featuredBlogPosts.unshift(
-  {
-    id: "ai-2026-autonomous-ops-guardrails",
-    title: "AI 2026: Autonomous Ops Guardrails",
-    description: "Budgets, live traces, and instant rollback that keep autonomy safe.",
-    link: "/blog/ai-2026-autonomous-ops-guardrails",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "edge-2026-private-rate-limiter-blueprint",
-    title: "Edge 2026: Private Rate Limiter Blueprint",
-    description: "Scoped IDs, signed configs, on‑device metrics for zero‑PII limits <100ms.",
-    link: "/blog/edge-2026-private-rate-limiter-blueprint",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "genai-2026-budget-aware-evals",
-    title: "GenAI 2026: Budget‑Aware Evals",
-    description: "KPI‑linked scorecards and evals that prevent regressions without slowing teams.",
-    link: "/blog/genai-2026-budget-aware-evals",
-    type: "article",
-    featured: true
-  }
-);
-
->>>>>>> origin/cursor/create-and-deploy-new-content-9cfb
 // Sept 30, 2025 – Promote brand-new posts site-wide (added now)
 featuredBlogPosts.unshift(
   {

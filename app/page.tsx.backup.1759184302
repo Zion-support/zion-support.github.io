@@ -69,12 +69,9 @@ import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
-=======
 import AIROICalculator from '../src/components/AIROICalculator';
 import AITrends2025Banner from '../src/components/AITrends2025Banner';
 import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBanner';
-=======
-=======
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
 import { 
   NewContent2026MegaSuccessBanner,
@@ -95,31 +92,6 @@ export default function HomePage() {
       <div className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-between">
           <div className="flex items-center gap-2 text-sm md:text-base">
-<<<<<<< HEAD
-            <Link href="/case-studies/ai-quantum-optimization-2026" className="underline hover:text-yellow-200">1000x Speed Improvement</Link>
-=======
-            <Link href="/blog/ai-metaverse-enterprise-2026" className="underline hover:text-yellow-200">Metaverse Enterprise</Link>
-=======
-            <span>✨ NEW 2026:</span>
-            <Link href="/blog/ai-next-generation-automation-2026" className="underline hover:text-yellow-200">Next-Gen Automation</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-transformation-mega-success-2026" className="underline hover:text-yellow-200">$25M ROI Case Study</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-customer-experience-revolution-2026" className="underline hover:text-yellow-200">Customer Experience</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-sustainability-green-tech-2026" className="underline hover:text-yellow-200">Sustainability Guide</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-autonomous-infrastructure-2026" className="underline hover:text-yellow-200">Autonomous Infrastructure</Link>
-=======
-            <span>🚀 BREAKING 2026:</span>
-            <Link href="/blog/ai-quantum-computing-breakthrough-2026" className="underline hover:text-yellow-200">Quantum AI Breakthrough</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/blog/ai-autonomous-enterprise-2026" className="underline hover:text-yellow-200">Autonomous Enterprise</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/case-studies/ai-quantum-enterprise-transformation-2026" className="underline hover:text-yellow-200">$50M ROI Success</Link>
-            <span className="hidden md:inline">•</span>
-            <Link href="/services/ai-synthetic-data-generation" className="underline hover:text-yellow-200">Quantum AI Services</Link>
->>>>>>> origin/cursor/create-and-deploy-new-content-bb79
           </div>
           <Link
             href="/blog"
@@ -161,7 +133,6 @@ export default function HomePage() {
       <QuantumComputingBanner />
       <SustainabilityCaseStudyBanner />
       <QuantumOptimizationBanner />
-=======
       <AISpaceTech2026Banner />
       <AISyntheticData2026Banner />
       <AICognitiveComputing2026Banner />
@@ -205,10 +176,8 @@ export default function HomePage() {
       
       {/* Interactive Content Recommendation */}
       <InteractiveContentRecommendation />
-=======
       {/* Latest 2026 Content Mega Banner */}
       <Latest2026ContentMegaBanner />
-=======
       {/* New 2026 Content Banners */}
       <section className="py-16 bg-gradient-to-r from-emerald-600 to-teal-600 text-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
@@ -260,57 +229,6 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-<<<<<<< HEAD
-              href="/services"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
-            >
-              Explore Our Services
-=======
-              href="/blog/ai-2026-ultimate-guide"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
-            >
-              🚀 Read AI Ultimate Guide 2026
-            </Link>
-            <Link
-              href="/case-studies/ai-2026-mega-transformation-success"
-              className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
-            >
-              🏆 View $50M Success Story
-            </Link>
-            <Link
-              href="/case-studies/ai-sustainability-transformation-2026"
-              className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-red-700 transition-all shadow-lg hover:shadow-xl"
-            >
-              🌱 $10M Sustainability ROI
-=======
-              href="/blog/ai-next-generation-automation-2026"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
-            >
-              🚀 Read Next-Gen Automation Guide
-            </Link>
-            <Link
-              href="/blog/ai-transformation-mega-success-2026"
-              className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
-            >
-              📈 View $25M ROI Case Study
-=======
-              href="/blog/ai-quantum-computing-breakthrough-2026"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
-            >
-              ⚛️ Quantum AI Breakthrough
-            </Link>
-            <Link
-              href="/blog/ai-autonomous-enterprise-2026"
-              className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
-            >
-              🤖 Autonomous Enterprise
-            </Link>
-            <Link
-              href="/case-studies/ai-quantum-enterprise-transformation-2026"
-              className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-teal-700 transition-all shadow-lg hover:shadow-xl"
-            >
-              📊 $50M ROI Success
->>>>>>> origin/cursor/create-and-deploy-new-content-bb79
             </Link>
             <a
               href="tel:+13024640950"
@@ -340,7 +258,6 @@ export default function HomePage() {
         </div>
       </section>
 
-=======
       {/* Enhanced Content Showcase */}
       <EnhancedContentShowcase2026 />
       

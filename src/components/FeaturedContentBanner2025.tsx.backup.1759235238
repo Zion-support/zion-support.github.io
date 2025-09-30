@@ -4,17 +4,6 @@ export default function FeaturedContentBanner2025() {
   const featuredContent = [
     {
       type: 'blog',
-<<<<<<< HEAD
-      title: 'AI 2025: The Enterprise Autonomous Operations Revolution',
-      excerpt: 'Discover how Fortune 500 companies are achieving 95% automation rates and $2M+ annual savings through next-generation autonomous AI operations.',
-      href: '/blog/ai-autonomous-operations-2025',
-      image: '🚀',
-=======
-      title: 'AI Autonomous Enterprise Operations: Complete 2025 Guide',
-      excerpt: 'Master autonomous AI operations with proven frameworks achieving 95% automation rates, $2M+ annual savings, and 99.99% uptime through comprehensive implementation strategies.',
-      href: '/blog/ai-autonomous-enterprise-operations-2025',
-      image: '🤖',
->>>>>>> origin/cursor/create-and-deploy-new-content-c359
       category: 'Latest AI Innovation',
       readTime: '45 min read',
       publishDate: 'Jan 30, 2025'

@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-const { spawnSync } = require('child_process');
-function runNode(relPath, args = []) {
-const { spawnSync } = require('child_process');
-function runNode(relPath, args = []) {
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
-<<<<<<< HEAD
-=======
-const { spawnSync } = require('child_process')function runNode() {const abs = path.resolve(__dirname, '....', relPath)const res = spawnSync('node', [abs, ...args], { 'stdio': 'pipe', 'encoding': 'utf8', 'shell': true,'
-};
-  return { 'status': res.status || 0, 'stdout': res.stdout || '', 'stderr': res.stderr || '' }'
->>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 exports.config = {'schedule': '*/10 * * * *,'
 }exports.handler = async () => ;
@@ -60,10 +48,6 @@ const abs = path.resolve (__dirname, '....', rel_path),;'
 const res = spawn_sync ('node', [abs, ...args], { 'stdio': 'pipe', 'encoding': 'utf8', 'shell': true,;'
 }),
  ;
-<<<<<<< HEAD
-=======
-
->>>>>>> main
   return { "status": res.status || 0, "stdout": res.stdout || '', "stderr": res.stderr || '' }'
 
   // Commit and push;'
