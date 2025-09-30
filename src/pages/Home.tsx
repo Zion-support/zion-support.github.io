@@ -150,14 +150,14 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Live Scorecards + Edge Personalization + Agent Runbooks"
-          description="Ship faster with KPI‑linked guardrails, private <100ms personalization, and safe agent releases."
+          title="New: Reliable GenAI Platform + Edge Privacy Insights + Experiments"
+          description="Ship dependable GenAI with KPI‑linked guardrails, private <100ms insights, and global experiments."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI Operational Trust Q4 2025", category: "AI Operations", link: "/blog/ai-operational-trust-q4-2025" },
-            { title: "Consentless Edge Analytics Q4 2025", category: "Analytics", link: "/blog/edge-consentless-analytics-q4-2025" },
-            { title: "GenAI Quality Tiers Q4 2025", category: "GenAI", link: "/blog/genai-routing-quality-tiers-q4-2025" }
+            { title: "Reliable GenAI Platform 2026", category: "GenAI", link: "/blog/ai-2026-reliable-genai-platform" },
+            { title: "Edge Privacy Insights 2026", category: "Analytics", link: "/blog/edge-privacy-insights-2026" },
+            { title: "Consentless Experiments Q4 2026", category: "Analytics", link: "/blog/edge-consentless-experiments-2026-q4" }
           ]}
         />
         {/* Fresh content banner promoting brand-new articles */}
