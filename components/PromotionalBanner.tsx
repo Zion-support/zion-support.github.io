@@ -117,12 +117,23 @@ export const CaseStudyBanner = () => (
 
 export const NewBlogBanner = () => (
   <PromotionalBanner
-    message="🔥 Fresh Insights: AI Roadmaps 2026 and FinOps Scorecards 2025 now live"
+    message="🔥 Fresh Insights: Governance Live Scorecards + Private Insights Blueprint"
     ctaText="Browse Latest Posts"
     ctaLink="/blog"
     backgroundColor="bg-gradient-to-r from-orange-600 to-pink-600"
     autoHide={true}
     hideAfter={18}
+  />
+);
+
+export const September30BrandNewTodayBanner = () => (
+  <PromotionalBanner
+    message="🆕 Brand New: Governance Live Scorecards + Zero‑PII Private Insights"
+    ctaText="Read the 2 new posts"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-emerald-600 to-cyan-600"
+    autoHide={true}
+    hideAfter={22}
   />
 );
 

@@ -19,6 +19,7 @@ import { Link } from "react-router-dom";
 const BreakthroughContent2026Banner = () => null;
 import October2025MegaLaunchBanner from "../components/October2025MegaLaunchBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
+import { September30BrandNewTodayBanner } from "../components/PromotionalBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
@@ -166,19 +167,20 @@ const Home = () => {
         />
         {/* Fresh content banner promoting brand-new articles */}
         <div className="container mx-auto px-6 mt-6">
+          <September30BrandNewTodayBanner />
           {/* Brand New Today - advertising newly added posts */}
           <div className="rounded-xl border border-emerald-400/30 bg-emerald-500/10 p-6 mb-6">
             <div className="text-white text-sm mb-3">Brand new today</div>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link to="/blog/ai-2025-sept-30-real-time-decision-engines-v2" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+              <Link to="/blog/ai-2025-sept-30-governance-live-scorecards" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
                 <div className="text-emerald-300 text-xs mb-2">Platform Engineering</div>
-                <div className="text-white font-semibold">Real-Time Decision Engines v2</div>
-                <div className="text-zion-slate-light text-sm mt-1">10M/sec under 1ms using warm pools and intent prefetching.</div>
+                <div className="text-white font-semibold">Governance Live Scorecards</div>
+                <div className="text-zion-slate-light text-sm mt-1">KPI-linked policy tests and live canaries that prevent regressions.</div>
               </Link>
-              <Link to="/blog/genai-2025-sept-30-multimodal-fusion-blueprint" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">GenAI</div>
-                <div className="text-white font-semibold">Multimodal Fusion Blueprint</div>
-                <div className="text-zion-slate-light text-sm mt-1">Fuse text, vision, audio with eval scorecards and rollback.</div>
+              <Link to="/blog/ai-2025-sept-30-private-insights-blueprint" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">Analytics</div>
+                <div className="text-white font-semibold">Private Insights Blueprint</div>
+                <div className="text-zion-slate-light text-sm mt-1">Scoped IDs + on-device aggregation + DP noise at &lt;100ms.</div>
               </Link>
               <Link to="/blog/ai-2025-sept-30-security-mesh" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
                 <div className="text-indigo-300 text-xs mb-2">AI Security</div>

@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2025-sept-30-governance-live-scorecards",
+    title: "AI Governance Live Scorecards — Ship Weekly Without Regressions",
+    description: "Executable KPI-linked policy tests and live canaries that keep velocity high without risk.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-2025-sept-30-private-insights-blueprint",
+    title: "Private Insights Blueprint — Zero‑PII Analytics at <100ms",
+    description: "Scoped IDs, on‑device aggregation, and DP noise deliver trustworthy insights without collecting PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-2025-sept-30-real-time-decision-engines-v2",
     title: "Real-Time Decision Engines v2 — 10M/sec under 1ms",
     description: "Next-gen warm pools, intent prefetching, and tiered caches that deliver decisions in <1ms at massive scale.",
