@@ -30,7 +30,7 @@ interface BlogPost {
   views: number;
 }
 
-export default function Blog(): React.JSX.Element React.JSX.Element {
+export default function Blog(): React.JSX.Element {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
 
