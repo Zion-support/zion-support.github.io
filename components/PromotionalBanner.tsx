@@ -936,3 +936,64 @@ export const EnterpriseAISecurityBanner = () => (
     hideAfter={20}
   />
 );
+
+// NEW CONTENT - September 30, 2025
+export const AIEdgeComputingBanner = () => (
+  <PromotionalBanner
+    message="🚀 NEW: AI Edge Computing 2026 - 95% Latency Reduction & 85% Cost Savings with Distributed Intelligence"
+    ctaText="Read Now"
+    ctaLink="/blog/ai-edge-computing-transformation-2026"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-cyan-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const AICustomerIntelligenceBanner = () => (
+  <PromotionalBanner
+    message="💎 NEW: AI Customer Intelligence 2026 - 45% Revenue Growth & 92% Prediction Accuracy with 360° Insights"
+    ctaText="Learn More"
+    ctaLink="/blog/ai-powered-customer-intelligence-2026"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={18}
+  />
+);
+
+export const BankingAISuccessBanner = () => (
+  <PromotionalBanner
+    message="🏦 SUCCESS: Banking AI Transformation - $250M ROI, 99.8% Fraud Detection & 85% Cost Reduction Achieved"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/banking-ai-transformation-2025"
+    backgroundColor="bg-gradient-to-r from-indigo-600 to-blue-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const TelecomAISuccessBanner = () => (
+  <PromotionalBanner
+    message="📡 SUCCESS: Telecom AI Transformation - $120M Savings, 95% Network Efficiency & 40% Churn Reduction"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/telecom-ai-transformation-2025"
+    backgroundColor="bg-gradient-to-r from-teal-600 to-cyan-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
+
+export const September30NewContentShowcase = () => (
+  <PromotionalBanner
+    message="🔥 JUST PUBLISHED: 4 Breakthrough AI Articles & Success Stories with $370M+ Combined ROI - Read Now!"
+    ctaText="Explore All"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-orange-600 to-red-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={22}
+  />
+);

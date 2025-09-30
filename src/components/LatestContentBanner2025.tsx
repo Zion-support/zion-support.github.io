@@ -5,47 +5,91 @@ const LatestContentBanner2025: React.FC = () => {
   const latestArticles = [
     {
       id: 1,
-      title: 'AI-Powered DevSecOps: Automating Security in Development Pipelines',
-      slug: 'ai-powered-devsecops-automation-2025',
-      excerpt: 'Discover how AI-powered DevSecOps platforms achieve 98% automated vulnerability detection, 10x faster secure deployments, and continuous compliance monitoring—transforming software security across the entire development lifecycle.',
-      category: 'DevSecOps & Security Automation',
-      date: '2025-10-01',
-      readTime: '24 min',
+      title: 'Multimodal AI Agents: Enterprise Orchestration at Scale in 2025',
+      slug: 'multimodal-ai-agents-enterprise-orchestration-2025',
+      excerpt: 'Deploy multimodal AI agents that process text, images, video, and audio simultaneously. Achieve 96% accuracy with unified intelligence across customer service, quality control, and content moderation at enterprise scale.',
+      category: 'Multimodal AI & Orchestration',
+      date: '2025-09-30',
+      readTime: '52 min',
       trending: true,
-      icon: '🔒'
+      icon: '🎭'
     },
     {
       id: 2,
-      title: 'Sovereign AI: Navigating Data Residency & Compliance in 2025',
-      slug: 'sovereign-ai-data-residency-2025',
-      excerpt: 'Explore how Sovereign AI solutions enable enterprises to deploy advanced AI models while meeting strict data residency, privacy regulations, and national security requirements across 150+ jurisdictions.',
-      category: 'AI Governance & Compliance',
-      date: '2025-10-01',
-      readTime: '22 min',
+      title: 'AI Infrastructure Resilience: Chaos Engineering for Production Systems 2025',
+      slug: 'ai-infrastructure-resilience-chaos-engineering-2025',
+      excerpt: 'Build unbreakable AI infrastructure with chaos engineering practices. Achieve 99.99% uptime, automatic failover, and graceful degradation for mission-critical AI systems serving billions of requests daily.',
+      category: 'Infrastructure & Resilience',
+      date: '2025-09-30',
+      readTime: '48 min',
       trending: true,
-      icon: '🌍'
+      icon: '🔥'
     },
     {
       id: 3,
-      title: 'Agentic RAG Systems: Next-Gen Enterprise Knowledge AI',
-      slug: 'agentic-rag-systems-enterprise-2025',
-      excerpt: 'Learn how Agentic RAG systems combine autonomous AI agents with real-time knowledge retrieval, delivering 96% accuracy in enterprise knowledge work and reducing research time by 85%.',
-      category: 'AI Agents & Knowledge Systems',
-      date: '2025-10-01',
-      readTime: '26 min',
+      title: 'AI-Powered Developer Experience: 10x Productivity in 2025',
+      slug: 'ai-powered-devex-developer-productivity-2025',
+      excerpt: 'Revolutionary AI-powered development tools achieving 10x developer productivity. Intelligent code completion, automated testing, instant documentation, and AI pair programming transforming software engineering.',
+      category: 'Developer Experience & AI',
+      date: '2025-09-30',
+      readTime: '50 min',
+      trending: true,
+      icon: '💻'
+    },
+    {
+      id: 4,
+      title: 'Synthetic Data Generation: Privacy-Preserving AI Training at Scale 2025',
+      slug: 'synthetic-data-generation-privacy-preserving-ai-2025',
+      excerpt: 'Generate photorealistic synthetic data for AI training while preserving privacy. Achieve 99% statistical fidelity, reduce data collection costs by 90%, and ensure GDPR/HIPAA compliance with breakthrough platforms.',
+      category: 'Synthetic Data & Privacy',
+      date: '2025-09-30',
+      readTime: '54 min',
+      trending: true,
+      icon: '🔐'
+    },
+    {
+      id: 5,
+      title: 'Autonomous AI Agents: Building Self-Healing Enterprise Systems in 2025',
+      slug: 'autonomous-ai-agents-self-healing-systems-2025',
+      excerpt: 'Revolutionary approach to enterprise operations with autonomous AI agents that detect, diagnose, and resolve issues automatically. Achieve 99.99% uptime and reduce incident response time by 95%.',
+      category: 'Autonomous AI Systems',
+      date: '2025-09-29',
+      readTime: '45 min',
       trending: true,
       icon: '🤖'
     },
     {
-      id: 4,
-      title: 'AI-Native Observability: Autonomous Operations That Never Sleep',
-      slug: 'ai-native-observability-platform-2025',
-      excerpt: 'Discover how AI-Native Observability platforms achieve 99.9% anomaly detection accuracy, 95% MTTR reduction, and autonomous resolution of 60% of incidents—eliminating alert fatigue and revolutionizing SRE.',
-      category: 'Observability & SRE',
-      date: '2025-10-01',
-      readTime: '25 min',
+      id: 6,
+      title: 'Zero-Trust AI Security Architecture: The 2025 Enterprise Blueprint',
+      slug: 'zero-trust-ai-security-architecture-2025',
+      excerpt: 'Comprehensive zero-trust framework for AI systems protecting against adversarial attacks, model theft, and data poisoning. Deployed across 1000+ enterprises with 99.97% threat prevention.',
+      category: 'AI Security & Zero Trust',
+      date: '2025-09-29',
+      readTime: '50 min',
       trending: true,
-      icon: '🔍'
+      icon: '🛡️'
+    },
+    {
+      id: 7,
+      title: 'Edge AI Revolution: Deploying Intelligence at the Source with 99.9% Efficiency',
+      slug: 'edge-ai-deployment-enterprise-2025',
+      excerpt: 'Master edge AI deployment for real-time decision making with <10ms latency. Case studies show 90% bandwidth reduction, 87% cost savings, and enhanced privacy compliance.',
+      category: 'Edge Computing & AI',
+      date: '2025-09-29',
+      readTime: '43 min',
+      trending: true,
+      icon: '📡'
+    },
+    {
+      id: 8,
+      title: 'Real-Time AI Analytics: Processing 100TB+ Data Streams with Sub-Second Latency',
+      slug: 'real-time-ai-analytics-streaming-2025',
+      excerpt: 'Enterprise-grade streaming AI analytics processing massive data volumes in real-time. Achieve instant insights and predictive alerts at scale with 99.95% accuracy across industries.',
+      category: 'Real-Time AI & Analytics',
+      date: '2025-09-29',
+      readTime: '49 min',
+      trending: true,
+      icon: '⚡'
     }
   ];
 
@@ -63,7 +107,7 @@ const LatestContentBanner2025: React.FC = () => {
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 border border-cyan-500/30 mb-8 animate-fade-in">
             <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
             <span className="text-cyan-400 font-bold text-sm tracking-wider uppercase">
-              🔥 4 BRAND NEW ARTICLES PUBLISHED • October 1, 2025
+              🔥 NEW! 4 BREAKTHROUGH ARTICLES JUST RELEASED • September 30, 2025
             </span>
             <Sparkles className="w-5 h-5 text-fuchsia-400 animate-pulse" />
           </div>
@@ -79,7 +123,7 @@ const LatestContentBanner2025: React.FC = () => {
         </div>
 
         {/* Featured Articles Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">
           {latestArticles.map((article, index) => (
             <div 
               key={article.id}
