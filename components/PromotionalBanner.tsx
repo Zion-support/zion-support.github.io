@@ -1161,3 +1161,15 @@ export const September30LatestBreakthroughsBanner = () => (
     hideAfter={20}
   />
 );
+
+// New banner to advertise the freshly added content
+export const FreshSeptemberContentBanner = () => (
+  <PromotionalBanner
+    message="🆕 New Today: Live Guardrails, Private Insights, Budget‑Aware Routing"
+    ctaText="Read the 3 new guides"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-emerald-600 to-cyan-600"
+    autoHide={true}
+    hideAfter={22}
+  />
+);

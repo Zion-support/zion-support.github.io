@@ -168,6 +168,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Sept 30, 2025 – Add three brand-new articles (newly created)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2026-live-guardrails-blueprint",
+    title: "AI 2026: Live Guardrails Blueprint",
+    description: "Budgets, policy gates, canaries, and instant rollback for safe autonomy.",
+    link: "/blog/ai-2026-live-guardrails-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2026-private-insights-blueprint",
+    title: "Edge Private Insights 2026",
+    description: "Consentless metrics with scoped IDs, edge aggregation, and DP noise.",
+    link: "/blog/ai-2026-private-insights-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-routing-budgets-2026",
+    title: "GenAI Budget‑Aware Routing 2026",
+    description: "Stable UX under cost SLAs using quality tiers, caches, and evals.",
+    link: "/blog/genai-routing-budgets-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
   {
