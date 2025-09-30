@@ -61,33 +61,6 @@ import June2026ContentShowcaseBanner from "./components/June2026ContentShowcaseB
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
-      {/* NEW: June 2026 Superintelligence Breakthrough Banner - Most Prominent */}
-      <June2026SuperintelligenceBreakthroughBanner />
-      
-      {/* NEW: June 2026 Content Showcase Banner - Featured Content */}
-      <June2026ContentShowcaseBanner />
-      
-      {/* NEW: June 2026 Mega Enterprise Automation Banner - Most Prominent */}
-      <June2026MegaAutomationBanner />
-      
-      {/* NEW: Interactive Content Showcase 2026 Advanced */}
-      <InteractiveContentShowcase2026Advanced />
-      
-      {/* NEW: May 2026 Revolutionary Breakthrough Banner - Most Prominent */}
-      <May2026RevolutionaryBreakthroughBanner />
-      
-      {/* NEW: May 2026 Content Showcase - Featured Content */}
-      <May2026ContentShowcase />
-      
-      {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
-      <April2026MegaBreakthroughBanner />
-      
-      {/* NEW: Revolutionary 2026 Content Showcase Banner - Most Prominent */}
-      <Revolutionary2026ContentShowcaseBanner />
-      
-      {/* NEW: 2026 Content Mega Breakthrough Banner */}
-      <NewContent2026MegaBreakthroughBanner />
-      
       {/* NEW: April 2026 Conscious Computing Banner */}
       <April2026ConsciousComputingBanner />
       
@@ -262,9 +235,6 @@ export default function App(): JSX.Element {
         </div>
       </header>
 
-      {/* NEW: May 2026 Content Advertising Banner */}
-      <May2026ContentAdvertisingBanner />
-      
       {/* NEW CONTENT ADVERTISING BANNER */}
       <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30 mb-12">
         <div className="text-center">
@@ -432,19 +402,6 @@ export default function App(): JSX.Element {
 
       {/* Interactive Content Showcase 2026 */}
       <InteractiveContentShowcase2026 />
-      
-      {/* Interactive ROI Calculator 2026 */}
-      <InteractiveROICalculator2026 />
-
-      {/* NEW: May 2026 Revolutionary Breakthrough Banner - Mid Page */}
-      <May2026RevolutionaryBreakthroughBanner />
-
-      {/* NEW: June 2026 Mega Enterprise Automation Banner - Mid Page */}
-      <June2026MegaAutomationBanner />
-
-      {/* NEW: Revolutionary 2026 Content Showcase Banner - Mid Page */}
-      <Revolutionary2026ContentShowcaseBanner />
-      
       {/* NEW: April 2026 Content Promotion Section */}
       <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
         <div className="container mx-auto px-6">
@@ -542,12 +499,6 @@ export default function App(): JSX.Element {
       <UltimateContentAdvertisingBanner />
       <RevolutionaryAI2026MegaBreakthroughBanner />
       <InteractiveContentShowcase2026 />
-
-      {/* NEW: May 2026 Revolutionary Breakthrough Banner - Pre Footer */}
-      <May2026RevolutionaryBreakthroughBanner />
-
-      {/* NEW: June 2026 Mega Enterprise Automation Banner - Pre Footer */}
-      <June2026MegaAutomationBanner />
 
       {/* Footer */}
       <footer className="bg-slate-900 border-t border-slate-800 py-12">
