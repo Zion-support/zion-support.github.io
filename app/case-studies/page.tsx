@@ -10,6 +10,39 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
+<<<<<<< HEAD
+=======
+    title: 'AI Automation Mega Success 2026: $5M Savings & 400% ROI',
+    slug: 'ai-automation-mega-success-2026',
+    excerpt: 'Discover how a Fortune 500 company achieved $5M annual savings and 400% ROI through comprehensive AI automation.',
+    company: 'GlobalTech Manufacturing',
+    industry: 'Manufacturing',
+    results: {
+      savings: '$5M',
+      roi: '400%',
+      automation: '75%',
+      timeline: '8 months'
+    },
+    image: '🚀',
+    color: 'green'
+  },
+  {
+    title: 'AI Manufacturing Transformation: 90% Efficiency Gain',
+    slug: 'ai-manufacturing-transformation-2026',
+    excerpt: 'See how a Fortune 500 manufacturer achieved 90% efficiency gains and $50M annual savings through comprehensive AI transformation.',
+    company: 'Global Manufacturing Corp',
+    industry: 'Manufacturing',
+    results: {
+      savings: '$50M',
+      efficiency: '90%',
+      quality: '95%',
+      timeline: '12 months'
+    },
+    image: '🏭',
+    color: 'green'
+  },
+  {
+>>>>>>> origin/cursor/create-and-deploy-new-content-2736
     title: 'Fortune 500 AI Transformation: $50M+ Savings & 300% ROI',
     slug: 'fortune-500-ai-transformation-2027',
     excerpt: 'See how a Fortune 500 company achieved $50M+ in savings and a 300% ROI through comprehensive AI transformation with Zion Tech Group.',
