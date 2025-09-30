@@ -215,6 +215,30 @@ export const featuredBlogPosts: FeaturedItem[] = [
 // Surface brand-new content (Oct 30, 2025)
 featuredBlogPosts.unshift(
   {
+    id: "ai-2025-sept-30-go-to-market-ai-scorecards",
+    title: "Go-To-Market AI Scorecards",
+    description: "Align AI bets to pipeline, win‑rates, and adoption — with rollback",
+    link: "/blog/ai-2025-sept-30-go-to-market-ai-scorecards",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2025-sept-30-private-telemetry-blueprint-v2",
+    title: "Private Telemetry Blueprint v2",
+    description: "Zero‑PII, sub‑100ms analytics with scoped IDs and DP noise",
+    link: "/blog/edge-2025-sept-30-private-telemetry-blueprint-v2",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-2025-sept-30-eval-budgeting-blueprint-v3",
+    title: "Eval Budgeting Blueprint v3",
+    description: "Right‑size suites, cache goldens, enforce online policies under KPIs",
+    link: "/blog/genai-2025-sept-30-eval-budgeting-blueprint-v3",
+    type: "article",
+    featured: true
+  },
+  {
     id: "genai-2025-oct-01-e2e-eval-pipelines",
     title: "E2E Eval Pipelines — KPI‑Linked Gates",
     description: "Eval pipelines wired to KPIs with budgets, canaries, and rollback.",

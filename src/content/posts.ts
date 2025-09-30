@@ -1483,6 +1483,36 @@ export const posts: BlogPost[] = [
 // Sept 30, 2025 – Add three brand-new posts to advertise across the site
 posts.unshift(
   {
+    slug: "ai-2025-sept-30-go-to-market-ai-scorecards",
+    title: "Go-To-Market AI Scorecards — Align Bets to Revenue",
+    description:
+      "Design GTM scorecards that tie AI features to pipeline, win‑rates, and adoption with rollback‑ready guardrails.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "edge-2025-sept-30-private-telemetry-blueprint-v2",
+    title: "Private Telemetry Blueprint v2 — Zero‑PII, Sub‑100ms",
+    description:
+      "Scoped IDs, on‑device redaction, and DP noise for actionable analytics without collecting PII.",
+    category: "Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "genai-2025-sept-30-eval-budgeting-blueprint-v3",
+    title: "Eval Budgeting Blueprint v3 — 60–85% Savings, Stable UX",
+    description:
+      "Right‑size offline suites, cache golden answers, and enforce online policies with KPI‑linked budgets.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
     slug: "ai-2025-sept-30-autonomic-decision-engines",
     title: "Autonomic Decision Engines: Sub‑100ms, KPI‑Linked Actions",
     description:
