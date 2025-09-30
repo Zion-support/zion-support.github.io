@@ -1,8 +1,9 @@
 [build]
-  # Deploy pre-built dist directory
-  command = "echo 'Deploying pre-built application from dist directory'"
+  # Build with Vite and deploy dist directory
+  command = "pnpm run build:optimized"
   publish = "dist"
   command_timeout = "30m"
+  functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "20"
@@ -11,6 +12,8 @@
   PUPPETEER_SKIP_DOWNLOAD = "1"
   CYPRESS_INSTALL_BINARY = "0"
   ELECTRON_SKIP_DOWNLOAD = "1"
+  # Disable Next.js auto-detection
+  NEXT_TELEMETRY_DISABLED = "1"
 
 # Disable Next.js plugin auto-detection since we're using Vite
 [build.processing]
@@ -27,7 +30,9 @@
 [build.processing.html]
   pretty_urls = true
 
-# No plugins - using static site deployment
+# Cloudinary plugin for image optimization
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
 
 
 
