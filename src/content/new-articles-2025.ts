@@ -269,7 +269,7 @@ newArticles2025.push(
 
 // Sept 30, 2025 – Additional featured content to advertise on homepage
 newArticles2025.push(
-  {
+	{
     id: "ai-value-stream-analytics-2026",
     title: "📈 AI Value Stream Analytics 2026: Trace Spend To ROI",
     description: "Map prompts, tools, and user actions to business KPIs with end‑to‑end analytics.",
@@ -301,7 +301,7 @@ newArticles2025.push(
     link: "/blog/ai-quantum-computing-breakthrough-2026",
     readTime: "10 min read",
     tags: ["Quantum", "Optimization", "Acceleration"]
-  }
+}
 );
 
 // Sept 30, 2025 – Fresh content for homepage banners and showcases
@@ -377,10 +377,6 @@ newArticles2025.push(
     tags: ["Governance", "Compliance", "Canaries", "Rollback"]
   }
 );
-
-  }
-);
-
 
 // Sept 30, 2025 – Combined brand-new items to advertise on homepage
 newArticles2025.push(

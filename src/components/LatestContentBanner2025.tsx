@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles, TrendingUp, Zap } from 'lucide-react';
 
 const LatestContentBanner2025: React.FC = () => {
@@ -141,7 +142,7 @@ const LatestContentBanner2025: React.FC = () => {
 
         {/* Featured highlights */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          {breakthroughArticles.map((article, index) => (
+          {latestArticles.map((article, index) => (
             <motion.div
               key={article.slug}
               initial={{ opacity: 0, y: 20 }}
@@ -207,7 +208,7 @@ const LatestContentBanner2025: React.FC = () => {
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
