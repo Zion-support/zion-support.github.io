@@ -78,10 +78,18 @@ function Header() {
             </Link>
           </div>
           <div className="relative group">
-            <Link href="/blog/ai-2028-autonomous-enterprise-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
-              2028 Breakthroughs
-              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+            <Link href="/blog/ai-2028-next-generation-autonomous-enterprise" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              AI 2028 Autonomous
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
                 REVOLUTIONARY
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/blog/ai-2028-neuromorphic-superintelligence" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Neuromorphic AI 2028
+              <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                SUPERINTELLIGENCE
               </span>
             </Link>
           </div>
@@ -137,8 +145,24 @@ function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Latest 2028 Revolutionary Content</h3>
+            <h3 className="font-semibold text-gray-900 mb-3">Latest AI 2028 Revolutionary Content</h3>
             <div className="space-y-2">
+              <Link href="/blog/ai-2028-next-generation-autonomous-enterprise" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🚀 AI 2028 Autonomous Enterprise
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">REVOLUTIONARY</span>
+              </Link>
+              <Link href="/blog/ai-2028-neuromorphic-superintelligence" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🧠 AI 2028 Neuromorphic Superintelligence
+                <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">SUPERINTELLIGENCE</span>
+              </Link>
+              <Link href="/case-studies/ai-2028-autonomous-enterprise-mega-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $100B Autonomous Success
+                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold">MEGA</span>
+              </Link>
+              <Link href="/case-studies/ai-2028-neuromorphic-superintelligence-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🧠 $75B Neuromorphic Success
+                <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-2 py-1 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
+              </Link>
               <Link href="/blog/ai-2026-future-trends-breakthrough" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🌟 AI 2026 Future Trends
                 <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">BREAKTHROUGH</span>
