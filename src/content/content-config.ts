@@ -836,3 +836,15 @@ featuredBlogPosts.unshift(
     featured: true
   }
 );
+
+// Oct 2025 – Surface newly created FinOps Scorecards article site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2028-autonomous-finops-scorecards",
+    title: "AI 2028: Autonomous FinOps Scorecards",
+    description: "Prevent cost regressions with KPI-linked scorecards, budget-aware routing, rollback.",
+    link: "/blog/ai-2028-autonomous-finops-scorecards",
+    type: "article",
+    featured: true
+  }
+);
