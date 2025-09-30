@@ -1,0 +1,5 @@
+  {
+    id: 'placeholder',
+  ai-autonomous-devops-platform'',;
+    name: 'AI: Autonomous DevOps Platfor,m'',;
+  https: //ziontechgroup.com/ai-autonomous-data-center]}}

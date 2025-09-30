@@ -1,8 +1,8 @@
-import { motion, useInView } from "framer-motion";
+import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { latestInsights } from "../src/content/insights";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 // import { AnimatePresence } from "framer-motion";
 // import dynamic from "next/dynamic";
 
@@ -78,14 +78,6 @@ const Home = React.memo(function Home(): React.JSX.Element {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-				{/* Promo ribbon for new content */}
-				<div className="container mx-auto px-4 pt-4">
-					<div className="mb-6 rounded-full bg-emerald-600/10 border border-emerald-600/30 px-5 py-3 text-emerald-700 text-sm inline-flex items-center gap-2">
-						<span className="inline-flex h-2 w-2 rounded-full bg-emerald-600 animate-pulse"></span>
-						<span>New: Platform Engineering blueprint and GenAI guardrails now available</span>
-						<Link href="/blog" className="text-emerald-700 underline underline-offset-4 hover:text-emerald-900">Read</Link>
-					</div>
-				</div>
 				{/* Hero Section */}
 				<section ref={heroRef} className="pt-20 pb-16">
 					<div className="container mx-auto px-4 max-w-7xl">
@@ -165,30 +157,31 @@ const Home = React.memo(function Home(): React.JSX.Element {
 					</section>
 				)}
 
-				{/* Latest Insights Promo */}
+				{/* Latest Insights */}
 				<section className="py-16 bg-white">
 					<div className="container mx-auto px-4 max-w-7xl">
-						<div className="text-center mb-10">
-							<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Latest Insights</h2>
-							<p className="text-lg text-gray-600">New guides and case studies from our team</p>
+						<div className="text-center mb-12">
+							<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Latest Insights</h2>
+							<p className="text-xl text-gray-600 max-w-2xl mx-auto">Fresh strategies and blueprints from our experts</p>
 						</div>
 						<div className="grid md:grid-cols-3 gap-8">
-							{latestInsights.slice(0, 3).map((item) => (
-								<div key={item.id} className="bg-gray-50 rounded-lg p-6">
-									<div className="text-sm font-medium mb-2 text-indigo-600">{item.category}</div>
-									<h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
-									<p className="text-gray-600 mb-3">{item.summary}</p>
-									<div className="flex items-center justify-between text-sm text-gray-500 mb-2">
-										<span>{new Date(item.date).toLocaleDateString()}</span>
-										<span>{item.readMinutes} min read</span>
-									</div>
-									<Link href="/blog" className="text-indigo-600 font-medium hover:text-indigo-700">Read more →</Link>
-								</div>
-							))}
+							<Link href="/app/blog/ai-2025-generative-design-systems-blueprint" className="block bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+								<h3 className="text-xl font-semibold text-gray-900 mb-2">AI 2025: Generative Design Systems</h3>
+								<p className="text-gray-600">Blueprint for enterprise-grade generative design systems with safety guardrails.</p>
+							</Link>
+							<Link href="/app/blog/ai-2025-multi-agent-ops-control-tower-blueprint" className="block bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+								<h3 className="text-xl font-semibold text-gray-900 mb-2">AI 2025: Multi‑Agent Ops Control Tower</h3>
+								<p className="text-gray-600">Operational playbook for approvals, observability, and guardrails for AI agents.</p>
+							</Link>
+							<Link href="/content/blog/ai-2025-intelligent-document-processing-breakthroughs" className="block bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+								<h3 className="text-xl font-semibold text-gray-900 mb-2">AI 2025: IDP Breakthroughs</h3>
+								<p className="text-gray-600">How layout‑aware models and HITL transform document-heavy workflows.</p>
+							</Link>
 						</div>
-
 						<div className="text-center mt-10">
-							<Link href="/blog" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">View all insights</Link>
+							<Link href="/blog" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+								View all insights
+							</Link>
 						</div>
 					</div>
 				</section>

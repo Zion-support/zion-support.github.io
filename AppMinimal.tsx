@@ -1,3 +1,5 @@
+import React, { JSX } from 'react';
+
 export default function AppMinimal(): JSX.Element {
   return (
     <main>

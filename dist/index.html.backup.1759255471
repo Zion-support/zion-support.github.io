@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zion Tech Group</title>
+    <link rel="icon" href="/favicon.ico" />
+<<<<<<< HEAD
+    <script type="module" crossorigin src="/assets/js/main-DvFPE9Tg.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/js/chunk-BQIaAqnx.js">
+    <link rel="modulepreload" crossorigin href="/assets/js/chunk-BLBeWjkL.js">
+    <link rel="modulepreload" crossorigin href="/assets/js/chunk-CnbC2XpG.js">
+=======
+    <script type="module" crossorigin src="/assets/js/main-3trbmrcf.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/js/chunk-wrLrNZoT.js">
+    <link rel="modulepreload" crossorigin href="/assets/js/chunk-QZTkfOUo.js">
+    <link rel="modulepreload" crossorigin href="/assets/js/chunk-BYI5Ufx5.js">
+    <link rel="modulepreload" crossorigin href="/assets/js/chunk-CnawWd4w.js">
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e7c
+    <link rel="stylesheet" crossorigin href="/assets/css/main-DTpZ8Jsn.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="notification-root"></div>
+  </body>
+</html>

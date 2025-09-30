@@ -1,9 +1,5 @@
-
-
-
-// Mock test for utils
-describe('Utils', () => {
-  it('should work correctly', () => {
-    expect(true).toBe(true);
+describe('utils placeholder', () => {
+  it('works', () => {
+    expect(Math.max(1, 2)).toBe(2);
   });
 });
