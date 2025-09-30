@@ -398,13 +398,11 @@ export default function BlogPage() {
           <BlogPost
             title="AI Agent Observability 2026: Metrics, Traces, and Guardrails"
             excerpt="Instrument agents with traces, evals, and policy guardrails to ship reliable autonomy."
-            title="AI Enterprise Automation 2026: Complete Business Process Transformation"
-            excerpt="Transform your enterprise with AI automation. 95% process efficiency, multimillion-dollar savings, and zero-touch operations."
             date="September 29, 2025"
-            category="Automation"
+            category="AI Reliability"
             readTime="18 min"
-            image="🤖"
-            href="/blog/ai-enterprise-automation-2026"
+            image="🔍"
+            href="/blog/ai-agent-observability-2026"
           />
           <BlogPost
             title="AI Operational Excellence 2026: From Pilots to Scaled Impact"
@@ -422,7 +420,7 @@ export default function BlogPage() {
             category="AI Reliability"
             readTime="12 min"
             image="🔎"
-            href="/blog/ai-agent-observability-2026"
+            href="/blog/ai-operational-excellence-2026"
           />
           <BlogPost
             title="Customer Journey AI 2026: Real-Time Personalization with CDPs"

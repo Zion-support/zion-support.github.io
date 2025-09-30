@@ -34,15 +34,6 @@ const caseStudies = [
       savings: '$50M+',
       roi: '300%',
       efficiency: '85%',
-    title: 'AI Autonomous Manufacturing Mega Success 2026: $50M Savings & 95% Efficiency',
-    slug: 'ai-autonomous-manufacturing-mega-success-2026',
-    excerpt: 'How a global manufacturer achieved $50M annual savings, 95% efficiency improvement, and complete autonomous operations through AI transformation.',
-    company: 'Global Manufacturing Leader',
-    industry: 'Manufacturing',
-    results: {
-      savings: '$50M',
-      efficiency: '95%',
-      quality: '99.8%',
       timeline: '18 months'
     },
     image: '🏭',
