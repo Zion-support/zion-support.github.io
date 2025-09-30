@@ -10,6 +10,8 @@ import Revolutionary2029ContentMegaBanner from '../components/Revolutionary2029C
 import Ultimate2030ConsciousnessBanner from '../components/Ultimate2030ConsciousnessBanner';
 import Revolutionary2027ContentMegaBanner from '../components/Revolutionary2027ContentMegaBanner';
 import Ultimate2027BreakthroughBanner from '../components/Ultimate2027BreakthroughBanner';
+import UltraIntelligentAutonomousSystems2026Banner from '../components/UltraIntelligentAutonomousSystems2026Banner';
+import QuantumEnhancedSuperintelligence2026Banner from '../components/QuantumEnhancedSuperintelligence2026Banner';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
 import January2026NeuralArchitectureSearchBanner from '../components/January2026NeuralArchitectureSearchBanner';
 import January2026FederatedLearningBanner from '../components/January2026FederatedLearningBanner';
@@ -135,7 +137,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </header>
+      </footer>
+    </div>
+      {/* New Content Advertising Banner */}
+      <NewContentAdvertisingBanner />
 
       {/* NEW AUGUST 2026 QUANTUM CONSCIOUSNESS - MOST PROMINENT */}
       <August2026QuantumConsciousnessBanner />
