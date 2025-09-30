@@ -1,4 +1,7 @@
 import React, { JSX } from "react";
+import September2025ContentShowcaseBanner from "./components/September2025ContentShowcaseBanner";
+import September2025DeploymentMasteryBanner from "./components/September2025DeploymentMasteryBanner";
+import September2025RetailSuccessBanner from "./components/September2025RetailSuccessBanner";
 import ComprehensiveContentIntegrationBanner from "./components/ComprehensiveContentIntegrationBanner";
 import AI2027TranscendentIntelligenceBanner from "./components/AI2027TranscendentIntelligenceBanner";
 import July2026RevolutionaryBreakthroughBanner from "./components/July2026RevolutionaryBreakthroughBanner";
@@ -83,6 +86,15 @@ import October2026BreakthroughShowcaseBanner from "./components/October2026Break
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* ⭐ LATEST: September 30, 2025 Content Showcase - MOST PROMINENT */}
+      <September2025ContentShowcaseBanner />
+      
+      {/* ⭐ LATEST: September 30, 2025 Deployment Mastery Guide - FEATURED */}
+      <September2025DeploymentMasteryBanner />
+      
+      {/* ⭐ LATEST: September 30, 2025 $8.5B Retail Success Story - FEATURED */}
+      <September2025RetailSuccessBanner />
+      
       {/* NEWEST: July 2026 Autonomous Intelligence Banner - MOST PROMINENT */}
       <July2026AutonomousIntelligenceBanner />
       
@@ -117,13 +129,10 @@ export default function App(): JSX.Element {
       <June2026SuperintelligenceBreakthroughBanner />
       
       {/* NEW: July 2026 Revolutionary Breakthrough Banner - Most Prominent */}
+      <July2026RevolutionaryBreakthroughBanner />
       
       {/* NEW: Autonomous Enterprise Automation Advertising Banner - HIGHLY PROMINENT */}
       <AutonomousEnterpriseAutomationAdvertisingBanner />
-      
-      {/* NEW: July 2026 Revolutionary Breakthrough Banner - PROMINENT */}
->>>>>>> 9c620609b277c476f65918aed44a419c7b8877f3
-      <July2026RevolutionaryBreakthroughBanner />
       
       {/* NEW: February 2026 New Content Breakthrough Banner - Most Prominent */}
       <February2026NewContentBreakthroughBanner />
