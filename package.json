@@ -53,7 +53,7 @@
     "build:analyze": "vite build --mode analyze && npx vite-bundle-analyzer dist",
     "build:prod": "NODE_ENV=production vite build --minify terser --sourcemap false",
     "build:profile": "vite build --mode production --profile",
-    "perf:monitor": "node scripts/performance-monitor.cjs",
+    "perf:monitor": "node scripts/performance-monitor.js",
     "perf:analyze:full": "pnpm run build:analyze && pnpm run perf:monitor",
     "perf:optimize": "node scripts/advanced-performance-optimizer.cjs && pnpm run perf:monitor",
     "optimize:final": "node scripts/final-optimization.cjs",
