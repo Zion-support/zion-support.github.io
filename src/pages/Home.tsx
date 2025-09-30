@@ -155,6 +155,27 @@ const Home = () => {
         {/* Fresh content banner promoting brand-new articles */}
         <div className="container mx-auto px-6 mt-6">
           <September30BrandNewTodayBanner />
+          {/* Auto-advertise newly added content */}
+          <div className="rounded-xl border border-cyan-400/30 bg-cyan-500/10 p-6 mb-6">
+            <div className="text-white text-sm mb-3">New today</div>
+            <div className="grid md:grid-cols-3 gap-4">
+              <Link to="/blog/ai-2025-oct-01-enterprise-rag-security-v2" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">AI Security</div>
+                <div className="text-white font-semibold">Enterprise RAG Security v2</div>
+                <div className="text-zion-slate-light text-sm mt-1">Auth-aware retrieval, freshness windows, and signed outputs.</div>
+              </Link>
+              <Link to="/blog/genai-2025-oct-01-cost-optimization-blueprint" className="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
+                <div className="text-indigo-300 text-xs mb-2">GenAI</div>
+                <div className="text-white font-semibold">GenAI Cost Optimization</div>
+                <div className="text-zion-slate-light text-sm mt-1">Quality tiers, caches, and budgets for 40–70% savings.</div>
+              </Link>
+              <Link to="/blog/edge-2025-oct-01-zero-pii-telemetry-v2" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">Analytics</div>
+                <div className="text-white font-semibold">Zero‑PII Telemetry v2</div>
+                <div className="text-zion-slate-light text-sm mt-1">Sub‑100ms metrics with DP noise and attestations.</div>
+              </Link>
+            </div>
+          </div>
           {/* Brand New Today - advertising newly added posts */}
           <div className="rounded-xl border border-emerald-400/30 bg-emerald-500/10 p-6 mb-6">
             <div className="text-white text-sm mb-3">Brand new today</div>
