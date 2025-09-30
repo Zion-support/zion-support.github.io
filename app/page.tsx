@@ -229,6 +229,47 @@ export default function HomePage() {
       
       {/* 🎉 NEW BLOG POSTS - September 30, 2025 - Revolutionary AI Breakthroughs! */}
       <September30NewBlogsBanner />
+      {/* 🚀 New Featured Articles — September 30, 2025 */}
+      <section className="py-10 bg-gradient-to-r from-blue-900/40 to-purple-900/40 border-y border-white/10">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Fresh Research & Playbooks
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2027-autonomous-governance-blueprint" className="group">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-blue-500/40 transition-colors">
+                <div className="mb-2">
+                  <span className="px-3 py-1 rounded-full text-xs bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                    Governance
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold group-hover:text-blue-300 transition-colors">
+                  AI 2027 Autonomous Governance Blueprint
+                </h3>
+                <p className="text-gray-300 mt-2 text-sm">
+                  Policy → controls → telemetry → review. Ship autonomous agents safely with measurable guardrails.
+                </p>
+              </div>
+            </Link>
+
+            <Link href="/blog/ai-2026-agent-ops-observability" className="group">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-fuchsia-500/40 transition-colors">
+                <div className="mb-2">
+                  <span className="px-3 py-1 rounded-full text-xs bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30">
+                    Agent Ops
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold group-hover:text-fuchsia-300 transition-colors">
+                  Agent Ops Observability 2026
+                </h3>
+                <p className="text-gray-300 mt-2 text-sm">
+                  Traces, budgets, and reviews to run multi-agent systems with confidence.
+                </p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
       
       {/* New Content 2025 Banner */}
       <NewContent2025Banner />
