@@ -28,7 +28,6 @@ import {
   HealthcareTransformationBanner,
   NewContent2026Banner
 } from '../components/PromotionalBanner';
-import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
@@ -219,7 +218,6 @@ export default function HomePage() {
       </section>
 
       {/* Dynamic Content Showcase */}
-      <ContentShowcase />
       
       {/* Interactive Content Hub */}
       <InteractiveContentShowcase />
