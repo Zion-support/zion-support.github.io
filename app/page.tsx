@@ -50,14 +50,17 @@ import InteractivePromotionalSection from '../components/InteractivePromotionalS
 import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
+import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
+import AIRevolutionary2026Banner from '../components/AIRevolutionary2026Banner';
+import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
-  description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous systems, and digital transformation services.',
-  keywords: 'AI enterprise transformation, AI consulting, autonomous AI systems, enterprise AI services, digital transformation, AI implementation, AI ROI calculator, manufacturing AI, AI automation, AI strategy',
+    description: 'Transform your enterprise with AI-powered solutions. Get 300% ROI, 90% efficiency improvement, and $50M+ savings with our proven AI transformation framework. Free consultation available.',
+  keywords: 'AI enterprise transformation, AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation, AI ROI calculator, AI implementation, digital transformation, AI consulting, Fortune 500 AI solutions',
   openGraph: {
     title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
-    description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
+    description: 'Transform your enterprise with AI-powered solutions. Get 300% ROI, 90% efficiency improvement, and $50M+ savings.',
     type: 'website',
     url: 'https://ziontechgroup.com',
     images: [
@@ -72,7 +75,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
-    description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
+    description: 'Transform your enterprise with AI-powered solutions. Get 300% ROI, 90% efficiency improvement, and $50M+ savings.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -133,6 +136,10 @@ export default function HomePage() {
       <div className="animate-fade-in">
       {/* Revolutionary Content 2026 Banner */}
       <RevolutionaryContent2026Banner />
+      
+      {/* New 2026 Content Banners */}
+      <NewContent2026MegaBanner />
+      <AIRevolutionary2026Banner />
       
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
@@ -305,6 +312,9 @@ export default function HomePage() {
 
       {/* Interactive Promotional Section */}
       <InteractivePromotionalSection />
+      
+      {/* Interactive AI Calculator */}
+      <InteractiveAICalculator2026 />
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
