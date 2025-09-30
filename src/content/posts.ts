@@ -10,76 +10,22 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "enterprise-rag-security-2027",
-    title: "Enterprise RAG Security 2027: Auth‑Aware Retrieval & Signed Outputs",
-    description: "Secure RAG with auth‑aware retrieval, freshness windows, prompt firewalls, and signed outputs.",
-    category: "AI Security",
-    publishedAt: "2025-09-30",
+    slug: "ai-2026-neural-architecture-search-breakthrough",
+    title: "Neural Architecture Search: The 2026 Breakthrough Revolutionizing AI Development",
+    description: "Discover how NAS breakthrough technology is delivering 300-500% performance improvements and 95% energy efficiency gains across Fortune 500 enterprises.",
+    category: "AI Development",
+    publishedAt: "2026-01-15",
     featured: true,
-    readTime: "8 min read"
+    readTime: "15 min read"
   },
   {
-    slug: "edge-consentless-personalization-2027",
-    title: "Edge Personalization 2027: Zero‑PII, <100ms, Scoped IDs",
-    description: "Private, sub‑100ms journeys with scoped IDs, on‑device models, and DP noise.",
-    category: "Edge Computing",
-    publishedAt: "2025-09-30",
+    slug: "ai-2026-federated-learning-enterprise-breakthrough",
+    title: "Federated Learning Enterprise Breakthrough: Privacy-First AI at Global Scale",
+    description: "Transform your AI capabilities with privacy-preserving federated learning that delivers 300% performance improvements while maintaining 100% regulatory compliance.",
+    category: "Privacy AI",
+    publishedAt: "2026-01-15",
     featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "ai-2025-september-30-new-governed-agent-patterns",
-    title: "New Governed Agent Patterns (2025)",
-    description: "Policy-first orchestration with approvals, verifiers, budgets, and rollback for safe autonomy.",
-    category: "AI Operations",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "agent-release-zero-regret-2026",
-    title: "Zero‑Regret Agent Releases 2026",
-    description: "Budgeted actions, KPI‑linked canaries, sandboxed tools, and one‑click rollback for safe agent updates.",
-    category: "AI Operations",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "ai-2026-e2e-ai-tracing",
-    title: "E2E AI Tracing 2026: From Token to KPI",
-    description: "Trace prompts, models, and costs to business outcomes with budget‑aware actions and rollback.",
-    category: "Observability",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "edge-rate-limiter-blueprint-2026",
-    title: "Edge 2026: Rate Limiter Blueprint — <100ms, Zero‑PII",
-    description: "Signed quotas, scoped IDs, and edge enforcement delivering privacy‑first rate limiting worldwide.",
-    category: "Edge Computing",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "ai-2027-operational-scorecards",
-    title: "AI 2027: Operational Scorecards",
-    description: "Wire SLIs to KPIs with budgets, live canaries, and instant rollback to keep reliability high.",
-    category: "AI Operations",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "ai-2027-autonomous-roadmaps",
-    title: "AI 2027: Autonomous Roadmaps that Prove ROI",
-    description: "Outcome‑led bets, KPI scorecards, budgets, and rollback — a pragmatic 2027 roadmap.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "9 min read"
+    readTime: "18 min read"
   },
   {
     slug: "production-rag-quality-budgets-2026",
@@ -107,6 +53,24 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-13",
     featured: true,
     readTime: "7 min read"
+  },
+  {
+    slug: "ai-2026-e2e-ai-tracing",
+    title: "E2E AI Tracing 2026: From Prompts to Outcomes",
+    description: "Instrument prompts, tools, calls, budgets, and KPIs with end‑to‑end traces for reliability and cost control.",
+    category: "AI Operations",
+    publishedAt: "2026-01-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "edge-2027-consentless-analytics-v4",
+    title: "Edge 2027: Consentless Analytics v4 — Zero‑PII Insights <100ms",
+    description: "Scoped IDs, on‑device aggregation, and differential privacy for actionable analytics without PII risk.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
   },
   {
     slug: "ai-2025-sept-30-autonomous-control-planes",
