@@ -214,6 +214,15 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
+    slug: "agent-red-teaming-2026",
+    title: "Agent Red‑Teaming 2026: Simulation Labs That Prevent Real Incidents",
+    description: "Build realistic attack labs for agents: jailbreak corpora, tool fuzzers, and KPI‑linked failure budgets you can ship.",
+    category: "AI Security",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "genai-2027-quality-tiers-v4",
     title: "GenAI 2027: Quality Tiers v4 — Stable UX Under Budget",
     description: "Deterministic tiering + semantic caches + eval gates to cut spend 40–70% without quality regressions.",
