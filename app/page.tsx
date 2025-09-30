@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { 
   NewBlogBanner, 
   AnalyticsPlatformBanner, 
@@ -18,24 +17,7 @@ import {
   AutonomousAgentsBanner,
   AIGovernanceBanner,
   FinTechSuccessBanner,
-  NewContentShowcaseBanner,
-  AI2025MegaBreakthroughBanner,
-  AIRevolutionaryInnovationBanner,
-  AIAdvancedAutomationBanner,
-  AICognitiveComputingBanner,
-  AIQuantumBreakthroughBanner,
-  AISpaceTechnologyBanner,
-  AISustainabilityGreenTechBanner,
-  AIEnterpriseAdoptionBanner,
-  AITrends2025Banner,
-  AISupplyChainOptimizationBanner,
-  AIBusinessTransformationBanner,
-  AICustomerExperienceBanner,
-  EnterpriseAITransformationBanner,
-  LatestAIInsightsBanner,
-  AIServicesShowcaseBanner,
-  AIWorkflowAutomationBanner,
-  EnterpriseAISecurityBanner
+  NewContentShowcaseBanner
 } from '../components/PromotionalBanner';
 import {
   AIEnterpriseAdoptionBanner,
@@ -49,38 +31,150 @@ import {
   AIWorkflowAutomationBanner,
   EnterpriseAISecurityBanner
 } from '../components/NewContentPromotionalBanners';
+import {
+  AIEnterpriseTransformationBanner,
+  AIAutonomousSystemsBanner,
+  ManufacturingTransformationBanner,
+  AIEnterpriseServicesBanner,
+  LatestContentShowcaseBanner,
+  InteractiveAICalculatorBanner,
+  AIInnovationShowcaseBanner
+} from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
-import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
-import LatestAIInnovations2026Banner from '../components/LatestAIInnovations2026Banner';
-import InteractiveAICalculator from '../components/InteractiveAICalculator';
-import EnhancedContentShowcase2025 from '../components/EnhancedContentShowcase2025';
+import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
+import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
+import AI2026RevolutionaryContentBanner from '../components/AI2026RevolutionaryContentBanner';
 
 export const metadata = {
-  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
-  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation',
+  title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
+  description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous systems, and digital transformation services.',
+  keywords: 'AI enterprise transformation, AI consulting, autonomous AI systems, enterprise AI services, digital transformation, AI implementation, AI ROI calculator, manufacturing AI, AI automation, AI strategy',
+  openGraph: {
+    title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
+    description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
+    type: 'website',
+    url: 'https://ziontechgroup.com',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group AI Enterprise Transformation',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
+    description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
+    images: ['/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function HomePage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading provider of AI-powered enterprise solutions and digital transformation services",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "name": "AI Enterprise Transformation Services",
+      "description": "Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains",
+      "price": "50000",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  };
+
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      {/* Revolutionary 2026 Content Banner */}
-      <Revolutionary2026ContentBanner />
-      
-      {/* Latest AI Innovations Banner */}
-      <LatestAIInnovations2026Banner />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="animate-fade-in">
+          {/* New 2026 Content Banners */}
+          <AI2026RevolutionaryContentBanner />
+          <NewContent2026ShowcaseBanner />
+          <NewContent2026MegaBanner />
+          <AIRevolutionary2026Banner />
+          
+          {/* Revolutionary 2026 Content Banner */}
+          <Revolutionary2026ContentBanner />
+          
+          {/* Latest AI Innovations Banner */}
+          <LatestAIInnovations2026Banner />
+          
+          {/* New Content Promotional Banners */}
+          <AIEnterpriseAdoptionBanner />
+          <AITrends2025Banner />
+          <SupplyChainOptimizationBanner />
+          <AIBusinessTransformationBanner />
+          <AICustomerExperienceBanner />
+          <EnterpriseAITransformationBanner />
+          <LatestAIInsightsBanner />
+          <AIServicesShowcaseBanner />
+          <AIWorkflowAutomationBanner />
+          <EnterpriseAISecurityBanner />
+          
+          {/* Existing Promotional Banners */}
+          <NewContentShowcaseBanner />
+          <AutonomousAgentsBanner />
+          <AIGovernanceBanner />
+          <FinTechSuccessBanner />
+          <AIContentShowcaseBanner />
+          <CustomerServiceAIBanner />
+          <HealthcareAIBanner />
+          <RetailSuccessBanner />
+          <AIRevolutionBanner />
+          <NewBlogBanner />
+          <WorkflowAutomationBanner />
+          <AIAnalyticsBanner />
+      <AIEnterpriseTransformationBanner />
+      <AIAutonomousSystemsBanner />
+      <ManufacturingTransformationBanner />
+      <AIEnterpriseServicesBanner />
+      <LatestContentShowcaseBanner />
+      <InteractiveAICalculatorBanner />
+      <AIInnovationShowcaseBanner />
       
       {/* New Content Promotional Banners */}
-      <AI2025MegaBreakthroughBanner />
-      <AIRevolutionaryInnovationBanner />
-      <AIAdvancedAutomationBanner />
-      <AICognitiveComputingBanner />
-      <AIQuantumBreakthroughBanner />
-      <AISpaceTechnologyBanner />
-      <AISustainabilityGreenTechBanner />
       <AIEnterpriseAdoptionBanner />
       <AITrends2025Banner />
-      <AISupplyChainOptimizationBanner />
+      <SupplyChainOptimizationBanner />
       <AIBusinessTransformationBanner />
       <AICustomerExperienceBanner />
       <EnterpriseAITransformationBanner />
@@ -103,56 +197,68 @@ export default function HomePage() {
       <WorkflowAutomationBanner />
       <AIAnalyticsBanner />
       
+>>>>>>> 83687f660ab4d793fbd393e78d6f981ce54e0604
       {/* Hero Section */}
-      <section className="relative py-20 px-6">
-        <div className="container mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Zion Tech Group
+      <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Transform Your Business with
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
+              {' '}AI-Powered Solutions
+            </span>
           </h1>
-          <p className="text-2xl text-blue-600 font-semibold mb-8">
-            AI, Micro SaaS, and IT Services
-          </p>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
             and enterprise IT solutions that drive growth, efficiency, and innovation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              href="/services"
+              to="/services"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore Our Services
             </Link>
             <a
-              href="tel:+13024640950"
+              to="tel:+13024640950"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
               Call +1 302 464 0950
             </a>
           </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-3xl font-bold text-blue-600">500+</div>
+              <div className="text-gray-600">Projects Delivered</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">99.9%</div>
+              <div className="text-gray-600">Uptime Guarantee</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">24/7</div>
+              <div className="text-gray-600">Expert Support</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">$2M+</div>
+              <div className="text-gray-600">Cost Savings</div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Featured Services */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our Services
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Featured AI & IT Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your business growth
+              Discover our most popular services that are transforming businesses worldwide
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
-              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl mb-4">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm2 2a1 1 0 000 2h6a1 1 0 100-2H5z" clipRule="evenodd" />
-                </svg>
-=======
             <FeaturedServiceCard
               title="AI Data Analytics"
               description="Transform data into actionable insights with predictive modeling and real-time dashboards"
@@ -221,8 +327,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Enhanced Content Showcase */}
-      <EnhancedContentShowcase2025 />
+      {/* Interactive AI 2027 Calculator */}
+      <InteractiveAI2027Calculator />
+
+      {/* Interactive AI 2026 Calculator */}
+      <InteractiveAICalculator2026 />
+
+      {/* Interactive AI ROI Calculator */}
+      <InteractiveAIROICalculator />
+
+      {/* Dynamic Content Showcase */}
+      <ContentShowcase />
 
       {/* Latest Innovations Section */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
@@ -259,74 +374,49 @@ export default function HomePage() {
                 >
                   Read More →
                 </Link>
->>>>>>> cursor/create-and-deploy-new-content-4ec5
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Data Analytics</h3>
-              <p className="text-gray-600 mb-4">Transform data into actionable insights with predictive modeling and real-time dashboards</p>
-              <Link href="/services/ai-data-analytics" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
-                <span>Learn More</span>
-                <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-              </Link>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
-              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl mb-4">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Workflow Automation</h3>
-              <p className="text-gray-600 mb-4">Automate business processes with intelligent workflow design and smart triggers</p>
-              <Link href="/services/ai-workflow-automation" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
-                <span>Learn More</span>
-                <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-              </Link>
-            </div>
-
-<<<<<<< HEAD
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
-              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl mb-4">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd" />
-                </svg>
-=======
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">💰</span>
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">🛡️</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">Finance Automation</h3>
-                  <p className="text-sm text-gray-500">$3M+ savings achieved</p>
+                  <h3 className="text-xl font-bold text-gray-900">AI Cybersecurity</h3>
+                  <p className="text-sm text-gray-500">Next-gen protection</p>
                 </div>
               </div>
               <p className="text-gray-600 mb-4">
-                See how AI automation achieved 95% process reduction and $3M annual savings 
-                for a leading financial services company.
+                Revolutionary threat detection with 99.7% accuracy. Autonomous incident response 
+                and zero-trust architecture for enterprise-grade security.
               </p>
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-500">Published Jan 20, 2025</div>
                 <Link
-                  to="/case-studies/ai-finance-automation"
-                  className="text-green-600 font-semibold hover:text-green-700 transition-colors"
+                  to="/blog/ai-cybersecurity-2025"
+                  className="text-red-600 font-semibold hover:text-red-700 transition-colors"
                 >
                   Read More →
                 </Link>
               </div>
             </div>
-          </div>
 
-          <div className="text-center">
-            <Link
-              to="/blog"
-              className="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors shadow-lg hover:shadow-xl"
-            >
-              Explore All Innovations
-            </Link>
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
+              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl mb-4">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Virtual Assistant</h3>
+              <p className="text-gray-600 mb-4">24/7 intelligent customer support with natural language processing</p>
+              <Link href="/services/ai-virtual-assistant" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                <span>Learn More</span>
+                <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -658,7 +748,7 @@ export default function HomePage() {
 
           <div className="text-center">
             <Link
-              href="/blog"
+              to="/blog"
               className="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg hover:shadow-xl"
             >
               View All Content
@@ -680,65 +770,33 @@ export default function HomePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">🏢</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900">TechCorp Inc.</h3>
-                  <p className="text-sm text-gray-500">E-commerce</p>
-                </div>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Manual data processing taking 40 hours/week was automated with AI Data Analytics, 
-                resulting in 90% time reduction and 60% cost savings.
-              </p>
-              <div className="text-2xl font-bold text-green-600 mb-2">$500K saved annually</div>
-              <div className="text-sm text-gray-500">300% ROI in 6 months</div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">🏥</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900">HealthTech Solutions</h3>
-                  <p className="text-sm text-gray-500">Healthcare</p>
-                </div>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Customer support overwhelmed with queries was transformed with AI Virtual Assistant implementation, 
-                achieving 80% faster response time and 24/7 support.
-              </p>
-              <div className="text-2xl font-bold text-green-600 mb-2">95% customer satisfaction</div>
-              <div className="text-sm text-gray-500">24/7 automated support</div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">💰</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900">FinanceFlow Ltd.</h3>
-                  <p className="text-sm text-gray-500">Fintech</p>
-                </div>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Complex workflow bottlenecks were resolved with AI Workflow Automation platform, 
-                achieving 75% process efficiency improvement.
-              </p>
-              <div className="text-2xl font-bold text-green-600 mb-2">300% ROI in 6 months</div>
-              <div className="text-sm text-gray-500">75% efficiency improvement</div>
-            </div>
+            <SuccessStory
+              company="TechCorp Inc."
+              industry="E-commerce"
+              challenge="Manual data processing taking 40 hours/week"
+              solution="AI Data Analytics automation"
+              result="90% time reduction, 60% cost savings"
+              metric="$500K saved annually"
+            />
+            <SuccessStory
+              company="HealthTech Solutions"
+              industry="Healthcare"
+              challenge="Customer support overwhelmed with queries"
+              solution="AI Virtual Assistant implementation"
+              result="80% faster response time, 24/7 support"
+              metric="95% customer satisfaction"
+            />
+            <SuccessStory
+              company="FinanceFlow Ltd."
+              industry="Fintech"
+              challenge="Complex workflow bottlenecks"
+              solution="AI Workflow Automation platform"
+              result="75% process efficiency improvement"
+              metric="300% ROI in 6 months"
+            />
           </div>
         </div>
       </section>
-
-      {/* Interactive AI Calculator */}
-      <InteractiveAICalculator />
 
       {/* Enhanced Newsletter Signup */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-teal-600 text-white">
@@ -802,7 +860,7 @@ export default function HomePage() {
               </div>
               <div className="mt-6 pt-4 border-t border-white/20">
                 <Link
-                  href="/blog"
+                  to="/blog"
                   className="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
                 >
                   View All Content →
@@ -813,31 +871,106 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
+      {/* Services Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive technology solutions designed to accelerate your business growth
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
+              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl mb-4">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm2 2a1 1 0 000 2h6a1 1 0 100-2H5z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Data Analytics</h3>
+              <p className="text-gray-600 mb-4">Transform data into actionable insights with predictive modeling and real-time dashboards</p>
+              <Link href="/services/ai-data-analytics" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                <span>Learn More</span>
+                <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </Link>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
+              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl mb-4">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Workflow Automation</h3>
+              <p className="text-gray-600 mb-4">Automate business processes with intelligent workflow design and smart triggers</p>
+              <Link href="/services/ai-workflow-automation" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                <span>Learn More</span>
+                <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </Link>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
+              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl mb-4">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Virtual Assistant</h3>
+              <p className="text-gray-600 mb-4">24/7 intelligent customer support with natural language processing</p>
+              <Link href="/services/ai-virtual-assistant" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                <span>Learn More</span>
+                <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Promotional Banners */}
+      <AnalyticsPlatformBanner />
+      <HealthTechSuccessBanner />
+      <ComprehensiveAIBanner />
+
+      {/* CTA Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our AI and technology solutions can accelerate your growth
+          <p className="text-xl text-gray-600 mb-8">
+            Let's discuss how our AI and IT solutions can drive your success
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+13024640950"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+              to="tel:+13024640950"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg"
             >
               Call +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+              to="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
-              Email Us
+              Get Free Consultation
             </a>
+          </div>
+          <div className="mt-8 text-sm text-gray-500">
+            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
           </div>
         </div>
       </section>
-    </main>
+        </div>
+      </main>
+    </>
   );
 }
