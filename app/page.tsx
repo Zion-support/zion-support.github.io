@@ -32,15 +32,17 @@ import {
   EnterpriseAISecurityBanner
 } from '../components/NewContentPromotionalBanners';
 import ContentShowcase from '../components/ContentShowcase';
+import FeaturedServiceCard from '../components/FeaturedServiceCard';
+import SuccessStory from '../components/SuccessStory';
+import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
+import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
+import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
+import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
+import LatestContent2025Banner from '../components/LatestContent2025Banner';
+import RevolutionaryAI2025Banner from '../components/RevolutionaryAI2025Banner';
+import InteractiveAICalculator2025 from '../components/InteractiveAICalculator2025';
 import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
-import AIRevolutionary2026Banner from '../components/AIRevolutionary2026Banner';
 import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
-import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
-import AI2027MegaSuccessBanner from '../components/AI2027MegaSuccessBanner';
-import QuantumAIRevolutionBanner from '../components/QuantumAIRevolutionBanner';
-import InteractiveAI2027Calculator from '../components/InteractiveAI2027Calculator';
-import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
-import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -83,18 +85,115 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
-        {/* Hero Section */}
-        <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
-          <div className="max-w-4xl mx-auto px-4">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Transform Your Business with
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
-                {' '}AI-Powered Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
-              and enterprise IT solutions that drive growth, efficiency, and innovation.
+      {/* New Content 2026 Mega Banner */}
+      <NewContent2026MegaBanner />
+      
+      {/* Revolutionary AI 2025 Banner */}
+      <RevolutionaryAI2025Banner />
+      
+      {/* Latest Content 2025 Banner */}
+      <LatestContent2025Banner />
+      
+      {/* Revolutionary Content 2026 Banner */}
+      <RevolutionaryContent2026Banner />
+      
+      {/* Latest 2026 Content Banners */}
+      <AIEnterpriseTransformationBanner />
+      <AIAutonomousSystemsBanner />
+      <ManufacturingTransformationBanner />
+      <AIEnterpriseServicesBanner />
+      <LatestContentShowcaseBanner />
+      <InteractiveAICalculatorBanner />
+      <AIInnovationShowcaseBanner />
+      
+      {/* Latest Content Showcase */}
+      <LatestContent2026ShowcaseBanner />
+      
+      {/* New Content Promotional Banners */}
+      <MultimodalAIIntegrationBanner />
+      <MultimodalAICustomerServiceBanner />
+      <AIEnterpriseAdoptionBanner />
+      <AITrends2025Banner />
+      <SupplyChainOptimizationBanner />
+      <AIBusinessTransformationBanner />
+      <AICustomerExperienceBanner />
+      <EnterpriseAITransformationBanner />
+      <LatestAIInsightsBanner />
+      <AIServicesShowcaseBanner />
+      <AIWorkflowAutomationBanner />
+      <EnterpriseAISecurityBanner />
+      
+      {/* Existing Promotional Banners */}
+      <NewContentShowcaseBanner />
+      <AutonomousAgentsBanner />
+      <AIGovernanceBanner />
+      <FinTechSuccessBanner />
+      <AIContentShowcaseBanner />
+      <CustomerServiceAIBanner />
+      <HealthcareAIBanner />
+      <RetailSuccessBanner />
+      <AIRevolutionBanner />
+      <NewBlogBanner />
+      <WorkflowAutomationBanner />
+      <AIAnalyticsBanner />
+      
+      {/* Hero Section */}
+      <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Transform Your Business with
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
+              {' '}AI-Powered Solutions
+            </span>
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
+            and enterprise IT solutions that drive growth, efficiency, and innovation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Link
+              href="/services"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Explore Our Services
+            </Link>
+            <a
+              href="tel:+13024640950"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
+            >
+              Call +1 302 464 0950
+            </a>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-3xl font-bold text-blue-600">500+</div>
+              <div className="text-gray-600">Projects Delivered</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">99.9%</div>
+              <div className="text-gray-600">Uptime Guarantee</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">24/7</div>
+              <div className="text-gray-600">Expert Support</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">$2M+</div>
+              <div className="text-gray-600">Cost Savings</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Services */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Featured AI & IT Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our most popular services that are transforming businesses worldwide
             </p>
           </div>
           
@@ -167,8 +266,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* New Content Showcase Banner */}
-      <NewContent2026ShowcaseBanner />
+      {/* Interactive AI Calculator 2025 */}
+      <InteractiveAICalculator2025 />
+      
+      {/* Interactive AI Calculator 2026 */}
+      <InteractiveAICalculator2026 />
 
       {/* Interactive AI 2027 Calculator */}
       <InteractiveAI2027Calculator />
