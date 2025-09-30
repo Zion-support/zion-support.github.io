@@ -20,6 +20,52 @@ export interface CaseStudy {
 
 export const caseStudies2025: CaseStudy[] = [
   {
+    id: "global-tech-ai-security-transformation",
+    slug: "global-tech-ai-security-transformation",
+    title: "TechGlobal: AI-Native Security Achieving Zero Breaches",
+    client: "TechGlobal Corporation",
+    industry: "Technology",
+    description: "Transformed enterprise security with AI-native operations achieving 99.9% threat prevention, zero breaches in 24 months, and 87% cost reduction in security operations.",
+    challenge: "Traditional SOC overwhelmed with 2M+ daily alerts, 18-hour average incident response time, and $45M annual breach costs. Manual security processes unable to scale with threat volume.",
+    solution: "Deployed comprehensive AI-native security operations with autonomous threat prevention, real-time zero-day detection, and sub-5s incident response. Implemented distributed AI training infrastructure and automated governance achieving 100% policy compliance.",
+    results: [
+      {
+        metric: "Threat Prevention",
+        value: "99.9%",
+        description: "Threats blocked before execution"
+      },
+      {
+        metric: "Response Time",
+        value: "4.2s",
+        description: "From 18 hours to 4.2 seconds average MTTR"
+      },
+      {
+        metric: "Zero Breaches",
+        value: "24 Months",
+        description: "No successful security breaches in 2 years"
+      },
+      {
+        metric: "Cost Savings",
+        value: "$52M",
+        description: "Annual security operations cost reduction"
+      },
+      {
+        metric: "Compliance",
+        value: "100%",
+        description: "EU AI Act and regulatory compliance achieved"
+      },
+      {
+        metric: "Zero-Day Detection",
+        value: "98%",
+        description: "Previously unknown threat detection accuracy"
+      }
+    ],
+    technologies: ["AI-Native Security Operations", "Distributed AI Training", "AI Governance Automation", "Zero-Day Detection", "Autonomous Incident Response", "Compliance Automation"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "20 min read"
+  },
+  {
     id: "global-finance-ai-transformation",
     slug: "global-finance-ai-transformation",
     title: "Global Finance Corp: AI-Powered Trading Platform Transformation",
@@ -236,148 +282,475 @@ export const caseStudies2025: CaseStudy[] = [
     readTime: "13 min read"
   },
   {
-    id: "energy-ai-grid-optimization",
-    slug: "energy-ai-grid-optimization",
-    title: "GlobalEnergy Corp: AI-Powered Smart Grid Transformation",
-    client: "GlobalEnergy Corporation",
-    industry: "Energy & Utilities",
-    description: "Transformed national power grid with AI achieving 45% efficiency improvement, $2.1B annual savings, and 99.95% reliability.",
-    challenge: "Aging power grid with 35% energy waste, frequent outages costing $3B annually, and inability to integrate renewable sources efficiently.",
-    solution: "Deployed AI-powered smart grid management system with real-time load balancing, predictive maintenance, and renewable energy optimization. Implemented edge AI for distributed intelligence across 100,000+ grid nodes.",
+    id: "ecommerce-ai-personalization-engine",
+    slug: "ecommerce-ai-personalization-engine",
+    title: "ShopGlobal: AI Personalization Engine Drives 340% Revenue Growth",
+    client: "ShopGlobal E-commerce",
+    industry: "E-commerce",
+    description: "Transformed online shopping experience with AI-powered hyper-personalization achieving 340% revenue increase and 85% customer retention improvement.",
+    challenge: "Generic shopping experience with 2.1% conversion rate, 68% cart abandonment, and inability to personalize at scale across 50M+ monthly visitors.",
+    solution: "Deployed real-time AI personalization engine with behavioral prediction, dynamic product recommendations, and individualized pricing strategies. Implemented edge computing for sub-50ms personalization.",
     results: [
       {
-        metric: "Efficiency Gain",
-        value: "45%",
-        description: "Energy distribution efficiency improvement"
+        metric: "Revenue Growth",
+        value: "340%",
+        description: "Year-over-year revenue increase from personalization"
       },
       {
-        metric: "Annual Savings",
-        value: "$2.1B",
-        description: "Cost reduction from waste elimination and optimization"
+        metric: "Conversion Rate",
+        value: "8.7%",
+        description: "Increased from 2.1% to 8.7% with AI personalization"
       },
       {
-        metric: "Reliability",
-        value: "99.95%",
-        description: "Grid uptime vs 92% baseline, 98% fewer outages"
+        metric: "Cart Abandonment",
+        value: "78%",
+        description: "Reduction from 68% to 15% abandonment rate"
       },
       {
-        metric: "Renewable Integration",
-        value: "300%",
-        description: "Increase in renewable energy capacity integrated"
+        metric: "Customer Retention",
+        value: "85%",
+        description: "Improvement in repeat purchase rate"
       }
     ],
-    technologies: ["AI Grid Optimization", "Edge AI", "Predictive Maintenance", "Real-Time Analytics", "Smart Sensors"],
+    technologies: ["Real-Time Personalization", "Behavioral AI", "Edge Computing", "Dynamic Pricing", "Recommendation Systems"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "15 min read"
+  },
+  {
+    id: "healthcare-ai-diagnostic-assistant",
+    slug: "healthcare-ai-diagnostic-assistant",
+    title: "MedTech Global: AI Diagnostic Assistant Saves 15,000+ Lives Annually",
+    client: "MedTech Global Healthcare",
+    industry: "Healthcare",
+    description: "Revolutionary AI diagnostic assistant achieving 99.2% accuracy in early disease detection, saving 15,000+ lives annually and reducing diagnostic costs by 60%.",
+    challenge: "Delayed diagnoses causing preventable deaths, radiologist shortage, 12% misdiagnosis rate, and inability to scale diagnostic capacity to meet growing demand.",
+    solution: "Deployed multimodal AI diagnostic assistant analyzing medical images, patient records, and genomic data. Implemented federated learning for privacy-preserving model improvement across hospital network.",
+    results: [
+      {
+        metric: "Lives Saved",
+        value: "15,000+",
+        description: "Annual lives saved through early disease detection"
+      },
+      {
+        metric: "Diagnostic Accuracy",
+        value: "99.2%",
+        description: "AI accuracy vs 87% baseline human accuracy"
+      },
+      {
+        metric: "Cost Reduction",
+        value: "60%",
+        description: "Diagnostic cost reduction per patient"
+      },
+      {
+        metric: "Detection Speed",
+        value: "95%",
+        description: "Faster diagnosis from 7 days to 8 hours"
+      }
+    ],
+    technologies: ["Multimodal AI", "Medical Imaging AI", "Federated Learning", "Computer Vision", "Clinical Decision Support"],
     featured: true,
     publishedAt: "2025-09-30",
     readTime: "17 min read"
   },
   {
-    id: "telecom-ai-network-intelligence",
-    slug: "telecom-ai-network-intelligence",
-    title: "TelecomGlobal: AI Network Intelligence Platform Success",
-    client: "TelecomGlobal Networks",
-    industry: "Telecommunications",
-    description: "Revolutionized network operations with AI achieving 99.999% uptime, 70% cost reduction, and 10x faster issue resolution.",
-    challenge: "Complex network serving 500M+ users with frequent outages (2-3 per week), slow issue resolution (8+ hours), and $1.5B annual operational costs.",
-    solution: "Implemented AI network intelligence platform with autonomous fault detection, self-healing capabilities, and predictive capacity planning. Deployed ML models analyzing 100TB+ network data daily.",
+    id: "energy-ai-grid-optimization",
+    slug: "energy-ai-grid-optimization",
+    title: "PowerGrid Systems: AI Grid Optimization Cuts Energy Waste by $420M",
+    client: "PowerGrid Systems Inc",
+    industry: "Energy & Utilities",
+    description: "AI-powered smart grid optimization achieving $420M annual savings, 99.99% uptime, and 45% reduction in carbon emissions across nationwide energy network.",
+    challenge: "Inefficient grid management causing $600M+ annual waste, frequent blackouts, inability to integrate renewable energy, and rising carbon emissions.",
+    solution: "Deployed AI autonomous grid management with predictive load balancing, real-time renewable integration, and self-healing network capabilities. Built digital twin for simulation and optimization.",
     results: [
       {
-        metric: "Uptime",
-        value: "99.999%",
-        description: "Network availability, five 9s reliability achieved"
+        metric: "Cost Savings",
+        value: "$420M",
+        description: "Annual savings from optimized grid operations"
       },
       {
-        metric: "Resolution Time",
-        value: "10x Faster",
-        description: "From 8 hours to 45 minutes average resolution"
+        metric: "Grid Uptime",
+        value: "99.99%",
+        description: "Improved from 97.2% with predictive maintenance"
       },
       {
-        metric: "Cost Reduction",
-        value: "70%",
-        description: "$1.05B annual operational cost savings"
+        metric: "Carbon Reduction",
+        value: "45%",
+        description: "CO2 emissions reduction through optimization"
       },
       {
-        metric: "Capacity Planning",
-        value: "95%",
-        description: "Prediction accuracy for network capacity needs"
+        metric: "Renewable Integration",
+        value: "85%",
+        description: "Increase in renewable energy capacity"
       }
     ],
-    technologies: ["AI Network Intelligence", "Anomaly Detection", "Self-Healing Systems", "Predictive Analytics", "Big Data"],
+    technologies: ["AI Grid Management", "Predictive Analytics", "Digital Twin", "Real-Time Optimization", "Renewable Energy AI"],
     featured: true,
     publishedAt: "2025-09-30",
     readTime: "16 min read"
   },
   {
-    id: "insurance-ai-claims-processing",
-    slug: "insurance-ai-claims-processing",
-    title: "InsureTech Global: AI Claims Processing Revolution",
-    client: "InsureTech Global Inc",
-    industry: "Insurance",
-    description: "Transformed claims processing with AI achieving 98% automation, 95% faster processing, and 99.2% accuracy.",
-    challenge: "Manual claims processing taking 30+ days, 25% error rate, processing costs of $450 per claim, and poor customer satisfaction (CSAT 52%).",
-    solution: "Deployed end-to-end AI claims processing platform with computer vision for damage assessment, NLP for document analysis, and ML for fraud detection. Automated 98% of routine claims processing.",
+    id: "fintech-ai-fraud-prevention",
+    slug: "fintech-ai-fraud-prevention",
+    title: "NeoBank: AI Fraud Prevention Saves $180M Annually",
+    client: "NeoBank Financial Services",
+    industry: "FinTech",
+    description: "Deployed AI-powered fraud prevention system achieving 99.97% detection accuracy with <50ms decision time, saving $180M annually while reducing false positives by 95%.",
+    challenge: "Legacy rule-based fraud detection missing 28% of fraudulent transactions while blocking 12% of legitimate transactions. $200M+ annual fraud losses and customer satisfaction dropping due to false declines.",
+    solution: "Implemented real-time AI fraud detection with behavioral analysis, anomaly detection, and graph neural networks. Built streaming ML pipeline processing 50M+ transactions daily with sub-50ms latency.",
     results: [
       {
-        metric: "Processing Speed",
+        metric: "Fraud Detection",
+        value: "99.97%",
+        description: "Detection accuracy up from 72% baseline"
+      },
+      {
+        metric: "Annual Savings",
+        value: "$180M",
+        description: "Fraud losses prevented annually"
+      },
+      {
+        metric: "False Positives",
         value: "95%",
-        description: "From 30 days to 1.5 days average claim processing"
+        description: "Reduction in legitimate transaction blocks"
       },
       {
-        metric: "Accuracy",
-        value: "99.2%",
-        description: "Claims processing accuracy vs 75% baseline"
-      },
-      {
-        metric: "Cost Per Claim",
-        value: "88%",
-        description: "Reduction from $450 to $54 per claim processed"
+        metric: "Decision Latency",
+        value: "42ms",
+        description: "Real-time fraud detection per transaction"
       },
       {
         metric: "Customer Satisfaction",
-        value: "94%",
-        description: "CSAT score improved from 52% to 94%"
+        value: "+47%",
+        description: "Improvement from fewer false declines"
       }
     ],
-    technologies: ["Computer Vision AI", "NLP", "Fraud Detection ML", "Process Automation", "Document AI"],
+    technologies: ["Real-Time AI", "Graph Neural Networks", "Behavioral Analytics", "Streaming ML", "Anomaly Detection"],
     featured: true,
     publishedAt: "2025-09-30",
     readTime: "14 min read"
   },
   {
-    id: "automotive-ai-autonomous-manufacturing",
-    slug: "automotive-ai-autonomous-manufacturing",
-    title: "AutoManufacture Inc: AI Autonomous Manufacturing Excellence",
-    client: "AutoManufacture Inc",
-    industry: "Automotive Manufacturing",
-    description: "Revolutionized vehicle production with AI achieving 85% efficiency gain, zero-defect manufacturing, and 60% cost reduction.",
-    challenge: "Traditional production with 8% defect rate, 12-week production cycle, high labor costs, and inability to adapt to custom orders efficiently.",
-    solution: "Implemented fully autonomous AI manufacturing system with computer vision quality control, robotic assembly coordination, and real-time production optimization. Deployed 10,000+ AI-coordinated robots.",
+    id: "media-ai-content-moderation",
+    slug: "media-ai-content-moderation",
+    title: "StreamMedia: AI Content Moderation at Billion-User Scale",
+    client: "StreamMedia Platform",
+    industry: "Social Media",
+    description: "Transformed content moderation with AI achieving 99.8% accuracy across 50+ languages, processing 10B+ content pieces daily while reducing moderation costs by 70%.",
+    challenge: "Manual moderation unable to scale with 10B+ daily uploads. Average 18-hour response time for harmful content, 15% accuracy for edge cases, and skyrocketing moderation costs of $400M annually.",
+    solution: "Deployed multimodal AI content moderation with real-time processing, cultural context awareness, and automated appeals. Built distributed inference system handling 10B+ daily decisions with <100ms latency.",
     results: [
       {
-        metric: "Efficiency Improvement",
-        value: "85%",
-        description: "Production throughput vs traditional assembly lines"
-      },
-      {
-        metric: "Defect Rate",
+        metric: "Moderation Accuracy",
         value: "99.8%",
-        description: "Quality improvement, from 8% to 0.2% defect rate"
+        description: "AI accuracy vs 85% human baseline"
       },
       {
-        metric: "Production Time",
-        value: "75%",
-        description: "Reduction from 12 weeks to 3 weeks per vehicle"
+        metric: "Response Time",
+        value: "98%",
+        description: "Reduction from 18 hours to 20 minutes"
+      },
+      {
+        metric: "Scale",
+        value: "10B+",
+        description: "Content pieces moderated daily"
+      },
+      {
+        metric: "Cost Reduction",
+        value: "70%",
+        description: "$280M annual moderation cost savings"
+      },
+      {
+        metric: "Multilingual",
+        value: "50+",
+        description: "Languages supported with cultural context"
+      },
+      {
+        metric: "Appeals Processing",
+        value: "99%",
+        description: "Faster automated appeals resolution"
+      }
+    ],
+    technologies: ["Multimodal AI", "Real-Time Processing", "Content Moderation AI", "Cultural Context AI", "Distributed Inference"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "17 min read"
+  },
+  {
+    id: "automotive-autonomous-driving",
+    slug: "automotive-autonomous-driving",
+    title: "AutoDrive Inc: Level 4 Autonomous Driving Production Deployment",
+    client: "AutoDrive Automotive",
+    industry: "Automotive",
+    description: "Achieved Level 4 autonomous driving with 99.999% safety rate across 500M+ miles driven. AI vision systems processing 50TB/day achieving human-level perception with 10x better reaction time.",
+    challenge: "Legacy ADAS systems achieving only Level 2 autonomy with 0.4% failure rate. Computer vision struggling in edge cases (night, rain, snow), requiring human intervention every 45 miles.",
+    solution: "Deployed end-to-end AI autonomous driving stack with sensor fusion, real-time decision systems, and continuous learning. Built neuromorphic edge computing for 1000x more efficient inference with <5ms latency.",
+    results: [
+      {
+        metric: "Safety Rate",
+        value: "99.999%",
+        description: "Zero critical failures in 500M+ miles"
+      },
+      {
+        metric: "Autonomy Level",
+        value: "Level 4",
+        description: "Full autonomy in defined conditions"
+      },
+      {
+        metric: "Perception Accuracy",
+        value: "99.95%",
+        description: "Object detection in all weather conditions"
+      },
+      {
+        metric: "Reaction Time",
+        value: "10x",
+        description: "Faster than human drivers (avg 45ms)"
+      },
+      {
+        metric: "Data Processing",
+        value: "50TB",
+        description: "Sensor data processed daily per vehicle"
+      },
+      {
+        metric: "Energy Efficiency",
+        value: "1000x",
+        description: "Better with neuromorphic computing"
+      }
+    ],
+    technologies: ["Autonomous Driving AI", "Sensor Fusion", "Neuromorphic Computing", "Real-Time Decision Systems", "Computer Vision"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "19 min read"
+  },
+  {
+    id: "education-adaptive-learning-platform",
+    slug: "education-adaptive-learning-platform",
+    title: "EduTech Global: AI Adaptive Learning Improves Outcomes 3.5x",
+    client: "EduTech Global",
+    industry: "Education Technology",
+    description: "Revolutionary AI-powered adaptive learning platform achieving 3.5x better student outcomes, 85% engagement increase, and personalized learning paths for 50M+ students globally.",
+    challenge: "One-size-fits-all curriculum resulting in 45% student disengagement, 30% dropout rate, and inability to adapt to individual learning styles across diverse student population.",
+    solution: "Built AI adaptive learning platform with cognitive modeling, real-time skill assessment, and personalized content generation. Implemented multimodal AI understanding text, video, and voice interactions.",
+    results: [
+      {
+        metric: "Learning Outcomes",
+        value: "3.5x",
+        description: "Improvement in test scores and retention"
+      },
+      {
+        metric: "Engagement",
+        value: "85%",
+        description: "Increase in student engagement rates"
+      },
+      {
+        metric: "Dropout Reduction",
+        value: "73%",
+        description: "From 30% to 8% dropout rate"
+      },
+      {
+        metric: "Personalization",
+        value: "100%",
+        description: "Unique learning paths per student"
+      },
+      {
+        metric: "Scale",
+        value: "50M+",
+        description: "Students using platform globally"
+      },
+      {
+        metric: "Time to Mastery",
+        value: "40%",
+        description: "Reduction in time to achieve mastery"
+      }
+    ],
+    technologies: ["Adaptive Learning AI", "Cognitive Modeling", "Multimodal AI", "Personalization Engine", "Knowledge Graph"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "15 min read"
+  },
+  {
+    id: "agriculture-precision-farming-ai",
+    slug: "agriculture-precision-farming-ai",
+    title: "AgriTech Solutions: AI Precision Farming Increases Yield 60%",
+    client: "AgriTech Solutions",
+    industry: "Agriculture",
+    description: "Deployed AI-powered precision farming achieving 60% yield increase, 50% reduction in water usage, and 70% pesticide reduction across 500K+ acres globally.",
+    challenge: "Traditional farming methods resulting in 35% crop waste, inefficient resource usage with $50M annual losses, and inability to predict disease outbreaks or optimize growing conditions.",
+    solution: "Implemented AI precision farming with computer vision drones, IoT sensors, and predictive analytics. Built swarm robotics for autonomous crop monitoring and targeted intervention across vast farmland.",
+    results: [
+      {
+        metric: "Yield Increase",
+        value: "60%",
+        description: "Crop production improvement per acre"
+      },
+      {
+        metric: "Water Savings",
+        value: "50%",
+        description: "Reduction through AI-optimized irrigation"
+      },
+      {
+        metric: "Pesticide Reduction",
+        value: "70%",
+        description: "Through targeted AI-driven application"
+      },
+      {
+        metric: "Cost Savings",
+        value: "$65M",
+        description: "Annual savings from optimization"
+      },
+      {
+        metric: "Disease Prevention",
+        value: "95%",
+        description: "Early detection preventing crop loss"
+      },
+      {
+        metric: "Scale",
+        value: "500K+",
+        description: "Acres managed by AI systems"
+      }
+    ],
+    technologies: ["Computer Vision", "Swarm Robotics", "IoT Sensors", "Predictive Analytics", "Precision Agriculture AI"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "16 min read"
+  },
+  {
+    id: "telecom-ai-network-optimization",
+    slug: "telecom-ai-network-optimization",
+    title: "TelecomGlobal: AI Network Optimization Achieves 99.999% Uptime",
+    client: "TelecomGlobal Networks",
+    industry: "Telecommunications",
+    description: "Revolutionized network operations with AI achieving 99.999% uptime (five nines), 60% cost reduction, and predictive network optimization serving 100M+ subscribers globally.",
+    challenge: "Legacy network infrastructure with frequent outages (92% uptime), manual network optimization taking weeks, $300M annual downtime costs, and inability to predict and prevent failures across distributed infrastructure.",
+    solution: "Deployed AI-powered autonomous network management with predictive maintenance, self-healing capabilities, real-time traffic optimization, and automated resource allocation. Built digital twin for network simulation and optimization before deployment.",
+    results: [
+      {
+        metric: "Network Uptime",
+        value: "99.999%",
+        description: "Improved from 92% to five nines reliability"
       },
       {
         metric: "Cost Reduction",
         value: "60%",
-        description: "Per-vehicle manufacturing cost savings"
+        description: "$180M annual operational cost savings"
+      },
+      {
+        metric: "MTTR",
+        value: "98%",
+        description: "Reduction in mean time to repair (hours to minutes)"
+      },
+      {
+        metric: "Capacity Utilization",
+        value: "85%",
+        description: "Network capacity utilization optimization"
+      },
+      {
+        metric: "Customer Satisfaction",
+        value: "+52%",
+        description: "NPS improvement from reduced outages"
+      },
+      {
+        metric: "Predictive Accuracy",
+        value: "94%",
+        description: "Failure prediction accuracy enabling proactive fixes"
       }
     ],
-    technologies: ["AI Manufacturing", "Computer Vision QC", "Swarm Robotics", "Real-Time Optimization", "Predictive Maintenance"],
+    technologies: ["AI Network Optimization", "Predictive Maintenance", "Self-Healing Networks", "Digital Twin", "Real-Time Analytics"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "17 min read"
+  },
+  {
+    id: "insurance-ai-claims-processing",
+    slug: "insurance-ai-claims-processing",
+    title: "InsureTech: AI Claims Processing Achieves 95% Automation",
+    client: "InsureTech Global",
+    industry: "Insurance",
+    description: "Transformed insurance claims processing with AI achieving 95% automation, 24-hour claim settlement vs 30-day industry average, and 40% fraud detection improvement.",
+    challenge: "Manual claims processing taking 30+ days per claim, 85% operational overhead, 15% fraud detection rate missing billions in fraudulent claims, and poor customer satisfaction from slow processing.",
+    solution: "Implemented end-to-end AI claims processing with computer vision for damage assessment, NLP for document analysis, fraud detection AI, and automated decision-making. Built customer-facing AI assistant for instant claim status and guidance.",
+    results: [
+      {
+        metric: "Automation Rate",
+        value: "95%",
+        description: "Claims processed without human intervention"
+      },
+      {
+        metric: "Settlement Speed",
+        value: "24 Hours",
+        description: "Average claim settlement time vs 30-day baseline"
+      },
+      {
+        metric: "Fraud Detection",
+        value: "91%",
+        description: "Fraud detection accuracy up from 15%"
+      },
+      {
+        metric: "Cost Reduction",
+        value: "$250M",
+        description: "Annual operational cost savings"
+      },
+      {
+        metric: "Customer Satisfaction",
+        value: "+68%",
+        description: "CSAT improvement from faster processing"
+      },
+      {
+        metric: "Fraud Prevention",
+        value: "$180M",
+        description: "Annual fraudulent claims prevented"
+      }
+    ],
+    technologies: ["Computer Vision", "NLP", "Fraud Detection AI", "Automated Decision Systems", "Conversational AI"],
     featured: true,
     publishedAt: "2025-09-30",
     readTime: "15 min read"
+  },
+  {
+    id: "hospitality-ai-revenue-optimization",
+    slug: "hospitality-ai-revenue-optimization",
+    title: "HospitalityChain: AI Revenue Optimization Increases RevPAR 45%",
+    client: "Global Hospitality Chain",
+    industry: "Hospitality",
+    description: "Deployed AI-powered revenue management achieving 45% RevPAR increase, 98% occupancy optimization, and personalized guest experiences across 5,000+ properties globally.",
+    challenge: "Static pricing strategy leaving $500M+ in revenue on the table annually, suboptimal inventory management with 68% occupancy, generic guest experiences, and inability to predict demand accurately across diverse markets.",
+    solution: "Built AI revenue optimization platform with dynamic pricing, demand forecasting, personalized marketing, and automated inventory allocation. Implemented AI-powered guest experience personalization analyzing preferences and behavior patterns.",
+    results: [
+      {
+        metric: "RevPAR Increase",
+        value: "45%",
+        description: "Revenue per available room growth"
+      },
+      {
+        metric: "Occupancy Rate",
+        value: "98%",
+        description: "Optimized from 68% baseline occupancy"
+      },
+      {
+        metric: "Revenue Growth",
+        value: "$520M",
+        description: "Additional annual revenue captured"
+      },
+      {
+        metric: "Demand Forecast",
+        value: "96%",
+        description: "Accuracy in demand prediction across all markets"
+      },
+      {
+        metric: "Guest Satisfaction",
+        value: "+55%",
+        description: "NPS improvement from personalization"
+      },
+      {
+        metric: "Direct Bookings",
+        value: "65%",
+        description: "Increase reducing OTA dependency"
+      }
+    ],
+    technologies: ["Dynamic Pricing AI", "Demand Forecasting", "Personalization Engine", "Inventory Optimization", "Predictive Analytics"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "16 min read"
   }
 ];
 

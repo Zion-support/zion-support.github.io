@@ -1,247 +1,193 @@
-import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Zap } from 'lucide-react';
+import { ArrowRight, Sparkles, TrendingUp, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
-const LatestContentBanner2025: React.FC = () => {
-  const latestArticles = [
+const LatestContentBanner2025 = () => {
+  const newArticles = [
     {
-      id: 1,
-      title: 'AI Multi-Agent Orchestration 2025: Coordinating Autonomous Systems at Enterprise Scale',
-      slug: 'ai-multi-agent-orchestration-2025',
-      excerpt: 'Deploy coordinated AI agent systems that work together seamlessly, achieving 10x productivity gains and 95% automation in complex business processes. Real-world success stories included.',
-      category: 'Multi-Agent AI & Orchestration',
-      date: '2025-09-30',
-      readTime: '12 min',
-      trending: true,
-      icon: '🤖'
+      title: "Agentic AI Workflows 2026",
+      description: "Production-Ready Multi-Agent Systems",
+      slug: "agentic-ai-workflows-production-2026",
+      category: "AI Engineering"
     },
     {
-      id: 2,
-      title: 'Enterprise AI Observability 2025: Full-Stack Monitoring for Production ML Systems',
-      slug: 'ai-observability-enterprise-2025',
-      excerpt: 'Master comprehensive monitoring strategies that ensure production ML systems deliver reliable, accurate, and compliant results at enterprise scale with proven frameworks.',
-      category: 'AI Observability & Monitoring',
-      date: '2025-09-30',
-      readTime: '14 min',
-      trending: true,
-      icon: '📊'
+      title: "LLM Function Calling Mastery 2026",
+      description: "Building Reliable AI Tools at Scale",
+      slug: "llm-function-calling-mastery-2026",
+      category: "LLM Engineering"
     },
     {
-      id: 3,
-      title: 'Enterprise LLM Security 2025: Protecting Against Emerging AI Threats',
-      slug: 'enterprise-llm-security-2025',
-      excerpt: 'Comprehensive guide to securing Large Language Models in enterprise environments. Learn proven strategies to defend against prompt injection, data poisoning, model theft, and evolving threats.',
-      category: 'AI Security & Threat Protection',
-      date: '2025-09-30',
-      readTime: '16 min',
-      trending: true,
-      icon: '🔒'
+      title: "Vector Search Optimization 2026",
+      description: "Sub-10ms Semantic Search at Billion Scale",
+      slug: "vector-search-optimization-2026",
+      category: "Search Infrastructure"
     },
     {
-      id: 4,
-      title: 'Enterprise AI Transformation Roadmap 2026: From Strategy to Scale',
-      slug: 'enterprise-ai-transformation-roadmap-2026',
-      excerpt: 'Navigate your AI transformation journey with confidence using battle-tested frameworks that connect strategy to execution. Complete blueprint for enterprise AI transformation with proven methodologies.',
-      category: 'AI Strategy',
-      date: '2025-09-30',
-      readTime: '12 min',
-      trending: true,
-      icon: '🚀'
+      title: "AI Cost Optimization 2026",
+      description: "Cut LLM Costs by 80% Without Sacrificing Quality",
+      slug: "ai-cost-optimization-production-2026",
+      category: "FinOps"
     },
     {
-      id: 5,
-      title: 'Real-Time AI Stream Processing 2026: Sub-Second Intelligence at Scale',
-      slug: 'real-time-ai-stream-processing-2026',
-      excerpt: 'Master real-time AI with streaming architectures that deliver instant insights from massive data flows. Build pipelines processing millions of events per second with <100ms latency.',
-      category: 'AI Engineering',
-      date: '2025-09-30',
-      readTime: '10 min',
-      trending: true,
-      icon: '⚡'
+      title: "Real-World RAG Production 2026",
+      description: "Beyond the Demo to Enterprise Scale",
+      slug: "real-world-rag-production-2026",
+      category: "GenAI"
     },
     {
-      id: 6,
-      title: 'AI Cost Optimization 2026: Cut Spend 60% Without Sacrificing Performance',
-      slug: 'ai-cost-optimization-enterprise-2026',
-      excerpt: 'Slash AI costs with intelligent caching, model tiering, and dynamic routing strategies that keep quality high. Proven strategies to reduce infrastructure costs dramatically.',
-      category: 'FinOps',
-      date: '2025-09-30',
-      readTime: '9 min',
-      trending: true,
-      icon: '💰'
+      title: "LLM Security & Red Teaming 2026",
+      description: "Defend Against Prompt Injection & Jailbreaks",
+      slug: "llm-security-red-teaming-2026",
+      category: "AI Security"
     },
     {
-      id: 7,
-      title: 'Federated AI & Privacy-Preserving Computing 2026',
-      slug: 'federated-ai-privacy-computing-2026',
-      excerpt: 'Build powerful AI models across organizations without ever sharing raw data—privacy by design. Revolutionary federated learning enabling collaborative AI while keeping data private.',
-      category: 'Privacy AI',
-      date: '2025-09-30',
-      readTime: '11 min',
-      trending: true,
-      icon: '🔐'
+      title: "Continuous Training ML Systems 2026",
+      description: "Always-Fresh Models That Adapt",
+      slug: "continuous-training-ml-systems-2026",
+      category: "MLOps"
     },
     {
-      id: 8,
-      title: 'Conversational AI Revolution 2026: Human-Like Interactions at Scale',
-      slug: 'conversational-ai-revolution-2026',
-      excerpt: 'Deploy conversational AI that understands context, emotion, and intent for truly human-like interactions. Next-generation AI achieving 96% customer satisfaction.',
-      category: 'Conversational AI',
-      date: '2025-09-30',
-      readTime: '10 min',
-      trending: true,
-      icon: '💬'
+      title: "Streaming LLM Architecture 2026",
+      description: "Real-Time Token Generation <200ms TTFB",
+      slug: "streaming-llm-architecture-2026",
+      category: "Real-Time AI"
+    },
+    {
+      title: "Prompt Caching Strategies 2026",
+      description: "90% Cost Reduction with Smart Caching",
+      slug: "prompt-caching-strategies-2026",
+      category: "LLM Optimization"
+    },
+    {
+      title: "Fine-Tuning LLMs for Production 2026",
+      description: "Domain Expertise at 10x Lower Cost",
+      slug: "fine-tuning-llms-production-2026",
+      category: "LLM Training"
     }
   ];
 
   return (
-    <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      {/* Animated background effects */}
-      <div className="absolute inset-0 overflow-hidden opacity-30">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-fuchsia-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 p-8 md:p-12 my-12 shadow-2xl"
+    >
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-1/2 -right-1/2 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-1/2 -left-1/2 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 border border-cyan-500/30 mb-8 animate-fade-in">
-            <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
-            <span className="text-cyan-400 font-bold text-sm tracking-wider uppercase">
-              🚀 FRESH CONTENT! 3 NEW BREAKTHROUGH ARTICLES • September 30, 2025
-            </span>
-            <Sparkles className="w-5 h-5 text-fuchsia-400 animate-pulse" />
+      <div className="relative z-10">
+        {/* Header */}
+        <div className="flex items-center gap-3 mb-6">
+          <motion.div
+            animate={{ rotate: [0, 360] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+          >
+            <Sparkles className="w-8 h-8 text-yellow-400" />
+          </motion.div>
+          <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+            <TrendingUp className="w-4 h-4 text-green-400" />
+            <span className="text-sm font-semibold text-white">NEW CONTENT DROPPED</span>
           </div>
-
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-fuchsia-400 bg-clip-text text-transparent animate-fade-in">
-            Latest AI Insights & Innovations
-          </h2>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Dive into cutting-edge research, enterprise case studies, and breakthrough technologies 
-            that are reshaping the future of AI and cybersecurity.
-          </p>
         </div>
 
-        {/* Featured Articles Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">
-          {latestArticles.map((article, index) => (
-            <div 
-              key={article.id}
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-cyan-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
-              style={{ animationDelay: `${index * 100}ms` }}
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          🚀 September 30, 2025 — MEGA CONTENT LAUNCH: 11 NEW RESOURCES!
+        </h2>
+        <p className="text-xl text-blue-100 mb-8 max-w-3xl">
+          🎉 <span className="font-bold text-yellow-300">JUST RELEASED TODAY!</span> 🎉
+          <br/>
+          <span className="font-bold text-green-300">5 REVOLUTIONARY SERVICES:</span> Multimodal AI Platform (text+image+video+audio), AI Model Compression (90% reduction!), AI Explainability Platform, Federated Learning, Continuous Learning AI!
+          <br/>
+          <span className="font-bold text-purple-300">3 BREAKTHROUGH CASE STUDIES:</span> TelecomGlobal (99.999% uptime!), InsureTech (95% automation), HospitalityChain (45% RevPAR increase)!
+          <br/>
+          <span className="font-bold text-pink-300">3 COMPREHENSIVE WHITEPAPERS:</span> Multimodal AI (165 pages), Model Compression (125 pages), Federated Learning (145 pages)!
+          <br/>
+          Total library now: <span className="font-bold text-yellow-300">17 Services • 18 Case Studies • 15 Whitepapers • 100+ Articles!</span>
+        </p>
+
+        {/* Featured highlights */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+          {newArticles.slice(0, 6).map((article, index) => (
+            <motion.div
+              key={article.slug}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
+              className="group"
             >
-              {/* Card glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-fuchsia-500/0 to-cyan-500/0 group-hover:from-cyan-500/10 group-hover:via-fuchsia-500/10 group-hover:to-cyan-500/10 transition-all duration-500"></div>
-              
-              <div className="relative p-8">
-                {/* Icon & Badges */}
-                <div className="flex items-start justify-between mb-6">
-                  <div className="text-6xl group-hover:scale-110 transition-transform duration-300">
-                    {article.icon}
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    {article.trending && (
-                      <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
-                        <TrendingUp className="w-3 h-3" />
-                        <span>TRENDING</span>
-                      </div>
-                    )}
-                    <span className="px-3 py-1.5 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-semibold border border-cyan-500/30">
-                      NEW
+              <Link
+                to={`/blog/${article.slug}`}
+                className="block p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300"
+              >
+                <div className="flex items-start gap-3">
+                  <Zap className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-1 group-hover:animate-pulse" />
+                  <div>
+                    <h3 className="font-bold text-white text-sm mb-1 group-hover:text-yellow-300 transition-colors">
+                      {article.title}
+                    </h3>
+                    <p className="text-xs text-blue-200 mb-2">{article.description}</p>
+                    <span className="inline-block px-2 py-1 text-xs font-semibold bg-blue-500/30 text-blue-200 rounded-full">
+                      {article.category}
                     </span>
                   </div>
                 </div>
-
-                {/* Category Tag */}
-                <div className="mb-4">
-                  <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/20 to-fuchsia-500/20 text-fuchsia-400 text-xs font-semibold border border-fuchsia-500/30">
-                    {article.category}
-                  </span>
-                </div>
-
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 leading-tight">
-                  {article.title}
-                </h3>
-
-                {/* Excerpt */}
-                <p className="text-gray-400 mb-6 leading-relaxed text-sm">
-                  {article.excerpt}
-                </p>
-
-                {/* Meta Info */}
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
-                  <span className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-cyan-400" />
-                    {article.readTime}
-                  </span>
-                  <span>{new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
-                </div>
-
-                {/* CTA Button */}
-                <a
-                  href={`/blog/${article.slug}`}
-                  className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
-                >
-                  <span>Read Full Article</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                </a>
-              </div>
-            </div>
+              </Link>
+            </motion.div>
           ))}
         </div>
 
-        {/* Call-to-Action Section */}
-        <div className="text-center mt-20">
-          <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-500 to-fuchsia-500">
-            <div className="bg-slate-900 rounded-xl px-12 py-10">
-              <h3 className="text-3xl font-bold text-white mb-4">
-                Stay Ahead of the AI Revolution
-              </h3>
-              <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-                Get weekly insights, case studies, and breakthrough research delivered directly to your inbox. 
-                Join 50,000+ AI leaders and innovators.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/blog"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-2"
-                >
-                  <Sparkles className="w-5 h-5" />
-                  <span>Explore All Articles</span>
-                </a>
-                <a
-                  href="/contact"
-                  className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
-                >
-                  <span>Get Started with Zion AI</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Link
+            to="/blog"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-blue-900 rounded-full font-bold hover:bg-yellow-300 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            <span>Explore All New Content</span>
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-bold hover:bg-white hover:text-blue-900 transition-all duration-300"
+          >
+            <span>Get Expert Consultation</span>
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+        </div>
+
+        {/* Stats */}
+        <div className="mt-8 pt-6 border-t border-white/20 flex flex-wrap gap-8">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-yellow-300">11</div>
+            <div className="text-sm text-blue-200">NEW Resources TODAY</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-green-300">17</div>
+            <div className="text-sm text-blue-200">Total Services</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-purple-300">18</div>
+            <div className="text-sm text-blue-200">Total Case Studies</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-pink-300">15</div>
+            <div className="text-sm text-blue-200">Total Whitepapers</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-blue-300">100+</div>
+            <div className="text-sm text-blue-200">Total Articles</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-orange-300">2000+</div>
+            <div className="text-sm text-blue-200">Pages of Insights</div>
           </div>
         </div>
-
-        {/* Stats Section */}
-        <div className="grid md:grid-cols-4 gap-8 mt-20">
-          {[
-            { value: '500+', label: 'Enterprise Clients' },
-            { value: '10B+', label: 'Data Points Processed Daily' },
-            { value: '99.9%', label: 'System Uptime' },
-            { value: '5M+', label: 'Autonomous Operations Hours' }
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-4xl font-extrabold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent mb-2">
-                {stat.value}
-              </div>
-              <div className="text-gray-400 text-sm font-medium">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

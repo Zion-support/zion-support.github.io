@@ -181,6 +181,48 @@ export const whitepapers2025: Whitepaper[] = [
     downloadCount: 13234,
     featured: true,
     newBadge: true
+  },
+  {
+    id: "multimodal-ai-implementation-2026",
+    slug: "multimodal-ai-implementation-2026",
+    title: "Multimodal AI Implementation Guide: Text, Image, Video & Audio Unified",
+    description: "165-page comprehensive guide to building multimodal AI systems processing text, images, video, and audio with unified understanding. Includes architecture patterns, training strategies, and production deployment achieving 98% cross-modal accuracy.",
+    author: "Zion Tech Group Multimodal AI Team",
+    publishedAt: "2025-09-30",
+    category: "Multimodal AI",
+    tags: ["Multimodal AI", "Computer Vision", "NLP", "Audio Processing", "Unified Models"],
+    pages: 165,
+    downloadCount: 9842,
+    featured: true,
+    newBadge: true
+  },
+  {
+    id: "ai-model-compression-optimization-2026",
+    slug: "ai-model-compression-optimization-2026",
+    title: "AI Model Compression & Optimization: 90% Reduction Playbook",
+    description: "125-page technical guide to compressing AI models by 90% with zero accuracy loss. Covers quantization, pruning, knowledge distillation, neural architecture search, and hardware-specific optimization achieving 10x inference speedup.",
+    author: "Zion Tech Group Model Optimization Team",
+    publishedAt: "2025-09-30",
+    category: "Model Optimization",
+    tags: ["Model Compression", "Quantization", "Pruning", "Edge AI", "Inference Optimization"],
+    pages: 125,
+    downloadCount: 10567,
+    featured: true,
+    newBadge: true
+  },
+  {
+    id: "federated-learning-privacy-2026",
+    slug: "federated-learning-privacy-2026",
+    title: "Federated Learning at Scale: Privacy-Preserving AI Training Guide",
+    description: "145-page definitive guide to federated learning achieving perfect privacy preservation while maintaining 98% centralized accuracy. Covers secure aggregation, differential privacy, cross-silo and cross-device federation with real-world implementations across healthcare, finance, and enterprise.",
+    author: "Zion Tech Group Privacy AI Team",
+    publishedAt: "2025-09-30",
+    category: "Privacy-Preserving AI",
+    tags: ["Federated Learning", "Privacy", "Distributed AI", "GDPR", "Secure ML"],
+    pages: 145,
+    downloadCount: 11923,
+    featured: true,
+    newBadge: true
   }
 ];
 
