@@ -41,6 +41,9 @@ export default function HomePage() {
               <Link href="/blog/ai-enterprise-automation-2026-mega-guide" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">Enterprise Automation Guide<span>→</span></Link>
               <Link href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">$2.3B Success Story<span>→</span></Link>
               <Link href="/blog/ai-2026-neural-optimization-revolution" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">Neural Optimization 1000x<span>→</span></Link>
+              <Link href="/blog/ai-2025-sept-30-enterprise-ai-roadmap-v2" className="inline-flex items-center gap-2 bg-teal-500/20 text-teal-200 border border-teal-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-teal-500/30 transition-colors">Enterprise AI Roadmap v2<span>→</span></Link>
+              <Link href="/blog/ai-2025-sept-30-governed-agent-patterns" className="inline-flex items-center gap-2 bg-fuchsia-500/20 text-fuchsia-200 border border-fuchsia-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-fuchsia-500/30 transition-colors">Governed Agent Patterns<span>→</span></Link>
+              <Link href="/blog/ai-2025-sept-30-autonomous-finops-scorecards-v2" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">Autonomous FinOps v2<span>→</span></Link>
             </div>
           </div>
         </div>
