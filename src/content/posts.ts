@@ -10,6 +10,51 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "autonomous-ai-agents-enterprise-2025",
+    title: "Autonomous AI Agents in Enterprise: The Complete Implementation Guide",
+    description: "Deploy self-learning AI agents that automate complex workflows, reduce operational costs by 70%, and scale infinitely. Includes architecture patterns, security best practices, and ROI metrics.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "neuromorphic-computing-revolution-2025",
+    title: "Neuromorphic Computing Revolution: 10,000x Energy Efficiency Now Available",
+    description: "Brain-inspired chips are here. Learn how to deploy neuromorphic processors for edge AI achieving 10,000x better energy efficiency with real-world case studies and implementation roadmap.",
+    category: "Hardware AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "quantum-ai-convergence-2025",
+    title: "Quantum-AI Convergence: Solving the Impossible in 2025",
+    description: "Quantum computing meets AI. Discover how hybrid quantum-classical systems are achieving 1000x speedups in optimization, drug discovery, and financial modeling with practical examples.",
+    category: "Quantum Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "zero-trust-ai-security-2025",
+    title: "Zero Trust AI Security: Protecting Against Next-Gen Threats",
+    description: "Implement zero-trust architecture for AI systems with prompt injection protection, model security, and autonomous threat response achieving sub-30s incident containment.",
+    category: "Cybersecurity",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-ai-transformation-2025",
+    title: "Edge AI Transformation: Real-Time Intelligence Without Cloud Latency",
+    description: "Deploy AI at the edge for <10ms inference latency. Complete guide covering neuromorphic chips, federated learning, and privacy-preserving edge intelligence at scale.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
     slug: "ai-e2e-tracing-2025",
     title: "E2E AI Tracing: From Prompt to Outcome KPIs",
     description: "Connect prompts, tools, and UX to measurable KPIs to prove ROI and prevent regressions.",
