@@ -321,6 +321,46 @@ export const getFeaturedBanners = (): EnhancedPromotionalBanner[] => {
   return getActiveEnhancedBanners().filter(banner => banner.featured);
 };
 
+// Sept 30, 2025 – Advertise three brand-new pieces across the front end
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-autonomic-decision-engines',
+  title: '🚀 New: Autonomic Decision Engines — Sub‑100ms, KPI‑Linked',
+  description: 'Budgeted actions, live canaries, instant rollback. Ship fast, stay safe.',
+  ctaText: 'Read article',
+  ctaLink: '/blog/ai-2025-sept-30-autonomic-decision-engines',
+  variant: 'success',
+  icon: '🚀',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-edge-private-personalization-v2',
+  title: '🔐 Edge Private Personalization v2 — Zero‑PII, <100ms',
+  description: 'Scoped IDs, signed configs, and on‑device models for private, fast UX.',
+  ctaText: 'Explore guide',
+  ctaLink: '/blog/edge-2025-sept-30-private-personalization-v2',
+  variant: 'info',
+  icon: '🔐',
+  featured: true,
+  priority: 1,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-genai-eval-scorecards-quickstart',
+  title: '📊 GenAI Eval Scorecards — Quickstart',
+  description: 'KPI‑linked evals and budget‑aware routing that prevent regressions.',
+  ctaText: 'See quickstart',
+  ctaLink: '/blog/genai-2025-sept-30-eval-scorecards-quickstart',
+  variant: 'success',
+  icon: '📊',
+  featured: true,
+  priority: 2,
+  startDate: '2025-09-30'
+});
+
 // Sept 30, 2025 – New banners to advertise fresh content
 enhancedPromotionalBanners.push({
   id: 'sept30-2025-just-added-trio',
@@ -507,6 +547,46 @@ enhancedPromotionalBanners.push({
   featured: true,
   priority: 1,
   startDate: '2025-10-01'
+});
+
+// Oct 01-02, 2025 – Advertise three brand-new posts site-wide (newly added)
+enhancedPromotionalBanners.push({
+  id: 'oct-01-2025-operational-trust-v4',
+  title: '📊 Operational Trust Scorecards v4 — New',
+  description: 'SLIs → KPIs with budgets, live canaries, and instant rollback.',
+  ctaText: 'Read article',
+  ctaLink: '/blog/ai-2025-oct-01-operational-trust-v4',
+  variant: 'info',
+  icon: '📊',
+  featured: true,
+  priority: 0,
+  startDate: '2025-10-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'oct-01-2025-consentless-journeys-v3',
+  title: '🔐 Consentless Journeys v3 — Private Personalization <100ms',
+  description: 'Scoped IDs, signed configs, on‑device models deliver zero‑PII journeys.',
+  ctaText: 'Explore guide',
+  ctaLink: '/blog/edge-2025-oct-01-consentless-journeys-v3',
+  variant: 'success',
+  icon: '🔐',
+  featured: true,
+  priority: 0,
+  startDate: '2025-10-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'oct-02-2025-cache-playbook-v3',
+  title: '🧠 GenAI Cache Playbook v3 — New',
+  description: 'Semantic + tiered caches and eval‑gated fallbacks for 60–80% savings.',
+  ctaText: 'See playbook',
+  ctaLink: '/blog/genai-2025-oct-02-cache-playbook-v3',
+  variant: 'success',
+  icon: '🧠',
+  featured: true,
+  priority: 0,
+  startDate: '2025-10-02'
 });
 
 // Sept 30, 2025 – Brand new promotional banners (priority 0 to surface on Home)
