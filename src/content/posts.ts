@@ -1257,6 +1257,37 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Fresh drop to expand catalog and advertise on Home (v4)
+posts.push(
+  {
+    slug: "ai-operational-scorecards-v4-2026",
+    title: "AI Operational Scorecards v4 (2026): SLIs, Budgets, Rollback",
+    description: "Fourth‑gen scorecards wiring SLIs to KPIs with budgeted actions and instant rollback teams adopt fast.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-zero-pii-insights-2026",
+    title: "Edge Zero‑PII Insights 2026: Actionable Metrics at <100ms",
+    description: "On‑device aggregation, scoped IDs, and DP noise enabling trustworthy analytics without collecting PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-quality-tiers-v2-2026",
+    title: "GenAI Quality Tiers v2 (2026): Predictable Cost, Stable UX",
+    description: "Tier models, add semantic caches, and route by SLA using eval signals to cut spend 30–60%.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Sept 30, 2025 – Brand-new content to advertise on homepage (fresh trio v3)
 posts.push(
   {
