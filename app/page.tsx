@@ -392,6 +392,284 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* 🔥 BRAND NEW CONTENT - SEPTEMBER 30, 2025 - 5 EXCLUSIVE PUBLICATIONS! */}
+        <section className="bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <span className="text-6xl animate-pulse">🔥</span>
+                <h2 className="text-6xl font-black">JUST RELEASED TODAY!</h2>
+                <span className="text-6xl animate-pulse">⚡</span>
+              </div>
+              <p className="text-4xl font-bold mb-4">
+                5 Game-Changing Articles & Success Stories
+              </p>
+              <p className="text-2xl opacity-95">
+                September 30, 2025 — Fresh insights, real results, actionable strategies
+              </p>
+            </div>
+
+            {/* Featured New Content Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              
+              {/* Blog Post 1: AI Agentic Workflows */}
+              <Link href="/blog/ai-agentic-workflows-enterprise-2025" className="group">
+                <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
+                  <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-6 text-white">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="bg-yellow-400 text-purple-900 px-3 py-1 rounded-full text-xs font-bold animate-bounce">
+                        🆕 BLOG POST
+                      </span>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2">
+                      AI Agentic Workflows
+                    </h3>
+                    <p className="text-base opacity-95">
+                      400% productivity gains with autonomous AI agents
+                    </p>
+                  </div>
+                  <div className="p-6">
+                    <p className="text-gray-700 mb-4 text-sm">
+                      Transform enterprise operations with AI agents achieving 90% automation, $25M+ savings, and 6-week implementation.
+                    </p>
+                    <div className="grid grid-cols-3 gap-2 mb-4 text-center">
+                      <div>
+                        <div className="text-2xl font-bold text-purple-600">400%</div>
+                        <div className="text-xs text-gray-600">Productivity</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-pink-600">90%</div>
+                        <div className="text-xs text-gray-600">Automation</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-green-600">$25M+</div>
+                        <div className="text-xs text-gray-600">Savings</div>
+                      </div>
+                    </div>
+                    <div className="block w-full bg-purple-600 text-white text-center py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
+                      Read Full Article →
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Blog Post 2: Multi-Cloud AI Deployment */}
+              <Link href="/blog/multicloud-ai-deployment-strategy-2025" className="group">
+                <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
+                  <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-6 text-white">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="bg-yellow-400 text-blue-900 px-3 py-1 rounded-full text-xs font-bold animate-bounce">
+                        🆕 BLOG POST
+                      </span>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2">
+                      Multi-Cloud AI Strategy
+                    </h3>
+                    <p className="text-base opacity-95">
+                      99.99% uptime, 65% cost savings, zero lock-in
+                    </p>
+                  </div>
+                  <div className="p-6">
+                    <p className="text-gray-700 mb-4 text-sm">
+                      Master multi-cloud deployment across AWS, Azure, GCP. Complete playbook for enterprise resilience.
+                    </p>
+                    <div className="grid grid-cols-3 gap-2 mb-4 text-center">
+                      <div>
+                        <div className="text-2xl font-bold text-blue-600">99.99%</div>
+                        <div className="text-xs text-gray-600">Uptime</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-cyan-600">65%</div>
+                        <div className="text-xs text-gray-600">Cost ↓</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-green-600">Zero</div>
+                        <div className="text-xs text-gray-600">Lock-in</div>
+                      </div>
+                    </div>
+                    <div className="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">
+                      Read Full Article →
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Blog Post 3: Responsible AI */}
+              <Link href="/blog/responsible-ai-implementation-guide-2025" className="group">
+                <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
+                  <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-6 text-white">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="bg-yellow-400 text-indigo-900 px-3 py-1 rounded-full text-xs font-bold animate-bounce">
+                        🆕 BLOG POST
+                      </span>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2">
+                      Responsible AI Guide
+                    </h3>
+                    <p className="text-base opacity-95">
+                      Ethics, compliance, trust at enterprise scale
+                    </p>
+                  </div>
+                  <div className="p-6">
+                    <p className="text-gray-700 mb-4 text-sm">
+                      Build trustworthy AI: eliminate bias (92%), meet EU AI Act, NIST RMF compliance in 8 weeks.
+                    </p>
+                    <div className="grid grid-cols-3 gap-2 mb-4 text-center">
+                      <div>
+                        <div className="text-2xl font-bold text-indigo-600">100%</div>
+                        <div className="text-xs text-gray-600">Compliant</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-purple-600">92%</div>
+                        <div className="text-xs text-gray-600">Bias ↓</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-green-600">Zero</div>
+                        <div className="text-xs text-gray-600">Incidents</div>
+                      </div>
+                    </div>
+                    <div className="block w-full bg-indigo-600 text-white text-center py-3 rounded-lg font-bold hover:bg-indigo-700 transition-colors">
+                      Read Full Article →
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Case Study 1: Retail Transformation */}
+              <Link href="/case-studies/retail-ai-transformation-2025" className="group">
+                <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-green-300">
+                  <div className="bg-gradient-to-r from-green-600 to-emerald-600 p-6 text-white">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="bg-yellow-400 text-green-900 px-3 py-1 rounded-full text-xs font-bold animate-bounce">
+                        🏆 CASE STUDY
+                      </span>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2">
+                      $80M Retail Success
+                    </h3>
+                    <p className="text-base opacity-95">
+                      Fortune 100 transformation in 9 months
+                    </p>
+                  </div>
+                  <div className="p-6">
+                    <p className="text-gray-700 mb-4 text-sm">
+                      How a leading retailer achieved $80M revenue lift, 95% customer satisfaction, 70% cost reduction.
+                    </p>
+                    <div className="grid grid-cols-3 gap-2 mb-4 text-center">
+                      <div>
+                        <div className="text-2xl font-bold text-green-600">$80M</div>
+                        <div className="text-xs text-gray-600">Revenue ↑</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-emerald-600">95%</div>
+                        <div className="text-xs text-gray-600">Cust Sat</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-blue-600">-70%</div>
+                        <div className="text-xs text-gray-600">Costs</div>
+                      </div>
+                    </div>
+                    <div className="block w-full bg-green-600 text-white text-center py-3 rounded-lg font-bold hover:bg-green-700 transition-colors">
+                      Read Success Story →
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Case Study 2: Healthcare AI */}
+              <Link href="/case-studies/healthcare-ai-diagnostic-system-2025" className="group">
+                <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-blue-300">
+                  <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-6 text-white">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="bg-yellow-400 text-blue-900 px-3 py-1 rounded-full text-xs font-bold animate-bounce">
+                        🏆 CASE STUDY
+                      </span>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2">
+                      12,000+ Lives Saved
+                    </h3>
+                    <p className="text-base opacity-95">
+                      Healthcare AI diagnostic breakthrough
+                    </p>
+                  </div>
+                  <div className="p-6">
+                    <p className="text-gray-700 mb-4 text-sm">
+                      Hospital network achieves 97.8% diagnostic accuracy, 60% faster diagnoses, $350M savings.
+                    </p>
+                    <div className="grid grid-cols-3 gap-2 mb-4 text-center">
+                      <div>
+                        <div className="text-2xl font-bold text-blue-600">12K+</div>
+                        <div className="text-xs text-gray-600">Lives</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-cyan-600">97.8%</div>
+                        <div className="text-xs text-gray-600">Accuracy</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-green-600">$350M</div>
+                        <div className="text-xs text-gray-600">Saved</div>
+                      </div>
+                    </div>
+                    <div className="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">
+                      Read Success Story →
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* CTA Card */}
+              <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl p-8 flex flex-col justify-center items-center text-white">
+                <div className="text-center mb-6">
+                  <div className="text-5xl mb-4">📚</div>
+                  <h3 className="text-2xl font-bold mb-3">
+                    Explore All Our Content
+                  </h3>
+                  <p className="text-base opacity-90 mb-6">
+                    Access our complete library of articles, case studies, and implementation guides
+                  </p>
+                </div>
+                <div className="space-y-3 w-full">
+                  <Link 
+                    href="/blog" 
+                    className="block w-full bg-white text-gray-900 text-center py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+                  >
+                    View All Articles
+                  </Link>
+                  <Link 
+                    href="/case-studies" 
+                    className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-center py-3 rounded-lg font-bold hover:from-blue-700 hover:to-cyan-700 transition-colors"
+                  >
+                    View Case Studies
+                  </Link>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Bottom CTA */}
+            <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-2 border-white/20">
+              <h3 className="text-3xl font-bold mb-4">Want These Results for Your Organization?</h3>
+              <p className="text-xl mb-6 opacity-95">
+                Schedule a free consultation with our AI transformation experts
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="tel:+13024640950"
+                  className="bg-white text-red-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
+                >
+                  📞 Call +1 302 464 0950
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-red-600 transition-all hover:scale-105"
+                >
+                  📧 Schedule Consultation
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* NEW CONTENT BANNER - SEPTEMBER 30, 2025 - UPDATED WITH 6 NEW ARTICLES */}
         <section className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white py-16">
           <div className="max-w-6xl mx-auto px-6">
