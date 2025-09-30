@@ -102,6 +102,47 @@ const caseStudies = [
       marketShare: '+6%'
     }
   }
+  ,
+  {
+    title: 'Retail Autonomous Fulfillment: 12% Revenue Lift, $35M Savings',
+    slug: 'retail-autonomous-fulfillment-2026',
+    excerpt: 'Implemented autonomous fulfillment orchestration with guardrails and observability, improving OTIF by 21% and cutting labor costs 35%.',
+    company: 'Global Retail Co',
+    industry: 'Retail',
+    roi: '$35M',
+    duration: '14 months',
+    category: 'Autonomous Systems',
+    publishedAt: 'October 1, 2025',
+    image: '🛒',
+    color: 'blue',
+    readTime: '14 min read',
+    featured: true,
+    metrics: {
+      costSavings: '$35M',
+      efficiencyGain: '21% OTIF',
+      marketShare: '+3%'
+    }
+  },
+  {
+    title: 'Healthcare AI Diagnostics: 40% Faster Triage, $9M Savings',
+    slug: 'healthcare-ai-diagnostic-system-2025',
+    excerpt: 'Deployed AI-assisted triage with privacy-safe data pipelines and continuous evaluation to reduce diagnosis time by 40%.',
+    company: 'MedTech Solutions',
+    industry: 'Healthcare',
+    roi: '$9M',
+    duration: '10 months',
+    category: 'Sustainability',
+    publishedAt: 'September 25, 2025',
+    image: '🏥',
+    color: 'green',
+    readTime: '12 min read',
+    featured: false,
+    metrics: {
+      costSavings: '$9M',
+      efficiencyGain: '40%',
+      marketShare: '+2%'
+    }
+  }
 ];
 
 const categories = [

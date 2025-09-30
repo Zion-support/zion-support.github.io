@@ -137,6 +137,19 @@ const featuredContent: ContentItem[] = [
     readTime: '16 min read',
     category: 'Data Governance'
   }
+  ,
+  {
+    id: '11',
+    title: 'AI 2026 Agentic Workflow Orchestration',
+    description: 'Guardrails, reviews, and online evals for reliable multi-agent workflows that achieve measurable ROI.',
+    link: '/blog/ai-2026-agentic-workflow-orchestration',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-fuchsia-600 to-purple-600',
+    icon: '🧩',
+    publishedDate: 'October 1, 2025',
+    readTime: '16 min read',
+    category: 'Implementation Guide'
+  }
 ];
 
 export default function UnifiedContentPromotion() {

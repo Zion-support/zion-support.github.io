@@ -102,6 +102,27 @@ const blogPosts = [
     color: 'green',
     readTime: '13 min read'
   }
+  ,
+  {
+    title: 'AI 2026 Agentic Workflow Orchestration: Guardrails to ROI',
+    slug: 'ai-2026-agentic-workflow-orchestration',
+    excerpt: 'Design multi-agent workflows with policy guardrails, human-in-the-loop reviews, and online evaluations for reliable business outcomes.',
+    category: 'Implementation Guide',
+    publishedAt: 'October 1, 2025',
+    image: '🧩',
+    color: 'green',
+    readTime: '16 min read'
+  },
+  {
+    title: 'AI 2026 Intelligent Data Fabric: Real-Time Decisions at Scale',
+    slug: 'ai-2026-intelligent-data-fabric',
+    excerpt: 'Unify batch, streaming, and unstructured data into a governed fabric powering low-latency AI decisions and observability.',
+    category: 'Featured Article',
+    publishedAt: 'October 1, 2025',
+    image: '🧩',
+    color: 'blue',
+    readTime: '14 min read'
+  }
 ];
 
 const categories = [
