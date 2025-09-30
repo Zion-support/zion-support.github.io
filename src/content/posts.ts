@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2026-reliable-genai-platform",
+    title: "Reliable GenAI Platform 2026: SLAs, Budgets, and Rollback",
+    description: "Blueprint for a dependable GenAI platform with quality tiers, budgets, evals, and instant rollback tied to KPIs.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "edge-privacy-insights-2026",
+    title: "Edge Privacy Insights 2026: Scoped IDs, On‑Device Telemetry, DP Noise",
+    description: "Privacy‑first insights with scoped identifiers, device aggregation, and differential privacy at <100ms.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-consentless-experiments-2026-q4",
+    title: "Edge Consentless Experiments Q4 2026: Global A/B in <100ms",
+    description: "Compliant, fast experimentation with scoped IDs, on‑device metrics, and DP noise—zero PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "ai-sla-scorecards-2026-q1",
     title: "AI SLA Scorecards 2026 Q1: SLIs, Budgets, Rollback",
     description: "Wire SLIs to product KPIs with budgeted actions and instant rollback for safe velocity.",
