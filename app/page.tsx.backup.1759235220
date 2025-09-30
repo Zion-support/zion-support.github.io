@@ -193,17 +193,6 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
-<<<<<<< HEAD
-      {/* 🚀 AI 2027 REVOLUTIONARY BREAKTHROUGH BANNER */}
-      <AI2027RevolutionaryBreakthroughBanner />
-=======
-      {/* 🚀 NEW 2028 REVOLUTIONARY CONTENT BANNERS */}
-      <NewJanuary2028PromotionsBanner />
-      <AI2028AutonomousEnterpriseRevolutionBanner />
-      <AIQuantumComputingBreakthrough2028Banner />
-      <AI2028MegaTransformationSuccessBanner />
-      <NewContent2028MegaShowcaseBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-69bb
       
       {/* 🚀 ULTIMATE CONTENT SHOWCASE 2026 */}
       <UltimateContentShowcase2026 />

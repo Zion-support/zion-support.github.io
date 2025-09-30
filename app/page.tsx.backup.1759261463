@@ -1,19 +1,6 @@
 // @ts-nocheck
 import React from 'react';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
-<<<<<<< HEAD
-import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
-import Ultimate2026ContentShowcase from '../components/Ultimate2026ContentShowcase';
-=======
-import Link from 'next/link';
-import January2026NeuralArchitectureSearchBanner from '../components/January2026NeuralArchitectureSearchBanner';
-import January2026FederatedLearningBanner from '../components/January2026FederatedLearningBanner';
-import January2026RevolutionaryBreakthroughBanner from '../components/January2026RevolutionaryBreakthroughBanner';
-import January2026NewServicesBanner from '../components/January2026NewServicesBanner';
-import Revolutionary2026ContentAdvertisingBanner from '../components/Revolutionary2026ContentAdvertisingBanner';
-import January2026BreakthroughShowcaseBanner from '../components/January2026BreakthroughShowcaseBanner';
-import Ultimate2026ContentPromotionalBanner from '../components/Ultimate2026ContentPromotionalBanner';
->>>>>>> origin/cursor/create-and-deploy-new-content-3982
 
 export default function HomePage() {
   return (

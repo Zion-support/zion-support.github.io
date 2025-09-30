@@ -18,8 +18,3 @@ import ErrorBoundarydynamic from "../components/ErrorBoundary.dynamic";
     // Add styling tests if needed})});
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> main

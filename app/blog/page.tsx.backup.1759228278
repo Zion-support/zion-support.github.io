@@ -7,29 +7,6 @@ export const metadata = {
 
 const blogPosts = [
   {
-<<<<<<< HEAD
-=======
-    title: 'AI 2026 Cost Optimization Blueprint: 30–70% Savings without Quality Loss',
-    slug: 'ai-2026-cost-optimization-blueprint',
-    excerpt: 'Cut AI spend with routing, semantic caches, quantization, and token discipline tied to quality scorecards.',
-    category: 'Implementation Guide',
-    publishedAt: 'January 15, 2026',
-    image: '💸',
-    color: 'green',
-    readTime: '13 min read'
-  },
-  {
-    title: 'AI 2025 Agent Reliability Blueprint: Ship Trustworthy Autonomous Workflows',
-    slug: 'ai-2025-agent-reliability-blueprint',
-    excerpt: 'Blueprint for reliable, observable, and governable autonomous agents with policy gates and eval scorecards.',
-    category: 'AI Reliability',
-    publishedAt: 'October 1, 2025',
-    image: '🧭',
-    color: 'indigo',
-    readTime: '14 min read'
-  },
-  {
->>>>>>> cursor/create-and-deploy-new-content-9685
     title: 'AI 2027 Hyper‑Automation Blueprint',
     slug: 'ai-2027-hyper-automation-blueprint',
     excerpt: 'Scale reliable hyper‑automation with policy gates, evals, and value stream analytics.',
@@ -271,35 +248,6 @@ const blogPosts = [
     readTime: '16 min read'
   },
   {
-<<<<<<< HEAD
-    title: 'AI Trends 2026: The Future of Enterprise Technology',
-    slug: 'ai-trends-2026-future-enterprise',
-    excerpt: 'Discover the revolutionary AI trends shaping 2026. From autonomous systems to quantum-enhanced AI, explore the breakthroughs that matter.',
-    category: 'Featured Article',
-    publishedAt: 'January 15, 2026',
-    image: '🚀',
-    color: 'blue',
-    readTime: '15 min read'
-=======
-    title: 'AI Enterprise Automation Revolution 2026: Complete Business Transformation',
-    slug: 'ai-2026-enterprise-automation-revolution',
-    excerpt: 'Discover how next-generation AI automation is revolutionizing enterprise operations, delivering unprecedented efficiency gains, massive cost reductions, and complete business process autonomy.',
-    category: 'Revolutionary Technology',
-    publishedAt: 'January 30, 2026',
-    image: '🚀',
-    color: 'blue',
-    readTime: '22 min read'
-  },
-  {
-    title: 'AI 2026 Quantum Neural Networks: Revolutionary Processing Power',
-    slug: 'ai-2026-quantum-neural-networks',
-    excerpt: 'Explore the revolutionary AI quantum neural networks breakthrough of 2026. Discover how quantum-enhanced AI is solving complex problems 1000x faster and transforming enterprise computing.',
-    category: 'Breakthrough Technology',
-    publishedAt: 'January 30, 2026',
-    image: '⚛️',
-    color: 'purple',
-    readTime: '18 min read'
->>>>>>> origin/cursor/create-and-deploy-new-content-662d
   }
 ];
 

@@ -417,7 +417,7 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
 export default EnhancedSidebar2025;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-import React, { useState, useEffect } from react';
+
 import Link from 'next/link;
 import { useRouter } from next/router';
 import { motion, AnimatePresence } from 'framer-motion;

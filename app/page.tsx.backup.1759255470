@@ -1,20 +1,6 @@
 // @ts-nocheck
 import React from 'react';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
-<<<<<<< HEAD
-import ContentShowcase from '../components/ContentShowcase';
-import AI2026RevolutionaryAutonomousEnterpriseBanner from '../components/AI2026RevolutionaryAutonomousEnterpriseBanner';
-import October2025NewContentBanner from '../components/October2025NewContentBanner';
-import NewContentAdvertisingBanner from '../components/NewContentAdvertisingBanner';
-import AI2027ConsciousnessFusionRevolutionaryBanner from '../components/AI2027ConsciousnessFusionRevolutionaryBanner';
-import AI2028AutonomousEnterpriseRevolutionaryBanner from '../components/AI2028AutonomousEnterpriseRevolutionaryBanner';
-import Link from 'next/link';
-=======
-import January2026NeuralArchitectureSearchBanner from '../components/January2026NeuralArchitectureSearchBanner';
-import January2026FederatedLearningBanner from '../components/January2026FederatedLearningBanner';
-import AI2027RevolutionaryBreakthroughBanner from '../components/AI2027RevolutionaryBreakthroughBanner';
-import UltimateContentShowcase2027 from '../components/UltimateContentShowcase2027';
->>>>>>> origin/cursor/create-and-deploy-new-content-abcd
 
 export default function HomePage() {
   return (
@@ -26,30 +12,6 @@ export default function HomePage() {
         </div>
       </section>
       
-<<<<<<< HEAD
-      {/* Revolutionary New Content - Featured First */}
-      <AI2026RevolutionaryAutonomousEnterpriseBanner />
-      <October2025NewContentBanner />
-      <NewContentAdvertisingBanner />
-      
-      {/* Revolutionary 2027 Consciousness Fusion Content */}
-      <AI2027ConsciousnessFusionRevolutionaryBanner />
-      
-      {/* Revolutionary 2028 Autonomous Enterprise Content */}
-      <AI2028AutonomousEnterpriseRevolutionaryBanner />
-      
-      {/* Additional Content Banners (temporarily disabled if not present) */}
-=======
-      {/* Revolutionary AI 2027 Content */}
-      <AI2027RevolutionaryBreakthroughBanner />
-      
-      {/* Ultimate Content Showcase */}
-      <UltimateContentShowcase2027 />
-      
-      {/* Legacy Content Banners */}
-      <January2026NeuralArchitectureSearchBanner />
-      <January2026FederatedLearningBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-abcd
       
       <UnifiedContentPromotion />
 

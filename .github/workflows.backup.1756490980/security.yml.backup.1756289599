@@ -13,7 +13,6 @@
       run: |
         echo "🚨 Security issues detected - notifying team"
         # Add notification logic here (Slack, email, etc.)
-=======
 name: Security
 on:
   schedule:
