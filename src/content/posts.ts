@@ -1167,6 +1167,15 @@ export const posts: BlogPost[] = [
   }
   ,
   {
+    slug: "agentic-workflows-blueprint-2026",
+    title: "Agentic Workflows Blueprint 2026: Tools, Traces, Policy Tests",
+    description: "Compose multi‑tool agents with safe tools, observable traces, and policy tests in CI.",
+    category: "GenAI",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-supply-chain-optimization-2025",
     title: "AI Supply Chain Optimization: 65% Faster Deliveries Under Budget",
     description: "From demand sensing to route optimization—AI patterns that cut costs and boost OTIF.",
@@ -1382,6 +1391,15 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-29",
     featured: true,
     readTime: "8 min read"
+  },
+  {
+    slug: "edge-llm-caching-blueprint-2025",
+    title: "Edge LLM Caching: Latency Budgets, KV Patterns, and Cost Control",
+    description: "Sub‑100ms prompts with tiered caches, signed configs, and freshness windows.",
+    category: "Architecture",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "7 min read"
   },
   {
     slug: "privacy-first-ab-testing-2026",
@@ -2767,5 +2785,14 @@ posts.push(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
+  },
+  {
+    slug: "ai-operational-scorecards-2026",
+    title: "AI Operational Scorecards 2026: Guardrails That Drive Outcomes",
+    description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs engineers adopt.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "7 min read"
   }
-);
+];
