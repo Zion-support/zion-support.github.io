@@ -10,6 +10,34 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2027-customer-experience-agents",
+    title: "AI 2027: Customer Experience Agents — 24/7 Autonomous CX",
+    description: "Deploy trusted CX agents with budgets, live KPIs, and instant rollback that resolve 80% of tickets autonomously.
+",
+    category: "AI Operations",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "edge-2027-real-time-feature-flags",
+    title: "Edge 2027: Real‑Time Feature Flags — <100ms, Zero‑PII Rollouts",
+    description: "Signed configs, scoped IDs, and on‑device telemetry for safe, private rollouts at global edge latency.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-02",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-2027-quality-tiers-v4",
+    title: "GenAI 2027: Quality Tiers v4 — Stable UX Under Budget",
+    description: "Deterministic tiering + semantic caches + eval gates to cut spend 40–70% without quality regressions.",
+    category: "GenAI",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "verifiable-edge-analytics-2026",
     title: "Verifiable Edge Analytics 2026: Zero‑PII Insights with Attestations",
     description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for audit‑ready insights under 100ms.",
