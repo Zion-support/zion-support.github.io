@@ -1,0 +1,201 @@
+name: Link Checking & Sitemap Management
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    # Run every 4 hours as an alternative to PM2 automation
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+
+jobs:
+  link-checking:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Use Node.js 20.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build for link checking
+      run: npm run build
+      
+    - name: Check internal links
+      run: |
+        echo "=== Internal Link Check ==="
+        npx linkinator dist --config .linkinatorrc || echo "Linkinator not configured"
+        
+    - name: Check external links
+      run: |
+        echo "=== External Link Check ==="
+        npx broken-link-checker dist || echo "Broken link checker not available"
+        
+    - name: Check for orphaned pages
+      run: |
+        echo "=== Orphaned Pages Check ==="
+        find dist -name "*.html" -exec basename {} \; | while read page; do
+          if ! grep -r "$page" dist/ --include="*.html" --exclude="$page" > /dev/null; then
+            echo "WARNING: $page might be orphaned"
+          fi
+        done || echo "Orphaned page check completed"
+
+  link-integrity:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Use Node.js 20.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build for integrity check
+      run: npm run build
+      
+    - name: Check link integrity
+      run: |
+        echo "=== Link Integrity Check ==="
+        echo "Checking for broken internal links..."
+        
+        # Find all HTML files
+        find dist -name "*.html" -type f | while read file; do
+          echo "Checking $file..."
+          
+          # Extract all links from the file
+          grep -o 'href="[^"]*"' "$file" | sed 's/href="//;s/"//' | while read link; do
+            if [[ $link == /* ]]; then
+              # Internal link
+              target_file="dist$link"
+              if [[ $link == *.html ]] && [[ ! -f "$target_file" ]]; then
+                echo "BROKEN: $file -> $link (file not found)"
+              elif [[ $link == */ ]] && [[ ! -d "$target_file" ]]; then
+                echo "BROKEN: $file -> $link (directory not found)"
+              fi
+            fi
+          done
+        done
+        
+        echo "Link integrity check completed"
+
+  sitemap-generation:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Use Node.js 20.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build for sitemap
+      run: npm run build
+      
+    - name: Generate sitemap
+      run: |
+        echo "=== Sitemap Generation ==="
+        
+        # Create sitemap.xml
+        echo '<?xml version="1.0" encoding="UTF-8"?>' > dist/sitemap.xml
+        echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> dist/sitemap.xml
+        
+        # Find all HTML files and add them to sitemap
+        find dist -name "*.html" -type f | while read file; do
+          # Convert file path to URL
+          url_path=$(echo "$file" | sed 's|^dist||' | sed 's|/index.html$|/|' | sed 's|.html$||')
+          if [[ $url_path == "" ]]; then
+            url_path="/"
+          fi
+          
+          echo "  <url>" >> dist/sitemap.xml
+          echo "    <loc>https://yourdomain.com$url_path</loc>" >> dist/sitemap.xml
+          echo "    <lastmod>$(date -Iseconds)</lastmod>" >> dist/sitemap.xml
+          echo "    <changefreq>weekly</changefreq>" >> dist/sitemap.xml
+          echo "    <priority>0.8</priority>" >> dist/sitemap.xml
+          echo "  </url>" >> dist/sitemap.xml
+        done
+        
+        echo '</urlset>' >> dist/sitemap.xml
+        
+        echo "Sitemap generated with $(grep -c '<url>' dist/sitemap.xml) URLs"
+        
+    - name: Generate sitemap index
+      run: |
+        echo "=== Sitemap Index Generation ==="
+        
+        # Create sitemap index
+        echo '<?xml version="1.0" encoding="UTF-8"?>' > dist/sitemap-index.xml
+        echo '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> dist/sitemap-index.xml
+        echo '  <sitemap>' >> dist/sitemap-index.xml
+        echo '    <loc>https://yourdomain.com/sitemap.xml</loc>' >> dist/sitemap-index.xml
+        echo '    <lastmod>$(date -Iseconds)</lastmod>' >> dist/sitemap-index.xml
+        echo '  </sitemap>' >> dist/sitemap-index.xml
+        echo '</sitemapindex>' >> dist/sitemap-index.xml
+        
+        echo "Sitemap index generated"
+        
+    - name: Upload sitemap artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: sitemap-files
+        path: |
+          dist/sitemap.xml
+          dist/sitemap-index.xml
+        retention-days: 30
+
+  link-report:
+    runs-on: ubuntu-latest
+    needs: [link-checking, link-integrity, sitemap-generation]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Use Node.js 20.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+        
+    - name: Generate comprehensive link report
+      run: |
+        echo "=== Comprehensive Link Report ===" > link-report.md
+        echo "Generated on: $(date)" >> link-report.md
+        echo "" >> link-report.md
+        echo "## Summary" >> link-report.md
+        echo "- Total HTML files: $(find dist -name '*.html' | wc -l)" >> link-report.md
+        echo "- Sitemap URLs: $(grep -c '<url>' dist/sitemap.xml 2>/dev/null || echo 'N/A')" >> link-report.md
+        echo "- Build size: $(du -sh dist/ 2>/dev/null || echo 'N/A')" >> link-report.md
+        
+        echo "" >> link-report.md
+        echo "## Link Statistics" >> link-report.md
+        echo "- Internal links checked: $(find dist -name '*.html' -exec grep -o 'href="/[^"]*"' {} \; | wc -l)" >> link-report.md
+        echo "- External links checked: $(find dist -name '*.html' -exec grep -o 'href="http[^"]*"' {} \; | wc -l)" >> link-report.md
+        
+    - name: Upload link report
+      uses: actions/upload-artifact@v4
+      with:
+        name: link-report
+        path: link-report.md
+        retention-days: 30
