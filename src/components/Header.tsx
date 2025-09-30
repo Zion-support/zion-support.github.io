@@ -31,9 +31,12 @@ const Header: React.FC = () => {
               </Link>
               <Link
                 to="/services"
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors flex items-center gap-2"
               >
                 Services
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                  NEW AMI
+                </span>
               </Link>
               <Link
                 to="/blog"
@@ -97,10 +100,13 @@ const Header: React.FC = () => {
               </Link>
               <Link
                 to="/services"
-                className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors"
+                className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors flex items-center gap-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                  NEW AMI
+                </span>
               </Link>
               <Link
                 to="/blog"
