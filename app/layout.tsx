@@ -54,13 +54,8 @@ function Header() {
           <div className="relative group">
             <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Blog
-<<<<<<< HEAD
               <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
                 🚀 NEW 2026
-=======
-              <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                BREAKTHROUGH 2026
->>>>>>> cursor/create-and-deploy-new-content-9e9b
               </span>
             </Link>
           </div>
