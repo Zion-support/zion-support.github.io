@@ -245,6 +245,38 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 🚀 Fresh: Three brand-new articles (auto surfaced) */}
+      <section className="py-6 bg-gradient-to-r from-emerald-700/20 to-cyan-700/20 border-y border-white/10">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link href="/blog/ai-sla-scorecards-2026-q1" className="block bg-white/10 hover:bg-white/15 border border-white/20 rounded-xl p-6 transition-colors">
+              <div className="mb-2">
+                <span className="px-3 py-1 rounded-full text-xs bg-emerald-500/20 text-emerald-200 border border-emerald-500/30">AI Operations</span>
+                <span className="ml-2 text-white/70 text-xs">New</span>
+              </div>
+              <h3 className="text-lg font-bold">AI SLA Scorecards 2026 Q1</h3>
+              <p className="text-white/80 mt-2 text-sm">SLIs + budgets + rollback wired to product KPIs.</p>
+            </Link>
+            <Link href="/blog/edge-private-insights-v2-2026" className="block bg-white/10 hover:bg-white/15 border border-white/20 rounded-xl p-6 transition-colors">
+              <div className="mb-2">
+                <span className="px-3 py-1 rounded-full text-xs bg-cyan-500/20 text-cyan-200 border border-cyan-500/30">Analytics</span>
+                <span className="ml-2 text-white/70 text-xs">New</span>
+              </div>
+              <h3 className="text-lg font-bold">Edge Private Insights v2 (2026)</h3>
+              <p className="text-white/80 mt-2 text-sm">Scoped IDs, DP noise, on‑device aggregation at &lt;100ms.</p>
+            </Link>
+            <Link href="/blog/agent-release-runbooks-v2-2026" className="block bg-white/10 hover:bg-white/15 border border-white/20 rounded-xl p-6 transition-colors">
+              <div className="mb-2">
+                <span className="px-3 py-1 rounded-full text-xs bg-fuchsia-500/20 text-fuchsia-200 border border-fuchsia-500/30">Agent Ops</span>
+                <span className="ml-2 text-white/70 text-xs">New</span>
+              </div>
+              <h3 className="text-lg font-bold">Agent Release Runbooks v2 (2026)</h3>
+              <p className="text-white/80 mt-2 text-sm">Budgets, KPI canaries, and one‑click rollback.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
       
       {/* 🚀 REVOLUTIONARY BREAKTHROUGH CONTENT - JANUARY 30, 2026 */}
       <RevolutionaryBreakthrough2026Banner />
