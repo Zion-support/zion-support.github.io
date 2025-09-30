@@ -1972,3 +1972,34 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – New additions for homepage advertisement (fresh drop v2)
+posts.push(
+  {
+    slug: "real-time-ai-decision-engines-2025",
+    title: "Real‑Time AI Decision Engines 2025: 10M/sec Under 1ms",
+    description: "Quality tiers, caches, and intent routing for sub‑millisecond decisions at scale.",
+    category: "Real-Time AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-insights-quickstart-2025",
+    title: "Privacy‑First Insights Quickstart 2025: Actionable Analytics Without PII",
+    description: "Scoped identifiers, edge aggregation, and DP noise to unlock insights safely.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-safety-checklists-quickstart-2025",
+    title: "Agent Safety Checklists 2025: Budgets, Sandboxes, Rollbacks",
+    description: "Practical checklists for safe agent releases with budgeted actions and instant rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  }
+);
+

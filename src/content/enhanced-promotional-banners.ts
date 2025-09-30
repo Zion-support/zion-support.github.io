@@ -138,6 +138,20 @@ enhancedPromotionalBanners.push({
   startDate: '2025-09-30'
 });
 
+// Sept 30, 2025 – Additional banner to advertise the latest content
+enhancedPromotionalBanners.push({
+  id: 'sept30-additional-fresh-content-2025',
+  title: '🔥 New Today: Real‑Time Decisions, Privacy‑First Insights, Agent Safety',
+  description: 'Explore sub‑ms decision engines, PII‑safe analytics, and battle‑tested agent safety checklists.',
+  ctaText: 'Explore new posts',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '✨',
+  featured: true,
+  priority: 1,
+  startDate: '2025-09-30'
+});
+
 export const getActiveEnhancedBanners = (): EnhancedPromotionalBanner[] => {
   const now = new Date();
   return enhancedPromotionalBanners
