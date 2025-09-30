@@ -5,64 +5,79 @@ import { motion } from "framer-motion";
 const LatestContentBanner2025 = () => {
   const newArticles = [
     {
-      title: "Agentic AI Workflows 2026",
-      description: "Production-Ready Multi-Agent Systems",
-      slug: "agentic-ai-workflows-production-2026",
-      category: "AI Engineering"
+      title: "AI Cognitive Mesh Networks 2026",
+      description: "1000x Faster Decisions with Distributed Intelligence",
+      slug: "ai-cognitive-mesh-networks-2026",
+      category: "Distributed AI",
+      emoji: "🧠",
+      highlight: "NEW TODAY"
     },
     {
-      title: "LLM Function Calling Mastery 2026",
-      description: "Building Reliable AI Tools at Scale",
-      slug: "llm-function-calling-mastery-2026",
-      category: "LLM Engineering"
+      title: "AI Predictive Infrastructure Orchestration 2026",
+      description: "Zero-Touch Cloud Operations with 99.99% Uptime",
+      slug: "ai-predictive-infrastructure-orchestration-2026",
+      category: "Cloud Infrastructure",
+      emoji: "🚀",
+      highlight: "NEW TODAY"
     },
     {
-      title: "Vector Search Optimization 2026",
-      description: "Sub-10ms Semantic Search at Billion Scale",
-      slug: "vector-search-optimization-2026",
-      category: "Search Infrastructure"
+      title: "AI Continuous Learning Systems 2026",
+      description: "Self-Improving Models with 99.2% Accuracy Gains",
+      slug: "ai-continuous-learning-systems-2026",
+      category: "Machine Learning",
+      emoji: "🔄",
+      highlight: "NEW TODAY"
     },
     {
-      title: "AI Cost Optimization 2026",
-      description: "Cut LLM Costs by 80% Without Sacrificing Quality",
-      slug: "ai-cost-optimization-production-2026",
-      category: "FinOps"
+      title: "AI Synthetic Creativity Engine 2026",
+      description: "Human-Level Creative Content at 1000x Speed",
+      slug: "ai-synthetic-creativity-engine-2026",
+      category: "Generative AI",
+      emoji: "🎨",
+      highlight: "NEW TODAY"
     },
     {
-      title: "Real-World RAG Production 2026",
-      description: "Beyond the Demo to Enterprise Scale",
-      slug: "real-world-rag-production-2026",
-      category: "GenAI"
+      title: "AI Hyper-Personalization Engines 2026",
+      description: "450% Conversion Increase with 1-to-1 Experiences",
+      slug: "ai-hyper-personalization-engines-2026",
+      category: "Customer Experience",
+      emoji: "🎯",
+      highlight: "NEW TODAY"
     },
     {
-      title: "LLM Security & Red Teaming 2026",
-      description: "Defend Against Prompt Injection & Jailbreaks",
-      slug: "llm-security-red-teaming-2026",
-      category: "AI Security"
+      title: "AI-Native Security Operations 2026",
+      description: "99.9% Threat Prevention with Autonomous Response",
+      slug: "ai-native-security-operations-2026",
+      category: "Cybersecurity",
+      emoji: "🛡️"
     },
     {
-      title: "Continuous Training ML Systems 2026",
-      description: "Always-Fresh Models That Adapt",
-      slug: "continuous-training-ml-systems-2026",
-      category: "MLOps"
+      title: "Distributed AI Training at Scale 2026",
+      description: "Train LLMs 10x Faster on 1000+ GPU Clusters",
+      slug: "distributed-ai-training-scale-2026",
+      category: "ML Infrastructure",
+      emoji: "⚡"
     },
     {
-      title: "Streaming LLM Architecture 2026",
-      description: "Real-Time Token Generation <200ms TTFB",
-      slug: "streaming-llm-architecture-2026",
-      category: "Real-Time AI"
+      title: "AI Governance Automation 2026",
+      description: "100% Compliance Without the Overhead",
+      slug: "ai-governance-automation-enterprise-2026",
+      category: "AI Governance",
+      emoji: "📋"
     },
     {
-      title: "Prompt Caching Strategies 2026",
-      description: "90% Cost Reduction with Smart Caching",
-      slug: "prompt-caching-strategies-2026",
-      category: "LLM Optimization"
+      title: "AI Quantum Hybrid Computing 2026",
+      description: "1000x Speedup for Optimization Problems",
+      slug: "ai-quantum-hybrid-optimization-2026",
+      category: "Quantum Computing",
+      emoji: "⚛️"
     },
     {
-      title: "Fine-Tuning LLMs for Production 2026",
-      description: "Domain Expertise at 10x Lower Cost",
-      slug: "fine-tuning-llms-production-2026",
-      category: "LLM Training"
+      title: "Federated Learning Enterprise 2026",
+      description: "Privacy-Preserving Training at Global Scale",
+      slug: "federated-learning-2026",
+      category: "Privacy AI",
+      emoji: "🔐"
     }
   ];
 
@@ -95,18 +110,11 @@ const LatestContentBanner2025 = () => {
         </div>
 
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          🚀 September 30, 2025 — MEGA CONTENT LAUNCH: 11 NEW RESOURCES!
+          🔥 BREAKING: 5 REVOLUTIONARY NEW ARTICLES JUST PUBLISHED!
         </h2>
         <p className="text-xl text-blue-100 mb-8 max-w-3xl">
-          🎉 <span className="font-bold text-yellow-300">JUST RELEASED TODAY!</span> 🎉
-          <br/>
-          <span className="font-bold text-green-300">5 REVOLUTIONARY SERVICES:</span> Multimodal AI Platform (text+image+video+audio), AI Model Compression (90% reduction!), AI Explainability Platform, Federated Learning, Continuous Learning AI!
-          <br/>
-          <span className="font-bold text-purple-300">3 BREAKTHROUGH CASE STUDIES:</span> TelecomGlobal (99.999% uptime!), InsureTech (95% automation), HospitalityChain (45% RevPAR increase)!
-          <br/>
-          <span className="font-bold text-pink-300">3 COMPREHENSIVE WHITEPAPERS:</span> Multimodal AI (165 pages), Model Compression (125 pages), Federated Learning (145 pages)!
-          <br/>
-          Total library now: <span className="font-bold text-yellow-300">17 Services • 18 Case Studies • 15 Whitepapers • 100+ Articles!</span>
+          Discover <span className="font-bold text-yellow-300">5 BRAND NEW cutting-edge articles</span> on AI Cognitive Mesh Networks, Predictive Infrastructure Orchestration, Continuous Learning Systems, Synthetic Creativity, and Hyper-Personalization! 
+          Plus explore our expanded library of <span className="font-bold text-yellow-300">160+ revolutionary articles</span> shaping the future of technology!
         </p>
 
         {/* Featured highlights */}
@@ -122,10 +130,17 @@ const LatestContentBanner2025 = () => {
             >
               <Link
                 to={`/blog/${article.slug}`}
-                className="block p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300"
+                className="block p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 relative overflow-hidden"
               >
+                {article.highlight && (
+                  <div className="absolute top-2 right-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-black animate-pulse">
+                    {article.highlight}
+                  </div>
+                )}
                 <div className="flex items-start gap-3">
-                  <Zap className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-1 group-hover:animate-pulse" />
+                  <div className="text-3xl flex-shrink-0 mt-1 group-hover:scale-110 transition-transform">
+                    {article.emoji || "⚡"}
+                  </div>
                   <div>
                     <h3 className="font-bold text-white text-sm mb-1 group-hover:text-yellow-300 transition-colors">
                       {article.title}
@@ -162,28 +177,20 @@ const LatestContentBanner2025 = () => {
         {/* Stats */}
         <div className="mt-8 pt-6 border-t border-white/20 flex flex-wrap gap-8">
           <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-300">11</div>
-            <div className="text-sm text-blue-200">NEW Resources TODAY</div>
+            <div className="text-3xl font-bold text-yellow-300">5</div>
+            <div className="text-sm text-blue-200">NEW Articles TODAY</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-green-300">17</div>
-            <div className="text-sm text-blue-200">Total Services</div>
+            <div className="text-3xl font-bold text-green-300">160+</div>
+            <div className="text-sm text-blue-200">Total Latest Articles</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-purple-300">18</div>
-            <div className="text-sm text-blue-200">Total Case Studies</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-pink-300">15</div>
-            <div className="text-sm text-blue-200">Total Whitepapers</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-blue-300">100+</div>
-            <div className="text-sm text-blue-200">Total Articles</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-orange-300">2000+</div>
+            <div className="text-3xl font-bold text-purple-300">2,800+</div>
             <div className="text-sm text-blue-200">Pages of Insights</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-pink-300">2026</div>
+            <div className="text-sm text-blue-200">Future-Ready Topics</div>
           </div>
         </div>
       </div>
