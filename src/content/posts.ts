@@ -10,30 +10,15 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-    slug: "ai-2026-neural-architecture-search-breakthrough",
-    title: "Neural Architecture Search: The 2026 Breakthrough Revolutionizing AI Development",
-    description: "Discover how NAS breakthrough technology is delivering 300-500% performance improvements and 95% energy efficiency gains across Fortune 500 enterprises.",
-    category: "AI Development",
-    publishedAt: "2026-01-15",
-=======
     slug: "agent-release-zero-regret-2026",
     title: "Zero‑Regret Agent Releases 2026",
     description: "Budgeted actions, KPI‑linked canaries, sandboxed tools, and one‑click rollback for safe agent updates.",
     category: "AI Operations",
     publishedAt: "2025-09-30",
->>>>>>> feat/new-content-ads-sept30-2025
     featured: true,
     readTime: "15 min read"
   },
   {
-<<<<<<< HEAD
-    slug: "ai-2026-federated-learning-enterprise-breakthrough",
-    title: "Federated Learning Enterprise Breakthrough: Privacy-First AI at Global Scale",
-    description: "Transform your AI capabilities with privacy-preserving federated learning that delivers 300% performance improvements while maintaining 100% regulatory compliance.",
-    category: "Privacy AI",
-    publishedAt: "2026-01-15",
-=======
     slug: "ai-2025-oct-31-governed-agent-patterns-v2",
     title: "Governed Agent Patterns v2 (2025)",
     description: "Approvals, verifiers, budgets, and rollback—production patterns for safe autonomous agents.",
@@ -48,9 +33,26 @@ export const posts: BlogPost[] = [
     description: "Trace prompts, models, and costs to business outcomes with budget‑aware actions and rollback.",
     category: "Observability",
     publishedAt: "2025-09-30",
->>>>>>> feat/new-content-ads-sept30-2025
     featured: true,
     readTime: "18 min read"
+  },
+  {
+    slug: "edge-rate-limiter-blueprint-2026",
+    title: "Edge Rate Limiter Blueprint 2026",
+    description: "Global, sub‑ms rate limiting with KV, token buckets, and signed policies.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-operational-trust-scorecards-2026",
+    title: "AI Operational Trust Scorecards 2026",
+    description: "SLIs → KPIs with budgets, canaries, and instant rollback for safe autonomy.",
+    category: "AI Operations",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "8 min read"
   },
   {
     slug: "production-rag-quality-budgets-2026",
