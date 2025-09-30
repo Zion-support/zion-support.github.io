@@ -35,6 +35,17 @@ export const featuredBlogPosts: FeaturedItem[] = [
     featured: true
   },
   {
+<<<<<<< HEAD
+=======
+    id: "realtime-ai-decision-engines-2025",
+    title: "Real-Time AI Decision Engines",
+    description: "10M/sec under 1ms with tiered models and caches",
+    link: "/blog/real-time-ai-decision-engines-2025",
+    type: "article",
+    featured: true
+  },
+  {
+>>>>>>> bd6c0a8d4749d70d3172d2f109a68952e79551fc
     id: "privacy-first-telemetry-quickstart-2025",
     title: "Privacy‑First Telemetry Quickstart",
     description: "Signal‑rich analytics with scoped IDs and DP noise",

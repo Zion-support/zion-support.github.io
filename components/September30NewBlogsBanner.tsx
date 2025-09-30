@@ -107,12 +107,32 @@ export default function September30NewBlogsBanner() {
         </div>
 
         <div className="text-center mt-12">
-          <Link
-            href="/blog"
-            className="inline-block bg-white text-indigo-600 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
-          >
-            View All Latest Articles →
-          </Link>
+          <div className="flex flex-col md:flex-row items-center gap-4 justify-center">
+            <Link
+              href="/blog"
+              className="inline-block bg-white text-indigo-600 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
+            >
+              View All Latest Articles →
+            </Link>
+            <Link
+              href="/blog/ai-real-time-streaming-inference-2026"
+              className="inline-block bg-white/10 text-white border border-white/30 font-semibold py-4 px-8 rounded-lg hover:bg-white/20 transition-colors text-lg"
+            >
+              NEW: Streaming Inference 2026 →
+            </Link>
+            <Link
+              href="/blog/ai-responsible-ai-implementation-2025"
+              className="inline-block bg-white/10 text-white border border-white/30 font-semibold py-4 px-8 rounded-lg hover:bg-white/20 transition-colors text-lg"
+            >
+              NEW: Responsible AI 2025 →
+            </Link>
+            <Link
+              href="/blog/ai-enterprise-adoption-playbook-2025"
+              className="inline-block bg-white/10 text-white border border-white/30 font-semibold py-4 px-8 rounded-lg hover:bg-white/20 transition-colors text-lg"
+            >
+              NEW: Adoption Playbook 2025 →
+            </Link>
+          </div>
         </div>
       </div>
     </div>
