@@ -3,120 +3,117 @@ import Link from 'next/link';
 
 export default function January2026NeuromorphicRevolutionBanner() {
   return (
-    <section className="py-12 bg-gradient-to-r from-green-900 via-emerald-900 to-teal-900 text-white">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-3 mb-4">
+    <section className="py-16 bg-gradient-to-r from-purple-900 via-indigo-900 to-purple-900 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse opacity-20"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse opacity-20" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse opacity-20" style={{ animationDelay: '4s' }}></div>
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-4 relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 mb-6">
+            <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse">
+              🧠 JANUARY 2026 BREAKTHROUGH
+            </span>
+            <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse">
+              1000x PERFORMANCE
+            </span>
             <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse">
-              🧠 REVOLUTION
-            </span>
-            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">
-              1,000,000x FASTER
-            </span>
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-bold">
-              $1.5B ROI
+              $2.8B ROI
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            AI 2026: Neuromorphic Computing Revolution
+          
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            Neuromorphic Computing Revolution
           </h2>
-          <p className="text-xl text-green-200 max-w-4xl mx-auto mb-6">
-            Revolutionary brain-inspired computing systems that mimic the human brain's neural architecture, 
-            delivering unprecedented efficiency and performance in AI applications.
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Brain-inspired AI delivering 1000x performance improvements with 99% power reduction. 
+            Transform your operations with the future of computing.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400">1,000,000x</div>
-              <div className="text-sm text-green-200">Faster Processing</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400">1000x</div>
-              <div className="text-sm text-green-200">Energy Efficient</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400">$1.5B</div>
-              <div className="text-sm text-green-200">ROI Achieved</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-pink-400">99.9%</div>
-              <div className="text-sm text-green-200">Accuracy Rate</div>
-            </div>
-          </div>
         </div>
-        
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-green-400/30">
-            <h3 className="text-xl font-bold mb-4 text-green-200">Revolutionary Features</h3>
-            <ul className="space-y-3 text-green-100">
+
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg flex items-center justify-center">
+                <span className="text-2xl">🧠</span>
+              </div>
+              <h3 className="text-2xl font-bold text-white">Revolutionary Performance</h3>
+            </div>
+            <ul className="space-y-3 text-gray-300">
               <li className="flex items-center gap-2">
-                <span className="text-green-400">✓</span>
-                Brain-inspired neural architecture
+                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                1000x faster processing speeds
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-green-400">✓</span>
-                Parallel processing like biological neurons
+                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                99% reduction in power consumption
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-green-400">✓</span>
-                Ultra-low power consumption
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-green-400">✓</span>
+                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                 Real-time learning and adaptation
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-green-400">✓</span>
-                Fault tolerance and self-healing
+                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                Brain-inspired neural networks
               </li>
             </ul>
           </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-400/30">
-            <h3 className="text-xl font-bold mb-4 text-teal-200">Industry Applications</h3>
-            <ul className="space-y-3 text-teal-100">
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                <span className="text-2xl">💰</span>
+              </div>
+              <h3 className="text-2xl font-bold text-white">Proven ROI</h3>
+            </div>
+            <ul className="space-y-3 text-gray-300">
               <li className="flex items-center gap-2">
-                <span className="text-green-400">✓</span>
-                Autonomous vehicles with sub-millisecond decisions
+                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                $2.8B total ROI achieved
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-green-400">✓</span>
-                Healthcare with 99.9% diagnostic accuracy
+                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                300% return on investment
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-green-400">✓</span>
-                Financial services with real-time fraud detection
+                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                $500M annual energy savings
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-green-400">✓</span>
-                Industrial automation with predictive maintenance
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-green-400">✓</span>
-                Smart cities with real-time optimization
+                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                Fortune 500 success story
               </li>
             </ul>
           </div>
         </div>
-        
+
         <div className="text-center">
-          <div className="flex flex-wrap justify-center gap-4 mb-6">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href="/blog/ai-2026-neuromorphic-computing-revolution"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Explore Neuromorphic AI
-              <span className="text-xl">→</span>
+              Read Full Article →
             </Link>
             <Link
               href="/case-studies/ai-2026-neuromorphic-computing-mega-success"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-teal-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              View $1.5B Success Story
-              <span className="text-xl">→</span>
+              View Success Story →
+            </Link>
+            <Link
+              href="/services/neuromorphic-computing-consulting"
+              className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              Get Started →
             </Link>
           </div>
-          <p className="text-green-300 text-sm">
-            Join Fortune 100 companies achieving $1.5B+ ROI with neuromorphic computing
+          
+          <p className="text-gray-400 text-sm mt-6">
+            Join the neuromorphic computing revolution. Transform your AI infrastructure with brain-inspired technology.
           </p>
         </div>
       </div>
