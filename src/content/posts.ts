@@ -10,7 +10,36 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
+    // NEW — Enterprise roadmap update (featured)
+    slug: "ai-2027-enterprise-roadmap-v2",
+    title: "AI 2027 Enterprise Roadmap v2",
+    description: "Outcome‑led bets, KPI scorecards, and guardrails that scale reliably across portfolios.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    // NEW — Consentless testing v3 at the edge (featured)
+    slug: "edge-2026-consentless-testing-v3",
+    title: "Edge 2026: Consentless Testing v3",
+    description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B at <100ms.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    // NEW — GenAI cost controllers v3 (featured)
+    slug: "genai-cost-controllers-v3-2027",
+    title: "GenAI Cost Controllers v3 (2027)",
+    description: "Quality tiers + semantic caches + policy tests that cut spend 40–70% without UX loss.",
+    category: "FinOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-2026-reliability-runbooks-v4",
     title: "AI 2026: Reliability Runbooks v4",
     description: "Budgeted actions, KPI canaries, and instant rollback—v4 playbooks for dependable AI operations.",
@@ -29,8 +58,6 @@ export const posts: BlogPost[] = [
     readTime: "8 min read"
   },
   {
-=======
->>>>>>> origin/content-updates-2025-09-30
     slug: "ai-executive-playbook-2027",
     title: "AI Executive Playbook 2027: Fund, Govern, and Scale with KPIs",
     description: "Executive‑ready roadmap: KPI‑linked scorecards, budgeted actions, and governance that accelerates delivery.",
@@ -103,7 +130,6 @@ export const posts: BlogPost[] = [
     readTime: "9 min read"
   },
   {
-<<<<<<< HEAD
     slug: "edge-2026-private-feature-flags",
     title: "Edge 2026: Private Feature Flags at <100ms",
     description: "Signed configs, scoped IDs, and on‑device telemetry for zero‑PII rollouts worldwide under 100ms.",
@@ -140,8 +166,6 @@ export const posts: BlogPost[] = [
     readTime: "9 min read"
   },
   {
-=======
->>>>>>> origin/content-updates-2025-09-30
     slug: "ai-2027-customer-experience-agents",
     title: "AI 2027: Customer Experience Agents — 24/7 Autonomous CX",
     description: "Deploy trusted CX agents with budgets, live KPIs, and instant rollback that resolve 80% of tickets autonomously.",
