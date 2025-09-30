@@ -5,39 +5,39 @@ const NewContentAdvertisingBanner: React.FC = () => {
   const featuredContent = [
     {
       id: 1,
-      title: 'AI 2028: Autonomous Enterprise Revolution',
-      category: 'AI Strategy',
+      title: 'AI 2028: Autonomous Ops Guardrails',
+      category: 'AI Operations',
       readTime: '12 min',
       rating: 5.0,
       readers: '120K+',
-      badge: 'NEW 2028',
+      badge: 'NEW',
       gradient: 'from-blue-500 to-purple-500',
       icon: <Star className="w-6 h-6" />,
-      link: '/blog/ai-2028-autonomous-enterprise-revolution'
+      link: '/blog/ai-2028-autonomous-ops-guardrails'
     },
     {
       id: 2,
-      title: 'AI 2028: Autonomous FinOps Scorecards',
-      category: 'FinOps',
+      title: 'Edge 2028: Private Personalization <100ms',
+      category: 'Edge',
       readTime: '10 min',
       rating: 4.9,
       readers: '87K+',
       badge: 'FEATURED',
       gradient: 'from-cyan-500 to-blue-500',
       icon: <TrendingUp className="w-6 h-6" />,
-      link: '/blog/ai-2028-autonomous-finops-scorecards'
+      link: '/blog/edge-2028-private-personalization'
     },
     {
       id: 3,
-      title: 'GenAI Quality Tiers v2 (2026)',
-      category: 'GenAI',
+      title: 'GenAI 2028: Cost Tiers v4',
+      category: 'AI Operations',
       readTime: '8 min',
       rating: 4.9,
       readers: '47K+',
       badge: 'FEATURED',
       gradient: 'from-green-500 to-emerald-500',
       icon: <Award className="w-6 h-6" />,
-      link: '/blog/genai-quality-tiers-v2-2026'
+      link: '/blog/genai-2028-cost-tiers-v4'
     }
   ];
 

@@ -781,6 +781,34 @@ export const getLatestContent = (count: number = 5): FeaturedItem[] => {
     .slice(0, count);
 };
 
+// Oct 2025 – Promote three brand-new guides site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2028-autonomous-ops-guardrails",
+    title: "AI 2028: Autonomous Ops Guardrails",
+    description: "Budgets, live traces, and instant rollback that keep autonomy safe.",
+    link: "/blog/ai-2028-autonomous-ops-guardrails",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2028-private-personalization",
+    title: "Edge 2028: Private Personalization <100ms",
+    description: "Scoped IDs, on-device models, and DP noise for zero‑PII journeys.",
+    link: "/blog/edge-2028-private-personalization",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-2028-cost-tiers-v4",
+    title: "GenAI 2028: Cost Tiers v4",
+    description: "Tiering + semantic caches + policy tests for predictable spend.",
+    link: "/blog/genai-2028-cost-tiers-v4",
+    type: "article",
+    featured: true
+  }
+);
+
 // Sept 30, 2025 – Feature three brand-new posts just created
 featuredBlogPosts.unshift(
   {

@@ -149,13 +149,13 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Autonomous Risk Budgets + Autonomous Enterprise Revolution"
-          description="KPI‑linked budgets, instant rollback, and enterprise‑scale autonomy with measurable ROI."
+          title="New: Autonomous Ops Guardrails + Edge Private Personalization"
+          description="Budgets, live traces, instant rollback and <100ms zero‑PII journeys with on‑device models."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "AI 2028: Autonomous Risk Budgets", category: "AI Operations", link: "/blog/ai-2028-autonomous-risk-budgets" },
-            { title: "AI 2028: Autonomous Enterprise Revolution", category: "AI Strategy", link: "/blog/ai-2028-autonomous-enterprise-revolution" },
+            { title: "AI 2028: Autonomous Ops Guardrails", category: "AI Operations", link: "/blog/ai-2028-autonomous-ops-guardrails" },
+            { title: "Edge 2028: Private Personalization <100ms", category: "Edge", link: "/blog/edge-2028-private-personalization" },
             { title: "Agent Red‑Teaming 2026", category: "AI Security", link: "/blog/agent-red-teaming-2026" },
             { title: "Verifiable Edge Analytics 2026", category: "Analytics", link: "/blog/verifiable-edge-analytics-2026" },
             { title: "AI Executive Playbook 2027", category: "AI Strategy", link: "/blog/ai-executive-playbook-2027" },
