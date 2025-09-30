@@ -23,22 +23,6 @@ export const metadata = {
 
 export default function AutonomousAISystems2026() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <article className="prose prose-lg max-w-none">
-        <header className="mb-8">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">
-              Featured Article
-            </span>
-            <span className="text-gray-500 text-sm">18 min read</span>
-          </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            AI Autonomous Systems 2026: Enterprise Implementation Guide
-          </h1>
-          <p className="text-xl text-gray-600 mb-6">
-            Master autonomous AI systems with 300% ROI strategies and enterprise-ready deployment patterns. 
-            Achieve 80% automation and 90% efficiency gains.
-=======
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-900 to-pink-900 text-white py-20">
