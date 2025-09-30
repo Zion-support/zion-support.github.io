@@ -47,6 +47,15 @@ import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
+import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
+import AIRevolutionary2026Banner from '../components/AIRevolutionary2026Banner';
+import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
+import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
+import AI2027MegaSuccessBanner from '../components/AI2027MegaSuccessBanner';
+import QuantumAIRevolutionBanner from '../components/QuantumAIRevolutionBanner';
+import InteractiveAI2027Calculator from '../components/InteractiveAI2027Calculator';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -128,6 +137,10 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
+        {/* Revolutionary 2026 Content Banners */}
+        <Revolutionary2026ContentBanner />
+        <Latest2026ContentMegaBanner />
+        
         {/* AI 2026 Revolutionary Banners */}
         <NeuralSuperintelligence2026Banner />
         <NeuralSuperintelligenceSuccessBanner />
@@ -142,6 +155,15 @@ export default function HomePage() {
         <LatestContentShowcaseBanner />
         <InteractiveAICalculatorBanner />
         <AIInnovationShowcaseBanner />
+        
+        {/* Revolutionary 2027 AI Content Banners */}
+        <Revolutionary2027ContentBanner />
+        <QuantumAIRevolutionBanner />
+        <AI2027MegaSuccessBanner />
+        
+        {/* New 2026 Content Banners */}
+        <NewContent2026MegaBanner />
+        <AIRevolutionary2026Banner />
       
       {/* New Content Promotional Banners */}
       <MultimodalAIIntegrationBanner />
