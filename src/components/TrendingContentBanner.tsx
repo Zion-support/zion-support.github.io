@@ -18,6 +18,36 @@ const TrendingContentBanner: React.FC = () => {
 
   const trendingItems = [
     {
+      title: "AI Executive Playbook 2027",
+      description: "Exec roadmap: KPI scorecards, budgets, and governance.",
+      views: "14.8K",
+      readTime: "12 min",
+      category: "AI Strategy",
+      icon: Brain,
+      link: "/blog/ai-executive-playbook-2027",
+      badge: "NEW"
+    },
+    {
+      title: "AI 2027 Cost Optimization",
+      description: "Quality tiers + semantic caches for predictable spend.",
+      views: "13.6K",
+      readTime: "9 min",
+      category: "AI Operations",
+      icon: TrendingUp,
+      link: "/blog/ai-2027-cost-optimization-playbook",
+      badge: "HOT"
+    },
+    {
+      title: "Edge Private Feature Flags 2026",
+      description: "Signed configs, scoped IDs, on‑device telemetry <100ms.",
+      views: "11.9K",
+      readTime: "8 min",
+      category: "Architecture",
+      icon: Zap,
+      link: "/blog/edge-2026-private-feature-flags",
+      badge: "TRENDING"
+    },
+    {
       title: "Edge Rate Limiter 2026",
       description: "Global token buckets with KV and consistent hashing under 10ms.",
       views: "13.2K",
