@@ -48,6 +48,7 @@ import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculat
 import LatestContentBanner2025 from '../src/components/LatestContentBanner2025';
 import Latest2026ContentBanner from '../components/Latest2026ContentBanner';
 import September30NewContentBanner from '../components/September30NewContentBanner';
+import September30LatestContentBanner from '../components/September30LatestContentBanner';
 import Revolutionary2026ContentShowcase from '../components/Revolutionary2026ContentShowcase';
 
 export const metadata = {
@@ -269,6 +270,9 @@ export default function HomePage() {
 
       {/* 🔥 BREAKING: NEW CONTENT - SEPTEMBER 30, 2025 */}
       <September30NewContentBanner />
+      
+      {/* 🚀 BRAND NEW: SEPTEMBER 30 LATEST CONTENT */}
+      <September30LatestContentBanner />
       
       {/* Latest Content Banner 2025 - September 30 */}
       <LatestContentBanner2025 />
