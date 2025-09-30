@@ -642,3 +642,51 @@ export const NewContent2026ShowcaseBanner = () => (
     hideAfter={18}
   />
 );
+
+export const AutonomousManufacturingBanner = () => (
+  <PromotionalBanner
+    message="🏭 BREAKTHROUGH: AI Autonomous Manufacturing 2026 - Achieve 99.9% uptime, 40% cost reduction, and zero-defect production with next-generation smart factories"
+    ctaText="Read Article"
+    ctaLink="/blog/ai-autonomous-manufacturing-2026"
+    backgroundColor="bg-gradient-to-r from-green-600 to-blue-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const ManufacturingSuccessBanner = () => (
+  <PromotionalBanner
+    message="📊 SUCCESS STORY: $15M ROI with AI Autonomous Manufacturing - See how a Fortune 500 automotive manufacturer achieved zero-defect production and unprecedented efficiency"
+    ctaText="View Case Study"
+    ctaLink="/case-studies/ai-autonomous-manufacturing-success-2026"
+    backgroundColor="bg-gradient-to-r from-blue-600 to-green-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const EdgeComputingOptimizationBanner = () => (
+  <PromotionalBanner
+    message="⚡ NEW: AI Edge Computing Optimization 2026 - Master sub-50ms response times, 99.9% uptime, and 70% cost reduction with intelligent edge AI systems"
+    ctaText="Read Guide"
+    ctaLink="/blog/ai-edge-computing-optimization-2026"
+    backgroundColor="bg-gradient-to-r from-cyan-600 to-blue-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={15}
+  />
+);
+
+export const LatestContent2026Banner = () => (
+  <PromotionalBanner
+    message="🚀 LATEST 2026: Autonomous Manufacturing, Edge Computing & $15M ROI Success Stories - Cutting-Edge AI Content"
+    ctaText="Explore Latest"
+    ctaLink="/blog"
+    backgroundColor="bg-gradient-to-r from-purple-600 to-pink-600"
+    textColor="text-white"
+    autoHide={true}
+    hideAfter={20}
+  />
+);
