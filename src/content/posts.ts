@@ -1668,3 +1668,34 @@ posts.push(
   }
 );
 
+// Mar 1, 2026 – Brand‑new content to advertise across the homepage
+posts.push(
+  {
+    slug: "agent-observability-v2-2026",
+    title: "Agent Observability v2 (2026): Live Traces, SLIs, Instant Rollback",
+    description: "Deep visibility for agent tools with KPI‑linked SLIs, budgeted actions, and one‑click rollback.",
+    category: "AI Operations",
+    publishedAt: "2026-03-01",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-quality-tiers-2026",
+    title: "GenAI Quality Tiers 2026: Predictable Cost, Stable UX",
+    description: "Tiered models, cache strategy, and eval routes that cut spend 40–70% without hurting experience.",
+    category: "GenAI",
+    publishedAt: "2026-02-20",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-safe-analytics-2026",
+    title: "Privacy‑Safe Analytics 2026: Scoped IDs, Edge Aggregation, DP Noise",
+    description: "Actionable insights without PII using scoped identifiers, on‑device aggregation, and differential privacy.",
+    category: "Analytics",
+    publishedAt: "2026-02-10",
+    featured: true,
+    readTime: "6 min read"
+  }
+);
+
