@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "verifiable-edge-analytics-2026",
+    title: "Verifiable Edge Analytics 2026: Zero‑PII Insights with Attestations",
+    description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms.",
+    category: "Analytics",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "agent-red-teaming-2026",
+    title: "Agent Red‑Teaming 2026: Live Evals, Budgets, and Safe Autonomy",
+    description: "Operational red‑teaming with KPI‑linked evals, budgeted actions, and instant rollback to prevent regressions.",
+    category: "AI Security",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-2028-autonomous-governance-blueprint",
     title: "AI 2028: Autonomous Governance Blueprint",
     description: "Budgets, live scorecards, PR policy tests, and rollback for safe autonomy.",
