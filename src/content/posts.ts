@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-ethics-operational-blueprint-2026",
+    title: "AI Ethics Operational Blueprint 2026: Bias, Fairness, Auditability",
+    description: "A pragmatic guide to operationalizing AI ethics: bias tests, fairness SLAs, red-team drills, and audit-ready trails.",
+    category: "AI Governance",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-rag-blueprint-2026",
+    title: "Edge RAG Blueprint 2026: Fresh, Private Answers in <100ms",
+    description: "Signed configs, TTL freshness, hybrid retrieval, and on-device caches for trustworthy sub-100ms answers.",
+    category: "GenAI",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "platform-roi-scorecards-2026",
+    title: "Platform ROI Scorecards 2026: From Golden Paths to Revenue",
+    description: "Lightweight scorecards that connect platform capabilities to adoption, SLOs, and measurable business impact.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-e2e-tracing-2025",
     title: "E2E AI Tracing: From Prompt to Outcome KPIs",
     description: "Connect prompts, tools, and UX to measurable KPIs to prove ROI and prevent regressions.",
