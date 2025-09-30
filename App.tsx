@@ -6,6 +6,10 @@ import November2026QuantumSuperintelligenceBanner from "./components/November202
 import December2026UniversalConsciousnessBanner from "./components/December2026UniversalConsciousnessBanner";
 import ComprehensiveContentIntegrationBanner from "./components/ComprehensiveContentIntegrationBanner";
 import AI2027TranscendentIntelligenceBanner from "./components/AI2027TranscendentIntelligenceBanner";
+// NEWEST: December 2026 Singularity Achievement - MOST PROMINENT
+import December2026SingularityAchievementBanner from "./components/December2026SingularityAchievementBanner";
+// NEWEST: November 2026 Universal Intelligence - HIGHLY PROMINENT
+import November2026UniversalIntelligenceBanner from "./components/November2026UniversalIntelligenceBanner";
 import July2026RevolutionaryBreakthroughBanner from "./components/July2026RevolutionaryBreakthroughBanner";
 import July2026AutonomousIntelligenceBanner from "./components/July2026AutonomousIntelligenceBanner";
 import July2026ContentShowcaseBanner from "./components/July2026ContentShowcaseBanner";
@@ -114,6 +118,11 @@ export default function App(): JSX.Element {
       
       {/* NEWEST: Comprehensive Content Integration Banner - MOST PROMINENT */}
       <ComprehensiveContentIntegrationBanner />
+      {/* NEWEST: December 2026 Singularity Achievement - MOST PROMINENT */}
+      <December2026SingularityAchievementBanner />
+      
+      {/* NEWEST: November 2026 Universal Intelligence - HIGHLY PROMINENT */}
+      <November2026UniversalIntelligenceBanner />
       
       {/* NEWEST: October 2026 New Content Banner - MOST PROMINENT */}
       <October2026NewContentBanner />
