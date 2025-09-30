@@ -2457,6 +2457,28 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Additional brand new posts
+posts.push(
+  {
+    slug: "edge-2026-consentless-journeys-blueprint",
+    title: "Edge 2026: Consentless Journeys Blueprint (<100ms, Zero‑PII)",
+    description: "Scoped IDs, on‑device cohorts, and DP noise for compliant, personalized journeys worldwide.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-2026-e2e-observability-blueprint",
+    title: "AI 2026: E2E Observability Blueprint — From Token to KPI",
+    description: "Trace prompts, tools, costs, and outcomes end‑to‑end with budgets, SLIs, and rollback hooks.",
+    category: "Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  }
+);
+
 // Sept 30, 2025 – New articles to expand catalog and promote on homepage
 posts.push(
   {

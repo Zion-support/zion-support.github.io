@@ -150,18 +150,17 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Platform ROI Scorecards v2 + Consentless Metrics v3"
-          description="Golden paths that prove ROI in weeks + zero‑PII telemetry under 100ms."
+          title="New: Consentless Journeys + E2E AI Observability"
+          description="Blueprints you can ship today: personalized, zero‑PII journeys and token‑to‑KPI traces."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Platform ROI Scorecards v2", category: "Platform Engineering", link: "/blog/ai-2025-sept-30-platform-roi-scorecards-v2" },
-            { title: "Consentless Metrics v3", category: "Analytics", link: "/blog/edge-2025-sept-30-consentless-metrics-v3" },
+            { title: "Consentless Journeys Blueprint", category: "Analytics", link: "/blog/edge-2026-consentless-journeys-blueprint" },
+            { title: "E2E Observability Blueprint", category: "Observability", link: "/blog/ai-2026-e2e-observability-blueprint" },
             { title: "Edge Rate Limiter Blueprint 2026", category: "Edge Computing", link: "/blog/edge-rate-limiter-blueprint-2026" },
             { title: "AI 2027: Operational Scorecards", category: "AI Operations", link: "/blog/ai-2027-operational-scorecards" },
             { title: "AI 2027: Autonomous Roadmaps", category: "AI Strategy", link: "/blog/ai-2027-autonomous-roadmaps" },
             { title: "Autonomous Infra Blueprint v2", category: "AI Operations", link: "/blog/ai-2025-sept-30-autonomous-infra-blueprint-v2" },
-            { title: "Consentless Journeys Blueprint", category: "Analytics", link: "/blog/edge-2026-consentless-journeys-blueprint" },
             { title: "Platform ROI Scorecards", category: "AI Governance", link: "/blog/genai-2027-platform-roi-scorecards" }
           ]}
         />
