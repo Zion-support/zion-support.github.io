@@ -18,63 +18,6 @@ interface ContentItem {
 }
 
 const contentItems: ContentItem[] = [
-  // Brand new items (Sept 30, 2025)
-  {
-    id: 'ai-2027-operational-trust-blueprint',
-    title: 'AI 2027: Operational Trust Blueprint',
-    excerpt: 'SLIs wired to KPIs with budgeted actions, live canaries, and instant rollback.',
-    readTime: '9 min read',
-    category: 'AI Governance',
-    href: '/blog/ai-2027-operational-trust-blueprint',
-    featured: true,
-    publishedDate: '2025-09-30',
-    metrics: [
-      { value: '↗ KPI', label: 'Outcome Lift' },
-      { value: '↘ MTTR', label: 'Faster Recovery' }
-    ]
-  },
-  {
-    id: 'ai-2027-operational-scorecards',
-    title: 'AI 2027: Operational Scorecards — SLIs, Budgets, Rollback',
-    excerpt: 'Wire SLIs to KPIs with budgeted actions, approvals, and instant rollback for reliable autonomy.',
-    readTime: '9 min read',
-    category: 'AI Governance',
-    href: '/blog/ai-2027-operational-scorecards',
-    featured: true,
-    publishedDate: '2025-09-30',
-    metrics: [
-      { value: '↗ KPI', label: 'Outcome Lift' },
-      { value: '↘ MTTR', label: 'Faster Recovery' }
-    ]
-  },
-  {
-    id: 'edge-consentless-experiments-2026-q4',
-    title: 'Edge Consentless Experiments 2026 Q4: <100ms A/B Without PII',
-    excerpt: 'Scoped IDs, on-device metrics, and DP noise for compliant global experiments.',
-    readTime: '6 min read',
-    category: 'Analytics',
-    href: '/blog/edge-consentless-experiments-2026-q4',
-    featured: true,
-    publishedDate: '2025-09-30',
-    metrics: [
-      { value: '<100ms', label: 'Latency' },
-      { value: '0 PII', label: 'Collected' }
-    ]
-  },
-  {
-    id: 'edge-consentless-analytics-2026',
-    title: 'Edge Consentless Analytics 2026 — Scoped IDs, On‑Device, DP Noise',
-    excerpt: 'Compliant, fast analytics without PII: scoped IDs, device aggregation, and DP noise under 100ms.',
-    readTime: '8 min read',
-    category: 'Analytics',
-    href: '/blog/edge-consentless-analytics-2026',
-    featured: true,
-    publishedDate: '2025-09-30',
-    metrics: [
-      { value: '<100ms', label: 'Latency' },
-      { value: '0 PII', label: 'Collected' }
-    ]
-  },
   // Newly added items for additional promotion on the homepage
   {
     id: 'ai-sla-scorecards-2026-q1',

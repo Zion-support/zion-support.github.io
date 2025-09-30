@@ -1,4 +1,3 @@
-// @ts-nocheck
 import {
   ArrowRight,
   Award,
@@ -150,14 +149,16 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Reliable GenAI Platform + Edge Privacy Insights + Experiments"
-          description="Ship dependable GenAI with KPI‑linked guardrails, private <100ms insights, and global experiments."
+          title="New: Scorecards v4 + Zero‑PII Insights + Quality Tiers v2"
+          description="Ship faster with KPI‑linked scorecards, private <100ms analytics, and predictable GenAI costs."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Reliable GenAI Platform 2026", category: "GenAI", link: "/blog/ai-2026-reliable-genai-platform" },
-            { title: "Edge Privacy Insights 2026", category: "Analytics", link: "/blog/edge-privacy-insights-2026" },
-            { title: "Consentless Experiments Q4 2026", category: "Analytics", link: "/blog/edge-consentless-experiments-2026-q4" }
+            { title: "AI Operational Scorecards v4 (2026)", category: "AI Operations", link: "/blog/ai-operational-scorecards-v4-2026" },
+            { title: "Edge Zero‑PII Insights 2026", category: "Analytics", link: "/blog/edge-zero-pii-insights-2026" },
+            { title: "GenAI Quality Tiers v2 (2026)", category: "GenAI", link: "/blog/genai-quality-tiers-v2-2026" },
+            { title: "Edge RAG 2026", category: "GenAI", link: "/blog/edge-rag-privacy-preserving-2026" },
+            { title: "PR Policy Tests 2026", category: "AI Governance", link: "/blog/ai-governance-pr-policy-tests-2026" }
           ]}
         />
         {/* Fresh content banner promoting brand-new articles */}
@@ -184,19 +185,19 @@ const Home = () => {
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">
             <div className="text-white text-sm mb-4">Just added</div>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link to="/blog/ai-operational-scorecards-q4-2026" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+              <Link to="/blog/ai-operational-scorecards-v4-2026" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
                 <div className="text-emerald-300 text-xs mb-2">AI Operations</div>
-                <div className="text-white font-semibold">AI Operational Scorecards Q4 2026</div>
-                <div className="text-zion-slate-light text-sm mt-1">SLIs mapped to KPIs, budgeted actions, instant rollback.</div>
+                <div className="text-white font-semibold">AI Operational Scorecards v4 (2026)</div>
+                <div className="text-zion-slate-light text-sm mt-1">SLIs mapped to KPIs, budgeted actions, instant rollback teams adopt fast.</div>
               </Link>
-              <Link to="/blog/edge-consentless-metrics-2026" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+              <Link to="/blog/edge-zero-pii-insights-2026" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
                 <div className="text-cyan-300 text-xs mb-2">Analytics</div>
-                <div className="text-white font-semibold">Edge Consentless Metrics 2026</div>
-                <div className="text-zion-slate-light text-sm mt-1">Scoped IDs, on‑device aggregation, DP noise—zero PII.</div>
+                <div className="text-white font-semibold">Edge Zero‑PII Insights 2026</div>
+                <div className="text-zion-slate-light text-sm mt-1">Scoped IDs, on‑device aggregation, and DP noise—zero PII.</div>
               </Link>
-              <Link to="/blog/genai-budget-aware-routing-2026" className="block rounded-lg border border-white/10 p-4 hover:border-fuchsia-400/40 transition-colors">
+              <Link to="/blog/genai-quality-tiers-v2-2026" className="block rounded-lg border border-white/10 p-4 hover:border-fuchsia-400/40 transition-colors">
                 <div className="text-fuchsia-300 text-xs mb-2">GenAI</div>
-                <div className="text-white font-semibold">GenAI Budget‑Aware Routing 2026</div>
+                <div className="text-white font-semibold">GenAI Quality Tiers v2 (2026)</div>
                 <div className="text-zion-slate-light text-sm mt-1">Quality tiers and caches for predictable cost and stable UX.</div>
               </Link>
             </div>

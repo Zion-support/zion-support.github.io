@@ -2,6 +2,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, TrendingUp, Sparkles, Zap, Shield, Brain, Users, DollarSign, Clock, CheckCircle } from 'lucide-react';
+import NewContent2026ShowcaseBanner from '../../components/NewContent2026ShowcaseBanner';
+import Fortune500SuccessBanner from '../../components/Fortune500SuccessBanner';
+import AI2026BreakthroughBanner from '../../components/AI2026BreakthroughBanner';
 
 export const metadata = {
   title: 'Content Hub - AI Insights, Case Studies & Resources | Zion Tech Group',
@@ -171,6 +174,8 @@ export default function ContentHubPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <h2 className="text-xl md:text-2xl font-bold">New this week</h2>
             <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-agent-reliability-playbook-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Agent Reliability 2026<span>→</span></Link>
+              <Link href="/blog/privacy-safe-feature-flags-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Privacy‑Safe Flags 2026<span>→</span></Link>
               <Link href="/blog/ai-safety-scorecards-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">AI Safety Scorecards<span>→</span></Link>
               <Link href="/blog/edge-governed-flags-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Edge‑Governed Flags<span>→</span></Link>
               <Link href="/blog/genai-cache-playbook-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">GenAI Cache Playbook<span>→</span></Link>
@@ -184,13 +189,11 @@ export default function ContentHubPage() {
       <section className="py-8 bg-gradient-to-r from-emerald-700 via-teal-700 to-cyan-700 text-white border-b border-white/10">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <h2 className="text-2xl md:text-3xl font-bold">New this week: Governance, Routing, and Data Controls</h2>
-          <div className="flex flex-wrap gap-3">
-              <Link href="/blog/ai-2027-hyper-automation-blueprint" className="inline-flex items-center gap-2 bg-white text-emerald-700 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">Hyper‑Automation 2027<span>→</span></Link>
-              <Link href="/blog/ai-2026-real-time-agent-routing" className="inline-flex items-center gap-2 bg-white text-emerald-700 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">Agent Routing 2026<span>→</span></Link>
-              <Link href="/blog/ai-2026-autonomous-data-governance" className="inline-flex items-center gap-2 bg-white text-teal-700 px-4 py-2 rounded-lg font-semibold hover:bg-teal-50 transition-colors">Data Governance 2026<span>→</span></Link>
-              <Link href="/blog/ai-2025-generative-ai-governance-blueprint" className="inline-flex items-center gap-2 bg-white text-cyan-700 px-4 py-2 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">GenAI Governance 2025<span>→</span></Link>
-            <Link href="/blog/ai-2027-edge-native-agents" className="inline-flex items-center gap-2 bg-white text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">Edge‑Native Agents 2027<span>→</span></Link>
+            <h2 className="text-2xl md:text-3xl font-bold">New this week: Enterprise Breakthroughs, Automation Guides, and Fortune 500 Success Stories</h2>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-enterprise-breakthrough" className="inline-flex items-center gap-2 bg-white text-emerald-700 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">AI 2026 Breakthrough<span>→</span></Link>
+              <Link href="/blog/ai-automation-2026-complete-guide" className="inline-flex items-center gap-2 bg-white text-teal-700 px-4 py-2 rounded-lg font-semibold hover:bg-teal-50 transition-colors">Automation Guide<span>→</span></Link>
+              <Link href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="inline-flex items-center gap-2 bg-white text-cyan-700 px-4 py-2 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">Fortune 500 Success<span>→</span></Link>
             </div>
           </div>
         </div>
@@ -251,6 +254,13 @@ export default function ContentHubPage() {
               Discover our latest breakthrough research, case studies, and implementation guides 
               that are transforming enterprises worldwide.
             </p>
+          </div>
+
+          {/* New Promotional Banners */}
+          <div className="mb-16">
+            <NewContent2026ShowcaseBanner />
+            <Fortune500SuccessBanner />
+            <AI2026BreakthroughBanner />
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">

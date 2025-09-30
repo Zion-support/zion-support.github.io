@@ -148,8 +148,52 @@ export const featuredBlogPosts: FeaturedItem[] = [
   }
 ];
 
+// Oct 2025 – Add two brand-new featured posts
+featuredBlogPosts.unshift(
+  {
+    id: "ai-agent-reliability-playbook-2026",
+    title: "AI Agent Reliability Playbook 2026",
+    description: "Budgets, guardrails, canaries, and instant rollback for dependable agents",
+    link: "/blog/ai-agent-reliability-playbook-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "privacy-safe-feature-flags-2026",
+    title: "Privacy‑Safe Feature Flags 2026",
+    description: "Consent‑aware, scoped IDs, and DP‑hardened experimentation at <100ms",
+    link: "/blog/privacy-safe-feature-flags-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
+  {
+    id: "genai-reliability-scorecards-2027",
+    title: "GenAI Reliability Scorecards 2027",
+    description: "Live KPIs + budgets + rollback for affordable, reliable GenAI.",
+    link: "/blog/genai-reliability-scorecards-2027",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-private-analytics-2027",
+    title: "Edge Private Analytics 2027",
+    description: "Zero‑PII insights with scoped IDs and DP at <100ms.",
+    link: "/blog/edge-private-analytics-2027",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "enterprise-ai-sustainability-2027",
+    title: "Enterprise AI Sustainability 2027",
+    description: "Cut spend and carbon: tiers, green routing, workload shifting.",
+    link: "/blog/enterprise-ai-sustainability-2027",
+    type: "article",
+    featured: true
+  },
   {
     id: "ai-operational-scorecards-q4-2026",
     title: "AI Operational Scorecards Q4 2026",
@@ -420,6 +464,14 @@ export const getLatestContent = (count: number = 5): FeaturedItem[] => {
 // Surface fresh featured content (added Sept 30, 2025)
 featuredBlogPosts.unshift(
   {
+    id: "ai-operational-scorecards-v4-2026",
+    title: "AI Operational Scorecards v4 (2026)",
+    description: "SLIs mapped to KPIs with budgeted actions and instant rollback.",
+    link: "/blog/ai-operational-scorecards-v4-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-operational-scorecards-q4-2026",
     title: "AI Operational Scorecards Q4 2026",
     description: "SLIs mapped to KPIs, budgeted actions, instant rollback.",
@@ -468,6 +520,34 @@ featuredBlogPosts.unshift(
     title: "Agent Release Runbooks 2026",
     description: "Approvals, budgets, and instant rollback for safe autonomous releases",
     link: "/blog/agent-release-runbooks-2026",
+    type: "article",
+    featured: true
+  }
+);
+
+// Advertise freshly added posts (Sept 30, 2025) on homepage banners
+featuredBlogPosts.unshift(
+  {
+    id: "ai-governance-operational-checks-2026",
+    title: "AI Governance Operational Checks 2026",
+    description: "PR policy tests + KPI-linked canaries that keep teams fast and safe",
+    link: "/blog/ai-governance-operational-checks-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-personalization-under-100ms-2026",
+    title: "Edge Personalization 2026",
+    description: "Private <100ms journeys with scoped IDs and on-device models",
+    link: "/blog/edge-personalization-under-100ms-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-release-checklists-v2-2026",
+    title: "Agent Release Checklists v2 (2026)",
+    description: "Budgets, approvals, rollback—battle-tested playbooks for safe releases",
+    link: "/blog/agent-release-checklists-v2-2026",
     type: "article",
     featured: true
   }
