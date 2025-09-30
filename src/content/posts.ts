@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-operational-trust-q4-2025",
+    title: "AI Operational Trust Q4 2025: Live Scorecards that Ship",
+    description: "KPI‑linked guardrails with PR checks, budgeted actions, and instant rollback to ship faster with confidence.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-consentless-analytics-q4-2025",
+    title: "Consentless Edge Analytics Q4 2025: Private Metrics Under 100ms",
+    description: "Scoped IDs, on‑device aggregation, and differential privacy for compliant, low‑latency analytics with zero PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-routing-quality-tiers-q4-2025",
+    title: "GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX",
+    description: "Tiered models, caching, and budget‑aware routes mapped to SLOs to keep quality high and costs predictable.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-governance-runtime-scorecards-2026",
     title: "AI Governance Runtime Scorecards 2026: KPIs, Budgets, Rollback",
     description: "Live guardrails wired to KPIs with PR checks, budgets, and instant rollback that speed delivery.",
