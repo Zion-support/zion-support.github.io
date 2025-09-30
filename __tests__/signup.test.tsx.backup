@@ -1,29 +1,6 @@
 
 
 
-<<<<<<< HEAD
-=======
-module.exports = {};
-
-
-
-
-
-
-
-// Mock test for signup
-describe('Signup', () => {'
-
-  it('should render without crashing', () => {
-    expect(true).toBe(true);
-
-
-
-
-
-
-
->>>>>>> main
 
 
 

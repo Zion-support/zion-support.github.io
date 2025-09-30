@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-=======
-
->>>>>>> main
 ;
 const EnhancedFooter: React.FC = () => {
   const current_year = new Date ().getFullYear ();

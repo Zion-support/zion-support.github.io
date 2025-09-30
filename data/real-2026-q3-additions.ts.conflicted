@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const real2026Q3Additions = [
-  {
-    id: 'q3-2026-service-1',
-    name: 'Q3 2026 Service',
-    tagline: 'Q3 2026 service solutions',
-    price: '$399',
-    category: 'Q3 2026 Services'
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export interface Real2026Q3Addition {
   id: string;
   name: string;
@@ -25,9 +13,5 @@ export const real2026Q3Additions: Real2026Q3Addition[] = [
     tagline: 'Third quarter 2026 addition',
     price: '$899',
     features: ['Q3 2026 features', 'Latest innovations', 'Advanced solutions']
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];

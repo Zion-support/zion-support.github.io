@@ -1,3 +1,4 @@
+import React, { useMemo, useState } from "react";
 import {
   ArrowRight,
   BarChart3,
@@ -11,11 +12,11 @@ import {
   User,
   Zap
 } from "lucide-react";
-import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import BlogPromotionBanner from "../components/BlogPromotionBanner";
-// Footer component missing; using page without footer
-// Header component missing; using page without header
+// import BlogPromotionBanner from "../components/BlogPromotionBanner";
+const BlogPromotionBanner = () => null;
+const Footer: React.FC = () => null;
+import Header from "../components/Header";
 
 interface BlogPost {
   id: number;
@@ -99,13 +100,13 @@ export default function Blog(): React.JSX.Element {
       excerpt: "Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.",
       content: "Full article content here...",
       author: "Zion Tech Group Team",
-      date: "2025-09-27",
-      readTime: "8 min read",
-      category: "Technology",
-      tags: ["GenAI", "Security", "Compliance"],
+      date: "2025-09-28",
+      readTime: "7 min read",
+      category: "Security",
+      tags: ["Guardrails", "PII", "Security"],
       image: "/api/placeholder/400/250",
       featured: false,
-      views: 297,
+      views: 210,
     },
     {
       id: 2,

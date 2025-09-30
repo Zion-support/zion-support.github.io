@@ -8,21 +8,4 @@ node_modules
 tsconfig.tsbuildinfo
 core
 
-<<<<<<< HEAD
-# ignore build artifacts and crash dumps
-tsconfig.tsbuildinfo
-core
-tsconfig.tsbuildinfo
-=======
-# TypeScript build info
-*.tsbuildinfo
-<<<<<<< HEAD
-
-# Ignore coverage reports
-coverage/
-coverage
-coverage/
->>>>>>> origin/main
-=======
 /.pnpm-home
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1d64

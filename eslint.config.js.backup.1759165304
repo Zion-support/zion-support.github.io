@@ -45,31 +45,12 @@ export default [
       '**/data.disabled/**',
       '**/automation_backup/**',
       '**/broken_files_backup/**',
-<<<<<<< HEAD
-=======
-      '**/pages/**',
-      '**/store/**',
-      '**/tests/**',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b86b
       '**/vite.config-backup.*',
       '**/*.disabled.*',
       '**/*.backup.*',
       '**/*.broken.*',
       '**/*.corrupted.*',
       '**/*.temp.*',
-<<<<<<< HEAD
-      'jest.setup.js'
-=======
-      '**/*.disabled/**',
-      '**/*.backup/**',
-      '**/*.broken/**',
-      '**/*.corrupted/**',
-      '**/*.temp/**',
-      'jest.setup.js',
-      'scripts/**',
-      'coverage/**',
-      '*.d.ts'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b86b
     ]
   },
 

@@ -1,0 +1,13 @@
+import React from 'react';
+
+const NewContent2026AdvertisingMegaBanner = () => {
+  return (
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default NewContent2026AdvertisingMegaBanner;

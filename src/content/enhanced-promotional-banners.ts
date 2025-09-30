@@ -1,383 +1,168 @@
 export interface EnhancedPromotionalBanner {
   id: string;
-  message: string;
+  title: string;
+  description: string;
   ctaText: string;
   ctaLink: string;
-  backgroundColor: string;
-  textColor: string;
-  showClose: boolean;
-  autoHide: boolean;
-  hideAfter: number;
-  active: boolean;
-  priority: number;
-  variant: 'info' | 'success' | 'warning' | 'premium' | 'launch' | 'special';
+  variant: 'success' | 'warning' | 'info' | 'error';
   icon?: string;
-  animation?: string;
-  badge?: string;
-  featured?: boolean;
+  featured: boolean;
+  priority: number;
+  startDate: string;
+  endDate?: string;
 }
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   {
-    id: 'fresh-oct-15-2025',
-    message: '✨ New: Incident Budgets v2 + Edge Personalization 2026',
-    ctaText: 'Read now',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
-    priority: 0,
+    id: 'ai-ethics-operational-blueprint-2026',
+    title: '⚖️ AI Ethics Operational Blueprint 2026',
+    description: 'Bias tests, fairness SLAs, and audit trails teams adopt. Ship fast, stay compliant.',
+    ctaText: 'Read the blueprint',
+    ctaLink: '/blog/ai-ethics-operational-blueprint-2026',
     variant: 'info',
-    icon: '🆕',
-    animation: 'fade-in',
-    badge: 'NEW',
-    featured: true
-  },
-  {
-    id: 'fresh-oct-14-2025',
-    message: '✨ New: Risk Budgets 2026 • Privacy‑First Flags 2026 • Reliable Agent Actions',
-    ctaText: 'Read now',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
-    priority: 0,
-    variant: 'info',
-    icon: '🆕',
-    animation: 'fade-in',
-    badge: 'NEW',
-    featured: true
-  },
-  {
-    id: 'fresh-content-sep-2025',
-    message: '✨ New: Blue‑Green Agent Releases + Edge Feature Flags + Cost Controllers',
-    ctaText: 'Explore new posts',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 20,
-    active: true,
-    priority: 0,
-    variant: 'info',
-    icon: '✨',
-    animation: 'fade-in',
-    badge: 'NEW',
-    featured: true
-  },
-  {
-    id: 'ai-autonomous-infrastructure-launch',
-    message: '🚀 NEW: AI Autonomous Infrastructure Platform - Self-Healing Systems That Scale',
-    ctaText: 'Start Free Trial',
-    ctaLink: '/services/ai-autonomous-infrastructure-platform',
-    backgroundColor: 'bg-gradient-to-r from-green-600 to-emerald-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 20,
-    active: true,
-    priority: 0,
-    variant: 'launch',
-    icon: '🤖',
-    animation: 'pulse',
-    badge: 'LAUNCH SPECIAL',
-    featured: true
-  },
-  {
-<<<<<<< HEAD
-    id: 'agent-release-checklists-banner',
-    message: '✅ New: Agent Release Checklists + KPI‑Linked Canaries',
-    ctaText: 'Read now',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-emerald-700 to-teal-700',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
-    priority: 0,
-    variant: 'info',
-    icon: '✅',
-    animation: 'fade-in',
-    badge: 'NEW CONTENT',
-=======
-    id: 'fresh-sept-2025-content',
-    message: '📚 NEW: Serverless Inference Cost Playbook + Agent Safety Budgets (2025)',
-    ctaText: 'Read Now',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: false,
-    hideAfter: 0,
-    active: true,
-    priority: 0,
-    variant: 'special',
-    icon: '✨',
-    animation: 'pulse',
-    badge: 'NEW',
->>>>>>> cursor/create-and-deploy-new-content-9df8
-    featured: true
-  },
-  {
-    id: 'quantum-ai-hybrid-computing',
-    message: '⚛️ BREAKTHROUGH: Quantum-AI Hybrid Computing - 1000x Faster Processing Power',
-    ctaText: 'Schedule Demo',
-    ctaLink: '/services/quantum-ai-hybrid-computing',
-    backgroundColor: 'bg-gradient-to-r from-purple-600 to-indigo-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
+    icon: '⚖️',
+    featured: true,
     priority: 1,
-    variant: 'premium',
-    icon: '⚛️',
-    animation: 'bounce',
-    badge: 'BREAKTHROUGH',
-    featured: true
+    startDate: '2025-09-30',
   },
   {
-    id: 'ai-cybersecurity-zero-trust',
-    message: '🛡️ ADVANCED: AI-Powered Zero Trust Cybersecurity - 99.9% Threat Detection',
-    ctaText: 'Security Audit',
-    ctaLink: '/services/ai-cybersecurity-zero-trust',
-    backgroundColor: 'bg-gradient-to-r from-red-600 to-rose-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 16,
-    active: true,
-    priority: 1,
-    variant: 'warning',
-    icon: '🛡️',
-    animation: 'pulse',
-    badge: 'ADVANCED',
-    featured: true
-  },
-  {
-    id: 'new-content-alert-jan-2025',
-    message: '📚 FRESH CONTENT: 6 New Articles on AI Autonomous Systems, Quantum Computing & Zero Trust Security',
-    ctaText: 'Read Latest',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-blue-600 to-cyan-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 15,
-    active: true,
-    priority: 2,
-    variant: 'info',
-    icon: '📚',
-    animation: 'fade-in',
-    badge: 'NEW CONTENT',
-    featured: false
-  },
-  {
-    id: 'case-studies-success-stories',
-    message: '🏆 SUCCESS STORIES: Global Retail Corp 45% Revenue Growth, Healthcare 99.9% Uptime',
-    ctaText: 'View Case Studies',
-    ctaLink: '/case-studies',
-    backgroundColor: 'bg-gradient-to-r from-yellow-600 to-orange-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 17,
-    active: true,
-    priority: 2,
+    id: 'edge-rag-blueprint-2026',
+    title: '🛰️ Edge RAG Blueprint 2026 — <100ms Private Answers',
+    description: 'Freshness TTLs, hybrid retrieval, and on-device caches for trustworthy answers.',
+    ctaText: 'Explore Edge RAG',
+    ctaLink: '/blog/edge-rag-blueprint-2026',
     variant: 'success',
-    icon: '🏆',
-    animation: 'slide-in',
-    badge: 'SUCCESS STORIES',
-    featured: false
+    icon: '🛰️',
+    featured: true,
+    priority: 2,
+    startDate: '2025-09-30',
   },
   {
-    id: 'special-offer-jan-2025',
-    message: '🎯 LIMITED TIME: 50% OFF AI Autonomous Infrastructure Platform - Valid Until March 31, 2025',
-    ctaText: 'Claim Offer',
-    ctaLink: '/services/ai-autonomous-infrastructure-platform#pricing',
-    backgroundColor: 'bg-gradient-to-r from-pink-600 to-rose-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: false,
-    hideAfter: 0,
-    active: true,
-    priority: 3,
-    variant: 'special',
-    icon: '🎯',
-    animation: 'pulse',
-    badge: 'LIMITED TIME',
-    featured: true
-  },
-  {
-    id: 'ai-content-generation-automation',
-    message: '📝 NEW: AI Content Generation Platform - 10x Content Production with Brand Consistency',
-    ctaText: 'Start Trial',
-    ctaLink: '/services/ai-content-generation-automation',
-    backgroundColor: 'bg-gradient-to-r from-teal-600 to-green-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 14,
-    active: true,
-    priority: 3,
+    id: 'platform-roi-scorecards-2026',
+    title: '📈 Platform ROI Scorecards 2026',
+    description: 'Connect golden paths to adoption, SLOs, and revenue with actionable scorecards.',
+    ctaText: 'See the guide',
+    ctaLink: '/blog/platform-roi-scorecards-2026',
     variant: 'info',
-    icon: '📝',
-    animation: 'fade-in',
-    badge: 'NEW SERVICE',
-    featured: false
+    icon: '📈',
+    featured: true,
+    priority: 3,
+    startDate: '2025-09-30',
   },
   {
-    id: 'ai-customer-experience-platform',
-    message: '💬 TRANSFORM: AI Customer Experience Platform - 45% Revenue Increase, 90% Satisfaction',
-    ctaText: 'Transform CX',
-    ctaLink: '/services/ai-customer-experience-platform',
-    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 13,
-    active: true,
-    priority: 4,
-    variant: 'premium',
-    icon: '💬',
-    animation: 'bounce',
-    badge: 'TRANSFORM',
-    featured: false
+    id: 'multimodal-ai-launch',
+    title: '🎭 Multimodal AI Revolution - Just Released!',
+    description: 'Master unified vision-language-audio AI achieving 98% accuracy. Transform your applications with cutting-edge multimodal capabilities.',
+    ctaText: 'Explore Multimodal AI',
+    ctaLink: '/blog/multimodal-ai-revolution-2025',
+    variant: 'success',
+    icon: '🎭',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-15',
   },
   {
-    id: 'ai-supply-chain-optimization',
-    message: '🚚 OPTIMIZE: AI Supply Chain Platform - 65% Faster Deliveries, 40% Cost Reduction',
-    ctaText: 'Optimize Now',
-    ctaLink: '/services/ai-supply-chain-optimization',
-    backgroundColor: 'bg-gradient-to-r from-orange-600 to-red-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 12,
-    active: true,
-    priority: 4,
+    id: 'blockchain-ai-integration',
+    title: '⛓️ Blockchain-AI Integration Now Available',
+    description: 'Combine blockchain immutability with AI intelligence for trustless, verifiable systems. Decentralized AI governance at scale.',
+    ctaText: 'Learn About Blockchain-AI',
+    ctaLink: '/blog/blockchain-ai-integration-2025',
     variant: 'info',
-    icon: '🚚',
-    animation: 'slide-in',
-    badge: 'OPTIMIZE',
-    featured: false
+    icon: '⛓️',
+    featured: true,
+    priority: 2,
+    startDate: '2025-10-15',
   },
   {
-    id: 'free-consultation-offer',
-    message: '🎁 FREE: AI Strategy Consultation - Discover How AI Can Transform Your Business',
-    ctaText: 'Book Free Call',
-    ctaLink: '/contact',
-    backgroundColor: 'bg-gradient-to-r from-cyan-600 to-blue-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: false,
-    hideAfter: 0,
-    active: true,
+    id: 'green-ai-sustainability',
+    title: '🌱 Green AI: 90% Carbon Reduction Achieved',
+    description: 'Build sustainable AI systems with carbon-neutral ML at scale. Join the environmental revolution in AI.',
+    ctaText: 'Discover Green AI',
+    ctaLink: '/blog/green-ai-sustainability-2025',
+    variant: 'success',
+    icon: '🌱',
+    featured: true,
+    priority: 3,
+    startDate: '2025-10-15',
+  },
+  {
+    id: 'ai-predictive-maintenance',
+    title: '⚙️ AI Predictive Maintenance - 85% Downtime Reduction',
+    description: 'New service: Predict equipment failures with 98% accuracy. Reduce costs by 40% and eliminate unplanned downtime.',
+    ctaText: 'Get Started',
+    ctaLink: '/services/ai-predictive-maintenance',
+    variant: 'warning',
+    icon: '⚙️',
+    featured: true,
+    priority: 4,
+    startDate: '2025-10-15',
+  },
+  {
+    id: 'ai-talent-acquisition',
+    title: '👥 AI Talent Acquisition - 10x Faster Hiring',
+    description: 'Revolutionary recruiting with AI matching candidates 10x faster with 95% accuracy. Transform your HR operations.',
+    ctaText: 'Explore Solution',
+    ctaLink: '/services/ai-talent-acquisition',
+    variant: 'info',
+    icon: '👥',
+    featured: true,
     priority: 5,
-    variant: 'special',
-    icon: '🎁',
-    animation: 'pulse',
-    badge: 'FREE',
-    featured: false
+    startDate: '2025-10-15',
   }
   ,
   {
-    id: 'fresh-content-oct-2025-b2',
-    message: '🆕 New today: Agent Evals 2026 + Privacy‑Preserving Agents',
+    id: 'oct-30-new-content-drop',
+    title: '🚀 New Content Drop: Platform ROI, Supply Chain v2, Edge Experiments',
+    description: 'Three fresh deep-dives: value realization, signed attestations, and sub‑100ms privacy‑first experiments.',
     ctaText: 'Read the latest',
     ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 20,
-    active: true,
+    variant: 'success',
+    icon: '🚀',
+    featured: true,
     priority: 0,
-    variant: 'info',
-    icon: '🆕',
-    animation: 'fade-in',
-    badge: 'JUST IN',
-    featured: true
-  },
-  {
-    id: 'fresh-content-oct-2025',
-    message: '📚 New: AI Risk Budgets + Privacy‑Preserving Agents — read now',
-    ctaText: 'Explore latest',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-blue-700 to-cyan-700',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 20,
-    active: true,
-    priority: 0,
-    variant: 'info',
-    icon: '✨',
-    animation: 'fade-in',
-    badge: 'NEW CONTENT',
-    featured: true
-  }
-  ,
-  {
-    id: 'ai-supply-chain-optimization-spotlight',
-    message: '🚚 New: AI Supply Chain Optimization—65% Faster Deliveries',
-    ctaText: 'Read Playbook',
-    ctaLink: '/blog/ai-supply-chain-optimization-2025',
-    backgroundColor: 'bg-gradient-to-r from-amber-600 to-orange-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
-    priority: 0,
-    variant: 'premium',
-    icon: '🚚',
-    animation: 'slide-in',
-    badge: 'NEW',
-    featured: true
-  },
-  {
-    id: 'privacy-first-observability-quickstart-spotlight',
-    message: '🔒 New: Privacy‑First Observability Quickstart—Ship Signal‑Rich, PII‑Safe Telemetry',
-    ctaText: 'View Guide',
-    ctaLink: '/blog/privacy-first-observability-quickstart-2025',
-    backgroundColor: 'bg-gradient-to-r from-slate-700 to-gray-900',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
-    priority: 1,
-    variant: 'info',
-    icon: '🔒',
-    animation: 'fade-in',
-    badge: 'GUIDE',
-    featured: false
+    startDate: '2025-10-30'
   }
 ];
 
-export const getActiveEnhancedBanners = () => {
+// Sept 30, 2025 – Fresh homepage banner promoting the new content
+enhancedPromotionalBanners.push({
+  id: 'sept30-fresh-content-2025',
+  title: '🚀 Fresh Drop: Governance Guardrails, Edge Inference, Agent Observability',
+  description: 'Three new deep-dives just landed. Ship fast with policy checks, deliver <100ms at the edge, and get live traces for agents.',
+  ctaText: 'Read the latest',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '🚀',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
+// Sept 30, 2025 – New homepage promo for latest content set
+enhancedPromotionalBanners.push({
+  id: 'sept30-autonomous-euai-edge-2025',
+  title: '🔥 New: Autonomous Infra, EU AI Act Playbook, Edge RAG Cold‑Starts',
+  description: 'Zero‑touch ops with budgets + live canaries, practical EU AI Act guardrails, and <100ms private answers with warm pools.',
+  ctaText: 'Explore the new content',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '✨',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
+export const getActiveEnhancedBanners = (): EnhancedPromotionalBanner[] => {
+  const now = new Date();
   return enhancedPromotionalBanners
-    .filter(banner => banner.active)
+    .filter(banner => {
+      const startDate = new Date(banner.startDate);
+      const endDate = banner.endDate ? new Date(banner.endDate) : null;
+      return startDate <= now && (!endDate || endDate >= now);
+    })
     .sort((a, b) => a.priority - b.priority);
 };
 
-export const getFeaturedBanners = () => {
-  return enhancedPromotionalBanners
-    .filter(banner => banner.featured && banner.active)
-    .sort((a, b) => a.priority - b.priority);
-};
-
-export const getBannersByVariant = (variant: EnhancedPromotionalBanner['variant']) => {
-  return enhancedPromotionalBanners
-    .filter(banner => banner.variant === variant && banner.active)
-    .sort((a, b) => a.priority - b.priority);
+export const getFeaturedBanners = (): EnhancedPromotionalBanner[] => {
+  return getActiveEnhancedBanners().filter(banner => banner.featured);
 };

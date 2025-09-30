@@ -1,10 +1,13 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React from "react";
+import { useParams } from "react-router-dom";
 
-const Post: React.FC = () => {
+export default function Post(): React.JSX.Element {
   const { slug } = useParams();
-  return <div className="container mx-auto px-6 py-16 text-white">Post: {slug}</div>;
-};
-
-export default Post;
+  return (
+    <main style={{ padding: "2rem" }}>
+      <h1>Post</h1>
+      <p>{slug}</p>
+    </main>
+  );
+}
 
