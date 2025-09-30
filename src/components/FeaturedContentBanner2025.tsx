@@ -4,33 +4,33 @@ export default function FeaturedContentBanner2025() {
   const featuredContent = [
     {
       type: 'blog',
-      title: 'AI 2025: The Enterprise Autonomous Operations Revolution',
-      excerpt: 'Discover how Fortune 500 companies are achieving 95% automation rates and $2M+ annual savings through next-generation autonomous AI operations.',
-      href: '/blog/ai-autonomous-operations-2025',
-      image: '🚀',
+      title: 'AI Autonomous Enterprise Operations: Complete 2025 Guide',
+      excerpt: 'Master autonomous AI operations with proven frameworks achieving 95% automation rates, $2M+ annual savings, and 99.99% uptime through comprehensive implementation strategies.',
+      href: '/blog/ai-autonomous-enterprise-operations-2025',
+      image: '🤖',
       category: 'Latest AI Innovation',
-      readTime: '12 min read',
-      publishDate: 'Jan 27, 2025'
+      readTime: '45 min read',
+      publishDate: 'Jan 30, 2025'
     },
     {
-      type: 'case-study',
-      title: 'Fortune 500 AI Transformation: $50M Annual Savings',
-      excerpt: 'How we helped a Fortune 500 company achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation.',
-      href: '/case-studies/fortune-500-ai-transformation',
+      type: 'blog',
+      title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
+      excerpt: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.',
+      href: '/blog/ai-enterprise-transformation-2025',
       image: '💰',
       category: 'Success Story',
-      readTime: '8 min read',
-      publishDate: 'Jan 25, 2025'
+      readTime: '50 min read',
+      publishDate: 'Jan 28, 2025'
     },
     {
-      type: 'service',
-      title: 'AI Autonomous Operations Services',
-      excerpt: 'Transform your enterprise with fully autonomous AI operations. Achieve 95% automation rates and $2M+ annual savings with our cutting-edge solutions.',
-      href: '/services/ai-autonomous-operations',
-      image: '⚡',
-      category: 'New Service',
-      readTime: '5 min read',
-      publishDate: 'Jan 20, 2025'
+      type: 'blog',
+      title: 'AI Innovation Labs: Product Development Revolution',
+      excerpt: 'Revolutionize product development with AI Innovation Labs achieving 10x faster time-to-market, 85% cost reduction, and 300% innovation acceleration.',
+      href: '/blog/ai-innovation-labs-product-development-2025',
+      image: '🚀',
+      category: 'Innovation Lab',
+      readTime: '40 min read',
+      publishDate: 'Jan 25, 2025'
     }
   ];
 
@@ -40,14 +40,14 @@ export default function FeaturedContentBanner2025() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
             <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">
-              🚀 Latest Content & Innovations
+              🚀 Latest AI Breakthroughs & Innovations
             </span>
           </div>
           <h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Featured Content
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our latest insights, success stories, and cutting-edge AI solutions that are transforming enterprises worldwide.
+            Discover breakthrough AI innovations, $50M+ savings strategies, and revolutionary product development frameworks that are transforming Fortune 500 companies worldwide.
           </p>
         </div>
 
