@@ -24,10 +24,22 @@ import Revolutionary2026MegaBreakthroughBanner from "./components/Revolutionary2
 import Revolutionary2026ContentAdvertisingBanner from "./components/Revolutionary2026ContentAdvertisingBanner";
 import January2026BreakthroughShowcaseBanner from "./components/January2026BreakthroughShowcaseBanner";
 import Ultimate2026ContentPromotionalBanner from "./components/Ultimate2026ContentPromotionalBanner";
+import Revolutionary2026ContentMegaBreakthroughBanner from "./components/Revolutionary2026ContentMegaBreakthroughBanner";
+import January2026RevolutionaryContentBanner from "./components/January2026RevolutionaryContentBanner";
+import NewContent2026AdvertisingMegaBanner from "./components/NewContent2026AdvertisingMegaBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEW: Revolutionary 2026 Content Mega Breakthrough Banner - Most Prominent */}
+      <Revolutionary2026ContentMegaBreakthroughBanner />
+      
+      {/* NEW: January 2026 Revolutionary Content Banner */}
+      <January2026RevolutionaryContentBanner />
+      
+      {/* NEW: New Content 2026 Advertising Mega Banner */}
+      <NewContent2026AdvertisingMegaBanner />
+      
       {/* Revolutionary AI 2026 Mega Breakthrough Banner - Most Prominent */}
       <Revolutionary2026ContentAdvertisingBanner />
       
