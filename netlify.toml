@@ -1,6 +1,6 @@
 [build]
-  # Publish prebuilt dist without running a build
-  command = "echo 'Skipping build - deploying prebuilt dist'"
+  # Build the project using Vite
+  command = "pnpm run build:optimized"
   publish = "dist"
   command_timeout = "30m"
 
