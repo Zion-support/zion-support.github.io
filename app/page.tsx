@@ -32,6 +32,7 @@ import April2026MegaBreakthroughBanner from '../components/April2026MegaBreakthr
 import QuantumConsciousnessFusionBanner from '../components/QuantumConsciousnessFusionBanner';
 import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import January2026BreakthroughInnovationsBanner from '../components/January2026BreakthroughInnovationsBanner';
 
 export const metadata: Metadata = {
@@ -56,6 +57,10 @@ import AI2026QuantumNeuralOptimizationBanner from '../components/AI2026QuantumNe
 import MetaCognitiveRevolutionaryBanner from '../components/MetaCognitiveRevolutionaryBanner';
 import QuantumNeuralSuperintelligenceBanner from '../components/QuantumNeuralSuperintelligenceBanner';
 >>>>>>> origin/cursor/create-and-deploy-new-content-e535
+=======
+import January2026RevolutionaryBreakthroughsBanner from '../components/January2026RevolutionaryBreakthroughsBanner';
+import February2026MegaBreakthroughBanner from '../components/February2026MegaBreakthroughBanner';
+>>>>>>> origin/cursor/create-and-deploy-new-content-7d4e
 
 export default function HomePage() {
   return (
@@ -225,6 +230,7 @@ export default function HomePage() {
         </div>
       </header>
 
+<<<<<<< HEAD
       {/* NEW: December 2026 Mega Breakthrough Banner - Most Prominent */}
       <December2026MegaBreakthroughBanner />
       
@@ -233,6 +239,13 @@ export default function HomePage() {
       
       {/* NEW: February 2027 Quantum Consciousness Banner */}
       <February2027QuantumConsciousnessBanner />
+=======
+      {/* NEW: February 2026 Mega Breakthrough Banner - Most Prominent */}
+      <February2026MegaBreakthroughBanner />
+      
+      {/* NEW: January 2026 Revolutionary Breakthroughs Banner */}
+      <January2026RevolutionaryBreakthroughsBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-7d4e
       
       {/* NEW: April 2026 Mega Breakthrough Banner */}
       <April2026MegaBreakthroughBanner />

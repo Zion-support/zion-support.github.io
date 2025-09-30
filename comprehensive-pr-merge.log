@@ -447,3 +447,30 @@ error: failed to push some refs to 'https://github.com/Zion-Holdings/zion.app'
 [2025-09-30T21:32:24.057Z] ✅ Check git status successful.
 [2025-09-30T21:32:24.057Z] 🔧 Found merge conflicts, attempting to resolve...
 [2025-09-30T21:32:24.057Z] 🚀 Add all files: git add .
+[2025-09-30T21:32:24.146Z] ✅ Add all files successful.
+[2025-09-30T21:32:24.146Z] 🚀 Check status after add: git status --porcelain
+[2025-09-30T21:32:24.202Z] ✅ Check status after add successful.
+[2025-09-30T21:32:24.202Z] ✅ Conflicts resolved automatically
+[2025-09-30T21:32:24.202Z] 🚀 Commit conflict resolution: git commit -m "Resolve merge conflicts for PR #24314"
+[2025-09-30T21:32:24.264Z] ✅ Commit conflict resolution successful.
+[2025-09-30T21:32:24.264Z] 🚀 Push resolved changes: git push origin main
+[2025-09-30T21:32:26.060Z] ✅ Push resolved changes successful.
+[2025-09-30T21:32:26.061Z] ✅ Successfully resolved conflicts and merged PR #24314
+[2025-09-30T21:32:26.061Z] 🔒 Closing PR #24314...
+[2025-09-30T21:32:26.188Z] ❌ GitHub API request failed: Resource not accessible by integration
+[2025-09-30T21:32:26.188Z] ❌ Failed to close PR #24314: Resource not accessible by integration
+[2025-09-30T21:32:26.188Z] 🗑️ Deleting branch cursor/create-and-deploy-new-content-e535...
+[2025-09-30T21:32:26.188Z] 🚀 Delete remote branch cursor/create-and-deploy-new-content-e535: git push origin --delete cursor/create-and-deploy-new-content-e535
+[2025-09-30T21:32:27.735Z] ✅ Delete remote branch cursor/create-and-deploy-new-content-e535 successful.
+[2025-09-30T21:32:27.735Z] ✅ Successfully deleted branch cursor/create-and-deploy-new-content-e535
+[2025-09-30T21:32:28.737Z] 🔄 Processing PR #24313: Create and deploy new content
+[2025-09-30T21:32:28.740Z] 🚀 Fetch PR branch cursor/create-and-deploy-new-content-7d4e: git fetch origin cursor/create-and-deploy-new-content-7d4e
+[2025-09-30T21:32:29.678Z] ✅ Fetch PR branch cursor/create-and-deploy-new-content-7d4e successful.
+[2025-09-30T21:32:29.679Z] 🚀 Merge PR #24313: git merge origin/cursor/create-and-deploy-new-content-7d4e --no-ff -m "Merge PR #24313: Create and deploy new content"
+[2025-09-30T21:32:29.973Z] ❌ Merge PR #24313 failed: Command failed: git merge origin/cursor/create-and-deploy-new-content-7d4e --no-ff -m "Merge PR #24313: Create and deploy new content"
+[2025-09-30T21:32:29.973Z] ⚠️ Merge failed, attempting to resolve conflicts: Command failed: git merge origin/cursor/create-and-deploy-new-content-7d4e --no-ff -m "Merge PR #24313: Create and deploy new content"
+[2025-09-30T21:32:29.973Z] 🔧 Resolving merge conflicts for branch: cursor/create-and-deploy-new-content-7d4e
+[2025-09-30T21:32:29.973Z] 🚀 Check git status: git status --porcelain
+[2025-09-30T21:32:30.055Z] ✅ Check git status successful.
+[2025-09-30T21:32:30.056Z] 🔧 Found merge conflicts, attempting to resolve...
+[2025-09-30T21:32:30.056Z] 🚀 Add all files: git add .
