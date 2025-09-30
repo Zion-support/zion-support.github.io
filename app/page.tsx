@@ -43,6 +43,22 @@ import {
   InteractiveAICalculatorBanner,
   AIInnovationShowcaseBanner
 } from '../components/NewContent2026Banners';
+import {
+  NewContent2026MegaBanner,
+  AIRevolutionary2026Banner,
+  Revolutionary2026ContentBanner,
+  LatestAIInnovations2026Banner
+} from '../components/NewContent2026Banners';
+import {
+  AI2026ContentShowcaseBanner,
+  AIEnterpriseAutomationRevolutionBanner,
+  AIQuantumComputingBreakthroughBanner,
+  AIMegaTransformationSuccessBanner,
+  AI2026InnovationShowcaseBanner,
+  LatestContent2026MegaBanner
+} from '../components/NewContent2026MegaBanners';
+import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculator';
+import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -154,7 +170,11 @@ export default function HomePage() {
       <AIQuantumComputingBreakthroughBanner />
       <AIMegaTransformationSuccessBanner />
       <AI2026InnovationShowcaseBanner />
+<<<<<<< HEAD
 >>>>>>> feature/new-content-and-advertising-2026
+=======
+      <LatestContent2026MegaBanner />
+>>>>>>> cursor/create-and-deploy-new-content-a02c
       
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
@@ -326,8 +346,16 @@ export default function HomePage() {
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Interactive AI Calculator 2025 */}
       <InteractiveAICalculator2025 />
+=======
+      {/* Interactive AI Calculator */}
+      <InteractiveAICalculator2026 />
+      
+      {/* New Interactive AI 2026 Calculator */}
+      <InteractiveAI2026Calculator />
+>>>>>>> cursor/create-and-deploy-new-content-a02c
 
 =======
       {/* Interactive AI ROI Calculator */}
@@ -372,6 +400,9 @@ export default function HomePage() {
       <LatestContent2026ShowcaseBanner />
       
       {/* Interactive Content Showcase 2026 */}
+      <InteractiveContentShowcase2026 />
+      
+      {/* New Interactive Content Showcase 2026 */}
       <InteractiveContentShowcase2026 />
 
       {/* Latest Innovations Section */}
