@@ -1026,6 +1026,45 @@ export default function ContentHubPage() {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Latest Content</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Link href="/blog/ai-2026-reliable-genai-platform" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    New Article
+                  </span>
+                  <span className="text-sm text-gray-500">20 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                  Reliable GenAI Platform 2026
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Policy guardrails, online evals, and cost-aware routing for measurable outcomes.
+                </p>
+                <div className="text-indigo-600 font-semibold group-hover:text-indigo-700 transition-colors">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/blog/ai-2026-e2e-ai-tracing" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    AI Operations
+                  </span>
+                  <span className="text-sm text-gray-500">12 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors">
+                  E2E AI Tracing 2026
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Instrument prompts, tools, external calls, budgets, and KPIs with full traces.
+                </p>
+                <div className="text-cyan-600 font-semibold group-hover:text-cyan-700 transition-colors">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
             <Link href="/blog/ai-2026-enterprise-automation" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">

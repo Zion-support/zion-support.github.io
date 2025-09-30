@@ -19,6 +19,19 @@ export default function HomePage() {
           <p className="text-lg md:text-xl text-gray-300">Leading AI insights, case studies, and implementation guides.</p>
         </div>
       </section>
+
+      {/* New this week — promote fresh content */}
+      <section className="py-6 border-t border-b border-white/10 bg-white/5">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+            <div className="text-white font-semibold">New this week</div>
+            <div className="flex flex-wrap gap-2">
+              <a href="/blog/ai-2026-reliable-genai-platform" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">Reliable GenAI Platform 2026<span>→</span></a>
+              <a href="/blog/ai-2026-e2e-ai-tracing" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">E2E AI Tracing 2026<span>→</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
       
       {/* Revolutionary 2026 Content Advertising Banner */}
       <Revolutionary2026ContentAdvertisingBanner />
