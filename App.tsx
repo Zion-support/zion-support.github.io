@@ -40,10 +40,18 @@ import March2026AdvertisingMegaBanner from "./components/March2026AdvertisingMeg
 import March2026BreakthroughBanner from "./components/March2026BreakthroughBanner";
 import RevolutionaryContentShowcase2026 from "./components/RevolutionaryContentShowcase2026";
 import InteractiveContentHub2026 from "./components/InteractiveContentHub2026";
+import April2026MegaBreakthroughBanner from "./components/April2026MegaBreakthroughBanner";
+import April2026RevolutionaryContentBanner from "./components/April2026RevolutionaryContentBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
+      <April2026MegaBreakthroughBanner />
+      
+      {/* NEW: April 2026 Revolutionary Content Banner */}
+      <April2026RevolutionaryContentBanner />
+      
       {/* NEW: March 2026 Revolutionary Breakthrough Banner - Most Prominent */}
       <March2026AdvertisingMegaBanner />
       
