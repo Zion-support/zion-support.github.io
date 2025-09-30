@@ -94,6 +94,14 @@ function Header() {
             </Link>
           </div>
           <div className="relative group">
+            <Link href="/blog/ai-2025-2026-mega-trends-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              2025-2026 Mega Trends
+              <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                BREAKTHROUGH
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
             <Link href="/blog/ai-2028-autonomous-enterprise-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               2028 Breakthroughs
               <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
