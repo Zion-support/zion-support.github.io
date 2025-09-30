@@ -14,6 +14,10 @@ import October2026BreakthroughShowcaseBanner from "./components/October2026Break
 import November2026UniversalIntelligenceBanner from "./components/November2026UniversalIntelligenceBanner";
 import December2026SingularityAchievementBanner from "./components/December2026SingularityAchievementBanner";
 
+// NEWEST: February 2026 Content Banners - MOST PROMINENT
+import February2026NewContentBanner from "./components/February2026NewContentBanner";
+import February2026BreakthroughShowcaseBanner from "./components/February2026BreakthroughShowcaseBanner";
+
 // Key Breakthrough Banners
 import July2026RevolutionaryBreakthroughBanner from "./components/July2026RevolutionaryBreakthroughBanner";
 import June2026SuperintelligenceBreakthroughBanner from "./components/June2026SuperintelligenceBreakthroughBanner";
@@ -34,6 +38,12 @@ export default function App(): JSX.Element {
       <AI2033UniversalConsciousnessBanner />
       
       {/* HERO SECTION - Most Recent Content */}
+      
+      {/* NEWEST: February 2026 New Content Banner - MOST PROMINENT */}
+      <February2026NewContentBanner />
+      
+      {/* NEWEST: February 2026 Breakthrough Showcase Banner - HIGHLY PROMINENT */}
+      <February2026BreakthroughShowcaseBanner />
       
       {/* NEWEST: January 2032 Transcendent Content Banner - MOST PROMINENT */}
       <January2032TranscendentContentBanner />
