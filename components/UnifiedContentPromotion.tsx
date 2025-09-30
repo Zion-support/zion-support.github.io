@@ -17,6 +17,43 @@ interface ContentItem {
 }
 
 const featuredContent: ContentItem[] = [
+  // Sept 30, 2025 — newly added items to advertise
+  {
+    id: 'n0a',
+    title: 'Autonomous Runbooks Quickstart: Budgeted Actions and Instant Rollback',
+    description: 'Design incident playbooks that close the loop from detection to safe action in <60s.',
+    link: '/blog/ai-2025-sept-30-autonomous-runbooks-quickstart',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    icon: '✅',
+    publishedDate: 'September 30, 2025',
+    readTime: '7 min read',
+    category: 'AI Operations'
+  },
+  {
+    id: 'n0b',
+    title: 'Privacy‑Preserving Telemetry: Scoped IDs, On‑Device Redaction, DP Noise',
+    description: 'Actionable analytics without PII using edge aggregation and differential privacy.',
+    link: '/blog/edge-2025-sept-30-privacy-preserving-telemetry',
+    badge: 'Fresh',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '🔒',
+    publishedDate: 'September 30, 2025',
+    readTime: '6 min read',
+    category: 'Observability'
+  },
+  {
+    id: 'n0c',
+    title: 'GenAI Quality Tiers Quickstart: Stable UX at 40–70% Lower Cost',
+    description: 'Tiered routing and semantic caches with KPI‑linked budgets.',
+    link: '/blog/genai-2025-sept-30-quality-tiers-quickstart',
+    badge: 'Featured',
+    badgeColor: 'bg-gradient-to-r from-indigo-600 to-blue-600',
+    icon: '💸',
+    publishedDate: 'September 30, 2025',
+    readTime: '8 min read',
+    category: 'GenAI'
+  },
   // Sept 30, 2025 — highlight newest content
   {
     id: 'n1',

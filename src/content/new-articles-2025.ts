@@ -293,6 +293,43 @@ newArticles2025.push(
   }
 );
 
+// Sept 30, 2025 – Fresh promos to advertise on Home and listings
+newArticles2025.push(
+  {
+    id: "ai-2025-sept-30-autonomous-runbooks-quickstart",
+    title: "✅ Autonomous Runbooks Quickstart (2025)",
+    description: "Budgeted actions, approvals, and instant rollback for safe automation.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2025-sept-30-autonomous-runbooks-quickstart",
+    readTime: "7 min read",
+    tags: ["Runbooks", "Automation", "Rollback"]
+  },
+  {
+    id: "edge-2025-sept-30-privacy-preserving-telemetry",
+    title: "🔒 Privacy‑Preserving Telemetry (2025)",
+    description: "Scoped IDs, on‑device redaction, and DP noise for useful, compliant analytics.",
+    category: "Observability",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-2025-sept-30-privacy-preserving-telemetry",
+    readTime: "6 min read",
+    tags: ["Privacy", "Telemetry", "Edge"]
+  },
+  {
+    id: "genai-2025-sept-30-quality-tiers-quickstart",
+    title: "💸 GenAI Quality Tiers Quickstart (2025)",
+    description: "Stable UX with tiered routing, semantic caches, and KPI‑linked budgets.",
+    category: "GenAI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/genai-2025-sept-30-quality-tiers-quickstart",
+    readTime: "8 min read",
+    tags: ["Quality Tiers", "Caching", "Budgets"]
+  }
+);
+
 // Jan 15, 2026 – Fresh featured items to surface on Home
 newArticles2025.push(
   {

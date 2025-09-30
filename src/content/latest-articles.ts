@@ -1831,6 +1831,58 @@ latestArticles.unshift(
   }
 );
 
+// Sept 30, 2025 – New items to promote across homepage and feeds
+latestArticles.unshift(
+  {
+    id: "ai-2025-sept-30-autonomous-runbooks-quickstart",
+    slug: "ai-2025-sept-30-autonomous-runbooks-quickstart",
+    title: "Autonomous Runbooks Quickstart: Budgeted Actions and Instant Rollback",
+    description: "Design incident playbooks that close the loop from detection to safe action in <60s.",
+    excerpt: "Budgets, approvals, and rollback triggers for safe automation at speed.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Operations",
+    tags: ["Runbooks", "Automation", "Rollback"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/autonomous-runbooks-quickstart-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2025-sept-30-privacy-preserving-telemetry",
+    slug: "edge-2025-sept-30-privacy-preserving-telemetry",
+    title: "Privacy‑Preserving Telemetry: Scoped IDs, On‑Device Redaction, DP Noise",
+    description: "Actionable analytics without PII using edge aggregation and differential privacy.",
+    excerpt: "Stand up privacy‑first telemetry with scoped identifiers and local redaction.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Observability",
+    tags: ["Privacy", "Telemetry", "Edge"],
+    featured: true,
+    readTime: "6 min read",
+    image: "/images/privacy-preserving-telemetry-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-2025-sept-30-quality-tiers-quickstart",
+    slug: "genai-2025-sept-30-quality-tiers-quickstart",
+    title: "GenAI Quality Tiers Quickstart: Stable UX at 40–70% Lower Cost",
+    description: "Tiered routing and semantic caches with KPI‑linked budgets.",
+    excerpt: "Predictable costs without regressions using quality tiers and caches.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["Quality Tiers", "Caching", "Budgets"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-quality-tiers-quickstart-2025.jpg",
+    newBadge: true,
+    trending: true
+  }
+);
+
 // Oct 02, 2025 – Add three brand-new articles (to advertise and surface)
 latestArticles.unshift(
   {

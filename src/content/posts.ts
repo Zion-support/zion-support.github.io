@@ -1513,3 +1513,37 @@ posts.unshift(
     readTime: "8 min read",
   }
 );
+
+// Sept 30, 2025 – Freshly added posts to expand content library
+posts.unshift(
+  {
+    slug: "ai-2025-sept-30-autonomous-runbooks-quickstart",
+    title: "Autonomous Runbooks Quickstart: Budgeted Actions and Instant Rollback",
+    description:
+      "Stand up incident playbooks with budgets, approvals, and rollback triggers that contain issues in under 60 seconds.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "edge-2025-sept-30-privacy-preserving-telemetry",
+    title: "Privacy‑Preserving Telemetry: Scoped IDs, On‑Device Redaction, DP Noise",
+    description:
+      "Actionable analytics without PII using scoped identifiers, local redaction, and differential privacy at the edge.",
+    category: "Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "genai-2025-sept-30-quality-tiers-quickstart",
+    title: "GenAI Quality Tiers Quickstart: Stable UX at 40–70% Lower Cost",
+    description:
+      "Introduce tiered routing, semantic caches, and KPI‑linked budgets to reduce spend without regressions.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  }
+);
