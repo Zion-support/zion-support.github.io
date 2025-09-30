@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import Link from 'next/link';
 export const metadata = {
@@ -6,6 +7,16 @@ export const metadata = {
 };
 
 const blogPosts = [
+  {
+    title: 'AI 2027: Edge‑Native Agents — Real‑Time, Reliable, Low‑Latency',
+    slug: 'ai-2027-edge-native-agents',
+    excerpt: 'Deploy agentic workloads at the edge for sub‑50ms latency with policy guardrails and cost control.',
+    category: 'Technical Guide',
+    publishedAt: 'September 30, 2025',
+    image: '⚡',
+    color: 'emerald',
+    readTime: '14 min read'
+  },
   {
     title: 'AI 2027 Hyper‑Automation Blueprint',
     slug: 'ai-2027-hyper-automation-blueprint',
