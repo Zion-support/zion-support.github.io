@@ -251,6 +251,30 @@ featuredBlogPosts.unshift(
 // Promote brand-new content on homepage showcases (added Sept 30, 2025)
 featuredBlogPosts.unshift(
   {
+    id: "ai-sla-scorecards-2026-q1",
+    title: "AI SLA Scorecards 2026 Q1",
+    description: "SLIs, budgets, and instant rollback wired to product KPIs",
+    link: "/blog/ai-sla-scorecards-2026-q1",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-private-insights-v2-2026",
+    title: "Edge Private Insights v2 (2026)",
+    description: "Scoped IDs, DP noise, and on‑device aggregation at <100ms",
+    link: "/blog/edge-private-insights-v2-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-release-runbooks-v2-2026",
+    title: "Agent Release Runbooks v2 (2026)",
+    description: "Budgets, KPI‑linked canaries, and one‑click recovery",
+    link: "/blog/agent-release-runbooks-v2-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-operational-resilience-2026",
     title: "AI Operational Resilience 2026",
     description: "Error budgets, blast radius limits, rollback playbooks for 99.99% uptime",

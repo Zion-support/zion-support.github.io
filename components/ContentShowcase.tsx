@@ -18,6 +18,49 @@ interface ContentItem {
 }
 
 const contentItems: ContentItem[] = [
+  // Newly added items for additional promotion on the homepage
+  {
+    id: 'ai-sla-scorecards-2026-q1',
+    title: 'AI SLA Scorecards 2026 Q1: SLIs, Budgets, Rollback',
+    excerpt: 'Operational scorecards wiring SLIs to KPIs with budgeted actions and instant rollback.',
+    readTime: '7 min read',
+    category: 'AI Governance',
+    href: '/blog/ai-sla-scorecards-2026-q1',
+    featured: true,
+    publishedDate: '2025-09-30',
+    metrics: [
+      { value: '99.9%', label: 'Target Uptime' },
+      { value: '↘ MTTR', label: 'Faster Recovery' }
+    ]
+  },
+  {
+    id: 'edge-private-insights-v2-2026',
+    title: 'Edge Private Insights v2 (2026): Scoped IDs, DP Noise, <100ms',
+    excerpt: 'Second‑gen private analytics with on‑device aggregation, scoped IDs, and DP noise at <100ms.',
+    readTime: '6 min read',
+    category: 'Analytics',
+    href: '/blog/edge-private-insights-v2-2026',
+    featured: true,
+    publishedDate: '2025-09-30',
+    metrics: [
+      { value: '<100ms', label: 'Latency' },
+      { value: '0 PII', label: 'Collected' }
+    ]
+  },
+  {
+    id: 'agent-release-runbooks-v2-2026',
+    title: 'Agent Release Runbooks v2 (2026): Budgets, Canaries, Recovery',
+    excerpt: 'Upgraded runbooks with KPI‑linked canaries, budgeted actions, sandboxed tools, and one‑click recovery.',
+    readTime: '8 min read',
+    category: 'AI Operations',
+    href: '/blog/agent-release-runbooks-v2-2026',
+    featured: true,
+    publishedDate: '2025-09-30',
+    metrics: [
+      { value: '↘ Incidents', label: 'Fewer Regressions' },
+      { value: '1‑click', label: 'Rollback' }
+    ]
+  },
   {
     id: 'ai-reliable-agent-evals-2025',
     title: 'Reliable Agent Evals 2025: Measure and Guardrail Autonomy',
