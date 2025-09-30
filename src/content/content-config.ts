@@ -148,29 +148,173 @@ export const featuredBlogPosts: FeaturedItem[] = [
   }
 ];
 
+// Oct 2025 – Add two brand-new featured posts
+featuredBlogPosts.unshift(
+  {
+    id: "ai-agent-reliability-playbook-2026",
+    title: "AI Agent Reliability Playbook 2026",
+    description: "Budgets, guardrails, canaries, and instant rollback for dependable agents",
+    link: "/blog/ai-agent-reliability-playbook-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "privacy-safe-feature-flags-2026",
+    title: "Privacy‑Safe Feature Flags 2026",
+    description: "Consent‑aware, scoped IDs, and DP‑hardened experimentation at <100ms",
+    link: "/blog/privacy-safe-feature-flags-2026",
+    type: "article",
+    featured: true
+  }
+);
+
+// Promote newly added posts (Sept 30, 2025)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2026-runtime-guardrails-blueprint",
+    title: "Runtime Guardrails 2026",
+    description: "CI policy tests + live canaries wired to KPIs for fast, safe delivery",
+    link: "/blog/ai-2026-runtime-guardrails-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-rag-privacy-preserving-2026",
+    title: "Edge RAG 2026",
+    description: "Private <100ms retrieval with signed configs and on‑device caches",
+    link: "/blog/edge-rag-privacy-preserving-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "platform-roi-scorecards-v2-2026",
+    title: "Platform ROI Scorecards v2 (2026)",
+    description: "Connect platform adoption to SLOs and measurable business outcomes",
+    link: "/blog/platform-roi-scorecards-v2-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
   {
-    id: "ai-governance-field-runbooks-2026",
-    title: "AI Governance Field Runbooks 2026",
-    description: "CI gates, live canaries, and instant rollback playbooks.",
-    link: "/blog/ai-governance-field-runbooks-2026",
+    id: "genai-reliability-scorecards-2027",
+    title: "GenAI Reliability Scorecards 2027",
+    description: "Live KPIs + budgets + rollback for affordable, reliable GenAI.",
+    link: "/blog/genai-reliability-scorecards-2027",
     type: "article",
     featured: true
   },
   {
-    id: "edge-personalization-quickstart-2026",
-    title: "Edge Personalization Quickstart 2026",
-    description: "Private <100ms journeys with scoped IDs and tiny models.",
-    link: "/blog/edge-personalization-quickstart-2026",
+    id: "edge-private-analytics-2027",
+    title: "Edge Private Analytics 2027",
+    description: "Zero‑PII insights with scoped IDs and DP at <100ms.",
+    link: "/blog/edge-private-analytics-2027",
     type: "article",
     featured: true
   },
   {
-    id: "agent-release-checklists-v2-2026",
-    title: "Agent Release Checklists v2 (2026)",
-    description: "Budgets, approvals, and safe actions with KPI-linked evals.",
-    link: "/blog/agent-release-checklists-v2-2026",
+    id: "enterprise-ai-sustainability-2027",
+    title: "Enterprise AI Sustainability 2027",
+    description: "Cut spend and carbon: tiers, green routing, workload shifting.",
+    link: "/blog/enterprise-ai-sustainability-2027",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-operational-scorecards-q4-2026",
+    title: "AI Operational Scorecards Q4 2026",
+    description: "SLIs tied to KPIs with budgeted actions and rollback",
+    link: "/blog/ai-operational-scorecards-q4-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-consentless-metrics-2026",
+    title: "Edge Consentless Metrics 2026",
+    description: "Actionable insights without PII using scoped IDs & DP",
+    link: "/blog/edge-consentless-metrics-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-budget-aware-routing-2026",
+    title: "GenAI Budget‑Aware Routing 2026",
+    description: "Stable UX under cost SLAs with caches and quality tiers",
+    link: "/blog/genai-budget-aware-routing-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-slo-scorecards-2026",
+    title: "AI SLO Scorecards 2026",
+    description: "SLIs, error budgets, rollback triggers wired to KPIs",
+    link: "/blog/ai-slo-scorecards-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-private-insights-2026",
+    title: "Edge Private Insights 2026",
+    description: "Actionable metrics without PII using scoped IDs & DP",
+    link: "/blog/edge-private-insights-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-budgets-routing-2026",
+    title: "GenAI Budgets & Routing 2026",
+    description: "Predictable cost, stable UX with tiers, caches, and evals",
+    link: "/blog/genai-budgets-routing-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-risk-budgets-blueprint-2026",
+    title: "AI Risk Budgets Blueprint 2026",
+    description: "Budgets + KPI canaries + rollback for safe autonomy",
+    link: "/blog/ai-risk-budgets-blueprint-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-consent-mode-2026",
+    title: "Edge Consent Mode 2026",
+    description: "Private analytics without PII at <100ms with scoped IDs & DP",
+    link: "/blog/edge-consent-mode-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-quality-tiers-blueprint-2026",
+    title: "GenAI Quality Tiers Blueprint 2026",
+    description: "Predictable cost and stable UX using quality tiers + caches",
+    link: "/blog/genai-quality-tiers-blueprint-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-governance-scorecards-q1-2026",
+    title: "AI Governance Scorecards Q1 2026",
+    description: "Scorecards + CI policy tests wired to outcomes",
+    link: "/blog/ai-governance-scorecards-q1-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-experiments-quickstart-2026",
+    title: "Edge Experiments Quickstart 2026",
+    description: "Private A/B at <100ms with scoped IDs and DP noise",
+    link: "/blog/edge-experiments-quickstart-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-release-guardrails-checklist-2026",
+    title: "Agent Release Guardrails 2026",
+    description: "Budgets, approvals, rollback—battle‑tested checklist",
+    link: "/blog/agent-release-guardrails-checklist-2026",
     type: "article",
     featured: true
   },
@@ -227,6 +371,30 @@ featuredBlogPosts.unshift(
 // Promote brand-new content on homepage showcases (added Sept 30, 2025)
 featuredBlogPosts.unshift(
   {
+    id: "ai-sla-scorecards-2026-q1",
+    title: "AI SLA Scorecards 2026 Q1",
+    description: "SLIs, budgets, and instant rollback wired to product KPIs",
+    link: "/blog/ai-sla-scorecards-2026-q1",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-private-insights-v2-2026",
+    title: "Edge Private Insights v2 (2026)",
+    description: "Scoped IDs, DP noise, and on‑device aggregation at <100ms",
+    link: "/blog/edge-private-insights-v2-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-release-runbooks-v2-2026",
+    title: "Agent Release Runbooks v2 (2026)",
+    description: "Budgets, KPI‑linked canaries, and one‑click recovery",
+    link: "/blog/agent-release-runbooks-v2-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-operational-resilience-2026",
     title: "AI Operational Resilience 2026",
     description: "Error budgets, blast radius limits, rollback playbooks for 99.99% uptime",
@@ -247,6 +415,34 @@ featuredBlogPosts.unshift(
     title: "GenAI Routing Blueprints 2026",
     description: "Quality tiers, caches, and eval signals under budget",
     link: "/blog/genai-routing-blueprints-2026",
+    type: "article",
+    featured: true
+  }
+);
+
+// Advertise the latest April 2026 trio on the homepage
+featuredBlogPosts.unshift(
+  {
+    id: "ai-operational-risk-budgets-2026",
+    title: "AI Operational Risk Budgets 2026",
+    description: "Budgeted actions, KPI canaries, and instant rollback for safe autonomy.",
+    link: "/blog/ai-operational-risk-budgets-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-zero-pii-personalization-2026",
+    title: "Edge Zero‑PII Personalization 2026",
+    description: "Private <100ms personalization with scoped IDs, on‑device models, and DP noise.",
+    link: "/blog/edge-zero-pii-personalization-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-quality-tiers-at-scale-2026",
+    title: "GenAI Quality Tiers at Scale 2026",
+    description: "Predictable cost and stable UX using quality tiers + semantic caches.",
+    link: "/blog/genai-quality-tiers-at-scale-2026",
     type: "article",
     featured: true
   }
@@ -296,6 +492,22 @@ export const getLatestContent = (count: number = 5): FeaturedItem[] => {
 // Surface fresh featured content (added Sept 30, 2025)
 featuredBlogPosts.unshift(
   {
+    id: "ai-operational-scorecards-v4-2026",
+    title: "AI Operational Scorecards v4 (2026)",
+    description: "SLIs mapped to KPIs with budgeted actions and instant rollback.",
+    link: "/blog/ai-operational-scorecards-v4-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-operational-scorecards-q4-2026",
+    title: "AI Operational Scorecards Q4 2026",
+    description: "SLIs mapped to KPIs, budgeted actions, instant rollback.",
+    link: "/blog/ai-operational-scorecards-q4-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-2027-revolutionary-breakthrough",
     title: "AI 2027 Revolutionary Breakthrough",
     description: "Quantum leaps in AI performance and autonomy—what it means for the enterprise",
@@ -315,22 +527,6 @@ featuredBlogPosts.unshift(
 
 // Surface brand-new articles at the very top of featured content
 featuredBlogPosts.unshift(
-  {
-    id: "ai-2028-self-healing-platforms",
-    title: "AI 2028: Self‑Healing Platforms",
-    description: "Predictive scaling, budget guards, one‑click rollback for 99.995% uptime",
-    link: "/blog/ai-2028-self-healing-platforms",
-    type: "article",
-    featured: true
-  },
-  {
-    id: "edge-2028-zero-pii-observability",
-    title: "Edge 2028: Zero‑PII Observability",
-    description: "Scoped IDs + on‑device aggregation + DP noise for <100ms insights",
-    link: "/blog/edge-2028-zero-pii-observability",
-    type: "article",
-    featured: true
-  },
   {
     id: "ai-governance-live-scorecards-2026",
     title: "AI Governance Live Scorecards 2026",
@@ -352,6 +548,190 @@ featuredBlogPosts.unshift(
     title: "Agent Release Runbooks 2026",
     description: "Approvals, budgets, and instant rollback for safe autonomous releases",
     link: "/blog/agent-release-runbooks-2026",
+    type: "article",
+    featured: true
+  }
+);
+
+// Advertise freshly added posts (Sept 30, 2025) on homepage banners
+featuredBlogPosts.unshift(
+  {
+    id: "ai-governance-operational-checks-2026",
+    title: "AI Governance Operational Checks 2026",
+    description: "PR policy tests + KPI-linked canaries that keep teams fast and safe",
+    link: "/blog/ai-governance-operational-checks-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-personalization-under-100ms-2026",
+    title: "Edge Personalization 2026",
+    description: "Private <100ms journeys with scoped IDs and on-device models",
+    link: "/blog/edge-personalization-under-100ms-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-release-checklists-v2-2026",
+    title: "Agent Release Checklists v2 (2026)",
+    description: "Budgets, approvals, rollback—battle-tested playbooks for safe releases",
+    link: "/blog/agent-release-checklists-v2-2026",
+    type: "article",
+    featured: true
+  }
+);
+
+// Advertise new content on homepage showcases
+featuredBlogPosts.unshift(
+  {
+    id: "ai-executive-playbook-2027",
+    title: "AI Executive Playbook 2027",
+    description: "Plan, fund, and govern reliable AI with measurable outcomes",
+    link: "/blog/ai-executive-playbook-2027",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2027-cost-optimization-playbook",
+    title: "AI 2027 Cost Optimization Playbook",
+    description: "Quality tiers, caches, and budgets to cut spend 30–70%",
+    link: "/blog/ai-2027-cost-optimization-playbook",
+    type: "article",
+    featured: true
+  }
+);
+
+// Sept 30, 2025 – Feature newly added and runtime guardrail posts (merged)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2027-operational-trust-blueprint",
+    title: "AI 2027: Operational Trust Blueprint",
+    description: "SLIs wired to KPIs with budgets, canaries, and instant rollback.",
+    link: "/blog/ai-2027-operational-trust-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-exec-trust-scorecards-2026",
+    title: "Executive Trust Scorecards 2026",
+    description: "SLIs linked to KPIs with rollback triggers",
+    link: "/blog/ai-exec-trust-scorecards-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-governance-runtime-guardrails-2026",
+    title: "AI Governance Runtime Guardrails 2026",
+    description: "Inline policy checks and live canaries without slowing teams",
+    link: "/blog/ai-governance-runtime-guardrails-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-model-warm-pools-2026",
+    title: "Edge Model Warm Pools 2026",
+    description: "Predictive warmups and tiered caches for <100ms starts",
+    link: "/blog/edge-model-warm-pools-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-privacy-insights-2026",
+    title: "Edge Privacy Insights 2026",
+    description: "Scoped IDs, edge aggregation, and DP noise for actionable metrics",
+    link: "/blog/edge-privacy-insights-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agentic-runtime-safety-2026",
+    title: "Agentic Runtime Safety 2026",
+    description: "Budgets, sandboxes, and instant rollback for safe autonomy",
+    link: "/blog/agentic-runtime-safety-2026",
+    type: "article",
+    featured: true
+  }
+);
+
+// Mar 2026 – Surface newest posts at the very top for homepage ads
+featuredBlogPosts.unshift(
+  {
+    id: "ai-governance-pr-policy-tests-2026",
+    title: "PR Policy Tests 2026",
+    description: "Lightweight CI policy tests wired to product KPIs—fast and safe delivery.",
+    link: "/blog/ai-governance-pr-policy-tests-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-zero-pii-analytics-2026",
+    title: "Zero‑PII Edge Analytics 2026",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for actionable insights.",
+    link: "/blog/edge-zero-pii-analytics-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-release-zero-regret-2026",
+    title: "Zero‑Regret Agent Releases 2026",
+    description: "Budgeted actions, KPI‑linked canaries, and instant rollback for safe automation.",
+    link: "/blog/agent-release-zero-regret-2026",
+    type: "article",
+    featured: true
+  }
+);
+
+// Mar 2026 – Add three brand-new featured items to advertise on homepage
+featuredBlogPosts.unshift(
+  {
+    id: "ai-governance-runtime-scorecards-v2-2026",
+    title: "Runtime Scorecards v2 (2026)",
+    description: "KPIs, budgets, and instant rollback wired into CI",
+    link: "/blog/ai-governance-runtime-scorecards-v2-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-private-experimentation-v2-2026",
+    title: "Edge Private Experimentation v2 (2026)",
+    description: "Compliant <100ms A/B without PII using scoped IDs + DP",
+    link: "/blog/edge-private-experimentation-v2-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-routing-quality-tiers-v3-2026",
+    title: "GenAI Quality Tiers v3 (2026)",
+    description: "Stable UX under budget with tiers, caches, and evals",
+    link: "/blog/genai-routing-quality-tiers-v3-2026",
+    type: "article",
+    featured: true
+  }
+);
+
+// Advertise brand-new Q4 content on homepage
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2026-autonomous-ops-q4-playbook",
+    title: "Autonomous Ops Q4 2026",
+    description: "Budgets, live traces, instant rollback for safe autonomy",
+    link: "/blog/ai-2026-autonomous-ops-q4-playbook",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-analytics-consentless-2026-v2",
+    title: "Consentless Edge Analytics v2 (2026)",
+    description: "Scoped IDs + on‑device aggregation + DP—zero PII insights",
+    link: "/blog/edge-analytics-consentless-2026-v2",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-quality-tiers-v2-2026",
+    title: "GenAI Quality Tiers v2 (2026)",
+    description: "Stable UX under strict budgets with caches and KPI routing",
+    link: "/blog/genai-quality-tiers-v2-2026",
     type: "article",
     featured: true
   }
