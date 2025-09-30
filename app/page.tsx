@@ -237,6 +237,9 @@ export default function HomePage() {
       {/* 🚀 NEWEST BREAKTHROUGH CONTENT - JANUARY 30, 2026 - REVOLUTIONARY AI TECHNOLOGIES! */}
       <NewContent2026BreakthroughBanner />
 
+      {/* Revolutionary Content Showcase */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <Link href="/blog/ai-2027-quantum-revolution" className="group">
               <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30">
@@ -1247,10 +1250,11 @@ export default function HomePage() {
               popular={false}
             />
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Interactive AI Calculator 2025 */}
-      <InteractiveAICalculator2025 />
+      {/* <InteractiveAICalculator2025 /> */}
 
       {/* Interactive AI ROI Calculator */}
       <section id="roi-calculator" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -1398,7 +1402,8 @@ export default function HomePage() {
                       </div>
                     </div>
                   </div>
-          </div>
+                </Link>
+              </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Link href="/blog/ai-operational-resilience-2026" className="group">
