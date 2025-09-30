@@ -2,132 +2,157 @@ import React from 'react';
 
 export default function September2025ContentShowcaseBanner() {
   return (
-    <section className="py-16 bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 border-y border-emerald-500/30">
+    <section className="py-16 bg-gradient-to-br from-violet-900 via-fuchsia-900 to-pink-900">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 mb-6 animate-pulse">
-            <span className="text-emerald-400 font-bold text-xl tracking-wider uppercase">
-              🚀 September 2025 Latest Content Released!
+          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-violet-500/20 to-fuchsia-500/20 border border-violet-500/30 mb-6">
+            <span className="text-violet-400 font-bold text-xl tracking-wider uppercase">
+              ⭐ NEW: September 2025 Revolutionary Content Published
             </span>
           </div>
-          
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
-            Transform Your Enterprise with Proven AI Strategies
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-violet-400 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent">
+            Latest Breakthroughs & Success Stories
           </h2>
-          
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Discover the latest insights, success stories, and acceleration programs that are helping 
-            leading enterprises achieve <span className="text-emerald-400 font-bold">10x deployment velocity</span> and 
-            <span className="text-cyan-400 font-bold"> $8.5B+ in measurable value</span>
+          <p className="text-xl text-gray-200 max-w-4xl mx-auto">
+            Explore our newest content featuring 800x speed improvements, $18.5B success stories, 
+            and enterprise consulting services that deliver unprecedented business value.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {/* Blog Post */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-emerald-500/50 transition-all duration-300 transform hover:-translate-y-2">
+          {/* Blog Post Card */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-violet-500/50 transition-all duration-300 transform hover:-translate-y-2">
             <div className="text-6xl mb-6">📚</div>
-            <div className="inline-block px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold mb-4">
-              NEW GUIDE
+            <div className="inline-block bg-violet-500/20 px-3 py-1 rounded-full text-violet-300 text-xs font-semibold mb-4">
+              LATEST BLOG POST
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">
-              Enterprise Deployment Mastery
+              Real-Time Intelligent Automation Revolution
             </h3>
             <p className="text-gray-300 mb-6">
-              September 2025 strategic guide revealing how leading enterprises achieve 95% deployment success 
-              rates and 10x faster time-to-production with proven methodologies.
+              Discover the breakthrough technology delivering 800x processing speed improvements 
+              and 97% decision accuracy across Fortune 500 enterprises.
             </p>
             <ul className="space-y-2 mb-6 text-gray-300 text-sm">
-              <li>✓ Automated Infrastructure at Scale</li>
-              <li>✓ MLOps Excellence Framework</li>
-              <li>✓ Security & Compliance Best Practices</li>
-              <li>✓ $18M Average Annual Value</li>
+              <li className="flex items-start">
+                <span className="text-violet-400 mr-2">✓</span>
+                <span>800x faster processing than traditional systems</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-violet-400 mr-2">✓</span>
+                <span>97% decision accuracy in enterprise deployments</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-violet-400 mr-2">✓</span>
+                <span>$12B+ proven value across 50+ implementations</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-violet-400 mr-2">✓</span>
+                <span>Sub-millisecond real-time processing</span>
+              </li>
             </ul>
-            <a 
-              href="/blog/ai-2025-september-30-enterprise-deployment-mastery"
-              className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50"
+            <a
+              href="/blog/ai-2025-oct-real-time-intelligent-automation-revolution"
+              className="inline-block bg-gradient-to-r from-violet-500 to-fuchsia-600 hover:from-violet-400 hover:to-fuchsia-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 w-full text-center"
             >
-              Read Full Guide →
+              Read Full Article →
             </a>
           </div>
 
-          {/* Case Study */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-teal-500/50 transition-all duration-300 transform hover:-translate-y-2">
-            <div className="text-6xl mb-6">💎</div>
-            <div className="inline-block px-4 py-2 rounded-full bg-teal-500/20 text-teal-400 text-sm font-bold mb-4">
-              SUCCESS STORY
+          {/* Case Study Card */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-fuchsia-500/50 transition-all duration-300 transform hover:-translate-y-2">
+            <div className="text-6xl mb-6">💼</div>
+            <div className="inline-block bg-fuchsia-500/20 px-3 py-1 rounded-full text-fuchsia-300 text-xs font-semibold mb-4">
+              NEW CASE STUDY
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">
-              $8.5B Retail Transformation
+              Fortune 500: $18.5B Manufacturing Success
             </h3>
             <p className="text-gray-300 mb-6">
-              Fortune 100 global retailer achieves unprecedented results through comprehensive AI transformation: 
-              87% stockout reduction, 340% conversion increase, 99.99% uptime.
+              How a global manufacturing leader achieved unprecedented results with Real-Time 
+              Intelligent Automation across 500+ facilities worldwide.
             </p>
             <ul className="space-y-2 mb-6 text-gray-300 text-sm">
-              <li>✓ $8.5B Total Value Generated</li>
-              <li>✓ 21-Month Transformation Timeline</li>
-              <li>✓ 2.8M SKUs Optimized Real-Time</li>
-              <li>✓ 1,200+ Locations Deployed</li>
+              <li className="flex items-start">
+                <span className="text-fuchsia-400 mr-2">✓</span>
+                <span>$18.5B total business value delivered</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-fuchsia-400 mr-2">✓</span>
+                <span>99.6% operational efficiency achieved</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-fuchsia-400 mr-2">✓</span>
+                <span>8-week ROI payback period</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-fuchsia-400 mr-2">✓</span>
+                <span>500+ facilities transformed globally</span>
+              </li>
             </ul>
-            <a 
-              href="/case-studies/ai-2025-september-global-retail-transformation-8-5-billion-success"
-              className="inline-block bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-teal-500/50"
+            <a
+              href="/case-studies/fortune-500-manufacturing-real-time-automation-18-5-billion-success"
+              className="inline-block bg-gradient-to-r from-fuchsia-500 to-pink-600 hover:from-fuchsia-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 w-full text-center"
             >
-              View Case Study →
+              Read Success Story →
             </a>
           </div>
 
-          {/* Service */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 transform hover:-translate-y-2">
-            <div className="text-6xl mb-6">🚀</div>
-            <div className="inline-block px-4 py-2 rounded-full bg-cyan-500/20 text-cyan-400 text-sm font-bold mb-4">
-              NEW PROGRAM
+          {/* Service Card */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-pink-500/50 transition-all duration-300 transform hover:-translate-y-2">
+            <div className="text-6xl mb-6">🎯</div>
+            <div className="inline-block bg-pink-500/20 px-3 py-1 rounded-full text-pink-300 text-xs font-semibold mb-4">
+              NEW SERVICE OFFERING
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">
-              Deployment Acceleration
+              Real-Time Automation Consulting
             </h3>
             <p className="text-gray-300 mb-6">
-              Move from AI experimentation to production-scale deployment with our comprehensive 6-12 month 
-              program delivering 10-15x ROI and 95% success rates.
+              Transform your enterprise with comprehensive consulting services delivering proven 
+              results and rapid ROI through our Real-Time Intelligent Automation platform.
             </p>
             <ul className="space-y-2 mb-6 text-gray-300 text-sm">
-              <li>✓ 10x Faster Deployment Velocity</li>
-              <li>✓ Production in Week 8</li>
-              <li>✓ 95% Success Rate Guaranteed</li>
-              <li>✓ Complete Knowledge Transfer</li>
+              <li className="flex items-start">
+                <span className="text-pink-400 mr-2">✓</span>
+                <span>Strategic assessment & custom solution design</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-pink-400 mr-2">✓</span>
+                <span>8-12 week pilot program with proven results</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-pink-400 mr-2">✓</span>
+                <span>Enterprise deployment & ongoing optimization</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-pink-400 mr-2">✓</span>
+                <span>24/7 support & continuous innovation</span>
+              </li>
             </ul>
-            <a 
-              href="/services/ai-2025-september-deployment-acceleration-program"
-              className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
+            <a
+              href="/services/real-time-intelligent-automation-consulting"
+              className="inline-block bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 w-full text-center"
             >
-              Learn More →
+              Explore Service →
             </a>
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/30 text-center">
+        {/* Bottom CTA */}
+        <div className="text-center bg-gradient-to-r from-violet-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-violet-500/20">
           <h3 className="text-3xl font-bold text-white mb-4">
-            Ready to Accelerate Your AI Journey?
+            Ready to Transform Your Enterprise?
           </h3>
-          <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
-            Join the leading enterprises achieving breakthrough results with Zion Tech Group's proven 
-            AI deployment strategies and comprehensive support programs.
+          <p className="text-xl text-gray-200 mb-6 max-w-3xl mx-auto">
+            Join 50+ Fortune 500 companies achieving unprecedented results with Real-Time Intelligent Automation.
+            Get your free consultation and discover how we can deliver hundreds of millions in value for your organization.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="/contact"
-              className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
-            >
-              Schedule Free Consultation
-            </a>
-            <a 
-              href="/services/ai-2025-september-deployment-acceleration-program"
-              className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-            >
-              Explore Acceleration Program
-            </a>
-          </div>
+          <a
+            href="/contact"
+            className="inline-block bg-gradient-to-r from-violet-500 to-fuchsia-600 hover:from-violet-400 hover:to-fuchsia-500 text-white font-bold py-4 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 transform hover:-translate-y-1"
+          >
+            Schedule Free Consultation →
+          </a>
         </div>
       </div>
     </section>
