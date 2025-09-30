@@ -124,6 +124,8 @@ import AutonomyBlueprint2026Banner from '../components/AutonomyBlueprint2026Bann
 import September30ContentPromo2025 from '../components/September30ContentPromo2025';
 import NewContent2026BreakthroughBanner from '../components/NewContent2026BreakthroughBanner';
 import InteractiveAI2026BreakthroughCalculator from '../components/InteractiveAI2026BreakthroughCalculator';
+import FreshContent2027ShowcaseBanner from '../components/FreshContent2027ShowcaseBanner';
+import RevolutionaryAI2027Banner from '../components/RevolutionaryAI2027Banner';
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -166,6 +168,12 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🚀🚀🚀 FRESH CONTENT 2027 - Revolutionary AI Breakthroughs! 🚀🚀🚀 */}
+      <RevolutionaryAI2027Banner />
+      
+      {/* 🌟 Fresh Content 2027 Showcase */}
+      <FreshContent2027ShowcaseBanner />
+      
       {/* 🚀 NEWEST BREAKTHROUGH CONTENT - JANUARY 30, 2026 - REVOLUTIONARY AI TECHNOLOGIES! */}
       <NewContent2026BreakthroughBanner />
 
@@ -233,6 +241,15 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+=======
+      {/* 🚀🚀🚀 FRESH CONTENT 2027 - Revolutionary AI Breakthroughs! 🚀🚀🚀 */}
+      <RevolutionaryAI2027Banner />
+      
+      {/* 🌟 Fresh Content 2027 Showcase */}
+      <FreshContent2027ShowcaseBanner />
+      
+      {/* 🚀🚀🚀 BREAKTHROUGH CONTENT - September 30, 2025 - 3 REVOLUTIONARY INNOVATIONS! 🚀🚀🚀 */}
+      <September30BreakthroughContentBanner />
       
       {/* 🚀 REVOLUTIONARY NEW CONTENT 2026 - FEATURED PROMINENTLY */}
       <NewContent2026RevolutionaryBanner />
