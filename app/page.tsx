@@ -17,7 +17,24 @@ import {
   AutonomousAgentsBanner,
   AIGovernanceBanner,
   FinTechSuccessBanner,
-  NewContentShowcaseBanner
+  NewContentShowcaseBanner,
+  AI2025MegaBreakthroughBanner,
+  AIRevolutionaryInnovationBanner,
+  AIAdvancedAutomationBanner,
+  AICognitiveComputingBanner,
+  AIQuantumBreakthroughBanner,
+  AISpaceTechnologyBanner,
+  AISustainabilityGreenTechBanner,
+  AIEnterpriseAdoptionBanner,
+  AITrends2025Banner,
+  AISupplyChainOptimizationBanner,
+  AIBusinessTransformationBanner,
+  AICustomerExperienceBanner,
+  EnterpriseAITransformationBanner,
+  LatestAIInsightsBanner,
+  AIServicesShowcaseBanner,
+  AIWorkflowAutomationBanner,
+  EnterpriseAISecurityBanner
 } from '../components/PromotionalBanner';
 import {
   AIEnterpriseAdoptionBanner,
@@ -32,6 +49,7 @@ import {
   EnterpriseAISecurityBanner
 } from '../components/NewContentPromotionalBanners';
 import ContentShowcase from '../components/ContentShowcase';
+import EnhancedContentShowcase2025 from '../components/EnhancedContentShowcase2025';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -43,9 +61,16 @@ export default function HomePage() {
   return (
     <div className="animate-fade-in">
       {/* New Content Promotional Banners */}
+      <AI2025MegaBreakthroughBanner />
+      <AIRevolutionaryInnovationBanner />
+      <AIAdvancedAutomationBanner />
+      <AICognitiveComputingBanner />
+      <AIQuantumBreakthroughBanner />
+      <AISpaceTechnologyBanner />
+      <AISustainabilityGreenTechBanner />
       <AIEnterpriseAdoptionBanner />
       <AITrends2025Banner />
-      <SupplyChainOptimizationBanner />
+      <AISupplyChainOptimizationBanner />
       <AIBusinessTransformationBanner />
       <AICustomerExperienceBanner />
       <EnterpriseAITransformationBanner />
@@ -197,8 +222,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Dynamic Content Showcase */}
-      <ContentShowcase />
+      {/* Enhanced Content Showcase */}
+      <EnhancedContentShowcase2025 />
 
       {/* Latest Innovations Section */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
