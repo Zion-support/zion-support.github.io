@@ -151,6 +151,30 @@ export const featuredBlogPosts: FeaturedItem[] = [
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
   {
+    id: "ai-governance-scorecards-q1-2026",
+    title: "AI Governance Scorecards Q1 2026",
+    description: "Scorecards + CI policy tests wired to outcomes",
+    link: "/blog/ai-governance-scorecards-q1-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-experiments-quickstart-2026",
+    title: "Edge Experiments Quickstart 2026",
+    description: "Private A/B at <100ms with scoped IDs and DP noise",
+    link: "/blog/edge-experiments-quickstart-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-release-guardrails-checklist-2026",
+    title: "Agent Release Guardrails 2026",
+    description: "Budgets, approvals, rollback—battle‑tested checklist",
+    link: "/blog/agent-release-guardrails-checklist-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-governance-real-time-2026",
     title: "AI Governance in Real Time 2026",
     description: "Live canaries + CI policy tests to prevent regressions.",

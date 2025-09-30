@@ -1230,6 +1230,37 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – New posts for homepage promotion and advertising (added)
+posts.push(
+  {
+    slug: "ai-governance-scorecards-q1-2026",
+    title: "AI Governance Scorecards Q1 2026: Guardrails Wired to KPIs",
+    description: "Lightweight scorecards with CI policy tests and live canaries tied to outcomes.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-experiments-quickstart-2026",
+    title: "Edge Experiments Quickstart 2026: Private A/B at <100ms",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant, fast experimentation.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-guardrails-checklist-2026",
+    title: "Agent Release Guardrails 2026: Budgets, Approvals, Rollback",
+    description: "Battle‑tested checklist for safe agent releases with budgeted actions and instant rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // New: Sept 30, 2025 – Fresh trio to advertise on homepage
 posts.push(
   {
