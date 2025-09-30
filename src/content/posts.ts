@@ -11,30 +11,93 @@ export interface BlogPost {
 export const posts: BlogPost[] = [
   {
     slug: "ai-operational-scorecards-v4-2026",
-    title: "AI Operational Scorecards v4 (2026): KPIs, Budgets, Rollback",
-    description: "SLIs mapped to KPIs, budgeted actions, and instant rollback teams adopt fast.",
+    title: "AI Operational Scorecards v4 (2026)",
+    description: "SLIs mapped to KPIs with budgeted actions and instant rollback.",
     category: "AI Operations",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "edge-zero-pii-insights-2026",
-    title: "Edge Zero‑PII Insights 2026: Scoped IDs, On‑Device Aggregation",
-    description: "Scoped IDs, on‑device aggregation, and DP noise—zero PII at <100ms.",
-    category: "Analytics",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
   },
   {
+    slug: "edge-zero-pii-insights-2026",
+    title: "Edge Zero‑PII Insights 2026",
+    description: "Scoped IDs, on‑device aggregation, and DP noise—zero PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "genai-quality-tiers-v2-2026",
-    title: "GenAI Quality Tiers v2 (2026): Predictable Cost, Stable UX",
-    description: "Quality tiers and semantic caches for predictable cost and stable experience.",
+    title: "GenAI Quality Tiers v2 (2026)",
+    description: "Quality tiers and caches for predictable cost and stable UX.",
     category: "GenAI",
     publishedAt: "2025-09-30",
     featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-rag-privacy-preserving-2026",
+    title: "Edge RAG 2026: Privacy‑Preserving Answers",
+    description: "Hybrid edge retrieval with TTL freshness and on‑device caches for <100ms.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-governance-pr-policy-tests-2026",
+    title: "PR Policy Tests 2026",
+    description: "Lightweight CI policy tests wired to product KPIs.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-governance-live-metrics-2025",
+    title: "AI Governance Live Metrics 2025: Ship Faster Without Regressions",
+    description: "CI policy tests + KPI‑linked canaries to prevent regressions before they ship.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-zero-pii-personalization-2025",
+    title: "Edge Zero‑PII Personalization 2025: <100ms, Private by Design",
+    description: "Scoped IDs, on‑device models, and DP noise for real‑time personalization without PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-executive-scorecards-2027",
+    title: "AI Executive Scorecards 2027: Proving ROI with Live KPIs",
+    description: "Design exec-ready AI scorecards tying model spend to KPIs with guardrails and SLIs.",
+    category: "Strategy",
+    publishedAt: "2027-01-05",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "ai-2025-cost-controllers-v1",
+    title: "AI Cost Controllers v1 (2025): Budgets, Tiers, and Guardrails",
+    description: "Practical cost governance: route by quality tier, enforce budgets, and prevent overruns with policy tests.",
+    category: "FinOps",
+    publishedAt: "2025-09-30",
+    featured: true,
     readTime: "9 min read"
+  },
+  {
+    slug: "edge-2025-realtime-personalization",
+    title: "Realtime Personalization 2025 at the Edge: <100ms, Zero‑PII",
+    description: "Edge feature flags, scoped IDs, and on‑device telemetry to deliver private, sub‑100ms personalization.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
   },
   {
     slug: "ai-2025-autonomous-infrastructure-blueprint",
@@ -68,6 +131,10 @@ export const posts: BlogPost[] = [
     title: "Edge‑Native Agents 2027: Private Tools at <100ms",
     description: "Design agents that run close to users with scoped permissions, on‑device tools, and instant rollback.",
     category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
   {
     slug: "ai-2027-operational-scorecards",
     title: "Operational AI Scorecards 2027: KPIs, Budgets, Rollback",
@@ -1491,6 +1558,37 @@ posts.push(
     description: "Battle-tested runbooks for safe LLM releases—risk budgets, rollback triggers, and KPI-linked canaries.",
     category: "AI Operations",
     publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
+// Sept 30, 2025 – Brand-new posts to surface and promote on Home
+posts.push(
+  {
+    slug: "ai-incident-response-playbooks-2025",
+    title: "AI Incident Response Playbooks 2025: Budgeted Actions & Instant Rollback",
+    description: "KPI‑linked incident runbooks with approvals, budgeted actions, and one‑click rollbacks for safe recovery.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-zero-pii-insights-2026",
+    title: "Edge Zero‑PII Insights 2026: Scoped IDs, On‑Device Aggregation, DP Noise",
+    description: "Actionable analytics with zero PII using scoped identifiers, device‑local aggregation, and differential privacy at <100ms.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-quality-tiers-v2-2026",
+    title: "GenAI Quality Tiers v2 (2026): Predictable Cost with Stable UX",
+    description: "Tiered models, semantic caches, and KPI‑aware routing for 40–70% spend reduction without quality loss.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
   }
