@@ -22,13 +22,13 @@ export const metadata = {
   },
 };
 
-<<<<<<< HEAD
 export default function ContentHubPage() {
   const blogCategories = [
     {
       title: 'AI Implementation',
       articles: [
         { title: 'AI Cost Calculator 2026', slug: '/blog/ai-cost-calculator-2026', readTime: '14 min', featured: true },
+        { title: 'AI 2027 Cost Optimization Playbook', slug: '/blog/ai-2027-cost-optimization-playbook', readTime: '13 min', featured: true },
         { title: 'AI Implementation Playbook 2026', slug: '/blog/ai-implementation-playbook-2026', readTime: '16 min', featured: true },
         { title: 'AI Multimodal Enterprise Solutions 2026', slug: '/blog/ai-multimodal-enterprise-2026', readTime: '15 min', featured: true },
         { title: 'AI Governance Maturity Model 2026', slug: '/blog/ai-governance-maturity-model-2026', readTime: '14 min', featured: true },
@@ -247,44 +247,41 @@ export default function ContentHubPage() {
               </div>
             </Link>
 
-            <Link href="/blog/ai-2025-zero-trust-security-architecture" className="group">
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-red-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20 p-8">
+            {/* New Featured: Cost Optimization Playbook */}
+            <Link href="/blog/ai-2027-cost-optimization-playbook" className="group">
+              <div className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20 p-8">
                 <div className="flex items-start justify-between mb-6">
-                  <div className="text-6xl group-hover:scale-110 transition-transform duration-300">
-                    🛡️
-                  </div>
+                  <div className="text-6xl group-hover:scale-110 transition-transform duration-300">💸</div>
                   <div className="flex flex-col gap-2">
-                    <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
+                    <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-green-500 text-white text-xs font-bold shadow-lg">
                       <TrendingUp className="w-3 h-3" />
-                      <span>TRENDING</span>
+                      <span>FEATURED</span>
                     </div>
-                    <span className="px-3 py-1.5 rounded-full bg-red-500/20 text-red-400 text-xs font-semibold border border-red-500/30">
+                    <span className="px-3 py-1.5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-semibold border border-emerald-500/30">
                       NEW
                     </span>
                   </div>
                 </div>
                 <div className="mb-4">
-                  <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 text-orange-400 text-xs font-semibold border border-orange-500/30">
-                    AI Security & Zero Trust
+                  <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-emerald-500/20 to-green-500/20 text-emerald-300 text-xs font-semibold border border-emerald-500/30">
+                    Cost Optimization
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors duration-300 leading-tight">
-                  Zero-Trust AI Security Architecture
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors duration-300 leading-tight">
+                  AI 2027 Cost Optimization Playbook
                 </h3>
                 <p className="text-gray-400 mb-6 leading-relaxed text-sm">
-                  Comprehensive zero-trust framework for AI systems protecting against adversarial attacks, 
-                  model theft, and data poisoning. Deployed across 1000+ enterprises with 99.97% threat prevention.
+                  Cut AI spend 30–70% with routing, caching, quantization, and guardrails—without sacrificing quality.
                 </p>
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-red-400" />
-                    50 min
+                    <DollarSign className="w-4 h-4 text-emerald-400" />
+                    13 min
                   </span>
-                  <span>Jan 30, 2025</span>
+                  <span>Sep 30, 2025</span>
                 </div>
-                <div className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-400 hover:to-orange-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-red-500/50 transform hover:-translate-y-1">
-                  <span>Read Full Article</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                <div className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300">
+                  <span>Read Guide</span>
                 </div>
               </div>
             </Link>
@@ -474,6 +471,10 @@ export default function ContentHubPage() {
                 </Link>
                 <Link href="/blog/ai-roi-optimization-2025" className="flex items-center gap-2 text-orange-400 hover:text-orange-300 font-semibold transition-colors group">
                   <span>ROI Optimization</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link href="/blog/ai-2027-cost-optimization-playbook" className="flex items-center gap-2 text-orange-400 hover:text-orange-300 font-semibold transition-colors group">
+                  <span>Cost Optimization Playbook</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
