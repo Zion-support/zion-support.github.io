@@ -68,6 +68,8 @@ import Revolutionary2026ContentShowcase from '../components/Revolutionary2026Con
 import September30NewContent2025Banner from '../components/September30NewContent2025Banner';
 import Revolutionary2026ContentMegaBanner from '../components/Revolutionary2026ContentMegaBanner';
 import UltimateContent2026MegaBanner from '../components/UltimateContent2026MegaBanner';
+import NewContent2026RevolutionaryBanner from '../components/NewContent2026RevolutionaryBanner';
+import AutonomousEnterprise2027Banner from '../components/AutonomousEnterprise2027Banner';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
@@ -168,6 +170,14 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🚀 NEW: Revolutionary 2026/2027 Content */}
+      <section className="max-w-7xl mx-auto px-6 md:px-8 py-8">
+        <div className="space-y-8">
+          <NewContent2026RevolutionaryBanner />
+          <AutonomousEnterprise2027Banner />
+        </div>
+      </section>
+
       {/* 🔔 Fresh today: Promote two new Sept 30, 2025 posts */}
       <section className="max-w-7xl mx-auto px-6 md:px-8 py-8">
         <div className="bg-gradient-to-br from-emerald-50 to-cyan-50 dark:from-emerald-900/30 dark:to-cyan-900/30 border border-emerald-200/60 dark:border-emerald-500/20 rounded-2xl p-6 md:p-8">
