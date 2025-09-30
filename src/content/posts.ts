@@ -1257,7 +1257,6 @@ posts.push(
   }
 );
 
-<<<<<<< HEAD
 // Mar 2026 – Three brand-new articles to surface at the top and advertise on Home
 posts.push(
   {
@@ -1288,10 +1287,6 @@ posts.push(
     readTime: "8 min read"
   }
 );
-
-=======
-// Merge: keep unified content set
->>>>>>> cursor/create-and-deploy-new-content-c3df
 // Sept 30, 2025 – Brand-new content to advertise on homepage (fresh trio v3)
 posts.push(
   {
