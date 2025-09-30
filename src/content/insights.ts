@@ -9,6 +9,33 @@ export type InsightArticle = {
 
 export const latestInsights: InsightArticle[] = [
   {
+    id: "autonomous-control-planes-kpis",
+    title: "Autonomous Control Planes: KPIs That Prevent Regressions",
+    summary:
+      "Wire SLIs to KPIs with budgets and attested rollbacks to ship safely every day.",
+    category: "AI Operations",
+    date: "2025-10-03",
+    readMinutes: 5,
+  },
+  {
+    id: "eval-budgeting-quick-wins",
+    title: "Eval Budgeting Quick Wins: Cut 30% Spend This Quarter",
+    summary:
+      "Cache golden answers, collapse redundant tests, and tier by risk to save budget.",
+    category: "GenAI",
+    date: "2025-10-03",
+    readMinutes: 4,
+  },
+  {
+    id: "privacy-first-edge-telemetry",
+    title: "Privacy‑First Edge Telemetry: Signal Without PII",
+    summary:
+      "On-device redaction, salted hashing, and negative caching for safe observability.",
+    category: "Observability",
+    date: "2025-10-03",
+    readMinutes: 6,
+  },
+  {
     id: "eval-guardrails-blueprint",
     title: "Evaluation Guardrails: A Practical Blueprint",
     summary:
