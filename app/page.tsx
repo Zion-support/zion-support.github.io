@@ -61,6 +61,9 @@ import ContentNavigationHub from '../components/ContentNavigationHub';
 import UltimateAutonomousRevolutionBanner from '../components/UltimateAutonomousRevolutionBanner';
 import InteractiveROICalculator2026 from '../components/InteractiveROICalculator2026';
 import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
+import InteractiveAIDemo from '../components/InteractiveAIDemo';
+import RevolutionaryTechShowcase from '../components/RevolutionaryTechShowcase';
+import PerformanceComparison from '../components/PerformanceComparison';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -446,6 +449,19 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Interactive AI Demo */}
+      <section className="py-20 bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950">
+        <div className="max-w-6xl mx-auto px-4">
+          <InteractiveAIDemo />
+        </div>
+      </section>
+
+      {/* Revolutionary Tech Showcase */}
+      <RevolutionaryTechShowcase />
+
+      {/* Performance Comparison */}
+      <PerformanceComparison />
 
       {/* Interactive ROI Calculator */}
       <InteractiveROICalculator2026 />
