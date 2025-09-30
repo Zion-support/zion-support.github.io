@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-sla-scorecards-2026-q1",
+    title: "AI SLA Scorecards 2026 Q1: SLIs, Budgets, Rollback",
+    description: "Wire SLIs to product KPIs with budgeted actions and instant rollback for safe velocity.",
+    category: "AI Governance",
+    publishedAt: "2026-04-01",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-private-insights-v2-2026",
+    title: "Edge Private Insights v2 (2026): Zero‑PII Metrics at <100ms",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for actionable insights without PII.",
+    category: "Analytics",
+    publishedAt: "2026-04-01",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-runbooks-v2-2026",
+    title: "Agent Release Runbooks v2 (2026): Budgets + One‑Click Recovery",
+    description: "Battle‑tested runbooks with approvals, KPI‑linked canaries, and instant rollback.",
+    category: "AI Operations",
+    publishedAt: "2026-04-01",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-operational-trust-q4-2025",
     title: "AI Operational Trust Q4 2025: Live Scorecards that Ship",
     description: "KPI‑linked guardrails with PR checks, budgeted actions, and instant rollback to ship faster with confidence.",
