@@ -10,29 +10,29 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "genai-reliability-scorecards-2027",
-    title: "GenAI Reliability Scorecards 2027: KPIs, Budgets, Rollback",
-    description: "Live KPIs with budgeted actions and instant rollback to keep GenAI reliable and affordable.",
-    category: "AI Governance",
-    publishedAt: "2027-01-20",
+    slug: "ai-2027-cost-optimization-playbook",
+    title: "AI 2027 Cost Optimization Playbook",
+    description: "Tiered routing, caching, and compression to cut spend 30–70% with no regressions.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
   },
   {
-    slug: "edge-private-analytics-2027",
-    title: "Edge Private Analytics 2027: Zero‑PII Insights at <100ms",
-    description: "Scoped IDs, on‑device aggregation, and DP noise for actionable analytics without PII.",
-    category: "Analytics",
-    publishedAt: "2027-01-22",
+    slug: "edge-2026-private-feature-flags",
+    title: "Edge 2026: Private Feature Flags",
+    description: "Signed configs, scoped IDs, and on‑device metrics for zero‑PII rollouts at <100ms.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
   },
   {
-    slug: "genai-cache-playbook-2026",
-    title: "GenAI Cache Playbook 2026: Tiered Semantic Caches that Cut Cost 50%",
-    description: "Tiered semantic caches and routing guards that reduce cost by 50% while maintaining quality.",
-    category: "GenAI",
-    publishedAt: "2026-06-01",
+    slug: "agent-release-guardrails-2026",
+    title: "Agent Release Guardrails 2026",
+    description: "Budgets, approvals, KPI‑linked canaries, and instant rollback for safe automation.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
   },
