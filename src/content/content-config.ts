@@ -167,6 +167,14 @@ export const featuredBlogPosts: FeaturedItem[] = [
 // Jan 2027 – Feature three brand-new articles
 featuredBlogPosts.unshift(
   {
+    id: "verifiable-edge-analytics-2026",
+    title: "Verifiable Edge Analytics 2026",
+    description: "Zero‑PII insights with signed attestations under 100ms at the edge",
+    link: "/blog/verifiable-edge-analytics-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-2027-revolutionary-breakthrough",
     title: "AI 2027 Revolutionary Breakthrough",
     description: "Quantum‑neural advances enable 95% automation and 1000x performance.",

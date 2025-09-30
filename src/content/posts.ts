@@ -10,31 +10,13 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "real-time-decision-engines-2026",
-    title: "Real‑Time Decision Engines 2026: 10M/sec under 1ms",
-    description: "Warm pools, intent prefetching, and tiered caches for ultra‑low latency at scale.",
-    category: "Platform Engineering",
-    publishedAt: "2025-10-01",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "federated-learning-enterprise-2026",
-    title: "Federated Learning 2026: Private Training with Secure Aggregation",
-    description: "Zero‑PII model training across regions using secure aggregation and DP noise.",
-    category: "Machine Learning",
-    publishedAt: "2025-10-01",
+    slug: "verifiable-edge-analytics-2026",
+    title: "Verifiable Edge Analytics 2026: Zero‑PII Insights with Attestations",
+    description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for audit‑ready insights under 100ms.",
+    category: "Analytics",
+    publishedAt: "2025-10-31",
     featured: true,
     readTime: "7 min read"
-  },
-  {
-    slug: "cognitive-financial-modeling-2027",
-    title: "AI Financial Modeling 2027: KPI‑Linked Scorecards for 95%+ Accuracy",
-    description: "Operational scorecards, online evals, and rollback for reliable FinAI decisions.",
-    category: "FinTech AI",
-    publishedAt: "2025-10-01",
-    featured: true,
-    readTime: "9 min read"
   },
   {
     slug: "enterprise-rag-security-2027",
