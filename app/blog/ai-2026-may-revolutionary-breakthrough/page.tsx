@@ -2,7 +2,15 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
+  title: 'AI 2026 May Revolutionary Breakthrough: Quantum Consciousness Revolution',
+  description: 'Discover the May 2026 AI breakthrough featuring quantum consciousness fusion and autonomous enterprise transformation.',
+  keywords: 'AI 2026, quantum consciousness, enterprise automation, breakthrough',
+  openGraph: {
+    title: 'AI 2026 May Revolutionary Breakthrough: Quantum Consciousness Revolution',
+    description: 'Revolutionary AI breakthrough featuring quantum consciousness fusion and autonomous enterprise transformation.',
+    type: 'article',
+    publishedTime: '2026-05-01T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
   },
 };
 
