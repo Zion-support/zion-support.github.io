@@ -33,6 +33,7 @@ import February2026ContentMegaBanner from "./components/February2026ContentMegaB
 import NewContent2026BreakthroughShowcaseBanner from "./components/NewContent2026BreakthroughShowcaseBanner";
 import February2026BreakthroughMegaBanner from "./components/February2026BreakthroughMegaBanner";
 import NewContent2026ShowcaseBanner from "./components/NewContent2026ShowcaseBanner";
+import Revolutionary2026ContentMegaBreakthroughBanner from "./components/Revolutionary2026ContentMegaBreakthroughBanner";
 
 export default function App(): JSX.Element {
   return (
@@ -45,6 +46,9 @@ export default function App(): JSX.Element {
       
       {/* NEW: Revolutionary 2026 Content Mega Breakthrough Banner - Most Prominent */}
       <Revolutionary2026ContentMegaBreakthroughBanner />
+      
+      {/* NEW: February 2026 Content Mega Banner - Latest Breakthroughs */}
+      <February2026ContentMegaBanner />
       
       {/* NEW BREAKTHROUGH CONTENT BANNERS - Most Prominent */}
       <NewContent2026BreakthroughShowcaseBanner />
