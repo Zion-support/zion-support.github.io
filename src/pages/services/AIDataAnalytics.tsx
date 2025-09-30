@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function AIDataAnalytics(): React.JSX.Element {
@@ -7,11 +6,3 @@ export default function AIDataAnalytics(): React.JSX.Element {
 			<h1>AI Data Analytics</h1>
 		</main>
 	);
-=======
-import React from "react";
-
-export default function AIDataAnalytics(): React.JSX.Element {
-  return <div>AI Data Analytics</div>;
->>>>>>> origin/main
-}
-
