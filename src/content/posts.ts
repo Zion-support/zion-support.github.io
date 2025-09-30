@@ -1288,6 +1288,37 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Newly added trio to expand content and surface on Home
+posts.push(
+  {
+    slug: "ai-slo-scorecards-2026",
+    title: "AI SLO Scorecards 2026: Prove Reliability Week by Week",
+    description: "Define SLIs, error budgets, and rollback triggers tied to product KPIs.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-private-insights-2026",
+    title: "Edge Private Insights 2026: Actionable Metrics Without PII",
+    description: "Scoped IDs, on‑device aggregation, and DP noise—insights teams love without risk.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-budgets-routing-2026",
+    title: "GenAI Budgets & Routing 2026: Predictable Cost, Stable UX",
+    description: "Tier models, cache prompts, and route by SLA using eval signals to cut spend 40–70%.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Sept 30, 2025 – Fresh articles to add and advertise on homepage
 posts.push(
   {
