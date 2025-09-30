@@ -638,5 +638,59 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-13",
     featured: false,
     readTime: "6 min read"
+  },
+  {
+    slug: "multimodal-ai-agents-2026",
+    title: "Multimodal AI Agents 2026: Vision + Language + Actions at Scale",
+    description: "Build agents that see, understand, and act across text, images, and video with reliability.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "real-time-ai-compliance-2026",
+    title: "Real‑Time AI Compliance 2026: Automated Regulatory Checks in Production",
+    description: "Stay compliant with EU AI Act, GDPR, and industry standards using automated policy enforcement.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "federated-learning-enterprise-2026",
+    title: "Federated Learning for Enterprise 2026: Train Without Centralizing Data",
+    description: "Learn from distributed data sources while maintaining privacy and regulatory compliance.",
+    category: "Machine Learning",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "ai-powered-code-review-2026",
+    title: "AI‑Powered Code Review 2026: Ship Faster with Intelligent PR Analysis",
+    description: "Accelerate development with AI assistants that catch bugs, suggest optimizations, and enforce standards.",
+    category: "DevOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "continuous-model-validation-2026",
+    title: "Continuous Model Validation 2026: Catch Drift Before Users Do",
+    description: "Monitor model performance in real‑time with automated drift detection and instant rollbacks.",
+    category: "MLOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "sovereign-ai-infrastructure-2026",
+    title: "Sovereign AI Infrastructure 2026: Data Residency Meets Performance",
+    description: "Build AI systems that comply with data sovereignty requirements without sacrificing speed or scale.",
+    category: "Infrastructure",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
   }
 ];
