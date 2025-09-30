@@ -96,7 +96,12 @@ import NewContentPromotionalBanner2026 from '../components/NewContentPromotional
 import AIInnovationShowcaseBanner2026 from '../components/AIInnovationShowcaseBanner2026';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import UltimateContent2026Showcase from '../components/UltimateContent2026Showcase';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
+=======
+import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
+import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
+>>>>>>> origin/cursor/create-and-deploy-new-content-90ae
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -523,7 +528,16 @@ export default function HomePage() {
       {/* Ultimate Content 2026 Showcase */}
       <UltimateContent2026Showcase />
       
+<<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
+=======
+      {/* Revolutionary 2027 Content Banner */}
+      <Revolutionary2027ContentBanner />
+      
+      {/* Ultimate Content 2027 Showcase */}
+      <UltimateContent2027Showcase />
+      
+>>>>>>> origin/cursor/create-and-deploy-new-content-90ae
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <div className="max-w-4xl mx-auto px-4">
