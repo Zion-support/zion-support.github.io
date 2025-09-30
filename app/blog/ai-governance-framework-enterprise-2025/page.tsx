@@ -162,12 +162,12 @@ assert dp_ratio >= 0.8, f"FAIL: DP ratio {dp_ratio:.2f} < 0.8"
               <li><strong>Development:</strong> Model cards, ethical reviews, fairness/safety testing</li>
               <li><strong>Deployment:</strong> Approval gates, canary rollouts, A/B testing</li>
               <li><strong>Monitoring:</strong> Real-time drift detection, bias dashboards, incident alerts</li>
-              <li><strong>Retirement:</strong> Decommission triggers (accuracy <80%, regulatory non-compliance)</li>
+              <li><strong>Retirement:</strong> Decommission triggers (accuracy &lt;80%, regulatory non-compliance)</li>
             </ul>
             <div className="mt-4 bg-gray-100 dark:bg-gray-800 p-4 rounded">
               <p className="text-sm font-semibold mb-2">MLOps + Governance Integration:</p>
               <p className="text-sm">Every model version logged in MLflow with: training data hash, fairness metrics, 
-              approver sign-off, compliance checklist. Auto-retire models >12 months old.</p>
+              approver sign-off, compliance checklist. Auto-retire models &gt;12 months old.</p>
             </div>
           </div>
 
@@ -249,8 +249,8 @@ assert dp_ratio >= 0.8, f"FAIL: DP ratio {dp_ratio:.2f} < 0.8"
               <p className="text-sm mb-3"><strong>Challenge:</strong> Legacy credit model showed 18% approval rate disparity by race</p>
               <ul className="list-disc pl-6 text-sm space-y-1">
                 <li><strong>Action 1:</strong> Removed proxy variables (zip code → income-to-debt ratio)</li>
-                <li><strong>Action 2:</strong> Re-trained with fairness constraints (demographic parity >0.85)</li>
-                <li><strong>Action 3:</strong> Human review for edge cases (model confidence <70%)</li>
+                <li><strong>Action 2:</strong> Re-trained with fairness constraints (demographic parity &gt;0.85)</li>
+                <li><strong>Action 3:</strong> Human review for edge cases (model confidence &lt;70%)</li>
                 <li><strong>Result:</strong> Disparity reduced to 4%, zero discrimination lawsuits in 18 months</li>
               </ul>
             </div>
@@ -261,7 +261,7 @@ assert dp_ratio >= 0.8, f"FAIL: DP ratio {dp_ratio:.2f} < 0.8"
               <ul className="list-disc pl-6 text-sm space-y-1">
                 <li><strong>Action 1:</strong> Bias audit revealed gendered language signals (e.g., "competitive" vs "collaborative")</li>
                 <li><strong>Action 2:</strong> Gender-blind training + adversarial debiasing</li>
-                <li><strong>Action 3:</strong> Weekly monitoring: if gender ratio drifts >10%, auto-pause system</li>
+                <li><strong>Action 3:</strong> Weekly monitoring: if gender ratio drifts &gt;10%, auto-pause system</li>
                 <li><strong>Result:</strong> Gender parity improved to 52/48, EEOC pre-complaint withdrawn</li>
               </ul>
             </div>

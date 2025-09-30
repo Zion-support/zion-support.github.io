@@ -1,5 +1,20 @@
 import React from 'react';
-import PromotionalBanner from './PromotionalBanner';
+import Link from 'next/link';
+
+// Simple PromotionalBanner component
+const PromotionalBanner = ({ message, ctaText, ctaLink, backgroundColor, textColor }) => (
+  <div className={`w-full ${backgroundColor} ${textColor} py-4 px-6 text-center`}>
+    <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <span className="font-bold text-sm md:text-base">{message}</span>
+      <Link 
+        href={ctaLink}
+        className="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg font-semibold text-sm transition-colors"
+      >
+        {ctaText} →
+      </Link>
+    </div>
+  </div>
+);
 
 export const AIEnterpriseRevolutionBanner = () => (
   <PromotionalBanner
@@ -60,3 +75,14 @@ export const AI2026MegaBreakthroughBanner = () => (
     hideAfter={15}
   />
 );
+
+// Default export
+export default function NewContent2026RevolutionaryBanners() {
+  return (
+    <div>
+      <AIEnterpriseRevolutionBanner />
+      <AIAutonomousSystemsBanner />
+      <AI2026MegaBreakthroughBanner />
+    </div>
+  );
+}
