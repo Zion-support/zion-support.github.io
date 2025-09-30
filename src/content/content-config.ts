@@ -168,6 +168,26 @@ featuredBlogPosts.unshift(
   }
 );
 
+// New articles added Sept 30, 2025 — advertise site-wide
+featuredBlogPosts.unshift(
+	{
+		id: "platform-engineering-scorecards-2026",
+		title: "Platform Engineering Scorecards 2026",
+		description: "SLIs → KPIs with budgets, canaries, rollback for reliable platforms",
+		link: "/blog/ai-2026-platform-engineering-scorecards",
+		type: "article",
+		featured: true
+	},
+	{
+		id: "edge-ai-blueprint-2026",
+		title: "Edge AI Blueprint 2026",
+		description: "Private <100ms personalization with scoped IDs, on-device models, DP",
+		link: "/blog/edge-ai-blueprint-2026",
+		type: "article",
+		featured: true
+	}
+);
+
 // Oct 2025 – Add two brand-new featured posts
 featuredBlogPosts.unshift(
   {
