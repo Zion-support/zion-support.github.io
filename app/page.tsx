@@ -567,6 +567,7 @@ export default function HomePage() {
       
       {/* New Content Promotional Banner 2026 */}
       <NewContentPromotionalBanner2026 />
+
       
       {/* AI Innovation Showcase Banner 2026 */}
       <AIInnovationShowcaseBanner2026 />

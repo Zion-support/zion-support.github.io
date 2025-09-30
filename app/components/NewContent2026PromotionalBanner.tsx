@@ -20,11 +20,11 @@ export default function NewContent2026PromotionalBanner() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          <Link href="/blog/ai-2026-revolutionary-breakthroughs" className="group">
+          <Link href="/blog/ai-operational-resilience-2026" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">🚀</span>
+                  <span className="text-2xl">🧯</span>
                 </div>
                 <div>
                   <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -33,11 +33,10 @@ export default function NewContent2026PromotionalBanner() {
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-3 group-hover:text-cyan-300 transition-colors">
-                AI 2026 Revolutionary Breakthroughs
+                AI Operational Resilience 2026
               </h3>
               <p className="text-sm opacity-90 mb-4">
-                Discover quantum AI, autonomous systems, and edge computing breakthroughs 
-                that are transforming industries in 2026.
+                Blueprint for 99.99% uptime with policy tests, isolation, and automated recovery.
               </p>
               <div className="flex items-center text-cyan-300 font-semibold text-sm">
                 Read Article →
@@ -45,27 +44,26 @@ export default function NewContent2026PromotionalBanner() {
             </div>
           </Link>
 
-          <Link href="/blog/ai-enterprise-transformation-2026" className="group">
+          <Link href="/blog/ai-agent-observability-2026" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-teal-500 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">🏢</span>
+                <div className="w-12 h-12 bg-gradient-to-br from-violet-400 to-fuchsia-500 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">🔎</span>
                 </div>
                 <div>
-                  <span className="bg-gradient-to-r from-green-400 to-teal-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                    Featured Guide
+                  <span className="bg-gradient-to-r from-violet-400 to-fuchsia-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    Reliability
                   </span>
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-3 group-hover:text-green-300 transition-colors">
-                AI Enterprise Transformation 2026
+                AI Agent Observability 2026
               </h3>
               <p className="text-sm opacity-90 mb-4">
-                Complete implementation guide with proven strategies, ROI frameworks, 
-                and step-by-step roadmaps for 300% ROI.
+                Traces, metrics, evals, and guardrails for safe and reliable autonomy.
               </p>
-              <div className="flex items-center text-green-300 font-semibold text-sm">
-                Read Guide →
+              <div className="flex items-center text-fuchsia-300 font-semibold text-sm">
+                Read Article →
               </div>
             </div>
           </Link>
