@@ -17,6 +17,10 @@ interface ContentItem {
 }
 
 const featuredContent: ContentItem[] = [
+  {
+    title: 'Real-Time Decision Engines v3',
+    description: '10M/sec under 1ms using warm pools and intent prefetching.',
+    href: '/blog/ai-2025-sept-30-real-time-decision-engines-v3',
     publishedDate: 'September 30, 2025',
     readTime: '6 min read',
     category: 'Observability'
