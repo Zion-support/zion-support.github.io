@@ -10,30 +10,69 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
-    slug: "ai-2026-neural-architecture-search-breakthrough",
-    title: "Neural Architecture Search: The 2026 Breakthrough Revolutionizing AI Development",
-    description: "Discover how NAS breakthrough technology is delivering 300-500% performance improvements and 95% energy efficiency gains across Fortune 500 enterprises.",
-    category: "AI Development",
-    publishedAt: "2026-01-15",
-=======
+    slug: "ai-2025-sept-30-autonomous-infra-blueprint-v2",
+    title: "AI 2025: Autonomous Infra Blueprint v2 — Self‑Healing in <60s",
+    description: "Updated playbooks with budgeted actions, policy tests, and live canaries for instant containment.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-2026-consentless-journeys-blueprint",
+    title: "Edge 2026: Consentless Journeys Blueprint — Zero‑PII at <100ms",
+    description: "Scoped IDs, signed attestations, and DP noise enabling compliant personalization worldwide.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "genai-2027-platform-roi-scorecards",
+    title: "GenAI 2027: Platform ROI Scorecards — Prove Value Every Sprint",
+    description: "KPI‑linked scorecards, golden tasks, and policy tests that quantify ROI and prevent regressions.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "enterprise-rag-security-2027",
+    title: "Enterprise RAG Security 2027: Auth‑Aware Retrieval & Signed Outputs",
+    description: "Secure RAG with auth‑aware retrieval, freshness windows, prompt firewalls, and signed outputs.",
+    category: "AI Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-consentless-personalization-2027",
+    title: "Edge Personalization 2027: Zero‑PII, <100ms, Scoped IDs",
+    description: "Private, sub‑100ms journeys with scoped IDs, on‑device models, and DP noise.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-2025-september-30-new-governed-agent-patterns",
+    title: "New Governed Agent Patterns (2025)",
+    description: "Policy-first orchestration with approvals, verifiers, budgets, and rollback for safe autonomy.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "agent-release-zero-regret-2026",
     title: "Zero‑Regret Agent Releases 2026",
     description: "Budgeted actions, KPI‑linked canaries, sandboxed tools, and one‑click rollback for safe agent updates.",
     category: "AI Operations",
     publishedAt: "2025-09-30",
->>>>>>> feat/new-content-ads-sept30-2025
     featured: true,
     readTime: "15 min read"
   },
   {
-<<<<<<< HEAD
-    slug: "ai-2026-federated-learning-enterprise-breakthrough",
-    title: "Federated Learning Enterprise Breakthrough: Privacy-First AI at Global Scale",
-    description: "Transform your AI capabilities with privacy-preserving federated learning that delivers 300% performance improvements while maintaining 100% regulatory compliance.",
-    category: "Privacy AI",
-    publishedAt: "2026-01-15",
-=======
     slug: "ai-2025-oct-31-governed-agent-patterns-v2",
     title: "Governed Agent Patterns v2 (2025)",
     description: "Approvals, verifiers, budgets, and rollback—production patterns for safe autonomous agents.",
@@ -48,7 +87,6 @@ export const posts: BlogPost[] = [
     description: "Trace prompts, models, and costs to business outcomes with budget‑aware actions and rollback.",
     category: "Observability",
     publishedAt: "2025-09-30",
->>>>>>> feat/new-content-ads-sept30-2025
     featured: true,
     readTime: "18 min read"
   },
