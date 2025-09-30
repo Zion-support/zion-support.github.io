@@ -205,6 +205,16 @@ export default function App(): JSX.Element {
         <Revolutionary2026ContentMegaBanner />
       </section>
 
+      {/* New Content Showcase 2026 - Prominent Advertising */}
+      <section>
+        <NewContentShowcase2026 />
+      </section>
+
+      {/* Revolutionary AI 2026 Banner */}
+      <section>
+        <RevolutionaryAI2026Banner />
+      </section>
+
       {/* Future Tech Showcase 2026 */}
       <section>
         <FutureTechShowcase2026 />
