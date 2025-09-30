@@ -1,0 +1,6 @@
+
+    id: 'placeholder',
+  space-mining-operations-platform'',;
+    name: 'SpaceMining: Operation,s'',;
+    description: ;
+  'Advanced: space mining platform that enables asteroid minin,g, lunar resource extraction, and space resource management for sustainable space exploration.'',;

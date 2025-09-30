@@ -1,0 +1,37 @@
+nohup: ignoring input
+🚀 Starting automated PR merge process...
+📋 Processing PR #23980...
+🌿 Branch: cursor/create-and-deploy-new-content-dc4d
+From https://github.com/Zion-Holdings/zion.app
+ * [new branch]                cursor/create-and-deploy-new-content-dc4d -> cursor/create-and-deploy-new-content-dc4d
+✅ Fetched branch cursor/create-and-deploy-new-content-dc4d
+Already up to date.
+✅ Merge successful for PR #23980
+On branch main
+Your branch is ahead of 'origin/main' by 2364 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   merge_all_prs.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	dist/assets/css/main-i8VcZ-cB.css
+	dist/assets/js/components-DNuPuJMJ.js
+	dist/assets/js/components-dashboard-DS6DTxQn.js
+	dist/assets/js/main-Drx-zlTv.js
+	dist/assets/js/pages-DhQ0UjgA.js
+	dist/assets/js/utils-C0rvH7GY.js
+	dist/assets/js/utils-performance-CKBw5LqG.js
+	dist/assets/js/vendor-q_N1p839.js
+	dist/assets/js/vendor-react-BsJ3FZJQ.js
+	dist/assets/js/vendor-utils-CESDOVH4.js
+	dist/performance-monitor.js
+	dist/sw-performance.js
+	merge_progress.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+🎉 PR #23980 merged successfully
+Deleted branch cursor/create-and-deploy-new-content-dc4d (was a017ecf02531).
