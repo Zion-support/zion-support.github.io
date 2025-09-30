@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-multimodal-agents-2025",
+    title: "Multimodal AI Agents 2025: Vision + Voice + Action Under One SLA",
+    description: "Build agents that process images, audio, and text with unified safety budgets, cross-modal evals, and SLO-backed reliability.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "realtime-genai-streaming-2025",
+    title: "Real-Time GenAI Streaming 2025: Sub-Second TTFB with Quality Guardrails",
+    description: "Stream LLM responses with <200ms time-to-first-byte while maintaining safety filters, cost controls, and quality evals.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-code-review-automation-2025",
+    title: "AI Code Review Automation 2025: Ship Faster with Security and Quality Built-In",
+    description: "Automate code reviews with AI that catches bugs, security issues, and architecture problems—without slowing down your team.",
+    category: "DevOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-reliable-rag-2025",
     title: "Reliable RAG 2025: Grounded Answers Under Latency Budgets",
     description: "Contracts, caches, and routing for reliable RAG that ships with SLAs.",

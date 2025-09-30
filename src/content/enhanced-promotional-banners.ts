@@ -19,6 +19,24 @@ export interface EnhancedPromotionalBanner {
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   {
+    id: 'fresh-content-sep-30-2025',
+    message: '🚀 NEW TODAY: Multimodal AI Agents, Real-Time Streaming, AI Code Review Automation',
+    ctaText: 'Explore Now',
+    ctaLink: '/blog',
+    backgroundColor: 'bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600',
+    textColor: 'text-white',
+    showClose: true,
+    autoHide: true,
+    hideAfter: 20,
+    active: true,
+    priority: 0,
+    variant: 'launch',
+    icon: '🚀',
+    animation: 'pulse',
+    badge: 'FRESH CONTENT',
+    featured: true
+  },
+  {
     id: 'fresh-content-sep-2025',
     message: '✨ New: Reliable RAG 2025 + Serverless Inference Cost Playbook',
     ctaText: 'Read now',
@@ -29,7 +47,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
     autoHide: true,
     hideAfter: 18,
     active: true,
-    priority: 0,
+    priority: 1,
     variant: 'info',
     icon: '✨',
     badge: 'NEW',
