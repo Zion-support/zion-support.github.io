@@ -10,6 +10,7 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+// merged: keep both new and existing entries
     // NEW — Autonomous AI Roadmaps (featured)
     slug: "ai-2027-autonomous-roadmaps",
     title: "AI 2027: Autonomous Roadmaps that Prove ROI",
@@ -24,12 +25,26 @@ export const posts: BlogPost[] = [
     slug: "edge-2026-signed-evals",
     title: "Edge 2026: Signed Evals — Zero‑PII, <100ms",
     description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for evals you can trust.",
+// merged from feature branch
+    slug: "ai-2025-sept-30-breaking-enterprise-ai-breakthroughs",
+    title: "Sept 30, 2025: Breaking Enterprise AI Breakthroughs",
+    description: "8 production‑ready patterns: rollback, scorecards, consentless analytics, and more.",
+    category: "Enterprise AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "edge-2025-sept-30-zero-pii-experiments-v2",
+    title: "Edge 2025: Zero‑PII Experiments v2 (<100ms)",
+    description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B worldwide.",
     category: "Analytics",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
   },
   {
+// merged: keep both variants
     // NEW — GenAI Cost Tiers v3 (featured)
     slug: "genai-2027-cost-tiers-v3",
     title: "GenAI 2027: Cost Tiers v3 — 40–70% Savings, Stable UX",
@@ -38,6 +53,14 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
+// merged from feature branch
+    slug: "genai-2025-sept-30-policy-tests-quickstart",
+    title: "GenAI 2025: Policy Tests Quickstart",
+    description: "Lightweight CI policy tests wired to KPIs to ship faster without regressions.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
   },
   {
     // NEW — Runtime rollback blueprint (featured)
