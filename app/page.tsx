@@ -151,6 +151,8 @@ import AutonomyBlueprint2026Banner from '../components/AutonomyBlueprint2026Bann
 import September30ContentPromo2025 from '../components/September30ContentPromo2025';
 import AI2026QuantumConsciousnessRevolutionBanner from '../components/AI2026QuantumConsciousnessRevolutionBanner';
 import Revolutionary2026BreakthroughBanner from '../components/Revolutionary2026BreakthroughBanner';
+import January2026BreakthroughContentBanner from '../components/January2026BreakthroughContentBanner';
+import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -187,6 +189,12 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🚀 JANUARY 2026 BREAKTHROUGH CONTENT BANNER */}
+      <January2026BreakthroughContentBanner />
+      
+      {/* 🚀 REVOLUTIONARY CONTENT 2026 BANNER */}
+      <RevolutionaryContent2026Banner />
+      
       {/* 🚀 AI 2027 REVOLUTIONARY BREAKTHROUGH BANNER */}
       <AI2027RevolutionaryBreakthroughBanner />
       
