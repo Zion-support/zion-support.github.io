@@ -10,6 +10,36 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2025-oct-02-agent-safety-scorecards",
+    title: "Agent Safety Scorecards — KPIs, Budgets, Rollback",
+    description:
+      "Design KPI‑linked scorecards for agents with budgets, canaries, and deterministic rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-10-02",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-2025-oct-02-private-experiments-v4",
+    title: "Private Experiments v4 — Consentless A/B at <100ms",
+    description:
+      "Scoped IDs, on‑device metrics, and DP noise for compliant A/B testing worldwide under 100ms.",
+    category: "Analytics",
+    publishedAt: "2025-10-02",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "genai-2025-oct-02-cache-playbook-v2",
+    title: "GenAI Cache Playbook v2 — 50–70% Savings, Stable UX",
+    description:
+      "Tiered + semantic caches with eval gates and KPI‑linked budgets for predictable costs.",
+    category: "GenAI",
+    publishedAt: "2025-10-02",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
     slug: "ai-2025-oct-02-agent-runbooks-v6",
     title: "Agent Reliability Runbooks v6 — Contain Incidents in Under 60s",
     description:

@@ -104,8 +104,8 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: Sept 30, 2025 — Agentic Workflows, Private Edge Telemetry, FinOps Scorecards"
-          description="Just dropped: Reliable Multi‑Agent Orchestration, Privacy‑First Edge Telemetry, and Cost Optimization Scorecards. Ship faster, stay safe, and cut spend 30–60%."
+          title="🚀 NEW: Oct 02 — Agent Safety Scorecards, Private Experiments v4, Cache Playbook v2"
+          description="Fresh drops: Agent Safety Scorecards, Edge Private Experiments v4, and GenAI Cache Playbook v2. Ship faster with safety, privacy, and predictable costs."
           ctaText="Read the Latest"
           ctaLink="/blog"
           dismissible={true}
