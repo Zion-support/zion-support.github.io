@@ -1994,3 +1994,25 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Brand new content to advertise (added now)
+posts.push(
+  {
+    slug: "ai-exec-trust-scorecards-2026",
+    title: "Executive Trust Scorecards 2026: Prove AI Reliability in Weeks",
+    description: "Lightweight scorecards tying SLIs to business KPIs with rollback triggers.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-model-warm-pools-2026",
+    title: "Edge Model Warm Pools 2026: <100ms Global Starts Under Budget",
+    description: "Predictive warmups, intent prefetch, and tiered caches for instant responses.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  }
+);
+

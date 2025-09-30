@@ -316,3 +316,23 @@ featuredBlogPosts.unshift(
     featured: true
   }
 );
+
+// Advertise newly added posts (Sept 30, 2025)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-exec-trust-scorecards-2026",
+    title: "Executive Trust Scorecards 2026",
+    description: "SLIs linked to KPIs with rollback triggers",
+    link: "/blog/ai-exec-trust-scorecards-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-model-warm-pools-2026",
+    title: "Edge Model Warm Pools 2026",
+    description: "Predictive warmups and tiered caches for <100ms starts",
+    link: "/blog/edge-model-warm-pools-2026",
+    type: "article",
+    featured: true
+  }
+);
