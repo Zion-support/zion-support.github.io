@@ -290,7 +290,7 @@ spec:
         <section className="mb-8">
           <h2 className="text-3xl font-bold mb-4">The Future: Autonomous Infrastructure by 2027</h2>
           <p className="mb-4">
-            By 2027, leading enterprises will run AI infrastructure with <5% human intervention. The vision:
+            By 2027, leading enterprises will run AI infrastructure with &lt;5% human intervention. The vision:
           </p>
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li><strong>Self-Optimizing:</strong> AI models tune infrastructure configs based on workload patterns</li>
