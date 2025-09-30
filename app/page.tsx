@@ -31,6 +31,15 @@ import {
   AIWorkflowAutomationBanner,
   EnterpriseAISecurityBanner
 } from '../components/NewContentPromotionalBanners';
+import {
+  AIEnterpriseTransformationGuideBanner,
+  AIQuantumComputingBreakthroughBanner,
+  QuantumFinancialOptimizationBanner,
+  AI2026MegaTrendsBanner,
+  AICognitiveComputingRevolutionBanner,
+  AIAutonomousEnterpriseSystemsBanner,
+  AISustainabilityTransformationBanner
+} from '../components/NewContent2026PromotionalBanners';
 import ContentShowcase from '../components/ContentShowcase';
 
 export const metadata = {
@@ -42,6 +51,15 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* Latest 2026 Content Promotional Banners */}
+      <AIEnterpriseTransformationGuideBanner />
+      <AIQuantumComputingBreakthroughBanner />
+      <QuantumFinancialOptimizationBanner />
+      <AI2026MegaTrendsBanner />
+      <AICognitiveComputingRevolutionBanner />
+      <AIAutonomousEnterpriseSystemsBanner />
+      <AISustainabilityTransformationBanner />
+      
       {/* New Content Promotional Banners */}
       <AIEnterpriseAdoptionBanner />
       <AITrends2025Banner />
