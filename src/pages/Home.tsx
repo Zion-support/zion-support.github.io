@@ -149,7 +149,6 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-<<<<<<< HEAD
           title="New: Scorecards v4 + Zero‑PII Insights + Quality Tiers v2"
           description="Ship faster with KPI‑linked scorecards, private <100ms analytics, and predictable GenAI costs."
           ctaText="Explore new content"
@@ -160,16 +159,6 @@ const Home = () => {
             { title: "GenAI Quality Tiers v2 (2026)", category: "GenAI", link: "/blog/genai-quality-tiers-v2-2026" },
             { title: "Edge RAG 2026", category: "GenAI", link: "/blog/edge-rag-privacy-preserving-2026" },
             { title: "PR Policy Tests 2026", category: "AI Governance", link: "/blog/ai-governance-pr-policy-tests-2026" }
-=======
-          title="New: Autonomous Infra + GenAI Evals Scorecards + Edge‑Governed Flags"
-          description="Self‑healing infra with budgets, KPI‑tied evals, and sub‑100ms private experiments."
-          ctaText="Explore new content"
-          ctaLink="/blog"
-          featuredItems={[
-            { title: "Autonomous Infra 2025", category: "Infrastructure", link: "/blog/ai-2025-autonomous-infra-blueprint" },
-            { title: "GenAI Evals Scorecards 2025", category: "GenAI", link: "/blog/genai-evals-scorecards-2025" },
-            { title: "Edge‑Governed Flags 2025", category: "Edge Computing", link: "/blog/edge-governed-flags-2025" }
->>>>>>> cursor/create-and-deploy-new-content-60b5
           ]}
         />
         {/* Fresh content banner promoting brand-new articles */}

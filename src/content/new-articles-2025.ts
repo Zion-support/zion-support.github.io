@@ -307,6 +307,17 @@ newArticles2025.push(
 // Sept 30, 2025 – Fresh content for homepage banners and showcases
 newArticles2025.push(
   {
+    id: "ai-operational-scorecards-v4-2026",
+    title: "📊 AI Operational Scorecards v4 (2026)",
+    description: "SLIs mapped to KPIs with budgeted actions, canaries, and instant rollback.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-operational-scorecards-v4-2026",
+    readTime: "8 min read",
+    tags: ["Scorecards", "SLIs", "Budgets", "Rollback"]
+  },
+  {
     id: "ai-governance-live-scorecards-2026",
     title: "📊 AI Governance Live Scorecards 2026",
     description: "Guardrails wired to KPIs with PR checks and live canaries—ship faster, stay compliant.",

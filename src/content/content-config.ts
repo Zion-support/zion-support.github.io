@@ -464,6 +464,14 @@ export const getLatestContent = (count: number = 5): FeaturedItem[] => {
 // Surface fresh featured content (added Sept 30, 2025)
 featuredBlogPosts.unshift(
   {
+    id: "ai-operational-scorecards-v4-2026",
+    title: "AI Operational Scorecards v4 (2026)",
+    description: "SLIs mapped to KPIs with budgeted actions and instant rollback.",
+    link: "/blog/ai-operational-scorecards-v4-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-operational-scorecards-q4-2026",
     title: "AI Operational Scorecards Q4 2026",
     description: "SLIs mapped to KPIs, budgeted actions, instant rollback.",
