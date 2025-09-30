@@ -196,6 +196,14 @@ export default function HomePage() {
       
       {/* 🆕 NEW SERVICES PROMOTIONAL BANNER */}
       <NewServicesPromotionalBanner />
+
+      {/* 🔍 Featured Content Showcase — New */}
+      <ContentShowcase
+        title="Latest AI Breakthroughs & Guides"
+        subtitle="Fresh research, playbooks, and success stories added today"
+        maxItems={6}
+        showMetrics
+      />
       
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
@@ -844,12 +852,10 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Transform Your Business with
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
-              {' '}AI-Powered Solutions
-            </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600"> AI-Powered Solutions</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
+            Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation,
             and enterprise IT solutions that drive growth, efficiency, and innovation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -884,7 +890,8 @@ export default function HomePage() {
               <div className="text-gray-600">Cost Savings</div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
         {/* Featured Services */}
         <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -963,7 +970,8 @@ export default function HomePage() {
               popular={false}
             />
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Interactive AI Calculator 2025 */}
       <InteractiveAICalculator2025 />
