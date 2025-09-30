@@ -1257,6 +1257,37 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Brand-new content to advertise on homepage (fresh trio v3)
+posts.push(
+  {
+    slug: "ai-sla-scorecards-2026-q1",
+    title: "AI SLA Scorecards 2026 Q1: SLIs, Budgets, Rollback",
+    description: "Operational scorecards tying model SLIs to KPIs with budgeted actions and instant rollback.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-private-insights-v2-2026",
+    title: "Edge Private Insights v2 (2026): Scoped IDs, DP Noise, <100ms",
+    description: "Second‑gen private analytics with on‑device aggregation, scoped IDs, and differential privacy under 100ms.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-runbooks-v2-2026",
+    title: "Agent Release Runbooks v2 (2026): Budgets, Canaries, Recovery",
+    description: "Upgraded runbooks with KPI‑linked canaries, budgeted actions, sandboxed tools, and one‑click recovery.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Jan 2026 – New articles to create more content and advertise on Home
 posts.push(
   {
