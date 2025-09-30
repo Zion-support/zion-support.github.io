@@ -44,6 +44,14 @@ import {
   AIInnovationShowcaseBanner
 } from '../components/NewContent2026Banners';
 import {
+  AINeuralSuperintelligenceBanner,
+  AIQuantumComputingBanner,
+  AIAutonomousSystemsBanner as NewAIAutonomousSystemsBanner,
+  NeuralSuperintelligenceCaseStudyBanner,
+  InteractiveAIToolsBanner,
+  LatestContentShowcaseBanner as NewLatestContentShowcaseBanner
+} from '../components/NewContent2026PromotionalBanners';
+import {
   AITrends2025PromotionalBanner,
   Fortune500SuccessBanner,
   InteractiveROICalculatorBanner,
@@ -138,16 +146,13 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
-<<<<<<< HEAD
-      {/* New 2025 Content Banners */}
-      <AITrends2025PromotionalBanner />
-      <Fortune500SuccessBanner />
-      <InteractiveROICalculatorBanner />
-      <AITransformationShowcaseBanner />
-=======
-      {/* Revolutionary Content 2026 Banner */}
-      <RevolutionaryContent2026Banner />
->>>>>>> 3ee1431f4b3ff64239e74586b537363f0fc67c86
+      {/* Latest 2026 Revolutionary Content Banners */}
+      <AINeuralSuperintelligenceBanner />
+      <AIQuantumComputingBanner />
+      <NewAIAutonomousSystemsBanner />
+      <NeuralSuperintelligenceCaseStudyBanner />
+      <InteractiveAIToolsBanner />
+      <NewLatestContentShowcaseBanner />
       
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
