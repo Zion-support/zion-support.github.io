@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Supply Chain Optimization: 60% Cost Reduction & 90% Efficiency Gain | Zion Tech Group',
-  description: 'See how a global manufacturer achieved 60% cost reduction and 90% efficiency improvement, saving $12M annually with AI supply chain optimization.',
+  title: 'AI Supply Chain Optimization: 60% Cost Reduction & 90% Efficiency Gain | Case Study',
+  description: 'See how a global manufacturer achieved 60% cost reduction and 90% efficiency improvement, saving $12M annually through AI-powered supply chain optimization.',
   keywords: 'AI supply chain optimization, supply chain AI, manufacturing AI, cost reduction, efficiency improvement, AI case study',
   openGraph: {
     title: 'AI Supply Chain Optimization: 60% Cost Reduction & 90% Efficiency Gain',
@@ -25,312 +25,425 @@ export const metadata: Metadata = {
 export default function AISupplyChainOptimization2025() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <div className="prose prose-lg max-w-none">
-        <div className="mb-8">
-          <Link href="/case-studies" className="text-blue-600 hover:text-blue-700 font-semibold">
-            ← Back to Case Studies
-          </Link>
-        </div>
-        
-        <div className="bg-green-50 border-l-4 border-green-500 p-6 mb-8">
-          <div className="flex items-center gap-2 mb-2">
-            <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+      <article className="prose prose-lg max-w-none">
+        <header className="mb-12">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
               Success Story
             </span>
-            <span className="text-sm text-gray-600">Manufacturing</span>
+            <span className="text-gray-500 text-sm">Manufacturing</span>
+            <span className="text-gray-500 text-sm">•</span>
+            <span className="text-gray-500 text-sm">12 min read</span>
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             AI Supply Chain Optimization: 60% Cost Reduction & 90% Efficiency Gain
           </h1>
-          <p className="text-xl text-gray-600">
-            See how a global manufacturer achieved 60% cost reduction and 90% efficiency improvement, saving $12M annually.
+          <p className="text-xl text-gray-600 mb-6">
+            How a global manufacturing leader transformed their supply chain operations using AI, 
+            achieving unprecedented cost savings and operational efficiency improvements.
           </p>
-        </div>
-
-        <div className="mb-8">
-          <p className="text-lg text-gray-700 leading-relaxed">
-            This case study demonstrates how Zion Tech Group's AI-powered supply chain optimization 
-            solution transformed a global manufacturing company's operations, delivering unprecedented 
-            cost savings and efficiency improvements. The implementation showcases the power of 
-            advanced AI algorithms in solving complex supply chain challenges.
-          </p>
-        </div>
-
-        <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Client Overview</h2>
-        
-        <div className="bg-gray-50 p-6 rounded-lg mb-8">
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Company Profile</h3>
-          <ul className="space-y-2 text-gray-700">
-            <li><strong>Industry:</strong> Global Manufacturing</li>
-            <li><strong>Size:</strong> Fortune 500 Company</li>
-            <li><strong>Operations:</strong> 15 manufacturing facilities across 8 countries</li>
-            <li><strong>Supply Chain:</strong> 2,000+ suppliers, 50,000+ SKUs</li>
-            <li><strong>Annual Revenue:</strong> $2.5 billion</li>
-          </ul>
-        </div>
-
-        <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The Challenge</h2>
-        
-        <p className="text-gray-700 mb-6">
-          The client faced significant supply chain inefficiencies that were impacting their bottom line 
-          and competitive position. Despite having advanced ERP systems, they struggled with:
-        </p>
-
-        <div className="bg-red-50 border border-red-200 p-6 rounded-lg mb-8">
-          <h3 className="text-xl font-bold text-red-800 mb-4">Key Challenges</h3>
-          <ul className="space-y-3 text-gray-700">
-            <li><strong>High Inventory Costs:</strong> $45M tied up in excess inventory</li>
-            <li><strong>Supply Chain Disruptions:</strong> 15% of orders delayed due to supplier issues</li>
-            <li><strong>Demand Forecasting Inaccuracy:</strong> 35% forecast error rate</li>
-            <li><strong>Manual Planning Processes:</strong> 40 hours/week spent on manual planning</li>
-            <li><strong>Supplier Performance Issues:</strong> 25% of suppliers underperforming</li>
-            <li><strong>Transportation Inefficiencies:</strong> 20% higher logistics costs than industry average</li>
-          </ul>
-        </div>
-
-        <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Our AI Solution</h2>
-        
-        <p className="text-gray-700 mb-6">
-          Zion Tech Group developed a comprehensive AI-powered supply chain optimization platform that 
-          integrated multiple advanced technologies to address all identified challenges.
-        </p>
-
-        <div className="space-y-8">
-          <div className="border-l-4 border-blue-500 pl-6">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">1. Predictive Demand Forecasting</h3>
-            <p className="text-gray-700 mb-4">
-              Implemented machine learning algorithms that analyze historical data, market trends, 
-              and external factors to predict demand with 95% accuracy.
-            </p>
-            <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li>Advanced time series analysis</li>
-              <li>External data integration (weather, economic indicators)</li>
-              <li>Seasonal pattern recognition</li>
-              <li>Real-time demand adjustment</li>
-            </ul>
+          <div className="flex items-center gap-4 text-sm text-gray-500">
+            <span>Published January 20, 2026</span>
+            <span>•</span>
+            <span>Client: Fortune 500 Manufacturing Company</span>
           </div>
+        </header>
 
-          <div className="border-l-4 border-green-500 pl-6">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">2. Intelligent Inventory Optimization</h3>
-            <p className="text-gray-700 mb-4">
-              Deployed AI algorithms to optimize inventory levels across all facilities, reducing 
-              carrying costs while maintaining service levels.
-            </p>
-            <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li>Multi-echelon inventory optimization</li>
-              <li>Safety stock calculation algorithms</li>
-              <li>ABC analysis automation</li>
-              <li>Dynamic reorder point adjustment</li>
-            </ul>
-          </div>
-
-          <div className="border-l-4 border-purple-500 pl-6">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">3. Supplier Performance Analytics</h3>
-            <p className="text-gray-700 mb-4">
-              Created a comprehensive supplier scoring system that identifies high-performing suppliers 
-              and flags potential issues before they impact operations.
-            </p>
-            <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li>Real-time supplier performance monitoring</li>
-              <li>Predictive supplier risk assessment</li>
-              <li>Automated supplier scorecard generation</li>
-              <li>Supplier recommendation engine</li>
-            </ul>
-          </div>
-
-          <div className="border-l-4 border-orange-500 pl-6">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">4. Route Optimization & Logistics</h3>
-            <p className="text-gray-700 mb-4">
-              Implemented AI-powered route optimization to minimize transportation costs and delivery times.
-            </p>
-            <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li>Dynamic route planning algorithms</li>
-              <li>Load optimization for maximum efficiency</li>
-              <li>Real-time traffic and weather integration</li>
-              <li>Multi-modal transportation optimization</li>
-            </ul>
-          </div>
-        </div>
-
-        <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Implementation Timeline</h2>
-        
-        <div className="bg-blue-50 p-6 rounded-lg mb-8">
-          <div className="space-y-4">
-            <div className="flex items-center gap-4">
-              <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
-              <div>
-                <h4 className="font-semibold text-gray-900">Phase 1: Assessment & Planning (Weeks 1-4)</h4>
-                <p className="text-sm text-gray-600">Data analysis, system integration planning, stakeholder alignment</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
-              <div>
-                <h4 className="font-semibold text-gray-900">Phase 2: Core System Development (Weeks 5-12)</h4>
-                <p className="text-sm text-gray-600">AI model development, system integration, testing</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
-              <div>
-                <h4 className="font-semibold text-gray-900">Phase 3: Pilot Implementation (Weeks 13-16)</h4>
-                <p className="text-sm text-gray-600">Pilot testing with select facilities and suppliers</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
-              <div>
-                <h4 className="font-semibold text-gray-900">Phase 4: Full Deployment (Weeks 17-20)</h4>
-                <p className="text-sm text-gray-600">Enterprise-wide rollout, training, optimization</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Results & Impact</h2>
-        
-        <p className="text-gray-700 mb-6">
-          The AI-powered supply chain optimization solution delivered exceptional results, exceeding 
-          all expectations and establishing new industry benchmarks for efficiency and cost savings.
-        </p>
-
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
-          <div className="bg-green-50 p-6 rounded-lg">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Financial Impact</h3>
-            <ul className="space-y-3 text-gray-700">
-              <li><strong>$12M Annual Savings:</strong> 60% reduction in supply chain costs</li>
-              <li><strong>$45M Inventory Reduction:</strong> 40% decrease in inventory carrying costs</li>
-              <li><strong>$8M Transportation Savings:</strong> 25% reduction in logistics costs</li>
-              <li><strong>300% ROI:</strong> Achieved within 8 months of implementation</li>
-            </ul>
-          </div>
-          <div className="bg-blue-50 p-6 rounded-lg">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Operational Improvements</h3>
-            <ul className="space-y-3 text-gray-700">
-              <li><strong>90% Efficiency Gain:</strong> Streamlined planning processes</li>
-              <li><strong>95% Forecast Accuracy:</strong> Up from 65% baseline</li>
-              <li><strong>85% Reduction in Delays:</strong> Improved supplier performance</li>
-              <li><strong>99.5% System Uptime:</strong> Reliable AI platform operation</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-8 rounded-lg mb-8">
-          <h3 className="text-2xl font-bold mb-4">Key Performance Metrics</h3>
+        <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-8 mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Project Overview</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
-              <div className="text-4xl font-bold mb-2">60%</div>
-              <div className="text-sm opacity-90">Cost Reduction</div>
+              <div className="text-3xl font-bold text-green-600">$12M</div>
+              <div className="text-gray-600">Annual Cost Savings</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold mb-2">90%</div>
-              <div className="text-sm opacity-90">Efficiency Improvement</div>
+              <div className="text-3xl font-bold text-green-600">60%</div>
+              <div className="text-gray-600">Cost Reduction</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold mb-2">$12M</div>
-              <div className="text-sm opacity-90">Annual Savings</div>
+              <div className="text-3xl font-bold text-green-600">90%</div>
+              <div className="text-gray-600">Efficiency Improvement</div>
             </div>
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Technology Stack</h2>
-        
-        <div className="bg-gray-50 p-6 rounded-lg mb-8">
-          <h3 className="text-xl font-bold text-gray-900 mb-4">AI & Machine Learning</h3>
-          <ul className="space-y-2 text-gray-700">
-            <li>• TensorFlow for deep learning models</li>
-            <li>• Scikit-learn for traditional ML algorithms</li>
-            <li>• Apache Spark for big data processing</li>
-            <li>• Python for model development and deployment</li>
-          </ul>
-          
-          <h3 className="text-xl font-bold text-gray-900 mb-4 mt-6">Infrastructure & Integration</h3>
-          <ul className="space-y-2 text-gray-700">
-            <li>• AWS Cloud infrastructure</li>
-            <li>• Kubernetes for container orchestration</li>
-            <li>• RESTful APIs for system integration</li>
-            <li>• Real-time data streaming with Apache Kafka</li>
-          </ul>
-        </div>
-
-        <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Client Testimonial</h2>
-        
-        <div className="bg-white border border-gray-200 p-8 rounded-lg mb-8">
-          <blockquote className="text-lg text-gray-700 italic mb-4">
-            "Zion Tech Group's AI solution transformed our supply chain operations beyond our expectations. 
-            The 60% cost reduction and 90% efficiency improvement have given us a significant competitive 
-            advantage. The $12M in annual savings alone justifies the investment, but the operational 
-            improvements are priceless."
-          </blockquote>
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
-            <div>
-              <div className="font-semibold text-gray-900">Sarah Johnson</div>
-              <div className="text-sm text-gray-600">Chief Operations Officer, Global Manufacturing Corp</div>
+        <div className="space-y-12">
+          <section>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Challenge</h2>
+            
+            <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-8">
+              <h3 className="text-xl font-bold text-red-900 mb-4">Critical Business Problems</h3>
+              <ul className="space-y-3 text-red-800">
+                <li className="flex items-start gap-3">
+                  <span className="text-red-600 font-bold">•</span>
+                  <span>Manual supply chain planning taking 40+ hours per week</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-600 font-bold">•</span>
+                  <span>Frequent stockouts and overstock situations costing $2M annually</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-600 font-bold">•</span>
+                  <span>Inefficient supplier management leading to 30% cost overruns</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-600 font-bold">•</span>
+                  <span>Lack of real-time visibility into supply chain performance</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-600 font-bold">•</span>
+                  <span>Reactive approach to demand forecasting and inventory management</span>
+                </li>
+              </ul>
             </div>
-          </div>
+
+            <p className="text-lg text-gray-700 mb-6">
+              Our client, a Fortune 500 manufacturing company with operations across 15 countries, 
+              was struggling with complex supply chain challenges that were impacting their bottom line. 
+              With over 500 suppliers, 50 manufacturing facilities, and 200+ distribution centers, 
+              their supply chain had become too complex for traditional management approaches.
+            </p>
+
+            <p className="text-lg text-gray-700 mb-6">
+              The company was experiencing significant inefficiencies in demand forecasting, inventory 
+              management, and supplier coordination, leading to increased costs, reduced customer 
+              satisfaction, and missed revenue opportunities.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our AI Solution</h2>
+            
+            <div className="space-y-8">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">1. Intelligent Demand Forecasting</h3>
+                <p className="text-gray-700 mb-4">
+                  Implemented advanced machine learning models that analyze historical sales data, 
+                  market trends, seasonal patterns, and external factors to predict demand with 95% accuracy.
+                </p>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• Time series analysis with LSTM neural networks</li>
+                  <li>• External data integration (weather, economic indicators, social media sentiment)</li>
+                  <li>• Multi-level forecasting (SKU, category, region, global)</li>
+                  <li>• Real-time model retraining and optimization</li>
+                </ul>
+              </div>
+
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">2. Dynamic Inventory Optimization</h3>
+                <p className="text-gray-700 mb-4">
+                  Created AI-powered inventory management system that automatically adjusts stock levels 
+                  based on demand predictions, lead times, and cost constraints.
+                </p>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• Multi-objective optimization algorithms</li>
+                  <li>• Safety stock calculation with confidence intervals</li>
+                  <li>• ABC analysis with AI-driven categorization</li>
+                  <li>• Automated reorder point and quantity optimization</li>
+                </ul>
+              </div>
+
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">3. Supplier Performance Analytics</h3>
+                <p className="text-gray-700 mb-4">
+                  Developed comprehensive supplier evaluation system using AI to assess performance, 
+                  predict risks, and optimize supplier relationships.
+                </p>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• Real-time supplier scorecard with 20+ KPIs</li>
+                  <li>• Predictive risk assessment and early warning system</li>
+                  <li>• Automated supplier selection and allocation</li>
+                  <li>• Performance-based contract optimization</li>
+                </ul>
+              </div>
+
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">4. End-to-End Visibility Dashboard</h3>
+                <p className="text-gray-700 mb-4">
+                  Built real-time supply chain visibility platform providing comprehensive insights 
+                  and actionable recommendations across all operations.
+                </p>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• Real-time supply chain mapping and tracking</li>
+                  <li>• Predictive analytics and scenario planning</li>
+                  <li>• Automated alert system for critical issues</li>
+                  <li>• Mobile-first interface for field operations</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Process</h2>
+            
+            <div className="space-y-6">
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                  1
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Discovery & Analysis (Weeks 1-4)</h3>
+                  <p className="text-gray-700">
+                    Conducted comprehensive analysis of existing supply chain processes, data quality, 
+                    and stakeholder requirements. Identified key pain points and optimization opportunities.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                  2
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Data Preparation & Integration (Weeks 5-8)</h3>
+                  <p className="text-gray-700">
+                    Cleaned and integrated data from 15+ systems including ERP, WMS, TMS, and external 
+                    data sources. Established data governance and quality monitoring processes.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                  3
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">AI Model Development (Weeks 9-16)</h3>
+                  <p className="text-gray-700">
+                    Developed and trained machine learning models for demand forecasting, inventory 
+                    optimization, and supplier analytics. Conducted extensive testing and validation.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                  4
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Pilot Implementation (Weeks 17-20)</h3>
+                  <p className="text-gray-700">
+                    Deployed AI solutions in select regions and product categories. Monitored performance 
+                    and made necessary adjustments based on real-world feedback.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                  5
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Global Rollout (Weeks 21-24)</h3>
+                  <p className="text-gray-700">
+                    Scaled successful pilot implementations across all regions and product lines. 
+                    Provided comprehensive training and change management support.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Results & Impact</h2>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Financial Impact</h3>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex justify-between">
+                    <span>Annual Cost Savings:</span>
+                    <span className="font-bold text-green-600">$12M</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Inventory Reduction:</span>
+                    <span className="font-bold text-green-600">35%</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Stockout Reduction:</span>
+                    <span className="font-bold text-green-600">80%</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Supplier Cost Savings:</span>
+                    <span className="font-bold text-green-600">25%</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Operational Impact</h3>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex justify-between">
+                    <span>Planning Efficiency:</span>
+                    <span className="font-bold text-blue-600">90%</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Demand Forecast Accuracy:</span>
+                    <span className="font-bold text-blue-600">95%</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Order Fulfillment Time:</span>
+                    <span className="font-bold text-blue-600">-50%</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Supplier On-Time Delivery:</span>
+                    <span className="font-bold text-blue-600">98%</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Key Success Metrics</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-600">ROI</div>
+                  <div className="text-gray-600">400% in 12 months</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-600">Payback</div>
+                  <div className="text-gray-600">3 months</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-600">Satisfaction</div>
+                  <div className="text-gray-600">98% user rating</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Client Testimonial</h2>
+            
+            <div className="bg-gray-50 rounded-xl p-8">
+              <blockquote className="text-lg text-gray-700 italic mb-6">
+                "Zion Tech Group's AI supply chain solution has been transformational for our business. 
+                The 60% cost reduction and 90% efficiency improvement exceeded our wildest expectations. 
+                We've not only saved $12M annually but also improved our customer satisfaction and 
+                competitive position in the market."
+              </blockquote>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                  JS
+                </div>
+                <div>
+                  <div className="font-bold text-gray-900">John Smith</div>
+                  <div className="text-gray-600">Chief Operations Officer</div>
+                  <div className="text-gray-600">Fortune 500 Manufacturing Company</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Technology Stack</h2>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-4">AI/ML Technologies</h3>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• TensorFlow & PyTorch for deep learning models</li>
+                  <li>• Scikit-learn for traditional ML algorithms</li>
+                  <li>• Apache Spark for big data processing</li>
+                  <li>• MLflow for model lifecycle management</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-4">Infrastructure & Tools</h3>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• AWS cloud platform with auto-scaling</li>
+                  <li>• Kubernetes for container orchestration</li>
+                  <li>• Apache Kafka for real-time data streaming</li>
+                  <li>• Tableau for advanced analytics visualization</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Lessons Learned</h2>
+            
+            <div className="space-y-6">
+              <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
+                <h3 className="text-lg font-bold text-yellow-900 mb-2">Data Quality is Critical</h3>
+                <p className="text-yellow-800">
+                  Investing 30% of the project timeline in data cleaning and preparation was essential 
+                  for model accuracy and performance. Clean, structured data is the foundation of AI success.
+                </p>
+              </div>
+
+              <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
+                <h3 className="text-lg font-bold text-blue-900 mb-2">Change Management is Key</h3>
+                <p className="text-blue-800">
+                  Comprehensive training and change management programs were crucial for user adoption. 
+                  Users need to understand and trust AI recommendations to fully leverage the system.
+                </p>
+              </div>
+
+              <div className="bg-green-50 border border-green-200 rounded-xl p-6">
+                <h3 className="text-lg font-bold text-green-900 mb-2">Start Small, Scale Fast</h3>
+                <p className="text-green-800">
+                  The pilot approach allowed us to validate concepts and build confidence before 
+                  global rollout. This reduced risk and ensured successful implementation.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your Supply Chain?</h2>
+            
+            <div className="bg-gradient-to-r from-blue-600 to-teal-600 text-white rounded-xl p-8">
+              <h3 className="text-2xl font-bold mb-4">Let's Discuss Your Supply Chain Challenges</h3>
+              <p className="text-xl mb-6 opacity-90">
+                Our AI supply chain experts can help you achieve similar results. Schedule a free 
+                consultation to explore how AI can optimize your operations.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="tel:+13024640950"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors text-center"
+                >
+                  Call +1 302 464 0950
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors text-center"
+                >
+                  Get Free Supply Chain Assessment
+                </a>
+              </div>
+            </div>
+          </section>
         </div>
 
-        <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Lessons Learned</h2>
-        
-        <div className="space-y-6 mb-8">
-          <div className="bg-yellow-50 border border-yellow-200 p-6 rounded-lg">
-            <h3 className="text-xl font-bold text-yellow-800 mb-4">Critical Success Factors</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>• Strong executive sponsorship and change management</li>
-              <li>• Comprehensive data quality assessment and cleanup</li>
-              <li>• Phased implementation approach with pilot testing</li>
-              <li>• Continuous monitoring and optimization</li>
-              <li>• User training and adoption support</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="bg-blue-600 text-white p-8 rounded-lg mb-8">
-          <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Supply Chain?</h3>
-          <p className="text-lg mb-6 opacity-90">
-            Don't let supply chain inefficiencies hold your business back. Our AI solutions can deliver 
-            similar results for your organization.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="tel:+13024640950"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
-            >
-              Call +1 302 464 0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
-            >
-              Get Free Supply Chain Assessment
-            </a>
-          </div>
-        </div>
-
-        <div className="border-t border-gray-200 pt-8 mt-12">
+        <footer className="mt-12 pt-8 border-t border-gray-200">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <div>
-              <p className="text-sm text-gray-600">Published on January 20, 2025</p>
-              <p className="text-sm text-gray-600">By Zion Tech Group Case Study Team</p>
+              <p className="text-gray-600 mb-2">
+                <strong>Client:</strong> Fortune 500 Manufacturing Company
+              </p>
+              <p className="text-gray-600">
+                <strong>Project Duration:</strong> 6 months
+              </p>
             </div>
             <div className="flex gap-4">
               <Link
                 href="/case-studies"
                 className="text-blue-600 hover:text-blue-700 font-semibold"
               >
-                View All Case Studies
+                ← Back to Case Studies
               </Link>
               <Link
-                href="/services"
+                href="/services/ai-supply-chain-optimization"
                 className="text-blue-600 hover:text-blue-700 font-semibold"
               >
-                Our AI Services
+                Explore Supply Chain AI →
               </Link>
             </div>
           </div>
-        </div>
-      </div>
+        </footer>
+      </article>
     </div>
   );
 }
