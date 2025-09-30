@@ -33,7 +33,6 @@ import February2026ContentMegaBanner from "./components/February2026ContentMegaB
 import NewContent2026BreakthroughShowcaseBanner from "./components/NewContent2026BreakthroughShowcaseBanner";
 import February2026BreakthroughMegaBanner from "./components/February2026BreakthroughMegaBanner";
 import NewContent2026ShowcaseBanner from "./components/NewContent2026ShowcaseBanner";
-import Revolutionary2026ContentMegaBreakthroughBanner from "./components/Revolutionary2026ContentMegaBreakthroughBanner";
 import March2026RevolutionaryBreakthroughBanner from "./components/March2026RevolutionaryBreakthroughBanner";
 import March2026ContentShowcase from "./components/March2026ContentShowcase";
 import March2026AdvertisingMegaBanner from "./components/March2026AdvertisingMegaBanner";
@@ -49,6 +48,8 @@ import Revolutionary2026ContentShowcaseBanner from "./components/Revolutionary20
 import May2026RevolutionaryBreakthroughBanner from "./components/May2026RevolutionaryBreakthroughBanner";
 import May2026ContentShowcase from "./components/May2026ContentShowcase";
 import May2026ContentAdvertisingBanner from "./components/May2026ContentAdvertisingBanner";
+import May2026RevolutionaryContentBanner from "./components/May2026RevolutionaryContentBanner";
+import May2026ContentShowcaseBanner from "./components/May2026ContentShowcaseBanner";
 import NeuromorphicComputingRevolutionBanner from "./components/NeuromorphicComputingRevolutionBanner";
 import MetaCognitiveAutonomousSystemsBanner from "./components/MetaCognitiveAutonomousSystemsBanner";
 import Ultimate2026ContentShowcaseBanner from "./components/Ultimate2026ContentShowcaseBanner";
@@ -78,6 +79,12 @@ export default function App(): JSX.Element {
       
       {/* NEW: May 2026 Content Showcase - Featured Content */}
       <May2026ContentShowcase />
+      
+      {/* NEW: May 2026 Revolutionary Content Banner - Most Prominent */}
+      <May2026RevolutionaryContentBanner />
+      
+      {/* NEW: May 2026 Content Showcase Banner - Most Prominent */}
+      <May2026ContentShowcaseBanner />
       
       {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
       <April2026MegaBreakthroughBanner />
