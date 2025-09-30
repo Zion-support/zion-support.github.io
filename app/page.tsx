@@ -98,6 +98,10 @@ import OctoberFeaturedContentBanner from '../components/OctoberFeaturedContentBa
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
+import NewContent2026ShowcaseBanner, { 
+  AI2026MegaTrendsBanner, 
+  EnterpriseAITransformationBanner 
+} from '../components/NewContent2026ShowcaseBanner';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
@@ -168,6 +172,9 @@ export default function HomePage() {
       <div className="animate-fade-in">
         {/* 🚀 NEW: Autonomous AI 2026 Revolution Banner */}
         <AutonomousAI2026RevolutionBanner />
+        
+        {/* 🎯 NEW: 2026 Content Showcase Banner */}
+        <NewContent2026ShowcaseBanner />
       {/* 🔔 New Article Promo: Real-Time Agent Routing 2026 */}
       <section className="py-6 bg-gradient-to-r from-cyan-700 via-indigo-700 to-blue-700 text-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -804,6 +811,7 @@ export default function HomePage() {
         </section>
 
         {/* 🔥 BRAND NEW CONTENT - SEPTEMBER 30, 2025 - 5 EXCLUSIVE PUBLICATIONS! */}
+        <section className="py-16 bg-gradient-to-r from-orange-500 via-red-500 to-pink-600">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-4 mb-6">
