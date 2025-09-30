@@ -437,15 +437,6 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
-    slug: "agent-red-teaming-2026",
-    title: "Agent Red‑Teaming 2026: Live Evals, Budgets, and Safe Autonomy",
-    description: "Operational red‑teaming with KPI‑linked evals, budgeted actions, and instant rollback to prevent regressions.",
-    category: "AI Security",
-    publishedAt: "2025-10-30",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
     slug: "ai-2028-autonomous-governance-blueprint",
     title: "AI 2028: Autonomous Governance Blueprint",
     description: "Budgets, live scorecards, PR policy tests, and rollback for safe autonomy.",
@@ -1654,18 +1645,9 @@ posts.unshift(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read",
-  },
-  {
-    slug: "genai-2025-sept-30-quality-tiers-quickstart",
-    title: "GenAI Quality Tiers Quickstart: Stable UX at 40–70% Lower Cost",
-    description:
-      "Introduce tiered routing, semantic caches, and KPI‑linked budgets to reduce spend without regressions.",
-    category: "GenAI",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read",
   }
 );
+
 
 // Oct 01-02, 2025 – Add three new posts and surface them site-wide
 posts.unshift(
