@@ -51,10 +51,18 @@ import May2026ContentShowcase from "./components/May2026ContentShowcase";
 import May2026ContentAdvertisingBanner from "./components/May2026ContentAdvertisingBanner";
 import June2026MegaAutomationBanner from "./components/June2026MegaAutomationBanner";
 import InteractiveContentShowcase2026Advanced from "./components/InteractiveContentShowcase2026Advanced";
+import June2026SuperintelligenceBreakthroughBanner from "./components/June2026SuperintelligenceBreakthroughBanner";
+import June2026ContentShowcaseBanner from "./components/June2026ContentShowcaseBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEW: June 2026 Superintelligence Breakthrough Banner - Most Prominent */}
+      <June2026SuperintelligenceBreakthroughBanner />
+      
+      {/* NEW: June 2026 Content Showcase Banner - Featured Content */}
+      <June2026ContentShowcaseBanner />
+      
       {/* NEW: May 2026 Revolutionary Breakthrough Banner - Most Prominent */}
       <May2026RevolutionaryBreakthroughBanner />
       
