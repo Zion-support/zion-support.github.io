@@ -73,10 +73,18 @@ import March2026ContentShowcaseBanner from "./components/March2026ContentShowcas
 import March2026ServicesPromotionalBanner from "./components/March2026ServicesPromotionalBanner";
 import April2026RevolutionaryBreakthroughBanner from "./components/April2026RevolutionaryBreakthroughBanner";
 import April2026ContentShowcaseBanner from "./components/April2026ContentShowcaseBanner";
+import October2026NewContentBanner from "./components/October2026NewContentBanner";
+import October2026BreakthroughShowcaseBanner from "./components/October2026BreakthroughShowcaseBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEWEST: October 2026 New Content Banner - MOST PROMINENT */}
+      <October2026NewContentBanner />
+      
+      {/* NEWEST: October 2026 Breakthrough Showcase Banner - HIGHLY PROMINENT */}
+      <October2026BreakthroughShowcaseBanner />
+      
       {/* NEW: September 2025 Practical AI Insights Banner - FEATURED */}
       <September2025PracticalAIBanner />
       
@@ -107,11 +115,11 @@ export default function App(): JSX.Element {
       {/* NEW: May 2026 Revolutionary Breakthrough Banner - Most Prominent */}
       <May2026RevolutionaryBreakthroughBanner />
       
-      {/* NEW: AI Trends 2026 Advertising Banner */}
-      <AITrends2026AdvertisingBanner />
+      {/* NEW: 2026 Consensus Intelligence Breakthrough Banner - Most Prominent */}
+      <ConsensusIntelligenceBreakthroughBanner />
       
-      {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
-      <April2026MegaBreakthroughBanner />
+      {/* NEW: 2026 Autonomous Enterprise Breakthrough Banner - Most Prominent */}
+      <AutonomousEnterpriseBreakthroughBanner />
       
       {/* NEW: April 2026 Conscious Computing Banner */}
       <April2026ConsciousComputingBanner />
@@ -124,15 +132,6 @@ export default function App(): JSX.Element {
       
       {/* NEW: Revolutionary 2026 Content Showcase Banner */}
       <Revolutionary2026ContentShowcaseBanner />
-      
-      {/* NEW: April 2026 Revolutionary Breakthrough Banner - Most Prominent */}
-      <April2026RevolutionaryBreakthroughBanner />
-      
-      {/* NEW: 2026 Consensus Intelligence Breakthrough Banner - Most Prominent */}
-      <ConsensusIntelligenceBreakthroughBanner />
-      
-      {/* NEW: 2026 Autonomous Enterprise Breakthrough Banner - Most Prominent */}
-      <AutonomousEnterpriseBreakthroughBanner />
       
       {/* NEW: March 2026 Revolutionary Breakthrough Banner - Most Prominent */}
       <March2026AdvertisingMegaBanner />
@@ -154,18 +153,6 @@ export default function App(): JSX.Element {
       
       {/* NEW: Interactive Content Hub 2026 - Advanced Content Exploration */}
       <InteractiveContentHub2026 />
-      
-      {/* NEW: March 2026 Multimodal AI Breakthrough Banner - Most Prominent */}
-      <March2026MultimodalBreakthroughBanner />
-      
-      {/* NEW: Autonomous AI 2026 Revolutionary Banner - Revolutionary Content */}
-      <AutonomousAI2026RevolutionaryBanner />
-      
-      {/* NEW: March 2026 Content Showcase Banner - Latest Content */}
-      <March2026ContentShowcaseBanner />
-      
-      {/* NEW: March 2026 Services Promotional Banner - Services Advertising */}
-      <March2026ServicesPromotionalBanner />
       
       {/* NEW: Revolutionary 2026 Content Mega Breakthrough Banner - Most Prominent */}
       <Revolutionary2026ContentMegaBreakthroughBanner />
