@@ -600,6 +600,24 @@ export const posts: BlogPost[] = [
     readTime: "6 min read"
   },
   {
+    slug: "ai-ops-slo-controllers-2025",
+    title: "AI Ops SLO Controllers: Self‑Healing Infra that Ships",
+    description: "SLO‑driven controllers that auto‑remediate, scale, and rollback without paging humans.",
+    category: "AI Operations",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "cost-aware-rag-blueprint-2025",
+    title: "Cost‑Aware RAG Blueprint: Hybrid Search with Freshness Budgets",
+    description: "Cut retrieval costs 40%+ with hybrid search, TTL windows, and cache warmups aligned to SLAs.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-governance-blueprint-2025",
     title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
     description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.",
