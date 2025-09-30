@@ -1149,6 +1149,33 @@ export const posts: BlogPost[] = [
 // Newly added content (auto-advertised on Home via latest sort)
 posts.push(
   {
+    slug: "ai-operational-evals-2026",
+    title: "Operational Evals 2026: KPIs, Canaries, and Rollbacks",
+    description: "Wire offline suites, PR checks, and live canaries to KPIs for safe, fast delivery.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-ab-testing-2026",
+    title: "Edge A/B Testing 2026: Private Experiments at <100ms",
+    description: "Scoped IDs, on-device metrics, and DP noise to run compliant, latency-free experiments.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "sovereign-rag-platforms-2026",
+    title: "Sovereign RAG Platforms 2026: Residency, Guardrails, and Speed",
+    description: "Region-scoped corpora, auth-aware retrieval, and signed outputs without hurting UX.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-safety-budgets-2026",
     title: "AI Safety Budgets 2026: Guardrails That Keep Velocity High",
     description: "Budget risky actions, set rollback triggers, and wire evals to KPIs for safe automation.",
