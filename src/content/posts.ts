@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2025-oct-01-enterprise-rag-security-v2",
+    title: "Enterprise RAG Security v2 — Auth-Aware, Fresh, Signed",
+    description: "Auth-scoped retrieval, freshness windows, prompt firewalls, and signed outputs that keep answers correct and compliant.",
+    category: "AI Security",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "genai-2025-oct-01-cost-optimization-blueprint",
+    title: "GenAI Cost Optimization Blueprint — Tiers, Caches, Budgets",
+    description: "Quality tiers, semantic caches, and budget-aware routing delivering 40–70% savings with stable UX.",
+    category: "GenAI",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-2025-oct-01-zero-pii-telemetry-v2",
+    title: "Zero‑PII Telemetry v2 — Sub‑100ms, Signed, Differentially Private",
+    description: "Scoped IDs, on‑device aggregation, DP noise, and attestations for privacy‑preserving metrics at the edge.",
+    category: "Analytics",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-2025-sept-30-cognitive-assistants-blueprint",
     title: "Cognitive Assistants Blueprint — 92% CSAT, Governed Velocity",
     description: "Production patterns for AI assistants with policy tests, eval scorecards, and KPI‑linked rollback for safe velocity.",
