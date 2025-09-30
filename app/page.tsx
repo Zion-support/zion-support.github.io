@@ -136,8 +136,8 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </header>
+
       {/* New Content Advertising Banner */}
       <NewContentAdvertisingBanner />
 
