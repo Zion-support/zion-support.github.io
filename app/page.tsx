@@ -166,6 +166,7 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+        
         {/* 🚀 NEW: Autonomous AI 2026 Revolution Banner */}
         <AutonomousAI2026RevolutionBanner />
       {/* 🔔 New Article Promo: Real-Time Agent Routing 2026 */}
