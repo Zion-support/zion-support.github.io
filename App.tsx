@@ -1,4 +1,8 @@
 import React, { JSX } from "react";
+import July2026RevolutionaryBreakthroughBanner from "./components/July2026RevolutionaryBreakthroughBanner";
+import InteractiveAI2026Showcase from "./components/InteractiveAI2026Showcase";
+import InteractiveROICalculator2026 from "./components/InteractiveROICalculator2026";
+import TranscendentIntelligence2027Banner from "./components/TranscendentIntelligence2027Banner";
 import ConsensusIntelligenceBreakthroughBanner from "./components/ConsensusIntelligenceBreakthroughBanner";
 import AutonomousEnterpriseBreakthroughBanner from "./components/AutonomousEnterpriseBreakthroughBanner";
 import LatestContentBanner2025 from "./src/components/LatestContentBanner2025";
@@ -16,7 +20,6 @@ import January2026BreakthroughContentBanner from "./components/January2026Breakt
 import Revolutionary2026ContentMegaBanner from "./components/Revolutionary2026ContentMegaBanner";
 import New2026ContentBreakthroughBanner from "./components/New2026ContentBreakthroughBanner";
 import FutureTechShowcase2026 from "./components/FutureTechShowcase2026";
-import InteractiveROICalculator2026 from "./components/InteractiveROICalculator2026";
 import NewContentAdvertisingBanner from "./components/NewContentAdvertisingBanner";
 import EnterpriseSolutionsShowcase2026 from "./components/EnterpriseSolutionsShowcase2026";
 import AITrendsInsightsBanner2026 from "./components/AITrendsInsightsBanner2026";
@@ -33,7 +36,6 @@ import NewContent2026AdvertisingMegaBanner from "./components/NewContent2026Adve
 import InteractiveContentShowcase2026 from "./components/InteractiveContentShowcase2026";
 import February2026ContentMegaBanner from "./components/February2026ContentMegaBanner";
 import NewContent2026BreakthroughShowcaseBanner from "./components/NewContent2026BreakthroughShowcaseBanner";
-<<<<<<< HEAD
 import February2026BreakthroughMegaBanner from "./components/February2026BreakthroughMegaBanner";
 import NewContent2026ShowcaseBanner from "./components/NewContent2026ShowcaseBanner";
 import March2026RevolutionaryBreakthroughBanner from "./components/March2026RevolutionaryBreakthroughBanner";
@@ -42,7 +44,6 @@ import March2026AdvertisingMegaBanner from "./components/March2026AdvertisingMeg
 import March2026BreakthroughBanner from "./components/March2026BreakthroughBanner";
 import RevolutionaryContentShowcase2026 from "./components/RevolutionaryContentShowcase2026";
 import InteractiveContentHub2026 from "./components/InteractiveContentHub2026";
-<<<<<<< HEAD
 import NewContent2026MegaBreakthroughBanner from "./components/NewContent2026MegaBreakthroughBanner";
 import April2026MegaBreakthroughBanner from "./components/April2026MegaBreakthroughBanner";
 import April2026ConsciousComputingBanner from "./components/April2026ConsciousComputingBanner";
@@ -50,25 +51,16 @@ import April2026QuantumNeuralBanner from "./components/April2026QuantumNeuralBan
 import QuantumConsciousnessFusionBanner from "./components/QuantumConsciousnessFusionBanner";
 import Revolutionary2026ContentShowcaseBanner from "./components/Revolutionary2026ContentShowcaseBanner";
 import May2026RevolutionaryBreakthroughBanner from "./components/May2026RevolutionaryBreakthroughBanner";
-<<<<<<< HEAD
-=======
-import March2026MultimodalBreakthroughBanner from "./components/March2026MultimodalBreakthroughBanner";
-import AutonomousAI2026RevolutionaryBanner from "./components/AutonomousAI2026RevolutionaryBanner";
-import March2026ContentShowcaseBanner from "./components/March2026ContentShowcaseBanner";
-import March2026ServicesPromotionalBanner from "./components/March2026ServicesPromotionalBanner";
->>>>>>> origin/cursor/create-and-deploy-new-content-071d
-=======
-import April2026RevolutionaryBreakthroughBanner from "./components/April2026RevolutionaryBreakthroughBanner";
-import April2026MegaSuccessBanner from "./components/April2026MegaSuccessBanner";
-import April2026ContentShowcaseBanner from "./components/April2026ContentShowcaseBanner";
->>>>>>> origin/cursor/create-and-deploy-new-content-c5bb
-=======
 import AITrends2026AdvertisingBanner from "./components/AITrends2026AdvertisingBanner";
->>>>>>> origin/cursor/create-and-deploy-new-content-fdff
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEW: July 2026 Revolutionary Breakthrough Banner - Most Prominent */}
+      <July2026RevolutionaryBreakthroughBanner />
+      
+      {/* NEW: June 2027 Transcendent Intelligence Banner - Most Prominent */}
+      <TranscendentIntelligence2027Banner />
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -370,6 +362,9 @@ export default function App(): JSX.Element {
         </div>
       </section>
 
+      {/* Interactive AI 2026 Showcase */}
+      <InteractiveAI2026Showcase />
+
       {/* AI Innovation Showcase */}
       <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-6">
@@ -450,6 +445,12 @@ export default function App(): JSX.Element {
         </div>
       </section>
 
+      {/* Interactive AI 2026 Showcase */}
+      <InteractiveAI2026Showcase />
+      
+      {/* Interactive ROI Calculator 2026 */}
+      <InteractiveROICalculator2026 />
+      
       {/* Interactive Content Showcase 2026 */}
       <InteractiveContentShowcase2026 />
       {/* NEW: April 2026 Content Promotion Section */}
