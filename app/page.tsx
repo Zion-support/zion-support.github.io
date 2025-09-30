@@ -41,6 +41,8 @@ import {
   InteractiveAICalculatorBanner,
   AIInnovationShowcaseBanner
 } from '../components/NewContent2026Banners';
+import LatestContentBanner2026 from '../components/LatestContentBanner2026';
+import RevolutionaryAI2026Banner from '../components/RevolutionaryAI2026Banner';
 import ContentShowcase from '../components/ContentShowcase';
 import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
 import NewContent2026PromotionalBanner from '../components/NewContent2026PromotionalBanner';
@@ -87,6 +89,12 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* Revolutionary AI 2026 Banner */}
+      <RevolutionaryAI2026Banner />
+
+      {/* Latest Content Banner 2026 */}
+      <LatestContentBanner2026 />
+
       {/* NEW 2026 Content Banner */}
       <section className="py-16 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white">
         <div className="max-w-6xl mx-auto px-4">
