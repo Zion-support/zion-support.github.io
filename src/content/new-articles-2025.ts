@@ -304,6 +304,43 @@ newArticles2025.push(
   }
 );
 
+// Sept 30, 2025 – Fresh content for homepage banners and showcases
+newArticles2025.push(
+  {
+    id: "ai-governance-live-scorecards-2026",
+    title: "📊 AI Governance Live Scorecards 2026",
+    description: "Guardrails wired to KPIs with PR checks and live canaries—ship faster, stay compliant.",
+    category: "AI Governance",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-governance-live-scorecards-2026",
+    readTime: "7 min read",
+    tags: ["Governance", "Canaries", "Scorecards"]
+  },
+  {
+    id: "edge-real-time-personalization-2026",
+    title: "⚡ Edge Real‑Time Personalization 2026",
+    description: "Scoped IDs, signed configs, and on‑device models for private <100ms personalization.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-real-time-personalization-2026",
+    readTime: "6 min read",
+    tags: ["Edge", "Privacy", "Personalization"]
+  },
+  {
+    id: "agent-release-runbooks-2026",
+    title: "✅ Agent Release Runbooks 2026",
+    description: "Budgets, evals, and instant rollback that keep agent releases safe at scale.",
+    category: "AI Operations",
+    publishedDate: "2025-10-31",
+    featured: true,
+    link: "/blog/agent-release-runbooks-2026",
+    readTime: "8 min read",
+    tags: ["Agents", "Runbooks", "Rollback"]
+  }
+);
+
 // Mar 2026 – Fresh featured promos to advertise on Home
 newArticles2025.push(
   {
