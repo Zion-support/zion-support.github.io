@@ -1623,7 +1623,7 @@ posts.unshift(
   }
 );
 
-// Sept 30, 2025 – Freshly added posts to expand content library
+// Sept 30, 2025 – Add three more posts and promote across the site
 posts.unshift(
   {
     slug: "ai-2025-sept-30-operational-trust-scorecards-v3",
@@ -1654,6 +1654,7 @@ posts.unshift(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read",
+<<<<<<< HEAD
   },
   {
     slug: "genai-2025-sept-30-quality-tiers-quickstart",
@@ -1662,6 +1663,40 @@ posts.unshift(
       "Introduce tiered routing, semantic caches, and KPI‑linked budgets to reduce spend without regressions.",
     category: "GenAI",
     publishedAt: "2025-09-30",
+=======
+  }
+);
+
+// Oct 01-02, 2025 – Add three new posts and surface them site-wide
+posts.unshift(
+  {
+    slug: "ai-2025-oct-01-operational-trust-v4",
+    title: "Operational Trust Scorecards v4 — SLIs → KPIs with Budgets",
+    description:
+      "Next-gen scorecards: live canaries, budgeted actions, and attested rollback wired to product KPIs.",
+    category: "AI Operations",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-2025-oct-01-consentless-journeys-v3",
+    title: "Consentless Journeys v3 — Private Personalization <100ms",
+    description:
+      "Scoped IDs, signed configs, and on-device models for zero‑PII journeys worldwide under 100ms.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "genai-2025-oct-02-cache-playbook-v3",
+    title: "GenAI Cache Playbook v3 — Semantic + Tiered Caches",
+    description:
+      "Blend semantic + tiered caches with eval‑gated fallbacks to cut spend 60–80% while preserving UX KPIs.",
+    category: "GenAI",
+    publishedAt: "2025-10-02",
+>>>>>>> cursor/create-and-deploy-new-content-31d6
     featured: true,
     readTime: "8 min read",
   }
