@@ -1228,6 +1228,37 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Brand new posts to advertise on homepage (featured)
+posts.push(
+  {
+    slug: "ai-autonomous-ops-blueprint-2026",
+    title: "AI Autonomous Ops Blueprint 2026: Budgets, Traces, Instant Rollback",
+    description: "Design safe, self-healing AI operations with budgeted actions, live traces, and one-click rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-private-analytics-2026",
+    title: "Edge Private Analytics 2026: Scoped IDs, On‑Device Metrics, DP Noise",
+    description: "Ship actionable analytics without PII using scoped identifiers, on-device aggregation, and differential privacy.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-safety-runbooks-2026",
+    title: "Agent Safety Runbooks 2026: Approvals, Budgets, Canary Evals",
+    description: "Battle-tested runbooks for safe agent releases with approvals, budgeted actions, and KPI‑linked canaries.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  }
+);
+
 // Sept 30, 2025 – New promotional articles to surface on homepage
 posts.push(
   {

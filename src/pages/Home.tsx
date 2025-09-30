@@ -178,6 +178,30 @@ const Home = () => {
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
         </div>
+
+        {/* Newly added content promo */}
+        <div className="container mx-auto px-6 mt-6">
+          <div className="rounded-xl border border-white/10 bg-white/5 p-6">
+            <div className="text-white text-sm mb-4">Just added</div>
+            <div className="grid md:grid-cols-3 gap-4">
+              <Link to="/blog/ai-autonomous-ops-blueprint-2026" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">AI Operations</div>
+                <div className="text-white font-semibold">AI Autonomous Ops Blueprint 2026</div>
+                <div className="text-zion-slate-light text-sm mt-1">Budgets, live traces, and one‑click rollback for safe autonomy.</div>
+              </Link>
+              <Link to="/blog/edge-private-analytics-2026" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">Analytics</div>
+                <div className="text-white font-semibold">Edge Private Analytics 2026</div>
+                <div className="text-zion-slate-light text-sm mt-1">Scoped IDs, on‑device metrics, and DP noise without PII.</div>
+              </Link>
+              <Link to="/blog/agent-safety-runbooks-2026" className="block rounded-lg border border-white/10 p-4 hover:border-fuchsia-400/40 transition-colors">
+                <div className="text-fuchsia-300 text-xs mb-2">AI Governance</div>
+                <div className="text-white font-semibold">Agent Safety Runbooks 2026</div>
+                <div className="text-zion-slate-light text-sm mt-1">Approvals, budgets, and KPI‑linked canary evals.</div>
+              </Link>
+            </div>
+          </div>
+        </div>
         
         {/* OCTOBER 2025 MEGA LAUNCH - 7 Revolutionary Articles */}
         <div className="container mx-auto px-6 mt-6">
