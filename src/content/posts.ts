@@ -1111,3 +1111,29 @@ export const posts: BlogPost[] = [
 >>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
   }
 ];
+<<<<<<< HEAD
+=======
+
+// Newly added content (auto-advertised on Home via latest sort)
+posts.push(
+  {
+    slug: "ai-threat-hunting-with-llms-2026",
+    title: "AI Threat Hunting with LLMs 2026: Signals, Sandboxes, and Speed",
+    description: "Operational playbooks to augment analysts with safe LLM tooling, live traces, and budgeted actions.",
+    category: "Security",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "llm-production-runbooks-2026",
+    title: "LLM Production Runbooks 2026: Rollbacks, Budgets, and Canary Evals",
+    description: "Battle-tested runbooks for safe LLM releases—risk budgets, rollback triggers, and KPI-linked canaries.",
+    category: "AI Operations",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
+>>>>>>> origin/pr-update-cursor/create-and-deploy-new-content-6ef6
