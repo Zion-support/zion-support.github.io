@@ -31,7 +31,9 @@ export default function RootLayout({
                 <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
                 <Link href="/services/ai-2026-revolutionary-solutions" className="text-gray-700 hover:text-purple-600 transition-colors font-semibold">AI 2026</Link>
                 <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">Blog</Link>
+                <Link href="/blog/ai-2026-next-generation-autonomous-systems" className="text-gray-700 hover:text-purple-600 transition-colors font-semibold">Autonomous AI</Link>
                 <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">Case Studies</Link>
+                <Link href="/case-studies/ai-2026-mega-transformation-success-story" className="text-gray-700 hover:text-green-600 transition-colors font-semibold">$100M ROI</Link>
               </nav>
             </div>
           </div>
@@ -59,9 +61,10 @@ export default function RootLayout({
                 <h3 className="text-lg font-semibold mb-4">Resources</h3>
                 <ul className="space-y-2 text-gray-400">
                   <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
-                  <li><Link href="/blog/ai-trends-2026-future-tech" className="hover:text-white">AI Trends 2026</Link></li>
+                  <li><Link href="/blog/ai-2026-next-generation-autonomous-systems" className="hover:text-white">Autonomous AI Systems</Link></li>
+                  <li><Link href="/blog/ai-2026-quantum-machine-learning" className="hover:text-white">Quantum Machine Learning</Link></li>
                   <li><Link href="/case-studies" className="hover:text-white">Case Studies</Link></li>
-                  <li><Link href="/case-studies/enterprise-ai-transformation-2026" className="hover:text-white">$50M ROI Case Study</Link></li>
+                  <li><Link href="/case-studies/ai-2026-mega-transformation-success-story" className="hover:text-white">$100M ROI Success Story</Link></li>
                 </ul>
               </div>
               <div>
