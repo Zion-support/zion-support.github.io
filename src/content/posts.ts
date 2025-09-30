@@ -1257,6 +1257,37 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Three brand-new posts to advertise on homepage
+posts.push(
+  {
+    slug: "ai-2026-autonomous-ops-q4-playbook",
+    title: "Autonomous Ops Q4 2026: Budgets, Traces, Instant Rollback",
+    description: "A pragmatic playbook to operate autonomous systems safely with explicit budgets, live traces, and one‑click rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-analytics-consentless-2026-v2",
+    title: "Consentless Edge Analytics v2 (2026): Actionable Insights, Zero PII",
+    description: "Scoped IDs, on‑device aggregation, and DP noise that unlock insights without collecting PII—now faster and cheaper.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-quality-tiers-v2-2026",
+    title: "GenAI Quality Tiers v2 (2026): Stable UX Under Strict Budgets",
+    description: "Tiered models, semantic caches, and KPI‑linked routing that cut spend 40–70% while preserving experience.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Jan 2026 – New articles to create more content and advertise on Home
 posts.push(
   {
