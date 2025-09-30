@@ -36,6 +36,7 @@ export default function HomePage() {
               <a href="/blog/ai-2026-multimodal-enterprise-automation" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">Multimodal Automation<span>→</span></a>
               <a href="/blog/ai-2026-quantum-enhanced-machine-learning" className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-purple-500/30 transition-colors">Quantum ML<span>→</span></a>
               <a href="/blog/ai-2026-autonomous-business-operations" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">Autonomous Ops<span>→</span></a>
+              <a href="/blog/ai-2025-sept-30-operational-trust-scorecards-v3" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">Operational Trust v3<span>→</span></a>
             </div>
           </div>
         </div>
