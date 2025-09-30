@@ -217,6 +217,9 @@ export default function ContentHubPage() {
               <Link href="/blog/ai-2026-autonomous-business-intelligence" className="inline-flex items-center gap-2 bg-white text-emerald-700 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">Autonomous BI<span>→</span></Link>
               <Link href="/blog/ai-automation-2026-complete-guide" className="inline-flex items-center gap-2 bg-white text-teal-700 px-4 py-2 rounded-lg font-semibold hover:bg-teal-50 transition-colors">Automation Guide<span>→</span></Link>
               <Link href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="inline-flex items-center gap-2 bg-white text-cyan-700 px-4 py-2 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">Fortune 500 Success<span>→</span></Link>
+              <Link href="/blog/ai-2025-sept-30-enterprise-ai-roadmap-v2" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Enterprise AI Roadmap v2<span>→</span></Link>
+              <Link href="/blog/ai-2025-sept-30-governed-agent-patterns" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Governed Agent Patterns<span>→</span></Link>
+              <Link href="/blog/ai-2025-sept-30-autonomous-finops-scorecards-v2" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Autonomous FinOps v2<span>→</span></Link>
             </div>
           </div>
         </div>
