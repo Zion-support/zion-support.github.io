@@ -10,19 +10,48 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
-<<<<<<< HEAD
-    title: 'AI Manufacturing Transformation: 90% Efficiency Gain',
-    slug: 'ai-manufacturing-transformation-2026',
-    excerpt: 'See how a Fortune 500 manufacturer achieved 90% efficiency gains and $50M annual savings through comprehensive AI transformation.',
-    company: 'Global Manufacturing Corp',
-    industry: 'Manufacturing',
+    title: 'Global Automotive Manufacturer: $15B AI Transformation',
+    slug: 'ai-2025-automotive-manufacturing-ai-transformation-15-billion-success',
+    excerpt: 'Leading automotive manufacturer achieves 40% efficiency gains, 60% quality improvement, and $15B in cumulative value with AI-powered smart factory solutions.',
+    company: 'GlobalAuto Corp',
+    industry: 'Automotive Manufacturing',
     results: {
-      savings: '$50M',
-      efficiency: '90%',
-      quality: '95%',
-      timeline: '12 months'
+      savings: '$15B',
+      efficiency: '40%',
+      quality: '60%',
+      timeline: '24 months'
     },
-    image: '🏭',
+    image: '🚗',
+    color: 'blue'
+  },
+  {
+    title: 'Global Retailer: $12B E-Commerce Personalization Success',
+    slug: 'ai-2025-retail-ecommerce-personalization-12-billion-success',
+    excerpt: 'Fortune 100 retailer achieves 180% conversion increase, 95% customer satisfaction, and $12B additional revenue with AI-powered personalization.',
+    company: 'GlobalRetail Inc',
+    industry: 'Retail & E-Commerce',
+    results: {
+      savings: '$12B',
+      efficiency: '180%',
+      quality: '95%',
+      timeline: '18 months'
+    },
+    image: '🛒',
+    color: 'purple'
+  },
+  {
+    title: 'Global Bank: $8B AI Fraud Prevention Success',
+    slug: 'ai-2025-financial-services-ai-fraud-detection-8-billion-savings',
+    excerpt: 'Top-tier bank saves $8B with 99.9% accuracy AI fraud detection across 500M accounts, achieving zero false declines.',
+    company: 'GlobalBank International',
+    industry: 'Financial Services',
+    results: {
+      savings: '$8B',
+      efficiency: '99.9%',
+      quality: 'Zero',
+      timeline: '18 months'
+    },
+    image: '💰',
     color: 'green'
   },
   {
@@ -35,25 +64,12 @@ const caseStudies = [
       savings: '$50M+',
       roi: '300%',
       efficiency: '85%',
-=======
-    title: 'AI Autonomous Manufacturing Mega Success 2026: $50M Savings & 95% Efficiency',
-    slug: 'ai-autonomous-manufacturing-mega-success-2026',
-    excerpt: 'How a global manufacturer achieved $50M annual savings, 95% efficiency improvement, and complete autonomous operations through AI transformation.',
-    company: 'Global Manufacturing Leader',
-    industry: 'Manufacturing',
-    results: {
-      savings: '$50M',
-      efficiency: '95%',
-      quality: '99.8%',
->>>>>>> origin/cursor/create-and-deploy-new-content-15c5
       timeline: '18 months'
     },
     image: '🏭',
     color: 'green'
   },
   {
-<<<<<<< HEAD
-=======
     title: 'AI FinTech Quantum Transformation 2026: $100M Revenue & 99.9% Security',
     slug: 'ai-fintech-quantum-transformation-2026',
     excerpt: 'See how a leading FinTech achieved $100M revenue increase, 99.9% security improvement, and quantum-powered trading capabilities.',

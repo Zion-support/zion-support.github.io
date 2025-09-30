@@ -396,10 +396,6 @@ export default function BlogPage() {
             href="/blog/ai-operational-resilience-2026"
           />
           <BlogPost
-<<<<<<< HEAD
-            title="AI Agent Observability 2026: Metrics, Traces, and Guardrails"
-            excerpt="Instrument agents with traces, evals, and policy guardrails to ship reliable autonomy."
-=======
             title="AI Enterprise Automation 2026: Complete Business Process Transformation"
             excerpt="Transform your enterprise with AI automation. 95% process efficiency, multimillion-dollar savings, and zero-touch operations."
             date="September 29, 2025"
