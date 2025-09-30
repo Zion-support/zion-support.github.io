@@ -8,6 +8,36 @@ export const metadata = {
 
 const blogPosts = [
   {
+    title: 'AI Safety Scorecards 2026: SLIs, Budgets, Rollback',
+    slug: 'ai-safety-scorecards-2026',
+    excerpt: 'Wire SLIs to KPIs with budgeted actions, approvals, and instant rollback to ship reliable autonomy.',
+    category: 'AI Governance',
+    publishedAt: 'September 30, 2025',
+    image: '🛡️',
+    color: 'emerald',
+    readTime: '9 min read'
+  },
+  {
+    title: 'Edge‑Governed Flags 2026: Safe Global Experiments',
+    slug: 'edge-governed-flags-2026',
+    excerpt: 'Scoped IDs, regional policy, and DP noise for compliant, sub‑100ms flags and experiments.',
+    category: 'Analytics',
+    publishedAt: 'September 30, 2025',
+    image: '🚩',
+    color: 'blue',
+    readTime: '8 min read'
+  },
+  {
+    title: 'GenAI Cache Playbook 2026: Cut Cost, Keep Quality',
+    slug: 'genai-cache-playbook-2026',
+    excerpt: 'Response + embedding cache, tiered TTL, and cost‑aware routing for 30–70% savings.',
+    category: 'FinOps',
+    publishedAt: 'September 30, 2025',
+    image: '🧠',
+    color: 'green',
+    readTime: '11 min read'
+  },
+  {
     title: 'AI 2027: Edge‑Native Agents — Real‑Time, Reliable, Low‑Latency',
     slug: 'ai-2027-edge-native-agents',
     excerpt: 'Deploy agentic workloads at the edge for sub‑50ms latency with policy guardrails and cost control.',
