@@ -133,6 +133,10 @@ function Footer() {
                 Content Hub
                 <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
               </Link>
+              <Link href="/blog/ai-2026-next-generation-ai-revolution" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🚀 AI 2026 Revolution
+                <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-semibold">HOT</span>
+              </Link>
               <Link href="/blog/ai-neural-interfaces-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🧠 Neural Interfaces 2026
                 <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
@@ -151,6 +155,10 @@ function Footer() {
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Case Studies
                 <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
+              </Link>
+              <Link href="/case-studies/ai-enterprise-transformation-mega-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $250M ROI Success Story
+                <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">MEGA</span>
               </Link>
               <Link href="/case-studies/ai-mega-transformation-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">💰 $150M ROI Success Story</Link>
               <Link href="/case-studies/ai-neural-interface-success-2026" className="block text-gray-600 hover:text-blue-600 transition-colors">💰 $12M ROI Neural Interface</Link>
