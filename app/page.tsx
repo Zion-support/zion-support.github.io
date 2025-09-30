@@ -31,22 +31,24 @@ import {
   AIWorkflowAutomationBanner,
   EnterpriseAISecurityBanner
 } from '../components/NewContentPromotionalBanners';
+import {
+  AIEnterpriseTransformationBanner,
+  AIAutonomousSystemsBanner,
+  ManufacturingTransformationBanner,
+  AIEnterpriseServicesBanner,
+  LatestContentShowcaseBanner,
+  InteractiveAICalculatorBanner,
+  AIInnovationShowcaseBanner
+} from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
-import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
-import AIRevolutionary2026Banner from '../components/AIRevolutionary2026Banner';
-import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
-import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
-import AI2027MegaSuccessBanner from '../components/AI2027MegaSuccessBanner';
-import QuantumAIRevolutionBanner from '../components/QuantumAIRevolutionBanner';
-import InteractiveAI2027Calculator from '../components/InteractiveAI2027Calculator';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
-  description: 'Transform your enterprise with AI-powered solutions. Get 300% ROI, 90% efficiency improvement, and $50M+ savings with our proven AI transformation framework. Free consultation available.',
-  keywords: 'AI enterprise transformation, AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation, AI ROI calculator, AI implementation, digital transformation, AI consulting, Fortune 500 AI solutions',
+  description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous systems, and digital transformation services.',
+  keywords: 'AI enterprise transformation, AI consulting, autonomous AI systems, enterprise AI services, digital transformation, AI implementation, AI ROI calculator, manufacturing AI, AI automation, AI strategy',
   openGraph: {
     title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
-    description: 'Transform your enterprise with AI-powered solutions. Get 300% ROI, 90% efficiency improvement, and $50M+ savings.',
+    description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
     type: 'website',
     url: 'https://ziontechgroup.com',
     images: [
@@ -61,7 +63,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
-    description: 'Transform your enterprise with AI-powered solutions. Get 300% ROI, 90% efficiency improvement, and $50M+ savings.',
+    description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -78,16 +80,56 @@ export const metadata = {
 };
 
 export default function HomePage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading provider of AI-powered enterprise solutions and digital transformation services",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "name": "AI Enterprise Transformation Services",
+      "description": "Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains",
+      "price": "50000",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  };
+
   return (
-    <div className="animate-fade-in">
-      {/* Revolutionary 2027 AI Content Banners */}
-      <Revolutionary2027ContentBanner />
-      <QuantumAIRevolutionBanner />
-      <AI2027MegaSuccessBanner />
-      
-      {/* New 2026 Content Banners */}
-      <NewContent2026MegaBanner />
-      <AIRevolutionary2026Banner />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <div className="animate-fade-in">
+      {/* Latest 2026 Content Banners */}
+      <AIEnterpriseTransformationBanner />
+      <AIAutonomousSystemsBanner />
+      <ManufacturingTransformationBanner />
+      <AIEnterpriseServicesBanner />
+      <LatestContentShowcaseBanner />
+      <InteractiveAICalculatorBanner />
+      <AIInnovationShowcaseBanner />
       
       {/* New Content Promotional Banners */}
       <AIEnterpriseAdoptionBanner />
@@ -837,6 +879,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
