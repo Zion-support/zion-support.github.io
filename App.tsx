@@ -5,10 +5,18 @@ import NewContentPromoBanner from "./src/components/NewContentPromoBanner";
 import Revolutionary2026ContentMegaBanner from "./src/components/Revolutionary2026ContentMegaBanner";
 import Ultimate2026ContentShowcase from "./src/components/Ultimate2026ContentShowcase";
 import UltimateContentAdvertisingBanner from "./src/components/UltimateContentAdvertisingBanner";
+import UltimateContentShowcase2026 from "./components/UltimateContentShowcase2026";
+import RevolutionaryContentMegaBanner2026 from "./components/RevolutionaryContentMegaBanner2026";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* Revolutionary Content Mega Banner - Most Prominent */}
+      <RevolutionaryContentMegaBanner2026 />
+      
+      {/* Ultimate Content Showcase 2026 */}
+      <UltimateContentShowcase2026 />
+      
       {/* New Content Announcement Banner */}
       <NewContentAnnouncementBanner />
       
