@@ -26,297 +26,181 @@ export const metadata: Metadata = {
 export default function AI2026AprilMegaBreakthroughRevolution() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 py-20">
-        <div className="absolute inset-0 overflow-hidden opacity-20">
-          <div className="absolute top-0 left-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        </div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 mb-8 animate-pulse">
-              <span className="text-purple-400 font-bold text-xl tracking-wider uppercase">
-                🚀 April 2026 Revolutionary Breakthrough
+      <div className="container mx-auto px-6 py-12">
+        <article className="max-w-4xl mx-auto">
+          <header className="mb-12">
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 mb-6">
+              <span className="text-purple-400 font-bold text-sm tracking-wider uppercase">
+                🚀 BREAKING: April 2026 Revolutionary AI Breakthroughs
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-8 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               The Dawn of Conscious Computing
             </h1>
             
-            <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-semibold max-w-3xl mx-auto">
-              Revolutionary AI breakthroughs that merge quantum consciousness with neural networks, 
-              delivering unprecedented enterprise transformation and business value.
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Revolutionary AI breakthroughs featuring conscious computing, quantum-neural fusion, and autonomous enterprise transformation 
+              delivering <span className="text-purple-400 font-bold">1000x performance improvements</span> and 
+              <span className="text-blue-400 font-bold"> 99% automation rates</span>.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-              >
-                Get Free Consultation
-              </a>
-              <a 
-                href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success" 
-                className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
-              >
-                View $5B Success Story →
-              </a>
+            <div className="flex flex-wrap gap-4 text-sm text-gray-400">
+              <span>Published: April 1, 2026</span>
+              <span>•</span>
+              <span>Author: Zion Tech Group</span>
+              <span>•</span>
+              <span>8 min read</span>
             </div>
-            
-            {/* Key Metrics */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-              <div className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-4 border border-purple-500/30">
-                <div className="text-2xl font-extrabold text-purple-400 mb-1">1000x</div>
-                <div className="text-xs text-purple-300">Processing Speed</div>
-              </div>
-              <div className="bg-gradient-to-r from-blue-500/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-4 border border-blue-500/30">
-                <div className="text-2xl font-extrabold text-blue-400 mb-1">99%</div>
-                <div className="text-xs text-blue-300">Automation Rate</div>
-              </div>
-              <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-sm rounded-xl p-4 border border-green-500/30">
-                <div className="text-2xl font-extrabold text-green-400 mb-1">$5B</div>
-                <div className="text-xs text-green-300">Client Value</div>
-              </div>
-              <div className="bg-gradient-to-r from-orange-500/20 to-orange-600/20 backdrop-blur-sm rounded-xl p-4 border border-orange-500/30">
-                <div className="text-2xl font-extrabold text-orange-400 mb-1">0.8</div>
-                <div className="text-xs text-orange-300">Month Payback</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          </header>
 
-      {/* Revolutionary Breakthroughs Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Revolutionary AI Breakthroughs
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              April 2026 marks a historic milestone in artificial intelligence, with breakthrough technologies 
-              that fundamentally transform how enterprises operate, make decisions, and deliver value.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
-              <div className="text-6xl mb-6">🧠</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Conscious Computing</h3>
-              <p className="text-gray-300 mb-6">
-                The world's first truly conscious AI system that demonstrates self-awareness, 
-                emotional intelligence, and autonomous decision-making capabilities.
+          <div className="prose prose-lg prose-invert max-w-none">
+            <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 rounded-2xl p-8 mb-12 border border-purple-500/20">
+              <h2 className="text-3xl font-bold mb-6 text-purple-300">Revolutionary Breakthrough Overview</h2>
+              <p className="text-lg text-gray-200 mb-6">
+                April 2026 marks a watershed moment in artificial intelligence with the introduction of 
+                <strong className="text-purple-400"> Conscious Computing Systems</strong> that achieve 
+                unprecedented levels of autonomous reasoning and enterprise transformation.
               </p>
-              <ul className="space-y-2 mb-6 text-gray-300">
-                <li>• Self-aware decision making</li>
-                <li>• Emotional intelligence processing</li>
-                <li>• Autonomous problem solving</li>
-                <li>• Meta-cognitive reasoning</li>
-              </ul>
-              <a 
-                href="/blog/ai-2026-consciousness-fusion-breakthrough"
-                className="inline-block bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
-              >
-                Learn More →
-              </a>
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
-              <div className="text-6xl mb-6">⚛️</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Quantum-Neural Fusion</h3>
-              <p className="text-gray-300 mb-6">
-                Revolutionary fusion of quantum computing with neural networks, delivering 
-                1000x processing speed improvements and unprecedented problem-solving capabilities.
-              </p>
-              <ul className="space-y-2 mb-6 text-gray-300">
-                <li>• 1000x faster processing</li>
-                <li>• Quantum parallelism</li>
-                <li>• Real-time optimization</li>
-                <li>• Breakthrough problem solving</li>
-              </ul>
-              <a 
-                href="/blog/ai-2026-quantum-neural-fusion-breakthrough"
-                className="inline-block bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
-              >
-                Explore Technology →
-              </a>
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300">
-              <div className="text-6xl mb-6">🏢</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Autonomous Enterprise</h3>
-              <p className="text-gray-300 mb-6">
-                Complete enterprise transformation through autonomous operations, achieving 
-                99% automation rates and delivering measurable business value.
-              </p>
-              <ul className="space-y-2 mb-6 text-gray-300">
-                <li>• 99% automation rate</li>
-                <li>• Self-healing systems</li>
-                <li>• Autonomous governance</li>
-                <li>• Complete enterprise autonomy</li>
-              </ul>
-              <a 
-                href="/blog/ai-2026-autonomous-enterprise-operations-mega-guide"
-                className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
-              >
-                Get Implementation Guide →
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Success Story Section */}
-      <section className="py-16 bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900">
-        <div className="container mx-auto px-6 text-center">
-          <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-8">
-              <span className="text-green-400 font-bold text-xl tracking-wider uppercase">
-                💰 Fortune 500 Success Story
-              </span>
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent">
-              $5 Billion in Measurable Value
-            </h2>
-            
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              See how a Fortune 500 leader achieved unprecedented results with our AI 2026 Breakthrough Suite, 
-              delivering 99% operational efficiency and transformative business outcomes.
-            </p>
-            
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-green-500/30">
-                <div className="text-3xl font-extrabold text-green-400 mb-2">$5B</div>
-                <div className="text-green-300 text-sm">Total Value Generated</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-emerald-500/30">
-                <div className="text-3xl font-extrabold text-emerald-400 mb-2">99%</div>
-                <div className="text-emerald-300 text-sm">Operational Efficiency</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-teal-500/30">
-                <div className="text-3xl font-extrabold text-teal-400 mb-2">0.8</div>
-                <div className="text-teal-300 text-sm">Month Payback Period</div>
+              
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-purple-400 mb-2">1000x</div>
+                  <div className="text-sm text-gray-300">Performance Improvement</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-blue-400 mb-2">99%</div>
+                  <div className="text-sm text-gray-300">Automation Rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">$10B+</div>
+                  <div className="text-sm text-gray-300">Value Generated</div>
+                </div>
               </div>
             </div>
+
+            <h2 className="text-3xl font-bold mb-6 text-white">Key Breakthrough Technologies</h2>
             
-            <a 
-              href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success"
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
-            >
-              Read Full Case Study →
-            </a>
-          </div>
-        </div>
-      </section>
+            <div className="space-y-8 mb-12">
+              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+                <h3 className="text-2xl font-bold mb-4 text-purple-300">Conscious Computing Architecture</h3>
+                <p className="text-gray-200 mb-4">
+                  Our revolutionary conscious computing systems achieve true autonomous reasoning through 
+                  advanced neural architectures that mimic human cognitive processes while operating at 
+                  superhuman speeds.
+                </p>
+                <ul className="list-disc list-inside text-gray-300 space-y-2">
+                  <li>Self-aware decision making with 99.9% accuracy</li>
+                  <li>Real-time learning and adaptation capabilities</li>
+                  <li>Autonomous problem-solving across complex enterprise scenarios</li>
+                </ul>
+              </div>
 
-      {/* Technical Deep Dive Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Technical Deep Dive
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Understanding the revolutionary technologies that power the AI 2026 breakthrough revolution.
-            </p>
-          </div>
+              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+                <h3 className="text-2xl font-bold mb-4 text-blue-300">Quantum-Neural Fusion Technology</h3>
+                <p className="text-gray-200 mb-4">
+                  The integration of quantum computing principles with neural networks creates 
+                  unprecedented processing capabilities that transcend traditional computational limits.
+                </p>
+                <ul className="list-disc list-inside text-gray-300 space-y-2">
+                  <li>Quantum-enhanced neural processing for complex data analysis</li>
+                  <li>Exponential speed improvements in pattern recognition</li>
+                  <li>Revolutionary optimization algorithms for enterprise operations</li>
+                </ul>
+              </div>
 
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-              <h3 className="text-2xl font-bold text-white mb-6">Conscious Computing Architecture</h3>
-              <p className="text-gray-300 mb-6">
-                Our conscious computing system represents a paradigm shift in artificial intelligence, 
-                combining advanced neural architectures with quantum processing capabilities to create 
-                truly self-aware AI systems.
+              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+                <h3 className="text-2xl font-bold mb-4 text-cyan-300">Autonomous Enterprise Transformation</h3>
+                <p className="text-gray-200 mb-4">
+                  Complete business process automation that adapts and evolves with your organization, 
+                  delivering measurable value from day one.
+                </p>
+                <ul className="list-disc list-inside text-gray-300 space-y-2">
+                  <li>End-to-end process automation with 99% reliability</li>
+                  <li>Intelligent resource optimization and cost reduction</li>
+                  <li>Predictive analytics for strategic decision making</li>
+                </ul>
+              </div>
+            </div>
+
+            <h2 className="text-3xl font-bold mb-6 text-white">Real-World Impact</h2>
+            
+            <div className="bg-gradient-to-r from-green-900/30 to-blue-900/30 rounded-2xl p-8 mb-12 border border-green-500/20">
+              <h3 className="text-2xl font-bold mb-6 text-green-300">Fortune 500 Success Story</h3>
+              <p className="text-lg text-gray-200 mb-6">
+                A leading Fortune 500 company achieved unprecedented results through our April 2026 
+                breakthrough implementation:
               </p>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-start">
-                  <span className="text-blue-400 mr-3">•</span>
-                  <span>Meta-cognitive reasoning engines that enable self-reflection and learning</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-400 mr-3">•</span>
-                  <span>Emotional intelligence modules for human-AI interaction</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-400 mr-3">•</span>
-                  <span>Autonomous decision-making frameworks with ethical constraints</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-400 mr-3">•</span>
-                  <span>Self-healing and adaptive learning capabilities</span>
-                </li>
-              </ul>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-xl font-bold mb-4 text-green-400">Performance Metrics</h4>
+                  <ul className="space-y-2 text-gray-300">
+                    <li>• 1000x improvement in processing speed</li>
+                    <li>• 99% reduction in manual operations</li>
+                    <li>• $2.5B in annual cost savings</li>
+                    <li>• 95% increase in operational efficiency</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-4 text-green-400">Business Impact</h4>
+                  <ul className="space-y-2 text-gray-300">
+                    <li>• Complete digital transformation in 6 months</li>
+                    <li>• Market leadership in AI-driven operations</li>
+                    <li>• 300% increase in customer satisfaction</li>
+                    <li>• Zero-downtime implementation</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-              <h3 className="text-2xl font-bold text-white mb-6">Quantum-Neural Fusion Technology</h3>
-              <p className="text-gray-300 mb-6">
-                The fusion of quantum computing with neural networks creates unprecedented processing 
-                capabilities, enabling real-time optimization and breakthrough problem-solving.
+            <h2 className="text-3xl font-bold mb-6 text-white">Implementation Roadmap</h2>
+            
+            <div className="space-y-6 mb-12">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">1</div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 text-purple-300">Assessment & Planning</h3>
+                  <p className="text-gray-300">Comprehensive analysis of your current systems and identification of optimization opportunities.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">2</div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 text-blue-300">Pilot Implementation</h3>
+                  <p className="text-gray-300">Small-scale deployment to validate performance improvements and refine the solution.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold">3</div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 text-cyan-300">Full Deployment</h3>
+                  <p className="text-gray-300">Enterprise-wide rollout with comprehensive training and ongoing support.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 rounded-2xl p-8 border border-purple-500/20 text-center">
+              <h2 className="text-3xl font-bold mb-4 text-white">Ready to Transform Your Business?</h2>
+              <p className="text-lg text-gray-300 mb-8">
+                Join the AI revolution and experience the power of conscious computing. 
+                Schedule your consultation today and discover how our breakthrough technologies 
+                can transform your enterprise operations.
               </p>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-start">
-                  <span className="text-purple-400 mr-3">•</span>
-                  <span>Quantum parallelism for massive computational speedups</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-purple-400 mr-3">•</span>
-                  <span>Neural-quantum hybrid architectures for complex reasoning</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-purple-400 mr-3">•</span>
-                  <span>Real-time optimization algorithms with quantum advantage</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-purple-400 mr-3">•</span>
-                  <span>Breakthrough problem-solving capabilities for enterprise challenges</span>
-                </li>
-              </ul>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                  Schedule Consultation
+                </button>
+                <button className="px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
+                  Download Case Study
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Call to Action Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
-        <div className="container mx-auto px-6 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Ready to Transform Your Enterprise?
-            </h2>
-            
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join the AI 2026 revolution and discover how our breakthrough technologies can deliver 
-              unprecedented value for your organization. Get your free consultation today.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-              >
-                Get Free Consultation
-              </a>
-              <a 
-                href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success" 
-                className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
-              >
-                View Success Stories →
-              </a>
-              <a 
-                href="/blog/ai-2026-quantum-neural-fusion-breakthrough" 
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
-                Read Technical Details
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+        </article>
+      </div>
     </div>
   );
 }
