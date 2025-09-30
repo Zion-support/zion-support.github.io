@@ -123,8 +123,12 @@ import AutonomousBusinessSystemsMegaBanner from '../components/AutonomousBusines
 import QuantumAI2027BreakthroughBanner from '../components/QuantumAI2027BreakthroughBanner';
 import AutonomousBusinessIntelligence2026Banner from '../components/AutonomousBusinessIntelligence2026Banner';
 import NewContent2027ShowcaseBanner from '../components/NewContent2027ShowcaseBanner';
+<<<<<<< HEAD
+import AutonomousAI2026RevolutionBanner from '../components/AutonomousAI2026RevolutionBanner';
+=======
 import RevolutionaryAI2026BreakthroughBanner from '../components/RevolutionaryAI2026BreakthroughBanner';
 import Ultimate2026ContentShowcaseBanner from '../components/Ultimate2026ContentShowcaseBanner';
+>>>>>>> origin/cursor/create-and-deploy-new-content-7f11
 
 export const metadata = {
   title: 'Zion Tech Group — Next-Gen Autonomous AI Systems 2026 | 95% Efficiency Gains',
