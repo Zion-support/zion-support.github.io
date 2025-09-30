@@ -43,6 +43,9 @@ import {
   InteractiveAICalculatorBanner,
   AIInnovationShowcaseBanner
 } from '../components/NewContent2026Banners';
+import NeuralArchitectureSearchBanner from '../components/NeuralArchitectureSearchBanner';
+import AIContentGenerationBanner from '../components/AIContentGenerationBanner';
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -129,6 +132,8 @@ export default function HomePage() {
       />
       <div className="animate-fade-in">
       {/* Latest 2026 Content Banners */}
+      <NeuralArchitectureSearchBanner />
+      <AIContentGenerationBanner />
       <AIEnterpriseTransformationBanner />
       <AIAutonomousSystemsBanner />
       <ManufacturingTransformationBanner />
@@ -304,6 +309,9 @@ export default function HomePage() {
       {/* Interactive Promotional Section */}
       <InteractivePromotionalSection />
 >>>>>>> cursor/create-and-deploy-new-content-1102
+
+      {/* Interactive Content Discovery */}
+      <InteractiveContentDiscovery />
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
