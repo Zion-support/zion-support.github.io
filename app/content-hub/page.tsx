@@ -174,6 +174,8 @@ export default function ContentHubPage() {
               <Link href="/blog/ai-safety-scorecards-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">AI Safety Scorecards<span>→</span></Link>
               <Link href="/blog/edge-governed-flags-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Edge‑Governed Flags<span>→</span></Link>
               <Link href="/blog/genai-cache-playbook-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">GenAI Cache Playbook<span>→</span></Link>
+              <Link href="/blog/ai-2026-enterprise-cost-guardrails" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Enterprise Cost Guardrails<span>→</span></Link>
+              <Link href="/case-studies/retail-autonomous-fulfillment-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Retail Autonomous Fulfillment<span>→</span></Link>
             </div>
           </div>
         </div>
