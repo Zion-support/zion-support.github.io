@@ -64,18 +64,9 @@ import ContentRecommendationSystem from '../components/ContentRecommendationSyst
 import AIROICalculator from '../src/components/AIROICalculator';
 import AITrends2025Banner from '../src/components/AITrends2025Banner';
 import NewServicesShowcaseBanner from '../src/components/NewServicesShowcaseBanner';
-=======
-=======
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
-<<<<<<< HEAD
-import NewContent2026Banner from '../components/NewContent2026Banner';
-import NewContent2026Showcase from '../components/NewContent2026Showcase';
-=======
-import NewContent2026FeaturedBanner from '../components/NewContent2026FeaturedBanner';
-import LatestBreakthroughContent2026 from '../components/LatestBreakthroughContent2026';
->>>>>>> origin/cursor/create-and-deploy-new-content-f4b1
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 2026 AI Solutions',
@@ -84,7 +75,6 @@ export const metadata = {
   openGraph: {
     title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 2026 AI Solutions',
     description: 'Transform your business with cutting-edge AI solutions. 95% process automation, $5M+ savings, quantum computing, and sustainable AI.',
-=======
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import InteractiveAIDemo from '../components/InteractiveAIDemo';
@@ -195,13 +185,11 @@ export default function HomePage() {
             <Link href="/case-studies/ai-quantum-finance-transformation-2026" className="underline hover:text-yellow-200">$500M Finance Success</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-space-mission-automation-2026" className="underline hover:text-yellow-200">$2B Space Success</Link>
-=======
             <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
           </div>
           <Link
             href="/blog"
             className="bg-white text-green-700 hover:bg-gray-100 px-4 py-1.5 rounded-md text-sm font-semibold"
-=======
             <Link href="/case-studies/ai-ethical-framework-success-2026" className="underline hover:text-yellow-200">Ethics Success Story</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-agent-observability-2026" className="underline hover:text-yellow-200">Agent Observability</Link>
@@ -263,7 +251,6 @@ export default function HomePage() {
       
       {/* Latest 2026 Content Banner */}
       <LatestContent2026Banner />
-=======
       {/* New 2026 Content Promotional Banners */}
       <AISustainabilityTransformationBanner />
       <AIAutonomousEnterpriseBanner />
@@ -286,8 +273,6 @@ export default function HomePage() {
       <NewContent2026Banner />
       
       
-=======
-=======
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <div className="max-w-4xl mx-auto px-4">
@@ -313,7 +298,6 @@ export default function HomePage() {
               className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
             >
               📈 View $25M ROI Case Study
-=======
               href="/blog/ai-quantum-computing-breakthrough-2026"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
             >
@@ -330,7 +314,6 @@ export default function HomePage() {
               className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-teal-700 transition-all shadow-lg hover:shadow-xl"
             >
               📊 $50M ROI Success
-=======
               href="/blog/ai-brain-computer-interfaces-2026"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
             >
@@ -397,7 +380,6 @@ export default function HomePage() {
       {/* AI Trends Calculator */}
       <AITrendsCalculator2026 />
       
-=======
       {/* New Content 2026 Showcase */}
       <NewContent2026Showcase />
 

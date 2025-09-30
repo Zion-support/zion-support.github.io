@@ -1,7 +1,7 @@
 'use client;
 ';
 ';
-import React, { Component, ErrorInfo, ReactNode } from react';
+
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -86,7 +86,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 use client;
 '';
 ;
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;

@@ -179,11 +179,6 @@ export default function ContentHubPage() {
               <Link href="/blog/genai-reliability-scorecards-2027" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">GenAI Reliability 2027<span>→</span></Link>
               <Link href="/blog/edge-private-analytics-2027" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Edge Private Analytics 2027<span>→</span></Link>
               <Link href="/blog/ai-agent-reliability-playbook-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Agent Reliability 2026<span>→</span></Link>
-<<<<<<< HEAD
-              <Link href="/blog/edge-governed-flags-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Edge‑Governed Flags 2026<span>→</span></Link>
-=======
-              <Link href="/blog/privacy-safe-feature-flags-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Privacy‑Safe Flags 2026<span>→</span></Link>
->>>>>>> origin/cursor/create-and-deploy-new-content-765a
               <Link href="/blog/ai-2028-autonomous-finops-scorecards" className="inline-flex items-center gap-2 bg-emerald-300/20 text-white px-4 py-2 rounded-lg font-semibold border border-white/20 hover:bg-emerald-300/30 transition-colors">Autonomous FinOps 2028<span>→</span></Link>
               <Link href="/blog/ai-safety-scorecards-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">AI Safety Scorecards<span>→</span></Link>
               <Link href="/blog/edge-inference-warm-pools-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Edge Warm Pools 2026<span>→</span></Link>

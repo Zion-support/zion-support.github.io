@@ -2,22 +2,6 @@ import React, { JSX } from "react";
 import LatestContentBanner2025 from "./src/components/LatestContentBanner2025";
 import FeaturedContentBanner2025 from "./src/components/FeaturedContentBanner2025";
 import NewContentPromoBanner from "./src/components/NewContentPromoBanner";
-<<<<<<< HEAD
-import Revolutionary2026ContentMegaBanner from "./src/components/Revolutionary2026ContentMegaBanner";
-import Ultimate2026ContentShowcase from "./src/components/Ultimate2026ContentShowcase";
-import UltimateContentAdvertisingBanner from "./src/components/UltimateContentAdvertisingBanner";
-=======
-import January2026ContentBanner from "./components/January2026ContentBanner";
-import AIAdvertisingBanner from "./components/AIAdvertisingBanner";
-import EnterpriseSolutionsBanner from "./components/EnterpriseSolutionsBanner";
-import NewContentAnnouncementBanner from "./components/NewContentAnnouncementBanner";
-import UltimateContentShowcase2026 from "./src/components/UltimateContentShowcase2026";
-import AIInnovationAdvertisingBanner from "./src/components/AIInnovationAdvertisingBanner";
-import LatestTrendsShowcase2026 from "./src/components/LatestTrendsShowcase2026";
-import NewServicesPromotionalBanner from "./src/components/NewServicesPromotionalBanner";
-import January2026BreakthroughContentBanner from "./components/January2026BreakthroughContentBanner";
-import Revolutionary2026ContentMegaBanner from "./components/Revolutionary2026ContentMegaBanner";
->>>>>>> origin/cursor/create-and-deploy-new-content-e0a1
 
 export default function App(): JSX.Element {
   return (
@@ -139,42 +123,6 @@ export default function App(): JSX.Element {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Promotional Banner - Limited Time Offer */}
-      <section className="py-12 bg-gradient-to-r from-orange-900/40 via-red-900/40 to-pink-900/40 border-y border-orange-500/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center">
-            <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 mb-4">
-              <span className="text-orange-400 font-bold text-lg tracking-wider uppercase">
-                🔥 Limited Time Offer - 30% Off New AI Services!
-              </span>
-            </div>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-6">
-              Transform your enterprise with our revolutionary AI solutions. 
-              <span className="text-orange-400 font-bold"> Get 30% off your first year</span> plus a 
-              <span className="text-red-400 font-bold"> free consultation</span> with our AI experts.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-orange-500/50 transform hover:-translate-y-1"
-              >
-                Claim Offer Now →
-              </a>
-              <a 
-                href="/services" 
-                className="border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
-              >
-                View All Services
-              </a>
-            </div>
-          </div>
-        </div>
-=======
-      {/* January 2026 Breakthrough Content Banner - Prominent Placement */}
-      <section>
-        <January2026BreakthroughContentBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-e0a1
       </section>
 
       {/* Revolutionary 2026 Content Section */}

@@ -63,18 +63,7 @@ import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
-=======
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
-<<<<<<< HEAD
-import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
-import LatestContent2026Banner from '../components/LatestContent2026Banner';
-import NewContent2026FeaturedBanner from '../components/NewContent2026FeaturedBanner';
-import LatestBreakthroughContent2026 from '../components/LatestBreakthroughContent2026';
-=======
-import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
-import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
-import LatestAIInnovations2026Banner from '../components/LatestAIInnovations2026Banner';
->>>>>>> origin/cursor/create-and-deploy-new-content-edac
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 2026 AI Solutions',
@@ -83,7 +72,6 @@ export const metadata = {
   openGraph: {
     title: 'Zion Tech Group — AI, Micro SaaS, and IT Services | 2026 AI Solutions',
     description: 'Transform your business with cutting-edge AI solutions. 95% process automation, $5M+ savings, quantum computing, and sustainable AI.',
-=======
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import InteractiveAIDemo from '../components/InteractiveAIDemo';
@@ -99,7 +87,6 @@ export const metadata = {
     siteName: 'Zion Tech Group',
     locale: 'en_US',
     type: 'website',
-=======
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import InteractiveAICalculator from '../components/InteractiveAICalculator';
@@ -191,7 +178,6 @@ export default function HomePage() {
             <span>✨ NEW 2026:</span>
             <Link href="/case-studies/ai-ethical-framework-success-2026" className="underline hover:text-yellow-200">Ethics Success Story</Link>
             <span className="hidden md:inline">•</span>
-=======
             <span className="hidden md:inline">•</span>
             <Link href="/case-studies/ai-ethical-framework-success-2026" className="underline hover:text-yellow-200">Ethics Success Story</Link>
             <span className="hidden md:inline">•</span>
@@ -200,7 +186,6 @@ export default function HomePage() {
             <Link href="/blog/ai-autonomous-cloud-ops-2026" className="underline hover:text-yellow-200">Autonomous Cloud Ops</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/agentic-workflow-orchestration-2026" className="underline hover:text-yellow-200">Workflow Orchestration</Link>
-=======
             <Link href="/blog/ai-autonomous-ai-systems-2026" className="underline hover:text-yellow-200">Autonomous AI Systems</Link>
             <span className="hidden md:inline">•</span>
             <Link href="/blog/ai-cognitive-computing-2026" className="underline hover:text-yellow-200">Cognitive Computing</Link>
@@ -224,29 +209,6 @@ export default function HomePage() {
       <AIInnovationShowcaseBanner />
       <AIROICalculatorBanner />
       
-<<<<<<< HEAD
-      {/* Promotional Banners */}
-      <NewContent2026PromotionalBanner />
-      <Comprehensive2026ContentBanner />
-      <AIAgentEvalsBanner />
-      <AIEthicsFrameworkBanner />
-      <MultimodalAIBanner />
-      <EthicsSuccessCaseStudyBanner />
-      <Latest2026ContentBanner />
-=======
-      {/* Latest AI Innovations 2026 Banner */}
-      <LatestAIInnovations2026Banner />
-      
-      {/* New 2026 Content Promotional Banners */}
-      <AIAutonomousInfrastructureBanner />
-      <AIQuantumComputingBanner />
-      <AITransformationSuccessBanner />
-      <AIZeroTrustSecurityBanner />
-      <AIFoundationModelsBanner />
-      <LatestContent2026Banner />
-      
-      {/* Additional Promotional Banners */}
->>>>>>> origin/cursor/create-and-deploy-new-content-edac
       <NewContentShowcase2026Banner />
       <AIEthicalFrameworkBanner />
       <AIEthicsSuccessBanner />
@@ -304,7 +266,6 @@ export default function HomePage() {
       {/* New Content Promotional Banners */}
       <NewContent2026PromotionalBanners />
       
-=======
       {/* Featured New Content 2026 */}
       <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-pink-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -413,8 +374,6 @@ export default function HomePage() {
       
       
       
-=======
-=======
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <div className="max-w-4xl mx-auto px-4">
@@ -449,7 +408,6 @@ export default function HomePage() {
               className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-teal-700 transition-all shadow-lg hover:shadow-xl"
             >
               📊 $50M ROI Success
-=======
               href="/blog/ai-brain-computer-interfaces-2026"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
             >
@@ -472,7 +430,6 @@ export default function HomePage() {
               className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-red-700 transition-all shadow-lg hover:shadow-xl"
             >
               🚀 $2B Space Success
-=======
               Explore Our Services
             </Link>
             <a
@@ -612,7 +569,6 @@ export default function HomePage() {
         </div>
       </section>
 
-=======
       {/* Featured Services */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -694,15 +650,6 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Interactive AI ROI Calculator Section */}
-      <InteractiveAICalculator />
-
-=======
-      {/* Enhanced Content Showcase */}
-      <EnhancedContentShowcase />
-      
->>>>>>> origin/cursor/create-and-deploy-new-content-edac
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
       

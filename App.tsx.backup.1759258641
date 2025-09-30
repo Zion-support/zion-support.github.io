@@ -20,20 +20,6 @@ import EnterpriseSolutionsShowcase2026 from "./components/EnterpriseSolutionsSho
 import AITrendsInsightsBanner2026 from "./components/AITrendsInsightsBanner2026";
 import NewBlogContentShowcase2026 from "./components/NewBlogContentShowcase2026";
 import UltimateContentAdvertisingBanner from "./components/UltimateContentAdvertisingBanner";
-<<<<<<< HEAD
-import Revolutionary2026MegaBreakthroughBanner from "./components/Revolutionary2026MegaBreakthroughBanner";
-import Revolutionary2026ContentAdvertisingBanner from "./components/Revolutionary2026ContentAdvertisingBanner";
-import January2026BreakthroughShowcaseBanner from "./components/January2026BreakthroughShowcaseBanner";
-import Ultimate2026ContentPromotionalBanner from "./components/Ultimate2026ContentPromotionalBanner";
-=======
-import RevolutionaryAI2026MegaBreakthroughBanner from "./components/RevolutionaryAI2026MegaBreakthroughBanner";
-import NewContent2026AdvertisingMegaBanner from "./components/NewContent2026AdvertisingMegaBanner";
-import InteractiveContentShowcase2026 from "./components/InteractiveContentShowcase2026";
-import SuperintelligentAutomationBanner from "./components/SuperintelligentAutomationBanner";
-import NeuralSuperintelligencePlatformBanner from "./components/NeuralSuperintelligencePlatformBanner";
-import UltimateContentShowcase2026MegaBanner from "./components/UltimateContentShowcase2026MegaBanner";
-import Fortune500SuccessStoryBanner from "./components/Fortune500SuccessStoryBanner";
->>>>>>> origin/cursor/create-and-deploy-new-content-38ee
 
 export default function App(): JSX.Element {
   return (

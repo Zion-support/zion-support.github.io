@@ -63,15 +63,6 @@ export default [
       '**/*.broken/**',
       '**/*.corrupted/**',
       '**/*.temp/**',
-<<<<<<< HEAD
-      'jest.setup.js',
-      // Additional common folders/files to ignore
-      'coverage/**',
-      'scripts/**',
-      '*.d.ts',
-=======
-      'jest.setup.js'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-9756
     ]
   },
 
@@ -110,10 +101,6 @@ export default [
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
-<<<<<<< HEAD
-      "@typescript-eslint/no-unnecessary-type-assertion": "off",
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-9756
       "@typescript-eslint/no-unsafe-assignment": "off",
       "@typescript-eslint/no-unsafe-member-access": "off",
       "@typescript-eslint/no-unsafe-call": "off",
@@ -122,10 +109,6 @@ export default [
       "@typescript-eslint/restrict-template-expressions": "off",
       "@typescript-eslint/no-floating-promises": "off",
       "@typescript-eslint/no-misused-promises": "off",
-<<<<<<< HEAD
-      "@typescript-eslint/no-unnecessary-type-assertion": "off",
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-9756
     },
   }),
 
@@ -237,15 +220,6 @@ export default [
     files: ["cypress/**/*.ts", "cypress/**/*.tsx"], // Target Cypress TS files
     extends: [...tseslint.configs.recommended], // Use non type-aware linting
     languageOptions: {
-<<<<<<< HEAD
-      globals: {
-        ...browserGlobals,
-        ...nodeGlobals,
-=======
-      globals: { // Cypress globals are typically provided by the plugin below
-        ...browserGlobals, // Cypress runs in browser
-        ...nodeGlobals,   // For tasks/plugins if any TS is used there
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-9756
       },
     },
     rules: {

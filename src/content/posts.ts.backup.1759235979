@@ -1673,59 +1673,6 @@ posts.push(
   }
 );
 
-<<<<<<< HEAD
-// Sept 30, 2025 – Brand-new trio for immediate homepage promotion
-posts.push(
-  {
-    slug: "ai-change-management-2026",
-    title: "AI Change Management 2026: From Pilot to Org-Wide Adoption",
-    description: "Playbooks, scorecards, and rollout trains that turn pilots into durable adoption across BUs.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "edge-governance-quickstart-2026",
-    title: "Edge Governance Quickstart 2026: Policies Without Latency Penalties",
-    description: "Auth-aware routes, scoped IDs, and signed outputs that enforce policy at <100ms.",
-    category: "Architecture",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "genai-evals-blueprint-2026",
-    title: "GenAI Evals Blueprint 2026: Offline Suites, PR Gates, Live Canaries",
-    description: "Layered evaluation patterns wired to KPIs so teams ship fast without regressions.",
-    category: "GenAI",
-=======
-// Sept 30, 2025 – New content additions for homepage advertising (fresh drop)
-posts.push(
-  {
-    slug: "ai-reasoning-agents-production-2026",
-    title: "Reasoning Agents in Production 2026: Tools, Traces, and Budgets",
-    description: "Ship reliable reasoning agents with deterministic tools, live traces, and KPI‑linked budgets.",
-    category: "AI Engineering",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "vector-database-optimization-2026",
-    title: "Vector Database Optimization 2026: Billion‑Scale Under 10ms",
-    description: "HNSW tuning, PQ/IVF, and hybrid search to hit sub‑10ms latency at billion‑vector scale.",
-    category: "Architecture",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "llm-fine-tuning-breakthrough-2026",
-    title: "LLM Fine‑Tuning Breakthrough 2026: QLoRA + Distillation in Days",
-    description: "Achieve domain‑expert models fast with QLoRA, distillation, and evals wired to outcomes.",
-    category: "Machine Learning",
->>>>>>> origin/cursor/create-and-deploy-new-content-498b
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"

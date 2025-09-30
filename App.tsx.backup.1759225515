@@ -1,11 +1,6 @@
 import React, { JSX } from "react";
 import LatestContentBanner2025 from "./src/components/LatestContentBanner2025";
 import FeaturedContentBanner2025 from "./src/components/FeaturedContentBanner2025";
-<<<<<<< HEAD
-import Revolutionary2026ContentMegaBanner from "./src/components/Revolutionary2026ContentMegaBanner";
-=======
-import January2026ContentShowcaseBanner from "./src/components/January2026ContentShowcaseBanner";
->>>>>>> origin/cursor/create-and-deploy-new-content-922c
 
 export default function App(): JSX.Element {
   return (
