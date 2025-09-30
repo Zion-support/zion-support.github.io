@@ -1165,6 +1165,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Sept 30, 2025 – Surface three brand-new articles site-wide (new content)
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-sept-30-runtime-guardrails-blueprint",
+    title: "AI 2025: Runtime Guardrails Blueprint",
+    description: "Inline policy tests, KPI‑linked canaries, and instant rollback without slowing delivery.",
+    link: "/blog/ai-2025-sept-30-runtime-guardrails-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2026-global-private-ab-testing",
+    title: "Edge 2026: Global Private A/B Testing <100ms",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for consentless experiments.",
+    link: "/blog/edge-2026-global-private-ab-testing",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-2026-signed-prompts-and-sboms",
+    title: "GenAI 2026: Signed Prompts and SBOMs",
+    description: "Signed SBOMs for prompts, datasets, models with CI policy gates.",
+    link: "/blog/genai-2026-signed-prompts-and-sboms",
+    type: "article",
+    featured: true
+  }
+);
+
 // Advertise freshly added posts (Sept 30, 2025) on homepage banners
 featuredBlogPosts.unshift(
   {

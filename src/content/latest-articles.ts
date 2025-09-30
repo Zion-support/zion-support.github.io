@@ -1546,6 +1546,58 @@ latestArticles.unshift(
   }
 );
 
+// Sept 30, 2025 – Newly added articles to highlight site-wide
+latestArticles.unshift(
+  {
+    id: "ai-2025-sept-30-runtime-guardrails-blueprint",
+    slug: "ai-2025-sept-30-runtime-guardrails-blueprint",
+    title: "AI 2025: Runtime Guardrails Blueprint",
+    description: "Inline policy tests, KPI-linked canaries, and instant rollback without slowing delivery.",
+    excerpt: "A practical blueprint for runtime guardrails engineers adopt: fast, measurable, and safe.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Governance",
+    tags: ["Policy Tests", "Canaries", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-2025-runtime-guardrails.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2026-global-private-ab-testing",
+    slug: "edge-2026-global-private-ab-testing",
+    title: "Edge 2026: Global Private A/B Testing <100ms",
+    description: "Scoped IDs, on-device aggregation, and DP noise enabling consentless, compliant experiments.",
+    excerpt: "Blueprint for sub-100ms experiments with zero PII and audit-ready telemetry.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "Analytics",
+    tags: ["Edge", "A/B", "Privacy"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-2026-private-ab-testing.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-2026-signed-prompts-and-sboms",
+    slug: "genai-2026-signed-prompts-and-sboms",
+    title: "GenAI 2026: Signed Prompts and SBOMs",
+    description: "Track prompts, datasets, and models with signed SBOMs and policy gates in CI.",
+    excerpt: "Stop drift with attestations and enforce policy without blocking delivery.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-02",
+    category: "Security",
+    tags: ["SBOM", "Attestations", "Governance"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/genai-2026-signed-prompts-sboms.jpg",
+    newBadge: true,
+    trending: true
+  }
+);
+
 export const featuredArticles = latestArticles.filter(article => article.featured);
 export const trendingArticles = latestArticles.filter(article => article.trending);
 export const newArticles = latestArticles.filter(article => article.newBadge);
