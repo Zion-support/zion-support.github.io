@@ -1257,59 +1257,30 @@ posts.push(
   }
 );
 
-<<<<<<< HEAD
-// Sept 30, 2025 – Brand-new content to advertise on homepage (fresh trio v3)
+// Sept 30, 2025 – Additional fresh posts to advertise on homepage
 posts.push(
-  // Sept 30, 2025 – Combine newly added items from both branches
   {
-    slug: "ai-sla-scorecards-2026-q1",
-    title: "AI SLA Scorecards 2026 Q1: SLIs, Budgets, Rollback",
-    description: "Operational scorecards tying model SLIs to KPIs with budgeted actions and instant rollback.",
-    category: "AI Governance",
+    slug: "ai-operational-trust-scorecards-v2-2026",
+    title: "AI Operational Trust Scorecards v2 (2026): SLIs, Budgets, Rollback",
+    description: "Second‑gen scorecards wiring SLIs to KPIs with budgeted actions and instant rollback.",
+    category: "AI Operations",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
   },
   {
-    slug: "edge-private-insights-v2-2026",
-    title: "Edge Private Insights v2 (2026): Scoped IDs, DP Noise, <100ms",
-    description: "Second‑gen private analytics with on‑device aggregation, scoped IDs, and differential privacy under 100ms.",
+    slug: "edge-private-insights-blueprint-2026",
+    title: "Edge Private Insights Blueprint 2026: Zero‑PII Analytics at <100ms",
+    description: "On‑device aggregation, scoped IDs, and DP noise that unlock compliant insights without latency tax.",
     category: "Analytics",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
   },
   {
-    slug: "agent-release-runbooks-v2-2026",
-    title: "Agent Release Runbooks v2 (2026): Budgets, Canaries, Recovery",
-    description: "Upgraded runbooks with KPI‑linked canaries, budgeted actions, sandboxed tools, and one‑click recovery.",
-    category: "AI Operations",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "ai-2026-autonomous-ops-q4-playbook",
-    title: "Autonomous Ops Q4 2026: Budgets, Traces, Instant Rollback",
-    description: "A pragmatic playbook to operate autonomous systems safely with explicit budgets, live traces, and one‑click rollback.",
-    category: "AI Operations",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "edge-analytics-consentless-2026-v2",
-    title: "Consentless Edge Analytics v2 (2026): Actionable Insights, Zero PII",
-    description: "Scoped IDs, on‑device aggregation, and DP noise that unlock insights without collecting PII—now faster and cheaper.",
-    category: "Analytics",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "genai-quality-tiers-v2-2026",
-    title: "GenAI Quality Tiers v2 (2026): Stable UX Under Strict Budgets",
-    description: "Tiered models, semantic caches, and KPI‑linked routing that cut spend 40–70% while preserving experience.",
+    slug: "genai-routing-quality-tiers-2026",
+    title: "GenAI Routing Quality Tiers 2026: Stable UX Under Budget",
+    description: "Tier models, add caches, and route by SLA using eval signals to cut spend 30–60%.",
     category: "GenAI",
     publishedAt: "2025-09-30",
     featured: true,
@@ -1317,52 +1288,12 @@ posts.push(
   }
 );
 
-// Jan 2026 – New articles to create more content and advertise on Home
-posts.push(
-  {
-    slug: "ai-risk-budgets-blueprint-2026",
-    title: "AI Risk Budgets Blueprint 2026: Ship Faster, Stay Safe",
-    description: "Budget actions and tokens, wire canaries to KPIs, and enable instant rollback for safe autonomy.",
-    category: "AI Operations",
-    publishedAt: "2026-01-05",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "edge-consent-mode-2026",
-    title: "Edge Consent Mode 2026: Private Analytics Without PII",
-    description: "Scoped IDs, on‑device aggregation, and DP noise that power compliant insights at <100ms.",
-    category: "Analytics",
-    publishedAt: "2026-01-05",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    slug: "genai-quality-tiers-blueprint-2026",
-    title: "GenAI Quality Tiers Blueprint 2026: Predictable Cost, Stable UX",
-    description: "Tier models, add semantic caches, and route by SLA using eval signals to cut spend 30–60%.",
-    category: "GenAI",
-    publishedAt: "2026-01-05",
-    featured: true,
-    readTime: "8 min read"
-  }
-);
-
-<<<<<<< HEAD
-// Sept 30, 2025 – Brand new content to advertise on homepage (added now)
-posts.push(
-  {
-    slug: "ai-operational-trust-blueprint-2026",
-    title: "AI Operational Trust Blueprint 2026: SLIs, Budgets, Rollback",
-    description: "Design SLIs tied to KPIs, set budgets, and wire instant rollback to ship safe automation.",
-=======
-// Sept 30, 2025 – Newly added trio to expand content and surface on Home
+// Sept 30, 2025 – Unified trio to expand content and surface on Home
 posts.push(
   {
     slug: "ai-slo-scorecards-2026",
     title: "AI SLO Scorecards 2026: Prove Reliability Week by Week",
     description: "Define SLIs, error budgets, and rollback triggers tied to product KPIs.",
->>>>>>> cursor/create-and-deploy-new-content-647f
     category: "AI Operations",
     publishedAt: "2025-09-30",
     featured: true,
@@ -1371,26 +1302,16 @@ posts.push(
   {
     slug: "edge-private-insights-2026",
     title: "Edge Private Insights 2026: Actionable Metrics Without PII",
-<<<<<<< HEAD
-    description: "Scoped IDs, on-device aggregation, and DP noise that deliver insights teams trust—no PII collected.",
-=======
-    description: "Scoped IDs, on‑device aggregation, and DP noise—insights teams love without risk.",
->>>>>>> cursor/create-and-deploy-new-content-647f
+    description: "Scoped IDs, on‑device aggregation, and DP noise that deliver insights teams trust—no PII collected.",
     category: "Analytics",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
   },
   {
-<<<<<<< HEAD
-    slug: "genai-cost-controllers-2026",
-    title: "GenAI Cost Controllers 2026: Quality Tiers Under Budget",
-    description: "Tiered models, semantic caches, and SLA-aware routing that cut spend 40–70% without hurting UX.",
-=======
     slug: "genai-budgets-routing-2026",
     title: "GenAI Budgets & Routing 2026: Predictable Cost, Stable UX",
     description: "Tier models, cache prompts, and route by SLA using eval signals to cut spend 40–70%.",
->>>>>>> cursor/create-and-deploy-new-content-647f
     category: "GenAI",
     publishedAt: "2025-09-30",
     featured: true,
