@@ -43,6 +43,7 @@ import {
   InteractiveAICalculatorBanner,
   AIInnovationShowcaseBanner
 } from '../components/NewContent2026Banners';
+import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -128,6 +129,9 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
+      {/* New 2026 Mega Content Banner */}
+      <NewContent2026MegaBanner />
+      
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
       <AIAutonomousSystemsBanner />

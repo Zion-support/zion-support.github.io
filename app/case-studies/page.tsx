@@ -9,6 +9,36 @@ export const metadata = {
 
 const caseStudies = [
   {
+    title: 'AI Autonomous Manufacturing Mega Success 2026: $50M Savings & 95% Efficiency',
+    slug: 'ai-autonomous-manufacturing-mega-success-2026',
+    excerpt: 'How a global manufacturer achieved $50M annual savings, 95% efficiency improvement, and complete autonomous operations through AI transformation.',
+    company: 'Global Manufacturing Leader',
+    industry: 'Manufacturing',
+    results: {
+      savings: '$50M',
+      efficiency: '95%',
+      quality: '99.8%',
+      timeline: '18 months'
+    },
+    image: '🏭',
+    color: 'green'
+  },
+  {
+    title: 'AI FinTech Quantum Transformation 2026: $100M Revenue & 99.9% Security',
+    slug: 'ai-fintech-quantum-transformation-2026',
+    excerpt: 'See how a leading FinTech achieved $100M revenue increase, 99.9% security improvement, and quantum-powered trading capabilities.',
+    company: 'Leading FinTech Company',
+    industry: 'Financial Services',
+    results: {
+      revenue: '$100M',
+      security: '99.9%',
+      speed: '1000x',
+      timeline: '18 months'
+    },
+    image: '💰',
+    color: 'indigo'
+  },
+  {
     title: 'AI Mega Transformation Success 2026: $500M+ Savings Achieved',
     slug: 'ai-mega-transformation-success-2026',
     excerpt: 'Discover how a Fortune 500 company achieved $500M+ annual savings and 99% process automation through comprehensive AI transformation.',
