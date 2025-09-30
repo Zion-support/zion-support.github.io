@@ -1,6 +1,6 @@
 // Minimal, type-safe Performance Monitor
 
-type MetricName = 'CLS' | 'FID' | 'FCP' | 'LCP' | 'TTFB';
+type MetricName = 'CLS' | 'FID' | 'FCP' | 'LCP' | 'TTFB' | 'SLOW_RESOURCE';
 
 interface PerformanceMetric {
   name: MetricName;
@@ -12,7 +12,7 @@ interface PerformanceMetric {
 class PerformanceMonitor {
   private metrics: PerformanceMetric[] = [];
   private observers: PerformanceObserver[] = [];
-  private initialized = false;
+  private isInitialized = false;
 
   constructor() {
     if (typeof window !== 'undefined') {

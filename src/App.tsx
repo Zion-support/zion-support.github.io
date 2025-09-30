@@ -9,7 +9,6 @@ import { AppRouter } from './router';
 // import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
 // import { screenReaderSupport } from './accessibility/screenReaderSupport';
 import './index.css';
-import { AppRouter } from './router';
 import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
@@ -46,7 +45,7 @@ const WebsiteEnhancements = (props: any) => <Placeholder name="WebsiteEnhancemen
 export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [notifications, setNotifications] = useState<Array<{id: string; type: "success" | "error" | "warning" | "info"; title: string; message: string; duration?: number}>>([]);
 
   const seoDataForOptimizer = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -70,36 +69,33 @@ export default function App(): React.JSX.Element {
         default:
           break;
       }
-      if (enhancedSecurityManager && typeof enhancedSecurityManager.initialize === 'function') {
-        enhancedSecurityManager.initialize();
-      }
-      
-      // Initialize new performance and accessibility enhancements
-      initializePerformanceEnhancements();
-      accessibilityEnhancer.initialize();
-      
-      // Initialize advanced optimizers
-      // Guard optional advanced systems if present in global scope
-      const advancedPerformanceOptimizer = (window as any).advancedPerformanceOptimizer;
-      const advancedSEOOptimizer = (window as any).advancedSEOOptimizer;
-      const advancedSecurityManager = (window as any).advancedSecurityManager;
-      const advancedAnalytics = (window as any).advancedAnalytics;
-      const advancedErrorHandler = (window as any).advancedErrorHandler;
-      const advancedCachingSystem = (window as any).advancedCachingSystem;
-      const advancedUXOptimizer = (window as any).advancedUXOptimizer;
-      const advancedTestingFramework = (window as any).advancedTestingFramework;
-      const advancedI18n = (window as any).advancedI18n;
+    };
 
+    // Initialize new performance and accessibility enhancements
+    performanceMonitor.reportPerformance();
+    
+    // Initialize advanced optimizers
+    // Guard optional advanced systems if present in global scope
+    const advancedPerformanceOptimizer = (window as any).advancedPerformanceOptimizer;
+    const advancedSEOOptimizer = (window as any).advancedSEOOptimizer;
+    const advancedSecurityManager = (window as any).advancedSecurityManager;
+    const advancedAnalytics = (window as any).advancedAnalytics;
+    const advancedErrorHandler = (window as any).advancedErrorHandler;
+    const advancedCachingSystem = (window as any).advancedCachingSystem;
+    const advancedUXOptimizer = (window as any).advancedUXOptimizer;
+    const advancedTestingFramework = (window as any).advancedTestingFramework;
+    const advancedI18n = (window as any).advancedI18n;
+
+    try {
       advancedPerformanceOptimizer?.initialize?.();
       advancedSEOOptimizer?.initialize?.();
-      accessibilityEnhancer.initialize();
       advancedSecurityManager?.initialize?.();
       advancedAnalytics?.initialize?.();
       // advancedErrorHandler is initialized in constructor
-      advancedCachingSystem.initialize();
-      advancedUXOptimizer.initialize();
-      advancedTestingFramework.initialize();
-      advancedI18n.initialize();
+      advancedCachingSystem?.initialize?.();
+      advancedUXOptimizer?.initialize?.();
+      advancedTestingFramework?.initialize?.();
+      advancedI18n?.initialize?.();
       // Store enhancements globally for debugging
       (window as unknown as Record<string, unknown>).enhancements = {
         performanceOptimizer: advancedPerformanceOptimizer,
@@ -109,7 +105,9 @@ export default function App(): React.JSX.Element {
         analytics: advancedAnalytics,
         errorHandler: advancedErrorHandler,
         cachingSystem: advancedCachingSystem,
-        uxOptimizer: advancedUXOptimizer
+        uxOptimizer: advancedUXOptimizer,
+        testingFramework: advancedTestingFramework,
+        i18n: advancedI18n
       };
       (window as unknown as Record<string, unknown>).performanceOptimizer = advancedPerformanceOptimizer;
       (window as unknown as Record<string, unknown>).seoOptimizer = advancedSEOOptimizer;
@@ -124,6 +122,14 @@ export default function App(): React.JSX.Element {
     } catch (error) {
       console.error('Error initializing enhancements:', error);
     }
+
+    // Add event listener
+    window.addEventListener('keydown', onKeyDown);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+    };
   }, []);
 
   const handleRemoveNotification = useCallback((id: string) => {
@@ -132,7 +138,11 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer seoData={seoDataForOptimizer} />
+      <SEOOptimizer 
+        title={seoDataForOptimizer.title}
+        description={seoDataForOptimizer.description}
+        canonicalUrl={seoDataForOptimizer.canonical}
+      />
       <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />

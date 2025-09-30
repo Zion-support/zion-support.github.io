@@ -13,6 +13,7 @@ import {
   Zap,
   Target,
   TrendingUp,
+  Calculator,
   Database,
   Cloud,
   Brain,

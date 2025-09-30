@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { TrendingUp, Eye, Clock, Star, ArrowRight, Fire, BookOpen, Zap } from 'lucide-react';
+import { TrendingUp, Eye, Clock, Star, ArrowRight, BookOpen, Zap } from 'lucide-react';
 
 interface TrendingContentBannerProps {
   className?: string;
@@ -152,7 +152,7 @@ export const TrendingContentBanner: React.FC<TrendingContentBannerProps> = ({
                 )}
                 {currentItem.isHot && (
                   <span className="px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 flex items-center gap-1">
-                    <Fire className="w-3 h-3" />
+                    <Zap className="w-3 h-3" />
                     HOT
                   </span>
                 )}
