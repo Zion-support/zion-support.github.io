@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AppRouter } from './router';
 import { LoadingSpinner } from './components/LoadingStates';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -116,6 +117,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <AppRouter />
+      <PerformanceMonitor />
     </div>
   );
 };
