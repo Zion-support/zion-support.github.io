@@ -316,3 +316,31 @@ featuredBlogPosts.unshift(
     featured: true
   }
 );
+
+// Feature: new September 2025 articles to advertise on Home
+featuredBlogPosts.unshift(
+  {
+    id: "ai-governance-runtime-guardrails-2026",
+    title: "AI Governance Runtime Guardrails 2026",
+    description: "Inline policy checks and live canaries without slowing teams",
+    link: "/blog/ai-governance-runtime-guardrails-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-privacy-insights-2026",
+    title: "Edge Privacy Insights 2026",
+    description: "Scoped IDs, edge aggregation, and DP noise for actionable metrics",
+    link: "/blog/edge-privacy-insights-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agentic-runtime-safety-2026",
+    title: "Agentic Runtime Safety 2026",
+    description: "Budgets, sandboxes, and instant rollback for safe autonomy",
+    link: "/blog/agentic-runtime-safety-2026",
+    type: "article",
+    featured: true
+  }
+);
