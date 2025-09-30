@@ -63,6 +63,8 @@ import June2026MegaAutomationBanner from "./components/June2026MegaAutomationBan
 import InteractiveContentShowcase2026Advanced from "./components/InteractiveContentShowcase2026Advanced";
 import June2026SuperintelligenceBreakthroughBanner from "./components/June2026SuperintelligenceBreakthroughBanner";
 import June2026ContentShowcaseBanner from "./components/June2026ContentShowcaseBanner";
+import July2026AutonomousIntelligenceBanner from "./components/July2026AutonomousIntelligenceBanner";
+import July2026ContentShowcaseBanner from "./components/July2026ContentShowcaseBanner";
 import AI2031SingularityAchievementBanner from "./components/AI2031SingularityAchievementBanner";
 import AITrends2026AdvertisingBanner from "./components/AITrends2026AdvertisingBanner";
 import September2026BreakthroughAdvertisingBanner from "./components/September2026BreakthroughAdvertisingBanner";
@@ -81,6 +83,12 @@ import October2026BreakthroughShowcaseBanner from "./components/October2026Break
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEWEST: July 2026 Autonomous Intelligence Banner - MOST PROMINENT */}
+      <July2026AutonomousIntelligenceBanner />
+      
+      {/* NEWEST: July 2026 Content Showcase Banner - FEATURED */}
+      <July2026ContentShowcaseBanner />
+      
       {/* NEWEST: Comprehensive Content Integration Banner - MOST PROMINENT */}
       <ComprehensiveContentIntegrationBanner />
       
