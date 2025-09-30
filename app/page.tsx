@@ -200,6 +200,31 @@ export default function HomePage() {
       <section className="py-6 bg-gradient-to-r from-blue-700 via-indigo-700 to-fuchsia-700 text-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-4">
+            {/* Newly added content – promote 3 fresh posts */}
+            <Link href="/blog/ai-2025-autonomous-infrastructure-blueprint" className="block bg-white/10 hover:bg-white/15 border border-white/20 rounded-xl p-6 transition-colors">
+              <div className="mb-2">
+                <span className="px-3 py-1 rounded-full text-xs bg-emerald-500/20 text-emerald-200 border border-emerald-500/30">Platform</span>
+                <span className="ml-2 text-white/70 text-xs">New</span>
+              </div>
+              <h3 className="text-xl font-bold">Autonomous Infrastructure 2025</h3>
+              <p className="text-white/80 mt-2 text-sm">Self‑healing, self‑optimizing, and self‑scaling with KPI‑linked guardrails.</p>
+            </Link>
+            <Link href="/blog/edge-2025-zero-pii-experiments" className="block bg-white/10 hover:bg-white/15 border border-white/20 rounded-xl p-6 transition-colors">
+              <div className="mb-2">
+                <span className="px-3 py-1 rounded-full text-xs bg-cyan-500/20 text-cyan-200 border border-cyan-500/30">Analytics</span>
+                <span className="ml-2 text-white/70 text-xs">New</span>
+              </div>
+              <h3 className="text-xl font-bold">Edge Experiments 2025</h3>
+              <p className="text-white/80 mt-2 text-sm">Zero‑PII global A/B at &lt;100ms with scoped IDs and DP noise.</p>
+            </Link>
+            <Link href="/blog/genai-2025-routing-caches-v1" className="block bg-white/10 hover:bg-white/15 border border-white/20 rounded-xl p-6 transition-colors md:col-span-2">
+              <div className="mb-2">
+                <span className="px-3 py-1 rounded-full text-xs bg-fuchsia-500/20 text-fuchsia-200 border border-fuchsia-500/30">GenAI</span>
+                <span className="ml-2 text-white/70 text-xs">New</span>
+              </div>
+              <h3 className="text-xl font-bold">GenAI Routing v1 (2025)</h3>
+              <p className="text-white/80 mt-2 text-sm">Tiered models + semantic caches for predictable cost and steady UX.</p>
+            </Link>
             <Link href="/blog/ai-2027-autonomous-governance-blueprint" className="block bg-white/10 hover:bg-white/15 border border-white/20 rounded-xl p-6 transition-colors">
               <div className="mb-2">
                 <span className="px-3 py-1 rounded-full text-xs bg-blue-500/20 text-blue-200 border border-blue-500/30">Governance</span>
