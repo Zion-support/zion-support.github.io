@@ -1261,6 +1261,37 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – New content additions for homepage advertising (fresh drop)
+posts.push(
+  {
+    slug: "ai-reasoning-agents-production-2026",
+    title: "Reasoning Agents in Production 2026: Tools, Traces, and Budgets",
+    description: "Ship reliable reasoning agents with deterministic tools, live traces, and KPI‑linked budgets.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "vector-database-optimization-2026",
+    title: "Vector Database Optimization 2026: Billion‑Scale Under 10ms",
+    description: "HNSW tuning, PQ/IVF, and hybrid search to hit sub‑10ms latency at billion‑vector scale.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "llm-fine-tuning-breakthrough-2026",
+    title: "LLM Fine‑Tuning Breakthrough 2026: QLoRA + Distillation in Days",
+    description: "Achieve domain‑expert models fast with QLoRA, distillation, and evals wired to outcomes.",
+    category: "Machine Learning",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // New: Sept 30, 2025 – Fresh trio to advertise on homepage
 posts.push(
   {
