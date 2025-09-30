@@ -108,6 +108,7 @@ import Revolutionary2026ContentBanner from '../components/Revolutionary2026Conte
 import UltimateContent2026Showcase from '../components/UltimateContent2026Showcase';
 import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
 import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
+import Interactive2027ContentDiscovery from '../components/Interactive2027ContentDiscovery';
 // import { ContentAnnouncementBanner, September2025ContentShowcase } from '../components/September2025ContentBanners';
 import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
 import AIMetaCognitiveRevolutionBanner from '../components/AIMetaCognitiveRevolutionBanner';
@@ -182,6 +183,12 @@ export default function HomePage() {
       </section>
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
+      
+      {/* 🎯 Revolutionary 2027 Content Banner */}
+      <Revolutionary2027ContentBanner />
+      
+      {/* 🔍 Interactive 2027 Content Discovery */}
+      <Interactive2027ContentDiscovery />
 
       {/* 📣 Featured: New — Autonomous Governance & Agent Ops Observability */}
       <div className="bg-gradient-to-r from-purple-700/20 to-fuchsia-700/20 border border-white/10 rounded-2xl p-6 mb-8">
