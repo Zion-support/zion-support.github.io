@@ -11,6 +11,30 @@ export interface FeaturedItem {
 
 export const featuredBlogPosts: FeaturedItem[] = [
   {
+    id: "ai-2027-customer-experience-agents",
+    title: "AI 2027: Customer Experience Agents",
+    description: "24/7 autonomous CX with budgets, KPIs, and instant rollback.",
+    link: "/blog/ai-2027-customer-experience-agents",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2027-real-time-feature-flags",
+    title: "Edge 2027: Real‑Time Feature Flags",
+    description: "Signed configs, scoped IDs, and DP for <100ms private rollouts.",
+    link: "/blog/edge-2027-real-time-feature-flags",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-2027-quality-tiers-v4",
+    title: "GenAI 2027: Quality Tiers v4",
+    description: "Tiering + semantic caches + eval gates for stable UX under budget.",
+    link: "/blog/genai-2027-quality-tiers-v4",
+    type: "article",
+    featured: true
+  },
+  {
     id: "enterprise-rag-security-2027",
     title: "Enterprise RAG Security 2027",
     description: "Auth‑aware retrieval, freshness windows, prompt firewalls, signed outputs",
