@@ -146,6 +146,21 @@ const Home = () => {
           <div className="rounded-xl border border-emerald-400/30 bg-emerald-500/10 p-6 mb-6">
             <div className="text-white text-sm mb-3">Brand new today</div>
             <div className="grid md:grid-cols-3 gap-4">
+              <Link to="/blog/ai-2025-sept-30-operational-trust-scorecards-v2" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">AI Operations</div>
+                <div className="text-white font-semibold">Operational Trust Scorecards v2</div>
+                <div className="text-zion-slate-light text-sm mt-1">SLIs → KPIs with budgets and rollback.</div>
+              </Link>
+              <Link to="/blog/edge-2025-sept-30-consentless-journeys-v2" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">Edge Computing</div>
+                <div className="text-white font-semibold">Consentless Journeys v2</div>
+                <div className="text-zion-slate-light text-sm mt-1">Private, real‑time personalization under 100ms.</div>
+              </Link>
+              <Link to="/blog/genai-2025-sept-30-runtime-rollback-v3" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
+                <div className="text-purple-300 text-xs mb-2">GenAI</div>
+                <div className="text-white font-semibold">Runtime Rollback v3</div>
+                <div className="text-zion-slate-light text-sm mt-1">Deterministic fallbacks and signed outputs.</div>
+              </Link>
               <Link to="/blog/ai-2025-sept-30-governance-live-scorecards" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
                 <div className="text-emerald-300 text-xs mb-2">Platform Engineering</div>
                 <div className="text-white font-semibold">Governance Live Scorecards</div>
