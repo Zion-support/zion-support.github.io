@@ -1,312 +1,315 @@
 import React from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'AI & IT Services - Zion Tech Group',
-  description: 'Comprehensive AI, micro SaaS, and IT services including data analytics, workflow automation, cloud migration, and cybersecurity.',
-  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, cybersecurity, automation',
+export const metadata: Metadata = {
+  title: 'AI & IT Services | Zion Tech Group - Enterprise Solutions',
+  description: 'Comprehensive AI services, micro SaaS solutions, and IT consulting. Transform your business with cutting-edge technology and automation.',
+  keywords: 'AI services, micro SaaS, IT consulting, cloud migration, DevOps, enterprise software, automation',
 };
 
 export default function ServicesPage() {
   const services = [
     {
-      id: 'ai-data-analytics',
       title: 'AI Data Analytics',
-      description: 'Transform your data into actionable insights with advanced AI-powered analytics and real-time dashboards.',
-      price: '$199/month',
+      description: 'Transform data into actionable insights with predictive modeling and real-time dashboards',
+      icon: '📊',
       features: [
         'Predictive Analytics & Forecasting',
-        'Real-time Dashboard Creation',
-        'Advanced Data Visualization',
-        'Custom ML Model Development',
-        'Automated Report Generation',
-        'API Integration & Data Pipeline'
+        'Real-time Business Intelligence',
+        'Machine Learning Model Development',
+        'Data Visualization & Reporting',
+        'Custom Analytics Solutions'
       ],
-      popular: true,
-      icon: '📊',
-      benefits: [
-        'Increase decision-making speed by 300%',
-        'Reduce manual reporting by 80%',
-        'Identify trends before competitors',
-        'Custom insights for your industry'
-      ]
+      href: '/services/ai-data-analytics'
     },
     {
-      id: 'ai-workflow-automation',
       title: 'AI Workflow Automation',
-      description: 'Automate complex business processes with intelligent workflow design and smart triggers.',
-      price: '$149/month',
+      description: 'Automate business processes with intelligent workflow design and smart triggers',
+      icon: '⚡',
       features: [
         'Process Automation Design',
-        'Smart Trigger Configuration',
-        'Performance Monitoring',
-        'Integration with 100+ Apps',
-        'Custom Workflow Builder',
-        'Real-time Analytics'
+        'Intelligent Document Processing',
+        'Business Rule Engine Development',
+        'Workflow Optimization',
+        'Integration & Orchestration'
       ],
-      popular: false,
-      icon: '⚙️',
-      benefits: [
-        'Reduce manual work by 75%',
-        'Eliminate human errors',
-        '24/7 automated processing',
-        'Scale operations effortlessly'
-      ]
+      href: '/services/ai-workflow-automation'
     },
     {
-      id: 'ai-virtual-assistant',
       title: 'AI Virtual Assistant',
-      description: '24/7 intelligent customer support with natural language processing and multi-channel capabilities.',
-      price: '$99/month',
-      features: [
-        '24/7 Customer Support',
-        'Multi-channel Integration',
-        'Natural Language Processing',
-        'Personalized Responses',
-        'Escalation Management',
-        'Performance Analytics'
-      ],
-      popular: false,
+      description: '24/7 intelligent customer support with natural language processing',
       icon: '🤖',
-      benefits: [
-        'Improve customer satisfaction by 40%',
-        'Reduce support costs by 60%',
-        'Handle unlimited queries',
-        'Learn and improve over time'
-      ]
+      features: [
+        'Natural Language Processing',
+        'Multi-channel Support',
+        'Intelligent Routing',
+        'Sentiment Analysis',
+        'Continuous Learning Systems'
+      ],
+      href: '/services/ai-virtual-assistant'
     },
     {
-      id: 'cloud-migration',
-      title: 'Cloud Migration Services',
-      description: 'Seamless migration to cloud infrastructure with zero downtime and enhanced security.',
-      price: '$2,999',
+      title: 'Autonomous Business Operations',
+      description: 'Self-managing AI systems that operate entire business processes autonomously',
+      icon: '🧠',
       features: [
-        'Zero Downtime Migration',
-        'Security Compliance Audit',
-        'Cost Optimization Analysis',
-        'Performance Monitoring',
-        'Disaster Recovery Setup',
-        '24/7 Support During Migration'
+        'Autonomous Process Management',
+        'Predictive Maintenance',
+        'Intelligent Resource Allocation',
+        'Self-healing Systems',
+        'Continuous Optimization'
       ],
-      popular: false,
+      href: '/services/autonomous-operations'
+    },
+    {
+      title: 'Generative AI Solutions',
+      description: 'Create, innovate, and generate novel solutions with cutting-edge generative intelligence',
+      icon: '✨',
+      features: [
+        'Content Generation Systems',
+        'Creative AI Applications',
+        'Multimodal Generation',
+        'Adaptive Learning Systems',
+        'Innovation Automation'
+      ],
+      href: '/services/generative-ai'
+    },
+    {
+      title: 'Cloud Migration & DevOps',
+      description: 'Seamless cloud transitions and optimized DevOps practices for modern infrastructure',
       icon: '☁️',
-      benefits: [
-        'Reduce infrastructure costs by 40%',
-        'Improve scalability and flexibility',
-        'Enhanced security and compliance',
-        'Access to latest technologies'
-      ]
-    },
-    {
-      id: 'devops-automation',
-      title: 'DevOps Automation',
-      description: 'Automate CI/CD pipelines and infrastructure management for faster, more reliable deployments.',
-      price: '$399/month',
       features: [
-        'CI/CD Pipeline Setup',
+        'Cloud Architecture Design',
+        'Migration Strategy & Execution',
+        'CI/CD Pipeline Development',
         'Infrastructure as Code',
-        'Auto-scaling Configuration',
-        'Monitoring & Alerting',
-        'Security Scanning',
-        'Performance Optimization'
+        'Monitoring & Observability'
       ],
-      popular: false,
-      icon: '🚀',
-      benefits: [
-        'Deploy 10x faster',
-        'Reduce deployment errors by 90%',
-        'Automated scaling and recovery',
-        'Continuous monitoring and optimization'
-      ]
+      href: '/services/cloud-migration'
     },
     {
-      id: 'cybersecurity-consulting',
-      title: 'Cybersecurity Consulting',
-      description: 'Advanced threat detection and zero-trust security architecture for enterprise protection.',
-      price: '$599/month',
+      title: 'Micro SaaS Development',
+      description: 'Custom micro SaaS solutions designed for specific business needs and rapid deployment',
+      icon: '🔧',
       features: [
-        'Advanced Threat Detection',
-        'Zero-trust Architecture',
-        'Compliance Management',
-        'Security Audits',
-        'Incident Response Planning',
-        'Security Training'
+        'Rapid Prototype Development',
+        'Scalable Architecture Design',
+        'API Development & Integration',
+        'User Experience Optimization',
+        'Performance Monitoring'
       ],
-      popular: false,
+      href: '/services/micro-saas'
+    },
+    {
+      title: 'Enterprise AI Consulting',
+      description: 'Strategic AI implementation guidance for enterprise-scale digital transformation',
+      icon: '🎯',
+      features: [
+        'AI Strategy Development',
+        'Technology Roadmap Planning',
+        'Change Management',
+        'ROI Optimization',
+        'Compliance & Governance'
+      ],
+      href: '/services/ai-consulting'
+    },
+    {
+      title: 'Cybersecurity & AI Security',
+      description: 'Advanced security solutions powered by AI for comprehensive threat protection',
       icon: '🛡️',
-      benefits: [
-        'Protect against 99.9% of threats',
-        'Meet all compliance requirements',
-        'Reduce security incidents by 95%',
-        '24/7 security monitoring'
-      ]
-    },
-    {
-      id: 'ai-synthetic-data-generation',
-      title: 'AI Synthetic Data Generation',
-      description: 'Generate privacy-preserving synthetic data with 90% privacy protection and $3M+ savings.',
-      price: '$4,999',
       features: [
-        'Privacy-Preserving Generation',
-        'Unlimited Scale Data',
-        'Regulatory Compliance',
-        'Custom Scenarios',
-        'Quality Validation',
-        'Real-time Generation'
+        'AI-Powered Threat Detection',
+        'Security Orchestration',
+        'Vulnerability Assessment',
+        'Incident Response Automation',
+        'Compliance Management'
       ],
-      popular: true,
-      icon: '🔒',
-      benefits: [
-        '90% privacy protection guaranteed',
-        '50% faster AI development',
-        '$3M+ annual cost savings',
-        'Full GDPR/HIPAA compliance'
-      ]
+      href: '/services/ai-security'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 to-teal-600 text-white py-20">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-6">
-            AI & IT Services That Transform Your Business
+      <section className="relative py-20 px-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            AI & IT Services
           </h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            From AI-powered analytics to cloud migration, we provide comprehensive solutions 
-            that drive growth, efficiency, and innovation for modern enterprises.
+          <p className="text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Transform your business with cutting-edge AI solutions, micro SaaS development, 
+            and enterprise IT services that drive growth and innovation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
             >
               Call +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
-              Get Free Consultation
+              Get a Quote
             </a>
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-4">
+      <section className="py-20 px-6">
+        <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Our Comprehensive Service Portfolio
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Comprehensive Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose from our range of AI and IT services, each designed to solve specific 
-              business challenges and drive measurable results.
+              From AI-powered analytics to autonomous business operations, we provide 
+              end-to-end technology solutions that deliver measurable results.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <ServiceCard key={service.id} service={service} />
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-200 hover:border-blue-300 group"
+              >
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {service.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <svg className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href={service.href}
+                  className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:underline"
+                >
+                  <span>Learn More</span>
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </Link>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Success Metrics */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Proven Results
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our clients achieve remarkable improvements across key business metrics
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl">
+              <div className="text-4xl font-bold text-blue-600 mb-2">89%</div>
+              <p className="text-gray-700 font-semibold">Efficiency Improvement</p>
+              <p className="text-sm text-gray-600 mt-2">Average client performance boost</p>
+            </div>
+            <div className="text-center bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl">
+              <div className="text-4xl font-bold text-green-600 mb-2">$2.3B</div>
+              <p className="text-gray-700 font-semibold">Cost Savings Generated</p>
+              <p className="text-sm text-gray-600 mt-2">Across all client implementations</p>
+            </div>
+            <div className="text-center bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl">
+              <div className="text-4xl font-bold text-purple-600 mb-2">156%</div>
+              <p className="text-gray-700 font-semibold">Average ROI</p>
+              <p className="text-sm text-gray-600 mt-2">Within first year of implementation</p>
+            </div>
+            <div className="text-center bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-xl">
+              <div className="text-4xl font-bold text-orange-600 mb-2">500+</div>
+              <p className="text-gray-700 font-semibold">Projects Delivered</p>
+              <p className="text-sm text-gray-600 mt-2">Successful implementations worldwide</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Proven Process
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We follow a systematic approach to ensure successful project delivery and maximum ROI
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Discovery & Analysis</h3>
+              <p className="text-gray-600">Comprehensive assessment of your current systems, requirements, and opportunities for improvement.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Strategy & Design</h3>
+              <p className="text-gray-600">Custom solution design and implementation strategy tailored to your specific business needs.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
+              <p className="text-gray-600">Agile development and deployment with continuous testing and optimization throughout the process.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Optimization</h3>
+              <p className="text-gray-600">Ongoing monitoring, support, and optimization to ensure continued performance and growth.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-4">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Let's discuss which services are right for your organization and create a 
-            customized solution that delivers real results.
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Let's discuss how our AI and technology solutions can accelerate your growth and drive innovation
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
             >
               Call +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
-              Schedule Consultation
+              Email Us
             </a>
-          </div>
-          <div className="mt-8 text-sm text-gray-500">
-            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-            <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
           </div>
         </div>
       </section>
-    </div>
-  );
-}
-
-function ServiceCard({ service }: { service: any }) {
-  return (
-    <div className={`border rounded-xl p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 ${
-      service.popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white hover:border-blue-300'
-    }`}>
-      {service.popular && (
-        <div className="text-center mb-4">
-          <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-            Most Popular
-          </span>
-        </div>
-      )}
-      
-      <div className="flex items-center gap-3 mb-4">
-        <span className="text-3xl">{service.icon}</span>
-        <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
-      </div>
-      
-      <p className="text-gray-600 mb-4">{service.description}</p>
-      
-      <div className="mb-4">
-        <span className="text-2xl font-bold text-gray-900">{service.price}</span>
-      </div>
-      
-      <div className="mb-6">
-        <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
-        <ul className="space-y-2">
-          {service.features.map((feature: string, index: number) => (
-            <li key={index} className="flex items-center">
-              <span className="text-green-500 mr-2">✓</span>
-              <span className="text-gray-600 text-sm">{feature}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="mb-6">
-        <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
-        <ul className="space-y-2">
-          {service.benefits.map((benefit: string, index: number) => (
-            <li key={index} className="flex items-center">
-              <span className="text-blue-500 mr-2">→</span>
-              <span className="text-gray-600 text-sm">{benefit}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-      
-      <Link
-        href={`/services/${service.id}`}
-        className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
-          service.popular
-            ? 'bg-blue-600 text-white hover:bg-blue-700'
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-        }`}
-      >
-        Learn More
-      </Link>
     </div>
   );
 }

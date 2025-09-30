@@ -1,25 +1,23 @@
 User-agent: *
 Allow: /
+Allow: /blog/
+Allow: /services/
+Allow: /case-studies/
+Allow: /contact/
 
-# Sitemap
-Sitemap: https://zion.app/sitemap.xml
-
-# Disallow admin and private areas
-Disallow: /admin/
 Disallow: /api/
-Disallow: /_next/
-Disallow: /private/
-Disallow: /tmp/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /*?*
 
-# Allow search engines to crawl static assets
-Allow: /images/
-Allow: /css/
-Allow: /js/
-Allow: /fonts/
-Allow: /assets/
+Sitemap: https://ziontechgroup.com/sitemap.xml
 
-# Crawl delay for respectful crawling
+# Specific bot rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl rate
 Crawl-delay: 1
-
-# Host directive
-Host: https://zion.app

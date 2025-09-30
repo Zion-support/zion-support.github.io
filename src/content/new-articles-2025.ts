@@ -1,452 +1,806 @@
 export interface NewArticle {
   id: string;
-  slug: string;
   title: string;
   description: string;
-  excerpt: string;
-  author: string;
-  date: string;
   category: string;
-  tags: string[];
+  publishedDate: string;
   featured: boolean;
+  link: string;
   readTime: string;
-  image?: string;
-  newBadge?: boolean;
-  trending?: boolean;
-  featuredInHomepage?: boolean;
+  tags: string[];
 }
 
 export const newArticles2025: NewArticle[] = [
   {
-    id: "ai-autonomous-infrastructure-2025",
-    slug: "ai-autonomous-infrastructure-2025",
-    title: "AI Autonomous Infrastructure: The Future of Self-Managing Systems",
-    description: "Discover how AI-powered autonomous infrastructure is revolutionizing enterprise operations with self-healing, self-optimizing, and self-scaling capabilities.",
-    excerpt: "Transform your infrastructure management with AI that never sleeps, never makes mistakes, and continuously optimizes performance.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-30",
-    category: "AI Operations",
-    tags: ["Autonomous Infrastructure", "AI", "Self-Healing", "Automation"],
+    id: "ai-agent-evaluations-2026",
+    title: "🧪 AI Agent Evaluations 2026: Reliable Metrics & Safe Deployments",
+    description: "Blueprint for robust agent evals: task suites, rubric scoring, long-horizon reliability, safety budgets, and HIL governance.",
+    category: "Agentic AI",
+    publishedDate: "2025-09-30",
     featured: true,
-    readTime: "12 min read",
-    image: "/images/ai-autonomous-infrastructure.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
+    link: "/blog/ai-agent-evaluations-2026",
+    readTime: "16 min read",
+    tags: ["Agent Evals", "Safety Budgets", "Reliability", "Governance"]
   },
   {
-    id: "quantum-ai-hybrid-computing-2025",
-    slug: "quantum-ai-hybrid-computing-2025",
-    title: "Quantum-AI Hybrid Computing: Breaking Computational Barriers",
-    description: "Explore the revolutionary combination of quantum computing and artificial intelligence, delivering unprecedented processing power for complex business problems.",
-    excerpt: "Unlock exponential computational power with quantum-AI hybrid systems that solve problems impossible for traditional computers.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-29",
-    category: "Quantum Computing",
-    tags: ["Quantum Computing", "AI", "Hybrid Systems", "Computational Power"],
+    id: "ai-platform-cost-optimization-2026",
+    title: "💸 AI Platform Cost Optimization 2026: 50–80% Savings Playbook",
+    description: "Cut AI platform costs 50–80% with autoscaling, quantization, spot capacity, and FinOps governance. 12‑week roadmap.",
+    category: "FinOps",
+    publishedDate: "2025-09-30",
     featured: true,
-    readTime: "15 min read",
-    image: "/images/quantum-ai-hybrid.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "ai-cybersecurity-next-generation-2025",
-    slug: "ai-cybersecurity-next-generation-2025",
-    title: "Next-Generation AI Cybersecurity: Zero-Trust with Intelligence",
-    description: "Learn how advanced AI cybersecurity systems are creating impenetrable digital fortresses with zero-trust architecture and behavioral analytics.",
-    excerpt: "Build an unbreachable security perimeter with AI that learns, adapts, and evolves to counter emerging threats in real-time.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-28",
-    category: "Cybersecurity",
-    tags: ["AI Security", "Zero Trust", "Behavioral Analytics", "Threat Detection"],
-    featured: true,
-    readTime: "10 min read",
-    image: "/images/ai-cybersecurity-next-gen.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "edge-ai-real-time-intelligence-2025",
-    slug: "edge-ai-real-time-intelligence-2025",
-    title: "Edge AI: Real-Time Intelligence at the Network Edge",
-    description: "Discover how Edge AI is bringing real-time intelligence to IoT devices, autonomous vehicles, and smart cities with sub-millisecond response times.",
-    excerpt: "Experience the power of AI processing at the edge, delivering instant decisions without cloud dependency.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-27",
-    category: "Edge Computing",
-    tags: ["Edge AI", "Real-time Processing", "IoT", "Autonomous Systems"],
-    featured: true,
-    readTime: "11 min read",
-    image: "/images/edge-ai-real-time.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
-  },
-  {
-    id: "ai-content-generation-enterprise-2025",
-    slug: "ai-content-generation-enterprise-2025",
-    title: "Enterprise AI Content Generation: Scale Your Content Strategy",
-    description: "Master enterprise-grade AI content generation that maintains brand voice, ensures quality, and scales content production by 1000%.",
-    excerpt: "Transform your content strategy with AI that understands your brand, maintains consistency, and delivers quality at scale.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-26",
-    category: "Content AI",
-    tags: ["Content Generation", "AI Writing", "Brand Voice", "Content Strategy"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-content-enterprise.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
-  },
-  {
-    id: "ai-customer-insights-advanced-2025",
-    slug: "ai-customer-insights-advanced-2025",
-    title: "Advanced AI Customer Insights: Predicting Behavior Before It Happens",
-    description: "Unlock the power of predictive customer analytics with AI that anticipates needs, predicts churn, and personalizes experiences at scale.",
-    excerpt: "Stay ahead of customer needs with AI that predicts behavior patterns and delivers personalized experiences before customers even ask.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-25",
-    category: "Customer Analytics",
-    tags: ["Customer Insights", "Predictive Analytics", "Personalization", "Churn Prediction"],
-    featured: false,
-    readTime: "8 min read",
-    image: "/images/ai-customer-insights-advanced.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
-  },
-  {
-    id: "genai-evals-production-2025",
-    slug: "genai-evals-production-2025",
-    title: "GenAI Evals in Production: Quality Gates That Actually Work",
-    description: "Implement production-ready GenAI evaluation systems with automated quality gates, performance monitoring, and continuous improvement loops.",
-    excerpt: "Ensure your GenAI systems deliver consistent quality with automated evaluation pipelines that catch issues before users do.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-24",
-    category: "GenAI Quality",
-    tags: ["GenAI", "Quality Gates", "Evaluation", "Production Monitoring"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/genai-evals-production.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
-  },
-  {
-    id: "ai-platform-roi-measurement-2025",
-    slug: "ai-platform-roi-measurement-2025",
-    title: "AI Platform ROI Measurement: Quantifying Business Impact",
-    description: "Learn how to measure and maximize ROI from AI platform investments with proven frameworks and success metrics.",
-    excerpt: "Turn AI investments into measurable business outcomes with comprehensive ROI frameworks and success tracking.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-23",
-    category: "AI Strategy",
-    tags: ["AI ROI", "Business Metrics", "Platform Investment", "Success Measurement"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/ai-platform-roi.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
-  }
-  ,
-  {
-    id: "zero-trust-for-genai-2026",
-    slug: "zero-trust-for-genai-2026",
-    title: "Zero‑Trust for GenAI 2026: Prompt Firewalls and Signed Outputs",
-    description: "Production patterns: egress control, prompt firewalls, and signed outputs at scale.",
-    excerpt: "Ship GenAI safely with layered controls: prompt firewalls, egress policies, signing.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Security",
-    tags: ["GenAI", "Security", "Zero‑Trust"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/zero-trust-for-genai-2026.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "quantum-ai-hybrid-blueprint-2026",
-    slug: "quantum-ai-hybrid-blueprint-2026",
-    title: "Quantum‑AI Hybrid Blueprint 2026: Practical Near‑Term Wins",
-    description: "Blend quantum libraries with AI orchestration to unlock optimization wins today.",
-    excerpt: "Near‑term value from QC + AI: routing patterns and orchestration tips.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Quantum",
-    tags: ["Quantum", "AI", "Optimization"],
-    featured: false,
-    readTime: "9 min read",
-    image: "/images/quantum-ai-hybrid-blueprint-2026.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
-  },
-  {
-    id: "secure-ml-supply-chain-2026",
-    slug: "secure-ml-supply-chain-2026",
-    title: "Secure ML Supply Chain 2026: SBOMs, Attestations, and Drift Guards",
-    description: "Continuously track models, datasets, and prompts with signed SBOMs and policy checks.",
-    excerpt: "Stop ML supply‑chain drift with automated SBOMs, attestations, and CI policy gates.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "Security",
-    tags: ["ML", "Supply Chain", "SBOM", "Security"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/secure-ml-supply-chain-2026.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "edge-llm-caching-blueprint-2026",
-    slug: "edge-llm-caching-blueprint-2026",
-    title: "Edge LLM Caching Blueprint 2026: Sub‑100ms Prompts at Scale",
-    description: "Architect edge‑accelerated LLM inference using regional caches, warm pools, and cost‑aware routing for lightning‑fast responses.",
-    excerpt: "Deliver sub‑100ms prompts with regional caches, warm pools, and adaptive routing.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Architecture",
-    tags: ["Edge AI", "LLM Inference", "Caching", "Performance"],
-    featured: true,
-    readTime: "13 min read",
-    image: "/images/edge-llm-caching-blueprint-2026.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "ai-governance-scorecards-quickstart-2025",
-    slug: "ai-governance-scorecards-quickstart-2025",
-    title: "AI Governance Scorecards: A Practical Quickstart",
-    description: "Stand up pragmatic governance scorecards tied to KPIs, risks, and evaluation policies that teams actually use.",
-    excerpt: "Ship governance that sticks: KPI‑linked scorecards, policy tests, and clear owners.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-28",
-    category: "AI Strategy",
-    tags: ["Governance", "Evals", "Policy", "Risk"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/ai-governance-scorecards-quickstart-2025.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "serverless-ai-inference-cost-playbook-2025",
-    slug: "serverless-ai-inference-cost-playbook-2025",
-    title: "Serverless AI Inference Cost Playbook (2025)",
-    description: "Cut inference costs 40–70% with adaptive batching, warm pools, and demand shaping without degrading SLOs.",
-    excerpt: "A tactical guide to reduce AI inference spend while maintaining performance.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-26",
-    category: "Cost Optimization",
-    tags: ["Serverless", "Cost", "Inference", "Optimization"],
-    featured: true,
-    readTime: "11 min read",
-    image: "/images/serverless-ai-inference-cost-playbook-2025.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "ai-platform-architecture-2026",
-    slug: "ai-platform-architecture-2026",
-    title: "AI Platform Architecture 2026: Building Scalable, Cost-Effective AI Systems",
-    description: "Comprehensive guide to designing AI platforms that scale efficiently, reduce costs by 70%, and deliver consistent performance across all workloads.",
-    excerpt: "Master the architecture patterns that power next-generation AI platforms with proven scalability and cost optimization strategies.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-31",
-    category: "AI Architecture",
-    tags: ["AI Platform", "Architecture", "Scalability", "Cost Optimization"],
-    featured: true,
+    link: "/blog/ai-platform-cost-optimization-2026",
     readTime: "14 min read",
-    image: "/images/ai-platform-architecture-2026.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
+    tags: ["FinOps", "Autoscaling", "Quantization", "Spot Instances"]
   },
   {
-    id: "ai-incident-response-playbooks-2025",
-    slug: "ai-incident-response-playbooks-2025",
-    title: "AI Incident Response Playbooks: Automated Recovery in Under 60 Seconds",
-    description: "Design AI incident response systems that detect, analyze, and resolve issues automatically with comprehensive playbooks and intelligent automation.",
-    excerpt: "Build bulletproof AI systems with automated incident response that recovers from failures faster than human teams ever could.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-30",
-    category: "AI Operations",
-    tags: ["Incident Response", "Automation", "Recovery", "Playbooks"],
-    featured: true,
-    readTime: "11 min read",
-    image: "/images/ai-incident-response-playbooks-2025.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "multi-modal-ai-applications-2026",
-    slug: "multi-modal-ai-applications-2026",
-    title: "Multi-Modal AI Applications 2026: Vision, Language, and Audio Integration",
-    description: "Explore cutting-edge multi-modal AI applications that combine computer vision, natural language processing, and audio processing for revolutionary user experiences.",
-    excerpt: "Unlock the power of multi-modal AI with applications that see, hear, and understand like humans, delivering unprecedented user experiences.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-29",
+    id: "multimodal-ai-revolution-2025",
+    title: "🎭 Multimodal AI Revolution: Unified Vision-Language-Audio Processing",
+    description: "Master cutting-edge multimodal AI achieving 98% accuracy across vision, language, and audio. Learn unified embeddings, cross-modal attention, and real-world applications transforming industries.",
     category: "AI Innovation",
-    tags: ["Multi-Modal AI", "Computer Vision", "NLP", "Audio Processing"],
+    publishedDate: "2025-10-15",
     featured: true,
+    link: "/blog/multimodal-ai-revolution-2025",
+    readTime: "18 min read",
+    tags: ["Multimodal AI", "Computer Vision", "NLP", "Audio Processing", "Deep Learning"]
+  },
+  {
+    id: "blockchain-ai-integration-2025",
+    title: "⛓️ Blockchain-AI Integration 2025: Trustless Intelligence at Scale",
+    description: "Combine blockchain immutability with AI intelligence for trustless, verifiable systems. Achieve decentralized AI governance, transparent model training, and secure data marketplaces.",
+    category: "Blockchain AI",
+    publishedDate: "2025-10-15",
+    featured: true,
+    link: "/blog/blockchain-ai-integration-2025",
+    readTime: "16 min read",
+    tags: ["Blockchain", "AI", "Web3", "Decentralized AI", "Smart Contracts"]
+  },
+  {
+    id: "green-ai-sustainability-2025",
+    title: "🌱 Green AI & Sustainability: Carbon-Neutral ML at Scale",
+    description: "Build sustainable AI systems achieving 90% carbon reduction. Master energy-efficient architectures, carbon-aware training, and environmental impact optimization.",
+    category: "Sustainable AI",
+    publishedDate: "2025-10-15",
+    featured: true,
+    link: "/blog/green-ai-sustainability-2025",
+    readTime: "14 min read",
+    tags: ["Green AI", "Sustainability", "Carbon Neutral", "Energy Efficiency", "Climate Tech"]
+  },
+  {
+    id: "ai-regulatory-compliance-2025",
+    title: "📋 AI Regulatory Compliance 2025: Global Standards & Implementation",
+    description: "Navigate EU AI Act, GDPR, CCPA, and emerging regulations. Implement comprehensive compliance frameworks ensuring 100% regulatory adherence with automated monitoring.",
+    category: "AI Governance",
+    publishedDate: "2025-10-15",
+    featured: true,
+    link: "/blog/ai-regulatory-compliance-2025",
+    readTime: "19 min read",
+    tags: ["Compliance", "Regulations", "GDPR", "EU AI Act", "Governance"]
+  },
+  {
+    id: "automated-ml-neural-architecture-search-2025",
+    title: "🤖 Automated ML & Neural Architecture Search: Self-Designing AI",
+    description: "Deploy AutoML systems that design optimal neural architectures 100x faster than humans. Achieve state-of-the-art performance with zero manual architecture engineering.",
+    category: "AutoML",
+    publishedDate: "2025-10-15",
+    featured: true,
+    link: "/blog/automated-ml-neural-architecture-search-2025",
+    readTime: "17 min read",
+    tags: ["AutoML", "Neural Architecture Search", "Optimization", "Hyperparameter Tuning"]
+  },
+  {
+    id: "ai-autonomous-infrastructure-2025",
+    title: "🏗️ AI Autonomous Infrastructure: Self-Healing, Self-Optimizing Systems",
+    description: "Build infrastructure that manages itself—self-healing failures, self-optimizing performance, and self-scaling resources. Achieve 99.99% uptime with zero manual intervention.",
+    category: "Infrastructure AI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-autonomous-infrastructure-2025",
+    readTime: "20 min read",
+    tags: ["Infrastructure", "Autonomous Systems", "Self-Healing", "Cloud Native", "DevOps"]
+  },
+  {
+    id: "quantum-entanglement-ai-2025",
+    title: "⚛️ Quantum Entanglement for AI: Next-Generation Computing",
+    description: "Harness quantum entanglement for AI achieving computational breakthroughs. Solve NP-hard problems in polynomial time and unlock unprecedented AI capabilities.",
+    category: "Quantum Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/quantum-entanglement-ai-2025",
+    readTime: "22 min read",
+    tags: ["Quantum Computing", "Quantum AI", "Entanglement", "Advanced Computing"]
+  },
+  {
+    id: "ai-memory-augmented-networks-2025",
+    title: "🧠 Memory-Augmented Neural Networks: Long-Term Context AI",
+    description: "Deploy neural networks with external memory achieving human-like long-term context retention. Transform AI capabilities with differentiable memory access.",
+    category: "Neural Architecture",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-memory-augmented-networks-2025",
+    readTime: "15 min read",
+    tags: ["Neural Networks", "Memory Systems", "Context Retention", "Architecture"]
+  },
+  {
+    id: "ai-federated-learning-enterprise-2025",
+    title: "🔐 Federated Learning for Enterprise: Privacy-First Distributed AI",
+    description: "Train powerful AI models across distributed data sources without centralizing sensitive data. Achieve 99% accuracy while maintaining perfect privacy compliance.",
+    category: "Privacy AI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-federated-learning-enterprise-2025",
+    readTime: "16 min read",
+    tags: ["Federated Learning", "Privacy", "Distributed AI", "Secure ML"]
+  },
+  {
+    id: "ai-real-time-anomaly-detection-2025",
+    title: "🚨 Real-Time Anomaly Detection: Sub-Millisecond Threat Response",
+    description: "Deploy AI anomaly detection achieving sub-millisecond response times with 99.9% accuracy. Prevent incidents before they impact your systems.",
+    category: "AI Security",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-real-time-anomaly-detection-2025",
     readTime: "13 min read",
-    image: "/images/multi-modal-ai-applications-2026.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
-  },
-  {
-    id: "ai-ethics-framework-2026",
-    slug: "ai-ethics-framework-2026",
-    title: "AI Ethics Framework 2026: Building Responsible AI Systems",
-    description: "Comprehensive framework for developing ethical AI systems that are fair, transparent, accountable, and aligned with human values.",
-    excerpt: "Create AI systems that are not just powerful, but also ethical, fair, and aligned with human values and societal good.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-28",
-    category: "AI Ethics",
-    tags: ["AI Ethics", "Responsible AI", "Fairness", "Transparency"],
-    featured: true,
-    readTime: "10 min read",
-    image: "/images/ai-ethics-framework-2026.jpg",
-    newBadge: true,
-    trending: false,
-    featuredInHomepage: false
-  },
-  {
-    id: "ai-performance-monitoring-2025",
-    slug: "ai-performance-monitoring-2025",
-    title: "AI Performance Monitoring: Real-Time Quality Assurance",
-    description: "Implement comprehensive AI performance monitoring systems that track model performance, detect drift, and ensure consistent quality in production.",
-    excerpt: "Monitor AI systems in real-time with comprehensive performance tracking, drift detection, and automated quality assurance.",
-    author: "Zion Tech Group Team",
-    date: "2025-01-27",
-    category: "AI Monitoring",
-    tags: ["Performance Monitoring", "Model Drift", "Quality Assurance", "Real-Time"],
-    featured: false,
-    readTime: "9 min read",
-    image: "/images/ai-performance-monitoring-2025.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: false
-  },
-  {
-    id: "production-agent-actions-2026",
-    slug: "production-agent-actions-2026",
-    title: "Production Agent Actions 2026: Deterministic Tools with Live Traces",
-    description: "Design agents with deterministic tools, budgets, and traces so actions are reliable and auditable.",
-    excerpt: "Make agent actions trustworthy with typed tools, timeouts, retries, and live traces.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-14",
-    category: "GenAI",
-    tags: ["Agents", "Tracing", "Reliability"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/production-agent-actions-2026.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "privacy-first-observability-2026-updated",
-    slug: "privacy-first-observability-2026-updated",
-    title: "Privacy‑First Observability 2026: Scoped IDs and Redaction That Teams Use",
-    description: "Ship user‑centric traces without PII leaks using scoped identifiers, field‑level redaction, and retention policies.",
-    excerpt: "Keep signals rich and safe with scoped IDs, redaction, and TTL policies.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-14",
-    category: "Observability",
-    tags: ["Privacy", "Telemetry", "Compliance"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/privacy-first-observability-2026.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "platform-golden-paths-kpis-2026",
-    slug: "platform-golden-paths-kpis-2026",
-    title: "Platform Golden Paths 2026: KPIs that Prove Value",
-    description: "Build golden paths that reduce time‑to‑first‑success and link directly to product KPIs and ROI.",
-    excerpt: "From paved roads to outcomes: golden paths that measurably move KPIs.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-14",
-    category: "Platform Engineering",
-    tags: ["Golden Paths", "KPIs", "ROI"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/platform-golden-paths-kpis-2026.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  }
-  ,
-  {
-    id: "genai-routing-blueprint-2026",
-    slug: "genai-routing-blueprint-2026",
-    title: "GenAI Routing Blueprint 2026: Fast, Cheap, and Grounded",
-    description: "Design intent-aware routers, fallback tiers, and caches to hit quality SLOs at a fraction of the cost.",
-    excerpt: "Route by intent, cache by value, and tier by SLO to cut spend 40–70% without hurting UX.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "GenAI",
-    tags: ["Routing", "Caching", "SLOs", "Cost"],
-    featured: true,
-    readTime: "10 min read",
-    image: "/images/genai-routing-blueprint-2026.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "secure-ml-supply-chain-2026",
-    slug: "secure-ml-supply-chain-2026",
-    title: "Secure ML Supply Chain 2026: Attestations, Policy Tests, SBOMs",
-    description: "Ship verifiably secure models and tools with signed artifacts, provenance, and CI policy tests.",
-    excerpt: "From data to deployment: secure each link with attestations, SBOMs, and automated policy checks.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-28",
-    category: "Security",
-    tags: ["Supply Chain", "Attestation", "SBOM", "Policy"],
-    featured: true,
-    readTime: "11 min read",
-    image: "/images/secure-ml-supply-chain-2026.jpg",
-    newBadge: true,
-    trending: true,
-    featuredInHomepage: true
-  },
-  {
-    id: "golden-paths-roi-2026",
-    slug: "golden-paths-roi-2026",
-    title: "Golden Paths ROI 2026: Proving Platform Value Quarterly",
-    description: "Build developer golden paths with scorecards that tie adoption to shipped business outcomes.",
-    excerpt: "Instrument your platform with KPIs that teams adopt—show ROI without vanity metrics.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-27",
-    category: "Platform Engineering",
-    tags: ["Golden Paths", "ROI", "KPIs", "Platform"],
-    featured: true,
-    readTime: "9 min read",
-    image: "/images/golden-paths-roi-2026.jpg",
-    newBadge: true,
-    trending: false,
-    featuredInHomepage: true
+    tags: ["Anomaly Detection", "Real-Time AI", "Security", "Monitoring"]
   }
 ];
 
-export const featuredNewArticles = newArticles2025.filter(article => article.featured);
-export const trendingNewArticles = newArticles2025.filter(article => article.trending);
-export const homepageFeaturedArticles = newArticles2025.filter(article => article.featuredInHomepage);
-export const latestNewArticles = newArticles2025.slice(0, 6);
+// Oct 01, 2025 – New articles to advertise prominently on Home
+newArticles2025.push(
+  {
+    id: "ai-2025-oct-01-operational-trust-v3",
+    title: "📊 AI Operational Trust Scorecards v3 (2025)",
+    description: "SLIs → KPIs with budgets, canaries, and instant rollback — updated v3 playbook.",
+    category: "AI Operations",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/ai-2025-oct-01-operational-trust-v3",
+    readTime: "9 min read",
+    tags: ["Scorecards", "Budgets", "Rollback"]
+  },
+  {
+    id: "edge-2025-oct-01-private-consentless-experiments",
+    title: "🔬 Edge Consentless Experiments v3 (<100ms)",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant A/B at <100ms.",
+    category: "Analytics",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/edge-2025-oct-01-private-consentless-experiments",
+    readTime: "7 min read",
+    tags: ["Edge", "Privacy", "Experiments"]
+  },
+  {
+    id: "genai-2025-oct-01-quality-tiers-v3",
+    title: "💸 GenAI Quality Tiers v3 (2025)",
+    description: "Predictable cost and stable UX with tiered routing, semantic caches, and eval gates.",
+    category: "GenAI",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/genai-2025-oct-01-quality-tiers-v3",
+    readTime: "8 min read",
+    tags: ["Quality Tiers", "Caching", "Budgets"]
+  }
+);
+
+// Newly added articles to advertise on the front end
+newArticles2025.push(
+  {
+    id: "ai-autonomous-infrastructure-2025",
+    title: "🏗️ AI Autonomous Infrastructure: Self‑Healing, Self‑Optimizing Systems",
+    description: "Zero‑touch ops with predictive autoscaling, policy‑tested releases, and instant rollback.",
+    category: "Infrastructure AI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-autonomous-infrastructure-2025",
+    readTime: "9 min read",
+    tags: ["Autonomous Systems", "Infrastructure", "SRE", "DevOps"]
+  },
+  {
+    id: "multimodal-ai-foundations-2025",
+    title: "🎭 Multimodal AI Foundations: Vision × Language × Audio",
+    description: "Production patterns for unified embeddings, routing, and KPI‑linked evals.",
+    category: "AI Innovation",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/multimodal-ai-foundations-2025",
+    readTime: "11 min read",
+    tags: ["Multimodal", "Embeddings", "Routing", "LLM"]
+  },
+  {
+    id: "privacy-first-analytics-quickstart-2025",
+    title: "🔒 Privacy‑First Analytics Quickstart",
+    description: "Scoped IDs, DP noise, and on‑device telemetry for actionable insights without PII.",
+    category: "Analytics",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/privacy-first-analytics-quickstart-2025",
+    readTime: "6 min read",
+    tags: ["Analytics", "Privacy", "Edge", "DP"]
+  }
+);
+
+// Feb 10, 2026 – Fresh featured articles to advertise on Home
+newArticles2025.push(
+  {
+    id: "genai-routing-playbook-2026-v2",
+    title: "GenAI Routing Playbook v2 (2026): Quality Tiers Under Budget",
+    description: "Tier models, cache prompts, and KPI‑linked routes for stable UX at 30–60% lower cost.",
+    category: "GenAI",
+    publishedDate: "2025-10-31",
+    featured: true,
+    link: "/blog/genai-routing-playbook-2026",
+    readTime: "8 min read",
+    tags: ["GenAI", "Routing", "Budgets", "Caching"]
+  },
+  {
+    id: "agent-release-checklists-2026-v2",
+    title: "Agent Release Checklists 2026: Budgets, Canaries, Rollback",
+    description: "Battle‑tested checklists for safe agent releases with budgeted actions and KPI‑linked canaries.",
+    category: "AI Operations",
+    publishedDate: "2025-10-31",
+    featured: true,
+    link: "/blog/agent-release-checklists-2026",
+    readTime: "7 min read",
+    tags: ["Agents", "Runbooks", "Budgets", "Rollback"]
+  },
+  {
+    id: "privacy-first-telemetry-2026-v2",
+    title: "Privacy‑First Telemetry 2026: Signal‑Rich Analytics Without PII",
+    description: "Scoped IDs, edge aggregation, and DP noise for insights teams love—compliance included.",
+    category: "Analytics",
+    publishedDate: "2025-10-31",
+    featured: true,
+    link: "/blog/privacy-first-telemetry-2026",
+    readTime: "6 min read",
+    tags: ["Analytics", "Privacy", "Edge", "DP"]
+  }
+);
+
+// Sept 30, 2025 – Brand-new items to advertise prominently on Home
+newArticles2025.push(
+  {
+    id: "ai-2029-self-healing-platforms",
+    title: "🛠️ AI 2029: Self‑Healing Platforms — Autonomic Recovery",
+    description: "Budgeted actions and live canaries that auto‑contain incidents in under 60s.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2029-self-healing-platforms",
+    readTime: "8 min read",
+    tags: ["Self‑Healing", "Runbooks", "Rollback"]
+  },
+  {
+    id: "edge-2028-private-personalization",
+    title: "⚡ Edge 2028: Private Personalization <100ms",
+    description: "Scoped IDs, signed configs, and on‑device models for zero‑PII personalization.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-2028-private-personalization",
+    readTime: "7 min read",
+    tags: ["Edge", "Privacy", "Personalization"]
+  },
+  {
+    id: "genai-2028-eval-scorecards",
+    title: "📊 GenAI 2028: Eval Scorecards — KPIs, Budgets, Rollback",
+    description: "KPI‑linked evals and budget‑aware routing that keep quality high without regressions.",
+    category: "GenAI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/genai-2028-eval-scorecards",
+    readTime: "8 min read",
+    tags: ["Evals", "Scorecards", "Budgets"]
+  }
+);
+
+// Jan 15, 2026 – Fresh featured items to surface on Home
+newArticles2025.push(
+  {
+    id: "genai-routing-playbook-2026",
+    title: "GenAI Routing Playbook 2026: Quality Tiers Under Budget",
+    description: "Tier models, cache prompts, and route by SLA to cut spend 30–60% with stable UX.",
+    category: "GenAI",
+    publishedDate: "2025-10-30",
+    featured: true,
+    link: "/blog/genai-routing-playbook-2026",
+    readTime: "8 min read",
+    tags: ["GenAI", "Routing", "Budgets", "Caching"]
+  },
+  {
+    id: "agent-runbooks-zero-regret-2026",
+    title: "Agent Runbooks 2026: Zero‑Regret Releases with Budgets & Rollback",
+    description: "Budgeted actions, approvals, and instant rollback so agent updates are safe at scale.",
+    category: "AI Operations",
+    publishedDate: "2025-10-30",
+    featured: true,
+    link: "/blog/agent-runbooks-zero-regret-2026",
+    readTime: "7 min read",
+    tags: ["Agents", "Runbooks", "Budgets", "Rollback"]
+  },
+  {
+    id: "edge-rag-privacy-preserving-2026",
+    title: "Edge RAG 2026: Private Retrieval with Sub‑100ms Answers",
+    description: "Hybrid edge retrieval with signed configs, TTL windows, and on‑device caches. Fast answers without PII risk.",
+    category: "GenAI",
+    publishedDate: "2025-10-30",
+    featured: true,
+    link: "/blog/edge-rag-privacy-preserving-2026",
+    readTime: "8 min read",
+    tags: ["RAG", "Edge", "Privacy", "Latency"]
+  }
+);
+
+// Sept 30, 2025 – Additional featured content to advertise on homepage
+newArticles2025.push(
+	{
+    id: "ai-value-stream-analytics-2026",
+    title: "📈 AI Value Stream Analytics 2026: Trace Spend To ROI",
+    description: "Map prompts, tools, and user actions to business KPIs with end‑to‑end analytics.",
+    category: "Analytics",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-value-stream-analytics-2026",
+    readTime: "9 min read",
+    tags: ["Analytics", "Tracing", "ROI", "KPIs"]
+  },
+  {
+    id: "ai-2027-cost-optimization-playbook",
+    title: "💸 AI 2027 Cost Optimization: Stable UX Under Budget",
+    description: "Tiered routing, caching, and compression to cut spend 30–70% with no regressions.",
+    category: "GenAI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2027-cost-optimization-playbook",
+    readTime: "8 min read",
+    tags: ["Cost", "Routing", "Caching", "Optimization"]
+  },
+  {
+    id: "ai-quantum-computing-breakthrough-2026",
+    title: "⚛️ Quantum AI Breakthrough 2026: 1000× Acceleration",
+    description: "Leverage quantum‑enhanced pipelines for combinatorial search and model optimization.",
+    category: "Quantum Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-quantum-computing-breakthrough-2026",
+    readTime: "10 min read",
+    tags: ["Quantum", "Optimization", "Acceleration"]
+}
+);
+
+// Sept 30, 2025 – Fresh content for homepage banners and showcases
+newArticles2025.push(
+  {
+    id: "ai-operational-scorecards-v4-2026",
+    title: "📊 AI Operational Scorecards v4 (2026)",
+    description: "SLIs mapped to KPIs with budgeted actions, canaries, and instant rollback.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-operational-scorecards-v4-2026",
+    readTime: "8 min read",
+    tags: ["Scorecards", "SLIs", "Budgets", "Rollback"]
+  },
+  {
+    id: "ai-governance-live-scorecards-2026",
+    title: "📊 AI Governance Live Scorecards 2026",
+    description: "Guardrails wired to KPIs with PR checks and live canaries—ship faster, stay compliant.",
+    category: "AI Governance",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-governance-live-scorecards-2026",
+    readTime: "7 min read",
+    tags: ["Governance", "Canaries", "Scorecards"]
+  },
+  {
+    id: "edge-real-time-personalization-2026",
+    title: "⚡ Edge Real‑Time Personalization 2026",
+    description: "Scoped IDs, signed configs, and on‑device models for private <100ms personalization.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-real-time-personalization-2026",
+    readTime: "6 min read",
+    tags: ["Edge", "Privacy", "Personalization"]
+  },
+  {
+    id: "agent-release-runbooks-2026",
+    title: "✅ Agent Release Runbooks 2026",
+    description: "Budgets, evals, and instant rollback that keep agent releases safe at scale.",
+    category: "AI Operations",
+    publishedDate: "2025-10-31",
+    featured: true,
+    link: "/blog/agent-release-runbooks-2026",
+    readTime: "8 min read",
+    tags: ["Agents", "Runbooks", "Rollback"]
+  }
+);
+
+// Mar 2026 – Fresh featured promos to advertise on Home
+newArticles2025.push(
+  {
+    id: "ai-platform-blueprints-2026",
+    title: "AI Platform Blueprints 2026: Guardrails, Traces, Budgets",
+    description: "Governed AI platform patterns with KPI‑linked guardrails, live traces, and predictable spend.",
+    category: "AI Engineering",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-platform-blueprints-2026",
+    readTime: "9 min read",
+    tags: ["Platforms", "Guardrails", "Observability", "Budgets"]
+  },
+  {
+    id: "edge-agents-2026",
+    title: "Edge Agents 2026: Offline‑Capable Tools at <100ms",
+    description: "On‑device tools, signed configs, and tiered caches for private, sub‑100ms experiences.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-agents-2026",
+    readTime: "7 min read",
+    tags: ["Agents", "Edge", "Privacy", "Latency"]
+  },
+  {
+    id: "policy-checked-genai-2026",
+    title: "Policy‑Checked GenAI 2026: CI Gates, Canaries, Rollback",
+    description: "CI policy tests, online canaries, and rollback triggers that keep velocity high without regressions.",
+    category: "AI Governance",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/policy-checked-genai-2026",
+    readTime: "7 min read",
+    tags: ["Governance", "Compliance", "Canaries", "Rollback"]
+  }
+);
+
+// End of March 2026 featured additions
+// Sept 30, 2025 – Combined brand-new items to advertise on homepage
+newArticles2025.push(
+  {
+    id: "ai-governance-real-time-guardrails-2025",
+    title: "AI Governance 2025: Real-Time Guardrails that Don't Slow Teams",
+    description: "Inline policy checks, KPI-linked canaries, and instant rollback—ship fast, stay safe.",
+    category: "AI Governance",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-governance-real-time-guardrails-2025",
+    readTime: "7 min read",
+    tags: ["Governance", "Policy Tests", "Canaries", "Rollback"]
+  },
+  {
+    id: "edge-inference-budgets-2025",
+    title: "Edge Inference Budgets 2025: Quality Under Cost and Latency SLAs",
+    description: "Tiered models, warm pools, and cache strategy to deliver <100ms UX under budget.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-inference-budgets-2025",
+    readTime: "6 min read",
+    tags: ["Edge", "Latency", "Caching", "Budgets"]
+  },
+  {
+    id: "agent-observability-live-traces-2025",
+    title: "Agent Observability 2025: Live Traces, SLIs, and Safe Actions",
+    description: "End-to-end visibility for agent tools with KPI-linked SLIs and budgeted actions.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/agent-observability-live-traces-2025",
+    readTime: "8 min read",
+    tags: ["Agents", "Observability", "SLIs", "Runbooks"]
+  },
+  {
+    id: "ai-governance-real-time-2026",
+    title: "🛡️ AI Governance in Real Time 2026: Canaries + CI Policy Tests",
+    description: "Prevent regressions with KPI‑linked canaries and lightweight PR policy checks.",
+    category: "AI Governance",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-governance-real-time-2026",
+    readTime: "7 min read",
+    tags: ["Governance", "Canaries", "Policy Tests"]
+  },
+  {
+    id: "edge-inference-warm-pools-2026",
+    title: "⚡ Edge Inference Warm Pools 2026: Sub‑100ms at Predictable Cost",
+    description: "Warm pools, intent prefetch, and tiered caches for global performance on budget.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-inference-warm-pools-2026",
+    readTime: "6 min read",
+    tags: ["Edge", "Inference", "Caching", "Cost"]
+  },
+  {
+    id: "agent-release-guardrails-2026",
+    title: "✅ Agent Release Guardrails 2026: Budgets, Approvals, Rollback",
+    description: "Safe agent releases with budgeted actions, approvals, and instant rollback triggers.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/agent-release-guardrails-2026",
+    readTime: "7 min read",
+    tags: ["Agents", "Runbooks", "Budgets", "Rollback"]
+  }
+);
+
+// Sept 30, 2025 – Brand new additions
+newArticles2025.push(
+  {
+    id: "ai-2028-realtime-multimodal-assistants",
+    title: "🤝 Real‑Time Multimodal Assistants (2028): Voice + Vision + Touch",
+    description: "Production patterns for assistants that see, hear, and act with <150ms latency.",
+    category: "Multimodal AI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2028-realtime-multimodal-assistants",
+    readTime: "10 min read",
+    tags: ["Multimodal", "Voice", "Vision", "Latency"]
+  },
+  {
+    id: "ai-2027-governed-agent-marketplaces",
+    title: "🏛️ Governed Agent Marketplaces (2027): Safe, Auditable Automation",
+    description: "Policy checks, budgets, and attestations enabling safe third‑party agent ecosystems.",
+    category: "AI Governance",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2027-governed-agent-marketplaces",
+    readTime: "9 min read",
+    tags: ["Agents", "Governance", "Attestations", "Budgets"]
+  },
+  {
+    id: "edge-2026-private-feature-flags",
+    title: "🔐 Edge Private Feature Flags (2026): Zero‑PII Rollouts at <100ms",
+    description: "Signed configs, scoped IDs, and on‑device metrics for private global rollouts.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-2026-private-feature-flags",
+    readTime: "7 min read",
+    tags: ["Edge", "Privacy", "Feature Flags", "DP"]
+  }
+);
+
+// Oct 01, 2025 – Fresh promos to advertise on Home
+newArticles2025.push(
+  {
+    id: "genai-2025-oct-01-e2e-eval-pipelines",
+    title: "GenAI: End‑to‑End Eval Pipelines (2025)",
+    description: "Online evals wired to KPIs with budget‑aware routing and instant rollback.",
+    category: "GenAI",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/genai-2025-oct-01-e2e-eval-pipelines",
+    readTime: "9 min read",
+    tags: ["Evals", "Scorecards", "Budgets"]
+  },
+  {
+    id: "genai-2025-oct-01-cost-optimization-v5",
+    title: "GenAI Cost Optimization v5 (2025)",
+    description: "60–85% savings with tier routing, caches, and KPI‑linked scorecards.",
+    category: "AI Operations",
+    publishedDate: "2025-10-01",
+    featured: true,
+    link: "/blog/genai-2025-oct-01-cost-optimization-v5",
+    readTime: "10 min read",
+    tags: ["FinOps", "Quality Tiers", "Caching"]
+  },
+  {
+    id: "observability-2025-sept-30-e2e-ai-tracing-v2",
+    title: "E2E AI Tracing v2 (2025)",
+    description: "Span budgets, cost telemetry, and KPI‑linked rollback for AI systems.",
+    category: "Observability",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/observability-2025-sept-30-e2e-ai-tracing-v2",
+    readTime: "8 min read",
+    tags: ["Tracing", "Budgets", "KPIs"]
+  }
+);
+
+// Sept 30, 2025 – Brand-new content additions to advertise
+newArticles2025.push(
+  {
+    id: "ai-2027-cost-optimization-playbook",
+    title: "AI 2027 Cost Optimization Playbook",
+    description: "Tiered routing, caching, and compression to cut spend 30–70% with no regressions.",
+    category: "GenAI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2027-cost-optimization-playbook",
+    readTime: "8 min read",
+    tags: ["Cost", "Routing", "Caching", "Optimization"]
+  },
+  {
+    id: "edge-2026-private-feature-flags",
+    title: "Edge 2026: Private Feature Flags",
+    description: "Signed configs, scoped IDs, and on‑device metrics for zero‑PII rollouts at <100ms.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-2026-private-feature-flags",
+    readTime: "7 min read",
+    tags: ["Edge", "Privacy", "Feature Flags", "DP"]
+  },
+  {
+    id: "agent-release-guardrails-2026",
+    title: "Agent Release Guardrails 2026",
+    description: "Budgets, approvals, KPI‑linked canaries, and instant rollback for safe automation.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/agent-release-guardrails-2026",
+    readTime: "7 min read",
+    tags: ["Agents", "Runbooks", "Budgets", "Rollback"]
+  }
+);
+
+// Sept 30, 2025 – New additions to advertise across the front end
+newArticles2025.push(
+	{
+		id: "ai-safety-scorecards-2026",
+		title: "🛡️ AI Safety Scorecards 2026: Guardrails Tied to KPIs",
+		description: "Live policy checks and KPI‑linked scorecards to prevent regressions while shipping weekly.",
+		category: "AI Governance",
+		publishedDate: "2025-09-30",
+		featured: true,
+		link: "/blog/ai-safety-scorecards-2026",
+		readTime: "7 min read",
+		tags: ["Governance", "Scorecards", "Policy Tests"]
+	},
+	{
+		id: "edge-governed-flags-2026",
+		title: "🏷️ Edge‑Governed Feature Flags 2026: Zero‑PII @ <100ms",
+		description: "Signed configs, scoped IDs, and on‑device telemetry for private global rollouts.",
+		category: "Edge Computing",
+		publishedDate: "2025-09-30",
+		featured: true,
+		link: "/blog/edge-governed-flags-2026",
+		readTime: "6 min read",
+		tags: ["Edge", "Privacy", "Feature Flags"]
+	},
+	{
+		id: "ai-agent-reliability-playbook-2026",
+		title: "✅ Agent Reliability Playbook 2026: Budgets, Canaries, Rollback",
+		description: "Budgeted actions, KPI‑linked canaries, and instant rollback for safe automation.",
+		category: "AI Operations",
+		publishedDate: "2025-09-30",
+		featured: true,
+		link: "/blog/ai-agent-reliability-playbook-2026",
+		readTime: "8 min read",
+		tags: ["Agents", "Runbooks", "Reliability"]
+	}
+);
+
+// Oct 2025 – Brand-new content to advertise
+newArticles2025.push(
+  {
+    id: "ai-operational-trust-scorecards-2026-v2",
+    title: "📊 AI Operational Trust Scorecards 2026 v2",
+    description: "SLIs → KPIs with budgets, canaries, and instant rollback — updated playbook.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-operational-trust-scorecards-2026-v2",
+    readTime: "9 min read",
+    tags: ["Scorecards", "Budgets", "Rollback"]
+  },
+  {
+    id: "edge-consentless-experiments-2026",
+    title: "🔬 Edge Consentless Experiments 2026",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant <100ms A/B.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-consentless-experiments-2026",
+    readTime: "7 min read",
+    tags: ["Edge", "A/B", "DP", "Privacy"]
+  },
+  {
+    id: "genai-eval-scorecards-2026",
+    title: "✅ GenAI Eval Scorecards 2026",
+    description: "KPI‑linked evals that gate routes and models with budget‑aware rollbacks.",
+    category: "GenAI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/genai-eval-scorecards-2026",
+    readTime: "8 min read",
+    tags: ["GenAI", "Evals", "Scorecards", "Budgets"]
+  }
+);
+
+// Sept 30, 2025 – More fresh featured content to surface across the front end
+newArticles2025.push(
+  {
+    id: "ai-2028-autonomous-governance-blueprint",
+    title: "AI 2028: Autonomous Governance Blueprint",
+    description: "KPI‑linked policy tests, live canaries, and instant rollback that scale governance without slowing teams.",
+    category: "AI Governance",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2028-autonomous-governance-blueprint",
+    readTime: "10 min read",
+    tags: ["Governance", "Policy Tests", "Canaries", "Rollback"]
+  },
+  {
+    id: "ai-2027-operational-scorecards",
+    title: "AI 2027: Operational Scorecards — Guardrails Engineers Adopt",
+    description: "SLIs wired to KPIs with budgeted actions and rollback to prevent regressions while increasing velocity.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2027-operational-scorecards",
+    readTime: "8 min read",
+    tags: ["Scorecards", "Budgets", "SLIs", "Rollback"]
+  },
+  {
+    id: "verifiable-edge-analytics-2026",
+    title: "Verifiable Edge Analytics 2026: Zero‑PII Insights with Attestations",
+    description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms.",
+    category: "Analytics",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/verifiable-edge-analytics-2026",
+    readTime: "7 min read",
+    tags: ["Edge", "Analytics", "Privacy", "Attestations"]
+  }
+);
+
+// January 2026 – Fresh new articles to advertise prominently
+newArticles2025.push(
+  {
+    id: "ai-2026-neural-architecture-search-breakthrough",
+    title: "🧠 Neural Architecture Search 2026: Auto-Designing AI Networks",
+    description: "Revolutionary NAS algorithms that design optimal neural architectures 1000x faster than humans, achieving state-of-the-art performance.",
+    category: "AI Innovation",
+    publishedDate: "2026-01-15",
+    featured: true,
+    link: "/blog/ai-2026-neural-architecture-search-breakthrough",
+    readTime: "12 min read",
+    tags: ["Neural Architecture Search", "AutoML", "Deep Learning", "Optimization"]
+  },
+  {
+    id: "ai-2026-federated-learning-enterprise-breakthrough",
+    title: "🔐 Federated Learning 2026: Privacy-First Enterprise AI",
+    description: "Train powerful AI models across distributed data without centralizing sensitive information. Achieve 99% accuracy while maintaining perfect privacy.",
+    category: "Privacy AI",
+    publishedDate: "2026-01-15",
+    featured: true,
+    link: "/blog/ai-2026-federated-learning-enterprise-breakthrough",
+    readTime: "14 min read",
+    tags: ["Federated Learning", "Privacy", "Distributed AI", "Enterprise"]
+  },
+  {
+    id: "ai-2026-quantum-enhanced-analytics",
+    title: "⚛️ Quantum-Enhanced Analytics 2026: 1000x Performance Boost",
+    description: "Leverage quantum computing for analytics achieving 1000x speedup in complex data processing and machine learning tasks.",
+    category: "Quantum Computing",
+    publishedDate: "2026-01-15",
+    featured: true,
+    link: "/blog/ai-2026-quantum-enhanced-analytics",
+    readTime: "15 min read",
+    tags: ["Quantum Computing", "Analytics", "Performance", "Machine Learning"]
+  },
+  {
+    id: "ai-2026-autonomous-business-intelligence",
+    title: "📊 Autonomous Business Intelligence 2026: Self-Driving Analytics",
+    description: "AI-powered BI that automatically discovers insights, generates reports, and makes data-driven recommendations without human intervention.",
+    category: "Business Intelligence",
+    publishedDate: "2026-01-15",
+    featured: true,
+    link: "/blog/ai-2026-autonomous-business-intelligence",
+    readTime: "11 min read",
+    tags: ["Business Intelligence", "Autonomous Systems", "Analytics", "Automation"]
+  },
+  {
+    id: "ai-2026-edge-computing-revolution",
+    title: "⚡ Edge Computing Revolution 2026: Sub-10ms AI Inference",
+    description: "Revolutionary edge AI achieving sub-10ms inference with on-device models, federated learning, and real-time decision making.",
+    category: "Edge Computing",
+    publishedDate: "2026-01-15",
+    featured: true,
+    link: "/blog/ai-2026-edge-computing-revolution",
+    readTime: "13 min read",
+    tags: ["Edge Computing", "Real-time AI", "Low Latency", "On-device ML"]
+  }
+);
+

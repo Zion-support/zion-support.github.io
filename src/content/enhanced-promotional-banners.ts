@@ -1,347 +1,532 @@
 export interface EnhancedPromotionalBanner {
   id: string;
-  message: string;
+  title: string;
+  description: string;
   ctaText: string;
   ctaLink: string;
-  backgroundColor: string;
-  textColor: string;
-  showClose: boolean;
-  autoHide: boolean;
-  hideAfter: number;
-  active: boolean;
-  priority: number;
-  variant: 'info' | 'success' | 'warning' | 'premium' | 'launch' | 'special';
+  variant: 'success' | 'warning' | 'info' | 'error';
   icon?: string;
-  animation?: string;
-  badge?: string;
-  featured?: boolean;
+  featured: boolean;
+  priority: number;
+  startDate: string;
+  endDate?: string;
 }
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   {
-    id: 'fresh-oct-15-2025',
-    message: '✨ New: Incident Budgets v2 + Edge Personalization 2026',
-    ctaText: 'Read now',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
-    priority: 0,
+    id: 'ai-ethics-operational-blueprint-2026',
+    title: '⚖️ AI Ethics Operational Blueprint 2026',
+    description: 'Bias tests, fairness SLAs, and audit trails teams adopt. Ship fast, stay compliant.',
+    ctaText: 'Read the blueprint',
+    ctaLink: '/blog/ai-ethics-operational-blueprint-2026',
     variant: 'info',
-    icon: '🆕',
-    animation: 'fade-in',
-    badge: 'NEW',
-    featured: true
-  },
-  {
-    id: 'fresh-oct-14-2025',
-    message: '✨ New: Risk Budgets 2026 • Privacy‑First Flags 2026 • Reliable Agent Actions',
-    ctaText: 'Read now',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
-    priority: 0,
-    variant: 'info',
-    icon: '🆕',
-    animation: 'fade-in',
-    badge: 'NEW',
-    featured: true
-  },
-  {
-    id: 'ai-autonomous-infrastructure-launch',
-    message: '🚀 NEW: AI Autonomous Infrastructure Platform - Self-Healing Systems That Scale',
-    ctaText: 'Start Free Trial',
-    ctaLink: '/services/ai-autonomous-infrastructure-platform',
-    backgroundColor: 'bg-gradient-to-r from-green-600 to-emerald-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 20,
-    active: true,
-    priority: 0,
-    variant: 'launch',
-    icon: '🤖',
-    animation: 'pulse',
-    badge: 'LAUNCH SPECIAL',
-    featured: true
-  },
-  {
-    id: 'agent-release-checklists-banner',
-    message: '✅ New: Agent Release Checklists + KPI‑Linked Canaries',
-    ctaText: 'Read now',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-emerald-700 to-teal-700',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
-    priority: 0,
-    variant: 'info',
-    icon: '✅',
-    animation: 'fade-in',
-    badge: 'NEW CONTENT',
-    featured: true
-  },
-  {
-    id: 'quantum-ai-hybrid-computing',
-    message: '⚛️ BREAKTHROUGH: Quantum-AI Hybrid Computing - 1000x Faster Processing Power',
-    ctaText: 'Schedule Demo',
-    ctaLink: '/services/quantum-ai-hybrid-computing',
-    backgroundColor: 'bg-gradient-to-r from-purple-600 to-indigo-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
+    icon: '⚖️',
+    featured: true,
     priority: 1,
-    variant: 'premium',
-    icon: '⚛️',
-    animation: 'bounce',
-    badge: 'BREAKTHROUGH',
-    featured: true
+    startDate: '2025-09-30',
   },
   {
-    id: 'ai-cybersecurity-zero-trust',
-    message: '🛡️ ADVANCED: AI-Powered Zero Trust Cybersecurity - 99.9% Threat Detection',
-    ctaText: 'Security Audit',
-    ctaLink: '/services/ai-cybersecurity-zero-trust',
-    backgroundColor: 'bg-gradient-to-r from-red-600 to-rose-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 16,
-    active: true,
-    priority: 1,
-    variant: 'warning',
-    icon: '🛡️',
-    animation: 'pulse',
-    badge: 'ADVANCED',
-    featured: true
-  },
-  {
-    id: 'new-content-alert-jan-2025',
-    message: '📚 FRESH CONTENT: 6 New Articles on AI Autonomous Systems, Quantum Computing & Zero Trust Security',
-    ctaText: 'Read Latest',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-blue-600 to-cyan-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 15,
-    active: true,
-    priority: 2,
-    variant: 'info',
-    icon: '📚',
-    animation: 'fade-in',
-    badge: 'NEW CONTENT',
-    featured: false
-  },
-  {
-    id: 'case-studies-success-stories',
-    message: '🏆 SUCCESS STORIES: Global Retail Corp 45% Revenue Growth, Healthcare 99.9% Uptime',
-    ctaText: 'View Case Studies',
-    ctaLink: '/case-studies',
-    backgroundColor: 'bg-gradient-to-r from-yellow-600 to-orange-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 17,
-    active: true,
-    priority: 2,
+    id: 'edge-rag-blueprint-2026',
+    title: '🛰️ Edge RAG Blueprint 2026 — <100ms Private Answers',
+    description: 'Freshness TTLs, hybrid retrieval, and on-device caches for trustworthy answers.',
+    ctaText: 'Explore Edge RAG',
+    ctaLink: '/blog/edge-rag-blueprint-2026',
     variant: 'success',
-    icon: '🏆',
-    animation: 'slide-in',
-    badge: 'SUCCESS STORIES',
-    featured: false
+    icon: '🛰️',
+    featured: true,
+    priority: 2,
+    startDate: '2025-09-30',
   },
   {
-    id: 'special-offer-jan-2025',
-    message: '🎯 LIMITED TIME: 50% OFF AI Autonomous Infrastructure Platform - Valid Until March 31, 2025',
-    ctaText: 'Claim Offer',
-    ctaLink: '/services/ai-autonomous-infrastructure-platform#pricing',
-    backgroundColor: 'bg-gradient-to-r from-pink-600 to-rose-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: false,
-    hideAfter: 0,
-    active: true,
-    priority: 3,
-    variant: 'special',
-    icon: '🎯',
-    animation: 'pulse',
-    badge: 'LIMITED TIME',
-    featured: true
-  },
-  {
-    id: 'ai-content-generation-automation',
-    message: '📝 NEW: AI Content Generation Platform - 10x Content Production with Brand Consistency',
-    ctaText: 'Start Trial',
-    ctaLink: '/services/ai-content-generation-automation',
-    backgroundColor: 'bg-gradient-to-r from-teal-600 to-green-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 14,
-    active: true,
-    priority: 3,
+    id: 'platform-roi-scorecards-2026',
+    title: '📈 Platform ROI Scorecards 2026',
+    description: 'Connect golden paths to adoption, SLOs, and revenue with actionable scorecards.',
+    ctaText: 'See the guide',
+    ctaLink: '/blog/platform-roi-scorecards-2026',
     variant: 'info',
-    icon: '📝',
-    animation: 'fade-in',
-    badge: 'NEW SERVICE',
-    featured: false
+    icon: '📈',
+    featured: true,
+    priority: 3,
+    startDate: '2025-09-30',
   },
   {
-    id: 'ai-customer-experience-platform',
-    message: '💬 TRANSFORM: AI Customer Experience Platform - 45% Revenue Increase, 90% Satisfaction',
-    ctaText: 'Transform CX',
-    ctaLink: '/services/ai-customer-experience-platform',
-    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-purple-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 13,
-    active: true,
-    priority: 4,
-    variant: 'premium',
-    icon: '💬',
-    animation: 'bounce',
-    badge: 'TRANSFORM',
-    featured: false
+    id: 'multimodal-ai-launch',
+    title: '🎭 Multimodal AI Revolution - Just Released!',
+    description: 'Master unified vision-language-audio AI achieving 98% accuracy. Transform your applications with cutting-edge multimodal capabilities.',
+    ctaText: 'Explore Multimodal AI',
+    ctaLink: '/blog/multimodal-ai-revolution-2025',
+    variant: 'success',
+    icon: '🎭',
+    featured: true,
+    priority: 1,
+    startDate: '2025-10-15',
   },
   {
-    id: 'ai-supply-chain-optimization',
-    message: '🚚 OPTIMIZE: AI Supply Chain Platform - 65% Faster Deliveries, 40% Cost Reduction',
-    ctaText: 'Optimize Now',
-    ctaLink: '/services/ai-supply-chain-optimization',
-    backgroundColor: 'bg-gradient-to-r from-orange-600 to-red-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 12,
-    active: true,
-    priority: 4,
+    id: 'blockchain-ai-integration',
+    title: '⛓️ Blockchain-AI Integration Now Available',
+    description: 'Combine blockchain immutability with AI intelligence for trustless, verifiable systems. Decentralized AI governance at scale.',
+    ctaText: 'Learn About Blockchain-AI',
+    ctaLink: '/blog/blockchain-ai-integration-2025',
     variant: 'info',
-    icon: '🚚',
-    animation: 'slide-in',
-    badge: 'OPTIMIZE',
-    featured: false
+    icon: '⛓️',
+    featured: true,
+    priority: 2,
+    startDate: '2025-10-15',
   },
   {
-    id: 'free-consultation-offer',
-    message: '🎁 FREE: AI Strategy Consultation - Discover How AI Can Transform Your Business',
-    ctaText: 'Book Free Call',
-    ctaLink: '/contact',
-    backgroundColor: 'bg-gradient-to-r from-cyan-600 to-blue-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: false,
-    hideAfter: 0,
-    active: true,
+    id: 'green-ai-sustainability',
+    title: '🌱 Green AI: 90% Carbon Reduction Achieved',
+    description: 'Build sustainable AI systems with carbon-neutral ML at scale. Join the environmental revolution in AI.',
+    ctaText: 'Discover Green AI',
+    ctaLink: '/blog/green-ai-sustainability-2025',
+    variant: 'success',
+    icon: '🌱',
+    featured: true,
+    priority: 3,
+    startDate: '2025-10-15',
+  },
+  {
+    id: 'ai-predictive-maintenance',
+    title: '⚙️ AI Predictive Maintenance - 85% Downtime Reduction',
+    description: 'New service: Predict equipment failures with 98% accuracy. Reduce costs by 40% and eliminate unplanned downtime.',
+    ctaText: 'Get Started',
+    ctaLink: '/services/ai-predictive-maintenance',
+    variant: 'warning',
+    icon: '⚙️',
+    featured: true,
+    priority: 4,
+    startDate: '2025-10-15',
+  },
+  {
+    id: 'ai-talent-acquisition',
+    title: '👥 AI Talent Acquisition - 10x Faster Hiring',
+    description: 'Revolutionary recruiting with AI matching candidates 10x faster with 95% accuracy. Transform your HR operations.',
+    ctaText: 'Explore Solution',
+    ctaLink: '/services/ai-talent-acquisition',
+    variant: 'info',
+    icon: '👥',
+    featured: true,
     priority: 5,
-    variant: 'special',
-    icon: '🎁',
-    animation: 'pulse',
-    badge: 'FREE',
-    featured: false
+    startDate: '2025-10-15',
   }
   ,
   {
-    id: 'fresh-content-oct-2025-b2',
-    message: '🆕 New today: Agent Evals 2026 + Privacy‑Preserving Agents',
+    id: 'oct-30-new-content-drop',
+    title: '🚀 New Content Drop: Platform ROI, Supply Chain v2, Edge Experiments',
+    description: 'Three fresh deep-dives: value realization, signed attestations, and sub‑100ms privacy‑first experiments.',
     ctaText: 'Read the latest',
     ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-indigo-700 to-purple-700',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 20,
-    active: true,
+    variant: 'success',
+    icon: '🚀',
+    featured: true,
     priority: 0,
-    variant: 'info',
-    icon: '🆕',
-    animation: 'fade-in',
-    badge: 'JUST IN',
-    featured: true
-  },
-  {
-    id: 'fresh-content-oct-2025',
-    message: '📚 New: AI Risk Budgets + Privacy‑Preserving Agents — read now',
-    ctaText: 'Explore latest',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-blue-700 to-cyan-700',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 20,
-    active: true,
-    priority: 0,
-    variant: 'info',
-    icon: '✨',
-    animation: 'fade-in',
-    badge: 'NEW CONTENT',
-    featured: true
-  }
-  ,
-  {
-    id: 'ai-supply-chain-optimization-spotlight',
-    message: '🚚 New: AI Supply Chain Optimization—65% Faster Deliveries',
-    ctaText: 'Read Playbook',
-    ctaLink: '/blog/ai-supply-chain-optimization-2025',
-    backgroundColor: 'bg-gradient-to-r from-amber-600 to-orange-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
-    priority: 0,
-    variant: 'premium',
-    icon: '🚚',
-    animation: 'slide-in',
-    badge: 'NEW',
-    featured: true
-  },
-  {
-    id: 'privacy-first-observability-quickstart-spotlight',
-    message: '🔒 New: Privacy‑First Observability Quickstart—Ship Signal‑Rich, PII‑Safe Telemetry',
-    ctaText: 'View Guide',
-    ctaLink: '/blog/privacy-first-observability-quickstart-2025',
-    backgroundColor: 'bg-gradient-to-r from-slate-700 to-gray-900',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
-    priority: 1,
-    variant: 'info',
-    icon: '🔒',
-    animation: 'fade-in',
-    badge: 'GUIDE',
-    featured: false
+    startDate: '2025-10-30'
   }
 ];
 
-export const getActiveEnhancedBanners = () => {
+// Sept 30, 2025 – Fresh homepage banner promoting the new content
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-new-content-autonomous-roadmaps-evals-costtiers',
+  title: '🚀 New: Autonomous Roadmaps, Signed Evals, GenAI Cost Tiers v3',
+  description: 'Outcome‑led AI roadmaps, verifiable edge evals, and predictable GenAI costs with stable UX.',
+  ctaText: 'Read the latest',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '🚀',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
+// Sept 30, 2025 – Promote newly added articles site-wide
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-autonomous-ops-guardrails',
+  title: '🛡️ Autonomous Ops Guardrails — New',
+  description: 'Budgets, live traces, and instant rollback that keep autonomy safe.',
+  ctaText: 'Read article',
+  ctaLink: '/blog/ai-2026-autonomous-ops-guardrails',
+  variant: 'info',
+  icon: '🛡️',
+  featured: true,
+  priority: 1,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-private-rate-limiter',
+  title: '⚡ Edge: Private Rate Limiter — New',
+  description: 'Scoped IDs, signed configs, on-device metrics for zero‑PII limits <100ms.',
+  ctaText: 'Explore blueprint',
+  ctaLink: '/blog/edge-2026-private-rate-limiter-blueprint',
+  variant: 'success',
+  icon: '⚡',
+  featured: true,
+  priority: 2,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-budget-aware-evals',
+  title: '📊 GenAI: Budget‑Aware Evals — New',
+  description: 'KPI‑linked scorecards and evals that prevent regressions without slowing teams.',
+  ctaText: 'See playbook',
+  ctaLink: '/blog/genai-2026-budget-aware-evals',
+  variant: 'success',
+  icon: '📊',
+  featured: true,
+  priority: 3,
+  startDate: '2025-09-30'
+});
+
+// Feature individual CTAs for the three new posts
+enhancedPromotionalBanners.push({
+  id: 'ai-2026-autonomous-change-control',
+  title: '🛡️ AI 2026: Autonomous Change Control — New',
+  description: 'Policy gates + budgets + rollback for safe weekly releases.',
+  ctaText: 'Read article',
+  ctaLink: '/blog/ai-2026-autonomous-change-control',
+  variant: 'info',
+  icon: '🛡️',
+  featured: true,
+  priority: 1,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'edge-2026-privacy-preserving-evals',
+  title: '🔐 Edge 2026: Privacy‑Preserving Evals — New',
+  description: 'Zero‑PII evals at <100ms with scoped IDs and DP noise.',
+  ctaText: 'Explore evals',
+  ctaLink: '/blog/edge-2026-privacy-preserving-evals',
+  variant: 'success',
+  icon: '🔐',
+  featured: true,
+  priority: 2,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'genai-2026-token-budgets-blueprint',
+  title: '💸 GenAI 2026: Token Budgets Blueprint — New',
+  description: 'Quality tiers + semantic caches + budgets for predictable spend.',
+  ctaText: 'See playbook',
+  ctaLink: '/blog/genai-2026-token-budgets-blueprint',
+  variant: 'success',
+  icon: '💸',
+  featured: true,
+  priority: 3,
+  startDate: '2025-09-30'
+});
+
+
+enhancedPromotionalBanners.push({
+  id: 'sept30-fresh-content-2025',
+  title: '🚀 Fresh Drop: Governance Guardrails, Edge Inference, Agent Observability',
+  description: 'Three new deep-dives just landed. Ship fast with policy checks, deliver <100ms at the edge, and get live traces for agents.',
+  ctaText: 'Read the latest',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '🚀',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
+// Sept 30, 2025 – Promote three brand-new articles (2027 theme)
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-new-2027-trio',
+  title: '🚀 New: GenAI Scorecards, Edge Private Analytics, AI Sustainability',
+  description: 'Reliability and cost KPIs, zero‑PII insights at <100ms, and green AI routing.',
+  ctaText: 'Read the latest',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '🚀',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
+// Sept 30, 2025 – Additional banner to advertise the latest content
+enhancedPromotionalBanners.push({
+  id: 'sept30-additional-fresh-content-2025',
+  title: '🔥 New Today: Real‑Time Decisions, Privacy‑First Insights, Agent Safety',
+  description: 'Explore sub‑ms decision engines, PII‑safe analytics, and battle‑tested agent safety checklists.',
+  ctaText: 'Explore new posts',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '✨',
+  featured: true,
+  priority: 1,
+  startDate: '2025-09-30'
+});
+
+// Jan 2026 – Promote newly added articles site-wide
+enhancedPromotionalBanners.push({
+  id: 'jan-2026-new-content',
+  title: '🚀 New: Risk Budgets, Edge Consent Mode, GenAI Quality Tiers',
+  description: 'Ship faster and safer: budgets + KPI canaries, private analytics without PII, and predictable GenAI costs.',
+  ctaText: 'Read the latest',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '🚀',
+  featured: true,
+  priority: 0,
+  startDate: '2026-01-05'
+});
+
+// Mar 2026 – Promote three brand-new articles site‑wide
+enhancedPromotionalBanners.push({
+  id: 'mar-2026-new-content',
+  title: '✨ New: Runtime Scorecards v2, Edge Experiments v2, GenAI Tiers v3',
+  description: 'Live KPIs + budgets + rollback, compliant <100ms experiments, and predictable GenAI UX under budget.',
+  ctaText: 'Explore the new posts',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '✨',
+  featured: true,
+  priority: 0,
+  startDate: '2026-03-25'
+});
+
+export const getActiveEnhancedBanners = (): EnhancedPromotionalBanner[] => {
+  const now = new Date();
   return enhancedPromotionalBanners
-    .filter(banner => banner.active)
+    .filter(banner => {
+      const startDate = new Date(banner.startDate);
+      const endDate = banner.endDate ? new Date(banner.endDate) : null;
+      return startDate <= now && (!endDate || endDate >= now);
+    })
     .sort((a, b) => a.priority - b.priority);
 };
 
-export const getFeaturedBanners = () => {
-  return enhancedPromotionalBanners
-    .filter(banner => banner.featured && banner.active)
-    .sort((a, b) => a.priority - b.priority);
+export const getFeaturedBanners = (): EnhancedPromotionalBanner[] => {
+  return getActiveEnhancedBanners().filter(banner => banner.featured);
 };
 
-export const getBannersByVariant = (variant: EnhancedPromotionalBanner['variant']) => {
-  return enhancedPromotionalBanners
-    .filter(banner => banner.variant === variant && banner.active)
-    .sort((a, b) => a.priority - b.priority);
-};
+// Sept 30, 2025 – New banners to advertise fresh content
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-just-added-trio',
+  title: '✨ Just Added: Real‑Time Engines, Federated Learning, FinAI 2027',
+  description: 'Explore sub‑ms decision engines, private federated learning, and high‑accuracy financial AI.',
+  ctaText: 'Read the latest',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '✨',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
+// Sept 30, 2025 – Promote two brand-new 2028 posts site-wide
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-new-2028-pair',
+  title: '🚀 New 2028: Risk Budgets + Autonomous Enterprise',
+  description: 'KPI risk budgets, live canaries, rollback — plus an executive blueprint to prove ROI.',
+  ctaText: 'Explore the 2028 posts',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '🚀',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-fresh-trio-q4',
+  title: '🚀 New: Operational Scorecards, Consentless Metrics, Budget‑Aware Routing',
+  description: 'Three fresh deep‑dives: SLIs to KPIs, zero‑PII analytics, and predictable GenAI cost with stable UX.',
+  ctaText: 'Read the latest',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '🚀',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'sept30-autonomy-blueprint-2026',
+  title: '🧭 Enterprise Autonomy Blueprint 2026 — New',
+  description: 'From pilots to governed production. Budgets, traces, and instant rollback.',
+  ctaText: 'Read the blueprint',
+  ctaLink: '/blog/ai-enterprise-autonomy-blueprint-2026',
+  variant: 'success',
+  icon: '🧭',
+  featured: true,
+  priority: 1,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'sept30-edge-trustless-analytics-2026',
+  title: '🔐 Edge Trustless Analytics — Verifiable, PII‑Safe',
+  description: 'Scoped IDs, on‑device aggregation, and signed attestations for insights without PII.',
+  ctaText: 'Explore the guide',
+  ctaLink: '/blog/edge-trustless-analytics-2026',
+  variant: 'info',
+  icon: '🔐',
+  featured: true,
+  priority: 2,
+  startDate: '2025-09-30'
+});
+
+// Apr 2026 – Promote three brand-new posts site-wide
+enhancedPromotionalBanners.push({
+  id: 'apr-2026-new-content-trio',
+  title: '🚀 New: AI SLA Scorecards, Edge Private Insights v2, Runbooks v2',
+  description: 'SLIs to KPIs + zero‑PII analytics + safe agent releases with one‑click recovery.',
+  ctaText: 'Read the latest',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '🚀',
+  featured: true,
+  priority: 0,
+  startDate: '2026-04-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'apr-2026-ai-sla-scorecards',
+  title: '📊 AI SLA Scorecards 2026 Q1 — New',
+  description: 'SLIs wired to KPIs with budgets and instant rollback for safe velocity.',
+  ctaText: 'Read article',
+  ctaLink: '/blog/ai-sla-scorecards-2026-q1',
+  variant: 'info',
+  icon: '📊',
+  featured: true,
+  priority: 1,
+  startDate: '2026-04-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'apr-2026-edge-private-insights-v2',
+  title: '🔐 Edge Private Insights v2 (2026)',
+  description: 'Scoped IDs, on‑device aggregation, DP noise — <100ms insights without PII.',
+  ctaText: 'Explore',
+  ctaLink: '/blog/edge-private-insights-v2-2026',
+  variant: 'success',
+  icon: '🔐',
+  featured: true,
+  priority: 2,
+  startDate: '2026-04-01'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'apr-2026-agent-runbooks-v2',
+  title: '🧭 Agent Release Runbooks v2 (2026)',
+  description: 'Budgets, KPI canaries, approvals, and one‑click rollback for safe autonomy.',
+  ctaText: 'See templates',
+  ctaLink: '/blog/agent-release-runbooks-v2-2026',
+  variant: 'warning',
+  icon: '🧭',
+  featured: true,
+  priority: 3,
+  startDate: '2026-04-01'
+});
+
+// Oct 2025 – Promote three new articles just added
+enhancedPromotionalBanners.push({
+  id: 'oct-2025-just-added-trio',
+  title: '✨ Just Added: Real‑Time Engines, Federated Learning, FinAI 2027',
+  description: 'Explore sub‑ms decision engines, private federated learning, and high‑accuracy financial AI.',
+  ctaText: 'Read the latest',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '✨',
+  featured: true,
+  priority: 0,
+  startDate: '2025-10-01'
+});
+
+// Oct 30, 2025 – Advertise three brand-new articles just added
+enhancedPromotionalBanners.push({
+  id: 'oct-30-2025-runtime-rollback',
+  title: '🛡️ Runtime Rollback Blueprint (2026) — New',
+  description: 'Instant rollback with KPI‑linked canaries and budgets. Safer velocity.',
+  ctaText: 'Read article',
+  ctaLink: '/blog/ai-2026-runtime-rollback-blueprint',
+  variant: 'info',
+  icon: '🛡️',
+  featured: true,
+  priority: 1,
+  startDate: '2025-10-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'oct-30-2025-attested-analytics',
+  title: '🔐 Edge Attested Analytics (2026) — New',
+  description: 'Zero‑PII insights with signed proofs at <100ms. Trust your metrics.',
+  ctaText: 'Explore guide',
+  ctaLink: '/blog/edge-2026-attested-analytics',
+  variant: 'success',
+  icon: '🔐',
+  featured: true,
+  priority: 2,
+  startDate: '2025-10-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'oct-30-2025-economy-modes',
+  title: '💸 GenAI 2027: Economy Modes — New',
+  description: 'Quality tiers + semantic caches for 40–70% savings with stable UX.',
+  ctaText: 'See playbook',
+  ctaLink: '/blog/genai-2027-economy-modes',
+  variant: 'success',
+  icon: '💸',
+  featured: true,
+  priority: 3,
+  startDate: '2025-10-30'
+});
+
+// Homepage highlight for the newest drop
+enhancedPromotionalBanners.push({
+  id: 'oct-2025-homepage-new-drop',
+  title: '🚀 New Drop: Decision Engines, Federated Learning, FinAI 2027',
+  description: 'Three fresh deep‑dives now live. Ship faster with private insights and budgeted reliability.',
+  ctaText: 'Explore new posts',
+  ctaLink: '/blog',
+  variant: 'info',
+  icon: '🚀',
+  featured: true,
+  priority: 1,
+  startDate: '2025-10-01'
+});
+
+// Sept 30, 2025 – Brand new promotional banners (priority 0 to surface on Home)
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-ai-traceability-scorecards',
+  title: '📊 New: AI Traceability Scorecards — Ship Fast, Stay Auditable',
+  description: 'Signed SBOMs, lineage, and KPI‑linked guardrails that teams adopt.',
+  ctaText: 'Read the guide',
+  ctaLink: '/blog/ai-traceability-scorecards-2026',
+  variant: 'success',
+  icon: '📊',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-edge-consent-mode-v3',
+  title: '🔐 Edge Consent Mode v3 — Zero‑PII Insights at <100ms',
+  description: 'Scoped IDs, on‑device aggregation, DP noise. Compliance without killing signals.',
+  ctaText: 'Explore Consent Mode v3',
+  ctaLink: '/blog/edge-consent-mode-v3-2026',
+  variant: 'info',
+  icon: '🔐',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-genai-ci-guardrails',
+  title: '🛡️ GenAI CI Guardrails — Policy Checks That Don’t Slow Teams',
+  description: 'Lightweight PR checks, KPI canaries, and instant rollback keep releases safe.',
+  ctaText: 'See CI Guardrails',
+  ctaLink: '/blog/genai-ci-guardrails-2026',
+  variant: 'success',
+  icon: '🛡️',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
