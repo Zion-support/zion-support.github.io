@@ -1663,7 +1663,7 @@ posts.unshift(
     category: "GenAI",
     publishedAt: "2025-09-30",
     featured: true,
-    readTime: "8 min read",
+    readTime: "6 min read",
   }
 );
 
