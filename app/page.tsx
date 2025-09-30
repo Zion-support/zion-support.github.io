@@ -10,6 +10,14 @@ import {
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
+import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
+import LatestAIInnovations2026Banner from '../components/LatestAIInnovations2026Banner';
+import InteractiveAICalculator from '../components/InteractiveAICalculator';
+import NewContent2026MegaSuccessBanner from '../components/NewContent2026MegaSuccessBanner';
+import AITrends2026PredictionsBanner from '../components/AITrends2026PredictionsBanner';
+import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
+import AI2027BreakthroughBanner from '../components/AI2027BreakthroughBanner';
+import EnterpriseTransformation2027Banner from '../components/EnterpriseTransformation2027Banner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -91,13 +99,31 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
-      {/* Latest 2026 Mega Content Banners */}
-      <AI2026ContentShowcaseBanner />
-      <AIEnterpriseAutomationRevolutionBanner />
-      <AIQuantumComputingBreakthroughBanner />
-      <AIMegaTransformationSuccessBanner />
-      <AI2026InnovationShowcaseBanner />
-      
+        {/* AI 2027 Breakthrough Banner */}
+        <AI2027BreakthroughBanner />
+        
+        {/* Enterprise Transformation 2027 Banner */}
+        <EnterpriseTransformation2027Banner />
+        
+        {/* Latest 2026 Mega Content Banners */}
+        <AI2026ContentShowcaseBanner />
+        <AIEnterpriseAutomationRevolutionBanner />
+        <AIQuantumComputingBreakthroughBanner />
+        <AIMegaTransformationSuccessBanner />
+        <AI2026InnovationShowcaseBanner />
+        
+        {/* New Mega Success Story Banner */}
+        <NewContent2026MegaSuccessBanner />
+        
+        {/* AI Trends 2026 Predictions Banner */}
+        <AITrends2026PredictionsBanner />
+        
+        {/* Revolutionary 2026 Content Banner */}
+        <Revolutionary2026ContentBanner />
+        
+        {/* Latest AI Innovations Banner */}
+        <LatestAIInnovations2026Banner />
+      </div>
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <div className="max-w-4xl mx-auto px-4">
