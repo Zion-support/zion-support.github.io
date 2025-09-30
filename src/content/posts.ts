@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "genai-reliability-scorecards-2027",
+    title: "GenAI Reliability Scorecards 2027: KPIs, Budgets, Rollback",
+    description: "Live KPIs with budgeted actions and instant rollback to keep GenAI reliable and affordable.",
+    category: "AI Governance",
+    publishedAt: "2027-01-20",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-private-analytics-2027",
+    title: "Edge Private Analytics 2027: Zero‑PII Insights at <100ms",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for actionable analytics without PII.",
+    category: "Analytics",
+    publishedAt: "2027-01-22",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-cache-playbook-2026",
+    title: "GenAI Cache Playbook 2026: Tiered Semantic Caches that Cut Cost 50%",
+    description: "Tiered semantic caches and routing guards that reduce cost by 50% while maintaining quality.",
+    category: "GenAI",
+    publishedAt: "2026-06-01",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "ai-trust-scorecards-v5-2027",
     title: "AI Trust Scorecards v5 (2027): KPIs, Budgets, Guardrails",
     description: "Next‑gen scorecards linking SLIs to KPIs with budgeted actions, PR policy tests, and instant rollback.",
@@ -2920,4 +2947,4 @@ posts.push(
     featured: true,
     readTime: "7 min read"
   }
-];
+);
