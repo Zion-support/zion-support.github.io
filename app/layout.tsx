@@ -29,8 +29,18 @@ export default function RootLayout({
               <nav className="hidden md:flex space-x-8">
                 <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">Home</Link>
                 <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
-                <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">Blog</Link>
-                <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">Case Studies</Link>
+                <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">
+                  <span className="relative">
+                    Blog
+                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">NEW</span>
+                  </span>
+                </Link>
+                <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">
+                  <span className="relative">
+                    Case Studies
+                    <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-1.5 py-0.5 rounded-full">HOT</span>
+                  </span>
+                </Link>
               </nav>
             </div>
           </div>
@@ -58,6 +68,8 @@ export default function RootLayout({
                 <ul className="space-y-2 text-gray-400">
                   <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
                   <li><Link href="/case-studies" className="hover:text-white">Case Studies</Link></li>
+                  <li><Link href="/blog/ai-innovation-trends-2026" className="hover:text-white text-blue-400">🔥 AI Trends 2026</Link></li>
+                  <li><Link href="/case-studies/enterprise-ai-transformation-success-2026" className="hover:text-white text-green-400">🏆 Success Story</Link></li>
                 </ul>
               </div>
               <div>
