@@ -18,93 +18,95 @@ const PerformanceMonitor: React.FC = () => {
   });
 
   useEffect(() => {
-    // Only run in production and browser environment
-    if (typeof window === 'undefined' || process.env.NODE_ENV !== 'production') {
-      return;
-    }
+    // Only run in production
+    if (process.env.NODE_ENV !== 'production') return;
 
-    // Measure Core Web Vitals
-    const measureWebVitals = async () => {
-      try {
-        // First Contentful Paint (FCP)
-        const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
-        if (fcpEntry) {
-          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-        }
+    const measurePerformance = () => {
+      // First Contentful Paint
+      const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
+      if (fcpEntry) {
+        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+      }
 
-        // Largest Contentful Paint (LCP)
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+      // Largest Contentful Paint
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // First Input Delay
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
         });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
 
-        // First Input Delay (FID)
-        const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
-          });
+      // Cumulative Layout Shift
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+            setMetrics(prev => ({ ...prev, cls: clsValue }));
+          }
         });
-        fidObserver.observe({ entryTypes: ['first-input'] });
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
 
-        // Cumulative Layout Shift (CLS)
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
-              setMetrics(prev => ({ ...prev, cls: clsValue }));
-            }
-          });
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      // Time to First Byte
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigationEntry) {
+        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+      }
 
-        // Time to First Byte (TTFB)
-        const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigationEntry) {
-          setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
-        }
+      // Cleanup observers
+      return () => {
+        lcpObserver.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+      };
+    };
 
-        // Cleanup observers
-        return () => {
-          lcpObserver.disconnect();
-          fidObserver.disconnect();
-          clsObserver.disconnect();
-        };
-      } catch (error) {
-        console.warn('Performance monitoring failed:', error);
+    const cleanup = measurePerformance();
+
+    // Send metrics to analytics (placeholder)
+    const sendMetrics = () => {
+      if (metrics.fcp && metrics.lcp && metrics.fid && metrics.cls && metrics.ttfb) {
+        console.log('Performance Metrics:', metrics);
+        // Here you would send to your analytics service
       }
     };
 
-    // Start measuring after a short delay to ensure page is loaded
-    const timer = setTimeout(measureWebVitals, 1000);
+    const timeoutId = setTimeout(sendMetrics, 5000);
 
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Send metrics to analytics service (optional)
-  useEffect(() => {
-    if (metrics.fcp && metrics.lcp && metrics.fid && metrics.cls && metrics.ttfb) {
-      // Send to your analytics service
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'Core Web Vitals',
-          fcp: Math.round(metrics.fcp),
-          lcp: Math.round(metrics.lcp),
-          fid: Math.round(metrics.fid * 1000), // Convert to milliseconds
-          cls: Math.round(metrics.cls * 1000), // Convert to milliseconds
-          ttfb: Math.round(metrics.ttfb),
-        });
-      }
-    }
+    return () => {
+      cleanup?.();
+      clearTimeout(timeoutId);
+    };
   }, [metrics]);
 
-  // This component doesn't render anything visible
-  return null;
+  // Don't render anything in production
+  if (process.env.NODE_ENV === 'production') {
+    return null;
+  }
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
+      <h3 className="font-bold mb-2">Performance Metrics</h3>
+      <div className="space-y-1">
+        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
+        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
+        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
+        <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'Loading...'}</div>
+        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
+      </div>
+    </div>
+  );
 };
 
 export default PerformanceMonitor;

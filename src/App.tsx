@@ -97,6 +97,17 @@ export default function App(): React.JSX.Element {
       advancedAnalytics?.initialize?.();
       // advancedErrorHandler is initialized in constructor
       advancedCachingSystem?.initialize?.();
+      
+      // Register service worker for performance
+      if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+        navigator.serviceWorker.register('/sw-performance.js')
+          .then((registration) => {
+            console.log('Service Worker registered:', registration);
+          })
+          .catch((error) => {
+            console.log('Service Worker registration failed:', error);
+          });
+      }
       advancedUXOptimizer?.initialize?.();
       advancedTestingFramework?.initialize?.();
       advancedI18n?.initialize?.();
