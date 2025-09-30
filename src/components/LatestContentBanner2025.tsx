@@ -5,6 +5,27 @@ import { motion } from "framer-motion";
 const LatestContentBanner2025 = () => {
   const newArticles = [
     {
+      title: "Autonomous AI Cloud Infrastructure 2026",
+      description: "Zero-Touch Operations at Planetary Scale — NEW!",
+      slug: "autonomous-ai-cloud-infrastructure-2026",
+      category: "Cloud Infrastructure",
+      isNew: true
+    },
+    {
+      title: "Next-Gen AI-Powered Analytics 2026",
+      description: "From Data to Decisions in Milliseconds — NEW!",
+      slug: "next-gen-ai-powered-analytics-2026",
+      category: "Data Analytics",
+      isNew: true
+    },
+    {
+      title: "AI-Augmented Software Development 2026",
+      description: "10x Developer Productivity Revolution — NEW!",
+      slug: "ai-augmented-software-development-2026",
+      category: "Software Engineering",
+      isNew: true
+    },
+    {
       title: "AI-Native Security Operations 2026",
       description: "99.9% Threat Prevention with Autonomous Response",
       slug: "ai-native-security-operations-2026",
@@ -29,40 +50,22 @@ const LatestContentBanner2025 = () => {
       category: "DevOps AI"
     },
     {
-      title: "AI Legal Document Automation 2026",
-      description: "From Contracts to Compliance in Seconds",
-      slug: "ai-legal-document-automation-2026",
-      category: "Legal Tech"
-    },
-    {
       title: "AI Customer Experience 2026",
       description: "Hyper-Personalization Achieving 400% Engagement",
       slug: "ai-customer-experience-hyper-personalization-2026",
       category: "Customer Experience"
     },
     {
-      title: "AI Renewable Energy Optimization 2026",
-      description: "Smart Grids Achieving 95% Efficiency",
-      slug: "ai-renewable-energy-optimization-2026",
-      category: "Energy Tech"
+      title: "Quantum-ML Hybrid Computing 2026",
+      description: "1000x Speedup for Optimization",
+      slug: "quantum-ml-hybrid-computing-2026",
+      category: "Quantum Computing"
     },
     {
       title: "AI Research Acceleration Platform 2026",
       description: "10x Faster Scientific Discovery",
       slug: "ai-research-acceleration-platform-2026",
       category: "Research AI"
-    },
-    {
-      title: "Autonomous Code Refactoring 2026",
-      description: "Self-Healing Codebases at Scale",
-      slug: "autonomous-code-refactoring-2026",
-      category: "AI Engineering"
-    },
-    {
-      title: "Quantum-ML Hybrid Computing 2026",
-      description: "1000x Speedup for Optimization",
-      slug: "quantum-ml-hybrid-computing-2026",
-      category: "Quantum Computing"
     }
   ];
 
@@ -95,11 +98,11 @@ const LatestContentBanner2025 = () => {
         </div>
 
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          🚀 September 30, 2025 — REVOLUTIONARY CONTENT DROP!
+          🚀 October 1, 2025 — MASSIVE NEW CONTENT UPDATE!
         </h2>
         <p className="text-xl text-blue-100 mb-8 max-w-3xl">
-          Discover <span className="font-bold text-yellow-300">3 BRAND NEW cutting-edge articles</span> on AI-Native Security Operations, Distributed AI Training at Scale, and AI Governance Automation! 
-          Plus explore our expanded library of <span className="font-bold text-yellow-300">30+ revolutionary articles</span> shaping 2026!
+          Discover <span className="font-bold text-yellow-300">3 BRAND NEW breakthrough articles</span> on Autonomous AI Cloud Infrastructure, Next-Gen AI-Powered Analytics, and AI-Augmented Software Development! 
+          Plus explore our expanded library of <span className="font-bold text-yellow-300">60+ revolutionary articles</span> shaping 2026!
         </p>
 
         {/* Featured highlights */}
@@ -124,9 +127,16 @@ const LatestContentBanner2025 = () => {
                       {article.title}
                     </h3>
                     <p className="text-xs text-blue-200 mb-2">{article.description}</p>
-                    <span className="inline-block px-2 py-1 text-xs font-semibold bg-blue-500/30 text-blue-200 rounded-full">
-                      {article.category}
-                    </span>
+                    <div className="flex gap-2 items-center flex-wrap">
+                      <span className="inline-block px-2 py-1 text-xs font-semibold bg-blue-500/30 text-blue-200 rounded-full">
+                        {article.category}
+                      </span>
+                      {article.isNew && (
+                        <span className="inline-block px-2 py-1 text-xs font-bold bg-yellow-500 text-gray-900 rounded-full animate-pulse">
+                          NEW TODAY
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </div>
               </Link>
@@ -159,11 +169,11 @@ const LatestContentBanner2025 = () => {
             <div className="text-sm text-blue-200">NEW Articles TODAY</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-green-300">30+</div>
+            <div className="text-3xl font-bold text-green-300">60+</div>
             <div className="text-sm text-blue-200">Total Latest Articles</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-purple-300">300+</div>
+            <div className="text-3xl font-bold text-purple-300">600+</div>
             <div className="text-sm text-blue-200">Pages of Insights</div>
           </div>
           <div className="text-center">
