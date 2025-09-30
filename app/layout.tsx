@@ -1,12 +1,78 @@
 import type { Metadata } from 'next'
-import React, { ReactNode } from 'react'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import Link from 'next/link'
 
-export const metadata: Metadata = { title: 'Zion App', description: 'Zion App' };
+const inter = Inter({ subsets: ['latin'] })
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={inter.className}>
+        <header className="bg-white shadow-sm border-b">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              <div className="flex items-center">
+                <Link href="/" className="text-2xl font-bold text-gray-900">
+                  Zion Tech Group
+                </Link>
+              </div>
+              <nav className="hidden md:flex space-x-8">
+                <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">Home</Link>
+                <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
+                <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">Blog</Link>
+                <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">Case Studies</Link>
+              </nav>
+            </div>
+          </div>
+        </header>
+        <main>{children}</main>
+        <footer className="bg-gray-900 text-white py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+                <p className="text-gray-400">
+                  Leading provider of AI-powered enterprise solutions and digital transformation services.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Services</h3>
+                <ul className="space-y-2 text-gray-400">
+                  <li><Link href="/services" className="hover:text-white">AI Solutions</Link></li>
+                  <li><Link href="/services" className="hover:text-white">Automation</Link></li>
+                  <li><Link href="/services" className="hover:text-white">Digital Transformation</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Resources</h3>
+                <ul className="space-y-2 text-gray-400">
+                  <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+                  <li><Link href="/case-studies" className="hover:text-white">Case Studies</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Contact</h3>
+                <p className="text-gray-400">
+                  Get in touch for your AI transformation needs.
+                </p>
+              </div>
+            </div>
+            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+              <p>&copy; 2026 Zion Tech Group. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+      </body>
     </html>
-  );
+  )
 }

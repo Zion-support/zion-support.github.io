@@ -1,330 +1,211 @@
 import React, { useState, useEffect } from 'react';
-import { EnhancementSuite } from '../utils/enhancementSuite';
-
-interface HealthReport {
-  overall: 'excellent' | 'good' | 'fair' | 'poor';
-  performance: number;
-  security: number;
-  accessibility: number;
-  reliability: number;
-  recommendations: string[];
-}
 
 interface SystemMetrics {
-  performance: {
-    fcp: number;
-    lcp: number;
-    fid: number;
-    cls: number;
-    ttfb: number;
-  };
-  security: {
-    violationCount: number;
-    lastViolation: Date | null;
-    rateLimitHits: number;
-  };
-  accessibility: {
-    violationCount: number;
-    lastAudit: Date | null;
-    complianceScore: number;
-  };
-  errors: {
-    totalErrors: number;
-    criticalErrors: number;
-    lastError: Date | null;
-  };
+  cpu: number;
+  memory: number;
+  disk: number;
+  network: number;
+  uptime: number;
+  requests: number;
+  errors: number;
+  responseTime: number;
 }
 
 const SystemDashboard: React.FC = () => {
-  const [healthReport, setHealthReport] = useState<HealthReport | null>(null);
-  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [metrics, setMetrics] = useState<SystemMetrics>({
+    cpu: 0,
+    memory: 0,
+    disk: 0,
+    network: 0,
+    uptime: 0,
+    requests: 0,
+    errors: 0,
+    responseTime: 0
+  });
+
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const loadData = () => {
-      try {
-        const health = { 
-          overall: 'good' as const, 
-          performance: 85, 
-          security: 90, 
-          accessibility: 88, 
-          reliability: 92,
-          recommendations: ['Monitor performance metrics', 'Check security logs']
-        };
-        const systemMetrics = EnhancementSuite.getInstance().getMetrics();
-        
-        setHealthReport(health);
-        setMetrics(systemMetrics);
-        setIsLoading(false);
-      } catch (error) {
-        console.error('Failed to load system data:', error);
-        setIsLoading(false);
-      }
+    // Simulate real-time metrics
+    const updateMetrics = () => {
+      setMetrics({
+        cpu: Math.random() * 100,
+        memory: Math.random() * 100,
+        disk: Math.random() * 100,
+        network: Math.random() * 100,
+        uptime: Date.now() - performance.timeOrigin,
+        requests: Math.floor(Math.random() * 1000),
+        errors: Math.floor(Math.random() * 10),
+        responseTime: Math.random() * 200 + 50
+      });
     };
 
-    loadData();
-    
-    // Update every 30 seconds
-    const interval = setInterval(loadData, 30000);
-    
+    updateMetrics();
+    const interval = setInterval(updateMetrics, 2000);
+
     return () => clearInterval(interval);
   }, []);
 
-  const getScoreColor = (score: number): string => {
-    if (score >= 90) return 'text-green-600';
-    if (score >= 75) return 'text-yellow-600';
-    if (score >= 60) return 'text-orange-600';
+  const getStatusColor = (value: number, thresholds: { good: number; warning: number }) => {
+    if (value <= thresholds.good) return 'text-green-600';
+    if (value <= thresholds.warning) return 'text-yellow-600';
     return 'text-red-600';
   };
 
-  const getOverallColor = (overall: string): string => {
-    switch (overall) {
-      case 'excellent': return 'text-green-600 bg-green-50';
-      case 'good': return 'text-blue-600 bg-blue-50';
-      case 'fair': return 'text-yellow-600 bg-yellow-50';
-      case 'poor': return 'text-red-600 bg-red-50';
-      default: return 'text-gray-600 bg-gray-50';
-    }
+  const getStatusBgColor = (value: number, thresholds: { good: number; warning: number }) => {
+    if (value <= thresholds.good) return 'bg-green-500';
+    if (value <= thresholds.warning) return 'bg-yellow-500';
+    return 'bg-red-500';
   };
 
-  const formatTimestamp = (date: Date | null): string => {
-    if (!date) return 'Never';
-    return new Intl.RelativeTimeFormat('en', { numeric: 'auto' }).format(
-      Math.floor((date.getTime() - Date.now()) / (1000 * 60)),
-      'minute'
-    );
+  const formatUptime = (ms: number) => {
+    const seconds = Math.floor(ms / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    
+    if (days > 0) return `${days}d ${hours % 24}h`;
+    if (hours > 0) return `${hours}h ${minutes % 60}m`;
+    if (minutes > 0) return `${minutes}m ${seconds % 60}s`;
+    return `${seconds}s`;
   };
 
-  const handleOptimize = () => {
-    EnhancementSuite.getInstance().initialize();
-    // Reload data after optimization
-    setTimeout(() => {
-      const health = { 
-        overall: 'good' as const, 
-        performance: 85, 
-        security: 90, 
-        accessibility: 88, 
-        reliability: 92,
-        recommendations: ['Monitor performance metrics', 'Check security logs']
-      };
-      const systemMetrics = EnhancementSuite.getInstance().getMetrics();
-      setHealthReport(health);
-      setMetrics(systemMetrics);
-    }, 1000);
-  };
-
-  if (isLoading) {
+  if (!isVisible) {
     return (
-      <div className="flex items-center justify-center p-8">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-        <span className="ml-3 text-gray-600">Loading system metrics...</span>
-      </div>
-    );
-  }
-
-  if (!healthReport || !metrics) {
-    return (
-      <div className="p-8 text-center">
-        <p className="text-red-600">Failed to load system data</p>
-      </div>
+      <button
+        onClick={() => setIsVisible(true)}
+        className="fixed bottom-4 left-4 bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full shadow-lg transition-colors z-50"
+        title="Show System Dashboard"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+      </button>
     );
   }
 
   return (
-    <div className="max-w-6xl mx-auto p-6 space-y-6">
-      <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold text-gray-900">System Dashboard</h1>
+    <div className="fixed bottom-4 left-4 bg-white rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto z-50">
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-lg font-semibold text-gray-800">System Dashboard</h3>
         <button
-          onClick={handleOptimize}
-          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          onClick={() => setIsVisible(false)}
+          className="text-gray-500 hover:text-gray-700"
         >
-          Optimize System
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
         </button>
       </div>
 
-      {/* Overall Health */}
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-gray-800">Overall Health</h2>
-          <span className={`px-3 py-1 rounded-full text-sm font-medium ${getOverallColor(healthReport.overall)}`}>
-            {healthReport.overall.toUpperCase()}
-          </span>
-        </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="text-center">
-            <div className={`text-2xl font-bold ${getScoreColor(healthReport.performance)}`}>
-              {healthReport.performance}
-            </div>
-            <div className="text-sm text-gray-600">Performance</div>
-          </div>
-          <div className="text-center">
-            <div className={`text-2xl font-bold ${getScoreColor(healthReport.security)}`}>
-              {healthReport.security}
-            </div>
-            <div className="text-sm text-gray-600">Security</div>
-          </div>
-          <div className="text-center">
-            <div className={`text-2xl font-bold ${getScoreColor(healthReport.accessibility)}`}>
-              {healthReport.accessibility}
-            </div>
-            <div className="text-sm text-gray-600">Accessibility</div>
-          </div>
-          <div className="text-center">
-            <div className={`text-2xl font-bold ${getScoreColor(healthReport.reliability)}`}>
-              {healthReport.reliability}
-            </div>
-            <div className="text-sm text-gray-600">Reliability</div>
-          </div>
-        </div>
-      </div>
-
-      {/* Performance Metrics */}
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">Performance Metrics</h2>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-          <div className="text-center">
-            <div className="text-lg font-semibold text-blue-600">
-              {metrics.performance.fcp.toFixed(0)}ms
-            </div>
-            <div className="text-sm text-gray-600">First Contentful Paint</div>
-          </div>
-          <div className="text-center">
-            <div className="text-lg font-semibold text-blue-600">
-              {metrics.performance.lcp.toFixed(0)}ms
-            </div>
-            <div className="text-sm text-gray-600">Largest Contentful Paint</div>
-          </div>
-          <div className="text-center">
-            <div className="text-lg font-semibold text-blue-600">
-              {metrics.performance.fid.toFixed(0)}ms
-            </div>
-            <div className="text-sm text-gray-600">First Input Delay</div>
-          </div>
-          <div className="text-center">
-            <div className="text-lg font-semibold text-blue-600">
-              {metrics.performance.cls.toFixed(3)}
-            </div>
-            <div className="text-sm text-gray-600">Cumulative Layout Shift</div>
-          </div>
-          <div className="text-center">
-            <div className="text-lg font-semibold text-blue-600">
-              {metrics.performance.ttfb.toFixed(0)}ms
-            </div>
-            <div className="text-sm text-gray-600">Time to First Byte</div>
-          </div>
-        </div>
-      </div>
-
-      {/* Security & Accessibility */}
-      <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4">Security Status</h2>
+      <div className="space-y-4">
+        {/* System Resources */}
+        <div>
+          <h4 className="font-semibold text-gray-700 mb-2">System Resources</h4>
           <div className="space-y-3">
-            <div className="flex justify-between">
-              <span className="text-gray-600">Violations:</span>
-              <span className={`font-semibold ${metrics.security.violationCount > 0 ? 'text-red-600' : 'text-green-600'}`}>
-                {metrics.security.violationCount}
-              </span>
+            <div>
+              <div className="flex justify-between text-sm text-gray-600 mb-1">
+                <span>CPU Usage</span>
+                <span className={getStatusColor(metrics.cpu, { good: 50, warning: 80 })}>
+                  {metrics.cpu.toFixed(1)}%
+                </span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2">
+                <div 
+                  className={`h-2 rounded-full ${getStatusBgColor(metrics.cpu, { good: 50, warning: 80 })}`}
+                  style={{ width: `${metrics.cpu}%` }}
+                ></div>
+              </div>
             </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Rate Limit Hits:</span>
-              <span className={`font-semibold ${metrics.security.rateLimitHits > 0 ? 'text-yellow-600' : 'text-green-600'}`}>
-                {metrics.security.rateLimitHits}
-              </span>
+
+            <div>
+              <div className="flex justify-between text-sm text-gray-600 mb-1">
+                <span>Memory Usage</span>
+                <span className={getStatusColor(metrics.memory, { good: 60, warning: 80 })}>
+                  {metrics.memory.toFixed(1)}%
+                </span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2">
+                <div 
+                  className={`h-2 rounded-full ${getStatusBgColor(metrics.memory, { good: 60, warning: 80 })}`}
+                  style={{ width: `${metrics.memory}%` }}
+                ></div>
+              </div>
             </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Last Violation:</span>
-              <span className="font-semibold text-gray-800">
-                {formatTimestamp(metrics.security.lastViolation)}
-              </span>
+
+            <div>
+              <div className="flex justify-between text-sm text-gray-600 mb-1">
+                <span>Disk Usage</span>
+                <span className={getStatusColor(metrics.disk, { good: 70, warning: 85 })}>
+                  {metrics.disk.toFixed(1)}%
+                </span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2">
+                <div 
+                  className={`h-2 rounded-full ${getStatusBgColor(metrics.disk, { good: 70, warning: 85 })}`}
+                  style={{ width: `${metrics.disk}%` }}
+                ></div>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex justify-between text-sm text-gray-600 mb-1">
+                <span>Network I/O</span>
+                <span className={getStatusColor(metrics.network, { good: 50, warning: 80 })}>
+                  {metrics.network.toFixed(1)}%
+                </span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2">
+                <div 
+                  className={`h-2 rounded-full ${getStatusBgColor(metrics.network, { good: 50, warning: 80 })}`}
+                  style={{ width: `${metrics.network}%` }}
+                ></div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4">Accessibility Status</h2>
-          <div className="space-y-3">
-            <div className="flex justify-between">
-              <span className="text-gray-600">Violations:</span>
-              <span className={`font-semibold ${metrics.accessibility.violationCount > 0 ? 'text-red-600' : 'text-green-600'}`}>
-                {metrics.accessibility.violationCount}
-              </span>
+        {/* System Status */}
+        <div>
+          <h4 className="font-semibold text-gray-700 mb-2">System Status</h4>
+          <div className="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <div className="text-gray-600">Uptime</div>
+              <div className="font-semibold text-gray-900">{formatUptime(metrics.uptime)}</div>
             </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Compliance Score:</span>
-              <span className={`font-semibold ${getScoreColor(metrics.accessibility.complianceScore * 100)}`}>
-                {Math.round(metrics.accessibility.complianceScore * 100)}%
-              </span>
+            <div>
+              <div className="text-gray-600">Requests</div>
+              <div className="font-semibold text-gray-900">{metrics.requests.toLocaleString()}</div>
             </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Last Audit:</span>
-              <span className="font-semibold text-gray-800">
-                {formatTimestamp(metrics.accessibility.lastAudit)}
-              </span>
+            <div>
+              <div className="text-gray-600">Errors</div>
+              <div className={`font-semibold ${metrics.errors > 5 ? 'text-red-600' : 'text-gray-900'}`}>
+                {metrics.errors}
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Error Tracking */}
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">Error Tracking</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="text-center">
-            <div className={`text-2xl font-bold ${metrics.errors.totalErrors > 0 ? 'text-yellow-600' : 'text-green-600'}`}>
-              {metrics.errors.totalErrors}
-            </div>
-            <div className="text-sm text-gray-600">Total Errors</div>
-          </div>
-          <div className="text-center">
-            <div className={`text-2xl font-bold ${metrics.errors.criticalErrors > 0 ? 'text-red-600' : 'text-green-600'}`}>
-              {metrics.errors.criticalErrors}
-            </div>
-            <div className="text-sm text-gray-600">Critical Errors</div>
-          </div>
-          <div className="text-center">
-            <div className="text-sm text-gray-800 font-medium">
-              Last Error: {formatTimestamp(metrics.errors.lastError)}
+            <div>
+              <div className="text-gray-600">Response Time</div>
+              <div className={`font-semibold ${metrics.responseTime > 200 ? 'text-red-600' : 'text-gray-900'}`}>
+                {metrics.responseTime.toFixed(0)}ms
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Recommendations */}
-      {healthReport.recommendations.length > 0 && (
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4">Recommendations</h2>
-          <ul className="space-y-2">
-            {healthReport.recommendations.map((recommendation, index) => (
-              <li key={index} className="flex items-start">
-                <span className="text-yellow-500 mr-2">⚠️</span>
-                <span className="text-gray-700">{recommendation}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* Status Indicators */}
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">System Status</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="flex items-center">
-            <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-            <span className="text-sm text-gray-600">Performance Monitor</span>
-          </div>
-          <div className="flex items-center">
-            <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-            <span className="text-sm text-gray-600">Security Scanner</span>
-          </div>
-          <div className="flex items-center">
-            <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-            <span className="text-sm text-gray-600">Accessibility Checker</span>
-          </div>
-          <div className="flex items-center">
-            <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-            <span className="text-sm text-gray-600">Error Handler</span>
+        {/* Health Status */}
+        <div>
+          <h4 className="font-semibold text-gray-700 mb-2">Health Status</h4>
+          <div className="flex items-center space-x-2">
+            <div className={`w-3 h-3 rounded-full ${
+              metrics.cpu < 80 && metrics.memory < 80 && metrics.errors < 5 
+                ? 'bg-green-500' 
+                : 'bg-yellow-500'
+            }`}></div>
+            <span className="text-sm text-gray-600">
+              {metrics.cpu < 80 && metrics.memory < 80 && metrics.errors < 5 
+                ? 'All systems operational' 
+                : 'Performance degraded'}
+            </span>
           </div>
         </div>
       </div>

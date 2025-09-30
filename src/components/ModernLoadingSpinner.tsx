@@ -1,114 +1,93 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 interface ModernLoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'primary' | 'secondary' | 'accent';
-  text?: string;
-  showProgress?: boolean;
   progress?: number;
-  className?: string;
+  size?: 'sm' | 'md' | 'lg';
+  variant?: 'default' | 'minimal' | 'dots';
 }
 
-const sizeClasses = {
-  sm: 'w-4 h-4',
-  md: 'w-8 h-8',
-  lg: 'w-12 h-12',
-  xl: 'w-16 h-16'
-};
-
-const variantClasses = {
-  primary: 'text-blue-600',
-  secondary: 'text-gray-600',
-  accent: 'text-purple-600'
-};
-
 export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
-  size = 'md',
-  variant = 'primary',
-  text,
-  showProgress = false,
   progress = 0,
-  className = ''
+  size = 'md',
+  variant = 'default'
 }) => {
-  const spinnerVariants = {
-    animate: {
-      rotate: 360,
-      transition: {
-        duration: 1,
-        repeat: Infinity,
-        ease: 'linear' as const
-      }
-    }
+  const sizeClasses = {
+    sm: 'w-8 h-8',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16'
   };
 
-  const pulseVariants = {
-    animate: {
-      scale: [1, 1.2, 1],
-      opacity: [0.5, 1, 0.5],
-      transition: {
-        duration: 1.5,
-        repeat: Infinity,
-        ease: 'easeInOut' as const
-      }
-    }
-  };
+  if (variant === 'minimal') {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className={`${sizeClasses[size]} border-2 border-blue-600 border-t-transparent rounded-full animate-spin`} />
+      </div>
+    );
+  }
+
+  if (variant === 'dots') {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="flex space-x-1">
+          {[0, 1, 2].map((i) => (
+            <div
+              key={i}
+              className="w-2 h-2 bg-blue-600 rounded-full animate-bounce"
+              style={{ animationDelay: `${i * 0.1}s` }}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="relative">
-        {/* Outer rotating ring */}
-        <motion.div
-          className={`${sizeClasses[size]} border-4 border-gray-200 border-t-4 rounded-full ${variantClasses[variant]}`}
-          variants={spinnerVariants}
-          animate="animate"
+        {/* Outer ring */}
+        <div className={`${sizeClasses[size]} border-4 border-gray-300 rounded-full`} />
+        
+        {/* Progress ring */}
+        <div
+          className={`${sizeClasses[size]} border-4 border-blue-600 border-t-transparent rounded-full absolute top-0 left-0 animate-spin`}
+          style={{
+            background: `conic-gradient(from 0deg, #3b82f6 0%, #3b82f6 ${progress}%, transparent ${progress}%, transparent 100%)`,
+            mask: 'radial-gradient(circle, transparent 50%, black 50%)',
+            WebkitMask: 'radial-gradient(circle, transparent 50%, black 50%)'
+          }}
         />
         
-        {/* Inner pulsing dot */}
-        <motion.div
-          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-current rounded-full ${variantClasses[variant]}`}
-          variants={pulseVariants}
-          animate="animate"
+        {/* Center content */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-blue-600 font-semibold text-sm">
+            {Math.round(progress)}%
+          </div>
+        </div>
+      </div>
+      
+      {/* Loading text */}
+      <div className="mt-4 text-white text-lg font-medium">
+        Loading Zion Tech Group...
+      </div>
+      
+      {/* Progress bar */}
+      <div className="w-64 h-2 bg-gray-700 rounded-full mt-4 overflow-hidden">
+        <div
+          className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-300 ease-out"
+          style={{ width: `${progress}%` }}
         />
       </div>
-
-      {/* Progress bar */}
-      {showProgress && (
-        <div className="w-32 bg-gray-200 rounded-full h-2 overflow-hidden">
-          <motion.div
-            className={`h-full ${variant === 'primary' ? 'bg-blue-600' : variant === 'secondary' ? 'bg-gray-600' : 'bg-purple-600'}`}
-            initial={{ width: 0 }}
-            animate={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
+      
+      {/* Loading dots */}
+      <div className="flex space-x-1 mt-4">
+        {[0, 1, 2].map((i) => (
+          <div
+            key={i}
+            className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"
+            style={{ animationDelay: `${i * 0.2}s` }}
           />
-        </div>
-      )}
-
-      {/* Loading text */}
-      {text && (
-        <motion.p
-          className={`text-sm font-medium ${variantClasses[variant]} text-center`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
-          {text}
-        </motion.p>
-      )}
-
-      {/* Progress percentage */}
-      {showProgress && (
-        <motion.span
-          className={`text-xs font-semibold ${variantClasses[variant]}`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-        >
-          {Math.round(progress)}%
-        </motion.span>
-      )}
+        ))}
+      </div>
     </div>
   );
 };
-
-export default ModernLoadingSpinner;
