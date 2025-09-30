@@ -196,7 +196,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-      {/* 🔔 New Promotions: Governance + Agent Ops */}
+      {/* 🔔 New Promotions: Governance + Agent Ops + Fresh Articles */}
       <section className="py-6 bg-gradient-to-r from-blue-700 via-indigo-700 to-fuchsia-700 text-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-4">
@@ -224,6 +224,36 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-bold">GenAI Routing v1 (2025)</h3>
               <p className="text-white/80 mt-2 text-sm">Tiered models + semantic caches for predictable cost and steady UX.</p>
+            </Link>
+
+            {/* Fresh: Edge Private Feature Flags */}
+            <Link href="/blog/edge-2026-private-feature-flags" className="block bg-white/10 hover:bg-white/15 border border-white/20 rounded-xl p-6 transition-colors">
+              <div className="mb-2">
+                <span className="px-3 py-1 rounded-full text-xs bg-emerald-500/20 text-emerald-200 border border-emerald-500/30">Edge</span>
+                <span className="ml-2 text-white/70 text-xs">New</span>
+              </div>
+              <h3 className="text-xl font-bold">Edge Private Feature Flags (2026)</h3>
+              <p className="text-white/80 mt-2 text-sm">Zero‑PII rollouts at &lt;100ms with scoped IDs and signed configs.</p>
+            </Link>
+
+            {/* Fresh: Governed Agent Marketplaces */}
+            <Link href="/blog/ai-2027-governed-agent-marketplaces" className="block bg-white/10 hover:bg-white/15 border border-white/20 rounded-xl p-6 transition-colors">
+              <div className="mb-2">
+                <span className="px-3 py-1 rounded-full text-xs bg-blue-500/20 text-blue-200 border border-blue-500/30">Governance</span>
+                <span className="ml-2 text-white/70 text-xs">New</span>
+              </div>
+              <h3 className="text-xl font-bold">Governed Agent Marketplaces (2027)</h3>
+              <p className="text-white/80 mt-2 text-sm">Budgets, attestations, and rollback for safe third‑party agents.</p>
+            </Link>
+
+            {/* Fresh: Real‑Time Multimodal Assistants */}
+            <Link href="/blog/ai-2028-realtime-multimodal-assistants" className="block bg-white/10 hover:bg-white/15 border border-white/20 rounded-xl p-6 transition-colors md:col-span-2">
+              <div className="mb-2">
+                <span className="px-3 py-1 rounded-full text-xs bg-cyan-500/20 text-cyan-200 border border-cyan-500/30">Multimodal</span>
+                <span className="ml-2 text-white/70 text-xs">New</span>
+              </div>
+              <h3 className="text-xl font-bold">Real‑Time Multimodal Assistants (2028)</h3>
+              <p className="text-white/80 mt-2 text-sm">Voice + vision + touch with &lt;150ms end‑to‑end latency budgets.</p>
             </Link>
             <Link href="/blog/ai-2027-autonomous-governance-blueprint" className="block bg-white/10 hover:bg-white/15 border border-white/20 rounded-xl p-6 transition-colors">
               <div className="mb-2">
