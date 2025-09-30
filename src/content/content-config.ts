@@ -843,7 +843,6 @@ export const getContentByTag = (tag: string) => {
 };
 
 // Import new content
-import { newBlogPosts2025, featuredBlogPosts, trendingBlogPosts } from './new-blog-posts-2025';
 import { newServices2025, featuredServices, trendingServices } from './new-services-2025';
 
 export const getRecentContent = (limit: number = 3) => {

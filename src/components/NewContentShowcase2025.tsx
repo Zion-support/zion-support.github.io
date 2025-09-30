@@ -1,7 +1,4 @@
 import React from 'react';
-import { ArrowRight, Calendar, Clock, Star, TrendingUp, Users, Zap } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { featuredBlogPosts, featuredServices } from '../content/content-config';
 
 const NewContentShowcase2025: React.FC = () => {
   const featuredBlogs = featuredBlogPosts.slice(0, 3);

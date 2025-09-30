@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { X, ArrowRight, Sparkles } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { EnhancedPromotionalBanner } from '../content/enhanced-promotional-banners';
 
 interface EnhancedPromotionalBannerProps {
   banner: EnhancedPromotionalBanner;

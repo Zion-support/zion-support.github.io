@@ -1,8 +1,3 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap, Shield, Globe, CheckCircle, Star, TrendingUp, Clock, Award } from 'lucide-react';
-import { newArticles2025, homepageFeaturedArticles } from '../content/new-articles-2025';
-import { newServices, featuredServices } from '../content/new-services';
 
 interface ComprehensivePromoBannerProps {
   className?: string;
@@ -14,7 +9,7 @@ export default function ComprehensivePromoBanner({
   className = '',
   variant = 'hero',
   showCount = 4
-}: ComprehensivePromoBannerProps) {
+}: ComprehensivePromoBannerProps): void {
   const [isVisible, setIsVisible] = useState(true);
   const [activeTab, setActiveTab] = useState<'content' | 'services'>('content');
 

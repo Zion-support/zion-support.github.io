@@ -1,6 +1,4 @@
-import { ArrowRight, Calendar, Clock, Sparkles, TrendingUp, X } from 'lucide-react';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 const NewContentAnnouncement: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);

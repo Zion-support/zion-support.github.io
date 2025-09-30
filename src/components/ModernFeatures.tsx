@@ -11,7 +11,7 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-export default function ModernFeatures(): React.JSX.Element {
+export default function ModernFeatures(): React.JSX.Element React.JSX.Element {
   const features = [
     { icon: <Zap className="w-8 h-8" />, title: "Lightning‑Fast Performance", description: "Optimized architectures with edge delivery and smart caching." },
     { icon: <Shield className="w-8 h-8" />, title: "Enterprise‑Grade Security", description: "Zero‑trust patterns, policy tests, and signed releases." },

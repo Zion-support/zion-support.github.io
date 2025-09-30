@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, User } from 'lucide-react';
 
-export default function LatestInsights(): React.JSX.Element {
+export default function LatestInsights(): React.JSX.Element React.JSX.Element {
   return (
     <div className="py-16 bg-white">
       <div className="container mx-auto px-6">

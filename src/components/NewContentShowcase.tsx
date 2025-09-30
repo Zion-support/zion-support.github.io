@@ -1,9 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Clock, Star } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { newBlogPosts, featuredNewPosts, trendingNewPosts } from '../content/new-blog-posts';
-import { newCaseStudies, featuredNewCaseStudies } from '../content/new-case-studies';
-import { newServices, featuredNewServices } from '../content/new-services';
 
 const NewContentShowcase: React.FC = () => {
   const latestPosts = newBlogPosts.slice(0, 3);

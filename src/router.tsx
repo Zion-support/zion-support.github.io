@@ -1,12 +1,11 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import Contact from './pages/Contact';
-import Blog from './pages/Blog';
-import Resources from './pages/Resources';
 import AIAutonomousOperations from './pages/services/AIAutonomousOperations';
-import AIPlatformArchitecture from './pages/services/AI-Platform-Architecture';
 import AIIncidentResponsePlaybooks2025 from './pages/blog/ai-incident-response-playbooks-2025/page';
+import AIPlatformArchitecture from './pages/services/AI-Platform-Architecture';
+import Blog from './pages/Blog';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Resources from './pages/Resources';
 
 export const AppRouter: React.FC = () => {
   return (

@@ -1,7 +1,4 @@
 import React from 'react';
-import { ArrowRight, Clock, Calendar, Sparkles, TrendingUp } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { latestArticles, featuredArticles, trendingArticles } from '../content/latest-articles';
 
 const LatestArticlesShowcase: React.FC = () => {
   const displayArticles = [...featuredArticles.slice(0, 2), ...trendingArticles.slice(0, 1)];

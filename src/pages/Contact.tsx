@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
 import {
   Mail,
   Phone,
@@ -16,7 +15,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 // import EnhancedContactForm from "../components/EnhancedContactForm";
 
-export default function Contact(): React.JSX.Element {
+export default function Contact(): React.JSX.Element React.JSX.Element {
   return (
     <>
       <Helmet>

@@ -1,7 +1,4 @@
 import React from 'react';
-import { ArrowRight, CheckCircle, Star, Zap, Sparkles } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { newServices } from '../content/new-services';
 
 const NewServicesShowcase: React.FC = () => {
   const featuredServices = newServices.filter(service => service.featured);

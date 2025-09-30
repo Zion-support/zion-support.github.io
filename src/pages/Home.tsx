@@ -12,13 +12,9 @@ import {
   Users,
   Zap
 } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
-import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
 import EnhancedPromotionalBanner from "../components/EnhancedPromotionalBanner";
-import EnhancedTestimonials from "../components/EnhancedTestimonials";
 import Header from "../components/Header";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
@@ -32,11 +28,6 @@ import NewServicesShowcase from "../components/NewServicesShowcase";
 import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
-import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
-import { latestInsights } from "../content/insights";
-import { posts } from "../content/posts";
-import { newArticles2025 } from "../content/new-articles-2025";
-import { featuredBlogPosts, featuredServices } from "../content/content-config";
 
 const Home = () => {
   return (

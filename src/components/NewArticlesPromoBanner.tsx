@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, TrendingUp, Clock, Star } from 'lucide-react';
-import { newArticles2025, homepageFeaturedArticles } from '../content/new-articles-2025';
 
 interface NewArticlesPromoBannerProps {
   className?: string;
@@ -15,7 +12,7 @@ export default function NewArticlesPromoBanner({
   variant = 'default',
   showCount = 3,
   autoRotate = false
-}: NewArticlesPromoBannerProps) {
+}: NewArticlesPromoBannerProps): void {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 

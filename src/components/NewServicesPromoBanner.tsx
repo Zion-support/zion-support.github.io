@@ -1,7 +1,3 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap, Shield, Globe, CheckCircle, Star, TrendingUp } from 'lucide-react';
-import { newServices } from '../content/new-services';
 
 interface NewServicesPromoBannerProps {
   className?: string;
@@ -15,7 +11,7 @@ export default function NewServicesPromoBanner({
   variant = 'default',
   showCount = 3,
   featuredOnly = false
-}: NewServicesPromoBannerProps) {
+}: NewServicesPromoBannerProps): void {
   const [isVisible, setIsVisible] = useState(true);
   
   const services = featuredOnly 

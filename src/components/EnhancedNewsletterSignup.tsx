@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function EnhancedNewsletterSignup(): React.JSX.Element {
+export default function EnhancedNewsletterSignup(): React.JSX.Element React.JSX.Element {
 	return (
 		<form onSubmit={(e) => e.preventDefault()} aria-label="Newsletter signup">
 			<input placeholder="Email" aria-label="Email" />
