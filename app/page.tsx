@@ -25,6 +25,7 @@ import LatestBreakthroughsBanner from '../components/LatestBreakthroughsBanner';
 import April2026MegaBreakthroughBanner from '../components/April2026MegaBreakthroughBanner';
 import QuantumConsciousnessFusionBanner from '../components/QuantumConsciousnessFusionBanner';
 import Revolutionary2026ContentShowcaseBanner from '../components/Revolutionary2026ContentShowcaseBanner';
+import January2026BreakthroughInnovationsBanner from '../components/January2026BreakthroughInnovationsBanner';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -101,6 +102,9 @@ export default function HomePage() {
           </div>
         </div>
       </header>
+
+      {/* January 2026 Breakthrough Innovations Banner - Featured prominently */}
+      <January2026BreakthroughInnovationsBanner />
 
       {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
       <April2026MegaBreakthroughBanner />
