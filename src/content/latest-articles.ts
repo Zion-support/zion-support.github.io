@@ -1595,6 +1595,58 @@ latestArticles.unshift(
   }
 );
 
+// Oct 01, 2025 – Add three brand-new articles (to advertise and surface)
+latestArticles.unshift(
+  {
+    id: "ai-2025-oct-01-operational-trust-v3",
+    slug: "ai-2025-oct-01-operational-trust-v3",
+    title: "AI 2025: Operational Trust Scorecards v3",
+    description: "SLIs → KPIs with budgets, canaries, and instant rollback — updated v3 playbook.",
+    excerpt: "Guardrails engineers adopt: PR policy checks, live canaries, KPI‑linked rollback.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "AI Operations",
+    tags: ["Scorecards", "Budgets", "Rollback"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/ai-operational-trust-v3-2025.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2025-oct-01-private-consentless-experiments",
+    slug: "edge-2025-oct-01-private-consentless-experiments",
+    title: "Edge 2025: Consentless Experiments v3 (<100ms)",
+    description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B at <100ms.",
+    excerpt: "Stand up privacy‑first experiments with edge aggregation and budgeted rollouts.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "Analytics",
+    tags: ["Edge", "Privacy", "Experiments"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-2025-consentless-experiments-v3.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-2025-oct-01-quality-tiers-v3",
+    slug: "genai-2025-oct-01-quality-tiers-v3",
+    title: "GenAI 2025: Quality Tiers v3",
+    description: "Predictable cost and stable UX using tiered routing, semantic caches, and eval gates.",
+    excerpt: "Cut spend 40–70% with quality tiers, caches, and KPI‑linked scorecards.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-01",
+    category: "GenAI",
+    tags: ["Quality Tiers", "Caching", "Budgets"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-2025-quality-tiers-v3.jpg",
+    newBadge: true,
+    trending: true
+  }
+);
+
 // Sept 30, 2025 – Add three new articles to surface across homepage showcases
 latestArticles.unshift(
   {
