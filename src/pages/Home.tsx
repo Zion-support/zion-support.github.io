@@ -201,20 +201,20 @@ const Home = () => {
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">
             <div className="text-white text-sm mb-4">Just added</div>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link to="/blog/ai-2027-cost-optimization-playbook" className="block rounded-lg border border-white/10 p-4 hover:border-fuchsia-400/40 transition-colors">
-                <div className="text-fuchsia-300 text-xs mb-2">GenAI</div>
-                <div className="text-white font-semibold">AI 2027 Cost Optimization Playbook</div>
-                <div className="text-zion-slate-light text-sm mt-1">Cut spend 30–70% with quality tiers, caches, and KPI routing.</div>
+              <Link to="/blog/real-time-decision-engines-2026" className="block rounded-lg border border-white/10 p-4 hover:border-blue-400/40 transition-colors">
+                <div className="text-blue-300 text-xs mb-2">Platform Engineering</div>
+                <div className="text-white font-semibold">Real‑Time Decision Engines 2026</div>
+                <div className="text-zion-slate-light text-sm mt-1">10M/sec under 1ms using warm pools, intent prefetching, and caches.</div>
               </Link>
-              <Link to="/blog/edge-2026-private-feature-flags" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">Edge Computing</div>
-                <div className="text-white font-semibold">Edge 2026: Private Feature Flags</div>
-                <div className="text-zion-slate-light text-sm mt-1">Signed configs, scoped IDs, and on‑device metrics—zero PII.</div>
+              <Link to="/blog/federated-learning-enterprise-2026" className="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors">
+                <div className="text-rose-300 text-xs mb-2">Machine Learning</div>
+                <div className="text-white font-semibold">Federated Learning 2026</div>
+                <div className="text-zion-slate-light text-sm mt-1">Train across regions with secure aggregation and DP noise—no centralization.</div>
               </Link>
-              <Link to="/blog/agent-release-guardrails-2026" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
-                <div className="text-emerald-300 text-xs mb-2">AI Operations</div>
-                <div className="text-white font-semibold">Agent Release Guardrails 2026</div>
-                <div className="text-zion-slate-light text-sm mt-1">Budgets, approvals, KPI‑linked canaries, instant rollback.</div>
+              <Link to="/blog/cognitive-financial-modeling-2027" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">FinTech AI</div>
+                <div className="text-white font-semibold">AI Financial Modeling 2027</div>
+                <div className="text-zion-slate-light text-sm mt-1">95%+ accuracy with KPI‑linked scorecards, evals, and rollback.</div>
               </Link>
             </div>
           </div>
