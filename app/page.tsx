@@ -95,83 +95,97 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Latest AI Innovations & Breakthroughs
+                Latest AI Innovations & Insights - September 2025
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Stay ahead with cutting-edge AI technologies and revolutionary solutions that are transforming industries
+                Fresh perspectives on cutting-edge AI technologies and revolutionary solutions transforming industries worldwide
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <Link href="/blog/ai-2026-revolutionary-breakthrough" className="group">
-                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200 hover:border-red-200">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-red-100 to-pink-100 rounded-lg flex items-center justify-center">
-                      <span className="text-2xl">🚀</span>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-600 transition-colors">AI 2026 Revolutionary Breakthrough</h3>
-                      <p className="text-sm text-gray-500">Featured Innovation</p>
-                    </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              <Link href="/blog/ai-agent-orchestration-2025" className="group">
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200 hover:border-cyan-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-100 to-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <span className="text-2xl">🤖</span>
                   </div>
-                  <p className="text-gray-600 mb-4">
-                    Discover the revolutionary AI breakthroughs of 2026 that are transforming enterprise operations. 
-                    From autonomous AI systems to quantum-enhanced computing, achieving 300% ROI.
+                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-cyan-600 transition-colors mb-2">
+                    AI Agent Orchestration
+                  </h3>
+                  <p className="text-sm text-gray-500 mb-3">Multi-Agent Systems</p>
+                  <p className="text-gray-600 text-sm mb-4">
+                    Build intelligent networks of AI agents working together to solve complex problems—achieving 200-300% productivity gains.
                   </p>
                   <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-500">Published Jan 25, 2026</div>
-                    <div className="text-red-600 font-semibold group-hover:text-red-700 transition-colors">
+                    <div className="text-xs text-gray-500">Sep 30, 2025</div>
+                    <div className="text-cyan-600 font-semibold text-sm group-hover:text-cyan-700 transition-colors">
                       Read More →
                     </div>
                   </div>
                 </div>
               </Link>
 
-              <Link href="/case-studies/ai-2026-mega-transformation-success-story" className="group">
-                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200 hover:border-green-200">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-green-100 to-teal-100 rounded-lg flex items-center justify-center">
-                      <span className="text-2xl">🏆</span>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">$100M Success Story</h3>
-                      <p className="text-sm text-gray-500">Fortune 500 Mega Breakthrough</p>
-                    </div>
+              <Link href="/blog/edge-ai-revolution-2025" className="group">
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200 hover:border-blue-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                    <span className="text-2xl">⚡</span>
                   </div>
-                  <p className="text-gray-600 mb-4">
-                    Discover how a Fortune 500 manufacturing giant achieved $100M ROI, 95% efficiency gains, 
-                    and 300% productivity improvement through our AI 2026 transformation solutions.
+                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
+                    Edge AI Revolution
+                  </h3>
+                  <p className="text-sm text-gray-500 mb-3">Processing at the Source</p>
+                  <p className="text-gray-600 text-sm mb-4">
+                    Real-time intelligence directly on devices—95% faster responses, 80% cost reduction, and enhanced privacy.
                   </p>
                   <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-500">Published Jan 25, 2026</div>
-                    <div className="text-green-600 font-semibold group-hover:text-green-700 transition-colors">
+                    <div className="text-xs text-gray-500">Sep 30, 2025</div>
+                    <div className="text-blue-600 font-semibold text-sm group-hover:text-blue-700 transition-colors">
                       Read More →
                     </div>
                   </div>
                 </div>
               </Link>
 
-              <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">⚛️</span>
+              <Link href="/blog/llm-fine-tuning-enterprise-2025" className="group">
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200 hover:border-purple-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg flex items-center justify-center mb-4">
+                    <span className="text-2xl">🎯</span>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900">Quantum AI Breakthrough</h3>
-                    <p className="text-sm text-gray-500">Computational Revolution</p>
+                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-purple-600 transition-colors mb-2">
+                    LLM Fine-Tuning
+                  </h3>
+                  <p className="text-sm text-gray-500 mb-3">Customizing Enterprise AI</p>
+                  <p className="text-gray-600 text-sm mb-4">
+                    Transform generic models into domain experts with 85-95% accuracy improvements and 10x ROI.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="text-xs text-gray-500">Sep 30, 2025</div>
+                    <div className="text-purple-600 font-semibold text-sm group-hover:text-purple-700 transition-colors">
+                      Read More →
+                    </div>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-4">
-                  Explore how quantum-enhanced AI is solving impossible optimization problems in seconds, 
-                  delivering 500x faster results and transforming computational capabilities.
-                </p>
-                <div className="flex items-center justify-between">
-                  <div className="text-sm text-gray-500">Coming Soon</div>
-                  <div className="text-purple-600 font-semibold">
-                    Learn More →
+              </Link>
+
+              <Link href="/blog/ai-cybersecurity-zero-trust-2025" className="group">
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200 hover:border-red-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-red-100 to-orange-100 rounded-lg flex items-center justify-center mb-4">
+                    <span className="text-2xl">🔒</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-red-600 transition-colors mb-2">
+                    AI Cybersecurity
+                  </h3>
+                  <p className="text-sm text-gray-500 mb-3">Zero Trust Architecture</p>
+                  <p className="text-gray-600 text-sm mb-4">
+                    AI-powered security systems detecting threats 99.7% faster with automated response in milliseconds.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="text-xs text-gray-500">Sep 30, 2025</div>
+                    <div className="text-red-600 font-semibold text-sm group-hover:text-red-700 transition-colors">
+                      Read More →
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
 
             <div className="text-center">
@@ -179,7 +193,7 @@ export default function HomePage() {
                 href="/blog"
                 className="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors shadow-lg hover:shadow-xl"
               >
-                Explore All Innovations
+                Explore All Articles & Insights
               </Link>
             </div>
           </div>
