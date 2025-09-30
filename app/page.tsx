@@ -44,9 +44,22 @@ import {
   AIInnovationShowcaseBanner
 } from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
+<<<<<<< HEAD
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
+=======
+import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
+import AIRevolutionary2026Banner from '../components/AIRevolutionary2026Banner';
+import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
+import Revolutionary2027ContentBanner from '../components/Revolutionary2027ContentBanner';
+import AI2027MegaSuccessBanner from '../components/AI2027MegaSuccessBanner';
+import QuantumAIRevolutionBanner from '../components/QuantumAIRevolutionBanner';
+import InteractiveAI2027Calculator from '../components/InteractiveAI2027Calculator';
+import FeaturedServiceCard from '../components/FeaturedServiceCard';
+import SuccessStory from '../components/SuccessStory';
+import NewContent2025PromotionalBanner from '../components/NewContent2025PromotionalBanner';
+>>>>>>> cursor/create-and-deploy-new-content-ab3b
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -122,6 +135,7 @@ export default function HomePage() {
   };
 
   return (
+<<<<<<< HEAD
     <>
       <script
         type="application/ld+json"
@@ -136,6 +150,20 @@ export default function HomePage() {
       <LatestContentShowcaseBanner />
       <InteractiveAICalculatorBanner />
       <AIInnovationShowcaseBanner />
+=======
+    <div className="animate-fade-in">
+      {/* New Content 2025 Promotional Banner */}
+      <NewContent2025PromotionalBanner />
+      
+      {/* Revolutionary 2027 AI Content Banners */}
+      <Revolutionary2027ContentBanner />
+      <QuantumAIRevolutionBanner />
+      <AI2027MegaSuccessBanner />
+      
+      {/* New 2026 Content Banners */}
+      <NewContent2026MegaBanner />
+      <AIRevolutionary2026Banner />
+>>>>>>> cursor/create-and-deploy-new-content-ab3b
       
       {/* New Content Promotional Banners */}
       <MultimodalAIIntegrationBanner />
@@ -422,6 +450,7 @@ export default function HomePage() {
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Link to="/blog/ai-multimodal-integration-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -464,6 +493,9 @@ export default function HomePage() {
 =======
             <Link href="/blog/ai-enterprise-adoption-2025" className="group">
 >>>>>>> cursor/create-and-deploy-new-content-1102
+=======
+            <Link href="/blog/ai-enterprise-adoption-2025" className="group">
+>>>>>>> cursor/create-and-deploy-new-content-ab3b
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -777,7 +809,7 @@ export default function HomePage() {
 
           <div className="text-center">
             <Link
-              to="/blog"
+              href="/blog"
               className="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg hover:shadow-xl"
             >
               View All Content
