@@ -5,47 +5,91 @@ const LatestContentBanner2025: React.FC = () => {
   const latestArticles = [
     {
       id: 1,
-      title: 'AI-Powered Enterprise Automation: The Complete 2025 Implementation Guide',
-      slug: 'ai-powered-enterprise-automation-2025',
-      excerpt: 'Discover how Fortune 500 companies achieve 85% cost reduction and 10x productivity gains through AI-powered automation. Complete implementation roadmap with real-world case studies achieving $420M annual savings.',
-      category: 'Enterprise AI & Automation',
+      title: 'Autonomous AI Agents: Building Self-Healing Enterprise Systems in 2025',
+      slug: 'autonomous-ai-agents-self-healing-systems-2025',
+      excerpt: 'Revolutionary approach to enterprise operations with autonomous AI agents that detect, diagnose, and resolve issues automatically. Achieve 99.99% uptime and reduce incident response time by 95% with zero-touch operations.',
+      category: 'Autonomous AI Systems',
       date: '2025-09-30',
-      readTime: '38 min',
+      readTime: '45 min',
       trending: true,
       icon: '🤖'
     },
     {
       id: 2,
-      title: 'Multimodal AI in Enterprise: Vision, Language, and Audio Intelligence',
-      slug: 'multimodal-ai-enterprise-applications-2025',
-      excerpt: 'Learn how multimodal AI systems processing text, images, video, and audio simultaneously deliver 10x productivity gains and 95% accuracy improvements across manufacturing, healthcare, and retail.',
-      category: 'Multimodal AI',
+      title: 'Zero-Trust AI Security Architecture: The 2025 Enterprise Blueprint',
+      slug: 'zero-trust-ai-security-architecture-2025',
+      excerpt: 'Comprehensive zero-trust framework for AI systems protecting against adversarial attacks, model theft, and data poisoning. Deployed across 1000+ enterprises achieving 99.97% threat prevention with full regulatory compliance.',
+      category: 'AI Security & Zero Trust',
       date: '2025-09-30',
-      readTime: '35 min',
+      readTime: '50 min',
       trending: true,
-      icon: '👁️'
+      icon: '🔐'
     },
     {
       id: 3,
-      title: 'Securing Generative AI: Enterprise Framework for Safe LLM Deployment',
-      slug: 'generative-ai-security-framework-2025',
-      excerpt: 'Battle-tested security framework protecting 500+ enterprise LLM deployments. Prevent prompt injection, data leakage, and model poisoning with 99.98% attack prevention rate while maintaining compliance.',
-      category: 'AI Security & Governance',
+      title: 'Quantum-Ready Encryption for Enterprise AI: Future-Proofing Your Infrastructure',
+      slug: 'quantum-ready-encryption-enterprise-ai-2025',
+      excerpt: 'Prepare your AI infrastructure for the quantum era with post-quantum cryptography. Protect sensitive models and data against quantum attacks while maintaining performance at scale across distributed systems.',
+      category: 'Quantum Security & AI',
       date: '2025-09-30',
-      readTime: '42 min',
+      readTime: '48 min',
       trending: true,
-      icon: '🛡️'
+      icon: '⚛️'
     },
     {
       id: 4,
-      title: 'LLM Cost Optimization: Reduce AI Spending by 85% Without Sacrificing Performance',
-      slug: 'llm-cost-optimization-enterprise-2025',
-      excerpt: 'Proven strategies Fortune 500 companies use to achieve 73-89% LLM cost reduction. Complete guide covering intelligent routing, caching, quantization, and infrastructure optimization.',
-      category: 'Cost Optimization & FinOps',
+      title: 'Edge AI Revolution: Deploying Intelligence at the Source with 99.9% Efficiency',
+      slug: 'edge-ai-deployment-enterprise-2025',
+      excerpt: 'Master edge AI deployment for real-time decision making with <10ms latency. Case studies show 90% bandwidth reduction, 87% cost savings, and enhanced privacy compliance across IoT, manufacturing, and retail.',
+      category: 'Edge Computing & AI',
       date: '2025-09-30',
-      readTime: '40 min',
+      readTime: '43 min',
       trending: true,
-      icon: '💰'
+      icon: '📡'
+    },
+    {
+      id: 5,
+      title: 'Responsible AI Governance: Building Ethical AI Systems at Enterprise Scale',
+      slug: 'responsible-ai-governance-framework-2025',
+      excerpt: 'Complete governance framework ensuring AI fairness, transparency, and accountability. Implement bias detection, explainable AI, and ethical oversight across 500+ models while maintaining business velocity and innovation.',
+      category: 'AI Ethics & Governance',
+      date: '2025-09-30',
+      readTime: '52 min',
+      trending: true,
+      icon: '⚖️'
+    },
+    {
+      id: 6,
+      title: 'Federated Learning for Enterprise: Privacy-Preserving AI Without Data Centralization',
+      slug: 'federated-learning-enterprise-privacy-2025',
+      excerpt: 'Train powerful AI models across distributed data sources without compromising privacy. Achieve 94% accuracy while keeping sensitive data on-premise, meeting GDPR, HIPAA, and regulatory requirements seamlessly.',
+      category: 'Privacy-Preserving AI',
+      date: '2025-09-30',
+      readTime: '46 min',
+      trending: true,
+      icon: '🔒'
+    },
+    {
+      id: 7,
+      title: 'MLOps 2.0: Automated Model Lifecycle Management for 1000+ Production Models',
+      slug: 'mlops-automated-lifecycle-management-2025',
+      excerpt: 'Next-generation MLOps platform managing model training, deployment, monitoring, and retraining at scale. Reduce time-to-production by 85% while ensuring model performance, compliance, and governance.',
+      category: 'MLOps & Automation',
+      date: '2025-09-30',
+      readTime: '55 min',
+      trending: true,
+      icon: '🔄'
+    },
+    {
+      id: 8,
+      title: 'Real-Time AI Analytics: Processing 100TB+ Data Streams with Sub-Second Latency',
+      slug: 'real-time-ai-analytics-streaming-2025',
+      excerpt: 'Enterprise-grade streaming AI analytics processing massive data volumes in real-time. Achieve instant insights, anomaly detection, and predictive alerts at scale with 99.95% accuracy across financial, healthcare, and IoT sectors.',
+      category: 'Real-Time AI & Analytics',
+      date: '2025-09-30',
+      readTime: '49 min',
+      trending: true,
+      icon: '⚡'
     }
   ];
 
@@ -63,7 +107,7 @@ const LatestContentBanner2025: React.FC = () => {
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 border border-cyan-500/30 mb-8 animate-fade-in">
             <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
             <span className="text-cyan-400 font-bold text-sm tracking-wider uppercase">
-              🔥 4 BRAND NEW ARTICLES PUBLISHED • September 30, 2025
+              🔥 8 BREAKTHROUGH ARTICLES JUST RELEASED • September 30, 2025
             </span>
             <Sparkles className="w-5 h-5 text-fuchsia-400 animate-pulse" />
           </div>
@@ -79,7 +123,7 @@ const LatestContentBanner2025: React.FC = () => {
         </div>
 
         {/* Featured Articles Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">
           {latestArticles.map((article, index) => (
             <div 
               key={article.id}
