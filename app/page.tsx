@@ -43,8 +43,12 @@ import {
   InteractiveAICalculatorBanner,
   AIInnovationShowcaseBanner
 } from '../components/NewContent2026Banners';
+<<<<<<< HEAD
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import LatestAI2026ContentBanner from '../components/LatestAI2026ContentBanner';
+=======
+import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
+>>>>>>> origin/cursor/create-and-deploy-new-content-15c5
 import ContentShowcase from '../components/ContentShowcase';
 <<<<<<< HEAD
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
@@ -153,6 +157,7 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Revolutionary AI 2025 Banner */}
       <RevolutionaryAI2025Banner />
       
@@ -177,6 +182,10 @@ export default function HomePage() {
       <RevolutionaryContent2026Banner />
       <LatestAI2026ContentBanner />
 >>>>>>> origin/feature/revolutionary-ai-2026-content
+=======
+      {/* New 2026 Mega Content Banner */}
+      <NewContent2026MegaBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-15c5
       
       {/* Latest 2026 Content Banners */}
 <<<<<<< HEAD
