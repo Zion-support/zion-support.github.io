@@ -194,6 +194,21 @@ const caseStudies = [
     },
     image: '⚙️',
     color: 'red'
+  },
+  {
+    title: 'AI Enterprise Automation Mega Success 2026: $100M+ Savings & 99% Automation',
+    slug: 'ai-enterprise-automation-mega-success-2026',
+    excerpt: 'See how a Fortune 500 manufacturing company achieved $100M+ annual savings and 99% process automation through comprehensive AI enterprise automation transformation.',
+    company: 'Fortune 500 Manufacturing',
+    industry: 'Manufacturing',
+    results: {
+      savings: '$100M+',
+      automation: '99%',
+      roi: '800%',
+      timeline: '18 months'
+    },
+    image: '🤖',
+    color: 'green'
   }
 ];
 
