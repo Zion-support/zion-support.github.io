@@ -31,6 +31,7 @@ import NewContent2026AdvertisingMegaBanner from "./components/NewContent2026Adve
 import InteractiveContentShowcase2026 from "./components/InteractiveContentShowcase2026";
 import February2026ContentMegaBanner from "./components/February2026ContentMegaBanner";
 import NewContent2026BreakthroughShowcaseBanner from "./components/NewContent2026BreakthroughShowcaseBanner";
+<<<<<<< HEAD
 import February2026BreakthroughMegaBanner from "./components/February2026BreakthroughMegaBanner";
 import NewContent2026ShowcaseBanner from "./components/NewContent2026ShowcaseBanner";
 import Revolutionary2026ContentMegaBreakthroughBanner from "./components/Revolutionary2026ContentMegaBreakthroughBanner";
@@ -47,10 +48,17 @@ import April2026QuantumNeuralBanner from "./components/April2026QuantumNeuralBan
 import QuantumConsciousnessFusionBanner from "./components/QuantumConsciousnessFusionBanner";
 import Revolutionary2026ContentShowcaseBanner from "./components/Revolutionary2026ContentShowcaseBanner";
 import May2026RevolutionaryBreakthroughBanner from "./components/May2026RevolutionaryBreakthroughBanner";
+=======
+import March2026MultimodalBreakthroughBanner from "./components/March2026MultimodalBreakthroughBanner";
+import AutonomousAI2026RevolutionaryBanner from "./components/AutonomousAI2026RevolutionaryBanner";
+import March2026ContentShowcaseBanner from "./components/March2026ContentShowcaseBanner";
+import March2026ServicesPromotionalBanner from "./components/March2026ServicesPromotionalBanner";
+>>>>>>> origin/cursor/create-and-deploy-new-content-071d
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+<<<<<<< HEAD
       {/* NEW: April 2026 Conscious Computing Banner */}
       <April2026ConsciousComputingBanner />
       
@@ -83,6 +91,19 @@ export default function App(): JSX.Element {
       
       {/* NEW: Interactive Content Hub 2026 - Advanced Content Exploration */}
       <InteractiveContentHub2026 />
+=======
+      {/* NEW: March 2026 Multimodal AI Breakthrough Banner - Most Prominent */}
+      <March2026MultimodalBreakthroughBanner />
+      
+      {/* NEW: Autonomous AI 2026 Revolutionary Banner - Revolutionary Content */}
+      <AutonomousAI2026RevolutionaryBanner />
+      
+      {/* NEW: March 2026 Content Showcase Banner - Latest Content */}
+      <March2026ContentShowcaseBanner />
+      
+      {/* NEW: March 2026 Services Promotional Banner - Services Advertising */}
+      <March2026ServicesPromotionalBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-071d
       
       {/* NEW: Revolutionary 2026 Content Mega Breakthrough Banner - Most Prominent */}
       <Revolutionary2026ContentMegaBreakthroughBanner />

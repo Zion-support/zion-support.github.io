@@ -258,3 +258,22 @@ error: failed to push some refs to 'https://github.com/Zion-Holdings/zion.app'
 [2025-09-30T21:05:15.587Z] 🔍 Fetching open PRs from GitHub...
 [2025-09-30T21:05:15.743Z] Found 0 open PRs
 [2025-09-30T21:05:15.743Z] 📋 No open PRs found
+[2025-09-30T21:31:45.691Z] 🚀 Starting Comprehensive PR Merger...
+[2025-09-30T21:31:45.694Z] 🚀 Switch to main branch: git checkout main
+[2025-09-30T21:31:45.774Z] ✅ Switch to main branch successful.
+[2025-09-30T21:31:45.774Z] 🚀 Pull latest main: git pull origin main
+[2025-09-30T21:31:46.305Z] ✅ Pull latest main successful.
+[2025-09-30T21:31:46.305Z] 🔍 Fetching open PRs from GitHub...
+[2025-09-30T21:31:46.597Z] Found 9 open PRs
+[2025-09-30T21:31:46.597Z] 📋 Found 9 open PRs to process
+[2025-09-30T21:31:46.598Z] 🔄 Processing PR #24320: Create and deploy new content
+[2025-09-30T21:31:46.600Z] 🚀 Fetch PR branch cursor/create-and-deploy-new-content-071d: git fetch origin cursor/create-and-deploy-new-content-071d
+[2025-09-30T21:31:47.152Z] ✅ Fetch PR branch cursor/create-and-deploy-new-content-071d successful.
+[2025-09-30T21:31:47.152Z] 🚀 Merge PR #24320: git merge origin/cursor/create-and-deploy-new-content-071d --no-ff -m "Merge PR #24320: Create and deploy new content"
+[2025-09-30T21:31:47.419Z] ❌ Merge PR #24320 failed: Command failed: git merge origin/cursor/create-and-deploy-new-content-071d --no-ff -m "Merge PR #24320: Create and deploy new content"
+[2025-09-30T21:31:47.419Z] ⚠️ Merge failed, attempting to resolve conflicts: Command failed: git merge origin/cursor/create-and-deploy-new-content-071d --no-ff -m "Merge PR #24320: Create and deploy new content"
+[2025-09-30T21:31:47.419Z] 🔧 Resolving merge conflicts for branch: cursor/create-and-deploy-new-content-071d
+[2025-09-30T21:31:47.419Z] 🚀 Check git status: git status --porcelain
+[2025-09-30T21:31:47.475Z] ✅ Check git status successful.
+[2025-09-30T21:31:47.475Z] 🔧 Found merge conflicts, attempting to resolve...
+[2025-09-30T21:31:47.475Z] 🚀 Add all files: git add .
