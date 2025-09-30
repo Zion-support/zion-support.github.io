@@ -212,6 +212,26 @@ export const featuredBlogPosts: FeaturedItem[] = [
   }
 ];
 
+// Sept 30, 2025 – Promote brand-new posts site-wide (added now)
+featuredBlogPosts.unshift(
+  {
+    id: "verifiable-edge-analytics-2026",
+    title: "Verifiable Edge Analytics 2026",
+    description: "Zero‑PII insights with signed attestations under 100ms at the edge",
+    link: "/blog/verifiable-edge-analytics-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-red-teaming-2026",
+    title: "Agent Red‑Teaming 2026",
+    description: "Live evals, budgets, and instant rollback for safe autonomy",
+    link: "/blog/agent-red-teaming-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 // Jan 2027 – Feature three brand-new articles
 featuredBlogPosts.unshift(
   {
