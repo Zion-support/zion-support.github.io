@@ -5,64 +5,79 @@ import { motion } from "framer-motion";
 const LatestContentBanner2025 = () => {
   const newArticles = [
     {
+      title: "Federated AI Governance Systems 2026",
+      description: "Zero-Trust Distributed Intelligence",
+      slug: "federated-ai-governance-systems-2026",
+      category: "AI Governance",
+      emoji: "🌐",
+      highlight: "NEW TODAY"
+    },
+    {
+      title: "Self-Evolving AI Models 2026",
+      description: "95% Accuracy Improvement, Zero Human Input",
+      slug: "self-evolving-ai-models-2026",
+      category: "AutoML",
+      emoji: "🧬",
+      highlight: "NEW TODAY"
+    },
+    {
+      title: "AI-Powered Legal Research 2026",
+      description: "10x Faster Research with 99% Accuracy",
+      slug: "ai-powered-legal-research-2026",
+      category: "LegalTech",
+      emoji: "⚖️",
+      highlight: "NEW TODAY"
+    },
+    {
+      title: "AI DevSecOps Automation 2026",
+      description: "99.9% Accuracy at Commit Time",
+      slug: "ai-devsecops-automation-2026",
+      category: "DevSecOps",
+      emoji: "🔐",
+      highlight: "NEW TODAY"
+    },
+    {
+      title: "Holographic AI Interfaces 2026",
+      description: "10x Productivity with Spatial AI",
+      slug: "holographic-ai-interfaces-2026",
+      category: "Spatial Computing",
+      emoji: "🎯",
+      highlight: "NEW TODAY"
+    },
+    {
       title: "AI-Native Security Operations 2026",
       description: "99.9% Threat Prevention with Autonomous Response",
       slug: "ai-native-security-operations-2026",
-      category: "Cybersecurity"
+      category: "Cybersecurity",
+      emoji: "🛡️"
     },
     {
       title: "Distributed AI Training at Scale 2026",
       description: "Train LLMs 10x Faster on 1000+ GPU Clusters",
       slug: "distributed-ai-training-scale-2026",
-      category: "ML Infrastructure"
+      category: "ML Infrastructure",
+      emoji: "⚡"
     },
     {
       title: "AI Governance Automation 2026",
       description: "100% Compliance Without the Overhead",
       slug: "ai-governance-automation-enterprise-2026",
-      category: "AI Governance"
+      category: "AI Governance",
+      emoji: "📋"
     },
     {
       title: "AI Autonomous DevOps 2026",
       description: "Self-Managing CI/CD Pipelines with Zero Downtime",
       slug: "ai-autonomous-devops-2026",
-      category: "DevOps AI"
-    },
-    {
-      title: "AI Legal Document Automation 2026",
-      description: "From Contracts to Compliance in Seconds",
-      slug: "ai-legal-document-automation-2026",
-      category: "Legal Tech"
-    },
-    {
-      title: "AI Customer Experience 2026",
-      description: "Hyper-Personalization Achieving 400% Engagement",
-      slug: "ai-customer-experience-hyper-personalization-2026",
-      category: "Customer Experience"
-    },
-    {
-      title: "AI Renewable Energy Optimization 2026",
-      description: "Smart Grids Achieving 95% Efficiency",
-      slug: "ai-renewable-energy-optimization-2026",
-      category: "Energy Tech"
-    },
-    {
-      title: "AI Research Acceleration Platform 2026",
-      description: "10x Faster Scientific Discovery",
-      slug: "ai-research-acceleration-platform-2026",
-      category: "Research AI"
-    },
-    {
-      title: "Autonomous Code Refactoring 2026",
-      description: "Self-Healing Codebases at Scale",
-      slug: "autonomous-code-refactoring-2026",
-      category: "AI Engineering"
+      category: "DevOps AI",
+      emoji: "🚀"
     },
     {
       title: "Quantum-ML Hybrid Computing 2026",
       description: "1000x Speedup for Optimization",
       slug: "quantum-ml-hybrid-computing-2026",
-      category: "Quantum Computing"
+      category: "Quantum Computing",
+      emoji: "⚛️"
     }
   ];
 
@@ -95,11 +110,11 @@ const LatestContentBanner2025 = () => {
         </div>
 
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          🚀 September 30, 2025 — REVOLUTIONARY CONTENT DROP!
+          🔥 BREAKING: 5 REVOLUTIONARY NEW ARTICLES JUST PUBLISHED!
         </h2>
         <p className="text-xl text-blue-100 mb-8 max-w-3xl">
-          Discover <span className="font-bold text-yellow-300">3 BRAND NEW cutting-edge articles</span> on AI-Native Security Operations, Distributed AI Training at Scale, and AI Governance Automation! 
-          Plus explore our expanded library of <span className="font-bold text-yellow-300">30+ revolutionary articles</span> shaping 2026!
+          Discover <span className="font-bold text-yellow-300">5 BRAND NEW cutting-edge articles</span> on Federated AI Governance, Self-Evolving Models, Legal Research AI, DevSecOps Automation, and Holographic Interfaces! 
+          Plus explore our expanded library of <span className="font-bold text-yellow-300">35+ revolutionary articles</span> shaping the future of technology!
         </p>
 
         {/* Featured highlights */}
@@ -115,10 +130,17 @@ const LatestContentBanner2025 = () => {
             >
               <Link
                 to={`/blog/${article.slug}`}
-                className="block p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300"
+                className="block p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 relative overflow-hidden"
               >
+                {article.highlight && (
+                  <div className="absolute top-2 right-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-black animate-pulse">
+                    {article.highlight}
+                  </div>
+                )}
                 <div className="flex items-start gap-3">
-                  <Zap className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-1 group-hover:animate-pulse" />
+                  <div className="text-3xl flex-shrink-0 mt-1 group-hover:scale-110 transition-transform">
+                    {article.emoji || "⚡"}
+                  </div>
                   <div>
                     <h3 className="font-bold text-white text-sm mb-1 group-hover:text-yellow-300 transition-colors">
                       {article.title}
@@ -155,15 +177,15 @@ const LatestContentBanner2025 = () => {
         {/* Stats */}
         <div className="mt-8 pt-6 border-t border-white/20 flex flex-wrap gap-8">
           <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-300">3</div>
+            <div className="text-3xl font-bold text-yellow-300">5</div>
             <div className="text-sm text-blue-200">NEW Articles TODAY</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-green-300">30+</div>
+            <div className="text-3xl font-bold text-green-300">35+</div>
             <div className="text-sm text-blue-200">Total Latest Articles</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-purple-300">300+</div>
+            <div className="text-3xl font-bold text-purple-300">350+</div>
             <div className="text-sm text-blue-200">Pages of Insights</div>
           </div>
           <div className="text-center">
