@@ -1699,6 +1699,7 @@ latestArticles.unshift(
   }
 );
 
+<<<<<<< HEAD
 // Oct 01, 2025 – Fresh additions to advertise across the front end
 latestArticles.unshift(
   {
@@ -1746,6 +1747,55 @@ latestArticles.unshift(
     featured: true,
     readTime: "8 min read",
     image: "/images/observability-2025-e2e-tracing-v2.jpg",
+=======
+// Oct 02, 2025 – Add three brand-new articles (to advertise and surface)
+latestArticles.unshift(
+  {
+    id: "ai-2025-oct-02-agent-safety-scorecards",
+    slug: "ai-2025-oct-02-agent-safety-scorecards",
+    title: "AI 2025: Agent Safety Scorecards",
+    description: "KPIs, budgets, and rollback triggers that keep autonomous agents safe at speed.",
+    excerpt: "Design scorecards for agents with KPI-linked budgets, canaries, and deterministic rollback.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-02",
+    category: "AI Operations",
+    tags: ["Agents", "Scorecards", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-2025-agent-safety-scorecards.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2025-oct-02-private-experiments-v4",
+    slug: "edge-2025-oct-02-private-experiments-v4",
+    title: "Edge 2025: Private Experiments v4 (<100ms)",
+    description: "Scoped IDs, on-device metrics, and DP noise for compliant A/B testing worldwide.",
+    excerpt: "Stand up privacy-first experiments with edge aggregation, signed configs, and budgets.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-02",
+    category: "Analytics",
+    tags: ["Edge", "Privacy", "Experiments"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-2025-private-experiments-v4.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-2025-oct-02-cache-playbook-v2",
+    slug: "genai-2025-oct-02-cache-playbook-v2",
+    title: "GenAI 2025: Cache Playbook v2",
+    description: "Tiered + semantic caches with eval gates for 50–70% savings and stable UX.",
+    excerpt: "A practical guide to semantic caching with KPI-linked scorecards and rollback.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-02",
+    category: "GenAI",
+    tags: ["Caching", "Quality Tiers", "Budgets"],
+    featured: true,
+    readTime: "9 min read",
+    image: "/images/genai-2025-cache-playbook-v2.jpg",
+>>>>>>> feat/oct-02-content
     newBadge: true,
     trending: true
   }

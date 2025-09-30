@@ -256,6 +256,34 @@ featuredBlogPosts.unshift(
   }
 );
 
+// Oct 02, 2025 – Advertise three brand-new articles site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2025-oct-02-agent-safety-scorecards",
+    title: "AI 2025: Agent Safety Scorecards",
+    description: "KPIs, budgets, and rollback triggers that keep autonomous agents safe at speed",
+    link: "/blog/ai-2025-oct-02-agent-safety-scorecards",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2025-oct-02-private-experiments-v4",
+    title: "Edge 2025: Private Experiments v4 (<100ms)",
+    description: "Scoped IDs, on-device metrics, and DP noise for compliant A/B worldwide",
+    link: "/blog/edge-2025-oct-02-private-experiments-v4",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-2025-oct-02-cache-playbook-v2",
+    title: "GenAI 2025: Cache Playbook v2",
+    description: "Tiered + semantic caches with eval gates for 50–70% savings",
+    link: "/blog/genai-2025-oct-02-cache-playbook-v2",
+    type: "article",
+    featured: true
+  }
+);
+
 // Sept 30, 2025 – Surface three newly added articles at the top
 featuredBlogPosts.unshift(
   {
