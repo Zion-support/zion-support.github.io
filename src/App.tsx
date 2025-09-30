@@ -46,48 +46,51 @@ const App: React.FC = () => {
           await new Promise(resolve => setTimeout(resolve, 200));
         }
 
-    // Initialize basic systems
-    analytics.initialize();
-    
-    // Initialize SEO analytics
-    seoAnalytics.trackPageView(window.location.pathname);
-    
-    // Initialize performance SEO optimizations
-    performanceSEO.optimizeImages();
-    performanceSEO.optimizeFonts();
-    // Note: optimizeCSS method doesn't exist in PerformanceSEO class
+        // Initialize basic systems
+        analytics.initialize();
+        
+        // Initialize SEO analytics
+        seoAnalytics.trackPageView(window.location.pathname);
+        
+        // Initialize performance SEO optimizations
+        performanceSEO.optimizeImages();
+        performanceSEO.optimizeFonts();
+        // Note: optimizeCSS method doesn't exist in PerformanceSEO class
 
-    // Set default SEO data using the correct method
-    seoManager.updateMetaTags(seoData);
+        // Set default SEO data using the correct method
+        seoManager.updateMetaTags(seoData);
 
-    // Basic performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('🚀 Zion Tech Group App initialized');
-    }
+        // Basic performance monitoring
+        if (typeof window !== 'undefined') {
+          console.log('🚀 Zion Tech Group App initialized');
+        }
 
-    // Mark app as fully initialized
-    if (typeof window !== 'undefined' && window.performance && 
-        typeof performance.mark === 'function' && 
-        typeof performance.measure === 'function') {
-      performance.mark('app-init-complete');
-      performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
-    }
+        // Mark app as fully initialized
+        if (typeof window !== 'undefined' && window.performance && 
+            typeof performance.mark === 'function' && 
+            typeof performance.measure === 'function') {
+          performance.mark('app-init-complete');
+          performance.measure('app-initialization', 'app-init-start', 'app-init-complete');
+        }
 
-    // Set loading to false after initialization
-    setIsLoading(false);
-  } catch (error) {
-    console.error('App initialization failed:', error);
-    setIsLoading(false);
-  }
+        // Set loading to false after initialization
+        setIsLoading(false);
+      } catch (error) {
+        console.error('App initialization failed:', error);
+        setIsLoading(false);
+      }
+    };
 
     // Cleanup function
-    return () => {
+    const cleanup = () => {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClick);
       document.removeEventListener('keydown', handleKeyDown);
     };
 
     initializeApp();
+    
+    return cleanup;
   }, []);
 
   if (isLoading) {
