@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2027-edge-native-agents",
+    title: "Edge‑Native Agents 2027: Private Tools at <100ms",
+    description: "Design agents that run close to users with scoped permissions, on‑device tools, and instant rollback.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-2027-operational-scorecards",
+    title: "Operational AI Scorecards 2027: KPIs, Budgets, Rollback",
+    description: "Live scorecards that link SLIs to product KPIs with budgeted actions and one‑click recovery.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-2027-quality-tiers-at-scale",
+    title: "GenAI 2027: Quality Tiers at Scale with Semantic Caches",
+    description: "Predictable cost and stable UX using tiered models, semantic caches, and KPI‑aware routing.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-2026-reliable-genai-platform",
     title: "Reliable GenAI Platform 2026: SLAs, Budgets, and Rollback",
     description: "Blueprint for a dependable GenAI platform with quality tiers, budgets, evals, and instant rollback tied to KPIs.",
