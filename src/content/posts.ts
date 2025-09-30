@@ -1284,3 +1284,37 @@ posts.push(
   }
 );
 
+// Oct 30, 2025 – Fresh content drop to surface on Home latest list
+posts.push(
+  {
+    slug: "ai-governance-eu-ai-act-2026",
+    title: "EU AI Act 2026 Playbook: Ship Fast, Stay Compliant",
+    description:
+      "Practical guardrails for EU AI Act compliance: model registries, audit trails, and KPI‑linked policy tests.",
+    category: "AI Governance",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "edge-rag-privacy-preserving-2026",
+    title: "Edge RAG 2026: Private Retrieval with Sub‑100ms Answers",
+    description:
+      "Hybrid edge retrieval with signed configs, TTL windows, and on‑device caches. Fast answers without PII risk.",
+    category: "GenAI",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "agent-safety-checklists-2026",
+    title: "Agent Safety Checklists 2026: Budgets, Sandboxes, Rollbacks",
+    description:
+      "Battle‑tested safety checklists for agent releases: scoped tools, eval gates, and instant rollbacks.",
+    category: "AI Operations",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "6 min read",
+  }
+);
+
