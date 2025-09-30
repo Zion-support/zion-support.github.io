@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2028-autonomous-governance-blueprint",
+    title: "AI 2028: Autonomous Governance Blueprint",
+    description: "Budgets, live scorecards, PR policy tests, and rollback for safe autonomy.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "ai-2028-autonomous-enterprise-revolution",
+    title: "AI 2028: Autonomous Enterprise Revolution",
+    description: "Outcome‑led autonomy at scale with budgets, KPIs, canaries, and rollback.",
+    category: "Enterprise AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "14 min read"
+  },
+  {
 // merged: keep both new and existing entries
     // NEW — Autonomous AI Roadmaps (featured)
     slug: "ai-2027-autonomous-roadmaps",
@@ -25,7 +43,13 @@ export const posts: BlogPost[] = [
     slug: "edge-2026-signed-evals",
     title: "Edge 2026: Signed Evals — Zero‑PII, <100ms",
     description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for evals you can trust.",
-// merged from feature branch
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    // merged from feature branch
     slug: "ai-2025-sept-30-breaking-enterprise-ai-breakthroughs",
     title: "Sept 30, 2025: Breaking Enterprise AI Breakthroughs",
     description: "8 production‑ready patterns: rollback, scorecards, consentless analytics, and more.",
@@ -44,7 +68,7 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
-// merged: keep both variants
+    // merged: keep both variants
     // NEW — GenAI Cost Tiers v3 (featured)
     slug: "genai-2027-cost-tiers-v3",
     title: "GenAI 2027: Cost Tiers v3 — 40–70% Savings, Stable UX",
@@ -53,7 +77,9 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-// merged from feature branch
+  },
+  {
+    // merged from feature branch
     slug: "genai-2025-sept-30-policy-tests-quickstart",
     title: "GenAI 2025: Policy Tests Quickstart",
     description: "Lightweight CI policy tests wired to KPIs to ship faster without regressions.",
