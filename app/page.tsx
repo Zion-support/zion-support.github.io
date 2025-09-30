@@ -98,6 +98,9 @@ import OctoberFeaturedContentBanner from '../components/OctoberFeaturedContentBa
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 import ContentRecommendationSystem from '../components/ContentRecommendationSystem';
 import InteractiveContentRecommendation from '../components/InteractiveContentRecommendation';
+import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
+import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
+import AI2026BreakthroughBanner from '../components/AI2026BreakthroughBanner';
 import EnhancedContentShowcase2026 from '../components/EnhancedContentShowcase2026';
 import LatestContent2026Banner from '../components/LatestContent2026Banner';
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
@@ -168,6 +171,15 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🚀 NEWEST CONTENT - January 30, 2025 - AI 2026 Breakthroughs & Fortune 500 Success! */}
+      <NewContent2026ShowcaseBanner />
+      
+      {/* 🏆 FORTUNE 500 SUCCESS STORY - $2.3B Revenue Increase! */}
+      <Fortune500SuccessBanner />
+      
+      {/* 🔬 AI 2026 ENTERPRISE BREAKTHROUGH - Revolutionary Business Transformation! */}
+      <AI2026BreakthroughBanner />
+      
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
       
