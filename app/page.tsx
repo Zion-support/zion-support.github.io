@@ -43,6 +43,10 @@ import {
   InteractiveAICalculatorBanner,
   AIInnovationShowcaseBanner
 } from '../components/NewContent2026Banners';
+import {
+  MultimodalAIIntegrationBanner,
+  MultimodalAICustomerServiceBanner
+} from '../components/MultimodalAIBanners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -130,16 +134,16 @@ export default function HomePage() {
       <div className="animate-fade-in">
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
+      <MultimodalAIIntegrationBanner />
       <AIAutonomousSystemsBanner />
       <ManufacturingTransformationBanner />
+      <MultimodalAICustomerServiceBanner />
       <AIEnterpriseServicesBanner />
       <LatestContentShowcaseBanner />
       <InteractiveAICalculatorBanner />
       <AIInnovationShowcaseBanner />
       
       {/* New Content Promotional Banners */}
-      <MultimodalAIIntegrationBanner />
-      <MultimodalAICustomerServiceBanner />
       <AIEnterpriseAdoptionBanner />
       <AITrends2025Banner />
       <SupplyChainOptimizationBanner />
