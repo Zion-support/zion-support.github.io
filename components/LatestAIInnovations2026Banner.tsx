@@ -5,6 +5,9 @@ export default function LatestAIInnovations2026Banner() {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-d775
     <section className="bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-16">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
