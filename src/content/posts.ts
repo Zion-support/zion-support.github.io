@@ -10,200 +10,31 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "production-rag-quality-budgets-2026",
-    title: "Production RAG: Quality Budgets, Freshness Windows, and SLAs",
-    description: "Run RAG at scale with explicit quality budgets, freshness controls, and KPI-aligned SLAs that avoid regressions.",
-    category: "GenAI",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "serverless-inference-cost-playbook-2025",
-    title: "Serverless Inference Cost Playbook",
-    description: "Adaptive batching, warm pools, and quality tiers without P95 pain.",
-    category: "GenAI",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "golden-paths-roi-2026",
-    title: "Golden Paths ROI 2026: Scorecards that Prove Platform Value",
-    description: "Link developer journeys to SLOs, adoption, and revenue with actionable scorecards.",
-    category: "Platform Engineering",
-    publishedAt: "2025-10-13",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "ai-2025-sept-30-autonomous-control-planes",
-    title: "AI 2025: Autonomous Control Planes — Budgets, Gates, Rollback",
-    description: "Design budget-aware, policy-gated AI platforms with instant rollback and KPI-linked guardrails.",
-    category: "AI Operations",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "ai-2029-self-healing-platforms",
-    title: "AI 2029: Self‑Healing Platforms — Auto‑Contain in <60s",
-    description: "Policy‑tested playbooks, budgeted actions, and live canaries that auto‑contain incidents in under a minute.",
-    category: "AI Operations",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "edge-2028-private-personalization",
-    title: "Edge 2028: Private Personalization at <100ms",
-    description: "Scoped IDs, on‑device models, and DP noise enabling zero‑PII personalization worldwide under 100ms.",
-    category: "Edge",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "genai-2028-eval-scorecards",
-    title: "GenAI 2028: Eval Scorecards — KPIs you can trust",
-    description: "Signed attestations, golden tasks, and budget‑linked guardrails for reliable GenAI in production.",
-    category: "AI Governance",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "verifiable-edge-analytics-2026",
-    title: "Verifiable Edge Analytics 2026: Zero‑PII Insights with Attestations",
-    description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms.",
-    category: "Analytics",
-    publishedAt: "2025-10-31",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "agent-red-teaming-2026",
-    title: "Agent Red‑Teaming 2026: Live Evals, Budgets, and Safe Autonomy",
-    description: "Operational red‑teaming with KPI‑linked evals, budgeted actions, and instant rollback to prevent regressions.",
-    category: "AI Security",
-    publishedAt: "2025-10-30",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "ai-2028-autonomous-governance-blueprint",
-    title: "AI 2028: Autonomous Governance Blueprint",
-    description: "Budgets, live scorecards, PR policy tests, and rollback for safe autonomy.",
-    category: "AI Governance",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "12 min read"
-  },
-  {
-    slug: "ai-2029-autonomous-infra-blueprint",
-    title: "AI 2029: Autonomous Infrastructure Blueprint — Self‑Healing in Seconds",
-    description: "Policy‑tested playbooks, budgeted actions, and live canaries that auto‑contain incidents in <60s.",
-    category: "AI Operations",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    slug: "ai-2028-autonomous-enterprise-revolution",
-    title: "AI 2028: Autonomous Enterprise Revolution",
-    description: "Outcome‑led autonomy at scale with budgets, KPIs, canaries, and rollback.",
-    category: "Enterprise AI",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "14 min read"
-  },
-  {
-// merged: keep both new and existing entries
-    // NEW — Autonomous AI Roadmaps (featured)
-    slug: "ai-2027-autonomous-roadmaps",
-    title: "AI 2027: Autonomous Roadmaps that Prove ROI",
-    description: "Outcome‑led bets, KPI scorecards, budgets, and rollback — a practical 2027 roadmap.",
+    // NEW — Executive AI Funding Blueprint (featured)
+    slug: "ai-2027-executive-ai-funding-blueprint",
+    title: "Executive AI Funding Blueprint 2027",
+    description: "KPI‑linked scorecards, budgets, and governance gates that prove ROI.",
     category: "AI Strategy",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    // NEW — Signed Evals at the Edge (featured)
-    slug: "edge-2026-signed-evals",
-    title: "Edge 2026: Signed Evals — Zero‑PII, <100ms",
-    description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for evals you can trust.",
-    category: "Analytics",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    // merged from feature branch
-    slug: "ai-2025-sept-30-breaking-enterprise-ai-breakthroughs",
-    title: "Sept 30, 2025: Breaking Enterprise AI Breakthroughs",
-    description: "8 production‑ready patterns: rollback, scorecards, consentless analytics, and more.",
-    category: "Enterprise AI",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "10 min read"
   },
   {
-    slug: "edge-2025-sept-30-zero-pii-experiments-v2",
-    title: "Edge 2025: Zero‑PII Experiments v2 (<100ms)",
-    description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B worldwide.",
+    // NEW — Zero‑PII Edge Analytics v3 (featured)
+    slug: "edge-2027-zero-pii-analytics-v3",
+    title: "Zero‑PII Edge Analytics v3 (2027)",
+    description: "Scoped IDs, on‑device aggregation, and DP delivering insights under 100ms.",
     category: "Analytics",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
   },
   {
-    // merged: keep both variants
-    // NEW — GenAI Cost Tiers v3 (featured)
-    slug: "genai-2027-cost-tiers-v3",
-    title: "GenAI 2027: Cost Tiers v3 — 40–70% Savings, Stable UX",
-    description: "Quality tiers + semantic caches + policy tests for predictable spend without regressions.",
-    category: "FinOps",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    // merged from feature branch
-    slug: "genai-2025-sept-30-policy-tests-quickstart",
-    title: "GenAI 2025: Policy Tests Quickstart",
-    description: "Lightweight CI policy tests wired to KPIs to ship faster without regressions.",
-    category: "AI Governance",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "6 min read"
-  },
-  {
-    // NEW — Runtime rollback blueprint (featured)
-    slug: "ai-2026-runtime-rollback-blueprint",
-    title: "AI 2026: Runtime Rollback Blueprint",
-    description: "Instant rollback with KPI‑linked canaries, budget gates, and safe fallbacks.",
+    // NEW — Operational Risk Budgets (featured)
+    slug: "ai-2027-operational-risk-budgets",
+    title: "AI 2027: Operational Risk Budgets",
+    description: "Budgets, KPI canaries, and instant rollback for safe autonomy.",
     category: "AI Operations",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    // NEW — Attested edge analytics (featured)
-    slug: "edge-2026-attested-analytics",
-    title: "Edge 2026: Attested Analytics (<100ms, Zero‑PII)",
-    description: "Signed attestations + scoped IDs + DP for audit‑ready insights at the edge.",
-    category: "Analytics",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    // NEW — GenAI economy modes (featured)
-    slug: "genai-2027-economy-modes",
-    title: "GenAI 2027: Economy Modes for 50% Cost Savings",
-    description: "Quality tiers, semantic caches, and token budgets that cut spend 50%+ with stable UX.",
-    category: "FinOps",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
@@ -237,15 +68,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
-  },
-  {
-    slug: "ai-2027-operational-risk-budgets",
-    title: "AI 2027: Operational Risk Budgets — Ship Faster, Stay Safe",
-    description: "Budget‑aware routing, KPI‑linked canaries, and instant rollback to prevent incidents while increasing velocity.",
-    category: "AI Operations",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "11 min read"
   },
   {
     slug: "ai-2026-reliability-runbooks-v4",
@@ -390,15 +212,6 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-02",
     featured: true,
     readTime: "7 min read"
-  },
-  {
-    slug: "agent-red-teaming-2026",
-    title: "Agent Red‑Teaming 2026: Simulation Labs That Prevent Real Incidents",
-    description: "Build realistic attack labs for agents: jailbreak corpora, tool fuzzers, and KPI‑linked failure budgets you can ship.",
-    category: "AI Security",
-    publishedAt: "2025-10-03",
-    featured: true,
-    readTime: "8 min read"
   },
   {
     slug: "genai-2027-quality-tiers-v4",
@@ -3458,27 +3271,5 @@ posts.push(
     publishedAt: "2025-10-09",
     featured: true,
     readTime: "7 min read"
-  }
-);
-
-// Sept 30, 2025 – New 2028 breakthrough articles
-posts.push(
-  {
-    slug: "ai-2028-autonomous-enterprise-revolution",
-    title: "AI 2028: Autonomous Enterprise Revolution",
-    description: "KPI‑linked budgets, instant rollback, and enterprise‑scale autonomy with measurable ROI.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "12 min read"
-  },
-  {
-    slug: "ai-2028-autonomous-finops-scorecards",
-    title: "AI 2028: Autonomous FinOps Scorecards",
-    description: "Budget‑aware orchestration that cuts spend 40–70% while safeguarding UX and KPIs.",
-    category: "FinOps",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "10 min read"
   }
 );
