@@ -10,15 +10,48 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
+    slug: "genai-reliability-scorecards-2027",
+    title: "GenAI Reliability Scorecards 2027: KPIs, Budgets, Rollback",
+    description: "Live KPIs with budgeted actions and instant rollback to keep GenAI reliable and affordable.",
+    category: "AI Governance",
+    publishedAt: "2027-01-20",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-private-analytics-2027",
+    title: "Edge Private Analytics 2027: Zero‑PII Insights at <100ms",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for actionable analytics without PII.",
+    category: "Analytics",
+    publishedAt: "2027-01-22",
+=======
     slug: "ai-governance-pr-policy-tests-2027-q4",
     title: "AI Governance: PR Policy Tests Q4 2027 — Ship Fast, Stay Safe",
     description: "CI policy tests wired to KPIs to prevent regressions while preserving velocity.",
     category: "AI Governance",
     publishedAt: "2025-09-30",
+>>>>>>> origin/cursor/create-and-deploy-new-content-dbd0
     featured: true,
     readTime: "7 min read"
   },
   {
+<<<<<<< HEAD
+    slug: "genai-cache-playbook-2026",
+    title: "GenAI Cache Playbook 2026: Tiered Semantic Caches that Cut Cost 50%",
+    description: "Tiered semantic caches and routing guards that reduce cost by 50% while maintaining quality.",
+    category: "GenAI",
+    publishedAt: "2026-06-01",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-trust-scorecards-v5-2027",
+    title: "AI Trust Scorecards v5 (2027): KPIs, Budgets, Guardrails",
+    description: "Next‑gen scorecards linking SLIs to KPIs with budgeted actions, PR policy tests, and instant rollback.",
+    category: "AI Governance",
+    publishedAt: "2026-12-01",
+=======
     slug: "edge-consentless-analytics-2027",
     title: "Edge Consentless Analytics 2027: Zero‑PII Insights at <100ms",
     description: "Scoped IDs, on‑device aggregation, and DP noise for global analytics without PII.",
@@ -33,15 +66,33 @@ export const posts: BlogPost[] = [
     description: "Stabilize UX and cut costs 30–70% with semantic caches and budget‑aware routing.",
     category: "GenAI",
     publishedAt: "2025-09-30",
+>>>>>>> origin/cursor/create-and-deploy-new-content-dbd0
     featured: true,
     readTime: "9 min read"
   },
   {
+<<<<<<< HEAD
+    slug: "edge-private-evals-2026",
+    title: "Private Evals at the Edge (2026): <100ms, Zero‑PII",
+    description: "On‑device evals with scoped IDs, local aggregation, and DP noise for safe, fast feedback loops.",
+    category: "Analytics",
+    publishedAt: "2026-12-01",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "agentops-runbooks-v3-2026",
+    title: "AgentOps Runbooks v3 (2026): Approvals, Budgets, One‑Click Recovery",
+    description: "Battle‑tested operational runbooks for agents with KPI‑linked canaries and instant rollback.",
+    category: "AI Operations",
+    publishedAt: "2026-12-01",
+=======
     slug: "ai-enterprise-cost-guardrails-2026",
     title: "AI Enterprise Cost Guardrails 2026: Budgets, Tiers, Approvals",
     description: "Cost SLOs, quality tiers, and approvals that keep spend predictable without hurting quality.",
     category: "FinOps",
     publishedAt: "2025-09-30",
+>>>>>>> origin/cursor/create-and-deploy-new-content-dbd0
     featured: true,
     readTime: "8 min read"
   },
