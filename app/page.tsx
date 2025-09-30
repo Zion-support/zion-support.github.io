@@ -20,6 +20,8 @@ import September30NewContent2025Banner from '../components/September30NewContent
 import Revolutionary2026ContentMegaBanner from '../components/Revolutionary2026ContentMegaBanner';
 import UltimateContent2026MegaBanner from '../components/UltimateContent2026MegaBanner';
 import AIInnovationBreakthrough2026Banner from '../components/AIInnovationBreakthrough2026Banner';
+import AI2026RevolutionaryBreakthroughBanner from '../components/AI2026RevolutionaryBreakthroughBanner';
+import AI2027BreakthroughBanner from '../components/AI2027BreakthroughBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -101,6 +103,12 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
+      {/* 🚀 REVOLUTIONARY AI BREAKTHROUGHS 2026 */}
+      <AI2026RevolutionaryBreakthroughBanner />
+      
+      {/* 🌟 AI 2027: NEXT GENERATION BREAKTHROUGHS */}
+      <AI2027BreakthroughBanner />
+      
       {/* 🚀 LATEST CONTENT - SEPTEMBER 30, 2025 */}
       <September30NewContent2025Banner />
       
