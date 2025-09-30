@@ -1373,3 +1373,34 @@ posts.push(
   }
 );
 
+// Nov 30, 2025 – New content to advertise on homepage
+posts.push(
+  {
+    slug: "secure-retrieval-blueprint-2026",
+    title: "Secure Retrieval Blueprint 2026: Auth‑Aware, Fresh, and Under Budget",
+    description: "Hybrid search with signed configs, freshness windows, and KPI‑linked budgets for trustworthy RAG.",
+    category: "GenAI",
+    publishedAt: "2025-11-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-cost-guardrails-2026",
+    title: "AI Cost Guardrails 2026: Tiered Quality, Budgets, and Live Canaries",
+    description: "Keep spend predictable with quality tiers, cache routes, and KPI‑linked canaries that protect UX.",
+    category: "AI Operations",
+    publishedAt: "2025-11-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-insights-2026",
+    title: "Privacy‑First Insights 2026: DP Noise, Scoped IDs, On‑Device Telemetry",
+    description: "Ship analytics teams love without collecting PII—scoped identifiers, DP noise, and edge aggregation.",
+    category: "Analytics",
+    publishedAt: "2025-11-30",
+    featured: true,
+    readTime: "6 min read"
+  }
+);
+
