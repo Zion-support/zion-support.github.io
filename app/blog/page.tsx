@@ -7,6 +7,16 @@ export const metadata = {
 
 const blogPosts = [
   {
+    title: 'Real-Time Agent Routing 2026: Faster, Cheaper, More Reliable AI Ops',
+    slug: 'ai-2026-real-time-agent-routing',
+    excerpt: 'Policy-aware model/tool routing with budgets and semantic caching. Cut cost ~40% with better reliability.',
+    category: 'Agent Platforms',
+    publishedAt: 'January 20, 2026',
+    image: '🧭',
+    color: 'indigo',
+    readTime: '18 min read'
+  },
+  {
     title: 'Trustworthy Autonomous Agents 2026: Guardrails, Evals, and Policy Gates',
     slug: 'ai-trustworthy-agents-2026',
     excerpt: 'Design reliable autonomy with layered guardrails, budgeted tools, and live evaluations.',

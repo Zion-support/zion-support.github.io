@@ -165,6 +165,20 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🔔 New Article Promo: Real-Time Agent Routing 2026 */}
+      <section className="py-6 bg-gradient-to-r from-cyan-700 via-indigo-700 to-blue-700 text-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <h2 className="text-2xl md:text-3xl font-bold">
+              New: Real-Time Agent Routing 2026 — Faster, Cheaper, More Reliable
+            </h2>
+            <Link href="/blog/ai-2026-real-time-agent-routing" className="inline-flex items-center gap-2 bg-white text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
+              Read the article
+              <span>→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
       {/** September 2025 banners temporarily disabled to avoid import bloat */}
       {/* 🔔 New Article Promo: Reliable Agent Evals 2025 */}
       <section className="py-6 bg-gradient-to-r from-indigo-700 via-purple-700 to-fuchsia-700 text-white">
