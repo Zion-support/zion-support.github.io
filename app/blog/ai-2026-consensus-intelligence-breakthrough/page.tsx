@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -190,24 +189,9 @@ export default function ConsensusIntelligencePage() {
           </div>
         </article>
       </div>
-=======
-import Link from 'next/link';
-
-export default function AI2026ConsensusIntelligenceBreakthrough() {
-  return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      {/* Hero Section */}
-      <header className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="absolute inset-0 overflow-hidden opacity-20">
-          <div className="absolute top-0 left-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        </div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 mb-8">
-              <span className="text-purple-400 font-bold text-xl tracking-wider uppercase">
-                🚀 Revolutionary 2026 Breakthrough
+    </div>
+  );
+}
               </span>
             </div>
             
