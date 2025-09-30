@@ -31,6 +31,7 @@ export default function ContentHubPage() {
     {
       title: 'AI Implementation',
       articles: [
+        { title: 'Autonomous Infrastructure 2025', slug: '/blog/ai-2025-autonomous-infrastructure-blueprint', readTime: '16 min', featured: true },
         { title: 'AI Enterprise Automation 2026', slug: '/blog/ai-2026-enterprise-automation', readTime: '20 min', featured: true },
         { title: 'AI Operational Resilience 2025', slug: '/blog/ai-operational-resilience-2025', readTime: '12 min', featured: true },
         { title: 'AI Cost Calculator 2026', slug: '/blog/ai-cost-calculator-2026', readTime: '14 min', featured: true },
@@ -67,6 +68,7 @@ export default function ContentHubPage() {
     {
       title: 'AI Analytics & Value',
       articles: [
+        { title: 'Edge Experiments 2025 (Zero‑PII)', slug: '/blog/edge-2025-zero-pii-experiments', readTime: '10 min', featured: true },
         { title: 'AI Value Stream Analytics 2026', slug: '/blog/ai-value-stream-analytics-2026', readTime: '9 min', featured: true },
         { title: 'AI Trustworthy Agents 2026', slug: '/blog/ai-trustworthy-agents-2026', readTime: '11 min', featured: true },
         { title: 'AI Roadmaps 2026', slug: '/blog/ai-roadmaps-2026', readTime: '8 min', featured: false },
