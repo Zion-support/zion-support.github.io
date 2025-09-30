@@ -1,25 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { 
-  NewBlogBanner, 
-  AnalyticsPlatformBanner, 
-  TechCorpSuccessBanner,
-  WorkflowAutomationBanner,
-  AIAnalyticsBanner,
-  HealthTechSuccessBanner,
-  ComprehensiveAIBanner,
-  EnterpriseAIBanner,
-  NewContentBanner,
-  CustomerServiceAIBanner,
-  HealthcareAIBanner,
-  RetailSuccessBanner,
-  AIContentShowcaseBanner,
-  AIRevolutionBanner,
-  AutonomousAgentsBanner,
-  AIGovernanceBanner,
-  FinTechSuccessBanner,
-  NewContentShowcaseBanner
-} from '../components/PromotionalBanner';
+// Removed missing promotional banner imports
 import {
   AIEnterpriseAdoptionBanner,
   AITrends2025Banner,
@@ -50,14 +31,14 @@ import {
   AI2026ContentShowcaseBanner,
   AI2026InnovationShowcaseBanner
 } from '../components/NewContent2026MegaBanners';
->>>>>>> cursor/create-and-deploy-new-content-a5bf
+import InteractiveAIROICalculator from './components/InteractiveAIROICalculator';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
-import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
+import InteractivePromotionalSection from './components/InteractivePromotionalSection';
 import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
-import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
+import InteractiveContentShowcase2026 from './components/InteractiveContentShowcase2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -172,19 +153,7 @@ export default function HomePage() {
       <AIWorkflowAutomationBanner />
       <EnterpriseAISecurityBanner />
       
-      {/* Existing Promotional Banners */}
-      <NewContentShowcaseBanner />
-      <AutonomousAgentsBanner />
-      <AIGovernanceBanner />
-      <FinTechSuccessBanner />
-      <AIContentShowcaseBanner />
-      <CustomerServiceAIBanner />
-      <HealthcareAIBanner />
-      <RetailSuccessBanner />
-      <AIRevolutionBanner />
-      <NewBlogBanner />
-      <WorkflowAutomationBanner />
-      <AIAnalyticsBanner />
+      {/* Existing Promotional Banners - Removed missing components */}
       
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -472,7 +441,6 @@ export default function HomePage() {
               </div>
             </Link>
             <Link href="/blog/ai-trends-2025-enterprise-transformation" className="group">
->>>>>>> cursor/create-and-deploy-new-content-6423
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -656,10 +624,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Additional Promotional Banners */}
-      <AnalyticsPlatformBanner />
-      <HealthTechSuccessBanner />
-      <ComprehensiveAIBanner />
+      {/* Additional Promotional Banners - Removed missing components */}
 
       {/* CTA Section */}
       <section className="py-20 bg-white">
