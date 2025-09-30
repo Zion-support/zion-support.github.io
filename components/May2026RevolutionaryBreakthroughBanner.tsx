@@ -115,7 +115,6 @@ export default function May2026RevolutionaryBreakthroughBanner() {
               </div>
             </div>
           </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-fdff
         </div>
       </div>
     </section>
