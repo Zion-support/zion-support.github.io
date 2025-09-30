@@ -149,11 +149,12 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Autonomous Ops Guardrails + Edge Private Personalization"
-          description="Budgets, live traces, instant rollback and <100ms zero‑PII journeys with on‑device models."
+          title="New: Autonomous Infra Blueprint + Edge Private Personalization"
+          description="Self‑healing platforms with budgets + <100ms zero‑PII journeys with on‑device models."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
+            { title: "AI 2029: Autonomous Infra Blueprint", category: "AI Operations", link: "/blog/ai-2029-autonomous-infra-blueprint" },
             { title: "AI 2028: Autonomous Ops Guardrails", category: "AI Operations", link: "/blog/ai-2028-autonomous-ops-guardrails" },
             { title: "Edge 2028: Private Personalization <100ms", category: "Edge", link: "/blog/edge-2028-private-personalization" },
             { title: "Agent Red‑Teaming 2026", category: "AI Security", link: "/blog/agent-red-teaming-2026" },
