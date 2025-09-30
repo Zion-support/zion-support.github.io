@@ -719,5 +719,50 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "9 min read"
+  },
+  {
+    slug: "ai-agent-orchestration-framework-2026",
+    title: "AI Agent Orchestration Framework 2026: Coordinating Autonomous Systems at Scale",
+    description: "Build enterprise-grade orchestration layers for coordinating hundreds of autonomous AI agents with reliability, observability, and fault tolerance.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "real-time-ai-decision-systems-2026",
+    title: "Real‑Time AI Decision Systems 2026: Sub‑10ms Intelligent Actions at Scale",
+    description: "Architect low‑latency AI decision systems processing millions of decisions per second with explainability, audit trails, and safety guarantees.",
+    category: "Real-Time AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "enterprise-ai-security-frameworks-2026",
+    title: "Enterprise AI Security Frameworks 2026: Defense-in-Depth for AI Systems",
+    description: "Comprehensive security frameworks for AI systems covering model security, data protection, adversarial defense, and supply chain integrity.",
+    category: "AI Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "neuromorphic-computing-breakthrough-2026",
+    title: "Neuromorphic Computing Breakthrough 2026: Brain‑Inspired AI at 1000x Efficiency",
+    description: "Explore neuromorphic computing architectures achieving brain‑like efficiency with spiking neural networks and event‑driven computation.",
+    category: "Emerging Technology",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "13 min read"
+  },
+  {
+    slug: "ai-native-application-architecture-2026",
+    title: "AI‑Native Application Architecture 2026: Building Apps with Intelligence at the Core",
+    description: "Design applications with AI as a first‑class citizen—embedding intelligence, context awareness, and adaptive behavior into every layer.",
+    category: "Software Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "11 min read"
   }
 ];
