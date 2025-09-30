@@ -1257,6 +1257,7 @@ posts.push(
   }
 );
 
+<<<<<<< HEAD
 // Mar 2026 – Three brand-new articles to surface at the top and advertise on Home
 posts.push(
   {
@@ -1288,6 +1289,9 @@ posts.push(
   }
 );
 
+=======
+// Merge: keep unified content set
+>>>>>>> cursor/create-and-deploy-new-content-c3df
 // Sept 30, 2025 – Brand-new content to advertise on homepage (fresh trio v3)
 posts.push(
   {
@@ -2496,34 +2500,24 @@ posts.push(
   }
 );
 
-
 // Sept 30, 2025 – Additional fresh posts to expand content and promote on Home
 posts.push(
   {
-    slug: "ai-operational-scorecards-q4-2026",
-    title: "AI Operational Scorecards Q4 2026: SLIs Tied to KPIs",
-    description: "Define SLIs that map to product KPIs with budgeted actions and instant rollback.",
+    slug: "ai-operational-trust-2026-q4",
+    title: "AI Operational Trust 2026 Q4: SLIs, Budgets, Instant Rollback",
+    description: "Blueprint to tie SLIs to product KPIs with budgeted actions, live canaries, and one‑click rollback.",
     category: "AI Operations",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
   },
   {
-    slug: "edge-consentless-metrics-2026",
-    title: "Edge Consentless Metrics 2026: Actionable Insights Without PII",
-    description: "On-device aggregation, scoped IDs, and DP noise to unlock analytics without collecting PII.",
+    slug: "edge-consentless-experiments-2026-q4",
+    title: "Edge Consentless Experiments 2026 Q4: <100ms A/B Without PII",
+    description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant, global experimentation under strict SLAs.",
     category: "Analytics",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
-  },
-  {
-    slug: "genai-budget-aware-routing-2026",
-    title: "GenAI Budget‑Aware Routing 2026: Stable UX Under Cost SLAs",
-    description: "Tiered models, semantic caches, and KPI‑linked routes keeping spend predictable without regressions.",
-    category: "GenAI",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
   }
 );
