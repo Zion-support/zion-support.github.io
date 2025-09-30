@@ -468,6 +468,14 @@ featuredBlogPosts.unshift(
 // Sept 30, 2025 – Feature newly added and runtime guardrail posts (merged)
 featuredBlogPosts.unshift(
   {
+    id: "ai-2027-operational-trust-blueprint",
+    title: "AI 2027: Operational Trust Blueprint",
+    description: "SLIs wired to KPIs with budgets, canaries, and instant rollback.",
+    link: "/blog/ai-2027-operational-trust-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-exec-trust-scorecards-2026",
     title: "Executive Trust Scorecards 2026",
     description: "SLIs linked to KPIs with rollback triggers",
