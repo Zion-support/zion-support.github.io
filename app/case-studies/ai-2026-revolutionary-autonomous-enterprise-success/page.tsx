@@ -169,7 +169,7 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSuccess() {
               <ul className="space-y-2 text-gray-700">
                 <li>• 1000x processing speed improvement</li>
                 <li>• 99.9% decision accuracy</li>
-                <li>• <1ms response time</li>
+                <li>• &lt;1ms response time</li>
                 <li>• Zero-downtime operations</li>
                 <li>• Self-healing systems</li>
               </ul>
