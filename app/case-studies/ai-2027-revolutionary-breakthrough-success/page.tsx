@@ -127,7 +127,7 @@ export default function AI2027RevolutionaryBreakthroughSuccess() {
               <p className="text-gray-700 mb-4">
                 Expanded implementation across all 50+ countries and business units, achieving 95% 
                 enterprise-wide automation and $800M in additional cost savings.
-              </div>
+              </p>
               <div className="bg-purple-50 p-4 rounded-lg">
                 <strong>Global Impact:</strong> 95% enterprise automation, $800M additional savings, 
                 24/7 autonomous operations achieved.

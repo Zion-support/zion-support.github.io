@@ -1,37 +1,3 @@
-// @ts-nocheck
-import React from 'react';
-import Link from 'next/link';
-
-export default function Page() {
-  return (
-    <main className="min-h-screen bg-slate-950 text-white">
-      <section className="py-16 border-b border-white/10 bg-white/5">
-        <div className="max-w-3xl mx-auto px-4">
-          <div className="text-sm text-cyan-300 mb-2">AI Operations • 2025-09-30 • 8 min read</div>
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI Operational Trust Q4 2025: Scorecards That Prevent Regressions</h1>
-          <p className="text-white/80 text-lg">Wire SLIs to KPIs with budgets, canaries, and attested rollbacks to ship faster and safer.</p>
-        </div>
-      </section>
-
-      <section className="py-10">
-        <div className="max-w-3xl mx-auto px-4 prose prose-invert">
-          <h2>Key takeaways</h2>
-          <ul>
-            <li>Define operational scorecards tied to product outcomes</li>
-            <li>Enforce policy tests at deploy and during runtime</li>
-            <li>Automate rollbacks with attested release flows</li>
-          </ul>
-          <p>These practices build durable trust while accelerating delivery velocity.</p>
-
-          <div className="mt-10">
-            <Link href="/" className="text-cyan-300 hover:text-cyan-200 font-semibold">← Back to Home</Link>
-          </div>
-        </div>
-      </section>
-    </main>
-  );
-}
-
 import React from 'react';
 import Link from 'next/link';
 

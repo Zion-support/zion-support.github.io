@@ -1,57 +1,5 @@
-import Link from 'next/link';
-
-export const metadata = {
-  title: 'AI 2026 Quantum Neural Fusion | Zion Tech Group',
-  description: 'Revolutionary quantum-enhanced neural fusion delivering massive speedups for enterprise AI workloads.',
-  openGraph: {
-    title: 'AI 2026 Quantum Neural Fusion',
-    description: 'Harness quantum-inspired kernels and variational circuits to accelerate complex AI optimization.',
-    type: 'article',
-    url: 'https://ziontechgroup.com/blog/ai-2026-quantum-neural-fusion',
-    images: [
-      { url: '/og-ai-2026-quantum-fusion.jpg', width: 1200, height: 630, alt: 'Quantum Neural Fusion 2026' }
-    ]
-  }
-};
-
-export default function AIQuantumNeuralFusion2026() {
-  return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>
-      <h1 className="text-4xl font-bold text-gray-900 mb-3">AI 2026 Quantum Neural Fusion</h1>
-      <div className="text-gray-600 mb-8">Published: Jan 30, 2026 • 28 min read • Quantum AI</div>
-
-      <div className="prose prose-lg max-w-none">
-        <p>
-          Quantum Neural Fusion integrates quantum-inspired optimization with classical deep learning to unlock
-          dramatic speedups in search, routing, and combinatorial tasks while maintaining enterprise-grade reliability.
-        </p>
-
-        <h2>Key capabilities</h2>
-        <ul>
-          <li>Variational circuits for discrete policy selection and routing</li>
-          <li>Hybrid solvers with classical-quantum co-processing</li>
-          <li>Probabilistic guarantees with online safety checks</li>
-        </ul>
-
-        <h2>Adoption roadmap</h2>
-        <ol>
-          <li>Identify high-impact optimization workloads (scheduling, routing, retrieval)</li>
-          <li>Prototype quantum-inspired kernels behind feature flags and eval gates</li>
-          <li>Scale with KPI-linked scorecards and rollback triggers</li>
-        </ol>
-
-        <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
-          <h3 className="m-0">Explore quantum acceleration</h3>
-          <p className="m-0">Our team delivers pragmatic pilots with measurable value and clear guardrails.</p>
-          <Link href="/services" className="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded">Work With Us</Link>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 import React from 'react';
+import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
