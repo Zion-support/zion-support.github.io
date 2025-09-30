@@ -1148,6 +1148,8 @@ export const posts: BlogPost[] = [
 
 // Newly added content (auto-advertised on Home via latest sort)
 posts.push(
+  { slug: "ai-operational-trust-scorecards-2026", title: "AI Operational Trust Scorecards 2026: SLIs That Matter", description: "Define SLIs tied to product KPIs, wire budgets and rollback for trustworthy automation.", category: "AI Operations", publishedAt: "2025-09-30", featured: true, readTime: "7 min read" },
+  { slug: "edge-consentless-analytics-2026", title: "Edge Analytics 2026: Consent-Safe Insights Without PII", description: "On-device aggregation, scoped IDs, and DP noise for actionable, compliant insights.", category: "Analytics", publishedAt: "2025-09-30", featured: true, readTime: "6 min read" },
   { slug: "genai-consent-mode-edge-2026", title: "GenAI Consent Mode 2026: On-Device Signals Without PII", description: "Respect user privacy with on-device aggregation, scoped IDs, and consent-aware analytics under strict SLAs.", category: "Analytics", publishedAt: "2025-10-31", featured: true, readTime: "6 min read" },
   { slug: "ai-operational-evals-2026", title: "Operational Evals 2026: KPIs, Canaries, and Rollbacks", description: "Wire offline suites, PR checks, and live canaries to KPIs for safe, fast delivery.", category: "AI Engineering", publishedAt: "2025-09-30", featured: true, readTime: "7 min read" },
   { slug: "edge-ab-testing-2026", title: "Edge A/B Testing 2026: Private Experiments at <100ms", description: "Scoped IDs, on-device metrics, and DP noise to run compliant, latency-free experiments.", category: "Analytics", publishedAt: "2025-09-30", featured: true, readTime: "6 min read" },
