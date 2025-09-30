@@ -27,19 +27,19 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
             <Sparkles className="w-6 h-6 animate-pulse" />
             <div>
               <h3 className="font-bold text-lg">
-                🔥 New: AI 2028 Autonomous Risk Budgets · Autonomous Enterprise Revolution
+                🔥 New: Self‑Healing Platforms · Private Personalization · Eval Scorecards
               </h3>
               <p className="text-sm opacity-90">
-                Ship faster with KPI‑linked budgets, instant rollback, and enterprise‑scale autonomy
+                Read AI 2029 Self‑Healing, Edge 2028 Personalization, and GenAI 2028 Eval Scorecards
               </p>
             </div>
           </div>
           <Link
-            to="/blog"
+            to="/blog/ai-2029-self-healing-platforms"
             className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0"
           >
             <TrendingUp className="w-4 h-4" />
-            Explore Now
+            Read Now
           </Link>
         </div>
       </div>

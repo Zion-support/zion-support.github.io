@@ -19,6 +19,33 @@ export const posts: BlogPost[] = [
     readTime: "9 min read"
   },
   {
+    slug: "ai-2029-self-healing-platforms",
+    title: "AI 2029: Self‑Healing Platforms — Auto‑Contain in <60s",
+    description: "Policy‑tested playbooks, budgeted actions, and live canaries that auto‑contain incidents in under a minute.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-2028-private-personalization",
+    title: "Edge 2028: Private Personalization at <100ms",
+    description: "Scoped IDs, on‑device models, and DP noise enabling zero‑PII personalization worldwide under 100ms.",
+    category: "Edge",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "genai-2028-eval-scorecards",
+    title: "GenAI 2028: Eval Scorecards — KPIs you can trust",
+    description: "Signed attestations, golden tasks, and budget‑linked guardrails for reliable GenAI in production.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "verifiable-edge-analytics-2026",
     title: "Verifiable Edge Analytics 2026: Zero‑PII Insights with Attestations",
     description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms.",
