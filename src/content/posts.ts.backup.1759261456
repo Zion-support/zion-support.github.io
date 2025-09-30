@@ -10,6 +10,12 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
+    slug: "ai-2025-oct-02-autonomous-customer-service-playbook",
+    title: "Autonomous Customer Service 2025: 60s Resolutions, 30% Cost Down",
+    description:
+      "Design agent workflows with safe tools, KPI-tied evals, and rollback runbooks to resolve support in under a minute.",
+=======
     slug: "ai-2025-september-30-new-governed-agent-patterns",
     title: "New Governed Agent Patterns (2025)",
     description: "Policy-first orchestration with approvals, verifiers, budgets, and rollback for safe autonomy.",
@@ -377,6 +383,7 @@ export const posts: BlogPost[] = [
     slug: "ai-2027-cost-optimization-playbook",
     title: "AI 2027 Cost Optimization Playbook: Quality Tiers + Caches",
     description: "Deterministic tiering, semantic caches, and policy tests to cut spend 40–70% while keeping UX stable.",
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4ea2
     category: "AI Operations",
     publishedAt: "2025-10-02",
     featured: true,

@@ -2,6 +2,13 @@
 
 const promoted = [
   {
+<<<<<<< HEAD
+    href: '/blog/ai-operational-trust-q4-2025',
+    title: 'AI Operational Trust Q4 2025',
+    desc: 'Scorecards, budgets, and attested rollbacks that prevent regressions and speed delivery.',
+    emoji: '🧭',
+    pill: 'Fresh • Sep 30, 2025',
+=======
     href: '/blog/ai-2025-september-30-new-governed-agent-patterns',
     title: 'New Governed Agent Patterns',
     desc: 'Approvals, verifiers, budgets, and rollback for safe autonomy.',
@@ -15,6 +22,7 @@ const promoted = [
     desc: 'KPI-linked budgets and routing that prevent cost regressions.',
     emoji: '📊',
     pill: 'New • Sep 30, 2025',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4ea2
     theme: 'from-emerald-600 to-teal-600',
   },
   {
@@ -56,6 +64,41 @@ const promoted = [
     emoji: '🧠',
     pill: 'New • Jan 30, 2026',
     theme: 'from-fuchsia-600 to-purple-600',
+<<<<<<< HEAD
+  },
+  {
+    href: '/blog/ai-2026-quantum-neural-fusion',
+    title: 'Quantum Neural Fusion 2026',
+    desc: 'Quantum-inspired optimization fused with deep learning for massive speedups in complex tasks.',
+    emoji: '⚛️',
+    pill: 'New • Jan 30, 2026',
+    theme: 'from-indigo-600 to-blue-600',
+  },
+  {
+    href: '/blog/ai-2026-federated-learning-enterprise-breakthrough',
+    title: 'Federated Learning 2026',
+    desc: 'Privacy-first enterprise AI training across distributed data without centralizing sensitive information.',
+    emoji: '🔐',
+    pill: 'New • Jan 15, 2026',
+    theme: 'from-emerald-600 to-teal-600',
+  },
+  {
+    href: '/blog/ai-2026-quantum-enhanced-analytics',
+    title: 'Quantum-Enhanced Analytics 2026',
+    desc: 'Leverage quantum computing for analytics achieving 1000x speedup in complex data processing.',
+    emoji: '⚛️',
+    pill: 'New • Jan 15, 2026',
+    theme: 'from-cyan-600 to-blue-600',
+  },
+  {
+    href: '/services/ai-autonomous-infrastructure-platform',
+    title: 'AI Autonomous Infrastructure',
+    desc: '99.99% uptime with self-healing, self-optimizing infrastructure and zero manual intervention.',
+    emoji: '🏗️',
+    pill: 'New Service • Jan 15, 2026',
+    theme: 'from-orange-600 to-red-600',
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4ea2
   },
 ];
 
