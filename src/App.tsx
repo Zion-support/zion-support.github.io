@@ -1,4 +1,4 @@
-import React, { Suspense, useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { AppRouter } from './router';
 
 // import { resourcePreloader } from './utils/resourcePreloader';
@@ -13,11 +13,12 @@ import { performanceMonitor } from './utils/performanceMonitor';
 import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
 import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
 import SEOOptimizer from './components/SEOOptimizer';
-const AdvancedAnalytics: React.FC<{ enableConversionTracking?: boolean; enablePerformanceTracking?: boolean; enableErrorTracking?: boolean; }> = () => null;
-const PerformanceOptimizer: React.FC<{ isVisible?: boolean; onClose?: () => void; }> = () => null;
-const PerformanceMonitor: React.FC<{ showDashboard?: boolean; }> = () => null;
-const EnhancedErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
-const NotificationSystem: React.FC<{ notifications: any[]; onRemove: (id: string) => void; }> = () => null;
+import type { Notification as UILibraryNotification } from './components/NotificationSystem';
+import AdvancedAnalytics from './components/AdvancedAnalytics';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import NotificationSystem, { Notification as UINotification } from './components/NotificationSystem';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 
 // Local stub to avoid type errors when optional performance init is not present
 const initializePerformanceEnhancements = (): void => {};
@@ -48,12 +49,12 @@ const WebsiteEnhancements = (props: any) => <Placeholder name="WebsiteEnhancemen
 export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [notifications, setNotifications] = useState<import('./components/NotificationSystem').Notification[]>([]);
+  const [notifications, setNotifications] = useState<UILibraryNotification[]>([]);
 
-  const seoDataForOptimizer = useMemo(() => ({
+  const seoDataForOptimizer: SEOData = useMemo(() => ({
     title: 'Zion Tech Group - Leading AI & Technology Solutions',
     description: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
-    canonicalUrl: typeof window !== 'undefined' ? window.location.pathname : '/',
+    canonical: typeof window !== 'undefined' ? window.location.href : 'https://zion.app/',
   }), []);
 
   // Simple hotkeys for demo toggles
@@ -77,9 +78,9 @@ export default function App(): React.JSX.Element {
           (enhancedSecurityManager as any).initialize();
         }
       
-      // Initialize new performance and accessibility enhancements
-      initializePerformanceEnhancements();
-      accessibilityEnhancer.initialize();
+        // Initialize new performance and accessibility enhancements
+        initializePerformanceEnhancements();
+        accessibilityEnhancer.initialize();
       
       // Initialize advanced optimizers
       // Guard optional advanced systems if present in global scope
@@ -139,11 +140,7 @@ export default function App(): React.JSX.Element {
 
   return (
     <EnhancedErrorBoundary>
-      <SEOOptimizer
-        title={seoDataForOptimizer.title}
-        description={seoDataForOptimizer.description}
-        canonicalUrl={new URL(seoDataForOptimizer.canonical).pathname}
-      />
+      <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonicalUrl} />
       <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AppRouter />
