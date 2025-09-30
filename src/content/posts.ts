@@ -9,6 +9,37 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
+  // Sept 30, 2025 — Newly added content (featured)
+  {
+    slug: "ai-2025-sept-30-operational-trust-scorecards-v2",
+    title: "Operational Trust Scorecards v2 — From SLIs to Business KPIs",
+    description:
+      "Update your scorecards with live canaries, budgeted actions, and rollback hooks that prevent regressions.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-2025-sept-30-consentless-journeys-v2",
+    title: "Consentless Journeys v2 — Personalization <100ms, Zero‑PII",
+    description:
+      "Scoped IDs, on‑device models, and DP noise for compliant, real‑time journeys at global scale.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "genai-2025-sept-30-runtime-rollback-v3",
+    title: "Runtime Rollback v3 — Deterministic Safeguards for GenAI",
+    description:
+      "Signed outputs, policy‑tested fallbacks, and KPI‑linked rollback that contain incidents in seconds.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
   {
     slug: "ai-2025-sept-30-governance-live-scorecards",
     title: "AI Governance Live Scorecards — Ship Weekly Without Regressions",
