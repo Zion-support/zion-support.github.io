@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { 
   NewBlogBanner, 
   AnalyticsPlatformBanner, 
@@ -32,6 +33,9 @@ import {
   EnterpriseAISecurityBanner
 } from '../components/NewContentPromotionalBanners';
 import ContentShowcase from '../components/ContentShowcase';
+import FeaturedServiceCard from '../components/FeaturedServiceCard';
+import SuccessStory from '../components/SuccessStory';
+import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -83,13 +87,13 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              to="/services"
+              href="/services"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore Our Services
             </Link>
             <a
-              to="tel:+13024640950"
+              href="tel:+13024640950"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
               Call +1 302 464 0950
@@ -134,7 +138,7 @@ export default function HomePage() {
               description="Transform data into actionable insights with predictive modeling and real-time dashboards"
               price="$199/month"
               features={['Predictive Analytics', 'Real-time Dashboards', 'Data Integration']}
-              to="/services/ai-data-analytics"
+              href="/services/ai-data-analytics"
               popular={true}
             />
             <FeaturedServiceCard
@@ -142,7 +146,7 @@ export default function HomePage() {
               description="Automate business processes with intelligent workflow design and smart triggers"
               price="$149/month"
               features={['Process Automation', 'Smart Triggers', 'Performance Monitoring']}
-              to="/services/ai-workflow-automation"
+              href="/services/ai-workflow-automation"
               popular={false}
             />
             <FeaturedServiceCard
@@ -150,7 +154,7 @@ export default function HomePage() {
               description="24/7 intelligent customer support with natural language processing"
               price="$99/month"
               features={['24/7 Support', 'Multi-channel', 'Personalized Responses']}
-              to="/services/ai-virtual-assistant"
+              href="/services/ai-virtual-assistant"
               popular={false}
             />
             <FeaturedServiceCard
@@ -158,7 +162,7 @@ export default function HomePage() {
               description="Seamless migration to cloud infrastructure with zero downtime"
               price="$2,999"
               features={['Zero Downtime', 'Security Compliance', 'Cost Optimization']}
-              to="/services/cloud-migration"
+              href="/services/cloud-migration"
               popular={false}
             />
             <FeaturedServiceCard
@@ -166,7 +170,7 @@ export default function HomePage() {
               description="Automate CI/CD pipelines and infrastructure management"
               price="$399/month"
               features={['CI/CD Pipelines', 'Infrastructure as Code', 'Auto-scaling']}
-              to="/services/devops-automation"
+              href="/services/devops-automation"
               popular={false}
             />
             <FeaturedServiceCard
@@ -174,7 +178,7 @@ export default function HomePage() {
               description="Advanced threat detection and zero-trust security architecture"
               price="$599/month"
               features={['Threat Detection', 'Zero-trust Architecture', 'Compliance']}
-              to="/services/cybersecurity-consulting"
+              href="/services/cybersecurity-consulting"
               popular={false}
             />
             <FeaturedServiceCard
@@ -182,7 +186,7 @@ export default function HomePage() {
               description="Real-time AI processing at the edge with sub-50ms response times"
               price="$799/month"
               features={['Sub-50ms Latency', 'Edge Intelligence', 'Offline Capability']}
-              to="/services/ai-edge-computing"
+              href="/services/ai-edge-computing"
               popular={false}
             />
             <FeaturedServiceCard
@@ -190,12 +194,15 @@ export default function HomePage() {
               description="Automate financial processes with 95% accuracy and $3M+ savings"
               price="$1,299/month"
               features={['95% Automation', 'Fraud Detection', 'Real-time Reporting']}
-              to="/services/ai-finance-automation"
+              href="/services/ai-finance-automation"
               popular={false}
             />
           </div>
         </div>
       </section>
+
+      {/* Interactive Promotional Section */}
+      <InteractivePromotionalSection />
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
@@ -230,7 +237,7 @@ export default function HomePage() {
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-500">Published Jan 20, 2025</div>
                 <Link
-                  to="/blog/ai-edge-computing-2025"
+                  href="/blog/ai-edge-computing-2025"
                   className="text-cyan-600 font-semibold hover:text-cyan-700 transition-colors"
                 >
                   Read More →
@@ -255,7 +262,7 @@ export default function HomePage() {
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-500">Published Jan 20, 2025</div>
                 <Link
-                  to="/blog/ai-cybersecurity-2025"
+                  href="/blog/ai-cybersecurity-2025"
                   className="text-red-600 font-semibold hover:text-red-700 transition-colors"
                 >
                   Read More →
@@ -280,7 +287,7 @@ export default function HomePage() {
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-500">Published Jan 20, 2025</div>
                 <Link
-                  to="/case-studies/ai-finance-automation"
+                  href="/case-studies/ai-finance-automation"
                   className="text-green-600 font-semibold hover:text-green-700 transition-colors"
                 >
                   Read More →
@@ -291,7 +298,7 @@ export default function HomePage() {
 
           <div className="text-center">
             <Link
-              to="/blog"
+              href="/blog"
               className="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore All Innovations
@@ -313,7 +320,7 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link to="/blog/ai-enterprise-adoption-2025" className="group">
+            <Link href="/blog/ai-enterprise-adoption-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -332,7 +339,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/blog/ai-trends-2025-predictions" className="group">
+            <Link href="/blog/ai-trends-2025-predictions" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -351,7 +358,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/case-studies/ai-supply-chain-optimization-2025" className="group">
+            <Link href="/case-studies/ai-supply-chain-optimization-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -370,7 +377,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/blog/ai-autonomous-agents-2025" className="group">
+            <Link href="/blog/ai-autonomous-agents-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -389,7 +396,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/blog/ai-governance-framework-2025" className="group">
+            <Link href="/blog/ai-governance-framework-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -408,7 +415,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/case-studies/fintech-ai-risk-compliance-2025" className="group">
+            <Link href="/case-studies/fintech-ai-risk-compliance-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -427,7 +434,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/blog/llm-cost-optimization-2025" className="group">
+            <Link href="/blog/llm-cost-optimization-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -446,7 +453,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/blog/edge-llm-latency-patterns" className="group">
+            <Link href="/blog/edge-llm-latency-patterns" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -465,7 +472,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/blog/genai-guardrails-2025" className="group">
+            <Link href="/blog/genai-guardrails-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -484,7 +491,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/blog/ai-revolution-2025" className="group">
+            <Link href="/blog/ai-revolution-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -504,7 +511,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/blog/ai-agents-in-the-enterprise-2025" className="group">
+            <Link href="/blog/ai-agents-in-the-enterprise-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -524,7 +531,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/case-studies/techcorp-ai-transformation" className="group">
+            <Link href="/case-studies/techcorp-ai-transformation" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -544,7 +551,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/case-studies/finserve-genai-risk-mitigation" className="group">
+            <Link href="/case-studies/finserve-genai-risk-mitigation" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -564,7 +571,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/blog/ai-customer-service-2025" className="group">
+            <Link href="/blog/ai-customer-service-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -584,7 +591,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/blog/ai-healthcare-transformation-2025" className="group">
+            <Link href="/blog/ai-healthcare-transformation-2025" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -604,7 +611,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link to="/case-studies/retail-ai-transformation" className="group">
+            <Link href="/case-studies/retail-ai-transformation" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -739,7 +746,7 @@ export default function HomePage() {
               </div>
               <div className="mt-6 pt-4 border-t border-white/20">
                 <Link
-                  to="/blog"
+                  href="/blog"
                   className="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
                 >
                   View All Content →
@@ -766,13 +773,13 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              to="tel:+13024640950"
+              href="tel:+13024640950"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg"
             >
               Call +1 302 464 0950
             </a>
             <a
-              to="mailto:kleber@ziontechgroup.com"
+              href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
             >
               Get Free Consultation
