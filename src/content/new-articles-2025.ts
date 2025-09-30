@@ -219,6 +219,43 @@ newArticles2025.push(
   }
 );
 
+// Sept 30, 2025 – Brand-new items to advertise prominently on Home
+newArticles2025.push(
+  {
+    id: "ai-2029-self-healing-platforms",
+    title: "🛠️ AI 2029: Self‑Healing Platforms — Autonomic Recovery",
+    description: "Budgeted actions and live canaries that auto‑contain incidents in under 60s.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2029-self-healing-platforms",
+    readTime: "8 min read",
+    tags: ["Self‑Healing", "Runbooks", "Rollback"]
+  },
+  {
+    id: "edge-2028-private-personalization",
+    title: "⚡ Edge 2028: Private Personalization <100ms",
+    description: "Scoped IDs, signed configs, and on‑device models for zero‑PII personalization.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-2028-private-personalization",
+    readTime: "7 min read",
+    tags: ["Edge", "Privacy", "Personalization"]
+  },
+  {
+    id: "genai-2028-eval-scorecards",
+    title: "📊 GenAI 2028: Eval Scorecards — KPIs, Budgets, Rollback",
+    description: "KPI‑linked evals and budget‑aware routing that keep quality high without regressions.",
+    category: "GenAI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/genai-2028-eval-scorecards",
+    readTime: "8 min read",
+    tags: ["Evals", "Scorecards", "Budgets"]
+  }
+);
+
 // Jan 15, 2026 – Fresh featured items to surface on Home
 newArticles2025.push(
   {

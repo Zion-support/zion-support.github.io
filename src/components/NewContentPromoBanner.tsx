@@ -146,6 +146,40 @@ const NewContentPromoBanner: React.FC = () => {
       featured: true,
       trending: true
     }
+    ,
+    {
+      title: "AI 2029: Self‑Healing Platforms",
+      description: "Budgeted actions and live canaries that auto‑contain incidents in under 60s.",
+      slug: "ai-2029-self-healing-platforms",
+      category: "AI Operations",
+      icon: "🛠️",
+      impact: "Auto‑Rollback",
+      savings: "<60s MTTR",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "Edge 2028: Private Personalization",
+      description: "Scoped IDs, signed configs, and on‑device models — zero‑PII at <100ms.",
+      slug: "edge-2028-private-personalization",
+      category: "Edge Computing",
+      icon: "⚡",
+      impact: "Zero PII",
+      savings: "<100ms",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "GenAI 2028: Eval Scorecards",
+      description: "KPI‑linked evals and budget‑aware routing that prevent regressions.",
+      slug: "genai-2028-eval-scorecards",
+      category: "GenAI",
+      icon: "📊",
+      impact: "Stable Quality",
+      savings: "On‑Budget",
+      featured: true,
+      trending: true
+    }
   ];
 
   return (
