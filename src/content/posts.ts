@@ -10,6 +10,51 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-unified-observability-platform-2025",
+    title: "Unified AI Observability Platform: Complete Stack Visibility in 2025",
+    description: "Master end-to-end AI observability with distributed tracing, real-time metrics, and intelligent alerting. Achieve 99.9% system reliability with unified monitoring across your entire AI stack.",
+    category: "AI Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "18 min read"
+  },
+  {
+    slug: "ai-model-governance-compliance-2025",
+    title: "AI Model Governance & Compliance 2025: Enterprise Frameworks",
+    description: "Implement comprehensive AI governance achieving 100% regulatory compliance with EU AI Act, GDPR, and SOC 2. Learn model versioning, bias detection, and automated compliance reporting.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "22 min read"
+  },
+  {
+    slug: "ai-edge-inference-optimization-2025",
+    title: "Edge AI Inference Optimization: 1000x Performance Gains",
+    description: "Achieve sub-10ms inference at the edge with model quantization, pruning, and neuromorphic computing. Deploy AI on resource-constrained devices with 1000x better energy efficiency.",
+    category: "Edge AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "20 min read"
+  },
+  {
+    slug: "ai-data-pipeline-automation-2025",
+    title: "Autonomous AI Data Pipelines: Self-Healing Infrastructure",
+    description: "Build self-managing data pipelines with AI-powered anomaly detection, automatic schema evolution, and intelligent data quality validation. Achieve 99.99% pipeline reliability.",
+    category: "MLOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "19 min read"
+  },
+  {
+    slug: "ai-security-threat-detection-2025",
+    title: "AI-Powered Security: Real-Time Threat Detection & Response",
+    description: "Deploy autonomous security operations with AI achieving sub-30s incident response, 99.8% threat detection accuracy, and zero-trust architecture. Prevent breaches before they happen.",
+    category: "AI Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "21 min read"
+  },
+  {
     slug: "ai-e2e-tracing-2025",
     title: "E2E AI Tracing: From Prompt to Outcome KPIs",
     description: "Connect prompts, tools, and UX to measurable KPIs to prove ROI and prevent regressions.",

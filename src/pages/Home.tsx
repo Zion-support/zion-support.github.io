@@ -115,201 +115,7 @@ const Home = () => {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
-<<<<<<< HEAD
-        {/* 🚨 MEGA ANNOUNCEMENT: NEW SERVICES, WHITEPAPERS & CONTENT - September 30, 2025 */}
-        <div className="bg-gradient-to-r from-red-600 via-orange-600 to-yellow-500 border-b-8 border-white shadow-2xl animate-pulse">
-          <div className="container mx-auto px-6 py-16">
-            <div className="text-center">
-              <div className="inline-flex items-center gap-6 px-16 py-6 rounded-full bg-white border-8 border-yellow-300 mb-12 shadow-2xl animate-bounce">
-                <Rocket className="w-16 h-16 text-red-600 animate-bounce" />
-                <span className="text-gray-900 font-black text-5xl tracking-wider uppercase">
-                  🚨 MASSIVE LAUNCH: 12 NEW SERVICES + 12 WHITEPAPERS + 100+ ARTICLES! 🚨
-                </span>
-                <Sparkles className="w-16 h-16 text-orange-600 animate-spin" />
-              </div>
-              <h2 className="text-8xl md:text-9xl font-black text-white mb-10 drop-shadow-2xl">
-                The Biggest Product Launch of 2025!
-              </h2>
-              <p className="text-5xl md:text-6xl text-yellow-100 font-black mb-12 max-w-7xl mx-auto leading-tight">
-                💥 12 Revolutionary AI Services • 12 Premium Whitepapers • 100+ Expert Articles • 10 Case Studies
-              </p>
-              
-              {/* New Services Grid */}
-              <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 mb-8 border-4 border-white/40">
-                <h3 className="text-4xl font-black text-white mb-6">🚀 12 BRAND NEW AI SERVICES JUST LAUNCHED</h3>
-                <div className="grid md:grid-cols-4 gap-4 mb-6">
-                  <div className="bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl p-5 border-4 border-white hover:scale-110 transition-all">
-                    <div className="text-5xl mb-2">🤖</div>
-                    <div className="text-white font-bold">AI Copilot Platform</div>
-                    <div className="text-blue-100 text-sm mt-1">10x Dev Productivity</div>
-                  </div>
-                  <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-5 border-4 border-white hover:scale-110 transition-all">
-                    <div className="text-5xl mb-2">⚛️</div>
-                    <div className="text-white font-bold">Quantum Optimization</div>
-                    <div className="text-purple-100 text-sm mt-1">1000x Speedup</div>
-                  </div>
-                  <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl p-5 border-4 border-white hover:scale-110 transition-all">
-                    <div className="text-5xl mb-2">🧠</div>
-                    <div className="text-white font-bold">Neuromorphic Edge AI</div>
-                    <div className="text-green-100 text-sm mt-1">10,000x Efficiency</div>
-                  </div>
-                  <div className="bg-gradient-to-br from-red-500 to-orange-500 rounded-xl p-5 border-4 border-white hover:scale-110 transition-all">
-                    <div className="text-5xl mb-2">🛡️</div>
-                    <div className="text-white font-bold">AI Security Ops</div>
-                    <div className="text-red-100 text-sm mt-1">Sub-30s Response</div>
-                  </div>
-                </div>
-                <Link
-                  to="/services"
-                  className="bg-white text-red-600 px-12 py-5 rounded-2xl font-black text-3xl hover:bg-yellow-50 transition-all duration-300 hover:scale-110 shadow-2xl inline-flex items-center gap-4 border-4 border-red-600"
-                >
-                  <Star className="w-10 h-10" />
-                  <span>Explore All 12 New Services</span>
-                  <ArrowRight className="w-10 h-10" />
-                </Link>
-              </div>
-              
-              {/* Whitepapers Section */}
-              <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 mb-8 border-4 border-white/40">
-                <h3 className="text-4xl font-black text-white mb-6">📚 12 PREMIUM WHITEPAPERS AVAILABLE NOW</h3>
-                <div className="grid md:grid-cols-3 gap-4 mb-6">
-                  <div className="bg-white/20 rounded-xl p-5 border-2 border-yellow-300 hover:scale-105 transition-all">
-                    <div className="text-3xl mb-2">📖</div>
-                    <div className="text-white font-bold text-sm">Autonomous AI Infrastructure</div>
-                    <div className="text-yellow-100 text-xs mt-1">150 pages • 12,547 downloads</div>
-                  </div>
-                  <div className="bg-white/20 rounded-xl p-5 border-2 border-yellow-300 hover:scale-105 transition-all">
-                    <div className="text-3xl mb-2">📖</div>
-                    <div className="text-white font-bold text-sm">Quantum Computing ROI</div>
-                    <div className="text-yellow-100 text-xs mt-1">89 pages • 8,932 downloads</div>
-                  </div>
-                  <div className="bg-white/20 rounded-xl p-5 border-2 border-yellow-300 hover:scale-105 transition-all">
-                    <div className="text-3xl mb-2">📖</div>
-                    <div className="text-white font-bold text-sm">AI Security Playbook</div>
-                    <div className="text-yellow-100 text-xs mt-1">200 pages • 15,623 downloads</div>
-                  </div>
-                </div>
-                <Link
-                  to="/resources"
-                  className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-12 py-5 rounded-2xl font-black text-3xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 hover:scale-110 shadow-2xl inline-flex items-center gap-4 border-4 border-white"
-                >
-                  <Award className="w-10 h-10" />
-                  <span>Download All Whitepapers FREE</span>
-                  <ArrowRight className="w-10 h-10" />
-                </Link>
-              </div>
-              
-              {/* Articles & Case Studies */}
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-gradient-to-br from-indigo-600 to-purple-700 rounded-3xl p-8 border-4 border-white/60">
-                  <h3 className="text-3xl font-black text-white mb-4">✨ 100+ NEW ARTICLES</h3>
-                  <p className="text-xl text-white mb-6">Revolutionary insights on AI, ML, Quantum Computing & more</p>
-                  <Link
-                    to="/blog"
-                    className="bg-white text-indigo-700 px-8 py-4 rounded-xl font-bold text-xl hover:bg-indigo-50 transition-all hover:scale-105 inline-flex items-center gap-3"
-                  >
-                    <span>Read Articles</span>
-                    <ArrowRight className="w-6 h-6" />
-                  </Link>
-                </div>
-                <div className="bg-gradient-to-br from-pink-600 to-rose-700 rounded-3xl p-8 border-4 border-white/60">
-                  <h3 className="text-3xl font-black text-white mb-4">💼 10 NEW CASE STUDIES</h3>
-                  <p className="text-xl text-white mb-6">Real results: $500M+ savings, 99.9% accuracy, 1000x speedups</p>
-                  <Link
-                    to="/case-studies"
-                    className="bg-white text-pink-700 px-8 py-4 rounded-xl font-bold text-xl hover:bg-pink-50 transition-all hover:scale-105 inline-flex items-center gap-3"
-                  >
-                    <span>View Case Studies</span>
-                    <ArrowRight className="w-6 h-6" />
-                  </Link>
-                </div>
-              </div>
-              
-              {/* Main CTAs */}
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Link
-                  to="/contact"
-                  className="bg-white text-red-600 px-16 py-7 rounded-2xl font-black text-4xl hover:bg-yellow-50 transition-all duration-300 hover:scale-110 shadow-2xl inline-flex items-center gap-4 border-8 border-white"
-                >
-                  <Zap className="w-14 h-14 animate-pulse" />
-                  <span>Get Started Today</span>
-                  <Target className="w-14 h-14" />
-                </Link>
-                <Link
-                  to="/demo"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-16 py-7 rounded-2xl font-black text-4xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:scale-110 shadow-2xl inline-flex items-center gap-4 border-8 border-white"
-                >
-                  <Rocket className="w-14 h-14 animate-bounce" />
-                  <span>Book Free Demo</span>
-                  <ArrowRight className="w-14 h-14" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* 🔥 BREAKING: 5 NEW REVOLUTIONARY ARTICLES - September 30, 2025 */}
-        <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 border-b-4 border-yellow-400/70 shadow-2xl">
-          <div className="container mx-auto px-6 py-12">
-            <div className="text-center">
-              <div className="inline-flex items-center gap-4 px-12 py-5 rounded-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 border-4 border-white/60 mb-10 shadow-2xl animate-bounce">
-                <Sparkles className="w-10 h-10 text-white animate-spin" />
-                <span className="text-gray-900 font-black text-3xl tracking-wider uppercase">
-                  🔥 BREAKING: 5 REVOLUTIONARY NEW ARTICLES JUST PUBLISHED! 🔥
-                </span>
-                <Sparkles className="w-10 h-10 text-white animate-spin" />
-              </div>
-              <h2 className="text-7xl md:text-8xl font-black text-white mb-8 drop-shadow-2xl animate-pulse">
-                The Future of AI is Here NOW!
-              </h2>
-              <p className="text-4xl md:text-5xl text-yellow-200 font-bold mb-10 max-w-6xl mx-auto leading-tight">
-                💥 5 Game-Changing Breakthroughs You Can't Miss!
-              </p>
-              <div className="grid md:grid-cols-5 gap-6 mb-10 max-w-7xl mx-auto">
-                <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border-2 border-yellow-400/70 hover:scale-110 transition-all hover:bg-white/30">
-                  <div className="text-5xl mb-3">⚖️</div>
-                  <div className="text-white font-bold text-base">AI Legal Analysis</div>
-                  <div className="text-yellow-200 text-xs mt-2">10x faster research, 99% accuracy</div>
-                </div>
-                <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border-2 border-yellow-400/70 hover:scale-110 transition-all hover:bg-white/30">
-                  <div className="text-5xl mb-3">🌐</div>
-                  <div className="text-white font-bold text-base">Federated AI Governance</div>
-                  <div className="text-yellow-200 text-xs mt-2">Zero-trust distributed intelligence</div>
-                </div>
-                <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border-2 border-yellow-400/70 hover:scale-110 transition-all hover:bg-white/30">
-                  <div className="text-5xl mb-3">🧬</div>
-                  <div className="text-white font-bold text-base">Self-Evolving Models</div>
-                  <div className="text-yellow-200 text-xs mt-2">95% improvement, zero human input</div>
-                </div>
-                <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border-2 border-yellow-400/70 hover:scale-110 transition-all hover:bg-white/30">
-                  <div className="text-5xl mb-3">🔐</div>
-                  <div className="text-white font-bold text-base">DevSecOps AI</div>
-                  <div className="text-yellow-200 text-xs mt-2">99.9% accuracy at commit time</div>
-                </div>
-                <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border-2 border-yellow-400/70 hover:scale-110 transition-all hover:bg-white/30">
-                  <div className="text-5xl mb-3">🎯</div>
-                  <div className="text-white font-bold text-base">Holographic AI</div>
-                  <div className="text-yellow-200 text-xs mt-2">10x productivity with spatial AI</div>
-                </div>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Link
-                  to="/blog"
-                  className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-gray-900 px-14 py-7 rounded-2xl font-black text-4xl hover:from-yellow-500 hover:via-orange-600 hover:to-red-600 transition-all duration-300 hover:scale-110 shadow-2xl inline-flex items-center gap-4 border-4 border-white"
-                >
-                  <Rocket className="w-12 h-12 animate-bounce" />
-                  <span>Read All 5 NOW</span>
-                  <ArrowRight className="w-12 h-12" />
-                </Link>
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-green-400 via-emerald-500 to-teal-500 text-gray-900 px-14 py-7 rounded-2xl font-black text-4xl hover:from-green-500 hover:via-emerald-600 hover:to-teal-600 transition-all duration-300 hover:scale-110 shadow-2xl inline-flex items-center gap-4 border-4 border-white"
-                >
-                  <Target className="w-12 h-12 animate-pulse" />
-                  <span>Get Expert Help</span>
-                  <TrendingUp className="w-12 h-12" />
-=======
-        {/* 🔥 LATEST: 5 NEW ARTICLES + 3 CASE STUDIES - September 30, 2025 */}
+        {/* 🚨 MEGA ANNOUNCEMENT: NEW CONTENT RELEASE - September 30, 2025 */}
         <div className="bg-gradient-to-r from-emerald-900 via-teal-900 to-cyan-900 border-b-4 border-yellow-400/50 shadow-2xl">
           <div className="container mx-auto px-6 py-12">
             <div className="text-center">
@@ -324,53 +130,85 @@ const Home = () => {
                 Revolutionary AI Content Just Dropped!
               </h2>
               <p className="text-3xl md:text-4xl text-emerald-200 font-bold mb-8 max-w-5xl mx-auto leading-tight">
-                💥 5 Game-Changing Articles + 3 High-ROI Case Studies
+                💥 5 Revolutionary Articles + 3 Billion-Dollar Case Studies + 3 Premium Whitepapers
               </p>
               <div className="grid md:grid-cols-5 gap-4 mb-8 max-w-6xl mx-auto">
                 <div className="bg-white/20 backdrop-blur-lg rounded-xl p-4 border-2 border-emerald-400/60 hover:scale-110 transition-all">
-                  <div className="text-4xl mb-2">💰</div>
-                  <div className="text-white font-bold text-sm">AI Cost Optimization</div>
-                  <div className="text-emerald-200 text-xs mt-1">Save 60-80% on infrastructure</div>
+                  <div className="text-4xl mb-2">🔍</div>
+                  <div className="text-white font-bold text-sm">AI Observability</div>
+                  <div className="text-emerald-200 text-xs mt-1">Complete stack visibility</div>
                 </div>
                 <div className="bg-white/20 backdrop-blur-lg rounded-xl p-4 border-2 border-emerald-400/60 hover:scale-110 transition-all">
-                  <div className="text-4xl mb-2">🕸️</div>
-                  <div className="text-white font-bold text-sm">Agent Mesh Networks</div>
-                  <div className="text-emerald-200 text-xs mt-1">10,000+ coordinated agents</div>
+                  <div className="text-4xl mb-2">⚡</div>
+                  <div className="text-white font-bold text-sm">Edge AI Optimization</div>
+                  <div className="text-emerald-200 text-xs mt-1">1000x performance gains</div>
                 </div>
                 <div className="bg-white/20 backdrop-blur-lg rounded-xl p-4 border-2 border-emerald-400/60 hover:scale-110 transition-all">
-                  <div className="text-4xl mb-2">👁️</div>
-                  <div className="text-white font-bold text-sm">Vision-Language-Action</div>
-                  <div className="text-emerald-200 text-xs mt-1">AI that sees, understands & acts</div>
+                  <div className="text-4xl mb-2">🛡️</div>
+                  <div className="text-white font-bold text-sm">AI Security</div>
+                  <div className="text-emerald-200 text-xs mt-1">Sub-30s threat response</div>
+                </div>
+                <div className="bg-white/20 backdrop-blur-lg rounded-xl p-4 border-2 border-emerald-400/60 hover:scale-110 transition-all">
+                  <div className="text-4xl mb-2">📊</div>
+                  <div className="text-white font-bold text-sm">Data Pipelines</div>
+                  <div className="text-emerald-200 text-xs mt-1">Self-healing infrastructure</div>
                 </div>
                 <div className="bg-white/20 backdrop-blur-lg rounded-xl p-4 border-2 border-emerald-400/60 hover:scale-110 transition-all">
                   <div className="text-4xl mb-2">✅</div>
                   <div className="text-white font-bold text-sm">AI Governance</div>
-                  <div className="text-emerald-200 text-xs mt-1">Build trust & compliance</div>
-                </div>
-                <div className="bg-white/20 backdrop-blur-lg rounded-xl p-4 border-2 border-emerald-400/60 hover:scale-110 transition-all">
-                  <div className="text-4xl mb-2">📊</div>
-                  <div className="text-white font-bold text-sm">Data Quality</div>
-                  <div className="text-emerald-200 text-xs mt-1">99%+ data accuracy</div>
+                  <div className="text-emerald-200 text-xs mt-1">100% compliance</div>
                 </div>
               </div>
               <div className="bg-gradient-to-r from-blue-500/30 to-purple-500/30 border-2 border-blue-400/60 rounded-2xl p-6 mb-8 max-w-6xl mx-auto">
-                <h3 className="text-3xl font-black text-white mb-4">💼 NEW CASE STUDIES: Proven Results, Massive ROI</h3>
+                <h3 className="text-3xl font-black text-white mb-4">💼 NEW CASE STUDIES: Billion-Dollar Results</h3>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div className="bg-white/10 rounded-lg p-4">
-                    <div className="text-blue-300 font-bold mb-2">InsureTech Global</div>
-                    <div className="text-5xl font-black text-white mb-1">$280M</div>
-                    <div className="text-emerald-200 text-sm">Annual Savings with AI Claims Processing</div>
+                    <div className="text-blue-300 font-bold mb-2">FinTech Global</div>
+                    <div className="text-5xl font-black text-white mb-1">$950M</div>
+                    <div className="text-emerald-200 text-sm">Annual Savings with AI Fraud Detection</div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-4">
-                    <div className="text-purple-300 font-bold mb-2">AutoDrive Innovations</div>
-                    <div className="text-5xl font-black text-white mb-1">99.997%</div>
-                    <div className="text-emerald-200 text-sm">Safety Record for Autonomous Driving</div>
+                    <div className="text-purple-300 font-bold mb-2">MediCare Systems</div>
+                    <div className="text-5xl font-black text-white mb-1">25,000+</div>
+                    <div className="text-emerald-200 text-sm">Lives Saved Annually with AI Diagnostics</div>
                   </div>
                   <div className="bg-white/10 rounded-lg p-4">
-                    <div className="text-cyan-300 font-bold mb-2">GlobalTelecom</div>
-                    <div className="text-5xl font-black text-white mb-1">$520M</div>
-                    <div className="text-emerald-200 text-sm">Annual Savings from AI Network Optimization</div>
+                    <div className="text-cyan-300 font-bold mb-2">GlobalRetail</div>
+                    <div className="text-5xl font-black text-white mb-1">$1.2B</div>
+                    <div className="text-emerald-200 text-sm">Savings from AI Supply Chain Optimization</div>
                   </div>
+                </div>
+              </div>
+              
+              {/* Whitepapers Section */}
+              <div className="bg-gradient-to-r from-indigo-500/30 to-pink-500/30 border-2 border-indigo-400/60 rounded-2xl p-6 mb-8 max-w-6xl mx-auto">
+                <h3 className="text-3xl font-black text-white mb-4">📚 NEW PREMIUM WHITEPAPERS - FREE DOWNLOAD</h3>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="bg-white/10 rounded-lg p-4">
+                    <div className="text-indigo-300 font-bold mb-2">AI Observability Guide</div>
+                    <div className="text-3xl font-black text-white mb-1">185 Pages</div>
+                    <div className="text-emerald-200 text-sm">Complete monitoring framework • 21,834 downloads</div>
+                  </div>
+                  <div className="bg-white/10 rounded-lg p-4">
+                    <div className="text-pink-300 font-bold mb-2">Edge AI Handbook</div>
+                    <div className="text-3xl font-black text-white mb-1">165 Pages</div>
+                    <div className="text-emerald-200 text-sm">1000x performance gains • 18,942 downloads</div>
+                  </div>
+                  <div className="bg-white/10 rounded-lg p-4">
+                    <div className="text-purple-300 font-bold mb-2">AI Security Framework</div>
+                    <div className="text-3xl font-black text-white mb-1">220 Pages</div>
+                    <div className="text-emerald-200 text-sm">Zero-trust architecture • 24,567 downloads</div>
+                  </div>
+                </div>
+                <div className="text-center mt-6">
+                  <Link
+                    to="/resources"
+                    className="bg-white text-indigo-700 px-10 py-4 rounded-xl font-bold text-xl hover:bg-indigo-50 transition-all hover:scale-105 inline-flex items-center gap-3"
+                  >
+                    <Award className="w-6 h-6" />
+                    <span>Download All Whitepapers FREE</span>
+                    <ArrowRight className="w-6 h-6" />
+                  </Link>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-5 justify-center">
@@ -389,7 +227,6 @@ const Home = () => {
                   <Award className="w-10 h-10 animate-pulse" />
                   <span>View 3 New Case Studies</span>
                   <TrendingUp className="w-10 h-10" />
->>>>>>> origin/cursor/create-and-deploy-new-content-6c4b
                 </Link>
               </div>
             </div>
