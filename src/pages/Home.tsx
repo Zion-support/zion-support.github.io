@@ -30,6 +30,7 @@ import NewContentPromoBanner from "../components/NewContentPromoBanner";
 import NewContentShowcase from "../components/NewContentShowcase";
 import NewContentShowcase2025 from "../components/NewContentShowcase2025";
 import NewServicesShowcase from "../components/NewServicesShowcase";
+import September30NewContentMegaBanner from "../components/September30NewContentMegaBanner";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
 import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
@@ -150,6 +151,11 @@ const Home = () => {
           <TrendingContentBanner />
         </div>
         
+        {/* MEGA BREAKTHROUGH RELEASE - September 30, 2025 */}
+        <div className="container mx-auto px-6 mt-8 mb-8">
+          <September30NewContentMegaBanner />
+        </div>
+        
         {/* BREAKTHROUGH CONTENT 2026 - September 30, 2025 */}
         <div className="container mx-auto px-6 mt-6">
           <BreakthroughContent2026Banner />
@@ -209,9 +215,9 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              🚀 <strong>JUST RELEASED OCT 2025:</strong> Multimodal AI Revolution, Blockchain-AI Integration, Green AI Sustainability & AutoML! 
-              Plus 5 NEW Services: AI Predictive Maintenance, AI Talent Acquisition, AI Fraud Prevention, AI Creative Studio & Legal Research Assistant.
-              Transform your business with revolutionary AI solutions. Join 500+ companies achieving unprecedented results!
+              🚀 <strong>BREAKING: SEPTEMBER 30, 2025:</strong> 5 Revolutionary AI Breakthroughs! Neural Coding (programs at thought speed), 
+              Holographic Computing (3D data visualization), Quantum Consciousness (1M× faster reasoning), Molecular Manufacturing (atomic precision), 
+              & Personalized Education (10× better outcomes). Transform your business with revolutionary AI solutions. Join 500+ companies achieving unprecedented results!
             </p>
 
             {/* Special Promotion Banner */}
@@ -243,19 +249,19 @@ const Home = () => {
               </div>
             </div>
 
-            {/* New Content Announcement */}
+            {/* New Content Announcement - SEPT 30, 2025 */}
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-6 mb-8 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
-                <span className="text-lg font-bold text-purple-400">🔥 OCT 2025: MASSIVE CONTENT DROP!</span>
+                <span className="text-lg font-bold text-purple-400">🔥 SEPT 30, 2025: 5 REVOLUTIONARY AI BREAKTHROUGHS!</span>
                 <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
               </div>
               <p className="text-white text-lg font-semibold mb-2">
-                🎯 Just Published: 5 Breakthrough Articles + 5 Revolutionary Services! Multimodal AI, Blockchain-AI Integration, Green AI, AI Compliance & AutoML
+                🎯 Just Published: Neural Coding, Holographic Computing, Quantum Consciousness, Molecular Manufacturing & AI Education Revolution!
               </p>
               <p className="text-zion-slate-light text-sm mb-4">
-                Discover breakthrough insights on unified vision-language-audio AI, trustless blockchain intelligence, carbon-neutral ML, global regulatory compliance, and automated neural architecture search. 
-                PLUS: New services for predictive maintenance, talent acquisition, fraud prevention, creative automation, and legal research!
+                Program at thought speed with 99.7% accuracy • Visualize data in 3D holograms • Quantum AI 1M× faster • Atomic-precision manufacturing • 
+                10× better learning outcomes. These breakthroughs are transforming industries NOW!
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
@@ -272,14 +278,14 @@ const Home = () => {
                 </Link>
               </div>
               <div className="mt-4 flex flex-wrap gap-2 justify-center">
-                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">🎭 Multimodal AI</span>
-                <span className="bg-rose-100/20 text-rose-200 px-3 py-1 rounded-full text-xs font-medium border border-rose-300/20">⛓️ Blockchain-AI</span>
-                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">🌱 Green AI</span>
-                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">📋 AI Compliance</span>
-                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">🤖 AutoML</span>
-                <span className="bg-orange-100/20 text-orange-200 px-3 py-1 rounded-full text-xs font-medium border border-orange-300/20">⚙️ Predictive Maintenance</span>
-                <span className="bg-pink-100/20 text-pink-200 px-3 py-1 rounded-full text-xs font-medium border border-pink-300/20">👥 AI Recruiting</span>
-                <span className="bg-green-100/20 text-green-200 px-3 py-1 rounded-full text-xs font-medium border border-green-300/20">🛡️ Fraud Prevention</span>
+                <span className="bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20">🧠 Neural Coding</span>
+                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">📊 Holographic AI</span>
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">⚛️ Quantum Consciousness</span>
+                <span className="bg-green-100/20 text-green-200 px-3 py-1 rounded-full text-xs font-medium border border-green-300/20">🔬 Molecular Manufacturing</span>
+                <span className="bg-pink-100/20 text-pink-200 px-3 py-1 rounded-full text-xs font-medium border border-pink-300/20">📚 AI Education</span>
+                <span className="bg-orange-100/20 text-orange-200 px-3 py-1 rounded-full text-xs font-medium border border-orange-300/20">⚙️ 10× Performance</span>
+                <span className="bg-rose-100/20 text-rose-200 px-3 py-1 rounded-full text-xs font-medium border border-rose-300/20">🚀 97% Success Rate</span>
+                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">💎 Zero Waste</span>
               </div>
             </div>
           </div>
