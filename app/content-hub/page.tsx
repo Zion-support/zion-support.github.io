@@ -171,6 +171,8 @@ export default function ContentHubPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <h2 className="text-xl md:text-2xl font-bold">New this week</h2>
             <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-agent-reliability-playbook-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Agent Reliability 2026<span>→</span></Link>
+              <Link href="/blog/privacy-safe-feature-flags-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Privacy‑Safe Flags 2026<span>→</span></Link>
               <Link href="/blog/ai-safety-scorecards-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">AI Safety Scorecards<span>→</span></Link>
               <Link href="/blog/edge-governed-flags-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">Edge‑Governed Flags<span>→</span></Link>
               <Link href="/blog/genai-cache-playbook-2026" className="inline-flex items-center gap-2 bg-white/90 text-emerald-800 px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">GenAI Cache Playbook<span>→</span></Link>

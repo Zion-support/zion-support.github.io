@@ -148,6 +148,26 @@ export const featuredBlogPosts: FeaturedItem[] = [
   }
 ];
 
+// Oct 2025 – Add two brand-new featured posts
+featuredBlogPosts.unshift(
+  {
+    id: "ai-agent-reliability-playbook-2026",
+    title: "AI Agent Reliability Playbook 2026",
+    description: "Budgets, guardrails, canaries, and instant rollback for dependable agents",
+    link: "/blog/ai-agent-reliability-playbook-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "privacy-safe-feature-flags-2026",
+    title: "Privacy‑Safe Feature Flags 2026",
+    description: "Consent‑aware, scoped IDs, and DP‑hardened experimentation at <100ms",
+    link: "/blog/privacy-safe-feature-flags-2026",
+    type: "article",
+    featured: true
+  }
+);
+
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
   {
