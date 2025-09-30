@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2028-autonomous-enterprise-revolution",
+    title: "AI 2028: Autonomous Enterprise Revolution",
+    description: "From reactive ops to self‑optimizing enterprises: budgets, guardrails, and KPI‑linked autonomy that scales safely.",
+    category: "Enterprise AI",
+    publishedAt: "2027-02-06",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "ai-2027-quantum-enhanced-machine-learning",
+    title: "Quantum‑Enhanced Machine Learning 2027: Secure, Scalable, ROI‑Proven",
+    description: "Hybrid quantum‑classical pipelines with verifiable speedups, enterprise security, and measurable ROI.",
+    category: "AI Research",
+    publishedAt: "2027-02-04",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "ai-2028-realtime-multimodal-assistants",
+    title: "Realtime Multimodal Assistants 2028: <100ms, Private by Design",
+    description: "Vision+speech+text assistants with edge personalization, tiered models, and budget‑aware routing under 100ms.",
+    category: "GenAI",
+    publishedAt: "2027-02-03",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-2027-executive-ai-funding-blueprint",
     title: "Executive AI Funding Blueprint 2027: KPIs, Budgets, Governance",
     description: "Secure funding and sustain AI programs with KPI-linked scorecards, budget guards, and governance gates that prove ROI.",
