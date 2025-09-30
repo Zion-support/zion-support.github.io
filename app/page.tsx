@@ -47,6 +47,9 @@ import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
 import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
+import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
+import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
+import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -128,6 +131,9 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
+      {/* Revolutionary Content 2026 Banner */}
+      <RevolutionaryContent2026Banner />
+      
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
       <AIAutonomousSystemsBanner />
@@ -136,6 +142,9 @@ export default function HomePage() {
       <LatestContentShowcaseBanner />
       <InteractiveAICalculatorBanner />
       <AIInnovationShowcaseBanner />
+      
+      {/* Latest Content Showcase */}
+      <LatestContent2026ShowcaseBanner />
       
       {/* New Content Promotional Banners */}
       <MultimodalAIIntegrationBanner />
@@ -299,6 +308,9 @@ export default function HomePage() {
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
+      
+      {/* Interactive Content Showcase 2026 */}
+      <InteractiveContentShowcase2026 />
 
       {/* Latest Innovations Section */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
