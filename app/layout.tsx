@@ -70,6 +70,28 @@ export default function RootLayout({
                 <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
                 <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">Blog</Link>
                 <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">Case Studies</Link>
+                <div className="relative group">
+                  <span className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">Latest</span>
+                  <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="p-4">
+                      <h4 className="font-bold text-gray-900 mb-3">🔥 Just Published</h4>
+                      <div className="space-y-2">
+                        <Link href="/blog/ai-2026-autonomous-business-processes" className="block p-2 hover:bg-gray-50 rounded text-sm">
+                          <span className="font-semibold text-purple-600">🤖 Autonomous Business Processes</span>
+                          <span className="text-gray-600 block">95% automation achieved</span>
+                        </Link>
+                        <Link href="/blog/ai-2026-next-generation-customer-intelligence" className="block p-2 hover:bg-gray-50 rounded text-sm">
+                          <span className="font-semibold text-green-600">🧠 Customer Intelligence 2026</span>
+                          <span className="text-gray-600 block">99% predictive accuracy</span>
+                        </Link>
+                        <Link href="/case-studies/fortune-500-autonomous-operations-transformation-2026" className="block p-2 hover:bg-gray-50 rounded text-sm">
+                          <span className="font-semibold text-orange-600">🏆 $200M ROI Success Story</span>
+                          <span className="text-gray-600 block">Fortune 500 transformation</span>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </nav>
             </div>
           </div>
@@ -98,12 +120,12 @@ export default function RootLayout({
                 <h3 className="text-lg font-semibold mb-4">Resources</h3>
                 <ul className="space-y-2 text-gray-400">
                   <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+                  <li><Link href="/blog/ai-2026-autonomous-business-processes" className="hover:text-white">🤖 Autonomous Business Processes</Link></li>
+                  <li><Link href="/blog/ai-2026-next-generation-customer-intelligence" className="hover:text-white">🧠 Customer Intelligence 2026</Link></li>
                   <li><Link href="/blog/ai-2026-revolutionary-breakthrough" className="hover:text-white">🚀 AI 2026 Revolutionary Breakthrough</Link></li>
-                  <li><Link href="/blog/ai-2026-next-generation-autonomous-systems" className="hover:text-white">Autonomous AI Systems</Link></li>
-                  <li><Link href="/blog/ai-2026-quantum-machine-learning" className="hover:text-white">Quantum Machine Learning</Link></li>
                   <li><Link href="/case-studies" className="hover:text-white">Case Studies</Link></li>
-                  <li><Link href="/case-studies/ai-2026-mega-transformation-success-story" className="hover:text-white">🏆 $100M Fortune 500 Success Story</Link></li>
-                  <li><Link href="/case-studies/fortune-500-ai-transformation-2027" className="hover:text-white">$200M ROI Success Story</Link></li>
+                  <li><Link href="/case-studies/fortune-500-autonomous-operations-transformation-2026" className="hover:text-white">🏆 $200M ROI Success Story</Link></li>
+                  <li><Link href="/case-studies/ai-2026-mega-transformation-success-story" className="hover:text-white">💎 $100M Fortune 500 Success Story</Link></li>
                 </ul>
               </div>
               <div>
