@@ -1288,6 +1288,37 @@ posts.push(
   }
 );
 
+// New: Additional fresh content to surface on homepage (promoted trio)
+posts.push(
+  {
+    slug: "ai-operational-risk-budgets-2026",
+    title: "AI Operational Risk Budgets 2026: Ship Faster, Stay Safe",
+    description: "Budget actions and tokens, wire canaries to KPIs, and enable instant rollback for safe autonomy at scale.",
+    category: "AI Operations",
+    publishedAt: "2026-04-01",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-zero-pii-personalization-2026",
+    title: "Edge Zero‑PII Personalization 2026: Private <100ms Experiences",
+    description: "Scoped IDs, on‑device models, and DP noise for compliant, sub‑100ms personalization worldwide.",
+    category: "Edge Computing",
+    publishedAt: "2026-04-01",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-quality-tiers-at-scale-2026",
+    title: "GenAI Quality Tiers at Scale 2026: Predictable Cost, Stable UX",
+    description: "Tier models, add semantic caches, and route by SLA using eval signals to cut spend 30–60% without hurting UX.",
+    category: "GenAI",
+    publishedAt: "2026-04-01",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Jan 2026 – New articles to create more content and advertise on Home
 posts.push(
   {
