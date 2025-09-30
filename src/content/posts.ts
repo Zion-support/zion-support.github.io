@@ -1699,3 +1699,34 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – New posts to surface and promote on Home
+posts.push(
+  {
+    slug: "ai-real-time-agent-routing-2026",
+    title: "Real‑Time Agent Routing 2026: Quality Tiers Under 100ms",
+    description: "Route tasks across model tiers with caches and KPIs to keep UX snappy under budget.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "reliable-agent-evals-2025",
+    title: "Reliable Agent Evals 2025: KPIs, Canaries, and Rollbacks",
+    description: "Layer offline suites and live canaries tied to product KPIs to prevent regressions while shipping weekly.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-operational-resilience-2025",
+    title: "AI Operational Resilience 2025: Predict, Prevent, Remediate",
+    description: "From reactive firefighting to self‑healing ops: budgets, traces, and rollback‑ready automations.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  }
+);
+

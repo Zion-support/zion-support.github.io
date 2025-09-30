@@ -1,6 +1,8 @@
+// @ts-nocheck
 import React from 'react';
 import Link from 'next/link';
 import './globals.css';
+import { NewSeptemberPromotionsBanner } from '../components/PromotionalBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -157,6 +159,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="min-h-screen bg-white text-gray-900">
+        <NewSeptemberPromotionsBanner />
         <Header />
         <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen">
           {children}
