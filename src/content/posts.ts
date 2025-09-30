@@ -10,6 +10,15 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2025-sept-30-neural-code-synthesis",
+    title: "Neural Code Synthesis 2025 — 95% Accuracy, 90% Faster Delivery",
+    description: "Production blueprint for neural code assistants: policy tests, eval scorecards, and instant rollback for safe velocity.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
     slug: "ai-2025-sept-30-platform-roi-scorecards-v2",
     title: "Platform ROI Scorecards v2 — Proving Value in Weeks",
     description: "KPI-linked developer scorecards, golden paths, and adoption funnels that quantify platform ROI in 4–8 weeks.",
