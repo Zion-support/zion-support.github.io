@@ -1,4 +1,6 @@
 import React, { JSX } from "react";
+import June2026AMIBreakthroughBanner from "./components/June2026AMIBreakthroughBanner";
+import NewContentJune2026PromotionalBanner from "./components/NewContentJune2026PromotionalBanner";
 import ConsensusIntelligenceBreakthroughBanner from "./components/ConsensusIntelligenceBreakthroughBanner";
 import AutonomousEnterpriseBreakthroughBanner from "./components/AutonomousEnterpriseBreakthroughBanner";
 import LatestContentBanner2025 from "./src/components/LatestContentBanner2025";
@@ -69,6 +71,11 @@ import AITrends2026AdvertisingBanner from "./components/AITrends2026AdvertisingB
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEW: June 2026 AMI Breakthrough Banner - Most Prominent */}
+      <June2026AMIBreakthroughBanner />
+      
+      {/* NEW: June 2026 Content Promotional Banner */}
+      <NewContentJune2026PromotionalBanner />
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
