@@ -103,7 +103,7 @@ const NewServicesAnnouncement: React.FC<NewServicesAnnouncementProps> = ({
 
           <div className="text-center">
             <Link 
-              to="/services" 
+              href="/services" 
               className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
             >
               Explore All Services
@@ -166,7 +166,7 @@ const NewServicesAnnouncement: React.FC<NewServicesAnnouncementProps> = ({
         </div>
         <div className="text-center">
           <Link 
-            to="/services" 
+            href="/services" 
             className="bg-green-600 text-white px-6 py-2 rounded-lg font-semibold inline-flex items-center gap-2 hover:bg-green-700 transition-colors"
           >
             Explore All New Services
@@ -264,14 +264,14 @@ const NewServicesAnnouncement: React.FC<NewServicesAnnouncementProps> = ({
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/services" 
+                href="/services" 
                 className="bg-white text-green-600 hover:bg-green-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-colors"
               >
                 <Zap className="w-5 h-5" />
                 Explore All Services
               </Link>
               <Link 
-                to="/contact" 
+                href="/contact" 
                 className="border border-white text-white hover:bg-white hover:text-green-600 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-colors"
               >
                 <Award className="w-5 h-5" />

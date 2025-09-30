@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, Sparkles, Star, TrendingUp, Users, Zap } from 'lucide-react';
 
 interface NewContent2025BannerProps {
@@ -185,21 +185,21 @@ const NewContent2025Banner: React.FC<NewContent2025BannerProps> = ({
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/blog" 
+              href="/blog" 
               className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
             >
               <ArrowRight className="w-5 h-5" />
               Read All Articles
             </Link>
             <Link 
-              to="/case-studies" 
+              href="/case-studies" 
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
             >
               <Star className="w-5 h-5" />
               View Success Stories
             </Link>
             <Link 
-              to="/services" 
+              href="/services" 
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
             >
               <TrendingUp className="w-5 h-5" />
