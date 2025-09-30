@@ -46,10 +46,19 @@ import April2026ConsciousComputingBanner from "./components/April2026ConsciousCo
 import April2026QuantumNeuralBanner from "./components/April2026QuantumNeuralBanner";
 import QuantumConsciousnessFusionBanner from "./components/QuantumConsciousnessFusionBanner";
 import Revolutionary2026ContentShowcaseBanner from "./components/Revolutionary2026ContentShowcaseBanner";
+import May2026RevolutionaryBreakthroughBanner from "./components/May2026RevolutionaryBreakthroughBanner";
+import May2026ContentShowcase from "./components/May2026ContentShowcase";
+import May2026ContentAdvertisingBanner from "./components/May2026ContentAdvertisingBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEW: May 2026 Revolutionary Breakthrough Banner - Most Prominent */}
+      <May2026RevolutionaryBreakthroughBanner />
+      
+      {/* NEW: May 2026 Content Showcase - Featured Content */}
+      <May2026ContentShowcase />
+      
       {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
       <April2026MegaBreakthroughBanner />
       
@@ -233,6 +242,9 @@ export default function App(): JSX.Element {
         </div>
       </header>
 
+      {/* NEW: May 2026 Content Advertising Banner */}
+      <May2026ContentAdvertisingBanner />
+      
       {/* NEW CONTENT ADVERTISING BANNER */}
       <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30 mb-12">
         <div className="text-center">
@@ -400,6 +412,9 @@ export default function App(): JSX.Element {
 
       {/* Interactive Content Showcase 2026 */}
       <InteractiveContentShowcase2026 />
+      
+      {/* Interactive ROI Calculator 2026 */}
+      <InteractiveROICalculator2026 />
 
       {/* NEW: Revolutionary 2026 Content Showcase Banner - Mid Page */}
       <Revolutionary2026ContentShowcaseBanner />
