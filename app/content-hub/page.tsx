@@ -597,6 +597,66 @@ export default function ContentHubPage() {
                 </div>
               </div>
             </Link>
+
+            <Link href="/blog/ai-2026-revolutionary-trends" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Trends
+                  </span>
+                  <span className="text-sm text-gray-500">12 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                  AI 2026: Revolutionary Trends
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  The most important AI shifts reshaping enterprise strategy and execution in 2026.
+                </p>
+                <div className="text-indigo-600 font-semibold group-hover:text-indigo-700 transition-colors">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/blog/ai-2026-enterprise-autonomous-systems" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Enterprise
+                  </span>
+                  <span className="text-sm text-gray-500">15 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  Enterprise Autonomous Systems 2026
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Patterns and guardrails to scale reliable agentic automation across the enterprise.
+                </p>
+                <div className="text-blue-600 font-semibold group-hover:text-blue-700 transition-colors">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/blog/quantum-ai-breakthrough-2026" className="group">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Technical
+                  </span>
+                  <span className="text-sm text-gray-500">14 min read</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                  Quantum AI Breakthrough 2026
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  How quantum‑enhanced inference unlocks 1000x speedups for complex optimization.
+                </p>
+                <div className="text-purple-600 font-semibold group-hover:text-purple-700 transition-colors">
+                  Read Article →
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
