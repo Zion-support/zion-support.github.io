@@ -67,11 +67,18 @@ import AITrends2026AdvertisingBanner from "./components/AITrends2026AdvertisingB
 import September2026BreakthroughAdvertisingBanner from "./components/September2026BreakthroughAdvertisingBanner";
 import AutonomousEnterpriseAutomationAdvertisingBanner from "./components/AutonomousEnterpriseAutomationAdvertisingBanner";
 import February2026NewContentBreakthroughBanner from "./components/February2026NewContentBreakthroughBanner";
+import September2025PracticalAIBanner from "./components/September2025PracticalAIBanner";
+import March2026MultimodalBreakthroughBanner from "./components/March2026MultimodalBreakthroughBanner";
+import AutonomousAI2026RevolutionaryBanner from "./components/AutonomousAI2026RevolutionaryBanner";
+import March2026ContentShowcaseBanner from "./components/March2026ContentShowcaseBanner";
+import March2026ServicesPromotionalBanner from "./components/March2026ServicesPromotionalBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
-<<<<<<< HEAD
+      {/* NEW: September 2025 Practical AI Insights Banner - FEATURED */}
+      <September2025PracticalAIBanner />
+      
       {/* NEW: September 2026 Breakthrough Advertising Banner - MOST PROMINENT */}
       <September2026BreakthroughAdvertisingBanner />
       
