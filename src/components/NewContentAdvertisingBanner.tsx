@@ -51,6 +51,31 @@ const NewContentAdvertisingBanner: React.FC = () => {
       icon: <TrendingUp className="w-6 h-6" />,
       link: '/blog/edge-2027-consentless-analytics-v4'
     }
+    ,
+    {
+      id: 5,
+      title: 'Operational Trust Scorecards v3',
+      category: 'AI Operations',
+      readTime: '9 min',
+      rating: 5.0,
+      readers: '41K+',
+      badge: 'NEW',
+      gradient: 'from-purple-500 to-pink-500',
+      icon: <Sparkles className="w-6 h-6" />,
+      link: '/blog/ai-2025-oct-01-operational-trust-v3'
+    },
+    {
+      id: 6,
+      title: 'Consentless Experiments v3 (<100ms)',
+      category: 'Analytics',
+      readTime: '7 min',
+      rating: 4.9,
+      readers: '33K+',
+      badge: 'NEW',
+      gradient: 'from-teal-500 to-emerald-500',
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: '/blog/edge-2025-oct-01-private-consentless-experiments'
+    }
   ];
 
   const achievements = [
