@@ -45,10 +45,18 @@ import April2026ConsciousComputingBanner from "./components/April2026ConsciousCo
 import April2026QuantumNeuralBanner from "./components/April2026QuantumNeuralBanner";
 import QuantumConsciousnessFusionBanner from "./components/QuantumConsciousnessFusionBanner";
 import Revolutionary2026ContentShowcaseBanner from "./components/Revolutionary2026ContentShowcaseBanner";
+import May2026RevolutionaryBreakthroughBanner from "./components/May2026RevolutionaryBreakthroughBanner";
+import AI2026FutureTrendsBanner from "./components/AI2026FutureTrendsBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEW: May 2026 Revolutionary Breakthrough Banner - Most Prominent */}
+      <May2026RevolutionaryBreakthroughBanner />
+      
+      {/* NEW: AI 2026 Future Trends Banner */}
+      <AI2026FutureTrendsBanner />
+      
       {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
       <April2026MegaBreakthroughBanner />
       
