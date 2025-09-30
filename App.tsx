@@ -1,4 +1,6 @@
 import React, { JSX } from "react";
+import ConsensusIntelligenceBreakthroughBanner from "./components/ConsensusIntelligenceBreakthroughBanner";
+import AutonomousEnterpriseBreakthroughBanner from "./components/AutonomousEnterpriseBreakthroughBanner";
 import LatestContentBanner2025 from "./src/components/LatestContentBanner2025";
 import FeaturedContentBanner2025 from "./src/components/FeaturedContentBanner2025";
 import NewContentPromoBanner from "./src/components/NewContentPromoBanner";
@@ -33,7 +35,6 @@ import February2026ContentMegaBanner from "./components/February2026ContentMegaB
 import NewContent2026BreakthroughShowcaseBanner from "./components/NewContent2026BreakthroughShowcaseBanner";
 import February2026BreakthroughMegaBanner from "./components/February2026BreakthroughMegaBanner";
 import NewContent2026ShowcaseBanner from "./components/NewContent2026ShowcaseBanner";
-import Revolutionary2026ContentMegaBreakthroughBanner from "./components/Revolutionary2026ContentMegaBreakthroughBanner";
 import March2026RevolutionaryBreakthroughBanner from "./components/March2026RevolutionaryBreakthroughBanner";
 import March2026ContentShowcase from "./components/March2026ContentShowcase";
 import March2026AdvertisingMegaBanner from "./components/March2026AdvertisingMegaBanner";
@@ -44,6 +45,12 @@ import InteractiveContentHub2026 from "./components/InteractiveContentHub2026";
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEW: 2026 Consensus Intelligence Breakthrough Banner - Most Prominent */}
+      <ConsensusIntelligenceBreakthroughBanner />
+      
+      {/* NEW: 2026 Autonomous Enterprise Breakthrough Banner - Most Prominent */}
+      <AutonomousEnterpriseBreakthroughBanner />
+      
       {/* NEW: March 2026 Revolutionary Breakthrough Banner - Most Prominent */}
       <March2026AdvertisingMegaBanner />
       
