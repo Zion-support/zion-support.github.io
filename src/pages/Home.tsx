@@ -128,6 +128,21 @@ const Home = () => {
         
         <NewContentAnnouncement />
         
+        {/* September 30, 2025 - LATEST: AI Infrastructure & Security Breakthroughs */}
+        <NewContentPromoBanner 
+          className="border-b border-white/10" 
+          variant="premium" 
+          title="🔥 JUST RELEASED: 3 Game-Changing Guides — AI Observability, Vector Databases & Security"
+          description="NEW September 30, 2025: Master production AI with comprehensive guides on next-gen observability (99.9% uptime), vector databases at scale (sub-100ms queries), and AI-powered security scanning (90% fewer false positives)."
+          ctaText="Read Latest Guides"
+          ctaLink="/blog"
+          featuredItems={[
+            { title: "AI Observability 2.0: Complete Monitoring Revolution — 99.9% Uptime, 85% Faster Detection", category: "AI Operations", link: "/blog/ai-2025-september-30-observability-monitoring-revolution" },
+            { title: "Vector Databases at Scale: Real-Time AI Applications — Sub-100ms Query Latency", category: "AI Infrastructure", link: "/blog/vector-databases-real-time-ai-applications-2025" },
+            { title: "AI-Powered Code Review & Security Scanning — 90% Fewer False Positives, 95% Detection", category: "Security", link: "/blog/ai-powered-code-security-scanning-2025" }
+          ]}
+        />
+        
         {/* September 30, 2025 - BREAKING: NEW ENTERPRISE GUIDES */}
         <NewContentPromoBanner 
           className="border-b border-white/10" 
@@ -254,7 +269,8 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">
-              🚨 <strong>BREAKING SEPTEMBER 30, 2025:</strong> 3 Mission-Critical Enterprise Guides Just Released! AI-Powered DevSecOps (95% faster), Quantum-Ready Infrastructure (beat Q-Day), and Enterprise AI Governance (ensure compliance). 
+              🔥 <strong>JUST RELEASED SEPTEMBER 30, 2025:</strong> 3 Game-Changing Guides on AI Observability (99.9% uptime), Vector Databases (sub-100ms), and AI Security Scanning (90% fewer false positives)! 
+              Plus mission-critical enterprise guides on AI-Powered DevSecOps, Quantum-Ready Infrastructure, and Enterprise AI Governance. 
               Transform your business with proven AI solutions delivering $50B+ in client results. 
               Join 500+ companies achieving 400-600% ROI with our expert guidance!
             </p>
@@ -288,7 +304,44 @@ const Home = () => {
               </div>
             </div>
 
-            {/* New Content Announcement - September 30, 2025 */}
+            {/* New Content Announcement - September 30, 2025 - LATEST */}
+            <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 rounded-xl p-6 mb-8 animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Sparkles className="w-6 h-6 text-emerald-400 animate-pulse" />
+                <span className="text-lg font-bold text-emerald-400">🔥 JUST RELEASED: AI INFRASTRUCTURE & SECURITY BREAKTHROUGHS</span>
+                <Sparkles className="w-6 h-6 text-emerald-400 animate-pulse" />
+              </div>
+              <p className="text-white text-lg font-semibold mb-2">
+                ⚡ NEW SEPTEMBER 30, 2025: Master production AI with next-gen observability (99.9% uptime), vector databases at scale (sub-100ms queries), and AI security scanning (90% fewer false positives)!
+              </p>
+              <p className="text-zion-slate-light text-sm mb-4">
+                Comprehensive guides covering real-time monitoring, semantic search architecture, RAG systems, and intelligent code review. Build production-ready AI applications with confidence.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link
+                  to="/blog/ai-2025-september-30-observability-monitoring-revolution"
+                  className="bg-emerald-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-emerald-600 transition-colors text-center"
+                >
+                  Explore AI Observability
+                </Link>
+                <Link
+                  to="/blog"
+                  className="border border-emerald-400 text-emerald-400 px-6 py-2 rounded-lg font-semibold hover:bg-emerald-400 hover:text-white transition-colors text-center"
+                >
+                  View All Guides
+                </Link>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2 justify-center">
+                <span className="bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20">AI Observability</span>
+                <span className="bg-teal-100/20 text-teal-200 px-3 py-1 rounded-full text-xs font-medium border border-teal-300/20">Vector Databases</span>
+                <span className="bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20">RAG Systems</span>
+                <span className="bg-red-100/20 text-red-200 px-3 py-1 rounded-full text-xs font-medium border border-red-300/20">AI Security</span>
+                <span className="bg-orange-100/20 text-orange-200 px-3 py-1 rounded-full text-xs font-medium border border-orange-300/20">Code Review</span>
+                <span className="bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20">Production AI</span>
+              </div>
+            </div>
+            
+            {/* New Content Announcement - September 30, 2025 - Enterprise */}
             <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-xl p-6 mb-8 animate-fade-in">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Sparkles className="w-6 h-6 text-red-400 animate-pulse" />
