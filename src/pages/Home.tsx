@@ -40,10 +40,7 @@ import NewContentShowcase2025 from "../components/NewContentShowcase2025";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
-import September30NewContentMegaBanner from "../components/September30NewContentMegaBanner";
-import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
-import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
-import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
+// duplicate imports removed below
 import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
@@ -151,21 +148,32 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: Live Canaries + EU AI Act + Edge RAG"
-          description="Prevent regressions, ship compliant AI fast, and get private <100ms answers at the edge."
+          title="New: Live Scorecards + Edge Personalization + Agent Runbooks"
+          description="Ship faster with KPI‑linked guardrails, private <100ms personalization, and safe agent releases."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Live Canaries Prevent Regressions", category: "AI Governance", link: "/blog/ai-governance-live-canaries-2026" },
-            { title: "EU AI Act Playbook", category: "AI Governance", link: "/blog/ai-governance-eu-ai-act-2026" },
+            { title: "Live Scorecards That Prevent Regressions", category: "AI Governance", link: "/blog/ai-governance-live-scorecards-2026" },
+            { title: "Edge Real‑Time Personalization", category: "Edge Computing", link: "/blog/edge-real-time-personalization-2026" },
+            { title: "Agent Release Runbooks", category: "AI Operations", link: "/blog/agent-release-runbooks-2026" },
             { title: "Edge RAG 2026", category: "GenAI", link: "/blog/edge-rag-privacy-preserving-2026" },
-            { title: "Zero‑Regret Agent Releases", category: "AI Operations", link: "/blog/agent-runbooks-zero-regret-2026" },
             { title: "GenAI Routing Playbook 2026", category: "GenAI", link: "/blog/genai-routing-playbook-2026" }
           ]}
         />
         {/* Fresh content banner promoting brand-new articles */}
         <div className="container mx-auto px-6 mt-6">
           <NewContentAdvertisingBanner />
+          {/* Inline promo for new service */}
+          <div className="mt-4">
+            <ContentPromotionBanner
+              variant="info"
+              title="🧪 New Service: Edge Experimentation Suite"
+              description="Privacy‑first A/B testing at <100ms with scoped IDs and on‑device metrics."
+              ctaText="Learn more"
+              ctaLink="/services/edge-experimentation-suite"
+              dismissible={true}
+            />
+          </div>
         </div>
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />

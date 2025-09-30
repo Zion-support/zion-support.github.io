@@ -1228,6 +1228,37 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – New promotional articles to surface on homepage
+posts.push(
+  {
+    slug: "ai-governance-live-scorecards-2026",
+    title: "AI Governance Live Scorecards 2026: Guardrails Wired to KPIs",
+    description: "Operational scorecards with PR checks and live canaries that speed delivery while staying compliant.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-real-time-personalization-2026",
+    title: "Edge Real‑Time Personalization 2026: <100ms Experiences Without PII",
+    description: "Signed configs, scoped IDs, and on‑device models for private, sub‑100ms personalization at scale.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-runbooks-2026",
+    title: "Agent Release Runbooks 2026: Budgets, Evals, Instant Rollback",
+    description: "Battle‑tested runbooks for safe agent releases wired to KPIs and error budgets.",
+    category: "AI Operations",
+    publishedAt: "2025-10-31",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Sept 30, 2025 – Additional new posts to advertise on homepage
 posts.push(
   {
