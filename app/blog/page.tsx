@@ -10,6 +10,26 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    title: 'AI Enterprise Automation Revolution 2026: Complete Implementation Guide',
+    slug: 'ai-2026-enterprise-automation-revolution',
+    excerpt: 'Discover how AI automation is revolutionizing enterprise operations in 2026. Learn implementation strategies, ROI frameworks, and success stories from leading companies achieving 300% ROI.',
+    category: 'Featured Article',
+    readTime: '20 min read',
+    publishedAt: 'January 20, 2026',
+    image: '🤖',
+    color: 'blue'
+  },
+  {
+    title: 'AI Multimodal Integration 2025: 250% Efficiency Gains with Text, Voice, and Video AI',
+    slug: 'ai-multimodal-integration-2025',
+    excerpt: 'Discover how multimodal AI integration is revolutionizing enterprise operations in 2025. Learn implementation strategies for text, voice, and video AI achieving 250% efficiency gains.',
+    category: 'New Article',
+    readTime: '15 min read',
+    publishedAt: 'January 20, 2026',
+    image: '🎯',
+    color: 'purple'
+  },
+  {
     title: 'AI 2026 Mega Breakthrough: Revolutionary Technologies Transforming Enterprise',
     slug: 'ai-2026-mega-breakthrough',
     excerpt: 'Discover how 2026 is shaping up to be the year of unprecedented AI breakthroughs that will transform every industry.',
