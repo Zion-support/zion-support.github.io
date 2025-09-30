@@ -33,7 +33,6 @@ import February2026ContentMegaBanner from "./components/February2026ContentMegaB
 import NewContent2026BreakthroughShowcaseBanner from "./components/NewContent2026BreakthroughShowcaseBanner";
 import February2026BreakthroughMegaBanner from "./components/February2026BreakthroughMegaBanner";
 import NewContent2026ShowcaseBanner from "./components/NewContent2026ShowcaseBanner";
-import Revolutionary2026ContentMegaBreakthroughBanner from "./components/Revolutionary2026ContentMegaBreakthroughBanner";
 import March2026RevolutionaryBreakthroughBanner from "./components/March2026RevolutionaryBreakthroughBanner";
 import March2026ContentShowcase from "./components/March2026ContentShowcase";
 import March2026AdvertisingMegaBanner from "./components/March2026AdvertisingMegaBanner";
@@ -57,6 +56,8 @@ import June2026MegaAutomationBanner from "./components/June2026MegaAutomationBan
 import InteractiveContentShowcase2026Advanced from "./components/InteractiveContentShowcase2026Advanced";
 import June2026SuperintelligenceBreakthroughBanner from "./components/June2026SuperintelligenceBreakthroughBanner";
 import June2026ContentShowcaseBanner from "./components/June2026ContentShowcaseBanner";
+import May2026RevolutionaryContentBanner from "./components/May2026RevolutionaryContentBanner";
+import May2026ContentShowcaseBanner from "./components/May2026ContentShowcaseBanner";
 
 export default function App(): JSX.Element {
   return (
@@ -78,6 +79,12 @@ export default function App(): JSX.Element {
       
       {/* NEW: May 2026 Content Showcase - Featured Content */}
       <May2026ContentShowcase />
+      
+      {/* NEW: May 2026 Revolutionary Content Banner - Most Prominent */}
+      <May2026RevolutionaryContentBanner />
+      
+      {/* NEW: May 2026 Content Showcase Banner - Most Prominent */}
+      <May2026ContentShowcaseBanner />
       
       {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
       <April2026MegaBreakthroughBanner />

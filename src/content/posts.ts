@@ -1654,7 +1654,6 @@ posts.unshift(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read",
-<<<<<<< HEAD
   },
   {
     slug: "genai-2025-sept-30-quality-tiers-quickstart",
@@ -1663,7 +1662,8 @@ posts.unshift(
       "Introduce tiered routing, semantic caches, and KPI‑linked budgets to reduce spend without regressions.",
     category: "GenAI",
     publishedAt: "2025-09-30",
-=======
+    featured: true,
+    readTime: "8 min read",
   }
 );
 
@@ -1696,7 +1696,6 @@ posts.unshift(
       "Blend semantic + tiered caches with eval‑gated fallbacks to cut spend 60–80% while preserving UX KPIs.",
     category: "GenAI",
     publishedAt: "2025-10-02",
->>>>>>> cursor/create-and-deploy-new-content-31d6
     featured: true,
     readTime: "8 min read",
   }
