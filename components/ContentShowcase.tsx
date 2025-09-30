@@ -361,6 +361,36 @@ const contentItems: ContentItem[] = [
       { value: '150%', label: 'Revenue Growth' },
       { value: '80%', label: 'Cost Reduction' }
     ]
+  },
+  {
+    id: 'ai-governance-scorecards-2027',
+    title: 'AI Governance Scorecards 2027: Guardrails Linked to KPIs',
+    excerpt: 'Operational guardrails wired to outcomes with PR checks and live canaries.',
+    readTime: '7 min read',
+    category: 'AI Governance',
+    href: '/blog/ai-governance-scorecards-2027',
+    featured: true,
+    publishedDate: '2025-09-30'
+  },
+  {
+    id: 'edge-retrieval-rag-2027',
+    title: 'Edge Retrieval RAG 2027: Sub‑100ms Answers Without PII',
+    excerpt: 'Hybrid edge retrieval with TTL windows and on‑device caches for private, fast answers.',
+    readTime: '8 min read',
+    category: 'GenAI',
+    href: '/blog/edge-retrieval-rag-2027',
+    featured: true,
+    publishedDate: '2025-09-30'
+  },
+  {
+    id: 'agentic-release-budgets-2027',
+    title: 'Agentic Release Budgets 2027: Safe Automation at Scale',
+    excerpt: 'Budgeted actions, approvals, and rollback playbooks that keep velocity high.',
+    readTime: '6 min read',
+    category: 'AI Operations',
+    href: '/blog/agentic-release-budgets-2027',
+    featured: true,
+    publishedDate: '2025-09-30'
   }
 ];
 
