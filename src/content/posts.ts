@@ -10,6 +10,15 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2025-sept-30-causal-evals-blueprint",
+    title: "AI 2025: Causal Evals Blueprint — KPIs, Budgets, Rollback",
+    description: "Causal scorecards wired to KPIs with policy tests, budgets, canaries, and instant rollback.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
     slug: "ai-2026-governed-agent-runbooks",
     title: "AI 2026: Governed Agent Runbooks — Budgets, Canaries, Rollback",
     description: "Production checklists for safe autonomy: budgeted actions, KPI‑linked canaries, instant rollback.",
