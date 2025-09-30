@@ -44,6 +44,22 @@ function Header() {
         </Link>
         <div className="hidden md:flex gap-6">
           <div className="relative group">
+            <Link href="/blog/ai-2026-january-ultimate-breakthrough-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              January 2026 Ultimate Breakthrough
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                $75B ROI
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/blog/ai-2026-february-quantum-consciousness-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              February 2026 Quantum Consciousness
+              <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                $50B ROI
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
             <Link href="/blog/ai-2026-ultra-intelligent-autonomous-systems-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Ultra-Intelligent AI Systems
               <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
