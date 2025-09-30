@@ -388,6 +388,231 @@ export const caseStudies2025: CaseStudy[] = [
     featured: true,
     publishedAt: "2025-09-30",
     readTime: "16 min read"
+  },
+  {
+    id: "fintech-ai-fraud-prevention",
+    slug: "fintech-ai-fraud-prevention",
+    title: "NeoBank: AI Fraud Prevention Saves $180M Annually",
+    client: "NeoBank Financial Services",
+    industry: "FinTech",
+    description: "Deployed AI-powered fraud prevention system achieving 99.97% detection accuracy with <50ms decision time, saving $180M annually while reducing false positives by 95%.",
+    challenge: "Legacy rule-based fraud detection missing 28% of fraudulent transactions while blocking 12% of legitimate transactions. $200M+ annual fraud losses and customer satisfaction dropping due to false declines.",
+    solution: "Implemented real-time AI fraud detection with behavioral analysis, anomaly detection, and graph neural networks. Built streaming ML pipeline processing 50M+ transactions daily with sub-50ms latency.",
+    results: [
+      {
+        metric: "Fraud Detection",
+        value: "99.97%",
+        description: "Detection accuracy up from 72% baseline"
+      },
+      {
+        metric: "Annual Savings",
+        value: "$180M",
+        description: "Fraud losses prevented annually"
+      },
+      {
+        metric: "False Positives",
+        value: "95%",
+        description: "Reduction in legitimate transaction blocks"
+      },
+      {
+        metric: "Decision Latency",
+        value: "42ms",
+        description: "Real-time fraud detection per transaction"
+      },
+      {
+        metric: "Customer Satisfaction",
+        value: "+47%",
+        description: "Improvement from fewer false declines"
+      }
+    ],
+    technologies: ["Real-Time AI", "Graph Neural Networks", "Behavioral Analytics", "Streaming ML", "Anomaly Detection"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "14 min read"
+  },
+  {
+    id: "media-ai-content-moderation",
+    slug: "media-ai-content-moderation",
+    title: "StreamMedia: AI Content Moderation at Billion-User Scale",
+    client: "StreamMedia Platform",
+    industry: "Social Media",
+    description: "Transformed content moderation with AI achieving 99.8% accuracy across 50+ languages, processing 10B+ content pieces daily while reducing moderation costs by 70%.",
+    challenge: "Manual moderation unable to scale with 10B+ daily uploads. Average 18-hour response time for harmful content, 15% accuracy for edge cases, and skyrocketing moderation costs of $400M annually.",
+    solution: "Deployed multimodal AI content moderation with real-time processing, cultural context awareness, and automated appeals. Built distributed inference system handling 10B+ daily decisions with <100ms latency.",
+    results: [
+      {
+        metric: "Moderation Accuracy",
+        value: "99.8%",
+        description: "AI accuracy vs 85% human baseline"
+      },
+      {
+        metric: "Response Time",
+        value: "98%",
+        description: "Reduction from 18 hours to 20 minutes"
+      },
+      {
+        metric: "Scale",
+        value: "10B+",
+        description: "Content pieces moderated daily"
+      },
+      {
+        metric: "Cost Reduction",
+        value: "70%",
+        description: "$280M annual moderation cost savings"
+      },
+      {
+        metric: "Multilingual",
+        value: "50+",
+        description: "Languages supported with cultural context"
+      },
+      {
+        metric: "Appeals Processing",
+        value: "99%",
+        description: "Faster automated appeals resolution"
+      }
+    ],
+    technologies: ["Multimodal AI", "Real-Time Processing", "Content Moderation AI", "Cultural Context AI", "Distributed Inference"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "17 min read"
+  },
+  {
+    id: "automotive-autonomous-driving",
+    slug: "automotive-autonomous-driving",
+    title: "AutoDrive Inc: Level 4 Autonomous Driving Production Deployment",
+    client: "AutoDrive Automotive",
+    industry: "Automotive",
+    description: "Achieved Level 4 autonomous driving with 99.999% safety rate across 500M+ miles driven. AI vision systems processing 50TB/day achieving human-level perception with 10x better reaction time.",
+    challenge: "Legacy ADAS systems achieving only Level 2 autonomy with 0.4% failure rate. Computer vision struggling in edge cases (night, rain, snow), requiring human intervention every 45 miles.",
+    solution: "Deployed end-to-end AI autonomous driving stack with sensor fusion, real-time decision systems, and continuous learning. Built neuromorphic edge computing for 1000x more efficient inference with <5ms latency.",
+    results: [
+      {
+        metric: "Safety Rate",
+        value: "99.999%",
+        description: "Zero critical failures in 500M+ miles"
+      },
+      {
+        metric: "Autonomy Level",
+        value: "Level 4",
+        description: "Full autonomy in defined conditions"
+      },
+      {
+        metric: "Perception Accuracy",
+        value: "99.95%",
+        description: "Object detection in all weather conditions"
+      },
+      {
+        metric: "Reaction Time",
+        value: "10x",
+        description: "Faster than human drivers (avg 45ms)"
+      },
+      {
+        metric: "Data Processing",
+        value: "50TB",
+        description: "Sensor data processed daily per vehicle"
+      },
+      {
+        metric: "Energy Efficiency",
+        value: "1000x",
+        description: "Better with neuromorphic computing"
+      }
+    ],
+    technologies: ["Autonomous Driving AI", "Sensor Fusion", "Neuromorphic Computing", "Real-Time Decision Systems", "Computer Vision"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "19 min read"
+  },
+  {
+    id: "education-adaptive-learning-platform",
+    slug: "education-adaptive-learning-platform",
+    title: "EduTech Global: AI Adaptive Learning Improves Outcomes 3.5x",
+    client: "EduTech Global",
+    industry: "Education Technology",
+    description: "Revolutionary AI-powered adaptive learning platform achieving 3.5x better student outcomes, 85% engagement increase, and personalized learning paths for 50M+ students globally.",
+    challenge: "One-size-fits-all curriculum resulting in 45% student disengagement, 30% dropout rate, and inability to adapt to individual learning styles across diverse student population.",
+    solution: "Built AI adaptive learning platform with cognitive modeling, real-time skill assessment, and personalized content generation. Implemented multimodal AI understanding text, video, and voice interactions.",
+    results: [
+      {
+        metric: "Learning Outcomes",
+        value: "3.5x",
+        description: "Improvement in test scores and retention"
+      },
+      {
+        metric: "Engagement",
+        value: "85%",
+        description: "Increase in student engagement rates"
+      },
+      {
+        metric: "Dropout Reduction",
+        value: "73%",
+        description: "From 30% to 8% dropout rate"
+      },
+      {
+        metric: "Personalization",
+        value: "100%",
+        description: "Unique learning paths per student"
+      },
+      {
+        metric: "Scale",
+        value: "50M+",
+        description: "Students using platform globally"
+      },
+      {
+        metric: "Time to Mastery",
+        value: "40%",
+        description: "Reduction in time to achieve mastery"
+      }
+    ],
+    technologies: ["Adaptive Learning AI", "Cognitive Modeling", "Multimodal AI", "Personalization Engine", "Knowledge Graph"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "15 min read"
+  },
+  {
+    id: "agriculture-precision-farming-ai",
+    slug: "agriculture-precision-farming-ai",
+    title: "AgriTech Solutions: AI Precision Farming Increases Yield 60%",
+    client: "AgriTech Solutions",
+    industry: "Agriculture",
+    description: "Deployed AI-powered precision farming achieving 60% yield increase, 50% reduction in water usage, and 70% pesticide reduction across 500K+ acres globally.",
+    challenge: "Traditional farming methods resulting in 35% crop waste, inefficient resource usage with $50M annual losses, and inability to predict disease outbreaks or optimize growing conditions.",
+    solution: "Implemented AI precision farming with computer vision drones, IoT sensors, and predictive analytics. Built swarm robotics for autonomous crop monitoring and targeted intervention across vast farmland.",
+    results: [
+      {
+        metric: "Yield Increase",
+        value: "60%",
+        description: "Crop production improvement per acre"
+      },
+      {
+        metric: "Water Savings",
+        value: "50%",
+        description: "Reduction through AI-optimized irrigation"
+      },
+      {
+        metric: "Pesticide Reduction",
+        value: "70%",
+        description: "Through targeted AI-driven application"
+      },
+      {
+        metric: "Cost Savings",
+        value: "$65M",
+        description: "Annual savings from optimization"
+      },
+      {
+        metric: "Disease Prevention",
+        value: "95%",
+        description: "Early detection preventing crop loss"
+      },
+      {
+        metric: "Scale",
+        value: "500K+",
+        description: "Acres managed by AI systems"
+      }
+    ],
+    technologies: ["Computer Vision", "Swarm Robotics", "IoT Sensors", "Predictive Analytics", "Precision Agriculture AI"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "16 min read"
   }
 ];
 
