@@ -511,6 +511,211 @@ export const newServices2025: ServiceOffering[] = [
     newBadge: true,
     popularBadge: false,
     icon: "🌍"
+  },
+  {
+    id: "multimodal-ai-platform",
+    slug: "multimodal-ai-platform",
+    name: "Multimodal AI Platform",
+    tagline: "Process Text, Image, Video, Audio Simultaneously",
+    description: "Revolutionary multimodal AI processing text, images, video, and audio in real-time achieving human-level comprehension across all modalities with unified understanding.",
+    category: "Multimodal AI",
+    benefits: [
+      "Unified understanding across all content types",
+      "Real-time processing of mixed media",
+      "98% accuracy across all modalities",
+      "Cross-modal reasoning and insight generation",
+      "Seamless integration with existing workflows"
+    ],
+    features: [
+      "Text-Image-Video-Audio Processing",
+      "Cross-Modal Understanding",
+      "Real-Time Inference",
+      "Unified Embedding Space",
+      "Content Generation Across Modalities",
+      "Sentiment Analysis Multi-Modal",
+      "Object Detection & Recognition",
+      "Speech-to-Text & Text-to-Speech"
+    ],
+    pricing: {
+      starter: "$3,000/month",
+      professional: "$15,000/month",
+      enterprise: "Custom Pricing"
+    },
+    useCases: [
+      "Analyze customer feedback across all channels",
+      "Generate content in any format from any input",
+      "Monitor brand presence across media types",
+      "Create accessible content automatically",
+      "Enhance search with multimodal understanding"
+    ],
+    featured: true,
+    newBadge: true,
+    popularBadge: true,
+    icon: "🎬"
+  },
+  {
+    id: "ai-model-compression-service",
+    slug: "ai-model-compression-service",
+    name: "AI Model Compression Service",
+    tagline: "90% Size Reduction, Zero Accuracy Loss",
+    description: "Compress AI models by 90% with zero accuracy loss using advanced quantization, pruning, and knowledge distillation achieving 10x faster inference.",
+    category: "Model Optimization",
+    benefits: [
+      "90% model size reduction",
+      "Zero accuracy degradation",
+      "10x faster inference speed",
+      "70% cost reduction in deployment",
+      "Deploy models on edge devices"
+    ],
+    features: [
+      "Automated Quantization",
+      "Neural Architecture Search",
+      "Knowledge Distillation",
+      "Pruning & Sparsification",
+      "Hardware-Aware Optimization",
+      "Model Benchmarking",
+      "Continuous Optimization",
+      "Cross-Platform Deployment"
+    ],
+    pricing: {
+      starter: "$2,000/month",
+      professional: "$8,000/month",
+      enterprise: "Custom Pricing"
+    },
+    useCases: [
+      "Deploy large models on mobile devices",
+      "Reduce cloud inference costs by 70%",
+      "Run AI at the edge with limited compute",
+      "Achieve real-time performance on CPUs",
+      "Scale AI deployment to millions of devices"
+    ],
+    featured: true,
+    newBadge: true,
+    popularBadge: true,
+    icon: "🗜️"
+  },
+  {
+    id: "ai-explainability-platform",
+    slug: "ai-explainability-platform",
+    name: "AI Explainability Platform",
+    tagline: "Transparent AI Decisions with Complete Audit Trails",
+    description: "Make every AI decision explainable and auditable achieving 100% transparency for regulatory compliance, building trust, and identifying model biases.",
+    category: "AI Governance",
+    benefits: [
+      "100% transparency in AI decisions",
+      "Regulatory compliance automation",
+      "Bias detection and mitigation",
+      "Complete decision audit trails",
+      "Build trust with stakeholders"
+    ],
+    features: [
+      "Model Interpretation Dashboard",
+      "Feature Importance Analysis",
+      "Decision Path Visualization",
+      "Bias Detection & Reporting",
+      "Counterfactual Explanations",
+      "Model Card Generation",
+      "Regulatory Compliance Reports",
+      "Real-Time Monitoring"
+    ],
+    pricing: {
+      starter: "$1,500/month",
+      professional: "$7,500/month",
+      enterprise: "Custom Pricing"
+    },
+    useCases: [
+      "Explain loan rejection decisions to customers",
+      "Audit AI hiring decisions for bias",
+      "Generate regulatory compliance reports",
+      "Debug model predictions in real-time",
+      "Build trust in AI-driven healthcare decisions"
+    ],
+    featured: true,
+    newBadge: true,
+    popularBadge: false,
+    icon: "🔍"
+  },
+  {
+    id: "federated-learning-platform",
+    slug: "federated-learning-platform",
+    name: "Federated Learning Platform",
+    tagline: "Train AI Without Centralizing Data",
+    description: "Train powerful AI models on distributed data without ever centralizing it, achieving perfect privacy preservation while maintaining 98% of centralized model accuracy.",
+    category: "Privacy-Preserving AI",
+    benefits: [
+      "Perfect data privacy preservation",
+      "Train on distributed data sources",
+      "98% accuracy vs centralized training",
+      "GDPR/HIPAA compliant by design",
+      "Reduce data transfer costs by 95%"
+    ],
+    features: [
+      "Secure Aggregation Protocol",
+      "Differential Privacy",
+      "Encrypted Model Updates",
+      "Cross-Silo Federation",
+      "Cross-Device Federation",
+      "Byzantine-Resilient Training",
+      "Model Personalization",
+      "Communication Optimization"
+    ],
+    pricing: {
+      starter: "$5,000/month",
+      professional: "$20,000/month",
+      enterprise: "Custom Pricing"
+    },
+    useCases: [
+      "Train healthcare AI across hospitals",
+      "Build financial models without sharing data",
+      "Create personalized models on user devices",
+      "Collaborate on AI across organizations",
+      "Maintain data sovereignty compliance"
+    ],
+    featured: true,
+    newBadge: true,
+    popularBadge: true,
+    icon: "🔐"
+  },
+  {
+    id: "ai-continuous-learning-platform",
+    slug: "ai-continuous-learning-platform",
+    name: "AI Continuous Learning Platform",
+    tagline: "Models That Learn and Improve Automatically",
+    description: "Deploy AI models that continuously learn from production data achieving always-fresh predictions with automated retraining, monitoring, and deployment.",
+    category: "MLOps",
+    benefits: [
+      "Automated continuous model improvement",
+      "Zero model drift over time",
+      "Always-fresh predictions",
+      "50% reduction in manual ML operations",
+      "Automatic A/B testing and deployment"
+    ],
+    features: [
+      "Automated Retraining Pipeline",
+      "Model Performance Monitoring",
+      "Data Drift Detection",
+      "Online Learning Support",
+      "Automated A/B Testing",
+      "Gradual Rollout Deployment",
+      "Feature Store Integration",
+      "Experiment Tracking"
+    ],
+    pricing: {
+      starter: "$2,500/month",
+      professional: "$12,000/month",
+      enterprise: "Custom Pricing"
+    },
+    useCases: [
+      "Maintain recommendation system freshness",
+      "Adapt fraud detection to new patterns",
+      "Keep demand forecasting accurate",
+      "Automatically improve customer service AI",
+      "Continuously optimize pricing strategies"
+    ],
+    featured: true,
+    newBadge: true,
+    popularBadge: true,
+    icon: "🔄"
   }
 ];
 

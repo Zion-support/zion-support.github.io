@@ -95,12 +95,18 @@ const LatestContentBanner2025 = () => {
         </div>
 
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          🚀 September 30, 2025 — MASSIVE CONTENT EXPANSION!
+          🚀 September 30, 2025 — MEGA CONTENT LAUNCH: 11 NEW RESOURCES!
         </h2>
         <p className="text-xl text-blue-100 mb-8 max-w-3xl">
-          Discover <span className="font-bold text-yellow-300">15 BRAND NEW cutting-edge articles</span> on Agentic AI Workflows, LLM Function Calling, Vector Search Optimization, Real-World RAG Production, AI Cost Optimization, and more! 
-          Plus <span className="font-bold text-yellow-300">5 NEW game-changing case studies</span> featuring FinTech fraud prevention, autonomous driving, adaptive learning, and precision farming!
-          Explore our expanded library of <span className="font-bold text-yellow-300">100+ revolutionary articles and 15+ case studies</span> shaping 2026!
+          🎉 <span className="font-bold text-yellow-300">JUST RELEASED TODAY!</span> 🎉
+          <br/>
+          <span className="font-bold text-green-300">5 REVOLUTIONARY SERVICES:</span> Multimodal AI Platform (text+image+video+audio), AI Model Compression (90% reduction!), AI Explainability Platform, Federated Learning, Continuous Learning AI!
+          <br/>
+          <span className="font-bold text-purple-300">3 BREAKTHROUGH CASE STUDIES:</span> TelecomGlobal (99.999% uptime!), InsureTech (95% automation), HospitalityChain (45% RevPAR increase)!
+          <br/>
+          <span className="font-bold text-pink-300">3 COMPREHENSIVE WHITEPAPERS:</span> Multimodal AI (165 pages), Model Compression (125 pages), Federated Learning (145 pages)!
+          <br/>
+          Total library now: <span className="font-bold text-yellow-300">17 Services • 18 Case Studies • 15 Whitepapers • 100+ Articles!</span>
         </p>
 
         {/* Featured highlights */}
@@ -156,23 +162,27 @@ const LatestContentBanner2025 = () => {
         {/* Stats */}
         <div className="mt-8 pt-6 border-t border-white/20 flex flex-wrap gap-8">
           <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-300">15</div>
-            <div className="text-sm text-blue-200">NEW Articles TODAY</div>
+            <div className="text-3xl font-bold text-yellow-300">11</div>
+            <div className="text-sm text-blue-200">NEW Resources TODAY</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-green-300">100+</div>
-            <div className="text-sm text-blue-200">Total Articles</div>
+            <div className="text-3xl font-bold text-green-300">17</div>
+            <div className="text-sm text-blue-200">Total Services</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-purple-300">5</div>
-            <div className="text-sm text-blue-200">NEW Case Studies</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-pink-300">15+</div>
+            <div className="text-3xl font-bold text-purple-300">18</div>
             <div className="text-sm text-blue-200">Total Case Studies</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-300">1500+</div>
+            <div className="text-3xl font-bold text-pink-300">15</div>
+            <div className="text-sm text-blue-200">Total Whitepapers</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-blue-300">100+</div>
+            <div className="text-sm text-blue-200">Total Articles</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-orange-300">2000+</div>
             <div className="text-sm text-blue-200">Pages of Insights</div>
           </div>
         </div>
