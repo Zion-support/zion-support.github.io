@@ -85,53 +85,169 @@ export const metadata = {
 export default function HomePage() {
   return (
     <>
-<<<<<<< HEAD
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="animate-fade-in">
-          {/* New 2026 Content Promotional Banner */}
-          <NewContent2026PromotionalBanner />
-          
-          {/* New 2026 Content Banners */}
-          <NewContent2026MegaBanner />
-          <AIRevolutionary2026Banner />
-          
-          {/* Revolutionary 2026 Content Banner */}
-          <Revolutionary2026ContentBanner />
-          
-          {/* Latest AI Innovations Banner */}
-          <LatestAIInnovations2026Banner />
-          
-          {/* New Content Promotional Banners */}
-          <AIEnterpriseAdoptionBanner />
-          <AITrends2025Banner />
-          <SupplyChainOptimizationBanner />
-          <AIBusinessTransformationBanner />
-          <AICustomerExperienceBanner />
-          <EnterpriseAITransformationBanner />
-          <LatestAIInsightsBanner />
-          <AIServicesShowcaseBanner />
-          <AIWorkflowAutomationBanner />
-          <EnterpriseAISecurityBanner />
-          
-          {/* Existing Promotional Banners */}
-          <NewContentShowcaseBanner />
-          <AutonomousAgentsBanner />
-          <AIGovernanceBanner />
-          <FinTechSuccessBanner />
-          <AIContentShowcaseBanner />
-          <CustomerServiceAIBanner />
-          <HealthcareAIBanner />
-          <RetailSuccessBanner />
-          <AIRevolutionBanner />
-          <NewBlogBanner />
-          <WorkflowAutomationBanner />
-          <AIAnalyticsBanner />
-=======
       <div className="animate-fade-in">
+      {/* BREAKING NEWS: SEPTEMBER 30, 2025 - 3 NEW BREAKTHROUGH GUIDES */}
+      <section className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6 animate-pulse">
+              <span className="text-3xl">🚀</span>
+              <span className="text-xl font-bold tracking-wide">JUST PUBLISHED TODAY — September 30, 2025</span>
+              <span className="text-3xl">✨</span>
+            </div>
+            <h2 className="text-6xl font-extrabold mb-6 leading-tight">
+              3 Game-Changing Enterprise AI Guides
+            </h2>
+            <p className="text-2xl opacity-95 max-w-4xl mx-auto mb-4">
+              Essential reading for CTOs, CIOs, and technology leaders planning their 2025-2026 AI roadmap
+            </p>
+            <p className="text-xl opacity-90">
+              Comprehensive technical guides with proven frameworks, real case studies, and implementation roadmaps
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* AI Infrastructure Automation */}
+            <a href="/blog/ai-infrastructure-automation-2026" className="group transform hover:scale-105 transition-all">
+              <div className="bg-white text-gray-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl">
+                <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-8 text-white">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="bg-white text-blue-900 px-4 py-2 rounded-full text-sm font-bold animate-pulse">
+                      🔥 #1 TRENDING
+                    </span>
+                  </div>
+                  <h3 className="text-3xl font-bold mb-3">
+                    AI Infrastructure Automation 2026
+                  </h3>
+                  <p className="text-lg opacity-95">
+                    Self-healing systems with 99.99% uptime
+                  </p>
+                </div>
+                <div className="p-8">
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    Build autonomous infrastructure that provisions, scales, and recovers from failures automatically. 
+                    Reduce MTTR from 4.2 hours to 8 minutes and cut costs by 70%.
+                  </p>
+                  <div className="grid grid-cols-3 gap-4 mb-6 text-center">
+                    <div>
+                      <div className="text-3xl font-bold text-blue-600">8min</div>
+                      <div className="text-sm text-gray-600">MTTR</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-cyan-600">70%</div>
+                      <div className="text-sm text-gray-600">Cost ↓</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-green-600">99.99%</div>
+                      <div className="text-sm text-gray-600">Uptime</div>
+                    </div>
+                  </div>
+                  <div className="text-sm text-gray-500 mb-4">18 min read • Infrastructure & DevOps</div>
+                  <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-center py-3 rounded-lg font-bold group-hover:from-blue-700 group-hover:to-cyan-700 transition-colors">
+                    Read Complete Guide →
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Generative AI Cost Breakthrough */}
+            <a href="/blog/generative-ai-cost-breakthrough-2025" className="group transform hover:scale-105 transition-all">
+              <div className="bg-white text-gray-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl">
+                <div className="bg-gradient-to-r from-green-600 to-emerald-600 p-8 text-white">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="bg-white text-green-900 px-4 py-2 rounded-full text-sm font-bold animate-pulse">
+                      💰 MUST READ
+                    </span>
+                  </div>
+                  <h3 className="text-3xl font-bold mb-3">
+                    Cut GenAI Costs by 85%
+                  </h3>
+                  <p className="text-lg opacity-95">
+                    Proven cost optimization strategies
+                  </p>
+                </div>
+                <div className="p-8">
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    Reduce LLM spending by 85% through semantic caching, model cascading, and intelligent routing. 
+                    Real case study: $2.1M → $315K monthly.
+                  </p>
+                  <div className="grid grid-cols-3 gap-4 mb-6 text-center">
+                    <div>
+                      <div className="text-3xl font-bold text-green-600">85%</div>
+                      <div className="text-sm text-gray-600">Cost ↓</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-emerald-600">$142M</div>
+                      <div className="text-sm text-gray-600">Saved</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-blue-600">12wks</div>
+                      <div className="text-sm text-gray-600">Deploy</div>
+                    </div>
+                  </div>
+                  <div className="text-sm text-gray-500 mb-4">22 min read • Cost Optimization & FinOps</div>
+                  <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white text-center py-3 rounded-lg font-bold group-hover:from-green-700 group-hover:to-emerald-700 transition-colors">
+                    Read Complete Guide →
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* AI Governance Framework */}
+            <a href="/blog/ai-governance-framework-enterprise-2025" className="group transform hover:scale-105 transition-all">
+              <div className="bg-white text-gray-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl">
+                <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-8 text-white">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="bg-white text-indigo-900 px-4 py-2 rounded-full text-sm font-bold animate-pulse">
+                      ⚖️ ESSENTIAL
+                    </span>
+                  </div>
+                  <h3 className="text-3xl font-bold mb-3">
+                    AI Governance Framework 2025
+                  </h3>
+                  <p className="text-lg opacity-95">
+                    Build trust, compliance & innovation
+                  </p>
+                </div>
+                <div className="p-8">
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    Complete governance framework for responsible AI: ethics, regulatory compliance (EU AI Act, NIST RMF), 
+                    risk management, and transparency.
+                  </p>
+                  <div className="grid grid-cols-3 gap-4 mb-6 text-center">
+                    <div>
+                      <div className="text-3xl font-bold text-indigo-600">10wks</div>
+                      <div className="text-sm text-gray-600">Deploy</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-purple-600">100%</div>
+                      <div className="text-sm text-gray-600">Compliant</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-green-600">Zero</div>
+                      <div className="text-sm text-gray-600">Fines</div>
+                    </div>
+                  </div>
+                  <div className="text-sm text-gray-500 mb-4">25 min read • AI Governance & Policy</div>
+                  <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center py-3 rounded-lg font-bold group-hover:from-indigo-700 group-hover:to-purple-700 transition-colors">
+                    Read Complete Guide →
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div className="text-center">
+            <a
+              href="/blog"
+              className="inline-block bg-white text-purple-600 px-12 py-5 rounded-xl font-bold text-xl hover:bg-purple-50 transition-all transform hover:scale-105 shadow-2xl"
+            >
+              Explore All Latest AI Insights →
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* NEW JANUARY 2025 Content Banner */}
       <section className="py-16 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -294,7 +410,6 @@ export default function HomePage() {
       <WorkflowAutomationBanner />
       <AIAnalyticsBanner />
       
->>>>>>> 83687f660ab4d793fbd393e78d6f981ce54e0604
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <div className="max-w-4xl mx-auto px-4">
