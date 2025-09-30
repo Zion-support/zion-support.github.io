@@ -1668,7 +1668,7 @@ posts.push(
   }
 );
 
-// Mar 1, 2026 – Brand‑new content to advertise across the homepage
+// Mar 2026 – Fresh featured posts to surface on homepage
 posts.push(
   {
     slug: "agent-observability-v2-2026",
@@ -1677,7 +1677,7 @@ posts.push(
     category: "AI Operations",
     publishedAt: "2026-03-01",
     featured: true,
-    readTime: "7 min read"
+    readTime: "8 min read"
   },
   {
     slug: "genai-quality-tiers-2026",
@@ -1696,6 +1696,33 @@ posts.push(
     publishedAt: "2026-02-10",
     featured: true,
     readTime: "6 min read"
+  },
+  {
+    slug: "ai-platform-blueprints-2026",
+    title: "AI Platform Blueprints 2026: Guardrails, Traces, and Budgets",
+    description: "Reference blueprints for governed AI platforms with KPI‑linked guardrails, live traces, and predictable spend.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-agents-2026",
+    title: "Edge Agents 2026: Offline‑Capable Tools at <100ms",
+    description: "Design privacy‑first agents with on‑device tools, signed configs, and tiered caches for sub‑100ms UX.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "policy-checked-genai-2026",
+    title: "Policy‑Checked GenAI 2026: CI Gates, Canaries, and Rollback",
+    description: "Wire CI policy tests, online canaries, and rollback triggers so teams ship fast without regressions.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
   }
 );
 
