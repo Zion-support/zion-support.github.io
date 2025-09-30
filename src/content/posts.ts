@@ -1342,3 +1342,34 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Additional content to advertise on Home
+posts.push(
+  {
+    slug: "agentic-control-planes-2026",
+    title: "Agentic Control Planes 2026: Budgets, Policies, Recovery",
+    description: "Operate agent platforms with budgeted actions, policy gates, and instant recovery playbooks.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-eval-canaries-2026",
+    title: "Edge Evals & Canaries 2026: Quality at <100ms",
+    description: "Run KPI‑linked evals and live canaries at the edge to protect UX without latency tax.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "ai-value-stream-maps-2026",
+    title: "AI Value Stream Maps 2026: Proving ROI End‑to‑End",
+    description: "Map prompts, tools, and UX to business outcomes with traceable, auditable scorecards.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
