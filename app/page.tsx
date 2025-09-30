@@ -46,6 +46,7 @@ import MetaCognitiveRevolutionBanner from '../components/MetaCognitiveRevolution
 import NeuromorphicComputingRevolutionBanner from '../components/NeuromorphicComputingRevolutionBanner';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import March2026MegaBreakthroughBanner from '../components/March2026MegaBreakthroughBanner';
+import NewContent2026MegaBanners from '../components/NewContent2026MegaBanners';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -190,6 +191,9 @@ export default function HomePage() {
           </div>
         </div>
       </header>
+
+      {/* NEW 2026 MEGA BREAKTHROUGH BANNERS - MOST PROMINENT */}
+      <NewContent2026MegaBanners />
 
       {/* NEW MARCH 2026 MEGA BREAKTHROUGH - MOST PROMINENT */}
       <March2026MegaBreakthroughBanner />
