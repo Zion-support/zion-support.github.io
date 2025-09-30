@@ -109,6 +109,7 @@ import Revolutionary2027ContentBanner from '../components/Revolutionary2027Conte
 import UltimateContent2027Showcase from '../components/UltimateContent2027Showcase';
 import NewContentShowcase2026 from '../src/components/NewContentShowcase2026';
 import AIMetaCognitiveRevolutionBanner from '../components/AIMetaCognitiveRevolutionBanner';
+import October2025NewContentBanner from '../components/October2025NewContentBanner';
 import AINeuromorphicRevolutionBanner from '../components/AINeuromorphicRevolutionBanner';
 import Ultimate2026ContentRevolutionBanner from '../components/Ultimate2026ContentRevolutionBanner';
 
@@ -153,6 +154,8 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🔔 Promote newest blog content */}
+      <October2025NewContentBanner />
       {/* 🚀 NEWEST BREAKTHROUGH CONTENT - January 2026 - Revolutionary AI Technologies! */}
       <Ultimate2026ContentRevolutionBanner />
       
