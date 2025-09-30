@@ -44,10 +44,18 @@ function Header() {
           <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
           <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
           <div className="relative group">
+            <Link href="/services/ai-autonomous-operations" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              AI Operations
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                NEW 2025
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
             <Link href="/content-hub" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Content Hub
               <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                NEW 2026
+                NEW 2027
               </span>
             </Link>
           </div>
@@ -95,7 +103,7 @@ function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Revolutionary 2026 Breakthroughs</h3>
+            <h3 className="font-semibold text-gray-900 mb-3">Latest 2027 Content</h3>
             <div className="space-y-2">
               <Link href="/blog/ai-revolutionary-breakthrough-january-2026" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 🚀 AI Revolutionary Breakthrough
@@ -120,6 +128,18 @@ function Footer() {
               <Link href="/content-hub" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Content Hub
                 <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">NEW</span>
+              </Link>
+              <Link href="/blog/ai-2027-quantum-neural-networks" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                ⚛️ Quantum AI 2027
+                <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
+              </Link>
+              <Link href="/blog/ai-2026-autonomous-business-intelligence" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                🧠 Autonomous Intelligence
+                <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">FEATURED</span>
+              </Link>
+              <Link href="/case-studies/ai-2027-quantum-breakthrough-success" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                💰 $500M Success Story
+                <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
               </Link>
               <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
                 Case Studies
