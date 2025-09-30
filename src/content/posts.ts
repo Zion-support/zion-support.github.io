@@ -10,9 +10,27 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: "ai-operational-trust-scorecards-2026",
-    title: "AI Operational Trust Scorecards 2026",
-    description: "SLIs wired to KPIs with budgets, canaries, and instant rollback for safe velocity.",
+    slug: "enterprise-rag-security-2027",
+    title: "Enterprise RAG Security 2027: Auth‑Aware Retrieval and Signed Outputs",
+    description: "Blueprint for secure RAG: auth‑aware retrieval, freshness windows, prompt firewalls, and signed outputs.",
+    category: "AI Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-consentless-personalization-2027",
+    title: "Edge Personalization 2027: Zero‑PII, <100ms, Scoped IDs",
+    description: "Private, sub‑100ms experiences using scoped IDs, on‑device models, and DP noise—no PII required.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-governance-pr-policy-tests-2027-q4",
+    title: "AI Governance: PR Policy Tests Q4 2027 — Ship Fast, Stay Safe",
+    description: "CI policy tests wired to KPIs to prevent regressions while preserving velocity.",
     category: "AI Governance",
     publishedAt: "2025-09-30",
     featured: true,
@@ -42,36 +60,6 @@ export const posts: BlogPost[] = [
     description: "Stabilize UX and cut costs 30–70% with semantic caches and budget‑aware routing.",
     category: "GenAI",
     publishedAt: "2025-09-30",
-<<<<<<< HEAD
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
-    slug: "edge-2026-private-feature-flags",
-    title: "Edge 2026: Private Feature Flags",
-    description: "Signed configs, scoped IDs, and on‑device metrics for zero‑PII rollouts at <100ms.",
-    category: "Edge Computing",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "agent-release-guardrails-2026",
-    title: "Agent Release Guardrails 2026",
-    description: "Budgets, approvals, KPI‑linked canaries, and instant rollback for safe automation.",
-    category: "AI Operations",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    slug: "ai-trust-scorecards-v5-2027",
-    title: "AI Trust Scorecards v5 (2027): KPIs, Budgets, Guardrails",
-    description: "Next‑gen scorecards linking SLIs to KPIs with budgeted actions, PR policy tests, and instant rollback.",
-    category: "AI Governance",
-    publishedAt: "2026-12-01",
-=======
->>>>>>> 24e17132c1344b429cef13f136704b6705d13023
     featured: true,
     readTime: "9 min read"
   },

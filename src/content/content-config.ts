@@ -11,6 +11,22 @@ export interface FeaturedItem {
 
 export const featuredBlogPosts: FeaturedItem[] = [
   {
+    id: "enterprise-rag-security-2027",
+    title: "Enterprise RAG Security 2027",
+    description: "Auth‑aware retrieval, freshness windows, prompt firewalls, signed outputs",
+    link: "/blog/enterprise-rag-security-2027",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-consentless-personalization-2027",
+    title: "Edge Personalization 2027",
+    description: "Zero‑PII personalization at <100ms with scoped IDs and on‑device models",
+    link: "/blog/edge-consentless-personalization-2027",
+    type: "article",
+    featured: true
+  },
+  {
     id: "realtime-ai-decision-engines-2025",
     title: "Real-Time AI Decision Engines",
     description: "10M/sec under 1ms with tiered models and caches",

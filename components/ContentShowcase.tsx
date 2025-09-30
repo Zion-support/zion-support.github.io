@@ -20,6 +20,26 @@ interface ContentItem {
 const contentItems: ContentItem[] = [
   // Newly added items for additional promotion on the homepage
   {
+    id: 'enterprise-rag-security-2027',
+    title: 'Enterprise RAG Security 2027: Auth‑Aware Retrieval and Signed Outputs',
+    excerpt: 'Secure RAG with auth‑aware retrieval, freshness windows, prompt firewalls, and signed outputs.',
+    readTime: '8 min read',
+    category: 'AI Security',
+    href: '/blog/enterprise-rag-security-2027',
+    featured: true,
+    publishedDate: '2025-09-30'
+  },
+  {
+    id: 'edge-consentless-personalization-2027',
+    title: 'Edge Personalization 2027: Zero‑PII, <100ms, Scoped IDs',
+    excerpt: 'Private, sub‑100ms journeys with scoped IDs, on‑device models, and DP noise.',
+    readTime: '7 min read',
+    category: 'Edge Computing',
+    href: '/blog/edge-consentless-personalization-2027',
+    featured: true,
+    publishedDate: '2025-09-30'
+  },
+  {
     id: 'ai-sla-scorecards-2026-q1',
     title: 'AI SLA Scorecards 2026 Q1: SLIs, Budgets, Rollback',
     excerpt: 'Operational scorecards wiring SLIs to KPIs with budgeted actions and instant rollback.',
