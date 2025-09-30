@@ -185,20 +185,20 @@ const Home = () => {
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">
             <div className="text-white text-sm mb-4">Just added</div>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link to="/blog/ai-operational-scorecards-v4-2026" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
-                <div className="text-emerald-300 text-xs mb-2">AI Operations</div>
-                <div className="text-white font-semibold">AI Operational Scorecards v4 (2026)</div>
-                <div className="text-zion-slate-light text-sm mt-1">SLIs mapped to KPIs, budgeted actions, instant rollback teams adopt fast.</div>
+              <Link to="/blog/ai-2025-real-time-decision-engines" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">Real-Time AI</div>
+                <div className="text-white font-semibold">Real-Time Decision Engines 2025</div>
+                <div className="text-zion-slate-light text-sm mt-1">10M decisions/sec under 1ms with streaming features and guardrails.</div>
               </Link>
-              <Link to="/blog/edge-zero-pii-insights-2026" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">Analytics</div>
-                <div className="text-white font-semibold">Edge Zero‑PII Insights 2026</div>
-                <div className="text-zion-slate-light text-sm mt-1">Scoped IDs, on‑device aggregation, and DP noise—zero PII.</div>
+              <Link to="/blog/ai-2025-neural-code-synthesis" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">Engineering</div>
+                <div className="text-white font-semibold">Neural Code Synthesis 2025</div>
+                <div className="text-zion-slate-light text-sm mt-1">95% accuracy and 90% faster delivery with governed generation.</div>
               </Link>
-              <Link to="/blog/genai-quality-tiers-v2-2026" className="block rounded-lg border border-white/10 p-4 hover:border-fuchsia-400/40 transition-colors">
-                <div className="text-fuchsia-300 text-xs mb-2">GenAI</div>
-                <div className="text-white font-semibold">GenAI Quality Tiers v2 (2026)</div>
-                <div className="text-zion-slate-light text-sm mt-1">Quality tiers and caches for predictable cost and stable UX.</div>
+              <Link to="/blog/ai-2025-multimodal-fusion-blueprint" className="block rounded-lg border border-white/10 p-4 hover:border-fuchsia-400/40 transition-colors">
+                <div className="text-fuchsia-300 text-xs mb-2">Multimodal AI</div>
+                <div className="text-white font-semibold">Multimodal Fusion Blueprint 2025</div>
+                <div className="text-zion-slate-light text-sm mt-1">Hybrid retrieval and calibrated adapters for 98% cross‑modal accuracy.</div>
               </Link>
             </div>
           </div>
