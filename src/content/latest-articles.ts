@@ -1395,6 +1395,55 @@ export const latestArticles: LatestArticle[] = [
     newBadge: true,
     trending: true
   }
+  ,
+  {
+    id: "ai-2029-self-healing-platforms",
+    slug: "ai-2029-self-healing-platforms",
+    title: "AI 2029: Self‑Healing Platforms — Autonomic Recovery in Seconds",
+    description: "Policy‑tested playbooks, budgeted actions, and live canaries that auto‑contain incidents in under 60s.",
+    excerpt: "Design self‑healing platforms that roll back safely and deterministically under pressure.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "AI Operations",
+    tags: ["Self‑Healing", "Runbooks", "Rollback"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/ai-2029-self-healing-platforms.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "edge-2028-private-personalization",
+    slug: "edge-2028-private-personalization",
+    title: "Edge 2028: Private Personalization at <100ms",
+    description: "Scoped IDs, signed configs, and on‑device models for zero‑PII personalization worldwide.",
+    excerpt: "Blueprints for real‑time, privacy‑first personalization with stable SLAs.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "Edge Computing",
+    tags: ["Edge", "Privacy", "Personalization"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/edge-2028-private-personalization.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "genai-2028-eval-scorecards",
+    slug: "genai-2028-eval-scorecards",
+    title: "GenAI 2028: Eval Scorecards — KPIs, Budgets, Rollback",
+    description: "KPI‑linked evals and budget‑aware routing that keep quality high without regressions.",
+    excerpt: "Ship safe GenAI with scorecards that gate traffic and trigger instant rollback.",
+    author: "Zion Tech Group Team",
+    date: "2025-09-30",
+    category: "GenAI",
+    tags: ["Evals", "Scorecards", "Budgets"],
+    featured: true,
+    readTime: "8 min read",
+    image: "/images/genai-2028-eval-scorecards.jpg",
+    newBadge: true,
+    trending: true
+  }
 ];
 
 export const featuredArticles = latestArticles.filter(article => article.featured);

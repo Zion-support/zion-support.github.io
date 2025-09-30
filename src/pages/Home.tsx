@@ -176,6 +176,27 @@ const Home = () => {
               dismissible={true}
             />
           </div>
+          {/* Newly added featured articles */}
+          <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-6">
+            <div className="text-white text-sm mb-4">Featured this week</div>
+            <div className="grid md:grid-cols-3 gap-4">
+              <Link to="/blog/ai-2028-autonomous-governance-blueprint" className="block rounded-lg border border-white/10 p-4 hover:border-purple-400/40 transition-colors">
+                <div className="text-purple-300 text-xs mb-2">AI Governance</div>
+                <div className="text-white font-semibold">AI 2028: Autonomous Governance Blueprint</div>
+                <div className="text-zion-slate-light text-sm mt-1">Policy tests in CI, live canaries, instant rollback.</div>
+              </Link>
+              <Link to="/blog/ai-2027-operational-scorecards" className="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+                <div className="text-emerald-300 text-xs mb-2">AI Operations</div>
+                <div className="text-white font-semibold">AI 2027: Operational Scorecards</div>
+                <div className="text-zion-slate-light text-sm mt-1">SLIs wired to KPIs with budgets and rollback.</div>
+              </Link>
+              <Link to="/blog/verifiable-edge-analytics-2026" className="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+                <div className="text-cyan-300 text-xs mb-2">Analytics</div>
+                <div className="text-white font-semibold">Verifiable Edge Analytics 2026</div>
+                <div className="text-zion-slate-light text-sm mt-1">Zero‑PII insights with signed attestations under 100ms.</div>
+              </Link>
+            </div>
+          </div>
         </div>
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />

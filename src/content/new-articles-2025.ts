@@ -219,6 +219,43 @@ newArticles2025.push(
   }
 );
 
+// Sept 30, 2025 – Brand-new items to advertise prominently on Home
+newArticles2025.push(
+  {
+    id: "ai-2029-self-healing-platforms",
+    title: "🛠️ AI 2029: Self‑Healing Platforms — Autonomic Recovery",
+    description: "Budgeted actions and live canaries that auto‑contain incidents in under 60s.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2029-self-healing-platforms",
+    readTime: "8 min read",
+    tags: ["Self‑Healing", "Runbooks", "Rollback"]
+  },
+  {
+    id: "edge-2028-private-personalization",
+    title: "⚡ Edge 2028: Private Personalization <100ms",
+    description: "Scoped IDs, signed configs, and on‑device models for zero‑PII personalization.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-2028-private-personalization",
+    readTime: "7 min read",
+    tags: ["Edge", "Privacy", "Personalization"]
+  },
+  {
+    id: "genai-2028-eval-scorecards",
+    title: "📊 GenAI 2028: Eval Scorecards — KPIs, Budgets, Rollback",
+    description: "KPI‑linked evals and budget‑aware routing that keep quality high without regressions.",
+    category: "GenAI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/genai-2028-eval-scorecards",
+    readTime: "8 min read",
+    tags: ["Evals", "Scorecards", "Budgets"]
+  }
+);
+
 // Jan 15, 2026 – Fresh featured items to surface on Home
 newArticles2025.push(
   {
@@ -594,6 +631,43 @@ newArticles2025.push(
     link: "/blog/genai-eval-scorecards-2026",
     readTime: "8 min read",
     tags: ["GenAI", "Evals", "Scorecards", "Budgets"]
+  }
+);
+
+// Sept 30, 2025 – More fresh featured content to surface across the front end
+newArticles2025.push(
+  {
+    id: "ai-2028-autonomous-governance-blueprint",
+    title: "AI 2028: Autonomous Governance Blueprint",
+    description: "KPI‑linked policy tests, live canaries, and instant rollback that scale governance without slowing teams.",
+    category: "AI Governance",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2028-autonomous-governance-blueprint",
+    readTime: "10 min read",
+    tags: ["Governance", "Policy Tests", "Canaries", "Rollback"]
+  },
+  {
+    id: "ai-2027-operational-scorecards",
+    title: "AI 2027: Operational Scorecards — Guardrails Engineers Adopt",
+    description: "SLIs wired to KPIs with budgeted actions and rollback to prevent regressions while increasing velocity.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2027-operational-scorecards",
+    readTime: "8 min read",
+    tags: ["Scorecards", "Budgets", "SLIs", "Rollback"]
+  },
+  {
+    id: "verifiable-edge-analytics-2026",
+    title: "Verifiable Edge Analytics 2026: Zero‑PII Insights with Attestations",
+    description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms.",
+    category: "Analytics",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/verifiable-edge-analytics-2026",
+    readTime: "7 min read",
+    tags: ["Edge", "Analytics", "Privacy", "Attestations"]
   }
 );
 
