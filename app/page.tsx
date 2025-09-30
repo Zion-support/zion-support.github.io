@@ -32,16 +32,54 @@ import {
   EnterpriseAISecurityBanner
 } from '../components/NewContentPromotionalBanners';
 import ContentShowcase from '../components/ContentShowcase';
+import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
+import AIRevolutionary2026Banner from '../components/AIRevolutionary2026Banner';
+import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
 
 export const metadata = {
-  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
-  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation',
+  title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
+  description: 'Transform your enterprise with AI-powered solutions. Get 300% ROI, 90% efficiency improvement, and $50M+ savings with our proven AI transformation framework. Free consultation available.',
+  keywords: 'AI enterprise transformation, AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation, AI ROI calculator, AI implementation, digital transformation, AI consulting, Fortune 500 AI solutions',
+  openGraph: {
+    title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
+    description: 'Transform your enterprise with AI-powered solutions. Get 300% ROI, 90% efficiency improvement, and $50M+ savings.',
+    type: 'website',
+    url: 'https://ziontechgroup.com',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group AI Enterprise Transformation',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
+    description: 'Transform your enterprise with AI-powered solutions. Get 300% ROI, 90% efficiency improvement, and $50M+ savings.',
+    images: ['/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
+      {/* New 2026 Content Banners */}
+      <NewContent2026MegaBanner />
+      <AIRevolutionary2026Banner />
+      
       {/* New Content Promotional Banners */}
       <AIEnterpriseAdoptionBanner />
       <AITrends2025Banner />
@@ -196,6 +234,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Interactive AI Calculator */}
+      <InteractiveAICalculator2026 />
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
