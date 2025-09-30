@@ -14,6 +14,26 @@ const blogPosts = [
     readTime: '24 min read'
   },
   {
+    title: 'AI‑Powered Enterprise Autonomous Systems',
+    slug: 'ai-2025-enterprise-autonomous-systems',
+    excerpt: 'Blueprint to deploy self‑healing, policy‑aware autonomous workflows with verifiable outcomes and 99.99% uptime.',
+    category: 'Revolutionary Technology',
+    publishedAt: 'January 30, 2025',
+    image: '🤖',
+    color: 'purple',
+    readTime: '45 min read'
+  },
+  {
+    title: 'AI 2026: Mega Trends & Predictions',
+    slug: 'ai-2026-mega-trends-predictions',
+    excerpt: 'The most consequential AI shifts in 2026—agentic automation, observability, and cost optimization.',
+    category: 'Featured Article',
+    publishedAt: 'January 15, 2026',
+    image: '🚀',
+    color: 'blue',
+    readTime: '12 min read'
+  },
+  {
     title: 'Autonomous Enterprise Operations 2026: 90% Efficiency, 300% ROI',
     slug: 'ai-2026-autonomous-enterprise-operations',
     excerpt: 'Deploy autonomous AI for incident response, finance, supply chain, and support with provable guardrails and ROI.',
