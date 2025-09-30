@@ -55,10 +55,18 @@ import AITrends2026AdvertisingBanner from "./components/AITrends2026AdvertisingB
 import September2026BreakthroughAdvertisingBanner from "./components/September2026BreakthroughAdvertisingBanner";
 import AutonomousEnterpriseAutomationAdvertisingBanner from "./components/AutonomousEnterpriseAutomationAdvertisingBanner";
 import February2026NewContentBreakthroughBanner from "./components/February2026NewContentBreakthroughBanner";
+import October2026NewContentBanner from "./components/October2026NewContentBanner";
+import October2026BreakthroughShowcaseBanner from "./components/October2026BreakthroughShowcaseBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEWEST: October 2026 New Content Banner - MOST PROMINENT */}
+      <October2026NewContentBanner />
+      
+      {/* NEWEST: October 2026 Breakthrough Showcase Banner - HIGHLY PROMINENT */}
+      <October2026BreakthroughShowcaseBanner />
+      
       {/* NEW: September 2026 Breakthrough Advertising Banner - MOST PROMINENT */}
       <September2026BreakthroughAdvertisingBanner />
       
@@ -73,21 +81,13 @@ export default function App(): JSX.Element {
       
       {/* NEW: June 2027 Transcendent Intelligence Banner - Most Prominent */}
       <TranscendentIntelligence2027Banner />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      {/* NEW: May 2026 Revolutionary Breakthrough Banner - Most Prominent */}
-      <May2026RevolutionaryBreakthroughBanner />
       
-      {/* NEW: AI Trends 2026 Advertising Banner */}
-      <AITrends2026AdvertisingBanner />
+      {/* NEW: 2026 Consensus Intelligence Breakthrough Banner - Most Prominent */}
+      <ConsensusIntelligenceBreakthroughBanner />
       
-      {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
-      <April2026MegaBreakthroughBanner />
+      {/* NEW: 2026 Autonomous Enterprise Breakthrough Banner - Most Prominent */}
+      <AutonomousEnterpriseBreakthroughBanner />
       
->>>>>>> origin/cursor/create-and-deploy-new-content-fdff
       {/* NEW: April 2026 Conscious Computing Banner */}
       <April2026ConsciousComputingBanner />
       
@@ -99,20 +99,6 @@ export default function App(): JSX.Element {
       
       {/* NEW: Revolutionary 2026 Content Showcase Banner */}
       <Revolutionary2026ContentShowcaseBanner />
-=======
-      {/* NEW: April 2026 Revolutionary Breakthrough Banner - Most Prominent */}
-      <April2026RevolutionaryBreakthroughBanner />
-      
-      {/* NEW: April 2026 Mega Success Banner */}
-      <April2026MegaSuccessBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-c5bb
-=======
-      {/* NEW: 2026 Consensus Intelligence Breakthrough Banner - Most Prominent */}
-      <ConsensusIntelligenceBreakthroughBanner />
-      
-      {/* NEW: 2026 Autonomous Enterprise Breakthrough Banner - Most Prominent */}
-      <AutonomousEnterpriseBreakthroughBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-52ce
       
       {/* NEW: March 2026 Revolutionary Breakthrough Banner - Most Prominent */}
       <March2026AdvertisingMegaBanner />
@@ -134,19 +120,6 @@ export default function App(): JSX.Element {
       
       {/* NEW: Interactive Content Hub 2026 - Advanced Content Exploration */}
       <InteractiveContentHub2026 />
-=======
-      {/* NEW: March 2026 Multimodal AI Breakthrough Banner - Most Prominent */}
-      <March2026MultimodalBreakthroughBanner />
-      
-      {/* NEW: Autonomous AI 2026 Revolutionary Banner - Revolutionary Content */}
-      <AutonomousAI2026RevolutionaryBanner />
-      
-      {/* NEW: March 2026 Content Showcase Banner - Latest Content */}
-      <March2026ContentShowcaseBanner />
-      
-      {/* NEW: March 2026 Services Promotional Banner - Services Advertising */}
-      <March2026ServicesPromotionalBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-071d
       
       {/* NEW: Revolutionary 2026 Content Mega Breakthrough Banner - Most Prominent */}
       <Revolutionary2026ContentMegaBreakthroughBanner />
