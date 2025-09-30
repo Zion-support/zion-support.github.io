@@ -117,7 +117,7 @@ import RevolutionaryQuantumAIBreakthroughBanner from '../components/Revolutionar
 import AutonomousBusinessSystemsMegaBanner from '../components/AutonomousBusinessSystemsMegaBanner';
 import QuantumAI2027BreakthroughBanner from '../components/QuantumAI2027BreakthroughBanner';
 import AutonomousBusinessIntelligence2026Banner from '../components/AutonomousBusinessIntelligence2026Banner';
-import NewContent2027ShowcaseBanner from '../components/NewContent2027ShowcaseBanner';
+// import NewContent2027ShowcaseBanner from '../components/NewContent2027ShowcaseBanner';
 import RevolutionaryBreakthrough2026Banner from '../src/components/RevolutionaryBreakthrough2026Banner';
 import AICostOptimizationBanner from '../src/components/AICostOptimizationBanner';
 import AutonomyBlueprint2026Banner from '../components/AutonomyBlueprint2026Banner';
@@ -314,7 +314,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
-      <NewContent2027ShowcaseBanner />
+      {/* <NewContent2027ShowcaseBanner /> */}
 
       {/* 🚀 REVOLUTIONARY AI ENTERPRISE AUTOMATION 2026 */}
       <RevolutionaryAIEnterpriseAutomationBanner />
