@@ -5,9 +5,6 @@ export const metadata = {
   description: 'Explore our latest AI insights, guides, and case studies.'
 };
 
-<<<<<<< HEAD
-export default function BlogIndex() {
-=======
 const blogPosts = [
   {
     title: 'Reliable Agent Evals 2025: Measure, Guardrail, and Improve',
@@ -261,7 +258,6 @@ const categories = [
 ];
 
 export default function BlogPage() {
->>>>>>> cursor/create-and-deploy-new-content-c189
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <main className="max-w-4xl mx-auto px-6 py-16">

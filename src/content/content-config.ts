@@ -19,6 +19,22 @@ export const featuredBlogPosts: FeaturedItem[] = [
     featured: true
   },
   {
+    id: "ai-2027-autonomous-governance-blueprint",
+    title: "AI 2027 Autonomous Governance Blueprint",
+    description: "Policy gates, budgets, and verifiable outcomes for safe autonomy",
+    link: "/blog/ai-2027-autonomous-governance-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2026-agent-ops-observability",
+    title: "Agent Ops Observability 2026",
+    description: "Metrics, traces, evals, and guardrails for reliable autonomy",
+    link: "/blog/ai-2026-agent-ops-observability",
+    type: "article",
+    featured: true
+  },
+  {
     id: "privacy-first-telemetry-quickstart-2025",
     title: "Privacy‑First Telemetry Quickstart",
     description: "Signal‑rich analytics with scoped IDs and DP noise",

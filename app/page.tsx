@@ -181,8 +181,20 @@ export default function HomePage() {
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
 
-      {/* 📣 Featured: October — New Risk Mitigation Article */}
-      <OctoberFeaturedContentBanner />
+      {/* 📣 Featured: New — Autonomous Governance & Agent Ops Observability */}
+      <div className="bg-gradient-to-r from-purple-700/20 to-fuchsia-700/20 border border-white/10 rounded-2xl p-6 mb-8">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div>
+            <div className="text-xs uppercase tracking-wide text-fuchsia-300 mb-1">New</div>
+            <h3 className="text-xl font-bold">Autonomous Governance 2027 + Agent Ops Observability 2026</h3>
+            <p className="text-white/70">Policy gates, budgets, metrics, and evals to ship reliable autonomy.</p>
+          </div>
+          <div className="flex gap-3">
+            <Link href="/blog/ai-2027-autonomous-governance-blueprint" className="inline-flex items-center gap-2 bg-white text-purple-700 px-4 py-2 rounded-lg font-semibold hover:bg-purple-50 transition-colors">Read Governance</Link>
+            <Link href="/blog/ai-2026-agent-ops-observability" className="inline-flex items-center gap-2 bg-fuchsia-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-fuchsia-400 transition-colors">Read Observability</Link>
+          </div>
+        </div>
+      </div>
 
       {/* 📣 Featured: September 30, 2025 — Three New Articles */}
       <NewestContent2025Banner />
