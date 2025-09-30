@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { 
   NewBlogBanner, 
   AnalyticsPlatformBanner, 
@@ -49,8 +50,29 @@ import {
 } from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
+import InteractiveAI2027Calculator from '../components/InteractiveAI2027Calculator';
+import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 import AI2026RevolutionaryContentBanner from '../components/AI2026RevolutionaryContentBanner';
+import FeaturedServiceCard from '../components/FeaturedServiceCard';
+import SuccessStory from '../components/SuccessStory';
+import {
+  NeuralSuperintelligence2026Banner,
+  NeuralSuperintelligenceSuccessBanner,
+  AI2026RevolutionaryBanner,
+  AI2026SuccessStoryBanner,
+  NewContent2026MegaBanner,
+  AIRevolutionary2026Banner,
+  Revolutionary2026ContentBanner,
+  LatestAIInnovations2026Banner
+} from '../components/NewContent2026Banners';
+import {
+  LatestNeuralSuperintelligenceBanner,
+  AI2026MegaTrendsBanner,
+  InteractiveToolsShowcaseBanner,
+  ContentShowcaseMegaBanner,
+  LatestAIInnovationsShowcaseBanner
+} from '../components/LatestContent2026Banners';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -133,6 +155,13 @@ export default function HomePage() {
       />
       <main className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="animate-fade-in">
+          {/* Latest Content Showcase Banners */}
+          <ContentShowcaseMegaBanner />
+          <LatestNeuralSuperintelligenceBanner />
+          <AI2026MegaTrendsBanner />
+          <InteractiveToolsShowcaseBanner />
+          <LatestAIInnovationsShowcaseBanner />
+          
           {/* Latest 2026 Revolutionary Content Banners */}
           <QuantumAIBreakthroughBanner />
           <GenerativeAIRevolutionBanner />
@@ -188,6 +217,7 @@ export default function HomePage() {
           <NewBlogBanner />
           <WorkflowAutomationBanner />
           <AIAnalyticsBanner />
+      {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
       <AIAutonomousSystemsBanner />
       <ManufacturingTransformationBanner />
@@ -195,7 +225,6 @@ export default function HomePage() {
       <LatestContentShowcaseBanner />
       <InteractiveAICalculatorBanner />
       <AIInnovationShowcaseBanner />
->>>>>>> f0b63bd1f3f9e82ad6d7e47e39a2caaf373c8747
       
       {/* New Content Promotional Banners */}
       <AIEnterpriseAdoptionBanner />
@@ -222,8 +251,6 @@ export default function HomePage() {
       <NewBlogBanner />
       <WorkflowAutomationBanner />
       <AIAnalyticsBanner />
-      
->>>>>>> 83687f660ab4d793fbd393e78d6f981ce54e0604
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <div className="max-w-4xl mx-auto px-4">
@@ -353,11 +380,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Interactive AI 2027 Calculator */}
-      <InteractiveAI2027Calculator />
+      {/* Interactive AI Calculators */}
+      <div id="ai-2027-calculator">
+        <InteractiveAI2027Calculator />
+      </div>
 
-      {/* Interactive AI 2026 Calculator */}
-      <InteractiveAICalculator2026 />
+      <div id="ai-2026-calculator">
+        <InteractiveAICalculator2026 />
+      </div>
 
       {/* Interactive AI ROI Calculator */}
       <InteractiveAIROICalculator />
