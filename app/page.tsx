@@ -68,6 +68,13 @@ import LatestAI2025InsightsBanner from '../components/LatestAI2025InsightsBanner
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
 import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculator';
+import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
+import InteractiveAI2027Calculator from '../components/InteractiveAI2027Calculator';
+import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
+import FeaturedServiceCard from '../components/FeaturedServiceCard';
+import SuccessStory from '../components/SuccessStory';
+import Revolutionary2026ContentMegaBanner from '../components/Revolutionary2026ContentMegaBanner';
+import Latest2026InnovationsBanner from '../components/Latest2026InnovationsBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — Revolutionary AI Breakthroughs 2026 | 1000x Performance Gains',
@@ -505,7 +512,33 @@ export default function HomePage() {
       
       {/* Revolutionary Content 2026 Banner */}
       <RevolutionaryContent2026Banner />
->>>>>>> origin/content-merge-2025
+      {/* Latest 2026 Mega Content Banners */}
+      <Revolutionary2026ContentBanner />
+      <AI2026ContentShowcaseBanner />
+      <AIEnterpriseAutomationRevolutionBanner />
+      <AIQuantumComputingBreakthroughBanner />
+      <AIMegaTransformationSuccessBanner />
+      <AI2026InnovationShowcaseBanner />
+>>>>>>> feature/new-content-and-advertising-2026
+=======
+      {/* Revolutionary 2026 Content Banners */}
+      <RevolutionaryContent2026Banner />
+      <LatestAI2026ContentBanner />
+>>>>>>> origin/feature/revolutionary-ai-2026-content
+=======
+      {/* New 2026 Mega Content Banner */}
+      <NewContent2026MegaBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-15c5
+=======
+      {/* Latest 2026 Revolutionary Content Banners */}
+      <AINeuralSuperintelligenceBanner />
+      <AIQuantumComputingBanner />
+      <NewAIAutonomousSystemsBanner />
+      <NeuralSuperintelligenceCaseStudyBanner />
+      <InteractiveAIToolsBanner />
+      <NewLatestContentShowcaseBanner />
+>>>>>>> origin/cursor/create-and-deploy-new-content-4092
+>>>>>>> origin/content-update-2026-final
       
       {/* Latest Content Banner 2025 - September 30 */}
       <LatestContentBanner2025 />
@@ -1294,7 +1327,9 @@ export default function HomePage() {
       
       {/* Interactive Content Showcase 2026 */}
       <InteractiveContentShowcase2026 />
->>>>>>> origin/content-merge-2025
+
+      {/* Latest 2026 Innovations Banner */}
+      <Latest2026InnovationsBanner />
 
       {/* Latest Innovations Section */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
