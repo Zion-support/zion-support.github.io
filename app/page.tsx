@@ -44,12 +44,12 @@ import {
   AIInnovationShowcaseBanner
 } from '../components/NewContent2026Banners';
 import {
-  AITrends2025PromotionalBanner,
-  Fortune500SuccessBanner,
-  InteractiveROICalculatorBanner,
-  AITransformationShowcaseBanner
-} from '../components/NewContent2025Banners';
-import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
+  QuantumAIBreakthroughBanner,
+  GenerativeAIRevolutionBanner,
+  AI2026InnovationShowcaseBanner,
+  AI2026TransformationBanner,
+  AI2026SuccessStoriesBanner
+} from '../components/NewContent2026Banners';
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
@@ -138,28 +138,27 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
-<<<<<<< HEAD
-      {/* New 2025 Content Banners */}
-      <AITrends2025PromotionalBanner />
-      <Fortune500SuccessBanner />
-      <InteractiveROICalculatorBanner />
-      <AITransformationShowcaseBanner />
-=======
-      {/* Revolutionary Content 2026 Banner */}
-      <RevolutionaryContent2026Banner />
->>>>>>> 3ee1431f4b3ff64239e74586b537363f0fc67c86
-      
-      {/* Latest 2026 Content Banners */}
-      <AIEnterpriseTransformationBanner />
-      <AIAutonomousSystemsBanner />
-      <ManufacturingTransformationBanner />
-      <AIEnterpriseServicesBanner />
-      <LatestContentShowcaseBanner />
-      <InteractiveAICalculatorBanner />
-      <AIInnovationShowcaseBanner />
-      
-      {/* Latest Content Showcase */}
-      <LatestContent2026ShowcaseBanner />
+        {/* Latest 2026 Revolutionary Content Banners */}
+        <QuantumAIBreakthroughBanner />
+        <GenerativeAIRevolutionBanner />
+        <AI2026InnovationShowcaseBanner />
+        <AI2026TransformationBanner />
+        <AI2026SuccessStoriesBanner />
+        
+        {/* AI 2026 Revolutionary Banners */}
+        <NeuralSuperintelligence2026Banner />
+        <NeuralSuperintelligenceSuccessBanner />
+        <AI2026RevolutionaryBanner />
+        <AI2026SuccessStoryBanner />
+        
+        {/* Latest 2026 Content Banners */}
+        <AIEnterpriseTransformationBanner />
+        <AIAutonomousSystemsBanner />
+        <ManufacturingTransformationBanner />
+        <AIEnterpriseServicesBanner />
+        <LatestContentShowcaseBanner />
+        <InteractiveAICalculatorBanner />
+        <AIInnovationShowcaseBanner />
       
       {/* New Content Promotional Banners */}
       <MultimodalAIIntegrationBanner />
@@ -455,50 +454,7 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-<<<<<<< HEAD
             <Link href="/blog/ai-enterprise-adoption-2025" className="group">
-=======
-<<<<<<< HEAD
-            <Link to="/blog/ai-multimodal-integration-2025" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Featured Article
-                  </span>
-                  <span className="text-sm text-gray-500">22 min read</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI Multimodal Integration 2025: The Future of Enterprise AI
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Discover how multimodal AI is revolutionizing enterprise operations with text, image, voice, and video integration. Achieve 250% efficiency gains.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  Read Article →
-                </div>
-              </div>
-            </Link>
-            <Link to="/case-studies/multimodal-ai-customer-service-transformation" className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Success Story
-                  </span>
-                  <span className="text-sm text-gray-500">E-commerce</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  Multimodal AI Customer Service: 80% Faster Response Times
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  See how a leading e-commerce company achieved 80% faster response times, 95% accuracy, and 60% cost reduction with multimodal AI.
-                </p>
-                <div className="flex items-center text-blue-600 font-semibold">
-                  View Case Study →
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/ai-trends-2025-enterprise-transformation" className="group">
->>>>>>> cursor/create-and-deploy-new-content-6423
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
