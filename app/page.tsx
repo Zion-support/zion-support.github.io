@@ -46,13 +46,16 @@ import {
 import ContentShowcase from '../components/ContentShowcase';
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
-import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
-import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
-import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
+// import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
 import LatestContent2025Banner from '../components/LatestContent2025Banner';
 import RevolutionaryAI2025Banner from '../components/RevolutionaryAI2025Banner';
 import InteractiveAICalculator2025 from '../components/InteractiveAICalculator2025';
+import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
+// import { 
+//   RevolutionaryContent2026Banner, 
+//   LatestContent2026ShowcaseBanner, 
+//   InteractiveContentShowcase2026 
+// } from '../components/NewContent2026Banners';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -134,14 +137,20 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
+      {/* Revolutionary Content 2026 Banner */}
+      {/* <RevolutionaryContent2026Banner /> */}
+      
+      {/* Latest Content 2026 Showcase Banner */}
+      {/* <LatestContent2026ShowcaseBanner /> */}
+      
+      {/* Interactive Content Showcase 2026 */}
+      {/* <InteractiveContentShowcase2026 /> */}
+      
       {/* Revolutionary AI 2025 Banner */}
       <RevolutionaryAI2025Banner />
       
       {/* Latest Content 2025 Banner */}
       <LatestContent2025Banner />
-      
-      {/* Revolutionary Content 2026 Banner */}
-      <RevolutionaryContent2026Banner />
       
       {/* Latest 2026 Content Banners */}
       <AIEnterpriseTransformationBanner />
@@ -153,7 +162,7 @@ export default function HomePage() {
       <AIInnovationShowcaseBanner />
       
       {/* Latest Content Showcase */}
-      <LatestContent2026ShowcaseBanner />
+      {/* <LatestContent2026ShowcaseBanner /> */}
       
       {/* New Content Promotional Banners */}
       <MultimodalAIIntegrationBanner />
@@ -312,17 +321,20 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Interactive AI Calculator 2026 */}
+      <InteractiveAICalculator2026 />
+      
       {/* Interactive AI Calculator 2025 */}
       <InteractiveAICalculator2025 />
 
       {/* Interactive Promotional Section */}
-      <InteractivePromotionalSection />
+      {/* <InteractivePromotionalSection /> */}
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
       
       {/* Interactive Content Showcase 2026 */}
-      <InteractiveContentShowcase2026 />
+      {/* <InteractiveContentShowcase2026 /> */}
 
       {/* Latest Innovations Section */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
