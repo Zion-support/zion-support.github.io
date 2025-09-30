@@ -17,32 +17,58 @@ interface ContentItem {
 }
 
 const featuredContent: ContentItem[] = [
-<<<<<<< HEAD
-  // Sept 30, 2025 — newly added items to advertise
+  // January 2026 — Revolutionary AI Breakthroughs
   {
-    id: 'n0a',
-    title: 'Autonomous Runbooks Quickstart: Budgeted Actions and Instant Rollback',
-    description: 'Design incident playbooks that close the loop from detection to safe action in <60s.',
-    link: '/blog/ai-2025-sept-30-autonomous-runbooks-quickstart',
-    badge: 'New',
-    badgeColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
-    icon: '✅',
-    publishedDate: 'September 30, 2025',
-    readTime: '7 min read',
-    category: 'AI Operations'
+    id: 'jan2026-1',
+    title: 'AI 2026: Autonomous Cognitive Enterprise Breakthrough',
+    description: 'Revolutionary autonomous cognitive enterprise systems achieving 99.8% business automation with self-managing AI.',
+    link: '/blog/ai-2026-autonomous-cognitive-enterprise-breakthrough',
+    badge: 'BREAKTHROUGH',
+    badgeColor: 'bg-gradient-to-r from-purple-600 to-indigo-600',
+    icon: '🧠',
+    publishedDate: 'January 20, 2026',
+    readTime: '25 min read',
+    category: 'Autonomous Enterprise'
   },
   {
-    id: 'n0b',
-    title: 'Privacy‑Preserving Telemetry: Scoped IDs, On‑Device Redaction, DP Noise',
-    description: 'Actionable analytics without PII using edge aggregation and differential privacy.',
-    link: '/blog/edge-2025-sept-30-privacy-preserving-telemetry',
-    badge: 'Fresh',
-    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
-    icon: '🔒',
-=======
-  // Sept 30, 2025 — newly added highlights
+    id: 'jan2026-2',
+    title: 'AI 2026: Quantum Neural Superintelligence Breakthrough',
+    description: 'Revolutionary quantum neural superintelligence achieving 10,000x performance improvements with consciousness-level AI.',
+    link: '/blog/ai-2026-quantum-neural-superintelligence-breakthrough',
+    badge: 'SUPERINTELLIGENCE',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-blue-600',
+    icon: '⚛️',
+    publishedDate: 'January 22, 2026',
+    readTime: '30 min read',
+    category: 'Quantum AI'
+  },
   {
-    id: 'nX1',
+    id: 'jan2026-3',
+    title: 'Autonomous Cognitive Enterprise Success: $5.2B ROI',
+    description: 'How a Fortune 100 technology conglomerate achieved $5.2B ROI through autonomous cognitive enterprise implementation.',
+    link: '/case-studies/ai-2026-autonomous-cognitive-enterprise-5-billion-success',
+    badge: 'MEGA ROI',
+    badgeColor: 'bg-gradient-to-r from-green-600 to-emerald-600',
+    icon: '💰',
+    publishedDate: 'January 21, 2026',
+    readTime: '20 min read',
+    category: 'Success Stories'
+  },
+  {
+    id: 'jan2026-4',
+    title: 'Quantum Neural Superintelligence Success: $15.8B ROI',
+    description: 'How a global pharmaceutical giant achieved $15.8B ROI through quantum neural superintelligence implementation.',
+    link: '/case-studies/ai-2026-quantum-neural-superintelligence-15-billion-success',
+    badge: 'BREAKTHROUGH',
+    badgeColor: 'bg-gradient-to-r from-orange-600 to-red-600',
+    icon: '🏆',
+    publishedDate: 'January 23, 2026',
+    readTime: '22 min read',
+    category: 'Success Stories'
+  },
+  // Legacy content
+  {
+    id: 'legacy1',
     title: 'Operational Trust Scorecards v3 — KPIs, Budgets, Instant Rollback',
     description: 'Wire SLIs to KPIs with budgeted actions, live canaries, and deterministic rollback that prevents regressions.',
     link: '/blog/ai-2025-sept-30-operational-trust-scorecards-v3',
