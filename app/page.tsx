@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React from 'react';
-import NewContentAdvertisingBanner from '../components/NewContentAdvertisingBanner';
+import Link from 'next/link';
+import { NewBlogBanner } from '../components/PromotionalBanner';
 import UnifiedContentPromotion from '../components/UnifiedContentPromotion';
 import January2026NeuralArchitectureSearchBanner from '../components/January2026NeuralArchitectureSearchBanner';
 import January2026FederatedLearningBanner from '../components/January2026FederatedLearningBanner';
@@ -26,13 +27,10 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
             <div className="text-white font-semibold">New this week</div>
             <div className="flex flex-wrap gap-2">
-<<<<<<< HEAD
-              <a href="/blog/ai-2025-oct-02-production-agent-guardrails" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">Production Agent Guardrails<span>→</span></a>
-=======
-              <a href="/blog/ai-2025-sept-30-governed-autonomy-blueprint" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">Governed Autonomy Blueprint 2025<span>→</span></a>
->>>>>>> cursor/create-and-deploy-new-content-8ae9
-              <a href="/blog/ai-2026-reliable-genai-platform" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">Reliable GenAI Platform 2026<span>→</span></a>
-              <a href="/blog/ai-2026-e2e-ai-tracing" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">E2E AI Tracing 2026<span>→</span></a>
+              <Link href="/blog/ai-2025-oct-02-production-agent-guardrails" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">Production Agent Guardrails<span>→</span></Link>
+              <Link href="/blog/ai-2025-sept-30-governed-autonomy-blueprint" className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 border border-blue-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-blue-500/30 transition-colors">Governed Autonomy Blueprint 2025<span>→</span></Link>
+              <Link href="/blog/ai-2026-reliable-genai-platform" className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-200 border border-indigo-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-indigo-500/30 transition-colors">Reliable GenAI Platform 2026<span>→</span></Link>
+              <Link href="/blog/ai-2026-e2e-ai-tracing" className="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-200 border border-cyan-400/30 px-3 py-2 rounded-lg font-semibold hover:bg-cyan-500/30 transition-colors">E2E AI Tracing 2026<span>→</span></Link>
             </div>
           </div>
         </div>
@@ -50,8 +48,8 @@ export default function HomePage() {
       {/* New Services Banner */}
       <January2026NewServicesBanner />
 
-      {/* New Content Advertising Banner - promotes Trustless Evaluation Blueprint (2026) */}
-      <NewContentAdvertisingBanner />
+      {/* New Content Promotional Banner */}
+      <NewBlogBanner />
       
       {/* Legacy Content Banners */}
       <January2026NeuralArchitectureSearchBanner />

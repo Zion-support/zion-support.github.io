@@ -20,6 +20,46 @@ export const posts: BlogPost[] = [
     readTime: "6 min read",
   },
   {
+    slug: "ai-2025-oct-02-production-agent-guardrails",
+    title: "Production Agent Guardrails: Live Policies, Budgets, and Safe Tools",
+    description:
+      "Deploy agent guardrails that actually hold in prod: budget-aware routing, tool sandboxes, and online policy tests.",
+    category: "AI Operations",
+    publishedAt: "2025-10-02",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "ai-2025-sept-30-governed-autonomy-blueprint",
+    title: "Governed Autonomy Blueprint 2025",
+    description:
+      "An implementation blueprint for governed autonomy: approvals, SLIs to KPIs, and attested rollbacks.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "ai-2025-oct-01-privacy-first-observability-v2",
+    title: "Privacy‑First Observability v2: Traces Without PII Leaks",
+    description:
+      "User‑centric telemetry that preserves privacy using on‑device redaction, hashing, and budgeted sampling.",
+    category: "Observability",
+    publishedAt: "2025-10-01",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "genai-2025-oct-01-quality-tiers-v3",
+    title: "GenAI Quality Tiers v3: Save 50% With Stable UX",
+    description:
+      "Tiered quality routing with eval budgets and cache strategies that reduce spend without regressions.",
+    category: "GenAI",
+    publishedAt: "2025-10-01",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
     slug: "ai-product-launch-checklist-2025",
     title: "AI Product Launch Checklist: From Pilot to Production",
     description:
