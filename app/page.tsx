@@ -134,6 +134,8 @@ import RevolutionaryBreakthrough2026Banner from '../src/components/Revolutionary
 import AICostOptimizationBanner from '../src/components/AICostOptimizationBanner';
 import AutonomyBlueprint2026Banner from '../components/AutonomyBlueprint2026Banner';
 import September30ContentPromo2025 from '../components/September30ContentPromo2025';
+import NewContent2026BreakthroughBanner from '../components/NewContent2026BreakthroughBanner';
+import InteractiveAI2026BreakthroughCalculator from '../components/InteractiveAI2026BreakthroughCalculator';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -170,6 +172,9 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🚀 NEWEST BREAKTHROUGH CONTENT - JANUARY 30, 2026 - REVOLUTIONARY AI TECHNOLOGIES! */}
+      <NewContent2026BreakthroughBanner />
+
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
 
@@ -980,8 +985,24 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Interactive AI 2026 Calculator */}
+      {/* Interactive AI 2026 Breakthrough Calculator */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              AI 2026 Breakthrough ROI Calculator
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Calculate your potential returns from revolutionary AI technologies including 
+              autonomous business intelligence and quantum-enhanced analytics.
+            </p>
+          </div>
+          <InteractiveAI2026BreakthroughCalculator />
+        </div>
+      </section>
+
+      {/* Interactive AI 2026 Calculator */}
+      <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-pink-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
