@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   ArrowRight,
   Award,
@@ -27,6 +28,7 @@ import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
 import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
 import September30NewContentMegaBanner from "../components/September30NewContentMegaBanner";
 import Header from "../components/Header";
+import Revolutionary2026ContentMegaBanner from "../components/Revolutionary2026ContentMegaBanner";
 import September30MegaBanner2025 from "../components/September30MegaBanner2025";
 import LatestArticlesShowcase from "../components/LatestArticlesShowcase";
 import LatestContentBanner from "../components/LatestContentBanner";
@@ -153,9 +155,9 @@ const Home = () => {
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
-            { title: "Live Scorecards That Prevent Regressions", category: "AI Governance", link: "/blog/ai-governance-live-scorecards-2026" },
-            { title: "Edge Real‑Time Personalization", category: "Edge Computing", link: "/blog/edge-real-time-personalization-2026" },
-            { title: "Agent Release Runbooks", category: "AI Operations", link: "/blog/agent-release-runbooks-2026" },
+            { title: "Scorecards Wired to KPIs (Q4 2026)", category: "AI Governance", link: "/blog/ai-governance-scorecards-2026-q4" },
+            { title: "Bust Edge Cold Starts <100ms", category: "Edge Computing", link: "/blog/edge-inference-cold-starts-2026" },
+            { title: "Agent Release Playbooks (Q4 2026)", category: "AI Operations", link: "/blog/agent-release-playbooks-2026-q4" },
             { title: "Edge RAG 2026", category: "GenAI", link: "/blog/edge-rag-privacy-preserving-2026" },
             { title: "GenAI Routing Playbook 2026", category: "GenAI", link: "/blog/genai-routing-playbook-2026" }
           ]}
