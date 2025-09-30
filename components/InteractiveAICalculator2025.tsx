@@ -1,4 +1,8 @@
 'use client';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/create-and-deploy-new-content-a9c3
 import React, { useState } from 'react';
 
 export default function InteractiveAICalculator2025() {

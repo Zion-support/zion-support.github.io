@@ -1,5 +1,6 @@
 'use client';
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 <<<<<<< HEAD
@@ -20,6 +21,9 @@ interface CalculatorResults {
   paybackPeriod: number;
   totalValue: number;
 }
+=======
+import React, { useState } from 'react';
+>>>>>>> origin/cursor/create-and-deploy-new-content-a9c3
 
 export default function InteractiveAI2026Calculator() {
 <<<<<<< HEAD

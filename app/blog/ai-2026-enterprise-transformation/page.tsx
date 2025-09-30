@@ -235,8 +235,13 @@ export default function AIEnterpriseTransformation2026() {
               View All Articles
             </Link>
           </div>
+<<<<<<< HEAD
         </div>
       </article>
+=======
+        </article>
+      </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-a9c3
     </div>
   );
 }
