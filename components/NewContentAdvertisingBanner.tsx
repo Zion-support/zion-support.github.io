@@ -25,8 +25,15 @@ export default function NewContentAdvertisingBanner() {
             </p>
 
             {/* Content Highlights */}
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="grid md:grid-cols-4 gap-6 mb-8">
               {[
+                { 
+                  title: 'Private AI Sandbox (2025)',
+                  description: 'Governed, cost‑capped AI experimentation',
+                  icon: '🧪',
+                  href: '/blog/ai-2025-oct-01-private-ai-sandbox',
+                  color: 'from-indigo-500 to-cyan-500'
+                },
                 { 
                   title: 'Trustless Evaluation Blueprint (2026)',
                   description: 'Verifiable evals with signed datasets',
