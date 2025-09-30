@@ -28,6 +28,15 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   },
   {
+    slug: "ai-operational-trust-2026-q4",
+    title: "AI Operational Trust 2026 Q4: SLIs, Budgets, Rollback",
+    description: "Outcome‑linked SLIs, budgeted actions, and one‑click rollback for safe autonomy.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
     slug: "agentops-runbooks-v3-2026",
     title: "AgentOps Runbooks v3 (2026): Budgeted Actions and One‑Click Rollback",
     description: "Battle‑tested runbooks for safe autonomous operations: approvals, KPI‑linked canaries, rollback playbooks.",
@@ -35,6 +44,24 @@ export const posts: BlogPost[] = [
     publishedAt: "2026-10-18",
     featured: true,
     readTime: "9 min read"
+  },
+  {
+    slug: "edge-consentless-experiments-2026-q4",
+    title: "Edge Consentless Experiments 2026 Q4: <100ms A/B Without PII",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant global experiments.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "ai-governance-real-time-2026",
+    title: "AI Governance in Real Time 2026: Live Canaries + PR Policy Tests",
+    description: "Wire KPI‑linked canaries and CI policy tests so teams ship weekly without regressions.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
   },
   {
     slug: "ai-2028-autonomous-enterprise-revolution",
