@@ -31,6 +31,10 @@ import {
   AIImplementationPlaybookBanner,
   September30LatestBreakthroughsBanner
 } from '../components/PromotionalBanner';
+import UltimateContentShowcase2026 from '../src/components/UltimateContentShowcase2026';
+import AIInnovationAdvertisingBanner from '../src/components/AIInnovationAdvertisingBanner';
+import LatestTrendsShowcase2026 from '../src/components/LatestTrendsShowcase2026';
+import NewServicesPromotionalBanner from '../src/components/NewServicesPromotionalBanner';
 import {
   AIEnterpriseAdoptionBanner,
   AITrends2025Banner,
@@ -175,6 +179,18 @@ export default function HomePage() {
   return (
     <>
       <div className="animate-fade-in">
+      {/* 🚀 ULTIMATE CONTENT SHOWCASE 2026 */}
+      <UltimateContentShowcase2026 />
+      
+      {/* 🔥 AI INNOVATION ADVERTISING BANNER */}
+      <AIInnovationAdvertisingBanner />
+      
+      {/* 🌟 LATEST TRENDS SHOWCASE 2026 */}
+      <LatestTrendsShowcase2026 />
+      
+      {/* 🆕 NEW SERVICES PROMOTIONAL BANNER */}
+      <NewServicesPromotionalBanner />
+      
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
 
