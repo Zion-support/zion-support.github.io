@@ -1155,6 +1155,33 @@ posts.push(
   { slug: "agent-policy-gates-blueprint-2026", title: "Agent Policy Gates 2026: Approvals, Budgets, and Safe Tools", description: "Design approval workflows, budgeted actions, and sandboxed tools to ship reliable agent releases.", category: "AI Operations", publishedAt: "2025-10-31", featured: true, readTime: "7 min read" },
   { slug: "sovereign-rag-platforms-2026", title: "Sovereign RAG Platforms 2026: Residency, Guardrails, and Speed", description: "Region-scoped corpora, auth-aware retrieval, and signed outputs without hurting UX.", category: "GenAI", publishedAt: "2025-09-30", featured: true, readTime: "8 min read" },
   {
+    slug: "ai-platform-value-realization-2026",
+    title: "AI Platform Value Realization 2026: From Pilots to Profit",
+    description: "Operational scorecards and rollout trains that convert AI pilots into durable ROI across business units.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "secure-ml-supply-chain-v2-2026",
+    title: "Secure ML Supply Chain v2: Attest Everything, Drift Nothing",
+    description: "Model, data, and prompt provenance with signed attestations and automated drift gates in CI/CD.",
+    category: "Security",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-experiments-under-100ms-2026",
+    title: "Edge Experiments Under 100ms: Privacy‑First A/B Without PII",
+    description: "Geo‑aware flags, scoped IDs, and on‑device metrics enabling compliant experimentation at the edge.",
+    category: "Analytics",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
     slug: "ai-safety-budgets-2026",
     title: "AI Safety Budgets 2026: Guardrails That Keep Velocity High",
     description: "Budget risky actions, set rollback triggers, and wire evals to KPIs for safe automation.",
@@ -1201,32 +1228,32 @@ posts.push(
   }
 );
 
-// Feb 10, 2026 – Brand‑new featured posts to surface on homepage
+// Sept 30, 2025 – Additional new posts to advertise on homepage
 posts.push(
   {
-    slug: "genai-routing-playbook-2026-v2",
-    title: "GenAI Routing Playbook v2 (2026): Quality Tiers Under Budget",
-    description: "Tier models, cache prompts, and KPI‑linked routes for stable UX at 30–60% lower cost.",
-    category: "GenAI",
-    publishedAt: "2025-10-31",
+    slug: "ai-agent-reliability-playbook-2026",
+    title: "AI Agent Reliability Playbook 2026: SLOs, Budgets, Rollbacks",
+    description: "Design reliable agent systems with explicit SLOs, budgeted actions, and instant rollback triggers.",
+    category: "AI Engineering",
+    publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
   },
   {
-    slug: "agent-release-checklists-2026-v2",
-    title: "Agent Release Checklists 2026: Budgets, Canaries, Instant Rollback",
-    description: "Battle‑tested checklists for safe agent releases with budgeted actions and KPI‑linked canaries.",
-    category: "AI Operations",
-    publishedAt: "2025-10-31",
+    slug: "privacy-safe-feature-flags-2026",
+    title: "Privacy‑Safe Feature Flags 2026: Sub‑100ms Global Releases",
+    description: "Edge flags with scoped IDs, geo budgets, and DP noise for compliant, fast rollouts.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
     featured: true,
     readTime: "7 min read"
   },
   {
-    slug: "privacy-first-telemetry-2026-v2",
-    title: "Privacy‑First Telemetry 2026: Signal‑Rich Analytics Without PII",
-    description: "Scoped IDs, edge aggregation, and DP noise for insights teams love—compliance included.",
-    category: "Analytics",
-    publishedAt: "2025-10-31",
+    slug: "platform-roi-scorecards-quickstart-2026",
+    title: "Platform ROI Scorecards Quickstart 2026: Prove Value Fast",
+    description: "Lightweight scorecards that link golden paths to adoption, SLOs, and revenue.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read"
   }

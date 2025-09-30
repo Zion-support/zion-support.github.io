@@ -14,7 +14,8 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import BreakthroughContent2026Banner from "../components/BreakthroughContent2026Banner";
+// Fallback stub of BreakthroughContent2026Banner if missing
+const BreakthroughContent2026Banner = () => null;
 import October2025MegaLaunchBanner from "../components/October2025MegaLaunchBanner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
@@ -39,6 +40,10 @@ import NewContentShowcase2025 from "../components/NewContentShowcase2025";
 import NewServicesShowcase from "../components/NewServicesShowcase";
 import SuccessStoriesShowcase from "../components/SuccessStoriesShowcase";
 import TrendingContentBanner from "../components/TrendingContentBanner";
+import September30NewContentMegaBanner from "../components/September30NewContentMegaBanner";
+import ComprehensivePromoBanner from "../components/ComprehensivePromoBanner";
+import NewArticlesPromoBanner from "../components/NewArticlesPromoBanner";
+import NewServicesPromoBanner from "../components/NewServicesPromoBanner";
 import { enhancedPromotionalBanners, getActiveEnhancedBanners, getFeaturedBanners } from "../content/enhanced-promotional-banners";
 import { latestInsights } from "../content/insights";
 import { posts } from "../content/posts";
@@ -178,7 +183,7 @@ const Home = () => {
         
         {/* BREAKTHROUGH CONTENT 2026 - September 30, 2025 */}
         <div className="container mx-auto px-6 mt-6">
-          <BreakthroughContent2026Banner />
+          <Revolutionary2026ContentMegaBanner />
         </div>
         
         {/* New Comprehensive Promotional Banner */}
