@@ -7,6 +7,8 @@ export const metadata = {
 
 const blogPosts = [
   {
+<<<<<<< HEAD
+=======
     title: 'AI 2026 Cost Optimization Blueprint: 30–70% Savings without Quality Loss',
     slug: 'ai-2026-cost-optimization-blueprint',
     excerpt: 'Cut AI spend with routing, semantic caches, quantization, and token discipline tied to quality scorecards.',
@@ -27,6 +29,7 @@ const blogPosts = [
     readTime: '14 min read'
   },
   {
+>>>>>>> cursor/create-and-deploy-new-content-9685
     title: 'AI 2027 Hyper‑Automation Blueprint',
     slug: 'ai-2027-hyper-automation-blueprint',
     excerpt: 'Scale reliable hyper‑automation with policy gates, evals, and value stream analytics.',
@@ -268,6 +271,16 @@ const blogPosts = [
     readTime: '16 min read'
   },
   {
+<<<<<<< HEAD
+    title: 'AI Trends 2026: The Future of Enterprise Technology',
+    slug: 'ai-trends-2026-future-enterprise',
+    excerpt: 'Discover the revolutionary AI trends shaping 2026. From autonomous systems to quantum-enhanced AI, explore the breakthroughs that matter.',
+    category: 'Featured Article',
+    publishedAt: 'January 15, 2026',
+    image: '🚀',
+    color: 'blue',
+    readTime: '15 min read'
+=======
     title: 'AI Enterprise Automation Revolution 2026: Complete Business Transformation',
     slug: 'ai-2026-enterprise-automation-revolution',
     excerpt: 'Discover how next-generation AI automation is revolutionizing enterprise operations, delivering unprecedented efficiency gains, massive cost reductions, and complete business process autonomy.',
@@ -286,6 +299,7 @@ const blogPosts = [
     image: '⚛️',
     color: 'purple',
     readTime: '18 min read'
+>>>>>>> origin/cursor/create-and-deploy-new-content-662d
   }
 ];
 

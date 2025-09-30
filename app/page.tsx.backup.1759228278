@@ -178,6 +178,10 @@ export default function HomePage() {
       {/* 🚀 NEWEST 2027 CONTENT - BREAKTHROUGH QUANTUM AI & AUTONOMOUS INTELLIGENCE! */}
       <NewContent2027ShowcaseBanner />
 
+<<<<<<< HEAD
+      {/* ✨ Latest Sept 30 additions — advertised site-wide */}
+      <September30LatestBreakthroughsBanner />
+=======
       {/* 🚀 REVOLUTIONARY AI ENTERPRISE AUTOMATION 2026 */}
       <RevolutionaryAIEnterpriseAutomationBanner />
 
@@ -213,6 +217,7 @@ export default function HomePage() {
               <h3 className="text-xl font-bold">AI 2027 Autonomous Governance Blueprint</h3>
               <p className="text-white/80 mt-2 text-sm">Policy → controls → telemetry → review. Ship autonomy safely with measurable guardrails.</p>
             </Link>
+>>>>>>> origin/cursor/create-and-deploy-new-content-662d
 
       {/* 🔔 New: Enterprise Autonomy Blueprint 2026 */}
       <AutonomyBlueprint2026Banner />
@@ -856,6 +861,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        {/* Featured Services */}
+=======
 
         {/* 🔥 BRAND NEW CONTENT - SEPTEMBER 30, 2025 - 5 EXCLUSIVE PUBLICATIONS! */}
         <section className="py-16 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 text-white">
@@ -1133,6 +1141,7 @@ export default function HomePage() {
               </div>
             </div>
       {/* Featured Services */}
+>>>>>>> origin/cursor/create-and-deploy-new-content-662d
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">

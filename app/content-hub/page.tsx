@@ -67,11 +67,21 @@ export default function ContentHubPage() {
         { title: 'AI Roadmaps 2026', slug: '/blog/ai-roadmaps-2026', readTime: '8 min', featured: false },
         { title: 'AI FinOps Scorecards 2025', slug: '/blog/ai-finops-scorecards-2025', readTime: '7 min', featured: false },
         { title: 'AI Operational Resilience 2026', slug: '/blog/ai-operational-resilience-2026', readTime: '14 min', featured: true },
+        { title: 'AI Enterprise Automation Revolution 2026', slug: '/blog/ai-2026-enterprise-automation-revolution', readTime: '22 min', featured: true },
+        { title: 'AI 2026 Quantum Neural Networks', slug: '/blog/ai-2026-quantum-neural-networks', readTime: '18 min', featured: true },
       ]
     }
   ];
 
   const caseStudies = [
+    {
+      title: 'AI Enterprise Automation Success 2026',
+      company: 'Fortune 500 Manufacturing Giant',
+      industry: 'Manufacturing',
+      results: '$2.3B Savings & 99.97% Uptime',
+      slug: '/case-studies/ai-enterprise-automation-success-2026',
+      featured: true
+    },
     {
       title: 'AI Supply Chain Optimization 2026',
       company: 'Global Manufacturing Corp',
