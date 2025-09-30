@@ -146,15 +146,15 @@ const Home = () => {
         <NewContentPromoBanner 
           className="border-b border-white/10" 
           variant="premium" 
-          title="New: E2E AI Tracing, Edge Personalization, CI Policy Tests"
-          description="Trace prompts to outcomes, personalize privately at the edge, and ship faster with CI policy tests."
+          title="New: Live Canaries, Edge Cold‑Starts, Zero‑Regret Agent Releases"
+          description="Prevent regressions with KPI‑linked canaries, deliver sub‑100ms edge UX, and ship agent updates safely."
           ctaText="Explore new content"
           ctaLink="/blog"
           featuredItems={[
+            { title: "Live Canaries Prevent Regressions", category: "AI Governance", link: "/blog/ai-governance-live-canaries-2026" },
+            { title: "Edge Cold‑Start Busting", category: "Edge Computing", link: "/blog/edge-cold-start-busting-2026" },
+            { title: "Zero‑Regret Agent Releases", category: "AI Operations", link: "/blog/agent-runbooks-zero-regret-2026" },
             { title: "E2E AI Tracing", category: "Observability", link: "/blog/ai-e2e-tracing-2025" },
-            { title: "Edge Personalization", category: "Edge Computing", link: "/blog/edge-personalization-2026" },
-            { title: "Policy Tests Quickstart", category: "AI Governance", link: "/blog/policy-tests-quickstart-2025" },
-            { title: "Secure ML Supply Chain 2026", category: "Security", link: "/blog/secure-ml-supply-chain-2026" },
             { title: "GenAI Routing Blueprint 2026", category: "GenAI", link: "/blog/genai-routing-blueprint-2026" }
           ]}
         />

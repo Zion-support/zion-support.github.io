@@ -1284,3 +1284,34 @@ posts.push(
   }
 );
 
+// Sept 30, 2025 – Additional brand-new content to advertise on homepage
+posts.push(
+  {
+    slug: "ai-governance-live-canaries-2026",
+    title: "AI Governance 2026: Live Canaries That Prevent Regressions",
+    description: "Wire KPI-linked canaries and policy tests to stop bad releases while keeping velocity high.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-cold-start-busting-2026",
+    title: "Edge Cold-Start Busting 2026: Warm Pools, Prefetch, Tiered Caches",
+    description: "Deliver sub-100ms UX globally with warm pools, intent prefetching, and tiered caches.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-runbooks-zero-regret-2026",
+    title: "Agent Runbooks 2026: Zero‑Regret Releases with Budgets & Rollback",
+    description: "Budgeted actions, approvals, and instant rollback so agent updates are safe at scale.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  }
+);
+
