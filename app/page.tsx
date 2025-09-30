@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
-=======
-import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/create-and-deploy-new-content-4f57
 import { 
   NewBlogBanner, 
   AnalyticsPlatformBanner, 
@@ -47,65 +43,12 @@ import {
   InteractiveAICalculatorBanner,
   AIInnovationShowcaseBanner
 } from '../components/NewContent2026Banners';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
-import LatestAI2026ContentBanner from '../components/LatestAI2026ContentBanner';
-=======
-import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
->>>>>>> origin/cursor/create-and-deploy-new-content-15c5
-=======
-import {
-<<<<<<< HEAD
-  MultimodalAIIntegrationBanner,
-  MultimodalAICustomerServiceBanner
-} from '../components/MultimodalAIBanners';
->>>>>>> origin/cursor/create-and-deploy-new-content-1f7b
-=======
-  AINeuralSuperintelligenceBanner,
-  AIQuantumComputingBanner,
-  AIAutonomousSystemsBanner as NewAIAutonomousSystemsBanner,
-  NeuralSuperintelligenceCaseStudyBanner,
-  InteractiveAIToolsBanner,
-  LatestContentShowcaseBanner as NewLatestContentShowcaseBanner
-} from '../components/NewContent2026PromotionalBanners';
-import {
-  AITrends2025PromotionalBanner,
-  Fortune500SuccessBanner,
-  InteractiveROICalculatorBanner,
-  AITransformationShowcaseBanner
-} from '../components/NewContent2025Banners';
-import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
->>>>>>> origin/cursor/create-and-deploy-new-content-4092
+import Latest2025ContentMegaBanner from '../components/Latest2025ContentMegaBanner';
+import AI2025BreakthroughShowcaseBanner from '../components/AI2025BreakthroughShowcaseBanner';
 import ContentShowcase from '../components/ContentShowcase';
-<<<<<<< HEAD
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
-import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
-<<<<<<< HEAD
-import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
-import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
-<<<<<<< HEAD
-import LatestContent2025Banner from '../components/LatestContent2025Banner';
-import RevolutionaryAI2025Banner from '../components/RevolutionaryAI2025Banner';
-import InteractiveAICalculator2025 from '../components/InteractiveAICalculator2025';
-import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
-import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
-import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculator';
-=======
->>>>>>> origin/feature/revolutionary-ai-2026-content
-=======
-import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
-import InteractiveAI2027Calculator from '../components/InteractiveAI2027Calculator';
 import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
-import FeaturedServiceCard from '../components/FeaturedServiceCard';
-import SuccessStory from '../components/SuccessStory';
->>>>>>> origin/new-content-integration-main
-=======
-import Revolutionary2026ContentMegaBanner from '../components/Revolutionary2026ContentMegaBanner';
-import Latest2026InnovationsBanner from '../components/Latest2026InnovationsBanner';
->>>>>>> origin/cursor/create-and-deploy-new-content-537c
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -187,59 +130,13 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Revolutionary AI 2025 Banner */}
-      <RevolutionaryAI2025Banner />
+      {/* Latest 2025 Content Mega Banner */}
+      <Latest2025ContentMegaBanner />
       
-      {/* Latest Content 2025 Banner */}
-      <LatestContent2025Banner />
-=======
-      {/* Revolutionary 2026 Content Mega Banner */}
-      <Revolutionary2026ContentMegaBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-537c
-      
-      {/* Revolutionary Content 2026 Banner */}
-      <RevolutionaryContent2026Banner />
-=======
-=======
->>>>>>> origin/new-content-integration-main
-      {/* Latest 2026 Mega Content Banners */}
-      <Revolutionary2026ContentBanner />
-      <AI2026ContentShowcaseBanner />
-      <AIEnterpriseAutomationRevolutionBanner />
-      <AIQuantumComputingBreakthroughBanner />
-      <AIMegaTransformationSuccessBanner />
-      <AI2026InnovationShowcaseBanner />
->>>>>>> feature/new-content-and-advertising-2026
-=======
-      {/* Revolutionary 2026 Content Banners */}
-      <RevolutionaryContent2026Banner />
-      <LatestAI2026ContentBanner />
->>>>>>> origin/feature/revolutionary-ai-2026-content
-=======
-      {/* New 2026 Mega Content Banner */}
-      <NewContent2026MegaBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-15c5
-=======
-      {/* Latest 2026 Revolutionary Content Banners */}
-      <AINeuralSuperintelligenceBanner />
-      <AIQuantumComputingBanner />
-      <NewAIAutonomousSystemsBanner />
-      <NeuralSuperintelligenceCaseStudyBanner />
-      <InteractiveAIToolsBanner />
-      <NewLatestContentShowcaseBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-4092
+      {/* AI 2025 Breakthrough Showcase Banner */}
+      <AI2025BreakthroughShowcaseBanner />
       
       {/* Latest 2026 Content Banners */}
-<<<<<<< HEAD
-=======
-      <LatestContent2026MegaBanner />
->>>>>>> origin/new-content-integration-main
       <AIEnterpriseTransformationBanner />
       <MultimodalAIIntegrationBanner />
       <AIAutonomousSystemsBanner />
