@@ -40,10 +40,19 @@ import March2026AdvertisingMegaBanner from "./components/March2026AdvertisingMeg
 import March2026BreakthroughBanner from "./components/March2026BreakthroughBanner";
 import RevolutionaryContentShowcase2026 from "./components/RevolutionaryContentShowcase2026";
 import InteractiveContentHub2026 from "./components/InteractiveContentHub2026";
+import April2026QuantumAIRevolutionBanner from "./components/April2026QuantumAIRevolutionBanner";
+import April2026QuantumAIShowcaseBanner from "./components/April2026QuantumAIShowcaseBanner";
+import April2026QuantumAIMegaBanner from "./components/April2026QuantumAIMegaBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* NEW: April 2026 Quantum AI Revolution Banner - Most Prominent */}
+      <April2026QuantumAIRevolutionBanner />
+      
+      {/* NEW: April 2026 Quantum AI Mega Banner - Breaking News */}
+      <April2026QuantumAIMegaBanner />
+      
       {/* NEW: March 2026 Revolutionary Breakthrough Banner - Most Prominent */}
       <March2026AdvertisingMegaBanner />
       
@@ -290,6 +299,9 @@ export default function App(): JSX.Element {
           </div>
         </div>
       </section>
+
+      {/* April 2026 Quantum AI Showcase */}
+      <April2026QuantumAIShowcaseBanner />
 
       {/* AI Innovation Showcase */}
       <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">

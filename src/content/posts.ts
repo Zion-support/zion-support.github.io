@@ -1605,7 +1605,6 @@ posts.unshift(
   }
 );
 
-<<<<<<< HEAD
 // Sept 30, 2025 – Freshly added posts to expand content library
 posts.unshift(
   {
@@ -1623,9 +1622,11 @@ posts.unshift(
     title: "Privacy‑Preserving Telemetry: Scoped IDs, On‑Device Redaction, DP Noise",
     description:
       "Actionable analytics without PII using scoped identifiers, local redaction, and differential privacy at the edge.",
-=======
-// Sept 30, 2025 – Add three more posts and promote across the site
-posts.unshift(
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  },
   {
     slug: "ai-2025-sept-30-operational-trust-scorecards-v3",
     title: "Operational Trust Scorecards v3 — KPIs, Budgets, Instant Rollback",
@@ -1651,12 +1652,10 @@ posts.unshift(
     title: "Consentless Telemetry v2 — Useful Insights, Zero‑PII, <100ms",
     description:
       "Scoped IDs, on‑device redaction, and DP noise to keep analytics rich and privacy‑first worldwide.",
->>>>>>> feat/content-sept30-ads
     category: "Observability",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "6 min read",
-<<<<<<< HEAD
   },
   {
     slug: "genai-2025-sept-30-quality-tiers-quickstart",
@@ -1667,8 +1666,6 @@ posts.unshift(
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read",
-=======
->>>>>>> feat/content-sept30-ads
   }
 );
 
