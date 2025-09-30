@@ -234,6 +234,150 @@ export const caseStudies2025: CaseStudy[] = [
     featured: true,
     publishedAt: "2025-09-30",
     readTime: "13 min read"
+  },
+  {
+    id: "energy-ai-grid-optimization",
+    slug: "energy-ai-grid-optimization",
+    title: "GlobalEnergy Corp: AI-Powered Smart Grid Transformation",
+    client: "GlobalEnergy Corporation",
+    industry: "Energy & Utilities",
+    description: "Transformed national power grid with AI achieving 45% efficiency improvement, $2.1B annual savings, and 99.95% reliability.",
+    challenge: "Aging power grid with 35% energy waste, frequent outages costing $3B annually, and inability to integrate renewable sources efficiently.",
+    solution: "Deployed AI-powered smart grid management system with real-time load balancing, predictive maintenance, and renewable energy optimization. Implemented edge AI for distributed intelligence across 100,000+ grid nodes.",
+    results: [
+      {
+        metric: "Efficiency Gain",
+        value: "45%",
+        description: "Energy distribution efficiency improvement"
+      },
+      {
+        metric: "Annual Savings",
+        value: "$2.1B",
+        description: "Cost reduction from waste elimination and optimization"
+      },
+      {
+        metric: "Reliability",
+        value: "99.95%",
+        description: "Grid uptime vs 92% baseline, 98% fewer outages"
+      },
+      {
+        metric: "Renewable Integration",
+        value: "300%",
+        description: "Increase in renewable energy capacity integrated"
+      }
+    ],
+    technologies: ["AI Grid Optimization", "Edge AI", "Predictive Maintenance", "Real-Time Analytics", "Smart Sensors"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "17 min read"
+  },
+  {
+    id: "telecom-ai-network-intelligence",
+    slug: "telecom-ai-network-intelligence",
+    title: "TelecomGlobal: AI Network Intelligence Platform Success",
+    client: "TelecomGlobal Networks",
+    industry: "Telecommunications",
+    description: "Revolutionized network operations with AI achieving 99.999% uptime, 70% cost reduction, and 10x faster issue resolution.",
+    challenge: "Complex network serving 500M+ users with frequent outages (2-3 per week), slow issue resolution (8+ hours), and $1.5B annual operational costs.",
+    solution: "Implemented AI network intelligence platform with autonomous fault detection, self-healing capabilities, and predictive capacity planning. Deployed ML models analyzing 100TB+ network data daily.",
+    results: [
+      {
+        metric: "Uptime",
+        value: "99.999%",
+        description: "Network availability, five 9s reliability achieved"
+      },
+      {
+        metric: "Resolution Time",
+        value: "10x Faster",
+        description: "From 8 hours to 45 minutes average resolution"
+      },
+      {
+        metric: "Cost Reduction",
+        value: "70%",
+        description: "$1.05B annual operational cost savings"
+      },
+      {
+        metric: "Capacity Planning",
+        value: "95%",
+        description: "Prediction accuracy for network capacity needs"
+      }
+    ],
+    technologies: ["AI Network Intelligence", "Anomaly Detection", "Self-Healing Systems", "Predictive Analytics", "Big Data"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "16 min read"
+  },
+  {
+    id: "insurance-ai-claims-processing",
+    slug: "insurance-ai-claims-processing",
+    title: "InsureTech Global: AI Claims Processing Revolution",
+    client: "InsureTech Global Inc",
+    industry: "Insurance",
+    description: "Transformed claims processing with AI achieving 98% automation, 95% faster processing, and 99.2% accuracy.",
+    challenge: "Manual claims processing taking 30+ days, 25% error rate, processing costs of $450 per claim, and poor customer satisfaction (CSAT 52%).",
+    solution: "Deployed end-to-end AI claims processing platform with computer vision for damage assessment, NLP for document analysis, and ML for fraud detection. Automated 98% of routine claims processing.",
+    results: [
+      {
+        metric: "Processing Speed",
+        value: "95%",
+        description: "From 30 days to 1.5 days average claim processing"
+      },
+      {
+        metric: "Accuracy",
+        value: "99.2%",
+        description: "Claims processing accuracy vs 75% baseline"
+      },
+      {
+        metric: "Cost Per Claim",
+        value: "88%",
+        description: "Reduction from $450 to $54 per claim processed"
+      },
+      {
+        metric: "Customer Satisfaction",
+        value: "94%",
+        description: "CSAT score improved from 52% to 94%"
+      }
+    ],
+    technologies: ["Computer Vision AI", "NLP", "Fraud Detection ML", "Process Automation", "Document AI"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "14 min read"
+  },
+  {
+    id: "automotive-ai-autonomous-manufacturing",
+    slug: "automotive-ai-autonomous-manufacturing",
+    title: "AutoManufacture Inc: AI Autonomous Manufacturing Excellence",
+    client: "AutoManufacture Inc",
+    industry: "Automotive Manufacturing",
+    description: "Revolutionized vehicle production with AI achieving 85% efficiency gain, zero-defect manufacturing, and 60% cost reduction.",
+    challenge: "Traditional production with 8% defect rate, 12-week production cycle, high labor costs, and inability to adapt to custom orders efficiently.",
+    solution: "Implemented fully autonomous AI manufacturing system with computer vision quality control, robotic assembly coordination, and real-time production optimization. Deployed 10,000+ AI-coordinated robots.",
+    results: [
+      {
+        metric: "Efficiency Improvement",
+        value: "85%",
+        description: "Production throughput vs traditional assembly lines"
+      },
+      {
+        metric: "Defect Rate",
+        value: "99.8%",
+        description: "Quality improvement, from 8% to 0.2% defect rate"
+      },
+      {
+        metric: "Production Time",
+        value: "75%",
+        description: "Reduction from 12 weeks to 3 weeks per vehicle"
+      },
+      {
+        metric: "Cost Reduction",
+        value: "60%",
+        description: "Per-vehicle manufacturing cost savings"
+      }
+    ],
+    technologies: ["AI Manufacturing", "Computer Vision QC", "Swarm Robotics", "Real-Time Optimization", "Predictive Maintenance"],
+    featured: true,
+    publishedAt: "2025-09-30",
+    readTime: "15 min read"
   }
 ];
 
