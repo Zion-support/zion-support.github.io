@@ -17,7 +17,6 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
-<<<<<<< HEAD
     id: "quantum-ai-convergence-enterprise-2026",
     slug: "quantum-ai-convergence-enterprise-2026",
     title: "Quantum-AI Convergence 2026: 1000x Performance Breakthrough for Enterprise",
@@ -335,8 +334,6 @@ export const latestArticles: LatestArticle[] = [
     title: "Enterprise LLM Fine-Tuning 2025: From Foundation to Domain Expert",
     description: "Master enterprise LLM fine-tuning with LoRA, QLoRA, and RLHF. Achieve 95%+ accuracy on domain tasks at 10x lower cost than training from scratch.",
     excerpt: "Transform foundation models into domain experts with production-ready fine-tuning strategies achieving 95%+ accuracy.",
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
     author: "Zion Tech Group Team",
     date: "2025-09-30",
     category: "LLM Training",
@@ -380,7 +377,6 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
-<<<<<<< HEAD
     id: "edge-personalization-2025",
     slug: "edge-personalization-2025",
     title: "Edge Personalization: Privacy‑First, Sub‑100ms Experiences",
@@ -409,13 +405,10 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "6 min read",
     image: "/images/policy-tests-quickstart-2025.jpg",
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
     newBadge: true,
     trending: true
   },
   {
-<<<<<<< HEAD
     id: "ai-autonomous-infrastructure-2026",
     slug: "ai-autonomous-infrastructure-2026",
     title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
@@ -428,7 +421,6 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "9 min read",
     image: "/images/ai-autonomous-infrastructure-2026.jpg",
-=======
     author: "Zion Tech Group Team",
     date: "2025-10-16",
     category: "Edge Computing",
@@ -436,12 +428,10 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "7 min read",
     image: "/images/edge-agent-observability-2026.jpg",
->>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
     newBadge: true,
     trending: true
   },
   {
-<<<<<<< HEAD
     id: "quantum-ai-hybrid-blueprint-2026",
     slug: "quantum-ai-hybrid-blueprint-2026",
     title: "Quantum‑AI Hybrid Blueprint 2026: Practical Wins in 12 Months",
@@ -451,7 +441,6 @@ export const latestArticles: LatestArticle[] = [
     date: "2025-10-12",
     category: "Quantum Computing",
     tags: ["Quantum", "AI", "Optimization"],
-=======
     id: "privacy-preserving-feature-flags-2026",
     slug: "privacy-preserving-feature-flags-2026",
     title: "Privacy‑Preserving Feature Flags 2026: Geo Budgets and On‑Device Filters",
@@ -519,7 +508,6 @@ export const latestArticles: LatestArticle[] = [
     date: "2025-09-29",
     category: "Platform Engineering",
     tags: ["Scorecards", "ROI", "SLOs", "Golden Paths"],
->>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
     featured: true,
     readTime: "8 min read",
     image: "/images/quantum-ai-hybrid-2026.jpg",
@@ -527,13 +515,11 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
-<<<<<<< HEAD
     id: "zero-trust-for-genai-2026",
     slug: "zero-trust-for-genai-2026",
     title: "Zero‑Trust for GenAI: Prompt Firewalls, Egress Policies, and Audit Trails",
     description: "Enterprise patterns to keep AI interactions safe without slowing delivery.",
     excerpt: "Implement auth‑aware retrieval, policy gates, and signed outputs with observability.",
-=======
     id: "multimodal-agents-enterprise-2026",
     slug: "multimodal-agents-enterprise-2026",
     title: "Multimodal Agents 2026: Vision + Text + Voice that Teams Can Trust",
@@ -731,7 +717,6 @@ export const latestArticles: LatestArticle[] = [
     title: "AI Incident Budgets: Playbooks That Contain in <60s",
     description: "Budgeted actions, approvals, and rollback triggers for safe automation under pressure.",
     excerpt: "Close the loop from detections to actions with KPI‑wired incident budgets.",
->>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
     author: "Zion Tech Group Team",
     date: "2025-10-12",
     category: "Security",
@@ -839,22 +824,6 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
-    id: "ai-incident-response-playbooks-2025",
-    slug: "ai-incident-response-playbooks-2025",
-    title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
-    description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
-    excerpt: "Design incident playbooks with budgeted actions, approvals, and telemetry that close the loop fast.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Cybersecurity",
-    tags: ["IR", "Automation", "Guardrails"],
-    featured: true,
-    readTime: "7 min read",
-    image: "/images/ai-incident-response-playbooks-2025.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
     id: "ai-runbooks-with-risk-budgets-2026",
     slug: "ai-runbooks-with-risk-budgets-2026",
     title: "AI Runbooks with Risk Budgets: Safe Automation That Ships",
@@ -871,22 +840,6 @@ export const latestArticles: LatestArticle[] = [
     trending: true
   },
   {
-    id: "privacy-preserving-feature-flags-2026",
-    slug: "privacy-preserving-feature-flags-2026",
-    title: "Privacy‑Preserving Feature Flags: Zero‑Regret Rollouts at Scale",
-    description: "Scoped IDs, on‑device filters, and edge budgets to ship fast without PII risk.",
-    excerpt: "Blueprint for global rollouts that keep signals rich and private under 100ms.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Architecture",
-    tags: ["Feature Flags", "Privacy", "Edge"],
-    featured: true,
-    readTime: "6 min read",
-    image: "/images/privacy-preserving-feature-flags-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
     id: "zero-trust-agents-2026",
     slug: "zero-trust-agents-2026",
     title: "Zero‑Trust for AI Agents: Sandboxes, Egress Policies, and Attestations",
@@ -899,22 +852,6 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "8 min read",
     image: "/images/zero-trust-agents-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "privacy-preserving-analytics-2025",
-    slug: "privacy-preserving-analytics-2025",
-    title: "Privacy‑Preserving Analytics: Ship Insights Without PII Risk",
-    description: "On-device redaction, scoped IDs, and DP noise for compliant, decision-grade telemetry.",
-    excerpt: "A practical blueprint for analytics that respect privacy while keeping signals rich.",
-    author: "Zion Tech Group Team",
-    date: "2025-09-29",
-    category: "Observability",
-    tags: ["Privacy", "Telemetry", "Compliance"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/privacy-preserving-analytics-2025.jpg",
     newBadge: true,
     trending: true
   },
@@ -1400,8 +1337,6 @@ export const latestArticles: LatestArticle[] = [
   }
   ,
   {
-<<<<<<< HEAD
-=======
     id: "ai-supply-chain-optimization-2025",
     slug: "ai-supply-chain-optimization-2025",
     title: "AI Supply Chain Optimization: 65% Faster Deliveries, 40% Lower Cost",
@@ -1435,7 +1370,6 @@ export const latestArticles: LatestArticle[] = [
   }
   ,
   {
->>>>>>> origin/cursor/create-and-deploy-new-content-5fb2
     id: "ai-platform-scorecards-roi-2026",
     slug: "ai-platform-scorecards-roi-2026",
     title: "AI Platform Scorecards 2026: Proving ROI with Leading Indicators",
@@ -1898,22 +1832,6 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "7 min read",
     image: "/images/ai-risk-budgets-2026.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "privacy-preserving-agents-2026",
-    slug: "privacy-preserving-agents-2026",
-    title: "Privacy‑Preserving Agents 2026: On‑Device Tools and Scoped Telemetry",
-    description: "Ship assistants that protect users with local tools, encrypted caches, and DP‑backed analytics.",
-    excerpt: "Design assistants that are fast, private, and reliable—without PII leaks.",
-    author: "Zion Tech Group Team",
-    date: "2025-10-13",
-    category: "AI Security",
-    tags: ["Privacy", "Agents", "Telemetry"],
-    featured: true,
-    readTime: "8 min read",
-    image: "/images/privacy-preserving-agents-2026.jpg",
     newBadge: true,
     trending: true
   },
@@ -2507,54 +2425,6 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "16 min read",
     image: "/images/ai-chip-design-automation.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-autonomous-threat-response-2025",
-    slug: "ai-autonomous-threat-response-2025",
-    title: "AI Autonomous Threat Response 2025: Zero-Touch Security Operations",
-    description: "Deploy autonomous security operations achieving sub-30s incident containment with 99.8% accuracy. Learn threat detection, automated playbooks, and self-healing security systems that eliminate manual response.",
-    excerpt: "Achieve sub-30s threat containment with zero-touch autonomous security. Reduce MTTR by 95% and prevent 99.8% of attacks automatically.",
-    author: "Zion Tech Group Security Team",
-    date: "2025-09-30",
-    category: "Cybersecurity",
-    tags: ["Autonomous Security", "Zero-Touch Operations", "Threat Response", "Security Automation"],
-    featured: true,
-    readTime: "14 min read",
-    image: "/images/ai-autonomous-threat-response.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-prompt-engineering-mastery-2025",
-    slug: "ai-prompt-engineering-mastery-2025",
-    title: "Prompt Engineering Mastery 2025: Unlock 95%+ LLM Accuracy at 70% Lower Cost",
-    description: "Master advanced LLM prompting with few-shot learning, chain-of-thought, RAG integration, and production optimization. Achieve 95%+ accuracy while reducing inference costs by 70%.",
-    excerpt: "Transform LLM outputs from mediocre to exceptional. Learn production-proven prompting techniques achieving 95%+ accuracy at fraction of the cost.",
-    author: "Zion Tech Group AI Engineering Team",
-    date: "2025-09-30",
-    category: "LLM Engineering",
-    tags: ["Prompt Engineering", "LLM Optimization", "Few-Shot Learning", "Chain-of-Thought"],
-    featured: true,
-    readTime: "16 min read",
-    image: "/images/prompt-engineering-mastery.jpg",
-    newBadge: true,
-    trending: true
-  },
-  {
-    id: "ai-synthetic-data-generation-2025",
-    slug: "ai-synthetic-data-generation-2025",
-    title: "Synthetic Data Generation 2025: Unlimited Training Data with Perfect Privacy",
-    description: "Generate unlimited high-quality training data with 98% statistical parity and perfect privacy. Master GANs, diffusion models, and privacy-preserving synthesis for ML at scale.",
-    excerpt: "Solve data scarcity forever. Generate unlimited training data with 98% statistical parity while maintaining perfect privacy compliance.",
-    author: "Zion Tech Group Data Science Team",
-    date: "2025-09-30",
-    category: "Data Science",
-    tags: ["Synthetic Data", "GANs", "Diffusion Models", "Privacy-Preserving ML"],
-    featured: true,
-    readTime: "15 min read",
-    image: "/images/synthetic-data-generation.jpg",
     newBadge: true,
     trending: true
   },
