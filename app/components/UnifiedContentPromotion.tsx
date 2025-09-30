@@ -17,6 +17,30 @@ const promoted = [
     pill: 'Sep 30, 2025',
     theme: 'from-rose-600 to-amber-600',
   },
+  {
+    href: '/blog/ai-2026-autonomous-change-control',
+    title: 'Autonomous Change Control — Gates, Budgets, Rollback',
+    desc: 'Ship weekly without regressions using CI policy tests and instant rollback.',
+    emoji: '🛡️',
+    pill: 'New • Sep 30, 2025',
+    theme: 'from-emerald-600 to-teal-600',
+  },
+  {
+    href: '/blog/edge-2026-privacy-preserving-evals',
+    title: 'Edge 2026: Privacy‑Preserving Evals (<100ms)',
+    desc: 'Scoped IDs, on‑device aggregation, DP noise for trustworthy eval signals.',
+    emoji: '🔐',
+    pill: 'New • Sep 30, 2025',
+    theme: 'from-fuchsia-600 to-pink-600',
+  },
+  {
+    href: '/blog/genai-2026-token-budgets-blueprint',
+    title: 'GenAI 2026: Token Budgets Blueprint',
+    desc: 'Quality tiers + semantic caches + budgets for predictable spend.',
+    emoji: '💸',
+    pill: 'New • Sep 30, 2025',
+    theme: 'from-amber-600 to-yellow-600',
+  },
 ];
 
 export default function UnifiedContentPromotion() {
@@ -34,7 +58,7 @@ export default function UnifiedContentPromotion() {
         <div className="grid md:grid-cols-2 gap-6">
           {promoted.map((c) => (
             <a key={c.href} href={c.href} className="group">
-              <div className={`rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-r ${c.theme} p-[1px]`}> 
+              <div className={`rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-r ${c.theme} p-[1px]`}>
                 <div className="bg-slate-900 rounded-2xl p-6 h-full">
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-3xl">{c.emoji}</div>
