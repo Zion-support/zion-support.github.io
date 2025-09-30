@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import BreakthroughContent2026Banner from "../components/BreakthroughContent2026Banner";
 import ContentPromotionBanner from "../components/ContentPromotionBanner";
 import ContentValueTestimonials from "../components/ContentValueTestimonials";
 import EnhancedNewsletterSignup from "../components/EnhancedNewsletterSignup";
@@ -147,6 +148,11 @@ const Home = () => {
         />
         <div className="container mx-auto px-6 mt-6">
           <TrendingContentBanner />
+        </div>
+        
+        {/* BREAKTHROUGH CONTENT 2026 - September 30, 2025 */}
+        <div className="container mx-auto px-6 mt-6">
+          <BreakthroughContent2026Banner />
         </div>
         
         {/* New Comprehensive Promotional Banner */}
