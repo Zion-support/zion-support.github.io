@@ -774,6 +774,37 @@ export default function HomePage() {
             >
               View All Success Stories →
             </Link>
+
+            {/* Newly added article promo */}
+            <Link href="/blog/ai-powered-devsecops-2026" className="group">
+              <div className="bg-white text-gray-900 rounded-xl p-6 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-1">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl">🛡️</span>
+                  </div>
+                  <div>
+                    <span className="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-bold mb-2">
+                      NEW 2026 ARTICLE
+                    </span>
+                    <h3 className="text-lg font-bold group-hover:text-purple-600 transition-colors">
+                      AI-Powered DevSecOps 2026
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Sub-minute containment and 99.9% detection with policy tests, evals, and automated runbooks.
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="flex gap-4 text-sm text-gray-500">
+                    <span>🆕 NEW</span>
+                    <span>⏱️ 20 min read</span>
+                  </div>
+                  <div className="text-purple-600 font-bold group-hover:text-purple-700">
+                    Read Now →
+                  </div>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
