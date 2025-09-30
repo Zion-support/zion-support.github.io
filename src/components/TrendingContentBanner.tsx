@@ -79,16 +79,6 @@ const TrendingContentBanner: React.FC = () => {
       badge: "NEW"
     },
     {
-      title: "Agent Red‑Teaming 2026",
-      description: "Simulation labs: jailbreak corpora, tool fuzzers, KPI‑linked budgets.",
-      views: "12.7K",
-      readTime: "8 min",
-      category: "AI Security",
-      icon: Shield,
-      link: "/blog/agent-red-teaming-2026",
-      badge: "HOT"
-    },
-    {
       title: "AI Autonomous Infrastructure 2026",
       description: "Self‑healing, self‑optimizing, self‑scaling platforms with budgets.",
       views: "12.4K",
