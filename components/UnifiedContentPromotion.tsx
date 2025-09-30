@@ -17,6 +17,43 @@ interface ContentItem {
 }
 
 const featuredContent: ContentItem[] = [
+  // Sept 30, 2025 — newly added highlights
+  {
+    id: 'nX1',
+    title: 'Operational Trust Scorecards v3 — KPIs, Budgets, Instant Rollback',
+    description: 'Wire SLIs to KPIs with budgeted actions, live canaries, and deterministic rollback that prevents regressions.',
+    link: '/blog/ai-2025-sept-30-operational-trust-scorecards-v3',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
+    icon: '🧭',
+    publishedDate: 'September 30, 2025',
+    readTime: '9 min read',
+    category: 'AI Operations'
+  },
+  {
+    id: 'nX2',
+    title: 'Autonomic Runbooks — Contain Incidents in Under 60 Seconds',
+    description: 'Policy‑tested actions, guardrails, and live traces that auto‑contain incidents without sacrificing velocity.',
+    link: '/blog/ai-2025-sept-30-autonomic-runbooks',
+    badge: 'Fresh',
+    badgeColor: 'bg-gradient-to-r from-yellow-600 to-orange-600',
+    icon: '⚙️',
+    publishedDate: 'September 30, 2025',
+    readTime: '8 min read',
+    category: 'AI Reliability'
+  },
+  {
+    id: 'nX3',
+    title: 'Consentless Telemetry v2 — Useful Insights, Zero‑PII, <100ms',
+    description: 'Scoped IDs, on‑device redaction, and DP noise to keep analytics rich and privacy‑first worldwide.',
+    link: '/blog/edge-2025-sept-30-consentless-telemetry-v2',
+    badge: 'New',
+    badgeColor: 'bg-gradient-to-r from-cyan-600 to-sky-600',
+    icon: '📈',
+    publishedDate: 'September 30, 2025',
+    readTime: '6 min read',
+    category: 'Observability'
+  },
   // Sept 30, 2025 — highlight newest content
   {
     id: 'n1',

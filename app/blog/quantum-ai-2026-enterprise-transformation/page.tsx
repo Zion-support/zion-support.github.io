@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import QuantumAI2026EnterpriseTransformation from '../../../../blog/quantum-ai-2026-enterprise-transformation';
+import QuantumAI2026EnterpriseTransformation from '../../../blog/quantum-ai-2026-enterprise-transformation';
 
 export const metadata: Metadata = {
   title: '⚛️ Quantum AI 2026: Enterprise Transformation Breakthrough | Zion Tech Group',

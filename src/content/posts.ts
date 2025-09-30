@@ -1513,3 +1513,37 @@ posts.unshift(
     readTime: "8 min read",
   }
 );
+
+// Sept 30, 2025 – Add three more posts and promote across the site
+posts.unshift(
+  {
+    slug: "ai-2025-sept-30-operational-trust-scorecards-v3",
+    title: "Operational Trust Scorecards v3 — KPIs, Budgets, Instant Rollback",
+    description:
+      "Wire SLIs to KPIs with budgeted actions, live canaries, and deterministic rollback that prevents regressions.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "ai-2025-sept-30-autonomic-runbooks",
+    title: "Autonomic Runbooks — Contain Incidents in Under 60 Seconds",
+    description:
+      "Policy‑tested actions, guardrails, and live traces that auto‑contain incidents without sacrificing velocity.",
+    category: "AI Reliability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-2025-sept-30-consentless-telemetry-v2",
+    title: "Consentless Telemetry v2 — Useful Insights, Zero‑PII, <100ms",
+    description:
+      "Scoped IDs, on‑device redaction, and DP noise to keep analytics rich and privacy‑first worldwide.",
+    category: "Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read",
+  }
+);

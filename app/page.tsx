@@ -9,7 +9,10 @@ import January2026NewServicesBanner from '../components/January2026NewServicesBa
 import Revolutionary2026ContentAdvertisingBanner from '../components/Revolutionary2026ContentAdvertisingBanner';
 import January2026BreakthroughShowcaseBanner from '../components/January2026BreakthroughShowcaseBanner';
 import Ultimate2026ContentPromotionalBanner from '../components/Ultimate2026ContentPromotionalBanner';
-import Ultimate2026HyperintelligenceBanner from '../components/Ultimate2026HyperintelligenceBanner';
+import Ultimate2026HyperintelligenceBanner from './components/Ultimate2026HyperintelligenceBanner';
+import Revolutionary2027ContentMegaBanner from '../components/Revolutionary2027ContentMegaBanner';
+import Ultimate2027BreakthroughBanner from '../components/Ultimate2027BreakthroughBanner';
+import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 
 export default function HomePage() {
   return (
