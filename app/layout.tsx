@@ -78,6 +78,22 @@ function Header() {
             </Link>
           </div>
           <div className="relative group">
+            <Link href="/blog/ai-2026-edge-native-intelligence-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Edge-Native AI 50x
+              <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                REVOLUTIONARY
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
+            <Link href="/blog/ai-2026-synthetic-data-revolution" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+              Synthetic Data 1000x
+              <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                BREAKTHROUGH
+              </span>
+            </Link>
+          </div>
+          <div className="relative group">
             <Link href="/blog/ai-2026-autonomous-business-intelligence-breakthrough" className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
               Autonomous BI 2026
               <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
