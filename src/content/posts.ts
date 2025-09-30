@@ -10,6 +10,33 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-executive-playbook-2027",
+    title: "AI Executive Playbook 2027: Fund, Govern, and Scale with KPIs",
+    description: "Executive‑ready roadmap: KPI‑linked scorecards, budgeted actions, and governance that accelerates delivery.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "ai-2027-cost-optimization-playbook",
+    title: "AI 2027 Cost Optimization Playbook: Quality Tiers + Caches",
+    description: "Deterministic tiering, semantic caches, and policy tests to cut spend 40–70% while keeping UX stable.",
+    category: "AI Operations",
+    publishedAt: "2025-10-02",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-2026-private-feature-flags",
+    title: "Edge 2026: Private Feature Flags at <100ms",
+    description: "Signed configs, scoped IDs, and on‑device telemetry for zero‑PII rollouts worldwide under 100ms.",
+    category: "Architecture",
+    publishedAt: "2025-10-01",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-2027-customer-experience-agents",
     title: "AI 2027: Customer Experience Agents — 24/7 Autonomous CX",
     description: "Deploy trusted CX agents with budgets, live KPIs, and instant rollback that resolve 80% of tickets autonomously.

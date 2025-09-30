@@ -4,6 +4,39 @@ import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Atom, Bot }
 const NewContentPromoBanner: React.FC = () => {
   const newContent = [
     {
+      title: "AI Executive Playbook 2027",
+      description: "KPI‑linked scorecards, budgets, and governance to scale safely",
+      slug: "ai-executive-playbook-2027",
+      category: "AI Strategy",
+      icon: "🏛️",
+      impact: "Exec Alignment",
+      savings: "Faster Delivery",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "AI 2027 Cost Optimization Playbook",
+      description: "Quality tiers + semantic caches for 40–70% cost savings",
+      slug: "ai-2027-cost-optimization-playbook",
+      category: "AI Operations",
+      icon: "💸",
+      impact: "40–70% Savings",
+      savings: "Stable UX",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "Edge 2026: Private Feature Flags",
+      description: "Signed configs, scoped IDs, on‑device telemetry at <100ms",
+      slug: "edge-2026-private-feature-flags",
+      category: "Architecture",
+      icon: "🚩",
+      impact: "Zero PII",
+      savings: "<100ms",
+      featured: true,
+      trending: true
+    },
+    {
       title: "AI Trust Scorecards v5 (2027)",
       description: "Live canaries + PR policy tests wired to KPIs for real reliability",
       slug: "ai-trust-scorecards-v5-2027",
