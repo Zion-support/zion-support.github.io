@@ -2178,6 +2178,34 @@ posts.push(
     featured: true,
     readTime: "6 min read"
   },
+  // Added Sept 30, 2025 — New content entries
+  {
+    slug: "ai-operational-trust-q4-2025",
+    title: "AI Operational Trust Q4 2025: Scorecards That Prevent Regressions",
+    description: "Wire SLIs to KPIs with budgets, canaries, and attested rollbacks to ship faster and safer.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-cost-optimization-breakthrough-2026",
+    title: "AI Cost Optimization Breakthrough 2026: 40–70% Savings With Stability",
+    description: "Quality tiers, semantic caches, and policy tests that cut spend without hurting UX.",
+    category: "FinOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-autonomous-enterprise-operations-2025",
+    title: "Autonomous Enterprise Operations 2025: From Pilots to Production",
+    description: "Guardrails, live traces, and budgeted actions that convert pilots into durable ROI.",
+    category: "Enterprise AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
   {
     slug: "ai-safety-budgets-2026",
     title: "AI Safety Budgets 2026: Guardrails That Keep Velocity High",
