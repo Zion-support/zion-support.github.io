@@ -17,6 +17,7 @@ export interface LatestArticle {
 
 export const latestArticles: LatestArticle[] = [
   {
+<<<<<<< HEAD
     id: "ai-2027-operational-risk-budgets",
     slug: "ai-2027-operational-risk-budgets",
     title: "AI 2027: Operational Risk Budgets",
@@ -45,6 +46,20 @@ export const latestArticles: LatestArticle[] = [
     featured: true,
     readTime: "6 min read",
     image: "/images/edge-consentless-analytics-v4-2027.jpg",
+=======
+    id: "verifiable-edge-analytics-2026",
+    slug: "verifiable-edge-analytics-2026",
+    title: "Verifiable Edge Analytics 2026: Zero‑PII Insights with Attestations",
+    description: "Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms.",
+    excerpt: "Ship audit‑ready, privacy‑first analytics at the edge with verifiable pipelines and stable SLAs.",
+    author: "Zion Tech Group Team",
+    date: "2025-10-31",
+    category: "Analytics",
+    tags: ["Edge", "Analytics", "Privacy", "Attestations"],
+    featured: true,
+    readTime: "7 min read",
+    image: "/images/verifiable-edge-analytics-2026.jpg",
+>>>>>>> cursor/create-and-deploy-new-content-308c
     newBadge: true,
     trending: true
   },

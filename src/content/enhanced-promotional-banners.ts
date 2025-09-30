@@ -126,6 +126,19 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
 
 // Sept 30, 2025 – Fresh homepage banner promoting the new content
 enhancedPromotionalBanners.push({
+  id: 'verifiable-edge-analytics-2026',
+  title: '🔐 Verifiable Edge Analytics 2026 — Zero‑PII, Signed Attestations',
+  description: 'Scoped IDs, on‑device aggregation, DP noise, and signed attestations for trustworthy insights under 100ms.',
+  ctaText: 'Read the guide',
+  ctaLink: '/blog/verifiable-edge-analytics-2026',
+  variant: 'success',
+  icon: '🔐',
+  featured: true,
+  priority: 0,
+  startDate: '2025-10-31'
+});
+
+enhancedPromotionalBanners.push({
   id: 'sept30-fresh-content-2025',
   title: '🚀 Fresh Drop: Governance Guardrails, Edge Inference, Agent Observability',
   description: 'Three new deep-dives just landed. Ship fast with policy checks, deliver <100ms at the edge, and get live traces for agents.',
@@ -210,6 +223,19 @@ export const getFeaturedBanners = (): EnhancedPromotionalBanner[] => {
 };
 
 // Sept 30, 2025 – New banners to advertise fresh content
+enhancedPromotionalBanners.push({
+  id: 'sept30-2025-just-added-trio',
+  title: '✨ Just Added: Real‑Time Engines, Federated Learning, FinAI 2027',
+  description: 'Explore sub‑ms decision engines, private federated learning, and high‑accuracy financial AI.',
+  ctaText: 'Read the latest',
+  ctaLink: '/blog',
+  variant: 'success',
+  icon: '✨',
+  featured: true,
+  priority: 0,
+  startDate: '2025-09-30'
+});
+
 enhancedPromotionalBanners.push({
   id: 'sept30-2025-fresh-trio-q4',
   title: '🚀 New: Operational Scorecards, Consentless Metrics, Budget‑Aware Routing',

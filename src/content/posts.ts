@@ -1272,6 +1272,24 @@ export const posts: BlogPost[] = [
     readTime: "11 min read"
   },
   {
+    slug: "real-time-decision-engines-2026",
+    title: "Real‑Time Decision Engines 2026",
+    description: "10M/sec under 1ms using warm pools, intent prefetching, and tiered caches.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "cognitive-financial-modeling-2027",
+    title: "AI Financial Modeling 2027",
+    description: "95%+ accuracy with KPI‑linked scorecards, evals, and rollback for safe autonomy.",
+    category: "FinTech AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
     slug: "ai-powered-code-review-2026",
     title: "AI‑Powered Code Review 2026: Ship Faster with Intelligent PR Analysis",
     description: "Accelerate development with AI assistants that catch bugs, suggest optimizations, and enforce standards.",
