@@ -4,6 +4,28 @@ import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Atom, Bot }
 const NewContentPromoBanner: React.FC = () => {
   const newContent = [
     {
+      title: "Executive AI Funding Blueprint 2027",
+      description: "KPI‑linked scorecards, budget guards, and governance gates that prove ROI",
+      slug: "ai-2027-executive-ai-funding-blueprint",
+      category: "Strategy",
+      icon: "📊",
+      impact: "Proven ROI",
+      savings: "Faster Buy‑In",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "Zero‑PII Edge Analytics v3 (2027)",
+      description: "Scoped IDs, on‑device aggregation, and DP for sub‑100ms insights",
+      slug: "edge-2027-zero-pii-analytics-v3",
+      category: "Analytics",
+      icon: "📈",
+      impact: "<100ms Insights",
+      savings: "Zero PII",
+      featured: true,
+      trending: true
+    },
+    {
       title: "AI 2027 Revolutionary Breakthrough",
       description: "Quantum‑neural advances deliver 95% automation and 1000x performance",
       slug: "ai-2027-revolutionary-breakthrough",

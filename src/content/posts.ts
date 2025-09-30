@@ -10,6 +10,24 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-2027-executive-ai-funding-blueprint",
+    title: "Executive AI Funding Blueprint 2027: KPIs, Budgets, Governance",
+    description: "Secure funding and sustain AI programs with KPI-linked scorecards, budget guards, and governance gates that prove ROI.",
+    category: "Strategy",
+    publishedAt: "2027-02-01",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "edge-2027-zero-pii-analytics-v3",
+    title: "Zero‑PII Edge Analytics v3 (2027): Scoped IDs, On‑Device DP, <100ms",
+    description: "Next‑gen privacy analytics: scoped identifiers, local aggregation, and differential privacy delivering actionable insights under 100ms.",
+    category: "Analytics",
+    publishedAt: "2027-02-01",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
     slug: "ai-enterprise-transformation-2027",
     title: "AI Enterprise Transformation 2027: Executive Playbook",
     description: "Practical blueprint to plan, fund, and scale enterprise AI with measurable ROI and safety.",
