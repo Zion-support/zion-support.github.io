@@ -10,17 +10,20 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-<<<<<<< HEAD
     slug: "agent-release-zero-regret-2026",
     title: "Zero‑Regret Agent Releases 2026",
     description: "Budgeted actions, KPI‑linked canaries, sandboxed tools, and one‑click rollback for safe agent updates.",
-=======
-    slug: "ai-2025-september-30-new-governed-agent-patterns",
-    title: "New Governed Agent Patterns (2025)",
-    description: "Policy-first orchestration with approvals, verifiers, budgets, and rollback for safe autonomy.",
->>>>>>> content/oct-2025-promo
     category: "AI Operations",
     publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-2025-oct-31-governed-agent-patterns-v2",
+    title: "Governed Agent Patterns v2 (2025)",
+    description: "Approvals, verifiers, budgets, and rollback—production patterns for safe autonomous agents.",
+    category: "AI Governance",
+    publishedAt: "2025-10-31",
     featured: true,
     readTime: "8 min read"
   },
