@@ -4,6 +4,26 @@ import Link from 'next/link';
 
 const blogPosts = [
   {
+    title: 'AI Enterprise GenAI Agent Platform 2026',
+    slug: 'ai-enterprise-genai-agent-platform-2026',
+    excerpt: 'Blueprint to ship a governed, reliable, and cost‑efficient GenAI agent platform—routing, memory, tools, observability, and guardrails.',
+    category: 'Implementation Guide',
+    publishedAt: 'September 30, 2025',
+    image: '🏗️',
+    color: 'green',
+    readTime: '20 min read'
+  },
+  {
+    title: 'AI Voice Interfaces Enterprise 2026',
+    slug: 'ai-voice-interfaces-enterprise-2026',
+    excerpt: 'Design low‑latency, multilingual, privacy‑preserving voice AI with guardrails, evals, and fallbacks.',
+    category: 'Implementation Guide',
+    publishedAt: 'September 30, 2025',
+    image: '🎙️',
+    color: 'indigo',
+    readTime: '18 min read'
+  },
+  {
     title: 'Enterprise RAG Guardrails 2026: Safe, Reliable, and Controllable AI',
     slug: 'ai-2026-enterprise-rag-guardrails',
     excerpt: 'Design enterprise-grade RAG with policy guardrails, verifiable citations, and cost-aware routing. Prevent hallucinations and ensure compliance.',
