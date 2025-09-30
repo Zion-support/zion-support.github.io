@@ -10,6 +10,22 @@ const promoted = [
     theme: 'from-emerald-600 to-teal-600',
   },
   {
+    href: '/blog/genai-2025-oct-01-quality-tiers-v3',
+    title: 'GenAI Quality Tiers v3',
+    desc: 'Intent-aware tier routing with semantic caches and KPI scorecards for safe savings.',
+    emoji: '🧪',
+    pill: 'New • Oct 01, 2025',
+    theme: 'from-purple-600 to-indigo-600',
+  },
+  {
+    href: '/blog/edge-2025-oct-01-consentless-journeys-blueprint',
+    title: 'Consentless Journeys Blueprint',
+    desc: 'Edge-native personalization <100ms with zero‑PII analytics and signed evaluations.',
+    emoji: '⚡',
+    pill: 'New • Oct 01, 2025',
+    theme: 'from-cyan-600 to-blue-600',
+  },
+  {
     href: '/blog/ai-product-launch-checklist-2025',
     title: 'AI Product Launch Checklist 2025',
     desc: 'Graduate pilots to production with safety, reliability, and measurable ROI.',
