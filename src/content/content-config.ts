@@ -484,3 +484,31 @@ featuredBlogPosts.unshift(
     featured: true
   }
 );
+
+// Advertise brand-new Q4 content on homepage
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2026-autonomous-ops-q4-playbook",
+    title: "Autonomous Ops Q4 2026",
+    description: "Budgets, live traces, instant rollback for safe autonomy",
+    link: "/blog/ai-2026-autonomous-ops-q4-playbook",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-analytics-consentless-2026-v2",
+    title: "Consentless Edge Analytics v2 (2026)",
+    description: "Scoped IDs + on‑device aggregation + DP—zero PII insights",
+    link: "/blog/edge-analytics-consentless-2026-v2",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "genai-quality-tiers-v2-2026",
+    title: "GenAI Quality Tiers v2 (2026)",
+    description: "Stable UX under strict budgets with caches and KPI routing",
+    link: "/blog/genai-quality-tiers-v2-2026",
+    type: "article",
+    featured: true
+  }
+);

@@ -1257,8 +1257,10 @@ posts.push(
   }
 );
 
+<<<<<<< HEAD
 // Sept 30, 2025 – Brand-new content to advertise on homepage (fresh trio v3)
 posts.push(
+  // Sept 30, 2025 – Combine newly added items from both branches
   {
     slug: "ai-sla-scorecards-2026-q1",
     title: "AI SLA Scorecards 2026 Q1: SLIs, Budgets, Rollback",
@@ -1282,6 +1284,33 @@ posts.push(
     title: "Agent Release Runbooks v2 (2026): Budgets, Canaries, Recovery",
     description: "Upgraded runbooks with KPI‑linked canaries, budgeted actions, sandboxed tools, and one‑click recovery.",
     category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-2026-autonomous-ops-q4-playbook",
+    title: "Autonomous Ops Q4 2026: Budgets, Traces, Instant Rollback",
+    description: "A pragmatic playbook to operate autonomous systems safely with explicit budgets, live traces, and one‑click rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-analytics-consentless-2026-v2",
+    title: "Consentless Edge Analytics v2 (2026): Actionable Insights, Zero PII",
+    description: "Scoped IDs, on‑device aggregation, and DP noise that unlock insights without collecting PII—now faster and cheaper.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-quality-tiers-v2-2026",
+    title: "GenAI Quality Tiers v2 (2026): Stable UX Under Strict Budgets",
+    description: "Tiered models, semantic caches, and KPI‑linked routing that cut spend 40–70% while preserving experience.",
+    category: "GenAI",
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "8 min read"
