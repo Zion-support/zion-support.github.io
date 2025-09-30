@@ -33,6 +33,7 @@ import February2026ContentMegaBanner from "./components/February2026ContentMegaB
 import NewContent2026BreakthroughShowcaseBanner from "./components/NewContent2026BreakthroughShowcaseBanner";
 import February2026BreakthroughMegaBanner from "./components/February2026BreakthroughMegaBanner";
 import NewContent2026ShowcaseBanner from "./components/NewContent2026ShowcaseBanner";
+import Revolutionary2026ContentMegaBreakthroughBanner from "./components/Revolutionary2026ContentMegaBreakthroughBanner";
 import March2026RevolutionaryBreakthroughBanner from "./components/March2026RevolutionaryBreakthroughBanner";
 import March2026ContentShowcase from "./components/March2026ContentShowcase";
 import March2026AdvertisingMegaBanner from "./components/March2026AdvertisingMegaBanner";
@@ -45,14 +46,9 @@ import April2026ConsciousComputingBanner from "./components/April2026ConsciousCo
 import April2026QuantumNeuralBanner from "./components/April2026QuantumNeuralBanner";
 import QuantumConsciousnessFusionBanner from "./components/QuantumConsciousnessFusionBanner";
 import Revolutionary2026ContentShowcaseBanner from "./components/Revolutionary2026ContentShowcaseBanner";
-import May2026QuantumConsciousnessBanner from "./components/May2026QuantumConsciousnessBanner";
-import June2026AutonomousEnterpriseBanner from "./components/June2026AutonomousEnterpriseBanner";
-import NewContent2026MegaShowcaseBanner from "./components/NewContent2026MegaShowcaseBanner";
 import May2026RevolutionaryBreakthroughBanner from "./components/May2026RevolutionaryBreakthroughBanner";
 import May2026ContentShowcase from "./components/May2026ContentShowcase";
 import May2026ContentAdvertisingBanner from "./components/May2026ContentAdvertisingBanner";
-import May2026RevolutionaryContentBanner from "./components/May2026RevolutionaryContentBanner";
-import May2026ContentShowcaseBanner from "./components/May2026ContentShowcaseBanner";
 import NeuromorphicComputingRevolutionBanner from "./components/NeuromorphicComputingRevolutionBanner";
 import MetaCognitiveAutonomousSystemsBanner from "./components/MetaCognitiveAutonomousSystemsBanner";
 import Ultimate2026ContentShowcaseBanner from "./components/Ultimate2026ContentShowcaseBanner";
@@ -61,27 +57,10 @@ import June2026MegaAutomationBanner from "./components/June2026MegaAutomationBan
 import InteractiveContentShowcase2026Advanced from "./components/InteractiveContentShowcase2026Advanced";
 import June2026SuperintelligenceBreakthroughBanner from "./components/June2026SuperintelligenceBreakthroughBanner";
 import June2026ContentShowcaseBanner from "./components/June2026ContentShowcaseBanner";
-import July2026AutomationBreakthroughBanner from "./components/July2026AutomationBreakthroughBanner";
-import July2026SuperintelligenceRevolutionBanner from "./components/July2026SuperintelligenceRevolutionBanner";
 
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-slate-950">
-      {/* NEW: July 2026 Automation Breakthrough Banner - MOST PROMINENT */}
-      <July2026AutomationBreakthroughBanner />
-      
-      {/* NEW: July 2026 Superintelligence Revolution Banner - Most Prominent */}
-      <July2026SuperintelligenceRevolutionBanner />
-      
-      {/* NEW: May 2026 Quantum Consciousness Banner - Most Prominent */}
-      <May2026QuantumConsciousnessBanner />
-      
-      {/* NEW: June 2026 Autonomous Enterprise Banner - Most Prominent */}
-      <June2026AutonomousEnterpriseBanner />
-      
-      {/* NEW: 2026 Content Mega Showcase Banner - Most Prominent */}
-      <NewContent2026MegaShowcaseBanner />
-      
       {/* NEW: June 2026 Superintelligence Breakthrough Banner - Most Prominent */}
       <June2026SuperintelligenceBreakthroughBanner />
       
@@ -99,12 +78,6 @@ export default function App(): JSX.Element {
       
       {/* NEW: May 2026 Content Showcase - Featured Content */}
       <May2026ContentShowcase />
-      
-      {/* NEW: May 2026 Revolutionary Content Banner - Most Prominent */}
-      <May2026RevolutionaryContentBanner />
-      
-      {/* NEW: May 2026 Content Showcase Banner - Most Prominent */}
-      <May2026ContentShowcaseBanner />
       
       {/* NEW: April 2026 Mega Breakthrough Banner - Most Prominent */}
       <April2026MegaBreakthroughBanner />
@@ -469,9 +442,6 @@ export default function App(): JSX.Element {
       {/* NEW: June 2026 Mega Enterprise Automation Banner - Mid Page */}
       <June2026MegaAutomationBanner />
 
-      {/* NEW: July 2026 Automation Breakthrough Banner - Mid Page */}
-      <July2026AutomationBreakthroughBanner />
-
       {/* NEW: Revolutionary 2026 Content Showcase Banner - Mid Page */}
       <Revolutionary2026ContentShowcaseBanner />
       
@@ -578,9 +548,6 @@ export default function App(): JSX.Element {
 
       {/* NEW: June 2026 Mega Enterprise Automation Banner - Pre Footer */}
       <June2026MegaAutomationBanner />
-
-      {/* NEW: July 2026 Automation Breakthrough Banner - Pre Footer */}
-      <July2026AutomationBreakthroughBanner />
 
       {/* Footer */}
       <footer className="bg-slate-900 border-t border-slate-800 py-12">
