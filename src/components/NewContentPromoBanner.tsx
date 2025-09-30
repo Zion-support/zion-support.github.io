@@ -101,6 +101,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       icon: TrendingUp,
       link: "/blog/ai-incident-response-playbooks-2025",
       category: "Security"
+<<<<<<< HEAD
     },
     {
       title: "Edge Privacy Telemetry 2026",
@@ -108,6 +109,8 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
       icon: Brain,
       link: "/blog/edge-privacy-telemetry-2026",
       category: "Observability"
+=======
+>>>>>>> 0ec817424410c98f82057489e9b657c2ec4299d7
     }
   ];
 
