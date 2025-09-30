@@ -64,6 +64,26 @@ const blogPosts = [
     readTime: '10 min read'
   },
   {
+    title: 'AI Operational Resilience 2026: Designing for Failure and Recovery',
+    slug: 'ai-operational-resilience-2026',
+    excerpt: 'Blueprint for 99.99% uptime with policy tests, isolation, and automated recovery.',
+    category: 'Operations',
+    publishedAt: 'September 29, 2025',
+    image: '🧯',
+    color: 'blue',
+    readTime: '14 min read'
+  },
+  {
+    title: 'AI Agent Observability 2026: Metrics, Traces, and Guardrails',
+    slug: 'ai-agent-observability-2026',
+    excerpt: 'Instrument agents with traces, evals, and policy guardrails to ship reliable autonomy.',
+    category: 'AI Reliability',
+    publishedAt: 'September 29, 2025',
+    image: '🔎',
+    color: 'purple',
+    readTime: '12 min read'
+  },
+  {
     title: 'AI Value Stream Analytics 2026: Trace ROI from Token to Revenue',
     slug: 'ai-value-stream-analytics-2026',
     excerpt: 'Connect model spend to customer value with end-to-end tracing and scorecards.',
