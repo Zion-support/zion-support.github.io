@@ -10,6 +10,13 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+<<<<<<< HEAD
+    slug: "ai-trust-scorecards-v5-2027",
+    title: "AI Trust Scorecards v5 (2027): KPIs, Budgets, Rollback",
+    description: "Latest playbook for KPI‑linked scorecards with budgeted actions, canaries, and instant rollback to keep AI reliable and affordable.",
+    category: "AI Governance",
+    publishedAt: "2027-02-10",
+=======
     slug: "ai-operational-trust-scorecards-2026",
     title: "AI Operational Trust Scorecards 2026",
     description: "SLIs wired to KPIs with budgets, canaries, and instant rollback for safe velocity.",
@@ -51,6 +58,7 @@ export const posts: BlogPost[] = [
     description: "Tiered routing, caching, and compression to cut spend 30–70% with no regressions.",
     category: "GenAI",
     publishedAt: "2025-09-30",
+>>>>>>> origin/cursor/create-and-deploy-new-content-aa8c
     featured: true,
     readTime: "8 min read"
   },
