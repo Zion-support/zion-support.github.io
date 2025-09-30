@@ -10,36 +10,6 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    // NEW — Enterprise roadmap update (featured)
-    slug: "ai-2027-enterprise-roadmap-v2",
-    title: "AI 2027 Enterprise Roadmap v2",
-    description: "Outcome‑led bets, KPI scorecards, and guardrails that scale reliably across portfolios.",
-    category: "AI Strategy",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "9 min read"
-  },
-  {
-    // NEW — Consentless testing v3 at the edge (featured)
-    slug: "edge-2026-consentless-testing-v3",
-    title: "Edge 2026: Consentless Testing v3",
-    description: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B at <100ms.",
-    category: "Analytics",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "7 min read"
-  },
-  {
-    // NEW — GenAI cost controllers v3 (featured)
-    slug: "genai-cost-controllers-v3-2027",
-    title: "GenAI Cost Controllers v3 (2027)",
-    description: "Quality tiers + semantic caches + policy tests that cut spend 40–70% without UX loss.",
-    category: "FinOps",
-    publishedAt: "2025-09-30",
-    featured: true,
-    readTime: "8 min read"
-  },
-  {
     slug: "ai-2026-reliability-runbooks-v4",
     title: "AI 2026: Reliability Runbooks v4",
     description: "Budgeted actions, KPI canaries, and instant rollback—v4 playbooks for dependable AI operations.",
@@ -182,6 +152,15 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-10-02",
     featured: true,
     readTime: "7 min read"
+  },
+  {
+    slug: "agent-red-teaming-2026",
+    title: "Agent Red‑Teaming 2026: Simulation Labs That Prevent Real Incidents",
+    description: "Build realistic attack labs for agents: jailbreak corpora, tool fuzzers, and KPI‑linked failure budgets you can ship.",
+    category: "AI Security",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "8 min read"
   },
   {
     slug: "genai-2027-quality-tiers-v4",
