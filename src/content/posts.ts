@@ -1230,6 +1230,37 @@ posts.push(
   }
 );
 
+// Apr 2026 – Brand new articles to surface and advertise on Home
+posts.push(
+  {
+    slug: "ai-governance-field-runbooks-2026",
+    title: "AI Governance Field Runbooks 2026: CI Gates, Canaries, Rollback",
+    description: "Practical, team-ready runbooks: KPI-linked policy tests, live canaries, and instant rollback.",
+    category: "AI Governance",
+    publishedAt: "2026-04-01",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-personalization-quickstart-2026",
+    title: "Edge Personalization Quickstart 2026: Private <100ms Journeys",
+    description: "Signed configs, scoped IDs, and tiny models to ship private, fast personalization in weeks.",
+    category: "Edge Computing",
+    publishedAt: "2026-04-01",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-checklists-v2-2026",
+    title: "Agent Release Checklists v2 (2026): Budgets, Approvals, Safe Actions",
+    description: "Updated v2 checklists for safe agent releases: budgeted actions, approvals, and KPI-linked evals.",
+    category: "AI Operations",
+    publishedAt: "2026-04-01",
+    featured: true,
+    readTime: "8 min read"
+  }
+);
+
 // Dec 2025 – New content to surface and advertise on Home
 posts.push(
   {

@@ -151,6 +151,30 @@ export const featuredBlogPosts: FeaturedItem[] = [
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
   {
+    id: "ai-governance-field-runbooks-2026",
+    title: "AI Governance Field Runbooks 2026",
+    description: "CI gates, live canaries, and instant rollback playbooks.",
+    link: "/blog/ai-governance-field-runbooks-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-personalization-quickstart-2026",
+    title: "Edge Personalization Quickstart 2026",
+    description: "Private <100ms journeys with scoped IDs and tiny models.",
+    link: "/blog/edge-personalization-quickstart-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-release-checklists-v2-2026",
+    title: "Agent Release Checklists v2 (2026)",
+    description: "Budgets, approvals, and safe actions with KPI-linked evals.",
+    link: "/blog/agent-release-checklists-v2-2026",
+    type: "article",
+    featured: true
+  },
+  {
     id: "ai-governance-real-time-2026",
     title: "AI Governance in Real Time 2026",
     description: "Live canaries + CI policy tests to prevent regressions.",
