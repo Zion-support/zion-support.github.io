@@ -30,7 +30,7 @@ export default function EdgeExperiments2025() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Why This Matters</h2>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-white p-4 rounded-lg shadow-sm text-center">
-              <div className="text-3xl font-bold text-cyan-600 mb-1"><100ms</div>
+              <div className="text-3xl font-bold text-cyan-600 mb-1">&lt;100ms</div>
               <div className="text-sm text-gray-600">Latency</div>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm text-center">
@@ -72,37 +72,6 @@ export default function EdgeExperiments2025() {
         </div>
       </article>
     </div>
-  );
-}
-
-import Link from 'next/link';
-
-export const metadata = {
-  title: 'Edge Experiments 2025: Zero‑PII Global A/B at <100ms',
-  description:
-    'Scoped IDs, on‑device metrics, and DP noise for compliant experimentation with sub‑100ms reads worldwide.',
-};
-
-export default function Page() {
-  return (
-    <main className="max-w-4xl mx-auto px-4 py-12 prose prose-invert">
-      <h1>Edge Experiments 2025</h1>
-      <p>
-        Run privacy‑preserving global experiments without PII. Use scoped identifiers, on‑device aggregation, and
-        differential privacy noise to stay compliant while keeping reads under 100ms.
-      </p>
-      <h2>Implementation Highlights</h2>
-      <ul>
-        <li>Scoped IDs with rotation windows</li>
-        <li>On‑device counters and sketches</li>
-        <li>Signed configs with TTL freshness</li>
-        <li>Federated rollups and DP release</li>
-      </ul>
-      <p>
-        See more analytics guides on the{' '}
-        <Link href="/blog" className="font-semibold">blog</Link>.
-      </p>
-    </main>
   );
 }
 
