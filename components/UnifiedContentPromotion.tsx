@@ -17,6 +17,10 @@ interface ContentItem {
 }
 
 const featuredContent: ContentItem[] = [
+  {
+    title: 'Privacy-First Observability v2',
+    description: 'User-centric traces without PII leaks',
+    href: '/blog/ai-2025-oct-01-privacy-first-observability-v2',
     publishedDate: 'September 30, 2025',
     readTime: '6 min read',
     category: 'Observability'
