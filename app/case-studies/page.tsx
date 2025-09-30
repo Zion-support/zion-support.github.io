@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-<<<<<<< HEAD
 export const metadata: Metadata = {
   title: 'AI Success Stories & Case Studies | Zion Tech Group',
   description: 'Discover real-world AI transformation success stories. See how companies achieved $500M+ savings, 99% automation, and 600% ROI with our AI solutions.',
@@ -11,9 +10,21 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+    title: 'AI 2026 Mega Transformation: $100M Success Story',
+    slug: 'ai-2026-mega-transformation-success-story',
+    excerpt: 'How a Fortune 500 manufacturing company achieved $100M in savings and 400% ROI through comprehensive AI transformation.',
+    company: 'Global Manufacturing Corp',
+    industry: 'Manufacturing',
+    results: {
+      savings: '$100M',
+      roi: '400%',
+      efficiency: '95%',
+      timeline: '18 months'
+    },
+    image: '💰',
+    color: 'green'
+  },
+  {
     title: 'AI Automation Mega Success 2026: $5M Savings & 400% ROI',
     slug: 'ai-automation-mega-success-2026',
     excerpt: 'Discover how a Fortune 500 company achieved $5M annual savings and 400% ROI through comprehensive AI automation.',
