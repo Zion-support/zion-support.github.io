@@ -496,3 +496,40 @@ newArticles2025.push(
     tags: ["Edge", "Privacy", "Feature Flags", "DP"]
   }
 );
+
+// Sept 30, 2025 – Brand-new content additions to advertise
+newArticles2025.push(
+  {
+    id: "ai-2027-cost-optimization-playbook",
+    title: "AI 2027 Cost Optimization Playbook",
+    description: "Tiered routing, caching, and compression to cut spend 30–70% with no regressions.",
+    category: "GenAI",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-2027-cost-optimization-playbook",
+    readTime: "8 min read",
+    tags: ["Cost", "Routing", "Caching", "Optimization"]
+  },
+  {
+    id: "edge-2026-private-feature-flags",
+    title: "Edge 2026: Private Feature Flags",
+    description: "Signed configs, scoped IDs, and on‑device metrics for zero‑PII rollouts at <100ms.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-2026-private-feature-flags",
+    readTime: "7 min read",
+    tags: ["Edge", "Privacy", "Feature Flags", "DP"]
+  },
+  {
+    id: "agent-release-guardrails-2026",
+    title: "Agent Release Guardrails 2026",
+    description: "Budgets, approvals, KPI‑linked canaries, and instant rollback for safe automation.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/agent-release-guardrails-2026",
+    readTime: "7 min read",
+    tags: ["Agents", "Runbooks", "Budgets", "Rollback"]
+  }
+);

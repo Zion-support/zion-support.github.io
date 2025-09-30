@@ -4,35 +4,35 @@ import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Atom, Bot }
 const NewContentPromoBanner: React.FC = () => {
   const newContent = [
     {
-      title: "Agentic Workflows Blueprint 2026",
-      description: "Compose multi‑tool agents with safe tools and policy tests in CI",
-      slug: "agentic-workflows-blueprint-2026",
-      category: "GenAI",
-      icon: "🤖",
-      impact: "Multi-Tool Agents",
-      savings: "40% Development Time",
-      featured: true,
-      trending: true
-    },
-    {
-      title: "Edge LLM Caching",
-      description: "Sub‑100ms prompts via tiered KV, signed configs, freshness windows",
-      slug: "edge-llm-caching-blueprint-2025",
-      category: "Architecture",
-      icon: "⚡",
-      impact: "Sub-100ms Response",
-      savings: "60% Cost Reduction",
-      featured: true,
-      trending: true
-    },
-    {
-      title: "AI Operational Scorecards 2026",
-      description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs",
-      slug: "ai-operational-scorecards-2026",
+      title: "AI 2027 Revolutionary Breakthrough",
+      description: "Quantum‑neural advances deliver 95% automation and 1000x performance",
+      slug: "ai-2027-revolutionary-breakthrough",
       category: "AI Strategy",
-      icon: "📊",
-      impact: "95% Uptime SLA",
-      savings: "$3M+ Risk Mitigation",
+      icon: "🚀",
+      impact: "1000x Performance",
+      savings: "90% Cost Reduction",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "AI 2027 Hyper‑Automation Blueprint",
+      description: "End‑to‑end autonomy with budgets, guards, and instant rollback",
+      slug: "ai-2027-hyper-automation-blueprint",
+      category: "Automation",
+      icon: "🤖",
+      impact: "95% Automation",
+      savings: "4‑10 week Deployment",
+      featured: true,
+      trending: true
+    },
+    {
+      title: "Quantum Breakthrough 2027 for the Enterprise",
+      description: "Enterprise‑ready quantum‑neural systems: secure, scalable, ROI‑proven",
+      slug: "ai-2027-quantum-breakthrough-enterprise",
+      category: "AI Research",
+      icon: "⚛️",
+      impact: "Zero‑Trust Security",
+      savings: "$10M+ Annual ROI",
       featured: true,
       trending: true
     }

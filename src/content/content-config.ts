@@ -11,60 +11,11 @@ export interface FeaturedItem {
 
 export const featuredBlogPosts: FeaturedItem[] = [
   {
-    id: "ai-agent-reliability-playbook-2026",
-    title: "AI Agent Reliability Playbook 2026",
-    description: "Comprehensive guide to building reliable AI agents with monitoring and rollback capabilities",
-    link: "/blog/ai-agent-reliability-playbook-2026",
+    id: "realtime-ai-decision-engines-2025",
+    title: "Real-Time AI Decision Engines",
+    description: "10M/sec under 1ms with tiered models and caches",
+    link: "/blog/real-time-ai-decision-engines-2025",
     type: "article",
-    featured: true
-  },
-  {
-    id: 'fresh-oct-16-2025',
-    message: '🚀 New: AI Agent Reliability Playbook 2026 + Privacy‑Safe Feature Flags',
-    ctaText: 'Read now',
-    ctaLink: '/blog',
-    backgroundColor: 'bg-gradient-to-r from-fuchsia-600 to-purple-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 18,
-    active: true,
-    priority: 0
-  },
-  {
-    id: 'agent-reliability-2026-banner',
-    message: '🧩 AI Agent Reliability 2026: Deterministic Tools + Budgeted Actions',
-    ctaText: 'Read Playbook',
-    ctaLink: '/blog/ai-agent-reliability-playbook-2026',
-    backgroundColor: 'bg-gradient-to-r from-sky-600 to-indigo-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 16,
-    active: true,
-    priority: 1
-  },
-  {
-    id: 'privacy-safe-flags-2026-banner',
-    message: '🔒 Privacy‑Safe Feature Flags 2026: Scoped IDs + Edge Filters',
-    ctaText: 'Explore',
-    ctaLink: '/blog/privacy-safe-feature-flags-2026',
-    backgroundColor: 'bg-gradient-to-r from-emerald-600 to-teal-600',
-    textColor: 'text-white',
-    showClose: true,
-    autoHide: true,
-    hideAfter: 16,
-    active: true,
-    priority: 1
-  },
-  {
-    id: 'ai-platform-engineering-2025',
-    title: 'AI Platform Engineering 2025: Scorecards, Trains, and Golden Paths',
-    excerpt: 'Practical platform patterns that link capabilities to adoption, SLOs, and ROI.',
-    date: 'October 8, 2025',
-    category: 'Platform Engineering',
-    readTime: '9 min',
-    image: '🛤️',
     featured: true
   },
   {
@@ -197,6 +148,34 @@ export const featuredBlogPosts: FeaturedItem[] = [
   }
 ];
 
+// Jan 2027 – Feature three brand-new articles
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2027-revolutionary-breakthrough",
+    title: "AI 2027 Revolutionary Breakthrough",
+    description: "Quantum‑neural advances enable 95% automation and 1000x performance.",
+    link: "/blog/ai-2027-revolutionary-breakthrough",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2027-hyper-automation-blueprint",
+    title: "AI 2027 Hyper‑Automation Blueprint",
+    description: "End‑to‑end autonomy with budgets, guards, and instant rollback.",
+    link: "/blog/ai-2027-hyper-automation-blueprint",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2027-quantum-breakthrough-enterprise",
+    title: "Quantum Breakthrough 2027 for the Enterprise",
+    description: "Enterprise‑ready quantum‑neural systems with security and ROI.",
+    link: "/blog/ai-2027-quantum-breakthrough-enterprise",
+    type: "article",
+    featured: true
+  }
+);
+
 // Sept 30, 2025 – Promote two brand-new guides site-wide
 featuredBlogPosts.unshift(
   {
@@ -215,6 +194,26 @@ featuredBlogPosts.unshift(
     type: "article",
     featured: true
   }
+);
+
+// New articles added Sept 30, 2025 — advertise site-wide
+featuredBlogPosts.unshift(
+	{
+		id: "platform-engineering-scorecards-2026",
+		title: "Platform Engineering Scorecards 2026",
+		description: "SLIs → KPIs with budgets, canaries, rollback for reliable platforms",
+		link: "/blog/ai-2026-platform-engineering-scorecards",
+		type: "article",
+		featured: true
+	},
+	{
+		id: "edge-ai-blueprint-2026",
+		title: "Edge AI Blueprint 2026",
+		description: "Private <100ms personalization with scoped IDs, on-device models, DP",
+		link: "/blog/edge-ai-blueprint-2026",
+		type: "article",
+		featured: true
+	}
 );
 
 // Oct 2025 – Add two brand-new featured posts
@@ -268,9 +267,9 @@ featuredBlogPosts.unshift(
 // Newly featured items to advertise on the homepage
 featuredBlogPosts.unshift(
   {
-    id: "privacy-safe-feature-flags-2026",
-    title: "Privacy-Safe Feature Flags 2026",
-    description: "Zero-PII feature flags with scoped targeting and consent-aware rollouts",
+    id: "genai-reliability-scorecards-2027",
+    title: "GenAI Reliability Scorecards 2027",
+    description: "Live KPIs + budgets + rollback for affordable, reliable GenAI.",
     link: "/blog/genai-reliability-scorecards-2027",
     type: "article",
     featured: true
@@ -296,6 +295,30 @@ featuredBlogPosts.unshift(
     title: "AI Operational Scorecards Q4 2026",
     description: "SLIs tied to KPIs with budgeted actions and rollback",
     link: "/blog/ai-operational-scorecards-q4-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "edge-2026-private-feature-flags",
+    title: "Edge 2026: Private Feature Flags",
+    description: "Signed configs, scoped IDs, and on‑device metrics for zero‑PII rollouts.",
+    link: "/blog/edge-2026-private-feature-flags",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agent-release-guardrails-2026",
+    title: "Agent Release Guardrails 2026",
+    description: "Budgets, approvals, KPI‑linked canaries, instant rollback.",
+    link: "/blog/agent-release-guardrails-2026",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "ai-2027-cost-optimization-playbook",
+    title: "AI 2027 Cost Optimization Playbook",
+    description: "Tiered routing, caches, compression to cut spend 30–70% without regressions.",
+    link: "/blog/ai-2027-cost-optimization-playbook",
     type: "article",
     featured: true
   },
@@ -439,6 +462,22 @@ featuredBlogPosts.unshift(
 
 // Promote brand-new content on homepage showcases (added Sept 30, 2025)
 featuredBlogPosts.unshift(
+  {
+    id: "ai-enterprise-transformation-2027",
+    title: "AI Enterprise Transformation 2027",
+    description: "Plan, fund, and scale enterprise AI with measurable ROI and safety.",
+    link: "/blog/ai-enterprise-transformation-2027",
+    type: "article",
+    featured: true
+  },
+  {
+    id: "agentic-workflow-orchestration-2026",
+    title: "Agentic Workflow Orchestration 2026",
+    description: "Budgets, KPI canaries, and rollback for safe agent workflows.",
+    link: "/blog/agentic-workflow-orchestration-2026",
+    type: "article",
+    featured: true
+  },
   {
     id: "ai-sla-scorecards-2026-q1",
     title: "AI SLA Scorecards 2026 Q1",
@@ -821,6 +860,18 @@ featuredBlogPosts.unshift(
     title: "GenAI Quality Tiers v2 (2026)",
     description: "Stable UX under strict budgets with caches and KPI routing",
     link: "/blog/genai-quality-tiers-v2-2026",
+    type: "article",
+    featured: true
+  }
+);
+
+// Oct 2025 – Surface newly created FinOps Scorecards article site-wide
+featuredBlogPosts.unshift(
+  {
+    id: "ai-2028-autonomous-finops-scorecards",
+    title: "AI 2028: Autonomous FinOps Scorecards",
+    description: "Prevent cost regressions with KPI-linked scorecards, budget-aware routing, rollback.",
+    link: "/blog/ai-2028-autonomous-finops-scorecards",
     type: "article",
     featured: true
   }
