@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
-=======
-import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/create-and-deploy-new-content-4f57
 import { 
   NewBlogBanner, 
   AnalyticsPlatformBanner, 
@@ -47,21 +43,9 @@ import {
   InteractiveAICalculatorBanner,
   AIInnovationShowcaseBanner
 } from '../components/NewContent2026Banners';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import LatestAI2026ContentBanner from '../components/LatestAI2026ContentBanner';
-=======
-import NewContent2026MegaBanner from '../components/NewContent2026MegaBanner';
->>>>>>> origin/cursor/create-and-deploy-new-content-15c5
-=======
 import {
-<<<<<<< HEAD
-  MultimodalAIIntegrationBanner,
-  MultimodalAICustomerServiceBanner
-} from '../components/MultimodalAIBanners';
->>>>>>> origin/cursor/create-and-deploy-new-content-1f7b
-=======
   AINeuralSuperintelligenceBanner,
   AIQuantumComputingBanner,
   AIAutonomousSystemsBanner as NewAIAutonomousSystemsBanner,
@@ -76,36 +60,22 @@ import {
   AITransformationShowcaseBanner
 } from '../components/NewContent2025Banners';
 import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
->>>>>>> origin/cursor/create-and-deploy-new-content-4092
 import ContentShowcase from '../components/ContentShowcase';
-<<<<<<< HEAD
 import FeaturedServiceCard from '../components/FeaturedServiceCard';
 import SuccessStory from '../components/SuccessStory';
-import InteractivePromotionalSection from '../components/InteractivePromotionalSection';
-<<<<<<< HEAD
 import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
-<<<<<<< HEAD
 import LatestContent2025Banner from '../components/LatestContent2025Banner';
 import RevolutionaryAI2025Banner from '../components/RevolutionaryAI2025Banner';
 import InteractiveAICalculator2025 from '../components/InteractiveAICalculator2025';
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
-import LatestContent2026ShowcaseBanner from '../components/LatestContent2026ShowcaseBanner';
 import InteractiveAI2026Calculator from '../components/InteractiveAI2026Calculator';
-=======
->>>>>>> origin/feature/revolutionary-ai-2026-content
-=======
 import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
 import InteractiveAI2027Calculator from '../components/InteractiveAI2027Calculator';
 import InteractiveAICalculator2026 from '../components/InteractiveAICalculator2026';
-import FeaturedServiceCard from '../components/FeaturedServiceCard';
-import SuccessStory from '../components/SuccessStory';
->>>>>>> origin/new-content-integration-main
-=======
 import Revolutionary2026ContentMegaBanner from '../components/Revolutionary2026ContentMegaBanner';
 import Latest2026InnovationsBanner from '../components/Latest2026InnovationsBanner';
->>>>>>> origin/cursor/create-and-deploy-new-content-537c
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -187,45 +157,18 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       {/* Revolutionary AI 2025 Banner */}
       <RevolutionaryAI2025Banner />
       
       {/* Latest Content 2025 Banner */}
       <LatestContent2025Banner />
-=======
+      
       {/* Revolutionary 2026 Content Mega Banner */}
       <Revolutionary2026ContentMegaBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-537c
       
       {/* Revolutionary Content 2026 Banner */}
       <RevolutionaryContent2026Banner />
-=======
-=======
->>>>>>> origin/new-content-integration-main
-      {/* Latest 2026 Mega Content Banners */}
-      <Revolutionary2026ContentBanner />
-      <AI2026ContentShowcaseBanner />
-      <AIEnterpriseAutomationRevolutionBanner />
-      <AIQuantumComputingBreakthroughBanner />
-      <AIMegaTransformationSuccessBanner />
-      <AI2026InnovationShowcaseBanner />
->>>>>>> feature/new-content-and-advertising-2026
-=======
-      {/* Revolutionary 2026 Content Banners */}
-      <RevolutionaryContent2026Banner />
-      <LatestAI2026ContentBanner />
->>>>>>> origin/feature/revolutionary-ai-2026-content
-=======
-      {/* New 2026 Mega Content Banner */}
-      <NewContent2026MegaBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-15c5
-=======
+      
       {/* Latest 2026 Revolutionary Content Banners */}
       <AINeuralSuperintelligenceBanner />
       <AIQuantumComputingBanner />
@@ -233,13 +176,9 @@ export default function HomePage() {
       <NeuralSuperintelligenceCaseStudyBanner />
       <InteractiveAIToolsBanner />
       <NewLatestContentShowcaseBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-4092
       
       {/* Latest 2026 Content Banners */}
-<<<<<<< HEAD
-=======
       <LatestContent2026MegaBanner />
->>>>>>> origin/new-content-integration-main
       <AIEnterpriseTransformationBanner />
       <MultimodalAIIntegrationBanner />
       <AIAutonomousSystemsBanner />
@@ -378,13 +317,8 @@ export default function HomePage() {
               description="Transform data into actionable insights with predictive modeling and real-time dashboards"
               price="$199/month"
               features={['Predictive Analytics', 'Real-time Dashboards', 'Data Integration']}
-<<<<<<< HEAD
               href="/services/ai-data-analytics"
               popular={true}
-=======
-              to="/services/ai-data-analytics"
-              popular={false}
->>>>>>> origin/cursor/create-and-deploy-new-content-4f57
             />
             <FeaturedServiceCard
               title="AI Workflow Automation"
@@ -426,7 +360,6 @@ export default function HomePage() {
               href="/services/cybersecurity-consulting"
               popular={false}
             />
-<<<<<<< HEAD
             <FeaturedServiceCard
               title="AI Edge Computing"
               description="Real-time AI processing at the edge with sub-50ms response times"
@@ -451,19 +384,13 @@ export default function HomePage() {
               href="/services/ai-2026-revolutionary-solutions"
               popular={true}
             />
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-4f57
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       {/* Interactive AI Calculator 2025 */}
       <InteractiveAICalculator2025 />
 
-=======
       {/* Interactive AI ROI Calculator */}
       <section id="roi-calculator" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -495,23 +422,9 @@ export default function HomePage() {
           <InteractiveAI2026Calculator />
         </div>
       </section>
->>>>>>> feature/new-content-and-advertising-2026
-      {/* Interactive Promotional Section */}
-      <InteractivePromotionalSection />
-=======
+
       {/* Interactive AI 2027 Calculator */}
       <InteractiveAI2027Calculator />
-
-      {/* Interactive AI 2026 Calculator */}
-=======
-      {/* Interactive AI Calculator */}
->>>>>>> origin/new-content-integration-main
-      <InteractiveAICalculator2026 />
-=======
-      {/* Interactive Promotional Section */}
-      <InteractivePromotionalSection />
->>>>>>> cursor/create-and-deploy-new-content-1102
->>>>>>> origin/feature/revolutionary-ai-2026-content
 
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
@@ -635,20 +548,6 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/new-content-integration-main
-            <Link href="/blog/ai-enterprise-adoption-2025" className="group">
-=======
-            <Link href="/blog/ai-2026-revolutionary-breakthrough" className="group">
->>>>>>> origin/feature/revolutionary-ai-2026-content
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Revolutionary Breakthrough
-=======
             <Link href="/blog/ai-revolution-2026-next-frontier" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200 hover:border-red-200">
                 <div className="flex items-center gap-2 mb-4">
@@ -673,23 +572,14 @@ export default function HomePage() {
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
                     Breakthrough Article
->>>>>>> origin/cursor/create-and-deploy-new-content-537c
                   </span>
                   <span className="text-sm text-gray-500">25 min read</span>
                 </div>
-<<<<<<< HEAD
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  AI 2026 Revolutionary Breakthrough: The Future of Enterprise AI is Here
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Discover the revolutionary AI breakthroughs of 2026 that are transforming enterprise operations. From autonomous AI systems to quantum-enhanced computing.
-=======
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
                   Quantum AI Breakthrough 2026: Solving Impossible Problems in Seconds
                 </h3>
                 <p className="text-gray-600 mb-4">
                   Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.
->>>>>>> origin/cursor/create-and-deploy-new-content-537c
                 </p>
                 <div className="flex items-center text-purple-600 font-semibold group-hover:text-purple-700 transition-colors">
                   Read Article →
