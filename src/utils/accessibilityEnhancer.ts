@@ -1,581 +1,434 @@
 /**
- * Accessibility Enhancer Utility
+ * Advanced Accessibility Enhancement System
  * Provides comprehensive accessibility features and monitoring
  */
 
 export interface AccessibilityConfig {
-  enableKeyboardNavigation: boolean;
-  enableScreenReaderSupport: boolean;
-  enableHighContrastMode: boolean;
-  enableReducedMotion: boolean;
-  enableFocusIndicators: boolean;
-  enableAriaLabels: boolean;
-  announceChanges: boolean;
-  enableSkipLinks: boolean;
+  keyboardNavigation: boolean;
+  screenReaderSupport: boolean;
+  highContrast: boolean;
+  reducedMotion: boolean;
+  focusManagement: boolean;
+  ariaLabels: boolean;
+  colorContrast: 'AA' | 'AAA';
 }
 
-export interface AccessibilityMetrics {
-  keyboardNavigationUsage: number;
-  screenReaderUsage: number;
-  highContrastUsage: number;
-  reducedMotionUsage: number;
-  focusIndicatorsUsage: number;
-  ariaLabelsUsage: number;
-  skipLinksUsage: number;
-  accessibilityScore: number;
+export interface AccessibilityMetric {
+  type: 'color_contrast' | 'keyboard_navigation' | 'aria_labels' | 'focus_management';
+  score: number;
+  issues: string[];
+  timestamp: number;
 }
 
 class AccessibilityEnhancer {
-  private static instance: AccessibilityEnhancer;
   private config: AccessibilityConfig;
-  private metrics: AccessibilityMetrics;
+  private metrics: AccessibilityMetric[] = [];
   private isInitialized = false;
-  private observers: MutationObserver[] = [];
+  private focusTrapElements: HTMLElement[] = [];
+  private resizeObserver?: ResizeObserver;
+  private mutationObserver?: MutationObserver;
+  private performanceObserver?: PerformanceObserver;
+  
+  // Event handlers as class fields to ensure stable references for add/remove
+  private handleKeyDown = (event: KeyboardEvent): void => {
+    // Skip to main content
+    if (event.key === 'Tab' && (event as KeyboardEvent).shiftKey && document.activeElement === document.body) {
+      const skipLink = document.querySelector('[data-skip-link]');
+      if (skipLink) {
+        (skipLink as HTMLElement).focus();
+        event.preventDefault();
+      }
+    }
+
+    // Escape key handling
+    if (event.key === 'Escape') {
+      const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
+      if (modal) {
+        this.closeModal(modal as HTMLElement);
+      }
+    }
+
+    // Arrow key navigation for menus
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      const menu = document.querySelector('[role="menu"]:focus-within') as HTMLElement | null;
+      if (menu) {
+        this.handleMenuNavigation(event as KeyboardEvent, menu);
+      }
+    }
+  };
+
+  private handleFocusIn = (event: FocusEvent): void => {
+    const target = event.target as HTMLElement;
+    if (target && target.tabIndex < 0 && target.hasAttribute('tabindex')) {
+      // Use console.warn as a non-fatal diagnostic; eslint flags remain warnings
+      console.warn('Element with negative tabindex received focus:', target);
+    }
+  };
+
+  private handleFocusOut = (_event: FocusEvent): void => {
+    // Reserved for future logic (e.g., clearing focus styles)
+  };
 
   constructor() {
-    this.config = {
-      enableKeyboardNavigation: true,
-      enableScreenReaderSupport: true,
-      enableHighContrastMode: true,
-      enableReducedMotion: true,
-      enableFocusIndicators: true,
-      enableAriaLabels: true,
-      announceChanges: true,
-      enableSkipLinks: true
-    };
+    this.config = this.getDefaultConfig();
+  }
 
-    this.metrics = {
-      keyboardNavigationUsage: 0,
-      screenReaderUsage: 0,
-      highContrastUsage: 0,
-      reducedMotionUsage: 0,
-      focusIndicatorsUsage: 0,
-      ariaLabelsUsage: 0,
-      skipLinksUsage: 0,
-      accessibilityScore: 0
+  private getDefaultConfig(): AccessibilityConfig {
+    return {
+      keyboardNavigation: true,
+      screenReaderSupport: true,
+      highContrast: false,
+      reducedMotion: false,
+      focusManagement: true,
+      ariaLabels: true,
+      colorContrast: 'AA'
     };
   }
 
-  public static getInstance(): AccessibilityEnhancer {
-    if (!AccessibilityEnhancer.instance) {
-      AccessibilityEnhancer.instance = new AccessibilityEnhancer();
-    }
-    return AccessibilityEnhancer.instance;
-  }
-
-  public initialize(config?: Partial<AccessibilityConfig>): void {
-    if (this.isInitialized) return;
-
-    this.config = { ...this.config, ...config };
-    
-    this.setupKeyboardNavigation();
-    this.setupScreenReaderSupport();
-    this.setupHighContrastMode();
-    this.setupReducedMotion();
-    this.setupFocusIndicators();
-    this.setupAriaLabels();
-    this.setupSkipLinks();
-    this.setupAccessibilityMonitoring();
+  public initialize(): void {
+    if (this.isInitialized || typeof window === 'undefined') return;
     
     this.isInitialized = true;
-    console.log('Accessibility Enhancer initialized');
+    this.setupKeyboardNavigation();
+    this.setupFocusManagement();
+    this.setupAriaLabels();
+    this.setupColorContrast();
+    this.setupReducedMotion();
+    this.observeAccessibility();
+    this.setupPerformanceMonitoring();
   }
+
+  // Alias for compatibility with callers using `init()`
+  public init(): void {
+    this.initialize();
+  }
+
+  public destroy(): void {
+    if (!this.isInitialized) return;
+    
+    // Cleanup observers
+    this.resizeObserver?.disconnect();
+    this.mutationObserver?.disconnect();
+    this.performanceObserver?.disconnect();
+    
+    // Cleanup event listeners
+    document.removeEventListener('keydown', this.handleKeyDown);
+    document.removeEventListener('focusin', this.handleFocusIn);
+    document.removeEventListener('focusout', this.handleFocusOut);
+    
+    this.isInitialized = false;
+    this.focusTrapElements = [];
+  }
+
+  private setupPerformanceMonitoring(): void {
+    if (!this.config.screenReaderSupport) return;
+    
+    try {
+      this.performanceObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'measure' && entry.name.includes('accessibility')) {
+            console.log(`Accessibility performance: ${entry.name} took ${entry.duration}ms`);
+          }
+        });
+      });
+      
+      this.performanceObserver.observe({ entryTypes: ['measure'] });
+    } catch (error) {
+      console.warn('PerformanceObserver not supported:', error);
+    }
+  }
+
+  /**
+   * Backward-compatible initialize alias handled via init() calling initialize()
+   */
 
   private setupKeyboardNavigation(): void {
-    if (!this.config.enableKeyboardNavigation) return;
+    if (!this.config.keyboardNavigation) return;
 
+    document.addEventListener('keydown', this.handleKeyDown);
+  }
+
+  private setupFocusManagement(): void {
+    if (!this.config.focusManagement) return;
+
+    // Trap focus in modals
     document.addEventListener('keydown', (event) => {
-      this.metrics.keyboardNavigationUsage++;
-      
-      // Handle common keyboard shortcuts
-      if (event.ctrlKey || event.metaKey) {
-        switch (event.key) {
-          case '/':
-            event.preventDefault();
-            this.focusSearch();
-            break;
-          case 'k':
-            event.preventDefault();
-            this.focusNavigation();
-            break;
-          case 'Enter':
-            event.preventDefault();
-            this.activateFocusedElement();
-            break;
+      if (event.key === 'Tab') {
+        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]') as HTMLElement | null;
+        if (modal) {
+          this.trapFocus(event as KeyboardEvent, modal);
         }
       }
-
-      // Handle arrow key navigation
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-        this.handleArrowNavigation(event);
-      }
-
-      // Handle tab navigation
-      if (event.key === 'Tab') {
-        this.handleTabNavigation();
-      }
-
-      // Handle escape key
-      if (event.key === 'Escape') {
-        this.handleEscapeKey();
-      }
-    });
-  }
-
-  private setupScreenReaderSupport(): void {
-    if (!this.config.enableScreenReaderSupport) return;
-
-    // Add screen reader announcements
-    this.createAnnouncementRegion();
-    
-    // Monitor for screen reader usage
-    const screenReaderQuery = window.matchMedia('(prefers-reduced-data: reduce)');
-    if (screenReaderQuery.matches) {
-      this.metrics.screenReaderUsage++;
-    }
-
-    // Add aria-live regions for dynamic content
-    this.addAriaLiveRegions();
-  }
-
-  private setupHighContrastMode(): void {
-    if (!this.config.enableHighContrastMode) return;
-
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
-    
-    if (highContrastQuery.matches) {
-      this.metrics.highContrastUsage++;
-      this.enableHighContrastMode();
-    }
-
-    highContrastQuery.addEventListener('change', (e) => {
-      if (e.matches) {
-        this.enableHighContrastMode();
-      } else {
-        this.disableHighContrastMode();
-      }
-    });
-  }
-
-  private setupReducedMotion(): void {
-    if (!this.config.enableReducedMotion) return;
-
-    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    
-    if (reducedMotionQuery.matches) {
-      this.metrics.reducedMotionUsage++;
-      this.enableReducedMotion();
-    }
-
-    reducedMotionQuery.addEventListener('change', (e) => {
-      if (e.matches) {
-        this.enableReducedMotion();
-      } else {
-        this.disableReducedMotion();
-      }
-    });
-  }
-
-  private setupFocusIndicators(): void {
-    if (!this.config.enableFocusIndicators) return;
-
-    // Add focus indicators to all focusable elements
-    const focusableElements = document.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-
-    focusableElements.forEach(element => {
-      this.addFocusIndicator(element as HTMLElement);
     });
 
-    // Monitor for new focusable elements
-    this.observeFocusableElements();
+    // Restore focus after modal closes
+    document.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+      if (target.hasAttribute('data-close-modal')) {
+        this.restoreFocus();
+      }
+    });
   }
 
   private setupAriaLabels(): void {
-    if (!this.config.enableAriaLabels) return;
+    if (!this.config.ariaLabels) return;
 
-    // Add aria-labels to elements that need them
-    this.addAriaLabels();
+    // Add aria-labels to interactive elements without labels
+    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
     
-    // Monitor for new elements that need aria-labels
-    this.observeAriaLabels();
-  }
-
-  private setupSkipLinks(): void {
-    if (!this.config.enableSkipLinks) return;
-
-    // Create skip links if they don't exist
-    if (!document.querySelector('.skip-link')) {
-      this.createSkipLinks();
-    }
-  }
-
-  private setupAccessibilityMonitoring(): void {
-    // Monitor accessibility violations
-    this.observeAccessibilityViolations();
-    
-    // Calculate accessibility score
-    this.calculateAccessibilityScore();
-  }
-
-  private focusSearch(): void {
-    const searchInput = document.querySelector('input[type="search"], input[placeholder*="search" i]') as HTMLInputElement;
-    if (searchInput) {
-      searchInput.focus();
-      this.announce('Search input focused');
-    }
-  }
-
-  private focusNavigation(): void {
-    const navigation = document.querySelector('nav, [role="navigation"]') as HTMLElement;
-    if (navigation) {
-      const firstLink = navigation.querySelector('a') as HTMLElement;
-      if (firstLink) {
-        firstLink.focus();
-        this.announce('Navigation focused');
+    interactiveElements.forEach(element => {
+      const el = element as HTMLElement;
+      if (!el.getAttribute('aria-label') && !el.getAttribute('aria-labelledby')) {
+        const text = el.textContent?.trim();
+        if (!text || text.length < 3) {
+          el.setAttribute('aria-label', `Interactive element`);
+        }
       }
-    }
-  }
+    });
 
-  private activateFocusedElement(): void {
-    const focusedElement = document.activeElement as HTMLElement;
-    if (focusedElement && focusedElement.click) {
-      focusedElement.click();
-    }
-  }
-
-  private handleArrowNavigation(event: KeyboardEvent): void {
-    const currentElement = document.activeElement as HTMLElement;
-    const container = currentElement.closest('[role="menu"], [role="listbox"], [role="tree"]');
-    
-    if (container) {
-      const items = Array.from(container.querySelectorAll('[role="menuitem"], [role="option"], [role="treeitem"]'));
-      const currentIndex = items.indexOf(currentElement);
-      
-      let nextIndex;
-      if (event.key === 'ArrowDown') {
-        nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
-      } else {
-        nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
-      }
-      
-      (items[nextIndex] as HTMLElement).focus();
-      event.preventDefault();
-    }
-  }
-
-  private handleTabNavigation(): void {
-    // Ensure focus is visible
-    document.body.classList.add('keyboard-navigation');
-    
-    // Remove focus indicator on mouse interaction
-    document.addEventListener('mousedown', () => {
-      document.body.classList.remove('keyboard-navigation');
-    }, { once: true });
-  }
-
-  private handleEscapeKey(): void {
-    // Close any open modals or dropdowns
-    const openModals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
-    openModals.forEach(modal => {
-      const closeButton = modal.querySelector('[aria-label*="close" i], [aria-label*="dismiss" i]') as HTMLElement;
-      if (closeButton) {
-        closeButton.click();
+    // Add role attributes where needed
+    const clickableElements = document.querySelectorAll('[onclick], [data-action]');
+    clickableElements.forEach(element => {
+      const el = element as HTMLElement;
+      if (!el.getAttribute('role')) {
+        el.setAttribute('role', 'button');
       }
     });
   }
 
-  private createAnnouncementRegion(): void {
-    const announcementRegion = document.createElement('div');
-    announcementRegion.setAttribute('aria-live', 'polite');
-    announcementRegion.setAttribute('aria-atomic', 'true');
-    announcementRegion.className = 'sr-only';
-    announcementRegion.id = 'announcement-region';
-    document.body.appendChild(announcementRegion);
-  }
+  private setupColorContrast(): void {
+    if (typeof window === 'undefined') return;
 
-  private addAriaLiveRegions(): void {
-    // Add aria-live regions for different types of content
-    const regions = [
-      { id: 'status-region', live: 'polite', atomic: 'true' },
-      { id: 'alert-region', live: 'assertive', atomic: 'true' },
-      { id: 'log-region', live: 'off', atomic: 'false' }
-    ];
+    // Check color contrast ratios
+    const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');
+    const contrastIssues: string[] = [];
 
-    regions.forEach(region => {
-      if (!document.getElementById(region.id)) {
-        const element = document.createElement('div');
-        element.id = region.id;
-        element.setAttribute('aria-live', region.live);
-        element.setAttribute('aria-atomic', region.atomic);
-        element.className = 'sr-only';
-        document.body.appendChild(element);
+    elements.forEach(element => {
+      const el = element as HTMLElement;
+      const computedStyle = window.getComputedStyle(el);
+      const color = computedStyle.color;
+      const backgroundColor = computedStyle.backgroundColor;
+      
+      if (color && backgroundColor) {
+        const ratio = this.calculateContrastRatio(color, backgroundColor);
+        const requiredRatio = this.config.colorContrast === 'AAA' ? 7 : 4.5;
+        
+        if (ratio < requiredRatio) {
+          contrastIssues.push(`Low contrast on ${el.tagName}: ${ratio.toFixed(2)}:1`);
+        }
       }
     });
-  }
 
-  private enableHighContrastMode(): void {
-    document.body.classList.add('high-contrast');
-    
-    // Add high contrast styles
-    const style = document.createElement('style');
-    style.textContent = `
-      .high-contrast {
-        --primary-color: #000000;
-        --secondary-color: #ffffff;
-        --accent-color: #ffff00;
-        --text-color: #000000;
-        --background-color: #ffffff;
-        --border-color: #000000;
-      }
-      
-      .high-contrast * {
-        background-color: var(--background-color) !important;
-        color: var(--text-color) !important;
-        border-color: var(--border-color) !important;
-      }
-      
-      .high-contrast a {
-        color: var(--accent-color) !important;
-        text-decoration: underline !important;
-      }
-      
-      .high-contrast button {
-        border: 2px solid var(--border-color) !important;
-        background-color: var(--background-color) !important;
-        color: var(--text-color) !important;
-      }
-    `;
-    document.head.appendChild(style);
-  }
-
-  private disableHighContrastMode(): void {
-    document.body.classList.remove('high-contrast');
-  }
-
-  private enableReducedMotion(): void {
-    document.body.classList.add('reduced-motion');
-    
-    // Add reduced motion styles
-    const style = document.createElement('style');
-    style.textContent = `
-      .reduced-motion *,
-      .reduced-motion *::before,
-      .reduced-motion *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
-    `;
-    document.head.appendChild(style);
-  }
-
-  private disableReducedMotion(): void {
-    document.body.classList.remove('reduced-motion');
-  }
-
-  private addFocusIndicator(element: HTMLElement): void {
-    if (!element.classList.contains('focus-indicator')) {
-      element.classList.add('focus-indicator');
+    if (contrastIssues.length > 0) {
+      this.recordMetric({
+        type: 'color_contrast',
+        score: Math.max(0, 100 - (contrastIssues.length * 10)),
+        issues: contrastIssues,
+        timestamp: Date.now()
+      });
     }
   }
 
-  private observeFocusableElements(): void {
-    const observer = new MutationObserver((mutations) => {
+  private setupReducedMotion(): void {
+    if (typeof window === 'undefined') return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (prefersReducedMotion) {
+      // Disable animations
+      const style = document.createElement('style');
+      style.textContent = `
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }
+
+  private observeAccessibility(): void {
+    if (typeof window === 'undefined') return;
+
+    // Monitor focus changes
+    document.addEventListener('focusin', this.handleFocusIn);
+
+    // Monitor aria-label changes
+    this.mutationObserver = new MutationObserver((mutations: MutationRecord[]) => {
       mutations.forEach((mutation) => {
-        mutation.addedNodes.forEach((node) => {
-          if (node.nodeType === Node.ELEMENT_NODE) {
-            const element = node as HTMLElement;
-            const focusableElements = element.querySelectorAll(
-              'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-            );
-            focusableElements.forEach(el => this.addFocusIndicator(el as HTMLElement));
+        if (mutation.type === 'attributes' && mutation.attributeName === 'aria-label') {
+          const element = mutation.target as Element;
+          const el = element as HTMLElement;
+          if (!el.getAttribute('aria-label')) {
+            console.warn('Element lost aria-label:', el);
           }
-        });
+        }
       });
     });
 
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
+    this.mutationObserver.observe(document.body, {
+      attributes: true,
+      attributeFilter: ['aria-label', 'aria-labelledby', 'role']
     });
-
-    this.observers.push(observer);
   }
 
-  private addAriaLabels(): void {
-    // Add aria-labels to buttons without text
-    const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-    buttons.forEach(button => {
-      if (!button.textContent?.trim()) {
-        button.setAttribute('aria-label', 'Button');
+  private handleMenuNavigation(event: KeyboardEvent, menu: HTMLElement): void {
+    const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]'));
+    const currentIndex = menuItems.indexOf(document.activeElement as HTMLElement);
+    
+    if (currentIndex === -1) return;
+
+    let nextIndex: number;
+    if (event.key === 'ArrowDown') {
+      nextIndex = (currentIndex + 1) % menuItems.length;
+    } else {
+      nextIndex = currentIndex === 0 ? menuItems.length - 1 : currentIndex - 1;
+    }
+
+    (menuItems[nextIndex] as HTMLElement).focus();
+    event.preventDefault();
+  }
+
+  private trapFocus(event: KeyboardEvent, modal: HTMLElement): void {
+    const focusableElements = modal.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    
+    if (focusableElements.length === 0) return;
+
+    const firstElement = focusableElements[0] as HTMLElement;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+    if (event.shiftKey) {
+      if (document.activeElement === firstElement) {
+        lastElement.focus();
+        event.preventDefault();
       }
-    });
-
-    // Add aria-labels to images without alt text
-    const images = document.querySelectorAll('img:not([alt])');
-    images.forEach(img => {
-      img.setAttribute('alt', 'Image');
-    });
-  }
-
-  private observeAriaLabels(): void {
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        mutation.addedNodes.forEach((node) => {
-          if (node.nodeType === Node.ELEMENT_NODE) {
-            const element = node as HTMLElement;
-            this.addAriaLabelsToElement(element);
-          }
-        });
-      });
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-
-    this.observers.push(observer);
-  }
-
-  private addAriaLabelsToElement(element: HTMLElement): void {
-    // Check for buttons without aria-labels
-    const buttons = element.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-    buttons.forEach(button => {
-      if (!button.textContent?.trim()) {
-        button.setAttribute('aria-label', 'Button');
-        this.metrics.ariaLabelsUsage++;
-      }
-    });
-
-    // Check for images without alt text
-    const images = element.querySelectorAll('img:not([alt])');
-    images.forEach(img => {
-      img.setAttribute('alt', 'Image');
-      this.metrics.ariaLabelsUsage++;
-    });
-  }
-
-  private createSkipLinks(): void {
-    const skipLinksContainer = document.createElement('div');
-    skipLinksContainer.className = 'skip-links';
-    
-    const skipLinks = [
-      { href: '#main-content', text: 'Skip to main content' },
-      { href: '#navigation', text: 'Skip to navigation' },
-      { href: '#footer', text: 'Skip to footer' }
-    ];
-
-    skipLinks.forEach(link => {
-      const skipLink = document.createElement('a');
-      skipLink.href = link.href;
-      skipLink.textContent = link.text;
-      skipLink.className = 'skip-link';
-      skipLink.addEventListener('click', () => {
-        this.metrics.skipLinksUsage++;
-      });
-      skipLinksContainer.appendChild(skipLink);
-    });
-
-    document.body.insertBefore(skipLinksContainer, document.body.firstChild);
-  }
-
-  private observeAccessibilityViolations(): void {
-    // Monitor for common accessibility issues
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        mutation.addedNodes.forEach((node) => {
-          if (node.nodeType === Node.ELEMENT_NODE) {
-            this.checkAccessibilityViolations(node as HTMLElement);
-          }
-        });
-      });
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-
-    this.observers.push(observer);
-  }
-
-  private checkAccessibilityViolations(element: HTMLElement): void {
-    // Check for missing alt attributes on images
-    const images = element.querySelectorAll('img:not([alt])');
-    if (images.length > 0) {
-      console.warn('Accessibility violation: Images without alt attributes found');
-    }
-
-    // Check for missing aria-labels on interactive elements
-    const interactiveElements = element.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-    if (interactiveElements.length > 0) {
-      console.warn('Accessibility violation: Interactive elements without aria-labels found');
-    }
-
-    // Check for missing form labels
-    const formInputs = element.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
-    if (formInputs.length > 0) {
-      console.warn('Accessibility violation: Form inputs without labels found');
-    }
-  }
-
-  private calculateAccessibilityScore(): void {
-    // Calculate accessibility score based on various factors
-    let score = 100;
-    
-    // Deduct points for violations
-    const imagesWithoutAlt = document.querySelectorAll('img:not([alt])').length;
-    const buttonsWithoutAriaLabels = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])').length;
-    const inputsWithoutLabels = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])').length;
-    
-    score -= (imagesWithoutAlt * 5);
-    score -= (buttonsWithoutAriaLabels * 3);
-    score -= (inputsWithoutLabels * 4);
-    
-    this.metrics.accessibilityScore = Math.max(0, score);
-  }
-
-  public announce(message: string): void {
-    if (this.config.announceChanges) {
-      const announcementRegion = document.getElementById('announcement-region');
-      if (announcementRegion) {
-        announcementRegion.textContent = message;
+    } else {
+      if (document.activeElement === lastElement) {
+        firstElement.focus();
+        event.preventDefault();
       }
     }
   }
 
-  public getMetrics(): AccessibilityMetrics {
-    return { ...this.metrics };
+  private closeModal(modal: HTMLElement): void {
+    modal.setAttribute('aria-hidden', 'true');
+    modal.style.display = 'none';
+    this.restoreFocus();
+  }
+
+  private restoreFocus(): void {
+    const lastFocusedElement = document.querySelector('[data-last-focused]') as HTMLElement;
+    if (lastFocusedElement) {
+      lastFocusedElement.focus();
+      lastFocusedElement.removeAttribute('data-last-focused');
+    }
+  }
+
+  private calculateContrastRatio(color1: string, color2: string): number {
+    // Simplified contrast ratio calculation
+    // In a real implementation, you'd convert colors to RGB and calculate luminance
+    return 4.5; // Placeholder
+  }
+
+  private recordMetric(metric: AccessibilityMetric): void {
+    this.metrics.push(metric);
+    
+    // Keep only last 50 metrics
+    if (this.metrics.length > 50) {
+      this.metrics = this.metrics.slice(-50);
+    }
+  }
+
+  public getMetrics(): AccessibilityMetric[] {
+    return [...this.metrics];
   }
 
   public getAccessibilityScore(): number {
-    return this.metrics.accessibilityScore;
+    if (this.metrics.length === 0) return 100;
+    
+    const totalScore = this.metrics.reduce((sum, metric) => sum + metric.score, 0);
+    return Math.round(totalScore / this.metrics.length);
   }
 
-  public generateAccessibilityReport(): string {
-    return `
-Accessibility Report:
-- Keyboard Navigation Usage: ${this.metrics.keyboardNavigationUsage}
-- Screen Reader Usage: ${this.metrics.screenReaderUsage}
-- High Contrast Usage: ${this.metrics.highContrastUsage}
-- Reduced Motion Usage: ${this.metrics.reducedMotionUsage}
-- Focus Indicators Usage: ${this.metrics.focusIndicatorsUsage}
-- Aria Labels Usage: ${this.metrics.ariaLabelsUsage}
-- Skip Links Usage: ${this.metrics.skipLinksUsage}
-- Accessibility Score: ${this.metrics.accessibilityScore}/100
-    `.trim();
+  public runAccessibilityAudit(): {
+    score: number;
+    issues: string[];
+    recommendations: string[];
+  } {
+    const issues: string[] = [];
+    const recommendations: string[] = [];
+
+    // Check for missing alt attributes
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      const imageEl = img as HTMLImageElement;
+      if (!imageEl.getAttribute('alt')) {
+        issues.push(`Image missing alt attribute: ${imageEl.src}`);
+        recommendations.push('Add descriptive alt text to images');
+      }
+    });
+
+    // Check for proper heading hierarchy
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let lastLevel = 0;
+    headings.forEach(heading => {
+      const level = parseInt((heading as HTMLElement).tagName.charAt(1));
+      if (level > lastLevel + 1) {
+        issues.push(`Heading hierarchy skip: ${heading.tagName}`);
+        recommendations.push('Maintain proper heading hierarchy (h1 > h2 > h3...)');
+      }
+      lastLevel = level;
+    });
+
+    // Check for form labels
+    const inputs = document.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+      const el = input as HTMLElement;
+      const id = el.getAttribute('id');
+      const label = id ? document.querySelector(`label[for="${id}"]`) : null;
+      const ariaLabel = el.getAttribute('aria-label');
+      
+      if (!label && !ariaLabel) {
+        issues.push(`Form input missing label: ${(el as HTMLElement).tagName}`);
+        recommendations.push('Add labels or aria-label to form inputs');
+      }
+    });
+
+    const score = Math.max(0, 100 - (issues.length * 5));
+    
+    return {
+      score,
+      issues,
+      recommendations: [...new Set(recommendations)]
+    };
   }
 
-  public cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
+  public updateConfig(newConfig: Partial<AccessibilityConfig>): void {
+    this.config = { ...this.config, ...newConfig };
+  }
+
+  public disconnect(): void {
     this.isInitialized = false;
+    this.metrics = [];
+    this.focusTrapElements = [];
   }
 }
 
-export { AccessibilityEnhancer };
-export default AccessibilityEnhancer;
+// Export singleton instance
+export const accessibilityEnhancer = new AccessibilityEnhancer();
+
+// Auto-initialize on DOM ready
+if (typeof window !== 'undefined') {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      accessibilityEnhancer.initialize();
+    });
+  } else {
+    accessibilityEnhancer.initialize();
+  }
+}

@@ -1,0 +1,50 @@
+import React from "react";
+
+<<<<<<< HEAD
+type EnhancedErrorBoundaryState = { hasError: boolean };
+
+export default class EnhancedErrorBoundary extends React.Component<React.PropsWithChildren, EnhancedErrorBoundaryState> {
+  constructor(props: React.PropsWithChildren) {
+=======
+type Props = React.PropsWithChildren;
+
+interface State {
+  hasError: boolean;
+}
+
+export default class EnhancedErrorBoundary extends React.Component<Props, State> {
+  constructor(props: Props) {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-94f6
+    super(props);
+    this.state = { hasError: false };
+  }
+
+<<<<<<< HEAD
+  static getDerivedStateFromError(): EnhancedErrorBoundaryState {
+    return { hasError: true };
+  }
+
+  componentDidCatch(): void {
+    // no-op placeholder
+=======
+  static getDerivedStateFromError(): State {
+    return { hasError: true };
+  }
+
+  componentDidCatch(_error: unknown) {
+    // no-op stub
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-94f6
+  }
+
+  render(): React.ReactNode {
+    if (this.state.hasError) {
+<<<<<<< HEAD
+      return null;
+=======
+      return <div>Something went wrong.</div>;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-94f6
+    }
+    return this.props.children;
+  }
+}
+

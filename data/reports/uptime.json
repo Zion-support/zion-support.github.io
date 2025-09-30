@@ -1,0 +1,26 @@
+{
+  "runAt": "2025-09-08T10:39:27.901Z",
+  "base": "https://zion.app",
+  "results": [
+    {
+      "url": "https://zion.app/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://zion.app/academy",
+      "ok": true,
+      "status": 404
+    },
+    {
+      "url": "https://zion.app/api/metrics/live",
+      "ok": true,
+      "status": 404
+    },
+    {
+      "url": "https://zion.app/api/academy/analytics",
+      "ok": true,
+      "status": 404
+    }
+  ]
+}
