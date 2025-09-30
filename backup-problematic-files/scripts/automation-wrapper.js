@@ -1,0 +1,2 @@
+        execSync('npm test -- --passWithNoTests', { "stdio": 'pipe', "cwd": process && process.cwd() });
+        execSync('npm run sitemap', { "stdio": 'pipe', "cwd": process && process.cwd() });
