@@ -692,5 +692,68 @@ export const posts: BlogPost[] = [
     publishedAt: "2025-09-30",
     featured: true,
     readTime: "9 min read"
+  },
+  {
+    slug: "neural-architecture-search-automation-2026",
+    title: "Neural Architecture Search Automation 2026: AI Designing AI",
+    description: "Discover how AutoML and neural architecture search are enabling AI to design better AI models automatically.",
+    category: "Machine Learning",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "quantum-resistant-cryptography-implementation-2026",
+    title: "Quantum‑Resistant Cryptography: Future‑Proofing Your Security Infrastructure",
+    description: "Implement post‑quantum cryptographic algorithms to protect your data against future quantum computing threats.",
+    category: "Cybersecurity",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "14 min read"
+  },
+  {
+    slug: "llm-fine-tuning-enterprise-2026",
+    title: "Enterprise LLM Fine‑Tuning 2026: Domain Expertise at Scale",
+    description: "Master cost‑effective fine‑tuning strategies for large language models with proprietary enterprise data.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "16 min read"
+  },
+  {
+    slug: "edge-computing-5g-integration-2026",
+    title: "Edge Computing + 5G Integration: Ultra‑Low Latency AI at Scale",
+    description: "Leverage 5G networks and edge computing for real‑time AI applications with sub‑10ms latency.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "ai-powered-incident-response-automation-2026",
+    title: "AI‑Powered Incident Response: Autonomous Security Operations",
+    description: "Deploy AI agents that detect, analyze, and respond to security incidents in under 60 seconds with 99% accuracy.",
+    category: "Cybersecurity",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "13 min read"
+  },
+  {
+    slug: "sustainable-ai-green-computing-2026",
+    title: "Sustainable AI & Green Computing: Reducing Carbon Footprint by 70%",
+    description: "Implement energy‑efficient AI models and sustainable computing practices to dramatically reduce environmental impact.",
+    category: "Sustainability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "explainable-ai-enterprise-adoption-2026",
+    title: "Explainable AI for Enterprise: Building Trust Through Transparency",
+    description: "Deploy interpretable AI models that provide clear explanations for decisions, ensuring regulatory compliance and user trust.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "15 min read"
   }
 ];

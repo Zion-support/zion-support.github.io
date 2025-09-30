@@ -208,65 +208,75 @@ const Home = () => {
               Join 500+ companies achieving unprecedented results!
             </p>
             
-            {/* NEW CONTENT MEGA BANNER - September 30, 2025 */}
-            <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/40 rounded-2xl p-8 mb-8 animate-fade-in shadow-2xl">
+            {/* LATEST CONTENT MEGA BANNER - September 30, 2025 UPDATED */}
+            <div className="bg-gradient-to-r from-purple-600/20 via-pink-500/20 to-orange-500/20 border border-pink-400/40 rounded-2xl p-8 mb-8 animate-fade-in shadow-2xl">
               <div className="flex items-center justify-center gap-3 mb-4">
-                <Sparkles className="w-8 h-8 text-emerald-400 animate-pulse" />
-                <span className="text-2xl font-bold text-emerald-300">🎉 6 REVOLUTIONARY NEW ARTICLES JUST PUBLISHED!</span>
-                <Sparkles className="w-8 h-8 text-emerald-400 animate-pulse" />
+                <Sparkles className="w-8 h-8 text-pink-400 animate-pulse" />
+                <span className="text-2xl font-bold text-pink-300">🚀 14 BREAKTHROUGH ARTICLES JUST PUBLISHED!</span>
+                <Sparkles className="w-8 h-8 text-orange-400 animate-pulse" />
               </div>
               <p className="text-white text-xl font-bold mb-3 text-center">
-                🔥 September 30, 2025 — Game-Changing AI Content Drop!
+                🔥 September 30, 2025 — The Ultimate AI & Security Content Collection!
               </p>
               <p className="text-zion-slate-light text-lg mb-6 text-center max-w-4xl mx-auto">
-                Discover breakthrough insights on Multimodal AI Agents, Real-Time AI Compliance, Federated Learning, 
-                AI-Powered Code Review, Continuous Model Validation, and Sovereign AI Infrastructure. 
-                <strong className="text-white"> These are the tools that will define AI in 2026!</strong>
+                Discover breakthrough insights on Neural Architecture Search, Quantum-Resistant Cryptography, LLM Fine-Tuning, 
+                Edge Computing + 5G, AI-Powered Incident Response, Sustainable AI, Explainable AI, and much more!
+                <strong className="text-white"> The most comprehensive AI & security resource of 2025!</strong>
               </p>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-emerald-400/30 hover:bg-white/20 transition-all">
-                  <div className="text-emerald-300 text-sm font-semibold mb-1">AI Engineering</div>
-                  <div className="text-white font-bold">Multimodal AI Agents 2026</div>
-                  <div className="text-xs text-gray-300 mt-1">Vision + Language + Actions at Scale</div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-purple-400/30 hover:bg-white/20 transition-all">
+                  <div className="text-purple-300 text-sm font-semibold mb-1">🧠 Machine Learning</div>
+                  <div className="text-white font-bold">Neural Architecture Search</div>
+                  <div className="text-xs text-gray-300 mt-1">AI Designing AI — 10x Faster</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-cyan-400/30 hover:bg-white/20 transition-all">
-                  <div className="text-cyan-300 text-sm font-semibold mb-1">AI Governance</div>
-                  <div className="text-white font-bold">Real-Time AI Compliance</div>
-                  <div className="text-xs text-gray-300 mt-1">Automated EU AI Act & GDPR Checks</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-blue-400/30 hover:bg-white/20 transition-all">
-                  <div className="text-blue-300 text-sm font-semibold mb-1">Machine Learning</div>
-                  <div className="text-white font-bold">Federated Learning Enterprise</div>
-                  <div className="text-xs text-gray-300 mt-1">Train Without Centralizing Data</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-purple-400/30 hover:bg-white/20 transition-all">
-                  <div className="text-purple-300 text-sm font-semibold mb-1">DevOps</div>
-                  <div className="text-white font-bold">AI-Powered Code Review</div>
-                  <div className="text-xs text-gray-300 mt-1">Ship Faster with Intelligent Analysis</div>
+                  <div className="text-cyan-300 text-sm font-semibold mb-1">🔐 Cybersecurity</div>
+                  <div className="text-white font-bold">Quantum-Resistant Crypto</div>
+                  <div className="text-xs text-gray-300 mt-1">Future-Proof Your Security</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-pink-400/30 hover:bg-white/20 transition-all">
-                  <div className="text-pink-300 text-sm font-semibold mb-1">MLOps</div>
-                  <div className="text-white font-bold">Continuous Model Validation</div>
-                  <div className="text-xs text-gray-300 mt-1">Catch Drift Before Users Do</div>
+                  <div className="text-pink-300 text-sm font-semibold mb-1">🤖 GenAI</div>
+                  <div className="text-white font-bold">Enterprise LLM Fine-Tuning</div>
+                  <div className="text-xs text-gray-300 mt-1">95% Accuracy, 80% Cost Reduction</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-orange-400/30 hover:bg-white/20 transition-all">
+                  <div className="text-orange-300 text-sm font-semibold mb-1">⚡ Edge Computing</div>
+                  <div className="text-white font-bold">Edge + 5G Integration</div>
+                  <div className="text-xs text-gray-300 mt-1">Sub-10ms Latency at Scale</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-red-400/30 hover:bg-white/20 transition-all">
+                  <div className="text-red-300 text-sm font-semibold mb-1">🛡️ Security Ops</div>
+                  <div className="text-white font-bold">AI Incident Response</div>
+                  <div className="text-xs text-gray-300 mt-1">Autonomous SOC in 60 Seconds</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-green-400/30 hover:bg-white/20 transition-all">
+                  <div className="text-green-300 text-sm font-semibold mb-1">🌱 Sustainability</div>
+                  <div className="text-white font-bold">Sustainable AI & Green Computing</div>
+                  <div className="text-xs text-gray-300 mt-1">70% Carbon Footprint Reduction</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-blue-400/30 hover:bg-white/20 transition-all">
+                  <div className="text-blue-300 text-sm font-semibold mb-1">📊 AI Governance</div>
+                  <div className="text-white font-bold">Explainable AI</div>
+                  <div className="text-xs text-gray-300 mt-1">Build Trust Through Transparency</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-indigo-400/30 hover:bg-white/20 transition-all">
-                  <div className="text-indigo-300 text-sm font-semibold mb-1">Infrastructure</div>
-                  <div className="text-white font-bold">Sovereign AI Infrastructure</div>
-                  <div className="text-xs text-gray-300 mt-1">Data Residency Meets Performance</div>
+                  <div className="text-indigo-300 text-sm font-semibold mb-1">🎭 Multimodal AI</div>
+                  <div className="text-white font-bold">Vision + Language + Actions</div>
+                  <div className="text-xs text-gray-300 mt-1">96% Accuracy Enterprise Scale</div>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
                   to="/blog"
-                  className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-bold text-lg hover:from-emerald-600 hover:to-cyan-600 transition-all shadow-lg hover:shadow-xl text-center"
+                  className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white px-8 py-3 rounded-lg font-bold text-lg hover:from-purple-600 hover:via-pink-600 hover:to-orange-600 transition-all shadow-lg hover:shadow-xl text-center"
                 >
-                  🚀 Read All 6 New Articles Now
+                  🚀 Explore All 14 New Articles Now
                 </Link>
                 <Link
-                  to="/blog/multimodal-ai-agents-2026"
-                  className="border-2 border-emerald-400 text-emerald-300 px-8 py-3 rounded-lg font-bold text-lg hover:bg-emerald-400 hover:text-white transition-all text-center"
+                  to="/blog/neural-architecture-search-automation-2026"
+                  className="border-2 border-pink-400 text-pink-300 px-8 py-3 rounded-lg font-bold text-lg hover:bg-pink-400 hover:text-white transition-all text-center"
                 >
-                  Start with Multimodal AI
+                  Start with Neural Architecture Search
                 </Link>
               </div>
             </div>
