@@ -341,8 +341,45 @@ newArticles2025.push(
   }
 );
 
-// New: Sept 30, 2025 – Additional featured highlights to surface on Home
+  }
+);
+
+
+// Sept 30, 2025 – Combined brand-new items to advertise on homepage
 newArticles2025.push(
+  {
+    id: "ai-governance-real-time-guardrails-2025",
+    title: "AI Governance 2025: Real-Time Guardrails that Don't Slow Teams",
+    description: "Inline policy checks, KPI-linked canaries, and instant rollback—ship fast, stay safe.",
+    category: "AI Governance",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/ai-governance-real-time-guardrails-2025",
+    readTime: "7 min read",
+    tags: ["Governance", "Policy Tests", "Canaries", "Rollback"]
+  },
+  {
+    id: "edge-inference-budgets-2025",
+    title: "Edge Inference Budgets 2025: Quality Under Cost and Latency SLAs",
+    description: "Tiered models, warm pools, and cache strategy to deliver <100ms UX under budget.",
+    category: "Edge Computing",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/edge-inference-budgets-2025",
+    readTime: "6 min read",
+    tags: ["Edge", "Latency", "Caching", "Budgets"]
+  },
+  {
+    id: "agent-observability-live-traces-2025",
+    title: "Agent Observability 2025: Live Traces, SLIs, and Safe Actions",
+    description: "End-to-end visibility for agent tools with KPI-linked SLIs and budgeted actions.",
+    category: "AI Operations",
+    publishedDate: "2025-09-30",
+    featured: true,
+    link: "/blog/agent-observability-live-traces-2025",
+    readTime: "8 min read",
+    tags: ["Agents", "Observability", "SLIs", "Runbooks"]
+  },
   {
     id: "ai-governance-real-time-2026",
     title: "🛡️ AI Governance in Real Time 2026: Canaries + CI Policy Tests",
