@@ -54,6 +54,11 @@ import InteractiveAI2027Calculator from '../components/InteractiveAI2027Calculat
 import Revolutionary2026ContentBanner from '../components/Revolutionary2026ContentBanner';
 import Latest2026ContentMegaBanner from '../components/Latest2026ContentMegaBanner';
 import InteractiveAIROICalculator from '../components/InteractiveAIROICalculator';
+import Revolutionary2025ContentBanner from '../components/Revolutionary2025ContentBanner';
+import AIInnovationShowcase2025 from '../components/AIInnovationShowcase2025';
+import InteractiveAICostCalculator from '../components/InteractiveAICostCalculator';
+import EnterpriseSuccessStories from '../components/EnterpriseSuccessStories';
+import LatestContent2025Banner from '../components/LatestContent2025Banner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -136,6 +141,21 @@ export default function HomePage() {
       />
 <<<<<<< HEAD
       <div className="animate-fade-in">
+        {/* Revolutionary 2025 Content Banners */}
+        <Revolutionary2025ContentBanner />
+        
+        {/* AI Innovation Showcase 2025 */}
+        <AIInnovationShowcase2025 />
+        
+        {/* Interactive AI Cost Calculator */}
+        <InteractiveAICostCalculator />
+        
+        {/* Enterprise Success Stories */}
+        <EnterpriseSuccessStories />
+        
+        {/* Latest Content 2025 Banner */}
+        <LatestContent2025Banner />
+        
         {/* Revolutionary 2026 Content Banners */}
         <Revolutionary2026ContentBanner />
         <Latest2026ContentMegaBanner />
