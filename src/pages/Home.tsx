@@ -104,8 +104,8 @@ const Home = () => {
         {/* Content Promotion Banner */}
         <ContentPromotionBanner
           variant="info"
-          title="🚀 NEW: Oct 02 — Agent Runbooks v6, Edge Privacy Observability, CIO Playbook"
-          description="Latest drops: Agent Reliability Runbooks v6, Edge Privacy Observability, and CIO Modernization Playbook. Ship faster with safety, privacy, and ROI."
+          title="🚀 NEW: Oct 02 — Agent Safety Scorecards, Private Experiments v4, Cache Playbook v2"
+          description="Fresh drops: Agent Safety Scorecards, Edge Private Experiments v4, and GenAI Cache Playbook v2. Ship faster with safety, privacy, and predictable costs."
           ctaText="Read the Latest"
           ctaLink="/blog"
           dismissible={true}
